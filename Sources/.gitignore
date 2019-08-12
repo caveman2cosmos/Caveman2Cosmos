@@ -73,6 +73,7 @@ StyleCopReport.xml
 *.iobj
 *.pch
 *.pdb
+!/lib/xerceslib_vc71.pdb
 *.ipdb
 *.pgc
 *.pgd
