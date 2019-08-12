@@ -118,13 +118,6 @@
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;_DEBUG;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;QC_MASTERY_VICTORY;LOG_AI;_MOD_GWARM;_MOD_SHAM_SPOILER;C2C_BUILD;MULTI_FEATURE_MOD;FASSERT_ENABLE</NMakePreprocessorDefinitions>
   </PropertyGroup>
   <ItemGroup>
-    <ClCompile Include="CvInfoBuilding.cpp" />
-    <ClCompile Include="CvInfoCity.cpp" />
-    <ClCompile Include="CvInfoGame.cpp" />
-    <ClCompile Include="CvInfoPlayer.cpp" />
-    <ClCompile Include="CvInfoTerrain.cpp" />
-    <ClCompile Include="CvInfoUnit.cpp" />
-    <ClCompile Include="CvInfoUnitCombat.cpp" />
     <ClCompile Include="CyPlayerInterface3.cpp" />
     <ClCompile Include="_precompile.cpp" />
     <ClCompile Include="BetterBTSAI.cpp" />
@@ -268,13 +261,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BetterBTSAI.h" />
-    <ClCompile Include="CvInfoBuilding.h" />
-    <ClInclude Include="CvInfoCity.h" />
-    <ClInclude Include="CvInfoGame.h" />
-    <ClInclude Include="CvInfoPlayer.h" />
-    <ClInclude Include="CvInfoTerrain.h" />
-    <ClInclude Include="CvInfoUnit.h" />
-    <ClCompile Include="CvInfoUnitCombat.h" />
     <ClInclude Include="CvMapExternal.h" />
     <ClInclude Include="CvMapInterfaceBase.h" />
     <ClInclude Include="CvReachablePlotSet.h" />

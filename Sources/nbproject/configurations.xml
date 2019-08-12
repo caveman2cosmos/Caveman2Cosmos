@@ -10,6 +10,7 @@
       <in>CvBuildLists.cpp</in>
       <in>CvBuildingFilters.cpp</in>
       <in>CvBuildingGrouping.cpp</in>
+      <in>CvBuildingInfo.cpp</in>
       <in>CvBuildingList.cpp</in>
       <in>CvBuildingSort.cpp</in>
       <in>CvCity.cpp</in>
@@ -35,13 +36,6 @@
       <in>CvGameTextMgr.cpp</in>
       <in>CvGlobals.cpp</in>
       <in>CvHallOfFameInfo.cpp</in>
-      <in>CvInfoBuilding.cpp</in>
-      <in>CvInfoCity.cpp</in>
-      <in>CvInfoGame.cpp</in>
-      <in>CvInfoPlayer.cpp</in>
-      <in>CvInfoTerrain.cpp</in>
-      <in>CvInfoUnit.cpp</in>
-      <in>CvInfoUnitCombat.cpp</in>
       <in>CvInfoWater.cpp</in>
       <in>CvInfos.cpp</in>
       <in>CvInitCore.cpp</in>
@@ -83,6 +77,7 @@
       <in>CvUnitAI.cpp</in>
       <in>CvUnitFilters.cpp</in>
       <in>CvUnitGrouping.cpp</in>
+      <in>CvUnitInfo.cpp</in>
       <in>CvUnitList.cpp</in>
       <in>CvUnitSort.cpp</in>
       <in>CvViewport.cpp</in>
@@ -225,6 +220,8 @@
       </item>
       <item path="CvBuildingGrouping.cpp" ex="false" tool="1" flavor2="4">
       </item>
+      <item path="CvBuildingInfo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="CvBuildingList.cpp" ex="false" tool="1" flavor2="4">
       </item>
       <item path="CvBuildingSort.cpp" ex="false" tool="1" flavor2="4">
@@ -274,20 +271,6 @@
       <item path="CvGlobals.cpp" ex="false" tool="1" flavor2="4">
       </item>
       <item path="CvHallOfFameInfo.cpp" ex="false" tool="1" flavor2="4">
-      </item>
-      <item path="CvInfoBuilding.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoCity.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoGame.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoPlayer.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoTerrain.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoUnit.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoUnitCombat.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CvInfoWater.cpp" ex="false" tool="1" flavor2="4">
       </item>
@@ -370,6 +353,8 @@
       <item path="CvUnitFilters.cpp" ex="false" tool="1" flavor2="4">
       </item>
       <item path="CvUnitGrouping.cpp" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="CvUnitInfo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CvUnitList.cpp" ex="false" tool="1" flavor2="4">
       </item>
@@ -563,6 +548,8 @@
       </item>
       <item path="CvBuildingGrouping.cpp" ex="false" tool="1" flavor2="4">
       </item>
+      <item path="CvBuildingInfo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="CvBuildingList.cpp" ex="false" tool="1" flavor2="4">
       </item>
       <item path="CvBuildingSort.cpp" ex="false" tool="1" flavor2="4">
@@ -612,20 +599,6 @@
       <item path="CvGlobals.cpp" ex="false" tool="1" flavor2="4">
       </item>
       <item path="CvHallOfFameInfo.cpp" ex="false" tool="1" flavor2="4">
-      </item>
-      <item path="CvInfoBuilding.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoCity.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoGame.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoPlayer.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoTerrain.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoUnit.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoUnitCombat.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CvInfoWater.cpp" ex="false" tool="1" flavor2="4">
       </item>
@@ -708,6 +681,8 @@
       <item path="CvUnitFilters.cpp" ex="false" tool="1" flavor2="4">
       </item>
       <item path="CvUnitGrouping.cpp" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="CvUnitInfo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CvUnitList.cpp" ex="false" tool="1" flavor2="4">
       </item>
@@ -902,6 +877,8 @@
       </item>
       <item path="CvBuildingGrouping.cpp" ex="false" tool="1" flavor2="4">
       </item>
+      <item path="CvBuildingInfo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="CvBuildingList.cpp" ex="false" tool="1" flavor2="4">
       </item>
       <item path="CvBuildingSort.cpp" ex="false" tool="1" flavor2="4">
@@ -951,20 +928,6 @@
       <item path="CvGlobals.cpp" ex="false" tool="1" flavor2="4">
       </item>
       <item path="CvHallOfFameInfo.cpp" ex="false" tool="1" flavor2="4">
-      </item>
-      <item path="CvInfoBuilding.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoCity.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoGame.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoPlayer.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoTerrain.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoUnit.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoUnitCombat.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CvInfoWater.cpp" ex="false" tool="1" flavor2="4">
       </item>
@@ -1047,6 +1010,8 @@
       <item path="CvUnitFilters.cpp" ex="false" tool="1" flavor2="4">
       </item>
       <item path="CvUnitGrouping.cpp" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="CvUnitInfo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CvUnitList.cpp" ex="false" tool="1" flavor2="4">
       </item>
@@ -1242,6 +1207,8 @@
       </item>
       <item path="CvBuildingGrouping.cpp" ex="false" tool="1" flavor2="4">
       </item>
+      <item path="CvBuildingInfo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="CvBuildingList.cpp" ex="false" tool="1" flavor2="4">
       </item>
       <item path="CvBuildingSort.cpp" ex="false" tool="1" flavor2="4">
@@ -1291,20 +1258,6 @@
       <item path="CvGlobals.cpp" ex="false" tool="1" flavor2="4">
       </item>
       <item path="CvHallOfFameInfo.cpp" ex="false" tool="1" flavor2="4">
-      </item>
-      <item path="CvInfoBuilding.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoCity.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoGame.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoPlayer.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoTerrain.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoUnit.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CvInfoUnitCombat.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CvInfoWater.cpp" ex="false" tool="1" flavor2="4">
       </item>
@@ -1387,6 +1340,8 @@
       <item path="CvUnitFilters.cpp" ex="false" tool="1" flavor2="4">
       </item>
       <item path="CvUnitGrouping.cpp" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="CvUnitInfo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CvUnitList.cpp" ex="false" tool="1" flavor2="4">
       </item>

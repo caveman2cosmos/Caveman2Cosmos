@@ -542,6 +542,7 @@
       <in>CvBuildingFilters.h</in>
       <in>CvBuildingGrouping.cpp</in>
       <in>CvBuildingGrouping.h</in>
+      <in>CvBuildingInfo.cpp</in>
       <in>CvBuildingList.cpp</in>
       <in>CvBuildingList.h</in>
       <in>CvBuildingSort.cpp</in>
@@ -608,21 +609,7 @@
       <in>CvGlobals.h</in>
       <in>CvHallOfFameInfo.cpp</in>
       <in>CvHallOfFameInfo.h</in>
-      <in>CvInfoBuilding.cpp</in>
-      <in>CvInfoBuilding.h</in>
-      <in>CvInfoCity.cpp</in>
-      <in>CvInfoCity.h</in>
-      <in>CvInfoGame.cpp</in>
-      <in>CvInfoGame.h</in>
-      <in>CvInfoPlayer.cpp</in>
-      <in>CvInfoPlayer.h</in>
       <in>CvInfoReplacements.h</in>
-      <in>CvInfoTerrain.cpp</in>
-      <in>CvInfoTerrain.h</in>
-      <in>CvInfoUnit.cpp</in>
-      <in>CvInfoUnit.h</in>
-      <in>CvInfoUnitCombat.cpp</in>
-      <in>CvInfoUnitCombat.h</in>
       <in>CvInfoWater.cpp</in>
       <in>CvInfoWater.h</in>
       <in>CvInfos.cpp</in>
@@ -706,6 +693,7 @@
       <in>CvUnitFilters.h</in>
       <in>CvUnitGrouping.cpp</in>
       <in>CvUnitGrouping.h</in>
+      <in>CvUnitInfo.cpp</in>
       <in>CvUnitList.cpp</in>
       <in>CvUnitList.h</in>
       <in>CvUnitSort.cpp</in>
