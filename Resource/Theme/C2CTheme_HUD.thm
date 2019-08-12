@@ -1,0 +1,2112 @@
+/********************************************************************** 
+
+Filename	:	Civ4Theme_HUD.thm
+Content		:	Civ4 HUD interface properties
+Created		:	October 2, 2005
+Authors		:	Sven Dixon
+
+Copyright	:	(c) 2005 Scaleform Corp. All Rights Reserved.
+
+Licensees may use this file in accordance with the valid Scaleform
+GFC Commercial License Agreement provided with the software.
+
+This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING 
+THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR ANY PURPOSE.
+
+For information regarding GFC Commercial License Agreements go to:
+	online - http://www.scaleform.com/licensing.html or
+	email  - sales@scaleform.com 
+
+**********************************************************************/
+
+/*
+SF_CtrlTheme_Civ4_Control
+
+GPanelCtrl
+-------
+Panel_Game_HudMap_Style
+Panel_Game_HudStat_Style
+Panel_Game_HudTC_Style
+Panel_Game_HudBC_Style
+Panel_Game_HudTR_Style
+Panel_Game_HudTL_Style
+Panel_Game_HudBR_Style
+Panel_Game_HudBL_Style
+
+GButtonCtrl
+-------
+Button_HUDEndTurn_Style
+
+Button_HUDSmall_Style
+Button_HUDBig_Style
+Button_HUDBtnPing_Style
+Button_HUDBtnGrid_Style
+Button_HUDBtnClearMap_Style
+Button_HUDBtnTileAssets_Style
+Button_HUDBtnRank_Style
+Button_HUDBtnResources_Style
+Button_HUDAdvisorDomestic_Style
+Button_HUDAdvisorFinance_Style
+Button_HUDAdvisorCivics_Style
+Button_HUDAdvisorForeign_Style
+Button_HUDAdvisorMilitary_Style
+Button_HUDAdvisorTechnology_Style
+Button_HUDAdvisorReligious_Style
+Button_HUDAdvisorCorporation_Style
+Button_HUDAdvisorEspionage_Style
+Button_HUDAdvisorVictory_Style
+Button_HUDAdvisorRecord_Style
+Button_HUDGlobeStrategy_Style
+Button_HUDGlobeUnit_Style
+Button_HUDGlobeReligion_Style
+Button_HUDGlobeCulture_Style
+Button_HUDGlobeTrade_Style
+Button_HUDZoom_Style
+
+Button_HUDLog_Style
+
+Button_HUDJump_Style
+Button_HUDJumpUnit_Style
+Button_HUDJumpBuilding_Style
+Button_HUDJumpWonder_Style
+
+Button_CityT1_Style
+Button_CityC1_Style
+Button_CityC2_Style
+Button_CityC3_Style
+Button_CityC4_Style
+Button_CityB1_Style
+Button_CityB2_Style
+Button_CityB3_Style
+Button_CityB4_Style
+Button_CityB5_Style
+Button_CityB6_Style
+*/
+
+skin SF_CtrlTheme_Civ4_Control_Button_EndTurn_Skin
+{
+	layer {
+		LayerFlags		= 	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+		DestCombine		= 	GColorCombine(BlendSource,Disable);
+		FactorCombine	= 	GColorCombine(AddSigned,Modulate);
+		FactorColor		= 	GColor(255,255,255,255);
+		Image			= 	GBitmap("../../../../Resource/Civ4/HUD/HUD_EndTurn.tga", HVGrid, 1, 1, 0, 0);
+		Margin			= 	GRectMargin(0,0,0,0);
+	}
+}
+
+// *** Panel ----------------------------------------------------------------------------------------------------------------------------
+
+with GFC_Control_Panel
+{
+	//Game Hud - Map Panel (Lower right map panel)
+	style SF_CtrlTheme_Civ4_Control_Panel_Game_HudMap_Style
+	{
+		.StyleId_Border			=	GPropertyId(GFC_Control_EmptyBorder_Style);
+		.Flag_NoInnerFill		=	0;
+
+		with GFC_CtrlTheme_Bitmap_Control_Panel_Skin_Inner
+		{
+			.Default
+			{
+				layer
+				{
+					LayerFlags		= 	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= 	GColorCombine(BlendSource,Disable);
+					Image			= 	GBitmap("GUI/Panel/HUD_Map.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= 	GRectMargin(0,0,0,0);
+				}
+			}
+			.Disable				=	.Default;
+			.Winoff					=	.Default;
+			.WinoffDisable			=	.Winoff;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Panel		=	GFC_Control_DefaultPanel_Style;
+		map GFC_Control								=	GFC_Control_DefaultPanel_Style;
+	}
+
+	//Game Hud - Stat Panel (Lower left stats for units)
+	style SF_CtrlTheme_Civ4_Control_Panel_Game_HudStat_Style
+	{
+		.StyleId_Border		= GPropertyId(GFC_Control_EmptyBorder_Style);
+		.Flag_NoInnerFill	= 0;
+
+		with GFC_CtrlTheme_Bitmap_Control_Panel_Skin_Inner
+		{
+			.Default
+			{
+				layer
+				{
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/HUD/HUD_Stat.tga", HVGrid, 1, 1, 0, 0);
+					Margin		= GRectMargin(8,24,0,8);
+				}
+			}
+			.Disable		= .Default;
+			.Winoff			= .Default;
+			.WinoffDisable	= .Winoff;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Panel	= GFC_Control_DefaultPanel_Style;
+		map GFC_Control							= GFC_Control_DefaultPanel_Style;
+	}
+
+	//Game Hud - Top center panel
+	style SF_CtrlTheme_Civ4_Control_Panel_Game_HudTC_Style
+	{
+		.StyleId_Border			=	GPropertyId(GFC_Control_EmptyBorder_Style);
+		.Flag_NoInnerFill		=	0;
+
+		with GFC_CtrlTheme_Bitmap_Control_Panel_Skin_Inner
+		{
+			.Default
+			{
+				layer 
+				{
+					LayerFlags		= 	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
+					DestCombine		= 	GColorCombine(BlendSource,Disable);
+					FactorCombine	= 	GColorCombine(Modulate,Modulate);
+					FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;
+					Image			= 	GBitmap("../../../../Resource/Civ4/HUD/HUD_top.tga", HVGrid, 2, 1, 1, 0);
+					Margin			= 	GRectMargin(0,0,0,0);
+					Indent			= 	GRectMargin(5,0,5,12);
+				}
+				layer 
+				{
+					LayerFlags		= 	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= 	GColorCombine(BlendSource,Disable);
+					Image			= 	GBitmap("../../../../Resource/Civ4/HUD/HUD_top_spires.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= 	GRectMargin(52,0,52,16);
+				}
+			}
+			.Disable				=	.Default;
+			.Winoff					=	.Default;
+			.WinoffDisable			=	.Winoff;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Panel		=	GFC_Control_DefaultPanel_Style;
+		map GFC_Control								=	GFC_Control_DefaultPanel_Style;
+	}
+
+	//Game Hud - Bottom center panel
+	style SF_CtrlTheme_Civ4_Control_Panel_Game_HudBC_Style
+	{
+		.StyleId_Border			=	GPropertyId(GFC_Control_EmptyBorder_Style);
+		.Flag_NoInnerFill		=	0;
+
+		with GFC_CtrlTheme_Bitmap_Control_Panel_Skin_Inner
+		{
+			.Default {
+				layer {
+					LayerFlags		= 	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
+					DestCombine		= 	GColorCombine(BlendSource,Disable);
+					FactorCombine	= 	GColorCombine(Modulate,Modulate);
+					FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;
+					Image			= 	GBitmap("../../../../Resource/Civ4/win_bg_TBsides.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= 	GRectMargin(0,32,0,32);
+					Indent			=	GRectMargin(0,11,0,0);
+				}
+				layer {
+					LayerFlags		= 	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= 	GColorCombine(BlendSource,Disable);
+					Image			= 	GBitmap("../../../../Resource/Civ4/HUD/HUD_bottom.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= 	GRectMargin(0,12,0,0);
+				}
+			}
+			.Disable				=	.Default;
+			.Winoff					=	.Default;
+			.WinoffDisable			=	.Winoff;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Panel		=	GFC_Control_DefaultPanel_Style;
+		map GFC_Control								=	GFC_Control_DefaultPanel_Style;
+	}
+
+	//Game Hud - Top right panel
+	style SF_CtrlTheme_Civ4_Control_Panel_Game_HudTR_Style
+	{
+		.StyleId_Border			=	GPropertyId(GFC_Control_EmptyBorder_Style);
+		.Flag_NoInnerFill		=	0;
+
+		with GFC_CtrlTheme_Bitmap_Control_Panel_Skin_Inner
+		{
+			.Default
+			{
+				layer {
+					LayerFlags		= 	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
+					DestCombine		= 	GColorCombine(BlendSource,Disable);
+					FactorCombine	= 	GColorCombine(Modulate,Modulate);
+					FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;
+					Image			= 	GBitmap("../../../../Resource/Civ4/HUD/HUD_top.tga", HVGrid, 2, 1, 0, 0);
+					Margin			= 	GRectMargin(0,0,0,32);
+					Indent			=	GRectMargin(9,0,0,21);
+				}
+				layer {
+					LayerFlags		= 	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= 	GColorCombine(BlendSource,Disable);
+					Image			= 	GBitmap("../../../../Resource/Civ4/HUD/HUD_corners.tga", HVGrid, 1, 4, 0, 3);
+					Margin			= 	GRectMargin(16,1,156,26);
+				}
+			}
+			.Disable				=	.Default;
+			.Winoff					=	.Default;
+			.WinoffDisable			=	.Winoff;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Panel		=	GFC_Control_DefaultPanel_Style;
+		map GFC_Control								=	GFC_Control_DefaultPanel_Style;
+	}
+
+	//Game Hud - Top left panel
+	style SF_CtrlTheme_Civ4_Control_Panel_Game_HudTL_Style
+	{
+		.StyleId_Border			=	GPropertyId(GFC_Control_EmptyBorder_Style);
+		.Flag_NoInnerFill		=	0;
+
+		with GFC_CtrlTheme_Bitmap_Control_Panel_Skin_Inner
+		{
+			.Default
+			{
+				layer {
+					LayerFlags		= 	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
+					DestCombine		= 	GColorCombine(BlendSource,Disable);
+					FactorCombine	= 	GColorCombine(Modulate,Modulate);
+					FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;
+					Image			= 	GBitmap("../../../../Resource/Civ4/HUD/HUD_top.tga", HVGrid, 2, 1, 0, 0);
+					Margin			= 	GRectMargin(0,0,0,32);
+					Indent			=	GRectMargin(0,0,9,21);
+				}
+				layer {
+					LayerFlags		= 	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= 	GColorCombine(BlendSource,Disable);
+					Image			= 	GBitmap("../../../../Resource/Civ4/HUD/HUD_corners.tga", HVGrid, 1, 4, 0, 2);
+					Margin			= 	GRectMargin(156,1,16,26);
+				}
+			}
+			.Disable				=	.Default;
+			.Winoff					=	.Default;
+			.WinoffDisable			=	.Winoff;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Panel		=	GFC_Control_DefaultPanel_Style;
+		map GFC_Control								=	GFC_Control_DefaultPanel_Style;
+	}
+
+	//Game Hud - Bottom right panel
+	style SF_CtrlTheme_Civ4_Control_Panel_Game_HudBR_Style
+	{
+		.StyleId_Border			=	GPropertyId(GFC_Control_EmptyBorder_Style);
+		.Flag_NoInnerFill		=	0;
+
+		with GFC_CtrlTheme_Bitmap_Control_Panel_Skin_Inner
+		{
+			.Default
+			{
+				layer {
+					LayerFlags		= 	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
+					DestCombine		= 	GColorCombine(BlendSource,Disable);
+					FactorCombine	= 	GColorCombine(Modulate,Modulate);
+					FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;
+					Image			= 	GBitmap("../../../../Resource/Civ4/win_bg_TBsides.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= 	GRectMargin(0,32,0,32);
+					Indent			=	GRectMargin(9,21,0,0);
+				}
+				layer {
+					LayerFlags		= 	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= 	GColorCombine(BlendSource,Disable);
+					Image			= 	GBitmap("../../../../Resource/Civ4/HUD/HUD_corners.tga", HVGrid, 1, 4, 0, 1);
+					Margin			= 	GRectMargin(16,26,156,1);
+				}
+			}
+			.Disable				=	.Default;
+			.Winoff					=	.Default;
+			.WinoffDisable			=	.Winoff;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Panel		=	GFC_Control_DefaultPanel_Style;
+		map GFC_Control								=	GFC_Control_DefaultPanel_Style;
+	}
+
+	//Game Hud - Bottom left panel
+	style SF_CtrlTheme_Civ4_Control_Panel_Game_HudBL_Style
+	{
+		.StyleId_Border			=	GPropertyId(GFC_Control_EmptyBorder_Style);
+		.Flag_NoInnerFill		=	0;
+
+		with GFC_CtrlTheme_Bitmap_Control_Panel_Skin_Inner
+		{
+			.Default
+			{
+				layer {
+					LayerFlags		= 	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
+					DestCombine		= 	GColorCombine(BlendSource,Disable);
+					FactorCombine	= 	GColorCombine(Modulate,Modulate);
+					FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;
+					Image			= 	GBitmap("../../../../Resource/Civ4/win_bg_TBsides.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= 	GRectMargin(0,32,0,32);
+					Indent			=	GRectMargin(0,21,9,0);
+				}
+				layer {
+					LayerFlags		= 	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= 	GColorCombine(BlendSource,Disable);
+					Image			= 	GBitmap("../../../../Resource/Civ4/HUD/HUD_corners.tga", HVGrid, 1, 4, 0, 0);
+					Margin			= 	GRectMargin(156,26,16,1);
+				}
+			}
+			.Disable				=	.Default;
+			.Winoff					=	.Default;
+			.WinoffDisable			=	.Winoff;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Panel		=	GFC_Control_DefaultPanel_Style;
+		map GFC_Control								=	GFC_Control_DefaultPanel_Style;
+	}
+
+} //End Panel Control
+
+// *** Button ----------------------------------------------------------------------------------------------------------------------------
+
+with GFC_Control_Button
+{
+	// HUD Evil Eye (end turn)
+	style SF_CtrlTheme_Civ4_Control_Button_HUDEndTurn_Style
+	{
+		GFC_Control_Renderer_Control				= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+		GFC_Control_Flag_Mask_InvalidateControl		= GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/HUD/HUD_EndTurn_btn.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= GRectMargin(0,0,0,0);
+				}
+			}
+			.Press					= .Default;
+			.Rollover				= .Press;
+			.Disable				= .Press;
+			.Focus					= .Press;
+			.FocusPress				= .Press;
+			.FocusRollover			= .Press;
+			.FocusDisable			= .Press;
+
+			.Toggle					= .Press;
+			.ToggleRollover			= .Press;
+			.TogglePress			= .Press;
+			.ToggleDisable			= .Press;
+			.ToggleFocus			= .Press;
+			.ToggleFocusRollover	= .Press;
+			.ToggleFocusPress		= .Press;
+			.ToggleFocusDisable		= .Press;
+
+			.Inactive				= .Press;
+			.InactiveRollover		= .Press;
+			.InactivePress			= .Press;
+			.InactiveDisable		= .Press;
+			.InactiveToggle			= .Press;
+			.InactiveToggleRollover	= .Press;
+			.InactiveTogglePress	= .Press;
+			.InactiveToggleDisable	= .Press;
+
+			.Winoff					= .Press;
+			.WinoffRollover			= .Press;
+			.WinoffPress			= .Press;
+			.WinoffDisable			= .Press;
+			.WinoffToggle			= .Press;
+			.WinoffToggleRollover	= .Press;
+			.WinoffTogglePress		= .Press;
+			.WinoffToggleDisable	= .Press;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+		map GFC_Control							= GFC_Control_DefaultButton_Style;
+	}
+
+	// HUD Buttons
+	style SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style
+	{
+		GFC_Control_Renderer_Control				=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+		GFC_Control_Flag_Mask_InvalidateControl		=	GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		.Size_BorderMargin							=	GRectMargin(0,0,0,0);
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/HUD/HUD_button.tga", HVGrid, 1, 4, 0, 0);
+					Margin			= GRectMargin(0,0,0,0);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer {}
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine		= GColorCombine(Add,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/HUD/HUD_button.tga", HVGrid, 1, 4, 0, 1);
+					Margin			= GRectMargin(0,0,0,0);
+				}
+			}
+			.Press
+			{
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/HUD/HUD_button.tga", HVGrid, 1, 4, 0, 2);
+					Margin			= GRectMargin(0,0,0,0);
+				}
+			}
+			.Disable
+			{
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/HUD/HUD_button.tga", HVGrid, 1, 4, 0, 3);
+					Margin			= GRectMargin(0,0,0,0);
+				}
+			}
+			.Focus					= .Rollover;
+			.FocusPress				= .Press;
+			.FocusRollover			= .Rollover;
+			.FocusDisable			= .Disable;
+
+			.Toggle					= .Default;
+			.ToggleRollover			= .Rollover;
+			.TogglePress			= .Press;
+			.ToggleDisable			= .Disable;
+			.ToggleFocus			= .Toggle;
+			.ToggleFocusRollover	= .ToggleRollover;
+			.ToggleFocusPress		= .TogglePress;
+			.ToggleFocusDisable		= .FocusDisable;
+
+			.Inactive				= .Default;
+			.InactiveRollover		= .Rollover;
+			.InactivePress			= .Press;
+			.InactiveDisable		= .Disable;
+			.InactiveToggle			= .Toggle;
+			.InactiveToggleRollover	= .ToggleRollover;
+			.InactiveTogglePress	= .TogglePress;
+			.InactiveToggleDisable	= .ToggleDisable;
+
+			.Winoff					= .Default;
+			.WinoffRollover			= .Rollover;
+			.WinoffPress			= .Press;
+			.WinoffDisable			= .Disable;
+			.WinoffToggle			= .Toggle;
+			.WinoffToggleRollover	= .ToggleRollover;
+			.WinoffTogglePress		= .TogglePress;
+			.WinoffToggleDisable	= .ToggleDisable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+		map GFC_Control							= GFC_Control_DefaultButton_Style;
+	}
+
+	// HUD Button for zoom
+	style SF_CtrlTheme_Civ4_Control_Button_HUDBig_Style
+	{
+		GFC_Control_Renderer_Control				=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;		
+		GFC_Control_Flag_Mask_InvalidateControl		=	GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		.Size_BorderMargin							=	GRectMargin(0,0,0,0);
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/HUD/HUD_zoom_btn.tga", HVGrid, 1, 4, 0, 0);
+					Margin			= GRectMargin(0,0,0,0);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer {}
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine		= GColorCombine(Add,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/HUD/HUD_zoom_btn.tga", HVGrid, 1, 4, 0, 1);
+					Margin			= GRectMargin(0,0,0,0);
+				}
+			}
+			.Press
+			{
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/HUD/HUD_zoom_btn.tga", HVGrid, 1, 4, 0, 2);
+					Margin			= GRectMargin(0,0,0,0);
+				}
+			}
+			.Disable
+			{
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/HUD/HUD_zoom_btn.tga", HVGrid, 1, 4, 0, 3);
+					Margin			= GRectMargin(0,0,0,0);
+				}
+			}
+			.Focus					= .Rollover;
+			.FocusPress				= .Press;
+			.FocusRollover			= .Rollover;
+			.FocusDisable			= .Disable;
+
+			.Toggle					= .Default;
+			.ToggleRollover			= .Rollover;
+			.TogglePress			= .Press;
+			.ToggleDisable			= .Disable;
+			.ToggleFocus			= .Toggle;
+			.ToggleFocusRollover	= .ToggleRollover;
+			.ToggleFocusPress		= .TogglePress;
+			.ToggleFocusDisable		= .FocusDisable;
+
+			.Inactive				= .Default;
+			.InactiveRollover		= .Rollover;
+			.InactivePress			= .Press;
+			.InactiveDisable		= .Disable;
+			.InactiveToggle			= .Toggle;
+			.InactiveToggleRollover	= .ToggleRollover;
+			.InactiveTogglePress	= .TogglePress;
+			.InactiveToggleDisable	= .ToggleDisable;
+
+			.Winoff					= .Default;
+			.WinoffRollover			= .Rollover;
+			.WinoffPress			= .Press;
+			.WinoffDisable			= .Disable;
+			.WinoffToggle			= .Toggle;
+			.WinoffToggleRollover	= .ToggleRollover;
+			.WinoffTogglePress		= .TogglePress;
+			.WinoffToggleDisable	= .ToggleDisable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+		map GFC_Control							= GFC_Control_DefaultButton_Style;
+	}
+
+	//HUD Button - Ping
+	style SF_CtrlTheme_Civ4_Control_Button_HUDBtnPing_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 9, 0);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 9, 1);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 9, 2);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 9, 3);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 9, 4);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button				=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control										=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Button - Grid
+	style SF_CtrlTheme_Civ4_Control_Button_HUDBtnGrid_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 0, 5);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 0, 6);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 0, 7);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 0, 8);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 0, 9);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button				=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control										=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Button - Clear Map
+	style SF_CtrlTheme_Civ4_Control_Button_HUDBtnClearMap_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 1, 5);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 1, 6);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 1, 7);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 1, 8);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 1, 9);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button				=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control										=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Button - Tile Assets
+	style SF_CtrlTheme_Civ4_Control_Button_HUDBtnTileAssets_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 2, 5);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 2, 6);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 2, 7);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 2, 8);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 2, 9);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button				=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control										=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Button - Rank
+	style SF_CtrlTheme_Civ4_Control_Button_HUDBtnRank_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 3, 5);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 3, 6);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 3, 7);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 3, 8);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 3, 9);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button				=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control										=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Button - Resources
+	style SF_CtrlTheme_Civ4_Control_Button_HUDBtnResources_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 4, 5);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 4, 6);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 4, 7);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 4, 8);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 4, 9);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button				=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control										=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Advisor Button - Domestic
+	style SF_CtrlTheme_Civ4_Control_Button_HUDAdvisorDomestic_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 0, 0);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 0, 1);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 0, 2);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 0, 3);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 0, 4);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button				=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control										=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Advisor Button - Finance
+	style SF_CtrlTheme_Civ4_Control_Button_HUDAdvisorFinance_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 1, 0);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 1, 1);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 1, 2);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 1, 3);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 1, 4);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button				=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control										=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Advisor Button - Civics
+	style SF_CtrlTheme_Civ4_Control_Button_HUDAdvisorCivics_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 2, 0);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 2, 1);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 2, 2);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 2, 3);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 2, 4);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button				=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control										=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Advisor Button - Foreign
+	style SF_CtrlTheme_Civ4_Control_Button_HUDAdvisorForeign_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 3, 0);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 3, 1);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 3, 2);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 3, 3);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 3, 4);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button				=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control										=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Advisor Button - Military
+	style SF_CtrlTheme_Civ4_Control_Button_HUDAdvisorMilitary_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 4, 0);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 4, 1);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 4, 2);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 4, 3);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 4, 4);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button				=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control										=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Advisor Button - Technology
+	style SF_CtrlTheme_Civ4_Control_Button_HUDAdvisorTechnology_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 5, 0);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 5, 1);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 5, 2);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 5, 3);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 5, 4);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button				=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control										=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Advisor Button - Religious
+	style SF_CtrlTheme_Civ4_Control_Button_HUDAdvisorReligious_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 6, 0);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 6, 1);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 6, 2);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 6, 3);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 6, 4);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button				=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control										=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Advisor Button - Corporation
+	style SF_CtrlTheme_Civ4_Control_Button_HUDAdvisorCorporation_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../Resource/Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 1, 0);
+			.Rollover				= GBitmap("../../../Resource/Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 1, 1);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../Resource/Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 1, 2);
+			.Toggle					= GBitmap("../../../Resource/Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 1, 3);
+			.ToggleRollover			= GBitmap("../../../Resource/Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 1, 4);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control							=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Advisor Button - Espionage
+	style SF_CtrlTheme_Civ4_Control_Button_HUDAdvisorEspionage_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../Resource/Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 0, 0);
+			.Rollover				= GBitmap("../../../Resource/Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 0, 1);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../Resource/Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 0, 2);
+			.Toggle					= GBitmap("../../../Resource/Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 0, 3);
+			.ToggleRollover			= GBitmap("../../../Resource/Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 0, 4);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control							=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Buy-Sell Unit Button
+	style SF_CtrlTheme_Civ4_Control_Button_HUDBuySellUnit_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../Resource/Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 2, 0);
+			.Rollover				= GBitmap("../../../Resource/Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 2, 1);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../Resource/Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 2, 2);
+			.Toggle					= GBitmap("../../../Resource/Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 2, 3);
+			.ToggleRollover			= GBitmap("../../../Resource/Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 2, 4);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control							=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Advisor Button - Victory
+	style SF_CtrlTheme_Civ4_Control_Button_HUDAdvisorVictory_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 7, 0);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 7, 1);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 7, 2);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 7, 3);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 7, 4);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control							=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Advisor Button - Record
+	style SF_CtrlTheme_Civ4_Control_Button_HUDAdvisorRecord_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 8, 0);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 8, 1);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 8, 2);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 8, 3);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 8, 4);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control							=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Globe Button - Strategy
+	style SF_CtrlTheme_Civ4_Control_Button_HUDGlobeStrategy_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 5, 5);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 5, 6);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 5, 7);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 5, 8);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 5, 9);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control							=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Globe Button - Unit
+	style SF_CtrlTheme_Civ4_Control_Button_HUDGlobeUnit_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 6, 5);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 6, 6);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 6, 7);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 6, 8);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 6, 9);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control							=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Globe Button - Religion
+	style SF_CtrlTheme_Civ4_Control_Button_HUDGlobeReligion_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 7, 5);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 7, 6);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 7, 7);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 7, 8);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 7, 9);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control							=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Globe Button - Culture
+	style SF_CtrlTheme_Civ4_Control_Button_HUDGlobeCulture_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 8, 5);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 8, 6);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 8, 7);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 8, 8);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 8, 9);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control							=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Globe Button - Trade
+	style SF_CtrlTheme_Civ4_Control_Button_HUDGlobeTrade_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 9, 5);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 9, 6);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 9, 7);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 9, 8);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/HUD_icons.tga", HVGrid, 10, 10, 9, 9);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control							=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Zoom Button
+	style SF_CtrlTheme_Civ4_Control_Button_HUDZoom_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_zoom.tga", HVGrid, 1, 5, 0, 0);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/HUD_zoom.tga", HVGrid, 1, 5, 0, 1);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/HUD_zoom.tga", HVGrid, 1, 5, 0, 2);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/HUD_zoom.tga", HVGrid, 1, 5, 0, 3);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/HUD_zoom.tga", HVGrid, 1, 5, 0, 4);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	=	SF_CtrlTheme_Civ4_Control_Button_HUDBig_Style;
+		map GFC_Control							=	SF_CtrlTheme_Civ4_Control_Button_HUDBig_Style;
+	}
+
+	//HUD Log Button
+	style SF_CtrlTheme_Civ4_Control_Button_HUDLog_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_log.tga", HVGrid, 1, 5, 0, 0);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/HUD_log.tga", HVGrid, 1, 5, 0, 1);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/HUD_log.tga", HVGrid, 1, 5, 0, 2);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/HUD_log.tga", HVGrid, 1, 5, 0, 3);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/HUD_log.tga", HVGrid, 1, 5, 0, 4);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control							=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	// HUD Jump Button
+	style SF_CtrlTheme_Civ4_Control_Button_HUDJump_Style
+	{
+		GFC_Control_Renderer_Control				=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+		GFC_Control_Flag_Mask_InvalidateControl		=	GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		.Size_BorderMargin							=	GRectMargin(0,0,0,0);
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/HUD/HUD_jump_btn.tga", HVGrid, 1, 3, 0, 0);
+					Margin			= GRectMargin(0,0,0,0);
+				}
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate,Modulate);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_HUDBorder;
+					Image			= GBitmap("../../../../Resource/Civ4/HUD/HUD_jump_btn.tga", HVGrid, 1, 3, 0, 1);
+					Margin			= GRectMargin(0,0,0,0);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer {}
+				layer {}
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine		= GColorCombine(Add,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/HUD/HUD_jump_btn.tga", HVGrid, 1, 3, 0, 2);
+					Margin			= GRectMargin(0,0,0,0);
+				}
+
+			}
+			.Press					= .Default;
+			.Disable				= .Default;
+			.Focus					= .Rollover;
+			.FocusPress				= .Press;
+			.FocusRollover			= .Rollover;
+			.FocusDisable			= .Disable;
+
+			.Toggle					= .Default;
+			.ToggleRollover			= .Rollover;
+			.TogglePress			= .Press;
+			.ToggleDisable			= .Disable;
+			.ToggleFocus			= .Toggle;
+			.ToggleFocusRollover	= .ToggleRollover;
+			.ToggleFocusPress		= .TogglePress;
+			.ToggleFocusDisable		= .FocusDisable;
+
+			.Inactive				= .Default;
+			.InactiveRollover		= .Rollover;
+			.InactivePress			= .Press;
+			.InactiveDisable		= .Disable;
+			.InactiveToggle			= .Toggle;
+			.InactiveToggleRollover	= .ToggleRollover;
+			.InactiveTogglePress	= .TogglePress;
+			.InactiveToggleDisable	= .ToggleDisable;
+
+			.Winoff					= .Default;
+			.WinoffRollover			= .Rollover;
+			.WinoffPress			= .Press;
+			.WinoffDisable			= .Disable;
+			.WinoffToggle			= .Toggle;
+			.WinoffToggleRollover	= .ToggleRollover;
+			.WinoffTogglePress		= .TogglePress;
+			.WinoffToggleDisable	= .ToggleDisable;
+		}
+
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+		map GFC_Control							= GFC_Control_DefaultButton_Style;
+	}
+
+	//HUD Jump Button - Unit
+	style SF_CtrlTheme_Civ4_Control_Button_HUDJumpUnit_Style
+	{
+
+		with GFC_Control_Button_Image
+		{
+			.Default		= GBitmap("../../../../Resource/Civ4/HUD/HUD_jump.tga", HVGrid, 3, 1, 0, 0);
+			.Rollover		= .Default;
+			.Press			= .Default;
+			.Disable		= .Default;
+			.Toggle			= .Default;
+			.ToggleRollover	= .Default;
+			.TogglePress	= .Default;
+			.ToggleDisable	= .Default;
+		}
+
+		map GFC_CtrlTheme_Bitmap_Control_Button	= SF_CtrlTheme_Civ4_Control_Button_HUDJump_Style;
+		map GFC_Control							= SF_CtrlTheme_Civ4_Control_Button_HUDJump_Style;
+	}
+
+	//HUD Jump Button - Building
+	style SF_CtrlTheme_Civ4_Control_Button_HUDJumpBuilding_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_jump.tga", HVGrid, 3, 1, 1, 0);
+			.Rollover				= .Default;
+			.Press					= .Default;
+			.Disable				= .Default;
+			.Toggle					= .Default;
+			.ToggleRollover			= .Default;
+			.TogglePress			= .Default;
+			.ToggleDisable			= .Default;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	=	SF_CtrlTheme_Civ4_Control_Button_HUDJump_Style;
+		map GFC_Control							=	SF_CtrlTheme_Civ4_Control_Button_HUDJump_Style;
+	}
+
+	//HUD Jump Button - Wonder
+	style SF_CtrlTheme_Civ4_Control_Button_HUDJumpWonder_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/HUD_jump.tga", HVGrid, 3, 1, 2, 0);
+			.Rollover				= .Default;
+			.Press					= .Default;
+			.Disable				= .Default;
+			.Toggle					= .Default;
+			.ToggleRollover			= .Default;
+			.TogglePress			= .Default;
+			.ToggleDisable			= .Default;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	=	SF_CtrlTheme_Civ4_Control_Button_HUDJump_Style;
+		map GFC_Control							=	SF_CtrlTheme_Civ4_Control_Button_HUDJump_Style;
+	}
+
+
+// *** City Buttons *** \\
+	// Draft btn
+	style SF_CtrlTheme_Civ4_Control_Button_CityT1_Style
+	{
+		GFC_Control_Renderer_Control			= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+		GFC_Control_Flag_Mask_InvalidateControl	= GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		.Size_BorderMargin						= GRectMargin(0,0,0,0);
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/HUD/city_btn01.tga", HVGrid, 1, 4, 0, 0);
+					Margin		= GRectMargin(0,0,0,0);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn01.tga", HVGrid, 1, 4, 0, 1); }
+			}
+			.Press
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn01.tga", HVGrid, 1, 4, 0, 2); }
+			}
+			.Disable
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn01.tga", HVGrid, 1, 4, 0, 3); }
+			}
+			.Focus					= .Rollover;
+			.FocusPress				= .Press;
+			.FocusRollover			= .Rollover;
+			.FocusDisable			= .Disable;
+
+			.Toggle					= .Default;
+			.ToggleRollover			= .Rollover;
+			.TogglePress			= .Press;
+			.ToggleDisable			= .Disable;
+			.ToggleFocus			= .Toggle;
+			.ToggleFocusRollover	= .ToggleRollover;
+			.ToggleFocusPress		= .TogglePress;
+			.ToggleFocusDisable		= .FocusDisable;
+
+			.Inactive				= .Default;
+			.InactiveRollover		= .Rollover;
+			.InactivePress			= .Press;
+			.InactiveDisable		= .Disable;
+			.InactiveToggle			= .Toggle;
+			.InactiveToggleRollover	= .ToggleRollover;
+			.InactiveTogglePress	= .TogglePress;
+			.InactiveToggleDisable	= .ToggleDisable;
+
+			.Winoff					= .Default;
+			.WinoffRollover			= .Rollover;
+			.WinoffPress			= .Press;
+			.WinoffDisable			= .Disable;
+			.WinoffToggle			= .Toggle;
+			.WinoffToggleRollover	= .ToggleRollover;
+			.WinoffTogglePress		= .TogglePress;
+			.WinoffToggleDisable	= .ToggleDisable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+		map GFC_Control							= GFC_Control_DefaultButton_Style;
+	}
+
+	// City Buttons
+	style SF_CtrlTheme_Civ4_Control_Button_CityBtn02_Style
+	{
+		GFC_Control_Renderer_Control			= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+		GFC_Control_Flag_Mask_InvalidateControl	= GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		.Size_BorderMargin						= GRectMargin(0,0,0,0);
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/HUD/city_btn02.tga", HVGrid, 1, 4, 0, 0);
+					Margin		= GRectMargin(0,0,0,0);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn02.tga", HVGrid, 1, 4, 0, 1); }
+			}
+			.Press
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn02.tga", HVGrid, 1, 4, 0, 2); }
+			}
+			.Disable
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn02.tga", HVGrid, 1, 4, 0, 3); }
+			}
+			.Focus					= .Rollover;
+			.FocusPress				= .Press;
+			.FocusRollover			= .Rollover;
+			.FocusDisable			= .Disable;
+
+			.Toggle					= .Default;
+			.ToggleRollover			= .Rollover;
+			.TogglePress			= .Press;
+			.ToggleDisable			= .Disable;
+			.ToggleFocus			= .Toggle;
+			.ToggleFocusRollover	= .ToggleRollover;
+			.ToggleFocusPress		= .TogglePress;
+			.ToggleFocusDisable		= .FocusDisable;
+
+			.Inactive				= .Default;
+			.InactiveRollover		= .Rollover;
+			.InactivePress			= .Press;
+			.InactiveDisable		= .Disable;
+			.InactiveToggle			= .Toggle;
+			.InactiveToggleRollover	= .ToggleRollover;
+			.InactiveTogglePress	= .TogglePress;
+			.InactiveToggleDisable	= .ToggleDisable;
+
+			.Winoff					= .Default;
+			.WinoffRollover			= .Rollover;
+			.WinoffPress			= .Press;
+			.WinoffDisable			= .Disable;
+			.WinoffToggle			= .Toggle;
+			.WinoffToggleRollover	= .ToggleRollover;
+			.WinoffTogglePress		= .TogglePress;
+			.WinoffToggleDisable	= .ToggleDisable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+		map GFC_Control							= GFC_Control_DefaultButton_Style;
+	}
+
+	// City Buttons
+	style SF_CtrlTheme_Civ4_Control_Button_CityBtn03_Style
+	{
+		GFC_Control_Renderer_Control			= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;		
+		GFC_Control_Flag_Mask_InvalidateControl	= GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		.Size_BorderMargin						= GRectMargin(0,0,0,0);
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/HUD/city_btn03.tga", HVGrid, 1, 4, 0, 0);
+					Margin		= GRectMargin(0,0,0,0);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit	= .Default; }
+				layer { Image	= GBitmap("../../../../Resource/Civ4/HUD/city_btn03.tga", HVGrid, 1, 4, 0, 1); }
+			}
+			.Press
+			{
+				layer { Inherit	= .Default; }
+				layer { Image	= GBitmap("../../../../Resource/Civ4/HUD/city_btn03.tga", HVGrid, 1, 4, 0, 2); }
+			}
+			.Disable
+			{
+				layer { Inherit = .Default; }
+				layer { Image	= GBitmap("../../../../Resource/Civ4/HUD/city_btn03.tga", HVGrid, 1, 4, 0, 3); }
+			}
+			.Focus					= .Rollover;
+			.FocusPress				= .Press;
+			.FocusRollover			= .Rollover;
+			.FocusDisable			= .Disable;
+
+			.Toggle					= .Default;
+			.ToggleRollover			= .Rollover;
+			.TogglePress			= .Press;
+			.ToggleDisable			= .Disable;
+			.ToggleFocus			= .Toggle;
+			.ToggleFocusRollover	= .ToggleRollover;
+			.ToggleFocusPress		= .TogglePress;
+			.ToggleFocusDisable		= .FocusDisable;
+
+			.Inactive				= .Default;
+			.InactiveRollover		= .Rollover;
+			.InactivePress			= .Press;
+			.InactiveDisable		= .Disable;
+			.InactiveToggle			= .Toggle;
+			.InactiveToggleRollover	= .ToggleRollover;
+			.InactiveTogglePress	= .TogglePress;
+			.InactiveToggleDisable	= .ToggleDisable;
+
+			.Winoff					= .Default;
+			.WinoffRollover			= .Rollover;
+			.WinoffPress			= .Press;
+			.WinoffDisable			= .Disable;
+			.WinoffToggle			= .Toggle;
+			.WinoffToggleRollover	= .ToggleRollover;
+			.WinoffTogglePress		= .TogglePress;
+			.WinoffToggleDisable	= .ToggleDisable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+		map GFC_Control							= GFC_Control_DefaultButton_Style;
+	}
+
+	// City Buttons
+	style SF_CtrlTheme_Civ4_Control_Button_CityBtn04_Style
+	{
+		GFC_Control_Renderer_Control			= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+		GFC_Control_Flag_Mask_InvalidateControl	= GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		.Size_BorderMargin						= GRectMargin(0,0,0,0);
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/HUD/city_btn04.tga", HVGrid, 1, 4, 0, 0);
+					Margin		= GRectMargin(0,0,0,0);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn04.tga", HVGrid, 1, 4, 0, 1); }
+			}
+			.Press
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn04.tga", HVGrid, 1, 4, 0, 2); }
+			}
+			.Disable
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn04.tga", HVGrid, 1, 4, 0, 3); }
+			}
+			.Focus					= .Rollover;
+			.FocusPress				= .Press;
+			.FocusRollover			= .Rollover;
+			.FocusDisable			= .Disable;
+
+			.Toggle					= .Default;
+			.ToggleRollover			= .Rollover;
+			.TogglePress			= .Press;
+			.ToggleDisable			= .Disable;
+			.ToggleFocus			= .Toggle;
+			.ToggleFocusRollover	= .ToggleRollover;
+			.ToggleFocusPress		= .TogglePress;
+			.ToggleFocusDisable		= .FocusDisable;
+
+			.Inactive				= .Default;
+			.InactiveRollover		= .Rollover;
+			.InactivePress			= .Press;
+			.InactiveDisable		= .Disable;
+			.InactiveToggle			= .Toggle;
+			.InactiveToggleRollover	= .ToggleRollover;
+			.InactiveTogglePress	= .TogglePress;
+			.InactiveToggleDisable	= .ToggleDisable;
+
+			.Winoff					= .Default;
+			.WinoffRollover			= .Rollover;
+			.WinoffPress			= .Press;
+			.WinoffDisable			= .Disable;
+			.WinoffToggle			= .Toggle;
+			.WinoffToggleRollover	= .ToggleRollover;
+			.WinoffTogglePress		= .TogglePress;
+			.WinoffToggleDisable	= .ToggleDisable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+		map GFC_Control							= GFC_Control_DefaultButton_Style;
+	}
+
+	// City Buttons
+	style SF_CtrlTheme_Civ4_Control_Button_CityBtn05_Style
+	{
+		GFC_Control_Renderer_Control			= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+		GFC_Control_Flag_Mask_InvalidateControl	= GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		.Size_BorderMargin						= GRectMargin(0,0,0,0);
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/HUD/city_btn05.tga", HVGrid, 1, 4, 0, 0);
+					Margin		= GRectMargin(0,0,0,0);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn05.tga", HVGrid, 1, 4, 0, 1); }
+			}
+			.Press
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn05.tga", HVGrid, 1, 4, 0, 2); }
+			}
+			.Disable
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn05.tga", HVGrid, 1, 4, 0, 3); }
+			}
+			.Focus					= .Rollover;
+			.FocusPress				= .Press;
+			.FocusRollover			= .Rollover;
+			.FocusDisable			= .Disable;
+
+			.Toggle					= .Default;
+			.ToggleRollover			= .Rollover;
+			.TogglePress			= .Press;
+			.ToggleDisable			= .Disable;
+			.ToggleFocus			= .Toggle;
+			.ToggleFocusRollover	= .ToggleRollover;
+			.ToggleFocusPress		= .TogglePress;
+			.ToggleFocusDisable		= .FocusDisable;
+
+			.Inactive				= .Default;
+			.InactiveRollover		= .Rollover;
+			.InactivePress			= .Press;
+			.InactiveDisable		= .Disable;
+			.InactiveToggle			= .Toggle;
+			.InactiveToggleRollover	= .ToggleRollover;
+			.InactiveTogglePress	= .TogglePress;
+			.InactiveToggleDisable	= .ToggleDisable;
+
+			.Winoff					= .Default;
+			.WinoffRollover			= .Rollover;
+			.WinoffPress			= .Press;
+			.WinoffDisable			= .Disable;
+			.WinoffToggle			= .Toggle;
+			.WinoffToggleRollover	= .ToggleRollover;
+			.WinoffTogglePress		= .TogglePress;
+			.WinoffToggleDisable	= .ToggleDisable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+		map GFC_Control							= GFC_Control_DefaultButton_Style;
+	}
+
+	// City Buttons
+	style SF_CtrlTheme_Civ4_Control_Button_CityBtn06_Style
+	{
+		GFC_Control_Renderer_Control			= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+		GFC_Control_Flag_Mask_InvalidateControl	= GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		.Size_BorderMargin						= GRectMargin(0,0,0,0);
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/HUD/city_btn06.tga", HVGrid, 1, 4, 0, 0);
+					Margin		= GRectMargin(0,0,0,0);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn06.tga", HVGrid, 1, 4, 0, 1); }
+			}
+			.Press
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn06.tga", HVGrid, 1, 4, 0, 2); }
+			}
+			.Disable
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn06.tga", HVGrid, 1, 4, 0, 3); }
+			}
+			.Focus					= .Rollover;
+			.FocusPress				= .Press;
+			.FocusRollover			= .Rollover;
+			.FocusDisable			= .Disable;
+
+			.Toggle					= .Default;
+			.ToggleRollover			= .Rollover;
+			.TogglePress			= .Press;
+			.ToggleDisable			= .Disable;
+			.ToggleFocus			= .Toggle;
+			.ToggleFocusRollover	= .ToggleRollover;
+			.ToggleFocusPress		= .TogglePress;
+			.ToggleFocusDisable		= .FocusDisable;
+
+			.Inactive				= .Default;
+			.InactiveRollover		= .Rollover;
+			.InactivePress			= .Press;
+			.InactiveDisable		= .Disable;
+			.InactiveToggle			= .Toggle;
+			.InactiveToggleRollover	= .ToggleRollover;
+			.InactiveTogglePress	= .TogglePress;
+			.InactiveToggleDisable	= .ToggleDisable;
+
+			.Winoff					= .Default;
+			.WinoffRollover			= .Rollover;
+			.WinoffPress			= .Press;
+			.WinoffDisable			= .Disable;
+			.WinoffToggle			= .Toggle;
+			.WinoffToggleRollover	= .ToggleRollover;
+			.WinoffTogglePress		= .TogglePress;
+			.WinoffToggleDisable	= .ToggleDisable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+		map GFC_Control							= GFC_Control_DefaultButton_Style;
+	}
+
+	// City Buttons
+	style SF_CtrlTheme_Civ4_Control_Button_CityBtn07_Style
+	{
+		GFC_Control_Renderer_Control			= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+		GFC_Control_Flag_Mask_InvalidateControl	= GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		.Size_BorderMargin						= GRectMargin(0,0,0,0);
+
+		
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/HUD/city_btn07.tga", HVGrid, 1, 4, 0, 0);
+					Margin		= GRectMargin(0,0,0,0);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn07.tga", HVGrid, 1, 4, 0, 1); }
+			}
+			.Press
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn07.tga", HVGrid, 1, 4, 0, 2); }
+			}
+			.Disable
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn07.tga", HVGrid, 1, 4, 0, 3); }
+			}
+			.Focus					= .Rollover;
+			.FocusPress				= .Press;
+			.FocusRollover			= .Rollover;
+			.FocusDisable			= .Disable;
+
+			.Toggle					= .Default;
+			.ToggleRollover			= .Rollover;
+			.TogglePress			= .Press;
+			.ToggleDisable			= .Disable;
+			.ToggleFocus			= .Toggle;
+			.ToggleFocusRollover	= .ToggleRollover;
+			.ToggleFocusPress		= .TogglePress;
+			.ToggleFocusDisable		= .FocusDisable;
+
+			.Inactive				= .Default;
+			.InactiveRollover		= .Rollover;
+			.InactivePress			= .Press;
+			.InactiveDisable		= .Disable;
+			.InactiveToggle			= .Toggle;
+			.InactiveToggleRollover	= .ToggleRollover;
+			.InactiveTogglePress	= .TogglePress;
+			.InactiveToggleDisable	= .ToggleDisable;
+
+			.Winoff					= .Default;
+			.WinoffRollover			= .Rollover;
+			.WinoffPress			= .Press;
+			.WinoffDisable			= .Disable;
+			.WinoffToggle			= .Toggle;
+			.WinoffToggleRollover	= .ToggleRollover;
+			.WinoffTogglePress		= .TogglePress;
+			.WinoffToggleDisable	= .ToggleDisable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+		map GFC_Control							= GFC_Control_DefaultButton_Style;
+	}
+
+	// City Buttons
+	style SF_CtrlTheme_Civ4_Control_Button_CityBtn08_Style
+	{
+		GFC_Control_Renderer_Control			= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+		GFC_Control_Flag_Mask_InvalidateControl	= GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		.Size_BorderMargin						= GRectMargin(0,0,0,0);
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/HUD/city_btn08.tga", HVGrid, 1, 4, 0, 0);
+					Margin		= GRectMargin(0,0,0,0);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn08.tga", HVGrid, 1, 4, 0, 1); }
+			}
+			.Press
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn08.tga", HVGrid, 1, 4, 0, 2); }
+			}
+			.Disable
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn08.tga", HVGrid, 1, 4, 0, 3); }
+			}
+			.Focus					= .Rollover;
+			.FocusPress				= .Press;
+			.FocusRollover			= .Rollover;
+			.FocusDisable			= .Disable;
+
+			.Toggle					= .Default;
+			.ToggleRollover			= .Rollover;
+			.TogglePress			= .Press;
+			.ToggleDisable			= .Disable;
+			.ToggleFocus			= .Toggle;
+			.ToggleFocusRollover	= .ToggleRollover;
+			.ToggleFocusPress		= .TogglePress;
+			.ToggleFocusDisable		= .FocusDisable;
+
+			.Inactive				= .Default;
+			.InactiveRollover		= .Rollover;
+			.InactivePress			= .Press;
+			.InactiveDisable		= .Disable;
+			.InactiveToggle			= .Toggle;
+			.InactiveToggleRollover	= .ToggleRollover;
+			.InactiveTogglePress	= .TogglePress;
+			.InactiveToggleDisable	= .ToggleDisable;
+
+			.Winoff					= .Default;
+			.WinoffRollover			= .Rollover;
+			.WinoffPress			= .Press;
+			.WinoffDisable			= .Disable;
+			.WinoffToggle			= .Toggle;
+			.WinoffToggleRollover	= .ToggleRollover;
+			.WinoffTogglePress		= .TogglePress;
+			.WinoffToggleDisable	= .ToggleDisable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+		map GFC_Control							= GFC_Control_DefaultButton_Style;
+	}
+
+	// City Buttons
+	style SF_CtrlTheme_Civ4_Control_Button_CityBtn09_Style
+	{
+		GFC_Control_Renderer_Control			= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+		GFC_Control_Flag_Mask_InvalidateControl	= GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		.Size_BorderMargin						= GRectMargin(0,0,0,0);
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/HUD/city_btn09.tga", HVGrid, 1, 4, 0, 0);
+					Margin		= GRectMargin(0,0,0,0);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn09.tga", HVGrid, 1, 4, 0, 1); }
+
+			}
+			.Press
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn09.tga", HVGrid, 1, 4, 0, 2); }
+			}
+			.Disable
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn09.tga", HVGrid, 1, 4, 0, 3); }
+			}
+			.Focus					= .Rollover;
+			.FocusPress				= .Press;
+			.FocusRollover			= .Rollover;
+			.FocusDisable			= .Disable;
+
+			.Toggle					= .Default;
+			.ToggleRollover			= .Rollover;
+			.TogglePress			= .Press;
+			.ToggleDisable			= .Disable;
+			.ToggleFocus			= .Toggle;
+			.ToggleFocusRollover	= .ToggleRollover;
+			.ToggleFocusPress		= .TogglePress;
+			.ToggleFocusDisable		= .FocusDisable;
+
+			.Inactive				= .Default;
+			.InactiveRollover		= .Rollover;
+			.InactivePress			= .Press;
+			.InactiveDisable		= .Disable;
+			.InactiveToggle			= .Toggle;
+			.InactiveToggleRollover	= .ToggleRollover;
+			.InactiveTogglePress	= .TogglePress;
+			.InactiveToggleDisable	= .ToggleDisable;
+
+			.Winoff					= .Default;
+			.WinoffRollover			= .Rollover;
+			.WinoffPress			= .Press;
+			.WinoffDisable			= .Disable;
+			.WinoffToggle			= .Toggle;
+			.WinoffToggleRollover	= .ToggleRollover;
+			.WinoffTogglePress		= .TogglePress;
+			.WinoffToggleDisable	= .ToggleDisable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+		map GFC_Control							= GFC_Control_DefaultButton_Style;
+	}
+
+	// City Buttons
+	style SF_CtrlTheme_Civ4_Control_Button_CityBtn10_Style
+	{
+		GFC_Control_Renderer_Control			= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+		GFC_Control_Flag_Mask_InvalidateControl	= GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		.Size_BorderMargin						= GRectMargin(0,0,0,0);
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/HUD/city_btn10.tga", HVGrid, 1, 4, 0, 0);
+					Margin		= GRectMargin(0,0,0,0);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn10.tga", HVGrid, 1, 4, 0, 1); }
+			}
+			.Press
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn10.tga", HVGrid, 1, 4, 0, 2); }
+			}
+			.Disable
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn10.tga", HVGrid, 1, 4, 0, 3); }
+			}
+			.Focus					= .Rollover;
+			.FocusPress				= .Press;
+			.FocusRollover			= .Rollover;
+			.FocusDisable			= .Disable;
+
+			.Toggle					= .Default;
+			.ToggleRollover			= .Rollover;
+			.TogglePress			= .Press;
+			.ToggleDisable			= .Disable;
+			.ToggleFocus			= .Toggle;
+			.ToggleFocusRollover	= .ToggleRollover;
+			.ToggleFocusPress		= .TogglePress;
+			.ToggleFocusDisable		= .FocusDisable;
+
+			.Inactive				= .Default;
+			.InactiveRollover		= .Rollover;
+			.InactivePress			= .Press;
+			.InactiveDisable		= .Disable;
+			.InactiveToggle			= .Toggle;
+			.InactiveToggleRollover	= .ToggleRollover;
+			.InactiveTogglePress	= .TogglePress;
+			.InactiveToggleDisable	= .ToggleDisable;
+
+			.Winoff					= .Default;
+			.WinoffRollover			= .Rollover;
+			.WinoffPress			= .Press;
+			.WinoffDisable			= .Disable;
+			.WinoffToggle			= .Toggle;
+			.WinoffToggleRollover	= .ToggleRollover;
+			.WinoffTogglePress		= .TogglePress;
+			.WinoffToggleDisable	= .ToggleDisable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+		map GFC_Control							= GFC_Control_DefaultButton_Style;
+	}
+
+	// City Buttons
+	style SF_CtrlTheme_Civ4_Control_Button_CityBtn11_Style
+	{
+		GFC_Control_Renderer_Control				=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+		GFC_Control_Flag_Mask_InvalidateControl		=	GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		.Size_BorderMargin							=	GRectMargin(0,0,0,0);
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/HUD/city_btn11.tga", HVGrid, 1, 4, 0, 0);
+					Margin			= GRectMargin(0,0,0,0);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn11.tga", HVGrid, 1, 4, 0, 1); }
+			}
+			.Press
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn11.tga", HVGrid, 1, 4, 0, 2); }
+			}
+			.Disable
+			{
+				layer { Inherit = .Default; }
+				layer { Image = GBitmap("../../../../Resource/Civ4/HUD/city_btn11.tga", HVGrid, 1, 4, 0, 3); }
+			}
+			.Focus					= .Rollover;
+			.FocusPress				= .Press;
+			.FocusRollover			= .Rollover;
+			.FocusDisable			= .Disable;
+
+			.Toggle					= .Default;
+			.ToggleRollover			= .Rollover;
+			.TogglePress			= .Press;
+			.ToggleDisable			= .Disable;
+			.ToggleFocus			= .Toggle;
+			.ToggleFocusRollover	= .ToggleRollover;
+			.ToggleFocusPress		= .TogglePress;
+			.ToggleFocusDisable		= .FocusDisable;
+
+			.Inactive				= .Default;
+			.InactiveRollover		= .Rollover;
+			.InactivePress			= .Press;
+			.InactiveDisable		= .Disable;
+			.InactiveToggle			= .Toggle;
+			.InactiveToggleRollover	= .ToggleRollover;
+			.InactiveTogglePress	= .TogglePress;
+			.InactiveToggleDisable	= .ToggleDisable;
+
+			.Winoff					= .Default;
+			.WinoffRollover			= .Rollover;
+			.WinoffPress			= .Press;
+			.WinoffDisable			= .Disable;
+			.WinoffToggle			= .Toggle;
+			.WinoffToggleRollover	= .ToggleRollover;
+			.WinoffTogglePress		= .TogglePress;
+			.WinoffToggleDisable	= .ToggleDisable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+		map GFC_Control							= GFC_Control_DefaultButton_Style;
+	}
+
+	style SF_CtrlTheme_Civ4_Control_Button_CityC1_Style
+	{// Hurry gold
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 0, 0);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 0, 1);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 0, 2);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 0, 3);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 0, 4);
+			.TogglePress			= .Default;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= SF_CtrlTheme_Civ4_Control_Button_CityBtn02_Style;
+		map GFC_Control							= SF_CtrlTheme_Civ4_Control_Button_CityBtn02_Style;
+	}
+
+	//City Icons
+	style SF_CtrlTheme_Civ4_Control_Button_CityC2_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 1, 0);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 1, 1);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 1, 2);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 1, 3);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 1, 4);
+			.TogglePress			= .Default;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	=	SF_CtrlTheme_Civ4_Control_Button_CityBtn03_Style;
+		map GFC_Control							=	SF_CtrlTheme_Civ4_Control_Button_CityBtn03_Style;
+	}
+
+	//City Icons
+	style SF_CtrlTheme_Civ4_Control_Button_CityC3_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default		= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 2, 0);
+			.Rollover		= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 2, 1);
+			.Press			= .Default;
+			.Disable		= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 2, 2);
+			.Toggle			= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 2, 3);
+			.ToggleRollover	= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 2, 4);
+			.TogglePress	= .Default;
+			.ToggleDisable	= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= SF_CtrlTheme_Civ4_Control_Button_CityBtn04_Style;
+		map GFC_Control							= SF_CtrlTheme_Civ4_Control_Button_CityBtn04_Style;
+	}
+
+	//City Icons
+	style SF_CtrlTheme_Civ4_Control_Button_CityC4_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default		= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 3, 0);
+			.Rollover		= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 3, 1);
+			.Press			= .Default;
+			.Disable		= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 3, 2);
+			.Toggle			= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 3, 3);
+			.ToggleRollover	= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 3, 4);
+			.TogglePress	= .Default;
+			.ToggleDisable	= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= SF_CtrlTheme_Civ4_Control_Button_CityBtn05_Style;
+		map GFC_Control							= SF_CtrlTheme_Civ4_Control_Button_CityBtn05_Style;
+	}
+
+	//City Icons
+	style SF_CtrlTheme_Civ4_Control_Button_CityB1_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default		= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 4, 0);
+			.Rollover		= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 4, 1);
+			.Press			= .Default;
+			.Disable		= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 4, 2);
+			.Toggle			= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 4, 3);
+			.ToggleRollover	= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 4, 4);
+			.TogglePress	= .Default;
+			.ToggleDisable	= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= SF_CtrlTheme_Civ4_Control_Button_CityBtn06_Style;
+		map GFC_Control							= SF_CtrlTheme_Civ4_Control_Button_CityBtn06_Style;
+	}
+
+	//City Icons
+	style SF_CtrlTheme_Civ4_Control_Button_CityB2_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default		= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 5, 0);
+			.Rollover		= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 5, 1);
+			.Press			= .Default;
+			.Disable		= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 5, 2);
+			.Toggle			= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 5, 3);
+			.ToggleRollover	= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 5, 4);
+			.TogglePress	= .Default;
+			.ToggleDisable	= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= SF_CtrlTheme_Civ4_Control_Button_CityBtn07_Style;
+		map GFC_Control							= SF_CtrlTheme_Civ4_Control_Button_CityBtn07_Style;
+	}
+
+	//City Icons
+	style SF_CtrlTheme_Civ4_Control_Button_CityB3_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 6, 0);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 6, 1);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 6, 2);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 6, 3);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 6, 4);
+			.TogglePress			= .Default;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	=	SF_CtrlTheme_Civ4_Control_Button_CityBtn08_Style;
+		map GFC_Control							=	SF_CtrlTheme_Civ4_Control_Button_CityBtn08_Style;
+	}
+
+	//City Icons
+	style SF_CtrlTheme_Civ4_Control_Button_CityB4_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 7, 0);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 7, 1);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 7, 2);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 7, 3);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 7, 4);
+			.TogglePress			= .Default;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	=	SF_CtrlTheme_Civ4_Control_Button_CityBtn09_Style;
+		map GFC_Control							=	SF_CtrlTheme_Civ4_Control_Button_CityBtn09_Style;
+	}
+
+	//City Icons
+	style SF_CtrlTheme_Civ4_Control_Button_CityB5_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 8, 0);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 8, 1);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 8, 2);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 8, 3);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 8, 4);
+			.TogglePress			= .Default;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	=	SF_CtrlTheme_Civ4_Control_Button_CityBtn10_Style;
+		map GFC_Control							=	SF_CtrlTheme_Civ4_Control_Button_CityBtn10_Style;
+	}
+
+	//City Icons
+	style SF_CtrlTheme_Civ4_Control_Button_CityB6_Style
+	{
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 9, 0);
+			.Rollover				= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 9, 1);
+			.Press					= .Default;
+			.Disable				= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 9, 2);
+			.Toggle					= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 9, 3);
+			.ToggleRollover			= GBitmap("../../../../Resource/Civ4/HUD/city_icons.tga", HVGrid, 10, 5, 9, 4);
+			.TogglePress			= .Default;
+			.ToggleDisable			= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	=	SF_CtrlTheme_Civ4_Control_Button_CityBtn11_Style;
+		map GFC_Control							=	SF_CtrlTheme_Civ4_Control_Button_CityBtn11_Style;
+	}
+} //End Button Control

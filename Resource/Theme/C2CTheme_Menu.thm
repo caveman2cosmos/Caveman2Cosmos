@@ -1,0 +1,716 @@
+/********************************************************************** 
+
+Filename	:	Civ4Theme_Menu.thm
+Content		:	Civ4 - GMenu and GMenuBar control theme
+Created		:	May 1, 2005
+Authors		:	Sven Dixon
+
+Copyright	:	(c) 2005 Scaleform Corp. All Rights Reserved.
+
+**********************************************************************/
+
+
+// *** Main Menu control namespace 
+
+with GFC_Control_Menu
+{
+
+	GFC_Control_DefaultMenu_Style
+	{
+		GFC_Control_Update_ChildLayout	= GFC_CtrlTheme_Bitmap_Control_Menu_Update_ChildLayout;
+		GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Menu_Renderer_Control;
+
+		with .Renderer
+		{	// Item renderers
+			.SeparatorItem				= GFC_CtrlTheme_Bitmap_Control_Menu_Renderer_SeparatorItem;
+			.TextItem					= GFC_CtrlTheme_Bitmap_Control_Menu_Renderer_TextItem;
+		}
+		.Child_Border					= GFC_CtrlTheme_Bitmap_Control_Menu_Child_Border;
+
+		with .StyleId
+		{
+			.Border						= GPropertyId(GFC_Control_StandardBorder_Style);
+			.Table						= GPropertyId(GFC_Control_StandardTable_Style);
+		}
+		with GFC_Control_Flag
+		{	// Base control flags
+			.Transparent					= GFlags(GCtrl, GFC_CF_TRANSPARENT);
+			.SolidInner						= 0;	//GFlags(GCtrl, GFC_CF_SOLIDINNER);
+			.SolidBackground				= 0;	//GFlags(GCtrl, GFC_CF_SOLIDBACKGROUND);
+			.RegionClip						= GFlags(GCtrl, GFC_CF_REGIONCLIP);
+			.RegionClipParent				= 0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+			.NoExternalWindow				= GFlags(GCtrl, GFC_CF_NOEXTERNALWINDOW);
+			.HitTest						= 0;	//GFlags(GCtrl, GFC_CF_HITTEST);
+			.TopLayer						= 0;	//GFlags(GCtrl, GFC_CF_TOPLAYER);
+			.TopLayerBitmap					= 0;	//GFlags(GCtrl, GFC_CF_TOPLAYERBITMAP);
+			.BottomLayerBitmap				= 0;	//GFlags(GCtrl, GFC_CF_BOTTOMLAYERBITMAP);
+			// Control flag change masks
+			.Mask_InvalidateControl			= GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		}
+		with .Flag
+		{	// Menu control flags
+			.NoInnerFill						= 0;	//GFlags(GMenuCtrl, GFC_CF_MENU_NOINNERFILL);
+			.NoBorder							= 0;	//GFlags(GMenuCtrl, GFC_CF_MENU_NOBORDER);
+			.Select_OnShow						= 0;	//GFlags(GMenuCtrl, GFC_CF_MENU_SELECT_ONSHOW);
+			.Select_DisabledItems				= GFlags(GMenuCtrl, GFC_CF_MENU_SELECT_DISABLEDITEMS);
+			.Select_ToggleMenu					= 0;	//GFlags(GMenuCtrl, GFC_CF_MENU_SELECT_TOGGLEMENU);
+			.Rollover							= 0;	//GFlags(GMenuCtrl, GFC_CF_MENU_ROLLOVER);
+			.PopupFocus_ByMouse					= 0;	//GFlags(GMenuCtrl, GFC_CF_MENU_POPUPFOCUS_BYMOUSE);
+			.PopupFocus_ByKeyboard				= GFlags(GMenuCtrl, GFC_CF_MENU_POPUPFOCUS_BYKEYBOARD);
+			.AutoPopup_ByKeyboard				= 0;	//GFlags(GMenuCtrl, GFC_CF_MENU_AUTOPOPUP_BYKEYBOARD);
+			.AutoPopup_ByMouse					= GFlags(GMenuCtrl, GFC_CF_MENU_AUTOPOPUP_BYMOUSE);
+			.PopupAutoSelect_ByKeyboard			= GFlags(GMenuCtrl, GFC_CF_MENU_POPUPAUTOSELECT_BYKEYBOARD);
+			.HidePopupOnLoseFocus_ByKeyboard	= GFlags(GMenuCtrl, GFC_CF_MENU_HIDEPOPUP_ONLOSEFOCUS_BYKEYBOARD);
+		}
+		with .Size
+		{
+			.Minimum							=	GSize(60,12);
+			.Margin								=	GRectMargin(1,1,1,1);
+			.TextSpace							=	10;
+			.TextMinimum						=	24;
+			.TextMargin							=	GRectMargin(0,3,0,3);
+			.ImageColumn						=	28;
+			.ImageSpace							=	1;
+			.ArrowColumn						=	26;
+			.ArrowSpace							=	3;
+			.Separator							=	2;
+			.SubMenuMargin						=	GRectMargin(0,0,0,0);
+			.ExtentMargin						=	GRectMargin(4,4,4,4);
+		}
+		with .Delay
+		{
+			.DropDown							=	400;
+			.DraggingDropDown					=	0;
+			.HideMenu							=	400;
+		}
+		with .Color
+		{
+			.Inner_Default						=	GFC_Control_Color_Surface;
+			.Inner_Select						=	GFC_Control_Color_Inner_Select;
+			.Inner_InactiveSelect				=	GFC_Control_Color_Inner_InactiveSelect;
+			.Inner_Disable						=	GFC_Control_Color_Inner_Disable;
+			.Inner_DisableSelect				=	GFC_Control_Color_Inner_DisableSelect;
+													
+			.Text_Default						=	GFC_Control_Color_Text_Default;  //GFC_Control_Color_Text_Default;
+			.Text_Select						=	SF_CtrlTheme_Civ4_Control_Color_SelectText;
+			.Text_InactiveSelect				=	SF_CtrlTheme_Civ4_Control_Color_SelectText;
+			.Text_Disable						=	GFC_Control_Color_Text_Disable;
+			.Text_DisableSelect					=	GFC_Control_Color_Text_Disable;
+													
+			.TextShadow_Default					=	GFC_Control_Color_TextShadow_Default;		//GFC_Control_Color_TextShadow_Default;
+			.TextShadow_Select					=	GFC_Control_Color_TextShadow_Default;
+			.TextShadow_InactiveSelect			=	GFC_Control_Color_TextShadow_Default;
+			.TextShadow_Disable					=	GFC_Control_Color_TextShadow_Disable;
+			.TextShadow_DisableSelect			=	GFC_Control_Color_TextShadow_Disable;
+													
+			.Image_Default						=	GFC_Control_Color_Image_Default;
+			.Image_Select						=	SF_CtrlTheme_Civ4_Control_Color_SelectText;
+			.Image_InactiveSelect				=	SF_CtrlTheme_Civ4_Control_Color_SelectText;
+			.Image_Disable						=	GFC_Control_Color_Image_Disable;
+			.Image_DisableSelect				=	GFC_Control_Color_Image_DisableSelect;
+														
+			// Toggle item colors (check & radio items)
+			.ToggleImage_Default				=	GFC_Control_Color_Text_Default;
+			.ToggleImage_Select					=	SF_CtrlTheme_Civ4_Control_Color_SelectText;
+			.ToggleImage_InactiveSelect			=	SF_CtrlTheme_Civ4_Control_Color_SelectText;
+			.ToggleImage_Disable				=	GFC_Control_Color_Text_Disable;
+			.ToggleImage_DisableSelect			=	GFC_Control_Color_Text_Disable;
+
+			.Separator							=	GFC_Control_Color_Text_Default;
+			.SeparatorShadow					=	GFC_Control_Color_TextShadow_Default;
+		}
+		with .Combine
+		{
+			.Inner_Default						=	GFC_Control_Combine_Surface;
+			.Inner_Select						=	GFC_Control_Combine_Surface;
+			.Inner_InactiveSelect				=	GFC_Control_Combine_Inner_InactiveSelect;
+			.Inner_Disable						=	GFC_Control_Combine_Inner_Disable;
+			.Inner_DisableSelect				=	GFC_Control_Combine_Inner_DisableSelect;
+
+			.Text_Default_Dest					=	GFC_Control_Combine_Text_Default_Dest;
+			.Text_Default_Factor				=	GFC_Control_Combine_Text_Default_Factor;
+			.Text_Select_Dest					=	GFC_Control_Combine_Text_Default_Dest;
+			.Text_Select_Factor					=	GFC_Control_Combine_Text_Default_Factor;
+			.Text_InactiveSelect_Dest			=	GFC_Control_Combine_Text_InactiveSelect_Dest;
+			.Text_InactiveSelect_Factor			=	GFC_Control_Combine_Text_InactiveSelect_Factor;
+			.Text_Disable_Dest					=	GFC_Control_Combine_Text_Disable_Dest;
+			.Text_Disable_Factor				=	GFC_Control_Combine_Text_Disable_Factor;
+			.Text_DisableSelect_Dest			=	GFC_Control_Combine_Text_DisableSelect_Dest;
+			.Text_DisableSelect_Factor			=	GFC_Control_Combine_Text_DisableSelect_Factor;
+
+			.TextShadow_Default_Dest			=	GFC_Control_Combine_TextShadow_Default_Dest;
+			.TextShadow_Default_Factor			=	GFC_Control_Combine_TextShadow_Default_Factor;
+			.TextShadow_Select_Dest				=	GFC_Control_Combine_TextShadow_Default_Dest;
+			.TextShadow_Select_Factor			=	GFC_Control_Combine_TextShadow_Default_Factor;
+			.TextShadow_InactiveSelect_Dest		=	GFC_Control_Combine_TextShadow_InactiveSelect_Dest;
+			.TextShadow_InactiveSelect_Factor	=	GFC_Control_Combine_TextShadow_InactiveSelect_Factor;
+			.TextShadow_Disable_Dest			=	GFC_Control_Combine_TextShadow_Disable_Dest;
+			.TextShadow_Disable_Factor			=	GFC_Control_Combine_TextShadow_Disable_Factor;
+			.TextShadow_DisableSelect_Dest		=	GFC_Control_Combine_TextShadow_DisableSelect_Dest;
+			.TextShadow_DisableSelect_Factor	=	GFC_Control_Combine_TextShadow_DisableSelect_Factor;
+
+			.Image_Default_Dest					=	GFC_Control_Combine_Image_Default_Dest;
+			.Image_Default_Factor				=	GFC_Control_Combine_Image_Default_Factor;
+			.Image_Select_Dest					=	GFC_Control_Combine_Image_Select_Dest;
+			.Image_Select_Factor				=	GFC_Control_Combine_Image_Select_Factor;
+			.Image_InactiveSelect_Dest			=	GFC_Control_Combine_Image_InactiveSelect_Dest;
+			.Image_InactiveSelect_Factor		=	GFC_Control_Combine_Image_InactiveSelect_Factor;
+			.Image_Disable_Dest					=	GFC_Control_Combine_Image_Disable_Dest;
+			.Image_Disable_Factor				=	GFC_Control_Combine_Image_Disable_Factor;
+			.Image_DisableSelect_Dest			=	GFC_Control_Combine_Image_DisableSelect_Dest;
+			.Image_DisableSelect_Factor			=	GFC_Control_Combine_Image_DisableSelect_Factor;
+			// Toggle item combines (check & radio items)
+			.ToggleImage_Default_Dest			=	GFC_Control_Combine_Image_Default_Dest;
+			.ToggleImage_Default_Factor			=	GFC_Control_Combine_Image_Default_Factor;
+			.ToggleImage_Select_Dest			=	GFC_Control_Combine_Image_Select_Dest;
+			.ToggleImage_Select_Factor			=	.ToggleImage_Default_Factor;
+			.ToggleImage_InactiveSelect_Dest	=	GFC_Control_Combine_Image_InactiveSelect_Dest;
+			.ToggleImage_InactiveSelect_Factor	=	.ToggleImage_Default_Factor;
+			.ToggleImage_Disable_Dest			=	GFC_Control_Combine_Image_Disable_Dest;
+			.ToggleImage_Disable_Factor			=	.ToggleImage_Default_Factor;
+			.ToggleImage_DisableSelect_Dest		=	GFC_Control_Combine_Image_DisableSelect_Dest;
+			.ToggleImage_DisableSelect_Factor	=	.ToggleImage_Default_Factor;
+			// Separator
+			.Separator							=	GFC_Control_Combine_Surface;
+			.SeparatorShadow					=	GFC_Control_Combine_Surface;
+		}
+		// Menu check and radio button icons
+		with .Image
+		{
+			.CheckItem_Default					=	GBitmap();
+			.CheckItem_Disable					=	.CheckItem_Default;
+			.CheckItem_Toggle					=	GBitmap("../../../../Resource/Civ4/Menu_Checkbox.tga", Vertical, 3, 0);
+			.CheckItem_ToggleDisable			=	GBitmap("../../../../Resource/Civ4/Menu_Checkbox.tga", Vertical, 3, 2);
+
+			.RadioItem_Default					=	.CheckItem_Default;
+			.RadioItem_Disable					=	.RadioItem_Default;
+			.RadioItem_Toggle					=	GBitmap("../../../../Resource/Civ4/Menu_Radiobutton.tga", Vertical, 3, 0);
+			.RadioItem_ToggleDisable			=	GBitmap("../../../../Resource/Civ4/Menu_Radiobutton.tga", Vertical, 3, 2);
+		}
+		// Fonts
+		.Font_Default							=	SF_CtrlTheme_Civ4_Control_Font_Size2_Normal;
+		.Font_Select							=	.Font_Default;
+
+		// ******* Initialize all the Bitmap theme Menu properties to avoid inheritance problems
+		with GFC_CtrlTheme_Bitmap_Control_Menu_Skin
+		{
+			.Inner_Default						=	0;
+			.Inner_Disable						=	0;
+			.Inner_Inactive						=	0;
+			.Inner_InactiveDisable				=	0;
+
+			.TextItem_Default					=	0;
+			.TextItem_Select					=	0;
+			.TextItem_Submenuselect				=	0;
+			.TextItem_Disable					=	0;
+			.TextItem_DisableSelect				=	0;
+
+			.SeparatorItem_Default				=	0;
+			.SeparatorItem_Disable				=	0;
+
+			.Arrow_Default						=	0;
+			.Arrow_Select						=	0;
+			.Arrow_Submenuselect				=	0;
+			.Arrow_Disable						=	0;
+			.Arrow_DisableSelect				=	0;
+
+			.Check_Default						=	0;
+			.Check_Disable						=	0;
+			.Check_Toggle						=	0;
+			.Check_ToggleDisable				=	0;
+
+			.Radio_Default						=	0;
+			.Radio_Disable						=	0;
+			.Radio_Toggle						=	0;
+			.Radio_ToggleDisable				=	0;
+		}
+		map GFC_Control			=	GFC_Control_DefaultControl_Style;
+	}	// end GFC_Control_DefaultMenu_Style
+
+
+
+// Normal Menu border
+
+style SF_CtrlTheme_Civ4_Control_Menu_Standard_Border_Style
+{
+	GFC_Control_Flag_RegionClipParent		=	GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+	GFC_Control_Flag_TopLayerBitmap			=	GFlags(GCtrl, GFC_CF_TOPLAYER_BITMAP);
+
+	GFC_Control_Border_Size_Margin			=	GRectMargin(6,6,6,6);
+
+	with GFC_CtrlTheme_Bitmap_Control_Border_Skin
+	{
+		.Full_Default
+		{
+			layer
+			{
+				LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
+				FactorColor		=	SF_CtrlTheme_Civ4_Control_Color_BG;
+				Margin			=	GRectMargin(6,2,6,2);
+				Indent			=	GRectMargin(0,4,0,4);
+			}
+			layer
+			{
+				LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+				DestCombine		=	GColorCombine(BlendSource,Disable);
+				FactorCombine	= 	GColorCombine(Modulate,Modulate);
+				FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;		
+				Image			=	GBitmap("../../../../Resource/Civ4/menu_bg_TB.tga", HVGrid, 1, 1, 0, 0);
+				Margin			=	GRectMargin(2,2,2,2);
+				Indent			=	GRectMargin(1,4,1,4);
+				LeftFlags		=	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_EMPTY);
+				RightFlags		=	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_EMPTY);
+			}
+			layer
+			{
+				LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+				DestCombine		=	GColorCombine(BlendSource,Disable);
+				FactorCombine	= 	GColorCombine(Modulate,Modulate);
+				FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;		
+				Image			=	GBitmap("../../../../Resource/Civ4/menu_bg_LR.tga", HVGrid, 1, 1, 0, 0);
+				Margin			=	GRectMargin(5,30,5,30);
+				Indent			=	GRectMargin(1,6,1,6);
+			}
+
+			layer
+			{
+				LayerFlags		= 	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_PARTIAL);
+				DestCombine		= 	GColorCombine(BlendSource,Disable);
+				Image			= 	GBitmap("../../../../Resource/Civ4/menu.tga", HVGrid, 1, 3, 0, 0);
+				Margin			= 	GRectMargin(6,6,6,6);
+			}
+			layer
+			{
+				LayerFlags		= 	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_REGION);
+				DestCombine		= 	GColorCombine(BlendSource,Disable);
+				Image			= 	GBitmap("../../../../Resource/Civ4/menu.tga", HVGrid, 1, 3, 0, 1);
+				Margin			= 	GRectMargin(6,6,6,6);
+			}
+			layer					
+			{					
+				LayerFlags  	=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST, 
+															GFC_BITMAPSKIN_BACKCAPS_REGION, GFC_BITMAPSKIN_REGION_TRANSPARENT, GFC_BITMAPSKIN_COLORKEY);
+				Image			= 	GBitmap("../../../../Resource/Civ4/menu.tga", HVGrid, 1, 3, 0, 2);
+				Margin			= 	GRectMargin(6,6,6,6);
+				ColorKey		= 	GColor(0,0,0,0);
+				ColorKeyMax		= 	GColor(0,0,0,128);
+				ColorKeyMask	= 	GColor(0,0,0,255);
+			}
+		}
+		.Full_Disable				=	.Full_Default;
+		.Full_Inactive				=	.Full_Default;
+		.Full_InactiveDisable		=	.Full_Disable;
+		.Full_Winoff				=	.Full_Default;
+		.Full_WinoffDisable			=	.Full_Disable;	
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Border		=	GFC_Control_DefaultBorder_Style;
+	map GFC_Control								=	GFC_Control_DefaultBorder_Style;
+}
+
+
+style SF_CtrlTheme_Civ4_Control_Menu_Standard_Table_Style
+{
+	GFC_Control_Flag_Transparent				=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+	
+	GFC_Control_Table_Flag_NoInnerBorder		=	GFlags(GTableCtrl, GFC_CF_TABLE_NOINNERBORDER);
+	GFC_Control_Table_Flag_NoInnerFill			=	GFlags(GTableCtrl, GFC_CF_TABLE_NOINNERFILL);
+
+	map GFC_CtrlTheme_Bitmap_Control_Table		=	GFC_Control_DefaultTable_Style;
+	map GFC_Control								=	GFC_Control_DefaultTable_Style;
+}
+
+
+
+	// ** Normal Menu style
+
+	GFC_Control_StandardMenu_Style
+	{
+		.StyleId_Table		=	GPropertyId(SF_CtrlTheme_Civ4_Control_Menu_Standard_Table_Style);
+		.StyleId_Border		=	GPropertyId(SF_CtrlTheme_Civ4_Control_Menu_Standard_Border_Style);
+	
+		with GFC_CtrlTheme_Bitmap_Control_Menu_Skin_Inner
+		{
+			.Default
+			{
+				layer
+				{
+					LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
+					CenterColor		=	SF_CtrlTheme_Civ4_Control_Color_BG; 
+				}
+				layer
+				{
+					LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
+					DestCombine		=	GColorCombine(BlendSource, Disable);
+					FactorCombine	= 	GColorCombine(Modulate,Modulate);
+					FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;
+					Image			=	GBitmap("../../../../Resource/Civ4/menu_bg_inner.tga", HVGrid, 1, 1, 0, 0);
+					Margin			=	GRectMargin(1,30,1,30); // (L, T, R, B)
+				}
+			}
+			.Disable				=	.Default;
+			.Inactive				=	.Default;
+			.InactiveDisable		=	.Default;
+		}
+
+		// Arrow items
+		with GFC_CtrlTheme_Bitmap_Control_Menu_Skin_Arrow
+		{
+			.Default
+			{
+				layer
+				{
+					DestCombine 	=	GColorCombine(BlendSource,Disable);
+					Center			=	GBitmap("../../../../Resource/Civ4/menu_arrow.tga", Vertical, 3, 0);
+				}				
+			}					
+			.Select					
+			{					
+				layer				
+				{				
+					DestCombine 	=	GColorCombine(BlendSource,Disable);
+					FactorCombine	= 	GColorCombine(Modulate,Modulate);
+					FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_SelectText;
+					Center			=	GBitmap("../../../../Resource/Civ4/menu_arrow.tga", Vertical, 3, 1);
+				}				
+			}					
+			.Submenuselect			=	.Select;
+			.Disable				
+			{					
+				layer				
+				{				
+					DestCombine 	=	GColorCombine(BlendSource,Disable);
+					FactorCombine	= 	GColorCombine(Modulate,Modulate);
+					FactorColor		= 	GFC_Control_Color_Text_Disable;
+					Center			=	GBitmap("../../../../Resource/Civ4/menu_arrow.tga", Vertical, 3, 2);
+				}
+			}
+			.DisableSelect			=	.Disable;
+		}
+		
+		
+		// Item skins
+		
+		// String item backgrounds
+		with GFC_CtrlTheme_Bitmap_Control_Menu_Skin_TextItem
+		{
+			.Default
+			{
+				layer 
+				{
+					LayerFlags = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_NOTVISIBLE);
+				}
+			}
+			.Select
+			{
+				layer {
+					LayerFlags						= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE);
+					DestCombine						= GColorCombine(BlendSource,Disable);
+					FactorCombine					= GColorCombine(Modulate,Modulate);
+					FactorColor						= SF_CtrlTheme_Civ4_Control_Color_Select;
+					Image							= GBitmap("../../../../Resource/Civ4/menu_selection.tga", HVGrid, 1, 1, 0, 0);
+					Margin							= GRectMargin(48,0,48,0);
+				}	
+			}
+			.Submenuselect			=	.Select;
+			.Disable				=	.Default;
+			.DisableSelect
+			{
+				layer {
+					LayerFlags						= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE);
+					DestCombine						= GColorCombine(BlendSource,Disable);
+					FactorCombine					= GColorCombine(Modulate,Modulate);
+					FactorColor						= SF_CtrlTheme_Civ4_Control_Color_DisableSelect;
+					Image							= GBitmap("../../../../Resource/Civ4/menu_selection.tga", HVGrid, 1, 1, 0, 0);
+					Margin							= GRectMargin(48,0,48,0);
+				}	
+			}
+		}
+		
+		// Separator items
+		
+		with GFC_CtrlTheme_Bitmap_Control_Menu_Skin_SeparatorItem
+		{
+			.Default
+			{
+				layer
+				{
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					Image			= GBitmap("../../../../Resource/Civ4/separator_h.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= GRectMargin(48,0,48,0);
+				}
+			}		
+			.Disable				= .Default;
+		}
+		
+		
+		map SF_CtrlTheme_Civ4_Control				=	GFC_Control_DefaultMenu_Style;		
+		map GFC_CtrlTheme_Bitmap_Control_Menu		=	GFC_Control_DefaultMenu_Style;
+		map GFC_Control								=	GFC_Control_DefaultMenu_Style;
+	}
+}
+
+
+
+with GFC_Control_MenuBar
+{
+
+	GFC_Control_DefaultMenuBar_Style
+	{
+		GFC_Control_Renderer_Control			=	GFC_CtrlTheme_Bitmap_Control_MenuBar_Renderer_Control;
+
+		with .Renderer
+		{
+			// Item renderers
+			.SeparatorItem						=	GFC_CtrlTheme_Bitmap_Control_MenuBar_Renderer_SeparatorItem;
+			.TextItem							=	GFC_CtrlTheme_Bitmap_Control_MenuBar_Renderer_TextItem;
+		}
+
+		with .Child
+		{
+			.Border								=	GFC_CtrlTheme_Bitmap_Control_MenuBar_Child_Border;
+			.Table								=	GFC_CtrlTheme_Bitmap_Control_MenuBar_Child_Table;
+		}
+
+		with .StyleId
+		{
+			.Border								=	GPropertyId(GFC_Control_StandardBorder_Style);
+			.Table								=	GPropertyId(GFC_Control_StandardTable_Style);
+		}
+
+		GFC_Control_Update_ChildLayout			=	GFC_CtrlTheme_Bitmap_Control_MenuBar_Update_ChildLayout;
+
+		with GFC_Control_Flag
+		{
+			// Base control flags
+			.Transparent						=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+			.SolidInner							=	0;	//GFlags(GCtrl, GFC_CF_SOLIDINNER);
+			.SolidBackground					=	0;	//GFlags(GCtrl, GFC_CF_SOLIDBACKGROUND);
+			.RegionClip							=	0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP);
+			.RegionClipParent					=	0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+			.NoExternalWindow					=	0;	//GFlags(GCtrl, GFC_CF_NOEXTERNALWINDOW);
+			.HitTest							=	0;	//GFlags(GCtrl, GFC_CF_HITTEST);
+			.TopLayer							=	0;	//GFlags(GCtrl, GFC_CF_TOPLAYER);
+			.TopLayerBitmap						=	0;	//GFlags(GCtrl, GFC_CF_TOPLAYERBITMAP);
+			.BottomLayerBitmap					=	0;	//GFlags(GCtrl, GFC_CF_BOTTOMLAYERBITMAP);
+
+			// Control flag change masks
+			.Mask_InvalidateControl				=	GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		}
+
+		with .Flag
+		{
+			// MenuBar control flags
+			.NoBorder							=	GFlags(GMenuBarCtrl, GFC_CF_MENUBAR_NOBORDER);
+			.NoInnerFill						=	GFlags(GMenuBarCtrl, GFC_CF_MENUBAR_NOINNERFILL);
+			.Rollover							=	GFlags(GMenuBarCtrl, GFC_CF_MENUBAR_ROLLOVER);
+			.RolloverAutoPopup					=	0;	//GFlags(GMenuBarCtrl, GFC_CF_MENUBAR_ROLLOVERAUTOPOPUP);
+			.Select_DisabledItems				=	0;	//GFlags(GMenuBarCtrl, GFC_CF_MENUBAR_SELECT_DISABLEDITEMS);
+			.Select_ToggleMenu					=	0;	//GFlags(GMenuBarCtrl, GFC_CF_MENUBAR_SELECT_TOGGLEMENU);
+
+			.PopupAutoSelect_ByMouse			=	0;
+			.PopupAutoSelect_ByKeyboard			=	GFlags(GMenuBarCtrl, GFC_CF_MENUBAR_POPUPAUTOSELECT_BYKEYBOARD);
+		}
+		with .Size
+		{
+			.MinimumHeight				= 23;
+			.Margin						= GRectMargin(2,2,2,2);
+			.ItemMargin					= GRectMargin(10,1,10,4);
+			.ItemMinimumWidth			= 4;
+			.TextMargin					= GRectMargin(0,0,0,0);
+			.ImageColumn				= 16;
+			.ItemSpace					= 3;
+			// Separator item size
+			.Separator					= 6;
+		}
+		.Delay_RolloverComeback			= 220;
+
+		with .Color
+		{
+			.Inner_Default						=	GFC_Control_Color_Surface;
+			.Inner_Select						=	GFC_Control_Color_Inner_Select;
+			.Inner_Disable						=	.Inner_Default;
+			.Inner_DisableSelect				=	GFC_Control_Color_Inner_DisableSelect;
+
+			.Text_Default						=	GFC_Control_Color_Text_Default;		//GFC_Control_Color_Text_Default;
+			.Text_Rollover						=	SF_CtrlTheme_Civ4_Control_Color_SelectText;
+			.Text_Select						=	SF_CtrlTheme_Civ4_Control_Color_SelectText;			//GColor( 66, 88,255);
+			.Text_Nomenuselect					=	SF_CtrlTheme_Civ4_Control_Color_SelectText;
+			.Text_Disable						=	GFC_Control_Color_Text_Disable;
+			.Text_DisableRollover				=	GFC_Control_Color_Text_Disable;
+			.Text_DisableSelect					=	GFC_Control_Color_Text_Disable;
+			.Text_Winoff						=	.Text_Default;
+			.Text_WinoffRollover				=	.Text_Select;
+			.Text_WinoffDisable					=	.Text_Disable;
+			.Text_WinoffDisableRollover			=	.Text_DisableRollover;
+
+			.TextShadow_Default					=	GFC_Control_Color_TextShadow_Default;				//GFC_Control_Color_TextShadow_Default;
+			.TextShadow_Rollover				=	GFC_Control_Color_TextShadow_Default;
+			.TextShadow_Select					=	GFC_Control_Color_TextShadow_Default;		//GFC_Control_Color_TextShadow_Select;
+			.TextShadow_Nomenuselect			=	GFC_Control_Color_TextShadow_Default;
+			.TextShadow_Disable					=	GFC_Control_Color_TextShadow_Disable;
+			.TextShadow_DisableRollover			=	GFC_Control_Color_TextShadow_Disable;
+			.TextShadow_DisableSelect			=	GFC_Control_Color_TextShadow_Disable;
+			.TextShadow_Winoff					=	.TextShadow_Default;
+			.TextShadow_WinoffRollover			=	.TextShadow_Rollover;
+			.TextShadow_WinoffDisable			=	.TextShadow_Disable;
+			.TextShadow_WinoffDisableRollover	=	.TextShadow_DisableRollover;
+
+			.Image_Default						=	GFC_Control_Color_Image_Default;
+			.Image_Select						=	GFC_Control_Color_Image_Select;
+			.Image_Disable						=	GFC_Control_Color_Image_Disable;
+			.Image_DisableSelect					=	GFC_Control_Color_Image_DisableSelect;
+
+			.Separator							=	GFC_Control_Color_3DLook_Dark;
+			.SeparatorShadow					=	GFC_Control_Color_3DLook_Lightest;
+		}
+
+		with .Combine
+		{
+			.Inner_Default						= 	GFC_Control_Combine_Surface;
+			.Inner_Select						= 	GFC_Control_Combine_Inner_InactiveSelect;
+			.Inner_Disable						=	GFC_Control_Combine_Surface;
+			.Inner_DisableSelect				= 	GFC_Control_Combine_Inner_DisableSelect;
+			.Text_Default_Dest					= 	GFC_Control_Combine_Text_Default_Dest;
+			.Text_Default_Factor				= 	GFC_Control_Combine_Text_Default_Factor;
+
+			.Text_Select_Dest					= 	GFC_Control_Combine_Text_Default_Dest;
+			.Text_Select_Factor					= 	GFC_Control_Combine_Text_Default_Factor;
+			.Text_Disable_Dest					= 	GFC_Control_Combine_Text_Disable_Dest;
+			.Text_Disable_Factor				= 	GFC_Control_Combine_Text_Disable_Factor;
+			.Text_DisableSelect_Dest			= 	GFC_Control_Combine_Text_DisableSelect_Dest;
+			.Text_DisableSelect_Factor			= 	GFC_Control_Combine_Text_DisableSelect_Factor;
+
+			.TextShadow_Default_Dest			= 	GFC_Control_Combine_TextShadow_Default_Dest;
+			.TextShadow_Default_Factor			= 	GFC_Control_Combine_TextShadow_Default_Factor;
+			.TextShadow_Select_Dest				= 	.TextShadow_Default_Dest;
+			.TextShadow_Select_Factor			= 	.TextShadow_Default_Factor;
+			.TextShadow_Disable_Dest			= 	GFC_Control_Combine_TextShadow_Disable_Dest;
+			.TextShadow_Disable_Factor			= 	GFC_Control_Combine_TextShadow_Disable_Factor;
+			.TextShadow_DisableSelect_Dest		= 	GFC_Control_Combine_TextShadow_DisableSelect_Dest;
+			.TextShadow_DisableSelect_Factor	= 	GFC_Control_Combine_TextShadow_DisableSelect_Factor;
+
+			.Image_Default_Dest					= 	GFC_Control_Combine_Image_Default_Dest;
+			.Image_Default_Factor				= 	GFC_Control_Combine_Image_Default_Factor;
+			.Image_Select_Dest					= 	GFC_Control_Combine_Image_Select_Dest;
+			.Image_Select_Factor					= 	GFC_Control_Combine_Image_Select_Factor;
+			.Image_Disable_Dest					= 	GFC_Control_Combine_Image_Disable_Dest;
+			.Image_Disable_Factor				= 	GFC_Control_Combine_Image_Disable_Factor;
+			.Image_DisableSelect_Dest			= 	GFC_Control_Combine_Image_DisableSelect_Dest;
+			.Image_DisableSelect_Factor			=	GFC_Control_Combine_Image_DisableSelect_Factor;
+
+			.Separator							= 	GFC_Control_Combine_Surface;
+			.SeparatorShadow					= 	GFC_Control_Combine_Surface;
+		}
+
+		// Fonts
+		.Font_Default							=	SF_CtrlTheme_Civ4_Control_Font_Size2_Normal;
+		.Font_Select							=	.Font_Default;
+
+		// ******* Initialize all the Bitmap theme MenuBar properties to avoid inheritance problems
+
+		with GFC_CtrlTheme_Bitmap_Control_MenuBar_Skin
+		{
+			.Inner_Default						=	0;
+			.Inner_Disable						=	0;
+			.Inner_Winoff						=	0;
+			.Inner_WinoffDisable				=	0;
+
+			.TextItem_Default					=	0;
+			.TextItem_Rollover					=	0;
+			.TextItem_Select					=	0;
+			.TextItem_Nomenuselect				=	0;
+			.TextItem_Disable					=	0;
+			.TextItem_DisableRollover			=	0;
+			.TextItem_DisableSelect				=	0;
+			.TextItem_Winoff					=	0;
+			.TextItem_WinoffRollover			=	0;
+			.TextItem_WinoffDisable				=	0;
+			.TextItem_WinoffDisableRollover		=	0;
+
+			.SeparatorItem_Default				=	0;
+			.SeparatorItem_Disable				=	0;
+		}
+
+		map GFC_Control			=	GFC_Control_DefaultControl_Style;
+	}	// end GFC_Control_DefaultMenuBar_Style
+
+
+
+style SF_CtrlTheme_Civ4_Control_MenuBar_Standard_Table_Style
+{
+	GFC_Control_Flag_Transparent			=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+	
+	GFC_Control_Table_Flag_NoInnerBorder	=	GFlags(GTableCtrl, GFC_CF_TABLE_NOINNERBORDER);
+	GFC_Control_Table_Flag_NoInnerFill		=	GFlags(GTableCtrl, GFC_CF_TABLE_NOINNERFILL);
+
+	map GFC_Control									=	GFC_Control_DefaultTable_Style;
+	map GFC_CtrlTheme_Bitmap_Control_Table			=	GFC_Control_DefaultTable_Style;
+	map SF_CtrlTheme_Civ4_Control					=	GFC_Control_DefaultTable_Style;
+}
+
+
+
+	// ** Normal MenuBar style
+
+	GFC_Control_StandardMenuBar_Style
+	{
+		.StyleId_Table		=	GPropertyId(SF_CtrlTheme_Civ4_Control_MenuBar_Standard_Table_Style);
+
+		// Item skins
+
+		// String item backgrounds
+		with GFC_CtrlTheme_Bitmap_Control_MenuBar_Skin_TextItem
+		{
+			.Default
+			{
+				layer 
+				{
+					LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_NOTVISIBLE);
+				}
+			}
+			.Rollover
+			{
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate,Modulate);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Select;
+					Image			= GBitmap("../../../../Resource/Civ4/menubar_selection.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= GRectMargin(0,0,0,0);
+				}
+			}
+			.Select
+			{
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate,Modulate);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Select;
+					Image			= GBitmap("../../../../Resource/Civ4/menubar_selection.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= GRectMargin(0,0,0,0);
+				}
+			}
+			.Nomenuselect
+			{
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate,Modulate);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Select;
+					Image			= GBitmap("../../../../Resource/Civ4/menubar_selection.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= GRectMargin(0,0,0,0);
+				}
+			}
+			.Disable				= .Default;
+			.DisableRollover		= .Rollover;
+			.DisableSelect			= .Select;
+			.Winoff					= .Default;
+			.WinoffRollover			= .Rollover;
+			.WinoffDisable			= .Disable;
+			.WinoffDisableRollover	= .DisableRollover;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_MenuBar	=	GFC_Control_DefaultMenuBar_Style;
+		map GFC_Control								=	GFC_Control_DefaultMenuBar_Style;
+	}
+}
