@@ -1,0 +1,17 @@
+#include "CvGameCoreDLL.h"
+#include "CvMapExternal.h"
+
+CvMapInterfaceBase::CvMapInterfaceBase()
+{
+	m_proxy = new CvMapExternal(this);
+}
+
+CvMapInterfaceBase::~CvMapInterfaceBase()
+{
+	SAFE_DELETE(m_proxy);
+}
+
+CvMapExternal* CvMapInterfaceBase::getProxy()
+{
+	return m_proxy;
+}
