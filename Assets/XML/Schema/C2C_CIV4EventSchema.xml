@@ -1,0 +1,557 @@
+<?xml version="1.0"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Modified by the World of Civilization Team -->
+<!-- Event Schema -->
+<!-- -->
+<Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
+  <ElementType name="ReplacementCondition"/>
+  <ElementType name="ReplacementID"/>
+  <!-- Expressions added by AIAndy -->
+  <ElementType name="Constant" content="textOnly"/>
+  <ElementType name="Is" content="textOnly"/>
+  <ElementType name="Python" content="textOnly"/>
+  <ElementType name="BoolExpr"/>
+  <ElementType name="Not"/>
+  <ElementType name="And"/>
+  <ElementType name="Or"/>
+  <ElementType name="BEqual"/>
+  <ElementType name="If"/>
+  <ElementType name="IntegrateOr"/>
+  <ElementType name="GOMType" content="textOnly"/>
+  <ElementType name="ID" content="textOnly"/>
+  <ElementType name="Has" content="eltOnly">
+    <element type="GOMType" minOccurs="1" maxOccurs="*"/>
+    <element type="ID" minOccurs="1" maxOccurs="*"/>
+  </ElementType>
+  <ElementType name="Greater"/>
+  <ElementType name="GreaterEqual"/>
+  <ElementType name="Equal"/>
+  <ElementType name="Random"/>
+  <ElementType name="Adapt"/>
+  <ElementType name="Plus"/>
+  <ElementType name="Minus"/>
+  <ElementType name="Mult"/>
+  <ElementType name="Div"/>
+  <ElementType name="IntegrateSum"/>
+  <ElementType name="IntegrateAvg"/>
+  <ElementType name="IntegrateCount"/>
+	<ElementType name="Type" content="textOnly"/>
+<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+	<ElementType name="bTypeDependency" content="textOnly" dt:type="boolean"/>
+	<ElementType name="DependencyType" content="textOnly"/>
+	<ElementType name="AndDependencyTypes" content="eltOnly">
+		<element type="DependencyType" minOccurs="1"/>
+	</ElementType>
+	<ElementType name="OrDependencyTypes" content="eltOnly">
+		<element type="DependencyType" minOccurs="1"/>
+	</ElementType>
+<!-- XMLCOPY				END					MRGENIE		-->
+	<ElementType name="Description" content="textOnly"/>
+	<ElementType name="OtherPlayerPopup" content="textOnly"/>
+	<ElementType name="LocalInfoText" content="textOnly"/>
+	<ElementType name="QuestFailText" content="textOnly"/>
+	<ElementType name="Button" content="textOnly"/>
+	<ElementType name="bQuest" content="textOnly" dt:type="boolean"/>
+	<ElementType name="EventArt" content="textOnly"/>
+	<ElementType name="bSinglePlayer" content="textOnly" dt:type="boolean"/>
+	<ElementType name="iMinTreasury" content="textOnly" dt:type="int"/>
+	<ElementType name="iGold" content="textOnly" dt:type="int"/>
+	<ElementType name="iRandomGold" content="textOnly" dt:type="int"/>
+	<ElementType name="iCulture" content="textOnly" dt:type="int"/>
+	<ElementType name="iEspionagePoints" content="textOnly" dt:type="int"/>
+	<ElementType name="Tech" content="textOnly"/>
+	<ElementType name="iTechPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iTechCostPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iTechMinTurnsLeft" content="textOnly" dt:type="int"/>
+	<ElementType name="Civic" content="textOnly"/>
+	<ElementType name="iMinPopulation" content="textOnly" dt:type="int"/>
+	<ElementType name="iMaxPopulation" content="textOnly" dt:type="int"/>
+	<ElementType name="iPopulationChange" content="textOnly" dt:type="int"/>
+	<ElementType name="iMinMapLandmass" content="textOnly" dt:type="int"/>
+	<ElementType name="iMinOurLandmass" content="textOnly" dt:type="int"/>
+	<ElementType name="iMaxOurLandmass" content="textOnly" dt:type="int"/>
+	<ElementType name="MinDifficulty" content="textOnly"/>
+	<ElementType name="iAngry" content="textOnly" dt:type="int"/>
+	<ElementType name="iUnhealthy" content="textOnly" dt:type="int"/>
+	<ElementType name="UnitsRequired" content="eltOnly">
+		<element type="UnitClass" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="UnitClass" content="textOnly"/>
+	<ElementType name="bUnitsOnPlot" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bOwnPlot" content="textOnly" dt:type="boolean"/>
+	<ElementType name="iMaxNumReligions" content="textOnly" dt:type="int"/>
+	<ElementType name="iNumReligions" content="textOnly" dt:type="int"/>
+	<ElementType name="iNumCorporations" content="textOnly" dt:type="int"/>
+	<ElementType name="iNumUnits" content="textOnly" dt:type="int"/>
+	<ElementType name="iNumUnitsGlobal" content="textOnly" dt:type="int"/>
+	<ElementType name="iNumFreeUnits" content="textOnly" dt:type="int"/>
+	<ElementType name="bDisbandUnit" content="textOnly" dt:type="boolean"/>
+	<ElementType name="iUnitDamagedWeight" content="textOnly" dt:type="int"/>
+	<ElementType name="iUnitDistanceWeight" content="textOnly" dt:type="int"/>
+	<ElementType name="iUnitExperienceWeight" content="textOnly" dt:type="int"/>
+	<ElementType name="iUnitExperience" content="textOnly" dt:type="int"/>
+	<ElementType name="iUnitImmobileTurns" content="textOnly" dt:type="int"/>
+	<ElementType name="UnitPromotion" content="textOnly"/>
+	<ElementType name="UnitCombat" content="textOnly"/>
+	<ElementType name="UnitCombatPromotion" content="eltOnly">
+		<element type="UnitCombat"/>
+		<element type="UnitPromotion"/>
+	</ElementType>
+	<ElementType name="UnitCombatPromotions" content="eltOnly">
+		<element type="UnitCombatPromotion" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="UnitClassPromotion" content="eltOnly">
+		<element type="UnitClass"/>
+		<element type="UnitPromotion"/>
+	</ElementType>
+	<ElementType name="UnitClassPromotions" content="eltOnly">
+		<element type="UnitClassPromotion" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="UnitName" content="textOnly"/>
+	<ElementType name="iHappy" content="textOnly" dt:type="int"/>
+	<ElementType name="iHealth" content="textOnly" dt:type="int"/>
+	<ElementType name="iHurryAnger" content="textOnly" dt:type="int"/>
+	<ElementType name="iHappyTurns" content="textOnly" dt:type="int"/>
+	<ElementType name="iRevoltTurns" content="textOnly" dt:type="int"/>
+	<ElementType name="iMinPillage" content="textOnly" dt:type="int"/>
+	<ElementType name="iMaxPillage" content="textOnly" dt:type="int"/>
+	<ElementType name="iFood" content="textOnly" dt:type="int"/>
+	<ElementType name="iFoodPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="SpecialistType" content="textOnly"/>
+	<ElementType name="iFreeSpecialistCount" content="textOnly" dt:type="int"/>
+	<ElementType name="FreeSpecialistCount" content="eltOnly">
+		<element type="SpecialistType"/>
+		<element type="iFreeSpecialistCount"/>
+	</ElementType>
+	<ElementType name="FreeSpecialistCounts" content="eltOnly">
+		<element type="FreeSpecialistCount" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="bTeam" content="textOnly" dt:type="int"/>
+	<ElementType name="bRecurring" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bGlobal" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bPickPlayer" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bGoldToPlayer" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bOtherPlayerWar" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bOtherPlayerAI" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bOtherPlayerHasReligion" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bOtherPlayerHasOtherReligion" content="textOnly" dt:type="boolean"/>
+	<ElementType name="iOtherPlayerShareBorders" content="textOnly" dt:type="int"/>
+	<ElementType name="OtherPlayerHasTech" content="textOnly"/>
+	<ElementType name="bPickCity" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bPickOtherPlayerCity" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bDeclareWar" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bShowPlot" content="textOnly" dt:type="boolean"/>
+	<ElementType name="iCityFoodWeight" content="textOnly" dt:type="int"/>
+	<ElementType name="iFreeUnitSupport" content="textOnly" dt:type="int"/>
+	<ElementType name="iInflationMod" content="textOnly" dt:type="int"/>
+	<ElementType name="iSpaceProductionMod" content="textOnly" dt:type="int"/>
+	<ElementType name="bGoldenAge" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bPickReligion" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bStateReligion" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bHolyCity" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bPickCorporation" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bHeadquarters" content="textOnly" dt:type="boolean"/>
+	<ElementType name="PrereqTech" content="textOnly"/>
+	<ElementType name="OrPreReqs" content="eltOnly">
+		<element type="PrereqTech" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="AndPreReqs" content="eltOnly">
+		<element type="PrereqTech" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="ObsoleteTechs" content="eltOnly">
+		<element type="ObsoleteTech" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="ObsoleteTech" content="textOnly"/>
+	<ElementType name="PythonCallback" content="textOnly"/>
+	<ElementType name="PythonExpireCheck" content="textOnly"/>
+	<ElementType name="PythonCanDo" content="textOnly"/>
+	<ElementType name="PythonCanDoCity" content="textOnly"/>
+	<ElementType name="PythonCanDoUnit" content="textOnly"/>
+	<ElementType name="PythonHelp" content="textOnly"/>
+	<ElementType name="iWeight" content="textOnly" dt:type="int"/>
+	<ElementType name="iAIValue" content="textOnly" dt:type="int"/>
+	<ElementType name="iPercentGamesActive" content="textOnly" dt:type="int"/>
+	<ElementType name="bProbabilityUnitMultiply" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bProbabilityBuildingMultiply" content="textOnly" dt:type="boolean"/>
+	<ElementType name="iConvertOwnCities" content="textOnly" dt:type="int"/>
+	<ElementType name="iConvertOtherCities" content="textOnly" dt:type="int"/>
+	<ElementType name="iOurAttitudeModifier" content="textOnly" dt:type="int"/>
+	<ElementType name="iAttitudeModifier" content="textOnly" dt:type="int"/>
+	<ElementType name="iTheirEnemyAttitudeModifier" content="textOnly" dt:type="int"/>
+	<ElementType name="BuildingsRequired" content="eltOnly">
+		<element type="BuildingClass" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="BuildingClass" content="textOnly"/>
+	<ElementType name="iNumBuildings" content="textOnly" dt:type="int"/>
+	<ElementType name="iBuildingChange" content="textOnly" dt:type="int"/>
+	<ElementType name="iNumBuildingsGlobal" content="textOnly" dt:type="int"/>
+	<ElementType name="iNumPlotsRequired" content="textOnly" dt:type="int"/>
+	<ElementType name="iPlotType" content="textOnly" dt:type="int"/>
+	<ElementType name="FeaturesRequired" content="eltOnly">
+		<element type="FeatureType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="FeatureType" content="textOnly"/>
+	<ElementType name="iFeatureChange" content="textOnly" dt:type="int"/>
+	<ElementType name="TerrainsRequired" content="eltOnly">
+		<element type="TerrainType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="TerrainType" content="textOnly"/>
+	<ElementType name="iTerrainChange" content="textOnly" dt:type="int"/>
+	<ElementType name="ImprovementsRequired" content="eltOnly">
+		<element type="ImprovementType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="ImprovementType" content="textOnly"/>
+	<ElementType name="iImprovementChange" content="textOnly" dt:type="int"/>
+	<ElementType name="BonusesRequired" content="eltOnly">
+		<element type="BonusType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="BonusType" content="textOnly"/>
+	<ElementType name="iBonusChange" content="textOnly" dt:type="int"/>
+	<ElementType name="RoutesRequired" content="eltOnly">
+		<element type="RouteType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="RouteType" content="textOnly"/>
+	<ElementType name="iRouteChange" content="textOnly" dt:type="int"/>
+	<ElementType name="BonusRevealed" content="textOnly"/>
+	<ElementType name="BonusGift" content="textOnly"/>
+	<ElementType name="FlavorType" content="textOnly"/>
+	<ElementType name="iFlavor" content="textOnly" dt:type="int"/>
+	<ElementType name="TechFlavor" content="eltOnly">
+		<element type="FlavorType"/>
+		<element type="iFlavor"/>
+	</ElementType>
+	<ElementType name="TechFlavors" content="eltOnly">
+		<element type="TechFlavor" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="YieldType" content="textOnly"/>
+	<ElementType name="CommerceType" content="textOnly"/>
+	<ElementType name="iExtraYield" content="textOnly" dt:type="int"/>
+	<ElementType name="iExtraCommerce" content="textOnly" dt:type="int"/>
+	<ElementType name="iCommerceModifier" content="textOnly" dt:type="int"/>
+	<ElementType name="PlotExtraYield" content="eltOnly">
+		<element type="YieldType"/>
+		<element type="iExtraYield"/>
+	</ElementType>
+	<ElementType name="PlotExtraYields" content="eltOnly">
+		<element type="PlotExtraYield" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="BuildingExtraYield" content="eltOnly">
+		<element type="BuildingClass"/>
+		<element type="YieldType"/>
+		<element type="iExtraYield"/>
+	</ElementType>
+	<ElementType name="BuildingExtraYields" content="eltOnly">
+		<element type="BuildingExtraYield" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="BuildingExtraCommerce" content="eltOnly">
+		<element type="BuildingClass"/>
+		<element type="CommerceType"/>
+		<element type="iExtraCommerce"/>
+	</ElementType>
+	<ElementType name="BuildingExtraCommerces" content="eltOnly">
+		<element type="BuildingExtraCommerce" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="BuildingCommerceModifier" content="eltOnly">
+		<element type="BuildingClass"/>
+		<element type="CommerceType"/>
+		<element type="iCommerceModifier"/>
+	</ElementType>
+	<ElementType name="BuildingCommerceModifiers" content="eltOnly">
+		<element type="BuildingCommerceModifier" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="BuildingExtraHappy" content="eltOnly">
+		<element type="BuildingClass"/>
+		<element type="iHappy"/>
+	</ElementType>
+	<ElementType name="BuildingExtraHappies" content="eltOnly">
+		<element type="BuildingExtraHappy" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="BuildingExtraHealth" content="eltOnly">
+		<element type="BuildingClass"/>
+		<element type="iHealth"/>
+	</ElementType>
+	<ElementType name="BuildingExtraHealths" content="eltOnly">
+		<element type="BuildingExtraHealth" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="iEventChance" content="textOnly" dt:type="int"/>
+	<ElementType name="EventChance" content="eltOnly">
+		<element type="Event"/>
+		<element type="iEventChance"/>
+	</ElementType>
+	<ElementType name="AdditionalEvents" content="eltOnly">
+		<element type="EventChance" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="iEventTime" content="textOnly" dt:type="int"/>
+	<ElementType name="EventTime" content="eltOnly">
+		<element type="Event"/>
+		<element type="iEventTime"/>
+	</ElementType>
+	<ElementType name="EventTimes" content="eltOnly">
+		<element type="EventTime" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="ReligionsRequired" content="eltOnly">
+		<element type="ReligionType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="ReligionType" content="textOnly"/>
+	<ElementType name="CorporationsRequired" content="eltOnly">
+		<element type="CorporationType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="CorporationType" content="textOnly"/>
+	<ElementType name="Text" content="textOnly"/>
+	<ElementType name="TriggerTexts" content="eltOnly">
+		<element type="TriggerText" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="TriggerText" content="eltOnly">
+		<element type="Text"/>
+		<element type="Era" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="Era" content="textOnly"/>
+	<ElementType name="WorldNewsTexts" content="eltOnly">
+		<element type="Text" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Event" content="textOnly"/>
+	<ElementType name="Events" content="eltOnly">
+		<element type="Event" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="PrereqEvents" content="eltOnly">
+		<element type="Event" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="ClearEvents" content="eltOnly">
+		<element type="EventChance" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="bPrereqEventPlot" content="textOnly" dt:type="boolean"/>
+	<ElementType name="iCommerce" content="textOnly" dt:type="int"/>
+	<ElementType name="CommerceModifiers" content="eltOnly">
+		<element type="iCommerce" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+
+	<!--AIAndy: Adding tags for generic properties-->
+	<ElementType name="PropertyType" content="textOnly"/>
+	<ElementType name="iPropertyValue" content="textOnly" dt:type="int"/>
+	<ElementType name="Property" content="eltOnly">
+		<element type="PropertyType"/>
+		<element type="iPropertyValue"/>
+	</ElementType>
+	<ElementType name="Properties" content="eltOnly">
+		<element type="Property" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="PropertiesAllCities" content="eltOnly">
+		<element type="Property" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="PrereqMinProperties" content="eltOnly">
+		<element type="Property" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="PrereqMaxProperties" content="eltOnly">
+		<element type="Property" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="PrereqPlayerMinProperties" content="eltOnly">
+		<element type="Property" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="PrereqPlayerMaxProperties" content="eltOnly">
+		<element type="Property" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+
+	<ElementType name="iYield" content="textOnly" dt:type="int"/>
+	<ElementType name="YieldModifiers" content="eltOnly">
+		<element type="iYield" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+
+	<!--TB's Tags-->
+	<ElementType name="GameOptionType" content="textOnly"/>
+	<ElementType name="OnGameOptions" content="eltOnly">
+		<element type="GameOptionType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="NotOnGameOptions" content="eltOnly">
+		<element type="GameOptionType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<!--TB's Tags end-->
+	<ElementType name="EventTriggerInfo" content="eltOnly">
+		<element type="Type"/>
+<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<element type="bTypeDependency" minOccurs="0"/>
+		<element type="AndDependencyTypes" minOccurs="0"/>
+		<element type="OrDependencyTypes" minOccurs="0"/>
+<!-- XMLCOPY				END					MRGENIE		-->
+		<element type="OnGameOptions" minOccurs="0"/>
+		<element type="NotOnGameOptions" minOccurs="0"/>
+		<element type="WorldNewsTexts" minOccurs="0"/>
+		<element type="TriggerTexts" minOccurs="0"/>
+		<element type="EventArt" minOccurs="0"/>
+		<element type="bSinglePlayer" minOccurs="0"/>
+		<element type="iPercentGamesActive" minOccurs="0"/>
+		<element type="iWeight" minOccurs="0"/>
+		<element type="bProbabilityUnitMultiply" minOccurs="0"/>
+		<element type="bProbabilityBuildingMultiply" minOccurs="0"/>
+		<element type="Civic" minOccurs="0"/>
+		<element type="iMinTreasury" minOccurs="0"/>
+		<element type="iMinPopulation" minOccurs="0"/>
+		<element type="iMaxPopulation" minOccurs="0"/>
+		<element type="iMinMapLandmass" minOccurs="0"/>
+		<element type="iMinOurLandmass" minOccurs="0"/>
+		<element type="iMaxOurLandmass" minOccurs="0"/>
+		<element type="MinDifficulty" minOccurs="0"/>
+		<element type="iAngry" minOccurs="0"/>
+		<element type="iUnhealthy" minOccurs="0"/>
+		<element type="UnitsRequired" minOccurs="0"/>
+		<element type="iNumUnits" minOccurs="0"/>
+		<element type="iNumUnitsGlobal" minOccurs="0"/>
+		<element type="iUnitDamagedWeight" minOccurs="0"/>
+		<element type="iUnitDistanceWeight" minOccurs="0"/>
+		<element type="iUnitExperienceWeight" minOccurs="0"/>
+		<element type="bUnitsOnPlot" minOccurs="0"/>
+		<element type="BuildingsRequired" minOccurs="0"/>
+		<element type="iNumBuildings" minOccurs="0"/>
+		<element type="iNumBuildingsGlobal" minOccurs="0"/>
+		<element type="iNumPlotsRequired" minOccurs="0"/>
+		<element type="bOwnPlot" minOccurs="0"/>
+		<element type="iPlotType" minOccurs="0"/>
+		<element type="FeaturesRequired" minOccurs="0"/>
+		<element type="TerrainsRequired" minOccurs="0"/>
+		<element type="ImprovementsRequired" minOccurs="0"/>
+		<element type="BonusesRequired" minOccurs="0"/>
+		<element type="RoutesRequired" minOccurs="0"/>
+		<element type="ReligionsRequired" minOccurs="0"/>
+		<element type="iNumReligions" minOccurs="0"/>
+		<element type="CorporationsRequired" minOccurs="0"/>
+		<element type="iNumCorporations" minOccurs="0"/>
+		<element type="bPickReligion" minOccurs="0"/>
+		<element type="bStateReligion" minOccurs="0"/>
+		<element type="bHolyCity" minOccurs="0"/>
+		<element type="bPickCorporation" minOccurs="0"/>
+		<element type="bHeadquarters" minOccurs="0"/>
+		<element type="Events" minOccurs="0"/>
+		<element type="PrereqEvents" minOccurs="0"/>
+		<element type="bPrereqEventPlot" minOccurs="0"/>
+		<element type="OrPreReqs" minOccurs="0"/>
+		<element type="AndPreReqs" minOccurs="0"/>
+		<element type="ObsoleteTechs" minOccurs="0"/>
+		<element type="bRecurring" minOccurs="0"/>
+		<element type="bTeam" minOccurs="0"/>
+		<element type="bGlobal" minOccurs="0"/>
+		<element type="bPickPlayer" minOccurs="0"/>
+		<element type="bOtherPlayerWar" minOccurs="0"/>
+		<element type="bOtherPlayerHasReligion" minOccurs="0"/>
+		<element type="bOtherPlayerHasOtherReligion" minOccurs="0"/>
+		<element type="bOtherPlayerAI" minOccurs="0"/>
+		<element type="iOtherPlayerShareBorders" minOccurs="0"/>
+		<element type="OtherPlayerHasTech" minOccurs="0"/>
+		<element type="bPickCity" minOccurs="0"/>
+		<element type="bPickOtherPlayerCity" minOccurs="0"/>
+		<element type="bShowPlot" minOccurs="0"/>
+		<element type="iCityFoodWeight" minOccurs="0"/>
+		<!-- AIAndy Property related tag -->
+		<element type="PrereqMinProperties" minOccurs="0"/>
+		<element type="PrereqMaxProperties" minOccurs="0"/>
+		<element type="PrereqPlayerMinProperties" minOccurs="0"/>
+		<element type="PrereqPlayerMaxProperties" minOccurs="0"/>
+
+		<element type="PythonCanDo" minOccurs="0"/>
+		<element type="PythonCanDoCity" minOccurs="0"/>
+		<element type="PythonCanDoUnit" minOccurs="0"/>
+		<element type="PythonCallback" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="EventTriggerInfos" content="eltOnly">
+		<element type="EventTriggerInfo" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4EventTriggerInfos" content="eltOnly">
+		<element type="EventTriggerInfos" minOccurs="1" maxOccurs="1"/>
+	</ElementType>
+	<ElementType name="EventInfo" content="eltOnly">
+		<element type="Type"/>
+<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<element type="bTypeDependency" minOccurs="0"/>
+		<element type="AndDependencyTypes" minOccurs="0"/>
+		<element type="OrDependencyTypes" minOccurs="0"/>
+<!-- XMLCOPY				END					MRGENIE		-->
+		<element type="Description" minOccurs="0"/>
+		<element type="LocalInfoText" minOccurs="0"/>
+		<element type="WorldNewsTexts" minOccurs="0"/>
+		<element type="OtherPlayerPopup" minOccurs="0"/>
+		<element type="QuestFailText" minOccurs="0"/>
+		<element type="bQuest" minOccurs="0"/>
+		<element type="bGlobal" minOccurs="0"/>
+		<element type="bTeam" minOccurs="0"/>
+		<element type="bPickCity" minOccurs="0"/>
+		<element type="bPickOtherPlayerCity" minOccurs="0"/>
+		<element type="bDeclareWar" minOccurs="0"/>
+		<element type="iGold" minOccurs="0"/>
+		<element type="bGoldToPlayer" minOccurs="0"/>
+		<element type="iRandomGold" minOccurs="0"/>
+		<element type="iCulture" minOccurs="0"/>
+		<element type="iEspionagePoints" minOccurs="0"/>
+		<element type="bGoldenAge" minOccurs="0"/>
+		<element type="iFreeUnitSupport" minOccurs="0"/>
+		<element type="iInflationMod" minOccurs="0"/>
+		<element type="iSpaceProductionMod" minOccurs="0"/>
+		<element type="Tech" minOccurs="0"/>
+		<element type="TechFlavors" minOccurs="0"/>
+		<element type="iTechPercent" minOccurs="0"/>
+		<element type="iTechCostPercent" minOccurs="0"/>
+		<element type="iTechMinTurnsLeft" minOccurs="0"/>
+		<element type="PrereqTech" minOccurs="0"/>
+		<element type="UnitClass" minOccurs="0"/>
+		<element type="iNumFreeUnits" minOccurs="0"/>
+		<element type="bDisbandUnit" minOccurs="0"/>
+		<element type="iUnitExperience" minOccurs="0"/>
+		<element type="iUnitImmobileTurns" minOccurs="0"/>
+		<element type="UnitPromotion" minOccurs="0"/>
+		<element type="UnitName" minOccurs="0"/>
+		<element type="UnitCombatPromotions" minOccurs="0"/>
+		<element type="UnitClassPromotions" minOccurs="0"/>
+		<element type="BuildingClass" minOccurs="0"/>
+		<element type="iBuildingChange" minOccurs="0"/>
+		<element type="BuildingExtraYields" minOccurs="0"/>
+		<element type="BuildingExtraCommerces" minOccurs="0"/>
+		<element type="BuildingExtraHappies" minOccurs="0"/>
+		<element type="BuildingExtraHealths" minOccurs="0"/>
+		<element type="iHappy" minOccurs="0"/>
+		<element type="iHealth" minOccurs="0"/>
+		<element type="iHurryAnger" minOccurs="0"/>
+		<element type="iHappyTurns" minOccurs="0"/>
+		<element type="iRevoltTurns" minOccurs="0"/>
+		<element type="iMinPillage" minOccurs="0"/>
+		<element type="iMaxPillage" minOccurs="0"/>
+		<element type="iFood" minOccurs="0"/>
+		<element type="iFoodPercent" minOccurs="0"/>
+		<element type="FreeSpecialistCounts" minOccurs="0"/>
+		<element type="FeatureType" minOccurs="0"/>
+		<element type="iFeatureChange" minOccurs="0"/>
+		<element type="ImprovementType" minOccurs="0"/>
+		<element type="iImprovementChange" minOccurs="0"/>
+		<element type="BonusType" minOccurs="0"/>
+		<element type="iBonusChange" minOccurs="0"/>
+		<element type="RouteType" minOccurs="0"/>
+		<element type="iRouteChange" minOccurs="0"/>
+		<element type="BonusRevealed" minOccurs="0"/>
+		<element type="BonusGift" minOccurs="0"/>
+		<element type="PlotExtraYields" minOccurs="0"/>
+		<element type="iConvertOwnCities" minOccurs="0"/>
+		<element type="iConvertOtherCities" minOccurs="0"/>
+		<element type="iMaxNumReligions" minOccurs="0"/>
+		<element type="iOurAttitudeModifier" minOccurs="0"/>
+		<element type="iAttitudeModifier" minOccurs="0"/>
+		<element type="iTheirEnemyAttitudeModifier" minOccurs="0"/>
+		<element type="iPopulationChange" minOccurs="0"/>
+		<element type="AdditionalEvents" minOccurs="0"/>
+		<element type="EventTimes" minOccurs="0"/>
+		<element type="ClearEvents" minOccurs="0"/>
+		<element type="PythonCallback" minOccurs="0"/>
+		<element type="PythonExpireCheck" minOccurs="0"/>
+		<element type="PythonCanDo" minOccurs="0"/>
+		<element type="PythonHelp" minOccurs="0"/>
+		<element type="Button" minOccurs="0"/>
+		<element type="iAIValue" minOccurs="0"/>
+		<element type="CommerceModifiers" minOccurs="0"/>
+		<element type="YieldModifiers" minOccurs="0"/>
+		<element type="BuildingCommerceModifiers" minOccurs="0"/>
+		<!-- AIAndy Property related tag -->
+		<element type="Properties" minOccurs="0"/>
+		<element type="PropertiesAllCities" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="EventInfos" content="eltOnly">
+		<element type="EventInfo" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4EventInfos" content="eltOnly">
+		<element type="EventInfos" minOccurs="1" maxOccurs="1"/>
+	</ElementType>
+</Schema>

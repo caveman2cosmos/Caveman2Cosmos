@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Global Defines -->
+<Civ4Defines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Schema\Caveman2Cosmos.xsd">
+	<Define>
+		<DefineName>SHOW_HIDDEN_ATTITUDE</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
+	</Define>
+	<!-- Inquisitions -->
+	<Define>
+		<DefineName>INQUISITION_BUILDING_GOLD_DIVISOR</DefineName>
+		<iDefineIntVal>4</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>HOLYCITY_REMOVAL_GOLD</DefineName>
+		<iDefineIntVal>500</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>RELIGION_REMOVAL_GOLD</DefineName>
+		<iDefineIntVal>50</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>OC_RESPAWN_HOLY_CITIES</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
+	</Define>
+	<!-- \Inquisitions -->
+	<Define>
+		<!-- minimum required revolution index to consider an inquisition-->
+		<DefineName>OC_MIN_REV_INDEX</DefineName>
+		<iDefineIntVal>600</iDefineIntVal>
+	</Define>
+	<!-- Dexy - Surround and Destroy -->
+	<Define>
+		<DefineName>SAD_FACTOR_1</DefineName>
+		<fDefineFloatVal>6.0</fDefineFloatVal>
+	</Define>
+	<Define>
+		<DefineName>SAD_FACTOR_2</DefineName>
+		<fDefineFloatVal>10.0</fDefineFloatVal>
+	</Define>
+	<Define>
+		<DefineName>SAD_FACTOR_3</DefineName>
+		<fDefineFloatVal>15.0</fDefineFloatVal>
+	</Define>
+	<Define>
+		<DefineName>SAD_FACTOR_4</DefineName>
+		<fDefineFloatVal>20.0</fDefineFloatVal>
+	</Define>
+	<Define>
+		<DefineName>SAD_MAX_MODIFIER</DefineName>
+		<iDefineIntVal>60</iDefineIntVal>
+	</Define>
+	<!-- \Dexy - Surround and Destroy -->
+	<Define>
+		<!-- Afforess: This sets the maximum bombard resistance a city can have. Set to 100 for normal games, less, for a lower minimum -->
+		<DefineName>MAX_BOMBARD_DEFENSE</DefineName>
+		<iDefineIntVal>70</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- Afforess: Units can not Claim Water Tiles -->
+		<DefineName>CANNOT_CLAIM_OCEAN</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- Afforess: Don't round up for 5% tax increments with taxation anger, only round down. -->
+		<DefineName>TAXATION_ANGER_ROUND_DOWN</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- Afforess: Disbanding units earn gold -->
+		<DefineName>DISBANDING_EARNS_GOLD</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- Afforess: The divisor (or denominator) for the disbanded units gold. 1 will yield the full production cost. Has no effect if the above setting is disabled. -->
+		<DefineName>UNIT_GOLD_DISBAND_DIVISOR</DefineName>
+		<iDefineIntVal>4</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- Afforess: The number of turns that the Cut Loser's Game Option Checks -->
+		<DefineName>CUT_LOSERS_TURN_INCREMENT</DefineName>
+		<iDefineIntVal>50</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- Afforess: Every X turns the game checks the High to Low Option -->
+		<DefineName>HIGH_TO_LOW_FIRST_TURN_CHECK</DefineName>
+		<iDefineIntVal>20</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- Afforess: Every X turns the game checks the Increasing Difficulty Option -->
+		<DefineName>INCREASING_DIFFICULTY_TURN_CHECK_INCREMENTS</DefineName>
+		<iDefineIntVal>50</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- Afforess: How much Golden Ages lower the food requirement for city growth -->
+		<DefineName>GOlDEN_AGE_PERCENT_LESS_FOOD_FOR_GROWTH</DefineName>
+		<iDefineIntVal>-25</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>TEST_GAMEFONTS</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
+	<Define>
+<!-- Afforess:
+	Sets a Maximum Airlift and Rebase range for aircraft. -1 for no limit to range or rebase.
+
+	Toffer: This is only used for the AI perceived value of a tech; and for wheter to display the can rebase anywhere information for air units.
+	A dll modder will need to decide if it should be removed from the dll or implemented to actually influence the max re-base range for air units.
+-->
+		<DefineName>MAX_AIRLIFT_RANGE</DefineName>
+		<iDefineIntVal>-1</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>MINIMUM_DESERT_SIZE</DefineName>
+		<iDefineIntVal>4</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>MINIMUM_JUNGLE_SIZE</DefineName>
+		<iDefineIntVal>12</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>MINIMUM_FOREST_SIZE</DefineName>
+		<iDefineIntVal>12</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>MINIMUM_MOUNTAIN_RANGE_SIZE</DefineName>
+		<iDefineIntVal>3</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>PEAK_EXTRA_DEFENSE</DefineName>
+		<iDefineIntVal>75</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>PEAK_EXTRA_MOVEMENT</DefineName>
+		<iDefineIntVal>3</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>PEAK_BUILD_TIME_MODIFIER</DefineName>
+		<iDefineIntVal>100</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- Afforess: Disables Military Unit Trading in Advanced Diplomacy. 0 Allows Military Unit Trading, any other value disables it. -->
+		<DefineName>NO_MILITARY_UNIT_TRADING</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>LANDMARK_ANGER_DIVISOR</DefineName>
+		<iDefineIntVal>20</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>NUM_BAY_NAMES</DefineName>
+		<iDefineIntVal>3</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>NUM_FOREST_NAMES</DefineName>
+		<iDefineIntVal>2</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>NUM_JUNGLE_NAMES</DefineName>
+		<iDefineIntVal>4</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>NUM_PEAK_NAMES</DefineName>
+		<iDefineIntVal>2</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>NUM_MOUNTAINS_NAMES</DefineName>
+		<iDefineIntVal>2</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>NUM_DESERT_NAMES</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>NUM_LAKE_NAMES</DefineName>
+		<iDefineIntVal>2</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>BATTLEFIELD_PROMOTIONS</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>EMBASSY_ESPIONAGE_MISSION_COST_MODIFIER</DefineName>
+		<iDefineIntVal>25</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>COMMERCE_ATTACKS_FADE_RATE</DefineName>
+		<iDefineIntVal>8</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>CORPORATION_SPREAD_DISTANCE_DIVISOR</DefineName>
+		<iDefineIntVal>100</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>CORPORATION_SPREAD_RAND</DefineName>
+		<iDefineIntVal>2500</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>CORPORATION_RESOURCE_BASE_INFLUENCE</DefineName>
+		<iDefineIntVal>25</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>RAND_CORPORATION_BEST_SPREAD</DefineName>
+		<iDefineIntVal>500</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>FREE_TRADE_CORPORATION_SPREAD_MOD</DefineName>
+		<iDefineIntVal>25</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>HURRY_INFLATION_DECAY_RATE</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>FREE_TRADE_AGREEMENT_ESPIONAGE_MISSION_COST_MODIFIER</DefineName>
+		<iDefineIntVal>25</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>XML_LOGGING_ENABLED</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- Realistic Corporations: Corporation will be founded when more players than X have the prereq tech for it. -->
+		<DefineName>MINIMUM_PLAYERS_WITH_TECH_FOR_AUTO_CORPORATION_FOUNDING</DefineName>
+		<iDefineIntVal>2</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- The game will try to found a HQ for a corporation every X turns -->
+		<DefineName>CORPORATION_FOUND_CHECK_TURNS</DefineName>
+		<iDefineIntVal>3</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- The Time and Gold to Build a Route over an existing route is reduced by the time and Gold already invested in the previous Route -->
+		<DefineName>ROUTES_UPGRADE</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>ALWAYS_USE_MAX_COMPAT_SAVES</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>NEANDERTHAL_SPAWN_MODIFIER</DefineName>
+		<iDefineIntVal>50</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>BARBARIAN_SPAWN_MODIFIER</DefineName>
+		<iDefineIntVal>50</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>ANIMAL_SPAWN_MODIFIER</DefineName>
+		<iDefineIntVal>100</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>SEA_ANIMAL_SPAWN_MODIFIER</DefineName>
+		<iDefineIntVal>75</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>BANDIT_SPAWN_MODIFIER</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>KILLERRABBIT_SPAWN_MODIFIER</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>USE_MULTIPLE_THREADS_PROPERTY_SOLVER</DefineName>
+		<bDefineBoolVal>0</bDefineBoolVal>
+	</Define>
+	<Define>
+		<DefineName>ZOOM_CITY_FOR_PRODUCTION_POPUP</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
+	<Define>
+<!-- Use the following to determine what building art is displayed on cities.
+It is a bitmask of flags which may be added together:
+	1	= Wonders
+	2	= City defences
+	128 = Other
+We default to all of them (1+2+128 = 131)
+-->
+		<DefineName>SHOW_BUILDINGS_LEVEL</DefineName>
+		<iDefineIntVal>131</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>WASTAGE_START_CONSUMPTION_PERCENT</DefineName>
+		<iDefineIntVal>50</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>WASTAGE_GROWTH_FACTOR</DefineName>
+		<fDefineFloatVal>0.05</fDefineFloatVal>
+	</Define>
+	<Define>
+		<DefineName>CITY_THIRD_RING_EXTRA_GROWTH_THRESHOLD_PERCENT</DefineName>
+		<iDefineIntVal>100</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- Set to non-0 value to enable dynamic activation of unit graphics entities (reduced memory usage and growth) -->
+		<DefineName>ENABLE_DYNAMIC_UNIT_ENTITIES</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>TREAT_NEGATIVE_GOLD_AS_MAINTENANCE</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
+	</Define>
+<!-- Don't Escort:
+if set to 0 you will need to escort subdued animals back to your lands.
+if set to 1 they will "teleport" to the nearest city when captured. -->
+	<Define>
+		<DefineName>DONT_ESCORT_SUBDUED_LAND_ANIMAL</DefineName>
+		<bDefineBoolVal>1</bDefineBoolVal>
+	</Define>
+	<Define>
+		<DefineName>DONT_ESCORT_SUBDUED_SEA_ANIMAL</DefineName>
+		<bDefineBoolVal>1</bDefineBoolVal>
+	</Define>
+<!-- \Don't Escort -->
+	<Define>
+<!-- If dynamic Great Wall is set to a non-0 value the great wall will be re-evaluated and positioned every turn to reflect the owner's expanding borders.
+Note that this has no functional effect (the Great Wall prevents barbarians from entering all of your territory however it's displayed - the effect is just graphical.
+The Great Wall is always dynamic if viewports are enabled regardless of this setting -->
+		<DefineName>DYNAMIC_GREAT_WALL</DefineName>
+		<bDefineBoolVal>1</bDefineBoolVal>
+	</Define>
+	<Define>
+		<DefineName>PROFILER_ALTERNATE_SAMPLE_SET_SOURCE</DefineName>
+		<DefineTextVal></DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>ENABLE_BACKGROUND_PROFILING</DefineName>
+		<bDefineBoolVal>1</bDefineBoolVal>
+	</Define>
+	<Define>
+		<DefineName>DEFAULT_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS</DefineName>
+		<iDefineIntVal>25</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>RIVER_EXTRA_MOVEMENT</DefineName>
+		<iDefineIntVal>3</iDefineIntVal>
+	</Define>
+</Civ4Defines>

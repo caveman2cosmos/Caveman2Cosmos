@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Civ4ModularLoadControls">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="DefaultConfiguration"/>
+        <xs:element name="ConfigurationInfos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="ConfigurationInfo"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConfigurationInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Type"/>
+        <xs:element name="Description" type="xs:string"/>
+        <xs:element ref="Modules"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Module">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Directory"/>
+        <xs:element ref="bLoad"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Modules">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Module"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Civ4PlayerOptionInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="PlayerOptionInfos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" ref="PlayerOptionInfo"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PlayerOptionInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Type"/>
+        <xs:element ref="Description"/>
+        <xs:element ref="Help"/>
+        <xs:element ref="bDefault"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Civ4Defines">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Define"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Define">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="DefineName"/>
+        <xs:choice>
+          <xs:element ref="DefineTextVal"/>
+          <xs:element ref="bDefineBoolVal"/>
+          <xs:element ref="fDefineFloatVal"/>
+          <xs:element ref="iDefineIntVal"/>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Civ4Types">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="AnimationOperatorTypes"/>
+        <xs:element ref="FunctionTypes"/>
+        <xs:element ref="FlavorTypes"/>
+        <xs:element ref="ArtStyleTypes"/>
+        <xs:element ref="CitySizeTypes"/>
+        <xs:element ref="ContactTypes"/>
+        <xs:element ref="DiplomacyPowerTypes"/>
+        <xs:element ref="AutomateTypes"/>
+        <xs:element ref="DirectionTypes"/>
+        <xs:element ref="FootstepAudioTypes"/>
+        <xs:element ref="FootstepAudioTags"/>
+        <xs:element ref="InterfaceVisibilityTypes"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AnimationOperatorTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="AnimationOperatorType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FunctionTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="FunctionType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FlavorTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="FlavorType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ArtStyleTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ArtStyleType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CitySizeTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="CitySizeType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContactTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ContactType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DiplomacyPowerTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="DiplomacyPowerType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutomateTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="AutomateType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DirectionTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="DirectionType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FootstepAudioTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="FootstepAudioType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FootstepAudioTags">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="FootstepAudioTag"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FootstepAudioTag">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="FootstepAudioType"/>
+        <xs:element ref="FootstepAudioTagString"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InterfaceVisibilityTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="InterfaceVisibilityType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Civ4ArtDefines">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="BonusArtInfos"/>
+        <xs:element ref="BuildingArtInfos"/>
+        <xs:element ref="CivilizationArtInfos"/>
+        <xs:element ref="FeatureArtInfos"/>
+        <xs:element ref="ImprovementArtInfos"/>
+        <xs:element ref="InterfaceArtInfos"/>
+        <xs:element ref="LeaderheadArtInfos"/>
+        <xs:element ref="MiscArtInfos"/>
+        <xs:element ref="MovieArtInfos"/>
+        <xs:element ref="TerrainArtInfos"/>
+        <xs:element ref="UnitArtInfos"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BonusArtInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="BonusArtInfo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BonusArtInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Type"/>
+        <xs:element ref="fScale"/>
+        <xs:element ref="fInterfaceScale"/>
+        <xs:element ref="NIF"/>
+        <xs:element ref="KFM"/>
+        <xs:element minOccurs="0" ref="SHADERNIF"/>
+        <xs:element ref="Button"/>
+        <xs:element ref="FontButtonIndex"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuildingArtInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="BuildingArtInfo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuildingArtInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Type"/>
+        <xs:element ref="LSystem"/>
+        <xs:element ref="bAnimated"/>
+        <xs:element ref="fScale"/>
+        <xs:element ref="fInterfaceScale"/>
+        <xs:element ref="NIF"/>
+        <xs:element ref="KFM"/>
+        <xs:element ref="Button"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CivilizationArtInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="CivilizationArtInfo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CivilizationArtInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Type"/>
+        <xs:element ref="Button"/>
+        <xs:element ref="Path"/>
+        <xs:element ref="bWhiteFlag"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FeatureArtInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="FeatureArtInfo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FeatureArtInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Type"/>
+        <xs:element ref="bAnimated"/>
+        <xs:element ref="bRiverArt"/>
+        <xs:element ref="TileArtType"/>
+        <xs:element ref="LightType"/>
+        <xs:element ref="fScale"/>
+        <xs:element ref="fInterfaceScale"/>
+        <xs:element ref="Button"/>
+        <xs:element maxOccurs="unbounded" ref="FeatureVariety"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FeatureVariety">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="FeatureArtPieces"/>
+        <xs:element ref="FeatureDummyNodes"/>
+        <xs:element ref="bGenerateRotations"/>
+        <xs:element ref="VarietyButton"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FeatureArtPieces">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="FeatureArtPiece"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FeatureArtPiece">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ModelFile"/>
+        <xs:element ref="Connections"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FeatureDummyNodes">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="ImprovementArtInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ImprovementArtInfo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImprovementArtInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Type"/>
+        <xs:element ref="bExtraAnimations"/>
+        <xs:element ref="fScale"/>
+        <xs:element ref="fInterfaceScale"/>
+        <xs:element ref="NIF"/>
+        <xs:element ref="KFM"/>
+        <xs:element minOccurs="0" ref="SHADERNIF"/>
+        <xs:element ref="Button"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InterfaceArtInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="InterfaceArtInfo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InterfaceArtInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Type"/>
+        <xs:element ref="Path"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MiscArtInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="MiscArtInfo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MiscArtInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Type"/>
+        <xs:element ref="Path"/>
+        <xs:element ref="fScale"/>
+        <xs:element ref="NIF"/>
+        <xs:element ref="KFM"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MovieArtInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="MovieArtInfo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MovieArtInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Type"/>
+        <xs:element ref="Path"/>
+        <xs:element minOccurs="0" ref="KFM"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TerrainArtInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="TerrainArtInfo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TerrainArtInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Type"/>
+        <xs:element ref="Path"/>
+        <xs:element ref="Grid"/>
+        <xs:element ref="Detail"/>
+        <xs:element ref="Button"/>
+        <xs:element ref="LayerOrder"/>
+        <xs:element ref="AlphaShader"/>
+        <xs:element ref="TextureBlend01"/>
+        <xs:element ref="TextureBlend02"/>
+        <xs:element ref="TextureBlend04"/>
+        <xs:element ref="TextureBlend08"/>
+        <xs:element ref="TextureBlend03"/>
+        <xs:element ref="TextureBlend06"/>
+        <xs:element ref="TextureBlend12"/>
+        <xs:element ref="TextureBlend09"/>
+        <xs:element ref="TextureBlend07"/>
+        <xs:element ref="TextureBlend14"/>
+        <xs:element ref="TextureBlend13"/>
+        <xs:element ref="TextureBlend11"/>
+        <xs:element ref="TextureBlend10"/>
+        <xs:element ref="TextureBlend05"/>
+        <xs:element ref="TextureBlend15"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnitArtInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="UnitArtInfo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnitArtInfo">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="Type"/>
+        <xs:element minOccurs="0" ref="Button"/>
+        <xs:element minOccurs="0" ref="fScale"/>
+        <xs:element minOccurs="0" ref="fInterfaceScale"/>
+        <xs:element minOccurs="0" ref="bActAsLand"/>
+        <xs:element minOccurs="0" ref="bActAsAir"/>
+        <xs:element minOccurs="0" ref="NIF"/>
+        <xs:element minOccurs="0" ref="KFM"/>
+        <xs:element minOccurs="0" ref="SHADERNIF"/>
+        <xs:element minOccurs="0" ref="ShadowDef"/>
+        <xs:element minOccurs="0" ref="iDamageStates"/>
+        <xs:element minOccurs="0" ref="TrailDefinition"/>
+        <xs:element minOccurs="0" ref="fBattleDistance"/>
+        <xs:element minOccurs="0" ref="fRangedDeathTime"/>
+        <xs:element minOccurs="0" ref="bSmoothMove"/>
+        <xs:element minOccurs="0" ref="fAngleInterpRate"/>
+        <xs:element minOccurs="0" ref="fBankRate"/>
+        <xs:element minOccurs="0" ref="bCombatExempt"/>
+        <xs:element minOccurs="0" ref="fExchangeAngle"/>
+        <xs:element minOccurs="0" ref="bActAsRanged"/>
+        <xs:element minOccurs="0" ref="TrainSound"/>
+        <xs:element minOccurs="0" ref="AudioRunSounds"/>
+        <xs:element minOccurs="0" ref="ActionSound"/>
+        <xs:element minOccurs="0" ref="PatrolSound"/>
+        <xs:element minOccurs="0" ref="SelectionSound"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeaderheadArtInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="LeaderheadArtInfo" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeaderheadArtInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Type"/>
+        <xs:element ref="Button"/>
+        <xs:element ref="NIF"/>
+        <xs:element ref="KFM"/>
+        <xs:element ref="NoShaderNIF"/>
+        <xs:element ref="BackgroundKFM"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShadowDef">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ShadowNIF"/>
+        <xs:element ref="ShadowAttachNode"/>
+        <xs:element ref="fShadowScale"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrailDefinition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Texture"/>
+        <xs:element ref="fWidth"/>
+        <xs:element ref="fLength"/>
+        <xs:element ref="fTaper"/>
+        <xs:element ref="fFadeStartTime"/>
+        <xs:element ref="fFadeFalloff"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AudioRunSounds">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="AudioRunTypeLoop"/>
+        <xs:element ref="AudioRunTypeEnd"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Civ4MainMenus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="MainMenus">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" ref="MainMenu"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MainMenu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Type"/>
+        <xs:element name="Description" type="xs:string"/>
+        <xs:element ref="Scene"/>
+        <xs:element ref="SceneNoShader"/>
+        <xs:element ref="Soundtrack"/>
+        <xs:element ref="Loading"/>
+        <xs:element ref="LoadingSlideshow"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Civ4RouteModelInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="RouteModelInfos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" ref="RouteModelInfo"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RouteModelInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ModelFile"/>
+        <xs:element ref="LateModelFile"/>
+        <xs:element ref="ModelFileKey"/>
+        <xs:element ref="Animated"/>
+        <xs:element ref="RouteType"/>
+        <xs:element ref="Connections"/>
+        <xs:element ref="ModelConnections"/>
+        <xs:element ref="Rotations"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Civ4BasicInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ConceptInfos"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConceptInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ConceptInfo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConceptInfo" type="c2cConceptInfo"/>
+  <xs:element name="Civ4NewConceptInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="NewConceptInfos"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewConceptInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="NewConceptInfo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewConceptInfo" type="c2cConceptInfo"/>
+  <xs:element name="Civ4DCMConceptInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="DCMConceptInfos"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DCMConceptInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="DCMConceptInfo" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DCMConceptInfo" type="c2cConceptInfo"/>
+  <xs:element name="Civ4ANDConceptInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ANDConceptInfos"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ANDConceptInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ANDConceptInfo" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ANDConceptInfo" type="c2cConceptInfo"/>
+  <xs:element name="Civ4InvisibleInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="InvisibleInfos"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvisibleInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="InvisibleInfo" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvisibleInfo" type="c2cConceptInfo"/>
+  <xs:element name="Civ4MemoryInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="MemoryInfos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="MemoryInfo" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MemoryInfo" type="c2cConceptInfo"/>
+  <xs:complexType name="c2cConceptInfo">
+    <xs:sequence>
+      <xs:element ref="Type"/>
+      <xs:element ref="Description"/>
+      <xs:element ref="Civilopedia" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Civ4MapInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="MapInfos"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MapInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="MapInfo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MapInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Type"/>
+        <xs:element ref="Description"/>
+        <xs:element ref="Help"/>
+        <xs:element ref="iGridWidth"/>
+        <xs:element ref="iGridHeight"/>
+        <xs:element ref="bWrapX"/>
+        <xs:element ref="bWrapY"/>
+        <xs:element ref="InitialWBMap"/>
+        <xs:element ref="MapScript"/>
+        <xs:element ref="MapInteraction"/>
+        <xs:element ref="StartingEvent"/>
+        <xs:element ref="SwitchType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MapInteraction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Map"/>
+        <xs:element ref="bContactable"/>
+        <xs:element ref="iDistance"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Civ4MapSwitchInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="MapSwitchInfos"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MapSwitchInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="MapSwitchInfo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MapSwitchInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Type"/>
+        <xs:element ref="Description"/>
+        <xs:element ref="Help"/>
+        <xs:element ref="Map"/>
+        <xs:element ref="SwitchEvent"/>
+        <xs:element ref="bManual"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Civ4GameOptionInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="GameOptionInfos"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GameOptionInfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="GameOptionInfo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GameOptionInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Type"/>
+        <xs:element ref="Description"/>
+        <xs:element ref="Help"/>
+        <xs:element ref="bDefault"/>
+        <xs:element ref="bVisible"/>
+        <xs:element minOccurs="0" ref="EnforcesGameOptionOnTypes"/>
+        <xs:element minOccurs="0" ref="EnforcesGameOptionOffTypes"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnforcesGameOptionOnTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="EnforcesGameOptionOnType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnforcesGameOptionOnType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="GameOptionType"/>
+        <xs:element ref="bEnforcesGameOptionOn"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnforcesGameOptionOffTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="EnforcesGameOptionOffType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnforcesGameOptionOffType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="GameOptionType"/>
+        <xs:element ref="bEnforcesGameOptionOff"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="bEnforcesGameOptionOn" type="Civ4Boolean"/>
+  <xs:element name="bEnforcesGameOptionOff" type="Civ4Boolean"/>
+  <xs:element name="GameOptionType" type="xs:NCName"/>
+  <xs:element name="InitialWBMap" type="xs:string"/>
+  <xs:element name="MapScript" type="xs:string"/>
+  <xs:element name="bRiverArt" type="Civ4Boolean"/>
+  <xs:element name="TileArtType" type="xs:NCName"/>
+  <xs:element name="LightType" type="xs:NCName"/>
+  <xs:element name="SwitchEvent" type="xs:NCName"/>
+  <xs:element name="bManual" type="Civ4Boolean"/>
+  <xs:element name="bContactable" type="Civ4Boolean"/>
+  <xs:element name="iDistance" type="Civ4Integer"/>
+  <xs:element name="StartingEvent" type="xs:NCName"/>
+  <xs:element name="SwitchType" type="xs:NCName"/>
+  <xs:element name="iGridWidth" type="Civ4Integer"/>
+  <xs:element name="iGridHeight" type="Civ4Integer"/>
+  <xs:element name="bWrapX" type="Civ4Boolean"/>
+  <xs:element name="bWrapY" type="Civ4Boolean"/>
+  <xs:element name="Map" type="xs:NCName"/>
+  <xs:element name="Civilopedia" type="xs:NCName"/>
+  <xs:element name="AnimationOperatorType" type="xs:NCName"/>
+  <xs:element name="FunctionType" type="xs:NCName"/>
+  <xs:element name="FlavorType" type="xs:NCName"/>
+  <xs:element name="ArtStyleType" type="xs:NCName"/>
+  <xs:element name="CitySizeType" type="xs:NCName"/>
+  <xs:element name="ContactType" type="xs:NCName"/>
+  <xs:element name="DiplomacyPowerType" type="xs:NCName"/>
+  <xs:element name="AutomateType" type="xs:NCName"/>
+  <xs:element name="DirectionType" type="xs:NCName"/>
+  <xs:element name="FootstepAudioTagString" type="xs:NCName"/>
+  <xs:element name="FontButtonIndex" type="Civ4Integer"/>
+  <xs:element name="LSystem" type="xs:string"/>
+  <xs:element name="bWhiteFlag" type="Civ4Boolean"/>
+  <xs:element name="bGenerateRotations" type="Civ4Boolean"/>
+  <xs:element name="VarietyButton" type="xs:string"/>
+  <xs:element name="bExtraAnimations" type="Civ4Boolean"/>
+  <xs:element name="Grid" type="xs:string"/>
+  <xs:element name="Detail" type="xs:string"/>
+  <xs:element name="LayerOrder" type="Civ4Integer"/>
+  <xs:element name="AlphaShader" type="Civ4Integer"/>
+  <xs:element name="TextureBlend01" type="xs:string"/>
+  <xs:element name="TextureBlend02" type="xs:string"/>
+  <xs:element name="TextureBlend04" type="xs:string"/>
+  <xs:element name="TextureBlend08" type="xs:string"/>
+  <xs:element name="TextureBlend03" type="xs:string"/>
+  <xs:element name="TextureBlend06" type="xs:string"/>
+  <xs:element name="TextureBlend12" type="xs:string"/>
+  <xs:element name="TextureBlend09" type="xs:string"/>
+  <xs:element name="TextureBlend07" type="xs:string"/>
+  <xs:element name="TextureBlend14" type="xs:string"/>
+  <xs:element name="TextureBlend13" type="xs:string"/>
+  <xs:element name="TextureBlend11" type="xs:string"/>
+  <xs:element name="TextureBlend10" type="xs:string"/>
+  <xs:element name="TextureBlend05" type="xs:string"/>
+  <xs:element name="TextureBlend15" type="xs:string"/>
+  <xs:element name="bActAsLand" type="Civ4Boolean"/>
+  <xs:element name="bActAsAir" type="Civ4Boolean"/>
+  <xs:element name="ShadowNIF" type="xs:string"/>
+  <xs:element name="ShadowAttachNode" type="xs:string"/>
+  <xs:element name="fShadowScale" type="Civ4Float"/>
+  <xs:element name="iDamageStates" type="Civ4Integer"/>
+  <xs:element name="Texture" type="xs:string"/>
+  <xs:element name="fWidth" type="Civ4Float"/>
+  <xs:element name="fLength" type="Civ4Float"/>
+  <xs:element name="fTaper" type="Civ4Float"/>
+  <xs:element name="fFadeStartTime" type="Civ4Float"/>
+  <xs:element name="fFadeFalloff" type="Civ4Float"/>
+  <xs:element name="fBattleDistance" type="Civ4Float"/>
+  <xs:element name="fRangedDeathTime" type="Civ4Float"/>
+  <xs:element name="bSmoothMove" type="Civ4Boolean"/>
+  <xs:element name="fAngleInterpRate" type="Civ4Float"/>
+  <xs:element name="fBankRate" type="Civ4Float"/>
+  <xs:element name="bCombatExempt" type="Civ4Boolean"/>
+  <xs:element name="fExchangeAngle" type="Civ4Float"/>
+  <xs:element name="bActAsRanged" type="Civ4Boolean"/>
+  <xs:element name="TrainSound" type="xs:NCName"/>
+  <xs:element name="AudioRunTypeLoop" type="xs:string"/>
+  <xs:element name="AudioRunTypeEnd" type="xs:string"/>
+  <xs:element name="ActionSound" type="xs:string"/>
+  <xs:element name="PatrolSound" type="xs:string"/>
+  <xs:element name="SelectionSound" type="xs:string"/>
+  <xs:element name="Scene" type="xs:NCName"/>
+  <xs:element name="SceneNoShader" type="xs:NCName"/>
+  <xs:element name="Soundtrack" type="xs:NCName"/>
+  <xs:element name="Loading" type="xs:NCName"/>
+  <xs:element name="LoadingSlideshow" type="xs:NCName"/>
+  <xs:element name="LateModelFile" type="xs:string"/>
+  <xs:element name="ModelFileKey" type="xs:NCName"/>
+  <xs:element name="Animated" type="Civ4Boolean"/>
+  <xs:element name="RouteType" type="xs:NCName"/>
+  <xs:element name="ModelConnections" type="xs:string"/>
+  <xs:element name="Rotations" type="xs:string"/>
+  <xs:element name="Path" type="xs:string"/>
+  <xs:element name="Button" type="xs:string"/>
+  <xs:element name="bAnimated" type="Civ4Boolean"/>
+  <xs:element name="fScale" type="Civ4Float"/>
+  <xs:element name="fInterfaceScale" type="Civ4Float"/>
+  <xs:element name="ModelFile" type="xs:string"/>
+  <xs:element name="Connections" type="xs:string"/>
+  <xs:element name="NoShaderNIF" type="xs:string"/>
+  <xs:element name="KFM" type="xs:string"/>
+  <xs:element name="NIF" type="xs:string"/>
+  <xs:element name="BackgroundKFM" type="xs:string"/>
+  <xs:element name="SHADERNIF" type="xs:string"/>
+  <xs:element name="InterfaceVisibilityType" type="xs:NCName"/>
+  <xs:element name="FootstepAudioType" type="xs:NCName"/>
+  <xs:element name="DefineName" type="xs:NCName"/>
+  <xs:element name="DefineTextVal" type="xs:string"/>
+  <xs:element name="bDefineBoolVal" type="Civ4Boolean"/>
+  <xs:element name="fDefineFloatVal" type="Civ4Float"/>
+  <xs:element name="iDefineIntVal" type="Civ4Integer"/>
+  <xs:element name="Help" type="xs:string"/>
+  <xs:element name="bDefault" type="Civ4Boolean"/>
+  <xs:element name="bVisible" type="Civ4Boolean"/>
+  <xs:element name="bLoad" type="Civ4Boolean"/>
+  <xs:element name="DefaultConfiguration" type="xs:NCName"/>
+  <xs:element name="Description" type="xs:NCName"/>
+  <xs:element name="Directory" type="xs:string"/>
+  <xs:element name="Type" type="xs:NCName"/>
+  <xs:simpleType name="emptyString">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value=""/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="int-01">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Civ4Boolean">
+    <xs:restriction base="int-01"/>
+  </xs:simpleType>
+  <xs:simpleType name="Civ4Integer">
+    <xs:restriction base="xs:integer"/>
+  </xs:simpleType>
+  <xs:simpleType name="Civ4Float">
+    <xs:restriction base="xs:float"/>
+  </xs:simpleType>
+</xs:schema>

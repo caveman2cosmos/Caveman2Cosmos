@@ -1,0 +1,78 @@
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- CityLSystem Schema -->
+<!-- -->
+<!-- Defines an arbitrary Civ4 LSystem -->
+<!-- When debugging LSystems, refer to Civ4/Logs/LSystem.log for help -->
+<Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
+	<!-- base types-->
+	<ElementType name="Filename" content="textOnly"/>
+	<ElementType name="Scale" content="textOnly"/>
+	<ElementType name="Rotate" content="textOnly"/>
+	<ElementType name="Translate" content="textOnly"/>
+	<ElementType name="Class" content="textOnly"/>
+	<ElementType name="Name" content="textOnly"/>
+	<ElementType name="Child" content="textOnly"/>
+	<ElementType name="From" content="textOnly"/>
+	<ElementType name="Width" content="textOnly"/>
+	<ElementType name="Height" content="textOnly"/>
+	<ElementType name="Attribute" content="textOnly">
+		<AttributeType name="Class" required="no" default="Scalar"/>
+		<attribute type="Class"/>
+	</ElementType>
+	<!-- Transformation info:
+		+X moves east on the Civ map
+		+Y is north on the Civ map
+		+90 rotation rotates CCW, i.e. +X->+Y, +Y->-X ... rotation is applied about the min-corner of the model
+		Translation by x,y sets the center of the item to x,y -->
+	<!-- entity references -->
+	<ElementType name="ArtRef">
+		<AttributeType name="Name" required="yes"/>
+		<attribute type="Name"/>
+		<element type="Attribute" minOccurs="0" maxOccurs="*"/>
+		<element type="Rotate" minOccurs="0" maxOccurs="1"/>
+		<element type="Translate" minOccurs="0" maxOccurs="1"/>
+		<element type="Scale" minOccurs="0" maxOccurs="1"/>
+	</ElementType>
+	<!-- a production encodes a split of a node into multiple child nodes -->
+	<!-- Civ4\Tools\Graphics\LSysTool can be used to create productions from bitmaps -->
+	<ElementType name="LProduction">
+		<AttributeType name="From" required="yes"/>
+		<attribute type="From"/>
+		<AttributeType name="Name" required="no"/>
+		<attribute type="Name"/>
+		<!-- nodes into which this splits -->
+		<element type="Attribute" minOccurs="0" maxOccurs="*"/>
+		<element type="To" minOccurs="0" maxOccurs="*"/>
+		<!-- production specific ArtRefs, e.g. roads, and attributes -->
+		<element type="ArtRef" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<!-- the To element describes the local transformations as well as the new node instance created by applying a production -->
+	<ElementType name="To" content="eltOnly" order="many">
+		<AttributeType name="Name" required="yes"/>
+		<attribute type="Name"/>
+		<element type="Rotate" minOccurs="0" maxOccurs="1"/>
+		<element type="Translate" minOccurs="0" maxOccurs="1"/>
+		<element type="Scale" minOccurs="0" maxOccurs="1"/>
+	</ElementType>
+	<!-- a node can contain ArtRefs, e.g. plain-old-NIFs, as well as named references to entities ...
+	     how these entity references are mapped from strings to actual CvEntities is determined by the CvLSystem
+	     runtime
+	  -->
+	<ElementType name="LNode">
+		<AttributeType name="Name" required="yes"/>
+		<attribute type="Name"/>
+		<element type="Width" minOccurs="0"/>
+		<element type="Height" minOccurs="0"/>
+		<element type="Attribute" minOccurs="0" maxOccurs="*"/>
+		<element type="ArtRef" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<!-- The main L-system is just a set of nodes and productions -->
+	<!-- Nonterminal nodes can be created implicitly via productions (nonterminals being nodes w/o entities & ArtRefs -->
+	<ElementType name="LSystemInfos" content="eltOnly">
+		<element type="Attribute" minOccurs="0" maxOccurs="*"/>
+		<element type="LNode" minOccurs="0" maxOccurs="*"/>
+		<element type="LProduction" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+</Schema>

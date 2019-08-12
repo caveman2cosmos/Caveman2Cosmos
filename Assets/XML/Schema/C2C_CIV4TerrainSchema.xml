@@ -1,0 +1,851 @@
+<?xml version="1.0"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Modified by the World of Civilization Team -->
+<!-- Terrain Schema -->
+<!-- -->
+<Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
+  <!-- Replacements added by AIAndy -->
+  <ElementType name="ReplacementCondition"/>
+  <ElementType name="ReplacementID"/>
+	<!--TB's Tags Begin -->
+	<ElementType name="bColdDamage" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bCanMoveSeaUnits" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bChangeRemove" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bNotOnAnyBonus" content="textOnly" dt:type="boolean"/>
+	<ElementType name="iPopDestroys" content="textOnly" dt:type="int"/>
+	<ElementType name="iCommunicability" content="textOnly" dt:type="int"/>
+	<ElementType name="PromotionLineType" content="textOnly"/>
+	<ElementType name="ImprovementType" content="textOnly"/>
+	<ElementType name="AlternativeImprovementUpgradeTypes" content="eltOnly">
+		<element type="ImprovementType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="FeatureType" content="textOnly"/>
+	<ElementType name="FeatureChangeTypes" content="eltOnly">
+		<element type="FeatureType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="MapCategoryType" content="textOnly"/>
+	<ElementType name="MapCategoryTypes" content="eltOnly">
+		<element type="MapCategoryType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="bWorkedTile" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bVicinity" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bAccessVolume" content="textOnly" dt:type="boolean"/>
+	<ElementType name="AfflictionCommunicabilityTypes" content="eltOnly">
+		<element type="AfflictionCommunicabilityType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="AfflictionCommunicabilityType" content="eltOnly">
+		<element type="PromotionLineType" minOccurs="0" maxOccurs="*"/>
+		<element type="iCommunicability" minOccurs="0" maxOccurs="*"/>
+		<element type="bWorkedTile" minOccurs="0" maxOccurs="*"/>
+		<element type="bVicinity" minOccurs="0" maxOccurs="*"/>
+		<element type="bAccessVolume" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="BonusChange" content="textOnly"/>
+	<!--TB's Tags End -->
+  <!-- Expressions added by AIAndy -->
+  <ElementType name="Constant" content="textOnly"/>
+  <ElementType name="Is" content="textOnly"/>
+  <ElementType name="Python" content="textOnly"/>
+  <ElementType name="BoolExpr"/>
+  <ElementType name="Not"/>
+  <ElementType name="And"/>
+  <ElementType name="Or"/>
+  <ElementType name="BEqual"/>
+  <ElementType name="If"/>
+  <ElementType name="IntegrateOr"/>
+  <ElementType name="GOMType" content="textOnly"/>
+  <ElementType name="ID" content="textOnly"/>
+  <ElementType name="Has" content="eltOnly">
+    <element type="GOMType" minOccurs="1" maxOccurs="*"/>
+    <element type="ID" minOccurs="1" maxOccurs="*"/>
+  </ElementType>
+  <ElementType name="Greater"/>
+  <ElementType name="GreaterEqual"/>
+  <ElementType name="Equal"/>
+  <ElementType name="Random"/>
+  <ElementType name="Adapt"/>
+  <ElementType name="Plus"/>
+  <ElementType name="Minus"/>
+  <ElementType name="Mult"/>
+  <ElementType name="Div"/>
+  <ElementType name="IntegrateSum"/>
+  <ElementType name="IntegrateAvg"/>
+  <ElementType name="IntegrateCount"/>
+	<!-- PropertyManipulators added by AIAndy -->
+	<ElementType name="PropertySourceType" content="textOnly"/>
+	<ElementType name="PropertyInteractionType" content="textOnly"/>
+	<ElementType name="PropertyPropagatorType" content="textOnly"/>
+	<ElementType name="PropertyType" content="textOnly"/>
+	<ElementType name="SourcePropertyType" content="textOnly"/>
+	<ElementType name="TargetPropertyType" content="textOnly"/>
+	<ElementType name="GameObjectType" content="textOnly"/>
+	<ElementType name="TargetObjectType" content="textOnly"/>
+	<ElementType name="RelationType" content="textOnly"/>
+	<ElementType name="TargetRelationType" content="textOnly"/>
+	<ElementType name="TargetCondition" content="textOnly"/>
+	<ElementType name="AttributeType" content="textOnly"/>
+	<ElementType name="iAmountPerTurn"/>
+	<ElementType name="iGrowthPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iInhibitionPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iDistance" content="textOnly" dt:type="int"/>
+	<ElementType name="iTargetDistance" content="textOnly" dt:type="int"/>
+	<ElementType name="iPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iLimit" content="textOnly" dt:type="int"/>
+	<ElementType name="iNoDecayAmount" content="textOnly" dt:type="int"/>
+	<ElementType name="iNoConvertAmount" content="textOnly" dt:type="int"/>
+	<ElementType name="Active"/>
+
+	<ElementType name="PropertySource" content="eltOnly" order="many">
+		<element type="PropertySourceType" minOccurs="1" maxOccurs="*"/>
+		<element type="PropertyType" minOccurs="1" maxOccurs="*"/>
+		<element type="GameObjectType" minOccurs="0" maxOccurs="*"/>
+		<element type="RelationType" minOccurs="0" maxOccurs="*"/>
+		<element type="iDistance" minOccurs="0" maxOccurs="*"/>
+		<element type="AttributeType" minOccurs="0" maxOccurs="*"/>
+		<element type="iAmountPerTurn" minOccurs="0" maxOccurs="*"/>
+		<element type="iPercent" minOccurs="0" maxOccurs="*"/>
+		<element type="iLimit" minOccurs="0" maxOccurs="*"/>
+		<element type="iNoDecayAmount" minOccurs="0" maxOccurs="*"/>
+		<element type="Active" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+
+	<ElementType name="PropertyInteraction" content="eltOnly" order="many">
+		<element type="PropertyInteractionType" minOccurs="1" maxOccurs="*"/>
+		<element type="SourcePropertyType" minOccurs="1" maxOccurs="*"/>
+		<element type="TargetPropertyType" minOccurs="1" maxOccurs="*"/>
+		<element type="GameObjectType" minOccurs="0" maxOccurs="*"/>
+		<element type="RelationType" minOccurs="0" maxOccurs="*"/>
+		<element type="iDistance" minOccurs="0" maxOccurs="*"/>
+		<element type="iAmountPerTurn" minOccurs="0" maxOccurs="*"/>
+		<element type="iGrowthPercent" minOccurs="0" maxOccurs="*"/>
+		<element type="iInhibitionPercent" minOccurs="0" maxOccurs="*"/>
+		<element type="iPercent" minOccurs="0" maxOccurs="*"/>
+		<element type="iNoConvertAmount" minOccurs="0" maxOccurs="*"/>
+		<element type="Active" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+
+	<ElementType name="PropertyPropagator" content="eltOnly" order="many">
+		<element type="PropertyPropagatorType" minOccurs="1" maxOccurs="*"/>
+		<element type="PropertyType" minOccurs="1" maxOccurs="*"/>
+		<element type="TargetObjectType" minOccurs="0" maxOccurs="*"/>
+		<element type="GameObjectType" minOccurs="0" maxOccurs="*"/>
+		<element type="RelationType" minOccurs="0" maxOccurs="*"/>
+		<element type="iAmountPerTurn" minOccurs="0" maxOccurs="*"/>
+		<element type="TargetRelationType" minOccurs="0" maxOccurs="*"/>
+		<element type="TargetCondition" minOccurs="0" maxOccurs="*"/>
+		<element type="iDistance" minOccurs="0" maxOccurs="*"/>
+		<element type="iTargetDistance" minOccurs="0" maxOccurs="*"/>
+		<element type="iPercent" minOccurs="0" maxOccurs="*"/>
+		<element type="Active" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+
+	<ElementType name="PropertyManipulators" content="eltOnly" order="many">
+    <element type="PropertySource" minOccurs="0" maxOccurs="*"/>
+    <element type="PropertyInteraction" minOccurs="0" maxOccurs="*"/>
+		<element type="PropertyPropagator" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+
+	<ElementType name="Civilopedia" content="textOnly"/>
+	<ElementType name="Help" content="textOnly"/>
+	<ElementType name="iHealthPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="SymbolMeshPath" content="textOnly"/>
+	<ElementType name="SymbolMeshPaths" content="eltOnly">
+		<element type="SymbolMeshPath" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="iYield" content="textOnly" dt:type="int"/>
+	<ElementType name="Yields" content="eltOnly">
+		<element type="iYield" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="RiverYieldChange" content="eltOnly">
+		<element type="iYield" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="HillsYieldChange" content="eltOnly">
+		<element type="iYield" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="bWater" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bImpassable" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bFound" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bFoundCoast" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bFoundFreshWater" content="textOnly" dt:type="boolean"/>
+	<ElementType name="iMovement" content="textOnly" dt:type="int"/>
+	<ElementType name="iSeeFrom" content="textOnly" dt:type="int"/>
+	<ElementType name="iSeeThrough" content="textOnly" dt:type="int"/>
+	<!--Afforess-->
+	<ElementType name="iCultureDistance" content="textOnly" dt:type="int"/>
+	<ElementType name="bIgnoreTerrainCulture" content="textOnly" dt:type="boolean"/>
+	<!--Afforess-->
+	<ElementType name="iBuildModifier" content="textOnly" dt:type="int"/>
+	<ElementType name="iDefense" content="textOnly" dt:type="int"/>
+	<ElementType name="Button" content="textOnly"/>
+	<ElementType name="FootstepAudioType" content="textOnly"/>
+	<ElementType name="FootstepAudioScript" content="textOnly"/>
+	<ElementType name="FootstepSound" content="eltOnly">
+		<element type="FootstepAudioType" minOccurs="1"/>
+		<element type="FootstepAudioScript"/>
+	</ElementType>
+	<ElementType name="FootstepSounds" content="eltOnly">
+		<element type="FootstepSound" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="WorldSoundscapeAudioScript" content="textOnly"/>
+	<ElementType name="bGraphicalOnly" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bNational" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bGlobal" content="textOnly" dt:type="boolean"/>
+	<ElementType name="TerrainInfo" content="eltOnly">
+		<element type="Type"/>
+<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<element type="bTypeDependency" minOccurs="0"/>
+		<element type="AndDependencyTypes" minOccurs="0"/>
+		<element type="OrDependencyTypes" minOccurs="0"/>
+		<element type="bForceOverwrite" minOccurs="0"/>
+		<element type="bForceDelete" minOccurs="0"/>
+		<element type="iForceInsertLocation" minOccurs="0"/>
+<!-- XMLCOPY				END					MRGENIE		-->
+		<element type="Description" minOccurs="0"/>
+		<element type="Civilopedia" minOccurs="0"/>
+		<element type="Help" minOccurs="0"/>
+		<element type="ArtDefineTag" minOccurs="0"/>
+		<element type="Yields" minOccurs="0"/>
+		<element type="RiverYieldChange" minOccurs="0"/>
+		<element type="HillsYieldChange" minOccurs="0"/>
+		<element type="MapCategoryTypes" minOccurs="0"/>
+		<element type="bWater" minOccurs="0"/>
+		<element type="bImpassable" minOccurs="0"/>
+		<element type="bFound" minOccurs="0"/>
+		<element type="bFoundCoast" minOccurs="0"/>
+		<element type="bFoundFreshWater" minOccurs="0"/>
+		<element type="iMovement" minOccurs="0"/>
+		<element type="iSeeFrom" minOccurs="0"/>
+		<element type="iSeeThrough" minOccurs="0"/>
+		<element type="iBuildModifier" minOccurs="0"/>
+		<element type="iDefense" minOccurs="0"/>
+		<element type="Button" minOccurs="0"/>
+		<element type="FootstepSounds" minOccurs="0"/>
+		<element type="WorldSoundscapeAudioScript" minOccurs="0"/>
+		<element type="bGraphicalOnly" minOccurs="0"/>
+		<!--Afforess-->
+		<element type="iCultureDistance" minOccurs="0"/>
+		<element type="iHealthPercent" minOccurs="0"/>
+		<!--Afforess-->
+		<!--TB's Tags begin -->
+		<element type="bColdDamage" minOccurs="0"/>
+		<element type="bNational" minOccurs="0"/>
+		<element type="bGlobal" minOccurs="0"/>
+		<element type="AfflictionCommunicabilityTypes" minOccurs="0"/>
+		<!--TB's Tags end -->
+		<element type="PropertyManipulators" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="TerrainInfos" content="eltOnly">
+		<element type="TerrainInfo" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Description" content="textOnly"/>
+	<ElementType name="iHillsChange" content="textOnly" dt:type="int"/>
+	<ElementType name="iPeakChange" content="textOnly" dt:type="int"/>
+	<ElementType name="iLakeChange" content="textOnly" dt:type="int"/>
+	<ElementType name="iCityChange" content="textOnly" dt:type="int"/>
+	<ElementType name="iPopulationChangeOffset" content="textOnly" dt:type="int"/>
+	<ElementType name="iPopulationChangeDivisor" content="textOnly" dt:type="int"/>
+	<ElementType name="iMinCity" content="textOnly" dt:type="int"/>
+	<ElementType name="iTradeModifier" content="textOnly" dt:type="int"/>
+	<ElementType name="iGoldenAgeYield" content="textOnly" dt:type="int"/>
+	<ElementType name="iGoldenAgeYieldThreshold" content="textOnly" dt:type="int"/>
+	<ElementType name="iAIWeightPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="ColorType" content="textOnly"/>
+	<ElementType name="SymbolPath" content="textOnly"/>
+	<ElementType name="SymbolPaths" content="eltOnly">
+		<element type="SymbolPath" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="YieldInfo" content="eltOnly">
+		<element type="Type"/>
+<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<element type="bTypeDependency" minOccurs="0"/>
+		<element type="AndDependencyTypes" minOccurs="0"/>
+		<element type="OrDependencyTypes" minOccurs="0"/>
+		<element type="bForceOverwrite" minOccurs="0"/>
+		<element type="bForceDelete" minOccurs="0"/>
+		<element type="iForceInsertLocation" minOccurs="0"/>
+<!-- XMLCOPY				END					MRGENIE		-->
+		<element type="Description" minOccurs="0"/>
+		<element type="iHillsChange" minOccurs="0"/>
+		<element type="iPeakChange" minOccurs="0"/>
+		<element type="iLakeChange" minOccurs="0"/>
+		<element type="iCityChange" minOccurs="0"/>
+		<element type="iPopulationChangeOffset" minOccurs="0"/>
+		<element type="iPopulationChangeDivisor" minOccurs="0"/>
+		<element type="iMinCity" minOccurs="0"/>
+		<element type="iTradeModifier" minOccurs="0"/>
+		<element type="iGoldenAgeYield" minOccurs="0"/>
+		<element type="iGoldenAgeYieldThreshold" minOccurs="0"/>
+		<element type="iAIWeightPercent" minOccurs="0"/>
+		<element type="ColorType" minOccurs="0"/>
+		<element type="SymbolPaths" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="YieldInfos" content="eltOnly">
+		<element type="YieldInfo" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="FeatureName" content="textOnly"/>
+	<ElementType name="iYieldChange" content="textOnly" dt:type="int"/>
+	<ElementType name="YieldChanges" content="eltOnly">
+		<element type="iYieldChange" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="iAppearance" content="textOnly" dt:type="int"/>
+	<ElementType name="iDisappearance" content="textOnly" dt:type="int"/>
+	<ElementType name="iGrowth" content="textOnly" dt:type="int"/>
+	<ElementType name="iTurnDamage" content="textOnly" dt:type="int"/>
+	<ElementType name="iWarmingDefense" content="textOnly" dt:type="int"/> <!-- GWMod new XML field M.A. -->
+	<ElementType name="bNoCoast" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bNoRiver" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bNoAdjacent" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bRequiresFlatlands" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bRequiresRiver" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bAddsFreshWater" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bNoCity" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bNoImprovement" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bVisibleAlways" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bNukeImmune" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bCountsAsPeak" content="textOnly" dt:type="boolean"/>
+	<!--Afforess-->
+	<ElementType name="bCanGrowAnywhere" content="textOnly" dt:type="boolean"/>
+	<ElementType name="iSpread" content="textOnly" dt:type="int"/>
+	<!--Afforess-->
+	<ElementType name="bTerrain" content="textOnly" dt:type="boolean"/>
+	<ElementType name="TerrainBoolean" content="eltOnly">
+		<element type="TerrainType"/>
+		<element type="bTerrain"/>
+	</ElementType>
+	<ElementType name="TerrainBooleans" content="eltOnly">
+		<element type="TerrainBoolean" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<!-- Afforess -->
+	<ElementType name="GrowthSound" content="textOnly"/>
+	<!-- Afforess -->
+	<ElementType name="EffectType" content="textOnly"/>
+	<ElementType name="iEffectProbability" content="textOnly" dt:type="int"/>
+	<ElementType name="OnUnitChangeTo" content="textOnly"/>
+	<ElementType name="FeatureInfo" content="eltOnly">
+		<element type="Type"/>
+<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<element type="bTypeDependency" minOccurs="0"/>
+		<element type="AndDependencyTypes" minOccurs="0"/>
+		<element type="OrDependencyTypes" minOccurs="0"/>
+		<element type="bForceOverwrite" minOccurs="0"/>
+		<element type="bForceDelete" minOccurs="0"/>
+		<element type="iForceInsertLocation" minOccurs="0"/>
+<!-- XMLCOPY				END					MRGENIE		-->
+		<element type="Description" minOccurs="0"/>
+		<element type="Civilopedia" minOccurs="0"/>
+		<element type="Help" minOccurs="0"/>
+		<element type="ArtDefineTag" minOccurs="0"/>
+		<element type="YieldChanges" minOccurs="0"/>
+		<element type="RiverYieldChange" minOccurs="0"/>
+		<element type="HillsYieldChange" minOccurs="0"/>
+		<element type="MapCategoryTypes" minOccurs="0"/>
+		<element type="iMovement" minOccurs="0"/>
+		<element type="iSeeThrough" minOccurs="0"/>
+		<element type="iHealthPercent" minOccurs="0"/>
+		<element type="iDefense" minOccurs="0"/>
+		<element type="iAppearance" minOccurs="0"/>
+		<element type="iDisappearance" minOccurs="0"/>
+		<element type="iGrowth" minOccurs="0"/>
+		<element type="iTurnDamage" minOccurs="0"/>
+		<element type="iWarmingDefense" minOccurs="0"/>
+		<element type="iPopDestroys" minOccurs="0"/>
+		<element type="bNoCoast" minOccurs="0"/>
+		<element type="bNoRiver" minOccurs="0"/>
+		<element type="bNoAdjacent" minOccurs="0"/>
+		<element type="bRequiresFlatlands" minOccurs="0"/>
+		<element type="bRequiresRiver" minOccurs="0"/>
+		<element type="bAddsFreshWater" minOccurs="0"/>
+		<element type="bImpassable" minOccurs="0"/>
+		<element type="bNoCity" minOccurs="0"/>
+		<element type="bNoImprovement" minOccurs="0"/>
+		<element type="bVisibleAlways" minOccurs="0"/>
+		<element type="bNukeImmune" minOccurs="0"/>
+		<element type="bCountsAsPeak" minOccurs="0"/>
+		<element type="OnUnitChangeTo" minOccurs="0"/>
+		<element type="TerrainBooleans" minOccurs="0"/>
+		<element type="FootstepSounds" minOccurs="0"/>
+		<element type="WorldSoundscapeAudioScript" minOccurs="0"/>
+		<!-- Afforess -->
+		<element type="GrowthSound" minOccurs="0"/>
+		<element type="iCultureDistance" minOccurs="0"/>
+		<element type="iSpread" minOccurs="0"/>
+		<element type="bIgnoreTerrainCulture" minOccurs="0"/>
+		<!-- Afforess -->
+		<element type="EffectType" minOccurs="0"/>
+		<element type="iEffectProbability" minOccurs="0"/>
+		<element type="iAdvancedStartRemoveCost" minOccurs="0"/>
+		<!--Afforess-->
+		<element type="bCanGrowAnywhere" minOccurs="0"/>
+		<!--Afforess-->
+		<element type="AfflictionCommunicabilityTypes" minOccurs="0"/>
+		<element type="PropertyManipulators" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="FeatureInfos" content="eltOnly">
+		<element type="FeatureInfo" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="BonusClassInfo" content="eltOnly">
+		<element type="Type"/>
+<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<element type="bTypeDependency" minOccurs="0"/>
+		<element type="AndDependencyTypes" minOccurs="0"/>
+		<element type="OrDependencyTypes" minOccurs="0"/>
+		<element type="bForceOverwrite" minOccurs="0"/>
+		<element type="bForceDelete" minOccurs="0"/>
+		<element type="iForceInsertLocation" minOccurs="0"/>
+<!-- XMLCOPY				END					MRGENIE		-->
+		<element type="iUnique" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="BonusClassInfos" content="eltOnly">
+		<element type="BonusClassInfo" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="BonusName" content="textOnly"/>
+	<ElementType name="TerrainType" content="textOnly"/>
+	<ElementType name="BonusClassType" content="textOnly"/>
+	<ElementType name="TechReveal" content="textOnly"/>
+	<ElementType name="TechCityTrade" content="textOnly"/>
+	<ElementType name="TechObsolete" content="textOnly"/>
+	<ElementType name="iAITradeModifier" content="textOnly" dt:type="int"/>
+	<ElementType name="iAIObjective" content="textOnly" dt:type="int"/>
+	<ElementType name="iHealth" content="textOnly" dt:type="int"/>
+	<ElementType name="iHappiness" content="textOnly" dt:type="int"/>
+	<ElementType name="iPlacementOrder" content="textOnly" dt:type="int"/>
+	<ElementType name="iConstAppearance" content="textOnly" dt:type="int"/>
+	<ElementType name="iMinAreaSize" content="textOnly" dt:type="int"/>
+	<ElementType name="iMinLatitude" content="textOnly" dt:type="int"/>
+	<ElementType name="iMaxLatitude" content="textOnly" dt:type="int"/>
+	<ElementType name="iRandApp1" content="textOnly" dt:type="int"/>
+	<ElementType name="iRandApp2" content="textOnly" dt:type="int"/>
+	<ElementType name="iRandApp3" content="textOnly" dt:type="int"/>
+	<ElementType name="iRandApp4" content="textOnly" dt:type="int"/>
+	<ElementType name="Rands" content="eltOnly">
+		<element type="iRandApp1"/>
+		<element type="iRandApp2"/>
+		<element type="iRandApp3"/>
+		<element type="iRandApp4"/>
+	</ElementType>
+	<ElementType name="iPlayer" content="textOnly" dt:type="int"/>
+	<ElementType name="iTilesPer" content="textOnly" dt:type="int"/>
+	<ElementType name="iMinLandPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iUnique" content="textOnly" dt:type="int"/>
+	<ElementType name="iGroupRange" content="textOnly" dt:type="int"/>
+	<ElementType name="iGroupRand" content="textOnly" dt:type="int"/>
+	<ElementType name="bArea" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bHills" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bPeaks" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bCurrency" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bFlatlands" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bNoRiverSide" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bNormalize" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bFeature" content="textOnly" dt:type="boolean"/>
+	<ElementType name="FeatureBoolean" content="eltOnly">
+		<element type="FeatureType"/>
+		<element type="bFeature"/>
+	</ElementType>
+	<ElementType name="FeatureBooleans" content="eltOnly">
+		<element type="FeatureBoolean" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="bFeatureTerrain" content="textOnly" dt:type="boolean"/>
+	<ElementType name="FeatureTerrainBoolean" content="eltOnly">
+		<element type="TerrainType"/>
+		<element type="bFeatureTerrain"/>
+	</ElementType>
+	<ElementType name="FeatureTerrainBooleans" content="eltOnly">
+		<element type="FeatureTerrainBoolean" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="bUseLSystem" content="textOnly" dt:type="boolean"/>
+	<ElementType name="BonusInfo" content="eltOnly">
+		<element type="Type"/>
+<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<element type="bTypeDependency" minOccurs="0"/>
+		<element type="AndDependencyTypes" minOccurs="0"/>
+		<element type="OrDependencyTypes" minOccurs="0"/>
+		<element type="bForceOverwrite" minOccurs="0"/>
+		<element type="bForceDelete" minOccurs="0"/>
+		<element type="iForceInsertLocation" minOccurs="0"/>
+<!-- XMLCOPY				END					MRGENIE		-->
+		<element type="Description" minOccurs="0"/>
+		<element type="Civilopedia" minOccurs="0"/>
+		<element type="Help" minOccurs="0"/>
+		<element type="BonusClassType" minOccurs="0"/>
+		<element type="ArtDefineTag" minOccurs="0"/>
+		<element type="TechReveal" minOccurs="0"/>
+		<element type="TechCityTrade" minOccurs="0"/>
+		<element type="TechObsolete" minOccurs="0"/>
+		<element type="YieldChanges" minOccurs="0"/>
+		<element type="MapCategoryTypes" minOccurs="0"/>
+		<element type="iAITradeModifier" minOccurs="0"/>
+		<element type="iAIObjective" minOccurs="0"/>
+		<element type="iHealth" minOccurs="0"/>
+		<element type="iHappiness" minOccurs="0"/>
+		<element type="iPlacementOrder" minOccurs="0"/>
+		<element type="iConstAppearance" minOccurs="0"/>
+		<element type="iMinAreaSize" minOccurs="0"/>
+		<element type="iMinLatitude" minOccurs="0"/>
+		<element type="iMaxLatitude" minOccurs="0"/>
+		<element type="Rands" minOccurs="0"/>
+		<element type="iPlayer" minOccurs="0"/>
+		<element type="iTilesPer" minOccurs="0"/>
+		<element type="iMinLandPercent" minOccurs="0"/>
+		<element type="iUnique" minOccurs="0"/>
+		<element type="iGroupRange" minOccurs="0"/>
+		<element type="iGroupRand" minOccurs="0"/>
+		<element type="bArea" minOccurs="0"/>
+		<element type="bHills" minOccurs="0"/>
+		<element type="bPeaks" minOccurs="0"/>
+		<element type="bCurrency" minOccurs="0"/>
+		<element type="bFlatlands" minOccurs="0"/>
+		<element type="bNoRiverSide" minOccurs="0"/>
+		<element type="bNormalize" minOccurs="0"/>
+		<element type="TerrainBooleans" minOccurs="0"/>
+		<element type="FeatureBooleans" minOccurs="0"/>
+		<element type="FeatureTerrainBooleans" minOccurs="0"/>
+		<element type="bUseLSystem" minOccurs="0"/>
+		<element type="AfflictionCommunicabilityTypes" minOccurs="0"/>
+		<element type="PropertyManipulators" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="BonusInfos" content="eltOnly">
+		<element type="BonusInfo" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4TerrainInfos" content="eltOnly">
+		<element type="TerrainInfos" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4YieldInfos" content="eltOnly">
+		<element type="YieldInfos" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4FeatureInfos" content="eltOnly">
+		<element type="FeatureInfos" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4BonusInfos" content="eltOnly">
+		<element type="BonusInfos" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4BonusClassInfos" content="eltOnly">
+		<element type="BonusClassInfos" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4Terrain" content="eltOnly">
+		<element type="TerrainInfos" minOccurs="0" maxOccurs="*"/>
+		<element type="YieldInfos" minOccurs="0" maxOccurs="*"/>
+		<element type="FeatureInfos" minOccurs="0" maxOccurs="*"/>
+		<element type="BonusInfos" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="ArtDefineTag" content="textOnly"/>
+	<ElementType name="Type" content="textOnly"/>
+<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+	<ElementType name="bTypeDependency" content="textOnly" dt:type="boolean"/>
+	<ElementType name="DependencyType" content="textOnly"/>
+	<ElementType name="AndDependencyTypes" content="eltOnly">
+		<element type="DependencyType" minOccurs="1"/>
+	</ElementType>
+	<ElementType name="OrDependencyTypes" content="eltOnly">
+		<element type="DependencyType" minOccurs="1"/>
+	</ElementType>
+	<ElementType name="bForceOverwrite" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bForceDelete" content="textOnly" dt:type="boolean"/>
+	<ElementType name="iForceInsertLocation" content="textOnly" dt:type="int"/>
+<!-- XMLCOPY				END					MRGENIE		-->
+	<ElementType name="iWaterHeight" content="textOnly" dt:type="int"/>
+	<ElementType name="bRandomMap" content="textOnly" dt:type="boolean"/>
+	<ElementType name="HeightMap" content="textOnly"/>
+	<ElementType name="TerrainMap" content="textOnly"/>
+	<ElementType name="NormalMap" content="textOnly"/>
+	<ElementType name="BlendMap" content="textOnly"/>
+	<ElementType name="SkyArt" content="textOnly"/>
+	<ElementType name="iFogR" content="textOnly" dt:type="int"/>
+	<ElementType name="iFogG" content="textOnly" dt:type="int"/>
+	<ElementType name="iFogB" content="textOnly" dt:type="int"/>
+	<ElementType name="fTextureScaleX" content="textOnly"/>
+	<ElementType name="fTextureScaleY" content="textOnly"/>
+	<ElementType name="iPlotsPerCellX" content="textOnly" dt:type="int"/>
+	<ElementType name="iPlotsPerCellY" content="textOnly" dt:type="int"/>
+	<ElementType name="iGameCellSizeX" content="textOnly" dt:type="int"/>
+	<ElementType name="iGameCellSizeY" content="textOnly" dt:type="int"/>
+	<ElementType name="fZScale" content="textOnly"/>
+	<ElementType name="bTerrainShader" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bUseLightmap" content="textOnly" dt:type="boolean"/>
+	<ElementType name="fPeakScale" content="textOnly"/>
+	<ElementType name="fHillScale" content="textOnly"/>
+	<ElementType name="TerrainTextureInfo" content="eltOnly">
+		<element type="Type"/>
+<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<element type="bTypeDependency" minOccurs="0"/>
+		<element type="AndDependencyTypes" minOccurs="0"/>
+		<element type="OrDependencyTypes" minOccurs="0"/>
+		<element type="bForceOverwrite" minOccurs="0"/>
+		<element type="bForceDelete" minOccurs="0"/>
+		<element type="iForceInsertLocation" minOccurs="0"/>
+<!-- XMLCOPY				END					MRGENIE		-->
+		<element type="Description"/>
+		<element type="ArtDefineTag"/>
+	</ElementType>
+	<ElementType name="TerrainTextureInfos" content="eltOnly">
+		<element type="TerrainTextureInfo" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="PrereqNatureYields" content="eltOnly">
+		<element type="iYield" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="RouteType" content="textOnly"/>
+	<ElementType name="RouteYields" content="eltOnly">
+		<element type="iYield" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="RouteYieldChange" content="eltOnly">
+		<element type="RouteType"/>
+		<element type="RouteYields"/>
+	</ElementType>
+	<ElementType name="RouteYieldChanges" content="eltOnly">
+		<element type="RouteYieldChange" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="PrereqTech" content="textOnly"/>
+	<ElementType name="TechYields" content="eltOnly">
+		<element type="iYield" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="TechYieldChange" content="eltOnly">
+		<element type="PrereqTech"/>
+		<element type="TechYields"/>
+	</ElementType>
+	<ElementType name="TechYieldChanges" content="eltOnly">
+		<element type="TechYieldChange" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="RiverSideYieldChange" content="eltOnly">
+		<element type="iYield" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="IrrigatedYieldChange" content="eltOnly">
+		<element type="iYield" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="BonusType" content="textOnly"/>
+	<ElementType name="bBonusMakesValid" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bObsoleteBonusMakesValid" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bBonusTrade" content="textOnly" dt:type="boolean"/>
+	<ElementType name="iDiscoverRand" content="textOnly" dt:type="int"/>
+	<!--Afforess-->
+	<ElementType name="iDepletionRand" content="textOnly" dt:type="int"/>
+	<!--Afforess-->
+	<ElementType name="BonusTypeStruct" content="eltOnly">
+		<element type="BonusType"/>
+		<element type="bBonusMakesValid" minOccurs="0"/>
+		<element type="bBonusTrade" minOccurs="0"/>
+		<element type="iDiscoverRand" minOccurs="0"/>
+		<!--Afforess-->
+		<element type="iDepletionRand" minOccurs="0"/>
+		<!--Afforess-->
+		<element type="YieldChanges" minOccurs="0" maxOccurs="*"/>
+		<element type="bObsoleteBonusMakesValid" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="BonusTypeStructs" content="eltOnly">
+		<element type="BonusTypeStruct" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="ImprovementPillage" content="textOnly"/>
+	<ElementType name="ImprovementUpgrade" content="textOnly"/>
+	<ElementType name="bActsAsCity" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bHillsMakesValid" content="textOnly" dt:type="boolean"/>
+	<!--Afforess-->
+	<ElementType name="bPeakMakesValid" content="textOnly" dt:type="boolean"/>
+	<!--Afforess-->
+	<ElementType name="bFreshWaterMakesValid" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bRiverSideMakesValid" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bNoFreshWater" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bRequiresRiverSide" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bRequiresPeak" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bRequiresIrrigation" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bCarriesIrrigation" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bRequiresFeature" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bGoody" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bPermanent" content="textOnly" dt:type="boolean"/>
+	<ElementType name="iGoodyRange" content="textOnly" dt:type="int"/>
+	<!--Afforess-->
+	<ElementType name="bDepletedMine" content="textOnly" dt:type="boolean"/>
+	<ElementType name="TraitType" content="textOnly"/>
+	<ElementType name="TraitYields" content="eltOnly">
+		<element type="iYield" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="TraitYieldChange" content="eltOnly">
+		<element type="TraitType"/>
+		<element type="TraitYields"/>
+	</ElementType>
+	<ElementType name="TraitYieldChanges" content="eltOnly">
+		<element type="TraitYieldChange" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<!--Afforess-->
+	<ElementType name="iFeatureGrowth" content="textOnly" dt:type="int"/>
+	<ElementType name="iAirBombDefense" content="textOnly" dt:type="int"/>
+	<ElementType name="iDefenseModifier" content="textOnly" dt:type="int"/>
+	<ElementType name="iPillageGold" content="textOnly" dt:type="int"/>
+	<ElementType name="bOutsideBorders" content="textOnly" dt:type="boolean"/>
+	<ElementType name="iAdvancedStartCost" content="textOnly" dt:type="int"/>
+	<ElementType name="iAdvancedStartRemoveCost" content="textOnly" dt:type="int"/>
+	<ElementType name="iAdvancedStartCostIncrease" content="textOnly" dt:type="int"/>
+	<ElementType name="iTilesPerGoody" content="textOnly" dt:type="int"/>
+	<ElementType name="iUpgradeTime" content="textOnly" dt:type="int"/>
+	<ElementType name="bMakesValid" content="textOnly" dt:type="boolean"/>
+	<ElementType name="TerrainMakesValid" content="eltOnly">
+		<element type="TerrainType"/>
+		<element type="bMakesValid"/>
+	</ElementType>
+	<ElementType name="TerrainMakesValids" content="eltOnly">
+		<element type="TerrainMakesValid" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="FeatureMakesValid" content="eltOnly">
+		<element type="FeatureType"/>
+		<element type="bMakesValid"/>
+	</ElementType>
+	<ElementType name="FeatureMakesValids" content="eltOnly">
+		<element type="FeatureMakesValid" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+<!-- Super Forts begin -->
+	<ElementType name="iCulture" content="textOnly" dt:type="int"/>
+	<ElementType name="iCultureRange" content="textOnly" dt:type="int"/>
+	<ElementType name="iVisibilityChange" content="textOnly" dt:type="int"/>
+	<ElementType name="bBombardable" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bUpgradeRequiresFortify" content="textOnly" dt:type="boolean"/>
+<!-- Super Forts end -->
+<!-- Super forts C2C adaptation begin -->
+  <ElementType name="bIsUniversalTradeBonusProvider" content="textOnly" dt:type="boolean"/>
+  <ElementType name="bIsZOCSource" content="textOnly" dt:type="boolean"/>
+  <!-- Super forts C2C adaptation end -->
+  <ElementType name="ImprovementInfo" content="eltOnly">
+		<element type="Type"/>
+<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<element type="bTypeDependency" minOccurs="0"/>
+		<element type="AndDependencyTypes" minOccurs="0"/>
+		<element type="OrDependencyTypes" minOccurs="0"/>
+		<element type="bForceOverwrite" minOccurs="0"/>
+		<element type="bForceDelete" minOccurs="0"/>
+		<element type="iForceInsertLocation" minOccurs="0"/>
+<!-- XMLCOPY				END					MRGENIE		-->
+		<element type="Description" minOccurs="0"/>
+		<element type="Civilopedia" minOccurs="0"/>
+		<element type="Help" minOccurs="0"/>
+		<element type="ArtDefineTag" minOccurs="0"/>
+		<element type="PrereqNatureYields" minOccurs="0"/>
+		<element type="YieldChanges" minOccurs="0"/>
+		<element type="RiverSideYieldChange" minOccurs="0"/>
+		<element type="HillsYieldChange" minOccurs="0"/>
+		<element type="IrrigatedYieldChange" minOccurs="0"/>
+		<element type="MapCategoryTypes" minOccurs="0"/>
+		<element type="bActsAsCity" minOccurs="0"/>
+		<element type="bHillsMakesValid" minOccurs="0"/>
+		<!--Afforess-->
+		<element type="bPeakMakesValid" minOccurs="0"/>
+		<element type="PrereqTech" minOccurs="0"/>
+		<element type="iHealthPercent" minOccurs="0"/>
+		<element type="bDepletedMine" minOccurs="0"/>
+		<element type="iDepletionRand" minOccurs="0"/>
+		<!--Afforess-->
+		<element type="bFreshWaterMakesValid" minOccurs="0"/>
+		<element type="bRiverSideMakesValid" minOccurs="0"/>
+		<element type="bNoFreshWater" minOccurs="0"/>
+		<element type="bRequiresFlatlands" minOccurs="0"/>
+		<element type="bRequiresRiverSide" minOccurs="0"/>
+		<element type="bRequiresPeak" minOccurs="0"/>
+		<element type="bRequiresIrrigation" minOccurs="0"/>
+		<element type="bCarriesIrrigation" minOccurs="0"/>
+		<element type="bRequiresFeature" minOccurs="0"/>
+		<element type="bWater" minOccurs="0"/>
+		<element type="bGoody" minOccurs="0"/>
+		<element type="bPermanent" minOccurs="0"/>
+		<element type="bUseLSystem" minOccurs="0"/>
+		<element type="iAdvancedStartCost" minOccurs="0"/>
+		<element type="iAdvancedStartCostIncrease" minOccurs="0"/>
+		<element type="iTilesPerGoody" minOccurs="0"/>
+		<element type="iGoodyRange" minOccurs="0"/>
+		<element type="iFeatureGrowth" minOccurs="0"/>
+		<element type="iUpgradeTime" minOccurs="0"/>
+		<element type="iAirBombDefense" minOccurs="0"/>
+		<element type="iDefenseModifier" minOccurs="0"/>
+		<element type="iHappiness" minOccurs="0"/>
+		<element type="iPillageGold" minOccurs="0"/>
+		<element type="bOutsideBorders" minOccurs="0"/>
+		<element type="TerrainMakesValids" minOccurs="0"/>
+		<element type="FeatureMakesValids" minOccurs="0"/>
+		<element type="BonusTypeStructs" minOccurs="0" maxOccurs="*"/>
+		<element type="ImprovementPillage" minOccurs="0"/>
+		<element type="ImprovementUpgrade" minOccurs="0"/>
+		<element type="AlternativeImprovementUpgradeTypes" minOccurs="0"/>
+		<element type="TechYieldChanges" minOccurs="0"/>
+		<element type="RouteYieldChanges" minOccurs="0"/>
+		<element type="WorldSoundscapeAudioScript" minOccurs="0"/>
+		<element type="bGraphicalOnly" minOccurs="0"/>
+		<element type="PropertyManipulators" minOccurs="0"/>
+<!-- Super Forts begin -->
+		<element type="iCulture" minOccurs="0"/>
+		<element type="iCultureRange" minOccurs="0"/>
+		<element type="iVisibilityChange" minOccurs="0"/>
+		<element type="iSeeFrom" minOccurs="0"/>
+		<element type="iUnique" minOccurs="0"/>
+		<element type="bBombardable" minOccurs="0"/>
+		<element type="bUpgradeRequiresFortify" minOccurs="0"/>
+<!-- Super Forts end -->
+<!-- Super forts C2C adaptation begin -->
+		<element type="bIsUniversalTradeBonusProvider" minOccurs="0"/>
+		<element type="bIsZOCSource" minOccurs="0"/>
+		<!-- Super forts C2C adaptation end -->
+		<!-- TB's Tags -->
+		<element type="FeatureChangeTypes" minOccurs="0"/>
+		<element type="BonusChange" minOccurs="0"/>
+		<element type="bChangeRemove" minOccurs="0"/>
+		<element type="bNotOnAnyBonus" minOccurs="0"/>
+		<element type="bCanMoveSeaUnits" minOccurs="0"/>
+		<element type="bNational" minOccurs="0"/>
+		<element type="bGlobal" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="ImprovementInfos" content="eltOnly">
+		<element type="ImprovementInfo" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="LandscapeInfo" content="eltOnly">
+		<element type="Type"/>
+<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<element type="bTypeDependency" minOccurs="0"/>
+		<element type="AndDependencyTypes" minOccurs="0"/>
+		<element type="OrDependencyTypes" minOccurs="0"/>
+		<element type="bForceOverwrite" minOccurs="0"/>
+		<element type="bForceDelete" minOccurs="0"/>
+		<element type="iForceInsertLocation" minOccurs="0"/>
+<!-- XMLCOPY				END					MRGENIE		-->
+		<element type="iWaterHeight" minOccurs="0"/>
+		<element type="bRandomMap" minOccurs="0"/>
+		<element type="HeightMap" minOccurs="0"/>
+		<element type="TerrainMap" minOccurs="0"/>
+		<element type="NormalMap" minOccurs="0"/>
+		<element type="BlendMap" minOccurs="0"/>
+		<element type="SkyArt" minOccurs="0"/>
+		<element type="iFogR" minOccurs="0"/>
+		<element type="iFogG" minOccurs="0"/>
+		<element type="iFogB" minOccurs="0"/>
+		<element type="fTextureScaleX" minOccurs="0"/>
+		<element type="fTextureScaleY" minOccurs="0"/>
+		<element type="iPlotsPerCellX" minOccurs="0"/>
+		<element type="iPlotsPerCellY" minOccurs="0"/>
+		<element type="iGameCellSizeX" minOccurs="0"/>
+		<element type="iGameCellSizeY" minOccurs="0"/>
+		<element type="fZScale" minOccurs="0"/>
+		<element type="bTerrainShader" minOccurs="0"/>
+		<element type="bUseLightmap" minOccurs="0"/>
+		<element type="fPeakScale" minOccurs="0"/>
+		<element type="fHillScale" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="LandscapeInfos" content="eltOnly">
+		<element type="LandscapeInfo" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4TerrainSettings" content="eltOnly">
+		<element type="LandscapeInfos" minOccurs="1" maxOccurs="1"/>
+	</ElementType>
+	<ElementType name="Civ4ImprovementInfos" content="eltOnly">
+		<element type="ImprovementInfos" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4MapCategoryInfos" content="eltOnly">
+		<element type="MapCategoryInfos" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="MapCategoryInfos" content="eltOnly">
+		<element type="MapCategoryInfo" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="MapCategoryInfo" content="eltOnly">
+		<element type="Type"/>
+		<element type="bTypeDependency" minOccurs="0"/>
+		<element type="AndDependencyTypes" minOccurs="0"/>
+		<element type="OrDependencyTypes" minOccurs="0"/>
+		<element type="bForceOverwrite" minOccurs="0"/>
+		<element type="bForceDelete" minOccurs="0"/>
+		<element type="iForceInsertLocation" minOccurs="0"/>
+		<element type="Description" minOccurs="0"/>
+		<element type="Civilopedia" minOccurs="0"/>
+		<element type="Help" minOccurs="0"/>
+	</ElementType>
+</Schema>
