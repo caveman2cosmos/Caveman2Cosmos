@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Game Text - New -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE</Tag>
+		<English>Worldview - Human Sacrifice</English>
+		<French>
+			<Text>Vision du Monde - Sacrifice Humain</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Concezione del mondo - Sacrifici umani</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Swiatopogląd - Ofiary z ludzi</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_HELP</Tag>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Allows you to sacrifice human and Neanderthal captives for culture or happiness.</English>
+		<French>vous permet de sacrifier les hommes et néanderthaliens pour de la culture ou du bonheur.</French>
+		<Italian>Ti permette di sacrificare i prigionieri umani e Neanderthal per ottenere cultura o felicità.</Italian>
+		<Polish>Pozwala na składanie ofiar z pojmanych jeńców.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_PEDIA</Tag>
+		<English>Human Sacrifice....</English>
+		<French>Sacrifice Humain....</French>
+		<Italian>Sacrifici umani....</Italian>
+		<Polish>Ofiary z ludzi....</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_STRATEGY</Tag>
+		<English>The [COLOR_UNIT_TEXT]Worldview - Human Sacrifice[COLOR_REVERT] indicates that sacrificing humans to the god(s) is OK in your nation at this time. It can only be removed by a Great Person or Lawyer.</English>
+		<French>La [COLOR_UNIT_TEXT]Vision du monde - Sacrifices humaines[COLOR_REVERT] indique que la pratique des sacrifices humains pour les Dieux fait partie de votre culture. Elle peut uniquement être enlevée par un personnage illustre ou un avocat.</French>
+		<German>The [COLOR_UNIT_TEXT]Worldview - Human Sacrifice[COLOR_REVERT] indicates sacrificing humans to the god(s) is OK in your nation at this time. It can only be removed by a Great Person or Lawyer.</German>
+		<Italian>La [COLOR_UNIT_TEXT]Concezione del mondo - Sacrifici umani[COLOR_REVERT] indica che nella tua città è legale sacrificare agli dei altri individui. Può essere rimossa solo da un Grande personaggio o da un uomo di legge.</Italian>
+		<Spanish>The [COLOR_UNIT_TEXT]Worldview - Human Sacrifice[COLOR_REVERT] indicates sacrificing humans to the god(s) is OK in your nation at this time. It can only be removed by a Great Person or Lawyer.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HUMAN_SACRIFICE</Tag>
+		<English>Worldview - Human Sacrifice active</English>
+		<French>
+			<Text>Vision du Monde - Sacrifice Humain actif</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Concezione del mondo - Sacrifici umani attivi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Swiatopogląd - Ofiary z ludzi aktywne</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HUMAN_SACRIFICE_ALTAR</Tag>
+		<English>Altar for Human Sacrifice</English>
+		<French>
+			<Text>Autel pour Sacrifice Humain</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Altare per sacrifici umani</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Ołtarz Ofiar z ludzi</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HUMAN_SACRIFICE_ALTAR_PEDIA</Tag>
+		<English>Altar for Human Sacrifice</English>
+		<French>Autel pour Sacrifice Humain</French>
+		<Italian>Un altare utilizzato per i sacrifici umani</Italian>
+		<Polish>Ołtarz Ofiar z ludzi</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HUMAN_SACRIFICE_ALTAR_STRATEGY</Tag>
+		<English>The [COLOR_UNIT_TEXT]Altar for Human Sacrifice[COLOR_REVERT] increases returns from human sacrifice.</English>
+		<French>L'[COLOR_UNIT_TEXT]Autel pour Sacrifice Humain[COLOR_REVERT] augmente les bénéfices du sacrifice humain.</French>
+		<Italian>L'[COLOR_UNIT_TEXT]Altare per sacrifici umani[COLOR_REVERT] incrementa gli effetti derivanti dai sacrifici umani.</Italian>
+	</TEXT>
+</Civ4GameText>

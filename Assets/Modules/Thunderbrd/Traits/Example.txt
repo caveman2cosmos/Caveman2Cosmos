@@ -1,0 +1,859 @@
+Example!
+		<TraitInfo>
+			<Type>TRAIT_WARLIKE</Type>
+			<Description>TXT_KEY_TRAIT_WARLIKE</Description>
+			<ShortDescription>TXT_KEY_TRAIT_WARLIKE_SHORT</ShortDescription>
+			<Help>TXT_KEY_TRAIT_WARLIKE_HELP</Help>
+			<Strategy>TXT_KEY_TRAIT_WARLIKE_STRATEGY</Strategy>
+			<Button>art/Buttons/Traits/TraitPhilosophical.dds</Button>
+			<PromotionLine>PROMOTIONLINE_WARLIKE</PromotionLine>
+			<iLinePriority>0</iLinePriority>
+			<OnGameOptions>
+				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+			</OnGameOptions>
+			<PrereqTech>NONE</PrereqTech>
+			<TraitPrereq>NONE</TraitPrereq>
+			<DisallowedTraitTypes>
+				<DisallowedTraitType>NONE</DisallowedTraitType>
+			</DisallowedTraitTypes>
+			<bNegativeTrait>0</bNegativeTrait>
+			<bImpurePromotions>0</bImpurePromotions>
+			<bImpurePropertyManipulators>0</bImpurePropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_RELIGION</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>4</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GROWTH</FlavorType>
+					<iFlavor>-2</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
+					<iFlavor>-2</iFlavor>
+				</Flavor>
+			</Flavors>
+			<iHealth>0</iHealth>
+			<iHappiness>0</iHappiness>
+			<iMaxAnarchy>0</iMaxAnarchy>
+			<iUpkeepModifier>0</iUpkeepModifier>
+			<iLevelExperienceModifier>0</iLevelExperienceModifier>
+			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
+			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
+			<iMaxGlobalBuildingProductionModifier>0</iMaxGlobalBuildingProductionModifier>
+			<iMaxTeamBuildingProductionModifier>0</iMaxTeamBuildingProductionModifier>
+			<iMaxPlayerBuildingProductionModifier>0</iMaxPlayerBuildingProductionModifier>
+			<iRevIdxLocal>0</iRevIdxLocal>
+			<iRevIdxNational>0</iRevIdxNational>
+			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
+			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
+			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
+			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
+			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
+			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
+			<bNonStateReligionCommerce>0</bNonStateReligionCommerce>
+			<bUpgradeAnywhere>0</bUpgradeAnywhere>
+			<ExtraYieldThresholds>
+				<iExtraYieldThreshold>0</iExtraYieldThreshold>
+				<iExtraYieldThreshold>0</iExtraYieldThreshold>
+				<iExtraYieldThreshold>0</iExtraYieldThreshold>
+			</ExtraYieldThresholds>
+			<TradeYieldModifiers>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+			</TradeYieldModifiers>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+			</CommerceChanges>
+			<CommerceModifiers>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+			</CommerceModifiers>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>NONE</PromotionType>
+					<bFreePromotion>0</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
+			<FreePromotionUnitCombatTypes>
+				<FreePromotionUnitCombatType>
+					<PromotionType>PROMOTION_TIMID</PromotionType>
+					<UnitCombatTypes>UNITCOMBAT_COMBATANT</UnitCombatTypes>
+				</FreePromotionUnitCombatType>
+				<FreePromotionUnitCombatType>
+					<PromotionType>PROMOTION_TIMID</PromotionType>
+					<UnitCombatTypes>UNITCOMBAT_NAVAL_COMBATANT</UnitCombatTypes>
+				</FreePromotionUnitCombatType>
+			</FreePromotionUnitCombatTypes>
+			<CivicOptionNoUpkeepTypes>
+				<CivicOptionNoUpkeepType>
+					<CivicOptionType>NONE</CivicOptionType>
+					<bCivicOptionNoUpkeep>0</bCivicOptionNoUpkeep>
+				</CivicOptionNoUpkeepType>
+			</CivicOptionNoUpkeepTypes>
+			<BuildingProductionModifierTypes>
+				<BuildingProductionModifierType>
+					<BuildingType>NONE</BuildingType>
+					<iBuildingProductionModifier>0</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+			</BuildingProductionModifierTypes>
+			<UnitProductionModifierTypes>
+				<UnitProductionModifierType>
+					<UnitType>NONE</UnitType>
+					<iUnitProductionModifier>0</iUnitProductionModifier>
+				</UnitProductionModifierType>
+			</UnitProductionModifierTypes>
+			<SpecialUnitProductionModifierTypes>
+				<SpecialUnitProductionModifierType>
+					<SpecialUnitType>NONE</SpecialUnitType>
+					<iSpecialUnitProductionModifier>0</iSpecialUnitProductionModifier>
+				</SpecialUnitProductionModifierType>
+			</SpecialUnitProductionModifierTypes>
+			<ImprovementYieldChanges>
+				<ImprovementYieldChange>
+					<ImprovementType>NONE</ImprovementType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+			</ImprovementYieldChanges>
+			<ImprovementUpgradeModifierTypes>
+				<ImprovementUpgradeModifierType>
+					<ImprovementType>NONE</ImprovementType>
+					<iImprovementUpgradeModifier>0</iImprovementUpgradeModifier>
+				</ImprovementUpgradeModifierType>
+			</ImprovementUpgradeModifierTypes>
+			<BuildWorkerSpeedModifierTypes>
+				<BuildWorkerSpeedModifierType>
+					<BuildType>NONE</BuildType>
+					<iBuildWorkerSpeedModifier>0</iBuildWorkerSpeedModifier>
+				</BuildWorkerSpeedModifierType>
+			</BuildWorkerSpeedModifierTypes>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+			</YieldChanges>
+			<SpecialistExtraYields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+			</SpecialistExtraYields>
+			<SpecialistYieldChanges>
+				<SpecialistYieldChange>
+					<SpecialistType>NONE</SpecialistType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+					</YieldChanges>
+				</SpecialistYieldChange>
+			</SpecialistYieldChanges>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+			</YieldModifiers>
+			<CapitalYieldModifiers>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+			</CapitalYieldModifiers>
+			<SpecialistCommerceChanges>
+				<SpecialistCommerceChange>
+					<SpecialistType>NONE</SpecialistType>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceChanges>
+				</SpecialistCommerceChange>
+			</SpecialistCommerceChanges>
+			<CapitalCommerceModifiers>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+			</CapitalCommerceModifiers>
+			<SpecialistExtraCommerces>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+			</SpecialistExtraCommerces>
+			<SeaPlotYieldChanges>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+			</SeaPlotYieldChanges>
+			<DomainFreeExperiences>
+				<DomainFreeExperience>
+					<DomainType>NONE</DomainType>
+					<iExperience>0</iExperience>
+				</DomainFreeExperience>
+			</DomainFreeExperiences>
+			<DomainProductionModifiers>
+				<DomainProductionModifier>
+					<DomainType>NONE</DomainType>
+					<iModifier>0</iModifier>
+				</DomainProductionModifier>
+			</DomainProductionModifiers>
+			<TechResearchModifiers>
+				<TechResearchModifier>
+					<TechType>NONE</TechType>
+					<iModifier>0</iModifier>
+				</TechResearchModifier>
+			</TechResearchModifiers>
+			<GoldenAgeYieldChanges>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+			</GoldenAgeYieldChanges>
+			<GoldenAgeCommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+			</GoldenAgeCommerceChanges>
+			<UnitCombatFreeExperiences>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>NONE</UnitCombatType>
+					<iModifier>0</iModifier>
+				</UnitCombatFreeExperience>
+			</UnitCombatFreeExperiences>
+			<UnitCombatProductionModifiers>
+				<UnitCombatProductionModifier>
+					<UnitCombatType>NONE</UnitCombatType>
+					<iModifier>0</iModifier>
+				</UnitCombatProductionModifier>
+			</UnitCombatProductionModifiers>
+			<EraAdvanceFreeSpecialistType>NONE</EraAdvanceFreeSpecialistType>
+			<GoldenAgeonBirthofGreatPersonType>NONE</GoldenAgeonBirthofGreatPersonType>
+			<iWarWearinessAccumulationModifier>0</iWarWearinessAccumulationModifier>
+			<iCivicAnarchyTimeModifier>0</iCivicAnarchyTimeModifier>
+			<iReligiousAnarchyTimeModifier>0</iReligiousAnarchyTimeModifier>
+			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
+			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
+			<iMaxConscript>0</iMaxConscript>
+			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
+			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
+			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
+			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
+			<iFreeExperience>0</iFreeExperience>
+			<iBaseFreeUnits>0</iBaseFreeUnits>
+			<iBaseFreeMilitaryUnits>0</iBaseFreeMilitaryUnits>
+			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
+			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
+			<iGoldPerUnit>0</iGoldPerUnit>
+			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
+			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
+			<iGoldPerUnit>0</iGoldPerUnit>
+			<iLargestCityHappiness>0</iLargestCityHappiness>
+			<iFreeSpecialist>0</iFreeSpecialist>
+			<iTradeRoutes>0</iTradeRoutes>
+			<iStateReligionHappiness>0</iStateReligionHappiness>
+			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
+			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
+			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<iExpInBorderModifier>0</iExpInBorderModifier>
+			<iCityDefenseBonus>0</iCityDefenseBonus>
+			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
+			<iAttitudeModifier>0</iAttitudeModifier>
+			<iEspionageDefense>0</iEspionageDefense>
+			<iMinAnarchy>0</iMinAnarchy>
+			<iMaxTradeRoutesChange>0</iMaxTradeRoutesChange>
+			<iGoldenAgeDurationModifier>0</iGoldenAgeDurationModifier>
+			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
+			<iHurryAngerModifier>0</iHurryAngerModifier>
+			<iHurryCostModifier>0</iHurryCostModifier>
+			<iEnemyWarWearinessModifier>0</iEnemyWarWearinessModifier>
+			<iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
+			<iBombardDefense>0</iBombardDefense>
+			<iUnitUpgradePriceModifier>0</iUnitUpgradePriceModifier>
+			<iCoastalTradeRoutes>0</iCoastalTradeRoutes>
+			<iGlobalPopulationgrowthratepercentage>0</iGlobalPopulationgrowthratepercentage>
+			<iCityStartCulture>0</iCityStartCulture>
+			<iGlobalAirUnitCapacity>0</iGlobalAirUnitCapacity>
+			<iCapitalXPModifier>0</iCapitalXPModifier>
+			<iHolyCityofStateReligionXPModifier>0</iHolyCityofStateReligionXPModifier>
+			<iHolyCityofNonStateReligionXPModifier>0</iHolyCityofNonStateReligionXPModifier>
+			<iBonusPopulationinNewCities>0</iBonusPopulationinNewCities>
+			<iMissileRange>0</iMissileRange>
+			<iFlightOperationRange>0</iFlightOperationRange>
+			<iNavalCargoSpace>0</iNavalCargoSpace>
+			<iMissileCargoSpace>0</iMissileCargoSpace>
+			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
+			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
+			<iStateReligionSpreadProbabilityModifier>0</iStateReligionSpreadProbabilityModifier>
+			<iNonStateReligionSpreadProbabilityModifier>0</iNonStateReligionSpreadProbabilityModifier>
+			<bAllowsInquisitions>0</bAllowsInquisitions>
+			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
+			<bCoastalAIInfluence>0</bCoastalAIInfluence>
+			<bCitiesStartwithStateReligion>0</bCitiesStartwithStateReligion>
+			<bDraftsOnCityCapture>0</bDraftsOnCityCapture>
+			<bFreeSpecialistperWorldWonder>0</bFreeSpecialistperWorldWonder>
+			<bFreeSpecialistperNationalWonder>0</bFreeSpecialistperNationalWonder>
+			<bFreeSpecialistperTeamProject>0</bFreeSpecialistperTeamProject>
+			<bExtraGoody>0</bExtraGoody>
+			<bAllReligionsActive>0</bAllReligionsActive>
+			<bBansNonStateReligions>0</bBansNonStateReligions>
+			<iFreedomFighterChange>0</iFreedomFighterChange>
+			<bFreedomFighter>0</bFreedomFighter>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_ATTRIBUTE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
+					<iAmountPerTurn>
+						<Div><!--Pick one this is .5 per pop-->
+							<Mult>
+								<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
+								<Constant>1</Constant>
+							</Mult>
+							<Constant>2</Constant>
+						</Div>
+						<Mult><!--Pick one this is 1 per pop-->
+							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
+							<Constant>1</Constant>
+						</Mult>
+					</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+		</TraitInfo>
+
+
+
+
+
+		<TraitInfo>
+			<Type>TRAIT_AGGRESSIVE</Type>
+			<ReplacementID>TRAIT_COMPLEX_AGGRESSIVE</ReplacementID>
+			<Description>TXT_KEY_TRAIT_AGGRESSIVE</Description>
+			<ShortDescription>TXT_KEY_TRAIT_AGGRESSIVE_SHORT</ShortDescription>
+			<Help>TXT_KEY_TRAIT_AGGRESSIVE_HELP</Help>
+			<Strategy>TXT_KEY_TRAIT_AGGRESSIVE_STRATEGY</Strategy>
+			<Button>art/Buttons/Traits/TraitAggressive.dds</Button>
+			<PromotionLine>PROMOTIONLINE_AGGRESSIVE</PromotionLine>
+			<iLinePriority>0</iLinePriority>
+			<PrereqTech>NONE</PrereqTech>
+			<TraitPrereq>NONE</TraitPrereq>
+			<DisallowedTraitTypes>
+				<DisallowedTraitType>NONE</DisallowedTraitType>
+			</DisallowedTraitTypes>
+			<bNegativeTrait>0</bNegativeTrait>
+			<bImpurePromotions>0</bImpurePromotions>
+			<bImpurePropertyManipulators>0</bImpurePropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_RELIGION</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>4</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GROWTH</FlavorType>
+					<iFlavor>-2</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
+					<iFlavor>-2</iFlavor>
+				</Flavor>
+			</Flavors>
+			<iHealth>0</iHealth>
+			<iHappiness>0</iHappiness>
+			<iMaxAnarchy>0</iMaxAnarchy>
+			<iUpkeepModifier>0</iUpkeepModifier>
+			<iLevelExperienceModifier>0</iLevelExperienceModifier>
+			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
+			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
+			<iMaxGlobalBuildingProductionModifier>0</iMaxGlobalBuildingProductionModifier>
+			<iMaxTeamBuildingProductionModifier>0</iMaxTeamBuildingProductionModifier>
+			<iMaxPlayerBuildingProductionModifier>0</iMaxPlayerBuildingProductionModifier>
+			<iRevIdxLocal>0</iRevIdxLocal>
+			<iRevIdxNational>0</iRevIdxNational>
+			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
+			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
+			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
+			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
+			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
+			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
+			<bNonStateReligionCommerce>0</bNonStateReligionCommerce>
+			<bUpgradeAnywhere>0</bUpgradeAnywhere>
+			<ExtraYieldThresholds>
+				<iExtraYieldThreshold>0</iExtraYieldThreshold>
+				<iExtraYieldThreshold>0</iExtraYieldThreshold>
+				<iExtraYieldThreshold>0</iExtraYieldThreshold>
+			</ExtraYieldThresholds>
+			<TradeYieldModifiers>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+			</TradeYieldModifiers>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+			</CommerceChanges>
+			<CommerceModifiers>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+			</CommerceModifiers>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>NONE</PromotionType>
+					<bFreePromotion>0</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
+			<FreePromotionUnitCombats>
+				<FreePromotionUnitCombat>
+					<UnitCombatType>NONE</UnitCombatType>
+					<bFreePromotionUnitCombat>0</bFreePromotionUnitCombat>
+				</FreePromotionUnitCombat>
+			</FreePromotionUnitCombats>
+			<CivicOptionNoUpkeepTypes>
+				<CivicOptionNoUpkeepType>
+					<CivicOptionType>NONE</CivicOptionType>
+					<bCivicOptionNoUpkeep>0</bCivicOptionNoUpkeep>
+				</CivicOptionNoUpkeepType>
+			</CivicOptionNoUpkeepTypes>
+			<BuildingProductionModifierTypes>
+				<BuildingProductionModifierType>
+					<BuildingType>NONE</BuildingType>
+					<iBuildingProductionModifier>0</iBuildingProductionModifier>
+				</BuildingProductionModifierType>
+			</BuildingProductionModifierTypes>
+			<UnitProductionModifierTypes>
+				<UnitProductionModifierType>
+					<UnitType>NONE</UnitType>
+					<iUnitProductionModifier>0</iUnitProductionModifier>
+				</UnitProductionModifierType>
+			</UnitProductionModifierTypes>
+			<SpecialUnitProductionModifierTypes>
+				<SpecialUnitProductionModifierType>
+					<SpecialUnitType>NONE</SpecialUnitType>
+					<iSpecialUnitProductionModifier>0</iSpecialUnitProductionModifier>
+				</SpecialUnitProductionModifierType>
+			</SpecialUnitProductionModifierTypes>
+			<ImprovementYieldChanges>
+				<ImprovementYieldChange>
+					<ImprovementType>NONE</ImprovementType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+			</ImprovementYieldChanges>
+			<ImprovementUpgradeModifierTypes>
+				<ImprovementUpgradeModifierType>
+					<ImprovementType>NONE</ImprovementType>
+					<iImprovementUpgradeModifier>0</iImprovementUpgradeModifier>
+				</ImprovementUpgradeModifierType>
+			</ImprovementUpgradeModifierTypes>
+			<BuildWorkerSpeedModifierTypes>
+				<BuildWorkerSpeedModifierType>
+					<BuildType>NONE</BuildType>
+					<iBuildWorkerSpeedModifier>0</iBuildWorkerSpeedModifier>
+				</BuildWorkerSpeedModifierType>
+			</BuildWorkerSpeedModifierTypes>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+			</YieldChanges>
+			<SpecialistExtraYields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+			</SpecialistExtraYields>
+			<SpecialistYieldChanges>
+				<SpecialistYieldChange>
+					<SpecialistType>NONE</SpecialistType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+					</YieldChanges>
+				</SpecialistYieldChange>
+			</SpecialistYieldChanges>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+			</YieldModifiers>
+			<CapitalYieldModifiers>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+			</CapitalYieldModifiers>
+			<SpecialistCommerceChanges>
+				<SpecialistCommerceChange>
+					<SpecialistType>NONE</SpecialistType>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceChanges>
+				</SpecialistCommerceChange>
+			</SpecialistCommerceChanges>
+			<CapitalCommerceModifiers>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+			</CapitalCommerceModifiers>
+			<SpecialistExtraCommerces>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+			</SpecialistExtraCommerces>
+			<LessYieldThresholds>
+				<iLessYieldThreshold>0</iLessYieldThreshold>
+				<iLessYieldThreshold>0</iLessYieldThreshold>
+				<iLessYieldThreshold>0</iLessYieldThreshold>
+			</LessYieldThresholds>
+			<SeaPlotYieldChanges>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+			</SeaPlotYieldChanges>
+			<DomainFreeExperiences>
+				<DomainFreeExperience>
+					<DomainType>NONE</DomainType>
+					<iExperience>0</iExperience>
+				</DomainFreeExperience>
+			</DomainFreeExperiences>
+			<DomainProductionModifiers>
+				<DomainProductionModifier>
+					<DomainType>NONE</DomainType>
+					<iModifier>0</iModifier>
+				</DomainProductionModifier>
+			</DomainProductionModifiers>
+			<TechResearchModifiers>
+				<TechResearchModifier>
+					<TechType>NONE</TechType>
+					<iModifier>0</iModifier>
+				</TechResearchModifier>
+			</TechResearchModifiers>
+			<GoldenAgeYieldChanges>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+			</GoldenAgeYieldChanges>
+			<GoldenAgeCommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+			</GoldenAgeCommerceChanges>
+			<UnitCombatFreeExperiences>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>NONE</UnitCombatType>
+					<iModifier>0</iModifier>
+				</UnitCombatFreeExperience>
+			</UnitCombatFreeExperiences>
+			<UnitCombatProductionModifiers>
+				<UnitCombatProductionModifier>
+					<UnitCombatType>NONE</UnitCombatType>
+					<iModifier>0</iModifier>
+				</UnitCombatProductionModifier>
+			</UnitCombatProductionModifiers>
+			<EraAdvanceFreeSpecialistType>NONE</EraAdvanceFreeSpecialistType>
+			<GoldenAgeonBirthofGreatPersonType>NONE</GoldenAgeonBirthofGreatPersonType>
+			<iWarWearinessAccumulationModifier>0</iWarWearinessAccumulationModifier>
+			<iCivicAnarchyTimeModifier>0</iCivicAnarchyTimeModifier>
+			<iReligiousAnarchyTimeModifier>0</iReligiousAnarchyTimeModifier>
+			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
+			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
+			<iMaxConscript>0</iMaxConscript>
+			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
+			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
+			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
+			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
+			<iFreeExperience>0</iFreeExperience>
+			<iBaseFreeUnits>0</iBaseFreeUnits>
+			<iBaseFreeMilitaryUnits>0</iBaseFreeMilitaryUnits>
+			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
+			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
+			<iGoldPerUnit>0</iGoldPerUnit>
+			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
+			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
+			<iGoldPerUnit>0</iGoldPerUnit>
+			<iLargestCityHappiness>0</iLargestCityHappiness>
+			<iFreeSpecialist>0</iFreeSpecialist>
+			<iTradeRoutes>0</iTradeRoutes>
+			<iStateReligionHappiness>0</iStateReligionHappiness>
+			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
+			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
+			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<iExpInBorderModifier>0</iExpInBorderModifier>
+			<iCityDefenseBonus>0</iCityDefenseBonus>
+			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
+			<iAttitudeModifier>0</iAttitudeModifier>
+			<iEspionageDefense>0</iEspionageDefense>
+			<iMinAnarchy>0</iMinAnarchy>
+			<iMaxTradeRoutesChange>0</iMaxTradeRoutesChange>
+			<iGoldenAgeDurationModifier>0</iGoldenAgeDurationModifier>
+			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
+			<iHurryAngerModifier>0</iHurryAngerModifier>
+			<iHurryCostModifier>0</iHurryCostModifier>
+			<iEnemyWarWearinessModifier>0</iEnemyWarWearinessModifier>
+			<iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
+			<iBombardDefense>0</iBombardDefense>
+			<iUnitUpgradePriceModifier>0</iUnitUpgradePriceModifier>
+			<iCoastalTradeRoutes>0</iCoastalTradeRoutes>
+			<iGlobalPopulationgrowthratepercentage>0</iGlobalPopulationgrowthratepercentage>
+			<iCityStartCulture>0</iCityStartCulture>
+			<iGlobalAirUnitCapacity>0</iGlobalAirUnitCapacity>
+			<iCapitalXPModifier>0</iCapitalXPModifier>
+			<iHolyCityofStateReligionXPModifier>0</iHolyCityofStateReligionXPModifier>
+			<iHolyCityofNonStateReligionXPModifier>0</iHolyCityofNonStateReligionXPModifier>
+			<iBonusPopulationinNewCities>0</iBonusPopulationinNewCities>
+			<iMissileRange>0</iMissileRange>
+			<iFlightOperationRange>0</iFlightOperationRange>
+			<iNavalCargoSpace>0</iNavalCargoSpace>
+			<iMissileCargoSpace>0</iMissileCargoSpace>
+			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
+			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
+			<iStateReligionSpreadProbabilityModifier>0</iStateReligionSpreadProbabilityModifier>
+			<iNonStateReligionSpreadProbabilityModifier>0</iNonStateReligionSpreadProbabilityModifier>
+			<bAllowsInquisitions>0</bAllowsInquisitions>
+			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
+			<bCoastalAIInfluence>0</bCoastalAIInfluence>
+			<bCitiesStartwithStateReligion>0</bCitiesStartwithStateReligion>
+			<bDraftsOnCityCapture>0</bDraftsOnCityCapture>
+			<bFreeSpecialistperWorldWonder>0</bFreeSpecialistperWorldWonder>
+			<bFreeSpecialistperNationalWonder>0</bFreeSpecialistperNationalWonder>
+			<bFreeSpecialistperTeamProject>0</bFreeSpecialistperTeamProject>
+			<bExtraGoody>0</bExtraGoody>
+			<bAllReligionsActive>0</bAllReligionsActive>
+			<bBansNonStateReligions>0</bBansNonStateReligions>
+			<iFreedomFighterChange>0</iFreedomFighterChange>
+			<bFreedomFighter>0</bFreedomFighter>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_ATTRIBUTE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
+					<iAmountPerTurn>
+						<Div><!--Pick one this is .5 per pop-->
+							<Mult>
+								<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
+								<Constant>1</Constant>
+							</Mult>
+							<Constant>2</Constant>
+						</Div>
+						<Mult><!--Pick one this is 1 per pop-->
+							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
+							<Constant>1</Constant>
+						</Mult>
+					</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<ReplacementCondition>
+				<Has>
+					<GOMType>GOM_OPTION</GOMType>
+					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+				</Has>
+			</ReplacementCondition>
+		</TraitInfo>
+
+
+
+
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_CARELESS</Tag>
+		<English>Careless</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_CARELESS_HELP</Tag>
+		<English>Who cares if our armies are well trained and top notch.  Put them under too much pressure and they'll likely run off.  They're just there for show mostly anyhow.  Since you're so concerned about it, why don't you take charge?</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_CARELESS_STRATEGY</Tag>
+		<English>Undisciplined military at every level.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_CARELESS_PEDIA</Tag>
+		<English>
+Negative Trait
+
+This leader just doesn't like having to focus on his military forces and lets the organization run itself as much as he can.  He doesn't often take the time to reward, train, or discipline his subordinates and as a result, his military can easily end up under trained and unprepared for real conflict.
+
+Primary Penalties:
+	[ICON_BULLET]Less starting Experience points to all units, potentially allowing them to start off at a total deficit of experience.
+	[ICON_BULLET]More Experience required for units to gain levels.
+	[ICON_BULLET]Strong penalty of experience points given to units trained in the capital.  The closer they are to the highest levels command, the more focused training is on style over substance.
+
+Side Penalties:
+	[ICON_BULLET]Strong reduction in the rate of earning Great Military People.
+	[ICON_BULLET]Further reduction in the rate of earning Great Military People when experience accumulated towards that goal is earned within your borders.
+	[ICON_BULLET]Military Training Buildings are more expensive to build.
+	[ICON_BULLET]Techs that bring military training benefits are slower to discover.
+	[ICON_BULLET]Your units earn less experience when they fight inside your borders.  Familiar places to rest and relax are too readily available.
+	[ICON_BULLET]Much more vulnerable to Espionage since care is not taken with sensitive information.
+	[ICON_BULLET]Great Generals are less likely to be born as normal Great People.
+
+Benefits:
+	[ICON_BULLET]Increased rate of earning standard Great People.  The free time and lack of strong enforcement of military routines allows the military segment the population to explore personal interests and therefore opens up paths to personal achievement.
+	[ICON_BULLET]Military units cost less to train and are thus faster to produce since the training is lax.
+	[ICON_BULLET]Golden Ages are increased by half as long as normal.  Relaxed demands and expectations allow people to sustain elation at their accomplishments longer.
+	[ICON_BULLET]Units are less expensive to upgrade since quality demands are not as high.
+		</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_CARELESS1</Tag>
+		<English>Careless I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_CARELESS1_PEDIA</Tag>
+		<English>
+Negative Trait
+
+This leader just doesn't like having to focus on his military forces and lets the organization run itself as much as he can.  He doesn't often take the time to reward, train, or discipline his subordinates and as a result, his military can easily end up under trained and unprepared for real conflict.
+
+Primary Penalties:
+	[ICON_BULLET]Less starting Experience points to all units, potentially allowing them to start off at a total deficit of experience.
+	[ICON_BULLET]More Experience required for units to gain levels.
+	[ICON_BULLET]Significant penalty of experience points given to units trained in the capital.  The closer they are to the highest levels command, the more focused training is on style over substance.
+
+Side Penalties:
+	[ICON_BULLET]Significant reduction in the rate of earning Great Military People.
+	[ICON_BULLET]Further reduction in the rate of earning Great Military People when experience accumulated towards that goal is earned within your borders.
+	[ICON_BULLET]Military Training Buildings are more expensive to build.
+	[ICON_BULLET]Techs that bring military training benefits are slower to discover.
+	[ICON_BULLET]Your units earn less experience when they fight inside your borders.  Familiar places to rest and relax are too readily available.
+	[ICON_BULLET]More vulnerable to Espionage since care is not taken with sensitive information.
+	[ICON_BULLET]Great Generals are less likely to be born as normal Great People.
+
+Benefits:
+	[ICON_BULLET]Slightly increased rate of earning standard Great People.  The free time and lack of strong enforcement of military routines allows the military segment the population to explore personal interests and therefore opens up paths to personal achievement.
+	[ICON_BULLET]Military units cost less to train and are thus faster to produce since the training is lax.
+	[ICON_BULLET]Golden Ages are increased by a quarter as long as normal.  Relaxed demands and expectations allow people to sustain elation at their accomplishments longer.
+	[ICON_BULLET]Units are less expensive to upgrade since quality demands are not as high.
+		</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_CARELESS2</Tag>
+		<English>Careless II</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_CARELESS2_PEDIA</Tag>
+		<English>
+Negative Trait
+
+This leader just doesn't like having to focus on his military forces and lets the organization run itself as much as he can.  He doesn't often take the time to reward, train, or discipline his subordinates and as a result, his military can easily end up under trained and unprepared for real conflict.
+
+Primary Penalties:
+	[ICON_BULLET]Less starting Experience points to all units, potentially allowing them to start off at a total deficit of experience.
+	[ICON_BULLET]More Experience required for units to gain levels.
+	[ICON_BULLET]Significant penalty of experience points given to units trained in the capital.  The closer they are to the highest levels command, the more focused training is on style over substance.
+
+Side Penalties:
+	[ICON_BULLET]Significant reduction in the rate of earning Great Military People.
+	[ICON_BULLET]Further reduction in the rate of earning Great Military People when experience accumulated towards that goal is earned within your borders.
+	[ICON_BULLET]Military Training Buildings are more expensive to build.
+	[ICON_BULLET]Techs that bring military training benefits are slower to discover.
+	[ICON_BULLET]Your units earn less experience when they fight inside your borders.  Familiar places to rest and relax are too readily available.
+	[ICON_BULLET]More vulnerable to Espionage since care is not taken with sensitive information.
+	[ICON_BULLET]Great Admirals are significantly less likely to be born as normal Great People.
+
+Benefits:
+	[ICON_BULLET]Increased rate of earning standard Great People.  The free time and lack of strong enforcement of military routines allows the military segment the population to explore personal interests and therefore opens up paths to personal achievement.
+	[ICON_BULLET]Military units cost less to train and are thus faster to produce since the training is lax.
+	[ICON_BULLET]Golden Ages are increased by a quarter as long as normal.  Relaxed demands and expectations allow people to sustain elation at their accomplishments longer.
+	[ICON_BULLET]Units are less expensive to upgrade since quality demands are not as high.
+		</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_CARELESS3</Tag>
+		<English>Careless III</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_CARELESS3_PEDIA</Tag>
+		<English>
+Negative Trait
+
+This leader just doesn't like having to focus on his military forces and lets the organization run itself as much as he can.  He doesn't often take the time to reward, train, or discipline his subordinates and as a result, his military can easily end up under trained and unprepared for real conflict.
+
+Primary Penalties:
+	[ICON_BULLET]Less starting Experience points to all units, potentially allowing them to start off at a total deficit of experience.
+	[ICON_BULLET]More Experience required for units to gain levels.
+	[ICON_BULLET]Significant penalty of experience points given to units trained in the capital.  The closer they are to the highest levels command, the more focused training is on style over substance.
+
+Side Penalties:
+	[ICON_BULLET]Significant reduction in the rate of earning Great Military People.
+	[ICON_BULLET]Further reduction in the rate of earning Great Military People when experience accumulated towards that goal is earned within your borders.
+	[ICON_BULLET]Military Training Buildings are more expensive to build.
+	[ICON_BULLET]Techs that bring military training benefits are slower to discover.
+	[ICON_BULLET]Your units earn less experience when they fight inside your borders.  Familiar places to rest and relax are too readily available.
+	[ICON_BULLET]More vulnerable to Espionage since care is not taken with sensitive information.
+	[ICON_BULLET]Great Aviators (Pending - Generals for now) are much less likely to be born as normal Great People.
+
+Benefits:
+	[ICON_BULLET]Increased rate of earning standard Great People.  The free time and lack of strong enforcement of military routines allows the military segment the population to explore personal interests and therefore opens up paths to personal achievement.
+	[ICON_BULLET]Military units cost less to train and are thus faster to produce since the training is lax.
+	[ICON_BULLET]Golden Ages are increased by a quarter as long as normal.  Relaxed demands and expectations allow people to sustain elation at their accomplishments longer.
+	[ICON_BULLET]Units are less expensive to upgrade since quality demands are not as high.
+		</English>
+	</TEXT>

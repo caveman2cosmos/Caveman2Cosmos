@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- Assets\Modules\Alt_Timelines\Fantasy\KillerRabbit\ExoticAnimals-0.3_CIV4UnitInfos.xml-->
+<!-- Unit Infos -->
+<Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
+	<UnitInfos>
+		<UnitInfo>
+			<Class>UNITCLASS_TRIPOD</Class>
+			<Type>UNIT_TRIPOD</Type>
+			<Domain>DOMAIN_LAND</Domain>
+			<Description>TXT_KEY_UNIT_TRIPOD</Description>
+			<Civilopedia>TXT_KEY_UNIT_TRIPOD</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_TRIPOD_STRATEGY</Strategy>
+			<bPillage>1</bPillage>
+			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
+			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
+			<bMechanized>1</bMechanized>
+			<iCost>-1</iCost>
+			<iMoves>2</iMoves>
+			<iCombat>32</iCombat>
+			<iCombatLimit>0</iCombatLimit>
+			<iXPValueAttack>4</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
+			<iCityAttack>35</iCityAttack>
+			<iBombardRate>15</iBombardRate>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>1</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_TRIPOD</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+	</UnitInfos>
+</Civ4UnitInfos>

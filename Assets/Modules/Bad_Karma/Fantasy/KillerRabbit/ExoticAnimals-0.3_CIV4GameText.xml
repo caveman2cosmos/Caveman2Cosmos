@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ###################################################################################### -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_KILLERRABBIT</Tag>
+		<English>Killer Rabbit</English>
+		<French>Lapin de meurtrier</French>
+		<German>Mörderhase</German>
+		<Italian>Coniglio assassino</Italian>
+		<Spanish>Conejo de asesino</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_KILLERRABBIT_PEDIA</Tag>
+		<English>"That rabbit's dynamite!" -King Arthur</English>
+		<French>«Cette dynamite du lapin!» -Le roi Arthur</French>
+		<German>„Das Dynamit jenes Hasen“! -König Artus</German>
+		<Italian>"Quella dinamite del coniglio"! -Re Artù</Italian>
+		<Spanish>¡"Esa dinamita de conejo"! -Rey Arthur</Spanish>
+	</TEXT>
+</Civ4GameText>
