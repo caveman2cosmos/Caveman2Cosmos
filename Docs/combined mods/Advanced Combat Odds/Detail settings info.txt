@@ -1,0 +1,39 @@
+Low detail:
+[LIST][*]Survival odds
+[*]Main battle outcome probabilities (Victory, Defeat, Retreat, Withdraw)
+[*]XP for each battle outcome (beside main battle outcomes)
+[/LIST]
+
+Medium detail (Recommended):
+[LIST][*]Survival odds
+[*]Main battle outcome probabilities (Victory, Defeat, Retreat, Withdraw)
+[*]XP for each battle outcome (beside main battle outcomes)
+[*][B]Expected hitpoints conditioned on battle outcome (beside battle outcomes)[/B]
+[*][B]Att,Def damage per hit and number of hits and odds of hits and CombatRatio[/B]
+[*][B]Attacker and Defender Unharmed Odds[/B]
+[/LIST]
+
+High Detail:
+[LIST][*]Survival odds
+[*]Main battle outcome probabilities (Victory, Defeat, Retreat, Withdraw)
+[*]XP for each battle outcome (beside main battle outcomes)
+[*]Expected hitpoints conditioned on battle outcome (beside battle outcomes)
+[*][B]Probability of every possible Attacker HP outcome[/B]
+[*]Att,Def damage per hit and number of hits and odds of hits and CombatRatio
+[*][b]Average HP for attacker and defender[/b]
+[*]Attacker and Defender Unharmed Odds
+[/LIST]
+
+Everything!:
+[LIST][*]Survival odds
+[*]Main battle outcome probabilities (Victory, Defeat, Retreat, Withdraw)
+[*]XP for each battle outcome (beside main battle outcomes)
+[*]Expected hitpoints conditioned on battle outcome (beside battle outcomes)
+[*]Probability of every possible Attacker HP outcome
+[*][B]Probability of every possible Defender HP outcome[/B]
+[*][b]Nearby XP thresholds for units without a combat limit[/b]
+[*]Att,Def damage per hit and number of hits and odds of hits and CombatRatio
+[*]Unconditional expected Attacker,Defender HP
+[*]Attacker and Defender Unharmed Odds
+[*]Unrounded XP
+[/LIST]

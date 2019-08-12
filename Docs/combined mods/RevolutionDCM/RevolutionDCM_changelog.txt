@@ -1,0 +1,202 @@
+[B]Note: Please refer to RevolutionDCM_readme.txt and other docs for more details 
+and detailed acknowledgements for each individual change.[/B]
+-------------------------------------
+[B]Change Log version 2.7 to 2.71[/B]
+-------------------------------------
+- Fix to reported XML error in feature growth.  Updated installer in the SVN.
+- Add Audio3DScripts needed otherwise the WoC audio installer application crashes
+- Another BUG/RevDCM interrelationship bug fix for CvExoticForeignAdvisor change screen.
+- Small bug with reporting the Inquisitions option
+- Add the install script code and instructions under docs/utils/
+- Turn off Revolution debug info by default
+
+
+-------------------------------------
+[B]Change Log version 2.61 to 2.7[/B]
+-------------------------------------
+- Updated to BUG 4.3 & BULL 1.1
+- Update to BBAI 0.84 & UP 1.4
+- Added Scenario Modcomp that allows loading of BtS scenarios that have less defined players then the dll (default BtS scenarios now playable with RevDCM)  -Thanks Tamudjin!
+- Added Afforess's Python callbacks (should improve performance)
+- Added many, many translations; RevDCM should be nearly entirely translated in German, and well polished in Italian (Thanks Snophru & Gaplus)
+- Swapped out old Civic Screen with RoM's Civic Screen, removes needed SDK functions and is much simpler
+- Normalized Loading of Revolution.ini with other BUG components (fixes user specific loss of interface bug)
+- Movies defined for any building now work correctly. Designed with big mods in mind:  Wonder splash only occurs for buildings that have a movie defined, and World Wonders.  -updated to be a BUG module (thanks Lemon Merchant)
+- Packed art into fpk
+- Added HasMet check to Worst Enemy trading penalty
+- AI razing decisions greatly improved and AI takes into account the effects of IDW; it may now raze cities with IDW enabled
+- Added new value to the GlobalDefinesAlt file "IDW_CITY_TILE_MULTIPLIER", which allows changing the effects of IDW on city tiles; default is 0.2 which means that in cities IDW effect is 1/5th of normal
+- Updated Credits screen in the BUG options tab to reflect this is RevDCM, and not BUG
+- Fixed bug with tech diffusion and AI's trade denials (thanks Afforess)
+- Fixed Python Error "newCividx is not defined"
+- Removed WoC UnitResource Icons
+- Improved Tech grant for Barb civs, new World Barbarian civs shouldn't be so advanced
+- Changed all inquisitor code to a Softcoded format handled in the XML (see UnitInfos for relevant tags).  Fixed many bugs in Inquisitions code.
+- Inquisitions moved entirely into the SDK (thanks Afforess)
+- Multiplayer code from the RevolutionMP project ported over, MP is still somewhat buggy and may not connect properly for all users, but should at least "work" in general
+	*Direct IP connections should work for most players (but some players are unable to connect for some unkown reason), Gamespy connections have not been tested
+	*Players must ensure that they have set the same options in the RevDCM options tab, any different options selected in this tab will cause OOS issues
+	*BarbarianCiv, BarbarianWorld, Dynamic Civ Names, Tech diffusion, and Start as Minors options have been tested and seem to function without issue
+	*Revolutions will work for the most part, however if a player chooses to switch leaders or take control of Rebels due to a Revolution pop up, an instantanious OOS will occur
+	*When a human player dies the game will go OOS; all living players will need to reload the game and the dead player must drop to correct
+- Wrote install script for RevDCM
+	*Allows easy installation for all users, and insures correct intallation
+	*Elinates need for "launch as admin", and elimnates some rare user specific crash to desktops
+	*automatically tests for 3.19 patch
+	*allows creation of easy to use shortcuts for easy accessibility to the mod
+- Created New Installer options, moved a few RevDCM default components into being optional
+	*Dale's Nuclear changes, such as the chain reactor and atomic bomber; brings RevDCM in line with default BtS
+	*Better Ship Scale WoC module; makes it so launching as admin is not necessary with new installer, since WoC modules require admin privlages to work correctly
+	*Choose Religions; multiple confirmed bug reports caused by conflicts with the Pick Religions gameoption, and this python component
+- Added a few XML tags to make things easier on mod modders and necessary for new inquisitions code to work
+	*FeatureInfos:
+		GrowthSound:  allows modders to set a specific sound for feature growth, rather then always getting the forest sound
+	*CivicInfos:
+		bUpgradeAnywhere:  allows units to upgrade outside national borders (Cloned from TraitInfos, introduced in previous RevDCM version)
+		bAllowInquisitions:  Defines a civic as enabling inquisitions
+		bDisallowInquisitions:  Defines a civic as disabling inquisitions (overrides all other conditions)
+	*UnitInfos:
+		bForceObsoleteTech: makes a unit untrainable when a defined tech is learned
+		bInquisitor: Unit can run inquisitions missions if inquisitions conditions are met
+		bStateReligion:  State relgion required in city to train unit
+		PrereqGameOption:  If set, gameoption required to be enabled in the game for the unit to be trained
+		NotGameOption:  If set, the unit may not be trained if the specified gameoption is selected
+		PrereqOrCivics:  If set, the unit my only be trained if the player is running one of the specified civics
+		PrereqBuildingClasses:  If set, the unit may only be trained if specified buildingclasses have been built in the city
+
+
+-------------------------------------
+[B]Change Log Version 2.60 to 2.61[/B]
+-------------------------------------
+- Updated to Better BTS AI 0.82J and Unofficial Patch 1.31
+- Fixed issue with combat odds display
+- Barbarian Civ settling now scales better with game speed
+- Fixed a couple bugs in RevInquisition
+- Fixed a couple issues with BUG and RevDCM
+- Updated to BUG 4.2
+- Updated to BULL 1.00 official
+- Fixed project interdependency bug
+- Fix to choose religion option
+- Fixed plot combat help issue, now shows modifiers correctly
+- Added Rom's extra inquisitor checking code
+- Fix to allow the sevopedia to show leaders of multiple civs
+- Fix bug in the RevDCM info screen where RevDCM was returning -1 for a playerID
+
+- Formatting changes for code comments
+- modified makefile for BULL compiler options
+- New organization of GlobalAltDefines.xml for BBAI 0.82 options
+- integer division issues in Revolutions calculations fixed
+- Python and XML changes from UP and BBAI
+- Remove duplicate xml tag, to fix "give up their independence" bug
+- "Financial stability" text displayed when revolution watch finances are positive
+- PerfectWorld 2.05
+- Added Duuk's private map scenarios customized for RevDCM
+
+
+-------------------------------------
+[B]Change Log Version 2.51 to 2.6[/B]
+-------------------------------------
+- Updated to Better BTS AI 0.81M and the latest Unofficial Patch
+- Adds rev index info to city bar text on the main map.
+- Super spy AI adjustments - AI chooses useful promotions including logistics
+- Remove need for Python callbacks to speed turn times except for the inquisitor unit
+- Updated to BUG 4.1, and BULL 1.0
+- Add Barbarian World, Rev Traits, Civilopedia civics effects, etc
+- Interdependent random event fix woc
+- Added the Global Warming mod by Minor Annoyance
+- Added missing revolutions copynondefaults in CvCivicInfo
+- Show Hidden Attitude mod merged and made a controllable interface option
+- The AI now is more Revolution aware and will keep its cities happier to avoid revolts
+- Revolution Civics effects now show in the Civilopedia
+- Small civics modifier fix
+- domestic advisor liberate city fix
+- Re-balanced BarbarianCiv for early barb settling as well as Barbarian World option
+- Adjusted AI war/peace making decisions for RevDCM
+- Added in new German translation
+- Added Finnish translation
+- Improved Spanish translation
+- Converted four Earth maps to Revolution DCM compatibility
+- Fixed issue with "X have chosen to give up their independence" text
+- RevolutionDCM options can no longer be changed in a multiplayer game session
+- RevolutionDCM options from the options screen now update immediately
+- RevolutionDCM "debug" option becomes obsolete
+- Revolution watch advisor always shows national effects even if city is not selected
+- Revolution national effects now show in the city screen rev bar mouseover
+- Limited religion and choose religion code ported to BUG 4.1 standard
+- Revolution Inquisitions code ported to BUG 4.1 standard
+- Inquisition code adjustments to Revolutions mod and non-revolution mod effects
+- Fixed inquisitor motion AI which would sometimes lead to asserts/slowness
+- Various BUG 4.1 fixes to civlerts and autolog to work with Revolutions
+- AI will start a new war if it has a huge power advantage in its existing wars
+
+-------------------------------------
+[B]Change Log Version 2.50 to 2.51[/B]
+-------------------------------------
+- Fixed long standing missing Naval bombard mission
+- Disabled defective events (8 out of 300)
+- Fixed DCM battle effects loss of terrain bonuses
+- Fixed missing popup import in RevEvents
+- Fixed Revolution.ini typo
+- "Better Ship Scale v1.0 for BTS" as a woc module
+- "TXT_KEY_REV_AND" bug fixed.
+- "TXT_KEY_MISC_SHIFT_ALT_PREPARE_WAR" text fixed
+- 52x32 earth map for 50 civs (Craterus22)
+
+-------------------------------------
+[B]Change Log Version 2.10 to 2.50[/B]
+-------------------------------------
+- Updated to BTS 3.19
+- Updated Better BTS AI and docs to 0.78c
+- Revolutions mod bug fixes - see Revolution docs
+- Bug fix to barbarian civ component - see Revolution docs
+- Fixed rare potential crash in IDW
+- Revolutions new city distance calculations
+- Changed financial/tax calculations that determine rev index and civ stability
+- Inquisitor unit limited to XML limit in more cases.
+- Ranged bombard help text updated and tested
+- Bomb shelter bug since DCM 1.7 fixed.
+- The "overwhelm doctrine" disabled .
+- Updated Perfect World map to version 2.03
+- Python code in-place already since 1.110 to accept the WoC Lite interface module
+
+-------------------------------------
+[B]Change Log Version 2.00 to 2.10[/B]
+-------------------------------------
+- Fixed an asserts error to naval bombardment reported by Phungus420 (thanks Jdog5000)
+- Fixed the loss of random events which occured in the SDK at release 2.00 (thanks Johny Smith).
+- Rearranged the main interface buttons to fit the Revolution info button in-line.
+- Merged in Thomas SG's scoreboard scroller (thanks!)
+- Update to Better BTS AI 0.75f
+- Addition of /assets/modules/woc_installer.jar utility application
+- German spy text translations (thanks to Chips2150)
+
+-------------------------------------
+[B]Change Log Version 1.02 to 2.00[/B]
+-------------------------------------
+- WoC Extra Lite which is a cutdown version of WoC Lite. A huge thanks to Johny Smith.
+- Better BTS AI 0.70H. A huge thanks to Jdog5000 and others.
+- Perfect World 2.01 converted for RevDCM.
+
+-------------------------------------
+[B]Change Log Version 1.01 to 1.02[/B]
+-------------------------------------
+- Updated to Advanced Combat Odds 1.0
+- Smeagolheart's Examine City at Conquest mod added and fixed so that the "liberate city option" works correctly.
+- Airbomb plot bug fix in DCM, where without DCM airbombing enabled, aircraft could bomb plots with zero success. Thanks GatlingGun for reporting this bug and supplying save game.
+- Inquisitions now works without needing the Revolutions mod both for the player and the AI.
+- Some structural level Revolution mod changes to the core in preparation for future Revolutions mod game level changes.
+
+-------------------------------
+Change Log Version 1.00 to 1.01
+-------------------------------
+- Introduction of a new diplomacy mode "Cease bothering us!" for single player mode only, and only issued from the human player to the AI
+- Updates to BarbarianCiv and Revolution
+- Improved stack formation for counter and attack UNITAIs shortly after BarbCiv or rebel civ is formed
+- Notification of settling barb civs updated so you will always be notified of nearby settling
+- Modified number of attack units given to forming minor barbcivs, generally fewer units for early civs, unit number scales by city size, plus added a random multiplier so some get more units than others
+- If a settling militaristic barbciv has a current unique unit, type of militaristic settling is now biased so they're more likely to get lots of those units
+- Adjusted unit AI types given to rebel units so they will more readily form attack stacks
+- Rebel units spawning alone and with little chance of capturing a city may now run pillage unit AI (which groups with ATTACK_CITY when available)
+- Large groups of barbarian rebels will now attack cities more directly using ATTACK_CITY_LEMMING
+- Some AI updates
+- Bug fixes see build log

@@ -1,0 +1,35 @@
+Nautil's air units mod:
+
+NOW playable with warlords 2.08 patch
+
+to play this mod just drag and drop the mod into my games\civilization4\mods then load the game as normal
+when the game has loaded go to advanced in the ingame menu and load mod.
+
+units in this mod are:
+
+B17 bomber
+BF109 fighter
+chinook helicopter (can carry 5 ground units over land/sea)
+CR42 
+do335
+F35 jet fighter
+F117 Stealth fighter
+FW190a
+Gladiator
+HE111 bomber
+IL2 fighter
+KA 50 gunship (can move over land/sea)
+MI24 gunship (can move over land/sea)
+MI26 helicopter (can move over land/sea can also carry 3 ground units)
+mig 3 fighter
+MIG 15 fighter
+MIG 21 fighter
+MIG 25 fighter
+P38 lightning (fighter)
+so79
+spitfire mk1
+SU37 fighter
+SU47 fighter
+
+
+All units were made by Nautil, Boneys26 put the XML to it and made the MOD pack. hope you enjoy the mod

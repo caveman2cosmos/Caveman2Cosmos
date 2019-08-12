@@ -1,0 +1,23 @@
+The default keyboard shortcuts set up by this mod are:
+
+Normal shortcuts:
+
+Shift+Ctrl+ :
+	X  -  AIAutoPlay, open auto play chooser popup to set up automation (or cancel if in automation).
+
+	M  -  AIAutoPlay, automate the rest of this turn (can be used for auto unit move).
+
+	W  -  Revolution (when enabled), open Revolution Watch popup
+
+
+
+Debug shortcuts:
+	B  -  BarbarianCiv (Debug Mode only), force creation of a new civ if any barbarian cities exist.
+
+	Q  -  RevolutionInit, opens popup indicating what revolution mod components are active and other info.
+
+	N  -  Tester, opens popup allowing the renaming of any player/civ.
+
+	L  -  ChangePlayer, open popup to change with player the human leads.
+
+	P  -  ChangePlayer, open popup to change leader, civ, or team for any player.

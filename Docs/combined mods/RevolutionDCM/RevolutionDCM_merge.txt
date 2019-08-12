@@ -1,0 +1,110 @@
+2.7 RevolutionDCM standardized into BUG format
+	- For all practical purposes merging RevDCM will follow the same process as merging the BUG mod, keep in mind RevDCM has modified source files
+	- It is recommended you check out the install script if you intend to merge your mod with RevDCM
+	- The UserSettings folder is installed seperately (see install script) so you must take this into account when merging
+
+2.00 RevolutionDCM conversion to WoC
+	- Basis of the work just carried over from Johny Smith's prototype RevDCM 1.02 WoC Lite Merge version 0.6
+	- Core SDK components (DCM, Super Spies, IDW, Revolutions) left untouched except for some commenting clarifications
+	- Bare minimum of assets copied across to effect WoC.
+
+1.71 Returning RevolutionDCM to stock defaults:
+	- Backup any ini files you have personally customised.
+	- Make sure the numbers of starting civs in CIV4WorldInfo.xml are set to default for the sake of random events
+	- Return Domestic Advisor to default by returning the txt files in CustomDomAdv to default
+	- Return Revolution Advisor to default by returning the txt files in CustomRevAdv to default
+	- Delete all ini's except Revolution.ini and Adv Unit Naming.ini. BUG will regenerate as appropriate.
+
+1.70 Adding event behaviour to a BUG userface element
+	- Declare a module level handler for the option in the assets/config/whatever.xml file
+	- Write the module level handler for the option in assets/contrib/whatever.py
+
+1.68 Unit Naming "isColor" error
+	- Any mod that introduces a new combat type needs to modify BUG:
+		- Unit Naming.xml (necessary) for example:
+			<!--RevolutionDCM - add new combat types here or get python isColor error-->
+				<option id="Combat_SPY" key="CombatSPY"
+					type="string" default="DEFAULT"/>
+		- BugUnitNameOptionsTab.py (not necessary)
+			- in case modifying this, Bug xml text has to be added as well.
+
+1.22 branch notes rev watch screen:
+	- Basic Rev variables added to the customisable rev watch advisor including colour behaviours
+	- Basic rev watch advisor configuration state saved to disk
+	- Process involved in adding a rev watch variable:
+		- Add data sources to RevWatchAdvisor.py at the commented sections starting #RevolutionDCM - Data sources
+		- Add new data manipulation functions to RevWatchAdvisor.py
+		- Add txt keys
+		- done!
+
+1.21 branch notes rev watch screen:
+	- Revwatch screen fires up and is based on the domestic advisor screen code but has it's own python source file
+	- Not sure about whether the screen has to be set as dirty at some point
+	- Keyboard handling not implemented
+	- No revolution information implemented
+	- Much domestic advisor code to be removed
+	- The old Revwatch popup code in Revolution.py remains as dormant.
+
+1.01 notes:
+	- Steps involved in adding option control to the interface:
+	  Define game options in assets/config/RevDCM.xml
+	  modify assets/config/init.xml to include RevolutionDCM as a mod and as a tab
+	  Add a RevolutionDCM tab class python file in assets/python/bug/tabs/RevDCMOptionsTab.py
+	  Add a RevDCM.py to assets/contrib/ that configures RevolutionDCM events
+	  This places the onus on the game options XML to initially configure the options which are then recorded to a mod ini file.
+	  GlobalDefinesAlt.xml is then no longer a driver of state, but merely a way of transferring state from ini to SDK. That state exists only in memory and is not required to be saved back to xml.
+	  This system does not override manual editing of GlobalDefinesAlt.xml states, unless they are defined in the game options xml.
+	  Because this system can change game state from save to save, one needs to be sure that no introduced game state can result in a CTD or python error in other game state contexts.
+
+0.961 notes:
+	- BUG 3.5 changes the event manager from CVCustomEventManager to BugEventManager. There is no real
+	  problem with that except that older code has to be carefully positioned inside the init() function
+	  so as not cause load problems. See the BugEventManager.py under ---Revolutions--- to see how this is done.
+	- The presentation of the BUG mod in terms of root files is untidy with many ini files in the root. Why?
+
+0.96 notes:
+	- Revolution 1.64b contains a new source file in the SDK that has to be included in the makefile
+	- CvUnitAI DCM fighter engage code now obseleted by Better BTS AI code
+	- CvUnitAI DCM AB: Bombing code now obseleted by Better BTS AI code
+	- Tsheep SS espionage spending code in CvPlayerAI obseleted by Better BTS AI code
+
+
+0.95 notes:
+	- Updated both SS and RevDCM to Better BTS AI 0.36
+	- Merged in BUG3.0:
+		- Copied across all unique BUG assets
+		- Did not merge Exotic Foreign Advisor because RevDCM version is better
+		- Merged in CvInfoScreen.py changes
+		- Merged in CvUtil.py
+		- Merged in all XML changes (two files)
+		- Merged RevDCM CvMainInterface.py into BUG (simpler) and copied across
+		- Modified RevDCM CvCustomEventManager.py imports and init function for BUG
+		- Modified RevDCM CvModName.py to include extra functions and properties as per BUG
+		- Removed BUG equivalents of CvCustomEventManager.py and CvModName.py
+		- Copied contents of Bug Mod directory into RevDCM base directory
+		- Copied Bug mod ini file contents into RevolutionDCM.ini
+
+0.93 notes:
+	- straight port of Rev 1.63
+	- UDCM retained because of known good stability
+	- Super Spies added:
+		- Download SS 1.23 for BTS 3.17 from the SS forum
+		- Remove the SS error "UNITCOMBAT_SPY in info class was incorrect": 
+			- Integrate the SS module "Spymod" into the standard XML structure of RevDCM
+			- Change SS so that there is no module directory called "SpyMod" any longer
+
+0.92 notes:
+	- straight port of Rev 1.62
+
+0.91 notes:
+
+	- UDCM asset files not added to avoid 3.17 incompatibility or not required:
+		- CvEventManager.py
+		- CIV4WorldInfo.xml
+		- CvUtil.py
+
+	- UDCM asset files modified to become 3.17 compatible:
+		- civ4unitinfos (change <iAirCombatLimit> to 50)
+		- xml/art/civ4artdefinesbuilding monument scale 0.5
+		- xml/art/civ4artdefinesunit needs only atomic definition added to the end.
+		- xml/building/civ4buildinginfos needs the bombshelter special updated

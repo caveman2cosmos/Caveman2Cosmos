@@ -1,0 +1,29 @@
+Bugs fixed in BBAI which would qualify for a patch:
+
+CvUnitAI::AI_paradrop - bug with valuation of terrain bonuses causing paradrops to avoid bonuses in some circumstances when intention is clearly to encourage landing on bonuses and pillaging
+
+CvUnitAI::AI_settleMove - bug when settler cannot reach a city site in an area (blocked by mountains, other player).  Causes settler to wait infinitely in city instead of loading into transport.
+
+CvTeamAI::AI_doWar - should use bFinancesProLimitedWar for limited war calc instead of max war version
+
+CvPlayerAI::AI_calculateUnitAIViability - Incorrect integer used so function return is meaningless, blocks AI logic for building privateers
+
+CvPlayerAI::AI_isFinancialTrouble, CvCityAI::AI_updateBestBuild, and CvPlayerAI::AI_getMinFoundValue - bug in calculating expenses when AI has negative gold per turn
+
+CvPlayerAI::AI_getTotalFloatingDefendersNeeded - poor decision by AI if it has captured one or two cities on someone else's continent, it will minimally defend its new cities
+
+CvPlayerAI::AI_getStrategyHash - counts destroyers as mobile anti-air
+
+CvPlayerAI::AI_doDiplo - when team is sneak attack ready but hasn't declared war, AI may still demand tribute. If other team accepts, it blocks war declaration for 10 turns but AI doesn't react.
+
+CvPlayerAI::AI_bestPlotEspionage - relevant weights are 0, +- 50, +- 100, so comparison for Agg AI should be < 51 instead of < 50
+
+CvPlayerAI::AI_civicTrade - incorrect interpretation of return of getCivicPercentAnger.  Don't block trade if new option civic is better than old in terms of unhappiness
+
+CvPlayerAI::AI_commerceWeight - Governors don't do smart things when human player sets culture slider to 100%
+
+isPotentialEnemy in CvGameCoreUtils - bug leading to AI launching invasions when unable to declare war, troops eventually get bounced when war is declared
+
+CvGame::addPlayer - Don't invalidate color choice for added civ if it's taken by this player slot
+
+CvCityAI::AI_cityThreat - bug when running crush strategy, wrong int is divided
