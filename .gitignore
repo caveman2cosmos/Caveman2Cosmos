@@ -6,3 +6,4 @@
 
 # Compiled Dynamic libraries
 *.dll
+*.pdb
