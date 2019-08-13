@@ -48,8 +48,8 @@ RC="$(PSDK)\bin\rc.exe"
 ## Overwritten by enviroment variable FASTDEP_FULL_PATH
 FD="deps\fastdep\fastdep.exe"
 
-TORTOISE="C:\Program files\TortoiseSVN"
-WCREV="$(TORTOISE)\bin\SubWCRev.exe"
+#TORTOISE="C:\Program files\TortoiseSVN"
+#WCREV="$(TORTOISE)\bin\SubWCRev.exe"
 
 ### BLACKLIST ####
 ## Uncomment to block CvTextScreen (accidentally included by Firaxis)

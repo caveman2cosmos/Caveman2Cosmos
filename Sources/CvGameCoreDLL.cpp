@@ -204,6 +204,27 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 		// set timer precision
 		MMRESULT iTimeSet = timeBeginPeriod(1);		// set timeGetTime and sleep resolution to 1 ms, otherwise it's 10-16ms
 		FAssertMsg(iTimeSet==TIMERR_NOERROR, "failed setting timer resolution to 1 ms");
+
+		CvString szFile = GC.getInitCore().getDLLPath() + "\\..\\svn_directory.txt";
+		std::ifstream stream(szFile.c_str());
+		if (!stream.fail())
+		{
+			std::string svn_dir;
+			std::getline(stream, svn_dir);
+			CvString cwd = GC.getInitCore().getDLLPath() + "\\..";
+			std::string fpkLiveExe = svn_dir + "\\Tools\\FPKLive.exe \"" + cwd.c_str() + "\"";
+			PROCESS_INFORMATION procInfo;
+			if (!CreateProcessA(NULL, (LPSTR)fpkLiveExe.c_str(), NULL, NULL, TRUE, 0, NULL, svn_dir.c_str(), NULL, &procInfo))
+			{
+				MessageBox(0, "Creation of FPK packs timed out after 10 minutes! It shouldn't take this long!", "ERROR!", 0);
+				return FALSE;
+			}
+			if (::WaitForSingleObject(procInfo.hProcess, 600) == WAIT_TIMEOUT)
+			{
+				MessageBox(0, "Creation of FPK packs timed out after 10 minutes! It shouldn't take this long!", "ERROR!", 0);
+				return FALSE;
+			}
+		}
 		}
 		break;
 	case DLL_THREAD_ATTACH:
