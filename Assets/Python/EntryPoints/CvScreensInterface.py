@@ -13,8 +13,6 @@ import CvReplayScreen
 
 import CvWorldBuilderScreen
 
-import CvDebugTools
-import CvDebugInfoScreen
 #import CvDiplomacy
 
 import BuildListScreen
@@ -164,9 +162,8 @@ def showInfoScreen(argsList):
 		iEndGame = argsList[1]
 		screenMap[INFO_SCREEN].showScreen(-1, iTabID, iEndGame)
 
-debugInfoScreen = CvDebugInfoScreen.CvDebugInfoScreen()
 def showDebugInfoScreen():
-	debugInfoScreen.interfaceScreen()
+	screenMap[DEBUG_INFO_SCREEN].interfaceScreen()
 
 def configTechSplash(option=None, value=None):
 	if value is None:
@@ -1248,7 +1245,6 @@ screenMap = {
 	REPLAY_SCREEN			: replayScreen,
 	BUILD_LIST_SCREEN		: buildListScreen,
 	WORLDBUILDER_SCREEN		: worldBuilderScreen,
-	DEBUG_INFO_SCREEN		: debugInfoScreen,
 	# add new screens here
 	STRATEGY_OVERLAY_SCREEN		: overlayScreen,
 	REVOLUTION_WATCH_ADVISOR	: revolutionWatchAdvisor,
@@ -1273,6 +1269,7 @@ def lateInit():
 	import CvDawnOfMan
 	import CvTopCivs
 	import Forgetful
+	import CvDebugInfoScreen
 	screenMap[CORPORATION_SCREEN]	= CvCorporationScreen.CvCorporationScreen()
 	screenMap[ESPIONAGE_ADVISOR]	= CvEspionageAdvisor.CvEspionageAdvisor()
 	screenMap[MILITARY_ADVISOR]		= CvMilitaryAdvisor.CvMilitaryAdvisor(MILITARY_ADVISOR)
@@ -1287,6 +1284,7 @@ def lateInit():
 	screenMap[DAWN_OF_MAN]			= CvDawnOfMan.CvDawnOfMan()
 	screenMap[TOP_CIVS]				= CvTopCivs.CvTopCivs(TOP_CIVS)
 	screenMap[FORGETFUL_SCREEN]		= Forgetful.Forgetful()
+	screenMap[DEBUG_INFO_SCREEN]	= CvDebugInfoScreen.CvDebugInfoScreen()
 
 def earlyInit():
 

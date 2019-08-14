@@ -2,7 +2,6 @@
 # Definitions for Revolution Mod
 #
 from CvPythonExtensions import *
-import CvUtil
 
 ## --------- XML variables used in the mod ----------- ##
 # If your mod changes some of these XML variables, you'll need to find an appropriate replacement
@@ -181,10 +180,6 @@ pickHumanPopup = 7052
 changeCivPopup = 7060
 changeHumanPopup = 7061
 updateGraphicsPopup = 7062
-
-# Keep game from showing messages about handling these popups
-CvUtil.SilentEvents.extend([toAIChooserPopup,revolutionPopup,revWatchPopup,joinHumanPopup,controlLostPopup,assimilationPopup,pickCityPopup,bribeCityPopup,abdicatePopup,pickHumanPopup])
-CvUtil.SilentEvents.extend([changeCivPopup,changeHumanPopup])
 
 ## ---------- Misc defines ---------- ##
 

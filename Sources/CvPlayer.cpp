@@ -619,18 +619,6 @@ void CvPlayer::init(PlayerTypes eID)
 /************************************************************************************************/
 
 	AI_init();
-/************************************************************************************************/
-/* Afforess  Food Threshold Modifier   Start          08/16/09                   		         */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	setPopulationgrowthratepercentage(0);
-	setReligionSpreadRate(0);
-	setDistantUnitSupportCostModifier(0);
-	setExtraCityDefense(0);
-/************************************************************************************************/
-/* Afforess  Food Threshold Modifier                        END                  		         */
-/************************************************************************************************/
 
 	m_contractBroker.init(eID);
 
@@ -1385,6 +1373,13 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iCivicHappiness = 0;
 	m_iUnitUpgradePriceModifier = 0;
 	m_iNationalGreatPeopleRate = 0;
+
+	// Afforess Food Threshold Modifier 08/16/09
+	m_fPopulationgrowthratepercentageLog = 0;
+
+	m_iExtraCityDefense = 0;
+	m_iDistantUnitSupportCostModifier = 0;
+	m_iReligionSpreadRate = 0;
 	
 	m_iWorldHappiness = 0;
 	m_iProjectHappiness = 0;

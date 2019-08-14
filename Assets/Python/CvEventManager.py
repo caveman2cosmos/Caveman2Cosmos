@@ -10,7 +10,7 @@
 from CvPythonExtensions import *
 import CvUtil
 import CvScreensInterface
-import CvDebugTools
+import CvDebugUtils
 import Popup as PyPopup
 import CvAdvisorUtils
 
@@ -123,7 +123,8 @@ class CvEventManager:
 		# Dictionary of Events, indexed by EventID (also used at popup context id)
 		#	entries have name, beginFunction, applyFunction [, randomization weight...]
 		#
-		# Normal events first, random events after
+		# Enums values less than 1000 are reserved for popup events
+		# Enum values greater than 5049 are reserved for CvUtil.getNewEventID().
 		#
 		self.OverrideEventApply = {}
 		import CvMainInterface
@@ -132,15 +133,14 @@ class CvEventManager:
 			5000 : ('EditCityName', self.__eventEditCityNameApply, self.__eventEditCityNameBegin),
 			5001 : ('EditCity', self.__eventEditCityApply, self.__eventEditCityBegin),
 			5002 : ('PlaceObject', self.__eventPlaceObjectApply, self.__eventPlaceObjectBegin),
-			CvUtil.EventAwardTechsAndGold: ('AwardTechsAndGold', self.__eventAwardTechsAndGoldApply, self.__eventAwardTechsAndGoldBegin),
+			5003 : ('AwardTechsAndGold', self.__eventAwardTechsAndGoldApply, self.__eventAwardTechsAndGoldBegin),
 			5006 : ('EditUnitName', self.__eventEditUnitNameApply, self.__eventEditUnitNameBegin),
 			5008 : ('WBAllPlotsPopup', self.__eventWBAllPlotsPopupApply, self.__eventWBAllPlotsPopupBegin),
 			5009 : ('WBLandmarkPopup', self.__eventWBLandmarkPopupApply, self.__eventWBLandmarkPopupBegin),
-			CvUtil.EventWBScriptPopup : ('WBScriptPopup', self.__eventWBScriptPopupApply, self.__eventWBScriptPopupBegin),
-			CvUtil.EventWBStartYearPopup : ('WBStartYearPopup', self.__eventWBStartYearPopupApply, self.__eventWBStartYearPopupBegin),
-			CvUtil.EventShowWonder : ('ShowWonder', self.__eventShowWonderApply, self.__eventShowWonderBegin),
+			5010 : ('WBScriptPopup', self.__eventWBScriptPopupApply, self.__eventWBScriptPopupBegin),
+			5011 : ('WBStartYearPopup', self.__eventWBStartYearPopupApply, self.__eventWBStartYearPopupBegin),
+			5012 : ('ShowWonder', self.__eventShowWonderApply, self.__eventShowWonderBegin),
 		}
-		CvUtil.SilentEvents.extend([4999, 5000, 5006])
 	###****************###
 	### EVENT STARTERS ###
 	''' Overwritten by the one in BugEventManager.py
@@ -166,20 +166,14 @@ class CvEventManager:
 	def applyEvent(self, argsList):
 		iD, iPlayer, netUserData, popupReturn = argsList
 
-		if iD == CvUtil.PopupTypeEffectViewer:
-			return CvDebugTools.g_CvDebugTools.applyEffectViewer(iPlayer, netUserData, popupReturn)
+		if iD == 5:
+			return CvDebugUtils.g_CvDebugUtils.applyEffectViewer(iPlayer, netUserData, popupReturn)
 
-		entry = self.Events[iD]
-		if entry:
-			if iD not in CvUtil.SilentEvents:
-				message = "DEBUG Event: %s" % entry[0]
-				CyInterface().addImmediateMessage(message, "")
-				CvUtil.pyPrint(message)
-
+		if self.Events[iD]:
 			if iD in self.OverrideEventApply:
 				return self.OverrideEventApply[iD](iPlayer, netUserData, popupReturn)
 
-			return entry[1](iPlayer, netUserData, popupReturn)
+			return self.Events[iD][1](iPlayer, netUserData, popupReturn)
 
 	###***********###
 	### ON EVENTS ###
@@ -385,11 +379,11 @@ class CvEventManager:
 				# Shift - T (Debug - No MP)
 				if key == InputTypes.KB_T:
 					if bShift and not (bCtrl or bAlt):
-						self.beginEvent(CvUtil.EventAwardTechsAndGold)
+						self.beginEvent(5003)
 						return 1
 				elif key == InputTypes.KB_W:
 					if bShift and not (bCtrl or bAlt):
-						self.beginEvent(CvUtil.EventShowWonder)
+						self.beginEvent(5012)
 						return 1
 
 		elif eventType == 7: # Key up
@@ -1315,7 +1309,7 @@ class CvEventManager:
 						continue
 					# Covers whole map for others
 					GC.getMap().setRevealedPlots(iTeamX, False, False)
-				CyInterface().addImmediateMessage(TRNSLTR.getText("TXT_GLOBAL_JAM",()), None)
+				CvUtil.sendImmediateMessage(TRNSLTR.getText("TXT_GLOBAL_JAM",()))
 			elif KEY == "TSUKIJI":
 				CyTeam = GC.getTeam(GC.getPlayer(iPlayer).getTeam())
 				BOAT = GC.getInfoTypeForString("IMPROVEMENT_FISHING_BOATS")
@@ -1698,110 +1692,96 @@ class CvEventManager:
 			if iRoute < 0:
 				print "Error CvEventManager.onBuildingBuilt\n\tROUTE_PAVED doesn't exist, aborting python effect for Appian Way"
 				return
-			CyPlayer = GC.getPlayer(iPlayer)
-			iCityID = CyCity.getID()
+			if iPlayer == GAME.getActivePlayer():
+				CvUtil.sendMessage(TRNSLTR.getText("TXT_APPIAN_BUILT",()), iPlayer)
 			MAP = GC.getMap()
-			CyInterface().addImmediateMessage(TRNSLTR.getText("TXT_APPIAN_BUILT",()), None)
+			CyPlayer = GC.getPlayer(iPlayer)
 
-			aCityList = []
-			mapCityNet = {iCityID : 0}
-
+			# The appian city
+			iCityID = CyCity.getID()
 			iAreaID = CyCity.area().getID()
 
-			iMaxPathStart = 0
-			n = 1
+			# Find start-point and cache city info
+			aCityList = []
+			iMaxPath2Appia = 0
+			iCities = 0
 			CyCityStart = None
 			CyCityX, i = CyPlayer.firstCity(False)
 			while CyCityX:
-				ID = CyCityX.getID()
-				if ID != iCityID and CyCityX.area().getID() == iAreaID:
+				if CyCityX.getID() != iCityID and CyCityX.area().getID() == iAreaID:
 					if MAP.generatePathForHypotheticalUnit(CyCity.plot(), CyCityX.plot(), iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 9999):
 						iPath2Appia = MAP.getLastPathStepNum()
-						if iPath2Appia > iMaxPathStart:
-							iMaxPathStart = iPath2Appia
+						if iPath2Appia > iMaxPath2Appia:
+							iMaxPath2Appia = iPath2Appia
 							CyCityStart = CyCityX
-							iCityStartID = ID
-						aCityList.append((CyCityX, ID, iPath2Appia))
-						mapCityNet[ID] = 0
-						n += 1
+							iIdx = iCities
+						aCityList.append((CyCityX, iPath2Appia))
+						iCities += 1
 				CyCityX, i = CyPlayer.nextCity(i, False)
 
-			if CyCityStart is not None:
-				aCityList.append((CyCity, iCityID, 0))
-				iMinCities = n / 4
-
-				mapCityNet[iCityStartID] = 1
-
-				CyCityEnd = None
-				iMaxPathEnd = 0
-				for CyCityX, ID, iPath2Appia in aCityList:
-					if ID == iCityStartID:
-						continue
-					if MAP.generatePathForHypotheticalUnit(CyCityStart.plot(), CyCityX.plot(), iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 9999):
+			if CyCityStart:
+				aCityList.pop(iIdx)
+				iCities -= 1
+				if iCities:
+					# Find end-point
+					iMaxPath = 0
+					i = 0
+					while i < iCities:
+						CyCityX = aCityList[i][0]
+						MAP.generatePathForHypotheticalUnit(CyCityStart.plot(), CyCityX.plot(), iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 9999)
 						iPath = MAP.getLastPathStepNum()
-						if iPath > iMaxPathEnd:
-							iMaxPathEnd = iPath
+						if iPath > iMaxPath:
+							iMaxPath = iPath
 							CyCityEnd = CyCityX
-							iCityEndID = ID
-				if CyCityEnd is None:
-					iLastPath2Appia = 0
-				else:
+							iIdx = i
+						i += 1
+					aCityList.pop(iIdx)
+					iCities -= 1
 					MAP.generatePathForHypotheticalUnit(CyCityEnd.plot(), CyCity.plot(), iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 9999)
-					iLastPath2Appia = MAP.getLastPathStepNum()
+					iOtherPath2Appia = MAP.getLastPathStepNum()
+					aCityList0 = list(aCityList)
+					iCities0 = iCities
+				else:
+					iOtherPath2Appia = 0
 
+				# Build Appian way
 				CyCityFrom = CyCityStart
-				iCount = 1
-				while iMaxPathStart:
-					iMinPath = 10000
-					for CyCityX, ID, iPath2Appia in aCityList:
-						if mapCityNet[ID] or iPath2Appia > iMaxPathStart:
-							continue
-						if MAP.generatePathForHypotheticalUnit(CyCityFrom.plot(), CyCityX.plot(), iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 9999):
+				while True:
+					# Find closest city that is not further away from the appian city.
+					iMinPath = 0
+					i = 0
+					while i < iCities:
+						CyCityX, iPath2Appia = aCityList[i]
+						if iPath2Appia <= iMaxPath2Appia:
+							MAP.generatePathForHypotheticalUnit(CyCityFrom.plot(), CyCityX.plot(), iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 9999)
 							iPath = MAP.getLastPathStepNum()
-							if iPath < iMinPath:
+							if not iMinPath or iPath < iMinPath:
 								iMinPath = iPath
-								iNextPath2Appia = iPath2Appia
-								CyCityTo = CyCityX
-								iCityToID = ID
-					if iMinPath < 10000:
+								iIdx = i
+						i += 1
+					if iMinPath:
+						# Connect two cities on the way to appia
+						CyCityTo, iPath2Appia = aCityList.pop(iIdx)
+						iCities -= 1
 						MAP.generatePathForHypotheticalUnit(CyCityFrom.plot(), CyCityTo.plot(), iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 9999)
-						for i in xrange(iMinPath):
-							MAP.getLastPathPlotByIndex(i).setRouteType(iRoute)
-						if iCityToID != iCityID:
-							CyCityFrom = CyCityTo
-							iMaxPathStart = iNextPath2Appia
-							mapCityNet[iCityToID] = 1
-						elif iLastPath2Appia:
+						for j in xrange(iMinPath):
+							MAP.getLastPathPlotByIndex(j).setRouteType(iRoute)
+						CyCityFrom = CyCityTo
+						iMaxPath2Appia = iPath2Appia
+					else:
+						# Connect to the appian city
+						MAP.generatePathForHypotheticalUnit(CyCityFrom.plot(), CyCity.plot(), iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 9999)
+						for j in xrange(iMaxPath2Appia):
+							MAP.getLastPathPlotByIndex(j).setRouteType(iRoute)
+						if iOtherPath2Appia:
 							CyCityFrom = CyCityEnd
-							iMaxPathStart = iLastPath2Appia
-							iLastPath2Appia = 0
+							iMaxPath2Appia = iOtherPath2Appia
+							iOtherPath2Appia = 0
+							iCities = iCities0
+							aCityList = aCityList0
 						else:
-							iMaxPathStart = 0
-							mapCityNet[iCityID] = 1
-						iCount += 1
-					else: break
+							break # All done
 
-				while iMinCities > iCount:
-					iMinPath = 10000
-					for CyCityX, ID, iPath2Appia in aCityList:
-						if not mapCityNet[ID]:
-							continue
-						for CyCityY, ID, iPath2Appia in aCityList:
-							if mapCityNet[ID]:
-								continue
-							if MAP.generatePathForHypotheticalUnit(CyCityX.plot(), CyCityY.plot(), iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 9999):
-								iPath = MAP.getLastPathStepNum()
-								if iPath < iMinPath:
-									iMinPath = iPath
-									CyCityFrom = CyCityX
-									CyCityTo = CyCityY
-									iCityToID = ID
-					if iMinPath < 10000:
-						MAP.generatePathForHypotheticalUnit(CyCityFrom.plot(), CyCityTo.plot(), iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 9999)
-						for i in xrange(iMinPath):
-							MAP.getLastPathPlotByIndex(i).setRouteType(iRoute)
-						mapCityNet[iCityToID] = 1
-					else: break
 			else: # The wonder should do something in this case.
 				# Let's fill out the fat cross of the city with the route.
 				for i in xrange(GC.getNUM_CITY_PLOTS()):
@@ -1827,7 +1807,8 @@ class CvEventManager:
 			iArea = CyPlot.getArea()
 			pMaxWest = pMaxEast = CyPlot
 
-			CyInterface().addImmediateMessage(TRNSLTR.getText("TXT_GOLDEN_SPIKE_BUILT",()), None)
+			if iPlayer == GAME.getActivePlayer():
+				CvUtil.sendMessage(TRNSLTR.getText("TXT_GOLDEN_SPIKE_BUILT",()), iPlayer)
 
 			iGridWidth = MAP.getGridWidth()
 			iGridHeight = MAP.getGridHeight()
@@ -2348,7 +2329,8 @@ class CvEventManager:
 					else:
 						iBase = CyCity.getBuildingHealthChange(NAZCA_LINES)
 						CyCity.setBuildingHealthChange(NAZCA_LINES, iBase + 2)
-					CyInterface().addImmediateMessage(TRNSLTR.getText("TXT_NAZCA_LINES",()), None)
+					if iPlayer == GAME.getActivePlayer():
+						CvUtil.sendMessage(TRNSLTR.getText("TXT_NAZCA_LINES",()), iPlayer)
 
 
 	'''
@@ -2839,25 +2821,25 @@ class CvEventManager:
 			CvWBPopups.CvWBPopups().applyEditCity((popupReturn, userData))
 
 	def __eventPlaceObjectBegin(self, argsList):
-		CvDebugTools.CvDebugTools().initUnitPicker(argsList)
+		CvDebugUtils.CvDebugUtils().initUnitPicker(argsList)
 
 	def __eventPlaceObjectApply(self, iPlayer, userData, popupReturn):
 		if getChtLvl() > 0:
-			CvDebugTools.CvDebugTools().applyUnitPicker((popupReturn, userData))
+			CvDebugUtils.CvDebugUtils().applyUnitPicker((popupReturn, userData))
 
 	def __eventAwardTechsAndGoldBegin(self, argsList):
-		CvDebugTools.CvDebugTools().cheatTechs()
+		CvDebugUtils.CvDebugUtils().cheatTechs()
 
 	def __eventAwardTechsAndGoldApply(self, iPlayer, netUserData, popupReturn):
 		if getChtLvl() > 0:
-			CvDebugTools.CvDebugTools().applyTechCheat((popupReturn))
+			CvDebugUtils.CvDebugUtils().applyTechCheat((popupReturn))
 
 	def __eventShowWonderBegin(self, argsList):
-		CvDebugTools.CvDebugTools().wonderMovie()
+		CvDebugUtils.CvDebugUtils().wonderMovie()
 
 	def __eventShowWonderApply(self, iPlayer, netUserData, popupReturn):
 		if getChtLvl() > 0:
-			CvDebugTools.CvDebugTools().applyWonderMovie((popupReturn))
+			CvDebugUtils.CvDebugUtils().applyWonderMovie((popupReturn))
 
 	def __eventEditUnitNameBegin(self, argsList):
 		pUnit = argsList
@@ -2892,7 +2874,7 @@ class CvEventManager:
 				CvScreensInterface.getWorldBuilderScreen().setLandmarkCB(szLandmark)
 
 	def __eventWBScriptPopupBegin(self, argsList):
-		popup = PyPopup.PyPopup(CvUtil.EventWBScriptPopup, EventContextTypes.EVENTCONTEXT_ALL)
+		popup = PyPopup.PyPopup(5010, EventContextTypes.EVENTCONTEXT_ALL)
 		popup.setHeaderString(TRNSLTR.getText("TXT_KEY_WB_SCRIPT", ()))
 		popup.createEditBox(CvScreensInterface.getWorldBuilderScreen().getCurrentScript())
 		popup.launch()
@@ -2903,7 +2885,7 @@ class CvEventManager:
 			CvScreensInterface.getWorldBuilderScreen().setScriptCB(szScriptName)
 
 	def __eventWBStartYearPopupBegin(self, argsList):
-		popup = PyPopup.PyPopup(CvUtil.EventWBStartYearPopup, EventContextTypes.EVENTCONTEXT_ALL)
+		popup = PyPopup.PyPopup(5011, EventContextTypes.EVENTCONTEXT_ALL)
 		popup.createSpinBox(0, "", GAME.getStartYear(), 1, 5000, -5000)
 		popup.launch()
 

@@ -9,47 +9,22 @@ import ScreenResolution as SR
 
 # globals
 GC = CyGlobalContext()
-GAME = GC.getGame()
 CyIF = CyInterface()
 TRNSLTR = CyTranslator()
 
-# Popup context enums, values greater than 999 are reserved for events
-#
-# DEBUG TOOLS
-PopupTypeEntityEventTest = 4
-PopupTypeEffectViewer = 5
-# HELP SCREENS
-PopupTypeMilitaryAdvisor = 103
-PopupTypePlayerSelect = 104
-# EVENT ID VALUES (also used in popup contexts)
-EventEditCity = 5001
-EventPlaceObject = 5002
-EventAwardTechsAndGold = 5003
-EventCityWarning = 5007
-EventWBScriptPopup = 5010
-EventWBStartYearPopup = 5011
-EventShowWonder = 5012
-
-# List of unreported Events
-SilentEvents = []
-
 # Event IDs
 g_nextEventID = 5050
-def getNewEventID(name=None, silent=True):
+def getNewEventID(name=None):
 	"""
 	Defines a new event and returns its unique ID
 	to be passed to BugEventManager.beginEvent(id).
+
+	Perhaps move over to CvEventManager.py
 	"""
 	global g_nextEventID
 	id = g_nextEventID
 	g_nextEventID += 1
-	if silent:
-		addSilentEvent(id)
 	return id
-
-def addSilentEvent(id):
-	if id not in SilentEvents:
-		SilentEvents.append(id)
 
 # Screen IDs
 BUG_FIRST_SCREEN = 1000
@@ -108,11 +83,7 @@ def myExceptHook(type, value, tb):
 	sys.stderr.write("\n".join(lines))
 
 def pyPrint(stuff):
-	# < Revolution Mod Start >
-	# Attempt to silence encoding errors for some city names after Python reload
-	stuff = 'PY:' + stuff + "\n"
-	# < Revolution Mod End >
-	sys.stdout.write(stuff)
+	sys.stdout.write('PY:' + stuff + "\n")
 
 def pyAssert(cond, msg):
 	if cond == False:
@@ -299,7 +270,11 @@ def stripLiterals(txt, literal):
 def sendMessage(szTxt, iPlayer=None, iTime=16, szIcon=None, eColor=-1, iMapX=-1, iMapY=-1, bOffArrow=False, bOnArrow=False, eMsgType=0, szSound=None, bForce=True):
 	if szTxt:
 		if iPlayer is None:
-			iPlayer = GAME.getActivePlayer()
+			iPlayer = GC.getGame().getActivePlayer()
 		if iPlayer == -1: return
 
 		CyIF.addMessage(iPlayer, bForce, iTime, SR.aFontList[5] + szTxt, szSound, eMsgType, szIcon, eColor, iMapX, iMapY, bOffArrow, bOnArrow)
+
+def sendImmediateMessage(szTxt, szSound=None):
+	if szTxt:
+		CyIF.addImmediateMessage(SR.aFontList[5] + szTxt, szSound)

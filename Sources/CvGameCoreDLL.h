@@ -67,7 +67,7 @@ public:
 class NiPoint3
 {
 public:
-	NiPoint3() {}
+	NiPoint3(): x(0.0f), y(0.0f), z(0.0f) {}
 	NiPoint3(float fx, float fy, float fz) : x(fx),y(fy),z(fz) {} 
 
 	bool operator== (const NiPoint3& pt) const

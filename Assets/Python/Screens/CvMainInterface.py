@@ -3646,16 +3646,18 @@ class CvMainInterface:
 			aList1 = []
 			aList2 = []
 			aList3 = []
-			iGroupNum = CyCity.getBuildingListGroupNum() - 1
+			iGroupNum = CyCity.getBuildingListGroupNum()
 			iGroup = 0
 			while iGroup < iGroupNum:
-				iGroup += 1
 				iNumInGroup = CyCity.getBuildingListNumInGroup(iGroup)
 				if not iNumInGroup:
+					iGroup += 1
 					continue
 				for i in xrange(iNumInGroup):
 					iType = CyCity.getBuildingListType(iGroup, i)
 					iBuildingClass = GC.getBuildingInfo(iType).getBuildingClassType()
+					if not isLimitedWonderClass(iBuildingClass):
+						break
 
 					if GC.getBuildingClassInfo(iBuildingClass).isNoLimit():
 						aList0.append(iType)
@@ -3667,10 +3669,12 @@ class CvMainInterface:
 						aList2.append(iType)
 					else:
 						aList3.append(iType)
+				iGroup += 1
+
 			# Wonders
+			iCount = 0
 			for aListX in [aList1, aList2, aList3]:
 				if not aListX: continue
-				iCount = 0
 				aList = []
 				for iType in aListX:
 					BTN = GC.getBuildingInfo(iType).getButton()
@@ -3696,8 +3700,9 @@ class CvMainInterface:
 					iCount += 1
 				x = xStart
 				y += dx
+				iCount = 0
+
 			# Projects
-			iCount = 0
 			for iType in xrange(self.iNumProjectInfos):
 				if CyCity.canCreate(iType, True, False):
 					if iCount == iBtnPerRow:
@@ -3709,8 +3714,11 @@ class CvMainInterface:
 					screen.setImageButtonAt(Img, Pnl, BTN, x, y, iSize, iSize, eWidGen, 1, 1)
 					x += dx
 					iCount += 1
+
 			# Cultures + palace + special
-			if iCount and aList0:
+			if not aList0: return
+			y += dx
+			if iCount:
 				x = xStart
 				iCount = 0
 			for iType in aList0:

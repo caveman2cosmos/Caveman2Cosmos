@@ -1416,7 +1416,7 @@ protected:
 	CvStatsReporter * m_statsReporter;
 	CvInterface* m_interface;
 
-	CvArtFileMgr* m_pArtFileMgr;
+//	CvArtFileMgr* m_pArtFileMgr; (unused)
 
 /*********************************/
 /***** Parallel Maps - Begin *****/
@@ -1738,7 +1738,7 @@ protected:
 	int m_iNumFootstepAudioTypes;
 
 	CvString *m_paszFootstepAudioTags;
-	int m_iNumFootstepAudioTags;
+//	int m_iNumFootstepAudioTags; (unused)
 
 	CvString m_szCurrentXMLFile;
 	//////////////////////////////////////////////////////////////////////////

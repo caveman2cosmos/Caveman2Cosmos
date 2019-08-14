@@ -51,16 +51,11 @@
 from CvPythonExtensions import *
 
 import PyHelpers
-import CvUtil
-import ScreenInput
 import CvScreenEnums
 import CvEventInterface
-import CvEventManager
 import Popup as PyPopup
 
-import CvEventInterface
 import BugPath
-import BugUtil
 import BugConfigTracker
 
 import math
@@ -68,21 +63,14 @@ import os.path
 
 PyPlayer = PyHelpers.PyPlayer
 
-# BUG - Mac Support - start
-BugUtil.fixSets(globals())
-# BUG - Mac Support - end
-
-# BUG - Options - start
+# BUG - Options
 import BugCore
 CityScreenOpt = BugCore.game.CityScreen
-# BUG - Options - end
-
 # RevolutionDCM
 import RevDefs
 import RevData
 import RevInstances
 import RevUtils
-import BugOptionsTab
 
 # Needed to save changes
 # Rise of Mankind 2.8 - pickle optimization
@@ -96,8 +84,6 @@ except:
 import re
 
 import time
-
-gc = CyGlobalContext()
 
 #	IMPORTANT INFORMATION
 #
@@ -851,7 +837,7 @@ class RevolutionWatchAdvisor:
 		#screen.addDDSGFC( self.BACKGROUND_ID, ArtFileMgr.getInterfaceArtInfo("SCREEN_BG").getPath(), 0, 29, 1024, 592, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 		# Text Buttons
-		screen.setText(self.EXIT_NAME, "Background", localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper(), CvUtil.FONT_RIGHT_JUSTIFY, self.X_EXIT, self.Y_EXIT, self.Z_TEXT, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
+		screen.setText(self.EXIT_NAME, "Background", localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper(), 1<<1, self.X_EXIT, self.Y_EXIT, self.Z_TEXT, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
 
 		x = self.X_SPECIAL + self.PAGES_DD_W + 10
 
@@ -886,7 +872,7 @@ class RevolutionWatchAdvisor:
 
 		# Header...
 		#szText = "<font=4>" + localText.getText("TXT_KEY_REVOLUTION_WATCH_ADVISOR_TITLE", ()).upper() + "</font>"
-		#screen.setLabel( "RevolutionWatchTitleHeader", "Background", szText, CvUtil.FONT_CENTER_JUSTIFY, 472, 40, STANDARD_Z, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+		#screen.setLabel( "RevolutionWatchTitleHeader", "Background", szText, 1<<2, 472, 40, STANDARD_Z, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 		# Draw the customization controls (but don't SHOW them)
 		self.drawCustomizationControls()
@@ -923,7 +909,7 @@ class RevolutionWatchAdvisor:
 		for i in range (self.getNumSpecialistInfos()):
 			if (gc.getSpecialistInfo(i).isVisible()):
 				szName = self.SPECIALIST_TEXT_NAME + str(i)
-				screen.setText (szName, "Background", "", CvUtil.FONT_LEFT_JUSTIFY, self.nFirstSpecialistX + (self.nSpecialistDistance * i) + self.nSpecTextOffsetX, self.nSpecialistY + self.nSpecTextOffsetY, self.Z_TEXT, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+				screen.setText (szName, "Background", "", 1<<0, self.nFirstSpecialistX + (self.nSpecialistDistance * i) + self.nSpecTextOffsetX, self.nSpecialistY + self.nSpecTextOffsetY, self.Z_TEXT, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 				screen.hide (szName)
 
 	def showSpecialists (self):
@@ -951,7 +937,7 @@ class RevolutionWatchAdvisor:
 		#
 		#		# Show all the specialist text
 		#		szName = self.SPECIALIST_TEXT_NAME + str(i)
-		#		screen.setText (szName, "Background", str (city.getSpecialistCount(i)) + "/" + str (city.getMaxSpecialistCount(i)) + u" %c" % self.SPECIALIST_ICON_DICT[i], CvUtil.FONT_LEFT_JUSTIFY, self.nFirstSpecialistX + (self.nSpecialistDistance * i) + self.nSpecTextOffsetX, self.nSpecialistY + self.nSpecTextOffsetY, self.Z_TEXT, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		#		screen.setText (szName, "Background", str (city.getSpecialistCount(i)) + "/" + str (city.getMaxSpecialistCount(i)) + u" %c" % self.SPECIALIST_ICON_DICT[i], 1<<0, self.nFirstSpecialistX + (self.nSpecialistDistance * i) + self.nSpecTextOffsetX, self.nSpecialistY + self.nSpecTextOffsetY, self.Z_TEXT, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		#		screen.show (szName)
 		#
 		#		# If the specialist is valid and we can increase it
@@ -989,7 +975,7 @@ class RevolutionWatchAdvisor:
 
 		screen.addPanel(self.BRIBE_PANEL, "", "", False, True, self.nBribePanelX, self.nBribePanelY, self.nBribePanelWidth, self.nBribePanelLength, PanelStyles.PANEL_STYLE_IN )
 		screen.setImageButton(self.REVOLUTION_LEGEND_ICON, self.revIcon, self.revIconX, self.revIconY, self.revIconSize, self.revIconSize, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-		screen.setText (self.REVOLUTION_BRIBE_TEXT, "Background", localText.getText("TXT_ADVISOR_BRIBE",()), CvUtil.FONT_LEFT_JUSTIFY, self.revBribeTextX, self.revBribeTextY, self.Z_TEXT, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		screen.setText (self.REVOLUTION_BRIBE_TEXT, "Background", localText.getText("TXT_ADVISOR_BRIBE",()), 1<<0, self.revBribeTextX, self.revBribeTextY, self.Z_TEXT, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		screen.addPanel(self.LEGEND_PANEL, "", "", False, True, self.nLegendPanelX, self.nLegendPanelY, self.nLegendPanelWidth, self.nLegendPanelLength, PanelStyles.PANEL_STYLE_IN )
 
 		#always show national effects even if a city has not been selected
@@ -999,7 +985,7 @@ class RevolutionWatchAdvisor:
 		revText = revText.strip('\n')
 		revText = revText.replace('\n', ' ')
 		revText = revText.replace("xxx", "\n")
-		screen.attachMultilineText( self.LEGEND_PANEL, "Text", revText, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.attachMultilineText( self.LEGEND_PANEL, "Text", revText, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 		self.hideRevolutionLegend()
 		screen.show(self.BRIBE_PANEL)
 		screen.show(self.LEGEND_PANEL)
@@ -1012,9 +998,9 @@ class RevolutionWatchAdvisor:
 			revText = revText.strip('\n')
 			revText = revText.replace('\n', ' ')
 			revText = revText.replace("xxx", "\n")
-			screen.attachMultilineText( self.LEGEND_PANEL, "Text", revText, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+			screen.attachMultilineText( self.LEGEND_PANEL, "Text", revText, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 			if RevUtils.isCanBribeCity(city)[0]:
-				screen.setText(self.REVOLUTION_BRIBE_TEXT, "Background", localText.getText("TXT_ADVISOR_BRIBE",()) + " " + city.getName(), CvUtil.FONT_LEFT_JUSTIFY, self.revBribeTextX, self.revBribeTextY, self.Z_TEXT, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+				screen.setText(self.REVOLUTION_BRIBE_TEXT, "Background", localText.getText("TXT_ADVISOR_BRIBE",()) + " " + city.getName(), 1<<0, self.revBribeTextX, self.revBribeTextY, self.Z_TEXT, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 				screen.show(self.BRIBE_PANEL)
 				screen.show(self.LEGEND_PANEL)
 				screen.show(self.REVOLUTION_LEGEND_ICON)
@@ -1145,7 +1131,7 @@ class RevolutionWatchAdvisor:
 		# Draw the city list...
 		self.drawContents (page)
 		end = time.clock()
-		CvUtil.pyPrint("drawContents: " + str(end - start) + "s")
+		print "drawContents: " + str(end - start) + "s"
 
 	def calculateFounded (self, city, szKey, arg):
 
@@ -1838,8 +1824,8 @@ class RevolutionWatchAdvisor:
 							bestOrder = -1  # In a cultural game, build units in the culturally weak cities
 					elif type == "Military":
 						if city.findBaseYieldRateRank(YieldTypes.YIELD_PRODUCTION) <= 3:
-							value = -1 * info.getMilitaryProductionModifier() / float(info.getProductionCost())
-							CvUtil.pyPrint(info.getDescription() + ": " + str(value))
+							value = (-1.0 * info.getMilitaryProductionModifier()) / info.getProductionCost()
+							print "%s: %.2f" %(info.getDescription(), value)
 							if value > bestData:
 								bestOrder = bldg
 								bestData = value
@@ -2072,18 +2058,18 @@ class RevolutionWatchAdvisor:
 			columns = self.PAGES[self.currentPageNum]["columns"]
 			for i, column in enumerate(columns):
 				screen.appendTableRow (self.CUSTOMIZE_PAGE)
-				screen.setTableInt(self.CUSTOMIZE_PAGE, 0, i, unicode(i+1), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_RIGHT_JUSTIFY)
-				screen.setTableText(self.CUSTOMIZE_PAGE, 1, i, unicode(column[0]), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+				screen.setTableInt(self.CUSTOMIZE_PAGE, 0, i, unicode(i+1), "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<1)
+				screen.setTableText(self.CUSTOMIZE_PAGE, 1, i, unicode(column[0]), "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 
 				# Catch exceptions generated by missing columns
 				try:
-					screen.setTableText(self.CUSTOMIZE_PAGE, 2, i, self.HEADER_DICT[column[0]], "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+					screen.setTableText(self.CUSTOMIZE_PAGE, 2, i, self.HEADER_DICT[column[0]], "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 				except KeyError:
-					screen.setTableText(self.CUSTOMIZE_PAGE, 2, i, "", "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+					screen.setTableText(self.CUSTOMIZE_PAGE, 2, i, "", "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 				except TypeError:
-					screen.setTableText(self.CUSTOMIZE_PAGE, 2, i, "", "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+					screen.setTableText(self.CUSTOMIZE_PAGE, 2, i, "", "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 
-				screen.setTableInt(self.CUSTOMIZE_PAGE, 3, i, unicode(column[1]), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_RIGHT_JUSTIFY)
+				screen.setTableInt(self.CUSTOMIZE_PAGE, 3, i, unicode(column[1]), "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<1)
 
 			# Build the available columns table
 			if(screen.getTableNumRows(self.COLUMNS_LIST_PAGE) != len(self.COLUMNS_LIST)):
@@ -2101,16 +2087,16 @@ class RevolutionWatchAdvisor:
 				columns = self.COLUMNS_LIST
 				for i, column in enumerate(columns):
 					screen.appendTableRow (self.COLUMNS_LIST_PAGE)
-					screen.setTableInt(self.COLUMNS_LIST_PAGE, 0, i, unicode(i), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_RIGHT_JUSTIFY)
-					screen.setTableText(self.COLUMNS_LIST_PAGE, 1, i, unicode(column[0]), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+					screen.setTableInt(self.COLUMNS_LIST_PAGE, 0, i, unicode(i), "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<1)
+					screen.setTableText(self.COLUMNS_LIST_PAGE, 1, i, unicode(column[0]), "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 					try:
-						screen.setTableText(self.COLUMNS_LIST_PAGE, 2, i, unicode(self.HEADER_DICT[column[0]]), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+						screen.setTableText(self.COLUMNS_LIST_PAGE, 2, i, unicode(self.HEADER_DICT[column[0]]), "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 					except TypeError:
-						screen.setTableText(self.COLUMNS_LIST_PAGE, 2, i, "", "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+						screen.setTableText(self.COLUMNS_LIST_PAGE, 2, i, "", "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 					except UnicodeDecodeError:
-						screen.setTableText(self.COLUMNS_LIST_PAGE, 2, i, "", "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+						screen.setTableText(self.COLUMNS_LIST_PAGE, 2, i, "", "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 
-					screen.setTableInt(self.COLUMNS_LIST_PAGE, 3, i, unicode(column[1]), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_RIGHT_JUSTIFY)
+					screen.setTableInt(self.COLUMNS_LIST_PAGE, 3, i, unicode(column[1]), "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<1)
 
 			# This is legacy code. I don't know if it's necessary.
 			screen.moveToBack (self.BACKGROUND_ID)
@@ -2161,7 +2147,7 @@ class RevolutionWatchAdvisor:
 #					szWidgetName = "ZoomCity" + str(i)
 #					screen.setImageButton( szWidgetName, zoomArt, 0, 0, 24, 24, WidgetTypes.WIDGET_ZOOM_CITY, cityList[i].getOwner(), cityList[i].getID() )
 #					screen.attachControlToTableCell( szWidgetName, page, i, 0 )
-				screen.setTableText( page, 0, i, "", zoomArt, WidgetTypes.WIDGET_ZOOM_CITY, cityList[i].getOwner(), cityList[i].getID(), CvUtil.FONT_LEFT_JUSTIFY)
+				screen.setTableText( page, 0, i, "", zoomArt, WidgetTypes.WIDGET_ZOOM_CITY, cityList[i].getOwner(), cityList[i].getID(), 1<<0)
 
 			# Order the columns
 			columns = []
@@ -2205,19 +2191,19 @@ class RevolutionWatchAdvisor:
 					# And the correct writing function.
 					if (type == "text"):
 						funcTableWrite = screen.setTableText
-						justify = CvUtil.FONT_LEFT_JUSTIFY
+						justify = 1<<0
 					elif (type == "date"):
 						funcTableWrite = screen.setTableDate
-						justify = CvUtil.FONT_LEFT_JUSTIFY
+						justify = 1<<0
 					elif (type == "int"):
 						funcTableWrite = screen.setTableInt
-						justify = CvUtil.FONT_RIGHT_JUSTIFY
+						justify = 1<<1
 					elif (type == "bonus"):
 						funcTableWrite = screen.setTableText
-						justify = CvUtil.FONT_CENTER_JUSTIFY
+						justify = 1<<2
 					elif (type == "bldg" or type == "bldgclass"):
 						funcTableWrite = screen.setTableText
-						justify = CvUtil.FONT_CENTER_JUSTIFY
+						justify = 1<<2
 					else:
 						return;
 
@@ -2339,8 +2325,7 @@ class RevolutionWatchAdvisor:
 					return 1
 
 			else:
-				CvUtil.pyPrint(szWidget)
-				CvUtil.pyPrint(self.currentPage)
+				print szWidget, self.currentPage
 
 		# Is the input from a mapped button?
 		elif (code == NotifyCode.NOTIFY_CLICKED and self.RevolutionWatchScreenInputMap.has_key(inputClass.getFunctionName())):
@@ -3079,7 +3064,6 @@ class RevolutionWatchAdvisor:
 				if not eventManager.Events.has_key(i):
 					self.renameEventContext = i
 					eventManager.Events[self.renameEventContext] = ('DomAdvRenamePage', self.renameApply, self.renameBegin)
-					CvUtil.SilentEvents.append(self.renameEventContext)
 					break
 
 		CvEventInterface.beginEvent(self.renameEventContext)

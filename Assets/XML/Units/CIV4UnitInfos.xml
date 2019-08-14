@@ -5485,6 +5485,12 @@
 					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
 				</ForceObsoleteUnitClass>
 			</ForceObsoleteUnitClasses>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_BY_THE_HORNS</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
 			<iCost>20</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>1</iCombat>
@@ -59955,6 +59961,12 @@
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_CANINE_DOMESTICATION</ForceObsoleteTech>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_BY_THE_HORNS</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
 			<iCost>40</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>2</iCombat>
