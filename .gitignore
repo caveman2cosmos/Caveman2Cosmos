@@ -9,3 +9,4 @@
 *.pdb
 *.FPK
 Assets/fpklive_token.txt
+!/Tools/*.dll
