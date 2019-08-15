@@ -5984,33 +5984,19 @@ void CvDLLWidgetData::parseFlagHelp(CvWidgetDataStruct &widgetDataStruct, CvWStr
 	szBuffer.append(szTempBuffer);
 
 	szBuffer.append(szBULLETICON);
-	if ( GC.getLoadedInitCore().getGameSaveSvnRev() == -1 )
-	{
-		szTempBuffer.Format(L"%S %d",
-							"Caveman2Cosmos build", GC.getLoadedInitCore().getSvnRev());
-	}
-	else
-	{
-		szTempBuffer.Format(L"%S %d (game saved from build %d)",
-							"Caveman2Cosmos build", GC.getLoadedInitCore().getSvnRev(), GC.getLoadedInitCore().getGameSaveSvnRev());
-	}
+	szTempBuffer.Format(L"Caveman2Cosmos %S", GC.getLoadedInitCore().getGitVersion());
 	szBuffer.append(szTempBuffer);
 
-	szBuffer.append(szBULLETICON);
-	szTempBuffer.Format(L"%S", "Rise of Mankind v2.92");
-	szBuffer.append(szTempBuffer);
-	
-	szBuffer.append(szBULLETICON);
-	szTempBuffer.Format(L"%S", "RevolutionDCM v2.80 pre-release");
-	szBuffer.append(szTempBuffer);	
-	
-	szBuffer.append(szBULLETICON);
-	szTempBuffer.Format(L"%S", "Better BTS AI v1.01b");
-	szBuffer.append(szTempBuffer);
-	
-	szBuffer.append(szBULLETICON);
-	szTempBuffer.Format(L"%S", "Unofficial 3.19 Patch v1.50+");
-	szBuffer.append(szTempBuffer);
+	if (GC.getLoadedInitCore().getGameSaveGitSHA() != '\0')
+	{
+		szBuffer.append(szBULLETICON);
+		szTempBuffer.Format(L"Caveman2Cosmos build %S", GC.getLoadedInitCore().getGitSHA());
+		szBuffer.append(szTempBuffer);
+		szBuffer.append(szBULLETICON);
+		szTempBuffer.Format(L"Game saved from %S", GC.getLoadedInitCore().getGameSaveGitSHA());
+		szBuffer.append(szTempBuffer);
+	}
+
 	
 // BUG - Version Info - end
 	if (GET_PLAYER(GC.getGameINLINE().getActivePlayer()).isModderOption(MODDEROPTION_SHOW_TRAITS_FLAG) || GC.getGameINLINE().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))

@@ -62,14 +62,16 @@ namespace
 				sprintf( g_AssertText, "Assert Failed\r\n\r\n"
 					"File:  %s\r\n"
 					"Line:  %u\r\n"
-					"SVN-Rev:  %d\r\n"
+					"Version:  %s\r\n"
+					"Git-SHA:  %s\r\n"
 					"Expression:  %s\r\n" 
 					"Message:  %s\r\n"
 					"\r\n"
 					"----------------------------------------------------------\r\n",
 					g_AssertInfo.szFileName,
 					g_AssertInfo.line,
-					SVN_REV,
+					build_git_version,
+					build_git_sha,
 					g_AssertInfo.szExpression,
 					g_AssertInfo.szMessage ? g_AssertInfo.szMessage : "" );
 

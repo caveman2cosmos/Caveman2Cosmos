@@ -48,8 +48,7 @@ RC="$(PSDK)\bin\rc.exe"
 ## Overwritten by enviroment variable FASTDEP_FULL_PATH
 FD="deps\fastdep\fastdep.exe"
 
-TORTOISE="C:\Program files\TortoiseSVN"
-WCREV="$(TORTOISE)\bin\SubWCRev.exe"
+GITVERSION="..\\Tools\C2C-GitVersion.exe"
 
 ### BLACKLIST ####
 ## Uncomment to block CvTextScreen (accidentally included by Firaxis)
@@ -275,8 +274,9 @@ source_list: Make_Dir
 	@ECHO OBJS= \>> $(FILE_DEPENDS)
 	@FOR %j in ($(SUBDIRS)) DO @(FOR /F "delims=." %i IN ('dir /b $(SOURCE_DIR)\%j\*.cpp') DO @ECHO. $(TEMP_TARGET_FILES)\%j\%i.obj \>> $(FILE_DEPENDS))
 	@ECHO.>> $(FILE_DEPENDS)
-!IFDEF WCREV
-	@$(WCREV) . version.svn version.h
+!IFDEF GITVERSION
+	@ECHO Running GitVersion
+	@$(GITVERSION)
 !ENDIF
 
 fastdep:

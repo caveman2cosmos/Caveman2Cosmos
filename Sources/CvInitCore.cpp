@@ -68,7 +68,6 @@ CvInitCore::CvInitCore()
 	bPathsSet = false;
 // BUG - EXE/DLL Paths - end
 
-	m_svnRev = -1;
 	m_bRecalcRequestProcessed = false;
 	//m_uiAssetCheckSum = -1;
 	m_uiSavegameAssetCheckSum = -1;
@@ -546,7 +545,6 @@ void CvInitCore::resetGame()
 	m_eTurnTimer = (TurnTimerTypes)GC.getDefineINT("STANDARD_TURNTIMER");	// NO_ option?
 	m_eCalendar = (CalendarTypes)GC.getDefineINT("STANDARD_CALENDAR");		// NO_ option?
 
-	m_svnRev = -1;
 	m_uiSavegameAssetCheckSum = -1;
 
 	// Map-specific custom parameters
@@ -591,6 +589,8 @@ void CvInitCore::resetGame()
 
 	// Temp vars
 	m_szTemp.clear();
+
+	m_gitSHA = '\0';
 	
 	OutputDebugString("Reseting Game: End");
 }
@@ -1982,10 +1982,10 @@ void CvInitCore::read(FDataStreamBase* pStream)
 	}
 
 	//	SVN rev of the build that did the save
-	m_svnRev = -1;	//	If save doesn't have the info
+	m_gitSHA = "0";	//	If save doesn't have the info
 	m_bRecalcRequestProcessed = false;
-	WRAPPER_READ(wrapper, "CvInitCore", &m_svnRev);
-	OutputDebugString(CvString::format("SVN Rev of save is %d\n", m_svnRev).c_str());
+	WRAPPER_READ_STRING(wrapper, "CvInitCore", &m_gitSHA);
+	OutputDebugString(CvString::format("Git SHA of save is %d\n", m_gitSHA).c_str());
 
 	//	Asset checksum of the build that did the save
 	m_uiSavegameAssetCheckSum = -1;	//	If save doesn't have the info
@@ -2294,8 +2294,8 @@ void CvInitCore::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_DECORATED(wrapper, "CvInitCore", (int)SAVE_FORMAT_VERSION, "SAVE_FORMAT_VERSION")
 
-	//	record the SVN rev of the build doing the save
-	WRAPPER_WRITE_DECORATED(wrapper, "CvInitCore", (int)SVN_REV, "m_svnRev");
+	//	record the Git SHA of the build doing the save
+	WRAPPER_WRITE_STRING_DECORATED(wrapper, "CvInitCore", build_git_sha, "m_gitSHA");
 	// record the asset checksum of the build doing the save
 	WRAPPER_WRITE_DECORATED(wrapper, "CvInitCore", m_uiAssetCheckSum, "m_uiSavegameAssetCheckSum");
 
@@ -2604,14 +2604,19 @@ void CvInitCore::checkInitialCivics()
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 
-int	CvInitCore::getSvnRev() const
+const char* CvInitCore::getGitVersion()
 {
-	return SVN_REV;
+	return  build_git_version;
 }
 
-int	CvInitCore::getGameSaveSvnRev() const
+const char* CvInitCore::getGitSHA()
 {
-	return m_svnRev;
+	return build_git_sha;
+}
+
+const char* CvInitCore::getGameSaveGitSHA() const
+{
+	return m_gitSHA;
 }
 
 unsigned int CvInitCore::getAssetCheckSum() const
@@ -2638,7 +2643,7 @@ void CvInitCore::checkVersions()
 {
 	if (!m_bRecalcRequestProcessed && !getNewGame())
 	{
-		bool bDLLChanged = m_svnRev != SVN_REV;
+		bool bDLLChanged = strcmp(m_gitSHA, getGitSHA()) != 0;
 		bool bAssetsChanged = m_uiSavegameAssetCheckSum != GC.getInitCore().getAssetCheckSum();
 		if (bDLLChanged || bAssetsChanged)
 		{

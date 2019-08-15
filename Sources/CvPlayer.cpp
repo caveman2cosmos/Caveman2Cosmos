@@ -35802,12 +35802,7 @@ void CvPlayer::recalculateModifiers()
 	((CvPlayerAI*)this)->AI_recalculateUnitCounts();
 	recalculateUnitClassCounts();
 
-	bool bresetInflation = false;
-	if ( GC.getLoadedInitCore().getGameSaveSvnRev() <= 3484 ) //SVN 3484 is the first with the Inflation fix.
-	{
-		bresetInflation = true;
-	}
-	doInflation(bresetInflation); //true was only set during two week, to 'clean' the messed savegames due to inflation calculation bugs.
+	doInflation(false); //true was only set during two week, to 'clean' the messed savegames due to inflation calculation bugs.
 
 	setMaintenanceDirty(true);
     

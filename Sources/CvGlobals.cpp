@@ -473,7 +473,7 @@ void CreateMiniDump(EXCEPTION_POINTERS *pep)
 {
 	_TCHAR filename[100];
 
-	_stprintf(filename, _T("MiniDump_%d.dmp"), SVN_REV);
+	_stprintf(filename, _T("MiniDump_%s.dmp"), build_git_version);
 	/* Open a file to store the minidump. */
 	HANDLE hFile = CreateFile(filename,
 	                          GENERIC_READ | GENERIC_WRITE,
