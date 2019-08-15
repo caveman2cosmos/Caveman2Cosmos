@@ -19525,4 +19525,8 @@
 		<Tag>TXT_KEY_PROMOTION_MAMMOTH_HUNTER2</Tag>
 		<English>Mammoth Hunter II</English>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_BY_THE_HORNS</Tag>
+		<English>By the Horns</English>
+	</TEXT>
 </Civ4GameText>

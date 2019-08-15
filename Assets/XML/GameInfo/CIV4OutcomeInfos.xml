@@ -227,6 +227,10 @@
 					<PromotionType>PROMOTION_SAVAGE_BEAST5</PromotionType>
 					<iExtraChance>-5</iExtraChance>
 				</ExtraChancePromotion>
+				<ExtraChancePromotion>
+					<PromotionType>PROMOTION_BY_THE_HORNS</PromotionType>
+					<iExtraChance>15</iExtraChance>
+				</ExtraChancePromotion>
 			</ExtraChancePromotions>
 		</OutcomeInfo>
 		<OutcomeInfo>

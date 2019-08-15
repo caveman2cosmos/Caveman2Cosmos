@@ -760,6 +760,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	//WorkRateMod
 	m_iExtraHillsWorkPercent = 0;
 	m_iExtraPeaksWorkPercent = 0;
+	m_iExtraWorkPercent = 0;
 	//
 	m_iRevoltProtection = 0;
 	m_iCollateralDamageProtection = 0;
@@ -26452,6 +26453,9 @@ void CvUnit::read(FDataStreamBase* pStream)
 	//ls612: Work Modifiers
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraHillsWorkPercent);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraWorkPercent);
+	// SVN 10973 08-13-2019 Fix for already corrupted worker extra work rate
+	// Because no promotion or unitcombat class defines iWorkRateModifier yet, we can set it to zero for now.
+	m_iExtraWorkPercent = 0;
 	WRAPPER_READ(wrapper, "CvUnit", &m_iRevoltProtection);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCollateralDamageProtection);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iPillageChange);

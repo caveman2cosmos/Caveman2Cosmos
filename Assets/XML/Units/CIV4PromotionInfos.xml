@@ -30553,5 +30553,18 @@
 			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Combat5.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,7,16</Button>
 		</PromotionInfo>
+		<PromotionInfo>
+			<Type>PROMOTION_BY_THE_HORNS</Type>
+			<Description>TXT_KEY_PROMOTION_BY_THE_HORNS</Description>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<TechPrereq>TECH_PERSISTENCE_HUNTING</TechPrereq>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_WEAPON_H2H_FIST</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
+			<Button>,Art/Interface/Buttons/Promotions/ByTheHorns.dds</Button>
+		</PromotionInfo>
 	</PromotionInfos>
 </Civ4PromotionInfos>

@@ -3,8 +3,7 @@
 
 from CvPythonExtensions import *
 
-gc = CyGlobalContext()
-localText = CyTranslator()
+GC = CyGlobalContext()
 
 class NaturalWonders:
 	def __init__(self,):
@@ -17,11 +16,12 @@ class NaturalWonders:
 		self.lLatitude = [("FEATURE_PLATY_AURORA", 70, 90)]	## Min Latitude, Max Latitude
 
 	def placeNaturalWonders(self):
-		for iFeature in xrange(gc.getNumFeatureInfos()):
-			FeatureInfo = gc.getFeatureInfo(iFeature)
+		GAME = GC.getGame()
+		for iFeature in xrange(GC.getNumFeatureInfos()):
+			FeatureInfo = GC.getFeatureInfo(iFeature)
 			sType = FeatureInfo.getType()
 			if sType.find("FEATURE_PLATY_") == -1: continue
-			if CyGame().getSorenRandNum(100, "Random Plot") >= self.iPlaceChance: continue
+			if GAME.getSorenRandNum(100, "Random Plot") >= self.iPlaceChance: continue
 
 			WonderPlot = []
 			for i in xrange(CyMap().numPlots()):
@@ -44,7 +44,7 @@ class NaturalWonders:
 						# if not bAllRevealed and pAdjacentPlot.isRevealed(-1, False):
 							# bUnsuitable = True
 							# break
-						if pAdjacentPlot.getFeatureType() > -1 and gc.getFeatureInfo(pAdjacentPlot.getFeatureType()).getType().find("FEATURE_PLATY_") > -1:
+						if pAdjacentPlot.getFeatureType() > -1 and GC.getFeatureInfo(pAdjacentPlot.getFeatureType()).getType().find("FEATURE_PLATY_") > -1:
 							bUnsuitable = True
 							break
 					## Big Wonders ##
@@ -71,7 +71,7 @@ class NaturalWonders:
 
 			bWonder = False
 			while len(WonderPlot) > 0:
-				iWonderPlot = CyGame().getSorenRandNum(len(WonderPlot), "Random Plot")
+				iWonderPlot = GAME.getSorenRandNum(len(WonderPlot), "Random Plot")
 				pPlot = WonderPlot[iWonderPlot]
 
 				## Big Wonders ##
@@ -88,11 +88,11 @@ class NaturalWonders:
 					if len(AdjacentPlot) == 0:
 						del WonderPlot[iWonderPlot]
 						continue
-					pAdjacentPlot = AdjacentPlot[CyGame().getSorenRandNum(len(AdjacentPlot), "Random Plot")]
+					pAdjacentPlot = AdjacentPlot[GAME.getSorenRandNum(len(AdjacentPlot), "Random Plot")]
 					pAdjacentPlot.setFeatureType(iFeature, 0)
-					# CyGame().setPlotExtraYield(pAdjacentPlot.getX(), pAdjacentPlot.getY(), YieldTypes.YIELD_FOOD, CyGame().getSorenRandNum(self.iMaxYield, "Adds Food"))
-					# CyGame().setPlotExtraYield(pAdjacentPlot.getX(), pAdjacentPlot.getY(), YieldTypes.YIELD_PRODUCTION, CyGame().getSorenRandNum(self.iMaxYield, "Adds Production"))
-					# CyGame().setPlotExtraYield(pAdjacentPlot.getX(), pAdjacentPlot.getY(), YieldTypes.YIELD_COMMERCE, CyGame().getSorenRandNum(self.iMaxYield, "Adds Commerce"))
+					# GAME.setPlotExtraYield(pAdjacentPlot.getX(), pAdjacentPlot.getY(), YieldTypes.YIELD_FOOD, GAME.getSorenRandNum(self.iMaxYield, "Adds Food"))
+					# GAME.setPlotExtraYield(pAdjacentPlot.getX(), pAdjacentPlot.getY(), YieldTypes.YIELD_PRODUCTION, GAME.getSorenRandNum(self.iMaxYield, "Adds Production"))
+					# GAME.setPlotExtraYield(pAdjacentPlot.getX(), pAdjacentPlot.getY(), YieldTypes.YIELD_COMMERCE, GAME.getSorenRandNum(self.iMaxYield, "Adds Commerce"))
 					bWonder = True
 					break
 
@@ -102,48 +102,49 @@ class NaturalWonders:
 
 			if bWonder:
 				pPlot.setFeatureType(iFeature, 0)
-				# CyGame().setPlotExtraYield(pPlot.getX(), pPlot.getY(), YieldTypes.YIELD_FOOD, CyGame().getSorenRandNum(self.iMaxYield, "Adds Food"))
-				# CyGame().setPlotExtraYield(pPlot.getX(), pPlot.getY(), YieldTypes.YIELD_PRODUCTION, CyGame().getSorenRandNum(self.iMaxYield, "Adds Production"))
-				# CyGame().setPlotExtraYield(pPlot.getX(), pPlot.getY(), YieldTypes.YIELD_COMMERCE, CyGame().getSorenRandNum(self.iMaxYield, "Adds Commerce"))
-
-				for iPlayerX in xrange(gc.getMAX_PLAYERS()):
-					pPlayerX = gc.getPlayer(iPlayerX)
-					if pPlot.isRevealed(pPlayerX.getTeam(), False):
-						self.applyRevealBenefit(pPlayerX)
+				# GAME.setPlotExtraYield(pPlot.getX(), pPlot.getY(), YieldTypes.YIELD_FOOD, GAME.getSorenRandNum(self.iMaxYield, "Adds Food"))
+				# GAME.setPlotExtraYield(pPlot.getX(), pPlot.getY(), YieldTypes.YIELD_PRODUCTION, GAME.getSorenRandNum(self.iMaxYield, "Adds Production"))
+				# GAME.setPlotExtraYield(pPlot.getX(), pPlot.getY(), YieldTypes.YIELD_COMMERCE, GAME.getSorenRandNum(self.iMaxYield, "Adds Commerce"))
 
 				sNature = sType[sType.find("_PLATY_") + 7:]
 				sBuildingType = "BUILDING_" + sNature
-				iBuilding = gc.getInfoTypeForString(sBuildingType)
+				iBuilding = GC.getInfoTypeForString(sBuildingType)
 				if iBuilding == -1: continue
 				lNaturalCity = []
 				lNaturalCity = self.addSuitableCity(pPlot, -1, lNaturalCity)
 				if sType in self.lBigWonder:
 					lNaturalCity = self.addSuitableCity(pAdjacentPlot, -1, lNaturalCity)
 				if len(lNaturalCity) > 0:
-					pLuckyCity = lNaturalCity[CyGame().getSorenRandNum(len(lNaturalCity), "New Natural City")]
+					pLuckyCity = lNaturalCity[GAME.getSorenRandNum(len(lNaturalCity), "New Natural City")]
 					pLuckyCity.setNumRealBuilding(iBuilding, 1)
 		return
 
 	# def checkAllRevealTech(self):
 		# iRevealTech = -1
-		# for iTech in xrange(gc.getNumTechInfos()):
-			# TechInfo = gc.getTechInfo(iTech)
+		# for iTech in xrange(GC.getNumTechInfos()):
+			# TechInfo = GC.getTechInfo(iTech)
 			# if TechInfo.isMapVisible():
 				# iRevealTech = iTech
 				# break
 		# if iRevealTech > 0:
-			# for iTeamX in xrange(gc.getMAX_PC_TEAMS()):
-				# pTeamX = gc.getTeam(iTeamX)
+			# for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
+				# pTeamX = GC.getTeam(iTeamX)
 				# if pTeamX.isHasTech(iRevealTech):
 					# return True
 		# return False
 
 	def checkReveal(self, pPlot, iTeam):
+
 		iFeature = pPlot.getFeatureType()
 		if iFeature == -1: return
-		pTeam = gc.getTeam(iTeam)
-		if pTeam.isNPC(): return
-		FeatureInfo = gc.getFeatureInfo(iFeature)
+
+		CyTeam = GC.getTeam(iTeam)
+		if CyTeam.isNPC(): return
+
+		GAME = GC.getGame()
+		if GAME.GetWorldBuilderMode(): return
+
+		FeatureInfo = GC.getFeatureInfo(iFeature)
 		sType = FeatureInfo.getType()
 		if sType.find("FEATURE_PLATY_") == -1: return
 
@@ -159,8 +160,7 @@ class NaturalWonders:
 				if bFound: break
 			if pAdjacentPlot.isRevealed(iTeam, False): return
 
-		bFirst = True
-		for iTeamX in xrange(gc.getMAX_PC_TEAMS()):
+		for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
 			if pPlot.isRevealed(iTeamX, False) and iTeamX != iTeam:
 				bFirst = False
 				break
@@ -168,39 +168,34 @@ class NaturalWonders:
 				if pAdjacentPlot.isRevealed(iTeamX, False) and iTeamX != iTeam:
 					bFirst = False
 					break
+		else: bFirst = True
+		if bFirst:
+			iGold = self.iFirstGold * GC.getGameSpeedInfo(GAME.getGameSpeedType()).getUnitTradePercent() /100
 
-		for iPlayerX in xrange(gc.getMAX_PC_PLAYERS()):
-			pPlayerX = gc.getPlayer(iPlayerX)
-			iTeamX = pPlayerX.getTeam()
-			if iTeamX == iTeam:
-				self.applyRevealBenefit(pPlayerX)
-				if pPlayerX.isHuman() and not CyGame().GetWorldBuilderMode():
-					popupInfo = CyPopupInfo()
-					popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
-					popupInfo.setData1(iFeature)
-					popupInfo.setData3(3)
-					popupInfo.setText(u"showWonderMovie")
-					popupInfo.addPopup(iPlayerX)
-					CyInterface().addMessage(iPlayerX,True,10,localText.getText("TXT_KEY_WONDERDISCOVERED_YOU",(FeatureInfo.getDescription(),)),'',0, FeatureInfo.getButton(),ColorTypes(44),pPlot.getX(),pPlot.getY(), True,True)
+		import CvUtil
+		TRNSLTR = CyTranslator()
+		iPlayerAct = GAME.getActivePlayer()
+
+		for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
+			CyPlayerX = GC.getPlayer(iPlayerX)
+			iTeamX = CyPlayerX.getTeam()
+			if iTeamX != iTeam:
+				if bFirst and iPlayerX == iPlayerAct:
+					if CyTeam.isHasMet(iTeamX):
+						CvUtil.sendMessage(TRNSLTR.getText("TXT_MET_FIRST_WONDER",(GC.getTeam(iDiscoverTeam).getName(), GC.getFeatureInfo(iFeature).getDescription())), iPlayerX, 12, bForce=False)
+					else:
+						CvUtil.sendMessage(TRNSLTR.getText("TXT_NOT_MET_FIRST_WONDER",(GC.getFeatureInfo(iFeature).getDescription(),)), iPlayerX, 12, bForce=False)
+				continue
+			if iPlayerX == iPlayerAct:
+				popupInfo = CyPopupInfo()
+				popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
+				popupInfo.setData1(iFeature)
+				popupInfo.setData3(3)
+				popupInfo.setText("showWonderMovie")
+				popupInfo.addPopup(iPlayerX)
+				CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_WONDERDISCOVERED_YOU",(FeatureInfo.getDescription(),)), iPlayerX, 12, FeatureInfo.getButton(), ColorTypes(44), pPlot.getX(), pPlot.getY(), True, True, bForce=False)
 			if bFirst:
-				self.applyFirstRevealBenefit(iPlayerX, iTeam, iFeature)
-		return
-
-	def applyRevealBenefit(self, pPlayer):
-		pPlayer.changeExtraHappiness(self.iDiscoverHappiness)
-		return
-
-	def applyFirstRevealBenefit(self, iPlayer, iDiscoverTeam, iFeature):
-		pPlayer = gc.getPlayer(iPlayer)
-		iTeam = pPlayer.getTeam()
-		if iTeam == iDiscoverTeam:
-			iGold = self.iFirstGold * gc.getGameSpeedInfo(CyGame().getGameSpeedType()).getUnitTradePercent() /100
-			pPlayer.changeGold(iGold)
-			CyInterface().addMessage(iPlayer,true,10,localText.getText("TXT_FIRST_FOUND_WONDER",(iGold,)),'',0, '', ColorTypes(44), -1, -1, true,true)
-			if CyGame().GetWorldBuilderMode(): return
-		if gc.getTeam(iTeam).isHasMet(iDiscoverTeam):
-			CyInterface().addMessage(iPlayer,True,10,localText.getText("TXT_MET_FIRST_WONDER",(gc.getTeam(iDiscoverTeam).getName(), gc.getFeatureInfo(iFeature).getDescription())),'',0, '', -1, -1, -1, True,True)
-		else:
-			CyInterface().addMessage(iPlayer,True,10,localText.getText("TXT_NOT_MET_FIRST_WONDER",(gc.getFeatureInfo(iFeature).getDescription(),)),'',0, '', -1, -1, -1, True,True)
-		return
+				CyPlayerX.changeGold(iGold)
+				if iPlayerX == iPlayerAct:
+					CvUtil.sendMessage(TRNSLTR.getText("TXT_FIRST_FOUND_WONDER",(iGold,)), iPlayerX, 12, None, ColorTypes(44), bForce=False)
 

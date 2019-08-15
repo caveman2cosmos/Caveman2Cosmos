@@ -444,7 +444,12 @@ m_cszModDir("NONE")
 /************************************************************************************************/
 ,m_bIsInPedia(false)
 ,m_iLastTypeID(-1)
-, m_iActiveLandscapeID(0)
+,m_iActiveLandscapeID(0),
+// uninitialized variables bugfix
+m_iNumPlayableCivilizationInfos(0),
+m_iNumAIPlayableCivilizationInfos(0),
+m_iTotalNumModules(0), // Modular loading control
+m_iNumEntityEventTypes(0)
 {
 }
 

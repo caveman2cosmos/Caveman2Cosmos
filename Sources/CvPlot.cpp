@@ -1298,15 +1298,14 @@ bool CvPlot::updateSymbolsInternal()
 
 	deleteAllSymbols();
 
-	if (isRevealed(GC.getGameINLINE().getActiveTeam(), true) &&
-		  (isShowCitySymbols() ||
-		   (gDLL->getInterfaceIFace()->isShowYields() && !(gDLL->getInterfaceIFace()->isCityScreenUp()))))
+	if (isRevealed(GC.getGameINLINE().getActiveTeam(), true) && (isShowCitySymbols() || (gDLL->getInterfaceIFace()->isShowYields() && !(gDLL->getInterfaceIFace()->isCityScreenUp()))))
 	{
 		int yieldAmounts[NUM_YIELD_TYPES];
 		int maxYield = 0;
+		int iYield = 0;
 		for (int iYieldType = 0; iYieldType < NUM_YIELD_TYPES; iYieldType++)
 		{
-			int iYield = calculateYield(((YieldTypes)iYieldType), true);
+			iYield = calculateYield(((YieldTypes)iYieldType), true);
 			yieldAmounts[iYieldType] = iYield;
 			if(iYield>maxYield)
 			{
@@ -1314,22 +1313,44 @@ bool CvPlot::updateSymbolsInternal()
 			}
 		}
 
-		if(maxYield>0)
+		if (maxYield)
 		{
 			int maxYieldStack = GC.getDefineINT("MAX_YIELD_STACK");
-			int layers = maxYield /maxYieldStack + 1;
-			
-			CvSymbol *pSymbol= NULL;
-			for(int i=0;i<layers;i++)
+
+			CvSymbol *pSymbol5x = addSymbol();
+			CvSymbol *pSymbol= addSymbol();
+
+
+			for (int iYieldType = 0; iYieldType < NUM_YIELD_TYPES; iYieldType++)
 			{
-				pSymbol = addSymbol();
-				for (int iYieldType = 0; iYieldType < NUM_YIELD_TYPES; iYieldType++)
+				iYield = yieldAmounts[iYieldType];
+
+				if (iYield)
 				{
-					int iYield = yieldAmounts[iYieldType] - (maxYieldStack * i);
-					LIMIT_RANGE(0,iYield, maxYieldStack);
-					if(yieldAmounts[iYieldType])
+					if (iYield > 29)
+			{
+						gDLL->getSymbolIFace()->setTypeYield(pSymbol5x, iYieldType, maxYieldStack-1);
+						gDLL->getSymbolIFace()->setTypeYield(pSymbol, iYieldType, 4);
+					}
+					else if (iYield > 4)
+				{
+						int iYieldBig = iYield / 5;
+						iYield -= 5 * iYieldBig;
+						gDLL->getSymbolIFace()->setTypeYield(pSymbol5x, iYieldType, iYieldBig + 4);
+
+						if (iYield)
 					{
 						gDLL->getSymbolIFace()->setTypeYield(pSymbol,iYieldType,iYield);
+					}
+						else
+						{
+							gDLL->getSymbolIFace()->setTypeYield(pSymbol, iYieldType, maxYieldStack);
+				}
+			}
+					else
+					{
+						gDLL->getSymbolIFace()->setTypeYield(pSymbol5x, iYieldType, maxYieldStack);
+						gDLL->getSymbolIFace()->setTypeYield(pSymbol, iYieldType, iYield);
 					}
 				}
 			}
@@ -1343,10 +1364,7 @@ bool CvPlot::updateSymbolsInternal()
 
 		return true;
 	}
-	else
-	{
-		return false;
-	}
+	else { return false; }
 }
 
 
@@ -13934,7 +13952,8 @@ void CvPlot::read(FDataStreamBase* pStream)
 
 				if ( iRemappedBuild != -1 )
 				{
-					m_paiBuildProgress[iRemappedBuild] = iTempArray[i];
+					// SVN 10973 08-13-2019 Fix for already corrupted plot build-progress counter
+					m_paiBuildProgress[iRemappedBuild] = std::max((short)0, iTempArray[i]);
 				}
 			}
 
@@ -13953,6 +13972,11 @@ void CvPlot::read(FDataStreamBase* pStream)
 		}
 
 		WRAPPER_READ_CLASS_ARRAY_ALLOW_MISSING(wrapper, "CvPlot", REMAPPED_CLASS_TYPE_BUILDS, GC.getNumBuildInfos(), m_paiBuildProgress);
+		// SVN 10973 08-13-2019 Fix for already corrupted plot build-progress counter
+		for (int i = 0; i < GC.getNumBuildInfos(); i++)
+		{
+			m_paiBuildProgress[i] = std::max(0, m_paiBuildProgress[i]);
+		}
 	}
 
 	//	Both to cope with having allocated the array speculatively in the intermediary format
