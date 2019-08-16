@@ -276,10 +276,8 @@ source_list: gitversion Make_Dir
 	@ECHO.>> $(FILE_DEPENDS)
 
 gitversion:
-	!IFDEF GITVERSION
-		@ECHO Running GitVersion
-		@$(GITVERSION)
-	!ENDIF
+	@ECHO Running GitVersion
+	@$(GITVERSION)
 
 fastdep:
 	@ECHO Running fastdep
