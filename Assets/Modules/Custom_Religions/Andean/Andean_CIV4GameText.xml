@@ -227,4 +227,19 @@ meaning 'Golden Courtyard'), originally named Inti Kancha (' Temple of the Sun')
 		<Tag>TXT_KEY_BONUS_MACHU_PICCHU_PLANS_PEDIA</Tag>
 		<English>Machu Picchu Plans allow workers to build the Machu Picchu improvement. Only the player with the great wonder [LINK=BUILDING_MACHU_PICCHU]Machu Picchu[\LINK] get this bonus.</English>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_RELIGION_ANDEANISM</Tag>
+		<English>Religion(Andeanism)</English>
+		<French>
+			<Text>Religion(Andeanisme)</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Andenista:Unidades andenistas</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Religia (Andeanizm)</Polish>
+	</TEXT>
 </Civ4GameText>

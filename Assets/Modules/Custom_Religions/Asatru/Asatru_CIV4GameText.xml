@@ -243,4 +243,19 @@
 		<French>"Aucun Homme de vivra tant que le cauchemar des Nornes est présent."[NEWLINE][NEWLINE]-Poème Anglo Saxon (trouvé sur  cauldronborn.blogspot.com.au)</French>
 		<Spanish>"Ningún hombre sobrevive a la condena de los nórdicos al amanecer."[NEWLINE][NEWLINE]-Poema anglosajón (encontrado en cauldronborn.blogspot.com.au)</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_RELIGION_ASATRU</Tag>
+		<English>Religion(Asatru)</English>
+		<French>
+			<Text>Religion(Asatru)</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Odinista:Unidades odinistas</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Religia (Asatru)</Polish>
+	</TEXT>
 </Civ4GameText>

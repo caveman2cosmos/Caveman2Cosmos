@@ -1896,7 +1896,7 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 		{
 // Anq: try to load TYPE, DEPEDENCY, FORCEOVERWRITE, REPLACEMENT info before actually calling read()
 // Firstly, we read the type name, look it up in the global map whether one of the same type is loaded.
-			CvString szTypeName, szTypeDepend, szTypeReplace;
+			CvString szTypeName, szTypeReplace;
 			bool bHasType = true;
 			if (!GetOptionalChildXmlValByName(szTypeName, L"Type") || szTypeName.empty())
 			{
@@ -1912,48 +1912,23 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 			if (!bHasType)
 			{	// (1) Let's deal with type-ignorant classes first, they are easier
 				T* pClassInfo = new T();
-				if (pClassInfo->read(this)) {
+				if (!pClassInfo->read(this))
+					SAFE_DELETE(pClassInfo)
+				else
 					aInfos.push_back(pClassInfo);
-				}
-				else	SAFE_DELETE(pClassInfo)
 			}
 			else
 			{	// (2) Check dependencies. If not satisfied, skip altogether
-				bool bAndDependencyNotFound = false, bOrDependencyNotFound = false;
-				if (TryMoveToXmlFirstChild(L"AndDependencyTypes")) {
-					if (GetChildXmlVal(szTypeDepend)) {
-						do { // If any of the AND depends is not loaded, set bNotFound
-							if (GC.getInfoTypeForString(szTypeDepend, true) == -1) {
-								bAndDependencyNotFound = true; break;
-							}
-						} while (GetNextXmlVal(szTypeDepend));
-						MoveToXmlParent();
-					}
-					MoveToXmlParent();
-				}
-				if (TryMoveToXmlFirstChild(L"OrDependencyTypes")) {
-					if (GetChildXmlVal(szTypeDepend)) {
-						bOrDependencyNotFound = true;
-						do { // If any of the OR depends is loaded, unset bNotFound
-							if (GC.getInfoTypeForString(szTypeDepend, true) != -1) {
-								bOrDependencyNotFound = false; break;
-							}
-						} while (GetNextXmlVal(szTypeDepend));
-						MoveToXmlParent();
-					}
-					MoveToXmlParent();
-				}
-				if (bAndDependencyNotFound || bOrDependencyNotFound) {
-					continue; // skip the current object altogether
-				}
+				if (!CheckDependency())
+					continue;
 				// (3) Read off if a modder wants his work to completely replace the core definition
 				bool bForceOverwrite = false;
 				GetOptionalChildXmlValByName(&bForceOverwrite, L"bForceOverwrite");
 				// (4) Read off the Replacement condition
-				int iReplacementID = -1;
+				uint uiReplacementID = 0;
 				BoolExpr* pReplacementCondition = NULL;
 				if (GetOptionalChildXmlValByName(szTypeReplace, L"ReplacementID") && szTypeReplace.size()) {
-					iReplacementID = GC.getOrCreateInfoTypeForString(szTypeReplace);
+					uiReplacementID = CvInfoReplacements<T>::getReplacementIDForString(szTypeReplace);
 					if (TryMoveToXmlFirstChild(L"ReplacementCondition")) {
 						// Replacement condition must be defined by the base object that
 						// names the particular Replacement ID; otherwise it won't work!
@@ -1964,118 +1939,49 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 						MoveToXmlParent();
 					}
 				}
-				// (5) Check if an object of the name exists already
-				int iExistPosition = GC.getInfoTypeForString(szTypeName, true);
-				uint iAppendPosition = aInfos.size();
-				if (iExistPosition == -1)
-				{	// (A) Does not exist
-					if (iReplacementID == -1)
-					{	// (A1) No replacement ID defined
-						T* pClassInfo = new T();
-						if (pClassInfo->read(this))
+				// (5) Now we can parse the object
+				T* pClassInfo = new T();
+				if (!pClassInfo->read(this))
+					SAFE_DELETE(pClassInfo)
+				else
+				{	// See if the type name is associated with any loaded object
+					if (GC.getInfoTypeForString(szTypeName, true) == -1)
+					{	// (5-1) Does not exist
+						uint uiAppendPosition = aInfos.size();
+						if (szTypeReplace.empty())
 							aInfos.push_back(pClassInfo);
-						else	SAFE_DELETE(pClassInfo)
-					}
-					else
-					{	// (A2) Has replacement ID
-						T* pClassInfo = new T();
-						if (pClassInfo->read(this))
+						else if (pReplacementCondition)	// has szTypeReplace
 						{	// AIAndy: If the class is a replacement, add it to the replacements
 							// but also add a dummy to the normal array to reserve an ID
 							aInfos.push_back(new T());
-							CvInfoReplacement<T>* pExisting = pReplacements->getReplacement(iAppendPosition, iReplacementID);
-							if (pExisting)
-							{
-								pClassInfo->copyNonDefaults(pExisting->getInfo(), this);
-								SAFE_DELETE(pExisting);
-								pExisting->setInfo(pClassInfo);
-							}
-							else if (pReplacementCondition)
-								pReplacements->addReplacement(iAppendPosition, iReplacementID, pReplacementCondition, pClassInfo);
-							else
-							{
-								CvString errorMsg = CvString::format("The first user of this Replacement ID %s Must define the replacement condition", szTypeReplace);
-								FAssertMsg(pReplacementCondition != NULL, errorMsg)
-							}
+							pReplacements->addReplacement(uiAppendPosition, uiReplacementID, pReplacementCondition, pClassInfo);
 						}
-						else	SAFE_DELETE(pClassInfo)
-//	Reserved for future	// Check if another object is on the replacement list already
-//						CvInfoReplacement<T>* pExisting = pReplacements->getReplacement(iAppendPosition, iReplacementID);
-//						if (pExisting)
-//						{
-//							pExisting->getInfo()->read(this);
-//							// Because we are not creating a new replacement object anymore,
-//							// we must release the replacement condition object
-//							SAFE_DELETE(pReplacementCondition)
-//						}
-//						else
-//						{	// Create a new replacement object and put it onto the list
-//							T* pClassInfo = new T();
-//							if (pClassInfo->read(this))
-//								pReplacements->addReplacement(iAppendPosition, iReplacementID, pReplacementCondition, pClassInfo);
-//							else	SAFE_DELETE(pClassInfo)
-//	End reserved		}
+						else
+							FAssertMsg(pReplacementCondition != NULL, CvString::format("No replacement condition for this Replacement ID %s.\r\n\tMake sure it's defined for the first replacement object in the load order.", szTypeReplace.c_str()));
+						GC.setInfoTypeFromString(szTypeName, uiAppendPosition);
 					}
-					GC.setInfoTypeFromString(szTypeName, iAppendPosition);
-				}
-				else
-				{	// (B) One object of the name exists, at iExistPosition
-					if (iReplacementID == -1)
-					{	// (B1) No replacement ID defined
-						T* pClassInfo = new T();
-						if (pClassInfo->read(this))
-						{
-							if (!bForceOverwrite)
-							{
-								pClassInfo->copyNonDefaults(aInfos[iExistPosition], this);
-							}
-							SAFE_DELETE(aInfos[iExistPosition])
-							aInfos[iExistPosition] = pClassInfo;
-						}
-//	Reserved for future	if (bForceOverwrite)
-//						{	// If ForceOverwrite is used, discard the old object
-//							SAFE_DELETE(aInfos[iExistPosition])
-//							aInfos[iExistPosition] = new T();
-//						}
-//	End reserved		aInfos[iExistPosition]->read(this);
-					}	// There is no sense to define both replacement condition and force overwrite
 					else
-					{	// (B2) Has replacement ID
-						T* pClassInfo = new T();
-						if (pClassInfo->read(this))
+					{	// (5-2) Found at uiExistPosition
+						uint uiExistPosition = GC.getInfoTypeForString(szTypeName);
+						if (szTypeReplace.empty())
 						{
-							CvInfoReplacement<T>* pExisting = pReplacements->getReplacement(iExistPosition, iReplacementID);
-							if (pExisting)
-							{
-								pClassInfo->copyNonDefaults(pExisting->getInfo(), this);
+							if (!bForceOverwrite)	pClassInfo->copyNonDefaults(aInfos[uiExistPosition], this);
+							SAFE_DELETE(aInfos[uiExistPosition])
+							aInfos[uiExistPosition] = pClassInfo;
+						}
+						else
+						{
+							CvInfoReplacement<T>* pExisting = pReplacements->getReplacement(uiExistPosition, uiReplacementID);
+							if (pExisting) {
 								SAFE_DELETE(pReplacementCondition)
+								pClassInfo->copyNonDefaults(pExisting->getInfo(), this);
 								pExisting->setInfo(pClassInfo);
 							}
 							else if (pReplacementCondition)
-								pReplacements->addReplacement(iExistPosition, iReplacementID, pReplacementCondition, pClassInfo);
+								pReplacements->addReplacement(uiExistPosition, uiReplacementID, pReplacementCondition, pClassInfo);
 							else
-							{
-								CvString errorMsg = CvString::format("The first user of this Replacement ID %s Must define the replacement condition", szTypeReplace);
-								FAssertMsg(pReplacementCondition != NULL, errorMsg)
-							}
+								FAssertMsg(pReplacementCondition != NULL, CvString::format("No replacement condition for this Replacement ID %s.\r\n\tMake sure it's defined for the first replacement object in the load order.", szTypeReplace.c_str()));
 						}
-						else	SAFE_DELETE(pClassInfo)
-//	Reserved for future	// Check if another object is on the replacement list already
-//						CvInfoReplacement<T>* pExisting = pReplacements->getReplacement(iExistPosition, iReplacementID);
-//						if (pExisting)
-//						{
-//							pExisting->getInfo()->read(this);
-//							// Because we are not creating a new replacement object anymore,
-//							// we must release the replacement condition object
-//							SAFE_DELETE(pReplacementCondition)
-//						}
-//						else
-//						{	// Create a new replacement object and put it onto the list
-//							T* pClassInfo = new T();
-//							if (pClassInfo->read(this))
-//								pReplacements->addReplacement(iExistPosition, iReplacementID, pReplacementCondition, pClassInfo);
-//							else	SAFE_DELETE(pClassInfo)
-//	End reserved		}
 					}
 				}
 			}
@@ -2499,8 +2405,7 @@ void CvXMLLoadUtility::SetGlobalClassInfoTwoPassReplacement(std::vector<T*>& aIn
 		// loop through each tag
 		do
 		{
-			// Anq: the same code apart from asserting Type definition and calling readPass2()
-			CvString szTypeName, szTypeDepend, szTypeReplace;
+			CvString szTypeName, szTypeReplace;
 			if (!GetOptionalChildXmlValByName(szTypeName, L"Type") || szTypeName.empty())
 			{
 				char* tmp = xercesc::XMLString::transcode(GetCurrentXMLElement()->getNodeName());
@@ -2512,44 +2417,21 @@ void CvXMLLoadUtility::SetGlobalClassInfoTwoPassReplacement(std::vector<T*>& aIn
 				continue;
 			}
 			// (1) Check if an object of the name exists already. If not, skip it.
-			int iExistPosition = GC.getInfoTypeForString(szTypeName, true);
-			if (iExistPosition == -1)	continue;
+			if (GC.getInfoTypeForString(szTypeName, true) == -1) {
+				FAssertMsg(false, CvString::format("Item %s not found to do a ReadPass2", szTypeName.c_str()))
+				continue;
+			}
 			// (2) Check dependencies. If not satisfied, skip altogether
-			bool bAndDependencyNotFound = false, bOrDependencyNotFound = false;
-			if (TryMoveToXmlFirstChild(L"AndDependencyTypes")) {
-				if (GetChildXmlVal(szTypeDepend)) {
-					do { // If any of the AND depends is not loaded, set bNotFound
-						if (GC.getInfoTypeForString(szTypeDepend, true) == -1) {
-							bAndDependencyNotFound = true; break;
-						}
-					} while (GetNextXmlVal(szTypeDepend));
-					MoveToXmlParent();
-				}
-				MoveToXmlParent();
-			}
-			if (TryMoveToXmlFirstChild(L"OrDependencyTypes")) {
-				if (GetChildXmlVal(szTypeDepend)) {
-					bOrDependencyNotFound = true;
-					do { // If any of the OR depends is loaded, unset bNotFound
-						if (GC.getInfoTypeForString(szTypeDepend, true) != -1) {
-							bOrDependencyNotFound = false; break;
-						}
-					} while (GetNextXmlVal(szTypeDepend));
-					MoveToXmlParent();
-				}
-				MoveToXmlParent();
-			}
-			if (bAndDependencyNotFound || bOrDependencyNotFound) {
-				continue; // skip the current object altogether
-			}
+			if (!CheckDependency())
+				continue;
 			// (3) Read off if a modder wants his work to completely replace the core definition
 			bool bForceOverwrite = false;
 			GetOptionalChildXmlValByName(&bForceOverwrite, L"bForceOverwrite");
 			// (4) Read off the Replacement condition
-			int iReplacementID = -1;
+			uint uiReplacementID = 0;
 			BoolExpr* pReplacementCondition = NULL;
 			if (GetOptionalChildXmlValByName(szTypeReplace, L"ReplacementID") && szTypeReplace.size()) {
-				iReplacementID = GC.getOrCreateInfoTypeForString(szTypeReplace);
+				uiReplacementID = CvInfoReplacements<T>::getReplacementIDForString(szTypeReplace);
 				if (TryMoveToXmlFirstChild(L"ReplacementCondition")) {
 					if (TryMoveToXmlFirstChild()) {
 						pReplacementCondition = BoolExpr::read(this);
@@ -2561,12 +2443,13 @@ void CvXMLLoadUtility::SetGlobalClassInfoTwoPassReplacement(std::vector<T*>& aIn
 			T* pClassInfo = new T();
 			if (pClassInfo->readPass2(this))
 			{
-				if (iReplacementID == -1)
-					aInfos[iExistPosition]->copyNonDefaultsReadPass2(pClassInfo, this, bForceOverwrite);
+				uint uiExistPosition = GC.getInfoTypeForString(szTypeName);
+				if (szTypeReplace.empty())
+					aInfos[uiExistPosition]->copyNonDefaultsReadPass2(pClassInfo, this, bForceOverwrite);
 				else
 				{
-					CvInfoReplacement<T>* pExisting = pReplacements->getReplacement(iExistPosition, iReplacementID);
-					FAssertMsg(pExisting, "Must have an existing replacement object on the list!")
+					CvInfoReplacement<T>* pExisting = pReplacements->getReplacement(uiExistPosition, uiReplacementID);
+					FAssertMsg(pExisting != NULL, CvString::format("Must have an existing replacement object of ID %s on the list!", szTypeReplace.c_str()))
 					pExisting->getInfo()->copyNonDefaultsReadPass2(pClassInfo, this, bForceOverwrite);
 				}
 			}

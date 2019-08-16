@@ -354,18 +354,6 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ANDEAN_MONASTERY</BuildingType>
-					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
-				</BuildingHappinessModifierType>
-				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ASATRU_MONASTERY</BuildingType>
-					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
-				</BuildingHappinessModifierType>
-				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_BAHAI_MONASTERY</BuildingType>
-					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
-				</BuildingHappinessModifierType>
-				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
@@ -2179,18 +2167,6 @@
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ANDEAN_MONASTERY</BuildingType>
-					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
-				</BuildingHappinessModifierType>
-				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ASATRU_MONASTERY</BuildingType>
-					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
-				</BuildingHappinessModifierType>
-				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_BAHAI_MONASTERY</BuildingType>
-					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
-				</BuildingHappinessModifierType>
-				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
@@ -3229,18 +3205,6 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_MESOAMERICAN_MONASTERY</BuildingType>
-					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
-				</BuildingHappinessModifierType>
-				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ANDEAN_MONASTERY</BuildingType>
-					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
-				</BuildingHappinessModifierType>
-				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ASATRU_MONASTERY</BuildingType>
-					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
-				</BuildingHappinessModifierType>
-				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_BAHAI_MONASTERY</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -5071,18 +5035,6 @@
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
 					<BuildingType>BUILDING_MESOAMERICAN_MONASTERY</BuildingType>
-					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
-				</BuildingHappinessModifierType>
-				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ANDEAN_MONASTERY</BuildingType>
-					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
-				</BuildingHappinessModifierType>
-				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ASATRU_MONASTERY</BuildingType>
-					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
-				</BuildingHappinessModifierType>
-				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_BAHAI_MONASTERY</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>

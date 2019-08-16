@@ -4300,7 +4300,12 @@
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
-			<BuildingHappinessChanges/>
+			<BuildingHappinessChanges>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_SLAVE_MARKET</BuildingType>
+					<iHappinessChange>-2</iHappinessChange>
+				</BuildingHappinessChange>
+			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
@@ -4866,7 +4871,7 @@
 				<SpecialistCommercePercentChange>
 					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
 					<SpecialistCommercePercents>
-						<iCommercePercent>25</iCommercePercent>
+						<iCommercePercent>100</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
@@ -5182,6 +5187,12 @@
 			<iNationalCaptureProbabilityModifier>10</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>-10</iNationalCaptureResistanceModifier>
 			<iPopulationgrowthratepercentage>33</iPopulationgrowthratepercentage>
+			<BuildingHappinessChanges>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_SLAVERY</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
+			</BuildingHappinessChanges>
 			<Button>art/Interface/buttons/civics/sparth/society_primitive.dds</Button>
 		</CivicInfo>
 		<CivicInfo>
@@ -5262,7 +5273,12 @@
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
-			<BuildingHappinessChanges/>
+			<BuildingHappinessChanges>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_SLAVERY</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
+			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges>
@@ -5614,11 +5630,10 @@
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
-				<!-- Changes to this building are done in the Slavery module otherwise you can't turn it off
-                                  BuildingHappinessChange>
+				<BuildingHappinessChange>
 					<BuildingType>BUILDINGCLASS_SLAVE_MARKET</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
-				</BuildingHappinessChange-->
+				</BuildingHappinessChange>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDINGCLASS_BROTHEL</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
@@ -6225,10 +6240,10 @@
 				</SpecialistValid>
 			</SpecialistValids>
 			<BuildingHappinessChanges>
-				<!-- Changes to this building are done in the Slavery module otherwise you can't turn it off
+				<BuildingHappinessChange>
 					<BuildingType>BUILDINGCLASS_SLAVE_MARKET</BuildingType>
 					<iHappinessChange>-5</iHappinessChange>
-				</BuildingHappinessChange-->
+				</BuildingHappinessChange>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDINGCLASS_LABOR_UNION</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
@@ -6572,7 +6587,12 @@
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
-			<BuildingHappinessChanges/>
+			<BuildingHappinessChanges>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_SLAVERY</BuildingType>
+					<iHappinessChange>-5</iHappinessChange>
+				</BuildingHappinessChange>
+			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
 					<BuildingType>BUILDINGCLASS_FOUNDRY</BuildingType>
@@ -21751,7 +21771,12 @@
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
-			<BuildingHappinessChanges/>
+			<BuildingHappinessChanges>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_SLAVERY</BuildingType>
+					<iHappinessChange>2</iHappinessChange>
+				</BuildingHappinessChange>
+			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
@@ -21863,6 +21888,10 @@
 					<BuildingType>BUILDINGCLASS_LABOR_UNION</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_SLAVERY</BuildingType>
+					<iHappinessChange>-3</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
@@ -21969,7 +21998,12 @@
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
-			<BuildingHappinessChanges/>
+			<BuildingHappinessChanges>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_SLAVERY</BuildingType>
+					<iHappinessChange>-3</iHappinessChange>
+				</BuildingHappinessChange>
+			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
@@ -22079,7 +22113,12 @@
 					<iFreeSpecialistCount>3</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<BuildingHappinessChanges/>
+			<BuildingHappinessChanges>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_SLAVERY</BuildingType>
+					<iHappinessChange>-5</iHappinessChange>
+				</BuildingHappinessChange>
+			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>

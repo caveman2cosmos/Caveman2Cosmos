@@ -15110,9 +15110,9 @@ int CvHandicapInfo::isAIFreeTechs(int i) const
 	return m_pbAIFreeTechs ? m_pbAIFreeTechs[i] : false;
 }
 
-int CvHandicapInfo::getPercent(int iID) const
+int CvHandicapInfo::getPercent(uint uiID) const
 {
-	return m_Percent.getValue(iID);
+	return m_Percent.getValue(uiID);
 }
 
 /************************************************************************************************/
@@ -15760,9 +15760,9 @@ int CvGameSpeedInfo::getTraitGainPercent() const
 }
 //TB GameSpeed end
 
-int CvGameSpeedInfo::getPercent(int iID) const
+int CvGameSpeedInfo::getPercent(uint uiID) const
 {
-	return m_Percent.getValue(iID);
+	return m_Percent.getValue(uiID);
 }
 
 bool CvGameSpeedInfo::read(CvXMLLoadUtility* pXML)
@@ -22853,9 +22853,9 @@ int CvWorldInfo::getCommandersLevelThresholdsPercent() const
 /* Afforess						 END															*/
 /************************************************************************************************/
 
-int CvWorldInfo::getPercent(int iID) const
+int CvWorldInfo::getPercent(uint uiID) const
 {
-	return m_Percent.getValue(iID);
+	return m_Percent.getValue(uiID);
 }
 
 bool CvWorldInfo::read(CvXMLLoadUtility* pXML)
@@ -29322,22 +29322,22 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 
 	if(pXML->TryMoveToXmlFirstChild(L"TechResearchModifiers"))
 	{
-		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"TechResearchModifier" );
-		m_aTechResearchModifiers.resize(iNum);
-		if(pXML->TryMoveToXmlFirstChild())
+		uint iNum = pXML->GetXmlChildrenNumber(L"TechResearchModifier");
+		if(iNum && pXML->TryMoveToXmlFirstChild())
 		{
-
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"TechResearchModifier"))
+			m_aTechResearchModifiers.reserve(iNum);
+			do
 			{
-				do
-				{
-					pXML->GetChildXmlValByName(szTextVal, L"TechType");
-					m_aTechResearchModifiers[i].eTech = (TechTypes)pXML->GetInfoClass(szTextVal);
-					pXML->GetChildXmlValByName(&(m_aTechResearchModifiers[i].iModifier), L"iModifier");
-					i++;
-				} while(pXML->TryMoveToXmlNextSibling(L"TechResearchModifier"));
-			}
+				if (!pXML->CheckDependency())
+					continue;
+				TechModifier kMod;
+				pXML->GetChildXmlValByName(szTextVal, L"TechType");
+				kMod.eTech = (TechTypes)pXML->GetInfoClass(szTextVal);
+				pXML->GetChildXmlValByName(&kMod.iModifier, L"iModifier");
+				if (kMod.eTech == NO_TECH || !kMod.iModifier)
+					continue;
+				m_aTechResearchModifiers.push_back(kMod);
+			} while(pXML->TryMoveToXmlNextSibling(L"TechResearchModifier"));
 			pXML->MoveToXmlParent();
 		}
 		pXML->MoveToXmlParent();
@@ -29393,23 +29393,22 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 
 	if(pXML->TryMoveToXmlFirstChild(L"BuildingHappinessModifierTypes"))
 	{
-		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"BuildingHappinessModifierType" );
-		m_aBuildingHappinessModifiers.resize(iNum); // Important to keep the delayed resolution pointers correct
-
-		if(pXML->TryMoveToXmlFirstChild())
+		uint iNum = pXML->GetXmlChildrenNumber(L"BuildingHappinessModifierType");
+		if(iNum && pXML->TryMoveToXmlFirstChild())
 		{
-
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"BuildingHappinessModifierType"))
+			m_aBuildingHappinessModifiers.reserve(iNum);
+			do
 			{
-				do
-				{
-					pXML->GetChildXmlValByName(szTextVal, L"BuildingType");
-					pXML->GetChildXmlValByName(&(m_aBuildingHappinessModifiers[i].iModifier), L"iBuildingHappinessModifier");
-					GC.addDelayedResolution((int*)&(m_aBuildingHappinessModifiers[i].eBuilding), szTextVal);
-					i++;
-				} while(pXML->TryMoveToXmlNextSibling(L"BuildingHappinessModifierType"));
-			}
+				if (!pXML->CheckDependency())
+					continue;
+				BuildingModifier kMod;
+				pXML->GetChildXmlValByName(szTextVal, L"BuildingType");
+				pXML->GetChildXmlValByName(&kMod.iModifier, L"iBuildingHappinessModifier");
+				if (szTextVal.empty() || !kMod.iModifier)
+					continue;
+				m_aBuildingHappinessModifiers.push_back(kMod);
+				GC.addDelayedResolution(&m_aBuildingHappinessModifiers.back(), szTextVal);
+			} while(pXML->TryMoveToXmlNextSibling(L"BuildingHappinessModifierType"));
 			pXML->MoveToXmlParent();
 		}
 		pXML->MoveToXmlParent();
@@ -30412,16 +30411,7 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXM
 		}
 	}
 
-	if (getNumBuildingHappinessModifiers() == 0)
-	{
-		int iNum = pClassInfo->getNumBuildingHappinessModifiers();
-		m_aBuildingHappinessModifiers.resize(iNum);
-		for (int i=0; i<iNum; i++)
-		{
-			m_aBuildingHappinessModifiers[i].iModifier = pClassInfo->m_aBuildingHappinessModifiers[i].iModifier;
-			GC.copyNonDefaultDelayedResolution((int*)&(m_aBuildingHappinessModifiers[i].eBuilding), (int*)&(pClassInfo->m_aBuildingHappinessModifiers[i].eBuilding));
-		}
-	}
+	GC.copyNonDefaultDelayedResolutionVector(m_aBuildingHappinessModifiers, pClassInfo->m_aBuildingHappinessModifiers);
 
 	if (getNumUnitProductionModifiers() == 0)
 	{

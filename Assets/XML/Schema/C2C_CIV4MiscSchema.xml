@@ -114,7 +114,6 @@
 	<ElementType name="BonusType" content="textOnly"/>
 	<ElementType name="Type" content="textOnly"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-	<ElementType name="bTypeDependency" content="textOnly" dt:type="boolean"/>
 	<ElementType name="DependencyType" content="textOnly"/>
 	<ElementType name="AndDependencyTypes" content="eltOnly">
 		<element type="DependencyType" minOccurs="1"/>
@@ -155,7 +154,6 @@
 	<ElementType name="RouteInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -189,7 +187,6 @@
 	<ElementType name="RiverInfo" content="eltOnly">
 		<element type="Type" maxOccurs="*"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -309,7 +306,6 @@
 	<ElementType name="EffectInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -328,7 +324,6 @@
 	<ElementType name="AttachableInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -342,7 +337,6 @@
 	<ElementType name="QuestInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -390,7 +384,6 @@
 	<ElementType name="ScriptGameInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -416,7 +409,6 @@
 	<ElementType name="ScriptCameraInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -441,7 +433,6 @@
 	<ElementType name="ScriptEngineInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -456,7 +447,6 @@
 	<ElementType name="ScriptUnitInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -476,7 +466,6 @@
 	<ElementType name="ScriptSoundInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -494,7 +483,6 @@
 	<ElementType name="PythonCallInfo" content="eltOnly">
 		<element type="Type" minOccurs="0"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->

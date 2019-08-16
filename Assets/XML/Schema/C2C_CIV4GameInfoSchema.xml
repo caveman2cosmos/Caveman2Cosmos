@@ -265,7 +265,6 @@
 	<ElementType name="ClimateInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -289,7 +288,6 @@
 	<ElementType name="SeaLevelInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -302,7 +300,6 @@
 	<ElementType name="WorldInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -359,7 +356,6 @@
 	<ElementType name="ProcessInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -408,7 +404,6 @@
 	<ElementType name="VoteInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -443,7 +438,6 @@
 	</ElementType>
 	<ElementType name="Type" content="textOnly"/>
 	<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-	<ElementType name="bTypeDependency" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bForceOverwrite" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bForceDelete" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iForceInsertLocation" content="textOnly" dt:type="int"/>
@@ -495,7 +489,6 @@
 	<ElementType name="ReligionInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -561,7 +554,6 @@
 	<ElementType name="CorporationInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -643,7 +635,6 @@
 	<ElementType name="GoodyInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -758,7 +749,6 @@
 	<ElementType name="HandicapInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -854,7 +844,6 @@
 	<ElementType name="VictoryInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -953,7 +942,6 @@ DPII < Maintenance Modifiers >
 	<ElementType name="ProjectInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -1013,7 +1001,6 @@ DPII < Maintenance Modifiers >
 	<ElementType name="HurryInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -1036,7 +1023,6 @@ DPII < Maintenance Modifiers >
 	<ElementType name="CommerceInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -1067,7 +1053,6 @@ DPII < Maintenance Modifiers >
 	<ElementType name="CivicOptionInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="bPolicy" minOccurs="0"/>
@@ -1337,7 +1322,6 @@ DPII < Revolution Mod End >
 		<element type="CivicOptionType" minOccurs="0"/>
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -1573,7 +1557,6 @@ DPII < Revolution Mod End >
 	<ElementType name="GameSpeedInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -1621,7 +1604,6 @@ DPII < Revolution Mod End >
 	<ElementType name="TurnTimerInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -1641,7 +1623,6 @@ DPII < Revolution Mod End >
 	<ElementType name="CursorInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -1662,7 +1643,6 @@ DPII < Revolution Mod End >
 	<ElementType name="EmphasizeInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -1689,7 +1669,6 @@ DPII < Revolution Mod End >
 	<ElementType name="UpkeepInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -1723,7 +1702,6 @@ DPII < Revolution Mod End >
 	<ElementType name="CultureLevelInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -1781,7 +1759,6 @@ DPII < Revolution Mod End >
 	<ElementType name="SpecialistInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -1873,7 +1850,6 @@ DPII < Revolution Mod End >
 	<ElementType name="DiplomacyInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -1914,7 +1890,6 @@ DPII < Revolution Mod End >
 	<ElementType name="EraInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -1974,7 +1949,6 @@ DPII < Revolution Mod End >
 	</ElementType>
 	<ElementType name="CulturalAgeInfo" content="eltOnly">
 		<element type="Type"/>
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -2040,7 +2014,6 @@ DPII < Revolution Mod End >
 	</ElementType>
 	<ElementType name="PropertyInfo" content="eltOnly">
 		<element type="Type"/>
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -2075,7 +2048,6 @@ DPII < Revolution Mod End >
 	<ElementType name="GameOptionInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -2096,7 +2068,6 @@ DPII < Revolution Mod End >
 	<ElementType name="MPOptionInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -2113,7 +2084,6 @@ DPII < Revolution Mod End >
 	<ElementType name="ForceControlInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -2130,7 +2100,6 @@ DPII < Revolution Mod End >
 	<ElementType name="PlayerOptionInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -2147,7 +2116,6 @@ DPII < Revolution Mod End >
 	<ElementType name="GraphicOptionInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -2199,7 +2167,6 @@ DPII < Revolution Mod End >
 	<ElementType name="EspionageMissionInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -2269,7 +2236,6 @@ DPII < Revolution Mod End >
 	<ElementType name="VoteSourceInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -2438,7 +2404,6 @@ DPII < Revolution Mod End >
 	</ElementType>
 	<ElementType name="OutcomeInfo" content="eltOnly">
 		<element type="Type"/>
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -2469,7 +2434,6 @@ DPII < Revolution Mod End >
 	</ElementType>
 	<ElementType name="IdeaClassInfo" content="eltOnly">
 		<element type="Type"/>
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>
@@ -2489,7 +2453,6 @@ DPII < Revolution Mod End >
 	<ElementType name="IdeaType" content="textOnly"/>
 	<ElementType name="IdeaInfo" content="eltOnly">
 		<element type="Type"/>
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
 		<element type="iForceInsertLocation" minOccurs="0"/>

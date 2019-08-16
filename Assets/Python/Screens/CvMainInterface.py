@@ -1,7 +1,7 @@
 from CvPythonExtensions import *
 from operator import itemgetter
 from string import split
-import time
+
 import CvScreenEnums
 import CvScreensInterface as UP
 import HandleInputUtil
@@ -3608,38 +3608,41 @@ class CvMainInterface:
 				x = xStart
 				y += dx
 		elif iTab == 1:
+			if not CyCity.getBuildingListGroupNum(): return
+			iNumInGroup = CyCity.getBuildingListNumInGroup(0)
+			if not iNumInGroup: return
 			PF = "WID|BUILDING|CityWork%d"
 			aList = []
 			iCount = 0
-			if not CyCity.getBuildingListGroupNum(): return
-			iNumInGroup = CyCity.getBuildingListNumInGroup(0)
-			if iNumInGroup:
-				for i in xrange(iNumInGroup):
-					iType = CyCity.getBuildingListType(0, i)
-					iBuildingClass = GC.getBuildingInfo(iType).getBuildingClassType()
-					if isLimitedWonderClass(iBuildingClass):
-						continue
-					BTN = GC.getBuildingInfo(iType).getButton()
-					Img = PF % iType
-					if not CyCity.canConstruct(iType, False, False, False) or iPlayer != iPlayerAct:
-						aList.append([Img, iType, BTN])
-					else:
-						if iCount == iBtnPerRow:
-							x = xStart
-							y += dx
-							iCount = 0
-						screen.setImageButtonAt(Img, Pnl, BTN, x, y, iSize, iSize, eWidGen, 1, 1)
-						x += dx
-						iCount += 1
-				for Img, iType, BTN in aList:
+			i = 0
+			while i < iNumInGroup:
+				iType = CyCity.getBuildingListType(0, i)
+				iBuildingClass = GC.getBuildingInfo(iType).getBuildingClassType()
+				if isLimitedWonderClass(iBuildingClass):
+					break
+				i += 1
+				BTN = GC.getBuildingInfo(iType).getButton()
+				Img = PF % iType
+				if not CyCity.canConstruct(iType, False, False, False) or iPlayer != iPlayerAct:
+					aList.append([Img, iType, BTN])
+				else:
 					if iCount == iBtnPerRow:
 						x = xStart
 						y += dx
 						iCount = 0
 					screen.setImageButtonAt(Img, Pnl, BTN, x, y, iSize, iSize, eWidGen, 1, 1)
-					screen.enable(Img, False)
 					x += dx
 					iCount += 1
+			while aList:
+				Img, iType, BTN = aList.pop(0)
+				if iCount == iBtnPerRow:
+					x = xStart
+					y += dx
+					iCount = 0
+				screen.setImageButtonAt(Img, Pnl, BTN, x, y, iSize, iSize, eWidGen, 1, 1)
+				screen.enable(Img, False)
+				x += dx
+				iCount += 1
 		elif iTab == 2:
 			PF = "WID|BUILDING|CityWork%d"
 			aList0 = []
@@ -3689,7 +3692,8 @@ class CvMainInterface:
 						screen.setImageButtonAt(Img, Pnl, BTN, x, y, iSize, iSize, eWidGen, 1, 1)
 						x += dx
 						iCount += 1
-				for Img, iType, BTN in aList:
+				while aList:
+					Img, iType, BTN = aList.pop(0)
 					if iCount == iBtnPerRow:
 						x = xStart
 						y += dx
@@ -3717,12 +3721,12 @@ class CvMainInterface:
 
 			# Cultures + palace + special
 			if not aList0: return
-			y += dx
 			if iCount:
 				x = xStart
+				y += dx
 				iCount = 0
+			aList = []
 			for iType in aList0:
-				aList = []
 				BTN = GC.getBuildingInfo(iType).getButton()
 				Img = PF % iType
 				if not CyCity.canConstruct(iType, False, False, False) or iPlayer != iPlayerAct:
@@ -3735,15 +3739,16 @@ class CvMainInterface:
 					screen.setImageButtonAt(Img, Pnl, BTN, x, y, iSize, iSize, eWidGen, 1, 1)
 					x += dx
 					iCount += 1
-				for Img, iType, BTN in aList:
-					if iCount == iBtnPerRow:
-						x = xStart
-						y += dx
-						iCount = 0
-					screen.setImageButtonAt(Img, Pnl, BTN, x, y, iSize, iSize, eWidGen, 1, 1)
-					screen.enable(Img, False)
-					x += dx
-					iCount += 1
+			while aList:
+				Img, iType, BTN = aList.pop(0)
+				if iCount == iBtnPerRow:
+					x = xStart
+					y += dx
+					iCount = 0
+				screen.setImageButtonAt(Img, Pnl, BTN, x, y, iSize, iSize, eWidGen, 1, 1)
+				screen.enable(Img, False)
+				x += dx
+				iCount += 1
 
 	def exitCityTab(self, screen, iTab):
 		screen.deleteWidget("CityTab|BG0")

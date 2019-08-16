@@ -333,9 +333,6 @@
 				<BuildingClass>BUILDINGCLASS_HELLENIC_CATHEDRAL</BuildingClass>
 				<BuildingClass>BUILDINGCLASS_ZOROASTRIAN_CATHEDRAL</BuildingClass>
 				<BuildingClass>BUILDINGCLASS_MESOAMERICAN_CATHEDRAL</BuildingClass>
-				<!--BuildingClass>BUILDINGCLASS_ANDEAN_CATHEDRAL</BuildingClass-->
-				<!--BuildingClass>BUILDINGCLASS_ASATRU_CATHEDRAL</BuildingClass-->
-				<!--BuildingClass>BUILDINGCLASS_BAHAI_CATHEDRAL</BuildingClass-->
 				<!--BuildingClass>BUILDINGCLASS_CANAANISM_CATHEDRAL</BuildingClass-->
 				<!--BuildingClass>BUILDINGCLASS_JAIN_CATHEDRAL</BuildingClass-->
 				<BuildingClass>BUILDINGCLASS_MORMON_CATHEDRAL</BuildingClass>
@@ -2853,9 +2850,6 @@
 				<BuildingClass>BUILDINGCLASS_TAOIST_MONASTERY</BuildingClass>
 				<BuildingClass>BUILDINGCLASS_HELLENIC_MONASTERY</BuildingClass>
 				<BuildingClass>BUILDINGCLASS_ZOROASTRIAN_MONASTERY</BuildingClass>
-				<!--BuildingClass>BUILDINGCLASS_ANDEAN_MONASTERY</BuildingClass-->
-				<!--BuildingClass>BUILDINGCLASS_ASATRU_MONASTERY</BuildingClass-->
-				<!--BuildingClass>BUILDINGCLASS_BAHAI_MONASTERY</BuildingClass-->
 				<!--BuildingClass>BUILDINGCLASS_JAIN_MONASTERY</BuildingClass-->
 				<BuildingClass>BUILDINGCLASS_VOODOO_MONASTERY</BuildingClass>
 			</BuildingsRequired>
@@ -3687,9 +3681,6 @@
 				<BuildingClass>BUILDINGCLASS_TAOIST_TEMPLE</BuildingClass>
 				<BuildingClass>BUILDINGCLASS_CHRISTIAN_TEMPLE</BuildingClass>
 				<BuildingClass>BUILDINGCLASS_ISLAMIC_TEMPLE</BuildingClass>
-				<!--BuildingClass>BUILDINGCLASS_ANDEAN_TEMPLE</BuildingClass-->
-				<!--BuildingClass>BUILDINGCLASS_ASATRU_TEMPLE</BuildingClass-->
-				<!--BuildingClass>BUILDINGCLASS_BAHAI_TEMPLE</BuildingClass-->
 				<!--BuildingClass>BUILDINGCLASS_CANAANISM_TEMPLE</BuildingClass-->
 				<!--BuildingClass>BUILDINGCLASS_JAIN_TEMPLE</BuildingClass-->
 				<BuildingClass>BUILDINGCLASS_MORMON_TEMPLE</BuildingClass>
@@ -3831,8 +3822,6 @@
 				<BuildingClass>BUILDINGCLASS_TAOIST_CATHEDRAL</BuildingClass>
 				<BuildingClass>BUILDINGCLASS_HELLENIC_CATHEDRAL</BuildingClass>
 				<BuildingClass>BUILDINGCLASS_ZOROASTRIAN_CATHEDRAL</BuildingClass>
-				<!--BuildingClass>BUILDINGCLASS_ASATRU_CATHEDRAL</BuildingClass-->
-				<!--BuildingClass>BUILDINGCLASS_BAHAI_CATHEDRAL</BuildingClass-->
 				<!--BuildingClass>BUILDINGCLASS_CANAANISM_CATHEDRAL</BuildingClass-->
 				<!--BuildingClass>BUILDINGCLASS_JAIN_CATHEDRAL</BuildingClass-->
 				<BuildingClass>BUILDINGCLASS_MORMON_CATHEDRAL</BuildingClass>
@@ -4760,9 +4749,6 @@
 				<BuildingClass>BUILDINGCLASS_HELLENIC_MONASTERY</BuildingClass>
 				<BuildingClass>BUILDINGCLASS_ZOROASTRIAN_MONASTERY</BuildingClass>
 				<BuildingClass>BUILDINGCLASS_EGYPT_MYTH_MONASTERY</BuildingClass>
-				<!--BuildingClass>BUILDINGCLASS_ANDEAN_MONASTERY</BuildingClass-->
-				<!--BuildingClass>BUILDINGCLASS_ASATRU_MONASTERY</BuildingClass-->
-				<!--BuildingClass>BUILDINGCLASS_BAHAI_MONASTERY</BuildingClass-->
 				<!--BuildingClass>BUILDINGCLASS_JAIN_MONASTERY</BuildingClass-->
 				<BuildingClass>BUILDINGCLASS_VOODOO_MONASTERY</BuildingClass>
 			</BuildingsRequired>

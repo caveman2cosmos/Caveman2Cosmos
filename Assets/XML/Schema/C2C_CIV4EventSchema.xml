@@ -37,7 +37,6 @@
   <ElementType name="IntegrateCount"/>
 	<ElementType name="Type" content="textOnly"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-	<ElementType name="bTypeDependency" content="textOnly" dt:type="boolean"/>
 	<ElementType name="DependencyType" content="textOnly"/>
 	<ElementType name="AndDependencyTypes" content="eltOnly">
 		<element type="DependencyType" minOccurs="1"/>
@@ -368,7 +367,6 @@
 	<ElementType name="EventTriggerInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -459,7 +457,6 @@
 	<ElementType name="EventInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->

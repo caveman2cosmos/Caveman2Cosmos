@@ -167,6 +167,7 @@ class CvMapSwitchInfo;
 /*******************************/
 
 #include "CvInfoReplacements.h"
+#include <stack>
 
 //	KOSHLING - granular control over callback enabling
 #define GRANULAR_CALLBACK_CONTROL
@@ -361,12 +362,34 @@ public:
 /************************************************************************************************/
 	void addToInfosVectors(void *infoVector);
 	void infosReset();
-	int getOrCreateInfoTypeForString(const char* szType);
 
 	void addDelayedResolution(int* pType, CvString szString);
 	CvString* getDelayedResolution(int* pType);
 	void removeDelayedResolution(int* pType);
 	void copyNonDefaultDelayedResolution(int* pTypeSelf, int* pTypeOther);
+	template<class T>
+	void copyNonDefaultDelayedResolutionVector(std::vector<T>& aTarget, std::vector<T>& aSource)
+	{
+		std::stack<CvString> aszTemp;
+		std::vector<T>::iterator it = aTarget.end(), it2 = aSource.begin();
+		while (it > aTarget.begin())
+		{
+			it--;
+			aszTemp.push(*getDelayedResolution(&*it));
+			removeDelayedResolution(&*it);
+		}
+		aTarget.insert(aTarget.end(), aSource.begin(), aSource.end());
+		it = aTarget.begin(); // because insert() invalidates the previous iterator
+		while (aszTemp.size())
+		{
+			addDelayedResolution(&*it++, aszTemp.top());
+			aszTemp.pop();
+		}
+		while (it2 != aSource.end())
+		{
+			addDelayedResolution(&*it++, *getDelayedResolution(&*it2++));
+		}
+	}
 	void resolveDelayedResolution();
 
 	int getNumWorldInfos();
@@ -1503,8 +1526,6 @@ protected:
 	typedef stdext::hash_map<const char* /* type */, int /* info index */, SZStringHash> InfosMap;
 	InfosMap m_infosMap;
 	std::vector<std::vector<CvInfoBase *> *> m_aInfoVectors;
-
-	int m_iLastTypeID; // last generic type ID assigned (for type strings that do not have an assigned info class) 
 
 	// AIAndy: Delayed resolution of type strings
 	typedef std::map<int*,std::pair<CvString,CvString> > DelayedResolutionMap;

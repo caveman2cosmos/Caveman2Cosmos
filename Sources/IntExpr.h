@@ -235,7 +235,7 @@ protected:
 class IntExprAdapt : public IntExpr
 {
 public:
-	IntExprAdapt(IntExpr* pExpr = NULL, int iID = 0) : m_pExpr(pExpr), m_iID(iID) {}
+	IntExprAdapt(IntExpr* pExpr = NULL, uint uiID = 0) : m_pExpr(pExpr), m_uiID(uiID) {}
 	virtual ~IntExprAdapt();
 	virtual int evaluate(CvGameObject* pObject);
 	virtual void getCheckSum(unsigned int& iSum);
@@ -243,7 +243,7 @@ public:
 	virtual int getBindingStrength() const;
 protected:
 	IntExpr* m_pExpr;
-	int m_iID;
+	uint m_uiID;
 };
 
 

@@ -180,7 +180,6 @@
 	<ElementType name="BuildInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
@@ -1923,7 +1922,6 @@
 		<element type="Help" minOccurs="0"/>
 		<element type="Advisor" minOccurs="0"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
@@ -2263,7 +2261,6 @@
 	<ElementType name="MissionInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
@@ -2297,7 +2294,6 @@
 	<ElementType name="ControlInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
@@ -2327,7 +2323,6 @@
 	<ElementType name="CommandInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
@@ -2449,7 +2444,6 @@
 	<ElementType name="PromotionInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
@@ -2763,7 +2757,6 @@
 	<ElementType name="DomainInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
@@ -2775,7 +2768,6 @@
 	</ElementType>
 	<ElementType name="Type" content="textOnly"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-	<ElementType name="bTypeDependency" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bForceOverwrite" content="textOnly" dt:type="boolean"/>
 	<ElementType name="DependencyType" content="textOnly"/>
 	<ElementType name="AndDependencyTypes" content="eltOnly">
@@ -2797,7 +2789,6 @@
 	<ElementType name="SpecialUnitInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
@@ -2832,7 +2823,6 @@
 	<ElementType name="AnimationCategory" content="eltOnly">
 		<element type="Type" maxOccurs="1" minOccurs="1"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
@@ -2843,7 +2833,6 @@
 	<ElementType name="EntityEventInfo" content="eltOnly">
 		<element type="Type" minOccurs="1" maxOccurs="1"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
@@ -2874,7 +2863,6 @@
 	<ElementType name="AnimationPath" content="eltOnly">
 		<element type="Type" maxOccurs="1" minOccurs="1"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
@@ -2961,7 +2949,6 @@
 	</ElementType>
 	<ElementType name="SpawnInfo" content="eltOnly" order="many">
 		<element type="Type"/>
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
@@ -3006,7 +2993,6 @@
 	<!--TB Promotion Line Mod begin-->
 	<ElementType name="PromotionLineInfo" content="eltOnly">
 		<element type="Type"/>
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="Description" minOccurs="0"/>
@@ -3062,7 +3048,6 @@
 	<ElementType name="UnitCombatInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -3304,7 +3289,6 @@
 	<ElementType name="InvisibleInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->

@@ -86,7 +86,7 @@ IntExpr* IntExpr::read(CvXMLLoadUtility *pXML)
 				IntExpr* pExpr = read(pXML);
 				
 				pXML->MoveToXmlParent();
-				return new IntExprAdapt(pExpr, GC.getOrCreateInfoTypeForString(szTextVal));
+				return new IntExprAdapt(pExpr, IDValueMapPercent::getIDForString(szTextVal));
 			}
 		}
 	}
@@ -781,13 +781,13 @@ IntExprAdapt::~IntExprAdapt()
 
 int IntExprAdapt::evaluate(CvGameObject *pObject)
 {
-	return pObject->adaptValueToGame(m_iID, m_pExpr->evaluate(pObject));
+	return pObject->adaptValueToGame(m_uiID, m_pExpr->evaluate(pObject));
 }
 
 void IntExprAdapt::buildDisplayString(CvWStringBuffer &szBuffer) const
 {
 	CvWString szTextVal;
-	szTextVal.Format(L"%d", GC.getGameINLINE().getGameObject()->adaptValueToGame(m_iID, m_pExpr->evaluate(GC.getGameINLINE().getGameObject())));
+	szTextVal.Format(L"%d", GC.getGameINLINE().getGameObject()->adaptValueToGame(m_uiID, m_pExpr->evaluate(GC.getGameINLINE().getGameObject())));
 	szBuffer.append(szTextVal);
 }
 
@@ -799,7 +799,7 @@ int IntExprAdapt::getBindingStrength() const
 void IntExprAdapt::getCheckSum(unsigned int &iSum)
 {
 	m_pExpr->getCheckSum(iSum);
-	CheckSum(iSum, m_iID);
+	CheckSum(iSum, m_uiID);
 }
 
 

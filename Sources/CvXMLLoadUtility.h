@@ -747,6 +747,9 @@ public:
 	// get the integer value for the keyboard mapping of the hotkey if it exists
 	int GetHotKeyInt(const TCHAR* pszHotKeyVal);
 
+	// Returns true if the dependency list is satisfied, false if not.
+	inline bool CheckDependency();
+
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 11/30/07                                MRGENIE      */
 /*                                                                                              */
@@ -994,6 +997,38 @@ int CvXMLLoadUtility::SetCommerce(T** ppbCommerce)
 	//}
 
 	//return iNumChildren;
+}
+
+// Returns true if the dependency list is satisfied, false if not.
+bool CvXMLLoadUtility::CheckDependency()
+{
+	CvString szTypeDepend;
+	bool bDependencyNotFound = false;
+	if (GetOptionalChildXmlValByName(szTypeDepend, L"DependencyType")) {
+		if (bDependencyNotFound = -1 == GC.getInfoTypeForString(szTypeDepend, true))
+			return false;
+	}
+	if (TryMoveToXmlFirstChild(L"AndDependencyTypes")) {
+		if (GetChildXmlVal(szTypeDepend)) {	// If any of the AND depends is not loaded, set bNotFound
+			while ( !(bDependencyNotFound = -1 == GC.getInfoTypeForString(szTypeDepend, true))
+					&& GetNextXmlVal(szTypeDepend));
+			MoveToXmlParent();
+		}
+		MoveToXmlParent();
+		if (bDependencyNotFound)
+			return false;
+	}
+	if (TryMoveToXmlFirstChild(L"OrDependencyTypes")) {
+		if (GetChildXmlVal(szTypeDepend)) {	// If any of the OR depends is loaded, unset bNotFound
+			while ( (bDependencyNotFound = -1 == GC.getInfoTypeForString(szTypeDepend, true))
+					&& GetNextXmlVal(szTypeDepend));
+			MoveToXmlParent();
+		}
+		MoveToXmlParent();
+		if (bDependencyNotFound)
+			return false;
+	}
+	return true;
 }
 
 #endif

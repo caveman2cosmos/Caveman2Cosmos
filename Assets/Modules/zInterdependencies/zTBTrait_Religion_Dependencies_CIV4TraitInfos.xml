@@ -1,275 +1,113 @@
 <?xml version="1.0"?>
 <!-- Leader Trait Infos -->
-<Civ4TraitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
+<Civ4TraitInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
 	<TraitInfos>
 		<TraitInfo>
 			<Type>TRAIT_SPIRITUAL</Type>
 			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_DRUIDISM</AndDependencyType>
-			</AndDependencyTypes>
 			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_DRUIDISM</DependencyType>
 					<TechType>TECH_DRUIDISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SHAMANISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SHAMANISM</DependencyType>
 					<TechType>TECH_SHAMANISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_TENGRIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_TENGRIISM</DependencyType>
 					<TechType>TECH_TENGRIISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_MESOPOTAMISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_MESOPOTAMISM</DependencyType>
 					<TechType>TECH_MESOPOTAMISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_YORUBA</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_YORUBA</DependencyType>
 					<TechType>TECH_YORUBA</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_ANDEANISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_ANDEANISM</DependencyType>
 					<TechType>TECH_ANDEANISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_NGAIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_NGAIISM</DependencyType>
 					<TechType>TECH_NGAIISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SHINTOISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SHINTOISM</DependencyType>
 					<TechType>TECH_SHINTOISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_KEMETISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_KEMETISM</DependencyType>
 					<TechType>TECH_KEMETISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_CANAANITE</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_CANAANITE</DependencyType>
 					<TechType>TECH_CANAANITE</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_RODNOVERY</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_RODNOVERY</DependencyType>
 					<TechType>TECH_RODNOVERY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_ASATRU</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_ASATRU</DependencyType>
 					<TechType>TECH_ASATRU</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_HELLENISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_HELLENISM</DependencyType>
 					<TechType>TECH_HELLENISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_NAGHUALISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_NAGHUALISM</DependencyType>
 					<TechType>TECH_NAGHUALISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_JAINISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_JAINISM</DependencyType>
 					<TechType>TECH_JAINISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_VOODOO</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_VOODOO</DependencyType>
 					<TechType>TECH_VOODOO</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SIKHISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SIKHISM</DependencyType>
 					<TechType>TECH_SIKHISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_BAHAI</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_BAHAI</DependencyType>
 					<TechType>TECH_BAHAI</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_MORMON</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_MORMON</DependencyType>
 					<TechType>TECH_MORMON</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_CAODAIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_CAODAIISM</DependencyType>
 					<TechType>TECH_CAODAIISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SCIENTOLOGY</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SCIENTOLOGY</DependencyType>
 					<TechType>TECH_SCIENTOLOGY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
@@ -278,796 +116,360 @@
 		<TraitInfo>
 			<Type>TRAIT_SPIRITUAL1</Type>
 			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_DRUIDISM</AndDependencyType>
-			</AndDependencyTypes>
 			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_DRUIDISM</DependencyType>
 					<TechType>TECH_DRUIDISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SHAMANISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SHAMANISM</DependencyType>
 					<TechType>TECH_SHAMANISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_TENGRIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_TENGRIISM</DependencyType>
 					<TechType>TECH_TENGRIISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_MESOPOTAMISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_MESOPOTAMISM</DependencyType>
 					<TechType>TECH_MESOPOTAMISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_YORUBA</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_YORUBA</DependencyType>
 					<TechType>TECH_YORUBA</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_ANDEANISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_ANDEANISM</DependencyType>
 					<TechType>TECH_ANDEANISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_NGAIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_NGAIISM</DependencyType>
 					<TechType>TECH_NGAIISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SHINTOISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SHINTOISM</DependencyType>
 					<TechType>TECH_SHINTOISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_KEMETISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_KEMETISM</DependencyType>
 					<TechType>TECH_KEMETISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_CANAANITE</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_CANAANITE</DependencyType>
 					<TechType>TECH_CANAANITE</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_RODNOVERY</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_RODNOVERY</DependencyType>
 					<TechType>TECH_RODNOVERY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_ASATRU</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_ASATRU</DependencyType>
 					<TechType>TECH_ASATRU</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_HELLENISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_HELLENISM</DependencyType>
 					<TechType>TECH_HELLENISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_NAGHUALISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_NAGHUALISM</DependencyType>
 					<TechType>TECH_NAGHUALISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_JAINISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_JAINISM</DependencyType>
 					<TechType>TECH_JAINISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_VOODOO</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_VOODOO</DependencyType>
 					<TechType>TECH_VOODOO</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SIKHISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SIKHISM</DependencyType>
 					<TechType>TECH_SIKHISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_BAHAI</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_BAHAI</DependencyType>
 					<TechType>TECH_BAHAI</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_MORMON</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_MORMON</DependencyType>
 					<TechType>TECH_MORMON</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_CAODAIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_CAODAIISM</DependencyType>
 					<TechType>TECH_CAODAIISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_SPIRITUAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SCIENTOLOGY</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SCIENTOLOGY</DependencyType>
 					<TechType>TECH_SCIENTOLOGY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
 		</TraitInfo>
 		<TraitInfo>
-			<Type>TRAIT_ANTI_CLERICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_DRUIDISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_DRUIDISM</TechType>
-					<iModifier>-20</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ANTI_CLERICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SHAMANISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_SHAMANISM</TechType>
-					<iModifier>-20</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ANTI_CLERICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_TENGRIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_TENGRIISM</TechType>
-					<iModifier>-20</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ANTI_CLERICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_MESOPOTAMISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_MESOPOTAMISM</TechType>
-					<iModifier>-20</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ANTI_CLERICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_YORUBA</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_YORUBA</TechType>
-					<iModifier>-20</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ANTI_CLERICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_ANDEANISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_ANDEANISM</TechType>
-					<iModifier>-20</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ANTI_CLERICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_NGAIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_NGAIISM</TechType>
-					<iModifier>-20</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ANTI_CLERICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SHINTOISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_SHINTOISM</TechType>
-					<iModifier>-20</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ANTI_CLERICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_KEMETISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_KEMETISM</TechType>
-					<iModifier>-20</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ANTI_CLERICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_CANAANITE</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_CANAANITE</TechType>
-					<iModifier>-20</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ANTI_CLERICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_RODNOVERY</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_RODNOVERY</TechType>
-					<iModifier>-20</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ANTI_CLERICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_ASATRU</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_ASATRU</TechType>
-					<iModifier>-20</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ANTI_CLERICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_HELLENISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_HELLENISM</TechType>
-					<iModifier>-20</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ANTI_CLERICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_NAGHUALISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_NAGHUALISM</TechType>
-					<iModifier>-20</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ANTI_CLERICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_JAINISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_JAINISM</TechType>
-					<iModifier>-20</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ANTI_CLERICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_VOODOO</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_VOODOO</TechType>
-					<iModifier>-20</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ANTI_CLERICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SIKHISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_SIKHISM</TechType>
-					<iModifier>-20</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ANTI_CLERICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_BAHAI</AndDependencyType>
-			</AndDependencyTypes>
+			<Type>TRAIT_SPIRITUAL2</Type>
+			<DependencyType>TECH_BAHAI</DependencyType>
 			<TechResearchModifiers>
 				<TechResearchModifier>
 					<TechType>TECH_BAHAI</TechType>
-					<iModifier>-20</iModifier>
+					<iModifier>20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_ANTI_CLERICAL</Type>
 			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_MORMON</AndDependencyType>
-			</AndDependencyTypes>
 			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_DRUIDISM</DependencyType>
+					<TechType>TECH_DRUIDISM</TechType>
+					<iModifier>-20</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_SHAMANISM</DependencyType>
+					<TechType>TECH_SHAMANISM</TechType>
+					<iModifier>-20</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_TENGRIISM</DependencyType>
+					<TechType>TECH_TENGRIISM</TechType>
+					<iModifier>-20</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_MESOPOTAMISM</DependencyType>
+					<TechType>TECH_MESOPOTAMISM</TechType>
+					<iModifier>-20</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_YORUBA</DependencyType>
+					<TechType>TECH_YORUBA</TechType>
+					<iModifier>-20</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_ANDEANISM</DependencyType>
+					<TechType>TECH_ANDEANISM</TechType>
+					<iModifier>-20</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_NGAIISM</DependencyType>
+					<TechType>TECH_NGAIISM</TechType>
+					<iModifier>-20</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_SHINTOISM</DependencyType>
+					<TechType>TECH_SHINTOISM</TechType>
+					<iModifier>-20</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_KEMETISM</DependencyType>
+					<TechType>TECH_KEMETISM</TechType>
+					<iModifier>-20</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_CANAANITE</DependencyType>
+					<TechType>TECH_CANAANITE</TechType>
+					<iModifier>-20</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_RODNOVERY</DependencyType>
+					<TechType>TECH_RODNOVERY</TechType>
+					<iModifier>-20</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_ASATRU</DependencyType>
+					<TechType>TECH_ASATRU</TechType>
+					<iModifier>-20</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_HELLENISM</DependencyType>
+					<TechType>TECH_HELLENISM</TechType>
+					<iModifier>-20</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_NAGHUALISM</DependencyType>
+					<TechType>TECH_NAGHUALISM</TechType>
+					<iModifier>-20</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_JAINISM</DependencyType>
+					<TechType>TECH_JAINISM</TechType>
+					<iModifier>-20</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_VOODOO</DependencyType>
+					<TechType>TECH_VOODOO</TechType>
+					<iModifier>-20</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_SIKHISM</DependencyType>
+					<TechType>TECH_SIKHISM</TechType>
+					<iModifier>-20</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_BAHAI</DependencyType>
+					<TechType>TECH_BAHAI</TechType>
+					<iModifier>-20</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_MORMON</DependencyType>
 					<TechType>TECH_MORMON</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ANTI_CLERICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_CAODAIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_CAODAIISM</DependencyType>
 					<TechType>TECH_CAODAIISM</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ANTI_CLERICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SCIENTOLOGY</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SCIENTOLOGY</DependencyType>
 					<TechType>TECH_SCIENTOLOGY</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
 		</TraitInfo>
 		<TraitInfo>
-			<Type>TRAIT_PIOUS</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_DRUIDISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_DRUIDISM</TechType>
-					<iModifier>-25</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SHAMANISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_SHAMANISM</TechType>
-					<iModifier>-25</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_TENGRIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_TENGRIISM</TechType>
-					<iModifier>-25</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_MESOPOTAMISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_MESOPOTAMISM</TechType>
-					<iModifier>-25</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_YORUBA</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_YORUBA</TechType>
-					<iModifier>-25</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_ANDEANISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_ANDEANISM</TechType>
-					<iModifier>-25</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_NGAIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_NGAIISM</TechType>
-					<iModifier>-25</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SHINTOISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_SHINTOISM</TechType>
-					<iModifier>-25</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_KEMETISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_KEMETISM</TechType>
-					<iModifier>-25</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_CANAANITE</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_CANAANITE</TechType>
-					<iModifier>-25</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_RODNOVERY</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_RODNOVERY</TechType>
-					<iModifier>-25</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_ASATRU</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_ASATRU</TechType>
-					<iModifier>-25</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_HELLENISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_HELLENISM</TechType>
-					<iModifier>-25</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_NAGHUALISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_NAGHUALISM</TechType>
-					<iModifier>-25</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_JAINISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_JAINISM</TechType>
-					<iModifier>-25</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_VOODOO</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_VOODOO</TechType>
-					<iModifier>-25</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SIKHISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
-				<TechResearchModifier>
-					<TechType>TECH_SIKHISM</TechType>
-					<iModifier>-25</iModifier>
-				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_BAHAI</AndDependencyType>
-			</AndDependencyTypes>
+			<Type>TRAIT_ANTI_CLERICAL1</Type>
+			<DependencyType>TECH_BAHAI</DependencyType>
 			<TechResearchModifiers>
 				<TechResearchModifier>
 					<TechType>TECH_BAHAI</TechType>
-					<iModifier>-25</iModifier>
+					<iModifier>-20</iModifier>
+				</TechResearchModifier>
+			</TechResearchModifiers>
+		</TraitInfo>
+		<TraitInfo>
+			<Type>TRAIT_ANTI_CLERICAL2</Type>
+			<DependencyType>TECH_BAHAI</DependencyType>
+			<TechResearchModifiers>
+				<TechResearchModifier>
+					<TechType>TECH_BAHAI</TechType>
+					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_PIOUS</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_MORMON</AndDependencyType>
-			</AndDependencyTypes>
 			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_DRUIDISM</DependencyType>
+					<TechType>TECH_DRUIDISM</TechType>
+					<iModifier>-25</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_SHAMANISM</DependencyType>
+					<TechType>TECH_SHAMANISM</TechType>
+					<iModifier>-25</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_TENGRIISM</DependencyType>
+					<TechType>TECH_TENGRIISM</TechType>
+					<iModifier>-25</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_MESOPOTAMISM</DependencyType>
+					<TechType>TECH_MESOPOTAMISM</TechType>
+					<iModifier>-25</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_YORUBA</DependencyType>
+					<TechType>TECH_YORUBA</TechType>
+					<iModifier>-25</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_ANDEANISM</DependencyType>
+					<TechType>TECH_ANDEANISM</TechType>
+					<iModifier>-25</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_NGAIISM</DependencyType>
+					<TechType>TECH_NGAIISM</TechType>
+					<iModifier>-25</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_SHINTOISM</DependencyType>
+					<TechType>TECH_SHINTOISM</TechType>
+					<iModifier>-25</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_KEMETISM</DependencyType>
+					<TechType>TECH_KEMETISM</TechType>
+					<iModifier>-25</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_CANAANITE</DependencyType>
+					<TechType>TECH_CANAANITE</TechType>
+					<iModifier>-25</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_RODNOVERY</DependencyType>
+					<TechType>TECH_RODNOVERY</TechType>
+					<iModifier>-25</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_ASATRU</DependencyType>
+					<TechType>TECH_ASATRU</TechType>
+					<iModifier>-25</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_HELLENISM</DependencyType>
+					<TechType>TECH_HELLENISM</TechType>
+					<iModifier>-25</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_NAGHUALISM</DependencyType>
+					<TechType>TECH_NAGHUALISM</TechType>
+					<iModifier>-25</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_JAINISM</DependencyType>
+					<TechType>TECH_JAINISM</TechType>
+					<iModifier>-25</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_VOODOO</DependencyType>
+					<TechType>TECH_VOODOO</TechType>
+					<iModifier>-25</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_SIKHISM</DependencyType>
+					<TechType>TECH_SIKHISM</TechType>
+					<iModifier>-25</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_BAHAI</DependencyType>
+					<TechType>TECH_BAHAI</TechType>
+					<iModifier>-25</iModifier>
+				</TechResearchModifier>
+				<TechResearchModifier>
+					<DependencyType>TECH_MORMON</DependencyType>
 					<TechType>TECH_MORMON</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_CAODAIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_CAODAIISM</DependencyType>
 					<TechType>TECH_CAODAIISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SCIENTOLOGY</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SCIENTOLOGY</DependencyType>
 					<TechType>TECH_SCIENTOLOGY</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
@@ -1075,251 +477,109 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_PIOUS1</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_DRUIDISM</AndDependencyType>
-			</AndDependencyTypes>
 			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_DRUIDISM</DependencyType>
 					<TechType>TECH_DRUIDISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS1</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SHAMANISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SHAMANISM</DependencyType>
 					<TechType>TECH_SHAMANISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS1</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_TENGRIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_TENGRIISM</DependencyType>
 					<TechType>TECH_TENGRIISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS1</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_MESOPOTAMISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_MESOPOTAMISM</DependencyType>
 					<TechType>TECH_MESOPOTAMISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS1</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_YORUBA</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_YORUBA</DependencyType>
 					<TechType>TECH_YORUBA</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS1</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_ANDEANISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_ANDEANISM</DependencyType>
 					<TechType>TECH_ANDEANISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS1</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_NGAIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_NGAIISM</DependencyType>
 					<TechType>TECH_NGAIISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS1</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SHINTOISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SHINTOISM</DependencyType>
 					<TechType>TECH_SHINTOISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS1</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_KEMETISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_KEMETISM</DependencyType>
 					<TechType>TECH_KEMETISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS1</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_CANAANITE</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_CANAANITE</DependencyType>
 					<TechType>TECH_CANAANITE</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS1</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_RODNOVERY</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_RODNOVERY</DependencyType>
 					<TechType>TECH_RODNOVERY</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS1</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_ASATRU</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_ASATRU</DependencyType>
 					<TechType>TECH_ASATRU</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS1</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_HELLENISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_HELLENISM</DependencyType>
 					<TechType>TECH_HELLENISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS1</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_NAGHUALISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_NAGHUALISM</DependencyType>
 					<TechType>TECH_NAGHUALISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS1</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_JAINISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_JAINISM</DependencyType>
 					<TechType>TECH_JAINISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS1</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_VOODOO</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_VOODOO</DependencyType>
 					<TechType>TECH_VOODOO</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS1</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SIKHISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SIKHISM</DependencyType>
 					<TechType>TECH_SIKHISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS1</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_BAHAI</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_BAHAI</DependencyType>
 					<TechType>TECH_BAHAI</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS1</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_MORMON</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_MORMON</DependencyType>
 					<TechType>TECH_MORMON</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS1</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_CAODAIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_CAODAIISM</DependencyType>
 					<TechType>TECH_CAODAIISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS1</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SCIENTOLOGY</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SCIENTOLOGY</DependencyType>
 					<TechType>TECH_SCIENTOLOGY</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
@@ -1327,251 +587,109 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_PIOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_DRUIDISM</AndDependencyType>
-			</AndDependencyTypes>
 			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_DRUIDISM</DependencyType>
 					<TechType>TECH_DRUIDISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SHAMANISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SHAMANISM</DependencyType>
 					<TechType>TECH_SHAMANISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_TENGRIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_TENGRIISM</DependencyType>
 					<TechType>TECH_TENGRIISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_MESOPOTAMISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_MESOPOTAMISM</DependencyType>
 					<TechType>TECH_MESOPOTAMISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_YORUBA</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_YORUBA</DependencyType>
 					<TechType>TECH_YORUBA</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_ANDEANISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_ANDEANISM</DependencyType>
 					<TechType>TECH_ANDEANISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_NGAIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_NGAIISM</DependencyType>
 					<TechType>TECH_NGAIISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SHINTOISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SHINTOISM</DependencyType>
 					<TechType>TECH_SHINTOISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_KEMETISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_KEMETISM</DependencyType>
 					<TechType>TECH_KEMETISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_CANAANITE</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_CANAANITE</DependencyType>
 					<TechType>TECH_CANAANITE</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_RODNOVERY</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_RODNOVERY</DependencyType>
 					<TechType>TECH_RODNOVERY</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_ASATRU</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_ASATRU</DependencyType>
 					<TechType>TECH_ASATRU</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_HELLENISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_HELLENISM</DependencyType>
 					<TechType>TECH_HELLENISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_NAGHUALISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_NAGHUALISM</DependencyType>
 					<TechType>TECH_NAGHUALISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_JAINISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_JAINISM</DependencyType>
 					<TechType>TECH_JAINISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_VOODOO</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_VOODOO</DependencyType>
 					<TechType>TECH_VOODOO</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SIKHISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SIKHISM</DependencyType>
 					<TechType>TECH_SIKHISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_BAHAI</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_BAHAI</DependencyType>
 					<TechType>TECH_BAHAI</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_MORMON</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_MORMON</DependencyType>
 					<TechType>TECH_MORMON</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_CAODAIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_CAODAIISM</DependencyType>
 					<TechType>TECH_CAODAIISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_PIOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SCIENTOLOGY</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SCIENTOLOGY</DependencyType>
 					<TechType>TECH_SCIENTOLOGY</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
@@ -1580,271 +698,109 @@
 		<TraitInfo>
 			<Type>TRAIT_FANATICAL</Type>
 			<ReplacementID>TRAIT_COMPLEX_ZEALOUS</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_DRUIDISM</AndDependencyType>
-			</AndDependencyTypes>
 			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_DRUIDISM</DependencyType>
 					<TechType>TECH_DRUIDISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SHAMANISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SHAMANISM</DependencyType>
 					<TechType>TECH_SHAMANISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_TENGRIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_TENGRIISM</DependencyType>
 					<TechType>TECH_TENGRIISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_MESOPOTAMISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_MESOPOTAMISM</DependencyType>
 					<TechType>TECH_MESOPOTAMISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_YORUBA</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_YORUBA</DependencyType>
 					<TechType>TECH_YORUBA</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_ANDEANISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_ANDEANISM</DependencyType>
 					<TechType>TECH_ANDEANISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_NGAIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_NGAIISM</DependencyType>
 					<TechType>TECH_NGAIISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SHINTOISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SHINTOISM</DependencyType>
 					<TechType>TECH_SHINTOISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_KEMETISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_KEMETISM</DependencyType>
 					<TechType>TECH_KEMETISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_CANAANITE</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_CANAANITE</DependencyType>
 					<TechType>TECH_CANAANITE</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_RODNOVERY</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_RODNOVERY</DependencyType>
 					<TechType>TECH_RODNOVERY</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_ASATRU</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_ASATRU</DependencyType>
 					<TechType>TECH_ASATRU</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_HELLENISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_HELLENISM</DependencyType>
 					<TechType>TECH_HELLENISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_NAGHUALISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_NAGHUALISM</DependencyType>
 					<TechType>TECH_NAGHUALISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_JAINISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_JAINISM</DependencyType>
 					<TechType>TECH_JAINISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_VOODOO</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_VOODOO</DependencyType>
 					<TechType>TECH_VOODOO</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SIKHISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SIKHISM</DependencyType>
 					<TechType>TECH_SIKHISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_BAHAI</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_BAHAI</DependencyType>
 					<TechType>TECH_BAHAI</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_MORMON</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_MORMON</DependencyType>
 					<TechType>TECH_MORMON</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_CAODAIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_CAODAIISM</DependencyType>
 					<TechType>TECH_CAODAIISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SCIENTOLOGY</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SCIENTOLOGY</DependencyType>
 					<TechType>TECH_SCIENTOLOGY</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
@@ -1853,271 +809,109 @@
 		<TraitInfo>
 			<Type>TRAIT_FANATICAL1</Type>
 			<ReplacementID>TRAIT_COMPLEX_ZEALOUS1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_DRUIDISM</AndDependencyType>
-			</AndDependencyTypes>
 			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_DRUIDISM</DependencyType>
 					<TechType>TECH_DRUIDISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SHAMANISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SHAMANISM</DependencyType>
 					<TechType>TECH_SHAMANISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_TENGRIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_TENGRIISM</DependencyType>
 					<TechType>TECH_TENGRIISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_MESOPOTAMISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_MESOPOTAMISM</DependencyType>
 					<TechType>TECH_MESOPOTAMISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_YORUBA</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_YORUBA</DependencyType>
 					<TechType>TECH_YORUBA</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_ANDEANISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_ANDEANISM</DependencyType>
 					<TechType>TECH_ANDEANISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_NGAIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_NGAIISM</DependencyType>
 					<TechType>TECH_NGAIISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SHINTOISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SHINTOISM</DependencyType>
 					<TechType>TECH_SHINTOISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_KEMETISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_KEMETISM</DependencyType>
 					<TechType>TECH_KEMETISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_CANAANITE</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_CANAANITE</DependencyType>
 					<TechType>TECH_CANAANITE</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_RODNOVERY</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_RODNOVERY</DependencyType>
 					<TechType>TECH_RODNOVERY</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_ASATRU</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_ASATRU</DependencyType>
 					<TechType>TECH_ASATRU</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_HELLENISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_HELLENISM</DependencyType>
 					<TechType>TECH_HELLENISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_NAGHUALISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_NAGHUALISM</DependencyType>
 					<TechType>TECH_NAGHUALISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_JAINISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_JAINISM</DependencyType>
 					<TechType>TECH_JAINISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_VOODOO</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_VOODOO</DependencyType>
 					<TechType>TECH_VOODOO</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SIKHISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SIKHISM</DependencyType>
 					<TechType>TECH_SIKHISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_BAHAI</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_BAHAI</DependencyType>
 					<TechType>TECH_BAHAI</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_MORMON</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_MORMON</DependencyType>
 					<TechType>TECH_MORMON</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_CAODAIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_CAODAIISM</DependencyType>
 					<TechType>TECH_CAODAIISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_FANATICAL1</Type>
-			<ReplacementID>TRAIT_COMPLEX_ZEALOUS1</ReplacementID>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SCIENTOLOGY</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SCIENTOLOGY</DependencyType>
 					<TechType>TECH_SCIENTOLOGY</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
@@ -2125,251 +919,109 @@
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_ZEALOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_DRUIDISM</AndDependencyType>
-			</AndDependencyTypes>
 			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_DRUIDISM</DependencyType>
 					<TechType>TECH_DRUIDISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ZEALOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SHAMANISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SHAMANISM</DependencyType>
 					<TechType>TECH_SHAMANISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ZEALOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_TENGRIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_TENGRIISM</DependencyType>
 					<TechType>TECH_TENGRIISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ZEALOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_MESOPOTAMISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_MESOPOTAMISM</DependencyType>
 					<TechType>TECH_MESOPOTAMISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ZEALOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_YORUBA</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_YORUBA</DependencyType>
 					<TechType>TECH_YORUBA</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ZEALOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_ANDEANISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_ANDEANISM</DependencyType>
 					<TechType>TECH_ANDEANISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ZEALOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_NGAIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_NGAIISM</DependencyType>
 					<TechType>TECH_NGAIISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ZEALOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SHINTOISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SHINTOISM</DependencyType>
 					<TechType>TECH_SHINTOISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ZEALOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_KEMETISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_KEMETISM</DependencyType>
 					<TechType>TECH_KEMETISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ZEALOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_CANAANITE</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_CANAANITE</DependencyType>
 					<TechType>TECH_CANAANITE</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ZEALOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_RODNOVERY</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_RODNOVERY</DependencyType>
 					<TechType>TECH_RODNOVERY</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ZEALOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_ASATRU</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_ASATRU</DependencyType>
 					<TechType>TECH_ASATRU</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ZEALOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_HELLENISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_HELLENISM</DependencyType>
 					<TechType>TECH_HELLENISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ZEALOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_NAGHUALISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_NAGHUALISM</DependencyType>
 					<TechType>TECH_NAGHUALISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ZEALOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_JAINISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_JAINISM</DependencyType>
 					<TechType>TECH_JAINISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ZEALOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_VOODOO</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_VOODOO</DependencyType>
 					<TechType>TECH_VOODOO</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ZEALOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SIKHISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SIKHISM</DependencyType>
 					<TechType>TECH_SIKHISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ZEALOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_BAHAI</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_BAHAI</DependencyType>
 					<TechType>TECH_BAHAI</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ZEALOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_MORMON</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_MORMON</DependencyType>
 					<TechType>TECH_MORMON</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ZEALOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_CAODAIISM</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_CAODAIISM</DependencyType>
 					<TechType>TECH_CAODAIISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
-			</TechResearchModifiers>
-		</TraitInfo>
-		<TraitInfo>
-			<Type>TRAIT_ZEALOUS2</Type>
-			<AndDependencyTypes>
-				<AndDependencyType>TECH_SCIENTOLOGY</AndDependencyType>
-			</AndDependencyTypes>
-			<TechResearchModifiers>
 				<TechResearchModifier>
+					<DependencyType>TECH_SCIENTOLOGY</DependencyType>
 					<TechType>TECH_SCIENTOLOGY</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>

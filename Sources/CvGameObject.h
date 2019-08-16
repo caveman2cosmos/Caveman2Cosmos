@@ -63,7 +63,7 @@ public:
 	virtual void* addPythonArgument(CyArgsList* argsList) = 0;
 	virtual void disposePythonArgument(void* pArgument) = 0;
 
-	virtual int adaptValueToGame(int iID, int iValue) const;
+	virtual int adaptValueToGame(uint uiID, int iValue) const;
 };
 
 class CvGameObjectGame : public CvGameObject
@@ -133,7 +133,7 @@ public:
 	virtual void* addPythonArgument(CyArgsList* argsList);
 	virtual void disposePythonArgument(void* pArgument);
 
-	virtual int adaptValueToGame(int iID, int iValue) const;
+	virtual int adaptValueToGame(uint uiID, int iValue) const;
 
 protected:
 	CvPlayer* m_pPlayer;
@@ -164,7 +164,7 @@ public:
 	virtual void* addPythonArgument(CyArgsList* argsList);
 	virtual void disposePythonArgument(void* pArgument);
 
-	virtual int adaptValueToGame(int iID, int iValue) const;
+	virtual int adaptValueToGame(uint uiID, int iValue) const;
 
 protected:
 	CvCity* m_pCity;
@@ -193,7 +193,7 @@ public:
 	virtual void* addPythonArgument(CyArgsList* argsList);
 	virtual void disposePythonArgument(void* pArgument);
 
-	virtual int adaptValueToGame(int iID, int iValue) const;
+	virtual int adaptValueToGame(uint uiID, int iValue) const;
 
 protected:
 	CvUnit* m_pUnit;

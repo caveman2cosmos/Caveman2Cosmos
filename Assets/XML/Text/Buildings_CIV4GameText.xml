@@ -30680,31 +30680,6 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>[ICON_BULLET]Generuje punkty Wielkiego Generala na podstawie punktacji.[NEWLINE][ICON_BULLET]Wasale zwiekszaja przyrosty tych punktów.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LOTUS_TEMPLE</Tag>
-		<English>Lotus Temple</English>
-		<French>
-			<Text>Le Temple du Lotus</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Swiatynia Lotosu</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LOTUS_TEMPLE_PEDIA</Tag>
-		<English>The Bahai House of Worship in New Delhi, India, popularly known as the Lotus Temple due to its flowerlike shape, is a Bahai House of Worship and also a prominent attraction in Delhi. It was completed in 1986 and serves as the Mother Temple of the Indian subcontinent. It has won numerous architectural awards and been featured in hundreds of newspaper and magazine articles.</English>
-		<Polish>Swiatynia Lotosu w Delhi (ang. Baha'í House of Worship lub Lotus Temple) - najwieksza swiatynia bahaistyczna w Indiach. Zlokalizowana jest w poludniowej czesci sródmiescia Delhi. Uwaza sie, ze architektura swiatyni w wielu elementach nawiazuje do Tadz Mahal. Polozona w rozleglych ogrodach swiatynia wysokosci okolo 40 metrów, której wyglad zainspirowany jest kwiatem lotosu. Glówne filary tworza dziewieciokat foremny. Czesc górna sklada sie z 27 "platków".</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LOTUS_TEMPLE_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Lotus Temple[COLOR_REVERT] gives you a second chance to make friends with leaders with serious conflicts.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LOTUS_TEMPLE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Changes Leaders with Furious and Annoyed Attitude to Cautious Attitude</English>
-		<French>[ICON_BULLET]Améliore l'attitude des Leaders adverses, de Furieux ou Inquiet à Prudent</French>
-		<Polish>[ICON_BULLET]Zmienia Liderów z Nastawieniem Wscieklym i Zirytowanym na Ostrozne.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NAZCA_LINES</Tag>
 		<English>Nazca Lines</English>
 		<French>

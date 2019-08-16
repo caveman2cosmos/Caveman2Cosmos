@@ -226,7 +226,8 @@
 			<Strategy>TXT_KEY_BUILDING_ENVIRONMENTAL_A_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_ENVIRONMENTAL_A</ArtDefineTag>			<bCenterInCity>1</bCenterInCity>
+			<ArtDefineTag>ART_DEF_BUILDING_ENVIRONMENTAL_A</ArtDefineTag>
+			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -296,7 +297,8 @@
 			<Strategy>TXT_KEY_BUILDING_MEDICAL_A_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_MEDICAL_A</ArtDefineTag>			<bCenterInCity>1</bCenterInCity>
+			<ArtDefineTag>ART_DEF_BUILDING_MEDICAL_A</ArtDefineTag>
+			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -401,7 +403,8 @@
 			<Strategy>TXT_KEY_BUILDING_SAFETY_A_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_SAFETY_A</ArtDefineTag>			<bCenterInCity>1</bCenterInCity>
+			<ArtDefineTag>ART_DEF_BUILDING_SAFETY_A</ArtDefineTag>
+			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -511,7 +514,8 @@
 			<Strategy>TXT_KEY_BUILDING_TOURISM_A_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM_A</ArtDefineTag>			<bCenterInCity>1</bCenterInCity>
+			<ArtDefineTag>ART_DEF_BUILDING_TOURISM_A</ArtDefineTag>
+			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -7077,13 +7081,12 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_EMANCIPATION</PrereqTech>
-			<!-- This bit moved into World View modules.
 			<PrereqNotBuildingClasses>
 				<PrereqNotBuildingClass>
 					<BuildingClassMustNotHave>BUILDINGCLASS_SLAVERY</BuildingClassMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses-->
+			</PrereqNotBuildingClasses>
 			<iInsidiousness>20</iInsidiousness>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -7455,7 +7458,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_TOURISM</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
+					<iAmountPerTurn>-1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
@@ -18827,7 +18830,8 @@
 			<Strategy>TXT_KEY_BUILDING_HINDU_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_HINDU_SHRINE</ArtDefineTag>			<ConstructSound>AS2D_BUILD_HINDU</ConstructSound>
+			<ArtDefineTag>ART_DEF_BUILDING_HINDU_SHRINE</ArtDefineTag>
+			<ConstructSound>AS2D_BUILD_HINDU</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -18892,7 +18896,8 @@
 			<Strategy>TXT_KEY_BUILDING_CONFUCIAN_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_CONFUCIAN_SHRINE</ArtDefineTag>			<ConstructSound>AS2D_BUILD_CONFUCIAN</ConstructSound>
+			<ArtDefineTag>ART_DEF_BUILDING_CONFUCIAN_SHRINE</ArtDefineTag>
+			<ConstructSound>AS2D_BUILD_CONFUCIAN</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -18959,7 +18964,8 @@
 			<Strategy>TXT_KEY_BUILDING_BUDDHIST_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_BUDDHIST_SHRINE</ArtDefineTag>			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
+			<ArtDefineTag>ART_DEF_BUILDING_BUDDHIST_SHRINE</ArtDefineTag>
+			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -19024,7 +19030,8 @@
 			<Strategy>TXT_KEY_BUILDING_ISLAMIC_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_ISLAMIC_SHRINE</ArtDefineTag>			<ConstructSound>AS2D_BUILD_ISLAMIC</ConstructSound>
+			<ArtDefineTag>ART_DEF_BUILDING_ISLAMIC_SHRINE</ArtDefineTag>
+			<ConstructSound>AS2D_BUILD_ISLAMIC</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -19128,7 +19135,8 @@
 			<Strategy>TXT_KEY_BUILDING_STATUE_OF_ZEUS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_STATUE_OF_ZEUS</ArtDefineTag>			<fVisibilityPriority>1</fVisibilityPriority>
+			<ArtDefineTag>ART_DEF_BUILDING_STATUE_OF_ZEUS</ArtDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -19196,7 +19204,8 @@
 			<Strategy>TXT_KEY_BUILDING_JEWISH_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_JEWISH_SHRINE</ArtDefineTag>			<ConstructSound>AS2D_BUILD_JEWISH</ConstructSound>
+			<ArtDefineTag>ART_DEF_BUILDING_JEWISH_SHRINE</ArtDefineTag>
+			<ConstructSound>AS2D_BUILD_JEWISH</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -19268,7 +19277,8 @@
 			<Strategy>TXT_KEY_BUILDING_VALLEY_KINGS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_VALLEY_KINGS</ArtDefineTag>			<!-- Prerequisites -->
+			<ArtDefineTag>ART_DEF_BUILDING_VALLEY_KINGS</ArtDefineTag>
+			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

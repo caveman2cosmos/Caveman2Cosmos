@@ -16,7 +16,6 @@
 	</ElementType>
 	<ElementType name="Type" content="textOnly"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-	<ElementType name="bTypeDependency" content="textOnly" dt:type="boolean"/>
 	<ElementType name="DependencyType" content="textOnly"/>
 	<ElementType name="AndDependencyTypes" content="eltOnly">
 		<element type="DependencyType" minOccurs="1"/>
@@ -143,7 +142,6 @@
 	<ElementType name="InterfaceArtInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -155,7 +153,6 @@
 	<ElementType name="MovieArtInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -167,7 +164,6 @@
 	<ElementType name="MiscArtInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -182,7 +178,6 @@
 	<ElementType name="UnitArtInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -217,7 +212,6 @@
 	<ElementType name="BuildingArtInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -236,7 +230,6 @@
 	<ElementType name="CivilizationArtInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -250,7 +243,6 @@
 	<ElementType name="LeaderheadArtInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -266,7 +258,6 @@
 	<ElementType name="BonusArtInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -284,7 +275,6 @@
 	<ElementType name="ImprovementArtInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -302,7 +292,6 @@
 	<ElementType name="TerrainArtInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -356,7 +345,6 @@
 	<ElementType name="FeatureArtInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -375,7 +363,6 @@
 	<ElementType name="EffectArtInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -393,7 +380,6 @@
 	<ElementType name="MainMenu" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->

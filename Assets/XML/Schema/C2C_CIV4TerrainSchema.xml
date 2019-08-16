@@ -193,7 +193,6 @@
 	<ElementType name="TerrainInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -257,7 +256,6 @@
 	<ElementType name="YieldInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -324,7 +322,6 @@
 	<ElementType name="FeatureInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -386,7 +383,6 @@
 	<ElementType name="BonusClassInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -456,7 +452,6 @@
 	<ElementType name="BonusInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -530,7 +525,6 @@
 	<ElementType name="ArtDefineTag" content="textOnly"/>
 	<ElementType name="Type" content="textOnly"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-	<ElementType name="bTypeDependency" content="textOnly" dt:type="boolean"/>
 	<ElementType name="DependencyType" content="textOnly"/>
 	<ElementType name="AndDependencyTypes" content="eltOnly">
 		<element type="DependencyType" minOccurs="1"/>
@@ -566,7 +560,6 @@
 	<ElementType name="TerrainTextureInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -703,7 +696,6 @@
   <ElementType name="ImprovementInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -792,7 +784,6 @@
 	<ElementType name="LandscapeInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -838,7 +829,6 @@
 	</ElementType>
 	<ElementType name="MapCategoryInfo" content="eltOnly">
 		<element type="Type"/>
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>

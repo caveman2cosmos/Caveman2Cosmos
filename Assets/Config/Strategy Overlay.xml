@@ -75,6 +75,7 @@
 	<!-- Interacting -->
 	<event type="ModNetMessage" function="onModNetMessage"/>
 
-	<shortcut key="Ctrl X | Ctrl F10" function="toggleDotMapVisibility"/>
-	<shortcut key="Alt X | Alt F10" function="toggleDotMapEditMode"/>
+	<shortcut key="Shift X" function="toggleDotMapSize"/>
+	<shortcut key="Ctrl X" function="toggleDotMapVisibility"/>
+	<shortcut key="Alt X" function="toggleDotMapEditMode"/>
 </mod>

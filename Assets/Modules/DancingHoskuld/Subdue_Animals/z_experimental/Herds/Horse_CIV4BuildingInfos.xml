@@ -32,11 +32,10 @@
 			</Flavors>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_WRITING</PrereqTech>
+					<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-1</iCommerce>
-						<iCommerce>1</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>

@@ -245,6 +245,9 @@
 	</ElementType>
 	<ElementType name="iModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="TechResearchModifier" content="eltOnly">
+		<element type="DependencyType" minOccurs="0"/>
+		<element type="AndDependencyTypes" minOccurs="0"/>
+		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="TechType"/>
 		<element type="iModifier"/>
 	</ElementType>
@@ -270,6 +273,9 @@
 	</ElementType>
 	<ElementType name="iBuildingHappinessModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="BuildingHappinessModifierType" content="eltOnly">
+		<element type="DependencyType" minOccurs="0"/>
+		<element type="AndDependencyTypes" minOccurs="0"/>
+		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="BuildingType"/>
 		<element type="iBuildingHappinessModifier"/>
 	</ElementType>
@@ -564,7 +570,6 @@
 	<ElementType name="LeaderHeadInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -671,7 +676,6 @@
 	</ElementType>
 	<ElementType name="Type" content="textOnly"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-	<ElementType name="bTypeDependency" content="textOnly" dt:type="boolean"/>
 	<ElementType name="DependencyType" content="textOnly"/>
 	<ElementType name="AndDependencyTypes" content="eltOnly">
 		<element type="DependencyType" minOccurs="1"/>
@@ -762,7 +766,6 @@
 	<ElementType name="TraitInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -1006,7 +1009,6 @@
 	<ElementType name="CivilizationInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -1067,7 +1069,6 @@
 	<ElementType name="UnitArtStyleTypeInfo" content="eltOnly">
 		<element type="Type"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 <!-- XMLCOPY				END					MRGENIE		-->
@@ -1098,7 +1099,6 @@
 	<ElementType name="CapitalCondition"/>
 	<ElementType name="CivNameInfo" content="eltOnly" order="many">
 		<element type="Type"/>
-		<element type="bTypeDependency" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bPrefix" minOccurs="0"/>

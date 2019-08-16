@@ -8148,6 +8148,21 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_SLAVERY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_SLAVERY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVSlavery</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_EGYPT_MYTH_MISSIONARY</Class>
@@ -28459,7 +28474,7 @@
 				<iRangedWaveSize>1</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_WORKBOAT_ANCIENT</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_WORKBOAT</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
@@ -52694,6 +52709,19 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_SLAVERY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_SLAVERY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVSlavery</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
@@ -52798,6 +52826,21 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_SLAVERY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_SLAVERY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVSlavery</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_PARK_RANGER</Class>
@@ -54777,6 +54820,21 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_SLAVERY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_SLAVERY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVSlavery</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_ARTIST</Class>
@@ -55064,6 +55122,21 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_SLAVERY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_SLAVERY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVSlavery</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_SCIENTIST</Class>
@@ -55288,6 +55361,21 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_SLAVERY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_SLAVERY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVSlavery</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_MERCHANT</Class>
@@ -55474,6 +55562,21 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_SLAVERY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_SLAVERY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVSlavery</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_ENGINEER</Class>
@@ -55659,6 +55762,21 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_SLAVERY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_SLAVERY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVSlavery</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_GREAT_GENERAL</Class>
@@ -55997,6 +56115,21 @@
 			<iCommandRange>1</iCommandRange>
 			<iControlPoints>5</iControlPoints>
 			<bGreatGeneral>1</bGreatGeneral>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_SLAVERY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_SLAVERY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVSlavery</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_GREAT_ADMIRAL</Class>
@@ -56146,6 +56279,21 @@
 			<iCommandRange>1</iCommandRange>
 			<iControlPoints>5</iControlPoints>
 			<bGreatGeneral>1</bGreatGeneral>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_SLAVERY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_SLAVERY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVSlavery</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_GREAT_HUNTER</Class>
@@ -56301,6 +56449,21 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_SLAVERY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_SLAVERY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVSlavery</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_GREAT_SPY</Class>
@@ -56403,6 +56566,21 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_SLAVERY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_SLAVERY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVSlavery</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL</Class>
@@ -56638,7 +56816,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_BRUTE</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_BRUTE</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_NO_SIEGE</FormationType>
@@ -56749,7 +56927,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_STONE_THROWER</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_STONE_THROWER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_NO_SIEGE</FormationType>
@@ -56842,7 +57020,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_WANDERER</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_WANDERER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -57035,7 +57213,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_GATHERER</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_GATHERER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -57345,7 +57523,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_WORKER</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_WORKER</EarlyArtDefineTag>
 					<LateArtDefineTag>ART_DEF_UNIT_WORKERMODERN</LateArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
@@ -57444,7 +57622,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_WISE_WOMAN</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_WISE_WOMAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -57569,7 +57747,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_SHEPHERD</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_SHEPHERD</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -57689,7 +57867,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_TRAINED_DOG</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_TRAINED_DOG</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
@@ -57832,7 +58010,7 @@
 				<iRangedWaveSize>1</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_OUTRIGGER</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_OUTRIGGER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
@@ -57952,7 +58130,7 @@
 				<iRangedWaveSize>1</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_KAYAK</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_KAYAK</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
@@ -58061,7 +58239,7 @@
 				<iRangedWaveSize>1</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_WAR_CANOE</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_WAR_CANOE</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
@@ -58174,7 +58352,7 @@
 				<iRangedWaveSize>1</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_CANOE</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_CANOE</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
@@ -58298,7 +58476,7 @@
 				<iRangedWaveSize>1</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_RAFT</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_RAFT</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
@@ -58470,7 +58648,7 @@
 				<iRangedWaveSize>1</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_WORKBOAT</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_WORKBOAT_SEDENTARY</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
@@ -58615,7 +58793,7 @@
 				<iRangedWaveSize>1</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_WORKBOAT_ANCIENT</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_WORKBOAT_ANCIENT</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
@@ -58725,7 +58903,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_LOG_RAM</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_LOG_RAM</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
@@ -58845,7 +59023,7 @@
 				<iRangedWaveSize>2</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_ELEPHANT_RIDER</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_ELEPHANT_RIDER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -58955,7 +59133,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_OBSIDIAN_SPEARMAN</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_OBSIDIAN_SPEARMAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -59061,7 +59239,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_STONE_AGE_SPEARMAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -59161,7 +59339,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_WOODEN_SPEARMAN</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_WOODEN_SPEARMAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -59263,7 +59441,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_OBSIDIAN_SWORDSMAN</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_OBSIDIAN_SWORDSMAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -59371,7 +59549,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_OBSIDIAN_AXEMAN</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_OBSIDIAN_AXEMAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -59480,7 +59658,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_STONE_AGE_AXEMAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -59584,7 +59762,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_OBSIDIAN_MACEMAN</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_OBSIDIAN_MACEMAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_NO_SIEGE</FormationType>
@@ -59697,7 +59875,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_STONE_MACEMAN</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_STONE_MACEMAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_NO_SIEGE</FormationType>
@@ -59789,7 +59967,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_HUNTER</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_HUNTER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<UnitCombatTargets>
@@ -59893,7 +60071,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_TRACKER</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_TRACKER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<UnitCombatTargets>
@@ -59985,7 +60163,7 @@
 				<iRangedWaveSize>1</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_CHASER</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_CHASER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -60082,7 +60260,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_SCOUT</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_SCOUT</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -64165,6 +64343,21 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_SLAVERY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_SLAVERY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVSlavery</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<!--TB Note: By the naval review, this is the Medical Ship -->
 		<UnitInfo>
@@ -65760,6 +65953,21 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_SLAVERY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_SLAVERY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVSlavery</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_GREAT_DETECTIVE</Class>
@@ -65834,6 +66042,21 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_SLAVERY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_SLAVERY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVSlavery</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_STORY_TELLER</Class>
@@ -67855,6 +68078,17 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
+			<Buildings>
+				<BuildingType>BUILDING_WV_SLAVERY</BuildingType>
+				<BuildingType>BUILDING_SLAVE_MARKET</BuildingType>
+				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
+				<BuildingType>BUILDING_SLAVE_COMPOUND_MILITARY_SUPPORT</BuildingType>
+				<BuildingType>BUILDING_SLAVE_COMPOUND_ENTERTAINMENT</BuildingType>
+				<BuildingType>BUILDING_SLAVE_COMPOUND_FOOD</BuildingType>
+				<BuildingType>BUILDING_SLAVE_COMPOUND_PRODUCTION</BuildingType>
+				<BuildingType>BUILDING_SLAVE_COMPOUND_COMMERCE</BuildingType>
+				<BuildingType>BUILDING_SLAVE_COMPOUND_SANITATION</BuildingType>
+			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<bNoRevealMap>1</bNoRevealMap>
@@ -68060,6 +68294,198 @@ iTradeMultiplier>3</iTradeMultiplier>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_JOIN_CITY_AS_SETTLED_SLAVE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_JOIN_AS_SLAVE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<And>
+									<Greater>
+										<Python>hasSufficientPopulation</Python>
+										<Constant>0</Constant>
+									</Greater>
+									<Is>TAG_OWNED</Is>
+								</And>
+							</PlotCondition>
+							<PythonCallback>doAddSettledSlave</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_JOIN_CITY_AS_SLAVE_FOOD</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_JOIN_AS_SLAVE_FOOD</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<And>
+									<Greater>
+										<Python>getNumNonSpecialistSlavesFood</Python>
+										<Constant>0</Constant>
+									</Greater>
+									<Is>TAG_OWNED</Is>
+								</And>
+							</PlotCondition>
+							<PythonCallback>doAddSettledSlaveFood</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_JOIN_CITY_AS_SLAVE_PRODUCTION</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_JOIN_AS_SLAVE_PRODUCTION</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<And>
+									<Greater>
+										<Python>getNumNonSpecialistSlavesProduction</Python>
+										<Constant>0</Constant>
+									</Greater>
+									<Is>TAG_OWNED</Is>
+								</And>
+							</PlotCondition>
+							<PythonCallback>doAddSettledSlaveProduction</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_JOIN_CITY_AS_SLAVE_COMMERCE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_JOIN_AS_SLAVE_COMMERCE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<And>
+									<Greater>
+										<Python>getNumNonSpecialistSlavesCommerce</Python>
+										<Constant>0</Constant>
+									</Greater>
+									<Is>TAG_OWNED</Is>
+								</And>
+							</PlotCondition>
+							<PythonCallback>doAddSettledSlaveCommerce</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_JOIN_CITY_AS_SLAVE_HEALTH</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_JOIN_AS_SLAVE_HEALTH</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<And>
+									<Greater>
+										<Python>getNumNonSpecialistSlavesHealth</Python>
+										<Constant>0</Constant>
+									</Greater>
+									<Is>TAG_OWNED</Is>
+								</And>
+							</PlotCondition>
+							<PythonCallback>doAddSettledSlaveHealth</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_JOIN_CITY_AS_SLAVE_ENTERTAINMENT</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_JOIN_AS_SLAVE_ENTERTAINMENT</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<And>
+									<Greater>
+										<Python>getNumNonSpecialistSlavesEntertainment</Python>
+										<Constant>0</Constant>
+									</Greater>
+									<Is>TAG_OWNED</Is>
+								</And>
+							</PlotCondition>
+							<PythonCallback>doAddSettledSlaveEntertainment</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_JOIN_CITY_AS_SLAVE_TUTOR</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_JOIN_AS_SLAVE_TUTOR</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<And>
+									<Greater>
+										<Python>getNumNonSpecialistSlavesTutor</Python>
+										<Constant>0</Constant>
+									</Greater>
+									<Is>TAG_OWNED</Is>
+								</And>
+							</PlotCondition>
+							<PythonCallback>doAddSettledSlaveTutor</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+<!--				<Action>
+					<MissionType>MISSION_JOIN_CITY_AS_SLAVE_MILITARY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_JOIN_AS_SLAVE_MILITARY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<And>
+									<Greater>
+										<Python>getNumNonSpecialistSlavesMilitary</Python>
+										<Constant>0</Constant>
+									</Greater>
+									<Is>TAG_OWNED</Is>
+								</And>
+							</PlotCondition>
+							<PythonCallback>doAddSettledSlaveMilitary</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+-->
+				<Action>
+					<MissionType>MISSION_SELL_CAPTIVE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_SLAVE_SALE_SLAVERY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Yields>
+								<iYield>0</iYield>
+								<iYield>0</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>6</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_SLAVE_SALE_SLAVE_MARKET</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Yields>
+								<iYield>0</iYield>
+								<iYield>0</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>12</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
@@ -68126,6 +68552,10 @@ iTradeMultiplier>3</iTradeMultiplier>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Buildings>
+				<BuildingType>BUILDING_WV_SLAVERY</BuildingType>
+				<BuildingType>BUILDING_SLAVE_MARKET</BuildingType>
+			</Buildings>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_JOIN_CITY_POPULATION</MissionType>
@@ -68390,6 +68820,17 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
+			<Buildings>
+				<BuildingType>BUILDING_WV_SLAVERY</BuildingType>
+				<BuildingType>BUILDING_SLAVE_MARKET</BuildingType>
+				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
+				<BuildingType>BUILDING_SLAVE_COMPOUND_MILITARY_SUPPORT</BuildingType>
+				<BuildingType>BUILDING_SLAVE_COMPOUND_ENTERTAINMENT</BuildingType>
+				<BuildingType>BUILDING_SLAVE_COMPOUND_FOOD</BuildingType>
+				<BuildingType>BUILDING_SLAVE_COMPOUND_PRODUCTION</BuildingType>
+				<BuildingType>BUILDING_SLAVE_COMPOUND_COMMERCE</BuildingType>
+				<BuildingType>BUILDING_SLAVE_COMPOUND_SANITATION</BuildingType>
+			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<bNoRevealMap>1</bNoRevealMap>

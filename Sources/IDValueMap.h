@@ -12,6 +12,7 @@
 #define IDVALUEMAP_H
 
 #include "CvXMLLoadUtility.h"
+#include "CvString.h"
 
 // ValueType will usually be int, only value types that are supported by FDataStreamBase as overloaded read and write will work without template specialization
 // The maps are assumed to be small, so a vector of pairs is used
@@ -19,6 +20,8 @@ template <class ValueType, ValueType& defaultValue>
 class IDValueMap
 {
 public:
+	static uint getIDForString(const char* szType);
+
 	void read(FDataStreamBase* pStream)
 	{
 		unsigned int iSize = 0;
@@ -53,7 +56,7 @@ public:
 				if (pXML->TryMoveToXmlFirstChild())
 				{
 					pXML->GetXmlVal(szTextVal);
-					int iID = GC.getOrCreateInfoTypeForString(szTextVal);
+					uint iID = getIDForString(szTextVal);
 					ValueType val = defaultValue;
 					pXML->GetNextXmlVal(&val);
 					setValue(iID, val);
@@ -96,17 +99,17 @@ public:
 		}
 	}
 
-	ValueType getValue(int iID) const
+	ValueType getValue(uint iID) const
 	{
-		for (unsigned int i=0; i<m_map.size(); i++)
+		for (uint i = 0; i < m_map.size(); i++)
 			if (m_map[i].first == iID)
 				return m_map[i].second;
 		return defaultValue;
 	}
 
-	void setValue(int iID, ValueType val)
+	void setValue(uint iID, ValueType val)
 	{
-		for (unsigned int i=0; i<m_map.size(); i++)
+		for (uint i = 0; i < m_map.size(); i++)
 		{
 			if (m_map[i].first == iID)
 			{
@@ -119,7 +122,8 @@ public:
 
 
 protected:
-	std::vector<std::pair<int,ValueType> > m_map;
+	std::vector<std::pair<uint,ValueType> > m_map;
+	static std::vector<std::pair<uint,CvString> > s_IDmap;
 };
 
 extern int g_iPercentDefault;
@@ -127,5 +131,19 @@ extern int g_iModifierDefault;
 
 typedef IDValueMap<int, g_iPercentDefault> IDValueMapPercent;
 typedef IDValueMap<int, g_iModifierDefault> IDValueMapModifier;
+
+template <class ValueType, ValueType& defaultValue>
+std::vector<std::pair<uint,CvString> > IDValueMap<ValueType, defaultValue>::s_IDmap;
+
+template <class ValueType, ValueType& defaultValue>
+uint IDValueMap<ValueType, defaultValue>::getIDForString(const char* szType)
+{
+	for (std::vector<std::pair<uint,CvString> >::iterator it = s_IDmap.begin(); it != s_IDmap.end(); it++)
+		if (it->second.CompareNoCase(szType) == 0)
+			return it->first;
+	uint uiID = s_IDmap.size();
+	s_IDmap.push_back(std::make_pair(uiID, szType));
+	return uiID;
+}
 
 #endif

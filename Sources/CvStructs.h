@@ -36,7 +36,6 @@ struct AidStruct
 {	
 	PropertyTypes eProperty;
 	int iChange;
-	operator int*() {return (int*)&eProperty;}
 	operator int() const {return (int)eProperty;}
 	bool operator< (const AidStruct& rhs) const {return (int)eProperty < (int)rhs.eProperty;}
 };
@@ -44,7 +43,6 @@ struct PromotionModifier
 {	
 	PromotionTypes ePromotion;
 	int iModifier;
-	operator int*() {return (int*)&ePromotion;}
 	operator int() const {return (int)ePromotion;}
 	bool operator< (const PromotionModifier& rhs) const {return (int)ePromotion < (int)rhs.ePromotion;}
 };
@@ -52,7 +50,6 @@ struct PromotionLineModifier
 {	
 	PromotionLineTypes ePromotionLine;
 	int iModifier;
-	operator int*() {return (int*)&ePromotionLine;}
 	operator int() const {return (int)ePromotionLine;}
 	bool operator< (const PromotionLineModifier& rhs) const {return (int)ePromotionLine < (int)rhs.ePromotionLine;}
 };
@@ -63,7 +60,6 @@ struct AfflictOnAttackChange
 	int iMelee;
 	int iDistance;
 	int iImmediate;
-	operator int*() {return (int*)&eAfflictionLine;}
 	operator int() const {return (int)eAfflictionLine;}
 	bool operator< (const AfflictOnAttackChange& rhs) const {return (int)eAfflictionLine < (int)rhs.eAfflictionLine;}
 };
@@ -74,7 +70,6 @@ struct PlotTeamVisibilityIntensity
 	int iUnitID;
 	int iIntensity;
 	int iCount;
-	operator int*() {return (int*)&eTeam;}
 	operator int() const {return (int)eTeam;}
 	bool operator< (const PlotTeamVisibilityIntensity& rhs) const {return (int)eTeam < (int)rhs.eTeam;}
 };
@@ -82,14 +77,12 @@ struct FreePromoTypes
 {	
 	PromotionTypes ePromotion;
 	BoolExpr* m_pExprFreePromotionCondition;
-	operator int*() {return (int*)&ePromotion;}
 	operator int() const {return (int)ePromotion;}
 	bool operator< (const FreePromoTypes& rhs) const {return (int)ePromotion < (int)rhs.ePromotion;}
 };
 struct FreeTraitTypes
 {	
 	TraitTypes eTrait;
-	operator int*() {return (int*)&eTrait;}
 	operator int() const {return (int)eTrait;}
 	bool operator< (const FreeTraitTypes& rhs) const {return (int)eTrait < (int)rhs.eTrait;}
 };
@@ -100,7 +93,6 @@ struct AfflictOnAttack
 	int iMelee;
 	int iDistance;
 	int iImmediate;
-	operator int*() {return (int*)&eAfflictionLine;}
 	operator int() const {return (int)eAfflictionLine;}
 	bool operator< (const AfflictOnAttack& rhs) const {return (int)eAfflictionLine < (int)rhs.eAfflictionLine;}
 };
@@ -108,7 +100,6 @@ struct TerrainModifier
 {	
 	TerrainTypes eTerrain;
 	int iModifier;
-	operator int*() {return (int*)&eTerrain;}
 	operator int() const {return (int)eTerrain;}
 	bool operator< (const TerrainModifier& rhs) const {return (int)eTerrain < (int)rhs.eTerrain;}
 };
@@ -116,7 +107,6 @@ struct FeatureModifier
 {	
 	FeatureTypes eFeature;
 	int iModifier;
-	operator int*() {return (int*)&eFeature;}
 	operator int() const {return (int)eFeature;}
 	bool operator< (const FeatureModifier& rhs) const {return (int)eFeature < (int)rhs.eFeature;}
 };
@@ -124,7 +114,6 @@ struct BuildModifier
 {	
 	BuildTypes eBuild;
 	int iModifier;
-	operator int*() {return (int*)&eBuild;}
 	operator int() const {return (int)eBuild;}
 	bool operator< (const BuildModifier& rhs) const {return (int)eBuild < (int)rhs.eBuild;}
 };
@@ -132,7 +121,6 @@ struct UnitCombatModifier
 {	
 	UnitCombatTypes eUnitCombat;
 	int iModifier;
-	operator int*() {return (int*)&eUnitCombat;}
 	operator int() const {return (int)eUnitCombat;}
 	bool operator< (const UnitCombatModifier& rhs) const {return (int)eUnitCombat < (int)rhs.eUnitCombat;}
 };
@@ -140,7 +128,6 @@ struct BonusModifier
 {	
 	BonusTypes eBonus;
 	int iModifier;
-	operator int*() {return (int*)&eBonus;}
 	operator int() const {return (int)eBonus;}
 	bool operator< (const BonusModifier& rhs) const {return (int)eBonus < (int)rhs.eBonus;}
 };
@@ -148,14 +135,12 @@ struct ImprovementModifier
 {	
 	ImprovementTypes eImprovement;
 	int iModifier;
-	operator int*() {return (int*)&eImprovement;}
 	operator int() const {return (int)eImprovement;}
 	bool operator< (const ImprovementModifier& rhs) const {return (int)eImprovement < (int)rhs.eImprovement;}
 };
 struct DisallowedTraitType
 {	
 	TraitTypes eTrait;
-	operator int*() {return (int*)&eTrait;}
 	operator int() const {return (int)eTrait;}
 	bool operator< (const DisallowedTraitType& rhs) const {return (int)eTrait < (int)rhs.eTrait;}
 };
@@ -163,7 +148,6 @@ struct DomainModifier
 {	
 	DomainTypes eDomain;
 	int iModifier;
-	operator int*() {return (int*)&eDomain;}
 	operator int() const {return (int)eDomain;}
 	bool operator< (const DomainModifier& rhs) const {return (int)eDomain < (int)rhs.eDomain;}
 };
@@ -171,7 +155,6 @@ struct TechModifier
 {	
 	TechTypes eTech;
 	int iModifier;
-	operator int*() {return (int*)&eTech;}
 	operator int() const {return (int)eTech;}
 	bool operator< (const TechModifier& rhs) const {return (int)eTech < (int)rhs.eTech;}
 };
@@ -179,7 +162,7 @@ struct BuildingModifier
 {	
 	BuildingTypes eBuilding;
 	int iModifier;
-	operator int*() {return (int*)&eBuilding;}
+	int* operator&() {return reinterpret_cast<int*>(&eBuilding);}
 	operator int() const {return (int)eBuilding;}
 	bool operator< (const BuildingModifier& rhs) const {return (int)eBuilding < (int)rhs.eBuilding;}
 };
@@ -187,7 +170,6 @@ struct SpecialBuildingModifier
 {	
 	SpecialBuildingTypes eSpecialBuilding;
 	int iModifier;
-	operator int*() {return (int*)&eSpecialBuilding;}
 	operator int() const {return (int)eSpecialBuilding;}
 	bool operator< (const SpecialBuildingModifier& rhs) const {return (int)eSpecialBuilding < (int)rhs.eSpecialBuilding;}
 };
@@ -195,7 +177,6 @@ struct UnitModifier
 {	
 	UnitTypes eUnit;
 	int iModifier;
-	operator int*() {return (int*)&eUnit;}
 	operator int() const {return (int)eUnit;}
 	bool operator< (const UnitModifier& rhs) const {return (int)eUnit < (int)rhs.eUnit;}
 };
@@ -203,7 +184,6 @@ struct SpecialUnitModifier
 {	
 	SpecialUnitTypes eSpecialUnit;
 	int iModifier;
-	operator int*() {return (int*)&eSpecialUnit;}
 	operator int() const {return (int)eSpecialUnit;}
 	bool operator< (const SpecialUnitModifier& rhs) const {return (int)eSpecialUnit < (int)rhs.eSpecialUnit;}
 };
@@ -212,7 +192,6 @@ struct ImprovementYieldModifier
 	ImprovementTypes eImprovement;
 	YieldTypes eYield;
 	int iModifier;
-	operator int*() {return (int*)&eImprovement;}
 	operator int() const {return (int)eImprovement;}
 	bool operator< (const ImprovementYieldModifier& rhs) const {return (int)eImprovement < (int)rhs.eImprovement;}
 };
@@ -220,7 +199,6 @@ struct CivicOptionTypeBool
 {	
 	CivicOptionTypes eCivicOption;
 	bool bBool;
-	operator int*() {return (int*)&eCivicOption;}
 	operator int() const {return (int)eCivicOption;}
 	bool operator< (const CivicOptionTypeBool& rhs) const {return (int)eCivicOption < (int)rhs.eCivicOption;}
 };
@@ -228,7 +206,6 @@ struct GameOptionTypeBool
 {	
 	GameOptionTypes eGameOption;
 	bool bBool;
-	operator int*() {return (int*)&eGameOption;}
 	operator int() const {return (int)eGameOption;}
 	bool operator< (const GameOptionTypeBool& rhs) const {return (int)eGameOption < (int)rhs.eGameOption;}
 };
@@ -237,7 +214,6 @@ struct HealUnitCombat
 	UnitCombatTypes eUnitCombat;
 	int iHeal;
 	int iAdjacentHeal;
-	operator int*() {return (int*)&eUnitCombat;}
 	operator int() const {return (int)eUnitCombat;}
 	bool operator< (const HealUnitCombat& rhs) const {return (int)eUnitCombat < (int)rhs.eUnitCombat;}
 };
@@ -246,7 +222,6 @@ struct GroupSpawnUnitCombat
 	UnitCombatTypes eUnitCombat;
 	int iChance;
 	CvWString m_szTitle;
-	operator int*() {return (int*)&eUnitCombat;}
 	operator int() const {return (int)eUnitCombat;}
 	bool operator< (const GroupSpawnUnitCombat& rhs) const {return (int)eUnitCombat < (int)rhs.eUnitCombat;}
 };
@@ -255,7 +230,6 @@ struct InvisibleTerrainChanges
 	InvisibleTypes eInvisible;
 	TerrainTypes eTerrain;
 	int iIntensity;
-	operator int*() {return (int*)&eInvisible;}
 	operator int() const {return (int)eInvisible;}
 	bool operator< (const InvisibleTerrainChanges& rhs) const {return (int)eInvisible < (int)rhs.eInvisible;}
 };
@@ -264,7 +238,6 @@ struct InvisibleFeatureChanges
 	InvisibleTypes eInvisible;
 	FeatureTypes eFeature;
 	int iIntensity;
-	operator int*() {return (int*)&eInvisible;}
 	operator int() const {return (int)eInvisible;}
 	bool operator< (const InvisibleFeatureChanges& rhs) const {return (int)eInvisible < (int)rhs.eInvisible;}
 };
@@ -273,14 +246,12 @@ struct InvisibleImprovementChanges
 	InvisibleTypes eInvisible;
 	ImprovementTypes eImprovement;
 	int iIntensity;
-	operator int*() {return (int*)&eInvisible;}
 	operator int() const {return (int)eInvisible;}
 	bool operator< (const InvisibleImprovementChanges& rhs) const {return (int)eInvisible < (int)rhs.eInvisible;}
 };
 struct EnabledCivilizations
 {	
 	CivilizationTypes eCivilization;
-	operator int*() {return (int*)&eCivilization;}
 	operator int() const {return (int)eCivilization;}
 	bool operator< (const EnabledCivilizations& rhs) const {return (int)eCivilization < (int)rhs.eCivilization;}
 };
@@ -288,7 +259,6 @@ struct AfflictionLineChanges
 {	
 	PromotionLineTypes eAfflictionLine;
 	int iChange;
-	operator int*() {return (int*)&eAfflictionLine;}
 	operator int() const {return (int)eAfflictionLine;}
 	bool operator< (const AfflictionLineChanges& rhs) const {return (int)eAfflictionLine < (int)rhs.eAfflictionLine;}
 };
@@ -297,7 +267,6 @@ struct BonusAidModifiers
 	BonusTypes eBonusType;
 	PropertyTypes ePropertyType;
 	int iModifier;
-	operator int*() {return (int*)&eBonusType;}
 	operator int() const {return (int)eBonusType;}
 	bool operator< (const BonusAidModifiers& rhs) const {return (int)eBonusType < (int)rhs.eBonusType;}
 };
@@ -305,7 +274,6 @@ struct AidRateChanges
 {
 	PropertyTypes ePropertyType;
 	int iChange;
-	operator int*() {return (int*)&ePropertyType;}
 	operator int() const {return (int)ePropertyType;}
 	bool operator< (const AidRateChanges& rhs) const {return (int)ePropertyType < (int)rhs.ePropertyType;}
 };
@@ -313,7 +281,6 @@ struct PrereqBuildingClass
 {	
 	BuildingClassTypes eBuildingClass;
 	int iMinimumRequired;
-	operator int*() {return (int*)&eBuildingClass;}
 	operator int() const {return (int)eBuildingClass;}
 	bool operator< (const PrereqBuildingClass& rhs) const {return (int)eBuildingClass < (int)rhs.eBuildingClass;}
 };
@@ -322,7 +289,6 @@ struct TerrainStructs
 	TerrainTypes eTerrain;
 	TechTypes ePrereqTech;
 	int iTime;
-	operator int*() {return (int*)&eTerrain;}
 	operator int() const {return (int)eTerrain;}
 	bool operator< (const TerrainStructs& rhs) const {return (int)eTerrain < (int)rhs.eTerrain;}
 };
@@ -335,7 +301,6 @@ struct PlaceBonusTypes
 	TerrainTypes ePrereqTerrain;
 	FeatureTypes ePrereqFeature;
 	MapCategoryTypes ePrereqMapCategory;
-	operator int*() {return (int*)&eBonus;}
 	operator int() const {return (int)eBonus;}
 	bool operator< (const PlaceBonusTypes& rhs) const {return (int)eBonus < (int)rhs.eBonus;}
 };
@@ -346,7 +311,6 @@ struct PromotionLineAfflictionModifier
 	bool bWorkedTile;
 	bool bVicinity;
 	bool bAccessVolume;
-	operator int*() {return (int*)&ePromotionLine;}
 	operator int() const {return (int)ePromotionLine;}
 	bool operator< (const PromotionLineAfflictionModifier& rhs) const {return (int)ePromotionLine < (int)rhs.ePromotionLine;}
 };

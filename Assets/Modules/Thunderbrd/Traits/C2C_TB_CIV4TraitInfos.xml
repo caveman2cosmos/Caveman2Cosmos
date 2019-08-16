@@ -18636,10 +18636,6 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BAHAI</TechType>
-					<iModifier>20</iModifier>
-				</TechResearchModifier>
-				<TechResearchModifier>
 					<TechType>TECH_MORMON</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
@@ -19264,10 +19260,6 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BAHAI</TechType>
-					<iModifier>-20</iModifier>
-				</TechResearchModifier>
-				<TechResearchModifier>
 					<TechType>TECH_MORMON</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
@@ -19432,10 +19424,6 @@
 				</TechResearchModifier>
 				<TechResearchModifier>
 					<TechType>TECH_ENLIGHTENMENT</TechType>
-					<iModifier>-20</iModifier>
-				</TechResearchModifier>
-				<TechResearchModifier>
-					<TechType>TECH_BAHAI</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>

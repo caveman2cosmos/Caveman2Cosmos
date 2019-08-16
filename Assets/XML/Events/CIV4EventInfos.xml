@@ -4217,21 +4217,6 @@
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<!--BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_ANDEAN_CATHEDRAL</BuildingClass>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
-				</BuildingExtraCommerce-->
-				<!--BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_ASATRU_CATHEDRAL</BuildingClass>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
-				</BuildingExtraCommerce>
-				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_BAHAI_CATHEDRAL</BuildingClass>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
-				</BuildingExtraCommerce>
-				<BuildingExtraCommerce>
 					<BuildingClass>BUILDINGCLASS_CANAANISM_CATHEDRAL</BuildingClass>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>

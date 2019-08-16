@@ -14,8 +14,6 @@
 from CvPythonExtensions import *
 import CvScreensInterface
 import BugCore
-import BugPath
-import BugUtil
 import SdToolKit
 
 COLOR_KEYS = None
@@ -170,13 +168,14 @@ X, Y = 0, 1		# used in point tuples instead of creating a new class
 
 class City:
 	# Holds the data for a single dot-mapped city.
-	def __init__(self, point, color, layer):
+	def __init__(self, point, color, layer, bAlt):
 		self.point = point
 		self.color = color
 		self.layer = layer
+		self.bAlt = bAlt
 
 	def __eq__(self, other):
-		return self.point == other.point and self.color == other.color
+		return self.point == other.point and self.color == other.color and self.bAlt == other.bAlt
 
 	def __str__(self):
 		return "(%d,%d) on %d" % (self.point[X], self.point[Y], self.layer)
@@ -184,22 +183,17 @@ class City:
 	def isAt(self, point):
 		return self.point == point
 
-	def samePoint(self, other):
-		return self.point == other.point
-
-	def sameColor(self, other):
-		return self.color == other.color
-
-	def sameLayer(self, other):
-		return self.layer == other.layer
 
 def getDotMap():
 	if g_DotMap is None:
-		BugUtil.error("CvStrategyOverlay has not been initialized")
+		print "[ERROR] CvStrategyOverlay has not been initialized"
 	return g_DotMap
 
 def hideDotMap(args=None):
 	g_DotMap.hide()
+
+def toggleDotMapSize(args=None):
+	g_DotMap.toggleSize()
 
 def toggleDotMapVisibility(args=None):
 	g_DotMap.toggleVisibility()
@@ -221,11 +215,25 @@ class DotMapLayer(StrategyLayer):
 		self.DOT_LAYER = PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_NUMPAD_HELP
 		self.NO_DOT_STYLE = PlotStyles.PLOT_STYLE_NONE
 		self.MAX_DOT_STYLE = PlotStyles.PLOT_STYLE_WAVES
-		self.BFC_OFFSETS = []
-		for x in range(-2, 3):
-			for y in range(-2, 3):
-				if abs(x) != 2 or abs(y) != 2:
-					self.BFC_OFFSETS.append((x, y))
+		self.BFC_OFFSETS_STD = []
+		self.BFC_OFFSETS_ALT = []
+		self.bAlt = False
+		for x in range(-3, 4):
+			for y in range(-3, 4):
+
+				if x < 0: x0 = -x
+				else:	x0 = x
+				if y < 0: y0 = -y
+				else:	y0 = y
+
+				if x0 < 3 or y0 < 3:
+					if (x0, y0) not in ((3,3), (3,2), (2,3)):
+						self.BFC_OFFSETS_ALT.append((x, y))
+
+						if x0 > 2 or y0 > 2 or x0 == 2 and y0 == 2:
+							continue
+						self.BFC_OFFSETS_STD.append((x, y))
+
 		# default options
 		self.CROSS_ALPHA = 50.0
 		self.DOT_ALPHA = 50.0
@@ -237,6 +245,9 @@ class DotMapLayer(StrategyLayer):
 		# state
 		self.highlightedCity = None
 
+	def toggleSize(self):
+		self.bAlt = not self.bAlt
+
 	def reset(self):
 		self.cities = {}
 		self.dirty = False
@@ -244,42 +255,23 @@ class DotMapLayer(StrategyLayer):
 	def read(self):
 		data = SdToolKit.sdGetGlobal("StrategyOverlay", "CityDataDict")
 		self.clearCityLayers()
-		if data is not None:
-			self.cities = self.updateData(data)
+		if data:
+			# // @SAVEBREAK DELETE
+			bFormat = False
+			for iPlayer, cities in data.iteritems():
+				for point, city in cities.iteritems():
+					if not hasattr(city, "bAlt"):
+						bFormat = True
+					break
+			if bFormat:
+				for iPlayer, cities in data.iteritems():
+					for point, city in cities.iteritems():
+						city.bAlt = False
+			# // SAVEBREAK@
+			self.cities = data
 			self.dirty = False
 		else:
 			self.reset()
-
-	def updateData(self, data):
-		# Upgrade previous data formats to latest format.
-		if len(data) == 0:
-			# empty, don't care
-			return data
-		for key, value in data.iteritems():
-			if isinstance(key, int):
-				# data in latest format
-				return data
-			else:
-				# old format, convert below
-				break
-		# find first living, human player and assign all data to them
-		# if none found, assign to player 0
-		for i in xrange(GC.getMAX_PC_PLAYERS()):
-			CyPlayer = GC.getPlayer(i)
-			if CyPlayer.isHuman() and CyPlayer.isAlive():
-				iPlayer = i
-				break
-		else:
-			iPlayer = 0
-		newData = {}
-		cities = {}
-		newData[iPlayer] = cities
-		for point, (color, layer) in data.iteritems():
-			# use new point-based layer scheme
-			grid = 6
-			layer = (point[X] % grid) * grid + (point[Y] % grid)
-			cities[point] = City(point, color, layer)
-		return newData
 
 	def write(self):
 		if self.dirty:
@@ -340,7 +332,7 @@ class DotMapLayer(StrategyLayer):
 		# Processes a message to add a city.
 		x = xy / 1000
 		y = xy % 1000
-		city = City((x, y), color, layer)
+		city = City((x, y), color, layer, self.bAlt)
 		self.addCity(ePlayer, city)
 
 	def addCity(self, ePlayer, city):
@@ -349,9 +341,9 @@ class DotMapLayer(StrategyLayer):
 			oldCity = self.getCity(ePlayer, city.point)
 			if city == oldCity:
 				return
-			BugUtil.debug("DotMap - replacing city at %s", city.point)
+			print "DotMap - replacing city at (%d,%d)" % city.point
 			self.removeCity(ePlayer, oldCity)
-		BugUtil.debug("DotMap - adding city %s", city)
+		print "DotMap - adding city %s" % city
 		self.getCities(ePlayer)[city.point] = city
 		self.dirty = True
 		if ePlayer == GC.getGame().getActivePlayer():
@@ -374,14 +366,14 @@ class DotMapLayer(StrategyLayer):
 	def removeCity(self, ePlayer, city):
 		# Removes the city from the data set and erases its dot and cross.
 		if city:
-			BugUtil.debug("DotMap - removing city %s", city)
+			print "DotMap - removing city %s" % city
 			del self.getCities(ePlayer)[city.point]
 			self.dirty = True
 			if ePlayer == GC.getGame().getActivePlayer():
 				self.redrawCrosses(city.layer)
 				self.eraseDot(city, self.DOT_ALPHA)
 		else:
-			BugUtil.warn("City doesn't exist")
+			print "City doesn't exist"
 
 	def highlightCity(self, point, color):
 		"""
@@ -392,7 +384,7 @@ class DotMapLayer(StrategyLayer):
 		If the city is on the same layer (S), nothing is done (N). --> WC
 		If the city is on a different layer (D), the city's layer is redrawn without it (W) and the new city is drawn (C).
 		"""
-		city = City(point, color, self.HIGHLIGHT_CROSS_LAYER)
+		city = City(point, color, self.HIGHLIGHT_CROSS_LAYER, self.bAlt)
 		if self.highlightedCity:
 			if self.highlightedCity == city:
 				return
@@ -471,7 +463,11 @@ class DotMapLayer(StrategyLayer):
 		x, y = city.point
 		color = GC.getColorInfo(city.color).getType()
 		layer = city.layer
-		for dx, dy in self.BFC_OFFSETS:
+		if city.bAlt:
+			aList = self.BFC_OFFSETS_ALT
+		else:
+			aList = self.BFC_OFFSETS_STD
+		for dx, dy in aList:
 			CyEngine().fillAreaBorderPlotAlt(x + dx, y + dy, layer, color, alpha)
 
 	def drawDot(self, city, alpha):

@@ -45,5 +45,15 @@
 			<KFM />
 			<Button>Art/Interface/Buttons/Buildings/Religions/Bahai/bahai_temple.dds</Button>
 		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_LOTUS_TEMPLE</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.6</fScale>
+			<fInterfaceScale>0.8</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/LotusTemple/lotus6.nif</NIF>
+			<KFM />
+			<Button>Art/Interface/buttons/Buildings/Religions/Bahai/lotustemple.dds</Button>
+		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

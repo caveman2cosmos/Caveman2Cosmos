@@ -21,18 +21,19 @@ template <class T>
 class CvInfoReplacement
 {
 protected:
-	int m_iID;
-	int m_iReplID;
+	uint m_uiID;
+	uint m_uiReplID;
 	BoolExpr* m_pCondition;
 	T* m_pInfo;
 
 public:
-	CvInfoReplacement(int iID = 0, int iReplID = 0, BoolExpr* pCondition = NULL, T* pInfo = NULL) : m_iID(iID), m_iReplID(iReplID), m_pCondition(pCondition), m_pInfo(pInfo) {}
+	CvInfoReplacement(uint uiID = 0, uint uiReplID = 0, BoolExpr* pCondition = NULL, T* pInfo = NULL):
+		m_uiID(uiID), m_uiReplID(uiReplID), m_pCondition(pCondition), m_pInfo(pInfo) {}
 
 	void read(FDataStreamBase* pStream)
 	{
-		pStream->Read(&m_iID);
-		pStream->Read(&m_iReplID);
+		pStream->Read(&m_uiID);
+		pStream->Read(&m_uiReplID);
 		m_pCondition = BoolExpr::readExpression(pStream);
 		m_pInfo = new T();
 		((CvInfoBase*)m_pInfo)->read(pStream);
@@ -40,20 +41,20 @@ public:
 
 	void write(FDataStreamBase* pStream)
 	{
-		pStream->Write(m_iID);
-		pStream->Write(m_iReplID);
+		pStream->Write(m_uiID);
+		pStream->Write(m_uiReplID);
 		m_pCondition->write(pStream);
 		((CvInfoBase*)m_pInfo)->write(pStream);
 	}
 
-	int getID()
+	uint getID()
 	{
-		return m_iID;
+		return m_uiID;
 	}
 
-	int getReplacementID()
+	uint getReplacementID()
 	{
-		return m_iReplID;
+		return m_uiReplID;
 	}
 
 	bool checkCondition()
@@ -95,6 +96,7 @@ class CvInfoReplacements
 protected:
 	std::vector<CvInfoReplacement<T>* > m_apReplacements;
 	std::vector<std::pair<int, T*> > m_apBackups;
+	static std::vector<std::pair<uint,CvString> > s_IDmap;
 
 public:
 	void read(FDataStreamBase* pStream)
@@ -119,20 +121,22 @@ public:
 		}
 	}
 
-	CvInfoReplacement<T>* getReplacement(int iID, int iReplID)
+	static uint getReplacementIDForString(const char* szType);
+
+	CvInfoReplacement<T>* getReplacement(uint uiID, uint uiReplID)
 	{
 		unsigned int iSize = m_apReplacements.size();
 		for (unsigned int i=0; i<iSize; i++)
 		{
 			CvInfoReplacement<T>* pReplacement = m_apReplacements[i];
-			if ((pReplacement->getID() == iID) && (pReplacement->getReplacementID() == iReplID))
+			if ((pReplacement->getID() == uiID) && (pReplacement->getReplacementID() == uiReplID))
 				return pReplacement;
 		}
 		return NULL;
 	}
 	
 	// This adds a replacement or updates an existing one
-	void addReplacement(int iID, int iReplID, BoolExpr* pCondition, T* pInfo, bool bPassTwo = false)
+	void addReplacement(uint uiID, uint uiReplID, BoolExpr* pCondition, T* pInfo, bool bPassTwo = false)
 	{
 //		CvInfoReplacement<T>* pExisting = getReplacement(iID, iReplID);
 //		if (pExisting)
@@ -141,13 +145,13 @@ public:
 //		}
 //		else
 //		{
-			m_apReplacements.push_back(new CvInfoReplacement<T>(iID, iReplID, pCondition, pInfo));
+			m_apReplacements.push_back(new CvInfoReplacement<T>(uiID, uiReplID, pCondition, pInfo));
 //		}
 	}
 
-	T* getReplacementInfo(int iID, int iReplID)
+	T* getReplacementInfo(uint uiID, uint uiReplID)
 	{
-		CvInfoReplacement<T>* pReplacement = getReplacement(iID, iReplID);
+		CvInfoReplacement<T>* pReplacement = getReplacement(uiID, uiReplID);
 		if (pReplacement)
 		{
 			return pReplacement->getInfo();
@@ -194,5 +198,19 @@ public:
 		}
 	}
 };
+
+template <class T>
+std::vector<std::pair<uint,CvString> > CvInfoReplacements<T>::s_IDmap;
+
+template <class T>
+uint CvInfoReplacements<T>::getReplacementIDForString(const char* szType)
+{
+	for (std::vector<std::pair<uint,CvString> >::iterator it = s_IDmap.begin(); it != s_IDmap.end(); it++)
+		if (it->second.CompareNoCase(szType) == 0)
+			return it->first;
+	uint uiID = s_IDmap.size();
+	s_IDmap.push_back(std::make_pair(uiID, szType));
+	return uiID;
+}
 
 #endif

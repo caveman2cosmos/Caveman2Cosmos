@@ -32682,16 +32682,6 @@
 			<Button>Art/Interface/Buttons/Buildings/B_Famensi.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LOTUS_TEMPLE</Type>
-			<LSystem>LSYSTEM_3x2</LSystem>
-			<bAnimated>0</bAnimated>
-			<fScale>0.6</fScale>
-			<fInterfaceScale>0.8</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/LotusTemple/lotus6.nif</NIF>
-			<KFM />
-			<Button>Art/Interface/buttons/Buildings/Religions/Bahai/lotustemple.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_NAZCA_LINES</Type>
 			<LSystem>LSYSTEM_4x4</LSystem>
 			<bAnimated>0</bAnimated>
@@ -32800,6 +32790,106 @@
 			<NIF>art/Reichstag.nif</NIF>
 			<KFM />
 			<Button>Art/Interface/Buttons/Great_Wonders/reichstag.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_WV_SLAVERY</Type>
+			<LSystem />
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF />
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/WorldViewSlavery.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SLAVERY_BAD_ZORO</Type>
+			<LSystem />
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF />
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/slavery_bad_zoro.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SLAVE_COMPOUND_MILITARY</Type>
+			<LSystem />
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF />
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/SlaveMilitary.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SLAVE_COMPOUND_ENTERTAINMENT</Type>
+			<LSystem />
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF />
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/SlaveEntertain.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SLAVE_COMPOUND_FOOD</Type>
+			<LSystem />
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF />
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/SlaveFood.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SLAVE_COMPOUND_PRODUCTION</Type>
+			<LSystem />
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF />
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/SlaveProd.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SLAVE_COMPOUND_COMMERCE</Type>
+			<LSystem />
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF />
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/SlaveCom.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SLAVE_COMPOUND_SANITATION</Type>
+			<LSystem />
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF />
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/SlaveHealth.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</Type>
+			<LSystem />
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF />
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/SlaveMilitary.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MEGATOWER_SLAVE_LEVEL</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF>Art/empty.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/megatower.dds</Button>
 		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

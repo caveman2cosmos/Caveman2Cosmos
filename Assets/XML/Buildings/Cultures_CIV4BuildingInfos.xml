@@ -4489,10 +4489,6 @@
 					<BuildingClassType>BUILDINGCLASS_GREAT_BATH</BuildingClassType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingClassProductionModifier>
-				<!--BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_LOTUS_TEMPLE</BuildingClassType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingClassProductionModifier-->
 				<BuildingClassProductionModifier>
 					<BuildingClassType>BUILDINGCLASS_KERALA</BuildingClassType>
 					<iProductionModifier>50</iProductionModifier>
