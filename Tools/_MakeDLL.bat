@@ -40,3 +40,5 @@ POPD
 
 echo ...Finished
 
+REM Force clean exit code
+exit /B 0
