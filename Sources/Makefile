@@ -266,7 +266,7 @@ build: $(Target_BIN)
 
 precompile: Make_Dir Target_unfinished $(Target_PCH)
 
-source_list: Make_Dir
+source_list: gitversion Make_Dir
 	@ECHO Building source list
 	@ECHO SOURCES= \> $(FILE_DEPENDS)
 	@FOR %j in ($(SUBDIRS)) DO @(FOR %i IN ($(SOURCE_DIR)\%j\*.cpp) DO @ECHO %i \>> $(FILE_DEPENDS))
@@ -274,10 +274,12 @@ source_list: Make_Dir
 	@ECHO OBJS= \>> $(FILE_DEPENDS)
 	@FOR %j in ($(SUBDIRS)) DO @(FOR /F "delims=." %i IN ('dir /b $(SOURCE_DIR)\%j\*.cpp') DO @ECHO. $(TEMP_TARGET_FILES)\%j\%i.obj \>> $(FILE_DEPENDS))
 	@ECHO.>> $(FILE_DEPENDS)
-!IFDEF GITVERSION
-	@ECHO Running GitVersion
-	@$(GITVERSION)
-!ENDIF
+
+gitversion:
+	!IFDEF GITVERSION
+		@ECHO Running GitVersion
+		@$(GITVERSION)
+	!ENDIF
 
 fastdep:
 	@ECHO Running fastdep
