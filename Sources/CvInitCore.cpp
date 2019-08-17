@@ -68,6 +68,7 @@ CvInitCore::CvInitCore()
 	bPathsSet = false;
 // BUG - EXE/DLL Paths - end
 
+	m_svnRev = -1;
 	m_bRecalcRequestProcessed = false;
 	//m_uiAssetCheckSum = -1;
 	m_uiSavegameAssetCheckSum = -1;
@@ -545,6 +546,7 @@ void CvInitCore::resetGame()
 	m_eTurnTimer = (TurnTimerTypes)GC.getDefineINT("STANDARD_TURNTIMER");	// NO_ option?
 	m_eCalendar = (CalendarTypes)GC.getDefineINT("STANDARD_CALENDAR");		// NO_ option?
 
+	m_svnRev = -1;
 	m_uiSavegameAssetCheckSum = -1;
 
 	// Map-specific custom parameters
@@ -1982,10 +1984,14 @@ void CvInitCore::read(FDataStreamBase* pStream)
 	}
 
 	//	SVN rev of the build that did the save
+	m_svnRev = -1;	//	If save doesn't have the info
+	//	GIT commit of the build that did the save
 	m_gitSHA = "0";	//	If save doesn't have the info
 	m_bRecalcRequestProcessed = false;
+	WRAPPER_READ(wrapper, "CvInitCore", &m_svnRev);
+	OutputDebugString(CvString::format("SVN Rev of save is %d\n", m_svnRev).c_str());
 	WRAPPER_READ_STRING(wrapper, "CvInitCore", &m_gitSHA);
-	OutputDebugString(CvString::format("Git SHA of save is %d\n", m_gitSHA).c_str());
+	OutputDebugString(CvString::format("Git commit of save is %s\n", m_gitSHA).c_str());
 
 	//	Asset checksum of the build that did the save
 	m_uiSavegameAssetCheckSum = -1;	//	If save doesn't have the info
@@ -2292,9 +2298,11 @@ void CvInitCore::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	WRAPPER_WRITE_DECORATED(wrapper, "CvInitCore", (int)SAVE_FORMAT_VERSION, "SAVE_FORMAT_VERSION")
+	WRAPPER_WRITE_DECORATED(wrapper, "CvInitCore", (int)SAVE_FORMAT_VERSION, "SAVE_FORMAT_VERSION");
 
-	//	record the Git SHA of the build doing the save
+	//	record -1 as default SVN rev
+	WRAPPER_WRITE_DECORATED(wrapper, "CvInitCore", (int)-1, "m_svnRev");
+	//	record the Git commit of the build doing the save
 	WRAPPER_WRITE_STRING_DECORATED(wrapper, "CvInitCore", build_git_sha, "m_gitSHA");
 	// record the asset checksum of the build doing the save
 	WRAPPER_WRITE_DECORATED(wrapper, "CvInitCore", m_uiAssetCheckSum, "m_uiSavegameAssetCheckSum");
@@ -2617,6 +2625,11 @@ const char* CvInitCore::getGitSHA()
 const char* CvInitCore::getGameSaveGitSHA() const
 {
 	return m_gitSHA;
+}
+
+int CvInitCore::getGameSaveSvnRev() const
+{
+	return m_svnRev;
 }
 
 unsigned int CvInitCore::getAssetCheckSum() const

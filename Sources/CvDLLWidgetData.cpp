@@ -5997,7 +5997,16 @@ void CvDLLWidgetData::parseFlagHelp(CvWidgetDataStruct &widgetDataStruct, CvWStr
 		szBuffer.append(szTempBuffer);
 	}
 
-	
+	if (GC.getLoadedInitCore().getGameSaveSvnRev() != -1)
+	{
+		szBuffer.append(szBULLETICON);
+		szTempBuffer.Format(L"Caveman2Cosmos build %S", GC.getLoadedInitCore().getGitSHA());
+		szBuffer.append(szTempBuffer);
+		szBuffer.append(szBULLETICON);
+		szTempBuffer.Format(L"Game saved from SVN rev %d", GC.getLoadedInitCore().getGameSaveSvnRev());
+		szBuffer.append(szTempBuffer);
+	}
+
 // BUG - Version Info - end
 	if (GET_PLAYER(GC.getGameINLINE().getActivePlayer()).isModderOption(MODDEROPTION_SHOW_TRAITS_FLAG) || GC.getGameINLINE().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
 	{
