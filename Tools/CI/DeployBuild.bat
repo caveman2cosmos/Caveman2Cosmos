@@ -11,13 +11,13 @@ if %ERRORLEVEL% neq 0 (
     exit /B 1
 )
 
-TEMPORARILY DISABLED FOR APPVEYOR TESTING!
 echo Building FinalRelease DLL...
-call Tools\MakeDLLFinalRelease.bat
-if not errorlevel 0 (
-    echo Building FinalRelease DLL failed, aborting deployment!
-    exit /B 2
-)
+echo TEMPORARILY DISABLED FOR APPVEYOR TESTING!
+REM call Tools\MakeDLLFinalRelease.bat
+REM if not errorlevel 0 (
+REM     echo Building FinalRelease DLL failed, aborting deployment!
+REM     exit /B 2
+REM )
 
 call Tools\CI\DoSourceIndexing.bat
 
@@ -27,7 +27,7 @@ rmdir /Q /S "%build_dir%"
 
 :checkout
 echo Checking out SVN working copy for deployment...
-svn checkout --quiet %svn_url% "%build_dir%"
+svn checkout %svn_url% "%build_dir%"
 
 :: HERE IS WHERE YOU ADJUST WHAT TO PUT IN THE BUILD
 echo Updating SVN working copy from git...
@@ -55,7 +55,7 @@ REM for /f "tokens=2*" %%i in ('svn status "%1" ^| find "!"') do svn delete "%%i
 
 echo Commiting new build to SVN...
 :: TODO auto generate a good changelist
-"%SVN%" commit -m "Caveman2Cosmos %APPVEYOR_BUILD_VERSION%" --quiet --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
+"%SVN%" commit -m "Caveman2Cosmos %APPVEYOR_BUILD_VERSION%" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
 POPD
 
 REM 7z a -r -x!.svn "%release_prefix%-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\*.*"
