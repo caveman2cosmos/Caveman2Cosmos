@@ -11,9 +11,9 @@ environment:
 
 build_script:
 - cmd: >-
-    call Tools\MakeDLLDebug.bat
+    call "$(APPVEYOR_BUILD_FOLDER)\Tools\MakeDLLDebug.bat"
 
-    call Tools\MakeDLLRelease.bat
+    call "$(APPVEYOR_BUILD_FOLDER)\Tools\MakeDLLRelease.bat"
 
 test_script:
 - cmd: >-
@@ -28,7 +28,7 @@ artifacts:
   name: Caveman2CosmosDLL
 
 before_deploy:
-- cmd: call Tools\CI\DeployBuild.bat
+- cmd: call "$(APPVEYOR_BUILD_FOLDER)\Tools\CI\DeployBuild.bat"
 
 deploy:
 - provider: GitHub
