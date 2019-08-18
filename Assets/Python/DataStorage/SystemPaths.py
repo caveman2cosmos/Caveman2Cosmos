@@ -7,10 +7,6 @@ logDir = ""
 appDir = ""
 modDir = ""
 modName = "Caveman2Cosmos"
-modVersion = "V39-V40"
-
-def getNameAndVersion():
-	return modName + " " + modVersion
 
 def init():
 	global appName, userDir, rootDir, logDir, appDir, modDir
@@ -67,8 +63,6 @@ def init():
 	sprint += "     logDir: %s\n" %logDir
 	sprint += "     appDir: %s\n" %appDir
 	sprint += "     modDir: %s\n" %modDir
-	sprint += "    modName: %s\n" %modName
-	sprint += " modVersion: %s\n" %modVersion
 	sprint += "\nAccess:\n\timport SystemPaths as SP\n\tSP.rootdir\n"
 	sprint += "------------------------------END------------------------------------"
 	print sprint

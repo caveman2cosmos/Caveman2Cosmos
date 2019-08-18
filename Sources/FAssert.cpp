@@ -63,6 +63,7 @@ namespace
 					"File:  %s\r\n"
 					"Line:  %u\r\n"
 					"Version:  %s\r\n"
+					"Git:  %s\r\n"
 					"Git-SHA:  %s\r\n"
 					"Expression:  %s\r\n" 
 					"Message:  %s\r\n"
@@ -70,8 +71,9 @@ namespace
 					"----------------------------------------------------------\r\n",
 					g_AssertInfo.szFileName,
 					g_AssertInfo.line,
+					build_c2c_version,
 					build_git_version,
-					build_git_sha,
+					build_git_short_sha,
 					g_AssertInfo.szExpression,
 					g_AssertInfo.szMessage ? g_AssertInfo.szMessage : "" );
 

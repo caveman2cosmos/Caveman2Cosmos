@@ -1,0 +1,27 @@
+version: 40.0.{build}
+skip_branch_with_pr: true
+image: Visual Studio 2019
+environment:
+  slack_webhook:
+    secure: gpUo4NTlxXQ2t3OU3PtxT2nWSReMcp3U803EZA3YEBm1hIt3XODQxDVWaiMvE0lGX3lhSrfkBTF2BiyJ8dMKWUKNocYNTxZqAZFeOMcJz6MLee/lSs2cBoIs7sSKeL0m
+  svn_url: https://svn.code.sf.net/p/c2c-gittest/code/
+  svn_user: c2cappveyor
+  svn_pass:
+    secure: mMXMYcNOGLSRmTCfng6QU8yFa84Stb35a4spzhscQC0=
+build_script:
+- cmd: >-
+    call Tools\MakeDLLDebug.bat
+
+    call Tools\MakeDLLRelease.bat
+test_script:
+- cmd: >-
+    cd Tools
+
+    XmlValidator.exe -a
+notifications:
+- provider: Slack
+  incoming_webhook: https://discordapp.com/api/webhooks/$env:slack_webhook/slack
+  channel: github
+  on_build_success: true
+  on_build_failure: true
+  on_build_status_changed: false

@@ -592,7 +592,7 @@ void CvInitCore::resetGame()
 	// Temp vars
 	m_szTemp.clear();
 
-	m_gitSHA = '\0';
+	m_gitSHA.clear();
 	
 	OutputDebugString("Reseting Game: End");
 }
@@ -1986,12 +1986,15 @@ void CvInitCore::read(FDataStreamBase* pStream)
 	//	SVN rev of the build that did the save
 	m_svnRev = -1;	//	If save doesn't have the info
 	//	GIT commit of the build that did the save
-	m_gitSHA = "0";	//	If save doesn't have the info
+	m_gitSHA.clear();	//	If save doesn't have the info
 	m_bRecalcRequestProcessed = false;
-	WRAPPER_READ(wrapper, "CvInitCore", &m_svnRev);
+	WRAPPER_READ_DECORATED(wrapper, "CvInitCore", &m_svnRev, "m_svnRev");
 	OutputDebugString(CvString::format("SVN Rev of save is %d\n", m_svnRev).c_str());
-	WRAPPER_READ_STRING(wrapper, "CvInitCore", &m_gitSHA);
-	OutputDebugString(CvString::format("Git commit of save is %s\n", m_gitSHA).c_str());
+	if (m_svnRev == -1)
+	{
+		WRAPPER_READ_STRING_DECORATED(wrapper, "CvInitCore", m_gitSHA, "m_gitSHA");
+		OutputDebugString(CvString::format("Git commit of save is %s\n", m_gitSHA).c_str());
+	}
 
 	//	Asset checksum of the build that did the save
 	m_uiSavegameAssetCheckSum = -1;	//	If save doesn't have the info
@@ -2611,6 +2614,10 @@ void CvInitCore::checkInitialCivics()
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
+const char* CvInitCore::getC2CVersion()
+{
+	return  build_c2c_version;
+}
 
 const char* CvInitCore::getGitVersion()
 {
@@ -2622,7 +2629,12 @@ const char* CvInitCore::getGitSHA()
 	return build_git_sha;
 }
 
-const char* CvInitCore::getGameSaveGitSHA() const
+const char* CvInitCore::getGitShortSHA()
+{
+	return build_git_short_sha;
+}
+
+std::string CvInitCore::getGameSaveGitSHA() const
 {
 	return m_gitSHA;
 }
@@ -2656,7 +2668,7 @@ void CvInitCore::checkVersions()
 {
 	if (!m_bRecalcRequestProcessed && !getNewGame())
 	{
-		bool bDLLChanged = strcmp(m_gitSHA, getGitSHA()) != 0;
+		bool bDLLChanged = strcmp(m_gitSHA.c_str(), getGitSHA()) != 0;
 		bool bAssetsChanged = m_uiSavegameAssetCheckSum != GC.getInitCore().getAssetCheckSum();
 		if (bDLLChanged || bAssetsChanged)
 		{

@@ -5,9 +5,10 @@
 ## Copyright (c) 2008 The BUG Mod.
 ##
 ## Author: EmperorFool
-
+from CvPythonExtensions import *
 import BugOptionsTab
 import BugConfigTracker
+GC = CyGlobalContext()
 
 class BugSystemOptionsTab(BugOptionsTab.BugOptionsTab):
 	"BUG System Options Screen Tab"
@@ -24,7 +25,7 @@ class BugSystemOptionsTab(BugOptionsTab.BugOptionsTab):
 		screen.setLayoutFlag(right, "LAYOUT_RIGHT")
 		screen.setLayoutFlag(right, "LAYOUT_SIZE_HPREFERREDEXPANDING")
 		import SystemPaths as SP
-		self.addLabel(screen, left, "Version", SP.getNameAndVersion())
+		self.addLabel(screen, left, "Version", "%s %s" % (SP.modName, GC.getGame().getGitVersion()))
 
 		screen.attachHSeparator(column, column + "Sep2")
 		self.addLabel(screen, column, "Debug_Logging", "Debugging Output:")

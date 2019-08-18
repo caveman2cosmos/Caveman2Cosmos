@@ -5972,9 +5972,7 @@ void CvDLLWidgetData::parseFlagHelp(CvWidgetDataStruct &widgetDataStruct, CvWStr
 	float fVersion = GC.getDefineINT("CIV4_VERSION") / 100.0f;
 	szTempBuffer.Format(SETCOLR L"Beyond the Sword %0.2f" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), fVersion);
 	szBuffer.append(szTempBuffer);
-	CvWString szBugNameAndVersion;
-	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYBugModule, "getModNameAndVersion", NULL, &szBugNameAndVersion);
-	szTempBuffer.Format(NEWLINE SETCOLR L"%s" ENDCOLR, TEXT_COLOR("COLOR_YELLOW"), szBugNameAndVersion.c_str());
+	szTempBuffer.Format(NEWLINE SETCOLR L"Caveman2Cosmos %S" ENDCOLR, TEXT_COLOR("COLOR_YELLOW"), GC.getLoadedInitCore().getC2CVersion());
 	szBuffer.append(szTempBuffer);
 	CvWString szBULLETICON;
 	szBULLETICON.Format(NEWLINE L"%c", gDLL->getSymbolID(BULLET_CHAR));
@@ -5982,18 +5980,19 @@ void CvDLLWidgetData::parseFlagHelp(CvWidgetDataStruct &widgetDataStruct, CvWStr
 	// BUG DLL version
 	szTempBuffer.Format(SETCOLR L"%s %s [Build %s]" ENDCOLR, TEXT_COLOR("COLOR_WHITE"), BUG_DLL_NAME, BUG_DLL_VERSION, BUG_DLL_BUILD);
 	szBuffer.append(szTempBuffer);
-
 	szBuffer.append(szBULLETICON);
-	szTempBuffer.Format(L"Caveman2Cosmos %S", GC.getLoadedInitCore().getGitVersion());
+	szTempBuffer.Format(L"GIT %S", GC.getLoadedInitCore().getGitVersion());
 	szBuffer.append(szTempBuffer);
-
-	if (GC.getLoadedInitCore().getGameSaveGitSHA() != '\0')
+	szBuffer.append(szBULLETICON);
+	szTempBuffer.Format(L"GIT Commit %S", GC.getLoadedInitCore().getGitShortSHA());
+	szBuffer.append(szTempBuffer);
+	if (!GC.getLoadedInitCore().getGameSaveGitSHA().empty())
 	{
 		szBuffer.append(szBULLETICON);
 		szTempBuffer.Format(L"Caveman2Cosmos build %S", GC.getLoadedInitCore().getGitSHA());
 		szBuffer.append(szTempBuffer);
 		szBuffer.append(szBULLETICON);
-		szTempBuffer.Format(L"Game saved from %S", GC.getLoadedInitCore().getGameSaveGitSHA());
+		szTempBuffer.Format(L"Game saved from %S", GC.getLoadedInitCore().getGameSaveGitSHA().c_str());
 		szBuffer.append(szTempBuffer);
 	}
 

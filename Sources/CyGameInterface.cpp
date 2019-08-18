@@ -389,6 +389,7 @@ void CyGamePythonInterface()
 		.def("canEverConstruct", &CyGame::canEverConstruct, "bool (int iBuilding)")
 		.def("canEverTrain", &CyGame::canEverTrain, "bool (int iUnit)")
 		.def("canEverSpread", &CyGame::canEverSpread, "bool (int iCorporation)")
+		.def("getC2CVersion", &CyGame::getC2CVersion, "const char* ()")
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/

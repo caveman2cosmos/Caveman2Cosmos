@@ -179,14 +179,6 @@ def getOptionINT(argsList):
 	except:
 		return default
 
-g_nameAndVersion = ""
-def getModNameAndVersion():
-	global g_nameAndVersion
-	if not g_nameAndVersion:
-		import SystemPaths as SP
-		g_nameAndVersion = SP.getNameAndVersion()
-	return g_nameAndVersion
-
 def gameStartSave():
 	autoSave("[Start]")
 

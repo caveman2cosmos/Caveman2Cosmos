@@ -1497,6 +1497,12 @@ bool CyGame::canEverSpread(int iCorporation) const
 {
 	return (NULL != m_pGame ? m_pGame->canEverSpread((CorporationTypes)iCorporation) : true);
 }
+
+const char* CyGame::getC2CVersion() const
+{
+	return GC.getInitCore().getC2CVersion();
+}
+
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
