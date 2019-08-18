@@ -8,6 +8,8 @@ environment:
     secure: 8MBckNYRp5EVPgbGcmZ6bQ==
   release_prefix: Caveman2Cosmos
   build_dir: _build
+  secure_test:
+    secure: bTiTZ65yuOycw9kqbfcfaw==
 
 build_script:
 - cmd: >-
@@ -22,12 +24,15 @@ test_script:
     XmlValidator.exe -a
 
 before_deploy:
-- cmd: call "%APPVEYOR_BUILD_FOLDER%\Tools\CI\DeployBuild.bat"
+- cmd: >-
+    call "%APPVEYOR_BUILD_FOLDER%\Tools\CI\DeployBuild.bat"
+
+    echo %secure_test%
 
 deploy:
 - provider: GitHub
   auth_token:
-    secure: gh2SyyG2KoAG4DwS6vg6my4mb/83P0aCfDJNyry0ncMapKqALE0GHR+f7EqwZkn2M712UhRYiyxXq0UU4/4hh5c6W4loKDYh/w5VOclmSfY=
+    secure: 8q/T1sjdSGdr8NWfFwisFuaMGNT5v4fKCZiS98tDQtFhbbOu2nmPSclfRfFsDE4Y
   artifact: $(release_prefix)-$(APPVEYOR_BUILD_VERSION).zip,$(release_prefix)-CvGameCoreDLL-$(APPVEYOR_BUILD_VERSION).zip
   prerelease: true
   force_update: true
