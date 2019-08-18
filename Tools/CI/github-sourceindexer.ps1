@@ -1,4 +1,4 @@
-#requires -version 2
+#requires -version 3
 
 <#
 .DESCRIPTION
@@ -11,8 +11,8 @@
   The github user ID.
 .PARAMETER repository
   The github repository name containing the matching source files.
-.PARAMETER branch
-  The github branch name, the version of the files in the branch must match the source versions the pdb file was created with.
+.PARAMETER commit
+  The github commit SHA1, the version of the files in the commit must match the source versions the pdb file was created with.
 .PARAMETER sourcesRoot
   The root of the source folder - i.e the beginning of the original file paths to be stripped out (obtained using "srctool -r Library.pdb"). 
   Will default to the longest common file path if not provided. The remainder will be appended to the appropriate Github url for source retrieval. 
@@ -26,21 +26,19 @@
 .PARAMETER ignoreUnknown
   By default this script terminates when it encounters source from a path other than the source root.
   Pass this switch to instead ignore all paths other than the source root.
-.PARAMETER serverIsRaw
-  If the server serves raw the /raw directory name should not be concatenated to the source urls.
-  Pass this switch to omit the /raw directory, e.g. -gitHubUrl https://raw.github.com -serverIsRaw
 .PARAMETER verifyLocalRepo
   This switch verifies the local repository from the detected or passed in 'sourcesRoot' by using 
-  git to get the filenames from the tree associated with 'branch' (which is either a branch or 
+  git to get the filenames from the tree associated with 'commit' (which is either a branch or 
   commit). Any filename from the PDB that is found in the tree list, and that is not excluded by 
   other options, will have its source server information added in the same case that it is seen in 
   the tree list. Other filenames from the PDB that are not found in the tree list will be ignored. 
   This is an important switch and is recommended because PDBs don't often store case sensitivity 
   for files while github servers expect case sensitivity for the files that are requested. Use of 
   this switch implies switch ignoreUnknown.
-
+.PARAMETER gitPath
+  Path to the git.exe
 .EXAMPLE 
-  .\github-sourceindexer.ps1 -symbolsFolder "C:\git\DirectoryContainingPdbFilesToIndex" -userId "GithubUsername" -repository "GithubRepositoryName" -branch "master" -sourcesRoot "c:\git\OriginalCompiledProjectPath" -verbose
+  .\index.ps1 -symbolsFolder "C:\git\DirectoryContainingPdbFilesToIndex" -userId "GithubUsername" -repository "GithubRepositoryName" -commit "master" -sourcesRoot "c:\git\OriginalCompiledProjectPath" -verbose
   
   Description
   -----------
@@ -65,9 +63,8 @@ param(
        [Parameter(Mandatory = $true)]
        [string] $repository,
        
-       ## github branch name
-       [Parameter(Mandatory = $true)]
-       [string] $branch,
+       ## github commit sha
+       [string] $commit,
        
        ## A root path for the source files
        [string] $sourcesRoot,
@@ -84,11 +81,12 @@ param(
        ## Ignore paths other than the source root
        [switch] $ignoreUnknown,
        
-       ## Server serves raw: don't concatenate /raw in the path
-       [switch] $serverIsRaw,
-       
        ## Verify the filenames in the tree in the local repository
-       [switch] $verifyLocalRepo
+       [switch] $verifyLocalRepo,
+
+       ## Full path to git.exe
+       [Alias("git")]
+       [string] $gitPath
        )
        
 
@@ -146,21 +144,21 @@ function CheckDebuggingToolsPath {
     # Let's try to execute the srctool and check the error
     if ($(Get-Command "srctool.exe" 2>$null) -eq $null) {
       # srctool.exe can't be found - let's try cdb
-      $cdbg = Get-Command "cdb.exe" 2>$null
+      $cdbg = Get-Command "symstore.exe" | Select-Object -ExpandProperty Definition
       if ($cdbg -eq $null) {
         $errormsg = "The Debugging Tools for Windows could not be found. Please make sure " + `
                     "that they are installed and reference them using -dbgToolsPath switch."
         throw $errormsg        
       }
       # cdbg found srctool.exe should be then in the srcsrv subdirectory
-      $dbgToolsPath = $([System.IO.Path]::GetDirectoryName($dbg.Defintion)) + "\srcsrv\"
+      $dbgToolsPath = $([System.IO.Path]::GetDirectoryName($cdbg)) + "\srcsrv\"
       if (![System.IO.File]::Exists($dbgToolsPath + "srctool.exe")) {
         $errormsg = "The Debugging Tools for Windows could not be found. Please make sure " + `
                     "that they are installed and reference them using -dbgToolsPath switch."
         throw $errormsg
       }
       # OK, we are fine - the srctool exists
-      Write-Verbose "The Debugging Tools For Windows found at $dbgToolsPath."
+      Write-Host "The Debugging Tools For Windows found at $dbgToolsPath."
     }
   }
   return $dbgToolsPath
@@ -169,6 +167,15 @@ function CheckDebuggingToolsPath {
 ###############################################################
 
 function FindGitExe {
+    if (![String]::IsNullOrEmpty($gitPath)) {
+        return $gitPath
+    }
+  
+    $gitPath = Get-Command git.exe| Select-Object -ExpandProperty Definition  
+    if (![String]::IsNullOrEmpty($gitPath)) {
+        return $gitPath
+    }
+
     $suffix = "\git\bin\git.exe"
     
     $gitexe = ${env:ProgramFiles} + $suffix
@@ -212,7 +219,7 @@ function WriteStreamVariables {
   Add-Content -value "SRCSRV: variables ------------------------------------------" -path $streamPath
   Add-Content -value "SRCSRVVERCTRL=http" -path $streamPath
   Add-Content -value "HTTP_ALIAS=$gitHubUrl" -path $streamPath
-  Add-Content -value "HTTP_EXTRACT_TARGET=%HTTP_ALIAS%/%var2%/%var3%$raw/%var4%/%var5%" -path $streamPath
+  Add-Content -value "HTTP_EXTRACT_TARGET=%HTTP_ALIAS%/%var2%/%var3%/var4%/%var5%" -path $streamPath
   Add-Content -value "SRCSRVTRG=%http_extract_target%" -path $streamPath
   Add-Content -value "SRCSRVCMD=" -path $streamPath
 }
@@ -221,7 +228,8 @@ function WriteStreamVariables {
 
 function WriteStreamSources {
   param([string] $streamPath,
-        [string] $pdbPath)
+        [string] $pdbPath,
+        [Object[]] $lstree)
         
   Write-Verbose "Preparing stream source files section..."
 
@@ -233,52 +241,32 @@ function WriteStreamSources {
   }
 
   Add-Content -value "SRCSRV: source files ---------------------------------------" -path $streamPath
-  
+
   if ([String]::IsNullOrEmpty($sourcesRoot)) {
-    # That's a little bit hard - we need to guess the source root.
-    # By default we compare all source paths stored in the PDB file
-    # and extract the least common path, eg. for paths:
-    # C:\test\test1\test2\src\Program.cs
-    # C:\test\test1\test2\src\Test.Domain\Domain.cs
-    # we will assume that the source code archive was created from
-    # the C:\test\test1\test2\src\ path - so be careful here!
-      
-    $sourcesRoot = $null
-    foreach ($src in $sources) {
-      if ($sourcesRoot -eq $null) {
-        $sourcesRoot = [System.IO.Path]::GetDirectoryName($src)
-        continue
-      }
-      $sourcesRoot = FindLongestCommonPath $src $sourcesRoot
-    }  
-    $warning = "Sources root not provided, assuming: '$sourcesRoot'. If it's not correct please run the script " + `
-               "with correct value set for -sourcesRoot parameter."
-    Write-Warning $warning
+    throw "Sources root not provided"
   }
-  $sourcesRoot = CorrectPathBackslash $sourcesRoot
   $outputFileName = [System.IO.Path]::GetFileNameWithoutExtension($sourceArchivePath)
-  
-  #if we're verifying the local repo then get the tree list from the branch/commit
-  $lstree = ""
-  if ($verifyLocalRepo) {
-    $gitexe = FindGitExe
-    if (!$gitexe) {
-      throw "Script error. git.exe not found";
-    }
-    
-    $gitrepo = $sourcesRoot + ".git"
-    if (!(Test-Path $gitrepo)) {
-      throw "Script error. git repo not found: $gitrepo";
-    }
-    
-    $lstree = & "$gitexe" "--git-dir=$gitrepo" ls-tree --name-only --full-tree -r "$branch"
-    if ($LASTEXITCODE) {
-      throw "Script error. git could not list the files from commit/branch: $branch";
-    }
-  }
-  
   #other source files
   foreach ($src in $sources) {
+    if ($src -eq $sources[-1]) {
+      continue;
+    }
+
+    if (($src.IndexOf("windows kits", [System.StringComparison]::OrdinalIgnoreCase) -ge 0)) {
+      continue;
+    }
+
+    if (($src.IndexOf("microsoft visual studio", [System.StringComparison]::OrdinalIgnoreCase) -ge 0)) {
+      continue;
+    }
+
+    if (($src.IndexOf("f:\dd\", [System.StringComparison]::OrdinalIgnoreCase) -ge 0)) {
+      continue;
+    }
+    
+    if (($src.IndexOf("f:\binaries.", [System.StringComparison]::OrdinalIgnoreCase) -ge 0)) {
+      continue;
+    }
     
     #if the source path $src contains a string in the $ignore array, skip it
     [bool] $skip = $false;
@@ -291,7 +279,16 @@ function WriteStreamSources {
     if ($skip) {
       continue;
     }
-    
+
+    $srcFileName = Split-Path $src -leaf
+    if (($srcFileName.IndexOf(".pch", [System.StringComparison]::OrdinalIgnoreCase) -ge 0)) {
+      continue;
+    }
+
+    if (($srcFileName.IndexOf(".tmp", [System.StringComparison]::OrdinalIgnoreCase) -ge 0)) {
+      continue;
+    }
+
     if (!$src.StartsWith($sourcesRoot, [System.StringComparison]::CurrentCultureIgnoreCase)) {
       if ($ignoreUnknown) {
         continue;
@@ -322,34 +319,72 @@ function WriteStreamSources {
       $filepath = $srcStrip
     }
     
-    #Add-Content -value "HTTP_ALIAS=http://github.com/%var2%/%var3%$raw/%var4%/%var5%" -path $streamPath
-    Add-Content -value "$src*$userId*$repository*$branch*$filepath" -path $streamPath
-    Write-Verbose "Indexing source to $gitHubUrl/$userId/$repository$raw/$branch/$filepath"
+    #Add-Content -value "HTTP_ALIAS=https://raw.githubusercontent.com/%var2%/%var3%/%var4%/%var5%" -path $streamPath
+    Add-Content -value "$src*$userId*$repository*$commit*$filepath" -path $streamPath
+    Write-Verbose "Indexing source to $gitHubUrl/$userId/$repository/$commit/$filepath"
   }
 }
 
 ###############################################################
 # START
 ###############################################################
+$Script:args=""
+write-host "Num Args: " $PSBoundParameters.Keys.Count
+foreach ($key in $PSBoundParameters.keys) {
+    $Script:args+= "`$$key=" + $PSBoundParameters["$key"] + "  "
+}
+write-host $Script:args
+
+$gitrepo=""
+if ([String]::IsNullOrEmpty($sourcesRoot)) {
+  $gitrepo = (get-item $PSScriptRoot ).FullName + "/.git"
+  if (Test-Path $gitrepo) {
+      $sourcesRoot = (get-item $PSScriptRoot ).FullName
+  } else {
+      $sourcesRoot = (get-item $PSScriptRoot ).parent.FullName
+  }
+  write-warning "Sources root not provided, assuming: '$sourcesRoot'";
+}
+
+$gitexe = FindGitExe
+if (!$gitexe) {
+  throw "Script error. git.exe not found";
+}
+
+$sourcesRoot = CorrectPathBackslash $sourcesRoot
+$gitrepo = $sourcesRoot + ".git";
+
+if ([String]::IsNullOrEmpty($commit)) {
+    $commit = & "$gitexe" "--git-dir=$gitrepo" rev-parse HEAD;
+    if ($LASTEXITCODE) {
+      throw "Script error. git could not get the hash of the current commit";
+    }
+}
+
 if ($verifyLocalRepo) {
-  $ignoreUnknown = $TRUE
+    $ignoreUnknown = $TRUE
+
+    if (!(Test-Path $gitrepo)) {
+      throw "Script error. git repo not found: $gitrepo";
+    }
+    
+    $lstree = & "$gitexe" "--git-dir=$gitrepo" ls-tree --name-only --full-tree -r "$commit"
+    if ($LASTEXITCODE) {
+      throw "Script error. git could not list the files from commit/branch: $commit";
+    }
 }
 
 if ([String]::IsNullOrEmpty($gitHubUrl)) {
-    $gitHubUrl = "http://github.com";
-}
-
-# If the server serves raw then /raw does not need to be concatenated
-if ($serverIsRaw) {
-  $raw = "";
-} else {
-  $raw = "/raw";
+    $gitHubUrl = "https://raw.githubusercontent.com";
 }
 
 # Check the debugging tools path
 $dbgToolsPath = CheckDebuggingToolsPath $dbgToolsPath
+# lstree
 
 $pdbs = Get-ChildItem $symbolsFolder -Filter *.pdb -Recurse
+#workflow updatePdb {
+#  param()
 foreach ($pdb in $pdbs) {
   Write-Verbose "Indexing $($pdb.FullName) ..."
 
@@ -359,24 +394,23 @@ foreach ($pdb in $pdbs) {
     # fill the PDB stream file
     WriteStreamHeader $streamContent
     WriteStreamVariables $streamContent
-    $success = WriteStreamSources $streamContent $pdb.FullName
-    if($success -eq "failed") {
-        continue
-    }
+    $success = WriteStreamSources $streamContent $pdb.FullName $lstree
     
-    Add-Content -value "SRCSRV: end ------------------------------------------------" -path $streamContent
-    
-    # Save stream to the pdb file
-    $pdbstrPath = "{0}pdbstr.exe" -f $dbgToolsPath
-    $pdbFullName = $pdb.FullName
-    # write stream info to the pdb file
+    if($success -ieq "failed") {
+      Write-Host "Ignored $($pdb.FullName)"
+    } else {
+      Add-Content -value "SRCSRV: end ------------------------------------------------" -path $streamContent
       
-    Write-Verbose "Saving the generated stream into the PDB file..."
-    . $pdbstrPath -w -s:srcsrv "-p:$pdbFullName" "-i:$streamContent"
-    
-    
-    Write-Verbose "Done."
+      # Save stream to the pdb file
+      $pdbstrPath = "{0}pdbstr.exe" -f $dbgToolsPath
+      $pdbFullName = $pdb.FullName
+
+      Write-Verbose "Saving the generated stream into the PDB file..."
+      . $pdbstrPath -w -s:srcsrv "-p:$pdbFullName" "-i:$streamContent"
+      Write-Verbose "Done."      
+    }
   } finally {
     Remove-Item $streamContent
   }
 }
+#}
