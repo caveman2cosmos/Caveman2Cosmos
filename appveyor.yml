@@ -38,7 +38,7 @@ deploy:
   prerelease: true
   force_update: true
   on:
-    branch: release
+    branch: test-deployment
 
 notifications:
 - provider: Slack
