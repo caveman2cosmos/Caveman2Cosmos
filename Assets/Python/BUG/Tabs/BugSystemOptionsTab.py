@@ -25,7 +25,7 @@ class BugSystemOptionsTab(BugOptionsTab.BugOptionsTab):
 		screen.setLayoutFlag(right, "LAYOUT_RIGHT")
 		screen.setLayoutFlag(right, "LAYOUT_SIZE_HPREFERREDEXPANDING")
 		import SystemPaths as SP
-		self.addLabel(screen, left, "Version", "%s %s" % (SP.modName, GC.getGame().getGitVersion()))
+		self.addLabel(screen, left, "Version", "%s %s" % (SP.modName, GC.getGame().getC2CVersion()))
 
 		screen.attachHSeparator(column, column + "Sep2")
 		self.addLabel(screen, column, "Debug_Logging", "Debugging Output:")
