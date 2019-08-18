@@ -11,7 +11,7 @@ environment:
 
 build_script:
 - cmd: >-
-    call "%APPVEYOR_BUILD_FOLDER%\Tools\MakeDLLDebug.bat"
+    REM call "%APPVEYOR_BUILD_FOLDER%\Tools\MakeDLLDebug.bat"
 
     call "%APPVEYOR_BUILD_FOLDER%\Tools\MakeDLLRelease.bat"
 
@@ -21,12 +21,6 @@ test_script:
 
     XmlValidator.exe -a
 
-artifacts:
-- path: $(release_prefix)-$(APPVEYOR_BUILD_VERSION).zip
-  name: Caveman2Cosmos
-- path: $(release_prefix)-CvGameCoreDLL-$(APPVEYOR_BUILD_VERSION).zip
-  name: Caveman2CosmosDLL
-
 before_deploy:
 - cmd: call "%APPVEYOR_BUILD_FOLDER%\Tools\CI\DeployBuild.bat"
 
@@ -34,7 +28,7 @@ deploy:
 - provider: GitHub
   auth_token:
     secure: gh2SyyG2KoAG4DwS6vg6my4mb/83P0aCfDJNyry0ncMapKqALE0GHR+f7EqwZkn2M712UhRYiyxXq0UU4/4hh5c6W4loKDYh/w5VOclmSfY=
-  artifact: Caveman2Cosmos,Caveman2CosmosDLL
+  artifact: $(release_prefix)-$(APPVEYOR_BUILD_VERSION).zip,$(release_prefix)-CvGameCoreDLL-$(APPVEYOR_BUILD_VERSION).zip
   prerelease: true
   force_update: true
   on:

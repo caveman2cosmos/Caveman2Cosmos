@@ -11,12 +11,13 @@ if not errorlevel 0 (
     exit /B 1
 )
 
-echo Building FinalRelease DLL...
-call Tools\MakeDLLFinalRelease.bat
-if not errorlevel 0 (
-    echo Building FinalRelease DLL failed, aborting deployment!
-    exit /B 2
-)
+REM TEMPORARILY DISABLED FOR APPVEYOR TESTING!
+REM echo Building FinalRelease DLL...
+REM call Tools\MakeDLLFinalRelease.bat
+REM if not errorlevel 0 (
+REM     echo Building FinalRelease DLL failed, aborting deployment!
+REM     exit /B 2
+REM )
 call Tools\CI\DoSourceIndexing.bat
 
 cd /d "%~dp0..\.."
@@ -38,7 +39,7 @@ xcopy "Caveman2Cosmos Config.ini" "%build_dir%" /R /Y
 
 echo Detecting working copy changes...
 PUSHD "%build_dir%"
-set "SVN=C:\Program Files\SlikSvn\bin\svn.exe"
+set SVN=svn.exe
 "%SVN%" status | findstr /R "^!" > ..\missing.list
 for /F "tokens=* delims=! " %%A in (..\missing.list) do (svn delete "%%A")
 del ..\missing.list 2>NUL
