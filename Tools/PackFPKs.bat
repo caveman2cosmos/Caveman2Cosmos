@@ -31,7 +31,6 @@ rmdir /Q /S "%ASSETS_DIR%\oldfpks"
 echo 3. Packing FPKs ...
 echo From: %FPK_IN_DIR%
 echo To:   %ASSETS_DIR%
-echo ...
 PakBuild /I="%FPK_IN_DIR%" /O="%ASSETS_DIR%" /F /S=256 /R=C2C /X=bik
 
 if "%1"=="CI" goto :skip_pause
