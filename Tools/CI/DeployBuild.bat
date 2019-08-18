@@ -11,13 +11,13 @@ if %ERRORLEVEL% neq 0 (
     exit /B 1
 )
 
-REM TEMPORARILY DISABLED FOR APPVEYOR TESTING!
-REM echo Building FinalRelease DLL...
-REM call Tools\MakeDLLFinalRelease.bat
-REM if not errorlevel 0 (
-REM     echo Building FinalRelease DLL failed, aborting deployment!
-REM     exit /B 2
-REM )
+TEMPORARILY DISABLED FOR APPVEYOR TESTING!
+echo Building FinalRelease DLL...
+call Tools\MakeDLLFinalRelease.bat
+if not errorlevel 0 (
+    echo Building FinalRelease DLL failed, aborting deployment!
+    exit /B 2
+)
 
 call Tools\CI\DoSourceIndexing.bat
 
@@ -55,11 +55,11 @@ REM for /f "tokens=2*" %%i in ('svn status "%1" ^| find "!"') do svn delete "%%i
 
 echo Commiting new build to SVN...
 :: TODO auto generate a good changelist
-"%SVN%" commit -m "C2C %APPVEYOR_BUILD_VERSION%" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
+"%SVN%" commit -m "Caveman2Cosmos %APPVEYOR_BUILD_VERSION%" --quiet --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
 POPD
 
-7z a -r -x!.svn "%release_prefix%-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\*.*"
-7z a -x!.svn "%release_prefix%-CvGameCoreDLL-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\Assets\CvGameCoreDLL.*"
+REM 7z a -r -x!.svn "%release_prefix%-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\*.*"
+REM 7z a -x!.svn "%release_prefix%-CvGameCoreDLL-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\Assets\CvGameCoreDLL.*"
 
 echo Done!
 exit /B 0

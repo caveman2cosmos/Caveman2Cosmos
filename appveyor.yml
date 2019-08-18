@@ -2,7 +2,7 @@ version: 40.0.{build}
 image: Visual Studio 2019
 
 environment:
-  svn_url: https://svn.code.sf.net/p/c2c-gittest/code/trunk/
+  svn_url: https://svn.code.sf.net/p/caveman2cosmos/code/branches/billw-git
   svn_user: c2cappveyor
   svn_pass:
     secure: 8MBckNYRp5EVPgbGcmZ6bQ==
@@ -13,7 +13,7 @@ build_script:
 - cmd: >-
     call "%APPVEYOR_BUILD_FOLDER%\Tools\MakeDLLDebug.bat"
 
-    REM call "%APPVEYOR_BUILD_FOLDER%\Tools\MakeDLLRelease.bat"
+    call "%APPVEYOR_BUILD_FOLDER%\Tools\MakeDLLRelease.bat"
 
 test_script:
 - cmd: >-
@@ -21,6 +21,7 @@ test_script:
 
     XmlValidator.exe -a
 
+# DISABLED: before_deploy can't access secure variables it seems
 # before_deploy:
 # - cmd: >-
 #     call "%APPVEYOR_BUILD_FOLDER%\Tools\CI\DeployBuild.bat"
@@ -29,6 +30,7 @@ test_script:
 deploy_script:
 - cmd: call "%APPVEYOR_BUILD_FOLDER%\Tools\CI\DeployBuild.bat"
 
+# DISABLED: this doesn't work, unauthorized
 # deploy:
 # - provider: GitHub
 #   auth_token:
