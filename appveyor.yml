@@ -2,8 +2,6 @@ version: 40.0.{build}
 skip_branch_with_pr: true
 image: Visual Studio 2019
 environment:
-  slack_webhook:
-    secure: gpUo4NTlxXQ2t3OU3PtxT2nWSReMcp3U803EZA3YEBm1hIt3XODQxDVWaiMvE0lGX3lhSrfkBTF2BiyJ8dMKWUKNocYNTxZqAZFeOMcJz6MLee/lSs2cBoIs7sSKeL0m
   svn_url: https://svn.code.sf.net/p/c2c-gittest/code/
   svn_user: c2cappveyor
   svn_pass:
@@ -21,7 +19,7 @@ test_script:
 notifications:
 - provider: Slack
   incoming_webhook:
-    secure: gpUo4NTlxXQ2t3OU3PtxT2nWSReMcp3U803EZA3YEBm1hIt3XODQxDVWaiMvE0lGX3lhSrfkBTF2BiyJ8dMKWUKNocYNTxZqAZFeOMcJz6MLee/lSs2cBoIs7sSKeL0m
+    secure: /rZsiy2rHhDaEh9f3Hzv6RtkcI/grO+svFlzo0AErpTBOfM0e2IDGzUVemKjvU2uQhUIL+t9TgYCItXIAcTIlAuZUgbXxJJGTQn4eJ+tkgM0Ze6dt+JSvb3H5nndmk9epWUr89PASEMdwTgw3nuJJe4f7TveskQwWbS1XNEX0lF5i/B8wj+TS5uIqZQPD/wP
   channel: github
   on_build_success: true
   on_build_failure: true
