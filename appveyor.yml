@@ -5,15 +5,15 @@ environment:
   svn_url: https://svn.code.sf.net/p/c2c-gittest/code/trunk/
   svn_user: c2cappveyor
   svn_pass:
-    secure: mMXMYcNOGLSRmTCfng6QU8yFa84Stb35a4spzhscQC0=
+    secure: 8MBckNYRp5EVPgbGcmZ6bQ==
   release_prefix: Caveman2Cosmos
   build_dir: _build
 
 build_script:
 - cmd: >-
-    REM call "%APPVEYOR_BUILD_FOLDER%\Tools\MakeDLLDebug.bat"
+    call "%APPVEYOR_BUILD_FOLDER%\Tools\MakeDLLDebug.bat"
 
-    call "%APPVEYOR_BUILD_FOLDER%\Tools\MakeDLLRelease.bat"
+    REM call "%APPVEYOR_BUILD_FOLDER%\Tools\MakeDLLRelease.bat"
 
 test_script:
 - cmd: >-
