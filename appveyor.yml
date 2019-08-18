@@ -20,7 +20,8 @@ test_script:
     XmlValidator.exe -a
 notifications:
 - provider: Slack
-  incoming_webhook: https://discordapp.com/api/webhooks/$env:slack_webhook/slack
+  incoming_webhook:
+    secure: gpUo4NTlxXQ2t3OU3PtxT2nWSReMcp3U803EZA3YEBm1hIt3XODQxDVWaiMvE0lGX3lhSrfkBTF2BiyJ8dMKWUKNocYNTxZqAZFeOMcJz6MLee/lSs2cBoIs7sSKeL0m
   channel: github
   on_build_success: true
   on_build_failure: true
