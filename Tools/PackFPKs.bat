@@ -1,5 +1,6 @@
 @echo off
 
+if "%1"=="CI" goto :skip_readme
 echo.
 echo **** README ****
 echo This script is part of a suite of scripts for managing the FPK files. They are designed to 
@@ -14,8 +15,9 @@ echo.
 echo.
 pause
 
+:skip_readme
 setlocal ENABLEEXTENSIONS ENABLEDELAYEDEXPANSION
-cd /d "%~dp0"
+PUSHD "%~dp0"
 set "ASSETS_DIR=%~dp0..\Assets"
 set "FPK_IN_DIR=%~dp0..\UnpackedArt"
 
@@ -29,11 +31,11 @@ rmdir /Q /S "%ASSETS_DIR%\oldfpks"
 echo 3. Packing FPKs ...
 echo From: %FPK_IN_DIR%
 echo To:   %ASSETS_DIR%
-echo ...
-PakBuild /I="%FPK_IN_DIR%" /O="%ASSETS_DIR%" /F /S=100 /R=C2C /X=bik
+PakBuild /I="%FPK_IN_DIR%" /O="%ASSETS_DIR%" /F /S=256 /R=C2C /X=bik
 
-
-
+if "%1"=="CI" goto :skip_pause
 pause
 
+:skip_pause
+POPD
 exit /B 0

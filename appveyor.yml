@@ -1,20 +1,45 @@
 version: 40.0.{build}
 image: Visual Studio 2019
+
 environment:
-  svn_url: https://svn.code.sf.net/p/c2c-gittest/code/
+  svn_url: https://svn.code.sf.net/p/caveman2cosmos/code/branches/billw-git
   svn_user: c2cappveyor
   svn_pass:
-    secure: mMXMYcNOGLSRmTCfng6QU8yFa84Stb35a4spzhscQC0=
+    secure: 8MBckNYRp5EVPgbGcmZ6bQ==
+  release_prefix: Caveman2Cosmos
+  build_dir: _build
+
 build_script:
 - cmd: >-
-    call Tools\MakeDLLDebug.bat
+    call "%APPVEYOR_BUILD_FOLDER%\Tools\MakeDLLDebug.bat"
 
-    call Tools\MakeDLLRelease.bat
+    call "%APPVEYOR_BUILD_FOLDER%\Tools\MakeDLLRelease.bat"
+
 test_script:
 - cmd: >-
     cd Tools
 
     XmlValidator.exe -a
+
+# DISABLED: before_deploy can't access secure variables it seems
+# before_deploy:
+# - cmd: >-
+#     call "%APPVEYOR_BUILD_FOLDER%\Tools\CI\DeployBuild.bat"
+
+#     echo %secure_test%
+deploy_script:
+- cmd: call "%APPVEYOR_BUILD_FOLDER%\Tools\CI\DeployBuild.bat"
+
+# DISABLED: this doesn't work, unauthorized
+# deploy:
+# - provider: GitHub
+#   auth_token:
+#     secure: 8q/T1sjdSGdr8NWfFwisFuaMGNT5v4fKCZiS98tDQtFhbbOu2nmPSclfRfFsDE4Y
+#   artifact: $(release_prefix)-$(APPVEYOR_BUILD_VERSION).zip,$(release_prefix)-CvGameCoreDLL-$(APPVEYOR_BUILD_VERSION).zip
+#   prerelease: true
+#   on:
+#     branch: test-deployment
+
 notifications:
 - provider: Slack
   incoming_webhook:
