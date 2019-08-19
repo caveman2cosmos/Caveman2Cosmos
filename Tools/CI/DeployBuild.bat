@@ -1,6 +1,16 @@
 @echo off
 PUSHD "%~dp0..\.."
 
+if "%APPVEYOR_REPO_BRANCH%" neq "release" (
+    echo Skipping deployment due to not being on release branch
+    exit /b 0
+)
+
+if "%APPVEYOR_PULL_REQUEST_TITLE%" neq "" (
+    echo Skipping deployment due to being a PR build
+    exit /b 0
+)
+
 echo C2C %APPVEYOR_BUILD_VERSION% DEPLOYMENT
 echo.
 
