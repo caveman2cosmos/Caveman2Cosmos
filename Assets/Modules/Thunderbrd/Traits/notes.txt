@@ -1,0 +1,2 @@
+
+	*[ICON_BULLET]All Units cost more gold to upkeep.

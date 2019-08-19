@@ -1,0 +1,702 @@
+/********************************************************************** 
+
+Filename	:	Civ4Theme_Scroll.thm
+Content		:	Civ4 - GScroll control theme
+Created		:	May 1, 2005
+Authors		:	Sven Dixon
+
+Copyright	:	(c) 2005 Scaleform Corp. All Rights Reserved.
+
+**********************************************************************/
+
+with GFC_Control_Scroll
+{
+	GFC_Control_DefaultScroll_Style
+	{
+		GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Scroll_Renderer_Control;
+		GFC_Control_Update_ChildLayout	= GFC_CtrlTheme_Bitmap_Control_Scroll_Update_ChildLayout;
+
+		with .Child
+		{
+			.UpButton		= GFC_CtrlTheme_Bitmap_Control_Scroll_Child_UpButton;
+			.DownButton		= GFC_CtrlTheme_Bitmap_Control_Scroll_Child_DownButton;
+			.LeftButton		= GFC_CtrlTheme_Bitmap_Control_Scroll_Child_LeftButton;
+			.RightButton	= GFC_CtrlTheme_Bitmap_Control_Scroll_Child_RightButton;
+			.HGrip			= GFC_CtrlTheme_Bitmap_Control_Scroll_Child_HGripButton;
+			.VGrip			= GFC_CtrlTheme_Bitmap_Control_Scroll_Child_VGripButton;
+			.HPopupMenu		= GFC_CtrlTheme_Bitmap_Control_Scroll_Child_HPopupMenu;
+			.VPopupMenu		= GFC_CtrlTheme_Bitmap_Control_Scroll_Child_VPopupMenu;
+		}
+		with .StyleId
+		{
+			.UpButton		= GPropertyId(GFC_Control_StandardButton_Style);
+			.DownButton		= GPropertyId(GFC_Control_StandardButton_Style);
+			.LeftButton		= GPropertyId(GFC_Control_StandardButton_Style);
+			.RightButton	= GPropertyId(GFC_Control_StandardButton_Style);
+			.HGrip			= GPropertyId(GFC_Control_StandardButton_Style);
+			.VGrip			= GPropertyId(GFC_Control_StandardButton_Style);
+			.HPopupMenu		= GPropertyId(GFC_Control_StandardMenu_Style);
+			.VPopupMenu		= GPropertyId(GFC_Control_StandardMenu_Style);
+		}
+		with GFC_Control_Flag
+		{
+			.Transparent			= GFlags(GCtrl, GFC_CF_TRANSPARENT);
+			.SolidInner				= 0;
+			.SolidBackground		= 0;
+			.RegionClip				= 0;
+			.RegionClipParent		= 0;
+			.NoExternalWindow		= 0;
+			.HitTest				= 0;
+			.TopLayer				= 0;
+			.TopLayerBitmap			= 0;
+			.BottomLayerBitmap		= 0;
+			// Control flag change masks
+			.Mask_InvalidateControl	= GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		}
+		with .Flag
+		{
+			.Discontinuous		= 0;	//GFlags(GScrollCtrl, GFC_CF_SCROLL_DISCONTINUOUS);
+			.Proportional		= 0;	//GFlags(GScrollCtrl, GFC_CF_SCROLL_PROPORTIONAL);
+			.NoUpDownButtons	= 0;	//GFlags(GScrollCtrl, GFC_CF_SCROLL_NOUPDOWNBUTTONS);
+			.SnapTo_OnDrop		= GFlags(GScrollCtrl, GFC_CF_SCROLL_SNAPTO_ONDROP);
+			.SnapTo_OnDrag		= 0;	//GFlags(GScrollCtrl, GFC_CF_SCROLL_SNAPTO_ONDRAG);
+		}
+		with .Size
+		{
+			.HGripLength	= 16;
+			.VGripLength	= 16;
+			.HGripMinLength	= 16;
+			.VGripMinLength	= 16;
+			.HGripInset		= GRangeMargin(3,3);
+			.VGripInset		= GRangeMargin(3,3);
+			.HDefault		= 16;
+			.VDefault		= 16;
+		}
+		with .Delay
+		{
+			.TrackStepping_First	= 250;
+			.TrackStepping_Repeat	= 90;
+		}
+		with .Color
+		{
+			.Track_Default	= GFC_Control_Color_3DLook_Normal;
+			.Track_Disable	= GFC_Control_Color_3DLook_Light;
+			.Track_Press	= GFC_Control_Color_3DLook_Dark;
+			.Track_Rollover	= GFC_Control_Color_3DLook_Normal;
+		}
+		with .Combine
+		{
+			.Track_Default	= GFC_Control_Combine_Surface;
+			.Track_Disable	= GFC_Control_Combine_Surface;
+			.Track_Press	= GFC_Control_Combine_Surface;
+			.Track_Rollover	= GFC_Control_Combine_Surface;
+		}
+		with .Text
+		{
+			with .PopupMenu
+			{
+				.FullLeft			=	"Left";
+				.FullRight			=	"Right";
+				.PageLeft			=	"Page Left";
+				.PageRight			=	"Page Right";
+				.LineLeft			=	"Line Left";
+				.LineRight			=	"Line Right";
+				.Left				=	"Scroll Left";
+				.Right				=	"Scroll Right";
+				.HStepTo			=	"Scroll Here";
+				
+				.FullTop			=	"Top";
+				.FullBottom			=	"Bottom";
+				.PageUp				=	"Page Up";
+				.PageDown			=	"Page Down";
+				.LineUp				=	"Line Up";
+				.LineDown			=	"Line Down";
+				.Up					=	"Scroll Up";
+				.Down				=	"Scroll Down";
+				.VStepTo			=	"Scroll Here";
+			}
+			with .ToolTip
+			{
+				.HGripButton		=	"Scroll Grip";
+				.VGripButton		=	"Scroll Grip";
+				.UpButton			=	"Scroll Up";
+				.DownButton			=	"Scroll Down";
+				.LeftButton			=	"Scroll Left";
+				.RightButton		=	"Scroll Right";
+				.LeftTrack			=	"Step Left";
+				.RightTrack			=	"Step Right";
+				.UpTrack			=	"Step Up";
+				.DownTrack			=	"Step Down";
+			}
+		}
+		with GFC_CtrlTheme_Bitmap_Control_Scroll_Skin
+		{// Initialize all the Bitmap theme Scroll properties to avoid inheritance problems
+			.HShaft_Default						=	0;
+			.HShaft_Rollover					=	0;
+			.HShaft_Press						=	0;
+			.HShaft_Disable						=	0;
+			.HShaft_Winoff						=	0;
+			.HShaft_WinoffRollover				=	0;
+			.HShaft_WinoffPress					=	0;
+			.HShaft_WinoffDisable				=	0;
+
+			.VShaft_Default						=	0;
+			.VShaft_Rollover					=	0;
+			.VShaft_Press						=	0;
+			.VShaft_Disable						=	0;
+			.VShaft_Winoff						=	0;
+			.VShaft_WinoffRollover				=	0;
+			.VShaft_WinoffPress					=	0;
+			.VShaft_WinoffDisable				=	0;
+		}
+		map GFC_Control			=	GFC_Control_DefaultControl_Style;
+	}
+
+
+// Create a new button control styles
+
+// Up - button style
+style SF_CtrlTheme_Civ4_Control_Scroll_UpButton_Style
+{
+	GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;		
+	GFC_Control_Button_Size_Default	= GSize(16,19);
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_btn_v.tga", HVGrid, 4, 2, 0, 0);
+				Margin		= GRectMargin(6,6,6,6);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Source);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_arrows.tga", HVGrid, 4, 3, 0, 0);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,4);
+			}
+		}
+		.Rollover
+		{
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_btn_v.tga", HVGrid, 4, 2, 0, 0);
+				Margin		= GRectMargin(6,6,6,6);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Source);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_arrows.tga", HVGrid, 4, 3, 0, 1);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,4);
+			}
+		}
+		.Press
+		{
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_btn_v.tga", HVGrid, 4, 2, 0, 0);
+				Margin		= GRectMargin(6,6,6,6);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Source);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_arrows.tga", HVGrid, 4, 3, 0, 1);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,6);
+			}	
+		}
+		.Disable
+		{
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_btn_v.tga", HVGrid, 4, 2, 0, 1);
+				Margin		= GRectMargin(6,6,6,6);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Source);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_arrows.tga", HVGrid, 4, 3, 0, 2);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,4);
+			}
+		}
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+	map GFC_Control							= GFC_Control_DefaultButton_Style;
+}
+
+// Down - button style
+style SF_CtrlTheme_Civ4_Control_Scroll_DownButton_Style
+{
+	GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;		
+	GFC_Control_Button_Size_Default	= GSize(16,19);
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_btn_v.tga", HVGrid, 4, 2, 1, 0);
+				Margin		= GRectMargin(6,6,6,6);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Source);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_arrows.tga", HVGrid, 4, 3, 1, 0);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,6,0,0);
+			}
+		}
+		.Rollover
+		{
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_btn_v.tga", HVGrid, 4, 2, 1, 0);
+				Margin		= GRectMargin(6,6,6,6);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Source);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_arrows.tga", HVGrid, 4, 3, 1, 1);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,6,0,0);
+			}
+		}
+		.Press
+		{
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_btn_v.tga", HVGrid, 4, 2, 1, 0);
+				Margin		= GRectMargin(6,6,6,6);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Source);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_arrows.tga", HVGrid, 4, 3, 1, 1);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,8,0,0);
+			}
+		}
+		.Disable
+		{
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_btn_v.tga", HVGrid, 4, 2, 1, 1);
+				Margin		= GRectMargin(6,6,6,6);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Source);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_arrows.tga", HVGrid, 4, 3, 1, 2);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,6,0,0);
+			}
+		}
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+	map GFC_Control							= GFC_Control_DefaultButton_Style;
+}
+
+// Left - button style
+style SF_CtrlTheme_Civ4_Control_Scroll_LeftButton_Style
+{
+	GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;		
+	GFC_Control_Button_Size_Default	= GSize(19,16);
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_btn_h.tga", HVGrid, 4, 2, 0, 0);
+				Margin		= GRectMargin(6,6,6,6);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Source);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_arrows.tga", HVGrid, 4, 3, 2, 0);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,4,0);
+			}
+		}
+		.Rollover
+		{
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_btn_h.tga", HVGrid, 4, 2, 0, 0);
+				Margin		= GRectMargin(6,6,6,6);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Source);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_arrows.tga", HVGrid, 4, 3, 2, 1);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,4,0);
+			}
+		}
+		.Press
+		{
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_btn_h.tga", HVGrid, 4, 2, 0, 0);
+				Margin		= GRectMargin(6,6,6,6);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Source);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_arrows.tga", HVGrid, 4, 3, 2, 1);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,6,0);
+			}
+		}
+		.Disable
+		{
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_btn_h.tga", HVGrid, 4, 2, 0, 1);
+				Margin		= GRectMargin(6,6,6,6);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Source);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_arrows.tga", HVGrid, 4, 3, 2, 2);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,4,0);
+			}
+		}
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+	map GFC_Control							= GFC_Control_DefaultButton_Style;
+}
+
+// Right - button style
+style SF_CtrlTheme_Civ4_Control_Scroll_RightButton_Style
+{
+	GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;		
+	GFC_Control_Button_Size_Default	= GSize(19,16);
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_btn_h.tga", HVGrid, 4, 2, 1, 0);
+				Margin		= GRectMargin(6,6,6,6);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Source);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_arrows.tga", HVGrid, 4, 3, 3, 0);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(6,0,0,0);
+			}
+		}
+		.Rollover
+		{
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_btn_h.tga", HVGrid, 4, 2, 1, 0);
+				Margin		= GRectMargin(6,6,6,6);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Source);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_arrows.tga", HVGrid, 4, 3, 3, 1);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(6,0,0,0);
+			}
+		}
+		.Press
+		{
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_btn_h.tga", HVGrid, 4, 2, 1, 0);
+				Margin		= GRectMargin(6,6,6,6);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Source);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_arrows.tga", HVGrid, 4, 3, 3, 1);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(8,0,0,0);
+			}
+		}
+		.Disable
+		{
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_btn_h.tga", HVGrid, 4, 2, 1, 1);
+				Margin		= GRectMargin(6,6,6,6);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Source);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_arrows.tga", HVGrid, 4, 3, 3, 2);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(6,0,0,0);
+			}
+		}
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+	map GFC_Control							= GFC_Control_DefaultButton_Style;
+}
+
+// Vertical Grip - button style
+style SF_CtrlTheme_Civ4_Control_Scroll_VGripButton_Style
+{
+	GFC_Control_Renderer_Control			= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+	GFC_Control_Button_Flag_TrackedPress	= GFlags(GButtonCtrl, GFC_CF_BUTTON_TRACKEDPRESS);
+	GFC_Control_Button_Size_Default			= GSize(10,10);
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE);
+				Image		= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(2,4,2,4);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_grip.tga", HVGrid, 2, 4, 0, 0);
+				Margin		= GRectMargin(4,4,4,4);
+				Indent		= GRectMargin(2,0,2,0);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_grip.tga", HVGrid, 2, 4, 0, 1);
+				Margin		= GRectMargin(4,4,4,4);
+				Indent		= GRectMargin(2,0,2,0);
+			}
+		}
+		.Rollover
+		{
+			layer {Inherit = .Default;}
+			layer {}
+			layer {}
+			layer {}
+			layer {
+				DestCombine	= GColorCombine(Add,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_grip.tga", HVGrid, 2, 4, 0, 2);
+				Margin		= GRectMargin(4,4,4,4);
+				Indent		= GRectMargin(2,0,2,0);
+			}
+		}
+		.Press
+		{
+			layer {Inherit = .Default;}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE);
+				Image		= GBitmap("../../../../Resource/Civ4/bg_header.tga", HVGrid, 1, 1, 0, 0);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(2,4,2,4);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_grip.tga", HVGrid, 2, 4, 0, 3);
+				Margin		= GRectMargin(4,4,4,4);
+				Indent		= GRectMargin(2,0,2,0);
+			}
+			layer {}
+		}
+		.Disable
+		{
+			layer {}
+		}
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+	map GFC_Control							= GFC_Control_DefaultButton_Style;
+}
+
+// Horizontal Grip - button style
+style SF_CtrlTheme_Civ4_Control_Scroll_HGripButton_Style
+{
+	GFC_Control_Renderer_Control			= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+	GFC_Control_Button_Flag_TrackedPress	= GFlags(GButtonCtrl, GFC_CF_BUTTON_TRACKEDPRESS);
+	GFC_Control_Button_Size_Default			= GSize(10,10);
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE);
+				Image		= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(4,2,4,2);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_grip.tga", HVGrid, 2, 4, 1, 0);
+				Margin		= GRectMargin(4,4,4,4);
+				Indent		= GRectMargin(0,2,0,2);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_grip.tga", HVGrid, 2, 4, 1, 1);
+				Margin		= GRectMargin(4,4,4,4);
+				Indent		= GRectMargin(0,2,0,2);
+			}
+		}
+		.Rollover
+		{
+			layer {Inherit = .Default;}
+			layer {}
+			layer {}
+			layer {}
+			layer {
+				DestCombine	= GColorCombine(Add,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_grip.tga", HVGrid, 2, 4, 1, 2);
+				Margin		= GRectMargin(4,4,4,4);
+				Indent		= GRectMargin(0,2,0,2);
+			}
+		}
+		.Press
+		{
+			layer {Inherit = .Default;}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE);
+				Image		= GBitmap("../../../../Resource/Civ4/bg_header.tga", HVGrid, 1, 1, 0, 0);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(4,2,4,2);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/scroll_grip.tga", HVGrid, 2, 4, 1, 3);
+				Margin		= GRectMargin(4,4,4,4);
+				Indent		= GRectMargin(0,2,0,2);
+			}
+			layer {}
+		}
+		.Disable
+		{
+			layer {}
+		}
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+	map GFC_Control							= GFC_Control_DefaultButton_Style;
+}
+
+	// Normal Scroll bar style \\
+	GFC_Control_StandardScroll_Style
+	{
+		with .StyleId
+		{
+			.UpButton		= GPropertyId(SF_CtrlTheme_Civ4_Control_Scroll_UpButton_Style);
+			.DownButton		= GPropertyId(SF_CtrlTheme_Civ4_Control_Scroll_DownButton_Style);
+			.LeftButton		= GPropertyId(SF_CtrlTheme_Civ4_Control_Scroll_LeftButton_Style);
+			.RightButton	= GPropertyId(SF_CtrlTheme_Civ4_Control_Scroll_RightButton_Style);
+			.HGrip			= GPropertyId(SF_CtrlTheme_Civ4_Control_Scroll_HGripButton_Style);
+			.VGrip			= GPropertyId(SF_CtrlTheme_Civ4_Control_Scroll_VGripButton_Style);
+		}
+		// Scroll shaft skins
+		with GFC_CtrlTheme_Bitmap_Control_Scroll_Skin_HShaft
+		{
+			.Default
+			{
+				layer {
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					Image		= GBitmap("../../../../Resource/Civ4/scroll_track.tga", HVGrid, 2, 3, 1, 0);
+					Margin		= GRectMargin(1,6,1,6);
+				}
+			}
+			.Rollover = .Default;
+			.Press
+			{
+				layer {
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					Image		= GBitmap("../../../../Resource/Civ4/scroll_track.tga", HVGrid, 2, 3, 1, 1);
+					Margin		= GRectMargin(1,6,1,6);
+				}
+			}
+			.Disable
+			{
+				layer {
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+					Image		= GBitmap("../../../../Resource/Civ4/scroll_track.tga", HVGrid, 2, 3, 1, 2);
+					Margin		= GRectMargin(1,6,1,6);
+				}
+			}
+			.Winoff			= .Default;
+			.WinoffPress	= .Press;
+			.WinoffRollover	= .Rollover;
+			.WinoffDisable	= .Disable;
+		}
+		with GFC_CtrlTheme_Bitmap_Control_Scroll_Skin_VShaft
+		{
+			.Default
+			{
+				layer {
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					Image		= GBitmap("../../../../Resource/Civ4/scroll_track.tga", HVGrid, 2, 3, 0, 0);
+					Margin		= GRectMargin(6,1,6,1);
+				}
+			}
+			.Rollover = .Default;
+			.Press
+			{
+				layer {
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					Image		= GBitmap("../../../../Resource/Civ4/scroll_track.tga", HVGrid, 2, 3, 0, 1);
+					Margin		= GRectMargin(6,1,6,1);
+				}
+			}
+			.Disable
+			{
+				layer {
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+					Image		= GBitmap("../../../../Resource/Civ4/scroll_track.tga", HVGrid, 2, 3, 0, 2);
+					Margin		= GRectMargin(6,1,6,1);
+				}
+			}
+			.Winoff			= .Default;
+			.WinoffPress	= .Press;
+			.WinoffRollover	= .Rollover;
+			.WinoffDisable	= .Disable;	
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Scroll	= GFC_Control_DefaultScroll_Style;
+		map GFC_Control							= GFC_Control_DefaultScroll_Style;
+	}
+}

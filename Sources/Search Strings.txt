@@ -1,0 +1,39 @@
+Strings to search for to find SDK code pieces of various mods included in Revolution DCM:
+"RevolutionDCM - ranged bombard"
+"RevDCM"
+
+"AI_AUTO_PLAY_MOD"
+
+"REVOLUTION_MOD"
+Revolution AI
+Minor Civs
+Dynamic Civ Names
+For BarbarianCiv
+Start As Minors
+StartAsMinors
+
+"BARBARIAN_CIV"
+
+"CHANGE_PLAYER"
+
+"BETTER_BTS_AI_MOD"
+
+"TSHEEP" --> Super spies
+
+"BEGIN InfluenceDrivenWar" --> InfluenceDrivenWar
+
+"RevolutionDCM start" --> 
+
+"Dale -" -->
+Dale - DCM: Globals
+Dale - DCM: Pedia Concepts
+Dale - AB: Bombing
+Dale - FE: Fighters
+Dale - RB: Field Bombard
+Dale - RB: Bug Fix
+Dale - BE: Battle Effect
+Dale - CCH: Globals
+Dale - SA: Opp Fire
+Dale - SA: Stack Attack
+Dale - ARB: Archer Bombard
+Dale - NB: A-Bomb

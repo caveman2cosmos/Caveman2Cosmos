@@ -1,0 +1,9 @@
+
+// *** Control Bitmap Theme file
+
+// Set the resource 
+resource_path	"Mods/Caveman2Cosmos/Resource";
+
+// Setup common properties
+include			"Mods/Caveman2Cosmos/Resource/Theme/C2CTheme.thm";
+

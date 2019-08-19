@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+	Rise of Mankind settings
+	by Zappara & Afforess
+-->
+<mod id="AutomatedSettings"	module="AutomatedSettings"
+	name="Caveman2Cosmos" author="Afforess"
+	version="1.75" date="9/20/10" url="">
+
+	<events module="AutomatedSettings"/>
+	<options id="AutomatedSettings" file="AutomatedSettings.ini">
+		<section id="Automations">
+			<!-- General Automation Settings -->
+			<option id="Reset" key="Reset" type="boolean" default="False" get="isReset" set="setReset">
+				<change module="AutomatedSettings" function="changedReset"/>
+			</option>
+
+			<!-- Automate Pillage Options: -->
+			 <option id="AvoidEnemyUnits" key="AvoidEnemyUnits" type="boolean" default="False" get="isAvoidEnemyUnits" set="setAvoidEnemyUnits">
+				<change module="AutomatedSettings" function="changedAvoidEnemyUnits"/>
+			</option>
+
+			<option id="AvoidBarbarianCities" key="AvoidBarbarianCities" type="boolean" default="False" get="isAvoidBarbarianCities" set="setAvoidBarbarianCities">
+				<change module="AutomatedSettings" function="changedAvoidBarbarianCities"/>
+			</option>
+
+			<option id="HideAutomatePillage" key="HideAutomatePillage" type="boolean" default="False" get="isHideAutomatePillage" set="setHideAutomatePillage">
+				<change module="AutomatedSettings" function="changedHideAutomatePillage"/>
+			</option>
+
+			<!-- Automate Hunt Options: -->
+			<option id="NoCapturingCities" key="NoCapturingCities" type="boolean" default="False" get="isNoCapturingCities" set="setNoCapturingCities">
+				<change module="AutomatedSettings" function="changedNoCapturingCities"/>
+			</option>
+
+			<option id="AllowUnitSuiciding" key="AllowUnitSuiciding" type="boolean" default="False" get="isAllowUnitSuiciding" set="setAllowUnitSuiciding">
+				<change module="AutomatedSettings" function="changedAllowUnitSuiciding"/>
+			</option>
+
+			<option id="HideAutomateHunt" key="HideAutomateHunt" type="boolean" default="False" get="isHideAutomateHunt" set="setHideAutomateHunt">
+				<change module="AutomatedSettings" function="changedHideAutomateHunt"/>
+			</option>
+
+			<list id="AutoHuntMinimumAttackOdds" key="AutoHuntMinimumAttackOdds" type="int" default="50"
+					values="100, 95, 90, 85, 80, 75, 70 65, 60, 55, 50, 45, 40, 35, 30, 25, 20, 15, 10, 5, 0" 
+					get="getAutoHuntMinimumAttackOdds" set="setAutoHuntMinimumAttackOdds">
+				<change module="AutomatedSettings" function="changedAutoHuntMinimumAttackOdds"/>
+			</list>
+
+			<!-- Automate Patrol Option: -->
+			<option id="CanLeaveBorders" key="CanLeaveBorders" type="boolean" default="True" get="isCanLeaveBorders" set="setCanLeaveBorders">
+				<change module="AutomatedSettings" function="changedCanLeaveBorders"/>
+			</option>
+
+			<option id="AllowPatrolUnitSuiciding" key="AllowPatrolUnitSuiciding" type="boolean" default="False" get="isAllowPatrolUnitSuiciding" set="setAllowPatrolUnitSuiciding">
+				<change module="AutomatedSettings" function="changedPatrolAllowUnitSuiciding"/>
+			</option>
+
+			<option id="NoPatrolCapturingCities" key="NoPatrolCapturingCities" type="boolean" default="False" get="isNoPatrolCapturingCities" set="setNoPatrolCapturingCities">
+				<change module="AutomatedSettings" function="changedNoPatrolCapturingCities"/>
+			</option>
+
+			<option id="HideAutomatePatrol" key="HideAutomatePatrol" type="boolean" default="False" get="isHideAutomatePatrol" set="setHideAutomatePatrol">
+				<change module="AutomatedSettings" function="changedHideAutomatePatrol"/>
+			</option>
+
+			<list id="AutoPatrolMinimumAttackOdds" key="AutoPatrolMinimumAttackOdds" type="int" default="65"
+					values="100, 95, 90, 85, 80, 75, 70 65, 60, 55, 50, 45, 40, 35, 30, 25, 20, 15, 10, 5, 0" 
+					get="getAutoPatrolMinimumAttackOdds" set="setAutoPatrolMinimumAttackOdds">
+				<change module="AutomatedSettings" function="changedAutoPatrolMinimumAttackOdds"/>
+			</list>
+
+			<!-- Automate City Defense Options: -->
+			<option id="CanLeaveCity" key="CanLeaveCity" type="boolean" default="True" get="isCanLeaveCity" set="setCanLeaveCity">
+				<change module="AutomatedSettings" function="changedCanLeaveCity"/>
+			</option>
+
+			<option id="HideAutomateDefense" key="HideAutomateDefense" type="boolean" default="False" get="isHideAutomateDefense" set="setHideAutomateDefense">
+				<change module="AutomatedSettings" function="changedHideAutomateDefense"/>
+			</option>
+
+			<list id="AutoDefenseMinimumAttackOdds" key="AutoDefenseMinimumAttackOdds" type="int" default="75"
+					values="100, 95, 90, 85, 80, 75, 70 65, 60, 55, 50, 45, 40, 35, 30, 25, 20, 15, 10, 5, 0" 
+					get="getAutoDefenseMinimumAttackOdds" set="setAutoDefenseMinimumAttackOdds">
+				<change module="AutomatedSettings" function="changedAutoDefenseMinimumAttackOdds"/>
+			</list>
+
+			<!-- Automate Air Strike and Air Bomb Options: -->
+			<option id="AirUnitCanDefend" key="AirUnitCanDefend" type="boolean" default="True" get="isAirUnitCanDefend" set="setAirUnitCanDefend">
+				<change module="AutomatedSettings" function="changedAirUnitCanDefend"/>
+			</option>
+
+			<option id="AirUnitCanRebase" key="AirUnitCanRebase" type="boolean" default="True" get="isAirUnitCanRebase" set="setAirUnitCanRebase">
+				<change module="AutomatedSettings" function="changedAirUnitCanRebase"/>
+			</option>
+
+			<option id="HideAirAutomations" key="HideAirAutomations" type="boolean" default="False" get="isHideAirAutomations" set="setHideAirAutomations">
+				<change module="AutomatedSettings" function="changedHideAirAutomations"/>
+			</option>
+
+			<!-- Automate Explore Options: -->
+			<option id="HideAutoExplore" key="HideAutoExplore" type="boolean" default="False" get="isHideAutoExplore" set="setHideAutoExplore">
+				<change module="AutomatedSettings" function="changedHideAutoExplore"/>
+			</option>
+
+			<!-- Automate Spread Options: -->
+			<option id="HideAutoSpread" key="HideAutoSpread" type="boolean" default="False" get="isHideAutoSpread" set="setHideAutoSpread">
+				<change module="AutomatedSettings" function="changedHideAutoSpread"/>
+			</option>
+
+			<!-- Automate Caravan Options: -->
+			<option id="HideAutoCaravan" key="HideAutoCaravan" type="boolean" default="False" get="isHideAutoCaravan" set="setHideAutoCaravan">
+				<change module="AutomatedSettings" function="changedHideAutoCaravan"/>
+			</option>
+
+			<!-- Automate Pirate Options: -->
+			<option id="HideAutoPirate" key="HideAutoPirate" type="boolean" default="False" get="isHideAutoPirate" set="setHideAutoPirate">
+				<change module="AutomatedSettings" function="changedHideAutoPirate"/>
+			</option>
+
+			<list id="AutoPirateMinimumAttackOdds" key="AutoPirateMinimumAttackOdds" type="int" default="75"
+					values="100, 95, 90, 85, 80, 75, 70 65, 60, 55, 50, 45, 40, 35, 30, 25, 20, 15, 10, 5, 0" 
+					get="getAutoPirateMinimumAttackOdds" set="setAutoPirateMinimumAttackOdds">
+				<change module="AutomatedSettings" function="changedAutoPirateMinimumAttackOdds"/>
+			</list>
+
+			<!-- Automate Protect Options: -->
+			<option id="HideAutoProtect" key="HideAutoProtect" type="boolean" default="False" get="isHideAutoProtect" set="setHideAutoProtect">
+				<change module="AutomatedSettings" function="changedHideAutoProtect"/>
+			</option>
+
+			<!-- Automate Upgrade Options: -->
+			<option id="HideAutoUpgrade" key="HideAutoUpgrade" type="boolean" default="True" get="isHideAutoUpgrade" set="setHideAutoUpgrade">
+				<change module="AutomatedSettings" function="changedHideAutoUpgrade"/>
+			</option>
+
+			<option id="MostExpensive" key="MostExpensive" type="boolean" default="False" get="isMostExpensive" set="setMostExpensive">
+				<change module="AutomatedSettings" function="changedMostExpensive"/>
+			</option>
+
+			<option id="MostExpierenced" key="MostExpierenced" type="boolean" default="False" get="isMostExpierenced" set="setMostExpierenced">
+				<change module="AutomatedSettings" function="changedMostExpierenced"/>
+			</option>
+
+			<list id="MinimumUpgradeGold" key="MinimumUpgradeGold" type="int" default="75"
+					values="50000, 40000, 30000, 25000, 22500, 20000, 19000, 18000, 17000, 16000, 15000, 14500, 14000, 13500, 13000, 12500, 12000, 11500, 11000, 10500, 10000, 9500, 9000, 8500, 8000, 7500, 7000, 6500, 6000, 5500, 5000, 4750, 4500, 4250, 4000, 3750, 3500, 3250, 3000, 2750, 2500, 2250, 2000, 1900, 1800, 1700, 1600, 1500, 1400, 1300, 1200, 1100, 1000, 950, 900, 850, 800, 750, 700, 650, 600, 550, 500, 475, 450, 425, 400, 375, 350, 325, 300, 275, 250, 225, 200, 175, 150, 125, 100, 75, 50, 40, 30, 25, 20, 15, 10, 5, 0" 
+					get="getMinimumUpgradeGold" set="setMinimumUpgradeGold">
+				<change module="AutomatedSettings" function="changedMinimumUpgradeGold"/>
+			</list>
+
+			<!-- Automate Promote Options: -->
+			<option id="HideAutoPromote" key="HideAutoPromote" type="boolean" default="True" get="isHideAutoPromote" set="setHideAutoPromote">
+				<change module="AutomatedSettings" function="changedHideAutoPromote"/>
+			</option>
+
+			<!-- Automate Worker Options: -->
+			<option id="ShowCityAutomations" key="ShowCityAutomations" type="boolean" default="False" get="isShowCityAutomations" set="setShowCityAutomations"/>
+		</section>
+	</options>
+</mod>

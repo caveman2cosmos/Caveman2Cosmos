@@ -1,0 +1,439 @@
+/********************************************************************** 
+
+Filename	:	Civ4Theme_Progress.thm
+Content		:	Civ4 - GProgress control theme
+Created		:	May 1, 2005
+Authors		:	Sven Dixon
+
+Copyright	:	(c) 2005 Scaleform Corp. All Rights Reserved.
+
+**********************************************************************/
+
+// Main Progress control namespace 
+with GFC_Control_Progress
+{
+	GFC_Control_DefaultProgress_Style
+	{
+		GFC_Control_Renderer_Control = GFC_CtrlTheme_Bitmap_Control_Progress_Renderer_Control;
+
+		with GFC_Control_Flag
+		{
+			.Transparent					= GFlags(GCtrl, GFC_CF_TRANSPARENT);
+			.SolidInner						= 0;
+			.SolidBackground				= 0;
+			.RegionClip						= 0;
+			.RegionClipParent				= 0;
+			.NoExternalWindow				= 0;
+			.HitTest						= 0;
+			.TopLayer						= 0;
+			.TopLayerBitmap					= 0;
+			.BottomLayerBitmap				= 0;
+			// Control flag change masks
+			.Mask_InvalidateControl			= GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		}
+		with .Flag
+		{
+			.NoInnerFill					= 0; //GFlags(GProgressCtrl, GFC_CF_PROGRESS_NOINNERFILL);
+		}
+		with .Color
+		{
+			.Inner_Default					= GFC_Control_Color_Inner_Select;
+			.Inner_Disable					= GFC_Control_Color_Inner_Select;
+			.Fill_Default					= GFC_Control_Color_Inner_Select;
+			.Fill_Disable					= GFC_Control_Color_Inner_Select;
+		}
+		with .Combine
+		{
+			.Inner_Default					= GFC_Control_Combine_Surface;
+			.Inner_Disable					= GFC_Control_Combine_Surface;
+			.Fill_Default					= GFC_Control_Combine_Surface;
+			.Fill_Disable					= GFC_Control_Combine_Surface;
+		}
+		with .Size
+		{
+			.HMargin						= GRectMargin(0,0,0,0);
+			.VMargin						= GRectMargin(0,0,0,0);
+			.HDefault						= GSize(100,28);
+			.VDefault						= GSize(28,100);
+		}
+		// ******* Initialize all the Bitmap theme Progress properties to avoid inheritance problems
+		with GFC_CtrlTheme_Bitmap_Control_Progress_Skin
+		{// Skin used to render the selected skin
+			.HTrack_Default				=	0;
+			.HTrack_Disable				=	0;
+			.HTrack_Winoff				=	0;
+			.HTrack_WinoffDisable		=	0;
+			.HInner_Default				=	0;
+			.HInner_Disable				=	0;
+			.HInner_Winoff				=	0;
+			.HInner_WinoffDisable		=	0;
+			.HFillLeft_Default			=	0;
+			.HFillLeft_Disable			=	0;
+			.HFillLeft_Winoff			=	0;
+			.HFillLeft_WinoffDisable	=	0;
+			.HFillRight_Default			=	0;
+			.HFillRight_Disable			=	0;
+			.HFillRight_Winoff			=	0;
+			.HFillRight_WinoffDisable	=	0;
+			.HBorder_Default			=	0;
+			.HBorder_Disable			=	0;
+			.HBorder_Winoff				=	0;
+			.HBorder_WinoffDisable		=	0;
+
+			.VTrack_Default				=	0;
+			.VTrack_Disable				=	0;
+			.VTrack_Winoff				=	0;
+			.VTrack_WinoffDisable		=	0;
+			.VInner_Default				=	0;
+			.VInner_Disable				=	0;
+			.VInner_Winoff				=	0;
+			.VInner_WinoffDisable		=	0;
+			.VFillUp_Default			=	0;
+			.VFillUp_Disable			=	0;
+			.VFillUp_Winoff				=	0;
+			.VFillUp_WinoffDisable		=	0;
+			.VFillDown_Default			=	0;
+			.VFillDown_Disable			=	0;
+			.VFillDown_Winoff			=	0;
+			.VFillDown_WinoffDisable	=	0;
+			.VBorder_Default			=	0;
+			.VBorder_Disable			=	0;
+			.VBorder_Winoff				=	0;
+			.VBorder_WinoffDisable		=	0;
+		}
+		map GFC_Control = GFC_Control_DefaultControl_Style;
+	}
+
+skin SF_CtrlTheme_Civ4_Control_Progress_VBorder_Default
+{
+	layer 
+	{
+		DestCombine		= GColorCombine(BlendSource,Disable);
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+		Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 1, 1);
+		Indent			= GRectMargin(3,0,0,0);
+		Margin			= GRectMargin(5,5,8,5);
+	}
+}
+skin SF_CtrlTheme_Civ4_Control_Progress_VBorder_Disable
+{
+	layer 
+	{
+		DestCombine		= GColorCombine(BlendSource,Disable);
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+		Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 3, 1);
+		Indent			= GRectMargin(3,0,0,0);
+		Margin			= GRectMargin(5,5,8,5);
+	}
+}
+skin SF_CtrlTheme_Civ4_Control_Progress_VInner_Default
+{
+	layer 
+	{
+		DestCombine		= GColorCombine(BlendSource,Disable);
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+		Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 1, 0);
+		Indent			= GRectMargin(3,0,0,0);
+		Margin			= GRectMargin(5,5,8,5);
+	}
+	layer 
+	{
+		DestCombine		= GColorCombine(BlendSource,Disable);
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+		FactorCombine	= GColorCombine(Modulate,Modulate);
+		FactorColor		= GColor(0,0,0,64);
+		Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 1, 2);
+		Indent			= GRectMargin(3,0,0,0);
+		Margin			= GRectMargin(5,5,8,5);
+	}
+}
+
+skin SF_CtrlTheme_Civ4_Control_Progress_HBorder_Default
+{
+	layer 
+	{
+		DestCombine		= GColorCombine(BlendSource,Disable);
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+		Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 0, 1);
+		Indent			= GRectMargin(0,3,0,0);
+		Margin			= GRectMargin(5,5,5,8);
+	}
+}
+skin SF_CtrlTheme_Civ4_Control_Progress_HBorder_Disable
+{
+	layer 
+	{
+		DestCombine		= GColorCombine(BlendSource,Disable);
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+		Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 2, 1);
+		Indent			= GRectMargin(0,3,0,0);
+		Margin			= GRectMargin(5,5,5,8);
+	}
+}
+skin SF_CtrlTheme_Civ4_Control_Progress_HInner_Default
+{
+	layer 
+	{
+		DestCombine		= GColorCombine(BlendSource,Disable);
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+		Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 0, 0);
+		Indent			= GRectMargin(0,3,0,0);
+		Margin			= GRectMargin(5,5,5,8);
+	}
+	layer 
+	{
+		DestCombine		= GColorCombine(BlendSource,Disable);
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+		FactorCombine	= GColorCombine(Modulate, Modulate);
+		FactorColor		= GColor(0,0,0,64);
+		Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 0, 2);
+		Indent			= GRectMargin(0,3,0,0);
+		Margin			= GRectMargin(5,5,5,8);
+	}
+}
+
+	// ** Normal Progress bar style
+	GFC_Control_StandardProgress_Style
+	{
+		with GFC_CtrlTheme_Bitmap_Control_Progress_Skin
+		{// Progress border and inner bitmap skins
+			.HInner_Default
+			{
+				layer 
+				{
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 0, 0);
+					Indent			= GRectMargin(0,3,0,0);
+					Margin			= GRectMargin(5,5,5,8);
+				}
+			}
+			.HInner_Disable
+			{
+				layer 
+				{
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 2, 0);
+					Indent			= GRectMargin(0,3,0,0);
+					Margin			= GRectMargin(5,5,5,8);
+				}
+			}
+			.HInner_Winoff			=	.HInner_Default;
+			.HInner_WinoffDisable	= 	.HInner_Disable;
+			.HFillLeft_Default
+			{
+				layer 
+				{
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 0, 0);
+					Indent			= GRectMargin(0,3,0,0);
+					Margin			= GRectMargin(5,5,5,8);
+				}
+				layer 
+				{
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					FactorCombine	= GColorCombine(Modulate,Source);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Fill;
+					Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 0, 2);
+					Indent			= GRectMargin(0,3,0,0);
+					Margin			= GRectMargin(5,5,5,8);
+				}
+			}
+			.HFillLeft_Disable
+			{
+				layer 
+				{
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 2, 0);
+					Indent			= GRectMargin(0,3,0,0);
+					Margin			= GRectMargin(5,5,5,8);
+				}
+				layer 
+				{
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					FactorCombine	= GColorCombine(Modulate,Source);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Fill;
+					Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 2, 2);
+					Indent			= GRectMargin(0,3,0,0);
+					Margin			= GRectMargin(5,5,5,8);
+				}
+			}
+			.HFillLeft_Winoff			=	.HFillLeft_Default;
+			.HFillLeft_WinoffDisable	=	.HFillLeft_Disable;
+			.HFillRight_Default
+			{
+				layer 
+				{
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 0, 0);
+					Indent			= GRectMargin(0,3,0,0);
+					Margin			= GRectMargin(5,5,5,8);
+				}
+				layer 
+				{
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					FactorCombine	= GColorCombine(Modulate,Source);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Fill;
+					Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 0, 2);
+					Indent			= GRectMargin(0,3,0,0);
+					Margin			= GRectMargin(5,5,5,8);
+				}
+			}
+			.HFillRight_Disable
+			{
+				layer 
+				{
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 2, 0);
+					Indent			= GRectMargin(0,3,0,0);
+					Margin			= GRectMargin(5,5,5,8);
+				}
+				layer 
+				{
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					FactorCombine	= GColorCombine(Modulate,Source);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Fill;
+					Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 2, 2);
+					Indent			= GRectMargin(0,3,0,0);
+					Margin			= GRectMargin(5,5,5,8);
+				}
+			}
+			.HFillRight_Winoff			=	.HFillRight_Default;
+			.HFillRight_WinoffDisable	=	.HFillRight_Disable;
+			.HBorder_Default		= SF_CtrlTheme_Civ4_Control_Progress_HBorder_Default;
+			.HBorder_Disable		= SF_CtrlTheme_Civ4_Control_Progress_HBorder_Disable;
+			.HBorder_Winoff			=	.HBorder_Default;
+			.HBorder_WinoffDisable	=	.HBorder_Disable;
+		}
+		with GFC_CtrlTheme_Bitmap_Control_Progress_Skin
+		{
+			.VInner_Default
+			{
+				layer 
+				{
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 1, 0);
+					Indent			= GRectMargin(3,0,0,0);
+					Margin			= GRectMargin(5,5,8,5);
+				}
+			}
+			.VInner_Disable
+			{
+				layer 
+				{
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 3, 0);
+					Indent			= GRectMargin(3,0,0,0);
+					Margin			= GRectMargin(5,5,8,5);
+				}
+			}
+			.VInner_Winoff			=	.VInner_Default;
+			.VInner_WinoffDisable	= 	.VInner_Disable;
+			.VFillUp_Default
+			{
+				layer 
+				{
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 1, 0);
+					Indent			= GRectMargin(3,0,0,0);
+					Margin			= GRectMargin(5,5,8,5);
+				}
+				layer 
+				{
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					FactorCombine	= GColorCombine(Modulate,Source);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Fill;
+					Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 1, 2);
+					Indent			= GRectMargin(3,0,0,0);
+					Margin			= GRectMargin(5,5,8,5);
+				}
+			}
+			.VFillUp_Disable
+			{
+				layer 
+				{
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 3, 0);
+					Indent			= GRectMargin(3,0,0,0);
+					Margin			= GRectMargin(5,5,8,5);
+				}
+				layer 
+				{
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					FactorCombine	= GColorCombine(Modulate,Source);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Fill;
+					Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 3, 2);
+					Indent			= GRectMargin(3,0,0,0);
+					Margin			= GRectMargin(5,5,8,5);
+				}
+			}
+			.VFillUp_Winoff			=	.VFillUp_Default;
+			.VFillUp_WinoffDisable	=	.VFillUp_Disable;
+			.VFillDown_Default
+			{
+				layer 
+				{
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 1, 0);
+					Indent			= GRectMargin(3,0,0,0);
+					Margin			= GRectMargin(5,5,8,5);
+				}
+				layer 
+				{
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					FactorCombine	= GColorCombine(Modulate,Source);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Fill;
+					Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 1, 2);
+					Indent			= GRectMargin(3,0,0,0);
+					Margin			= GRectMargin(5,5,8,5);
+				}
+			}
+			.VFillDown_Disable	
+			{
+				layer 
+				{
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 3, 0);
+					Indent			= GRectMargin(3,0,0,0);
+					Margin			= GRectMargin(5,5,8,5);
+				}
+				layer 
+				{
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					FactorCombine	= GColorCombine(Modulate,Source);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Fill;
+					Image			= GBitmap("../../../../Resource/Civ4/progress.tga", HVGrid, 4, 3, 3, 2);
+					Indent			= GRectMargin(3,0,0,0);
+					Margin			= GRectMargin(5,5,8,5);
+				}
+			}
+			.VFillDown_Winoff			= .VFillDown_Default;
+			.VFillDown_WinoffDisable	= .VFillDown_Disable;
+			.VBorder_Default		= SF_CtrlTheme_Civ4_Control_Progress_VBorder_Default;
+			.VBorder_Disable		= SF_CtrlTheme_Civ4_Control_Progress_VBorder_Disable;
+			.VBorder_Winoff			= .VBorder_Default;
+			.VBorder_WinoffDisable	= .VBorder_Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Progress	= GFC_Control_DefaultProgress_Style;
+		map GFC_Control								= GFC_Control_DefaultProgress_Style;
+	}
+}

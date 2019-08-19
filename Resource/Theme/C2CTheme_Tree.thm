@@ -1,0 +1,322 @@
+/********************************************************************** 
+
+Filename	:	Civ4Theme_Tree.thm
+Content		:	Civ4 - Tree control theme
+Created		:	May 1, 2005
+Authors		:	Sven Dixon
+
+Copyright	:	(c) 2005 Scaleform Corp. All Rights Reserved.
+
+Licensees may use this file in accordance with the valid Scaleform
+GFC Commercial License Agreement provided with the software.
+
+This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING 
+THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR ANY PURPOSE.
+
+For information regarding GFC Commercial License Agreements go to:
+	online - http://www.scaleform.com/licensing.html or
+	email  - sales@scaleform.com 
+
+**********************************************************************/
+
+// ***** Tree control Bitmap Skin 
+
+
+with GFC_Control_Tree
+{
+	GFC_Control_DefaultTreeTable_Style
+	{
+		GFC_Control_Renderer_Control =	GFC_CtrlTheme_Bitmap_Control_Tree_Renderer_Control;
+
+		with .Renderer
+		{
+			.Item	= GFC_CtrlTheme_Bitmap_Control_Tree_Renderer_Item;
+			.Indent	= GFC_CtrlTheme_Bitmap_Control_Tree_Renderer_Indent;
+		}
+		with GFC_Control_Flag
+		{
+			.Transparent					=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+			.SolidInner						=	0;	//GFlags(GCtrl, GFC_CF_SOLIDINNER);
+			.SolidBackground				=	0;	//GFlags(GCtrl, GFC_CF_SOLIDBACKGROUND);
+			.RegionClip						=	0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP);
+			.RegionClipParent				=	0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+			.NoExternalWindow				=	0;	//GFlags(GCtrl, GFC_CF_NOEXTERNALWINDOW);
+			.HitTest						=	0;	//GFlags(GCtrl, GFC_CF_HITTEST);
+			.TopLayer						=	0;	//GFlags(GCtrl, GFC_CF_TOPLAYER);
+			.TopLayerBitmap					=	0;	//GFlags(GCtrl, GFC_CF_TOPLAYERBITMAP);
+			.BottomLayerBitmap				=	0;	//GFlags(GCtrl, GFC_CF_BOTTOMLAYERBITMAP);
+			.Mask_InvalidateControl			=	GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		}
+		.Flag_NoLines = GFlags(GTreeCtrl, GFC_CF_TREE_NOLINES);
+
+		with .Size
+		{
+			.IndentWidth					=	GFC_Control_Size_ListItem;
+			.IndentHeight					=	GFC_Control_Size_ListItem;
+
+			.ItemSpace						=	GFC_Control_Table_Size_CellItemSpace;
+			.ItemContentMargin				=	GRectMargin(0);
+			.ItemTextMargin					=	GRectMargin(2,3,2,0);
+		}
+		with .Color
+		{
+			with .Indent
+			{
+				.Connector_Default					=	GFC_Control_Color_3DLook_Dark;
+				.Connector_Select					=	GFC_Control_Color_3DLook_Light;
+				.Connector_Offselect				=	GFC_Control_Tree_Color_Indent_Connector_Default;
+				.Connector_Multiselect				=	GFC_Control_Tree_Color_Indent_Connector_Select;
+				.Connector_Inactive					=	GFC_Control_Color_3DLook_Light;
+				.Connector_InactiveSelect			=	GFC_Control_Color_3DLook_Light;
+				.Connector_InactiveOffselect		=	GFC_Control_Tree_Color_Indent_Connector_Default;
+				.Connector_InactiveMultiselect		=	GFC_Control_Tree_Color_Indent_Connector_Select;
+				.Connector_Disable					=	GFC_Control_Color_3DLook_Dark;
+				.Connector_DisableSelect			=	GFC_Control_Color_3DLook_Light;
+				.Connector_DisableOffselect			=	GFC_Control_Tree_Color_Indent_Connector_Default;
+				.Connector_DisableMultiselect		=	GFC_Control_Tree_Color_Indent_Connector_Select;
+
+				.ExpandImage_Default				=	GFC_Control_Color_3DLook_Dark;
+				.ExpandImage_Select					=	GFC_Control_Color_3DLook_Light;
+				.ExpandImage_Offselect				=	GFC_Control_Tree_Color_Indent_Connector_Default;
+				.ExpandImage_Multiselect			=	GFC_Control_Tree_Color_Indent_Connector_Select;
+				.ExpandImage_Inactive				=	GFC_Control_Color_3DLook_Dark;
+				.ExpandImage_InactiveSelect			=	GFC_Control_Color_3DLook_Light;
+				.ExpandImage_InactiveOffselect		=	GFC_Control_Tree_Color_Indent_Connector_Default;
+				.ExpandImage_InactiveMultiselect	=	GFC_Control_Tree_Color_Indent_Connector_Select;
+				.ExpandImage_Disable				=	GFC_Control_Color_3DLook_Dark;
+				.ExpandImage_DisableSelect			=	GFC_Control_Color_3DLook_Light;
+				.ExpandImage_DisableOffselect		=	GFC_Control_Tree_Color_Indent_Connector_Default;
+				.ExpandImage_DisableMultiselect		=	GFC_Control_Tree_Color_Indent_Connector_Select;
+			}
+			with .ItemImage
+			{
+				.Default							=	GFC_Control_Color_Image_Default;
+				.Select								=	GFC_Control_Color_Image_Select;
+				.Offselect							=	GFC_Control_Color_Image_Select;
+				.Multiselect						=	GFC_Control_Color_Image_Select;
+				.Inactive							=	GFC_Control_Color_Image_Default;
+				.InactiveSelect						=	GFC_Control_Color_Image_Select;
+				.InactiveOffselect					=	GFC_Control_Color_Image_Select;
+				.InactiveMultiselect				=	GFC_Control_Color_Image_Select;
+				.Disable							=	GFC_Control_Color_Image_Disable;
+				.DisableSelect						=	GFC_Control_Color_Image_DisableSelect;
+				.DisableOffselect					=	GFC_Control_Color_Image_DisableSelect;
+				.DisableMultiselect					=	GFC_Control_Color_Image_DisableSelect;
+			}
+		}
+		with .Combine
+		{
+			with .Indent
+			{
+				.Connector_Default					=	GFC_Control_Combine_Surface;
+				.Connector_Select					=	GFC_Control_Combine_Inner_Select;
+				.Connector_Offselect				=	GFC_Control_Combine_Surface;
+				.Connector_Multiselect				=	GFC_Control_Combine_Inner_Select;
+				.Connector_Inactive					=	GFC_Control_Combine_Surface;
+				.Connector_InactiveSelect			=	GFC_Control_Combine_Inner_Select;
+				.Connector_InactiveOffselect		=	GFC_Control_Combine_Surface;
+				.Connector_InactiveMultiselect		=	GFC_Control_Combine_Inner_Select;
+				.Connector_Disable					=	GFC_Control_Combine_Surface;
+				.Connector_DisableSelect			=	GFC_Control_Combine_Inner_Select;
+				.Connector_DisableOffselect			=	GFC_Control_Combine_Surface;
+				.Connector_DisableMultiselect		=	GFC_Control_Combine_Inner_Select;
+
+				.ExpandImage_Default				=	GFC_Control_Combine_Surface;
+				.ExpandImage_Select					=	GFC_Control_Combine_Inner_Select;
+				.ExpandImage_Offselect				=	GFC_Control_Combine_Surface;
+				.ExpandImage_Multiselect			=	GFC_Control_Combine_Inner_Select;
+				.ExpandImage_Inactive				=	GFC_Control_Combine_Surface;
+				.ExpandImage_InactiveSelect			=	GFC_Control_Combine_Inner_Select;
+				.ExpandImage_InactiveOffselect		=	GFC_Control_Combine_Surface;
+				.ExpandImage_InactiveMultiselect	=	GFC_Control_Combine_Inner_Select;
+				.ExpandImage_Disable				=	GFC_Control_Combine_Surface;
+				.ExpandImage_DisableSelect			=	GFC_Control_Combine_Inner_Select;
+				.ExpandImage_DisableOffselect		=	GFC_Control_Combine_Surface;
+				.ExpandImage_DisableMultiselect		=	GFC_Control_Combine_Inner_Select;
+			}
+			with .ItemImage
+			{
+				// Item icon (graphic to the left of the item name)
+				.Default_Dest						=	GFC_Control_Combine_Image_Default_Dest;
+				.Default_Factor						=	GFC_Control_Combine_Image_Default_Factor;
+				.Select_Dest						=	GFC_Control_Combine_Image_Select_Dest;
+				.Select_Factor						=	GFC_Control_Combine_Image_Select_Factor;
+				.Offselect_Dest						=	GFC_Control_Combine_Image_Default_Dest;
+				.Offselect_Factor					=	GFC_Control_Combine_Image_Default_Factor;
+				.Multiselect_Dest					=	GFC_Control_Combine_Image_Default_Dest;
+				.Multiselect_Factor					=	GFC_Control_Combine_Image_Default_Factor;
+
+				.Inactive_Dest						=	GFC_Control_Combine_Image_Default_Dest;
+				.Inactive_Factor					=	GFC_Control_Combine_Image_Default_Factor;
+				.InactiveSelect_Dest				=	GFC_Control_Combine_Image_Select_Dest;
+				.InactiveSelect_Factor				=	GFC_Control_Combine_Image_Select_Factor;
+				.InactiveOffselect_Dest				=	GFC_Control_Combine_Image_Default_Dest;
+				.InactiveOffselect_Factor			=	GFC_Control_Combine_Image_Default_Factor;
+				.InactiveMultiselect_Dest			=	GFC_Control_Combine_Image_Select_Dest;
+				.InactiveMultiselect_Factor			=	GFC_Control_Combine_Image_Select_Factor;
+
+				.Disable_Dest						=	GFC_Control_Combine_Image_Disable_Dest;
+				.Disable_Factor						=	GFC_Control_Combine_Image_Disable_Factor;
+				.DisableSelect_Dest					=	GFC_Control_Combine_Image_DisableSelect_Dest;
+				.DisableSelect_Factor				=	GFC_Control_Combine_Image_DisableSelect_Factor;
+				.DisableOffselect_Dest				=	GFC_Control_Combine_Image_Disable_Dest;
+				.DisableOffselect_Factor			=	GFC_Control_Combine_Image_Disable_Factor;
+				.DisableMultiselect_Dest			=	GFC_Control_Combine_Image_DisableSelect_Dest;
+				.DisableMultiselect_Factor			=	GFC_Control_Combine_Image_DisableSelect_Factor;
+			}
+		}
+		with GFC_CtrlTheme_Bitmap_Control_Tree_Skin
+		{
+			.Indent_None_Default					=	0;
+			.Indent_None_Select						=	0;
+
+			.Indent_Empty_Default					=	0;
+			.Indent_Empty_Select					=	0;
+			.Indent_EmptyUp_Default					=	0;
+			.Indent_EmptyUp_Select					=	0;
+			.Indent_EmptyDown_Default				=	0;
+			.Indent_EmptyDown_Select				=	0;
+			.Indent_EmptyUpDown_Default				=	0;
+			.Indent_EmptyUpDown_Select				=	0;
+
+			.Indent_Empty_Disable					=	0;
+			.Indent_Empty_DisableSelect				=	0;
+			.Indent_EmptyUp_Disable					=	0;
+			.Indent_EmptyUp_DisableSelect			=	0;
+			.Indent_EmptyDown_Disable				=	0;
+			.Indent_EmptyDown_DisableSelect			=	0;
+			.Indent_EmptyUpDown_Disable				=	0;
+			.Indent_EmptyUpDown_DisableSelect		=	0;
+
+			.Indent_ClosedBox_Default				=	0;
+			.Indent_ClosedBox_Select				=	0;
+			.Indent_ClosedBoxUp_Default				=	0;
+			.Indent_ClosedBoxUp_Select				=	0;
+			.Indent_ClosedBoxDown_Default			=	0;
+			.Indent_ClosedBoxDown_Select			=	0;
+			.Indent_ClosedBoxUpDown_Default			=	0;
+			.Indent_ClosedBoxUpDown_Select			=	0;
+
+			.Indent_ClosedBox_Disable				=	0;
+			.Indent_ClosedBox_DisableSelect			=	0;
+			.Indent_ClosedBoxUp_Disable				=	0;
+			.Indent_ClosedBoxUp_DisableSelect		=	0;
+			.Indent_ClosedBoxDown_Disable			=	0;
+			.Indent_ClosedBoxDown_DisableSelect		=	0;
+			.Indent_ClosedBoxUpDown_Disable			=	0;
+			.Indent_ClosedBoxUpDown_DisableSelect	=	0;
+
+			.Indent_OpenBox_Default					=	0;
+			.Indent_OpenBox_Select					=	0;
+			.Indent_OpenBoxUp_Default				=	0;
+			.Indent_OpenBoxUp_Select				=	0;
+			.Indent_OpenBoxDown_Default				=	0;
+			.Indent_OpenBoxDown_Select				=	0;
+			.Indent_OpenBoxUpDown_Default			=	0;
+			.Indent_OpenBoxUpDown_Select			=	0;
+			
+			.Indent_OpenBox_Disable					=	0;
+			.Indent_OpenBox_DisableSelect			=	0;
+			.Indent_OpenBoxUp_Disable				=	0;
+			.Indent_OpenBoxUp_DisableSelect			=	0;
+			.Indent_OpenBoxDown_Disable				=	0;
+			.Indent_OpenBoxDown_DisableSelect		=	0;
+			.Indent_OpenBoxUpDown_Disable			=	0;
+			.Indent_OpenBoxUpDown_DisableSelect		=	0;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Table		=	GFC_Control_StandardTable_Style;
+		map GFC_Control								=	GFC_Control_StandardTable_Style;
+	}
+	// **** Normal Tree style
+	GFC_Control_StandardTreeTable_Style
+	{
+		with GFC_CtrlTheme_Bitmap_Control_Tree_Skin_Indent
+		{
+	// *** Empty Box
+			.None_Default					=	SF_CtrlTheme_Civ4_Control_Skin_Blank;
+			.None_Select					=	.None_Default;
+			.None_Disable					=	.None_Default;
+			.None_DisableSelect				=	.None_Default;
+
+			.Empty_Default					=	.None_Default;
+			.Empty_Select					=	.Empty_Default;
+			.EmptyUp_Default				=	.Empty_Default;
+			.EmptyUp_Select					=	.Empty_Default;
+			.EmptyDown_Default				=	.Empty_Default;
+			.EmptyDown_Select				=	.Empty_Default;
+			.EmptyUpDown_Default			=	.Empty_Default;
+			.EmptyUpDown_Select				=	.Empty_Default;
+			.Empty_Disable					=	.Empty_Default;
+			.Empty_DisableSelect			=	.Empty_Disable;
+			.EmptyUp_Disable				=	.Empty_Disable;
+			.EmptyUp_DisableSelect			=	.Empty_Disable;
+			.EmptyDown_Disable				=	.Empty_Disable;
+			.EmptyDown_DisableSelect		=	.Empty_Disable;
+			.EmptyUpDown_Disable			=	.Empty_Disable;
+			.EmptyUpDown_DisableSelect		=	.Empty_Disable;
+
+	// *** Closed Box
+			.ClosedBox_Default
+			{
+				layer {
+					DestCombine				= GColorCombine(BlendSource,Disable);
+					Image					= GBitmap("../../../../Resource/Civ4/tree_icons.tga", HVGrid, 2, 2, 0, 0);
+				}
+			}
+			.ClosedBox_Select				=	.ClosedBox_Default;
+			.ClosedBoxUp_Default			=	.ClosedBox_Default;
+			.ClosedBoxUp_Select				=	.ClosedBox_Default;
+			.ClosedBoxDown_Default			=	.ClosedBox_Default;
+			.ClosedBoxDown_Select			=	.ClosedBox_Default;
+			.ClosedBoxUpDown_Default		=	.ClosedBox_Default;
+			.ClosedBoxUpDown_Select			=	.ClosedBox_Default;
+			.ClosedBox_Disable
+			{
+				layer {
+					DestCombine				= GColorCombine(BlendSource,Disable);
+					Image					= GBitmap("../../../../Resource/Civ4/tree_icons.tga", HVGrid, 2, 2, 1, 0);
+				}
+			}
+			.ClosedBox_DisableSelect		=	.ClosedBox_Disable;
+			.ClosedBoxUp_Disable			=	.ClosedBox_Disable;
+			.ClosedBoxUp_DisableSelect		=	.ClosedBox_Disable;
+			.ClosedBoxDown_Disable			=	.ClosedBox_Disable;
+			.ClosedBoxDown_DisableSelect	=	.ClosedBox_Disable;
+			.ClosedBoxUpDown_Disable		=	.ClosedBox_Disable;
+			.ClosedBoxUpDown_DisableSelect	=	.ClosedBox_Disable;
+
+	// *** Open Box
+			.OpenBox_Default
+			{
+				layer {
+					DestCombine				= GColorCombine(BlendSource,Disable);
+					Image					= GBitmap("../../../../Resource/Civ4/tree_icons.tga", HVGrid, 2, 2, 0, 1);
+				}
+			}
+			.OpenBox_Select					=	.OpenBox_Default;
+			.OpenBoxUp_Default				=	.OpenBox_Default;
+			.OpenBoxUp_Select				=	.OpenBox_Default;
+			.OpenBoxDown_Default			=	.OpenBox_Default;
+			.OpenBoxDown_Select				=	.OpenBox_Default;
+			.OpenBoxUpDown_Default			=	.OpenBox_Default;
+			.OpenBoxUpDown_Select			=	.OpenBox_Default;
+			.OpenBox_Disable
+			{
+				layer {
+					DestCombine				= GColorCombine(BlendSource,Disable);
+					Image					= GBitmap("../../../../Resource/Civ4/tree_icons.tga", HVGrid, 2, 2, 1, 1);
+				}
+			}
+			.OpenBox_DisableSelect			=	.OpenBox_Disable;
+			.OpenBoxUp_Disable				=	.OpenBox_Disable;
+			.OpenBoxUp_DisableSelect		=	.OpenBox_Disable;
+			.OpenBoxDown_Disable			=	.OpenBox_Disable;
+			.OpenBoxDown_DisableSelect		=	.OpenBox_Disable;
+			.OpenBoxUpDown_Disable			=	.OpenBox_Disable;
+			.OpenBoxUpDown_DisableSelect	=	.OpenBox_Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Tree		=	GFC_Control_DefaultTreeTable_Style;
+		map GFC_CtrlTheme_Bitmap_Control_Table		=	GFC_Control_DefaultTreeTable_Style;
+		map GFC_Control								=	GFC_Control_DefaultTreeTable_Style;
+	}
+}

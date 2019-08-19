@@ -1,0 +1,1402 @@
+/********************************************************************** 
+
+Filename	: Civ4Theme_ComboBox.thm
+Content		: Civ4 - GComboBox control theme
+Created		: May 1, 2005
+Authors		: Sven Dixon
+
+Copyright	: (c) 2005 Scaleform Corp. All Rights Reserved.
+
+**********************************************************************/
+
+// Popup Button style \\
+style SF_CtrlTheme_Civ4_Control_ComboBox_Standard_PopupButton_Style
+{
+	GFC_Control_Renderer_Control				= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+	GFC_Control_Flag_Mask_InvalidateControl		= GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_WINDOWACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER, GFC_CF_FORCE_ROLLOVER);
+	GFC_Control_Button_Flag_DownOffset			= GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_CONTENT);
+	GFC_Control_Button_Size_DownOffset_Content	= GPoint(0,0);
+	GFC_Control_Button_Size_Default				= GSize(18,30);
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+				Image		= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,3,6,3);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/combobox_btn.tga", HVGrid, 1, 6, 0, 0);
+				Margin		= GRectMargin(0,8,7,8);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/combobox_btn.tga", HVGrid, 1, 6, 0, 1);
+				Margin		= GRectMargin(0,8,7,8);
+			}
+			layer {
+				DestCombine	= GColorCombine(Add,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/combobox_btn.tga", HVGrid, 1, 6, 0, 5);
+				Margin		= GRectMargin(1,0,0,0);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/combobox_glyph.tga", HVGrid, 1, 3, 0, 0);
+				Margin		= GRectMargin(1,1,1,1);
+				Indent		= GRectMargin(0,3,2,0);
+			}
+		}
+		.Rollover
+		{
+			layer {Inherit = .Default;}
+			layer {}
+			layer {}
+			layer {}
+			layer {}
+			layer {
+				DestCombine	= GColorCombine(Add,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+				Image		= GBitmap("../../../../Resource/Civ4/combobox_btn.tga", HVGrid, 1, 6, 0, 2);
+				Margin		= GRectMargin(0,8,7,8);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/combobox_glyph.tga", HVGrid, 1, 3, 0, 0);
+				Margin		= GRectMargin(1,1,1,1);
+				Indent		= GRectMargin(0,3,2,0);
+			}
+		}
+		.Press
+		{
+			layer {Inherit = .Default;}
+			layer {}
+			layer {}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				Image		= GBitmap("../../../../Resource/Civ4/combobox_btn.tga", HVGrid, 1, 6, 0, 3);
+				Margin		= GRectMargin(0,8,7,8);
+			}
+			layer {}
+			layer {Image = GBitmap("../../../../Resource/Civ4/combobox_glyph.tga", HVGrid, 1, 3, 0, 1);}
+		}
+		.Disable
+		{
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+				Image		= GBitmap("../../../../Resource/Civ4/combobox_btn.tga", HVGrid, 1, 6, 0, 4);
+				Margin		= GRectMargin(0,8,7,8);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/combobox_glyph.tga", HVGrid, 1, 3, 0, 2);
+				Margin		= GRectMargin(1,1,1,1);
+				Indent		= GRectMargin(0,3,2,0);
+			}
+		}
+		.Toggle					= .Press;
+		.ToggleRollover			= .Press;
+		.TogglePress			= .Press;
+		.ToggleDisable			= .Disable;
+		.ToggleFocus			= .Toggle;
+		.ToggleFocusRollover	= .ToggleRollover;
+		.ToggleFocusPress		= .TogglePress;
+		.ToggleFocusDisable		= .ToggleDisable;
+		.Inactive				= .Default;
+		.InactiveRollover		= .Rollover;
+		.InactivePress			= .Press;
+		.InactiveDisable		= .Disable;
+		.InactiveToggle			= .Toggle;
+		.InactiveToggleRollover	= .ToggleRollover;
+		.InactiveTogglePress	= .TogglePress;
+		.InactiveToggleDisable	= .ToggleDisable;
+		.Winoff					= .Default;
+		.WinoffRollover			= .Rollover;
+		.WinoffPress			= .Press;
+		.WinoffDisable			= .Disable;
+		.WinoffToggle			= .Toggle;
+		.WinoffToggleRollover	= .ToggleRollover;
+		.WinoffTogglePress		= .TogglePress;
+		.WinoffToggleDisable	= .ToggleDisable;
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+	map GFC_Control							= GFC_Control_DefaultButton_Style;
+}
+
+// Up - button style \\
+style SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_UpButton_Style
+{
+	GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+	GFC_Control_Button_Size_Default	= GSize(8,30);
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer
+			{
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
+				CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG; 
+			}
+			layer {
+				DestCombine		= GColorCombine(BlendSource,Disable);
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
+				FactorCombine	= GColorCombine(Modulate,Modulate);
+				FactorColor		= SF_CtrlTheme_Civ4_Control_Color_MergeBG;
+				Image			= GBitmap("../../../../Resource/Civ4/menu_scroll_track_bg_v.tga", HVGrid, 2, 2, 0, 0);
+				Margin			= GRectMargin(0,0,0,4);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY);
+				Image		= GBitmap("../../../../Resource/Civ4/menu_scroll_track_bg_v.tga", HVGrid, 2, 2, 0, 1);
+				Margin		= GRectMargin(0,0,0,10);
+				Indent		= GRectMargin(5,0,5,0);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/menu_scroll_btn.tga", HVGrid, 4, 4, 0, 0);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(2,0,0,6);
+			}
+		}
+		.Rollover
+		{
+			layer {Inherit = .Default;}
+			layer {}
+			layer {}
+			layer {}
+			layer {Image = GBitmap("../../../../Resource/Civ4/menu_scroll_btn.tga", HVGrid, 4, 4, 0, 2);}
+		}
+		.Press
+		{
+			layer {Inherit = .Default;}
+			layer {}
+			layer {}
+			layer {}
+			layer {
+				Image	= GBitmap("../../../../Resource/Civ4/menu_scroll_btn.tga", HVGrid, 4, 4, 0, 1);
+				Indent	= GRectMargin(2,0,0,8);
+			}
+		}
+		.Disable
+		{
+			layer {Inherit = .Default;}
+			layer {}
+			layer {}
+			layer {}
+			layer {Image = GBitmap("../../../../Resource/Civ4/menu_scroll_btn.tga", HVGrid, 4, 4, 0, 3);}
+		}
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+	map GFC_Control							= GFC_Control_DefaultButton_Style;
+}
+
+// Down - button style \\
+style SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_DownButton_Style
+{
+	GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+	GFC_Control_Button_Size_Default	= GSize(8,30);
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer
+			{
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
+				CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG; 
+			}
+			layer {
+				DestCombine		= GColorCombine(BlendSource,Disable);
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
+				FactorCombine	= GColorCombine(Modulate,Modulate);
+				FactorColor		= SF_CtrlTheme_Civ4_Control_Color_MergeBG;
+				Image			= GBitmap("../../../../Resource/Civ4/menu_scroll_track_bg_v.tga", HVGrid, 2, 2, 1, 0);
+				Margin			= GRectMargin(0,0,0,0);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY);
+				Image		= GBitmap("../../../../Resource/Civ4/menu_scroll_track_bg_v.tga", HVGrid, 2, 2, 1, 1);
+				Margin		= GRectMargin(0,10,0,0);
+				Indent		= GRectMargin(5,0,5,0);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/menu_scroll_btn.tga", HVGrid, 4, 4, 1, 0);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(2,6,0,0);
+			}
+		}
+		.Rollover
+		{
+			layer {Inherit = .Default;}
+			layer {}
+			layer {}
+			layer {}
+			layer {Image = GBitmap("../../../../Resource/Civ4/menu_scroll_btn.tga", HVGrid, 4, 4, 1, 2);}
+		}
+		.Press
+		{
+			layer {Inherit = .Default;}
+			layer {}
+			layer {}
+			layer {}
+			layer {
+				Image	= GBitmap("../../../../Resource/Civ4/menu_scroll_btn.tga", HVGrid, 4, 4, 1, 1);
+				Indent	= GRectMargin(2,8,0,0);
+			}
+		}
+		.Disable
+		{
+			layer {Inherit = .Default;}
+			layer {}
+			layer {}
+			layer {}
+			layer {Image = GBitmap("../../../../Resource/Civ4/menu_scroll_btn.tga", HVGrid, 4, 4, 1, 3);}
+		}
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+	map GFC_Control							= GFC_Control_DefaultButton_Style;
+}
+
+// Left - button style \\
+style SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_LeftButton_Style
+{
+	GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+	GFC_Control_Button_Size_Default	= GSize(30,8);
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer
+			{
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
+				CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG; 
+			}
+			layer {
+				DestCombine		= GColorCombine(BlendSource,Disable);
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
+				FactorCombine	= GColorCombine(Modulate,Modulate);
+				FactorColor		= SF_CtrlTheme_Civ4_Control_Color_MergeBG;
+				Image			= GBitmap("../../../../Resource/Civ4/menu_scroll_track_bg_h.tga", HVGrid, 2, 2, 0, 0);
+				Margin			= GRectMargin(0,0,0,0);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY);
+				Image		= GBitmap("../../../../Resource/Civ4/menu_scroll_track_bg_h.tga", HVGrid, 2, 2, 0, 1);
+				Margin		= GRectMargin(0,0,10,0);
+				Indent		= GRectMargin(0,5,0,5);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/menu_scroll_btn.tga", HVGrid, 4, 4, 2, 0);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,1,6,0);
+			}
+		}
+		.Rollover
+		{
+			layer {Inherit = .Default;}
+			layer {}
+			layer {}
+			layer {}
+			layer {Image = GBitmap("../../../../Resource/Civ4/menu_scroll_btn.tga", HVGrid, 4, 4, 2, 2);}
+		}
+		.Press
+		{
+			layer {Inherit = .Default;}
+			layer {}
+			layer {}
+			layer {}
+			layer {
+				Image	= GBitmap("../../../../Resource/Civ4/menu_scroll_btn.tga", HVGrid, 4, 4, 2, 1);
+				Indent	= GRectMargin(0,1,8,0);
+			}
+		}
+		.Disable
+		{
+			layer {Inherit = .Default;}
+			layer {}
+			layer {}
+			layer {}
+			layer {Image = GBitmap("../../../../Resource/Civ4/menu_scroll_btn.tga", HVGrid, 4, 4, 2, 3);}
+		}
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+	map GFC_Control							= GFC_Control_DefaultButton_Style;
+}
+
+// Right - button style \\
+style SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_RightButton_Style
+{
+	GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+	GFC_Control_Button_Size_Default	= GSize(30,8);
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer
+			{
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
+				CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG; 
+			}
+			layer {
+				DestCombine		= GColorCombine(BlendSource,Disable);
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
+				FactorCombine	= GColorCombine(Modulate,Modulate);
+				FactorColor		= SF_CtrlTheme_Civ4_Control_Color_MergeBG;
+				Image			= GBitmap("../../../../Resource/Civ4/menu_scroll_track_bg_h.tga", HVGrid, 2, 2, 1, 0);
+				Margin			= GRectMargin(0,0,0,0);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY);
+				Image		= GBitmap("../../../../Resource/Civ4/menu_scroll_track_bg_h.tga", HVGrid, 2, 2, 1, 1);
+				Margin		= GRectMargin(10,0,0,0);
+				Indent		= GRectMargin(0,5,0,5);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/menu_scroll_btn.tga", HVGrid, 4, 4, 3, 0);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(6,1,0,0);
+			}
+		}
+		.Rollover
+		{
+			layer {Inherit = .Default;}
+			layer {}
+			layer {}
+			layer {}
+			layer {Image = GBitmap("../../../../Resource/Civ4/menu_scroll_btn.tga", HVGrid, 4, 4, 3, 2);}
+		}
+		.Press
+		{
+			layer {Inherit = .Default;}
+			layer {}
+			layer {}
+			layer {}
+			layer {
+				Image	= GBitmap("../../../../Resource/Civ4/menu_scroll_btn.tga", HVGrid, 4, 4, 3, 1);
+				Indent	= GRectMargin(8,1,0,0);
+			}
+		}
+		.Disable
+		{
+			layer {Inherit = .Default;}
+			layer {}
+			layer {}
+			layer {}
+			layer {Image = GBitmap("../../../../Resource/Civ4/menu_scroll_btn.tga", HVGrid, 4, 4, 3, 3);}
+		}
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+	map GFC_Control							= GFC_Control_DefaultButton_Style;
+}
+
+// Vertical Grip - button style \\
+style SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_VGrip_Style
+{
+	GFC_Control_Renderer_Control			= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+	GFC_Control_Button_Size_BorderMargin	= GRectMargin(4,4,4,4);
+	GFC_Control_Button_Size_Default			= GSize(4,4);
+	GFC_Control_Button_Flag_TrackedPress	= GFlags(GButtonCtrl, GFC_CF_BUTTON_TRACKEDPRESS);
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer
+			{
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
+				CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG; 
+				Indent		= GRectMargin(5,0,5,0);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_SCALE);
+				Image		= GBitmap("../../../../Resource/Civ4/menu_scroll_grip.tga", HVGrid, 2, 4, 0, 0);
+				Margin		= GRectMargin(1,1,1,1);
+				Indent		= GRectMargin(5,0,5,0);
+			}
+		}
+		.Rollover
+		{
+			layer {Inherit = .Default;}
+			layer {}
+			layer {Image = GBitmap("../../../../Resource/Civ4/menu_scroll_grip.tga", HVGrid, 2, 4, 0, 2);}
+		}
+		.Press
+		{
+			layer {Inherit = .Default;}
+			layer {}
+			layer {Image = GBitmap("../../../../Resource/Civ4/menu_scroll_grip.tga", HVGrid, 2, 4, 0, 1);}
+		}
+		.Disable
+		{
+			layer {Inherit = .Default;}
+			layer {}
+			layer {Image = GBitmap("../../../../Resource/Civ4/menu_scroll_grip.tga", HVGrid, 2, 4, 0, 3);}
+		}
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+	map GFC_Control							= GFC_Control_DefaultButton_Style;
+}
+
+// Horizontal Grip - button style
+style SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_HGrip_Style
+{
+	GFC_Control_Renderer_Control			= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+	GFC_Control_Button_Size_Default			= GSize(4,4);
+	GFC_Control_Button_Flag_TrackedPress	= GFlags(GButtonCtrl, GFC_CF_BUTTON_TRACKEDPRESS);
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer
+			{
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
+				CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG; 
+				Indent		= GRectMargin(0,5,0,5);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_SCALE);
+				Image		= GBitmap("../../../../Resource/Civ4/menu_scroll_grip.tga", HVGrid, 2, 4, 1, 0);
+				Margin		= GRectMargin(1,1,1,1);
+				Indent		= GRectMargin(0,5,0,5);
+			}
+		}
+		.Rollover
+		{
+			layer {Inherit = .Default;}
+			layer {}
+			layer {Image = GBitmap("../../../../Resource/Civ4/menu_scroll_grip.tga", HVGrid, 2, 4, 1, 2);}
+		}
+		.Press
+		{
+			layer {Inherit = .Default;}
+			layer {}
+			layer {Image = GBitmap("../../../../Resource/Civ4/menu_scroll_grip.tga", HVGrid, 2, 4, 1, 1);}
+		}
+		.Disable
+		{
+			layer {Inherit = .Default;}
+			layer {}
+			layer {Image = GBitmap("../../../../Resource/Civ4/menu_scroll_grip.tga", HVGrid, 2, 4, 1, 3);}
+		}
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+	map GFC_Control							= GFC_Control_DefaultButton_Style;
+}
+
+// Shaft skins \\
+skin SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_Skin_HShaft_Default
+{
+	layer
+	{
+		LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
+		CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG; 
+	}
+	layer {
+		DestCombine		= GColorCombine(BlendSource,Disable);
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_BACKCAPS_PARTIAL);
+		FactorCombine	= GColorCombine(Modulate,Modulate);
+		FactorColor		= SF_CtrlTheme_Civ4_Control_Color_MergeBG;
+		Image			= GBitmap("../../../../Resource/Civ4/menu_scroll_track.tga", HVGrid, 1, 4, 0, 3);
+		Margin			= GRectMargin(0,0,0,0);
+	}
+	layer {
+		DestCombine	= GColorCombine(BlendSource,Disable);
+		LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+		Image		= GBitmap("../../../../Resource/Civ4/menu_scroll_track.tga", HVGrid, 1, 4, 0, 0);
+		Margin		= GRectMargin(1,1,1,1);
+		Indent		= GRectMargin(5,5,5,5);
+	}
+}
+
+skin SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_Skin_HShaft_Press
+{
+	layer
+	{
+		LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
+		CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG; 
+	}
+	layer {
+		DestCombine		= GColorCombine(BlendSource,Disable);
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE);
+		FactorCombine	= GColorCombine(Modulate,Modulate);
+		FactorColor		= SF_CtrlTheme_Civ4_Control_Color_MergeBG;
+		Image			= GBitmap("../../../../Resource/Civ4/menu_scroll_track.tga", HVGrid, 1, 4, 0, 3);
+		Margin			= GRectMargin(0,0,0,0);
+	}
+	layer {
+		DestCombine	= GColorCombine(BlendSource,Disable);
+		LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+		Image		= GBitmap("../../../../Resource/Civ4/menu_scroll_track.tga", HVGrid, 1, 4, 0, 2);
+		Margin		= GRectMargin(1,1,1,1);
+		Indent		= GRectMargin(5,5,5,5);
+	}
+}
+
+skin SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_Skin_VShaft_Default
+{
+	layer
+	{
+		LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
+		CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG; 
+	}
+	layer {
+		DestCombine		= GColorCombine(BlendSource,Disable);
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE);
+		FactorCombine	= GColorCombine(Modulate,Modulate);
+		FactorColor		= SF_CtrlTheme_Civ4_Control_Color_MergeBG;
+		Image			= GBitmap("../../../../Resource/Civ4/menu_scroll_track.tga", HVGrid, 1, 4, 0, 3);
+		Margin			= GRectMargin(0,0,0,0);
+	}
+	layer {
+		DestCombine	= GColorCombine(BlendSource,Disable);
+		LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+		Image		= GBitmap("../../../../Resource/Civ4/menu_scroll_track.tga", HVGrid, 1, 4, 0, 0);
+		Margin		= GRectMargin(1,1,1,1);
+		Indent		= GRectMargin(5,0,5,0);
+	}
+}
+
+skin SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_Skin_VShaft_Press
+{
+	layer
+	{
+		LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
+		CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG; 
+	}
+	layer {
+		DestCombine		= GColorCombine(BlendSource,Disable);
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE);
+		FactorCombine	= GColorCombine(Modulate,Modulate);
+		FactorColor		= SF_CtrlTheme_Civ4_Control_Color_MergeBG;
+		Image			= GBitmap("../../../../Resource/Civ4/menu_scroll_track.tga", HVGrid, 1, 4, 0, 3);
+		Margin			= GRectMargin(0,0,0,0);
+	}
+	layer {
+		DestCombine	= GColorCombine(BlendSource,Disable);
+		LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+		Image		= GBitmap("../../../../Resource/Civ4/menu_scroll_track.tga", HVGrid, 1, 4, 0, 1);
+		Margin		= GRectMargin(1,1,1,1);
+		Indent		= GRectMargin(5,0,5,0);
+	}
+}
+
+style SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_Style
+{
+	with GFC_Control_Scroll
+	{
+		with .Size
+		{
+			.HGripLength	= 7;
+			.VGripLength	= 7;
+			.HGripMinLength	= 7;
+			.VGripMinLength	= 7;
+			.HGripInset		= GRangeMargin(10,10);
+			.VGripInset		= GRangeMargin(10,10);
+			//Find GFC_Control_Table_Size_Scroll
+			.HDefault		= 7;
+			.VDefault		= 7;
+		}
+	}
+	GFC_Control_Flag_Transparent = GFlags(GCtrl);
+
+	with GFC_CtrlTheme_Bitmap_Control_Scroll_Skin_HShaft
+	{
+		.Default		= SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_Skin_HShaft_Default;
+		.Rollover		= .Default;
+		.Press			= SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_Skin_HShaft_Press;
+		.Disable		= .Default;
+		.Winoff			= .Default;
+		.WinoffPress	= .Press;
+		.WinoffRollover	= .Rollover;
+		.WinoffDisable	= .Disable;
+	}
+	with GFC_CtrlTheme_Bitmap_Control_Scroll_Skin_VShaft
+	{
+		.Default		= SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_Skin_VShaft_Default;
+		.Rollover		= .Default;
+		.Press			= SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_Skin_VShaft_Press;
+		.Disable		= .Default;
+		.Winoff			= .Default;
+		.WinoffPress	= .Press;
+		.WinoffRollover	= .Rollover;
+		.WinoffDisable	= .Disable;
+	}
+	GFC_Control_Scroll_StyleId_UpButton		= GPropertyId(SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_UpButton_Style);
+	GFC_Control_Scroll_StyleId_DownButton	= GPropertyId(SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_DownButton_Style);
+	GFC_Control_Scroll_StyleId_LeftButton	= GPropertyId(SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_LeftButton_Style);
+	GFC_Control_Scroll_StyleId_RightButton	= GPropertyId(SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_RightButton_Style);
+	GFC_Control_Scroll_StyleId_VGrip		= GPropertyId(SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_VGrip_Style);
+	GFC_Control_Scroll_StyleId_HGrip		= GPropertyId(SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_HGrip_Style);
+
+	map GFC_CtrlTheme_Bitmap_Control_Scroll	= GFC_Control_DefaultScroll_Style;
+	map GFC_Control							= GFC_Control_DefaultScroll_Style;
+}
+
+
+// Drop down combo-box border
+style SF_CtrlTheme_Civ4_Control_ComboBox_Standard_PopupBoxTableBorder_Style
+{
+	GFC_Control_Flag_RegionClipParent	= GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+	GFC_Control_Border_Size_Margin		= GRectMargin(6,6,6,6);
+
+	with GFC_CtrlTheme_Bitmap_Control_Border_Skin
+	{
+		.Full_Default
+		{
+			layer
+			{
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
+				FactorColor	= SF_CtrlTheme_Civ4_Control_Color_BG;
+				Margin		= GRectMargin(6,2,6,2);
+				Indent		= GRectMargin(0,4,0,4);
+			}
+			layer
+			{
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+				DestCombine		= GColorCombine(BlendSource,Disable);
+				FactorCombine	= GColorCombine(Modulate,Modulate);
+				FactorColor		= SF_CtrlTheme_Civ4_Control_Color_MergeBG;
+				Image			= GBitmap("../../../../Resource/Civ4/menu_bg_TB.tga", HVGrid, 1, 1, 0, 0);
+				Margin			= GRectMargin(2,2,2,2);
+				Indent			= GRectMargin(1,4,1,4);
+				LeftFlags		= GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_EMPTY);
+				RightFlags		= GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_EMPTY);
+			}
+			layer
+			{
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+				DestCombine		= GColorCombine(BlendSource,Disable);
+				FactorCombine	= GColorCombine(Modulate,Modulate);
+				FactorColor		= SF_CtrlTheme_Civ4_Control_Color_MergeBG;
+				Image			= GBitmap("../../../../Resource/Civ4/menu_bg_LR.tga", HVGrid, 1, 1, 0, 0);
+				Margin			= GRectMargin(5,30,5,30);
+				Indent			= GRectMargin(1,6,1,6);
+			}
+			layer
+			{
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_PARTIAL);
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				Image		= GBitmap("../../../../Resource/Civ4/menu.tga", HVGrid, 1, 3, 0, 0);
+				Margin		= GRectMargin(6,6,6,6);
+			}
+			layer
+			{
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_REGION);
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				Image		= GBitmap("../../../../Resource/Civ4/menu.tga", HVGrid, 1, 3, 0, 1);
+				Margin		= GRectMargin(6,6,6,6);
+			}
+			layer
+			{
+				LayerFlags = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST, 
+													 GFC_BITMAPSKIN_BACKCAPS_REGION, GFC_BITMAPSKIN_REGION_TRANSPARENT, GFC_BITMAPSKIN_COLORKEY);
+				Image			= GBitmap("../../../../Resource/Civ4/menu.tga", HVGrid, 1, 3, 0, 2);
+				Margin			= GRectMargin(6,6,6,6);
+				ColorKey		= GColor(0,0,0,0);
+				ColorKeyMax		= GColor(0,0,0,128);
+				ColorKeyMask	= GColor(0,0,0,255);
+			}
+		}
+		.Full_Disable			= .Full_Default;
+		.Full_Inactive			= .Full_Default;
+		.Full_InactiveDisable	= .Full_Disable;
+		.Full_Winoff			= .Full_Default;
+		.Full_WinoffDisable		= .Full_Disable;
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Border	= GFC_Control_DefaultBorder_Style;
+	map GFC_Control							= GFC_Control_DefaultBorder_Style;
+}
+
+style SF_CtrlTheme_Civ4_Control_ComboBox_Standard_PopupBoxTable_Style
+{
+	GFC_Control_Flag_NoExternalWindow	= GFlags(GCtrl, GFC_CF_NOEXTERNALWINDOW);
+	GFC_Control_Flag_RegionClip			= GFlags(GCtrl, GFC_CF_REGIONCLIP);
+
+	with GFC_Control_Table
+	{
+		with .StyleId
+		{
+			.OuterBorder	= GPropertyId(SF_CtrlTheme_Civ4_Control_ComboBox_Standard_PopupBoxTableBorder_Style);
+			.VScroll		= GPropertyId(SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_Style);
+			.HScroll		= GPropertyId(SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Scroll_Style);
+		}
+		with .Size
+		{
+			.Scroll				= GSize(13,13);
+			.CellContentMargin	= GRectMargin(0,2,2,2);
+			.CellTextMargin		= GRectMargin(0,0,0,0);
+		}
+		.Flag_NoInnerBorder	= GFlags(GTableCtrl, GFC_CF_TABLE_NOINNERBORDER);
+	}
+	with GFC_CtrlTheme_Bitmap_Control_Table_Skin_Inner
+	{
+		.Default
+		{
+			layer
+			{
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
+				CenterColor	= SF_CtrlTheme_Civ4_Control_Color_BG; 
+			}
+			layer
+			{
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
+				DestCombine		= GColorCombine(BlendSource, Disable);
+				FactorCombine	= GColorCombine(Modulate,Modulate);
+				FactorColor		= SF_CtrlTheme_Civ4_Control_Color_MergeBG;
+				Image			= GBitmap("../../../../Resource/Civ4/menu_bg_inner.tga", HVGrid, 1, 1, 0, 0);
+				Margin			= GRectMargin(1,30,1,30); // (L, T, R, B)
+			}
+		}
+		.Inactive =	.Default;
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Table	= GFC_Control_DefaultTable_Style;
+	map GFC_Control							= GFC_Control_DefaultTable_Style;
+}
+
+// Combo-box border
+style SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Border_Style
+{
+	GFC_Control_Flag_Mask_InvalidateControl	= GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+	GFC_Control_Border_Size_Margin			= GRectMargin(0,0,0,0);
+
+	with GFC_CtrlTheme_Bitmap_Control_Border_Skin
+	{
+		.Full_Default
+		{
+			layer {
+				DestCombine		= GColorCombine(BlendSource,Source);
+				FactorCombine	= GColorCombine(Modulate,Modulate);
+				FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+				Image			= GBitmap("../../../../Resource/Civ4/focus.tga", HVGrid, 1, 1, 0, 0);
+				Margin			= GRectMargin(6,6,6,6);
+				Indent			= GRectMargin(0,1,0,1);
+			}
+		}
+		.Full_Disable			= .Full_Default;
+		.Full_Inactive			= SF_CtrlTheme_Civ4_Control_Skin_Blank;
+		.Full_InactiveDisable	= SF_CtrlTheme_Civ4_Control_Skin_Blank;
+		.Full_Winoff			= .Full_Inactive;
+		.Full_WinoffDisable		= .Full_InactiveDisable;
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Border	= GFC_Control_DefaultBorder_Style;
+	map GFC_Control							= GFC_Control_DefaultBorder_Style;
+}
+
+
+style SF_CtrlTheme_Civ4_Control_ComboBox_Standard_ItemEdit_Style
+{
+	GFC_Control_Edit_Color_Text_Default		= SF_CtrlTheme_Civ4_Control_Color_AltText;
+	GFC_Control_Edit_Color_Text_Disable		= SF_CtrlTheme_Civ4_Control_Color_AltTextDisable;
+	map GFC_CtrlTheme_Bitmap_Control_Edit	= GFC_Control_ClearEdit_Style;
+	map GFC_Control 						= GFC_Control_ClearEdit_Style;
+}
+
+style SF_CtrlTheme_Civ4_Control_ComboBox_Edit_ItemEdit_Style
+{
+	GFC_Control_Edit_Color_Text_Default		= GFC_Control_Color_Text_Default;
+	GFC_Control_Edit_Color_Text_Disable		= GFC_Control_Color_Text_Disable;
+	map GFC_CtrlTheme_Bitmap_Control_Edit	= GFC_Control_ClearEdit_Style;
+	map GFC_Control 						= GFC_Control_ClearEdit_Style;
+}
+
+// Combo-box edit border \\
+style SF_CtrlTheme_Civ4_Control_ComboBox_Edit_Border_Style
+{
+	GFC_Control_Flag_Mask_InvalidateControl	= GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+	GFC_Control_Border_Size_Margin			= GRectMargin(0,0,0,0);
+
+	with GFC_CtrlTheme_Bitmap_Control_Border_Skin
+	{
+		.Full_Default
+		{
+			layer {
+				DestCombine		= GColorCombine(BlendSource,Source);
+				FactorCombine	= GColorCombine(Modulate,Modulate);
+				FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+				Image			= GBitmap("../../../../Resource/Civ4/focus.tga", HVGrid, 1, 1, 0, 0);
+				Margin			= GRectMargin(6,6,6,6);
+				Indent			= GRectMargin(1,1,0,1);
+			}
+		}
+		.Full_Disable			= .Full_Default;
+		.Full_Inactive			= SF_CtrlTheme_Civ4_Control_Skin_Blank;
+		.Full_InactiveDisable	= SF_CtrlTheme_Civ4_Control_Skin_Blank;
+		.Full_Winoff			= .Full_Inactive;
+		.Full_WinoffDisable		= .Full_InactiveDisable;
+	}
+
+	map GFC_CtrlTheme_Bitmap_Control_Border	= GFC_Control_DefaultBorder_Style;
+	map GFC_Control							= GFC_Control_DefaultBorder_Style;
+}
+
+// ComboBox control namespace \\
+with GFC_Control_ComboBox
+{	// Default ComboBox style \\
+	GFC_Control_DefaultComboBox_Style
+	{
+		GFC_Control_Update_ChildLayout	= GFC_CtrlTheme_Bitmap_Control_ComboBox_Update_ChildLayout;
+		GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_ComboBox_Renderer_Control;
+		.Renderer_TextItem 				= GFC_CtrlTheme_Bitmap_Control_ComboBox_Renderer_TextItem;
+
+		with .Child
+		{
+			.OuterBorder	= GFC_CtrlTheme_Bitmap_Control_ComboBox_Child_OuterBorder;
+			.InnerBorder	= GFC_CtrlTheme_Bitmap_Control_ComboBox_Child_InnerBorder;
+			.ItemEdit		= GFC_CtrlTheme_Bitmap_Control_ComboBox_Child_ItemEdit;
+			.PopupButton	= GFC_CtrlTheme_Bitmap_Control_ComboBox_Child_PopupButton;
+			.PopupBoxTable	= GFC_CtrlTheme_Bitmap_Control_ComboBox_Child_PopupBoxTable;
+		}
+		with .StyleId
+		{// Child styles
+			.OuterBorder	= GPropertyId(GFC_Control_StandardBorder_Style);
+			.InnerBorder	= GPropertyId(GFC_Control_EmptyBorder_Style);
+			.ItemEdit		= GPropertyId(GFC_Control_ClearEdit_Style);
+			.PopupButton	= GPropertyId(GFC_Control_StandardButton_Style);
+			.PopupBoxTable	= GPropertyId(GFC_Control_StandardTable_Style);
+		}
+		with GFC_Control_Flag
+		{
+			.Transparent			= GFlags(GCtrl, GFC_CF_TRANSPARENT);
+			.SolidInner				= 0;
+			.SolidBackground		= 0;
+			.RegionClip				= 0;
+			.RegionClipParent		= 0;
+			.NoExternalWindow		= 0;
+			.HitTest				= 0;
+			.TopLayer				= 0;
+			.TopLayerBitmap			= 0;
+			.BottomLayerBitmap		= 0;
+			// Control flag change masks
+			.Mask_InvalidateControl	= GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_MODAL, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER, GFC_CF_FORCE_ROLLOVER);
+		}
+		with .Flag
+		{
+			.NoBorder		= 0;
+			.NoInnerBorder	= GFlags(GComboBoxCtrl, GFC_CF_COMBOBOX_NOINNERBORDER);
+			.NoInnerFill	= GFlags(GComboBoxCtrl, GFC_CF_COMBOBOX_NOINNERFILL);
+			.Popup_VStyle	= GFlags(GComboBoxCtrl, GFC_CF_COMBOBOX_POPUP_DOWN);
+		}
+		with .Size
+		{
+			.EditMargin					= GRectMargin(0,0,0,0);
+			.PopupMinimum				= GSize(32,16);
+			.PopupUpMargin				= GRectMargin(0,0,0,0);
+			.PopupDownMargin			= GRectMargin(0,0,0,0);
+			.PopupCenterMargin			= GRectMargin(0,1,0,1);
+			.PopupItem_ContentMargin	= GRectMargin(0,0,0,0);
+			.ViewItem_ContentMargin		= GRectMargin(0,0,0,0);
+			.ItemSpace					= 4;
+			.TextMinimum				= 20;
+			.TextMargin					= GRectMargin(8,2,8,2);
+			.ImageColumn				= 20;
+			.ImageMargin				= GRectMargin(8,5,-2,4);
+			.ImageNoTextMargin			= GRectMargin(8,5,8,4);
+			.Default					= GSize(64,32);
+		}
+		.Delay_IgnoreSelect = 500;
+		with .Color
+		{
+			with .ViewItem
+			{
+				.Inner_Default			= GFC_Control_Color_3DLook_Darkest;
+				.Inner_Rollover			= GFC_Control_Color_3DLook_Darkest;
+				.Inner_Select			= GFC_Control_Color_Inner_Select;
+				.Inner_Disable			= GFC_Control_Color_3DLook_Darkest;
+				.Image_Default			= GFC_Control_Color_Image_Default;
+				.Image_Rollover			= GFC_Control_Color_Image_Default;
+				.Image_Select			= GFC_Control_Color_Image_Select;
+				.Image_Disable			= GFC_Control_Color_Image_Disable;
+				.Text_Default			= SF_CtrlTheme_Civ4_Control_Color_AltText;
+				.Text_Rollover			= .Text_Default;
+				.Text_Select			= .Text_Default;
+				.Text_Disable			= SF_CtrlTheme_Civ4_Control_Color_AltTextDisable;
+				.TextShadow_Default		= SF_CtrlTheme_Civ4_Control_Color_AltTextShadow;
+				.TextShadow_Rollover	= .TextShadow_Default;
+				.TextShadow_Select		= .TextShadow_Default;
+				.TextShadow_Disable		= SF_CtrlTheme_Civ4_Control_Color_AltTextShadowDisable;
+			}
+			with .PopupItem
+			{
+				.Inner_Default				= GFC_Control_Color_3DLook_Darkest;
+				.Inner_Select				= GFC_Control_Color_Inner_Select;
+				.Inner_Disable				= GFC_Control_Color_3DLook_Darkest;
+				.Inner_DisableSelect		= .Inner_Default;
+				.Image_Default				= GFC_Control_Color_Image_Default;
+				.Image_Select				= GFC_Control_Color_Image_Select;
+				.Image_Disable				= GFC_Control_Color_Image_Disable;
+				.Image_DisableSelect		= GFC_Control_Color_Image_DisableSelect;
+				.Text_Default				= GFC_Control_Color_Text_Default;
+				.Text_Select				= SF_CtrlTheme_Civ4_Control_Color_SelectText;
+				.Text_Disable				= GFC_Control_Color_Text_Disable;
+				.Text_DisableSelect			= GFC_Control_Color_Text_DisableSelect;
+				.TextShadow_Default			= GFC_Control_Color_TextShadow_Default;
+				.TextShadow_Select			= GFC_Control_Color_TextShadow_Default;
+				.TextShadow_Disable			= GFC_Control_Color_TextShadow_Disable;
+				.TextShadow_DisableSelect	= GFC_Control_Color_TextShadow_DisableSelect;
+			}
+		}
+		with .Combine
+		{
+			with .ViewItem
+			{
+				.Inner_Default				= GFC_Control_Combine_Inner_Default;
+				.Inner_Rollover				= GFC_Control_Combine_Inner_Default;
+				.Inner_Select				= GFC_Control_Combine_Inner_Select;
+				.Inner_Disable				= GFC_Control_Combine_Inner_Disable;
+				.Image_Default_Dest			= GFC_Control_Combine_Image_Default_Dest;
+				.Image_Default_Factor		= GFC_Control_Combine_Image_Default_Factor;
+				.Image_Rollover_Dest		= GFC_Control_Combine_Image_Default_Dest;
+				.Image_Rollover_Factor		= GFC_Control_Combine_Image_Default_Factor;
+				.Image_Select_Dest			= GFC_Control_Combine_Image_Select_Dest;
+				.Image_Select_Factor		= GFC_Control_Combine_Image_Select_Factor;
+				.Image_Disable_Dest			= GFC_Control_Combine_Image_Disable_Dest;
+				.Image_Disable_Factor		= GFC_Control_Combine_Image_Disable_Factor;
+				.Text_Default_Dest			= GFC_Control_Combine_Text_Default_Dest;
+				.Text_Default_Factor		= GFC_Control_Combine_Text_Default_Factor;
+				.Text_Rollover_Dest			= GFC_Control_Combine_Text_Default_Dest;
+				.Text_Rollover_Factor		= GFC_Control_Combine_Text_Default_Factor;
+				.Text_Select_Dest			= GFC_Control_Combine_Text_Select_Dest;
+				.Text_Select_Factor			= GFC_Control_Combine_Text_Select_Factor;
+				.Text_Disable_Dest			= GFC_Control_Combine_Text_Disable_Dest;
+				.Text_Disable_Factor		= GFC_Control_Combine_Text_Disable_Factor;
+				.TextShadow_Default_Dest	= GFC_Control_Combine_TextShadow_Default_Dest;
+				.TextShadow_Default_Factor	= GFC_Control_Combine_TextShadow_Default_Factor;
+				.TextShadow_Rollover_Dest	= GFC_Control_Combine_TextShadow_Default_Dest;
+				.TextShadow_Rollover_Factor	= GFC_Control_Combine_TextShadow_Default_Factor;
+				.TextShadow_Select_Dest		= GFC_Control_Combine_TextShadow_Select_Dest;
+				.TextShadow_Select_Factor	= GFC_Control_Combine_TextShadow_Select_Factor;
+				.TextShadow_Disable_Dest	= GFC_Control_Combine_TextShadow_Disable_Dest;
+				.TextShadow_Disable_Factor	= GFC_Control_Combine_TextShadow_Disable_Factor;
+			}
+			with .PopupItem
+			{
+				.Inner_Default						= GFC_Control_Combine_Inner_Default;
+				.Inner_Select						= GFC_Control_Combine_Inner_Select;
+				.Inner_Disable						= GFC_Control_Combine_Inner_Disable;
+				.Inner_DisableSelect				= GFC_Control_Combine_Inner_DisableSelect;
+				.Image_Default_Dest					= GFC_Control_Combine_Image_Default_Dest;
+				.Image_Default_Factor				= GFC_Control_Combine_Image_Default_Factor;
+				.Image_Select_Dest					= GFC_Control_Combine_Image_Select_Dest;
+				.Image_Select_Factor				= GFC_Control_Combine_Image_Select_Factor;
+				.Image_Disable_Dest					= GFC_Control_Combine_Image_Disable_Dest;
+				.Image_Disable_Factor				= GFC_Control_Combine_Image_Disable_Factor;
+				.Image_DisableSelect_Dest			= GFC_Control_Combine_Image_DisableSelect_Dest;
+				.Image_DisableSelect_Factor			= GFC_Control_Combine_Image_DisableSelect_Factor;
+				.Text_Default_Dest					= GFC_Control_Combine_Text_Default_Dest;
+				.Text_Default_Factor				= GFC_Control_Combine_Text_Default_Factor;
+				.Text_Select_Dest					= GFC_Control_Combine_Text_Select_Dest;
+				.Text_Select_Factor					= GFC_Control_Combine_Text_Select_Factor;
+				.Text_Disable_Dest					= GFC_Control_Combine_Text_Disable_Dest;
+				.Text_Disable_Factor				= GFC_Control_Combine_Text_Disable_Factor;
+				.Text_DisableSelect_Dest			= GFC_Control_Combine_Text_DisableSelect_Dest;
+				.Text_DisableSelect_Factor			= GFC_Control_Combine_Text_DisableSelect_Factor;
+				.TextShadow_Default_Dest			= GFC_Control_Combine_TextShadow_Default_Dest;
+				.TextShadow_Default_Factor			= GFC_Control_Combine_TextShadow_Default_Factor;
+				.TextShadow_Select_Dest				= GFC_Control_Combine_TextShadow_Select_Dest;
+				.TextShadow_Select_Factor			= GFC_Control_Combine_TextShadow_Select_Factor;
+				.TextShadow_Disable_Dest			= GFC_Control_Combine_TextShadow_Disable_Dest;
+				.TextShadow_Disable_Factor			= GFC_Control_Combine_TextShadow_Disable_Factor;
+				.TextShadow_DisableSelect_Dest		= GFC_Control_Combine_TextShadow_DisableSelect_Dest;
+				.TextShadow_DisableSelect_Factor	= GFC_Control_Combine_TextShadow_DisableSelect_Factor;
+			}
+		}
+		with .Font
+		{
+			.Default = SF_CtrlTheme_Civ4_Control_Font_Size2_Normal;
+			.Select  = SF_CtrlTheme_Civ4_Control_Font_Size2_Normal;
+		}
+		with GFC_CtrlTheme_Bitmap_Control_ComboBox_Skin
+		{// Initialize all the Bitmap theme Button properties to avoid inheritance problems
+			.ViewItem_Default			= 0;
+			.ViewItem_Rollover 			= 0;
+			.ViewItem_Select 			= 0;
+			.ViewItem_SelectRollover	= 0;
+			.ViewItem_Popupselect 		= 0;
+			.ViewItem_Disable 			= 0;
+			.EditItem_Default 			= 0;
+			.EditItem_Rollover 			= 0;
+			.EditItem_Select 			= 0;
+			.EditItem_SelectRollover	= 0;
+			.EditItem_Popupselect 		= 0;
+			.EditItem_Disable 			= 0;
+			.PopupItem_Default 			= 0;
+			.PopupItem_Select 			= 0;
+			.PopupItem_Disable 			= 0;
+			.PopupItem_DisableSelect	= 0;
+		}
+		map GFC_Control = GFC_Control_DefaultControl_Style;
+	}
+
+	// Normal ComboBox style \\
+	GFC_Control_StandardComboBox_Style
+	{
+		with .StyleId
+		{
+			.OuterBorder	= GPropertyId(SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Border_Style);
+			.InnerBorder	= GPropertyId(GFC_Control_EmptyBorder_Style);
+			.ItemEdit		= GPropertyId(SF_CtrlTheme_Civ4_Control_ComboBox_Standard_ItemEdit_Style);
+			.PopupButton	= GPropertyId(SF_CtrlTheme_Civ4_Control_ComboBox_Standard_PopupButton_Style);
+			.PopupBoxTable	= GPropertyId(SF_CtrlTheme_Civ4_Control_ComboBox_Standard_PopupBoxTable_Style);
+		}
+		with GFC_CtrlTheme_Bitmap_Control_ComboBox_Skin
+		{// **NOTE: This is the combobox background.**
+			with .ViewItem
+			{
+				.Default
+				{
+					layer {
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image		= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+						Margin		= GRectMargin(0,0,0,0);
+						Indent		= GRectMargin(6,3,0,3);
+					}
+					layer {
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image		= GBitmap("../../../../Resource/Civ4/combobox.tga", HVGrid, 1, 6, 0, 0);
+						Margin		= GRectMargin(7,8,0,8);
+					}
+					layer {
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image		= GBitmap("../../../../Resource/Civ4/combobox.tga", HVGrid, 1, 6, 0, 1);
+						Margin		= GRectMargin(7,8,0,8);
+					}
+					layer {
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image		= GBitmap("../../../../Resource/Civ4/combobox.tga", HVGrid, 1, 6, 0, 5);
+						Margin		= GRectMargin(0,0,1,0);
+					}
+				}
+				.Rollover
+				{
+					layer {Inherit = .Default;}
+					layer {}
+					layer {}
+					layer {}
+					layer {}
+					layer {
+						DestCombine	= GColorCombine(Add,Disable);
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image		= GBitmap("../../../../Resource/Civ4/combobox.tga", HVGrid, 1, 6, 0, 2);
+						Margin		= GRectMargin(7,8,0,8);
+					}
+				}
+				.Select			= .Default;
+				.SelectRollover	= .Rollover;
+				.Popupselect
+				{
+					layer {Inherit = .Default;}
+					layer {}
+					layer {}
+					layer {
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image		= GBitmap("../../../../Resource/Civ4/combobox.tga", HVGrid, 1, 6, 0, 3);
+						Margin		= GRectMargin(7,8,0,8);
+					}
+					layer {}
+				}
+				.Disable
+				{
+					layer {
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image		= GBitmap("../../../../Resource/Civ4/combobox.tga", HVGrid, 1, 6, 0, 4);
+						Margin		= GRectMargin(7,8,0,8);
+					}
+				}
+			}
+			with .EditItem
+			{
+				.Default 		= GFC_CtrlTheme_Bitmap_Control_ComboBox_Skin_ViewItem_Default;
+				.Rollover 		= GFC_CtrlTheme_Bitmap_Control_ComboBox_Skin_ViewItem_Rollover;
+				.Select 		= GFC_CtrlTheme_Bitmap_Control_ComboBox_Skin_ViewItem_Select;
+				.Popupselect	= GFC_CtrlTheme_Bitmap_Control_ComboBox_Skin_ViewItem_Popupselect;
+				.Disable 		= GFC_CtrlTheme_Bitmap_Control_ComboBox_Skin_ViewItem_Disable;
+			}
+			with .PopupItem
+			{// Popup item backgrounds
+				.Default
+				{
+					layer {LayerFlags = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_NOTVISIBLE);}
+				}
+				.Select
+				{
+					layer {
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE);
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= GColor(128,168,255,140);
+						Image			= GBitmap("../../../../Resource/Civ4/menu_selection.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(64,0,0,0);
+					}
+				}
+				.Disable		= .Default;
+				.DisableSelect
+				{
+					layer {
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE);
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= GColor(199,178,153,140);
+						Image			= GBitmap("../../../../Resource/Civ4/menu_selection.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(64,0,0,0);
+					}
+				}
+			}
+		}
+		map GFC_CtrlTheme_Bitmap_Control_ComboBox	= GFC_Control_DefaultComboBox_Style;
+		map GFC_Control								= GFC_Control_DefaultComboBox_Style;
+	}
+
+	GFC_Control_EditComboBox_Style
+	{
+		.Flag_Popup_VStyle = GFlags(GComboBoxCtrl, GFC_CF_COMBOBOX_POPUP_DOWN);
+		
+		with .StyleId
+		{
+			.OuterBorder	= GPropertyId(SF_CtrlTheme_Civ4_Control_ComboBox_Edit_Border_Style);
+			.ItemEdit		= GPropertyId(SF_CtrlTheme_Civ4_Control_ComboBox_Edit_ItemEdit_Style);
+		}
+		with .Color_ViewItem
+		{
+			.Text_Default			= GFC_Control_Color_Text_Default;
+			.Text_Rollover			= .Text_Default;
+			.Text_Select			= .Text_Default;
+			.Text_Disable			= GFC_Control_Color_Text_Disable;
+			.TextShadow_Default		= GFC_Control_Color_TextShadow_Default;
+			.TextShadow_Rollover	= .TextShadow_Default;
+			.TextShadow_Select		= .TextShadow_Default;
+			.TextShadow_Disable		= GFC_Control_Color_TextShadow_Disable;
+		}
+		with .Combine_ViewItem
+		{
+			.TextShadow_Default_Dest	= GColorCombine(Disable,Disable);	//GFC_Control_Combine_TextShadow_Default_Dest;
+			.TextShadow_Default_Factor	= GColorCombine(Disable,Disable);	//GFC_Control_Combine_TextShadow_Default_Factor;
+			.TextShadow_Rollover_Dest	= GColorCombine(Disable,Disable);	//GFC_Control_Combine_TextShadow_Default_Dest;
+			.TextShadow_Rollover_Factor	= GColorCombine(Disable,Disable);	//GFC_Control_Combine_TextShadow_Default_Factor;
+			.TextShadow_Select_Dest		= GColorCombine(Disable,Disable);	//GFC_Control_Combine_TextShadow_Select_Dest;
+			.TextShadow_Select_Factor	= GColorCombine(Disable,Disable);	//GFC_Control_Combine_TextShadow_Select_Factor;
+			.TextShadow_Disable_Dest	= GColorCombine(Disable,Disable);	//GFC_Control_Combine_TextShadow_Disable_Dest;
+			.TextShadow_Disable_Factor	= GColorCombine(Disable,Disable);	//GFC_Control_Combine_TextShadow_Disable_Factor;
+		}
+		with GFC_CtrlTheme_Bitmap_Control_ComboBox_Skin
+		{
+			with .ViewItem
+			{
+				.Default
+				{
+					layer {
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						Image		= GBitmap("../../../../Resource/Civ4/combobox_edit.tga", HVGrid, 1, 3, 0, 0);
+						Margin		= GRectMargin(4,4,4,4);
+						Indent		= GRectMargin(3,3,0,3);
+					}
+					layer {
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						Image		= GBitmap("../../../../Resource/Civ4/combobox_edit.tga", HVGrid, 1, 3, 0, 1);
+						Margin		= GRectMargin(4,4,4,4);
+						Indent		= GRectMargin(3,3,0,3);
+					}
+				}
+				.Rollover		= .Default;
+				.Select			= .Default;
+				.SelectRollover	= .Default;
+				.Popupselect	= .Default;
+				.Disable
+				{
+					layer {
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						Image		= GBitmap("../../../../Resource/Civ4/combobox_edit.tga", HVGrid, 1, 3, 0, 2);
+						Margin		= GRectMargin(4,4,4,4);
+						Indent		= GRectMargin(3,3,0,3);
+					}
+				}
+			}
+		}
+		map SF_CtrlTheme_Civ4_Control_ComboBox		= GFC_Control_StandardComboBox_Style;
+		map GFC_CtrlTheme_Bitmap_Control_ComboBox	= GFC_Control_StandardComboBox_Style;
+		map GFC_Control								= GFC_Control_StandardComboBox_Style;
+	}
+
+// *** Flat Popup Button style *** \\
+style SF_CtrlTheme_Civ4_Control_ComboBox_Flat_PopupButton_Style
+{
+	GFC_Control_Renderer_Control				= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+	GFC_Control_Flag_Mask_InvalidateControl		= GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_WINDOWACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER, GFC_CF_FORCE_ROLLOVER);
+	GFC_Control_Button_Flag_DownOffset			= GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_CONTENT);
+	GFC_Control_Button_Size_DownOffset_Content	= GPoint(0,0);
+	GFC_Control_Button_Size_Default				= GSize(25,30);
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+				Image		= GBitmap("../../../../Resource/Civ4/combobox_flat_btn.tga", HVGrid, 1, 4, 0, 0);
+				Margin		= GRectMargin(0,8,7,8);
+			}
+			layer {
+				DestCombine	= GColorCombine(BlendSource,Disable);
+				LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/combobox_flat_glyph.tga", HVGrid, 1, 3, 0, 0);
+				Margin		= GRectMargin(1,1,1,1);
+				Indent		= GRectMargin(0,3,2,0);
+			}
+		}
+		.Rollover
+		{
+			layer {Inherit	= .Default;}
+			layer {Image	= GBitmap("../../../../Resource/Civ4/combobox_flat_btn.tga", HVGrid, 1, 4, 0, 1);}
+			layer {Image	= GBitmap("../../../../Resource/Civ4/combobox_flat_glyph.tga", HVGrid, 1, 3, 0, 1);}
+		}
+		.Press
+		{
+			layer {Inherit	= .Default;}
+			layer {Image	= GBitmap("../../../../Resource/Civ4/combobox_flat_btn.tga", HVGrid, 1, 4, 0, 2);}
+			layer {Image	= GBitmap("../../../../Resource/Civ4/combobox_flat_glyph.tga", HVGrid, 1, 3, 0, 1);}
+		}
+		.Disable
+		{
+			layer {Inherit	= .Default;}
+			layer {Image	= GBitmap("../../../../Resource/Civ4/combobox_flat_btn.tga", HVGrid, 1, 4, 0, 3);}
+			layer {Image	= GBitmap("../../../../Resource/Civ4/combobox_flat_glyph.tga", HVGrid, 1, 3, 0, 2);}
+		}
+		.Toggle					= .Press;
+		.ToggleRollover			= .Press;
+		.TogglePress			= .Press;
+		.ToggleDisable			= .Disable;
+		.ToggleFocus			= .Toggle;
+		.ToggleFocusRollover	= .ToggleRollover;
+		.ToggleFocusPress		= .TogglePress;
+		.ToggleFocusDisable		= .ToggleDisable;
+
+		.Inactive				= .Default;
+		.InactiveRollover		= .Rollover;
+		.InactivePress			= .Press;
+		.InactiveDisable		= .Disable;
+		.InactiveToggle			= .Toggle;
+		.InactiveToggleRollover	= .ToggleRollover;
+		.InactiveTogglePress	= .TogglePress;
+		.InactiveToggleDisable	= .ToggleDisable;
+
+		.Winoff					= .Default;
+		.WinoffRollover			= .Rollover;
+		.WinoffPress			= .Press;
+		.WinoffDisable			= .Disable;
+		.WinoffToggle			= .Toggle;
+		.WinoffToggleRollover	= .ToggleRollover;
+		.WinoffTogglePress		= .TogglePress;
+		.WinoffToggleDisable	= .ToggleDisable;
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+	map GFC_Control							= GFC_Control_DefaultButton_Style;
+}
+
+	GFC_Control_FlatComboBox_Style
+	{
+		with .StyleId
+		{
+			.OuterBorder	= GPropertyId(SF_CtrlTheme_Civ4_Control_ComboBox_Standard_Border_Style);
+			.InnerBorder	= GPropertyId(GFC_Control_EmptyBorder_Style);
+			.ItemEdit		= GPropertyId(SF_CtrlTheme_Civ4_Control_ComboBox_Standard_ItemEdit_Style);
+			.PopupButton	= GPropertyId(SF_CtrlTheme_Civ4_Control_ComboBox_Flat_PopupButton_Style);
+			.PopupBoxTable	= GPropertyId(SF_CtrlTheme_Civ4_Control_ComboBox_Standard_PopupBoxTable_Style);
+		}
+		with .Color_ViewItem
+		{
+			.Text_Default			= GFC_Control_Color_Text_Default;
+			.Text_Rollover			= .Text_Default;
+			.Text_Select			= .Text_Default;
+			.Text_Disable			= GFC_Control_Color_Text_Disable;
+			.TextShadow_Default		= GFC_Control_Color_TextShadow_Default;
+			.TextShadow_Rollover	= .TextShadow_Default;
+			.TextShadow_Select		= .TextShadow_Default;
+			.TextShadow_Disable		= GFC_Control_Color_TextShadow_Disable;
+		}
+		with GFC_CtrlTheme_Bitmap_Control_ComboBox_Skin
+		{// **NOTE: This is the combobox background.**
+			with .ViewItem
+			{
+				.Default
+				{
+					layer {
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image		= GBitmap("../../../../Resource/Civ4/combobox_flat.tga", HVGrid, 1, 4, 0, 0);
+						Margin		= GRectMargin(7,8,0,8);
+					}
+				}
+				.Rollover
+				{
+					layer {Inherit	= .Default;}
+					layer {Image	= GBitmap("../../../../Resource/Civ4/combobox_flat.tga", HVGrid, 1, 4, 0, 1);}
+				}
+				.Select			= .Default;
+				.SelectRollover	= .Rollover;
+				.Popupselect
+				{
+					layer {Inherit	= .Default;}
+					layer {Image	= GBitmap("../../../../Resource/Civ4/combobox_flat.tga", HVGrid, 1, 4, 0, 2);}
+					layer {}
+				}
+				.Disable
+				{
+					layer {Inherit	= .Default;}
+					layer {Image	= GBitmap("../../../../Resource/Civ4/combobox_flat.tga", HVGrid, 1, 4, 0, 3);}
+				}
+			}
+			with .EditItem
+			{
+				.Default		= GFC_CtrlTheme_Bitmap_Control_ComboBox_Skin_ViewItem_Default;
+				.Rollover		= GFC_CtrlTheme_Bitmap_Control_ComboBox_Skin_ViewItem_Rollover;
+				.Select			= GFC_CtrlTheme_Bitmap_Control_ComboBox_Skin_ViewItem_Select;
+				.Popupselect	= GFC_CtrlTheme_Bitmap_Control_ComboBox_Skin_ViewItem_Popupselect;
+				.Disable 		= GFC_CtrlTheme_Bitmap_Control_ComboBox_Skin_ViewItem_Disable;
+			}
+		}
+		map SF_CtrlTheme_Civ4_Control_ComboBox		= GFC_Control_StandardComboBox_Style;
+		map GFC_CtrlTheme_Bitmap_Control_ComboBox	= GFC_Control_StandardComboBox_Style;
+		map GFC_Control								= GFC_Control_StandardComboBox_Style;
+	}
+}

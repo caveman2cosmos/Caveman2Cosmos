@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Building Class Infos -->
+<Civ4BuildingClassInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
+	<BuildingClassInfos>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_WV_CANNIBALISM</Type>
+			<Description>TXT_KEY_BUILDING_WV_CANNIBALISM</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_WV_CANNIBALISM</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CANNIBALISM</Type>
+			<Description>TXT_KEY_BUILDING_CANNIBALISM</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_CANNIBALISM</DefaultBuilding>
+		</BuildingClassInfo>
+
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CANNIBALISM_BAD_I</Type>
+			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_I</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_CANNIBALISM_BAD_I</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CANNIBALISM_BAD_II</Type>
+			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_II</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_CANNIBALISM_BAD_II</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CANNIBALISM_BAD_III</Type>
+			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_III</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_CANNIBALISM_BAD_III</DefaultBuilding>
+		</BuildingClassInfo>
+	</BuildingClassInfos>
+</Civ4BuildingClassInfos>

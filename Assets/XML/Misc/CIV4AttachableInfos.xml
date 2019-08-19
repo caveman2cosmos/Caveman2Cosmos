@@ -1,0 +1,446 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Greg Cunningham (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Attachables -->
+<Civ4AttachableInfos xmlns="x-schema:../Schema/C2C_CIV4MiscSchema.xml">
+	<AttachableInfos>
+		<!-- Units: -->
+		<AttachableInfo>
+			<Type>ATTACHABLE_SMOKE</Type>
+			<Description>ATTACHABLE_SMOKE</Description>
+			<fScale>1.0</fScale>
+			<Path>Art/Interface/Attachables/AttachableSmoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_AIRDEBRIS</Type>
+			<Description>Looks like little white things flying behind plane</Description>
+			<fScale>1.0</fScale>
+			<Path>Art/Effects/Attachables/PrototypeEffects/FlyingAttachable/AirNoise.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_TANK_DAMAGE_SMOKE</Type>
+			<Description>Dark Oil Smoke for the 4th Damage State of the Tanks</Description>
+			<fScale>1.5</fScale>
+			<Path>Art/Effects/unit_damage_smoke_oily/fx_unit_damage_oily_smoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_ARTILLERY_DAMAGE_SMOKE</Type>
+			<Description>Dark Oil Smoke for the 4th Damage State of Artillery</Description>
+			<fScale>1.3</fScale>
+			<Path>Art/Effects/unit_damage_smoke_oily/fx_unit_damage_oily_smoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_CANNON_DAMAGE_SMOKE</Type>
+			<Description>Dark Oil Smoke for the 4th Damage State of Artillery</Description>
+			<fScale>1.6</fScale>
+			<Path>Art/Effects/unit_damage_smoke_oily/fx_unit_damage_oily_smoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_MACHINEGUNNER_DAMAGE_SMOKE</Type>
+			<Description>Dark Oil Smoke for the 4th Damage State of MachineGunner</Description>
+			<fScale>1.8</fScale>
+			<Path>Art/Effects/unit_damage_smoke_oily/fx_unit_damage_oily_smoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_GUNSHIP_DAMAGE_SMOKE</Type>
+			<Description>Dark Oil Smoke for the 4th Damage State of the Gunship</Description>
+			<fScale>2.5</fScale>
+			<Path>Art/Effects/unit_damage_smoke_oily/fx_unit_damage_oily_smoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_CATAPULT_DAMAGE_SMOKE</Type>
+			<Description>DarkSmoke for the 4th Damage State of the Catapult</Description>
+			<fScale>1.4</fScale>
+			<Path>Art/Effects/ship_damage_smoke_gunpowder/fx_ship_damage_gunpowder_smoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_CARAVEL_DAMAGE_SMOKE</Type>
+			<Description>DarkSmoke for the 4th Damage State of the Caravel</Description>
+			<fScale>1.5</fScale>
+			<Path>Art/Effects/ship_damage_smoke_gunpowder/fx_ship_damage_gunpowder_smoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_FRIGATE_DAMAGE_SMOKE</Type>
+			<Description>DarkSmoke for the 4th Damage State of the Frigate</Description>
+			<fScale>2.6</fScale>
+			<Path>Art/Effects/ship_damage_smoke_gunpowder/fx_ship_damage_gunpowder_smoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_IRONCLAD_DAMAGE_SMOKE</Type>
+			<Description>DarkSmoke for the 4th Damage State of the Ironclad</Description>
+			<fScale>1.5</fScale>
+			<Path>Art/Effects/ship_damage_smoke_gunpowder/fx_ship_damage_gunpowder_smoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_GALLEON_DAMAGE_SMOKE</Type>
+			<Description>DarkSmoke for the 4th Damage State of the Galleon</Description>
+			<fScale>3</fScale>
+			<Path>Art/Effects/ship_damage_smoke_gunpowder/fx_ship_damage_gunpowder_smoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_GALLEY_DAMAGE_SMOKE</Type>
+			<Description>DarkSmoke for the 4th Damage State of the Galley</Description>
+			<fScale>10</fScale>
+			<Path>Art/Effects/unit_damage_smoke_oily/fx_unit_damage_oily_smoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_TRANSPORT_DAMAGE_SMOKE</Type>
+			<Description>DarkSmoke for the 4th Damage State of the Transport</Description>
+			<fScale>0.75</fScale>
+			<Path>Art/Effects/ship_damage_smoke_gunpowder/fx_ship_damage_gunpowder_smoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_DESTROYER_DAMAGE_SMOKE</Type>
+			<Description>DarkSmoke for the 4th Damage State of the Destroyer</Description>
+			<fScale>1.2</fScale>
+			<Path>Art/Effects/ship_damage_smoke_gunpowder/fx_ship_damage_gunpowder_smoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_BATTLESHIP_DAMAGE_SMOKE</Type>
+			<Description>DarkSmoke for the 4th Damage State of the Battleship</Description>
+			<fScale>1.5</fScale>
+			<Path>Art/Effects/ship_damage_smoke_gunpowder/fx_ship_damage_gunpowder_smoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_CARRIER_DAMAGE_SMOKE01</Type>
+			<Description>DarkSmoke for the 3rd Damage State of the Carrier</Description>
+			<fScale>1.3</fScale>
+			<Path>Art/Effects/ship_damage_smoke_gunpowder/fx_ship_damage_gunpowder_smoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_CARRIER_DAMAGE_SMOKE02</Type>
+			<Description>DarkSmoke for the 4th Damage State of the Carrier</Description>
+			<fScale>1.5</fScale>
+			<Path>Art/Effects/ship_damage_smoke_gunpowder/fx_ship_damage_gunpowder_smoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_PLANE_DAMAGE_SMOKE</Type>
+			<Description>DarkSmoke for the 4th Damage State of the Plane</Description>
+			<fScale>1.6</fScale>
+			<Path>Art/Effects/ship_damage_smoke_gunpowder/fx_ship_damage_gunpowder_smoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_JETFIGHTER_DAMAGE_SMOKE</Type>
+			<Description>DarkSmoke for the 4th Damage State of the JetFighter</Description>
+			<fScale>1.4</fScale>
+			<Path>Art/Effects/ship_damage_smoke_gunpowder/fx_ship_damage_gunpowder_smoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_BOMBER_DAMAGE_SMOKE</Type>
+			<Description>DarkSmoke for the 4th Damage State of the Bomber</Description>
+			<fScale>1.2</fScale>
+			<Path>Art/Effects/ship_damage_smoke_gunpowder/fx_ship_damage_gunpowder_smoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_STEALTHBOMBER_DAMAGE_SMOKE</Type>
+			<Description>DarkSmoke for the 4th Damage State of the Stealth Bomber</Description>
+			<fScale>1.2</fScale>
+			<Path>Art/Effects/ship_damage_smoke_gunpowder/fx_ship_damage_gunpowder_smoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_IRONCLAD_SMOKESTACK_SMOKE</Type>
+			<Description>DarkSmoke for the Smoke Stack of the Ironclad</Description>
+			<fScale>0.4</fScale>
+			<Path>Art/Effects/smokestack_smoke/smokestack_smoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_JETFIGHTERBOMB_CONTRAIL</Type>
+			<Description>JetFighter Bomb Contrail</Description>
+			<fScale>1.0</fScale>
+			<Path>Art/Effects/smoke_missile_contrail/fx_smoke_missile_contrail.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_JETFIGHTERMISSILE_CONTRAIL</Type>
+			<Description>JetFighter Missile Contrail</Description>
+			<fScale>0.8</fScale>
+			<Path>Art/Effects/smoke_missile_contrail/fx_smoke_missile_contrail.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_JETFIGHTER_AFTERBURN</Type>
+			<Description>JetFighterAfterburn</Description>
+			<fScale>0.8</fScale>
+			<Path>Art/Effects/fire_afterburn/fx_fire_afterburn.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_STEALTHBOMBERBOMB_CONTRAIL</Type>
+			<Description>JetFighter Missile Contrail</Description>
+			<fScale>0.8</fScale>
+			<Path>Art/Effects/smoke_missile_contrail/fx_smoke_missile_contrail.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_ICBM_AFTERBURN</Type>
+			<Description>ICBM Afterburn</Description>
+			<fScale>0.8</fScale>
+			<Path>Art/Effects/fire_afterburn/fx_fire_afterburn.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_TORPEDO_BUBBLES</Type>
+			<Description>SubmarineTorpedo Bubbles</Description>
+			<fScale>0.25</fScale>
+			<Path>Art/Effects/water_propeller_bubbles/fx_water_propeller_bubbles.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_SUBMARINE_BUBBLES</Type>
+			<Description>SubmarineBubbles</Description>
+			<fScale>1.0</fScale>
+			<Path>Art/Effects/water_propeller_bubbles/fx_water_propeller_bubbles.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_SUBMARINE_SIDE_FROTH</Type>
+			<Description>Side Froth for the Submarine</Description>
+			<fScale>0.037</fScale>
+			<Path>Art/Effects/water_ship_side_froth/fx_water_ship_side_froth.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_SUBMARINE_DAMAGE_SMOKE</Type>
+			<Description>DarkSmoke for the 4th Damage State of the Submarine</Description>
+			<fScale>1.4</fScale>
+			<Path>Art/Effects/ship_damage_smoke_gunpowder/fx_ship_damage_gunpowder_smoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_BATTLESHIP_BOW_FROTH</Type>
+			<Description>Bow Froth for the Battleship</Description>
+			<fScale>0.08</fScale>
+			<Path>Art/Effects/water_ship_bow_froth/fx_water_ship_bow_froth.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_BATTLESHIP_SIDE_FROTH</Type>
+			<Description>Side Froth for the Battleship</Description>
+			<fScale>0.1</fScale>
+			<Path>Art/Effects/water_ship_side_froth/fx_water_ship_side_froth.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_CARRIER_BOW_FROTH</Type>
+			<Description>Bow Froth for the Carrier</Description>
+			<fScale>0.075</fScale>
+			<Path>Art/Effects/water_ship_bow_froth/fx_water_ship_bow_froth.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_CARRIER_SIDE_FROTH</Type>
+			<Description>Side Froth for the Carrier</Description>
+			<fScale>0.105</fScale>
+			<Path>Art/Effects/water_ship_side_froth/fx_water_ship_side_froth.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_CARAVEL_BOW_FROTH</Type>
+			<Description>Bow Froth for the Caravel</Description>
+			<fScale>0.31</fScale>
+			<Path>Art/Effects/water_ship_bow_froth/fx_water_ship_bow_froth.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_CARAVEL_SIDE_FROTH</Type>
+			<Description>Side Froth for the Caravel</Description>
+			<fScale>0.24</fScale>
+			<Path>Art/Effects/water_ship_side_froth/fx_water_ship_side_froth.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_DESTROYER_BOW_FROTH</Type>
+			<Description>Bow Froth for the Destroyer</Description>
+			<fScale>0.065</fScale>
+			<Path>Art/Effects/water_ship_bow_froth/fx_water_ship_bow_froth.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_DESTROYER_SIDE_FROTH</Type>
+			<Description>Side Froth for the Destroyer</Description>
+			<fScale>0.09</fScale>
+			<Path>Art/Effects/water_ship_side_froth/fx_water_ship_side_froth.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_FRIGATE_BOW_FROTH</Type>
+			<Description>Bow Froth for the Frigate</Description>
+			<fScale>0.35</fScale>
+			<Path>Art/Effects/water_ship_bow_froth/fx_water_ship_bow_froth.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_FRIGATE_SIDE_FROTH</Type>
+			<Description>Side Froth for the Frigate</Description>
+			<fScale>0.3</fScale>
+			<Path>Art/Effects/water_ship_side_froth/fx_water_ship_side_froth.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_GALLEON_BOW_FROTH</Type>
+			<Description>Bow Froth for the Galleon</Description>
+			<fScale>0.42</fScale>
+			<Path>Art/Effects/water_ship_bow_froth/fx_water_ship_bow_froth.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_GALLEON_SIDE_FROTH</Type>
+			<Description>Side Froth for the Galleon</Description>
+			<fScale>0.42</fScale>
+			<Path>Art/Effects/water_ship_side_froth/fx_water_ship_side_froth.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_GALLEY_BOW_FROTH</Type>
+			<Description>Bow Froth for the Galley</Description>
+			<fScale>0.40</fScale>
+			<Path>Art/Effects/water_ship_bow_froth/fx_water_ship_bow_froth.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_GALLEY_SIDE_FROTH</Type>
+			<Description>Side Froth for the Galley</Description>
+			<fScale>0.35</fScale>
+			<Path>Art/Effects/water_ship_side_froth/fx_water_ship_side_froth.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_IRONCLAD_BOW_FROTH</Type>
+			<Description>Bow Froth for the Ironclad</Description>
+			<fScale>0.059</fScale>
+			<Path>Art/Effects/water_ship_bow_froth/fx_water_ship_bow_froth.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_IRONCLAD_SIDE_FROTH</Type>
+			<Description>Side Froth for the Ironclad</Description>
+			<fScale>0.13</fScale>
+			<Path>Art/Effects/water_ship_side_froth/fx_water_ship_side_froth.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_TRANSPORT_BOW_FROTH</Type>
+			<Description>Bow Froth for the Transport</Description>
+			<fScale>0.065</fScale>
+			<Path>Art/Effects/water_ship_bow_froth/fx_water_ship_bow_froth.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_TRANSPORT_SIDE_FROTH</Type>
+			<Description>Side Froth for the Transport</Description>
+			<fScale>0.058</fScale>
+			<Path>Art/Effects/water_ship_side_froth/fx_water_ship_side_froth.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_WORKBOAT_BOW_FROTH</Type>
+			<Description>Bow Froth for the Workboat</Description>
+			<fScale>0.86</fScale>
+			<Path>Art/Effects/water_ship_bow_froth/fx_water_ship_bow_froth.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_WORKBOAT_SIDE_FROTH</Type>
+			<Description>Side Froth for the Workboat</Description>
+			<fScale>0.46</fScale>
+			<Path>Art/Effects/water_ship_side_froth/fx_water_ship_side_froth.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_HIGHLIGHT_PROPHET</Type>
+			<Description>Highlight effect for the Prophet</Description>
+			<fScale>0.9</fScale>
+			<Path>Art/Effects/unit_greatpeople/fx_GreatPeople_Prophet_Highlight.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_HIGHLIGHT_SCIENTIST</Type>
+			<Description>Highlight effect for the Scientist</Description>
+			<fScale>0.9</fScale>
+			<Path>Art/Effects/unit_greatpeople/fx_GreatPeople_Scientist_Highlight.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_HIGHLIGHT_MERCHANT</Type>
+			<Description>Highlight effect for the Merchant</Description>
+			<fScale>0.9</fScale>
+			<Path>Art/Effects/unit_greatpeople/fx_GreatPeople_Tycoon_Highlight.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_HIGHLIGHT_GREATARTIST</Type>
+			<Description>Highlight effect for the Great Artist</Description>
+			<fScale>0.9</fScale>
+			<Path>Art/Effects/unit_greatpeople/fx_GreatPeople_Artist_Highlight.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_HIGHLIGHT_ENGINEER</Type>
+			<Description>Highlight effect for the Engineer</Description>
+			<fScale>0.9</fScale>
+			<Path>Art/Effects/unit_greatpeople/fx_GreatPeople_Engineer_Highlight.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_HIGHLIGHT_WARLORD</Type>
+			<Description>Highlight effect for the Warlord</Description>
+			<fScale>0.9</fScale>
+			<Path>Art/Effects/unit_greatpeople/fx_GreatPeople_Warlord_Highlight.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_OMEN_SMOKE</Type>
+			<Description>BlackSmoke on Omen 4 Horsemen</Description>
+			<fScale>1</fScale>
+			<Path>Art/Effects/Omen_Horseman/OMEN_HORSEMAN_SMOKE.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_OMEN_SICK</Type>
+			<Description>GreenSmoke on Famine Horseman</Description>
+			<fScale>1</fScale>
+			<Path>Art/Effects/Omen_Horseman/OMEN_HORSEMAN_SICK.nif</Path>
+		</AttachableInfo>
+		<!-- Improvements: -->
+		<AttachableInfo>
+			<Type>ATTACHABLE_GOODYPOP</Type>
+			<Description>Goody hut pop dust and hay</Description>
+			<fScale>1.0</fScale>
+			<Path>Art/Effects/improvement_goody_hut_pop/fx_goodyhut_pop.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_IMPCAMPFIRE</Type>
+			<Description>Improvements campfire</Description>
+			<fScale>0.5</fScale>
+			<Path>Art/Effects/improvement_campfire/fx_fire_campfire.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_IMPCHIMNEYSMOKE_01</Type>
+			<Description>Improvements chimney smoke</Description>
+			<fScale>1.0</fScale>
+			<Path>Art/Interface/Attachables/AttachableSmoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_IMPCHIMNEYSMOKE</Type>
+			<Description>Improvements chimney smoke</Description>
+			<fScale>1.0</fScale>
+			<Path>Art/Interface/Attachables/AttachableSmoke.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_IMPFIREPLACEFIRE</Type>
+			<Description>Fire for improvement fire place</Description>
+			<fScale>0.2</fScale>
+			<Path>Art/Effects/fire_torch/fx_fire_torch.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_IMPSTEAM</Type>
+			<Description>Steam for improvements</Description>
+			<fScale>1.0</fScale>
+			<Path>Art/Effects/improvement_steam/fx_improvement_steam.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_ICBM_GREENGLOW</Type>
+			<Description>ICBM greenglow</Description>
+			<fScale>1.5</fScale>
+			<Path>Art/Effects/cities_sickly_fumes/fx_cities_sickly_fumes.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_IMPFIREPLACEFIRE_BIG</Type>
+			<Description>Fire for improvement fire place</Description>
+			<fScale>1.0</fScale>
+			<Path>Art/Effects/fire_torch/fx_fire_torch.nif</Path>
+		</AttachableInfo>
+
+		<!-- Final Frontier: -->
+		<AttachableInfo>
+			<Type>ATTACHABLE_INVASIONSHIP_GLOW</Type>
+			<Description>Invasion Ship Engine Glow</Description>
+			<fScale>1.0</fScale>
+			<Path>Art/Effects/FF_Engine_Glow/FF_Engine_Glow.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_INVASIONSHIP_THRUST</Type>
+			<Description>Invasion Ship Engine Thrust</Description>
+			<fScale>0.8</fScale>
+			<Path>Art/Effects/FF_Engine_Thrust/FF_Engine_Thrust.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_INVASIONSHIP_FORCEFIELD</Type>
+			<Description>Invasion Ship Forcefield</Description>
+			<fScale>1.0</fScale>
+			<Path>Art/Effects/FF_Forcefield/FF_FOrcefield.nif</Path>
+		</AttachableInfo>
+		<AttachableInfo>
+			<Type>ATTACHABLE_INVASIONSHIP_GLOW_BIG</Type>
+			<Description>Invasion Ship Engine Glow</Description>
+			<fScale>1.8</fScale>
+			<Path>Art/Effects/FF_Engine_Glow/FF_Engine_Glow.nif</Path>
+		</AttachableInfo>
+	</AttachableInfos>
+</Civ4AttachableInfos>

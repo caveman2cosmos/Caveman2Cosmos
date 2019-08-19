@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Progtern (Firaxis Games) -->
+	<!-- Sid Meier's Civilization 4 -->
+	<!-- Copyright Firaxis Games 2005 -->
+	<!-- -->
+	<!-- Bonus Class -->
+<Civ4BonusClassInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
+	<BonusClassInfos>
+		<BonusClassInfo>
+			<Type>BONUSCLASS_GENERAL</Type>
+			<iUnique>0</iUnique>
+		</BonusClassInfo>
+		<BonusClassInfo>
+			<Type>BONUSCLASS_GRAIN</Type>
+			<iUnique>4</iUnique>
+		</BonusClassInfo>
+		<BonusClassInfo>
+			<Type>BONUSCLASS_LIVESTOCK</Type>
+			<iUnique>4</iUnique>
+		</BonusClassInfo>
+		<BonusClassInfo>
+			<Type>BONUSCLASS_SEAFOOD</Type>
+			<iUnique>1</iUnique>
+		</BonusClassInfo>
+		<BonusClassInfo>
+			<Type>BONUSCLASS_RUSH</Type>
+			<iUnique>3</iUnique>
+		</BonusClassInfo>
+		<BonusClassInfo>
+			<Type>BONUSCLASS_MODERN</Type>
+			<iUnique>4</iUnique>
+		</BonusClassInfo>
+		<BonusClassInfo>
+			<Type>BONUSCLASS_WONDER</Type>
+			<iUnique>8</iUnique>
+		</BonusClassInfo>
+		<BonusClassInfo>
+			<Type>BONUSCLASS_LUXURY</Type>
+			<iUnique>8</iUnique>
+		</BonusClassInfo>
+		<BonusClassInfo>
+			<Type>BONUSCLASS_FUEL</Type>
+			<iUnique>6</iUnique>
+		</BonusClassInfo>
+		<BonusClassInfo>
+			<Type>BONUSCLASS_MANUFACTURED</Type>
+			<iUnique>0</iUnique>
+		</BonusClassInfo>
+		<BonusClassInfo>
+			<Type>BONUSCLASS_FUTURE</Type>
+			<iUnique>0</iUnique>
+		</BonusClassInfo>
+		<BonusClassInfo>
+			<Type>BONUSCLASS_CULTURE</Type>
+			<iUnique>0</iUnique>
+		</BonusClassInfo>
+		<BonusClassInfo>
+			<Type>BONUSCLASS_RELIGION</Type>
+			<iUnique>0</iUnique>
+		</BonusClassInfo>
+	</BonusClassInfos>
+</Civ4BonusClassInfos>

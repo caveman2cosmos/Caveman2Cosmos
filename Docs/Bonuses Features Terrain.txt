@@ -1,0 +1,272 @@
+Bonuses, Terrain Features, and Terrain 
+Mod: Caveman 2 Cosmos
+Document Creator: EldrinFal
+==========================================================
+The purpose of this document is to keep a list of the 
+element names for Bonuses, Terrain Features, and Terrain.
+Please feel free to modify this document as needed.
+==========================================================
+
+
+##########################################################
+List of Bonus Types
+##########################################################
+Animals
+-------
+BONUS_BISON (Grass, Plains, Scrub, Lush, Sword Grass)
+BONUS_DEER (Forest, Grass, Marsh, Plains, Scrub, Tundra, 
+			Rocky)
+BONUS_RABBIT (Desert, Scrub, Plains, Grass, Lush, Tundra)
+BONUS_PIG (Forest, Jungle, Grass, Plains, Scrub, Lush,
+			Muddy, Marsh)
+BONUS_COW (Lush, Grass, Plains, Flood Plains)
+BONUS_IVORY (Plains, Scrub, Flood Plains, Forest, Jungle,
+			Savanna, Muddy, Scrub, Desert)
+BONUS_CAMEL (Desert, Dunes)
+BONUS_HORSE (Grass, Plains, Lush, Flood Plains, Sword
+			Grass)
+BONUS_MAMMOTH (Forest, Tundra, Permafrost, Snow)
+BONUS_WALRUS (Snow, Permafrost, Tundra)
+BONUS_SEA_LIONS (Snow, Permafrost, Tundra)
+BONUS_SHEEP (Grass, Plains, Rocky, Scrub)
+BONUS_WHALE (Ocean, Storm)
+
+
+Food
+----
+BONUS_APPLE (Forest, Grass, Plains, Lush)
+BONUS_LEMON (Forest, Jungle, Grass, Plains, Lush)
+BONUS_CORN (Grass, Plains, Scrub)
+BONUS_RICE (Lush, Marsh, Muddy, Swamp)
+BONUS_WHEAT (Plains, Flood Plains, Desert)
+BONUS_BANANA (Jungle, Grass, Lush, Muddy)
+BONUS_POTATO (Grass, Plains, Rocky)
+BONUS_FISH (Coast, Ocean, Storm)
+BONUS_CLAM (Coast)
+BONUS_CRAB (Coast)
+BONUS_SHRIMP (Coast, Ocean, Storm)
+
+
+
+Ore
+---
+BONUS_COAL (Grass, Plains, Rocky, Barren, Desert, Scrub,
+			Lush, Muddy, Marsh, Tundra, Permafrost, Snow,
+			Flood Plains, Forest, Jungle, Swamp, Savanna,
+			Bamboo, Sword Grass)
+BONUS_IRON (Grass, Plains, Rocky, Barren, Desert, Scrub,
+			Lush, Muddy, Marsh, Tundra, Permafrost, Snow,
+			Flood Plains, Forest, Jungle, Swamp, Savanna,
+			Bamboo, Sword Grass)
+BONUS_OBSIDIAN (Barren, Rocky)
+BONUS_COPPER (Grass, Plains, Rocky, Barren, Desert, Scrub,
+			Lush, Muddy, Marsh, Tundra, Permafrost, Snow,
+			Flood Plains, Forest, Jungle, Swamp, Savanna,
+			Bamboo, Sword Grass)
+BONUS_BAUXITE (Grass, Plains, Rocky, Barren, Desert, Scrub,
+			Lush, Muddy, Marsh, Tundra, Permafrost, Snow,
+			Flood Plains, Forest, Jungle, Swamp, Savanna,
+			Bamboo, Sword Grass)
+BONUS_LEAD (Grass, Plains, Rocky, Barren, Desert, Scrub,
+			Lush, Muddy, Marsh, Tundra, Permafrost, Snow,
+			Flood Plains, Forest, Jungle, Swamp, Savanna,
+			Bamboo, Sword Grass)
+
+		
+		
+Fuel/Production
+---------------
+BONUS_RUBBER (Forest, Jungle, Grass, Lush, Muddy)
+BONUS_OIL (Grass, Plains, Rocky, Barren, Desert, Scrub,
+			Lush, Muddy, Marsh, Tundra, Permafrost, Snow,
+			Flood Plains, Forest, Jungle, Swamp, Savanna,
+			Bamboo, Sword Grass, Storm)
+BONUS_SULPHUR (Barren, Rocky)
+BONUS_URANIUM (Grass, Plains, Rocky, Barren, Desert, Scrub,
+			Lush, Muddy, Marsh, Tundra, Permafrost, Snow,
+			Flood Plains, Forest, Jungle, Swamp, Savanna,
+			Bamboo, Sword Grass)
+BONUS_MARBLE (Rocky, Barren, Desert, Scrub, Plains, Grass,
+			Lush, Muddy, Marsh, Tundra, Permafrost, Snow)
+BONUS_SALT (Desert, Salt Flats)
+BONUS_STONE (Rocky, Barren, Desert, Scrub, Plains, Grass,
+			Lush, Muddy, Marsh, Tundra, Permafrost, Snow)
+BONUS_METHANE (Ocean, Storm)
+BONUS_THERMAL_VENT (Rocky, Barren, Desert, Scrub, Grass,
+					Lush, Marsh, Muddy, Plains, Snow,
+					Permafrost, Tundra, Forest, Jungle,
+					Swamp, Savanna, Bamboo, Sword Grass)
+BONUS_TIMBER (Forest, Jungle, Grass, Plains, Tundra, Lush,
+			Muddy, Permafrost)
+
+			
+
+
+Luxury
+------
+BONUS_DYE (Desert, Scrub, Grass, Lush, Marsh, Muddy, 
+			Plains, Flood Plains, Forest, Jungle, Swamp,
+			Savanna, Bamboo, Sword Grass)
+BONUS_FUR (Grass, Lush, Marsh, Muddy, Plains, Snow,
+			Permafrost, Tundra, Forest, Swamp)
+BONUS_GEMS (Rocky, Barren, Desert, Scrub, Plains, Grass,
+			Lush, Muddy, Marsh, Tundra, Permafrost, Snow,
+			Flood Plains, Forest, Jungle, Swamp, Savanna,
+			Bamboo, Sword Grass)
+BONUS_GOLD (Rocky, Barren, Desert, Scrub, Plains, Grass,
+			Lush, Muddy, Marsh, Tundra, Permafrost, Snow,
+			Flood Plains, Forest, Jungle, Swamp, Savanna,
+			Bamboo, Sword Grass)
+BONUS_OLIVES (Forest, Grass, Plains, Lush, Scrub)
+BONUS_PEARLS (Coast)
+BONUS_SILK (Forest, Jungle, Bamboo, Grass, Marsh, Plains,
+			Lush, Muddy)
+BONUS_SILVER (Rocky, Desert, Scrub, Grass, Lush, Marsh,
+			Muddy, Plains, Snow, Permafrost, Tundra,
+			Flood Plains, Forest, Jungle, Swamp, Savanna,
+			Bamboo, Sword Grass)
+BONUS_WINE (Grass, Plains, Lush, Scrub)
+BONUS_CANNABIS (Plains, Scrub, Forest, Lush, Grass, Scrub)
+BONUS_COFFEE (Grass, Plains, Lush, Scrub, Flood Plains,
+			Desert)
+BONUS_TEA (Forest, Bamboo, Rocky, Grass, Plains, Lush)
+BONUS_COTTON (Plains, Forest, Jungle, Lush, Grass)
+BONUS_INCENSE (Desert, Scrub, Dunes, Flood Plains)
+BONUS_SPICES (Desert, Grass, Marsh, Plains, Scrub, Lush,
+			Muddy, Flood Plains, Forest, Jungle, Swamp,
+			Savanna, Bamboo, Sword Grass)
+BONUS_SUGAR (Marsh, Muddy, Flood Plains, Jungle, Desert,
+			Scrub, Grass, Lush, Plains)
+BONUS_TOBACCO (Grass, Lush, Jungle)
+
+
+Manufactured
+------------
+BONUS_ALCOHOL 
+BONUS_ALUMINUM
+BONUS_AMMO
+BONUS_BIOFUEL
+BONUS_CHEMICALS
+BONUS_DIESEL
+BONUS_DRAMA
+BONUS_MUSIC
+BONUS_MOVIES
+BONUS_NANOTUBES
+BONUS_SEMICONDUCTORS
+BONUS_STEEL
+
+
+
+Other
+-----
+BONUS_ANCIENTTEMPLE (Desert, Marsh, Dunes, Jungle, Swamp,
+					Bamboo, Grass, Lush, Muddy)
+
+
+
+
+##########################################################
+List of Feature Types
+##########################################################
+
+FEATURE_JUNGLE (Grass, Muddy, Lush)
+FEATURE_BAMBOO (Grass, Plains, Muddy, Lush, Barren, Rocky)
+FEATURE_OASIS (Desert, Dunes, Scrub)
+FEATURE_FLOOD_PLAINS (Desert, Dunes, Scrub)
+FEATURE_FOREST (Grass, Plains, Muddy, Lush, Scrub, Rocky,
+				Tundra, Permafrost)
+FEATURE_SWAMP (Marsh, Muddy, Tundra)
+FEATURE_PEAT_BOG (Marsh, Tundra)
+FEATURE_BIOGAS (Grass, Plains, Muddy, Lush, Marsh, Scrub,
+				Rocky, Desert, Barren, Dunes, Salt Flats,
+				Peak, Hill, Permafrost, Tundra, Snow,
+				Coast, Ocean)
+FEATURE_PLAGUEGAS (Grass, Plains, Muddy, Lush, Marsh, Scrub,
+				Rocky, Desert, Barren, Dunes, Salt Flats,
+				Peak, Hill, Permafrost, Tundra, Snow,
+				Coast, Ocean)
+FEATURE_BARREL_CACTUS (Desert, Scrub)
+FEATURE_COCONUT (Muddy, Lush)
+FEATURE_DATE_PALM (Desert, Scrub, Rocky, Barren)
+FEATURE_PRICKLY_PEAR (Desert, Scrub)
+FEATURE_SAVANNA (Plains, Grass, Rocky, Barren, Scrub)
+FEATURE_SWORD_GRASS (Grass, Plains, Muddy, Lush, Marsh,
+					(Barren, Rocky, Scrub)
+FEATURE_VOLCANO (Barren, Rocky)
+FEATURE_VOLCANO2 (Barren, Rocky)
+FEATURE_ICE (Coast, Ocean)
+FEATURE_STORM (Coast, Ocean)
+FEATURE_FALLOUT
+FEATURE_REEF (Coast)
+FEATURE_KELP (Coast)
+FEATURE_FOSSIL (Desert, Plains, Hill, Barren, Rocky,
+				Scrub, Tundra, Dunes)
+FEATURE_CRATER (Desert, Barren, Rocky, Scrub, Tundra)
+FEATURE_TARPIT (Marsh, Muddy, Lush, Grass, Plains, Barren,
+				Rocky, Scrub, Desert, Tundra, Permafrost)
+FEATURE_POLAR_ROCK_ARCH (Tundra, Permafrost, Snow)
+FEATURE_POLAR_ROCK_ARCH2 (Tundra, Permafrost, Snow)
+FEATURE_POLAR_ROCK_FORM1 (Tundra, Permafrost, Snow)
+FEATURE_POLAR_ROCK_FORM2 (Tundra, Permafrost, Snow)
+FEATURE_POLAR_ROCK_FORM3 (Tundra, Permafrost, Snow)
+FEATURE_POLAR_ROCK_FORM4 (Tundra, Permafrost, Snow)
+FEATURE_DARK_ROCK_ARCH (Rocky, Barren)
+FEATURE_DARK_ROCK_ARCH2 (Rocky, Barren)
+FEATURE_DARK_ROCK_FORM1 (Rocky, Barren)
+FEATURE_DARK_ROCK_FORM2 (Rocky, Barren)
+FEATURE_DARK_ROCK_FORM3 (Rocky, Barren)
+FEATURE_DARK_ROCK_FORM4 (Rocky, Barren)
+FEATURE_ROCK_ARCH (Desert, Scrub, Dunes)
+FEATURE_ROCK_ARCH2 (Desert, Scrub, Dunes)
+FEATURE_ROCK_FORM1 (Desert, Scrub, Dunes)
+FEATURE_ROCK_FORM2 (Desert, Scrub, Dunes)
+FEATURE_ROCK_FORM3 (Desert, Scrub, Dunes)
+FEATURE_ROCK_FORM4 (Desert, Scrub, Dunes)
+
+
+
+
+##########################################################
+List of Terrain Types 
+##########################################################
+
+Temperate
+---------
+TERRAIN_GRASS
+TERRAIN_LUSH
+TERRAIN_PLAINS
+
+
+Wet
+---
+TERRAIN_MUDDY
+TERRAIN_MARSH
+
+Dry
+---
+TERRAIN_BARREN
+TERRAIN_ROCKY
+TERRAIN_SCRUB
+TERRAIN_DESERT
+TERRAIN_DUNES
+TERRAIN_SALT_FLATS
+
+Cold
+----
+TERRAIN_TUNDRA
+TERRAIN_PERMAFROST
+TERRAIN_SNOW
+
+
+Water
+-----
+TERRAIN_COAST
+TERRAIN_OCEAN
+TERRAIN_SLIMY_COAST
+TERRAIN_SLIMY_OCEAN
+
+
+Elevated
+--------
+TERRAIN_PEAK
+TERRAIN_HILL

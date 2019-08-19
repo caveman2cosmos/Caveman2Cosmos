@@ -1,0 +1,95 @@
+-----------------------------------------------------------
+
+Potential future targeted changes to explore:
+
+Bugfix
+- Extra turn when overwriting slot bug
+- See UP thread for more ideas
+
+Air AI
+- Bombers hit random nearby enemy cities if no air defenses and nothing else to do?
+
+Espionage AI
+- Check out Super Spies AI
+
+City AI:
+- Better logic (centralized) for determining when to relocate capital
+x Rework "early" city hunting stack logic
+x Build CARRIER_AIR if at war based on empty slots, regardless of area ai
+x Block more superfluous builds in defensive areas (executives)
+
+War strategy AI:
+- Target cities to stop potential victory - capital for space, high culture cities for cultural.  Use war declaration code as a guide for how to determine if other player is close
+- Consider closeness to cultural victory?
+- War alliances:  If want to declare war on a civ, but simply not powerful enough, check for other AIs who want to join right from the beginning?  Would have to skip the preparing phase, just set Dogpile or something ... any way to make them all declare on the same turn?  Some new ALLIED ATTACK war plan or something?
+x Double war success if captured capital
+x Cut preparing time in 2 if have 50% more power?
+- Allow destruction of tiny civs more often (instead of accepting capitulation) even if others capture some cities
+- Make AI okay with having its vassals capture some enemy cities instead of accepting capitulation
+
+Unit AI:
+- City defense axemen don't upgrade to Macemen since Macemen don't have that UNITAI ... switch to city counter under some circumstances?
+- Check calculations of which cities fall under blockade, AI privateer positioning choices
+x Privateers: move in the shadows
+x Attack stacks should stage in coastal cities if in assault areas
+- If sending an attack load with no attack city units, change at least one unit ai
+- When pillaging, have fast units pillage once each and then slow units/second pillage so that group can still move
+- Stranded move to city with good closeness
+- Generals spawned in enemy territory (mods) -> lead
+
+Naval AI:
+x Have AI transfer troops from Assault to Defensive and Offensive areas if it is out-gunned
+x Portugese can't upgrade existing galley transports to Carracks, so often won't build new settler transports since already have
+- Block transports from grouping with transports running MISSIONAI_ASSAULT
+- When transport heads out on assault mission, clear missions for all those coming to join with it
+- Escorts for picking up stranded
+x Stealth Destroyers ... don't run escort AI
+x Check out Maniac's changes for all terrain ships/transports
+
+Great people AI
+- If losing war or on defensive, up value of Golden Age (so can switch to drafting civics)
+
+Civics AI
+- If in tough war, up value of civics which allow drafting, whipping, or buying?
+
+Vassal AI:
+x Option to turn off extra human's vassal military production
+
+Barbarian AI:
+- Build smallish attack stacks?
+x No financial trouble
+
+Diplomacy:
+- How do losing/weak civs ask for help in war?
+- when will vassals choose to break free?
+- Pick state religion logic
+- Switch state religions in Golden Age?
+- Less willing to make peace when about to capture city, more willing when have threatened cities
+- Double check bug fix in CvPlayerAI::AI_civicTrade
+
+General AI:
+- XML option for tech beelining length
+x Issue with tactical nukes being able to auto explore (also, range causing crashes?)
+x Block AI from building UNITAI_ESCORT_SEA which are invisible
+
+-----------------------------------------------------------
+
+Bigger picture avenues to pursue:
+
+Are there any remaining bottlenecks for invasions/reinforcements?
+
+Workers: Keep them from plowing under villages/towns.  See thread for more.
+
+Area city graphs, or some way to pick ports for naval invasion.
+
+Check decisions about making amphibious assaults versus landing next to city.  Also, separate off attack ships and have them bombard before invasion?
+
+Active defense, both shifting defenders around plus forming a stack to attack invaders.  See Version 0.50 thread.
+
+Guard city logic causes cycles due to inconsistent counting of units.
+
+Playing to win:  Spaceship_1, Spaceship_2, etc strategies, Domination_1, Domination_2.  Diplo??
+
+Turtle strategy, keep attack units from heading out much.
+
+How to get early rushes ready?  Early rush defense too.

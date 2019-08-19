@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Modified by the World of Civilization Team -->
+<!-- Audio Defines Schema -->
+<!-- -->
+<Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
+	<ElementType name="SoundID" content="textOnly"/>
+	<ElementType name="Filename" content="textOnly"/>
+	<ElementType name="bIsCompressed" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bInGeneric" content="textOnly" dt:type="boolean"/>
+	<ElementType name="ContextType" content="textOnly"/>
+	<ElementType name="SoundType" content="textOnly"/>
+	<ElementType name="PositionType" content="textOnly"/>
+	<ElementType name="ScriptType" content="textOnly"/>
+	<ElementType name="LoadType" content="textOnly"/>
+	<ElementType name="EffectType" content="textOnly"/>
+	<ElementType name="SpeakerConfig" content="textOnly"/>
+	<ElementType name="fReverbTime" content="textOnly"/>
+	<ElementType name="fReverbPredelay" content="textOnly"/>
+	<ElementType name="fReverbDamping" content="textOnly"/>
+	<ElementType name="fReverbDryLevel" content="textOnly"/>
+	<ElementType name="fReverbWetLevel" content="textOnly"/>
+	<ElementType name="iSampleRate" content="textOnly" dt:type="int"/>
+	<ElementType name="iSampleBits" content="textOnly" dt:type="int"/>
+	<ElementType name="iMultiChannelPref" content="textOnly" dt:type="int"/>
+	<ElementType name="iNum2DSamples" content="textOnly" dt:type="int"/>
+	<ElementType name="iNum3DSamples" content="textOnly" dt:type="int"/>
+	<ElementType name="iNum2DStreams" content="textOnly" dt:type="int"/>
+	<ElementType name="iNum3DStreams" content="textOnly" dt:type="int"/>
+	<ElementType name="fPercentSamplesFor3D" content="textOnly"/>
+	<ElementType name="AudioSystemInit" content="eltOnly">
+		<element type="iSampleRate" maxOccurs="1"/>
+		<element type="iSampleBits" maxOccurs="1"/>
+		<element type="iMultiChannelPref" maxOccurs="1"/>
+		<element type="iNum2DSamples" maxOccurs="1"/>
+		<element type="iNum3DSamples" maxOccurs="1"/>
+		<element type="iNum2DStreams" maxOccurs="1"/>
+		<element type="iNum3DStreams" maxOccurs="1"/>
+		<element type="fPercentSamplesFor3D" maxOccurs="1"/>
+	</ElementType>
+	<ElementType name="ReverbData" content="eltOnly">
+		<element type="fReverbTime" maxOccurs="1"/>
+		<element type="fReverbPredelay" maxOccurs="1"/>
+		<element type="fReverbDamping" maxOccurs="1"/>
+		<element type="fReverbDryLevel" maxOccurs="1"/>
+		<element type="fReverbWetLevel" maxOccurs="1"/>
+	</ElementType>
+	<ElementType name="GameEnvironmentType" content="textOnly"/>
+	<ElementType name="GameEnvironmentMap" content="eltOnly">
+		<element type="GameEnvironmentType" maxOccurs="1"/>
+		<element type="ReverbData" maxOccurs="1"/>
+		<element type="EffectType" maxOccurs="1"/>
+	</ElementType>
+	<ElementType name="SoundData" content="eltOnly">
+		<element type="SoundID"/>
+		<element type="Filename"/>
+		<element type="LoadType"/>
+		<element type="bIsCompressed"/>
+		<element type="bInGeneric"/>
+	</ElementType>
+	<ElementType name="SoundDatas" content="eltOnly">
+		<element type="SoundData" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="SpeakerConfigs" content="eltOnly">
+		<element type="SpeakerConfig" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="ContextTypes" content="eltOnly">
+		<element type="ContextType" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="SoundTypes" content="eltOnly">
+		<element type="SoundType" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="PositionTypes" content="eltOnly">
+		<element type="PositionType" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="ScriptTypes" content="eltOnly">
+		<element type="ScriptType" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="LoadTypes" content="eltOnly">
+		<element type="LoadType" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="EffectTypes" content="eltOnly">
+		<element type="EffectType" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="GameEnvironmentTypes" content="eltOnly">
+		<element type="GameEnvironmentType" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Effects" content="eltOnly">
+		<element type="GameEnvironmentMap" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="AudioDefines" content="eltOnly">
+		<element type="SoundDatas" maxOccurs="1"/>
+		<element type="ContextTypes" maxOccurs="1"/>
+		<element type="SoundTypes" maxOccurs="1"/>
+		<element type="PositionTypes" maxOccurs="1"/>
+		<element type="ScriptTypes" maxOccurs="1"/>
+		<element type="LoadTypes" maxOccurs="1"/>
+		<element type="EffectTypes" maxOccurs="1"/>
+		<element type="GameEnvironmentTypes" maxOccurs="*"/>
+		<element type="Effects" maxOccurs="1"/>
+		<element type="SpeakerConfigs" maxOccurs="1"/>
+		<element type="AudioSystemInit" maxOccurs="1"/>
+	</ElementType>
+</Schema>

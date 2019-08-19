@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<mod id="NJAGC" name="Not Just Another Game Clock Mod" author="TheLopez"
+	version="0.4w" date="11/08/2006" url="http://forums.civfanatics.com/showthread.php?t=158137">
+
+	<options id="NJAGC" file="Not Just Another Game Clock Mod Config.ini">
+		<section id="Not Just Another Game Clock Mod">
+
+			<option id="ShowCompletedTurns" key="Show Game Completed Turns" type="boolean" default="True" get="isShowGameTurn"/>
+
+			<option id="ShowTotalTurns" key="Show Game Total Turns" type="boolean" default="False" get="isShowTotalTurns"/>
+
+			<option id="ShowCompletedPercent" key="Show Game Completed Percent" type="boolean" default="True" get="isShowPercentComplete"/>
+
+			<option id="ShowDate" key="Show Turns" type="boolean" default="True" get="isShowDate"/>
+
+			<option id="AlternateText" key="Alternate Views" type="boolean" default="False" get="isAlternateTimeText"/>
+
+			<list id="AltTiming" key="Alternating Time" type="int" default="4" values="1, 2, 3, 4, 5, 6, 7, 8, 9, 10" get="getAlternatePeriod"/>
+
+			<option id="ShowAltCompletedTurns" key="Alternate Show Game Completed Turns" type="boolean" default="True" get="isShowAltGameTurn"/>
+
+			<option id="ShowAltTotalTurns" key="Alternate Show Game Total Turns" type="boolean" default="True" get="isShowAltTotalTurns"/>
+
+			<option id="ShowAltCompletedPercent" key="Alternate Show Game Completed Percent" type="boolean" default="False" get="isShowAltPercentComplete"/>
+
+			<option id="ShowAltDate" key="Alternate Show Turns" type="boolean" default="True" get="isShowAltDate"/>
+		</section>
+	</options>
+</mod>

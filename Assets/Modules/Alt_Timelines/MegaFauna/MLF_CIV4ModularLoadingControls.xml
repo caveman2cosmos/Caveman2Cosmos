@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Master Load File -->
+<!-- -->
+<Civ4ModularLoadControls xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
+	<DefaultConfiguration>DH_Custom_Units_MegaFauna</DefaultConfiguration>
+	<ConfigurationInfos>
+		<ConfigurationInfo>
+			<Type>DH_Custom_Units_MegaFauna</Type>
+			<Description>Changes to existing religions and additions religions</Description>
+			<Modules>
+				<Module>
+					<Directory>Big_Cats</Directory>
+					<bLoad>1</bLoad>
+					<!--> Modular?  NO  Conflict with Pepper's modules<-->
+				</Module>
+				<Module>
+					<Directory>DeerRider</Directory>
+					<bLoad>1</bLoad>
+					<!--> Modular? Yes v38  Initial Test Only<-->
+				</Module>
+				<Module>
+					<Directory>Llama</Directory>
+					<bLoad>1</bLoad>
+					<!--> Modular? Yes v38  Initial Test Only<-->
+				</Module>
+			</Modules>
+		</ConfigurationInfo>
+	</ConfigurationInfos>
+</Civ4ModularLoadControls>

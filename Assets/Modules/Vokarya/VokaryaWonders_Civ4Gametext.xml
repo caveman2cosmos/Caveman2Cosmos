@@ -1,0 +1,1417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AACHENCATHEDRAL</Tag>
+		<English>Aachen Cathedral</English>
+		<French>La Cathédrale d'Aachen</French>
+		<Italian>Cattedrale di Aquisgrana</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AACHENCATHEDRAL_STRATEGY</Tag>
+		<English>Build Aachen Cathedral for a large one-time stability bonus to all your cities and a smaller continuing stability bonus.</English>
+		<French>La [COLOR_BUILDING_TEXT]Cathédrale d'Aachen[COLOR_REVERT] procure un bonus important de manière unique de stabilité dans toutes les villes, et continue après à améliorer la stabilité de votre Empire.</French>
+		<Italian>Costruisci la Cattedrale di Aquisgrana per ottenere un grande bonus alla stabilità una-tantum, oltre ad un bonus più piccolo che persiste nel tempo.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AACHENCATHEDRAL_PEDIA</Tag>
+		<English>Aachen Cathedral is a cathedral in Germany that is also known as the Imperial Cathedral. The center of the cathedral is the Palatine Chapel, originally built by Charlemagne and consecrated by Pope Leo III, who had crowned Charlemagne as Holy Roman Emperor. Charlemagne was later buried there upon his death. Until 1531, the cathedral served as the coronation church for 30 German kings. In some ways, the cathedral symbolizes the end of the warlord era that followed the disintegration of the Roman Empire.</English>
+		<Italian>La Cattedrale di Aquisgrana è una cattedrale in Germania, nota anche come Cattedrale Imperiale. Il centro della cattedrale è la Cappella Palatina, costruita da Carlo Magno e consacrata da papa Leone III, che aveva incoronato Carlo Magno Imperatore del Sacro Romano Impero. Carlo Magno fu in seguito sepolto lì, dopo la dua morte. Fino al 1531 la cattedrale è stata usata come luogo di incoronazione per 30 re tedeschi. Si può dire che la cattedrale sia il simbolo della fine di un'era, quella che seguì la disintegrazione dell'Impero Romano.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ALAMO</Tag>
+		<English>Alamo</English>
+		<French>Le Fort Alamo</French>
+		<Italian>Forte di Alamo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ALAMO_STRATEGY</Tag>
+		<English>Build the Alamo to gain Culture in all your cities whenever one of your units is killed.</English>
+		<French>Le [COLOR_BUILDING_TEXT]Fort Alamo[COLOR_REVERT] vous procure un gain de culture dans toutes les villes où au moins une unité a été tuée.</French>
+		<Italian>Costruisci questa grande meraviglia per ottenere cultura in tutte le tue città, ogni volta che una tua unità viene uccisa.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ALAMO_HELP</Tag>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Adds Base Strength Of Your Units Killed as [ICON_CULTURE] In All Cities</English>
+		<French>[ICON_BULLET]Ajoute la Puissance de l'unité tuée en [ICON_CULTURE] dans toutes les Villes</French>
+		<Italian>[ICON_BULLET]Aggiunge a tutte le città [ICON_CULTURE] equivalente alla forza dell'unità uccisa</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ALAMO_PEDIA</Tag>
+		<English>The Alamo was a Spanish mission built in 1719 in southern Texas. It was originally built to Christianize and educate the local Native Americans, but in 1793, was given to the Mexican government and converted to a military post. In December 1835, Texians took over the mission during the Texas Revolution. The Texians tried to fortify the complex, but were beseiged by the Mexican army under General Antonio Lopez de Santa Anna. On March 6th, a final battle between the Texians and Mexicans ended with the death of virtually all the Texian defenders, including the legendary William Travis, Jim Bowie, and Davy Crockett. A handful of noncombatants were spared to spread the word of the Texian defeat. The reports of the battle spurred the growth of the Texian army and Santa Anna was defeated and captured at the Battle of San Jacinto less than two months later, in a battle that lasted only 18 minutes. "Remember the Alamo!" was used as a rallying cry in the battle and it has since become part of Texas legend. The mission itself served several purposes before being purchased and restored by the Daughters of the Republic of Texas in the early 20th century. It is today one of the most popular historic sites in the United States.</English>
+		<French>Le siège de Fort Alamo (février à mars 1836) est un événement majeur de la guerre d'indépendance du Texas et de la constitution d'une république du Texas indépendante du Mexique, à l'instigation des états-Unis qui fournissaient à leurs nationaux argent et appui politique. En 1836, moins de deux cents hommes1 la plupart venus des états-Unis dont Davy Crockett se retranchèrent dans le fort qu'ils étaient venus détruire avant l'arrivée de l'armée Mexicaine. 1 500 soldats mexicains réguliers participèrent au siège sur près des 7 000 hommes que comptait l'armée composée en grande partie d'hommes recrutés de force par levées dans les villages durant le déplacement vers le nord, mal habillés et mal équipés et pour certains marchant pieds nus2,3 commandée par le général Santa Anna. Les défenseurs du fort venus des états-Unis étaient considérés comme des flibustiers et ils étaient passibles de la peine de mort - ce terme s'appliquait aux étrangers occupant illégalement une portion du territoire national et qui sont naturellement opposés aux autorités et s'adonnent à des trafics4. Le siège, qui dura treize jours jusqu'à l'assaut du 6 mars, a retardé et affaibli l'armée mexicaine (environ six cents soldats mexicains tués5). Cet épisode entraîna pour le Mexique la perte du Texas quelques semaines plus tard.</French>
+		<Italian>Alamo era una missione spagnola costruita nel 1719 nel Texas meridionale. Fu costruita per cristianizzare ed educare i nativi locali, ma nel 1793 fu donata al governo Messicano, che la trasformò in un forte militare. Nel dicembre del 1835 i Texani conquistarono il forte duante le Rivoluzioni Texane. I Texani cercarono di fortificare il complesso, ma furono assediati dall'esercito messicano sotto il comando del Generale Antonio Lopez de Santa Anna. Il 6 marzo, la battaglia finale tra messicani e texani si concluse con la morte di praticamente tutti i difensori texani, inclusi William Travis, Jim Bowie e Davy Crockett; solo un gruppetto di non combattenti venne risparmiato, per far conoscere al mondo la sconfitta dei texni. Le notizie di questa battaglia favorirono la crescita dell'esercito texano; Santa Anna fu sconfitto e catturato alla battaglia di San Jacinto meno di due mesi dopo, in una battaglia che durò solo 18 minuti. "Ricordate Alamo!" fu usato come grido di battaglia, e da allora è diventato parte della leggenda del Texas. La missione aveva diversi scopi, prima di essere nuovamente fondata dalla Sorelle della Repubblica del Texas all'inizio del 20° secolo. Attualmente, è unoo dei siti storici più popolari negli Stati Uniti.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ALAMUT</Tag>
+		<English>Alamut</English>
+		<French>La Forteresse d'Alamut</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ALAMUT_STRATEGY</Tag>
+		<English>Build Alamut for free Fanatic promotions for your units and the ability to train the powerful Hashishin.</English>
+		<French>Cosntruire La [COLOR_BUILDING_TEXT]Forteresse d'Alamut[COLOR_REVERT] vous permet d'entraîner les puissantes unités [COLOR_UNIT_TEXT]Hashishin[COLOR_REVERT] et donne à toutes les unités produites dans la ville la promotion [COLOR_HIGHLIGHT_TEXT]Fanatique[COLOR_REVERT].</French>
+		<Italian>Questa meraviglia fornisce la promozione Fanatico alle tue unità; inoltre, permette di addestrare l'unità Hashishin</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ALAMUT_PEDIA</Tag>
+		<English>Alamut is a mountain fortress in northern Iran. Its name translates as "Eagle's Nest". This fortress was famous for its libraries and the legendary assassins (Hashishin) trained there. Alamut was destroyed in 1256 by the Mongols.</English>
+		<Italian>Alamut è una montagna-fortezza nel nord dell'Iran. La tradizione del suo nome è "Nido dell'aquila"; questa fortezza era famosa per le sue biblioteche e per i leggendari assassini che vi venivano addestrati. Alamut fu distrutta dai mongoli nel 1256.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HASHISHIN</Tag>
+		<English>Hashishin</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HASHISHIN_STRATEGY</Tag>
+		<English>Hashishin are powerful medieval assassins.</English>
+		<French>les Hashishin sont de puissants assassins du Moyen-Age.</French>
+		<Italian>Gli Hashishin sono potenti assassini medievali</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HASHISHIN_PEDIA</Tag>
+		<English>The Hashishin were the legendary assassins of the 12th-century Middle East. Supposedly conditioned through religion and drugs into fanatics, these assassins would follow any order, no matter how extreme.</English>
+		<Italian>Gli Hashishin erano leggendari assassini presenti nel Medioriente durante il 12° secolo. Condizionati per mezzo di droghe e fanatismo religioso, questi assassini seguivano ogni ordine, anche quelli più folli.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ALCATRAZ</Tag>
+		<English>Alcatraz</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ALCATRAZ_STRATEGY</Tag>
+		<English>Build Alcatraz to reduce the crime rate across your entire civilization.</English>
+		<French>Construire [COLOR_BUILDING_TEXT]Alcatraz[COLOR_REVERT] vous permettra de réduire la criminalité au sein de toute votre civilisation.</French>
+		<Italian>Costruisci la prigione di ALcatraz per ridurre il crimine in tutte la tua civiltà.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ALCATRAZ_PEDIA</Tag>
+		<English>Alcatraz Island is an island in San Francisco Bay. "Alcatraz" means "pelican" in archaic Spanish. The island, originally controlled by the Spanish, became American property after the Mexican-American War. The island was turned into a fortress in the 1850's, and was used to house Civil War prisoners.After the Civil War, it became a military prison. It was used to house prisoners following the 1906 San Francisco earthquake and conscientious objectors during World War I.In 1933, Alcatraz was transferred to the United States Department of Justice and became one of the highest-security prisons in the nation. During its 29 years of operation, no prisoner ever made a verified successful escape. Three men who disappeared in 1962 may have escaped, swimming the mile and a half to the coast.The prison was closed in 1963 due its expense and state of erosion. Following its closure, Alcatraz Island was the subject of an occupation by Native Americans to protest the United States government's policies towards Native Americans.</English>
+		<Italian>Alcatraz è un'isola nella baia di San Francisco; Alcatraz significa pellicano in spagnolo arcaico. L'isola, controllata originalmente dagli spagnoli, divenne proprietà degli americani dopo la guerra tra Messico e Stati Uniti. L'isola fu trasformata in una fortezza negli anni 5o dell'Otticento, e venne usata per trattenere prigionieri della Guerra Civile.Dopo la Guerra Civile, divenne una prigione militare. Fu usata per trattenere i prigionieri dopo il terremoto di San Francisco del 1906 e gli obiettori di coscienza durante la Prima Guerra Mondiale.Nel 1933 Alcatraz divenne proprietà del Dipartimento di giustizia degli Stati Uniti, diventando una delle prigioni di massima sicurezza nella nazione. Durante i 29 anni in cui rimase aperta, nessun prigioniero riuscì a fuggire con successo. Tre uomini scomparvero nel 1962, e potrebbero aver raggiunto la costa a nuoto.La prigione fu chiusa nel 1963, a causa delle spese e dello stato di erosione. Dopo la chiusura, l'isola fu occupata dai Nativi Americani, per protestare contro le politiche del governo nei confronti dei nativi.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOOD_ALCATRAZ</Tag>
+		<English>Safety (Alcatraz)</English>
+		<French>Sécurité (Alcatraz)</French>
+		<Italian>Sicurezza (Alcatraz)</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOOD_ALCATRAZ_STRATEGY</Tag>
+		<English>Safety (Alcatraz) is provided to all your cities once you build Alcatraz. It reduces crime in all your cities.</English>
+		<French>Sécurité (Alcatraz) est construit automatiquement par la Merveille. Réduit la criminalité.</French>
+		<Italian>Questo "edificio" è costruito automaticamente in tutte le tue città quando costruisci Alcatraz. Riduce il crimine in tutte le tue città.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOOD_ALCATRAZ_PEDIA</Tag>
+		<English>Following the building of Alcatraz Prison, the worst criminals from all across the nation were shipped there.</English>
+		<Italian>Dopo la costruzione della Prigione di Alcatraz, i peggiori criminali della nazione venivano spediti qui.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_APPIAN_WAY</Tag>
+		<English>Via Appia</English>
+		<French>La Via Appia</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_APPIAN_WAY_STRATEGY</Tag>
+		<English>Build Via Appia to build a Paved Road network that connects all your cities on the same continent and increase your trade income from then on.</English>
+		<French>Construire la [COLOR_BUILDING_TEXT]Via Appia[COLOR_REVERT], c'est construire automatiquement un réseau de routes pavées qui connectent entre-elles toutes les villes de votre continent, améliorant ainsi le commerce.</French>
+		<Italian>La Via Appia connette tutte le città sullo stesso continente con una rete di strade pavimentate; inoltre, aumenta i tuoi ricavi.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_APPIAN_WAY_PEDIA</Tag>
+		<English>Via Appia (normally translated into English as Appian Way) was one of the most important roads of the Roman Republic. Built in 312 BC by the censor Appius Claudius Caecus, it linked Rome to the cities and towns of southeast Italy. Via Appia was known as the "Queen of Roads".</English>
+		<Italian>La Via Appia era una delle strade più importanti della Repubblica Romana. Costruita nel 312 a.C. dal censore Appio Claudio Caecus, collegava Roma alle città e ai paesi dell'Italia meridionale. Era conosciuta come la "Regina delle strade".</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HELP_APPIAN_WAY</Tag>
+		<English>[ICON_BULLET]Builds Paved Roads to All Your Cities on Same Continent on Completion</English>
+		<French>[ICON_BULLET]Construit automatiquement des routes pavées entre toutes vos villes du Continent.</French>
+		<Italian>[ICON_BULLET]Quando completata, costruisce automaticamente strade pavimentatea tra tutte le città del continente.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_APPIAN_BUILT</Tag>
+		<English>The [COLOR_UNIT_TEXT]Via Appia[COLOR_REVERT] connects your cities.</English>
+		<French>La [COLOR_UNIT_TEXT]Via Appia[COLOR_REVERT] connecte entre-elles toutes vos Villes.</French>
+		<Italian>La [COLOR_UNIT_TEXT]Via Appia[COLOR_REVERT] ha collegato tutte le tue città.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BAKER_STREET</Tag>
+		<English>221B Baker Street</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BAKER_STREET_STRATEGY</Tag>
+		<English>221B Baker Street provides a massive crime reduction in one city and helps make your Espionage units more effective.</English>
+		<French>Le 221B Baker Street procure une réduction importante de la criminalité de la ville, et améliore l'expérience des unités d'espionnages.</French>
+		<Italian>Questa meraviglia fornisce una grande riduzione del crimine in una città, oltre a rendere le tue unità da spionaggio più efficaci.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BAKER_STREET_PEDIA</Tag>
+		<English>221B Baker Street is the London address of the world's most famous fictional detective, Sherlock Holmes. In four novels and 56 short stories, Sir Arthur Conan Doyle created the archetype of the genius detective. The Sherlock Holmes stories feature the detective catching murderers, thieves, criminal masterminds, and international spies from across Europe. 221B Baker Street itself was a suite of rooms in a Georgian terrace. At the time of the stories' creation, Baker Street house numbers only went up to 100. Baker Street was later extended, and the number was eventually used for the Sherlock Holmes Museum, somewhat out of sequence with the remaining street numbers on its block but designed in accordance with the description of the rooms in the books.</English>
+		<Italian>221B Baker Street è l'indirizzo della casa del detective più famoso di Londra, Sherlock Holmes. In 4 romanzi e 56 storie corte, Sir Arthur Conan Doyle creò l'archetipo del detective genio. Le storie di Sherlock Holmes rappresentano il detective che insegue assassini, ladri, menti criminali e spie internazionali attraverso tutta l'Europa. 221B Baker Street era una serie di stanze in una casa dell'epoca Georgiana. Al tempo della creazione delle storie, in Baker Street i numeri civici arrivavano solo fino al 100. Baker Street fu in seguito espansa, e il numero venne usato per il museo di Sherlock Holmes, senza rispettare la sequenza di numeri del proprio blocco, ma in accordo con la descrizione fatta nei libri.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BANK_OF_CHINA</Tag>
+		<English>Bank of China Tower</English>
+		<French>La Tour de la Banque de Chine</French>
+		<Italian>Torre della Banca della Cina</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BANK_OF_CHINA_STRATEGY</Tag>
+		<English>The Bank of China Tower increases the income from your Banks and decreases the maintenance of your Corporations.</English>
+		<French>La [COLOR_BUILDING_TEXT]Tour de la Banque de Chine[COLOR_REVERT] améliore les revenus de vos [COLOR_BUILDING_TEXT]Banques[COLOR_REVERT], et réduit le coût d'entretien de vos corporations.</French>
+		<Italian>Questa torre incrementa i profitti delle tue banche e diminuisce i costi di mantenimento delle corporazioni.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BANK_OF_CHINA_PEDIA</Tag>
+		<English>The Bank of China Tower is a skyscraper in Hong Kong that houses the Bank of China (Hong Kong) Limited. It was built in 1989 and was the tallest building in Hong Kong at the time of building. The tower was also the first skyscraper outside the United States that was over 1,000 feet tall. The tower's appearance has been criticized for ignoring the principles of feng shui in its construction. From certain angles, the building is said to resemble a meat cleaver.</English>
+		<Italian>La Torre della Banca della Cina è un grattacielo di Hong Kong, sede della Banca della Cina. Fu csotruita nel 1989 ed era all'epoca l'edificio più alto di tutta Hong Kong. La torre era anche il primo grattacielo al di fuori degli Stati Uniti con un'altezza superiore ai 1000 piedi. L'aspetto della torre è stato criticato per aver ignorato i principi base del Feng Shui. Da certe angolazioni, l'edificio assomiglia a una mannaia da macellaio.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BAUHAUS</Tag>
+		<English>Bauhaus School</English>
+		<French>L'Ecole 'Bauhaus'</French>
+		<Italian>Scuola Bauhaus</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BAUHAUS_STRATEGY</Tag>
+		<English>Build the Bauhaus School to get additional production from your Artists and culture from your Engineers.</English>
+		<French>L'[COLOR_BUILDING_TEXT]Ecole 'Bauhaus'[COLOR_REVERT] procure un bonus de production à tous vos spécialistes Artistes, et un bonus de culture à tous vos spécialistes ingénieurs.</French>
+		<Italian>Costruisci la Bauhaus per fornire produzione ai tuoi artisti e cultura ai tuoi ingegneri.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BAUHAUS_PEDIA</Tag>
+		<English>The Bauhaus School was organized in Weimar, Germany, in 1919. Meaning "School of Building", the school combined fine arts and crafts. The school would eventually close in 1933 under pressure from the Nazi regime.</English>
+		<Italian>La Scuola Bauhaus fu costruita a Weimar, in Germania, nel 1919. Significando "Scuola di costruzione" la scuola combinava arte e stabilità. La scuola venne chiusa nel 1933 sotto le pressioni ricevute dal regime nazista.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BAYREUTH</Tag>
+		<English>Bayreuth Festspielhaus</English>
+		<French>Le Palais des festivals de Bayreuth</French>
+		<Italian>Gran Palazzo dei festival di Bayreuth</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BAYREUTH_STRATEGY</Tag>
+		<English>Build the Bayreuth Festspielhaus to increase the culture production of your Achievements and Epics.</English>
+		<French>Le [COLOR_BUILDING_TEXT]Palais des festivals de Bayreuth[COLOR_REVERT] améliore la culture de vos Accomplissements et de vos Epopées.</French>
+		<Italian>Costruisci questa meraviglia per incrementare la cultura dei tuoi Obiettivi e dai tuoi Poemi Epici.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BAYREUTH_PEDIA</Tag>
+		<English>The Bayreuth Festspielhaus is an opera house in Bayreuth, Germany. The opera house is dedicated entirely to the performances of the works of Richard Wagner. The opera house is known for its unusual design in that the orchestra pit is completely hidden from the singers and the audience, making it very difficult on the conductor and orchestra. The Festspielhaus still serves as the venue for the annual Bayreuth Festival of Wagner's works.</English>
+		<Italian>Il Palazzo dei festival di Bayreuth è unteatro dell'opera situato in Germania. Il teatro è dedicato interamente alla rappresentazione dei lavori di Richard Wagner. Il teatro è famoso per il suo design non comune: infatti la fossa dell'orchestra è completamente nascosta rispetto ai cantanti e alla platea, rendendo molto difficile al direttore dirigere l'orchestra. Il teatro viene anche usato per il festival annuale di Bayreuth dei lavori di Wagner.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BERLIN_WALL</Tag>
+		<English>Berlin Wall</English>
+		<French>Le Mur de Berlin</French>
+		<Italian>Muro di Berlino</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BERLIN_WALL_STRATEGY</Tag>
+		<English>Build the Berlin Wall to put a temporary halt to revolts in your cities, but be careful - if you don't solve your instability problems, the Wall will only make things worse in the long run!.</English>
+		<French>Le [COLOR_BUILDING_TEXT]Mur de Berlin[COLOR_REVERT] met un terme aux révoltes de vos villes. Mais attention, si vous ne résolvez pas les problèmes d'instabilité, le Mur ne fera que retarder l'échéance fatidique, et ce sera pire!</French>
+		<Italian>Il Muro di Berlino serve come soluzione temporanea contro le rivolte nelle tue città. Stai attento, perchè se non risolvi i tuoi problemi di instabilità, il Muro peggiorerà solo le cose a lungo andare!</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BERLIN_WALL_PEDIA</Tag>
+		<English>The Berlin Wall was built in 1961 to stop emigration from East Germany to West Germany. In the aftermath of World War II, Germany was divided into four sections, one for each occupying power. The Soviet section was organized into the Communist state of East Germany. Many people tried to flee East Germany for the freer West Germany, and the Wall was built to stop this. The Wall was torn down in 1990, as West and East Germany reunified into one nation.</English>
+		<French>Le mur de Berlin (en allemand Berliner Mauer), est érigé en plein Berlin à partir de la nuit du 12 au 13 août 1961 par la République démocratique allemande (RDA), qui tente ainsi de mettre fin à l'exode croissant de ses habitants vers la République fédérale d'Allemagne (RFA). Le mur sépare physiquement la ville en Berlin-Est et Berlin-Ouest pendant plus de vingt-huit ans, et constitue le symbole le plus marquant d'une Europe divisée par le Rideau de fer.</French>
+		<Italian>Il Muro di Berlino fu costruito nel 1961 per fermare l'emigrazione dalla Germania Est ala Germania ovest. Dopo la Seconda guerra mondiale, la Germania era divisa in quattro settori, uno per goni potenza occupante. Il settore sovietico fu trasformato nello stato comunista della Germania Est. Molte persone cercavano di scappare dalla Germania est alla germania Ovest, ed il muro fu costruito per fermare questo fenomeno. Il muro fu abbattuto nel 1990, qunado la Germania venne riunificata.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BLARNEY</Tag>
+		<English>Blarney Castle</English>
+		<French>Le Château Blarney</French>
+		<Italian>Castello di Blarney</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BLARNEY_STRATEGY</Tag>
+		<English>Build Blarney Castle for free Deception I promotions for your Spies. It also gradually improves your relations with foreign leaders.</English>
+		<French>Le [COLOR_BUILDING_TEXT]Château Blarney[COLOR_REVERT] donne à vos espions la promotion gratuite [COLOR_HIGHLIGHT_TEXT]Imposture I[COLOR_REVERT]. Il améliore également les relations avec les autres nations.</French>
+		<Italian>Questa meraviglia fornisce la promozione gratuita Inganno I alle tue spie. Inoltre, migliora le tue relazioni con i leader stranieri.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BLARNEY_PEDIA</Tag>
+		<English>Blarney Castle is a castle in County Cork of Ireland. The original fortifications on this site date from before 1200, and stone buildings were built there from 1210 on. In 1446, the famous Blarney Stone was set into a tower of the castle. Kissing the Blarney Stone (done while leaning upside down over the edge of the castle walls) is supposed to grant great skill of speech. To this day, flattering, if not necessarily true, speech is known as "blarney".</English>
+		<Italian>Il castello di Blarney è un castello nella contea di Cork, in Irlanda. Le fortificazioni originali di questo sito sono precedenti al 1200, ed edifici in pietra vi furono costruiti dal 1210. Nel 1446 la pietra di Blarny fu trasformata nella torre di un castello. Baciare la pietra di Blarney (un gesto possibile sporgendosi verso il basso dalla cima del castello) è un gesto che secondo le credenze popolari dona ottime doti oratorie. Al giorno d'oggi, in inglese un discorso non necessariamente vero è detto "blarney".</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HELP_BLARNEY</Tag>
+		<English>[ICON_BULLET]Gradually Improves Relations with Foreign Leaders</English>
+		<French>[ICON_BULLET]Améliore les relations avec les autres Leaders</French>
+		<Italian>[ICON_BULLET]Migliora gradualmente le relazioni con i leader stranieri</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_BLARNEYVISIT</Tag>
+		<English>The %s4_civ_adjective leader is paying a state visit to the %s1_civ_adjective capital.</English>
+		<French>Le Leader %s4_civ_adjective prévoit une visite d'état dans la capitale %s1_civ_adjective.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_BLARNEYVISIT</Tag>
+		<English>Charmed by the eloquence granted to you by the Blarney Stone, the %s1_civ_adjective leader is paying a state visit to your capital.</English>
+		<French>Charmé par l'éloquence que vous apporte les pierres de Blarney, le leader %s1_civ_adjective prévoit une visite d'état dans votre Capitale.</French>
+		<Italian>Ammirato dall'eloquenza che la pietra di Blarney ti ha donato, il leader %s1_civ_adjective sta facendo una visita di stato alla tua capitale.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_BLARNEYVISIT_1</Tag>
+		<English>I hope this will build friendship between our two civilizations.</English>
+		<French>J'espère que cela va sceller l'amitié entre nos deux civilisations.</French>
+		<Italian>Spero che questo gesto sia la base di una grande amicizia tra le nostre due civiltà.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_BLARNEYVISIT_OTHER_1</Tag>
+		<English>You have been invited to pay a state visit to the %s1_civ_adjective capital.</English>
+		<French>You avez été invité à faire une visite d'état dans la Capitale %s1_civ_adjective.</French>
+		<Italian>Sei stato invitato ad una visita di stato nella capitale %s1_civ_adjective.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_BLARNEYVISIT_2</Tag>
+		<English>This visit made us closer.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_BLARNEYVISIT_OTHER_2</Tag>
+		<English>We are now bit closer after this visit.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BURNINGMAN</Tag>
+		<English>Burning Man</English>
+		<French>Le Festival Burning Man</French>
+		<Italian>Festival Burning Man</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BURNINGMAN_STRATEGY</Tag>
+		<English>Burning Man grants you Happiness from all your Culture wonders.</English>
+		<French>Ce Festival vous procure du Bonheur de toutes les Merveilles culturelles.</French>
+		<Italian>Burning Man fornisce felicità da tutte le Meraviglie che forniscono una Cultura</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BURNINGMAN_PEDIA</Tag>
+		<English>Burning Man is a festival held every year since 1991 in the Black Rock Desert of northern Nevada. The festival is devoted to "community, art, self-expression, and self-reliance." The climax of the event is the ritual burning of a large wooden effigy, from which the festival takes its name.</English>
+		<French>Le festival Burning Man est une grande rencontre artistique et bariolée qui se tient chaque année dans le désert de Black Rock au Nevada. Elle a lieu la dernière semaine d'août, le premier lundi de septembre étant férié aux États-Unis (Labor Day). En anglais, burning man signifie homme qui brule (burn=bruler et le suffixe -ing est l'action). C'est Larry Harvey qui a proposé en 1986 la crémation festive d'un mannequin géant sur la plage de Baker Beach, qui fait face au Golden Gate Park à San Francisco. En 1990, l'événement est déplacé dans le Nevada pour permettre l'accueil, dans une sorte de ville temporaire en plein désert, d'installations (Art Camps) et de participants (Burners) de plus en plus nombreux.: Source: wikipédia</French>
+		<Italian>Burning Man è un festival organizzato ogni anno dal 1991 nel deserto Black Rock, nella Nevada settentrionale. Il festival è dedicato a "comunità, arte, espressione personale e fiduia in sè stessi". Il momento più importante del festival è il rogo rituale di una grande statua in legno, dalla quale il festival prende il proprio nome.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CABARET_VOLTAIRE</Tag>
+		<English>Cabaret Voltaire</English>
+		<French>Le Cabaret Voltaire</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CABARET_VOLTAIRE_STRATEGY</Tag>
+		<English>Build Cabaret Voltaire for 2 free Artist specialists, at the cost of some instability in your cities.</English>
+		<French>Le [COLOR_BUILDING_TEXT]Cabaret Voltaire[COLOR_REVERT] fait apparaître 2 Spécialistes Artistes, mais peut causer de l'instabilité dans vos villes.</French>
+		<Italian>Questa meraviglia fornisce 2 specialisti Artisti gratuiti, al costo di una piccola quantità di instabilità nelle tue città.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CABARET_VOLTAIRE_PEDIA</Tag>
+		<English>Cabaret Voltaire was a nightclub in Zurich that opened in 1916. It quickly became the center of the nascent Dadaist movement. The movement spread from there to Germany and France before finally centralizing in Paris. In September 2004, the Cabaret was re-opened by neo-Dadaists.</English>
+		<Italian>Cabaret Voltaire era un nightclub di Zurigo, aperto nel 1916. Diventò presto il movimento dadaista. Il movimento si diffuse anche in Germania e Francia, prima di stabilire la propria sede a Parigi. Il cabaret fu riaperto nel settembre 2004 dai neo-dadaisti.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CAHOKIA</Tag>
+		<English>Cahokia Mounds</English>
+		<French>Les Tertres Cahokia</French>
+		<Italian>Tumuli di Cahokia</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CAHOKIA_STRATEGY</Tag>
+		<English>Build Cahokia Mounds to increase the production speed and Culture output of your Tumuluses.</English>
+		<French>Accélère la construction des Tumulus, puis améliore la culture de ces bâtiments.</French>
+		<Italian>Costruisci i Tumuli di Cahokia per incrementare le produzione e la cultura dei tuoi tumuli.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CAHOKIA_PEDIA</Tag>
+		<English>The Cahokia Mounds are the remains of an ancient pre-Columbian civilization in what is now southwestern Illinois in the United States. The site was settled around 600 CE and originally contained 120 earthern mounds, 80 of which still stand today. It is estimated that 55 million cubic feet of earth were moved to create the mounds. The surrounding city is estimated to have contained as many as 40,000 people, which would not be surpassed by any European settlement until the American Revolution. The mounds included burial sites and a workshop for forging copper. After 1300 CE, the site was abandoned due to environmental exhaustion.</English>
+		<Italian>I tumui di Cahokia sono l'unica traccia di un'antica civiltà pre-colombiana stabilitasi nell'area corrispondente all'attuale sud-ovest dell'Illinois, negli Stati Uniti. Il sito vevnne colonizzato intorno al 600 d.C. e conteneva originalmente 120 tumuli interrati, 80 dei quali esistono ancora oggi. Si stima che siano stati spostati 55 milioni di metri cubici di terra per creare i tumuli. La città poteva contenere, secondo le stime, fino a 40000 abitanti, una cifra che nessun insediamento europeo avrebbe superato prima della Rivoluzione Americana. I tumuli includevano siti di sepoltura e botteghe per la forgiatura del rame. Il sito venne abbandonato dopo il 1300 d.C. a causa dell'esaurimento delle risorse ambientali.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CANNES_FF</Tag>
+		<English>Cannes Film Festival</English>
+		<French>Le Festival du Film de Cannes</French>
+		<Italian>Festival del cinema di Cannes</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CANNES_FF_STRATEGY</Tag>
+		<English>Build Cannes Film Festival to increase the cultural output of Movie Theatres and Broadcast Towers.</English>
+		<French>Construisez le [COLOR_BUILDING_TEXT]Festival du Film de Cannes[COLOR_REVERT] pour améliorer l'influence culturelle des [COLOR_BUILDING_TEXT]Cinémas[COLOR_REVERT] et des [COLOR_BUILDING_TEXT]Tours de radiodiffusion[COLOR_REVERT].</French>
+		<Italian>Questa meraviglia aumenta la cultura dei Cinema e dei Ripetitori</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CANNES_FF_PEDIA</Tag>
+		<English>The Cannes Film Festival is an international film festival held every year since 1946 in the town of Cannes along the French Riviera. Tens of thousands of film professionals attend the festival every year. The most prestigious award given out is the "Palme d'Or".</English>
+		<Italian>Il festival del cinema di Cannes è un festival cinematografico tenuto ogni anno dal 1946 nella città di Cannes, sulla Riviera francese. Decine di migliaia di professionisti del cinema partecipano al festival ogni anno; il premio più prestigioso è la "Palma d'oro".</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_COIT_TOWER</Tag>
+		<English>Coit Tower</English>
+		<French>La Tour Coit</French>
+		<Italian>Torre Coit</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_COIT_TOWER_STRATEGY</Tag>
+		<English>Build Coit Tower to increase the happiness and culture production of your firefighting buildings.</English>
+		<French>Construisez [COLOR_BUILDING_TEXT]la Tour Coit[COLOR_REVERT] pour générer du bonheur et de la culture des bâtiments associés aux pompiers.</French>
+		<Italian>Costruisci questa meraviglia per ottenere più felicità dagli edifici dei pompieri.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_COIT_TOWER_PEDIA</Tag>
+		<English>Coit Tower is a monument on Telegraph Hill in San Francisco, California. The tower is named after Lillie Hitchcock Coit, an eccentric woman who adored the city's fire brigades. Upon her death, she left a third of her estate to beautify San Francisco, and one of the results was the Coit Tower. The murals decorating the tower caused some controversy as they included various left-wing elements, which were not always popular with the establishment.</English>
+		<Italian>La Torre Coit è un monumnto di Telegraph Hill a San Francisco, in California. La torre prende il nome da Lillie Hitchcock Coit, una donna eccentrica che adorava i vigli del fuoco della città. Dopo la sua morte, lasciò un terzo del proprio matrimonio per abbellire San Francisco, e uno dei risultati fu la Torre Coit. I murali che decorano la torre hanno causato alcune controversie, dato che includono vari elemnti di ispirazione di sinistra, che non erano sempre molto popolari.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CRYSTAL_PALACE</Tag>
+		<English>Crystal Palace</English>
+		<French>Le Palais de Cristal</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CRYSTAL_PALACE_STRATEGY</Tag>
+		<English>Build the Crystal Palace to start a Golden Age and boost your cities' culture from Specialists and Cultures.</English>
+		<French>Construisez le [COLOR_BUILDING_TEXT]Palais de Cristal[COLOR_REVERT], son achèvement marquera le début d'un Age d'Or. Il améliorera également la culture de votre ville, notamment celle provenant des spécialistes.</French>
+		<Italian>Costruisci il Crystal Palace per iniziare un'Età dell'Oro e aumentare la cultura di spicialisti e Culture.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CRYSTAL_PALACE_PEDIA</Tag>
+		<English>The Crystal Palace was the central building of the Great Exhibition of 1851. Held in London, the Exhibition was a display of industrial progress. The Palace itself was 1848 feet long, 408 feet deep, and 66 feet high and used over one million square feet of glass. Its standardized construction allowed the building to be taken down and rebuilt in another location after the Exhibition ended.</English>
+		<Italian>Il Crystal Palace era l'edificio principale della Grande Esposizione del 1851. Tenutasi a Londra, l'Esposizione era un modo per dimostrare il progresso industriale dell'Inghilterra. Il Palazzo era lungo 1848 piedi e alto 66 piedi, coperto da oltre un milione di piedi quadrati di vetro. La sua struttura modulare permise di disassemblare e ricostruire in un altro posto l'edificio, dopo la fine dell'Esposizione.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CONGVIENNA</Tag>
+		<English>Congress of Vienna</English>
+		<French>Le Congrès de Vienne</French>
+		<Italian>Congresso di Vienna</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CONGVIENNA_STRATEGY</Tag>
+		<English>The Congress of Vienna triggers Congress of Vienna elections. If you build it, it guarantees that you will be a candidate. If you are at war with the owner of the Congress, you will be declared outlaw - every civilization may declare war on you!</English>
+		<French>Le [COLOR_BUILDING_TEXT]Congrès de Vienne[COLOR_REVERT] déclenche des élections, dont vous pourrez être candidat. Attention, déclarer la guerre contre le Porte-parole du congrèes peut amener tous les autres joueurs à vous déclarer la guerre!</French>
+		<Italian>Il Congresso di Vienna attiva le elezioni del Congresso di Vienna. Se lo costruisci, tu sarai sicuramente un candidato. Se sei in guerra con il proprietario del Congresso verrai dichiarato fuorilegge e tutte le civiltà ti dichiareranno guerra.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CONGVIENNA_PEDIA</Tag>
+		<English>The Congress of Vienna was assembled in 1814 after the first defeat of Napoleon. Ambassadors from across Europe assembled to settle the issues arising from the French Revolutionary and Napoleonic Wars and the end of the Holy Roman Empire. The four great powers that formed the core of the coalition that defeated Napoleon were present: Austria (represented by Prince Metternich), Prussia (represented by Prince Karl August von Hardenburg), Russia (nominally represented by Count Karl Robert Nesselrode, although represented in fact by Tsar Alexander I), and the United Kingdom (represented first by Foreign Secretary Viscount Castlereagh, then the Duke of Wellington, and finally the Earl of Clancarty after Wellington left to battle Napoleon during his return). France was also represented by Charles Maurice de Talleyrand-Perigord, and virtually every state in Europe sent delegations. The Congress of Vienna virtually redrew the map of Europe, changing the borders of many nations, and is credited with preventing a widespread European war until the First World War in 1914.</English>
+		<French>Le congrès de Vienne est une conférence des représentants diplomatiques des grandes puissances européennes qui eut lieu à Vienne du 1er novembre 1814 au 9 juin 18151. Les pays vainqueurs de Napoléon Ier ainsi que les autres États européens se réunissent pour rédiger et signer les conditions de la paix et donc déterminer les frontières et tenter d'établir un nouvel ordre pacifique. Le congrès de Vienne permet également la discussion sur la libre circulation navale, l'abolition de la traite des Noirs (et non pas de l'esclavage), qui persiste cependant, et la mise en avant de la neutralité de la Suisse et de la neutralité de la Savoie.</French>
+		<Italian>Il Congresso di Vienna si riunì per a prima volta nel 1814, dopo la prima sconfitta di Napoleone. Ambasciatori da tutta Europa si riunirono per risolvere i problemi causati dalla Rivoluzione Francese, dalle Guerre Nepoleoniche e dalla fine del Sacro Romano Impero. Le 4 grandi potenze che componevano la base della coalizione che aveva sconfitto napoleone erano presenti: Austria (rappresentata dal principe Metternich), Prussia (rappresentata dal Principe Karl August von Hardenburg), Russia (rappresentata nominalmente dal Conte Karl Robert Nesselrode, anche se effettivamente era rappresentata dallo zar Alessandro I) e Regno Unito (rappresentato dal ministro degli esteri Visconte Castlereagh, poi dal Duca di Wellington e infine da Earl of Lancarty, quando Wellington tornò a combattere contro Napoleone). Anche la Francia era rappresentata da Charles-Maurice de Talleyrand-Perigord, ed ogni stato europeo aveva la propria delegazione. Il conresso di Vienna ridisegnò la mappa dell'Europa cambiando i confini di molte nazioni; ebbe il merito di impedire una guerra su scala europea fino allo scoppio della Prima Guerra Mondiale.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_CHAIR_ELECTION</Tag>
+		<English>As Chair of the Congress of Vienna, you can choose a Congress Act to put forward for a global vote. (You have %d1_MyNum Votes.)</English>
+		<French>En tant que Porte parole du Congrès de Vienne, vous pouvez choisir un Acte du Congrès, qui sera soumis au vote (Vous avez %d1_MyNum Votes.)</French>
+		<Italian>Come rappresentante del Congresso di Vienna, puoi scegliere un Atto da sottoporre a votazione. Tu hai (%d1_MyNum Voti).</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_CONGVIENNA_CHAIR</Tag>
+		<English>Congress of Vienna Chair Election (Winner Proposes Congress Acts)</English>
+		<French>Election du Porte parole du Congrès de Vienne (le Vainqueur propose un Acte du Congrès)</French>
+		<Italian>Elezione del Rappresentante del Congresso (il vincitore propone gli Atti al Congresso)</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_CONGVIENNA_OPEN_BORDERS</Tag>
+		<English>Open Borders</English>
+		<French>Ouverture des Frontières</French>
+		<Italian>Apertura delle frontiere</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_ELECTION_CONGVIENNA_OPEN_BORDERS</Tag>
+		<English>Sign open borders with all members (Requires %d1_ReqNum of %d2_TotNum Total Votes)</English>
+		<French>Signe un accord d'ouverture des Frontières avec tous les membres (Requiert %d1_ReqNum sur %d2_TotNum des Votes)</French>
+		<Italian>Sigla un accordo di Apertura delle frontiere tra tutti i membri (Richiede %d1_ReqNum su %d2_TotNum di voti)</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_CONGVIENNA_DEFENSIVE_PACT</Tag>
+		<English>Sign a Defensive Pact</English>
+		<French>Signer un Pacte de Défense</French>
+		<Italian>Sigla un Patto difensivo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_ELECTION_CONGVIENNA_DEFENSIVE_PACT</Tag>
+		<English>Sign defensive pact with all members (Requires %d1_ReqNum of %d2_TotNum Total Votes)</English>
+		<French>Signe un Pacte de Défense avec tous les membres (Requiert %d1_ReqNum sur %d2_TotNum des Votes)</French>
+		<Italian>Sigla un Patto difensivo tra tutti i membri (Richiede %d1_ReqNum su %d2_TotNum di voti)</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_CONGVIENNA_FORCE_PEACE</Tag>
+		<English>Stop the fighting among our friends at the Congress.</English>
+		<French>Fin des Combats entre les membres du Congrès.</French>
+		<Italian>Ferma la guerra tra i membri del Congresso</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_ELECTION_CONGVIENNA_FORCE_PEACE</Tag>
+		<English>Stop the war against %s1_player (Requires %d2_ReqNum of %d3_TotNum Total Votes)</English>
+		<French>Fin de la Guerre contre %s1_player (Requiert %d2_ReqNum sur %d3_TotNum des Votes)</French>
+		<Italian>Ferma la guerra contro Richiede %s1_player (Richiede %d2_ReqNum su %d3_TotNum voti)</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_CONGVIENNA_FORCE_NO_TRADE</Tag>
+		<English>Stop trading with the outlaws.</English>
+		<French>Fin des échanges avec les hors-la-loi</French>
+		<Italian>Embargo commerciale contro i fuorilegge</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_ELECTION_CONGVIENNA_FORCE_NO_TRADE</Tag>
+		<English>Stop trading with %s1_player (Requires %d2_ReqNum of %d3_TotNum Total Votes)</English>
+		<French>Fin des échanges avec %s1_player (Requiert %d2_ReqNum sur %d3_TotNum des Votes)</French>
+		<Italian>Smetti di commerciare con %s1_player (Richiede %d2_ReqNum su %d3_TotNum voti)</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_CONGVIENNA_FORCE_WAR</Tag>
+		<English>Declare war on the outlaws.</English>
+		<French>Déclaration de Guerre aux hors-la-loi</French>
+		<Italian>Dichiara guerra ai fuorilegge</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_ELECTION_CONGVIENNA_FORCE_WAR</Tag>
+		<English>Declare war on %s1_player (Requires %d2_ReqNum of %d3_TotNum Total Votes)</English>
+		<French>Déclarer la Guerre à %s1_player (Requiert %d2_ReqNum sur %d3_TotNum des Votes)</French>
+		<Italian>Dichiara guerra a %s1_player (Richiede %d2_ReqNum su %d3_TotNum voti</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_CONGVIENNA_ASSIGN_CITY</Tag>
+		<English>Return a city to their rightful owner.</English>
+		<French>Rendre une Ville à son propriétaire légitime</French>
+		<Italian>Restituisci una città al legittimo proprietario</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_ELECTION_CONGVIENNA_ASSIGN_CITY</Tag>
+		<English>Assign the %s1_civ_adjective city of %s2_city to %s3_player (Requires %d4_ReqNum of %d5_TotNum Total Votes)</English>
+		<French>Assigner la ville %s1_civ_adjective de %s2_city à %s3_player (Requiert %d4_ReqNum sur %d5_TotNum des Votes)</French>
+		<Italian>Assegna la città %s1_civ_adjective di %s2_city a %s3_player (Richiede %d4_ReqNum su %d5_TotNum voti)</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DINO_PARK</Tag>
+		<English>Dinosaur Park</English>
+		<French>Le Parc de Dinosaures</French>
+		<Italian>Parco dei Dinosauri</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DINO_PARK_STRATEGY</Tag>
+		<English>Build Dinosaur Park to boost your civilization's happiness. It also gives a bonus in happiness and science to your Paleontology Labs.</English>
+		<French>Construire le [COLOR_BUILDING_TEXT]Parc de Dinosaures[COLOR_REVERT] procure un bonus de bonheur. Il donne également un bonus pour tous les [COLOR_BUILDING_TEXT]Laboratoires de Paléontologie[COLOR_REVERT].</French>
+		<Italian>Costruuisci il Parco dei dinosauri per aumentare la felicità nella tua civiltà. Fornisce anche bonus alla ricerca e alla felicità del tuo Laboratorio di paleontologia.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DINO_PARK_PEDIA</Tag>
+		<English>The idea of cloning dinosaurs has a storied history in fiction. Unfortunately, DNA is not stable on the geological time scale and is impossible to obtain short of time travel. However, for a civilization powerful enough to travel in time, creating such a park is not out of the question.</English>
+		<Italian>L'idea di clonare i dinosauri ha una lunga storia nei racconti di finzione. Sfortunatamente, il DNA è instabile su scale di milioni di anni ed è impossibile da ottenere senza viaggi nel tempo. Comunque, per una civiltà abbastanza avanzata da viaggiare nel tempo, la creazione di un parco del genere è possibile.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_DINO_ATTACK</Tag>
+		<English>An accident has led to an escape of animals at Dinosaur Park!</English>
+		<French>Un Accident a fait s'échapper des animaux du Parc de dinosaures!</French>
+		<Italian>Un incidente ha causato la fuga degli animali al Parco dei dinosauri!</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_DINO_ATTACK</Tag>
+		<English>An accident has led to an escape of animals at Dinosaur Park! Several people are dead and dozens are injured.</English>
+		<French>Un Accident a fait s'échapper des animaux du Parc de dinosaures! Plusieurs personnes sont mortes, et des douzaines sont blessées.</French>
+		<Italian>Un incidente ha causato la fuga degli animali al Parco dei dinosauri! Molte persone sono morte, e ci sono dozzine di feriti.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_DINO_ATTACK_1</Tag>
+		<English>Offer compensation to the affected families and conduct a safety audit of the park.</English>
+		<French>Offrir une compensation aux familles et mener un audit sécurité dans le parc.</French>
+		<Italian>Offri dei risarcimenti alle famiglie delle vittime e conduci un'indagine sulla sicurezza del parco.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_DINO_ATTACK_2</Tag>
+		<English>We don't have the money to spare.</English>
+		<French>Nous n'avons pas d'argent à perdre.</French>
+		<Italian>Non abbiamo soldi da perdere.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DISNEYLAND</Tag>
+		<English>Disneyland</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DISNEYLAND_STRATEGY</Tag>
+		<English>Build Disneyland to eliminate unhappiness in the city you build it in and boost happiness across your civilization.</English>
+		<French>Construire [COLOR_BUILDING_TEXT]Disneyland[COLOR_REVERT] vous permettra d'éliminer tout mécontentement dans la ville qui l'accueille, et donne également un bonus de bonheur pour toutes les villes.</French>
+		<Italian>Costruisci Disneyland per eliminare l'infelicità nella città in cui viene costruito e aumentare la felicità in tutta la tua civiltà.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DISNEYLAND_PEDIA</Tag>
+		<English>Known as "The Happiest Place on Earth", Disneyland was built in 1955 in Anaheim, California. It has hosted more than 600 million visitors since its opening.</English>
+		<Italian>Descritto dome "Il posto più felice della Terra", Disneyland fu costruito nel 1955 a Anaheim in California; dalla sua apertura è stato visitato da più di 600 milioni di visitatori.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_NSLCHAMP</Tag>
+		<English>The hometown hero of %s2_city is going to Disneyland after winning the %s1_civ_adjective National Sports League championship.</English>
+		<Italian>Il campiona nazionale di %s2_city sta andando a Disneyland dopo aver vinto il Campionato nazionale %s1_civ_adjective.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_NSLCHAMP</Tag>
+		<English>The hometown hero of %s2_city has just won the National Sports League championship! What is he going to do next?</English>
+		<Italian>Il campionato nazionale di %s2_city ha appena vinto il Campionato nazionale! Cosa farà ora?</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_NSLCHAMP_1</Tag>
+		<English>He's going to Disneyland!</English>
+		<Italian>Sta andando a Disneyland!</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_NSL_CHAMP_OTHER_1</Tag>
+		<English>Disneyland is experiencing a rise in admissions after a visit from the winner of the %s1_civ_adjective National Sports League championship.</English>
+		<Italian>Disneyland sta avendo un aumneto delle entrate dopo una visita dal vincitore del Campionato nazionale %s1_civ_adjective.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_NSLCHAMP_2</Tag>
+		<English>Disneyland now has higher income.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_NSL_CHAMP_OTHER_2</Tag>
+		<English>Disneyland experienced a rise in admissions after a visit from the winner of the %s1_civ_adjective National Sports League championship.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ELCAMINODESANTIAGO</Tag>
+		<English>El Camino de Santiago</English>
+		<French>Le Chemin de St Jacques de Compostelle</French>
+		<Italian>Cammino di Santiago</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ELCAMINODESANTIAGO_STRATEGY</Tag>
+		<English>El Camino de Santiago acts as a second Shrine for your State Religion, providing +1 [ICON_GOLD] per city with that religion. It cannot be built in your State Religion's Holy City.</English>
+		<French>Le [COLOR_BUILDING_TEXT]Chemin de St Jacques de Compostelle[COLOR_REVERT] se comporte comme un second Lieu Saint pour votre Religion d'Etat, procurant +1 [ICON_GOLD] par ville où la religion est présente. Il ne peut pas être construit dans la Ville Sainte.</French>
+		<Italian>Il Cammino di Santiago funziona come seconda città santa della tua religione si stato, fornendo +1 [ICON_GOLD] per ogni città con quella religione. Non può essere costruito nella Città Santa della tua religione.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ELCAMINODESANTIAGO_PEDIA</Tag>
+		<English>El Camino de Santiago, or "the Way of Saint James", is a major pilgrimage route in northern Spain. For over a thousand years, it has served as one of the most important pilgrimage routes for Christians. The end of the route is the cathedral of Santiago de Compostela, which, according to tradition, holds the remains of Saint James, one of the Twelve Apostles. In certain designated years, when St. James's feast falls on a Sunday, the route can host tens of thousands of pilgrims. The scallop shell is a symbol of the pilgrimage.</English>
+		<Italian>Il Cammino di Santiago, o "La Strada di San Giacomo", è un percorso di pellegrinaggio nel nord della Spagna. Per più di 1000 anni è stato uno dei percorsi di pellegrinaggio più importanti per i Cristiani. La fine del Cammino è la Cattedrale di Santiago de Compostela che, secondo la tradizione, raccoglie le reliquie di San Giacomo, uno dei dodici apostoli. In alcuni anni, quando la festa di San Giacomo cade di domenica, il cammino può ospitare decine di migliaia di pellegrini; uno dei loro simboli è la conchiglia.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ELLIS_ISLAND</Tag>
+		<English>Ellis Island</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ELLIS_ISLAND_STRATEGY</Tag>
+		<English>Ellis Island provides every single Native Culture building. If a Culture has not been built yet, this may give you the chance to build it.</English>
+		<French>l'Ile de Ellis Island peut vous permettre d'adopter une culture, même si vous n'en possédez pas les pré-requis. Si une culture n'a pas encore été construite, ça peut être le moment.</French>
+		<Italian>Ellis Island fornisce tutti gli edifici del tipo Cultura Nativa. Se una cultura non è ancora stata costruita, ora potresti farlo.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ELLIS_ISLAND_PEDIA</Tag>
+		<English>Ellis Island is an island in New York Harbor, properly belonging mostly to New Jersey. Between 1892 and 1954, Ellis Island was the busiest immigration port into the United States. The facility processed 12 million immigrants before its closing in 1954, with a peak year of over 1 million immigrants in 1907 and peak days of over ten thousand immigrants before the Immigration Act of 1924 greatly restricted immigration. Thw numerous immigrants helped turn the United States into the "melting pot" of cultures that it is today, and it is believed that a third of the population can trace its ancestry to immigrants that passed through Ellis Island.</English>
+		<Italian>Ellis Island è un'isola del porto di New York, nello stato del New Jersey. Tra il 1892 e il 1954 Ellis Island era il porto di immigrazione più attivo degli Stati Uniti. L'impianto smistava 12 milioni di immigranti prima di chiudere nel 1954, con un massimo di più di 1 milione di immigranti nel 1907 e giorni con più di 10000 immigranti, prima che l'Atto di Immigrazione del 1924 impedì l'immigrazione. Anche se numerosi immigranti hanno aiutato la formazione del "melting pot" di culture che gli Stati Uniti sono al giorno d'oggi, si crede che più di un terzo della popolazione degli USA discende da immigranti che sono passati da Ellis Island.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ESCORIAL</Tag>
+		<English>El Escorial</English>
+		<Italian>Escorial</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ESCORIAL_PEDIA</Tag>
+		<English>The Royal Seat of San Lorenzo de El Escorial, often shortened to simply El Escorial, is a Spanish royal palace and monastery. El Escorial was built by Philip II of Spain in the 1500's as part of the Counter-Reformation against Protestantism. The palace's design was based on the layout of the Temple of Solomon. It possesses a huge quantity of religious art and relics, and is also the burial place for most of the monarchs of Spain.</English>
+		<Italian>Il Seggio Reale di San Lorenzo de El Escorial, noto come Escorial, è un palazzo reale e monastero spagnolo. L'Escorial fu costruito da Filippo II di Spagna nel Cinquecento come azione della Contro-riforma nei confronti dei protestanti. Il progetto del palazzo era basato sul tempio di Salomone; possiede una grande quantità di arte e reliquie religiose; inoltre, è il luogo di sepoltua di molti sovrani spagnoli.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ESCORIAL_STRATEGY</Tag>
+		<English>Build El Escorial as an additional Palace and produce large quantities of Missionaries.</English>
+		<Italian>Costruisci l'Escorial come un nuovo Palazzo, e per produrre molti missionari.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FIELD_GOLD</Tag>
+		<English>Field of the Cloth of Gold</English>
+		<French>Le Camp du Drap d'Or</French>
+		<Italian>Campo del Drappo d'oro</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FIELD_GOLD_STRATEGY</Tag>
+		<English>Build the Field of the Cloth of Gold for a one-time +3 relations bonus with all leaders you have met.</English>
+		<Italian>Questa meraviglia fornisce un bonus una tantum di +3 alle relazioni con tutti i leader che hai già incontrato.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FIELD_GOLD_PEDIA</Tag>
+		<English>The Field of the Cloth of Gold was a great meeting arranged between King Henry VIII of England and King Francis I of France. The meeting was held in June 1520 near Calais, France. It was an attempt to broker a lasting peace between the two nations. The name came from the huge amounts of cloth of gold used on the tents and costumes of those attending.</English>
+		<Italian>Il Campo del Drappo d'oro fu un grande incontro orchestrato tra re Enrico VIII d'Inghilterra e re Francesco I di Francia. L'incontro fu tenuto nel giugno 1520 vicino a Calais in Francia. Era un tentativo per stabilire una pace tra le due nazioni; il nome deriva dalle grande quantità di drappi d'oro usati sulle tende e sui vestiti dei partecipanti all'incontro.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HELP_FIELD_GOLD</Tag>
+		<English>[ICON_BULLET]+3 relations bonus with all leaders you have met</English>
+		<French>[ICON_BULLET]+3 bonus de relations avec tous les leaders déjà rencontrés</French>
+		<Italian>[ICON_BULLET]Bonus di +3 alle relazioni con tutti i leader già incontrati</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_FIELD_GOLD</Tag>
+		<English>Leaders from around the world are gathering for the Field of the Cloth of Gold.</English>
+		<French>Les Leaders du monde entier sont à la recherche du Camp du Drap d'Or.</French>
+		<Italian>I leader di tutto il mondo si stanno radunando al Campo del Drappo d'oro</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_FIELD_GOLD</Tag>
+		<English>You have completed the Field of the Cloth of Gold. Leaders from around the world are gathering for this grand event.</English>
+		<Italian>Hai completato il Campo del Drappo d'oro. I leader di tutto il mondo si stanno rdunando per questo grande evento.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_FIELD_GOLD_1</Tag>
+		<English>This will build bonds of friendship between us.</English>
+		<Italian>Questo creerà nuovi legami d'amicizia fra di noi.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_FIELD_GOLD_OTHER_1</Tag>
+		<English>Leaders from around the world are gathering for the Field of the Cloth of Gold.</English>
+		<Italian>Leader da tutto il mondo si stanno radunando per il Campo del Drappo d'oro</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GIVERNY</Tag>
+		<English>Giverny</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GIVERNY_STRATEGY</Tag>
+		<English>Build Giverny to increase the culture and happiness of your Art Galleries and Art Patronage.</English>
+		<French>Construire la Merveille de [COLOR_BUILDING_TEXT]Giverny[COLOR_REVERT], c'est un grand pas en avant pour l'art. Elle augmente la culture et le bonheur des vos [COLOR_BUILDING_TEXT]Galeries d'Art[COLOR_REVERT] et vos [COLOR_BUILDING_TEXT]Mécénats d'Art[COLOR_REVERT].</French>
+		<Italian>Costruisci Giverny per incrementare cultura e felicità delle Gallerie d'arte e dei Patronati d'arte</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GIVERNY_PEDIA</Tag>
+		<English>Giverny is a small commune in northwestern France. Giverny's population has never exceeded more than a few hundred people, but it is best known as the location of Claude Monet's home and garden. Monet moved to Giverny in 1883 (after starting the Impressionist movement in the 1870's) and would go on to paint numerous paintings of the garden and water-lily ponds. After Monet's death in 1926, the home and grounds were turned into a museum.</English>
+		<Italian>Giverny è una piccola tenuta nella Francia del nord-ovest. La popolazione di questo abitato non ha mai superato le poche centinaia di persone, ma è famosa in tutta il mondo come luogo della casa e del giardino di Claude Monet. Monet si stabilì a Giverny nel 1883 (dopo aver fondato il movimento impressionista negli anni 70) e continuò numerosi dipinti del giardino e delle ninfee. Dopo la morte di Monet nel 1926, la casa ed il terreno vennero trasformati in un museo.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOLDEN_SPIKE</Tag>
+		<English>Golden Spike</English>
+		<French>Le Piquet d'Or</French>
+		<Italian>Golden Spike</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOLDEN_SPIKE_STRATEGY</Tag>
+		<English>Build The Golden Spike to create a Transcontinental Railroad on completion and to speed up your production of Settlers and Workers thereafter.</English>
+		<Italian>Costruisci la Golden Spike per creare una ferrovia transcontinentale, oltre che per velocizzare la produzione di unità di coloni e di lavoratori.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOLDEN_SPIKE_PEDIA</Tag>
+		<English>The Golden Spike was the name given to the ceremonial last spike driven to to finish the first railroad line to cross the United States. The ceremony was held on May 10, 1869, at Promontory Point in Utah. Other great railroads include the Canadian Pacific Railway and the Trans-Siberian Railway.</English>
+		<Italian>Golden Spike era il nome dato all'ultimo chiodo utilizzato per terminare la prima linea ferroviaria trascontinentale che attraversò gli Stati Uniti. La cerimonia fu tenuta il 10 maggio 1869 a Promontory Point, nello Otah. Altre grandi ferrovie includono la Canadian Pacific Railway e la Ferrocia Transiberiana.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HELP_GOLDEN_SPIKE</Tag>
+		<English>[ICON_BULLET]Builds a Transcontinental Railroad on Completion</English>
+		<Italian>[ICON_BULLET]Costruisce una ferrovia transcontinentale al completamento</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_GOLDEN_SPIKE_BUILT</Tag>
+		<English>The [COLOR_UNIT_TEXT]Golden Spike[COLOR_REVERT] lays rails across your continent.</English>
+		<Italian>La [COLOR_UNIT_TEXT]Golden Spike[COLOR_REVERT] costruisce ferrovie attraverso il tuo continente.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HILLTARA</Tag>
+		<English>Hill of Tara</English>
+		<French>Colline de Tara</French>
+		<Italian>Collina di Tara</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HILLTARA_STRATEGY</Tag>
+		<English>The Hill of Tara grants you a free Chief's Hut in every city and +1 happiness from your state religion.</English>
+		<Italian>La collina di Tara fornisce una Capanna del capo gratuita in ogni città e +1 felicità dalla tua religione di stato.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HILLTARA_PEDIA</Tag>
+		<English>The Hill of Tara is the legendary seat of the High King of Ireland. The Hill of Tara may have served as a capital for the High King, or may have been the site of his coronation and sacred rituals. The first structures on the site were built around 3400 BC with the "Mound of the Hostages", a small tomb on the site. Later improvements include a pair of linked earthworks known as the "Royal Seat" and "Carnac's House".  In the center of the "Royal Seat" stands the Stone of Destiny, which legend says will roar three times if touched by the true king.</English>
+		<French>Dans la mythologie celtique irlandaise, Tara est la capitale mythique de l'Irlande, située dans la cinquième province de Meath, au centre ; en irlandais, c'est « Teamhair na Rí », la colline des rois. Le récit Suidigud Tellach Temra (Fondation du domaine de Tara) expose la suprématie de la ville sur le reste de l'île. source: wikipédia</French>
+		<Italian>La collina di Tara è il leggendariof trono del Grande re d'Irlanda. La collina di Tara potrebbe essere servita come capitale per il Grande re, o potrebbe essere stata il sito della sua incoronazione e dei rituali sacri. Le prime strutture vennero costruite intono al 3400 a.C. con il "Tumulo degli ostaggi", una piccola tomba. Miglioramenti più recenti includono un paio di costruzioni legate fra loro, note come "Sesgio reale" e "Casa di Carnac". Al centro del "Seggio reale" c'e la Pietra del destino, che secondo la leggenda dovrebbe ruggire tre volte se toccata dal vero re.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HNIC</Tag>
+		<English>National Night of Hockey</English>
+		<French>La Nuit du Hockey au Canada</French>
+		<Italian>Notte dell'hockey in Canada</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HNIC_PEDIA</Tag>
+		<English>Hockey Night In Canada has been a national institution since 1952, when Foster Hewitt's familiar "Hello, Canada!" ushered hockey fans into the era of television. It was the greeting he had been using on the radio broadcast of the same name since its first coast-to-coast coverage of a 1933 contest between the Detroit Red Wings and Toronto Maple Leafs, coming two years after the radio broadcast of the opening game at the new Maple Leaf Gardens on Carlton Street in downtown Toronto.[PARAGRAPH:1]Over the years, Hockey Night In Canada also began to use former NHL players and coaches as game analysts, including Bob Goldham, Howie Meeker, Gary Dornhoefer, John Davidson, Greg Millen, John Garrett and the outspoken Don Cherry, whose "Coach's Corner" intermission segment with Ron MacLean became the highest-rated spot on Canadian television.</English>
+		<Italian>Notte dell'hockey in Canada è un'istituzione nazionale dal 1952, quando il familiare "Hello, Canada!" di Foster Hewitt accolse i fan dell'hockey nell'era della televisione. Era il saluto che lui aveva usato sulla trasmissione radio con lo stesso nome sin dalla prima trasmissione nazionale del match del 1933 tra i Detroit Red Wings e i Toronto Maple Leafs, due anni dopo la prima trasmissione radio della partita di apertura al Maple Leaf Gardens a Carlton Street, nella città di Toronto.[PARAGRAPH:1]Durante gli anni, la Notte dell'hockey in Canada iniziò ad usare ex-giocatori e allenatori di NHL come analisti di gioco, come Bob Goldham, Howie Meeker, Gary Dornhoefer, John Davidson, Greg Millen, John Garrett e Don Cherry, il cui segmento "Coach's Corner" con Ron MacLean diventò lostacco pubblicitario più gradito in Canada.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HNIC_STRATEGY</Tag>
+		<English>[COLOR_BUILDING_TEXT]Hockey Night in Canada[COLOR_REVERT] provides [COLOR_BUILDING_TEXT]1 happiness[COLOR_REVERT] to all Broadcast Towers and Hockey Rinks of the building civilization and +25% gold to the city in which it resides. It contributes an improved chance of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</English>
+		<Italian>[COLOR_BUILDING_TEXT]Notte dell'hockey in Canada[COLOR_REVERT] fornisce [COLOR_BUILDING_TEXT]1 felicità[COLOR_REVERT] a tutti i Ripetitori e ai Campi da Hockey della città che costruisce la meraviglia; inoltre fornisce +25% all'oro nella città dov'è costruita. Aumenta le chance di generare un [COLOR_UNIT_TEXT]Grande Artista[COLOR_REVERT].</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HOUSE_OF_WISDOM</Tag>
+		<English>House of Wisdom</English>
+		<French>Maison de la sagesse</French>
+		<Italian>Casa della saggezza</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HOUSE_OF_WISDOM_STRATEGY</Tag>
+		<English>The House of Wisdom converts 1 gold from each Priest specialist you have into Science.</English>
+		<French>Maison de la sagesse</French>
+		<Italian>La Casa della saggezza toglie ai tuoi sacerdoti 1 oro e aggiunge 1 ricerca</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HOUSE_OF_WISDOM_PEDIA</Tag>
+		<English>The House of Wisdom was a library and translation center in Baghdad in the 9th century, during the Islamic Golden Age. The House collected numerous manuscripts of Greek, Persian, and Indian literature and science, translating them all into Arabic. Hundreds of thousands of manuscripts were collected, helping to protect knowledge that might have been lost following the collapse of the Greek and Roman Empires. The House was destroyed during the Mongol sack of Baghdad in 1258.</English>
+		<French>Maison de la sagesse</French>
+		<Italian>La casa della saggezza era una biblioteca e centro di traduzioni a Baghdad nel 9° secolo, durante l'Età dell'oro islamica. La casa raccoglieva numerosi manoscritti di scienza e letteratura greca, indiana e persiana, con le relative traduzioni in arabo. Centinaia di migliaia di manoscritti vennero raccolti, aiutando a proteggere una conoscenza che sarebbe potuta svanire in seguito al collasso dell'Impero Romano. La casa fu distrutta durante il saccheggio di Baghdad effettuato nel 1258.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KENTUCKY_DERBY</Tag>
+		<English>Kentucky Derby</English>
+		<French>Le Derby du Kentucky</French>
+		<Italian>Derby del Kentucky</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KENTUCKY_DERBY_PEDIA</Tag>
+		<English>The Kentucky Derby is a horse race for Thoroughbred racehorses and is probably the most famous horse race in the world. The race is held annually at the Churchill Downs racetrack in Louisville, Kentucky, in early May, and has been held every year since 1875. The race is 1-1/4 miles long, and only three-year-old horses are allowed to run. Traditions of the race include the mint julep as the traditional beverage and a blanket of red roses being given to the winner, giving the event the nickname of The Run for the Roses.</English>
+		<Italian>Il derby del Kentucky è una gara di cavalli per cavalli da corsa Thoroughbred; probabilmente, è la gara di cavalli più famosa al mondo. La gara viene organizzata ogni anno al circuito di Churchill Downs di Loisville, in Kentucky, all'inizio di maggio; è stato organizzato ogni anno sin dal 1875. La gara è lunga un quarto di miglio, e sono ammessi alla corsa solo cavalli di tre anni. Tradizioni della gara sono l'abbeveratoio tradizionale e un mazzo di rose rosse che vengono date al vincitore, da cui deriva il nome Corsa delle rose.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KENTUCKY_DERBY_STRATEGY</Tag>
+		<English>[COLOR_BUILDING_TEXT]Kentucky Derby[COLOR_REVERT] provides 1 happiness and +2 gold to all [COLOR_BUILDING_TEXT]Animal Racetracks[COLOR_REVERT] of the building civilization. The Derby also provides a [COLOR_UNIT_TEXT]Subdued Horse[COLOR_REVERT] every 10 turns, allowing you to build more Horse Herds or upgrade them to Mounted units.</English>
+		<French>Le [COLOR_BUILDING_TEXT]Derby du Kentucky[COLOR_REVERT] procure du bonheur et de l'or pour chaque [COLOR_BUILDING_TEXT]Hippodrome[COLOR_REVERT]. Cette merveille fournit également un [COLOR_UNIT_TEXT]Cheval deompté[COLOR_REVERT] tous les 10 tours, vous permettant d'établir d'autres troupeaux, ou de les améliorer en unités montées.</French>
+		<Italian>Il [COLOR_BUILDING_TEXT]Derby del Kentucky[COLOR_REVERT] fornisce +1 felicità e +2 oro a tutti gli edifici [COLOR_BUILDING_TEXT]Circuito per gare di animali[COLOR_REVERT]. Il Derby fornisce anche un [COLOR_UNIT_TEXT]Cavallo ammaestrato[COLOR_REVERT] ogni 10 turni, permettendoti di costruire più Recinti per cavalli o migliorarli in unità montate.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KENTUCKY_DERBY_HELP</Tag>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Provides a [LINK=UNIT_SUBDUED_HORSE]Subdued Horse[\LINK] Every 10 Turns</English>
+		<French>[ICON_BULLET]Procure un [LINK=UNIT_SUBDUED_HORSE]Cheval dompté[\LINK] tous les 10 Tours</French>
+		<Italian>[ICON_BULLET]Fornisce un [LINK=UNIT_SUBDUED_HORSE]Cavallo ammaestrato[\LINK] ogni 10 turni</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_NEW_HORSE</Tag>
+		<English>The [COLOR_BUILDING_TEXT]Kentucky Derby[COLOR_REVERT] has produced a [COLOR_UNIT_TEXT]Subdued Horse[COLOR_REVERT]!</English>
+		<French>Le [COLOR_BUILDING_TEXT]Derby du Kentucky[COLOR_REVERT] a produit un [COLOR_UNIT_TEXT]Cheval apprivoisé[COLOR_REVERT]!</French>
+		<Italian>Il [COLOR_BUILDING_TEXT]Derby del Kentucky[COLOR_REVERT] ha prodotto un [COLOR_UNIT_TEXT]Cavallo ammaestrato[COLOR_REVERT]!</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KINGS_TOURNAMENT</Tag>
+		<English>King's Tournament</English>
+		<French>Le Tournoi des Rois</French>
+		<Italian>Torneo del Re</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KINGS_TOURNAMENT_STRATEGY</Tag>
+		<English>King's Tournament grants additional experience to your Melee, Mounted, and Hero units.</English>
+		<Italian>Il Torneo del Re fornisce XP extra alle tue unità montate, da combattimento ravvicinato e agli eroi.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KINGS_TOURNAMENT_PEDIA</Tag>
+		<English>During the Middle Ages, tournaments were popular among knights. Some of the largest tournaments were held by kings, who had the most money and resources available. Louis VII of France held a tournament in 1179 to celebrate the passing of the French crown to his son Philip II that attracted three thousand knights. Edward III of England also regularly held tournaments.</English>
+		<Italian>Durante il Medioevo i tornei erano molto popolari fra i cavalieri. Alcuni dei tornei più importanti erano organizzati dai re, che avevano molti soldi e risorse. Luigi VII di Francia organizzò un torneo nel 1179 per celebrare il passaggio della corona francese a suo figlio Filippo II che attirò più di tremila cavalieri. Anche Edoardo III d'Inghilterra organizzava regolarmente dei tornei.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KRAK_DES_CHEVS</Tag>
+		<English>Krak des Chevaliers</English>
+		<French>Le Krak des Chevaliers</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KRAK_DES_CHEVS_STRATEGY</Tag>
+		<English>Build the Krak des Chevaliers to increase your cities' defense while you hold your religion's holy city -- and increase your units' attack strength while heathens hold it.</English>
+		<French>Le Krak des Chevaliers</French>
+		<Italian>Costruisci il Krak des Chevaliers per incrementare le difese della tua città mentre controlli la sittà santa della tua religione; inoltre incrementa la forza in attacco delle tue unità quando la città santa è controllata dagli infedeli.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KRAK_DES_CHEVS_PEDIA</Tag>
+		<English>The Krak des Chevaliers is a Crusader castle in western Syria. The site was originally inhabited in the 11th century by Kurds, and the current castle was built by the Knights Hospitaller in the 12th century. It housed a garrison of 2,000 men at its peak. The castle was conquered by the Mamluks in 1271.</English>
+		<French>Le Krak des Chevaliers</French>
+		<Italian>Il Krak des Chevaliers è un castello che fu costruito dai Crociati nell'ovest della Siria. Il sito era abitato nell'11° secolo dai Curdi, mentre il castello attuale fun costruito dai Cavalieri Ospitalieri nel 12° secolo. Ospitava una guarnigione di 2000 uomini nel suo periodo di massimo splendore; il castello fu conquistato dai Mamekucchi nel 1271.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LAS_VEGAS_STRIP</Tag>
+		<English>Las Vegas Strip</English>
+		<French>Las Vegas</French>
+		<Italian>Strip di Las Vegas</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LAS_VEGAS_STRIP_STRATEGY</Tag>
+		<English>Build the Las Vegas Strip to radically increase your gold production in the building city and get extra gold from all your Casinos.</English>
+		<Italian>Costruisci la Strip di Las Vegas per incrementare radicalmente la tua produzione di oro, e ottenere altro oro da tutti i tuoi Casinò.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LAS_VEGAS_STRIP_PEDIA</Tag>
+		<English>The Las Vegas Strip is the name given to the collection of casinos along Las Vegas Boulevard, just outside the city of Las Vegas. These casinos are famous for their unique and dramatic architecture, and 19 of the world's 25 hotels with the most rooms are located on the Strip.
+	The Las Vegas Strip's first major casino was the Flamingo, which opened in 1946 and was backed by organized-crime boss Bugsy Siegel. His murder less than a year later brought a blaze of publicity to the Flamingo and helped launch the Strip into the gambling mecca it is today.</English>
+		<Italian>Strip è il nome dato alla serie di Casinò costruiti lungo Las Vegas Boulevard, appena al di fuori della città di Las Vegas. Questi Casinò sono famosi per la loro architettura unica, e 19 dei 25 hotel con più camere di tutto il mondo sono costruiti sulla Strip.
+	Il primo casinò costruito sulla Strip era il Flamingo, che aprì nel 1946 ed era gestito dal boss del crimine organizzato Bugsy Siegel. Il suo omicidio meno di un anno dopo portò molta pubblicità al Flamingo, ed aiutò a lanciare la Strip nella mecca del gioco d'azzardo che è oggi.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_VEGAS_JACKPOT</Tag>
+		<English>A lucky gambler from %s2_city has hit the jackpot on the Las Vegas Strip.</English>
+		<Italian>Un fortunato giocatore d'azzardo di %s2_city ha vinto il jackpot sulla strip di Las Vegas.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_VEGAS_JACKPOT</Tag>
+		<English>A gambler from %s2_city has hit the jackpot on the Las Vegas Strip! Of course, our tax collectors stand ready for just such an event.</English>
+		<Italian>Un giocatore di %s2_city ha vinto il jackpot nella Strip di Las Vegas! Ovviamente, i nostri esattori delle tasse satvano aspettando un evento come questo.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_VEGAS_JACKPOT_1</Tag>
+		<English>Send our tax collectors to pay the lucky gambler a visit.</English>
+		<Italian>Manda i nostri esattori delle tasse a far visita a questo "fortunato" giocatore.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_VEGAS_JACKPOT_2</Tag>
+		<English>Good fortune should be enjoyed.</English>
+		<Italian>Augurategli buona fortuna.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_VEGAS_JACKPOT_OTHER_1</Tag>
+		<English>A lucky gambler from %s2_city has hit the jackpot on the Las Vegas Strip.</English>
+		<Italian>Un fortunato giocatore d'azzardo di %s2_city ha vinto il jackpot sulla strip di Las Vegas.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LONDONEYE</Tag>
+		<English>London Eye</English>
+		<French>Le London Eye</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LONDONEYE_STRATEGY</Tag>
+		<English>The London Eye grants a gold bonus to the city it is built on and +2 commerce from all Engineer specialists.</English>
+		<Italian>London Eye ofrnisce un bonus all'oro nella città in cui è costruita; fornisce anche +2 commercio dagli ingegneri.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LONDONEYE_PEDIA</Tag>
+		<English>The London Eye is a huge Ferris wheel built on the banks of the River Thames in London, England. It was opened in 2000 and was for a time the tallest Ferris wheel in the world. The wheel is 135 meters tall and visitors can see up to 40 kilometers from the top. The wheel attracts over 3.5 million visitors each year.</English>
+		<Italian>La London Eye è una grande ruota panoramica costruita sulle rive del fiume Tamigi a Londra, in Inghilterra. Fu aperta nel 2000 e fu per un breve periodo la più alta ruota panoramica del mondo. La ruota è alta 135 metri e i visitatori possono vedere fino a una distanza di 40 km dalla cima. La ruota attre più di 3,5 milioni di visitatori ogni anno.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AD_AGENCY</Tag>
+		<English>Advertising Agency</English>
+		<French>Agence de Publicité</French>
+		<Italian>Agenzia pubblicitaria</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AD_AGENCY_STRATEGY</Tag>
+		<English>Build Advertising Agency to increase your gold production.</English>
+		<French>Améliore à la fois les revenus et la culture de votre ville</French>
+		<Italian>Costruisci un'agenzia pubblicitaria per incrementare la tua produzione d'oro.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AD_AGENCY_PEDIA</Tag>
+		<English>Advertising is not new to history; commercial messages have been found in the volcanic ruins of Pompeii. The modern advertising agency dates to the late 1800's, when the first advertising agency, N. W. Ayer &amp; Son, was founded. This agency was one of the first to offer the complete planning and executing of marketing for its customers. Advertising has since adapted to every new kind of media available, from the radio, to television, to the Internet.</English>
+		<French>Agence de Publicité</French>
+		<Italian>La pubblicità ha una lunga storia: messaggi commerciali sono stati ritrovati nelle rovine vulcaniche di Pompei. Le moderne agenzie pubblicitarie hannoa vuto origine alla fine dell'Ottocento, quando fu fondata la prima agenzia N. W. Ayer &amp; Son. Quest'agenzia fu una delle prime ad offrire pianificazione ed esecuzione completa del marketing ai propri clienti. Da allora la pubblicità si è adattata ai nuovi mezzi di comunicazione, come radio, televisione ed internet.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MADISON_AVENUE</Tag>
+		<English>Madison Avenue</English>
+		<French>L'Avenue Madison</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MADISON_AVENUE_STRATEGY</Tag>
+		<English>Madison Avenue increases the amount of gold produced by your shopping buildings and Advertising Agencies. It also allows you extra commerce from Artists.</English>
+		<French>L'[COLOR_BUILDING_TEXT]Avenue Madison[COLOR_REVERT] augmente les revenus des [COLOR_BUILDING_TEXT]Boutiques de shopping[COLOR_REVERT] et des [COLOR_BUILDING_TEXT]Agences de pub[COLOR_REVERT]. Il donne également un bonus de commerce pour les spécialistes Artistes.</French>
+		<Italian>Madison Avenue aumenta la quantità di oro prodotta dai tuoi edifici legati allo shopping e dalle Agenzie pubblicitarie. Fornisce anche commercio extra agli artisti.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MADISON_AVENUE_PEDIA</Tag>
+		<English>Madison Avenue in New York City became the heart of the American advertising industry in the 1920's. By 1861, there were 20 ad agencies in New York City, and the New York City Association of Advertising Agencies was founded there in 1911. The term "Madison Avenue" became a metonym for the advertising industry, and advertising managed to shape a substantial part of the world's culture in the 20th and 21st centuries.</English>
+		<French>L'Avenue Madison</French>
+		<Italian>Madison Avenue, situata a New York City, divenne il cuore dell'industria pubblicitaria negli anni venti del XX secolo. Già dal 1861 c'erano 20 agenzie a New York, e l'associazione cittadina delle agenzia pubblicitarie fu fondata qui nel 1911. Il termine "Madison Avenue" divenne sinonimo di industria pubblicitaria, mentre la pubblicità divenne parte della cultura mondiale nel XX e XXI secolo.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MAGINOTLINE</Tag>
+		<English>Maginot Line</English>
+		<French>La Ligne Maginot</French>
+		<Italian>Linea Maginot</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MAGINOTLINE_STRATEGY</Tag>
+		<English>Build the Maginot Line for a free Barricade in every city.</English>
+		<Italian>Costruisci la Linea Maginot per ottenere Barricate gratuite in tutte le città.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MAGINOTLINE_PEDIA</Tag>
+		<English>The Maginot Line was a huge defensive line built by the French between World War I and World War II. The French drew on their experiences with the trench warfare of World War I to build a line of defense along the German border, from Switzerland to Luxembourg. The basic idea was to dissuade the Germans from attacking France directly, or at least buy time for a general French mobilization. Due to political considerations and the supposed difficulty of attacking through the Ardennes Forest, the fortifications facing the Belgian and Luxembourg borders were much lighter. The line itself was an interlocked system of concrete walls, gun turrets, antitank obstacles, and underground connections.Unfortunately for all the time, money, and effort put into the Maginot Line, it proved to be useless during World War II. The German forces swept through the Ardennes and the French surrendered in less than two months. The Maginot Line has since become a byword for a supposed solution to a problem that utterly fails in practice.</English>
+		<Italian>La Linea Maginot era un'enorme linea difensiva costruita dai francesi tra la I e la II Guerra Mondiale. Basandosi sulle loro esperienze con la guerra in trincea della I Guerra mondiale, i francesi costruirono una linea difensiva lungo il confine tedesco, dalla Svizzera al Lussemburgo. L'idea base era dissuadre i tedeschi dall'attaccare la Francia direttamente, o almeno guadagnare tempo per una mobilitazione genrale della Francia. A causa di questioni politiche e della supposta difficoltà di attaccare attraverso la Foresta delle Ardenne, le fortificazoni lungo i confini con Belgio e Lussemburgo erano molto meno potenti. La linea stessa era un complesso sistema di muri in calcestruzzo, ostacoli anticarro, torrette con mitragliatrici e tunnel sotterranei.Sfortunatamente per tutti i soldi, il tempo e gli sforzi fatti per costruirla, la Linea Maginot si rivelò inutile nella II Guerra Mondiale. I tedeschi attaccarono attraverso le Ardenne e i francesi si arresero in meno di due mesi. La Linea Maginot è da allora l'esempio di qualcosa che dovrebbe essere la soluzione al problema, ma che in pratica è destinata a fallire.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MAGINOTLINE_HELP</Tag>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Places Bunkers Along Your Frontiers On Completion</English>
+		<French>[ICON_BULLET]Place des Bunkers le long de vos Frontières</French>
+		<Italian>[ICON_BULLET]Piazza dei bunker lungo le tue frontiere quando viene completata</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MONTE_CARLO</Tag>
+		<English>Monte Carlo</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MONTE_CARLO_STRATEGY</Tag>
+		<English>Build Monte Carlo to increase your gold production.</English>
+		<Italian>Costruisci Monte Carlo per incrementare la tua produzione di oro.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MONTE_CARLO_PEDIA</Tag>
+		<English>The Monte Carlo casino was built in 1856 in Monaco for the House of Grimaldi. The government of Monaco and the ruling family have held a majority interest in the casino since its construction. For most of this time, the casino has been the primary source of income for the Monaco economy.</English>
+		<Italian>Il Casinò di Monte Carlo fu costruito a Monaco nel 1856 dalla Casa dei Grimaldi. Il governo di Monaco e la famiglia regnante hanno sempre avuto un grande interesse nei confroti del Casinò, sin dalla sua costruzione. Per la maggior parte di questo periodo, il casinò è stata la principale fonte di entrate per l'economia di Monaco.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_BREAK_THE_BANK</Tag>
+		<English>A lucky gambler from %s2_city has broken the bank at Monte Carlo.</English>
+		<Italian>Un fortunato giocatore di %s2_city ha sbancato la roulette a Monte Carlo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_BREAK_THE_BANK</Tag>
+		<English>A gambler from %s2_city has broken the bank at Monte Carlo! Of course, our tax collectors stand ready for just such an event.</English>
+		<Italian>Un fortunato giocatore di %s2_city ha sbancato la roulette a Monte Carlo! Ovviamente, i nostri esattori delle tasse stavano aspettando un simile evento.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_BREAK_THE_BANK_1</Tag>
+		<English>Send our tax collectors to pay the lucky gambler a visit.</English>
+		<Italian>Mandate i nostri esattori a far visita al "fortunato" giocatore.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_BREAK_THE_BANK_2</Tag>
+		<English>Good fortune should be enjoyed.</English>
+		<Italian>Dovrebbe godersi la sua buona stella.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_BREAK_THE_BANK_OTHER_1</Tag>
+		<English>A lucky gambler from %s2_city has broken the bank at Monte Carlo.</English>
+		<Italian>Un fortunato giocatore di %s2_city ha sbancato la roulette a Monte Carlo.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ORIENT_EXPRESS</Tag>
+		<English>Orient Express</English>
+		<French>L'Orient Express</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ORIENT_EXPRESS_STRATEGY</Tag>
+		<English>Build the Orient Express to boost your trade income, as well as get additional happiness and espionage from your Railroad Stations.</English>
+		<Italian>Costruisci l'Orient Express per aumentare il ricavato delle rotte commerciali, oltre a felicità e spionaggio bonus dalle tue Stazioni ferroviarie.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ORIENT_EXPRESS_PEDIA</Tag>
+		<English>The Orient Express was the name of a passenger train service that ran from Paris to Istanbul. It was first started in 1883 and ran until December 2009. A private version of the train still runs today. The Orient Express became famous for both luxury travel and intrigue, was and was used in numerous books, films, and TV shows.</English>
+		<Italian>Orient Express era il nome di un treno passeggeri che collegava Parigi a Istanbul. Fu iniziato nel 1883 e funzionò fino a dicembre 2009. Una versione privata del treno funziona ancora oggi. L'Orient Express divenne famoso sia per i viaggi lussuosi che per gli intrighi, dato che fu raffigurato in molti libri, fil e serie TV.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PALACE_SOV</Tag>
+		<English>Palace of the Soviets</English>
+		<French>Le Palais des Soviets</French>
+		<Italian>Palazzo dei Soviet</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PALACE_SOV_STRATEGY</Tag>
+		<English>Build the Palace of the Soviets to slash your cities' maintenance costs and increase the happiness from some buildings.</English>
+		<Italian>Costruisci il Palazzo dei Soviet per annientare i costi di mantenimento delle tue città e aumentare la felicità da akcuni edifici.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PALACE_SOV_PEDIA</Tag>
+		<English>The Palace of the Soviets was planned as a giant administrative center for the soviets (workers' councils) of the Soviet Union. Construction was started in 1937 but was interrupted by World War II and never resumed. The foundations were eventually converted to a giant open-air swimming pool.</English>
+		<Italian>Il Palazzo dei Soviet fu progettato come un gigantesco centro amministrativo per i sovie (assemblee dei lavoratori) dell'Unione Sovietica. La costruzione fu iniziata nel 1937, ma venne interrotta dalla Seconda Guerra mondiale e mai più ripresa. Le fondazioni vennero in seguito convertite in una gigantesca piscina all'aria aperta.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PEARL_HARBOR</Tag>
+		<English>Pearl Harbor</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PEARL_HARBOR_STRATEGY</Tag>
+		<English>Build Pearl Harbor as a forward military base to increase your line of sight and drastically increase the speed of your military unit repairs.</English>
+		<Italian>Costruisci Pearl Harbor come una base militare, per incrementare la tua linea di avvistamento e la velocità di riparazione dei danni per le tue unità.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PEARL_HARBOR_PEDIA</Tag>
+		<English>Pearl Harbor is a natural harbor on the island of O'ahu in Hawai'i. In the early 20th century, a United States Navy base was established there to serve as a supply station and later a repair yard. Pearl Harbor was attacked by Japanese forces on the morning of December 7, 1941. Of the ships in harbor, all eight battleships in harbor were sunk or damaged along with several other ships. This attack drew the United States into World War II. During the war, Pearl Harbor served as an important naval base for the Pacific Theater. When the carrier Yorktown was damaged at the Battle of the Coral Sea, workers at Pearl Harbor were able to repair the carrier to usable status in three days, in time for it to serve (and be sunk) at the Battle of Midway.</English>
+		<Italian>Pearl Harbor è un porto naturale dell'isola di O'ahu nelle Hawaii. All'inizio del XX secolo la Marina degli Stati Uniti vi costruì una base militare da usare come stazione di rifornimento e cantiere per le riparazioni.[TAB]Pearl harbor fu attaccata dai giapponesi il mattino del 7 dicembre 1941. Tutte le 8 corazzate nel porto furono affondate o danneggiate gravemente, assieme a molte altre navi. Questo attacco secgnò l'ingresso degli Stati Uniti nella II Guerra Mondiale. Durante la guerra, Pearl Harbor fu un'importante base navale nel teatro del Pacifico. Quando la portaerei Yorktown venne danneggiata durante la battaglia del Mar dei Coralli, i lavoratori dei cantieri di Pearl Harbor furono in grado di riparare la portaerei in 3 giorni, in tempo per combattere (ed essere affondata) nella Battaglia delle Midway.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PERE_LACHAISE</Tag>
+		<English>Pere Lachaise Cemetery</English>
+		<French>Le Cimetière du Père Lachaise</French>
+		<Italian>Cimitero di Père Lachaise</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PERE_LACHAISE_STRATEGY</Tag>
+		<English>Build Pere Lachaise Cemetery to gain a significant bonus to the Great Works of your Great Artists.</English>
+		<French>Le Cimetière du Père Lachaise</French>
+		<Italian>Costruisci il Cimitero di Père Lachaise</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PERE_LACHAISE_PEDIA</Tag>
+		<English>Pere Lachaise Cemetery is a cemetery in Paris named for the confessor to Louis XIV. The cemetery itself was built in 1804 as a cemetery open to all. Today, it is the burial site of numerous famous people, including artists such as Molière, Georges-Pierre Seurat, Oscar Wilde and Jim Morrison.</English>
+		<French>Le Cimetière du Père Lachaise</French>
+		<Italian>Il cimitero di Père Lachaise è un cimitero di Parigi che prende il nome dal confessore di Luigi XIV. Il cimitero fu costruito nel 1804, in modo che fosse aperto a tutti. Al giorno d'oggi è il sito di sepoltura di molte persone famose, inclusi artisti come Molière, Georges-Pierre Seurat, Oscar Wilde e Jim Morrison.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PLEISTO_PARK</Tag>
+		<English>Pleistocene Park</English>
+		<French>Le Parc de Pléistocene</French>
+		<Italian>Parco del Pleistocene</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PLEISTO_PARK_STRATEGY</Tag>
+		<English>Build the Pleistocene Park to boost your civilization's happiness. It also improves the gold and science production of megafauna trainers that have survived to this day.</English>
+		<French>Permet de booster le bonheur de votre civilisation. Il confère également un bonus d'or, de science aux éleveurs de mégafaunes qui ont survécu</French>
+		<Italian>Costruisci il parco del Pleistocene per incrementare la felicità della tua civiltà. Migliora anche la produzione di oro e scienza degli allevatori di grandi animali che sono sopravvissuti fino a questo punto.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PLEISTO_PARK_PEDIA</Tag>
+		<English>Pleistocene Park is an attempt to recreate the ecosystems of the last Ice Age in northern Siberia. Efforts are currently focused on currently-living herbivores, with some work being done with carnivores. It is possible that cloning technology may advance to the point where extinct megafauna can be recreated. While this is not possible to do with dinosaurs, as DNA is not stable over the geologic time scales required, some of these mammals may have survived until only a few millenia ago.</English>
+		<Italian>Il Parco del Pleistocene è un tentativo di ricreare gli ecosistemi dell'ultima Era Glaciale nel nord della Siberia. Gli sforzi attuali sono focalizzati sugli erbivori attualmente viventi, mentre poco è stato fatto per i carnivori. E' possibile che la tecnologia della clonazione possa avanzare fino al cui si possa ricreare la megafauna estinta; mentre questo non è possibile con i dinosauri, dato che il DNA non rimane stabile su scale di milioni di anni, il DNA di alcuni mammiferi può resistere per alcuni millenni.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_MEGA_ATTACK</Tag>
+		<English>An accident has led to an escape of animals at Pleistocene Park!</English>
+		<Italian>Un incidente ha causato una fuga di animali nel Parco del Pleistocene!</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_MEGA_ATTACK</Tag>
+		<English>An accident has led to an escape of animals at Pleistocene Park! Several people are dead and dozens are injured.</English>
+		<Italian>Un incidente ha causato una fuga di animali nel Parco del Pleistocene! Molte persone sono morte e ci sono dozzine di feriti.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_MEGA_ATTACK_1</Tag>
+		<English>Offer compensation to the affected families.</English>
+		<Italian>Offri un risarcimento alle famiglie delle vittime.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_MEGA_ATTACK_2</Tag>
+		<English>We don't have the money to spare.</English>
+		<Italian>Non abbiamo soldi da perdere.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RIVERROUGE</Tag>
+		<English>River Rouge Complex</English>
+		<French>Le Complexe Rivière Rouge</French>
+		<Italian>Complesso di River Rouge</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RIVERROUGE_STRATEGY</Tag>
+		<English>Build the River Rouge Complex to increase your production. The more resources you have access to, the more effective it will be.</English>
+		<French>Construire le [COLOR_BUILDING_TEXT]Complexe Rivière Rouge[COLOR_REVERT] va améliorer de manière importante votre production, en fonction des ressources dont vous disposez.</French>
+		<Italian>Costruisci il Complesso di River Rouge per incrementare la tua produzione. Più risorse hai a disposizione, più il complesso renderà.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RIVERROUGE_PEDIA</Tag>
+		<English>The River Rouge Complex was built by the Ford Motor Company as an automobile manufacturing center. It took 11 years (1917-1928) to build and was the largest integrated factory in the world, capable of going from raw materials to finished parts. The complete plant measured 1 mile long by 1.5 miles wide, and its buildings contained 16 million square feet of floor space.</English>
+		<Italian>Il complesso di River Rouge fu costruito dalla Ford Motor Company come centro di produzione di automobili. Fu costruito in 11 anni, dal 1917 al 1928, ed era il complesso industriale più grande del mondo, trasformando materiali grezzi in parti finite. L'impianto era lungo 1 miglio e largo 1,5 miglia mentre gli edifici avevano una supericie calpestabile di 16 milioni di metri quadri.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROSETTA_STONE</Tag>
+		<English>Rosetta Stone</English>
+		<French>La Pierre de Rosette</French>
+		<Italian>Stele di Rosetta</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROSETTA_STONE_STRATEGY</Tag>
+		<English>The Rosetta Stone increases the culture and science output of your Museums, and increases the science output of your Anthropology and Archeology Labs.</English>
+		<Italian>La Stele di Rosetta aumenta la cultura e la ricerca dei tuoi musei, oltre ad incrementare la ricerca dei tuoi laboratori di archeologia e di antropologia.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROSETTA_STONE_PEDIA</Tag>
+		<English>The Rosetta Stone is the name given to a 760-kilogram stone of black granite that was used to inscribe a decree of the Egyptian King Ptolemy V. The Stone was part of a temple stele and the decree was inscribed in 196 BCE to establish Ptolemy V's divine cult. The Stone was inscribed in ancient Egyptian heiroglyphs, Egyptian Demotic script, and Ancient Greek.During Napoleon's campaign in Egypt in 1798, the Stone was discovered by technical experts accompanying the army. The Stone was recognized as having three inscriptions of the same text and taken to France, then surrendered to the British after the defeat of Napoleon's expedition. The Stone is still on display in the British Museum.The three languages used on the Rosetta Stone are the key to its importance. Because the three languages used the same text, and especially because it was possible to recognize proper names, within the text, scholars became able to translate from the well-known Ancient Greek to the previously-unknown Demotic and heiroglyphs. The name "Rosetta Stone" has now become a byword for a single clue that opens up an entire field of information.</English>
+		<Italian>La Stele di Rosetta è una roccia di 760 Kg in granito nero che fu usata per l'inscrizione di un decreto del re egiziano Tolomeo V. La stele faceva parte di un tempio, dato che il decreto fu inscritto, nel 196, per stabilire il culto divino di Tolomeo. La Stele presenta inscrizioni in geroglifici antici, Demotico e Greco antico.Durante la campagna in Egitto di Napoleone del 1798 la stel fu scoperta da esperti che accompagnavano l'esercito. Si accorsero che la stele presentava la stessa inscrizione in 3 lingue diverse e fu portata in Francia, e poi ceduta agli inglesi in seguitoalla sconfitta di Napoleone. Attualmente, la Stele è esposta al British Museum. Le 3 lingue sulla Stele sono la chiave della sua importanza; dato che le tre lingue riportano lo stesso testo, e soprattutto perchè fu possibile isolare nomi propri all'interno del testo, gli studiosi furono in grado di tradurre dal ben conosciuto greco antico alle lingue sconosciute, Demotico e geroglifici egiziani. Il nome "Stele di Rosetta" indica ora una singola scoperta che apre un nuovo mondo di scoperte.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROUTE_66</Tag>
+		<English>Route 66</English>
+		<French>La Route 66</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROUTE_66_TERMINUS</Tag>
+		<English>Route 66 Terminus</English>
+		<French>Extremité de la Route 66</French>
+		<Italian>Termine della Route 66</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROUTE_66_STRATEGY</Tag>
+		<English>Route 66 builds Highways between the building city and the largest remaining city on the same continent. Both cities also get +3 trade routes and +50% trade route income.</English>
+		<Italian>Route 66 costruisce delle Autostrade tra la città che la costruisce e la città più grande sullo stesso continente. Entrambe le città ricevono 3 rotte commerciali e un bonus del 50% agli introiti dalle rotte commerciali.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROUTE_66_TERMINUS_STRATEGY</Tag>
+		<English>Route 66 Terminus cannot be built; when you complete Route 66, it is automatically placed in the largest remaining city on the same continent.</English>
+		<Italian>Il Termine della Route 66 non può essere costruito; viene costruito automaticamente nella città più grande sullo stesso continente.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROUTE_66_PEDIA</Tag>
+		<English>U.S. Route 66 was a United States highway connecting Chicago and Los Angeles. It was first built in 1926 and became one of the most famous roads in the United States, nicknamed the "Main Street of America". At over 2400 miles long, it served as a major connection across the western United States and was heavily used during the Dust Bowl of the 1930's as farming families left the Great Plains for agricultural work in California. Later, it would be used to move workers to military jobs during World War II, and then traveled by vacationers to Los Angeles during the prosperity of the 1950's. Route 66 was decommissioned in 1985 after the Interstate Highway System bypassed much of the route. Organizations devoted to Route 66 still exist and the route is still remembered in songs and TV shows.</English>
+		<Italian>La Route 66 era un'autostrada americana che collegava Chicago ad Alaska. Fu costruita nel 1926 e diventò una delle strade più famose degli Stati Uniti, soprannominata la "Strada principale d'America". Longa più di 2400 miglia fu usata come collegamento principale attraverso gli Stati Uniti occidentali e fu molto utilizzata durante le Tempeste di polvere degli anni 30 quando le famiglia di contadini lasciarono le Grandi pianure per trasferirsi in California. In seguito, fu usata per spostare i lavoratori verso impieghi militari durante la II Guerra Mondiale e in seguito fu usata dai turisti che si recavano a Los Angeles durante la properità degli anni '50. La Route 66 fu decomissionata nel 1985 dopo che il Sistema di Autostrade Interstatali sostituì gran parte della strada. Esistono molte organizzazioni devote alla Route 66, che viene spesso citata in canzoni e show televisivi.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROUTE_66_HELP</Tag>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Places Route 66 Terminus in Largest City on Same Continent[NEWLINE][ICON_BULLET]Builds Highway Between This City and Route 66 Terminus</English>
+		<Italian>[ICON_BULLET]Piazza un Termine della Route 66 nella città più grande dello stesso continente[NEWLINE][ICON_BULLET]Costruisce un'autostrada tra questa città e il termine della Route 66</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SCAPA_FLOW</Tag>
+		<English>Scapa Flow</English>
+		<French>Le Scapa Flow</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SCAPA_FLOW_STRATEGY</Tag>
+		<English>Build Scapa Flow to increase your cities' defense and to speed up repairing your naval units.</English>
+		<Italian>Costruisci la Scapa Flow per incrementare le difese delle tue città e riparare le tue unità navali.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SCAPA_FLOW_PEDIA</Tag>
+		<English>Scapa Flow is the name given to a great natural harbor in the Orkney Islands off the northern tip of Scotland. During the two World Wars, this was the main naval base for the Grand Fleet of the United Kingdom. The German High Seas Fleet was also interned here after the German surrender in World War I. The German sailors eventually scuttled most of the ships. The naval base was closed in 1956 and the area is now used as a processing point for oil from the North Sea.</English>
+		<Italian>Scapa Flow è il nome dato a un grande porto naturale nelle Isole Orcadi al largo delle coste settentrionali della Scozia. Durante le due guerre mondiali Scapa Flow fu la base navale principale della Royal Navy. La flotta tedesca fu tenuta prigioniera qui dopo la resa tedesca nella Prima Guerra mondiale; i marinai tedeschi riuscirono ada affondare in seguito la maggior parte delle navi. La base navale fu chiusa nel 1956 e l'area viene attualmente utilizzata come stabilimento di trattamento del petrolio del Mare del Nord.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SCARBOROUGH_FAIR</Tag>
+		<English>Scarborough Fair</English>
+		<French>La Foire de Scarborough</French>
+		<Italian>Fiera di Scarborough</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SCARBOROUGH_FAIR_STRATEGY</Tag>
+		<English>Build Scarborough Fair to increase the Culture output of your Bazaars, Grocers, and Markets.</English>
+		<Italian>Costruisci la Fiera di Scarborough per incrementare la cultura dei tuoi Bazaar, Droghieri e Mercati.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SCARBOROUGH_FAIR_PEDIA</Tag>
+		<English>"Are you going to Scarborough Fair? Parsley, sage, rosemary, and thyme." The original Scarborough Fair was a trading fair in England chartered by King Henry III of England in 1253. The Fair started in August of each year and ran for 45 days, from the Assumption to the Feast of St. Michael. It attracted merchants from England, Scandinavia, and even as far as the Byzantine Empire. The fair eventually ended in 1788 due to increasing competition and taxation. The name was later adopted for a traditional ballad of two lovers giving each other impossible tasks.</English>
+		<Italian>"Are you going to Scarborough Fair? Parsley, sage, rosemary, and thyme." La Fiera originale di Scarborough era una fiera commerciale inglese istituita da re Enrico III di Inghilterra nel 1253. La Fiera iniziava nell'agosto di ogni anno e durava 45 giorni, dalla festa dell'Assunzione alla festa di San Michele. Attirava mercanti dall'Inghilterra, dalla Scandinavia e perfino dall'impero bizantino. La fiera si concluse nel 1788 a causa dell'eccessiva competizione e delle tasse. Il nome fu in seguito dato a una ballata tradizionale che parla di due amanti che si danno compiti impossibili da compiere.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SERPENT_MOUND</Tag>
+		<English>Serpent Mound</English>
+		<French>Mont Serpent</French>
+		<Italian>Tumulo del serpente</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SERPENT_MOUND_STRATEGY</Tag>
+		<English>Build Serpent Mound to gain science from building Tumuluses.</English>
+		<Italian>Costruisci il Tumulo del serpente per ottenere ricerca dai tumuli.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SERPENT_MOUND_PEDIA</Tag>
+		<English>Serpent Mound is a huge effigy mound of a snake located in what is now southwestern Ohio. This mound is 3 feet high and 1,348 feet long, making it the largest serpent effigy in the world. Evidence suggests that the mound was built around 1070 CE, probably by the Fort Ancient culture. The significance of the mound is that the various coils are arranged to point to sunrise and sunset on the solstices and equinoxes, and the pattern of the Serpent Mound fits the arrangement of stars in the constellation Draco.</English>
+		<Italian>Il tumulo del serpente è un grande tumulo a forma di serpente situato nel sud-ovest dell'attuale Ohio. Questo tumulo è alto 3 piedi e lungo 1348 piedi, rendendolo la più grande figura di serpente nel mondo. Le prove suggeriscono che il tumulo fu costruito introno al 1070 d.C. probabilmente dalla civiltà di Fort Ancient. Il significato di questo tumulo è che i vari vertici sono disposti per indicare l'alba e il tramonto dei solstizi e degli equinozi, e la forma del tumulo ricorda la disposizione delle stelle nella constellazione del Drago.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SHAOLINMK</Tag>
+		<English>Shaolin Monk</English>
+		<French>Moine Shaolin</French>
+		<Italian>Monaco Shaolin</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SHAOLINMK_STRATEGY</Tag>
+		<English>Shaolin Monks make excellent city defenders and healers.</English>
+		<Italian>I monaci Shaolin sono ottimi difensori delle città e guaritori.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SHAOLINMK_PEDIA</Tag>
+		<English>The Shaolin Monks were the product of the Shaolin Temple. Their martial arts feats have become the stuff of legends across the globe.</English>
+		<Italian>I monaci shaolin erano addestrati nel Tempio Shaolin. Le loro arti marziali sono diventate leggendarie in tutto il mondo.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SHAOLIN</Tag>
+		<English>Shaolin Temple</English>
+		<French>Temple Shaolin</French>
+		<Italian>Tempio Shaolin</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SHAOLIN_STRATEGY</Tag>
+		<English>Build the Shaolin Temple to grant the Martial Arts promotions to your units for free and to train Shaolin Monks.</English>
+		<Italian>Costruisci il Tempio Shaolin per fornire la promozione Arti Marziali I gratuita alle tue unità e per addestrare i monaci shaolin.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SHAOLIN_PEDIA</Tag>
+		<English>The Shaolin Temple was established in 5th century China. Its name means "monastery in the woods of Mount Shaoshi". Famous for its martial arts training, the Temple was destroyed by the Qing dynasty because of the monks' political meddling.</English>
+		<Italian>Il Tempio Shaolin fu fondato nella Cina del V secolo; il suo nome significa "monastero nei boschi del Monte Shaoshi". Famoso per gli addestramenti nelle arti marziali il Tempio venne distrutto dalla dinastia Qing a causa delle idee politiche dei monaci.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SVALBARD</Tag>
+		<English>Svalbard Global Seed Vault</English>
+		<French>La Réserve mondiale de Semences de Svalbard</French>
+		<Italian>Deposito delle Isole Svalbard</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SVALBARD_STRATEGY</Tag>
+		<English>Build the Svalbard Global Seed Vault to provide your civilization with every food crop possible, as well as reducing the impact of disasters on your cities.</English>
+		<Italian>Il deposito delle Isole Svalbard fornisce alla tua civiltà ogni semenza possibile, oltre a ridurre l'impatto dei disastri nelle città.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SVALBARD_PEDIA</Tag>
+		<English>The Svalbard Global Seed Vault is a repository for seeds of food crops from across the globe. Opened in 2008, the Vault was built deep within the mountains of Svalbard, Norway, in the permafrost of the Arctic for maximum preservation. The seeds could someday be used to re-establish seeds lost to climate change, natural disaster, or warfare. By 2010, the Vault housed over 500,000 samples of seeds.</English>
+		<Italian>Il Deposito delle Isole Svalbard è un deposito di semi di piante da tutto il mondo. Aperto nel 2008, il deposito fu costruito nelle profondità delle isole Svalbard, in Norvegia, nel permafrost artico per una migliore conservazione dei semi. I semi potranno essere usati un giorno per ricreare le coltivazioni in seguito a cambiamenti climatici, disastri naturali o guerre. Nel 2010, il Deposito conteneva più di 500000 qualità di semi.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TOKYO_SKY_TREE</Tag>
+		<English>Tokyo Sky Tree</English>
+		<French>L'Arbre-Ciel de Tokyo</French>
+		<Italian>Sky Tree di Tokyo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TOKYO_SKY_TREE_STRATEGY</Tag>
+		<English>Build Tokyo Sky Tree to increase the happiness of your cities with a Broadcast Tower or Communications Tower.</English>
+		<Italian>Costruisci lo Sky Tree per incrementare la felicità delle tue città con Ripetitori o Torri di comunicazione.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TOKYO_SKY_TREE_PEDIA</Tag>
+		<English>Tokyo Sky Tree is a communications and observation tower in Tokyo, Japan. Built to replace Tokyo Tower, it is the tallest tower in the world and the second-tallest structure, only surpassed by Burj Khalifa. A new tower was needed because increasing congestion among Tokyo's skyline meant that Tokyo Tower was no longer tall enough to properly broadcast television and radio signals throughout Tokyo. Construction of the tower finished on 29 February 2012.</English>
+		<Italian>La Sky Tree è una torre di comunicazione ed osservazione a Tokyo, in Giappone. Costruita per sostituire la Tokyo Tower, è la torre più alta del mondo ed il secondo edificio più alto, superaro solo dal Burj Khalifa. Una nuova torre era necessario perhcè la congestione dello skyline di Tokyo aveva reso la Tokyo Tower troppo bassa per trasmettere adeguatamente i seganli radio-televisivi. La costruzione della Sky Tree è terminata il 29 febbraio 2012.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TOKYO_TOWER</Tag>
+		<English>Tokyo Tower</English>
+		<French>La Tour de Tokyo</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TOKYO_TOWER_STRATEGY</Tag>
+		<English>Build Tokyo Tower to increase the happiness of your cities with a Broadcast Tower.</English>
+		<Italian>Costruisci la Tokyo Tower per incrementare la felicità delle tue città con un ripetitore.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TOKYO_TOWER_PEDIA</Tag>
+		<English>Tokyo Tower is a communications and observation tower in Tokyo, Japan. It was originally built in 1958 to support NHK broadcasting throughout the Kanto region. The tower's design was based on the Eiffel Tower in Paris, but was 13 meters taller and 3,300 tons lighter. The tower serves as both a tourist attraction and a broadcast tower for radio and television signals. As Tokyo became more crowded and its skyscrapers rose higher, Tokyo Tower eventually became inadequate to support complete broadcasting to its service area. A second and taller tower, the Tokyo Sky Tree, was opened in 2012.</English>
+		<Italian>La Tokyo Tower è una torre per comunicazioni e osservazioni a Tokyo, Giappone. Fu costruita nel 1958 per le tramissioni della NHK nella regione del Kanto, dove è situata Tokyo. Il design della torre era basato sulla Torre Eiffel di Parigi, ma era 13 metri più alta e 3300 tonnellate più leggera. La torre funziona isa come attrazione turistica, sia come stazione di trasmissione radio-televisiva. Mentre Tokyo divenne sempre più affollata e i grattacieli divennero più alti, la Tokyo Tower divenne inadeguata per supportare le comunicazioni nella sua area di servizio; perciò nel 2012 è stata costruita una nuova torre più alta, la Sky Tree.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TROYES_FAIR</Tag>
+		<English>Troyes Trade Fair</English>
+		<French>Foire d'échange de Troyes</French>
+		<Italian>Fiera di Troyes</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TROYES_FAIR_STRATEGY</Tag>
+		<English>Build Troyes Trade Fair to increase the gold production of your Bazaars, Grocers, and Markets.</English>
+		<Italian>Costruisci la Fiera di Troyes per incrementare la produzione d'oro dei tuoi bazaar, droghieri e mercati.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TROYES_FAIR_PEDIA</Tag>
+		<English>The Troyes Trade Fair was one of the six fairs of Champagne in the 11th to 13th centuries. The Troyes Fair, which happened every June, lasted about six weeks and was one of the most important fairs. Merchants came from all over Europe and even the Middle East and Africa to attend the fairs. The fairs became an international location for making loans and settling debts, eventually leading to a system of commercial law. The Champagne fairs began to decline after Champagne was united with the French crown in 1285 and eventually ended with the European wars of the 14th centuries. The influence of the Troyes Trade Fair still exists in the "troy weight" used to measure gold and silver.</English>
+		<Italian>La Fiera di Troyes era una dlle sei fiere dello Champagne dall'XI al XIII secolo. La Fiera di Troyes, organizzata ogni giugno, durava circa sei settimane ed era una delle fiere più importanti. Arrivavano mercanti da tutta Europa e perfino dal Medioriente e dall'Africa. Le fiere divennero così un punto di ritrovo internazionale per fare affari e contrarre debiti, creando così un sistema di leggi commerciali. Le fiere dello Champagne iniziarono a perdere importanza dopo che lo Champagne venne unito al Regno di Francia nel 1285 e terminarono con le guerre europee del XIV secolo. L'influenza attuale della Fiera si riflette nel "peso troy", un'unità di misura per oro e argento.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WALK_OF_FAME</Tag>
+		<English>Walk of Fame</English>
+		<French>Promenade de la célébrité</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WALK_OF_FAME_STRATEGY</Tag>
+		<English>Build Walk of Fame to increase the commerce and Happiness from your Artists, Great Artists, and Celebrities.</English>
+		<Italian>Costruisci la Walk of Fame per incrementare il commercio e la felicità dai tuoi Artisti, Grandi artisti e celebrità.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WALK_OF_FAME_PEDIA</Tag>
+		<English>A hall of fame is an attraction to honor individuals of achievement in a field. These halls can take many forms; one of them is the Hollywood Walk of Fame, stretching across 18 blocks of sidewalk along Hollywood Boulevard and Vine Street, in Hollywood, California. On the Hollywood Walk of Fame, over 2400 figures in the entertainment industry have embedded stars to honor their achievements in different fields of entertainment. Stars can represent achievement in motion pictures, television, broadcast radio, music, or live theatre. Some persons have stars in more than one category, and Gene Autry has stars representing all five categories.</English>
+		<Italian>Una hall of fame è un'attrazione creata per onorare alcuni individui in determinati campi. Possono assumere varie forme: una di esse è la Walk of Fame di Hollywood, disposta sui marciapiedi di Hollywood Boulevard e Vine in Street di Hollywood, in California. Sulla Walk of fame oltre 2400 figure dello spettacolo hanno delle stelle dedicate per onorare i loro risultati in differenti campi dell'intrattenimento. Le stelle possono indicare successi nel cinema, nella televisione, nella radio, nella musica o nel teatro. Alcune persone hanno stelle in più categoria, mentre Gene Autry ha una stella per ognuna delle cinque categorie.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WARHOL_FACTORY</Tag>
+		<English>Warhol's Factory</English>
+		<French>Studio-Usine de Warhol</French>
+		<Italian>Studio di Andy Warhol</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WARHOL_FACTORY_STRATEGY</Tag>
+		<English>Build Warhol's Factory to increase the commerce and production speed of your Art Galleries.</English>
+		<Italian>Costruisci lo studio di Andy Warhol per incrementare il commercio e la velocità di costruzione delle tue Gallerie d'arte.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WARHOL_FACTORY_PEDIA</Tag>
+		<English>"The Factory" was Andy Warhol's name for his original New York City studio where he created his paintings and shot many of his films. The original Factory was located on the fifth floor of 231 East 47th Street in Manhattan, and Warhol worked there from 1962 to 1968. The Factory was known as the "Silver Factory" for its tin foil and silver paint decorations, and was famous for its red couch, constant stream of celebrities, and frequent orgies.</English>
+		<Italian>Il nome originale per lo studio di New York, dove creava i suoi dipinti e girava molti dei suoi filmati, era "The Factory". Lo studio originale era al 5° piano di 231 East 47th Street a Manhattan, dove Warhol lavorò dal 1962 al 1968. Lo studio era conosciuto come "Silver Factory" per le sue deocrazioni in stagno ed argento ed era famosa per il suo divano rosso, destinazione costante di molte celebrità e sede frequente di orgie.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WESTMINSTER</Tag>
+		<English>Westminster Abbey</English>
+		<French>Abbaye de Westminster</French>
+		<Italian>Abbazia di Westminster</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WESTMINSTER_STRATEGY</Tag>
+		<English>Build Westminster Abbey to increase the benefits from your Great People.</English>
+		<Italian>Costruisci l'Abbazia di Westminster per incrementare i benefici derivanti dai Grandi Artisti.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WESTMINSTER_PEDIA</Tag>
+		<English>Westminster Abbey, properly known as the Collegiate Church of St. Peter at Westminster, is a large Gothic church in Westminster, England. It is famous as the coronation and burial site of English, British and Commonwealth monarchs, along with many national figures of Britain. The practice of memorializing national figures began in 1657 and has has become one of Britain's highest honors.</English>
+		<Italian>L'Abbazia di Westminster, nota anche come Chiesa Collegiale di San Pietro in Westminster, è una grande chiesa gotica di Westminster, in Inghilterra. E' famosa come luogo di incoronazione e sepoltura dei monarchi inglesi e del Commonwealth, oltre che luogo di sepoltura di molte figure nazionali inglesi di spicco. La pratica di rendere omaggio alla figure nazionali iniziò nel 1657 ed è diventato uno dei più grandi onori del Regno Unito.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WILLOWRUN</Tag>
+		<English>Willow Run</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WILLOWRUN_STRATEGY</Tag>
+		<English>Build Willow Run for a bonus to production and a very large bonus to producing air units.</English>
+		<Italian>Costruisci Willow Run per un bonus alla produzione, ed un bonus ancora maggiore alla produzione di aerei.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WILLOWRUN_PEDIA</Tag>
+		<English>Willow Run was a huge manufacturing plant built in 1940 as the United States increased its military production while World War II was raging in Europe. At its peak, Willow Run could produce 650 B-24 Liberator heavy bombers a month and could turn out one bomber every hour. The factory was so large that it incorporated a turntable to turn the assembly line so it would not cross a county border. The main production line was the world's largest single enclosed room when it was built.  After the war, Willow Run would produce cargo planes, automobiles, transmissions, and military guns.</English>
+		<Italian>Willow Run era un enorme stabilimento di produzione costruito nel 1940, quando gli Stati Uniti cercarono di incrementare la loro produzione militare mentre la II Guerra Mondiale infuriava in Europa. Willow Run poteva produrre fino a 650 bombardieri pesanti B-24 Liberator al mese, sfornando un bombardiere all'ora. La fabbrica era così grande che incorporava una piattaforma girevole per girare la catena di montaggio affinchè non attraversasse un confine di contea. La linea di produzione principale era la sala più grande del mondo quando venne costruita. Dopo la guerra, Willow Run continuò a produrre aerei, automobili, ingranaggi e armi militari.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WOODSTOCK</Tag>
+		<English>Woodstock</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WOODSTOCK_STRATEGY</Tag>
+		<English>Build Woodstock for a huge culture bonus in your cities at the cost of some temporary unhappiness.</English>
+		<Italian>Costruisci Woodstock per un grande bonus alla cultura nelle tue città, al costo di infelicità temporanea.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WOODSTOCK_HELP</Tag>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Summer of Love Event Provides All Cities with +1000 [ICON_CULTURE] and 3 Temporary [ICON_UNHAPPY]</English>
+		<Italian>[ICON_BULLET]L'evento Summer of love fornisce +1000 [ICON_CULTURE] e 3 temporanee [ICON_UNHAPPY] a tutte le città.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WOODSTOCK_PEDIA</Tag>
+		<English>The Woodstock Music &amp; Art Fair was held from August 15th to August 18th, 1969, at a dairy farm in upstate New York, a few miles from the town of Woodstock. Over the four days of the festival, 32 musical acts performed in front of 500,000 attendees. It was one of the biggest rock festivals of all time and one of the major events of the late-1960's counterculture. Some of the biggest acts in rock and roll performed at Woodstock, including Arlo Guthrie, Joan Baez, the Grateful Dead, Creedence Clearwater Revival, Janis Joplin, The Who, The Band, Crosby, Stills, Nash &amp; Young, and finally ending with Jimi Hendrix.</English>
+		<Italian>Il festival della musica e dell'arte di Woodstock fu tenuto dal 15 al 18 agosto del 1969, in una fattoria dello stato di New York a poche miglia dalla cittadina di Woodstock. Durante i 4 giorni del festival, più di 32 artisti si esibirono di fronte a 500000 spettatori. Fu uno dei più grandi festival rock di tutti i tempi e uno dei più grandi eventi della contestazione giovanile degli anni '60. Alcune delle star più famose del rock si esibirono a Woodstock, inclusi Arlo Guthrie, Joan Baez, the Grateful Dead, Creedence Clearwater Revival, Janis Joplin, The Who, The Band, Crosby, Stills, Nash &amp; Young e infine Jimi Hendrix.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_SUMMER_OF_LOVE</Tag>
+		<English>The Summer of Love has begun in the city of %s2 as the Woodstock Music Festival is held there.</English>
+		<French>L'été de l'Amour a commencé dans la ville de %s2, représenté par le Festival de Musique de Wookstock</French>
+		<Italian>La Summer of Love è iniziata a %s2 dove si tiene il festival di Woodstock.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_SUMMER_OF_LOVE</Tag>
+		<English>The Age of Aquarius has begun with the Summer of Love! Artists, students, and radicals of all kinds are turning on, tuning in, and dropping out.</English>
+		<French>L'Age du Verseau a commencé avec l'été de l'Amour! Artistes, étudiants, et les radicaux de toutes sortes sont sous tension, réglage en, et le décrochage scolaire</French>
+		<Italian>L'era dell'Aquarius è iniziata con la Summer of Love! Artisti, studenti e radicali di ogni tipo si stanno recando lì per divertirsi.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_SUMMER_OF_LOVE_1</Tag>
+		<English>Like, far out, man, but what will the squares think?</English>
+		<French>Waouh, épatant, but que vont penser les ringards coincés?</French>
+		<Italian>Wow, grande, ma cosa ne penserà la gente?</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_SUMMER_OF_LOVE_OTHER_1</Tag>
+		<English>The Summer of Love has begun in the %s1_civ_adjective Empire.</English>
+		<French>L'été de l'Amour a commencé dans l'Empire %s1_civ_adjective.</French>
+		<Italian>La Summer of Love è iniziata nell'impero %s1_civ_adjective.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_YASNAYA_POLYANA</Tag>
+		<English>Yasnaya Polyana</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_YASNAYA_POLYANA_STRATEGY</Tag>
+		<English>Yasnaya Polyana grants the city it is in 1 free Artist specialist for every 3 Farms in the city's radius.</English>
+		<French>[COLOR_BUILDING_TEXT]Yasnaya Polyana[COLOR_REVERT] donne à votre ville un spécialiste Artiste gratuit, pour chaque 3 fermes présentes aux alentours.</French>
+		<Italian>Yasnaya Polyana fornisce alla città in cui è costruita uno specialista Artista ogni 3 fattorie nel raggio cittadino.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_YASNAYA_POLYANA_PEDIA</Tag>
+		<English>Yasnaya Polyana, or "Bright Glade" in English, was the home and estate of Leo Tolstoy. This home, 200 kilometers from Moscow, was where Tolstoy was born, lived, and wrote his greatest works. One wing of the estate was used as a school for the children of the peasants living on the estate. After his death, the home and grounds became a museum dedicated to Tolstoy's life and works.</English>
+		<Italian>Yasnaya Polyana era la residenza di Leo Tolstoy. Questa casa, a 200 km da Mosca, era la casa natale di Toltstoy, dove l'artista era cresciuto ed aveva scritto i suoi più grandi capolavori. Un'ala della residenza era utilizzata come scuola per i figli dei servitori che lavoravano nella tenuta. Dopo la morte dell'arrista la tenuta divenne un museo dedicato alla vita e ai lavori di Tolstoy.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ZURICH_ORBITAL</Tag>
+		<English>Zurich-Orbital</English>
+		<Italian>Orbitale di Zurigo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ZURICH_ORBITAL_PEDIA</Tag>
+		<English>Zurich-Orbital is a corporate space station. A natural extension of the Swiss banking industry, Zurich-Orbital offers 100% guaranteed safe, secure storage of even the most valuable assets and information.</English>
+		<Italian>L'Orbitale di Zurigo è una stazione spaziale di proprietà di una corporazione. Una estensione naturale dell'industria bancaria svizzera, l'Orbitale di Zurigo fornisce un deposito garantito e sicuro al 100% per gli oggetti e le informazioni più importanti.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ZURICH_ORBITAL_STRATEGY</Tag>
+		<English>Build Zurich-Orbital to increase your gold and espionage production, as well as allowing you to build Zurich-Orbital Uplink.</English>
+		<Italian>Costruisci l'Orbitale di Zurigo per incrementare la tua produzione di oro e spionaggio, oltre a poter costruire l'Uplink dell'Orbitale di Zurigo.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ZURICH_ORBITAL_UPLINK</Tag>
+		<English>Zurich-Orbital Uplink</English>
+		<French>Liaison vers Zurich-Orbital</French>
+		<Italian>Uplink dell'Orbitale di Zurigo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ZURICH_ORBITAL_UPLINK_PEDIA</Tag>
+		<English>Zurich-Orbital Uplinks offer secure communications with the facility of Zurich-Orbital. These uplinks are the only assured way to transmit information safely to the station.</English>
+		<Italian>Gli Uplink dell'orbitale di Zurigo offrono comunicazioni sicure con l'Orbitale di Zurigo. Questi uplink sono l'unico mezzo sicuro per trasmettere informazioni alla stazione orbitale.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ZURICH_ORBITAL_UPLINK_STRATEGY</Tag>
+		<English>Zurich-Orbital Uplink increases your gold and espionage production, and protects your cities against enemy spies.</English>
+		<Italian>Gli uplink dell'Orbitale di Zurigo proteggono la tua produzione di oro e spionaggio, proteggendo le tue città dalle spie nemiche.</Italian>
+	</TEXT>
+</Civ4GameText>

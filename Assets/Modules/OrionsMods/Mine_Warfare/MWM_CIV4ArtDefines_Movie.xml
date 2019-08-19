@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jon Shafer (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Bonus/Resource art path information -->
+<Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
+	<MovieArtInfos>
+		<!-- Mine Warfare Mod -->
+		<!-- Movie Naval Mine Explosion -->
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ADVANCED_MINE_TECHNOLOGY_CENTER</Type>
+			<Path>Art/Movies/Mine_Tech_Center/Mine_Explosion.bik</Path>
+		</MovieArtInfo>
+		<!-- End Mine Warfare Mod -->
+	</MovieArtInfos>
+</Civ4ArtDefines>

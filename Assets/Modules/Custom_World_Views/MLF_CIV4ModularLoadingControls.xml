@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Master Load File -->
+<!-- -->
+<Civ4ModularLoadControls xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Xml\Schema\Caveman2Cosmos.xsd">
+	<DefaultConfiguration>Custom_World_Views</DefaultConfiguration>
+	<ConfigurationInfos>
+		<ConfigurationInfo>
+			<Type>Custom_World_Views</Type>
+			<Description>Active World Views</Description>
+			<Modules>
+				<Module>
+					<Directory>Cannibalism</Directory>
+					<bLoad>1</bLoad>
+				</Module>
+				<Module>
+					<Directory>Human_Sacrifice</Directory>
+					<bLoad>1</bLoad>
+				</Module>
+				<Module>
+					<Directory>Slavery</Directory>
+					<bLoad>1</bLoad>
+				</Module>
+			</Modules>
+		</ConfigurationInfo>
+	</ConfigurationInfos>
+</Civ4ModularLoadControls>

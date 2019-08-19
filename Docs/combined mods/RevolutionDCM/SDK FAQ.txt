@@ -1,0 +1,25 @@
+[B]New SDK features[/B] - Updated 6/20/08
+
+Revolution includes a large number of changes to the SDK from several different sources.  These changes include tweaks to the AI both in general and for Revolution, Revolution specific gameplay tweaks, plus many new functions exposed to Python.  There is an evolving list of the exposed Python functions in the Revolution sub-forum at CFC, if you don't see an explanation for what you're looking for then post there.
+
+1.  Where can I get the SDK sources?
+
+They are available from CFC.
+
+2.  Do I need to do anything with them to play the mod?
+
+Nope!  They are there to allow other modders to merge this mod with other SDK mods, or for people to inspect the inner workings of this mod.
+
+3.  Speaking of merging, how might I do that?
+
+All additions to the SDK code are delinated using the WOC comment style.  Changes fall into three categories:
+AI_AUTO_PLAY_MOD - Small set of changes for the AIAutoPlay mod.
+
+REVOLUTION_MOD - Covers the vast majority of changes including many new function which are exposed to Python plus Revolution specific AI or gamplay changes.
+
+BETTER_BTS_AI_MOD - AI customization which is not Revolution specific
+
+
+To find changes, search for the appropriate string.  Each change is also marked with a date of last change which are usually correct plus who wrote the code (jdog5000, DPII, ocitalis, mrgenie, etc).
+
+In addition there are several other labels used in these comments, particularly for Revolution changes, to specify what they apply to.  Examples inlcude "Revolution AI", "DynamicCivNames", "BarbarianCiv", and "Minor civs".

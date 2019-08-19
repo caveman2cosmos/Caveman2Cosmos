@@ -1,0 +1,233 @@
+/********************************************************************** 
+
+Filename	:	Civ4Theme_Panel.thm
+Content		:	Civ4 - GPanel control theme
+Created		:	May 1, 2005
+Authors		:	Sven Dixon
+
+Copyright	:	(c) 2005 Scaleform Corp. All Rights Reserved.
+
+**********************************************************************/
+
+
+// *** Main Panel control namespace 
+
+with GFC_Control_Panel
+{
+	GFC_Control_DefaultPanel_Style
+	{
+		GFC_Control_Renderer_Control		=	GFC_CtrlTheme_Bitmap_Control_Panel_Renderer_Control;
+
+		.Child_Border						=	GFC_CtrlTheme_Bitmap_Control_Panel_Child_Border;
+
+		.StyleId_Border			=	GPropertyId(GFC_Control_StandardBorder_Style);
+
+		with GFC_Control_Flag
+		{
+			// Base control flags
+			.Transparent					=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+			.SolidInner						=	0;	//GFlags(GCtrl, GFC_CF_SOLIDINNER);
+			.SolidBackground				=	0;	//GFlags(GCtrl, GFC_CF_SOLIDBACKGROUND);
+			.RegionClip						=	0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP);
+			.RegionClipParent				=	0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+			.NoExternalWindow				=	0;	//GFlags(GCtrl, GFC_CF_NOEXTERNALWINDOW);
+			.HitTest						=	GFlags(GCtrl, GFC_CF_HITTEST);
+			.TopLayer						=	0;	//GFlags(GCtrl, GFC_CF_TOPLAYER);
+			.TopLayerBitmap					=	0;	//GFlags(GCtrl, GFC_CF_TOPLAYERBITMAP);
+			.BottomLayerBitmap				=	0;	//GFlags(GCtrl, GFC_CF_BOTTOMLAYERBITMAP);
+			// Control flag change masks
+			.Mask_InvalidateControl			=	GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		}
+		with .Flag
+		{// Panel flags
+			.NoBorder						=	0;	//GFlags(GPanelCtrl, GFC_CF_PANEL_NOBORDER);
+			.Title_Crop						=	GFlags(GPanelCtrl, GFC_CF_PANEL_TITLE_CROP_WORD);
+			.Title_CropDotted				=	GFlags(GPanelCtrl, GFC_CF_PANEL_TITLE_CROP_DOTTED);
+			.Title_Just						=	GFlags(GPanelCtrl, GFC_CF_PANEL_TITLE_JUST_BEGIN);
+			.Title_Loc						=	GFlags(GPanelCtrl, GFC_CF_PANEL_TITLE_LOC_TOP);
+			.Title_Pos						=	GFlags(GPanelCtrl, GFC_CF_PANEL_TITLE_POS_CENTER);
+			.NoInnerFill					=	GFlags(GPanelCtrl, GFC_CF_PANEL_NOINNERFILL);
+		}
+		with .Size
+		{
+			.Default							=	GSize(0,0);
+		}
+		with .Color
+		{
+			.Inner								=	GFC_Control_Color_Surface;
+		}
+		with .Combine
+		{
+			.Inner								=	GFC_Control_Combine_Surface;
+		}
+		// ******* Initialize all the Bitmap theme Panel properties to avoid inheritance problems
+		with GFC_CtrlTheme_Bitmap_Control_Panel_Skin
+		{
+			.Inner_Default						=	0;
+			.Inner_Disable						=	0;
+			.Inner_Winoff						=	0;
+			.Inner_WinoffDisable				=	0;
+		}
+		map GFC_Control			=	GFC_Control_DefaultControl_Style;
+	}// end GFC_Control_DefaultPanel_Style
+
+	// ** Normal panel style
+	GFC_Control_StandardPanel_Style
+	{
+		map GFC_CtrlTheme_Bitmap_Control_Panel		=	GFC_Control_DefaultPanel_Style;
+		map GFC_Control								=	GFC_Control_DefaultPanel_Style;
+	}
+
+	// ** In style
+	GFC_Control_InPanel_Style
+	{
+		.StyleId_Border			=	GPropertyId(GFC_Control_InBorder_Style);
+		.Flag_NoInnerFill		=	0;
+		
+		with GFC_CtrlTheme_Bitmap_Control_Panel_Skin_Inner
+		{
+			.Default
+			{
+				layer {
+					LayerFlags		= 	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
+					DestCombine		= 	GColorCombine(BlendSource,Disable);
+					Image			= 	GBitmap("../../../../Resource/Civ4/black_25.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= 	GRectMargin(0,0,0,0);
+				}
+			}
+			.Disable				=	.Default;
+			.Winoff					=	.Default;
+			.WinoffDisable			=	.Winoff;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Panel		=	GFC_Control_DefaultPanel_Style;
+		map GFC_Control								=	GFC_Control_DefaultPanel_Style;
+	}
+
+	// ** Out style
+	GFC_Control_OutPanel_Style
+	{
+		.StyleId_Border			=	GPropertyId(GFC_Control_OutBorder_Style);
+
+		map GFC_CtrlTheme_Bitmap_Control_Panel		=	GFC_Control_DefaultPanel_Style;
+		map GFC_Control								=	GFC_Control_DefaultPanel_Style;
+	}
+
+	// ** Flat style
+	GFC_Control_FlatPanel_Style
+	{
+		.StyleId_Border			=	GPropertyId(GFC_Control_FlatBorder_Style);
+		.Flag_NoInnerFill		=	0;
+
+		with GFC_CtrlTheme_Bitmap_Control_Panel_Skin_Inner
+		{
+			.Default
+			{
+				layer {
+					LayerFlags		= 	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
+					DestCombine		= 	GColorCombine(BlendSource,Disable);
+					Image			= 	GBitmap("../../../../Resource/Civ4/black_25.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= 	GRectMargin(0,0,0,0);
+				}
+			}
+			.Disable				=	.Default;
+			.Winoff					=	.Default;
+			.WinoffDisable			=	.Winoff;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Panel		=	GFC_Control_DefaultPanel_Style;
+		map GFC_Control								=	GFC_Control_DefaultPanel_Style;
+	}
+
+	// ** Solid style
+	style SF_CtrlTheme_Civ4_Panel_SolidBorder_Style
+	{
+		GFC_Control_Border_Color_Inner				=	GFC_Control_SolidPanel_Style[GFC_Control_Panel_Color_Inner];
+		GFC_Control_Border_Combine_Inner			=	GFC_Control_SolidPanel_Style[GFC_Control_Panel_Combine_Inner];
+
+		map GFC_CtrlTheme_Bitmap_Control_Border		=	GFC_Control_SolidBorder_Style;
+		map GFC_Control								=	GFC_Control_SolidBorder_Style;
+	}
+
+	GFC_Control_SolidPanel_Style
+	{
+		.StyleId_Border			=	GPropertyId(SF_CtrlTheme_Civ4_Panel_SolidBorder_Style);
+		.Flag_NoInnerFill		=	0;
+
+		map GFC_CtrlTheme_Bitmap_Control_Panel		=	GFC_Control_DefaultPanel_Style;
+		map GFC_Control								=	GFC_Control_DefaultPanel_Style;
+	}
+
+	// ** Empty style
+	GFC_Control_EmptyPanel_Style
+	{
+		.StyleId_Border			=	GPropertyId(GFC_Control_EmptyBorder_Style);
+
+		map GFC_CtrlTheme_Bitmap_Control_Panel		=	GFC_Control_DefaultPanel_Style;
+		map GFC_Control								=	GFC_Control_DefaultPanel_Style;
+	}
+
+	// ** External style
+	style SF_CtrlTheme_Civ4_Panel_ExternalBorderLabel_Style	
+	{
+		GFC_Control_Color_Background				=	GFC_Control_ExternalBorder_Style[GFC_Control_Border_Color_Inner];
+		GFC_Control_Combine_Background				=	GFC_Control_ExternalBorder_Style[GFC_Control_Border_Combine_Inner];
+
+		map GFC_CtrlTheme_Bitmap_Control_Label		=	SF_CtrlTheme_Civ4_Control_Label_External_Style;
+		map GFC_Control								=	SF_CtrlTheme_Civ4_Control_Label_External_Style;
+	}
+
+	style SF_CtrlTheme_Civ4_Panel_ExternalBorder_Style
+	{
+		GFC_Control_Border_Color_Inner				=	GFC_Control_ExternalPanel_Style[GFC_Control_Panel_Color_Inner];
+		GFC_Control_Border_Combine_Inner			=	GFC_Control_ExternalPanel_Style[GFC_Control_Panel_Combine_Inner];
+		GFC_Control_Border_StyleId_Title_Center		=	GPropertyId(SF_CtrlTheme_Civ4_Panel_ExternalBorderLabel_Style);
+
+		map GFC_CtrlTheme_Bitmap_Control_Border		=	GFC_Control_ExternalBorder_Style;
+		map GFC_Control								=	GFC_Control_ExternalBorder_Style;
+	}
+
+	GFC_Control_ExternalPanel_Style
+	{
+		.StyleId_Border			=	GPropertyId(SF_CtrlTheme_Civ4_Panel_ExternalBorder_Style);
+		.Flag_NoInnerFill		=	0;
+		
+		with GFC_CtrlTheme_Bitmap_Control_Panel_Skin_Inner
+		{
+			.Default
+			{
+				layer
+				{
+					LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
+					CenterColor		=	SF_CtrlTheme_Civ4_Control_Color_BG;
+				}
+				layer {
+					LayerFlags		= 	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
+					DestCombine		= 	GColorCombine(BlendSource,Disable);
+					FactorCombine	= 	GColorCombine(Modulate,Source);
+					FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;
+					Image			= 	GBitmap("../../../../Resource/Civ4/panel_bg.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= 	GRectMargin(0,0,0,0);
+				}
+			}
+			.Disable				=	.Default;
+			.Winoff					=	.Default;
+			.WinoffDisable			=	.Winoff;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Panel		=	GFC_Control_DefaultPanel_Style;
+		map GFC_Control								=	GFC_Control_DefaultPanel_Style;
+	}
+
+	// Bottom StatusBar panel style for in game and map editor.
+	GFC_Control_StatusBarPanel_Style
+	{
+		.StyleId_Border			=	GPropertyId(GFC_Control_StandardBorder_Style);
+		.Size_Default			=	GSize(0,28);
+
+		with GFC_Control_StatusBarLayout_Size
+		{
+			.Spacing			=	4;
+			.OuterMargin		=	GRectMargin(4,2,4,2);
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Panel		=	GFC_Control_DefaultPanel_Style;
+		map GFC_Control								=	GFC_Control_DefaultPanel_Style;
+	}
+}

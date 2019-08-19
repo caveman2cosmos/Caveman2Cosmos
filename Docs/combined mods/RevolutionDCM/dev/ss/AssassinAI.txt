@@ -1,0 +1,95 @@
+10:23 AM 7/10/2008
+
+XML changes:
+CIV4EspionageMissionInfo:
+	<iCityPoisonWaterCounter>5</iCityPoisonWaterCounter>
+
+OUTSTANDING ISSUES:
+	Remove the SS assassination icon altogether (can only remove SDK references. CIV4MissionInfos has to stay for new game and assassinate.dds has to stay generally)
+	Could be some issue with Fassert message at new game start with CvSelectionGroup possibly an extra break; in a case switch statement.
+	Final testing
+	
+AI ESPIONAGE DECISION TREE (prototype):
+	if not in a big espionage plan and if considering a war, or otherwise if generally annoyed:
+		- 05destroy improvement (10, 2, 60, 2, 10, 18, 36, 1, 20, 20, 10, 7, 13, 21, 1, 20, 7, 36, 1, 10, 9, 5)
+		- bribe
+	if in a city:
+		if annoyed:
+			if not in a big espionage plan:
+				- 06destroy building (27, 99, 106, 136, 6, 2, 45, 525, 113, 160, 225, 153, 136, 265, 161, 174, 208, 158)
+			- destroy project
+			if not in a big espionage plan:
+				- 11poisonings (256 [iAverageUnhealth=4,11,12,8], 64, 704, 768, 512 )
+				- 08destroy production (8, 11, 27, 33, 105, 10, 90, 41, 54, 137)
+				- steal treasury RIP (AIespionageVal always -ve because iData from CvUnitAI is always -1)
+			if at war:
+				- 13incite revolt (45, )
+				- anarchy RIP 
+			- assassinate
+		if annoyed, have memory and counter espionage points run out:
+			- 17counter espionage (104, 108, 112, 104, 106, 106, 108, 106, 105)
+		- 14steal technology (10940, 180, 720, 780)
+		
+AI ESPIONAGE DECISION TREE (test1):
+	if not in a big espionage plan and if considering a war, or otherwise if generally annoyed:
+		- 05destroy improvement (2, 4, 18, 2, 2, 2, 10, 16, 18, 2, 18, 18, 9, 2, 18,  )
+		- 19bribe (100, 100, )
+	if in a city:
+		if annoyed:
+			if not in a big espionage plan:
+				- 06destroy building (58, 5, 122, 107)
+			- destroy project
+			if not in a big espionage plan:
+				- 11poisonings (120, 80, 120, 200, 160, 320, 120)
+				- 08destroy production (3, 5, 4, 3, )
+				- steal treasury RIP (AIespionageVal always -ve because iData from CvUnitAI is always -1)
+			if at war:
+				- 13incite revolt ()
+				- anarchy RIP 
+			- 18assassinate (1000 4 32771 AD1765, 1000 0 8192 AD1870, )
+		if annoyed, have memory and counter espionage points run out:
+			- 17counter espionage ()
+		- 14steal technology (580, 1040, 520, 10060 owner 2 AD1)
+			
+
+Adding the Assassin mission to the AI:
+
+The mission itself for example MISSION_ESPIONAGE or MISSION_ASSASSINATE, 
+can be assigned from the user interface or pushed. 
+In all these cases, CvSelectionGroup allocates the mission code to execute.
+Sometimes, the AI code executes mission code independently of CvSelectionGroup....
+
+- Add the assassination mission to the XML file CIV4EspionageMissionInfo.xml
+	- Create new mission ESPIONAGEMISSION_ASSASSINATE
+		- make destroyUnitCostFactor > 0
+	- Create new mission ESPIONAGEMISSION_BRIBE
+		- make BuyUnitCostFactor > 0
+
+- CvUnitAI::AI_spyMove() triggers CvUnit:espionage() via a spy unit:
+	- calls AI_espionageSpy if spy is on foreign soil
+		- calls CvPlayerAI:AI_bestPlotEspionage
+			- Assign the intention to perform some espionage
+			- Program an assassination weight into CvPlayerAI::AI_espionageVal
+			- Add the assassination mission to CvPlayerAI::AI_bestPlotEspionage
+		- calls CvPlayer::canDoEspionage and asks if there are enough points etc
+		- calls CvUnit::espionage and does the espionage:
+			- Execute the mission in CvPlayer::doEspionageMission
+				- MODIFY espionage mission cost at CvPlayer::getEspionageMissionCost
+					- MODIFY espionage mission cost at CvPlayer::getEspionageMissionBaseCost
+					- CvPlayer::getEspionageMissionCostModifier adds espionage context costs
+			- Execute similar code to CvUnit::assassin
+		- conduct espionage activities like intercept
+	- calls CvUnitAI::AI_guardSpy(0%) search for the best city to guard and go there.
+	- calls AI_bonusOffenseSpy(3Maxpath) search the path for the best HOME plot using AI_getEspionageTargetValue and go there
+	- calls AI_cityOffenseSpy(10range) search for other players cities (valid pLoopCity->area() == area()) using AI_getEspionageTargetValue and go there
+	- calls CvUnitAI::AI_reconSpy(3range) search for any plots that have not been revealed or are not visible and go there
+	- calls AI_cityOffenseSpy(10range)
+	- calls AI_retreatToCity
+	- calls AI_safety
+	
+- Add the user interface to the new missions in CvDLLButtonPopup.cpp::launchEspionageDoTargetPopup()
+
+There is distinct possibility that CvUnit::assassin() does not program in the chance of a negative diplomatic hit on the assassinator's origin nation.
+Reduce the AI's use of city poisoning
+
+The game help text needs to be changed for destroy unit cost factor at CvGameTextMgr::setEspionageCostHelp

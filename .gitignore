@@ -6,3 +6,8 @@
 
 # Compiled Dynamic libraries
 *.dll
+*.pdb
+*.FPK
+Assets/fpklive_token.txt
+!/Tools/*.dll
+XmlValidator.log

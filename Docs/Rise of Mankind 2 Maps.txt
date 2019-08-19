@@ -1,0 +1,121 @@
+All these maps require Rise of Mankind 2.x. Maps are previously released for Beyond the Sword by other modders, I've just modified them to Rise of Mankind settings by changing starting techs, starting civis and added new resources to map - no other changes have been made.
+
+
+Install instructions
+--------------------
+
+Unzip to folder '..\Mods\Rise of Mankind\PublicMaps'
+
+Choose Custom Scenario when you want to use one of these maps.
+
+Maps
+----
+
+RiseOfMankind2.3Earth28Civ
+
+- huge Earth map
+- 28 preset Civs
+- resources adjusted for Rise of Mankind 2.3
+- requires Rise of Mankind 2.3
+
+
+
+RiseOfMankind2.3EarthStd12Civs
+
+- Standard size (84x52) Earth map 
+- 12 preset civs, 8 of them in old world and 4 in new world
+- requires Rise of Mankind v2.3
+- Credits to Munch, vladstrutzu and Tacy for original map file
+
+
+
+RiseOfMankind2.3EarthStd12Civs
+
+- same as above but with 23 preset civs
+
+
+
+RiseOfMankind2.3Earth_IceAge
+
+- modified Civ 4 Ice Age scenario, settings modified for Rise of Mankind
+- start year 18 000BC
+- 14 preset civs
+- huge size map, 124x68
+
+
+RiseOfMankind2.3Americas
+
+- Huge size map (58x72) of North and South America
+- No preset Civilizations
+- Resources adjusted for Rise of Mankind v2.3
+- Credits to Reveilled for original map file
+- Original map's discussion thread: http://forums.civfanatics.com/showthread.php?t=146807
+
+
+
+RiseOfMankind2.3Mediterranean
+
+- Mediterranean Standard size map (64x44)
+- 10 preset Civs
+- requires Rise of Mankind v2.3
+- Resources adjusted for Rise of Mankind v2.3
+- Added couple new Civs that weren't in original map: England, Iberian (Spain), Germany and Hittite
+- Credits to el_hidalgo for original map file
+- original map's discussion thread: http://forums.civfanatics.com/showthread.php?t=272606
+
+
+
+RiseOfMankind2.3NewZealand
+
+- New Zealand Huge size map (79x99)
+- No preset Civs
+- Credits to CMKMStephens for making and tweaking the map for Rise of Mankind 2
+
+
+RiseOfMankind2.3Demographica
+
+- a Huge Mediterranean map (100x73)
+- 17 preset Civs
+- Rise of Mankind v2.3 resources added
+
+... more maps will be included to this package once I or some other modders get them converted to Rise of Mankind 2.x.
+
+
+Version history
+---------------
+
+Version 0.5
+
+- Added: Ice Age map from Civ 4
+- Added: Demographica
+- Fixed: Previous maps converted to RoM 2.3 settings
+
+
+Version 0.4
+
+- Added: CMKMStephens' New Zealand map
+
+Version 0.3
+
+- Fixed: Removed some revealed map sections and units that was left on the Colonization map when I was adding some new Rise of Mankind resources
+
+- Added: Mediterranean map
+
+Version 0.2
+
+- Added: Colonization of Americas map, huge size
+
+Version 0.1
+
+- Added: Earth 12 Civ Preset Standard size map
+
+
+
+
+
+Contact info
+------------
+
+Zappara at Civfanatics forum
+
+Rise of Mankind forum at http://forums.civfanatics.com/forumdisplay.php?f=269
