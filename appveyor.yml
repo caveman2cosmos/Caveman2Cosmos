@@ -28,7 +28,13 @@ test_script:
 
 #     echo %secure_test%
 deploy_script:
-- cmd: call "%APPVEYOR_BUILD_FOLDER%\Tools\CI\DeployBuild.bat"
+- cmd: >-
+    if "%APPVEYOR_REPO_BRANCH%" neq "release" exit /b 0
+
+    if "%APPVEYOR_PULL_REQUEST_TITLE%" neq "" exit /b 0
+
+    call "%APPVEYOR_BUILD_FOLDER%\Tools\CI\DeployBuild.bat"
+
 
 # DISABLED: this doesn't work, unauthorized
 # deploy:
