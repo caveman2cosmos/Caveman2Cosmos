@@ -57,10 +57,12 @@ UnitGroupingFilters::~UnitGroupingFilters()
 }
 
 UnitGroupingList::UnitGroupingList(CvPlayer *pPlayer, CvCity *pCity)
+	: m_apUnitGrouping()
+	, m_pCity(pCity)
+	, m_pPlayer(pPlayer)
+	, m_eActiveGrouping(NO_UNIT_GROUPING)
+	, m_bInit(false)
 {
-	m_bInit = false;
-	m_pPlayer = pPlayer;
-	m_pCity = pCity;
 	if ((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_WORKER", true) >= 0)
 	{
 		init();
@@ -69,9 +71,12 @@ UnitGroupingList::UnitGroupingList(CvPlayer *pPlayer, CvCity *pCity)
 
 UnitGroupingList::~UnitGroupingList()
 {
-	for (int i = 0; i < NUM_UNIT_GROUPING; i++)
+	if (m_bInit)
 	{
-		delete m_apUnitGrouping[i];
+		for (int i = 0; i < NUM_UNIT_GROUPING; i++)
+		{
+			delete m_apUnitGrouping[i];
+		}
 	}
 }
 

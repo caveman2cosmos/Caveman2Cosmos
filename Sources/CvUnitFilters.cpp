@@ -88,10 +88,11 @@ bool UnitFilterIsDefense::isFilteredUnit(CvPlayer *pPlayer, CvCity *pCity, UnitT
 }
 
 UnitFilterList::UnitFilterList(CvPlayer *pPlayer, CvCity *pCity)
+	: m_apUnitFilters()
+	, m_pCity(pCity)
+	, m_pPlayer(pPlayer)
+	, m_bInit(false)
 {
-	m_bInit = false;
-	m_pPlayer = pPlayer;
-	m_pCity = pCity;
 	if ((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_WORKER", true) >= 0)
 	{
 		init();
@@ -100,9 +101,12 @@ UnitFilterList::UnitFilterList(CvPlayer *pPlayer, CvCity *pCity)
 
 UnitFilterList::~UnitFilterList()
 {
-	for (int i = 0; i < NUM_UNIT_FILTERS; i++)
+	if(m_bInit)
 	{
-		delete m_apUnitFilters[i];
+		for (int i = 0; i < NUM_UNIT_FILTERS; i++)
+		{
+			delete m_apUnitFilters[i];
+		}
 	}
 }
 

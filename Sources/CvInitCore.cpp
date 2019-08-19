@@ -1993,7 +1993,7 @@ void CvInitCore::read(FDataStreamBase* pStream)
 	if (m_svnRev == -1)
 	{
 		WRAPPER_READ_STRING_DECORATED(wrapper, "CvInitCore", m_gitSHA, "m_gitSHA");
-		OutputDebugString(CvString::format("Git commit of save is %s\n", m_gitSHA).c_str());
+		OutputDebugString(CvString::format("Git commit of save is %s\n", m_gitSHA.c_str()).c_str());
 	}
 
 	//	Asset checksum of the build that did the save
@@ -2306,7 +2306,7 @@ void CvInitCore::write(FDataStreamBase* pStream)
 	//	record -1 as default SVN rev
 	WRAPPER_WRITE_DECORATED(wrapper, "CvInitCore", (int)-1, "m_svnRev");
 	//	record the Git commit of the build doing the save
-	WRAPPER_WRITE_STRING_DECORATED(wrapper, "CvInitCore", build_git_sha, "m_gitSHA");
+	WRAPPER_WRITE_STRING_DECORATED(wrapper, "CvInitCore", std::string(build_git_sha), "m_gitSHA");
 	// record the asset checksum of the build doing the save
 	WRAPPER_WRITE_DECORATED(wrapper, "CvInitCore", m_uiAssetCheckSum, "m_uiSavegameAssetCheckSum");
 
