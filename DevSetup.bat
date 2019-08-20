@@ -12,8 +12,8 @@ echo.
 pause
 
 PUSHD "."
+call "%~dp0\Tools\Install.bat"
 call "%~dp0\Tools\_MakeDLL.bat" build Assert
-call "%~dp0\Tools\MakeDLLAssert.bat"
 POPD
 
 echo.
