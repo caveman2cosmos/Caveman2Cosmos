@@ -14,7 +14,7 @@ environment:
 
 build_script:
 - cmd: >-
-    call git whatchanged --pretty=%at .\Sources
+    call git whatchanged --pretty=format:%at .\Sources
     
     call "%APPVEYOR_BUILD_FOLDER%\Tools\CI\fix_sources_timestamps.ps1"
 
