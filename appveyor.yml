@@ -14,10 +14,8 @@ environment:
 
 build_script:
 - cmd: >-
-    call git whatchanged --pretty=format:%at .\Sources
+    call Powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%APPVEYOR_BUILD_FOLDER%\Tools\CI\fix_sources_timestamps.ps1"
     
-    call "%APPVEYOR_BUILD_FOLDER%\Tools\CI\fix_sources_timestamps.ps1"
-
     call "%APPVEYOR_BUILD_FOLDER%\Tools\_MakeDLL.bat" build Debug
 
     call "%APPVEYOR_BUILD_FOLDER%\Tools\MakeDLLRelease.bat"
