@@ -1,4 +1,4 @@
-[string[]]$changes = &git whatchanged --pretty=format:%at ..\..\Sources
+[string[]]$changes = &git whatchanged --pretty=format:%at .\Sources
 $mtime = [DateTime]::Now;
 [string]$change = $null;
 foreach($change in $changes)
