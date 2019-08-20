@@ -11,13 +11,13 @@ echo.
 
 pause
 
-PUSHD "%~dp0"
-call Tools\Install.bat
-call Tools\MakeDLLAssert.bat
+PUSHD "."
+call "%~dp0\Tools\_MakeDLL.bat" build Assert
+call "%~dp0\Tools\MakeDLLAssert.bat"
 POPD
 
 echo.
 echo.
 echo.
-echo **** Dev Setup complete, you can run the Mod now! ****
+echo **** Dev Setup complete, you can run the Mod now using LaunchC2C.bat or your prefered method! ****
 pause
