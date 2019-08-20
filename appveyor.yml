@@ -1,5 +1,8 @@
 version: 40.0.{build}
 image: Visual Studio 2019
+cache:
+- Sources\temp_files\Debug -> Tools\deps.exe, Sources\makefile, appveyor.yml
+- Sources\temp_files\Release -> Tools\deps.exe, Sources\makefile, appveyor.yml
 
 environment:
   svn_url: https://svn.code.sf.net/p/caveman2cosmos/code/branches/billw-git
@@ -11,9 +14,11 @@ environment:
 
 build_script:
 - cmd: >-
-    call "%APPVEYOR_BUILD_FOLDER%\Tools\MakeDLLDebug.bat"
+    call Powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%APPVEYOR_BUILD_FOLDER%\Tools\CI\fix_sources_timestamps.ps1"
+    
+    call "%APPVEYOR_BUILD_FOLDER%\Tools\_MakeDLL.bat" build Debug
 
-    call "%APPVEYOR_BUILD_FOLDER%\Tools\MakeDLLRelease.bat"
+    call "%APPVEYOR_BUILD_FOLDER%\Tools\_MakeDLL.bat" build Release
 
 test_script:
 - cmd: >-
@@ -30,7 +35,6 @@ test_script:
 deploy_script:
 - cmd: >-
     call "%APPVEYOR_BUILD_FOLDER%\Tools\CI\DeployBuild.bat"
-
 
 # DISABLED: this doesn't work, unauthorized
 # deploy:
