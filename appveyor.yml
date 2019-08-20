@@ -36,7 +36,6 @@ deploy_script:
 - cmd: >-
     call "%APPVEYOR_BUILD_FOLDER%\Tools\CI\DeployBuild.bat"
 
-
 # DISABLED: this doesn't work, unauthorized
 # deploy:
 # - provider: GitHub
