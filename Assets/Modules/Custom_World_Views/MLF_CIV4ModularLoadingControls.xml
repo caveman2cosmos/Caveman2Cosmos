@@ -10,15 +10,7 @@
 			<Description>Active World Views</Description>
 			<Modules>
 				<Module>
-					<Directory>Cannibalism</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
 					<Directory>Human_Sacrifice</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
-					<Directory>Slavery</Directory>
 					<bLoad>1</bLoad>
 				</Module>
 			</Modules>

@@ -9,12 +9,13 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_RHINO_TRAINER</BuildingClass>
 			<Type>BUILDING_RHINO_TRAINER</Type>
-			<SpecialBuildingType>NONE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RHINO_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RHINO_TRAINER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_RHINO_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RHINO_TRAINER</ArtDefineTag>			<ObsoleteTech>TECH_ARMORED_CAVALRY</ObsoleteTech>
+			<ArtDefineTag>ART_DEF_BUILDING_RHINO_TRAINER</ArtDefineTag>
+ 		     <MovieDefineTag>ART_DEF_MOVIE_RHINO_TRAINER</MovieDefineTag>
+			<ObsoleteTech>TECH_ARMORED_CAVALRY</ObsoleteTech>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23,7 +24,6 @@
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
-			<fVisibilityPriority>0.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -61,12 +61,12 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_RHINO_TRAINER_HERITAGE</BuildingClass>
 			<Type>BUILDING_RHINO_TRAINER_HERITAGE</Type>
-			<SpecialBuildingType>NONE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_RHINO_TRAINER_HERITAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RHINO_TRAINER_HERITAGE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_RHINO_TRAINER_HERITAGE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RHINO_TRAINER_HERITAGE</ArtDefineTag>			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ArtDefineTag>ART_DEF_BUILDING_RHINO_TRAINER_HERITAGE</ArtDefineTag>
+			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -79,7 +79,6 @@
 			<iConquestProb>0</iConquestProb>
         		<iAsset>4</iAsset>
 			<iPower>2</iPower>
-			<fVisibilityPriority>0.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -114,17 +113,13 @@
 			<Help>TXT_KEY_BUILDING_RHINO_TRAINER_EFFECT_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RHINO_TRAINER_HERITAGE</ArtDefineTag>
-			<PrereqTech>NONE</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
-			<FreeStartEra>NONE</FreeStartEra>
-			<iAIWeight>0</iAIWeight>
 			<iCost>-1</iCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>2</iAsset>
-			<iPower>0</iPower>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -148,11 +143,9 @@
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
-			<iAIWeight>0</iAIWeight>
 			<iCost>-1</iCost>
 			<iConquestProb>25</iConquestProb>
 			<iAsset>2</iAsset>
-			<iPower>0</iPower>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>

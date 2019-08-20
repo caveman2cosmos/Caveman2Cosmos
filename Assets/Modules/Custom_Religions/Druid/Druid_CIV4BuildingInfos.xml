@@ -15,7 +15,6 @@
 			<Strategy>TXT_KEY_BUILDING_DRUID_CATHEDRAL2_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_CATHEDRAL2</ArtDefineTag>
-			<HolyCity>NONE</HolyCity>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
 			<bStateReligion>1</bStateReligion>
@@ -131,7 +130,6 @@
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<FreePromotion>PROMOTION_GUERILLA1</FreePromotion>
-			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>92</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -145,7 +143,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
 			</CommerceModifiers>
-			<ReligionChanges/>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
@@ -176,7 +173,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -218,7 +214,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceModifiers/>
 			<CommerceChangeOriginalOwners>
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
@@ -255,7 +250,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_WHEAT</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -292,7 +286,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_BARLEY</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -329,7 +322,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_CORN</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -366,7 +358,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_RICE</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -403,7 +394,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_POTATO</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -433,23 +423,21 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_SHRINE</BuildingClass>
 			<Type>BUILDING_DRUID_SHRINE</Type>
-			<SpecialBuildingType>NONE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DRUID_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_SHRINE</ArtDefineTag>			<HolyCity>RELIGION_DRUID</HolyCity>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_DRUID</MovieDefineTag>
+			<HolyCity>RELIGION_DRUID</HolyCity>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<GlobalReligionCommerce>RELIGION_DRUID</GlobalReligionCommerce>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iCost>-1</iCost>
-			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>8</iAsset>
-			<iPower>0</iPower>
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -509,7 +497,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<ReligionChanges/>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
@@ -558,7 +545,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_WHEAT</BonusType>
@@ -575,7 +561,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_BARLEY</BuildingClass>
@@ -599,7 +584,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_BARLEY</BonusType>
@@ -616,7 +600,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_CORN</BuildingClass>
@@ -640,7 +623,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_CORN</BonusType>
@@ -657,7 +639,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_RICE</BuildingClass>
@@ -681,7 +662,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_RICE</BonusType>
@@ -698,7 +678,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_POTATO</BuildingClass>
@@ -722,7 +701,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_POTATO</BonusType>
@@ -739,7 +717,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_ALMOND</BuildingClass>
@@ -751,7 +728,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_ALMOND</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -796,7 +772,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_ALMONDS</BonusType>
@@ -813,7 +788,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_APPLE</BuildingClass>
@@ -825,7 +799,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_APPLE</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -870,7 +843,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_APPLE</BonusType>
@@ -887,7 +859,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_BANANA</BuildingClass>
@@ -899,7 +870,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_BANANA</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -944,7 +914,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_BANANA</BonusType>
@@ -961,7 +930,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_COCONUT</BuildingClass>
@@ -973,7 +941,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_COCONUT</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -1018,7 +985,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_COCONUT</BonusType>
@@ -1035,7 +1001,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_DATES</BuildingClass>
@@ -1047,7 +1012,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_DATES</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -1092,7 +1056,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_DATES</BonusType>
@@ -1109,7 +1072,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_FIG</BuildingClass>
@@ -1121,7 +1083,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_FIG</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -1166,7 +1127,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_FIG</BonusType>
@@ -1183,7 +1143,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_GRAPES</BuildingClass>
@@ -1195,7 +1154,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_GRAPES</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -1240,7 +1198,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_WINE</BonusType>
@@ -1257,7 +1214,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_GUAVA</BuildingClass>
@@ -1269,7 +1225,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_GUAVA</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -1314,7 +1269,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_GUAVA</BonusType>
@@ -1331,7 +1285,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_LEMON</BuildingClass>
@@ -1343,7 +1296,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_LEMON</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -1388,7 +1340,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_LEMON</BonusType>
@@ -1405,7 +1356,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_MANGO</BuildingClass>
@@ -1417,7 +1367,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_MANGO</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -1462,7 +1411,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_MANGO</BonusType>
@@ -1479,7 +1427,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_MELON</BuildingClass>
@@ -1491,7 +1438,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_MELON</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -1536,7 +1482,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_MELON</BonusType>
@@ -1553,7 +1498,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_MUSHROOMS</BuildingClass>
@@ -1565,7 +1509,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_MUSHROOMS</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -1610,7 +1553,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_MUSHROOMS</BonusType>
@@ -1627,7 +1569,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_OLIVES</BuildingClass>
@@ -1639,7 +1580,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_OLIVES</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -1684,7 +1624,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_OLIVES</BonusType>
@@ -1701,7 +1640,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_PAPAYA</BuildingClass>
@@ -1713,7 +1651,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_PAPAYA</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -1758,7 +1695,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_PAPAYA</BonusType>
@@ -1775,7 +1711,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_PISTACHIO</BuildingClass>
@@ -1787,7 +1722,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_PISTACHIO</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -1832,7 +1766,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_PISTACHIO</BonusType>
@@ -1849,7 +1782,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_POMEGRANATE</BuildingClass>
@@ -1861,7 +1793,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_POMEGRANATE</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -1906,7 +1837,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_POMEGRANATE</BonusType>
@@ -1923,7 +1853,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_PRICKLY_PEAR</BuildingClass>
@@ -1935,7 +1864,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_PRICKLY_PEAR</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -1980,7 +1908,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_PRICKLY_PEAR</BonusType>
@@ -1997,7 +1924,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_PUMPKIN</BuildingClass>
@@ -2009,7 +1935,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_PUMPKIN</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -2054,7 +1979,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_PUMPKIN</BonusType>
@@ -2071,7 +1995,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_SQUASH</BuildingClass>
@@ -2083,7 +2006,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_SQUASH</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -2128,7 +2050,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_SQUASH</BonusType>
@@ -2145,7 +2066,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_KAVA</BuildingClass>
@@ -2157,7 +2077,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_KAVA</ArtDefineTag>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<StateReligion>RELIGION_DRUID</StateReligion>
-			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
 			<!--ObsoleteTech>TECH_FEUDALISM</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
@@ -2202,7 +2121,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_KAVA</BonusType>
@@ -2219,7 +2137,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<HotKey/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DJENNE</BuildingClass>

@@ -1,4 +1,4 @@
 .FPK
 .dll
 .pdb
-\art\
+\Assets\art\

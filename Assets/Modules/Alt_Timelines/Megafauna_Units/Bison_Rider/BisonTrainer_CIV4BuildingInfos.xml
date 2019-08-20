@@ -9,24 +9,23 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_BISON_TRAINER</BuildingClass>
 			<Type>BUILDING_BISON_TRAINER</Type>
-			<SpecialBuildingType>NONE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_BISON_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BISON_TRAINER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BISON_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BISON_TRAINER</ArtDefineTag>			<ObsoleteTech>TECH_CAVALRY_TACTICS</ObsoleteTech>
+			<ArtDefineTag>ART_DEF_BUILDING_BISON_TRAINER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BISON_TRAINER</MovieDefineTag>
+			<ObsoleteTech>TECH_CAVALRY_TACTICS</ObsoleteTech>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_BISON</Bonus>
-			<iAIWeight>0</iAIWeight>
 			<iCost>588</iCost>
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
-			<fVisibilityPriority>0.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
@@ -90,13 +89,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<FreeBuilding>BUILDINGCLASS_BISON_TRAINER_EFFECT</FreeBuilding>
-			<iAIWeight>0</iAIWeight>
 			<iCost>139</iCost>
 			<iConquestProb>0</iConquestProb>
-			<iMaintenanceModifier>0</iMaintenanceModifier>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
-			<fVisibilityPriority>0.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -130,17 +126,13 @@
 			<Strategy>TXT_KEY_BUILDING_BISON_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BISON_TRAINER_EFFECT</ArtDefineTag>
-			<PrereqTech>NONE</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_CAVALRY_TACTICS</ObsoleteTech>
-			<FreeStartEra>NONE</FreeStartEra>
-			<iAIWeight>0</iAIWeight>
 			<iCost>-1</iCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>2</iAsset>
-			<iPower>0</iPower>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -164,11 +156,9 @@
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
-			<iAIWeight>0</iAIWeight>
 			<iCost>-1</iCost>
 			<iConquestProb>25</iConquestProb>
 			<iAsset>2</iAsset>
-			<iPower>0</iPower>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>

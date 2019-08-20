@@ -847,7 +847,6 @@
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
-			<BuildingClassNeededs/>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -982,7 +981,6 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<bPrereqPower>0</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_GOOD_ATOM</BuildingClass>
@@ -1001,7 +999,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
-			<PrereqBonuses/>
 			<bPower>1</bPower>
 			<iCost>-1</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1011,7 +1008,6 @@
 				<iYield>0</iYield>
 				<iYield>200</iYield>
 			</YieldChanges>
-			<BuildingClassNeededs/>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

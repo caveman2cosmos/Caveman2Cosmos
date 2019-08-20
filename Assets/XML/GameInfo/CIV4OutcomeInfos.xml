@@ -1127,5 +1127,45 @@
 				<BuildingType>BUILDING_SLAVERY</BuildingType>
 			</PrereqBuildings>
 		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_HUMAN_BUTCHERED_CITY</Type>
+			<Description>TXT_KEY_OUTCOME_BUTCHER_CAPTIVE</Description>
+			<Message>TXT_KEY_OUTCOME_BUTCHER_CAPTIVE_MESSAGE</Message>
+			<PrereqTech>NONE</PrereqTech>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_CANNIBALISM</BuildingType>
+			</PrereqBuildings>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_HUMAN_BUTCHERED_CITY_BEST</Type>
+			<Description>TXT_KEY_OUTCOME_BUTCHER_CAPTIVE</Description>
+			<Message>TXT_KEY_OUTCOME_BUTCHER_CAPTIVE_MESSAGE</Message>
+			<PrereqTech>NONE</PrereqTech>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_CANNIBALISM</BuildingType>
+				<BuildingType>BUILDING_BUTCHERY</BuildingType>
+			</PrereqBuildings>
+			<ReplaceOutcomes>
+				<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY</OutcomeType>
+			</ReplaceOutcomes>
+		</OutcomeInfo>
+		<OutcomeInfo>
+			<Type>OUTCOME_REMOVE_WV_CANNIBALISM</Type>
+			<Description>TXT_KEY_OUTCOME_REMOVE_WV_CANNIBALISM</Description>
+			<Message>TXT_KEY_OUTCOME_REMOVE_WV_CANNIBALISM_MESSAGE</Message>
+			<PrereqTech>NONE</PrereqTech>
+			<bNeutralTerritory>0</bNeutralTerritory>
+			<bHostileTerritory>0</bHostileTerritory>
+			<bCity>1</bCity>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_CANNIBALISM</BuildingType>
+			</PrereqBuildings>
+		</OutcomeInfo>
 	</OutcomeInfos>
 </Civ4OutcomeInfos>

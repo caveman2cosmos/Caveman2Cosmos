@@ -222,7 +222,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_SHINTO_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SHINTO_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SHINTO_SHRINE</ArtDefineTag>			<HolyCity>RELIGION_SHINTO</HolyCity>
+			<ArtDefineTag>ART_DEF_BUILDING_SHINTO_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_SHINTO</MovieDefineTag>
+			<HolyCity>RELIGION_SHINTO</HolyCity>
 			<ReligionType>RELIGION_SHINTO</ReligionType>
 			<GlobalReligionCommerce>RELIGION_SHINTO</GlobalReligionCommerce>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
@@ -268,7 +270,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_MATSUMOTO_CASTLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MATSUMOTO_CASTLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MATSUMOTO_CASTLE</ArtDefineTag>			<ReligionType>RELIGION_SHINTO</ReligionType>
+			<ArtDefineTag>ART_DEF_BUILDING_MATSUMOTO_CASTLE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MATSUMOTO_CASTLE</MovieDefineTag>
+			<ReligionType>RELIGION_SHINTO</ReligionType>
 			<StateReligion>RELIGION_SHINTO</StateReligion>
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_SHINTO</PrereqReligion>
@@ -325,7 +329,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_ITSUKUSHIMA_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ITSUKUSHIMA_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ITSUKUSHIMA_SHRINE</ArtDefineTag>			<ReligionType>RELIGION_SHINTO</ReligionType>
+			<ArtDefineTag>ART_DEF_BUILDING_ITSUKUSHIMA_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ITSUKUSHIMA_SHRINE</MovieDefineTag>
+			<ReligionType>RELIGION_SHINTO</ReligionType>
 			<StateReligion>RELIGION_SHINTO</StateReligion>
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_SHINTO</PrereqReligion>

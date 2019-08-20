@@ -211,14 +211,10 @@
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<PrereqOrBuildings>

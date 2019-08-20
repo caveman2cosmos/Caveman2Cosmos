@@ -3014,7 +3014,6 @@
 			<PrereqTech>TECH_CONTROLLED_VACUUM_COLLAPSE</PrereqTech>
 			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes/>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>200</iYield>

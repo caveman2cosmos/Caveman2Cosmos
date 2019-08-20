@@ -6392,7 +6392,9 @@
 			<Strategy>TXT_KEY_BUILDING_NEANDERTHAL_EMBASSY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>			<!-- Prerequisites -->
+			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NEANDERTHAL_EMBASSY</MovieDefineTag>
+			<!-- Prerequisites -->
 			<PrereqTech>TECH_NOMADIC_LIFESTYLE</PrereqTech>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>

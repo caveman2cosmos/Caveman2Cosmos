@@ -35,10 +35,6 @@
 					<bLoad>1</bLoad>
 				</Module>
 				<Module>
-					<Directory>Vokarya</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
 					<Directory>Static</Directory>
 					<bLoad>1</bLoad>
 				</Module>

@@ -225,8 +225,6 @@
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<PrereqBonuses>
@@ -360,8 +358,6 @@
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_GARRISON</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<PrereqBonuses>
@@ -518,8 +514,6 @@
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_POLICE_CAT</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<BonusProductionModifiers>
@@ -704,8 +698,6 @@
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_RE_PET_SHOP</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<BonusProductionModifiers>

@@ -182,7 +182,7 @@ class NaturalWonders:
 			if iTeamX != iTeam:
 				if bFirst and iPlayerX == iPlayerAct:
 					if CyTeam.isHasMet(iTeamX):
-						CvUtil.sendMessage(TRNSLTR.getText("TXT_MET_FIRST_WONDER",(GC.getTeam(iDiscoverTeam).getName(), GC.getFeatureInfo(iFeature).getDescription())), iPlayerX, 12, bForce=False)
+						CvUtil.sendMessage(TRNSLTR.getText("TXT_MET_FIRST_WONDER",(GC.getTeam(iTeam).getName(), GC.getFeatureInfo(iFeature).getDescription())), iPlayerX, 12, bForce=False)
 					else:
 						CvUtil.sendMessage(TRNSLTR.getText("TXT_NOT_MET_FIRST_WONDER",(GC.getFeatureInfo(iFeature).getDescription(),)), iPlayerX, 12, bForce=False)
 				continue

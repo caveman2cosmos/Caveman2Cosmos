@@ -27451,12 +27451,6 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<!-- Special Health and Happiness  modifiers -->
-			<ReligionChanges>
-				<ReligionChange>
-					<ReligionType>RELIGION_CONFUCIANISM</ReligionType>
-					<iReligionChange>0</iReligionChange>
-				</ReligionChange>
-			</ReligionChanges>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<!-- Specialist effects -->
 			<SpecialistCounts>

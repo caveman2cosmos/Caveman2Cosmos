@@ -232,8 +232,8 @@
 			<Type>GAMEOPTION_MOUNTAINS</Type>
 			<Description>TXT_KEY_GAMEOPTION_MOUNTAINS</Description>
 			<Help>TXT_KEY_GAMEOPTION_MOUNTAINS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
+			<bDefault>1</bDefault>
+			<bVisible>0</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_SAD</Type>
