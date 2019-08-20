@@ -119,8 +119,10 @@ if exist "%C2C_MOD_DIR%" (
     :: We will only warn if it isn't an install done previously with this tool
     if not exist "!C2C_MOD_DIR!\svn_directory.txt" (
         call :warn_dir_exists "!C2C_MOD_DIR!"
+        if %errorlevel% neq 0 exit /B 1
+    ) else (
+        rmdir /S /Q "!C2C_MOD_DIR!"
     )
-    rmdir /S /Q "!C2C_MOD_DIR!"
 )
 
 echo 2. Create Caveman2Cosmos directory ...
@@ -160,15 +162,29 @@ exit /B 0
 :: call Copy.bat
 
 :warn_dir_exists
+
+for /f "tokens=2-8 delims=.:/ " %%a in ("%date% %time%") do set DateNtime=%%c-%%a-%%b_%%d-%%e-%%f.%%g
+set new_name=Caveman2Cosmos_%DateNtime%
 echo.
 echo *** WARNING ***
 echo.
 echo Caveman2Cosmos already exists in the mods folder %1.
 echo It does not appear to be there from a previous install with this script.
-echo This operation will DELETE it and create it from scratch, are you sure?
+echo This operation will RENAME it to %new_name% and create a new mod directory
+echo from scratch, are you sure?
 echo To cancel close this window, or press Ctrl+C
 echo or
 pause
+
+PUSHD "%~1\.."
+MOVE /-Y "%~1" "%new_name%""
+if %errorlevel% neq 0 (
+    echo Something went wrong backing up your old Caveman2Cosmos folder, please
+    echo close this Window and renamem, move or delete the folder yourself
+    pause
+    exit /B 1
+)
+POPD
 
 exit /B 0
 
