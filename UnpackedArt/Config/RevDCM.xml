@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<mod id="RevDCM" name="RevDCM" author="glider1" version="1.0" date="05/01/2008">
+
+	<events module="RevDCM"/>
+
+	<options id="RevDCM" file="RevDCM.ini">
+		<section id="RevDCMControl">
+			<option id="RevDCMReset" key="RevDCMReset" type="boolean" default="False" get="isReset" set="setReset">
+				<change module="RevDCM" function="changedReset"/>
+			</option>
+		</section>
+		<section id="RevDCMInterface">
+			<option id="RevDCMHiddenAttitude" key="RevDCMHiddenAttitude" type="boolean" default="True" get="isHiddenAttitude" set="setHiddenAttitude">
+				<change module="RevDCM" function="changedHiddenAttitude"/>
+			</option>
+		</section>
+		<section id="RevDCM_seige">
+			<option id="DCM_RANGE_BOMBARD"  key="DCM_RANGE_BOMBARD" type="boolean" default="True" get="isDCM_RANGE_BOMBARD" set="setDCM_RANGE_BOMBARD">
+				<change module="RevDCM" function="changedDCM_RANGE_BOMBARD"/>
+			</option>
+			<option id="DCM_OPP_FIRE" key="DCM_OPP_FIRE" type="boolean" default="False" get="isDCM_OPP_FIRE" set="setDCM_OPP_FIRE">
+				<change module="RevDCM" function="changedDCM_OPP_FIRE"/>
+			</option>
+		</section>
+		<section id="RevDCM_air">
+			<option id="DCM_AIR_BOMBING" key="DCM_AIR_BOMBING" type="boolean" default="False" get="isDCM_AIR_BOMBING" set="setDCM_AIR_BOMBING">
+				<change module="RevDCM" function="changedDCM_AIR_BOMBING"/>
+			</option>
+			<option id="DCM_ACTIVE_DEFENSE" key="DCM_ACTIVE_DEFENSE" type="boolean" default="False" get="isDCM_ACTIVE_DEFENSE" set="setDCM_ACTIVE_DEFENSE">
+				<change module="RevDCM" function="changedDCM_ACTIVE_DEFENSE"/>
+			</option>
+			<option id="DCM_FIGHTER_ENGAGE" key="DCM_FIGHTER_ENGAGE" type="boolean" default="True" get="isDCM_FIGHTER_ENGAGE" set="setDCM_FIGHTER_ENGAGE">
+				<change module="RevDCM" function="changedDCM_FIGHTER_ENGAGE"/>
+			</option>
+		</section>
+		<section id="RevDCM_battle">
+			<option id="DCM_ARCHER_BOMBARD" key="DCM_ARCHER_BOMBARD" type="boolean" default="False" get="isDCM_ARCHER_BOMBARD" set="setDCM_ARCHER_BOMBARD">
+				<change module="RevDCM" function="changedDCM_ARCHER_BOMBARD"/>
+			</option>
+			<option id="DCM_BATTLE_EFFECTS" key="DCM_BATTLE_EFFECTS" type="boolean" default="False" get="isDCM_BATTLE_EFFECTS" set="setDCM_BATTLE_EFFECTS">
+				<change module="RevDCM" function="changedDCM_BATTLE_EFFECTS"/>
+			</option>
+			<option id="DCM_STACK_ATTACK"  key="DCM_STACK_ATTACK" type="boolean" default="False" get="isDCM_STACK_ATTACK" set="setDCM_STACK_ATTACK">
+				<change module="RevDCM" function="changedDCM_STACK_ATTACK"/>
+			</option>
+			<option id="DCM_ATTACK_SUPPORT"  key="DCM_ATTACK_SUPPORT" type="boolean" default="False" get="isDCM_ATTACK_SUPPORT" set="setDCM_ATTACK_SUPPORT">
+				<change module="RevDCM" function="changedDCM_ATTACK_SUPPORT"/>
+			</option>
+		</section>
+		<section id="RevDCMIDW">
+			<option id="IDW_ENABLED" key="IDW_ENABLED" type="boolean" default="True" get="isIDW_ENABLED" set="setIDW_ENABLED">
+				<change module="RevDCM" function="changedIDW_ENABLED"/>
+			</option>
+			<option id="IDW_EMERGENCY_DRAFT_ENABLED" key="IDW_EMERGENCY_DRAFT_ENABLED" type="boolean" default="False" get="isIDW_EMERGENCY_DRAFT_ENABLED" set="setIDW_EMERGENCY_DRAFT_ENABLED">
+				<change module="RevDCM" function="changedIDW_EMERGENCY_DRAFT_ENABLED"/>
+			</option>
+			<option id="IDW_NO_BARBARIAN_INFLUENCE" key="IDW_NO_BARBARIAN_INFLUENCE" type="boolean" default="False" get="isIDW_NO_BARBARIAN_INFLUENCE" set="setIDW_NO_BARBARIAN_INFLUENCE">
+				<change module="RevDCM" function="changedIDW_NO_BARBARIAN_INFLUENCE"/>
+			</option>
+			<option id="IDW_NO_NAVAL_INFLUENCE" key="IDW_NO_NAVAL_INFLUENCE" type="boolean" default="False" get="isIDW_NO_NAVAL_INFLUENCE" set="setIDW_NO_NAVAL_INFLUENCE">
+				<change module="RevDCM" function="changedIDW_NO_NAVAL_INFLUENCE"/>
+			</option>
+			<option id="IDW_PILLAGE_INFLUENCE_ENABLED" key="IDW_PILLAGE_INFLUENCE_ENABLED" type="boolean" default="True" get="isIDW_PILLAGE_INFLUENCE_ENABLED" set="setIDW_PILLAGE_INFLUENCE_ENABLED">
+				<change module="RevDCM" function="changedIDW_PILLAGE_INFLUENCE_ENABLED"/>
+			</option>
+		</section>
+		<section id="RevDCMSS">
+			<option id="SS_ENABLED" key="SS_ENABLED" type="boolean" default="True" get="isSS_ENABLED" set="setSS_ENABLED">
+				<change module="RevDCM" function="changedSS_ENABLED"/>
+			</option>
+			<option id="SS_BRIBE" key="SS_BRIBE" type="boolean" default="False" get="isSS_BRIBE" set="setSS_BRIBE">
+				<change module="RevDCM" function="changedSS_BRIBE"/>
+			</option>
+			<option id="SS_ASSASSINATE" key="SS_ASSASSINATE" type="boolean" default="False" get="isSS_ASSASSINATE" set="setSS_ASSASSINATE">
+				<change module="RevDCM" function="changedSS_ASSASSINATE"/>
+			</option>
+		</section>
+		<section id="Religion">
+			<option id="OC_RESPAWN_HOLY_CITIES" key="OC_RESPAWN_HOLY_CITIES" type="boolean" default="False" get="isOC_RESPAWN_HOLY_CITIES" set="setOC_RESPAWN_HOLY_CITIES">
+				<change module="RevDCM" function="changedOC_RESPAWN_HOLY_CITIES"/>
+			</option>
+			<option id="LIMITED_RELIGIONS_EXCEPTIONS" key="LIMITED_RELIGIONS_EXCEPTIONS" type="boolean" default="True" get="isLIMITED_RELIGIONS_EXCEPTIONS" set="setLIMITED_RELIGIONS_EXCEPTIONS">
+				<change module="RevDCM" function="changedLIMITED_RELIGIONS_EXCEPTIONS"/>
+			</option>
+		</section>
+	</options>
+</mod>

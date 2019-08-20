@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Bart Muzzin (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Formation Schema -->
+<Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
+	<ElementType name="Name" content="textOnly"/>
+	<ElementType name="FormationType" content="textOnly"/>
+	<ElementType name="EventType" content="textOnly"/>
+	<ElementType name="UnitEntryType" content="textOnly"/>
+	<ElementType name="x" content="textOnly"/>
+	<ElementType name="y" content="textOnly"/>
+	<ElementType name="PositionRadius" content="textOnly"/>
+	<ElementType name="Direction" content="textOnly"/>
+	<ElementType name="DirVariation" content="textOnly"/>
+	<ElementType name="EventMaskList" content="eltOnly">
+		<element type="EventType" maxOccurs="*" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="Position" content="eltOnly">
+		<element type="x" maxOccurs="1" minOccurs="1"/>
+		<element type="y" maxOccurs="1" minOccurs="1"/>
+	</ElementType>
+	<ElementType name="UnitEntry" content="eltOnly">
+		<element type="UnitEntryType" minOccurs="1" maxOccurs="1"/>
+		<element type="Position" minOccurs="1" maxOccurs="1"/>
+		<element type="PositionRadius" minOccurs="1" maxOccurs="1"/>
+		<element type="Direction" minOccurs="1" maxOccurs="1"/>
+		<element type="DirVariation" minOccurs="1" maxOccurs="1"/>
+	</ElementType>
+	<ElementType name="UnitFormation" content="eltOnly">
+		<element type="Name" minOccurs="1" maxOccurs="1"/>
+		<element type="FormationType" minOccurs="1" maxOccurs="1"/>
+		<element type="EventMaskList"/>
+		<element type="UnitEntry" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="UnitFormations" content="eltOnly">
+		<element type="UnitFormation" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+</Schema>

@@ -139,6 +139,11 @@ public:
 	CvGameObjectCity* getGameObject()  {return &m_GameObject;};
 	const CvGameObjectCity* getGameObjectConst() const {return (const CvGameObjectCity*)&m_GameObject;};
 
+private:
+	// disable copy: we have owned pointers so we can't use the default copy implementation
+	CvCity(const CvCity&);
+	CvCity& operator=(const CvCity&);
+
 protected:
 	CvGameObjectCity m_GameObject;
 
@@ -547,6 +552,10 @@ public:
 	void updateOngoingTraining(UnitCombatTypes eCombat);
 	void assignOngoingTraining(UnitCombatTypes eCombat, CvPlot* pPlot);
 	bool canEquip(CvUnit* pUnit, PromotionTypes eEquipment) const;
+
+	bool assignPromotionChecked(PromotionTypes ePromotion, CvUnit* pUnit) const;
+	void assignPromotionsFromBuildingChecked(const CvBuildingInfo& kBuilding, CvUnit* pLoopUnit) const;
+
 	//TB Combat Mods (Buildings) end
 	//TB Traits begin
 	int getModifiedBaseYieldRate(YieldTypes eIndex) const;
@@ -2164,6 +2173,7 @@ protected:
 /*                                                                                              */
 /************************************************************************************************/
 	void doPromotion();
+
 /************************************************************************************************/
 /* Afforess	                               END                                                  */
 /************************************************************************************************/	

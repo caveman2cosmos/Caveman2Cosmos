@@ -13,7 +13,7 @@ public:
 	{
 		MAX_CY_ARGS=20
 	};
-	CyArgsList() : m_iCnt(0) {}
+	CyArgsList() : m_iCnt(0), m_aList() {}
 	DllExport void add(int i);
 	void add(uint ui) { add((int)ui);	}
 	DllExport void add(float f);

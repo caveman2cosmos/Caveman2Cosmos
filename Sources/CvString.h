@@ -58,16 +58,16 @@ public:
 	wchar& operator[](int i) { return std::wstring::operator[](i);	}
 	wchar& operator[](std::wstring::size_type i) { return std::wstring::operator[](i);	}
 	const wchar operator[](int i) const { return std::wstring::operator[](i);	}
-	const CvWString& operator=( const wchar* s) { if (s) assign(s); else clear();	return *this; }	
-	const CvWString& operator=( const std::wstring& s) { assign(s.c_str());	return *this; }	
-	const CvWString& operator=( const std::string& w) { Copy(w.c_str());	return *this; }	
-	const CvWString& operator=( const CvWString& w) { assign(w.c_str());	return *this; }	
+	CvWString& operator=( const wchar* s) { if (s) assign(s); else clear();	return *this; }	
+	CvWString& operator=( const std::wstring& s) { assign(s.c_str());	return *this; }	
+	CvWString& operator=( const std::string& w) { Copy(w.c_str());	return *this; }	
+	CvWString& operator=( const CvWString& w) { assign(w.c_str());	return *this; }	
 #ifndef _USRDLL
 	// FString conversion, if not in the DLL
-	const CvWString& operator=( const FStringW& s) { assign(s.GetCString());	return *this; }	
-	const CvWString& operator=( const FStringA& w) { Copy(w.GetCString());	return *this; }	
+	CvWString& operator=( const FStringW& s) { assign(s.GetCString());	return *this; }	
+	CvWString& operator=( const FStringA& w) { Copy(w.GetCString());	return *this; }	
 #endif
-	const CvWString& operator=( const char* w) { Copy(w);	return *this; }	
+	CvWString& operator=( const char* w) { Copy(w);	return *this; }	
 
 	void Format( LPCWSTR lpszFormat, ... );
 
@@ -338,7 +338,6 @@ inline bool CvString::formatv(std::string & out, const char * fmt, va_list args)
 {
 	char buf[2048];
 	char * pbuf = buf;
-	int len = 0;
 	int attempts = 0;
 	bool success = false;
 	const int kMaxAttempts = 40;
@@ -346,7 +345,7 @@ inline bool CvString::formatv(std::string & out, const char * fmt, va_list args)
 	do
 	{
 		int maxlen = 2047+2048*attempts;
-		len = _vsnprintf(pbuf,maxlen,fmt,args);
+		int len = _vsnprintf(pbuf,maxlen,fmt,args);
 		attempts++;
 		success = (len>=0 && len<=maxlen);
 		if (!success)
@@ -381,7 +380,6 @@ inline bool CvWString::formatv(std::wstring & out, const wchar * fmt, va_list ar
 {
 	wchar buf[2048];
 	wchar * pbuf = buf;
-	int len = 0;
 	int attempts = 0;
 	bool success = false;
 	const int kMaxAttempts = 40;
@@ -389,7 +387,7 @@ inline bool CvWString::formatv(std::wstring & out, const wchar * fmt, va_list ar
 	do
 	{
 		int maxlen = 2047+2048*attempts;
-		len = _vsnwprintf(pbuf,maxlen,fmt,args);
+		int len = _vsnwprintf(pbuf,maxlen,fmt,args);
 		attempts++;
 		success = (len>=0 && len<=maxlen);
 		if (!success)

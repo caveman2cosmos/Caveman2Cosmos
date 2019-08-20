@@ -19,7 +19,7 @@ friend class CLinkList<tVARTYPE>;
 
 public:
 
-    CLLNode(): m_pNext(NULL), m_pPrev(NULL){}
+    CLLNode(): m_data(), m_pNext(NULL), m_pPrev(NULL){}
 
 	CLLNode(const tVARTYPE& val) : m_data(val), m_pNext(NULL), m_pPrev(NULL){}
 

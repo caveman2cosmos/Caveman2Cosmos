@@ -87,7 +87,7 @@ public:
 	virtual void write(FDataStreamBase* pStream) {}
 
 	virtual bool read(CvXMLLoadUtility* pXML);
-	virtual bool readPass2(CvXMLLoadUtility* pXML) { pXML; FAssertMsg(false, "Override this"); return false; }
+	virtual bool readPass2(CvXMLLoadUtility* /*pXML*/) { FAssertMsg(false, "Override this"); return false; }
 	virtual bool readPass3() { FAssertMsg(false, "Override this"); return false; }
 	virtual void copyNonDefaults(CvInfoBase* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL );
 	virtual void copyNonDefaultsReadPass2(CvInfoBase* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL, bool bOver = false)
@@ -4120,6 +4120,7 @@ public:
 	//Struct
 	int getNumFreePromoTypes() const;
 	FreePromoTypes& getFreePromoType(int iPromotion);
+	const FreePromoTypes& getFreePromoType(int iPromotion) const;
 
 	int getNumFreeTraitTypes() const;
 	FreeTraitTypes& getFreeTraitType(int iIndex);
@@ -8769,10 +8770,9 @@ public:
 	{
 	public:
 		FeatureArtModel(const CvString &modelFile, RotationTypes rotation)
-		{
-			m_szModelFile = modelFile;
-			m_eRotation = rotation;
-		}
+			: m_szModelFile(modelFile)
+			, m_eRotation(rotation)
+		{}
 
 		const CvString &getModelFile() const
 		{
@@ -8824,10 +8824,9 @@ public:
 	{
 	public:
 		FeatureDummyNode(const CvString &tagName, const CvString &nodeName)
-		{
-			m_szTag = tagName;
-			m_szName = nodeName;
-		}
+			: m_szTag(tagName)
+			, m_szName(nodeName)
+		{}
 
 		const CvString getTagName() const
 		{

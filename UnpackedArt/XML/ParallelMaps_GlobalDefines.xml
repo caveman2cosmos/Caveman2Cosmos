@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Global Defines -->
+<Civ4Defines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Schema\Caveman2Cosmos.xsd">
+	<Define>
+		<DefineName>ENABLE_VIEWPORTS</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>VIEWPORT_SIZE_X</DefineName>
+		<iDefineIntVal>40</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>VIEWPORT_SIZE_Y</DefineName>
+		<iDefineIntVal>40</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>VIEWPORT_FOCUS_BORDER</DefineName>
+		<iDefineIntVal>2</iDefineIntVal>
+	</Define>
+</Civ4Defines>

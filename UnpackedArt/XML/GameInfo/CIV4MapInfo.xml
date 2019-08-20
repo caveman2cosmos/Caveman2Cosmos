@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jon Shafer (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Map Infos. This file contains the maps included in the game -->
+<Civ4MapInfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
+	<MapInfos>
+		<MapInfo>
+			<Type>MAP_EXAMPLE</Type>
+			<Description>TXT_KEY_MAP_EXAMPLE</Description>
+			<Help>TXT_KEY_MAP_EXAMPLE_HELP</Help>
+			<!-- default grid size and wrapping is the same as the original map -->
+			<iGridWidth>100</iGridWidth>
+			<iGridHeight>100</iGridHeight>
+			<bWrapX>1</bWrapX>
+			<bWrapY>0</bWrapY>
+			<!-- WB map path should look like the one below, i.e. beginning with \ -->
+			<!--<InitialWBMap>\PublicMaps\Test.Civ4BeyondSwordWBSave</InitialWBMap>
+			<MapScript>Continents.py</MapScript> -->
+			<InitialWBMap />
+			<MapScript />
+			<MapInteraction>
+				<Map>MAP_EXAMPLE2</Map>
+				<bContactable>1</bContactable>
+				<iDistance>5</iDistance>
+			</MapInteraction>
+			<StartingEvent>GameStart</StartingEvent>
+			<!-- Leaving SwitchType blank will enable at-will switching -->
+			<SwitchType>MAPSWITCH_EXAMPLE</SwitchType>
+		</MapInfo>
+		<MapInfo>
+			<Type>MAP_EXAMPLE2</Type>
+			<Description>TXT_KEY_MAP_EXAMPLE</Description>
+			<Help>TXT_KEY_MAP_EXAMPLE_HELP</Help>
+			<iGridWidth>100</iGridWidth>
+			<iGridHeight>100</iGridHeight>
+			<bWrapX>1</bWrapX>
+			<bWrapY>0</bWrapY>
+			<InitialWBMap />
+			<MapScript />
+			<MapInteraction>
+				<Map>MAP_EXAMPLE</Map>
+				<bContactable>1</bContactable>
+				<iDistance>5</iDistance>
+			</MapInteraction>
+			<StartingEvent>GameStart</StartingEvent>
+			<SwitchType>MAPSWITCH_EXAMPLE2</SwitchType>
+		</MapInfo>
+	</MapInfos>
+</Civ4MapInfos>

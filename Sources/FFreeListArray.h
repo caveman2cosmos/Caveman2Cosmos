@@ -86,8 +86,6 @@ FFreeListArray<T>::~FFreeListArray()
 template <class T>
 void FFreeListArray<T>::init(int iNumSlots)
 {
-	int iI;
-
 	uninit();
 
 	m_iFreeListHead = FFreeList::FREE_LIST_INDEX;
@@ -99,7 +97,7 @@ void FFreeListArray<T>::init(int iNumSlots)
 	{
 		m_pArray = new DArrayNode[m_iNumSlots];
 
-		for (iI = 0; iI < m_iNumSlots; iI++)
+		for (int iI = 0; iI < m_iNumSlots; iI++)
 		{
 			m_pArray[iI].iNextFreeIndex = FFreeList::INVALID_INDEX;
 		}
@@ -122,7 +120,6 @@ void FFreeListArray<T>::uninit()
 template <class T>
 void FFreeListArray<T>::insert(T data)
 {
-	int iIndex;
 
 	if (m_pArray == NULL) 
 	{
@@ -135,6 +132,7 @@ void FFreeListArray<T>::insert(T data)
 		growArray();
 	}
 
+	int iIndex;
 	if (m_iFreeListCount > 0)
 	{
 		iIndex = m_iFreeListHead;
@@ -155,8 +153,6 @@ void FFreeListArray<T>::insert(T data)
 template <class T>
 void FFreeListArray<T>::insertAt(T data, int iIndex)
 {
-	int iTempIndex;
-
 	if (m_pArray == NULL) 
 	{
 		init();
@@ -200,7 +196,7 @@ void FFreeListArray<T>::insertAt(T data, int iIndex)
 		}
 		else
 		{
-			iTempIndex = m_iFreeListHead;
+			int iTempIndex = m_iFreeListHead;
 			while (iTempIndex != FFreeList::FREE_LIST_INDEX)
 			{
 				assert(iTempIndex != FFreeList::INVALID_INDEX);

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<mod id="CustDomAdv" name="Customizable Domestic Advisor" author="Taelis, Cammagno"
+	version="3.0" date="07/11/2008" url="http://forums.civfanatics.com/forumdisplay.php?f=268" module="CvDomesticAdvisor">
+
+	<options id="CustDomAdv" file="CustDomAdv.ini">
+		<section id="CustDomAdv">
+			<list id="ProductionGrouping" key="Production Grouping" type="int" default="3" listType="string">
+				<choice id="None" get="isProductionGroupingNone"/>
+				<choice id="Icons" get="isProductionGroupingIcons"/>
+				<choice id="Colors" get="isProductionGroupingColors"/>
+				<choice id="Both" get="isProductionGroupingIcons isProductionGroupingColors"/>
+			</list>
+		</section>
+	</options>
+	<widget name="WIDGET_CDA_SELECT_PAGE" xml="TXT_KEY_CDA_SELECT_PAGE"/>
+	<widget name="WIDGET_CDA_PREV_PAGE" xml="TXT_KEY_CDA_PREV_PAGE"/>
+	<widget name="WIDGET_CDA_NEXT_PAGE" xml="TXT_KEY_CDA_NEXT_PAGE"/>
+	<widget name="WIDGET_CDA_SAVE" xml="TXT_KEY_CDA_SAVE"/>
+	<widget name="WIDGET_CDA_RELOAD" xml="TXT_KEY_CDA_RELOAD"/>
+	<widget name="WIDGET_CDA_RENAME_PAGE" xml="TXT_KEY_CDA_RENAME_PAGE"/>
+	<widget name="WIDGET_CDA_ADD_PAGE" xml="TXT_KEY_CDA_ADD_PAGE"/>
+	<widget name="WIDGET_CDA_REMOVE_PAGE" xml="TXT_KEY_CDA_REMOVE_PAGE"/>
+	<widget name="WIDGET_CDA_MOVE_PAGE_UP" xml="TXT_KEY_CDA_MOVE_PAGE_UP"/>
+	<widget name="WIDGET_CDA_MOVE_PAGE_DOWN" xml="TXT_KEY_CDA_MOVE_PAGE_DOWN"/>
+	<widget name="WIDGET_CDA_TOGGLE_SPECIALISTS" xml="TXT_KEY_CDA_TOGGLE_SPECIALISTS"/>
+	<widget name="WIDGET_CDA_ADD_COLUMN" xml="TXT_KEY_CDA_ADD_COLUMN"/>
+	<widget name="WIDGET_CDA_REMOVE_COLUMN" xml="TXT_KEY_CDA_REMOVE_COLUMN"/>
+	<widget name="WIDGET_CDA_MOVE_COLUMN_UP" xml="TXT_KEY_CDA_MOVE_COLUMN_UP"/>
+	<widget name="WIDGET_CDA_MOVE_COLUMN_DOWN" xml="TXT_KEY_CDA_MOVE_COLUMN_DOWN"/>
+	<widget name="WIDGET_CDA_SHRINK_COLUMN" xml="TXT_KEY_CDA_SHRINK_COLUMN"/>
+	<widget name="WIDGET_CDA_EXPAND_COLUMN" xml="TXT_KEY_CDA_EXPAND_COLUMN"/>
+</mod>

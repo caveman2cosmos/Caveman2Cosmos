@@ -106,13 +106,10 @@ inline FVariableSystem::~FVariableSystem( )
 
 inline void FVariableSystem::UnInit()
 {
-	VSIteratorC iIterator = m_mapVariableMap.begin();
-	FVariable * pkVariable;
-	while ( iIterator != m_mapVariableMap.end())
+	for (VSIteratorC iIterator = m_mapVariableMap.begin(); iIterator != m_mapVariableMap.end(); ++iIterator)
 	{
-		pkVariable = (FVariable*)iIterator->second;
+		FVariable * pkVariable = (FVariable*)(iIterator->second);
 		if ( pkVariable != NULL ) delete pkVariable;
-		++iIterator;
 	}
 	m_mapVariableMap.clear ();
 }
@@ -171,7 +168,6 @@ inline void FVariableSystem::Write(FDataStreamBase *pStream) const
 	// write vars/keys
 	int iNumWritten=0;
 	VSIteratorC iIterator = m_mapVariableMap.begin();
-	FVariable * pkVariable;
 	while ( iIterator != m_mapVariableMap.end())
 	{
 		// write key
@@ -179,8 +175,7 @@ inline void FVariableSystem::Write(FDataStreamBase *pStream) const
 		pStream->WriteString(szKey);
 
 		// write vars
-		pkVariable = (FVariable*)iIterator->second;
-		pkVariable->Write(pStream);
+		((FVariable*)iIterator->second)->Write(pStream);
 		
 		iNumWritten++;
 		++iIterator;

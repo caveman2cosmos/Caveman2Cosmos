@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<mod id="Revolution">
+	<options id="Revolution" file="Revolution.ini">
+		<section id="RevConfig">
+			<option id="ActivePopup" key="ActivePopup" type="boolean" default="True" get="isActivePopup" set="setActivePopup"/>
+		</section>
+		<section id="BarbarianCiv">
+			<list id="MinPopulation" key="MinPopulation" type="int" default="3" values="1,2,3,4,5,6,7,8,9,10" get="getMinPopulation" set="setMinPopulation"/>
+			<list id="NewWorldPolicy" key="NewWorldPolicy" type="int" default="2" values="1,2,3,4" get="getNewWorldPolicy" set="setNewWorldPolicy"/>
+			<list id="NewWorldErasBehind" key="NewWorldErasBehind" type="int" default="2" values="0,1,2,3,4" get="getNewWorldErasBehind" set="setNewWorldErasBehind"/>
+			<list id="BarbTechFrac" key="BarbTechFrac" type="float" default="0.7" listType="float"
+				values="0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0" format="%.1f" get="getBarbTechFrac" set="setBarbTechFrac"/>
+			<list id="MilitaryStrength" key="MilitaryStrength" type="float" default="1.0" listType="float"
+				values="0.2,0.4,0.6,0.8,1.0,1.2,1.4,1.6,1.8,2.0" format="%.1f" get="getMilitaryStrength" set="setMilitaryStrength"/>
+			<list id="BarbCivMaxCivs" key="MaxCivs" type="int" default="25" values="-1,1,2,3,4,5,6,7,8,9,10,15,20,25,30,35,40" get="getBarbCivMaxCivs" set="setBarbCivMaxCivs"/>
+			<list id="FormMinorModifier" key="FormMinorModifier" type="float" default="1.0" listType="float"
+				values="0.0,0.2,0.4,0.6,0.8,1.0,1.2,1.4,1.6,1.8,2.0" format="%.1f" get="getFormMinorModifier" set="setFormMinorModifier"/>
+			<list id="CloseDist" key="CloseDist" type="int" default="8" values="8,12,16,20,24,28,32" get="getCloseDist" set="setCloseDist"/>
+		</section>
+		<section id="Revolution">
+			<option id="RevDebugMode" key="DebugMode" type="boolean" default="True" get="isRevDebugMode" set="setRevDebugMode"/>
+			<option id="ShowDebugMessages" key="ShowDebugMessages" type="boolean" default="False" get="isShowDebugMessages" set="setShowDebugMessages"/>
+			<option id="CenterPopups" key="CenterPopups" type="boolean" default="False" get="isCenterPopups" set="setCenterPopups"/>
+			<option id="ShowRevIndexInPopup" key="ShowRevIndexInPopup" type="boolean" default="False" get="isShowRevIndexInPopup" set="setShowRevIndexInPopup"/>
+			<list id="MaxScoreLines" key="MaxScoreLines" type="int" default="-1" values="-1,1,7,14,21,28,35,42,49" get="getMaxScoreLines" set="setMaxScoreLines"/>
+			<list id="RevMaxCivs" key="MaxCivs" type="int" default="30" values="-1,0,1,2,3,4,5,10,15,20,25,30,35,40" get="getRevMaxCivs" set="setRevMaxCivs"/>
+			<option id="RebelTypes" key="RebelTypes" type="boolean" default="True" get="isRebelTypes" set="setRebelTypes"/>
+			<option id="ArtStyleTypes" key="ArtStyleTypes" type="boolean" default="True" get="isArtStyleTypes" set="setArtStyleTypes"/>
+			<option id="OfferDefectToRevs" key="OfferDefectToRevs" type="boolean" default="True" get="isOfferDefectToRevs" set="setOfferDefectToRevs"/>
+			<option id="AllowAssimilation" key="AllowAssimilation" type="boolean" default="True" get="isAllowAssimilation" set="setAllowAssimilation"/>
+			<option id="AllowSmallBarbRevs" key="AllowSmallBarbRevs" type="boolean" default="True" get="isAllowSmallBarbRevs" set="setAllowSmallBarbRevs"/>
+			<option id="AllowBreakVassal" key="AllowBreakVassal" type="boolean" default="True" get="isAllowBreakVassal" set="setAllowBreakVassal"/>
+			<option id="EndWarsOnDeath" key="EndWarsOnDeath" type="boolean" default="True" get="isEndWarsOnDeath" set="setEndWarsOnDeath"/>
+			<option id="AllowStateReligionToJoin" key="AllowStateReligionToJoin" type="boolean" default="True" get="isAllowStateReligionToJoin" set="setAllowStateReligionToJoin"/>
+			<option id="CulturalRevolution" key="CulturalRevolution" type="boolean" default="True" get="isCulturalRevolution" set="setCulturalRevolution"/>
+			<option id="ReligiousRevolution" key="ReligiousRevolution" type="boolean" default="True" get="isReligiousRevolution" set="setReligiousRevolution"/>
+			<option id="CivicRevolution" key="CivicRevolution" type="boolean" default="True" get="isCivicRevolution" set="setCivicRevolution"/>
+			<option id="LeaderRevolution" key="LeaderRevolution" type="boolean" default="True" get="isLeaderRevolution" set="setLeaderRevolution"/>
+			<option id="HumanLeaderRevolution" key="HumanLeaderRevolution" type="boolean" default="True" get="isHumanLeaderRevolution" set="setHumanLeaderRevolution"/>
+			<list id="IndexModifier" key="IndexModifier" type="float" default="1.0" listType="float"
+				values="0.0,0.2,0.4,0.6,0.8,1.0,1.2,1.4,1.6,1.8,2.0" format="%.1f" get="getIndexModifier" set="setIndexModifier"/>
+
+			<list id="IndexOffset" key="IndexOffset" type="float" default="0" listType="float"
+				values="-10.0,-8.0,-6.0,-5.0,-4.0,-3.0,-2.0,-1.0,0,1.0,2.0,3.0,4.0,5.0,6.0,8.0,10.0" format="%.1f" get="getIndexOffset" set="setIndexOffset"/>
+
+			<list id="HumanIndexModifier" key="HumanIndexModifier" type="float" default="1.0" listType="float"
+				values="0.0,0.2,0.4,0.6,0.8,1.0,1.2,1.4,1.6,1.8,2.0" format="%.1f" get="getHumanIndexModifier" set="setHumanIndexModifier"/>
+
+			<list id="HumanIndexOffset" key="HumanIndexOffset" type="float" default="0" listType="float"
+				values="-10.0,-8.0,-6.0,-5.0,-4.0,-3.0,-2.0,-1.0,0,1.0,2.0,3.0,4.0,5.0,6.0,8.0,10.0" format="%.1f"
+				get="getHumanIndexOffset" set="setHumanIndexOffset"/>
+
+			<list id="CultureRateModifier" key="CultureRateModifier" type="float" default="1.0" listType="float"
+				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"  
+				get="getCultureRateModifier" set="setCultureRateModifier"/>
+
+			<list id="CivSizeModifier" key="CivSizeModifier" type="float" default="1.0" listType="float"
+				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"  
+				get="getCivSizeModifier" set="setCivSizeModifier"/>
+
+			<list id="CityLostModifier" key="CityLostModifier" type="float" default="1.0" listType="float"
+				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"  
+				get="getCityLostModifier" set="setCityLostModifier"/>
+
+			<list id="CityAcquiredModifier" key="CityAcquiredModifier" type="float" default="1.0" listType="float"
+				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"
+				get="getCityAcquiredModifier" set="setCityAcquiredModifier"/>
+
+			<list id="WarWearinessMod" key="WarWearinessMod" type="float" default="1.0" listType="float"
+				values="0.0,0.2,0.4,0.6,0.8,1.0,1.2,1.4,1.6,1.8,2.0" format="%.1f" get="getWarWearinessMod" set="setWarWearinessMod"/>
+
+			<list id="ReligionModifier" key="ReligionModifier" type="float" default="1.0" listType="float"
+				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"  
+				get="getReligionModifier" set="setReligionModifier"/>
+
+			<list id="ColonyModifier" key="ColonyModifier" type="float" default="1.0" listType="float"
+				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"  
+				get="getColonyModifier" set="setColonyModifier"/>
+
+			<list id="DistanceToCapitalModifier" key="DistanceToCapitalModifier" type="float" default="1.0" listType="float"
+				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"  
+				get="getDistanceToCapitalModifier" set="setDistanceToCapitalModifier"/>
+
+			<list id="HappinessModifier" key="HappinessModifier" type="float" default="1.0" listType="float"
+				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f" 
+				get="getHappinessModifier" set="setHappinessModifier"/>
+
+			<list id="NationalityModifier" key="NationalityModifier" type="float" default="1.0" listType="float"
+				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"  
+				get="getNationalityModifier" set="setNationalityModifier"/>
+
+			<list id="GarrisonModifier" key="GarrisonModifier" type="float" default="3.0" listType="float"
+				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f"  
+				get="getGarrisonModifier" set="setGarrisonModifier"/>
+
+			<list id="RevCultureModifier" key="RevCultureModifier" type="float" default="1.0" listType="float"
+				values="0.00,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00" format="%.2f" get="getRevCultureModifier" set="setRevCultureModifier"/>
+
+			<list id="ChanceModifier" key="ChanceModifier" type="float" default="1.00"
+				listType="float" values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f" 
+				get="getChanceModifier" set="setChanceModifier"/>
+
+			<list id="CivicsOdds" key="CivicsOdds" type="int" default="0"
+				values="-100,-90,-80,-70,-60,-50,-40,-30,-20,-10,0,10,20,30,40,50,60,70,80,90,100" get="getCivicsOdds" set="setCivicsOdds"/>
+
+			<list id="ReligionOdds" key="ReligionOdds" type="int" default="0"
+				values="-100,-90,-80,-70,-60,-50,-40,-30,-20,-10,0,10,20,30,40,50,60,70,80,90,100" get="getReligionOdds" set="setReligionOdds"/>
+
+			<list id="LeaderOdds" key="LeaderOdds" type="int" default="0"
+				values="-100,-90,-80,-70,-60,-50,-40,-30,-20,-10,0,10,20,30,40,50,60,70,80,90,100" get="getLeaderOdds" set="setLeaderOdds"/>
+
+			<list id="CrusadeOdds" key="CrusadeOdds" type="int" default="0"
+				values="-100,-90,-80,-70,-60,-50,-40,-30,-20,-10,0,10,20,30,40,50,60,70,80,90,100" get="getCrusadeOdds" set="setCrusadeOdds"/>
+
+			<list id="IndependenceOdds" key="IndependenceOdds" type="int" default="0"
+				values="-100,-90,-80,-70,-60,-50,-40,-30,-20,-10,0,10,20,30,40,50,60,70,80,90,100" get="getIndependenceOdds" set="setIndependenceOdds"/>
+
+			<list id="TurnsBetweenRevs" key="TurnsBetweenRevs" type="int" default="8"
+				values="1,2,3,4,6,8,10,12,15,20,25,30,40,50" get="getTurnsBetweenRevs" set="setTurnsBetweenRevs"/>
+
+			<list id="BaseReinforcementTurns" key="BaseReinforcementTurns" type="int" default="3"
+				values="1,2,3,4,5,6,7,8,9,8,10" get="getBaseReinforcementTurns" set="setBaseReinforcementTurns"/>
+
+			<list id="MinReinforcementTurns" key="MinReinforcementTurns" type="int" default="1"
+				values="1,2,3,4,5,6,7,8,9,8,10" get="getMinReinforcementTurns" set="setMinReinforcementTurns"/>
+
+			<list id="AcquiredTurns" key="AcquiredTurns" type="int" default="10" values="1,2,3,4,5,6,8,10,12,14,16,18,20,25,30" get="getAcquiredTurns" set="setAcquiredTurns"/>
+			<list id="AcceptedTurns" key="AcceptedTurns" type="int" default="10" values="1,2,3,4,5,6,8,10,12,14,16,18,20,25,30" get="getAcceptedTurns" set="setAcceptedTurns"/>
+			<list id="BuyoffTurns" key="BuyoffTurns" type="int" default="10" values="1,2,3,4,5,6,8,10,12,14,16,18,20,25,30" get="getBuyoffTurns" set="setBuyoffTurns"/>
+			<list id="DeniedTurns" key="DeniedTurns" type="int" default="5" values="1,2,3,4,5,6,8,10,12,15,20" get="getDeniedTurns" set="setDeniedTurns"/>
+
+			<list id="HumanWarnFrac" key="HumanWarnFrac" type="float" default="0.9"
+				listType="float" values="0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0" format="%.1f"
+				get="getHumanWarnFrac" set="setHumanWarnFrac"/>
+
+			<list id="WarnTurns" key="WarnTurns" type="int" default="15"
+				values="1,2,3,4,6,8,10,12,15,20,25,30,40,50"
+				get="getWarnTurns" set="setWarnTurns"/>
+
+			<list id="MaxNationality" key="MaxNationality" type="int" default="45"
+				values="0,1,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100"
+				get="getMaxNationality" set="setMaxNationality"/>
+
+			<list id="InstigateRevolutionThreshold" key="InstigateRevolutionThreshold" type="int" default="1000"
+				values="100,200,300,400,500,750,1000,1250,1500,1750,2000,2250,2500,2750,3000"
+				get="getInstigateRevolutionThreshold" set="setInstigateRevolutionThreshold"/>
+
+			<list id="AlwaysViolentThreshold" key="AlwaysViolentThreshold" type="int" default="1750"
+				values="100,200,300,400,500,750,1000,1250,1500,1750,2000,2250,2500,2750,3000"
+				get="getAlwaysViolentThreshold" set="setAlwaysViolentThreshold"/>
+
+			<list id="CloseRadius" key="CloseRadius" type="int" default="8"
+				values="1,2,4,8,10,12,14,18,18,20"
+				get="getCloseRadius" set="setCloseRadius"/>
+
+			<list id="StrengthModifier" key="StrengthModifier" type="float" default="1.0"
+				listType="float" values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f" 
+				get="getStrengthModifier" set="setStrengthModifier"/>
+
+			<list id="ReinforcementModifier" key="ReinforcementModifier" type="float" default="1.0" listType="float"
+				values="0.00,1.10,0.25,0.50,0.75,1.00,1.25,1.50,1.75,2.00,2.50,3.00,3.50,4.00,5.00" format="%.2f" 
+				get="getReinforcementModifier" set="setReinforcementModifier"/>
+		</section>
+		<section id="AIAutoPlay">
+			<option id="AIAutoPlayEnable" key="Enable" type="boolean" default="True" get="isAIAutoPlayEnable" set="setAIAutoPlayEnable"/>
+			<option id="BlockPopups" key="BlockPopups" type="boolean" default="True" get="isBlockPopups" set="setBlockPopups"/>
+			<option id="SaveAllDeaths" key="SaveAllDeaths" type="boolean" default="True" get="isSaveAllDeaths" set="setSaveAllDeaths"/>
+			<option id="Refortify" key="Refortify" type="boolean" default="True" get="isRefortify" set="setRefortify"/>
+		</section>
+		<section id="ChangePlayer">
+			<option id="ChangePlayerEnable" key="Enable" type="boolean" default="True" get="isChangePlayerEnable" set="setChangePlayerEnable"/>
+		</section>
+	</options>
+	<events module="RevolutionInit" function="RevolutionInit"/>
+</mod>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+	<!-- Sid Meier's Civilization 4 -->
+	<!-- Copyright C2C team 2016 and Firaxis Games 2016 -->
+	<!-- -->
+	<!-- Idea Classes -->
+<Civ4IdeaClassInfos xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
+	<IdeaClassInfos>
+		<IdeaClassInfo>
+			<Type>IDEACLASS_HERITAGE</Type>
+			<Description>TXT_KEY_IDEACLASS_HERITAGE</Description>
+		</IdeaClassInfo>
+		<IdeaClassInfo>
+			<Type>IDEACLASS_CULTURE</Type>
+			<Description>TXT_KEY_IDEACLASS_CULTURE</Description>
+		</IdeaClassInfo>
+	</IdeaClassInfos>
+</Civ4IdeaClassInfos>

@@ -38,7 +38,14 @@ typedef bool (*PlotUnitFunc)(CvUnit* pUnit, int iData1, int iData2, const CvUnit
 #ifdef CAN_BUILD_VALUE_CACHING
 struct canBuildCacheEntry
 {
-	canBuildCacheEntry() { iLastUseCount = 0; }
+	canBuildCacheEntry()
+		: iPlotX(-1)
+		, iPlotY(-1)
+		, eBuild(NO_BUILD)
+		, ePlayer(NO_PLAYER)
+		, lResult(-1)
+		, iLastUseCount(0)
+	{}
 
 	int iPlotX;
 	int iPlotY;
@@ -53,10 +60,7 @@ struct canBuildCacheEntry
 class canBuildCache
 {
 public:
-	canBuildCache()
-	{
-		currentUseCounter = 0;
-	}
+	canBuildCache() : currentUseCounter(0) {}
 
 	struct canBuildCacheEntry entries[CAN_BUILD_CACHE_SIZE];
 	int currentUseCounter;

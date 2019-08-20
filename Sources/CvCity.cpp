@@ -233,12 +233,6 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 {
 	PROFILE_FUNC();
 
-	CvPlot* pAdjacentPlot;
-	CvPlot* pPlot;
-	BuildingTypes eLoopBuilding;
-	int iI;
-
-	pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
 
 	//--------------------------------
 	// Log this event
@@ -252,6 +246,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 		}
 	}
 
+	CvPlot* pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
 	//--------------------------------
 	// Init saved data
 	reset(iID, eOwner, pPlot->getX_INLINE(), pPlot->getY_INLINE());
@@ -306,9 +301,9 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	if (!GC.getGameINLINE().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING))
 	{
 		int iAdjCulture = GC.getDefineINT("FREE_CITY_ADJACENT_CULTURE");
-		for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+		for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 		{
-			pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)iI));
+			CvPlot* pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)iI));
 
 			if (pAdjacentPlot != NULL)
 			{
@@ -321,7 +316,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 		}
 	}
 
-	for (iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		if (GET_TEAM(getTeam()).isVassal((TeamTypes)iI))
 		{
@@ -331,10 +326,10 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 
 	long lResult=0;
 
-		CyArgsList argsList;
-		argsList.add(iX);
-		argsList.add(iY);
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "citiesDestroyFeatures", argsList.makeFunctionArgs(), &lResult);
+	CyArgsList argsList;
+	argsList.add(iX);
+	argsList.add(iY);
+	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "citiesDestroyFeatures", argsList.makeFunctionArgs(), &lResult);
 
 	if (lResult == 1)
 	{
@@ -390,7 +385,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 
 	pPlot->updateCityRoute(false);
 
-	for (iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		if (GET_TEAM((TeamTypes)iI).isAlive())
 		{
@@ -403,13 +398,13 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 
 	changeMilitaryHappinessUnits(pPlot->plotCount(PUF_isMilitaryHappiness));
 
-	for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 	{
 		changeCommerceHappinessPer(((CommerceTypes)iI), GC.getCommerceInfo((CommerceTypes)iI).getInitialHappiness());
 	}
 
 	//TBFREEBUILD
-	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
 		if (GET_PLAYER(getOwnerINLINE()).isBuildingFree((BuildingTypes)iI))
 		{
@@ -460,11 +455,11 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	{
 		if (GET_PLAYER(getOwnerINLINE()).getNumCities() == 1)
 		{
-			for (iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+			for (int iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
 			{
 				if (GC.getCivilizationInfo(getCivilizationType()).isCivilizationFreeBuildingClass(iI))
 				{
-					eLoopBuilding = ((BuildingTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuildings(iI)));
+					BuildingTypes eLoopBuilding = ((BuildingTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuildings(iI)));
 
 					if (eLoopBuilding != NO_BUILDING)
 					{
@@ -4044,29 +4039,25 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 			}
 		}
 
-		if (!bExposed)
+		if (kBuilding.getHolyCity() != NO_RELIGION)
 		{
-			if (kBuilding.getHolyCity() != NO_RELIGION)
+			if (!isHolyCity(((ReligionTypes)(kBuilding.getHolyCity()))))
 			{
-				if (!isHolyCity(((ReligionTypes)(kBuilding.getHolyCity()))))
-				{
-					return false;
-				}
-			}
-
-			if (kBuilding.getPrereqAndBonus() != NO_BONUS)
-			{
-				if (!hasBonus((BonusTypes)kBuilding.getPrereqAndBonus()))
-				{
-					if ( probabilityEverConstructable != NULL )
-					{
-						*probabilityEverConstructable = 50;
-					}
-					return false;
-				}
+				return false;
 			}
 		}
 
+		if (kBuilding.getPrereqAndBonus() != NO_BONUS)
+		{
+			if (!hasBonus((BonusTypes)kBuilding.getPrereqAndBonus()))
+			{
+				if (probabilityEverConstructable != NULL)
+				{
+					*probabilityEverConstructable = 50;
+				}
+				return false;
+			}
+		}
 
 		eCorporation = (CorporationTypes)kBuilding.getFoundsCorporation();
 		if (eCorporation != NO_CORPORATION && !bAffliction)
@@ -4166,41 +4157,38 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 			}
 		}
 
-		if (!bExposed)
+		if (kBuilding.getPrereqAnyoneBuildingClass() != NO_BUILDINGCLASS)
 		{
-			if (kBuilding.getPrereqAnyoneBuildingClass() != NO_BUILDINGCLASS)
+			BuildingClassTypes ePrereqBuildingClass = (BuildingClassTypes)kBuilding.getPrereqAnyoneBuildingClass();
+			if (GC.getGameINLINE().getBuildingClassCreatedCount(ePrereqBuildingClass) == 0)
 			{
-				BuildingClassTypes ePrereqBuildingClass = (BuildingClassTypes)kBuilding.getPrereqAnyoneBuildingClass();
-				if (GC.getGameINLINE().getBuildingClassCreatedCount(ePrereqBuildingClass) == 0)
-				{
-					return false;
-				}
-			}
-
-			bRequiresBonus = false;
-			bNeedsBonus = true;
-
-			for (iI = 0; iI < kBuilding.getNumPrereqOrBonuses(); iI++)
-			{
-				if (kBuilding.getPrereqOrBonuses(iI) != NO_BONUS)
-				{
-					bRequiresBonus = true;
-
-					if (hasBonus((BonusTypes)kBuilding.getPrereqOrBonuses(iI)))
-					{
-						bNeedsBonus = false;
-					}
-				}
-			}
-
-			if (bRequiresBonus && bNeedsBonus)
-			{
-				if ( probabilityEverConstructable != NULL )
-				{
-					*probabilityEverConstructable = 50;
-				}
 				return false;
 			}
+		}
+
+		bRequiresBonus = false;
+		bNeedsBonus = true;
+
+		for (iI = 0; iI < kBuilding.getNumPrereqOrBonuses(); iI++)
+		{
+			if (kBuilding.getPrereqOrBonuses(iI) != NO_BONUS)
+			{
+				bRequiresBonus = true;
+
+				if (hasBonus((BonusTypes)kBuilding.getPrereqOrBonuses(iI)))
+				{
+					bNeedsBonus = false;
+				}
+			}
+		}
+
+		if (bRequiresBonus && bNeedsBonus)
+		{
+			if (probabilityEverConstructable != NULL)
+			{
+				*probabilityEverConstructable = 50;
+			}
+			return false;
 		}
 	}
 	
@@ -4864,9 +4852,6 @@ void CvCity::addProductionExperience(CvUnit* pUnit, bool bConscript)
 {
 	PROFILE_FUNC();
 
-	bool bEquip = false;
-	bool bCanAssign = false;
-
 	if (pUnit->canAcquirePromotionAny())
 	{
 		pUnit->changeExperience(getProductionExperience(pUnit->getUnitType()) / ((bConscript) ? 2 : 1));
@@ -4879,21 +4864,7 @@ void CvCity::addProductionExperience(CvUnit* pUnit, bool bConscript)
 
 		if (isFreePromotion(ePromotion))
 		{
-			bEquip = GC.getPromotionInfo(ePromotion).isEquipment();
-			bCanAssign = false;
-			if (bEquip)
-			{
-				bCanAssign = canEquip(pUnit, ePromotion);
-			}
-			else
-			{
-				bCanAssign = pUnit->canAcquirePromotion(ePromotion, false, false, false, true, false, false, true);
-			}
-
-			if (bCanAssign)
-			{
-				pUnit->setHasPromotion(ePromotion, true);
-			}
+			assignPromotionChecked(ePromotion, pUnit);
 		}
 	}
 
@@ -4907,37 +4878,7 @@ void CvCity::addProductionExperience(CvUnit* pUnit, bool bConscript)
 		{
 			if (getNumActiveBuilding(eBuilding) > 0)
 			{
-				for (int iK = 0; iK < kBuilding.getNumFreePromoTypes(); iK++)
-				{
-					PromotionTypes kPromotion = (PromotionTypes)kBuilding.getFreePromoType(iK).ePromotion;
-					if (kPromotion != NO_PROMOTION)
-					{
-						bEquip = GC.getPromotionInfo(kPromotion).isEquipment();
-						bCanAssign = false;
-						if (bEquip)
-						{
-							bCanAssign = canEquip(pUnit, kPromotion);
-						}
-						else
-						{
-							bCanAssign = pUnit->canAcquirePromotion(kPromotion, false, false, false, true, false, false, true);
-						}
-						if (bCanAssign)
-						{
-							if (kBuilding.getFreePromoType(iK).m_pExprFreePromotionCondition)
-							{
-								if (!kBuilding.getFreePromoType(iK).m_pExprFreePromotionCondition->evaluate(const_cast<CvGameObjectUnit*>(pUnit->getGameObjectConst())))
-								{
-									bCanAssign = false;
-								}
-							}
-							if (bCanAssign)
-							{
-								pUnit->setHasPromotion(kPromotion, true);
-							}
-						}
-					}
-				}
+				assignPromotionsFromBuildingChecked(kBuilding, pUnit);
 			}
 		}
 	}
@@ -16813,10 +16754,7 @@ void CvCity::setTradeRoute(PlayerTypes eIndex, bool bNewValue)
 {
 	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
 	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex expected to be < MAX_PLAYERS");
-	if (m_abTradeRoute[eIndex] != bNewValue)
-	{
-		m_abTradeRoute[eIndex] = bNewValue;
-	}
+	m_abTradeRoute[eIndex] = bNewValue;
 }
 
 
@@ -25210,8 +25148,6 @@ void CvCity::doPromotion()
 		return;
 	}
 	bool hasFreePromofromList = false;
-	bool bEquip = false;
-	bool bCanAssign = false;
 
 	const int numNumBuildingInfos = GC.getNumBuildingInfos();
 	for (int iI = 0; iI < numNumBuildingInfos; iI++)
@@ -25241,92 +25177,15 @@ void CvCity::doPromotion()
 						pUnitNode = plot()->nextUnitNode(pUnitNode);
 						if (GET_TEAM(pLoopUnit->getTeam()).getID() == GET_TEAM(GET_PLAYER(getOwner()).getTeam()).getID())
 						{
-							if (ePromotion1 != NO_PROMOTION)
-							{
-								bEquip = GC.getPromotionInfo(ePromotion1).isEquipment();
-								bCanAssign = false;
-								if (bEquip)
-								{
-									bCanAssign = canEquip(pLoopUnit, ePromotion1);
-								}
-								else
-								{
-									bCanAssign = pLoopUnit->canAcquirePromotion(ePromotion1, false, false, false, true, false, false, true);
-								}
+							assignPromotionChecked(ePromotion1, pLoopUnit);
+							assignPromotionChecked(ePromotion2, pLoopUnit);
+							assignPromotionChecked(ePromotion3, pLoopUnit);
 
-								if (bCanAssign)
-								{
-									pLoopUnit->setHasPromotion(ePromotion1, true);
-								}
-							}
-							if (ePromotion2 != NO_PROMOTION)
-							{
-								bEquip = GC.getPromotionInfo(ePromotion2).isEquipment();
-								bCanAssign = false;
-								if (bEquip)
-								{
-									bCanAssign = canEquip(pLoopUnit, ePromotion2);
-								}
-								else
-								{
-									bCanAssign = pLoopUnit->canAcquirePromotion(ePromotion2, false, false, false, true, false, false, true);
-								}
-
-								if (bCanAssign)
-								{
-									pLoopUnit->setHasPromotion(ePromotion2, true);
-								}
-							}
-							if (ePromotion3 != NO_PROMOTION)
-							{
-								bEquip = GC.getPromotionInfo(ePromotion3).isEquipment();
-								bCanAssign = false;
-								if (bEquip)
-								{
-									bCanAssign = canEquip(pLoopUnit, ePromotion3);
-								}
-								else
-								{
-									bCanAssign = pLoopUnit->canAcquirePromotion(ePromotion3, false, false, false, true, false, false, true);
-								}
-
-								if (bCanAssign)
-								{
-									pLoopUnit->setHasPromotion(ePromotion3, true);
-								}
-							}
 							if (hasFreePromofromList)
 							{
-								for (int iK = 0; iK < kBuilding.getNumFreePromoTypes(); iK++)
-								{
-									const PromotionTypes ePromotion = (PromotionTypes)kBuilding.getFreePromoType(iK).ePromotion;
-									bEquip = GC.getPromotionInfo(ePromotion).isEquipment();
-									bCanAssign = false;
-									if (bEquip)
-									{
-										bCanAssign = canEquip(pLoopUnit, ePromotion);
-									}
-									else
-									{
-										bCanAssign = pLoopUnit->canAcquirePromotion(ePromotion, false, false, false, true, false, false, true);
-									}
-									if (bCanAssign)
-									{
-										if (kBuilding.getFreePromoType(iK).m_pExprFreePromotionCondition)
-										{
-											if (!kBuilding.getFreePromoType(iK).m_pExprFreePromotionCondition->evaluate(const_cast<CvGameObjectUnit*>(pLoopUnit->getGameObjectConst())))
-											{
-												bCanAssign = false;
-											}
-										}
-										if (bCanAssign)
-										{
-											pLoopUnit->setHasPromotion(ePromotion, true);
-										}
-									}
-								}
+								assignPromotionsFromBuildingChecked(kBuilding, pLoopUnit);
 							}
-						}//TB SubCombat Mod End
+						} //TB SubCombat Mod End
 					}
 				}
 			}
@@ -29022,15 +28881,42 @@ void CvCity::assignOngoingTraining(UnitCombatTypes eCombat, CvPlot* pPlot)
 	}
 }
 
+bool CvCity::assignPromotionChecked(PromotionTypes promotion, CvUnit* unit) const
+{
+	if (promotion != NO_PROMOTION &&
+		((GC.getPromotionInfo(promotion).isEquipment() && canEquip(unit, promotion)) ||
+		unit->canAcquirePromotion(promotion, false, false, false, true, false, false, true)))
+	{
+		unit->setHasPromotion(promotion, true);
+		return true;
+	}
+	return false;
+}
+
+void CvCity::assignPromotionsFromBuildingChecked(const CvBuildingInfo &building, CvUnit* unit) const
+{
+	for (int promoTypeIdx = 0; promoTypeIdx < building.getNumFreePromoTypes(); ++promoTypeIdx)
+	{
+		const FreePromoTypes& freePromoType = building.getFreePromoType(promoTypeIdx);
+		if (freePromoType.ePromotion != NO_PROMOTION &&
+			((GC.getPromotionInfo(freePromoType.ePromotion).isEquipment() && canEquip(unit, freePromoType.ePromotion)) ||
+			unit->canAcquirePromotion(freePromoType.ePromotion, false, false, false, true, false, false, true)))
+		{
+			if (!freePromoType.m_pExprFreePromotionCondition ||
+				freePromoType.m_pExprFreePromotionCondition->evaluate(const_cast<CvGameObjectUnit*>(unit->getGameObjectConst())))
+			{
+				unit->setHasPromotion(freePromoType.ePromotion, true);
+			}
+		}
+	}
+}
+
 bool CvCity::canEquip(CvUnit* pUnit, PromotionTypes eEquipment) const
 {
-	int iI;
-	int iJ;
-	bool bCanEquip = true;
 	//Some of this could be a bit misleading if its not understood that the result should be true if its NOT an equipment at all.
 	if (GC.getPromotionInfo(eEquipment).isEquipment())
 	{
-		for (iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 		{
 			if (pUnit->isHasPromotion((PromotionTypes)iI) && GC.getPromotionInfo((PromotionTypes)iI).isEquipment())
 			{
@@ -29048,17 +28934,18 @@ bool CvCity::canEquip(CvUnit* pUnit, PromotionTypes eEquipment) const
 			}
 		}
 
-				for (iJ = 0; iJ < GC.getPromotionInfo(eEquipment).getNumNoAutoEquiptoCombatClassTypes(); iJ++)
-				{
-					UnitCombatTypes eNoAuto = (UnitCombatTypes)GC.getPromotionInfo(eEquipment).getNoAutoEquiptoCombatClassType(iJ);
+		for (int iJ = 0; iJ < GC.getPromotionInfo(eEquipment).getNumNoAutoEquiptoCombatClassTypes(); iJ++)
+		{
+			UnitCombatTypes eNoAuto = (UnitCombatTypes)GC.getPromotionInfo(eEquipment).getNoAutoEquiptoCombatClassType(iJ);
 			if (pUnit->isHasUnitCombat(eNoAuto))
-					{
-						return false;
-					}
-				}
+			{
+				return false;
 			}
-	return bCanEquip;
+		}
+	}
+	return true;
 }
+
 //TB Combat Mods (Buildings) end
 //TB Traits begin
 int CvCity::getModifiedBaseYieldRate(YieldTypes eIndex) const
