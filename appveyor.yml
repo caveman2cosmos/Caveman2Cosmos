@@ -19,7 +19,7 @@ build_script:
     
     call "%APPVEYOR_BUILD_FOLDER%\Tools\_MakeDLL.bat" build Debug
 
-    call "%APPVEYOR_BUILD_FOLDER%\Tools\MakeDLLRelease.bat"
+    call "%APPVEYOR_BUILD_FOLDER%\Tools\_MakeDLL.bat" build Release
 
 test_script:
 - cmd: >-
