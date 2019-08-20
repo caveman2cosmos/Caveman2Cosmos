@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Re-Modified by StrategyOnly -->
+<!-- Master Load File -->
+<!-- -->
+<Civ4ModularLoadControls xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
+	<DefaultConfiguration>Fantasy_1</DefaultConfiguration>
+	<ConfigurationInfos>
+		<ConfigurationInfo>
+			<Type>Fantasy_1</Type>
+			<Description>All the fantacy units that dont fit elsewhere but are fun.</Description>
+			<Modules>
+				<Module> <!-- rabbit can kill a squad of armoured knights with one swipe of its paw! Beware. -->
+					<Directory>KillerRabbit</Directory>
+					<bLoad>0</bLoad>
+				</Module>
+			</Modules>
+		</ConfigurationInfo>
+	</ConfigurationInfos>
+</Civ4ModularLoadControls>

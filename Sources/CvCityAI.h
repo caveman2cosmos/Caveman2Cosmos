@@ -37,7 +37,18 @@ class	BuildingValueCache;
 #ifdef YIELD_VALUE_CACHING
 struct yieldValueCacheEntry
 {
-	yieldValueCacheEntry() { iLastUseCount = 0; }
+	yieldValueCacheEntry() 
+		: aiYields()
+		, aiCommerceYields()
+		, bAvoidGrowth(false)
+		, bRemove(false)
+		, bIgnoreFood(false)
+		, bIgnoreGrowth(false)
+		, bIgnoreStarvation(false)
+		, bWorkerOptimization(false)
+		, iResult(-1)
+		, iLastUseCount(0)
+	{}
 
 	short aiYields[NUM_YIELD_TYPES];
 	short aiCommerceYields[NUM_COMMERCE_TYPES];
@@ -56,11 +67,7 @@ struct yieldValueCacheEntry
 class yieldCache
 {
 public:
-	yieldCache()
-	{
-		currentUseCounter = 0;
-	}
-
+	yieldCache() : currentUseCounter(0) {}
 	struct yieldValueCacheEntry entries[YIELD_VALUE_CACHE_SIZE];
 	int currentUseCounter;
 };

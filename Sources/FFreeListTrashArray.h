@@ -161,16 +161,13 @@ FFreeListTrashArray<T>::~FFreeListTrashArray()
 template <class T>
 void FFreeListTrashArray<T>::init(int iNumSlots)
 {
-	int iCount;
-	int iI;
-
 	assert(iNumSlots >= 0);
 
 	// make sure it's binary...
 	if ((iNumSlots > 0) && ((iNumSlots - 1) & iNumSlots) != 0)
 	{
 		// find high bit
-		iCount = 0;
+		int iCount = 0;
 		while (iNumSlots != 1)
 		{
 			iNumSlots >>= 1;
@@ -194,7 +191,7 @@ void FFreeListTrashArray<T>::init(int iNumSlots)
 	{
 		m_pArray = new FFreeListTrashArrayNode[m_iNumSlots];
 
-		for (iI = 0; iI < m_iNumSlots; iI++)
+		for (int iI = 0; iI < m_iNumSlots; iI++)
 		{
 			m_pArray[iI].iNextFreeIndex = FFreeList::INVALID_INDEX;
 			m_pArray[iI].iLastUsed = FFreeList::INVALID_INDEX;
@@ -342,13 +339,11 @@ T* FFreeListTrashArray<T>::getAt(int iID) const
 template <class T>
 bool FFreeListTrashArray<T>::remove(T* pData)
 {
-	int iI;
-
 	assert(m_pArray != NULL);
 
 	if (pData != NULL)
 	{
-		for (iI = 0; iI <= m_iLastIndex; iI++)
+		for (int iI = 0; iI <= m_iLastIndex; iI++)
 		{
 			if (m_pArray[iI].pData == pData)
 			{
@@ -364,14 +359,12 @@ bool FFreeListTrashArray<T>::remove(T* pData)
 template <class T>
 bool FFreeListTrashArray<T>::removeAt(int iID)
 {
-	int iIndex;
-
 	if ((iID == FFreeList::INVALID_INDEX) || (m_pArray == NULL))
 	{
 		return false;
 	}
 
-	iIndex = (iID & FLTA_INDEX_MASK);
+	int iIndex = (iID & FLTA_INDEX_MASK);
 
 	assert(iIndex >= 0);
 
@@ -402,8 +395,6 @@ bool FFreeListTrashArray<T>::removeAt(int iID)
 template <class T>
 void FFreeListTrashArray<T>::removeAll()
 {
-	int iI;
-
 	if (m_pArray == NULL)
 	{
 		return;
@@ -413,7 +404,7 @@ void FFreeListTrashArray<T>::removeAll()
 	m_iFreeListHead = FFreeList::INVALID_INDEX;
 	m_iFreeListCount = 0;
 
-	for (iI = 0; iI < m_iNumSlots; iI++)
+	for (int iI = 0; iI < m_iNumSlots; iI++)
 	{
 		m_pArray[iI].iNextFreeIndex = FFreeList::INVALID_INDEX;
 		if (m_pArray[iI].pData != NULL)
@@ -428,13 +419,11 @@ void FFreeListTrashArray<T>::removeAll()
 template <class T>
 void FFreeListTrashArray<T>::load(T* pData)
 {
-	int iIndex;
-
 	assert(pData != NULL);
 	//assert((pData->getID() & FLTA_ID_MASK) < m_iCurrentID);
 	assert(m_pArray != NULL);
 
-	iIndex = (pData->getID() & FLTA_INDEX_MASK);
+	int iIndex = (pData->getID() & FLTA_INDEX_MASK);
 
 	assert(iIndex < FLTA_MAX_BUCKETS);
 	assert(iIndex <= m_iLastIndex);
@@ -450,22 +439,18 @@ void FFreeListTrashArray<T>::load(T* pData)
 template <class T>
 void FFreeListTrashArray<T>::growArray()
 {
-	FFreeListTrashArrayNode* pOldArray;
-	int iOldNumSlots;
-	int iI;
-
 	MEMORY_TRACK_EXEMPT();
 
 	assert(m_pArray != NULL);
 
-	pOldArray = m_pArray;
-	iOldNumSlots = m_iNumSlots;
+	FFreeListTrashArrayNode* pOldArray = m_pArray;
+	int iOldNumSlots = m_iNumSlots;
 
 	m_iNumSlots *= FLTA_GROWTH_FACTOR;
 	assert((m_iNumSlots <= FLTA_MAX_BUCKETS) && "FFreeListTrashArray<T>::growArray() size too large");
 	m_pArray = new FFreeListTrashArrayNode[m_iNumSlots];
 
-	for (iI = 0; iI < m_iNumSlots; iI++)
+	for (int iI = 0; iI < m_iNumSlots; iI++)
 	{
 		if (iI < iOldNumSlots)
 		{
@@ -506,9 +491,7 @@ inline void FFreeListTrashArray< T >::Read( FDataStreamBase* pStream )
 	WRAPPER_READ_DECORATED(wrapper, "FFreeListTrashArray", &iTemp, "currentID" );
 	setCurrentID( iTemp );
 
-	int i;
-
-	for ( i = 0; i < getNumSlots(); i++ )
+	for (int i = 0; i < getNumSlots(); i++ )
 	{
 		WRAPPER_READ_DECORATED(wrapper, "FFreeListTrashArray", &iTemp, "nextFreeIndex" );
 		setNextFreeIndex( i, iTemp );
@@ -517,7 +500,7 @@ inline void FFreeListTrashArray< T >::Read( FDataStreamBase* pStream )
 	int iCount;
 	WRAPPER_READ_DECORATED(wrapper, "FFreeListTrashArray", &iCount, "count" );
 
-	for ( i = 0; i < iCount; i++ )
+	for (int  i = 0; i < iCount; i++ )
 	{
 		T* pData = new T;
 		WRAPPER_READ_ARRAY_DECORATED(wrapper, "FFreeListTrashArray", sizeof ( T ), ( byte* )pData, "pData" );
@@ -542,16 +525,14 @@ inline void FFreeListTrashArray< T >::Write( FDataStreamBase* pStream )
 	WRAPPER_WRITE_DECORATED(wrapper, "FFreeListTrashArray",  getFreeListCount(), "freeListCount" );
 	WRAPPER_WRITE_DECORATED(wrapper, "FFreeListTrashArray",  getCurrentID(), "currentID" );
 
-	int i;
-
-	for ( i = 0; i < getNumSlots(); i++ )
+	for ( int i = 0; i < getNumSlots(); i++ )
 	{
 		WRAPPER_WRITE_DECORATED(wrapper, "FFreeListTrashArray",  getNextFreeIndex( i ), "nextFreeIndex" );
 	}
 
 	WRAPPER_WRITE_DECORATED(wrapper, "FFreeListTrashArray",  getCount(), "count" );
 
-	for ( i = 0; i < getIndexAfterLast(); i++ )
+	for ( int i = 0; i < getIndexAfterLast(); i++ )
 	{
 		if ( getAt( i ) )
 		{
@@ -591,9 +572,8 @@ inline void ReadStreamableFFreeListTrashArray( FFreeListTrashArray< T >& flist, 
 	flist.setFreeListCount( iTemp );
 	WRAPPER_READ_DECORATED(wrapper, "WriteStreamableFFreeListTrashArray", &iTemp, "flistCurrentId" );
 	flist.setCurrentID( iTemp );
-	int i;
 
-	for ( i = 0; i < flist.getNumSlots(); i++ )
+	for ( int i = 0; i < flist.getNumSlots(); i++ )
 	{
 		WRAPPER_READ_DECORATED(wrapper, "WriteStreamableFFreeListTrashArray", &iTemp, "flistNextFree" );
 		flist.setNextFreeIndex( i, iTemp );
@@ -602,7 +582,7 @@ inline void ReadStreamableFFreeListTrashArray( FFreeListTrashArray< T >& flist, 
 	int iCount;
 	WRAPPER_READ_DECORATED(wrapper, "WriteStreamableFFreeListTrashArray", &iCount, "flistCount" );
 
-	for ( i = 0; i < iCount; i++ )
+	for ( int i = 0; i < iCount; i++ )
 	{
 		T* pData = new T;
 		pData->read( pStream );
@@ -631,16 +611,14 @@ inline void WriteStreamableFFreeListTrashArray( FFreeListTrashArray< T >& flist,
 	WRAPPER_WRITE_DECORATED(wrapper, "WriteStreamableFFreeListTrashArray",  flist.getFreeListCount(), "flistFreeListCount" );
 	WRAPPER_WRITE_DECORATED(wrapper, "WriteStreamableFFreeListTrashArray",  flist.getCurrentID(), "flistCurrentId" );
 
-	int i;
-
-	for ( i = 0; i < flist.getNumSlots(); i++ )
+	for ( int i = 0; i < flist.getNumSlots(); i++ )
 	{
 		WRAPPER_WRITE_DECORATED(wrapper, "WriteStreamableFFreeListTrashArray",  flist.getNextFreeIndex( i ), "flistNextFree" );
 	}
 
 	WRAPPER_WRITE_DECORATED(wrapper, "WriteStreamableFFreeListTrashArray",  flist.getCount(), "flistCount" );
 
-	for ( i = 0; i < flist.getIndexAfterLast(); i++ )
+	for ( int i = 0; i < flist.getIndexAfterLast(); i++ )
 	{
 		if ( flist[ i ] )
 		{

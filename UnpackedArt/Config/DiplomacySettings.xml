@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+	Rise of Mankind settings
+	by Zappara & Afforess
+-->
+<mod id="DiplomacySettings"	module="DiplomacySettings"
+	name="Caveman2Cosmos" author="Afforess"
+	version="1.73" date="5/14/10" url="">
+
+	<events module="DiplomacySettings"/>
+	<options id="DiplomacySettings" file="DiplomacySettings.ini">
+		<section id="Diplomacy">
+
+			<option id="CanTradeTechs" key="CanTradeTechs" type="boolean" default="True" get="isCanTradeTechs" set="setCanTradeTechs">
+				<change module="DiplomacySettings" function="changedCanTradeTechs"/>
+			</option>
+
+			<option id="CanBrokerTechs" key="CanBrokerTechs" type="boolean" default="True" get="isCanBrokerTechs" set="setCanBrokerTechs">
+				<change module="DiplomacySettings" function="changedCanBrokerTechs"/>
+			</option>
+
+			<option id="CanTradeResources" key="CanTradeResources" type="boolean" default="True" get="isCanTradeResources" set="setCanTradeResources">
+				<change module="DiplomacySettings" function="changedCanTradeResources"/>
+			</option>
+
+			<option id="CanTradeCities" key="CanTradeCities" type="boolean" default="True" get="isCanTradeCities" set="setCanTradeCities">
+				<change module="DiplomacySettings" function="changedCanTradeCities"/>
+			</option>
+
+			<option id="CanTradeWorkers" key="CanTradeWorkers" type="boolean" default="True" get="isCanTradeWorkers" set="setCanTradeWorkers">
+				<change module="DiplomacySettings" function="changedCanTradeWorkers"/>
+			</option>
+
+			<option id="CanTradeMilitary" key="CanTradeMilitary" type="boolean" default="True" get="isCanTradeMilitary" set="setCanTradeMilitary">
+				<change module="DiplomacySettings" function="changedCanTradeMilitary"/>
+			</option>
+
+			<option id="CanTradeGold" key="CanTradeGold" type="boolean" default="True" get="isCanTradeGold" set="setCanTradeGold">
+				<change module="DiplomacySettings" function="changedCanTradeGold"/>
+			</option>
+
+			<option id="CanTradeGoldPerTurn" key="CanTradeGoldPerTurn" type="boolean" default="True" get="isCanTradeGoldPerTurn" set="setCanTradeGoldPerTurn">
+				<change module="DiplomacySettings" function="changedCanTradeGoldPerTurn"/>
+			</option>
+
+			<option id="CanTradeMaps" key="CanTradeMaps" type="boolean" default="True" get="isCanTradeMaps" set="setCanTradeMaps">
+				<change module="DiplomacySettings" function="changedCanTradeMaps"/>
+			</option>
+
+			<option id="CanTradeVassals" key="CanTradeVassals" type="boolean" default="True" get="isCanTradeVassals" set="setCanTradeVassals">
+				<change module="DiplomacySettings" function="changedCanTradeVassals"/>
+			</option>
+
+			<option id="CanCapitulate" key="CanCapitulate" type="boolean" default="True" get="isCanCapitulate" set="setCanCapitulate">
+				<change module="DiplomacySettings" function="changedCanTradeVassals"/>
+			</option>
+
+			<option id="CanTradeEmbassies" key="CanTradeEmbassies" type="boolean" default="True" get="isCanTradeEmbassies" set="setCanTradeEmbassies">
+				<change module="DiplomacySettings" function="changedCanTradeEmbassies"/>
+			</option>
+
+			<option id="CanTradeContact" key="CanTradeContact" type="boolean" default="True" get="isCanTradeContact" set="setCanTradeContact">
+				<change module="DiplomacySettings" function="changedCanTradeContact"/>
+			</option>
+
+			<option id="CanTradeCorporations" key="CanTradeCorporations" type="boolean" default="True" get="isCanTradeCorporations" set="setCanTradeCorporations">
+				<change module="DiplomacySettings" function="changedCanTradeCorporations"/>
+			</option>
+
+			<option id="CanTradePeace" key="CanTradePeace" type="boolean" default="True" get="isCanTradePeace" set="setCanTradePeace">
+				<change module="DiplomacySettings" function="changedCanTradePeace"/>
+			</option>
+
+			<option id="CanTradeWar" key="CanTradeWar" type="boolean" default="True" get="isCanTradeWar" set="setCanTradeWar">
+				<change module="DiplomacySettings" function="changedCanTradeWar"/>
+			</option>
+
+			<option id="CanTradeEmbargo" key="CanTradeEmbargo" type="boolean" default="True" get="isCanTradeEmbargo" set="setCanTradeEmbargo">
+				<change module="DiplomacySettings" function="changedCanTradeEmbargo"/>
+			</option>
+
+			<option id="CanTradeCivics" key="CanTradeCivics" type="boolean" default="True" get="isCanTradeCivics" set="setCanTradeCivics">
+				<change module="DiplomacySettings" function="changedCanTradeCivics"/>
+			</option>
+
+			<option id="CanTradeReligions" key="CanTradeReligions" type="boolean" default="True" get="isCanTradeReligions" set="setCanTradeReligions">
+				<change module="DiplomacySettings" function="changedCanTradeReligions"/>
+			</option>
+
+			<option id="CanTradeOpenBorders" key="CanTradeOpenBorders" type="boolean" default="True" get="isCanTradeOpenBorders" set="setCanTradeOpenBorders">
+				<change module="DiplomacySettings" function="changedCanTradeOpenBorders"/>
+			</option>
+
+			<option id="CanTradeLimitedBorders" key="CanTradeLimitedBorders" type="boolean" default="True" get="isCanTradeLimitedBorders" set="setCanTradeLimitedBorders">
+				<change module="DiplomacySettings" function="changedCanTradeLimitedBorders"/>
+			</option>
+
+			<option id="CanTradeDefensivePact" key="CanTradeDefensivePact" type="boolean" default="True" get="isCanTradeDefensivePact" set="setCanTradeDefensivePact">
+				<change module="DiplomacySettings" function="changedCanTradeDefensivePact"/>
+			</option>
+
+			<option id="CanTradeAlliance" key="CanTradeAlliance" type="boolean" default="False" get="isCanTradeAlliance" set="setCanTradeAlliance">
+				<change module="DiplomacySettings" function="changedCanTradeAlliance"/>
+			</option>
+
+			<option id="AdvancedDiplomacy" key="AdvancedDiplomacy" type="boolean" default="True" get="isAdvancedDiplomacy" set="setAdvancedDiplomacy">
+				<change module="DiplomacySettings" function="changedAdvancedDiplomacy"/>
+			</option>
+		</section>
+	</options>
+</mod>

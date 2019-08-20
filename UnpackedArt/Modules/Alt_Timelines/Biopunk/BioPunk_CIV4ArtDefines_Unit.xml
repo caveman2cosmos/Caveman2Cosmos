@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http:/www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Unit art path information -->
+<Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
+	<UnitArtInfos>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_ORGANIC_INFANTRY</Type>
+			<Button>art/Interface/buttons/units/Organic_Infantry.dds</Button>
+			<fScale>0.44</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>art/units/Biopunk/OrganicInfantry/OrganicInfantry.nif</NIF>
+			<KFM>art/units/unique/america/navyseal/navyseal.kfm</KFM>
+			<SHADERNIF/>
+			<ShadowDef>
+				<ShadowNIF>art/units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>0.44</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.05</fRangedDeathTime>
+			<bActAsRanged>1</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+			<SelectionSound>AS3D_UN_MECH_SERVO</SelectionSound>
+			<ActionSound>AS3D_UN_MECH_SERVO</ActionSound>
+		</UnitArtInfo>
+	</UnitArtInfos>
+</Civ4ArtDefines>

@@ -20,14 +20,16 @@
 //---------------------------------------------------------------------------------------------------------------------
 struct ProfileSample
 {
-	ProfileSample(char *name)
+	ProfileSample(char *name) :
+#ifdef USE_INTERNAL_PROFILER
+		Id(-1),
+#else  
+	
+#endif
+		Added(false),
+		Parent(-1)
 	{	
 		strcpy(Name, name);
-		Added=false;
-		Parent=-1;
-#ifdef USE_INTERNAL_PROFILER
-		Id = -1;
-#endif
 	}
 
 	char	Name[256];						// Name of sample;
@@ -42,7 +44,7 @@ struct ProfileSample
 	LARGE_INTEGER	ChildrenSampleTime[MAX_PROFILED_THREADS+1];		// Time taken by all children
 	LARGE_INTEGER	AlternateSampleSetTime[MAX_PROFILED_THREADS+1];	// Time taken by all descendants flagged as contributing to altrernate set
 #else
-	int			ProfileInstances;		// # of times ProfileBegin Called
+	int				ProfileInstances;		// # of times ProfileBegin Called
 	int				OpenProfiles;			// # of time ProfileBegin called w/o ProfileEnd
 	double			StartTime;				// The current open profile start time
 	double			Accumulator;			// All samples this frame added together

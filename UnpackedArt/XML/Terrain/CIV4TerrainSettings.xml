@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Og (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Terrain Settings -->
+<Civ4TerrainSettings xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
+	<LandscapeInfos>
+		<LandscapeInfo>
+			<Type>LANDSCAPE_DEFAULT</Type>
+			<iWaterHeight>50</iWaterHeight>
+			<bRandomMap>1</bRandomMap>
+			<HeightMap/>
+			<TerrainMap/>
+			<NormalMap/>
+			<BlendMap/>
+			<SkyArt>Art/Terrain/Sky/Sky.NIF</SkyArt>
+			<iFogR>0</iFogR>
+			<iFogG>0</iFogG>
+			<iFogB>0</iFogB>
+			<fTextureScaleX>1.0</fTextureScaleX>
+			<fTextureScaleY>1.0</fTextureScaleY>
+			<iPlotsPerCellX>4</iPlotsPerCellX>
+			<iPlotsPerCellY>4</iPlotsPerCellY>
+			<iGameCellSizeX>17</iGameCellSizeX>
+			<iGameCellSizeY>17</iGameCellSizeY>
+			<fZScale>1.0</fZScale>
+			<bTerrainShader>1</bTerrainShader>
+			<bUseLightmap>0</bUseLightmap>
+			<fPeakScale>0.33</fPeakScale>
+			<fHillScale>0.13</fHillScale>
+		</LandscapeInfo>
+	</LandscapeInfos>
+</Civ4TerrainSettings>

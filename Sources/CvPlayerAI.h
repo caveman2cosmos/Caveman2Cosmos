@@ -24,7 +24,14 @@ typedef struct
 #ifdef PLOT_DANGER_CACHING
 struct plotDangerCacheEntry
 {
-	plotDangerCacheEntry() { iLastUseCount = 0; }
+	plotDangerCacheEntry()
+		: plotX(-1)
+		, plotY(-1)
+		, iRange(-1)
+		, bTestMoves(false)
+		, iResult(-1)
+		, iLastUseCount(0)
+	{}
 
 	int plotX;
 	int plotY;
@@ -39,11 +46,7 @@ struct plotDangerCacheEntry
 class plotDangerCache
 {
 public:
-	plotDangerCache()
-	{
-		currentUseCounter = -1;
-		clear();
-	}
+	plotDangerCache() : currentUseCounter(0) {}
 
 	void clear()
 	{
@@ -58,8 +61,8 @@ public:
 		}
 	}
 
-	struct plotDangerCacheEntry entries[PLOT_DANGER_CACHE_SIZE];
 	int currentUseCounter;
+	struct plotDangerCacheEntry entries[PLOT_DANGER_CACHE_SIZE];
 };
 #endif
 

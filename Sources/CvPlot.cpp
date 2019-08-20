@@ -1291,11 +1291,10 @@ bool CvPlot::updateSymbolsInternal()
 	MEMORY_TRACK_EXEMPT();
 	PROFILE_FUNC();
 
-	if ( !shouldHaveFullGraphics() )
+	if ( ! shouldHaveFullGraphics())
 	{
 		return false;
 	}
-
 	deleteAllSymbols();
 
 	if (isRevealed(GC.getGameINLINE().getActiveTeam(), true) && (isShowCitySymbols() || (gDLL->getInterfaceIFace()->isShowYields() && !(gDLL->getInterfaceIFace()->isCityScreenUp()))))
@@ -1307,7 +1306,7 @@ bool CvPlot::updateSymbolsInternal()
 		{
 			iYield = calculateYield(((YieldTypes)iYieldType), true);
 			yieldAmounts[iYieldType] = iYield;
-			if(iYield>maxYield)
+			if (iYield > maxYield)
 			{
 				maxYield = iYield;
 			}
@@ -1328,25 +1327,25 @@ bool CvPlot::updateSymbolsInternal()
 				if (iYield)
 				{
 					if (iYield > 29)
-			{
+					{
 						gDLL->getSymbolIFace()->setTypeYield(pSymbol5x, iYieldType, maxYieldStack-1);
 						gDLL->getSymbolIFace()->setTypeYield(pSymbol, iYieldType, 4);
 					}
 					else if (iYield > 4)
-				{
+					{
 						int iYieldBig = iYield / 5;
 						iYield -= 5 * iYieldBig;
 						gDLL->getSymbolIFace()->setTypeYield(pSymbol5x, iYieldType, iYieldBig + 4);
 
 						if (iYield)
-					{
-						gDLL->getSymbolIFace()->setTypeYield(pSymbol,iYieldType,iYield);
-					}
+						{
+							gDLL->getSymbolIFace()->setTypeYield(pSymbol, iYieldType, iYield);
+						}
 						else
 						{
 							gDLL->getSymbolIFace()->setTypeYield(pSymbol, iYieldType, maxYieldStack);
-				}
-			}
+						}
+					}
 					else
 					{
 						gDLL->getSymbolIFace()->setTypeYield(pSymbol5x, iYieldType, maxYieldStack);
@@ -1354,14 +1353,13 @@ bool CvPlot::updateSymbolsInternal()
 					}
 				}
 			}
-			for(int i=0;i<getNumSymbols();i++)
+			for (int i=0; i < getNumSymbols(); i++)
 			{
 				SymbolTypes eSymbol  = (SymbolTypes)0;
 				pSymbol = getSymbol(i);
 				gDLL->getSymbolIFace()->init(pSymbol, gDLL->getSymbolIFace()->getID(pSymbol), i, eSymbol, this);
 			}
 		}
-
 		return true;
 	}
 	else { return false; }

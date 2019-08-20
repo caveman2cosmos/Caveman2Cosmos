@@ -40,18 +40,21 @@ class CvArtInfoFeature;
 class CvArtInfoMovie;
 class CvArtInfoInterface;
 
+
 // Example usage: ART_INFO_DECL(Unit)
 #define ART_INFO_DECL(name) \
 public: \
 	friend class Cv##name##ArtInfoItem; \
-	DllExport CvArtInfo##name##* get##name##ArtInfo(const char *szArtDefineTag) const; \
+	DllExport CvArtInfo##name * get##name##ArtInfo(const char *szArtDefineTag) const; \
 	int getNum##name##ArtInfos() { return (int)m_pa##name##ArtInfo.size(); } \
-	std::vector<CvArtInfo##name##*>& get##name##ArtInfo() { return m_pa##name##ArtInfo; } \
-	CvArtInfo##name##& get##name##ArtInfo(int i); \
+	std::vector<CvArtInfo##name *>& get##name##ArtInfo() { return m_pa##name##ArtInfo; } \
+	CvArtInfo##name & get##name##ArtInfo(int i); \
 private: \
-	typedef std::map<const char* /* index */,CvArtInfo##name##* /*value */, ltstr> ArtInfo##name##MapType; \
-	ArtInfo##name##MapType* m_map##name##ArtInfos; \
-	std::vector<CvArtInfo##name##*> m_pa##name##ArtInfo; \
+	typedef std::map<const char* /* index */,CvArtInfo##name * /*value */, ltstr> ArtInfo##name##MapType; \
+	ArtInfo##name##MapType * m_map##name##ArtInfos; \
+	std::vector<CvArtInfo##name *> m_pa##name##ArtInfo; \
+
+#define ART_INFO_INIT(name) m_map##name##ArtInfos(NULL)
 
 class CvArtFileMgr
 {
@@ -68,7 +71,20 @@ public:
 	// singleton accessor
 	DllExport static CvArtFileMgr& GetInstance();
 
-	CvArtFileMgr() {};
+	CvArtFileMgr()
+		: ART_INFO_INIT(Asset)
+		, ART_INFO_INIT(Misc)
+		, ART_INFO_INIT(Unit)
+		, ART_INFO_INIT(Building)
+		, ART_INFO_INIT(Civilization)
+		, ART_INFO_INIT(Leaderhead)
+		, ART_INFO_INIT(Bonus)
+		, ART_INFO_INIT(Improvement)
+		, ART_INFO_INIT(Terrain)
+		, ART_INFO_INIT(Feature)
+		, ART_INFO_INIT(Movie)
+		, ART_INFO_INIT(Interface)
+	{};
 	virtual ~CvArtFileMgr() {};
 
 	DllExport void Init();

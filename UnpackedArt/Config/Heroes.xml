@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+    Heroes mod
+-->
+<mod id="Heroes" module="Heroes">
+   	<event type="combatResult" function="onCombatResult"/>
+   	<!--event type="unitPromoted" function="onUnitPromoted"/-->
+	<init/>
+</mod>

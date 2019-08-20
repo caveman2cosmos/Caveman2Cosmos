@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jesse Smith (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Civ4HurryInfo - This structure describes the name for each multiplayer option. -->
+<!-- Caveman2Cosmos -->
+<Civ4HurryInfo xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
+	<HurryInfos>
+		<HurryInfo>
+			<Type>HURRY_POPULATION</Type>
+			<Description>TXT_KEY_HURRY_POPULATION</Description>
+			<iGoldPerProduction>0</iGoldPerProduction>
+			<iProductionPerPopulation>250</iProductionPerPopulation>
+			<bAnger>1</bAnger>
+			<Button>Art/Interface/MainScreen/CityScreen/hurry_slavery.dds</Button>
+		</HurryInfo>
+		<HurryInfo>
+			<Type>HURRY_GOLD</Type>
+			<Description>TXT_KEY_HURRY_GOLD</Description>
+			<iGoldPerProduction>3</iGoldPerProduction>
+			<iProductionPerPopulation>0</iProductionPerPopulation>
+			<bAnger>0</bAnger>
+			<Button>Art/Interface/MainScreen/CityScreen/hurry_commerce.dds</Button>
+		</HurryInfo>
+	</HurryInfos>
+</Civ4HurryInfo>

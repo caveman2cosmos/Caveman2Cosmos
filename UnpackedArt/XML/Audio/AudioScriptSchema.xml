@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Modified by the World of Civilization Team -->
+<!-- Audio Script Schema -->
+<!-- -->
+<Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
+	<ElementType name="ScriptID" content="textOnly"/>
+	<ElementType name="SoundID" content="textOnly"/>
+	<ElementType name="SoundType" content="textOnly"/>
+	<ElementType name="iMinVolume" content="textOnly" dt:type="int"/>
+	<ElementType name="iMaxVolume" content="textOnly" dt:type="int"/>
+	<ElementType name="iPitchChangeDown" content="textOnly" dt:type="int"/>
+	<ElementType name="iPitchChangeUp" content="textOnly" dt:type="int"/>
+	<ElementType name="bLooping" content="textOnly" dt:type="boolean"/>
+	<ElementType name="iMinTimeDelay" content="textOnly" dt:type="int"/>
+	<ElementType name="iMaxTimeDelay" content="textOnly" dt:type="int"/>
+	<ElementType name="StartPosition" content="textOnly"/>
+	<ElementType name="EndPosition" content="textOnly"/>
+	<ElementType name="iMinVelocity" content="textOnly" dt:type="int"/>
+	<ElementType name="iMaxVelocity" content="textOnly" dt:type="int"/>
+	<ElementType name="iMinDistanceFromListener" content="textOnly" dt:type="int"/>
+	<ElementType name="iMaxDistanceFromListener" content="textOnly" dt:type="int"/>
+	<ElementType name="iMinDistanceForMaxVolume" content="textOnly" dt:type="int"/>
+	<ElementType name="iMaxDistanceForMaxVolume" content="textOnly" dt:type="int"/>
+	<ElementType name="iMinCutoffDistance" content="textOnly" dt:type="int"/>
+	<ElementType name="iMaxCutoffDistance" content="textOnly" dt:type="int"/>
+	<ElementType name="bTaperForSoundtracks" content="textOnly" dt:type="boolean"/>
+	<ElementType name="iLengthOfSound" content="textOnly" dt:type="int"/>
+	<ElementType name="iMinLeftPan" content="textOnly" dt:type="int"/>
+	<ElementType name="iMaxLeftPan" content="textOnly" dt:type="int"/>
+	<ElementType name="iMinRightPan" content="textOnly" dt:type="int"/>
+	<ElementType name="iMaxRightPan" content="textOnly" dt:type="int"/>
+	<ElementType name="fMinDryLevel" content="textOnly"/>
+	<ElementType name="fMaxDryLevel" content="textOnly"/>
+	<ElementType name="fMinWetLevel" content="textOnly"/>
+	<ElementType name="fMaxWetLevel" content="textOnly"/>
+	<ElementType name="iNotPlayPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="ScriptType" content="textOnly"/>
+	<ElementType name="SoundscapeElement" content="eltOnly">
+		<element type="ScriptType"/>
+		<element type="ScriptID"/>
+	</ElementType>
+	<ElementType name="Script3DSound" content="eltOnly">
+		<element type="ScriptID"/>
+		<element type="SoundID"/>
+		<element type="SoundType"/>
+		<element type="iMinVolume"/>
+		<element type="iMaxVolume"/>
+		<element type="iPitchChangeDown"/>
+		<element type="iPitchChangeUp"/>
+		<element type="bLooping"/>
+		<element type="iMinTimeDelay"/>
+		<element type="iMaxTimeDelay"/>
+		<element type="StartPosition"/>
+		<element type="EndPosition"/>
+		<element type="iMinVelocity"/>
+		<element type="iMaxVelocity"/>
+		<element type="iMinDistanceFromListener"/>
+		<element type="iMaxDistanceFromListener"/>
+		<element type="iMinDistanceForMaxVolume"/>
+		<element type="iMaxDistanceForMaxVolume"/>
+		<element type="iMinCutoffDistance"/>
+		<element type="iMaxCutoffDistance"/>
+		<element type="bTaperForSoundtracks"/>
+		<element type="iLengthOfSound"/>
+		<element type="fMinDryLevel"/>
+		<element type="fMaxDryLevel"/>
+		<element type="fMinWetLevel"/>
+		<element type="fMaxWetLevel"/>
+		<element type="iNotPlayPercent"/>
+	</ElementType>
+	<ElementType name="Script2DSound" content="eltOnly">
+		<element type="ScriptID"/>
+		<element type="SoundID"/>
+		<element type="SoundType"/>
+		<element type="iMinVolume"/>
+		<element type="iMaxVolume"/>
+		<element type="iPitchChangeDown"/>
+		<element type="iPitchChangeUp"/>
+		<element type="iMinLeftPan"/>
+		<element type="iMaxLeftPan"/>
+		<element type="iMinRightPan"/>
+		<element type="iMaxRightPan"/>
+		<element type="bLooping"/>
+		<element type="iMinTimeDelay"/>
+		<element type="iMaxTimeDelay"/>
+		<element type="bTaperForSoundtracks"/>
+		<element type="iLengthOfSound"/>
+		<element type="fMinDryLevel"/>
+		<element type="fMaxDryLevel"/>
+		<element type="fMinWetLevel"/>
+		<element type="fMaxWetLevel"/>
+		<element type="iNotPlayPercent"/>
+	</ElementType>
+	<ElementType name="ScriptSoundscape" content="eltOnly">
+		<element type="ScriptID"/>
+		<element type="iMinVolume"/>
+		<element type="iMaxVolume"/>
+		<element type="SoundscapeElement" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Script3DSounds" content="eltOnly">
+		<element type="Script3DSound" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Script2DSounds" content="eltOnly">
+		<element type="Script2DSound" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="ScriptSoundscapes" content="eltOnly">
+		<element type="ScriptSoundscape" maxOccurs="*"/>
+	</ElementType>
+</Schema>

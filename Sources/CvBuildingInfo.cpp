@@ -2816,6 +2816,13 @@ FreePromoTypes& CvBuildingInfo::getFreePromoType(int iPromotion)
 	return m_aFreePromoTypes[iPromotion];
 }
 
+const FreePromoTypes& CvBuildingInfo::getFreePromoType(int iPromotion) const
+{
+	FAssertMsg(iPromotion < (int)m_aFreePromoTypes.size(), "Index out of bounds");
+	FAssertMsg(iPromotion > -1, "Index out of bounds");
+	return m_aFreePromoTypes[iPromotion];
+}
+
 int CvBuildingInfo::getNumFreeTraitTypes() const
 {
 	return (int)m_aFreeTraitTypes.size();
@@ -3487,17 +3494,16 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum)
 	CheckSumI(iSum, NUM_COMMERCE_TYPES, m_pbCommerceChangeOriginalOwner);
 	CheckSumI(iSum, GC.getNumBuildingClassInfos(), m_pbBuildingClassNeededInCity);
 
-	int i;
 	if (m_ppaiSpecialistYieldChange)
 	{
-		for(i=0;i<GC.getNumSpecialistInfos();i++)
+		for(int i = 0; i < GC.getNumSpecialistInfos(); i++)
 		{
 			CheckSumI(iSum, NUM_YIELD_TYPES, m_ppaiSpecialistYieldChange[i]);
 		}
 	}
 	if (m_ppaiSpecialistCommerceChange)
 	{
-		for(i=0;i<GC.getNumSpecialistInfos();i++)
+		for(int i = 0; i < GC.getNumSpecialistInfos(); i++)
 		{
 			CheckSumI(iSum, NUM_COMMERCE_TYPES, m_ppaiSpecialistCommerceChange[i]);
 		}
@@ -3506,7 +3512,7 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum)
 //Team Project (1)
 	if (m_ppaiLocalSpecialistYieldChange)
 	{
-		for(i=0;i<GC.getNumSpecialistInfos();i++)
+		for(int i = 0; i < GC.getNumSpecialistInfos(); i++)
 		{
 			CheckSumI(iSum, NUM_YIELD_TYPES, m_ppaiLocalSpecialistYieldChange[i]);
 		}
@@ -3514,7 +3520,7 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum)
 
 	if (m_ppaiLocalSpecialistCommerceChange)
 	{
-		for(i=0;i<GC.getNumSpecialistInfos();i++)
+		for(int i = 0; i < GC.getNumSpecialistInfos(); i++)
 		{
 			CheckSumI(iSum, NUM_COMMERCE_TYPES, m_ppaiLocalSpecialistCommerceChange[i]);
 		}
@@ -3522,7 +3528,7 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum)
 
 	if (m_ppaiBonusYieldModifier)
 	{
-		for(i=0;i<GC.getNumBonusInfos();i++)
+		for(int i = 0; i < GC.getNumBonusInfos(); i++)
 		{
 			CheckSumI(iSum, NUM_YIELD_TYPES, m_ppaiBonusYieldModifier[i]);
 		}
@@ -3593,7 +3599,7 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum)
 	CheckSumI(iSum, GC.getNumUnitCombatInfos(), m_piUnitCombatExtraStrength);
 	CheckSumI(iSum, NUM_COMMERCE_TYPES, m_piCommerceAttacks);
 	
-	for(i=0;i<GC.getNumTechInfos();i++)
+	for(int i = 0; i < GC.getNumTechInfos(); i++)
 	{
 		if (m_ppaiTechCommerceChange)
 			CheckSumI(iSum, NUM_COMMERCE_TYPES, m_ppaiTechCommerceChange[i]);
@@ -3607,7 +3613,7 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum)
 			CheckSumI(iSum, NUM_YIELD_TYPES, m_ppaiTechYieldModifier[i]);
 	}
 	
-	for(i=0;i<GC.getNumBonusInfos();i++)
+	for(int i = 0; i < GC.getNumBonusInfos(); i++)
 	{
 		if (m_ppaiBonusCommerceModifier)
 			CheckSumI(iSum, NUM_COMMERCE_TYPES, m_ppaiBonusCommerceModifier[i]);
@@ -3620,10 +3626,12 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum)
 	}
 	
 	if (m_ppiImprovementYieldChanges)
-		for(i=0;i<GC.getNumImprovementInfos();i++)
+	{
+		for (int i = 0; i < GC.getNumImprovementInfos(); i++)
 		{
 			CheckSumI(iSum, NUM_YIELD_TYPES, m_ppiImprovementYieldChanges[i]);
 		}
+	}
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
@@ -3778,11 +3786,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 		return false;
 	}
 
-	int j=0;						//loop counter
-	int k=0;						//loop counter
-	int iNumSibs=0;				// the number of siblings the current xml node has
-	int iNumChildren;				// the number of children the current node has
-
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"BuildingClass");
 	m_iBuildingClassType = pXML->GetInfoClass(szTextVal);
 
@@ -3864,7 +3867,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	if (pXML->TryMoveToXmlFirstChild(L"TechTypes"))
 	{
-		iNumChildren = pXML->GetXmlChildrenNumber();
+		int iNumChildren = pXML->GetXmlChildrenNumber();
 
 		if (0 < iNumChildren)
 		{
@@ -3872,7 +3875,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 			if (pXML->GetChildXmlVal(szTextVal))
 			{
 				FAssertMsg((iNumChildren <= GC.getNUM_BUILDING_AND_TECH_PREREQS()),"For loop iterator is greater than array size");
-				for (j=0;j<iNumChildren;j++)
+				for (int j = 0; j < iNumChildren; j++)
 				{
 					m_piPrereqAndTechs[j] = pXML->GetInfoClass(szTextVal);
 					if (!pXML->GetNextXmlVal(szTextVal))
@@ -4332,7 +4335,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	m_aGlobalBuildingCommerceChanges.clear();
 	if (pXML->TryMoveToXmlFirstChild(L"GlobalBuildingExtraCommerces"))
 	{
-		iNumChildren = pXML->GetXmlChildrenNumber();
+		int iNumChildren = pXML->GetXmlChildrenNumber();
 
 		if (0 < iNumChildren)
 		{
@@ -4369,14 +4372,14 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	if (pXML->TryMoveToXmlFirstChild(L"SpecialistYieldChanges"))
 	{
-		iNumChildren = pXML->GetXmlChildrenNumber();
+		int iNumChildren = pXML->GetXmlChildrenNumber();
 
 		if (pXML->TryMoveToXmlFirstChild(L"SpecialistYieldChange"))
 		{
-			for(j=0;j<iNumChildren;j++)
+			for (int j = 0; j < iNumChildren; ++j)
 			{
 				pXML->GetChildXmlValByName(szTextVal, L"SpecialistType");
-				k = pXML->GetInfoClass(szTextVal);
+				int k = pXML->GetInfoClass(szTextVal);
 				if (k > -1)
 				{
 					if ( m_ppaiSpecialistYieldChange == NULL )
@@ -4413,14 +4416,14 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	if (pXML->TryMoveToXmlFirstChild(L"SpecialistCommerceChanges"))
 	{
-		iNumChildren = pXML->GetXmlChildrenNumber();
+		int iNumChildren = pXML->GetXmlChildrenNumber();
 
 		if (pXML->TryMoveToXmlFirstChild(L"SpecialistCommerceChange"))
 		{
-			for(j=0;j<iNumChildren;j++)
+			for (int j = 0; j < iNumChildren; ++j)
 			{
 				pXML->GetChildXmlValByName(szTextVal, L"SpecialistType");
-				k = pXML->GetInfoClass(szTextVal);
+				int k = pXML->GetInfoClass(szTextVal);
 				if (k > -1)
 				{
 					if ( m_ppaiSpecialistCommerceChange == NULL )
@@ -4458,14 +4461,14 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 //Team Project (1)
 	if (pXML->TryMoveToXmlFirstChild(L"LocalSpecialistYieldChanges"))
 	{
-		iNumChildren = pXML->GetXmlChildrenNumber();
+		int iNumChildren = pXML->GetXmlChildrenNumber();
 
 		if (pXML->TryMoveToXmlFirstChild(L"LocalSpecialistYieldChange"))
 		{
-			for(j=0;j<iNumChildren;j++)
+			for (int j = 0; j < iNumChildren; ++j)
 			{
 				pXML->GetChildXmlValByName(szTextVal, L"SpecialistType");
-				k = pXML->GetInfoClass(szTextVal);
+				int k = pXML->GetInfoClass(szTextVal);
 				if (k > -1)
 				{
 					if ( m_ppaiLocalSpecialistYieldChange == NULL )
@@ -4502,14 +4505,14 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	if (pXML->TryMoveToXmlFirstChild(L"LocalSpecialistCommerceChanges"))
 	{
-		iNumChildren = pXML->GetXmlChildrenNumber();
+		int iNumChildren = pXML->GetXmlChildrenNumber();
 
 		if (pXML->TryMoveToXmlFirstChild(L"LocalSpecialistCommerceChange"))
 		{
-			for(j=0;j<iNumChildren;j++)
+			for (int j = 0; j < iNumChildren; ++j)
 			{
 				pXML->GetChildXmlValByName(szTextVal, L"SpecialistType");
-				k = pXML->GetInfoClass(szTextVal);
+				int k = pXML->GetInfoClass(szTextVal);
 				if (k > -1)
 				{
 					if ( m_ppaiLocalSpecialistCommerceChange == NULL )
@@ -4546,14 +4549,14 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	if (pXML->TryMoveToXmlFirstChild(L"BonusYieldModifiers"))
 	{
-		iNumChildren = pXML->GetXmlChildrenNumber();
+		int iNumChildren = pXML->GetXmlChildrenNumber();
 
 		if (pXML->TryMoveToXmlFirstChild(L"BonusYieldModifier"))
 		{
-			for(j=0;j<iNumChildren;j++)
+			for (int j = 0; j < iNumChildren; ++j)
 			{
 				pXML->GetChildXmlValByName(szTextVal, L"BonusType");
-				k = pXML->GetInfoClass(szTextVal);
+				int k = pXML->GetInfoClass(szTextVal);
 				if (k > -1)
 				{
 					if ( m_ppaiBonusYieldModifier == NULL )
@@ -4677,14 +4680,14 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	
 	if (pXML->TryMoveToXmlFirstChild(L"BonusCommerceModifiers"))
 	{
-		iNumChildren = pXML->GetXmlChildrenNumber();
+		int iNumChildren = pXML->GetXmlChildrenNumber();
 
 		if (pXML->TryMoveToXmlFirstChild(L"BonusCommerceModifier"))
 		{
-			for(j=0;j<iNumChildren;j++)
+			for (int j = 0; j < iNumChildren; ++j)
 			{
 				pXML->GetChildXmlValByName(szTextVal, L"BonusType");
-				k = pXML->GetInfoClass(szTextVal);
+				int k = pXML->GetInfoClass(szTextVal);
 				if (k > -1)
 				{
 					if ( m_ppaiBonusCommerceModifier == NULL )
@@ -4721,14 +4724,14 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	
 	if (pXML->TryMoveToXmlFirstChild(L"BonusCommercePercentChanges"))
 	{
-		iNumChildren = pXML->GetXmlChildrenNumber();
+		int iNumChildren = pXML->GetXmlChildrenNumber();
 
 		if (pXML->TryMoveToXmlFirstChild(L"BonusCommercePercentChange"))
 		{
-			for(j=0;j<iNumChildren;j++)
+			for (int j = 0; j < iNumChildren; ++j)
 			{
 				pXML->GetChildXmlValByName(szTextVal, L"BonusType");
-				k = pXML->GetInfoClass(szTextVal);
+				int k = pXML->GetInfoClass(szTextVal);
 				if (k > -1)
 				{
 					if ( m_ppaiBonusCommercePercentChanges == NULL )
@@ -4765,14 +4768,14 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	
 	if (pXML->TryMoveToXmlFirstChild(L"BonusYieldChanges"))
 	{
-		iNumChildren = pXML->GetXmlChildrenNumber();
+		int iNumChildren = pXML->GetXmlChildrenNumber();
 
 		if (pXML->TryMoveToXmlFirstChild(L"BonusYieldChange"))
 		{
-			for(j=0;j<iNumChildren;j++)
+			for (int j = 0; j < iNumChildren; ++j)
 			{
 				pXML->GetChildXmlValByName(szTextVal, L"BonusType");
-				k = pXML->GetInfoClass(szTextVal);
+				int k = pXML->GetInfoClass(szTextVal);
 				if (k > -1)
 				{
 					if ( m_ppaiBonusYieldChanges == NULL )
@@ -4809,14 +4812,14 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	
 	if (pXML->TryMoveToXmlFirstChild(L"VicinityBonusYieldChanges"))
 	{
-		iNumChildren = pXML->GetXmlChildrenNumber();
+		int iNumChildren = pXML->GetXmlChildrenNumber();
 
 		if (pXML->TryMoveToXmlFirstChild(L"BonusYieldChange"))
 		{
-			for(j=0;j<iNumChildren;j++)
+			for (int j = 0; j < iNumChildren; ++j)
 			{
 				pXML->GetChildXmlValByName(szTextVal, L"BonusType");
-				k = pXML->GetInfoClass(szTextVal);
+				int k = pXML->GetInfoClass(szTextVal);
 				if (k > -1)
 				{
 					if ( m_ppaiVicinityBonusYieldChanges == NULL )
@@ -4859,7 +4862,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 		{
 			if (pXML->TryMoveToXmlFirstChild())
 			{
-				for (int i=0;i<iNumSibs;i++)
+				for (int i = 0; i < iNumSibs; i++)
 				{
 					if (pXML->GetChildXmlVal(szTextVal))
 					{
@@ -4890,7 +4893,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 		{
 			if (pXML->TryMoveToXmlFirstChild())
 			{
-				for (int i=0;i<iNumSibs;i++)
+				for (int i = 0; i < iNumSibs; i++)
 				{
 					if (pXML->GetChildXmlVal(szTextVal))
 					{
@@ -4915,7 +4918,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	if (pXML->TryMoveToXmlFirstChild(L"PrereqVicinityBonuses"))
 	{
-		iNumChildren = pXML->GetXmlChildrenNumber();
+		int iNumChildren = pXML->GetXmlChildrenNumber();
 
 		if (0 < iNumChildren)
 		{
@@ -4923,7 +4926,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 			if (pXML->GetChildXmlVal(szTextVal))
 			{
 				FAssertMsg((iNumChildren <= GC.getNUM_BUILDING_PREREQ_OR_BONUSES()),"For loop iterator is greater than array size");
-				for (j=0;j<iNumChildren;j++)
+				for (int j = 0; j < iNumChildren; ++j)
 				{
 					m_piPrereqOrVicinityBonuses[j] = pXML->GetInfoClass(szTextVal);
 					if (!pXML->GetNextXmlVal(szTextVal))
@@ -4948,7 +4951,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	if (pXML->TryMoveToXmlFirstChild(L"PrereqRawVicinityBonuses"))
 	{
-		iNumChildren = pXML->GetXmlChildrenNumber();
+		int iNumChildren = pXML->GetXmlChildrenNumber();
 
 		if (0 < iNumChildren)
 		{
@@ -4956,7 +4959,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 			if (pXML->GetChildXmlVal(szTextVal))
 			{
 				FAssertMsg((iNumChildren <= GC.getNUM_BUILDING_PREREQ_OR_BONUSES()),"For loop iterator is greater than array size");
-				for (j=0;j<iNumChildren;j++)
+				for (int j = 0; j < iNumChildren; ++j)
 				{
 					m_piPrereqOrRawVicinityBonuses[j] = pXML->GetInfoClass(szTextVal);
 					if (!pXML->GetNextXmlVal(szTextVal))
@@ -4981,15 +4984,15 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	if (pXML->TryMoveToXmlFirstChild(L"TechCommerceChanges"))
 	{
-		iNumSibs = pXML->GetXmlChildrenNumber();
+		int iNumSibs = pXML->GetXmlChildrenNumber();
 		if (pXML->TryMoveToXmlFirstChild())
 		{
 			if (0 < iNumSibs)
 			{
-				for (j=0;j<iNumSibs;j++)
+				for (int j = 0; j < iNumSibs; j++)
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"PrereqTech");
-					k = pXML->GetInfoClass(szTextVal);
+					int k = pXML->GetInfoClass(szTextVal);
 
 					if (k > -1)
 					{
@@ -5028,15 +5031,15 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	if (pXML->TryMoveToXmlFirstChild(L"TechYieldChanges"))
 	{
-		iNumSibs = pXML->GetXmlChildrenNumber();
+		int iNumSibs = pXML->GetXmlChildrenNumber();
 		if (pXML->TryMoveToXmlFirstChild())
 		{
 			if (0 < iNumSibs)
 			{
-				for (j=0;j<iNumSibs;j++)
+				for (int j = 0; j < iNumSibs; j++)
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"PrereqTech");
-					k = pXML->GetInfoClass(szTextVal);
+					int k = pXML->GetInfoClass(szTextVal);
 
 					if (k > -1)
 					{
@@ -5074,15 +5077,15 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	if (pXML->TryMoveToXmlFirstChild(L"TechSpecialistChanges"))
 	{
-		iNumSibs = pXML->GetXmlChildrenNumber();
+		int iNumSibs = pXML->GetXmlChildrenNumber();
 		if (pXML->TryMoveToXmlFirstChild())
 		{
 			if (0 < iNumSibs)
 			{
-				for (j=0;j<iNumSibs;j++)
+				for (int j = 0; j < iNumSibs; j++)
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"PrereqTech");
-					k = pXML->GetInfoClass(szTextVal);
+					int k = pXML->GetInfoClass(szTextVal);
 
 					if (k > -1)
 					{
@@ -5114,15 +5117,15 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	if (pXML->TryMoveToXmlFirstChild(L"TechCommerceModifiers"))
 	{
-		iNumSibs = pXML->GetXmlChildrenNumber();
+		int iNumSibs = pXML->GetXmlChildrenNumber();
 		if (pXML->TryMoveToXmlFirstChild())
 		{
 			if (0 < iNumSibs)
 			{
-				for (j=0;j<iNumSibs;j++)
+				for (int j = 0; j < iNumSibs; j++)
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"PrereqTech");
-					k = pXML->GetInfoClass(szTextVal);
+					int k = pXML->GetInfoClass(szTextVal);
 
 					if (k > -1)
 					{
@@ -5159,15 +5162,15 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	if (pXML->TryMoveToXmlFirstChild(L"TechYieldModifiers"))
 	{
-		iNumSibs = pXML->GetXmlChildrenNumber();
+		int iNumSibs = pXML->GetXmlChildrenNumber();
 		if (pXML->TryMoveToXmlFirstChild())
 		{
 			if (0 < iNumSibs)
 			{
-				for (j=0;j<iNumSibs;j++)
+				for (int j = 0; j < iNumSibs; j++)
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"PrereqTech");
-					k = pXML->GetInfoClass(szTextVal);
+					int k = pXML->GetInfoClass(szTextVal);
 
 					if (k > -1)
 					{
@@ -5200,19 +5203,18 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 		pXML->MoveToXmlParent();
 	}
-	int iIndex;
 
 	if (pXML->TryMoveToXmlFirstChild(L"ImprovementYieldChanges"))
 	{
-		iNumSibs = pXML->GetXmlChildrenNumber();
+		int iNumSibs = pXML->GetXmlChildrenNumber();
 		if (pXML->TryMoveToXmlFirstChild())
 		{
 			if (0 < iNumSibs)
 			{
-				for (j=0;j<iNumSibs;j++)
+				for (int j = 0; j < iNumSibs; j++)
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"ImprovementType");
-					iIndex = pXML->GetInfoClass(szTextVal);
+					int iIndex = pXML->GetInfoClass(szTextVal);
 
 					if (iIndex > -1)
 					{
@@ -5319,7 +5321,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	if(pXML->TryMoveToXmlFirstChild(L"FreePromoTypes"))
 	{
-		int i = 0;
 		int iNum = pXML->GetXmlChildrenNumber(L"FreePromoType" );
 		m_aFreePromoTypes.resize(iNum); // Important to keep the delayed resolution pointers correct
 
@@ -5327,6 +5328,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 		{
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"FreePromoType"))
 			{	
+				int i = 0;
 				do
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"PromotionType");
@@ -5346,7 +5348,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	if(pXML->TryMoveToXmlFirstChild(L"FreeTraitTypes"))
 	{
-		int i = 0;
 		int iNum = pXML->GetXmlChildrenNumber(L"FreeTraitType" );
 		m_aFreeTraitTypes.resize(iNum); // Important to keep the delayed resolution pointers correct
 
@@ -5354,6 +5355,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 		{
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"FreeTraitType"))
 			{	
+				int i = 0;
 				do
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"TraitType");
@@ -5368,15 +5370,14 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	if(pXML->TryMoveToXmlFirstChild(L"HealUnitCombatTypes"))
 	{
-		int i = 0;
 		int iNum = pXML->GetXmlChildrenNumber(L"HealUnitCombatType" );
 		m_aHealUnitCombatTypes.resize(iNum); // Important to keep the delayed resolution pointers correct
 
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"HealUnitCombatType"))
 			{
+				int i = 0;
 				do
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"UnitCombatType");
@@ -5392,15 +5393,14 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	if(pXML->TryMoveToXmlFirstChild(L"BonusAidModifiers"))
 	{
-		int i = 0;
 		int iNum = pXML->GetXmlChildrenNumber(L"BonusAidModifier" );
 		m_aBonusAidModifiers.resize(iNum); // Important to keep the delayed resolution pointers correct
 
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"BonusAidModifier"))
 			{
+				int i = 0;
 				do
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"BonusType");
@@ -5418,15 +5418,14 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	if(pXML->TryMoveToXmlFirstChild(L"AidRateChanges"))
 	{
-		int i = 0;
 		int iNum = pXML->GetXmlChildrenNumber(L"AidRateChange" );
 		m_aAidRateChanges.resize(iNum); // Important to keep the delayed resolution pointers correct
 
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"AidRateChange"))
 			{
+				int i = 0;
 				do
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"PropertyType");
@@ -5442,15 +5441,14 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	if(pXML->TryMoveToXmlFirstChild(L"EnabledCivilizationTypes"))
 	{
-		int i = 0;
 		int iNum = pXML->GetXmlChildrenNumber(L"EnabledCivilizationType" );
 		m_aEnabledCivilizationTypes.resize(iNum); // Important to keep the delayed resolution pointers correct
 
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"EnabledCivilizationType"))
 			{
+				int i = 0;
 				do
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"CivilizationType");
@@ -5584,7 +5582,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	int iTextDefault = -1;
 	float fDefault = 0.0f;
 	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
 
 	if ( getArtDefineTag() == cDefault ) // "ArtDefineTag"
 	{

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Civ4UnitCombatInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
+	<UnitCombatInfos>
+		<UnitCombatInfo>
+			<Type>UNITCOMBAT_CULTURE_CYBERPUNK</Type>
+			<Description>TXT_KEY_UNITCOMBAT_CULTURE_CYBERPUNK</Description>
+			<CultureType>BONUS_CYBERPUNK</CultureType>
+			<Button>Art/Interface/Buttons/units/sparth/categories/culture_cyberpunk.dds</Button>
+		</UnitCombatInfo>
+	</UnitCombatInfos>
+</Civ4UnitCombatInfos>

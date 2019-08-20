@@ -236,16 +236,11 @@ void CvArea::setID(int iID)
 
 int CvArea::calculateTotalBestNatureYield() const
 {
-	CvPlot* pLoopPlot;
-	int iCount;
-	int iI;
+	int iCount = 0;
 
-	iCount = 0;
-
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
-
+		CvPlot*  pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
 		if (pLoopPlot->getArea() == getID())
 		{
 			iCount += pLoopPlot->calculateTotalBestNatureYield(NO_TEAM);
@@ -258,21 +253,16 @@ int CvArea::calculateTotalBestNatureYield() const
 
 int CvArea::countCoastalLand() const
 {
-	CvPlot* pLoopPlot;
-	int iCount;
-	int iI;
-
 	if (isWater())
 	{
 		return 0;
 	}
 
-	iCount = 0;
+	int iCount = 0;
 
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
-
+		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
 		if (pLoopPlot->getArea() == getID())
 		{
 			if (pLoopPlot->isCoastalLand())
@@ -288,12 +278,9 @@ int CvArea::countCoastalLand() const
 
 int CvArea::countNumUniqueBonusTypes() const
 {
-	int iCount;
-	int iI;
+	int iCount = 0;
 
-	iCount = 0;
-
-	for (iI = 0; iI < GC.getNumBonusInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 	{
 		if (getNumBonuses((BonusTypes)iI) > 0)
 		{
@@ -310,20 +297,16 @@ int CvArea::countNumUniqueBonusTypes() const
 
 int CvArea::countHasReligion(ReligionTypes eReligion, PlayerTypes eOwner) const
 {
-	CvCity* pLoopCity;
-	int iCount;
-	int iLoop;
-	int iI;
+	int iCount = 0;
 
-	iCount = 0;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
 			if ((eOwner == NO_PLAYER) || (iI == eOwner))
 			{
-				for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+				int iLoop;
+				for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
 				{
 					if (pLoopCity->area()->getID() == getID())
 					{
@@ -383,16 +366,14 @@ bool CvArea::isLake() const
 
 void CvArea::changeNumTiles(int iChange)
 {
-	bool bOldLake;
-
 	if (iChange != 0)
 	{
-		bOldLake = isLake();
+		bool bWasLake = isLake();
 
 		m_iNumTiles = (m_iNumTiles + iChange);
 		FAssert(getNumTiles() >= 0);
 
-		if (bOldLake != isLake())
+		if (bWasLake != isLake())
 		{
 			GC.getMapINLINE().updateIrrigated();
 			GC.getMapINLINE().updateYield();
@@ -916,18 +897,16 @@ bool CvArea::isCleanPower(TeamTypes eIndex) const
 
 void CvArea::changeCleanPowerCount(TeamTypes eIndex, int iChange)
 {
-	bool bOldCleanPower;
-
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
 	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be < MAX_TEAMS");
 
 	if (iChange != 0)
 	{
-		bOldCleanPower = isCleanPower(eIndex);
+		bool bWasCleanPower = isCleanPower(eIndex);
 
 		m_aiCleanPowerCount[eIndex] = (m_aiCleanPowerCount[eIndex] + iChange);
 
-		if (bOldCleanPower != isCleanPower(eIndex))
+		if (bWasCleanPower != isCleanPower(eIndex))
 		{
 			GET_TEAM(eIndex).updateCommerce();
 			GET_TEAM(eIndex).updatePowerHealth();
@@ -1142,8 +1121,6 @@ void CvArea::changeNumImprovements(ImprovementTypes eImprovement, int iChange)
 
 void CvArea::read(FDataStreamBase* pStream)
 {
-	int iI;
-
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -1189,21 +1166,21 @@ void CvArea::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_ARRAY(wrapper, "CvArea", MAX_TEAMS, (int*)m_aeAreaAIType);
 
-	for (iI=0;iI<MAX_PLAYERS;iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		WRAPPER_READ(wrapper, "CvArea", (int*)&m_aTargetCities[iI].eOwner);
 		WRAPPER_READ(wrapper, "CvArea", &m_aTargetCities[iI].iID);
 	}
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		WRAPPER_READ_ARRAY(wrapper, "CvArea", NUM_YIELD_TYPES, m_aaiYieldRateModifier[iI]);
 	}
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		WRAPPER_READ_OPTIONAL_CLASS_ARRAY(wrapper, "CvArea", REMAPPED_CLASS_TYPE_UNITAIS, NUM_UNITAI_TYPES, m_aaiNumTrainAIUnits[iI]);
 	}
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		WRAPPER_READ_OPTIONAL_CLASS_ARRAY(wrapper, "CvArea", REMAPPED_CLASS_TYPE_UNITAIS, NUM_UNITAI_TYPES, m_aaiNumAIUnits[iI]);
 	}
@@ -1212,7 +1189,7 @@ void CvArea::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvArea", REMAPPED_CLASS_TYPE_IMPROVEMENTS, GC.getNumImprovementInfos(), m_paiNumImprovements);
 
 	WRAPPER_READ(wrapper, "CvArea", &m_iLastGameTurnRecorded);
-	for(iI = 0; iI < COMBAT_RECORD_LENGTH; iI++)
+	for(int iI = 0; iI < COMBAT_RECORD_LENGTH; iI++)
 	{
 		TurnCombatResults& turnRecord = m_combatRecord[iI];
 		int numRecords = 0;
@@ -1237,8 +1214,6 @@ void CvArea::read(FDataStreamBase* pStream)
 
 void CvArea::write(FDataStreamBase* pStream)
 {
-	int iI;
-
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -1281,21 +1256,21 @@ void CvArea::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_ARRAY(wrapper, "CvArea", MAX_TEAMS, (int*)m_aeAreaAIType);
 
-	for (iI=0;iI<MAX_PLAYERS;iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		WRAPPER_WRITE(wrapper, "CvArea", m_aTargetCities[iI].eOwner);
 		WRAPPER_WRITE(wrapper, "CvArea", m_aTargetCities[iI].iID);
 	}
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		WRAPPER_WRITE_ARRAY(wrapper, "CvArea", NUM_YIELD_TYPES, m_aaiYieldRateModifier[iI]);
 	}
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvArea", REMAPPED_CLASS_TYPE_UNITAIS, NUM_UNITAI_TYPES, m_aaiNumTrainAIUnits[iI]);
 	}
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvArea", REMAPPED_CLASS_TYPE_UNITAIS, NUM_UNITAI_TYPES, m_aaiNumAIUnits[iI]);
 	}
@@ -1303,7 +1278,7 @@ void CvArea::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvArea", REMAPPED_CLASS_TYPE_IMPROVEMENTS, GC.getNumImprovementInfos(), m_paiNumImprovements);
 
 	WRAPPER_WRITE(wrapper, "CvArea", m_iLastGameTurnRecorded);
-	for(iI = 0; iI < COMBAT_RECORD_LENGTH; iI++)
+	for(int iI = 0; iI < COMBAT_RECORD_LENGTH; iI++)
 	{
 		TurnCombatResults& turnRecord = m_combatRecord[iI];
 		int numRecords = turnRecord.size();
@@ -1397,9 +1372,7 @@ int	CvArea::getRecentCombatDeathRate(PlayerTypes ePlayer, UnitAITypes eUnitAITyp
 
 void CvArea::clearModifierTotals()
 {
-	int iI;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		m_aiBuildingGoodHealth[iI] = 0;
 		m_aiBuildingBadHealth[iI] = 0;
@@ -1413,12 +1386,12 @@ void CvArea::clearModifierTotals()
 		//DPII < Maintenance Modifiers >
 	}
 
-	for (iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		m_aiCleanPowerCount[iI] = 0;
 	}
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 		{

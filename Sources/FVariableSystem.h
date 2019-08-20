@@ -55,7 +55,7 @@ class FVariable
 		FVariable(const FVariable& src) { CopyFrom(src); }
 		virtual ~FVariable();
 
-		const FVariable& operator=( const FVariable& varSrc ) { CopyFrom(varSrc); return *this; }
+		FVariable& operator=( const FVariable& varSrc ) { CopyFrom(varSrc); return *this; }
 		void CopyFrom(const FVariable& varSrc);
 		void Read(FDataStreamBase *);
 		void Write(FDataStreamBase *) const;

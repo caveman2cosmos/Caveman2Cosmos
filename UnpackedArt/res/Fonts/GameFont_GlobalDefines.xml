@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Modified by the World of Civilization Team -->
+<!-- Global Defines -->
+<!-- -->
+<Civ4Defines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Xml\Schema\Caveman2Cosmos.xsd">
+	<Define>
+		<DefineName>GAMEFONT_TGA_RELIGIONS</DefineName>
+		<iDefineIntVal>50</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>GAMEFONT_TGA_CORPORATIONS</DefineName>
+		<iDefineIntVal>50</iDefineIntVal>
+	</Define>
+</Civ4Defines>

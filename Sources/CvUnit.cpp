@@ -27051,6 +27051,16 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 			info->m_iPromotionFreeCount = g_paiTempPromotionFreeCount[iI];
 		}
+		else if ( GC.getLoadedInitCore().getGameSaveSvnRev() < 5080 && isHasPromotion((PromotionTypes)iI) )
+		{
+			if ( !canKeepPromotion((PromotionTypes)iI, false, false) )
+			{
+				//	We have a promotion it doesn't look like we should be able to keep
+				//	but for the sake of old save games we allow it at load time, or else
+				//	all pre-combat mod games will lose promotions given by Python
+				setPromotionFreeCount((PromotionTypes)iI, 1);
+			}
+		}
 	}
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatKnockbacks);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatRepels);
