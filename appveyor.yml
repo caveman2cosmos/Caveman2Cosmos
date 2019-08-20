@@ -1,5 +1,6 @@
 version: 40.0.{build}
 image: Visual Studio 2019
+cache: Sources/deps -> Tools\deps.exe appveyor.yml Tools/InstallDeps.bat
 
 environment:
   svn_url: https://svn.code.sf.net/p/caveman2cosmos/code/branches/billw-git
