@@ -1,6 +1,8 @@
 version: 40.0.{build}
 image: Visual Studio 2019
-cache: Sources/deps -> Tools\deps.exe appveyor.yml Tools/InstallDeps.bat
+cache:
+- Sources\deps -> Tools\deps.exe, appveyor.yml, Tools\InstallDeps.bat
+- Sources\temp_files\Debug -> Sources\deps
 
 environment:
   svn_url: https://svn.code.sf.net/p/caveman2cosmos/code/branches/billw-git
@@ -12,7 +14,7 @@ environment:
 
 build_script:
 - cmd: >-
-    call "%APPVEYOR_BUILD_FOLDER%\Tools\MakeDLLDebug.bat"
+    call "%APPVEYOR_BUILD_FOLDER%\Tools\_MakeDLL.bat" build Debug
 
     call "%APPVEYOR_BUILD_FOLDER%\Tools\MakeDLLRelease.bat"
 
