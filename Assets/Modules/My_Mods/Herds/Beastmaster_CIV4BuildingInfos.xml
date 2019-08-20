@@ -6,20 +6,16 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DONKEY_BREEDER</BuildingClass>
 			<Type>BUILDING_DONKEY_BREEDER</Type>
-			<SpecialBuildingType>NONE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DONKEY_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_BREEDER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_BREEDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DONKEY_BREEDER</ArtDefineTag>
-			<ObsoleteTech/>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
-			<iAIWeight>0</iAIWeight>
 			<iCost>132</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
-			<fVisibilityPriority>0.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_STABLE</ConstructSound>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -54,20 +50,16 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_HORSE_BREEDER</BuildingClass>
 			<Type>BUILDING_HORSE_BREEDER</Type>
-			<SpecialBuildingType>NONE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HORSE_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_BREEDER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_BREEDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HORSE_BREEDER</ArtDefineTag>
-			<ObsoleteTech/>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
-			<iAIWeight>0</iAIWeight>
 			<iCost>132</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
-			<fVisibilityPriority>0.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_STABLE</ConstructSound>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

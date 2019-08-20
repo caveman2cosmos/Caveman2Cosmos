@@ -44,7 +44,9 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<CreateSound/>			<iWorldTradeRoutes>1</iWorldTradeRoutes>
+			<CreateSound/>
+			<MovieDefineTag>ART_DEF_MOVIE_INTERNET</MovieDefineTag>
+			<iWorldTradeRoutes>1</iWorldTradeRoutes>
 			<CommerceModifiers>
 				<iCommerce>10</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -85,7 +87,9 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<CreateSound/>		</ProjectInfo>
+			<CreateSound/>
+			<MovieDefineTag>ART_DEF_MOVIE_SDI</MovieDefineTag>
+		</ProjectInfo>
 		<ProjectInfo>
 			<Type>PROJECT_MISSILE_DEFENCE_I</Type>
 			<Description>TXT_KEY_PROJECT_MISSILE_DEFENCE_I</Description>
@@ -119,7 +123,9 @@
 					<iProductonModifier>50</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<CreateSound/>		</ProjectInfo>
+			<CreateSound/>
+			<MovieDefineTag/>
+		</ProjectInfo>
 		<ProjectInfo>
 			<Type>PROJECT_MISSILE_DEFENCE_II</Type>
 			<Description>TXT_KEY_PROJECT_MISSILE_DEFENCE_II</Description>
@@ -157,7 +163,9 @@
 					<iProductonModifier>50</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<CreateSound/>		</ProjectInfo>
+			<CreateSound/>
+			<MovieDefineTag/>
+		</ProjectInfo>
 		<ProjectInfo>
 			<Type>PROJECT_MISSILE_RAILGUN</Type>
 			<Description>TXT_KEY_PROJECT_MISSILE_RAILGUN</Description>
@@ -199,7 +207,9 @@
 					<iProductonModifier>25</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<CreateSound/>		</ProjectInfo>
+			<CreateSound/>
+			<MovieDefineTag/>
+		</ProjectInfo>
 		<ProjectInfo>
 			<Type>PROJECT_APOLLO_PROGRAM</Type>
 			<Description>TXT_KEY_PROJECT_APOLLO_PROGRAM</Description>
@@ -233,7 +243,9 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<CreateSound/>		</ProjectInfo>
+			<CreateSound/>
+			<MovieDefineTag/>
+		</ProjectInfo>
 		<ProjectInfo>
 			<Type>PROJECT_SS_COCKPIT</Type>
 			<Description>TXT_KEY_PROJECT_SS_COCKPIT</Description>
@@ -277,7 +289,9 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<CreateSound/>		</ProjectInfo>
+			<CreateSound/>
+			<MovieDefineTag/>
+		</ProjectInfo>
 		<ProjectInfo>
 			<Type>PROJECT_SS_LIFE_SUPPORT</Type>
 			<Description>TXT_KEY_PROJECT_SS_LIFE_SUPPORT</Description>
@@ -321,7 +335,9 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<CreateSound/>		</ProjectInfo>
+			<CreateSound/>
+			<MovieDefineTag/>
+		</ProjectInfo>
 		<ProjectInfo>
 			<Type>PROJECT_SS_STASIS_CHAMBER</Type>
 			<Description>TXT_KEY_PROJECT_SS_STASIS_CHAMBER</Description>
@@ -360,7 +376,9 @@
 			<iVictoryDelayPercent>0</iVictoryDelayPercent>
 			<iSuccessRate>0</iSuccessRate>
 			<BonusProductionModifiers/>
-			<CreateSound/>		</ProjectInfo>
+			<CreateSound/>
+			<MovieDefineTag/>
+		</ProjectInfo>
 		<ProjectInfo>
 			<Type>PROJECT_SS_DOCKING_BAY</Type>
 			<Description>TXT_KEY_PROJECT_SS_DOCKING_BAY</Description>
@@ -404,7 +422,9 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<CreateSound/>		</ProjectInfo>
+			<CreateSound/>
+			<MovieDefineTag/>
+		</ProjectInfo>
 		<ProjectInfo>
 			<Type>PROJECT_SS_ENGINE</Type>
 			<Description>TXT_KEY_PROJECT_SS_ENGINE</Description>
@@ -448,7 +468,9 @@
 			<iVictoryDelayPercent>50</iVictoryDelayPercent>
 			<iSuccessRate>0</iSuccessRate>
 			<BonusProductionModifiers/>
-			<CreateSound/>		</ProjectInfo>
+			<CreateSound/>
+			<MovieDefineTag/>
+		</ProjectInfo>
 		<ProjectInfo>
 			<Type>PROJECT_SS_CASING</Type>
 			<Description>TXT_KEY_PROJECT_SS_CASING</Description>
@@ -497,7 +519,9 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<CreateSound/>		</ProjectInfo>
+			<CreateSound/>
+			<MovieDefineTag/>
+		</ProjectInfo>
 		<ProjectInfo>
 			<Type>PROJECT_SS_THRUSTERS</Type>
 			<Description>TXT_KEY_PROJECT_SS_THRUSTERS</Description>
@@ -546,7 +570,9 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<CreateSound/>		</ProjectInfo>
+			<CreateSound/>
+			<MovieDefineTag/>
+		</ProjectInfo>
 		<ProjectInfo>
 			<Type>PROJECT_FIRST_CLONED_MAMMAL</Type>
 			<Description>TXT_KEY_PROJECT_FIRST_CLONED_MAMMAL</Description>
@@ -580,7 +606,9 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<CreateSound/>		</ProjectInfo>
+			<CreateSound/>
+			<MovieDefineTag/>
+		</ProjectInfo>
 		<ProjectInfo>
 			<Type>PROJECT_HUBBLE</Type>
 			<Description>TXT_KEY_PROJECT_HUBBLE</Description>
@@ -614,7 +642,9 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<CreateSound/>		</ProjectInfo>
+			<CreateSound/>
+			<MovieDefineTag>ART_DEF_MOVIE_HUBBLE</MovieDefineTag>
+		</ProjectInfo>
 		<ProjectInfo>
 			<Type>PROJECT_ENCYCLOPEDIE</Type>
 			<Description>TXT_KEY_PROJECT_ENCYCLOPEDIE</Description>
@@ -643,7 +673,9 @@
 			<iVictoryDelayPercent>0</iVictoryDelayPercent>
 			<iSuccessRate>0</iSuccessRate>
 			<BonusProductionModifiers/>
-			<CreateSound/>			<CommerceModifiers>
+			<CreateSound/>
+			<MovieDefineTag>ART_DEF_MOVIE_ENCYCLOPEDIA</MovieDefineTag>
+			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>15</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -683,7 +715,9 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<CreateSound/>		</ProjectInfo>
+			<CreateSound/>
+			<MovieDefineTag>ART_DEF_MOVIE_ISS</MovieDefineTag>
+		</ProjectInfo>
 		<ProjectInfo>
 			<Type>PROJECT_ITER</Type>
 			<Description>TXT_KEY_PROJECT_ITER</Description>
@@ -712,7 +746,9 @@
 			<iVictoryDelayPercent>0</iVictoryDelayPercent>
 			<iSuccessRate>0</iSuccessRate>
 			<BonusProductionModifiers/>
-			<CreateSound/>		</ProjectInfo>
+			<CreateSound/>
+			<MovieDefineTag/>
+		</ProjectInfo>
 		<ProjectInfo>
 			<Type>PROJECT_IMF</Type>
 			<Description>TXT_KEY_PROJECT_IMF</Description>
@@ -746,7 +782,9 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<CreateSound/>		</ProjectInfo>
+			<CreateSound/>
+			<MovieDefineTag/>
+		</ProjectInfo>
 		<ProjectInfo>
 			<Type>PROJECT_EDEN</Type>
 			<Description>TXT_KEY_PROJECT_EDEN</Description>
@@ -775,7 +813,9 @@
 			<iVictoryDelayPercent>0</iVictoryDelayPercent>
 			<iSuccessRate>0</iSuccessRate>
 			<BonusProductionModifiers/>
-			<CreateSound/>		</ProjectInfo>
+			<CreateSound/>
+			<MovieDefineTag>ART_DEF_MOVIE_EDEN</MovieDefineTag>
+		</ProjectInfo>
 		<ProjectInfo>
 			<Type>PROJECT_CURE_FOR_CANCER</Type>
 			<Description>TXT_KEY_BUILDING_CANCER</Description>
@@ -805,7 +845,9 @@
 			<iSuccessRate>0</iSuccessRate>
 			<BonusProductionModifiers>
 			</BonusProductionModifiers>
-			<CreateSound/>			<iGlobalHealth>2</iGlobalHealth>
+			<CreateSound/>
+			<MovieDefineTag>ART_DEF_MOVIE_CANCER</MovieDefineTag>
+			<iGlobalHealth>2</iGlobalHealth>
 			<iGlobalHappiness>1</iGlobalHappiness>
 			<iWorldHappiness>0</iWorldHappiness>
 			<iWorldHealth>2</iWorldHealth>
@@ -839,7 +881,9 @@
 			<iSuccessRate>0</iSuccessRate>
 			<BonusProductionModifiers>
 			</BonusProductionModifiers>
-			<CreateSound/>			<iGlobalHealth>1</iGlobalHealth>
+			<CreateSound/>
+			<MovieDefineTag></MovieDefineTag>
+			<iGlobalHealth>1</iGlobalHealth>
 			<iGlobalHappiness>0</iGlobalHappiness>
 			<iWorldHappiness>0</iWorldHappiness>
 			<iWorldHealth>1</iWorldHealth>
@@ -879,7 +923,9 @@
 			<iSuccessRate>0</iSuccessRate>
 			<BonusProductionModifiers>
 			</BonusProductionModifiers>
-			<CreateSound/>			<iGlobalHealth>1</iGlobalHealth>
+			<CreateSound/>
+			<MovieDefineTag></MovieDefineTag>
+			<iGlobalHealth>1</iGlobalHealth>
 			<iGlobalHappiness>1</iGlobalHappiness>
 			<iWorldHappiness>1</iWorldHappiness>
 			<iWorldHealth>1</iWorldHealth>
@@ -919,7 +965,9 @@
 			<iSuccessRate>0</iSuccessRate>
 			<BonusProductionModifiers>
 			</BonusProductionModifiers>
-			<CreateSound/>			<iGlobalHealth>1</iGlobalHealth>
+			<CreateSound/>
+			<MovieDefineTag></MovieDefineTag>
+			<iGlobalHealth>1</iGlobalHealth>
 			<iGlobalHappiness>1</iGlobalHappiness>
 			<iWorldHappiness>0</iWorldHappiness>
 			<iWorldHealth>0</iWorldHealth>
@@ -959,7 +1007,9 @@
 			<iSuccessRate>0</iSuccessRate>
 			<BonusProductionModifiers>
 			</BonusProductionModifiers>
-			<CreateSound/>			<iGlobalHealth>0</iGlobalHealth>
+			<CreateSound/>
+			<MovieDefineTag></MovieDefineTag>
+			<iGlobalHealth>0</iGlobalHealth>
 			<iGlobalHappiness>1</iGlobalHappiness>
 			<iWorldHappiness>0</iWorldHappiness>
 			<iWorldHealth>0</iWorldHealth>

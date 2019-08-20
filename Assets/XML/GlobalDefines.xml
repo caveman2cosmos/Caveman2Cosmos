@@ -1230,7 +1230,7 @@
 	</Define>
 	<Define>
 		<DefineName>CAMERA_START_DISTANCE</DefineName>
-		<fDefineFloatVal>2200</fDefineFloatVal>
+		<fDefineFloatVal>3800</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>CAMERA_MAX_TRAVEL_DISTANCE</DefineName>
@@ -1276,15 +1276,15 @@
 	</Define>
 	<Define>
 		<DefineName>CAMERA_CITY_ZOOM_IN_DISTANCE</DefineName>
-		<fDefineFloatVal>4000</fDefineFloatVal>
+		<fDefineFloatVal>4400</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>CAMERA_BATTLE_ZOOM_IN_DISTANCE</DefineName>
-		<fDefineFloatVal>900</fDefineFloatVal>
+		<fDefineFloatVal>1000</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>CAMERA_SHRINE_ZOOM_IN_DISTANCE</DefineName>
-		<fDefineFloatVal>900</fDefineFloatVal>
+		<fDefineFloatVal>1000</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>CAMERA_FAR_CLIP_Z_HEIGHT</DefineName>

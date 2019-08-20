@@ -43,7 +43,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_ZEBRA_TRAINER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ZEBRA_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ZEBRA_TRAINER</ArtDefineTag>			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
+			<ArtDefineTag>ART_DEF_BUILDING_ZEBRA_TRAINER</ArtDefineTag>
+  		       <MovieDefineTag>ART_DEF_MOVIE_ZEBRA_RIDER</MovieDefineTag>
+			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

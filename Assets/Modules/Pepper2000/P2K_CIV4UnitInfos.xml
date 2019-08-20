@@ -1451,7 +1451,6 @@
 			<iCollateralDamageLimit>10</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>1</iCollateralDamageMaxUnits>
 			<iCityAttack>10</iCityAttack>
-			<iCityDefense>0</iCityDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -1507,7 +1506,6 @@
 			<iCollateralDamageLimit>10</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>1</iCollateralDamageMaxUnits>
 			<iCityAttack>10</iCityAttack>
-			<iCityDefense>0</iCityDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -1563,7 +1561,6 @@
 			<iCollateralDamageLimit>10</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>1</iCollateralDamageMaxUnits>
 			<iCityAttack>10</iCityAttack>
-			<iCityDefense>0</iCityDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -1619,7 +1616,6 @@
 			<iCollateralDamageLimit>10</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>1</iCollateralDamageMaxUnits>
 			<iCityAttack>10</iCityAttack>
-			<iCityDefense>0</iCityDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -1673,7 +1669,6 @@
 			<iCollateralDamageLimit>10</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>1</iCollateralDamageMaxUnits>
 			<iCityAttack>10</iCityAttack>
-			<iCityDefense>0</iCityDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -2404,7 +2399,6 @@
 			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -2511,7 +2505,6 @@
 			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -2591,7 +2584,6 @@
 			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -2660,7 +2652,6 @@
 			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -2848,7 +2839,6 @@
 			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -2979,7 +2969,6 @@
 			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -3160,7 +3149,6 @@
 			<Strategy>TXT_KEY_UNIT_NANOWORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -3344,7 +3332,6 @@
 			<Strategy>TXT_KEY_UNIT_COSMIC_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -3639,7 +3626,6 @@
 			<Strategy>TXT_KEY_UNIT_CHRONOFORM_SHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -3787,7 +3773,6 @@
 			<Strategy>TXT_KEY_UNIT_SPACE_WORK_CREW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -3852,7 +3837,6 @@
 			<Strategy>TXT_KEY_UNIT_CYBERNETIC_WORK_CREW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -3919,7 +3903,6 @@
 			<Strategy>TXT_KEY_UNIT_TRANSHUMAN_WORK_CREW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -3988,7 +3971,6 @@
 			<Strategy>TXT_KEY_UNIT_POSTHUMAN_WORK_CREW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -4058,7 +4040,6 @@
 			<Strategy>TXT_KEY_UNIT_COSMIC_WORK_CREW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -4129,7 +4110,6 @@
 			<Strategy>TXT_KEY_UNIT_SHAPESHIFTING_WORK_CREW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -4186,7 +4166,6 @@
 			<Strategy>TXT_KEY_UNIT_HYPERINTELLIGENT_WORK_CREW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -4271,7 +4250,6 @@
 			<Strategy>TXT_KEY_UNIT_BACTERIA_SWARM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -4363,7 +4341,6 @@
 			<Strategy>TXT_KEY_UNIT_LIFE_SWARM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -4420,7 +4397,6 @@
 			<Strategy>TXT_KEY_UNIT_ENERGY_ENTITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -4492,7 +4468,6 @@
 			<Strategy>TXT_KEY_UNIT_SATELLITE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -4635,7 +4610,6 @@
 			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -4879,7 +4853,6 @@
 			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -5502,7 +5475,6 @@
 			<Strategy>TXT_KEY_UNIT_INTERSTELLAR_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -5703,7 +5675,6 @@
 			<Strategy>TXT_KEY_UNIT_BRACEWELL_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -5868,7 +5839,6 @@
 			<Strategy>TXT_KEY_UNIT_VON_NEUMANN_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -6000,7 +5970,6 @@
 			<Strategy>TXT_KEY_UNIT_QUANTUM_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -6099,7 +6068,6 @@
 			<Strategy>TXT_KEY_UNIT_INTERDIMENSIONAL_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -6233,7 +6201,6 @@
 			<Help>TXT_KEY_UNIT_HEAVY_ROCKET_HOVER</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -6561,7 +6528,6 @@
 			<Strategy>TXT_KEY_UNIT_CAPTURED_ASTEROID_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -6645,7 +6611,6 @@
 			<Strategy>TXT_KEY_UNIT_CAPTURED_COMET_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -6740,7 +6705,6 @@
 			<Strategy>TXT_KEY_UNIT_INTERSTELLAR_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -6866,7 +6830,6 @@
 			<Strategy>TXT_KEY_UNIT_LOE_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -6945,7 +6908,6 @@
 			<Strategy>TXT_KEY_UNIT_SS1_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -7021,7 +6983,6 @@
 			<Strategy>TXT_KEY_UNIT_SS2_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -7099,7 +7060,6 @@
 			<Strategy>TXT_KEY_UNIT_SS3_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -7179,7 +7139,6 @@
 			<Strategy>TXT_KEY_UNIT_CISLUNAR_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -7259,7 +7218,6 @@
 			<Strategy>TXT_KEY_UNIT_LUNAR_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -7338,7 +7296,6 @@
 			<Strategy>TXT_KEY_UNIT_INNER_SOLAR_SYSTEM_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -7419,7 +7376,6 @@
 			<Strategy>TXT_KEY_UNIT_OUTER_SOLAR_SYSTEM_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -7495,7 +7451,6 @@
 			<Strategy>TXT_KEY_UNIT_TRANSNEPTUNIAN_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -7574,7 +7529,6 @@
 			<Strategy>TXT_KEY_UNIT_INTERSTELLAR_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -7657,7 +7611,6 @@
 			<Strategy>TXT_KEY_UNIT_GALACTIC_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -7740,7 +7693,6 @@
 			<Strategy>TXT_KEY_UNIT_INTERGALACTIC_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -7816,7 +7768,6 @@
 			<Strategy>TXT_KEY_UNIT_MERCURY_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -7891,7 +7842,6 @@
 			<Strategy>TXT_KEY_UNIT_VENUS_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -7966,7 +7916,6 @@
 			<Strategy>TXT_KEY_UNIT_MARS_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -8042,7 +7991,6 @@
 			<Strategy>TXT_KEY_UNIT_ASTEROID_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -8117,7 +8065,6 @@
 			<Strategy>TXT_KEY_UNIT_JUPITER_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -8192,7 +8139,6 @@
 			<Strategy>TXT_KEY_UNIT_EUROPA_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -8268,7 +8214,6 @@
 			<Strategy>TXT_KEY_UNIT_SATURN_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -8343,7 +8288,6 @@
 			<Strategy>TXT_KEY_UNIT_TITAN_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -8418,7 +8362,6 @@
 			<Strategy>TXT_KEY_UNIT_URANUS_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -8494,7 +8437,6 @@
 			<Strategy>TXT_KEY_UNIT_NEPTUNE_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -8570,7 +8512,6 @@
 			<Strategy>TXT_KEY_UNIT_KBO_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -8647,7 +8588,6 @@
 			<Strategy>TXT_KEY_UNIT_SEDNOID_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -8724,7 +8664,6 @@
 			<Strategy>TXT_KEY_UNIT_EXOPLANET_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -8797,7 +8736,6 @@
 			<Strategy>TXT_KEY_UNIT_OORT_CLOUD_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -8870,7 +8808,6 @@
 			<Strategy>TXT_KEY_UNIT_DISTANT_COSMOS_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -8943,7 +8880,6 @@
 			<Strategy>TXT_KEY_UNIT_HYPERSPACE_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -9016,7 +8952,6 @@
 			<Strategy>TXT_KEY_UNIT_MULTIVERSE_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -9089,7 +9024,6 @@
 			<Strategy>TXT_KEY_UNIT_ANCIENT_CIVILIZATION_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -9162,7 +9096,6 @@
 			<Strategy>TXT_KEY_UNIT_SOLAR_SYSTEM_LIFE_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -9235,7 +9168,6 @@
 			<Strategy>TXT_KEY_UNIT_INTERSTELLAR_LIFE_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -9315,7 +9247,6 @@
 			<Strategy>TXT_KEY_UNIT_GALACTIC_CORE_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<bWorkerTrade>0</bWorkerTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>

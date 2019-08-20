@@ -1862,6 +1862,8 @@ class CvMainInterface:
 			return
 
 		# Prepare the basics.
+		iPlayerAct = self.iPlayer
+		iTeamAct = self.iTeam
 		iUnits = CyPlot.getNumUnits()
 		x = self.xMidL
 		bCityScreen	= self.bCityScreen
@@ -1888,28 +1890,31 @@ class CvMainInterface:
 			iTopRow = 0
 			if not self.InCity:
 				# Find selected unit list position
-				iPos = 0
-				while iPos < iUnits:
-					if CyPlot.getUnit(iPos).IsSelected():
-						if iPos >= iMaxUnits:
-							self.iPlotListTopRow = iTopRow = 1 + (iPos - iMaxUnits)/iMaxCols
-						break
-					iPos += 1
+				iPos = i = 0
+				while i < iUnits:
+					CyUnit = CyPlot.getUnit(i)
+					if not self.bDebugMode and CyUnit.isInvisible(iTeamAct, False):
+						i += 1
+					else:
+						if CyUnit.IsSelected():
+							if iPos >= iMaxUnits:
+								self.iPlotListTopRow = iTopRow = 1 + (iPos - iMaxUnits)/iMaxCols
+							break
+						iPos += 1
+						i += 1
 		else:
 			iTopRow = self.iPlotListTopRow
 			self.bPlotListAutoScroll = True
 		# Collect data about plot list.
-		iPlayerAct = self.iPlayer
-		iTeamAct = self.iTeam
 		aMap = {}
 		aList = []
 		iStart = iTopRow * iMaxCols
-		i = iStart
-		while i < iUnits and i - iStart < iMaxUnits:
+		iPos = i = iStart
+		while i < iUnits and iPos - iStart < iMaxUnits:
 			CyUnit = CyPlot.getUnit(i)
 			i += 1
-			if CyUnit.isInvisible(iTeamAct, False): continue
-
+			if not self.bDebugMode and CyUnit.isInvisible(iTeamAct, False): continue
+			iPos += 1
 			iUnitType = CyUnit.getUnitType()
 
 			bEnable = CyUnit.getOwner() == iPlayerAct

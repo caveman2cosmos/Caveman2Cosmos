@@ -1300,9 +1300,10 @@ class CvEventManager:
 				iTeam = GC.getPlayer(iPlayer).getTeam()
 				# Reveals whole map for owner
 				GC.getMap().resetRevealedPlots(iTeam)
-				for iTeamX in xrange(GC.getMAX_TEAMS()):
+				for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
 					if iTeamX == iTeam:
 						continue
+					CyTeamX = GC.getTeam(iTeamX)
 					if not CyTeamX.isEverAlive() or CyTeamX.isVassal(iTeam):
 						continue
 					if TECH_SATELLITES > -1 and CyTeamX.isHasTech(TECH_SATELLITES):

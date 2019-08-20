@@ -166,7 +166,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_BAHAI_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BAHAI_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BAHAI_SHRINE</ArtDefineTag>			<HolyCity>RELIGION_BAHAI</HolyCity>
+			<ArtDefineTag>ART_DEF_BUILDING_BAHAI_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_BAHAI</MovieDefineTag>
+			<HolyCity>RELIGION_BAHAI</HolyCity>
 			<ReligionType>RELIGION_BAHAI</ReligionType>
 			<GlobalReligionCommerce>RELIGION_BAHAI</GlobalReligionCommerce>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
@@ -285,7 +287,9 @@
 			<Strategy>TXT_KEY_BUILDING_LOTUS_TEMPLE_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_LOTUS_TEMPLE_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LOTUS_TEMPLE</ArtDefineTag>			<ReligionType>RELIGION_BAHAI</ReligionType>
+			<ArtDefineTag>ART_DEF_BUILDING_LOTUS_TEMPLE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_LOTUS_TEMPLE</MovieDefineTag>
+			<ReligionType>RELIGION_BAHAI</ReligionType>
 			<PrereqTech>TECH_RADIO</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

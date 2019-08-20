@@ -6645,17 +6645,8 @@
 		<Polish>Starożytna</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ERA_ATOMIC</Tag>
-		<English>Atomic</English>
-		<German>
-			<Text>Atomzeitalter:Atomzeitalters:Atomzeitalter:Atomzeitalter</Text>
-			<Gender>Neuter</Gender>
-			<Plural>0</Plural>
-		</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ERA_ATOMIC_STRATEGY</Tag>
-		<English>Atomic</English>
+		<Tag>TXT_KEY_ERA_SEDENTARY_STRATEGY</Tag>
+		<English>Ancient[NEWLINE]12 000 BC - 1200 BC</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_CLASSICAL</Tag>
@@ -6683,6 +6674,10 @@
 		<Polish>Klasyczna</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ERA_CLASSICAL_STRATEGY</Tag>
+		<English>Classical[NEWLINE]1200 BC - 450 AD</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ERA_COSMIC</Tag>
 		<English>Cosmic</English>
 		<German>
@@ -6693,7 +6688,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_COSMIC_STRATEGY</Tag>
-		<English>Cosmic</English>
+		<English>Cosmic[NEWLINE]3000 AD - 4000 AD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_FUTURE</Tag>
@@ -6721,6 +6716,10 @@
 		<Polish>Przyszłość</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ERA_FUTURE_STRATEGY</Tag>
+		<English>Future[NEWLINE]This era can never be actually reached.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ERA_GALACTIC</Tag>
 		<English>Galactic</English>
 		<French>Galactique</French>
@@ -6732,6 +6731,10 @@
 		<Italian>Galattica</Italian>
 		<Spanish>Época galáctica</Spanish>
 		<Polish>Galaktyczna</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ERA_GALACTIC_STRATEGY</Tag>
+		<English>Galactic[NEWLINE]2300 AD - 3000 AD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_INDUSTRIAL</Tag>
@@ -6759,6 +6762,10 @@
 		<Polish>Przemysłowa</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ERA_INDUSTRIAL_STRATEGY</Tag>
+		<English>Industrial[NEWLINE]1750 AD - 1900 AD</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ERA_INFORMATION</Tag>
 		<English>Information</English>
 		<German>
@@ -6769,7 +6776,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_INFORMATION_STRATEGY</Tag>
-		<English>Information</English>
+		<English>Information[NEWLINE]1990 AD - 2050 AD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_MEDIEVAL</Tag>
@@ -6797,21 +6804,16 @@
 		<Polish>Średniowieczna</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ERA_MESOLITHIC</Tag>
-		<English>Mesolithic</English>
-		<French>Mésolithique</French>
-		<German>
-			<Text>Mesolithikum:Mesolithikums:Mesolithikum:Mesolithikum</Text>
-			<Gender>Neuter</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mesolitico</Italian>
-		<Spanish>Mesolítico</Spanish>
-		<Polish>Mezolityczna</Polish>
+		<Tag>TXT_KEY_ERA_MEDIEVAL_STRATEGY</Tag>
+		<English>Medieval[NEWLINE]450 AD - 1400 AD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_MODERN</Tag>
 		<English>Atomic</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ERA_MODERN_STRATEGY</Tag>
+		<English>Atomic[NEWLINE]1900 AD - 1990 AD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_NANOTECH</Tag>
@@ -6824,37 +6826,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_NANOTECH_STRATEGY</Tag>
-		<English>Nanotech</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ERA_NEOLITHIC</Tag>
-		<English>Neolithic</English>
-		<French>Néolithique</French>
-		<German>
-			<Text>Neolithikum:Neolithikums:Neolithikum:Neolithikum</Text>
-			<Gender>Neuter</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Neolitico</Italian>
-		<Spanish>Neolítico</Spanish>
-		<Polish>Neolityczna</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ERA_NEOLITHIC_STRATEGY</Tag>
-		<English>Neolithic</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ERA_PALEOLITHIC</Tag>
-		<English>Paleolithic</English>
-		<French>Epi-paléolithique</French>
-		<German>
-			<Text>Paläolithikum:Paläolithikums:Paläolithikum:Paläolithikum</Text>
-			<Gender>Neuter</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Paleolitico</Italian>
-		<Spanish>Epipaleolítico</Spanish>
-		<Polish>Paleolityczna</Polish>
+		<English>Nanotech[NEWLINE]2050 AD - 2150 AD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_ANCIENT</Tag>
@@ -6871,7 +6843,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_ANCIENT_STRATEGY</Tag>
-		<English>Prehistory (Latin, pra = before; Greek, iotopia = history) is a term used to describe the period before recorded history. Paul Tournal originally coined the term Pré-historique in describing the finds he had made in the caves of southern France. The term "prehistory" can be used to refer to all time since the beginning of the universe, although it is more often used in referring to the period of time since life appeared on Earth, or even more specifically to the time since human-like beings appeared.</English>
+		<English>Prehistoric[NEWLINE]200 000 BC - 12 000 BC[NEWLINE]Prehistory (Latin, pra = before; Greek, iotopia = history) is a term used to describe the period before recorded history. Paul Tournal originally coined the term Pré-historique in describing the finds he had made in the caves of southern France. The term "prehistory" can be used to refer to all time since the beginning of the universe, although it is more often used in referring to the period of time since life appeared on Earth, or even more specifically to the time since human-like beings appeared.</English>
 		<Italian>Preistoria è il termine usato per descrivere il periodo prima della storia. Paul Tournal lo coniò per descrivere le scoperte che aveva fatto nelle caverne della Francia meridionale. Il termine può essere usato per riferirsi a tutto il periodo dall'inizio dell'universo, anche se più spesso indica il periodo dal quale la vita è apparsa sulla Terra, o più precisamente il periodo da cui l'essere umano è apparso.</Italian>
 		<Spanish>La Prehistoria (del latín praiotopia, pra = antes; iotopia = historia) es un término utilizado para referirse al periodo anterior a la historia registrada. Paul Tournal acuñó originalmente el término "Pré-historique" para describir los hallazgos encontrados en las cuevas del sur de Francia. El término se utiliza para describir todo el lapso temporal desde el nacimiento del universo, aunque se utiliza comúnmente para referirse al lapso de tiempo desde la aparición de la vida en la Tierra, más concretamente al periodo en el que aparecieron los primeros homínidos.</Spanish>
 		<Polish>Prehistoria (łac. pra - przedrostek oznaczający uprzedniość, "przed", "wcześniej") to najdłuższy okres dziejów ludzkości - od pojawienia się na Ziemi pierwszych człowiekowatych lub człowieka rozumnego do powstania pisma. Badanie tego okresu możliwe jest jedynie metodami archeologicznymi. Na terenach Afryki zaczyna się około 5 mln lat temu razem z pojawieniem się pierwszych człowiekowatych, na terenie Europy około 1 mln lat temu, natomiast na innych terenach z momentem pojawienia się tam człowieka</Polish>
@@ -6902,6 +6874,10 @@
 		<Polish>Renesansowa</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ERA_RENAISSANCE_STRATEGY</Tag>
+		<English>Renaissance[NEWLINE]1400 AD - 1750 AD</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ERA_TRANSCENDENT</Tag>
 		<English>Transcendent</English>
 		<German>
@@ -6912,7 +6888,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_TRANSCENDENT_STRATEGY</Tag>
-		<English>Transcendent</English>
+		<English>Transcendent[NEWLINE]4000 AD - 6000 AD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_TRANSHUMAN</Tag>
@@ -6929,7 +6905,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_TRANSHUMAN_STRATEGY</Tag>
-		<English>.</English>
+		<English>Transhuman[NEWLINE]2150 AD - 2300 AD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EWTRADE_STRATEGY</Tag>

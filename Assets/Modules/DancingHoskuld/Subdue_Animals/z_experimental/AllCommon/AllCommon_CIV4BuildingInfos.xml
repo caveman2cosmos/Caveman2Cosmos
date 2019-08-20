@@ -800,7 +800,6 @@
 			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<bWater>1</bWater>
-			<iAIWeight>0</iAIWeight>
 			<iCost>56</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

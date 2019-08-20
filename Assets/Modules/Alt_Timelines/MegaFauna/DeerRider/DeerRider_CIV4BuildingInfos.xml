@@ -13,7 +13,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_DEER_TRAINER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DEER_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DEER_TRAINER</ArtDefineTag>			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ArtDefineTag>ART_DEF_BUILDING_DEER_TRAINER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DEER_RIDER</MovieDefineTag>
+			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

@@ -9,24 +9,23 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_GIRAFFE_TRAINER</BuildingClass>
 			<Type>BUILDING_GIRAFFE_TRAINER</Type>
-			<SpecialBuildingType>NONE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_GIRAFFE_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GIRAFFE_TRAINER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GIRAFFE_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GIRAFFE_TRAINER</ArtDefineTag>			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ArtDefineTag>ART_DEF_BUILDING_GIRAFFE_TRAINER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GIRAFFE_TRAINER</MovieDefineTag>
+			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iAIWeight>0</iAIWeight>
 			<iCost>588</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iMaxLatitude>45</iMaxLatitude>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
-			<fVisibilityPriority>0.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
@@ -68,12 +67,12 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_GIRAFFE_TRAINER_HERITAGE</BuildingClass>
 			<Type>BUILDING_GIRAFFE_TRAINER_HERITAGE</Type>
-			<SpecialBuildingType>NONE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_GIRAFFE_TRAINER_HERITAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GIRAFFE_TRAINER_HERITAGE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GIRAFFE_TRAINER_HERITAGE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GIRAFFE_TRAINER_HERITAGE</ArtDefineTag>			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
+			<ArtDefineTag>ART_DEF_BUILDING_GIRAFFE_TRAINER_HERITAGE</ArtDefineTag>
+			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -82,13 +81,10 @@
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<FreeBuilding>BUILDINGCLASS_GIRAFFE_TRAINER_EFFECT</FreeBuilding>
-			<iAIWeight>0</iAIWeight>
 			<iCost>139</iCost>
 			<iConquestProb>0</iConquestProb>
-			<iMaintenanceModifier>0</iMaintenanceModifier>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
-			<fVisibilityPriority>0.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -123,17 +119,13 @@
 			<Help>TXT_KEY_BUILDING_GIRAFFE_TRAINER_EFFECT_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GIRAFFE_TRAINER_HERITAGE</ArtDefineTag>
-			<PrereqTech>NONE</PrereqTech>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<FreeStartEra>NONE</FreeStartEra>
-			<iAIWeight>0</iAIWeight>
 			<iCost>-1</iCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>2</iAsset>
-			<iPower>0</iPower>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -157,11 +149,9 @@
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
-			<iAIWeight>0</iAIWeight>
 			<iCost>-1</iCost>
 			<iConquestProb>25</iConquestProb>
 			<iAsset>2</iAsset>
-			<iPower>0</iPower>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>

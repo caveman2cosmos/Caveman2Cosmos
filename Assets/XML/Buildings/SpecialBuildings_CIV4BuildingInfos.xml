@@ -227,6 +227,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ENVIRONMENTAL_A</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ENVIRONMENTAL_ACHIEVEMENT</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -298,6 +299,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_MEDICAL_A</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MEDICAL_A</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -404,6 +406,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SAFETY_A</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SAFETY_A</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -515,6 +518,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_TOURISM_A</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TOURISM_A</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -5480,7 +5484,6 @@
 				<iCommerce>-3</iCommerce>
 			</CommerceModifiers>
 			<!-- Special Health and Happiness  modifiers -->
-			<iGlobalHappiness>0</iGlobalHappiness>
 			<!-- Special properties -->
 			<bNukeImmune>1</bNukeImmune>
 			<iConquestProb>100</iConquestProb>
@@ -11100,7 +11103,9 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Help>TXT_KEY_BUILDING_UNIVERSAL_HEALTH_CARE_HELP</Help>
 			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSAL_HEALTH_CARE</ArtDefineTag>			<fVisibilityPriority>1</fVisibilityPriority>
+			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSAL_HEALTH_CARE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSAL_HEALTH_CARE</MovieDefineTag>
+			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_LIBERALISM</PrereqTech>
 			<!-- Construction cost -->
@@ -11193,7 +11198,9 @@
 			<Strategy>TXT_KEY_BUILDING_CAVE_DWELLING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_CAVE_DWELLING</ArtDefineTag>			<ConstructSound>AS2D_BUILD_CASTLE</ConstructSound>
+			<ArtDefineTag>ART_DEF_BUILDING_CAVE_DWELLING</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CAVE_DWELLING</MovieDefineTag>
+			<ConstructSound>AS2D_BUILD_CASTLE</ConstructSound>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -16178,7 +16185,6 @@
 			<!-- Main effects -->
 			<iHappiness>-1</iHappiness>
 			<iHealth>-1</iHealth>
-			<YieldModifiers/>
 			<!-- Special properties -->
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<bNukeImmune>1</bNukeImmune>
@@ -16848,7 +16854,6 @@
 			<iHealth>-5</iHealth>
 			<iHappiness>-5</iHappiness>
 			<!-- Special Health and Happiness  modifiers -->
-			<iGlobalHealth>0</iGlobalHealth>
 			<!-- Special Yield and Commerce modifiers -->
 			<RiverPlotYieldChanges>
 				<iYield>-3</iYield>
@@ -17702,7 +17707,6 @@
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<!-- Special Health and Happiness  modifiers -->
-			<iGlobalHealth>0</iGlobalHealth>
 			<!-- Specialist effects -->
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -18487,7 +18491,9 @@
 			<Strategy>TXT_KEY_BUILDING_ZOROASTRIAN_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_ZOROASTRIAN_SHRINE</ArtDefineTag>			<ConstructSound>AS2D_BUILD_ISLAMIC</ConstructSound>
+			<ArtDefineTag>ART_DEF_BUILDING_ZOROASTRIAN_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_ISLAMIC</MovieDefineTag>
+			<ConstructSound>AS2D_BUILD_ISLAMIC</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -18629,7 +18635,9 @@
 			<Strategy>TXT_KEY_BUILDING_CHRISTIAN_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_CHRISTIAN_SHRINE</ArtDefineTag>			<ConstructSound>AS2D_BUILD_CHRISTIAN</ConstructSound>
+			<ArtDefineTag>ART_DEF_BUILDING_CHRISTIAN_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_CHRISTIAN</MovieDefineTag>
+			<ConstructSound>AS2D_BUILD_CHRISTIAN</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -18694,7 +18702,9 @@
 			<Strategy>TXT_KEY_BUILDING_TAOIST_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_TAOIST_SHRINE</ArtDefineTag>			<ConstructSound>AS2D_BUILD_TAOIST</ConstructSound>
+			<ArtDefineTag>ART_DEF_BUILDING_TAOIST_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_TAOIST</MovieDefineTag>
+			<ConstructSound>AS2D_BUILD_TAOIST</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -18831,6 +18841,7 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_HINDU_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_HINDU</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_HINDU</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -18897,6 +18908,7 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CONFUCIAN_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_CONFUCIAN</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_CONFUCIAN</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -18965,6 +18977,7 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_BUDDHIST_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_BUDDHIST</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -19031,6 +19044,7 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ISLAMIC_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_ISLAMIC</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_ISLAMIC</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -19136,6 +19150,7 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_STATUE_OF_ZEUS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_STATUE_OF_ZEUS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -19205,6 +19220,7 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_JEWISH_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_JEWISH</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_JEWISH</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -19278,6 +19294,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_VALLEY_KINGS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_VALLEY_KINGS</MovieDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -19807,6 +19824,177 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
+		</BuildingInfo>
+		<BuildingInfo>
+			<BuildingClass>BUILDINGCLASS_WV_CANNIBALISM</BuildingClass>
+			<Type>BUILDING_WV_CANNIBALISM</Type>
+			<Description>TXT_KEY_BUILDING_WV_CANNIBALISM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WV_CANNIBALISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_WV_CANNIBALISM_STRATEGY</Strategy>
+			<Help>TXT_KEY_BUILDING_WV_CANNIBALISM_HELP</Help>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_WV_CANNIBALISM</ArtDefineTag>
+			<FreeBuilding>BUILDINGCLASS_CANNIBALISM</FreeBuilding>
+			<bNeverCapture>1</bNeverCapture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<iCost>-1</iCost>
+			<iAsset>3</iAsset>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+			</Flavors>
+		</BuildingInfo>
+		<BuildingInfo>
+			<BuildingClass>BUILDINGCLASS_CANNIBALISM</BuildingClass>
+			<Type>BUILDING_CANNIBALISM</Type>
+			<Description>TXT_KEY_BUILDING_CANNIBALISM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WV_CANNIBALISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_WV_CANNIBALISM_STRATEGY</Strategy>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM</ArtDefineTag>
+			<bNeverCapture>1</bNeverCapture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<iCost>-1</iCost>
+			<iAsset>3</iAsset>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+			</Flavors>
+		</BuildingInfo>
+		<BuildingInfo>
+			<BuildingClass>BUILDINGCLASS_CANNIBALISM_BAD_I</BuildingClass>
+			<Type>BUILDING_CANNIBALISM_BAD_I</Type>
+			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_I</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_GROWTH</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM_BAD_I</ArtDefineTag>
+			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
+			<bNeverCapture>1</bNeverCapture>
+			<iHappiness>-1</iHappiness>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<iCost>-1</iCost>
+			<iAsset>3</iAsset>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_CANNIBALISM</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
+			<bAutoBuild>1</bAutoBuild>
+		</BuildingInfo>
+		<BuildingInfo>
+			<BuildingClass>BUILDINGCLASS_CANNIBALISM_BAD_II</BuildingClass>
+			<Type>BUILDING_CANNIBALISM_BAD_II</Type>
+			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_II</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_GROWTH</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM_BAD_II</ArtDefineTag>
+			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
+			<bNeverCapture>1</bNeverCapture>
+			<iHappiness>-2</iHappiness>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<iCost>-1</iCost>
+			<iAsset>3</iAsset>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_CANNIBALISM</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
+			<bAutoBuild>1</bAutoBuild>
+		</BuildingInfo>
+		<BuildingInfo>
+			<BuildingClass>BUILDINGCLASS_CANNIBALISM_BAD_III</BuildingClass>
+			<Type>BUILDING_CANNIBALISM_BAD_III</Type>
+			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_III</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_GROWTH</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM_BAD_III</ArtDefineTag>
+			<PrereqTech>TECH_HUMANISM</PrereqTech>
+			<bNeverCapture>1</bNeverCapture>
+			<iHappiness>-1</iHappiness>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<iCost>-1</iCost>
+			<iAsset>3</iAsset>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_CANNIBALISM</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
+			<bAutoBuild>1</bAutoBuild>
+		</BuildingInfo>
+		<BuildingInfo>
+			<BuildingClass>BUILDINGCLASS_DISEASE_KURU</BuildingClass>
+			<Type>BUILDING_DISEASE_KURU</Type>
+			<Description>TXT_KEY_BUILDING_DISEASE_KURU</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_DISEASE_STRATEGY</Strategy>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_KURU</ArtDefineTag>
+			<bNukeImmune>1</bNukeImmune>
+			<bAutoBuild>1</bAutoBuild>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_WV_CANNIBALISM</BuildingClassType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
+			<iCost>-1</iCost>
+			<iHealth>-1</iHealth>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>-5</iYield>
+				<iYield>0</iYield>
+			</YieldModifiers>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

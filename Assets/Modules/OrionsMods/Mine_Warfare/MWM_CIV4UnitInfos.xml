@@ -22,7 +22,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoRevealMap >1</bNoRevealMap >
-			<bRivalTerritory>0</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bInvisible>1</bInvisible>
@@ -120,7 +119,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoRevealMap >1</bNoRevealMap >
-			<bRivalTerritory>0</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMechanized>1</bMechanized>
@@ -219,7 +217,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoRevealMap >1</bNoRevealMap >
-			<bRivalTerritory>0</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bInvisible>1</bInvisible>
@@ -379,7 +376,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoRevealMap >1</bNoRevealMap >
-			<bRivalTerritory>0</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bInvisible>1</bInvisible>
@@ -470,7 +466,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoRevealMap >1</bNoRevealMap >
-			<bRivalTerritory>0</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bInvisible>1</bInvisible>
@@ -565,7 +560,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoRevealMap >1</bNoRevealMap >
-			<bRivalTerritory>0</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bInvisible>1</bInvisible>

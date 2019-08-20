@@ -15,7 +15,9 @@
 			<Strategy>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER_STRATEGY</Strategy>
 			<Help>TXT_KEY_ADVANCED_MINE_TECHNOLOGY_CENTER_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER</ArtDefineTag>			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
+			<ArtDefineTag>ART_DEF_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ADVANCED_MINE_TECHNOLOGY_CENTER</MovieDefineTag>
+			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
 			<!--iCost>4080</iCost-->
 			<iCost>-1</iCost>
 			<iConquestProb>66</iConquestProb>

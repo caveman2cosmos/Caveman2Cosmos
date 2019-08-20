@@ -9,13 +9,11 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_CAVE_NEAR_CITY</BuildingClass>
 			<Type>BUILDING_CAVE_NEAR_CITY</Type>
-			<SpecialBuildingType>NONE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CAVE_NEAR_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEAR_CITY_STUFF_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NEAR_CITY_STUFF_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAVE_NEAR_CITY</ArtDefineTag>
-			<PrereqTech>NONE</PrereqTech>
 			<!--ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech-->
 			<iCost>-1</iCost>
 			<PrereqOrFeature>
@@ -31,13 +29,11 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_CAVE_IN_NATION</BuildingClass>
 			<Type>BUILDING_CAVE_IN_NATION</Type>
-			<SpecialBuildingType>NONE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CAVE_IN_NATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEAR_CITY_STUFF_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NEAR_CITY_STUFF_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAVE_IN_NATION</ArtDefineTag>
-			<PrereqTech>NONE</PrereqTech>
 			<!--ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech-->
 			<iCost>-1</iCost>
 			<bGraphicalOnly>1</bGraphicalOnly>
@@ -45,13 +41,11 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_ELITE_HOUSING</BuildingClass>
 			<Type>BUILDING_ELITE_HOUSING</Type>
-			<SpecialBuildingType>NONE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ELITE_HOUSING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELITE_HOUSING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ELITE_HOUSING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ELITE_HOUSING</ArtDefineTag>
-			<PrereqTech>NONE</PrereqTech>
 			<iCost>-1</iCost>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>

@@ -177,14 +177,10 @@
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_BIG_CAT_CAGE</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -285,14 +281,10 @@
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_BIG_CAT_CAGE</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -393,14 +385,10 @@
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_CAMEL_TRAINER</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<PrereqOrBuildings>
@@ -506,14 +494,10 @@
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_LLAMA_FARM</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<PrereqOrBuildings>
@@ -617,14 +601,10 @@
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_DONKEY_FARM</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<PrereqOrBuildings>
@@ -731,14 +711,10 @@
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_HORSE_TRAINER</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<PrereqOrBuildings>
@@ -848,20 +824,14 @@
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_EXOTIC_HERBAVOURS</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_BISON_HERD</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<PrereqOrBuildings>
@@ -968,20 +938,14 @@
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_EXOTIC_HERBAVOURS</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_BUFFALO_HERD</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<PrereqOrBuildings>
@@ -1087,20 +1051,14 @@
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_EXOTIC_HERBAVOURS</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_COW_FARM</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -1200,20 +1158,14 @@
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_MUSKOX_HERD</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_EXOTIC_HERBAVOURS</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -1306,20 +1258,14 @@
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_AARDVARK_MYTH_EFFECT</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_EXOTIC_HERBAVOURS</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -1418,20 +1364,14 @@
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PIG_FARM</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_EXOTIC_HERBAVOURS</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride/>
-					<EraOverride/>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -1678,23 +1618,7 @@
 			<Strategy>TXT_KEY_UNIT_TAMED_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SUBDUED_BROWN_BEAR_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
-			<bNoCapture>0</bNoCapture>
-			<bQuickCombat>0</bQuickCombat>
-			<bRivalTerritory>0</bRivalTerritory>
-			<bMilitaryHappiness>0</bMilitaryHappiness>
-			<bMilitarySupport>0</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bPillage>0</bPillage>
-			<bSpy>0</bSpy>
-			<bSabotage>0</bSabotage>
-			<bDestroy>0</bDestroy>
-			<bStealPlans>0</bStealPlans>
-			<bInvestigate>0</bInvestigate>
-			<bCounterSpy>0</bCounterSpy>
-			<bFound>0</bFound>
-			<bGoldenAge>0</bGoldenAge>
-			<bInvisible>0</bInvisible>
-			<bFirstStrikeImmune>0</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
@@ -3865,8 +3789,6 @@
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_REPTILE_CAGE</BuildingClassType>
 					<bPrereq>1</bPrereq>
-					<TechOverride>NONE</TechOverride>
-					<EraOverride>NONE</EraOverride>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<PrereqOrBuildings>

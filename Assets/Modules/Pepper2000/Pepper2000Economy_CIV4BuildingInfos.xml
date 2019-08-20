@@ -304,7 +304,6 @@
 			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
 			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_SOLAR_EFFECT</BuildingClass>
@@ -318,7 +317,6 @@
 			<PrereqTech>TECH_PLANETARY_MEGASTRUCTURES</PrereqTech>
 			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_GALACTIC_EFFECT</BuildingClass>
@@ -332,7 +330,6 @@
 			<PrereqTech>TECH_FOLDING_SPACE</PrereqTech>
 			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_UNIVERSAL_EFFECT</BuildingClass>
@@ -346,7 +343,6 @@
 			<PrereqTech>TECH_COSMIC_ENGINEERING</PrereqTech>
 			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes/>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_COSMIC_ECONOMY_EFFECT</BuildingClass>
@@ -360,7 +356,6 @@
 			<PrereqTech>TECH_TRUTH_MANIPULATION</PrereqTech>
 			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<MapCategoryTypes/>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>
