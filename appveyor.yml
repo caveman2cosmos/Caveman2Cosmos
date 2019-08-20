@@ -14,6 +14,8 @@ environment:
 
 build_script:
 - cmd: >-
+    call "%APPVEYOR_BUILD_FOLDER%\Tools\CI\fix_sources_timestamps.ps1"
+
     call "%APPVEYOR_BUILD_FOLDER%\Tools\_MakeDLL.bat" build Debug
 
     call "%APPVEYOR_BUILD_FOLDER%\Tools\MakeDLLRelease.bat"
