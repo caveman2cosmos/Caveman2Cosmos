@@ -8,8 +8,11 @@
 *.dll
 *.pdb
 *.FPK
+
 Assets/fpklive_token.txt
 !/Tools/*.dll
 XmlValidator.log
 
 .vscode/settings.json
+
+Tools/Setup/git_installer.exe
