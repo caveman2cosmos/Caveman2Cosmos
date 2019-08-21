@@ -9,3 +9,4 @@ past and present modders to create a mod to "rule them all".
 
 It is currently being developed by StrategyOnly Productions with a modding team made up of prominent members of CivFanatics.com.
 
+Developer setup guide: https://youtu.be/QFC6N9kOYmc
