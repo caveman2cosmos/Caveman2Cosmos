@@ -3,7 +3,7 @@ function FindGitExe {
         return $gitPath
     }
   
-    $gitPath = Get-Command git.exe| Select-Object -ExpandProperty Definition  
+    $gitPath = Get-Command git.exe -ErrorAction SilentlyContinue| Select-Object -ExpandProperty Definition
     if (![String]::IsNullOrEmpty($gitPath)) {
         return $gitPath
     }
@@ -30,6 +30,7 @@ function FindGitExe {
 function downloadFile($url, $targetFile)
 { 
     "Downloading $url" 
+    [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
     $uri = New-Object "System.Uri" "$url" 
     $request = [System.Net.HttpWebRequest]::Create($uri) 
     $request.set_Timeout(15000) #15 second timeout 
