@@ -209,14 +209,14 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 		GetModuleFileNameA((HMODULE)dllModule, pathBuffer, sizeof(pathBuffer));
 		std::string dllPath = pathBuffer;
 		std::string dllDir = dllPath.substr(0, dllPath.length() - strlen("CvGameCoreDLL.dll"));
-		std::string tokenFile = dllDir + "\\..\\svn_directory.txt";
+		std::string tokenFile = dllDir + "\\..\\git_directory.txt";
 		std::ifstream stream(tokenFile.c_str());
 		if (!stream.fail())
 		{
-			std::string svn_dir;
-			std::getline(stream, svn_dir);
+			std::string git_dir;
+			std::getline(stream, git_dir);
 			// CvString cwd = GC.getInitCore().getDLLPath() + "\\..";
-			std::string fpkLiveExe = svn_dir + "\\Tools\\FPKLive.exe";
+			std::string fpkLiveExe = git_dir + "\\Tools\\FPKLive.exe";
 
 			STARTUPINFOA startupInfo;
 			ZeroMemory(&startupInfo, sizeof(startupInfo));
@@ -225,7 +225,7 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 			ZeroMemory(&procInfo, sizeof(procInfo));
 			// This isn't really considered safe to call in a DLLmain: it could cause other dlls to be loaded to fulfill the request.
 			// HOWEVER: this DLL is loaded by LoadLibrary later in exe startup so we appear to have the required dlls already loaded at this point.
-			if (!::CreateProcessA(NULL, (LPSTR)fpkLiveExe.c_str(), NULL, NULL, TRUE, CREATE_NO_WINDOW, NULL, (svn_dir + "\\Tools").c_str(), &startupInfo, &procInfo))
+			if (!::CreateProcessA(NULL, (LPSTR)fpkLiveExe.c_str(), NULL, NULL, TRUE, CREATE_NO_WINDOW, NULL, (git_dir + "\\Tools").c_str(), &startupInfo, &procInfo))
 			{
 				MessageBox(0, "Creation of FPK packs timed out after 10 minutes! It shouldn't take this long!", "ERROR!", 0);
 				return FALSE;

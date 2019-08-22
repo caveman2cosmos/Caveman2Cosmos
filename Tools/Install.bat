@@ -2,6 +2,9 @@
 :: Automatically check & get admin rights V2
 ::::::::::::::::::::::::::::::::::::::::::::
 @echo off
+
+if "%1"=="DevSetup" goto :skip_readme
+
 CLS
 
 :init
@@ -40,30 +43,29 @@ if '%1'=='ELEV' (del "%vbsGetPrivileges%" 1>nul 2>nul  &  shift /1)
 ::START
 ::::::::::::::::::::::::::::
 
-
 @echo off
 
 echo.
 echo **** README ****
-echo This script will link from your SVN workspace directly into your Mods folder.
-echo It is designed so you can have your SVN workspace OUTSIDE of the BtS Mods folder
+echo This script will link from your Git workspace directly into your Mods folder.
+echo It is designed so you can have your Git workspace OUTSIDE of the BtS Mods folder
 echo but still run the Mod without having to export or copy. It does this by making links
-echo from specific directories in the SVN workspace directly into the Mods directory.
+echo from specific directories in the Git workspace directly into the Mods directory.
 echo Once this script is run you do NOT need to run it again unless you do a clean
-echo fetch from SVN or otherwise delete/move the folders in the workspace.
+echo fetch from Git or otherwise delete/move the folders in the workspace.
 echo -- [Author @billw on discord / @billw2015 on the forums]
 echo.
 echo This script will:
 echo   1. (optional) Give you a directory browser to select your Mods location.
 echo   2. Create the Caveman2Cosmos directory under Mods.
-echo   3. Create the appropriate links from your SVN workspace to that new directory.
+echo   3. Create the appropriate links from your Git workspace to that new directory.
 echo   4. Copy any files that shouldn't be linked to that new directory.
 echo.
 echo After it is complete you should be able to run the Mod without issue.
 echo.
 echo IMPORTANT:
-echo     Running this script is only appropriate if your SVN workspace (from which you are 
-echo     running now) is OUTSIDE the Mods directory. If you want to have SVN in the Mods 
+echo     Running this script is only appropriate if your Git workspace (from which you are 
+echo     running now) is OUTSIDE the Mods directory. If you want to have Git in the Mods 
 echo     directory then this script isn't for you.
 echo NOTE:
 echo     If you previously used this script then it should have saved the Mods directory 
@@ -71,6 +73,8 @@ echo     from last time. If you want to reset the saved directory then delete
 echo     Tools\mods_directory.txt
 echo.
 pause
+
+:skip_readme
 
 PUSHD "%~dp0"
 
@@ -83,7 +87,7 @@ if exist "..\..\..\Civ4BeyondSword.exe" (
     echo It looks like you are running this script from within the BtS Mods directory.
     echo As explained in the README above, it is intended to install TO the Mods directory FROM
     echo somewhere else!
-    echo If you want to use it then move your SVN workspace out of the Mods directory
+    echo If you want to use it then move your Git workspace out of the Mods directory
     echo to somewhere else, then run this script again from there instead.
     pause
     exit /B 1
@@ -117,7 +121,7 @@ if not exist "%MODS_DIR%\..\Civ4BeyondSword.exe" (
 set "C2C_MOD_DIR=%MODS_DIR%\Caveman2Cosmos"
 if exist "%C2C_MOD_DIR%" (
     :: We will only warn if it isn't an install done previously with this tool
-    if not exist "!C2C_MOD_DIR!\svn_directory.txt" (
+    if not exist "!C2C_MOD_DIR!\git_directory.txt" (
         call :warn_dir_exists "!C2C_MOD_DIR!"
         if %errorlevel% neq 0 exit /B 1
     ) else (
@@ -130,8 +134,8 @@ mkdir "%C2C_MOD_DIR%"
 
 PUSHD ..
 
-:: Make the junctions and copy the files we don't want to modify in SVN
-echo 3. Making required links from '%cd%' SVN directory to '%C2C_MOD_DIR%' ...
+:: Make the junctions and copy the files we don't want to modify in Git
+echo 3. Making required links from '%cd%' Git directory to '%C2C_MOD_DIR%' ...
 mklink /J "%C2C_MOD_DIR%\Assets" Assets
 mklink /J "%C2C_MOD_DIR%\PrivateMaps" PrivateMaps
 mklink /J "%C2C_MOD_DIR%\Resource" Resource
@@ -139,10 +143,9 @@ mklink /J "%C2C_MOD_DIR%\Resource" Resource
 echo 4. Copying config files ...
 copy "Caveman2Cosmos.ini" "%C2C_MOD_DIR%"
 copy "Caveman2Cosmos Config.ini" "%C2C_MOD_DIR%"
-copy "Launch C2C.bat" "%C2C_MOD_DIR%"
 
-:: Write a back pointer so we know where the SVN repo is
-echo %cd%>"%C2C_MOD_DIR%\svn_directory.txt"
+:: Write a back pointer so we know where the Git repo is
+echo %cd%>"%C2C_MOD_DIR%\git_directory.txt"
 
 POPD
 POPD
