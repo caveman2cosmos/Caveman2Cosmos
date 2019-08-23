@@ -2530,7 +2530,7 @@ void CvUnitAI::AI_workerMove()
 		}
 	}
 
-	if (AI_construct(MAX_INT, MAX_INT, 0, true))
+	if (AI_construct(MAX_INT, MAX_INT, 15, true))
 	{
 		OutputDebugString(CvString::format("%S (%d) chooses to head off to construct\n",getDescription().c_str(),m_iID).c_str());
 		return;

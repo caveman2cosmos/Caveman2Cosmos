@@ -12901,70 +12901,20 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 	bool bisPositivePropertyUnit = (iGeneralPropertyValue > 0);
 	bool bUndefinedValid = false;
 
-	// Evaluate unit's ability to construct buildings
-	int iConstructionValue = 0;
-	bool bConstructionValid = false;
-
-	if (kUnitInfo.getNumBuildings() > 0 && pArea != NULL && ! isNPC())
-	{
-		int iBuildingValue;
-		int iCount;
-		int iLoop;
-		bool bCoastal = kUnitInfo.getDomainType() == DOMAIN_SEA;
-		int iMinOceanSize;
-		if (bCoastal)
-		{
-			iMinOceanSize = GC.getMIN_WATER_SIZE_FOR_OCEAN();
-		}
-
-		for (iI = 0; iI < kUnitInfo.getNumBuildings(); iI++)
-		{
-			BuildingTypes eBuilding = (BuildingTypes) kUnitInfo.getBuildings(iI);
-
-			if (NO_BUILDING != eBuilding)
-			{
-				if (canConstruct(eBuilding, false, false, true) && AI_getNumBuildingsNeeded(eBuilding, bCoastal) > 0)
-				{
-					iCount = 0;
-					iBuildingValue = 0;
-					for (CvCity* pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
-					{
-						if ((!bCoastal || pLoopCity->isCoastal(iMinOceanSize)) && (pLoopCity->area() == pArea))
-						{
-							if (pLoopCity->getNumBuilding(eBuilding) == 0 && pLoopCity->canConstruct(eBuilding, false, false, true))
-							{
-								iBuildingValue += pLoopCity->AI_buildingValue(eBuilding);
-								iCount++;
-							}
-						}
-					}
-					if (iCount)
-					{
-						iConstructionValue += iBuildingValue/iCount;
-					}
-				}
-			}
-		}
-		if (iConstructionValue > 10) // That '10' could be a global define value for the lower threshold. AI_BUILDINGVALUE_THRESHOLD_TO_UNITVALUE
-		{
-			bConstructionValid = true; // Only use this to validate unitAI's that have the AI_construct or checkSwitchToConstruct routines.
-			// unitAI's currently hijacked by this validator:
-			//		UNITAI_WORKER;  UNITAI_PROPERTY_CONTROL; UNITAI_RESERVE; UNITAI_ATTACK
-			// Maybe we need a dedicated system for cities to place orders for units that can build buildings instead of hijacking various unit orders.
-			// Maybe a new unitAI? UNITAI_CONSTRUCT
-		}
-	}
-
 	if (!bValid)
 	{
 		switch (eUnitAI)
 		{
 		case UNITAI_UNKNOWN:
-			bUndefinedValid = true;
+			{
+				bUndefinedValid = true;
+			}
 			break;
 
 		case UNITAI_SUBDUED_ANIMAL:
-			bValid = true;
+			{
+				bValid = true;
+			}
 			break;
 		case UNITAI_HUNTER:
 		case UNITAI_HUNTER_ESCORT:
@@ -12990,20 +12940,12 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			break;
 
 		case UNITAI_WORKER:
-			if (bConstructionValid)
+			for (iI = 0; iI < GC.getNumBuildInfos(); iI++)
 			{
-				bUndefinedValid = true;
-				bValid = true;
-			}
-			else
-			{
-				for (iI = 0; iI < GC.getNumBuildInfos(); iI++)
+				if (kUnitInfo.getBuilds(iI))
 				{
-					if (kUnitInfo.getBuilds(iI))
-					{
-						bValid = true;
-						break;
-					}
+					bValid = true;
+					break;
 				}
 			}
 			break;
@@ -13017,14 +12959,12 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			break;
 
 		case UNITAI_ATTACK:
-			if (bConstructionValid)
+			if (kUnitInfo.getCombat() > 0)
 			{
-				bUndefinedValid = true;
-				bValid = true;
-			}
-			else if (kUnitInfo.getCombat() > 0 && ! kUnitInfo.isOnlyDefensive())
-			{
-				bValid = true;
+				if (!(kUnitInfo.isOnlyDefensive()))
+				{
+					bValid = true;
+				}
 			}
 			break;
 
@@ -13062,17 +13002,9 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			break;
 
 		case UNITAI_RESERVE:
-			if (!bisNegativePropertyUnit)
+			if (!bisNegativePropertyUnit && kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive())
 			{
-				if (bConstructionValid)
-				{
-					bUndefinedValid = true;
-					bValid = true;
-				}
-				else if (kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive())
-				{
-					bValid = true;
-				}
+				bValid = true;
 			}
 			break;
 
@@ -13159,15 +13091,6 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			break;
 
 		case UNITAI_PROPERTY_CONTROL:
-			if (bisPositivePropertyUnit || (bConstructionValid && !bisNegativePropertyUnit))
-			{
-				if (bConstructionValid)
-				{
-					bUndefinedValid = true;
-				}
-				bValid = true;
-			}
-			break;
 		case UNITAI_PROPERTY_CONTROL_SEA:
 			if (bisPositivePropertyUnit)
 			{
@@ -13483,7 +13406,6 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 		bool bHasBombardValue = false;
 		bool bNoBombardValue = true;
 		int iDefenseModifier = kUnitInfo.getDefenseCombatModifier();
-		bool bRoute = false;
 
 		switch (eUnitAI)
 		{
@@ -13502,22 +13424,10 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			{
 				if (kUnitInfo.getBuilds(iI))
 				{
-					if (!bRoute && GC.getBuildInfo((BuildTypes)iI).getRoute() != NO_ROUTE)
-					{
-						bRoute = true;
-					}
-					else
-					{
-						iValue++;
-					}
+					iValue++;
 				}
 			}
 			iValue += (kUnitInfo.getMoves() * iValue)/2;
-
-			if (bRoute)
-			{
-				iValue += 20;
-			}
 			//	Scale by how fast a worker works - the extra '4' is a fudge factor
 			//	to make worker values (somewhat) comparable to military unit values
 			//	now that we have workers that can upgrade to military and we need to
@@ -13622,7 +13532,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			// K-Mod (how is drop range a disadvantage?)
 			//if (kUnitInfo.getDropRange() > 0)
 			//{
-			//	iValue -= iTempValue / 2;
+			//	iValue -= iTempValue / 2;				
 			//}
 			if (kUnitInfo.isFirstStrikeImmune())
 			{
@@ -13970,18 +13880,18 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			//	int iNetExpenses = calculateInflatedCosts() + std::max(0, -getGoldPerTurn());
 
 			//	if (iNetCommerce > iNetExpenses + kUnitInfo.getExtraCost())	
-			//	{
+			//	{			
 			//		iValue = (iValue*(iNetCommerce - iNetExpenses - kUnitInfo.getExtraCost())) / (iNetCommerce - iNetExpenses);
 			//	}
-			//	else
-			//	{
+			//	else	
+			//	{			
 			//		iValue = 1;	//	Don't set the value to 0, just make this the least useful option
 			//	}
 			//}
 			//TB Combat Mods Begin
 			iValue += ((iCombatValue * kUnitInfo.getPursuit()) / 100);
 			iValue += ((iCombatValue * kUnitInfo.getRepel()) / 85);
-			iValue += ((iCombatValue * kUnitInfo.getFortRepel()) / 100);
+			iValue += ((iCombatValue * kUnitInfo.getFortRepel()) / 100);		
 			iValue += ((iCombatValue * kUnitInfo.getUnyielding()) / 100);
 			if (kUnitInfo.getStrAdjperRnd() != 0)
 			{
@@ -13991,7 +13901,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			{
 				iValue += ((iCombatValue * kUnitInfo.getStrAdjperDef()) / 100);
 			}
-			//TB Combat Mods End
+			//TB Combat Mods End		
 			break;
 		case UNITAI_CITY_COUNTER:
 			//	For now the AI cannot cope with bad property values on anything but hunter or pillage units
@@ -14028,11 +13938,11 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			//	int iNetExpenses = calculateInflatedCosts() + std::max(0, -getGoldPerTurn());
 
 			//	if (iNetCommerce > iNetExpenses + kUnitInfo.getExtraCost())	
-			//	{
+			//	{			
 			//		iValue = (iValue*(iNetCommerce - iNetExpenses - kUnitInfo.getExtraCost())) / (iNetCommerce - iNetExpenses);
 			//	}
-			//	else
-			//	{
+			//	else	
+			//	{			
 			//		iValue = 1;	//	Don't set the value to 0, just make this the least useful option
 			//	}
 			//}
@@ -14049,7 +13959,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			{
 				iValue += ((iCombatValue * kUnitInfo.getStrAdjperDef()) / 100);
 			}
-			//TB Combat Mods End
+			//TB Combat Mods End		
 			break;
 
 
@@ -14162,7 +14072,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 						iTempValue += (50 * getNumCities()) / (1 + getHasReligionCount((ReligionTypes)iI));
 					}
 				}
-				iValue += iTempValue;
+				iValue += iTempValue;		    
 			}
 			for (iI = 0; iI < GC.getNumCorporationInfos(); ++iI)
 			{
@@ -14485,7 +14395,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			break;
 		}
 	}
-
+	
 	if ((iCombatValue > 0) && ((eUnitAI == UNITAI_ATTACK) || (eUnitAI == UNITAI_ATTACK_CITY)))
 	{
 		if (pArea != NULL)
@@ -14493,7 +14403,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			AreaAITypes eAreaAI = pArea->getAreaAIType(getTeam());
 			if (eAreaAI == AREAAI_ASSAULT || eAreaAI == AREAAI_ASSAULT_MASSING)
 			{
-				for (iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+				for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 				{
 					if (kUnitInfo.getFreePromotions(iI))
 					{
@@ -14504,14 +14414,11 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 							break;
 						}
 					}
-				}
+				}				
 			}
 		}
 	}
-	if (iConstructionValue > 0)
-	{
-		iValue += iConstructionValue * 75 / 100; // That '75' could be a global define modifier for buildingValue to unitValue conversion. AI_BUILDINGVALUE_PERCENT_TO_UNITVALUE
-	}
+
 	return std::max(0, iValue);
 }
 
@@ -14678,53 +14585,33 @@ int CvPlayerAI::AI_neededWorkers(CvArea* pArea) const
 	int iCount;
 	int iLoop;
 
-	// Toffer: Landmass should be an important factor on how many workers a civ need
-	int iTiles = pArea->getNumTiles();
-	if (iTiles < 2)
-	{
-		return 0;
-	}
-	iCount = iTiles/3; // Divided by 16 later, so this is 1 worker per 48 tiles on the landmass
-
-	// Toffer
-	//iCount += countUnimprovedBonuses(pArea) * 2;
+	iCount = countUnimprovedBonuses(pArea) * 2;
 
 	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 	{
 		if (pLoopCity->getArea() == pArea->getID())
 		{
-			iCount += pLoopCity->AI_getWorkersNeeded() * 15 + 5; // ' * 15' is intentional.
-			// +5 means 1 extra worker per 3.2 city on the landmass.
+			iCount += pLoopCity->AI_getWorkersNeeded() * 3;
 		}
 	}
-	iCount /= 16; // Normalize worker count
-
-	if (iCount < 1)
+	
+	if (iCount == 0)
 	{
 		return 0;
 	}
 
-	/* Toffer
 	if (getBestRoute() != NO_ROUTE)
 	{
 		iCount += pArea->getCitiesPerPlayer(getID()) / 2;
 	}
-	*/
 
-	// Max 2.5 workers per city in area. Sanity control.
-	if (iCount > 2)
-	{
-		iCount = std::min(iCount, 5 * pArea->getCitiesPerPlayer(getID())/2);
 
-		/* Toffer
-		// Max 10, plus 1 per 10 population point, workers total.
-		if (iCount > 10)
-		{
-			iCount = std::min(iCount, 10 + getTotalPopulation()/10);
-		}
-		*/
-	}
-	return iCount;
+	iCount += 1;
+	iCount /= 3;
+	iCount = std::min(iCount, 3 * pArea->getCitiesPerPlayer(getID()));
+	iCount = std::min(iCount, (1 + getTotalPopulation()) / 2);
+
+	return std::max(1, iCount);
 
 }
 
