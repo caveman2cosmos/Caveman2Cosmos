@@ -70,7 +70,15 @@ pause
 PUSHD "."
 call "%~dp0\Tools\Setup\InstallGit.bat"
 call "%~dp0\Tools\Install.bat" DevSetup
+if errorlevel 1 (
+    call :install_failure
+    exit /B 1
+)
 call "%~dp0\Tools\_MakeDLL.bat" build Assert
+if errorlevel 1 (
+    call :build_failure
+    exit /B 1
+)
 POPD
 
 echo.
@@ -78,3 +86,19 @@ echo.
 echo.
 echo **** Dev Setup complete, you can run the Mod now using LaunchC2C.bat or your prefered method! ****
 pause
+
+exit /B 0
+
+:install_failure
+echo Install failed, please check the log above this message for warnings or errors!
+echo If you need help please ask in the forums or discord.
+pause
+
+exit /B 0
+
+:build_failure
+echo DLL compile failed, please check the log above this message for warnings or errors!
+echo If you need help please ask in the forums or discord.
+pause
+
+exit /B 0

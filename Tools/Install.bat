@@ -106,15 +106,13 @@ if not exist mods_directory.txt (
 set /p MODS_DIR=<mods_directory.txt
 if not exist "%MODS_DIR%" (
     del mods_directory.txt
-    echo Previous mods directory doesn't exist! Please rerun this script to select a new one!
-    pause
-    exit /B 1
+    GetDirectory "Please select your Beyond the Sword Mods directory" >mods_directory.txt
 )
 
 if not exist "%MODS_DIR%\..\Civ4BeyondSword.exe" (
     del mods_directory.txt
     call :wrong_mods_dir "!MODS_DIR!"
-    exit /B 0
+    exit /B 1
 )
 
 :: If the C2C directory already exists then we can offer to delete it or abort
@@ -153,8 +151,11 @@ POPD
 endlocal
 
 echo Done!
+
+if "%1"=="DevSetup" goto :skip_end_pause
 pause
 
+:skip_end_pause
 exit /B 0
 
 :: rmdir /S/Q "%MOD_DIR%"
