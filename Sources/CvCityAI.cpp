@@ -1095,7 +1095,7 @@ void CvCityAI::AI_chooseProduction()
 		}
 
 		clearOrderQueue();
-}
+	}
 
 
 	if (kPlayer.isAnarchy())
@@ -1600,7 +1600,7 @@ void CvCityAI::AI_chooseProduction()
 		
 		return;
 	}
-	
+
 //TB Build Mod (is considered a poor strategy now)	// if we need to pop borders, then do that immediately if we have drama and can do it
 #ifndef C2C_BUILD
 	// if we need to pop borders, then do that immediately if we have drama and can do it
@@ -1619,7 +1619,7 @@ void CvCityAI::AI_chooseProduction()
 /*                                                                                              */
 /************************************************************************************************/
 	if( kPlayer.isRebel() )
-	{		
+	{
 		UnitTypeWeightArray rebelDefenseTypes;
 		rebelDefenseTypes.push_back(std::make_pair(UNITAI_CITY_DEFENSE, 100));
 		rebelDefenseTypes.push_back(std::make_pair(UNITAI_COUNTER, 100));
@@ -1778,7 +1778,7 @@ void CvCityAI::AI_chooseProduction()
 				{
 					return;
 				}
-			}			
+			}
 		}
 
 		// Buildings important for rebels
@@ -2519,6 +2519,7 @@ void CvCityAI::AI_chooseProduction()
 		m_iTempBuildPriority = HIGH_PRIORITY_ESCORT_PRIORITY - 1;
 	}
 
+	/* Deactivated by Toffer, worker evaluation should be generalized to work for all stages of the game.
 	// Early game worker logic
 	if( !bInhibitUnits && isCapital() && (GC.getGame().getElapsedGameTurns() < ((30 * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent()) / 100)))
 	{
@@ -2536,7 +2537,7 @@ void CvCityAI::AI_chooseProduction()
 				}
 			}
 
-			if( iExistingWorkers == 0 && AI_totalBestBuildValue(area()) > 0 /*Fuyu: anything bigger than 0 is ok*/ )
+			if( iExistingWorkers == 0 && AI_totalBestBuildValue(area()) > 0)
 			{
 				if (!bChooseWorker && AI_chooseUnit("capital with no workers", UNITAI_WORKER))
 				{
@@ -2544,9 +2545,7 @@ void CvCityAI::AI_chooseProduction()
 				}
 				bChooseWorker = true;
 			}
-/********************************************************************************/
-/* 	Build more early sea workers								Fuyu		    */
-/********************************************************************************/
+
 			else
 			{
 				if (!bWaterDanger && (getPopulation() <= 4) && (iNeededSeaWorkers > 0) && (happyLevel() - unhappyLevel(1)) > 0)
@@ -2560,13 +2559,11 @@ void CvCityAI::AI_chooseProduction()
 					}
 				}
 			}
-/********************************************************************************/
-/* 	Build more early sea workers								END			    */
-/********************************************************************************/
 		}
 	}
 
 	m_iTempBuildPriority--;
+	// Deactivated by Toffer*/
 
 	if( !bInhibitUnits && !(bDefenseWar && iWarSuccessRatio < -50) && !bDanger )
 	{
@@ -2693,7 +2690,7 @@ void CvCityAI::AI_chooseProduction()
 					}
 				}
 			}
-		
+
 			if (NULL != pWaterArea)
 			{
 				int iOdds = -1;
@@ -2749,7 +2746,7 @@ void CvCityAI::AI_chooseProduction()
 	
 	m_iTempBuildPriority--;
 
-	if (!bDanger && ((kPlayer.getCurrentEra() > (GC.getGame().getStartEra() + iProductionRank / 2))) || (kPlayer.getCurrentEra() > (GC.getNumEraInfos() / 2)))
+	if (!bDanger && ((kPlayer.getCurrentEra() >= (GC.getGame().getStartEra() + iProductionRank / 2))) || (kPlayer.getCurrentEra() > (GC.getNumEraInfos() / 2)))
 	{
 		if (!isHuman() || AI_isEmphasizeYield(YIELD_PRODUCTION))
 		{
@@ -2764,7 +2761,7 @@ void CvCityAI::AI_chooseProduction()
 		{
 			if ((iExistingWorkers < ((iNeededWorkers + 1) / 2)))
 			{
-				if( getPopulation() > 3 || (iProductionRank < (kPlayer.getNumCities() + 1) / 2) )
+				if( getPopulation() > 3 || (iProductionRank <= (kPlayer.getNumCities() + 1) / 2) )
 				{
 					if (!bChooseWorker && AI_chooseUnit("no danger workers", UNITAI_WORKER))
 					{
@@ -3109,15 +3106,11 @@ void CvCityAI::AI_chooseProduction()
 	{
 		if (!bDanger && (iProductionRank <= ((kPlayer.getNumCities() / 5) + 1)))
 		{
-			// BBAI TODO: Temporary for testing
-			//if( getOwnerINLINE()%2 == 1 )
-			//{
-				if (AI_chooseProject())
-				{
-					if( gCityLogLevel >= 2 ) logBBAI("      City %S uses choose project 1", getName().GetCString());
-					return;
-				}
-			//}
+			if (AI_chooseProject())
+			{
+				if( gCityLogLevel >= 2 ) logBBAI("      City %S uses choose project 1", getName().GetCString());
+				return;
+			}
 		}
 	}
 
@@ -4834,23 +4827,20 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 	UnitTypes eLoopUnit;
 	UnitTypes eBestUnit = NO_UNIT;
 	int iValue;
-	/*int iOriginalValue;*/
-	/*int iBestOriginalValue;*/
 	int iI, iJ, iK;
 	CvUnitSelectionCriteria tempCriteria;
-	
+
 	FAssert (eUnitAI != NO_UNITAI);
 
 	bool bGrowMore = false;
 	iBestValue = 0;
-	//iBestOriginalValue = 0;
-	
-	if ( criteria != NULL )
+
+	if (criteria != NULL)
 	{
 		tempCriteria = *criteria;
 	}
 
-	if ( tempCriteria.m_eUnitAI == NO_UNITAI )
+	if (tempCriteria.m_eUnitAI == NO_UNITAI)
 	{
 		tempCriteria.m_eUnitAI = eUnitAI;
 	}
@@ -4902,10 +4892,10 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 	int cacheKey = tempCriteria.getHash();
 	std::map<int,UnitValueInfo>::const_iterator itr = m_bestUnits.find(cacheKey);
 
-	if ( itr != m_bestUnits.end() )
+	if (itr != m_bestUnits.end())
 	{
 		//	Have to recheck canTrain as we may hit a unit limit mid-turn
-		if ( (itr->second.eUnit == NO_UNIT || !bGrowMore || !isFoodProduction(itr->second.eUnit)) && AI_meetsUnitSelectionCriteria(itr->second.eUnit, &tempCriteria) && canTrain(itr->second.eUnit))
+		if ((itr->second.eUnit == NO_UNIT || !bGrowMore || !isFoodProduction(itr->second.eUnit)) && AI_meetsUnitSelectionCriteria(itr->second.eUnit, &tempCriteria) && canTrain(itr->second.eUnit))
 		{
 			iBestValue = itr->second.iValue;
 			eBestUnit = itr->second.eUnit;
@@ -4913,187 +4903,150 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 		}
 	}
 
-	if ( bHasCachedValue )
+	if (bHasCachedValue)
 	{
-		if ( UNITAI_CITY_DEFENSE == eUnitAI && eBestUnit == NO_UNIT && (criteria == NULL || criteria->m_eProperty == NO_PROPERTY) )
+		if (UNITAI_CITY_DEFENSE == eUnitAI && eBestUnit == NO_UNIT && (criteria == NULL || criteria->m_eProperty == NO_PROPERTY))
 		{
 			OutputDebugString("No buildable defender!!\n");
 		}
 		return eBestUnit;
 	}
 
-	CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
-	for (iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+	for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		eLoopUnit = ((UnitTypes)(kCivilizationInfo.getCivilizationUnits(iI)));
+		eLoopUnit = (UnitTypes) iI;
 
 		if (eLoopUnit != NO_UNIT)
 		{
-			if (tempCriteria.m_eIgnoreAdvisor == NO_ADVISOR || (GC.getUnitInfo(eLoopUnit).getAdvisorType() != tempCriteria.m_eIgnoreAdvisor))
-			{
-				//	Koshling - this causes crashes with new code that asumes you will have some unit capable
-				//	of UNITAI_CITY_DEFENDER becasuse early on you have nothing with this as default.  Since I cannot
-				//	see why the human player wouldn't want an alternate that CAN do the requested AI, any less than
-				//	the AI does I have decided to just remove this check for now
-				//if (!isHuman() || (GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType() == eUnitAI))
-				{
-				    
-					if (!(bGrowMore && isFoodProduction(eLoopUnit)))
-					{
-						if (AI_meetsUnitSelectionCriteria(eLoopUnit, &tempCriteria) && canTrain(eLoopUnit))
-						{
-							iValue = GET_PLAYER(getOwnerINLINE()).AI_unitValue(eLoopUnit, eUnitAI, area(), &tempCriteria);
+			CvUnitInfo& kUnitInfo = GC.getUnitInfo(eLoopUnit);
 
-							FAssert((MAX_INT / 100) > iValue);
-							if (iValue > (MAX_INT/100))
+			if (tempCriteria.m_eIgnoreAdvisor == NO_ADVISOR || (kUnitInfo.getAdvisorType() != tempCriteria.m_eIgnoreAdvisor))
+			{
+				if ( ! (bGrowMore && isFoodProduction(eLoopUnit)))
+				{
+					if ( ! kUnitInfo.getNotUnitAIType(eUnitAI) && AI_meetsUnitSelectionCriteria(eLoopUnit, &tempCriteria) && canTrain(eLoopUnit))
+					{
+						iValue = GET_PLAYER(getOwnerINLINE()).AI_unitValue(eLoopUnit, eUnitAI, area(), &tempCriteria);
+
+						if (iValue > 0)
+						{
+							// 110 so that the next * 100 order of magnitude operation doesn't take us right back at the MAX_INT value.
+							FAssert(MAX_INT / 110 > iValue);
+							if (iValue > MAX_INT/110)
 							{
-								iValue = (MAX_INT/100);
+								iValue = MAX_INT/110;
 							}
 
 							//	Allow order fo magnitude
 							iValue *= 100;	//	Need it multiplying up so that truncation errors don't render
 											//	modifiers irrelevant
-							
 							int iPromotionValue = 0;
-							if (iValue > 0)
+							iValue += getProductionExperience(eLoopUnit);
+
+							//	KOSHLING - this need rework to take actual promotion values.  May need some caching to do so at
+							//	appropriate performance levels.  TODO ****
+
+							//free promotions. slow?
+							//only 1 promotion per source is counted (ie protective isn't counted twice)
+							//buildings
+							for (iJ = 0; iJ < GC.getNumPromotionInfos(); iJ++)
 							{
-								iValue += getProductionExperience(eLoopUnit);
-
-								//	KOSHLING - this need rework to take actual promotion values.  May need some caching to do so at
-								//	appropriate performance levels.  TODO ****
-
-
-								//free promotions. slow?
-								//only 1 promotion per source is counted (ie protective isn't counted twice)
-								//buildings
-								for (iJ = 0; iJ < GC.getNumPromotionInfos(); iJ++)
+								if (isFreePromotion((PromotionTypes)iJ) && ! kUnitInfo.getFreePromotions((PromotionTypes)iJ))
 								{
-									if (isFreePromotion((PromotionTypes)iJ) && !GC.getUnitInfo(eLoopUnit).getFreePromotions((PromotionTypes)iJ))
+									if (kUnitInfo.getUnitCombatType() != NO_UNITCOMBAT && GC.getPromotionInfo((PromotionTypes)iJ).getUnitCombat(kUnitInfo.getUnitCombatType()))
 									{
-										if ((GC.getUnitInfo(eLoopUnit).getUnitCombatType() != NO_UNITCOMBAT) && GC.getPromotionInfo((PromotionTypes)iJ).getUnitCombat(GC.getUnitInfo(eLoopUnit).getUnitCombatType()))
+										iPromotionValue += 15;
+
+										break;
+									}
+								}
+							}
+							//TB SubCombat Mod Begin
+							UnitCombatTypes eSubCombatType;
+
+							for (iJ = 0; iJ < GC.getNumPromotionInfos(); iJ++)
+							{
+								if (isFreePromotion((PromotionTypes)iJ) && ! kUnitInfo.getFreePromotions((PromotionTypes)iJ))
+								{
+									for (iK = 0; iK < kUnitInfo.getNumSubCombatTypes(); iK++)
+									{
+										eSubCombatType = (UnitCombatTypes) kUnitInfo.getSubCombatType(iK);
+										if (GC.getPromotionInfo((PromotionTypes)iJ).getUnitCombat(eSubCombatType))
 										{
 											iPromotionValue += 15;
-
 											break;
 										}
 									}
 								}
-								//TB SubCombat Mod Begin
-								UnitCombatTypes eSubCombatType;
-								
-								for (iJ = 0; iJ < GC.getNumPromotionInfos(); iJ++)
+							}
+							//TB SubCombat Mod End
+							//special to the unit
+							for (iJ = 0; iJ < GC.getNumPromotionInfos(); iJ++)
+							{
+								if (kUnitInfo.getFreePromotions(iJ))
 								{
-									if (isFreePromotion((PromotionTypes)iJ) && !GC.getUnitInfo(eLoopUnit).getFreePromotions((PromotionTypes)iJ))
-									{
-										for (iK = 0; iK < GC.getUnitInfo(eLoopUnit).getNumSubCombatTypes(); iK++)
-										{
-											eSubCombatType = ((UnitCombatTypes)GC.getUnitInfo(eLoopUnit).getSubCombatType(iK));
-											if (GC.getPromotionInfo((PromotionTypes)iJ).getUnitCombat(eSubCombatType))
-											{											
-												iPromotionValue += 15;
-												break;
-											}
-										}
-									}
-								}							
-								//TB SubCombat Mod End
-								//special to the unit
-								for (iJ = 0; iJ < GC.getNumPromotionInfos(); iJ++)
-								{
-									if (GC.getUnitInfo(eLoopUnit).getFreePromotions(iJ))
-									{
-										iPromotionValue += 15;
-										break;
-									}
+									iPromotionValue += 15;
+									break;
 								}
+							}
 
-								//traits
+							//traits
 
-								if (GC.getUnitInfo(eLoopUnit).getUnitCombatType() != NO_UNITCOMBAT)
+							if (kUnitInfo.getUnitCombatType() != NO_UNITCOMBAT)
+							{
+								for (iJ = 0; iJ < GC.getNumTraitInfos(); iJ++)
 								{
-									for (iJ = 0; iJ < GC.getNumTraitInfos(); iJ++)
+									if (hasTrait((TraitTypes)iJ))
 									{
-										if (hasTrait((TraitTypes)iJ))
+										for (iK = 0; iK < GC.getNumPromotionInfos(); iK++)
 										{
-											for (iK = 0; iK < GC.getNumPromotionInfos(); iK++)
+											if (GC.getTraitInfo((TraitTypes) iJ).isFreePromotionUnitCombats(iK, kUnitInfo.getUnitCombatType()))
 											{
-												if (GC.getTraitInfo((TraitTypes) iJ).isFreePromotionUnitCombats(iK, GC.getUnitInfo(eLoopUnit).getUnitCombatType()))
-												{
-													iPromotionValue += 15;
-												}
+												iPromotionValue += 15;
 											}
 										}
 									}
 								}
 							}
+							iValue *= 100 + iPromotionValue;
+							iValue /= 100;
 
-                            iValue *= (iPromotionValue + 100);
-                            iValue /= 100;
-
-							if ( !bNoRand )
+							if ( ! bNoRand)
 							{
 								if (bAsync)
 								{
-									iValue *= (GC.getASyncRand().get(50, "AI Best Unit ASYNC") + 100);
+									iValue *= 100 + GC.getASyncRand().get(51, "AI Best Unit ASYNC");
 									iValue /= 100;
 								}
 								else
 								{
-									iValue *= (GC.getGameINLINE().getSorenRandNum(50, "AI Best Unit") + 100);
+									iValue *= 100 + GC.getGameINLINE().getSorenRandNum(51, "AI Best Unit");
 									iValue /= 100;
 								}
 							}
 
-							//int iBestHappy = 0;
-							//for (int iHurry = 0; iHurry < GC.getNumHurryInfos(); ++iHurry)
-							//{
-							//	if (canHurryUnit((HurryTypes)iHurry, eLoopUnit, true))
-							//	{
-							//		int iHappy = AI_getHappyFromHurry((HurryTypes)iHurry, eLoopUnit, true);
-							//		if (iHappy > iBestHappy)
-							//		{
-							//			iBestHappy = iHappy;
-							//		}
-							//	}
-							//}
-
-							//if (0 == iBestHappy)
-							//{
-							//	iValue += getUnitProduction(eLoopUnit);
-							//}
-
-							//iValue *= (GET_PLAYER(getOwnerINLINE()).getNumCities() * 2);
-							//iValue /= std::max(1,GET_PLAYER(getOwnerINLINE()).getUnitClassCountPlusMaking((UnitClassTypes)iI) + GET_PLAYER(getOwnerINLINE()).getNumCities()+1);
-			
-							bool bIsSuicide = GC.getUnitInfo(eLoopUnit).isSuicide();
-							
-							if (bIsSuicide)
+							// consider time to train
+							if (iValue > 0)
 							{
-								//much of this is compensated
-								iValue /= 3;
-							}
+								int iTurns = getProductionTurnsLeft(eLoopUnit, 0);
+								if (iTurns < 1) { iTurns = 1; }
 
-							//if (0 == iBestHappy)
-							//{
-							//	iValue /= std::max(1, (getProductionTurnsLeft(eLoopUnit, 0) + (GC.getUnitInfo(eLoopUnit).isSuicide() ? 1 : 4)));
-							//}
-							//else
-							//{
-							//	iValue *= (2 + 3 * iBestHappy);
-							//	iValue /= 100;
-							//}
+								iValue = iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent() / (100 * iTurns);
 
-							iValue = std::max(0, iValue);
+								// Time to build should never disqualify any units that have value
+								if (iValue < 1) { iValue = 1; }
 
-							if (GC.getUnitInfo(eLoopUnit).getNotUnitAIType(eUnitAI))
-							{ 
-								iValue = 0;
-							}
+								if (kUnitInfo.isSuicide())
+								{
+									//much of this is compensated
+									iValue /= 3;
+								}
 
-							if (iValue > 0 && iValue > iBestValue)
-							{
-								iBestValue = iValue;
-								eBestUnit = eLoopUnit;
+								if (iValue > iBestValue)
+								{
+									iBestValue = iValue;
+									eBestUnit = eLoopUnit;
+								}
 							}
 						}
 					}
@@ -5102,7 +5055,7 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 		}
 	}
 
-	if ( !bGrowMore && !bAsync )
+	if ( ! bGrowMore && ! bAsync)
 	{
 		UnitValueInfo unitValueInfo;
 
@@ -5111,7 +5064,7 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 
 		m_bestUnits.insert(std::make_pair(cacheKey, unitValueInfo));
 	}
-	if ( UNITAI_CITY_DEFENSE == eUnitAI && eBestUnit == NO_UNIT && (criteria == NULL || criteria->m_eProperty == NO_PROPERTY) )
+	if (UNITAI_CITY_DEFENSE == eUnitAI && eBestUnit == NO_UNIT && (criteria == NULL || criteria->m_eProperty == NO_PROPERTY))
 	{
 		OutputDebugString("No buildable defender!!\n");
 	}
