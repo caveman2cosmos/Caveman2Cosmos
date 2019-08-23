@@ -66,7 +66,7 @@ void EventTriggeredData::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
 	WRAPPER_WRITE(wrapper, "EventTriggeredData", m_iId);
-	WRAPPER_WRITE(wrapper, "EventTriggeredData", m_eTrigger);
+	WRAPPER_WRITE_CLASS_ENUM(wrapper, "EventTriggeredData", REMAPPED_CLASS_TYPE_EVENT_TRIGGERS, m_eTrigger);
 	WRAPPER_WRITE(wrapper, "EventTriggeredData", m_iTurn);
 	WRAPPER_WRITE(wrapper, "EventTriggeredData", m_ePlayer);
 	WRAPPER_WRITE(wrapper, "EventTriggeredData", m_iCityId);
