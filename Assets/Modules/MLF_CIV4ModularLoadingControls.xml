@@ -75,10 +75,6 @@
 					<bLoad>0</bLoad>
 				</Module>
 				<Module>
-					<Directory>Custom_World_Views</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module>
 					<Directory>Pepper2000</Directory>
 					<bLoad>1</bLoad>
 				</Module>

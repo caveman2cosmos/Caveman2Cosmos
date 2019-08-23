@@ -10,9 +10,9 @@
 from CvPythonExtensions import *
 import CvUtil
 import CvScreensInterface
-import CvDebugUtils
 import Popup as PyPopup
 import CvAdvisorUtils
+import CvDebugUtils
 
 # globals
 GC = CyGlobalContext()
@@ -30,13 +30,13 @@ class CvEventManager:
 		self.aWonderTuple = [[],[],[],[],[]]
 
 		# OnEvent Enums
-		self.EventLButtonDown = 1
-		#self.EventLcButtonDblClick = 2
-		#self.EventRButtonDown = 3
-		self.EventBack = 4
-		self.EventForward = 5
+		# EventLButtonDown = 1
+		# EventLcButtonDblClick = 2
+		# EventRButtonDown = 3
+		# EventBack = 4
+		# EventForward = 5
 		self.EventKeyDown = 6
-		self.EventKeyUp = 7
+		# EventKeyUp = 7
 
 		## EVENT MAP
 		self.EventHandlerMap = {
@@ -128,18 +128,20 @@ class CvEventManager:
 		#
 		self.OverrideEventApply = {}
 		import CvMainInterface
+		debugUtils = CvDebugUtils.debugUtils
 		self.Events = {
+			5	 : ('EffectViewer', debugUtils.applyEffectViewer, debugUtils.initEffectViewer),
 			4999 : ('CityTabOptions', CvMainInterface.applyCityTabOptions, None),
 			5000 : ('EditCityName', self.__eventEditCityNameApply, self.__eventEditCityNameBegin),
 			5001 : ('EditCity', self.__eventEditCityApply, self.__eventEditCityBegin),
-			5002 : ('PlaceObject', self.__eventPlaceObjectApply, self.__eventPlaceObjectBegin),
-			5003 : ('AwardTechsAndGold', self.__eventAwardTechsAndGoldApply, self.__eventAwardTechsAndGoldBegin),
+			5002 : ('PlaceObject', debugUtils.applyUnitPicker, debugUtils.initUnitPicker),
+			5003 : ('AwardTechsAndGold', debugUtils.applyTechCheat, debugUtils.initTechsCheat),
 			5006 : ('EditUnitName', self.__eventEditUnitNameApply, self.__eventEditUnitNameBegin),
 			5008 : ('WBAllPlotsPopup', self.__eventWBAllPlotsPopupApply, self.__eventWBAllPlotsPopupBegin),
 			5009 : ('WBLandmarkPopup', self.__eventWBLandmarkPopupApply, self.__eventWBLandmarkPopupBegin),
 			5010 : ('WBScriptPopup', self.__eventWBScriptPopupApply, self.__eventWBScriptPopupBegin),
 			5011 : ('WBStartYearPopup', self.__eventWBStartYearPopupApply, self.__eventWBStartYearPopupBegin),
-			5012 : ('ShowWonder', self.__eventShowWonderApply, self.__eventShowWonderBegin),
+			5012 : ('ShowWonder', debugUtils.applyWonderMovie, debugUtils.initWonderMovie),
 		}
 	###****************###
 	### EVENT STARTERS ###
@@ -160,20 +162,26 @@ class CvEventManager:
 	### EVENT APPLY ###
 	def beginEvent(self, iD, argsList = -1):
 		entry = self.Events[iD]
-		if entry:
+		if entry and entry[2]:
+			if CvDebugUtils.bDebugMode:
+				print "Begin event " + entry[0]
 			return entry[2](argsList)
+		elif CvDebugUtils.bDebugMode:
+			print "EventBegin - Unknown event ID " + str(iD)
 
 	def applyEvent(self, argsList):
 		iD, iPlayer, netUserData, popupReturn = argsList
+		entry = self.Events[iD]
 
-		if iD == 5:
-			return CvDebugUtils.g_CvDebugUtils.applyEffectViewer(iPlayer, netUserData, popupReturn)
-
-		if self.Events[iD]:
+		if entry and entry[1]:
+			if CvDebugUtils.bDebugMode:
+				print "Apply event " + entry[0]
 			if iD in self.OverrideEventApply:
 				return self.OverrideEventApply[iD](iPlayer, netUserData, popupReturn)
 
-			return self.Events[iD][1](iPlayer, netUserData, popupReturn)
+			return entry[1](iPlayer, netUserData, popupReturn)
+		elif CvDebugUtils.bDebugMode:
+			print "EventApply - Unknown event ID " + str(iD)
 
 	###***********###
 	### ON EVENTS ###
@@ -316,8 +324,8 @@ class CvEventManager:
 		'mouse handler - returns 1 if the event was consumed'
 		eventType, mx, my, px, py, interfaceConsumed, screens = argsList
 
-		if self.bAllowCheats and not interfaceConsumed:
-			if eventType == self.EventLButtonDown and px != -1 and py != -1 and self.bCtrl:
+		if not interfaceConsumed and not self.bNetworkMP and (self.bAllowCheats or CvDebugUtils.bDebugMode):
+			if eventType == 1 and px != -1 and py != -1 and self.bCtrl:
 				if self.bAlt and GC.getMap().plot(px, py).isCity():
 					# Launch Edit City Event
 					self.beginEvent(5001, (px,py))
@@ -327,9 +335,9 @@ class CvEventManager:
 					self.beginEvent(5002, (px, py))
 					return 1
 
-		if eventType == self.EventBack:
+		if eventType == 4:
 			CvScreensInterface.handleBack(screens)
-		elif eventType == self.EventForward:
+		elif eventType == 5:
 			CvScreensInterface.handleForward(screens)
 		return 0
 
@@ -341,54 +349,72 @@ class CvEventManager:
 		bCtrl = self.bCtrl
 		bShift = self.bShift
 
+		# Screen specific input handlers
 		iCode = eventType + 10
 		if iCode in (16, 17):
 			iCode = CvScreensInterface.handleInput([iCode, key, 0, 0, CvScreensInterface.g_iScreenActive, "", 0, 0, 0, px, py, 35, 0, 0, 0])
 			if iCode:
 				return 1
 
+		iModifiers = bAlt + bCtrl + bShift
+
 		if eventType == 6: # Key down
 
-			if bCtrl and not (bShift or bAlt):
-				if key == InputTypes.KB_F1:
-					CvScreensInterface.showForgetfulScreen()
-					return 1
-				if key == InputTypes.KB_F2:
-					import GameFontScreen
-					GameFontScreen.GameFontScreen()
-					return 1
-				if key == InputTypes.KB_F3:
-					import TimeKeeper
-					TimeKeeper.TimeKeeper()
-					return 1
-				if key == InputTypes.KB_F4:
-					CvScreensInterface.replayScreen.showScreen(False)
-					return 1
-				if key == InputTypes.KB_F5:
-					CvScreensInterface.showDebugInfoScreen()
-					return 1
-				if key == InputTypes.KB_F6:
-					CvScreensInterface.showDanQuayleScreen(())
-					return 1
-				if key == InputTypes.KB_F7:
-					CvScreensInterface.showUnVictoryScreen(())
-					return 1
-
-			if self.bAllowCheats:
-
-				# Shift - T (Debug - No MP)
-				if key == InputTypes.KB_T:
-					if bShift and not (bCtrl or bAlt):
-						self.beginEvent(5003)
+			if iModifiers == 1:
+				if bCtrl:
+					if key == InputTypes.KB_F1:
+						CvScreensInterface.showForgetfulScreen()
 						return 1
-				elif key == InputTypes.KB_W:
-					if bShift and not (bCtrl or bAlt):
-						self.beginEvent(5012)
+					if key == InputTypes.KB_F2:
+						import GameFontScreen
+						GameFontScreen.GameFontScreen()
 						return 1
+					if key == InputTypes.KB_F3:
+						import TimeKeeper
+						TimeKeeper.TimeKeeper()
+						return 1
+
+				if CvDebugUtils.bDebugMode:
+					if bCtrl:
+						if key == InputTypes.KB_F4:
+							CvScreensInterface.replayScreen.showScreen(False)
+							return 1
+						if key == InputTypes.KB_F5:
+							CvScreensInterface.showDebugInfoScreen()
+							return 1
+						if key == InputTypes.KB_F6:
+							CvScreensInterface.showDanQuayleScreen(())
+							return 1
+						if key == InputTypes.KB_F7:
+							CvScreensInterface.showUnVictoryScreen(())
+							return 1
+
+					elif bShift:
+						if key == InputTypes.KB_T:
+							self.beginEvent(5003)
+							return 1
+						elif key == InputTypes.KB_W:
+							self.beginEvent(5012)
+							return 1
+						elif key == InputTypes.KB_Z:
+							CyInterface().addImmediateMessage("Dll Debug Mode: %s" %(not GAME.isDebugMode()), "AS2D_GOODY_MAP")
+							GAME.toggleDebugMode()
+							return 1
+						elif key == InputTypes.KB_E:
+							self.beginEvent(5, (px, py))
+							return 1
+
+			elif iModifiers == 3:
+
+				if CvDebugUtils.bDebugMode:
+					if key == InputTypes.KB_U:
+						CvDebugUtils.putOneOfEveryUnit()
 
 		elif eventType == 7: # Key up
-			if key == 16 and bAlt and bCtrl and bShift: # D
-				GAME.toggleDebugMode()
+
+			if iModifiers == 3 and not self.bNetworkMP:
+				if key == 16: # D
+					CvDebugUtils.toggleDebugMode()
 		return 0
 
 
@@ -2817,30 +2843,8 @@ class CvEventManager:
 		CvWBPopups.CvWBPopups().initEditCity(argsList)
 
 	def __eventEditCityApply(self, iPlayer, userData, popupReturn):
-		if getChtLvl() > 0:
-			import CvWBPopups
-			CvWBPopups.CvWBPopups().applyEditCity((popupReturn, userData))
-
-	def __eventPlaceObjectBegin(self, argsList):
-		CvDebugUtils.CvDebugUtils().initUnitPicker(argsList)
-
-	def __eventPlaceObjectApply(self, iPlayer, userData, popupReturn):
-		if getChtLvl() > 0:
-			CvDebugUtils.CvDebugUtils().applyUnitPicker((popupReturn, userData))
-
-	def __eventAwardTechsAndGoldBegin(self, argsList):
-		CvDebugUtils.CvDebugUtils().cheatTechs()
-
-	def __eventAwardTechsAndGoldApply(self, iPlayer, netUserData, popupReturn):
-		if getChtLvl() > 0:
-			CvDebugUtils.CvDebugUtils().applyTechCheat((popupReturn))
-
-	def __eventShowWonderBegin(self, argsList):
-		CvDebugUtils.CvDebugUtils().wonderMovie()
-
-	def __eventShowWonderApply(self, iPlayer, netUserData, popupReturn):
-		if getChtLvl() > 0:
-			CvDebugUtils.CvDebugUtils().applyWonderMovie((popupReturn))
+		import CvWBPopups
+		CvWBPopups.CvWBPopups().applyEditCity((popupReturn, userData))
 
 	def __eventEditUnitNameBegin(self, argsList):
 		pUnit = argsList

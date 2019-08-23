@@ -52734,6 +52734,19 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_HUMAN_SACRIFICE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_HUMAN_SACRIFICE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVHumanSacrifice</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
@@ -52862,6 +52875,19 @@
 								<Is>TAG_OWNED</Is>
 							</PlotCondition>
 							<PythonCallback>doRemoveWVCannibalism</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_HUMAN_SACRIFICE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_HUMAN_SACRIFICE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVHumanSacrifice</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -54865,6 +54891,19 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_HUMAN_SACRIFICE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_HUMAN_SACRIFICE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVHumanSacrifice</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
@@ -55176,6 +55215,19 @@
 								<Is>TAG_OWNED</Is>
 							</PlotCondition>
 							<PythonCallback>doRemoveWVCannibalism</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_HUMAN_SACRIFICE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_HUMAN_SACRIFICE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVHumanSacrifice</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -68255,6 +68307,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_COMMERCE</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_SANITATION</BuildingType>
 				<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
+				<BuildingType>BUILDING_WV_HUMAN_SACRIFICE</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -68704,6 +68757,191 @@ iTradeMultiplier>3</iTradeMultiplier>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_SACRIFICE_CAPTIVE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE</OutcomeType>
+							<iChance>100</iChance>
+							<PythonCallback>doSacrificeCaptive</PythonCallback>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Commerces>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>3</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+							</Commerces>
+							<iHappinessTimer>1</iHappinessTimer>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_ALTER_I</OutcomeType>
+							<iChance>100</iChance>
+							<PythonCallback>doSacrificeCaptive</PythonCallback>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Commerces>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>6</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+							</Commerces>
+							<iHappinessTimer>2</iHappinessTimer>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_ALTER_II</OutcomeType>
+							<iChance>100</iChance>
+							<PythonCallback>doSacrificeCaptive</PythonCallback>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Commerces>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>12</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+							</Commerces>
+							<iHappinessTimer>3</iHappinessTimer>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_DRUID</OutcomeType>
+							<iChance>100</iChance>
+							<PythonCallback>doSacrificeCaptive</PythonCallback>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Commerces>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>6</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+							</Commerces>
+							<iHappinessTimer>2</iHappinessTimer>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_DRUID_ALTER_I</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doSacrificeCaptive</PythonCallback>
+							<Commerces>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>12</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+							</Commerces>
+							<iHappinessTimer>4</iHappinessTimer>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_DRUID_ALTER_II</OutcomeType>
+							<iChance>100</iChance>
+							<PythonCallback>doSacrificeCaptive</PythonCallback>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Commerces>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>24</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+							</Commerces>
+							<iHappinessTimer>6</iHappinessTimer>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_MESOAMERICAN</OutcomeType>
+							<iChance>100</iChance>
+							<PythonCallback>doSacrificeCaptive</PythonCallback>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Commerces>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>6</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+							</Commerces>
+							<iHappinessTimer>2</iHappinessTimer>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_MESOAMERICAN_ALTER_I</OutcomeType>
+							<iChance>100</iChance>
+							<PythonCallback>doSacrificeCaptive</PythonCallback>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Commerces>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>12</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+							</Commerces>
+							<iHappinessTimer>4</iHappinessTimer>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_MESOAMERICAN_ALTER_II</OutcomeType>
+							<iChance>100</iChance>
+							<PythonCallback>doSacrificeCaptive</PythonCallback>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Commerces>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>24</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+							</Commerces>
+							<iHappinessTimer>6</iHappinessTimer>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
@@ -68774,6 +69012,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 				<BuildingType>BUILDING_WV_SLAVERY</BuildingType>
 				<BuildingType>BUILDING_SLAVE_MARKET</BuildingType>
 				<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
+				<BuildingType>BUILDING_WV_HUMAN_SACRIFICE</BuildingType>
 			</Buildings>
 			<Actions>
 				<Action>
@@ -69099,6 +69338,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_COMMERCE</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_SANITATION</BuildingType>
 				<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
+				<BuildingType>BUILDING_WV_HUMAN_SACRIFICE</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>

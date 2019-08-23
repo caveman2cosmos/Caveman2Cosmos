@@ -88388,6 +88388,12 @@
 				<Bonus>BONUS_MARBLE</Bonus>
 				<Bonus>BONUS_STONE</Bonus>
 			</PrereqBonuses>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_HUMAN_SACRIFICE</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>139</iCost>
 			<!-- Main effects -->

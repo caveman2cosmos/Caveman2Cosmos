@@ -37,9 +37,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WV_SLAVERY</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_WV_SLAVERY</DependencyType>
-			</AndDependencyTypes>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_EMANCIPATION_PROCLAMATION_EFFECT</BuildingClassType>
@@ -49,9 +46,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVERY</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_SLAVERY</DependencyType>
-			</AndDependencyTypes>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_EMANCIPATION_PROCLAMATION_EFFECT</BuildingClassType>
@@ -61,9 +55,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVERY_BAD_ZORO_I</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_SLAVERY_BAD_ZORO_I</DependencyType>
-			</AndDependencyTypes>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_EMANCIPATION_PROCLAMATION_EFFECT</BuildingClassType>
@@ -73,9 +64,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVERY_BAD_ZORO_II</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_SLAVERY_BAD_ZORO_II</DependencyType>
-			</AndDependencyTypes>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_EMANCIPATION_PROCLAMATION_EFFECT</BuildingClassType>
@@ -85,9 +73,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVE_MARKET</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_SLAVE_MARKET</DependencyType>
-			</AndDependencyTypes>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_EMANCIPATION_PROCLAMATION_EFFECT</BuildingClassType>
@@ -97,9 +82,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVE_COMPOUND</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_SLAVE_COMPOUND</DependencyType>
-			</AndDependencyTypes>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_EMANCIPATION_PROCLAMATION_EFFECT</BuildingClassType>
@@ -109,9 +91,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVE_COMPOUND_MILITARY_SUPPORT</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_SLAVE_COMPOUND_MILITARY_SUPPORT</DependencyType>
-			</AndDependencyTypes>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_EMANCIPATION_PROCLAMATION_EFFECT</BuildingClassType>
@@ -121,9 +100,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVE_COMPOUND_ENTERTAINMENT</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_SLAVE_COMPOUND_ENTERTAINMENT</DependencyType>
-			</AndDependencyTypes>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_EMANCIPATION_PROCLAMATION_EFFECT</BuildingClassType>
@@ -133,9 +109,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVE_COMPOUND_FOOD</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_SLAVE_COMPOUND_FOOD</DependencyType>
-			</AndDependencyTypes>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_EMANCIPATION_PROCLAMATION_EFFECT</BuildingClassType>
@@ -145,9 +118,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVE_COMPOUND_PRODUCTION</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_SLAVE_COMPOUND_PRODUCTION</DependencyType>
-			</AndDependencyTypes>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_EMANCIPATION_PROCLAMATION_EFFECT</BuildingClassType>
@@ -157,9 +127,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVE_COMPOUND_COMMERCE</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_SLAVE_COMPOUND_COMMERCE</DependencyType>
-			</AndDependencyTypes>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_EMANCIPATION_PROCLAMATION_EFFECT</BuildingClassType>
@@ -169,9 +136,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVE_COMPOUND_SANITATION</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_SLAVE_COMPOUND_SANITATION</DependencyType>
-			</AndDependencyTypes>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_EMANCIPATION_PROCLAMATION_EFFECT</BuildingClassType>
@@ -181,9 +145,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</DependencyType>
-			</AndDependencyTypes>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_EMANCIPATION_PROCLAMATION_EFFECT</BuildingClassType>
@@ -193,9 +154,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WV_HUMAN_SACRIFICE</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_WV_HUMAN_SACRIFICE</DependencyType>
-			</AndDependencyTypes>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_EMANCIPATION_PROCLAMATION_EFFECT</BuildingClassType>
@@ -205,9 +163,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HUMAN_SACRIFICE</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_HUMAN_SACRIFICE</DependencyType>
-			</AndDependencyTypes>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_EMANCIPATION_PROCLAMATION_EFFECT</BuildingClassType>
@@ -217,9 +172,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HUMAN_SACRIFICE_ALTAR</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_HUMAN_SACRIFICE_ALTAR</DependencyType>
-			</AndDependencyTypes>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_EMANCIPATION_PROCLAMATION_EFFECT</BuildingClassType>
@@ -229,9 +181,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WV_CANNIBALISM</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_WV_CANNIBALISM</DependencyType>
-			</AndDependencyTypes>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_EMANCIPATION_PROCLAMATION_EFFECT</BuildingClassType>
@@ -241,9 +190,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CANNIBALISM</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_CANNIBALISM</DependencyType>
-			</AndDependencyTypes>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_EMANCIPATION_PROCLAMATION_EFFECT</BuildingClassType>
@@ -253,9 +199,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CANNIBALISM_BAD_I</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_CANNIBALISM_BAD_I</DependencyType>
-			</AndDependencyTypes>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_EMANCIPATION_PROCLAMATION_EFFECT</BuildingClassType>
@@ -265,9 +208,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CANNIBALISM_BAD_II</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_CANNIBALISM_BAD_II</DependencyType>
-			</AndDependencyTypes>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_EMANCIPATION_PROCLAMATION_EFFECT</BuildingClassType>
@@ -277,9 +217,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CANNIBALISM_BAD_III</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_CANNIBALISM_BAD_III</DependencyType>
-			</AndDependencyTypes>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_EMANCIPATION_PROCLAMATION_EFFECT</BuildingClassType>
@@ -289,9 +226,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HUMAN_SACRIFICE_ALTAR</Type>
-			<AndDependencyTypes>
-				<DependencyType>BUILDING_HUMAN_SACRIFICE_ALTAR</DependencyType>
-			</AndDependencyTypes>
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 		</BuildingInfo>
 	</BuildingInfos>
