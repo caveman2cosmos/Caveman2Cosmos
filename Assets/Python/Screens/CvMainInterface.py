@@ -820,6 +820,7 @@ class CvMainInterface:
 		self.iX_FoVSlider = x
 		self.iY_FoVSlider = y
 		self.setFieldofView_Text(screen, iFoV)
+		self.setFieldofView(iFoV)
 		screen.hide("FoVSliderText")
 
 		# Entity Panel

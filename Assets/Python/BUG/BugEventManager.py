@@ -98,7 +98,7 @@ import CvEventManager
 import BugData
 import BugUtil
 import InputUtil
-import types
+import CvDebugUtils
 
 GC = CyGlobalContext()
 g_eventManager = None
@@ -141,7 +141,6 @@ class BugEventManager(CvEventManager.CvEventManager):
 
 		self.bDbg = False
 		self.bMultiPlayer = False
-		self.bAllowCheats = False
 
 		# used to register shortcut handlers
 		self.shortcuts = {}
@@ -192,9 +191,9 @@ class BugEventManager(CvEventManager.CvEventManager):
 		Prints a warning if eventType is already defined.
 		"""
 		if self.hasEvent(eventType):
-			BugUtil.warn("BugEventManager - event '%s' already defined", eventType)
+			print "[WARNING] BugEventManager - event '%s' already defined", eventType
 		else:
-			BugUtil.debug("BugEventManager - adding event '%s'", eventType)
+			print "BugEventManager - adding event '%s'", eventType
 			self.EventHandlerMap[eventType] = []
 
 	def addEventHandler(self, eventType, eventHandler=None):
@@ -278,7 +277,7 @@ class BugEventManager(CvEventManager.CvEventManager):
 		"""
 		if isinstance(keys, InputUtil.Keystroke):
 			keys = (keys,)
-		elif isinstance(keys, types.StringTypes):
+		elif isinstance(keys, basestring):
 			keys = InputUtil.stringToKeystrokes(keys)
 		for key in keys:
 			if key in self.shortcuts:
@@ -297,7 +296,7 @@ class BugEventManager(CvEventManager.CvEventManager):
 		return self._dispatchEvent(argsList[0], argsList[1:-6])
 
 	def _dispatchEvent(self, eventType, argsList):
-		if eventType != "gameUpdate":
+		if CvDebugUtils.bDebugMode and eventType != "gameUpdate":
 			print ("dispatchEvent: " + eventType, argsList)
 		return EVENT_FUNCTION_MAP.get(eventType, BugEventManager._handleDefaultEvent)(self, eventType, argsList)
 
@@ -388,11 +387,12 @@ class BugEventManager(CvEventManager.CvEventManager):
 	def onShortcutHandler(self, argsList):
 		"""Handles onKbdEvent by firing the keystroke's handler if it has one registered."""
 		eventType, key, mx, my, px, py = argsList
-		if eventType == self.EventKeyDown:
+		if eventType == 6: # Key down
 			if not InputUtil.isModifier(key):
 				stroke = InputUtil.Keystroke(key, self.bAlt, self.bCtrl, self.bShift)
 				if stroke in self.shortcuts:
-					BugUtil.debug("BugEventManager - calling handler for shortcut %s", stroke)
+					if CvDebugUtils.bDebugMode:
+						print "BugEventManager - calling handler for shortcut %s"
 					self.shortcuts[stroke](argsList)
 		return 0
 

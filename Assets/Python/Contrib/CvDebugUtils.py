@@ -1,309 +1,240 @@
-## Sid Meier's Civilization 4
-## Copyright Firaxis Games 2005
-#
-# CIV Python Tools Code
-#
+
 from CvPythonExtensions import *
-import CvUtil
-import PyHelpers
 import Popup as PyPopup
 
-PyPlayer = PyHelpers.PyPlayer
-PyGame = PyHelpers.PyGame
-
-# globals
 GC = CyGlobalContext()
-iLastSelectedObject = -1
-gSetUnit = 0
+bDebugMode = False
 
 def toggleDebugMode():
-	return
+	global bDebugMode
+	bDebugMode = not bDebugMode
+	CyInterface().addImmediateMessage("Python Debug Mode: %s" % bDebugMode, "AS2D_ERROR")
 
-def adjustUnitMovement(iPlayer, iUnitType, iNumMoves):
-	player = PyPlayer(iPlayer)
-	for unit in player.getUnitList():
-		if ( int(unit.getUnitType()) == iUnitType ):
-			unit.setMoves(iNumMoves)
-
-def giveUnitsLotsOfMoves():
-	playerTeam = GC.getActivePlayer().getTeam(0)
-	playerTeam.changeExtraMoves(DomainTypes.DOMAIN_LAND, 1000)
-	playerTeam.changeExtraMoves(DomainTypes.DOMAIN_SEA, 1000)
-	playerTeam.changeExtraMoves(DomainTypes.DOMAIN_AIR, 1000)
-
-############################### DEBUG TOOLS ####################################
 class CvDebugUtils:
 	def __init__(self):
-		self._bDebugMode = False
-		self.iActiveEffect = -1
-		self.pEffectPlot = None
+		self.iLastUnitPicker = -1
 
-	def getDebugMode( self ):
-		return self._bDebugMode
+	def resetUnitMovement(self):
+		for iPlayer in xrange(GC.getMAX_PLAYERS()):
+			CyPlayer = GC.getPlayer(iPlayer)
+			CyUnit, i = CyPlayer.firstUnit(false)
+			while CyUnit:
+				CyUnit.setMoves(0)
+				CyUnit, i = CyPlayer.nextUnit(i, false)
 
-	def setDebugMode( self, bVal ):
-		self._bDebugMode = bVal
-		CyInterface().addImmediateMessage( "CvDebugUtils.setDebugMode set to %s" % self.bDebugMode, "" )
+	def allBonuses(self):
+		iNBonuses = GC.getNumBonusInfos()
+		map = GC.getMap()
+		if iNBonuses < map.getGridWidth() * map.getGridHeight():
+			for x in xrange(map.getGridWidth()):
+				for y in xrange((iNBonuses/map.getGridWidth())+1):
+					map.plot(x,y).setBonusType((x + y * map.getGridWidth())%iNBonuses);
 
-	def notifyInput( self, argsList ):
-		#print "Python Debug Mode Notify"
-		return 0
+	def allImprovements(self):
+		iNImprovements = GC.getNumImprovementInfos()
+		map = GC.getMap()
+		if (iNImprovements < map.getGridWidth() * map.getGridHeight()):
+			for x in xrange(map.getGridWidth()):
+				for y in xrange((iNImprovements/map.getGridWidth())+1):
+					map.plot(x,y).setImprovementType((x + y * map.getGridWidth())%iNImprovements);
 
-	def initEffectViewer( self, argsList ):
-		px,py = argsList
-		pPlot = CyMap().plot(px,py)
-		popup = PyPopup.PyPopup(5, EventContextTypes.EVENTCONTEXT_SELF )
+
+################ TRIGGERED EVENTS ################
+
+	# Event 5
+	def initEffectViewer(self, argsList):
+		px, py = argsList
+		pPlot = GC.getMap().plot(px,py)
+		popup = PyPopup.PyPopup(5, EventContextTypes.EVENTCONTEXT_SELF)
 		popup.setSize(550,300)
-		popup.setUserData( (px,py) )
-		popup.setHeaderString( "Python Debug Tools: Object Placer" )
+		popup.setUserData((px,py))
+		popup.setHeaderString("Python Debug Tools: Object Placer")
 		# Pulldown0 - Player Selection
 		numEffects = GC.getNumEffectInfos()	# get total # of units from Game
 
 		popup.createPythonPullDown("Choose an Effect")
-		for i in range(GC.getNumEffectInfos()):
+		for i in xrange(GC.getNumEffectInfos()):
 			popup.addPullDownString(GC.getEffectInfo(i).getType(), i)
 
-		popup.createPythonEditBox( "Default", "Modify the scale of the effect" )
-		popup.createPythonEditBox( "Default", "Modify the update rate" )
+		popup.createPythonEditBox("Default", "Modify the scale of the effect")
+		popup.createPythonEditBox("Default", "Modify the update rate")
 
 		# Launch Popup
 		popup.launch()
 		return 0
 
-	def applyEffectViewer(self, playerID, userData, popupReturn):
-		px,py = userData
-		self.pEffectPlot = CyMap().plot(px,py)
+	def applyEffectViewer(self, iPlayer, userData, popupReturn):
+		px, py = userData
+		CyPlot = GC.getMap().plot(px, py)
+		if not CyPlot.isNone():
+			CyEngine().triggerEffect(popupReturn.getSelectedPullDownValue(0), CyPlot.getPoint())
 
-		if self.pEffectPlot.isNone():
-			return 0
-
-		self.iActiveEffect = popupReturn.getSelectedPullDownValue( 0 )
-
-		CyEngine().triggerEffect(self.iActiveEffect, self.pEffectPlot.getPoint())
-		#scale = popupReturn.getSelectedListBoxValue( 0 )
-		#updateRate = int( popupReturn.getEditBoxString( 0 ) )
-
-	############################
-	## UNIT / CITY PLAYER
-	############################
-	def initUnitPicker( self, argsList ):
-		'initUnitPicker - for placing units & cities'
-		px,py = argsList
-		pPlot = CyMap().plot(px,py)
-		popup = PyPopup.PyPopup(5002, EventContextTypes.EVENTCONTEXT_ALL )
+	# Event 5002
+	def initUnitPicker(self, argsList):
+		px, py = argsList
+		pPlot = GC.getMap().plot(px,py)
+		popup = PyPopup.PyPopup(5002, EventContextTypes.EVENTCONTEXT_ALL)
 		popup.setSize(400,600)
 		popup.setPosition(600,25)
-		popup.setUserData( (px,py) )
-		popup.setHeaderString( "Python Debug Tools: Object Placer" )
-		#popup.setBodyString( "Choose Player:" )
+		popup.setUserData((px,py))
+		popup.setHeaderString("Python Debug Tools: Object Placer")
 
 		# Pulldown0 - Player Selection
 		iNumUnits = GC.getNumUnitInfos()	# get total # of units from Game
 		iOwner = pPlot.getOwner()
-		if ( iOwner == PlayerTypes.NO_PLAYER ):
-			iOwner = GC.getGame().getActivePlayer()
 		popup.createPythonPullDown("Choose a Player")
-		popup.addPullDownString(GC.getPlayer(iOwner).getName(), iOwner)
-		for i in range(GC.getMAX_PLAYERS()):
-			if (GC.getPlayer(i).isEverAlive()):
-				if (i != iOwner):
-					popup.addPullDownString(GC.getPlayer(i).getName(), i)
+		if iOwner < 0:
+			iOwner = GC.getGame().getActivePlayer()
+		if iOwner > -1:
+			popup.addPullDownString(GC.getPlayer(iOwner).getName(), iOwner)
+		for i in xrange(GC.getMAX_PLAYERS()):
+			if i == iOwner: continue
+			CyPlayer = GC.getPlayer(i)
+			if CyPlayer.isAlive():
+				popup.addPullDownString(CyPlayer.getName(), i)
 
 		popup.addSeparator()
 
-		# ListBox0 - Unit List w/ City also selectable
-		#popup.setBodyString( "Select Game Object to Add:" )
-
-		popup.createPythonListBox( "" )
-		popup.addListBoxString( 'Nothing', iNumUnits + 1 )   # for clean exit
+		popup.createPythonListBox("")
+		popup.addListBoxString('Nothing', iNumUnits + 1)   # for clean exit
 		popup.addSeparator()
-		lastSelection = u""
-		if ( iLastSelectedObject == -1 ):
-			pass
-		elif ( iLastSelectedObject == iNumUnits+1 ):
-			lastSelection = u'Nothing'
-		elif ( iLastSelectedObject == iNumUnits ):
-			lastSelection = u'City'
-		else:
-			lastSelection = GC.getUnitInfo(iLastSelectedObject).getDescription()
-		if ( not iLastSelectedObject == -1 ):
-			popup.addListBoxString( lastSelection, iLastSelectedObject )
-		popup.addListBoxString( u'City', iNumUnits )    	# list City first
+
+		if self.iLastUnitPicker > -1:
+			if self.iLastUnitPicker == iNumUnits + 1:
+				szTxt = 'Nothing'
+			elif self.iLastUnitPicker == iNumUnits:
+				szTxt = 'City'
+			else:
+				szTxt = GC.getUnitInfo(self.iLastUnitPicker).getDescription()
+				popup.addListBoxString(szTxt, self.iLastUnitPicker)
+
+		popup.addListBoxString('City', iNumUnits) # list City first
 
 		# sort units alphabetically
 		unitsList=[(0,0)]*iNumUnits
-		for j in range( iNumUnits ):
+		for j in xrange(iNumUnits):
 			unitsList[j] = (GC.getUnitInfo(j).getDescription(), j)
 		unitsList.sort()
 
-		for j in range( iNumUnits ):
-			popup.addListBoxString( unitsList[j][0], unitsList[j][1])
+		for j in xrange(iNumUnits):
+			popup.addListBoxString(unitsList[j][0], unitsList[j][1])
 
 		# EditBox0 - Customize how many units to build
-		#popup.setBodyString( "How many objects?" )
-		popup.createPythonEditBox( "1", "This allows you to create multiple units." )
+		#popup.setBodyString("How many objects?")
+		popup.createPythonEditBox("1", "This allows you to create multiple units.")
 
 		# Launch Popup
-		#popup.setSize( 400, 600 )
+		#popup.setSize(400, 600)
 		popup.launch()
 		return 0
 
-	def applyUnitPicker( self, argsList ):
-		'Apply Unit Picker'
-		popupReturn, userData = argsList
-		px,py = userData
-		pPlot = CyMap().plot(px,py)
+	def applyUnitPicker(self, iPlayer, userData, popupReturn):
+		iX, iY = userData
 
-		if pPlot.isNone():
+		if GC.getMap().plot(iX, iY).isNone():
 			return 0
 
 		# UNIT DEBUG MENU
-		playerID = popupReturn.getSelectedPullDownValue( 0 )
-		selectedObject = popupReturn.getSelectedListBoxValue( 0 )
-		iSpawnNum = int( popupReturn.getEditBoxString( 0 ) )
+		iPlayer = popupReturn.getSelectedPullDownValue(0)
+		iObject = popupReturn.getSelectedListBoxValue(0)
 
-		player = PyPlayer( playerID )
-		if ( player.isNone() ):
-			return -1   # Error
+		CyPlayer = GC.getPlayer(iPlayer)
+		if CyPlayer.isNone():
+			return -1 # Error
 
 		iNumUnits = GC.getNumUnitInfos()
-		global iLastSelectedObject
-		iLastSelectedObject = selectedObject
-		if ( selectedObject != iNumUnits + 1 ):# Nothing
 
-			if ( selectedObject == iNumUnits ):# City"
-				player.initCity( px,py )
+		if iObject < iNumUnits + 1:
+			self.iLastUnitPicker = iObject
 
+			if iObject == iNumUnits: # City"
+				CyPlayer.initCity(iX, iY)
 			else:
-				player.initUnit( selectedObject, px, py, iSpawnNum )
+				iSpawnNum = int(popupReturn.getEditBoxString(0))
+				while iSpawnNum > 0:
+					CyPlayer.initUnit(iObject, iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
+					iSpawnNum -= 1
 		else:
-			iLastSelectedObject = -1
+			self.iLastUnitPicker = -1
 
 		return 0
 
-	############################
-	## TECH / GOLD CHEAT POPUP
-	############################
-	def cheatTechs( self ):
-		'Cheat techs and gold to the players'
-		popup = PyPopup.PyPopup(5003, EventContextTypes.EVENTCONTEXT_ALL )
-		popup.setHeaderString( "Tech & Gold Cheat!" )
+	# Event 5003
+	def initTechsCheat(self, argsList):
+		popup = PyPopup.PyPopup(5003, EventContextTypes.EVENTCONTEXT_ALL)
+		popup.setHeaderString("Tech & Gold Cheat!")
 		popup.createPullDown()
-		popup.addPullDownString( "All", GC.getMAX_CIV_PLAYERS() )
-		for i in range( GC.getMAX_CIV_PLAYERS() ):
-			if ( GC.getPlayer(i).isAlive() ):
-				popup.addPullDownString( GC.getPlayer(i).getName(), i )
-		popup.setBodyString( "Modify Player %s:" %( CvUtil.getIcon('gold'),) )
-		popup.createPythonEditBox( "0", "Integer value (positive or negative)" )
+		popup.addPullDownString("All", GC.getMAX_CIV_PLAYERS())
+		for i in xrange(GC.getMAX_CIV_PLAYERS()):
+			if (GC.getPlayer(i).isAlive()):
+				popup.addPullDownString(GC.getPlayer(i).getName(), i)
+		popup.setBodyString("Modify Player " + unichr(8500))
+		popup.createPythonEditBox("0", "Integer value (positive or negative)")
 
-		# Loop through Era Infos and add names
-		for i in range(GC.getNumEraInfos()):
+		for i in xrange(GC.getNumEraInfos()):
 			popup.addButton(GC.getEraInfo(i).getDescription())
 
 		popup.launch(true, PopupStates.POPUPSTATE_IMMEDIATE)
 
-	def applyTechCheat( self, argsList ):
-		'Apply Tech Cheat'
-		popupReturn = argsList
-		playerID = popupReturn.getSelectedPullDownValue( 0 )
-		bAll = 0
-		if playerID == GC.getMAX_CIV_PLAYERS():
-			bAll = 1
-			player = PyGame().getCivPlayerList()
-		else:
-			player = PyPlayer( playerID )
-		era = popupReturn.getButtonClicked()
+	def applyTechCheat(self, iPlayer, userData, popupReturn):
+
+		iPlayer = popupReturn.getSelectedPullDownValue(0)
+		iPlayers = 0
+		if iPlayer == GC.getMAX_PC_PLAYERS():
+			player = []
+			for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
+				CyPlayerX = GC.getPlayer(iPlayerX)
+				if CyPlayerX.isAlive():
+					player.append(CyPlayerX)
+					iPlayers += 1
+
+		else: player = GC.getPlayer(iPlayer)
 
 		try:
-			goldChange = int( popupReturn.getEditBoxString( 0 ) )
+			goldChange = int(popupReturn.getEditBoxString(0))
 		except:
-			return 0
+			goldChange = 0
 
 		if goldChange:
-			if not bAll:
-				player.changeGold(goldChange)
-			else:
-				for i in range(len(player)):
+			if iPlayers:
+				for i in xrange(iPlayers):
 					player[i].changeGold(goldChange)
 
-		for tech in PyGame().getEraTechList(era):
-			id = tech.getID()
-			if not bAll:
-				player.setHasTech( id )
-			else:
-				for j in range(len(player)):
-					player[j].setHasTech( id )
-	def RotateUnit(self, Direction, px, py ):
-		if ( px != -1 and py != -1 ):
-			unit = CyMap().plot(px, py).getUnit(0)
-			if ( not unit.isNone() ):
-				unitEntity = CyUnitEntity(unit)
-				dir = unitEntity.GetUnitFacingDirection( )
-				dir += Direction * 0.05;
-				unitEntity.SetUnitFacingDirection( dir )
+			else: player.changeGold(goldChange)
 
-	def resetUnitMovement( self ):
-		global g_bDebugMode
-		if g_bDebugMode == 0:
-			return
-		for i in range(GC.getMAX_PLAYERS()):
-			(unit, iter) = GC.getPlayer(i).firstUnit(false)
-			while (unit):
-				unit.setMoves(0)
-				(unit, iter) = GC.getPlayer(i).nextUnit(iter, false)
+		era = popupReturn.getButtonClicked()
+		for iTech in xrange(GC.getNumTechInfos()):
 
-	def allUnits( self ):
-		self.putOneOfEveryUnit();
+			if GC.getTechInfo(iTech).getiEra() == era:
+				if iPlayers:
+					for j in xrange(iPlayers):
+						player[j].setHasTech(iTech)
+				else:
+					player.setHasTech(iTech)
 
-	def allBonuses( self ):
-		iNBonuses = GC.getNumBonusInfos()
-		map = CyMap()
-		if ( iNBonuses < map.getGridWidth() * map.getGridHeight() ):
-			for x in range(map.getGridWidth()):
-				for y in range((iNBonuses/map.getGridWidth())+1):
-					map.plot(x,y).setBonusType( (x + y * map.getGridWidth())%iNBonuses );
-
-	def allImprovements( self ):
-		iNImprovements = GC.getNumImprovementInfos()
-		map = CyMap()
-		if ( iNImprovements < map.getGridWidth() * map.getGridHeight() ):
-			for x in range(map.getGridWidth()):
-				for y in range((iNImprovements/map.getGridWidth())+1):
-					map.plot(x,y).setImprovementType( (x + y * map.getGridWidth())%iNImprovements );
-
-	def putOneOfEveryUnit( self ):
-		pass
-		iNUnits = GC.getNumUnitInfos()
-		map = CyMap()
-		player = GC.getPlayer(0)
-		if ( iNUnits < map.getGridWidth() * map.getGridHeight() ):
-			for x in range(map.getGridWidth()):
-				for y in range((iNUnits/map.getGridWidth())+1):
-					player.initUnit( (x + y * map.getGridWidth())%iNUnits, x, y, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION )
-
-	def wonderMovie(self):
+	# Event 5012
+	def initWonderMovie(self, argsList):
 		popup = PyPopup.PyPopup(5012, EventContextTypes.EVENTCONTEXT_ALL)
-		popup.setHeaderString( "Wonder Movie" )
+		popup.setHeaderString("Wonder Movie")
 		popup.createPullDown()
-		for i in range(GC.getNumBuildingInfos()):
+		for i in xrange(GC.getNumBuildingInfos()):
 			szMovieFile = GC.getBuildingInfo(i).getMovie()
 			if (szMovieFile != None and len(szMovieFile) > 0):
-				popup.addPullDownString( GC.getBuildingInfo(i).getDescription(), i )
+				popup.addPullDownString(GC.getBuildingInfo(i).getDescription(), i)
 
-		for i in range(GC.getNumProjectInfos()):
+		for i in xrange(GC.getNumProjectInfos()):
 			szMovieFile = None
 			szArtDef = GC.getProjectInfo(i).getMovieArtDef()
 			if (len(szArtDef) > 0):
 				szMovieFile = CyArtFileMgr().getMovieArtInfo(szArtDef).getPath()
 			if (szMovieFile != None and len(szMovieFile) > 0):
-				popup.addPullDownString( GC.getProjectInfo(i).getDescription(), GC.getNumBuildingInfos() + i )
+				popup.addPullDownString(GC.getProjectInfo(i).getDescription(), GC.getNumBuildingInfos() + i)
 
 		popup.launch(true, PopupStates.POPUPSTATE_IMMEDIATE)
 
-	def applyWonderMovie( self, argsList ):
-		'Apply Wonder Movie'
-		popupReturn = argsList
-		wonderID = popupReturn.getSelectedPullDownValue( 0 )
+	def applyWonderMovie(self, iPlayer, userData, popupReturn):
+
+		wonderID = popupReturn.getSelectedPullDownValue(0)
 
 		popupInfo = CyPopupInfo()
 		popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
@@ -319,4 +250,75 @@ class CvDebugUtils:
 
 		popupInfo.addPopup(0)
 
-g_CvDebugUtils = CvDebugUtils()
+debugUtils = CvDebugUtils()
+
+
+def putOneOfEveryUnit():
+	MAP = GC.getMap()
+
+	x = y = 0
+	dx = MAP.getGridWidth()
+	dy = MAP.getGridHeight()
+
+	waterPlots = []
+	landPlots = []
+	iLand = 0
+	iWater = 0
+	while y < dy:
+
+		CyPlot = MAP.plot(x, y)
+		if not CyPlot.isImpassable():
+			if CyPlot.isWater():
+				waterPlots.append((x, y))
+				iWater += 1
+			else:
+				landPlots.append((x, y))
+				iLand += 1
+		x += 1
+		if x == dx:
+			x = 0
+			y += 1
+
+	CyPlayer = GC.getPlayer(0)
+	iWaterInc = 0
+	iTotalWater = 0
+	iLandInc = 0
+	iTotalLand = 0
+	iUnits = GC.getNumUnitInfos()
+	iUnit = 0
+	while iUnit < iUnits:
+		bLand = False
+		bWater = False
+		DOMAIN = GC.getUnitInfo(iUnit).getDomainType()
+		if DOMAIN == DomainTypes.DOMAIN_AIR:
+			if iTotalWater + iLand < iTotalLand + iWater:
+				if iWater:
+					bWater = True
+				elif iLand:
+					bLand = True
+			else:
+				if iLand:
+					bLand = True
+				elif iWater:
+					bWater = True
+
+		elif DOMAIN == DomainTypes.DOMAIN_SEA:
+			bWater = iWater != 0
+		else:
+			bLand = iLand != 0
+
+		if bLand or bWater:
+			if bLand:
+				x, y = landPlots[iLandInc]
+				iLandInc += 1
+				if iLandInc == iLand:
+					iLandInc = 0
+				iTotalLand += 1
+			else:
+				x, y = waterPlots[iWaterInc]
+				iWaterInc += 1
+				if iWaterInc == iWater:
+					iWaterInc = 0
+				iTotalWater += 1
+			CyPlayer.initUnit(iUnit, x, y, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
+		iUnit += 1

@@ -1,6 +1,7 @@
 # Utility for input debugging.
 import InputData
 inData = InputData.instance
+import CvDebugUtils
 
 NOTIFY_CODES = {
 	0	: "Click",
@@ -53,6 +54,7 @@ MOUSE_FLAGS = {
 	134217728	: "MOUSE_MOUSEWHEELDOWN"
 }
 def debugInput(inputClass):
+	if not CvDebugUtils.bDebugMode: return
 	# InputClass does not contain reliable information
 	bAlt, bCtrl, bShift	= inData.getModifierKeys()
 	x, y				= inData.getMousePosition()

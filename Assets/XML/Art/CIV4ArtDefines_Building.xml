@@ -33591,5 +33591,35 @@
 			<KFM></KFM>
 			<Button>Art/Interface/Buttons/Buildings/ZUplink.dds</Button>
 		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_HUMAN_SACRIFICE</Type>
+			<LSystem />
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF />
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/humansacrifice.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_WV_HUMAN_SACRIFICE</Type>
+			<LSystem />
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF />
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/WorldViewHumanSacrifice.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_HUMAN_SACRIFICE_ALTAR</Type>
+			<LSystem />
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF />
+			<KFM />
+			<Button>Art/Interface/Buttons/Buildings/humansacrificealter.dds</Button>
+		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

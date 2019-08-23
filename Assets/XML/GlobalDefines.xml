@@ -1210,7 +1210,7 @@
 	</Define>
 	<Define>
 		<DefineName>CAMERA_LOWER_PITCH</DefineName>
-		<fDefineFloatVal>-30.0</fDefineFloatVal>
+		<fDefineFloatVal>-32.0</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>CAMERA_MIN_SCROLL_SPEED</DefineName>
@@ -1230,7 +1230,7 @@
 	</Define>
 	<Define>
 		<DefineName>CAMERA_START_DISTANCE</DefineName>
-		<fDefineFloatVal>3800</fDefineFloatVal>
+		<fDefineFloatVal>4000</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>CAMERA_MAX_TRAVEL_DISTANCE</DefineName>
@@ -1238,7 +1238,7 @@
 	</Define>
 	<Define>
 		<DefineName>CAMERA_MIN_DISTANCE</DefineName>
-		<fDefineFloatVal>400</fDefineFloatVal>
+		<fDefineFloatVal>600</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>CAMERA_MAX_TURN_OFFSET</DefineName>

@@ -58,7 +58,7 @@ class CvWBPopups:
 		# City Name - Editbox 0
 		popup.createEditBox(CyCity.getName(), 0)
 		# Population - Editbox 1
-		popup.createEditBox('1', 1)
+		popup.createEditBox('0', 1)
 		popup.setBodyString(local.getText("TXT_KEY_WB_CITY_EDIT_POP", ()))
 		# Culture - Editbox 2
 		popup.createEditBox('0', 2)
