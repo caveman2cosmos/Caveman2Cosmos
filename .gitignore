@@ -17,3 +17,6 @@ XmlValidator.log
 
 git_installer.exe
 Tools/Setup/.wget-hsts
+
+Assets/art/
+!Assets/art/Readme.txt
