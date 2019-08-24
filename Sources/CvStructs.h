@@ -383,14 +383,29 @@ struct MissionData				// Exposed to Python
 	int iData2;
 	int iFlags;
 	int iPushTurn;
+
+	MissionData() 
+		: eMissionType(NO_MISSION)
+		, iData1(0)
+		, iData2(0)
+		, iFlags(0)
+		, iPushTurn(0)
+	{}
 };
 
-struct TradeData					// Exposed to Python
+struct TradeData // Exposed to Python
 {
-	TradeableItems m_eItemType;				//	What type of item is this
-	int m_iData;											//	Any additional data?
-	bool m_bOffering;									//	Is this item up for grabs?
-	bool m_bHidden;										//	Are we hidden?
+	TradeableItems m_eItemType; //What type of item is this
+	int m_iData; //Any additional data?
+	bool m_bOffering; // Is this item up for grabs?
+	bool m_bHidden; // Are we hidden?
+
+	TradeData()
+		: m_eItemType(TRADE_ITEM_NONE)
+		, m_iData(0)
+		, m_bOffering(0)
+		, m_bHidden(0)
+	{}
 };
 
 struct EventTriggeredData
@@ -412,6 +427,23 @@ struct EventTriggeredData
 	CvWString m_szGlobalText;
 	bool m_bExpired;
 
+	EventTriggeredData()
+		: m_iId(0)
+		, m_eTrigger(NO_EVENTTRIGGER)
+		, m_iTurn(0)
+		, m_ePlayer(NO_PLAYER)
+		, m_iCityId(0)
+		, m_iPlotX(0)
+		, m_iPlotY(0)
+		, m_iUnitId(0)
+		, m_eOtherPlayer(NO_PLAYER)
+		, m_iOtherPlayerCityId(0)
+		, m_eReligion(NO_RELIGION)
+		, m_eCorporation(NO_CORPORATION)
+		, m_eBuilding(NO_BUILDING)
+		, m_bExpired(false)
+	{}
+
 	int getID() const;
 	void setID(int iID);
 	void read(FDataStreamBase* pStream);
@@ -425,6 +457,13 @@ struct VoteSelectionSubData
 	int iCityId;
 	PlayerTypes eOtherPlayer;
 	CvWString szText;
+
+	VoteSelectionSubData()
+		: eVote(NO_VOTE)
+		, ePlayer(NO_PLAYER)
+		, iCityId(0)
+		, eOtherPlayer(NO_PLAYER)
+	{}
 };
 
 struct VoteSelectionData
@@ -432,6 +471,11 @@ struct VoteSelectionData
 	int iId;
 	VoteSourceTypes eVoteSource;
 	std::vector<VoteSelectionSubData> aVoteOptions;
+
+	VoteSelectionData()
+		: iId(0)
+		, eVoteSource(NO_VOTESOURCE)
+	{}
 
 	int getID() const;
 	void setID(int iID);
@@ -444,6 +488,11 @@ struct VoteTriggeredData
 	int iId;
 	VoteSourceTypes eVoteSource;
 	VoteSelectionSubData kVoteOption;
+
+	VoteTriggeredData()
+		: iId(0)
+		, eVoteSource(NO_VOTESOURCE)
+	{}
 
 	int getID() const;
 	void setID(int iID);
@@ -458,6 +507,12 @@ struct EventMessage
 	int iX;
 	int iY;
 
+	EventMessage()
+		: iExpirationTurn(0)
+		, iX(0)
+		, iY(0)
+	{}
+
 	// python friendly accessors
 	std::wstring getDescription() const { return szDescription;	}
 };
@@ -468,6 +523,11 @@ struct PlotExtraYield
 	int m_iY;
 	std::vector<int> m_aeExtraYield;
 
+	PlotExtraYield()
+		: m_iX(0)
+		, m_iY(0)
+	{}
+
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
 };
@@ -477,6 +537,12 @@ struct PlotExtraCost
 	int m_iX;
 	int m_iY;
 	int m_iCost;
+
+	PlotExtraCost()
+		: m_iX(0)
+		, m_iY(0)
+		, m_iCost(0)
+	{}
 
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -490,6 +556,12 @@ struct BuildingYieldChange
 	YieldTypes eYield;
 	int iChange;
 
+	BuildingYieldChange()
+		: eBuildingClass(NO_BUILDINGCLASS)
+		, eYield(NO_YIELD)
+		, iChange(0)
+	{}
+
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
 };
@@ -499,6 +571,12 @@ struct BuildingCommerceChange
 	BuildingClassTypes eBuildingClass;
 	CommerceTypes eCommerce;
 	int iChange;
+
+	BuildingCommerceChange()
+		: eBuildingClass(NO_BUILDINGCLASS)
+		, eCommerce(NO_COMMERCE)
+		, iChange(0)
+	{}
 
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -513,7 +591,12 @@ struct PropertySpawns
 {
 	PropertyTypes eProperty;
 	UnitClassTypes eUnitClass;
-	
+
+	PropertySpawns()
+		: eProperty(NO_PROPERTY)
+		, eUnitClass(NO_UNITCLASS)
+	{}
+
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
 };
@@ -522,6 +605,12 @@ struct BuildingYieldModifier
 	BuildingClassTypes eBuildingClass;
 	YieldTypes eYield;
 	int iChange;
+
+	BuildingYieldModifier()
+		: eBuildingClass(NO_BUILDINGCLASS)
+		, eYield(NO_YIELD)
+		, iChange(0)
+	{}
 
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -532,6 +621,12 @@ struct BuildingCommerceModifier
 	BuildingClassTypes eBuildingClass;
 	CommerceTypes eCommerce;
 	int iChange;
+
+	BuildingCommerceModifier()
+		: eBuildingClass(NO_BUILDINGCLASS)
+		, eCommerce(NO_COMMERCE)
+		, iChange(0)
+	{}
 
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -547,6 +642,11 @@ struct FOWVis
 {
 	uint uiCount;
 	POINT* pOffsets;  // array of "Offset" points
+
+	FOWVis()
+		: uiCount(0)
+		, pOffsets(NULL)
+	{}
 
 	// python friendly accessors
 	POINT getOffsets(int i) const { return pOffsets[i]; }
@@ -593,6 +693,14 @@ struct DllExport PBPlayerSetupData
 	int iTeam;
 	int iDifficulty;
 
+	PBPlayerSetupData()
+		: iWho(0)
+		, iCiv(0)
+		, iLeader(0)
+		, iTeam(0)
+		, iDifficulty(0)
+	{}
+
 	std::wstring szStatusText;
 	std::wstring getStatusText() {return szStatusText;}
 };
@@ -608,6 +716,12 @@ struct DllExport PBPlayerAdminData
 	bool bHuman;
 	bool bClaimed;
 	bool bTurnActive;
+
+	PBPlayerAdminData()
+		: bHuman(false)
+		, bClaimed(false)
+		, bTurnActive(false)
+	{}
 };
 
 class CvUnit;
@@ -703,7 +817,7 @@ class CvBattleDefinition : public CvMissionDefinition
 public:
 	CvBattleDefinition();
 	DllExport CvBattleDefinition( const CvBattleDefinition & kCopy );
-        DllExport ~CvBattleDefinition();
+	DllExport ~CvBattleDefinition();
 
 	DllExport int getDamage(BattleUnitTypes unitType, BattleTimeTypes timeType) const;
 	void setDamage(BattleUnitTypes unitType, BattleTimeTypes timeType, int damage);
@@ -769,6 +883,13 @@ struct CvWidgetDataStruct
 	bool m_bOption;									//	A boolean piece of data
 
 	WidgetTypes m_eWidgetType;			//	What the 'type' of this widget is (for parsing help and executing actions)
+
+	CvWidgetDataStruct()
+		: m_iData1(0)
+		, m_iData2(0)
+		, m_bOption(false)
+		, m_eWidgetType(WIDGET_PLOT_LIST)
+	{}
 };
 
 struct DllExport CvPlotIndicatorData
@@ -781,9 +902,8 @@ struct DllExport CvPlotIndicatorData
 		, m_bTestEnemyVisibility(false)
 		, m_bVisibleOnlyIfSelected(false)
 		, m_bPersistentRotation(false)
-		
-	{
-	}
+	{}
+
 	CvString m_strIcon;
 	CvString m_strLabel;
 	NiColor m_kColor;

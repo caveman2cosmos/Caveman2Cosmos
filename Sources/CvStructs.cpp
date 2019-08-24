@@ -555,14 +555,14 @@ void CvMissionDefinition::setPlot(const CvPlot *plot)
 // FUNCTION:    CvBattleDefinition::CvBattleDefinition
 //! \brief      Constructor.
 //------------------------------------------------------------------------------------------------
-CvBattleDefinition::CvBattleDefinition() : 
-	m_bAdvanceSquare(false), 
-	CvMissionDefinition()
+CvBattleDefinition::CvBattleDefinition() 
+	: CvMissionDefinition()
+	, m_bAdvanceSquare(false)
+	, m_iNumMeleeRounds(0)
+	, m_iNumRangedRounds(0)
 {
 	m_fMissionTime = 0.0f;
 	m_eMissionType = MISSION_BEGIN_COMBAT;
-	m_iNumMeleeRounds = 0;
-	m_iNumRangedRounds = 0;
 
 	for(int i=0;i<BATTLE_UNIT_COUNT;i++)
 	{
@@ -772,6 +772,19 @@ bool CvAirMissionDefinition::isDead(BattleUnitTypes unitType) const
 }
 
 PBGameSetupData::PBGameSetupData()
+	: iSize(0)
+	, iClimate(0)
+	, iSeaLevel(0)
+	, iSpeed(0)
+	, iEra(0)
+	, iMaxTurns(0)
+	, iCityElimination(0)
+	, iAdvancedStartPoints(0)
+	, iTurnTime(0)
+	, iNumCustomMapOptions(0)
+	, aiCustomMapOptions(NULL)
+	, iNumVictories(0)
+	, abVictories(NULL)
 {
 	for (int i = 0; i < NUM_GAMEOPTION_TYPES; i++)
 	{
