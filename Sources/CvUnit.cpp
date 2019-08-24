@@ -27051,7 +27051,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 			info->m_iPromotionFreeCount = g_paiTempPromotionFreeCount[iI];
 		}
-		else if ( GC.getLoadedInitCore().getGameSaveSvnRev() < 5080 && isHasPromotion((PromotionTypes)iI) )
+		else if (GC.getLoadedInitCore().getGameSaveSvnRev() != -1 && GC.getLoadedInitCore().getGameSaveSvnRev() < 5080 && isHasPromotion((PromotionTypes)iI) )
 		{
 			if ( !canKeepPromotion((PromotionTypes)iI, false, false) )
 			{
