@@ -1,0 +1,73 @@
+For 2.7 still todo:
+X Fix bug with espionage +/- buttons not drawing
+X Fix bug reports:  http://forums.civfanatics.com/showpost.php?p=8938864&postcount=734
+	X TXT_KEY_LANGUAGE_5
+	X getModPath
+	X (jdog5000) RevCivicUtils.py
+	X CvExoticForeignAdvisor
+	X RebelTypes issue
+X Remove duplicated show hidden attitude (SHAM) code from the BULL merge; RevDCM already has this and having the code duplicated could only cause problems
+X Merge in glider's MP fixes in current RevolutionMP SVN branch (Possibly wait till 2.71 and further testing)
+*Finalizations for 2.7
+	-Get new GameFonts.tga (is this needed?):  http://forums.civfanatics.com/showthread.php?t=354343
+	XUpdate any custom maps in RevDCM
+	-Check for any last minute translations:  http://forums.civfanatics.com/showthread.php?t=329327
+	-Check for and merge in any last minute BUG SVN fixes
+	X Last minute UP and BBAI fixes
+	-Package in Installer
+
+
+For 2.71:
+- Get the effect of an inquisition to show in the RevIdx bar (green showing drop)
+- Tech grant for Barbarian Civs on New World still needs improvement (even with 2.7 fix Barbarian civs on the new world are still getting a couple of free techs granted, which still destroys the New World Gameplay Concept)
+- Nudden says #2273 RevDCM forum: dont know if anyone noticed that before, but i found a small bug in the civicsadvisor screen. in this case it's the environmentalism civic. the +2  from the public transportation building is not in the advisor screen but in the sevopedia. this is also the case for the revolution settings.
+- Fix Bug python errors such as: Traceback (most recent call last):  File "BugEventManager", line 350, in _handleDefaultEvent   File "FavoriteCivicDetector", line 319, in onBeginActivePlayerTurn   File "FavoriteCivicDetector", line 132, in doUpdate   File "FavoriteCivicDetector", line 259, in removePossible AttributeError: 'NoneType' object has no attribute 'remove'
+- Afforess says #2290 RevDCM forum:  I've noticed that in RoM, when I bribe cities, it has the reverse effect, the Revolution index rises instead of falling.
+- Afforess says #2310 RevDCM forum: The DCM additions to CvUnitInfo in CvInfos.cpp were never made in WoC form, so modders could be slightly confused when a module has trouble editing existing units. Here's the code that needs to be added
+- Remove religious rebellion fervor drop on tech, switch to civics-based (change in both Python and SDK!)
+- Clone Revolution XML tags from CivicInfos into BuildingInfos and SpecialBuildingInfos; will give moders more control over revolutionary effects
+- Create new BUG options tab for the Revolutions.ini file, since Revolutions now loads as a BUG module; set it to only display when in debug mode
+
+For 2.8:
+- Turn all BULL imported compiling options into GDA values, toglable in the RevDCM tab
+- Move DCM Battle Effects into optional add on (no one likes this component, and it just makes things messy)
+- Clean up Super Spies code so it's not so bizzarly structured, and is easier on merging in the future
+- Add new game option "Ruthless AI" based on Afforess's mod component:  http://forums.civfanatics.com/showthread.php?t=354203
+- Create new functionality so that all BUG controled options in the RevDCM tab (or that must be for stability reasons) are syncronized to the Host's settings in MP games:  http://forums.civfanatics.com/showpost.php?p=8911324&postcount=665
+- Add no state religion inquisitions functionality (requires some major coding changes, but will allow for greater functionality for many mod mergers)
+- Add XML tag to UnitInfos, ForceObsoleteUnits (array), so that when a specified unit is trainable, the unit may no longer be trained
+- Change default Revolutions Gameoptions to negative options (No Revolutions, No Inquisitions, etc); Firaxis set up negative game options (No Espionage, No Vassals) when feature is default but the user may toggle it off
+
+The 3.0 checklist:
+- Fix multiplayer so it is entirely supported
+- Improve exposure and aesthetics of Revolutions, specifically how the information is displayed for the player:  http://forums.civfanatics.com/showthread.php?t=349842
+- Leader names changing in Scenarios
+- Add an upper era limit to custom game interface, see the JEraLimit mod
+- Add new tag to ReligionInfos that allows scaling of the number of religions in a game to map size:  http://forums.civfanatics.com/showpost.php?p=8822001&postcount=3
+- IDW changes to allow units fortified in enemy territory to slowly convert culture
+- BarbarianCiv: Sort out tech/unit/military style order
+- Hunt down python source of assert for checking TradeDenial of declaring war on ourselves
+- Limited religions report: http://forums.civfanatics.com/showpost.php?p=8598110&postcount=611
+- Keldath says page 114 #2275:  Adding in AI logic for all terrain transports would be a good idea
+- Xienwolf says #235 Woc Lite Forum: Without the bForceOverwrite tag I wrote (which I do not know if WoC, WoCLite or DCM imported from Fall Further) you cannot remove any values from the base XML.
+
+Future versions:
+- glider: merge Dom Pedro's mod helper? (Phungus says it is bugged)
+- glider: jculture mod and make it controllable on/off
+- glider: Hidden attitude mod (controllable?)
+- glider: IDW issues reported in RevDCM forum post 1838 too much for this build? There is also an IDW observation of some interest in the IDW forum itself.
+- phungus420: Multiple production mod (currently it is known to cause hangs in some of the larger mod mergers).  Component is used in the majority of RevDCM based mods, so we should fix it and merge it in.
+- Culturally linked starts
+- Modify BUG to display the dynamic civ name as an option for the scoreboard.
+
+Super Spies:
+- Think about coding the espionage "incite revolt" mission in terms of the Revolutions code. At present, the AI will not conduct it and the mission is not Revolutions aware.
+
+DCM:
+- Expand and improve the "attack support" option. Make it so that each stack get's one shot at free bombard from seige and or archers per turn. This set's up an extra tactic of deciding when is best to engage this free bombard shot, at what point in the stack battle that turn (is it always straight away?). Makes the option more dynamic and delineated in time.
+
+Revolutions:
+- Add bug autolog entries for revolutions events
+
+Wish List:
+- "Mountains" Mod to become a part of the standard DLL Link:http://forums.civfanatics.com/downlo...=file&id=11815

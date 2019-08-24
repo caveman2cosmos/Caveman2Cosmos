@@ -1,0 +1,12 @@
+iEvasion = detection evasion bonus
+iInterceptionChange = enemy spy detection bonus
+iVisibility = 50% bonus to counterespionage missions?  Also shows the +1 visibility range
+iUpgradeDiscount = 10% Free preparation bonus
+bAlwaysHeal = Never reveals nationality
+iEnemyHealChange = 50% bonus unrest from missions
+iFriendlyHealChange = 50% bonus unhealthiness from missions
+bAmphib = Creates fallout on sabotaged improvements
+iWithdrawalChange = 40% bonus escape chance
+
+
+

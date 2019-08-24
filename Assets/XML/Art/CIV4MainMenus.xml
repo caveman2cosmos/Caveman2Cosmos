@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- ReModified by StrategyOnly -->
+<!-- -->
+<!-- Main Menu Infos -->
+<Civ4MainMenus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Xml\Schema\Caveman2Cosmos.xsd">
+	<MainMenus>
+		<MainMenu>
+			<Type>MAIN_MENU_BEYOND_SWORD</Type>
+			<Description>Beyond the Sword</Description>
+			<Scene>MAINMENU_SCENE</Scene>
+			<SceneNoShader>MAINMENU_SCENE_NO_SHADER</SceneNoShader>
+			<Soundtrack>AS2D_OPENING_MENU</Soundtrack>
+			<Loading>MAINMENU_LOAD_BTS</Loading>
+			<LoadingSlideshow>MAINMENU_SLIDESHOW_LOAD_BTS</LoadingSlideshow>
+		</MainMenu>
+		<MainMenu>
+			<Type>MAIN_MENU_CLASSICAL</Type>
+			<Description>BTS Classical</Description>
+			<Scene>MAINMENU_SCENE_CLASSICAL</Scene>
+			<SceneNoShader>MAINMENU_SCENE_CLASSICAL</SceneNoShader>
+			<Soundtrack>AS2D_OPENING_MENU</Soundtrack>
+			<Loading>MAINMENU_LOAD_CLASSICAL</Loading>
+			<LoadingSlideshow>MAINMENU_SLIDESHOW_LOAD_CLASSICAL</LoadingSlideshow>
+		</MainMenu>
+		<MainMenu>
+			<Type>MAIN_MENU_VANILLA</Type>
+			<Description>Civilization IV</Description>
+			<Scene>MAINMENU_SCENE_VANILLA</Scene>
+			<SceneNoShader>MAINMENU_SCENE_VANILLA</SceneNoShader>
+			<Soundtrack>AS2D_OPENING_MENU_VANILLA</Soundtrack>
+			<Loading>MAINMENU_LOAD</Loading>
+			<LoadingSlideshow>MAINMENU_SLIDESHOW_LOAD</LoadingSlideshow>
+		</MainMenu>
+		<MainMenu>
+			<Type>MAIN_MENU_WARLORDS</Type>
+			<Description>Warlords</Description>
+			<Scene>MAINMENU_SCENE_WARLORDS</Scene>
+			<SceneNoShader>MAINMENU_SCENE_NO_SHADER</SceneNoShader>
+			<Soundtrack>AS2D_OPENING_MENU_WARLORDS</Soundtrack>
+			<Loading>MAINMENU_LOAD_WARLORDS</Loading>
+			<LoadingSlideshow>MAINMENU_SLIDESHOW_LOAD_WARLORDS</LoadingSlideshow>
+		</MainMenu>
+	</MainMenus>
+</Civ4MainMenus>

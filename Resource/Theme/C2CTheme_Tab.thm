@@ -1,0 +1,3649 @@
+/********************************************************************** 
+
+Filename	:	Civ4Theme_Tab.thm
+Content		:	Civ4 - GTab control theme
+Created		:	May 1, 2005
+Authors		:	Sven Dixon
+
+Copyright	:	(c) 2005 Scaleform Corp. All Rights Reserved.
+
+**********************************************************************/
+
+with GFC_Control_Tab
+{
+	GFC_Control_DefaultTab_Style
+	{
+		GFC_Control_Update_ChildLayout	= GFC_CtrlTheme_Bitmap_Control_Tab_Update_ChildLayout;
+		GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_Tab_Renderer_Control;
+
+		with .Renderer
+		{
+			.Item	= GFC_CtrlTheme_Bitmap_Control_Tab_Renderer_Item;
+			.Text	= GFC_CtrlTheme_Bitmap_Control_Tab_Renderer_Text;
+			.Image	= GFC_CtrlTheme_Bitmap_Control_Tab_Renderer_Image;
+		}
+		with .Child
+		{
+			.UpButton		= GFC_CtrlTheme_Bitmap_Control_Tab_Child_UpButton;
+			.DownButton		= GFC_CtrlTheme_Bitmap_Control_Tab_Child_DownButton;
+			.LeftButton		= GFC_CtrlTheme_Bitmap_Control_Tab_Child_LeftButton;
+			.RightButton	= GFC_CtrlTheme_Bitmap_Control_Tab_Child_RightButton;
+		}
+		with GFC_Control_Flag
+		{
+			.Transparent			= GFlags(GCtrl, GFC_CF_TRANSPARENT);
+			.HitTest				= GFlags(GCtrl, GFC_CF_HITTEST);
+			.SolidInner				= 0;	//GFlags(GCtrl, GFC_CF_SOLIDINNER);
+			.SolidBackground		= 0;	//GFlags(GCtrl, GFC_CF_SOLIDBACKGROUND);
+			.RegionClip				= 0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP);
+			.RegionClipParent		= 0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+			.NoExternalWindow		= 0;	//GFlags(GCtrl, GFC_CF_NOEXTERNALWINDOW);
+			.TopLayer				= 0;	//GFlags(GCtrl, GFC_CF_TOPLAYER);
+			.TopLayerBitmap			= 0;	//GFlags(GCtrl, GFC_CF_TOPLAYERBITMAP);
+			.BottomLayerBitmap		= 0;	//GFlags(GCtrl, GFC_CF_BOTTOMLAYERBITMAP);
+			.Mask_InvalidateControl	= GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		}
+		with .Flag
+		{
+			.Align				= GFlags(GTabCtrl, GFC_CF_TAB_ALIGN_BEGIN);
+			.SingleLine			= GFlags(GTabCtrl, GFC_CF_TAB_SINGLELINE);
+			.SwitchLevels		= GFlags(GTabCtrl); // GFC_CF_TAB_SWITCHLEVELS
+			.Levels				= GFlags(GTabCtrl, GFC_CF_TAB_LEVELS_AVGAUTOWRAP);
+			.AutoStretch		= GFlags(GTabCtrl, GFC_CF_TAB_AUTOSTRETCH_ALL);
+			.Arrow				= GFlags(GTabCtrl, GFC_CF_TAB_ARROW_END);
+			.NoArrowHide		= GFlags(GTabCtrl); //, GFC_CF_TAB_NOARROWHIDE);
+			.Wrap				= GFlags(GTabCtrl, GFC_CF_TAB_WRAP_TAIL);
+			.SingleLineStretch	= GFlags(GTabCtrl); // GFC_CF_TAB_SINGLELINE_STRETCH);
+			.Focus				= 0;	//GFlags(GTabCtrl, GFC_CF_TAB_FOCUS_ITEM); // Draw focus around the entire item
+			.Item_VAlign		= GFlags(GTabCtrl, GFC_CF_TAB_ITEM_VCENTER);
+			.Item_HAlign		= GFlags(GTabCtrl, GFC_CF_TAB_ITEM_HCENTER);
+			.Item_VTextAlign	= GFlags(GTabCtrl, GFC_CF_TAB_ITEM_TEXT_VCENTER);
+			.Item_HTextAlign	= GFlags(GTabCtrl, GFC_CF_TAB_ITEM_TEXT_RIGHT);
+		}
+		with .Size
+		{
+			.ItemContentSpace = GFC_Control_Size_ItemSpace; // Space between text and image in a tab
+
+			with .Top
+			{ // Tab-orientation dependent sizes
+				.FlatMin			= GSize(10, 10);
+				.DiagonalMin		= GSize(10, 10);
+				.Baseline			= 8;
+				.BaselineExtent		= 1;
+				.FrameMargin		= GRectMargin(8,8,8,8);
+				.FrameExtent		= GRectMargin(0,1,0,0);
+				.FocusMargin		= GRectMargin(2,4,2,4);
+				with .Begin
+				{
+					.Indent			= 0;
+					.IndentInc		= 0;
+					with .Arrow
+					{
+						.Indent	= 30;
+						.EdgeSpace		= 0;
+						.SiblingSpace	= 0;
+						.LiftSpace		= 0;
+						.Prev			= GSize(12,25);
+						.Next			= GSize(12,25);
+						.Order			= GFlags(GTabCtrlArrowButton, GFC_TAB_ARROW_ORDER_HNORMAL);
+					}
+				}
+				with .End
+				{
+					.Indent			= 0;
+					.IndentInc		= 0;
+					with .Arrow
+					{
+						.Indent			= 30;
+						.EdgeSpace		= 0;
+						.SiblingSpace	= 0;
+						.LiftSpace		= 0;
+						.Prev			= GSize(12,25);
+						.Next			= GSize(12,25);
+						.Order			= GFlags(GTabCtrlArrowButton, GFC_TAB_ARROW_ORDER_HNORMAL);
+					}
+				}
+			}
+			with .Left
+			{
+				.FlatMin		= GSize(10, 10);
+				.DiagonalMin	= GSize(10, 10);
+				.Baseline		= 8;
+				.BaselineExtent	= 1;
+				.FrameMargin	= GRectMargin(8,8,8,8);
+				.FrameExtent	= GRectMargin(1,0,0,0);
+				.FocusMargin	= GRectMargin(4,2,4,2);
+				with .Begin
+				{
+					.Indent		= 0;
+					.IndentInc	= 0;
+					with .Arrow
+					{
+						.Indent			= 30;
+						.EdgeSpace		= 0;
+						.SiblingSpace	= 0;
+						.LiftSpace		= 0;
+						.Prev			= GSize(25,12);
+						.Next			= GSize(25,12);
+						.Order			= GFlags(GTabCtrlArrowButton, GFC_TAB_ARROW_ORDER_VNORMAL);
+					}
+				}
+				with .End
+				{
+					.Indent		= 0;
+					.IndentInc	= 0;
+					with .Arrow
+					{
+						.Indent			= 30;
+						.EdgeSpace		= 0;
+						.SiblingSpace	= 0;
+						.LiftSpace		= 0;
+						.Prev			= GSize(25,12);
+						.Next			= GSize(25,12);
+						.Order			= GFlags(GTabCtrlArrowButton, GFC_TAB_ARROW_ORDER_VNORMAL);
+					}
+				}
+			}
+			with .Bottom
+			{
+				.FlatMin				= GSize(10, 10);
+				.DiagonalMin			= GSize(10, 10);
+				.Begin_Indent			= 0;
+				.Begin_IndentInc		= 0;
+				.Begin_Arrow_Indent		= 30;
+				.End_Indent				= 0;
+				.End_IndentInc			= 0;
+				.End_Arrow_Indent		= 30;
+				.Baseline				= 8;
+				.BaselineExtent			= 1;
+				.FrameMargin			= GRectMargin(8,8,8,8);
+				.FrameExtent			= GRectMargin(0,0,0,1);
+				.FocusMargin			= GRectMargin(2,4,2,4);
+				.Begin_Arrow_EdgeSpace			= 0;
+				.Begin_Arrow_SiblingSpace		= 0;
+				.Begin_Arrow_LiftSpace			= 0;
+				.Begin_Arrow_Prev				= GSize(12,25);
+				.Begin_Arrow_Next				= GSize(12,25);
+				.Begin_Arrow_Order				= GFlags(GTabCtrlArrowButton, GFC_TAB_ARROW_ORDER_HNORMAL);
+				.End_Arrow_EdgeSpace			= 0;
+				.End_Arrow_SiblingSpace			= 0;
+				.End_Arrow_LiftSpace			= 0;
+				.End_Arrow_Prev					= GSize(12,25);
+				.End_Arrow_Next					= GSize(12,25);
+				.End_Arrow_Order				= GFlags(GTabCtrlArrowButton, GFC_TAB_ARROW_ORDER_HNORMAL);
+			}
+			with .Right
+			{
+				.FlatMin				= GSize(10, 10);
+				.DiagonalMin			= GSize(10, 10);
+				.Begin_Indent			= 0;
+				.Begin_IndentInc		= 0;
+				.Begin_Arrow_Indent		= 30;
+				.End_Indent				= 0;
+				.End_IndentInc			= 0;
+				.End_Arrow_Indent		= 30;
+				.Baseline				= 8;
+				.BaselineExtent			= 1;
+				.FrameMargin			= GRectMargin(8,8,8,8);
+				.FrameExtent			= GRectMargin(0,0,1,0);
+				.FocusMargin			= GRectMargin(4,2,4,2);
+				.Begin_Arrow_EdgeSpace			= 0;
+				.Begin_Arrow_SiblingSpace		= 0;
+				.Begin_Arrow_LiftSpace			= 0;
+				.Begin_Arrow_Prev				= GSize(25,12);
+				.Begin_Arrow_Next				= GSize(25,12);
+				.Begin_Arrow_Order				= GFlags(GTabCtrlArrowButton, GFC_TAB_ARROW_ORDER_VNORMAL);
+				.End_Arrow_EdgeSpace			= 0;
+				.End_Arrow_SiblingSpace			= 0;
+				.End_Arrow_LiftSpace			= 0;
+				.End_Arrow_Prev					= GSize(25,12);
+				.End_Arrow_Next					= GSize(25,12);
+				.End_Arrow_Order				= GFlags(GTabCtrlArrowButton, GFC_TAB_ARROW_ORDER_VNORMAL);
+			}
+		}
+		with .Color
+		{
+			.Inner			= GFC_Control_Color_Inner_Default;
+			.Highlight		= GColor(Yellow);
+			.Image_Default	= GFC_Control_Color_Image_Default;
+			.Image_Disable	= GFC_Control_Color_Image_Disable;
+
+			with .Text
+			{
+				.Default		= SF_CtrlTheme_Civ4_Control_Color_AltText;
+				.Rollover		= .Default;
+				.Select			= .Default;
+				.SelectRollover	= .Default;
+				.Disable		= SF_CtrlTheme_Civ4_Control_Color_AltTextDisable;
+				.DisableSelect	= .Disable;
+
+				.Winoff					= .Default;
+				.WinoffRollover			= .Default;
+				.WinoffSelect			= .Default;
+				.WinoffSelectRollover	= .Default;
+				.WinoffDisable			= .Disable;
+				.WinoffDisableSelect	= .Disable;
+			}
+			with .TextShadow
+			{
+				.Default		= SF_CtrlTheme_Civ4_Control_Color_AltTextShadow;
+				.Rollover		= .Default;
+				.Select			= .Default;
+				.SelectRollover	= .Default;
+				.Disable		= SF_CtrlTheme_Civ4_Control_Color_AltTextShadowDisable;
+				.DisableSelect	= .Disable;
+
+				.Winoff					= .Default;
+				.WinoffRollover			= .Default;
+				.WinoffSelect			= .Default;
+				.WinoffSelectRollover	= .Default;
+				.WinoffDisable			= .Disable;
+				.WinoffDisableSelect	= .Disable;
+			}
+		}
+		with .Combine
+		{
+			.Inner_Dest							= GFC_Control_Combine_Inner_Default;
+			.Inner_Factor						= GColorCombine(Source, Source);
+
+			.Highlight_Dest						= GFC_Control_Combine_Inner_Default;
+			.Highlight_Factor					= GColorCombine(Source, Source);
+
+			.Image_Default_Dest					= GFC_Control_Combine_Image_Default_Dest;
+			.Image_Default_Factor				= GFC_Control_Combine_Image_Default_Factor;
+			.Image_Disable_Dest					= GFC_Control_Combine_Image_Disable_Dest;
+			.Image_Disable_Factor				= GFC_Control_Combine_Image_Disable_Factor;
+
+			with .Text
+			{
+				.Default_Dest			= GFC_Control_Combine_Text_Default_Dest;
+				.Default_Factor			= GFC_Control_Combine_Text_Default_Factor;
+				.Rollover_Dest			= .Default_Dest;
+				.Rollover_Factor		= .Default_Factor;
+				.Select_Dest			= .Default_Dest;
+				.Select_Factor			= .Default_Factor;
+				.SelectRollover_Dest	= .Default_Dest;
+				.SelectRollover_Factor	= .Default_Factor;
+				.Disable_Dest			= GFC_Control_Combine_Text_Disable_Dest;
+				.Disable_Factor			= GFC_Control_Combine_Text_Disable_Factor;
+				.DisableSelect_Dest		= .Disable_Dest;
+				.DisableSelect_Factor	= .Disable_Factor;
+
+				.Winoff_Dest					= .Default_Dest;
+				.Winoff_Factor					= .Default_Factor;
+				.WinoffRollover_Dest			= .Default_Dest;
+				.WinoffRollover_Factor			= .Default_Factor;
+				.WinoffSelect_Dest				= .Default_Dest;
+				.WinoffSelect_Factor			= .Default_Factor;
+				.WinoffSelectRollover_Dest		= .Default_Dest;
+				.WinoffSelectRollover_Factor	= .Default_Factor;
+				.WinoffDisable_Dest				= .Disable_Dest;
+				.WinoffDisable_Factor			= .Disable_Factor;
+				.WinoffDisableSelect_Dest		= .Disable_Dest;
+				.WinoffDisableSelect_Factor		= .Disable_Factor;
+			}
+			with .TextShadow
+			{
+				.Default_Dest			= GFC_Control_Combine_TextShadow_Default_Dest;
+				.Default_Factor			= GFC_Control_Combine_TextShadow_Default_Factor;
+				.Rollover_Dest			= .Default_Dest;
+				.Rollover_Factor		= .Default_Factor;
+				.Select_Dest			= .Default_Dest;
+				.Select_Factor			= .Default_Factor;
+				.SelectRollover_Dest	= .Default_Dest;
+				.SelectRollover_Factor	= .Default_Factor;
+				.Disable_Dest			= GFC_Control_Combine_TextShadow_Disable_Dest;
+				.Disable_Factor			= GFC_Control_Combine_TextShadow_Disable_Factor;
+				.DisableSelect_Dest		= .Disable_Dest;
+				.DisableSelect_Factor	= .Disable_Factor;
+
+				.Winoff_Dest					= .Default_Dest;
+				.Winoff_Factor					= .Default_Factor;
+				.WinoffRollover_Dest			= .Default_Dest;
+				.WinoffRollover_Factor			= .Default_Factor;
+				.WinoffSelect_Dest				= .Default_Dest;
+				.WinoffSelect_Factor			= .Default_Factor;
+				.WinoffSelectRollover_Dest		= .Default_Dest;
+				.WinoffSelectRollover_Factor	= .Default_Factor;
+				.WinoffDisable_Dest				= .Disable_Dest;
+				.WinoffDisable_Factor			= .Disable_Factor;
+				.WinoffDisableSelect_Dest		= .Disable_Dest;
+				.WinoffDisableSelect_Factor		= .Disable_Factor;
+			}
+		}
+		.Font_Default			= SF_CtrlTheme_Civ4_Control_Font_Size2_Normal;
+		.Font_Select			= .Font_Default;
+
+		map GFC_Control			= GFC_Control_DefaultControl_Style;
+	}
+// end Default style
+
+
+// *** Button styles used by tab
+
+with GFC_Control_Button
+{
+	style SF_CtrlTheme_Civ4_Control_Tab_Arrow_LeftButton_Style
+	{
+		GFC_Control_Renderer_Control = GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+
+		.Size_Default		= GSize(14,14);
+		.Size_BorderMargin	= GRectMargin(3,3,3,3);
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/tab_arrows.tga", HVGrid, 4, 4, 0, 0);
+					Margin		= GRectMargin(0,0,0,0);
+				}
+			}
+			.Rollover
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/tab_arrows.tga", HVGrid, 4, 4, 0, 2);
+					Margin		= GRectMargin(0,0,0,0);
+				}
+			}
+			.Press
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/tab_arrows.tga", HVGrid, 4, 4, 0, 1);
+					Margin		= GRectMargin(0,0,0,0);
+					Indent		= GRectMargin(0,0,2,0);
+				}
+			}
+			.Disable
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/tab_arrows.tga", HVGrid, 4, 4, 0, 3);
+					Margin		= GRectMargin(0,0,0,0);
+				}
+			}
+			.Focus				= .Rollover;
+			.FocusRollover		= .Rollover;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+		map GFC_Control							= GFC_Control_DefaultButton_Style;
+	}
+
+	style SF_CtrlTheme_Civ4_Control_Tab_Arrow_RightButton_Style
+	{
+		GFC_Control_Renderer_Control = GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+
+		.Size_Default		= GSize(14,14);
+		.Size_BorderMargin	= GRectMargin(3,3,3,3);
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/tab_arrows.tga", HVGrid, 4, 4, 1, 0);
+					Margin		= GRectMargin(0,0,0,0);
+				}
+			}
+			.Rollover
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/tab_arrows.tga", HVGrid, 4, 4, 1, 2);
+					Margin		= GRectMargin(0,0,0,0);
+				}
+			}
+			.Press
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/tab_arrows.tga", HVGrid, 4, 4, 1, 1);
+					Margin		= GRectMargin(0,0,0,0);
+					Indent		= GRectMargin(2,0,0,0);
+				}
+			}
+			.Disable
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/tab_arrows.tga", HVGrid, 4, 4, 1, 3);
+					Margin		= GRectMargin(0,0,0,0);
+				}
+			}
+			.Focus				= .Rollover;
+			.FocusRollover		= .Rollover;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button		= GFC_Control_DefaultButton_Style;
+		map GFC_Control								= GFC_Control_DefaultButton_Style;
+	}
+
+
+	style SF_CtrlTheme_Civ4_Control_Tab_Arrow_UpButton_Style
+	{
+		GFC_Control_Renderer_Control = GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+
+		.Size_Default		= GSize(14,14);
+		.Size_BorderMargin	= GRectMargin(3,3,3,3);
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/tab_arrows.tga", HVGrid, 4, 4, 3, 0);
+					Margin		= GRectMargin(0,0,0,0);
+				}
+			}
+			.Rollover
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/tab_arrows.tga", HVGrid, 4, 4, 3, 2);
+					Margin		= GRectMargin(0,0,0,0);
+				}
+			}
+			.Press
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/tab_arrows.tga", HVGrid, 4, 4, 3, 1);
+					Margin		= GRectMargin(0,0,0,0);
+					Indent		= GRectMargin(0,0,0,2);
+				}
+			}
+			.Disable
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/tab_arrows.tga", HVGrid, 4, 4, 3, 3);
+					Margin		= GRectMargin(0,0,0,0);
+				}
+			}
+			.Focus			= .Rollover;
+			.FocusRollover	= .Rollover;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+		map GFC_Control							= GFC_Control_DefaultButton_Style;
+	}
+
+	style SF_CtrlTheme_Civ4_Control_Tab_Arrow_DownButton_Style
+	{
+		GFC_Control_Renderer_Control = GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+
+		.Size_Default		= GSize(14,14);
+		.Size_BorderMargin	= GRectMargin(3,3,3,3);
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/tab_arrows.tga", HVGrid, 4, 4, 2, 0);
+					Margin		= GRectMargin(0,0,0,0);
+				}
+			}
+			.Rollover
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/tab_arrows.tga", HVGrid, 4, 4, 2, 2);
+					Margin		= GRectMargin(0,0,0,0);
+				}
+			}
+			.Press
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/tab_arrows.tga", HVGrid, 4, 4, 2, 1);
+					Margin		= GRectMargin(0,0,0,0);
+					Indent		= GRectMargin(0,2,0,0);
+				}
+			}
+			.Disable
+			{
+				layer {
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					Image		= GBitmap("../../../../Resource/Civ4/tab_arrows.tga", HVGrid, 4, 4, 2, 3);
+					Margin		= GRectMargin(0,0,0,0);
+				}
+			}
+			.Focus			= .Rollover;
+			.FocusRollover	= .Rollover;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+		map GFC_Control							= GFC_Control_DefaultButton_Style;
+	}
+}
+
+//*******************************
+
+	GFC_Control_StandardTab_Style
+	{
+		.StyleId_LeftButton		= GPropertyId(SF_CtrlTheme_Civ4_Control_Tab_Arrow_LeftButton_Style);
+		.StyleId_RightButton	= GPropertyId(SF_CtrlTheme_Civ4_Control_Tab_Arrow_RightButton_Style);
+		.StyleId_UpButton		= GPropertyId(SF_CtrlTheme_Civ4_Control_Tab_Arrow_UpButton_Style);
+		.StyleId_DownButton		= GPropertyId(SF_CtrlTheme_Civ4_Control_Tab_Arrow_DownButton_Style);
+
+		GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Top_Begin_BaseLevel_Single
+		{
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Skin_Full
+			{
+				.Default
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg_off.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(6,3,6,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 0, 3);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 0, 4);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 0, 2);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+				}
+				.Rollover
+				{
+					layer { Inherit = .Default; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 0, 2);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+				}
+				.Press = .Default;
+				.Itemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 0, 6);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+				}
+				.Select
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(6,2,6,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 0, 0);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 0, 1);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 0, 2);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+				}
+				.SelectRollover
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 0, 2);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+				}
+				.SelectPress		= .Select;
+				.SelectItemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 0, 5);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+				}
+				.SelectFocus
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB_focus.tga", HVGrid, 6, 1, 0, 0);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,0,0,1);
+					}
+				}
+				.SelectFocusRollover
+				{
+					layer { Inherit = .SelectRollover; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB_focus.tga", HVGrid, 6, 1, 0, 0);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,0,0,1);
+					}
+				}
+				.Disable								= 	.Itemdisable;
+				.DisablePress 							= .Disable;
+				.DisableRollover 						= .Disable;
+				.DisableItemdisable 					= .Disable;
+				.DisableSelect							= .SelectItemdisable;
+				.DisableSelectPress 					= .DisableSelect;
+				.DisableSelectRollover 					= .DisableSelect;
+				.DisableSelectItemdisable 				= .DisableSelect;
+				.DisableSelectFocus
+				{
+					layer { Inherit = .SelectItemdisable; }
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB_focus.tga", HVGrid, 6, 1, 0, 0);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,0,0,1);
+					}
+				}
+				.DisableSelectFocusRollover	= .DisableSelectFocus;
+
+				.Winoff 					= .Default;
+				.WinoffPress 				= .Press;
+				.WinoffRollover 			= .Rollover;
+				.WinoffItemdisable 			= .Itemdisable;
+				.WinoffSelect 				= .Select;
+				.WinoffSelectPress 			= .SelectPress;
+				.WinoffSelectRollover 		= .SelectRollover;
+				.WinoffSelectItemdisable	= .SelectItemdisable;
+				.WinoffSelectFocus 			= .SelectFocus;
+				.WinoffSelectFocusRollover	= .SelectFocusRollover;
+
+				.WinoffDisable 						= .Disable;
+				.WinoffDisablePress 				= .Disable;
+				.WinoffDisableRollover 				= .Disable;
+				.WinoffDisableItemdisable 			= .Disable;
+				.WinoffDisableSelect 				= .DisableSelect;
+				.WinoffDisableSelectPress 			= .DisableSelect;
+				.WinoffDisableSelectRollover 		= .DisableSelect;
+				.WinoffDisableSelectItemdisable 	= .DisableSelect;
+				.WinoffDisableSelectFocus 			= .DisableSelectFocus;
+				.WinoffDisableSelectFocusRollover	= .DisableSelectFocus;
+			}
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Skin_EndCut
+			{// Right-cut skin
+				.Default
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg_off.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(6,3,6,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 1, 3);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 1, 4);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}	
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 1, 2);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+				}
+				.Rollover
+				{
+					layer { Inherit = .Default; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 1, 2);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+				}
+				.Press				= .Default;
+				.Itemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 1, 6);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+				}
+				.Select
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(6,2,6,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 1, 0);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 1, 1);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}		
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 1, 2);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+				}
+				.SelectRollover
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 1, 2);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+				}
+				.SelectPress		= .Select;
+				.SelectItemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 1, 5);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+				}
+				.SelectFocus
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB_focus.tga", HVGrid, 6, 1, 1, 0);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,0,0,1);
+					}
+				}
+				.SelectFocusRollover
+				{
+					layer { Inherit = .SelectRollover; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB_focus.tga", HVGrid, 6, 1, 1, 0);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,0,0,1);
+					}
+				}
+				.Disable								= 	.Itemdisable;
+				.DisablePress 							= .Disable;
+				.DisableRollover 						= .Disable;
+				.DisableItemdisable 					= .Disable;
+				.DisableSelect							= .SelectItemdisable;
+				.DisableSelectPress 					= .DisableSelect;
+				.DisableSelectRollover 					= .DisableSelect;
+				.DisableSelectItemdisable 				= .DisableSelect;
+				.DisableSelectFocus
+				{
+					layer { Inherit = .SelectItemdisable; }
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB_focus.tga", HVGrid, 6, 1, 1, 0);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,0,0,1);
+					}
+				}
+				.DisableSelectFocusRollover	= .DisableSelectFocus;
+
+				.Winoff 					= .Default;
+				.WinoffPress 				= .Press;
+				.WinoffRollover 			= .Rollover;
+				.WinoffItemdisable 			= .Itemdisable;
+				.WinoffSelect 				= .Select;
+				.WinoffSelectPress 			= .SelectPress;
+				.WinoffSelectRollover 		= .SelectRollover;
+				.WinoffSelectItemdisable 	= .SelectItemdisable;
+				.WinoffSelectFocus 			= .SelectFocus;
+				.WinoffSelectFocusRollover	= .SelectFocusRollover;
+
+				.WinoffDisable						= .Disable;
+				.WinoffDisablePress					= .Disable;
+				.WinoffDisableRollover				= .Disable;
+				.WinoffDisableItemdisable			= .Disable;
+				.WinoffDisableSelect				= .DisableSelect;
+				.WinoffDisableSelectPress			= .DisableSelect;
+				.WinoffDisableSelectRollover		= .DisableSelect;
+				.WinoffDisableSelectItemdisable		= .DisableSelect;
+				.WinoffDisableSelectFocus			= .DisableSelectFocus;
+				.WinoffDisableSelectFocusRollover	= .DisableSelectFocus;
+			}
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Skin_BeginCut
+			{// Left-cut skin
+				.Default
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg_off.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(6,3,6,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 2, 3);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 2, 4);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 2, 2);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+				}
+				.Rollover
+				{
+					layer { Inherit = .Default; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 2, 2);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+				}
+				.Press				= .Default;
+				.Itemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 2, 6);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+				}
+				.Select
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(6,2,6,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 2, 0);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 2, 1);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}		
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 2, 2);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+				}
+				.SelectRollover
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 2, 2);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+				}
+				.SelectPress		= .Select;
+				.SelectItemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 2, 5);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,2,0,0);
+					}
+				}
+				.SelectFocus
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB_focus.tga", HVGrid, 6, 1, 2, 0);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,0,0,1);
+					}
+				}
+				.SelectFocusRollover
+				{
+					layer { Inherit = .SelectRollover; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB_focus.tga", HVGrid, 6, 1, 2, 0);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,0,0,1);
+					}
+				}
+				.Disable								= 	.Itemdisable;
+				.DisablePress 							= .Disable;
+				.DisableRollover 						= .Disable;
+				.DisableItemdisable 					= .Disable;
+				.DisableSelect							= .SelectItemdisable;
+				.DisableSelectPress 					= .DisableSelect;
+				.DisableSelectRollover 					= .DisableSelect;
+				.DisableSelectItemdisable 				= .DisableSelect;
+				.DisableSelectFocus
+				{
+					layer { Inherit = .SelectItemdisable; }
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB_focus.tga", HVGrid, 6, 1, 2, 0);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,0,0,1);
+					}
+				}
+				.DisableSelectFocusRollover 			= .DisableSelectFocus;
+
+				.Winoff 								= .Default;
+				.WinoffPress 							= .Press;
+				.WinoffRollover 						= .Rollover;
+				.WinoffItemdisable 						= .Itemdisable;
+				.WinoffSelect 							= .Select;
+				.WinoffSelectPress 						= .SelectPress;
+				.WinoffSelectRollover 					= .SelectRollover;
+				.WinoffSelectItemdisable 				= .SelectItemdisable;
+				.WinoffSelectFocus 						= .SelectFocus;
+				.WinoffSelectFocusRollover 				= .SelectFocusRollover;
+
+				.WinoffDisable 							= .Disable;
+				.WinoffDisablePress 					= .Disable;
+				.WinoffDisableRollover 					= .Disable;
+				.WinoffDisableItemdisable 				= .Disable;
+				.WinoffDisableSelect 					= .DisableSelect;
+				.WinoffDisableSelectPress 				= .DisableSelect;
+				.WinoffDisableSelectRollover 			= .DisableSelect;
+				.WinoffDisableSelectItemdisable 		= .DisableSelect;
+				.WinoffDisableSelectFocus 				= .DisableSelectFocus;
+				.WinoffDisableSelectFocusRollover 		= .DisableSelectFocus;
+			}
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Skin_Frame
+			{
+				.Default
+				{
+					layer {
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE);
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Source);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_BG;
+						Image			= GBitmap("../../../../Resource/Civ4/table_innerTB.tga", HVGrid, 1, 2, 0, 0);
+						Margin			= GRectMargin(0,32,0,0);
+						Indent			= GRectMargin(0,3,0,8);
+					}
+					layer {
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						Image		= GBitmap("../../../../Resource/Civ4/tab_panel.tga", HVGrid, 2, 4, 0, 0);
+						Margin		= GRectMargin(8,8,8,8);
+					}
+				}
+				.Disable
+				{
+					layer {
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE);
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Source);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_BG;
+						Image			= GBitmap("../../../../Resource/Civ4/table_innerTB.tga", HVGrid, 1, 2, 0, 0);
+						Margin			= GRectMargin(0,32,0,0);
+						Indent			= GRectMargin(0,3,0,8);
+					}
+					layer {
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						Image		= GBitmap("../../../../Resource/Civ4/tab_panel.tga", HVGrid, 2, 4, 0, 2);
+						Margin		= GRectMargin(8,8,8,8);
+					}
+				}
+				.Winoff			= .Default;
+				.WinoffDisable	= .Disable;
+			}
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Skin_Baseline
+			{// Baseline skin - a hack in XP
+				.Default
+				{
+					layer {
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						Image		= GBitmap("../../../../Resource/Civ4/tab_baseline_h.tga", HVGrid, 1, 4, 0, 0);
+						Margin		= GRectMargin(1,5,1,0);
+					}
+				}
+				.Disable
+				{
+					layer {
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						Image		= GBitmap("../../../../Resource/Civ4/tab_baseline_h.tga", HVGrid, 1, 4, 0, 2);
+						Margin		= GRectMargin(1,5,1,0);
+					}
+				}
+				.Winoff			= .Default;
+				.WinoffDisable	= .Disable;
+			}
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Size
+			{
+				.SkinSizeExtent_Default	= GRectMargin(10,5,10,4);	//L,T,R,B
+				.SkinSizeExtent_Select	= GRectMargin(10,5,10,4);
+
+				.SkinExtent_Default		= GRectMargin(2,1,1,-1);
+				.SkinExtent_Select		= GRectMargin(2,0,1,0);
+
+				// Minimum value that can be cut-off
+				.SkinMinCutOffAmount_Default	= 0;
+				.SkinMinCutOffAmount_Select		= 0;
+				// Minimum size the cut-off value should be
+				.SkinMinCutSize_Default			= 12;
+				.SkinMinCutSize_Select			= 12;
+
+				.BeginCut_ClipMargin_Default	= GRectMargin(6,0,0,0); // Left Cut
+				.EndCut_ClipMargin_Default		= GRectMargin(0,0,6,0);	// Right Cut
+				.EndCut_ClipMargin_Select		= GRectMargin(0,0,6,0);	//L,T,R,B
+			}
+		}
+		GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Top_Begin_MidLevel_Single
+		{
+			map GFC_CtrlTheme_Bitmap_Control_Tab	= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Top_Begin_BaseLevel_Single;
+			map GFC_Control							= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Top_Begin_BaseLevel_Single;
+		}
+		// Top Left - edge single
+		GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Top_Begin_BaseLevel_SingleBeginEdge
+		{
+			map GFC_CtrlTheme_Bitmap_Control_Tab	= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Top_Begin_BaseLevel_Single;
+			map GFC_Control							= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Top_Begin_BaseLevel_Single;
+		}
+		// Top Right - edge single
+		GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Top_Begin_BaseLevel_SingleEndEdge
+		{
+			map GFC_CtrlTheme_Bitmap_Control_Tab	= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Top_Begin_BaseLevel_Single;
+			map GFC_Control							= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Top_Begin_BaseLevel_Single;
+		}
+		// Top Both Edges
+		GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Top_Begin_BaseLevel_SingleTwoEdge
+		{
+			map GFC_CtrlTheme_Bitmap_Control_Tab	= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Top_Begin_BaseLevel_Single;
+			map GFC_Control							= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Top_Begin_BaseLevel_Single;
+		}
+
+		// Map the rest of the tab styles to this one for now
+		// there is no special look for different alignments or levels
+
+		with GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Top
+		{
+			.Begin_BaseLevel_First				= .Begin_BaseLevel_Single;
+			.Begin_BaseLevel_Middle				= .Begin_BaseLevel_Single;
+			.Begin_BaseLevel_Last				= .Begin_BaseLevel_Single;
+			.Begin_TopLevel_Single				= .Begin_MidLevel_Single;
+			.Begin_TopLevel_First				= .Begin_MidLevel_Single;
+			.Begin_TopLevel_Middle				= .Begin_MidLevel_Single;
+			.Begin_TopLevel_Last				= .Begin_MidLevel_Single;
+			.Begin_MidLevel_First				= .Begin_MidLevel_Single;
+			.Begin_MidLevel_Middle				= .Begin_MidLevel_Single;
+			.Begin_MidLevel_Last				= .Begin_MidLevel_Single;
+
+			.Begin_BaseLevel_FirstBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.Begin_BaseLevel_FirstEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Begin_BaseLevel_FirstTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.Begin_BaseLevel_MiddleBeginEdge	= .Begin_BaseLevel_SingleBeginEdge;
+			.Begin_BaseLevel_MiddleEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Begin_BaseLevel_MiddleTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.Begin_BaseLevel_LastBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.Begin_BaseLevel_LastEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Begin_BaseLevel_LastTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+
+			.Center_BaseLevel_Single			= .Begin_BaseLevel_Single;
+			.Center_BaseLevel_First				= .Begin_BaseLevel_Single;
+			.Center_BaseLevel_Middle			= .Begin_BaseLevel_Single;
+			.Center_BaseLevel_Last				= .Begin_BaseLevel_Single;
+			.Center_TopLevel_Single				= .Begin_MidLevel_Single;
+			.Center_TopLevel_First				= .Begin_MidLevel_Single;
+			.Center_TopLevel_Middle				= .Begin_MidLevel_Single;
+			.Center_TopLevel_Last				= .Begin_MidLevel_Single;
+			.Center_MidLevel_Single				= .Begin_MidLevel_Single;
+			.Center_MidLevel_First				= .Begin_MidLevel_Single;
+			.Center_MidLevel_Middle				= .Begin_MidLevel_Single;
+			.Center_MidLevel_Last				= .Begin_MidLevel_Single;
+			.Center_BaseLevel_SingleBeginEdge	= .Begin_BaseLevel_SingleBeginEdge;
+			.Center_BaseLevel_SingleEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Center_BaseLevel_SingleTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.Center_BaseLevel_FirstBeginEdge	= .Begin_BaseLevel_SingleBeginEdge;
+			.Center_BaseLevel_FirstEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Center_BaseLevel_FirstTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.Center_BaseLevel_MiddleBeginEdge	= .Begin_BaseLevel_SingleBeginEdge;
+			.Center_BaseLevel_MiddleEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Center_BaseLevel_MiddleTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.Center_BaseLevel_LastBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.Center_BaseLevel_LastEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Center_BaseLevel_LastTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+
+			.End_BaseLevel_Single				= .Begin_BaseLevel_Single;
+			.End_BaseLevel_First				= .Begin_BaseLevel_Single;
+			.End_BaseLevel_Middle				= .Begin_BaseLevel_Single;
+			.End_BaseLevel_Last					= .Begin_BaseLevel_Single;
+			.End_TopLevel_Single				= .Begin_MidLevel_Single;
+			.End_TopLevel_First					= .Begin_MidLevel_Single;
+			.End_TopLevel_Middle				= .Begin_MidLevel_Single;
+			.End_TopLevel_Last					= .Begin_MidLevel_Single;
+			.End_MidLevel_Single				= .Begin_MidLevel_Single;
+			.End_MidLevel_First					= .Begin_MidLevel_Single;
+			.End_MidLevel_Middle				= .Begin_MidLevel_Single;
+			.End_MidLevel_Last					= .Begin_MidLevel_Single;
+			.End_BaseLevel_SingleBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.End_BaseLevel_SingleEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.End_BaseLevel_SingleTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.End_BaseLevel_FirstBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.End_BaseLevel_FirstEndEdge			= .Begin_BaseLevel_SingleEndEdge;
+			.End_BaseLevel_FirstTwoEdge			= .Begin_BaseLevel_SingleTwoEdge;
+			.End_BaseLevel_MiddleBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.End_BaseLevel_MiddleEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.End_BaseLevel_MiddleTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.End_BaseLevel_LastBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.End_BaseLevel_LastEndEdge			= .Begin_BaseLevel_SingleEndEdge;
+			.End_BaseLevel_LastTwoEdge			= .Begin_BaseLevel_SingleTwoEdge;
+		}
+
+		// ***** Left Tab Styles
+		GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Left_Begin_BaseLevel_Single
+		{
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Skin_Full
+			{
+				.Default
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg_off.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(7,2,0,2);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 0, 3);
+						Margin			= GRectMargin(5,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 0, 4);
+						Margin			= GRectMargin(5,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 0, 2);
+						Margin			= GRectMargin(5,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+				}
+				.Rollover
+				{
+					layer { Inherit = .Default; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 0, 2);
+						Margin			= GRectMargin(5,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+				}
+				.Press				= .Default;
+				.Itemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 0, 6);
+						Margin			= GRectMargin(5,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+				}
+				.Select
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(6,2,0,2);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 0, 0);
+						Margin			= GRectMargin(4,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 0, 1);
+						Margin			= GRectMargin(4,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}		
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 0, 2);
+						Margin			= GRectMargin(5,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+				}
+				.SelectRollover
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 0, 2);
+						Margin			= GRectMargin(4,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+				}
+				.SelectPress		= .Select;
+				.SelectItemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 0, 5);
+						Margin			= GRectMargin(4,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+				}
+				.SelectFocus
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR_focus.tga", HVGrid, 6, 1, 0, 0);
+						Margin			= GRectMargin(6,6,0,6);
+						Indent			= GRectMargin(0,0,1,0);
+					}
+				}
+				.SelectFocusRollover
+				{
+					layer { Inherit = .SelectRollover; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR_focus.tga", HVGrid, 6, 1, 0, 0);
+						Margin			= GRectMargin(6,6,0,6);
+						Indent			= GRectMargin(0,0,1,0);
+					}
+				}
+				.Disable					= .Itemdisable;
+				.DisablePress				= .Disable;
+				.DisableRollover			= .Disable;
+				.DisableItemdisable			= .Disable;
+				.DisableSelect				= .SelectItemdisable;
+				.DisableSelectPress			= .DisableSelect;
+				.DisableSelectRollover		= .DisableSelect;
+				.DisableSelectItemdisable	= .DisableSelect;
+				.DisableSelectFocus
+				{
+					layer { Inherit = .SelectItemdisable; }
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR_focus.tga", HVGrid, 6, 1, 0, 0);
+						Margin			= GRectMargin(6,6,0,6);
+						Indent			= GRectMargin(0,0,1,0);
+					}
+				}
+				.DisableSelectFocusRollover 			= .DisableSelectFocus;
+
+				.Winoff 								= .Default;
+				.WinoffPress 							= .Press;
+				.WinoffRollover 						= .Rollover;
+				.WinoffItemdisable 						= .Itemdisable;
+				.WinoffSelect 							= .Select;
+				.WinoffSelectPress 						= .SelectPress;
+				.WinoffSelectRollover 					= .SelectRollover;
+				.WinoffSelectItemdisable 				= .SelectItemdisable;
+				.WinoffSelectFocus 						= .SelectFocus;
+				.WinoffSelectFocusRollover 				= .SelectFocusRollover;
+
+				.WinoffDisable 							= .Disable;
+				.WinoffDisablePress 					= .Disable;
+				.WinoffDisableRollover 					= .Disable;
+				.WinoffDisableItemdisable 				= .Disable;
+				.WinoffDisableSelect 					= .DisableSelect;
+				.WinoffDisableSelectPress 				= .DisableSelect;
+				.WinoffDisableSelectRollover 			= .DisableSelect;
+				.WinoffDisableSelectItemdisable 		= .DisableSelect;
+				.WinoffDisableSelectFocus 				= .DisableSelectFocus;
+				.WinoffDisableSelectFocusRollover 		= .DisableSelectFocus;
+			}
+
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Skin_EndCut
+			{// Right-cut skin
+				.Default
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg_off.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(7,2,0,6);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 1, 3);
+						Margin			= GRectMargin(5,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 1, 4);
+						Margin			= GRectMargin(5,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}	
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 1, 2);
+						Margin			= GRectMargin(5,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+				}
+				.Rollover
+				{
+					layer { Inherit = .Default; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 1, 2);
+						Margin			= GRectMargin(5,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+				}
+				.Press				= .Default;
+				.Itemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 1, 6);
+						Margin			= GRectMargin(5,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+				}
+				.Select
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(6,2,0,6);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 1, 0);
+						Margin			= GRectMargin(4,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 1, 1);
+						Margin			= GRectMargin(4,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 1, 2);
+						Margin			= GRectMargin(5,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+				}
+				.SelectRollover
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 1, 2);
+						Margin			= GRectMargin(4,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+				}
+				.SelectPress		= .Select;
+				.SelectItemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 1, 5);
+						Margin			= GRectMargin(4,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+				}
+				.SelectFocus
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR_focus.tga", HVGrid, 6, 1, 1, 0);
+						Margin			= GRectMargin(6,6,0,6);
+						Indent			= GRectMargin(0,0,1,0);
+					}
+				}
+				.SelectFocusRollover
+				{
+					layer { Inherit = .SelectRollover; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR_focus.tga", HVGrid, 6, 1, 1, 0);
+						Margin			= GRectMargin(6,6,0,6);
+						Indent			= GRectMargin(0,0,1,0);
+					}
+				}
+				.Disable								= 	.Itemdisable;
+				.DisablePress 							= .Disable;
+				.DisableRollover 						= .Disable;
+				.DisableItemdisable 					= .Disable;
+				.DisableSelect							= .SelectItemdisable;
+				.DisableSelectPress 					= .DisableSelect;
+				.DisableSelectRollover 					= .DisableSelect;
+				.DisableSelectItemdisable 				= .DisableSelect;
+				.DisableSelectFocus
+				{
+					layer { Inherit = .SelectItemdisable; }
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR_focus.tga", HVGrid, 6, 1, 1, 0);
+						Margin			= GRectMargin(6,6,0,6);
+						Indent			= GRectMargin(0,0,1,0);
+					}
+				}
+				.DisableSelectFocusRollover 			= .DisableSelectFocus;
+
+				.Winoff 								= .Default;
+				.WinoffPress 							= .Press;
+				.WinoffRollover 						= .Rollover;
+				.WinoffItemdisable 						= .Itemdisable;
+				.WinoffSelect 							= .Select;
+				.WinoffSelectPress 						= .SelectPress;
+				.WinoffSelectRollover 					= .SelectRollover;
+				.WinoffSelectItemdisable 				= .SelectItemdisable;
+				.WinoffSelectFocus 						= .SelectFocus;
+				.WinoffSelectFocusRollover 				= .SelectFocusRollover;
+
+				.WinoffDisable 							= .Disable;
+				.WinoffDisablePress 					= .Disable;
+				.WinoffDisableRollover 					= .Disable;
+				.WinoffDisableItemdisable 				= .Disable;
+				.WinoffDisableSelect 					= .DisableSelect;
+				.WinoffDisableSelectPress 				= .DisableSelect;
+				.WinoffDisableSelectRollover 			= .DisableSelect;
+				.WinoffDisableSelectItemdisable 		= .DisableSelect;
+				.WinoffDisableSelectFocus 				= .DisableSelectFocus;
+				.WinoffDisableSelectFocusRollover 		= .DisableSelectFocus;
+			}
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Skin_BeginCut
+			{// Left-cut skin
+				.Default
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg_off.tga", HVGrid, 1, 2, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(7,6,0,2);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 2, 3);
+						Margin			= GRectMargin(5,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 2, 4);
+						Margin			= GRectMargin(5,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}	
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 2, 2);
+						Margin			= GRectMargin(5,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+				}
+				.Rollover
+				{
+					layer { Inherit = .Default; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 2, 2);
+						Margin			= GRectMargin(5,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+				}
+				.Press				= .Default;
+				.Itemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 2, 6);
+						Margin			= GRectMargin(5,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+				}
+				.Select
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(6,6,0,2);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 2, 0);
+						Margin			= GRectMargin(4,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 2, 1);
+						Margin			= GRectMargin(4,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}		
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 2, 2);
+						Margin			= GRectMargin(5,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+				}
+				.SelectRollover
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 2, 2);
+						Margin			= GRectMargin(4,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+				}
+				.SelectPress		= .Select;
+				.SelectItemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 2, 5);
+						Margin			= GRectMargin(4,6,1,6);
+						Indent			= GRectMargin(2,0,0,0);
+					}
+				}
+				.SelectFocus
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR_focus.tga", HVGrid, 6, 1, 2, 0);
+						Margin			= GRectMargin(6,6,0,6);
+						Indent			= GRectMargin(0,0,1,0);
+					}
+				}
+				.SelectFocusRollover
+				{
+					layer { Inherit = .SelectRollover; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR_focus.tga", HVGrid, 6, 1, 2, 0);
+						Margin			= GRectMargin(6,6,0,6);
+						Indent			= GRectMargin(0,0,1,0);
+					}
+				}
+				.Disable								= 	.Itemdisable;
+				.DisablePress 							= .Disable;
+				.DisableRollover 						= .Disable;
+				.DisableItemdisable 					= .Disable;
+				.DisableSelect							= .SelectItemdisable;
+				.DisableSelectPress 					= .DisableSelect;
+				.DisableSelectRollover 					= .DisableSelect;
+				.DisableSelectItemdisable 				= .DisableSelect;
+				.DisableSelectFocus
+				{
+					layer { Inherit = .SelectItemdisable; }
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR_focus.tga", HVGrid, 6, 1, 2, 0);
+						Margin			= GRectMargin(6,6,0,6);
+						Indent			= GRectMargin(0,0,1,0);
+					}
+				}
+				.DisableSelectFocusRollover 			= .DisableSelectFocus;
+
+				.Winoff 								= .Default;
+				.WinoffPress 							= .Press;
+				.WinoffRollover 						= .Rollover;
+				.WinoffItemdisable 						= .Itemdisable;
+				.WinoffSelect 							= .Select;
+				.WinoffSelectPress 						= .SelectPress;
+				.WinoffSelectRollover 					= .SelectRollover;
+				.WinoffSelectItemdisable 				= .SelectItemdisable;
+				.WinoffSelectFocus 						= .SelectFocus;
+				.WinoffSelectFocusRollover 				= .SelectFocusRollover;
+
+				.WinoffDisable 							= .Disable;
+				.WinoffDisablePress 					= .Disable;
+				.WinoffDisableRollover 					= .Disable;
+				.WinoffDisableItemdisable 				= .Disable;
+				.WinoffDisableSelect 					= .DisableSelect;
+				.WinoffDisableSelectPress 				= .DisableSelect;
+				.WinoffDisableSelectRollover 			= .DisableSelect;
+				.WinoffDisableSelectItemdisable 		= .DisableSelect;
+				.WinoffDisableSelectFocus 				= .DisableSelectFocus;
+				.WinoffDisableSelectFocusRollover 		= .DisableSelectFocus;
+			}
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Skin_Frame
+			{
+				.Default
+				{
+					layer {
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE);
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Source);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_BG;
+						Image			= GBitmap("../../../../Resource/Civ4/table_innerLR.tga", HVGrid, 1, 2, 0, 0);
+						Margin			= GRectMargin(32,0,0,0);
+						Indent			= GRectMargin(3,0,8,0);
+					}
+					layer {
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						Image		= GBitmap("../../../../Resource/Civ4/tab_panel.tga", HVGrid, 2, 4, 1, 0);
+						Margin		= GRectMargin(8,8,8,8);
+					}
+				}
+				.Disable
+				{
+					layer {
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE);
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Source);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_BG;
+						Image			= GBitmap("../../../../Resource/Civ4/table_innerLR.tga", HVGrid, 1, 2, 0, 0);
+						Margin			= GRectMargin(32,0,0,0);
+						Indent			= GRectMargin(3,0,8,0);
+					}
+					layer {
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						Image		= GBitmap("../../../../Resource/Civ4/tab_panel.tga", HVGrid, 2, 4, 1, 2);
+						Margin		= GRectMargin(8,8,8,8);
+					}
+				}
+				.Winoff					= .Default;
+				.WinoffDisable			= .Disable;
+			}
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Skin_Baseline
+			{// Baseline skin - a hack in XP
+				.Default
+				{
+					layer {
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						Image		= GBitmap("../../../../Resource/Civ4/tab_baseline_v.tga", HVGrid, 1, 4, 0, 0);
+						Margin		= GRectMargin(5,1,0,1);
+					}
+				}
+				.Disable
+				{
+					layer {
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						Image		= GBitmap("../../../../Resource/Civ4/tab_baseline_v.tga", HVGrid, 1, 4, 0, 2);
+						Margin		= GRectMargin(5,1,0,1);
+					}
+				}
+				.Winoff					= .Default;
+				.WinoffDisable			= .Disable;
+			}
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Size
+			{
+				.SkinSizeExtent_Default			= GRectMargin(5,10,4,10);	//B,L,T,R
+				.SkinSizeExtent_Select			= GRectMargin(5,10,4,10);	//B,L,T,R
+
+				.SkinExtent_Default				= GRectMargin(2,1,1,-1);	//B,L,T,R
+				.SkinExtent_Select				= GRectMargin(2,0,1,0);	//B,L,T,R
+
+				// Minimum value that can be cut-off
+				.SkinMinCutOffAmount_Default	= 0;
+				.SkinMinCutOffAmount_Select		= 0;
+				// Minimum size the cut-off value should be
+				.SkinMinCutSize_Default			= 12;
+				.SkinMinCutSize_Select			= 12;
+
+				.BeginCut_ClipMargin_Default	= GRectMargin(0,6,0,0);	//L,T,R,B	(Top Cut)
+				.BeginCut_ClipMargin_Select		= GRectMargin(0,6,0,0);	//L,T,R,B
+				.EndCut_ClipMargin_Default		= GRectMargin(0,0,0,6);	//L,T,R,B	(Bottom Cut)
+				.EndCut_ClipMargin_Select		= GRectMargin(0,0,0,6);	//L,T,R,B
+			} 
+		}
+		// Left Top - edge single
+		GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Left_Begin_BaseLevel_SingleBeginEdge
+		{
+			map GFC_CtrlTheme_Bitmap_Control_Tab	= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Left_Begin_BaseLevel_Single;
+			map GFC_Control							= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Left_Begin_BaseLevel_Single;
+		}
+		// Left Bottom - edge single
+		GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Left_Begin_BaseLevel_SingleEndEdge
+		{
+			map GFC_CtrlTheme_Bitmap_Control_Tab	= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Left_Begin_BaseLevel_Single;
+			map GFC_Control							= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Left_Begin_BaseLevel_Single;
+		}
+		// Left Both Edges
+		GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Left_Begin_BaseLevel_SingleTwoEdge
+		{
+			map GFC_CtrlTheme_Bitmap_Control_Tab	= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Left_Begin_BaseLevel_Single;
+			map GFC_Control							= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Left_Begin_BaseLevel_Single;
+		}
+		with GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Left
+		{
+			.Begin_BaseLevel_First				= .Begin_BaseLevel_Single;
+			.Begin_BaseLevel_Middle				= .Begin_BaseLevel_Single;
+			.Begin_BaseLevel_Last				= .Begin_BaseLevel_Single;
+			.Begin_TopLevel_Single				= .Begin_BaseLevel_Single;
+			.Begin_TopLevel_First				= .Begin_BaseLevel_Single;
+			.Begin_TopLevel_Middle				= .Begin_BaseLevel_Single;
+			.Begin_TopLevel_Last				= .Begin_BaseLevel_Single;
+			.Begin_MidLevel_Single				= .Begin_BaseLevel_Single;
+			.Begin_MidLevel_First				= .Begin_BaseLevel_Single;
+			.Begin_MidLevel_Middle				= .Begin_BaseLevel_Single;
+			.Begin_MidLevel_Last				= .Begin_BaseLevel_Single;
+
+			.Begin_BaseLevel_FirstBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.Begin_BaseLevel_FirstEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Begin_BaseLevel_FirstTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.Begin_BaseLevel_MiddleBeginEdge	= .Begin_BaseLevel_SingleBeginEdge;
+			.Begin_BaseLevel_MiddleEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Begin_BaseLevel_MiddleTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.Begin_BaseLevel_LastBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.Begin_BaseLevel_LastEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Begin_BaseLevel_LastTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+
+			.Center_BaseLevel_Single			= .Begin_BaseLevel_Single;
+			.Center_BaseLevel_First				= .Begin_BaseLevel_Single;
+			.Center_BaseLevel_Middle			= .Begin_BaseLevel_Single;
+			.Center_BaseLevel_Last				= .Begin_BaseLevel_Single;
+			.Center_TopLevel_Single				= .Begin_BaseLevel_Single;
+			.Center_TopLevel_First				= .Begin_BaseLevel_Single;
+			.Center_TopLevel_Middle				= .Begin_BaseLevel_Single;
+			.Center_TopLevel_Last				= .Begin_BaseLevel_Single;
+			.Center_MidLevel_Single				= .Begin_BaseLevel_Single;
+			.Center_MidLevel_First				= .Begin_BaseLevel_Single;
+			.Center_MidLevel_Middle				= .Begin_BaseLevel_Single;
+			.Center_MidLevel_Last				= .Begin_BaseLevel_Single;
+			.Center_BaseLevel_SingleBeginEdge	= .Begin_BaseLevel_SingleBeginEdge;
+			.Center_BaseLevel_SingleEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Center_BaseLevel_SingleTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.Center_BaseLevel_FirstBeginEdge	= .Begin_BaseLevel_SingleBeginEdge;
+			.Center_BaseLevel_FirstEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Center_BaseLevel_FirstTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.Center_BaseLevel_MiddleBeginEdge	= .Begin_BaseLevel_SingleBeginEdge;
+			.Center_BaseLevel_MiddleEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Center_BaseLevel_MiddleTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.Center_BaseLevel_LastBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.Center_BaseLevel_LastEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Center_BaseLevel_LastTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+
+			.End_BaseLevel_Single				= .Begin_BaseLevel_Single;
+			.End_BaseLevel_First				= .Begin_BaseLevel_Single;
+			.End_BaseLevel_Middle				= .Begin_BaseLevel_Single;
+			.End_BaseLevel_Last					= .Begin_BaseLevel_Single;
+			.End_TopLevel_Single				= .Begin_BaseLevel_Single;
+			.End_TopLevel_First					= .Begin_BaseLevel_Single;
+			.End_TopLevel_Middle				= .Begin_BaseLevel_Single;
+			.End_TopLevel_Last					= .Begin_BaseLevel_Single;
+			.End_MidLevel_Single				= .Begin_BaseLevel_Single;
+			.End_MidLevel_First					= .Begin_BaseLevel_Single;
+			.End_MidLevel_Middle				= .Begin_BaseLevel_Single;
+			.End_MidLevel_Last					= .Begin_BaseLevel_Single;
+			.End_BaseLevel_SingleBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.End_BaseLevel_SingleEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.End_BaseLevel_SingleTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.End_BaseLevel_FirstBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.End_BaseLevel_FirstEndEdge			= .Begin_BaseLevel_SingleEndEdge;
+			.End_BaseLevel_FirstTwoEdge			= .Begin_BaseLevel_SingleTwoEdge;
+			.End_BaseLevel_MiddleBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.End_BaseLevel_MiddleEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.End_BaseLevel_MiddleTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.End_BaseLevel_LastBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.End_BaseLevel_LastEndEdge			= .Begin_BaseLevel_SingleEndEdge;
+			.End_BaseLevel_LastTwoEdge			= .Begin_BaseLevel_SingleTwoEdge;
+		}
+
+		// ***** Bottom Tab Styles
+		GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Bottom_Begin_BaseLevel_Single
+		{
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Skin_Full
+			{
+				.Default
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg_off.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(6,0,6,3);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 3, 3);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 3, 4);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 3, 2);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+				}
+				.Rollover
+				{
+					layer { Inherit = .Default; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 3, 2);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+				}
+				.Press				= .Default;
+				.Itemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 3, 6);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+				}
+				.Select
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(6,0,6,2);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 3, 0);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 3, 1);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 3, 2);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+				}
+				.SelectRollover
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 3, 2);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+				}
+				.SelectPress		= .Select;
+				.SelectItemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 3, 5);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+				}
+				.SelectFocus
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB_focus.tga", HVGrid, 6, 1, 3, 0);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,1,0,0);
+					}
+				}
+				.SelectFocusRollover
+				{
+					layer { Inherit = .SelectRollover; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB_focus.tga", HVGrid, 6, 1, 3, 0);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,1,0,0);
+					}
+				}
+				.Disable								= 	.Itemdisable;
+				.DisablePress 							= .Disable;
+				.DisableRollover 						= .Disable;
+				.DisableItemdisable 					= .Disable;
+				.DisableSelect							= .SelectItemdisable;
+				.DisableSelectPress 					= .DisableSelect;
+				.DisableSelectRollover 					= .DisableSelect;
+				.DisableSelectItemdisable 				= .DisableSelect;
+				.DisableSelectFocus
+				{
+					layer { Inherit = .SelectItemdisable; }
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB_focus.tga", HVGrid, 6, 1, 3, 0);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,1,0,0);
+					}
+				}
+				.DisableSelectFocusRollover 			= .DisableSelectFocus;
+
+				.Winoff 								= .Default;
+				.WinoffPress 							= .Press;
+				.WinoffRollover 						= .Rollover;
+				.WinoffItemdisable 						= .Itemdisable;
+				.WinoffSelect 							= .Select;
+				.WinoffSelectPress 						= .SelectPress;
+				.WinoffSelectRollover 					= .SelectRollover;
+				.WinoffSelectItemdisable 				= .SelectItemdisable;
+				.WinoffSelectFocus 						= .SelectFocus;
+				.WinoffSelectFocusRollover 				= .SelectFocusRollover;
+
+				.WinoffDisable 							= .Disable;
+				.WinoffDisablePress 					= .Disable;
+				.WinoffDisableRollover 					= .Disable;
+				.WinoffDisableItemdisable 				= .Disable;
+				.WinoffDisableSelect 					= .DisableSelect;
+				.WinoffDisableSelectPress 				= .DisableSelect;
+				.WinoffDisableSelectRollover 			= .DisableSelect;
+				.WinoffDisableSelectItemdisable 		= .DisableSelect;
+				.WinoffDisableSelectFocus 				= .DisableSelectFocus;
+				.WinoffDisableSelectFocusRollover 		= .DisableSelectFocus;
+			}
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Skin_EndCut
+			{// Right-cut skin
+				.Default
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg_off.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(6,0,6,3);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 4, 3);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 4, 4);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 4, 2);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+				}
+				.Rollover
+				{
+					layer { Inherit = .Default; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 4, 2);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+				}
+				.Press				= .Default;
+				.Itemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 4, 6);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+				}
+				.Select
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(6,0,6,2);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 4, 0);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 4, 1);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 4, 2);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+				}
+				.SelectRollover
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 4, 2);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+				}
+				.SelectPress		= .Select;
+				.SelectItemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 4, 5);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+				}
+				.SelectFocus
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB_focus.tga", HVGrid, 6, 1, 4, 0);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,1,0,0);
+					}
+				}
+				.SelectFocusRollover
+				{
+					layer { Inherit = .SelectRollover; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB_focus.tga", HVGrid, 6, 1, 4, 0);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,1,0,0);
+					}
+				}
+				.Disable								= 	.Itemdisable;
+				.DisablePress 							= .Disable;
+				.DisableRollover 						= .Disable;
+				.DisableItemdisable 					= .Disable;
+				.DisableSelect							= .SelectItemdisable;
+				.DisableSelectPress 					= .DisableSelect;
+				.DisableSelectRollover 					= .DisableSelect;
+				.DisableSelectItemdisable 				= .DisableSelect;
+				.DisableSelectFocus
+				{
+					layer { Inherit = .SelectItemdisable; }
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB_focus.tga", HVGrid, 6, 1, 4, 0);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,1,0,0);
+					}
+				}
+				.DisableSelectFocusRollover 			= .DisableSelectFocus;
+
+				.Winoff 								= .Default;
+				.WinoffPress 							= .Press;
+				.WinoffRollover 						= .Rollover;
+				.WinoffItemdisable 						= .Itemdisable;
+				.WinoffSelect 							= .Select;
+				.WinoffSelectPress 						= .SelectPress;
+				.WinoffSelectRollover 					= .SelectRollover;
+				.WinoffSelectItemdisable 				= .SelectItemdisable;
+				.WinoffSelectFocus 						= .SelectFocus;
+				.WinoffSelectFocusRollover 				= .SelectFocusRollover;
+
+				.WinoffDisable 							= .Disable;
+				.WinoffDisablePress 					= .Disable;
+				.WinoffDisableRollover 					= .Disable;
+				.WinoffDisableItemdisable 				= .Disable;
+				.WinoffDisableSelect 					= .DisableSelect;
+				.WinoffDisableSelectPress 				= .DisableSelect;
+				.WinoffDisableSelectRollover 			= .DisableSelect;
+				.WinoffDisableSelectItemdisable 		= .DisableSelect;
+				.WinoffDisableSelectFocus 				= .DisableSelectFocus;
+				.WinoffDisableSelectFocusRollover 		= .DisableSelectFocus;
+			}
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Skin_BeginCut
+			{// Left-cut skin
+				.Default
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg_off.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(6,0,6,3);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 5, 3);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 5, 4);
+						Margin			= GRectMargin(6,4,6,1);
+						Indent			= GRectMargin(0,0,0,2);
+					}	
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 5, 2);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+				}
+				.Rollover
+				{
+					layer { Inherit = .Default; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 5, 2);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+				}
+				.Press				= .Default;
+				.Itemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 5, 6);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+				}
+				.Select
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(6,0,6,2);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 5, 0);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 5, 1);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 5, 2);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+				}
+				.SelectRollover
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 5, 2);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+				}
+				.SelectPress		= .Select;
+				.SelectItemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB.tga", HVGrid, 6, 7, 5, 5);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,0,0,2);
+					}
+				}
+				.SelectFocus
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB_focus.tga", HVGrid, 6, 1, 5, 0);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,1,0,0);
+					}
+				}
+				.SelectFocusRollover
+				{
+					layer { Inherit = .SelectRollover; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB_focus.tga", HVGrid, 6, 1, 5, 0);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,1,0,0);
+					}
+				}
+				.Disable								= 	.Itemdisable;
+				.DisablePress 							= .Disable;
+				.DisableRollover 						= .Disable;
+				.DisableItemdisable 					= .Disable;
+				.DisableSelect							= .SelectItemdisable;
+				.DisableSelectPress 					= .DisableSelect;
+				.DisableSelectRollover 					= .DisableSelect;
+				.DisableSelectItemdisable 				= .DisableSelect;
+				.DisableSelectFocus
+				{
+					layer { Inherit = .SelectItemdisable; }
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabTB_focus.tga", HVGrid, 6, 1, 5, 0);
+						Margin			= GRectMargin(6,1,6,4);
+						Indent			= GRectMargin(0,1,0,0);
+					}
+				}
+				.DisableSelectFocusRollover 			= .DisableSelectFocus;
+
+				.Winoff 								= .Default;
+				.WinoffPress 							= .Press;
+				.WinoffRollover 						= .Rollover;
+				.WinoffItemdisable 						= .Itemdisable;
+				.WinoffSelect 							= .Select;
+				.WinoffSelectPress 						= .SelectPress;
+				.WinoffSelectRollover 					= .SelectRollover;
+				.WinoffSelectItemdisable 				= .SelectItemdisable;
+				.WinoffSelectFocus 						= .SelectFocus;
+				.WinoffSelectFocusRollover 				= .SelectFocusRollover;
+
+				.WinoffDisable 							= .Disable;
+				.WinoffDisablePress 					= .Disable;
+				.WinoffDisableRollover 					= .Disable;
+				.WinoffDisableItemdisable 				= .Disable;
+				.WinoffDisableSelect 					= .DisableSelect;
+				.WinoffDisableSelectPress 				= .DisableSelect;
+				.WinoffDisableSelectRollover 			= .DisableSelect;
+				.WinoffDisableSelectItemdisable 		= .DisableSelect;
+				.WinoffDisableSelectFocus 				= .DisableSelectFocus;
+				.WinoffDisableSelectFocusRollover 		= .DisableSelectFocus;
+			}
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Skin_Frame
+			{
+				.Default
+				{
+					layer {
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE);
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Source);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_BG;
+						Image			= GBitmap("../../../../Resource/Civ4/table_innerTB.tga", HVGrid, 1, 2, 0, 1);
+						Margin			= GRectMargin(0,0,0,32);
+						Indent			= GRectMargin(0,8,0,3);
+					}
+					layer {
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						Image		= GBitmap("../../../../Resource/Civ4/tab_panel.tga", HVGrid, 2, 4, 0, 1);
+						Margin		= GRectMargin(8,8,8,8);
+					}
+				}
+				.Disable
+				{
+					layer {
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE);
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Source);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_BG;
+						Image			= GBitmap("../../../../Resource/Civ4/table_innerTB.tga", HVGrid, 1, 2, 0, 1);
+						Margin			= GRectMargin(0,0,0,32);
+						Indent			= GRectMargin(0,8,0,3);
+					}
+					layer {
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						Image		= GBitmap("../../../../Resource/Civ4/tab_panel.tga", HVGrid, 2, 4, 0, 3);
+						Margin		= GRectMargin(8,8,8,8);
+					}
+				}
+				.Winoff					= .Default;
+				.WinoffDisable			= .Disable;
+			}
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Skin_Baseline
+			{// Baseline skin - a hack in XP
+				.Default
+				{
+					layer {
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						Image		= GBitmap("../../../../Resource/Civ4/tab_baseline_h.tga", HVGrid, 1, 4, 0, 1);
+						Margin		= GRectMargin(1,0,1,5);
+					}
+				}
+				.Disable
+				{
+					layer {
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						Image		= GBitmap("../../../../Resource/Civ4/tab_baseline_h.tga", HVGrid, 1, 4, 0, 3);
+						Margin		= GRectMargin(1,0,1,5);
+					}
+				}
+				.Winoff					= .Default;
+				.WinoffDisable			= .Disable;
+			}
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Size
+			{
+				.SkinSizeExtent_Default			= GRectMargin(10,6,10,3);	//L,B,R,T
+				.SkinSizeExtent_Select			= GRectMargin(10,6,10,3);	//L,B,R,T
+
+				.SkinExtent_Default				= GRectMargin(2,1,1,-1);	//L,T,R,B
+				.SkinExtent_Select				= GRectMargin(2,0,1,0);	//L,T,R,B
+
+				// Minimum value that can be cut-off
+				.SkinMinCutOffAmount_Default	= 0;
+				.SkinMinCutOffAmount_Select		= 0;
+				// Minimum size the cut-off value should be
+				.SkinMinCutSize_Default			= 12;
+				.SkinMinCutSize_Select			= 12;
+
+				.BeginCut_ClipMargin_Default	= GRectMargin(6,0,0,0);	//L,T,R,B	(Left Cut)
+				.BeginCut_ClipMargin_Select		= GRectMargin(6,0,0,0);	//L,T,R,B
+				.EndCut_ClipMargin_Default		= GRectMargin(0,0,6,0);	//L,T,R,B	(Right Cut)
+				.EndCut_ClipMargin_Select		= GRectMargin(0,0,6,0);	//L,T,R,B
+			} 
+		}
+		// Bottom Left - edge single
+		GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Bottom_Begin_BaseLevel_SingleBeginEdge
+		{
+			map GFC_CtrlTheme_Bitmap_Control_Tab	= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Bottom_Begin_BaseLevel_Single;
+			map GFC_Control							= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Bottom_Begin_BaseLevel_Single;
+		}
+		// Bottom Right - edge single
+		GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Bottom_Begin_BaseLevel_SingleEndEdge
+		{
+			map GFC_CtrlTheme_Bitmap_Control_Tab	= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Bottom_Begin_BaseLevel_Single;
+			map GFC_Control							= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Bottom_Begin_BaseLevel_Single;
+		}
+		// Bottom Both Edges
+		GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Bottom_Begin_BaseLevel_SingleTwoEdge
+		{
+			map GFC_CtrlTheme_Bitmap_Control_Tab	= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Bottom_Begin_BaseLevel_Single;
+			map GFC_Control							= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Bottom_Begin_BaseLevel_Single;
+		}
+
+		// Map the rest of the tab styles to this one for now
+		// there is no special look for different alignments or levels
+		with GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Bottom
+		{
+			.Begin_BaseLevel_First				= .Begin_BaseLevel_Single;
+			.Begin_BaseLevel_Middle				= .Begin_BaseLevel_Single;
+			.Begin_BaseLevel_Last				= .Begin_BaseLevel_Single;
+			.Begin_TopLevel_Single				= .Begin_BaseLevel_Single;
+			.Begin_TopLevel_First				= .Begin_BaseLevel_Single;
+			.Begin_TopLevel_Middle				= .Begin_BaseLevel_Single;
+			.Begin_TopLevel_Last				= .Begin_BaseLevel_Single;
+			.Begin_MidLevel_Single				= .Begin_BaseLevel_Single;
+			.Begin_MidLevel_First				= .Begin_BaseLevel_Single;
+			.Begin_MidLevel_Middle				= .Begin_BaseLevel_Single;
+			.Begin_MidLevel_Last				= .Begin_BaseLevel_Single;
+
+			.Begin_BaseLevel_FirstBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.Begin_BaseLevel_FirstEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Begin_BaseLevel_FirstTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.Begin_BaseLevel_MiddleBeginEdge	= .Begin_BaseLevel_SingleBeginEdge;
+			.Begin_BaseLevel_MiddleEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Begin_BaseLevel_MiddleTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.Begin_BaseLevel_LastBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.Begin_BaseLevel_LastEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Begin_BaseLevel_LastTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+
+			.Center_BaseLevel_Single			= .Begin_BaseLevel_Single;
+			.Center_BaseLevel_First				= .Begin_BaseLevel_Single;
+			.Center_BaseLevel_Middle			= .Begin_BaseLevel_Single;
+			.Center_BaseLevel_Last				= .Begin_BaseLevel_Single;
+			.Center_TopLevel_Single				= .Begin_BaseLevel_Single;
+			.Center_TopLevel_First				= .Begin_BaseLevel_Single;
+			.Center_TopLevel_Middle				= .Begin_BaseLevel_Single;
+			.Center_TopLevel_Last				= .Begin_BaseLevel_Single;
+			.Center_MidLevel_Single				= .Begin_BaseLevel_Single;
+			.Center_MidLevel_First				= .Begin_BaseLevel_Single;
+			.Center_MidLevel_Middle				= .Begin_BaseLevel_Single;
+			.Center_MidLevel_Last				= .Begin_BaseLevel_Single;
+			.Center_BaseLevel_SingleBeginEdge	= .Begin_BaseLevel_SingleBeginEdge;
+			.Center_BaseLevel_SingleEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Center_BaseLevel_SingleTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.Center_BaseLevel_FirstBeginEdge	= .Begin_BaseLevel_SingleBeginEdge;
+			.Center_BaseLevel_FirstEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Center_BaseLevel_FirstTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.Center_BaseLevel_MiddleBeginEdge	= .Begin_BaseLevel_SingleBeginEdge;
+			.Center_BaseLevel_MiddleEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Center_BaseLevel_MiddleTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.Center_BaseLevel_LastBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.Center_BaseLevel_LastEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Center_BaseLevel_LastTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+
+			.End_BaseLevel_Single				= .Begin_BaseLevel_Single;
+			.End_BaseLevel_First				= .Begin_BaseLevel_Single;
+			.End_BaseLevel_Middle				= .Begin_BaseLevel_Single;
+			.End_BaseLevel_Last					= .Begin_BaseLevel_Single;
+			.End_TopLevel_Single				= .Begin_BaseLevel_Single;
+			.End_TopLevel_First					= .Begin_BaseLevel_Single;
+			.End_TopLevel_Middle				= .Begin_BaseLevel_Single;
+			.End_TopLevel_Last					= .Begin_BaseLevel_Single;
+			.End_MidLevel_Single				= .Begin_BaseLevel_Single;
+			.End_MidLevel_First					= .Begin_BaseLevel_Single;
+			.End_MidLevel_Middle				= .Begin_BaseLevel_Single;
+			.End_MidLevel_Last					= .Begin_BaseLevel_Single;
+			.End_BaseLevel_SingleBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.End_BaseLevel_SingleEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.End_BaseLevel_SingleTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.End_BaseLevel_FirstBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.End_BaseLevel_FirstEndEdge			= .Begin_BaseLevel_SingleEndEdge;
+			.End_BaseLevel_FirstTwoEdge			= .Begin_BaseLevel_SingleTwoEdge;
+			.End_BaseLevel_MiddleBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.End_BaseLevel_MiddleEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.End_BaseLevel_MiddleTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.End_BaseLevel_LastBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.End_BaseLevel_LastEndEdge			= .Begin_BaseLevel_SingleEndEdge;
+			.End_BaseLevel_LastTwoEdge			= .Begin_BaseLevel_SingleTwoEdge;
+		}
+
+		// ***** Right Tab Styles
+		GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Right_Begin_BaseLevel_Single
+		{
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Skin_Full
+			{
+				.Default
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg_off.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(0,2,7,2);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 3, 3);
+						Margin			= GRectMargin(1,6,5,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 3, 4);
+						Margin			= GRectMargin(1,6,5,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}	
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 3, 2);
+						Margin			= GRectMargin(1,6,5,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+				}
+				.Rollover
+				{
+					layer { Inherit = .Default; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 3, 2);
+						Margin			= GRectMargin(1,6,5,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+				}
+				.Press				= .Default;
+				.Itemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 3, 6);
+						Margin			= GRectMargin(1,6,5,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+				}
+				.Select
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(0,2,6,2);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 3, 0);
+						Margin			= GRectMargin(1,6,4,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 3, 1);
+						Margin			= GRectMargin(1,6,4,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}		
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 3, 2);
+						Margin			= GRectMargin(1,6,5,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+				}
+				.SelectRollover
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 3, 2);
+						Margin			= GRectMargin(1,6,4,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+				}
+				.SelectPress		= .Select;
+				.SelectItemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 3, 5);
+						Margin			= GRectMargin(1,6,4,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+				}
+				.SelectFocus
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR_focus.tga", HVGrid, 6, 1, 3, 0);
+						Margin			= GRectMargin(0,6,6,6);
+						Indent			= GRectMargin(1,0,0,0);
+					}
+				}
+				.SelectFocusRollover
+				{
+					layer { Inherit = .SelectRollover; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR_focus.tga", HVGrid, 6, 1, 3, 0);
+						Margin			= GRectMargin(0,6,6,6);
+						Indent			= GRectMargin(1,0,0,0);
+					}
+				}
+				.Disable								= 	.Itemdisable;
+				.DisablePress 							= .Disable;
+				.DisableRollover 						= .Disable;
+				.DisableItemdisable 					= .Disable;
+				.DisableSelect							= .SelectItemdisable;
+				.DisableSelectPress 					= .DisableSelect;
+				.DisableSelectRollover 					= .DisableSelect;
+				.DisableSelectItemdisable 				= .DisableSelect;
+				.DisableSelectFocus
+				{
+					layer { Inherit = .SelectItemdisable; }
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR_focus.tga", HVGrid, 6, 1, 3, 0);
+						Margin			= GRectMargin(0,6,6,6);
+						Indent			= GRectMargin(1,0,0,0);
+					}
+				}
+				.DisableSelectFocusRollover 			= .DisableSelectFocus;
+
+				.Winoff 								= .Default;
+				.WinoffPress 							= .Press;
+				.WinoffRollover 						= .Rollover;
+				.WinoffItemdisable 						= .Itemdisable;
+				.WinoffSelect 							= .Select;
+				.WinoffSelectPress 						= .SelectPress;
+				.WinoffSelectRollover 					= .SelectRollover;
+				.WinoffSelectItemdisable 				= .SelectItemdisable;
+				.WinoffSelectFocus 						= .SelectFocus;
+				.WinoffSelectFocusRollover 				= .SelectFocusRollover;
+
+				.WinoffDisable 							= .Disable;
+				.WinoffDisablePress 					= .Disable;
+				.WinoffDisableRollover 					= .Disable;
+				.WinoffDisableItemdisable 				= .Disable;
+				.WinoffDisableSelect 					= .DisableSelect;
+				.WinoffDisableSelectPress 				= .DisableSelect;
+				.WinoffDisableSelectRollover 			= .DisableSelect;
+				.WinoffDisableSelectItemdisable 		= .DisableSelect;
+				.WinoffDisableSelectFocus 				= .DisableSelectFocus;
+				.WinoffDisableSelectFocusRollover 		= .DisableSelectFocus;
+			}
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Skin_EndCut
+			{// Right-cut skin
+				.Default
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg_off.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(0,2,7,6);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 4, 3);
+						Margin			= GRectMargin(1,6,5,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 4, 4);
+						Margin			= GRectMargin(1,6,5,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}	
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 4, 2);
+						Margin			= GRectMargin(1,6,5,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+				}
+				.Rollover
+				{
+					layer { Inherit = .Default; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 4, 2);
+						Margin			= GRectMargin(1,6,5,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+				}
+				.Press				= .Default;
+				.Itemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 4, 6);
+						Margin			= GRectMargin(1,6,5,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+				}
+				.Select
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(0,2,6,6);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 4, 0);
+						Margin			= GRectMargin(1,6,4,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 4, 1);
+						Margin			= GRectMargin(1,6,4,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}		
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 4, 2);
+						Margin			= GRectMargin(1,6,5,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+				}
+				.SelectRollover
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 4, 2);
+						Margin			= GRectMargin(1,6,4,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+				}
+				.SelectPress		= .Select;
+				.SelectItemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 4, 5);
+						Margin			= GRectMargin(1,6,4,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+				}
+				.SelectFocus
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR_focus.tga", HVGrid, 6, 1, 4, 0);
+						Margin			= GRectMargin(0,6,6,6);
+						Indent			= GRectMargin(1,0,0,0);
+					}
+				}
+				.SelectFocusRollover
+				{
+					layer { Inherit = .SelectRollover; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR_focus.tga", HVGrid, 6, 1, 4, 0);
+						Margin			= GRectMargin(0,6,6,6);
+						Indent			= GRectMargin(1,0,0,0);
+					}
+				}
+				.Disable								= 	.Itemdisable;
+				.DisablePress 							= .Disable;
+				.DisableRollover 						= .Disable;
+				.DisableItemdisable 					= .Disable;
+				.DisableSelect							= .SelectItemdisable;
+				.DisableSelectPress 					= .DisableSelect;
+				.DisableSelectRollover 					= .DisableSelect;
+				.DisableSelectItemdisable 				= .DisableSelect;
+				.DisableSelectFocus
+				{
+					layer { Inherit = .SelectItemdisable; }
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR_focus.tga", HVGrid, 6, 1, 4, 0);
+						Margin			= GRectMargin(0,6,6,6);
+						Indent			= GRectMargin(1,0,0,0);
+					}
+				}
+				.DisableSelectFocusRollover 			= .DisableSelectFocus;
+
+				.Winoff 								= .Default;
+				.WinoffPress 							= .Press;
+				.WinoffRollover 						= .Rollover;
+				.WinoffItemdisable 						= .Itemdisable;
+				.WinoffSelect 							= .Select;
+				.WinoffSelectPress 						= .SelectPress;
+				.WinoffSelectRollover 					= .SelectRollover;
+				.WinoffSelectItemdisable 				= .SelectItemdisable;
+				.WinoffSelectFocus 						= .SelectFocus;
+				.WinoffSelectFocusRollover 				= .SelectFocusRollover;
+
+				.WinoffDisable 							= .Disable;
+				.WinoffDisablePress 					= .Disable;
+				.WinoffDisableRollover 					= .Disable;
+				.WinoffDisableItemdisable 				= .Disable;
+				.WinoffDisableSelect 					= .DisableSelect;
+				.WinoffDisableSelectPress 				= .DisableSelect;
+				.WinoffDisableSelectRollover 			= .DisableSelect;
+				.WinoffDisableSelectItemdisable 		= .DisableSelect;
+				.WinoffDisableSelectFocus 				= .DisableSelectFocus;
+				.WinoffDisableSelectFocusRollover 		= .DisableSelectFocus;
+			}
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Skin_BeginCut
+			{// Left-cut skin
+				.Default
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg_off.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(0,6,7,2);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 5, 3);
+						Margin			= GRectMargin(1,6,5,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 5, 4);
+						Margin			= GRectMargin(1,6,5,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}	
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 5, 2);
+						Margin			= GRectMargin(1,6,5,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+				}
+				.Rollover
+				{
+					layer { Inherit = .Default; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 5, 2);
+						Margin			= GRectMargin(1,6,5,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+				}
+				.Press				= .Default;
+				.Itemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 5, 6);
+						Margin			= GRectMargin(1,6,5,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+				}
+				.Select
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+						Image			= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+						Margin			= GRectMargin(0,0,0,0);
+						Indent			= GRectMargin(0,6,6,2);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 5, 0);
+						Margin			= GRectMargin(1,6,4,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 5, 1);
+						Margin			= GRectMargin(1,6,4,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}		
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 5, 2);
+						Margin			= GRectMargin(1,6,5,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+				}
+				.SelectRollover
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(Add,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 5, 2);
+						Margin			= GRectMargin(1,6,4,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+				}
+				.SelectPress		= .Select;
+				.SelectItemdisable
+				{
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR.tga", HVGrid, 6, 7, 5, 5);
+						Margin			= GRectMargin(1,6,4,6);
+						Indent			= GRectMargin(0,0,2,0);
+					}
+				}
+				.SelectFocus
+				{
+					layer { Inherit = .Select; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR_focus.tga", HVGrid, 6, 1, 5, 0);
+						Margin			= GRectMargin(0,6,6,6);
+						Indent			= GRectMargin(1,0,0,0);
+					}
+				}
+				.SelectFocusRollover
+				{
+					layer { Inherit = .SelectRollover; }
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer{}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR_focus.tga", HVGrid, 6, 1, 5, 0);
+						Margin			= GRectMargin(0,6,6,6);
+						Indent			= GRectMargin(1,0,0,0);
+					}
+				}
+				.Disable								= 	.Itemdisable;
+				.DisablePress 							= .Disable;
+				.DisableRollover 						= .Disable;
+				.DisableItemdisable 					= .Disable;
+				.DisableSelect							= .SelectItemdisable;
+				.DisableSelectPress 					= .DisableSelect;
+				.DisableSelectRollover 					= .DisableSelect;
+				.DisableSelectItemdisable 				= .DisableSelect;
+				.DisableSelectFocus
+				{
+					layer { Inherit = .SelectItemdisable; }
+					layer {}
+					layer {
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Modulate);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+						Image			= GBitmap("../../../../Resource/Civ4/tabLR_focus.tga", HVGrid, 6, 1, 5, 0);
+						Margin			= GRectMargin(0,6,6,6);
+						Indent			= GRectMargin(1,0,0,0);
+					}
+				}
+				.DisableSelectFocusRollover 			= .DisableSelectFocus;
+
+				.Winoff 								= .Default;
+				.WinoffPress 							= .Press;
+				.WinoffRollover 						= .Rollover;
+				.WinoffItemdisable 						= .Itemdisable;
+				.WinoffSelect 							= .Select;
+				.WinoffSelectPress 						= .SelectPress;
+				.WinoffSelectRollover 					= .SelectRollover;
+				.WinoffSelectItemdisable 				= .SelectItemdisable;
+				.WinoffSelectFocus 						= .SelectFocus;
+				.WinoffSelectFocusRollover 				= .SelectFocusRollover;
+
+				.WinoffDisable 							= .Disable;
+				.WinoffDisablePress 					= .Disable;
+				.WinoffDisableRollover 					= .Disable;
+				.WinoffDisableItemdisable 				= .Disable;
+				.WinoffDisableSelect 					= .DisableSelect;
+				.WinoffDisableSelectPress 				= .DisableSelect;
+				.WinoffDisableSelectRollover 			= .DisableSelect;
+				.WinoffDisableSelectItemdisable 		= .DisableSelect;
+				.WinoffDisableSelectFocus 				= .DisableSelectFocus;
+				.WinoffDisableSelectFocusRollover 		= .DisableSelectFocus;
+			}
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Skin_Frame
+			{
+				.Default
+				{
+					layer {
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE);
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Source);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_BG;
+						Image			= GBitmap("../../../../Resource/Civ4/table_innerLR.tga", HVGrid, 1, 2, 0, 1);
+						Margin			= GRectMargin(0,0,32,0);
+						Indent			= GRectMargin(8,0,3,0);
+					}
+					layer {
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						Image		= GBitmap("../../../../Resource/Civ4/tab_panel.tga", HVGrid, 2, 4, 1, 1);
+						Margin		= GRectMargin(8,8,8,8);
+					}
+				}
+				.Disable
+				{
+					layer {
+						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE);
+						DestCombine		= GColorCombine(BlendSource,Disable);
+						FactorCombine	= GColorCombine(Modulate,Source);
+						FactorColor		= SF_CtrlTheme_Civ4_Control_Color_BG;
+						Image			= GBitmap("../../../../Resource/Civ4/table_innerLR.tga", HVGrid, 1, 2, 0, 1);
+						Margin			= GRectMargin(0,0,32,0);
+						Indent			= GRectMargin(8,0,3,0);
+					}
+					layer {
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						Image		= GBitmap("../../../../Resource/Civ4/tab_panel.tga", HVGrid, 2, 4, 1, 3);
+						Margin		= GRectMargin(8,8,8,8);
+					}
+				}
+				.Winoff					= .Default;
+				.WinoffDisable			= .Disable;
+			}
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Skin_Baseline
+			{// Baseline skin - a hack in XP
+				.Default
+				{
+					layer {
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						Image		= GBitmap("../../../../Resource/Civ4/tab_baseline_v.tga", HVGrid, 1, 4, 0, 1);
+						Margin		= GRectMargin(0,1,5,1);
+					}
+				}
+				.Disable
+				{
+					layer {
+						LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+						DestCombine	= GColorCombine(BlendSource,Disable);
+						Image		= GBitmap("../../../../Resource/Civ4/tab_baseline_v.tga", HVGrid, 1, 4, 0, 3);
+						Margin		= GRectMargin(0,1,5,1);
+					}
+				}
+				.Winoff					= .Default;
+				.WinoffDisable			= .Disable;
+			}
+			with GFC_CtrlTheme_Bitmap_Control_Tab_Size
+			{
+				.SkinSizeExtent_Default			= GRectMargin(4,10,5,10);	//T,R,B,L
+				.SkinSizeExtent_Select			= GRectMargin(4,10,5,10);	//T,R,B,L
+
+				.SkinExtent_Default				= GRectMargin(2,1,1,-1);	//B,L,T,R
+				.SkinExtent_Select				= GRectMargin(2,0,1,0);	//B,L,T,R
+
+				// Minimum value that can be cut-off
+				.SkinMinCutOffAmount_Default	= 0;
+				.SkinMinCutOffAmount_Select		= 0;
+				// Minimum size the cut-off value should be
+				.SkinMinCutSize_Default			= 12;
+				.SkinMinCutSize_Select			= 12;
+
+				.BeginCut_ClipMargin_Default	= GRectMargin(0,6,0,0);	//L,T,R,B	(Top Cut)
+				.BeginCut_ClipMargin_Select		= GRectMargin(0,6,0,0);	//L,T,R,B
+				.EndCut_ClipMargin_Default		= GRectMargin(0,0,0,6);	//L,T,R,B	(Bottom Cut)
+				.EndCut_ClipMargin_Select		= GRectMargin(0,0,0,6);	//L,T,R,B
+			} 
+		}
+		// Right Top - edge single
+		GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Right_Begin_BaseLevel_SingleBeginEdge
+		{
+			map GFC_CtrlTheme_Bitmap_Control_Tab	= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Right_Begin_BaseLevel_Single;
+			map GFC_Control								= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Right_Begin_BaseLevel_Single;
+		}
+		// Right Bottom - edge single
+		GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Right_Begin_BaseLevel_SingleEndEdge
+		{
+			map GFC_CtrlTheme_Bitmap_Control_Tab	= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Right_Begin_BaseLevel_Single;
+			map GFC_Control								= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Right_Begin_BaseLevel_Single;
+		}
+		// Right Both Edges
+		GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Right_Begin_BaseLevel_SingleTwoEdge
+		{
+			map GFC_CtrlTheme_Bitmap_Control_Tab	= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Right_Begin_BaseLevel_Single;
+			map GFC_Control								= GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Right_Begin_BaseLevel_Single;
+		}
+		with GFC_CtrlTheme_Bitmap_Control_Tab_SkinStyle_Right
+		{
+			.Begin_BaseLevel_First				= .Begin_BaseLevel_Single;
+			.Begin_BaseLevel_Middle				= .Begin_BaseLevel_Single;
+			.Begin_BaseLevel_Last				= .Begin_BaseLevel_Single;
+			.Begin_TopLevel_Single				= .Begin_BaseLevel_Single;
+			.Begin_TopLevel_First				= .Begin_BaseLevel_Single;
+			.Begin_TopLevel_Middle				= .Begin_BaseLevel_Single;
+			.Begin_TopLevel_Last				= .Begin_BaseLevel_Single;
+			.Begin_MidLevel_Single				= .Begin_BaseLevel_Single;
+			.Begin_MidLevel_First				= .Begin_BaseLevel_Single;
+			.Begin_MidLevel_Middle				= .Begin_BaseLevel_Single;
+			.Begin_MidLevel_Last				= .Begin_BaseLevel_Single;
+
+			.Begin_BaseLevel_FirstBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.Begin_BaseLevel_FirstEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Begin_BaseLevel_FirstTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.Begin_BaseLevel_MiddleBeginEdge	= .Begin_BaseLevel_SingleBeginEdge;
+			.Begin_BaseLevel_MiddleEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Begin_BaseLevel_MiddleTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.Begin_BaseLevel_LastBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.Begin_BaseLevel_LastEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Begin_BaseLevel_LastTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+
+			.Center_BaseLevel_Single			= .Begin_BaseLevel_Single;
+			.Center_BaseLevel_First				= .Begin_BaseLevel_Single;
+			.Center_BaseLevel_Middle			= .Begin_BaseLevel_Single;
+			.Center_BaseLevel_Last				= .Begin_BaseLevel_Single;
+			.Center_TopLevel_Single				= .Begin_BaseLevel_Single;
+			.Center_TopLevel_First				= .Begin_BaseLevel_Single;
+			.Center_TopLevel_Middle				= .Begin_BaseLevel_Single;
+			.Center_TopLevel_Last				= .Begin_BaseLevel_Single;
+			.Center_MidLevel_Single				= .Begin_BaseLevel_Single;
+			.Center_MidLevel_First				= .Begin_BaseLevel_Single;
+			.Center_MidLevel_Middle				= .Begin_BaseLevel_Single;
+			.Center_MidLevel_Last				= .Begin_BaseLevel_Single;
+			.Center_BaseLevel_SingleBeginEdge	= .Begin_BaseLevel_SingleBeginEdge;
+			.Center_BaseLevel_SingleEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Center_BaseLevel_SingleTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.Center_BaseLevel_FirstBeginEdge	= .Begin_BaseLevel_SingleBeginEdge;
+			.Center_BaseLevel_FirstEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Center_BaseLevel_FirstTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.Center_BaseLevel_MiddleBeginEdge	= .Begin_BaseLevel_SingleBeginEdge;
+			.Center_BaseLevel_MiddleEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Center_BaseLevel_MiddleTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.Center_BaseLevel_LastBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.Center_BaseLevel_LastEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.Center_BaseLevel_LastTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+
+			.End_BaseLevel_Single				= .Begin_BaseLevel_Single;
+			.End_BaseLevel_First				= .Begin_BaseLevel_Single;
+			.End_BaseLevel_Middle				= .Begin_BaseLevel_Single;
+			.End_BaseLevel_Last					= .Begin_BaseLevel_Single;
+			.End_TopLevel_Single				= .Begin_BaseLevel_Single;
+			.End_TopLevel_First					= .Begin_BaseLevel_Single;
+			.End_TopLevel_Middle				= .Begin_BaseLevel_Single;
+			.End_TopLevel_Last					= .Begin_BaseLevel_Single;
+			.End_MidLevel_Single				= .Begin_BaseLevel_Single;
+			.End_MidLevel_First					= .Begin_BaseLevel_Single;
+			.End_MidLevel_Middle				= .Begin_BaseLevel_Single;
+			.End_MidLevel_Last					= .Begin_BaseLevel_Single;
+			.End_BaseLevel_SingleBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.End_BaseLevel_SingleEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.End_BaseLevel_SingleTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.End_BaseLevel_FirstBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.End_BaseLevel_FirstEndEdge			= .Begin_BaseLevel_SingleEndEdge;
+			.End_BaseLevel_FirstTwoEdge			= .Begin_BaseLevel_SingleTwoEdge;
+			.End_BaseLevel_MiddleBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.End_BaseLevel_MiddleEndEdge		= .Begin_BaseLevel_SingleEndEdge;
+			.End_BaseLevel_MiddleTwoEdge		= .Begin_BaseLevel_SingleTwoEdge;
+			.End_BaseLevel_LastBeginEdge		= .Begin_BaseLevel_SingleBeginEdge;
+			.End_BaseLevel_LastEndEdge			= .Begin_BaseLevel_SingleEndEdge;
+			.End_BaseLevel_LastTwoEdge			= .Begin_BaseLevel_SingleTwoEdge;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Tab	= GFC_Control_DefaultTab_Style;
+		map GFC_Control							= GFC_Control_DefaultTab_Style;
+	}
+}

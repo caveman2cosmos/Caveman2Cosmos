@@ -1,0 +1,36 @@
+from timeit import timeit as t
+------------
+Performance:
+------------
+• "a = []" is at least 4 times faster than "a = list()".
+
+• " str(int) is a little faster than " '%d' % int"
+	• "'%d'" is the same as "'%i'".
+	• Even " 'foobar' + str(int)" is slightly faster than " 'foobar%d' % int"
+
+• " '%f' % float" is a little faster than str(float), not as significant a difference as with integer though.
+
+• "a = -5; if a < 0: a = -a" is 1.5 times faster than "a = abs(-5)"
+
+• "x**y" is at least 13 times faster than "pow(x, y)"
+
+• " '' + a" is around 3 times faster than "'%s' % a".
+
+• "a = 'Foo'; b = 'Bar'; for i in range(X): a + b" is faster than "a = 'Foo'; for i in range(X): a + 'Bar' "
+
+	• Because the string 'Bar' is only created once instead of X times, X may need to be bigger than 4 for it to be faster if the string is very small.
+
+• "int(round(random() * 100))" is 3 times faster than "randint(0,100)", and 2 times faster than "randrange(101)"
+
+	• "int(random() * 100)" is 4 times faster than "randint(0,99)"
+
+• "while aList: a, b, c = aList.pop()" is faster than "for a, b, c in aList: pass" 
+	• 8 times faster with a list lenght of 4
+	• 800 times faster with a list length of 1000
+
+• "if not 0:" is about 4 times faster than "for j in xrange(0)", so an if check can be worth it before a for loop unless the for loop is inside another for loop and the parameter is rarely zero for the second loop.
+
+• xrange(x) is always faster than range(x) in python 2.4 -> 2.6.
+	• Tested parameter values like 1, 100, 1000, and even 1000000. xrange is as expected progressivly faster than range the bigger the parameter is, but is also faster if the parameter is 1.
+	• xrange is significantly faster if the loop ends prematurely with a break/return statement.
+	• range is about 4% faster when the parameter is zero, but we are talking about really fast operations at this point where 4% in my case equals about 4 nanoseconds.

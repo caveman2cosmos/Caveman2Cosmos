@@ -1,0 +1,21 @@
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Detail Manager -->
+<!-- Defines level-of-detail controllers for Civ4 graphical elements -->
+<Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
+	<!-- base types-->
+	<ElementType name="Name" content="textOnly"/>
+	<ElementType name="Key" content="textOnly"/>
+	<ElementType name="Value" content="textOnly"/>
+	<!-- Fader -->
+	<ElementType name="Fader">
+		<element type="Name"/>
+		<element type="Key" minOccurs="0" maxOccurs="*"/>
+		<element type="Value" minOccurs="0" maxOccurs="1"/>
+	</ElementType>
+	<!-- DetailManagerInfos -->
+	<ElementType name="DetailManagerInfos" content="eltOnly">
+		<element type="Fader" maxOccurs="*"/>
+	</ElementType>
+</Schema>

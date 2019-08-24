@@ -1,0 +1,2843 @@
+/********************************************************************** 
+
+Filename	:	Civ4Theme_Window.thm
+Content		:	Civ4 - GWindow control theme
+Created		:	May 1, 2005
+Authors		:	Sven Dixon
+
+Copyright	:	(c) 2005 Scaleform Corp. All Rights Reserved.
+
+***********************************************************************
+
+SF_CtrlTheme_Civ4_Control_Window
+
+Standard_Style
+StandardResize_Style
+NoTitleBar_Style
+NoTitleBarResize_Style
+NoTitleBar_OuterBorder_Normal_Style
+
+ToolWindow_Style
+ToolResize_Style
+
+**********************************************************************/
+
+// *** Main Window control namespace
+
+with GFC_Control_Window
+{
+
+//****** Default Window ******
+
+	GFC_Control_DefaultWindow_Style
+	{
+		GFC_Control_Update_ChildLayout	=	GFC_CtrlTheme_Bitmap_Control_Window_Update_ChildLayout;
+
+		GFC_Control_Renderer_Control	=	GFC_CtrlTheme_Bitmap_Control_Window_Renderer_Control;
+
+		// Child prototypes
+		with .Child
+		{
+			.TitleBar		=	GFC_CtrlTheme_Bitmap_Control_Window_Child_TitleBar;
+			.OuterBorder	=	GFC_CtrlTheme_Bitmap_Control_Window_Child_OuterBorder;
+			.InnerBorder	=	GFC_CtrlTheme_Bitmap_Control_Window_Child_InnerBorder;
+			.ResizeGrip		=	GFC_CtrlTheme_Bitmap_Control_Window_Child_ResizeGrip;
+			.PopupMenu		=	GFC_CtrlTheme_Bitmap_Control_Window_Child_PopupMenu;
+		}
+		// Child styles	
+		// - Default TitleBar,OuterBorder and InnerBorder style ids are overriden
+		//   by the custom Bitmap theme styles (see below)
+		with .StyleId
+		{
+			.TitleBar		=	GPropertyId(GFC_Control_StandardTitleBar_Style);
+			.OuterBorder	=	GPropertyId(GFC_Control_StandardBorder_Style);
+			.InnerBorder	=	GPropertyId(GFC_Control_StandardBorder_Style);
+			.ResizeGrip		=	GPropertyId(GFC_Control_StandardSizeGrip_Style);
+			.PopupMenu		=	GPropertyId(GFC_Control_StandardMenu_Style);
+		}
+		with GFC_Control_Flag
+		{
+			.Transparent			=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+			.SolidInner				=	0;	//GFlags(GCtrl, GFC_CF_SOLIDINNER);
+			.SolidBackground		=	0;	//GFlags(GCtrl, GFC_CF_SOLIDBACKGROUND);
+			.RegionClip				=	0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP);
+			.RegionClipParent		=	0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+			.NoExternalWindow		=	0;	//GFlags(GCtrl, GFC_CF_NOEXTERNALWINDOW);
+			.HitTest				=	GFlags(GCtrl, GFC_CF_HITTEST);
+			.TopLayer				=	0;	//GFlags(GCtrl, GFC_CF_TOPLAYER);
+			.TopLayerBitmap			=	0;	//GFlags(GCtrl, GFC_CF_TOPLAYERBITMAP);
+			.BottomLayerBitmap		=	0;	//GFlags(GCtrl, GFC_CF_BOTTOMLAYERBITMAP);
+			// Control flag change masks
+			.Mask_InvalidateControl	=	GFlags(GCtrl, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		}
+		with .Flag
+		{// Window flags
+			.NoTitleBar		=	0;	//GFlags(GWindowCtrl, GFC_CF_WINDOW_NOTITLEBAR);
+			.NoResizeGrip	=	GFlags(GWindowCtrl, GFC_CF_WINDOW_NORESIZEGRIP);
+			.NoPopupMenu	=	0;	//GFlags(GWindowCtrl, GFC_CF_WINDOW_NOPOPUPMENU);
+			.NoBorder		=	0;	//GFlags(GWindowCtrl, GFC_CF_WINDOW_NOBORDER);
+			.NoInnerBorder	=	0;	//GFlags(GWindowCtrl, GFC_CF_WINDOW_NOINNERBORDER);
+			.NoInnerFill	=	0;	//GFlags(GWindowCtrl, GFC_CF_WINDOW_NOINNERFILL)
+			.InnerMovable	=	GFlags(GWindowCtrl, GFC_CF_WINDOW_INNERMOVABLE);
+		}
+		with .Size
+		{
+			.ResizeGrip				=	GSize(16,16);
+			.DefaultMin_Normal		=	GSize(168,64);
+			.DefaultMin_Collapsed	=	GSize(168,0);
+			.DefaultMin_Minimized	=	GSize(168,0);
+			.DefaultMin_Maximized	=	GSize(168,0);
+			.ExtentMargin_Normal	=	GRectMargin(4,4,14,14);
+			.ExtentMargin_Collapsed	=	.ExtentMargin_Normal;
+			.ExtentMargin_Minimized	=	GRectMargin(0,0,0,0);
+			.ExtentMargin_Maximized	=	GRectMargin(0,0,0,0);
+		}
+		with .Color
+		{
+			.Inner						=	GFC_Control_Color_Inner_Default;
+			.Title_Default				=	GFC_Control_Color_Text_Default;
+			.Title_Disable				=	GFC_Control_Color_Text_Disable;
+			.Title_Winoff				=	GFC_Control_Color_Text_Default;
+			.Title_WinoffDisable		=	GFC_Control_Color_Text_Disable;
+			.TitleShadow_Default		=	GFC_Control_Color_TextShadow_Default;
+			.TitleShadow_Disable		=	GFC_Control_Color_TextShadow_Disable;
+			.TitleShadow_Winoff			=	GFC_Control_Color_TextShadow_Default;
+			.TitleShadow_WinoffDisable	=	GFC_Control_Color_TextShadow_Disable;
+		}
+		with .Combine
+		{
+			.Inner								=	GFC_Control_Combine_Inner_Default;
+			.Title_Default_Dest					=	GFC_Control_Combine_Text_Default_Dest;
+			.Title_Default_Factor				=	GFC_Control_Combine_Text_Default_Factor;
+			.Title_Disable_Dest					=	GFC_Control_Combine_Text_Disable_Dest;
+			.Title_Disable_Factor				=	GFC_Control_Combine_Text_Disable_Factor;
+			.Title_Winoff_Dest					=	GFC_Control_Combine_Text_Default_Dest;
+			.Title_Winoff_Factor				=	GFC_Control_Combine_Text_Default_Factor;
+			.Title_WinoffDisable_Dest			=	GFC_Control_Combine_Text_Disable_Dest;
+			.Title_WinoffDisable_Factor			=	GFC_Control_Combine_Text_Disable_Factor;
+			.TitleShadow_Default_Dest			=	GFC_Control_Combine_TextShadow_Default_Dest;
+			.TitleShadow_Default_Factor			=	GFC_Control_Combine_TextShadow_Default_Factor;
+			.TitleShadow_Disable_Dest			=	GFC_Control_Combine_TextShadow_Disable_Dest;
+			.TitleShadow_Disable_Factor			=	GFC_Control_Combine_TextShadow_Disable_Factor;
+			.TitleShadow_Winoff_Dest			=	GFC_Control_Combine_TextShadow_Default_Dest;
+			.TitleShadow_Winoff_Factor			=	GFC_Control_Combine_TextShadow_Default_Factor;
+			.TitleShadow_WinoffDisable_Dest		=	GFC_Control_Combine_TextShadow_Disable_Dest;
+			.TitleShadow_WinoffDisable_Factor	=	GFC_Control_Combine_TextShadow_Disable_Factor;
+		}
+		with .Font
+		{
+			.Title	=	SF_CtrlTheme_Civ4_Control_Font_Size2_Normal;
+		}
+		with .Cursor
+		{
+			.Size			=	GFC_Control_Cursor_Size_All;
+			.SizeUp			=	GFC_Control_Cursor_Size_UpDown;
+			.SizeDown		=	GFC_Control_Cursor_Size_UpDown;
+			.SizeLeft		=	GFC_Control_Cursor_Size_LeftRight;
+			.SizeRight		=	GFC_Control_Cursor_Size_LeftRight;
+			.SizeUpLeft		=	GFC_Control_Cursor_Size_UpLeft;
+			.SizeUpRight	=	GFC_Control_Cursor_Size_UpRight;
+			.SizeDownLeft	=	GFC_Control_Cursor_Size_DownLeft;
+			.SizeDownRight	=	GFC_Control_Cursor_Size_DownRight;
+			.Move			=	GFC_Control_Cursor_Arrow;
+			.MoveUp			=	.Move;
+			.MoveDown		=	.Move;
+			.MoveUpDown		=	.Move;
+			.MoveLeft		=	.Move;
+			.MoveRight		=	.Move;
+			.MoveLeftRight	=	.Move;
+		}
+		// ******* Initialize all the Window StyleIds to prevent inheritance problems
+		with GFC_CtrlTheme_Bitmap_Control_Window_StyleId
+		{
+			with .OuterBorder
+			{
+				.Normal				=	GPropertyId(GFC_Control_StandardBorder_Style);
+				.Maximized			=	GPropertyId(GFC_Control_StandardBorder_Style);	
+				.Minimized			=	GPropertyId(GFC_Control_StandardBorder_Style);
+				.Collapsed			=	GPropertyId(GFC_Control_StandardBorder_Style);
+				.NoBorderNormal		=	.Normal;
+				.NoBorderMaximized	=	.Maximized;
+				.NoBorderMinimized	=	.Minimized;
+				.NoBorderCollapsed	=	.Collapsed;
+				.SysBorderNormal	=	.Maximized;
+				.SysBorderMinimized	=	.Maximized;
+				.SysBorderMaximized	=	.Maximized;
+				.SysBorderCollapsed	=	.Maximized;
+			}
+			with .TitleBar
+			{
+				.Normal				=	GPropertyId(GFC_Control_StandardTitleBar_Style);
+				.Maximized			=	GPropertyId(GFC_Control_StandardTitleBar_Style);
+				.Minimized			=	GPropertyId(GFC_Control_StandardTitleBar_Style);
+				.Collapsed			=	GPropertyId(GFC_Control_StandardTitleBar_Style);
+				.NoBorderNormal		=	.Normal;
+				.NoBorderMaximized	=	.Maximized;
+				.NoBorderMinimized	=	.Minimized;
+				.NoBorderCollapsed	=	.Collapsed;
+				.SysBorderNormal	=	.Maximized;
+				.SysBorderMinimized	=	.Maximized;
+				.SysBorderMaximized	=	.Maximized;
+				.SysBorderCollapsed	=	.Maximized;
+			}
+			with .InFrameBorder
+			{
+				.Normal				=	GPropertyId(GFC_Control_EmptyBorder_Style);
+				.Maximized			=	GPropertyId(GFC_Control_EmptyBorder_Style);
+				.Minimized			=	GPropertyId(GFC_Control_EmptyBorder_Style);
+				.Collapsed			=	GPropertyId(GFC_Control_EmptyBorder_Style);
+				.NoBorderNormal		=	.Normal;
+				.NoBorderMaximized	=	.Maximized;
+				.NoBorderMinimized	=	.Minimized;
+				.NoBorderCollapsed	=	.Collapsed;
+				.SysBorderNormal	=	.Maximized;
+				.SysBorderMinimized	=	.Maximized;
+				.SysBorderMaximized	=	.Maximized;
+				.SysBorderCollapsed	=	.Maximized;
+			}
+			.InnerBorder_Normal	=	GPropertyId(GFC_Control_EmptyBorder_Style);
+		}
+		with GFC_CtrlTheme_Bitmap_Control_Window_Skin_Inner
+		{
+			.Default
+			{
+				layer
+				{
+					LayerFlags	=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
+					CenterColor	=	SF_CtrlTheme_Civ4_Control_Color_BG; 
+				}
+				layer
+				{
+					LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
+					DestCombine		=	GColorCombine(BlendSource, Disable);
+					FactorCombine	= 	GColorCombine(Modulate,Modulate);
+					FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;
+					Image			=	GBitmap("../../../../Resource/Civ4/win_bg_inner.tga", HVGrid, 1, 1, 0, 0);
+					Margin			=	GRectMargin(1,24,1,24); // (L, T, R, B)
+				}
+			}
+			.Winoff	= .Default;
+		}
+		map GFC_Control			=	GFC_Control_DefaultControl_Style;
+	}
+
+
+//****** Normal Border Styles *****************************************************************************************************************************************
+
+//****** Normal Outer Border ******
+
+//WINDOW TITLE WINOFF
+skin SF_CtrlTheme_Civ4_Control_Window_Standard_OuterBorder_Normal_Skin
+{
+	layer
+	{
+	}
+}
+skin SF_CtrlTheme_Civ4_Control_Window_Standard_OuterBorder_Winoff_Skin
+{
+	layer
+	{
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOHITTEST, GFC_BITMAPSKIN_BACKCAPS_PARTIAL);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		FactorCombine	= 	GColorCombine(Modulate,Modulate);
+		FactorColor		=	SF_CtrlTheme_Civ4_Control_Color_Winoff;
+		Image			=	GBitmap("../../../../Resource/Civ4/win_winoff.tga", HVGrid, 2, 4, 0, 0);
+		Margin			=	GRectMargin(6,6,6,6);
+		Indent			=	GRectMargin(1,1,1,3);
+	}
+	layer
+	{
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOHITTEST, GFC_BITMAPSKIN_BACKCAPS_REGION);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		FactorCombine	= 	GColorCombine(Modulate,Modulate);
+		FactorColor		=	SF_CtrlTheme_Civ4_Control_Color_Winoff;
+		Image			=	GBitmap("../../../../Resource/Civ4/win_winoff.tga", HVGrid, 2, 4, 1, 0);
+		Margin			=	GRectMargin(6,6,6,6);
+		Indent			=	GRectMargin(1,1,1,3);
+	}
+}
+style SF_CtrlTheme_Civ4_Control_Window_Standard_OuterBorder_Normal_Style
+{
+	GFC_Control_Border_Size_Margin				=	GRectMargin(0,0,0,0);
+	GFC_Control_Border_Size_ForceSizableMargin	=	GRectMargin(4,4,4,7);
+	GFC_Control_Border_Size_ForceHitTestMargin	=	GRectMargin(4,4,4,7);
+	GFC_Control_Flag_RegionClipParent			=	GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+	GFC_Control_Flag_Transparent				=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+	GFC_Control_Flag_TopLayerBitmap				=	GFlags(GCtrl, GFC_CF_TOPLAYER_BITMAP);
+	GFC_Control_Flag_Mask_InvalidateControl		=	GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER, GFC_CF_WINDOWACTIVE);
+
+	map GFC_CtrlTheme_Bitmap_Control_Border		=	GFC_Control_EmptyBorder_Style;
+	map GFC_Control								=	GFC_Control_EmptyBorder_Style;
+}
+
+//WINDOW NOTITLE BAR WINOFF
+skin SF_CtrlTheme_Civ4_Control_Window_NoTitleBar_OuterBorder_Normal_Skin
+{
+	layer
+	{
+	}
+}
+skin SF_CtrlTheme_Civ4_Control_Window_NoTitleBar_OuterBorder_Winoff_Skin
+{
+	layer
+	{
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOHITTEST, GFC_BITMAPSKIN_BACKCAPS_PARTIAL);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		FactorCombine	= 	GColorCombine(Modulate,Modulate);
+		FactorColor		=	SF_CtrlTheme_Civ4_Control_Color_Winoff;
+		Image			=	GBitmap("../../../../Resource/Civ4/win_winoff.tga", HVGrid, 2, 4, 0, 1);
+		Margin			=	GRectMargin(6,6,6,6);
+		Indent			=	GRectMargin(1,1,1,3);
+	}
+	layer
+	{
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOHITTEST, GFC_BITMAPSKIN_BACKCAPS_REGION);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		FactorCombine	= 	GColorCombine(Modulate,Modulate);
+		FactorColor		=	SF_CtrlTheme_Civ4_Control_Color_Winoff;
+		Image			=	GBitmap("../../../../Resource/Civ4/win_winoff.tga", HVGrid, 2, 4, 1, 1);
+		Margin			=	GRectMargin(6,6,6,6);
+		Indent			=	GRectMargin(1,1,1,3);
+	}
+}
+
+style SF_CtrlTheme_Civ4_Control_Window_NoTitleBar_OuterBorder_Normal_Style
+{
+	GFC_Control_Border_Size_Margin				=	GRectMargin(0,0,0,0);
+	GFC_Control_Border_Size_ForceSizableMargin	=	GRectMargin(4,4,4,7);
+	GFC_Control_Border_Size_ForceHitTestMargin	=	GRectMargin(4,4,4,7);
+	GFC_Control_Flag_RegionClipParent			=	GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+	GFC_Control_Flag_Transparent				=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+	GFC_Control_Flag_TopLayerBitmap				=	GFlags(GCtrl, GFC_CF_TOPLAYER_BITMAP);
+
+	GFC_Control_Flag_Mask_InvalidateControl		=	GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER, GFC_CF_WINDOWACTIVE);
+
+	map GFC_CtrlTheme_Bitmap_Control_Border		=	GFC_Control_EmptyBorder_Style;
+	map GFC_Control								=	GFC_Control_EmptyBorder_Style;
+}
+
+//** MIN, MAX, COLLPASE WINOFF STYLES **
+style SF_CtrlTheme_Civ4_Control_Window_Standard_OuterBorder_Min_Style
+{
+	GFC_Control_Border_Size_Margin				=	GRectMargin(0,0,0,0);
+	GFC_Control_Flag_RegionClipParent			=	GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+	GFC_Control_Flag_Transparent				=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+	GFC_Control_Flag_TopLayerBitmap				=	GFlags(GCtrl, GFC_CF_TOPLAYER_BITMAP);
+	GFC_Control_Flag_Mask_InvalidateControl		=	GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER, GFC_CF_WINDOWACTIVE);
+
+	map GFC_CtrlTheme_Bitmap_Control_Border		=	GFC_Control_EmptyBorder_Style;
+	map GFC_Control								=	GFC_Control_EmptyBorder_Style;
+}
+style SF_CtrlTheme_Civ4_Control_Window_Standard_OuterBorder_Max_Style
+{
+	GFC_Control_Border_Size_Margin				=	GRectMargin(0,0,0,0);
+	GFC_Control_Flag_RegionClipParent			=	GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+	GFC_Control_Flag_Transparent				=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+	GFC_Control_Flag_TopLayerBitmap				=	GFlags(GCtrl, GFC_CF_TOPLAYER_BITMAP);
+	GFC_Control_Flag_Mask_InvalidateControl		=	GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER, GFC_CF_WINDOWACTIVE);
+
+	map GFC_CtrlTheme_Bitmap_Control_Border		=	GFC_Control_EmptyBorder_Style;
+	map GFC_Control								=	GFC_Control_EmptyBorder_Style;
+}
+style SF_CtrlTheme_Civ4_Control_Window_Standard_OuterBorder_Collapse_Style
+{
+	GFC_Control_Border_Size_ForceSizableMargin	=	GRectMargin(4,0,4,0);
+	GFC_Control_Border_Size_ForceHitTestMargin	=	GRectMargin(4,0,4,0);
+
+	map GFC_CtrlTheme_Bitmap_Control_Border		=	SF_CtrlTheme_Civ4_Control_Window_Standard_OuterBorder_Min_Style;
+	map GFC_Control								=	SF_CtrlTheme_Civ4_Control_Window_Standard_OuterBorder_Min_Style;
+}
+
+
+//****** Normal InFrame Border ******
+
+//WINDOW TITLE
+skin SF_CtrlTheme_Civ4_Control_Window_Standard_InFrameBorder_Normal_Skin
+{
+	layer
+	{
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
+		FactorColor		=	SF_CtrlTheme_Civ4_Control_Color_BG;
+		Margin			=	GRectMargin(10,8,10,8);
+		Indent			=	GRectMargin(2,0,2,7);
+	}
+	layer
+	{
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_CENTER_EMPTY);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		FactorCombine	= 	GColorCombine(Modulate,Modulate);
+		FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;		
+		Image			=	GBitmap("../../../../Resource/Civ4/win_bg_TBsides.tga", HVGrid, 1, 1, 0, 0);
+		Margin			=	GRectMargin(10,8,10,8);
+		Indent			=	GRectMargin(2,0,2,7);
+		LeftFlags		=	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_EMPTY);
+		RightFlags		=	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_EMPTY);
+	}
+	layer
+	{
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_CENTER_EMPTY);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		FactorCombine	= 	GColorCombine(Modulate,Modulate);
+		FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;		
+		Image			=	GBitmap("../../../../Resource/Civ4/win_bg_LRsides.tga", HVGrid, 1, 1, 0, 0);
+		Margin			=	GRectMargin(10,24,10,24);
+		Indent			=	GRectMargin(2,8,2,15);
+	}
+
+	layer
+	{
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_PARTIAL);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		Image			=	GBitmap("../../../../Resource/Civ4/win_border.tga", HVGrid, 2, 2, 0, 0);
+		Margin			=	GRectMargin(7,16,41,19);
+	}
+	layer
+	{
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_REGION);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		Image			=	GBitmap("../../../../Resource/Civ4/win_border_x.tga", HVGrid, 2, 2, 0, 0);
+		Margin			=	GRectMargin(7,16,41,19);
+	}
+	layer
+	{
+		LayerFlags  	=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST, 
+													GFC_BITMAPSKIN_BACKCAPS_REGION, GFC_BITMAPSKIN_REGION_TRANSPARENT, GFC_BITMAPSKIN_COLORKEY);
+		Image			=	GBitmap("../../../../Resource/Civ4/win_border_mask.tga", HVGrid, 1, 2, 0, 0);
+		Margin			=	GRectMargin(7,16,41,19);
+		ColorKey		=	GColor(0,0,0,0);
+		ColorKeyMax		=	GColor(0,0,0,128);
+		ColorKeyMask	=	GColor(0,0,0,255);
+	}
+}
+
+style SF_CtrlTheme_Civ4_Control_Window_Standard_InFrameBorder_Normal_Style
+{
+	GFC_Control_Border_Size_Margin				=	GRectMargin(12,8,12,15);
+	GFC_Control_Border_Size_ForceSizableMargin	=	GRectMargin(4,0,4,7);
+
+	GFC_Control_Flag_RegionClipParent			=	GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+	GFC_Control_Flag_Transparent				=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+	GFC_Control_Flag_TopLayerBitmap				=	GFlags(GCtrl, GFC_CF_TOPLAYER_BITMAP);
+
+	GFC_Control_Flag_Mask_InvalidateControl		=	GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER, GFC_CF_WINDOWACTIVE);
+
+	with GFC_CtrlTheme_Bitmap_Control_Border_Skin
+	{
+		.Full_Default 	= SF_CtrlTheme_Civ4_Control_Window_Standard_InFrameBorder_Normal_Skin;
+		.Full_Winoff	= .Full_Default;
+	}
+
+	map GFC_CtrlTheme_Bitmap_Control_Border		=	GFC_Control_StandardBorder_Style;
+	map GFC_Control								=	GFC_Control_StandardBorder_Style;
+}
+
+//Resize
+skin SF_CtrlTheme_Civ4_Control_Window_StandardResize_InFrameBorder_Normal_Skin
+{
+	layer
+	{
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
+		FactorColor		=	SF_CtrlTheme_Civ4_Control_Color_BG;
+		Margin			=	GRectMargin(10,8,10,8);
+		Indent			=	GRectMargin(2,0,2,7);
+	}
+	layer
+	{
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_CENTER_EMPTY);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		FactorCombine	= 	GColorCombine(Modulate,Modulate);
+		FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;
+		Image			=	GBitmap("../../../../Resource/Civ4/win_bg_TBsides.tga", HVGrid, 1, 1, 0, 0);
+		Margin			=	GRectMargin(10,8,10,8);
+		Indent			=	GRectMargin(2,0,2,7);
+		LeftFlags		=	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_EMPTY);
+		RightFlags		=	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_EMPTY);
+	}
+	layer
+	{
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_CENTER_EMPTY);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		FactorCombine	= 	GColorCombine(Modulate,Modulate);
+		FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;
+		Image			=	GBitmap("../../../../Resource/Civ4/win_bg_LRsides.tga", HVGrid, 1, 1, 0, 0);
+		Margin			=	GRectMargin(10,24,10,24);
+		Indent			=	GRectMargin(2,8,2,15);
+	}
+	layer
+	{
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_PARTIAL);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		Image			=	GBitmap("../../../../Resource/Civ4/win_border.tga", HVGrid, 2, 2, 1, 0);
+		Margin			=	GRectMargin(7,16,41,19);
+	}
+	layer
+	{
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_REGION);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		Image			=	GBitmap("../../../../Resource/Civ4/win_border_x.tga", HVGrid, 2, 2, 1, 0);
+		Margin			=	GRectMargin(7,16,41,19);
+	}
+	layer
+	{
+		LayerFlags  	=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST, 
+													GFC_BITMAPSKIN_BACKCAPS_REGION, GFC_BITMAPSKIN_REGION_TRANSPARENT, GFC_BITMAPSKIN_COLORKEY);
+		Image			=	GBitmap("../../../../Resource/Civ4/win_border_mask.tga", HVGrid, 1, 2, 0, 0);
+		Margin			=	GRectMargin(7,16,41,19);
+		ColorKey		=	GColor(0,0,0,0);
+		ColorKeyMax		=	GColor(0,0,0,128);
+		ColorKeyMask	=	GColor(0,0,0,255);
+	}
+}
+
+style SF_CtrlTheme_Civ4_Control_Window_StandardResize_InFrameBorder_Normal_Style
+{
+	GFC_Control_Border_Size_Margin				=	GRectMargin(12,8,12,15);
+	GFC_Control_Border_Size_ForceSizableMargin	=	GRectMargin(4,0,4,7);
+
+	GFC_Control_Flag_RegionClipParent			=	GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+	GFC_Control_Flag_Transparent				=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+	GFC_Control_Flag_TopLayerBitmap				=	GFlags(GCtrl, GFC_CF_TOPLAYER_BITMAP);
+
+	GFC_Control_Flag_Mask_InvalidateControl		=	GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER, GFC_CF_WINDOWACTIVE);
+	
+	with GFC_CtrlTheme_Bitmap_Control_Border_Skin
+	{
+		.Full_Default 	= SF_CtrlTheme_Civ4_Control_Window_StandardResize_InFrameBorder_Normal_Skin;
+		.Full_Winoff	= .Full_Default;
+	}
+
+	map GFC_CtrlTheme_Bitmap_Control_Border		=	GFC_Control_StandardBorder_Style;
+	map GFC_Control								=	GFC_Control_StandardBorder_Style;
+}
+
+
+//WINDOW NO TITLE
+skin SF_CtrlTheme_Civ4_Control_Window_NoTitleBar_InFrameBorder_Normal_Skin
+{
+	layer
+	{
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
+		FactorColor		=	SF_CtrlTheme_Civ4_Control_Color_BG;
+		Margin			=	GRectMargin(10,8,10,8);
+		Indent			=	GRectMargin(2,5,2,7);
+	}
+	layer
+	{
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_CENTER_EMPTY);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		FactorCombine	= 	GColorCombine(Modulate,Modulate);
+		FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;
+		Image			=	GBitmap("../../../../Resource/Civ4/win_bg_TBsides.tga", HVGrid, 1, 1, 0, 0);
+		Margin			=	GRectMargin(10,8,10,8);
+		Indent			=	GRectMargin(2,5,2,7);
+		LeftFlags		=	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_EMPTY);
+		RightFlags		=	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_EMPTY);
+	}
+	layer
+	{
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_CENTER_EMPTY);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		FactorCombine	= 	GColorCombine(Modulate,Modulate);
+		FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;		
+		Image			=	GBitmap("../../../../Resource/Civ4/win_bg_LRsides.tga", HVGrid, 1, 1, 0, 0);
+		Margin			=	GRectMargin(10,24,10,24);
+		Indent			=	GRectMargin(2,13,2,15);
+	}
+	layer
+	{
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_PARTIAL);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		Image			=	GBitmap("../../../../Resource/Civ4/win_border.tga", HVGrid, 2, 2, 0, 1);
+		Margin			=	GRectMargin(7,16,41,19);
+	}
+	layer
+	{
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_REGION);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		Image			=	GBitmap("../../../../Resource/Civ4/win_border_x.tga", HVGrid, 2, 2, 0, 1);
+		Margin			=	GRectMargin(7,16,41,19);
+	}	
+	layer
+	{
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST, 
+													GFC_BITMAPSKIN_BACKCAPS_REGION, GFC_BITMAPSKIN_REGION_TRANSPARENT, GFC_BITMAPSKIN_COLORKEY);
+		Image			=	GBitmap("../../../../Resource/Civ4/win_border_mask.tga", HVGrid, 1, 2, 0, 1);
+		Margin			=	GRectMargin(7,16,41,19);
+		ColorKey		=	GColor(0,0,0,0);
+		ColorKeyMax		=	GColor(0,0,0,128);
+		ColorKeyMask	=	GColor(0,0,0,255);
+	}
+}
+
+style SF_CtrlTheme_Civ4_Control_Window_NoTitleBar_InFrameBorder_Normal_Style
+{
+	GFC_Control_Border_Size_Margin				=	GRectMargin(12,13,12,15);
+	GFC_Control_Border_Size_ForceSizableMargin	=	GRectMargin(4,7,4,7);
+
+	GFC_Control_Flag_RegionClipParent			=	GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+	GFC_Control_Flag_Transparent				=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+	GFC_Control_Flag_TopLayerBitmap				=	GFlags(GCtrl, GFC_CF_TOPLAYER_BITMAP);
+
+	GFC_Control_Flag_Mask_InvalidateControl		=	GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER, GFC_CF_WINDOWACTIVE);
+
+	with GFC_CtrlTheme_Bitmap_Control_Border_Skin
+	{
+		.Full_Default 	= SF_CtrlTheme_Civ4_Control_Window_NoTitleBar_InFrameBorder_Normal_Skin;
+		.Full_Winoff	= .Full_Default;
+	}
+
+	map GFC_CtrlTheme_Bitmap_Control_Border		=	GFC_Control_StandardBorder_Style;
+	map GFC_Control								=	GFC_Control_StandardBorder_Style;
+}
+
+//Resize
+skin SF_CtrlTheme_Civ4_Control_Window_NoTitleBarResize_InFrameBorder_Normal_Skin
+{
+	layer
+	{
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
+		FactorColor		=	SF_CtrlTheme_Civ4_Control_Color_BG;
+		Margin			=	GRectMargin(10,8,10,8);
+		Indent			=	GRectMargin(2,7,2,7);
+	}
+	layer
+	{
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_CENTER_EMPTY);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		FactorCombine	= 	GColorCombine(Modulate,Modulate);
+		FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;
+		Image			=	GBitmap("../../../../Resource/Civ4/win_bg_TBsides.tga", HVGrid, 1, 1, 0, 0);
+		Margin			=	GRectMargin(10,8,10,8);
+		Indent			=	GRectMargin(2,7,2,7);
+		LeftFlags		=	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_EMPTY);
+		RightFlags		=	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_EMPTY);
+	}
+	layer
+	{
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_CENTER_EMPTY);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		FactorCombine	= 	GColorCombine(Modulate,Modulate);
+		FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;
+		Image			=	GBitmap("../../../../Resource/Civ4/win_bg_LRsides.tga", HVGrid, 1, 1, 0, 0);
+		Margin			=	GRectMargin(10,24,10,24);
+		Indent			=	GRectMargin(2,15,2,15);
+	}
+	layer
+	{
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_PARTIAL);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		Image			=	GBitmap("../../../../Resource/Civ4/win_border.tga", HVGrid, 2, 2, 1, 1);
+		Margin			=	GRectMargin(7,16,41,19);
+	}
+	layer
+	{
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_REGION);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		Image			=	GBitmap("../../../../Resource/Civ4/win_border_x.tga", HVGrid, 2, 2, 1, 1);
+		Margin			=	GRectMargin(7,16,41,19);
+	}
+	layer
+	{
+		LayerFlags  	=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST, 
+													GFC_BITMAPSKIN_BACKCAPS_REGION, GFC_BITMAPSKIN_REGION_TRANSPARENT, GFC_BITMAPSKIN_COLORKEY);
+		Image			=	GBitmap("../../../../Resource/Civ4/win_border_mask.tga", HVGrid, 1, 2, 0, 1);
+		Margin			=	GRectMargin(7,16,41,19);
+		ColorKey		=	GColor(0,0,0,0);
+		ColorKeyMax		=	GColor(0,0,0,128);
+		ColorKeyMask	=	GColor(0,0,0,255);
+	}
+}
+
+style SF_CtrlTheme_Civ4_Control_Window_NoTitleBarResize_InFrameBorder_Normal_Style
+{
+	GFC_Control_Border_Size_Margin				=	GRectMargin(12,15,12,15);
+	GFC_Control_Border_Size_ForceSizableMargin	=	GRectMargin(4,7,4,7);
+
+	GFC_Control_Flag_RegionClipParent			=	GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+	GFC_Control_Flag_Transparent				=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+	GFC_Control_Flag_TopLayerBitmap				=	GFlags(GCtrl, GFC_CF_TOPLAYER_BITMAP);
+
+	GFC_Control_Flag_Mask_InvalidateControl		=	GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER, GFC_CF_WINDOWACTIVE);
+
+	with GFC_CtrlTheme_Bitmap_Control_Border_Skin
+	{
+		.Full_Default	= SF_CtrlTheme_Civ4_Control_Window_NoTitleBarResize_InFrameBorder_Normal_Skin;
+		.Full_Winoff	= .Full_Default;
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Border		=	GFC_Control_StandardBorder_Style;
+	map GFC_Control								=	GFC_Control_StandardBorder_Style;
+}
+
+
+//****** Toolbar Border Styles *****************************************************************************************************************************************
+
+//****** Toolbar Outer Border ******
+
+style SF_CtrlTheme_Civ4_Control_Window_Tool_OuterBorder_Normal_Style
+{
+	GFC_Control_Border_Size_Margin				=	GRectMargin(0,0,0,0);
+	GFC_Control_Border_Size_ForceSizableMargin	=	GRectMargin(4,4,4,4);
+	GFC_Control_Border_Size_ForceHitTestMargin	=	GRectMargin(4,4,4,4);
+	GFC_Control_Flag_RegionClipParent			=	GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+	GFC_Control_Flag_Transparent				=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+	GFC_Control_Flag_TopLayerBitmap				=	GFlags(GCtrl, GFC_CF_TOPLAYER_BITMAP);
+
+	GFC_Control_Flag_Mask_InvalidateControl		=	GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER, GFC_CF_WINDOWACTIVE);
+
+	map GFC_CtrlTheme_Bitmap_Control_Border		=	GFC_Control_EmptyBorder_Style;
+	map GFC_Control								=	GFC_Control_EmptyBorder_Style;
+}
+
+//** MIN, MAX, COLLPASE WINOFF STYLES **
+style SF_CtrlTheme_Civ4_Control_Window_Tool_OuterBorder_Min_Style
+{
+	GFC_Control_Border_Size_Margin				=	GRectMargin(0,0,0,0);
+	GFC_Control_Flag_RegionClipParent			=	GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+	GFC_Control_Flag_Transparent				=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+	GFC_Control_Flag_TopLayerBitmap				=	GFlags(GCtrl, GFC_CF_TOPLAYER_BITMAP);
+
+	GFC_Control_Flag_Mask_InvalidateControl		=	GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER, GFC_CF_WINDOWACTIVE);
+
+	map GFC_CtrlTheme_Bitmap_Control_Border		=	GFC_Control_EmptyBorder_Style;
+	map GFC_Control								=	GFC_Control_EmptyBorder_Style;
+}
+
+style SF_CtrlTheme_Civ4_Control_Window_Tool_OuterBorder_Max_Style
+{
+	GFC_Control_Border_Size_Margin				=	GRectMargin(0,0,0,0);
+	GFC_Control_Flag_RegionClipParent			=	GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+	GFC_Control_Flag_Transparent				=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+	GFC_Control_Flag_TopLayerBitmap				=	GFlags(GCtrl, GFC_CF_TOPLAYER_BITMAP);
+
+	GFC_Control_Flag_Mask_InvalidateControl		=	GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER, GFC_CF_WINDOWACTIVE);
+
+	map GFC_CtrlTheme_Bitmap_Control_Border		=	GFC_Control_EmptyBorder_Style;
+	map GFC_Control								=	GFC_Control_EmptyBorder_Style;
+}
+style SF_CtrlTheme_Civ4_Control_Window_Tool_OuterBorder_Collapse_Style
+{
+	GFC_Control_Border_Size_ForceSizableMargin	=	GRectMargin(4,0,4,0);
+	GFC_Control_Border_Size_ForceHitTestMargin	=	GRectMargin(4,0,4,0);
+
+	map GFC_CtrlTheme_Bitmap_Control_Border		=	SF_CtrlTheme_Civ4_Control_Window_Tool_OuterBorder_Min_Style;
+	map GFC_Control								=	SF_CtrlTheme_Civ4_Control_Window_Tool_OuterBorder_Min_Style;
+}
+
+
+//****** Toolbar InFrame Border ******
+
+//WINDOW TITLE
+skin SF_CtrlTheme_Civ4_Control_Window_Tool_InFrameBorder_Normal_Skin
+{
+	layer
+	{
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
+		FactorColor		=	SF_CtrlTheme_Civ4_Control_Color_BG;
+		Margin			=	GRectMargin(10,8,10,8);
+		Indent			=	GRectMargin(2,0,2,2);
+	}
+	layer
+	{
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_CENTER_EMPTY);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		FactorCombine	= 	GColorCombine(Modulate,Modulate);
+		FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;		
+		Image			=	GBitmap("../../../../Resource/Civ4/win_bg_TBsides.tga", HVGrid, 1, 1, 0, 0);
+		Margin			=	GRectMargin(10,8,10,8);
+		Indent			=	GRectMargin(2,0,2,2);
+		LeftFlags		=	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_EMPTY);
+		RightFlags		=	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_EMPTY);
+	}
+	layer
+	{
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_CENTER_EMPTY);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		FactorCombine	= 	GColorCombine(Modulate,Modulate);
+		FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;		
+		Image			=	GBitmap("../../../../Resource/Civ4/win_bg_LRsides.tga", HVGrid, 1, 1, 0, 0);
+		Margin			=	GRectMargin(10,24,10,24);
+		Indent			=	GRectMargin(2,8,2,10);
+	}
+	layer
+	{
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_PARTIAL);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		Image			=	GBitmap("../../../../Resource/Civ4/toolwin_border.tga", HVGrid, 2, 2, 0, 0);
+		Margin			=	GRectMargin(7,1,41,10);
+	}
+	layer
+	{
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_REGION);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		Image			=	GBitmap("../../../../Resource/Civ4/toolwin_border.tga", HVGrid, 2, 2, 0, 1);
+		Margin			=	GRectMargin(7,1,41,10);
+	}
+}
+
+style SF_CtrlTheme_Civ4_Control_Window_Tool_InFrameBorder_Normal_Style
+{
+	GFC_Control_Border_Size_Margin				=	GRectMargin(12,8,12,10);
+	GFC_Control_Border_Size_ForceSizableMargin	=	GRectMargin(4,0,4,4);
+
+	GFC_Control_Flag_RegionClipParent			=	GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+	GFC_Control_Flag_Transparent				=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+	GFC_Control_Flag_TopLayerBitmap				=	GFlags(GCtrl, GFC_CF_TOPLAYER_BITMAP);
+
+	GFC_Control_Flag_Mask_InvalidateControl		=	GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER, GFC_CF_WINDOWACTIVE);
+
+	with GFC_CtrlTheme_Bitmap_Control_Border_Skin
+	{
+		.Full_Default 	= SF_CtrlTheme_Civ4_Control_Window_Tool_InFrameBorder_Normal_Skin;
+		.Full_Winoff	= .Full_Default;
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Border		=	GFC_Control_StandardBorder_Style;
+	map GFC_Control								=	GFC_Control_StandardBorder_Style;
+}
+
+//Resize
+skin SF_CtrlTheme_Civ4_Control_Window_ToolResize_InFrameBorder_Normal_Skin
+{
+	layer
+	{
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
+		FactorColor		=	SF_CtrlTheme_Civ4_Control_Color_BG;
+		Margin			=	GRectMargin(10,8,10,8);
+		Indent			=	GRectMargin(2,0,2,2);
+	}
+	layer
+	{
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_CENTER_EMPTY);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		FactorCombine	= 	GColorCombine(Modulate,Modulate);
+		FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;
+		Image			=	GBitmap("../../../../Resource/Civ4/win_bg_TBsides.tga", HVGrid, 1, 1, 0, 0);
+		Margin			=	GRectMargin(10,8,10,8);
+		Indent			=	GRectMargin(2,0,2,2);
+		LeftFlags		=	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_EMPTY);
+		RightFlags		=	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_EMPTY);
+	}
+	layer
+	{
+		LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_CENTER_EMPTY);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		FactorCombine	= 	GColorCombine(Modulate,Modulate);
+		FactorColor		= 	SF_CtrlTheme_Civ4_Control_Color_BG;
+		Image			=	GBitmap("../../../../Resource/Civ4/win_bg_LRsides.tga", HVGrid, 1, 1, 0, 0);
+		Margin			=	GRectMargin(10,24,10,24);
+		Indent			=	GRectMargin(2,8,2,10);
+	}
+	layer
+	{
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_PARTIAL);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		Image			=	GBitmap("../../../../Resource/Civ4/toolwin_border.tga", HVGrid, 2, 2, 1, 0);
+		Margin			=	GRectMargin(7,1,41,10);
+	}
+	layer
+	{
+		LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_REGION);
+		DestCombine		=	GColorCombine(BlendSource,Disable);
+		Image			=	GBitmap("../../../../Resource/Civ4/toolwin_border.tga", HVGrid, 2, 2, 1, 1);
+		Margin			=	GRectMargin(7,1,41,10);
+	}
+}
+
+style SF_CtrlTheme_Civ4_Control_Window_ToolResize_InFrameBorder_Normal_Style
+{
+	GFC_Control_Border_Size_Margin				=	GRectMargin(12,8,12,10);
+	GFC_Control_Border_Size_ForceSizableMargin	=	GRectMargin(4,0,4,4);
+
+	GFC_Control_Flag_RegionClipParent			=	GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+	GFC_Control_Flag_Transparent				=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+	GFC_Control_Flag_TopLayerBitmap				=	GFlags(GCtrl, GFC_CF_TOPLAYER_BITMAP);
+
+	GFC_Control_Flag_Mask_InvalidateControl		=	GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER, GFC_CF_WINDOWACTIVE);
+
+	with GFC_CtrlTheme_Bitmap_Control_Border_Skin
+	{
+		.Full_Default 	= SF_CtrlTheme_Civ4_Control_Window_ToolResize_InFrameBorder_Normal_Skin;
+		.Full_Winoff	= .Full_Default;
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Border		=	GFC_Control_StandardBorder_Style;
+	map GFC_Control								=	GFC_Control_StandardBorder_Style;
+}
+
+
+//****** Normal Buttons **********************************************************************************
+
+//****** Normal Close Button ******
+
+style SF_CtrlTheme_Civ4_Control_TitleBar_Standard_CloseButton_Normal_Style
+{
+	GFC_Control_Renderer_Control				= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+
+	GFC_Control_Button_Size_Default				= GSize(15,16);
+
+	GFC_Control_Button_Flag_DownOffset			= GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_NONE);
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 0, 0);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Rollover
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 0, 1);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Press
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 0, 2);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Disable
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 0, 3);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Inactive			= .Default;
+		.InactiveRollover	= .Rollover;
+		.InactivePress		= .Press;
+		.InactiveDisable	= .Disable;
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+	map GFC_Control								=	GFC_Control_DefaultButton_Style;
+}
+
+
+
+//****** Normal Maximize Button ****** 
+
+style SF_CtrlTheme_Civ4_Control_TitleBar_Standard_MaximizeButton_Normal_Style
+{
+	GFC_Control_Renderer_Control				= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+
+	GFC_Control_Button_Size_Default				= GSize(15,16);
+
+	GFC_Control_Button_Flag_DownOffset			= GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_NONE);
+
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 1, 0);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Rollover
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 1, 1);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Press
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 1, 2);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Disable
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 1, 3);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Inactive			= .Default;
+		.InactiveRollover	= .Rollover;
+		.InactivePress		= .Press;
+		.InactiveDisable	= .Disable;
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+	map GFC_Control								=	GFC_Control_DefaultButton_Style;
+}
+
+
+//****** Normal Minimize Button ****** 
+
+style SF_CtrlTheme_Civ4_Control_TitleBar_Standard_MinimizeButton_Normal_Style
+{
+	GFC_Control_Renderer_Control				= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+
+	GFC_Control_Button_Size_Default				= GSize(15,16);
+
+	GFC_Control_Button_Flag_DownOffset			= GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_NONE);
+
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 3, 0);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Rollover
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 3, 1);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Press
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 3, 2);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Disable
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 3, 3);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Inactive			= .Default;
+		.InactiveRollover	= .Rollover;
+		.InactivePress		= .Press;
+		.InactiveDisable	= .Disable;
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+	map GFC_Control								=	GFC_Control_DefaultButton_Style;
+}
+
+
+//****** Normal Restore Down Button ****** 
+
+style SF_CtrlTheme_Civ4_Control_TitleBar_Standard_MaximizeRestoreButton_Normal_Style
+{
+	GFC_Control_Renderer_Control				= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+
+	GFC_Control_Button_Size_Default				= GSize(15,16);
+
+	GFC_Control_Button_Flag_DownOffset			= GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_NONE);
+
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 2, 0);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Rollover
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 2, 1);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Press
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 2, 2);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Disable
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 2, 3);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Inactive			= .Default;
+		.InactiveRollover	= .Rollover;
+		.InactivePress		= .Press;
+		.InactiveDisable	= .Disable;
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+	map GFC_Control								=	GFC_Control_DefaultButton_Style;
+}
+
+
+//****** Normal Restore Up Button ****** 
+
+style SF_CtrlTheme_Civ4_Control_TitleBar_Standard_MinimizeRestoreButton_Normal_Style
+{
+	GFC_Control_Renderer_Control				= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+
+	GFC_Control_Button_Size_Default				= GSize(15,16);
+
+	GFC_Control_Button_Flag_DownOffset			= GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_NONE);
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 4, 0);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Rollover
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 4, 1);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Press
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 4, 2);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Disable
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 4, 3);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Inactive			= .Default;
+		.InactiveRollover	= .Rollover;
+		.InactivePress		= .Press;
+		.InactiveDisable	= .Disable;
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+	map GFC_Control								=	GFC_Control_DefaultButton_Style;
+}
+
+
+
+
+
+
+//****** Normal Collapse Button ****** 
+
+style SF_CtrlTheme_Civ4_Control_TitleBar_Standard_CollapseButton_Normal_Style
+{
+	GFC_Control_Renderer_Control				= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+
+	GFC_Control_Button_Size_Default				= GSize(15,16);
+
+	GFC_Control_Button_Flag_DownOffset			= GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_NONE);
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 5, 0);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Rollover
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 5, 1);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Press
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 5, 2);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Disable
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 5, 3);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Inactive			= .Default;
+		.InactiveRollover	= .Rollover;
+		.InactivePress		= .Press;
+		.InactiveDisable	= .Disable;
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+	map GFC_Control								=	GFC_Control_DefaultButton_Style;
+}
+
+
+
+//****** Normal CollapseRestore Button ****** 
+
+style SF_CtrlTheme_Civ4_Control_TitleBar_Standard_CollapseRestoreButton_Normal_Style
+{
+	GFC_Control_Renderer_Control				= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+
+	GFC_Control_Button_Size_Default				= GSize(15,16);
+
+	GFC_Control_Button_Flag_DownOffset			= GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_NONE);
+
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 6, 0);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Rollover
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 6, 1);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Press
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 6, 2);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Disable
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 6, 3);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Inactive			= .Default;
+		.InactiveRollover	= .Rollover;
+		.InactivePress		= .Press;
+		.InactiveDisable	= .Disable;
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+	map GFC_Control								=	GFC_Control_DefaultButton_Style;
+}
+
+
+//****** Normal Help Button ****** 
+
+style SF_CtrlTheme_Civ4_Control_TitleBar_Standard_HelpButton_Normal_Style
+{
+	GFC_Control_Renderer_Control				= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+
+	GFC_Control_Button_Size_Default				= GSize(15,16);
+
+	GFC_Control_Button_Flag_DownOffset			= GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_NONE);
+
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 7, 0);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Rollover
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 7, 1);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Press
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 7, 2);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Disable
+		{
+			layer {
+				LayerFlags  = GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				Image		= GBitmap("../../../../Resource/Civ4/win_glyphs.tga", HVGrid, 8, 4, 7, 3);
+				DestCombine = GColorCombine(BlendSource,Disable);
+				Margin		= GRectMargin(0,0,0,0);
+				Indent		= GRectMargin(0,0,0,0);
+			}
+		}
+		.Inactive			= .Default;
+		.InactiveRollover	= .Rollover;
+		.InactivePress		= .Press;
+		.InactiveDisable	= .Disable;
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+	map GFC_Control								=	GFC_Control_DefaultButton_Style;
+}
+
+
+//****** Toolbar Buttons *****************************************************************************************
+
+//****** Tool Close Button ******
+
+style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_CloseButton_Normal_Style
+{
+	GFC_Control_Renderer_Control				=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlImage;
+
+	GFC_Control_Button_Size_Default				=	GSize(11,11);
+
+	GFC_Control_Button_Flag_DownOffset			=	GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_NONE);
+
+	with GFC_Control_Button_Image
+	{
+		.Default					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 0, 0);
+		.Rollover					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 0, 1);
+		.Press						=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 0, 2);
+		.Disable					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 0, 3);
+		.Inactive					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 0, 3);
+		.InactiveRollover			=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 0, 0);
+		.InactivePress				=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 0, 2);
+		.InactiveDisable			=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 0, 3);
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+	map GFC_Control								=	GFC_Control_DefaultButton_Style;
+}
+
+//****** Tool Maximize Button ****** 
+
+style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_MaximizeButton_Normal_Style
+{
+	GFC_Control_Renderer_Control				=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlImage;
+
+	GFC_Control_Button_Size_Default				=	GSize(11,11);
+
+	GFC_Control_Button_Flag_DownOffset			=	GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_NONE);
+
+	with GFC_Control_Button_Image
+	{
+		.Default					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 1, 0);
+		.Rollover					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 1, 1);
+		.Press						=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 1, 2);
+		.Disable					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 1, 3);
+		.Inactive					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 1, 3);
+		.InactiveRollover			=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 1, 0);
+		.InactivePress				=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 1, 2);
+		.InactiveDisable			=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 1, 3);
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button	=	GFC_Control_DefaultButton_Style;
+	map GFC_Control							=	GFC_Control_DefaultButton_Style;
+}
+
+//****** Tool MaximizeRestore Button ****** 
+
+style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_MaximizeRestoreButton_Normal_Style
+{
+	GFC_Control_Renderer_Control				=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlImage;
+
+	GFC_Control_Button_Size_Default				=	GSize(11,11);
+
+	GFC_Control_Button_Flag_DownOffset			=	GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_NONE);
+
+	with GFC_Control_Button_Image
+	{
+		.Default					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 2, 0);
+		.Rollover					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 2, 1);
+		.Press						=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 2, 2);
+		.Disable					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 2, 3);
+		.Inactive					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 2, 3);
+		.InactiveRollover			=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 2, 0);
+		.InactivePress				=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 2, 2);
+		.InactiveDisable			=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 2, 3);
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+	map GFC_Control								=	GFC_Control_DefaultButton_Style;
+}
+
+//****** Tool Minimize Button ****** 
+
+style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_MinimizeButton_Normal_Style
+{
+	GFC_Control_Renderer_Control				=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlImage;
+
+	GFC_Control_Button_Size_Default				=	GSize(11,11);
+
+	GFC_Control_Button_Flag_DownOffset			=	GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_NONE);
+
+	with GFC_Control_Button_Image
+	{
+		.Default					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 3, 0);
+		.Rollover					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 3, 1);
+		.Press						=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 3, 2);
+		.Disable					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 3, 3);
+		.Inactive					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 3, 3);
+		.InactiveRollover			=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 3, 0);
+		.InactivePress				=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 3, 2);
+		.InactiveDisable			=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 3, 3);
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+	map GFC_Control								=	GFC_Control_DefaultButton_Style;
+}
+
+//****** Tool MinimizeRestore Button ****** 
+
+style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_MinimizeRestoreButton_Normal_Style
+{
+	GFC_Control_Renderer_Control				=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlImage;
+
+	GFC_Control_Button_Size_Default				=	GSize(11,11);
+
+	GFC_Control_Button_Flag_DownOffset			=	GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_NONE);
+
+	with GFC_Control_Button_Image
+	{
+		.Default					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 4, 0);
+		.Rollover					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 4, 1);
+		.Press						=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 4, 2);
+		.Disable					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 4, 3);
+		.Inactive					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 4, 3);
+		.InactiveRollover			=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 4, 0);
+		.InactivePress				=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 4, 2);
+		.InactiveDisable			=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 4, 3);
+	}
+
+	map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+	map GFC_Control								=	GFC_Control_DefaultButton_Style;
+}
+
+//****** Tool Collapse Button ****** 
+
+style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_CollapseButton_Normal_Style
+{
+	GFC_Control_Renderer_Control				=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlImage;
+
+	GFC_Control_Button_Size_Default				=	GSize(11,11);
+
+	GFC_Control_Button_Flag_DownOffset			=	GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_NONE);
+
+	with GFC_Control_Button_Image
+	{
+		.Default					= GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 5, 0);
+		.Rollover					= GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 5, 1);
+		.Press						= GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 5, 2);
+		.Disable					= GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 5, 3);
+		.Inactive					= GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 5, 3);
+		.InactiveRollover			= GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 5, 0);
+		.InactivePress				= GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 5, 2);
+		.InactiveDisable			= GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 5, 3);
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+	map GFC_Control								=	GFC_Control_DefaultButton_Style;
+}
+
+//****** Tool CollapseRestore Button ****** 
+
+style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_CollapseRestoreButton_Normal_Style
+{
+	GFC_Control_Renderer_Control				=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlImage;
+
+	GFC_Control_Button_Size_Default				=	GSize(11,11);
+
+	GFC_Control_Button_Flag_DownOffset			=	GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_NONE);
+
+	with GFC_Control_Button_Image
+	{
+		.Default					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 6, 0);
+		.Rollover					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 6, 1);
+		.Press						=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 6, 2);
+		.Disable					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 6, 3);
+		.Inactive					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 6, 3);
+		.InactiveRollover			=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 6, 0);
+		.InactivePress				=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 6, 2);
+		.InactiveDisable			=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 6, 3);
+	}
+
+	map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+	map GFC_Control								=	GFC_Control_DefaultButton_Style;
+}
+
+//****** Tool Help Button ****** 
+
+style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_HelpButton_Normal_Style
+{
+	GFC_Control_Renderer_Control				=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlImage;
+
+	GFC_Control_Button_Size_Default				=	GSize(11,11);
+
+	GFC_Control_Button_Flag_DownOffset			=	GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_NONE);
+
+	with GFC_Control_Button_Image
+	{
+		.Default					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 7, 0);
+		.Rollover					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 7, 1);
+		.Press						=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 7, 2);
+		.Disable					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 7, 3);
+		.Inactive					=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 7, 3);
+		.InactiveRollover			=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 7, 0);
+		.InactivePress				=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 7, 2);
+		.InactiveDisable			=	GBitmap("../../../../Resource/Civ4/Tool_Glyphs.tga", HVGrid, 8, 4, 7, 3);
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+	map GFC_Control								=	GFC_Control_DefaultButton_Style;
+}
+
+
+//****** Titlebar Styles *****************************************************************************************************************************************
+
+with GFC_Control_TitleBar
+{
+
+//****** Default Titlebar **********************
+
+	GFC_Control_DefaultTitleBar_Style
+	{
+		GFC_Control_Update_ChildLayout			=	GFC_CtrlTheme_Bitmap_Control_TitleBar_Update_ChildLayout;
+		GFC_Control_Renderer_Control	 		=	GFC_CtrlTheme_Bitmap_Control_TitleBar_Renderer_Control;
+
+		with .Child
+		{	// Label & icon
+			.Image								=	GFC_CtrlTheme_Bitmap_Control_TitleBar_Child_Image;
+			.Text								=	GFC_CtrlTheme_Bitmap_Control_TitleBar_Child_Label;
+			.Border								=	GFC_CtrlTheme_Bitmap_Control_TitleBar_Child_Border;
+			// Buttons
+			.CloseButton						=	GFC_CtrlTheme_Bitmap_Control_TitleBar_Child_CloseButton;
+			.MaximizeButton						=	GFC_CtrlTheme_Bitmap_Control_TitleBar_Child_MaximizeButton;
+			.MinimizeButton						=	GFC_CtrlTheme_Bitmap_Control_TitleBar_Child_MinimizeButton;
+			.CollapseButton						=	GFC_CtrlTheme_Bitmap_Control_TitleBar_Child_CollapseButton;
+			.MaximizeRestoreButton				=	GFC_CtrlTheme_Bitmap_Control_TitleBar_Child_MaximizeRestoreButton;
+			.MinimizeRestoreButton				=	GFC_CtrlTheme_Bitmap_Control_TitleBar_Child_MinimizeRestoreButton;
+			.CollapseRestoreButton				=	GFC_CtrlTheme_Bitmap_Control_TitleBar_Child_CollapseRestoreButton;
+			.HelpButton							=	GFC_CtrlTheme_Bitmap_Control_TitleBar_Child_HelpButton;
+		}
+
+		with .StyleId
+		{
+			// Label & icon
+			.Image								=	GPropertyId(GFC_Control_StandardImage_Style);
+			.Text								=	GPropertyId(GFC_Control_StandardLabel_Style);
+			.Border								=	GPropertyId(GFC_Control_EmptyBorder_Style);
+
+			// Buttons
+			.CloseButton						=	GPropertyId(GFC_Control_StandardButton_Style);
+			.MinimizeButton						=	GPropertyId(GFC_Control_StandardButton_Style);
+			.MaximizeButton						=	GPropertyId(GFC_Control_StandardButton_Style);
+			.CollapseButton						=	GPropertyId(GFC_Control_StandardButton_Style);
+			.CollapseRestoreButton				=	GPropertyId(GFC_Control_StandardButton_Style);
+			.MinimizeRestoreButton				=	GPropertyId(GFC_Control_StandardButton_Style);
+			.MaximizeRestoreButton				=	GPropertyId(GFC_Control_StandardButton_Style);
+			.HelpButton							=	GPropertyId(GFC_Control_StandardButton_Style);
+		}
+
+		with GFC_Control_Flag
+		{
+			// Base control flags
+			.Transparent						=	0;	//GFlags(GCtrl, GFC_CF_TRANSPARENT);
+			.HitTest							=	0;	//GFlags(GCtrl, GFC_CF_HITTEST);
+			.SolidInner							=	0;	//GFlags(GCtrl, GFC_CF_SOLIDINNER);
+			.SolidBackground					=	0;	//GFlags(GCtrl, GFC_CF_SOLIDBACKGROUND);
+			.RegionClip							=	0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP);
+			.RegionClipParent					=	GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+			.NoExternalWindow					=	0;	//GFlags(GCtrl, GFC_CF_NOEXTERNALWINDOW);
+			.TopLayer							=	0;	//GFlags(GCtrl, GFC_CF_TOPLAYER);
+			.TopLayerBitmap						=	0;	//GFlags(GCtrl, GFC_CF_TOPLAYERBITMAP);
+			.BottomLayerBitmap					=	0;	//GFlags(GCtrl, GFC_CF_BOTTOMLAYERBITMAP);
+
+			// Control flag change masks
+			.Mask_InvalidateControl				=	GFlags(GCtrl, GFC_CF_WINDOWACTIVE, GFC_CF_DISABLED, GFC_CF_MODAL, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		}
+
+		with .Flag
+		{
+			.NoBorder							=	0;	//GFlags(GTitleBarCtrl, GFC_CF_TITLEBAR_NOBORDER);
+			.NoInnerFill						=	0;	//GFlags(GTitleBarCtrl, GFC_CF_TITLEBAR_NOINNERFILL);
+		}
+
+		with .Size
+		{
+			.Margin								=	GRectMargin(10,0,10,0);
+			.ButtonSpace						=	0;
+			.BarThickness						=	24;
+		}
+
+		with .Color
+		{
+			.Inner_Default						=	GFC_Control_Color_Inner_Select;
+			.Inner_Disable						=	.Inner_Default;
+			.Inner_Winoff						=	.Inner_Default;
+			.Inner_WinoffDisable				=	.Inner_Disable;
+
+			.Text_Default						=	GFC_Control_Color_Text_Default;
+			.Text_Disable						=	.Text_Default;
+			.Text_Winoff						=	.Text_Default;
+			.Text_WinoffDisable					=	.Text_Disable;
+		}
+
+		with .Combine
+		{
+			.Inner_Default						=	GFC_Control_Combine_Surface;
+			.Inner_Disable						=	.Inner_Default;
+			.Inner_Winoff						=	.Inner_Default;
+			.Inner_WinoffDisable				=	.Inner_Disable;
+
+			.Text_Default_Dest					=	GFC_Control_Combine_Text_Default_Dest;
+			.Text_Default_Factor				=	GFC_Control_Combine_Text_Default_Factor;
+			.Text_Disable_Dest					=	.Text_Default_Dest;
+			.Text_Disable_Factor				=	.Text_Default_Factor;
+			.Text_Winoff_Dest					=	.Text_Default_Dest;
+			.Text_Winoff_Factor					=	.Text_Default_Factor;
+			.Text_WinoffDisable_Dest			=	.Text_Default_Dest;
+			.Text_WinoffDisable_Factor			=	.Text_Default_Factor;
+		}
+
+		with .Cursor
+		{
+			.Move								=	GFC_Control_Cursor_Arrow;
+			.MoveUp								=	.Move;
+			.MoveDown							=	.Move;
+			.MoveUpDown							=	.Move;
+			.MoveLeft							=	.Move;
+			.MoveRight							=	.Move;
+			.MoveLeftRight						=	.Move;
+		}
+
+		with .Font
+		{
+			.Text								=	SF_CtrlTheme_Civ4_Control_Font_Size2_Normal;
+		}
+
+		with .Text
+		{
+			.CropDots							=	"...";
+
+			with .ToolTip
+			{
+				.MinimizeButton					=	"";
+				.MaximizeButton					=	"";
+				.CollapseButton					=	"";
+				.CollapseRestoreButton			=	"";
+				.MinimizeRestoreButton			=	"";
+				.MaximizeRestoreButton			=	"";
+				.CloseButton					=	"";
+				.HelpButton						=	"";
+			}
+		}
+
+
+		// ******* Initialize the Bitmap theme properties to zero to prevent inheritance problems
+
+		with GFC_CtrlTheme_Bitmap_Control_TitleBar
+		{
+			with .Skin
+			{
+				.Full_Default						=	0;
+				.LeftItem_Default 					=	0;
+				.CenterItem_Default 				=	0;
+				.RightItem_Default 					=	0;
+				.ItemToCenter_Default 				=	0;
+				.CenterToItem_Default 				=	0;
+				.LeftToCenter_Default 				=	0;
+				.CenterToRight_Default 				=	0;
+				.ItemToRight_Default 				=	0;
+				.LeftToItem_Default 				=	0;
+				.ItemToItem_Default 				=	0;
+				.LeftToRight_Default 				=	0;
+
+				.Full_Winoff						=	.Full_Default;
+				.LeftItem_Winoff 					=	.LeftItem_Default;
+				.CenterItem_Winoff 					=	.CenterItem_Default;
+				.RightItem_Winoff 					=	.RightItem_Default;
+				.ItemToCenter_Winoff 				=	.ItemToCenter_Default;
+				.CenterToItem_Winoff 				=	.CenterToItem_Default;
+				.LeftToCenter_Winoff 				=	.LeftToCenter_Default;
+				.CenterToRight_Winoff 				=	.CenterToRight_Default;
+				.ItemToRight_Winoff 				=	.ItemToRight_Default;
+				.LeftToItem_Winoff 					=	.LeftToItem_Default;
+				.ItemToItem_Winoff 					=	.ItemToItem_Default;
+				.LeftToRight_Winoff 				=	.LeftToRight_Default;
+			}
+
+			with .Flag
+			{
+				.CenterItem_Relative_Default		=	0;
+				.CenterItem_Relative_Winoff			=	0;
+
+				.Label_Align						=	0;
+				.Image_Align						=	0;
+				.CloseButton_Align					=	0;
+				.MinimizeButton_Align				=	0;
+				.MaximizeButton_Align				=	0;
+				.MinimizeRestoreButton_Align		=	0;
+				.MaximizeRestoreButton_Align		=	0;
+				.CollapseButton_Align				=	0;
+				.CollapseRestoreButton_Align		=	0;
+				.HelpButton_Align					=	0;
+			}
+
+			// *** Sizes
+			with .Size
+			{
+				.LeftItem_Width_Default				=	0;
+				.CenterItem_Width_Default			=	0;
+				.RightItem_Width_Default			=	0;
+				.LeftItem_Width_Winoff				=	.LeftItem_Width_Default;
+				.CenterItem_Width_Winoff			=	.CenterItem_Width_Default;
+				.RightItem_Width_Winoff				=	.RightItem_Width_Default;
+
+				.LeftItem_Margin_Default			=	GRectMargin(0,0,0,0);
+				.CenterItem_Margin_Default			=	GRectMargin(0,0,0,0);
+				.RightItem_Margin_Default			=	GRectMargin(0,0,0,0);
+				.LeftItem_Margin_Winoff				=	.LeftItem_Margin_Default;
+				.CenterItem_Margin_Winoff			=	.CenterItem_Margin_Default;
+				.RightItem_Margin_Winoff			=	.RightItem_Margin_Default;
+
+				.Label_Index						=	0;
+				.Label_Width						=	0;
+				.Label_Spacing						=	0;
+
+				.Image_Index						=	0;
+				.Image_Width						=	0;
+				.Image_Spacing						=	0;
+
+				.CloseButton_Index					=	0;
+				.CloseButton_Width					=	0;
+				.CloseButton_Spacing				=	0;
+
+				.MinimizeButton_Index				=	0;
+				.MinimizeButton_Width				=	0;
+				.MinimizeButton_Spacing				=	0;
+
+				.MaximizeButton_Index				=	0;
+				.MaximizeButton_Width				=	0;
+				.MaximizeButton_Spacing				=	0;
+
+				.MinimizeRestoreButton_Index		=	0;
+				.MinimizeRestoreButton_Width		=	0;
+				.MinimizeRestoreButton_Spacing		=	0;
+
+				.MaximizeRestoreButton_Index		=	0;
+				.MaximizeRestoreButton_Width		=	0;
+				.MaximizeRestoreButton_Spacing		=	0;
+
+				.CollapseButton_Index				=	0;
+				.CollapseButton_Width				=	0;
+				.CollapseButton_Spacing				=	0;
+
+				.CollapseRestoreButton_Index		=	0;
+				.CollapseRestoreButton_Width		=	0;
+				.CollapseRestoreButton_Spacing		=	0;
+
+				.HelpButton_Index					=	0;
+				.HelpButton_Width					=	0;
+				.HelpButton_Spacing					=	0;
+			}
+		}
+		map GFC_Control			=	GFC_Control_DefaultControl_Style;
+	} // end GFC_Control_DefaultTitleBar_Style
+
+
+
+	//** Normal TitleBar Section skins ***************************************************************
+
+	skin SF_CtrlTheme_Civ4_Control_Window_Skin_Standard_TitleBar_Full_Default
+	{
+		layer
+		{
+			LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE);
+			DestCombine		= GColorCombine(BlendSource,Disable);
+			Image			= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+			Margin			= GRectMargin(0,0,0,0);
+			Indent			= GRectMargin(10,1,10,0);
+		}
+		layer
+		{
+			LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_PARTIAL);
+			DestCombine		= GColorCombine(BlendSource,Disable);
+			Image			= GBitmap("../../../../Resource/Civ4/win_title.tga", HVGrid, 3, 2, 0, 0);
+			Margin			= GRectMargin(10,11,10,11);
+		}
+		layer
+		{
+			LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_REGION);
+			DestCombine		= GColorCombine(BlendSource,Disable);
+			Image			= GBitmap("../../../../Resource/Civ4/win_title_x.tga", HVGrid, 2, 1, 0, 0);
+			Margin			= GRectMargin(10,11,10,11);
+		}
+		layer
+		{
+			LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+			DestCombine		= GColorCombine(BlendSource,Disable);
+			Image			= GBitmap("../../../../Resource/Civ4/win_title.tga", HVGrid, 3, 2, 0, 1);
+			Margin			= GRectMargin(10,0,10,0);
+		}
+		layer
+		{
+			LayerFlags  	=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST, 
+														GFC_BITMAPSKIN_BACKCAPS_REGION, GFC_BITMAPSKIN_REGION_TRANSPARENT, GFC_BITMAPSKIN_COLORKEY);
+			Image			=	GBitmap("../../../../Resource/Civ4/win_title_mask.tga", HVGrid, 1, 2, 0, 0);
+			Margin			=	GRectMargin(10,11,10,11);
+			ColorKey		=	GColor(0,0,0,0);
+			ColorKeyMax		=	GColor(0,0,0,128);
+			ColorKeyMask	=	GColor(0,0,0,255);
+		}
+	}
+
+	skin SF_CtrlTheme_Civ4_Control_Window_Skin_Standard_TitleBar_Full_Default_Minimize
+	{
+		layer
+		{
+			LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE);
+			DestCombine		= GColorCombine(BlendSource,Disable);
+			Image			= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+			Margin			= GRectMargin(0,0,0,0);
+			Indent			= GRectMargin(10,1,10,1);
+		}
+		layer
+		{
+			LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_PARTIAL);
+			DestCombine		= GColorCombine(BlendSource,Disable);
+			Image			= GBitmap("../../../../Resource/Civ4/win_title.tga", HVGrid, 3, 2, 1, 0);
+			Margin			= GRectMargin(10,11,10,11);
+		}
+		layer
+		{
+			LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_REGION);
+			DestCombine		= GColorCombine(BlendSource,Disable);
+			Image			= GBitmap("../../../../Resource/Civ4/win_title_x.tga", HVGrid, 2, 1, 1, 0);
+			Margin			= GRectMargin(10,11,10,11);
+		}
+		layer
+		{
+			LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+			DestCombine		= GColorCombine(BlendSource,Disable);
+			Image			= GBitmap("../../../../Resource/Civ4/win_title.tga", HVGrid, 3, 2, 1, 1);
+			Margin			= GRectMargin(10,0,10,0);
+		}
+		layer
+		{
+			LayerFlags  	=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_NOTVISIBLE, GFC_BITMAPSKIN_NOHITTEST, 
+														  GFC_BITMAPSKIN_BACKCAPS_REGION, GFC_BITMAPSKIN_REGION_TRANSPARENT, GFC_BITMAPSKIN_COLORKEY);
+			Image			=	GBitmap("../../../../Resource/Civ4/win_title_mask.tga", HVGrid, 1, 2, 0, 1);
+			Margin			=	GRectMargin(10,11,10,11);
+			ColorKey		=	GColor(0,0,0,0);
+			ColorKeyMax		=	GColor(0,0,0,128);
+			ColorKeyMask	=	GColor(0,0,0,255);
+		}
+	}
+
+	skin SF_CtrlTheme_Civ4_Control_Window_Skin_Standard_TitleBar_Full_Default_Maximize
+	{
+		layer
+		{
+			LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE);
+			DestCombine		= GColorCombine(BlendSource,Disable);
+			Image			= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+			Margin			= GRectMargin(0,0,0,0);
+			Indent			= GRectMargin(10,1,10,0);
+		}
+		layer
+		{
+			LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+			DestCombine		= GColorCombine(BlendSource,Disable);
+			Image			= GBitmap("../../../../Resource/Civ4/win_title.tga", HVGrid, 3, 2, 2, 0);
+			Margin			= GRectMargin(10,11,10,11);
+		}
+		layer
+		{
+			LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+			DestCombine		= GColorCombine(BlendSource,Disable);
+			Image			= GBitmap("../../../../Resource/Civ4/win_title.tga", HVGrid, 3, 2, 2, 1);
+			Margin			= GRectMargin(10,0,10,0);
+		}
+	}
+
+
+	// ***** Standard TitleBar styles
+
+	style SF_CtrlTheme_Civ4_Control_Window_Standard_TitleBar_Normal_Style
+	{
+
+		map SF_CtrlTheme_Civ4_Control				=	GFC_Control_StandardTitleBar_Style;
+		map GFC_CtrlTheme_Bitmap_Control_TitleBar	=	GFC_Control_StandardTitleBar_Style;	
+		map GFC_Control								=	GFC_Control_StandardTitleBar_Style;	
+	}
+
+	style SF_CtrlTheme_Civ4_Control_Window_Standard_TitleBar_Maximized_Style
+	{
+		.Size_Margin			=	GRectMargin(6,2,6,4);
+
+		with GFC_CtrlTheme_Bitmap_Control_TitleBar_Skin
+		{
+			.Full_Default		= SF_CtrlTheme_Civ4_Control_Window_Skin_Standard_TitleBar_Full_Default_Maximize;
+			.Full_Winoff		= .Full_Default;
+		}	
+
+		map SF_CtrlTheme_Civ4_Control				=	GFC_Control_StandardTitleBar_Style;
+		map GFC_CtrlTheme_Bitmap_Control_TitleBar	=	GFC_Control_StandardTitleBar_Style;	
+		map GFC_Control								=	GFC_Control_StandardTitleBar_Style;	
+	}
+
+
+	style SF_CtrlTheme_Civ4_Control_Window_Standard_TitleBar_Minimized_Style
+	{
+
+		with GFC_CtrlTheme_Bitmap_Control_TitleBar_Skin
+		{
+			.Full_Default		= SF_CtrlTheme_Civ4_Control_Window_Skin_Standard_TitleBar_Full_Default_Minimize;
+			.Full_Winoff		= .Full_Default;
+		}
+
+		map SF_CtrlTheme_Civ4_Control				=	GFC_Control_StandardTitleBar_Style;
+		map GFC_CtrlTheme_Bitmap_Control_TitleBar	=	GFC_Control_StandardTitleBar_Style;	
+		map GFC_Control								=	GFC_Control_StandardTitleBar_Style;	
+	}
+
+
+	style SF_CtrlTheme_Civ4_Control_Window_Standard_TitleBar_Collapsed_Style
+	{
+
+		map SF_CtrlTheme_Civ4_Control				=	SF_CtrlTheme_Civ4_Control_Window_Standard_TitleBar_Minimized_Style;
+		map GFC_CtrlTheme_Bitmap_Control_TitleBar	=	SF_CtrlTheme_Civ4_Control_Window_Standard_TitleBar_Minimized_Style;	
+		map GFC_Control								=	SF_CtrlTheme_Civ4_Control_Window_Standard_TitleBar_Minimized_Style;	
+	}
+
+	// *** Label styles
+
+	style SF_CtrlTheme_Civ4_Control_TitleBar_Standard_Label_Style
+	{
+		GFC_Control_Flag_Mask_InvalidateControl		=	GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_WINDOWACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+
+		GFC_Control_Label_Font_Text_Default			=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Font_Text];
+		GFC_Control_Label_Font_Text_Disable			=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Font_Text];
+		GFC_Control_Label_Font_Text_Winoff			=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Font_Text];
+		GFC_Control_Label_Font_Text_WinoffDisable	=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Font_Text];
+		
+		with GFC_Control_Label_Color
+		{
+			.Text_Default							=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Color_Text_Default];
+			.Text_Disable							=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Color_Text_Disable];
+			.Text_Winoff							=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Color_Text_Winoff];
+			.Text_WinoffDisable						=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Color_Text_WinoffDisable];
+
+			.TextShadow_Default						=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Color_TextShadow_Default];
+			.TextShadow_Disable						=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Color_TextShadow_Disable];
+			.TextShadow_Winoff						=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Color_TextShadow_Winoff];
+			.TextShadow_WinoffDisable				=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Color_TextShadow_WinoffDisable];
+		}
+
+		with GFC_Control_Label_Combine
+		{
+			.Text_Default_Dest						=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Combine_Text_Default_Dest];
+			.Text_Default_Factor					=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Combine_Text_Default_Factor];
+			.Text_Disable_Dest						=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Combine_Text_Disable_Dest];
+			.Text_Disable_Factor					=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Combine_Text_Disable_Factor];
+			.Text_Winoff_Dest						=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Combine_Text_Winoff_Dest];
+			.Text_Winoff_Factor						=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Combine_Text_Winoff_Factor];
+			.Text_WinoffDisable_Dest				=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Combine_Text_WinoffDisable_Dest];
+			.Text_WinoffDisable_Factor				=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Combine_Text_WinoffDisable_Factor];
+
+			.TextShadow_Default_Dest				=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_Default_Dest];
+			.TextShadow_Default_Factor				=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_Default_Factor];
+			.TextShadow_Disable_Dest				=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_Disable_Dest];
+			.TextShadow_Disable_Factor				=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_Disable_Factor];
+			.TextShadow_Winoff_Dest					=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_Winoff_Dest];
+			.TextShadow_Winoff_Factor				=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_Winoff_Factor];
+			.TextShadow_WinoffDisable_Dest			=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_WinoffDisable_Dest];
+			.TextShadow_WinoffDisable_Factor		=	GFC_Control_StandardTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_WinoffDisable_Factor];
+		}
+
+		map GFC_CtrlTheme_Bitmap_Control_Label		=	GFC_Control_DefaultLabel_Style;
+		map GFC_Control								=	GFC_Control_DefaultLabel_Style;
+	}
+
+	style SF_CtrlTheme_Civ4_Control_TitleBar_Dialog_Label_Style
+	{
+		GFC_Control_Flag_Mask_InvalidateControl		=	GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_WINDOWACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+
+		GFC_Control_Label_Font_Text_Default			=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Font_Text];
+		GFC_Control_Label_Font_Text_Disable			=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Font_Text];
+		GFC_Control_Label_Font_Text_Winoff			=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Font_Text];
+		GFC_Control_Label_Font_Text_WinoffDisable	=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Font_Text];
+
+		with GFC_Control_Label_Color
+		{
+			.Text_Default							=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Color_Text_Default];
+			.Text_Disable							=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Color_Text_Disable];
+			.Text_Winoff							=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Color_Text_Winoff];
+			.Text_WinoffDisable						=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Color_Text_WinoffDisable];
+													
+			.TextShadow_Default						=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Color_TextShadow_Default];
+			.TextShadow_Disable						=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Color_TextShadow_Disable];
+			.TextShadow_Winoff						=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Color_TextShadow_Winoff];
+			.TextShadow_WinoffDisable				=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Color_TextShadow_WinoffDisable];
+		}
+
+		with GFC_Control_Label_Combine
+		{
+			.Text_Default_Dest						=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Combine_Text_Default_Dest];
+			.Text_Default_Factor					=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Combine_Text_Default_Factor];
+			.Text_Disable_Dest						=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Combine_Text_Disable_Dest];
+			.Text_Disable_Factor					=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Combine_Text_Disable_Factor];
+			.Text_Winoff_Dest						=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Combine_Text_Winoff_Dest];
+			.Text_Winoff_Factor						=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Combine_Text_Winoff_Factor];
+			.Text_WinoffDisable_Dest				=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Combine_Text_WinoffDisable_Dest];
+			.Text_WinoffDisable_Factor				=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Combine_Text_WinoffDisable_Factor];
+
+			.TextShadow_Default_Dest				=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_Default_Dest];
+			.TextShadow_Default_Factor				=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_Default_Factor];
+			.TextShadow_Disable_Dest				=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_Disable_Dest];
+			.TextShadow_Disable_Factor				=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_Disable_Factor];
+			.TextShadow_Winoff_Dest					=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_Winoff_Dest];
+			.TextShadow_Winoff_Factor				=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_Winoff_Factor];
+			.TextShadow_WinoffDisable_Dest			=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_WinoffDisable_Dest];
+			.TextShadow_WinoffDisable_Factor		=	GFC_Control_DialogTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_WinoffDisable_Factor];
+		}
+
+		map	SF_CtrlTheme_Civ4_Control				=	SF_CtrlTheme_Civ4_Control_TitleBar_Standard_Label_Style;
+		map GFC_CtrlTheme_Bitmap_Control_Label		=	SF_CtrlTheme_Civ4_Control_TitleBar_Standard_Label_Style;
+		map GFC_Control								=	SF_CtrlTheme_Civ4_Control_TitleBar_Standard_Label_Style;
+	}
+
+
+	style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_Label_Style
+	{
+		GFC_Control_Flag_Mask_InvalidateControl		=	GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_WINDOWACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+
+		GFC_Control_Label_Font_Text_Default			=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Font_Text];
+		GFC_Control_Label_Font_Text_Disable			=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Font_Text];
+		GFC_Control_Label_Font_Text_Winoff			=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Font_Text];
+		GFC_Control_Label_Font_Text_WinoffDisable	=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Font_Text];
+
+		with GFC_Control_Label_Color
+		{
+			.Text_Default							=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Color_Text_Default];
+			.Text_Disable							=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Color_Text_Disable];
+			.Text_Winoff							=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Color_Text_Winoff];
+			.Text_WinoffDisable						=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Color_Text_WinoffDisable];
+
+			.TextShadow_Default						=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Color_TextShadow_Default];
+			.TextShadow_Disable						=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Color_TextShadow_Disable];
+			.TextShadow_Winoff						=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Color_TextShadow_Winoff];
+			.TextShadow_WinoffDisable				=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Color_TextShadow_WinoffDisable];
+		}
+
+		with GFC_Control_Label_Combine
+		{
+			.Text_Default_Dest						=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Combine_Text_Default_Dest];
+			.Text_Default_Factor					=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Combine_Text_Default_Factor];
+			.Text_Disable_Dest						=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Combine_Text_Disable_Dest];
+			.Text_Disable_Factor					=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Combine_Text_Disable_Factor];
+			.Text_Winoff_Dest						=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Combine_Text_Winoff_Dest];
+			.Text_Winoff_Factor						=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Combine_Text_Winoff_Factor];
+			.Text_WinoffDisable_Dest				=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Combine_Text_WinoffDisable_Dest];
+			.Text_WinoffDisable_Factor				=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Combine_Text_WinoffDisable_Factor];
+
+			.TextShadow_Default_Dest				=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_Default_Dest];
+			.TextShadow_Default_Factor				=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_Default_Factor];
+			.TextShadow_Disable_Dest				=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_Disable_Dest];
+			.TextShadow_Disable_Factor				=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_Disable_Factor];
+			.TextShadow_Winoff_Dest					=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_Winoff_Dest];
+			.TextShadow_Winoff_Factor				=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_Winoff_Factor];
+			.TextShadow_WinoffDisable_Dest			=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_WinoffDisable_Dest];
+			.TextShadow_WinoffDisable_Factor		=	GFC_Control_ToolTitleBar_Style[GFC_Control_TitleBar_Combine_TextShadow_WinoffDisable_Factor];
+		}
+		map	SF_CtrlTheme_Civ4_Control				=	SF_CtrlTheme_Civ4_Control_TitleBar_Standard_Label_Style;
+		map GFC_CtrlTheme_Bitmap_Control_Label		=	SF_CtrlTheme_Civ4_Control_TitleBar_Standard_Label_Style;
+		map GFC_Control								=	SF_CtrlTheme_Civ4_Control_TitleBar_Standard_Label_Style;
+	}
+
+
+	style SF_CtrlTheme_Civ4_Control_TitleBar_Tool_Image_Style
+	{
+		GFC_Control_Image_Size_Margin				=	GRectMargin(0,-2,0,0);
+
+		map	SF_CtrlTheme_Civ4_Control				=	GFC_Control_StandardImage_Style;
+		map GFC_CtrlTheme_Bitmap_Control_Image		=	GFC_Control_StandardImage_Style;
+		map GFC_Control								=	GFC_Control_StandardImage_Style;
+	}
+
+
+//****** Normal Titlebar *****************************************************************************************************************************************
+
+	GFC_Control_StandardTitleBar_Style
+	{
+		GFC_Control_Flag_RegionClipParent		=	GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+
+		.Size_BarThickness						=	24;
+		.Size_Margin							=	GRectMargin(12,2,12,4);
+
+		.Font_Text								=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Font_Title];
+
+		with .Color
+		{
+			.Text_Default						=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Color_Title_Default];
+			.Text_Disable						=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Color_Title_Disable];
+			.Text_Winoff						=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Color_Title_Winoff];
+			.Text_WinoffDisable					=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Color_Title_WinoffDisable];
+
+			.TextShadow_Default					=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Color_TitleShadow_Default];
+			.TextShadow_Disable					=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Color_TitleShadow_Disable];
+			.TextShadow_Winoff					=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Color_TitleShadow_Winoff];
+			.TextShadow_WinoffDisable			=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Color_TitleShadow_WinoffDisable];
+		}
+
+		with .Combine
+		{
+			.Text_Default_Dest					=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Combine_Title_Default_Dest];
+			.Text_Default_Factor				=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Combine_Title_Default_Factor];
+			.Text_Disable_Dest					=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Combine_Title_Disable_Dest];
+			.Text_Disable_Factor				=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Combine_Title_Disable_Factor];
+			.Text_Winoff_Dest					=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Combine_Title_Winoff_Dest];
+			.Text_Winoff_Factor					=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Combine_Title_Winoff_Factor];
+			.Text_WinoffDisable_Dest			=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Combine_Title_WinoffDisable_Dest];
+			.Text_WinoffDisable_Factor			=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Combine_Title_WinoffDisable_Factor];
+
+			.TextShadow_Default_Dest			=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Combine_TitleShadow_Default_Dest];
+			.TextShadow_Default_Factor			=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Combine_TitleShadow_Default_Factor];
+			.TextShadow_Disable_Dest			=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Combine_TitleShadow_Disable_Dest];
+			.TextShadow_Disable_Factor			=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Combine_TitleShadow_Disable_Factor];
+			.TextShadow_Winoff_Dest				=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Combine_TitleShadow_Winoff_Dest];
+			.TextShadow_Winoff_Factor			=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Combine_TitleShadow_Winoff_Factor];
+			.TextShadow_WinoffDisable_Dest		=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Combine_TitleShadow_WinoffDisable_Dest];
+			.TextShadow_WinoffDisable_Factor	=	GFC_Control_StandardWindow_Style[GFC_Control_Window_Combine_TitleShadow_WinoffDisable_Factor];
+		}
+
+		with .StyleId
+		{
+			.Text								=	GPropertyId(SF_CtrlTheme_Civ4_Control_TitleBar_Standard_Label_Style);
+			.CloseButton						=	GPropertyId(SF_CtrlTheme_Civ4_Control_TitleBar_Standard_CloseButton_Normal_Style);
+			.MaximizeButton						=	GPropertyId(SF_CtrlTheme_Civ4_Control_TitleBar_Standard_MaximizeButton_Normal_Style);
+			.MaximizeRestoreButton				=	GPropertyId(SF_CtrlTheme_Civ4_Control_TitleBar_Standard_MaximizeRestoreButton_Normal_Style);
+			.MinimizeButton						=	GPropertyId(SF_CtrlTheme_Civ4_Control_TitleBar_Standard_MinimizeButton_Normal_Style);
+			.MinimizeRestoreButton				=	GPropertyId(SF_CtrlTheme_Civ4_Control_TitleBar_Standard_MinimizeRestoreButton_Normal_Style);
+			.CollapseButton						=	GPropertyId(SF_CtrlTheme_Civ4_Control_TitleBar_Standard_CollapseButton_Normal_Style);
+			.CollapseRestoreButton				=	GPropertyId(SF_CtrlTheme_Civ4_Control_TitleBar_Standard_CollapseRestoreButton_Normal_Style);
+			.HelpButton							=	GPropertyId(SF_CtrlTheme_Civ4_Control_TitleBar_Standard_HelpButton_Normal_Style);
+		}
+
+		// Button styles
+		with GFC_CtrlTheme_Bitmap_Control_TitleBar
+		{
+			with .Flag
+			{
+				.CloseButton_Align				=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_RIGHT);
+				.MaximizeButton_Align			=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_RIGHT);
+				.MaximizeRestoreButton_Align	=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_RIGHT);
+				.MinimizeButton_Align			=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_RIGHT);
+				.MinimizeRestoreButton_Align	=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_RIGHT);
+				.CollapseButton_Align			=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_RIGHT);
+				.CollapseRestoreButton_Align	=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_RIGHT);
+				.HelpButton_Align				=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_RIGHT);
+
+				.Label_Align					=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_LEFT, GFC_BITMAPTHEME_STRETCHY);
+				.Image_Align					=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_LEFT);
+			}
+
+			with .Size
+			{
+				with .CloseButton
+				{
+					.Index			= 5;
+					.Width			= 15;
+					.Spacing		= 5;
+				}
+				with .MaximizeButton
+				{
+					.Index			= 4;
+					.Width			= 15;
+					.Spacing		= 5;
+				}
+				with .MaximizeRestoreButton
+				{
+					.Index			= 4;
+					.Width			= 15;
+					.Spacing		= 5;
+				}
+				with .MinimizeButton
+				{
+					.Index			= 3;
+					.Width			= 15;
+					.Spacing		= 5;
+				}
+				with .MinimizeRestoreButton
+				{
+					.Index			= 3;
+					.Width			= 15;
+					.Spacing		= 5;
+				}
+				with .CollapseButton
+				{
+					.Index			= 2;
+					.Width			= 15;
+					.Spacing		= 5;
+				}
+				with .CollapseRestoreButton
+				{
+					.Index			= 2;
+					.Width			= 15;
+					.Spacing		= 5;
+				}
+				with .HelpButton
+				{
+					.Index			= 1;
+					.Width			= 15;
+					.Spacing		= 5;
+				}
+				with .Label
+				{
+					.Index			= 1;
+					.Spacing		= 2;
+				}
+				with .Image
+				{
+					.Index			= 0;
+					.Spacing		= 6;
+				}
+			}
+			with .Skin
+			{
+				.Full_Default		= SF_CtrlTheme_Civ4_Control_Window_Skin_Standard_TitleBar_Full_Default;
+				.Full_Winoff		= .Full_Default;
+			}
+		}
+		map GFC_CtrlTheme_Bitmap_Control_TitleBar	=	GFC_Control_DefaultTitleBar_Style;
+		map GFC_Control								=	GFC_Control_DefaultTitleBar_Style;
+	}
+
+
+	style SF_CtrlTheme_Civ4_Control_Window_Standard_TitleBar_SysBorderCollapsed_Style
+	{
+		with .StyleId
+		{
+			.Border		= GPropertyId(GFC_Control_EmptyBorder_Style);
+		}
+		map SF_CtrlTheme_Civ4_Control				=	GFC_Control_StandardTitleBar_Style;
+		map GFC_CtrlTheme_Bitmap_Control_TitleBar	=	GFC_Control_StandardTitleBar_Style;
+		map GFC_Control								=	GFC_Control_StandardTitleBar_Style;
+	}
+
+
+
+//** Dialog TitleBar Section skins *****************************************************************************************************************
+
+//****** Dialog Titlebar *****************************************************************************************************************************************
+
+	GFC_Control_DialogTitleBar_Style
+	{
+		.Font_Text								=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Font_Title];
+
+		GFC_Control_Flag_RegionClipParent		=	GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+		
+		with .Color
+		{
+			.Text_Default						=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Color_Title_Default];
+			.Text_Disable						=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Color_Title_Disable];
+			.Text_Winoff						=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Color_Title_Winoff];
+			.Text_WinoffDisable					=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Color_Title_WinoffDisable];
+
+			.TextShadow_Default					=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Color_TitleShadow_Default];
+			.TextShadow_Disable					=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Color_TitleShadow_Disable];
+			.TextShadow_Winoff					=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Color_TitleShadow_Winoff];
+			.TextShadow_WinoffDisable			=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Color_TitleShadow_WinoffDisable];
+		}
+
+		with .Combine
+		{
+			.Text_Default_Dest					=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Combine_Title_Default_Dest];
+			.Text_Default_Factor				=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Combine_Title_Default_Factor];
+			.Text_Disable_Dest					=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Combine_Title_Disable_Dest];
+			.Text_Disable_Factor				=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Combine_Title_Disable_Factor];
+			.Text_Winoff_Dest					=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Combine_Title_Winoff_Dest];
+			.Text_Winoff_Factor					=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Combine_Title_Winoff_Factor];
+			.Text_WinoffDisable_Dest			=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Combine_Title_WinoffDisable_Dest];
+			.Text_WinoffDisable_Factor			=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Combine_Title_WinoffDisable_Factor];
+
+			.TextShadow_Default_Dest			=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Combine_TitleShadow_Default_Dest];
+			.TextShadow_Default_Factor			=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Combine_TitleShadow_Default_Factor];
+			.TextShadow_Disable_Dest			=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Combine_TitleShadow_Disable_Dest];
+			.TextShadow_Disable_Factor			=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Combine_TitleShadow_Disable_Factor];
+			.TextShadow_Winoff_Dest				=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Combine_TitleShadow_Winoff_Dest];
+			.TextShadow_Winoff_Factor			=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Combine_TitleShadow_Winoff_Factor];
+			.TextShadow_WinoffDisable_Dest		=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Combine_TitleShadow_WinoffDisable_Dest];
+			.TextShadow_WinoffDisable_Factor	=	GFC_Control_DialogWindow_Style[GFC_Control_Window_Combine_TitleShadow_WinoffDisable_Factor];
+		}
+		map SF_CtrlTheme_Civ4_Control				=	GFC_Control_StandardTitleBar_Style;
+		map GFC_CtrlTheme_Bitmap_Control_TitleBar	=	GFC_Control_StandardTitleBar_Style;
+		map GFC_Control								=	GFC_Control_StandardTitleBar_Style;
+	}
+
+
+	// ***** Dialog TitleBar button styles
+
+	style SF_CtrlTheme_Civ4_Control_Window_Dialog_TitleBar_Maximized_Style
+	{
+		map GFC_CtrlTheme_Bitmap_Control_TitleBar	= GFC_Control_DialogTitleBar_Style;
+		map GFC_Control								= GFC_Control_DialogTitleBar_Style;
+	}
+
+
+	style SF_CtrlTheme_Civ4_Control_Window_Dialog_TitleBar_Collapsed_Style
+	{
+		map GFC_CtrlTheme_Bitmap_Control_TitleBar	= GFC_Control_DialogTitleBar_Style;
+		map GFC_Control								= GFC_Control_DialogTitleBar_Style;
+	}
+
+
+//****** Tool Titlebar *****************************************************************************************************************************************
+
+	//** Tool TitleBar Section skins *****************************************************************************************************************
+
+	skin SF_CtrlTheme_Civ4_Control_Window_Skin_Tool_TitleBar_Full_Default
+	{
+		layer
+		{
+			LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE);
+			DestCombine		= GColorCombine(BlendSource,Disable);
+			Image			= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+			Margin			= GRectMargin(0,0,0,0);
+			Indent			= GRectMargin(1,1,1,0);
+		}
+		layer
+		{
+			LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_PARTIAL);
+			DestCombine		= GColorCombine(BlendSource,Disable);
+			Image			= GBitmap("../../../../Resource/Civ4/toolwin_title.tga", HVGrid, 3, 2, 0, 0);
+			Margin			= GRectMargin(2,1,2,1);
+		}
+		layer
+		{
+			LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_REGION);
+			DestCombine		= GColorCombine(BlendSource,Disable);
+			Image			= GBitmap("../../../../Resource/Civ4/toolwin_title.tga", HVGrid, 3, 2, 1, 1);
+			Margin			= GRectMargin(2,1,2,1);
+		}
+		layer
+		{
+			LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+			DestCombine		= GColorCombine(BlendSource,Disable);
+			Image			= GBitmap("../../../../Resource/Civ4/toolwin_title.tga", HVGrid, 3, 2, 0, 1);
+			Margin			= GRectMargin(2,1,2,1);
+		}
+	}
+
+	skin SF_CtrlTheme_Civ4_Control_Window_Skin_Tool_TitleBar_Full_Default_Minimize
+	{
+		layer
+		{
+			LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE);
+			DestCombine		= GColorCombine(BlendSource,Disable);
+			Image			= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+			Margin			= GRectMargin(0,0,0,0);
+			Indent			= GRectMargin(1,1,1,0);
+		}
+		layer
+		{
+			LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_PARTIAL);
+			DestCombine		= GColorCombine(BlendSource,Disable);
+			Image			= GBitmap("../../../../Resource/Civ4/toolwin_title.tga", HVGrid, 3, 2, 1, 0);
+			Margin			= GRectMargin(2,1,2,1);
+		}
+		layer
+		{
+			LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_REGION);
+			DestCombine		= GColorCombine(BlendSource,Disable);
+			Image			= GBitmap("../../../../Resource/Civ4/toolwin_title.tga", HVGrid, 3, 2, 2, 1);
+			Margin			= GRectMargin(2,1,2,1);
+		}
+		layer
+		{
+			LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+			DestCombine		= GColorCombine(BlendSource,Disable);
+			Image			= GBitmap("../../../../Resource/Civ4/toolwin_title.tga", HVGrid, 3, 2, 0, 1);
+			Margin			= GRectMargin(2,1,2,1);
+		}
+	}
+
+	skin SF_CtrlTheme_Civ4_Control_Window_Skin_Tool_TitleBar_Full_Default_Maximize
+	{
+		layer
+		{
+			LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE);
+			DestCombine		= GColorCombine(BlendSource,Disable);
+			Image			= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+			Margin			= GRectMargin(0,0,0,0);
+			Indent			= GRectMargin(1,1,1,0);
+		}
+		layer
+		{
+			LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+			DestCombine		= GColorCombine(BlendSource,Disable);
+			Image			= GBitmap("../../../../Resource/Civ4/toolwin_title.tga", HVGrid, 3, 2, 2, 0);
+			Margin			= GRectMargin(2,1,2,1);
+		}
+		layer
+		{
+			LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+			DestCombine		= GColorCombine(BlendSource,Disable);
+			Image			= GBitmap("../../../../Resource/Civ4/toolwin_title.tga", HVGrid, 3, 2, 0, 1);
+			Margin			= GRectMargin(2,1,2,1);
+		}
+	}
+
+
+	// ***** Tool TitleBar styles
+
+	style SF_CtrlTheme_Civ4_Control_Window_Tool_TitleBar_Normal_Style
+	{
+		map SF_CtrlTheme_Civ4_Control				=	GFC_Control_ToolTitleBar_Style;
+		map GFC_CtrlTheme_Bitmap_Control_TitleBar	=	GFC_Control_ToolTitleBar_Style;
+		map GFC_Control								=	GFC_Control_ToolTitleBar_Style;
+	}
+
+	style SF_CtrlTheme_Civ4_Control_Window_Tool_TitleBar_Maximized_Style
+	{
+		.Size_Margin			=	GRectMargin(4,1,4,2);
+
+		with GFC_CtrlTheme_Bitmap_Control_TitleBar_Skin
+		{
+			.Full_Default		= SF_CtrlTheme_Civ4_Control_Window_Skin_Tool_TitleBar_Full_Default_Maximize;
+			.Full_Winoff		= .Full_Default;
+		}
+
+		map SF_CtrlTheme_Civ4_Control				=	GFC_Control_ToolTitleBar_Style;
+		map GFC_CtrlTheme_Bitmap_Control_TitleBar	=	GFC_Control_ToolTitleBar_Style;
+		map GFC_Control								=	GFC_Control_ToolTitleBar_Style;
+	}
+
+
+	style SF_CtrlTheme_Civ4_Control_Window_Tool_TitleBar_Minimized_Style
+	{
+
+		with GFC_CtrlTheme_Bitmap_Control_TitleBar_Skin
+		{
+			.Full_Default		= SF_CtrlTheme_Civ4_Control_Window_Skin_Tool_TitleBar_Full_Default_Minimize;
+			.Full_Winoff		= .Full_Default;
+		}
+
+		map SF_CtrlTheme_Civ4_Control				=	GFC_Control_ToolTitleBar_Style;
+		map GFC_CtrlTheme_Bitmap_Control_TitleBar	=	GFC_Control_ToolTitleBar_Style;
+		map GFC_Control								=	GFC_Control_ToolTitleBar_Style;
+	}
+
+
+	style SF_CtrlTheme_Civ4_Control_Window_Tool_TitleBar_Collapsed_Style
+	{
+
+		map SF_CtrlTheme_Civ4_Control				=	SF_CtrlTheme_Civ4_Control_Window_Tool_TitleBar_Minimized_Style;
+		map GFC_CtrlTheme_Bitmap_Control_TitleBar	=	SF_CtrlTheme_Civ4_Control_Window_Tool_TitleBar_Minimized_Style;	
+		map GFC_Control								=	SF_CtrlTheme_Civ4_Control_Window_Tool_TitleBar_Minimized_Style;	
+	}
+
+
+	GFC_Control_ToolTitleBar_Style
+	{
+		GFC_Control_Flag_RegionClipParent		=	GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+
+		.Size_BarThickness						=	20;
+		.Size_Margin							=	GRectMargin(4,1,4,1);
+
+		.Font_Text								=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Font_Title];
+
+		with .Color
+		{
+			.Text_Default						=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Color_Title_Default];
+			.Text_Disable						=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Color_Title_Disable];
+			.Text_Winoff						=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Color_Title_Winoff];
+			.Text_WinoffDisable					=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Color_Title_WinoffDisable];
+
+			.TextShadow_Default					=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Color_TitleShadow_Default];
+			.TextShadow_Disable					=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Color_TitleShadow_Disable];
+			.TextShadow_Winoff					=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Color_TitleShadow_Winoff];
+			.TextShadow_WinoffDisable			=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Color_TitleShadow_WinoffDisable];
+		}
+
+		with .Combine
+		{
+			.Text_Default_Dest					=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Combine_Title_Default_Dest];
+			.Text_Default_Factor				=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Combine_Title_Default_Factor];
+			.Text_Disable_Dest					=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Combine_Title_Disable_Dest];
+			.Text_Disable_Factor				=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Combine_Title_Disable_Factor];
+			.Text_Winoff_Dest					=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Combine_Title_Winoff_Dest];
+			.Text_Winoff_Factor					=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Combine_Title_Winoff_Factor];
+			.Text_WinoffDisable_Dest			=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Combine_Title_WinoffDisable_Dest];
+			.Text_WinoffDisable_Factor			=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Combine_Title_WinoffDisable_Factor];
+
+			.TextShadow_Default_Dest			=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Combine_TitleShadow_Default_Dest];
+			.TextShadow_Default_Factor			=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Combine_TitleShadow_Default_Factor];
+			.TextShadow_Disable_Dest			=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Combine_TitleShadow_Disable_Dest];
+			.TextShadow_Disable_Factor			=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Combine_TitleShadow_Disable_Factor];
+			.TextShadow_Winoff_Dest				=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Combine_TitleShadow_Winoff_Dest];
+			.TextShadow_Winoff_Factor			=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Combine_TitleShadow_Winoff_Factor];
+			.TextShadow_WinoffDisable_Dest		=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Combine_TitleShadow_WinoffDisable_Dest];
+			.TextShadow_WinoffDisable_Factor	=	GFC_Control_ToolWindow_Style[GFC_Control_Window_Combine_TitleShadow_WinoffDisable_Factor];
+		}
+
+		with .StyleId
+		{
+			.Image								=	GPropertyId(SF_CtrlTheme_Civ4_Control_TitleBar_Tool_Image_Style);
+			.Text								=	GPropertyId(SF_CtrlTheme_Civ4_Control_TitleBar_Tool_Label_Style);
+			.CloseButton						=	GPropertyId(SF_CtrlTheme_Civ4_Control_TitleBar_Standard_CloseButton_Normal_Style);
+			.MaximizeButton						=	GPropertyId(SF_CtrlTheme_Civ4_Control_TitleBar_Standard_MaximizeButton_Normal_Style);
+			.MaximizeRestoreButton				=	GPropertyId(SF_CtrlTheme_Civ4_Control_TitleBar_Standard_MaximizeRestoreButton_Normal_Style);
+			.MinimizeButton						=	GPropertyId(SF_CtrlTheme_Civ4_Control_TitleBar_Standard_MinimizeButton_Normal_Style);
+			.MinimizeRestoreButton				=	GPropertyId(SF_CtrlTheme_Civ4_Control_TitleBar_Standard_MinimizeRestoreButton_Normal_Style);
+			.CollapseButton						=	GPropertyId(SF_CtrlTheme_Civ4_Control_TitleBar_Standard_CollapseButton_Normal_Style);
+			.CollapseRestoreButton				=	GPropertyId(SF_CtrlTheme_Civ4_Control_TitleBar_Standard_CollapseRestoreButton_Normal_Style);
+			.HelpButton							=	GPropertyId(SF_CtrlTheme_Civ4_Control_TitleBar_Standard_HelpButton_Normal_Style);
+		}
+
+
+		// Button sizes
+		with GFC_CtrlTheme_Bitmap_Control_TitleBar
+		{
+			with .Size
+			{
+				with .CloseButton
+				{
+					.Index				=	5;
+					.Width				=	15;
+					.Spacing			=	2;
+				}
+				with .MaximizeButton
+				{
+					.Index				=	4;
+					.Width				=	15;
+					.Spacing			=	2;
+				}
+				with .MaximizeRestoreButton
+				{
+					.Index				=	4;
+					.Width				=	15;
+					.Spacing			=	2;
+				}
+				with .MinimizeButton
+				{
+					.Index				=	3;
+					.Width				=	15;
+					.Spacing			=	2;
+				}
+				with .MinimizeRestoreButton
+				{
+					.Index				=	3;
+					.Width				=	15;
+					.Spacing			=	2;
+				}
+				with .CollapseButton
+				{
+					.Index				=	2;
+					.Width				=	15;
+					.Spacing			=	2;
+				}
+				with .CollapseRestoreButton
+				{
+					.Index				=	2;
+					.Width				=	15;
+					.Spacing			=	2;
+				}
+				with .HelpButton
+				{
+					.Index				=	1;
+					.Width				=	15;
+					.Spacing			=	2;
+				}
+				with .Label
+				{
+					.Index				=	1;
+				}
+				with .Image
+				{
+					.Index				=	0;
+					.Spacing			=	6;
+				}
+			}
+			with .Flag
+			{
+				.CloseButton_Align					=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_RIGHT);
+				.MaximizeButton_Align				=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_RIGHT);
+				.MaximizeRestoreButton_Align		=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_RIGHT);
+				.MinimizeButton_Align				=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_RIGHT);
+				.MinimizeRestoreButton_Align		=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_RIGHT);
+				.CollapseButton_Align				=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_RIGHT);
+				.CollapseRestoreButton_Align		=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_RIGHT);
+				.HelpButton_Align					=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_RIGHT);
+
+				.Label_Align						=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_LEFT, GFC_BITMAPTHEME_STRETCHY);
+				.Image_Align						=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_LEFT);
+			}
+			with .Skin
+			{
+				.Full_Default		= SF_CtrlTheme_Civ4_Control_Window_Skin_Tool_TitleBar_Full_Default;
+				.Full_Winoff		= .Full_Default;
+			}
+		}
+		map GFC_CtrlTheme_Bitmap_Control_TitleBar	=	GFC_Control_DefaultTitleBar_Style;
+		map GFC_Control								=	GFC_Control_DefaultTitleBar_Style;
+	}
+} // end of GFC_Control_TitleBar
+
+
+//****** WINDOW TITLE
+
+	style SF_CtrlTheme_Civ4_Control_Window_Standard_Style
+	{
+		GFC_Control_Flag_RegionClip	 			=	GFlags(GCtrl, GFC_CF_REGIONCLIP);
+
+		.Font_Title								=	SF_CtrlTheme_Civ4_Control_Font_Size2_Normal;
+
+		with .Color
+		{
+			.Title_Default						=	SF_CtrlTheme_Civ4_Control_Color_AltText;
+			.Title_Disable						=	.Title_Default;
+			.Title_Winoff						=	SF_CtrlTheme_Civ4_Control_Color_AltText;
+			.Title_WinoffDisable				=	.Title_Winoff;
+
+			.TitleShadow_Default				=	SF_CtrlTheme_Civ4_Control_Color_AltTextShadow;
+			.TitleShadow_Disable				=	.TitleShadow_Default;
+			.TitleShadow_Winoff					=	SF_CtrlTheme_Civ4_Control_Color_AltTextShadow;
+			.TitleShadow_WinoffDisable			=	.TitleShadow_Winoff;
+		}
+
+		with .Combine
+		{
+			.Title_Default_Dest					=	GFC_Control_Combine_Text_Default_Dest;
+			.Title_Default_Factor				=	GFC_Control_Combine_Text_Default_Factor;
+			.Title_Disable_Dest					=	GFC_Control_Combine_Text_Default_Dest;
+			.Title_Disable_Factor				=	GFC_Control_Combine_Text_Default_Factor;
+			.Title_Winoff_Dest					=	GFC_Control_Combine_Text_Default_Dest;
+			.Title_Winoff_Factor				=	GFC_Control_Combine_Text_Default_Factor;
+			.Title_WinoffDisable_Dest			=	GFC_Control_Combine_Text_Default_Dest;
+			.Title_WinoffDisable_Factor			=	GFC_Control_Combine_Text_Default_Factor;
+
+			.TitleShadow_Default_Dest			=	GFC_Control_Combine_TextShadow_Default_Dest;
+			.TitleShadow_Default_Factor			=	GFC_Control_Combine_TextShadow_Default_Factor;
+		}
+
+
+		with GFC_CtrlTheme_Bitmap_Control_Window_StyleId
+		{
+			with .TitleBar
+			{
+				.Normal				=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_Standard_TitleBar_Normal_Style);
+				.Maximized			=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_Standard_TitleBar_Maximized_Style);
+				.Minimized			=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_Standard_TitleBar_Minimized_Style);
+				.Collapsed			=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_Standard_TitleBar_Collapsed_Style);
+				.SysBorderCollapsed	=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_Standard_TitleBar_SysBorderCollapsed_Style);
+			}
+
+			with .InFrameBorder
+			{
+				.Normal				=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_Standard_InFrameBorder_Normal_Style);
+				.Maximized			=	GPropertyId(GFC_Control_EmptyBorder_Style);
+				.Minimized			=	GPropertyId(GFC_Control_EmptyBorder_Style);
+				.Collapsed			=	GPropertyId(GFC_Control_EmptyBorder_Style);
+				.SysBorderCollapsed	=	GPropertyId(GFC_Control_EmptyBorder_Style);
+			}
+
+			with .OuterBorder
+			{
+				//Note: These are set to empty style with a size margin in the style
+				.Normal				=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_Standard_OuterBorder_Normal_Style);
+				.Maximized			=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_Standard_OuterBorder_Max_Style);
+				.Minimized			=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_Standard_OuterBorder_Min_Style);
+				.Collapsed			=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_Standard_OuterBorder_Collapse_Style);
+			}
+		}
+		map SF_CtrlTheme_Civ4_Control				=	GFC_Control_DefaultWindow_Style;
+		map GFC_CtrlTheme_Bitmap_Control_Window		=	GFC_Control_DefaultWindow_Style;
+		map GFC_Control								=	GFC_Control_DefaultWindow_Style;
+	}
+
+	style SF_CtrlTheme_Civ4_Control_Window_StandardResize_Style
+	{
+		with GFC_CtrlTheme_Bitmap_Control_Window_StyleId
+		{
+		.InFrameBorder_Normal	=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_StandardResize_InFrameBorder_Normal_Style);
+		}
+		map SF_CtrlTheme_Civ4_Control				=	GFC_Control_StandardWindow_Style;
+		map GFC_CtrlTheme_Bitmap_Control_Window		=	GFC_Control_StandardWindow_Style;
+		map GFC_Control								=	GFC_Control_StandardWindow_Style;
+	}
+
+	//Standard is mapped to a window with a titlebar but NO RESIZE GRIP
+	GFC_Control_StandardWindow_Style = SF_CtrlTheme_Civ4_Control_Window_Standard_Style;
+
+	//Dialog is mapped to a window with a titlebar but WITH A RESIZE GRIP
+	GFC_Control_DialogWindow_Style = SF_CtrlTheme_Civ4_Control_Window_StandardResize_Style;
+
+
+//****** WINDOW NO TITLE
+
+	style SF_CtrlTheme_Civ4_Control_Window_NoTitleBar_Style
+	{
+		.Flag_NoTitleBar	= GFlags(GWindowCtrl, GFC_CF_WINDOW_NOTITLEBAR);
+
+		with GFC_CtrlTheme_Bitmap_Control_Window_StyleId
+		{
+			.InFrameBorder_Normal	=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_NoTitleBar_InFrameBorder_Normal_Style);
+			//Note: This is set to empty style with a size margin in the style
+			.OuterBorder_Normal		=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_NoTitleBar_OuterBorder_Normal_Style);
+		}
+		map SF_CtrlTheme_Civ4_Control				=	GFC_Control_StandardWindow_Style;
+		map GFC_CtrlTheme_Bitmap_Control_Window		=	GFC_Control_StandardWindow_Style;
+		map GFC_Control								=	GFC_Control_StandardWindow_Style;
+	}
+
+	style SF_CtrlTheme_Civ4_Control_Window_NoTitleBarResize_Style
+	{
+		.Flag_NoTitleBar	= GFlags(GWindowCtrl, GFC_CF_WINDOW_NOTITLEBAR);
+
+		with GFC_CtrlTheme_Bitmap_Control_Window_StyleId
+		{
+			.InFrameBorder_Normal	=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_NoTitleBarResize_InFrameBorder_Normal_Style);
+		}
+		map SF_CtrlTheme_Civ4_Control				=	SF_CtrlTheme_Civ4_Control_Window_NoTitleBar_Style;
+		map GFC_CtrlTheme_Bitmap_Control_Window		=	SF_CtrlTheme_Civ4_Control_Window_NoTitleBar_Style;
+		map GFC_Control								=	SF_CtrlTheme_Civ4_Control_Window_NoTitleBar_Style;
+	}
+
+
+//****** Tool Window ******
+
+	GFC_Control_ToolWindow_Style
+	{
+		.Font_Title								=	SF_CtrlTheme_Civ4_Control_Font_Size0_Bold;
+
+		with GFC_CtrlTheme_Bitmap_Control_Window_StyleId
+		{
+			with .TitleBar
+			{
+				.Normal						=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_Tool_TitleBar_Normal_Style);
+				.Maximized					=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_Tool_TitleBar_Maximized_Style);
+				.Minimized					=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_Tool_TitleBar_Collapsed_Style);
+				.Collapsed					=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_Tool_TitleBar_Collapsed_Style);
+
+				.SysBorderCollapsed			=	GPropertyId(GFC_Control_EmptyBorder_Style);
+			}
+
+			with .InFrameBorder
+			{
+				.Normal						=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_Tool_InFrameBorder_Normal_Style);
+				.Maximized					=	GPropertyId(GFC_Control_EmptyBorder_Style);
+				.Minimized					=	GPropertyId(GFC_Control_EmptyBorder_Style);
+				.Collapsed					=	GPropertyId(GFC_Control_EmptyBorder_Style);
+
+				.SysBorderCollapsed			=	GPropertyId(GFC_Control_EmptyBorder_Style);	
+			}
+			with .OuterBorder
+			{
+				.Normal						=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_Tool_OuterBorder_Normal_Style);
+				.Maximized					=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_Tool_OuterBorder_Max_Style);
+				.Minimized					=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_Tool_OuterBorder_Min_Style);
+				.Collapsed					=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_Tool_OuterBorder_Collapse_Style);
+			}
+		}
+		map SF_CtrlTheme_Civ4_Control				=	SF_CtrlTheme_Civ4_Control_Window_Standard_Style;
+		map GFC_CtrlTheme_Bitmap_Control_Window		=	SF_CtrlTheme_Civ4_Control_Window_Standard_Style;
+		map GFC_Control								=	SF_CtrlTheme_Civ4_Control_Window_Standard_Style;
+	}
+
+	style SF_CtrlTheme_Civ4_Control_Window_ToolResize_Style
+	{
+		with GFC_CtrlTheme_Bitmap_Control_Window_StyleId
+		{
+			.InFrameBorder_Normal	=	GPropertyId(SF_CtrlTheme_Civ4_Control_Window_ToolResize_InFrameBorder_Normal_Style);
+		}
+		map SF_CtrlTheme_Civ4_Control				=	GFC_Control_ToolWindow_Style;
+		map GFC_CtrlTheme_Bitmap_Control_Window		=	GFC_Control_ToolWindow_Style;
+		map GFC_Control								=	GFC_Control_ToolWindow_Style;
+	}
+} // end of GFC_Control_Window

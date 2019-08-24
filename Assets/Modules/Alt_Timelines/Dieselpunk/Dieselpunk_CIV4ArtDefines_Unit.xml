@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http:/www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Unit art path information -->
+<Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
+	<UnitArtInfos>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_GOLIATH_AIRSHIP</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/culture/goliath_airship.dds</Button>
+			<fScale>0.6</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>1</bActAsAir>
+			<NIF>Art/Units/Zeppelin_Carrier/zeppelin_long_fins.nif</NIF>
+			<KFM />
+			<SHADERNIF>Art/Units/Zeppelin_Carrier/zeppelin_long_fins.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/BearShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>0.65</fShadowScale>
+			</ShadowDef>
+			<iDamageStates>4</iDamageStates>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bSmoothMove>1</bSmoothMove>
+			<fBankRate>0.35</fBankRate>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+			<PatrolSound>AS3D_UN_FIGHTER_PATROL</PatrolSound>
+			<SelectionSound>AS3D_UN_FIGHTER_COMMAND_PATROL</SelectionSound>
+			<ActionSound>AS3D_UN_FIGHTER_COMMAND_PATROL</ActionSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_DRACHE_HELICOPTER</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/culture/drache_helicopter.dds</Button>
+			<fScale>0.36</fScale>
+			<fInterfaceScale>0.7</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/dieselpunk/drache/Drache.nif</NIF>
+			<KFM>Art/Units/dieselpunk/drache/Drache.kfm</KFM>
+			<SHADERNIF />
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/GunshipShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>0.75</fShadowScale>
+			</ShadowDef>
+			<iDamageStates>4</iDamageStates>
+			<fBattleDistance>0.5</fBattleDistance>
+			<fRangedDeathTime>0.12</fRangedDeathTime>
+			<bActAsRanged>1</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop>LOOPSTEP_GUNSHIP</AudioRunTypeLoop>
+				<AudioRunTypeEnd>ENDSTEP_GUNSHIP</AudioRunTypeEnd>
+			</AudioRunSounds>
+			<SelectionSound>AS3D_UN_GUNSHIP_FORT</SelectionSound>
+			<ActionSound>AS3D_UN_GUNSHIP_FORT</ActionSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_RAILROAD_ARTILLERY</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/culture/railroad_artillery.dds</Button>
+			<fScale>0.65</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/dieselpunk/rrarty/320mm.nif</NIF>
+			<KFM>Art/Units/dieselpunk/rrarty/320mm.kfm</KFM>
+			<SHADERNIF />
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/ArtilleryShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<TrailDefinition>
+				<Texture>Art/Shared/wheeltread.dds</Texture>
+				<fWidth>0.9</fWidth>
+				<fLength>180.0</fLength>
+				<fTaper>0.0</fTaper>
+				<fFadeStartTime>0.2</fFadeStartTime>
+				<fFadeFalloff>0.35</fFadeFalloff>
+			</TrailDefinition>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>1</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop>LOOPSTEP_ARTILLERY</AudioRunTypeLoop>
+				<AudioRunTypeEnd>ENDSTEP_ARTILLERY</AudioRunTypeEnd>
+			</AudioRunSounds>
+			<SelectionSound>AS3D_UN_ARTILLERY_FORT</SelectionSound>
+			<ActionSound>AS3D_UN_ARTILLERY_FORT</ActionSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_BIG_BERTHA</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/culture/big_bertha.dds</Button>
+			<fScale>0.65</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/dieselpunk/bigbertha/BigBertha.nif</NIF>
+			<KFM>Art/Units/dieselpunk/bigbertha/BigBertha.kfm</KFM>
+			<SHADERNIF />
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/ArtilleryShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<TrailDefinition>
+				<Texture>Art/Shared/wheeltread.dds</Texture>
+				<fWidth>0.9</fWidth>
+				<fLength>180.0</fLength>
+				<fTaper>0.0</fTaper>
+				<fFadeStartTime>0.2</fFadeStartTime>
+				<fFadeFalloff>0.35</fFadeFalloff>
+			</TrailDefinition>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>1</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop>LOOPSTEP_ARTILLERY</AudioRunTypeLoop>
+				<AudioRunTypeEnd>ENDSTEP_ARTILLERY</AudioRunTypeEnd>
+			</AudioRunSounds>
+			<SelectionSound>AS3D_UN_ARTILLERY_FORT</SelectionSound>
+			<ActionSound>AS3D_UN_ARTILLERY_FORT</ActionSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_TZAR_TANK</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/culture/tzar_tank.dds</Button>
+			<fScale>0.48</fScale>
+			<fInterfaceScale>0.9</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/dieselpunk/tzartank/TsarTank.nif</NIF>
+			<KFM>Art/Units/dieselpunk/tzartank/TsarTank.kfm</KFM>
+			<SHADERNIF />
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/TankShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<iDamageStates>4</iDamageStates>
+			<TrailDefinition>
+				<Texture>Art/Shared/tanktread.dds</Texture>
+				<fWidth>0.8</fWidth>
+				<fLength>180.0</fLength>
+				<fTaper>0.0</fTaper>
+				<fFadeStartTime>0.2</fFadeStartTime>
+				<fFadeFalloff>0.35</fFadeFalloff>
+			</TrailDefinition>
+			<fBattleDistance>0.5</fBattleDistance>
+			<fRangedDeathTime>0.12</fRangedDeathTime>
+			<bActAsRanged>1</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop>LOOPSTEP_TANK</AudioRunTypeLoop>
+				<AudioRunTypeEnd>ENDSTEP_TANK</AudioRunTypeEnd>
+			</AudioRunSounds>
+			<SelectionSound>AS3D_UN_TANK_FORT</SelectionSound>
+			<ActionSound>AS3D_UN_TANK_FORT</ActionSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_DOUBLE_BIPLANE</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/culture/double_biplane.dds</Button>
+			<fScale>0.44</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/dieselpunk/doublebiplane/AnatraVKh.nif</NIF>
+			<KFM>Art/Units/Fighter/Fighter.kfm</KFM>
+			<SHADERNIF />
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/FighterShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>0.75</fShadowScale>
+			</ShadowDef>
+			<iDamageStates>4</iDamageStates>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bSmoothMove>1</bSmoothMove>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+			<PatrolSound>AS3D_UN_FIGHTER_PATROL</PatrolSound>
+			<SelectionSound>AS3D_UN_FIGHTER_COMMAND_PATROL</SelectionSound>
+			<ActionSound>AS3D_UN_FIGHTER_COMMAND_PATROL</ActionSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_VERY_HEAVY_ARMOR</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/culture/superheavy_tank.dds</Button>
+			<fScale>0.48</fScale>
+			<fInterfaceScale>0.9</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>art/units/dieselpunk/superheavy_tank/p1000g5.nif</NIF>
+			<KFM>Art/Units/Unique/German/Panzer/Panzer.kfm</KFM>
+			<SHADERNIF />
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/TankShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<iDamageStates>4</iDamageStates>
+			<TrailDefinition>
+				<Texture>Art/Shared/tanktread.dds</Texture>
+				<fWidth>0.8</fWidth>
+				<fLength>180.0</fLength>
+				<fTaper>0.0</fTaper>
+				<fFadeStartTime>0.2</fFadeStartTime>
+				<fFadeFalloff>0.35</fFadeFalloff>
+			</TrailDefinition>
+			<fBattleDistance>0.5</fBattleDistance>
+			<fRangedDeathTime>0.12</fRangedDeathTime>
+			<bActAsRanged>1</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop>LOOPSTEP_TANK</AudioRunTypeLoop>
+				<AudioRunTypeEnd>ENDSTEP_TANK</AudioRunTypeEnd>
+			</AudioRunSounds>
+			<SelectionSound>AS3D_UN_TANK_FORT</SelectionSound>
+			<ActionSound>AS3D_UN_TANK_FORT</ActionSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_CHROMIUM_GUNMAN</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/culture/chromium_gunman.dds</Button>
+			<fScale>0.44</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>art/units/ChromiumGunman.nif</NIF>
+			<KFM>Art/Units/Rifleman/Rifleman.kfm</KFM>
+			<SHADERNIF>art/units/ChromiumGunman.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>0.9</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.05</fRangedDeathTime>
+			<bActAsRanged>1</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+			<SelectionSound>AS3D_UN_MECH_SERVO</SelectionSound>
+			<ActionSound>AS3D_UN_MECH_SERVO</ActionSound>
+		</UnitArtInfo>
+	</UnitArtInfos>
+</Civ4ArtDefines>

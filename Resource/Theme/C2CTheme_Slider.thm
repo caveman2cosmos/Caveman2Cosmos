@@ -1,0 +1,1285 @@
+/********************************************************************** 
+
+Filename	:	Civ4Theme_Slider.thm
+Content		:	Civ4 - GSlider control theme
+Created		:	May 1, 2005
+Authors		:	Sven Dixon
+
+Copyright	:	(c) 2005 Scaleform Corp. All Rights Reserved.
+
+**********************************************************************/
+
+
+// *** Main Slider control namespace 
+
+with GFC_Control_Slider
+{
+
+	GFC_Control_DefaultSlider_Style
+	{
+		// Child layout function
+		GFC_Control_Update_ChildLayout	=	GFC_CtrlTheme_Bitmap_Control_Slider_Update_ChildLayout;
+
+		GFC_Control_Renderer_Control	=	GFC_CtrlTheme_Bitmap_Control_Slider_Renderer_Control;
+
+		with .Renderer
+		{
+			.TickItem							=	GFC_CtrlTheme_Bitmap_Control_Slider_Renderer_TickItem;
+			.TextItem							=	GFC_CtrlTheme_Bitmap_Control_Slider_Renderer_TextItem;
+			.ImageItem							=	GFC_CtrlTheme_Bitmap_Control_Slider_Renderer_ImageItem;
+		}
+		with .Child
+		{	// Child controls
+			.VGrip								=	GFC_CtrlTheme_Bitmap_Control_Slider_Child_VGripButton;	
+			.HGrip								=	GFC_CtrlTheme_Bitmap_Control_Slider_Child_HGripButton;	
+			.TickItem							=	GFC_CtrlTheme_Bitmap_Control_Slider_Child_TickItem;
+			.ValueItem							=	GFC_CtrlTheme_Bitmap_Control_Slider_Child_ValueItem;
+			.TextItem							=	GFC_CtrlTheme_Bitmap_Control_Slider_Child_TextItem;
+			.ImageItem							=	GFC_CtrlTheme_Bitmap_Control_Slider_Child_ImageItem;
+			.HPopupMenu							=	GFC_CtrlTheme_Bitmap_Control_Slider_Child_HPopupMenu;	
+			.VPopupMenu							=	GFC_CtrlTheme_Bitmap_Control_Slider_Child_VPopupMenu;
+		}
+		with .StyleId
+		{	// Child styles
+			.VGrip								=	GPropertyId(GFC_Control_StandardButton_Style);	
+			.HGrip								=	GPropertyId(GFC_Control_StandardButton_Style);	
+			.HPopupMenu							=	GPropertyId(GFC_Control_StandardMenu_Style);	
+			.VPopupMenu							=	GPropertyId(GFC_Control_StandardMenu_Style);
+		}
+		with GFC_Control_Flag
+		{	// Base control flags
+			.Transparent						=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+			.SolidInner							=	0;	//GFlags(GCtrl, GFC_CF_SOLIDINNER);
+			.SolidBackground					=	0;	//GFlags(GCtrl, GFC_CF_SOLIDBACKGROUND);
+			.RegionClip							=	0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP);
+			.RegionClipParent					=	0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+			.NoExternalWindow					=	0;	//GFlags(GCtrl, GFC_CF_NOEXTERNALWINDOW);
+			.HitTest							=	GFlags(GCtrl, GFC_CF_HITTEST);
+			.TopLayer							=	0;	//GFlags(GCtrl, GFC_CF_TOPLAYER);
+			.TopLayerBitmap						=	0;	//GFlags(GCtrl, GFC_CF_TOPLAYERBITMAP);
+			.BottomLayerBitmap					=	0;	//GFlags(GCtrl, GFC_CF_BOTTOMLAYERBITMAP);
+			// Control flag change masks
+			.Mask_InvalidateControl				=	GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		}
+		with .Flag
+		{	// Slider flags
+			.Discontinuous						=	0;	//GFlags(GSliderCtrl, GFC_SLIDER_ITEM_REPEAT);
+			.NoInnerFill						=	GFlags(GSliderCtrl, GFC_CF_SLIDER_NOINNERFILL);
+			.TrackStepping						=	0;	//GFlags(GSliderCtrl, GFC_CF_SLIDER_TRACKSTEPPING);
+			.HTrack_FillStyle					=	0;	//GFlags(GSliderCtrl);
+			.VTrack_FillStyle					=	0;	//GFlags(GSliderCtrl);
+			.HTrack_HAlign						=	GFlags(GSliderCtrl, GFC_CF_SLIDER_LEFT);
+			.HTrack_VAlign						=	GFlags(GSliderCtrl, GFC_CF_SLIDER_VCENTER);
+			.VTrack_HAlign						=	GFlags(GSliderCtrl, GFC_CF_SLIDER_HCENTER);
+			.VTrack_VAlign						=	GFlags(GSliderCtrl, GFC_CF_SLIDER_TOP);
+
+			.Items_Recalc						=	GFlags(GSliderCtrl, GFC_CF_SLIDER_ITEMS_RECALC);
+			.HGrip_Align						=	GFlags(GSliderCtrl, GFC_CF_SLIDER_GRIP_CENTER);
+			.VGrip_Align						=	GFlags(GSliderCtrl, GFC_CF_SLIDER_GRIP_CENTER);
+
+			.HItems_Align						=	GFlags(GSliderCtrl, GFC_CF_SLIDER_ITEMS_TOPLEFT);
+			.VItems_Align						=	GFlags(GSliderCtrl, GFC_CF_SLIDER_ITEMS_TOPLEFT);
+
+			.SnapTo_OnDrop						=	0;	//GFlags(GSliderCtrl, GFC_CF_SLIDER_SNAPTO_ONDROP);
+			.SnapTo_OnDrag						=	0;	//GFlags(GSliderCtrl, GFC_CF_SLIDER_SNAPTO_ONDRAG);
+		}
+		with .Size
+		{
+			.LineUnits							=	1;
+			.PageUnits							=	10;
+
+			.SnapToValue						=	5;
+			.SnapToPercent 						=	10;
+			// Default control sizes
+			.HDefault							=	GSize(140,30);
+			.VDefault							=	GSize(30,140);
+
+			.HMargin							=	GRectMargin(0,0,0,0);
+			.VMargin							=	GRectMargin(0,0,0,0);
+			// Grip sizes
+			.HGrip								=	GSize(14,28);
+			.VGrip								=	GSize(28,14);
+			.HGripOffset						=	GPoint(0,0);
+			.VGripOffset						=	GPoint(0,0);
+			.HGripInset							=	GRectMargin(0,0,2,0);
+			.VGripInset							=	GRectMargin(0,0,0,2);
+			// Item set offset (number of units from track)
+			.HItemsOffset						=	GPoint(0,11);
+			.VItemsOffset						=	GPoint(11,0);
+			// Tick item size
+			.HTickItem							=	GSize(2,10);
+			.VTickItem							=	GSize(10,2);
+			.HTickItemMinor						=	GSize(2,5);
+			.VTickItemMinor						=	GSize(5,2);
+			// Tick item margin
+			.HTickItemMargin					=	GRectMargin(6,0,6,0);
+			.VTickItemMargin					=	GRectMargin(0,0,0,0);
+			// Individual item margin
+			.HItemMargin						=	GRectMargin(4,0,4,0);
+			.VItemMargin						=	GRectMargin(4,4,4,4);
+			// Track attributes
+			.HTrackThickness					=	12;
+			.VTrackThickness					=	12;
+			.HTrackMargin						=	GRectMargin(0,0,0,0);
+			.VTrackMargin						=	GRectMargin(0,0,0,0);
+			.HTrackBorderMargin					=	GRectMargin(-4,0,-4,0);
+			.VTrackBorderMargin					=	GRectMargin(0,0,0,0);
+			.HTrackGripMargin					=	GRectMargin(0,0,0,0);
+			.VTrackGripMargin					=	GRectMargin(0,0,0,0);
+		}
+		with .Delay
+		{
+			.TrackStepping_First				=	300;
+			.TrackStepping_Repeat				=	100;
+		}
+		with .Color
+		{
+			.Inner								=	GFC_Control_Color_Surface;
+			.Fill								=	SF_CtrlTheme_Civ4_Control_Color_SliderFill;
+
+			.Text_Default						=	GFC_Control_Color_Text_Default;
+			.Text_Disable						=	GFC_Control_Color_Text_Disable;
+			.Text_Winoff						=	.Text_Default;
+			.Text_WinoffDisable					=	.Text_Disable;
+			.TextShadow_Default					=	GFC_Control_Color_TextShadow_Default;
+			.TextShadow_Disable					=	GFC_Control_Color_TextShadow_Disable;
+			.TextShadow_Winoff					=	.TextShadow_Default;
+			.TextShadow_WinoffDisable			=	.TextShadow_Disable;
+
+			.Tick_Default						=	GFC_Control_Color_Text_Default;
+			.Tick_Disable						=	GFC_Control_Color_Text_Disable;
+			.Tick_Winoff						=	.Tick_Default;
+			.Tick_WinoffDisable					=	.Tick_Disable;
+
+			.Image_Default						=	GFC_Control_Color_Image_Default;
+			.Image_Disable						=	GFC_Control_Color_Image_Disable;
+			.Image_Winoff						=	.Image_Default;
+			.Image_WinoffDisable				=	.Image_Disable;
+		}
+		with .Combine
+		{
+			.Inner								=	GFC_Control_Combine_Surface;
+
+			.Text_Default_Dest					=	GFC_Control_Combine_Text_Default_Dest;
+			.Text_Default_Factor				=	GFC_Control_Combine_Text_Default_Factor;
+			.Text_Disable_Dest					=	GFC_Control_Combine_Text_Disable_Dest;
+			.Text_Disable_Factor				=	GFC_Control_Combine_Text_Disable_Factor;
+			.TextShadow_Default_Dest			=	GFC_Control_Combine_TextShadow_Default_Dest;
+			.TextShadow_Default_Factor			=	GFC_Control_Combine_TextShadow_Default_Factor;
+			.TextShadow_Disable_Dest			=	GFC_Control_Combine_TextShadow_Disable_Dest;
+			.TextShadow_Disable_Factor			=	GFC_Control_Combine_TextShadow_Disable_Factor;
+
+			.Image_Default_Dest					=	GFC_Control_Combine_Image_Default_Dest;
+			.Image_Default_Factor				=	GFC_Control_Combine_Image_Default_Factor;
+			.Image_Disable_Dest					=	GFC_Control_Combine_Image_Disable_Dest;
+			.Image_Disable_Factor				=	GFC_Control_Combine_Image_Disable_Factor;
+
+			.Tick_Default						=	GFC_Control_Combine_Text_Default_Dest;
+			.Tick_Disable						=	GFC_Control_Combine_Text_Default_Factor;
+			.Tick_Winoff						=	GFC_Control_Combine_Text_Disable_Dest;
+			.Tick_WinoffDisable					=	GFC_Control_Combine_Text_Disable_Factor;
+		}
+		with .Cursor
+		{
+			.HTrackLeft							=	GFC_Draw_Cursor_ReverseArrow;
+			.HTrackRight						=	GFC_Draw_Cursor_ReverseArrow;
+			.VTrackTop							=	GFC_Control_Cursor_Arrow;
+			.VTrackDown							=	GFC_Control_Cursor_Arrow;
+		}
+		.Font_Text							=	SF_CtrlTheme_Civ4_Control_Font_Size2_Normal;
+
+
+		// ******* Initialize all the Bitmap theme Slider properties to avoid inheritance problems
+		with GFC_CtrlTheme_Bitmap_Control_Slider
+		{
+			with .Skin
+			{
+				with .HTrack
+				{
+					.Border_Default 				=	0;
+					.Border_Disable 				=	0;
+					.Border_Focus					=	0;
+					.Border_FocusDisable			=	0;
+					.Border_Winoff 					=	0;
+					.Border_WinoffDisable 			=	0;
+					.Inner_Default 					=	0;
+					.Inner_Rollover 				=	0;
+					.Inner_Press 					=	0;
+					.Inner_Disable 					=	0;
+					.Inner_Focus					=	0;
+					.Inner_FocusRollover			=	0;
+					.Inner_FocusPress				=	0;
+					.Inner_FocusDisable				=	0;
+					.Inner_Winoff 					=	0;
+					.Inner_WinoffRollover 			=	0;
+					.Inner_WinoffDisable 			=	0;
+					.Fill_Default 					=	0;
+					.Fill_Rollover 					=	0;
+					.Fill_Press 					=	0;
+					.Fill_Disable 					=	0;
+					.Fill_Focus						=	0;
+					.Fill_FocusRollover				=	0;
+					.Fill_FocusPress				=	0;
+					.Fill_FocusDisable				=	0;
+					.Fill_Winoff 					=	0;
+					.Fill_WinoffRollover 			=	0;
+					.Fill_WinoffDisable 			=	0;
+					.FillColor_Default 				=	0;
+					.FillColor_Rollover 			=	0;
+					.FillColor_Press 				=	0;
+					.FillColor_Disable 				=	0;
+					.FillColor_Focus				=	0;
+					.FillColor_FocusRollover		=	0;
+					.FillColor_FocusPress			=	0;
+					.FillColor_FocusDisable			=	0;
+					.FillColor_Winoff 				=	0;
+					.FillColor_WinoffRollover 		=	0;
+					.FillColor_WinoffDisable 		=	0;
+				}
+				with .VTrack
+				{
+					.Border_Default 				=	0;
+					.Border_Disable 				=	0;
+					.Border_Focus					=	0;
+					.Border_FocusDisable			=	0;
+					.Border_Winoff 					=	0;
+					.Border_WinoffDisable 			=	0;
+					.Inner_Default 					=	0;
+					.Inner_Rollover 				=	0;
+					.Inner_Press 					=	0;
+					.Inner_Disable 					=	0;
+					.Inner_Focus					=	0;
+					.Inner_FocusRollover			=	0;
+					.Inner_FocusPress				=	0;
+					.Inner_FocusDisable				=	0;
+					.Inner_Winoff 					=	0;
+					.Inner_WinoffRollover 			=	0;
+					.Inner_WinoffDisable 			=	0;
+					.Fill_Default 					=	0;
+					.Fill_Rollover 					=	0;
+					.Fill_Press 					=	0;
+					.Fill_Disable 					=	0;
+					.Fill_Focus						=	0;
+					.Fill_FocusRollover				=	0;
+					.Fill_FocusPress				=	0;
+					.Fill_FocusDisable				=	0;
+					.Fill_Winoff 					=	0;
+					.Fill_WinoffRollover 			=	0;
+					.Fill_WinoffDisable 			=	0;
+					.FillColor_Default 				=	0;
+					.FillColor_Rollover 			=	0;
+					.FillColor_Press 				=	0;
+					.FillColor_Disable 				=	0;
+					.FillColor_Focus				=	0;
+					.FillColor_FocusRollover		=	0;
+					.FillColor_FocusPress			=	0;
+					.FillColor_FocusDisable			=	0;
+					.FillColor_Winoff 				=	0;
+					.FillColor_WinoffRollover 		=	0;
+					.FillColor_WinoffDisable 		=	0;
+				}
+				with .HTickItem
+				{	// *** Slider Tick item skin
+					.Default						=	0;
+					.Toggle							=	0;
+					.Rollover						=	0;
+					.Disable						=	0;
+					.Winoff							=	0;
+					.WinoffToggle					=	0;
+					.WinoffRollover					=	0;
+					.WinoffDisable					=	0;
+				}
+				with .VTickItem
+				{
+					.Default						=	0;
+					.Toggle							=	0;
+					.Rollover						=	0;
+					.Disable						=	0;
+					.Winoff							=	0;
+					.WinoffToggle					=	0;
+					.WinoffRollover					=	0;
+					.WinoffDisable					=	0;
+				}
+			}
+		}
+		map GFC_Control			=	GFC_Control_DefaultControl_Style;
+	}	// end GFC_Control_DefaultSlider_Style
+
+
+	// ** Grips
+
+	// Horizontal grip - button style
+	style SF_CtrlTheme_Civ4_Control_Slider_HGripButton_Normal_Style
+	{
+		GFC_Control_Renderer_Control			=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+													
+		GFC_Control_Flag_Mask_InvalidateControl	=	GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_WINDOWACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT);
+
+		GFC_Control_Button_Flag_TrackedPress	=	GFlags(GButtonCtrl, GFC_CF_BUTTON_TRACKEDPRESS);
+		GFC_Control_Button_Flag_DownOffset		=	GFlags(GButtonCtrl);
+	
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 0, 0);
+					Margin			= GRectMargin(6,13,6,13);
+				}
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate,Modulate);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 0, 4);
+					Margin			= GRectMargin(6,13,6,13);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 0, 1);				
+				}
+				layer {}
+			}
+			.Press
+			{
+				layer { Inherit = .Default; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 0, 2);				
+				}
+				layer {}
+			}
+			.Disable
+			{
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 0, 3);
+					Margin			= GRectMargin(6,13,6,13);
+				}
+			}
+			.Inactive
+			{
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 0, 0);
+					Margin			= GRectMargin(6,13,6,13);
+				}
+			}
+			.InactiveRollover
+			{
+				layer { Inherit = .Inactive; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 0, 1);				
+				}
+			}
+			.InactivePress
+			{
+				layer { Inherit = .Inactive; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 0, 2);				
+				}
+			}
+			.InactiveDisable
+			{
+				layer { Inherit = .Inactive; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 0, 3);				
+				}
+			}
+		}
+
+		map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+		map GFC_Control								=	GFC_Control_DefaultButton_Style;
+	}
+
+	// Horizontal Pointed Up - button style
+	style SF_CtrlTheme_Civ4_Control_Slider_HGripButton_PointedUp_Style
+	{
+		GFC_Control_Renderer_Control				=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+													
+		GFC_Control_Flag_Mask_InvalidateControl			=	GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_WINDOWACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT);
+		
+		GFC_Control_Button_Flag_TrackedPress		=	GFlags(GButtonCtrl, GFC_CF_BUTTON_TRACKEDPRESS);
+		GFC_Control_Button_Flag_DownOffset			=	0;
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 2, 0);
+					Margin			= GRectMargin(6,13,6,13);
+				}
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate,Modulate);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 2, 4);
+					Margin			= GRectMargin(6,13,6,13);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 2, 1);				
+				}
+				layer {}
+			}
+			.Press
+			{
+				layer { Inherit = .Default; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 2, 2);				
+				}
+				layer {}
+			}
+			.Disable
+			{
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 2, 3);
+					Margin			= GRectMargin(6,13,6,13);
+				}
+			}
+			.Inactive
+			{
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 2, 0);
+					Margin			= GRectMargin(6,13,6,13);
+				}
+			}
+			.InactiveRollover
+			{
+				layer { Inherit = .Inactive; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 2, 1);				
+				}
+			}
+			.InactivePress
+			{
+				layer { Inherit = .Inactive; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 2, 2);				
+				}
+			}
+			.InactiveDisable
+			{
+				layer { Inherit = .Inactive; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 2, 3);				
+				}
+			}
+		}
+
+		map GFC_CtrlTheme_Bitmap_Control_Button		= GFC_Control_DefaultButton_Style;
+		map GFC_Control								= GFC_Control_DefaultButton_Style;
+	}
+
+	// Horizontal Pointed Down - button style
+	style SF_CtrlTheme_Civ4_Control_Slider_HGripButton_PointedDown_Style
+	{
+		GFC_Control_Renderer_Control				=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+													
+		GFC_Control_Flag_Mask_InvalidateControl			=	GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_WINDOWACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT);
+		
+		GFC_Control_Button_Flag_TrackedPress		=	GFlags(GButtonCtrl, GFC_CF_BUTTON_TRACKEDPRESS);
+		GFC_Control_Button_Flag_DownOffset			=	0;
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 1, 0);
+					Margin			= GRectMargin(6,13,6,13);
+				}
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate,Modulate);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 1, 4);
+					Margin			= GRectMargin(6,13,6,13);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 1, 1);				
+				}
+				layer {}
+			}
+			.Press
+			{
+				layer { Inherit = .Default; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 1, 2);				
+				}
+				layer {}
+			}
+			.Disable
+			{
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 1, 3);
+					Margin			= GRectMargin(6,13,6,13);
+				}
+			}
+			.Inactive
+			{
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 1, 0);
+					Margin			= GRectMargin(6,13,6,13);
+				}
+			}
+			.InactiveRollover
+			{
+				layer { Inherit = .Inactive; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 1, 1);				
+				}
+			}
+			.InactivePress
+			{
+				layer { Inherit = .Inactive; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 1, 2);				
+				}
+			}
+			.InactiveDisable
+			{
+				layer { Inherit = .Inactive; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_h.tga",HVGrid, 3, 5, 1, 3);				
+				}
+			}
+		}
+
+		map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+		map GFC_Control								=	GFC_Control_DefaultButton_Style;
+	}
+
+
+	// Vertical grip
+	style SF_CtrlTheme_Civ4_Control_Slider_VGripButton_Normal_Style
+	{
+		GFC_Control_Renderer_Control			=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+													
+		GFC_Control_Flag_Mask_InvalidateControl	=	GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_WINDOWACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT);
+
+		GFC_Control_Button_Flag_TrackedPress	=	GFlags(GButtonCtrl, GFC_CF_BUTTON_TRACKEDPRESS);
+		GFC_Control_Button_Flag_DownOffset		=	GFlags(GButtonCtrl);
+	
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 0, 0);
+					Margin			= GRectMargin(13,6,13,6);
+				}
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate,Modulate);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 0, 4);
+					Margin			= GRectMargin(13,6,13,6);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 0, 1);				
+				}
+				layer {}
+			}
+			.Press
+			{
+				layer { Inherit = .Default; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 0, 2);				
+				}
+				layer {}
+			}
+			.Disable
+			{
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 0, 3);
+					Margin			= GRectMargin(13,6,13,6);
+				}
+			}
+			.Inactive
+			{
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 0, 0);
+					Margin			= GRectMargin(13,6,13,6);
+				}
+			}
+			.InactiveRollover
+			{
+				layer { Inherit = .Inactive; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 0, 1);				
+				}
+			}
+			.InactivePress
+			{
+				layer { Inherit = .Inactive; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 0, 2);				
+				}
+			}
+			.InactiveDisable
+			{
+				layer { Inherit = .Inactive; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 0, 3);				
+				}
+			}
+		}
+
+		map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+		map GFC_Control								=	GFC_Control_DefaultButton_Style;
+	}
+
+	// Vertical Pointed Left - button style
+	style SF_CtrlTheme_Civ4_Control_Slider_VGripButton_PointedLeft_Style
+	{
+		GFC_Control_Renderer_Control				=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+													
+		GFC_Control_Flag_Mask_InvalidateControl			=	GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_WINDOWACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT);
+		
+		GFC_Control_Button_Flag_TrackedPress		=	GFlags(GButtonCtrl, GFC_CF_BUTTON_TRACKEDPRESS);
+		GFC_Control_Button_Flag_DownOffset			=	0;
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 2, 0);
+					Margin			= GRectMargin(13,6,13,6);
+				}
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate,Modulate);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 2, 4);
+					Margin			= GRectMargin(13,6,13,6);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 2, 1);				
+				}
+				layer {}
+			}
+			.Press
+			{
+				layer { Inherit = .Default; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 2, 2);				
+				}
+				layer {}
+			}
+			.Disable
+			{
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 2, 3);
+					Margin			= GRectMargin(13,6,13,6);
+				}
+			}
+			.Inactive
+			{
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 2, 0);
+					Margin			= GRectMargin(13,6,13,6);
+				}
+			}
+			.InactiveRollover
+			{
+				layer { Inherit = .Inactive; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 2, 1);				
+				}
+			}
+			.InactivePress
+			{
+				layer { Inherit = .Inactive; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 2, 2);				
+				}
+			}
+			.InactiveDisable
+			{
+				layer { Inherit = .Inactive; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 2, 3);				
+				}
+			}
+		}
+
+		map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+		map GFC_Control								=	GFC_Control_DefaultButton_Style;
+	}
+
+
+	// Vertical Pointed Right - button style
+	style SF_CtrlTheme_Civ4_Control_Slider_VGripButton_PointedRight_Style
+	{
+		GFC_Control_Renderer_Control				=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+													
+		GFC_Control_Flag_Mask_InvalidateControl			=	GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_WINDOWACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT);
+		
+		GFC_Control_Button_Flag_TrackedPress		=	GFlags(GButtonCtrl, GFC_CF_BUTTON_TRACKEDPRESS);
+		GFC_Control_Button_Flag_DownOffset			=	0;
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 1, 0);
+					Margin			= GRectMargin(13,6,13,6);
+				}
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate,Modulate);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 1, 4);
+					Margin			= GRectMargin(13,6,13,6);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 1, 1);				
+				}
+				layer {}
+			}
+			.Press
+			{
+				layer { Inherit = .Default; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 1, 2);				
+				}
+				layer {}
+			}
+			.Disable
+			{
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 1, 3);
+					Margin			= GRectMargin(13,6,13,6);
+				}
+			}
+			.Inactive
+			{
+				layer 
+				{
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 1, 0);
+					Margin			= GRectMargin(13,6,13,6);
+				}
+			}
+			.InactiveRollover
+			{
+				layer { Inherit = .Inactive; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 1, 1);				
+				}
+			}
+			.InactivePress
+			{
+				layer { Inherit = .Inactive; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 1, 2);				
+				}
+			}
+			.InactiveDisable
+			{
+				layer { Inherit = .Inactive; }
+				layer {
+					Image			= GBitmap("../../../../Resource/Civ4/slider_grip_v.tga",HVGrid, 3, 5, 1, 3);				
+				}
+			}
+		}
+
+		map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+		map GFC_Control								=	GFC_Control_DefaultButton_Style;
+	}
+
+
+
+	// *** Normal slider style
+
+	GFC_Control_StandardSlider_Style
+	{
+		
+		// Child styles
+		with .StyleId
+		{
+			.VGrip					=	GPropertyId(SF_CtrlTheme_Civ4_Control_Slider_VGripButton_Normal_Style);	
+			.HGrip					=	GPropertyId(SF_CtrlTheme_Civ4_Control_Slider_HGripButton_Normal_Style);	
+		}
+
+		
+		// ** DragGrip, Track and Item Skins
+
+		with GFC_CtrlTheme_Bitmap_Control_Slider_Skin
+		{		
+			
+			// ***** Slider Track skin
+			
+			with .HTrack
+			{
+				with .Border
+				{
+					.Default
+					{
+						layer {	}
+					}						
+					.Disable				=	.Default;
+					.Focus					=	.Default;
+					.FocusDisable			=	.Disable;
+					.Winoff					=	.Default;
+					.WinoffDisable			=	.Disable;
+				}
+			
+				with .Inner
+				{
+					.Default
+					{
+						layer {
+							LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+							DestCombine		=	GColorCombine(BlendSource,Disable);
+							Image			=	GBitmap("../../../../Resource/Civ4/slider_track_h.tga",HVGrid, 1, 2, 0, 0);
+							Margin			=	GRectMargin(5,5,5,5);
+						}					
+					}						
+					.Rollover				=	.Default;
+					.Press					=	.Default;
+					.Disable
+					{
+						layer {
+							LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+							DestCombine		=	GColorCombine(BlendSource,Disable);
+							Image			=	GBitmap("../../../../Resource/Civ4/slider_track_h.tga",HVGrid, 1, 2, 0, 1);
+							Margin			=	GRectMargin(5,5,5,5);
+						}					
+					}							
+					.Focus					=	.Default;
+					.FocusRollover			=	.Rollover;
+					.FocusPress				=	.Press;
+					.FocusDisable			=	.Disable;
+					.Winoff					=	.Default;
+					.WinoffRollover			=	.Rollover;
+					.WinoffDisable			=	.Disable;
+				}
+			
+				with .Fill
+				{
+					.Default
+					{
+						layer {
+							LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+							DestCombine		=	GColorCombine(BlendSource,Disable);
+							Image			=	GBitmap("../../../../Resource/Civ4/slider_track_h.tga",HVGrid, 1, 2, 0, 0);
+							Margin			=	GRectMargin(5,5,5,5);
+						}
+						layer {
+							LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+							DestCombine		=	GColorCombine(BlendSource,Disable);
+							FactorCombine	=	GColorCombine(Modulate,Modulate);
+							FactorColor		=	GFC_Control_Slider_Color_Fill;
+							Image			=	GBitmap("../../../../Resource/Civ4/slider_fill.tga",HVGrid, 1, 1, 0, 0);
+							Margin			=	GRectMargin(1,0,1,0);
+							Indent			=	GRectMargin(3,4,3,4);
+						}					
+					}						
+					.Rollover				=	.Default;
+					.Press					=	.Default;
+					.Disable
+					{
+						layer { Inherit = .Default; }
+						layer {
+							Image			=	GBitmap("../../../../Resource/Civ4/slider_track_h.tga",HVGrid, 1, 2, 0, 1);						
+						}
+						layer {
+							FactorColor		=	SF_CtrlTheme_Civ4_Control_Color_DisableSliderFill;
+						}					
+					}	
+					.Focus					=	.Default;
+					.FocusRollover			=	.Rollover;
+					.FocusPress				=	.Press;
+					.FocusDisable			=	.Disable;
+					.Winoff					=	.Default;
+					.WinoffRollover			=	.Rollover;
+					.WinoffDisable			=	.Disable;
+				}
+							
+				with .FillColor
+				{
+					.Default
+					{
+						layer {
+							LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+							DestCombine		=	GColorCombine(BlendSource,Disable);
+							Image			=	GBitmap("../../../../Resource/Civ4/slider_track_h.tga",HVGrid, 1, 2, 0, 0);
+							Margin			=	GRectMargin(5,5,5,5);
+						}
+						layer {
+							LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+							DestCombine		=	GColorCombine(BlendSource,Disable);
+							FactorCombine	=	GColorCombine(Modulate,Modulate);
+							FactorColor		=	GFC_Control_Slider_Color_Fill;
+							Image			=	GBitmap("../../../../Resource/Civ4/slider_fill.tga",HVGrid, 1, 1, 0, 0);
+							Margin			=	GRectMargin(1,0,1,0);
+							Indent			=	GRectMargin(3,4,3,4);
+						}					
+					}							
+					.Rollover				=	.Default;		
+					.Press					=	.Default;		
+					.Disable
+					{
+						layer { Inherit = .Default; }
+						layer {
+							Image			=	GBitmap("../../../../Resource/Civ4/slider_track_h.tga",HVGrid, 1, 2, 0, 1);						
+						}
+						layer {
+							FactorColor		=	SF_CtrlTheme_Civ4_Control_Color_DisableSliderFill;
+						}					
+					}	
+					.Focus					=	.Default;
+					.FocusRollover			=	.Rollover;
+					.FocusPress				=	.Press;
+					.FocusDisable			=	.Disable;							
+					.Winoff					=	.Default;
+					.WinoffRollover			=	.Rollover;
+					.WinoffDisable			=	.Disable;
+				}
+			}
+			
+			with .VTrack
+			{
+				with .Border
+				{
+					.Default
+					{
+						layer {	}
+					}						
+					.Disable				=	.Default;
+					.Focus					=	.Default;
+					.FocusDisable			=	.Disable;
+					.Winoff					=	.Default;
+					.WinoffDisable			=	.Disable;
+				}
+			
+				with .Inner
+				{
+					.Default
+					{
+						layer {
+							LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+							DestCombine		=	GColorCombine(BlendSource,Disable);
+							Image			=	GBitmap("../../../../Resource/Civ4/slider_track_v.tga",HVGrid, 1, 2, 0, 0);
+							Margin			=	GRectMargin(5,5,5,5);
+						}					
+					}						
+					.Rollover				=	.Default;
+					.Press					=	.Default;
+					.Disable
+					{
+						layer {
+							LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+							DestCombine		=	GColorCombine(BlendSource,Disable);
+							Image			=	GBitmap("../../../../Resource/Civ4/slider_track_v.tga",HVGrid, 1, 2, 0, 1);
+							Margin			=	GRectMargin(5,5,5,5);
+						}					
+					}							
+					.Focus					=	.Default;
+					.FocusRollover			=	.Rollover;
+					.FocusPress				=	.Press;
+					.FocusDisable			=	.Disable;
+					.Winoff					=	.Default;
+					.WinoffRollover			=	.Rollover;
+					.WinoffDisable			=	.Disable;
+				}
+			
+				with .Fill
+				{
+					.Default
+					{
+						layer {
+							LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+							DestCombine		=	GColorCombine(BlendSource,Disable);
+							Image			=	GBitmap("../../../../Resource/Civ4/slider_track_v.tga",HVGrid, 1, 2, 0, 0);
+							Margin			=	GRectMargin(5,5,5,5);
+						}
+						layer {
+							LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+							DestCombine		=	GColorCombine(BlendSource,Disable);
+							FactorCombine	=	GColorCombine(Modulate,Modulate);
+							FactorColor		=	GFC_Control_Slider_Color_Fill;
+							Image			=	GBitmap("../../../../Resource/Civ4/slider_fill.tga",HVGrid, 1, 1, 0, 0);
+							Margin			=	GRectMargin(0,1,0,1);
+							Indent			=	GRectMargin(4,3,4,3);
+						}					
+					}						
+					.Rollover				=	.Default;
+					.Press					=	.Default;
+					.Disable
+					{
+						layer { Inherit = .Default; }
+						layer {
+							Image			=	GBitmap("../../../../Resource/Civ4/slider_track_v.tga",HVGrid, 1, 2, 0, 1);						
+						}
+						layer {
+							FactorColor		=	SF_CtrlTheme_Civ4_Control_Color_DisableSliderFill;
+						}					
+					}	
+					.Focus					=	.Default;
+					.FocusRollover			=	.Rollover;
+					.FocusPress				=	.Press;
+					.FocusDisable			=	.Disable;
+					.Winoff					=	.Default;
+					.WinoffRollover			=	.Rollover;
+					.WinoffDisable			=	.Disable;
+				}
+							
+				with .FillColor
+				{
+					.Default
+					{
+						layer {
+							LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+							DestCombine		=	GColorCombine(BlendSource,Disable);
+							Image			=	GBitmap("../../../../Resource/Civ4/slider_track_v.tga",HVGrid, 1, 2, 0, 0);
+							Margin			=	GRectMargin(5,5,5,5);
+						}
+						layer {
+							LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+							DestCombine		=	GColorCombine(BlendSource,Disable);
+							FactorCombine	=	GColorCombine(Modulate,Modulate);
+							FactorColor		=	GFC_Control_Slider_Color_Fill;
+							Image			=	GBitmap("../../../../Resource/Civ4/slider_fill.tga",HVGrid, 1, 1, 0, 0);
+							Margin			=	GRectMargin(0,1,0,1);
+							Indent			=	GRectMargin(4,3,4,3);
+						}					
+					}							
+					.Rollover				=	.Default;		
+					.Press					=	.Default;		
+					.Disable
+					{
+						layer { Inherit = .Default; }
+						layer {
+							Image			=	GBitmap("../../../../Resource/Civ4/slider_track_v.tga",HVGrid, 1, 2, 0, 1);						
+						}
+						layer {
+							FactorColor		=	SF_CtrlTheme_Civ4_Control_Color_DisableSliderFill;
+						}					
+					}	
+					.Focus					=	.Default;
+					.FocusRollover			=	.Rollover;
+					.FocusPress				=	.Press;
+					.FocusDisable			=	.Disable;							
+					.Winoff					=	.Default;
+					.WinoffRollover			=	.Rollover;
+					.WinoffDisable			=	.Disable;
+				}
+			}		
+
+			// *** Slider Tick item skin
+			with .HTickItem
+			{
+				.Default
+				{
+					layer 
+					{
+						LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						DestCombine		=	GColorCombine(BlendSource,Disable);
+						Image			=	GBitmap("../../../../Resource/Civ4/slider_tick_h.tga",Horizontal, 2, 0);
+						Margin			=	GRectMargin(0,1,0,1);
+					}					
+				}						
+				.Toggle						
+				{						
+					layer					
+					{					
+						LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						DestCombine		=	GColorCombine(BlendSource,Disable);
+						Image			=	GBitmap("../../../../Resource/Civ4/slider_tick_h.tga",Horizontal, 2, 1);
+						Margin			=	GRectMargin(0,0,0,0);
+					}
+				}
+				.Rollover 				=	.Toggle;
+				.Disable 				=	.Default;
+				.Winoff 				=	.Default;
+				.WinoffToggle			=	.Toggle;
+				.WinoffRollover 		=	.Rollover;
+				.WinoffDisable 			=	.Default;
+			}									
+			with .VTickItem							
+			{									
+				.Default
+				{
+					layer 
+					{
+						LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						DestCombine		=	GColorCombine(BlendSource,Disable);
+						Image			=	GBitmap("../../../../Resource/Civ4/slider_tick_v.tga",Vertical, 2, 0);
+						Margin			=	GRectMargin(1,0,1,0);
+					}					
+				}						
+				.Toggle						
+				{						
+					layer					
+					{					
+						LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+						DestCombine		=	GColorCombine(BlendSource,Disable);
+						Image			=	GBitmap("../../../../Resource/Civ4/slider_tick_v.tga",Vertical, 2, 1);
+						Margin			=	GRectMargin(1,0,1,0);
+					}
+				}
+				.Rollover 				=	.Toggle;
+				.Disable 				=	.Default;
+				.Winoff 				=	.Default;
+				.WinoffToggle			=	.Toggle;
+				.WinoffRollover 		=	.Rollover;
+				.WinoffDisable 			=	.Default;
+			}
+
+		} //  end of GFC_CtrlTheme_Bitmap_Control_Slider_Skin
+
+		map SF_CtrlTheme_Civ4_Control_Slider					=	GFC_Control_DefaultSlider_Style;
+		map GFC_CtrlTheme_Bitmap_Control_Slider					=	GFC_Control_DefaultSlider_Style;
+		map GFC_Control											=	GFC_Control_DefaultSlider_Style;
+	}
+	
+
+
+	GFC_Control_PointedUpSlider_Style
+	{
+		with .Flag
+		{
+			.HGrip_Align			=	GFlags(GSliderCtrl, GFC_CF_SLIDER_GRIP_CENTER);
+			.VGrip_Align			=	GFlags(GSliderCtrl, GFC_CF_SLIDER_GRIP_CENTER);
+			.HItems_Align			=	GFlags(GSliderCtrl, GFC_CF_SLIDER_ITEMS_TOPLEFT);
+			.VItems_Align			=	GFlags(GSliderCtrl, GFC_CF_SLIDER_ITEMS_TOPLEFT);
+		}
+
+		// Child styles
+		with .StyleId
+		{
+			.VGrip					=	GPropertyId(SF_CtrlTheme_Civ4_Control_Slider_VGripButton_PointedLeft_Style);	
+			.HGrip					=	GPropertyId(SF_CtrlTheme_Civ4_Control_Slider_HGripButton_PointedUp_Style);	
+		}
+
+		with .Size
+		{
+			.HGripOffset			=	GPoint(0,0);
+			.VGripOffset			=	GPoint(0,0);
+		}
+		
+		map SF_CtrlTheme_Civ4_Control_Slider					=	GFC_Control_StandardSlider_Style;
+		map GFC_CtrlTheme_Bitmap_Control_Slider					=	GFC_Control_StandardSlider_Style;
+		map GFC_Control											=	GFC_Control_StandardSlider_Style;
+	}
+
+
+
+	GFC_Control_PointedDownSlider_Style
+	{
+		with .Flag
+		{
+			.HGrip_Align			=	GFlags(GSliderCtrl, GFC_CF_SLIDER_GRIP_CENTER);
+			.VGrip_Align			=	GFlags(GSliderCtrl, GFC_CF_SLIDER_GRIP_CENTER);
+			.HItems_Align			=	GFlags(GSliderCtrl, GFC_CF_SLIDER_ITEMS_BOTTOMRIGHT);
+			.VItems_Align			=	GFlags(GSliderCtrl, GFC_CF_SLIDER_ITEMS_BOTTOMRIGHT);
+		}
+
+		// Child styles
+		with .StyleId
+		{
+			.VGrip					=	GPropertyId(SF_CtrlTheme_Civ4_Control_Slider_VGripButton_PointedRight_Style);	
+			.HGrip					=	GPropertyId(SF_CtrlTheme_Civ4_Control_Slider_HGripButton_PointedDown_Style);	
+		}
+
+		with .Size
+		{
+			.HGripOffset			=	GPoint(0,0);
+			.VGripOffset			=	GPoint(0,0);
+		}
+		
+		map SF_CtrlTheme_Civ4_Control_Slider					=	GFC_Control_StandardSlider_Style;
+		map GFC_CtrlTheme_Bitmap_Control_Slider					=	GFC_Control_StandardSlider_Style;
+		map GFC_Control											=	GFC_Control_StandardSlider_Style;
+	}
+	
+}	// end of GFC_Control_Slider
+

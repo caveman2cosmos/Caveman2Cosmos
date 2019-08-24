@@ -1,0 +1,91 @@
+/********************************************************************** 
+
+Filename	:	Civ4Theme_SizeGrip.thm
+Content		:	Civ4 - GSizeGrip control theme
+Created		:	May 1, 2005
+Authors		:	Sven Dixon
+
+Copyright	:	(c) 2005 Scaleform Corp. All Rights Reserved.
+
+**********************************************************************/
+
+// *** Main SizeGrip control namespace 
+
+with GFC_Control_SizeGrip
+{
+
+	GFC_Control_DefaultSizeGrip_Style
+	{
+		GFC_Control_Renderer_Control		= GFC_CtrlTheme_Bitmap_Control_SizeGrip_Renderer_Control;
+
+		with GFC_Control_Flag
+		{
+			// Base control flags
+			.Transparent					= GFlags(GCtrl, GFC_CF_TRANSPARENT);
+			.SolidInner						= 0;	//GFlags(GCtrl, GFC_CF_SOLIDINNER);
+			.SolidBackground				= 0;	//GFlags(GCtrl, GFC_CF_SOLIDBACKGROUND);
+			.RegionClip						= 0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP);
+			.RegionClipParent				= 0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+			.NoExternalWindow				= 0;	//GFlags(GCtrl, GFC_CF_NOEXTERNALWINDOW);
+			.HitTest						= GFlags(GCtrl, GFC_CF_HITTEST);
+			.TopLayer						= 0;	//GFlags(GCtrl, GFC_CF_TOPLAYER);
+			.TopLayerBitmap					= 0;	//GFlags(GCtrl, GFC_CF_TOPLAYERBITMAP);
+			.BottomLayerBitmap				= 0;	//GFlags(GCtrl, GFC_CF_BOTTOMLAYERBITMAP);
+			// Control flag change masks
+			.Mask_InvalidateControl			= GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		}
+		.Flag_NoInnerFill					= 0;	//GFlags(GSizeGripCtrl, GFC_CF_SIZGRIP_NOINNERFILL);
+
+		with .Color
+		{
+			.Inner								=	GFC_Control_Color_Surface;
+			.Grip								=	GFC_Control_Color_Border_Default;
+			.GripShadow							=	GFC_Control_Color_Inner_Default;
+		}
+		with .Combine
+		{
+			.Inner								=	GFC_Control_Combine_Surface;
+			.Grip								=	GFC_Control_Combine_Surface;
+			.GripShadow							=	GFC_Control_Combine_Surface;
+		}
+		with .Size
+		{
+			.Margin								=	GRectMargin(0,0,0,0);
+			.Default							=	GSize(18,18);
+		}
+		GFC_Control_Cursor_Default				=	GFC_Control_Cursor_Size_DownRight;
+
+		// ******* Initialize all the Bitmap theme SizeGrip properties to avoid inheritance problems
+		with GFC_CtrlTheme_Bitmap_Control_SizeGrip_Skin
+		{
+			// Skin used to render the selected skin
+			.Default			=	0;
+			.Rollover			=	0;
+			.Disable			=	0;
+			.Winoff				=	0;
+			.WinoffRollover		=	0;
+			.WinoffDisable		=	0;
+		}
+		map GFC_Control			=	GFC_Control_DefaultControl_Style;
+	}	// end GFC_Control_DefaultSizeGrip_Style
+
+
+	// ** Normal SizeGrip style
+	GFC_Control_StandardSizeGrip_Style
+	{	// SizeGrip border and grip bitmap skins
+		with GFC_CtrlTheme_Bitmap_Control_SizeGrip_Skin
+		{
+			.Default
+			{
+				layer{}
+			}
+			.Rollover			= .Default;
+			.Disable			= .Default;
+			.Winoff				= .Default;
+			.WinoffRollover		= .Rollover;
+			.WinoffDisable		= .Disable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_SizeGrip	= GFC_Control_DefaultSizeGrip_Style;
+		map GFC_Control								= GFC_Control_DefaultSizeGrip_Style;
+	}
+}

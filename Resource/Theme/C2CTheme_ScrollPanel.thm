@@ -1,0 +1,108 @@
+/********************************************************************** 
+
+Filename	:	Civ4Theme_ScrollPanel.thm
+Content		:	Civ4 - GScrollPanel control theme
+Created		:	May 1, 2005
+Authors		:	Sven Dixon
+
+Copyright	:	(c) 2005 Scaleform Corp. All Rights Reserved.
+
+**********************************************************************/
+
+// *** Main ScrollPanel control namespace 
+
+with GFC_Control_ScrollPanel
+{
+	GFC_Control_DefaultScrollPanel_Style
+	{
+		GFC_Control_Renderer_Control		= GFC_CtrlTheme_Bitmap_Control_ScrollPanel_Renderer_Control;
+
+		GFC_Control_Update_ChildLayout		= GFC_CtrlTheme_Bitmap_Control_ScrollPanel_Update_ChildLayout;
+
+		.Child_ScrollFrame		= GFC_CtrlTheme_Bitmap_Control_ScrollPanel_Child_ScrollFrame;
+
+		.StyleId_ScrollFrame	= GPropertyId(GFC_Control_StandardScrollFrame_Style);
+
+		with GFC_Control_Flag
+		{// Base control flags
+			.Transparent					= GFlags(GCtrl, GFC_CF_TRANSPARENT);
+			.SolidInner						= 0;	//GFlags(GCtrl, GFC_CF_SOLIDINNER);
+			.SolidBackground				= 0;	//GFlags(GCtrl, GFC_CF_SOLIDBACKGROUND);
+			.RegionClip						= 0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP);
+			.RegionClipParent				= 0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+			.NoExternalWindow				= 0;	//GFlags(GCtrl, GFC_CF_NOEXTERNALWINDOW);
+			.HitTest						= GFlags(GCtrl, GFC_CF_HITTEST);
+			.TopLayer						= 0;	//GFlags(GCtrl, GFC_CF_TOPLAYER);
+			.TopLayerBitmap					= 0;	//GFlags(GCtrl, GFC_CF_TOPLAYERBITMAP);
+			.BottomLayerBitmap				= 0;	//GFlags(GCtrl, GFC_CF_BOTTOMLAYERBITMAP);
+			// Control flag change masks
+			.Mask_InvalidateControl			= GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		}
+		.Flag_NoInnerFill	= GFlags(GScrollPanelCtrl, GFC_CF_SCROLLPANEL_NOINNERFILL);
+
+		.Color_Inner		= GFC_Control_Color_Surface;
+		.Combine_Inner		= GFC_Control_Combine_Surface;
+
+		map GFC_Control			= GFC_Control_DefaultControl_Style;
+	}
+	// ** Normal ScrollPanel bar style
+	GFC_Control_StandardScrollPanel_Style
+	{
+		map GFC_CtrlTheme_Bitmap_Control_ScrollPanel	= GFC_Control_DefaultScrollPanel_Style;
+		map GFC_Control									= GFC_Control_DefaultScrollPanel_Style;
+	}
+}// End DefaultScrollPanel_Style
+
+
+// *** Main ScrollFrame control namespace
+with GFC_Control_ScrollFrame
+{
+	GFC_Control_DefaultScrollFrame_Style
+	{
+		GFC_Control_Renderer_Control	= GFC_CtrlTheme_Bitmap_Control_ScrollFrame_Renderer_Control;
+
+		GFC_Control_Update_ChildLayout	= GFC_CtrlTheme_Bitmap_Control_ScrollFrame_Update_ChildLayout;
+
+		.Child_Table					= GFC_CtrlTheme_Bitmap_Control_ScrollFrame_Child_Table;
+
+		.StyleId_Table		= GPropertyId(GFC_Control_StandardTable_Style);
+
+		with GFC_Control_Flag
+		{// Base control flags
+			.Transparent					= GFlags(GCtrl, GFC_CF_TRANSPARENT);
+			.SolidInner						= 0;	//GFlags(GCtrl, GFC_CF_SOLIDINNER);
+			.SolidBackground				= 0;	//GFlags(GCtrl, GFC_CF_SOLIDBACKGROUND);
+			.RegionClip						= 0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP);
+			.RegionClipParent				= 0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+			.NoExternalWindow				= 0;	//GFlags(GCtrl, GFC_CF_NOEXTERNALWINDOW);
+			.HitTest						= 0;	//GFlags(GCtrl, GFC_CF_HITTEST);
+			.TopLayer						= 0;	//GFlags(GCtrl, GFC_CF_TOPLAYER);
+			.TopLayerBitmap					= 0;	//GFlags(GCtrl, GFC_CF_TOPLAYERBITMAP);
+			.BottomLayerBitmap				= 0;	//GFlags(GCtrl, GFC_CF_BOTTOMLAYERBITMAP);
+			// Control flag change masks
+			.Mask_InvalidateControl			= GFlags(GCtrl, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		}
+		.Flag_NoBorder			= GFlags(GScrollFrameCtrl, GFC_CF_SCROLLFRAME_NOBORDER);
+
+		map GFC_Control		= GFC_Control_DefaultControl_Style;
+	}
+	style SF_CtrlTheme_Civ4_Control_ScrollFrame_Standard_Table_Style
+	{
+		GFC_Control_Table_StyleId_OuterBorder	= GPropertyId(GFC_Control_EmptyBorder_Style);
+		GFC_Control_Table_StyleId_InnerBorder	= GPropertyId(GFC_Control_EmptyBorder_Style);
+
+		GFC_Control_Table_Flag_NoInnerBorder		= GFlags(GTableCtrl, GFC_CF_TABLE_NOINNERBORDER);
+
+		map SF_CtrlTheme_Civ4_Control				= GFC_Control_StandardTable_Style;
+		map GFC_CtrlTheme_Bitmap_Control_Table		= GFC_Control_StandardTable_Style;
+		map GFC_Control								= GFC_Control_StandardTable_Style;
+	}
+	// ** Normal ScrollPanel bar style
+	GFC_Control_StandardScrollFrame_Style
+	{
+		.StyleId_Table									= GPropertyId(SF_CtrlTheme_Civ4_Control_ScrollFrame_Standard_Table_Style);
+
+		map GFC_CtrlTheme_Bitmap_Control_ScrollFrame	= GFC_Control_DefaultScrollFrame_Style;
+		map GFC_Control									= GFC_Control_DefaultScrollFrame_Style;
+	}
+}

@@ -1,0 +1,1327 @@
+/********************************************************************** 
+
+Filename	:	Civ4Theme_Button.thm
+Content		:	Civ4 - GButton control theme
+Created	    :	May 1, 2005
+Authors		:	Sven Dixon
+
+Copyright	:	(c) 2005 Scaleform Corp. All Rights Reserved.
+
+**********************************************************************/
+
+// *** Main Button control namespace
+
+with GFC_Control_Button
+{
+	GFC_Control_DefaultButton_Style
+	{// Default style
+		GFC_Control_Renderer_Control		= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+
+		with .Renderer
+		{
+			.Text							= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_Text;
+			.Image							= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_Image;
+		}
+		with GFC_Control_Flag
+		{
+			.Transparent					= GFlags(GCtrl, GFC_CF_TRANSPARENT);
+			.HitTest						= 0;	//GFlags(GCtrl, GFC_CF_HITTEST);
+			.SolidInner						= 0;	//GFlags(GCtrl, GFC_CF_SOLIDINNER);
+			.SolidBackground				= 0;	//GFlags(GCtrl, GFC_CF_SOLIDBACKGROUND);
+			.RegionClip						= 0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP);
+			.RegionClipParent				= 0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+			.NoExternalWindow				= 0;	//GFlags(GCtrl, GFC_CF_NOEXTERNALWINDOW);
+			.TopLayer						= 0;	//GFlags(GCtrl, GFC_CF_TOPLAYER);
+			.TopLayerBitmap					= 0;	//GFlags(GCtrl, GFC_CF_TOPLAYERBITMAP);
+			.BottomLayerBitmap				= 0;	//GFlags(GCtrl, GFC_CF_BOTTOMLAYERBITMAP);
+			// Control flag change masks
+			.Mask_InvalidateControl			= GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER, GFC_CF_FORCE_ROLLOVER);
+		}
+		with .Flag
+		{
+			.DownOffset			= GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_CONTENT);
+			.VAlign				= GFlags(GButtonCtrl, GFC_CF_BUTTON_VCENTER);
+			.HAlign				= GFlags(GButtonCtrl, GFC_CF_BUTTON_HCENTER);
+			.Focus				= 0;	//GFlags(GButtonCtrl, GFC_CF_BUTTON_FOCUS_CONTROL);
+			.HoldTimer			= 0;	//GFlags(GButtonCtrl, GFC_CF_BUTTON_HOLDTIMER);
+			.Text_VAlign		= GFlags(GButtonCtrl, GFC_CF_BUTTON_TEXT_VCENTER);
+			.Text_HAlign		= GFlags(GButtonCtrl, GFC_CF_BUTTON_TEXT_RIGHT);
+			.Multiline			= 0;	//GFlags(GButtonCtrl, GFC_CF_BUTTON_MULTILINE);
+			.Just				= 0;	//GFlags(GButtonCtrl, GFC_CF_BUTTON_JUST_LEFT);
+			.Wrap				= 0;	//GFlags(GButtonCtrl, GFC_CF_BUTTON_WRAP_WORD);
+			.Crop				= 0;	//GFlags(GButtonCtrl, GFC_CF_BUTTON_CROP_CHAR);
+			.CropDotted			= 0;	//GFlags(GButtonCtrl, GFC_CF_BUTTON_CROP_DOTTED);
+		}
+		with .Delay
+		{
+			// First hit takes place 1/4 of a second (250ms)
+			// The other ones will be 9/100 (90ms)
+			.HoldTimer_First		= 250;
+			.HoldTimer_Repeat		= 90;
+		}
+		with .Size
+		{
+			.BorderMargin			= GRectMargin(0,0,0,0);
+			.ExtraMargin			= GRectMargin(0,0,0,0);
+			.FocusMargin_Text		= GRectMargin(4,4,4,4);
+			.FocusMargin_Image		= GRectMargin(2,2,2,2);
+			.FocusMargin_Content	= GRectMargin(4,4,4,4);
+			.FocusMargin_Control	= GRectMargin(4,4,4,4);
+			.ContentOffset			= GPoint(0,0);
+			.TextOffset				= GPoint(0,-1);
+			.DownOffset_Content		= GPoint(0,1);
+			.DownOffset_Text		= GPoint(0,1);
+			.DownOffset_Image		= GPoint(0,1);
+			.ItemSpace				= GFC_Control_Size_ItemSpace;
+			.Image					= GSize(0,0);
+			.Default				= GSize(64,30);
+		}
+		with .Color
+		{
+			.Inner					= GFC_Control_Color_Surface;
+			.Highlight				= GColor(255,255,255,128);
+			with .Text
+			{
+				.Default						=	SF_CtrlTheme_Civ4_Control_Color_AltText;
+				.Press							=	.Default;
+				.Disable						=	SF_CtrlTheme_Civ4_Control_Color_AltTextDisable;
+				.Rollover						=	.Default;
+				.Focus							=	.Default;
+				.FocusRollover					=	.Default;
+				.Toggle							=	.Default;
+				.TogglePress					=	.Press;
+				.ToggleDisable					=	.Disable;
+				.ToggleRollover					=	.Rollover;
+				.ToggleFocus					=	.Focus;
+				.ToggleFocusRollover			=	.FocusRollover;
+
+				.Inactive						=	.Default;
+				.InactivePress					=	.Press;
+				.InactiveDisable				=	.Disable;
+				.InactiveRollover				=	.Rollover;
+				.InactiveToggle					=	.Toggle;
+				.InactiveTogglePress			=	.TogglePress;
+				.InactiveToggleDisable			=	.ToggleDisable;
+				.InactiveToggleRollover			=	.ToggleRollover;
+
+				.Winoff							=	.Inactive;
+				.WinoffPress					=	.InactivePress;
+				.WinoffDisable					=	.InactiveDisable;
+				.WinoffRollover					=	.InactiveRollover;
+				.WinoffToggle					=	.InactiveToggle;
+				.WinoffTogglePress				=	.InactiveTogglePress;
+				.WinoffToggleDisable			=	.InactiveToggleDisable;
+				.WinoffToggleRollover			=	.InactiveToggleRollover;
+			}
+			with .TextShadow
+			{
+				.Default						=	SF_CtrlTheme_Civ4_Control_Color_AltTextShadow;
+				.Press							=	.Default;
+				.Disable						=	SF_CtrlTheme_Civ4_Control_Color_AltTextShadowDisable;
+				.Rollover						=	.Default;
+				.Focus							=	.Default;
+				.FocusRollover					=	.Default;
+				.Toggle							=	.Default;
+				.TogglePress					=	.Press;
+				.ToggleDisable					=	.Disable;
+				.ToggleRollover					=	.Rollover;
+				.ToggleFocus					=	.Focus;
+				.ToggleFocusRollover			=	.FocusRollover;
+
+				.Inactive						=	.Default;
+				.InactivePress					=	.Press;
+				.InactiveDisable				=	.Disable;
+				.InactiveRollover				=	.Rollover;
+				.InactiveToggle					=	.Toggle;
+				.InactiveTogglePress			=	.TogglePress;
+				.InactiveToggleDisable			=	.ToggleDisable;
+				.InactiveToggleRollover			=	.ToggleRollover;
+													
+				.Winoff							=	.Inactive;
+				.WinoffPress					=	.InactivePress;
+				.WinoffDisable					=	.InactiveDisable;
+				.WinoffRollover					=	.InactiveRollover;
+				.WinoffToggle					=	.InactiveToggle;
+				.WinoffTogglePress				=	.InactiveTogglePress;
+				.WinoffToggleDisable			=	.InactiveToggleDisable;
+				.WinoffToggleRollover			=	.InactiveToggleRollover;
+			}
+			.Image_Default						=	GFC_Control_Color_Image_Default;
+			.Image_Disable						=	GFC_Control_Color_Image_Disable;
+		}
+		with .Combine
+		{
+			.Inner_Dest							=	GFC_Control_Combine_Surface;
+			.Inner_Factor						=	GColorCombine(Factor, Source);
+
+			.Highlight_Dest						=	GColorCombine(BlendSource, Disable);
+			.Highlight_Factor					=	GColorCombine(Factor, Source);
+
+			.Image_Default_Dest					=	GFC_Control_Combine_Image_Default_Dest;
+			.Image_Default_Factor				=	GFC_Control_Combine_Image_Default_Factor;
+			.Image_Disable_Dest					=	GFC_Control_Combine_Image_Disable_Dest;
+			.Image_Disable_Factor				=	GFC_Control_Combine_Image_Disable_Factor;
+
+			.Text_Default_Dest					=	GFC_Control_Combine_Text_Default_Dest;
+			.Text_Default_Factor				=	GFC_Control_Combine_Text_Default_Factor;
+			.Text_Disable_Dest					=	GFC_Control_Combine_Text_Disable_Dest;
+			.Text_Disable_Factor				=	GFC_Control_Combine_Text_Disable_Factor;
+
+			.TextShadow_Default_Dest			=	GFC_Control_Combine_TextShadow_Default_Dest;
+			.TextShadow_Default_Factor			=	GFC_Control_Combine_TextShadow_Default_Factor;
+			.TextShadow_Disable_Dest			=	GFC_Control_Combine_TextShadow_Disable_Dest;
+			.TextShadow_Disable_Factor			=	GFC_Control_Combine_TextShadow_Disable_Factor;
+		}
+		with .Cursor
+		{
+			.Press			= GFC_Control_Cursor_Default;
+			.Tracking		= .Press;
+			.Toggle			= .Press;
+			.TogglePress	= .Press;
+			.ToggleTracking	= .Press;
+			.Disable		= GFC_Control_Cursor_Arrow;
+		}
+		with .Binding
+		{
+			.ButtonPress	= GInputBinding(GPropertyId(GFC_Input_Mouse_Message_OnDown), LeftButton,
+											GPropertyId(GFC_Input_Mouse_Message_OnDblClick), LeftButton,
+											GPropertyId(GFC_Input_Keyboard_Message_OnKeyDown), Space);
+			.ButtonCancel	= GInputBinding(GPropertyId(GFC_Input_Keyboard_Message_OnKeyDown), Escape);
+			.ButtonExecute	= GInputBinding(GPropertyId(GFC_Input_Keyboard_Message_OnKeyDown), Return);
+			.ButtonRelease	= GInputBinding(GPropertyId(GFC_Input_Mouse_Message_OnUp), LeftButton,
+											GPropertyId(GFC_Input_Keyboard_Message_OnKeyUp), Space);
+		}
+		.Font_Text = SF_CtrlTheme_Civ4_Control_Font_Size2_Normal;
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{// ******* Initialize all the Bitmap theme Button properties to avoid inheritance problems
+			// Button stretchy skins
+			.Default										= 0;
+			.Press											= 0;
+			.Disable										= 0;
+			.Rollover										= 0;
+			.Focus											= 0;
+			.FocusPress										= 0;
+			.FocusDisable									= 0;
+			.FocusRollover									= 0;
+			.Toggle											= 0;
+			.TogglePress									= 0;
+			.ToggleDisable									= 0;
+			.ToggleRollover									= 0;
+			.ToggleFocus									= 0;
+			.ToggleFocusPress								= 0;
+			.ToggleFocusDisable								= 0;
+			.ToggleFocusRollover							= 0;
+			.Inactive										= 0;
+			.InactivePress									= 0;
+			.InactiveDisable								= 0;
+			.InactiveRollover								= 0;
+			.InactiveToggle									= 0;
+			.InactiveTogglePress							= 0;
+			.InactiveToggleDisable							= 0;
+			.InactiveToggleRollover							= 0;
+			.Winoff											= 0;
+			.WinoffPress									= 0;
+			.WinoffDisable									= 0;
+			.WinoffRollover									= 0;
+			.WinoffToggle									= 0;
+			.WinoffTogglePress								= 0;
+			.WinoffToggleDisable							= 0;
+			.WinoffToggleRollover							= 0;
+			// Button icon (check or radio) skins
+			.Image_Default									= 0;
+			.Image_Press									= 0;
+			.Image_Disable									= 0;
+			.Image_Rollover									= 0;
+			.Image_Focus									= 0;
+			.Image_FocusPress								= 0;
+			.Image_FocusDisable								= 0;
+			.Image_FocusRollover							= 0;
+			.Image_Toggle									= 0;
+			.Image_TogglePress								= 0;
+			.Image_ToggleDisable							= 0;
+			.Image_ToggleRollover							= 0;
+			.Image_ToggleFocus								= 0;
+			.Image_ToggleFocusPress							= 0;
+			.Image_ToggleFocusDisable						= 0;
+			.Image_ToggleFocusRollover						= 0;
+			.Image_Inactive									= 0;
+			.Image_InactivePress							= 0;
+			.Image_InactiveDisable							= 0;
+			.Image_InactiveRollover							= 0;
+			.Image_InactiveToggle							= 0;
+			.Image_InactiveTogglePress						= 0;
+			.Image_InactiveToggleDisable					= 0;
+			.Image_InactiveToggleRollover					= 0;
+			.Image_Winoff									= 0;
+			.Image_WinoffPress								= 0;
+			.Image_WinoffDisable							= 0;
+			.Image_WinoffRollover							= 0;
+			.Image_WinoffToggle								= 0;
+			.Image_WinoffTogglePress						= 0;
+			.Image_WinoffToggleDisable						= 0;
+			.Image_WinoffToggleRollover						= 0;
+			// Button focus skins
+			.Focuser_Press									= 0;
+			.Focuser_Rollover								= 0;
+			.Focuser_Toggle									= 0;
+			.Focuser_TogglePress							= 0;
+			.Focuser_ToggleRollover							= 0;
+			.Focuser_Inactive								= 0;
+			.Focuser_InactivePress							= 0;
+			.Focuser_InactiveRollover						= 0;
+			.Focuser_InactiveToggle							= 0;
+			.Focuser_InactiveTogglePress					= 0;
+			.Focuser_InactiveToggleRollover					= 0;
+			.Focuser_Winoff									= 0;
+			.Focuser_WinoffPress							= 0;
+			.Focuser_WinoffRollover							= 0;
+			.Focuser_WinoffToggle							= 0;
+			.Focuser_WinoffTogglePress						= 0;
+			.Focuser_WinoffToggleRollover					= 0;
+			.Focuser_Default								= 0;
+		}
+		map GFC_Control			=	GFC_Control_DefaultControl_Style;
+	}	// end GFC_Control_DefaultButton_Style
+
+
+	// *** Normal button style
+	// This style is used for the default stone style of buttons. 
+	// This uses the default text, which is mapped to a custom alt text style defined in common.
+
+	GFC_Control_StandardButton_Style
+	{
+		GFC_Control_Flag_Mask_InvalidateControl = GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+
+		.Size_BorderMargin						= GRectMargin(10,6,10,3);
+
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{// Image skins
+			.Default
+			{
+				layer {
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+					Image			= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= GRectMargin(0,0,0,0);
+					Indent			= GRectMargin(6,3,6,3);
+				}
+				layer {
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					Image			= GBitmap("../../../../Resource/Civ4/button.tga", HVGrid, 1, 5, 0, 0);
+					Margin			= GRectMargin(7,8,7,8);
+				}
+				layer {
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					Image			= GBitmap("../../../../Resource/Civ4/button.tga", HVGrid, 1, 5, 0, 1);
+					Margin			= GRectMargin(7,8,7,8);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer {}
+				layer {}
+				layer {}
+				layer {
+					DestCombine		= GColorCombine(Add,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+					Image			= GBitmap("../../../../Resource/Civ4/button.tga", HVGrid, 1, 5, 0, 2);
+					Margin			= GRectMargin(7,8,7,8);
+				}
+			}
+			.Press	//NOTE: THIS IS NOT VISIBLE DURRING TESTING IF BUTTON HAS A FOCUS AND IT IS NOT MAPPED TO PRESS STATE.
+			{
+				layer { Inherit = .Default; }
+				layer {}
+				layer {}
+				layer {
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					Image			= GBitmap("../../../../Resource/Civ4/button.tga", HVGrid, 1, 5, 0, 3);
+					Margin			= GRectMargin(7,8,7,8);
+				}
+			}
+			.Disable
+			{
+				layer {
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+					Image			= GBitmap("../../../../Resource/Civ4/button.tga", HVGrid, 1, 5, 0, 4);
+					Margin			= GRectMargin(7,8,7,8);
+				}
+			}
+			.Focus
+			{
+				layer { Inherit = .Default; }
+				layer {}
+				layer {}
+				layer {}
+				layer {
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate,Modulate);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+					Image			= GBitmap("../../../../Resource/Civ4/focus.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= GRectMargin(6,6,6,6);
+					Indent			= GRectMargin(0,1,0,1);
+				}
+			}
+			.FocusPress
+			{
+				layer { Inherit = .Press; }
+				layer {}
+				layer {}
+				layer {}
+				layer {
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate,Modulate);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+					Image			= GBitmap("../../../../Resource/Civ4/focus.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= GRectMargin(6,6,6,6);
+					Indent			= GRectMargin(0,1,0,1);
+				}
+			}
+			.FocusRollover
+			{
+				layer { Inherit = .Rollover; }
+				layer {}
+				layer {}
+				layer {}
+				layer {}
+				layer {
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate,Modulate);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+					Image			= GBitmap("../../../../Resource/Civ4/focus.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= GRectMargin(6,6,6,6);
+					Indent			= GRectMargin(0,1,0,1);
+				}
+			}
+			.FocusDisable
+			{
+				layer { Inherit = .Disable; }
+				layer {}
+				layer {
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate,Modulate);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+					Image			= GBitmap("../../../../Resource/Civ4/focus.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= GRectMargin(6,6,6,6);
+					Indent			= GRectMargin(0,1,0,1);
+				}
+			}
+			.Toggle					= .Rollover;
+			.ToggleRollover			= .Press;
+			.TogglePress			= .Rollover;
+			.ToggleDisable			= .Disable;
+			.ToggleFocus			= .FocusRollover;
+			.ToggleFocusRollover	= .FocusPress;
+			.ToggleFocusPress		= .FocusRollover;
+			.ToggleFocusDisable		= .FocusDisable;
+
+			.Inactive				= .Default;
+			.InactiveRollover		= .Rollover;
+			.InactivePress			= .Press;
+			.InactiveDisable		= .Disable;
+			.InactiveToggle			= .Toggle;
+			.InactiveToggleRollover	= .ToggleRollover;
+			.InactiveTogglePress	= .TogglePress;
+			.InactiveToggleDisable	= .ToggleDisable;
+									
+			.Winoff					= .Default;
+			.WinoffRollover			= .Rollover;
+			.WinoffPress			= .Press;
+			.WinoffDisable			= .Disable;
+			.WinoffToggle			= .Toggle;
+			.WinoffToggleRollover	= .ToggleRollover;
+			.WinoffTogglePress		= .TogglePress;
+			.WinoffToggleDisable	= .ToggleDisable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button		= GFC_Control_DefaultButton_Style;
+		map GFC_Control								= GFC_Control_DefaultButton_Style;
+	}
+
+
+	GFC_Control_SquareButton_Style
+	{
+		map GFC_CtrlTheme_Bitmap_Control_Button		= GFC_Control_StandardButton_Style;
+		map GFC_Control								= GFC_Control_StandardButton_Style;
+	}
+
+
+	GFC_Control_EtchedButton_Style
+	{
+		with .Size
+		{
+			.FocusMargin_Text		= GRectMargin(0,0,0,0);
+			.FocusMargin_Image		= GRectMargin(0,0,0,0);
+			.FocusMargin_Content	= GRectMargin(0,0,0,0);
+			.FocusMargin_Control	= GRectMargin(0,0,0,0);
+			.TextOffset				= GPoint(0,0);
+			.DownOffset_Content		= GPoint(0,0);
+			.DownOffset_Text		= GPoint(0,0);
+			.DownOffset_Image		= GPoint(0,0);
+			.Default				= GSize(64,64);
+		}
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate,Source);
+					FactorColor		= GColor(180,200,220);
+					Image			= GBitmap("GUI/Button/Etched_Btn_BG.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= GRectMargin(4,4,4,4);
+				}
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("GUI/Button/Etched_Btn_Border.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= GRectMargin(8,8,8,8);
+					Indent			= GRectMargin(2,2,2,2);
+				}
+			}
+			.Press
+			{
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate2X,Source);
+					FactorColor		= GColor(255,255,255);
+					Image			= GBitmap("GUI/Button/Etched_Btn_BG.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= GRectMargin(4,4,4,4);
+				}
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("GUI/Button/Etched_Btn_Border.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= GRectMargin(8,8,8,8);
+					Indent			= GRectMargin(2,2,2,2);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer { FactorColor = GColor(120,240,255); }
+				layer { FactorColor = GColor(255,255,255); }
+			}
+			.Disable
+			{
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate2X,Source);
+					FactorColor		= GColor(0,50,100);
+					Image			= GBitmap("GUI/Button/Etched_Btn_BG.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= GRectMargin(4,4,4,4);
+				}
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate2X,Source);
+					FactorColor		= GColor(0,100,150);
+					Image			= GBitmap("GUI/Button/Etched_Btn_Border.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= GRectMargin(8,8,8,8);
+					Indent			= GRectMargin(2,2,2,2);
+				}
+			}
+			.Focus					= .Rollover;
+			.FocusPress				= .Press;
+			.FocusRollover			= .Rollover;
+			.FocusDisable			= .Disable;
+
+			.Toggle					= .Press;
+			.ToggleRollover			= .Press;
+			.TogglePress			= .Rollover;
+			.ToggleDisable			= .Disable;
+			.ToggleFocus			= .FocusPress;
+			.ToggleFocusRollover	= .FocusPress;
+			.ToggleFocusPress		= .FocusRollover;
+			.ToggleFocusDisable		= .FocusDisable;
+
+			.Inactive				= .Default;
+			.InactiveRollover		= .Rollover;
+			.InactivePress			= .Press;
+			.InactiveDisable		= .Disable;
+			.InactiveToggle			= .Toggle;
+			.InactiveToggleRollover	= .TogglePress;
+			.InactiveTogglePress	= .ToggleRollover;
+			.InactiveToggleDisable	= .ToggleDisable;
+
+			.Winoff					= .Default;
+			.WinoffRollover			= .Rollover;
+			.WinoffPress			= .Press;
+			.WinoffDisable			= .Disable;
+			.WinoffToggle			= .Toggle;
+			.WinoffToggleRollover	= .TogglePress;
+			.WinoffTogglePress		= .ToggleRollover;
+			.WinoffToggleDisable	= .ToggleDisable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_DefaultButton_Style;
+		map GFC_Control							= GFC_Control_DefaultButton_Style;
+	}
+
+	GFC_Control_FlatButton_Style
+	{
+		GFC_Control_Renderer_Control			= GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+
+		with .Color_Text
+		{
+			.Default						=	GFC_Control_Color_Text_Default;
+			.Press							=	.Default;
+			.Disable						=	GFC_Control_Color_Text_Disable;
+			.Rollover						=	.Default;
+			.Focus							=	.Press;
+			.FocusRollover					=	.Press;
+			.Toggle							=	.Default;
+			.TogglePress					=	.Press;
+			.ToggleDisable					=	.Disable;
+			.ToggleRollover					=	.Rollover;
+			.ToggleFocus					=	.Focus;
+			.ToggleFocusRollover			=	.FocusRollover;	
+		}
+		with .Color_TextShadow
+		{
+			.Default						=	GFC_Control_Color_TextShadow_Default;
+			.Press							=	.Default;
+			.Disable						=	GFC_Control_Color_TextShadow_Disable;
+			.Rollover						=	.Default;
+			.Focus							=	.Default;
+			.FocusRollover					=	.Default;
+			.Toggle							=	.Default;
+			.TogglePress					=	.Press;
+			.ToggleDisable					=	.Disable;
+			.ToggleRollover					=	.Rollover;
+			.ToggleFocus					=	.Focus;
+			.ToggleFocusRollover			=	.FocusRollover;	
+		}
+		// Image skins
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default				= SF_CtrlTheme_Civ4_Control_Skin_Blank;
+			.Press					= .Default;
+			.Rollover				= .Default;
+			.Disable				= .Default;
+			.Focus
+			{
+				layer {
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate,Modulate);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+					Image			= GBitmap("../../../../Resource/Civ4/focus.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= GRectMargin(6,6,6,6);
+					Indent			= GRectMargin(0,1,0,1);
+				}
+			}
+			.FocusPress				= .Focus;
+			.FocusRollover			= .Focus;
+			.FocusDisable			= .Focus;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button = GFC_Control_StandardButton_Style;
+		map GFC_Control							= GFC_Control_StandardButton_Style;
+	}
+
+
+	GFC_Control_LabelButton_Style
+	{
+		GFC_Control_Renderer_Control				=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlLabel;
+
+		.Size_BorderMargin							=	GRectMargin(2,2,2,2);
+
+		with .Flag
+		{
+			.DownOffset						= GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_CONTENT);
+			.Text_HAlign					= GFlags(GButtonCtrl, GFC_CF_BUTTON_TEXT_RIGHT);
+			.Text_VAlign					= GFlags(GButtonCtrl, GFC_CF_BUTTON_TEXT_VCENTER);
+		}
+		with .Color_Text
+		{
+			.Default						=	GFC_Control_Color_Text_Default;
+			.Press							=	SF_CtrlTheme_Civ4_Control_Color_RollText;
+			.Disable						=	GFC_Control_Color_Text_Disable;
+			.Rollover						=	SF_CtrlTheme_Civ4_Control_Color_SelectText;
+			.Focus							=	.Rollover;
+			.FocusRollover					=	.Rollover;
+			.Toggle							=	.Default;
+			.TogglePress					=	.Press;
+			.ToggleDisable					=	.Disable;
+			.ToggleRollover					=	.Rollover;
+			.ToggleFocus					=	.Focus;
+			.ToggleFocusRollover			=	.FocusRollover;
+		}
+		with .Color_TextShadow
+		{
+			.Default						=	GFC_Control_Color_TextShadow_Default;
+			.Press							=	.Default;
+			.Disable						=	GFC_Control_Color_TextShadow_Disable;
+			.Rollover						=	.Default;
+			.Focus							=	.Default;
+			.FocusRollover					=	.Default;
+			.Toggle							=	.Default;
+			.TogglePress					=	.Press;
+			.ToggleDisable					=	.Disable;
+			.ToggleRollover					=	.Rollover;
+			.ToggleFocus					=	.Focus;
+			.ToggleFocusRollover			=	.FocusRollover;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button					= GFC_Control_FlatButton_Style;
+		map GFC_Control											= GFC_Control_FlatButton_Style;
+	}
+
+
+	GFC_Control_ImageButton_Style
+	{
+		GFC_Control_Renderer_Control				=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlImage;
+
+		.Size_BorderMargin							=	GRectMargin(2,2,2,2);
+
+		with .Flag
+		{
+			.DownOffset						= GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_CONTENT);
+			.Text_HAlign					= GFlags(GButtonCtrl, GFC_CF_BUTTON_TEXT_RIGHT);
+			.Text_VAlign					= GFlags(GButtonCtrl, GFC_CF_BUTTON_TEXT_VCENTER);
+		}
+		with .Color_Text
+		{
+			.Default						=	GFC_Control_Color_Text_Default;
+			.Press							=	SF_CtrlTheme_Civ4_Control_Color_RollText;
+			.Disable						=	GFC_Control_Color_Text_Disable;
+			.Rollover						=	SF_CtrlTheme_Civ4_Control_Color_SelectText;
+			.Focus							=	.Rollover;
+			.FocusRollover					=	.Rollover;
+			.Toggle							=	.Default;
+			.TogglePress					=	.Press;
+			.ToggleDisable					=	.Disable;
+			.ToggleRollover					=	.Rollover;
+			.ToggleFocus					=	.Focus;
+			.ToggleFocusRollover			=	.FocusRollover;
+		}
+		with .Color_TextShadow
+		{
+			.Default						=	GFC_Control_Color_TextShadow_Default;
+			.Press							=	.Default;
+			.Disable						=	GFC_Control_Color_TextShadow_Disable;
+			.Rollover						=	.Default;
+			.Focus							=	.Default;
+			.FocusRollover					=	.Default;
+			.Toggle							=	.Default;
+			.TogglePress					=	.Press;
+			.ToggleDisable					=	.Disable;
+			.ToggleRollover					=	.Rollover;
+			.ToggleFocus					=	.Focus;
+			.ToggleFocusRollover			=	.FocusRollover;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button					= GFC_Control_StandardButton_Style;
+		map GFC_Control											= GFC_Control_StandardButton_Style;
+	}
+
+
+	GFC_Control_LinkButton_Style
+	{
+		GFC_Control_Renderer_Control				=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlLink;
+		
+		.Renderer_Text								=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_TextLink;
+		.Flag_DownOffset							=	0;	//GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_CONTENT);
+
+		.Size_BorderMargin							=	GRectMargin(2,2,2,2);
+
+		GFC_Control_Cursor_Default		=	GFC_Control_Cursor_Link;
+
+		with .Cursor
+		{
+			.Press						=	GFC_Control_Cursor_Link;
+			.Tracking					=	GFC_Control_Cursor_Arrow;
+		}
+		with .Color_Text
+		{
+			.Default					=	SF_CtrlTheme_Civ4_Control_Color_RollText;
+			.Press						=	SF_CtrlTheme_Civ4_Control_Color_SelectText;
+			.Disable					=	SF_CtrlTheme_Civ4_Control_Color_DisableText;
+			.Rollover					=	SF_CtrlTheme_Civ4_Control_Color_SelectText;
+			.Focus						=	.Rollover;
+			.FocusRollover				=	.Rollover;
+			.Toggle						=	.Press;
+			.TogglePress				=	.Rollover;
+			.ToggleDisable				=	.Toggle;
+			.ToggleRollover				=	.Rollover;
+			.ToggleFocus				=	.Toggle;
+			.ToggleFocusRollover		=	.ToggleRollover;
+
+			.Inactive					=	.Default;
+			.InactivePress				=	.Press;
+			.InactiveDisable			=	.Disable;
+			.InactiveRollover			=	.Rollover;
+			.InactiveToggle				=	.Toggle;
+			.InactiveTogglePress		=	.TogglePress;
+			.InactiveToggleDisable		=	.ToggleDisable;
+			.InactiveToggleRollover		=	.ToggleRollover;
+
+			.Winoff						=	.Inactive;
+			.WinoffPress				=	.InactivePress;
+			.WinoffDisable				=	.InactiveDisable;
+			.WinoffRollover				=	.InactiveRollover;
+			.WinoffToggle				=	.InactiveToggle;
+			.WinoffTogglePress			=	.InactiveTogglePress;
+			.WinoffToggleDisable		=	.InactiveToggleDisable;
+			.WinoffToggleRollover		=	.InactiveToggleRollover;
+		}
+		with .Color_TextShadow
+		{
+			.Default						=	GFC_Control_Color_TextShadow_Default;
+			.Press							=	.Default;
+			.Disable						=	GFC_Control_Color_TextShadow_Disable;
+			.Rollover						=	.Default;
+			.Focus							=	.Default;
+			.FocusRollover					=	.Default;
+			.Toggle							=	.Default;
+			.TogglePress					=	.Press;
+			.ToggleDisable					=	.Disable;
+			.ToggleRollover					=	.Rollover;
+			.ToggleFocus					=	.Focus;
+			.ToggleFocusRollover			=	.FocusRollover;
+		}
+		// Image skins
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					DestCombine			=	GColorCombine(BlendSource,Disable);
+					LayerFlags			=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+					Image				=	GBitmap("../../../../Resource/Civ4/Blank.tga", HVGrid, 1, 1, 0, 0);
+					Margin				=	GRectMargin(0,0,0,0);
+				}
+			}
+			.Press						=	.Default;
+			.Rollover					=	.Default;
+			.Disable					=	.Default;
+			.Focus						=	.Default;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button					= GFC_Control_StandardButton_Style;
+		map GFC_Control											= GFC_Control_StandardButton_Style;
+	}
+
+
+	GFC_Control_ToolButton_Style
+	{
+		GFC_Control_Renderer_Control					=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+
+		with .Color_Text
+		{
+			.Default						=	GFC_Control_Color_Text_Default;
+			.Press							=	SF_CtrlTheme_Civ4_Control_Color_AltText;
+			.Disable						=	SF_CtrlTheme_Civ4_Control_Color_AltTextDisable;
+			.Rollover						=	.Press;
+			.Focus							=	.Press;
+			.FocusRollover					=	.Focus;
+			.Toggle							=	SF_CtrlTheme_Civ4_Control_Color_AltText;
+			.TogglePress					=	.Toggle;
+			.ToggleDisable					=	.Disable;
+			.ToggleRollover					=	.Toggle;
+			.ToggleFocus					=	.Toggle;
+			.ToggleFocusRollover			=	.ToggleFocus;
+		}
+		with .Color_TextShadow
+		{
+			.Default						=	GFC_Control_Color_TextShadow_Default;
+			.Press							=	SF_CtrlTheme_Civ4_Control_Color_AltTextShadow;
+			.Disable						=	SF_CtrlTheme_Civ4_Control_Color_AltTextShadowDisable;
+			.Rollover						=	.Press;
+			.Focus							=	.Press;
+			.FocusRollover					=	.Focus;
+			.Toggle							=	.Press;
+			.TogglePress					=	.Toggle;
+			.ToggleDisable					=	.Disable;
+			.ToggleRollover					=	.Toggle;
+			.ToggleFocus					=	.Toggle;
+			.ToggleFocusRollover			=	.ToggleFocus;
+		}
+		// Image skins
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {}
+			}
+			.Rollover
+			{
+				layer {
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+					Image			= GBitmap("../../../../Resource/Civ4/bg.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= GRectMargin(0,0,0,0);
+					Indent			= GRectMargin(6,3,6,3);
+				}
+				layer {
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					Image			= GBitmap("../../../../Resource/Civ4/button.tga", HVGrid, 1, 5, 0, 0);
+					Margin			= GRectMargin(7,8,7,8);
+				}
+				layer {
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					Image			= GBitmap("../../../../Resource/Civ4/button.tga", HVGrid, 1, 5, 0, 1);
+					Margin			= GRectMargin(7,8,7,8);
+				}
+			}
+			.Press
+			{
+				layer { Inherit = .Rollover; }
+				layer {}
+				layer {}
+				layer {
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					Image			= GBitmap("../../../../Resource/Civ4/button.tga", HVGrid, 1, 5, 0, 3);
+					Margin			= GRectMargin(7,8,7,8);
+				}
+			}
+			.Disable
+			{
+				layer {}
+			}
+			.Toggle					= .Press;
+			.ToggleRollover			= .Rollover;
+			.TogglePress			= .Press;
+			.ToggleDisable			= .Disable;
+			.Focus					= .Press;
+			.FocusRollover			= .Rollover;
+			.FocusPress				= .Press;
+			.FocusDisable			= .Disable;
+			.ToggleFocus			= .Toggle;
+			.ToggleFocusRollover	= .ToggleRollover;
+			.ToggleFocusPress		= .TogglePress;
+			.ToggleFocusDisable		= .ToggleDisable;
+
+			.Inactive				= .Default;
+			.InactiveRollover		= .Rollover;
+			.InactivePress			= .Press;
+			.InactiveDisable		= .Disable;
+			.InactiveToggle			= .Toggle;
+			.InactiveToggleRollover	= .ToggleRollover;
+			.InactiveTogglePress	= .TogglePress;
+			.InactiveToggleDisable	= .ToggleDisable;
+
+			.Winoff					= .Default;
+			.WinoffRollover			= .Rollover;
+			.WinoffPress			= .Press;
+			.WinoffDisable			= .Disable;
+			.WinoffToggle			= .Toggle;
+			.WinoffToggleRollover	= .ToggleRollover;
+			.WinoffTogglePress		= .TogglePress;
+			.WinoffToggleDisable	= .ToggleDisable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button					= GFC_Control_StandardButton_Style;
+		map GFC_Control											= GFC_Control_StandardButton_Style;
+	}
+
+
+	// ** Normal Checkbox style
+	GFC_Control_StandardCheckBox_Style
+	{
+		GFC_Control_Renderer_Control			=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlToggle;
+
+		with .Flag
+		{
+			.HAlign							=	GFlags(GButtonCtrl, GFC_CF_BUTTON_LEFT);
+			.VAlign							=	GFlags(GButtonCtrl, GFC_CF_BUTTON_VCENTER);
+			.Focus							=	0;	//GFlags(GButtonCtrl, GFC_CF_BUTTON_FOCUS_TEXT);
+			.DownOffset						=	GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_CONTENT);
+		}
+		with .Size
+		{
+			// Border style side widths
+			.BorderMargin					=	GRectMargin(4,0,4,0);
+			.ExtraMargin					=	GRectMargin(0,0,0,0);
+			.FocusMargin_Text				=	GRectMargin(4,4,4,4);
+			.FocusMargin_Image				=	GRectMargin(2,2,2,2);
+			.FocusMargin_Content			=	GRectMargin(0,0,4,2);
+			.FocusMargin_Control			=	GRectMargin(4,4,4,4);
+			.TextOffset						=	GPoint(0,0);
+			.DownOffset_Content				=	GPoint(0,0);
+			.DownOffset_Text				=	GPoint(0,0);
+			.DownOffset_Image				=	GPoint(0,0);
+			.ItemSpace						=	GFC_Control_Size_ItemSpace;
+			.Default						=	GSize(64,31);
+			.Image							=	GSize(24,24);
+		}
+		with .Color
+		{
+			.Text_Default						=	GFC_Control_Color_Text_Default;
+			.TextShadow_Default					=	GFC_Control_Color_TextShadow_Default;
+			.Text_Disable						=	GFC_Control_Color_Text_Disable;
+			.TextShadow_Disable					=	GFC_Control_Color_TextShadow_Disable;
+		}
+		// Toggle State images
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin_Image
+		{
+			.Default
+			{
+				layer {
+					DestCombine			=	GColorCombine(BlendSource,Disable);
+					Center				=	GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 0);
+				}
+			}
+			.Press
+			{
+				layer { Inherit = .Default; }
+				layer {	
+					Center				=	GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 1);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer {	
+					Center				=	GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 2);
+				}
+			}
+			.Disable
+			{
+				layer { Inherit = .Default; }
+				layer {
+					Center				=	GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 3);
+				}
+			}
+			.Focus
+			{
+				layer {
+					DestCombine			=	GColorCombine(BlendSource,Disable);
+					Center				=	GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 0);
+				}
+				layer {
+					DestCombine			= 	GColorCombine(BlendSource,Disable);
+					FactorCombine		= 	GColorCombine(Modulate,Modulate);
+					FactorColor			= 	SF_CtrlTheme_Civ4_Control_Color_Focus;
+					Center				=	GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 6);
+				}
+			}
+			.FocusPress
+			{
+				layer { Inherit = .Focus; }
+				layer {
+					Center				=	GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 1);
+				}
+				layer {}
+			}
+			.FocusRollover
+			{
+				layer { Inherit = .Focus; }
+				layer {
+					Center				=	GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 2);
+				}
+				layer {}
+			}
+			.FocusDisable
+			{
+				layer { Inherit = .Disable; }
+				layer {}
+				layer {
+					DestCombine			= 	GColorCombine(BlendSource,Disable);
+					FactorCombine		= 	GColorCombine(Modulate,Modulate);
+					FactorColor			= 	SF_CtrlTheme_Civ4_Control_Color_Focus;
+					Center				=	GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 6);
+				}
+			}
+			.Toggle
+			{
+				layer {
+					DestCombine			=	GColorCombine(BlendSource,Disable);
+					Center				=	GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 0);
+				}
+				layer {
+					DestCombine			= 	GColorCombine(BlendSource,Disable);
+					FactorCombine		= 	GColorCombine(Modulate,Modulate);
+					FactorColor			= 	SF_CtrlTheme_Civ4_Control_Color_CheckRadio;
+					Center				=	GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 4);
+				}
+			}
+			.ToggleRollover
+			{
+				layer { Inherit = .Toggle; }
+				layer {
+					Center				=	GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 2);
+				}
+				layer {
+					FactorColor			= 	SF_CtrlTheme_Civ4_Control_Color_SelectText;
+				}
+			}
+			.TogglePress
+			{
+				layer { Inherit = .Toggle; }
+				layer {
+					Center				=	GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 1);
+				}
+				layer {
+					FactorColor			= 	SF_CtrlTheme_Civ4_Control_Color_SelectText;
+				}
+			}
+			.ToggleDisable
+			{
+				layer {
+					DestCombine			=	GColorCombine(BlendSource,Disable);
+					Center				=	GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 3);
+				}
+				layer {
+					DestCombine			= 	GColorCombine(BlendSource,Disable);
+					Center				=	GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 5);
+				}
+			}
+			.ToggleFocus
+			{
+				layer {
+					DestCombine			=	GColorCombine(BlendSource,Disable);
+					Center				=	GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 0);
+				}
+				layer {
+					DestCombine			= 	GColorCombine(BlendSource,Disable);
+					FactorCombine		= 	GColorCombine(Modulate,Modulate);
+					FactorColor			= 	SF_CtrlTheme_Civ4_Control_Color_CheckRadio;
+					Center				=	GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 4);
+				}
+				layer {
+					DestCombine			= 	GColorCombine(BlendSource,Disable);
+					FactorCombine		= 	GColorCombine(Modulate,Modulate);
+					FactorColor			= 	SF_CtrlTheme_Civ4_Control_Color_Focus;
+					Center				=	GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 6);
+				}
+			}
+			.ToggleFocusRollover
+			{
+				layer { Inherit = .ToggleFocus; }
+				layer {
+					DestCombine			=	GColorCombine(BlendSource,Disable);
+					Center				=	GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 2);
+				}	
+				layer {
+					FactorColor			= 	SF_CtrlTheme_Civ4_Control_Color_SelectText;
+				}
+				layer {}
+			}
+			.ToggleFocusPress
+			{
+				layer { Inherit = .ToggleFocus; }
+				layer {
+					DestCombine			=	GColorCombine(BlendSource,Disable);
+					Center				=	GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 1);
+				}
+				layer {
+					FactorColor			= 	SF_CtrlTheme_Civ4_Control_Color_SelectText;
+				}
+				layer {}
+			}
+			.ToggleFocusDisable
+			{
+				layer { Inherit = .ToggleDisable; }
+				layer {}
+				layer {}
+				layer {
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate,Modulate);
+					FactorColor		= SF_CtrlTheme_Civ4_Control_Color_Focus;
+					Center			= GBitmap("../../../../Resource/Civ4/Check.tga", HVGrid, 1, 7, 0, 6);
+				}
+			}
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button = GFC_Control_DefaultButton_Style;
+		map GFC_Control							= GFC_Control_DefaultButton_Style;
+	}
+
+
+	// *** Normal RadioButton style
+	GFC_Control_StandardRadioButton_Style
+	{
+		GFC_Control_Renderer_Control			=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlToggle;
+
+		with .Flag
+		{
+			.HAlign							=	GFlags(GButtonCtrl, GFC_CF_BUTTON_LEFT);
+			.VAlign							=	GFlags(GButtonCtrl, GFC_CF_BUTTON_VCENTER);
+			.Focus							=	0;	//GFlags(GButtonCtrl, GFC_CF_BUTTON_FOCUS_TEXT);
+			.DownOffset						=	GFlags(GButtonCtrl, GFC_CF_BUTTON_DOWNOFFSET_CONTENT);
+		}
+		with .Size
+		{
+			.BorderMargin					=	GRectMargin(4,0,4,0);
+			.ExtraMargin					=	GRectMargin(0,0,0,0);
+			.FocusMargin_Text				=	GRectMargin(4,4,4,4);
+			.FocusMargin_Image				=	GRectMargin(2,2,2,2);
+			.FocusMargin_Content			=	GRectMargin(0,0,4,2);
+			.FocusMargin_Control			=	GRectMargin(4,4,4,4);
+			.TextOffset						=	GPoint(0,0);
+			.DownOffset_Content				=	GPoint(0,0);
+			.DownOffset_Text				=	GPoint(0,0);
+			.DownOffset_Image				=	GPoint(0,0);
+			.ItemSpace						=	GFC_Control_Size_ItemSpace;
+			.Default						=	GSize(64,24);
+			.Image							=	GSize(16,16);
+		}
+		with .Color
+		{
+			.Text_Default						=	GFC_Control_Color_Text_Default;
+			.TextShadow_Default					=	GFC_Control_Color_TextShadow_Default;
+			.Text_Disable						=	GFC_Control_Color_Text_Disable;
+			.TextShadow_Disable					=	GFC_Control_Color_TextShadow_Disable;
+		}
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin_Image
+		{
+			.Default
+			{
+				layer {
+					DestCombine			=	GColorCombine(BlendSource,Disable);
+					Center				=	GBitmap("../../../../Resource/Civ4/Radio.tga", HVGrid, 1, 7, 0, 0);
+				}
+			}
+			.Press
+			{
+				layer { Inherit = .Default; }
+				layer { Center = GBitmap("../../../../Resource/Civ4/Radio.tga", HVGrid, 1, 7, 0, 1); }
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer { Center = GBitmap("../../../../Resource/Civ4/Radio.tga", HVGrid, 1, 7, 0, 2); }
+			}
+			.Disable
+			{
+				layer { Inherit = .Default; }
+				layer { Center = GBitmap("../../../../Resource/Civ4/Radio.tga", HVGrid, 1, 7, 0, 3); }
+			}
+			.Focus
+			{
+				layer {
+					DestCombine			=	GColorCombine(BlendSource,Disable);
+					Center				=	GBitmap("../../../../Resource/Civ4/Radio.tga", HVGrid, 1, 7, 0, 0);
+				}
+				layer {
+					DestCombine			= 	GColorCombine(BlendSource,Disable);
+					FactorCombine		= 	GColorCombine(Modulate,Modulate);
+					FactorColor			= 	SF_CtrlTheme_Civ4_Control_Color_Focus;
+					Center				=	GBitmap("../../../../Resource/Civ4/Radio.tga", HVGrid, 1, 7, 0, 6);
+				}
+			}
+			.FocusPress
+			{
+				layer { Inherit = .Focus; }
+				layer { Center = GBitmap("../../../../Resource/Civ4/Radio.tga", HVGrid, 1, 7, 0, 1); }
+				layer {}
+			}
+			.FocusRollover
+			{
+				layer { Inherit = .Focus; }
+				layer { Center = GBitmap("../../../../Resource/Civ4/Radio.tga", HVGrid, 1, 7, 0, 2); }
+				layer {}
+			}
+			.FocusDisable
+			{
+				layer { Inherit = .Disable; }
+				layer {}
+				layer {
+					DestCombine			= 	GColorCombine(BlendSource,Disable);
+					FactorCombine		= 	GColorCombine(Modulate,Modulate);
+					FactorColor			= 	SF_CtrlTheme_Civ4_Control_Color_Focus;
+					Center				=	GBitmap("../../../../Resource/Civ4/Radio.tga", HVGrid, 1, 7, 0, 6);
+				}
+			}
+			.Toggle
+			{
+				layer {
+					DestCombine			=	GColorCombine(BlendSource,Disable);
+					Center				=	GBitmap("../../../../Resource/Civ4/Radio.tga", HVGrid, 1, 7, 0, 0);
+				}
+				layer {
+					DestCombine			= 	GColorCombine(BlendSource,Disable);
+					FactorCombine		= 	GColorCombine(Modulate,Modulate);
+					FactorColor			= 	SF_CtrlTheme_Civ4_Control_Color_CheckRadio;
+					Center				=	GBitmap("../../../../Resource/Civ4/Radio.tga", HVGrid, 1, 7, 0, 4);
+				}
+			}
+			.ToggleRollover
+			{
+				layer { Inherit = .Toggle; }
+				layer { Center = GBitmap("../../../../Resource/Civ4/Radio.tga", HVGrid, 1, 7, 0, 2); }
+				layer { FactorColor = SF_CtrlTheme_Civ4_Control_Color_SelectText; }
+			}
+			.TogglePress
+			{
+				layer { Inherit = .Toggle; }
+				layer { Center = GBitmap("../../../../Resource/Civ4/Radio.tga", HVGrid, 1, 7, 0, 1); }
+				layer { FactorColor = SF_CtrlTheme_Civ4_Control_Color_SelectText; }
+			}
+			.ToggleDisable
+			{
+				layer {
+					DestCombine			=	GColorCombine(BlendSource,Disable);
+					Center				=	GBitmap("../../../../Resource/Civ4/Radio.tga", HVGrid, 1, 7, 0, 3);
+				}
+				layer {
+					DestCombine			= 	GColorCombine(BlendSource,Disable);
+					Center				=	GBitmap("../../../../Resource/Civ4/Radio.tga", HVGrid, 1, 7, 0, 5);
+				}
+			}
+			.ToggleFocus
+			{
+				layer {
+					DestCombine			=	GColorCombine(BlendSource,Disable);
+					Center				=	GBitmap("../../../../Resource/Civ4/Radio.tga", HVGrid, 1, 7, 0, 0);
+				}
+				layer {
+					DestCombine			= 	GColorCombine(BlendSource,Disable);
+					FactorCombine		= 	GColorCombine(Modulate,Modulate);
+					FactorColor			= 	SF_CtrlTheme_Civ4_Control_Color_CheckRadio;
+					Center				=	GBitmap("../../../../Resource/Civ4/Radio.tga", HVGrid, 1, 7, 0, 4);
+				}
+				layer {
+					DestCombine			= 	GColorCombine(BlendSource,Disable);
+					FactorCombine		= 	GColorCombine(Modulate,Modulate);
+					FactorColor			= 	SF_CtrlTheme_Civ4_Control_Color_Focus;
+					Center				=	GBitmap("../../../../Resource/Civ4/Radio.tga", HVGrid, 1, 7, 0, 6);
+				}
+			}
+			.ToggleFocusRollover
+			{
+				layer { Inherit = .ToggleFocus; }
+				layer {
+					DestCombine			=	GColorCombine(BlendSource,Disable);
+					Center				=	GBitmap("../../../../Resource/Civ4/Radio.tga", HVGrid, 1, 7, 0, 2);
+				}
+				layer { FactorColor = SF_CtrlTheme_Civ4_Control_Color_SelectText; }
+				layer {}
+			}
+			.ToggleFocusPress
+			{
+				layer { Inherit = .ToggleFocus; }
+				layer {
+					DestCombine			=	GColorCombine(BlendSource,Disable);
+					Center				=	GBitmap("../../../../Resource/Civ4/Radio.tga", HVGrid, 1, 7, 0, 1);
+				}
+				layer { FactorColor = SF_CtrlTheme_Civ4_Control_Color_SelectText; }
+				layer {}
+			}
+			.ToggleFocusDisable
+			{
+				layer { Inherit = .ToggleDisable; }
+				layer {}
+				layer {}
+				layer {
+					DestCombine			= 	GColorCombine(BlendSource,Disable);
+					FactorCombine		= 	GColorCombine(Modulate,Modulate);
+					FactorColor			= 	SF_CtrlTheme_Civ4_Control_Color_Focus;
+					Center				=	GBitmap("../../../../Resource/Civ4/Radio.tga", HVGrid, 1, 7, 0, 6);
+				}
+			}
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button		= GFC_Control_DefaultButton_Style;
+		map GFC_Control								= GFC_Control_DefaultButton_Style;
+	}
+}

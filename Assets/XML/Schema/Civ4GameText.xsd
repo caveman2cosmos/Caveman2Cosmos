@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.firaxis.com" xmlns="http://www.firaxis.com">
+  <xs:element name="Civ4GameText">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TEXT" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:all>
+              <xs:element ref="Tag"/>
+              <xs:element name="English" type="Gametext"/>
+              <xs:element name="French" type="Gametext" minOccurs="0"/>
+              <xs:element name="German" type="Gametext" minOccurs="0"/>
+              <xs:element name="Italian" type="Gametext" minOccurs="0"/>
+              <xs:element name="Spanish" type="Gametext" minOccurs="0"/>
+              <xs:element name="Finnish" type="Gametext" minOccurs="0"/>
+              <xs:element name="Hungarian" type="Gametext" minOccurs="0"/>
+              <xs:element name="Polish" type="Gametext" minOccurs="0"/>
+              <xs:element name="Russian" type="Gametext" minOccurs="0"/>
+              <xs:element name="Chinese" type="Gametext" minOccurs="0"/>
+              <xs:element name="Portuguese" type="Gametext" minOccurs="0"/>
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tag">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:pattern value="TXT_[\c-[:]]*|AI_DIPLO_[\c-[:]]*|USER_DIPLO_[\c-[:]]*|INTERFACE_[\c-[:]]*"/>
+        <xs:whiteSpace value="collapse"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:complexType mixed="true" name="Gametext">
+    <xs:all>
+      <xs:element name="Text" type="xs:string" minOccurs="0"/>
+      <xs:element name="Gender" type="xs:NMTOKEN" minOccurs="0"/>
+      <xs:element name="Plural" type="xs:NMTOKEN" minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+</xs:schema>

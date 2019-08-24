@@ -1,0 +1,58 @@
+-> Perfect World notes:
+	Aluminium co: coal->+3sci, aluminium
+	Cereal Mills: rice, corn, wheat->0.75food
+	Civ Jewellers: gold, silver, gems->+1gld, +4cult
+	Creative co: iron, copper, marble, stone, aluminium -> +0.5prod, +3 cult
+	Mining inc: coal, iron, copper, gold, silver -> +1.0prod
+	Sid Sushi: crab, clam, fish, rice -> 0.5food, +2cult
+	Standard eth: corn, sugar, rice -> +2sci, oil
+
+	Technologies required from earliest to latest:
+	MiningInc - railroad
+	CreativeCo - combustion AND Sid Sushi - medicine
+	AluminiumCo - rocketry AND CerealMills - refrigeration
+	StandardEth - plastics AND CivJewellers - mass media
+	
+	Elements:
+	CivJewellers/MiningInc:	coal+basemetal/gems
+	CreativeCo/Mining Inc:  coal+raremetal/marble+stone+aluminium
+	AluminiumCo/Mining Inc: coal/basemetal+raremetal
+
+	Food:
+	CerealMills/SidSushi: sea/corn+wheat
+	StandardEth/SidSushi: sea/corn+sugar
+	CerealMills/StandardEth: wheat/sugar
+
+	Some outputs two continents (broken/rounded/smattering islands):
+	MiningInc/CivJewellers: coal+basemetal to gems = 11.333333 
+	MiningInc/CreativeCo: coal+raremetal to marble+stone+aluminium = 0.923077
+	MiningInc/AluminiumCo: basemetal+raremetal to coal = 4.571429 
+	SidSushi/CerealMills: sea to corn+wheat = 4.461538 
+	SidSushi/StandardEth: sea to corn+sugar = 4.833333 
+	CerealMills/StandardEth: wheat to sugar = 1.333333 
+
+	Some outputs two continents (two broken):
+	MiningInc/CivJewellers: coal+basemetal to gems = 11.000000
+	MiningInc/CreativeCo: coal+raremetal to marble+stone+aluminium = 0.961538
+	MiningInc/AluminiumCo: basemetal+raremetal to coal = 4.500000
+	SidSushi/CerealMills: sea to corn+wheat = 3.833333
+	SidSushi/StandardEth: sea to corn+sugar = 3.833333
+	CerealMills/StandardEth: wheat to sugar = 1.000000
+
+	Some outputs two continents (desertcentre/divided in four)
+	MiningInc/CivJewellers: coal+basemetal to gems = 12.750000
+	MiningInc/CreativeCo: coal+raremetal to marble+stone+aluminium = 1.000000
+	MiningInc/AluminiumCo: basemetal+raremetal to coal = 4.761905
+	SidSushi/CerealMills: sea to corn+wheat = 4.000000
+	SidSushi/StandardEth: sea to corn+sugar = 4.255319
+	CerealMills/StandardEth: wheat to sugar = 1.230769
+	
+	Some outputs two continents (roughly three continents)
+	MiningInc/CivJewellers: coal+basemetal to gems = 9.750000
+	MiningInc/CreativeCo: coal+raremetal to marble+stone+aluminium = 1.058824
+	MiningInc/AluminiumCo: basemetal+raremetal to coal = 4.333333
+	SidSushi/CerealMills: sea to corn+wheat = 2.421053
+	SidSushi/StandardEth: sea to corn+sugar = 2.190476
+	CerealMills/StandardEth: wheat to sugar = 0.666667
+ 
+	not enough sugar, gems

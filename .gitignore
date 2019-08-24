@@ -6,3 +6,17 @@
 
 # Compiled Dynamic libraries
 *.dll
+*.pdb
+*.FPK
+
+Assets/fpklive_token.txt
+!/Tools/*.dll
+XmlValidator.log
+
+.vscode/settings.json
+
+git_installer.exe
+Tools/Setup/.wget-hsts
+
+Assets/art/
+!Assets/art/Readme.txt

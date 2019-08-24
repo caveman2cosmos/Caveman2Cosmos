@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Re-Modified by StrategyOnly -->
+<!-- Master Load File -->
+<!-- -->
+<Civ4ModularLoadControls xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Xml\Schema\Caveman2Cosmos.xsd">
+	<DefaultConfiguration>Alternate_Timelines_1</DefaultConfiguration>
+	<ConfigurationInfos>
+		<ConfigurationInfo>
+			<Type>Alternate_Timelines_1</Type>
+			<Description>All the Modules concerned with alternate timline units and buildings.</Description>
+			<Modules>
+				<Module>
+					<Directory>Lara_Croft</Directory>
+					<bLoad>1</bLoad>
+					<!--> Modular? Yes v38  Initial Test Only<-->
+				</Module>
+				<Module>
+					<Directory>Megafauna</Directory>
+					<bLoad>1</bLoad>
+					<!--> Modular? NO   <-->
+					<!--> This contains sub modules some of which may be modular. As each is made modular it will be moved to  Megafauna_Units <-->
+				</Module>
+				<Module>
+					<Directory>Megafauna_Units</Directory>
+					<bLoad>1</bLoad>
+					<!--> Modular? Yes v38  Initial Test Only<-->
+					<!--> NOTE: This contains sub modules turn all off here or selected ones using the folders MLF file <-->
+				</Module>
+				<Module>
+					<Directory>Clockpunk</Directory>
+					<bLoad>1</bLoad>
+					<!--> Modular? Yes v38  Initial Test Only<-->
+				</Module>
+				<Module>
+					<Directory>Steampunk</Directory>
+					<bLoad>1</bLoad>
+					<!--> Modular? Yes v38  Initial Test Only<-->
+				</Module>
+				<Module>
+					<Directory>Dieselpunk</Directory>
+					<bLoad>1</bLoad>
+					<!--> Modular?  NO   Work is in progress but eartly stages at the moment<-->
+				</Module>
+				<Module>
+					<Directory>Biopunk</Directory>
+					<bLoad>1</bLoad>
+					<!--> Modular?  NO   Biopunk and Cyberpunk cross reference each other. Both must be on or both must be off<-->
+				</Module>
+				<Module>
+					<Directory>Cyberpunk</Directory>
+					<bLoad>1</bLoad>
+					<!--> Modular?  NO   Biopunk and Cyberpunk cross reference each other. Both must be on or both must be off<-->
+				</Module>
+				<Module>
+					<Directory>Apocalypse</Directory>
+					<bLoad>1</bLoad>
+					<!--> Modular?  NO   not started<-->
+				</Module>
+				<Module>
+					<Directory>Atompunk</Directory>
+					<bLoad>1</bLoad>
+					<!--> Modular? Yes v38  Initial Test Only<-->
+				</Module>
+				<Module>
+					<Directory>Nanopunk</Directory>
+					<bLoad>1</bLoad>
+					<!--> Modular? Yes v38  Initial Test Only<-->
+				</Module>
+				<Module>
+					<Directory>Crystalpunk</Directory>
+					<bLoad>1</bLoad>
+					<!--> Modular?  NO   Work is in progress but eartly stages at the moment<-->
+				</Module>
+				<Module>
+					<Directory>Spacepunk</Directory>
+					<bLoad>1</bLoad>
+					<!--> Modular?  NO   Work is in progress but eartly stages at the moment<-->
+				</Module>
+				<Module>
+					<Directory>Starpunk</Directory>
+					<bLoad>1</bLoad>
+					<!--> Modular?  NO   Work is in progress but eartly stages at the moment<-->
+				</Module>
+			</Modules>
+		</ConfigurationInfo>
+	</ConfigurationInfos>
+</Civ4ModularLoadControls>

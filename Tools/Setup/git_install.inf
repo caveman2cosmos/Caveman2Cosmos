@@ -1,0 +1,20 @@
+[Setup]
+Lang=default
+Dir=C:\Program Files\Git
+Group=Git
+NoIcons=0
+SetupType=default
+Components=ext,ext\shellhere,ext\guihere,gitlfs,assoc_sh
+Tasks=
+EditorOption=Notepad++
+CustomEditorPath=
+PathOption=Cmd
+SSHOption=OpenSSH
+TortoiseOption=false
+CURLOption=OpenSSL
+CRLFOption=CRLFAlways
+BashTerminalOption=ConHost
+PerformanceTweaksFSCache=Enabled
+UseCredentialManager=Enabled
+EnableSymlinks=Disabled
+EnableBuiltinInteractiveAdd=Disabled

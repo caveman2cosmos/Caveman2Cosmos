@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Building Infos -->
+<Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
+	<BuildingInfos>
+		<BuildingInfo>
+			<BuildingClass>BUILDINGCLASS_DISEASE_KURU</BuildingClass>
+			<Type>BUILDING_DISEASE_KURU</Type>
+			<SpecialBuildingType>NONE</SpecialBuildingType>
+			<Description>TXT_KEY_BUILDING_DISEASE_KURU</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_DISEASE_STRATEGY</Strategy>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_KURU</ArtDefineTag>
+			<bNeverCapture>0</bNeverCapture>
+			<bNukeImmune>1</bNukeImmune>
+			<iCost>-1</iCost>
+			<iHealth>-1</iHealth>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>-5</iYield>
+				<iYield>0</iYield>
+			</YieldModifiers>
+		</BuildingInfo>
+	</BuildingInfos>
+</Civ4BuildingInfos>

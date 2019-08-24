@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+	<!-- ReModified by StrategyOnly -->
+	<!--
+	Main BUG Mod Initialization
+
+	This file initializes the BUG Core and all mods.
+
+	Copyright (c) 2008 The BUG Mod.
+	-->
+<bug>
+	<!-- BUG Core -->
+	<load mod="BUG Config"/>
+	<load mod="BUG Core"/>
+	<!-- Utility Modules -->
+	<init module="AttitudeUtil"/>
+	<event type="LanguageChanged" module="AttitudeUtil" function="initModifiers"/>
+	<init module="ColorUtil">
+		<!--
+			You can safely modify this list to change the color dropdown menus
+			for color options. You can change the text displayed in the menus by
+			adding translations for your new colors to Colors_CIV4GameText.xml
+			in the XML/Text directory. 
+		-->
+		<arg name="colors" type="tuple">
+			"COLOR_RED",
+			"COLOR_YELLOW",
+			"COLOR_CYAN",
+			"COLOR_GREEN",
+			"COLOR_BLUE",
+			"COLOR_MAGENTA",
+			"COLOR_WHITE",
+			"COLOR_LIGHT_GREY",
+			"COLOR_GREY",
+			"COLOR_DARK_GREY",
+			"COLOR_BLACK"
+		</arg>
+	</init>
+	<event type="LanguageChanged" module="ColorUtil" function="createColors"/>
+	<events module="DealUtil" function="addEvents"/>
+	<events module="DiplomacyUtil" function="addEvents"/>
+	<extend how="after" module="DiplomacyUtil" function="handleAIComment" to="CvDiplomacyInterface" as="beginDiplomacy"/>
+	<extend how="after" module="DiplomacyUtil" function="handleUserResponse" to="CvDiplomacyInterface" as="handleUserResponse"/>
+	<!-- Rise of Mankind -->
+	<events module="CvEnhancedTechConquestEventManager"/>
+	<!-- Rise of Mankind end -->
+	<init module="GPUtil"/>
+	<init module="ReligionUtil"/>
+	<init module="TradeUtil"/>
+	<init module="TraitUtil"/>
+	<gameutils module="WidgetUtil" handler="getWidgetHelp"/>
+<!--  Removed while I try and get Platy Tech Screen working
+	<event type="OnLoad" module="CvTechChooser" function="resetTechPrefs"/>
+	<event type="GameStart" module="CvTechChooser" function="resetTechPrefs"/-->
+	<!-- Mods -->
+	<load mod="BUG Main Interface"/>
+	<load mod="BUG City Screen"/>
+	<load mod="BUG Advisors"/>
+	<load mod="Customizable Domestic Advisor"/>
+	<load mod="TechWindow"/>
+	<load mod="Not Just Another Game Clock"/>
+	<load mod="Advanced Scoreboard"/>
+	<load mod="Autolog"/>
+	<load mod="Reminder"/>
+	<!-- requires Autolog -->
+	<load mod="Civ4lerts"/>
+	<load mod="MoreCiv4lerts"/>
+	<load mod="Unit Naming"/>
+	<load mod="EventSigns"/>
+	<load mod="Strategy Overlay"/>
+	<load mod="StatusDump"/>
+	<load mod="Abandon City Mod"/>
+	<!-- BULL -->
+	<load mod="BULL Actions"/>
+	<load mod="BULL City Bar"/>
+	<load mod="BULL Misc Hovers"/>
+	<load mod="AutoSave"/>
+	<load mod="Advanced Combat Odds"/>
+	<load mod="RoMSettings"/>
+	<load mod="DiplomacySettings"/>
+	<load mod="AutomatedSettings"/>
+	<!--RevolutionDCM start - mod components -->
+	<load mod="Revolution"/>
+	<load mod="RevDCM"/>
+	<!--RevolutionDCM end-->
+	<!--Mad Nukes Mod-->
+	<events module="MADNukesEventManager"/>
+	<!--Mad Nukes Mod-->
+	<!-- Options Screen -->
+	<screen id="BUGFull">
+		<tab module="BugGeneralOptionsTab"/>
+		<tab module="RevDCMOptionsTab"/>
+		<tab module="RoMOptionsTab"/>
+		<tab module="ANDDiplomacyTab"/>
+		<tab module="ANDAutomationsTab"/>
+		<tab module="BugMapOptionsTab"/>
+		<tab module="BugCityScreenOptionsTab"/>
+		<tab module="BugAdvisorOptionsTab"/>
+		<tab module="BugAlertsOptionsTab"/>
+		<tab module="BugScoreOptionsTab"/>
+		<tab module="BugNJAGCOptionsTab"/>
+		<tab module="BugACOOptionsTab"/>
+		<tab module="BugUnitNameOptionsTab"/>
+		<tab module="BugAutologOptionsTab"/>
+		<tab module="BugSystemOptionsTab"/>
+		<tab module="BugCreditsOptionsTab"/>
+	</screen>
+	<load mod="Female Missionaries"/>
+	<load mod="CaptureSlaves"/>
+	<load mod="MasterModList"/>
+	<load mod="Partisan"/>
+	<load mod="Heroes"/>
+	<load mod="InitMilitaryPromos"/>
+	<load mod="NaturalWonders"/>
+	<load mod="GreatPersonBornDisplay"/>
+</bug>

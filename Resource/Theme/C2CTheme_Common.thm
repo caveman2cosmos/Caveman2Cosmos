@@ -1,0 +1,413 @@
+/********************************************************************** 
+
+Filename	:	Civ4Theme_Common.thm
+Content		:	Civ4 - GCtrl common control theme
+Created		:	May 1, 2005
+Authors		:	Sven Dixon
+
+Copyright	:	(c) 2005 Scaleform Corp. All Rights Reserved.
+
+**********************************************************************/
+
+// Control Base properties 
+with GFC_Control
+{
+	// Blank control skin
+	skin SF_CtrlTheme_Civ4_Control_Skin_Blank
+	{
+		layer
+		{
+		}
+	}
+
+	GFC_Control_DefaultControl_Style
+	{
+		.Renderer_Control	= 0;
+		.Update_ChildLayout	= 0;
+
+		with .Flag
+		{
+			.Transparent			= 0;	//GFlags(GCtrl, GFC_CF_TRANSPARENT);
+			.SolidInner				= 0;	//GFlags(GCtrl, GFC_CF_SOLIDINNER);
+			.SolidBackground		= 0;	//GFlags(GCtrl, GFC_CF_SOLIDBACKGROUND);
+			.RegionClip				= 0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP);
+			.RegionClipParent		= 0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+			.NoExternalWindow		= 0;	//GFlags(GCtrl, GFC_CF_NOEXTERNALWINDOW);
+			.HitTest				= 0;	//GFlags(GCtrl, GFC_CF_HITTEST);
+			.TopLayer				= 0;	//GFlags(GCtrl, GFC_CF_TOPLAYER);
+			.TopLayerBitmap			= 0;	//GFlags(GCtrl, GFC_CF_TOPLAYERBITMAP);
+			.BottomLayerBitmap		= 0;	//GFlags(GCtrl, GFC_CF_BOTTOMLAYERBITMAP);
+			.Mask_InvalidateControl	= GFlags(GCtrl, GFC_CF_ACTIVE, GFC_CF_DISABLED, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER, GFC_CF_FORCE_ROLLOVER);
+		}
+		with .Size
+		{
+			.ItemSpace	= 2;
+			.ListItem	= 20;
+			.IconLarge	= 48;
+			.IconMedium	= 32;
+			.IconSmall	= 16;
+			.Step		= 10;
+		}
+		with .Layout
+		{
+			.Size_VSpacing		= 2;
+			.Size_HSpacing		= 2;
+			.Size_OuterMargin	= GRectMargin(4,4,4,4);
+
+			with SF_CtrlTheme_Civ4_Control
+			{
+				GRectMargin .Layout_Thick_OuterMargin		= GRectMargin(8,8,8,8);
+				GRectMargin .Layout_MainMenu_OuterMargin	= GRectMargin(4,4,4,4);
+			}
+		}
+		with .BoxLayout
+		{//Tech Screen tech boxes & Menu Buttons.
+			.Size_VSpacing		= 4;
+			.Size_HSpacing		= 4;
+			.Size_OuterMargin	= GRectMargin(8,8,8,8);
+		}
+		with .Delay
+		{// ToolTip delays, in ms.
+			.ToolTipShow = 500;
+			.ToolTipHide = 30000;
+		}
+		with .Color
+		{//All default color types are set for dynamic color change.
+			with GFC_Control_Color_3DLook
+			{
+				.Lightest	= GColor(255,255,255);
+				.VeryLight	= GColor(250,246,240);
+				.Light		= GColor(243,240,233);
+				.Normal		= GColor(236,233,216);
+				.Dark		= GColor(166,163,156);
+				.VeryDark	= GColor( 86, 83, 76);
+				.Darkest	= GColor(  0,  0,  0);
+			}
+			.Surface					= GColor(115, 96, 78,255);
+			.Background					= .Surface;
+			.DialogInner				= GColor(154,129,106);
+			.Info						= GColor(255,255,128);
+			.ToolTipInner				= GColor( 32, 64,128);
+			.ToolTipBorder				= GColor(224,180,  0);
+			.Border_Default				= GColor(  0,  0,  0);
+			.Border_Select				= GColor( 79,156,233);
+			.Border_Inactive			= GColor(190,173,150);
+			.Border_InactiveSelect		= GColor(190,173,150);
+			.Border_Disable				= GColor( 68,157,201);
+			.Border_DisableSelect		= GColor( 68,157,201);
+			.Inner_Default				= GColor(226,213,191);
+			.Inner_Select				= GColor(109,207,246,96);
+			.Inner_Inactive				= GColor(190,173,150,96);
+			.Inner_InactiveSelect		= GColor(190,173,150,96);
+			.Inner_Disable				= GColor(218,210,198,96);
+			.Inner_DisableSelect		= GColor( 68,157,201,96);
+			.Image_Default				= GColor(White);
+			.Image_Select				= GColor(White);
+			.Image_Inactive				= GColor(White);
+			.Image_InactiveSelect		= GColor(White);
+			.Image_Disable				= GColor(0, 0, 0, 96);
+			.Image_DisableSelect		= GColor(0, 0, 0, 96);
+			.Text_Default				= GColor(255,255,255,255);
+			.Text_Select				= GColor(255,255,255,255);
+			.Text_Inactive				= GColor(255,255,255,255);
+			.Text_InactiveSelect		= GColor(255,255,255,255);
+			.Text_Disable				= GColor(255,255,255,128);
+			.Text_DisableSelect			= GColor(255,255,255,128);
+			.TextShadow_Default			= GColor(  0,  0,  0,255);
+			.TextShadow_Select			= GColor(  0,  0,  0,255);
+			.TextShadow_Inactive		= GColor(  0,  0,  0,255);
+			.TextShadow_InactiveSelect	= GColor(  0,  0,  0,255);
+			.TextShadow_Disable			= GColor(  0,  0,  0,128);
+			.TextShadow_DisableSelect	= GColor(  0,  0,  0,128);
+			.Link_Default				= GColor(175,210,245);
+			.Link_Select				= GColor(175,210,245);
+			.Link_Rollover				= GColor(255,211,126);
+			.Link_Inactive				= GColor(175,210,245);
+			.Link_InactiveSelect		= GColor(175,210,245);
+			.Link_InactiveRollover		= GColor(255,211,126);
+			.Link_Disable				= GColor(255,255,255,128);
+			.Link_DisableSelect			= GColor(255,255,255,128);
+			.Link_DisableRollover		= GColor(255,255,255,128);
+			.BottomLayer_Factor			= GColor(Black);
+			.BottomLayer_ColorKey		= GColor(Black);
+			.BottomLayer_ColorKeyMask	= GColor(White);
+			.TopLayer_Factor			= GColor(Black);
+			.TopLayer_ColorKey			= GColor(Black);
+			.TopLayer_ColorKeyMask		= GColor(White);
+			.HitTestLayer_Factor		= GColor(Black);
+			.HitTestLayer_ColorKey		= GColor(Black);
+			.HitTestLayer_ColorKeyMask	= GColor(White);
+			// Theme - specific colors
+			// By default, custom color types are not set to dynamic color 
+			with SF_CtrlTheme_Civ4_Control_Color
+			{
+				// Text used for stone components.
+				GColor	.AltText					= GColor( 64, 40, 38,255);
+				GColor	.AltTextShadow				= GColor(255,227,200,128);
+				GColor	.AltTextDisable				= GColor( 43, 40, 17,255);
+				GColor	.AltTextShadowDisable		= GColor(182,171,151,128);
+				// Another text used for stone components (lighter brown).
+				GColor	.StoneText					= GColor( 79, 52, 41,255);
+				GColor	.StoneTextShadow			= GColor(255,235,216,255);
+				GColor	.StoneTextDisable			= GColor( 79, 52, 41,128);
+				GColor	.StoneTextShadowDisable		= GColor(255,235,216,128);
+				// Text used for table selection
+				GColor	.SelectText					= GColor(255,229,121,255);
+				GColor	.SelectTextShadow			= GColor(  0,  0,  0,255);
+				GColor	.SelectTextDisable			= GColor(255,229,121,128);
+				GColor	.SelectTextShadowDisable	= GColor(  0,  0,  0,128);
+				// Used for backgrounds of Window and Menu/ComboBox popup.
+				GColor	.BG							= GColor( 69, 93,156,217)	: GFC_Control_Color;	//Set for dynamic color change
+				GColor	.MenuBG						= GColor( 27, 39, 63,255)	: GFC_Control_Color;	//Set for dynamic color change
+				GColor	.MergeBG					= GColor( 44, 84,130,255)	: GFC_Control_Color;	//Set for dynamic color change
+				GColor	.Winoff						= GColor( 32, 32, 64, 48)	: GFC_Control_Color;	//Set for dynamic color change
+
+				GColor	.Grid						= GColor(105, 97, 86,128);
+				// Table selection color
+				GColor	.Select						= GColor(128,168,255, 89);
+				GColor	.Offselect					= GColor(199,178,153, 89);
+				GColor	.Multiselect				= GColor(128,168,255, 64);
+				GColor	.DisableSelect				= GColor(199,178,153, 89);
+				GColor	.DisableOffselect			= GColor(199,178,153, 89);
+				GColor	.DisableMultiselect			= GColor(199,178,153, 64);
+				GColor	.Rollover					= GColor(255,229,121, 64);
+				// Table alt row / column
+				GColor	.AltCell					= GColor(199,178,153, 32);
+				// Progress Fill
+				GColor	.Fill						= GColor( 67,140, 38,255);
+				// Leader border/button color
+				GColor	.Leader						= GColor(171,255,129,255);
+				GColor	.LeaderRoll					= GColor(255,255,255,255);
+				GColor	.LeaderDisable				= GColor(128,128,128,255);
+				// Text Rollover Disable
+				GColor	.RollText					= GColor(179,228,255,255);
+				GColor	.DisableText				= GColor(128,128,128,255);
+
+				GColor	.Focus						= GColor(128,168,255,255);
+				GColor	.CheckRadio					= GColor(128,220,255,255);
+				// Main Menu Header Text
+				GColor	.HeaderText					= GColor(214,238,255,255);
+
+				GColor	.SliderFill					= GColor(128,220,255,255);
+				GColor	.DisableSliderFill			= GColor(172,172,172,255);
+
+				GColor	.Modal						= GColor(  0,  0,  0, 89);
+
+				GColor	.TabText					= GColor(240,225,216,255);
+				// Icon HudHelp panel
+				GColor	.IconBG						= GColor( 69, 93,156,128)	: GFC_Control_Color;	//Set for dynamic color change
+				GColor	.HelpBG						= GColor( 50, 50,100,112)	: GFC_Control_Color;	//Set for dynamic color change
+				// HUD icon border color
+				GColor	.HUDBorder					= GColor( 78, 97,130,255)	: GFC_Control_Color;	//Set for dynamic color change
+
+				GColor	.EndTurnDot_Green			= GColor(200,  0,  0,255);
+				GColor	.EndTurnDot_Red				= GColor(  0,200,  0,255);
+				GColor	.EndTurnDot_DarkRed			= GColor(  0,100,  0,255);
+				GColor	.EndTurnDot_Disable			= GColor(100,100,100,255);
+			}
+		}
+		with .Combine
+		{
+			.Surface							= GColorCombine(Source, Disable);
+			.DialogInner						= .Surface;
+			.Info								= .Surface;
+			.ToolTip							= .Surface;
+
+			.Border_Default						= .Surface;
+			.Border_Select						= GColorCombine(BlendSource, Disable);
+			.Border_Inactive					= .Border_Select;
+			.Border_InactiveSelect				= .Border_Select;
+			.Border_Disable						= .Border_Select;
+			.Border_DisableSelect				= .Border_Select;
+
+			.Inner_Default						= .Surface;
+			.Inner_Select						= GColorCombine(BlendSource, Disable);
+			.Inner_Inactive						= .Inner_Select;
+			.Inner_InactiveSelect				= .Inner_Select;
+			.Inner_Disable						= GColorCombine(Source, Disable);
+			.Inner_DisableSelect				= .Inner_Select;
+
+			.Image_Default_Dest					= GColorCombine(BlendSource, Disable);
+			.Image_Default_Factor				= GColorCombine(Source, Source);
+			.Image_Select_Dest					= .Image_Default_Dest;
+			.Image_Select_Factor				= .Image_Default_Factor;
+			.Image_Inactive_Dest				= .Image_Default_Dest;
+			.Image_Inactive_Factor				= .Image_Default_Factor;
+			.Image_InactiveSelect_Dest			= .Image_Default_Dest;
+			.Image_InactiveSelect_Factor		= .Image_Default_Factor;
+			.Image_Disable_Dest					= GColorCombine(BlendSource, Disable);
+			.Image_Disable_Factor				= GColorCombine(Source, Modulate);
+			.Image_DisableSelect_Dest			= GColorCombine(BlendSource, Disable);
+			.Image_DisableSelect_Factor			= GColorCombine(Source, Modulate);
+
+			.Text_Default_Dest					= GColorCombine(BlendSource, Disable);
+			.Text_Default_Factor				= GColorCombine(Factor, Source);
+			.Text_Select_Dest					= GColorCombine(BlendSource, Disable);
+			.Text_Select_Factor					= GColorCombine(Factor, Source);
+			.Text_Inactive_Dest					= GColorCombine(BlendSource, Disable);
+			.Text_Inactive_Factor				= GColorCombine(Factor, Source);
+			.Text_InactiveSelect_Dest			= GColorCombine(BlendSource, Disable);
+			.Text_InactiveSelect_Factor			= GColorCombine(Factor, Source);
+			.Text_Disable_Dest					= GColorCombine(BlendSource, Disable);
+			.Text_Disable_Factor				= GColorCombine(Factor, Modulate);
+			.Text_DisableSelect_Dest			= GColorCombine(BlendSource, Disable);
+			.Text_DisableSelect_Factor			= GColorCombine(Factor, Modulate);
+
+			.TextShadow_Default_Dest			= GColorCombine(BlendSource, Disable);
+			.TextShadow_Default_Factor			= GColorCombine(Factor, Modulate);
+			.TextShadow_Select_Dest				= GColorCombine(BlendSource, Disable);
+			.TextShadow_Select_Factor			= GColorCombine(Factor, Modulate);
+			.TextShadow_Inactive_Dest			= GColorCombine(BlendSource, Disable);
+			.TextShadow_Inactive_Factor			= GColorCombine(Factor, Modulate);
+			.TextShadow_InactiveSelect_Dest		= GColorCombine(BlendSource, Disable);
+			.TextShadow_InactiveSelect_Factor	= GColorCombine(Factor, Modulate);
+			.TextShadow_Disable_Dest			= GColorCombine(BlendSource, Disable);
+			.TextShadow_Disable_Factor			= GColorCombine(Factor, Modulate);
+			.TextShadow_DisableSelect_Dest		= GColorCombine(BlendSource, Disable);
+			.TextShadow_DisableSelect_Factor	= GColorCombine(Factor, Modulate);
+
+			.TopLayer_Dest 						= GColorCombine(BlendSource, Disable);
+			.TopLayer_Factor 					= GColorCombine(Source, Source);
+			.BottomLayer_Dest 					= GColorCombine(BlendSource, Disable);
+			.BottomLayer_Factor 				= GColorCombine(Source, Source);
+			.HitTestLayer_Dest 					= GColorCombine(Source, Disable);
+			.HitTestLayer_Factor 				= GColorCombine(Source, Source);
+		}
+		with .Font
+		{
+			// Anti-aliased font requires the Text combine
+			// to be BlendSource instead of Source, which means
+			// there must be an ALPHA channel in all fonts
+			with SF_CtrlTheme_Civ4_Control_Font
+			{
+				GFont .Size0_Normal	= GFont("Sylfaen","Regular", 13, GFlags(GFontFeature, GFC_FONT_ALPHA),				  0, GRectMargin(2));
+				GFont .Size0_Bold	= GFont("Sylfaen","Bold",	 13, GFlags(GFontFeature, GFC_FONT_ALPHA, GFC_FONT_BOLD), 0, GRectMargin(2));
+
+				GFont .Size1_Normal	= GFont("Sylfaen","Regular", 15, GFlags(GFontFeature, GFC_FONT_ALPHA),				  0, GRectMargin(2));
+				GFont .Size1_Bold	= GFont("Sylfaen","Bold",	 15, GFlags(GFontFeature, GFC_FONT_ALPHA, GFC_FONT_BOLD), 0, GRectMargin(2));
+
+				GFont .Size2_Normal	= GFont("Sylfaen","Regular", 17, GFlags(GFontFeature, GFC_FONT_ALPHA),				  0, GRectMargin(2));
+				GFont .Size2_Bold	= GFont("Sylfaen","Bold",	 17, GFlags(GFontFeature, GFC_FONT_ALPHA, GFC_FONT_BOLD), 0, GRectMargin(2));
+
+				GFont .Size3_Normal	= GFont("Sylfaen","Regular", 19, GFlags(GFontFeature, GFC_FONT_ALPHA),				  0, GRectMargin(2));
+				GFont .Size3_Bold	= GFont("Sylfaen","Bold",	 19, GFlags(GFontFeature, GFC_FONT_ALPHA, GFC_FONT_BOLD), 0, GRectMargin(2));
+
+				GFont .Size4_Normal	= GFont("Sylfaen","Regular", 21, GFlags(GFontFeature, GFC_FONT_ALPHA),				  0, GRectMargin(2));
+				GFont .Size4_Bold	= GFont("Sylfaen","Bold",	 21, GFlags(GFontFeature, GFC_FONT_ALPHA, GFC_FONT_BOLD), 0, GRectMargin(2));
+			}
+			.Normal		= SF_CtrlTheme_Civ4_Control_Font_Size2_Normal;
+			.Bold		= SF_CtrlTheme_Civ4_Control_Font_Size2_Bold;
+
+			.Header		= SF_CtrlTheme_Civ4_Control_Font_Size4_Normal;
+			.HeaderBold	= SF_CtrlTheme_Civ4_Control_Font_Size4_Bold;
+
+			.Footer		= SF_CtrlTheme_Civ4_Control_Font_Size0_Normal;
+			.FooterBold	= SF_CtrlTheme_Civ4_Control_Font_Size0_Bold;
+
+			.Fixed		= SF_CtrlTheme_Civ4_Control_Font_Size1_Normal;
+			.FixedBold	= SF_CtrlTheme_Civ4_Control_Font_Size1_Bold;
+		}
+		with .Cursor
+		{
+			.Default							=	.Arrow;
+
+			.Custom								=	GFC_Draw_Cursor_Custom;
+			.None								=	GFC_Draw_Cursor_None;
+			.Arrow								=	GFC_Draw_Cursor_Arrow;
+			.ReverseArrow						=	GFC_Draw_Cursor_ReverseArrow;
+			.Cross								=	GFC_Draw_Cursor_Cross;
+			.No									=	GFC_Draw_Cursor_No;
+			.Text								=	GFC_Draw_Cursor_Text;
+			.Wait								=	GFC_Draw_Cursor_Wait;
+			.Help								=	GFC_Draw_Cursor_Help;
+			.Link								=	GFC_Draw_Cursor_Link;
+
+			.DragNone							=	GFC_Draw_Cursor_DragNone;
+			.DragCopy							=	GFC_Draw_Cursor_DragCopy;
+			.DragMove							=	GFC_Draw_Cursor_DragMove;
+			.DragLink							=	GFC_Draw_Cursor_DragLink;
+
+			.Up									=	GFC_Draw_Cursor_Up;
+			.Down								=	GFC_Draw_Cursor_Down;
+			.Right								=	GFC_Draw_Cursor_Right;
+			.Left								=	GFC_Draw_Cursor_Left;
+
+			.VSplit								=	GFC_Draw_Cursor_VSplit;
+			.HSplit								=	GFC_Draw_Cursor_HSplit;
+
+			.Size_All							=	GFC_Draw_Cursor_Size_All;
+			.Size_Up							=	GFC_Draw_Cursor_Size_Up;
+			.Size_Down							=	GFC_Draw_Cursor_Size_Down;
+			.Size_Right							=	GFC_Draw_Cursor_Size_Right;
+			.Size_Left							=	GFC_Draw_Cursor_Size_Left;
+			.Size_UpDown						=	GFC_Draw_Cursor_Size_UpDown;
+			.Size_LeftRight						=	GFC_Draw_Cursor_Size_LeftRight;
+			.Size_UpLeft						=	GFC_Draw_Cursor_Size_UpLeft;
+			.Size_UpRight						=	GFC_Draw_Cursor_Size_UpRight;
+			.Size_DownLeft						=	GFC_Draw_Cursor_Size_DownLeft;
+			.Size_DownRight						=	GFC_Draw_Cursor_Size_DownRight;
+
+			.Move_Normal						=	GFC_Draw_Cursor_Arrow;
+			.Move_Vertical						=	GFC_Draw_Cursor_Arrow;
+			.Move_Horizontal					=	GFC_Draw_Cursor_Arrow;
+		}
+		with .Icon
+		{
+			.File_Unknown_Small					=	GBitmap("../../../../Resource/Icons/Civ4/file_16x16.tga");
+			.File_Unknown_Medium				=	GBitmap("../../../../Resource/Icons/Civ4/file_32x32.tga");
+			.File_Text_Small					=	GBitmap("../../../../Resource/Icons/System/file text_16x16.tga");
+			.File_Text_Medium					=	GBitmap("../../../../Resource/Icons/System/file text_32x32.tga");
+			.File_Image_Small					=	GBitmap("../../../../Resource/Icons/System/file paint_16x16.tga");
+			.File_Image_Medium					=	GBitmap("../../../../Resource/Icons/System/file paint_32x32.tga");
+
+			.Folder_Open_Small					=	GBitmap("../../../../Resource/Icons/System/folder open_16x16.tga");
+			.Folder_Open_Medium					=	GBitmap("../../../../Resource/Icons/System/folder open_32x32.tga");
+			.Folder_Close_Small					=	GBitmap("../../../../Resource/Icons/System/folder close_16x16.tga");
+			.Folder_Close_Medium				=	GBitmap("../../../../Resource/Icons/System/folder close_32x32.tga");
+			.Folder_FilledOpen_Small			=	GBitmap("../../../../Resource/Icons/System/folder file_16x16.tga");
+			.Folder_FilledOpen_Medium			=	GBitmap("../../../../Resource/Icons/System/folder file_32x32.tga");
+			.Folder_FilledClose_Small			=	.Folder_Close_Small;
+			.Folder_FilledClose_Medium			=	.Folder_Close_Medium;
+
+			.Drive_Fixed_Small					=	GBitmap("../../../../Resource/Icons/System/drive disk_16x16.tga");
+			.Drive_Fixed_Medium					=	GBitmap("../../../../Resource/Icons/System/drive disk_32x32.tga");
+			.Drive_Removable_Small				=	GBitmap("../../../../Resource/Icons/System/drive remove_16x16.tga");
+			.Drive_Removable_Medium				=	GBitmap("../../../../Resource/Icons/System/drive remove_32x32.tga");
+			.Drive_Optical_Small				=	GBitmap("../../../../Resource/Icons/System/drive cd_16x16.tga");
+			.Drive_Optical_Medium				=	GBitmap("../../../../Resource/Icons/System/drive cd_32x32.tga");
+			.Drive_Network_Small				=	GBitmap("../../../../Resource/Icons/System/networks_16x16.tga");
+			.Drive_Network_Medium				=	GBitmap("../../../../Resource/Icons/System/networks_32x32.tga");
+
+			.Computer_Small						=	GBitmap("../../../../Resource/Icons/System/display_16x16.tga");
+			.Computer_Medium					=	GBitmap("../../../../Resource/Icons/System/display_32x32.tga");
+
+			.New_Small							=	GBitmap("../../../../Resource/Icons/Application/new_16x16.tga");
+			.New_Medium							=	GBitmap("../../../../Resource/Icons/Application/new_32x32.tga");
+			.Open_Small							=	GBitmap("../../../../Resource/Icons/Application/open_16x16.tga");
+			.Open_Medium						=	GBitmap("../../../../Resource/Icons/Application/open_32x32.tga");
+			.Save_Small							=	GBitmap("../../../../Resource/Icons/Application/save_16x16.tga");
+			.Save_Medium						=	GBitmap("../../../../Resource/Icons/Application/save_32x32.tga");
+			.SaveAll_Small						=	GBitmap("../../../../Resource/Icons/Application/save all_16x16.tga");
+			.SaveAll_Medium						=	GBitmap("../../../../Resource/Icons/Application/save all_32x32.tga");
+
+			.Undo_Small							=	GBitmap("../../../../Resource/Icons/Application/undo_16x16.tga");
+			.Undo_Medium						=	GBitmap("../../../../Resource/Icons/Application/undo_32x32.tga");
+			.Redo_Small							=	GBitmap("../../../../Resource/Icons/Application/redo_16x16.tga");
+			.Redo_Medium						=	GBitmap("../../../../Resource/Icons/Application/redo_32x32.tga");
+
+			.Cut_Small							=	GBitmap("../../../../Resource/Icons/Application/cut_16x16.tga");
+			.Cut_Medium							=	GBitmap("../../../../Resource/Icons/Application/cut_32x32.tga");
+			.Copy_Small							=	GBitmap("../../../../Resource/Icons/Application/copy_16x16.tga");
+			.Copy_Medium						=	GBitmap("../../../../Resource/Icons/Application/copy_32x32.tga");
+			.Paste_Small						=	GBitmap("../../../../Resource/Icons/Application/paste_16x16.tga");
+			.Paste_Medium						=	GBitmap("../../../../Resource/Icons/Application/paste_32x32.tga");
+			.Delete_Small						=	GBitmap("../../../../Resource/Icons/Application/delete_16x16.tga");
+			.Delete_Medium						=	GBitmap("../../../../Resource/Icons/Application/delete_32x32.tga");
+
+			.Dialog_Information					=	GBitmap("../../../../Resource/Icons/Dialog/info.tga");
+			.Dialog_Question					=	GBitmap("../../../../Resource/Icons/Dialog/question.tga");
+			.Dialog_Warning						=	GBitmap("../../../../Resource/Icons/Dialog/warning.tga");
+			.Dialog_Error						=	GBitmap("../../../../Resource/Icons/Dialog/error.tga");
+		}
+	}
+}

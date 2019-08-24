@@ -1,0 +1,550 @@
+/********************************************************************** 
+
+Filename	:	Civ4Theme_SplitPanel.thm
+Content		:	Civ4 - GSplitPanel control theme
+Created		:	May 1, 2005
+Authors		:	Sven Dixon
+
+Copyright	:	(c) 2005 Scaleform Corp. All Rights Reserved.
+
+Licensees may use this file in accordance with the valid Scaleform
+GFC Commercial License Agreement provided with the software.
+
+This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING 
+THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR ANY PURPOSE.
+
+For information regarding GFC Commercial License Agreements go to:
+	online - http://www.scaleform.com/licensing.html or
+	email  - sales@scaleform.com 
+
+**********************************************************************/
+
+// *** Main SplitPanel control namespace 
+
+with GFC_Control_SplitPanel
+{
+
+	GFC_Control_DefaultSplitPanel_Style
+	{
+		GFC_Control_Renderer_Control			=	GFC_CtrlTheme_Bitmap_Control_SplitPanel_Renderer_Control;
+												
+		// Child layout function				
+		GFC_Control_Update_ChildLayout			=	GFC_CtrlTheme_Bitmap_Control_SplitPanel_Update_ChildLayout;
+
+		// Child prototypes
+		with .Child
+		{
+			.HDivider				=	GFC_CtrlTheme_Bitmap_Control_SplitPanel_Child_HDivider;	
+			.VDivider				=	GFC_CtrlTheme_Bitmap_Control_SplitPanel_Child_VDivider;	
+			.HDragDivider			=	GFC_CtrlTheme_Bitmap_Control_SplitPanel_Child_HDragDivider;	
+			.VDragDivider			=	GFC_CtrlTheme_Bitmap_Control_SplitPanel_Child_VDragDivider;
+			.OneTouchLeft			=	GFC_CtrlTheme_Bitmap_Control_SplitPanel_Child_OneTouchLeft;
+			.OneTouchRight			=	GFC_CtrlTheme_Bitmap_Control_SplitPanel_Child_OneTouchRight;
+			.OneTouchUp				=	GFC_CtrlTheme_Bitmap_Control_SplitPanel_Child_OneTouchUp;	
+			.OneTouchDown			=	GFC_CtrlTheme_Bitmap_Control_SplitPanel_Child_OneTouchDown;
+			.HPopupMenu				=	GFC_CtrlTheme_Bitmap_Control_SplitPanel_Child_HPopupMenu;	
+			.VPopupMenu				=	GFC_CtrlTheme_Bitmap_Control_SplitPanel_Child_VPopupMenu;
+		}
+
+		with .StyleId
+		{
+			.HDivider				=	GPropertyId(GFC_Control_StandardButton_Style);
+			.VDivider				=	GPropertyId(GFC_Control_StandardButton_Style);
+			.HDragDivider			=	GPropertyId(GFC_Control_StandardButton_Style);
+			.VDragDivider			=	GPropertyId(GFC_Control_StandardButton_Style);
+			.OneTouchLeft			=	GPropertyId(GFC_Control_StandardButton_Style);
+			.OneTouchRight			=	GPropertyId(GFC_Control_StandardButton_Style);
+			.OneTouchUp				=	GPropertyId(GFC_Control_StandardButton_Style);
+			.OneTouchDown			=	GPropertyId(GFC_Control_StandardButton_Style);
+			.HPopupMenu				=	GPropertyId(GFC_Control_StandardMenu_Style);
+			.VPopupMenu				=	GPropertyId(GFC_Control_StandardMenu_Style);
+		}
+
+		with GFC_Control_Flag
+		{
+			// Base control flags
+			.Transparent						=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+			.SolidInner							=	0;	//GFlags(GCtrl, GFC_CF_SOLIDINNER);
+			.SolidBackground					=	0;	//GFlags(GCtrl, GFC_CF_SOLIDBACKGROUND);
+			.RegionClip							=	0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP);
+			.RegionClipParent					=	0;	//GFlags(GCtrl, GFC_CF_REGIONCLIP_PARENT);
+			.NoExternalWindow					=	0;	//GFlags(GCtrl, GFC_CF_NOEXTERNALWINDOW);
+			.HitTest							=	GFlags(GCtrl, GFC_CF_HITTEST);
+			.TopLayer							=	0;	//GFlags(GCtrl, GFC_CF_TOPLAYER);
+			.TopLayerBitmap						=	0;	//GFlags(GCtrl, GFC_CF_TOPLAYERBITMAP);
+			.BottomLayerBitmap					=	0;	//GFlags(GCtrl, GFC_CF_BOTTOMLAYERBITMAP);
+
+			// Control flag change masks
+			.Mask_InvalidateControl				=	GFlags(GCtrl, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);
+		}
+
+		with .Flag
+		{
+			// SplitPanel flags
+			.OneTouch							=	GFlags(GSplitPanelCtrl, GFC_CF_SPLITPANEL_ONETOUCH);
+			.Discontinuous						=	0;	//GFlags(GSplitPanelCtrl, GFC_CF_SPLITPANEL_DISCONTINUOUS);
+			.NoInnerFill						=	GFlags(GSplitPanelCtrl, GFC_CF_SPLITPANEL_NOINNERFILL);
+		}
+
+		with .Size
+		{
+			// Thickness of the split area used for calculations
+			.HSplitLength						=	8;	
+			.VSplitLength						=	8;	
+			// Insets of the divider control (overhang)
+			.HDividerInset						=	GRangeMargin(0,0);
+			.VDividerInset						=	GRangeMargin(0,0);
+			// Divider margin for adjusting where the one touch buttons are positioned
+			.HDividerMargin						=	GRectMargin(1,3,1,3);
+			.VDividerMargin						=	GRectMargin(3,1,3,1);
+			// Divider margin for adjusting where the one touch buttons are positioned
+			.HDividerButtonSpace				=	0;
+			.VDividerButtonSpace				=	0;
+
+			// Drag Divider is mapped to the normal divider
+			.HDragSplitLength					=	.HSplitLength;
+			.VDragSplitLength					=	.VSplitLength;
+			.HDragDividerInset					=	.HDividerInset;
+			.VDragDividerInset					=	.VDividerInset;
+			.HDragDividerMargin					=	.HDividerMargin;
+			.VDragDividerMargin					=	.VDividerMargin;
+			.HDragDividerButtonSpace			=	.HDividerButtonSpace;
+			.VDragDividerButtonSpace			=	.VDividerButtonSpace;
+
+			// Number of units to move when sizing left/right/up/down
+			.Step								=	GFC_Control_Size_Step;
+		}
+
+		with .Color
+		{
+			.Inner								=	GFC_Control_Color_Surface;
+			.DragDivider_BottomLayer			= 	GFC_Control_Color_Surface;
+		}
+
+		with .Combine
+		{
+			.Inner								=	GFC_Control_Combine_Surface;
+			.DragDivider_BottomLayer_Dest		=	GFC_Control_Combine_Image_Default_Dest;
+			.DragDivider_BottomLayer_Factor		=	GFC_Control_Combine_Image_Default_Factor;
+		}
+
+		with .Text
+		{
+			with .PopupMenu
+			{
+				.FullLeft				=	"Full Left";
+				.FullRight				=	"Full Right";
+				.Left					=	"Left";
+				.Right					=	"Right";
+				.LeftRestore			=	"Restore";
+				.RightRestore			=	"Restore";
+				.FullTop				=	"Full Top";
+				.FullBottom				=	"Full Bottom";
+				.Up						=	"Up";
+				.Down					=	"Down";
+				.UpRestore				=	"Restore";
+				.DownRestore			=	"Restore";
+				.Restore				=	"Restore";
+			}
+
+			with .ToolTip
+			{
+				.OneTouchLeftButton		=	"Full Left";
+				.OneTouchRightButton	=	"Full Right";
+				.OneTouchUpButton		=	"Full Top";
+				.OneTouchDownButton		=	"Full Bottom";
+				.OneTouchRestoreButton	=	"Restore";
+			}
+		}
+
+
+		// ******* Initialize all the Bitmap theme SplitPanel properties to avoid inheritance problems
+
+		with GFC_CtrlTheme_Bitmap_Control_SplitPanel
+		{
+			// *** Bitmap theme predefined child styles
+			// - these are used instead of the default StyleIds
+			with .StyleId
+			{
+				// Vertical split panel components
+				.VNormal_DividerButton					=	GPropertyId(GFC_Control_FlatButton_Style);
+				.VNormal_DragDividerButton				=	.VNormal_DividerButton;
+				.VNormal_OneTouchUpButton				=	GPropertyId(GFC_Control_StandardButton_Style);
+				.VNormal_OneTouchDownButton				=	GPropertyId(GFC_Control_StandardButton_Style);
+				.FullTop_DividerButton					=	.VNormal_DividerButton;
+				.FullTop_OneTouchUpButton				=	.VNormal_OneTouchUpButton;
+				.FullTop_OneTouchDownButton				=	.VNormal_OneTouchDownButton;
+				.FullBottom_DividerButton				=	.VNormal_DividerButton;
+				.FullBottom_OneTouchUpButton			=	.VNormal_OneTouchUpButton;
+				.FullBottom_OneTouchDownButton			=	.VNormal_OneTouchDownButton;
+
+				// Horizontal split panel components
+				.HNormal_DividerButton					=	GPropertyId(GFC_Control_FlatButton_Style);
+				.HNormal_DragDividerButton				=	.HNormal_DividerButton;
+				.HNormal_OneTouchLeftButton				=	GPropertyId(GFC_Control_StandardButton_Style);
+				.HNormal_OneTouchRightButton			=	GPropertyId(GFC_Control_StandardButton_Style);
+				.FullLeft_DividerButton					=	.HNormal_DividerButton;
+				.FullLeft_OneTouchLeftButton			=	.HNormal_OneTouchLeftButton;
+				.FullLeft_OneTouchRightButton			=	.HNormal_OneTouchRightButton;
+				.FullRight_DividerButton				=	.HNormal_DividerButton;
+				.FullRight_OneTouchLeftButton			=	.HNormal_OneTouchLeftButton;
+				.FullRight_OneTouchRightButton			=	.HNormal_OneTouchRightButton;
+			}
+
+			with .Flag
+			{
+				.OneTouchLeft_Align						=	0;
+				.OneTouchRight_Align					=	0;
+				.OneTouchUp_Align						=	0;
+				.OneTouchDown_Align						=	0;
+			}
+		}
+
+		map GFC_Control			=	GFC_Control_DefaultControl_Style;
+	}	// end GFC_Control_DefaultSplitPanel_Style
+
+
+
+
+// ** Dividers
+
+// Vertical divider
+style SF_CtrlTheme_Civ4_Control_SplitPanel_VNormal_DividerButton_Style
+{
+	GFC_Control_Renderer_Control					=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+	
+	GFC_Control_Flag_Transparent					=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+	GFC_Control_Flag_Mask_InvalidateControl			=	GFlags(GCtrl, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);	
+
+	GFC_Control_Button_Flag_TrackedPress			=	GFlags(GButtonCtrl, GFC_CF_BUTTON_TRACKEDPRESS);
+	GFC_Control_Button_Flag_DownOffset				=	0;
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer {
+				LayerFlags		= 	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+				DestCombine		= 	GColorCombine(BlendSource,Disable);
+				Image			= 	GBitmap("../../../../Resource/Civ4/split_panel.tga", HVGrid, 1, 2, 0, 0);
+				Margin			= 	GRectMargin(0,0,0,0);
+			}
+		}
+	}
+
+	GFC_Control_Cursor_Default		=	GFC_Control_Cursor_VSplit;
+
+	with GFC_Control_Button_Cursor
+	{
+		.Press				= GFC_Control_Cursor_VSplit;
+		.Disable			= GFC_Control_Cursor_Arrow;
+	}
+
+	map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+	map GFC_Control								=	GFC_Control_DefaultButton_Style;
+}
+
+
+// Horizontal divider - button style
+style SF_CtrlTheme_Civ4_Control_SplitPanel_HNormal_DividerButton_Style
+{
+	GFC_Control_Renderer_Control					=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;
+
+	GFC_Control_Flag_Transparent					=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+	GFC_Control_Flag_Mask_InvalidateControl			=	GFlags(GCtrl, GFC_CF_TRANSPARENT, GFC_CF_TOPLAYER);	
+
+	GFC_Control_Button_Flag_TrackedPress			=	GFlags(GButtonCtrl, GFC_CF_BUTTON_TRACKEDPRESS);
+	GFC_Control_Button_Flag_DownOffset				=	0;
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer {
+				LayerFlags		= 	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
+				DestCombine		= 	GColorCombine(BlendSource,Disable);
+				Image			= 	GBitmap("../../../../Resource/Civ4/split_panel.tga", HVGrid, 1, 2, 0, 1);
+				Margin			= 	GRectMargin(0,0,0,0);
+			}
+		}
+	}
+
+	GFC_Control_Cursor_Default		=	GFC_Control_Cursor_HSplit;
+
+	with GFC_Control_Button_Cursor
+	{
+		.Press				= GFC_Control_Cursor_HSplit;
+		.Disable			= GFC_Control_Cursor_Arrow;
+	}
+
+	map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+	map GFC_Control								=	GFC_Control_DefaultButton_Style;
+}
+
+
+
+
+// *** One-touch button styles
+
+// Up - button style
+style SF_CtrlTheme_Civ4_Control_SplitPanel_VNormal_OneTouchUpButton_Style
+{
+	GFC_Control_Renderer_Control					=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;		
+	GFC_Control_Flag_Transparent					=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+
+	GFC_Control_Button_Size_BorderMargin			=	GRectMargin(0,0,0,0);
+	GFC_Control_Button_Size_Default					=	GSize(8,8);
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer {
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				DestCombine		= GColorCombine(BlendSource,Disable);
+				Center			= GBitmap("../../../../Resource/Civ4/split_arrows.tga", HVGrid, 4, 4, 0, 0);
+			}
+		}
+		.Rollover
+		{
+			layer {
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				DestCombine		= GColorCombine(BlendSource,Disable);
+				Center			= GBitmap("../../../../Resource/Civ4/split_arrows.tga", HVGrid, 4, 4, 0, 2);
+			}
+		}
+		.Press
+		{
+			layer {
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				DestCombine		= GColorCombine(BlendSource,Disable);
+				Center			= GBitmap("../../../../Resource/Civ4/split_arrows.tga", HVGrid, 4, 4, 0, 1);
+			}
+		}
+		.Disable
+		{
+			layer {
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				DestCombine		= GColorCombine(BlendSource,Disable);
+				Center			= GBitmap("../../../../Resource/Civ4/split_arrows.tga", HVGrid, 4, 4, 0, 3);
+			}
+		}
+	}
+
+	map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+	map GFC_Control								=	GFC_Control_DefaultButton_Style;
+}
+
+// Down - button style
+style SF_CtrlTheme_Civ4_Control_SplitPanel_VNormal_OneTouchDownButton_Style
+{
+	GFC_Control_Renderer_Control					=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;		
+	GFC_Control_Flag_Transparent					=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+
+	GFC_Control_Button_Size_BorderMargin			=	GRectMargin(0,0,0,0);
+	GFC_Control_Button_Size_Default					=	GSize(8,8);
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer {
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				DestCombine		= GColorCombine(BlendSource,Disable);
+				Center			= GBitmap("../../../../Resource/Civ4/split_arrows.tga", HVGrid, 4, 4, 1, 0);
+			}
+		}
+		.Rollover
+		{
+			layer {
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				DestCombine		= GColorCombine(BlendSource,Disable);
+				Center			= GBitmap("../../../../Resource/Civ4/split_arrows.tga", HVGrid, 4, 4, 1, 2);
+			}
+		}
+		.Press
+		{
+			layer {
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				DestCombine		= GColorCombine(BlendSource,Disable);
+				Center			= GBitmap("../../../../Resource/Civ4/split_arrows.tga", HVGrid, 4, 4, 1, 1);
+			}
+		}
+		.Disable
+		{
+			layer {
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				DestCombine		= GColorCombine(BlendSource,Disable);
+				Center			= GBitmap("../../../../Resource/Civ4/split_arrows.tga", HVGrid, 4, 4, 1, 3);
+			}
+		}
+	}
+
+	map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+	map GFC_Control								=	GFC_Control_DefaultButton_Style;
+}
+
+// Left - button style
+style SF_CtrlTheme_Civ4_Control_SplitPanel_HNormal_OneTouchLeftButton_Style
+{
+	GFC_Control_Renderer_Control					=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;		
+	GFC_Control_Flag_Transparent					=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+
+	GFC_Control_Button_Size_BorderMargin			=	GRectMargin(0,0,0,0);
+	GFC_Control_Button_Size_Default					=	GSize(8,8);
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer {
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				DestCombine		= GColorCombine(BlendSource,Disable);					
+				Center			= GBitmap("../../../../Resource/Civ4/split_arrows.tga", HVGrid, 4, 4, 2, 0);
+			}
+		}
+		.Rollover
+		{
+			layer {
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				DestCombine		= GColorCombine(BlendSource,Disable);					
+				Center			= GBitmap("../../../../Resource/Civ4/split_arrows.tga", HVGrid, 4, 4, 2, 2);
+			}
+		}
+		.Press
+		{
+			layer {
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				DestCombine		= GColorCombine(BlendSource,Disable);					
+				Center			= GBitmap("../../../../Resource/Civ4/split_arrows.tga", HVGrid, 4, 4, 2, 1);
+			}
+		}
+		.Disable
+		{
+			layer {
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				DestCombine		= GColorCombine(BlendSource,Disable);					
+				Center			= GBitmap("../../../../Resource/Civ4/split_arrows.tga", HVGrid, 4, 4, 2, 3);
+			}
+		}
+	}
+
+	map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+	map GFC_Control								=	GFC_Control_DefaultButton_Style;
+}
+
+// Right - button style
+style SF_CtrlTheme_Civ4_Control_SplitPanel_HNormal_OneTouchRightButton_Style
+{
+	GFC_Control_Renderer_Control					=	GFC_CtrlTheme_Bitmap_Control_Button_Renderer_ControlStandard;		
+	GFC_Control_Flag_Transparent					=	GFlags(GCtrl, GFC_CF_TRANSPARENT);
+
+	GFC_Control_Button_Size_BorderMargin			=	GRectMargin(0,0,0,0);
+	GFC_Control_Button_Size_Default					=	GSize(8,8);
+
+	with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+	{
+		.Default
+		{
+			layer {
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				DestCombine		= GColorCombine(BlendSource,Disable);
+				Center			= GBitmap("../../../../Resource/Civ4/split_arrows.tga", HVGrid, 4, 4, 3, 0);
+			}
+		}
+		.Rollover
+		{
+			layer {
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				DestCombine		= GColorCombine(BlendSource,Disable);
+				Center			= GBitmap("../../../../Resource/Civ4/split_arrows.tga", HVGrid, 4, 4, 3, 2);
+			}
+		}
+		.Press
+		{
+			layer {
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				DestCombine		= GColorCombine(BlendSource,Disable);
+				Center			= GBitmap("../../../../Resource/Civ4/split_arrows.tga", HVGrid, 4, 4, 3, 1);
+			}
+		}
+		.Disable
+		{
+			layer {
+				LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED);
+				DestCombine		= GColorCombine(BlendSource,Disable);
+				Center			= GBitmap("../../../../Resource/Civ4/split_arrows.tga", HVGrid, 4, 4, 3, 3);
+			}
+		}
+	}
+	
+	map GFC_CtrlTheme_Bitmap_Control_Button		=	GFC_Control_DefaultButton_Style;
+	map GFC_Control								=	GFC_Control_DefaultButton_Style;
+}
+
+
+
+
+
+
+
+	// *** Normal SplitPanel style
+
+	GFC_Control_StandardSplitPanel_Style
+	{
+
+		with .StyleId
+		{
+			.OneTouchLeft		=	GPropertyId(SF_CtrlTheme_Civ4_Control_SplitPanel_HNormal_OneTouchLeftButton_Style);
+			.OneTouchRight		=	GPropertyId(SF_CtrlTheme_Civ4_Control_SplitPanel_HNormal_OneTouchRightButton_Style);
+			.OneTouchUp			=	GPropertyId(SF_CtrlTheme_Civ4_Control_SplitPanel_VNormal_OneTouchUpButton_Style);
+			.OneTouchDown		=	GPropertyId(SF_CtrlTheme_Civ4_Control_SplitPanel_VNormal_OneTouchDownButton_Style);
+			.HDivider			=	GPropertyId(SF_CtrlTheme_Civ4_Control_SplitPanel_HNormal_DividerButton_Style);
+			.VDivider			=	GPropertyId(SF_CtrlTheme_Civ4_Control_SplitPanel_VNormal_DividerButton_Style);
+			.HDragDivider		=	.HDivider;
+			.VDragDivider		=	.VDivider;
+		}
+
+		// Control styles
+		with GFC_CtrlTheme_Bitmap_Control_SplitPanel
+		{
+			with .StyleId
+			{
+				// Vertical split panel components
+				.VNormal_DividerButton				=	GPropertyId(SF_CtrlTheme_Civ4_Control_SplitPanel_VNormal_DividerButton_Style);
+				.VNormal_DragDividerButton			=	.VNormal_DividerButton;
+				.VNormal_OneTouchUpButton			=	GPropertyId(SF_CtrlTheme_Civ4_Control_SplitPanel_VNormal_OneTouchUpButton_Style);
+				.VNormal_OneTouchDownButton			=	GPropertyId(SF_CtrlTheme_Civ4_Control_SplitPanel_VNormal_OneTouchDownButton_Style);
+				.FullTop_DividerButton				=	.VNormal_DividerButton;
+				.FullTop_OneTouchUpButton			=	.VNormal_OneTouchUpButton;
+				.FullTop_OneTouchDownButton			=	.VNormal_OneTouchDownButton;
+				.FullBottom_DividerButton			=	.VNormal_DividerButton;
+				.FullBottom_OneTouchUpButton		=	.VNormal_OneTouchUpButton;
+				.FullBottom_OneTouchDownButton		=	.VNormal_OneTouchDownButton;
+
+				// Horizontal split panel components
+				.HNormal_DividerButton				=	GPropertyId(SF_CtrlTheme_Civ4_Control_SplitPanel_HNormal_DividerButton_Style);
+				.HNormal_DragDividerButton			=	.HNormal_DividerButton;
+				.HNormal_OneTouchLeftButton			=	GPropertyId(SF_CtrlTheme_Civ4_Control_SplitPanel_HNormal_OneTouchLeftButton_Style);
+				.HNormal_OneTouchRightButton		=	GPropertyId(SF_CtrlTheme_Civ4_Control_SplitPanel_HNormal_OneTouchRightButton_Style);
+				.FullLeft_DividerButton				=	.HNormal_DividerButton;
+				.FullLeft_OneTouchLeftButton		=	.HNormal_OneTouchLeftButton;
+				.FullLeft_OneTouchRightButton		=	.HNormal_OneTouchRightButton;
+				.FullRight_DividerButton			=	.HNormal_DividerButton;
+				.FullRight_OneTouchLeftButton		=	.HNormal_OneTouchLeftButton;
+				.FullRight_OneTouchRightButton		=	.HNormal_OneTouchRightButton;
+			}
+
+			with .Flag
+			{
+				.OneTouchLeft_Align						=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_CENTER);
+				.OneTouchRight_Align					=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_CENTER);
+				.OneTouchUp_Align						=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_CENTER);
+				.OneTouchDown_Align						=	GFlags(GBitmapThemeAlign, GFC_BITMAPTHEME_ALIGN_CENTER);
+			}
+		}
+
+		map GFC_CtrlTheme_Bitmap_Control_SplitPanel		=	GFC_Control_DefaultSplitPanel_Style;
+		map GFC_Control								=	GFC_Control_DefaultSplitPanel_Style;
+	}
+}

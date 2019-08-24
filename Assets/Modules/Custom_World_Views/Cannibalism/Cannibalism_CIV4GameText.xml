@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Game Text - New -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_NO_CANNIBALISM</Tag>
+		<English>Your nation has banned cannibalism.</English>
+		<French>Votre nation a banni le cannibalisme.</French>
+		<Italian>La tua nazione ha vietato il cannibalismo.</Italian>
+		<Polish>Twój naród zakazał kanibalizmu.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_REMOVE_WV_CANNIBALISM</Tag>
+		<English>Abandon Cannibalism World View</English>
+		<French>Abandonner la Vision du Monde Cannibalisme</French>
+		<Italian>Abbandona la Concezione del mondo - Cannibalismo</Italian>
+		<Polish>Porzuć Swiatopogląd - Kanibalizm</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_REMOVE_WV_CANNIBALISM_HELP</Tag>
+		<English>Eating people is no longer acceptable in your cities. Unit is consumed.</English>
+		<French>Le fait de manger vos semblables n'est plus accepté dans vos villes. Les unités sont libérées.</French>
+		<Italian>Mangiare altre persone è ora illegale nella tua nazione. L'unità viene consumata.</Italian>
+		<Polish>Zjadanie ludzi nie jest już akceptowane w Twoim imperium. Jednostka zostaj usunięta.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_REMOVE_WV_CANNIBALISM</Tag>
+		<English>Your world view abandons eating people.</English>
+		<French>Vous abandonner le cannibalisme de votre vision du monde</French>
+		<Italian>Hai abbandonato il cannibalismo.</Italian>
+		<Polish>Twój Swiatopogląd nie akceptuje już kanibalizmu.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_REMOVE_WV_CANNIBALISM_MESSAGE</Tag>
+		<English>Your nation has stopped eating people.</English>
+		<French>Votre nation a stopé de manger vos semblables.</French>
+		<Italian>Nella tua nazione la gente ha smesso di mangiare altre persone.</Italian>
+		<Polish>Twój naród przestał zjadać innych ludzi.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_BUTCHER_HUMAN</Tag>
+		<English>Butcher a captive for food.</English>
+		<French>Dépecer un prisonnier pour sa nourriture.</French>
+		<Italian>Uccidi un prigioniero per ricavarne cibo.</Italian>
+		<Polish>Zarżnij jeńców i przeznacz ich mięso do zjedzenia.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_BUTCHER_HUMAN_HELP</Tag>
+		<English>Butchering a captive adds food to your store.</English>
+		<French>Dépecer le prisonnier, pour ajouter de la nourriture à votre stock.</French>
+		<Italian>Uccidere un prigioniero aggiunge cibo alla tua riserva.</Italian>
+		<Polish>Mięso zarżniętych jeńców zostaje przekazani do zapasów żywności w mieście.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_BUTCHER_CAPTIVE</Tag>
+		<English>Butcher a captive for food.</English>
+		<French>Dépecer un prisonnier pour sa nourriture.</French>
+		<Italian>Uccidi un prigioniero per ricavarne cibo.</Italian>
+		<Polish>Zarżnij jeńców i przeznacz ich mięso do zjedzenia.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_BUTCHER_CAPTIVE_MESSAGE</Tag>
+		<English>Your people have butchered a captive.</English>
+		<French>Votre peuple a dépecé un prisonnier afin de le manger.</French>
+		<Italian>La tua gente ha ucciso e macellato un prigioniero.</Italian>
+		<Polish>Twoi ludzie zabili i zjedli jeńców.</Polish>
+	</TEXT>
+</Civ4GameText>

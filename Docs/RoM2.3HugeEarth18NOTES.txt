@@ -1,0 +1,53 @@
+08-09-2008	Rise of Mankind 2.3 Huge Earthmap with 18 civs NOTES
+
+
+Rise of Mankind 2.3 Huge Earthmap with 18 civs
+==============================================
+
+Civs present:
+
+Egypt
+India
+China
+Greece
+Rome
+Persia
+Japan
+Germany
+Mongolia
+France
+Arabia
+Spain
+England
+Russia
+Mali
+Inca
+Aztec
+America
+
+Version: 1.0 (RoM 2.2 v 1.1 removed after 588 downloads total, v 1.0 removed after 105 downloads)
+
+
+Change in 1.0:
+
+- updated to RoM 2.3 (added 2.3 resources, based on zappara's 28 civmap)
+
+
+Change in 2.2 v 1.1:
+
+- fixed max turn limit (game no longer ends in 750 AD!).
+
+
+Installation
+------------
+Download and unzip into BtS\Public Maps folder.
+
+
+PLEASE NOTE:
+-----------
+Map does NOT work with the 40civDLL!
+
+
+Credits
+-------
+Rhye (original map), strategyonly (map update), zappara (for making an excellent mod).
