@@ -91,7 +91,7 @@ void CvDLLEntity::QueueMove( const CvPlot * pkPlot )
 
 void CvDLLEntity::ExecuteMove( float fTimeToExecute, bool bCombat )
 {
-	if ( CvUnit::isRealEntity(getEntity()) && ((CvUnit*)this)->isInViewport() )
+	if ( CvUnit::isRealEntity(getEntity()) && static_cast<CvUnit*>(this)->isInViewport() )
 	{
 		gDLL->getEntityIFace()->ExecuteMove(getUnitEntity(), fTimeToExecute, bCombat );
 	}

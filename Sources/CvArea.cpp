@@ -666,7 +666,7 @@ int CvArea::getBestFoundValue(PlayerTypes eIndex) const
 	//	Calculate on demand
 	if ( iResult == -1 )
 	{
-		GET_PLAYER(eIndex).AI_updateFoundValues(false, (CvArea*)this);
+		GET_PLAYER(eIndex).AI_updateFoundValues(false, const_cast<CvArea*>(this));
 		iResult = m_aiBestFoundValue[eIndex] == -1;
 
 		if (iResult == -1)

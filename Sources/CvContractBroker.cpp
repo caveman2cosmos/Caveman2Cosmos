@@ -129,10 +129,6 @@ void	CvContractBroker::advertiseWork(int iPriority, unitCapabilities eUnitFlags,
 			if ( bNew )
 			{
 				m_contractedUnits[pLoopSelectionGroup->getID()] = true;
-			}
-
-			if ( bNew )
-			{
 				if( gUnitLogLevel >= 3 ) logBBAI("      Unit %S (%d) at (%d,%d) already responding to contract at (%d,%d)",
 												 pLoopSelectionGroup->getHeadUnit()->getDescription().GetCString(),
 												 pLoopSelectionGroup->getHeadUnit()->getID(),
@@ -716,7 +712,6 @@ advertisingUnit*	CvContractBroker::findBestUnit(workRequest& request, bool bThis
 	for(int iI = 0; iI < (int)m_advertisingUnits.size(); iI++)
 	{
 		advertisingUnit&	unitInfo = m_advertisingUnits[iI];
-		int	iValue = 0;
 
 		//OutputDebugString(CvString::format("Assess unit %d suitability for work request %d\n", unitInfo.iUnitId, request.iWorkRequestId).c_str());
 		//	Don't bother recalculating this advertiser/requestor pair if they have already been
@@ -728,6 +723,7 @@ advertisingUnit*	CvContractBroker::findBestUnit(workRequest& request, bool bThis
 
 			if ( pLoopUnit != NULL && pLoopUnit->meetsUnitSelectionCriteria(&request.criteria) && unitInfo.iMinPriority <= request.iPriority)
 			{
+				int	iValue = 0;
 				if ( (request.eUnitFlags & WORKER_UNITCAPABILITIES) == 0 || (request.eUnitFlags & HEALER_UNITCAPABILITIES) == 0)
 				{
 					if ( request.eAIType == NO_UNITAI || pLoopUnit->AI_getUnitAIType() == request.eAIType )

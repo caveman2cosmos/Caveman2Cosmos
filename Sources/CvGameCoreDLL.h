@@ -160,6 +160,7 @@ typedef wchar_t          wchar;
 
 // cppcheck-suppress invalidPointerCast
 __forceinline DWORD FtoDW( float f ) { return *(DWORD*)&f; }
+// cppcheck-suppress invalidPointerCast
 __forceinline float DWtoF( dword n ) { return *(float*)&n; }
 __forceinline float MaxFloat() { return DWtoF(0x7f7fffff); }
 

@@ -27,6 +27,7 @@ inline void CheckSum(unsigned int& iSum, bool bData)
 
 inline void CheckSum(unsigned int& iSum, float fData)
 {
+	// cppcheck-suppress invalidPointerCast
 	CheckSum(iSum, *(unsigned int *)&fData);
 }
 

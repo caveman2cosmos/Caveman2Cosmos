@@ -23,15 +23,20 @@ public:
 	~CvWString() {}
 
 	CvWString(const CvWString& s) { *this = s; 	}
-
+	// cppcheck-suppress noExplicitConstructor
 	CvWString(const std::string& s) { Copy(s.c_str()); }
+	// cppcheck-suppress noExplicitConstructor
 	CvWString(const char* s) { Copy(s); }
+	// cppcheck-suppress noExplicitConstructor
 	CvWString(const wchar* s) { if (s) *this = s; }
 //	CvWString(const __wchar_t* s) { if (s) *this = s; }
+	// cppcheck-suppress noExplicitConstructor
 	CvWString(const std::wstring& s) { assign(s.c_str()); }
 #ifndef _USRDLL
 	// FString conversion, if not in the DLL
+	// cppcheck-suppress noExplicitConstructor
 	CvWString(const FStringA& s) { Copy(s.GetCString()); }
+	// cppcheck-suppress noExplicitConstructor
 	CvWString(const FStringW& s) { assign(s.GetCString()); }
 #endif
 
@@ -206,9 +211,11 @@ public:
 	CvString() {}
 	
 	explicit CvString(int iLen) { reserve(iLen); }
-
+	// cppcheck-suppress noExplicitConstructor
 	CvString(const char* s) { operator=(s); }
+	// cppcheck-suppress noExplicitConstructor
 	CvString(const std::string& s) { assign(s.c_str()); }
+	// cppcheck-suppress noExplicitConstructor
 	CvString(const std::wstring& s) { Copy(s.c_str()); }		// don't want accidental conversions down to narrow strings
 
 	~CvString() {}
