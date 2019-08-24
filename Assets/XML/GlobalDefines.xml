@@ -11,7 +11,8 @@
 	</Define>
 	<Define>
 		<DefineName>MIN_VERSION</DefineName>
-		<iDefineIntVal>000</iDefineIntVal>
+		<!-- I want this change -->
+		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>SAVE_VERSION</DefineName>
