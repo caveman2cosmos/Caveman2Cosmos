@@ -37,7 +37,9 @@ void	CvContractBroker::lookingForWork(CvUnit* pUnit, int iMinPriority)
 	PROFILE_FUNC();
 
 	advertisingUnit	unitDetails;
-	int				iUnitStr = GC.getGameINLINE().AI_combatValue(pUnit->getUnitType());
+	unitDetails.eUnitType = pUnit->getUnitType();
+
+	int	iUnitStr = GC.getGameINLINE().AI_combatValue(pUnit->getUnitType());
 
 	unitDetails.bIsWorker = (pUnit->AI_getUnitAIType() == UNITAI_WORKER);
 	unitDetails.bIsHealer = (pUnit->AI_getUnitAIType() == UNITAI_HEALER);
@@ -72,7 +74,6 @@ void	CvContractBroker::lookingForWork(CvUnit* pUnit, int iMinPriority)
 	//	and no attempt has been made yet to match any work requests
 	unitDetails.iMatchedToRequestSeqThisPlot = -1;
 	unitDetails.iMatchedToRequestSeqAnyPlot = -1;
-
 
 	{
 		MEMORY_TRACK_EXEMPT();

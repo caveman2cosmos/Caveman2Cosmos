@@ -142,7 +142,7 @@ protected:
 class UnitSortListWrapper
 {
 public:
-	UnitSortListWrapper(UnitSortList* pList) : m_pList(pList) {}
+	explicit UnitSortListWrapper(UnitSortList* pList) : m_pList(pList) {}
 	bool operator()(UnitTypes eUnit1, UnitTypes eUnit2) {return m_pList->operator()(eUnit1, eUnit2);}
 protected:
 	UnitSortList* m_pList;

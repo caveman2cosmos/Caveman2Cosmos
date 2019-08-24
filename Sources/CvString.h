@@ -20,9 +20,12 @@ class CvWString : public std::wstring
 {
 public:
 	CvWString() {}
-	CvWString(const std::string& s) { Copy(s.c_str()); 	}
+	~CvWString() {}
+
 	CvWString(const CvWString& s) { *this = s; 	}
-	CvWString(const char* s) { Copy(s); 	}
+
+	CvWString(const std::string& s) { Copy(s.c_str()); }
+	CvWString(const char* s) { Copy(s); }
 	CvWString(const wchar* s) { if (s) *this = s; }
 //	CvWString(const __wchar_t* s) { if (s) *this = s; }
 	CvWString(const std::wstring& s) { assign(s.c_str()); }
@@ -31,7 +34,6 @@ public:
 	CvWString(const FStringA& s) { Copy(s.GetCString()); }
 	CvWString(const FStringW& s) { assign(s.GetCString()); }
 #endif
-	~CvWString() {}
 
 	void Copy(const char* s)
 	{ 
@@ -81,9 +83,9 @@ public:
 
 //#define WIDEPTR(s) (s ? CvWString(s).c_str() : NULL)
 
-inline CvWString operator+( const CvWString& s, const CvWString& t) { return (std::wstring&)s + (std::wstring&)t; }
-inline CvWString operator+( const CvWString& s, const wchar* t) { return (std::wstring&)s + std::wstring(t); }
-inline CvWString operator+( const wchar* s, const CvWString& t) { return std::wstring(s) + std::wstring(t); }
+inline CvWString operator+( const CvWString& s, const CvWString& t) { return CvWString((std::wstring&)s + (std::wstring&)t); }
+inline CvWString operator+( const CvWString& s, const wchar* t) { return CvWString((std::wstring&)s + std::wstring(t)); }
+inline CvWString operator+( const wchar* s, const CvWString& t) { return CvWString(std::wstring(s) + std::wstring(t)); }
 //CvString operator+( const CvString& s, const CvString& t) { return (std::string&)s + (std::string&)t; }
 
 class CvWStringBuffer
@@ -197,15 +199,18 @@ private:
 	int m_iCapacity;
 };
 
-//
+
 class CvString : public std::string
 {
 public:
 	CvString() {}
-	CvString(int iLen) { reserve(iLen); }
+	
+	explicit CvString(int iLen) { reserve(iLen); }
+
 	CvString(const char* s) { operator=(s); }
 	CvString(const std::string& s) { assign(s.c_str()); }
-	explicit CvString(const std::wstring& s) { Copy(s.c_str()); }		// don't want accidental conversions down to narrow strings
+	CvString(const std::wstring& s) { Copy(s.c_str()); }		// don't want accidental conversions down to narrow strings
+
 	~CvString() {}
 
 	void Convert(const std::wstring& w) { Copy(w.c_str());	}
@@ -320,7 +325,7 @@ inline void CvString::getTokens(const CvString& delimiters, std::vector<CvString
 	while (CvString::npos != pos || CvString::npos != lastPos)
 	{
 		// found a token, parse it.
-		CvString token = substr(lastPos, pos - lastPos);
+		CvString token(substr(lastPos, pos - lastPos));
 		tokensOut.push_back(token);
 		
 		// skip delimiters.  Note the "not_of"

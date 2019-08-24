@@ -373,6 +373,7 @@ void CvArea::changeNumTiles(int iChange)
 		m_iNumTiles = (m_iNumTiles + iChange);
 		FAssert(getNumTiles() >= 0);
 
+		// cppcheck-suppress knownConditionTrueFalse
 		if (bWasLake != isLake())
 		{
 			GC.getMapINLINE().updateIrrigated();
@@ -905,7 +906,8 @@ void CvArea::changeCleanPowerCount(TeamTypes eIndex, int iChange)
 		bool bWasCleanPower = isCleanPower(eIndex);
 
 		m_aiCleanPowerCount[eIndex] = (m_aiCleanPowerCount[eIndex] + iChange);
-
+		
+		// cppcheck-suppress knownConditionTrueFalse
 		if (bWasCleanPower != isCleanPower(eIndex))
 		{
 			GET_TEAM(eIndex).updateCommerce();

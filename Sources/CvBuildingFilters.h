@@ -101,7 +101,7 @@ public:
 class BuildingFilterIsCommerce : public BuildingFilterBase
 {
 public:
-	BuildingFilterIsCommerce(CommerceTypes eCommerce, bool bInvert = false);
+	explicit BuildingFilterIsCommerce(CommerceTypes eCommerce, bool bInvert = false);
 	bool isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
 
 protected:
@@ -111,7 +111,7 @@ protected:
 class BuildingFilterIsYield : public BuildingFilterBase
 {
 public:
-	BuildingFilterIsYield(YieldTypes eYield, bool bInvert = false);
+	explicit BuildingFilterIsYield(YieldTypes eYield, bool bInvert = false);
 	bool isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
 
 protected:
@@ -163,7 +163,7 @@ public:
 class BuildingFilterIsProperty : public BuildingFilterBase
 {
 public:
-	BuildingFilterIsProperty(PropertyTypes eProperty, bool bInvert = false) : BuildingFilterBase(bInvert), m_eProperty(eProperty) {};
+	explicit BuildingFilterIsProperty(PropertyTypes eProperty, bool bInvert = false) : BuildingFilterBase(bInvert), m_eProperty(eProperty) {};
 	bool isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
 
 protected:

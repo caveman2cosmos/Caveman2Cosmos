@@ -70,7 +70,7 @@ class CvPropertyPropagatorSpread : public CvPropertyPropagator
 {
 public:
 	CvPropertyPropagatorSpread();
-	CvPropertyPropagatorSpread(PropertyTypes eProperty);
+	explicit CvPropertyPropagatorSpread(PropertyTypes eProperty);
 	CvPropertyPropagatorSpread(PropertyTypes eProperty, int iPercent);
 
 	virtual PropertyPropagatorTypes getType();
@@ -97,7 +97,7 @@ class CvPropertyPropagatorGather : public CvPropertyPropagator
 {
 public:
 	CvPropertyPropagatorGather();
-	CvPropertyPropagatorGather(PropertyTypes eProperty);
+	explicit CvPropertyPropagatorGather(PropertyTypes eProperty);
 	CvPropertyPropagatorGather(PropertyTypes eProperty, int iAmountPerTurn);
 
 	virtual PropertyPropagatorTypes getType();
@@ -122,7 +122,7 @@ class CvPropertyPropagatorDiffuse : public CvPropertyPropagator
 {
 public:
 	CvPropertyPropagatorDiffuse();
-	CvPropertyPropagatorDiffuse(PropertyTypes eProperty);
+	explicit CvPropertyPropagatorDiffuse(PropertyTypes eProperty);
 	CvPropertyPropagatorDiffuse(PropertyTypes eProperty, int iPercent);
 
 	virtual PropertyPropagatorTypes getType();

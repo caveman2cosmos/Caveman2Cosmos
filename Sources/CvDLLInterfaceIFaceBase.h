@@ -175,27 +175,27 @@ public:
 	virtual int getFontAdditive() = 0;
 
 	virtual void popupSetHeaderString( CvPopup* pPopup, CvWString szText, uint uiFlags = DLL_FONT_CENTER_JUSTIFY ) = 0;
-	virtual void popupSetBodyString( CvPopup* pPopup, CvWString szText, uint uiFlags = DLL_FONT_LEFT_JUSTIFY, char *szName = NULL, CvWString szHelpText = "" ) = 0;
+	virtual void popupSetBodyString( CvPopup* pPopup, CvWString szText, uint uiFlags = DLL_FONT_LEFT_JUSTIFY, char *szName = NULL, CvWString szHelpText = CvWString()) = 0;
 	virtual void popupLaunch( CvPopup* pPopup, bool bCreateOkButton = true, PopupStates bState = POPUPSTATE_QUEUED, int iNumPixelScroll = 0 ) = 0;
 	virtual void popupSetPopupType( CvPopup* pPopup, PopupEventTypes ePopupType, LPCTSTR szArtFileName = NULL ) = 0;
 	virtual void popupSetStyle( CvPopup* pPopup, const char* styleId ) = 0;
 
-	virtual void popupAddDDS( CvPopup* pPopup, const char* szIconFilename, int iWidth = 0, int iHeight = 0, CvWString szHelpText = "") = 0;
+	virtual void popupAddDDS( CvPopup* pPopup, const char* szIconFilename, int iWidth = 0, int iHeight = 0, CvWString szHelpText = CvWString()) = 0;
 
 	virtual void popupAddSeparator( CvPopup* pPopup, int iSpace = 0) = 0;
 
 	virtual void popupAddGenericButton( CvPopup* pPopup, CvWString szText, const char* szIcon = 0, int iButtonId = -1, WidgetTypes eWidgetType = WIDGET_GENERAL, int iData1 = MAX_INT, int iData2 = MAX_INT, 
 		bool bOption = true, PopupControlLayout ctrlLayout = POPUP_LAYOUT_CENTER, unsigned int textJustifcation = DLL_FONT_LEFT_JUSTIFY ) = 0;
 
-	virtual void popupCreateEditBox( CvPopup* pPopup, CvWString szDefaultString = "", WidgetTypes eWidgetType = WIDGET_GENERAL, CvWString szHelpText = "", int iGroup = 0, 
+	virtual void popupCreateEditBox( CvPopup* pPopup, CvWString szDefaultString = CvWString(), WidgetTypes eWidgetType = WIDGET_GENERAL, CvWString szHelpText = CvWString(), int iGroup = 0,
 		PopupControlLayout ctrlLayout = POPUP_LAYOUT_STRETCH, unsigned int preferredCharWidth = 0, unsigned int maxCharCount = 256 ) = 0;
 	virtual void popupEnableEditBox( CvPopup* pPopup, int iGroup = 0, bool bEnable = false ) = 0;
 
 	virtual void popupCreateRadioButtons( CvPopup * pPopup, int iNumButtons, int iGroup = 0, WidgetTypes eWidgetType = WIDGET_GENERAL, PopupControlLayout ctrlLayout = POPUP_LAYOUT_CENTER ) = 0;
-	virtual void popupSetRadioButtonText( CvPopup * pPopup, int iRadioButtonID, CvWString szText, int iGroup = 0, CvWString szHelpText = "" ) = 0;
+	virtual void popupSetRadioButtonText( CvPopup * pPopup, int iRadioButtonID, CvWString szText, int iGroup = 0, CvWString szHelpText = CvWString()) = 0;
 
 	virtual void popupCreateCheckBoxes( CvPopup* pPopup, int iNumBoxes, int iGroup = 0, WidgetTypes eWidgetType = WIDGET_GENERAL, PopupControlLayout ctrlLayout = POPUP_LAYOUT_CENTER ) = 0;
-	virtual void popupSetCheckBoxText( CvPopup* pPopup, int iCheckBoxID, CvWString szText, int iGroup = 0, CvWString szHelpText = "") = 0;
+	virtual void popupSetCheckBoxText( CvPopup* pPopup, int iCheckBoxID, CvWString szText, int iGroup = 0, CvWString szHelpText = CvWString()) = 0;
 	virtual void popupSetCheckBoxState( CvPopup* pPopup, int iCheckBoxID, bool bChecked, int iGroup = 0 ) = 0;
 
 	virtual void popupSetAsCancelled(CvPopup* pPopup) = 0;

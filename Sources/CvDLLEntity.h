@@ -30,10 +30,10 @@ public:
 
 	CvEntity* getEntity() { return m_pEntity;	}
 	const CvEntity* getEntity() const { return m_pEntity;	}
-	CvUnitEntity* getUnitEntity() { return (CvUnitEntity*)m_pEntity;	}
-	CvCityEntity* getCityEntity() { return (CvCityEntity*)m_pEntity;	}
-	const CvUnitEntity* getUnitEntity() const { return (CvUnitEntity*)m_pEntity;	}
-	const CvCityEntity* getCityEntity() const { return (CvCityEntity*)m_pEntity;	}
+	CvUnitEntity* getUnitEntity() { return reinterpret_cast<CvUnitEntity*>(m_pEntity);	}
+	CvCityEntity* getCityEntity() { return reinterpret_cast<CvCityEntity*>(m_pEntity);	}
+	const CvUnitEntity* getUnitEntity() const { return reinterpret_cast<CvUnitEntity*>(m_pEntity);	}
+	const CvCityEntity* getCityEntity() const { return reinterpret_cast<CvCityEntity*>(m_pEntity);	}
 
 	void setEntity(CvEntity* pG) { m_pEntity = pG;	}
 

@@ -42,12 +42,14 @@ class CvProperties
 {
 public:
 	CvProperties();
-	CvProperties(CvGame* pGame);
-	CvProperties(CvTeam* pTeam);
-	CvProperties(CvPlayer* pPlayer);
-	CvProperties(CvCity* pCity);
-	CvProperties(CvUnit* pUnit);
-	CvProperties(CvPlot* pPlot);
+	
+	explicit CvProperties(CvGame* pGame);
+	explicit CvProperties(CvTeam* pTeam);
+	explicit CvProperties(CvPlayer* pPlayer);
+	explicit CvProperties(CvCity* pCity);
+	explicit CvProperties(CvUnit* pUnit);
+	explicit CvProperties(CvPlot* pPlot);
+
 	int getProperty(int index) const;
 	int getValue(int index) const;
 	int getChangeProperty(int index) const;

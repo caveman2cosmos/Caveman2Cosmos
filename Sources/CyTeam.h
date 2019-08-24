@@ -14,7 +14,8 @@ class CyTeam
 {
 public:
 	CyTeam();
-	CyTeam(CvTeam* pTeam);		// Call from C++
+	explicit CyTeam(CvTeam* pTeam);		// Call from C++
+
 	CvTeam* getTeam() { return m_pTeam;	}	// Call from C++
 
 	bool isNone() { return (m_pTeam==NULL); }

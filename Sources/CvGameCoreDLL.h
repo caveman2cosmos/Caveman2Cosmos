@@ -158,6 +158,7 @@ typedef wchar_t          wchar;
 #define M_PI       3.14159265358979323846
 #define fM_PI		3.141592654f		//!< Pi (float)
 
+// cppcheck-suppress invalidPointerCast
 __forceinline DWORD FtoDW( float f ) { return *(DWORD*)&f; }
 __forceinline float DWtoF( dword n ) { return *(float*)&n; }
 __forceinline float MaxFloat() { return DWtoF(0x7f7fffff); }

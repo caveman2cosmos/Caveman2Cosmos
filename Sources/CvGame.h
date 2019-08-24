@@ -655,7 +655,7 @@ public:
 	DllExport int calculateSyncChecksum();																								// Exposed to Python	
 	DllExport int calculateOptionsChecksum();																							// Exposed to Python	
 
-	void addReplayMessage(ReplayMessageTypes eType = NO_REPLAY_MESSAGE, PlayerTypes ePlayer = NO_PLAYER, CvWString pszText = L"", 
+	void addReplayMessage(ReplayMessageTypes eType = NO_REPLAY_MESSAGE, PlayerTypes ePlayer = NO_PLAYER, CvWString pszText = CvWString(),
 		int iPlotX = -1, int iPlotY = -1, ColorTypes eColor = NO_COLOR);
 	void clearReplayMessageMap();
 	int getReplayMessageTurn(uint i) const;

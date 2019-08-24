@@ -91,7 +91,7 @@ public:
 class CvGameObjectTeam : public CvGameObject
 {
 public:
-	CvGameObjectTeam(CvTeam* pTeam);
+	explicit CvGameObjectTeam(CvTeam* pTeam);
 	virtual GameObjectTypes getGameObjectType() const;
 	virtual CvProperties* getProperties() const;
 	virtual const CvProperties* getPropertiesConst() const;
@@ -115,7 +115,7 @@ protected:
 class CvGameObjectPlayer : public CvGameObject
 {
 public:
-	CvGameObjectPlayer(CvPlayer* pPlayer);
+	explicit CvGameObjectPlayer(CvPlayer* pPlayer);
 	virtual GameObjectTypes getGameObjectType() const;
 	virtual CvProperties* getProperties() const;
 	virtual const CvProperties* getPropertiesConst() const;
@@ -142,7 +142,7 @@ protected:
 class CvGameObjectCity : public CvGameObject
 {
 public:
-	CvGameObjectCity(CvCity* pCity);
+	explicit CvGameObjectCity(CvCity* pCity);
 	virtual GameObjectTypes getGameObjectType() const;
 	virtual CvProperties* getProperties() const;
 	virtual const CvProperties* getPropertiesConst() const;
@@ -173,7 +173,7 @@ protected:
 class CvGameObjectUnit : public CvGameObject
 {
 public:
-	CvGameObjectUnit(CvUnit* pUnit);
+	explicit CvGameObjectUnit(CvUnit* pUnit);
 	virtual GameObjectTypes getGameObjectType() const;
 	virtual CvProperties* getProperties() const;
 	virtual const CvProperties* getPropertiesConst() const;
@@ -202,7 +202,7 @@ protected:
 class CvGameObjectPlot : public CvGameObject
 {
 public:
-	CvGameObjectPlot(CvPlot* pPlot);
+	explicit CvGameObjectPlot(CvPlot* pPlot);
 	virtual GameObjectTypes getGameObjectType() const;
 	virtual CvProperties* getProperties() const;
 	virtual const CvProperties* getPropertiesConst() const;

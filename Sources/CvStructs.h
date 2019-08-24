@@ -353,6 +353,8 @@ struct GameTurnInfo				// Exposed to Python
 {
 	int iMonthIncrement;
 	int iNumGameTurnsPerIncrement;
+
+	GameTurnInfo() : iMonthIncrement(0), iNumGameTurnsPerIncrement(0) {}
 };
 
 struct OrderData					// Exposed to Python
@@ -361,6 +363,8 @@ struct OrderData					// Exposed to Python
 	int iData1;
 	int iData2;
 	bool bSave;
+
+	OrderData() : eOrderType(NO_ORDER), iData1(0), iData2(0), bSave(0) {}
 };
 
 //	Koshling - need to cram some extra info into some orders.  Existing usage
@@ -919,7 +923,7 @@ struct DllExport CvPlotIndicatorData
 
 struct DllExport CvGlobeLayerData
 {
-	CvGlobeLayerData(GlobeLayerTypes eType) : m_eType(eType), m_bGlobeViewRequired(true), m_bShouldCitiesZoom(false), m_iNumOptions(0) { }
+	explicit CvGlobeLayerData(GlobeLayerTypes eType) : m_eType(eType), m_bGlobeViewRequired(true), m_bShouldCitiesZoom(false), m_iNumOptions(0) { }
 	GlobeLayerTypes m_eType;
 	CvString m_strName;
 	CvString m_strButtonHelpTag;
@@ -941,7 +945,7 @@ struct DllExport CvFlyoutMenuData
 
 struct CvStatBase
 {
-	CvStatBase(const char* strKey) : m_strKey(strKey) { }
+	explicit CvStatBase(const char* strKey) : m_strKey(strKey) { }
 	virtual ~CvStatBase() { }
 	CvString m_strKey;
 };
