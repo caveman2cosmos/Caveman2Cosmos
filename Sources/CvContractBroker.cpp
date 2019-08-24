@@ -802,14 +802,7 @@ advertisingUnit*	CvContractBroker::findBestUnit(workRequest& request, bool bThis
 
 CvUnit* CvContractBroker::findUnit(int iUnitId) const
 {
-	if ( iUnitId == -1 )
-	{
-		return NULL;
-	}
-	else
-	{
-		return GET_PLAYER((PlayerTypes)m_eOwner).getUnit(iUnitId);
-	}
+	return iUnitId != -1 ? GET_PLAYER((PlayerTypes)m_eOwner).getUnit(iUnitId) : NULL;
 }
 
 int	CvContractBroker::lowerPartiallyFulfilledRequestPriority(int iPreviousPriority, int iPreviousRequestStrength, int iStrengthProvided)

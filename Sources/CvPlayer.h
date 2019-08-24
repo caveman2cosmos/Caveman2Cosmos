@@ -14,6 +14,7 @@
 #include "CvContractBroker.h"
 #include "CvGameObject.h"
 #include "CvBuildLists.h"
+#include "FItemIDMap.h"
 
 class CvDiploParameters;
 class CvPopupInfo;
@@ -2254,7 +2255,8 @@ protected:
 
 	FFreeListTrashArray<CvCityAI> m_cities;
 
-	FFreeListTrashArray<CvUnitAI> m_units;
+	typedef FItemIDMap<CvUnitAI> UnitMap;
+	UnitMap m_units;
 
 	FFreeListTrashArray<CvSelectionGroupAI> m_selectionGroups;
 

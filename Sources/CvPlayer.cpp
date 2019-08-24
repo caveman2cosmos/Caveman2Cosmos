@@ -460,7 +460,7 @@ void CvPlayer::init(PlayerTypes eID)
 
 	m_cities.init();
 
-	m_units.init();
+	m_units.clear();
 
 	m_selectionGroups.init();
 
@@ -650,7 +650,7 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 
 	m_cities.init();
 
-	m_units.init();
+	m_units.clear();
 
 	m_selectionGroups.init();
 
@@ -1058,7 +1058,7 @@ void CvPlayer::uninit()
 
 	m_cities.uninit();
 
-	m_units.uninit();
+	m_units.clear();
 
 	m_selectionGroups.uninit();
 
@@ -1380,7 +1380,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iExtraCityDefense = 0;
 	m_iDistantUnitSupportCostModifier = 0;
 	m_iReligionSpreadRate = 0;
-	
+
 	m_iWorldHappiness = 0;
 	m_iProjectHappiness = 0;
 	m_iWorldHealth = 0;
@@ -1936,7 +1936,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 
 	m_cities.removeAll();
 
-	m_units.removeAll();
+	m_units.clear();
 	m_pTempUnit = NULL;
 
 	m_selectionGroups.removeAll();
@@ -20024,27 +20024,89 @@ void CvPlayer::deleteCity(int iID)
 
 CvUnit* CvPlayer::firstUnit(int *pIterIdx, bool bRev) const
 {
-	CvUnit* pResult = !bRev ? m_units.beginIter(pIterIdx) : m_units.endIter(pIterIdx);
-
-	if ( pResult != NULL && pResult == m_pTempUnit )
+	if (m_units.size() == 0)
 	{
-		pResult = nextUnit(pIterIdx, bRev);
+		return NULL;
 	}
 
-	return pResult;
+	if(!bRev)
+	{
+		UnitMap::const_iterator pResult = m_units.begin();
+
+		if (pResult->second == m_pTempUnit)
+		{
+			++pResult;
+			if (pResult == m_units.end())
+			{
+				return NULL;
+			}
+		}
+		*pIterIdx = pResult->first;
+		return pResult->second;
+	}
+	else
+	{
+		UnitMap::const_reverse_iterator pResult = m_units.rbegin();
+
+		if (pResult->second == m_pTempUnit)
+		{
+			++pResult;
+			if (pResult == m_units.rend())
+			{
+				return NULL;
+			}
+		}
+		*pIterIdx = pResult->first;
+		return pResult->second;
+	}
 }
 
 
 CvUnit* CvPlayer::nextUnit(int *pIterIdx, bool bRev) const
 {
-	CvUnit* pResult = !bRev ? m_units.nextIter(pIterIdx) : m_units.prevIter(pIterIdx);
-
-	if ( pResult != NULL && pResult == m_pTempUnit )
+	if (m_units.size() == 0)
 	{
-		pResult = nextUnit(pIterIdx, bRev);
+		return NULL;
 	}
 
-	return pResult;
+	if (!bRev)
+	{
+		UnitMap::const_iterator pResult = m_units.find(*pIterIdx);
+		++pResult;
+		if (pResult == m_units.end())
+		{
+			return NULL;
+		}
+		if (pResult->second == m_pTempUnit)
+		{
+			++pResult;
+			if (pResult == m_units.end())
+			{
+				return NULL;
+			}
+		}
+		*pIterIdx = pResult->first;
+		return pResult->second;
+	}
+	else
+	{
+		UnitMap::const_reverse_iterator pResult(m_units.find(*pIterIdx));
+		++pResult;
+		if (pResult == m_units.rend())
+		{
+			return NULL;
+		}
+		if (pResult->second == m_pTempUnit)
+		{
+			++pResult;
+			if (pResult == m_units.rend())
+			{
+				return NULL;
+			}
+		}
+		*pIterIdx = pResult->first;
+		return pResult->second;
+	}
 }
 
 CvUnit* CvPlayer::firstUnitExternal(int *pIterIdx, bool bRev) const
@@ -20075,13 +20137,13 @@ CvUnit* CvPlayer::nextUnitExternal(int *pIterIdx, bool bRev) const
 
 int CvPlayer::getNumUnits() const
 {
-	return m_units.getCount() - (m_pTempUnit != NULL ? 1 : 0);
+	return m_units.size() - (m_pTempUnit != NULL ? 1 : 0);
 }
 
 
 CvUnit* CvPlayer::getUnit(int iID) const
 {
-	return (m_units.getAt(iID));
+	return iID != -1 ? m_units.findAt(iID) : NULL;
 }
 
 CvUnit* CvPlayer::addUnit()																			

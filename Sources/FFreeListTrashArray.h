@@ -1,27 +1,10 @@
 #pragma once
 
-//	$Revision: #2 $		$Author: mbreitkreutz $ 	$DateTime: 2005/06/13 13:35:55 $
-//------------------------------------------------------------------------------------------------
-//
-//  *****************   FIRAXIS GAME ENGINE   ********************
-//
-//  FILE:    FFreeListTrashArray.h
-//
-//  AUTHOR:  Soren Johnson
-//
-//  PURPOSE: A dynamic array with a free list that keeps track of its own memory...
-//
-//------------------------------------------------------------------------------------------------
-//  Copyright (c) 2004 Firaxis Games, Inc. All rights reserved.
-//------------------------------------------------------------------------------------------------
+#include "FDataStreamBase.h"
+#include "CvTaggedSaveFormatWrapper.h"
+#include "FFreeListArrayBase.h"
 
-#ifndef		FFREELISTTRASHARRAY_H
-#define		FFREELISTTRASHARRAY_H
-
-#include	"FFreeListArrayBase.h"
-#include	"FDataStreamBase.h"
-#include	"CvTaggedSaveFormatWrapper.h"
-
+#define USE_HASHMAP_FREELIST
 
 #define FLTA_ID_SHIFT				(13)
 #define FLTA_MAX_BUCKETS		(1 << FLTA_ID_SHIFT)
@@ -30,69 +13,59 @@
 #define FLTA_GROWTH_FACTOR	(2)
 
 template <class T>
-class FFreeListTrashArray : public FFreeListArrayBase<T>
+class FFreeListTrashArray
 {
 public:
 
 	FFreeListTrashArray();
-	virtual ~FFreeListTrashArray();
+	~FFreeListTrashArray();
 
-	virtual void init(int iNumSlots = 8);
-	virtual void uninit();
-	virtual T* getAt(int iID) const;
+	void init(int iNumSlots = 8);
+	void uninit();
+
+	T* getAt(int iID) const;
+	T* operator[](int iIndex) const { return getAt(iIndex); }
+
+	// start at the beginning of the list and return the first item or NULL when done
+	T* beginIter(int* pIterIdx) const;
+
+	// iterate from the current position and return the next item found or NULL when done
+	T* nextIter(int* pIterIdx) const;
+
+	// start at the end of the list and return the last item or NULL when done
+	T* endIter(int* pIterIdx) const;
+
+	// iterate from the current position and return the prev item found or NULL when done
+	T* prevIter(int* pIterIdx) const;
+
+	// Returns the iIndex after the last iIndex in the array containing an element
+	int getIndexAfterLast() const { return m_iLastIndex + 1; }
+
+	// Returns the number of elements in the array (NOTE: this is a non-packed array, so this value is NOT the last iIndex in the array...)
+	int getCount()	const { return m_iLastIndex - m_iFreeListCount + 1 - m_iCorruptedAdjustment; }
 
 	T* add();
 	bool remove(T* pData);
 	bool removeAt(int iID);
-	virtual void removeAll();
+	void removeAll();
 
 	void load(T* pData);
 
-	int getNumSlots() const
-	{
-		return m_iNumSlots;
-	}
+	int getNumSlots() const { return m_iNumSlots;}
 
-	int getLastIndex() const
-	{
-		return m_iLastIndex;
-	}
-	void setLastIndex(int iNewValue)
-	{
-		m_iLastIndex = iNewValue;
-	}
+	int getLastIndex() const { return m_iLastIndex; }
+	void setLastIndex(int iNewValue) { m_iLastIndex = iNewValue; }
 
-	int getFreeListHead() const
-	{
-		return m_iFreeListHead;
-	}
-	void setFreeListHead(int iNewValue)
-	{
-		m_iFreeListHead = iNewValue;
-	}
+	int getFreeListHead() const { return m_iFreeListHead; }
+	void setFreeListHead(int iNewValue) { m_iFreeListHead = iNewValue; }
 
-	int getFreeListCount() const
-	{
-		return m_iFreeListCount;
-	}
-	void setFreeListCount(int iNewValue)
-	{
-		m_iFreeListCount = iNewValue;
-	}
+	int getFreeListCount() const { return m_iFreeListCount; }
+	void setFreeListCount(int iNewValue) { m_iFreeListCount = iNewValue; }
 
-	int getCorruptedAdjustment() const
-	{
-		return m_iCorruptedAdjustment;
-	}
-	void setCorruptedAdjustment(int iNewValue)
-	{
-		m_iCorruptedAdjustment = iNewValue;
-	}
+	int getCorruptedAdjustment() const { return m_iCorruptedAdjustment; }
+	void setCorruptedAdjustment(int iNewValue) { m_iCorruptedAdjustment = iNewValue; }
 
-	int getCurrentID()
-	{
-		return m_iCurrentID;
-	}
+	int getCurrentID() { return m_iCurrentID; }
 
 	void setCurrentID(int iNewValue)
 	{
@@ -110,6 +83,7 @@ public:
 		}
 		return m_pArray[iIndex].iNextFreeIndex;
 	}
+
 	void setNextFreeIndex(int iIndex, int iNewValue)
 	{
 		if ((iIndex >= getNumSlots()) || (m_pArray == NULL))
@@ -124,7 +98,12 @@ public:
 	void Read( FDataStreamBase* pStream );
 	void Write( FDataStreamBase* pStream );
 
-protected:
+private:
+	int m_iFreeListHead;
+	int m_iFreeListCount;
+	int m_iLastIndex;
+	int m_iNumSlots;
+	int m_iCorruptedAdjustment;
 
 	struct FFreeListTrashArrayNode
 	{
@@ -136,20 +115,22 @@ protected:
 	int m_iCurrentID;
 	FFreeListTrashArrayNode* m_pArray;
 
-	virtual void growArray();
+	void growArray();
 };
 
 
 
 // Public functions...
-
 template <class T>
 FFreeListTrashArray<T>::FFreeListTrashArray()
-{
-	m_iCurrentID = FLTA_MAX_BUCKETS;
-	m_pArray = NULL;
-}
-
+	: m_iFreeListHead(FFreeList::FREE_LIST_INDEX)
+	, m_iFreeListCount(0)
+	, m_iLastIndex(FFreeList::INVALID_INDEX)
+	, m_iNumSlots(0)
+	, m_iCorruptedAdjustment(0)
+	, m_iCurrentID(FLTA_MAX_BUCKETS)
+	, m_pArray(NULL)
+{}
 
 template <class T>
 FFreeListTrashArray<T>::~FFreeListTrashArray()
@@ -212,6 +193,57 @@ void FFreeListTrashArray<T>::uninit()
 	}
 }
 
+//
+// iteration functions
+//
+
+// start at the beginning of the list and return the first item or NULL when done
+template <class T>
+T* FFreeListTrashArray<T>::beginIter(int* pIterIdx) const
+{
+	*pIterIdx = 0;
+	return nextIter(pIterIdx);
+}
+
+// iterate from the current position and return the next item found or NULL when done
+template <class T>
+T* FFreeListTrashArray<T>::nextIter(int* pIterIdx) const
+{
+	for (; (*pIterIdx) < getIndexAfterLast(); (*pIterIdx)++)
+	{
+		T* pObj = getAt((*pIterIdx));
+		if (pObj)
+		{
+			(*pIterIdx)++;	// prime for next call
+			return pObj;
+		}
+	}
+	return NULL;
+}
+
+// start at the end of the list and return the last item or NULL when done
+template <class T>
+T* FFreeListTrashArray<T>::endIter(int* pIterIdx) const
+{
+	*pIterIdx = getIndexAfterLast() - 1;
+	return prevIter(pIterIdx);
+}
+
+// iterate from the current position and return the prev item found or NULL when done
+template <class T>
+T* FFreeListTrashArray<T>::prevIter(int* pIterIdx) const
+{
+	for (; (*pIterIdx) >= 0; (*pIterIdx)--)
+	{
+		T* pObj = getAt((*pIterIdx));
+		if (pObj)
+		{
+			(*pIterIdx)--;	// prime for next call
+			return pObj;
+		}
+	}
+	return NULL;
+}
 
 
 template <class T>
@@ -628,5 +660,3 @@ inline void WriteStreamableFFreeListTrashArray( FFreeListTrashArray< T >& flist,
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
-
-#endif	//FFREELISTTRASHARRAY_H
