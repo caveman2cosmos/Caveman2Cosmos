@@ -16,7 +16,7 @@
 			<Type>PROCESS_WEALTH_LESSER</Type>
 			<Description>TXT_KEY_PROCESS_LESSER_WEALTH</Description>
 			<Strategy>TXT_KEY_PROCESS_WEALTH_STRATEGY</Strategy>
-			<TechPrereq>TECH_ARITHMETIC</TechPrereq>
+			<TechPrereq>TECH_TRADE</TechPrereq>
 			<ProductionToCommerceModifiers>
 				<iProductionToCommerceModifier>40</iProductionToCommerceModifier>
 			</ProductionToCommerceModifiers>
@@ -32,7 +32,6 @@
 			</ProductionToCommerceModifiers>
 			<Button>Art/Interface/Buttons/Process/ProcessWealth.dds</Button>
 		</ProcessInfo>
-
 		<ProcessInfo>
 			<Type>PROCESS_RESEARCH_MEAGER</Type>
 			<Description>TXT_KEY_PROCESS_MEAGER_RESEARCH</Description>
@@ -48,7 +47,7 @@
 			<Type>PROCESS_RESEARCH_LESSER</Type>
 			<Description>TXT_KEY_PROCESS_LESSER_RESEARCH</Description>
 			<Strategy>TXT_KEY_PROCESS_RESEARCH_STRATEGY</Strategy>
-			<TechPrereq>TECH_PETROGLYPHS</TechPrereq>
+			<TechPrereq>TECH_WRITING</TechPrereq>
 			<ProductionToCommerceModifiers>
 				<iProductionToCommerceModifier>0</iProductionToCommerceModifier>
 				<iProductionToCommerceModifier>40</iProductionToCommerceModifier>
@@ -66,12 +65,11 @@
 			</ProductionToCommerceModifiers>
 			<Button>Art/Interface/Buttons/Process/ProcessResearch.dds</Button>
 		</ProcessInfo>
-
 		<ProcessInfo>
 			<Type>PROCESS_CULTURE_MEAGER</Type>
 			<Description>TXT_KEY_PROCESS_MEAGER_CULTURE</Description>
 			<Strategy>TXT_KEY_PROCESS_CULTURE_STRATEGY</Strategy>
-			<TechPrereq>TECH_CARVING</TechPrereq>
+			<TechPrereq>TECH_CULTURAL_IDENTITY</TechPrereq>
 			<ProductionToCommerceModifiers>
 				<iProductionToCommerceModifier>0</iProductionToCommerceModifier>
 				<iProductionToCommerceModifier>0</iProductionToCommerceModifier>
@@ -83,7 +81,7 @@
 			<Type>PROCESS_CULTURE_LESSER</Type>
 			<Description>TXT_KEY_PROCESS_LESSER_CULTURE</Description>
 			<Strategy>TXT_KEY_PROCESS_CULTURE_STRATEGY</Strategy>
-			<TechPrereq>TECH_BEAD_MAKING</TechPrereq>
+			<TechPrereq>TECH_HERITAGE</TechPrereq>
 			<ProductionToCommerceModifiers>
 				<iProductionToCommerceModifier>0</iProductionToCommerceModifier>
 				<iProductionToCommerceModifier>0</iProductionToCommerceModifier>
@@ -95,7 +93,7 @@
 			<Type>PROCESS_CULTURE</Type>
 			<Description>TXT_KEY_PROCESS_CULTURE</Description>
 			<Strategy>TXT_KEY_PROCESS_CULTURE_STRATEGY</Strategy>
-			<TechPrereq>TECH_MUSIC</TechPrereq>
+			<TechPrereq>TECH_LITERATURE</TechPrereq>
 			<ProductionToCommerceModifiers>
 				<iProductionToCommerceModifier>0</iProductionToCommerceModifier>
 				<iProductionToCommerceModifier>0</iProductionToCommerceModifier>
@@ -103,12 +101,11 @@
 			</ProductionToCommerceModifiers>
 			<Button>Art/Interface/Buttons/Process/ProcessCulture.dds</Button>
 		</ProcessInfo>
-
 		<ProcessInfo>
 			<Type>PROCESS_SPY_MEAGER</Type>
 			<Description>TXT_KEY_PROCESS_SPY_MEAGER</Description>
 			<Strategy>TXT_KEY_PROCESS_SPY</Strategy>
-			<TechPrereq>TECH_CHIEFDOM</TechPrereq>
+			<TechPrereq>TECH_DECEPTION</TechPrereq>
 			<ProductionToCommerceModifiers>
 				<iProductionToCommerceModifier>0</iProductionToCommerceModifier>
 				<iProductionToCommerceModifier>0</iProductionToCommerceModifier>
@@ -121,7 +118,7 @@
 			<Type>PROCESS_SPY_LESSER</Type>
 			<Description>TXT_KEY_PROCESS_SPY_LESSER</Description>
 			<Strategy>TXT_KEY_PROCESS_SPY</Strategy>
-			<TechPrereq>TECH_BOARDGAMES</TechPrereq>
+			<TechPrereq>TECH_ORATORY</TechPrereq>
 			<ProductionToCommerceModifiers>
 				<iProductionToCommerceModifier>0</iProductionToCommerceModifier>
 				<iProductionToCommerceModifier>0</iProductionToCommerceModifier>
@@ -134,7 +131,7 @@
 			<Type>PROCESS_SPY</Type>
 			<Description>TXT_KEY_PROCESS_SPY</Description>
 			<Strategy>TXT_KEY_PROCESS_SPY</Strategy>
-			<TechPrereq>TECH_ALPHABET</TechPrereq>
+			<TechPrereq>TECH_DIPLOMACY</TechPrereq>
 			<ProductionToCommerceModifiers>
 				<iProductionToCommerceModifier>0</iProductionToCommerceModifier>
 				<iProductionToCommerceModifier>0</iProductionToCommerceModifier>
@@ -143,7 +140,6 @@
 			</ProductionToCommerceModifiers>
 			<Button>Art/Interface/Buttons/Process/SpyProcess.dds</Button>
 		</ProcessInfo>
-
 		<ProcessInfo>
 			<Type>PROCESS_IDLE</Type>
 			<Description>TXT_KEY_PROCESS_IDLE</Description>

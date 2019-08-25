@@ -548,48 +548,5 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ORGANIC_COMPUTER_LAB</BuildingClass>
-			<Type>BUILDING_ORGANIC_COMPUTER_LAB</Type>
-			<Description>TXT_KEY_BUILDING_ORGANIC_COMPUTER_LAB</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ORGANIC_COMPUTER_LAB_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ORGANIC_COMPUTER_LAB_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ORGANIC_COMPUTER_LAB</ArtDefineTag>
-			<PrereqTech>TECH_BIOPUNK</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Bonus>BONUS_BIOPUNK</Bonus>
-			<FreeBonus>BONUS_ORGANIC_COMPUTERS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iCost>3665</iCost>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<CommerceChanges>
-				<iCommerce>3</iCommerce>
-				<iCommerce>5</iCommerce>
-			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_BIOPUNK_LAB</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<bPrereqPower>1</bPrereqPower>
-			<iPrereqPopulation>13</iPrereqPopulation>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>13</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

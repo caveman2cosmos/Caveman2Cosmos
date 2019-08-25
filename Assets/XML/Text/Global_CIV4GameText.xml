@@ -3167,6 +3167,14 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_ABATIS]Zasieki[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_ABATIS_G</Tag>
+		<English>Build a [LINK=IMPROVEMENT_ABATIS]Abatis[\LINK] (Gatherer)</English>
+		<French>Construire un [LINK=IMPROVEMENT_ABATIS]Abattis[\LINK]</French>
+		<Italian>Costruisci un'[LINK=IMPROVEMENT_ABATIS]abbattuta[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_ABATIS]Abatis con cerco espinoso[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_ABATIS]Zasieki[\LINK]</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_APPLE_FARM</Tag>
 		<English>Build an [LINK=IMPROVEMENT_APPLE_FARM]Apple Orchard[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_APPLE_FARM]Pommeraie[\LINK]</French>
@@ -3374,6 +3382,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FORTIFIED_CAVE</Tag>
 		<English>Build a [LINK=IMPROVEMENT_FORTIFIED_CAVE]Fortified Cave[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_FORTIFIED_CAVE]Caverne fortifiée[\LINK]</French>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_FORTIFIED_CAVE]grotta fortificata[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_FORTIFIED_CAVE]Caverna fortificada[\LINK]</Spanish>
+		<Polish>Zbadaj [LINK=IMPROVEMENT_FORTIFIED_CAVE]Ufortyfikowaną Jaskinię[\LINK]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_FORTIFIED_CAVE_G</Tag>
+		<English>Build a [LINK=IMPROVEMENT_FORTIFIED_CAVE]Fortified Cave[\LINK] (Gatherer)</English>
 		<French>Construire une [LINK=IMPROVEMENT_FORTIFIED_CAVE]Caverne fortifiée[\LINK]</French>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_FORTIFIED_CAVE]grotta fortificata[\LINK]</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_FORTIFIED_CAVE]Caverna fortificada[\LINK]</Spanish>
@@ -3731,6 +3747,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PALISADE</Tag>
 		<English>Build a [LINK=IMPROVEMENT_PALISADE]Wooden Palisade[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_PALISADE]Palissade en bois[\LINK]</French>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_PALISADE]palizzata in legno[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_PALISADE]Empalizada de madera[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_PALISADE]Drewnianą Palisadę[\LINK]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_PALISADE_G</Tag>
+		<English>Build a [LINK=IMPROVEMENT_PALISADE]Wooden Palisade[\LINK] (Gatherer)</English>
 		<French>Construire une [LINK=IMPROVEMENT_PALISADE]Palissade en bois[\LINK]</French>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_PALISADE]palizzata in legno[\LINK]</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_PALISADE]Empalizada de madera[\LINK]</Spanish>
@@ -4235,6 +4259,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WOODEN_TOWER</Tag>
 		<English>Build a [LINK=IMPROVEMENT_WOODEN_TOWER]Wooden Watchtower[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_WOODEN_TOWER]Tour d'observation en bois[\LINK]</French>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_WOODEN_TOWER]torre d'osservazione in legno[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_WOODEN_TOWER]Puesto de avanzada de madera[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_WOODEN_TOWER]Drewnianą Wieżę Obserwacyjną[\LINK]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_WOODEN_TOWER_G</Tag>
+		<English>Build a [LINK=IMPROVEMENT_WOODEN_TOWER]Wooden Watchtower[\LINK] (Gatherer)</English>
 		<French>Construire une [LINK=IMPROVEMENT_WOODEN_TOWER]Tour d'observation en bois[\LINK]</French>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_WOODEN_TOWER]torre d'osservazione in legno[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_WOODEN_TOWER]Puesto de avanzada de madera[\LINK]</Spanish>

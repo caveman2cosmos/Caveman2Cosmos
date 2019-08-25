@@ -71,7 +71,7 @@
 				<BuildingType>BUILDING_DEER_TRAINER</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			<iCost>100</iCost>
+			<iCost>94</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>6</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>

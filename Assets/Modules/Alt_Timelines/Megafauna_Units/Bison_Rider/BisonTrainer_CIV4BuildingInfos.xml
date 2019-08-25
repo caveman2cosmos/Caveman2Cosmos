@@ -21,7 +21,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_BISON</Bonus>
-			<iCost>588</iCost>
+			<iCost>624</iCost>
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
 			<iAsset>4</iAsset>
@@ -126,6 +126,7 @@
 			<Strategy>TXT_KEY_BUILDING_BISON_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BISON_TRAINER_EFFECT</ArtDefineTag>
+			<PrereqTech>NONE</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

@@ -56,7 +56,7 @@
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_SPEAR_MAKING</ForceObsoleteTech>
-			<iCost>-1</iCost>
+			<iCost>100</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -142,7 +142,7 @@
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_IRON_WORKING</ForceObsoleteTech>
-			<iCost>120</iCost>
+			<iCost>110</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>

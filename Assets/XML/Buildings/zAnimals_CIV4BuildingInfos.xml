@@ -18522,7 +18522,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_AMPHIBIAN_POND</ArtDefineTag>
 			<ObsoleteTech>TECH_DESIGNER_MICROBIOLOGY</ObsoleteTech>
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<!--FreeStartEra>ERA_MEDIEVAL</FreeStartEra-->
+			<!--FreeStartEra>ERA_MEDIEVAL</FreeStartEra>-->
 			<FreeBonus>BONUS_POISON</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>-1</iCost>
@@ -19455,7 +19455,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DOG</ArtDefineTag>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
-			<iCost>80</iCost>
+			<iCost>96</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -19895,7 +19895,7 @@
 			</MapCategoryTypes>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEMI_AUTOMATIC_WEAPONS</ObsoleteTech>
 			<ReplaceBuildings>
@@ -19969,10 +19969,7 @@
 			</MapCategoryTypes>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEMI_AUTOMATIC_WEAPONS</ObsoleteTech>
 			<!-- Construction Cost -->
@@ -20736,7 +20733,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SNAKE_CHARMER</ArtDefineTag>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
-			<PrereqTech>TECH_PREHISTORIC_MUSIC</PrereqTech>
+			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
@@ -20786,12 +20783,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SNAKE_PIT</ArtDefineTag>
 			<ObsoleteTech>TECH_CHEMISTRY</ObsoleteTech>
 			<PrereqTech>TECH_POISON_CRAFTING</PrereqTech>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SNAKE_CHARMER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
 			<FreeStartEra>ERA_CLASSICAL</FreeStartEra>
 			<FreeBonus>BONUS_POISON</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>

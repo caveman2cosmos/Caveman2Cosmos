@@ -20,7 +20,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_BEAR_RIDER</MovieDefineTag>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			<iCost>588</iCost>
+			<iCost>624</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>

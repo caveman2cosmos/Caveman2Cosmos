@@ -170,7 +170,7 @@
 				<VicinityBonus>BONUS_MUREX</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>80</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -473,7 +473,7 @@
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>-2</iCommerce>
 			</CommerceChanges>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -2032,7 +2032,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>68</iCost>
+			<iCost>62</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
@@ -2203,7 +2203,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Anchovy Nets -->
+			<!-- Net (Anchovy) -->
 			<BuildingClass>BUILDINGCLASS_ANCHOVY_NETS</BuildingClass>
 			<Type>BUILDING_ANCHOVY_NETS</Type>
 			<Description>TXT_KEY_BUILDING_ANCHOVY_NETS</Description>
@@ -2216,13 +2216,13 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FISHING</PrereqTech>
-			<Bonus>BONUS_NETS</Bonus>
 			<VicinityBonus>BONUS_FISH</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PEARLS</VicinityBonus>
 			</PrereqVicinityBonuses>
+			<Bonus>BONUS_NETS</Bonus>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>80</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -3062,7 +3062,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ANIMAL_HUSBANDRY</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>30</iCost>
+			<iCost>35</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -3375,7 +3375,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Camp (Antelopes) -->
+			<!-- Camp (Antelope) -->
 			<BuildingClass>BUILDINGCLASS_ANTELOPE_CAMP</BuildingClass>
 			<Type>BUILDING_ANTELOPE_CAMP</Type>
 			<Description>TXT_KEY_BUILDING_ANTELOPE_CAMP</Description>
@@ -3388,9 +3388,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_DEER</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_HORSE</VicinityBonus>
@@ -3409,7 +3406,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -3430,7 +3427,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Anthill -->
+			<!-- Ant Catcher -->
 			<BuildingClass>BUILDINGCLASS_ANTHILL</BuildingClass>
 			<Type>BUILDING_ANTHILL</Type>
 			<EnabledCivilizationTypes>
@@ -3441,21 +3438,61 @@
 			<Description>TXT_KEY_BUILDING_ANTHILL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANTHILL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANTHILL_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANTHILL</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
+			<PrereqTech>TECH_SCAVENGING</PrereqTech>
+			<PrereqOrTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_LUSH</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_PLAINS</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_ROCKY</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_SCRUB</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_TAIGA</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_MUDDY</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+			</PrereqOrTerrain>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_COOKING</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>25</iCost>
+			<iCost>15</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
+			<FreeBonus>BONUS_BUG</FreeBonus>
+			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<Flavors>
 				<Flavor>
@@ -3463,7 +3500,7 @@
 					<iFlavor>6</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iHurryCostModifier>50</iHurryCostModifier>
+			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Anatomy Lab -->
@@ -4210,7 +4247,7 @@
 					<BuildingClassType>BUILDINGCLASS_SHOPPING_DISTRICT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			</PrereqOrBuildingClasses>											
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -6978,7 +7015,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Camp (Aurochses) -->
+			<!-- Camp (Aurochs) -->
 			<BuildingClass>BUILDINGCLASS_AUROCHS_CAMP</BuildingClass>
 			<Type>BUILDING_AUROCHS_CAMP</Type>
 			<Description>TXT_KEY_BUILDING_AUROCHS_CAMP</Description>
@@ -6991,9 +7028,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_COW</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -7004,7 +7038,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -7269,7 +7303,7 @@
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
-			<iCost>2405</iCost>
+			<iCost>2865</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_AMMO</BonusType>
@@ -8398,7 +8432,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TANNING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 				<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
@@ -8418,7 +8451,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GUNPOWDER</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>74</iCost>
+			<iCost>68</iCost>
 			<!-- Unit effects -->
 			<FreePromotion>PROMOTION_BAMBOO_ARMOR</FreePromotion>
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
@@ -8500,7 +8533,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>74</iCost>
+			<iCost>68</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -8533,7 +8566,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CARPENTRY</PrereqTech>
+			<PrereqTech>TECH_WEAVING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_BAMBOO</FeatureType>
@@ -8541,7 +8574,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<!-- Construction cost -->
-			<iCost>74</iCost>
+			<iCost>20</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -8650,7 +8683,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Bandit's Hideout -->
+			<!-- Thieves' Hideout -->
 			<BuildingClass>BUILDINGCLASS_BANDITS_HIDEOUT</BuildingClass>
 			<Type>BUILDING_BANDITS_HIDEOUT</Type>
 			<Description>TXT_KEY_BUILDING_BANDITS_HIDEOUT</Description>
@@ -8673,7 +8706,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GUERRILLA_WARFARE</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>50</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
@@ -9028,7 +9061,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_PLASTICS</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>62</iCost>
+			<iCost>40</iCost>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
@@ -9080,7 +9113,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Barley Gatherer -->
+			<!-- Wild Barley Gatherer -->
 			<BuildingClass>BUILDINGCLASS_BARLEY_GATHERER</BuildingClass>
 			<Type>BUILDING_BARLEY_GATHERER</Type>
 			<Description>TXT_KEY_BUILDING_BARLEY_GATHERER</Description>
@@ -9103,7 +9136,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>30</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -9354,9 +9387,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BARTER</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CURRENCY</ObsoleteTech>
 			<ReplaceBuildings>
@@ -9370,8 +9400,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>68</iCost>
-			<bAutoBuild>1</bAutoBuild>
+			<iCost>62</iCost>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>2</iCommerce>
@@ -9616,7 +9645,7 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Basketweaver's Hut -->
+			<!-- Basketmaker -->
 			<BuildingClass>BUILDINGCLASS_BASKETWEAVER</BuildingClass>
 			<Type>BUILDING_BASKETWEAVER</Type>
 			<Description>TXT_KEY_BUILDING_BASKETWEAVER</Description>
@@ -9630,9 +9659,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BASKETRY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_GRASS</Bonus>
 				<Bonus>BONUS_REEDS</Bonus>
@@ -9800,7 +9826,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>30</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<!-- Special Health and Happiness  modifiers -->
@@ -10149,7 +10175,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Beadmaker's Hut -->
+			<!-- Beadworker -->
 			<BuildingClass>BUILDINGCLASS_BEADMAKER</BuildingClass>
 			<Type>BUILDING_BEADMAKER</Type>
 			<Description>TXT_KEY_BUILDING_BEADMAKER</Description>
@@ -10198,7 +10224,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>62</iCost>
+			<iCost>56</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_NOMAD</ProductionTraitType>
@@ -10486,7 +10512,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Beaver Traps -->
+			<!-- Trap (Beaver) -->
 			<BuildingClass>BUILDINGCLASS_BEAVER_TRAPS</BuildingClass>
 			<Type>BUILDING_BEAVER_TRAPS</Type>
 			<Description>TXT_KEY_BUILDING_BEAVER_TRAPS</Description>
@@ -10499,9 +10525,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRAPPING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<bRiver>1</bRiver>
 			<VicinityBonus>BONUS_FUR</VicinityBonus>
 			<PrereqVicinityBonuses>
@@ -10510,7 +10533,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>30</iCost>
+			<iCost>35</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -10527,6 +10550,12 @@
 					<iHappiness>-1</iHappiness>
 				</TechHappinessChange>
 			</TechHappinessChanges>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_ANIMAL_TRAPS</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
@@ -10716,13 +10745,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POISON_CRAFTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<RawVicinityBonus>BONUS_WINE</RawVicinityBonus>
-			<PrereqRawVicinityBonuses>
-				<VicinityBonus>BONUS_INDIGO</VicinityBonus>
-			</PrereqRawVicinityBonuses>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
@@ -10784,7 +10807,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>98</iCost>
+			<iCost>86</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -10846,7 +10869,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Berry Bushes -->
+			<!-- Berry Gatherer -->
 			<BuildingClass>BUILDINGCLASS_BERRY_BUSHES</BuildingClass>
 			<Type>BUILDING_BERRY_BUSHES</Type>
 			<Description>TXT_KEY_BUILDING_BERRY_BUSHES</Description>
@@ -12182,9 +12205,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_BISON</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -12193,7 +12213,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -12565,7 +12585,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Bloodhuntress Hut -->
+			<!-- Bloodhuntress -->
 			<BuildingClass>BUILDINGCLASS_BLOODHUNTRESS_HUT</BuildingClass>
 			<Type>BUILDING_BLOODHUNTRESS_HUT</Type>
 			<Description>TXT_KEY_BUILDING_BLOODHUNTRESS_HUT</Description>
@@ -12740,7 +12760,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Camp (Boars) -->
+			<!-- Camp (Boar) -->
 			<BuildingClass>BUILDINGCLASS_BOAR_CAMP</BuildingClass>
 			<Type>BUILDING_BOAR_CAMP</Type>
 			<Description>TXT_KEY_BUILDING_BOAR_CAMP</Description>
@@ -12753,9 +12773,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_PIG</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -12771,7 +12788,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -12839,7 +12856,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>80</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
@@ -13143,7 +13160,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ANCIENT_MEDICINE</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>50</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -13167,7 +13184,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Boneworker's Hut -->
+			<!-- Boneworker -->
 			<BuildingClass>BUILDINGCLASS_BONEWORKERS_HUT</BuildingClass>
 			<Type>BUILDING_BONEWORKERS_HUT</Type>
 			<EnabledCivilizationTypes>
@@ -13185,9 +13202,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BONE_WORKING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_BONE</Bonus>
 				<Bonus>BONUS_IVORY</Bonus>
@@ -13209,7 +13223,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GUILDS</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>50</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -13257,7 +13271,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_FIREFIGHTING</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>74</iCost>
+			<iCost>56</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -13284,7 +13298,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
@@ -13341,9 +13355,8 @@
 					<iProductonModifier>25</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<!-- Main effects -->
-			<iHealth>-4</iHealth>
-			<iHappiness>-1</iHappiness>
+			<!-- Main effects -->								 
+			<iHappiness>-3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -13880,7 +13893,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MEDICINE</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>56</iCost>
+			<iCost>62</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<CommerceChanges>
@@ -16745,7 +16758,7 @@
 			<iConquestProb>70</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Bug Catcher -->
+			<!-- Grasshopper Catcher -->
 			<BuildingClass>BUILDINGCLASS_BUG_CATCHER</BuildingClass>
 			<Type>BUILDING_BUG_CATCHER</Type>
 			<Description>TXT_KEY_BUILDING_BUG_CATCHER</Description>
@@ -16769,34 +16782,6 @@
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_ROCKY</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_SCRUB</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_DUNES</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_TAIGA</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
 					<TerrainType>TERRAIN_MUDDY</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
@@ -16806,7 +16791,7 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<!-- Construction cost -->
-			<iCost>20</iCost>
+			<iCost>15</iCost>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
@@ -16815,7 +16800,13 @@
 			<FreeBonus>BONUS_BUG</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
-			<iConquestProb>70</iConquestProb>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_GROWTH</FlavorType>
+					<iFlavor>6</iFlavor>
+				</Flavor>
+			</Flavors>
+			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Bullseye Store -->
@@ -17228,7 +17219,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>80</iCost>
+			<iCost>56</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
@@ -17362,7 +17353,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>25</iCost>
+			<iCost>30</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_NOMAD</ProductionTraitType>
@@ -18968,7 +18959,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Canoe Builder's Hut -->
+			<!-- Canoe Builder -->
 			<BuildingClass>BUILDINGCLASS_CANOEBUILDERS_HUT</BuildingClass>
 			<Type>BUILDING_CANOEBUILDERS_HUT</Type>
 			<EnabledCivilizationTypes>
@@ -18986,9 +18977,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<bWater>1</bWater>
 			<bRiver>1</bRiver>
 			<PrereqBonuses>
@@ -19013,7 +19001,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_RAILROAD</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>86</iCost>
+			<iCost>74</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -19099,7 +19087,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
+			<PrereqTech>TECH_GAMES</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_CLOTH</Bonus>
 				<Bonus>BONUS_LEATHER</Bonus>
@@ -19114,18 +19102,6 @@
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
-			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_TEAM_SPORTS</ObsoleteTech>
-			<!-- Construction cost -->
-			<iCost>74</iCost>
-			<!-- Main effects -->
-			<iHappiness>1</iHappiness>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -19137,6 +19113,18 @@
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
+			<!-- Obsolescence -->
+			<ObsoleteTech>TECH_TEAM_SPORTS</ObsoleteTech>
+			<!-- Construction cost -->
+			<iCost>40</iCost>
+			<!-- Main effects -->
+			<iHappiness>1</iHappiness>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
+			</CommerceChanges>
 			<!-- Other -->
 			<Flavors>
 				<Flavor>
@@ -19387,9 +19375,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_DEER</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FUR</VicinityBonus>
@@ -19419,7 +19404,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -19484,7 +19469,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Carpenter's Workshop -->
+			<!-- Carpenter -->
 			<BuildingClass>BUILDINGCLASS_CARPENTERS_WORKSHOP</BuildingClass>
 			<Type>BUILDING_CARPENTERS_WORKSHOP</Type>
 			<EnabledCivilizationTypes>
@@ -19507,7 +19492,7 @@
 				<Bonus>BONUS_TIMBER</Bonus>
 			</PrereqBonuses>
 			<!-- Construction cost -->
-			<iCost>74</iCost>
+			<iCost>68</iCost>
 			<!-- Main effects -->
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -19717,6 +19702,7 @@
 			<BuildingClass>BUILDINGCLASS_CARRION</BuildingClass>
 			<Type>BUILDING_CARRION</Type>
 			<Description>TXT_KEY_BUILDING_CARRION</Description>
+			<Help>TXT_KEY_BUILDING_CARRION_HELP</Help>
 			<Civilopedia>TXT_KEY_BUILDING_CARRION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CARRION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -19748,9 +19734,9 @@
 				<VicinityBonus>BONUS_SEA_LIONS</VicinityBonus>
 			</PrereqRawVicinityBonuses>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_HUNTING_TACTICS</ObsoleteTech>
+			<ObsoleteTech>TECH_ANIMAL_HUSBANDRY</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>20</iCost>
+			<iCost>15</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<!-- Main effects -->
 			<iHealth>-2</iHealth>
@@ -20374,7 +20360,7 @@
 				<Bonus>BONUS_RAWMEAT</Bonus>
 			</PrereqBonuses>
 			<!-- Construction cost -->
-			<iCost>86</iCost>
+			<iCost>92</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -20416,7 +20402,7 @@
 			<Bonus>BONUS_CAT</Bonus>
 			<PrereqReligion>RELIGION_EGYPT_MYTHOLOGY</PrereqReligion>
 			<!-- Construction cost -->
-			<iCost>86</iCost>
+			<iCost>92</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -21470,7 +21456,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Chalk Pit -->
+			<!-- Chalk Gatherer -->
 			<BuildingClass>BUILDINGCLASS_CHALK_PIT</BuildingClass>
 			<Type>BUILDING_CHALK_PIT</Type>
 			<EnabledCivilizationTypes>
@@ -21490,7 +21476,7 @@
 			<PrereqTech>TECH_NATURAL_PIGMENTS</PrereqTech>
 			<VicinityBonus>BONUS_STONE</VicinityBonus>
 			<!-- Construction cost -->
-			<iCost>40</iCost>
+			<iCost>35</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -22397,7 +22383,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_HERALDRY</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>86</iCost>
+			<iCost>68</iCost>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -22641,7 +22627,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Chinchilla Traps -->
+			<!-- Trap (Chinchilla) -->
 			<BuildingClass>BUILDINGCLASS_CHINCHILLA_TRAPS</BuildingClass>
 			<Type>BUILDING_CHINCHILLA_TRAPS</Type>
 			<Description>TXT_KEY_BUILDING_CHINCHILLA_TRAPS</Description>
@@ -22654,9 +22640,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRAPPING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_FUR</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RABBIT</VicinityBonus>
@@ -22667,10 +22650,16 @@
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_ANIMAL_TRAPS</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>30</iCost>
+			<iCost>35</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -24615,7 +24604,7 @@
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<VicinityBonus>BONUS_CLAM</VicinityBonus>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>80</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -24629,7 +24618,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Clay Pit -->
+			<!-- Clay Gatherer -->
 			<BuildingClass>BUILDINGCLASS_CLAY_PIT</BuildingClass>
 			<Type>BUILDING_CLAY_PIT</Type>
 			<EnabledCivilizationTypes>
@@ -24649,7 +24638,7 @@
 			<PrereqTech>TECH_NATURAL_PIGMENTS</PrereqTech>
 			<bFreshWater>1</bFreshWater>
 			<!-- Construction cost -->
-			<iCost>40</iCost>
+			<iCost>35</iCost>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
@@ -25372,7 +25361,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>68</iCost>
+			<iCost>62</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -25627,7 +25616,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Cod Nets -->
+			<!-- Net (Cod) -->
 			<BuildingClass>BUILDINGCLASS_COD_NETS</BuildingClass>
 			<Type>BUILDING_COD_NETS</Type>
 			<Description>TXT_KEY_BUILDING_COD_NETS</Description>
@@ -25646,7 +25635,7 @@
 				<VicinityBonus>BONUS_CLAM</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>80</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -26581,6 +26570,12 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
+			<PrereqOrCivics>
+				<PrereqCivic>
+					<CivicOption>CIVIC_NATIVE_SPEAK</CivicOption>
+					<bPrereqCivic>1</bPrereqCivic>
+				</PrereqCivic>
+			</PrereqOrCivics>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Construction cost -->
@@ -26973,7 +26968,7 @@
 				<VicinityBonus>BONUS_CLAM</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>80</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -27564,7 +27559,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2405</iCost>
+			<iCost>2865</iCost>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -28173,7 +28168,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Corn Gatherer -->
+			<!-- Wild Corn Gatherer -->
 			<BuildingClass>BUILDINGCLASS_CORN_GATHERER</BuildingClass>
 			<Type>BUILDING_CORN_GATHERER</Type>
 			<Description>TXT_KEY_BUILDING_CORN_GATHERER</Description>
@@ -28196,7 +28191,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>30</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -28375,7 +28370,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Counter's Hut -->
+			<!-- Taxperson -->
 			<BuildingClass>BUILDINGCLASS_COUNTERS_HUT</BuildingClass>
 			<Type>BUILDING_COUNTERS_HUT</Type>
 			<Description>TXT_KEY_BUILDING_COUNTERS_HUT</Description>
@@ -28452,7 +28447,6 @@
 			<PrereqTech>TECH_COUNTING</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
-				<Bonus>BONUS_TIMBER</Bonus>
 				<Bonus>BONUS_BONE</Bonus>
 				<Bonus>BONUS_IVORY</Bonus>
 				<Bonus>BONUS_BAMBOO</Bonus>
@@ -28460,7 +28454,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MATHEMATICS</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>50</iCost>
+			<iCost>30</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -28852,7 +28846,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Crab Traps -->
+			<!-- Net (Crab) -->
 			<BuildingClass>BUILDINGCLASS_CRAB_TRAPS</BuildingClass>
 			<Type>BUILDING_CRAB_TRAPS</Type>
 			<Description>TXT_KEY_BUILDING_CRAB_TRAPS</Description>
@@ -28864,11 +28858,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_FISHING</PrereqTech>
-			<Bonus>BONUS_WOOD</Bonus>
+			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
 			<VicinityBonus>BONUS_CRAB</VicinityBonus>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -28878,6 +28871,12 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_SHELLFISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_FISHTRAPS</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
@@ -28895,9 +28894,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BARTER</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_STORAGE_PIT</BuildingClassType>
@@ -28924,7 +28920,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>68</iCost>
+			<iCost>62</iCost>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -29072,7 +29068,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_LITERATURE</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>25</iCost>
+			<iCost>20</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -29459,7 +29455,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_SLAVERY</PrereqTech>
+			<PrereqTech>TECH_CARPENTRY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_CONDUCT</PrereqTech>
+			</TechTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_TIMBER</Bonus>
@@ -29477,7 +29476,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>74</iCost>
+			<iCost>68</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
@@ -29788,13 +29787,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POISON_CRAFTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<RawVicinityBonus>BONUS_TIMBER</RawVicinityBonus>
-			<PrereqRawVicinityBonuses>
-				<VicinityBonus>BONUS_INDIGO</VicinityBonus>
-			</PrereqRawVicinityBonuses>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
@@ -30900,9 +30893,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_DEER</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -30918,7 +30908,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -32399,14 +32389,12 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_COOKING</PrereqTech>
+			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-				<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
+				<PrereqTech>TECH_COOKING</PrereqTech>
 			</TechTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
-				<Bonus>BONUS_TIMBER</Bonus>
 				<Bonus>BONUS_BAMBOO</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
@@ -32450,9 +32438,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_MAMMOTH</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_KANGAROO</VicinityBonus>
@@ -32466,7 +32451,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -32831,7 +32816,7 @@
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
-			<iCost>86</iCost>
+			<iCost>98</iCost>
 			<!-- Special Yield and Commerce modifiers -->
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -33086,7 +33071,7 @@
 				<Bonus>BONUS_RAWMEAT</Bonus>
 			</PrereqBonuses>
 			<!-- Construction cost -->
-			<iCost>80</iCost>
+			<iCost>92</iCost>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
@@ -33678,7 +33663,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_FISHING</PrereqTech>
+			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_DRYING</PrereqTech>
+			</TechTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_RAWFISH</Bonus>
 				<Bonus>BONUS_SHELLFISH</Bonus>
@@ -33694,7 +33682,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -33765,7 +33753,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
-			<iCost>62</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -33802,10 +33790,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
+			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<bWater>1</bWater>
 			<!-- Construction cost -->
-			<iCost>50</iCost>
+			<iCost>15</iCost>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
@@ -34229,9 +34217,8 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_DRYING</PrereqTech>
-			<Bonus>BONUS_WOOD</Bonus>
 			<!-- Construction cost -->
-			<iCost>62</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -34604,7 +34591,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>40</iCost>
+			<iCost>35</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -34693,7 +34680,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>104</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -34738,7 +34725,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Earthworm Gatherer -->
+			<!-- Earthworm Catcher -->
 			<BuildingClass>BUILDINGCLASS_EARTHWORM</BuildingClass>
 			<Type>BUILDING_EARTHWORM</Type>
 			<Description>TXT_KEY_BUILDING_EARTHWORM</Description>
@@ -34751,6 +34738,24 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
+			<PrereqOrTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_LUSH</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_MUDDY</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+			</PrereqOrTerrain>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
@@ -34758,7 +34763,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<!-- Construction cost -->
-			<iCost>20</iCost>
+			<iCost>15</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -35082,7 +35087,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Eel Traps -->
+			<!-- Net (Eel) -->
 			<BuildingClass>BUILDINGCLASS_EEL_TRAPS</BuildingClass>
 			<Type>BUILDING_EEL_TRAPS</Type>
 			<Description>TXT_KEY_BUILDING_EEL_TRAPS</Description>
@@ -35094,14 +35099,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_FISHING</PrereqTech>
-			<Bonus>BONUS_BASKETS</Bonus>
+			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
 			<VicinityBonus>BONUS_FISH</VicinityBonus>
-			<PrereqVicinityBonuses>
-				<VicinityBonus>BONUS_CRAB</VicinityBonus>
-			</PrereqVicinityBonuses>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -35111,6 +35112,12 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_RAWFISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_FISHTRAPS</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
@@ -35178,7 +35185,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_WRITING</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>40</iCost>
+			<iCost>35</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -36047,9 +36054,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_ELEPHANT</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -36065,7 +36069,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>2</iYield>
@@ -36124,7 +36128,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>20</iCost>
+			<iCost>86</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -36432,9 +36436,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<RawVicinityBonus>BONUS_POULTRY</RawVicinityBonus>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_KANGAROO</VicinityBonus>
@@ -36453,7 +36454,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -37283,12 +37284,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CARVING</PrereqTech>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_STONETOOL_MAKER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
 			<ReplaceBuildings>
@@ -37296,24 +37291,11 @@
 					<BuildingClassType>BUILDINGCLASS_OUTHOUSE</BuildingClassType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_GARDEROBE</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_PUBLIC_RESTROOMS</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_SANITATION_CHAMBER</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>45</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
-			<iHappiness>-1</iHappiness>
 			<!-- Other -->
 			<Flavors>
 				<Flavor>
@@ -37332,7 +37314,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Executioners Hut -->
+			<!-- Executioner -->
 			<BuildingClass>BUILDINGCLASS_EXECUTIONERS_HUT</BuildingClass>
 			<Type>BUILDING_EXECUTIONERS_HUT</Type>
 			<Description>TXT_KEY_BUILDING_EXECUTIONERS_HUT</Description>
@@ -37348,7 +37330,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>45</iCost>
+			<iCost>50</iCost>
 			<!-- Main effects -->
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
@@ -37772,7 +37754,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>98</iCost>
+			<iCost>160</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_NOMAD</ProductionTraitType>
@@ -39576,7 +39558,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_SLAVERY</PrereqTech>
+			<PrereqTech>TECH_WARFARE</PrereqTech>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
 			<ReplaceBuildings>
@@ -39598,7 +39580,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>74</iCost>
+			<iCost>86</iCost>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -39766,7 +39748,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>74</iCost>
+			<iCost>56</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
@@ -39802,7 +39784,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>10</iAmountPerTurn>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -40448,7 +40430,7 @@
 			</Properties>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Fish Traps -->
+			<!-- Fish Nets -->
 			<BuildingClass>BUILDINGCLASS_FISHTRAPS</BuildingClass>
 			<Type>BUILDING_FISHTRAPS</Type>
 			<Description>TXT_KEY_BUILDING_FISHTRAPS</Description>
@@ -40467,7 +40449,7 @@
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_BASKETS</Bonus>
 			<!-- Construction cost -->
-			<iCost>56</iCost>
+			<iCost>45</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
@@ -40516,7 +40498,7 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Fisherman Hut -->
+			<!-- Fisher -->
 			<BuildingClass>BUILDINGCLASS_FISHERMAN_HUT</BuildingClass>
 			<Type>BUILDING_FISHERMAN_HUT</Type>
 			<Description>TXT_KEY_BUILDING_FISHERMAN_HUT</Description>
@@ -40531,20 +40513,17 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_FISHING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
 			<bWater>1</bWater>
 			<Bonus>BONUS_ROPE</Bonus>
-			<PrereqBonuses>
-				<Bonus>BONUS_FISH</Bonus>
-				<Bonus>BONUS_CRAB</Bonus>
-				<Bonus>BONUS_LOBSTER</Bonus>
-				<Bonus>BONUS_CLAM</Bonus>
-				<Bonus>BONUS_SHRIMP</Bonus>
-				<Bonus>BONUS_PEARLS</Bonus>
-			</PrereqBonuses>
+			<PrereqRawVicinityBonuses>
+				<VicinityBonus>BONUS_FISH</VicinityBonus>
+				<VicinityBonus>BONUS_CRAB</VicinityBonus>
+				<VicinityBonus>BONUS_LOBSTER</VicinityBonus>
+				<VicinityBonus>BONUS_CLAM</VicinityBonus>
+				<VicinityBonus>BONUS_SHRIMP</VicinityBonus>
+				<VicinityBonus>BONUS_PEARLS</VicinityBonus>
+			</PrereqRawVicinityBonuses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_STORAGE_PIT</BuildingClassType>
@@ -40564,7 +40543,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>50</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
@@ -40676,7 +40655,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>80</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -41033,7 +41012,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Flint Knapper's Hut -->
+			<!-- Flintknapper -->
 			<BuildingClass>BUILDINGCLASS_FLINT_KNAPPER</BuildingClass>
 			<Type>BUILDING_FLINT_KNAPPER</Type>
 			<EnabledCivilizationTypes>
@@ -41051,9 +41030,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FLINT_KNAPPING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_FLINT</Bonus>
 				<Bonus>BONUS_OBSIDIAN</Bonus>
@@ -41067,7 +41043,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_BRONZE_WORKING</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>62</iCost>
+			<iCost>45</iCost>
 			<!-- Unit effects -->
 			<UnitClassProductionModifiers>
 				<UnitClassProductionModifier>
@@ -41095,7 +41071,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Flint Quarry -->
+			<!-- Flint Gatherer -->
 			<BuildingClass>BUILDINGCLASS_FLINT_QUARRY</BuildingClass>
 			<Type>BUILDING_FLINT_QUARRY</Type>
 			<EnabledCivilizationTypes>
@@ -41112,7 +41088,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_FLINT_KNAPPING</PrereqTech>
+			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ConstructCondition>
 				<Or>
 					<Has>
@@ -41210,7 +41186,7 @@
 				</Or>
 			</ConstructCondition>
 			<!-- Construction cost -->
-			<iCost>62</iCost>
+			<iCost>15</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -41278,7 +41254,7 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Flounder Nets -->
+			<!-- Net (Flounder) -->
 			<BuildingClass>BUILDINGCLASS_FLOUNDER_NETS</BuildingClass>
 			<Type>BUILDING_FLOUNDER_NETS</Type>
 			<Description>TXT_KEY_BUILDING_FLOUNDER_NETS</Description>
@@ -41291,13 +41267,13 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FISHING</PrereqTech>
-			<Bonus>BONUS_NETS</Bonus>
 			<VicinityBonus>BONUS_FISH</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_MUREX</VicinityBonus>
 			</PrereqVicinityBonuses>
+			<Bonus>BONUS_NETS</Bonus>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>80</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -42140,7 +42116,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Camp (Foxes) -->
+			<!-- Trap (Foxes) -->
 			<BuildingClass>BUILDINGCLASS_FOX_TRAPS</BuildingClass>
 			<Type>BUILDING_FOX_TRAPS</Type>
 			<Description>TXT_KEY_BUILDING_FOX_TRAPS</Description>
@@ -42153,14 +42129,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRAPPING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_FUR</VicinityBonus>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>30</iCost>
+			<iCost>35</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -42177,6 +42150,12 @@
 					<iHappiness>-1</iHappiness>
 				</TechHappinessChange>
 			</TechHappinessChanges>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_ANIMAL_TRAPS</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
@@ -42440,7 +42419,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>74</iCost>
+			<iCost>68</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -42516,7 +42495,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_FIREFIGHTING</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>80</iCost>
+			<iCost>56</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<CommerceChanges>
@@ -42658,7 +42637,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Furniture Workshop -->
+			<!-- Furniture Maker -->
 			<BuildingClass>BUILDINGCLASS_FURNITURE_WORKSHOP</BuildingClass>
 			<Type>BUILDING_FURNITURE_WORKSHOP</Type>
 			<Description>TXT_KEY_BUILDING_FURNITURE_WORKSHOP</Description>
@@ -42691,6 +42670,12 @@
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_CARPENTERS_WORKSHOP</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -42699,7 +42684,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>74</iCost>
+			<iCost>68</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -42767,15 +42752,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SKINNING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_TRAPPING</PrereqTech>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<Bonus>BONUS_PELTS</Bonus>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_PLASTICS</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>45</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->
 			<FreeBonus>BONUS_FURS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -43036,7 +43017,7 @@
 			<!-- Main effects -->
 			<iHappiness>-1</iHappiness>
 			<CommerceModifiers>
-				<iCommerce>4</iCommerce>
+				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
 			<!-- Other -->
 			<Flavors>
@@ -43487,6 +43468,47 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+		</BuildingInfo>
+		<BuildingInfo>
+			<!-- Organic Computer Lab -->
+			<BuildingClass>BUILDINGCLASS_ORGANIC_COMPUTER_LAB</BuildingClass>
+			<Type>BUILDING_ORGANIC_COMPUTER_LAB</Type>
+			<Description>TXT_KEY_BUILDING_ORGANIC_COMPUTER_LAB</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORGANIC_COMPUTER_LAB_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ORGANIC_COMPUTER_LAB_STRATEGY</Strategy>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_ORGANIC_COMPUTER_LAB</ArtDefineTag>
+			<PrereqTech>TECH_DNA_COMPUTING</PrereqTech>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<iCost>4485</iCost>
+			<iHurryCostModifier>100</iHurryCostModifier>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<CommerceChanges>
+				<iCommerce>3</iCommerce>
+				<iCommerce>5</iCommerce>
+			</CommerceChanges>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_CLONING_FACTORY</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
+			<bPrereqPower>1</bPrereqPower>
+			<iPrereqPopulation>13</iPrereqPopulation>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>13</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Gas Lamps -->
@@ -44272,9 +44294,6 @@
 				<DependencyType>RELIGION_TENGRIISM</DependencyType>
 			</AndDependencyTypes>
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_PORTABLE_SHELTERS</PrereqTech>
-			</TechTypes>
 			<Bonus>BONUS_HORSE</Bonus>
 			<PrereqReligion>RELIGION_TENGRIISM</PrereqReligion>
 			<PrereqOrBuildingClasses>
@@ -44389,8 +44408,8 @@
 			<!-- Construction cost -->
 			<iCost>1180</iCost>
 			<!-- Main effects -->
-			<iHealth>-5</iHealth>
-			<iHappiness>-2</iHappiness>
+			<iHealth>-3</iHealth>
+			<iHappiness>-3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -44731,9 +44750,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_MAMMOTH</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_BISON</VicinityBonus>
@@ -44747,7 +44763,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -44787,7 +44803,7 @@
 				<VicinityBonus>BONUS_WHALE</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>80</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -44943,9 +44959,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_ELEPHANT</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_DEER</VicinityBonus>
@@ -44964,7 +44977,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -46455,7 +46468,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_BASKETRY</PrereqTech>
+			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
@@ -46463,7 +46476,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<!-- Construction cost -->
-			<iCost>25</iCost>
+			<iCost>15</iCost>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
@@ -48230,7 +48243,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_ALPHAMALES</BuildingClassType>
@@ -48248,26 +48260,37 @@
 					<BuildingClassType>BUILDINGCLASS_BROTHEL</BuildingClassType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_GENTLEMANS_CLUB</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_ANDROID_BROTHEL</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_PROSTITUTION_BAN</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>30</iCost>
+			<iCost>5</iCost>
 			<!-- Main effects -->
-			<iHappiness>1</iHappiness>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
+			<YieldChanges>
+				<iYield>2</iYield>
+			</YieldChanges>
+			<!-- Special Yield and Commerce modifiers -->
+			<TechYieldChanges>
+				<TechYieldChange>
+					<PrereqTech>TECH_TRADE</PrereqTech>
+					<TechYield>
+						<iYield>-2</iYield>
+					</TechYield>
+				</TechYieldChange>
+			</TechYieldChanges>
+			<TechCommerceModifiers>
+				<TechCommerceModifier>
+					<PrereqTech>TECH_TRADE</PrereqTech>
+					<TechCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceModifier>
+			</TechCommerceModifiers>
+			<!-- Special Health and Happiness  modifiers -->
+			<TechHappinessChanges>
+				<TechHappinessChange>
+					<PrereqTech>TECH_TRADE</PrereqTech>
+					<iHappiness>1</iHappiness>
+				</TechHappinessChange>
+			</TechHappinessChanges>
 			<!-- Other -->
 			<Flavors>
 				<Flavor>
@@ -48283,14 +48306,6 @@
 					<iFlavor>3</iFlavor>
 				</Flavor>
 			</Flavors>
-			<!-- Properties diffusion -->
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>2</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Factory (Hats) -->
@@ -48371,7 +48386,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Hat Shop -->
+			<!-- Hatter -->
 			<BuildingClass>BUILDINGCLASS_HAT_SHOP</BuildingClass>
 			<Type>BUILDING_HAT_SHOP</Type>
 			<Description>TXT_KEY_BUILDING_HAT_SHOP</Description>
@@ -48384,7 +48399,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PERSONAL_ADORNMENT</PrereqTech>
-			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_CLOTH</Bonus>
 				<Bonus>BONUS_LEATHER</Bonus>
@@ -48413,7 +48427,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>56</iCost>
+			<iCost>50</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -48537,7 +48551,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>45</iCost>
+			<iCost>50</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_HUMANITARIAN</ProductionTraitType>
@@ -48608,10 +48622,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_NATURAL_PIGMENTS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_NATUROPATHY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<VicinityBonus>BONUS_FINE_CLAY</VicinityBonus>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -48626,7 +48637,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MEDICINE</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>45</iCost>
+			<iCost>50</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<!-- Other -->
@@ -49154,7 +49165,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Hematite Pit -->
+			<!-- Hematite Gatherer -->
 			<BuildingClass>BUILDINGCLASS_HEMATITE_PIT</BuildingClass>
 			<Type>BUILDING_HEMATITE_PIT</Type>
 			<EnabledCivilizationTypes>
@@ -49174,7 +49185,7 @@
 			<PrereqTech>TECH_NATURAL_PIGMENTS</PrereqTech>
 			<VicinityBonus>BONUS_OBSIDIAN</VicinityBonus>
 			<!-- Construction cost -->
-			<iCost>40</iCost>
+			<iCost>35</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -49248,7 +49259,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>40</iCost>
+			<iCost>35</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -50504,9 +50515,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<bRiver>1</bRiver>
 			<VicinityBonus>BONUS_ELEPHANT</VicinityBonus>
 			<PrereqVicinityBonuses>
@@ -50532,7 +50540,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -51167,7 +51175,7 @@
 				<VicinityBonus>BONUS_STONE</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Construction cost -->
-			<iCost>176</iCost>
+			<iCost>92</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -51251,17 +51259,14 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_COUNTING</PrereqTech>
+			<PrereqTech>TECH_GAMES</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_NATURAL_PIGMENTS</PrereqTech>
 			</TechTypes>
-			<PrereqBonuses>
-				<Bonus>BONUS_STONE</Bonus>
-			</PrereqBonuses>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CONSUMERISM</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>50</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -51549,15 +51554,12 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GAMES</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
+			</TechTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_POTATO</Bonus>
 			</PrereqBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ROCK_GATHERER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_BOARDGAMES</ObsoleteTech>
 			<!-- Construction cost -->
@@ -51577,14 +51579,6 @@
 				</Flavor>
 			</Flavors>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<!-- Properties diffusion -->
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Hotel -->
@@ -51831,77 +51825,8 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
-			<PrereqOrTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_LUSH</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_ROCKY</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_BARREN</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_SCRUB</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_DUNES</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_TAIGA</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_TUNDRA</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_ICE</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_MUDDY</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_MARSH</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-			</PrereqOrTerrain>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -53246,7 +53171,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>40</iCost>
+			<iCost>35</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -54919,7 +54844,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_PLASTICS</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>45</iCost>
+			<iCost>40</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_FINANCIAL</ProductionTraitType>
@@ -54956,7 +54881,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_BARTER</PrereqTech>
+			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<VicinityBonus>BONUS_JADE</VicinityBonus>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CURRENCY</ObsoleteTech>
@@ -54967,7 +54892,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>68</iCost>
+			<iCost>30</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
@@ -55067,7 +54992,7 @@
 				</PrereqNotBuildingClass>
 			</PrereqNotBuildingClasses>
 			<!-- Construction cost -->
-			<iCost>68</iCost>
+			<iCost>62</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_FINANCIAL</ProductionTraitType>
@@ -55594,7 +55519,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Jewelry Store -->
+			<!-- Jeweler -->
 			<BuildingClass>BUILDINGCLASS_JEWELLERY</BuildingClass>
 			<Type>BUILDING_JEWELLERY</Type>
 			<Description>TXT_KEY_BUILDING_JEWELRY_STORE</Description>
@@ -55623,7 +55548,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_TRANSHUMANISM</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>56</iCost>
+			<iCost>50</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>4</iCommerce>
@@ -56079,7 +56004,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Juggler's Booth -->
+			<!-- Juggling -->
 			<BuildingClass>BUILDINGCLASS_JUGGLERS_BOOTH</BuildingClass>
 			<Type>BUILDING_JUGGLERS_BOOTH</Type>
 			<Description>TXT_KEY_BUILDING_JUGGLERS_BOOTH</Description>
@@ -56209,7 +56134,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ATHLETICS</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>50</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -56560,9 +56485,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_KANGAROO</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -56578,7 +56500,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -56705,7 +56627,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>45</iCost>
+			<iCost>50</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -57180,7 +57102,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_WRITING</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>25</iCost>
+			<iCost>20</iCost>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<!-- Main effects -->
 			<CommerceChanges>
@@ -57418,7 +57340,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Lacquerware Hut -->
+			<!-- Lacquerware Maker -->
 			<BuildingClass>BUILDINGCLASS_LACQUERWARE_HUT</BuildingClass>
 			<Type>BUILDING_LACQUERWARE_HUT</Type>
 			<Description>TXT_KEY_BUILDING_LACQUERWARE_HUT</Description>
@@ -57894,9 +57816,8 @@
 					<iProductonModifier>25</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<!-- Main effects -->
-			<iHealth>-3</iHealth>
-			<iHappiness>-1</iHappiness>
+			<!-- Main effects -->									  
+			<iHappiness>-3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -58272,7 +58193,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_INVENTION</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>62</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -58294,7 +58215,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Lava Rock Quarry -->
+			<!-- Lava Rock Gatherer -->
 			<BuildingClass>BUILDINGCLASS_LAVA_ROCK_QUARRY</BuildingClass>
 			<Type>BUILDING_LAVA_ROCK_QUARRY</Type>
 			<EnabledCivilizationTypes>
@@ -58311,7 +58232,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_FLINT_KNAPPING</PrereqTech>
+			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_VOLCANO</FeatureType>
@@ -58323,7 +58244,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<!-- Construction cost -->
-			<iCost>62</iCost>
+			<iCost>15</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -58897,7 +58818,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MEDICINE</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>45</iCost>
+			<iCost>50</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<iHappiness>-1</iHappiness>
@@ -59225,7 +59146,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CELEBRATION</PrereqTech>
+			<PrereqTech>TECH_BARTER</PrereqTech>
 			<Bonus>BONUS_JADE</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_LIANGZHU</Bonus>
@@ -59243,7 +59164,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_PLASTICS</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>98</iCost>
+			<iCost>62</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_FINANCIAL</ProductionTraitType>
@@ -59388,10 +59309,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_COOKING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SCAVENGING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
 			<Bonus>BONUS_LARD</Bonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -59413,17 +59331,10 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<PrereqOrCivics>
-				<PrereqCivic>
-					<CivicOption>CIVIC_SURVIVAL</CivicOption>
-					<bPrereqCivic>1</bPrereqCivic>
-				</PrereqCivic>
-			</PrereqOrCivics>
-			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ANCIENT_MEDICINE</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>25</iCost>
+			<iCost>20</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<CommerceChanges>
@@ -59465,18 +59376,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_HERBALISM</PrereqTech>
-			<PrereqOrCivics>
-				<PrereqCivic>
-					<CivicOption>CIVIC_SURVIVAL</CivicOption>
-					<bPrereqCivic>1</bPrereqCivic>
-				</PrereqCivic>
-			</PrereqOrCivics>
-			<bRequiresActiveCivics>1</bRequiresActiveCivics>
+			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ANCIENT_MEDICINE</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>20</iCost>
+			<iCost>15</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -59933,7 +59837,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -60120,7 +60024,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Lobster Traps -->
+			<!-- Net (Lobster) -->
 			<BuildingClass>BUILDINGCLASS_LOBSTER_TRAPS</BuildingClass>
 			<Type>BUILDING_LOBSTER_TRAPS</Type>
 			<Description>TXT_KEY_BUILDING_LOBSTER_TRAPS</Description>
@@ -60132,11 +60036,16 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_FISHING</PrereqTech>
-			<Bonus>BONUS_WOOD</Bonus>
+			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
 			<VicinityBonus>BONUS_LOBSTER</VicinityBonus>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_FISHTRAPS</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -60441,7 +60350,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>68</iCost>
+			<iCost>62</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -60505,9 +60414,9 @@
 			<PrereqTech>TECH_DECEPTION</PrereqTech>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
-			<!-- Note: This building will eventually spawn barb Exciles that cannot enter your territory-->
+			<!-- Note: This building will eventually spawn barb Exiles that cannot enter your territory-->
 			<!-- Construction cost -->
-			<iCost>15</iCost>
+			<iCost>20</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -60587,7 +60496,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>15</iCost>
+			<iCost>20</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -60756,7 +60665,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<!-- Construction cost -->
-			<iCost>68</iCost>
+			<iCost>62</iCost>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
@@ -61886,9 +61795,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_MAMMOTH</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -61904,7 +61810,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -62742,7 +62648,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Mask Carver's Hut -->
+			<!-- Mask Carver -->
 			<BuildingClass>BUILDINGCLASS_MASK_CARVER</BuildingClass>
 			<Type>BUILDING_MASK_CARVER</Type>
 			<Description>TXT_KEY_BUILDING_MASK_CARVER</Description>
@@ -62772,7 +62678,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GUILDS</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>56</iCost>
+			<iCost>50</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -63497,8 +63403,8 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>270</iCost>
-			<!-- Main effects -->
-			<iHealth>-3</iHealth>
+			<!-- Main effects -->					  
+			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -64165,9 +64071,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_MAMMOTH</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_DEER</VicinityBonus>
@@ -64181,7 +64084,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -64275,9 +64178,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_MAMMOTH</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_LLAMA</VicinityBonus>
@@ -64291,7 +64191,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -66647,7 +66547,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2505</iCost>
+			<iCost>2865</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -67853,7 +67753,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Mink Traps -->
+			<!-- Trap (Mink) -->
 			<BuildingClass>BUILDINGCLASS_MINK_TRAPS</BuildingClass>
 			<Type>BUILDING_MINK_TRAPS</Type>
 			<Description>TXT_KEY_BUILDING_MINK_TRAPS</Description>
@@ -67866,9 +67766,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRAPPING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<bRiver>1</bRiver>
 			<VicinityBonus>BONUS_FUR</VicinityBonus>
 			<PrereqVicinityBonuses>
@@ -67877,7 +67774,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>30</iCost>
+			<iCost>35</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -67894,6 +67791,12 @@
 					<iHappiness>-1</iHappiness>
 				</TechHappinessChange>
 			</TechHappinessChanges>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_ANIMAL_TRAPS</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
@@ -69293,7 +69196,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>30</iCost>
 			<!-- Special Yield and Commerce modifiers -->
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -69530,9 +69433,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_DEER</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -69549,7 +69449,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -69881,9 +69781,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_SHEEP</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -69899,7 +69796,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -70179,9 +70076,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_NATURAL_PIGMENTS</PrereqTech>
-			</TechTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
 				<Bonus>BONUS_CLAY</Bonus>
@@ -70205,7 +70099,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>45</iCost>
+			<iCost>50</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<!-- Other -->
@@ -70297,10 +70191,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_FISHING</PrereqTech>
+			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
 			<VicinityBonus>BONUS_MUREX</VicinityBonus>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
@@ -70448,7 +70342,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>30</iCost>
+			<iCost>25</iCost>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -70596,9 +70490,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_BISON</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SHEEP</VicinityBonus>
@@ -70628,7 +70519,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -71812,7 +71703,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>20</iCost>
+			<iCost>10</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
@@ -71920,7 +71811,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_POULTRY_DOMESTICATION</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>20</iCost>
+			<iCost>15</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -72850,7 +72741,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_AGRICULTURE</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>25</iCost>
+			<iCost>20</iCost>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
@@ -73120,7 +73011,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_RITUALISM</PrereqTech>
+			<PrereqTech>TECH_ORNAMENTATION</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 				<Bonus>BONUS_MARBLE</Bonus>
@@ -73131,7 +73022,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>168</iCost>
 			<!-- Special Yield and Commerce modifiers -->
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -73327,10 +73218,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_FLINT_KNAPPING</PrereqTech>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<VicinityBonus>BONUS_OBSIDIAN</VicinityBonus>
 			<!-- Construction cost -->
-			<iCost>62</iCost>
+			<iCost>145</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -73833,7 +73724,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
+			<PrereqTech>TECH_BARTER</PrereqTech>
 			<Bonus>BONUS_JADE</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_OLMEC</Bonus>
@@ -73851,7 +73742,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_PLASTICS</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>62</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_FINANCIAL</ProductionTraitType>
@@ -73894,10 +73785,17 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
+			<PrereqTech>TECH_COOPERATION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_COOPERATION</PrereqTech>
+				<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
 			</TechTypes>
+			<PrereqOrCivics>
+				<PrereqCivic>
+					<CivicOption>CIVIC_COMMUNITY</CivicOption>
+					<bPrereqCivic>1</bPrereqCivic>
+				</PrereqCivic>
+			</PrereqOrCivics>
+			<bRequiresActiveCivics>0</bRequiresActiveCivics>
 			<PrereqBonuses>
 				<Bonus>BONUS_RAWFISH</Bonus>
 				<Bonus>BONUS_RAWMEAT</Bonus>
@@ -73912,17 +73810,6 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<PrereqOrCivics>
-				<PrereqCivic>
-					<CivicOption>CIVIC_UNORGANIZED</CivicOption>
-					<bPrereqCivic>1</bPrereqCivic>
-				</PrereqCivic>
-				<PrereqCivic>
-					<CivicOption>CIVIC_COMMUNITY</CivicOption>
-					<bPrereqCivic>1</bPrereqCivic>
-				</PrereqCivic>
-			</PrereqOrCivics>
-			<bRequiresActiveCivics>0</bRequiresActiveCivics>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<!-- Construction cost -->
@@ -74661,7 +74548,7 @@
 			<bPrereqPower>1</bPrereqPower>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CLONING_FACTORY</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_ORGANIC_COMPUTER_LAB</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -75089,9 +74976,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_POULTRY</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_ELEPHANT</VicinityBonus>
@@ -75110,7 +74994,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -75214,7 +75098,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>74</iCost>
+			<iCost>68</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -75870,7 +75754,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>74</iCost>
+			<iCost>68</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
@@ -77512,7 +77396,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Pearl Divers -->
+			<!-- Pearl Diver -->
 			<BuildingClass>BUILDINGCLASS_PEARL_DIVERS</BuildingClass>
 			<Type>BUILDING_PEARL_DIVERS</Type>
 			<Description>TXT_KEY_BUILDING_PEARL_DIVERS</Description>
@@ -77524,10 +77408,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_FISHING</PrereqTech>
+			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
 			<VicinityBonus>BONUS_PEARLS</VicinityBonus>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -77739,7 +77623,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PREHISTORIC_MUSIC</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
+				<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
 			</TechTypes>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -77760,7 +77644,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
-			<iCost>30</iCost>
+			<iCost>25</iCost>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<!-- Main effects -->
 			<CommerceChanges>
@@ -78892,7 +78776,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Piercing Hut -->
+			<!-- Piercer -->
 			<BuildingClass>BUILDINGCLASS_PIERCING_HUT</BuildingClass>
 			<Type>BUILDING_PIERCING_HUT</Type>
 			<Description>TXT_KEY_BUILDING_PIERCING_HUT</Description>
@@ -78905,6 +78789,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PERSONAL_ADORNMENT</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_PIERCING</PrereqTech>
+			</TechTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_JEWELRY</Bonus>
 				<Bonus>BONUS_BONE</Bonus>
@@ -78933,7 +78820,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>56</iCost>
+			<iCost>50</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -79460,7 +79347,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_TRAPPING</PrereqTech>
+			<PrereqTech>TECH_CARVING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_TRAPPING</PrereqTech>
+			</TechTypes>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MACHINERY</ObsoleteTech>
 			<ReplaceBuildings>
@@ -79502,12 +79392,26 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>30</iCost>
-			<!-- Main effects -->
-			<iHealth>-1</iHealth>
+			<iCost>35</iCost>
+			<!-- Main effects -->					  
+			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
+			<BonusYieldModifiers>
+				<BonusYieldModifier>
+					<BonusType>BONUS_FUR</BonusType>
+					<YieldModifiers>
+						<iYield>1</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_DEER</BonusType>
+					<YieldModifiers>
+						<iYield>1</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+			</BonusYieldModifiers>
 			<!-- Defense effects -->
 			<iDefense>5</iDefense>
 			<iLocalRepel>10</iLocalRepel>
@@ -79933,10 +79837,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MICROTURBINE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CONTROLLED_PLASMA</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ELECTRIC_ARC_WEAPONRY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
@@ -79950,7 +79851,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2625</iCost>
+			<iCost>3385</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
@@ -80569,7 +80470,7 @@
 			<iRevIdxLocal>25</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Poison Crafter's Hut -->
+			<!-- Poison Crafter -->
 			<BuildingClass>BUILDINGCLASS_POISONCRAFTERS_HUT</BuildingClass>
 			<Type>BUILDING_POISONCRAFTERS_HUT</Type>
 			<EnabledCivilizationTypes>
@@ -80587,9 +80488,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POISON_CRAFTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<Bonus>BONUS_POISON</Bonus>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -80621,11 +80519,6 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<!-- Properties diffusion -->
 			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>3</iAmountPerTurn>
-				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
@@ -82112,7 +82005,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Prawn Nets -->
+			<!-- Net (Prawn) -->
 			<BuildingClass>BUILDINGCLASS_PRAWN_NETS</BuildingClass>
 			<Type>BUILDING_PRAWN_NETS</Type>
 			<Description>TXT_KEY_BUILDING_PRAWN_NETS</Description>
@@ -82124,14 +82017,19 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_FISHING</PrereqTech>
-			<Bonus>BONUS_NETS</Bonus>
+			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
 			<VicinityBonus>BONUS_LOBSTER</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SHRIMP</VicinityBonus>
 			</PrereqVicinityBonuses>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_FISHTRAPS</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -83180,10 +83078,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_RITUALISM</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CONDUCT</PrereqTech>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_ROCK_GATHERER</BuildingClassType>
@@ -83199,7 +83094,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>50</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
@@ -83732,7 +83627,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>30</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_AGRICULTURAL</ProductionTraitType>
@@ -83843,7 +83738,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>62</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -83963,7 +83858,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Rabbit Traps -->
+			<!-- Trap (Rabbit) -->
 			<BuildingClass>BUILDINGCLASS_RABBIT_TRAPS</BuildingClass>
 			<Type>BUILDING_RABBIT_TRAPS</Type>
 			<Description>TXT_KEY_BUILDING_RABBIT_TRAPS</Description>
@@ -83976,14 +83871,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRAPPING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_RABBIT</VicinityBonus>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>30</iCost>
+			<iCost>35</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -84000,11 +83892,17 @@
 					<iHappiness>-1</iHappiness>
 				</TechHappinessChange>
 			</TechHappinessChanges>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_ANIMAL_TRAPS</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Raccoon Traps -->
+			<!-- Trap (Raccoon) -->
 			<BuildingClass>BUILDINGCLASS_RACCOON_TRAPS</BuildingClass>
 			<Type>BUILDING_RACCOON_TRAPS</Type>
 			<Description>TXT_KEY_BUILDING_RACCOON_TRAPS</Description>
@@ -84017,9 +83915,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRAPPING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_FUR</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CRAB</VicinityBonus>
@@ -84027,7 +83922,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>30</iCost>
+			<iCost>35</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -84044,6 +83939,12 @@
 					<iHappiness>-1</iHappiness>
 				</TechHappinessChange>
 			</TechHappinessChanges>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_ANIMAL_TRAPS</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
@@ -84520,7 +84421,7 @@
 			<iPower>2</iPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Grove (Rattans) -->
+			<!-- Grove (Rattan) -->
 			<BuildingClass>BUILDINGCLASS_RATTAN_GROVE</BuildingClass>
 			<Type>BUILDING_RATTAN_GROVE</Type>
 			<EnabledCivilizationTypes>
@@ -84538,10 +84439,12 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BASKETRY</PrereqTech>
-			<RawVicinityBonus>BONUS_TIMBER</RawVicinityBonus>
-			<PrereqVicinityBonuses>
-				<VicinityBonus>BONUS_COTTON</VicinityBonus>
-			</PrereqVicinityBonuses>
+			<PrereqOrFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_JUNGLE</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+			</PrereqOrFeature>
 			<!-- Construction cost -->
 			<iCost>25</iCost>
 			<!-- Main effects -->
@@ -85162,7 +85065,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_BASKETRY</PrereqTech>
+			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -85170,7 +85073,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<!-- Construction cost -->
-			<iCost>25</iCost>
+			<iCost>15</iCost>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
@@ -85460,7 +85363,7 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -86010,7 +85913,7 @@
 			<PrereqTech>TECH_ADHESIVES</PrereqTech>
 			<VicinityBonus>BONUS_RESIN</VicinityBonus>
 			<!-- Construction cost -->
-			<iCost>50</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -86243,9 +86146,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_POULTRY</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_LLAMA</VicinityBonus>
@@ -86264,7 +86164,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -86298,9 +86198,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_ELEPHANT</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PIG</VicinityBonus>
@@ -86319,7 +86216,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -86434,7 +86331,7 @@
 			<iHurryCostModifier>50</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Rice Gatherer -->
+			<!-- Wild Rice Gatherer -->
 			<BuildingClass>BUILDINGCLASS_RICE_GATHERER</BuildingClass>
 			<Type>BUILDING_RICE_GATHERER</Type>
 			<Description>TXT_KEY_BUILDING_RICE_GATHERER</Description>
@@ -86457,7 +86354,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>30</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -86803,7 +86700,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>86</iCost>
+			<iCost>74</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
@@ -87154,9 +87051,8 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>1685</iCost>
-			<!-- Main effects -->
-			<iHealth>-5</iHealth>
-			<iHappiness>-1</iHappiness>
+			<!-- Main effects -->					  
+			<iHappiness>-3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -87367,7 +87263,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>80</iCost>
+			<iCost>68</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -87454,11 +87350,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
+			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>30</iCost>
+			<iCost>15</iCost>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
@@ -87623,7 +87519,7 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Root Tubers -->
+			<!-- Tuber Gatherer -->
 			<BuildingClass>BUILDINGCLASS_ROOT_TUBERS</BuildingClass>
 			<Type>BUILDING_ROOT_TUBERS</Type>
 			<EnabledCivilizationTypes>
@@ -87736,7 +87632,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>50</iCost>
+			<iCost>30</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -87815,7 +87711,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Rope Weaver's Hut -->
+			<!-- Roper -->
 			<BuildingClass>BUILDINGCLASS_ROPE_WEAVER</BuildingClass>
 			<Type>BUILDING_ROPE_WEAVER</Type>
 			<EnabledCivilizationTypes>
@@ -87861,7 +87757,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>50</iCost>
+			<iCost>30</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -88655,7 +88551,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Sage's Hut -->
+			<!-- Sage -->
 			<BuildingClass>BUILDINGCLASS_SHAMANHUT</BuildingClass>
 			<Type>BUILDING_SHAMANHUT</Type>
 			<Description>TXT_KEY_BUILDING_SAGE_HUT</Description>
@@ -88670,9 +88566,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMISM</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_STORAGE_PIT</BuildingClassType>
@@ -88690,7 +88583,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_DEMOCRACY</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>68</iCost>
+			<iCost>74</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<CommerceChanges>
@@ -88852,7 +88745,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Salmon Nets -->
+			<!-- Net (Salmon) -->
 			<BuildingClass>BUILDINGCLASS_SALMON_NETS</BuildingClass>
 			<Type>BUILDING_SALMON_NETS</Type>
 			<Description>TXT_KEY_BUILDING_SALMON_NETS</Description>
@@ -88864,15 +88757,23 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_FISHING</PrereqTech>
+			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
 			<bRiver>1</bRiver>
-			<Bonus>BONUS_NETS</Bonus>
 			<VicinityBonus>BONUS_FISH</VicinityBonus>
-			<PrereqVicinityBonuses>
-				<VicinityBonus>BONUS_TIMBER</VicinityBonus>
-			</PrereqVicinityBonuses>
+			<PrereqOrFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+			</PrereqOrFeature>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_FISHTRAPS</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -89223,7 +89124,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Sand Pit (Beach) -->
+			<!-- Beach Sand Collector -->
 			<BuildingClass>BUILDINGCLASS_SANDPIT_BEACH</BuildingClass>
 			<Type>BUILDING_SANDPIT_BEACH</Type>
 			<Description>TXT_KEY_BUILDING_SANDPIT_BEACH</Description>
@@ -89238,7 +89139,7 @@
 			<PrereqTech>TECH_NATURAL_PIGMENTS</PrereqTech>
 			<bWater>1</bWater>
 			<!-- Construction cost -->
-			<iCost>40</iCost>
+			<iCost>35</iCost>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<!-- Main effects -->
 			<CommerceChanges>
@@ -89250,7 +89151,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Sand Pit (Desert) -->
+			<!-- Desert Sand Gatherer -->
 			<BuildingClass>BUILDINGCLASS_SANDPIT_DESERT</BuildingClass>
 			<Type>BUILDING_SANDPIT_DESERT</Type>
 			<Description>TXT_KEY_BUILDING_SANDPIT_DESERT</Description>
@@ -89268,9 +89169,13 @@
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_DUNES</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<!-- Construction cost -->
-			<iCost>40</iCost>
+			<iCost>35</iCost>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<!-- Main effects -->
 			<CommerceChanges>
@@ -89282,7 +89187,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Sand Pit (Stone) -->
+			<!-- Rockdust Gatherer -->
 			<BuildingClass>BUILDINGCLASS_SANDPIT_STONE</BuildingClass>
 			<Type>BUILDING_SANDPIT_STONE</Type>
 			<Description>TXT_KEY_BUILDING_SANDPIT_STONE</Description>
@@ -89297,7 +89202,7 @@
 			<PrereqTech>TECH_NATURAL_PIGMENTS</PrereqTech>
 			<VicinityBonus>BONUS_STONE</VicinityBonus>
 			<!-- Construction cost -->
-			<iCost>40</iCost>
+			<iCost>35</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -89435,7 +89340,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Sardine Nets -->
+			<!-- Net (Sardine) -->
 			<BuildingClass>BUILDINGCLASS_SARDINE_NETS</BuildingClass>
 			<Type>BUILDING_SARDINE_NETS</Type>
 			<Description>TXT_KEY_BUILDING_SARDINE_NETS</Description>
@@ -89448,13 +89353,13 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FISHING</PrereqTech>
-			<Bonus>BONUS_NETS</Bonus>
 			<VicinityBonus>BONUS_FISH</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SHRIMP</VicinityBonus>
 			</PrereqVicinityBonuses>
+			<Bonus>BONUS_NETS</Bonus>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>80</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -90463,7 +90368,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Sea Bass Nets -->
+			<!-- Net (Sea Bass) -->
 			<BuildingClass>BUILDINGCLASS_SEABASS_NETS</BuildingClass>
 			<Type>BUILDING_SEABASS_NETS</Type>
 			<Description>TXT_KEY_BUILDING_SEABASS_NETS</Description>
@@ -90476,13 +90381,13 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FISHING</PrereqTech>
-			<Bonus>BONUS_NETS</Bonus>
 			<VicinityBonus>BONUS_FISH</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SEA_LIONS</VicinityBonus>
 			</PrereqVicinityBonuses>
+			<Bonus>BONUS_NETS</Bonus>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>80</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -90496,7 +90401,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Camp (Sea Otters) -->
+			<!-- Trap (Sea Otters) -->
 			<BuildingClass>BUILDINGCLASS_OTTER_CAMP</BuildingClass>
 			<Type>BUILDING_OTTER_CAMP</Type>
 			<Description>TXT_KEY_BUILDING_OTTER_CAMP</Description>
@@ -90509,9 +90414,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRAPPING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<bWater>1</bWater>
 			<VicinityBonus>BONUS_FUR</VicinityBonus>
 			<PrereqVicinityBonuses>
@@ -90520,7 +90422,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>30</iCost>
+			<iCost>35</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -90537,6 +90439,12 @@
 					<iHappiness>-1</iHappiness>
 				</TechHappinessChange>
 			</TechHappinessChanges>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_ANIMAL_TRAPS</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
@@ -90602,7 +90510,7 @@
 				<VicinityBonus>BONUS_CLAM</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>80</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -90645,7 +90553,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>98</iCost>
+			<iCost>92</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -90725,7 +90633,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Seamstress's Hut -->
+			<!-- Seamstress -->
 			<BuildingClass>BUILDINGCLASS_SEAMSTRESS_HUT</BuildingClass>
 			<Type>BUILDING_SEAMSTRESS_HUT</Type>
 			<Description>TXT_KEY_BUILDING_SEAMSTRESS_HUT</Description>
@@ -90738,9 +90646,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SEWING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_CLOTH</Bonus>
 				<Bonus>BONUS_LEATHER</Bonus>
@@ -90774,7 +90679,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>62</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -90860,7 +90765,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>80</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -91026,7 +90931,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Seed Camp -->
+			<!-- Seed Gatherer -->
 			<BuildingClass>BUILDINGCLASS_SEED_CAMP</BuildingClass>
 			<Type>BUILDING_SEED_CAMP</Type>
 			<EnabledCivilizationTypes>
@@ -91046,15 +90951,8 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
-			<PrereqAndCivics>
-				<PrereqCivic>
-					<CivicOption>CIVIC_NOFARM</CivicOption>
-					<bPrereqCivic>1</bPrereqCivic>
-				</PrereqCivic>
-			</PrereqAndCivics>
-			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_GARDENING</ObsoleteTech>
+			<ObsoleteTech>TECH_AGRICULTURE</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>15</iCost>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
@@ -91231,39 +91129,15 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CONDUCT</PrereqTech>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_LAW_ENFORCEMENT</ObsoleteTech>
+			<ObsoleteTech>TECH_DUALISM</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_TOWNWATCH</BuildingClassType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_TOWN_PATROL</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_GUARDHOUSE</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_GUARD_STATION</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_SHERIFFS_OFFICE</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_POLICE_STATION</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_POLICE_PRECINCT</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>45</iCost>
+			<iCost>50</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-2</iCommerce>
@@ -91689,7 +91563,7 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Shark Nets -->
+			<!-- Net (Shark) -->
 			<BuildingClass>BUILDINGCLASS_SHARK_NETS</BuildingClass>
 			<Type>BUILDING_SHARK_NETS</Type>
 			<Description>TXT_KEY_BUILDING_SHARK_NETS</Description>
@@ -91708,7 +91582,7 @@
 				<VicinityBonus>BONUS_WHALE</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>80</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -92397,7 +92271,6 @@
 			</PrereqBonuses>
 			<!-- Construction cost -->
 			<iCost>1030</iCost>
-			<bAutoBuild>1</bAutoBuild>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>10</iCommerce>
@@ -92481,7 +92354,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Shrimp Nets -->
+			<!-- Net (Shrimp) -->
 			<BuildingClass>BUILDINGCLASS_SHRIMP_NETS</BuildingClass>
 			<Type>BUILDING_SHRIMP_NETS</Type>
 			<Description>TXT_KEY_BUILDING_SHRIMP_NETS</Description>
@@ -92493,11 +92366,16 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_FISHING</PrereqTech>
-			<Bonus>BONUS_NETS</Bonus>
+			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
 			<VicinityBonus>BONUS_SHRIMP</VicinityBonus>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_FISHTRAPS</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -93275,9 +93153,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SKINNING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<Bonus>BONUS_CARCASS</Bonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -93286,7 +93161,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>45</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -93532,7 +93407,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
-			<iCost>25</iCost>
+			<iCost>30</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -93584,7 +93459,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>80</iCost>
+			<iCost>92</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -93774,9 +93649,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FIRE_MAKING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_WARFARE</PrereqTech>
-			</TechTypes>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_IMU</BuildingClassType>
@@ -93794,7 +93666,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_OIL_LAMPS</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>74</iCost>
+			<iCost>56</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -93837,9 +93709,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_COOKING</PrereqTech>
+			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
+				<PrereqTech>TECH_DRYING</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_WOOD</Bonus>
 			<PrereqBonuses>
@@ -94033,25 +93905,45 @@
 			<iRevIdxLocal>10</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Snail Gatherer -->
+			<!-- Snail Catcher -->
 			<BuildingClass>BUILDINGCLASS_SNAIL</BuildingClass>
 			<Type>BUILDING_SNAIL</Type>
 			<Description>TXT_KEY_BUILDING_SNAIL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SNAIL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SNAIL_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SNAIL</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
-			<RawVicinityBonus>BONUS_SILK</RawVicinityBonus>
-			<PrereqRawVicinityBonuses>
-				<VicinityBonus>BONUS_MUREX</VicinityBonus>
-			</PrereqRawVicinityBonuses>
+			<PrereqTech>TECH_SCAVENGING</PrereqTech>
+			<PrereqOrTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_LUSH</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_MUDDY</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+			</PrereqOrTerrain>
+			<PrereqOrFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+			</PrereqOrFeature>
 			<!-- Construction cost -->
-			<iCost>56</iCost>
+			<iCost>15</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -94129,7 +94021,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Snapper Nets -->
+			<!-- Net (Snapper) -->
 			<BuildingClass>BUILDINGCLASS_SNAPPER_NETS</BuildingClass>
 			<Type>BUILDING_SNAPPER_NETS</Type>
 			<Description>TXT_KEY_BUILDING_SNAPPER_NETS</Description>
@@ -94148,7 +94040,7 @@
 				<VicinityBonus>BONUS_LOBSTER</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>80</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -95310,7 +95202,7 @@
 			<iRevIdxLocal>5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Spear Fishermen's Hut -->
+			<!-- Spearfisher -->
 			<BuildingClass>BUILDINGCLASS_SPEAR_FISHERMEN</BuildingClass>
 			<Type>BUILDING_SPEAR_FISHERMEN</Type>
 			<Description>TXT_KEY_BUILDING_SPEAR_FISHERMEN</Description>
@@ -95323,9 +95215,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SPEARFISHING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<bRiver>1</bRiver>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -95344,11 +95233,37 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SAILING</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>68</iCost>
+			<iCost>62</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
+			<VicinityBonusYieldChanges>
+				<BonusYieldChange>
+					<BonusType>BONUS_FISH</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_CRAB</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_SHRIMP</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_LOBSTER</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+			</VicinityBonusYieldChanges>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
@@ -95384,7 +95299,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>80</iCost>
+			<iCost>56</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -95648,9 +95563,9 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>68</iCost>
-			<!-- Main effects -->
-			<iHealth>-2</iHealth>
+			<iCost>62</iCost>
+			<!-- Main effects -->					  
+			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -95659,13 +95574,13 @@
 				<BonusYieldModifier>
 					<BonusType>BONUS_FUR</BonusType>
 					<YieldModifiers>
-						<iYield>1</iYield>
+						<iYield>2</iYield>
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
 					<BonusType>BONUS_DEER</BonusType>
 					<YieldModifiers>
-						<iYield>1</iYield>
+						<iYield>2</iYield>
 					</YieldModifiers>
 				</BonusYieldModifier>
 			</BonusYieldModifiers>
@@ -95813,7 +95728,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>80</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<CommerceChanges>
@@ -96044,7 +95959,7 @@
 			<iConquestProb>100</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Squid Nets -->
+			<!-- Net (Squid) -->
 			<BuildingClass>BUILDINGCLASS_SQUID_NETS</BuildingClass>
 			<Type>BUILDING_SQUID_NETS</Type>
 			<Description>TXT_KEY_BUILDING_SQUID_NETS</Description>
@@ -96063,7 +95978,7 @@
 				<VicinityBonus>BONUS_PEARLS</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>80</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -96987,7 +96902,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>80</iCost>
+			<iCost>56</iCost>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<!-- Special Yield and Commerce modifiers -->
@@ -97207,10 +97122,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CULTURAL_IDENTITY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_WARFARE</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
@@ -97227,7 +97139,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MILITARY_TRADITION</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>74</iCost>
+			<iCost>86</iCost>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -97272,8 +97184,22 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
+			<PrereqOrFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_JUNGLE</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+			</PrereqOrFeature>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_FIRE_MAKING</ObsoleteTech>
+			<ObsoleteTech>TECH_WOOD_WORKING</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>15</iCost>
 			<!-- Main effects -->
@@ -97517,7 +97443,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>104</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-2</iCommerce>
@@ -97550,10 +97476,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<VicinityBonus>BONUS_STONE</VicinityBonus>
 			<!-- Construction cost -->
-			<iCost>30</iCost>
+			<iCost>145</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -97585,31 +97511,17 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
+			<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_ROCK_GATHERER</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_STORAGE_PIT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BARTER_POST</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_VIKING_TRADING_POST</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>30</iCost>
+			<iCost>20</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -97773,7 +97685,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Stoneworker's Hut -->
+			<!-- Stoneworker -->
 			<BuildingClass>BUILDINGCLASS_STONEWORKER</BuildingClass>
 			<Type>BUILDING_STONEWORKER</Type>
 			<EnabledCivilizationTypes>
@@ -97793,9 +97705,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 				<Bonus>BONUS_MARBLE</Bonus>
@@ -97819,7 +97728,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SCULPTURE</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>30</iCost>
+			<iCost>25</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_INDUSTRIOUS</ProductionTraitType>
@@ -97882,7 +97791,7 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Storage Pit -->
+			<!-- Food Storage Pit -->
 			<BuildingClass>BUILDINGCLASS_STORAGE_PIT</BuildingClass>
 			<Type>BUILDING_STORAGE_PIT</Type>
 			<EnabledCivilizationTypes>
@@ -97902,30 +97811,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_PESTICIDES</ObsoleteTech>
+			<ObsoleteTech>TECH_POTTERY</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_CELLAR</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_GRANARY</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_MODERN_GRANARY</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_WAREHOUSE</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_WAREHOUSE2</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_ICEHOUSE</BuildingClassType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
@@ -97946,7 +97835,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Storyteller's Hut -->
+			<!-- Storyteller -->
 			<BuildingClass>BUILDINGCLASS_STORYTELLERS_HUT</BuildingClass>
 			<Type>BUILDING_STORYTELLERS_HUT</Type>
 			<Description>TXT_KEY_BUILDING_STORYTELLERS_HUT</Description>
@@ -97959,9 +97848,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_STORAGE_PIT</BuildingClassType>
@@ -97979,7 +97865,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_LITERATURE</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>25</iCost>
+			<iCost>20</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -98017,7 +97903,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_BASKETRY</PrereqTech>
+			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -98041,7 +97927,7 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<!-- Construction cost -->
-			<iCost>25</iCost>
+			<iCost>120</iCost>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
@@ -99085,7 +98971,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MEDICINE</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>68</iCost>
+			<iCost>74</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<CommerceChanges>
@@ -99494,7 +99380,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MATHEMATICS</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>50</iCost>
+			<iCost>30</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -99655,9 +99541,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TANNING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_HIDE</Bonus>
 			<PrereqBonuses>
@@ -99692,7 +99575,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>68</iCost>
+			<iCost>62</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_NOMAD</ProductionTraitType>
@@ -99859,7 +99742,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>68</iCost>
+			<iCost>62</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -100303,7 +100186,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<!-- Construction cost -->
-			<iCost>50</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -100584,7 +100467,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Tattoo Hut -->
+			<!-- Tattooer -->
 			<BuildingClass>BUILDINGCLASS_TATTOO_HUT</BuildingClass>
 			<Type>BUILDING_TATTOO_HUT</Type>
 			<EnabledCivilizationTypes>
@@ -100602,9 +100485,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TATTOOS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<Bonus>BONUS_DYE</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_BONE</Bonus>
@@ -101277,7 +101157,6 @@
 			<bPrereqPower>1</bPrereqPower>
 			<!-- Construction cost -->
 			<iCost>10155</iCost>
-			<bAutoBuild>1</bAutoBuild>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -101912,7 +101791,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Termite Mound -->
+			<!-- Termite Catcher -->
 			<BuildingClass>BUILDINGCLASS_TERMITE_MOUND</BuildingClass>
 			<Type>BUILDING_TERMITE_MOUND</Type>
 			<Description>TXT_KEY_BUILDING_TERMITE_MOUND</Description>
@@ -101924,16 +101803,62 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
+			<PrereqTech>TECH_SCAVENGING</PrereqTech>
+			<PrereqOrTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_LUSH</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_PLAINS</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_ROCKY</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_SCRUB</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_TAIGA</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_MUDDY</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+			</PrereqOrTerrain>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_COOKING</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>25</iCost>
+			<iCost>15</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
+			<FreeBonus>BONUS_BUG</FreeBonus>
+			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_GROWTH</FlavorType>
+					<iFlavor>6</iFlavor>
+				</Flavor>
+			</Flavors>
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -102676,7 +102601,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Tidepools -->
+			<!-- Tidepool Scavanger -->
 			<BuildingClass>BUILDINGCLASS_TIDEPOOLS</BuildingClass>
 			<Type>BUILDING_TIDEPOOLS</Type>
 			<Description>TXT_KEY_BUILDING_TIDEPOOLS</Description>
@@ -102693,7 +102618,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_FISHING</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>20</iCost>
+			<iCost>15</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -103556,7 +103481,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>74</iCost>
+			<iCost>56</iCost>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -104357,7 +104282,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>153</iCost>
-			<bAutoBuild>1</bAutoBuild>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>5</iCommerce>
@@ -104540,7 +104464,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>30</iCost>
+			<iCost>20</iCost>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<!-- Misc. Effects -->
 			<iTradeRoutes>1</iTradeRoutes>
@@ -104554,14 +104478,6 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
-			<!-- Properties diffusion -->
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -104838,7 +104754,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>68</iCost>
+			<iCost>50</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -104929,20 +104845,25 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_WOOD_WORKING</PrereqTech>
-			<PrereqBonuses>
-				<Bonus>BONUS_TIMBER</Bonus>
-			</PrereqBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_WOODCARVERS_HUT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqTech>TECH_CARVING</PrereqTech>
+			<PrereqOrFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_JUNGLE</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+			</PrereqOrFeature>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MACHINERY</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>68</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -105059,9 +104980,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ARITHMETIC</PrereqTech>
-			</TechTypes>
 			<Bonus>BONUS_ROPE</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
@@ -105083,7 +105001,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<!-- Construction cost -->
-			<iCost>74</iCost>
+			<iCost>68</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -105280,7 +105198,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_THEOLOGY</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>80</iCost>
+			<iCost>56</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
@@ -105312,7 +105230,7 @@
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Tuna Nets -->
+			<!-- Net (Tuna) -->
 			<BuildingClass>BUILDINGCLASS_TUNA_NETS</BuildingClass>
 			<Type>BUILDING_TUNA_NETS</Type>
 			<Description>TXT_KEY_BUILDING_TUNA_NETS</Description>
@@ -105325,10 +105243,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FISHING</PrereqTech>
-			<Bonus>BONUS_NETS</Bonus>
 			<VicinityBonus>BONUS_FISH</VicinityBonus>
+			<Bonus>BONUS_NETS</Bonus>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>80</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -107079,7 +106997,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_PLASTICS</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>50</iCost>
+			<iCost>30</iCost>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
@@ -107460,7 +107378,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_DIVINATION</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>30</iCost>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -107600,7 +107518,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_DIVINATION</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>30</iCost>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -107786,7 +107704,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>98</iCost>
+			<iCost>86</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -107925,7 +107843,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_TRIBALISM</PrereqTech>
+			<PrereqTech>TECH_WARFARE</PrereqTech>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_TRIBALWARFARE</CivicOption>
@@ -107936,7 +107854,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MILITARY_TRAINING</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>80</iCost>
+			<iCost>86</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
@@ -109123,7 +109041,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Weaver's Hut -->
+			<!-- Weaver -->
 			<BuildingClass>BUILDINGCLASS_WEAVER</BuildingClass>
 			<Type>BUILDING_WEAVER</Type>
 			<EnabledCivilizationTypes>
@@ -109171,6 +109089,12 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusCommerceModifiers>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_BAMBOO</BonusType>
+					<CommerceModifiers>
+						<iCommerce>1</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_HEMP_FIBERS</BonusType>
 					<CommerceModifiers>
@@ -109404,7 +109328,7 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Wet Nurse Hut -->
+			<!-- Wet Nurse -->
 			<BuildingClass>BUILDINGCLASS_MAMMALIAN_HUT</BuildingClass>
 			<Type>BUILDING_MAMMALIAN_HUT</Type>
 			<Description>TXT_KEY_BUILDING_MAMMALIAN_HUT</Description>
@@ -109417,9 +109341,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COOPERATION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CHILDBIRTH_HUT</BuildingClassType>
@@ -109539,10 +109460,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_SAILING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ANIMISM</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_WHALE</VicinityBonus>
 			</PrereqVicinityBonuses>
@@ -109554,7 +109472,7 @@
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
-			<iCost>132</iCost>
+			<iCost>86</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -109634,7 +109552,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Wheat Gatherer -->
+			<!-- Wild Wheat Gatherer -->
 			<BuildingClass>BUILDINGCLASS_WHEAT_GATHERER</BuildingClass>
 			<Type>BUILDING_WHEAT_GATHERER</Type>
 			<Description>TXT_KEY_BUILDING_WHEAT_GATHERER</Description>
@@ -109657,7 +109575,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>30</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -109873,7 +109791,7 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Wild Herbs -->
+			<!-- Wild Herbs Gatherer -->
 			<BuildingClass>BUILDINGCLASS_WILD_HERBS</BuildingClass>
 			<Type>BUILDING_WILD_HERBS</Type>
 			<EnabledCivilizationTypes>
@@ -109938,8 +109856,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
+			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_AGRICULTURE</ObsoleteTech>
+			<ObsoleteTech>TECH_FUNGICULTURE</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>15</iCost>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
@@ -110641,7 +110560,7 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Woodcarver's Hut -->
+			<!-- Woodcarver -->
 			<BuildingClass>BUILDINGCLASS_WOODCARVERS_HUT</BuildingClass>
 			<Type>BUILDING_WOODCARVERS_HUT</Type>
 			<Description>TXT_KEY_BUILDING_WOODCARVERS_HUT</Description>
@@ -110675,7 +110594,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GUILDS</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>68</iCost>
+			<iCost>62</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -110699,11 +110618,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_PREHISTORIC_MUSIC</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-				<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
 			<Bonus>BONUS_WOOD</Bonus>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -110845,9 +110760,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_MAMMOTH</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PIG</VicinityBonus>
@@ -110872,7 +110784,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -111190,9 +111102,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<VicinityBonus>BONUS_ELEPHANT</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_HORSE</VicinityBonus>
@@ -111211,7 +111120,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>45</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -113050,6 +112959,9 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRE_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
+			</TechTypes>
 			<bNeverCapture>1</bNeverCapture>
 			<FreeBuilding>BUILDINGCLASS_FIRE_MYTH_EFFECT</FreeBuilding>
 			<iCost>20</iCost>
@@ -113395,9 +113307,12 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_STONE_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
+			</TechTypes>
 			<bNeverCapture>1</bNeverCapture>
 			<FreeBuilding>BUILDINGCLASS_STONE_MYTH_EFFECT</FreeBuilding>
-			<iCost>25</iCost>
+			<iCost>20</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -114608,7 +114523,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
             <RawVicinityBonus>BONUS_COPPER</RawVicinityBonus>
-			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
+			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -114627,7 +114542,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
             <RawVicinityBonus>BONUS_GOLD</RawVicinityBonus>
-			<PrereqTech>TECH_BARTER</PrereqTech>
+			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -114646,7 +114561,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
             <RawVicinityBonus>BONUS_IRON</RawVicinityBonus>
-			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
+			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -114703,7 +114618,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
             <RawVicinityBonus>BONUS_SILVER</RawVicinityBonus>
-			<PrereqTech>TECH_BARTER</PrereqTech>
+			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -114722,7 +114637,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
             <RawVicinityBonus>BONUS_TIN</RawVicinityBonus>
-			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -114819,7 +114734,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
 			<ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech>
-			<iCost>80</iCost>
+			<iCost>56</iCost>
 			<iConquestProb>70</iConquestProb>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -114874,7 +114789,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
 			<ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech>
-			<iCost>80</iCost>
+			<iCost>56</iCost>
 			<iConquestProb>70</iConquestProb>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -114916,7 +114831,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
 			<ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech>
-			<iCost>80</iCost>
+			<iCost>56</iCost>
 			<iConquestProb>70</iConquestProb>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -114958,7 +114873,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
 			<ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech>
-			<iCost>80</iCost>
+			<iCost>56</iCost>
 			<iConquestProb>70</iConquestProb>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -115006,7 +114921,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
 			<ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech>
-			<iCost>80</iCost>
+			<iCost>56</iCost>
 			<iConquestProb>70</iConquestProb>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -115135,7 +115050,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>80</iCost>
+			<iCost>56</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_WOOD</BonusType>

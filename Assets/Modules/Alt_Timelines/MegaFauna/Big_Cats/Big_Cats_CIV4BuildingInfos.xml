@@ -24,7 +24,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<FreeBuilding>BUILDINGCLASS_BIG_CAT_TRAINER_EFFECT</FreeBuilding>
-			<iCost>588</iCost>
+			<iCost>624</iCost>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
