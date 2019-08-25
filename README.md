@@ -1,6 +1,9 @@
-# Caveman2Cosmos
-
+# Caveman2Cosmos 
 [![Build status](https://ci.appveyor.com/api/projects/status/03bdn0dlmy85k4oj?svg=true)](https://ci.appveyor.com/project/Caveman2Cosmos/caveman2cosmos)
+<a href="https://scan.coverity.com/projects/caveman2cosmos-caveman2cosmos">
+  <img alt="Coverity Scan Build Status"
+       src="https://scan.coverity.com/projects/19071/badge.svg"/>
+</a>
 
 Caveman2Cosmos is a CivFanatics.com community mod that add new features, gameplay, and content to the Civilization 4 experience.
 It is the most expansive Civilization 4: BTS mod to date with almost daily updates since November 2010.
