@@ -22,12 +22,11 @@ if %ERRORLEVEL% neq 0 (
 )
 
 echo Building FinalRelease DLL...
-echo TEMPORARILY DISABLED FOR APPVEYOR TESTING!
-REM call Tools\MakeDLLFinalRelease.bat
-REM if not errorlevel 0 (
-REM     echo Building FinalRelease DLL failed, aborting deployment!
-REM     exit /B 2
-REM )
+call Tools\MakeDLLFinalRelease.bat
+if not errorlevel 0 (
+    echo Building FinalRelease DLL failed, aborting deployment!
+    exit /B 2
+)
 
 call Tools\CI\DoSourceIndexing.bat
 
