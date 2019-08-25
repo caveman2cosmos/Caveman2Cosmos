@@ -7738,11 +7738,9 @@ int CvCity::getCelebrityHappiness() const
 {
 	int iHappy = 0;
 	CvPlot* pPlot = plot();
-	for (CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode(); pUnitNode != NULL; pUnitNode = pPlot->nextUnitNode(pUnitNode))
+	for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 	{
-		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-
-		iHappy += std::max(0, (pLoopUnit->getCelebrityHappy()));
+		iHappy += std::max(0, unitItr->getCelebrityHappy());
 	}
 	return iHappy;
 }
@@ -8805,9 +8803,9 @@ int CvCity::cultureGarrison(PlayerTypes ePlayer) const
 	int iGarrison = 1;
 	
 	CvPlot* pPlot = plot();
-	for (CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode(); pUnitNode != NULL; pUnitNode = pPlot->nextUnitNode(pUnitNode))
+	for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 	{
-		iGarrison += ::getUnit(pUnitNode->m_data)->revoltProtectionTotal();
+		iGarrison += unitItr->revoltProtectionTotal();
 	}
 
 	if (atWar(GET_PLAYER(ePlayer).getTeam(), getTeam()))
@@ -10688,9 +10686,9 @@ void CvCity::calculateFeatureHealthPercentChange(int& iGood, int& iBad, CvPlot* 
 
 					if (iNumUnits > 0)
 					{
-						for (CLLNode<IDInfo>* pUnitNode = pLoopPlot->headUnitNode(); pUnitNode != NULL; pUnitNode = pLoopPlot->nextUnitNode(pUnitNode))
+						for (CvPlot::unit_iterator unitItr = pLoopPlot->beginUnits(); unitItr != pLoopPlot->endUnits(); ++unitItr)
 						{
-							BuildTypes eBuild = ::getUnit(pUnitNode->m_data)->getBuildType();
+							BuildTypes eBuild = unitItr->getBuildType();
 
 							if (eBuild != NO_BUILD)
 							{
@@ -18661,12 +18659,7 @@ void CvCity::updateTradeRoutes()
 	PROFILE_FUNC();
 	int iMaxTradeRoutes = GC.getDefineINT("MAX_TRADE_ROUTES") + GET_PLAYER(getOwnerINLINE()).getMaxTradeRoutesAdjustment();
 
-	int* paiBestValue = new int[iMaxTradeRoutes];
-
-	for (int iI = 0; iI < iMaxTradeRoutes; iI++)
-	{
-		paiBestValue[iI] = 0;
-	}
+	std::vector<int> paiBestValue(iMaxTradeRoutes, 0);
 
 	clearTradeRoutes();
 
@@ -18751,8 +18744,6 @@ void CvCity::updateTradeRoutes()
 #endif
 // BUG - Fractional Trade Routes - end
 	}
-
-	SAFE_DELETE_ARRAY(paiBestValue);
 }
 
 
@@ -19681,10 +19672,10 @@ void CvCity::popOrder(int iNum, bool bFinish, bool bChoose, bool bResolveList)
 		}
 	}
 
-	LPCSTR szIcon = NULL;
 
 	if (bFinish)
 	{
+		LPCSTR szIcon = NULL;
 		wchar szBuffer[1024];
 		TCHAR szSound[1024];
 		if (eTrainUnit != NO_UNIT)
@@ -22825,19 +22816,21 @@ void CvCity::setBuildingYieldChange(BuildingClassTypes eBuildingClass, YieldType
 {
 	for (std::vector<BuildingYieldChange>::iterator it = m_aBuildingYieldChange.begin(); it != m_aBuildingYieldChange.end(); ++it)
 	{
-		if ((*it).eBuildingClass == eBuildingClass && (*it).eYield == eYield)
+		BuildingYieldChange& yieldChange = *it;
+		if (yieldChange.eBuildingClass == eBuildingClass && yieldChange.eYield == eYield)
 		{
-			int iOldChange = (*it).iChange;
+			int iOldChange = yieldChange.iChange;
 			if (iOldChange != iChange)
 			{
 
 				if (iChange == 0)
 				{
+					// Don't worry, we are exiting the function at this point, not continuing the loop
 					m_aBuildingYieldChange.erase(it);
 				}
 				else
 				{
-					(*it).iChange = iChange;
+					yieldChange.iChange = iChange;
 				}
 
 				BuildingTypes eBuilding = (BuildingTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuildings(eBuildingClass);
@@ -22903,17 +22896,19 @@ void CvCity::setBuildingCommerceChange(BuildingClassTypes eBuildingClass, Commer
 {
 	for (std::vector<BuildingCommerceChange>::iterator it = m_aBuildingCommerceChange.begin(); it != m_aBuildingCommerceChange.end(); ++it)
 	{
-		if ((*it).eBuildingClass == eBuildingClass && (*it).eCommerce == eCommerce)
+		BuildingCommerceChange& commerceChange = *it;
+		if (commerceChange.eBuildingClass == eBuildingClass && commerceChange.eCommerce == eCommerce)
 		{
-			if ((*it).iChange != iChange)
+			if (commerceChange.iChange != iChange)
 			{
 				if (iChange == 0)
 				{
+					// Don't worry, we are exiting the function at this point, not continuing the loop
 					m_aBuildingCommerceChange.erase(it);
 				}
 				else
 				{
-					(*it).iChange = iChange;
+					commerceChange.iChange = iChange;
 				}
 
 				updateBuildingCommerce();
@@ -23806,17 +23801,20 @@ void CvCity::updateCommerceModifierByBuilding(BuildingTypes eBuilding, CommerceT
 	BuildingClassTypes eBuildingClass = (BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType();
 	for (std::vector<BuildingCommerceModifier>::iterator it = m_aBuildingCommerceModifier.begin(); it != m_aBuildingCommerceModifier.end(); ++it)
 	{
-		if ((*it).eBuildingClass == eBuildingClass && (*it).eCommerce == eCommerce)
+		BuildingCommerceModifier& commerceModifier = *it;
+
+		if (commerceModifier.eBuildingClass == eBuildingClass && commerceModifier.eCommerce == eCommerce)
 		{
-			if ((*it).iChange != iChange)
+			if (commerceModifier.iChange != iChange)
 			{
 				if (iChange == 0)
 				{
+					// Don't worry, we are exiting the function at this point, not continuing the loop
 					m_aBuildingCommerceModifier.erase(it);
 				}
 				else
 				{
-					(*it).iChange = iChange;
+					commerceModifier.iChange = iChange;
 				}
 
 				setCommerceModifierDirty(eCommerce);
@@ -23852,17 +23850,20 @@ void CvCity::updateCommerceRateByBuilding(BuildingTypes eBuilding, CommerceTypes
 	BuildingClassTypes eBuildingClass = (BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType();
 	for (std::vector<BuildingCommerceChange>::iterator it = m_aBuildingCommerceChange.begin(); it != m_aBuildingCommerceChange.end(); ++it)
 	{
-		if ((*it).eBuildingClass == eBuildingClass && (*it).eCommerce == eCommerce)
+		BuildingCommerceChange& commerceChange = *it;
+
+		if (commerceChange.eBuildingClass == eBuildingClass && commerceChange.eCommerce == eCommerce)
 		{
-			if ((*it).iChange != iChange)
+			if (commerceChange.iChange != iChange)
 			{
 				if (iChange == 0)
 				{
+					// Don't worry, we are exiting the function at this point, not continuing the loop
 					m_aBuildingCommerceChange.erase(it);
 				}
 				else
 				{
-					(*it).iChange = iChange;
+					commerceChange.iChange = iChange;
 				}
 
 				updateBuildingCommerce();
@@ -23957,9 +23958,11 @@ void CvCity::updateYieldModifierByBuilding(BuildingTypes eBuilding, YieldTypes e
 	BuildingClassTypes eBuildingClass = (BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType();
 	for (std::vector<BuildingYieldModifier>::iterator it = m_aBuildingYieldModifier.begin(); it != m_aBuildingYieldModifier.end(); ++it)
 	{
-		if ((*it).eBuildingClass == eBuildingClass && (*it).eYield == eYield)
+		BuildingYieldModifier& yieldModifier = *it;
+
+		if (yieldModifier.eBuildingClass == eBuildingClass && yieldModifier.eYield == eYield)
 		{
-			int iOldChange = (*it).iChange;
+			int iOldChange = yieldModifier.iChange;
 			if (iOldChange != iChange)
 			{
 				//	Clear cached yield modifier
@@ -23967,6 +23970,7 @@ void CvCity::updateYieldModifierByBuilding(BuildingTypes eBuilding, YieldTypes e
 
 				if (iChange == 0)
 				{
+					// Don't worry, we are exiting the function at this point, not continuing the loop
 					m_aBuildingYieldModifier.erase(it);
 				}
 				else
@@ -24552,9 +24556,9 @@ void CvCity::doPromotion()
 				if (ePromotion1 != NO_PROMOTION || ePromotion2 != NO_PROMOTION || ePromotion3 != NO_PROMOTION || hasFreePromofromList)
 				{
 					CvPlot* pPlot = plot();
-					for (CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode(); pUnitNode != NULL; pUnitNode = pPlot->nextUnitNode(pUnitNode))
+					for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 					{
-						CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+						CvUnit* pLoopUnit = unitItr.ptr();
 						if (GET_TEAM(pLoopUnit->getTeam()).getID() == GET_TEAM(GET_PLAYER(getOwner()).getTeam()).getID())
 						{
 							assignPromotionChecked(ePromotion1, pLoopUnit);
@@ -25804,14 +25808,12 @@ void CvCity::doInvasion()
 				CvPlot* pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), (DirectionTypes)iI);
 				if (pAdjacentPlot != NULL && !bTestInvasion)
 				{
-					for(CLLNode<IDInfo>* pUnitNode = pAdjacentPlot->headUnitNode(); pUnitNode != NULL; pUnitNode = pAdjacentPlot->nextUnitNode(pUnitNode))
+					for (CvPlot::unit_iterator unitItr = pAdjacentPlot->beginUnits(); unitItr != pAdjacentPlot->endUnits(); ++unitItr)
 					{
-						CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-
-						if (GET_TEAM(pLoopUnit->getTeam()).isAtWar(getTeam()) && !pLoopUnit->isAnimal() && !pLoopUnit->isOnlyDefensive() && !pLoopUnit->canAttackOnlyCities())
+						if (GET_TEAM(unitItr->getTeam()).isAtWar(getTeam()) && !unitItr->isAnimal() && !unitItr->isOnlyDefensive() && !unitItr->canAttackOnlyCities())
 						{
 							bTestInvasion = true;
-							ePlayer = pLoopUnit->getOwnerINLINE();
+							ePlayer = unitItr->getOwnerINLINE();
 							break;
 						}
 					}
@@ -25932,9 +25934,9 @@ void CvCity::doAttack()
 				CvPlot* pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)iI));
 				if (pAdjacentPlot != NULL)
 				{
-					for (CLLNode<IDInfo>* pUnitNode = pAdjacentPlot->headUnitNode(); pUnitNode != NULL; pUnitNode = pAdjacentPlot->nextUnitNode(pUnitNode))
+					for (CvPlot::unit_iterator unitItr = pAdjacentPlot->beginUnits(); unitItr != pAdjacentPlot->endUnits(); ++unitItr)
 					{
-						CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+						CvUnit* pLoopUnit = unitItr.ptr();
 						
 						if (pLoopUnit->getTeam() != getTeam())
 						{
@@ -25975,13 +25977,12 @@ void CvCity::doHeal()
 		int iNumHeals = getNumUnitFullHeal();
 		int iNumDamagedUnits = 0;
 
-		for (CLLNode<IDInfo>* pUnitNode = plot()->headUnitNode(); pUnitNode != NULL; pUnitNode = plot()->nextUnitNode(pUnitNode))
+		CvPlot* pPlot = plot();
+		for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 		{
-			CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-
-			if (pLoopUnit->getTeam() == getTeam())
+			if (unitItr->getTeam() == getTeam())
 			{
-				if (pLoopUnit->getDamage() > 0)
+				if (unitItr->getDamage() > 0)
 				{
 					iNumDamagedUnits++;
 				}
@@ -25991,17 +25992,15 @@ void CvCity::doHeal()
 		iNumHeals = std::min(iNumHeals, iNumDamagedUnits);
 		while (iNumHeals > 0)
 		{
-			for (CLLNode<IDInfo>* pUnitNode = plot()->headUnitNode(); pUnitNode != NULL; pUnitNode = plot()->nextUnitNode(pUnitNode))
+			for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 			{
-				CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-				
-				if (pLoopUnit->getTeam() == getTeam())
+				if (unitItr->getTeam() == getTeam())
 				{
-					if (pLoopUnit->getDamage() > 0)
+					if (unitItr->getDamage() > 0)
 					{
 						if (GC.getGameINLINE().getSorenRandNum(100, "Unit Full Heals") > 50)
 						{
-							pLoopUnit->setDamage(0, getOwnerINLINE(), false);
+							unitItr->setDamage(0, getOwnerINLINE(), false);
 							iNumHeals--;
 							//Recheck condition after each heal
 							break;
@@ -26395,14 +26394,9 @@ void CvCity::calculateExtraTradeRouteProfit(int iExtra, int* &aiTradeYields) con
 	PROFILE_FUNC();
 	
 	int iMaxTradeRoutes = GC.getDefineINT("MAX_TRADE_ROUTES") + GET_PLAYER(getOwnerINLINE()).getMaxTradeRoutesAdjustment();
-	int* paiBestValue = new int[iMaxTradeRoutes];
-	IDInfo* paTradeCities = new IDInfo[iMaxTradeRoutes];
 
-	for (int iI = 0; iI < iMaxTradeRoutes; iI++)
-	{
-		paiBestValue[iI] = 0;
-		paTradeCities[iI].reset();
-	}
+	std::vector<int> paiBestValue(iMaxTradeRoutes, 0);
+	std::vector<IDInfo> paTradeCities(iMaxTradeRoutes, IDInfo());
 
 	if (!isDisorder() && !isPlundered())
 	{
@@ -26473,8 +26467,6 @@ void CvCity::calculateExtraTradeRouteProfit(int iExtra, int* &aiTradeYields) con
 	{
 		aiTradeYields[iI] = calculateTradeYield(((YieldTypes)iI), iTradeProfit) / 100;
 	}
-	SAFE_DELETE_ARRAY(paiBestValue);
-	SAFE_DELETE_ARRAY(paTradeCities);
 }
 
 int CvCity::getMinimumDefenseLevel() const
@@ -26522,16 +26514,9 @@ void CvCity::removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeople
 {
 	PROFILE_FUNC();
 
-	SpecialistTypes* paeRemovedSpecailists = new SpecialistTypes[iNumCitizens];
-	for (int iI = 0; iI < iNumCitizens; iI++)
-	{
-		paeRemovedSpecailists[iI] = NO_SPECIALIST;
-	}
-	bool* abRemovedPlots = new bool[NUM_CITY_PLOTS];
-	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
-	{
-		abRemovedPlots[iI] = false;
-	}
+	std::vector<SpecialistTypes> paeRemovedSpecailists(iNumCitizens, NO_SPECIALIST);
+	std::vector<bool> abRemovedPlots(NUM_CITY_PLOTS, false);
+
 	iGreatPeopleRate = 0;
 	iHappiness = 0;
 	iHealthiness = 0;
@@ -26666,8 +26651,6 @@ void CvCity::removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeople
 			}
 		}
 	}
-	SAFE_DELETE_ARRAY(paeRemovedSpecailists);
-	SAFE_DELETE_ARRAY(abRemovedPlots);
 }
 
 int CvCity::calculatePopulationHappiness() const
@@ -27371,11 +27354,9 @@ int CvCity::getTotalUnitSourcedProperty(PropertyTypes eProperty) const
 		int	iValue = 0;
 
 		CvPlot* pPlot = plot();
-		for (CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode(); pUnitNode != NULL; pUnitNode = pPlot->nextUnitNode(pUnitNode))
+		for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 		{
-			CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-
-			pLoopUnit->getGameObject()->foreachManipulator(boost::bind(unitSources, _1, _2, eProperty, this, &iValue));
+			unitItr->getGameObject()->foreachManipulator(boost::bind(unitSources, _1, _2, eProperty, this, &iValue));
 		}
 
 		m_unitSourcedPropertyCache[(int)eProperty] = iValue;
@@ -27463,12 +27444,11 @@ int CvCity::getUnitAidPresent(PropertyTypes eProperty) const
 	int iBestAid = 0;
 
 	CvPlot* pPlot = plot();
-	for (CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode(); pUnitNode != NULL; pUnitNode = pPlot->nextUnitNode(pUnitNode))
-    {
-		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-		if (pLoopUnit->getTeam() == getTeam())
+	for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
+	{
+		if (unitItr->getTeam() == getTeam())
 		{
-			int  iAid = pLoopUnit->aidTotal(eProperty);
+			int  iAid = unitItr->aidTotal(eProperty);
 
 			if (iAid > iBestAid)
 			{
@@ -27684,14 +27664,12 @@ int CvCity::getUnitCommunicability(PromotionLineTypes eAfflictionLine) const
 		bool bCheck = false;	
 		int iWorstContractModifier = 0;
 		CvPlot* pPlot = plot();
-		for (CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode(); pUnitNode != NULL; pUnitNode = pPlot->nextUnitNode(pUnitNode))
+		for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 		{
-			CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-
-			if (pLoopUnit->hasAfflictionLine(eAfflictionLine))
+			if (unitItr->hasAfflictionLine(eAfflictionLine))
 			{
 				bCheck = true;
-				iWorstContractModifier = std::max<int>(pLoopUnit->worsenedProbabilitytoAfflict(eAfflictionLine), iWorstContractModifier);
+				iWorstContractModifier = std::max<int>(unitItr->worsenedProbabilitytoAfflict(eAfflictionLine), iWorstContractModifier);
 			}
 		}
 		if (bCheck)
@@ -28137,10 +28115,9 @@ void CvCity::assignOngoingTraining(UnitCombatTypes eCombat, CvPlot* pPlot)
 	int iLowestValidity = MAX_INT;
 
 	CvUnit* pBestUnit = NULL;
-	for (CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode(); pUnitNode != NULL; pUnitNode = pPlot->nextUnitNode(pUnitNode))
+	for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 	{
-		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-
+		CvUnit* pLoopUnit = unitItr.ptr();
 		if (pLoopUnit->getTeam() == getTeam())
 		{
 			if (pLoopUnit->isHasUnitCombat(eCombat))
@@ -28937,9 +28914,9 @@ int CvCity::getInvestigationTotal(bool bActual) const
 	{
 		CvUnit* pBestUnit = NULL;
 		CvPlot* pPlot = plot();
-		for (CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode(); pUnitNode != NULL; pUnitNode = pPlot->nextUnitNode(pUnitNode))
+		for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 		{
-			CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+			CvUnit* pLoopUnit = unitItr.ptr();
 
 			int iUnitInvestigation = 0;
 			if (pLoopUnit->getOwner() == getOwner())
@@ -28950,7 +28927,7 @@ int CvCity::getInvestigationTotal(bool bActual) const
 			{
 				iBestUnitInvestigation = iUnitInvestigation;
 				pBestUnit = pLoopUnit;
-			}				
+			}
 			if (iUnitInvestigation > 0)
 			{
 				iAssistance++;

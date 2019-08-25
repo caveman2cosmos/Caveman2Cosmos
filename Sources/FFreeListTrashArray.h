@@ -69,8 +69,8 @@ public:
 
 	void setCurrentID(int iNewValue)
 	{
-		assert((iNewValue & FLTA_INDEX_MASK) == 0);
-		assert((iNewValue & FLTA_ID_MASK) != 0);
+		FAssertMsg((iNewValue & FLTA_INDEX_MASK) == 0, "FFreeListTrashArray::setCurrentID - ID format invalid (index bits should be 0)");
+		FAssertMsg((iNewValue & FLTA_ID_MASK) != 0, "FFreeListTrashArray::setCurrentID - ID format invalid (id bits should not be 0)");
 		m_iCurrentID = iNewValue;
 	}
 
@@ -78,7 +78,7 @@ public:
 	{
 		if ((iIndex >= getNumSlots()) || (m_pArray == NULL))
 		{
-			assert(false);
+			FErrorMsg("FFreeListTrashArray::getNextFreeIndex - out of slots, or not initialized");
 			return FFreeList::INVALID_INDEX;
 		}
 		return m_pArray[iIndex].iNextFreeIndex;
@@ -88,7 +88,7 @@ public:
 	{
 		if ((iIndex >= getNumSlots()) || (m_pArray == NULL))
 		{
-			assert(false);
+			FErrorMsg("FFreeListTrashArray::getNextFreeIndex - out of slots, or not initialized");
 			return;
 		}
 		m_pArray[iIndex].iNextFreeIndex = iNewValue;
@@ -142,7 +142,7 @@ FFreeListTrashArray<T>::~FFreeListTrashArray()
 template <class T>
 void FFreeListTrashArray<T>::init(int iNumSlots)
 {
-	assert(iNumSlots >= 0);
+	FAssertMsg(iNumSlots >= 0, "FFreeListTrashArray::init - iNumSlots must be >= 0");
 
 	// make sure it's binary...
 	if ((iNumSlots > 0) && ((iNumSlots - 1) & iNumSlots) != 0)
@@ -157,8 +157,8 @@ void FFreeListTrashArray<T>::init(int iNumSlots)
 		iNumSlots = (1 << (iCount + 1));
 	}
 
-	assert(((iNumSlots - 1) & iNumSlots) == 0);
-	assert((m_iNumSlots <= FLTA_MAX_BUCKETS) && "FFreeListTrashArray<T>::init() size too large");
+	FAssertMsg(((iNumSlots - 1) & iNumSlots) == 0, "FFreeListTrashArray::init - iNumSlots must be a power of 2");
+	FAssertMsg(iNumSlots <= FLTA_MAX_BUCKETS, "FFreeListTrashArray::init - iNumSlots too large");
 
 	uninit();
 
@@ -371,7 +371,7 @@ T* FFreeListTrashArray<T>::getAt(int iID) const
 template <class T>
 bool FFreeListTrashArray<T>::remove(T* pData)
 {
-	assert(m_pArray != NULL);
+	FAssertMsg(m_pArray != NULL, "FFreeListTrashArray::remove - not initialized");
 
 	if (pData != NULL)
 	{
@@ -398,7 +398,7 @@ bool FFreeListTrashArray<T>::removeAt(int iID)
 
 	int iIndex = (iID & FLTA_INDEX_MASK);
 
-	assert(iIndex >= 0);
+	FAssertMsg(iIndex >= 0, "FFreeListTrashArray::removeAt - index part of iID is not a valid index");
 
 	if ((iIndex <= m_iLastIndex) && 
 		(m_pArray[iIndex].pData != NULL))
@@ -416,7 +416,7 @@ bool FFreeListTrashArray<T>::removeAt(int iID)
 		}
 		else
 		{
-			assert(false);
+			FErrorMsg("FFreeListTrashArray::removeAt - item at index didn't match ID");
 		}
 	}
 
@@ -451,9 +451,9 @@ void FFreeListTrashArray<T>::removeAll()
 template <class T>
 void FFreeListTrashArray<T>::load(T* pData)
 {
-	assert(pData != NULL);
+	FAssertMsg(pData != NULL, "FFreeListTrashArray::load - pData is NULL");
 	//assert((pData->getID() & FLTA_ID_MASK) < m_iCurrentID);
-	assert(m_pArray != NULL);
+	FAssertMsg(m_pArray != NULL, "FFreeListTrashArray::load - not initialized");
 
 	int iIndex = (pData->getID() & FLTA_INDEX_MASK);
 
@@ -473,13 +473,15 @@ void FFreeListTrashArray<T>::growArray()
 {
 	MEMORY_TRACK_EXEMPT();
 
-	assert(m_pArray != NULL);
+	FAssertMsg(m_pArray != NULL, "FFreeListTrashArray::growArray - not initialized");
 
 	FFreeListTrashArrayNode* pOldArray = m_pArray;
 	int iOldNumSlots = m_iNumSlots;
 
 	m_iNumSlots *= FLTA_GROWTH_FACTOR;
-	assert((m_iNumSlots <= FLTA_MAX_BUCKETS) && "FFreeListTrashArray<T>::growArray() size too large");
+
+	FAssertMsg(m_iNumSlots <= FLTA_MAX_BUCKETS, "FFreeListTrashArray::growArray - size too large");
+
 	m_pArray = new FFreeListTrashArrayNode[m_iNumSlots];
 
 	for (int iI = 0; iI < m_iNumSlots; iI++)
