@@ -21625,7 +21625,7 @@ void CvCity::write(FDataStreamBase* pStream)
 /************************************************************************************************/	
 	int iMaxTradeRoutes =  GET_PLAYER(getOwnerINLINE()).getMaxTradeRoutesAdjustment() + GC.getDefineINT("MAX_TRADE_ROUTES");
 	WRAPPER_WRITE_DECORATED(wrapper, "CvCity", iMaxTradeRoutes, "iMaxTradeRoutes");
-	for (iI=0;iI<iMaxTradeRoutes;iI++)
+	for (int iI = 0; iI < iMaxTradeRoutes; iI++)
 	{
 		WRAPPER_WRITE(wrapper, "CvCity", m_paTradeCities[iI].eOwner);
 		WRAPPER_WRITE(wrapper, "CvCity", m_paTradeCities[iI].iID);
