@@ -9513,11 +9513,6 @@ void CvCityAI::AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMul
 
 int CvCityAI::AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange, bool bOriginal )
 {
-	int aiFinalYields[NUM_YIELD_TYPES];
-	int aiDiffYields[NUM_YIELD_TYPES];
-
-	int iBestTempBuildValue = 0;
-
 	BonusTypes eNonObsoleteBonus = pPlot->getNonObsoleteBonusType(getTeam());
 
 	if (eNonObsoleteBonus != NO_BONUS)
@@ -9544,29 +9539,21 @@ int CvCityAI::AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImproveme
 	}
 	else
 	{
-		CLLNode<IDInfo>* pUnitNode;
-		CvUnit* pLoopUnit;
-
-		pUnitNode = pPlot->headUnitNode();
-
-		BuildTypes eForcedBuild = NO_BUILD;
-		while (pUnitNode != NULL)
+		for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 		{
 			if (GC.getBuildInfo(unitItr->getBuildType()).getImprovement() != NO_IMPROVEMENT)
 			{
-				if (GC.getBuildInfo(pLoopUnit->getBuildType()).getImprovement() != NO_IMPROVEMENT)
+				BuildTypes eForcedBuild = unitItr->getBuildType();
+				if (eForcedBuild != NO_BUILD && GC.getBuildInfo(eForcedBuild).getImprovement() == eImprovement)
 				{
-					eForcedBuild = pLoopUnit->getBuildType();
-					if (eForcedBuild != NO_BUILD && GC.getBuildInfo(eForcedBuild).getImprovement() == eImprovement)
-					{
-						eBestTempBuild = eForcedBuild; //If a worker is already building a build, force that Build.
-					}
-					break;
+					eBestTempBuild = eForcedBuild; //If a worker is already building a build, force that Build.
 				}
+				break;
 			}
 		}
 		if (eBestTempBuild == NO_BUILD)
 		{
+			int iBestTempBuildValue = 0;
 			for (int iJ = 0; iJ < GC.getNumBuildInfos(); iJ++)
 			{
 				BuildTypes eBuild = ((BuildTypes)iJ);
@@ -9658,6 +9645,8 @@ int CvCityAI::AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImproveme
 		
 		if (iValue >= 0)
 		{
+			int aiFinalYields[NUM_YIELD_TYPES];
+			int aiDiffYields[NUM_YIELD_TYPES];
 			iValue *= 2;
 			for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 			{
