@@ -10,7 +10,7 @@ def toggleDebugMode():
 	bDebugMode = not bDebugMode
 	CyInterface().addImmediateMessage("Python Debug Mode: %s" % bDebugMode, "AS2D_ERROR")
 
-class CvDebugUtils:
+class DebugUtils:
 	def __init__(self):
 		self.iLastUnitPicker = -1
 
@@ -250,7 +250,7 @@ class CvDebugUtils:
 
 		popupInfo.addPopup(0)
 
-debugUtils = CvDebugUtils()
+debugUtils = DebugUtils()
 
 
 def putOneOfEveryUnit():

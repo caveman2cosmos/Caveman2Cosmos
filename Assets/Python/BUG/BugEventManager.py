@@ -98,7 +98,7 @@ import CvEventManager
 import BugData
 import BugUtil
 import InputUtil
-import CvDebugUtils
+import DebugUtils
 
 GC = CyGlobalContext()
 g_eventManager = None
@@ -296,7 +296,7 @@ class BugEventManager(CvEventManager.CvEventManager):
 		return self._dispatchEvent(argsList[0], argsList[1:-6])
 
 	def _dispatchEvent(self, eventType, argsList):
-		if CvDebugUtils.bDebugMode and eventType != "gameUpdate":
+		if DebugUtils.bDebugMode and eventType != "gameUpdate":
 			print ("dispatchEvent: " + eventType, argsList)
 		return EVENT_FUNCTION_MAP.get(eventType, BugEventManager._handleDefaultEvent)(self, eventType, argsList)
 
@@ -391,7 +391,7 @@ class BugEventManager(CvEventManager.CvEventManager):
 			if not InputUtil.isModifier(key):
 				stroke = InputUtil.Keystroke(key, self.bAlt, self.bCtrl, self.bShift)
 				if stroke in self.shortcuts:
-					if CvDebugUtils.bDebugMode:
+					if DebugUtils.bDebugMode:
 						print "BugEventManager - calling handler for shortcut %s"
 					self.shortcuts[stroke](argsList)
 		return 0
