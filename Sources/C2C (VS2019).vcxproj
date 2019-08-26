@@ -261,6 +261,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BetterBTSAI.h" />
+    <ClInclude Include="idinfo_iterator.h" />
     <ClInclude Include="CvMapExternal.h" />
     <ClInclude Include="CvMapInterfaceBase.h" />
     <ClInclude Include="CvReachablePlotSet.h" />

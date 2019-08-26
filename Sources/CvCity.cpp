@@ -490,7 +490,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	//	Koshliong  - do this unconditionally - it dopesn; nmatter if assimilation is off because in
 	//	that case we're setting the value it would have anyway and on any change of ownership
 	//	acquireCity() is called which initializes a new CvCity instance anyway
-    setCivilizationType(GET_PLAYER(getOwnerINLINE()).getCivilizationType());
+	setCivilizationType(GET_PLAYER(getOwnerINLINE()).getCivilizationType());
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
@@ -2005,7 +2005,7 @@ void CvCity::doTurn()
 
 	doGrowth();
 
-    doCulture();
+	doCulture();
 
 	doPlotCulture(false, getOwnerINLINE(), getCommerceRate(COMMERCE_CULTURE));
 
@@ -3312,12 +3312,12 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 	
 	if (GC.getGameINLINE().isOption(GAMEOPTION_ASSIMILATION))
 	{
-        UnitClassTypes eUnitClass = ((UnitClassTypes)(kUnit.getUnitClassType()));
+		UnitClassTypes eUnitClass = ((UnitClassTypes)(kUnit.getUnitClassType()));
 
-        if (GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(eUnitClass) != eUnit)
-        {
-            return false;
-        }
+		if (GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(eUnitClass) != eUnit)
+		{
+			return false;
+		}
 	}
 	if (kUnit.getPrereqVicinityBonus() != NO_BONUS)
 	{
@@ -3770,11 +3770,11 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 	if (GC.getGameINLINE().isOption(GAMEOPTION_ASSIMILATION))
 	{
-        BuildingClassTypes eBuildingClass = ((BuildingClassTypes)(GC.getBuildingInfo(eBuilding).getBuildingClassType()));
-        if (kCivilization.getCivilizationBuildings(eBuildingClass) != eBuilding)
-        {
-            return false;
-        }
+		BuildingClassTypes eBuildingClass = ((BuildingClassTypes)(GC.getBuildingInfo(eBuilding).getBuildingClassType()));
+		if (kCivilization.getCivilizationBuildings(eBuildingClass) != eBuilding)
+		{
+			return false;
+		}
 	}
 
 /************************************************************************************************/
@@ -7294,10 +7294,10 @@ CivilizationTypes CvCity::getCivilizationType() const
 /*                                                                                              */
 /************************************************************************************************/
 	if (!GC.getGameINLINE().isOption(GAMEOPTION_ASSIMILATION) || m_iCiv == NO_CIVILIZATION)
-    {
-        return GET_PLAYER(getOwnerINLINE()).getCivilizationType();
-    }
-    return (CivilizationTypes)m_iCiv;
+	{
+		return GET_PLAYER(getOwnerINLINE()).getCivilizationType();
+	}
+	return (CivilizationTypes)m_iCiv;
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
@@ -8283,13 +8283,13 @@ int CvCity::foodDifference(bool bBottom, bool bIncludeWastage, bool bIgnoreFoodB
 /************************************************************************************************/
 int CvCity::growthThreshold() const
 {
-    int iThreshold = GET_PLAYER(getOwnerINLINE()).getGrowthThreshold(getPopulation());
-    
-    iThreshold *= (GET_PLAYER(getOwnerINLINE()).getPopulationgrowthratepercentage() + 100);
+	int iThreshold = GET_PLAYER(getOwnerINLINE()).getGrowthThreshold(getPopulation());
+	
+	iThreshold *= (GET_PLAYER(getOwnerINLINE()).getPopulationgrowthratepercentage() + 100);
 	iThreshold /= 100;
 	
 	iThreshold *= (getPopulationgrowthratepercentage() + 100);
-    iThreshold /= 100;
+	iThreshold /= 100;
 	
 	if (getNumCityPlots() == NUM_CITY_PLOTS)
 	{
@@ -9464,7 +9464,7 @@ int CvCity::getHighestPopulation() const
 
 void CvCity::setHighestPopulation(int iNewValue)
 {
- 	m_iHighestPopulation = iNewValue;
+	m_iHighestPopulation = iNewValue;
 	FAssert(getHighestPopulation() >= 0);
 }
 
@@ -10001,10 +10001,10 @@ int CvCity::getEffectiveMaintenanceModifier() const
 {
 	int iModifier = getMaintenanceModifier() + GET_PLAYER(getOwnerINLINE()).getMaintenanceModifier() + area()->getTotalAreaMaintenanceModifier(GET_PLAYER(getOwnerINLINE()).getID());
 
-    if (isConnectedToCapital() && !(isCapital()))
-    {
-        iModifier += GET_PLAYER(getOwnerINLINE()).getConnectedCityMaintenanceModifier();
-    }
+	if (isConnectedToCapital() && !(isCapital()))
+	{
+		iModifier += GET_PLAYER(getOwnerINLINE()).getConnectedCityMaintenanceModifier();
+	}
 
 	return iModifier;
 }
@@ -10111,7 +10111,7 @@ int CvCity::calculateDistanceMaintenanceTimes100(int iExtraDistanceModifier, int
 		if (isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
 		{
 			iTempMaintenance *= std::max(0, (GET_PLAYER(getOwnerINLINE()).getCoastalDistanceMaintenanceModifier() + iExtraCoastalDistanceModifier + 100));
-            iTempMaintenance /= 100;
+			iTempMaintenance /= 100;
 		}
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -13331,7 +13331,7 @@ void CvCity::setProductionAutomated(bool bNewValue, bool bClear)
 		
 		if (!isProduction())
 		{
-		    AI_chooseProduction();		    
+			AI_chooseProduction();		    
 		}
 	}
 }
@@ -15584,8 +15584,8 @@ int CvCity::getReligionCommerceByReligion(CommerceTypes eIndex, ReligionTypes eR
 /* RevTrait Effects                                                                             */
 /************************************************************************************************/
 	if ((GET_PLAYER(getOwnerINLINE()).getStateReligion() == eReligion) 
-    || (GET_PLAYER(getOwnerINLINE()).getStateReligion() == NO_RELIGION) 
-    || (GET_PLAYER(getOwnerINLINE()).isNonStateReligionCommerce())) //phungus enlightened
+	|| (GET_PLAYER(getOwnerINLINE()).getStateReligion() == NO_RELIGION) 
+	|| (GET_PLAYER(getOwnerINLINE()).isNonStateReligionCommerce())) //phungus enlightened
 /************************************************************************************************/
 /* REVDCM                                  END                                                  */
 /************************************************************************************************/
@@ -23731,31 +23731,31 @@ int CvCity::getNumCityPlots() const
 	int var_city_plots;
 	if (getCultureLevel() == -1)
 	{
-	    return NUM_CITY_PLOTS_1;
+		return NUM_CITY_PLOTS_1;
 	}
 
-    iRadius = GC.getCultureLevelInfo(getCultureLevel()).getCityRadius();
+	iRadius = GC.getCultureLevelInfo(getCultureLevel()).getCityRadius();
 
 	if (getWorkableRadiusOverride() > 0)
 	{
 		iRadius = getWorkableRadiusOverride();
 	}
 	
-    switch (iRadius)
-    {
-    case 3:
-        var_city_plots = NUM_CITY_PLOTS;
-        break;
-    case 2:
-        var_city_plots = NUM_CITY_PLOTS_2;
-        break;
-    case 1:
-        var_city_plots = NUM_CITY_PLOTS_1;
-        break;
-    default:
-        var_city_plots = NUM_CITY_PLOTS_2;
-        break;
-    }
+	switch (iRadius)
+	{
+	case 3:
+		var_city_plots = NUM_CITY_PLOTS;
+		break;
+	case 2:
+		var_city_plots = NUM_CITY_PLOTS_2;
+		break;
+	case 1:
+		var_city_plots = NUM_CITY_PLOTS_1;
+		break;
+	default:
+		var_city_plots = NUM_CITY_PLOTS_2;
+		break;
+	}
 	return (var_city_plots);
 }
 
@@ -24789,7 +24789,7 @@ int CvCity::calculateBonusDefense() const
 
 void CvCity::setCivilizationType(int iCiv)
 {
-    m_iCiv = iCiv;
+	m_iCiv = iCiv;
 }
 
 int CvCity::getAdditionalDefenseByBuilding(BuildingTypes eBuilding) const

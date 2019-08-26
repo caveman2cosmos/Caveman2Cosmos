@@ -11,6 +11,7 @@
 #include <vector>
 #include "CvGameObject.h"
 #include "CvUnit.h"
+#include "idinfo_iterator.h"
 
 class CvSelectionGroup;
 
@@ -818,40 +819,23 @@ public:
 	DllExport CLLNode<IDInfo>* headUnitNode() const;
 	CLLNode<IDInfo>* tailUnitNode() const;
 
-	// A simple forward iterator that moves to the next node preemptively to avoid the current node being invalidated by
-	// changes done to the referenced unit.
-	// This might not be necessary, however it is done to safely emulate the code it is replacing which had this 
-	// characteristic
-	class unit_iterator // : public boost::iterator_facade<unit_iterator, CvUnit, boost::forward_traversal_tag>
+	// For iterating over units on a plot, optionally skipping invalid (NULL) ones
+	class unit_iterator : public idinfo_iterator<unit_iterator, CvUnit>
 	{
 	public:
-		unit_iterator() : m_plot(NULL), m_node(NULL), m_unit(NULL) {}
-		explicit unit_iterator(const CvPlot* plot, bool skip_invalid = false);
-		bool operator==(unit_iterator const& other) const { return equal(other); }
-		bool operator!=(unit_iterator const& other) const { return !equal(other); }
-		unit_iterator& operator++() { increment(); return *this; }
-		unit_iterator  operator++(int) { unit_iterator prev(*this); increment(); return prev; }
-		CvUnit& operator*() { return dereference(); };
-		CvUnit* operator->() { return &dereference(); };
-		bool valid() const { return m_unit != NULL; }
-		CvUnit* ptr() const { return m_unit; }
+		typedef idinfo_iterator<unit_iterator, CvUnit> base_type;
+		unit_iterator() {}
+		explicit unit_iterator(const CLinkList<IDInfo>* list, bool skip_invalid = false) : base_type(list, skip_invalid) {}
 
 	private:
-		//friend class boost::iterator_core_access;
-		void increment();
-		bool equal(unit_iterator const& other) const { return this->m_unit == other.m_unit; }
-		CvUnit& dereference() const { return *m_unit; }
-
-		const CvPlot* m_plot;
-		bool m_skip_invalid;
-		CLLNode<IDInfo>* m_node;
-		CvUnit* m_unit;
+		friend class core_access;
+		CvUnit* resolve(const IDInfo& info) const;
 	};
 
-	unit_iterator beginValidUnits() const { return unit_iterator(this, true); }
+	unit_iterator beginValidUnits() const { return unit_iterator(&m_units, true); }
 	unit_iterator endValidUnits() const { return unit_iterator(); } // Same as endUnits() currently
 
-	unit_iterator beginUnits() const { return unit_iterator(this); }
+	unit_iterator beginUnits() const { return unit_iterator(&m_units); }
 	unit_iterator endUnits() const { return unit_iterator(); }
 
 	int getNumSymbols() const;

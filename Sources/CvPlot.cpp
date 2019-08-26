@@ -17082,25 +17082,7 @@ int CvPlot::getCommunicability(PromotionLineTypes ePromotionLine, bool bWorkedTi
 	return iCommunicability;
 }
 
-CvPlot::unit_iterator::unit_iterator(const CvPlot* plot, bool skip_invalid /*= false*/) : m_plot(plot), m_skip_invalid(skip_invalid), m_node(plot->headUnitNode())
+CvUnit* CvPlot::unit_iterator::resolve(const IDInfo& info) const
 {
-	// We start by incrementing
-	increment();
-}
-
-void CvPlot::unit_iterator::increment()
-{
-	if (m_node == NULL)
-	{
-		m_unit = NULL;
-	}
-	else
-	{
-		do 
-		{
-			m_unit = ::getUnit(m_node->m_data);
-			// Immediately increment to the next node so any changes relating to m_unit can't invalidate the iterator
-			m_node = m_plot->nextUnitNode(m_node);
-		} while (m_skip_invalid && m_unit == NULL && m_node != NULL);
-	}
+	return ::getUnit(info);
 }
