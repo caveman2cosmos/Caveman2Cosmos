@@ -9516,59 +9516,57 @@ int CvCityAI::AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImproveme
 	int aiFinalYields[NUM_YIELD_TYPES];
 	int aiDiffYields[NUM_YIELD_TYPES];
 
-	BonusTypes eBonus = pPlot->getBonusType(getTeam());
+	int iBestTempBuildValue = 0;
+
 	BonusTypes eNonObsoleteBonus = pPlot->getNonObsoleteBonusType(getTeam());
 
-	// bHasBonusImprovement was never used, there might be a bug here.
-	//bool bHasBonusImprovement = false;
-
-	//if (eNonObsoleteBonus != NO_BONUS)
-	//{
-	//	if (pPlot->getImprovementType() != NO_IMPROVEMENT)
-	//	{
-	//		if (GC.getImprovementInfo(pPlot->getImprovementType()).isImprovementBonusTrade(eNonObsoleteBonus))
-	//		{
-	//			bHasBonusImprovement = true;
-	//		}
-	//	}
-	//}
-
-	BuildTypes eForcedBuild = NO_BUILD;
-	
-	//If a worker is already building a build, force that Build.
-	for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
+	if (eNonObsoleteBonus != NO_BONUS)
 	{
-		if (unitItr->getBuildType() != NO_BUILD)
+		if ( ! GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eNonObsoleteBonus))
 		{
-			if (GC.getBuildInfo(unitItr->getBuildType()).getImprovement() != NO_IMPROVEMENT)
+			if (pPlot->getImprovementType() != NO_IMPROVEMENT)
 			{
-				eForcedBuild = unitItr->getBuildType();
-				break;
+				if (GC.getImprovementInfo(pPlot->getImprovementType()).isImprovementBonusTrade(eNonObsoleteBonus))
+				{
+					return 0; //Always prefer improvements which connect bonuses.
+				}
 			}
 		}
 	}
 
-
 	bool bIgnoreFeature = false;
 	bool bValid = false;
-
 	BuildTypes eBestTempBuild = NO_BUILD;
+
 	if (eImprovement == pPlot->getImprovementType())
 	{
 		bValid = true;
 	}
 	else
 	{
-		if (eForcedBuild != NO_BUILD)
+		CLLNode<IDInfo>* pUnitNode;
+		CvUnit* pLoopUnit;
+
+		pUnitNode = pPlot->headUnitNode();
+
+		BuildTypes eForcedBuild = NO_BUILD;
+		while (pUnitNode != NULL)
 		{
-			if (GC.getBuildInfo(eForcedBuild).getImprovement() == eImprovement)
+			if (GC.getBuildInfo(unitItr->getBuildType()).getImprovement() != NO_IMPROVEMENT)
 			{
-				eBestTempBuild = eForcedBuild;
+				if (GC.getBuildInfo(pLoopUnit->getBuildType()).getImprovement() != NO_IMPROVEMENT)
+				{
+					eForcedBuild = pLoopUnit->getBuildType();
+					if (eForcedBuild != NO_BUILD && GC.getBuildInfo(eForcedBuild).getImprovement() == eImprovement)
+					{
+						eBestTempBuild = eForcedBuild; //If a worker is already building a build, force that Build.
+					}
+					break;
+				}
 			}
 		}
-		else
+		if (eBestTempBuild == NO_BUILD)
 		{
-			int iBestTempBuildValue = 0;
 			for (int iJ = 0; iJ < GC.getNumBuildInfos(); iJ++)
 			{
 				BuildTypes eBuild = ((BuildTypes)iJ);
@@ -9628,6 +9626,7 @@ int CvCityAI::AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImproveme
 
 	if (bValid)
 	{
+		BonusTypes eBonus = pPlot->getBonusType(getTeam());
 		ImprovementTypes eFinalImprovement = finalImprovementUpgrade(eImprovement);
 
 		if (eFinalImprovement == NO_IMPROVEMENT)
@@ -9643,25 +9642,6 @@ int CvCityAI::AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImproveme
 				{
 					iValue += (GET_PLAYER(getOwnerINLINE()).AI_bonusVal(eNonObsoleteBonus) * 10);
 					iValue += 200;
-					/*if (eBestBuild != NO_BUILD)
-					{
-						if ((GC.getBuildInfo(eBestBuild).getImprovement() == NO_IMPROVEMENT) || (!GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus)))
-						{
-							//Always prefer improvements which connect bonuses.
-							eBestBuild = NO_BUILD;
-							iBestValue = 0;
-						}
-					}*/
-				}
-				else
-				{
-					/*if (eBestBuild != NO_BUILD)
-					{
-						if ((GC.getBuildInfo(eBestBuild).getImprovement() != NO_IMPROVEMENT) && (GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus)))
-						{
-							iValue -= 1000;
-						}
-					}*/
 				}
 			}
 		}
@@ -9745,7 +9725,7 @@ int CvCityAI::AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImproveme
 					if (iFoodPriority > 100)
 					{
 						iValue *= 100 + iFoodPriority;
-						iValue /= 200;							
+						iValue /= 200;
 					}
 					if (iFoodChange > 0)
 					{
@@ -9794,18 +9774,16 @@ int CvCityAI::AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImproveme
 						//We want more food.
 						iValue *= 2 + std::max(0, aiDiffYields[YIELD_FOOD]);
 						iValue /= 2 * (1 + std::max(0, -aiDiffYields[YIELD_FOOD]));
-					}
-//							else if (iFoodChange < 0)
-//							{
-//								//We want to soak up food.
-//								iValue *= 8;
-//								iValue /= 8 + std::max(0, aiDiffYields[YIELD_FOOD]);
-//							}
+					}/*
+					else if (iFoodChange < 0)
+					{
+						//We want to soak up food.
+						iValue *= 8;
+						iValue /= 8 + std::max(0, aiDiffYields[YIELD_FOOD]);
+					}*/
 				}
-			}
-			
-
-			/*if (bEmphasizeIrrigation && GC.getImprovementInfo(eFinalImprovement).isCarriesIrrigation())
+			}/*
+			if (bEmphasizeIrrigation && GC.getImprovementInfo(eFinalImprovement).isCarriesIrrigation())
 			{
 				iValue += 500;
 			}*/
