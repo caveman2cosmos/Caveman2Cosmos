@@ -34,9 +34,11 @@ protected:
 
 };
 
-
 template <class tVARTYPE> class CLinkList
 {
+public:
+	typedef tVARTYPE value_type;
+	typedef CLLNode<tVARTYPE> node_type;
 
 public:
 
@@ -271,7 +273,7 @@ inline CLLNode<tVARTYPE>* CLinkList<tVARTYPE>::deleteNode(CLLNode<tVARTYPE>* pNo
 		m_pTail = NULL;
 	}
 
-	SAFE_DELETE(pNode);
+	delete pNode;
 
 	m_iLength--;
 
