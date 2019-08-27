@@ -56,7 +56,7 @@ class CvMap : public CvMapInterfaceBase
 public:
 
 	CvMap();
-	CvMap(/* Parallel Maps */ MapTypes eMap);
+	explicit CvMap(/* Parallel Maps */ MapTypes eMap);
 	virtual ~CvMap();
 
 	CvMapInterfaceBase*	getUnderlyingMap() const { return const_cast<CvMap*>(this); }

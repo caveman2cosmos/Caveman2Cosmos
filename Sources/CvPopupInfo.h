@@ -20,6 +20,7 @@ public:
 	DllExport void read(FDataStreamBase& stream);
 	DllExport void write(FDataStreamBase& stream) const;
 
+	// cppcheck-suppress operatorEq
 	DllExport const CvPopupInfo& operator=(const CvPopupInfo& other);
 
 	// Accessors

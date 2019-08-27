@@ -101,11 +101,13 @@ void CvDLLPythonIFaceBase::setSeqFromArray(const T* aSrc, int size, PyObject* ds
 	FAssertMsg(iSeqSize>=size, "sequence length too small");
 
 	int i;
-	int ret=0;
 	for (i=0;i<size;i++)
 	{
 		PyObject* x = PyInt_FromLong(aSrc[i]);
-		ret=PySequence_SetItem(dst, i, x); 
+#ifdef FASSERT_ENABLE
+		int ret=
+#endif
+			PySequence_SetItem(dst, i, x); 
 		FAssertMsg(ret!=-1, "PySequence_SetItem failed");
 		Py_DECREF(x);
 	}
@@ -113,7 +115,10 @@ void CvDLLPythonIFaceBase::setSeqFromArray(const T* aSrc, int size, PyObject* ds
 	// trim extra space
 	if (iSeqSize>size)
 	{
-		ret=PySequence_DelSlice(dst, size, iSeqSize);
+#ifdef FASSERT_ENABLE
+		int ret=
+#endif
+			PySequence_DelSlice(dst, size, iSeqSize);
 		FAssertMsg(ret!=-1, "PySequence_DelSlice failed");
 	}
 }

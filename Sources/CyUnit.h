@@ -19,7 +19,7 @@ class CyUnit
 {
 public:
 	CyUnit();
-	DllExport CyUnit(CvUnit* pUnit);		// Call from C++
+	DllExport explicit CyUnit(CvUnit* pUnit);		// Call from C++
 
 	// < M.A.D. Nukes Start >
 	bool isMADEnabled();

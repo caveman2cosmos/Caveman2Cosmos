@@ -29,8 +29,8 @@
 #
 # Note: $(PROGRAMFILES) converts to "C:\Program Files", "C:\Program Files (x86)" or whatever fits your system.
 # run "nmake.exe /P" in cmd.exe to see what it is on your system
-TOOLKIT=deps\Microsoft Visual C++ Toolkit 2003
-PSDK=deps\Microsoft Platform SDK
+TOOLKIT=..\Build\deps\Microsoft Visual C++ Toolkit 2003
+PSDK=..\Build\deps\Microsoft Platform SDK
 ## Uncomment to have newly compiled dlls copied to your mod's Assets directory
 YOURMOD=..
 
@@ -46,13 +46,9 @@ LD="$(TOOLKIT)\bin\link.exe"
 RC="$(PSDK)\bin\rc.exe"
 ## Uncomment to build dependencies using fastdep
 ## Overwritten by enviroment variable FASTDEP_FULL_PATH
-FD="deps\fastdep\fastdep.exe"
+FD="..\Build\deps\fastdep\fastdep.exe"
 
-GITVERSION="..\\Tools\C2C-GitVersion.exe"
-
-### BLACKLIST ####
-## Uncomment to block CvTextScreen (accidentally included by Firaxis)
-# BLACKLIST=CvTextScreens
+GITVERSION="..\Tools\C2C-GitVersion.exe"
 
 #### DEFINES ####
 ## copy the following lines into "Additional options" in NMAKE properties
@@ -67,7 +63,6 @@ Release_DEFINES=/DWIN32 /D_WINDOWS /D_USRDLL /DNDEBUG /DFINAL_RELEASE
 #### You shouldn't need to modify anything beyond this point ####
 #################################################################
 
-TEMP_FILE_DIR = temp_files
 CUSTOM_CFLAGS =
 CUSTOM_LDFLAGS =
 
@@ -77,7 +72,7 @@ CUSTOM_LDFLAGS =
 # !ENDIF
 # !include Makefile.settings
 
-# /nologo /MD /Z7 /O2 /Oy /Oi /G7 /DWIN32 /D_WINDOWS /D_USRDLL /DCVGAMECOREDLL_EXPORTS /DNDEBUG /DFINAL_RELEASE /GR /Gy /W3 /EHsc /Gd /Gm- /Fd"temp_files\Profile\CvGameCoreDLL.pdb"   /Z7 /Yu"CvGameCoreDLL.h" /Fp"temp_files\Profile\CvGameCoreDLL.pch" /I"deps/Boost-1.32.0/include" /I"deps/Python24/include" /I"./include" /I"deps\Microsoft Visual C++ Toolkit 2003/include" /I"deps\Microsoft Platform SDK/Include" /I"deps\Microsoft Platform SDK/Include/mfc" /YcCvGameCoreDLL.h /Fo"temp_files\Profile\_precompile.obj" /c .\_precompile.cpp
+# /nologo /MD /Z7 /O2 /Oy /Oi /G7 /DWIN32 /D_WINDOWS /D_USRDLL /DCVGAMECOREDLL_EXPORTS /DNDEBUG /DFINAL_RELEASE /GR /Gy /W3 /EHsc /Gd /Gm- /Fd"TARGET_DIR_files\Profile\CvGameCoreDLL.pdb"   /Z7 /Yu"CvGameCoreDLL.h" /Fp"temp_files\Profile\CvGameCoreDLL.pch" /I"deps/Boost-1.32.0/include" /I"deps/Python24/include" /I"./include" /I"deps\Microsoft Visual C++ Toolkit 2003/include" /I"deps\Microsoft Platform SDK/Include" /I"deps\Microsoft Platform SDK/Include/mfc" /YcCvGameCoreDLL.h /Fo"temp_files\Profile\_precompile.obj" /c .\_precompile.cpp
 PRECOMPILE_DEPENDENCIES = 
 PROJECT_CFLAGS = /arch:SSE2 /Zm200 /DXERCES_STATIC_LIBRARY /D_MOD_SENTRY /D_MOD_FRACTRADE /D_MOD_GOVWORKERS /DQC_MASTERY_VICTORY /DLOG_AI /D_MOD_GWARM /D_MOD_SHAM_SPOILER /DC2C_BUILD
 PROJECT_LDFLAGS = /NODEFAULTLIB:msvcprtd.lib /DEF:CvGameCoreDLL.def /PDBALTPATH:%_PDB%
@@ -113,7 +108,8 @@ SUBDIRPATH15 = ../
 
 SUBDIRS = . $(SUBDIR1) $(SUBDIR2) $(SUBDIR3) $(SUBDIR4) $(SUBDIR5) $(SUBDIR6) $(SUBDIR7) $(SUBDIR8) $(SUBDIR9) $(SUBDIR10) $(SUBDIR11) $(SUBDIR12) $(SUBDIR13) $(SUBDIR14) $(SUBDIR15)
 
-TEMP_TARGET_FILES = $(TEMP_FILE_DIR)\$(TARGET)
+BUILD_DIR =..\Build
+TARGET_DIR = $(BUILD_DIR)\$(TARGET)
 
 ## Environmental path overwrite
 !IFDEF CIV4_LIB_INSTALL_PATH
@@ -125,33 +121,31 @@ FD=$(FASTDEP_FULL_PATH)
 !ENDIF
 
 #### Target Files ####
-Target_BIN=$(TARGET)\CvGameCoreDLL.dll
-Target_BIN_TEMP=$(TEMP_TARGET_FILES)\CvGameCoreDLL.dll
+Target_BIN=$(TARGET_DIR)\CvGameCoreDLL.dll
 
 !IF [IF NOT EXIST CvGameCoreDLL.rc EXIT 1] == 0
-Target_RESOURCE=$(TEMP_TARGET_FILES)\CvGameCoreDLL.res
+Target_RESOURCE=$(TARGET_DIR)\CvGameCoreDLL.res
 !ENDIF
 
-Target_STATICLIB=$(TEMP_TARGET_FILES)\CvGameCoreDLL.lib
+Target_STATICLIB=$(TARGET_DIR)\CvGameCoreDLL.lib
 
-Target_LIBDEF=$(TEMP_TARGET_FILES)\CvGameCoreDLL.def
+Target_LIBDEF=$(TARGET_DIR)\CvGameCoreDLL.def
 
-Target_PCH=$(TEMP_TARGET_FILES)\CvGameCoreDLL.pch
+Target_PCH=$(TARGET_DIR)\CvGameCoreDLL.pch
 
-Target_PDB=$(TARGET)\CvGameCoreDLL.pdb
-Target_PDB_TEMP=$(TEMP_TARGET_FILES)\CvGameCoreDLL.pdb
+Target_PDB=$(TARGET_DIR)\CvGameCoreDLL.pdb
 
-Target_OTHER=$(TEMP_TARGET_FILES)\CvGameCoreDLL.exp
+Target_OTHER=$(TARGET_DIR)\CvGameCoreDLL.exp
 
 !IFDEF IGNORE_CUSTOM
 CUSTOM_CFLAGS  =
 CUSTOM_LDFLAGS =
 !ENDIF
 
-FILE_DEPENDS = $(TEMP_TARGET_FILES)\depends
+FILE_DEPENDS = $(TARGET_DIR)\depends
 
 #### CFLAGS ####
-GLOBAL_CFLAGS=/GR /Gy /W3 /EHsc /Gd /Gm- /Fd"$(Target_PDB_TEMP)" $(PROJECT_CFLAGS)
+GLOBAL_CFLAGS=/GR /Gy /W3 /EHsc /Gd /Gm- /Fd"$(Target_PDB)" $(PROJECT_CFLAGS)
 Debug_CFLAGS=/MD /Z7 /Od /RTC1 $(Debug_DEFINES) $(GLOBAL_CFLAGS)
 Release_CFLAGS=/MD /Z7 /O2 /Oy /Oi /G7 $(Release_DEFINES) $(GLOBAL_CFLAGS)
 FinalRelease_CFLAGS=/GL $(Release_CFLAGS)
@@ -160,7 +154,7 @@ PRECOMPILE_CFLAGS1 = /Yu"
 PRECOMPILE_CFLAGS2 = CvGameCoreDLL.h" /Fp"$(Target_PCH)"
 
 #### LDFLAGS ####
-GLOBAL_LDFLAGS=/LTCG /DLL /NOLOGO /SUBSYSTEM:WINDOWS /LARGEADDRESSAWARE /TLBID:1 /PDB:"$(Target_PDB_TEMP)" $(CUSTOM_LDFLAGS) $(PROJECT_LDFLAGS)
+GLOBAL_LDFLAGS=/LTCG /DLL /NOLOGO /SUBSYSTEM:WINDOWS /LARGEADDRESSAWARE /TLBID:1 /PDB:"$(Target_PDB)" $(CUSTOM_LDFLAGS) $(PROJECT_LDFLAGS)
 Debug_LDFLAGS=/INCREMENTAL:NO /DEBUG /IMPLIB:"$(Target_STATICLIB)" $(GLOBAL_LDFLAGS)
 Release_LDFLAGS=/INCREMENTAL:NO /DEBUG /OPT:REF /OPT:ICF $(GLOBAL_LDFLAGS)
 FinalRelease_LDFLAGS= $(Release_LDFLAGS)
@@ -170,7 +164,7 @@ GLOBAL_INCS=/I"$(TOOLKIT)/include" /I"$(PSDK)/Include" /I"$(PSDK)/Include/mfc"
 
 #### boost and python ####
 
-BOOST_LIB_PATH = deps/
+BOOST_LIB_PATH = ..\\Build\deps/
 !IF [IF NOT EXIST "$(BOOST_LIB_PATH)Boost-1.32.0\libs\boost_python-vc71-mt-gd-1_32.lib" EXIT 1] != 0
 BOOST_LIB_PATH = $(SOURCE_DIR)
 !IF [IF NOT EXIST "$(BOOST_LIB_PATH)Boost-1.32.0\libs\boost_python-vc71-mt-gd-1_32.lib" EXIT 1] != 0
@@ -222,22 +216,6 @@ LDFLAGS = $(Release_LDFLAGS)
 !IF EXIST ($(FILE_DEPENDS))
 !INCLUDE $(FILE_DEPENDS)
 !ENDIF
-!IF "$(TARGET)" == "Assert"
-CFLAGS  = $(Release_CFLAGS) /DFASSERT_ENABLE
-LDFLAGS = $(Release_LDFLAGS)
-!ENDIF
-!IF "$(TARGET)" == "Profile"
-CFLAGS  = $(Release_CFLAGS) /DFP_PROFILE_ENABLE /DUSE_INTERNAL_PROFILER
-LDFLAGS = $(Release_LDFLAGS)
-!ENDIF
-
-!IFNDEF CFLAGS
-!ERROR Target "$(TARGET)" not supported. Supported targets: Debug Release Assert Profile
-!ENDIF
-
-!IF EXIST ($(FILE_DEPENDS))
-!INCLUDE $(FILE_DEPENDS)
-!ENDIF
 
 #### Targets ####
 #################
@@ -250,15 +228,10 @@ dll: all
 
 clean:
 	@IF EXIST "version.cpp" DEL "version.cpp"
-	@IF EXIST "$(TEMP_TARGET_FILES)" RMDIR /s /q "$(TEMP_TARGET_FILES)"
+	@IF EXIST "$(TARGET_DIR)" RMDIR /s /q "$(TARGET_DIR)"
 	@FOR %i IN ($(Target_BIN) $(Target_STATICLIB) $(Target_LIBDEF) $(Target_RESOURCE) \
 		$(Target_PCH) $(Target_PDB) $(Target_OTHER)) DO @IF EXIST "%i" DEL "%i"
 
-$(Target_BIN): $(Target_BIN_TEMP)
-	-COPY "$(Target_BIN_TEMP)" "$(Target_BIN)"
-	-COPY "$(Target_PDB_TEMP)" "$(Target_PDB)"
-
-		
 build: $(Target_BIN)
 !IFDEF YOURMOD
 	-COPY "$(Target_BIN)" "$(YOURMOD)\Assets\."
@@ -273,7 +246,7 @@ source_list: gitversion Make_Dir
 	@FOR %j in ($(SUBDIRS)) DO @(FOR %i IN ($(SOURCE_DIR)\%j\*.cpp) DO @ECHO %i \>> $(FILE_DEPENDS))
 	@ECHO.>> $(FILE_DEPENDS)
 	@ECHO OBJS= \>> $(FILE_DEPENDS)
-	@FOR %j in ($(SUBDIRS)) DO @(FOR /F "delims=." %i IN ('dir /b $(SOURCE_DIR)\%j\*.cpp') DO @ECHO. $(TEMP_TARGET_FILES)\%j\%i.obj \>> $(FILE_DEPENDS))
+	@FOR %j in ($(SUBDIRS)) DO @(FOR /F "delims=." %i IN ('dir /b $(SOURCE_DIR)\%j\*.cpp') DO @ECHO. $(TARGET_DIR)\%j\%i.obj \>> $(FILE_DEPENDS))
 	@ECHO.>> $(FILE_DEPENDS)
 
 gitversion:
@@ -282,124 +255,113 @@ gitversion:
 
 fastdep:
 	@ECHO Running fastdep
-	@$(FD) --objectextension=pch -q --removepath=$(SOURCE_DIR)\ -O $(TEMP_TARGET_FILES) $(SOURCE_DIR)\CvGameCoreDLL.cpp >> $(FILE_DEPENDS)
-	@$(FD) --objectextension=obj -q --removepath=$(SOURCE_DIR)\ -O $(TEMP_TARGET_FILES) $(SOURCES) >> $(FILE_DEPENDS)
+	@$(FD) --objectextension=pch -q --removepath=$(SOURCE_DIR)\ -O $(TARGET_DIR) $(SOURCE_DIR)\CvGameCoreDLL.cpp >> $(FILE_DEPENDS)
+	@$(FD) --objectextension=obj -q --removepath=$(SOURCE_DIR)\ -O $(TARGET_DIR) $(SOURCES) >> $(FILE_DEPENDS)
 
 Make_Dir:
-	@FOR %j in ($(SUBDIRS)) DO @(IF NOT EXIST "$(TEMP_TARGET_FILES)\%j\." MKDIR "$(TEMP_TARGET_FILES)\%j")
-	@IF NOT EXIST "$(TARGET)\." MKDIR $(TARGET)
+	@FOR %j in ($(SUBDIRS)) DO @(IF NOT EXIST "$(TARGET_DIR)\%j\." MKDIR "$(TARGET_DIR)\%j")
+	@IF NOT EXIST "$(TARGET_DIR)\." MKDIR $(TARGET_DIR)
 
 Target_unfinished:
-	@ECHO.>$(TEMP_TARGET_FILES)\unfinished.@
-	@FOR /F "delims=@" %i IN ('dir /b $(TEMP_TARGET_FILES)\*.@') DO \
-		@IF EXIST "$(TEMP_TARGET_FILES)\%i" DEL "$(TEMP_TARGET_FILES)\%i"
-	@FOR /F %i IN ('dir /b $(TEMP_TARGET_FILES)\*.@') DO \
-		@IF EXIST "$(TEMP_TARGET_FILES)\%i" DEL "$(TEMP_TARGET_FILES)\%i"
+	@ECHO.>$(TARGET_DIR)\unfinished.@
+	@FOR /F "delims=@" %i IN ('dir /b $(TARGET_DIR)\*.@') DO \
+		@IF EXIST "$(TARGET_DIR)\%i" DEL "$(TARGET_DIR)\%i"
+	@FOR /F %i IN ('dir /b $(TARGET_DIR)\*.@') DO \
+		@IF EXIST "$(TARGET_DIR)\%i" DEL "$(TARGET_DIR)\%i"
 
-$(Target_BIN_TEMP): $(OBJS) $(Target_RESOURCE)
+$(Target_BIN): $(OBJS) $(Target_RESOURCE)
 	@ECHO.Linking DLL
-	$(LD) /out:$(Target_BIN_TEMP) $(LDFLAGS) $(LIBS) $(OBJS) $(Target_RESOURCE)
+	$(LD) /out:$(Target_BIN) $(LDFLAGS) $(LIBS) $(OBJS) $(Target_RESOURCE)
 
-{$(SOURCE_DIR)\.}.cpp{$(TEMP_TARGET_FILES)\.}.obj:
+{$(SOURCE_DIR)\.}.cpp{$(TARGET_DIR)\.}.obj:
 	@ECHO.>"$*.obj.@"
     $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 	
-{$(SOURCE_DIR)\$(SUBDIR1)}.cpp{$(TEMP_TARGET_FILES)\$(SUBDIR1)}.obj:
+{$(SOURCE_DIR)\$(SUBDIR1)}.cpp{$(TARGET_DIR)\$(SUBDIR1)}.obj:
 	@ECHO.>"$*.obj.@"
     $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH1)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
-{$(SOURCE_DIR)\$(SUBDIR2)}.cpp{$(TEMP_TARGET_FILES)\$(SUBDIR2)}.obj:
+{$(SOURCE_DIR)\$(SUBDIR2)}.cpp{$(TARGET_DIR)\$(SUBDIR2)}.obj:
 	@ECHO.>"$*.obj.@"
     $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH2)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
-{$(SOURCE_DIR)\$(SUBDIR3)}.cpp{$(TEMP_TARGET_FILES)\$(SUBDIR3)}.obj:
+{$(SOURCE_DIR)\$(SUBDIR3)}.cpp{$(TARGET_DIR)\$(SUBDIR3)}.obj:
 	@ECHO.>"$*.obj.@"
     $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH3)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
-{$(SOURCE_DIR)\$(SUBDIR4)}.cpp{$(TEMP_TARGET_FILES)\$(SUBDIR4)}.obj:
+{$(SOURCE_DIR)\$(SUBDIR4)}.cpp{$(TARGET_DIR)\$(SUBDIR4)}.obj:
 	@ECHO.>"$*.obj.@"
     $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH4)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 	
-{$(SOURCE_DIR)\$(SUBDIR5)}.cpp{$(TEMP_TARGET_FILES)\$(SUBDIR5)}.obj:
+{$(SOURCE_DIR)\$(SUBDIR5)}.cpp{$(TARGET_DIR)\$(SUBDIR5)}.obj:
 	@ECHO.>"$*.obj.@"
     $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH5)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
-{$(SOURCE_DIR)\$(SUBDIR6)}.cpp{$(TEMP_TARGET_FILES)\$(SUBDIR6)}.obj:
+{$(SOURCE_DIR)\$(SUBDIR6)}.cpp{$(TARGET_DIR)\$(SUBDIR6)}.obj:
 	@ECHO.>"$*.obj.@"
     $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH6)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
-{$(SOURCE_DIR)\$(SUBDIR7)}.cpp{$(TEMP_TARGET_FILES)\$(SUBDIR7)}.obj:
+{$(SOURCE_DIR)\$(SUBDIR7)}.cpp{$(TARGET_DIR)\$(SUBDIR7)}.obj:
 	@ECHO.>"$*.obj.@"
     $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH7)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
-{$(SOURCE_DIR)\$(SUBDIR8)}.cpp{$(TEMP_TARGET_FILES)\$(SUBDIR8)}.obj:
+{$(SOURCE_DIR)\$(SUBDIR8)}.cpp{$(TARGET_DIR)\$(SUBDIR8)}.obj:
 	@ECHO.>"$*.obj.@"
     $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH8)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 	
-{$(SOURCE_DIR)\$(SUBDIR9)}.cpp{$(TEMP_TARGET_FILES)\$(SUBDIR9)}.obj:
+{$(SOURCE_DIR)\$(SUBDIR9)}.cpp{$(TARGET_DIR)\$(SUBDIR9)}.obj:
 	@ECHO.>"$*.obj.@"
     $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH9)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
-{$(SOURCE_DIR)\$(SUBDIR10)}.cpp{$(TEMP_TARGET_FILES)\$(SUBDIR10)}.obj:
+{$(SOURCE_DIR)\$(SUBDIR10)}.cpp{$(TARGET_DIR)\$(SUBDIR10)}.obj:
 	@ECHO.>"$*.obj.@"
     $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH10)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
-{$(SOURCE_DIR)\$(SUBDIR11)}.cpp{$(TEMP_TARGET_FILES)\$(SUBDIR11)}.obj:
+{$(SOURCE_DIR)\$(SUBDIR11)}.cpp{$(TARGET_DIR)\$(SUBDIR11)}.obj:
 	@ECHO.>"$*.obj.@"
     $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH11)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
-{$(SOURCE_DIR)\$(SUBDIR12)}.cpp{$(TEMP_TARGET_FILES)\$(SUBDIR12)}.obj:
+{$(SOURCE_DIR)\$(SUBDIR12)}.cpp{$(TARGET_DIR)\$(SUBDIR12)}.obj:
 	@ECHO.>"$*.obj.@"
     $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH12)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
-{$(SOURCE_DIR)\$(SUBDIR13)}.cpp{$(TEMP_TARGET_FILES)\$(SUBDIR13)}.obj:
+{$(SOURCE_DIR)\$(SUBDIR13)}.cpp{$(TARGET_DIR)\$(SUBDIR13)}.obj:
 	@ECHO.>"$*.obj.@"
     $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH13)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
-{$(SOURCE_DIR)\$(SUBDIR14)}.cpp{$(TEMP_TARGET_FILES)\$(SUBDIR14)}.obj:
+{$(SOURCE_DIR)\$(SUBDIR14)}.cpp{$(TARGET_DIR)\$(SUBDIR14)}.obj:
 	@ECHO.>"$*.obj.@"
     $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH14)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
-{$(SOURCE_DIR)\$(SUBDIR15)}.cpp{$(TEMP_TARGET_FILES)\$(SUBDIR15)}.obj:
+{$(SOURCE_DIR)\$(SUBDIR15)}.cpp{$(TARGET_DIR)\$(SUBDIR15)}.obj:
 	@ECHO.>"$*.obj.@"
     $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH15)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
-	@DEL "$*.obj.@"
-	
+	@DEL "$*.obj.@"	
 
-$(Target_PCH) $(TEMP_TARGET_FILES)\_precompile.obj: $(PRECOMPILE_DEPENDENCIES)
+$(Target_PCH) $(TARGET_DIR)\_precompile.obj: $(PRECOMPILE_DEPENDENCIES)
 	@ECHO.>"$(Target_PCH).@"
-	@ECHO.>"$(TEMP_TARGET_FILES)\_precompile.obj.@"
-	@FOR %i IN ($(TEMP_TARGET_FILES)\*.obj) DO @IF EXIST "%i" DEL "%i"
-    $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(PRECOMPILE_CFLAGS2) $(INCS) /YcCvGameCoreDLL.h /Fo"$(TEMP_TARGET_FILES)\_precompile.obj" /c $(SOURCE_DIR)\_precompile.cpp
+	@ECHO.>"$(TARGET_DIR)\_precompile.obj.@"
+	@FOR %i IN ($(TARGET_DIR)\*.obj) DO @IF EXIST "%i" DEL "%i"
+    $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(PRECOMPILE_CFLAGS2) $(INCS) /YcCvGameCoreDLL.h /Fo"$(TARGET_DIR)\_precompile.obj" /c $(SOURCE_DIR)\_precompile.cpp
 	@DEL "$(Target_PCH).@"
-	@DEL "$(TEMP_TARGET_FILES)\_precompile.obj.@"
+	@DEL "$(TARGET_DIR)\_precompile.obj.@"
 
-.rc{$(TEMP_TARGET_FILES)}.res:
+.rc{$(TARGET_DIR)}.res:
 	@ECHO.>"$*.res.@"
 	$(RC) /Fo$@ $(INCS) $<
 	@DEL "$*.res.@"
-
-!IFDEF BLACKLIST
-$(TEMP_TARGET_FILES)\$(BLACKLIST).obj: $(BLACKLIST).cpp
-	@ECHO.>"$*.obj.@"
-	@ECHO.>"$*-dummy.cpp"
-	$(CPP) /nologo $(Release_CFLAGS) $(Release_INCS) /Y- /Fo$@ /c "$*-dummy.cpp"
-	@DEL "$*-dummy.cpp"
-	@DEL "$*.obj.@"
-
-!ENDIF

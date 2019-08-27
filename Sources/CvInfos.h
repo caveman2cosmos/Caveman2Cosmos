@@ -48,7 +48,7 @@ class CvInfoBase
 //---------------------------PUBLIC INTERFACE---------------------------------
 public:
 	CvInfoBase();
-	CvInfoBase(const char* szType);
+	explicit CvInfoBase(const char* szType);
 	DllExport virtual ~CvInfoBase();
 
 	virtual void reset();
@@ -1588,7 +1588,7 @@ class CvMissionInfo : public CvHotkeyInfo
 public:
 
 	CvMissionInfo();
-	CvMissionInfo(const char* szType);
+	explicit CvMissionInfo(const char* szType);
 	virtual ~CvMissionInfo();
 
 	DllExport int getTime() const;			// Exposed to Python
@@ -8792,7 +8792,7 @@ public:
 	class FeatureArtPiece
 	{
 	public:
-		FeatureArtPiece(int connectionMask)
+		explicit FeatureArtPiece(int connectionMask)
 		{
 			m_iConnectionMask = connectionMask;
 		}

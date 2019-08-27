@@ -19,6 +19,7 @@ import Scoreboard
 import ReminderEventManager # Reminders
 import GPUtil # Great Person Bar
 import RawYields # Raw Yields
+import StackBarUtil
 
 g_mainInterface = None
 
@@ -1142,12 +1143,15 @@ class CvMainInterface:
 		screen.setStackedBarColors("GreatGeneralBar", InfoBarTypes.INFOBAR_EMPTY, szColorEmpty)
 		self.xMidBarTopGG = x1 + w1/2
 
+		# ResearchBar
+		iColor = GC.getInfoTypeForString("COLOR_RESEARCH_RATE")
 		screen.addStackedBarGFC("ResearchBar", x2, y1, w2, h1, InfoBarTypes.NUM_INFOBAR_TYPES, eWidGen, 0, 0)
 		screen.setStackedBarColors("ResearchBar", InfoBarTypes.INFOBAR_STORED, GC.getInfoTypeForString("COLOR_RESEARCH_STORED"))
-		screen.setStackedBarColors("ResearchBar", InfoBarTypes.INFOBAR_RATE, GC.getInfoTypeForString("COLOR_RESEARCH_RATE"))
+		screen.setStackedBarColors("ResearchBar", InfoBarTypes.INFOBAR_RATE, iColor)
 		screen.setStackedBarColors("ResearchBar", InfoBarTypes.INFOBAR_RATE_EXTRA, szColorEmpty)
 		screen.setStackedBarColors("ResearchBar", InfoBarTypes.INFOBAR_EMPTY, szColorEmpty)
 		self.xywhTechBar = [x2, y1, w2, h1]
+		self.researchBarDC = StackBarUtil.StackBarDC("ResearchBarDC", x2, y1, w2, h1, iColor)
 
 		# Great Person Bar
 		screen.addStackedBarGFC("GreatPersonBar", x3, y2, w3, h2, InfoBarTypes.NUM_INFOBAR_TYPES, eWidGen, 0, 0)
@@ -1783,6 +1787,7 @@ class CvMainInterface:
 			screen.hide("BuildListBtn0")
 			screen.hide("MADScreenWidget0")
 			screen.hide("ResearchBar")
+			screen.hide("ResearchBarDC")
 			screen.hide("WID|TECH|ProgBar0")
 			screen.hide("WID|TECH|ProgBar1")
 			screen.hide("GreatPersonBar")
@@ -1831,6 +1836,7 @@ class CvMainInterface:
 				screen.hide("FoVSliderText")
 				screen.hide("FoVSlider")
 			screen.hide("ResearchBar")
+			screen.hide("ResearchBarDC")
 			screen.hide("WID|TECH|ProgBar0")
 			screen.hide("WID|TECH|ProgBar1")
 			screen.hide("GreatPersonBar")
@@ -2376,6 +2382,7 @@ class CvMainInterface:
 
 				if iCurrentResearch == -1:
 					screen.hide("ResearchBar")
+					screen.hide("ResearchBarDC")
 					screen.hide("WID|TECH|ProgBar0")
 					screen.hide("WID|TECH|ProgBar1")
 				else:
@@ -2386,21 +2393,24 @@ class CvMainInterface:
 						szTxt = TRNSLTR.getText("INTERFACE_ANARCHY", (CyPlayer.getAnarchyTurns(),))
 						screen.setText("WID|TECH|ProgBar1", "", szTxt, 1<<2, x, 2, 0, eFontGame, eWidGen, iCurrentResearch, 0)
 					elif iCurrentResearch != -1:
-						szTxt = GC.getTechInfo(iCurrentResearch).getDescription()
-						szTxt += u' (%d)' %(CyPlayer.getResearchTurnsLeft(iCurrentResearch, true))
-						screen.setText("WID|TECH|ProgBar1", "", szTxt, 1<<2, x, 2, 0, eFontGame, eWidGen, iCurrentResearch, 0)
 
 						CyTeam = GC.getTeam(CyPlayer.getTeam())
 						researchProgress = CyTeam.getResearchProgress(iCurrentResearch)
 						iOverflow = CyPlayer.getOverflowResearch() * iResearchMod / 100
 						researchCost = CyTeam.getResearchCost(iCurrentResearch)
+						iCurr = researchProgress + iOverflow
 
-						screen.setBarPercentage("ResearchBar", InfoBarTypes.INFOBAR_STORED, float(researchProgress + iOverflow) / researchCost)
-						if researchCost > researchProgress + iOverflow:
-							screen.setBarPercentage("ResearchBar", InfoBarTypes.INFOBAR_RATE, float(iResearchRate) / (researchCost - researchProgress - iOverflow))
+						screen.setBarPercentage("ResearchBar", InfoBarTypes.INFOBAR_STORED, iCurr * 1.0 / researchCost)
+						if researchCost > iCurr and iResearchRate > 0:
+							self.researchBarDC.drawTickMarks(screen, iCurr, researchCost, iResearchRate)
+							screen.setBarPercentage("ResearchBar", InfoBarTypes.INFOBAR_RATE, iResearchRate * 1.0 / (researchCost - researchProgress - iOverflow))
 						else:
 							screen.setBarPercentage("ResearchBar", InfoBarTypes.INFOBAR_RATE, 0)
 						screen.show("ResearchBar")
+
+						szTxt = GC.getTechInfo(iCurrentResearch).getDescription()
+						szTxt += u' (%d)' %(CyPlayer.getResearchTurnsLeft(iCurrentResearch, true))
+						screen.setText("WID|TECH|ProgBar1", "", szTxt, 1<<2, x, 2, 0, eFontGame, eWidGen, iCurrentResearch, 0)
 
 				# Great General Bar
 				CyPlayer = self.CyPlayer

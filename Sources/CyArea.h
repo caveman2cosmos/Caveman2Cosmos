@@ -14,7 +14,7 @@ class CyArea
 public:
 
 	CyArea();
-	CyArea(CvArea* pArea);					// Call from C++
+	explicit CyArea(CvArea* pArea);					// Call from C++
 	CvArea* getArea() { return m_pArea;	}	// Call from C++
 	bool isNone() { return (m_pArea==NULL); }
 

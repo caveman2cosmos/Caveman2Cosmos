@@ -373,6 +373,7 @@ void CvArea::changeNumTiles(int iChange)
 		m_iNumTiles = (m_iNumTiles + iChange);
 		FAssert(getNumTiles() >= 0);
 
+		// cppcheck-suppress knownConditionTrueFalse
 		if (bWasLake != isLake())
 		{
 			GC.getMapINLINE().updateIrrigated();
@@ -665,7 +666,7 @@ int CvArea::getBestFoundValue(PlayerTypes eIndex) const
 	//	Calculate on demand
 	if ( iResult == -1 )
 	{
-		GET_PLAYER(eIndex).AI_updateFoundValues(false, (CvArea*)this);
+		GET_PLAYER(eIndex).AI_updateFoundValues(false, const_cast<CvArea*>(this));
 		iResult = m_aiBestFoundValue[eIndex] == -1;
 
 		if (iResult == -1)
@@ -905,7 +906,8 @@ void CvArea::changeCleanPowerCount(TeamTypes eIndex, int iChange)
 		bool bWasCleanPower = isCleanPower(eIndex);
 
 		m_aiCleanPowerCount[eIndex] = (m_aiCleanPowerCount[eIndex] + iChange);
-
+		
+		// cppcheck-suppress knownConditionTrueFalse
 		if (bWasCleanPower != isCleanPower(eIndex))
 		{
 			GET_TEAM(eIndex).updateCommerce();

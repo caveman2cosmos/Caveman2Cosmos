@@ -19,7 +19,7 @@ class CySelectionGroup
 {
 public:
 	CySelectionGroup();
-	CySelectionGroup(CvSelectionGroup* pSelectionGroup);		// Call from C++
+	explicit CySelectionGroup(CvSelectionGroup* pSelectionGroup);		// Call from C++
 	CvSelectionGroup* getSelectionGroup() { return m_pSelectionGroup;	}	// Call from C++
 
 	bool isNone() { return (m_pSelectionGroup==NULL); }

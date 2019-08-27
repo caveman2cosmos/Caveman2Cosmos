@@ -25,7 +25,7 @@ class CyArtFileMgr
 {
 public:
 	CyArtFileMgr();
-	CyArtFileMgr(CvArtFileMgr* pArtFileMgr);			// Call from C++
+	explicit CyArtFileMgr(CvArtFileMgr* pArtFileMgr);			// Call from C++
 	bool isNone() { return (m_pArtFileMgr==NULL); }
 
 	void Reset();

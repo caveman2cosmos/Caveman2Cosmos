@@ -435,21 +435,6 @@
     <ClCompile Include="CyPlayerInterface3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CvInfoCity.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CvInfoGame.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CvInfoPlayer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CvInfoTerrain.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CvInfoUnit.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BetterBTSAI.h">
@@ -855,21 +840,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvInfoCity.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvInfoGame.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvInfoPlayer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvInfoTerrain.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvInfoUnit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="version.h">

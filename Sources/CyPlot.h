@@ -16,7 +16,7 @@ class CyPlot
 {
 public:
 	CyPlot();	
-	DllExport CyPlot(CvPlot*);			// Call from C++
+	DllExport explicit CyPlot(CvPlot*);			// Call from C++
 	CyPlot(CvPlot*, bool bInViewportSpace);
 	CvPlot* getPlot() { return m_pPlot; }	// Call from C++
 	void setPlot(CvPlot* p) { m_pPlot=p; }	// Call from C++

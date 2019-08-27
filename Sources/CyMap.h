@@ -19,7 +19,7 @@ class CyMap
 {
 public:
 	CyMap();
-	CyMap(CvMap* pMap);		// Call from C++
+	explicit CyMap(CvMap* pMap);		// Call from C++
 	//CvMapInterfaceBase* getMap() { return m_pMap;	}	// Call from C++
 	bool isNone() { return (m_pMap==NULL); }
 	

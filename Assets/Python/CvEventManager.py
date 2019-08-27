@@ -12,7 +12,7 @@ import CvUtil
 import CvScreensInterface
 import Popup as PyPopup
 import CvAdvisorUtils
-import CvDebugUtils
+import DebugUtils
 
 # globals
 GC = CyGlobalContext()
@@ -128,7 +128,7 @@ class CvEventManager:
 		#
 		self.OverrideEventApply = {}
 		import CvMainInterface
-		debugUtils = CvDebugUtils.debugUtils
+		debugUtils = DebugUtils.debugUtils
 		self.Events = {
 			5	 : ('EffectViewer', debugUtils.applyEffectViewer, debugUtils.initEffectViewer),
 			4999 : ('CityTabOptions', CvMainInterface.applyCityTabOptions, None),
@@ -163,10 +163,10 @@ class CvEventManager:
 	def beginEvent(self, iD, argsList = -1):
 		entry = self.Events[iD]
 		if entry and entry[2]:
-			if CvDebugUtils.bDebugMode:
+			if DebugUtils.bDebugMode:
 				print "Begin event " + entry[0]
 			return entry[2](argsList)
-		elif CvDebugUtils.bDebugMode:
+		elif DebugUtils.bDebugMode:
 			print "EventBegin - Unknown event ID " + str(iD)
 
 	def applyEvent(self, argsList):
@@ -174,13 +174,13 @@ class CvEventManager:
 		entry = self.Events[iD]
 
 		if entry and entry[1]:
-			if CvDebugUtils.bDebugMode:
+			if DebugUtils.bDebugMode:
 				print "Apply event " + entry[0]
 			if iD in self.OverrideEventApply:
 				return self.OverrideEventApply[iD](iPlayer, netUserData, popupReturn)
 
 			return entry[1](iPlayer, netUserData, popupReturn)
-		elif CvDebugUtils.bDebugMode:
+		elif DebugUtils.bDebugMode:
 			print "EventApply - Unknown event ID " + str(iD)
 
 	###***********###
@@ -324,7 +324,7 @@ class CvEventManager:
 		'mouse handler - returns 1 if the event was consumed'
 		eventType, mx, my, px, py, interfaceConsumed, screens = argsList
 
-		if not interfaceConsumed and not self.bNetworkMP and (self.bAllowCheats or CvDebugUtils.bDebugMode):
+		if not interfaceConsumed and not self.bNetworkMP and (self.bAllowCheats or DebugUtils.bDebugMode):
 			if eventType == 1 and px != -1 and py != -1 and self.bCtrl:
 				if self.bAlt and GC.getMap().plot(px, py).isCity():
 					# Launch Edit City Event
@@ -374,7 +374,7 @@ class CvEventManager:
 						TimeKeeper.TimeKeeper()
 						return 1
 
-				if CvDebugUtils.bDebugMode:
+				if DebugUtils.bDebugMode:
 					if bCtrl:
 						if key == InputTypes.KB_F4:
 							CvScreensInterface.replayScreen.showScreen(False)
@@ -406,15 +406,15 @@ class CvEventManager:
 
 			elif iModifiers == 3:
 
-				if CvDebugUtils.bDebugMode:
+				if DebugUtils.bDebugMode:
 					if key == InputTypes.KB_U:
-						CvDebugUtils.putOneOfEveryUnit()
+						DebugUtils.putOneOfEveryUnit()
 
 		elif eventType == 7: # Key up
 
 			if iModifiers == 3 and not self.bNetworkMP:
 				if key == 16: # D
-					CvDebugUtils.toggleDebugMode()
+					DebugUtils.toggleDebugMode()
 		return 0
 
 

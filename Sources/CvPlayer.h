@@ -288,7 +288,7 @@ public:
 /* UNOFFICIAL_PATCH                        END                                                  */
 /************************************************************************************************/
 
-	void chooseTech(int iDiscover = 0, CvWString szText = "", bool bFront = false);				// Exposed to Python
+	void chooseTech(int iDiscover = 0, CvWString szText = CvWString(), bool bFront = false);				// Exposed to Python
 
 	int calculateScore(bool bFinal = false, bool bVictory = false) const;
 

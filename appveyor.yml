@@ -1,9 +1,8 @@
 version: 40.0.{build}
 image: Visual Studio 2019
-# DISABLED: not working correctly with commits which modify Sources
-#cache:
-#- Sources\temp_files\Debug -> Tools\deps.exe, Sources\makefile, appveyor.yml
-#- Sources\temp_files\Release -> Tools\deps.exe, Sources\makefile, appveyor.yml
+cache:
+- Build\Debug -> Tools\deps.exe, Tools\_MakeDLL.bat, Sources\, appveyor.yml
+- Build\Release -> Tools\deps.exe, Tools\_MakeDLL.bat, Sources\, appveyor.yml
 
 environment:
   svn_url: https://svn.code.sf.net/p/caveman2cosmos/code/branches/billw-git
