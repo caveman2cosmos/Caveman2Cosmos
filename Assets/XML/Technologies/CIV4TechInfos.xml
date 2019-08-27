@@ -663,10 +663,9 @@ Current techs which are not in this file:-
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_NOMADIC_LIFESTYLE</PrereqTech>
+				<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
 				<PrereqTech>TECH_TRACKING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_PERSISTENCE_HUNTING_QUOTE</Quote>
@@ -1022,11 +1021,10 @@ Current techs which are not in this file:-
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
+				<PrereqTech>TECH_PREHISTORIC_MUSIC</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_COOPERATION</PrereqTech>
-				<PrereqTech>TECH_PREHISTORIC_MUSIC</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_PREHISTORIC_DANCE_QUOTE</Quote>
 			<Sound>AS2D_TECH_PREHISTORIC_DANCE</Sound>
@@ -1252,11 +1250,8 @@ Current techs which are not in this file:-
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_PREHISTORIC_MUSIC</PrereqTech>
-			</OrPreReqs>
-			<AndPreReqs>
 				<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
-			</AndPreReqs>
+			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_CULTURAL_IDENTITY_QUOTE</Quote>
 			<Sound>AS2D_TECH_CULTURAL_IDENTITY</Sound>
 			<SoundMP>AS2D_TECH_CULTURAL_IDENTITY</SoundMP>
@@ -1568,11 +1563,10 @@ Current techs which are not in this file:-
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
+				<PrereqTech>TECH_CULTURAL_IDENTITY</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_COUNTING</PrereqTech>
-				<PrereqTech>TECH_CULTURAL_IDENTITY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_GAMES_QUOTE</Quote>
 			<Sound>AS2D_TECH_GAMES</Sound>
@@ -2663,7 +2657,6 @@ Current techs which are not in this file:-
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_CONDUCT</PrereqTech>
-				<PrereqTech>TECH_COUNTING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_BARTER_QUOTE</Quote>
 			<Sound>AS2D_TECH_BARTER</Sound>
@@ -3106,7 +3099,7 @@ Current techs which are not in this file:-
 			<bTrade>1</bTrade>
 			<bGoodyTech>1</bGoodyTech>
 			<iGridX>14</iGridX>
-			<iGridY>9</iGridY>
+			<iGridY>13</iGridY>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -3122,10 +3115,9 @@ Current techs which are not in this file:-
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_CHIEFDOM</PrereqTech>
+				<PrereqTech>TECH_ANIMISM</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_ANIMISM</PrereqTech>
 				<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_TRIBALISM_QUOTE</Quote>
@@ -3145,7 +3137,7 @@ Current techs which are not in this file:-
 			<bTrade>1</bTrade>
 			<bGoodyTech>1</bGoodyTech>
 			<iGridX>14</iGridX>
-			<iGridY>13</iGridY>
+			<iGridY>9</iGridY>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -3190,7 +3182,7 @@ Current techs which are not in this file:-
 			<bTrade>1</bTrade>
 			<bGoodyTech>1</bGoodyTech>
 			<iGridX>15</iGridX>
-			<iGridY>7</iGridY>
+			<iGridY>13</iGridY>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
@@ -3295,7 +3287,6 @@ Current techs which are not in this file:-
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_NOCTURNALISM</PrereqTech>
-				<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
 				<PrereqTech>TECH_THEFT</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_WARFARE_QUOTE</Quote>
@@ -3316,7 +3307,7 @@ Current techs which are not in this file:-
 			<bTrade>1</bTrade>
 			<bGoodyTech>1</bGoodyTech>
 			<iGridX>15</iGridX>
-			<iGridY>13</iGridY>
+			<iGridY>7</iGridY>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -3810,7 +3801,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
+				<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
+				<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 				<PrereqTech>TECH_MYSTICISM</PrereqTech>
 				<PrereqTech>TECH_WARFARE</PrereqTech>
 			</AndPreReqs>
@@ -3932,9 +3924,6 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
-			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_AGRICULTURE_QUOTE</Quote>
 			<Sound>AS2D_TECH_AGRICULTURE</Sound>
 			<SoundMP>AS2D_TECH_MP_AGRICULTURE</SoundMP>
@@ -5232,9 +5221,6 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_NEGOTIATION</PrereqTech>
 			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_PORTABLE_SHELTERS</PrereqTech>
-			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_TRADE_QUOTE</Quote>
 			<Sound>AS2D_TECH_Trade</Sound>
 			<SoundMP>AS2D_TECH_Trade</SoundMP>
