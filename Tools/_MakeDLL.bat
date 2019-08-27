@@ -6,7 +6,7 @@ call InstallDeps.bat
 POPD
 
 REM Set the environment paths so we can find nmake
-PUSHD "%~dp0..\Sources\deps\Microsoft Visual C++ Toolkit 2003"
+PUSHD "%~dp0..\Build\deps\Microsoft Visual C++ Toolkit 2003"
 SET PATH=%cd%\bin;%PATH%
 POPD
 
@@ -20,7 +20,7 @@ if "%1"=="build" (
     nmake source_list
     nmake fastdep
     nmake precompile
-    deps\jom\jom build
+    ..\Build\deps\jom\jom build
 )
 if "%1"=="rebuild" (
     echo Rebuilding DLL in %2 configuration ...
@@ -28,7 +28,7 @@ if "%1"=="rebuild" (
     nmake source_list
     nmake fastdep
     nmake precompile
-    deps\jom\jom build
+    ..\Build\deps\jom\jom build
 )
 if "%1"=="clean" (
     echo Cleaning DLL in %2 configuration ...
