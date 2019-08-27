@@ -1631,7 +1631,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<PrereqBuildingClasses/>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<BuildingClassNeededs>
@@ -1705,7 +1704,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<PrereqBuildingClasses/>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<BuildingClassNeededs>
@@ -1793,7 +1791,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<PrereqBuildingClasses/>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<BuildingClassNeededs>
@@ -1949,7 +1946,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<PrereqBuildingClasses/>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<BuildingClassNeededs>
@@ -2037,7 +2033,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<PrereqBuildingClasses/>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<BuildingClassNeededs>
@@ -2133,7 +2128,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<PrereqBuildingClasses/>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<BuildingClassNeededs>

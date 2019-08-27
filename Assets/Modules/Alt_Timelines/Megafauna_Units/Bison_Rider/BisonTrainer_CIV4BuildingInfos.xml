@@ -126,7 +126,6 @@
 			<Strategy>TXT_KEY_BUILDING_BISON_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BISON_TRAINER_EFFECT</ArtDefineTag>
-			<PrereqTech>NONE</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
