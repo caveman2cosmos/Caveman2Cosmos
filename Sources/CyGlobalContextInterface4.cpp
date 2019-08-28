@@ -185,5 +185,8 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 
 		.def("getNumPropertyInfos", &CyGlobalContext::getNumPropertyInfos, "int () - Returns number of PropertyInfos")
 		.def("getPropertyInfo", &CyGlobalContext::getPropertyInfo, python::return_value_policy<python::reference_existing_object>(), "PropertyInfo (int)")
+
+		.def("getCursorPos", &CyGlobalContext::getCursorPos, "POINT getCursorPos() - Returns window relative mouse position")
+		.def("screenToClient", &CyGlobalContext::screenToClient, "POINT screenToClient(POINT) - Convert point from screen relative to window relative")
 		;
 }
