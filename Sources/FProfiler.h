@@ -20,7 +20,8 @@
 //---------------------------------------------------------------------------------------------------------------------
 struct ProfileSample
 {
-	ProfileSample(char *name) :
+	// cppcheck-suppress uninitMemberVar
+	explicit ProfileSample(char *name) :
 #ifdef USE_INTERNAL_PROFILER
 		Id(-1),
 #else  
@@ -74,8 +75,9 @@ struct ProfileLinkageInfo
 class CProfileScope
 {
 public:
+	// cppcheck-suppress uninitMemberVar
 	CProfileScope() { bValid= false;};
-	CProfileScope(ProfileSample *pSample)
+	explicit CProfileScope(ProfileSample *pSample)
 	{
 		bValid = true;
 #ifdef USE_INTERNAL_PROFILER

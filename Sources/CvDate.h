@@ -20,7 +20,7 @@ class CvDate
 public:
 
 	CvDate();
-	CvDate(unsigned int iTick);
+	explicit CvDate(unsigned int iTick);
 
 	int getYear() const;
 	int getMonth() const;
@@ -50,6 +50,12 @@ protected:
 
 struct CvDateIncrement
 {
+	CvDateIncrement() 
+		: m_iendTurn(0)
+		, m_iIncrementMonth(0)
+		, m_iIncrementDay(0)
+	{}
+
 	CvDate m_endDate;
 	int m_iendTurn;
 	int m_iIncrementMonth;

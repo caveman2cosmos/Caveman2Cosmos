@@ -69,8 +69,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
     <ReferencePath>..\Sources;$(ReferencePath)</ReferencePath>
-    <OutDir>$(Configuration)\</OutDir>
-    <IntDir>$(Configuration)\</IntDir>
+    <OutDir>..\Build\$(Configuration)\</OutDir>
+    <IntDir>..\Build\$(Configuration)\</IntDir>
     <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" build $(Configuration)</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" rebuild $(Configuration)</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" clean $(Configuration)</NMakeCleanCommandLine>
@@ -79,8 +79,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Assert|Win32'">
     <ReferencePath>..\Sources;$(ReferencePath)</ReferencePath>
-    <OutDir>$(Configuration)\</OutDir>
-    <IntDir>$(Configuration)\</IntDir>
+    <OutDir>..\Build\$(Configuration)\</OutDir>
+    <IntDir>..\Build\$(Configuration)\</IntDir>
     <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" build $(Configuration)</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" rebuild $(Configuration)</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" clean $(Configuration)</NMakeCleanCommandLine>
@@ -89,8 +89,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ReferencePath>..\Sources;$(ReferencePath)</ReferencePath>
-    <OutDir>$(Configuration)\</OutDir>
-    <IntDir>$(Configuration)\</IntDir>
+    <OutDir>..\Build\$(Configuration)\</OutDir>
+    <IntDir>..\Build\$(Configuration)\</IntDir>
     <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" build $(Configuration)</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" rebuild $(Configuration)</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" clean $(Configuration)</NMakeCleanCommandLine>
@@ -99,8 +99,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='FinalRelease|Win32'">
     <ReferencePath>..\Sources;$(ReferencePath)</ReferencePath>
-    <OutDir>$(Configuration)\</OutDir>
-    <IntDir>$(Configuration)\</IntDir>
+    <OutDir>..\Build\$(Configuration)\</OutDir>
+    <IntDir>..\Build\$(Configuration)\</IntDir>
     <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" build $(Configuration)</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" rebuild $(Configuration)</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" clean $(Configuration)</NMakeCleanCommandLine>
@@ -109,8 +109,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ReferencePath>..\Sources;$(ReferencePath)</ReferencePath>
-    <OutDir>$(Configuration)\</OutDir>
-    <IntDir>$(Configuration)\</IntDir>
+    <OutDir>..\Build\$(Configuration)\</OutDir>
+    <IntDir>..\Build\$(Configuration)\</IntDir>
     <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" build $(Configuration)</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" rebuild $(Configuration)</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" clean $(Configuration)</NMakeCleanCommandLine>
@@ -261,6 +261,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BetterBTSAI.h" />
+    <ClInclude Include="idinfo_iterator.h" />
     <ClInclude Include="CvMapExternal.h" />
     <ClInclude Include="CvMapInterfaceBase.h" />
     <ClInclude Include="CvReachablePlotSet.h" />

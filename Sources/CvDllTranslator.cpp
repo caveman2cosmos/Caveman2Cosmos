@@ -46,13 +46,12 @@ void CvDllTranslator::initializeTags(CvWString& szTagStartIcon, CvWString& szTag
 	aIconMap[L"[ICON_COMMERCE]"] = std::wstring(1, (wchar)GC.getYieldInfo(YIELD_COMMERCE).getChar());
 
 	// Add the invisible icons to the icon map
-	int iInvis = 0;
 	for (int i=0; i < GC.getNumInvisibleInfos(); i++)
 	{
 		CvWString szType = L"[ICON_";
 		szType.append(CvWString(GC.getInvisibleInfo((InvisibleTypes)i).getType()));
 		szType.append(L"]");
-		iInvis = GC.getInvisibleInfo((InvisibleTypes)i).getChar();
+		int iInvis = GC.getInvisibleInfo((InvisibleTypes)i).getChar();
 		aIconMap[szType] = std::wstring(1, (wchar)iInvis);
 	}
 

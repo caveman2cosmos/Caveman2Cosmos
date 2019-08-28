@@ -223,7 +223,7 @@ protected:
 class IntExprPython : public IntExpr
 {
 public:
-	IntExprPython(CvString szPythonCallback) : m_szPythonCallback(szPythonCallback) {}
+	explicit IntExprPython(CvString szPythonCallback) : m_szPythonCallback(szPythonCallback) {}
 	virtual int evaluate(CvGameObject* pObject);
 	virtual void getCheckSum(unsigned int& iSum);
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;

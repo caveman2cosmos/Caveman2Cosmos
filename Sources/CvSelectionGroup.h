@@ -10,6 +10,7 @@
 #include "CvPathGenerator.h"
 #include "CvUnit.h"
 #include "CvCity.h"
+#include "idinfo_iterator.h"
 
 class CvPlot;
 class CvArea;
@@ -236,6 +237,25 @@ public:
 	UnitAITypes getHeadUnitAI() const;
 	PlayerTypes getHeadOwner() const;
 	TeamTypes getHeadTeam() const;
+
+	// For iterating over units in a selection group, optionally skipping invalid (NULL) ones
+	class unit_iterator : public idinfo_iterator<unit_iterator, CvUnit>
+	{
+	public:
+		typedef idinfo_iterator<unit_iterator, CvUnit> base_type;
+		unit_iterator() {}
+		explicit unit_iterator(const CLinkList<IDInfo>* list, bool skip_invalid = false) : base_type(list, skip_invalid) {}
+
+	private:
+		friend class core_access;
+		CvUnit* resolve(const IDInfo& info) const;
+	};
+
+	unit_iterator beginValidUnits() const { return unit_iterator(&m_units, true); }
+	unit_iterator endValidUnits() const { return unit_iterator(); } // Same as endUnits() currently
+
+	unit_iterator beginUnits() const { return unit_iterator(&m_units); }
+	unit_iterator endUnits() const { return unit_iterator(); }
 
 	void clearMissionQueue();
 	void setMissionPaneDirty();																																	// Exposed to Python

@@ -20,3 +20,6 @@ Tools/Setup/.wget-hsts
 
 Assets/art/
 !Assets/art/Readme.txt
+
+Sources/cov-int/
+Build/

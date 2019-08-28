@@ -24,7 +24,7 @@ class CvPropertySource
 {
 public:
 	CvPropertySource();
-	CvPropertySource(PropertyTypes eProperty);
+	explicit CvPropertySource(PropertyTypes eProperty);
 	virtual ~CvPropertySource();
 	PropertyTypes getProperty() const;
 	void setProperty(PropertyTypes eProperty);
@@ -61,7 +61,7 @@ class CvPropertySourceConstant : public CvPropertySource
 {
 public:
 	CvPropertySourceConstant();
-	CvPropertySourceConstant(PropertyTypes eProperty);
+	explicit CvPropertySourceConstant(PropertyTypes eProperty);
 	CvPropertySourceConstant(PropertyTypes eProperty, IntExpr* pAmountPerTurn);
 
 	int getAmountPerTurn(const CvGameObject* pObject);
@@ -86,7 +86,7 @@ class CvPropertySourceConstantLimited : public CvPropertySource
 {
 public:
 	CvPropertySourceConstantLimited();
-	CvPropertySourceConstantLimited(PropertyTypes eProperty);
+	explicit CvPropertySourceConstantLimited(PropertyTypes eProperty);
 	CvPropertySourceConstantLimited(PropertyTypes eProperty, int iAmountPerTurn, int iLimit);
 
 	int getAmountPerTurn();
@@ -113,7 +113,7 @@ class CvPropertySourceDecay : public CvPropertySource
 {
 public:
 	CvPropertySourceDecay();
-	CvPropertySourceDecay(PropertyTypes eProperty);
+	explicit CvPropertySourceDecay(PropertyTypes eProperty);
 	CvPropertySourceDecay(PropertyTypes eProperty, int iPercent, int iNoDecayAmount);
 
 	int getPercent();
@@ -142,7 +142,7 @@ class CvPropertySourceAttributeConstant : public CvPropertySource
 {
 public:
 	CvPropertySourceAttributeConstant();
-	CvPropertySourceAttributeConstant(PropertyTypes eProperty);
+	explicit CvPropertySourceAttributeConstant(PropertyTypes eProperty);
 	CvPropertySourceAttributeConstant(PropertyTypes eProperty, AttributeTypes eAttribute, int iAmountPerTurn);
 
 	AttributeTypes getAttribute();

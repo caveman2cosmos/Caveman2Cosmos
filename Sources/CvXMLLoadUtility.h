@@ -614,7 +614,7 @@ public:
 
 	// allocate and initialize a list from a tag pair in the xml
 	void SetVariableListTagPair(CvString **ppszList, const wchar_t* szRootTagName,
-		int iInfoBaseLength, CvString szDefaultListVal = "");
+		int iInfoBaseLength, CvString szDefaultListVal = CvString());
 
 	// allocate and initialize a list from a tag pair in the xml
 	void SetVariableListTagPair(int **ppiList, const wchar_t* szRootTagName,
@@ -634,7 +634,7 @@ public:
 
 	// allocate and initialize a list from a tag pair in the xml
 	void SetVariableListTagPair(CvString **ppszList, const wchar_t* szRootTagName,
-		CvString* m_paszTagList, int iTagListLength, CvString szDefaultListVal = "");
+		CvString* m_paszTagList, int iTagListLength, CvString szDefaultListVal = CvString());
 
 	// allocate and initialize a list from a tag pair in the xml
 	void SetVariableListTagPair(std::vector<int>, const wchar_t* szRootTagName,

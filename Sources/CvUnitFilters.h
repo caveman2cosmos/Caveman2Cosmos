@@ -70,7 +70,7 @@ protected:
 class UnitFilterIsCombat : public UnitFilterBase
 {
 public:
-	UnitFilterIsCombat(UnitCombatTypes eCombat, bool bInvert = false) : UnitFilterBase(bInvert), m_eCombat(eCombat) {};
+	explicit UnitFilterIsCombat(UnitCombatTypes eCombat, bool bInvert = false) : UnitFilterBase(bInvert), m_eCombat(eCombat) {};
 	bool isFilteredUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit);
 
 protected:
@@ -99,7 +99,7 @@ public:
 class UnitFilterIsDomain : public UnitFilterBase
 {
 public:
-	UnitFilterIsDomain(DomainTypes eDomain, bool bInvert = false) : UnitFilterBase(bInvert), m_eDomain(eDomain) {};
+	explicit UnitFilterIsDomain(DomainTypes eDomain, bool bInvert = false) : UnitFilterBase(bInvert), m_eDomain(eDomain) {};
 	bool isFilteredUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit);
 
 protected:

@@ -27,7 +27,7 @@ public:
 	
 	void StringArrayExtend( CvString **ppszListNew, int* iNumNewListElements,
 							CvString **ppszListOld, int iNumOldListElements,
-							CvString szDefaultListVal = "") const;
+							CvString szDefaultListVal = CvString()) const;
 
 	bool isDuplicate(int iNumValueNew, int *ppiListNew, int iValueOld) const;
 	bool isDuplicate(int iNumValueNew, CvWString *ppiListNew, CvWString wValueOld) const;

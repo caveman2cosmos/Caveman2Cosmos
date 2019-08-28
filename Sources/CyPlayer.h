@@ -20,7 +20,8 @@ class CyPlayer
 {
 public:
 	CyPlayer();
-	CyPlayer(CvPlayer* pPlayer);		// Call from C++
+	explicit CyPlayer(CvPlayer* pPlayer);		// Call from C++
+
 	CvPlayer* getPlayer() { return m_pPlayer;	}	// Call from C++
 	bool isNone() { return (m_pPlayer==NULL); }
 

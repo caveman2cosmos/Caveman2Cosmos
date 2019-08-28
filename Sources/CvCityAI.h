@@ -467,6 +467,7 @@ private:
 #ifdef YIELD_VALUE_CACHING
 private:
 	virtual void ClearYieldValueCache();
+	void ClearYieldValueCacheImpl();
 	virtual void CheckYieldValueCache(char* label);
 
 	yieldCache yieldValueCache;

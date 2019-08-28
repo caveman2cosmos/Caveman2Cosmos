@@ -20365,7 +20365,7 @@ const TCHAR* CvYieldInfo::getSymbolPath(int i) const
 {
 	FAssertMsg(i < GC.getDefineINT("MAX_YIELD_STACK"), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
-	return m_paszSymbolPath ? m_paszSymbolPath[i] : -1;
+	return m_paszSymbolPath ? m_paszSymbolPath[i] : reinterpret_cast<const TCHAR*>(-1);
 }
 
 bool CvYieldInfo::read(CvXMLLoadUtility* pXML)

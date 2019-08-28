@@ -108,7 +108,7 @@ inline void FVariableSystem::UnInit()
 {
 	for (VSIteratorC iIterator = m_mapVariableMap.begin(); iIterator != m_mapVariableMap.end(); ++iIterator)
 	{
-		FVariable * pkVariable = (FVariable*)(iIterator->second);
+		FVariable * pkVariable = static_cast<FVariable*>(iIterator->second);
 		if ( pkVariable != NULL ) delete pkVariable;
 	}
 	m_mapVariableMap.clear ();
@@ -135,11 +135,11 @@ inline void FVariableSystem::Read(FDataStreamBase *pStream)
 	UnInit();
 
 	// read num
-	int i, iSize;
+	int iSize;
 	pStream->Read(&iSize);
 
 	// read and add vars
-	for(i=0;i<iSize;i++)
+	for(int i=0;i<iSize;i++)
 	{
 		// read key
 		std::string szKey;
@@ -162,26 +162,19 @@ inline void FVariableSystem::Read(FDataStreamBase *pStream)
 inline void FVariableSystem::Write(FDataStreamBase *pStream) const
 {
 	// write num
-	int iSize = GetSize();
+	int iSize = m_mapVariableMap.size();
 	pStream->Write(iSize);
 
 	// write vars/keys
-	int iNumWritten=0;
-	VSIteratorC iIterator = m_mapVariableMap.begin();
-	while ( iIterator != m_mapVariableMap.end())
+	for(VSIteratorC iIterator = m_mapVariableMap.begin(); iIterator != m_mapVariableMap.end(); ++iIterator)
 	{
 		// write key
 		std::string szKey = iIterator->first;
 		pStream->WriteString(szKey);
 
 		// write vars
-		((FVariable*)iIterator->second)->Write(pStream);
-		
-		iNumWritten++;
-		++iIterator;
+		static_cast<FVariable*>(iIterator->second)->Write(pStream);
 	}
-
-	assert(iNumWritten==iSize);
 }
 
 //---------------------------------------------------------------------------------------
@@ -194,14 +187,12 @@ inline void FVariableSystem::Write(FDataStreamBase *pStream) const
 //---------------------------------------------------------------------------------------
 inline bool FVariableSystem::GetValue( const char * szVariable, bool & bValue ) const
 {
-	FVariable * pkVariable;
-	VSIteratorC iIterator;
-	iIterator = m_mapVariableMap.find( szVariable );
+	VSIteratorC iIterator = m_mapVariableMap.find( szVariable );
 	if ( iIterator == m_mapVariableMap.end())
 	{
 		return false;
 	}
-	pkVariable = iIterator->second;
+	FVariable* pkVariable = iIterator->second;
 	assert( pkVariable->m_eType == FVARTYPE_BOOL );
 	bValue = pkVariable->m_bValue;
 	return true;
@@ -217,14 +208,12 @@ inline bool FVariableSystem::GetValue( const char * szVariable, bool & bValue ) 
 //---------------------------------------------------------------------------------------
 inline bool FVariableSystem::GetValue( const char * szVariable, char & cValue ) const
 {
-	FVariable * pkVariable;
-	VSIteratorC iIterator;
-	iIterator = m_mapVariableMap.find ( szVariable );
+	VSIteratorC iIterator = m_mapVariableMap.find ( szVariable );
 	if ( iIterator == m_mapVariableMap.end())
 	{
 		return false;
 	}
-	pkVariable = iIterator->second;
+	FVariable* pkVariable = iIterator->second;
 	assert( pkVariable->m_eType == FVARTYPE_CHAR );
 	cValue = pkVariable->m_cValue;
 	return true;
@@ -240,14 +229,12 @@ inline bool FVariableSystem::GetValue( const char * szVariable, char & cValue ) 
 //---------------------------------------------------------------------------------------
 inline bool FVariableSystem::GetValue( const char * szVariable, byte & ucValue ) const
 {
-	FVariable * pkVariable;
-	VSIteratorC iIterator;
-	iIterator = m_mapVariableMap.find ( szVariable );
+	VSIteratorC iIterator = m_mapVariableMap.find ( szVariable );
 	if ( iIterator == m_mapVariableMap.end())
 	{
 		return false;
 	}
-	pkVariable = iIterator->second;
+	FVariable* pkVariable = iIterator->second;
 	assert( pkVariable->m_eType == FVARTYPE_UCHAR );
 	ucValue = pkVariable->m_ucValue;
 	return true;
@@ -263,14 +250,12 @@ inline bool FVariableSystem::GetValue( const char * szVariable, byte & ucValue )
 //---------------------------------------------------------------------------------------
 inline bool FVariableSystem::GetValue( const char * szVariable, short & wValue ) const
 {
-	FVariable * pkVariable;
-	VSIteratorC iIterator;
-	iIterator = m_mapVariableMap.find ( szVariable );
+	VSIteratorC iIterator = m_mapVariableMap.find ( szVariable );
 	if ( iIterator == m_mapVariableMap.end())
 	{
 		return false;
 	}
-	pkVariable = iIterator->second;
+	FVariable* pkVariable = iIterator->second;
 	assert( pkVariable->m_eType == FVARTYPE_SHORT );
 	wValue = pkVariable->m_wValue;
 	return true;
@@ -286,14 +271,12 @@ inline bool FVariableSystem::GetValue( const char * szVariable, short & wValue )
 //---------------------------------------------------------------------------------------
 inline bool FVariableSystem::GetValue( const char * szVariable, word & uwValue ) const
 {
-	FVariable * pkVariable;
-	VSIteratorC iIterator;
-	iIterator = m_mapVariableMap.find ( szVariable );
+	VSIteratorC iIterator = m_mapVariableMap.find ( szVariable );
 	if ( iIterator == m_mapVariableMap.end())
 	{
 		return false;
 	}
-	pkVariable = iIterator->second;
+	FVariable* pkVariable = iIterator->second;
 	assert( pkVariable->m_eType == FVARTYPE_USHORT );
 	uwValue = pkVariable->m_uwValue;
 	return true;
@@ -309,14 +292,12 @@ inline bool FVariableSystem::GetValue( const char * szVariable, word & uwValue )
 //---------------------------------------------------------------------------------------
 inline bool FVariableSystem::GetValue( const char * szVariable, int & iValue ) const
 {
-	FVariable * pkVariable;
-	VSIteratorC iIterator;
-	iIterator = m_mapVariableMap.find ( szVariable );
+	VSIteratorC iIterator = m_mapVariableMap.find ( szVariable );
 	if ( iIterator == m_mapVariableMap.end())
 	{
 		return false;
 	}
-	pkVariable = iIterator->second;
+	FVariable* pkVariable = iIterator->second;
 	assert( pkVariable->m_eType == FVARTYPE_INT );
 	iValue = pkVariable->m_iValue;
 	return true;
@@ -332,14 +313,12 @@ inline bool FVariableSystem::GetValue( const char * szVariable, int & iValue ) c
 //---------------------------------------------------------------------------------------
 inline bool FVariableSystem::GetValue( const char * szVariable, uint & uiValue ) const
 {
-	FVariable * pkVariable;
-	VSIteratorC iIterator;
-	iIterator = m_mapVariableMap.find ( szVariable );
+	VSIteratorC iIterator = m_mapVariableMap.find ( szVariable );
 	if ( iIterator == m_mapVariableMap.end())
 	{
 		return false;
 	}
-	pkVariable = iIterator->second;
+	FVariable* pkVariable = iIterator->second;
 	assert( pkVariable->m_eType == FVARTYPE_UINT );
 	uiValue = pkVariable->m_uiValue;
 	return true;
@@ -355,14 +334,12 @@ inline bool FVariableSystem::GetValue( const char * szVariable, uint & uiValue )
 //---------------------------------------------------------------------------------------
 inline bool FVariableSystem::GetValue( const char * szVariable, float & fValue ) const
 {
-	FVariable * pkVariable;
-	VSIteratorC iIterator;
-	iIterator = m_mapVariableMap.find ( szVariable );
+	VSIteratorC iIterator = m_mapVariableMap.find ( szVariable );
 	if ( iIterator == m_mapVariableMap.end())
 	{
 		return false;
 	}
-	pkVariable = iIterator->second;
+	FVariable* pkVariable = iIterator->second;
 
 	switch (pkVariable->m_eType)
 	{
@@ -410,14 +387,12 @@ inline bool FVariableSystem::GetValue( const char * szVariable, float & fValue )
 //---------------------------------------------------------------------------------------
 inline bool FVariableSystem::GetValue( const char * szVariable, double & dValue ) const
 {
-	FVariable * pkVariable;
-	VSIteratorC iIterator;
-	iIterator = m_mapVariableMap.find ( szVariable );
+	VSIteratorC iIterator = m_mapVariableMap.find ( szVariable );
 	if ( iIterator == m_mapVariableMap.end())
 	{
 		return false;
 	}
-	pkVariable = iIterator->second;
+	FVariable* pkVariable = iIterator->second;
 
 	switch (pkVariable->m_eType)
 	{
@@ -465,14 +440,12 @@ inline bool FVariableSystem::GetValue( const char * szVariable, double & dValue 
 //---------------------------------------------------------------------------------------
 inline bool FVariableSystem::GetValue( const char * szVariable, const char * & pszValue ) const
 {
-	FVariable * pkVariable;
-	VSIteratorC iIterator;
-	iIterator = m_mapVariableMap.find ( szVariable );
+	VSIteratorC iIterator = m_mapVariableMap.find ( szVariable );
 	if ( iIterator == m_mapVariableMap.end())
 	{
 		return false;
 	}
-	pkVariable = iIterator->second;
+	FVariable* pkVariable = iIterator->second;
 	assert( pkVariable->m_eType == FVARTYPE_STRING );
 	pszValue = pkVariable->m_szValue;
 	return true;
@@ -488,14 +461,12 @@ inline bool FVariableSystem::GetValue( const char * szVariable, const char * & p
 //---------------------------------------------------------------------------------------
 inline bool FVariableSystem::GetValue( const char * szVariable, const wchar * & pwszValue ) const
 {
-	FVariable * pkVariable;
-	VSIteratorC iIterator;
-	iIterator = m_mapVariableMap.find ( szVariable );
+	VSIteratorC iIterator = m_mapVariableMap.find ( szVariable );
 	if ( iIterator == m_mapVariableMap.end())
 	{
 		return false;
 	}
-	pkVariable = iIterator->second;
+	FVariable* pkVariable = iIterator->second;
 	assert( pkVariable->m_eType == FVARTYPE_WSTRING );
 	pwszValue = pkVariable->m_wszValue;
 	return true;
@@ -510,8 +481,7 @@ inline bool FVariableSystem::GetValue( const char * szVariable, const wchar * & 
 //---------------------------------------------------------------------------------------
 inline const FVariable * FVariableSystem::GetVariable( const char * szVariable ) const
 {
-	VSIteratorC iIterator;
-	iIterator = m_mapVariableMap.find ( szVariable );
+	VSIteratorC iIterator = m_mapVariableMap.find ( szVariable );
 	if ( iIterator == m_mapVariableMap.end()) return NULL;
 	return iIterator->second;
 }
@@ -525,13 +495,12 @@ inline const FVariable * FVariableSystem::GetVariable( const char * szVariable )
 //---------------------------------------------------------------------------------------
 inline void FVariableSystem::SetValue( const char * szVariable, bool bValue )
 {
-	FVariable * pkVariable;
 	VSIteratorC iIterator = m_mapVariableMap.find( szVariable ); 
 	if ( iIterator != m_mapVariableMap.end() )
 	{
 		delete iIterator->second;
 	}
-	pkVariable = new FVariable;
+	FVariable* pkVariable = new FVariable;
 	pkVariable->m_eType = FVARTYPE_BOOL;
 	pkVariable->m_bValue = bValue;
 	m_mapVariableMap[szVariable] = pkVariable;
@@ -547,13 +516,12 @@ inline void FVariableSystem::SetValue( const char * szVariable, bool bValue )
 //---------------------------------------------------------------------------------------
 inline void FVariableSystem::SetValue( const char * szVariable, char cValue )
 {
-	FVariable * pkVariable;
 	VSIteratorC iIterator = m_mapVariableMap.find( szVariable ); 
 	if ( iIterator != m_mapVariableMap.end() )
 	{
 		delete iIterator->second;
 	}
-	pkVariable = new FVariable;
+	FVariable* pkVariable = new FVariable;
 	pkVariable->m_eType = FVARTYPE_CHAR;
 	pkVariable->m_cValue = cValue;
 	m_mapVariableMap[szVariable] = pkVariable;
@@ -569,13 +537,12 @@ inline void FVariableSystem::SetValue( const char * szVariable, char cValue )
 //---------------------------------------------------------------------------------------
 inline void FVariableSystem::SetValue( const char * szVariable, byte ucValue )
 {
-	FVariable * pkVariable;
 	VSIteratorC iIterator = m_mapVariableMap.find( szVariable ); 
 	if ( iIterator != m_mapVariableMap.end() )
 	{
 		delete iIterator->second;
 	}
-	pkVariable = new FVariable;
+	FVariable* pkVariable = new FVariable;
 	pkVariable->m_eType = FVARTYPE_UCHAR;
 	pkVariable->m_ucValue = ucValue;
 	m_mapVariableMap[szVariable] = pkVariable;
@@ -591,13 +558,12 @@ inline void FVariableSystem::SetValue( const char * szVariable, byte ucValue )
 //---------------------------------------------------------------------------------------
 inline void FVariableSystem::SetValue( const char * szVariable, short wValue )
 {
-	FVariable * pkVariable;
 	VSIteratorC iIterator = m_mapVariableMap.find( szVariable ); 
 	if ( iIterator != m_mapVariableMap.end() )
 	{
 		delete iIterator->second;
 	}
-	pkVariable = new FVariable;
+	FVariable* pkVariable = new FVariable;
 	pkVariable->m_eType = FVARTYPE_SHORT;
 	pkVariable->m_wValue = wValue;
 	m_mapVariableMap[szVariable] = pkVariable;
@@ -613,13 +579,12 @@ inline void FVariableSystem::SetValue( const char * szVariable, short wValue )
 //---------------------------------------------------------------------------------------
 inline void FVariableSystem::SetValue( const char * szVariable, word uwValue )
 {
-	FVariable * pkVariable;
 	VSIteratorC iIterator = m_mapVariableMap.find( szVariable ); 
 	if ( iIterator != m_mapVariableMap.end() )
 	{
 		delete iIterator->second;
 	}
-	pkVariable = new FVariable;
+	FVariable* pkVariable = new FVariable;
 	pkVariable->m_eType = FVARTYPE_USHORT;
 	pkVariable->m_uwValue = uwValue;
 	m_mapVariableMap[szVariable] = pkVariable;
@@ -635,13 +600,12 @@ inline void FVariableSystem::SetValue( const char * szVariable, word uwValue )
 //---------------------------------------------------------------------------------------
 inline void FVariableSystem::SetValue( const char * szVariable, int iValue )
 {
-	FVariable * pkVariable;
 	VSIteratorC iIterator = m_mapVariableMap.find( szVariable ); 
 	if ( iIterator != m_mapVariableMap.end() )
 	{
 		delete iIterator->second;
 	}
-	pkVariable = new FVariable;
+	FVariable* pkVariable = new FVariable;
 	pkVariable->m_eType = FVARTYPE_INT;
 	pkVariable->m_iValue = iValue;
 	m_mapVariableMap[szVariable] = pkVariable;
@@ -657,13 +621,12 @@ inline void FVariableSystem::SetValue( const char * szVariable, int iValue )
 //---------------------------------------------------------------------------------------
 inline void FVariableSystem::SetValue( const char * szVariable, uint uiValue )
 {
-	FVariable * pkVariable;
 	VSIteratorC iIterator = m_mapVariableMap.find( szVariable ); 
 	if ( iIterator != m_mapVariableMap.end() )
 	{
 		delete iIterator->second;
 	}
-	pkVariable = new FVariable;
+	FVariable* pkVariable = new FVariable;
 	pkVariable->m_eType = FVARTYPE_UINT;
 	pkVariable->m_uiValue = uiValue;
 	m_mapVariableMap[szVariable] = pkVariable;
@@ -679,13 +642,12 @@ inline void FVariableSystem::SetValue( const char * szVariable, uint uiValue )
 //---------------------------------------------------------------------------------------
 inline void FVariableSystem::SetValue( const char * szVariable, float fValue )
 {
-	FVariable * pkVariable;
 	VSIteratorC iIterator = m_mapVariableMap.find( szVariable ); 
 	if ( iIterator != m_mapVariableMap.end() )
 	{
 		delete iIterator->second;
 	}
-	pkVariable = new FVariable;
+	FVariable* pkVariable = new FVariable;
 	pkVariable->m_eType = FVARTYPE_FLOAT;
 	pkVariable->m_fValue = fValue;
 	m_mapVariableMap[szVariable] = pkVariable;
@@ -701,13 +663,12 @@ inline void FVariableSystem::SetValue( const char * szVariable, float fValue )
 //---------------------------------------------------------------------------------------
 inline void FVariableSystem::SetValue( const char * szVariable, double dValue )
 {
-	FVariable * pkVariable;
 	VSIteratorC iIterator = m_mapVariableMap.find( szVariable ); 
 	if ( iIterator != m_mapVariableMap.end() )
 	{
 		delete iIterator->second;
 	}
-	pkVariable = new FVariable;
+	FVariable* pkVariable = new FVariable;
 	pkVariable->m_eType = FVARTYPE_DOUBLE;
 	pkVariable->m_dValue = dValue;
 	m_mapVariableMap[szVariable] = pkVariable;
@@ -723,13 +684,12 @@ inline void FVariableSystem::SetValue( const char * szVariable, double dValue )
 //---------------------------------------------------------------------------------------
 inline void FVariableSystem::SetValue( const char * szVariable, const char * szValue )
 {
-	FVariable * pkVariable;
 	VSIteratorC iIterator = m_mapVariableMap.find( szVariable ); 
 	if ( iIterator != m_mapVariableMap.end() )
 	{
 		delete iIterator->second;
 	}
-	pkVariable = new FVariable;
+	FVariable* pkVariable = new FVariable;
 	pkVariable->m_eType = FVARTYPE_STRING;
 	pkVariable->m_szValue = strcpy( new char[strlen( szValue ) + 1], szValue ); 
 	m_mapVariableMap[szVariable] = pkVariable;
@@ -745,13 +705,12 @@ inline void FVariableSystem::SetValue( const char * szVariable, const char * szV
 //---------------------------------------------------------------------------------------
 inline void FVariableSystem::SetValue( const char * szVariable, const wchar * wszValue )
 {
-	FVariable * pkVariable;
 	VSIteratorC iIterator = m_mapVariableMap.find( szVariable ); 
 	if ( iIterator != m_mapVariableMap.end() )
 	{
 		delete iIterator->second;
 	}
-	pkVariable = new FVariable;
+	FVariable* pkVariable = new FVariable;
 	pkVariable->m_eType = FVARTYPE_WSTRING;
 	pkVariable->m_wszValue = wcscpy( new wchar[wcslen( wszValue ) + 1], wszValue ); 
 	m_mapVariableMap[szVariable] = pkVariable;

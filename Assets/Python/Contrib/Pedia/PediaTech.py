@@ -327,10 +327,10 @@ class PediaTech:
 		szTxt = ""
 		szTemp = CvTheTechInfo.getStrategy()
 		if szTemp:
-			szTxt += TRNSLTR.getText("TXT_KEY_CIVILOPEDIA_STRATEGY", ()) + szTemp + "\n\n"
+			szTxt += szfont2b + TRNSLTR.getText("TXT_KEY_CIVILOPEDIA_STRATEGY", ()) + szfont2 + szTemp + "\n\n"
 		szTemp = CvTheTechInfo.getCivilopedia()
 		if szTemp:
-			szTxt += TRNSLTR.getText("TXT_KEY_CIVILOPEDIA_BACKGROUND", ()) + szTemp
+			szTxt += szfont2b + TRNSLTR.getText("TXT_KEY_CIVILOPEDIA_BACKGROUND", ()) + szfont2 + szTemp
 
 		if szSpecial and szTxt:
 			WIDTH = W_COL_2
@@ -342,4 +342,4 @@ class PediaTech:
 			screen.addMultilineText(aName(), szfont3 + szSpecial, X_COL_1 + 4, Y_TOP_ROW_2 + 8, W_COL_1 - 8, H_SPECIAL - 16, eWidGen, 0, 0, 1<<0)
 		if szTxt:
 			screen.addPanel(aName(), "", "", True, False, X_COL_2, Y_TOP_ROW_2, WIDTH, H_SPECIAL, ePnlBlue50)
-			screen.addMultilineText(aName(), szfont2 + szTxt, X_COL_2 + 4, Y_TOP_ROW_2 + 8, WIDTH - 8, H_SPECIAL - 16, eWidGen, 0, 0, 1<<0)
+			screen.addMultilineText(aName(), szTxt, X_COL_2 + 4, Y_TOP_ROW_2 + 8, WIDTH - 8, H_SPECIAL - 16, eWidGen, 0, 0, 1<<0)

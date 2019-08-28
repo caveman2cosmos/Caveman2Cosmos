@@ -33,7 +33,7 @@ public:
 	{
 	friend CvPath;
 	protected:
-		const_iterator(CvPathNode* cursorNode);
+		explicit const_iterator(CvPathNode* cursorNode);
 
 	public:
 		const_iterator& operator++();
@@ -220,7 +220,7 @@ class CvPathGeneratorPlotInfo;
 class CvPathGenerator : public CvPathGeneratorBase
 {
 public:
-	CvPathGenerator(CvMap* pMap);
+	explicit CvPathGenerator(CvMap* pMap);
 	virtual ~CvPathGenerator();
 
 	void reset();

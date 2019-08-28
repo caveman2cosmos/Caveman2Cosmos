@@ -7,16 +7,16 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_CIVILOPEDIA_BACKGROUND</Tag>
-		<English>[BOLD]Background:[\BOLD][NEWLINE]</English>
-		<French>[BOLD]Contexte:[\BOLD][NEWLINE]</French>
-		<German>[BOLD]Hintergrund:[\BOLD][NEWLINE]</German>
+		<English>Background:[PARAGRAPH:1]</English>
+		<French>Contexte:[PARAGRAPH:1]</French>
+		<German>Hintergrund:[PARAGRAPH:1]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILOPEDIA_STRATEGY</Tag>
-		<English>[BOLD]Strategy:[\BOLD][PARAGRAPH:1]</English>
-		<French>[BOLD]Stratégie:[\BOLD][PARAGRAPH:1]</French>
-		<Italian>[BOLD]Strategia:[\BOLD][PARAGRAPH:1]</Italian>
-		<Spanish>[BOLD]Estrategia:[\BOLD][PARAGRAPH:1]</Spanish>
+		<English>Strategy:[PARAGRAPH:1]</English>
+		<French>Stratégie:[PARAGRAPH:1]</French>
+		<Italian>Strategia:[PARAGRAPH:1]</Italian>
+		<Spanish>Estrategia:[PARAGRAPH:1]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_ATTITUDE</Tag>
@@ -646,12 +646,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_HISTORY</Tag>
-		<English>[BOLD]History:[\BOLD][NEWLINE]</English>
-		<French>[BOLD]Historique:[\BOLD][NEWLINE]</French>
-		<German>[BOLD]Geschichte:[\BOLD][NEWLINE]</German>
-		<Italian>[BOLD]Storia:[\BOLD][NEWLINE]</Italian>
-		<Spanish>[BOLD]Historia:[\BOLD][NEWLINE]</Spanish>
-		<Polish>[BOLD]Historia:[\BOLD][NEWLINE]</Polish>
+		<English>History:[PARAGRAPH:1]</English>
+		<French>Historique:[PARAGRAPH:1]</French>
+		<German>Geschichte:[PARAGRAPH:1]</German>
+		<Italian>Storia:[PARAGRAPH:1]</Italian>
+		<Spanish>Historia:[PARAGRAPH:1]</Spanish>
+		<Polish>Historia:[PARAGRAPH:1]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_IMPROVEMENT_AIR_DEFENSE</Tag>

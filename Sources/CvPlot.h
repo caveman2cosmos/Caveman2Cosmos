@@ -11,6 +11,7 @@
 #include <vector>
 #include "CvGameObject.h"
 #include "CvUnit.h"
+#include "idinfo_iterator.h"
 
 class CvSelectionGroup;
 
@@ -817,6 +818,25 @@ public:
 	CLLNode<IDInfo>* prevUnitNode(CLLNode<IDInfo>* pNode) const;
 	DllExport CLLNode<IDInfo>* headUnitNode() const;
 	CLLNode<IDInfo>* tailUnitNode() const;
+
+	// For iterating over units on a plot, optionally skipping invalid (NULL) ones
+	class unit_iterator : public idinfo_iterator<unit_iterator, CvUnit>
+	{
+	public:
+		typedef idinfo_iterator<unit_iterator, CvUnit> base_type;
+		unit_iterator() {}
+		explicit unit_iterator(const CLinkList<IDInfo>* list, bool skip_invalid = false) : base_type(list, skip_invalid) {}
+
+	private:
+		friend class core_access;
+		CvUnit* resolve(const IDInfo& info) const;
+	};
+
+	unit_iterator beginValidUnits() const { return unit_iterator(&m_units, true); }
+	unit_iterator endValidUnits() const { return unit_iterator(); } // Same as endUnits() currently
+
+	unit_iterator beginUnits() const { return unit_iterator(&m_units); }
+	unit_iterator endUnits() const { return unit_iterator(); }
 
 	int getNumSymbols() const;
 	CvSymbol* getSymbol(int iID) const;

@@ -39,10 +39,21 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
 } \
 }
 
+#define FErrorMsg( msg )	\
+{ \
+	static bool bIgnoreAlways = false; \
+	if( !bIgnoreAlways ) \
+{ \
+	if( FAssertDlg( "Error", 0, __FILE__, __LINE__, bIgnoreAlways ) ) \
+{ _asm int 3 } \
+} \
+}
+
 #else
 // Non Win32 platforms--just use built-in FAssert
 #define FAssert( expr )	FAssert( expr )
 #define FAssertMsg( expr, msg )	FAssert( expr )
+#define FErrorMsg( msg ) FAssert( false )
 
 #endif
 
@@ -50,6 +61,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
 // FASSERT_ENABLE not defined
 #define FAssert( expr )
 #define FAssertMsg( expr, msg )
+#define FErrorMsg( msg )
 
 #endif
 

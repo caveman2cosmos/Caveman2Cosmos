@@ -9,7 +9,7 @@
 class CvDiploParameters
 {
 public:
-	DllExport CvDiploParameters(PlayerTypes ePlayer);
+	DllExport explicit CvDiploParameters(PlayerTypes ePlayer);
 	virtual ~CvDiploParameters();
 
 	DllExport void setWhoTalkingTo(PlayerTypes eWhoTalkingTo);
@@ -17,13 +17,13 @@ public:
 	void setDiploComment(DiploCommentTypes eCommentType, const std::vector<FVariable>* args=NULL);
 
 	// allow 3 args either int or string.  can't really use va_argslist here
-	void setDiploComment(DiploCommentTypes eCommentType, CvWString  arg1, CvWString  arg2="", CvWString  arg3="");
+	void setDiploComment(DiploCommentTypes eCommentType, CvWString  arg1, CvWString  arg2=CvWString(), CvWString  arg3=CvWString());
 	void setDiploComment(DiploCommentTypes eCommentType, CvWString  arg1, CvWString  arg2, int arg3=MAX_INT);
-	void setDiploComment(DiploCommentTypes eCommentType, CvWString  arg1, int arg2, CvWString  arg3="");
+	void setDiploComment(DiploCommentTypes eCommentType, CvWString  arg1, int arg2, CvWString  arg3=CvWString());
 	void setDiploComment(DiploCommentTypes eCommentType, CvWString  arg1, int arg2, int arg3=MAX_INT);
-	void setDiploComment(DiploCommentTypes eCommentType, int arg1, CvWString  arg2="", CvWString  arg3="");
+	void setDiploComment(DiploCommentTypes eCommentType, int arg1, CvWString  arg2=CvWString(), CvWString  arg3=CvWString());
 	void setDiploComment(DiploCommentTypes eCommentType, int arg1, CvWString  arg2, int arg3=MAX_INT);
-	void setDiploComment(DiploCommentTypes eCommentType, int arg1, int arg2=MAX_INT, CvWString  arg3="");
+	void setDiploComment(DiploCommentTypes eCommentType, int arg1, int arg2=MAX_INT, CvWString  arg3=CvWString());
 	void setDiploComment(DiploCommentTypes eCommentType, int arg1, int arg2, int arg3=MAX_INT);
 
 	DllExport DiploCommentTypes getDiploComment() const;

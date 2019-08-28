@@ -138,9 +138,13 @@ std::vector<std::pair<uint,CvString> > IDValueMap<ValueType, defaultValue>::s_ID
 template <class ValueType, ValueType& defaultValue>
 uint IDValueMap<ValueType, defaultValue>::getIDForString(const char* szType)
 {
-	for (std::vector<std::pair<uint,CvString> >::iterator it = s_IDmap.begin(); it != s_IDmap.end(); it++)
+	for (std::vector<std::pair<uint,CvString> >::iterator it = s_IDmap.begin(); it != s_IDmap.end(); ++it)
+	{
 		if (it->second.CompareNoCase(szType) == 0)
+		{
 			return it->first;
+		}
+	}
 	uint uiID = s_IDmap.size();
 	s_IDmap.push_back(std::make_pair(uiID, szType));
 	return uiID;

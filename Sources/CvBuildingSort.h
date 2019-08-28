@@ -56,7 +56,7 @@ protected:
 class BuildingSortCommerce : public BuildingSortBase
 {
 public:
-	BuildingSortCommerce(CommerceTypes eCommerce, bool bInvert = false);
+	explicit BuildingSortCommerce(CommerceTypes eCommerce, bool bInvert = false);
 	int getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
 
 protected:
@@ -66,7 +66,7 @@ protected:
 class BuildingSortYield : public BuildingSortBase
 {
 public:
-	BuildingSortYield(YieldTypes eYield, bool bInvert = false);
+	explicit BuildingSortYield(YieldTypes eYield, bool bInvert = false);
 	int getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
 
 protected:
@@ -105,7 +105,7 @@ public:
 class BuildingSortProperty : public BuildingSortBase
 {
 public:
-	BuildingSortProperty(PropertyTypes eProperty, bool bInvert = false) : BuildingSortBase(bInvert), m_eProperty(eProperty) {};
+	explicit BuildingSortProperty(PropertyTypes eProperty, bool bInvert = false) : BuildingSortBase(bInvert), m_eProperty(eProperty) {};
 	int getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
 
 protected:
@@ -136,7 +136,7 @@ protected:
 class BuildingSortListWrapper
 {
 public:
-	BuildingSortListWrapper(BuildingSortList* pList) : m_pList(pList) {}
+	explicit BuildingSortListWrapper(BuildingSortList* pList) : m_pList(pList) {}
 	bool operator()(BuildingTypes eBuilding1, BuildingTypes eBuilding2) {return m_pList->operator()(eBuilding1, eBuilding2);}
 	void deleteCache() {m_pList->deleteCache();}
 protected:

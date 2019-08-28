@@ -13,7 +13,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodaircraft.dds</Button>
+			<Button>art/Goods/goodaircraft.dds</Button>
 			<FontButtonIndex>200</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Alcohol -->
@@ -23,7 +23,7 @@
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Wheat/Wheat.nif</NIF>
 			<KFM>Art/Terrain/Resources/Wheat/Wheat.kfm</KFM>
-			<Button>art/Goods/Art/goodalcohol.dds</Button>
+			<Button>art/Goods/goodalcohol.dds</Button>
 			<FontButtonIndex>100</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Algae -->
@@ -33,7 +33,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodalgae.dds</Button>
+			<Button>art/Goods/goodalgae.dds</Button>
 			<FontButtonIndex>199</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Aluminum Ingots -->
@@ -43,7 +43,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodingotaluminum.dds</Button>
+			<Button>art/Goods/goodingotaluminum.dds</Button>
 			<FontButtonIndex>0</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Ammunition -->
@@ -53,7 +53,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Copper/Copper.nif</NIF>
 			<KFM>Art/Terrain/Resources/Copper/Copper.kfm</KFM>
-			<Button>art/Goods/Art/goodammunition.dds</Button>
+			<Button>art/Goods/goodammunition.dds</Button>
 			<FontButtonIndex>92</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Androids -->
@@ -63,7 +63,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodandroids.dds</Button>
+			<Button>art/Goods/goodandroids.dds</Button>
 			<FontButtonIndex>222</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Antigrav Generators -->
@@ -73,7 +73,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodantigravgenerators.dds</Button>
+			<Button>art/Goods/goodantigravgenerators.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Anti Gravity Field Generators -->
@@ -83,7 +83,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodantigravityfieldgenerators.dds</Button>
+			<Button>art/Goods/goodantigravityfieldgenerators.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Antimatter -->
@@ -93,7 +93,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodantimatter.dds</Button>
+			<Button>art/Goods/goodantimatter.dds</Button>
 			<FontButtonIndex>170</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Ash -->
@@ -103,7 +103,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodash.dds</Button>
+			<Button>art/Goods/goodash.dds</Button>
 			<FontButtonIndex>130</FontButtonIndex>
 		</BonusArtInfo-->
 	<!-- Automobiles -->
@@ -113,7 +113,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodautomobile.dds</Button>
+			<Button>art/Goods/goodautomobile.dds</Button>
 			<FontButtonIndex>80</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Bamboo -->
@@ -123,7 +123,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodbamboo.dds</Button>
+			<Button>art/Goods/goodbamboo.dds</Button>
 			<FontButtonIndex>112</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Bark -->
@@ -133,7 +133,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodbark.dds</Button>
+			<Button>art/Goods/goodbark.dds</Button>
 			<FontButtonIndex>63</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Barrels -->
@@ -143,7 +143,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodbarrels.dds</Button>
+			<Button>art/Goods/goodbarrels.dds</Button>
 			<FontButtonIndex>205</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Baskets -->
@@ -153,7 +153,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodbaskets.dds</Button>
+			<Button>art/Goods/goodbaskets.dds</Button>
 			<FontButtonIndex>113</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Beads -->
@@ -163,7 +163,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodbeads.dds</Button>
+			<Button>art/Goods/goodbeads.dds</Button>
 			<FontButtonIndex>114</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Berlinite -->
@@ -173,7 +173,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodberlinite.dds</Button>
+			<Button>art/Goods/goodberlinite.dds</Button>
 			<FontButtonIndex>188</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Berries -->
@@ -183,7 +183,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodberries.dds</Button>
+			<Button>art/Goods/goodberries.dds</Button>
 			<FontButtonIndex>115</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Bicycles -->
@@ -193,7 +193,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodbicycles.dds</Button>
+			<Button>art/Goods/goodbicycles.dds</Button>
 			<FontButtonIndex>116</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Biofuel -->
@@ -203,7 +203,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Oil/Oil.nif</NIF>
 			<KFM>Art/Terrain/Resources/Oil/Oil.kfm</KFM>
-			<Button>art/Goods/Art/goodbiofuel.dds</Button>
+			<Button>art/Goods/goodbiofuel.dds</Button>
 			<FontButtonIndex>77</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Bionic Suits -->
@@ -213,7 +213,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodbionicsuits.dds</Button>
+			<Button>art/Goods/goodbionicsuits.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Biopolymers -->
@@ -223,7 +223,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodbiopolymers.dds</Button>
+			<Button>art/Goods/goodbiopolymers.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Blender -->
@@ -233,7 +233,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodblender.dds</Button>
+			<Button>art/Goods/goodblender.dds</Button>
 			<FontButtonIndex>54</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Bone -->
@@ -243,7 +243,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodbone.dds</Button>
+			<Button>art/Goods/goodbone.dds</Button>
 			<FontButtonIndex>117</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Books -->
@@ -253,7 +253,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodbooks.dds</Button>
+			<Button>art/Goods/goodbooks.dds</Button>
 			<FontButtonIndex>118</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Borax -->
@@ -263,7 +263,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodborax.dds</Button>
+			<Button>art/Goods/goodborax.dds</Button>
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Brass Instruments -->
@@ -273,7 +273,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodbrass.dds</Button>
+			<Button>art/Goods/goodbrass.dds</Button>
 			<FontButtonIndex>66</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Bread -->
@@ -283,7 +283,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodbread.dds</Button>
+			<Button>art/Goods/goodbread.dds</Button>
 			<FontButtonIndex>119</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Bricks -->
@@ -293,7 +293,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodbricks.dds</Button>
+			<Button>art/Goods/goodbricks.dds</Button>
 			<FontButtonIndex>120</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Bugs -->
@@ -303,7 +303,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodbugs.dds</Button>
+			<Button>art/Goods/goodbugs.dds</Button>
 			<FontButtonIndex>94</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Caesium Ore -->
@@ -313,7 +313,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodcaesium.dds</Button>
+			<Button>art/Goods/goodcaesium.dds</Button>
 			<FontButtonIndex>130</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Calculators -->
@@ -323,7 +323,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodcalculators.dds</Button>
+			<Button>art/Goods/goodcalculators.dds</Button>
 			<FontButtonIndex>126</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Candles -->
@@ -333,7 +333,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodcandles.dds</Button>
+			<Button>art/Goods/goodcandles.dds</Button>
 			<FontButtonIndex>69</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Candy -->
@@ -343,7 +343,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodcandy.dds</Button>
+			<Button>art/Goods/goodcandy.dds</Button>
 			<FontButtonIndex>88</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Canned Food -->
@@ -353,7 +353,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodcannedfood.dds</Button>
+			<Button>art/Goods/goodcannedfood.dds</Button>
 			<FontButtonIndex>113</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Carcass -->
@@ -363,7 +363,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodcarcass.dds</Button>
+			<Button>art/Goods/goodcarcass.dds</Button>
 			<FontButtonIndex>122</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Carpets -->
@@ -373,7 +373,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodcarpets.dds</Button>
+			<Button>art/Goods/goodcarpets.dds</Button>
 			<FontButtonIndex>86</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Cat -->
@@ -383,7 +383,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodcat.dds</Button>
+			<Button>art/Goods/goodcat.dds</Button>
 			<FontButtonIndex>83</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Cellphones -->
@@ -393,7 +393,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodcellphones.dds</Button>
+			<Button>art/Goods/goodcellphones.dds</Button>
 			<FontButtonIndex>156</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Cellulase Capsules -->
@@ -403,7 +403,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodcellulasecapsules.dds</Button>
+			<Button>art/Goods/goodcellulasecapsules.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Cement -->
@@ -413,7 +413,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Stone/Stone.nif</NIF>
 			<KFM>Art/Terrain/Resources/Stone/Stone.kfm</KFM>
-			<Button>art/Goods/Art/goodcement.dds</Button>
+			<Button>art/Goods/goodcement.dds</Button>
 			<FontButtonIndex>102</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Chalk -->
@@ -423,7 +423,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodchalk.dds</Button>
+			<Button>art/Goods/goodchalk.dds</Button>
 			<FontButtonIndex>36</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Charcoal -->
@@ -433,7 +433,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodcharcoal.dds</Button>
+			<Button>art/Goods/goodcharcoal.dds</Button>
 			<FontButtonIndex>1</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Cheese -->
@@ -443,7 +443,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodcheese.dds</Button>
+			<Button>art/Goods/goodcheese.dds</Button>
 			<FontButtonIndex>155</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Chemicals -->
@@ -453,7 +453,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodchemicals.dds</Button>
+			<Button>art/Goods/goodchemicals.dds</Button>
 			<FontButtonIndex>85</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Chocolate -->
@@ -463,7 +463,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodchocolate.dds</Button>
+			<Button>art/Goods/goodchocolate.dds</Button>
 			<FontButtonIndex>190</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Chromite Ore -->
@@ -473,7 +473,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodchromite.dds</Button>
+			<Button>art/Goods/goodchromite.dds</Button>
 			<FontButtonIndex>27</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Cinnabar Ore -->
@@ -483,7 +483,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodcinnabar.dds</Button>
+			<Button>art/Goods/goodcinnabar.dds</Button>
 			<FontButtonIndex>127</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Common Clay -->
@@ -493,7 +493,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodclay.dds</Button>
+			<Button>art/Goods/goodclay.dds</Button>
 			<FontButtonIndex>49</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Cloth -->
@@ -504,7 +504,7 @@
 			<NIF>Art/Terrain/Resources/Cloth/Cloth.nif</NIF>
 			<KFM>Art/Terrain/Resources/Wheat/Wheat.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Cloth/Cloth.nif</SHADERNIF>
-			<Button>art/Goods/Art/goodcloth.dds</Button>
+			<Button>art/Goods/goodcloth.dds</Button>
 			<FontButtonIndex>64</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Clothing -->
@@ -514,7 +514,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodclothing.dds</Button>
+			<Button>art/Goods/goodclothing.dds</Button>
 			<FontButtonIndex>87</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Cobalt Ore -->
@@ -524,7 +524,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodcobalt.dds</Button>
+			<Button>art/Goods/goodcobalt.dds</Button>
 			<FontButtonIndex>95</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Computers -->
@@ -534,7 +534,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodcomputers.dds</Button>
+			<Button>art/Goods/goodcomputers.dds</Button>
 			<FontButtonIndex>126</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Copper Wires -->
@@ -544,7 +544,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodcopperwiring.dds</Button>
+			<Button>art/Goods/goodcopperwiring.dds</Button>
 			<FontButtonIndex>2</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Cotton Fibers -->
@@ -554,7 +554,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodcottonfibers.dds</Button>
+			<Button>art/Goods/goodcottonfibers.dds</Button>
 			<FontButtonIndex>101</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Cybernetic Chloroplasts -->
@@ -564,7 +564,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodcyberneticchloroplasts.dds</Button>
+			<Button>art/Goods/goodcyberneticchloroplasts.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Oil Products -->
@@ -574,7 +574,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Oil/Oil.nif</NIF>
 			<KFM>Art/Terrain/Resources/Oil/Oil.kfm</KFM>
-			<Button>art/Goods/Art/goodoilproducts.dds</Button>
+			<Button>art/Goods/goodoilproducts.dds</Button>
 			<FontButtonIndex>77</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Digitized Membranes -->
@@ -584,7 +584,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/gooddigitizedmembranes.dds</Button>
+			<Button>art/Goods/gooddigitizedmembranes.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Dishwashers -->
@@ -594,7 +594,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/gooddishwashers.dds</Button>
+			<Button>art/Goods/gooddishwashers.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Diskettes -->
@@ -604,7 +604,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/gooddiskettes.dds</Button>
+			<Button>art/Goods/gooddiskettes.dds</Button>
 			<FontButtonIndex>206</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Dog -->
@@ -614,7 +614,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/gooddog.dds</Button>
+			<Button>art/Goods/gooddog.dds</Button>
 			<FontButtonIndex>89</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Dried Fish -->
@@ -624,7 +624,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/gooddriedfish.dds</Button>
+			<Button>art/Goods/gooddriedfish.dds</Button>
 			<FontButtonIndex>220</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Dried Fruit -->
@@ -634,7 +634,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/gooddriedfruit.dds</Button>
+			<Button>art/Goods/gooddriedfruit.dds</Button>
 			<FontButtonIndex>38</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Dried Meat -->
@@ -644,7 +644,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/gooddriedmeat.dds</Button>
+			<Button>art/Goods/gooddriedmeat.dds</Button>
 			<FontButtonIndex>62</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Drugs -->
@@ -654,7 +654,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/gooddrugs.dds</Button>
+			<Button>art/Goods/gooddrugs.dds</Button>
 			<FontButtonIndex>199</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Dye -->
@@ -664,7 +664,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/gooddye.dds</Button>
+			<Button>art/Goods/gooddye.dds</Button>
 			<FontButtonIndex>20</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Ecstasy -->
@@ -674,7 +674,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodecstasy.dds</Button>
+			<Button>art/Goods/goodecstasy.dds</Button>
 			<FontButtonIndex>199</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Eggs -->
@@ -684,7 +684,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodeggs.dds</Button>
+			<Button>art/Goods/goodeggs.dds</Button>
 			<FontButtonIndex>178</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Electroactive Polymers -->
@@ -694,7 +694,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodelectroactivepolymers.dds</Button>
+			<Button>art/Goods/goodelectroactivepolymers.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Electrolyte Cells -->
@@ -704,7 +704,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodelectrolyticcells.dds</Button>
+			<Button>art/Goods/goodelectrolyticcells.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Energy Drink -->
@@ -714,7 +714,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodenergydrink.dds</Button>
+			<Button>art/Goods/goodenergydrink.dds</Button>
 			<FontButtonIndex>0</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Enzymes -->
@@ -724,7 +724,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodenzymes.dds</Button>
+			<Button>art/Goods/goodenzymes.dds</Button>
 			<FontButtonIndex>85</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Exoskeletons -->
@@ -734,7 +734,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodexoskeletons.dds</Button>
+			<Button>art/Goods/goodexoskeletons.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Feathers -->
@@ -744,7 +744,7 @@
 			<fInterfaceScale>1.25</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Feathers/Bird2.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodfeathers.dds</Button>
+			<Button>art/Goods/goodfeathers.dds</Button>
 			<FontButtonIndex>134</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Fertilizers -->
@@ -754,7 +754,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodfertilizer.dds</Button>
+			<Button>art/Goods/goodfertilizer.dds</Button>
 			<FontButtonIndex>102</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Fiberglass -->
@@ -764,7 +764,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodfiberglass.dds</Button>
+			<Button>art/Goods/goodfiberglass.dds</Button>
 			<FontButtonIndex>221</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Fiber Optic Cables -->
@@ -774,7 +774,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodfiberoptics.dds</Button>
+			<Button>art/Goods/goodfiberoptics.dds</Button>
 			<FontButtonIndex>125</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Firearms -->
@@ -784,7 +784,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodfirearms.dds</Button>
+			<Button>art/Goods/goodfirearms.dds</Button>
 			<FontButtonIndex>75</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Firecrackers -->
@@ -794,7 +794,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodfirecrackers.dds</Button>
+			<Button>art/Goods/goodfirecrackers.dds</Button>
 			<FontButtonIndex>199</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Fish Oil -->
@@ -804,7 +804,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodfishoil.dds</Button>
+			<Button>art/Goods/goodfishoil.dds</Button>
 			<FontButtonIndex>70</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Flash Memory Devices -->
@@ -814,7 +814,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodflashmemorydevices.dds</Button>
+			<Button>art/Goods/goodflashmemorydevices.dds</Button>
 			<FontButtonIndex>82</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Flax Fibers -->
@@ -824,7 +824,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodflaxfibers.dds</Button>
+			<Button>art/Goods/goodflaxfibers.dds</Button>
 			<FontButtonIndex>43</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Flint -->
@@ -834,7 +834,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodflint.dds</Button>
+			<Button>art/Goods/goodflint.dds</Button>
 			<FontButtonIndex>57</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Flour -->
@@ -844,7 +844,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodflour.dds</Button>
+			<Button>art/Goods/goodflour.dds</Button>
 			<FontButtonIndex>36</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Flowers -->
@@ -854,7 +854,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodflowers.dds</Button>
+			<Button>art/Goods/goodflowers.dds</Button>
 			<FontButtonIndex>50</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Fossils -->
@@ -864,7 +864,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodfossils.dds</Button>
+			<Button>art/Goods/goodfossils.dds</Button>
 			<FontButtonIndex>189</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Fruit -->
@@ -874,7 +874,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodfruit.dds</Button>
+			<Button>art/Goods/goodfruit.dds</Button>
 			<FontButtonIndex>128</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Furniture -->
@@ -884,7 +884,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodfurniture.dds</Button>
+			<Button>art/Goods/goodfurniture.dds</Button>
 			<FontButtonIndex>84</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Furs -->
@@ -894,7 +894,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodfur.dds</Button>
+			<Button>art/Goods/goodfur.dds</Button>
 			<FontButtonIndex>21</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Gems -->
@@ -904,7 +904,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Gems/Gems.nif</NIF>
 			<KFM>Art/Terrain/Resources/Gems/Gems.kfm</KFM>
-			<Button>art/Goods/Art/goodcutgems.dds</Button>
+			<Button>art/Goods/goodcutgems.dds</Button>
 			<FontButtonIndex>22</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Ghee Oil -->
@@ -914,7 +914,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodgheeoil.dds</Button>
+			<Button>art/Goods/goodgheeoil.dds</Button>
 			<FontButtonIndex>169</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Glassware -->
@@ -924,7 +924,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Wine/Wine.nif</NIF>
 			<KFM>Art/Terrain/Resources/Wine/Wine.kfm</KFM>
-			<Button>art/Goods/Art/goodglass.dds</Button>
+			<Button>art/Goods/goodglass.dds</Button>
 			<FontButtonIndex>71</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Grain -->
@@ -934,7 +934,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodgrain.dds</Button>
+			<Button>art/Goods/goodgrain.dds</Button>
 			<FontButtonIndex>19</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Graphene -->
@@ -944,7 +944,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodgraphene.dds</Button>
+			<Button>art/Goods/goodgraphene.dds</Button>
 			<FontButtonIndex>105</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Graphite -->
@@ -954,7 +954,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodgraphite.dds</Button>
+			<Button>art/Goods/goodgraphite.dds</Button>
 			<FontButtonIndex>1</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Grass -->
@@ -964,7 +964,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodgrass.dds</Button>
+			<Button>art/Goods/goodgrass.dds</Button>
 			<FontButtonIndex>112</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Gravity Generators -->
@@ -974,7 +974,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodgravitygenerators.dds</Button>
+			<Button>art/Goods/goodgravitygenerators.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Hats -->
@@ -984,7 +984,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodhats.dds</Button>
+			<Button>art/Goods/goodhats.dds</Button>
 			<FontButtonIndex>217</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Heavy Water -->
@@ -994,7 +994,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodheavywater.dds</Button>
+			<Button>art/Goods/goodheavywater.dds</Button>
 			<FontButtonIndex>8</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Helicopters -->
@@ -1004,7 +1004,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodhelicopters.dds</Button>
+			<Button>art/Goods/goodhelicopters.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Hematite Ore -->
@@ -1014,7 +1014,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodhematite.dds</Button>
+			<Button>art/Goods/goodhematite.dds</Button>
 			<FontButtonIndex>95</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Hemp Fibers -->
@@ -1024,7 +1024,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodhempfibers.dds</Button>
+			<Button>art/Goods/goodhempfibers.dds</Button>
 			<FontButtonIndex>176</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Hide -->
@@ -1034,7 +1034,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodhide.dds</Button>
+			<Button>art/Goods/goodhide.dds</Button>
 			<FontButtonIndex>129</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Holographic Projectors -->
@@ -1044,7 +1044,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodholoprojector.dds</Button>
+			<Button>art/Goods/goodholoprojector.dds</Button>
 			<FontButtonIndex>175</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Honey -->
@@ -1054,7 +1054,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodhoney.dds</Button>
+			<Button>art/Goods/goodhoney.dds</Button>
 			<FontButtonIndex>174</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Hovercrafts -->
@@ -1064,7 +1064,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodhovercrafts.dds</Button>
+			<Button>art/Goods/goodhovercrafts.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Hydrogen -->
@@ -1074,7 +1074,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodhydrogen.dds</Button>
+			<Button>art/Goods/goodhydrogen.dds</Button>
 			<FontButtonIndex>181</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Hyposprays -->
@@ -1084,7 +1084,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodhyposprays.dds</Button>
+			<Button>art/Goods/goodhyposprays.dds</Button>
 			<FontButtonIndex>30</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Ice Cream -->
@@ -1094,7 +1094,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodIcecream.dds</Button>
+			<Button>art/Goods/goodIcecream.dds</Button>
 			<FontButtonIndex>177</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Immunity Drugs -->
@@ -1104,7 +1104,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodimmunitydrugs.dds</Button>
+			<Button>art/Goods/goodimmunitydrugs.dds</Button>
 			<FontButtonIndex>173</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Brass Ingots -->
@@ -1114,7 +1114,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodingotbrass.dds</Button>
+			<Button>art/Goods/goodingotbrass.dds</Button>
 			<FontButtonIndex>120</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Copper Ingots -->
@@ -1124,7 +1124,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodingotcopper.dds</Button>
+			<Button>art/Goods/goodingotcopper.dds</Button>
 			<FontButtonIndex>120</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Electrum Ingots -->
@@ -1134,7 +1134,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodingotelectrum.dds</Button>
+			<Button>art/Goods/goodingotelectrum.dds</Button>
 			<FontButtonIndex>23</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Gold Ingots -->
@@ -1144,7 +1144,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodingotgold.dds</Button>
+			<Button>art/Goods/goodingotgold.dds</Button>
 			<FontButtonIndex>23</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Iron Ingots -->
@@ -1154,7 +1154,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodingotiron.dds</Button>
+			<Button>art/Goods/goodingotiron.dds</Button>
 			<FontButtonIndex>27</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Lead Ingots -->
@@ -1164,7 +1164,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodingotlead.dds</Button>
+			<Button>art/Goods/goodingotlead.dds</Button>
 			<FontButtonIndex>27</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Platinum Ingots -->
@@ -1174,7 +1174,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodingotplatinum.dds</Button>
+			<Button>art/Goods/goodingotplatinum.dds</Button>
 			<FontButtonIndex>27</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Silver Ingots -->
@@ -1184,7 +1184,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodingotsilver.dds</Button>
+			<Button>art/Goods/goodingotsilver.dds</Button>
 			<FontButtonIndex>27</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Tin Ingots -->
@@ -1194,7 +1194,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodingottin.dds</Button>
+			<Button>art/Goods/goodingottin.dds</Button>
 			<FontButtonIndex>27</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Titanium Ingots -->
@@ -1204,7 +1204,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodingottitanium.dds</Button>
+			<Button>art/Goods/goodingottitanium.dds</Button>
 			<FontButtonIndex>27</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Ivory -->
@@ -1214,7 +1214,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodivory.dds</Button>
+			<Button>art/Goods/goodivory.dds</Button>
 			<FontButtonIndex>25</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Jet Engines -->
@@ -1224,7 +1224,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodjetengines.dds</Button>
+			<Button>art/Goods/goodjetengines.dds</Button>
 			<FontButtonIndex>200</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Jewelry -->
@@ -1234,7 +1234,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodjewelry.dds</Button>
+			<Button>art/Goods/goodjewelry.dds</Button>
 			<FontButtonIndex>167</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Kerosene -->
@@ -1244,7 +1244,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodkerosense.dds</Button>
+			<Button>art/Goods/goodkerosense.dds</Button>
 			<FontButtonIndex>197</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Kevlar -->
@@ -1254,7 +1254,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodkevlar.dds</Button>
+			<Button>art/Goods/goodkevlar.dds</Button>
 			<FontButtonIndex>214</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Lacquerware -->
@@ -1264,7 +1264,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodlacquerware.dds</Button>
+			<Button>art/Goods/goodlacquerware.dds</Button>
 			<FontButtonIndex>157</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Lard -->
@@ -1274,7 +1274,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodlard.dds</Button>
+			<Button>art/Goods/goodlard.dds</Button>
 			<FontButtonIndex>216</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Lazulite Ore -->
@@ -1284,7 +1284,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodlazulite.dds</Button>
+			<Button>art/Goods/goodlazulite.dds</Button>
 			<FontButtonIndex>60</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Leather -->
@@ -1294,7 +1294,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodleather.dds</Button>
+			<Button>art/Goods/goodleather.dds</Button>
 			<FontButtonIndex>129</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Lithium -->
@@ -1304,7 +1304,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodlithium.dds</Button>
+			<Button>art/Goods/goodlithium.dds</Button>
 			<FontButtonIndex>193</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Lizards -->
@@ -1314,7 +1314,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodlizards.dds</Button>
+			<Button>art/Goods/goodlizards.dds</Button>
 			<FontButtonIndex>67</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- LSD -->
@@ -1324,7 +1324,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodlsd.dds</Button>
+			<Button>art/Goods/goodlsd.dds</Button>
 			<FontButtonIndex>149</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Lye -->
@@ -1334,7 +1334,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodlye.dds</Button>
+			<Button>art/Goods/goodlye.dds</Button>
 			<FontButtonIndex>113</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Magnesium Ore -->
@@ -1344,7 +1344,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodmagnesium.dds</Button>
+			<Button>art/Goods/goodmagnesium.dds</Button>
 			<FontButtonIndex>36</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Mars Rocks -->
@@ -1354,7 +1354,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodmarsrocks.dds</Button>
+			<Button>art/Goods/goodmarsrocks.dds</Button>
 			<FontButtonIndex>37</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Marzipan -->
@@ -1364,7 +1364,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodmarzipan.dds</Button>
+			<Button>art/Goods/goodmarzipan.dds</Button>
 			<FontButtonIndex>190</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Mascagnite -->
@@ -1374,7 +1374,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodmascagnite.dds</Button>
+			<Button>art/Goods/goodmascagnite.dds</Button>
 			<FontButtonIndex>7</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Masks -->
@@ -1384,7 +1384,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodmasks.dds</Button>
+			<Button>art/Goods/goodmasks.dds</Button>
 			<FontButtonIndex>68</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Mechs -->
@@ -1394,7 +1394,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodmechs.dds</Button>
+			<Button>art/Goods/goodmechs.dds</Button>
 			<FontButtonIndex>139</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Medical Tricoders -->
@@ -1404,7 +1404,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodmedicaltricoders.dds</Button>
+			<Button>art/Goods/goodmedicaltricoders.dds</Button>
 			<FontButtonIndex>156</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Meth -->
@@ -1414,7 +1414,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodmeth.dds</Button>
+			<Button>art/Goods/goodmeth.dds</Button>
 			<FontButtonIndex>192</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Microgenerators -->
@@ -1424,7 +1424,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodmicrogenerators.dds</Button>
+			<Button>art/Goods/goodmicrogenerators.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Microwave Ovens -->
@@ -1434,7 +1434,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodmicrowaves.dds</Button>
+			<Button>art/Goods/goodmicrowaves.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Milk -->
@@ -1444,7 +1444,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodmilk.dds</Button>
+			<Button>art/Goods/goodmilk.dds</Button>
 			<FontButtonIndex>191</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Moon Rocks -->
@@ -1454,7 +1454,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodmoonrocks.dds</Button>
+			<Button>art/Goods/goodmoonrocks.dds</Button>
 			<FontButtonIndex>37</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Nanoactuators -->
@@ -1464,7 +1464,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodnanoactuators.dds</Button>
+			<Button>art/Goods/goodnanoactuators.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Nanobots -->
@@ -1474,7 +1474,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Methane/fallout.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodnanobots.dds</Button>
+			<Button>art/Goods/goodnanobots.dds</Button>
 			<FontButtonIndex>103</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Nanogenerators -->
@@ -1484,7 +1484,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodnanogenerators.dds</Button>
+			<Button>art/Goods/goodnanogenerators.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Nanotubes -->
@@ -1494,7 +1494,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodnanotubes.dds</Button>
+			<Button>art/Goods/goodnanotubes.dds</Button>
 			<FontButtonIndex>105</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Nets -->
@@ -1504,7 +1504,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodnets.dds</Button>
+			<Button>art/Goods/goodnets.dds</Button>
 			<FontButtonIndex>219</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Neuroimplants -->
@@ -1514,7 +1514,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodneuroimplants.dds</Button>
+			<Button>art/Goods/goodneuroimplants.dds</Button>
 			<FontButtonIndex>182</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Newspapers -->
@@ -1524,7 +1524,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodnewspapers.dds</Button>
+			<Button>art/Goods/goodnewspapers.dds</Button>
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Nickel Ore -->
@@ -1534,7 +1534,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodnickel.dds</Button>
+			<Button>art/Goods/goodnickel.dds</Button>
 			<FontButtonIndex>193</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Novus Chemicals -->
@@ -1544,7 +1544,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodnovuschemicals.dds</Button>
+			<Button>art/Goods/goodnovuschemicals.dds</Button>
 			<FontButtonIndex>204</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Nutella -->
@@ -1554,7 +1554,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodnutella.dds</Button>
+			<Button>art/Goods/goodnutella.dds</Button>
 			<FontButtonIndex>194</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Nuts -->
@@ -1564,7 +1564,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodnuts.dds</Button>
+			<Button>art/Goods/goodnuts.dds</Button>
 			<FontButtonIndex>185</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Nylon -->
@@ -1574,7 +1574,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodnylon.dds</Button>
+			<Button>art/Goods/goodnylon.dds</Button>
 			<FontButtonIndex>184</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Olive Oil -->
@@ -1584,7 +1584,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodoliveoil.dds</Button>
+			<Button>art/Goods/goodoliveoil.dds</Button>
 			<FontButtonIndex>180</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Omega Acids -->
@@ -1594,7 +1594,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodomegaacids.dds</Button>
+			<Button>art/Goods/goodomegaacids.dds</Button>
 			<FontButtonIndex>180</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Organic Computers -->
@@ -1604,7 +1604,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodorganiccomputers.dds</Button>
+			<Button>art/Goods/goodorganiccomputers.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Organic Photonic Cells -->
@@ -1614,7 +1614,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodorganicphotoniccells.dds</Button>
+			<Button>art/Goods/goodorganicphotoniccells.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Paper -->
@@ -1624,7 +1624,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodpaper.dds</Button>
+			<Button>art/Goods/goodpaper.dds</Button>
 			<FontButtonIndex>149</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Parts -->
@@ -1634,7 +1634,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodparts.dds</Button>
+			<Button>art/Goods/goodparts.dds</Button>
 			<FontButtonIndex>82</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Pasta -->
@@ -1644,7 +1644,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodpasta.dds</Button>
+			<Button>art/Goods/goodpasta.dds</Button>
 			<FontButtonIndex>153</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Peat -->
@@ -1654,7 +1654,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodpeat.dds</Button>
+			<Button>art/Goods/goodpeat.dds</Button>
 			<FontButtonIndex>58</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Pelts -->
@@ -1664,7 +1664,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodpelt.dds</Button>
+			<Button>art/Goods/goodpelt.dds</Button>
 			<FontButtonIndex>148</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Pencils -->
@@ -1674,7 +1674,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodpencils.dds</Button>
+			<Button>art/Goods/goodpencils.dds</Button>
 			<FontButtonIndex>204</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Percussion Instruments -->
@@ -1684,7 +1684,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodpercussion.dds</Button>
+			<Button>art/Goods/goodpercussion.dds</Button>
 			<FontButtonIndex>162</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Perfume -->
@@ -1694,7 +1694,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodperfume.dds</Button>
+			<Button>art/Goods/goodperfume.dds</Button>
 			<FontButtonIndex>164</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Personal Electronics -->
@@ -1704,7 +1704,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodpersonalelectronics.dds</Button>
+			<Button>art/Goods/goodpersonalelectronics.dds</Button>
 			<FontButtonIndex>156</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Replicators -->
@@ -1714,7 +1714,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodreplicators.dds</Button>
+			<Button>art/Goods/goodreplicators.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Pharmaceuticals -->
@@ -1724,7 +1724,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodpharmaceuticals.dds</Button>
+			<Button>art/Goods/goodpharmaceuticals.dds</Button>
 			<FontButtonIndex>179</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Phonographs -->
@@ -1734,7 +1734,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodphonograph.dds</Button>
+			<Button>art/Goods/goodphonograph.dds</Button>
 			<FontButtonIndex>161</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Plasma Generators -->
@@ -1744,7 +1744,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodplasmagenerators.dds</Button>
+			<Button>art/Goods/goodplasmagenerators.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Plastic -->
@@ -1754,7 +1754,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodplastic.dds</Button>
+			<Button>art/Goods/goodplastic.dds</Button>
 			<FontButtonIndex>160</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Poison -->
@@ -1764,7 +1764,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodpoison.dds</Button>
+			<Button>art/Goods/goodpoison.dds</Button>
 			<FontButtonIndex>52</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Potash -->
@@ -1774,7 +1774,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodpotash.dds</Button>
+			<Button>art/Goods/goodpotash.dds</Button>
 			<FontButtonIndex>195</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Potato Chips -->
@@ -1784,7 +1784,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodpotatochips.dds</Button>
+			<Button>art/Goods/goodpotatochips.dds</Button>
 			<FontButtonIndex>158</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Pottery -->
@@ -1794,7 +1794,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Wine/Wine.nif</NIF>
 			<KFM>Art/Terrain/Resources/Wine/Wine.kfm</KFM>
-			<Button>art/Goods/Art/goodpottery.dds</Button>
+			<Button>art/Goods/goodpottery.dds</Button>
 			<FontButtonIndex>78</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Power Tools -->
@@ -1804,7 +1804,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodpowertools.dds</Button>
+			<Button>art/Goods/goodpowertools.dds</Button>
 			<FontButtonIndex>121</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Pumice Stone -->
@@ -1814,7 +1814,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodpumicestone.dds</Button>
+			<Button>art/Goods/goodpumicestone.dds</Button>
 			<FontButtonIndex>49</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Pyrite -->
@@ -1824,7 +1824,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodpyrite.dds</Button>
+			<Button>art/Goods/goodpyrite.dds</Button>
 			<FontButtonIndex>199</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Radios -->
@@ -1834,7 +1834,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodradios.dds</Button>
+			<Button>art/Goods/goodradios.dds</Button>
 			<FontButtonIndex>163</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Raw Fish -->
@@ -1844,7 +1844,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodfish.dds</Button>
+			<Button>art/Goods/goodfish.dds</Button>
 			<FontButtonIndex>15</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Raw Meat -->
@@ -1854,7 +1854,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodrawmeat.dds</Button>
+			<Button>art/Goods/goodrawmeat.dds</Button>
 			<FontButtonIndex>127</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Reeds -->
@@ -1864,7 +1864,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodreeds.dds</Button>
+			<Button>art/Goods/goodreeds.dds</Button>
 			<FontButtonIndex>43</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Refrigerators -->
@@ -1874,7 +1874,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodrefrigerators.dds</Button>
+			<Button>art/Goods/goodrefrigerators.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Replacement Organs -->
@@ -1884,7 +1884,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodreplacementorgans.dds</Button>
+			<Button>art/Goods/goodreplacementorgans.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Roasted Coffee -->
@@ -1894,7 +1894,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodroastedcoffee.dds</Button>
+			<Button>art/Goods/goodroastedcoffee.dds</Button>
 			<FontButtonIndex>38</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Rocket Fuel -->
@@ -1904,7 +1904,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodrocketfuel.dds</Button>
+			<Button>art/Goods/goodrocketfuel.dds</Button>
 			<FontButtonIndex>79</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Rope -->
@@ -1914,7 +1914,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodrope.dds</Button>
+			<Button>art/Goods/goodrope.dds</Button>
 			<FontButtonIndex>186</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Saddles -->
@@ -1924,7 +1924,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodsaddles.dds</Button>
+			<Button>art/Goods/goodsaddles.dds</Button>
 			<FontButtonIndex>207</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Sails -->
@@ -1934,7 +1934,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodsails.dds</Button>
+			<Button>art/Goods/goodsails.dds</Button>
 			<FontButtonIndex>165</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Sand -->
@@ -1944,7 +1944,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodsand.dds</Button>
+			<Button>art/Goods/goodsand.dds</Button>
 			<FontButtonIndex>39</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Sausage -->
@@ -1954,7 +1954,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodsausage.dds</Button>
+			<Button>art/Goods/goodsausage.dds</Button>
 			<FontButtonIndex>202</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Scrolls -->
@@ -1964,7 +1964,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodscrolls.dds</Button>
+			<Button>art/Goods/goodscrolls.dds</Button>
 			<FontButtonIndex>208</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Nok Sculptures -->
@@ -1974,7 +1974,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodsculpturenok.dds</Button>
+			<Button>art/Goods/goodsculpturenok.dds</Button>
 			<FontButtonIndex>201</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Sculptures -->
@@ -1984,7 +1984,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodsculptures.dds</Button>
+			<Button>art/Goods/goodsculptures.dds</Button>
 			<FontButtonIndex>201</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Seasoning -->
@@ -1994,7 +1994,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodspices.dds</Button>
+			<Button>art/Goods/goodspices.dds</Button>
 			<FontButtonIndex>28</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Microchips -->
@@ -2004,7 +2004,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodmicrochips.dds</Button>
+			<Button>art/Goods/goodmicrochips.dds</Button>
 			<FontButtonIndex>82</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Service Bots -->
@@ -2014,7 +2014,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodservicebots.dds</Button>
+			<Button>art/Goods/goodservicebots.dds</Button>
 			<FontButtonIndex>65</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Shellfish -->
@@ -2024,7 +2024,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodshellfish.dds</Button>
+			<Button>art/Goods/goodshellfish.dds</Button>
 			<FontButtonIndex>15</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Shockwave Engines -->
@@ -2034,7 +2034,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodshockwaveengines.dds</Button>
+			<Button>art/Goods/goodshockwaveengines.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Shoes -->
@@ -2044,7 +2044,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodshoes.dds</Button>
+			<Button>art/Goods/goodshoes.dds</Button>
 			<FontButtonIndex>183</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Silk Fibers -->
@@ -2054,7 +2054,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodsilkfibers.dds</Button>
+			<Button>art/Goods/goodsilkfibers.dds</Button>
 			<FontButtonIndex>26</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Skis -->
@@ -2064,7 +2064,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodskis.dds</Button>
+			<Button>art/Goods/goodskis.dds</Button>
 			<FontButtonIndex>76</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Smart Medicine -->
@@ -2074,7 +2074,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodsmartmedicine.dds</Button>
+			<Button>art/Goods/goodsmartmedicine.dds</Button>
 			<FontButtonIndex>85</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Soap -->
@@ -2084,7 +2084,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodsoap.dds</Button>
+			<Button>art/Goods/goodsoap.dds</Button>
 			<FontButtonIndex>192</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Soda Pop -->
@@ -2094,7 +2094,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodsodapop.dds</Button>
+			<Button>art/Goods/goodsodapop.dds</Button>
 			<FontButtonIndex>159</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Soylent Green -->
@@ -2104,7 +2104,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodsoylentgreen.dds</Button>
+			<Button>art/Goods/goodsoylentgreen.dds</Button>
 			<FontButtonIndex>154</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Sponges -->
@@ -2114,7 +2114,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodsponges.dds</Button>
+			<Button>art/Goods/goodsponges.dds</Button>
 			<FontButtonIndex>152</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Steel Ingots -->
@@ -2124,7 +2124,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodingotsteel.dds</Button>
+			<Button>art/Goods/goodingotsteel.dds</Button>
 			<FontButtonIndex>27</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Stim Packs -->
@@ -2134,7 +2134,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodstimpacks.dds</Button>
+			<Button>art/Goods/goodstimpacks.dds</Button>
 			<FontButtonIndex>210</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Stone Tools -->
@@ -2144,7 +2144,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodstonetools.dds</Button>
+			<Button>art/Goods/goodstonetools.dds</Button>
 			<FontButtonIndex>91</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Straw -->
@@ -2154,7 +2154,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodstraw.dds</Button>
+			<Button>art/Goods/goodstraw.dds</Button>
 			<FontButtonIndex>11</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- String Instruments -->
@@ -2164,7 +2164,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodstrings.dds</Button>
+			<Button>art/Goods/goodstrings.dds</Button>
 			<FontButtonIndex>172</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Synthetic Rubber -->
@@ -2175,7 +2175,7 @@
 			<NIF>Art/Terrain/Resources/Rubber/silk.nif</NIF>
 			<KFM>Art/Terrain/Resources/Rubber/silk.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Rubber/silk.nif</SHADERNIF>
-			<Button>art/Goods/Art/goodsyntheticrubber.dds</Button>
+			<Button>art/Goods/goodsyntheticrubber.dds</Button>
 			<FontButtonIndex>99</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Tablets -->
@@ -2185,7 +2185,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodtablets.dds</Button>
+			<Button>art/Goods/goodtablets.dds</Button>
 			<FontButtonIndex>198</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Tanks -->
@@ -2195,7 +2195,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodtanks.dds</Button>
+			<Button>art/Goods/goodtanks.dds</Button>
 			<FontButtonIndex>154</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Tannin -->
@@ -2205,7 +2205,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodstannin.dds</Button>
+			<Button>art/Goods/goodstannin.dds</Button>
 			<FontButtonIndex>63</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Tapestries -->
@@ -2215,7 +2215,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodtapestries.dds</Button>
+			<Button>art/Goods/goodtapestries.dds</Button>
 			<FontButtonIndex>64</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Tar -->
@@ -2225,7 +2225,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodtar.dds</Button>
+			<Button>art/Goods/goodtar.dds</Button>
 			<FontButtonIndex>203</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Televisions -->
@@ -2235,7 +2235,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodtelevisions.dds</Button>
+			<Button>art/Goods/goodtelevisions.dds</Button>
 			<FontButtonIndex>146</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Theremin -->
@@ -2245,7 +2245,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodtheremin.dds</Button>
+			<Button>art/Goods/goodtheremin.dds</Button>
 			<FontButtonIndex>199</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Tires -->
@@ -2255,7 +2255,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodtires.dds</Button>
+			<Button>art/Goods/goodtires.dds</Button>
 			<FontButtonIndex>99</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Tools -->
@@ -2265,7 +2265,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodstonetools.dds</Button>
+			<Button>art/Goods/goodstonetools.dds</Button>
 			<FontButtonIndex>91</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Toys -->
@@ -2275,7 +2275,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodtoys.dds</Button>
+			<Button>art/Goods/goodtoys.dds</Button>
 			<FontButtonIndex>199</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Transistors -->
@@ -2285,7 +2285,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodtransistors.dds</Button>
+			<Button>art/Goods/goodtransistors.dds</Button>
 			<FontButtonIndex>82</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Tungsten Ore -->
@@ -2295,7 +2295,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodtungsten.dds</Button>
+			<Button>art/Goods/goodtungsten.dds</Button>
 			<FontButtonIndex>55</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Typewriters -->
@@ -2305,7 +2305,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodtypewriter.dds</Button>
+			<Button>art/Goods/goodtypewriter.dds</Button>
 			<FontButtonIndex>199</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Unmanned Aircrafts -->
@@ -2315,7 +2315,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodunmannedaircrafts.dds</Button>
+			<Button>art/Goods/goodunmannedaircrafts.dds</Button>
 			<FontButtonIndex>200</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Vacuum -->
@@ -2325,7 +2325,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodvacuum.dds</Button>
+			<Button>art/Goods/goodvacuum.dds</Button>
 			<FontButtonIndex>209</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Vegetables -->
@@ -2335,7 +2335,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodvegetables.dds</Button>
+			<Button>art/Goods/goodvegetables.dds</Button>
 			<FontButtonIndex>128</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Video Games -->
@@ -2345,7 +2345,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodvideogames.dds</Button>
+			<Button>art/Goods/goodvideogames.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Vines -->
@@ -2355,7 +2355,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodvines.dds</Button>
+			<Button>art/Goods/goodvines.dds</Button>
 			<FontButtonIndex>35</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Vulcanized Rubber -->
@@ -2366,7 +2366,7 @@
 			<NIF>Art/Terrain/Resources/Rubber/silk.nif</NIF>
 			<KFM>Art/Terrain/Resources/Rubber/silk.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Rubber/silk.nif</SHADERNIF>
-			<Button>art/Goods/Art/goodvulcanizedrubber.dds</Button>
+			<Button>art/Goods/goodvulcanizedrubber.dds</Button>
 			<FontButtonIndex>99</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Aluminum Wares -->
@@ -2376,7 +2376,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodwarealuminum.dds</Button>
+			<Button>art/Goods/goodwarealuminum.dds</Button>
 			<FontButtonIndex>0</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Brass Wares -->
@@ -2386,7 +2386,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodwarebrass.dds</Button>
+			<Button>art/Goods/goodwarebrass.dds</Button>
 			<FontButtonIndex>66</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Bronze Wares -->
@@ -2396,7 +2396,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodwarebronze.dds</Button>
+			<Button>art/Goods/goodwarebronze.dds</Button>
 			<FontButtonIndex>73</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Copper Wares -->
@@ -2406,7 +2406,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodwarecopper.dds</Button>
+			<Button>art/Goods/goodwarecopper.dds</Button>
 			<FontButtonIndex>2</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Electrum Wares -->
@@ -2416,7 +2416,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodwareelectrum.dds</Button>
+			<Button>art/Goods/goodwareelectrum.dds</Button>
 			<FontButtonIndex>167</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Gold Wares -->
@@ -2426,7 +2426,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodwaregold.dds</Button>
+			<Button>art/Goods/goodwaregold.dds</Button>
 			<FontButtonIndex>23</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Iron Wares -->
@@ -2436,7 +2436,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodwareiron.dds</Button>
+			<Button>art/Goods/goodwareiron.dds</Button>
 			<FontButtonIndex>97</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Lead Wares -->
@@ -2446,7 +2446,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodwarelead.dds</Button>
+			<Button>art/Goods/goodwarelead.dds</Button>
 			<FontButtonIndex>97</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Platinum Wares -->
@@ -2456,7 +2456,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodwareplatinum.dds</Button>
+			<Button>art/Goods/goodwareplatinum.dds</Button>
 			<FontButtonIndex>63</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Silver Wares -->
@@ -2466,7 +2466,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodwaresilver.dds</Button>
+			<Button>art/Goods/goodwaresilver.dds</Button>
 			<FontButtonIndex>160</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Steel Wares -->
@@ -2476,7 +2476,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodwaresteel.dds</Button>
+			<Button>art/Goods/goodwaresteel.dds</Button>
 			<FontButtonIndex>97</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Tin Wares -->
@@ -2486,7 +2486,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodwaretin.dds</Button>
+			<Button>art/Goods/goodwaretin.dds</Button>
 			<FontButtonIndex>0</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Titanium Wares -->
@@ -2496,7 +2496,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodwaretitanium.dds</Button>
+			<Button>art/Goods/goodwaretitanium.dds</Button>
 			<FontButtonIndex>97</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Liquid Metal Wares -->
@@ -2506,7 +2506,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodliquidmetalwares.dds</Button>
+			<Button>art/Goods/goodliquidmetalwares.dds</Button>
 			<FontButtonIndex>170</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Megastrong Alloy Wares -->
@@ -2516,7 +2516,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodwaresmegastrongalloy.dds</Button>
+			<Button>art/Goods/goodwaresmegastrongalloy.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Metamaterial Wares -->
@@ -2526,7 +2526,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodmetamaterials.dds</Button>
+			<Button>art/Goods/goodmetamaterials.dds</Button>
 			<FontButtonIndex>105</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Porcelain Wares -->
@@ -2536,7 +2536,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodporcelain.dds</Button>
+			<Button>art/Goods/goodporcelain.dds</Button>
 			<FontButtonIndex>157</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Superstrong Alloy Wares -->
@@ -2546,7 +2546,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodsuperstrongalloywares.dds</Button>
+			<Button>art/Goods/goodsuperstrongalloywares.dds</Button>
 			<FontButtonIndex>97</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Terracotta Wares -->
@@ -2556,7 +2556,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodterracotta.dds</Button>
+			<Button>art/Goods/goodterracotta.dds</Button>
 			<FontButtonIndex>78</FontButtonIndex>
 		</BonusArtInfo>
 		<!-- Ultra Fuel -->
@@ -2566,7 +2566,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodultrafuel.dds</Button>
+			<Button>art/Goods/goodultrafuel.dds</Button>
 			<FontButtonIndex>87</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Washer Dryer -->
@@ -2576,7 +2576,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodwasherdryer.dds</Button>
+			<Button>art/Goods/goodwasherdryer.dds</Button>
 			<FontButtonIndex>81</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Water Bottles -->
@@ -2586,7 +2586,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodwaterbottle.dds</Button>
+			<Button>art/Goods/goodwaterbottle.dds</Button>
 			<FontButtonIndex>218</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Wax -->
@@ -2596,7 +2596,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodwax.dds</Button>
+			<Button>art/Goods/goodwax.dds</Button>
 			<FontButtonIndex>39</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Whale Oil -->
@@ -2606,7 +2606,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodwhaleoil.dds</Button>
+			<Button>art/Goods/goodwhaleoil.dds</Button>
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Wood -->
@@ -2616,7 +2616,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodwood.dds</Button>
+			<Button>art/Goods/goodwood.dds</Button>
 			<FontButtonIndex>72</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Woodwind Instruments -->
@@ -2626,7 +2626,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodwoodwinds.dds</Button>
+			<Button>art/Goods/goodwoodwinds.dds</Button>
 			<FontButtonIndex>204</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Wool -->
@@ -2637,7 +2637,7 @@
 			<NIF>Art/Terrain/Resources/Sheep/Sheep.nif</NIF>
 			<KFM>Art/Terrain/Resources/Sheep/Sheep.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Sheep/Sheep_FX.nif</SHADERNIF>
-			<Button>art/Goods/Art/goodwool.dds</Button>
+			<Button>art/Goods/goodwool.dds</Button>
 			<FontButtonIndex>101</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Zinc Ore -->
@@ -2647,7 +2647,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodzinc.dds</Button>
+			<Button>art/Goods/goodzinc.dds</Button>
 			<FontButtonIndex>199</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Unsorted -->
@@ -3458,6 +3458,60 @@
 			<KFM></KFM>
 			<Button>art/Interface/Buttons/Bonus/unobtainium.dds</Button>
 			<FontButtonIndex>104</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_GEOGLYPH_PLANS</Type>
+			<fScale>0.08</fScale>
+			<fInterfaceScale>1.2</fInterfaceScale>
+			<NIF>Art/Structures/Improvements/Geoglyph/Geoglyph2.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Builds/buildgeoglyph.dds</Button>
+			<FontButtonIndex>90</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_WATERPROOF_CEMENT</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM></KFM>
+			<Button>art/Goods/Waterproof_Cement.dds</Button>
+			<FontButtonIndex>102</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_CRYSTAL_GLASSWARE</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM></KFM>
+			<Button>art/Goods/goodglass.dds</Button>
+			<FontButtonIndex>71</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_FAKE_GEMS</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM></KFM>
+			<Button>art/Goods/goodcutgems.dds</Button>
+			<FontButtonIndex>22</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_MING_VASE</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM></KFM>
+			<Button>art/Goods/goodporcelain.dds</Button>
+			<FontButtonIndex>157</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_TERRA_SIGILLIATA</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM></KFM>
+			<Button>art/Goods/goodpottery.dds</Button>
+			<FontButtonIndex>78</FontButtonIndex>
 		</BonusArtInfo>
 	</BonusArtInfos>
 </Civ4ArtDefines>
