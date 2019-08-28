@@ -25,7 +25,7 @@
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Corn/Corn.nif</NIF>
 			<KFM></KFM>
-			<Button>,Art/Interface/Buttons/Bonus/Corn.dds,Art/Interface/Buttons/AtlasMapBonus.dds,6,1</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,6,1</Button>
 			<FontButtonIndex>11</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Melons -->
@@ -35,7 +35,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Melon/Wheat.nif</NIF>
 			<KFM>Art/Terrain/Resources/Melon/Wheat.kfm</KFM>
-			<Button>Art/Interface/Buttons/Bonus/melon.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,8,5</Button>
 			<FontButtonIndex>111</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Potatoes -->
@@ -65,7 +65,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Rice/Rice.nif</NIF>
 			<KFM>Art/Terrain/Resources/Rice/Rice.kfm</KFM>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Rice.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,1,14</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,1,3</Button>
 			<FontButtonIndex>17</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Squash -->
@@ -85,7 +85,7 @@
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Wheat/Wheat.nif</NIF>
 			<KFM>Art/Terrain/Resources/Wheat/Wheat.kfm</KFM>
-			<Button>,Art/Interface/Buttons/Bonus/Wheat.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,16</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,2,5</Button>
 			<FontButtonIndex>19</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- FRUITS/NUTS/TREES (Orchard) -->
@@ -97,7 +97,7 @@
 			<NIF>Art/Terrain/Resources/Almond/Banana.nif</NIF>
 			<KFM>Art/Terrain/Resources/Almond/Banana.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Almond/Banana.nif</SHADERNIF>
-			<Button>,Art/Interface/Buttons/Bonus/almond.dds,Art/Interface/Buttons/AtlasMapBonus.dds,1,1</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,1,1</Button>
 			<FontButtonIndex>135</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Apple -->
@@ -108,7 +108,7 @@
 			<NIF>Art/Terrain/Resources/Apple/Banana.nif</NIF>
 			<KFM>Art/Terrain/Resources/Apple/Banana.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Apple/Banana.nif</SHADERNIF>
-			<Button>Art/Interface/Buttons/Bonus/Apple.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,3,4</Button>
 			<FontButtonIndex>47</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Banana -->
@@ -118,7 +118,7 @@
 			<fInterfaceScale>0.7</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Banana/Banana.nif</NIF>
 			<KFM>Art/Terrain/Resources/Banana/Banana.kfm</KFM>
-			<Button>,Art/Interface/Buttons/Bonus/Banana.dds,Art/Interface/Buttons/AtlasMapBonus.dds,2,1</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,2,1</Button>
 			<FontButtonIndex>9</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Coconut -->
@@ -128,7 +128,7 @@
 			<fInterfaceScale>1.5</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Coconut/coconut.nif</NIF>
 			<KFM></KFM>
-			<Button>Art/Interface/Buttons/Bonus/coconut.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,6,4</Button>
 			<FontButtonIndex>123</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Dates -->
@@ -180,7 +180,7 @@
 			<NIF>Art/Terrain/Resources/Mango/Mango.nif</NIF>
 			<KFM></KFM>
 			<SHADERNIF>Art/Terrain/Resources/Mango/Mango.nif</SHADERNIF>
-			<Button>Art/Interface/Buttons/Bonus/Mango.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,7,5</Button>
 			<FontButtonIndex>114</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Papaya -->
@@ -252,7 +252,7 @@
 			<fInterfaceScale>1.6</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Spices/Spices.nif</NIF>
 			<KFM>Art/Terrain/Resources/Spices/Spices.kfm</KFM>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Spices.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,5,14</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,5,3</Button>
 			<FontButtonIndex>28</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- DRUGS/CASH CROPS (Plantation) -->
@@ -273,7 +273,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Coca/sugar.nif</NIF>
 			<KFM>Art/Terrain/Resources/Coca/sugar.kfm</KFM>
-			<Button>Art/Interface/Buttons/Bonus/Coca.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,6,5</Button>
 			<FontButtonIndex>36</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Cocoa -->
@@ -283,7 +283,7 @@
 			<fInterfaceScale>1.5</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Cocoa/spices.nif</NIF>
 			<KFM>Art/Terrain/Resources/Cocoa/spices.kfm</KFM>
-			<Button>Art/Interface/Buttons/Bonus/Cocoa.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,4,5</Button>
 			<FontButtonIndex>44</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Coffee -->
@@ -293,7 +293,7 @@
 			<fInterfaceScale>1.5</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Coffee/Cofwes.nif</NIF>
 			<KFM>Art/Terrain/Resources/Coffee/Cofwes.kfm</KFM>
-			<Button>Art/Interface/Buttons/Bonus/coffee.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,5,5</Button>
 			<FontButtonIndex>38</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Cotton -->
@@ -333,7 +333,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Incense/Incense.nif</NIF>
 			<KFM>Art/Terrain/Resources/Incense/Incense.kfm</KFM>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Incense.dds,Art/Interface/Buttons/AtlasMapBonus.dds,5,2</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,5,2</Button>
 			<FontButtonIndex>24</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Indigo -->
@@ -403,7 +403,7 @@
 			<fInterfaceScale>1.3</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Sugar/Sugar.nif</NIF>
 			<KFM>Art/Terrain/Resources/Sugar/Sugar.kfm</KFM>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Sugar.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,14</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,7,3</Button>
 			<FontButtonIndex>29</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Tea -->
@@ -445,7 +445,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Wine/Wine.nif</NIF>
 			<KFM>Art/Terrain/Resources/Wine/Wine.kfm</KFM>
-			<Button>Art/Interface/Buttons/Bonus/grapes.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,3,5</Button>
 			<FontButtonIndex>96</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Mushrooms -->
@@ -478,7 +478,7 @@
 			<NIF>Art/Terrain/Resources/Camel/camel.nif</NIF>
 			<KFM>Art/Terrain/Resources/Deer/Deer.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Camel/Camel.nif</SHADERNIF>
-			<Button>Art/Interface/Buttons/Bonus/camel.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,5,4</Button>
 			<FontButtonIndex>196</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Cow -->
@@ -489,7 +489,7 @@
 			<NIF>Art/Terrain/Resources/Cow/Cow.nif</NIF>
 			<KFM>Art/Terrain/Resources/Cow/Cow.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Cow/Cow_FX.nif</SHADERNIF>
-			<Button>,Art/Interface/Buttons/Bonus/Cow.dds,Art/Interface/Buttons/AtlasMapBonus.dds,7,1</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,7,1</Button>
 			<FontButtonIndex>12</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Donkey -->
@@ -499,7 +499,7 @@
 			<fInterfaceScale>0.70</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Donkey/Donkey.nif</NIF>
 			<KFM>Art/Terrain/Resources/Horse/Horse.kfm</KFM>
-			<Button>,Art/Interface/Buttons/Bonus/Donkey.dds,Art/Interface/Buttons/AtlasMapBonus.dds,2,2</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,2,2</Button>
 			<FontButtonIndex>133</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Horse -->
@@ -510,7 +510,7 @@
 			<NIF>Art/Terrain/Resources/Horse/Horse.nif</NIF>
 			<KFM>Art/Terrain/Resources/Horse/Horse.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Horse/Horse_FX.nif</SHADERNIF>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Horse.dds,Art/Interface/Buttons/AtlasMapBonus.dds,4,2</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,4,2</Button>
 			<FontButtonIndex>3</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Llama -->
@@ -531,7 +531,7 @@
 			<NIF>Art/Terrain/Resources/Pig/Pig.nif</NIF>
 			<KFM>Art/Terrain/Resources/Pig/Pig.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Pig/Pig_FX.nif</SHADERNIF>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Pig.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,8,15</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,8,4</Button>
 			<FontButtonIndex>16</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Sheep -->
@@ -542,7 +542,7 @@
 			<NIF>Art/Terrain/Resources/Sheep/Sheep.nif</NIF>
 			<KFM>Art/Terrain/Resources/Sheep/Sheep.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Sheep/Sheep_FX.nif</SHADERNIF>
-			<Button>,Art/Interface/Buttons/Bonus/Sheep.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,14</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,2,3</Button>
 			<FontButtonIndex>18</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- WILD (Camp) -->
@@ -554,7 +554,7 @@
 			<NIF>Art/Terrain/Resources/Fur/Fur.nif</NIF>
 			<KFM>Art/Terrain/Resources/Fur/Fur.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Fur/Fur_FX.nif</SHADERNIF>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Fur.dds,Art/Interface/Buttons/AtlasMapBonus.dds,1,2</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,1,2</Button>
 			<FontButtonIndex>21</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Bison -->
@@ -576,7 +576,7 @@
 			<NIF>Art/Terrain/Resources/Deer/Deer.nif</NIF>
 			<KFM>Art/Terrain/Resources/Deer/Deer.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Deer/Deer_FX.nif</SHADERNIF>
-			<Button>,Art/Interface/Buttons/Bonus/Deer.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,1,15</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,1,4</Button>
 			<FontButtonIndex>14</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Elephants -->
@@ -587,7 +587,7 @@
 			<NIF>Art/Terrain/Resources/Elephant/Elephant.nif</NIF>
 			<KFM>Art/Terrain/Resources/Elephant/Elephant.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Elephant/Elephant_FX.nif</SHADERNIF>
-			<Button>,Art/Interface/Buttons/Bonus/elephant.dds,Art/Interface/Buttons/AtlasMapBonus.dds,7,2</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,7,2</Button>
 			<FontButtonIndex>25</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Guinea Pigs -->
@@ -681,7 +681,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Clam/Clam.nif</NIF>
 			<KFM>Art/Terrain/Resources/Clam/Clam.kfm</KFM>
-			<Button>,Art/Interface/Buttons/Bonus/Clam.dds,Art/Interface/Buttons/AtlasMapBonus.dds,3,1</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,3,1</Button>
 			<FontButtonIndex>10</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Crab -->
@@ -692,7 +692,7 @@
 			<NIF>Art/Terrain/Resources/Crab/Crab.nif</NIF>
 			<KFM>Art/Terrain/Resources/Crab/Crab.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Crab/Crab_FX.nif</SHADERNIF>
-			<Button>,Art/Interface/Buttons/Bonus/Crab.dds,Art/Interface/Buttons/AtlasMapBonus.dds,8,1</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,8,1</Button>
 			<FontButtonIndex>13</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Fish -->
@@ -703,7 +703,7 @@
 			<NIF>Art/Terrain/Resources/Fish/Fish.nif</NIF>
 			<KFM>Art/Terrain/Resources/Fish/Fish.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Fish/Fish_FX.nif</SHADERNIF>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Fish.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,4,15</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,4,4</Button>
 			<FontButtonIndex>15</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Lobster -->
@@ -755,7 +755,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Whale/Whale.nif</NIF>
 			<KFM>Art/Terrain/Resources/Whale/Whale.kfm</KFM>
-			<Button>,Art/Interface/Buttons/Bonus/Whale.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,1,16</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,1,5</Button>
 			<FontButtonIndex>31</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- OTHER (Silk Farm) -->
@@ -766,7 +766,7 @@
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Silk/Silk.nif</NIF>
 			<KFM></KFM>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Silk.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,3,14</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,3,3</Button>
 			<FontButtonIndex>26</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- MINERALS -->
@@ -779,7 +779,7 @@
 			<NIF>Art/Terrain/Resources/Amber/Gems.nif</NIF>
 			<KFM>Art/Terrain/Resources/Amber/Gems.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Amber/Gems.nif</SHADERNIF>
-			<Button>Art/Interface/Buttons/Bonus/Amber.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,2,4</Button>
 			<FontButtonIndex>48</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Bauxite ore -->
@@ -799,7 +799,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Coal/Coal.nif</NIF>
 			<KFM>Art/Terrain/Resources/Coal/Coal.kfm</KFM>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Coal.dds,Art/Interface/Buttons/AtlasMapBonus.dds,4,1</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,4,1</Button>
 			<FontButtonIndex>1</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Copper Ore -->
@@ -809,7 +809,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Copper/Copper.nif</NIF>
 			<KFM>Art/Terrain/Resources/Copper/Copper.kfm</KFM>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Copper.dds,Art/Interface/Buttons/AtlasMapBonus.dds,5,1</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,5,1</Button>
 			<FontButtonIndex>2</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Diamond -->
@@ -840,7 +840,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Gold/Gold.nif</NIF>
 			<KFM>Art/Terrain/Resources/Gold/Gold.KFM</KFM>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Gold.dds,Art/Interface/Buttons/AtlasMapBonus.dds,3,2</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,3,2</Button>
 			<FontButtonIndex>23</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Iron Ore -->
@@ -850,7 +850,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Iron/Iron.nif</NIF>
 			<KFM>Art/Terrain/Resources/Iron/Iron.kfm</KFM>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Iron.dds,Art/Interface/Buttons/AtlasMapBonus.dds,6,2</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,6,2</Button>
 			<FontButtonIndex>4</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Lead Ore -->
@@ -913,7 +913,7 @@
 			<fInterfaceScale>.8</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Silver/Silver.nif</NIF>
 			<KFM>Art/Terrain/Resources/Silver/Silver.kfm</KFM>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Silver.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,4,14</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,4,3</Button>
 			<FontButtonIndex>27</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Sulphur -->
@@ -954,7 +954,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Uranium/Uranium.nif</NIF>
 			<KFM>Art/Terrain/Resources/Uranium/Uranium.kfm</KFM>
-			<Button>,Art/Interface/Buttons/Bonus/Uranium.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,8,14</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,8,3</Button>
 			<FontButtonIndex>8</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- DIRT/ROCKS (Quarries) -->
@@ -987,7 +987,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Marble/Marble.nif</NIF>
 			<KFM>Art/Terrain/Resources/Marble/Marble.kfm</KFM>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Marble.dds,Art/Interface/Buttons/AtlasMapBonus.dds,8,2</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,8,2</Button>
 			<FontButtonIndex>5</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Obsidian -->
@@ -1018,7 +1018,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Stone/Stone.nif</NIF>
 			<KFM>Art/Terrain/Resources/Stone/Stone.kfm</KFM>
-			<Button>,Art/Interface/Buttons/Bonus/Stone.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,6,14</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,6,3</Button>
 			<FontButtonIndex>7</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Turquoise -->
@@ -1079,7 +1079,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Oil/Oil.nif</NIF>
 			<KFM>Art/Terrain/Resources/Oil/Oil.kfm</KFM>
-			<Button>,Art/Interface/Buttons/Bonus/Oil.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,15</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,7,4</Button>
 			<FontButtonIndex>6</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Geothermal Energy -->
