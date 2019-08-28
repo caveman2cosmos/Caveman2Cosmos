@@ -197,7 +197,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings-->
 			<!-- Construction cost -->
-			<iCost>62</iCost>
+			<iCost>56</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_NOMAD</ProductionTraitType>

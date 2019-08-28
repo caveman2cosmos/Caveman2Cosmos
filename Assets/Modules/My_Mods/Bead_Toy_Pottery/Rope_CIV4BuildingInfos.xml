@@ -127,7 +127,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings-->
 			<!-- Construction cost -->
-			<iCost>50</iCost>
+			<iCost>30</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>

@@ -40543,7 +40543,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
-			<iCost>50</iCost>
+			<iCost>45</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
@@ -51882,7 +51882,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
-			<iCost>80</iCost>
+			<iCost>92</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -79392,7 +79392,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>35</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->					  
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
@@ -90553,7 +90553,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>86</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>

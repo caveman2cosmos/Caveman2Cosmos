@@ -333,7 +333,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MACHINERY</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>150</iCost>
+			<iCost>148</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Local -->
@@ -861,7 +861,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MONARCHY</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>135</iCost>
+			<iCost>136</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<!-- Local -->

@@ -1206,7 +1206,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>270</iCost>
+			<iCost>180</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_CULTURE</Advisor>
@@ -1255,7 +1255,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>60</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>3</iYield>
@@ -1304,7 +1304,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>60</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>3</iYield>
@@ -1787,7 +1787,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>335</iCost>
+			<iCost>224</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>2</iYield>
@@ -2002,7 +2002,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>60</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>3</iYield>			  
@@ -2119,7 +2119,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>60</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>3</iYield>
@@ -3278,7 +3278,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Cost -->
-			<iCost>410</iCost>
+			<iCost>408</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -3398,7 +3398,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Cost -->
-			<iCost>370</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -3914,7 +3914,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>625</iCost>
+			<iCost>624</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4079,7 +4079,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_WILDERNESSC</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>520</iCost>
+			<iCost>516</iCost>
 			<!-- Main effects -->
 			<iHappiness>3</iHappiness>
 			<YieldChanges>
@@ -4303,7 +4303,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GAS_LIGHTING</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>520</iCost>
+			<iCost>516</iCost>
 			<!-- Main effects -->
 			<iHappiness>3</iHappiness>
 			<YieldChanges>
@@ -4568,7 +4568,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_DEEP_SEA_EXPLORATION</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>520</iCost>
+			<iCost>516</iCost>
 			<!-- Main effects -->
 			<iHappiness>3</iHappiness>
 			<YieldChanges>
@@ -4791,7 +4791,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>520</iCost>
+			<iCost>516</iCost>
 			<!-- Main effects -->
 			<iHappiness>3</iHappiness>
 			<YieldChanges>
@@ -5105,7 +5105,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>625</iCost>
+			<iCost>624</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_CULTURE</Advisor>
@@ -5898,7 +5898,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>515</iCost>
+			<iCost>516</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
@@ -6400,7 +6400,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>240</iCost>
+			<iCost>160</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>2</iYield>
@@ -6602,7 +6602,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>60</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>3</iYield>
@@ -7771,7 +7771,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>240</iCost>
+			<iCost>160</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>3</iYield>
@@ -7809,7 +7809,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>370</iCost>
+			<iCost>248</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>3</iYield>
@@ -8025,7 +8025,7 @@
 			<bWater>1</bWater>
 			<Bonus>BONUS_STONE</Bonus>
 			<!-- Cost -->
-			<iCost>625</iCost>
+			<iCost>624</iCost>
 			<!-- Special Yield and Commerce modifiers -->
 			<SeaPlotYieldChanges>
 				<iYield>0</iYield>
@@ -8090,7 +8090,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>480</iCost>
+			<iCost>320</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>2</iYield>
@@ -8877,7 +8877,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>60</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>3</iYield>
@@ -9595,7 +9595,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>445</iCost>
+			<iCost>296</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>2</iYield>
@@ -10764,7 +10764,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>625</iCost>
+			<iCost>624</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iHurryCostModifier>200</iHurryCostModifier>
 			<!-- Local -->
@@ -17711,7 +17711,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>440</iCost>
+			<iCost>444</iCost>
 			<!-- Misc. Effects -->
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -17766,7 +17766,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>440</iCost>
+			<iCost>444</iCost>
 			<!-- Misc. Effects -->
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -17815,7 +17815,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>440</iCost>
+			<iCost>444</iCost>
 			<!-- Misc. Effects -->
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -17881,7 +17881,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>440</iCost>
+			<iCost>444</iCost>
 			<!-- Misc. Effects -->
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -17930,7 +17930,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>440</iCost>
+			<iCost>444</iCost>
 			<!-- Misc. Effects -->
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -17983,7 +17983,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>440</iCost>
+			<iCost>444</iCost>
 			<!-- Misc. Effects -->
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -18032,7 +18032,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>440</iCost>
+			<iCost>444</iCost>
 			<!-- Misc. Effects -->
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -18081,7 +18081,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>440</iCost>
+			<iCost>444</iCost>
 			<!-- Misc. Effects -->
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -18130,7 +18130,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>440</iCost>
+			<iCost>444</iCost>
 			<!-- Misc. Effects -->
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -18182,7 +18182,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>440</iCost>
+			<iCost>444</iCost>
 			<!-- Misc. Effects -->
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -21102,7 +21102,7 @@
 			<FreeBuilding>BUILDINGCLASS_CHIEFS_HUT</FreeBuilding>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<iCost>625</iCost>
+			<iCost>624</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>10</iAsset>

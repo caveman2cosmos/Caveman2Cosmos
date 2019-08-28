@@ -1427,7 +1427,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_POISON_CRAFTING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
-			<iCost>20</iCost>
+			<iCost>13</iCost>
 			<Era>ERA_ANCIENT</Era>
 			<iAsset>15</iAsset>
 			<bTrade>1</bTrade>
@@ -1693,7 +1693,7 @@ Current techs which are not in this file:-
 			<Civilopedia>TXT_KEY_TECH_HUNTING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_HUNTING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<iCost>11</iCost>
+			<iCost>15</iCost>
 			<Era>ERA_ANCIENT</Era>
 			<iAsset>8</iAsset>
 			<iPower>2</iPower>
