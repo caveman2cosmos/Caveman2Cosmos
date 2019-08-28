@@ -5674,6 +5674,18 @@
 					<BuildingType>BUILDINGCLASS_PORTRAIT_PAINTER</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_COIT_TOWER</BuildingType>
+					<iHappinessChange>-1</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_LAS_VEGAS_STRIP</BuildingType>
+					<iHappinessChange>2</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_MONTE_CARLO</BuildingType>
+					<iHappinessChange>3</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
@@ -5691,6 +5703,10 @@
 				<BuildingHealthChange>
 					<BuildingType>BUILDINGCLASS_MANUFACTURING_PLANT</BuildingType>
 					<iHealthChange>-1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDINGCLASS_WILLOWRUN</BuildingType>
+					<iHealthChange>-2</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
 			<FeatureHappinessChanges/>
@@ -6109,7 +6125,7 @@
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDINGCLASS_CANNIBALISM</BuildingType>
-					<iHappinessChange>1</iHappinessChange>
+					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
@@ -6297,8 +6313,21 @@
 					<BuildingType>BUILDINGCLASS_CANNIBALISM</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_COIT_TOWER</BuildingType>
+					<iHappinessChange>2</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_WOODSTOCK</BuildingType>
+					<iHappinessChange>2</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
-			<BuildingHealthChanges/>
+			<BuildingHealthChanges>
+				<BuildingHealthChange>
+					<BuildingType>BUILDINGCLASS_BURNINGMAN</BuildingType>
+					<iHealthChange>2</iHealthChange>
+				</BuildingHealthChange>
+			</BuildingHealthChanges>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
@@ -6492,6 +6521,18 @@
 					<BuildingType>BUILDINGCLASS_CANNIBALISM</BuildingType>
 					<iHappinessChange>-5</iHappinessChange>
 				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_BAYREUTH</BuildingType>
+					<iHappinessChange>3</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_CRYSTAL_PALACE</BuildingType>
+					<iHappinessChange>2</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_MAGINOTLINE</BuildingType>
+					<iHappinessChange>2</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
@@ -6634,6 +6675,10 @@
 				<BuildingHealthChange>
 					<BuildingType>BUILDINGCLASS_MANUFACTURING_PLANT</BuildingType>
 					<iHealthChange>-1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDINGCLASS_WILLOWRUN</BuildingType>
+					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
 			<FeatureHappinessChanges/>
@@ -8430,7 +8475,12 @@
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
-			<BuildingHappinessChanges/>
+			<BuildingHappinessChanges>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_BURNINGMAN</BuildingType>
+					<iHappinessChange>2</iHappinessChange>
+				</BuildingHappinessChange>
+			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
 					<BuildingType>BUILDINGCLASS_PUBLIC_TRANSPORTATION</BuildingType>
@@ -10716,6 +10766,10 @@
 				<BuildingHealthChange>
 					<BuildingType>BUILDINGCLASS_MESOAMERICAN_MONASTERY</BuildingType>
 					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDINGCLASS_SHAOLIN</BuildingType>
+					<iHealthChange>2</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
 			<FeatureHappinessChanges/>
@@ -15135,6 +15189,14 @@
 				<BuildingHappinessChange>
 					<BuildingType>BUILDINGCLASS_BROADCAST_TOWER</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_AD_AGENCY</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_MADISON_AVENUE</BuildingType>
+					<iHappinessChange>3</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
@@ -21232,7 +21294,7 @@
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDINGCLASS_CANNIBALISM</BuildingType>
-					<iHappinessChange>-5</iHappinessChange>
+					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<Button>art/Interface/buttons/civics/sparth/labor_unorganized.dds</Button>
