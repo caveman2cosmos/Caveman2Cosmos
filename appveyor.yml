@@ -5,7 +5,7 @@ cache:
 - Build\Release -> Tools\deps.exe, Tools\_MakeDLL.bat, Sources\, appveyor.yml
 
 environment:
-  svn_url: https://svn.code.sf.net/p/caveman2cosmos/code/branches/billw-git
+  svn_url: https://svn.code.sf.net/p/caveman2cosmos/code/trunk
   svn_user: c2cappveyor
   svn_pass:
     secure: 8MBckNYRp5EVPgbGcmZ6bQ==
