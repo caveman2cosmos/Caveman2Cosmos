@@ -919,20 +919,12 @@ void CvPlot::doImprovementSpawn()
 	// XXX
 #ifdef _DEBUG
 	{
-		CLLNode<IDInfo>* pUnitNode;
-		CvUnit* pLoopUnit;
-
-		pUnitNode = headUnitNode();
-
-		while (pUnitNode != NULL)
+		for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
 		{
-			pLoopUnit = ::getUnit(pUnitNode->m_data);
-			pUnitNode = nextUnitNode(pUnitNode);
-
-			FAssertMsg(pLoopUnit->atPlot(this), "pLoopUnit is expected to be at the current plot instance");
-			if (!pLoopUnit->atPlot(this))
+			FAssertMsg(unitItr->atPlot(this), "pLoopUnit is expected to be at the current plot instance");
+			if (!unitItr->atPlot(this))
 			{
-				removeUnit(pLoopUnit);
+				removeUnit(unitItr.ptr());
 			}
 		}
 	}
@@ -1380,16 +1372,9 @@ void CvPlot::updateMinimapColor()
 
 bool CvPlot::unitHere(const CvUnit* pUnit) const
 {
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
-	pUnitNode = headUnitNode();
-
-	while (pUnitNode != NULL)
+	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = nextUnitNode(pUnitNode);
-
-		if ( pLoopUnit == pUnit )
+		if (unitItr.ptr() == pUnit)
 		{
 			return true;
 		}
@@ -1498,46 +1483,28 @@ void CvPlot::verifyUnitValidPlot()
 	
 	bool bAnyMoved = false;
 	std::vector<CvUnit*> aUnits;
-	CLLNode<IDInfo>* pUnitNode = headUnitNode();
-	while (pUnitNode != NULL)
-	{
-		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = nextUnitNode(pUnitNode);
-		if (NULL != pLoopUnit)
-		{
-			aUnits.push_back(pLoopUnit);
-		}
-	}
 
-	std::vector<CvUnit*>::iterator it = aUnits.begin();
-	while (it != aUnits.end())
+	for (unit_iterator unitItr = beginValidUnits(); unitItr != endValidUnits(); ++unitItr)
+	{
+		aUnits.push_back(unitItr.ptr());
+	}
+	
+	for (std::vector<CvUnit*>::iterator it = aUnits.begin(); it != aUnits.end(); )
 	{
 		CvUnit* pLoopUnit = *it;
 		bool bErased = false;
 
-		if (pLoopUnit != NULL)
+		if (pLoopUnit->atPlot(this) && 
+			!(pLoopUnit->isCargo()) &&
+			!(pLoopUnit->isCombat()) &&
+			(!isValidDomainForLocation(*pLoopUnit) || !pLoopUnit->canEnterArea(getTeam(), area()))
+			)
 		{
-			if (pLoopUnit->atPlot(this))
+			bAnyMoved = true;
+			if (!pLoopUnit->jumpToNearestValidPlot())
 			{
-				if (!(pLoopUnit->isCargo()))
-				{
-					if (!(pLoopUnit->isCombat()))
-					{
-						if (!isValidDomainForLocation(*pLoopUnit) || !(pLoopUnit->canEnterArea(getTeam(), area())))
-						{
-							bAnyMoved = true;
-							if (!pLoopUnit->jumpToNearestValidPlot())
-							{
-								bErased = true;
-							}
-						}
-					}
-				}
+				bErased = true;
 			}
-		}
-		else
-		{
-			bErased = true;
 		}
 
 		if (bErased)
@@ -1605,27 +1572,20 @@ void CvPlot::verifyUnitValidPlot()
 	//	having been moved
 	if ( bAnyMoved )
 	{
-		it = aUnits.begin();
-		while (it != aUnits.end())
+		for (std::vector<CvUnit*>::iterator it = aUnits.begin(); it != aUnits.end(); ++it)
 		{
 			CvUnit* pLoopUnit = *it;
+			CvSelectionGroup* pGroup = pLoopUnit->getGroup();
 
-			if (pLoopUnit != NULL)
+			if ( pGroup != NULL && !pGroup->isMidMove() )
 			{
-				CvSelectionGroup* pGroup = pLoopUnit->getGroup();
+				CvUnit*	pHeadUnit = pGroup->getHeadUnit();
 
-				if ( pGroup != NULL && !pGroup->isMidMove() )
+				if ( pHeadUnit != NULL && pHeadUnit->plot() != pLoopUnit->plot() )
 				{
-					CvUnit*	pHeadUnit = pGroup->getHeadUnit();
-
-					if ( pHeadUnit != NULL && pHeadUnit->plot() != pLoopUnit->plot() )
-					{
-						pLoopUnit->joinGroup(NULL);
-					}
+					pLoopUnit->joinGroup(NULL);
 				}
 			}
-
-			++it;
 		}
 	}
 }
@@ -17120,6 +17080,9 @@ int CvPlot::getCommunicability(PromotionLineTypes ePromotionLine, bool bWorkedTi
 	}
 
 	return iCommunicability;
-
 }
 
+CvUnit* CvPlot::unit_iterator::resolve(const IDInfo& info) const
+{
+	return ::getUnit(info);
+}

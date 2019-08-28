@@ -8886,3 +8886,8 @@ void CvSelectionGroup::releaseUnitAIs(UnitAITypes eUnitAI)
 	}
 	return;
 }
+
+CvUnit* CvSelectionGroup::unit_iterator::resolve(const IDInfo& info) const
+{
+	return ::getUnit(info);
+}
