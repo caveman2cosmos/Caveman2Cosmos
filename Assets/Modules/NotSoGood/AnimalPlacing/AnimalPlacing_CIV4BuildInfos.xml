@@ -23,7 +23,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/Donkey.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,2,2</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_HORSE</Type>
@@ -42,7 +42,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Horse.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,4,13</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,4,2</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_ELEPHANT</Type>
@@ -61,7 +61,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Ivory.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,13</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,7,2</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_BISON</Type>
@@ -99,7 +99,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Worldbuilder/camel.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,5,4</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_COW</Type>
@@ -118,7 +118,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Cow.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,12</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,7,1</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_DEER</Type>
@@ -137,7 +137,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Deer.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,1,15</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,1,4</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_FUR</Type>
@@ -156,7 +156,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Fur.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,1,13</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,1,2</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_KANGAROO</Type>
@@ -175,7 +175,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/kangaroo.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/kangaroo.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_LLAMA</Type>
@@ -194,7 +194,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/llama.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/llama.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_MAMMOTH</Type>
@@ -213,7 +213,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Ivory.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,13</Button>
+			<Button>Art/Interface/Buttons/Bonus/Mammoth.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PIG</Type>
@@ -232,7 +232,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Pig.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,8,15</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,8,4</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_POULTRY</Type>
@@ -251,7 +251,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/poultry.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/poultry.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_RABBIT</Type>
@@ -270,7 +270,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/Rabbits.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/Rabbits.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_SEA_LIONS</Type>
@@ -308,7 +308,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Sheep.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,14</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,2,3</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_WALRUS</Type>
@@ -346,7 +346,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Guinea_Pig.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,8,15</Button>
+			<Button>Art/Interface/Buttons/Bonus/guinea_pig.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PARROTS</Type>
@@ -365,7 +365,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Units/Parrot.dds</Button>
+			<Button>Art/Interface/Buttons/Resources/Parrots.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_BARLEY</Type>
@@ -384,7 +384,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/Barley.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,1,6</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_CORN</Type>
@@ -403,7 +403,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Corn.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,6,12</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,6,1</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_FLAX</Type>
@@ -422,7 +422,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/flax.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,6,6</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_POMEGRANATE</Type>
@@ -441,7 +441,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/Pomegranate.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/Pomegranate.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_KAVA</Type>
@@ -460,7 +460,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/Kava.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/Kava.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_GUAVA</Type>
@@ -479,7 +479,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/Guava.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/Guava.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_MELON</Type>
@@ -498,7 +498,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/melon_button.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,8,5</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_POTATO</Type>
@@ -517,7 +517,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/potato.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/potato.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PUMPKIN</Type>
@@ -536,7 +536,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/Pumpkin_button.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/Pumpkin.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_RICE</Type>
@@ -555,7 +555,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Rice.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,1,14</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,1,3</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_SQUASH</Type>
@@ -574,7 +574,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/squash_button.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/squash.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_WHEAT</Type>
@@ -593,9 +593,8 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Wheat.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,16</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,2,5</Button>
 		</BuildInfo>
-
 		<BuildInfo>
 			<Type>BUILD_BONUS_ALMONDS</Type>
 			<Description>TXT_KEY_PLACE_ALMONDS</Description>
@@ -613,7 +612,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/Almond.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,1,1</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_APPLE</Type>
@@ -632,7 +631,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/Apple.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,3,4</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_BANANA</Type>
@@ -651,7 +650,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Banana.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,12</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,2,1</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_COCONUT</Type>
@@ -670,7 +669,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/coconut.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,6,4</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_DATES</Type>
@@ -689,7 +688,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/datepalm.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,3,6</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_FIG</Type>
@@ -708,7 +707,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/Fig_button.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,5,6</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_LEMON</Type>
@@ -727,7 +726,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/lemon.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/lemon.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_MANGO</Type>
@@ -746,7 +745,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/Mango.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,7,5</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_OLIVES</Type>
@@ -765,7 +764,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Spices.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,1,14</Button>
+			<Button>,Art/blank.dds.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,1,14</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PAPAYA</Type>
@@ -784,7 +783,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/Papaya.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/Papaya.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PISTACHIO</Type>
@@ -803,7 +802,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/pistachio.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/pistachio.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_WINE</Type>
@@ -822,9 +821,8 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/Wine2.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,3,5</Button>
 		</BuildInfo>
-
 		<BuildInfo>
 			<Type>BUILD_BONUS_HENNA</Type>
 			<Description>TXT_KEY_PLACE_HENNA</Description>
@@ -842,7 +840,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/Henna.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/Henna.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_INDIGO</Type>
@@ -861,7 +859,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/Indigo.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/Indigo.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_RUBBER</Type>
@@ -901,7 +899,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Resources/Timber_button.dds</Button>
 		</BuildInfo>
-
 		<BuildInfo>
 			<Type>BUILD_BONUS_CANNABIS</Type>
 			<Description>TXT_KEY_PLACE_CANNABIS</Description>
@@ -919,7 +916,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/hemp.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/hemp.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_COCA</Type>
@@ -938,7 +935,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/Coca.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,6,5</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_COCOA</Type>
@@ -957,7 +954,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/cocoa.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,4,5</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_COFFEE</Type>
@@ -976,7 +973,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/coffee.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,5,5</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_COTTON</Type>
@@ -1014,7 +1011,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Incense.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,5,13</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,5,2</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_MUSHROOMS</Type>
@@ -1033,7 +1030,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/mushrooms.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/mushrooms.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_OPIUM</Type>
@@ -1052,7 +1049,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/opium.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/opium.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PAPYRUS</Type>
@@ -1071,7 +1068,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/papyrus.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/papyrus.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PEYOTE</Type>
@@ -1090,7 +1087,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/peyote.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/peyote.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PRICKLY_PEAR</Type>
@@ -1109,7 +1106,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/pricklypear.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/pricklypear.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_RESIN</Type>
@@ -1128,7 +1125,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/Resin.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/Resin.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_SILK</Type>
@@ -1147,7 +1144,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Silk.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,3,14</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,3,3</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_SPICES</Type>
@@ -1166,7 +1163,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Spices.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,5,14</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,5,3</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_SUGAR</Type>
@@ -1185,7 +1182,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Sugar.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,14</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,7,3</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_TEA</Type>
@@ -1204,7 +1201,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/Tea.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/Tea.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_TOBACCO</Type>
@@ -1223,7 +1220,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/Tobacco.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/Tobacco.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_VANILLA</Type>
@@ -1242,7 +1239,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/vanilla.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/vanilla.dds</Button>
 		</BuildInfo>
 	</BuildInfos>
 </Civ4BuildInfos>

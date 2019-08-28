@@ -3459,5 +3459,59 @@
 			<Button>art/Interface/Buttons/Bonus/unobtainium.dds</Button>
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_GEOGLYPH_PLANS</Type>
+			<fScale>0.08</fScale>
+			<fInterfaceScale>1.2</fInterfaceScale>
+			<NIF>Art/Structures/Improvements/Geoglyph/Geoglyph2.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Builds/buildgeoglyph.dds</Button>
+			<FontButtonIndex>90</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_WATERPROOF_CEMENT</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM></KFM>
+			<Button>art/Goods/Waterproof_Cement.dds</Button>
+			<FontButtonIndex>102</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_CRYSTAL_GLASSWARE</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM></KFM>
+			<Button>art/Goods/goodglass.dds</Button>
+			<FontButtonIndex>71</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_FAKE_GEMS</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM></KFM>
+			<Button>art/Goods/goodcutgems.dds</Button>
+			<FontButtonIndex>22</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_MING_VASE</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM></KFM>
+			<Button>art/Goods/goodporcelain.dds</Button>
+			<FontButtonIndex>157</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_TERRA_SIGILLIATA</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM></KFM>
+			<Button>art/Goods/goodpottery.dds</Button>
+			<FontButtonIndex>78</FontButtonIndex>
+		</BonusArtInfo>
 	</BonusArtInfos>
 </Civ4ArtDefines>
