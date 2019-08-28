@@ -1153,7 +1153,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>Art/Interface/Buttons/WorldBuilder/Waterproof_Cement.dds</Button>
+			<Button>art/Goods/Waterproof_Cement.dds</Button>
 			<FontButtonIndex>102</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Crystal Glasssware -->
@@ -1163,7 +1163,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodglass.dds</Button>
+			<Button>art/Goods/goodglass.dds</Button>
 			<FontButtonIndex>71</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Fake Gems -->
@@ -1173,7 +1173,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodcutgems.dds</Button>
+			<Button>art/Goods/goodcutgems.dds</Button>
 			<FontButtonIndex>22</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Ming Vase -->
@@ -1183,7 +1183,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodporcelain.dds</Button>
+			<Button>art/Goods/goodporcelain.dds</Button>
 			<FontButtonIndex>157</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Terra Sigillata -->
@@ -1193,7 +1193,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
-			<Button>art/Goods/Art/goodpottery.dds</Button>
+			<Button>art/Goods/goodpottery.dds</Button>
 			<FontButtonIndex>78</FontButtonIndex>
 		</BonusArtInfo>
 	</BonusArtInfos>

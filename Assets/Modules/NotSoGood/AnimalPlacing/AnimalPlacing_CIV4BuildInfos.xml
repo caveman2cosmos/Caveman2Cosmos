@@ -880,7 +880,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/WorldBuilder/Rubber.dds</Button>
+			<Button>Art/Interface/Buttons/Bonus/Rubber.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_TIMBER</Type>

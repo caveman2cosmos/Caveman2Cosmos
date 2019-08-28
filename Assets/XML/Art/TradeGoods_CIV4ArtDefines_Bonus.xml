@@ -13,7 +13,7 @@
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
 		<KFM></KFM>
-		<Button>art/Goods/Art/goodwinechampagne.dds</Button>
+		<Button>art/Goods/goodwinechampagne.dds</Button>
 		<FontButtonIndex>96</FontButtonIndex>
 	</BonusArtInfo>
 <!-- Hit Musicals -->
@@ -23,7 +23,7 @@
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Terrain/Resources/Wheat/Wheat.nif</NIF>
 		<KFM></KFM>
-		<Button>art/Goods/Art/goodhitmusicals.dds</Button>
+		<Button>art/Goods/goodhitmusicals.dds</Button>
 		<FontButtonIndex>32</FontButtonIndex>
 	</BonusArtInfo>
 <!-- Carved Emu Eggs -->
@@ -33,7 +33,7 @@
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
 		<KFM></KFM>
-		<Button>art/Goods/Art/goodcarvedemueggs.dds</Button>
+		<Button>art/Goods/goodcarvedemueggs.dds</Button>
 		<FontButtonIndex>178</FontButtonIndex>
 	</BonusArtInfo>
 <!-- Fine Leather -->
@@ -43,7 +43,7 @@
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
 		<KFM></KFM>
-		<Button>art/Goods/Art/goodfineleather.dds</Button>
+		<Button>art/Goods/goodfineleather.dds</Button>
 		<FontButtonIndex>129</FontButtonIndex>
 	</BonusArtInfo>
 <!-- Fine Stoneware -->
@@ -53,7 +53,7 @@
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
 		<KFM></KFM>
-		<Button>art/Goods/Art/goodfinestoneware.dds</Button>
+		<Button>art/Goods/goodfinestoneware.dds</Button>
 		<FontButtonIndex>78</FontButtonIndex>
 	</BonusArtInfo>
 <!-- Hawaiian Surfboards -->
@@ -63,7 +63,7 @@
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
 		<KFM></KFM>
-		<Button>art/Goods/Art/goodhawaiiansurfboards.dds</Button>
+		<Button>art/Goods/goodhawaiiansurfboards.dds</Button>
 		<FontButtonIndex>110</FontButtonIndex>
 	</BonusArtInfo>
 <!-- Jade Death Masks -->
@@ -73,7 +73,7 @@
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
 		<KFM></KFM>
-		<Button>art/Goods/Art/goodjadedeathmask.dds</Button>
+		<Button>art/Goods/goodjadedeathmask.dds</Button>
 		<FontButtonIndex>90</FontButtonIndex>
 	</BonusArtInfo>
 <!-- Hit Movies -->
@@ -83,7 +83,7 @@
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Terrain/Resources/Wheat/Wheat.nif</NIF>
 		<KFM></KFM>
-		<Button>art/Goods/Art/goodhitmovies.dds</Button>
+		<Button>art/Goods/goodhitmovies.dds</Button>
 		<FontButtonIndex>34</FontButtonIndex>
 	</BonusArtInfo>
 <!-- Hit Singles -->
@@ -93,7 +93,7 @@
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Terrain/Resources/Wheat/Wheat.nif</NIF>
 		<KFM></KFM>
-		<Button>art/Goods/Art/goodhitsingles.dds</Button>
+		<Button>art/Goods/goodhitsingles.dds</Button>
 		<FontButtonIndex>33</FontButtonIndex>
 	</BonusArtInfo>
 <!-- Ostrich Feathers -->
@@ -103,7 +103,7 @@
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
 		<KFM></KFM>
-		<Button>art/Goods/Art/goodostrichfeathers.dds</Button>
+		<Button>art/Goods/goodostrichfeathers.dds</Button>
 		<FontButtonIndex>134</FontButtonIndex>
 	</BonusArtInfo>
 <!-- Red and Black Ware -->
@@ -113,7 +113,7 @@
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
 		<KFM></KFM>
-		<Button>art/Goods/Art/goodblackredware.dds</Button>
+		<Button>art/Goods/goodblackredware.dds</Button>
 		<FontButtonIndex>78</FontButtonIndex>
 	</BonusArtInfo>
 <!-- Wine - Vintage Red -->
@@ -123,7 +123,7 @@
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
 		<KFM></KFM>
-		<Button>art/Goods/Art/goodvintageredwine.dds</Button>
+		<Button>art/Goods/goodvintageredwine.dds</Button>
 		<FontButtonIndex>30</FontButtonIndex>
 	</BonusArtInfo>
 <!-- Wine - Vintage White -->
@@ -133,7 +133,7 @@
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
 		<KFM></KFM>
-		<Button>art/Goods/Art/goodvintagewhitewine.dds</Button>
+		<Button>art/Goods/goodvintagewhitewine.dds</Button>
 		<FontButtonIndex>30</FontButtonIndex>
 	</BonusArtInfo>
 <!-- Olmec Jade Figurines -->
@@ -143,7 +143,7 @@
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
 		<KFM></KFM>
-		<Button>art/Goods/Art/goodolmecjadefigurines.dds</Button>
+		<Button>art/Goods/goodolmecjadefigurines.dds</Button>
 		<FontButtonIndex>55</FontButtonIndex>
 	</BonusArtInfo>
 <!-- Liangzhu Jades -->
@@ -153,7 +153,7 @@
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
 		<KFM></KFM>
-		<Button>art/Goods/Art/goodlianghzujades.dds</Button>
+		<Button>art/Goods/goodlianghzujades.dds</Button>
 		<FontButtonIndex>55</FontButtonIndex>
 	</BonusArtInfo>
 <!-- Shang Jade Ritual Items -->
@@ -163,7 +163,7 @@
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
 		<KFM></KFM>
-		<Button>art/Goods/Art/goodshangjaderitualitems.dds</Button>
+		<Button>art/Goods/goodshangjaderitualitems.dds</Button>
 		<FontButtonIndex>55</FontButtonIndex>
 	</BonusArtInfo>
 </BonusArtInfos>
