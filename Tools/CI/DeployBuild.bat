@@ -58,11 +58,12 @@ robocopy Resource "%build_dir%\Resource" %ROBOCOPY_FLAGS%
 xcopy Caveman2Cosmos.ini "%build_dir%" /R /Y
 xcopy "Caveman2Cosmos Config.ini" "%build_dir%" /R /Y
 
+PUSHD "%build_dir%"
+
 echo Update full SVN changelog ...
-github_changelog_generator --cache-file "github-changelog-http-cache" --cache-log "github-changelog-logger.log" -u %git_user% --token %git_access_token% --future-release %version% --release-branch %release_branch% --output "%build_dir%\CHANGELOG.md"
+github_changelog_generator --cache-file "github-changelog-http-cache" --cache-log "github-changelog-logger.log" -u caveman2cosmos --token %git_access_token% --future-release %version% --release-branch %release_branch% --output "CHANGELOG.md"
 
 echo Detecting working copy changes...
-PUSHD "%build_dir%"
 set SVN=svn.exe
 "%SVN%" status | findstr /R "^!" > ..\missing.list
 for /F "tokens=* delims=! " %%A in (..\missing.list) do (svn delete "%%A")
@@ -70,7 +71,7 @@ del ..\missing.list 2>NUL
 "%SVN%" add * --force
 
 echo Generate SVN commit description...
-github_changelog_generator --cache-file "github-changelog-http-cache" --cache-log "github-changelog-logger.log" -u %git_user% --token %git_access_token% --future-release %version% --release-branch %release_branch% --unreleased-only --output "commit_desc.md"
+github_changelog_generator --cache-file "github-changelog-http-cache" --cache-log "github-changelog-logger.log" -u caveman2cosmos --token %git_access_token% --future-release %version% --release-branch %release_branch% --unreleased-only --output "commit_desc.md"
 
 echo Commiting new build to SVN...
 :: TODO auto generate a good changelist
