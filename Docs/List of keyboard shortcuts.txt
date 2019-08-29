@@ -1,0 +1,24 @@
+(incomplete)
+The default keyboard shortcuts set up by this mod are:
+(incomplete)
+
+Shift+Ctrl:
+	X	- AIAutoPlay - Open auto play chooser popup to set up automation (or cancel if in automation).
+	M	- AIAutoPlay - Automate the rest of this turn (can be used for auto unit move).
+	W	- Revolution (when enabled) - Open Revolution Watch popup
+	P	- Open popup to change the civ and leader type for any player in the game.
+	L	- Open popup to switch which player the human controls.
+
+Alt+Ctrl:
+	O	- opens BUG Options Screen.
+	F1	- brings up the (external) BUG Mod Help File.
+	N	- opens a window for testing the Unit Naming.
+	R	- opens a window in which the player can set a Reminder.
+
+Alt:
+	M	- opens a window in which the player can set a Reminder.
+	L	- toggles Autolog.
+	B	- creates battle dump in Autolog.
+	E	- add custom entry to Autolog.
+
+- Holding down SHIFT+ALT and clicking on a leader in the scoreboard toggles your civ's warplan between WARPLAN_PREPARING_TOTAL and NO_WARPLAN.  This feature can be used to signal to your vassals that they should begin preparing for war with a particular player as well, allowing them to be much better prepared when you declare.  Any warning you can give your vassals will help, but enough time to build one to two units in a city is best.  WARNING: Use of this feature is not multiplayer compatible, WARPLANs are not sent across the network since they're otherwise only used by the AI and so it will lead to OOS errors if you have vassals.
