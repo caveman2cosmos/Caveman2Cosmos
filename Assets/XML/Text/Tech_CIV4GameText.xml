@@ -4547,7 +4547,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CEREMONIAL_BURIAL_STRATEGY</Tag>
-		<English>[COLOR_TECH_TEXT]Celebration[COLOR_REVERT] is a prehistoric era technology that allows the construction of four different [COLOR_BUILDING_TEXT]Burial Traditions[COLOR_REVERT] that give each city a way to reduce their [COLOR_GREEN]Disease[COLOR_REVERT] levels.</English>
+		<English>[COLOR_TECH_TEXT]Ceremonial Burial[COLOR_REVERT] is a prehistoric era technology that allows the construction of four different [COLOR_BUILDING_TEXT]Burial Traditions[COLOR_REVERT] that give each city a way to reduce their [COLOR_GREEN]Disease[COLOR_REVERT] levels.</English>
 		<French>La construction de Tumulus réduit le mécontentement de la Guerre.</French>
 		<Italian>Permette la costruzione di tumuli, che diminuiscono la stanchezza della guerra; è una tecnologia che conduce alle religioni.</Italian>
 		<Spanish>Permite la construcción de Túmulos, que reducen el hastío bélico. Esta tecnología conduce hacia algunas religiones.</Spanish>
@@ -16902,8 +16902,24 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TECH_NOCTURNALISM</Tag>
+		<English>Nocturnalism</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_NOCTURNALISM_PEDIA</Tag>
+		<English>[TAB]Nocturnality is a behavior characterized by being active during the night and sleeping during the day.[PARAGRAPH:2]Being active at night is a form of niche differentiation, where a species' niche is partitioned not by the amount of resources but by the amount of time (i.e. temporal division of the ecological niche). Hawks and owls can hunt the same field or meadow for the same rodents without conflict because hawks are diurnal and owls are nocturnal. This means they are not in competition for each other's prey.[PARAGRAPH:2]Nocturnality is a form of crypsis, an adaptation to avoid or enhance predation. One of the reasons that (cathemeral) lions prefer to hunt at night is that many of their prey species (zebra, antelope, impala, wildebeest, etc.) have poor night vision.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_NOCTURNALISM_QUOTE</Tag>
+		<English>It was the possibility of darkness that made the day seem so bright.[PARAGRAPH:2]- Stephen King,[PARAGRAPH:1][SPACE][SPACE]"Wolves of the Calla"</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_NOCTURNALISM_STRATEGY</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TECH_NOMADIC_LIFESTYLE</Tag>
-		<English>Nomadic Lifestyle</English>
+		<English>Nomadism</English>
 		<French>Vie de nomade</French>
 		<German>
 			<Text>Nomadentum:Nomadentums:Nomadentum:Nomadentum</Text>

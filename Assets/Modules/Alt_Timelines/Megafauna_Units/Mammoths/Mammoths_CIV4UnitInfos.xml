@@ -87,7 +87,7 @@
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<iCost>105</iCost>
+			<iCost>94</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>8</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
@@ -329,7 +329,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_MAMMOTH</BonusType>
 			</PrereqBonuses>
-			<iCost>210</iCost>
+			<iCost>190</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>9</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -365,7 +365,7 @@
 				<iRangedWaveSize>2</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_TRAINED_NEANDERTHAL_MAMMOTH</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_TRAINED_MAMMOTH</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>

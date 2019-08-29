@@ -2342,7 +2342,7 @@
 		<BuildInfo>
 			<Type>BUILD_SALT_GATHERER</Type>
 			<Description>TXT_KEY_BUILD_SALT_GATHERER</Description>
-			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
+			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
@@ -10331,7 +10331,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_ABATIS_G</Type>
-			<Description>TXT_KEY_BUILD_ABATIS</Description>
+			<Description>TXT_KEY_BUILD_ABATIS_G</Description>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<ObsoleteTech>TECH_CARPENTRY</ObsoleteTech>
 			<iTime>200</iTime>
@@ -10361,7 +10361,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_PALISADE_G</Type>
-			<Description>TXT_KEY_BUILD_PALISADE</Description>
+			<Description>TXT_KEY_BUILD_PALISADE_G</Description>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<ObsoleteTech>TECH_MATHEMATICS</ObsoleteTech>
 			<iTime>500</iTime>
@@ -10390,7 +10390,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_FORTIFIED_CAVE_G</Type>
-			<Description>TXT_KEY_BUILD_FORTIFIED_CAVE</Description>
+			<Description>TXT_KEY_BUILD_FORTIFIED_CAVE_G</Description>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<iTime>150</iTime>
 			<iCost>0</iCost>
@@ -10432,7 +10432,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_WOODEN_TOWER_G</Type>
-			<Description>TXT_KEY_BUILD_WOODEN_TOWER</Description>
+			<Description>TXT_KEY_BUILD_WOODEN_TOWER_G</Description>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>

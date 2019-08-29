@@ -153,7 +153,7 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_RHINO_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>94</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>

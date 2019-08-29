@@ -20,7 +20,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iCost>588</iCost>
+			<iCost>624</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
