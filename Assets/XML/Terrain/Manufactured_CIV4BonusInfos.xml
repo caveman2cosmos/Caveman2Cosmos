@@ -1800,8 +1800,8 @@
 			<Civilopedia>TXT_KEY_BONUS_ORGANIC_COMPUTERS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ORGANIC_COMPUTERS</ArtDefineTag>
-			<TechReveal>TECH_DNA_COMPUTING</TechReveal>
-			<TechCityTrade>TECH_DNA_COMPUTING</TechCityTrade>
+			<TechReveal>TECH_AUGMENT_CONSUMABLES</TechReveal>
+			<TechCityTrade>TECH_AUGMENT_CONSUMABLES</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Organic Photonic Cells -->
@@ -2070,8 +2070,8 @@
 			<Civilopedia>TXT_KEY_BONUS_RAWFISH_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_RAWFISH</ArtDefineTag>
-			<TechReveal>TECH_FISHING</TechReveal>
-			<TechCityTrade>TECH_FISHING</TechCityTrade>
+			<TechReveal>TECH_TRAP_FISHING</TechReveal>
+			<TechCityTrade>TECH_TRAP_FISHING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Raw Meat -->
@@ -2273,8 +2273,8 @@
 			<Civilopedia>TXT_KEY_BONUS_SHELLFISH_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SHELLFISH</ArtDefineTag>
-			<TechReveal>TECH_FISHING</TechReveal>
-			<TechCityTrade>TECH_FISHING</TechCityTrade>
+			<TechReveal>TECH_TRAP_FISHING</TechReveal>
+			<TechCityTrade>TECH_TRAP_FISHING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Shockwave Engines -->

@@ -7567,7 +7567,7 @@
 			<iRevIdxLocal>150</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Crime (Lying) --> <!--  (Concept?) -->
+			<!-- Crime (Lying) -->
 			<BuildingClass>BUILDINGCLASS_CRIME_LYING</BuildingClass>
 			<Type>BUILDING_CRIME_LYING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_LYING</Description>
@@ -15704,6 +15704,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COOKING</PrereqTech>
+			<iPrereqPopulation>4</iPrereqPopulation>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<bAutoBuild>1</bAutoBuild>
@@ -15899,6 +15900,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
+			<iPrereqPopulation>4</iPrereqPopulation>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_DOG</VicinityBonus>
 				<VicinityBonus>BONUS_CAT</VicinityBonus>
@@ -15937,6 +15939,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COOKING</PrereqTech>
+			<iPrereqPopulation>4</iPrereqPopulation>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RAWMEAT</VicinityBonus>
 				<VicinityBonus>BONUS_RAWFISH</VicinityBonus>
@@ -16015,6 +16018,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
+			<iPrereqPopulation>8</iPrereqPopulation>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<bAutoBuild>1</bAutoBuild>
@@ -16397,6 +16401,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COOKING</PrereqTech>
+			<iPrereqPopulation>10</iPrereqPopulation>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_WOOD</VicinityBonus>
 				<VicinityBonus>BONUS_TIMBER</VicinityBonus>
@@ -16431,6 +16436,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
+			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_DOG</VicinityBonus>
 				<VicinityBonus>BONUS_CAT</VicinityBonus>
