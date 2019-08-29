@@ -55,13 +55,6 @@ for /F "tokens=* delims=! " %%A in (..\missing.list) do (svn delete "%%A")
 del ..\missing.list 2>NUL
 "%SVN%" add * --force
 
-REM svn status | findstr /R "^?" > ..\added.list
-REM for /F "tokens=* delims=? " %%A in (..\added.list) do (svn add "%%A")
-REM del ..\added.list 2>NUL
-
-REM for /f "tokens=2*" %%i in ('svn status "%1" ^| find "?"') do svn add "%%i"
-REM for /f "tokens=2*" %%i in ('svn status "%1" ^| find "!"') do svn delete "%%i"
-
 echo Commiting new build to SVN...
 :: TODO auto generate a good changelist
 "%SVN%" commit -m "Caveman2Cosmos %APPVEYOR_BUILD_VERSION%" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
@@ -69,6 +62,19 @@ POPD
 
 REM 7z a -r -x!.svn "%release_prefix%-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\*.*"
 REM 7z a -x!.svn "%release_prefix%-CvGameCoreDLL-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\Assets\CvGameCoreDLL.*"
+
+echo Setting build tag on git
+
+git config --global credential.helper store
+powershell -ExecutionPolicy Bypass -command "Add-Content '$HOME\.git-credentials' 'https://$($env:git_access_token):x-oauth-basic@github.com`n'"
+REM ps: Add-Content "$HOME\.git-credentials" "https://$($env:git_access_token):x-oauth-basic@github.com`n"
+git config --global user.email "%git_email%"
+git config --global user.name "%git_user%"
+
+git checkout master
+git tag -a %APPVEYOR_BUILD_VERSION%-alpha %APPVEYOR_REPO_COMMIT% -m "%APPVEYOR_BUILD_VERSION%-alpha"
+
+git push
 
 echo Done!
 exit /B 0
