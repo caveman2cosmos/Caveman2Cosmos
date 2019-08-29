@@ -5,7 +5,9 @@ cache:
 - Build\Release -> Tools\deps.exe, Tools\_MakeDLL.bat, Sources\, appveyor.yml
 
 environment:
+  testing: true
   svn_url: https://svn.code.sf.net/p/caveman2cosmos/code/trunk
+  svn_test_url: https://svn.code.sf.net/p/caveman2cosmos/code/branches/billw-git
   svn_user: c2cappveyor
   svn_pass:
     secure: 8MBckNYRp5EVPgbGcmZ6bQ==
@@ -16,6 +18,15 @@ environment:
     secure: c5g3VzEHFNptNDFyI85sEbUyI5fNW5rHwovptE64l2GmzUJ2bcgzTbzsa7Y90jKa
   release_prefix: Caveman2Cosmos
   build_dir: _build
+  release_branch: release
+  # nodejs_version: "11"
+
+install:
+  # Get the latest stable version of Node.js or io.js
+  # Need this for deploy script 
+  # - ps: Install-Product node $env:nodejs_version
+  # - npm install auto-changelog
+  - gem install github_changelog_generator
 
 build_script:
 - cmd: >-
