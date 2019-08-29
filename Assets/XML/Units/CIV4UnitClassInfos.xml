@@ -4849,7 +4849,7 @@ Assyria, Hungary, Minoa, Armenia
 			<Description>TXT_KEY_UNIT_CHASER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_CHASER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -7042,7 +7042,7 @@ Assyria, Hungary, Minoa, Armenia
 			<Description>TXT_KEY_UNIT_HAIDA_WAR_CANOE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_HAIDA_WAR_CANOE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -10842,7 +10842,7 @@ Assyria, Hungary, Minoa, Armenia
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_KAYAK</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_NEANDERTHAL_KAYAK</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -10850,7 +10850,7 @@ Assyria, Hungary, Minoa, Armenia
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_WAR_CANOE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_NEANDERTHAL_WAR_CANOE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -10858,7 +10858,7 @@ Assyria, Hungary, Minoa, Armenia
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_CANOE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_NEANDERTHAL_CANOE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -10866,7 +10866,7 @@ Assyria, Hungary, Minoa, Armenia
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_RAFT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_NEANDERTHAL_RAFT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -10890,7 +10890,7 @@ Assyria, Hungary, Minoa, Armenia
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_LOG_RAM</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iMaxPlayerInstances>40</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_NEANDERTHAL_LOG_RAM</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>

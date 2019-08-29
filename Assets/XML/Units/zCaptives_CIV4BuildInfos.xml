@@ -131,24 +131,6 @@
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
-			</FeatureStructs>
-			<HotKey>KB_S</HotKey>
-			<bShiftDown>1</bShiftDown>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/Button_StoneToolsWorkshop.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
-		</BuildInfo>
-		<BuildInfo>
-			<Type>BUILD_ROCK_GATHERER_2_SLAVE</Type>
-			<Description>TXT_KEY_BUILD_ROCK_GATHERER_SLAVE</Description>
-			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
-			<iTime>1</iTime>
-			<iCost>0</iCost>
-			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_ROCK_GATHERER</ImprovementType>
-			<RouteType>NONE</RouteType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
 					<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
@@ -4248,23 +4230,6 @@
 			<HotKey>KB_M</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>Art/electricity/art/geothermalplant.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
-		</BuildInfo>
-		<BuildInfo>
-			<Type>BUILD_JUNGLE_CAMP_GATHERER_SLAVE</Type>
-			<Description>TXT_KEY_BUILD_JUNGLE_CAMP_SLAVE</Description>
-			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iTime>600</iTime>
-			<iCost>0</iCost>
-			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_JUNGLE_CAMP</ImprovementType>
-			<RouteType>NONE</RouteType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<FeatureStructs/>
-			<HotKey>0</HotKey>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/builds/junglecamp.dds</Button>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>

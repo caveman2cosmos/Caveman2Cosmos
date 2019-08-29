@@ -1206,7 +1206,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>200</iCost>
+			<iCost>180</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_CULTURE</Advisor>
@@ -1245,8 +1245,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
-			<bWater>1</bWater>
+			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CAVE</FeatureType>
@@ -1256,15 +1255,22 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>120</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>3</iYield>
 				<iYield>3</iYield>
-				<iYield>3</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_STONETOOLS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<CommerceChanges>
+				<iCommerce>3</iCommerce>
+			</CommerceChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>  
 			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
@@ -1281,14 +1287,14 @@
 			<Description>TXT_KEY_BUILDING_BLUEFISH_CAVES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BLUEFISH_CAVES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BLUEFISH_CAVES_STRATEGY</Strategy>
-			<Advisor>ADVISOR_CULTURE</Advisor>
+			<Advisor>ADVISOR_GROWTH</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_PREHISTORIC_CAVES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_BLUEFISH_CAVES</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BLUEFISH_CAVES</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
+			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CAVE</FeatureType>
@@ -1298,17 +1304,22 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>100</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
-				<iYield>2</iYield>
-				<iYield>2</iYield>
+				<iYield>3</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>5</iCommerce>
+				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_BONE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>			   
 			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
@@ -1776,7 +1787,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>248</iCost>
+			<iCost>224</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>2</iYield>
@@ -1981,7 +1992,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_PETROGLYPHS</PrereqTech>
+			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CAVE</FeatureType>
@@ -1991,30 +2002,27 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>180</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
-				<iYield>2</iYield>
+				<iYield>3</iYield>			  
+				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>8</iCommerce>
+				<iCommerce>3</iCommerce>
 			</CommerceChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_TOURISM</PropertyType>
-					<iAmountPerTurn>8</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Changdeokgung -->
@@ -2101,7 +2109,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_FINE_EDGED_TOOLS</PrereqTech>
+			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CAVE</FeatureType>
@@ -2111,7 +2119,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>200</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>3</iYield>
@@ -2120,8 +2128,13 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_STONETOOLS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>		  
 			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
@@ -3265,7 +3278,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Cost -->
-			<iCost>480</iCost>
+			<iCost>408</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -3385,7 +3398,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Cost -->
-			<iCost>408</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -3901,7 +3914,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>552</iCost>
+			<iCost>624</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4066,7 +4079,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_WILDERNESSC</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>588</iCost>
+			<iCost>516</iCost>
 			<!-- Main effects -->
 			<iHappiness>3</iHappiness>
 			<YieldChanges>
@@ -4290,7 +4303,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GAS_LIGHTING</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>588</iCost>
+			<iCost>516</iCost>
 			<!-- Main effects -->
 			<iHappiness>3</iHappiness>
 			<YieldChanges>
@@ -4555,7 +4568,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_DEEP_SEA_EXPLORATION</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>588</iCost>
+			<iCost>516</iCost>
 			<!-- Main effects -->
 			<iHappiness>3</iHappiness>
 			<YieldChanges>
@@ -4778,7 +4791,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>588</iCost>
+			<iCost>516</iCost>
 			<!-- Main effects -->
 			<iHappiness>3</iHappiness>
 			<YieldChanges>
@@ -5092,7 +5105,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>552</iCost>
+			<iCost>624</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_CULTURE</Advisor>
@@ -5868,9 +5881,6 @@
 			<Strategy>TXT_KEY_BUILDING_ZULU_IKHANDA_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_WARFARE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			</TechTypes>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_STORAGE_PIT</BuildingClassType>
@@ -5887,14 +5897,8 @@
 			</PrereqOrBuildingClasses>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_GARRISON</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
 			<!-- Cost -->
-			<iCost>408</iCost>
+			<iCost>516</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
@@ -6195,7 +6199,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Cost -->
-			<iCost>336</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -6391,12 +6395,12 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_FINE_EDGED_TOOLS</PrereqTech>
+			<PrereqTech>TECH_SKINNING</PrereqTech>
 			<bWater>1</bWater>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>200</iCost>
+			<iCost>160</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>2</iYield>
@@ -6588,7 +6592,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<bRiver>1</bRiver>
+			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>		
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CAVE</FeatureType>
@@ -6598,13 +6602,22 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>20</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>3</iYield>
 				<iYield>3</iYield>
-				<iYield>3</iYield>
 			</YieldChanges>
+			<CommerceChanges>
+				<iCommerce>3</iCommerce>
+			</CommerceChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators> 
 			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
@@ -7753,12 +7766,12 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
+			<PrereqTech>TECH_SKINNING</PrereqTech>
 			<bWater>1</bWater>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>100</iCost>
+			<iCost>160</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>3</iYield>
@@ -7792,11 +7805,11 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
+			<PrereqTech>TECH_STONE_BUILDING</PrereqTech>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>80</iCost>
+			<iCost>248</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>3</iYield>
@@ -8012,7 +8025,7 @@
 			<bWater>1</bWater>
 			<Bonus>BONUS_STONE</Bonus>
 			<!-- Cost -->
-			<iCost>552</iCost>
+			<iCost>624</iCost>
 			<!-- Special Yield and Commerce modifiers -->
 			<SeaPlotYieldChanges>
 				<iYield>0</iYield>
@@ -8073,11 +8086,11 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_GATHERING</PrereqTech>
+			<PrereqTech>TECH_TRIBALISM</PrereqTech>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>60</iCost>
+			<iCost>320</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>2</iYield>
@@ -8086,8 +8099,6 @@
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_STONETOOLS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
@@ -8856,7 +8867,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_PETROGLYPHS</PrereqTech>
+			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CAVE</FeatureType>
@@ -8866,22 +8877,15 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>180</iCost>
+			<iCost>40</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
-				<iYield>2</iYield>
-				<iYield>2</iYield>
+				<iYield>3</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<!-- Misc -->
-			<iAsset>10</iAsset>
-			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -8889,6 +8893,11 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<!-- Misc -->
+			<iAsset>10</iAsset>
+			<iConquestProb>100</iConquestProb>
+			<iHurryCostModifier>100</iHurryCostModifier>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>								  
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Penicillin -->
@@ -9581,12 +9590,12 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
+			<PrereqTech>TECH_ANIMISM</PrereqTech>
 			<bWater>1</bWater>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>140</iCost>
+			<iCost>296</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>2</iYield>
@@ -10755,7 +10764,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>552</iCost>
+			<iCost>624</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iHurryCostModifier>200</iHurryCostModifier>
 			<!-- Local -->
@@ -11125,7 +11134,7 @@
 					<PropertyType>PROPERTY_TOURISM</PropertyType>
 					<iAmountPerTurn>20</iAmountPerTurn>
 				</PropertySource>
-			</PropertyManipulators>			
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Temple of Ah Cacao -->
@@ -14306,7 +14315,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SCULPTURE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>270</iCost>
+			<iCost>240</iCost>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -17698,14 +17707,11 @@
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_FIST</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_COMMUNITY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>472</iCost>
+			<iCost>444</iCost>
 			<!-- Misc. Effects -->
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -17750,14 +17756,17 @@
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_FEATHER</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_ARCHERY</PrereqTech>
+			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+				<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			</TechTypes>
+			<PrereqBonuses>
+				<Bonus>BONUS_EGGS</Bonus>
+			</PrereqBonuses>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>472</iCost>
+			<iCost>444</iCost>
 			<!-- Misc. Effects -->
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -17802,14 +17811,11 @@
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_SHADOWS</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_CONSCIOUSNESS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>500</iCost>
+			<iCost>444</iCost>
 			<!-- Misc. Effects -->
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -17921,9 +17927,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_WARRIOR</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
-			</TechTypes>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
@@ -17973,14 +17976,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_WAVES</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SAILING</PrereqTech>
-			</TechTypes>
 			<bWater>1</bWater>
+			<TechTypes>
+				<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
+			</TechTypes>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>528</iCost>
+			<iCost>444</iCost>
 			<!-- Misc. Effects -->
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -18026,9 +18029,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_WIND</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
-			</TechTypes>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
@@ -18113,7 +18113,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Ancient Way of the leech -->
+			<!-- Ancient Way of the Leech -->
 			<BuildingClass>BUILDINGCLASS_ANCIENT_WAY_OF_THE_LEECH</BuildingClass>
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_LEECH</Type>
 			<MapCategoryTypes>
@@ -18176,7 +18176,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_WOLF</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<Bonus>BONUS_DOG</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_DOG</Bonus>
+			</PrereqBonuses>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
@@ -19405,7 +19407,7 @@
 					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-		</BuildingInfo>		
+		</BuildingInfo>
 		<!-- Aachen Cathedral -->
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AACHENCATHEDRAL</BuildingClass>
@@ -21091,9 +21093,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_HILLTARA</MovieDefineTag>
 			<ObsoleteTech>TECH_HERALDRY</ObsoleteTech>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CHIEFDOM</PrereqTech>
-			</TechTypes>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_HILL</TerrainType>
@@ -21103,7 +21102,7 @@
 			<FreeBuilding>BUILDINGCLASS_CHIEFS_HUT</FreeBuilding>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<iCost>552</iCost>
+			<iCost>624</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>10</iAsset>

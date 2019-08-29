@@ -122,6 +122,7 @@
 					<iProductionTrait>50</iProductionTrait>
 				</ProductionTrait>
 			</ProductionTraits>
+			<iCost>160</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -197,6 +198,7 @@
 					<iProductionTrait>50</iProductionTrait>
 				</ProductionTrait>
 			</ProductionTraits>
+			<iCost>220</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -281,6 +283,7 @@
 					<iProductionTrait>50</iProductionTrait>
 				</ProductionTrait>
 			</ProductionTraits>
+			<iCost>880</iCost>
 			<iMoves>2</iMoves>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<iAsset>1</iAsset>
@@ -366,6 +369,7 @@
 					<iProductionTrait>50</iProductionTrait>
 				</ProductionTrait>
 			</ProductionTraits>
+			<iCost>1260</iCost>
 			<iMoves>2</iMoves>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<iAsset>1</iAsset>
@@ -460,7 +464,7 @@
 					<iProductionTrait>50</iProductionTrait>
 				</ProductionTrait>
 			</ProductionTraits>
-			<iCost>1280</iCost>
+			<iCost>2560</iCost>
 			<iMoves>24</iMoves>
 			<iExtraCost>5</iExtraCost>
 			<iAsset>1</iAsset>
@@ -4688,7 +4692,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_NOMADIC_LIFESTYLE</PrereqTech>
-			<iCost>10</iCost>
+			<iCost>8</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>1</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -4781,7 +4785,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<iCost>20</iCost>
+			<iCost>15</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>2</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -5466,7 +5470,6 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bPillage>1</bPillage>
 			<bAssassin>1</bAssassin>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -5478,7 +5481,7 @@
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteTech>TECH_CANINE_DOMESTICATION</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_HUNTING</ForceObsoleteTech>
 			<ForceObsoleteUnitClasses>
 				<ForceObsoleteUnitClass>
 					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_CHASER</ForceObsoleteUnitClassType>
@@ -5491,7 +5494,7 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<iCost>20</iCost>
+			<iCost>21</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>1</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -5569,7 +5572,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_TRACKING</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_HUNTER</UnitClassUpgradeType>
@@ -5583,14 +5586,14 @@
 					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
 				</ForceObsoleteUnitClass>
 			</ForceObsoleteUnitClasses>
-			<iCost>25</iCost>
+			<iCost>38</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>2</iCombat>
 			<iXPValueAttack>8</iXPValueAttack>
 			<iXPValueDefense>4</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
 			<iPursuit>30</iPursuit>
-			<iAnimalCombat>125</iAnimalCombat>
+			<iAnimalCombat>200</iAnimalCombat>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitMeshGroups>
@@ -5668,7 +5671,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
-			<iCost>60</iCost>
+			<iCost>63</iCost>
 			<iMoves>2</iMoves>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
@@ -5681,7 +5684,7 @@
 			<iXPValueDefense>4</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
 			<iPursuit>40</iPursuit>
-			<iAnimalCombat>225</iAnimalCombat>
+			<iAnimalCombat>200</iAnimalCombat>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitMeshGroups>
@@ -6604,7 +6607,6 @@
 			<PrereqCorporation>CORPORATION_1</PrereqCorporation>
 			<PrereqBuilding>BUILDING_CORPORATION_1</PrereqBuilding>
 			<iCost>275</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6653,7 +6655,6 @@
 			<PrereqCorporation>CORPORATION_2</PrereqCorporation>
 			<PrereqBuilding>BUILDING_CORPORATION_2</PrereqBuilding>
 			<iCost>275</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6702,7 +6703,6 @@
 			<PrereqCorporation>CORPORATION_3</PrereqCorporation>
 			<PrereqBuilding>BUILDING_CORPORATION_3</PrereqBuilding>
 			<iCost>275</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6751,7 +6751,6 @@
 			<PrereqCorporation>CORPORATION_4</PrereqCorporation>
 			<PrereqBuilding>BUILDING_CORPORATION_4</PrereqBuilding>
 			<iCost>275</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6800,7 +6799,6 @@
 			<PrereqCorporation>CORPORATION_5</PrereqCorporation>
 			<PrereqBuilding>BUILDING_CORPORATION_5</PrereqBuilding>
 			<iCost>275</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6849,7 +6847,6 @@
 			<PrereqCorporation>CORPORATION_6</PrereqCorporation>
 			<PrereqBuilding>BUILDING_CORPORATION_6</PrereqBuilding>
 			<iCost>275</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6898,7 +6895,6 @@
 			<PrereqCorporation>CORPORATION_7</PrereqCorporation>
 			<PrereqBuilding>BUILDING_CORPORATION_7</PrereqBuilding>
 			<iCost>275</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6947,7 +6943,6 @@
 			<PrereqCorporation>CORPORATION_ADVENTURE</PrereqCorporation>
 			<PrereqBuilding>BUILDING_CORPORATION_ADVENTURE_HQ</PrereqBuilding>
 			<iCost>275</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
 			<UnitMeshGroups>
@@ -6996,7 +6991,6 @@
 			<PrereqCorporation>CORPORATION_BULLSEYE</PrereqCorporation>
 			<PrereqBuilding>BUILDING_CORPORATION_BULLSEYE_HQ</PrereqBuilding>
 			<iCost>275</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
 			<UnitMeshGroups>
@@ -7045,7 +7039,6 @@
 			<PrereqCorporation>CORPORATION_BURGERWORLD</PrereqCorporation>
 			<PrereqBuilding>BUILDING_CORPORATION_BURGERWORLD_HQ</PrereqBuilding>
 			<iCost>275</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
 			<UnitMeshGroups>
@@ -7094,7 +7087,6 @@
 			<PrereqCorporation>CORPORATION_EMPCLOTH</PrereqCorporation>
 			<PrereqBuilding>BUILDING_CORPORATION_EMPCLOTH_HQ</PrereqBuilding>
 			<iCost>275</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7143,7 +7135,6 @@
 			<PrereqCorporation>CORPORATION_EWTRADE</PrereqCorporation>
 			<PrereqBuilding>BUILDING_CORPORATION_EWTRADE_HQ</PrereqBuilding>
 			<iCost>275</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
 			<UnitMeshGroups>
@@ -7192,7 +7183,6 @@
 			<PrereqCorporation>CORPORATION_FASHION</PrereqCorporation>
 			<PrereqBuilding>BUILDING_CORPORATION_FASHION_HQ</PrereqBuilding>
 			<iCost>275</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7241,7 +7231,6 @@
 			<PrereqCorporation>CORPORATION_MALLWART</PrereqCorporation>
 			<PrereqBuilding>BUILDING_CORPORATION_MALLWART_HQ</PrereqBuilding>
 			<iCost>275</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
 			<UnitMeshGroups>
@@ -7290,7 +7279,6 @@
 			<PrereqCorporation>CORPORATION_MAPSTER</PrereqCorporation>
 			<PrereqBuilding>BUILDING_CORPORATION_MAPSTER_HQ</PrereqBuilding>
 			<iCost>275</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7339,7 +7327,6 @@
 			<PrereqCorporation>CORPORATION_MCDOWELLS</PrereqCorporation>
 			<PrereqBuilding>BUILDING_CORPORATION_MCDOWELLS_HQ</PrereqBuilding>
 			<iCost>275</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
 			<UnitMeshGroups>
@@ -7388,7 +7375,6 @@
 			<PrereqCorporation>CORPORATION_MILEHIGH</PrereqCorporation>
 			<PrereqBuilding>BUILDING_CORPORATION_MILEHIGH_HQ</PrereqBuilding>
 			<iCost>275</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
 			<UnitMeshGroups>
@@ -7437,7 +7423,6 @@
 			<PrereqCorporation>CORPORATION_MOBBY</PrereqCorporation>
 			<PrereqBuilding>BUILDING_CORPORATION_MOBBY_HQ</PrereqBuilding>
 			<iCost>275</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7486,7 +7471,6 @@
 			<PrereqCorporation>CORPORATION_MOONBEAN</PrereqCorporation>
 			<PrereqBuilding>BUILDING_CORPORATION_MOONBEAN_HQ</PrereqBuilding>
 			<iCost>275</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7535,7 +7519,6 @@
 			<PrereqCorporation>CORPORATION_RED</PrereqCorporation>
 			<PrereqBuilding>BUILDING_CORPORATION_RED_HQ</PrereqBuilding>
 			<iCost>275</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
 			<UnitMeshGroups>
@@ -7584,7 +7567,6 @@
 			<PrereqCorporation>CORPORATION_SAFARI</PrereqCorporation>
 			<PrereqBuilding>BUILDING_CORPORATION_SAFARI_HQ</PrereqBuilding>
 			<iCost>275</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
 			<UnitMeshGroups>
@@ -7633,7 +7615,6 @@
 			<PrereqCorporation>CORPORATION_ULTSOLDIER</PrereqCorporation>
 			<PrereqBuilding>BUILDING_CORPORATION_ULTSOLDIER_HQ</PrereqBuilding>
 			<iCost>275</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
 			<UnitMeshGroups>
@@ -7682,7 +7663,6 @@
 			<PrereqCorporation>CORPORATION_WONKA</PrereqCorporation>
 			<PrereqBuilding>BUILDING_CORPORATION_WONKA_HQ</PrereqBuilding>
 			<iCost>275</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7732,7 +7712,6 @@
 			<PrereqReligion>RELIGION_JUDAISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_JEWISH_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iExtraCost>1</iExtraCost>
 			<iAsset>1</iAsset>
@@ -7782,7 +7761,6 @@
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
 			<PrereqBuilding>BUILDING_CHRISTIAN_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iExtraCost>1</iExtraCost>
 			<iAsset>1</iAsset>
@@ -7832,7 +7810,6 @@
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<PrereqBuilding>BUILDING_ISLAMIC_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iExtraCost>1</iExtraCost>
 			<iAsset>1</iAsset>
@@ -7882,7 +7859,6 @@
 			<PrereqReligion>RELIGION_HINDUISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_HINDU_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iExtraCost>1</iExtraCost>
 			<iAsset>1</iAsset>
@@ -7932,7 +7908,6 @@
 			<PrereqReligion>RELIGION_BUDDHISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_BUDDHIST_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iExtraCost>1</iExtraCost>
 			<iAsset>1</iAsset>
@@ -7982,7 +7957,6 @@
 			<PrereqReligion>RELIGION_CONFUCIANISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_CONFUCIAN_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iExtraCost>1</iExtraCost>
 			<iAsset>1</iAsset>
@@ -8032,7 +8006,6 @@
 			<PrereqReligion>RELIGION_TAOISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_TAOIST_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iExtraCost>1</iExtraCost>
 			<iAsset>1</iAsset>
@@ -8082,7 +8055,6 @@
 			<PrereqReligion>RELIGION_HELLENISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_HELLENIC_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iExtraCost>1</iExtraCost>
 			<iAsset>1</iAsset>
@@ -8132,7 +8104,6 @@
 			<PrereqReligion>RELIGION_ZOROASTRIANISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_ZOROASTRIAN_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iExtraCost>1</iExtraCost>
 			<iAsset>1</iAsset>
@@ -8197,7 +8168,6 @@
 			<PrereqReligion>RELIGION_EGYPT_MYTHOLOGY</PrereqReligion>
 			<PrereqBuilding>BUILDING_EGYPT_MYTH_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iExtraCost>1</iExtraCost>
 			<iAsset>1</iAsset>
@@ -8247,7 +8217,6 @@
 			<PrereqReligion>RELIGION_MESOAMERICANISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_MESOAMERICAN_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iExtraCost>1</iExtraCost>
 			<iAsset>1</iAsset>
@@ -8464,7 +8433,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
+			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_SPIKED_CLUBMAN</UnitClassUpgradeType>
@@ -8486,7 +8455,7 @@
 				</ForceObsoleteUnitClass>
 			</ForceObsoleteUnitClasses>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
-			<iCost>15</iCost>
+			<iCost>17</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -8573,7 +8542,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_PIERCING</PrereqTech>
+			<PrereqTech>TECH_FINE_EDGED_TOOLS</PrereqTech>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_STONE_AGE_AXEMAN</UnitClassUpgradeType>
@@ -8595,7 +8564,7 @@
 				</ForceObsoleteUnitClass>
 			</ForceObsoleteUnitClasses>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
-			<iCost>25</iCost>
+			<iCost>26</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -8696,7 +8665,7 @@
 					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
 				</ForceObsoleteUnitClass>
 			</ForceObsoleteUnitClasses>
-			<iCost>42</iCost>
+			<iCost>38</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -8795,7 +8764,7 @@
 			</UnitClassUpgrades>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<BonusType>BONUS_OBSIDIAN</BonusType>
-			<iCost>55</iCost>
+			<iCost>56</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -9106,7 +9075,7 @@
 					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
 				</ForceObsoleteUnitClass>
 			</ForceObsoleteUnitClasses>
-			<iCost>46</iCost>
+			<iCost>42</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -9209,7 +9178,7 @@
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<iCost>55</iCost>
+			<iCost>56</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -9518,7 +9487,7 @@
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<iCost>60</iCost>
+			<iCost>59</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -10161,7 +10130,7 @@
 					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
 				</ForceObsoleteUnitClass>
 			</ForceObsoleteUnitClasses>
-			<iCost>44</iCost>
+			<iCost>39</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
@@ -11340,7 +11309,7 @@
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_BINDING</ForceObsoleteTech>
 			<ForceObsoleteUnitClasses>
 				<ForceObsoleteUnitClass>
 					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_STONE_THROWER</ForceObsoleteUnitClassType>
@@ -11447,9 +11416,9 @@
 			</UnitAIs>
 			<PrereqTech>TECH_BINDING</PrereqTech>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
-			<iCost>40</iCost>
+			<iCost>23</iCost>
 			<iMoves>1</iMoves>
-			<iCombat>3</iCombat>
+			<iCombat>2</iCombat>
 			<iXPValueAttack>3</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
 			<iChanceFirstStrikes>2</iChanceFirstStrikes>
@@ -11555,7 +11524,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_ATLATL_MAKING</PrereqTech>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
-			<iCost>55</iCost>
+			<iCost>50</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -13930,7 +13899,6 @@
 			</UnitAIs>
 			<PrereqTech>TECH_REGENERATIVE_MEDICINE</PrereqTech>
 			<iCost>4300</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iMoves>4</iMoves>
 			<iCombat>140</iCombat>
@@ -14124,7 +14092,6 @@
 				<BonusType>BONUS_NEUROIMPLANTS</BonusType>
 			</PrereqBonuses>
 			<iCost>5250</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iMoves>4</iMoves>
 			<iCombat>220</iCombat>
@@ -21116,7 +21083,7 @@
 				<BonusType>BONUS_DIESEL</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
-			<iCost>2405</iCost>
+			<iCost>2865</iCost>
 			<iMoves>3</iMoves>
 			<iCombat>80</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -21219,7 +21186,7 @@
 				<BonusType>BONUS_DIESEL</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
-			<iCost>2405</iCost>
+			<iCost>2865</iCost>
 			<iMoves>3</iMoves>
 			<iCombat>100</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -21328,7 +21295,8 @@
 			<TechTypes>
 				<PrereqTech>TECH_WARFARE</PrereqTech>
 			</TechTypes>
-			<iCost>65</iCost>
+			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<iCost>82</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
 			<iCombatLimit>75</iCombatLimit>
@@ -25101,7 +25069,7 @@
 				<BonusType>BONUS_DIESEL</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
-			<iCost>2075</iCost>
+			<iCost>2580</iCost>
 			<iMoves>3</iMoves>
 			<iAirRange>2</iAirRange>
 			<iCombat>100</iCombat>
@@ -25753,7 +25721,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_COMPUTERS</BonusType>
 			</PrereqBonuses>
-			<iCost>2890</iCost>
+			<iCost>3438</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>110</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -26346,12 +26314,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_CONTROLLED_PLASMA</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CONTROLLED_PLASMA</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ELECTRIC_ARC_WEAPONRY</PrereqTech>
 			<BonusType>BONUS_PLASMA_GENERATORS</BonusType>
-			<iCost>2100</iCost>
+			<iCost>3045</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>85</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -28126,7 +28091,6 @@
 				<BonusType>BONUS_NANOTUBES</BonusType>
 			</PrereqBonuses>
 			<iCost>8300</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iMoves>4</iMoves>
 			<iAirRange>3</iAirRange>
@@ -28211,7 +28175,6 @@
 				<BonusType>BONUS_NANOBOTS</BonusType>
 			</PrereqBonuses>
 			<iCost>5200</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iMoves>5</iMoves>
 			<iCombat>160</iCombat>
@@ -28303,7 +28266,6 @@
 				<BonusType>BONUS_NANOBOTS</BonusType>
 			</PrereqBonuses>
 			<iCost>10200</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iMoves>5</iMoves>
 			<iCombat>360</iCombat>
@@ -28444,7 +28406,7 @@
 					<iProductionTrait>25</iProductionTrait>
 				</ProductionTrait>
 			</ProductionTraits>
-			<iCost>16</iCost>
+			<iCost>48</iCost>
 			<iMoves>1</iMoves>
 			<iWorkRate>100</iWorkRate>
 			<TerrainImpassableTypes>
@@ -28635,7 +28597,7 @@
 				<iRangedWaveSize>1</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_WORKBOAT</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_WORKBOAT_SEDENTARY</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
@@ -29467,7 +29429,7 @@
 			</ForceObsoleteUnitClasses>
 			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
 			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
-			<iCost>75</iCost>
+			<iCost>67</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
 			<iMoves>2</iMoves>
 			<TerrainImpassableTypes>
@@ -30531,7 +30493,7 @@
 			</ForceObsoleteUnitClasses>
 			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
 			<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
-			<iCost>100</iCost>
+			<iCost>77</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
 			<iMoves>2</iMoves>
 			<TerrainImpassableTypes>
@@ -30545,8 +30507,8 @@
 				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_TRENCH</TerrainType>
-				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>3</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -33377,9 +33339,9 @@
 				<BonusType>BONUS_BAMBOO</BonusType>
 				<BonusType>BONUS_WOOD</BonusType>
 			</PrereqBonuses>
-			<iCost>70</iCost>
+			<iCost>81</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
-			<iMoves>2</iMoves>
+			<iMoves>1</iMoves>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
@@ -33399,7 +33361,7 @@
 			<iXPValueDefense>1</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
-			<iAnimalCombat>100</iAnimalCombat>
+			<iAnimalCombat>200</iAnimalCombat>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_TIMBER</BonusType>
@@ -39454,7 +39416,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESEL</BonusType>
 			</PrereqBonuses>
-			<iCost>2405</iCost>
+			<iCost>2865</iCost>
 			<iMoves>6</iMoves>
 			<iCombat>115</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -43922,7 +43884,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_ROCKETFUEL</BonusType>
 			</PrereqBonuses>
-			<iCost>1125</iCost>
+			<iCost>2865</iCost>
 			<iMoves>1</iMoves>
 			<iAirRange>4</iAirRange>
 			<iAirCombat>50</iAirCombat>
@@ -43992,7 +43954,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_ROCKETFUEL</BonusType>
 			</PrereqBonuses>
-			<iCost>1680</iCost>
+			<iCost>2865</iCost>
 			<iMoves>1</iMoves>
 			<iAirRange>6</iAirRange>
 			<iAirCombat>80</iAirCombat>
@@ -44088,7 +44050,7 @@
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<iCost>36</iCost>
+			<iCost>46</iCost>
 			<iMoves>2</iMoves>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<VisibilityIntensityTypes>
@@ -45182,7 +45144,7 @@
 					<iIntensity>1</iIntensity>
 				</VisibilityIntensityType>
 			</VisibilityIntensityTypes>
-			<iCost>14</iCost>
+			<iCost>18</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
 			<iEnclose>2</iEnclose>
@@ -47391,7 +47353,7 @@
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
-			<iCost>12</iCost>
+			<iCost>17</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
 			<iChanceFirstStrikes>1</iChanceFirstStrikes>
@@ -47529,7 +47491,7 @@
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<iCost>30</iCost>
+			<iCost>43</iCost>
 			<iMoves>1</iMoves>
 			<Invisible>INVISIBLE_CAMOUFLAGE</Invisible>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
@@ -47699,7 +47661,7 @@
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
-			<PrereqTech>TECH_BARTER</PrereqTech>
+			<PrereqTech>TECH_NOCTURNALISM</PrereqTech>
 			<ForceObsoleteTech>TECH_MATCHLOCK</ForceObsoleteTech>
 			<PrereqBuilding>BUILDING_BANDITS_HIDEOUT</PrereqBuilding>
 			<UnitClassUpgrades>
@@ -47708,7 +47670,7 @@
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<iCost>58</iCost>
+			<iCost>68</iCost>
 			<iMoves>2</iMoves>
 			<Invisible>INVISIBLE_CAMOUFLAGE</Invisible>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
@@ -51095,7 +51057,7 @@
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
-			<PrereqTech>TECH_POISON_CRAFTING</PrereqTech>
+			<PrereqTech>TECH_NOCTURNALISM</PrereqTech>
 			<ForceObsoleteTech>TECH_CODE_OF_LAWS</ForceObsoleteTech>
 			<PrereqBuilding>BUILDING_POISONCRAFTERS_HUT</PrereqBuilding>
 			<UnitClassUpgrades>
@@ -51104,7 +51066,7 @@
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<iCost>45</iCost>
+			<iCost>92</iCost>
 			<iMoves>2</iMoves>
 			<Invisible>INVISIBLE_CAMOUFLAGE</Invisible>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
@@ -52665,7 +52627,6 @@
 				</Flavor>
 			</Flavors>
 			<iCost>450</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -53447,7 +53408,6 @@
 			</UnitAIs>
 			<PrereqTech>TECH_ARISTOCRACY</PrereqTech>
 			<iCost>200</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -53503,7 +53463,6 @@
 			</UnitAIs>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<iCost>350</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -53559,7 +53518,6 @@
 			</UnitAIs>
 			<PrereqTech>TECH_VASSALAGE</PrereqTech>
 			<iCost>280</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -53609,7 +53567,6 @@
 			</UnitAIs>
 			<PrereqTech>TECH_LEADERSHIP</PrereqTech>
 			<iCost>400</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -56876,9 +56833,9 @@
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
-			<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
+			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
 			<BonusType>BONUS_NEANDERTHAL</BonusType>
-			<iCost>20</iCost>
+			<iCost>33</iCost>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_SPEARMAN</UnitClassUpgradeType>
@@ -56971,7 +56928,7 @@
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
-			<iCost>6</iCost>
+			<iCost>5</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -57069,8 +57026,8 @@
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
-			<iCost>10</iCost>
+			<ForceObsoleteTech>TECH_BINDING</ForceObsoleteTech>
+			<iCost>8</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -57183,7 +57140,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_NOMADIC_LIFESTYLE</PrereqTech>
-			<iCost>20</iCost>
+			<iCost>16</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>2</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -57247,7 +57204,7 @@
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_WORKER</UnitClassUpgradeType>
+					<UnitClassUpgradeType>UNITCLASS_WORKER</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
@@ -57395,317 +57352,6 @@
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
 					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_GATHERER</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-		</UnitInfo>
-		<UnitInfo>
-			<Class>UNITCLASS_NEANDERTHAL_WORKER</Class>
-			<Type>UNIT_NEANDERTHAL_WORKER</Type>
-			<EnabledCivilizationTypes>
-				<EnabledCivilizationType>
-					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
-				</EnabledCivilizationType>
-			</EnabledCivilizationTypes>
-			<Capture>UNITCLASS_WORKER</Capture>
-			<Combat>UNITCOMBAT_WORKER</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_POOR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_COMPANY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
-			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_WORKER</Description>
-			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<bFood>1</bFood>
-			<bWorkerTrade>1</bWorkerTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_WORKANIMAL</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_WORKER</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<Builds>
-				<Build>
-					<BuildType>BUILD_TRAIL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PATH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RAILROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GRAIN_GATHERER_2</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ROCK_GATHERER_2</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SALT_GATHERER2</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SHAFT_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MODERN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WORKSHOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBERMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WINDMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WATERMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GRAPE_PICKER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WINERY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ORCHARD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANTATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SILK_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_EARLY_QUARRY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_QUARRY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PASTURE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WELL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COTTAGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HAMLET</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_VILLAGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TOWN</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FORT</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BURN_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_DESERT_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WETLANDS_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_THATCH_CUTTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PEAT_CUTTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GEOGLYPH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PALISADE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-			</Builds>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<iCost>180</iCost>
-			<iMoves>2</iMoves>
-			<iWorkRate>175</iWorkRate>
-			<BonusProductionModifiers>
-				<BonusProductionModifier>
-					<BonusType>BONUS_DONKEY</BonusType>
-					<iProductonModifier>5</iProductonModifier>
-				</BonusProductionModifier>
-				<BonusProductionModifier>
-					<BonusType>BONUS_CAMEL</BonusType>
-					<iProductonModifier>5</iProductonModifier>
-				</BonusProductionModifier>
-				<BonusProductionModifier>
-					<BonusType>BONUS_COW</BonusType>
-					<iProductonModifier>5</iProductonModifier>
-				</BonusProductionModifier>
-				<BonusProductionModifier>
-					<BonusType>BONUS_HORSE</BonusType>
-					<iProductonModifier>5</iProductonModifier>
-				</BonusProductionModifier>
-			</BonusProductionModifiers>
-			<iAsset>1</iAsset>
-			<UnitMeshGroups>
-				<iGroupSize>2</iGroupSize>
-				<fMaxSpeed>1.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>2</iMeleeWaveSize>
-				<iRangedWaveSize>0</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_WORKER</EarlyArtDefineTag>
-					<LateArtDefineTag>ART_DEF_UNIT_WORKERMODERN</LateArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -57912,7 +57558,7 @@
 				<BonusType>BONUS_HORSE</BonusType>
 				<BonusType>BONUS_LLAMA</BonusType>
 			</PrereqBonuses>
-			<iCost>130</iCost>
+			<iCost>129</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
@@ -58025,10 +57671,10 @@
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<iCost>72</iCost>
+			<iCost>92</iCost>
 			<iMoves>2</iMoves>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
-			<iCombat>4</iCombat>
+			<iCombat>5</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
 			<iAnimalCombat>15</iAnimalCombat>
@@ -58272,7 +57918,7 @@
 				<BonusType>BONUS_BAMBOO</BonusType>
 				<BonusType>BONUS_WOOD</BonusType>
 			</PrereqBonuses>
-			<iCost>140</iCost>
+			<iCost>135</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
 			<iMoves>2</iMoves>
 			<TerrainImpassableTypes>
@@ -58294,7 +57940,7 @@
 			<iXPValueDefense>1</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
-			<iAnimalCombat>100</iAnimalCombat>
+			<iAnimalCombat>200</iAnimalCombat>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_TIMBER</BonusType>
@@ -58384,9 +58030,9 @@
 			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
 			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
 			<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
-			<iCost>200</iCost>
+			<iCost>140</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
-			<iMoves>1</iMoves>
+			<iMoves>2</iMoves>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
@@ -58495,7 +58141,7 @@
 			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
 			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
 			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
-			<iCost>150</iCost>
+			<iCost>160</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
 			<iMoves>1</iMoves>
 			<TerrainImpassableTypes>
@@ -58942,10 +58588,10 @@
 					<iProductionTrait>25</iProductionTrait>
 				</ProductionTrait>
 			</ProductionTraits>
-			<iCost>32</iCost>
+			<iCost>96</iCost>
 			<iMoves>1</iMoves>
 			<bNoRevealMap>1</bNoRevealMap>
-			<iWorkRate>100</iWorkRate>
+			<iWorkRate>200</iWorkRate>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
@@ -59050,7 +58696,7 @@
 				<PrereqTech>TECH_WARFARE</PrereqTech>
 			</TechTypes>
 			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
-			<iCost>130</iCost>
+			<iCost>165</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
 			<iCombatLimit>75</iCombatLimit>
@@ -59281,7 +58927,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_OBSIDIAN</BonusType>
 			</PrereqBonuses>
-			<iCost>104</iCost>
+			<iCost>105</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
@@ -59383,7 +59029,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
 			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
-			<iCost>88</iCost>
+			<iCost>78</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
@@ -59803,7 +59449,7 @@
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
-			<iCost>92</iCost>
+			<iCost>84</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -60020,7 +59666,7 @@
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
-			<iCost>84</iCost>
+			<iCost>75</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -60124,7 +59770,7 @@
 			</NotUnitAIs>
 			<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
 			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
-			<iCost>120</iCost>
+			<iCost>125</iCost>
 			<iMoves>2</iMoves>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
@@ -60132,12 +59778,12 @@
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<iCombat>4</iCombat>
+			<iCombat>5</iCombat>
 			<iXPValueAttack>8</iXPValueAttack>
 			<iXPValueDefense>4</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
 			<iPursuit>40</iPursuit>
-			<iAnimalCombat>225</iAnimalCombat>
+			<iAnimalCombat>200</iAnimalCombat>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitMeshGroups>
@@ -60226,7 +59872,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<BonusType>BONUS_NEANDERTHAL</BonusType>
-			<PrereqTech>TECH_TRACKING</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_HUNTER</UnitClassUpgradeType>
@@ -60234,14 +59880,14 @@
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_HUNTING_TACTICS</ForceObsoleteTech>
-			<iCost>50</iCost>
+			<iCost>77</iCost>
 			<iMoves>2</iMoves>
-			<iCombat>3</iCombat>
+			<iCombat>4</iCombat>
 			<iXPValueAttack>8</iXPValueAttack>
 			<iXPValueDefense>4</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
 			<iPursuit>30</iPursuit>
-			<iAnimalCombat>125</iAnimalCombat>
+			<iAnimalCombat>200</iAnimalCombat>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitMeshGroups>
@@ -60306,7 +59952,6 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bPillage>1</bPillage>
 			<bAssassin>1</bAssassin>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -60319,14 +59964,14 @@
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteTech>TECH_CANINE_DOMESTICATION</ForceObsoleteTech>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_BY_THE_HORNS</PromotionType>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<iCost>40</iCost>
+			<ForceObsoleteTech>TECH_HUNTING</ForceObsoleteTech>
+			<iCost>43</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>2</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -60424,9 +60069,9 @@
 			</NotUnitAIs>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
-			<iCost>40</iCost>
+			<iCost>30</iCost>
 			<iMoves>2</iMoves>
-			<iCombat>3</iCombat>
+			<iCombat>4</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
@@ -63016,7 +62661,7 @@
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<iCost>40</iCost>
+			<iCost>45</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
@@ -65254,7 +64899,7 @@
 				<BonusType>BONUS_DIESEL</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
-			<iCost>1924</iCost>
+			<iCost>2150</iCost>
 			<iMoves>5</iMoves>
 			<iCombat>50</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -65385,7 +65030,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESEL</BonusType>
 			</PrereqBonuses>
-			<iCost>2405</iCost>
+			<iCost>2865</iCost>
 			<iAdvancedStartCost>150</iAdvancedStartCost>
 			<iMoves>6</iMoves>
 			<TerrainImpassableTypes>
@@ -66324,7 +65969,7 @@
 				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<iCost>15</iCost>
+			<iCost>12</iCost>
 			<iMoves>2</iMoves>
 			<!--
 iTradeMultiplier>3</iTradeMultiplier>
@@ -66775,7 +66420,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 				</Flavor>
 			</Flavors>
 			<iAIWeight>10</iAIWeight>
-			<iCost>55</iCost>
+			<iCost>37</iCost>
 			<iMoves>1</iMoves>
 			<iBaseFoodChange>33</iBaseFoodChange>
 			<iCombat>2</iCombat>
@@ -67102,7 +66747,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>55</iCost>
+			<iCost>37</iCost>
 			<iMoves>1</iMoves>
 			<iBaseTrade>15</iBaseTrade>
 			<iTradeMultiplier>1</iTradeMultiplier>
@@ -67500,7 +67145,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bNoBadGoodies>1</bNoBadGoodies>
-			<PrereqTech>TECH_TRACKING</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_MASTER_HUNTER</UnitClassUpgradeType>
@@ -67509,12 +67154,12 @@ iTradeMultiplier>3</iTradeMultiplier>
 			</UnitClassUpgrades>
 			<iCost>-1</iCost>
 			<iMoves>3</iMoves>
-			<iCombat>3</iCombat>
+			<iCombat>4</iCombat>
 			<iXPValueAttack>8</iXPValueAttack>
 			<iXPValueDefense>4</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
 			<iPursuit>30</iPursuit>
-			<iAnimalCombat>125</iAnimalCombat>
+			<iAnimalCombat>200</iAnimalCombat>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitCombatTargets>
@@ -67607,12 +67252,12 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<iCombat>4</iCombat>
+			<iCombat>5</iCombat>
 			<iXPValueAttack>8</iXPValueAttack>
 			<iXPValueDefense>4</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
 			<iPursuit>40</iPursuit>
-			<iAnimalCombat>225</iAnimalCombat>
+			<iAnimalCombat>200</iAnimalCombat>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitCombatTargets>
@@ -68757,7 +68402,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
-				<Action>
+			<Action>
 					<MissionType>MISSION_SACRIFICE_CAPTIVE</MissionType>
 					<ActionOutcomes>
 						<Outcome>

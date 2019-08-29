@@ -22,7 +22,7 @@
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<FreePromotion>PROMOTION_WOODSMAN1</FreePromotion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>92</iCost>
+			<iCost>104</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
 			<iHealth>2</iHealth>
@@ -131,7 +131,7 @@
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<FreePromotion>PROMOTION_GUERILLA1</FreePromotion>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>92</iCost>
+			<iCost>104</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iHealth>2</iHealth>
 			<iHealthPercentPerPopulation>5</iHealthPercentPerPopulation>

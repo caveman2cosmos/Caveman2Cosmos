@@ -5638,7 +5638,7 @@
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
-				<BuildingHappinessChange>
+                <BuildingHappinessChange>
 					<BuildingType>BUILDINGCLASS_SLAVE_MARKET</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
@@ -19664,7 +19664,7 @@
 			<Strategy>TXT_KEY_CIVIC_TRIBALWARFARE_STRATEGY</Strategy>
 			<Help/>
 			<Button>art/Interface/buttons/civics/sparth/military_tribal_warfare.dds</Button>
-			<TechPrereq>TECH_TRIBALISM</TechPrereq>
+			<TechPrereq>TECH_WARFARE</TechPrereq>
 			<iAnarchyLength>0</iAnarchyLength>
 			<Upkeep>UPKEEP_LOW</Upkeep>
 			<iAIWeight>0</iAIWeight>
@@ -21307,7 +21307,7 @@
 			<Strategy>TXT_KEY_CIVIC_COMMUNITY_STRATEGY</Strategy>
 			<Help/>
 			<Button>art/Interface/buttons/civics/sparth/labor_community.dds</Button>
-			<TechPrereq>TECH_TRIBALISM</TechPrereq>
+			<TechPrereq>TECH_COOPERATION</TechPrereq>
 			<iAnarchyLength>0</iAnarchyLength>
 			<Upkeep>UPKEEP_LOW</Upkeep>
 			<iAIWeight>0</iAIWeight>

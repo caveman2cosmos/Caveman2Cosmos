@@ -8,14 +8,17 @@
 			<Description>TXT_KEY_RELIGION_SHAMAN</Description>
 			<Civilopedia>TXT_KEY_RELIGION_SHAMAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_RELIGION_SHAMAN_STRATEGY</Strategy>
+			<!-- Main -->
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<iCost>30</iCost>
-			<Era>ERA_ANCIENT</Era>
-			<iGridX>13</iGridX>
-			<iGridY>17</iGridY>
+			<iCost>34</iCost>
 			<bGlobal>1</bGlobal>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<Era>ERA_ANCIENT</Era>
+			<iGridX>14</iGridX>
+			<iGridY>15</iGridY>
+			<!-- Effects -->
 			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<!-- System -->
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>

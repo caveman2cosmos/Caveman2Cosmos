@@ -10,12 +10,12 @@
 			<Strategy>TXT_KEY_RELIGION_TENGRIISM_STRATEGY</Strategy>
 			<!-- Main -->
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<iCost>60</iCost>
+			<iCost>52</iCost>
 			<bGlobal>1</bGlobal>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>ERA_ANCIENT</Era>
-			<iGridX>18</iGridX>
-			<iGridY>13</iGridY>
+			<iGridX>17</iGridX>
+			<iGridY>15</iGridY>
 			<!-- Effects -->
 			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
 			<!-- System -->
@@ -35,11 +35,8 @@
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
+				<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
 			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_ANIMISM</PrereqTech>
-			</AndPreReqs>
 			<Quote>TXT_KEY_RELIGION_TENGRIISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_TENGRIISM2</Sound>
 			<SoundMP>AS2D_TECH_TENGRIISM2</SoundMP>
