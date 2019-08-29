@@ -31,7 +31,7 @@ install:
 
 build_script:
 - cmd: >-
-    github_changelog_generator --cache-file "github-changelog-http-cache" --cache-log "github-changelog-logger.log" -u %git_user% --token %git_access_token% --future-release %version% --release-branch %release_branch% --output "%build_dir%\CHANGELOG.md"
+    github_changelog_generator --cache-file "github-changelog-http-cache" --cache-log "github-changelog-logger.log" -u caveman2cosmos --token %git_access_token% --future-release %version% --release-branch %release_branch% --output "%build_dir%\CHANGELOG.md"
 
     call Powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%APPVEYOR_BUILD_FOLDER%\Tools\CI\fix_sources_timestamps.ps1"
     
