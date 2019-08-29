@@ -28,6 +28,8 @@ install:
   # - npm install auto-changelog
   - set PATH=C:\Ruby26-x64\bin;%PATH%
   - gem install github_changelog_generator
+  - github_changelog_generator --cache-file "github-changelog-http-cache" --cache-log "github-changelog-logger.log" -u %git_user% --token %git_access_token% --future-release %version% --release-branch %release_branch% --output "%build_dir%\CHANGELOG.md"
+
 
 build_script:
 - cmd: >-

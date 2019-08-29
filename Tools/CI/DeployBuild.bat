@@ -59,7 +59,7 @@ xcopy Caveman2Cosmos.ini "%build_dir%" /R /Y
 xcopy "Caveman2Cosmos Config.ini" "%build_dir%" /R /Y
 
 echo Update full SVN changelog ...
-github_changelog_generator -u %git_user% --token %git_access_token% --future-release %version% --release-branch %release_branch% --output "%build_dir%\CHANGELOG.md"
+github_changelog_generator --cache-file "github-changelog-http-cache" --cache-log "github-changelog-logger.log" -u %git_user% --token %git_access_token% --future-release %version% --release-branch %release_branch% --output "%build_dir%\CHANGELOG.md"
 
 echo Detecting working copy changes...
 PUSHD "%build_dir%"
@@ -70,7 +70,7 @@ del ..\missing.list 2>NUL
 "%SVN%" add * --force
 
 echo Generate SVN commit description...
-github_changelog_generator -u %git_user% --token %git_access_token% --future-release %version% --release-branch %release_branch% --unreleased-only --output "commit_desc.md"
+github_changelog_generator --cache-file "github-changelog-http-cache" --cache-log "github-changelog-logger.log" -u %git_user% --token %git_access_token% --future-release %version% --release-branch %release_branch% --unreleased-only --output "commit_desc.md"
 
 echo Commiting new build to SVN...
 :: TODO auto generate a good changelist
