@@ -1,5 +1,8 @@
 import _core
 import _misc
+from CvPythonExtensions import *
+
+GC = CyGlobalContext()
 
 class InputData:
 	def __init__(self):
@@ -30,6 +33,7 @@ class InputData:
 		return "Unknown"
 
 	def getMousePosition(self):
-		return _misc.GetMousePosition()
+		pos = GC.getCursorPos()
+		return pos.x, pos.y
 
 instance = InputData()
