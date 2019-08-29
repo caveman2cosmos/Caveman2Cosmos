@@ -13895,7 +13895,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_BUG_CATCHER</BuildingType>
 				<BuildingType>BUILDING_EARTH_MYTH</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_MYTH</BuildingType>
 				<BuildingType>BUILDING_BUG_MYTH</BuildingType>
@@ -13958,7 +13957,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_BUG_CATCHER</BuildingType>
 				<BuildingType>BUILDING_EARTH_MYTH</BuildingType>
 				<BuildingType>BUILDING_BUG_MYTH</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_MYTH</BuildingType>

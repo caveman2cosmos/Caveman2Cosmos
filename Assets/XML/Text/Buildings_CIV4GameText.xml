@@ -971,7 +971,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANTHILL</Tag>
-		<English>Ant-hill</English>
+		<English>Ant Catcher</English>
 		<French>
 			<Text>Fourmilière</Text>
 			<Gender>Female</Gender>
@@ -2268,7 +2268,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BANDITS_HIDEOUT</Tag>
-		<English>Bandit's Hideout</English>
+		<English>Thieves' Hideout</English>
 		<French>Repaire de Bandit</French>
 		<German>Banditenversteck</German>
 		<Italian>Nascondiglio dei banditi</Italian>
@@ -2554,7 +2554,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BASKETWEAVER</Tag>
-		<English>Basketweaver's Hut</English>
+		<English>Basketmaker</English>
 		<French>
 			<Text>Hutte du Tresseur de paniers</Text>
 			<Gender>Female</Gender>
@@ -2676,7 +2676,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEADMAKER</Tag>
-		<English>Beadmaker's Hut</English>
+		<English>Beadworker</English>
 		<French>
 			<Text>Hutte du Perlier</Text>
 			<Gender>Female</Gender>
@@ -3289,7 +3289,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLOODHUNTRESS_HUT</Tag>
-		<English>Bloodhuntress's Hut</English>
+		<English>Bloodhuntress</English>
 		<French>
 			<Text>Cabane de préleveur de sang</Text>
 			<Gender>Female</Gender>
@@ -4848,7 +4848,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARPENTER</Tag>
-		<English>Carpenter's Shop</English>
+		<English>Carpenter</English>
 		<French>
 			<Text>Atelier du Charpentier</Text>
 			<Gender>Male</Gender>
@@ -8909,7 +8909,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EARTHWORM</Tag>
-		<English>Earthworm Gatherer</English>
+		<English>Earthworm Catcher</English>
 		<French>Récolteur de vers de terre</French>
 		<Polish>Zbieracz Dżdżownic</Polish>
 	</TEXT>
@@ -9646,7 +9646,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXECUTIONERS_HUT</Tag>
-		<English>Executioner's Hut</English>
+		<English>Executioner</English>
 		<French>
 			<Text>Cabane du bourreau</Text>
 			<Gender>Female</Gender>
@@ -10133,7 +10133,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FISHERMAN_HUT</Tag>
-		<English>Fisherman's Hut</English>
+		<English>Fisher</English>
 		<French>
 			<Text>Cabane de Pêcheur</Text>
 			<Gender>Female</Gender>
@@ -10163,7 +10163,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FISHTRAPS</Tag>
-		<English>Fish Traps</English>
+		<English>Fish Nets</English>
 		<French>
 			<Text>Pièges à Poissons</Text>
 			<Gender>Male</Gender>
@@ -10303,7 +10303,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLINT_KNAPPER</Tag>
-		<English>Flint Knapper's Hut</English>
+		<English>Flintknapper</English>
 		<French>
 			<Text>Cabane du Tailleur de Silex</Text>
 			<Gender>Female</Gender>
@@ -14285,7 +14285,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JEWELRY_STORE</Tag>
-		<English>Jewelry Store</English>
+		<English>Jeweler</English>
 		<French>
 			<Text>Boutique de bijoux</Text>
 			<Gender>Female</Gender>
@@ -15092,7 +15092,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LAVA_ROCK_QUARRY</Tag>
-		<English>Lava Rock Quarry</English>
+		<English>Lava Rock Gatherer</English>
 		<French>
 			<Text>Carrière de Roches de Lave</Text>
 			<Gender>Female</Gender>
@@ -15807,7 +15807,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAMMALIAN_HUT</Tag>
-		<English>Wet Nurse's Hut</English>
+		<English>Wet Nurse</English>
 		<French>
 			<Text>Cabane de Nourrice</Text>
 			<Gender>Female</Gender>
@@ -17817,7 +17817,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONTE_VERDE_PEDIA</Tag>
 		<English>Monte Verde is an archaeological site in southern Chile, located near Puerto Montt, Southern Chile, which has been dated to 14,800 years BP. This dating adds to the evidence showing that the human settlement of the Americas pre-dates the Clovis culture by roughly 1000 years. This contradicts the previously accepted "Clovis first" model which holds that settlement of the Americas began after 13,500 BP. The Monte Verde findingswere initially dismissed by most of the scientific community, but in recent years the evidence has become more widely accepted in some archaeological circles, although vocal "Clovis First" advocates remain. Coastalmigration is a widely accepted model explaining the inhabitance of Monte Verde. Archaeological evidence shows that people arrived at Monte Verde about 1,800 years before the time that the Bering Land Bridge betweenAlaska and Siberia would have become impassable in 13,000 BP. This leaves traveling down the western coast of the Americas as the most plausible explanation for the earliest inhabitants of Chile. Paleoecological evidenceof the coastal landscape's ability to sustain human life further supports this model. However, no archaeological evidence has been found of pre-Clovis humans using a coastal migration route.</English>
-		<German>Monte Verde (deutsch: Grüner Berg) ist ein archäologischer Fundort in Zentralchile westlich von Puerto Montt. Er gehört zu den ältesten Spuren menschlicher Besiedlung auf dem amerikanischen Kontinent. Monte Verde wurde konserviert, da der Pegel des Chinchihuapi-Flusses kurz nach der Besiedlung stieg und das dabei entstandene Moor den Zerfall von organischem Material verhinderte. Dadurch wurden Artefakte wie Alltagsgegenstände über Jahrtausende konserviert.[NEWLINE]Wiederentdeckt wurde die Stätte bei Ausgrabungen durch Mario Pino und Tom Dillehay ab 1977. Dillehay beschrieb seine Entdeckungen als einen von etwa 20 bis 30 Personen besiedelten Wohnplatz, in dessen Zentrum sich eine über 6 m lange zeltähnliche Struktur befand, die von in den Boden gerammten Baumstämmen und Bohlen gesichert wurde. Jeder der mit Schilfstricken und Tierfellen abgegrenzten Wohnräume verfügte über eine mit Lehm umgebene Feuerstelle. Im Umfeld wurden viele Steinwerkzeuge und Überreste von verschütteten Samen, Nüssen und Beeren sowie Knochen von Mastodons gefunden. Das durch Radiokarbondatierung gesicherte Alter der Funde von etwa 12000–14000 Jahren zeigte, dass das bis dahin angenommene Erstbesiedlungsdatum von Amerika (etwa 11000 v.Chr.) inkorrekt war.</German>
+		<German>Monte Verde (deutsch: Grüner Berg) ist ein archäologischer Fundort in Zentralchile westlich von Puerto Montt. Er gehört zu den ältesten Spuren menschlicher Besiedlung auf dem amerikanischen Kontinent. Monte Verde wurde konserviert, da der Pegel des Chinchihuapi-Flusses kurz nach der Besiedlung stieg und das dabei entstandene Moor den Zerfall von organischem Material verhinderte. Dadurch wurden Artefakte wie Alltagsgegenstände über Jahrtausende konserviert.[NEWLINE]Wiederentdeckt wurde die Stätte bei Ausgrabungen durch Mario Pino und Tom Dillehay ab 1977. Dillehay beschrieb seine Entdeckungen als einen von etwa 20 bis 30 Personen besiedelten Wohnplatz, in dessen Zentrum sich eine über 6 m lange zeltähnliche Struktur befand, die von in den Boden gerammten Baumstämmen und Bohlen gesichert wurde. Jeder der mit Schilfstricken und Tierfellen abgegrenzten Wohnräume verfügte über eine mit Lehm umgebene Feuerstelle. Im Umfeld wurden viele Steinwerkzeuge und Überreste von verschütteten Samen, Nüssen und Beeren sowie Knochen von Mastodons gefunden. Das durch Radiokarbondatierung gesicherte Alter der Funde von etwa 12000–14000 Jahren zeigte, dass das bis dahin angenommenen Erstbesiedlungsdatum von Amerika (etwa 11000 v.Chr.) inkorrekt war.</German>
 		<Polish>Monte Verde - stanowisko archeologiczne w pobliżu miejscowości Puerto Montt w Chile ok. 56 km od wybrzeży Pacyfiku, odkryte w 1976. Tom Dillehay z University of Kentucky i geolog Mario Pino odkryli w 1977 ślady obecności człowieka szacowane na ok. 12,5 tys. lat. Zdaniem Dillehay są to ślady małej osady zamieszkiwanej przez grupę 20-30 osób ok. 12-11,8 tys. lat temu. Datowanie radiowęglowe stanowiska Monte Verde II, w których stwierdzono ślady działalności człowieka wskazuje wiek 15-12,5 tys. lat. Dalsze badania na stanowisku Monte Verde I (1997) przyniosły kolejne artefakty szacowane tą samą metodą na 35-33 tys. lat.</Polish>
 	</TEXT>
 	<TEXT>
@@ -20904,7 +20904,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PIERCING_HUT</Tag>
-		<English>Piercer's Hut</English>
+		<English>Piercer</English>
 		<French>
 			<Text>Cabane de Piercing</Text>
 			<Gender>Female</Gender>
@@ -24701,7 +24701,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAIL</Tag>
-		<English>Snail Gatherer</English>
+		<English>Snail Catcher</English>
 		<French>Récolteur d'escargots</French>
 		<Polish>Zbieracz Ślimaków</Polish>
 	</TEXT>
@@ -25592,7 +25592,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STONEWORKER</Tag>
-		<English>Stoneworker's Hut</English>
+		<English>Stoneworker</English>
 		<French>
 			<Text>Hutte du Tailleur de Pierres</Text>
 			<Gender>Female</Gender>
@@ -25621,7 +25621,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STORAGE_PIT</Tag>
-		<English>Storage Pit</English>
+		<English>Food Storage Pit</English>
 		<French>
 			<Text>Fosse de Stockage</Text>
 			<Gender>Female</Gender>
@@ -28069,7 +28069,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WEAVER</Tag>
-		<English>Weaver's Hut</English>
+		<English>Weaver</English>
 		<French>
 			<Text>Hutte du Tisserand</Text>
 			<Gender>Female</Gender>

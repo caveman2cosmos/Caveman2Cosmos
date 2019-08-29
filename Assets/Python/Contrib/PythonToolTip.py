@@ -1,7 +1,9 @@
 from CvPythonExtensions import *
 
 import ScreenResolution as RES
-import InputData
+
+GC = CyGlobalContext()
+CyIF = CyInterface()
 
 def makeTooltip(screen, xPos, yPos, szTxt, uFont, listBox):
 	bSetX = False
@@ -9,11 +11,11 @@ def makeTooltip(screen, xPos, yPos, szTxt, uFont, listBox):
 	if xPos == -1: bSetX = True
 	if yPos == -1: bSetY = True
 	if bSetX or bSetY:
-		X, Y = InputData.instance.getMousePosition()
+		POINT = GC.getCursorPos()
 		if bSetX:
-			xPos = X
+			xPos = POINT.x
 		if bSetY:
-			yPos = Y
+			yPos = POINT.y
 	xRes = RES.x
 	yRes = RES.y
 
@@ -39,7 +41,7 @@ def makeTooltip(screen, xPos, yPos, szTxt, uFont, listBox):
 	dxMax = xRes/3
 	dx = 0
 	for aLine in aList:
-		iWidth = CyInterface().determineWidth(uFont + aLine)
+		iWidth = CyIF.determineWidth(uFont + aLine)
 		aWidthList.append((iWidth, aLine))
 		if iWidth > dx:
 			dx = iWidth
@@ -105,13 +107,13 @@ def makeTooltip(screen, xPos, yPos, szTxt, uFont, listBox):
 					# A line must start with the first word.
 					szLine = aWordList.pop(0)
 					# Is it already too long?
-					iWidth = CyInterface().determineWidth(uFont + szLine)
+					iWidth = CyIF.determineWidth(uFont + szLine)
 					if iWidth >= dx -24:
 						continue # Oh well... Wrap a new line
 					# A line should have more than just one word.
 					while True:
 						if aWordList:
-							iWidth = CyInterface().determineWidth(uFont + szLine + " " + aWordList[0])
+							iWidth = CyIF.determineWidth(uFont + szLine + " " + aWordList[0])
 							if iWidth >= dx -24:
 								# Wrap a new line
 								break

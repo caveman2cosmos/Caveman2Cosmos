@@ -137,8 +137,8 @@
 			<Civilopedia>TXT_KEY_BONUS_BAMBOO_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_BAMBOO</ArtDefineTag>
-			<TechReveal>TECH_CARPENTRY</TechReveal>
-			<TechCityTrade>TECH_CARPENTRY</TechCityTrade>
+			<TechReveal>TECH_GATHERING</TechReveal>
+			<TechCityTrade>TECH_WEAVING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Bark -->
@@ -928,7 +928,7 @@
 			<Civilopedia>TXT_KEY_BONUS_FLINT_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_FLINT</ArtDefineTag>
-			<TechReveal>TECH_FLINT_KNAPPING</TechReveal>
+			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_FLINT_KNAPPING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
@@ -1083,8 +1083,8 @@
 			<Civilopedia>TXT_KEY_BONUS_GRASS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_GRASS</ArtDefineTag>
-			<TechReveal>TECH_BASKETRY</TechReveal>
-			<TechCityTrade>TECH_BASKETRY</TechCityTrade>
+			<TechReveal>TECH_GATHERING</TechReveal>
+			<TechCityTrade>TECH_GATHERING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Gravity Generators -->
@@ -1417,8 +1417,8 @@
 			<Civilopedia>TXT_KEY_BONUS_LACQUERWARE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_LACQUERWARE</ArtDefineTag>
-			<TechReveal>TECH_ADHESIVES</TechReveal>
-			<TechCityTrade>TECH_ADHESIVES</TechCityTrade>
+			<TechReveal>TECH_SIMPLE_WOOD_WORKING</TechReveal>
+			<TechCityTrade>TECH_SIMPLE_WOOD_WORKING</TechCityTrade>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
@@ -1800,8 +1800,8 @@
 			<Civilopedia>TXT_KEY_BONUS_ORGANIC_COMPUTERS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ORGANIC_COMPUTERS</ArtDefineTag>
-			<TechReveal>TECH_DNA_COMPUTING</TechReveal>
-			<TechCityTrade>TECH_DNA_COMPUTING</TechCityTrade>
+			<TechReveal>TECH_AUGMENT_CONSUMABLES</TechReveal>
+			<TechCityTrade>TECH_AUGMENT_CONSUMABLES</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Organic Photonic Cells -->
@@ -1958,8 +1958,8 @@
 			<Civilopedia>TXT_KEY_BONUS_PLASMA_GENERATORS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PLASMA_GENERATORS</ArtDefineTag>
-			<TechReveal>TECH_CONTROLLED_PLASMA</TechReveal>
-			<TechCityTrade>TECH_CONTROLLED_PLASMA</TechCityTrade>
+			<TechReveal>TECH_ELECTRIC_ARC_WEAPONRY</TechReveal>
+			<TechCityTrade>TECH_ELECTRIC_ARC_WEAPONRY</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Plastic -->
@@ -2037,8 +2037,8 @@
 			<Civilopedia>TXT_KEY_BONUS_PUMICE_STONE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PUMICE_STONE</ArtDefineTag>
-			<TechReveal>TECH_FLINT_KNAPPING</TechReveal>
-			<TechCityTrade>TECH_FLINT_KNAPPING</TechCityTrade>
+			<TechReveal>TECH_SOFT_HAMMER_PERCUSSION</TechReveal>
+			<TechCityTrade>TECH_SOFT_HAMMER_PERCUSSION</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Pyrite -->
@@ -2070,8 +2070,8 @@
 			<Civilopedia>TXT_KEY_BONUS_RAWFISH_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_RAWFISH</ArtDefineTag>
-			<TechReveal>TECH_FISHING</TechReveal>
-			<TechCityTrade>TECH_FISHING</TechCityTrade>
+			<TechReveal>TECH_TRAP_FISHING</TechReveal>
+			<TechCityTrade>TECH_TRAP_FISHING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Raw Meat -->
@@ -2092,8 +2092,8 @@
 			<Civilopedia>TXT_KEY_BONUS_REEDS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_REEDS</ArtDefineTag>
-			<TechReveal>TECH_BASKETRY</TechReveal>
-			<TechCityTrade>TECH_BASKETRY</TechCityTrade>
+			<TechReveal>TECH_GATHERING</TechReveal>
+			<TechCityTrade>TECH_GATHERING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Refrigerators -->
@@ -2273,8 +2273,8 @@
 			<Civilopedia>TXT_KEY_BONUS_SHELLFISH_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SHELLFISH</ArtDefineTag>
-			<TechReveal>TECH_FISHING</TechReveal>
-			<TechCityTrade>TECH_FISHING</TechCityTrade>
+			<TechReveal>TECH_TRAP_FISHING</TechReveal>
+			<TechCityTrade>TECH_TRAP_FISHING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Shockwave Engines -->
@@ -2410,8 +2410,8 @@
 			<Civilopedia>TXT_KEY_BONUS_STONETOOLS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_STONETOOLS</ArtDefineTag>
-			<TechReveal>TECH_HARD_HAMMER_PERCUSSION</TechReveal>
-			<TechCityTrade>TECH_HARD_HAMMER_PERCUSSION</TechCityTrade>
+			<TechReveal>TECH_TOOL_MAKING</TechReveal>
+			<TechCityTrade>TECH_TOOL_MAKING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Straw -->
@@ -2421,8 +2421,8 @@
 			<Civilopedia>TXT_KEY_BONUS_STRAW_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_STRAW</ArtDefineTag>
-			<TechReveal>TECH_BASKETRY</TechReveal>
-			<TechCityTrade>TECH_BASKETRY</TechCityTrade>
+			<TechReveal>TECH_AGRICULTURE</TechReveal>
+			<TechCityTrade>TECH_AGRICULTURE</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- String Instruments -->
@@ -2921,7 +2921,7 @@
 			<Civilopedia>TXT_KEY_BONUS_WOOD_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_WOOD</ArtDefineTag>
-			<TechReveal>TECH_SIMPLE_WOOD_WORKING</TechReveal>
+			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_SIMPLE_WOOD_WORKING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
@@ -2932,8 +2932,8 @@
 			<Civilopedia>TXT_KEY_BONUS_WOODWINDS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_WOODWINDS</ArtDefineTag>
-			<TechReveal>TECH_PREHISTORIC_MUSIC</TechReveal>
-			<TechCityTrade>TECH_PREHISTORIC_MUSIC</TechCityTrade>
+			<TechReveal>TECH_SIMPLE_WOOD_WORKING</TechReveal>
+			<TechCityTrade>TECH_SIMPLE_WOOD_WORKING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Wool -->

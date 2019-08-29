@@ -76,7 +76,7 @@
 			<BonusType>BONUS_ORGANIC_COMPUTERS</BonusType>
 			<iCost>3665</iCost>
 			<iMoves>2</iMoves>
-			<iCombat>100</iCombat>
+			<iCombat>225</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
 			<iFirstStrikes>1</iFirstStrikes>

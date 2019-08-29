@@ -419,7 +419,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>180</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -455,7 +455,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>270</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -482,8 +482,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_AKA_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_GATHERING</PrereqTech>
-			<RawVicinityBonus>BONUS_POTATO</RawVicinityBonus>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
@@ -497,7 +496,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>270</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -533,7 +532,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -848,7 +847,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_APACHE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_BEAD_MAKING</PrereqTech>
+			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<RawVicinityBonus>BONUS_PEYOTE</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
@@ -863,7 +862,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>1700</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -905,7 +904,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>710</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -965,7 +964,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>336</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1041,7 +1040,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>710</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1113,7 +1112,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1161,7 +1160,7 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_LEAD</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1244,7 +1243,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>665</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1293,7 +1292,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1335,7 +1334,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>444</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1392,7 +1391,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>235</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1471,7 +1470,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_BASQUE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
+			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
 			<RawVicinityBonus>BONUS_SPICES</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -1480,7 +1479,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>552</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1627,7 +1626,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_BERBER_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
+			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			<RawVicinityBonus>BONUS_SHEEP</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
@@ -1642,7 +1641,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>470</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1678,7 +1677,7 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_BISON</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1767,7 +1766,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>470</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1980,7 +1979,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CANTONESE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<RawVicinityBonus>BONUS_POULTRY</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -1989,7 +1988,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>710</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2026,7 +2025,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>240</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2069,7 +2068,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2105,7 +2104,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>665</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2132,7 +2131,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CELTIC_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
+			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_SHEEP</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -2147,7 +2146,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>1230</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2371,7 +2370,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>588</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2573,7 +2572,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CHUMASH_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_PETROGLYPHS</PrereqTech>
+			<PrereqTech>TECH_FISHING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_FINE_CLAY</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -2583,7 +2582,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>480</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2743,7 +2742,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CREE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_TRACKING</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<RawVicinityBonus>BONUS_RABBIT</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -2752,7 +2751,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>270</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2852,7 +2851,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_DAHOMEY_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_SLAVERY</PrereqTech>
+			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_CLAM</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -2862,7 +2861,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>910</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2946,7 +2945,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>552</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3068,7 +3067,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EGYPTIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
+			<PrereqTech>TECH_CHARIOTRY</PrereqTech>
 			<RawVicinityBonus>BONUS_STONE</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
@@ -3089,7 +3088,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>140</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3254,7 +3253,7 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_LEAD</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3375,7 +3374,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>665</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3411,7 +3410,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3743,7 +3742,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3873,7 +3872,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>516</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3981,7 +3980,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_HAWAIIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
+			<PrereqTech>TECH_SEAFARING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_COCONUT</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -3991,7 +3990,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>385</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4018,7 +4017,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_HERERO_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
+			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<RawVicinityBonus>BONUS_BISON</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
@@ -4033,7 +4032,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>1070</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4193,7 +4192,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_HUASTEC_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_PETROGLYPHS</PrereqTech>
+			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<RawVicinityBonus>BONUS_INCENSE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -4202,7 +4201,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>235</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4248,7 +4247,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>588</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4326,7 +4325,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>270</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4363,7 +4362,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>430</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4390,7 +4389,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_INCAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_STONE_BUILDING</PrereqTech>
+			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_POTATO</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
@@ -4405,7 +4404,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4512,7 +4511,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_INDONESIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_FISHING</PrereqTech>
+			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<RawVicinityBonus>BONUS_PEARLS</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -4527,7 +4526,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>505</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4554,7 +4553,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_INUIT_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
 			<RawVicinityBonus>BONUS_WALRUS</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -4569,7 +4568,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>516</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4633,7 +4632,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_IROQUOIS_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WOOD_WORKING</PrereqTech>
+			<PrereqTech>TECH_AXE_MAKING</PrereqTech>
 			<RawVicinityBonus>BONUS_TIMBER</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -4648,7 +4647,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>336</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4901,7 +4900,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>444</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4938,7 +4937,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>552</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5016,7 +5015,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>430</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5132,7 +5131,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_KLAMATH_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_SLAVERY</PrereqTech>
+			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<RawVicinityBonus>BONUS_WINE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -5141,7 +5140,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>3210</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5168,7 +5167,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_KONGOLESE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WARFARE</PrereqTech>
+			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_TIMBER</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -5177,7 +5176,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5308,7 +5307,7 @@
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<RawVicinityBonus>BONUS_PLATINUM</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>665</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5335,7 +5334,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_LIANGZHU_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
+			<PrereqTech>TECH_AXE_MAKING</PrereqTech>
 			<RawVicinityBonus>BONUS_JADE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -5344,7 +5343,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>336</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5458,7 +5457,7 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_COPPER</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5654,7 +5653,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>336</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5690,7 +5689,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5795,7 +5794,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_MAYAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_PETROGLYPHS</PrereqTech>
+			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<RawVicinityBonus>BONUS_INDIGO</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -5810,7 +5809,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>444</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5942,7 +5941,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_MINOAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
+			<PrereqTech>TECH_WRITING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_COW</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -5952,7 +5951,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>1056</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6022,7 +6021,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_MIXTEC_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_PETROGLYPHS</PrereqTech>
+			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<RawVicinityBonus>BONUS_COCOA</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -6031,7 +6030,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>444</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6120,7 +6119,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>588</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6156,7 +6155,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>910</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6283,7 +6282,7 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_SILVER</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6310,7 +6309,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_NAVAJO_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_ANIMISM</PrereqTech>
+			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			<RawVicinityBonus>BONUS_SHEEP</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
@@ -6325,7 +6324,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>500</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6367,7 +6366,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>444</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6395,18 +6394,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NEANDERTHAL_EMBASSY</MovieDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_NOMADIC_LIFESTYLE</PrereqTech>
+			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
+			<RawVicinityBonus>BONUS_STONE</RawVicinityBonus>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
 			<!-- Construction -->
 			<iCost>60</iCost>
-			<!-- Main effects -->
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
 			<!-- Special properties -->
 			<FreeBonus>BONUS_NEANDERTHAL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -6561,7 +6554,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6633,7 +6626,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>235</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6660,7 +6653,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_OLMEC_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
+			<PrereqTech>TECH_BARTER</PrereqTech>
 			<RawVicinityBonus>BONUS_JADE</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -6675,7 +6668,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6861,8 +6854,8 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_PAPUAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
-			<RawVicinityBonus>BONUS_POTATO</RawVicinityBonus>
+			<PrereqTech>TECH_WARFARE</PrereqTech>
+			<RawVicinityBonus>BONUS_MANGO</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
@@ -6876,7 +6869,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>516</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6912,7 +6905,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>450</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6948,7 +6941,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>588</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7162,7 +7155,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_POLYNESIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_FISHING</PrereqTech>
+			<PrereqTech>TECH_SAILING</PrereqTech>
 			<RawVicinityBonus>BONUS_FISH</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -7171,7 +7164,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>265</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7207,7 +7200,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>665</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7306,7 +7299,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_QUECHUA_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_LLAMA</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
@@ -7321,7 +7314,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7358,7 +7351,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>624</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7524,7 +7517,7 @@
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<RawVicinityBonus>BONUS_HORSE</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>588</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7630,7 +7623,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SAMI_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
+			<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
 			<RawVicinityBonus>BONUS_DEER</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
@@ -7651,7 +7644,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>552</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7688,7 +7681,7 @@
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<RawVicinityBonus>BONUS_PEARLS</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>1070</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7897,7 +7890,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>235</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7960,7 +7953,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SIAMESE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_PACHYDERM_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<RawVicinityBonus>BONUS_ELEPHANT</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -7975,7 +7968,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>552</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8013,7 +8006,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SIBERIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_PORTABLE_SHELTERS</PrereqTech>
+			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<RawVicinityBonus>BONUS_MAMMOTH</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
@@ -8032,7 +8025,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>620</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8078,7 +8071,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>336</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8114,7 +8107,7 @@
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<RawVicinityBonus>BONUS_POULTRY</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>1700</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8366,7 +8359,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8435,7 +8428,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SWAHILI_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_FISHING</PrereqTech>
+			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<RawVicinityBonus>BONUS_FISH</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -8444,7 +8437,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>552</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8610,7 +8603,7 @@
 			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			<RawVicinityBonus>BONUS_CLAM</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>430</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8674,7 +8667,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_TAMIL_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
+			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<RawVicinityBonus>BONUS_STONE</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -8689,7 +8682,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>1800</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8726,7 +8719,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8734,47 +8727,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<FreeBonus>BONUS_TARASCAN</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<!-- Special properties -->
-			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<bNukeImmune>1</bNukeImmune>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-		</BuildingInfo>
-		<BuildingInfo>
-			<!-- Culture (Tasmanian) -->
-			<BuildingClass>BUILDINGCLASS_TASMANIAN_EMBASSY</BuildingClass>
-			<Type>BUILDING_TASMANIAN_EMBASSY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_TASMANIAN_EMBASSY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TASMANIAN_EMBASSY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TASMANIAN_EMBASSY_STRATEGY</Strategy>
-			<Advisor>ADVISOR_CULTURE</Advisor>
-			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_TASMANIAN_EMBASSY</ArtDefineTag>
-			<!-- Prerequisites -->
-			<PrereqTech>TECH_NAVIGATION</PrereqTech>
-			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_TIN</RawVicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_OCEANIAN</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_EUROPEAN</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<!-- Construction -->
-			<iCost>800</iCost>
-			<!-- Main effects -->
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<FreeBonus>BONUS_TASMANIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -8807,7 +8759,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>1600</iCost>
+			<iCost>1070</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8970,7 +8922,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>444</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9006,7 +8958,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>444</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9042,7 +8994,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>444</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9106,7 +9058,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_TOTONAC_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
+			<PrereqTech>TECH_TRADE</PrereqTech>
 			<RawVicinityBonus>BONUS_VANILLA</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -9115,7 +9067,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>305</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9151,7 +9103,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9193,7 +9145,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>552</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9220,7 +9172,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_TUPI_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_POISON_CRAFTING</PrereqTech>
+			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<RawVicinityBonus>BONUS_PARROTS</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -9235,7 +9187,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>235</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9262,7 +9214,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_TURKMEN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<RawVicinityBonus>BONUS_COTTON</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -9271,7 +9223,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>710</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9599,7 +9551,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>588</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9636,7 +9588,7 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_PEARLS</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9709,7 +9661,7 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_LLAMA</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9793,7 +9745,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>444</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9820,7 +9772,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ZULU_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WARFARE</PrereqTech>
+			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_ELEPHANT</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -9835,7 +9787,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9943,7 +9895,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ADENA_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_FIG</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -9953,7 +9905,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10105,7 +10057,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>665</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10209,7 +10161,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_AMIS_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
+			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_PARROTS</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -10219,7 +10171,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1070</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10247,7 +10199,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ANDAMANESE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_BEAD_MAKING</PrereqTech>
+			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_MUREX</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -10257,7 +10209,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>235</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10361,7 +10313,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_AVARS_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_PORTABLE_SHELTERS</PrereqTech>
+			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_RABBIT</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -10371,7 +10323,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>450</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10437,7 +10389,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_AZANDE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_RITUALISM</PrereqTech>
+			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_MARBLE</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -10447,7 +10399,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1700</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10485,7 +10437,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>450</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10513,7 +10465,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_BACTRIC_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
+			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_SILVER</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -10523,7 +10475,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>588</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10703,7 +10655,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_BAVARIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WARFARE</PrereqTech>
+			<PrereqTech>TECH_STIRRUP</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_PIG</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -10713,7 +10665,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>470</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10741,7 +10693,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_BEDOUIN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_PETROGLYPHS</PrereqTech>
+			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_DEER</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -10751,7 +10703,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>640</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10827,7 +10779,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>910</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10855,7 +10807,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_BRETON_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
+			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_DONKEY</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -10865,7 +10817,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>710</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10969,7 +10921,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CAMBEBA_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
+			<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_COFFEE</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -10979,7 +10931,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>990</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11055,7 +11007,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11169,7 +11121,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>235</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11207,7 +11159,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11245,7 +11197,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>552</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11349,7 +11301,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CHIMU_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_ANIMISM</PrereqTech>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_CRAB</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -11359,7 +11311,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11463,7 +11415,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_DACIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_BEAD_MAKING</PrereqTech>
+			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_COPPER</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -11473,7 +11425,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>230</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11511,7 +11463,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>335</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11539,7 +11491,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_DRAVIDIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_PORTABLE_SHELTERS</PrereqTech>
+			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_PEARLS</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -11549,7 +11501,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>450</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11587,7 +11539,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1070</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11777,7 +11729,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>444</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11815,7 +11767,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>450</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11853,7 +11805,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11881,7 +11833,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_GAUCHO_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_PORTABLE_SHELTERS</PrereqTech>
+			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_HORSE</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -11891,7 +11843,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1160</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11967,7 +11919,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>665</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12043,7 +11995,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>665</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12071,7 +12023,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_GUAM_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_KAVA</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -12081,7 +12033,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12109,7 +12061,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_GUANCHES_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_SPEARFISHING</PrereqTech>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_STONE</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -12119,7 +12071,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12147,7 +12099,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_GUARANI_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WARFARE</PrereqTech>
+			<PrereqTech>TECH_USURY</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_PAPAYA</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -12157,7 +12109,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>665</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12261,7 +12213,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_HELVETII_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WARFARE</PrereqTech>
+			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_BISON</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -12271,7 +12223,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>430</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12299,7 +12251,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_HEMUDU_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_GATHERING</PrereqTech>
+			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_RICE</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -12309,7 +12261,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>235</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12413,7 +12365,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_HOPEWELL_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_ANIMISM</PrereqTech>
+			<PrereqTech>TECH_TRADE</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_POULTRY</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -12423,7 +12375,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>305</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12451,7 +12403,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_HURRIANS_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_RITUALISM</PrereqTech>
+			<PrereqTech>TECH_WRITING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_TIMBER</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -12461,7 +12413,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>350</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12499,7 +12451,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>588</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12537,7 +12489,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>430</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12565,7 +12517,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ILOCANO_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_POISON_CRAFTING</PrereqTech>
+			<PrereqTech>TECH_COMPASS</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_INDIGO</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -12575,7 +12527,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>760</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12603,7 +12555,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_INDUS_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_RITUALISM</PrereqTech>
+			<PrereqTech>TECH_DUALISM</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_PIG</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -12613,7 +12565,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>335</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12727,7 +12679,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12803,7 +12755,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1070</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12820,7 +12772,7 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Culture (Khazak) -->
+			<!-- Culture (Khazakh) -->
 			<BuildingClass>BUILDINGCLASS_KHAZAK_EMBASSY</BuildingClass>
 			<Type>BUILDING_KHAZAK_EMBASSY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12831,7 +12783,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_KHAZAK_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_MELON</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -12841,7 +12793,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>910</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12917,7 +12869,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>335</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12983,7 +12935,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_KITARA_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_BEAD_MAKING</PrereqTech>
+			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_FUR</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -12993,7 +12945,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>690</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13135,7 +13087,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_KUSHAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_RITUALISM</PrereqTech>
+			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_CAMEL</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -13145,7 +13097,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>450</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13221,7 +13173,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>910</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13259,7 +13211,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>910</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13401,7 +13353,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_LONGOBARDI_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_WINE</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -13411,7 +13363,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13487,7 +13439,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>235</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13563,7 +13515,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>235</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13629,7 +13581,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_MANI_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WARFARE</PrereqTech>
+			<PrereqTech>TECH_FOLK_MEDICINE</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_SPICES</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -13639,7 +13591,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>305</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13667,7 +13619,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_MEDES_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_JADE</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -13677,7 +13629,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13743,7 +13695,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_MICRONESIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_RITUALISM</PrereqTech>
+			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_STONE</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -13753,7 +13705,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1700</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13933,7 +13885,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_MOLLO_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
+			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_PRICKLY_PEAR</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -13943,7 +13895,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>665</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13971,7 +13923,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_MUISCA_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
+			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_MUSHROOMS</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -13981,7 +13933,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>505</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14009,7 +13961,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_MURRI_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_GATHERING</PrereqTech>
+			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_RABBIT</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -14019,7 +13971,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>600</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14085,7 +14037,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_NAHUA_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_POULTRY</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -14095,7 +14047,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14161,7 +14113,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_NOONGAR_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_PORTABLE_SHELTERS</PrereqTech>
+			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_FINE_CLAY</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -14171,7 +14123,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>400</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14209,7 +14161,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>665</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14237,7 +14189,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_NUMIDIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_CAMEL</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -14247,7 +14199,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>430</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14275,7 +14227,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ODAWA_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_FISHING</PrereqTech>
+			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_TOBACCO</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -14285,7 +14237,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>600</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14313,7 +14265,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_OMAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_FISHING</PrereqTech>
+			<PrereqTech>TECH_PIRACY</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_PARROTS</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -14323,7 +14275,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>320</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14378,7 +14330,7 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Culture (Orang_Asli) -->
+			<!-- Culture (Orang Asli) -->
 			<BuildingClass>BUILDINGCLASS_ORANG_ASLI_EMBASSY</BuildingClass>
 			<Type>BUILDING_ORANG_ASLI_EMBASSY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14389,7 +14341,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ORANG_ASLI_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WARFARE</PrereqTech>
+			<PrereqTech>TECH_YEOMANRY</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_TIMBER</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -14399,7 +14351,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>640</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14427,7 +14379,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_PAIUTE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_ANIMISM</PrereqTech>
+			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_PEYOTE</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -14437,7 +14389,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1260</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14589,7 +14541,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>588</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14627,7 +14579,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1700</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14741,7 +14693,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14758,7 +14710,7 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Culture (Poverty_Point) -->
+			<!-- Culture (Poverty Point) -->
 			<BuildingClass>BUILDINGCLASS_POVERTY_POINT_EMBASSY</BuildingClass>
 			<Type>BUILDING_POVERTY_POINT_EMBASSY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14769,7 +14721,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_POVERTY_POINT_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_SPEARFISHING</PrereqTech>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_STONE</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -14779,7 +14731,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14883,7 +14835,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_PUNTIC_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
+			<PrereqTech>TECH_TRADE</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_WHALE</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -14893,7 +14845,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>920</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14969,7 +14921,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>710</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15007,7 +14959,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1070</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15111,7 +15063,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_RED_OCHER_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_PUMPKIN</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -15121,7 +15073,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1100</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15149,7 +15101,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SABBATEAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
+			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_HENNA</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -15159,7 +15111,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>960</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15273,7 +15225,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15377,7 +15329,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SEMANG_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_PETROGLYPHS</PrereqTech>
+			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_PIG</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -15387,7 +15339,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15691,7 +15643,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1070</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15719,7 +15671,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SUNDANESE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WARFARE</PrereqTech>
+			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_SHRIMP</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -15729,7 +15681,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>665</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15805,7 +15757,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>910</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15947,7 +15899,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_TANG_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_RITUALISM</PrereqTech>
+			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_FLAX</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -15957,7 +15909,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>600</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16023,7 +15975,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_TASMANIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_ANIMISM</PrereqTech>
+			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_AMBER</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -16033,7 +15985,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>600</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16071,7 +16023,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>710</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16137,7 +16089,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_THREE_KINGDOMS_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
+			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_GOLD</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -16147,7 +16099,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>430</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16175,7 +16127,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_TIWI_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_COPPER</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -16185,7 +16137,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1100</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16213,7 +16165,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_TOBA_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_PORTABLE_SHELTERS</PrereqTech>
+			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_CLAM</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -16223,7 +16175,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>910</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16231,44 +16183,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<FreeBonus>BONUS_TOBA</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<!-- Misc. Effects -->
-			<!-- Special properties -->
-			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<bNukeImmune>1</bNukeImmune>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-		</BuildingInfo>
-		<BuildingInfo>
-			<!-- Culture (Totonac) -->
-			<BuildingClass>BUILDINGCLASS_TOTONAC_EMBASSY</BuildingClass>
-			<Type>BUILDING_TOTONAC_EMBASSY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_TOTONAC_EMBASSY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TOTONAC_EMBASSY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TOTONAC_EMBASSY_STRATEGY</Strategy>
-			<Advisor>ADVISOR_CULTURE</Advisor>
-			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_TOTONAC_EMBASSY</ArtDefineTag>
-			<!-- Prerequisites -->
-			<PrereqTech>TECH_POISON_CRAFTING</PrereqTech>
-			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_MARBLE</RawVicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_NAMERICAN</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<!-- Construction cost -->
-			<iCost>100</iCost>
-			<!-- Main effects -->
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<FreeBonus>BONUS_TOTONAC</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -16299,7 +16213,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>588</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16327,7 +16241,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_TUCANO_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_ANIMISM</PrereqTech>
+			<PrereqTech>TECH_BARTER</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_PUMPKIN</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -16337,7 +16251,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16527,7 +16441,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>710</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16555,7 +16469,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_UZBEKS_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_PETROGLYPHS</PrereqTech>
+			<PrereqTech>TECH_HUMANISM</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_COW</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -16565,7 +16479,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>820</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16603,7 +16517,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16717,7 +16631,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>910</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16783,7 +16697,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_WARAY_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_GATHERING</PrereqTech>
+			<PrereqTech>TECH_STIRRUP</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_TOBACCO</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -16793,7 +16707,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>470</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16821,7 +16735,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_WARI_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
+			<PrereqTech>TECH_DUALISM</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_POULTRY</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -16831,7 +16745,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>335</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16859,7 +16773,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_WAYUU_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_FISHING</PrereqTech>
+			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_SILVER</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -16869,7 +16783,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>455</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16907,7 +16821,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16945,7 +16859,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>588</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16983,7 +16897,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -17021,7 +16935,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -17097,7 +17011,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>335</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -17135,7 +17049,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>235</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>

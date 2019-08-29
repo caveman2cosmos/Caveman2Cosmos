@@ -51,6 +51,10 @@
 			</BuildingClassNeededs>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_ABORIGINE_EMBASSY</BuildingClassType>
+					<bPrereqBuildingClass>1</bPrereqBuildingClass>
+				</PrereqOrBuildingClass>
+				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_FIJIAN_EMBASSY</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>

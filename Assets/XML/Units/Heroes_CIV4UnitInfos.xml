@@ -16584,9 +16584,9 @@
 			</Buildings>
 			<PrereqTech>TECH_RITUALISM</PrereqTech>
 			<BonusType>BONUS_ABORIGINE</BonusType>
-			<iCost>150</iCost>
+			<iCost>120</iCost>
 			<iMoves>1</iMoves>
-			<iCombat>3</iCombat>
+			<iCombat>4</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iConscription>2</iConscription>
@@ -18509,7 +18509,7 @@
 			</Buildings>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<BonusType>BONUS_AKA</BonusType>
-			<iCost>150</iCost>
+			<iCost>180</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -18605,7 +18605,7 @@
 			</Buildings>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<BonusType>BONUS_AINU</BonusType>
-			<iCost>150</iCost>
+			<iCost>180</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -19998,11 +19998,11 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_WARFARE</PrereqTech>
+			<PrereqTech>TECH_DEPUTIZATION</PrereqTech>
 			<BonusType>BONUS_ABORIGINE</BonusType>
-			<iCost>300</iCost>
-			<iMoves>1</iMoves>
-			<iCombat>3</iCombat>
+			<iCost>2520</iCost>
+			<iMoves>2</iMoves>
+			<iCombat>25</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iConscription>2</iConscription>
@@ -20399,9 +20399,9 @@
 			</Buildings>
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<BonusType>BONUS_ROXOLANI</BonusType>
-			<iCost>400</iCost>
+			<iCost>390</iCost>
 			<iMoves>1</iMoves>
-			<iCombat>12</iCombat>
+			<iCombat>8</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iConscription>2</iConscription>
@@ -20592,7 +20592,7 @@
 			</Buildings>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<BonusType>BONUS_AKA</BonusType>
-			<iCost>150</iCost>
+			<iCost>180</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -21276,11 +21276,11 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<PrereqTech>TECH_POISON_CRAFTING</PrereqTech>
+			<PrereqTech>TECH_COLONIALISM</PrereqTech>
 			<BonusType>BONUS_TUPI</BonusType>
-			<iCost>150</iCost>
+			<iCost>1760</iCost>
 			<iMoves>2</iMoves>
-			<iCombat>11</iCombat>
+			<iCombat>20</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>10</iWithdrawalProb>
@@ -33297,9 +33297,9 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
+			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_TANG</BonusType>
-			<iCost>900</iCost>
+			<iCost>1200</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -46123,11 +46123,11 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_HUNTING</PrereqTech>
+			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<BonusType>BONUS_HEMUDU</BonusType>
-			<iCost>150</iCost>
+			<iCost>470</iCost>
 			<iMoves>1</iMoves>
-			<iCombat>4</iCombat>
+			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iConscription>2</iConscription>
@@ -46955,16 +46955,16 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_RITUALISM</PrereqTech>
+			<PrereqTech>TECH_WRITING</PrereqTech>
 			<BonusType>BONUS_HURRIANS</BonusType>
-			<iCost>150</iCost>
+			<iCost>700</iCost>
 			<iMoves>1</iMoves>
-			<iCombat>3</iCombat>
+			<iCombat>10</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iConscription>2</iConscription>
-			<iAsset>2</iAsset>
-			<iPower>3</iPower>
+			<iAsset>6</iAsset>
+			<iPower>8</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -47055,9 +47055,9 @@
 			</Buildings>
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<BonusType>BONUS_HYKSOSI</BonusType>
-			<iCost>400</iCost>
+			<iCost>392</iCost>
 			<iMoves>1</iMoves>
-			<iCombat>12</iCombat>
+			<iCombat>8</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iConscription>2</iConscription>
@@ -47395,11 +47395,11 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_RITUALISM</PrereqTech>
+			<PrereqTech>TECH_DUALISM</PrereqTech>
 			<BonusType>BONUS_INDUS</BonusType>
-			<iCost>150</iCost>
+			<iCost>670</iCost>
 			<iMoves>1</iMoves>
-			<iCombat>3</iCombat>
+			<iCombat>6</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iConscription>2</iConscription>

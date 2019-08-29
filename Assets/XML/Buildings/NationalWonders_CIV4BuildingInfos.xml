@@ -861,7 +861,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MONARCHY</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>172</iCost>
+			<iCost>136</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<!-- Local -->
@@ -1762,7 +1762,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_WOMENS_SUFFRAGE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>196</iCost>
+			<iCost>172</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Local -->
@@ -2044,7 +2044,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_FIREFIGHTING</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>148</iCost>
+			<iCost>112</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<!-- Local -->
@@ -3880,7 +3880,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>184</iCost>
+			<iCost>210</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Local -->
@@ -4006,7 +4006,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>112</iCost>
+			<iCost>100</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>

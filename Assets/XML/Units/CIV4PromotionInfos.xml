@@ -544,7 +544,7 @@
 			<Description>TXT_KEY_PROMOTION_TACTICS</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_LEADER</PromotionPrereq>
-			<TechPrereq>TECH_TRACKING</TechPrereq>
+			<TechPrereq>TECH_HUNTING</TechPrereq>
 			<iWithdrawalChange>20</iWithdrawalChange>
 			<UnitCombats>
 				<UnitCombat>
@@ -2573,7 +2573,7 @@
 			<Description>TXT_KEY_PROMOTION_HUNTER2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_HUNTER1</PromotionPrereq>
-			<TechPrereq>TECH_TRACKING</TechPrereq>
+			<TechPrereq>TECH_HUNTING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_HUNTER</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<NotOnDomainTypes>
@@ -12409,7 +12409,7 @@
 			</UnitCombats>
 			<Button>Art/Interface/Buttons/Retinue/strategist.dds</Button>
 			<iCaptureProbabilityModifierChange>10</iCaptureProbabilityModifierChange>
-		</PromotionInfo>		
+		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_WAR_VETERAN</Type>
 			<Description>TXT_KEY_PROMOTION_RETINUE_WAR_VETERAN_DESC</Description>
@@ -17082,7 +17082,7 @@
 			<Type>PROMOTION_FOREST_WORKER1</Type>
 			<Description>TXT_KEY_PROMOTION_FOREST_WORKER1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FINE_EDGED_TOOLS</TechPrereq>
+			<TechPrereq>TECH_AXE_MAKING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_FOREST_WORKER</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<FeatureWorks>
@@ -17612,7 +17612,7 @@
 			<Description>TXT_KEY_PROMOTION_STALL3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_STALL2</PromotionPrereq>
-			<TechPrereq>TECH_SCRAPING</TechPrereq>
+			<TechPrereq>TECH_HUNTING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_STALL</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<NotOnUnitCombatTypes>
@@ -26427,7 +26427,7 @@
 			<Type>PROMOTION_MASTER_HUNTER1</Type>
 			<Description>TXT_KEY_PROMOTION_MASTER_HUNTER1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_TRACKING</TechPrereq>
+			<TechPrereq>TECH_HUNTING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_MASTER_HUNTER</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<bBlitz>1</bBlitz>

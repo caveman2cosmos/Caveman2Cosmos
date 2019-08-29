@@ -21,7 +21,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_BISON</Bonus>
-			<iCost>588</iCost>
+			<iCost>624</iCost>
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
 			<iAsset>4</iAsset>

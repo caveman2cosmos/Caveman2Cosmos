@@ -218,7 +218,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_OBSIDIAN</BonusType>
 			</PrereqBonuses>
-			<iCost>65</iCost>
+			<iCost>60</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>7</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -750,7 +750,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_AXE_MAKING</PrereqTech>
 			<BonusType>BONUS_SIOUX</BonusType>
-			<iCost>55</iCost>
+			<iCost>42</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -1182,7 +1182,7 @@
 				<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_MAYAN</BonusType>
-			<iCost>65</iCost>
+			<iCost>56</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -2500,7 +2500,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_HORSE</BonusType>
 			</PrereqBonuses>
-			<iCost>100</iCost>
+			<iCost>98</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>6</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -4184,9 +4184,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
+			<PrereqTech>TECH_AXE_MAKING</PrereqTech>
 			<BonusType>BONUS_IROQUOIS</BonusType>
-			<iCost>65</iCost>
+			<iCost>42</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -4674,9 +4674,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_BONE_WORKING</PrereqTech>
+			<PrereqTech>TECH_SEAFARING</PrereqTech>
 			<BonusType>BONUS_HAWAIIAN</BonusType>
-			<iCost>45</iCost>
+			<iCost>770</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>7</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -5248,7 +5248,7 @@
 			</NotUnitAIs>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<BonusType>BONUS_OLMEC</BonusType>
-			<iCost>65</iCost>
+			<iCost>60</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -6251,7 +6251,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_OBSIDIAN</BonusType>
 			</PrereqBonuses>
-			<iCost>65</iCost>
+			<iCost>60</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>7</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -6357,7 +6357,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<BonusType>BONUS_TOLTEC</BonusType>
-			<iCost>65</iCost>
+			<iCost>60</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>7</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -6942,7 +6942,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_HEAT_TREATMENT</PrereqTech>
 			<BonusType>BONUS_MAPUCHE</BonusType>
-			<iCost>42</iCost>
+			<iCost>47</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -7037,7 +7037,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
 			<BonusType>BONUS_INUIT</BonusType>
-			<iCost>84</iCost>
+			<iCost>65</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -7360,7 +7360,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_POISON_CRAFTING</PrereqTech>
 			<BonusType>BONUS_CARIB</BonusType>
-			<iCost>50</iCost>
+			<iCost>46</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -7445,9 +7445,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_TRACKING</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<BonusType>BONUS_CREE</BonusType>
-			<iCost>30</iCost>
+			<iCost>38</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -7528,9 +7528,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
+			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
 			<BonusType>BONUS_HURON</BonusType>
-			<iCost>65</iCost>
+			<iCost>34</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -7770,7 +7770,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_WOOD_WORKING</PrereqTech>
 			<BonusType>BONUS_NOOTKA</BonusType>
-			<iCost>51</iCost>
+			<iCost>46</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -7974,7 +7974,7 @@
 			<BonusType>BONUS_ABORIGINE</BonusType>
 			<iCost>43</iCost>
 			<iMoves>2</iMoves>
-			<iCombat>2</iCombat>
+			<iCombat>4</iCombat>
 			<iXPValueAttack>3</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
 			<iFirstStrikes>1</iFirstStrikes>
@@ -11000,9 +11000,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<BonusType>BONUS_AKA</BonusType>
-			<iCost>15</iCost>
+			<iCost>29</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -11225,12 +11225,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_WOOD_WORKING</PrereqTech>
+			<PrereqTech>TECH_TATTOOS</PrereqTech>
 			<BonusType>BONUS_MAORI</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_TIMBER</BonusType>
+				<BonusType>BONUS_WOOD</BonusType>
 			</PrereqBonuses>
-			<iCost>60</iCost>
+			<iCost>42</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -11321,11 +11321,11 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
+			<PrereqTech>TECH_WARFARE</PrereqTech>
 			<BonusType>BONUS_PAPUAN</BonusType>
-			<iCost>25</iCost>
+			<iCost>99</iCost>
 			<iMoves>1</iMoves>
-			<iCombat>3</iCombat>
+			<iCombat>5</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
 			<iPursuit>15</iPursuit>
@@ -11537,7 +11537,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_CAMEL</BonusType>
 			</PrereqBonuses>
-			<iCost>100</iCost>
+			<iCost>98</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>6</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -13846,7 +13846,7 @@
 			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<BonusType>BONUS_CHUMASH</BonusType>
-			<iCost>10</iCost>
+			<iCost>88</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iMoves>2</iMoves>
 			<TerrainImpassableTypes>
@@ -13866,7 +13866,7 @@
 			<iCombat>2</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
-			<iAnimalCombat>50</iAnimalCombat>
+			<iAnimalCombat>250</iAnimalCombat>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
 			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
@@ -15315,7 +15315,7 @@
 					<iProductionTrait>25</iProductionTrait>
 				</ProductionTrait>
 			</ProductionTraits>
-			<iCost>83</iCost>
+			<iCost>78</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>200</iWorkRate>
 			<iAsset>1</iAsset>
@@ -17057,7 +17057,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
 			<BonusType>BONUS_ARAWAK</BonusType>
-			<iCost>50</iCost>
+			<iCost>39</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -18021,7 +18021,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_DOG</BonusType>
 			</PrereqBonuses>
-			<iCost>43</iCost>
+			<iCost>46</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>3</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -18260,7 +18260,7 @@
 			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
 			<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
 			<BonusType>BONUS_HAIDA</BonusType>
-			<iCost>115</iCost>
+			<iCost>95</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
 			<iMoves>1</iMoves>
 			<TerrainImpassableTypes>
@@ -18663,7 +18663,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
 			<BonusType>BONUS_JIVARO</BonusType>
-			<iCost>70</iCost>
+			<iCost>63</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>3</iCombat>
 			<iXPValueAttack>5</iXPValueAttack>
@@ -18753,12 +18753,12 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
+			<PrereqTech>TECH_AXE_MAKING</PrereqTech>
 			<BonusType>BONUS_LIANGZHU</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_JADE</BonusType>
 			</PrereqBonuses>
-			<iCost>60</iCost>
+			<iCost>42</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -19128,7 +19128,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_OBSIDIAN</BonusType>
 			</PrereqBonuses>
-			<iCost>65</iCost>
+			<iCost>60</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>7</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -20323,7 +20323,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_OBSIDIAN</BonusType>
 			</PrereqBonuses>
-			<iCost>75</iCost>
+			<iCost>60</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -20422,7 +20422,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_OBSIDIAN</BonusType>
 			</PrereqBonuses>
-			<iCost>65</iCost>
+			<iCost>60</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>7</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -27022,7 +27022,7 @@
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<iCost>65</iCost>
+			<iCost>60</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -32129,7 +32129,7 @@
 				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_SAMI</BonusType>
-			<iCost>100</iCost>
+			<iCost>98</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>6</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -35739,12 +35739,12 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_SIEGE_WORKSHOP</PrereqBuilding>
-			<PrereqTech>TECH_ALCHEMY</PrereqTech>
+			<PrereqTech>TECH_INVENTION</PrereqTech>
 			<BonusType>BONUS_TANG</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_TAR</BonusType>
 			</PrereqBonuses>
-			<iCost>320</iCost>
+			<iCost>310</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>12</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -37453,9 +37453,9 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_CAMEL</BonusType>
 			</PrereqBonuses>
-			<iCost>100</iCost>
+			<iCost>98</iCost>
 			<iMoves>2</iMoves>
-			<iCombat>6</iCombat>
+			<iCombat>13</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
 			<iChanceFirstStrikes>1</iChanceFirstStrikes>
@@ -38012,7 +38012,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>60</iCost>
+			<iCost>37</iCost>
 			<iMoves>1</iMoves>
 			<iBaseTrade>15</iBaseTrade>
 			<iTradeMultiplier>2</iTradeMultiplier>
@@ -39121,7 +39121,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>60</iCost>
+			<iCost>37</iCost>
 			<iMoves>1</iMoves>
 			<iBaseTrade>25</iBaseTrade>
 			<iTradeMultiplier>1</iTradeMultiplier>
@@ -40876,7 +40876,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_HORSE</BonusType>
 			</PrereqBonuses>
-			<iCost>100</iCost>
+			<iCost>98</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>6</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -41625,7 +41625,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>60</iCost>
+			<iCost>37</iCost>
 			<iMoves>1</iMoves>
 			<iBaseTrade>20</iBaseTrade>
 			<iTradeMultiplier>3</iTradeMultiplier>
@@ -45231,7 +45231,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_LLAMA</BonusType>
 			</PrereqBonuses>
-			<iCost>80</iCost>
+			<iCost>69</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -47980,7 +47980,7 @@
 			</NotUnitAIs>
 			<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
 			<BonusType>BONUS_FUEGIAN</BonusType>
-			<iCost>70</iCost>
+			<iCost>63</iCost>
 			<iMoves>2</iMoves>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
@@ -49662,6 +49662,7 @@
 					<iAmountPerTurn>25</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<ForceObsoleteTech>TECH_GUERRILLA_WARFARE</ForceObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_ALVARADO_CAVALRY</Class>
@@ -52200,7 +52201,7 @@
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<iCost>43</iCost>
+			<iCost>46</iCost>
 			<iMoves>2</iMoves>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<iCombat>4</iCombat>

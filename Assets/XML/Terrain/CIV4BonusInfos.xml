@@ -5011,7 +5011,7 @@
 			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_WHALE</ArtDefineTag>
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
-			<TechCityTrade>TECH_SAILING</TechCityTrade>
+			<TechCityTrade>TECH_HARPOON_MAKING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>2</iYieldChange>
@@ -5915,7 +5915,7 @@
 			<Civilopedia>TXT_KEY_BONUS_COPPER_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_RUSH</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_COPPER</ArtDefineTag>
-			<TechReveal>TECH_HARD_HAMMER_PERCUSSION</TechReveal>
+			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_COPPER_WORKING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
@@ -6559,7 +6559,7 @@
 			<Civilopedia>TXT_KEY_BONUS_GOLD_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_GOLD</ArtDefineTag>
-			<TechReveal>TECH_BARTER</TechReveal>
+			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_MINING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
@@ -6819,7 +6819,7 @@
 			<Civilopedia>TXT_KEY_BONUS_IRON_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_RUSH</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_IRON</ArtDefineTag>
-			<TechReveal>TECH_METAL_CASTING</TechReveal>
+			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_IRON_WORKING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
@@ -8190,7 +8190,7 @@
 			<Civilopedia>TXT_KEY_BONUS_SILVER_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SILVER</ArtDefineTag>
-			<TechReveal>TECH_BARTER</TechReveal>
+			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_MINING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
@@ -8610,7 +8610,7 @@
 			<Civilopedia>TXT_KEY_BONUS_TIN_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TIN</ArtDefineTag>
-			<TechReveal>TECH_BRONZE_WORKING</TechReveal>
+			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_BRONZE_WORKING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
@@ -9391,7 +9391,7 @@
 			<Civilopedia>TXT_KEY_BONUS_FINE_CLAY_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_FINE_CLAY</ArtDefineTag>
-			<TechReveal>TECH_HARD_HAMMER_PERCUSSION</TechReveal>
+			<TechReveal>TECH_NATURAL_PIGMENTS</TechReveal>
 			<TechCityTrade>TECH_NATURAL_PIGMENTS</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
@@ -9512,7 +9512,7 @@
 			<Civilopedia>TXT_KEY_BONUS_JADE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_JADE</ArtDefineTag>
-			<TechReveal>TECH_CARVING</TechReveal>
+			<TechReveal>TECH_SOFT_HAMMER_PERCUSSION</TechReveal>
 			<TechCityTrade>TECH_CARVING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
@@ -9774,7 +9774,7 @@
 			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MARBLE</ArtDefineTag>
 			<TechReveal>TECH_HARD_HAMMER_PERCUSSION</TechReveal>
-			<TechCityTrade>TECH_HARD_HAMMER_PERCUSSION</TechCityTrade>
+			<TechCityTrade>TECH_MASONRY</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
@@ -10067,8 +10067,8 @@
 			<Civilopedia>TXT_KEY_BONUS_OBSIDIAN_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_RUSH</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_OBSIDIAN</ArtDefineTag>
-			<TechReveal>TECH_HARD_HAMMER_PERCUSSION</TechReveal>
-			<TechCityTrade>TECH_HARD_HAMMER_PERCUSSION</TechCityTrade>
+			<TechReveal>TECH_GATHERING</TechReveal>
+			<TechCityTrade>TECH_OBSIDIAN_WEAPONS</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
@@ -10262,7 +10262,7 @@
 			<Civilopedia>TXT_KEY_BONUS_SALT_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SALT</ArtDefineTag>
-			<TechReveal>TECH_DRYING</TechReveal>
+			<TechReveal>TECH_SOFT_HAMMER_PERCUSSION</TechReveal>
 			<TechCityTrade>TECH_SALT_PROCESSING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
@@ -10410,8 +10410,8 @@
 			<Civilopedia>TXT_KEY_BONUS_STONE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_STONE</ArtDefineTag>
-			<TechReveal>TECH_HARD_HAMMER_PERCUSSION</TechReveal>
-			<TechCityTrade>TECH_HARD_HAMMER_PERCUSSION</TechCityTrade>
+			<TechReveal>TECH_GATHERING</TechReveal>
+			<TechCityTrade>TECH_TOOL_MAKING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>

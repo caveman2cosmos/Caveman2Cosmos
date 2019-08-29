@@ -14,6 +14,15 @@
                 "kind": "test",
                 "isDefault": true
             }
+        },
+        {
+            "label": "Install",
+            "type": "shell",
+            "command": "Install.bat",
+            "options": {
+                "cwd": "Tools"
+            },
+            "problemMatcher": []
         }
     ]
 }

@@ -57,7 +57,7 @@ def debugInput(inputClass):
 	if not DebugUtils.bDebugMode: return
 	# InputClass does not contain reliable information
 	bAlt, bCtrl, bShift	= inData.getModifierKeys()
-	x, y				= inData.getMousePosition()
+	POINT = GC.getCursorPos()
 	# ------------------------------------------------
 	iNotifyCode	= inputClass.eNotifyCode
 	iFlag		= inputClass.uiFlags
@@ -65,7 +65,7 @@ def debugInput(inputClass):
 	print "ePythonFileEnum = %d"					%inputClass.ePythonFileEnum
 	print "eNotifyCode = %d\t\t%s"					%(iNotifyCode, NOTIFY_CODES.get(iNotifyCode, "Unknown"))
 	print "uiFlags = %d\t\t%s"						%(iFlag, MOUSE_FLAGS.get(iFlag, "UNKNOWN"))
-	print "iMouseX = %d\niMouseY = %d"				%(x, y)
+	print "iMouseX = %d\niMouseY = %d"				%(POINT.x, POINT.y)
 	print "bAlt = %s\nbCtrl = %s\nbShift = %s\n"	%(bAlt, bCtrl, bShift)
 	print "WidgetName = %s"							%inputClass.szFunctionName
 	print "iItemID = %d"							%inputClass.iItemID

@@ -32,7 +32,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARPENTERS_WORKSHOP</Tag>
-		<English>Carpenter's Workshop</English>
+		<English>Carpenter</English>
 		<French>
 			<Text>Menuiserie</Text>
 			<Gender>Female</Gender>
@@ -58,7 +58,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOODCARVERS_HUT</Tag>
-		<English>Woodcarver's Hut</English>
+		<English>Woodcarver</English>
 		<French>
 			<Text>Cabane de Sculpteur</Text>
 			<Gender>Female</Gender>
@@ -82,7 +82,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BERRY_BUSHES</Tag>
-		<English>Berry Bushes</English>
+		<English>Berry Gatherer</English>
 		<French>
 			<Text>Arbustes à baies</Text>
 			<Gender>Male</Gender>
@@ -137,8 +137,12 @@
 		<Polish>Padlina - okreslenie zwierzecych zwlok. Okreslenia tego nie uzywa sie w stosunku do zwlok ludzkich. Padlina jest podstawowym pokarmem wielu drapiezników i zwierzat wszystkozernych, takich jak diably tasmanskie, hieny, kondory i sepy. Padlina to takze siedlisko wystepowania bezkregowców zaliczanych do nekrofauny.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CARRION_HELP</Tag>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Enables the [COLOR_BUILDING_TEXT]Slaughterhouse[COLOR_REVERT] if there are no animal [COLOR_CYAN]Camps[COLOR_REVERT] nor [COLOR_CYAN]Herds[COLOR_REVERT] present.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERMITE_MOUND</Tag>
-		<English>Termite Mound</English>
+		<English>Termite Catcher</English>
 		<French>
 			<Text>Termitières</Text>
 			<Gender>Female</Gender>
@@ -163,7 +167,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BONEWORKERS_HUT</Tag>
-		<English>Boneworker's Hut</English>
+		<English>Boneworker</English>
 		<French>
 			<Text>Cabane du sculpteur d'Os</Text>
 			<Gender>Female</Gender>
@@ -187,7 +191,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TATTOO_HUT</Tag>
-		<English>Tattoo Hut</English>
+		<English>Tattooer</English>
 		<French>
 			<Text>Cabane de Tatoueur</Text>
 			<Gender>Female</Gender>
@@ -212,7 +216,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPEAR_FISHERMEN</Tag>
-		<English>Spear Fishermen's Hut</English>
+		<English>Spearfisher</English>
 		<French>
 			<Text>Cabane du Pêcheur</Text>
 			<Gender>Female</Gender>
@@ -236,7 +240,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CANOEBUILDERS_HUT</Tag>
-		<English>Canoe Builder's Hut</English>
+		<English>Canoe Builder</English>
 		<French>
 			<Text>Fabricant de Canoé</Text>
 			<Gender>Male</Gender>
@@ -260,7 +264,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIDEPOOLS</Tag>
-		<English>Tidepools</English>
+		<English>Tidepool Scavanger</English>
 		<French>
 			<Text>Mare résiduelle</Text>
 			<Gender>Female</Gender>
@@ -332,7 +336,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WILD_HERBS</Tag>
-		<English>Wild Herbs</English>
+		<English>Wild Herbs Gatherer</English>
 		<French>
 			<Text>Parcelle d'Herbes Sauvages</Text>
 			<Gender>Female</Gender>
@@ -403,7 +407,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEAMSTRESS_HUT</Tag>
-		<English>Seamstress's Hut</English>
+		<English>Seamstress</English>
 		<French>
 			<Text>Hutte de couturière</Text>
 			<Gender>Female</Gender>
@@ -475,7 +479,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FURNITURE_WORKSHOP</Tag>
-		<English>Furniture Workshop</English>
+		<English>Furniture Maker</English>
 		<French>
 			<Text>Fabrique de Mobilier</Text>
 			<Gender>Female</Gender>
@@ -716,7 +720,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROOT_TUBERS</Tag>
-		<English>Root Tubers</English>
+		<English>Tuber Gatherer</English>
 		<French>
 			<Text>Champ de Tubercules</Text>
 			<Gender>Male</Gender>
@@ -866,7 +870,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASK_CARVER</Tag>
-		<English>Mask Carver's Hut</English>
+		<English>Mask Carver</English>
 		<French>
 			<Text>Sculpteur de Masques</Text>
 			<Gender>Male</Gender>
@@ -890,7 +894,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAT_SHOP</Tag>
-		<English>Hat Shop</English>
+		<English>Hatter</English>
 		<French>
 			<Text>Chapelier</Text>
 			<Gender>Male</Gender>
@@ -914,7 +918,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROPE_WEAVER</Tag>
-		<English>Rope Weaver's Hut</English>
+		<English>Roper</English>
 		<French>
 			<Text>Fabrique de cordages</Text>
 			<Gender>Female</Gender>
@@ -1417,7 +1421,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WILD_MUSHROOMS</Tag>
-		<English>Wild Mushrooms</English>
+		<English>Wild Mushroom Gatherer</English>
 		<French>
 			<Text>Récolteur de Champignons</Text>
 			<Gender>Male</Gender>
@@ -2344,7 +2348,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUG_CATCHER</Tag>
-		<English>Bug Catcher</English>
+		<English>Grasshopper Catcher</English>
 		<French>
 			<Text>Chasseur d'Insectes</Text>
 			<Gender>Male</Gender>
@@ -2465,7 +2469,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COUNTERS_HUT</Tag>
-		<English>Counter's Hut</English>
+		<English>Taxperson</English>
 		<French>
 			<Text>Cabane du Comptable</Text>
 			<Gender>Female</Gender>
@@ -2476,7 +2480,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COUNTERS_HUT_PEDIA</Tag>
-		<English>The Counter's Hut is the first in the dread line that leads to tax men, revinuers and accountants.</English>
+		<English>The Counter's Hut is the first in the dread line that leads to tax men, revenuers and accountants.</English>
 		<French>The une Cabane du Comptable is the first in the dread line that leads to tax men, revinuers and accountants.</French>
 		<Italian>La capanna del contatore è l'edificio più antico dedicato alla raccolta delle tasse.</Italian>
 		<Polish>Counter's Hut reduces crime at a cost to happiness.</Polish>
@@ -5515,7 +5519,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LACQUERWARE_HUT</Tag>
-		<English>Lacquerware Hut</English>
+		<English>Lacquerware Maker</English>
 		<French>
 			<Text>Hutte de fabrication d'objets décoratifs</Text>
 			<Gender>Female</Gender>
@@ -11453,7 +11457,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHEAT_GATHERER</Tag>
-		<English>Wheat Gatherer</English>
+		<English>Wild Wheat Gatherer</English>
 		<French>
 			<Text>Récolteur de Blé</Text>
 			<Gender>Male</Gender>
@@ -11476,7 +11480,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BARLEY_GATHERER</Tag>
-		<English>Barley Gatherer</English>
+		<English>Wild Barley Gatherer</English>
 		<French>
 			<Text>Récolteur d'Orge</Text>
 			<Gender>Male</Gender>
@@ -11499,7 +11503,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RICE_GATHERER</Tag>
-		<English>Rice Gatherer</English>
+		<English>Wild Rice Gatherer</English>
 		<French>
 			<Text>Récolteur de Riz</Text>
 			<Gender>Male</Gender>
@@ -11522,7 +11526,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORN_GATHERER</Tag>
-		<English>Corn Gatherer</English>
+		<English>Wild Corn Gatherer</English>
 		<French>
 			<Text>Récolteur de Maïs</Text>
 			<Gender>Male</Gender>
@@ -15896,7 +15900,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AKA_EMBASSY_PEDIA</Tag>
 		<English>The Aka are a nomadic Mbenga pygmy people who live by hunting in central Africa.</English>
-		<German>Bei den [COLOR_HIGHLIGHT_TEXT]Aka[COLOR_REVERT] (auch Bayaka, BiAka oder Babenzele genannt) handelt es sich um ein dunkelhäutiges, kleinwüchsiges, nomadisches Volk, das zu den Mbenga-Pygmäen gehört. Die Aka sind im nördlichen Kongo und in der südwestlichen Zentralafrikanischen Republik heimisch. Im Gegensatz zu den Mbuti-Stämmen im Ostkongo verfügen sie über eine eigene Sprache. Die Aka leben traditionell als Jäger und Sammler in den Wäldern. Am Ende des 19. Jahrhundert waren sie als die besten Elefantenjäger für die Belieferung der Kolonialherren mit Elfenbein zuständig. Wegen der Konkurrenz durch Wilderer und ständigen Lebensraumverlust sind sie heutzutage gezwungen, auf Plantagen zu arbeiten. Weltweit bekannt wurden die Aka durch ihre mehrstimmigen Gesänge und den Film "Song from the Forest".</German>
+		<German>Bei den [COLOR_HIGHLIGHT_TEXT]Aka[COLOR_REVERT] (auch Bayaka, BiAka oder Babenzele genannt) handelt es sich um ein dunkelhäutiges, kleinwüchsiges, nomadisches Volk, das zu den Mbenga-Pygmäen gehört. Die Aka sind im nördlichen Kongo und der südwestlichen Zentralafrikanischen Republik heimisch. Im Gegensatz zu den Mbuti-Stämmen im Ostkongo verfügen sie über eine eigene Sprache. Die Aka leben traditionell als Jäger und Sammler in den Wäldern. Am Ende des 19. Jahrhundert waren sie als die besten Elefantenjäger für die Belieferung der Kolonialherren mit Elfenbein zuständig. Wegen der Konkurrenz durch Wilderer und ständigen Lebensraumverlust sind sie heutzutage gezwungen, auf Plantagen zu arbeiten. Weltweit bekannt wurden die Aka durch ihre mehrstimmigen Gesänge und den Film "Song from the Forest".</German>
 		<Italian>Gli Aka sono un popolo nomade di cacciatori pigmei che vivono nell'Africa centrale.</Italian>
 		<Polish>Pigmeje - ludy negroidalne, zamieszkujące dżungle Afryki Środkowej, charakteryzuje je niski wzrost, wahający się od 140 do 150 cm. Częściowo prowadzą koczowniczy tryb życia, zajmując się łowiectwem i zbieractwem. Zamieszkują różne regiony w Afryce równikowej. Ich populacja liczy około 100 tys. osób. Nie posługują się wspólnym językiem, nie mają świadomości wspólnej historii. Stanowią małe, odrębne społeczności, które nic nie wiedzą o istnieniu innych.</Polish>
 	</TEXT>
@@ -18688,7 +18692,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STORYTELLERS_HUT</Tag>
-		<English>Storyteller's Hut</English>
+		<English>Storyteller</English>
 		<French>
 			<Text>Hutte du conteur d'histoires</Text>
 			<Gender>Female</Gender>
@@ -19109,7 +19113,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JUGGLERS_BOOTH</Tag>
-		<English>Juggler's Booth</English>
+		<English>Juggling</English>
 		<French>
 			<Text>Stand du Jongleur</Text>
 			<Gender>Male</Gender>
@@ -19799,7 +19803,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEED_CAMP</Tag>
-		<English>Seed Camp</English>
+		<English>Seed Gatherer</English>
 		<French>Dépot de Semences</French>
 		<German>
 			<Text>Wildgetreidefeld:Wildgetreidefeldes:Wildgetreidefeld:Wildgetreidefeld</Text>
@@ -24524,7 +24528,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CLAY_PIT</Tag>
-		<English>Clay Pit</English>
+		<English>Clay Gatherer</English>
 		<French>
 			<Text>Fosse d'argile</Text>
 			<Gender>Female</Gender>
@@ -24549,7 +24553,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHALK_PIT</Tag>
-		<English>Chalk Pit</English>
+		<English>Chalk Gatherer</English>
 		<French>
 			<Text>Fosse de Chaux</Text>
 			<Gender>Female</Gender>
@@ -24573,7 +24577,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEMATITE_PIT</Tag>
-		<English>Hematite Pit</English>
+		<English>Hematite Gatherer</English>
 		<French>
 			<Text>Filon d'Hématite</Text>
 			<Gender>Male</Gender>
@@ -25101,7 +25105,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLINT_QUARRY</Tag>
-		<English>Flint Quarry</English>
+		<English>Flint Gatherer</English>
 		<French>
 			<Text>Carrière de Silex</Text>
 			<Gender>Female</Gender>
@@ -25480,7 +25484,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SANDPIT_DESERT</Tag>
-		<English>Sand Pit (Desert)</English>
+		<English>Desert Sand Gatherer</English>
 		<French>
 			<Text>Sablière (Désert)</Text>
 			<Gender>Female</Gender>
@@ -25504,7 +25508,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SANDPIT_BEACH</Tag>
-		<English>Sand Pit (Beach)</English>
+		<English>Beach Sand Gatherer</English>
 		<French>
 			<Text>Sablière (Plage)</Text>
 			<Gender>Female</Gender>
@@ -25528,7 +25532,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SANDPIT_STONE</Tag>
-		<English>Sand Pit (Stone)</English>
+		<English>Rockdust Gatherer</English>
 		<French>
 			<Text>Sablière (Pierre)</Text>
 			<Gender>Female</Gender>
@@ -28191,7 +28195,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POISONCRAFTERS_HUT</Tag>
-		<English>Poison Crafter's Hut</English>
+		<English>Poison Crafter</English>
 		<French>
 			<Text>Hutte de l'Elaborateur de Poisons</Text>
 			<Gender>Female</Gender>
@@ -30269,7 +30273,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TUNA_NETS</Tag>
-		<English>Tuna Nets</English>
+		<English>Net (Tuna)</English>
 		<French>
 			<Text>Filets à Thons</Text>
 			<Gender>Male</Gender>
@@ -30293,7 +30297,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_TRAPS</Tag>
-		<English>Crab Traps</English>
+		<English>Net (Carb)</English>
 		<French>
 			<Text>Pièges à Crabes</Text>
 			<Gender>Male</Gender>
@@ -30317,7 +30321,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHRIMP_NETS</Tag>
-		<English>Shrimp Nets</English>
+		<English>Net (Shrimp)</English>
 		<French>
 			<Text>Filets de Crevettes</Text>
 			<Gender>Male</Gender>
@@ -30365,7 +30369,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PEARL_DIVERS</Tag>
-		<English>Pearl Divers</English>
+		<English>Pearl Diver</English>
 		<French>
 			<Text>Chercheurs de Perles</Text>
 			<Gender>Male</Gender>
@@ -30389,7 +30393,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LOBSTER_TRAPS</Tag>
-		<English>Lobster Traps</English>
+		<English>Net (Lobster)</English>
 		<French>
 			<Text>Pièges à Homards</Text>
 			<Gender>Male</Gender>
@@ -30412,7 +30416,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SALMON_NETS</Tag>
-		<English>Salmon Nets</English>
+		<English>Net (Salmon)</English>
 		<French>
 			<Text>Filets à Saumons</Text>
 			<Gender>Male</Gender>
@@ -30458,7 +30462,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SQUID_NETS</Tag>
-		<English>Squid Nets</English>
+		<English>Net (Squid)</English>
 		<French>
 			<Text>Filets à calmars</Text>
 			<Gender>Male</Gender>
@@ -30481,7 +30485,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SARDINE_NETS</Tag>
-		<English>Sardine Nets</English>
+		<English>Net (Sardine)</English>
 		<French>
 			<Text>Filets à Sardines</Text>
 			<Gender>Male</Gender>
@@ -30505,7 +30509,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCHOVY_NETS</Tag>
-		<English>Anchovy Nets</English>
+		<English>Net (Anchovy)</English>
 		<French>
 			<Text>Filets à Anchois</Text>
 			<Gender>Male</Gender>
@@ -30528,7 +30532,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EEL_TRAPS</Tag>
-		<English>Eel Traps</English>
+		<English>Net (Eel)</English>
 		<French>
 			<Text>Pièges à anguilles</Text>
 			<Gender>Male</Gender>
@@ -30597,7 +30601,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAPPER_NETS</Tag>
-		<English>Snapper Nets</English>
+		<English>Net (Snapper)</English>
 		<French>
 			<Text>Filets à vivaneaux</Text>
 			<Gender>Male</Gender>
@@ -30620,7 +30624,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COD_NETS</Tag>
-		<English>Cod Nets</English>
+		<English>Nets (Cod)</English>
 		<French>
 			<Text>Filets à Morues</Text>
 			<Gender>Male</Gender>
@@ -30643,7 +30647,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEABASS_NETS</Tag>
-		<English>Sea Bass Nets</English>
+		<English>Net (Sea Bass)</English>
 		<French>
 			<Text>Filets à bars</Text>
 			<Gender>Male</Gender>
@@ -30685,7 +30689,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHARK_NETS</Tag>
-		<English>Shark Nets</English>
+		<English>Net (Shark)</English>
 		<French>Filets à Requins</French>
 		<Italian>Reti da pesca per squali</Italian>
 		<Polish>Sieci na rekiny</Polish>
@@ -30723,7 +30727,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRAWN_NETS</Tag>
-		<English>Prawn Nets</English>
+		<English>Net (Prawn)</English>
 		<French>Filets à crustacées</French>
 		<Italian>Reti da pesca per gamberi</Italian>
 		<Polish>Sieci na krewetki</Polish>
@@ -30761,7 +30765,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLOUNDER_NETS</Tag>
-		<English>Flounder Nets</English>
+		<English>Net (Flounder)</English>
 		<French>Filets de Limandes</French>
 		<Italian>Reti da pesca per passere nere</Italian>
 		<Polish>Sieci na Flądry</Polish>
@@ -31057,7 +31061,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAGE_HUT</Tag>
-		<English>Sage's Hut</English>
+		<English>Sage</English>
 		<French>
 			<Text>Hutte du Sage</Text>
 			<Gender>Female</Gender>
@@ -34609,7 +34613,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OTTER_CAMP</Tag>
-		<English>Camp (Sea Otter)</English>
+		<English>Trap (Sea Otter)</English>
 		<French>
 			<Text>Camp de Chasseurs de loutres</Text>
 			<Gender>Male</Gender>
@@ -34634,7 +34638,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEAVER_TRAPS</Tag>
-		<English>Beaver Traps</English>
+		<English>Trap (Beaver)</English>
 		<French>
 			<Text>Pièges à castors</Text>
 			<Gender>Male</Gender>
@@ -34661,7 +34665,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHINCHILLA_TRAPS</Tag>
-		<English>Chinchilla Traps</English>
+		<English>Trap (Chinchilla)</English>
 		<French>
 			<Text>Pièges à Chinchilla</Text>
 			<Gender>Male</Gender>
@@ -34688,7 +34692,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOX_TRAPS</Tag>
-		<English>Camp (Fox)</English>
+		<English>Trap (Fox)</English>
 		<French>
 			<Text>Camp du Chasseur de renard</Text>
 			<Gender>Male</Gender>
@@ -34715,7 +34719,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MINK_TRAPS</Tag>
-		<English>Mink Traps</English>
+		<English>Trap (Mink)</English>
 		<French>
 			<Text>Pièges à Vison</Text>
 			<Gender>Male</Gender>
@@ -34742,7 +34746,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RABBIT_TRAPS</Tag>
-		<English>Rabbit Traps</English>
+		<English>Trap (Rabbit)</English>
 		<French>
 			<Text>Collets à Lièvres</Text>
 			<Gender>Male</Gender>
@@ -34769,7 +34773,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RACCOON_TRAPS</Tag>
-		<English>Raccoon Traps</English>
+		<English>Trap (Raccoon)</English>
 		<French>
 			<Text>Pièges à ratons laveurs</Text>
 			<Gender>Male</Gender>
