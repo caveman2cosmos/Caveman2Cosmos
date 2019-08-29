@@ -1,8 +1,5 @@
 import _core
 import _misc
-from CvPythonExtensions import *
-
-GC = CyGlobalContext()
 
 class InputData:
 	def __init__(self):
@@ -31,9 +28,5 @@ class InputData:
 			return _misc.GetKeyState(iKey)
 		print "InputData.isKeyDown() - Warning\n\tUnknown key: %d" %iKey
 		return "Unknown"
-
-	def getMousePosition(self):
-		pos = GC.getCursorPos()
-		return pos.x, pos.y
 
 instance = InputData()

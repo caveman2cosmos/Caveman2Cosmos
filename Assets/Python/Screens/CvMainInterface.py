@@ -1243,9 +1243,13 @@ class CvMainInterface:
 					self.updateTooltip(screen, szTxt)
 				self.bUpdateUnitTT == False
 			# Tooltip sometimes get stuck...
-			X, Y = self.InputData.getMousePosition()
-			xDiff = abs(X - self.xMouseTT)
-			yDiff = abs(Y - self.yMouseTT)
+			POINT = GC.getCursorPos()
+			xDiff = POINT.x - self.xMouseTT
+			yDiff = POINT.y - self.yMouseTT
+			if xDiff < 0:
+				xDiff = -xDiff
+			if yDiff < 0:
+				yDiff = -yDiff
 			if xDiff > 256 and yDiff > 256 or xDiff + yDiff > 384:
 				self.hideTooltip(screen)
 
@@ -1408,26 +1412,19 @@ class CvMainInterface:
 		if CyIF.isDirty(InterfaceDirtyBits.Help_DIRTY_BIT):
 			if CyIF.isFocused():
 				screen.hide("PlotHelp")
-				'''
-			elif self.bPlotHelpBan:
-				X, Y = self.InputData.getMousePosition()
-				xDiff = abs(X - self.xMouseNoPlotHelp)
-				yDiff = abs(Y - self.yMouseNoPlotHelp)
-				if xDiff > 64 and yDiff > 64 or xDiff + yDiff > 128:
-					self.bPlotHelpBan = False
-				'''
+
 			elif not self.bPlotHelpBan and not self.bTooltip:
 				if self.iInterfaceType not in (InterfaceVisibility.INTERFACE_HIDE_ALL, InterfaceVisibility.INTERFACE_MINIMAP_ONLY):
 					self.updatePlotHelp(screen)
 			CyIF.setDirty(InterfaceDirtyBits.Help_DIRTY_BIT, False)
 		# Tooltip
 		if self.bTooltip and self.bLockedTT:
-			X, Y = self.InputData.getMousePosition()
-			x = X + self.iOffsetTT[0]
-			y = Y + self.iOffsetTT[1]
-			if x < 0: x = 0
-			if y < 0: y = 0
-			screen.moveItem("Tooltip", x, y, 0)
+			POINT = GC.getCursorPos()
+			iX = POINT.x + self.iOffsetTT[0]
+			iY = POINT.y + self.iOffsetTT[1]
+			if iX < 0: iX = 0
+			if iY < 0: iY = 0
+			screen.moveItem("Tooltip", iX, iY, 0)
 
 
 	def resetEndTurnObjects(self):
@@ -4948,12 +4945,12 @@ class CvMainInterface:
 	#######################
 	# Plot help
 	def updatePlotHelp(self, screen, uFont=None):
-		X, Y = self.InputData.getMousePosition()
-		xMouse = X
+		POINT = GC.getCursorPos()
+		xMouse = POINT.x
 		if xMouse < 40 or xMouse > self.xRes - 40:
 			screen.hide("PlotHelp")
 			return
-		yMouse = Y
+		yMouse = POINT.y
 		yBotBar = self.yBotBar
 		if yMouse > yBotBar or yMouse < 60:
 			screen.hide("PlotHelp")
@@ -4988,24 +4985,24 @@ class CvMainInterface:
 			if not uFont:
 				uFont=self.aFontList[5]
 			self.szHelpText = szHelpText
-			x, y = pyTT.makeTooltip(screen, xPos, yPos, szHelpText, uFont, "Tooltip")
-			X, Y = self.InputData.getMousePosition()
-			self.iOffsetTT = [x - X, y - Y]
-			self.xMouseTT = X
-			self.yMouseTT = Y
+			iX, iY = pyTT.makeTooltip(screen, xPos, yPos, szHelpText, uFont, "Tooltip")
+			POINT = GC.getCursorPos()
+			self.iOffsetTT = [iX - POINT.x, iY - POINT.y]
+			self.xMouseTT = POINT.x
+			self.yMouseTT = POINT.y
 		else:
 			if xPos == yPos == -1:
-				X, Y = self.InputData.getMousePosition()
-				self.xMouseTT = X
-				self.yMouseTT = Y
+				POINT = GC.getCursorPos()
+				self.xMouseTT = POINT.x
+				self.yMouseTT = POINT.y
 				xOff, yOff = self.iOffsetTT
-				x = X + xOff
-				if x < 0:
-					x = 0
-				y = Y + yOff
-				if y < 0:
-					y = 0
-				screen.moveItem("Tooltip", x, y, 0)
+				iX = POINT.x + xOff
+				if iX < 0:
+					iX = 0
+				iY = POINT.y + yOff
+				if iY < 0:
+					iY = 0
+				screen.moveItem("Tooltip", iX, iY, 0)
 			screen.moveToFront("Tooltip")
 			screen.show("Tooltip")
 		self.bTooltip = True
@@ -5308,7 +5305,8 @@ class CvMainInterface:
 				self.bPlotHelpBan = True
 				screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
 				screen.hide("PlotHelp")
-				self.xMouseNoPlotHelp, self.yMouseNoPlotHelp = self.InputData.getMousePosition()
+				POINT = GC.getCursorPos()
+				self.xMouseNoPlotHelp = POINT.x; self.yMouseNoPlotHelp = POINT.y
 
 			elif NAME == "AdvisorButton":
 				advisorTip = self.AdvisorButtonTip[ID]
