@@ -11,11 +11,11 @@ environment:
   svn_user: c2cappveyor
   svn_pass:
     secure: 8MBckNYRp5EVPgbGcmZ6bQ==
-  git_user: c2cappveyor
+  git_user: billw2012
   git_email: 
-    secure: XNL5MWZKrsIcIJE56OhImjxBF2h9Kkub+hQJK9m73WA=
+    secure: AoLWYD1det69EeuLNvABlrTx2aIRf9IA6AF7s08MhZY=
   git_access_token:
-    secure: c5g3VzEHFNptNDFyI85sEbUyI5fNW5rHwovptE64l2GmzUJ2bcgzTbzsa7Y90jKa
+    secure: doZmFPN5YobqYMv18KzewNLmDUlCs+gDN2CoKfHBiQ4kN6z8gtPZMztCaigRaGGJ
   release_prefix: Caveman2Cosmos
   build_dir: _build
   release_branch: release
