@@ -3,6 +3,8 @@ PUSHD "%~dp0..\.."
 
 SET version=v%APPVEYOR_BUILD_VERSION%-alpha
 
+REM TESTING
+goto :testing
 
 if "%APPVEYOR_REPO_BRANCH%" neq "%release_branch%" (
     echo Skipping deployment due to not being on release branch
@@ -81,17 +83,20 @@ POPD
 REM 7z a -r -x!.svn "%release_prefix%-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\*.*"
 REM 7z a -x!.svn "%release_prefix%-CvGameCoreDLL-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\Assets\CvGameCoreDLL.*"
 
+:testing
 echo Setting build tag on git ...
 
-git config --global credential.helper store
-powershell -ExecutionPolicy Bypass -command "Add-Content '$HOME\.git-credentials' 'https://$($env:git_access_token):x-oauth-basic@github.com`n'"
-REM ps: Add-Content "$HOME\.git-credentials" "https://$($env:git_access_token):x-oauth-basic@github.com`n"
-git config --global user.email "%git_email%"
-git config --global user.name "%git_user%"
+cd /d "%~dp0..\.."
 
-git checkout master
-git tag -a %version% %APPVEYOR_REPO_COMMIT% -m "%version%"
-git push --tags
+call git config --global credential.helper store
+call powershell -ExecutionPolicy Bypass -command "Add-Content '%USERPROFILE%\.git-credentials' 'https://%git_access_token%:x-oauth-basic@github.com`n'"
+REM ps: Add-Content "$HOME\.git-credentials" "https://$($env:git_access_token):x-oauth-basic@github.com`n"
+call git config --global user.email "%git_email%"
+call git config --global user.name "%git_user%"
+
+call git checkout master
+call git tag -a %version% %APPVEYOR_REPO_COMMIT% -m "%version%"
+call git push --tags
 
 echo Done!
 exit /B 0
