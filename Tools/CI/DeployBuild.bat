@@ -37,6 +37,7 @@ if not errorlevel 0 (
 call Tools\CI\DoSourceIndexing.bat
 
 cd /d "%~dp0..\.."
+set "root_dir=%cd%"
 if not exist "%build_dir%" goto :checkout
 rmdir /Q /S "%build_dir%"
 
@@ -58,24 +59,23 @@ robocopy Resource "%build_dir%\Resource" %ROBOCOPY_FLAGS%
 xcopy Caveman2Cosmos.ini "%build_dir%" /R /Y
 xcopy "Caveman2Cosmos Config.ini" "%build_dir%" /R /Y
 
-PUSHD "%build_dir%"
-
 echo Update full SVN changelog ...
-github_changelog_generator --cache-file "github-changelog-http-cache" --cache-log "github-changelog-logger.log" -u caveman2cosmos --token %git_access_token% --future-release %version% --release-branch %release_branch% --output "CHANGELOG.md"
+github_changelog_generator --cache-file "github-changelog-http-cache" --cache-log "github-changelog-logger.log" -u caveman2cosmos --token %git_access_token% --future-release %version% --release-branch %release_branch% --output "%build_dir%\CHANGELOG.md"
+
+echo Generate SVN commit description...
+github_changelog_generator --cache-file "github-changelog-http-cache" --cache-log "github-changelog-logger.log" -u caveman2cosmos --token %git_access_token% --future-release %version% --release-branch %release_branch% --unreleased-only --output "%root_dir%\commit_desc.md"
 
 echo Detecting working copy changes...
+PUSHD "%build_dir%"
 set SVN=svn.exe
 "%SVN%" status | findstr /R "^!" > ..\missing.list
 for /F "tokens=* delims=! " %%A in (..\missing.list) do (svn delete "%%A")
 del ..\missing.list 2>NUL
 "%SVN%" add * --force
 
-echo Generate SVN commit description...
-github_changelog_generator --cache-file "github-changelog-http-cache" --cache-log "github-changelog-logger.log" -u caveman2cosmos --token %git_access_token% --future-release %version% --release-branch %release_branch% --unreleased-only --output "commit_desc.md"
-
 echo Commiting new build to SVN...
 :: TODO auto generate a good changelist
-"%SVN%" commit -F commit_desc.md --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
+"%SVN%" commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
 POPD
 
 REM 7z a -r -x!.svn "%release_prefix%-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\*.*"
