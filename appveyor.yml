@@ -37,11 +37,11 @@ build_script:
 
     REM call "%APPVEYOR_BUILD_FOLDER%\Tools\_MakeDLL.bat" build Release
 
-test_script:
-- cmd: >-
-    cd Tools
+# test_script:
+# - cmd: >-
+#     cd Tools
 
-    # XmlValidator.exe -a
+#     XmlValidator.exe -a
 
 # DISABLED: before_deploy can't access secure variables it seems
 # before_deploy:
