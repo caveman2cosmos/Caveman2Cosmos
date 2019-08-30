@@ -10,7 +10,6 @@ REM ps: Add-Content "$HOME\.git-credentials" "https://$($env:git_access_token):x
 git config --global user.email "%git_email%"
 git config --global user.name "%git_user%"
 
-git checkout master
 git tag -a %version% %APPVEYOR_REPO_COMMIT% -m "%version%"
 git push --tags
 
