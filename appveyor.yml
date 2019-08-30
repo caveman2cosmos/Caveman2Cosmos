@@ -27,7 +27,7 @@ install:
   # - ps: Install-Product node $env:nodejs_version
   # - npm install auto-changelog
   - set PATH=C:\Ruby22\bin;%PATH%
-  - gem install github_changelog_generator
+  # - gem install github_changelog_generator
 
 build_script:
 - cmd: >-
