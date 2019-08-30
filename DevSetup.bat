@@ -74,7 +74,7 @@ if errorlevel 1 (
     call :install_failure
     exit /B 1
 )
-call "%~dp0\Tools\_MakeDLL.bat" build Assert
+call "%~dp0\Tools\_MakeDLL.bat" build Release
 if errorlevel 1 (
     call :build_failure
     exit /B 1
