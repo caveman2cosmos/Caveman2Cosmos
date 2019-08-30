@@ -84,19 +84,7 @@ REM 7z a -r -x!.svn "%release_prefix%-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%
 REM 7z a -x!.svn "%release_prefix%-CvGameCoreDLL-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\Assets\CvGameCoreDLL.*"
 
 :testing
-echo Setting build tag on git ...
-
-cd /d "%~dp0..\.."
-
-call git config --global credential.helper store
-call powershell -ExecutionPolicy Bypass -command "Add-Content '%USERPROFILE%\.git-credentials' 'https://%git_access_token%:x-oauth-basic@github.com`n'"
-REM ps: Add-Content "$HOME\.git-credentials" "https://$($env:git_access_token):x-oauth-basic@github.com`n"
-call git config --global user.email "%git_email%"
-call git config --global user.name "%git_user%"
-
-call git checkout master
-call git tag -a %version% %APPVEYOR_REPO_COMMIT% -m "%version%"
-call git push --tags
+call "%~dp0\CommitTag.bat"
 
 echo Done!
 exit /B 0
