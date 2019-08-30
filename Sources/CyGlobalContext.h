@@ -539,6 +539,10 @@ public:
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
+
+	// UI functions
+	POINT getCursorPos() const;
+	POINT screenToClient(POINT screenPos) const;
 };
 
 #endif	// CyGlobalContext_h

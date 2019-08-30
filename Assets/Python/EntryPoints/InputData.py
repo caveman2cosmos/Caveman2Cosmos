@@ -29,7 +29,4 @@ class InputData:
 		print "InputData.isKeyDown() - Warning\n\tUnknown key: %d" %iKey
 		return "Unknown"
 
-	def getMousePosition(self):
-		return _misc.GetMousePosition()
-
 instance = InputData()

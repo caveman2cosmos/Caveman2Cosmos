@@ -1246,13 +1246,13 @@ class CvForeignAdvisor:
 			self.szTextTT = szText
 			if not uFont:
 				uFont = self.aFontList[6]
-			x, y = pyTT.makeTooltip(screen, xPos, yPos, szText, uFont, "Tooltip")
-			X, Y = self.InputData.getMousePosition()
-			self.iOffsetTT = [x - X, y - Y]
+			iX, iY = pyTT.makeTooltip(screen, xPos, yPos, szText, uFont, "Tooltip")
+			POINT = GC.getCursorPos()
+			self.iOffsetTT = [iX - POINT.x, iY - POINT.y]
 		else:
 			if xPos == yPos == -1:
-				X, Y = self.InputData.getMousePosition()
-				screen.moveItem("Tooltip", X + self.iOffsetTT[0], Y + self.iOffsetTT[1], 0)
+				POINT = GC.getCursorPos()
+				screen.moveItem("Tooltip", POINT.x + self.iOffsetTT[0], POINT.y + self.iOffsetTT[1], 0)
 			screen.moveToFront("Tooltip")
 			screen.show("Tooltip")
 		if xPos == yPos == -1:
@@ -1263,12 +1263,12 @@ class CvForeignAdvisor:
 	#||||||||||||||||||||||||||#
 	def update(self, fDelta):
 		if self.bLockedTT:
-			X, Y = self.InputData.getMousePosition()
-			x = X + self.iOffsetTT[0]
-			y = Y + self.iOffsetTT[1]
-			if x < 0: x = 0
-			if y < 0: y = 0
-			self.getScreen().moveItem("Tooltip", x, y, 0)
+			POINT = GC.getCursorPos()
+			iX = POINT.x + self.iOffsetTT[0]
+			iY = POINT.y + self.iOffsetTT[1]
+			if iX < 0: iX = 0
+			if iY < 0: iY = 0
+			self.getScreen().moveItem("Tooltip", iX, iY, 0)
 
 	# Handles the input for this screen...
 	def handleInput (self, inputClass):
@@ -1276,7 +1276,6 @@ class CvForeignAdvisor:
 		if not screen.isActive():
 			return
 		HandleInputUtil.debugInput(inputClass)
-		xMouse, yMouse = self.InputData.getMousePosition()
 		bAlt, bCtrl, bShift = self.InputData.getModifierKeys()
 		iCode	= inputClass.eNotifyCode
 		iData	= inputClass.iData

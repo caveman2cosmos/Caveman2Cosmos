@@ -1484,13 +1484,13 @@ class Pedia:
 			self.szTextTT = szText
 			if not uFont:
 				uFont = self.aFontList[6]
-			x, y = pyTT.makeTooltip(screen, xPos, yPos, szText, uFont, "Tooltip")
-			X, Y = self.InputData.getMousePosition()
-			self.iOffsetTT = [x - X, y - Y]
+			iX, iY = pyTT.makeTooltip(screen, xPos, yPos, szText, uFont, "Tooltip")
+			POINT = GC.getCursorPos()
+			self.iOffsetTT = [iX - POINT.x, iY - POINT.y]
 		else:
 			if xPos == yPos == -1:
-				X, Y = self.InputData.getMousePosition()
-				screen.moveItem("Tooltip", X + self.iOffsetTT[0], Y + self.iOffsetTT[1], 0)
+				POINT = GC.getCursorPos()
+				screen.moveItem("Tooltip", POINT.x + self.iOffsetTT[0], POINT.y + self.iOffsetTT[1], 0)
 			screen.moveToFront("Tooltip")
 			screen.show("Tooltip")
 		if xPos == yPos == -1:
@@ -1748,12 +1748,12 @@ class Pedia:
 	def update(self, fDelta):
 		if self.bLockedTT:
 			screen = self.screen()
-			X, Y = self.InputData.getMousePosition()
-			x = X + self.iOffsetTT[0]
-			y = Y + self.iOffsetTT[1]
-			if x < 0: x = 0
-			if y < 0: y = 0
-			screen.moveItem("Tooltip", x, y, 0)
+			POINT = GC.getCursorPos()
+			iX = POINT.x + self.iOffsetTT[0]
+			iY = POINT.y + self.iOffsetTT[1]
+			if iX < 0: iX = 0
+			if iY < 0: iY = 0
+			screen.moveItem("Tooltip", iX, iY, 0)
 		if self.bKeyPress:
 			self.fKeyTimer += fDelta
 			if self.fKeyTimer > 2:

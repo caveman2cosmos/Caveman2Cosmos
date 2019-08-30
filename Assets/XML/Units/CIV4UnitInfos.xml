@@ -122,7 +122,6 @@
 					<iProductionTrait>50</iProductionTrait>
 				</ProductionTrait>
 			</ProductionTraits>
-			<iCost>160</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -198,7 +197,6 @@
 					<iProductionTrait>50</iProductionTrait>
 				</ProductionTrait>
 			</ProductionTraits>
-			<iCost>220</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -283,7 +281,6 @@
 					<iProductionTrait>50</iProductionTrait>
 				</ProductionTrait>
 			</ProductionTraits>
-			<iCost>880</iCost>
 			<iMoves>2</iMoves>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<iAsset>1</iAsset>
@@ -369,7 +366,6 @@
 					<iProductionTrait>50</iProductionTrait>
 				</ProductionTrait>
 			</ProductionTraits>
-			<iCost>1260</iCost>
 			<iMoves>2</iMoves>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<iAsset>1</iAsset>
@@ -464,7 +460,7 @@
 					<iProductionTrait>50</iProductionTrait>
 				</ProductionTrait>
 			</ProductionTraits>
-			<iCost>2560</iCost>
+			<iCost>1280</iCost>
 			<iMoves>24</iMoves>
 			<iExtraCost>5</iExtraCost>
 			<iAsset>1</iAsset>
@@ -68713,7 +68709,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
-			<Action>
+				<Action>
 					<MissionType>MISSION_SACRIFICE_CAPTIVE</MissionType>
 					<ActionOutcomes>
 						<Outcome>

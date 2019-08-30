@@ -10,7 +10,7 @@
 			<Strategy>TXT_KEY_BUILDING_MAPINGUARI_COMPOUND_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAPINGUARI_COMPOUND</ArtDefineTag>
-			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
+			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

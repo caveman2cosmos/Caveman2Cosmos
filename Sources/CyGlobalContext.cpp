@@ -757,3 +757,18 @@ bool CyGlobalContext::isAltDown() const {
 bool CyGlobalContext::isCtrlDown() const {
 	return gDLL->ctrlKey();
 }
+
+POINT CyGlobalContext::getCursorPos() const
+{
+	POINT p;
+	// Just assume these work, if they don't then we have bigger problems that mouse pos not being correct
+	::GetCursorPos(&p);
+	::ScreenToClient(::GetActiveWindow(), &p);
+	return p;
+}
+
+POINT CyGlobalContext::screenToClient(POINT screenPos) const
+{
+	::ScreenToClient(::GetActiveWindow(), &screenPos);
+	return screenPos;
+}

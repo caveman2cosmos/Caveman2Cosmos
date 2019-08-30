@@ -5941,7 +5941,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_MINOAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+			<PrereqTech>TECH_WRITING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_COW</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -5951,7 +5951,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>372</iCost>
+			<iCost>1056</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6653,7 +6653,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_OLMEC_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
+			<PrereqTech>TECH_BARTER</PrereqTech>
 			<RawVicinityBonus>BONUS_JADE</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -6668,7 +6668,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>444</iCost>
+			<iCost>372</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10465,7 +10465,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_BACTRIC_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
+			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_SILVER</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -10475,7 +10475,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>710</iCost>
+			<iCost>588</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>

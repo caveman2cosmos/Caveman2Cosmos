@@ -19,7 +19,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_TISSUE</PrereqTech>
+			<PrereqTech>TECH_BIOMATHMATICS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
@@ -34,7 +34,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2205</iCost>
+			<iCost>2305</iCost>
 			<!-- Main effects -->
 			<iHealth>2</iHealth>
 			<CommerceChanges>
@@ -2252,6 +2252,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_CLOTH</Bonus>
 			<PrereqBonuses>
+				<Bonus>BONUS_TANNIN</Bonus>
 				<Bonus>BONUS_SALT</Bonus>
 				<Bonus>BONUS_OLIVEOIL</Bonus>
 				<Bonus>BONUS_PERFUME</Bonus>
@@ -13265,6 +13266,10 @@
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_LUMBER_CAMP</BuildingClassType>
+					<bPrereqBuildingClass>1</bPrereqBuildingClass>
+				</PrereqOrBuildingClass>
+				<PrereqOrBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_DRIFTWOOD_GATHERER</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
@@ -31063,6 +31068,7 @@
 			<PrereqTech>TECH_MELECTRONICS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_GRAPHENE</PrereqTech>
+				<PrereqTech>TECH_ELECTRIC_ARC_WEAPONRY</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -31097,7 +31103,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>3245</iCost>
+			<iCost>3385</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -43478,17 +43484,19 @@
 			<Strategy>TXT_KEY_BUILDING_ORGANIC_COMPUTER_LAB_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORGANIC_COMPUTER_LAB</ArtDefineTag>
-			<PrereqTech>TECH_DNA_COMPUTING</PrereqTech>
+			<PrereqTech>TECH_AUGMENT_CONSUMABLES</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iCost>4485</iCost>
+			<iCost>3525</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
+			<FreeBonus>BONUS_ORGANIC_COMPUTERS</FreeBonus>
+			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CLONING_FACTORY</BuildingClassType>
@@ -49519,7 +49527,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
+			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<Bonus>BONUS_DOG</Bonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -49550,7 +49558,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
-			<iCost>86</iCost>
+			<iCost>92</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -59309,7 +59317,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
+			<PrereqTech>TECH_COOKING</PrereqTech>
 			<Bonus>BONUS_LARD</Bonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -59334,7 +59342,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ANCIENT_MEDICINE</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>20</iCost>
+			<iCost>30</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<CommerceChanges>
@@ -78418,7 +78426,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_GBIOLOGY</PrereqTech>
+			<PrereqTech>TECH_BACTERIUM_ENGINEERING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
@@ -78437,7 +78445,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2985</iCost>
+			<iCost>2865</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -92687,6 +92695,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_WARSIMULATION</PrereqTech>
+			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
@@ -92711,7 +92722,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
-			<iCost>2005</iCost>
+			<iCost>2105</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-20</iCommerce>
@@ -93154,12 +93165,16 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SKINNING</PrereqTech>
 			<Bonus>BONUS_CARCASS</Bonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
+			<PrereqOrBuildingClasses>
+				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_HUNTERS_CAMP</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+					<bPrereqBuildingClass>1</bPrereqBuildingClass>
+				</PrereqOrBuildingClass>
+				<PrereqOrBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_ANIMAL_TRAPS</BuildingClassType>
+					<bPrereqBuildingClass>1</bPrereqBuildingClass>
+				</PrereqOrBuildingClass>
+			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
 			<iCost>40</iCost>
 			<!-- Main effects -->
@@ -94354,10 +94369,6 @@
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_ENCRYPTED_FIREWALL</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_MARKET_RESEARCH</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -96962,10 +96973,6 @@
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_ENZYMES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_BIOPOLYMERS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -102960,10 +102967,6 @@
 					<BuildingClassType>BUILDINGCLASS_STEM_CELL_LAB</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GESTURE_RECOGNITION_SOFTWARE</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>2205</iCost>
@@ -107214,10 +107217,6 @@
 				</BuildingClassNeeded>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_STEM_CELL_LAB</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SYSTEMS_BIOLOGY_SIMULATOR</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>

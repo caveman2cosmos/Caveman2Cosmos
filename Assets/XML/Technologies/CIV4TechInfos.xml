@@ -23459,9 +23459,6 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_MICROTURBINE</PrereqTech>
 			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_MILITARY_ROBOTS</PrereqTech>
-			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MICROMECHANICS_QUOTE</Quote>
 			<Sound>AS2D_TECH_MICROMECHANICS</Sound>
 			<SoundMP>AS2D_TECH_MICROMECHANICS</SoundMP>

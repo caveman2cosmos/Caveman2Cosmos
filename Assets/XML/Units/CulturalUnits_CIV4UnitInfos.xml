@@ -11228,7 +11228,7 @@
 			<PrereqTech>TECH_TATTOOS</PrereqTech>
 			<BonusType>BONUS_MAORI</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_TIMBER</BonusType>
+				<BonusType>BONUS_WOOD</BonusType>
 			</PrereqBonuses>
 			<iCost>42</iCost>
 			<iMoves>1</iMoves>
@@ -49662,6 +49662,7 @@
 					<iAmountPerTurn>25</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<ForceObsoleteTech>TECH_GUERRILLA_WARFARE</ForceObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_ALVARADO_CAVALRY</Class>

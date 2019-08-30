@@ -1,0 +1,26 @@
+{{#each releases}}
+  {{title}}{{#if tag}} - {{isoDate}}{{/if}}
+  {{#if summary}}
+    {{summary}}
+  {{/if}}
+
+  {{#if merges}}
+    Merged
+
+    {{#each merges}}
+      - {{{message}}}
+    {{/each}}
+  {{/if}}
+
+  {{#if fixes}}
+    Fixed
+
+    {{#each fixes}}
+      - {{{commit.subject}}}{{#each fixes}}{{/each}}
+    {{/each}}
+  {{/if}}
+
+  {{#commit-list commits heading='Changes'}}
+    - {{{subject}}}
+  {{/commit-list}}
+{{/each}}
