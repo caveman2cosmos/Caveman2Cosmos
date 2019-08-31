@@ -10,7 +10,6 @@ import Popup as PyPopup
 import RevDefs
 import RevUtils
 import BugCore
-import DebugUtils
 
 # globals
 GC = CyGlobalContext()
