@@ -1230,7 +1230,7 @@
 	</Define>
 	<Define>
 		<DefineName>CAMERA_START_DISTANCE</DefineName>
-		<fDefineFloatVal>4000</fDefineFloatVal>
+		<fDefineFloatVal>1800</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>CAMERA_MAX_TRAVEL_DISTANCE</DefineName>

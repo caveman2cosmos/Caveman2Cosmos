@@ -502,6 +502,8 @@ class CvEventManager:
 		else:
 			self.bNetworkMP = False
 
+		import CvMainInterface
+		CvMainInterface.bSetStartZoom = True
 		self.iTurnTopCiv = GAME.getGameTurn()
 		self.iTurnsToTopCiv = 49 - (self.iTurnTopCiv % 50)
 
