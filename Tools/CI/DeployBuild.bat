@@ -84,7 +84,9 @@ REM 7z a -r -x!.svn "%release_prefix%-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%
 REM 7z a -x!.svn "%release_prefix%-CvGameCoreDLL-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\Assets\CvGameCoreDLL.*"
 
 :testing
-call "%~dp0\CommitTag.bat"
+
+cd /d "%~dp0..\.."
+powershell -ExecutionPolicy Bypass -File "%~dp0\CommitTag.ps1"
 
 echo Done!
 exit /B 0
