@@ -186,7 +186,6 @@
 			<Strategy>TXT_KEY_BUILDING_SIKH_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SIKH_SHRINE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_SIKH</MovieDefineTag>
 			<HolyCity>RELIGION_SIKHISM</HolyCity>
 			<ReligionType>RELIGION_SIKHISM</ReligionType>
 			<GlobalReligionCommerce>RELIGION_SIKHISM</GlobalReligionCommerce>

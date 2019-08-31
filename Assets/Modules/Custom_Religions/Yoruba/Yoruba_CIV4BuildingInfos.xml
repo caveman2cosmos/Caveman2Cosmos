@@ -362,7 +362,6 @@
 			<Strategy>TXT_KEY_BUILDING_YORUBA_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OLODUMARE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_OLODUMARE</MovieDefineTag>
 			<HolyCity>RELIGION_YORUBA</HolyCity>
 			<ReligionType>RELIGION_YORUBA</ReligionType>
 			<GlobalReligionCommerce>RELIGION_YORUBA</GlobalReligionCommerce>

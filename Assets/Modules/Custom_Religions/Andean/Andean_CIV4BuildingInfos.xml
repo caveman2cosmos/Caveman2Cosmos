@@ -254,7 +254,6 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ANDEAN_SHRINE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_ANDEAN_SHRINE</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_ANDEAN</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -310,7 +309,6 @@
 			<Strategy>TXT_KEY_BUILDING_DORADO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DORADO</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_DORADO</MovieDefineTag>
 			<ReligionType>RELIGION_ANDEAN</ReligionType>
 			<StateReligion>RELIGION_ANDEAN</StateReligion>
 			<bStateReligion>1</bStateReligion>
@@ -391,7 +389,6 @@
 			<Help>TXT_KEY_BUILDING_MACHU_PICCHU_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MACHU_PICCHU</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_MACHU_PICCHU</MovieDefineTag>
 			<ReligionType>RELIGION_ANDEAN</ReligionType>
 			<StateReligion>RELIGION_ANDEAN</StateReligion>
 			<bStateReligion>1</bStateReligion>

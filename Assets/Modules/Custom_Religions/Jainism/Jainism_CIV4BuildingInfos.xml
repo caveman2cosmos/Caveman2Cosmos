@@ -241,7 +241,6 @@
 			<Strategy>TXT_KEY_BUILDING_JAINISM_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JAINISM_SHRINE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_JAINISM_SHRINE</MovieDefineTag>
 			<HolyCity>RELIGION_JAINISM</HolyCity>
 			<ReligionType>RELIGION_JAINISM</ReligionType>
 			<GlobalReligionCommerce>RELIGION_JAINISM</GlobalReligionCommerce>

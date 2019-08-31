@@ -189,7 +189,6 @@
 			<Strategy>TXT_KEY_BUILDING_CANAANISM_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CANAANISM_SHRINE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_CANAANISM</MovieDefineTag>
 			<HolyCity>RELIGION_CANAANITE</HolyCity>
 			<ReligionType>RELIGION_CANAANITE</ReligionType>
 			<GlobalReligionCommerce>RELIGION_CANAANITE</GlobalReligionCommerce>

@@ -14,7 +14,6 @@
 			<Strategy>TXT_KEY_BUILDING_HELLSMOUTH_SANCTUARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HELLSMOUTH</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_HELLSMOUTH</MovieDefineTag>
 			<ReligionType>RELIGION_VOODOO</ReligionType>
 			<StateReligion>RELIGION_VOODOO</StateReligion>
 			<bStateReligion>1</bStateReligion>
@@ -213,7 +212,6 @@
 			<Strategy>TXT_KEY_BUILDING_CONFUCIAN_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VOODOO_SHRINE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_VOODOO</MovieDefineTag>
 			<HolyCity>RELIGION_VOODOO</HolyCity>
 			<ReligionType>RELIGION_VOODOO</ReligionType>
 			<GlobalReligionCommerce>RELIGION_VOODOO</GlobalReligionCommerce>

@@ -189,7 +189,6 @@
 			<Strategy>TXT_KEY_BUILDING_TENGRI_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TENGRI_SHRINE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_TENGRI_SHRINE</MovieDefineTag>
 			<HolyCity>RELIGION_TENGRIISM</HolyCity>
 			<ReligionType>RELIGION_TENGRIISM</ReligionType>
 			<GlobalReligionCommerce>RELIGION_TENGRIISM</GlobalReligionCommerce>

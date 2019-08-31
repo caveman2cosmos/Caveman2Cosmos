@@ -295,7 +295,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_ARCHIVES</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_ARCHIVES</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Aerial Basket Ropeways -->
@@ -563,7 +562,6 @@
 			<iPower>2</iPower>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_BULL_LEAPING</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_BULL_LEAPING</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Capital Administration -->
@@ -744,7 +742,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_CENTERS_FOR_DISEASE_CONTROL</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_CDC</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Central Bank -->
@@ -827,7 +824,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_CENTRAL_BANK</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_CENTRAL_BANK</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Chief's Funeral Pyre -->
@@ -894,7 +890,6 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_CHIEFS_PYRE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_CHIEFS_PYRE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Computer Center -->
@@ -1006,7 +1001,6 @@
 			<iAsset>10</iAsset>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_COSMONAUT_TRAINING_CENTRE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_COSMONAUT_TRAINING_CENTRE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Courier System -->
@@ -1911,7 +1905,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_FOUNDLING_HOSPITAL</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_FOUNDLING_HOSPITAL</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Garbage Collection Agency -->
@@ -2062,7 +2055,6 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_GREAT_BONFIRE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_GREAT_BONFIRE</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2132,7 +2124,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_GREAT_PALACE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_FORBIDDEN_PALACE</MovieDefineTag>
 		</BuildingInfo>
 		<!--↓ Guilds ↓-->
 		<BuildingInfo>
@@ -3664,7 +3655,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_HOMELAND_SECURITY</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_HOMELAND_SECURITY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- House of Parliament -->
@@ -3814,7 +3804,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_IRON_WORKS</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_IRON_WORKS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Labor Union -->
@@ -3852,7 +3841,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_LABOR_UNION</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_LABOR_UNION</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Log Roller System -->
@@ -3976,7 +3964,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_MANHATTAN</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_MANHATTAN_PROJECT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Microlith Workshop -->
@@ -4314,7 +4301,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_NASA</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_NASA</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4415,7 +4401,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_AQUA</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_AQUA</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4803,7 +4788,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_LIBRARY_SERVICE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_LIBRARY_SERVICE</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -5632,7 +5616,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SPORTS</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SPORTS_LEAGUE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National TV-Station -->
@@ -5725,7 +5708,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_NOBLEGARDEN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NOBLEGARDEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<MovieDefineTag>ART_DEF_MOVIE_NOBLEGARDEN</MovieDefineTag>
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<Bonus>BONUS_ANTI_GRAVITY_FIELD_GENERATORS</Bonus>
 			<bPrereqPower>1</bPrereqPower>
@@ -5904,7 +5886,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_ZOO</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_ZOO</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -6231,7 +6212,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPAGANDA</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_PROPAGANDA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Radio Telescope -->
@@ -6663,7 +6643,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_AREA51</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_SECRET_ARMY_BASE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Space Laboratory -->
@@ -6909,7 +6888,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_STRATEGIC_GRAIN_RESERVE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_STRATEGIC_GRAIN_RESERVE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Supercollider -->
@@ -6968,7 +6946,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_SUPERCOLLIDER</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_SUPERCOLLIDER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Supreme Court -->
@@ -7039,7 +7016,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_SUPREME_COURT</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_SUPREME_COURT</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -7414,7 +7390,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_TOMB</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_TOMB</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Toxic Waste Dump -->
@@ -7518,7 +7493,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_SSTAR</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_ARCHERY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Effect - Tradition - Archery -->
@@ -7583,7 +7557,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_SSTAR</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_ASTHETIC_APPRECIATION</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Effect - Tradition - Aesthetic Appreciation -->
@@ -7659,7 +7632,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_SSTAR</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_WORK_ETHIC</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Effect - Tradition - Work Ethic -->
@@ -7872,7 +7844,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_TREASURY</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_TREASURY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Triumph Column -->
@@ -7930,7 +7901,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_TRIUMPH_COLUMN</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_COLUMN</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- UN Mission -->
