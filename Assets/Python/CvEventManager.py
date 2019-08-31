@@ -688,7 +688,7 @@ class CvEventManager:
 							continue
 
 						if not GAME.getSorenRandNum(5 * iWorldSize, "Zizkov"):
-							MAP.setRevealedPlots(iTeamX, False, False)
+							GC.getMap().resetRevealedPlots(iTeamX)
 							if iPlayer == iPlayerAct:
 								CvUtil.sendMessage(TRNSLTR.getText("TXT_ZIZKOV1", (CyPlayerX.getCivilizationDescription(0),)), iPlayer)
 							elif iPlayerX == iPlayerAct:
@@ -1325,7 +1325,6 @@ class CvEventManager:
 				TECH_SATELLITES = GC.getInfoTypeForString("TECH_SATELLITES")
 				iTeam = GC.getPlayer(iPlayer).getTeam()
 				# Reveals whole map for owner
-				GC.getMap().resetRevealedPlots(iTeam)
 				for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
 					if iTeamX == iTeam:
 						continue
@@ -1335,7 +1334,7 @@ class CvEventManager:
 					if TECH_SATELLITES > -1 and CyTeamX.isHasTech(TECH_SATELLITES):
 						continue
 					# Covers whole map for others
-					GC.getMap().setRevealedPlots(iTeamX, False, False)
+					GC.getMap().resetRevealedPlots(iTeamX)
 				CvUtil.sendImmediateMessage(TRNSLTR.getText("TXT_GLOBAL_JAM",()))
 			elif KEY == "TSUKIJI":
 				CyTeam = GC.getTeam(GC.getPlayer(iPlayer).getTeam())

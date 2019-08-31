@@ -10,6 +10,7 @@ import Popup as PyPopup
 import RevDefs
 import RevUtils
 import BugCore
+import DebugUtils
 
 # globals
 GC = CyGlobalContext()
@@ -46,18 +47,16 @@ class ChangePlayer :
 	# keypress handler
 	def onKbdEvent(self, argsList):
 		eventType, key, mx, my, px, py = argsList
-
-		if eventType == 6 and (GAME.isDebugMode() or GAME.cheatCodesEnabled()):
+		if eventType == 6 and DebugUtils.bDebugMode:
 			if self.customEM.bShift and self.customEM.bCtrl:
-				theKey = int(key)
 
-				if theKey == int(InputTypes.KB_P):
+				if key == InputTypes.KB_P:
 					changeCivPopup()
 
-				elif theKey == int(InputTypes.KB_L):
+				elif key == InputTypes.KB_L:
 					changeHumanPopup()
 
-				elif theKey == int(InputTypes.KB_U):
+				elif key == InputTypes.KB_U:
 					updateGraphics()
 
 # Chooser window for switching a players civ
