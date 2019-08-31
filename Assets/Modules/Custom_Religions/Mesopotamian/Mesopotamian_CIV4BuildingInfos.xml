@@ -541,6 +541,7 @@
 			<Strategy>TXT_KEY_BUILDING_MESO_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BABEL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BABEL</MovieDefineTag>
 			<HolyCity>RELIGION_MESO</HolyCity>
 			<ReligionType>RELIGION_MESO</ReligionType>
 			<GlobalReligionCommerce>RELIGION_MESO</GlobalReligionCommerce>

@@ -420,6 +420,7 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_SHAMAN</MovieDefineTag>
 			<HolyCity>RELIGION_SHAMAN</HolyCity>
 			<ReligionType>RELIGION_SHAMAN</ReligionType>
 			<GlobalReligionCommerce>RELIGION_SHAMAN</GlobalReligionCommerce>

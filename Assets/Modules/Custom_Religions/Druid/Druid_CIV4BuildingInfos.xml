@@ -428,6 +428,7 @@
 			<Strategy>TXT_KEY_BUILDING_DRUID_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRUID_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_DRUID</MovieDefineTag>
 			<HolyCity>RELIGION_DRUID</HolyCity>
 			<ReligionType>RELIGION_DRUID</ReligionType>
 			<GlobalReligionCommerce>RELIGION_DRUID</GlobalReligionCommerce>

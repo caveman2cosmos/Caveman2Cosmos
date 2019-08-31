@@ -158,6 +158,7 @@
 			<Strategy>TXT_KEY_BUILDING_SCIENTOLOGY_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SCIENTOLOGY_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SCIENTOLOGY</MovieDefineTag>
 			<HolyCity>RELIGION_SCIENTOLOGY</HolyCity>
 			<ReligionType>RELIGION_SCIENTOLOGY</ReligionType>
 			<GlobalReligionCommerce>RELIGION_SCIENTOLOGY</GlobalReligionCommerce>

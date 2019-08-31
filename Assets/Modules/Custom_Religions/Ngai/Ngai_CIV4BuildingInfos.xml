@@ -412,6 +412,7 @@
 			<Strategy>TXT_KEY_BUILDING_NGAI_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OLDOINYO</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_OLDOINYO</MovieDefineTag>
 			<HolyCity>RELIGION_NGAI</HolyCity>
 			<ReligionType>RELIGION_NGAI</ReligionType>
 			<GlobalReligionCommerce>RELIGION_NGAI</GlobalReligionCommerce>

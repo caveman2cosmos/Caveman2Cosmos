@@ -181,6 +181,7 @@
 			<Strategy>TXT_KEY_BUILDING_ASATRU_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ASATRU_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_ASATRU</MovieDefineTag>
 			<HolyCity>RELIGION_ASATRU</HolyCity>
 			<ReligionType>RELIGION_ASATRU</ReligionType>
 			<GlobalReligionCommerce>RELIGION_ASATRU</GlobalReligionCommerce>
@@ -308,6 +309,7 @@
 			<Strategy>TXT_KEY_BUILDING_FREYA_SANCTUARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FREYA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FREYA</MovieDefineTag>
 			<ReligionType>RELIGION_ASATRU</ReligionType>
 			<StateReligion>RELIGION_ASATRU</StateReligion>
 			<bStateReligion>1</bStateReligion>
@@ -375,6 +377,7 @@
 			<Strategy>TXT_KEY_BUILDING_HEIMDALL_SANCTUARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HEIMDALL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HEIMDALL</MovieDefineTag>
 			<ReligionType>RELIGION_ASATRU</ReligionType>
 			<StateReligion>RELIGION_ASATRU</StateReligion>
 			<bStateReligion>1</bStateReligion>
@@ -437,6 +440,7 @@
 			<Strategy>TXT_KEY_BUILDING_LOKI_SANCTUARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LOKI</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_LOKI</MovieDefineTag>
 			<ReligionType>RELIGION_ASATRU</ReligionType>
 			<StateReligion>RELIGION_ASATRU</StateReligion>
 			<bStateReligion>1</bStateReligion>
@@ -552,6 +556,7 @@
 			<Strategy>TXT_KEY_BUILDING_THOR_SANCTUARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_THOR</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_THOR</MovieDefineTag>
 			<ReligionType>RELIGION_ASATRU</ReligionType>
 			<StateReligion>RELIGION_ASATRU</StateReligion>
 			<bStateReligion>1</bStateReligion>

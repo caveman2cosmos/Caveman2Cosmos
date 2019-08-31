@@ -18,8 +18,7 @@ XmlValidator.log
 git_installer.exe
 Tools/Setup/.wget-hsts
 
-Assets/art/
-!Assets/art/Readme.txt
+Assets/**/*.dds
 
 Sources/cov-int/
 Build/
