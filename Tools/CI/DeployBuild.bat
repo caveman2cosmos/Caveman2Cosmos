@@ -3,9 +3,6 @@ PUSHD "%~dp0..\.."
 
 SET version=v%APPVEYOR_BUILD_VERSION%-alpha
 
-REM TESTING
-goto :testing
-
 if "%APPVEYOR_REPO_BRANCH%" neq "%release_branch%" (
     echo Skipping deployment due to not being on release branch
     exit /b 0
@@ -26,8 +23,6 @@ if %ERRORLEVEL% neq 0 (
     exit /B 1
 )
 
-if "%testing%"=="true" goto :source_indexing
-
 echo Building FinalRelease DLL...
 call Tools\MakeDLLFinalRelease.bat
 if not errorlevel 0 (
@@ -45,11 +40,7 @@ rmdir /Q /S "%build_dir%"
 
 :checkout
 echo Checking out SVN working copy for deployment...
-if "%testing%"=="true" goto :test_svn
 svn checkout %svn_url% "%build_dir%"
-goto :update_svn
-:test_svn
-svn checkout %svn_test_url% "%build_dir%"
 
 :update_svn
 :: HERE IS WHERE YOU ADJUST WHAT TO PUT IN THE BUILD
@@ -82,8 +73,6 @@ POPD
 
 REM 7z a -r -x!.svn "%release_prefix%-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\*.*"
 REM 7z a -x!.svn "%release_prefix%-CvGameCoreDLL-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\Assets\CvGameCoreDLL.*"
-
-:testing
 
 cd /d "%~dp0..\.."
 powershell -ExecutionPolicy Bypass -File "%~dp0\CommitTag.ps1"
