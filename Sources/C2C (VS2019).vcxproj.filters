@@ -866,4 +866,7 @@
   <ItemGroup>
     <Text Include="..\Notes for the next breaking of save game compatability cycle.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="C2C.natvis" />
+  </ItemGroup>
 </Project>
