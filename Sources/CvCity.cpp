@@ -6516,6 +6516,12 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 
 			if (kBuilding.getPropertySpawnProperty() != NO_PROPERTY && kBuilding.getPropertySpawnUnitClass() != NO_UNITCLASS)
 			{
+				FAssertMsg(
+					GC.getUnitInfo(static_cast<UnitTypes>(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(static_cast<int>(kBuilding.getPropertySpawnUnitClass())))).isBlendIntoCity(),
+					CvString::format("Building %s wants to add property spawner with unit class %s, but this unit doesn't have bBlendIntoCity enabled, which is a requirement",
+						kBuilding.getType(), 
+						GC.getUnitInfo(static_cast<UnitTypes>(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(static_cast<int>(kBuilding.getPropertySpawnUnitClass())))).getType()).c_str());
+
 				changePropertySpawn(iChange, kBuilding.getPropertySpawnProperty(), kBuilding.getPropertySpawnUnitClass());
 			}
 			
@@ -26969,6 +26975,7 @@ void CvCity::clearModifierTotals()
 	m_aBuildingYieldModifier.clear();
 
 	//m_Properties.clear();
+	m_aPropertySpawns.clear();
 
 	//	Until this city gets to process its buildings
 	m_recalcBuilding = -1;
@@ -29140,6 +29147,8 @@ void CvCity::doPropertyUnitSpawn()
 						//}
 						//int iAIRoll = GC.getGameINLINE().getSorenRandNum(aiUnitAIIndex.size(), "Property Unit Spawn AI Check");
 						//UnitAITypes eUnitAI = (UnitAITypes)aiUnitAIIndex[iAIRoll];
+
+						FAssertMsg(GC.getUnitInfo(eUnit).isBlendIntoCity(), CvString::format("Trying to spawn %s from property spawn, but it doesn't have bBlendIntoCity enabled, which is a requirement", GC.getUnitInfo(eUnit).getType()).c_str());
 
 						CvUnit* pUnit = GET_PLAYER(eSpawnOwner).initUnit(eUnit, getX_INLINE(), getY_INLINE(), UNITAI_BARB_CRIMINAL, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
 
