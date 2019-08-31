@@ -404,17 +404,37 @@ class CvEventManager:
 							self.beginEvent(5, (px, py))
 							return 1
 
+			elif iModifiers == 2:
+
+				if DebugUtils.bDebugMode:
+
+					if bShift and bCtrl:
+
+						if key == InputTypes.KB_P:
+							import ChangePlayer
+							ChangePlayer.changeCivPopup()
+							return 1
+
+						elif key == InputTypes.KB_L:
+							import ChangePlayer
+							ChangePlayer.changeHumanPopup()
+							return 1
+
+						elif key == InputTypes.KB_U:
+							import ChangePlayer
+							ChangePlayer.updateGraphics()
+							return 1
+
 			elif iModifiers == 3:
+
+				if key == 16: # D
+					DebugUtils.toggleDebugMode()
+					return 1
 
 				if DebugUtils.bDebugMode:
 					if key == InputTypes.KB_U:
 						DebugUtils.putOneOfEveryUnit()
-
-		elif eventType == 7: # Key up
-
-			if iModifiers == 3 and not self.bNetworkMP:
-				if key == 16: # D
-					DebugUtils.toggleDebugMode()
+						return 1
 		return 0
 
 

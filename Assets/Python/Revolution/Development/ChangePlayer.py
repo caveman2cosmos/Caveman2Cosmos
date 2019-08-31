@@ -18,15 +18,13 @@ GAME = GC.getGame()
 
 RevOpt = BugCore.game.Revolution
 
-class ChangePlayer :
+class ChangePlayer:
 
 	def __init__(self, customEM, RevOpt):
 		print "Initializing ChangePlayer Mod"
 
 		self.RevOpt = RevOpt
 		self.customEM = customEM
-
-		self.customEM.addEventHandler("kbdEvent", self.onKbdEvent)
 
 		self.customEM.setPopupHandler(RevDefs.changeCivPopup, ["changeCivPopup",changeCivHandler,self.blankHandler])
 		self.customEM.setPopupHandler(RevDefs.changeHumanPopup, ["changeHumanPopup",changeHumanHandler,self.blankHandler])
@@ -35,29 +33,12 @@ class ChangePlayer :
 	def removeEventHandlers(self):
 		print "Removing event handlers from ChangePlayer"
 
-		self.customEM.removeEventHandler("kbdEvent", self.onKbdEvent)
-
 		self.customEM.setPopupHandler(RevDefs.changeCivPopup, ["changeCivPopup",self.blankHandler,self.blankHandler])
 		self.customEM.setPopupHandler(RevDefs.changeHumanPopup, ["changeHumanPopup",self.blankHandler,self.blankHandler])
 		self.customEM.setPopupHandler(RevDefs.updateGraphicsPopup, ["updateGraphicsPopup",self.blankHandler,self.blankHandler])
 
 	# Dummy handler to take the second event for popup
 	def blankHandler(self, playerID, netUserData, popupReturn): return
-
-	# keypress handler
-	def onKbdEvent(self, argsList):
-		eventType, key, mx, my, px, py = argsList
-		if eventType == 6 and DebugUtils.bDebugMode:
-			if self.customEM.bShift and self.customEM.bCtrl:
-
-				if key == InputTypes.KB_P:
-					changeCivPopup()
-
-				elif key == InputTypes.KB_L:
-					changeHumanPopup()
-
-				elif key == InputTypes.KB_U:
-					updateGraphics()
 
 # Chooser window for switching a players civ
 def changeCivPopup():
