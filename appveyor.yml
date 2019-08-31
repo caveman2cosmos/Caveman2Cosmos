@@ -1,14 +1,18 @@
 version: 40.0.{build}
 image: Visual Studio 2019
+# skip_tags is important or you will get an infinite build loop when we apply release tags
+skip_tags: true
+skip_branch_with_pr: true
+
 cache:
 - Build\Debug -> Tools\deps.exe, Tools\_MakeDLL.bat, Sources\, appveyor.yml
 - Build\Release -> Tools\deps.exe, Tools\_MakeDLL.bat, Sources\, appveyor.yml
 
+# setup remote desktop access
 init:
   - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
 environment:
-  testing: true
   svn_url: https://svn.code.sf.net/p/caveman2cosmos/code/trunk
   svn_test_url: https://svn.code.sf.net/p/caveman2cosmos/code/branches/billw-git
   svn_user: c2cappveyor
@@ -22,13 +26,8 @@ environment:
   release_prefix: Caveman2Cosmos
   build_dir: _build
   release_branch: release
-  # nodejs_version: "11"
 
 install:
-  # Get the latest stable version of Node.js or io.js
-  # Need this for deploy script 
-  # - ps: Install-Product node $env:nodejs_version
-  # - npm install auto-changelog
   - set PATH=C:\Ruby26-x64\bin;%PATH%
   - gem install github_changelog_generator
 
@@ -38,15 +37,15 @@ build_script:
 
     call "%APPVEYOR_BUILD_FOLDER%\Tools\_MakeDLL.bat" build Debug
 
-    REM call "%APPVEYOR_BUILD_FOLDER%\Tools\_MakeDLL.bat" build Release
+    call "%APPVEYOR_BUILD_FOLDER%\Tools\_MakeDLL.bat" build Release
 
-# test_script:
-# - cmd: >-
-#     cd Tools
+test_script:
+- cmd: >-
+    cd Tools
 
-#     XmlValidator.exe -a
+    XmlValidator.exe -a
 
-# DISABLED: before_deploy can't access secure variables it seems
+# DISABLED: before_deploy can't access secure variables it seems, we just do everything in the deploy_script
 # before_deploy:
 # - cmd: >-
 #     call "%APPVEYOR_BUILD_FOLDER%\Tools\CI\DeployBuild.bat"

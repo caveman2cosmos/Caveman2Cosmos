@@ -182,7 +182,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_WORKER</Tag>
-		<English>Upgrade a Captive to a work unit.</English>
+		<English>Upgrade a Captive to worker.</English>
 		<French>Convertir en Ouvrier</French>
 		<German>Bilde einen Gefangenen zu einem beliebigen Arbeitstrupp aus</German>
 		<Italian>Migliora il tuo prigioniero in un'unità da lavoro.</Italian>
@@ -318,7 +318,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER</Tag>
-		<English>Upgrade a Captive to a Neanderthal Gatherer.</English>
+		<English>Upgrade a Captive to a Neanderthal Tracker.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_WARRIOR</Tag>
