@@ -19,6 +19,7 @@ git_installer.exe
 Tools/Setup/.wget-hsts
 
 Assets/**/*.dds
+Assets/**/*.nif
 
 Sources/cov-int/
 Build/
