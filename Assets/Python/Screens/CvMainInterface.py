@@ -45,7 +45,6 @@ class CvMainInterface:
 		self.InputData = InputData.instance
 
 		self.bInitialize = True
-		self.bSetStartZoom = True
 		self.xRes = 0
 		self.yRes = 0
 
@@ -1358,6 +1357,7 @@ class CvMainInterface:
 				if self.bSetStartZoom:
 					# CAMERA_START_DISTANCE also defines camera zoom where music is turned on/off, we want that to be quite low and the start zoom to be higher.
 					CyCamera().SetZoom(0.46)
+					self.bSetStartZoom = False
 
 			# This will update the flag widget for SP hotseat and debugging
 			IFT = CyIF.getShowInterface()

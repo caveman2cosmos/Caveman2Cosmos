@@ -502,8 +502,9 @@ class CvEventManager:
 		else:
 			self.bNetworkMP = False
 
-		import CvMainInterface
-		CvMainInterface.bSetStartZoom = True
+		# This is too early to actually set the initial camera zoom level, so raise a flag so it will happen later.
+		CvScreensInterface.mainInterface.bSetStartZoom = True
+
 		self.iTurnTopCiv = GAME.getGameTurn()
 		self.iTurnsToTopCiv = 49 - (self.iTurnTopCiv % 50)
 
