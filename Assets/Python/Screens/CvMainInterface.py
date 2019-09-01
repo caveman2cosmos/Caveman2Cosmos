@@ -1356,7 +1356,8 @@ class CvMainInterface:
 					self.bHelpTextFullY = True
 				if self.bSetStartZoom:
 					# CAMERA_START_DISTANCE also defines camera zoom where music is turned on/off, we want that to be quite low and the start zoom to be higher.
-					CyCamera().SetZoom(0.46)
+					# Max zoom change from game to game, so the percentage zoom is relative to the initial zoom from CAMERA_START_DISTANCE
+					CyCamera().SetZoom(CyCamera().GetZoom() * 2)
 					self.bSetStartZoom = False
 
 			# This will update the flag widget for SP hotseat and debugging
