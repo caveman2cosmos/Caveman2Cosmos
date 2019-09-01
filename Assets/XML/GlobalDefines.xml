@@ -1304,7 +1304,7 @@
 	</Define>
 	<Define>
 		<DefineName>FIELD_OF_VIEW</DefineName>
-		<fDefineFloatVal>50.0</fDefineFloatVal>
+		<fDefineFloatVal>42.0</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>IMPROVEMENT_SCALE</DefineName>
