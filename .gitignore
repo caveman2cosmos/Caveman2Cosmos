@@ -20,6 +20,8 @@ Tools/Setup/.wget-hsts
 
 Assets/**/*.dds
 Assets/**/*.nif
+Assets/**/*.kfm
+Assets/**/*.kf
 
 Sources/cov-int/
 Build/
