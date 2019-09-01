@@ -193,7 +193,7 @@
 			<fInterfaceScale>1.6</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Olives/olives.nif</NIF>
 			<KFM></KFM>
-			<Button>,Art/blank.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,1,14</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,1,7</Button>
 			<FontButtonIndex>51</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
