@@ -4677,43 +4677,32 @@ def doSyntheticFuels4(argsList):
 ####### ALTERNATIVE_ENERGY ######
 
 def canTriggerAlternativeEnergy(argsList):
-  kTriggeredData = argsList[0]
-  pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
-  i3Gorges = GC.getInfoTypeForString("BUILDING_GREAT_DAM")
-  iCoalPlant = GC.getInfoTypeForString("BUILDINGCLASS_COAL_PLANT")
 
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and pPlayer.isHuman():
-    return False
-  if pPlayer.getBuildingClassCountWithUpgrades(GC.getBuildingInfo(i3Gorges).getBuildingClassType()) > 0:
-    return False
-  if pPlayer.getBuildingClassCountWithUpgrades(iCoalPlant) == 0:
-    return False
+	CyPlayer = GC.getPlayer(argsList[0].ePlayer)
 
-  return True
+	if CyPlayer.getBuildingClassCountWithUpgrades(GC.getBuildingInfo(GC.getInfoTypeForString("BUILDING_GREAT_DAM")).getBuildingClassType()):
+		return False
+
+	if not CyPlayer.getBuildingClassCountWithUpgrades(GC.getInfoTypeForString("BUILDINGCLASS_COAL_PLANT")):
+		return False
+	return True
 
 
 def getHelpAlternativeEnergy1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
-
-  iRequired = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
-
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_ALTERNATIVE_ENERGY_HELP_1", (iRequired, ))
-
-  return szHelp
-
+	return TRNSLTR.getText("TXT_KEY_EVENT_ALTERNATIVE_ENERGY_HELP_1", (GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers(), ))
 
 def expireAlternativeEnergy1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
-  i3Gorges = GC.getInfoTypeForString("BUILDING_GREAT_DAM")
 
-  if pPlayer.getBuildingClassCountWithUpgrades(GC.getBuildingInfo(i3Gorges).getBuildingClassType()) > 0:
-    return True
+	CyPlayer = GC.getPlayer(argsList[1].ePlayer)
 
-  return False
+	# A player reported a 'NoneType' object has no attribute 'getBuildingClassCountWithUpgrades' exception in this function on SVN 11024.
+	if not CyPlayer:
+		print "[WARNING] CvRandonEventInterface.expireAlternativeEnergy1\n\tEVENTTRIGGER_ALTERNATIVE_ENERGY triggered for a non valid player (iPlayer not in range(51) == True)"
+	else:
+		if CyPlayer.getBuildingClassCountWithUpgrades(GC.getBuildingInfo(GC.getInfoTypeForString("BUILDING_GREAT_DAM")).getBuildingClassType()):
+			return True
+	return False
+
 
 def canTriggerAlternativeEnergyDone(argsList):
   kTriggeredData = argsList[0]

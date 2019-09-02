@@ -4123,7 +4123,7 @@ with GFC_Control_Table
 						LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_SIDES_SCALE, GFC_BITMAPSKIN_CENTER_SCALE);
 						DestCombine		= GColorCombine(BlendSource,Disable);
 						FactorCombine	= GColorCombine(Modulate,Modulate);
-						FactorColor		= GColor(0, 51, 227, 231);
+						FactorColor		= GColor(50, 60, 180, 184);
 						Image			= GBitmap("../../../../Resource/Civ4/tooltip.tga", HVGrid, 1, 2, 0, 1);
 						Margin			= GRectMargin(7,7,7,7);
 					}
