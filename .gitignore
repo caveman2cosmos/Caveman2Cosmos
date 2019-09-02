@@ -9,7 +9,8 @@
 *.pdb
 *.FPK
 
-Assets/fpklive_token.txt
+/Tools/Autocorrect/LanguageTool.zip
+/Tools/Autocorrect/LanguageTool-*
 !/Tools/*.dll
 XmlValidator.log
 
@@ -18,6 +19,7 @@ XmlValidator.log
 git_installer.exe
 Tools/Setup/.wget-hsts
 
+Assets/fpklive_token.txt
 Assets/**/*.dds
 Assets/**/*.nif
 Assets/**/*.kfm
