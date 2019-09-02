@@ -32661,7 +32661,8 @@ bool CvUnitAI::AI_RbombardPlot(int iRange, int iBonusValueThreshold)
 								}
 								if (iValue < iBonusValueThreshold) iValue = 0;
 							}
-						} else
+						} 
+						else
 						{
 							iValue = AI_pillageValue(pLoopPlot, 0); // returns any improvement with highest pillage value
 						}
@@ -32677,6 +32678,7 @@ bool CvUnitAI::AI_RbombardPlot(int iRange, int iBonusValueThreshold)
 	}
 	if (pBestPlot != NULL)
 	{
+		FAssertMsg(pBestPlot->getNumVisibleEnemyCombatUnits(getOwner()) > 0, "Can't bombard without units in target plot");
 		getGroup()->pushMission(MISSION_RBOMBARD, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE());
 		return true;
 	}
@@ -32784,6 +32786,7 @@ bool CvUnitAI::AI_RbombardUnit(int iRange, int iHighestOddsThreshold, int iMinSt
 	}
 	if (pBestPlot != NULL)
 	{
+		FAssertMsg(pBestPlot->getNumVisibleEnemyCombatUnits(getOwner()) > 0, "Can't bombard without units in target plot");
 		getGroup()->pushMission(MISSION_RBOMBARD, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE());
 		return true;
 	}
@@ -32844,53 +32847,34 @@ bool CvUnitAI::AI_RbombardNaval()
 {
 	PROFILE_FUNC();
 
-	CvCity* pCity;
-	CvPlot* pLoopPlot;
-	CvPlot* pBestPlot;
-	CvUnit* pDefender;
-	int iSearchRange;
-	int iPotentialAttackers;
-	int iValue = 0;
-	int iBestValue;
-	int iDX, iDY;
-
 	if(!canRBombard())
 	{
 		return false;
 	}
 
-	iSearchRange = getGroup()->getMinimumRBombardRange();
-	iBestValue = 0;
-	pBestPlot = NULL;
-	int iEnemyCount = 0;
-	for (iDX = -(iSearchRange); iDX <= iSearchRange; iDX++)
+	int iSearchRange = getGroup()->getMinimumRBombardRange();
+	int iBestValue = 0;
+	CvPlot*  pBestPlot = NULL;
+
+	for (int iDX = -(iSearchRange); iDX <= iSearchRange; iDX++)
 	{
-		for (iDY = -(iSearchRange); iDY <= iSearchRange; iDY++)
+		for (int iDY = -(iSearchRange); iDY <= iSearchRange; iDY++)
 		{
-			pLoopPlot	= plotXY(getX_INLINE(), getY_INLINE(), iDX, iDY);
-			if (pLoopPlot != NULL && !atPlot(pLoopPlot))
+			CvPlot* pLoopPlot = plotXY(getX_INLINE(), getY_INLINE(), iDX, iDY);
+			if (pLoopPlot != NULL && !atPlot(pLoopPlot) && getGroup()->canBombardAtRanged(plot(), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE()))
 			{
-				if (getGroup()->canBombardAtRanged(plot(), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE()))
+				int iEnemyCount = pLoopPlot->getNumVisibleEnemyCombatUnits(getOwner());
+
+				// We definitely can't do a bombard mission unless there is enemy present, and we won't do one unless the targets are worth it
+				if (iEnemyCount > 0 && pLoopPlot->getAverageEnemyDamage(getTeam()) < getGroup()->getMinimumRBombardDamageLimit())
 				{
-					for (int iPlayer = 0; iPlayer < MAX_PLAYERS; iPlayer++)
-					{
-						TeamTypes eEnemyTeam = GET_PLAYER((PlayerTypes)iPlayer).getTeam();
-						if (GET_TEAM(eEnemyTeam).isAtWar(getTeam()))
-						{
-							if (pLoopPlot->getAverageEnemyDamage(eEnemyTeam) < getGroup()->getMinimumRBombardDamageLimit())
-							{
-								iEnemyCount = pLoopPlot->getNumVisibleEnemyCombatUnits((PlayerTypes)iPlayer);
+					int iValue = pLoopPlot->getAverageEnemyStrength(getTeam());
+					iValue *= pLoopPlot->getAverageEnemyDamage(getTeam());
+					iValue /= 100;
+					iValue += std::min(getGroup()->getRBombardDamageMaxUnits(), iEnemyCount);
+					iValue *= iEnemyCount;
 
-								iValue = pLoopPlot->getAverageEnemyStrength(eEnemyTeam);
-								iValue *= pLoopPlot->getAverageEnemyDamage(eEnemyTeam);
-								iValue /= 100;
-								iValue += std::min(getGroup()->getRBombardDamageMaxUnits(), iEnemyCount);
-								iValue *= iEnemyCount;
-							}
-						}
-					}
-
-					pCity = pLoopPlot->getPlotCity();
+					CvCity* pCity = pLoopPlot->getPlotCity();
 					if (pCity != NULL)
 					{
 						//iValue += std::max(0, (std::min((pCity->getDefenseDamage() + airBombCurrRate()), GC.getMAX_CITY_DEFENSE_DAMAGE()) - pCity->getDefenseDamage()));
@@ -32904,13 +32888,14 @@ bool CvUnitAI::AI_RbombardNaval()
 							iValue *= 3;
 						}
 					}
+
 					//TBHERE
-					iPotentialAttackers = GET_PLAYER(getOwnerINLINE()).AI_adjacentPotentialAttackers(pLoopPlot);//pLoopPlot->getNumVisibleEnemyDefenders(NO_PLAYER);
+					int iPotentialAttackers = GET_PLAYER(getOwnerINLINE()).AI_adjacentPotentialAttackers(pLoopPlot);//pLoopPlot->getNumVisibleEnemyDefenders(NO_PLAYER);
 					if (iPotentialAttackers > 0 || pLoopPlot->isAdjacentTeam(getTeam()))
 					{
-						pDefender = pLoopPlot->getBestDefender(NO_PLAYER, getOwnerINLINE(), this, true);
+						CvUnit* pDefender = pLoopPlot->getBestDefender(NO_PLAYER, getOwnerINLINE(), this, true);
 
-						if( pDefender != NULL && pDefender->canDefend() && iValue > 0)
+						if (pDefender != NULL && pDefender->canDefend() && iValue > 0)
 						{
 							//iDamage = GC.getGameINLINE().getSorenRandNum(rBombardDamage(), "AI Bombard");
 							//iValue = std::max(0, (std::min((pDefender->getDamage() + iDamage), rBombardDamage()) - pDefender->getDamage()));
@@ -32924,14 +32909,15 @@ bool CvUnitAI::AI_RbombardNaval()
 					{
 						iBestValue = iValue;
 						pBestPlot = pLoopPlot;
-						FAssert(!atPlot(pBestPlot));
 					}
 				}
 			}
 		}
 	}
+
 	if (pBestPlot != NULL)
 	{
+		FAssertMsg(pBestPlot->getNumVisibleEnemyCombatUnits(getOwner()) > 0, "Can't bombard without units in target plot");
 		getGroup()->pushMission(MISSION_RBOMBARD, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE());
 		return true;
 	}
