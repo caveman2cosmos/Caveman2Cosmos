@@ -17975,8 +17975,8 @@
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ANCIENT_WAYS</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ANCIENT_WAY_OF_THE_WAVES</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<bWater>1</bWater>
+			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
 			</TechTypes>

@@ -229,9 +229,9 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_SUPPLY_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_MASS_DRIVER</PrereqTech>
 			<iCost>612</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
+			<PrereqTech>TECH_MASS_DRIVER</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
 			</TechTypes>
@@ -557,14 +557,14 @@
 			<BuildingClass>BUILDINGCLASS_ORBITAL_LABS</BuildingClass>
 			<Type>BUILDING_ORBITAL_LABS</Type>
 			<iCost>528</iCost>
-			<TechTypes>
-				<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
-			</TechTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ORBITAL_LABS</Description>
 			<PrereqTech>TECH_ASTEROIDPROBE</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			</TechTypes>
 			<Strategy>TXT_KEY_BUILDING_ORBITAL_LABS_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_LABS</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>

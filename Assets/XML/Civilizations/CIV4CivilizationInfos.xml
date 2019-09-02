@@ -6138,14 +6138,6 @@
 					<UnitType>NONE</UnitType>
 				</Unit>
 				<Unit>
-					<UnitClassType>UNITCLASS_NATIONAL_HERO</UnitClassType>
-					<UnitType>NONE</UnitType>
-				</Unit>
-				<Unit>
-					<UnitClassType>UNITCLASS_MILITARY_HERO</UnitClassType>
-					<UnitType>NONE</UnitType>
-				</Unit>
-				<Unit>
 					<UnitClassType>UNITCLASS_HUITZILOPOCHTLI</UnitClassType>
 					<UnitType>NONE</UnitType>
 				</Unit>

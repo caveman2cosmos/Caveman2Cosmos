@@ -5022,7 +5022,6 @@
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SMELTER_ALUMINUM_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
-			<Bonus>BONUS_BAUXITE</Bonus>
 			<ConstructCondition>
 				<Or>
 					<Has>
@@ -5035,6 +5034,7 @@
 					</Has>
 				</Or>
 			</ConstructCondition>
+			<Bonus>BONUS_BAUXITE</Bonus>
 			<PrereqNotBuildingClasses>
 				<PrereqNotBuildingClass>
 					<BuildingClassMustNotHave>BUILDINGCLASS_AUTOBUILD_ALUMINUM_NEAR</BuildingClassMustNotHave>
@@ -5088,7 +5088,6 @@
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SMELTER_COPPER_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<Bonus>BONUS_COPPER</Bonus>
 			<ConstructCondition>
 				<Or>
 					<Has>
@@ -5101,6 +5100,7 @@
 					</Has>
 				</Or>
 			</ConstructCondition>
+			<Bonus>BONUS_COPPER</Bonus>
 			<PrereqNotBuildingClasses>
 				<PrereqNotBuildingClass>
 					<BuildingClassMustNotHave>BUILDINGCLASS_AUTOBUILD_COPPER_NEAR</BuildingClassMustNotHave>
@@ -5151,7 +5151,6 @@
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SMELTER_GOLD_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
-			<Bonus>BONUS_GOLD</Bonus>
 			<ConstructCondition>
 				<Or>
 					<Has>
@@ -5164,6 +5163,7 @@
 					</Has>
 				</Or>
 			</ConstructCondition>
+			<Bonus>BONUS_GOLD</Bonus>
 			<PrereqNotBuildingClasses>
 				<PrereqNotBuildingClass>
 					<BuildingClassMustNotHave>BUILDINGCLASS_AUTOBUILD_GOLD_NEAR</BuildingClassMustNotHave>
@@ -5214,7 +5214,6 @@
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SMELTER_IRON_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
-			<Bonus>BONUS_IRON</Bonus>
 			<ConstructCondition>
 				<Or>
 					<Has>
@@ -5227,6 +5226,7 @@
 					</Has>
 				</Or>
 			</ConstructCondition>
+			<Bonus>BONUS_IRON</Bonus>
 			<PrereqNotBuildingClasses>
 				<PrereqNotBuildingClass>
 					<BuildingClassMustNotHave>BUILDINGCLASS_AUTOBUILD_IRON_NEAR</BuildingClassMustNotHave>
@@ -5277,7 +5277,6 @@
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SMELTER_LEAD_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_LEAD_WORKING</PrereqTech>
-			<Bonus>BONUS_LEAD</Bonus>
 			<ConstructCondition>
 				<Or>
 					<Has>
@@ -5290,6 +5289,7 @@
 					</Has>
 				</Or>
 			</ConstructCondition>
+			<Bonus>BONUS_LEAD</Bonus>
 			<PrereqNotBuildingClasses>
 				<PrereqNotBuildingClass>
 					<BuildingClassMustNotHave>BUILDINGCLASS_AUTOBUILD_LEAD_NEAR</BuildingClassMustNotHave>
@@ -5340,7 +5340,6 @@
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SMELTER_PLATINUM_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
-			<Bonus>BONUS_PLATINUM</Bonus>
 			<ConstructCondition>
 				<Or>
 					<Has>
@@ -5353,6 +5352,7 @@
 					</Has>
 				</Or>
 			</ConstructCondition>
+			<Bonus>BONUS_PLATINUM</Bonus>
 			<PrereqNotBuildingClasses>
 				<PrereqNotBuildingClass>
 					<BuildingClassMustNotHave>BUILDINGCLASS_AUTOBUILD_PLATINUM_NEAR</BuildingClassMustNotHave>
@@ -5403,7 +5403,6 @@
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SMELTER_SILVER_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
-			<Bonus>BONUS_SILVER</Bonus>
 			<ConstructCondition>
 				<Or>
 					<Has>
@@ -5416,6 +5415,7 @@
 					</Has>
 				</Or>
 			</ConstructCondition>
+			<Bonus>BONUS_SILVER</Bonus>
 			<PrereqNotBuildingClasses>
 				<PrereqNotBuildingClass>
 					<BuildingClassMustNotHave>BUILDINGCLASS_AUTOBUILD_SILVER_NEAR</BuildingClassMustNotHave>
@@ -5466,7 +5466,6 @@
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SMELTER_TIN_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-			<Bonus>BONUS_TIN</Bonus>
 			<ConstructCondition>
 				<Or>
 					<Has>
@@ -5479,6 +5478,7 @@
 					</Has>
 				</Or>
 			</ConstructCondition>
+			<Bonus>BONUS_TIN</Bonus>
 			<PrereqNotBuildingClasses>
 				<PrereqNotBuildingClass>
 					<BuildingClassMustNotHave>BUILDINGCLASS_AUTOBUILD_TIN_NEAR</BuildingClassMustNotHave>
@@ -5529,7 +5529,6 @@
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SMELTER_TITANIUM_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ADVANCED_METALLURGY</PrereqTech>
-			<Bonus>BONUS_TITANIUM</Bonus>
 			<ConstructCondition>
 				<Or>
 					<Has>
@@ -5542,6 +5541,7 @@
 					</Has>
 				</Or>
 			</ConstructCondition>
+			<Bonus>BONUS_TITANIUM</Bonus>
 			<PrereqNotBuildingClasses>
 				<PrereqNotBuildingClass>
 					<BuildingClassMustNotHave>BUILDINGCLASS_AUTOBUILD_TITANIUM_NEAR</BuildingClassMustNotHave>
