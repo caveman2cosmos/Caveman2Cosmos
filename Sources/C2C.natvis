@@ -13,6 +13,8 @@
   <Type Name="CvUnit">
     <DisplayString>[ owner = {CvPlayerAI::m_aPlayers[m_eOwner]}, class = {gGlobals->m_paUnitClassInfo[m_pUnitInfo->m_iUnitClassType]->m_szType} ({m_pUnitInfo->m_iUnitClassType}), type = {gGlobals->m_paUnitInfo[m_eUnitType]->m_szType} ({m_eUnitType}) ]</DisplayString>
     <Expand>
+      <Item Name="[owner]" ExcludeView="simple">CvPlayerAI::m_aPlayers[m_eOwner]</Item>
+      <Item Name="[id]" ExcludeView="simple">m_iID</Item>
       <Item Name="[class]" ExcludeView="simple">gGlobals->m_paUnitClassInfo[m_pUnitInfo->m_iUnitClassType]->m_szType</Item>
       <Item Name="[type]" ExcludeView="simple">gGlobals->m_paUnitInfo[m_eUnitType]->m_szType</Item>
     </Expand>
