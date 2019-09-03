@@ -27,3 +27,5 @@ Sources/cov-int/
 Build/
 
 test-gen.bat
+
+CHANGELOG.md
