@@ -14051,7 +14051,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 	{
 		for (iI = 0; iI < iSize; iI++)
 		{
-			WRAPPER_READ(wrapper, "CvPlot", &iType1);
+			WRAPPER_READ_CLASS_ENUM(wrapper, "CvPlot", REMAPPED_CLASS_TYPE_INVISIBLES, &iType1);
 			WRAPPER_READ(wrapper, "CvPlot", &iType2);
 			WRAPPER_READ(wrapper, "CvPlot", &iType3);
 			WRAPPER_READ(wrapper, "CvPlot", &iType4);
@@ -14493,7 +14493,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 			iType2 = (int)m_aPlotTeamVisibilityIntensity[iI].eTeam;
 			iType3 = m_aPlotTeamVisibilityIntensity[iI].iUnitID;
 			iType4 = m_aPlotTeamVisibilityIntensity[iI].iIntensity;
-			WRAPPER_WRITE(wrapper, "CvPlot", iType1);
+			WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvPlot", REMAPPED_CLASS_TYPE_INVISIBLES, iType1);
 			WRAPPER_WRITE(wrapper, "CvPlot", iType2);
 			WRAPPER_WRITE(wrapper, "CvPlot", iType3);
 			WRAPPER_WRITE(wrapper, "CvPlot", iType4);
