@@ -19650,33 +19650,7 @@
 					<iAmountPerTurn>-75</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-		</BuildingInfo>
-		<!-- Safety (Alcatraz) -->
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_GOOD_ALCATRAZ</BuildingClass>
-			<Type>BUILDING_GOOD_ALCATRAZ</Type>
-			<Description>TXT_KEY_BUILDING_GOOD_ALCATRAZ</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOOD_ALCATRAZ_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GOOD_ALCATRAZ_STRATEGY</Strategy>
-			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GOOD_ALCATRAZ</ArtDefineTag>
-			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
-			<iCost>-1</iCost>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iConquestProb>100</iConquestProb>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-50</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-		</BuildingInfo>
+		</BuildingInfo>		
 		<!-- Via Appia -->
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_APPIAN_WAY</BuildingClass>
@@ -22561,30 +22535,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Help>TXT_KEY_BUILDING_ROUTE_66_HELP</Help>
-		</BuildingInfo>
-		<!-- Route 66 Terminus -->
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ROUTE_66_TERMINUS</BuildingClass>
-			<Type>BUILDING_ROUTE_66_TERMINUS</Type>
-			<Description>TXT_KEY_BUILDING_ROUTE_66_TERMINUS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ROUTE_66_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ROUTE_66_TERMINUS_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ROUTE_66_TERMINUS</ArtDefineTag>
-			<ObsoleteTech>TECH_SKYROADS</ObsoleteTech>
-			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
-			<bNukeImmune>1</bNukeImmune>
-			<iCost>-1</iCost>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<iConquestProb>100</iConquestProb>
-			<iTradeRoutes>3</iTradeRoutes>
-			<iTradeRouteModifier>50</iTradeRouteModifier>
-			<iAsset>10</iAsset>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</BuildingInfo>
+		</BuildingInfo>		
 		<!-- Scapa Flow -->
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_SCAPA_FLOW</BuildingClass>
