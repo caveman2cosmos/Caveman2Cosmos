@@ -816,7 +816,7 @@ class CvMainInterface:
 		x = xRes - 156
 		y = 48
 		iFoV = self.iField_View
-		screen.addSlider("FoVSlider", x, y, 132, 12, iFoV, 1, 100, eWidGen, 0, 0, False)
+		screen.addSlider("FoVSlider", x, y, 132, 12, iFoV, 20, 80, eWidGen, 0, 0, False)
 		screen.hide("FoVSlider")
 		self.iX_FoVSlider = x
 		self.iY_FoVSlider = y
@@ -1357,7 +1357,7 @@ class CvMainInterface:
 				if self.bSetStartZoom:
 					# CAMERA_START_DISTANCE also defines camera zoom where music is turned on/off, we want that to be quite low and the start zoom to be higher.
 					# Max zoom change from game to game, so the percentage zoom is relative to the initial zoom from CAMERA_START_DISTANCE
-					CyCamera().SetZoom(CyCamera().GetZoom() * 2)
+					CyCamera().SetZoom(CyCamera().GetZoom() * 1.9)
 					self.bSetStartZoom = False
 
 			# This will update the flag widget for SP hotseat and debugging
