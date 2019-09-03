@@ -1815,9 +1815,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_FLAK_TOWER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_FLAK_TOWER_STRATEGY</Strategy>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_FLIGHT</PrereqTech>
+			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
+				<PrereqTech>TECH_FLIGHT</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
@@ -2576,9 +2576,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GUILDS_STRATEGY</Strategy>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_GUILDS</PrereqTech>
+			<PrereqTech>TECH_INVENTION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_INVENTION</PrereqTech>
+				<PrereqTech>TECH_GUILDS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqOrBuildingClasses>
@@ -5784,9 +5784,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_WEATHER_SERVICE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_WEATHER_SERVICE_STRATEGY</Strategy>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_METEOROLOGY</PrereqTech>
+			<PrereqTech>TECH_RADIO</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_RADIO</PrereqTech>
+				<PrereqTech>TECH_METEOROLOGY</PrereqTech>
 				<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>

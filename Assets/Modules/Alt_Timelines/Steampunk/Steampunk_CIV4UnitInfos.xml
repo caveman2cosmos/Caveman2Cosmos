@@ -57,9 +57,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
+			<PrereqTech>TECH_BALLOON_WARFARE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_BALLOON_WARFARE</PrereqTech>
+				<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_STEAMPUNK</BonusType>
 			<PrereqBonuses>

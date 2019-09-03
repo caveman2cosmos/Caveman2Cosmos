@@ -561,10 +561,7 @@
 				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ORBITAL_LABS</Description>
-			<PrereqTech>TECH_ASTEROIDPROBE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
 			<Strategy>TXT_KEY_BUILDING_ORBITAL_LABS_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_LABS</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>

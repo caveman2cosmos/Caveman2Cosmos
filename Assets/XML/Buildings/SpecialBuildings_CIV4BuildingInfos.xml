@@ -775,10 +775,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_SCREW_PROPELLER</PrereqTech>
+			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
-				<PrereqTech>TECH_MEDICINE</PrereqTech>
+				<PrereqTech>TECH_SCREW_PROPELLER</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrBuildingClasses>
@@ -10224,7 +10224,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -10329,9 +10328,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CLOUDCOMPUTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_MEDIAPSYCOLOGY</PrereqTech>
-			</TechTypes>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -14229,9 +14225,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FISHING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CARPENTRY</PrereqTech>
-			</TechTypes>
 			<bWater>1</bWater>
 			<PrereqBonuses>
 				<Bonus>BONUS_BAMBOO</Bonus>
@@ -17654,9 +17647,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SAFETY_NAT_LEGAL_DATABASE</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CLOUDCOMPUTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_MEDIAPSYCOLOGY</PrereqTech>
-			</TechTypes>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Special properties -->

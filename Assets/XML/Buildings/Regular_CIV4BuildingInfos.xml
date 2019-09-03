@@ -3089,9 +3089,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MODERNPHYSICS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ANTIBIOTICS</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -8431,9 +8428,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_TANNING</PrereqTech>
+			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_CARPENTRY</PrereqTech>
+				<PrereqTech>TECH_TANNING</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_BAMBOO</Bonus>
@@ -11207,9 +11204,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_EXOCORTEXNETWORKS</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_COMPUTERS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ADVANCED_COMPUTERS</PrereqTech>
+				<PrereqTech>TECH_EXOCORTEXNETWORKS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -13807,9 +13804,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CASTE_SYSTEM</PrereqTech>
+			<PrereqTech>TECH_WRITING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_WRITING</PrereqTech>
+				<PrereqTech>TECH_CASTE_SYSTEM</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqReligion>RELIGION_HINDUISM</PrereqReligion>
@@ -27665,9 +27662,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_FERMENTATION</PrereqTech>
+			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_METAL_CASTING</PrereqTech>
+				<PrereqTech>TECH_FERMENTATION</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_WOOD</Bonus>
@@ -28081,9 +28078,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_FISHING</PrereqTech>
+			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
+				<PrereqTech>TECH_FISHING</PrereqTech>
 			</TechTypes>
 			<bWater>1</bWater>
 			<VicinityBonus>BONUS_POULTRY</VicinityBonus>
@@ -29834,9 +29831,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LAWN_SPORTS</PrereqTech>
+			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_REFRIGERATION</PrereqTech>
+				<PrereqTech>TECH_LAWN_SPORTS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqOrBuildingClasses>
@@ -31065,10 +31062,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MELECTRONICS</PrereqTech>
+			<PrereqTech>TECH_ELECTRIC_ARC_WEAPONRY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_GRAPHENE</PrereqTech>
-				<PrereqTech>TECH_ELECTRIC_ARC_WEAPONRY</PrereqTech>
+				<PrereqTech>TECH_MELECTRONICS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -31954,9 +31950,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MMO</PrereqTech>
+			<PrereqTech>TECH_COGNITIVE_ROBOTICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_COGNITIVE_ROBOTICS</PrereqTech>
+				<PrereqTech>TECH_MMO</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -40152,9 +40148,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_FIREFIGHTING</PrereqTech>
+			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
+				<PrereqTech>TECH_FIREFIGHTING</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
@@ -42096,9 +42092,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_AESTHETICS</PrereqTech>
+			<PrereqTech>TECH_WATERWORKS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_WATERWORKS</PrereqTech>
+				<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<BuildingClassNeededs>
@@ -51170,9 +51166,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WRITING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			</TechTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_TIMBER</Bonus>
@@ -56133,9 +56126,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GAMES</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_BINDING</PrereqTech>
-			</TechTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_ROPE</Bonus>
 			</PrereqBonuses>
@@ -57361,9 +57351,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ADHESIVES</PrereqTech>
+			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
+				<PrereqTech>TECH_ADHESIVES</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_RESIN</Bonus>
 			<PrereqBonuses>
@@ -58048,9 +58038,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
+			<PrereqTech>TECH_LASER</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_LASER</PrereqTech>
+				<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -58611,9 +58601,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LEAD_WORKING</PrereqTech>
+			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_METAL_CASTING</PrereqTech>
+				<PrereqTech>TECH_LEAD_WORKING</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_INGOT_LEAD</Bonus>
@@ -64474,9 +64464,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
+			<PrereqTech>TECH_HOLOGRAPHICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_HOLOGRAPHICS</PrereqTech>
+				<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -65161,9 +65151,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_SADDLES</Bonus>
 			<BuildingClassNeededs>
@@ -65986,9 +65976,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
@@ -66539,9 +66526,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
+			<PrereqTech>TECH_MILITARY_ROBOTS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MILITARY_ROBOTS</PrereqTech>
+				<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<Bonus>BONUS_ROCKETFUEL</Bonus>
@@ -68150,9 +68137,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_SEMI_AUTOMATIC_WEAPONS</PrereqTech>
+			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
+				<PrereqTech>TECH_SEMI_AUTOMATIC_WEAPONS</PrereqTech>
 			</TechTypes>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -72032,9 +72019,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_NEUROTECHNOLOGY</PrereqTech>
+			<PrereqTech>TECH_NEURAL_NETWORK</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_NEURAL_NETWORK</PrereqTech>
+				<PrereqTech>TECH_NEUROTECHNOLOGY</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -72156,9 +72143,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_JOURNALISM</PrereqTech>
+			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
+				<PrereqTech>TECH_JOURNALISM</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_NEWSPAPERS</Bonus>
 			<BuildingClassNeededs>
@@ -74343,9 +74330,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_MAGLEV</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -74455,10 +74439,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ASTEROIDPROBE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CSPACECRAFT</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -78797,9 +78778,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PERSONAL_ADORNMENT</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_PIERCING</PrereqTech>
-			</TechTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_JEWELRY</Bonus>
 				<Bonus>BONUS_BONE</Bonus>
@@ -86605,9 +86583,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CURRENCY</PrereqTech>
+			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
+				<PrereqTech>TECH_CURRENCY</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bRiver>1</bRiver>
@@ -88957,9 +88935,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SALT_PROCESSING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_MONARCHY</PrereqTech>
-			</TechTypes>
 			<bWater>1</bWater>
 			<PrereqBonuses>
 				<Bonus>BONUS_WARE_COPPER</Bonus>
@@ -88984,7 +88959,7 @@
 				</PrereqNotBuildingClass>
 			</PrereqNotBuildingClasses>
 			<!-- Construction cost -->
-			<iCost>200</iCost>
+			<iCost>153</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -92532,10 +92507,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_SCREW_PROPELLER</PrereqTech>
+			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
-				<PrereqTech>TECH_MEDICINE</PrereqTech>
+				<PrereqTech>TECH_SCREW_PROPELLER</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqCorporation>CORPORATION_2</PrereqCorporation>
@@ -92694,9 +92669,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
+			<PrereqTech>TECH_WARSIMULATION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_WARSIMULATION</PrereqTech>
+				<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -95352,9 +95327,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MMO</PrereqTech>
+			<PrereqTech>TECH_COGNITIVE_ROBOTICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_COGNITIVE_ROBOTICS</PrereqTech>
+				<PrereqTech>TECH_MMO</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -105458,9 +105433,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_JOURNALISM</PrereqTech>
+			<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
+				<PrereqTech>TECH_JOURNALISM</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<ConstructCondition>
@@ -111154,10 +111129,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_GBIOLOGY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CSPACECRAFT</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<PrereqBonuses>

@@ -1671,9 +1671,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_PLASTIC_ELECTRONICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_PLASTIC_ELECTRONICS</PrereqTech>
+				<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_SEMICONDUCTORS</Bonus>
 			<ConstructCondition>
@@ -1765,9 +1765,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_PLASTIC_ELECTRONICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_PLASTIC_ELECTRONICS</PrereqTech>
+				<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_SEMICONDUCTORS</Bonus>
 			<ConstructCondition>
@@ -1924,9 +1924,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
+			<PrereqTech>TECH_NANOMINING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_NANOMINING</PrereqTech>
+				<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
 			</TechTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_WARE_TITANIUM</Bonus>
@@ -1969,9 +1969,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
+			<PrereqTech>TECH_NANOMINING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_NANOMINING</PrereqTech>
+				<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
 			</TechTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_WARE_TITANIUM</Bonus>

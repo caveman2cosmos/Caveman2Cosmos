@@ -26558,9 +26558,6 @@
 			</MapCategoryTypes>
 			<iCost>17190</iCost>
 			<PrereqTech>TECH_WEAPONIZED_LASERS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SOLAR_PROPULSION</PrereqTech>
-			</TechTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>40</iCommerce>

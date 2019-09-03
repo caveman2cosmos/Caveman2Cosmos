@@ -15241,9 +15241,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_HORSE_TRAINER</PrereqBuilding>
-			<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
+				<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_HORSE</BonusType>
 			<iCost>90</iCost>
@@ -15530,9 +15530,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_HORSE_TRAINER</PrereqBuilding>
-			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
+			<PrereqTech>TECH_ANCIENT_BALLISTICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ANCIENT_BALLISTICS</PrereqTech>
+				<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_HORSE</BonusType>
 			<PrereqBonuses>
@@ -17663,9 +17663,9 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqBuilding>BUILDING_ELEPHANT_TRAINER</PrereqBuilding>
-			<PrereqTech>TECH_PACHYDERM_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
+				<PrereqTech>TECH_PACHYDERM_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_ELEPHANT</BonusType>
 			<iCost>95</iCost>
@@ -17909,10 +17909,10 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqBuilding>BUILDING_ELEPHANT_TRAINER</PrereqBuilding>
-			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
+			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_PACHYDERM_DOMESTICATION</PrereqTech>
-				<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
+				<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_ELEPHANT</BonusType>
 			<TrainCondition>
@@ -18313,9 +18313,9 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqBuilding>BUILDING_CAMEL_TRAINER</PrereqBuilding>
-			<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
+				<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_CAMEL</BonusType>
 			<iCost>90</iCost>
@@ -21287,10 +21287,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqBuilding>BUILDING_LUMBER_CAMP</PrereqBuilding>
-			<PrereqTech>TECH_WOOD_WORKING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_WARFARE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_WARFARE</PrereqTech>
 			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
 			<iCost>82</iCost>
 			<iMoves>1</iMoves>
@@ -26191,9 +26188,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
+			<PrereqTech>TECH_FIRE_SUPPRESSION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_FIRE_SUPPRESSION</PrereqTech>
+				<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_CHEMICALS</BonusType>
 			<PrereqBonuses>
@@ -31177,9 +31174,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_SHIPWRIGHT</PrereqBuilding>
-			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
+			<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
+				<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			</TechTypes>
 			<iCost>250</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -31454,9 +31451,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_SHIPWRIGHT</PrereqBuilding>
-			<PrereqTech>TECH_ASTROLABE</PrereqTech>
+			<PrereqTech>TECH_METALLURGY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_METALLURGY</PrereqTech>
+				<PrereqTech>TECH_ASTROLABE</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_WARE_IRON</BonusType>
 			<PrereqBonuses>
@@ -31948,9 +31945,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_COMBUSTION</PrereqTech>
+			<PrereqTech>TECH_ARTILLERY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ARTILLERY</PrereqTech>
+				<PrereqTech>TECH_COMBUSTION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
@@ -34061,9 +34058,6 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ARTILLERY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_SCREW_PROPELLER</PrereqTech>
-			</TechTypes>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_WARE_STEEL</BonusType>
@@ -36162,9 +36156,6 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_MODERN_WARFARE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_NUCLEAR_POWER</PrereqTech>
-			</TechTypes>
 			<BonusType>BONUS_URANIUM</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_WARE_STEEL</BonusType>
@@ -37925,9 +37916,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
-			<PrereqTech>TECH_PIRACY</PrereqTech>
+			<PrereqTech>TECH_WRITING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_WRITING</PrereqTech>
+				<PrereqTech>TECH_PIRACY</PrereqTech>
 			</TechTypes>
 			<Flavors>
 				<Flavor>
@@ -39548,9 +39539,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_WARMACHINES</PrereqTech>
+			<PrereqTech>TECH_SKYROADS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_SKYROADS</PrereqTech>
+				<PrereqTech>TECH_WARMACHINES</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_HELICOPTERS</BonusType>
 			<PrereqBonuses>
@@ -41226,9 +41217,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_STEALTH</PrereqTech>
+			<PrereqTech>TECH_COMMUNICATION_NETWORKS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_COMMUNICATION_NETWORKS</PrereqTech>
+				<PrereqTech>TECH_STEALTH</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_DIESEL</BonusType>
 			<PrereqBonuses>
@@ -42272,10 +42263,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_MILITARY_AIRBASE</PrereqBuilding>
-			<PrereqTech>TECH_GUIDED_WEAPONS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_COMPOSITES</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_COMPOSITES</PrereqTech>
 			<BonusType>BONUS_DIESEL</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_WARE_ALUMINUM</BonusType>
@@ -42500,10 +42488,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_GUIDED_WEAPONS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_COMPOSITES</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_COMPOSITES</PrereqTech>
 			<BonusType>BONUS_DIESEL</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_AMMO</BonusType>
@@ -42605,9 +42590,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_MILITARY_AIRBASE</PrereqBuilding>
-			<PrereqTech>TECH_STEALTH</PrereqTech>
+			<PrereqTech>TECH_WARSIMULATION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_WARSIMULATION</PrereqTech>
+				<PrereqTech>TECH_STEALTH</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_DIESEL</BonusType>
 			<PrereqBonuses>
@@ -43051,9 +43036,6 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_MODERN_WARFARE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_NUCLEAR_POWER</PrereqTech>
-			</TechTypes>
 			<BonusType>BONUS_URANIUM</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_HEAVY_WATER</BonusType>
@@ -46274,9 +46256,9 @@
 					<bUnitCombatDefender>1</bUnitCombatDefender>
 				</UnitCombatDefender>
 			</UnitCombatDefenders>
-			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
+			<PrereqTech>TECH_RADIO</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_RADIO</PrereqTech>
+				<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_FRESPONSE</ObsoleteTech>
 			<TrainCondition>
@@ -58998,10 +58980,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqBuilding>BUILDING_LUMBER_CAMP</PrereqBuilding>
-			<PrereqTech>TECH_WOOD_WORKING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_WARFARE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_WARFARE</PrereqTech>
 			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
 			<iCost>165</iCost>
 			<iMoves>1</iMoves>
@@ -59114,9 +59093,9 @@
 			</NotUnitAIs>
 			<PrereqBuilding>BUILDING_ELEPHANT_TRAINER</PrereqBuilding>
 			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
-			<PrereqTech>TECH_PACHYDERM_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
+				<PrereqTech>TECH_PACHYDERM_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<PrereqBonuses>
 				<BonusType>BONUS_ELEPHANT</BonusType>
@@ -62341,9 +62320,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</PrereqBuilding>
-			<PrereqTech>TECH_DROIDS</PrereqTech>
+			<PrereqTech>TECH_QUANTUM_COMPUTING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_QUANTUM_COMPUTING</PrereqTech>
+				<PrereqTech>TECH_DROIDS</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_SERVICE_BOTS</BonusType>
 			<PrereqBonuses>

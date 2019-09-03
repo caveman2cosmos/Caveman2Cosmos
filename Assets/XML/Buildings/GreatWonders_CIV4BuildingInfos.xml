@@ -490,9 +490,9 @@
 			<MovieDefineTag>ART_DEF_MOVIE_APADANA_PALACE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_SCULPTURE</PrereqTech>
+			<PrereqTech>TECH_DUALISM</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_DUALISM</PrereqTech>
+				<PrereqTech>TECH_SCULPTURE</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bStateReligion>1</bStateReligion>
@@ -8647,9 +8647,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_OLYMPIC</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_OLYMPIC</MovieDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_ATHLETICS</PrereqTech>
+			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
+				<PrereqTech>TECH_ATHLETICS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqBuildingClasses>
@@ -14092,9 +14092,9 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_AESTHETICS</PrereqTech>
+			<PrereqTech>TECH_WATERWORKS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_WATERWORKS</PrereqTech>
+				<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_SCULPTURES</Bonus>
@@ -15629,9 +15629,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_COIMBRA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
+			<PrereqTech>TECH_ANATOMY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ANATOMY</PrereqTech>
+				<PrereqTech>TECH_EDUCATION</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqBuildingClasses>
@@ -15758,9 +15758,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_BARCELONA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
+			<PrereqTech>TECH_ANATOMY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ANATOMY</PrereqTech>
+				<PrereqTech>TECH_EDUCATION</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqBuildingClasses>
@@ -15887,9 +15887,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MONTPELLIER_UNIVERSITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
+			<PrereqTech>TECH_ANATOMY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ANATOMY</PrereqTech>
+				<PrereqTech>TECH_EDUCATION</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqBuildingClasses>
@@ -16016,9 +16016,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SORBONNE_UNIVERSITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
+			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
+				<PrereqTech>TECH_EDUCATION</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqBuildingClasses>
@@ -16143,9 +16143,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_BASEL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
+			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
+				<PrereqTech>TECH_EDUCATION</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqBuildingClasses>
@@ -16270,9 +16270,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_JAGIELLONIAN_UNIVERSITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_EDUCATION</PrereqTech>
+			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
+				<PrereqTech>TECH_EDUCATION</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqBuildingClasses>

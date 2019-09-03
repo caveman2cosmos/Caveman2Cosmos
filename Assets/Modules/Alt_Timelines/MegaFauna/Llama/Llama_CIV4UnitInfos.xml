@@ -78,9 +78,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_LLAMA_TRAINER</PrereqBuilding>
-			<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
+				<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_LLAMA</BonusType>
 			<iCost>100</iCost>
@@ -236,6 +236,9 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_LLAMA_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+			</TechTypes>
 			<BonusType>BONUS_LLAMA</BonusType>
 			<iCost>235</iCost>
 			<iMoves>2</iMoves>
