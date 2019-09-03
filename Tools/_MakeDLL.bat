@@ -21,6 +21,9 @@ if "%1"=="build" (
     nmake fastdep
     nmake precompile
     ..\Build\deps\jom\jom build
+    if "%3"=="stage" (
+        nmake stage
+    )
 )
 if "%1"=="rebuild" (
     echo Rebuilding DLL in %2 configuration ...
@@ -29,6 +32,9 @@ if "%1"=="rebuild" (
     nmake fastdep
     nmake precompile
     ..\Build\deps\jom\jom build
+    if "%3"=="stage" (
+        nmake stage
+    )
 )
 if "%1"=="clean" (
     echo Cleaning DLL in %2 configuration ...
