@@ -61,6 +61,8 @@ robocopy PrivateMaps "%build_dir%\PrivateMaps" %ROBOCOPY_FLAGS%
 robocopy Resource "%build_dir%\Resource" %ROBOCOPY_FLAGS%
 xcopy Caveman2Cosmos.ini "%build_dir%" /R /Y
 xcopy "Caveman2Cosmos Config.ini" "%build_dir%" /R /Y
+xcopy "C2C.ico" "%build_dir%" /R /Y
+xcopy "CIV_C2C.ico" "%build_dir%" /R /Y
 
 :: GENERATE NEW CHANGES LOG ------------------------------------
 echo Generate SVN commit description...

@@ -12,6 +12,7 @@
 Assets/fpklive_token.txt
 !/Tools/*.dll
 XmlValidator.log
+desktop.ini
 
 .vscode/settings.json
 
