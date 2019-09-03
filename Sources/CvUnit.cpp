@@ -32737,14 +32737,17 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 /************************************************************************************************/
 		}
 	}
+
 	if (!sAttack)
 	{
 		setMadeAttack(true);
 		changeMoves(GC.getMOVE_DENOMINATOR());
 	}
 
-	if (pPlot->isActiveVisible(false))
+	if (pPlot->isActiveVisible(false) && (pLoopUnit == NULL || (!pLoopUnit->isUsingDummyEntities() && pLoopUnit->isInViewport())))
 	{
+		FAssertMsg(pLoopUnit != NULL, "Bombard mission requires a valid defending unit");
+
 		// Bombard entity mission
 		CvMissionDefinition kDefiniton;
 		kDefiniton.setMissionTime(GC.getMissionInfo(MISSION_RBOMBARD).getTime() * gDLL->getSecsPerTurn());

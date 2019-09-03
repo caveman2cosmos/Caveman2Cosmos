@@ -2,38 +2,29 @@
 <AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
   <Type Name="CvUnitInfo">
     <DisplayString>{gGlobals->m_paUnitClassInfo[m_iUnitClassType]->m_szType}</DisplayString>
-    <Expand>
-      <!--<Item Name="[size]" ExcludeView="simple">_Mylast - _Myfirst</Item>
-      <Item Name="[capacity]" ExcludeView="simple">_Myend - _Myfirst</Item>
-      <ArrayItems>
-        <Size>_Mylast - _Myfirst</Size>
-        <ValuePointer>_Myfirst</ValuePointer>
-      </ArrayItems>-->
-    </Expand>
+  </Type>
+
+  <Type Name="CvPlayer">
+    <DisplayString Condition="m_szName._Mysize != 0">{m_szName}</DisplayString>
+    <DisplayString Condition="m_szName._Mysize == 0 &amp;&amp; gGlobals->m_initCore->m_aszLeaderName[m_eID]._Mysize != 0">{gGlobals->m_initCore->m_aszLeaderName[m_eID]}</DisplayString>
+    <DisplayString>{gGlobals->m_paLeaderHeadInfo[gGlobals->m_initCore->m_aeLeader[m_eID]]->m_aCachedDescriptions[0]}</DisplayString>
   </Type>
 
   <Type Name="CvUnit">
-    <DisplayString>[class = {gGlobals->m_paUnitClassInfo[m_pUnitInfo->m_iUnitClassType]->m_szType} ({m_pUnitInfo->m_iUnitClassType}), type = {gGlobals->m_paUnitInfo[m_eUnitType]->m_szType} ({m_eUnitType})]</DisplayString>
+    <DisplayString>[ owner = {CvPlayerAI::m_aPlayers[m_eOwner]}, class = {gGlobals->m_paUnitClassInfo[m_pUnitInfo->m_iUnitClassType]->m_szType} ({m_pUnitInfo->m_iUnitClassType}), type = {gGlobals->m_paUnitInfo[m_eUnitType]->m_szType} ({m_eUnitType}) ]</DisplayString>
     <Expand>
+      <Item Name="[owner]" ExcludeView="simple">CvPlayerAI::m_aPlayers[m_eOwner]</Item>
+      <Item Name="[id]" ExcludeView="simple">m_iID</Item>
       <Item Name="[class]" ExcludeView="simple">gGlobals->m_paUnitClassInfo[m_pUnitInfo->m_iUnitClassType]->m_szType</Item>
       <Item Name="[type]" ExcludeView="simple">gGlobals->m_paUnitInfo[m_eUnitType]->m_szType</Item>
-      <!--<ArrayItems>
-        <Size>_Mylast - _Myfirst</Size>
-        <ValuePointer>_Myfirst</ValuePointer>
-      </ArrayItems>-->
     </Expand>
   </Type>
-
 
   <Type Name="PropertySpawns">
     <DisplayString>[property = {gGlobals->m_paPropertyInfo[eProperty]->m_szType} ({eProperty}), unit class = {gGlobals->m_paUnitClassInfo[eUnitClass]->m_szType} ({eUnitClass})]</DisplayString>
     <Expand>
       <Item Name="[property]" ExcludeView="simple">gGlobals->m_paPropertyInfo[eProperty]->m_szType</Item>
       <Item Name="[unit class]" ExcludeView="simple">gGlobals->m_paUnitClassInfo[eUnitClass]->m_szType</Item>
-      <!--<ArrayItems>
-        <Size>_Mylast - _Myfirst</Size>
-        <ValuePointer>_Myfirst</ValuePointer>
-      </ArrayItems>-->
     </Expand>
   </Type>
 </AutoVisualizer>

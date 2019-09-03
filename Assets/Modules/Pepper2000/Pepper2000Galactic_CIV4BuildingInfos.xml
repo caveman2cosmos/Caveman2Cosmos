@@ -1525,9 +1525,9 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PROJECT_PERSEPHONE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_CLOSED_ECONOMIES</PrereqTech>
 			<iCost>6195</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
+			<PrereqTech>TECH_CLOSED_ECONOMIES</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SPACEPUNK</PrereqTech>
 			</TechTypes>

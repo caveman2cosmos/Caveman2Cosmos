@@ -21198,8 +21198,8 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_ROCKETRY</PrereqTech>
 			<BonusType>BONUS_KONJO</BonusType>
+			<PrereqTech>TECH_ROCKETRY</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
 			</TechTypes>
@@ -27868,8 +27868,8 @@
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
-			<PrereqTech>TECH_PIRACY</PrereqTech>
 			<BonusType>BONUS_OMAN</BonusType>
+			<PrereqTech>TECH_PIRACY</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_WRITING</PrereqTech>
 			</TechTypes>
@@ -33262,8 +33262,8 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
+			<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
 				<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_SERBIAN</BonusType>
@@ -38850,8 +38850,8 @@
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
-			<PrereqTech>TECH_PIRACY</PrereqTech>
 			<BonusType>BONUS_BANDANESE</BonusType>
+			<PrereqTech>TECH_PIRACY</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_WRITING</PrereqTech>
 			</TechTypes>

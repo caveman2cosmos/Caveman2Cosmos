@@ -2247,8 +2247,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<iCost>4010</iCost>
+			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_FSYSTEMS</PrereqTech>
 			</TechTypes>
@@ -26556,8 +26556,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_WEAPONIZED_LASERS</PrereqTech>
 			<iCost>17190</iCost>
+			<PrereqTech>TECH_WEAPONIZED_LASERS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SOLAR_PROPULSION</PrereqTech>
 			</TechTypes>

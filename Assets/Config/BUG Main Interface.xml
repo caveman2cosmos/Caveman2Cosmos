@@ -42,7 +42,7 @@
 			<!-- Field of View -->
 			<option id="FieldOfView" key="Field of View" type="boolean" default="True" get="isShowFieldOfView" dirtyBit="MiscButtons"/>
 			<option id="FieldOfView_Remember" key="Remember Field of View" type="boolean" default="True" get="isRememberFieldOfView"/>
-			<option id="FieldOfView_Value" key="Field of View Value" type="string" default="50" get="getFieldOfView" set="setFieldOfView"/>
+			<option id="FieldOfView_Value" key="Field of View Value" type="string" default="42" get="getFieldOfView" set="setFieldOfView"/>
 
 			<!-- Build/Action Icon Size by EmperorFool -->
 			<list id="UnitIconSize" key="Unit Icon Size" type="int" default="56" listType="int" values="64, 60, 56, 52, 48, 44, 40, 36, 33"

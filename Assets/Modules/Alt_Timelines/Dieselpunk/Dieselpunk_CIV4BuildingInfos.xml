@@ -42,11 +42,11 @@
 			<Strategy>TXT_KEY_BUILDING_AERODROME_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AERODROME</ArtDefineTag>
-			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_DIESELPUNK</Bonus>
+			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_FLIGHT</PrereqTech>
 			</TechTypes>
@@ -102,10 +102,10 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GRAND_AERODROME</ArtDefineTag>
 			<PrereqTech>TECH_ADVANCED_FLIGHT</PrereqTech>
-			<Bonus>BONUS_DIESELPUNK</Bonus>
 			<TechTypes>
 				<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			</TechTypes>
+			<Bonus>BONUS_DIESELPUNK</Bonus>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -156,11 +156,11 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZUSE_COMPUTER</ArtDefineTag>
 			<ObsoleteTech>TECH_COMPUTER_NETWORKS</ObsoleteTech>
-			<PrereqTech>TECH_EARLY_COMPUTING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_DIESELPUNK</Bonus>
+			<PrereqTech>TECH_EARLY_COMPUTING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			</TechTypes>

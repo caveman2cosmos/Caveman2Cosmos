@@ -59113,8 +59113,8 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqBuilding>BUILDING_ELEPHANT_TRAINER</PrereqBuilding>
-			<PrereqTech>TECH_PACHYDERM_DOMESTICATION</PrereqTech>
 			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<PrereqTech>TECH_PACHYDERM_DOMESTICATION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			</TechTypes>

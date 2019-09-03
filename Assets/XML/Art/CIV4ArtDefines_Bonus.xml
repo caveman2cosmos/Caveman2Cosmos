@@ -62,7 +62,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Squash/Lemqes.nif</NIF>
 			<KFM>Art/Terrain/Resources/Squash/Lemqes.kfm</KFM>
-			<Button>Art/Interface/Buttons/Bonus/squash.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,7,7</Button>
 			<FontButtonIndex>110</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -175,7 +175,7 @@
 			<fInterfaceScale>1.5</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/pistachio/pistachio.nif</NIF>
 			<KFM></KFM>
-			<Button>Art/Interface/Buttons/Bonus/pistachio.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,6,7</Button>
 			<FontButtonIndex>61</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -193,7 +193,7 @@
 			<fInterfaceScale>1.6</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Olives/olives.nif</NIF>
 			<KFM></KFM>
-			<Button>,Art/blank.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,1,14</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,1,7</Button>
 			<FontButtonIndex>51</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -266,7 +266,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Cotton/Cop.nif</NIF>
 			<KFM>Art/Terrain/Resources/Cotton/Cop.kfm</KFM>
-			<Button>,Art/Interface/Buttons/Buildings/ChichenItza.dds,Art/RoM_Atlas.dds,8,1</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,2,7</Button>
 			<FontButtonIndex>42</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -311,7 +311,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/kava/cnq.nif</NIF>
 			<KFM>Art/Terrain/Resources/kava/cnq.kfm</KFM>
-			<Button>Art/Interface/Buttons/Bonus/kava.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,3,7</Button>
 			<FontButtonIndex>143</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -320,7 +320,7 @@
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/papyrus/corn.nif</NIF>
 			<KFM>Art/Terrain/Resources/papyrus/corn.kfm</KFM>
-			<Button>Art/Interface/Buttons/Bonus/papyrus.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,5,7</Button>
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -384,7 +384,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/vanilla/wine.nif</NIF>
 			<KFM>Art/Terrain/Resources/vanilla/wine.kfm</KFM>
-			<Button>Art/Interface/Buttons/Bonus/vanilla.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,8,7</Button>
 			<FontButtonIndex>140</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -459,7 +459,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/llama/llama_adult_f.nif</NIF>
 			<KFM></KFM>
-			<Button>Art/Interface/Buttons/Bonus/llama.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,4,7</Button>
 			<FontButtonIndex>124</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>

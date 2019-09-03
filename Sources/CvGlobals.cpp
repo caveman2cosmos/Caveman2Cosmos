@@ -443,6 +443,7 @@ m_cszModDir("NONE")
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 ,m_bIsInPedia(false)
+,m_iLastTypeID(-1)
 ,m_iActiveLandscapeID(0),
 // uninitialized variables bugfix
 m_iNumPlayableCivilizationInfos(0),
@@ -5475,6 +5476,19 @@ void cvInternalGlobals::setInfoTypeFromString(const char* szType, int idx)
 	char* strCpy = new char[strlen(szType)+1];
 
 	m_infosMap[strcpy(strCpy, szType)] = idx;
+}
+
+// returns the ID if it exists, otherwise assigns a new ID
+int cvInternalGlobals::getOrCreateInfoTypeForString(const char* szType)
+{
+	int iID = getInfoTypeForString(szType, true);
+	if (iID < 0)
+	{
+		m_iLastTypeID++;
+		iID = m_iLastTypeID;
+		setInfoTypeFromString(szType, iID);
+	}
+	return iID;
 }
 
 void cvInternalGlobals::logInfoTypeMap(const char* tagMsg)
