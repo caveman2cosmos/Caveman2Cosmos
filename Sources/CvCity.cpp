@@ -21260,7 +21260,7 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCity", &m_iExtraLocalCaptureResistanceModifier);
 //Team Project (5)
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_pabReligiouslyDisabledBuilding);
-	WRAPPER_READ(wrapper, "CvCity", &m_iPrioritySpecialist);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "CvCity", REMAPPED_CLASS_TYPE_SPECIALISTS, &m_iPrioritySpecialist);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiSpecialistBannedCount);
 	WRAPPER_READ(wrapper, "CvCity", &m_iExtraLocalDynamicDefense);
 	WRAPPER_READ(wrapper, "CvCity", &m_iExtraRiverDefensePenalty);
@@ -21711,7 +21711,7 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvCity", m_iExtraLocalCaptureResistanceModifier);
 //Team Project (5)
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_pabReligiouslyDisabledBuilding);
-	WRAPPER_WRITE(wrapper, "CvCity", m_iPrioritySpecialist);
+	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvCity", REMAPPED_CLASS_TYPE_SPECIALISTS, m_iPrioritySpecialist);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiSpecialistBannedCount);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iExtraLocalDynamicDefense);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iExtraRiverDefensePenalty);
