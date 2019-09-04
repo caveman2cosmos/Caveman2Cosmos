@@ -258,7 +258,8 @@ public:
 	int AI_religionTradeVal(ReligionTypes eReligion, PlayerTypes ePlayer) const;
 	DenialTypes AI_religionTrade(ReligionTypes eReligion, PlayerTypes ePlayer) const;
 
-	int AI_unitImpassableCount(UnitTypes eUnit) const;
+	int AI_unitImpassableCount(UnitTypes eUnit) const; 
+	int AI_unitBuildingValue(UnitTypes eUnit, CvArea* pArea) const;
 /********************************************************************************/
 /* 	City Defenders						24.07.2010				Fuyu			*/
 /********************************************************************************/

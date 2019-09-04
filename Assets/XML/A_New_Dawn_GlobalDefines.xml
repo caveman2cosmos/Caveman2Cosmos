@@ -336,4 +336,8 @@ The Great Wall is always dynamic if viewports are enabled regardless of this set
 		<DefineName>RIVER_EXTRA_MOVEMENT</DefineName>
 		<iDefineIntVal>3</iDefineIntVal>
 	</Define>
+	<Define>
+		<DefineName>AI_VALUE_PER_BUILDING_FOR_UNITS</DefineName>
+		<iDefineIntVal>3</iDefineIntVal>
+	</Define>
 </Civ4Defines>

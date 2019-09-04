@@ -12852,9 +12852,60 @@ int CvPlayerAI::AI_unitPropertyValue(UnitTypes eUnit, PropertyTypes eProperty) c
 	return iValue;
 }
 
-/********************************************************************************/
-/* 	City Defenders						24.07.2010				Fuyu			*/
-/********************************************************************************/
+int CvPlayerAI::AI_unitBuildingValue(UnitTypes eUnit, CvArea* pArea) const
+{
+	FAssertMsg(eUnit != NO_UNIT, "Unit is not assigned a valid value");
+	FAssertMsg(eUnitAI != NO_UNITAI, "UnitAI is not assigned a valid value");
+
+	CvUnitInfo& kUnitInfo = GC.getUnitInfo(eUnit);
+
+	// Evaluate unit's ability to construct buildings
+	int iConstructionValue = 0;
+	bool bConstructionValid = false;
+
+	if (kUnitInfo.getNumBuildings() > 0 && pArea != NULL && !isNPC())
+	{
+		int iBuildingValue;
+		int iCount;
+		int iLoop;
+		bool bCoastal = kUnitInfo.getDomainType() == DOMAIN_SEA;
+		int iMinOceanSize;
+		if (bCoastal)
+		{
+			iMinOceanSize = GC.getMIN_WATER_SIZE_FOR_OCEAN();
+		}
+
+		for (int iI = 0; iI < kUnitInfo.getNumBuildings(); iI++)
+		{
+			BuildingTypes eBuilding = (BuildingTypes)kUnitInfo.getBuildings(iI);
+
+			if (NO_BUILDING != eBuilding)
+			{
+				if (canConstruct(eBuilding, false, false, true) && AI_getNumBuildingsNeeded(eBuilding, bCoastal) > 0)
+				{
+					iCount = 0;
+					iBuildingValue = 0;
+					for (CvCity* pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+					{
+						if ((!bCoastal || pLoopCity->isCoastal(iMinOceanSize)) && (pLoopCity->area() == pArea))
+						{
+							if (pLoopCity->getNumBuilding(eBuilding) == 0 && pLoopCity->canConstruct(eBuilding, false, false, true))
+							{
+								iCount++;
+							}
+						}
+					}
+					//if (iCount)
+					//{
+					//	iConstructionValue += iBuildingValue / iCount;
+					//}
+				}
+			}
+		}
+	}
+	iConstructionValue = iCount * GC.getAI_VALUE_PER_BUILDING_FOR_UNITS();
+	return iConstructionValue;
+}
 //Fuyu bIgnoreNotUnitAIs
 int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea, CvUnitSelectionCriteria* criteria) const
 /********************************************************************************/
@@ -12901,6 +12952,9 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 	bool bisPositivePropertyUnit = (iGeneralPropertyValue > 0);
 	bool bUndefinedValid = false;
 
+	int iConstructionValue = 0;
+	bool bConstructionValid = false;
+
 	if (!bValid)
 	{
 		switch (eUnitAI)
@@ -12912,9 +12966,8 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			break;
 
 		case UNITAI_SUBDUED_ANIMAL:
-			{
-				bValid = true;
-			}
+			bValid = true;
+			iConstructionValue = AI_unitBuildingValue(eUnit, pArea);				
 			break;
 		case UNITAI_HUNTER:
 		case UNITAI_HUNTER_ESCORT:
@@ -12940,7 +12993,17 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			break;
 
 		case UNITAI_WORKER:
-			for (iI = 0; iI < GC.getNumBuildInfos(); iI++)
+			iConstructionValue = AI_unitBuildingValue(eUnit, pArea);
+
+			if (iConstructionValue > 10) // That '10' could be a global define value for the lower threshold. AI_BUILDINGVALUE_THRESHOLD_TO_UNITVALUE
+			{
+				bConstructionValid = true; // Only use this to validate unitAI's that have the AI_construct or checkSwitchToConstruct routines.
+				// unitAI's currently hijacked by this validator:
+				//		UNITAI_WORKER;  UNITAI_PROPERTY_CONTROL; UNITAI_RESERVE; UNITAI_ATTACK
+				// Maybe we need a dedicated system for cities to place orders for units that can build buildings instead of hijacking various unit orders.
+				// Maybe a new unitAI? UNITAI_CONSTRUCT
+			}
+			if (bConstructionValid)
 			{
 				if (kUnitInfo.getBuilds(iI))
 				{
@@ -12959,7 +13022,17 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			break;
 
 		case UNITAI_ATTACK:
-			if (kUnitInfo.getCombat() > 0 && ! kUnitInfo.isOnlyDefensive())
+			iConstructionValue = AI_unitBuildingValue(eUnit, pArea);//TB note: there is probably no routine in the unitAI to USE the build ability of such a unit so this may well be a very moot point for attack AIs.
+
+			if (iConstructionValue > 10) // That '10' could be a global define value for the lower threshold. AI_BUILDINGVALUE_THRESHOLD_TO_UNITVALUE
+			{
+				bConstructionValid = true; // Only use this to validate unitAI's that have the AI_construct or checkSwitchToConstruct routines.
+				// unitAI's currently hijacked by this validator:
+				//		UNITAI_WORKER;  UNITAI_PROPERTY_CONTROL; UNITAI_RESERVE; UNITAI_ATTACK
+				// Maybe we need a dedicated system for cities to place orders for units that can build buildings instead of hijacking various unit orders.
+				// Maybe a new unitAI? UNITAI_CONSTRUCT
+			}
+			if (bConstructionValid)
 			{
 				bValid = true;
 			}
@@ -12999,7 +13072,17 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			break;
 
 		case UNITAI_RESERVE:
-			if (!bisNegativePropertyUnit && kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive())
+			iConstructionValue = AI_unitBuildingValue(eUnit, pArea);//TB Note: probably no calls to use the unit for a build construction in the Reserve unit AI routine so this may be a moot point
+
+			if (iConstructionValue > 10) // That '10' could be a global define value for the lower threshold. AI_BUILDINGVALUE_THRESHOLD_TO_UNITVALUE
+			{
+				bConstructionValid = true; // Only use this to validate unitAI's that have the AI_construct or checkSwitchToConstruct routines.
+				// unitAI's currently hijacked by this validator:
+				//		UNITAI_WORKER;  UNITAI_PROPERTY_CONTROL; UNITAI_RESERVE; UNITAI_ATTACK
+				// Maybe we need a dedicated system for cities to place orders for units that can build buildings instead of hijacking various unit orders.
+				// Maybe a new unitAI? UNITAI_CONSTRUCT
+			}
+			if (!bisNegativePropertyUnit)
 			{
 				bValid = true;
 			}
@@ -13089,8 +13172,22 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 
 		case UNITAI_PROPERTY_CONTROL:
 		case UNITAI_PROPERTY_CONTROL_SEA:
-			if (bisPositivePropertyUnit)
+			iConstructionValue = AI_unitBuildingValue(eUnit, pArea);//TB Note:Pretty sure there is already a call to use the building tag on this AI (for entertainers) already
+
+			if (iConstructionValue > 10) // That '10' could be a global define value for the lower threshold. AI_BUILDINGVALUE_THRESHOLD_TO_UNITVALUE
 			{
+				bConstructionValid = true; // Only use this to validate unitAI's that have the AI_construct or checkSwitchToConstruct routines.
+				// unitAI's currently hijacked by this validator:
+				//		UNITAI_WORKER;  UNITAI_PROPERTY_CONTROL; UNITAI_RESERVE; UNITAI_ATTACK
+				// Maybe we need a dedicated system for cities to place orders for units that can build buildings instead of hijacking various unit orders.
+				// Maybe a new unitAI? UNITAI_CONSTRUCT
+			}
+			if (bisPositivePropertyUnit || (bConstructionValid && !bisNegativePropertyUnit))
+			{
+				if (bConstructionValid)
+				{
+					bUndefinedValid = true;
+				}
 				bValid = true;
 			}
 			break;
@@ -13162,6 +13259,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			break;
 
 		case UNITAI_CITY_SPECIAL:
+			iConstructionValue = AI_unitBuildingValue(eUnit, pArea);
 			if (!bisNegativePropertyUnit)
 			{
 				bValid = true;
@@ -13184,6 +13282,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			break;
 
 		case UNITAI_MISSIONARY:
+			iConstructionValue = AI_unitBuildingValue(eUnit, pArea);
 			if (pArea != NULL)
 			{
 				for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
