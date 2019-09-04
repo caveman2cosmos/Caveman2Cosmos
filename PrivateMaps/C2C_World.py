@@ -3537,7 +3537,7 @@ class StartingPlotFinder:
 		for i in xrange(iStartingAreas):
 			fOldWorldValue += startingAreaList[i].fRawValue
 		# Calulate value per player of old world
-		fOldWorldValuePerPlayer = fOldWorldValue / iNumPlayers
+		fOldWorldValuePerPlayer = fOldWorldValue / (iNumPlayers + 1)
 		# Sort startingAreaList by rawValue
 		startingAreaList.sort(lambda x, y: cmp(x.fRawValue, y.fRawValue))
 		# Get rid of areas that have less value than fOldWorldValuePerPlayer as they are too small to put a player on.
