@@ -12860,13 +12860,11 @@ int CvPlayerAI::AI_unitBuildingValue(UnitTypes eUnit, CvArea* pArea) const
 	CvUnitInfo& kUnitInfo = GC.getUnitInfo(eUnit);
 
 	// Evaluate unit's ability to construct buildings
-	int iConstructionValue = 0;
-	bool bConstructionValid = false;
+	int iCount = 0;
 
 	if (kUnitInfo.getNumBuildings() > 0 && pArea != NULL && !isNPC())
 	{
 		int iBuildingValue;
-		int iCount;
 		int iLoop;
 		bool bCoastal = kUnitInfo.getDomainType() == DOMAIN_SEA;
 		int iMinOceanSize;
@@ -12903,7 +12901,7 @@ int CvPlayerAI::AI_unitBuildingValue(UnitTypes eUnit, CvArea* pArea) const
 			}
 		}
 	}
-	iConstructionValue = iCount * GC.getAI_VALUE_PER_BUILDING_FOR_UNITS();
+	int iConstructionValue = iCount * GC.getAI_VALUE_PER_BUILDING_FOR_UNITS();
 	return iConstructionValue;
 }
 //Fuyu bIgnoreNotUnitAIs
@@ -13005,11 +13003,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			}
 			if (bConstructionValid)
 			{
-				if (kUnitInfo.getBuilds(iI))
-				{
-					bValid = true;
-					break;
-				}
+				bValid = true;
 			}
 			break;
 
@@ -14527,50 +14521,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			}
 		}
 	}
-	// Evaluate unit's ability to construct buildings
-	int iConstructionValue = 0;
 
-	if (kUnitInfo.getNumBuildings() > 0 && pArea != NULL && ! isNPC())
-	{
-		int iBuildingValue;
-		int iCount;
-		int iLoop;
-		bool bCoastal = kUnitInfo.getDomainType() == DOMAIN_SEA;
-		int iMinOceanSize;
-		if (bCoastal)
-		{
-			iMinOceanSize = GC.getMIN_WATER_SIZE_FOR_OCEAN();
-		}
-
-		for (iI = 0; iI < kUnitInfo.getNumBuildings(); iI++)
-		{
-			BuildingTypes eBuilding = (BuildingTypes) kUnitInfo.getBuildings(iI);
-
-			if (NO_BUILDING != eBuilding)
-			{
-				if (canConstruct(eBuilding, false, false, true) && AI_getNumBuildingsNeeded(eBuilding, bCoastal) > 0)
-				{
-					iCount = 0;
-					iBuildingValue = 0;
-					for (CvCity* pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
-					{
-						if ((!bCoastal || pLoopCity->isCoastal(iMinOceanSize)) && (pLoopCity->area() == pArea))
-						{
-							if (pLoopCity->getNumBuilding(eBuilding) == 0 && pLoopCity->canConstruct(eBuilding, false, false, true))
-							{
-								iBuildingValue += pLoopCity->AI_buildingValue(eBuilding);
-								iCount++;
-							}
-						}
-					}
-					if (iCount)
-					{
-						iConstructionValue += iBuildingValue/iCount;
-					}
-				}
-			}
-		}
-	}
 	if (iConstructionValue > 0)
 	{
 		iValue += iConstructionValue * 75 / 100; // That '75' could be a global define modifier for buildingValue to unitValue conversion. AI_BUILDINGVALUE_PERCENT_TO_UNITVALUE
