@@ -11387,7 +11387,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<BuildingClassNeededs>
@@ -11764,7 +11764,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<bPrereqPower>1</bPrereqPower>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -11995,7 +11995,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<BuildingClassNeededs>
@@ -12109,7 +12109,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
+			<PrereqTech>TECH_SANITATION</PrereqTech>
 			<bFreshWater>1</bFreshWater>
 			<Bonus>BONUS_WOOD</Bonus>
 			<PrereqBonuses>
@@ -12325,7 +12325,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<BuildingClassNeededs>
@@ -12522,7 +12522,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<BuildingClassNeededs>
@@ -13126,7 +13126,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
+			<PrereqTech>TECH_SANITATION</PrereqTech>
 			<bFreshWater>1</bFreshWater>
 			<Bonus>BONUS_WOOD</Bonus>
 			<!-- Obsolescence -->
@@ -13226,7 +13226,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
+			<PrereqTech>TECH_SANITATION</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bFreshWater>1</bFreshWater>
 			<Bonus>BONUS_WOOD</Bonus>
@@ -13480,7 +13480,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
 			<BuildingClassNeededs>
@@ -13607,7 +13607,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
+			<PrereqTech>TECH_SANITATION</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bFreshWater>1</bFreshWater>
 			<Bonus>BONUS_MARBLE</Bonus>
@@ -13672,7 +13672,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
@@ -13738,7 +13738,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<BuildingClassNeededs>
@@ -14052,7 +14052,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
+			<PrereqTech>TECH_SANITATION</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bFreshWater>1</bFreshWater>
 			<Bonus>BONUS_WOOD</Bonus>
@@ -14345,7 +14345,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<bPrereqPower>1</bPrereqPower>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -14654,7 +14654,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
+			<PrereqTech>TECH_SANITATION</PrereqTech>
 			<bFreshWater>1</bFreshWater>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqBonuses>

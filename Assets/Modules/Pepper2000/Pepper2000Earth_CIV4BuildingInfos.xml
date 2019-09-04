@@ -27042,6 +27042,10 @@
 					<BuildingClassType>BUILDINGCLASS_MILITARY_SPACEPORT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
+				<PrereqOrBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_COMMERCIAL_SPACEPORT</BuildingClassType>
+					<bPrereqBuildingClass>1</bPrereqBuildingClass>
+				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -28001,12 +28005,16 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
+			<PrereqOrBuildingClasses>
+				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_MILITARY_SPACEPORT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+					<bPrereqBuildingClass>1</bPrereqBuildingClass>
+				</PrereqOrBuildingClass>
+				<PrereqOrBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_COMMERCIAL_SPACEPORT</BuildingClassType>
+					<bPrereqBuildingClass>1</bPrereqBuildingClass>
+				</PrereqOrBuildingClass>
+			</PrereqOrBuildingClasses>
 			<PropertiesAllCities>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
