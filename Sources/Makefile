@@ -242,7 +242,7 @@ stage: $(Target_BIN)
 
 precompile: Make_Dir Target_unfinished $(Target_PCH)
 
-source_list: gitversion Make_Dir
+source_list: Make_Dir
 	@ECHO Building source list
 	@ECHO SOURCES= \> $(FILE_DEPENDS)
 	@FOR %j in ($(SUBDIRS)) DO @(FOR %i IN ($(SOURCE_DIR)\%j\*.cpp) DO @ECHO %i \>> $(FILE_DEPENDS))

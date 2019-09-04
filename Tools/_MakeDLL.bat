@@ -17,24 +17,29 @@ set TARGET=%2
 
 if "%1"=="build" (
     echo Building DLL in %2 configuration ...
+    nmake gitversion
     nmake source_list
     nmake fastdep
     nmake precompile
     ..\Build\deps\jom\jom build
-    if "%3"=="stage" (
-        nmake stage
-    )
+    nmake stage
 )
 if "%1"=="rebuild" (
     echo Rebuilding DLL in %2 configuration ...
     nmake clean
+    nmake gitversion
     nmake source_list
     nmake fastdep
     nmake precompile
     ..\Build\deps\jom\jom build
-    if "%3"=="stage" (
-        nmake stage
-    )
+    nmake stage
+)
+if "%1"=="autobuild" (
+    echo Autobuilding DLL in %2 configuration ...
+    nmake source_list
+    nmake fastdep
+    nmake precompile
+    ..\Build\deps\jom\jom build
 )
 if "%1"=="clean" (
     echo Cleaning DLL in %2 configuration ...

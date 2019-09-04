@@ -2,7 +2,7 @@
 PUSHD "%~dp0"
 
 :: Call iterative build without staging the DLL (we couldn't anyway as Civ will have locked it)
-call _MakeDLL.bat build %1
+call _MakeDLL.bat autobuild %1
 :: Compare the built DLL with the staged one
 fc ..\Build\%1\CvGameCoreDLL.dll ..\Assets\CvGameCoreDLL.dll > nul
 :: If there is no change then we can exit
