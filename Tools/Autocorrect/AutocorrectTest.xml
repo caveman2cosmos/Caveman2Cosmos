@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_TEST1</Tag>
@@ -7,5 +7,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_TEST2</Tag>
 		<English>this txt has erors</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TEST3</Tag>
+		<English>Ivar The Boneless (died posibly 873) Was a Viking leader and by reputation also a berserker. According to legend, he Was a son of the powerful Ragnar Lodbrok, and he ruled an area probably comprising parts of modern-day Denmark and Sweden. Ivar led the Great Heathen Army in the invasion of the East Anglian region of England.</English>
 	</TEXT>
 </Civ4GameText>

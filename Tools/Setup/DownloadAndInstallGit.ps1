@@ -34,10 +34,10 @@ if (!$gitexe) {
     [void][System.Console]::ReadKey($true)
 
     if([Environment]::Is64BitOperatingSystem) {
-        & ".\wget.exe" -O "git_installer.exe" "https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/Git-2.23.0-64-bit.exe" --quiet --show-progress
+        & "..\Utils\wget.exe" -O "git_installer.exe" "https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/Git-2.23.0-64-bit.exe" --quiet --show-progress
     }
     else {
-        & ".\wget.exe" -O "git_installer.exe" "https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/Git-2.23.0-32-bit.exe" --quiet --show-progress
+        & ".\Utils\wget.exe" -O "git_installer.exe" "https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/Git-2.23.0-32-bit.exe" --quiet --show-progress
     }
     
     "Waiting for installer to finish..."

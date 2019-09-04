@@ -10,7 +10,17 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "args": ["${fileDirname}\\AutocorrectTest.xml"]
+            "args": ["${fileDirname}\\AutocorrectTest.xml"],
+            "cwd": "${fileDirname}"
+        },
+        {
+            "name": "Python: Autocorrect.py APPLY",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": ["${fileDirname}\\AutocorrectTest.xml", "--apply-changes"],
+            "cwd": "${fileDirname}"
         }
     ]
 }

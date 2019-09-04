@@ -17,7 +17,7 @@ XmlValidator.log
 .vscode/settings.json
 
 git_installer.exe
-Tools/Setup/.wget-hsts
+Tools/Utils/.wget-hsts
 
 Assets/fpklive_token.txt
 Assets/**/*.dds
