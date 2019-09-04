@@ -512,9 +512,6 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MID_CLASS_SKYPAD_APARTMENTS</ArtDefineTag>
 			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_TELEVISION</PrereqTech>
-			</TechTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -990,9 +987,9 @@
 			<Strategy>TXT_KEY_BUILDING_GOOD_ATOM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GOOD_ATOM</ArtDefineTag>
-			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
+			<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
+				<PrereqTech>TECH_ATOMPUNK</PrereqTech>
 				<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
 			</TechTypes>
 			<MapCategoryTypes>

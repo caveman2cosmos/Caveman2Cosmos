@@ -116,9 +116,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ADHESIVES</PrereqTech>
+			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
+				<PrereqTech>TECH_ADHESIVES</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_RESIN</Bonus>
 			<PrereqBonuses>

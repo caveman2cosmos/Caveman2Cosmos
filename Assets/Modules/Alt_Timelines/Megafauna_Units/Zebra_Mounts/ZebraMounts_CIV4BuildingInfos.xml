@@ -16,7 +16,10 @@
 			<Strategy>TXT_KEY_BUILDING_ZEBRA_HERD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZEBRA_HERD</ArtDefineTag>
-			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
+			</TechTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -166,7 +169,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CULTURAL_IDENTITY</PrereqTech>
+			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<iCost>-1</iCost>

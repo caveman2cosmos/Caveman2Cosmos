@@ -342,9 +342,9 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WOOD_DYNAMO</ArtDefineTag>
 			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
-			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
+			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+				<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			</TechTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -396,9 +396,9 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PEAT_DYNAMO</ArtDefineTag>
 			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
-			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
+			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+				<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			</TechTypes>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
