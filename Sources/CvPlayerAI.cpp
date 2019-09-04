@@ -12941,7 +12941,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 	bool bisPositivePropertyUnit = (iGeneralPropertyValue > 0);
 	bool bUndefinedValid = false;
 
-	int iConstructionValue = 0;
+	int iConstructionValue = -1;
 	bool bConstructionValid = false;
 
 	if (!bValid)
@@ -12957,6 +12957,10 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 		case UNITAI_SUBDUED_ANIMAL:
 			bValid = true;
 			iConstructionValue = AI_unitBuildingValue(eUnit, pArea);
+			if (iConstructionValue > 0)
+			{
+				bUndefinedValid = true;
+			}
 			break;
 		case UNITAI_HUNTER:
 		case UNITAI_HUNTER_ESCORT:
@@ -12988,7 +12992,11 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			//		UNITAI_WORKER;  UNITAI_PROPERTY_CONTROL; UNITAI_RESERVE; UNITAI_ATTACK
 			// Maybe we need a dedicated system for cities to place orders for units that can build buildings instead of hijacking various unit orders.
 			// Maybe a new unitAI? UNITAI_CONSTRUCT
-			bValid = iConstructionValue > 10; // That '10' could be a global define value for the lower threshold. AI_BUILDINGVALUE_THRESHOLD_TO_UNITVALUE
+			if (iConstructionValue > 10) // That '10' could be a global define value for the lower threshold. AI_BUILDINGVALUE_THRESHOLD_TO_UNITVALUE
+			{
+				bValid = true;
+				bUndefinedValid = true;
+			}
 			if (! bValid)
 			{
 				for (iI = 0; iI < GC.getNumBuildInfos(); iI++)
@@ -13011,9 +13019,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			break;
 
 		case UNITAI_ATTACK:
-			iConstructionValue = AI_unitBuildingValue(eUnit, pArea);
-
-			if (iConstructionValue > 10 || kUnitInfo.getCombat() > 0 && ! kUnitInfo.isOnlyDefensive())
+			if (kUnitInfo.getCombat() > 0 && ! kUnitInfo.isOnlyDefensive())
 			{
 				bValid = true;
 			}
@@ -13057,8 +13063,12 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			if (!bisNegativePropertyUnit)
 			{
 				iConstructionValue = AI_unitBuildingValue(eUnit, pArea);
-
-				if (iConstructionValue > 10 || kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive())
+				if (iConstructionValue > 10)
+				{
+					bValid = true;
+					bUndefinedValid = true;
+				}
+				if ( ! bValid && kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive())
 				{
 					bValid = true;
 				}
@@ -13149,12 +13159,16 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 
 		case UNITAI_PROPERTY_CONTROL:
 		case UNITAI_PROPERTY_CONTROL_SEA:
-			iConstructionValue = AI_unitBuildingValue(eUnit, pArea);
-
-			if (bisPositivePropertyUnit || (iConstructionValue > 10 && !bisNegativePropertyUnit))
+			if (!bisNegativePropertyUnit)
 			{
-				bValid = true;
+				iConstructionValue = AI_unitBuildingValue(eUnit, pArea);
+				if (iConstructionValue > 10)
+				{
+					bValid = true;
+					bUndefinedValid = true;
+				}
 			}
+			bValid = bValid || bisPositivePropertyUnit;
 			break;
 
 		case UNITAI_INVESTIGATOR:
@@ -13224,7 +13238,6 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			break;
 
 		case UNITAI_CITY_SPECIAL:
-			iConstructionValue = AI_unitBuildingValue(eUnit, pArea);
 			if (!bisNegativePropertyUnit)
 			{
 				bValid = true;
@@ -13247,7 +13260,6 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			break;
 
 		case UNITAI_MISSIONARY:
-			iConstructionValue = AI_unitBuildingValue(eUnit, pArea);
 			if (pArea != NULL)
 			{
 				for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
@@ -14493,6 +14505,10 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 		}
 	}
 
+	if (iConstructionValue == -1)
+	{
+		iConstructionValue = AI_unitBuildingValue(eUnit, pArea);
+	}
 	if (iConstructionValue > 0)
 	{
 		iValue += iConstructionValue * 75 / 100; // That '75' could be a global define modifier for buildingValue to unitValue conversion. AI_BUILDINGVALUE_PERCENT_TO_UNITVALUE
