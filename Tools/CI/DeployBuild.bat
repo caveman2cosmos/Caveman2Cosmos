@@ -23,14 +23,6 @@ echo.
 :: INIT GIT WRITE ---------------------------------------------
 powershell -ExecutionPolicy Bypass -File "%~dp0\InitGit.ps1"
 
-:: PACK FPKS ---------------------------------------------------
-echo Packing FPKs...
-call Tools\PackFPKs.bat CI
-if %ERRORLEVEL% neq 0 (
-    echo Packing FPKs failed, aborting deployment
-    exit /B 1
-)
-
 :: SET GIT RELEASE TAG -----------------------------------------
 echo Setting release version build tag on git ...
 git tag -a %version% %APPVEYOR_REPO_COMMIT% -m "%version%"
@@ -51,6 +43,22 @@ call Tools\CI\DoSourceIndexing.bat
 :: CHECK OUT SVN -----------------------------------------------
 echo Checking out SVN working copy for deployment...
 svn checkout %svn_url% "%build_dir%"
+
+:: PACK FPKS ---------------------------------------------------
+:: We copy built FPKs and the fpklive token back from SVN 
+:: so we can build a patch FPK against them. This reduces how
+:: much we need to push back to SVN, and how much players
+:: need to sync
+echo Copying FPKs from SVN...
+xcopy "%build_dir%\Assets\*.FPK" "Assets" /Y
+xcopy "%build_dir%\Assets\fpklive_token.txt" "Assets" /Y
+
+echo Packing FPKs...
+call Tools\FPKLive.exe
+if %ERRORLEVEL% neq 0 (
+    echo Packing FPKs failed, aborting deployment
+    exit /B 1
+)
 
 :: STAGE TO SVN ------------------------------------------------
 :: HERE IS WHERE YOU ADJUST WHAT TO PUT IN THE BUILD
