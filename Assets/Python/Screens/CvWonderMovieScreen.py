@@ -45,7 +45,7 @@ class CvWonderMovieScreen:
 		if not szMovieFile:
 			return
 		fileExt = szMovieFile[-4:]
-		if fileExt == ".bik":
+		if fileExt in (".bik", ".nif"):
 			bMovie = True
 		elif fileExt == ".dds":
 			bMovie = False
@@ -58,7 +58,7 @@ class CvWonderMovieScreen:
 			CyIF = CyInterface()
 			if not iMovieType:
 				CyIF.lookAtCityBuilding(iCityId, iMovieItem)
-			else: CyIF.lookAtCityOffset(iCityId)
+			else: CyIF.lookAtCityBuilding(iCityId, -1)
 
 			CyIF.setDirty(InterfaceDirtyBits.SelectionCamera_DIRTY_BIT, True)
 
