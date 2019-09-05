@@ -1029,6 +1029,17 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 			m_stream->WriteString(info.getType());
 		}
 		break;
+	case REMAPPED_CLASS_TYPE_CULTURELEVELS:
+		entry.numClasses = GC.getNumCultureLevelInfos();
+		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)& entry);
+		for (int i = 0; i < entry.numClasses; i++)
+		{
+			CvCultureLevelInfo& info = GC.getCultureLevelInfo((CultureLevelTypes)i);
+
+			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
+				m_stream->WriteString(info.getType());
+		}
+		break;
 	default:
 		FAssertMsg(false, "Unexpected RemappedClassType");
 		break;
@@ -1086,6 +1097,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTables()
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_PROPERTIES);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_INVISIBLES);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_MISSIONS);
+	WriteClassMappingTable(REMAPPED_CLASS_TYPE_CULTURELEVELS);
 }
 
 //	How many members of a given class type were present at save time?
@@ -1222,6 +1234,9 @@ CvTaggedSaveFormatWrapper::getNumClassEnumValues(RemappedClassType classType)
 			break;
 		case REMAPPED_CLASS_TYPE_MISSIONS:
 			result = GC.getNumMissionInfos();
+			break;
+		case REMAPPED_CLASS_TYPE_CULTURELEVELS:
+			result = GC.getNumCultureLevelInfos();
 			break;
 		default:
 			FAssertMsg(false, "Unexpected RemappedClassType");
