@@ -1500,7 +1500,7 @@ bool CyGame::canEverSpread(int iCorporation) const
 
 const char* CyGame::getC2CVersion() const
 {
-	return GC.getDefineSTRING("C2C_Version");
+	return GC.getDefineSTRING("C2C_VERSION");
 }
 
 /************************************************************************************************/
