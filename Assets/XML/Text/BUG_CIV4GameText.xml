@@ -14988,6 +14988,21 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<Spanish>Nomenclatura: Combat[PROMOTED_STALL]</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_PROMOTED_ARMED_GUARD_HOVER</Tag>
+		<English>Enter the user defined naming convention for combat units 'PROMOTED_ARMED_GUARD'.</English>
+		<French>Entrez la convention des noms pour les unités 'PROMOTED_ARMED_GUARD'.</French>
+		<German>Eingabe der benutzerdefinierten Benennungsregel für 'PROMOTED_ARMED_GUARD' Einheiten</German>
+		<Italian>Inserisci la tua convenzione di denominazione personalizzata per le Unità di Combattimento Corazzate ('Combat[PROMOTED_ARMED_GUARD]').</Italian>
+		<Spanish>Introduce la nomenclatura que desees para nombrar a las unidades de tipo 'PROMOTED_ARMED_GUARD'.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_PROMOTED_ARMED_GUARD_TEXT</Tag>
+		<English>Naming Convention: Combat[PROMOTED_ARMED_GUARD]</English>
+		<French>Convention des Noms: Combat[PROMOTED_ARMED_GUARD]</French>
+		<German>Benennungsregel: Kampf[PROMOTED_ARMED_GUARD]</German>
+		<Spanish>Nomenclatura: Combat[PROMOTED_ARMED_GUARD]</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_PROMOTED_TRANSPORT_FIGHTERS_HOVER</Tag>
 		<English>Enter the user defined naming convention for combat units 'PROMOTED_TRANSPORT_FIGHTERS'.</English>
 		<French>Entrez la convention des noms pour les unités 'PROMOTED_TRANSPORT_FIGHTERS'.</French>
