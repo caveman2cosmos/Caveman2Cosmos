@@ -293,13 +293,6 @@ public:
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
-	int	getGameSaveSvnRev() const;
-	static const char* getC2CVersion();
-	static const char* getGitVersion();
-	static const char* getGitSHA();
-	static const char* getGitShortSHA();
-	std::string getGameSaveGitSHA() const;
-
 	unsigned int getAssetCheckSum() const;
 	unsigned int getSavegameAssetCheckSum() const;
 	void calculateAssetCheckSum();
@@ -446,10 +439,6 @@ protected:
 	static bool bPathsSet;
 // BUG - EXE/DLL Paths - end
 
-	// SVN rev of the build which performed the save of the loaded game
-	int	m_svnRev;
-	// GIT commit of the build which performed the save of the loaded game
-	std::string m_gitSHA;
 	bool m_bRecalcRequestProcessed;
 
 	// Asset checksum of the current build

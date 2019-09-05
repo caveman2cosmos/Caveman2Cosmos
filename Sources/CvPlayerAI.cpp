@@ -24809,15 +24809,7 @@ void CvPlayerAI::read(FDataStreamBase* pStream)
 
 		for (int i = 0; i < MAX_PLAYERS; i++)
 		{
-			if (GC.getLoadedInitCore().getGameSaveSvnRev() != -1 && GC.getLoadedInitCore().getGameSaveSvnRev() < 7895)
-			{
-				WRAPPER_READ_ARRAY(wrapper, "CvPlayerAI", NUM_CONTACT_TYPES - 1, m_aaiContactTimer[i]);
-				m_aaiContactTimer[i][NUM_CONTACT_TYPES - 1] = 0;
-			}
-			else
-			{
-				WRAPPER_READ_ARRAY(wrapper, "CvPlayerAI", NUM_CONTACT_TYPES, m_aaiContactTimer[i]);
-			}
+			WRAPPER_READ_ARRAY(wrapper, "CvPlayerAI", NUM_CONTACT_TYPES, m_aaiContactTimer[i]);
 		}
 		for (int i = 0; i < MAX_PLAYERS; i++)
 		{

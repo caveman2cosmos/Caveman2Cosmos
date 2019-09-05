@@ -304,7 +304,6 @@
     <ClInclude Include="CvDLLUtilityIFaceBase.h" />
     <ClInclude Include="CvDLLWidgetData.h" />
     <ClInclude Include="CvDLLXMLIFaceBase.h" />
-    <ClInclude Include="version.h" />
     <ClInclude Include="wchar_utils.h" />
     <ClInclude Include="CvEnums.h" />
     <ClInclude Include="CvEventReporter.h" />
