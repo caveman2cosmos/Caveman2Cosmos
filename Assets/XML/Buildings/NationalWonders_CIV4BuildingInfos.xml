@@ -1138,7 +1138,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Cost -->
-			<iCost>3690</iCost>
+			<iCost>2950</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_DEEP_SPACE_RESEARCH</ConstructSound>
@@ -3822,7 +3822,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>210</iCost>
+			<iCost>208</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Local -->

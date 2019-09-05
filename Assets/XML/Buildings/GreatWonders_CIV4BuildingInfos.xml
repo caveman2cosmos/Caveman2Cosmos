@@ -9768,7 +9768,7 @@
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<!-- Cost -->
-			<iCost>6780</iCost>
+			<iCost>7680</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_WARE_ALUMINUM</BonusType>
@@ -14092,9 +14092,9 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WATERWORKS</PrereqTech>
+			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_AESTHETICS</PrereqTech>
+				<PrereqTech>TECH_WATERWORKS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_SCULPTURES</Bonus>
@@ -18769,7 +18769,7 @@
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
-			<iCost>1566</iCost>
+			<iCost>1296</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
