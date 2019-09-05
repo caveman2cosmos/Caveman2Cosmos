@@ -206,9 +206,9 @@
 				<BuildingType>BUILDING_DEER_TRAINER_EFFECT</BuildingType>
 				<BuildingType>BUILDING_DEER_TRAINER</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
+				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<iCost>235</iCost>
 			<iMoves>2</iMoves>
@@ -347,6 +347,9 @@
 				<BuildingType>BUILDING_DEER_TRAINER</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+			</TechTypes>
 			<BonusType>BONUS_SULPHUR</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>

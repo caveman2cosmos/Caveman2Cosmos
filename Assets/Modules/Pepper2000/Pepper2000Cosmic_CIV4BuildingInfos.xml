@@ -196,9 +196,9 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FANTASY_CITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SUPERSYMMETRIC_PARTICLE_CONSTRUCTION</PrereqTech>
+			<PrereqTech>TECH_OMEGA_MINUS_ENGINEERING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_OMEGA_MINUS_ENGINEERING</PrereqTech>
+				<PrereqTech>TECH_SUPERSYMMETRIC_PARTICLE_CONSTRUCTION</PrereqTech>
 			</TechTypes>
 			<iCost>4492</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>

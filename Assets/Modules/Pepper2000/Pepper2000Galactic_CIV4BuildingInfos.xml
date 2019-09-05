@@ -3926,9 +3926,9 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMATED_PREON_STAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SUPERSYMMETRIC_PARTICLE_CONSTRUCTION</PrereqTech>
+			<PrereqTech>TECH_ELECTROWEAK_MATTER</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ELECTROWEAK_MATTER</PrereqTech>
+				<PrereqTech>TECH_SUPERSYMMETRIC_PARTICLE_CONSTRUCTION</PrereqTech>
 			</TechTypes>
 			<iCost>7629</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>

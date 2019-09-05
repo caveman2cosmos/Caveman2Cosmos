@@ -1339,36 +1339,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_DEPT_FOREIGN_POLICY_WONDER</ArtDefineTag>
 			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>
-		<BuildingInfo>
-			<!-- Department of Foreign Policy Effect -->
-			<BuildingClass>BUILDINGCLASS_DEPT_FOREIGN_POLICY_EFFECT</BuildingClass>
-			<Type>BUILDING_DEPT_FOREIGN_POLICY_EFFECT</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_PEDIA</Civilopedia>
-			<!-- Cost -->
-			<iCost>-1</iCost>
-			<!-- Local -->
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
-			</CommerceModifiers>
-			<!-- Units -->
-			<UnitCombatFreeExperiences>
-				<UnitCombatFreeExperience>
-					<UnitCombatType>UNITCOMBAT_DIPLOMAT</UnitCombatType>
-					<iExperience>1</iExperience>
-				</UnitCombatFreeExperience>
-			</UnitCombatFreeExperiences>
-			<!-- Misc -->
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_DEPT_FOREIGN_POLICY</ArtDefineTag>
-		</BuildingInfo>
+		</BuildingInfo>		
 		<BuildingInfo>
 			<!-- Department of Motor Vehicles -->
 			<BuildingClass>BUILDINGCLASS_DMV</BuildingClass>
@@ -1774,36 +1745,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_FERTILITYFESTIVAL</ArtDefineTag>
 			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>
-		<BuildingInfo>
-			<!-- Fertility Festival Effect -->
-			<BuildingClass>BUILDINGCLASS_FERTILITYFESTIVAL_EFFECT</BuildingClass>
-			<Type>BUILDING_FERTILITYFESTIVAL_EFFECT</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FERTILITYFESTIVAL_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FERTILITYFESTIVAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_FERTILITYFESTIVAL_STRATEGY</Strategy>
-			<ObsoleteTech>TECH_WOMENS_SUFFRAGE</ObsoleteTech>
-			<!-- Cost -->
-			<iCost>-1</iCost>
-			<!-- Local -->
-			<iHappiness>1</iHappiness>
-			<YieldChanges>
-				<iYield>2</iYield>
-			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<iFoodKept>5</iFoodKept>
-			<!--iGrowthPercent>5</iGrowthPercent-->
-			<!-- Misc -->
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_FERTILITYFESTIVAL</ArtDefineTag>
-		</BuildingInfo>
+		</BuildingInfo>		
 		<BuildingInfo>
 			<!-- Flak Tower -->
 			<BuildingClass>BUILDINGCLASS_FLAK_TOWER</BuildingClass>
@@ -1815,9 +1757,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_FLAK_TOWER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_FLAK_TOWER_STRATEGY</Strategy>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_FLIGHT</PrereqTech>
+			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
+				<PrereqTech>TECH_FLIGHT</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
@@ -2576,9 +2518,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GUILDS_STRATEGY</Strategy>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_GUILDS</PrereqTech>
+			<PrereqTech>TECH_INVENTION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_INVENTION</PrereqTech>
+				<PrereqTech>TECH_GUILDS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqOrBuildingClasses>
@@ -5784,9 +5726,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_WEATHER_SERVICE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_WEATHER_SERVICE_STRATEGY</Strategy>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_METEOROLOGY</PrereqTech>
+			<PrereqTech>TECH_RADIO</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_RADIO</PrereqTech>
+				<PrereqTech>TECH_METEOROLOGY</PrereqTech>
 				<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
@@ -7469,226 +7411,6 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_TOXIC_WASTE_DUMP</ArtDefineTag>
 		</BuildingInfo>
-		<!--↓ Traditions ↓-->
-		<BuildingInfo>
-			<!-- Tradition - Archery -->
-			<BuildingClass>BUILDINGCLASS_TRADITION_ARCHERY</BuildingClass>
-			<Type>BUILDING_TRADITION_ARCHERY</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TRADITION_ARCHERY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TRADITION_ARCHERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MILITARY_TRADITION_STRATEGY</Strategy>
-			<!-- Prerequisites -->
-			<PrereqTech>TECH_ARCHERY</PrereqTech>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_FLETCHER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
-			<!-- Cost -->
-			<iCost>-1</iCost>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<!-- Local -->
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</ObsoleteSafeCommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
-			<!-- Global -->
-			<FreeBuilding>BUILDINGCLASS_TRADITION_ARCHERY_EFFECT</FreeBuilding>
-			<!-- Misc -->
-			<iAsset>8</iAsset>
-			<iPower>4</iPower>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<bNeverCapture>1</bNeverCapture>
-			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_SSTAR</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_ARCHERY</MovieDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<!-- Effect - Tradition - Archery -->
-			<BuildingClass>BUILDINGCLASS_TRADITION_ARCHERY_EFFECT</BuildingClass>
-			<Type>BUILDING_TRADITION_ARCHERY_EFFECT</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TRADITION_ARCHERY_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TRADITION_ARCHERY_EFFECT_PEDIA</Civilopedia>
-			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
-			<!-- Construction cost -->
-			<iCost>-1</iCost>
-			<!-- Unit effects -->
-			<FreePromotion>PROMOTION_ARCHER_TRADITION</FreePromotion>
-			<UnitCombatFreeExperiences>
-				<UnitCombatFreeExperience>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<iExperience>2</iExperience>
-				</UnitCombatFreeExperience>
-			</UnitCombatFreeExperiences>
-			<!-- Misc -->
-			<bNeverCapture>1</bNeverCapture>
-			<iAsset>1</iAsset>
-			<iPower>1</iPower>
-			<ArtDefineTag>ART_DEF_BUILDING_TRADITION</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<!-- Tradition - Asthetic Appreciation  -->
-			<BuildingClass>BUILDINGCLASS_TRADITION_ASTHETIC_APPRECIATION</BuildingClass>
-			<Type>BUILDING_TRADITION_ASTHETIC_APPRECIATION</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TRADITION_ASTHETIC_APPRECIATION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TRADITION_ASTHETIC_APPRECIATION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WORKER_TRADITION_STRATEGY</Strategy>
-			<!-- Prerequisites -->
-			<PrereqTech>TECH_AESTHETICS</PrereqTech>
-			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_CIVIL_ENGINEERING</ObsoleteTech>
-			<!-- Cost -->
-			<iCost>-1</iCost>
-			<Advisor>ADVISOR_CULTURE</Advisor>
-			<!-- Global -->
-			<GlobalCommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>2</iCommerce>
-			</GlobalCommerceModifiers>
-			<FreeBuilding>BUILDINGCLASS_TRADITION_ASTHETIC_APPRECIATION_EFFECT</FreeBuilding>
-			<!-- Misc -->
-			<iAsset>8</iAsset>
-			<iPower>4</iPower>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<bNeverCapture>1</bNeverCapture>
-			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_SSTAR</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_ASTHETIC_APPRECIATION</MovieDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<!-- Effect - Tradition - Aesthetic Appreciation -->
-			<BuildingClass>BUILDINGCLASS_TRADITION_ASTHETIC_APPRECIATION_EFFECT</BuildingClass>
-			<Type>BUILDING_TRADITION_ASTHETIC_APPRECIATION_EFFECT</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TRADITION_ASTHETIC_APPRECIATION_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TRADITION_ASTHETIC_APPRECIATION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WORKER_TRADITION_STRATEGY</Strategy>
-			<!-- Cost -->
-			<iCost>-1</iCost>
-			<!-- Units -->
-			<FreePromotion>PROMOTION_TRADITION_ASTHETIC_APPRECIATION</FreePromotion>
-			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
-			<!-- Misc -->
-			<iAsset>1</iAsset>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>-2</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-					<iAmountPerTurn>-2</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_TRADITION</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<!-- Tradition - Work Ethic  -->
-			<BuildingClass>BUILDINGCLASS_TRADITION_WORK_ETHIC</BuildingClass>
-			<Type>BUILDING_TRADITION_WORK_ETHIC</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TRADITION_WORK_ETHIC</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TRADITION_WORK_ETHIC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WORKER_TRADITION_STRATEGY</Strategy>
-			<!-- Prerequisites -->
-			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
-			<!-- Cost -->
-			<iCost>-1</iCost>
-			<Advisor>ADVISOR_GROWTH</Advisor>
-			<!-- Local -->
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</ObsoleteSafeCommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes>
-			<!-- Global -->
-			<FreeBuilding>BUILDINGCLASS_TRADITION_WORK_ETHIC_EFFECT</FreeBuilding>
-			<!-- Misc -->
-			<iAsset>8</iAsset>
-			<iPower>4</iPower>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<bNeverCapture>1</bNeverCapture>
-			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_SSTAR</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_WORK_ETHIC</MovieDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<!-- Effect - Tradition - Work Ethic -->
-			<BuildingClass>BUILDINGCLASS_TRADITION_WORK_ETHIC_EFFECT</BuildingClass>
-			<Type>BUILDING_TRADITION_WORK_ETHIC_EFFECT</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TRADITION_WORK_ETHIC_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TRADITION_WORK_ETHIC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WORKER_TRADITION_STRATEGY</Strategy>
-			<!-- Cost -->
-			<iCost>-1</iCost>
-			<!-- Units -->
-			<FreePromotion>PROMOTION_TRADITION_WORK_ETHIC</FreePromotion>
-			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
-			<!-- Misc -->
-			<iAsset>8</iAsset>
-			<iPower>4</iPower>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-			</Flavors>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_TRADITION</ArtDefineTag>
-		</BuildingInfo>
-		<!--↑ Traditions ↑-->
 		<BuildingInfo>
 			<!-- Travel Agency -->
 			<BuildingClass>BUILDINGCLASS_TRAVEL_AGENCY</BuildingClass>

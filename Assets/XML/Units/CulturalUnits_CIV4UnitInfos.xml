@@ -1177,9 +1177,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_ATLATL_MAKING</PrereqTech>
+			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
+				<PrereqTech>TECH_ATLATL_MAKING</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_MAYAN</BonusType>
 			<iCost>56</iCost>
@@ -2375,9 +2375,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_CHARIOT_WORKSHOP</PrereqBuilding>
-			<PrereqTech>TECH_CHARIOTRY</PrereqTech>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+				<PrereqTech>TECH_CHARIOTRY</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_EGYPTIAN</BonusType>
 			<PrereqBonuses>
@@ -11529,9 +11529,9 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqBuilding>BUILDING_CAMEL_TRAINER</PrereqBuilding>
-			<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
+				<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_TUAREG</BonusType>
 			<PrereqBonuses>
@@ -22235,6 +22235,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_CRIMINAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iCost>1750</iCost>
 			<iMoves>4</iMoves>
@@ -22384,6 +22388,10 @@
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_TRADE</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -24260,6 +24268,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_TRADE</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<TechTypes>
@@ -25695,6 +25707,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_CANINE</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
 			<PrereqOrBuildings>
@@ -25878,6 +25894,10 @@
 				</UnitCombatTarget>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_CANINE</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -27869,9 +27889,9 @@
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
 			<BonusType>BONUS_OMAN</BonusType>
-			<PrereqTech>TECH_PIRACY</PrereqTech>
+			<PrereqTech>TECH_WRITING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_WRITING</PrereqTech>
+				<PrereqTech>TECH_PIRACY</PrereqTech>
 			</TechTypes>
 			<Flavors>
 				<Flavor>
@@ -31744,6 +31764,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_TRADE</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<Flavors>
 				<Flavor>
@@ -32124,9 +32148,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_HORSE_TRAINER</PrereqBuilding>
-			<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
+				<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_SAMI</BonusType>
 			<iCost>98</iCost>
@@ -33352,6 +33376,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_CRIMINAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<Flavors>
 				<Flavor>
@@ -33854,6 +33882,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_TRADE</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<PrereqBuilding>BUILDING_HIGHWAY_HIDEOUT</PrereqBuilding>
@@ -34162,6 +34194,10 @@
 				</UnitCombatTarget>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_CANINE</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -34809,6 +34845,10 @@
 				</UnitCombatTarget>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_CRIMINAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -36931,9 +36971,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_SHIPWRIGHT</PrereqBuilding>
-			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
+			<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
+				<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_THREE_KINGDOMS</BonusType>
 			<iCost>270</iCost>
@@ -37445,9 +37485,9 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqBuilding>BUILDING_CAMEL_TRAINER</PrereqBuilding>
-			<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
+				<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_BACTRIC</BonusType>
 			<PrereqBonuses>
@@ -38851,9 +38891,9 @@
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
 			<BonusType>BONUS_BANDANESE</BonusType>
-			<PrereqTech>TECH_PIRACY</PrereqTech>
+			<PrereqTech>TECH_WRITING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_WRITING</PrereqTech>
+				<PrereqTech>TECH_PIRACY</PrereqTech>
 			</TechTypes>
 			<Flavors>
 				<Flavor>
@@ -40868,9 +40908,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_HORSE_TRAINER</PrereqBuilding>
-			<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
+				<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_XIANBEI</BonusType>
 			<PrereqBonuses>
@@ -47723,6 +47763,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_CANINE</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
 			<PrereqOrBuildings>
@@ -49572,6 +49616,10 @@
 				</UnitCombatTarget>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ENTERTAINER</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>

@@ -47,9 +47,6 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_DIESELPUNK</Bonus>
 			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_FLIGHT</PrereqTech>
-			</TechTypes>
 			<iCost>1080</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
