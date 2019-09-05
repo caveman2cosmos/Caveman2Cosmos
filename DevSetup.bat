@@ -59,11 +59,13 @@
 
 @echo off
 
+set build_config=Release
+
 echo.
 echo **** README ****
 echo.
 echo This script will do default dev setup/update including a LINK based
-echo install, and building the Assert DLL.
+echo install, building the %build_config% DLL.
 echo Packing FPKs will be done automatically when the mod is run.
 echo. 
 echo *** WARNINGS - MAKE SURE YOU READ THESE *** 
@@ -91,11 +93,12 @@ if errorlevel 1 (
     call :install_failure
     exit /B 1
 )
-call "%~dp0\Tools\_MakeDLL.bat" build Release
+call "%~dp0\Tools\_MakeDLL.bat" build %build_config%
 if errorlevel 1 (
     call :build_failure
     exit /B 1
 )
+call "%~dp0\Tools\UpdateVSUserFile.bat"
 POPD
 
 echo.
