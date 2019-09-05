@@ -96,13 +96,18 @@ class CvWonderMovieScreen:
 			self.fTime = 0
 			if self.iMovieType == 1:
 				screen.addReligionMovieWidgetGFC("ReligionMovie", szMovieFile, 16, 42, 720, 480, WidgetTypes.WIDGET_GENERAL, 1, 2) # Not sure if this one understand .dds files...
-				CyInterface().playGeneralSound(CvInfo.getMovieSound())
 			else:
-				 screen.playMovie(szMovieFile, 16, 42, 720, 480, 0) # This one can play .dds files too, but I think addDDSGFC is better to use in that case anyhow.
+				screen.playMovie(szMovieFile, 16, 42, 720, 480, 0) # This one can play .dds files too, but I think addDDSGFC is better to use in that case anyhow.
 		else:
 			self.bTimer = True
 			self.fTime = 3
 			screen.addDDSGFC("", szMovieFile, 16, 42, 720, 480, WidgetTypes.WIDGET_GENERAL, 1, 2)
+
+		# Sound
+		if self.iMovieType == 1:
+			szSound = CvInfo.getMovieSound()
+			if szSound:
+				CyInterface().playGeneralSound(szSound)
 
 		screen.setButtonGFC("WonderExit", CyTranslator().getText("TXT_KEY_MAIN_MENU_OK", ()), "", 316, 526, 120, 30, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, ButtonStyles.BUTTON_STYLE_STANDARD)
 
