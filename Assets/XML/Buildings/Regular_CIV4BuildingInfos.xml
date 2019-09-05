@@ -23143,7 +23143,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ENLIGHTENMENT</PrereqTech>
+			<PrereqTech>TECH_COMPULSORY_EDUCATION</PrereqTech>
 			<Bonus>BONUS_FURNITURE</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
@@ -23161,7 +23161,7 @@
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
-			<iCost>495</iCost>
+			<iCost>870</iCost>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceModifiers>
