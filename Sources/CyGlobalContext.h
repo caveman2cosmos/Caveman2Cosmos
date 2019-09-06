@@ -543,6 +543,7 @@ public:
 	// UI functions
 	POINT getCursorPos() const;
 	POINT screenToClient(POINT screenPos) const;
+	HWND getToplevelWindow() const;
 };
 
 #endif	// CyGlobalContext_h
