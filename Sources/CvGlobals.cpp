@@ -472,7 +472,7 @@ void CreateMiniDump(EXCEPTION_POINTERS *pep)
 {
 	_TCHAR filename[100];
 
-	_stprintf(filename, _T("MiniDump.dmp"));
+	_stprintf(filename, _T("MiniDump-%s.dmp", GC.getDefineSTRING("C2C_VERSION")));
 	/* Open a file to store the minidump. */
 	HANDLE hFile = CreateFile(filename,
 	                          GENERIC_READ | GENERIC_WRITE,

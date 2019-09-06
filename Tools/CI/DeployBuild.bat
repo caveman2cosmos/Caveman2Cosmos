@@ -20,6 +20,9 @@ rmdir /Q /S "%build_dir%"
 echo C2C %version% DEPLOYMENT
 echo.
 
+:: WRITE VERSION TO XML ---------------------------------------
+powershell -ExecutionPolicy Bypass -File "%~dp0\update-c2c-version.ps1"
+
 :: INIT GIT WRITE ---------------------------------------------
 powershell -ExecutionPolicy Bypass -File "%~dp0\InitGit.ps1"
 
