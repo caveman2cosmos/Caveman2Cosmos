@@ -8064,7 +8064,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<!-- Unit effects -->
 			<UnitCombatExtraStrengths>
 				<UnitCombatExtraStrength>
@@ -8206,7 +8206,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>150</iCost>
+			<iCost>300</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
@@ -9424,6 +9424,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Base Jumping Site -->
@@ -11528,7 +11529,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2405</iCost>
+			<iCost>2205</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
@@ -12371,7 +12372,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2005</iCost>
+			<iCost>2205</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12540,7 +12541,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2005</iCost>
+			<iCost>2205</iCost>
 			<!-- Main effects -->
 			<iHappiness>4</iHappiness>
 			<CommerceChanges>
@@ -17722,7 +17723,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>950</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -20136,7 +20137,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>150</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-3</iCommerce>
@@ -20183,7 +20184,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>178</iCost>
+			<iCost>356</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_HUMANITARIAN</ProductionTraitType>
@@ -20269,7 +20270,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>150</iCost>
+			<iCost>300</iCost>
 			<!-- Defense effects -->
 			<iNoEntryDefenseLevel>30</iNoEntryDefenseLevel>
 			<!-- Other -->
@@ -20321,7 +20322,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>155</iCost>
+			<iCost>310</iCost>
 			<!-- Special Yield and Commerce modifiers -->
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -20443,7 +20444,7 @@
 			</PrereqOrBuildingClasses>
 			<ExtendsBuildingClass>BUILDINGCLASS_CASTLE</ExtendsBuildingClass>
 			<!-- Construction cost -->
-			<iCost>150</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>5</iCommerce>
@@ -23142,7 +23143,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ENLIGHTENMENT</PrereqTech>
+			<PrereqTech>TECH_COMPULSORY_EDUCATION</PrereqTech>
 			<Bonus>BONUS_FURNITURE</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
@@ -23160,7 +23161,7 @@
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
-			<iCost>495</iCost>
+			<iCost>870</iCost>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceModifiers>
@@ -23837,7 +23838,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ECONOMICS</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>150</iCost>
+			<iCost>300</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -32053,7 +32054,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2005</iCost>
+			<iCost>2205</iCost>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -35590,7 +35591,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2625</iCost>
+			<iCost>2505</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
@@ -36955,7 +36956,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2625</iCost>
+			<iCost>2505</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -37028,7 +37029,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2005</iCost>
+			<iCost>2205</iCost>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>12</iCommerce>
@@ -42092,9 +42093,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_WATERWORKS</PrereqTech>
+			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_AESTHETICS</PrereqTech>
+				<PrereqTech>TECH_WATERWORKS</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<BuildingClassNeededs>
@@ -45620,7 +45621,7 @@
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
-			<iCost>550</iCost>
+			<iCost>555</iCost>
 			<!-- Special Yield and Commerce modifiers -->
 			<GlobalCommerceModifiers>
 				<iCommerce>7</iCommerce>
@@ -51176,7 +51177,7 @@
 				<VicinityBonus>BONUS_STONE</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>176</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -60154,7 +60155,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
-			<iCost>830</iCost>
+			<iCost>870</iCost>
 			<!-- Special Yield and Commerce modifiers -->
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -63473,7 +63474,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2625</iCost>
+			<iCost>2505</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -68101,7 +68102,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>150</iCost>
+			<iCost>300</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
@@ -72037,7 +72038,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2105</iCost>
+			<iCost>2205</iCost>
 			<!-- Main effects -->
 			<iHealth>2</iHealth>
 			<CommerceChanges>
@@ -73216,7 +73217,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<VicinityBonus>BONUS_OBSIDIAN</VicinityBonus>
 			<!-- Construction cost -->
-			<iCost>145</iCost>
+			<iCost>146</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -73930,7 +73931,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2405</iCost>
+			<iCost>2205</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -83484,7 +83485,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2405</iCost>
+			<iCost>2305</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
@@ -84542,7 +84543,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2625</iCost>
+			<iCost>2505</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -85488,7 +85489,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
-			<iCost>1845</iCost>
+			<iCost>2005</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -88277,7 +88278,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>139</iCost>
+			<iCost>160</iCost>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<!-- Special Yield and Commerce modifiers -->
@@ -91186,7 +91187,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_LABOR_UNION</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>150</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -92287,6 +92288,7 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Shopping Drone Control Center -->
@@ -97066,7 +97068,7 @@
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
-			<iCost>140</iCost>
+			<iCost>368</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_ORGANIZED</ProductionTraitType>
@@ -97461,7 +97463,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<VicinityBonus>BONUS_STONE</VicinityBonus>
 			<!-- Construction cost -->
-			<iCost>145</iCost>
+			<iCost>146</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -97909,7 +97911,7 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<!-- Construction cost -->
-			<iCost>120</iCost>
+			<iCost>118</iCost>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
@@ -102467,7 +102469,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>130</iCost>
+			<iCost>261</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -104294,6 +104296,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Traffic Cameras -->
@@ -111372,7 +111375,7 @@
 				<Bonus>BONUS_FIBERGLASS</Bonus>
 			</PrereqBonuses>
 			<!-- Construction cost -->
-			<iCost>335</iCost>
+			<iCost>535</iCost>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -113869,7 +113872,7 @@
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
-			<iCost>100</iCost>
+			<iCost>168</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_INDUSTRIOUS</ProductionTraitType>

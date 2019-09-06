@@ -46,7 +46,7 @@
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<!-- Construction cost -->
-			<iCost>332</iCost>
+			<iCost>710</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<CommerceChanges>

@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Movie art path information -->
+
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<MovieArtInfos>
 		<MovieArtInfo>
@@ -670,7 +666,6 @@
 			<Type>ART_DEF_MOVIE_WUDANG</Type>
 			<Path>Art/Movies/Wonders/Wudang.bik</Path>
 		</MovieArtInfo>
-		<!-- EgyptMyth -->
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_EGYPT_MYTH_SHRINE</Type>
 			<Path>Art/Movies/Wonders/shrine_egy_dwg_512.bik</Path>
@@ -683,7 +678,6 @@
 			<Type>ART_DEF_MOVIE_TOTH</Type>
 			<Path>Art/Movies/Wonders/Toth.bik</Path>
 		</MovieArtInfo>
-		<!-- Hellinic  -->
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ERECTION</Type>
 			<Path>Art/Movies/Wonders/Erectheum.bik</Path>
@@ -696,7 +690,6 @@
 			<Type>ART_DEF_MOVIE_NECROMANTEION</Type>
 			<Path>Art/Movies/Wonders/Necromanteion.bik</Path>
 		</MovieArtInfo>
-		<!-- Nagualismo -->
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_PYRAMID_OF_THE_MOON</Type>
 			<Path>Art/Movies/Wonders/ToltecPyramid.bik</Path>
@@ -709,7 +702,6 @@
 			<Type>ART_DEF_MOVIE_MESOAMERICAN_SHRINE</Type>
 			<Path>Art/Movies/Wonders/teotihuacan.bik</Path>
 		</MovieArtInfo>
-		<!-- Zoroasterism -->
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_HAMMURABI</Type>
 			<Path>Art/Movies/Wonders/Hammurabi.bik</Path>
@@ -728,7 +720,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SHRINE_SHAMAN</Type>
-			<Path>Art/Movies/Wonders/Shaman_Shrine.bik</Path>
+			<Path>Art/Cutscene/Shaman/Shaman_Shrine.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SHRINE_SHINTO</Type>
@@ -1138,7 +1130,6 @@
 			<Type>ART_DEF_MOVIE_NATIONAL_LIBRARY_SERVICE</Type>
 			<Path>Art/Movies/Wonders/Behistun_InscriptionMovie.bik</Path>
 		</MovieArtInfo>
-		<!--Natural Wonders  -->
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_AURORA</Type>
 			<Path>Art/Movies/Natural Wonders/Aurora.bik</Path>
@@ -1349,7 +1340,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_KLASIES</Type>
-			<Path>Art/Movies/Wonders/Klasies.bik</Path>
+			<Path>Art/Movies/Wonders/Klasies_River_Caves.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_LA_BREA</Type>
@@ -1555,41 +1546,30 @@
 			<Type>ART_DEF_MOVIE_EARTH_FESTIVAL</Type>
 			<Path>Art/Movies/Wonders/xearthfestival.bik</Path>
 		</MovieArtInfo>
-
-		<!-- National Archives -->
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ARCHIVES</Type>
 			<Path>Art/movies/wonders/National Archives.bik</Path>
 		</MovieArtInfo>
-		<!-- End National Archives -->
-
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ARK</Type>
 			<Path>Art/movies/wonders/Ark of The Covenant.bik</Path>
 		</MovieArtInfo>
-
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ISHTAR</Type>
 			<Path>Art/Movies/Wonders/Ishtar.bik</Path>
 		</MovieArtInfo>
-
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_GREAT_JAGUAR_TEMPLE</Type>
 			<Path>Art/Movies/Wonders/JaguarTemple.bik</Path>
 		</MovieArtInfo>
-
-		<!-- Library of Nineveh -->
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_NINEVEH</Type>
 			<Path>Art/Movies/Wonders/Library of Nineveh.bik</Path>
 		</MovieArtInfo>
-		<!-- Library of Nineveh -->
-
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_STRATEGIC_GRAIN_RESERVE</Type>
 			<Path>Art/movies/wonders/StrategicGrainReserve.bik</Path>
 		</MovieArtInfo>
-
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_TOPKAPI_PALACE</Type>
 			<Path>Art/Movies/Wonders/TopkapiPalace.bik</Path>

@@ -47330,6 +47330,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_TRADE</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iCost>17</iCost>
 			<iMoves>1</iMoves>
@@ -47458,6 +47462,10 @@
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_TRADE</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -47636,6 +47644,10 @@
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_TRADE</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -47862,6 +47874,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_TRADE</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<Flavors>
 				<Flavor>
@@ -48077,6 +48093,10 @@
 				</UnitCombatTarget>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ENTERTAINER</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -48307,6 +48327,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_CRIMINAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<Flavors>
 				<Flavor>
@@ -48523,6 +48547,10 @@
 				</UnitCombatTarget>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_CRIMINAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -48745,6 +48773,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_CRIMINAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<Flavors>
 				<Flavor>
@@ -48910,6 +48942,10 @@
 				</UnitCombatTarget>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_CRIMINAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -49168,6 +49204,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_TRADE</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iCost>875</iCost>
 			<iMoves>4</iMoves>
@@ -49372,6 +49412,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_CRIMINAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iCost>1000</iCost>
 			<iMoves>4</iMoves>
@@ -49571,6 +49615,10 @@
 				</UnitCombatTarget>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_CRIMINAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -50126,6 +50174,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_TRADE</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<ForceObsoleteTech>TECH_RIFLING</ForceObsoleteTech>
@@ -50312,6 +50364,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_TRADE</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iCost>540</iCost>
 			<iMoves>2</iMoves>
@@ -50451,6 +50507,10 @@
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_TRADE</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -50617,6 +50677,10 @@
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_TRADE</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -50828,6 +50892,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_TRADE</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_DEPUTIZATION</PrereqTech>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
@@ -51034,6 +51102,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_CANINE</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_NOCTURNALISM</PrereqTech>
 			<ForceObsoleteTech>TECH_CODE_OF_LAWS</ForceObsoleteTech>
@@ -51210,6 +51282,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_CANINE</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iCost>160</iCost>
 			<iMoves>2</iMoves>
@@ -51359,6 +51435,10 @@
 				</UnitCombatTarget>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ENTERTAINER</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -51552,6 +51632,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_CANINE</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<TechTypes>
@@ -51724,6 +51808,10 @@
 				</UnitCombatTarget>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_CANINE</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -51956,6 +52044,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_SIEGE_DEFENSIVE</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iCost>1250</iCost>
 			<iMoves>2</iMoves>
@@ -52103,6 +52195,10 @@
 				</UnitCombatTarget>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_CANINE</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -52287,6 +52383,10 @@
 				</UnitCombatTarget>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_SIEGE_ROCKETRY</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -52479,6 +52579,10 @@
 				</UnitCombatTarget>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_CANINE</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -69683,6 +69787,10 @@ iTradeMultiplier>3</iTradeMultiplier>
 				</UnitCombatTarget>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ENTERTAINER</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>

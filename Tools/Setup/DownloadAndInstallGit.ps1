@@ -30,7 +30,8 @@ function FindGitExe {
 $gitexe = FindGitExe
 if (!$gitexe) {
     "Git command line not found! It will now be downloaded and installed for you, if you wish to cancel then close the window."
-    "Otherwise press any key to continue with download and install..."
+    "(NOTE: You may need to restart Steam for changes to take effect)"
+    "Press any key to continue with installation of git..."
     [void][System.Console]::ReadKey($true)
 
     if([Environment]::Is64BitOperatingSystem) {

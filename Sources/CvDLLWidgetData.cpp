@@ -5837,7 +5837,7 @@ void CvDLLWidgetData::parseFlagHelp(CvWidgetDataStruct &widgetDataStruct, CvWStr
 	float fVersion = GC.getDefineINT("CIV4_VERSION") / 100.0f;
 	szTempBuffer.Format(SETCOLR L"Beyond the Sword %0.2f" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), fVersion);
 	szBuffer.append(szTempBuffer);
-	szTempBuffer.Format(NEWLINE SETCOLR L"Caveman2Cosmos %S" ENDCOLR, TEXT_COLOR("COLOR_YELLOW"), GC.getLoadedInitCore().getC2CVersion());
+	szTempBuffer.Format(NEWLINE SETCOLR L"Caveman2Cosmos %S" ENDCOLR, TEXT_COLOR("COLOR_YELLOW"), GC.getDefineSTRING("C2C_VERSION"));
 	szBuffer.append(szTempBuffer);
 	CvWString szBULLETICON;
 	szBULLETICON.Format(NEWLINE L"%c", gDLL->getSymbolID(BULLET_CHAR));
@@ -5845,31 +5845,6 @@ void CvDLLWidgetData::parseFlagHelp(CvWidgetDataStruct &widgetDataStruct, CvWStr
 	// BUG DLL version
 	szTempBuffer.Format(SETCOLR L"%s %s [Build %s]" ENDCOLR, TEXT_COLOR("COLOR_WHITE"), BUG_DLL_NAME, BUG_DLL_VERSION, BUG_DLL_BUILD);
 	szBuffer.append(szTempBuffer);
-	szBuffer.append(szBULLETICON);
-	szTempBuffer.Format(L"GIT %S", GC.getLoadedInitCore().getGitVersion());
-	szBuffer.append(szTempBuffer);
-	szBuffer.append(szBULLETICON);
-	szTempBuffer.Format(L"GIT Commit %S", GC.getLoadedInitCore().getGitShortSHA());
-	szBuffer.append(szTempBuffer);
-	if (!GC.getLoadedInitCore().getGameSaveGitSHA().empty())
-	{
-		szBuffer.append(szBULLETICON);
-		szTempBuffer.Format(L"Caveman2Cosmos build %S", GC.getLoadedInitCore().getGitSHA());
-		szBuffer.append(szTempBuffer);
-		szBuffer.append(szBULLETICON);
-		szTempBuffer.Format(L"Game saved from %S", GC.getLoadedInitCore().getGameSaveGitSHA().c_str());
-		szBuffer.append(szTempBuffer);
-	}
-
-	if (GC.getLoadedInitCore().getGameSaveSvnRev() != -1)
-	{
-		szBuffer.append(szBULLETICON);
-		szTempBuffer.Format(L"Caveman2Cosmos build %S", GC.getLoadedInitCore().getGitSHA());
-		szBuffer.append(szTempBuffer);
-		szBuffer.append(szBULLETICON);
-		szTempBuffer.Format(L"Game saved from SVN rev %d", GC.getLoadedInitCore().getGameSaveSvnRev());
-		szBuffer.append(szTempBuffer);
-	}
 
 // BUG - Version Info - end
 	if (GET_PLAYER(GC.getGameINLINE().getActivePlayer()).isModderOption(MODDEROPTION_SHOW_TRAITS_FLAG) || GC.getGameINLINE().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))

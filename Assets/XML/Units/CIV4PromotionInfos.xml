@@ -25960,6 +25960,9 @@
 			<TechPrereq>NONE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_ARMED_GUARD</PromotionLine>
 			<iLinePriority>1</iLinePriority>
+			<SubCombatChangeTypes>
+					<SubCombatChangeType>UNITCOMBAT_PROMOTED_ARMED_GUARD</SubCombatChangeType>
+			</SubCombatChangeTypes>
 			<iDefenseCombatModifierChange>10</iDefenseCombatModifierChange>
 			<iDynamicDefenseChange>10</iDynamicDefenseChange>
 			<iDefenseOnlyChange>1</iDefenseOnlyChange>

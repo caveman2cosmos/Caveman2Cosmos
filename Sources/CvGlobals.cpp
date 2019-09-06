@@ -3,7 +3,14 @@
 //
 #include "CvGameCoreDLL.h"
 #include "CvMapExternal.h"
-#include "version.h"
+
+static char gVersionString[64] = { 0 };
+
+// Use macro override when available. Version string might not be loaded in time for
+// applying it to the mini-dump so we will use macro version string for releases
+#ifndef C2C_VERSION
+#	define C2C_VERSION gVersionString
+#endif
 
 #define COPY(dst, src, typeName) \
 	{ \
@@ -473,7 +480,7 @@ void CreateMiniDump(EXCEPTION_POINTERS *pep)
 {
 	_TCHAR filename[100];
 
-	_stprintf(filename, _T("MiniDump_%s-%s.dmp"), build_c2c_version, build_git_version);
+	_stprintf(filename, _T("MiniDump-%s.dmp"), C2C_VERSION);
 	/* Open a file to store the minidump. */
 	HANDLE hFile = CreateFile(filename,
 	                          GENERIC_READ | GENERIC_WRITE,
@@ -3822,6 +3829,9 @@ FVariableSystem* cvInternalGlobals::getDefinesVarSystem()
 void cvInternalGlobals::cacheGlobals()
 {
 	OutputDebugString("Caching Globals: Start");
+
+	strcpy(gVersionString, getDefineSTRING("C2C_VERSION"));
+
 /************************************************************************************************/
 /* Mod Globals    Start                          09/13/10                           phungus420  */
 /*                                                                                              */

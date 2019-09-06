@@ -779,6 +779,7 @@
 			<option id="Combat_QUALITY_EPIC" key="CombatQUALITY_EPIC" type="string" default="DEFAULT"/>
 			<option id="Combat_PROMOTED_CAUTIOUS" key="CombatPROMOTED_CAUTIOUS" type="string" default="DEFAULT"/>
 			<option id="Combat_PROMOTED_STALL" key="CombatPROMOTED_STALL" type="string" default="DEFAULT"/>
+			<option id="Combat_PROMOTED_ARMED_GUARD" key="CombatPROMOTED_ARMED_GUARD" type="string" default="DEFAULT"/>
 			<option id="Combat_REPTILE_DINOSAUR" key="CombatREPTILE_DINOSAUR" type="string" default="DEFAULT"/>
 			<option id="Combat_QUALITY_INCAPABLE" key="CombatQUALITY_INCAPABLE" type="string" default="DEFAULT"/>
 			<option id="Combat_QUALITY_DIVINE" key="CombatQUALITY_DIVINE" type="string" default="DEFAULT"/>

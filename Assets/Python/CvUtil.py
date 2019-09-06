@@ -46,14 +46,22 @@ def convertToUnicode(s):
 		return s.decode("latin_1")
 	return s
 
-def convertToStr(s):
+def convertToStr(str):
 	"if the string is unicode, convert it to str by encoding it using 8859-1, latin_1"
-	if (isinstance(s, unicode)):
-		try:
-			return s.encode("latin_1")
-		except:
-			return s
-	return s
+	if isinstance(str, unicode):
+		i = 0
+		length = len(str)
+		bEncode = False
+		while i < length:
+			ordinal = ord(str[i])
+			if ordinal > 255:
+				str[i] = '?'
+			elif ordinal > 127:
+				bEncode = True
+			i += 1
+		if bEncode:
+			return str.encode("latin_1")
+	return str
 
 class RedirectDebug:
 	"""Send Debug Messages to Civ Engine"""
