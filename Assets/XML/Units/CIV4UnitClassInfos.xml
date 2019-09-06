@@ -3317,22 +3317,6 @@ Thailand, Chola, Kongo, Italy, Hausaland, Berber
 Assyria, Hungary, Minoa, Armenia
 		-->
 		<UnitClassInfo>
-			<Type>UNITCLASS_NATIONAL_HERO</Type>
-			<Description>TXT_KEY_UNIT_NATIONAL_HERO</Description>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_NATIONAL_HERO</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_MILITARY_HERO</Type>
-			<Description>TXT_KEY_UNIT_MILITARY_HERO</Description>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_MILITARY_HERO</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
 			<Type>UNITCLASS_HUITZILOPOCHTLI</Type>
 			<Description>TXT_KEY_UNIT_HUITZILOPOCHTLI</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>

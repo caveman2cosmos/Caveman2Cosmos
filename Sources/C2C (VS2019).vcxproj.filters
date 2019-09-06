@@ -842,9 +842,6 @@
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="version.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="idinfo_iterator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -865,5 +862,8 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Notes for the next breaking of save game compatability cycle.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="C2C.natvis" />
   </ItemGroup>
 </Project>

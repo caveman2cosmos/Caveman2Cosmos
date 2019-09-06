@@ -1525,9 +1525,9 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PROJECT_PERSEPHONE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_CLOSED_ECONOMIES</PrereqTech>
 			<iCost>6195</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
+			<PrereqTech>TECH_CLOSED_ECONOMIES</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SPACEPUNK</PrereqTech>
 			</TechTypes>
@@ -3926,9 +3926,9 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMATED_PREON_STAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SUPERSYMMETRIC_PARTICLE_CONSTRUCTION</PrereqTech>
+			<PrereqTech>TECH_ELECTROWEAK_MATTER</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ELECTROWEAK_MATTER</PrereqTech>
+				<PrereqTech>TECH_SUPERSYMMETRIC_PARTICLE_CONSTRUCTION</PrereqTech>
 			</TechTypes>
 			<iCost>7629</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>

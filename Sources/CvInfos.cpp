@@ -15110,9 +15110,9 @@ int CvHandicapInfo::isAIFreeTechs(int i) const
 	return m_pbAIFreeTechs ? m_pbAIFreeTechs[i] : false;
 }
 
-int CvHandicapInfo::getPercent(uint uiID) const
+int CvHandicapInfo::getPercent(int iID) const
 {
-	return m_Percent.getValue(uiID);
+	return m_Percent.getValue(iID);
 }
 
 /************************************************************************************************/
@@ -15760,9 +15760,9 @@ int CvGameSpeedInfo::getTraitGainPercent() const
 }
 //TB GameSpeed end
 
-int CvGameSpeedInfo::getPercent(uint uiID) const
+int CvGameSpeedInfo::getPercent(int iID) const
 {
-	return m_Percent.getValue(uiID);
+	return m_Percent.getValue(iID);
 }
 
 bool CvGameSpeedInfo::read(CvXMLLoadUtility* pXML)
@@ -22853,9 +22853,9 @@ int CvWorldInfo::getCommandersLevelThresholdsPercent() const
 /* Afforess						 END															*/
 /************************************************************************************************/
 
-int CvWorldInfo::getPercent(uint uiID) const
+int CvWorldInfo::getPercent(int iID) const
 {
-	return m_Percent.getValue(uiID);
+	return m_Percent.getValue(iID);
 }
 
 bool CvWorldInfo::read(CvXMLLoadUtility* pXML)

@@ -27051,16 +27051,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 			info->m_iPromotionFreeCount = g_paiTempPromotionFreeCount[iI];
 		}
-		else if (GC.getLoadedInitCore().getGameSaveSvnRev() != -1 && GC.getLoadedInitCore().getGameSaveSvnRev() < 5080 && isHasPromotion((PromotionTypes)iI) )
-		{
-			if ( !canKeepPromotion((PromotionTypes)iI, false, false) )
-			{
-				//	We have a promotion it doesn't look like we should be able to keep
-				//	but for the sake of old save games we allow it at load time, or else
-				//	all pre-combat mod games will lose promotions given by Python
-				setPromotionFreeCount((PromotionTypes)iI, 1);
-			}
-		}
 	}
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatKnockbacks);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatRepels);
@@ -32737,14 +32727,17 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 /************************************************************************************************/
 		}
 	}
+
 	if (!sAttack)
 	{
 		setMadeAttack(true);
 		changeMoves(GC.getMOVE_DENOMINATOR());
 	}
 
-	if (pPlot->isActiveVisible(false))
+	if (pPlot->isActiveVisible(false) && (pLoopUnit == NULL || (!pLoopUnit->isUsingDummyEntities() && pLoopUnit->isInViewport())))
 	{
+		FAssertMsg(pLoopUnit != NULL, "Bombard mission requires a valid defending unit");
+
 		// Bombard entity mission
 		CvMissionDefinition kDefiniton;
 		kDefiniton.setMissionTime(GC.getMissionInfo(MISSION_RBOMBARD).getTime() * gDLL->getSecsPerTurn());

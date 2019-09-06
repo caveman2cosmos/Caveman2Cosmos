@@ -12,14 +12,21 @@
 Assets/fpklive_token.txt
 !/Tools/*.dll
 XmlValidator.log
+desktop.ini
 
 .vscode/settings.json
 
 git_installer.exe
 Tools/Setup/.wget-hsts
 
-Assets/art/
-!Assets/art/Readme.txt
+Assets/**/*.dds
+Assets/**/*.nif
+Assets/**/*.kfm
+Assets/**/*.kf
 
 Sources/cov-int/
 Build/
+
+test-gen.bat
+
+CHANGELOG.md

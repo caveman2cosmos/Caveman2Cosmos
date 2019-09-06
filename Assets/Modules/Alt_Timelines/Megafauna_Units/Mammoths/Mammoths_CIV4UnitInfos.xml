@@ -223,6 +223,9 @@
 				<BuildingType>BUILDING_MODERN_STABLE</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+			</TechTypes>
 			<BonusType>BONUS_MAMMOTH</BonusType>
 			<iCost>140</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -365,7 +368,7 @@
 				<iRangedWaveSize>2</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_TRAINED_MAMMOTH</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_TRAINED_NEANDERTHAL_MAMMOTH</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -1070,6 +1073,9 @@
 				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+			</TechTypes>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>

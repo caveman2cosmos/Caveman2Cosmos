@@ -48,8 +48,6 @@ RC="$(PSDK)\bin\rc.exe"
 ## Overwritten by enviroment variable FASTDEP_FULL_PATH
 FD="..\Build\deps\fastdep\fastdep.exe"
 
-GITVERSION="..\Tools\C2C-GitVersion.exe"
-
 #### DEFINES ####
 ## copy the following lines into "Additional options" in NMAKE properties
 ## This will make VC++ aware of what is defined and what isn't, which affects the help popup and red lines
@@ -57,8 +55,8 @@ GITVERSION="..\Tools\C2C-GitVersion.exe"
 ## Assert adds /DFASSERT_ENABLE, which should be added to additional options too, if you care.
 ## However you will only be able to tell a difference if you do something with asserts other than FAssert() or FAssertMsg()
 
-Debug_DEFINES=/DWIN32 /D_WINDOWS /D_USRDLL /D_DEBUG
-Release_DEFINES=/DWIN32 /D_WINDOWS /D_USRDLL /DNDEBUG /DFINAL_RELEASE
+Debug_DEFINES=/DWIN32 /D_WINDOWS /D_USRDLL /D_DEBUG /DBUILD_TARGET=$(TARGET)
+Release_DEFINES=/DWIN32 /D_WINDOWS /D_USRDLL /DNDEBUG /DFINAL_RELEASE /DBUILD_TARGET=$(TARGET)
 
 #### You shouldn't need to modify anything beyond this point ####
 #################################################################
@@ -233,6 +231,8 @@ clean:
 		$(Target_PCH) $(Target_PDB) $(Target_OTHER)) DO @IF EXIST "%i" DEL "%i"
 
 build: $(Target_BIN)
+
+stage: $(Target_BIN)
 !IFDEF YOURMOD
 	-COPY "$(Target_BIN)" "$(YOURMOD)\Assets\."
 	-COPY "$(Target_PDB)" "$(YOURMOD)\Assets\."
@@ -240,7 +240,7 @@ build: $(Target_BIN)
 
 precompile: Make_Dir Target_unfinished $(Target_PCH)
 
-source_list: gitversion Make_Dir
+source_list: Make_Dir
 	@ECHO Building source list
 	@ECHO SOURCES= \> $(FILE_DEPENDS)
 	@FOR %j in ($(SUBDIRS)) DO @(FOR %i IN ($(SOURCE_DIR)\%j\*.cpp) DO @ECHO %i \>> $(FILE_DEPENDS))
@@ -248,10 +248,6 @@ source_list: gitversion Make_Dir
 	@ECHO OBJS= \>> $(FILE_DEPENDS)
 	@FOR %j in ($(SUBDIRS)) DO @(FOR /F "delims=." %i IN ('dir /b $(SOURCE_DIR)\%j\*.cpp') DO @ECHO. $(TARGET_DIR)\%j\%i.obj \>> $(FILE_DEPENDS))
 	@ECHO.>> $(FILE_DEPENDS)
-
-gitversion:
-	@ECHO Running GitVersion
-	@$(GITVERSION)
 
 fastdep:
 	@ECHO Running fastdep

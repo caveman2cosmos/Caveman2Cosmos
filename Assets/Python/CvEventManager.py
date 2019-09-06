@@ -404,17 +404,37 @@ class CvEventManager:
 							self.beginEvent(5, (px, py))
 							return 1
 
+			elif iModifiers == 2:
+
+				if DebugUtils.bDebugMode:
+
+					if bShift and bCtrl:
+
+						if key == InputTypes.KB_P:
+							import ChangePlayer
+							ChangePlayer.changeCivPopup()
+							return 1
+
+						elif key == InputTypes.KB_L:
+							import ChangePlayer
+							ChangePlayer.changeHumanPopup()
+							return 1
+
+						elif key == InputTypes.KB_U:
+							import ChangePlayer
+							ChangePlayer.updateGraphics()
+							return 1
+
 			elif iModifiers == 3:
+
+				if key == 16: # D
+					DebugUtils.toggleDebugMode()
+					return 1
 
 				if DebugUtils.bDebugMode:
 					if key == InputTypes.KB_U:
 						DebugUtils.putOneOfEveryUnit()
-
-		elif eventType == 7: # Key up
-
-			if iModifiers == 3 and not self.bNetworkMP:
-				if key == 16: # D
-					DebugUtils.toggleDebugMode()
+						return 1
 		return 0
 
 
@@ -481,6 +501,9 @@ class CvEventManager:
 			self.bNetworkMP = True
 		else:
 			self.bNetworkMP = False
+
+		# This is too early to actually set the initial camera zoom level, so raise a flag so it will happen later.
+		CvScreensInterface.mainInterface.bSetStartZoom = True
 
 		self.iTurnTopCiv = GAME.getGameTurn()
 		self.iTurnsToTopCiv = 49 - (self.iTurnTopCiv % 50)
@@ -688,7 +711,7 @@ class CvEventManager:
 							continue
 
 						if not GAME.getSorenRandNum(5 * iWorldSize, "Zizkov"):
-							MAP.setRevealedPlots(iTeamX, False, False)
+							GC.getMap().resetRevealedPlots(iTeamX)
 							if iPlayer == iPlayerAct:
 								CvUtil.sendMessage(TRNSLTR.getText("TXT_ZIZKOV1", (CyPlayerX.getCivilizationDescription(0),)), iPlayer)
 							elif iPlayerX == iPlayerAct:
@@ -1325,7 +1348,6 @@ class CvEventManager:
 				TECH_SATELLITES = GC.getInfoTypeForString("TECH_SATELLITES")
 				iTeam = GC.getPlayer(iPlayer).getTeam()
 				# Reveals whole map for owner
-				GC.getMap().resetRevealedPlots(iTeam)
 				for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
 					if iTeamX == iTeam:
 						continue
@@ -1335,7 +1357,7 @@ class CvEventManager:
 					if TECH_SATELLITES > -1 and CyTeamX.isHasTech(TECH_SATELLITES):
 						continue
 					# Covers whole map for others
-					GC.getMap().setRevealedPlots(iTeamX, False, False)
+					GC.getMap().resetRevealedPlots(iTeamX)
 				CvUtil.sendImmediateMessage(TRNSLTR.getText("TXT_GLOBAL_JAM",()))
 			elif KEY == "TSUKIJI":
 				CyTeam = GC.getTeam(GC.getPlayer(iPlayer).getTeam())
@@ -1554,7 +1576,7 @@ class CvEventManager:
 						bOK = False
 						continue
 					CyPlot = MAP.plotByIndex(i)
-					if CyPlot.getOwner() == iPlayer and CyPlot.getArea() == iArea and CyPlot.getImprovementType() != iBunker:
+					if CyPlot.getOwner() == iPlayer and CyPlot.getArea() == iArea and CyPlot.getImprovementType() != iBunker and CyPlot.canHaveImprovement(iBunker, -1, True):
 						x = CyPlot.getX()
 						y = CyPlot.getY()
 						iEast = x + 1

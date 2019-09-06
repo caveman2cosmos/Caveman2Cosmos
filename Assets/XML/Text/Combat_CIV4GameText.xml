@@ -8534,6 +8534,21 @@
 		<Polish>Awansowany (Kabina)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_PROMOTED_ARMED_GUARD</Tag>
+		<English>Promoted(Armed Guard)</English>
+		<French>
+			<Text>Prom.(Armed Guard)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Spanish>
+			<Text>Ascendida para evasión:Unidades ascendidas para ARMED_GUARD</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Awansowany (ARMED_GUARD)</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</Tag>
 		<English>Promoted(Transport Fighters)</English>
 		<French>

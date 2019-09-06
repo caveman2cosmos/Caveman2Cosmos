@@ -77,9 +77,9 @@
 				<BuildingType>BUILDING_BISON_TRAINER_EFFECT</BuildingType>
 				<BuildingType>BUILDING_BISON_TRAINER</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ARCHERY</PrereqTech>
+				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_BISON</BonusType>
 			<iCost>120</iCost>

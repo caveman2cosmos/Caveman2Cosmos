@@ -1,7 +1,4 @@
 @echo off
-PUSHD "%~dp0..\.."
-
-SET version=v%APPVEYOR_BUILD_VERSION%-alpha
 
 if "%APPVEYOR_REPO_BRANCH%" neq "%release_branch%" (
     echo Skipping deployment due to not being on release branch
@@ -13,16 +10,25 @@ if "%APPVEYOR_PULL_REQUEST_TITLE%" neq "" (
     exit /b 0
 )
 
+PUSHD "%~dp0..\.."
+SET version=v%APPVEYOR_BUILD_VERSION%-alpha
+SET "root_dir=%cd%"
+if not exist "%build_dir%" goto :skip_delete
+rmdir /Q /S "%build_dir%"
+:skip_delete
+
 echo C2C %version% DEPLOYMENT
 echo.
 
-echo Packing FPKs...
-call Tools\PackFPKs.bat CI
-if %ERRORLEVEL% neq 0 (
-    echo Packing FPKs failed, aborting deployment
-    exit /B 1
-)
+:: INIT GIT WRITE ---------------------------------------------
+powershell -ExecutionPolicy Bypass -File "%~dp0\InitGit.ps1"
 
+:: SET GIT RELEASE TAG -----------------------------------------
+echo Setting release version build tag on git ...
+git tag -a %version% %APPVEYOR_REPO_COMMIT% -m "%version%"
+git push --tags
+
+:: COMPILE -----------------------------------------------------
 echo Building FinalRelease DLL...
 call Tools\MakeDLLFinalRelease.bat
 if not errorlevel 0 (
@@ -30,34 +36,53 @@ if not errorlevel 0 (
     exit /B 2
 )
 
+:: SOURCE INDEXING ---------------------------------------------
 :source_indexing
 call Tools\CI\DoSourceIndexing.bat
 
-cd /d "%~dp0..\.."
-set "root_dir=%cd%"
-if not exist "%build_dir%" goto :checkout
-rmdir /Q /S "%build_dir%"
-
-:checkout
+:: CHECK OUT SVN -----------------------------------------------
 echo Checking out SVN working copy for deployment...
 svn checkout %svn_url% "%build_dir%"
 
-:update_svn
+:: PACK FPKS ---------------------------------------------------
+:: We copy built FPKs and the fpklive token back from SVN 
+:: so we can build a patch FPK against them. This reduces how
+:: much we need to push back to SVN, and how much players
+:: need to sync
+echo Copying FPKs from SVN...
+xcopy "%build_dir%\Assets\*.FPK" "Assets" /Y
+xcopy "%build_dir%\Assets\fpklive_token.txt" "Assets" /Y
+
+echo Packing FPKs...
+call Tools\FPKLive.exe
+if %ERRORLEVEL% neq 0 (
+    echo Packing FPKs failed, aborting deployment
+    exit /B 1
+)
+
+:: STAGE TO SVN ------------------------------------------------
 :: HERE IS WHERE YOU ADJUST WHAT TO PUT IN THE BUILD
 echo Updating SVN working copy from git...
 set ROBOCOPY_FLAGS=/MIR /NFL /NDL /NJH /NJS /NS /NC
 robocopy Assets "%build_dir%\Assets" %ROBOCOPY_FLAGS%
 robocopy PrivateMaps "%build_dir%\PrivateMaps" %ROBOCOPY_FLAGS%
 robocopy Resource "%build_dir%\Resource" %ROBOCOPY_FLAGS%
-xcopy Caveman2Cosmos.ini "%build_dir%" /R /Y
+robocopy Docs "%build_dir%\Docs" %ROBOCOPY_FLAGS%
+xcopy "Caveman2Cosmos.ini" "%build_dir%" /R /Y
 xcopy "Caveman2Cosmos Config.ini" "%build_dir%" /R /Y
+xcopy "C2C.ico" "%build_dir%" /R /Y
+xcopy "CIV_C2C.ico" "%build_dir%" /R /Y
 
-echo Update full SVN changelog ...
-call github_changelog_generator --cache-file "github-changelog-http-cache" --cache-log "github-changelog-logger.log" -u caveman2cosmos --token %git_access_token% --future-release %version% --release-branch %release_branch% --output "%build_dir%\CHANGELOG.md"
-
+:: GENERATE NEW CHANGES LOG ------------------------------------
 echo Generate SVN commit description...
-call github_changelog_generator --cache-file "github-changelog-http-cache" --cache-log "github-changelog-logger.log" -u caveman2cosmos --token %git_access_token% --future-release %version% --release-branch %release_branch% --unreleased-only --output "%root_dir%\commit_desc.md"
+call Tools\CI\git-chglog_windows_amd64.exe --output "%root_dir%\commit_desc.md" --config Tools\CI\.chglog\config.yml %version%
 
+:: GENERATE FULL CHANGELOG -------------------------------------
+echo Update full SVN changelog ...
+call Tools\CI\git-chglog_windows_amd64.exe --output "%build_dir%\CHANGELOG.md" --config Tools\CI\.chglog\config.yml
+REM call github_changelog_generator --cache-file "github-changelog-http-cache" --cache-log "github-changelog-logger.log" -u caveman2cosmos --token %git_access_token% --future-release %version% --release-branch %release_branch% --output "%build_dir%\CHANGELOG.md"
+
+:: DETECT SVN CHANGES ------------------------------------------
 echo Detecting working copy changes...
 PUSHD "%build_dir%"
 set SVN=svn.exe
@@ -66,16 +91,22 @@ for /F "tokens=* delims=! " %%A in (..\missing.list) do (svn delete "%%A")
 del ..\missing.list 2>NUL
 "%SVN%" add * --force
 
+:: COMMIT TO SVN -----------------------------------------------
 echo Commiting new build to SVN...
 :: TODO auto generate a good changelist
 "%SVN%" commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
+
+:: SET SVN RELEASE TAG -----------------------------------------
+echo Setting SVN commit tag on git ...
+for /f "delims=" %%a in ('svnversion') do @set svn_rev=%%a
+
 POPD
+
+git tag -a SVN-%svn_rev% %APPVEYOR_REPO_COMMIT% -m "SVN-%svn_rev%"
+git push --tags
 
 REM 7z a -r -x!.svn "%release_prefix%-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\*.*"
 REM 7z a -x!.svn "%release_prefix%-CvGameCoreDLL-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\Assets\CvGameCoreDLL.*"
-
-cd /d "%~dp0..\.."
-powershell -ExecutionPolicy Bypass -File "%~dp0\CommitTag.ps1"
 
 echo Done!
 exit /B 0

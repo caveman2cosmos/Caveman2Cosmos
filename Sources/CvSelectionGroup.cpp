@@ -534,9 +534,6 @@ void CvSelectionGroup::updateTimers()
 // Returns true if group was killed...
 bool CvSelectionGroup::doDelayedDeath()
 {
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
-
 	FAssert(getOwnerINLINE() != NO_PLAYER);
 
 	if (isBusy())
@@ -544,16 +541,21 @@ bool CvSelectionGroup::doDelayedDeath()
 		return false;
 	}
 
-	pUnitNode = headUnitNode();
-
-	while (pUnitNode != NULL)
+	// Keep looping the unit list until no more units have delayed death.
+	// We need to restart loop each time a unit is actually killed because it can invalidate the 
+	// unit iterators by deleting other units.
+	bool wasDeath = true;
+	while (wasDeath)
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = nextUnitNode(pUnitNode);
-
-		if (pLoopUnit != NULL && !GET_PLAYER(getOwnerINLINE()).isTempUnit(pLoopUnit) )
+		wasDeath = false;
+		for (unit_iterator itr = beginValidUnits(); itr != endValidUnits(); ++itr)
 		{
-			pLoopUnit->doDelayedDeath();
+			if(!GET_PLAYER(getOwnerINLINE()).isTempUnit(&(*itr))
+				&& itr->doDelayedDeath())
+			{
+				wasDeath = true;
+				break;
+			}
 		}
 	}
 

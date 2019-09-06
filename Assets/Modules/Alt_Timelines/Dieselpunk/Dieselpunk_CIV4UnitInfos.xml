@@ -55,9 +55,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_ZEPPELINS</PrereqTech>
+			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_DIESELPUNK</PrereqTech>
+				<PrereqTech>TECH_ZEPPELINS</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_HYDROGEN</BonusType>
 			<PrereqBonuses>
@@ -157,9 +157,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_ZEPPELINS</PrereqTech>
+			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_DIESELPUNK</PrereqTech>
+				<PrereqTech>TECH_ZEPPELINS</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_DIESEL</BonusType>
 			<PrereqBonuses>
@@ -613,9 +613,6 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_FLIGHT</PrereqTech>
-			</TechTypes>
 			<BonusType>BONUS_DIESELPUNK</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_AMMO</BonusType>
@@ -709,10 +706,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_ARMORED_VEHICLES</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_DIESELPUNK</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			<BonusType>BONUS_DIESELPUNK</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESEL</BonusType>

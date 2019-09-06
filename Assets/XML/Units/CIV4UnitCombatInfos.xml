@@ -7399,6 +7399,11 @@
 			<Button>Art/Interface/Buttons/units/sparth/categories/promoted_stall.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
+			<Type>UNITCOMBAT_PROMOTED_ARMED_GUARD</Type>
+			<Description>TXT_KEY_UNITCOMBAT_PROMOTED_ARMED_GUARD</Description>
+			<Button>,Art/Buttons/Promotions/ArmedGuard1Promotion.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
 			<Type>UNITCOMBAT_REPTILE_DINOSAUR</Type>
 			<Description>TXT_KEY_UNITCOMBAT_REPTILE_DINOSAUR</Description>
 			<Button>Art/Interface/Buttons/units/sparth/categories/reptile.dds</Button>

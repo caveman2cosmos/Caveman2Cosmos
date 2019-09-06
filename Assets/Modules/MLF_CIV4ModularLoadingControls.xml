@@ -82,10 +82,6 @@
 					<Directory>zInterdependencies</Directory>
 					<bLoad>1</bLoad>
 				</Module>
-				<Module>
-					<Directory>zMovieFix</Directory>
-					<bLoad>1</bLoad>
-				</Module>
                 <Module>
 					<Directory>zTerrains</Directory>
 					<bLoad>1</bLoad>

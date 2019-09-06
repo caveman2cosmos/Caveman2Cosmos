@@ -73,9 +73,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_RHINO_TRAINER</PrereqBuilding>
-			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_IRON_WORKING</PrereqTech>
+				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_WARE_IRON</BonusType>
 			<iCost>225</iCost>

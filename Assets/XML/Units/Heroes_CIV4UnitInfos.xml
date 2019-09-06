@@ -7,195 +7,6 @@
 <!-- Unit Infos -->
 <Civ4UnitInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
-		<!-- FAKE HEROES -->
-		<UnitInfo>
-			<Class>UNITCLASS_NATIONAL_HERO</Class>
-			<Type>UNIT_NATIONAL_HERO</Type>
-			<Combat>UNITCOMBAT_HERO</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_H2H_SHORT_POLEARM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_SHORT_BLADE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_RIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOUNT_HORSE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_ELITE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NATIONAL_HERO</Description>
-			<Civilopedia>TXT_KEY_UNIT_NATIONAL_HERO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NATIONAL_HERO_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bPillage>1</bPillage>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_ATTACK</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_RESERVE</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_COUNTER</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_CITY_COUNTER</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<Buildings>
-				<BuildingType>BUILDING_AGRICULTURAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_COMMERCIAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_CULTURAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
-			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_MONARCHY</PrereqTech>
-			</TechTypes>
-			<iCost>-1</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iMoves>1</iMoves>
-			<iCombat>6</iCombat>
-			<iXPValueAttack>4</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
-			<iWithdrawalProb>10</iWithdrawalProb>
-			<iAsset>6</iAsset>
-			<iPower>8</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>1.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>0</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_HORSEMAN</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_RETINUE_BARD</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-			</FreePromotions>
-		</UnitInfo>
-		<UnitInfo>
-			<Class>UNITCLASS_MILITARY_HERO</Class>
-			<Type>UNIT_MILITARY_HERO</Type>
-			<Combat>UNITCOMBAT_HERO</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_H2H_SHORT_POLEARM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_SHORT_BLADE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_RIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOUNT_HORSE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_ELITE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_MILITARY_HERO</Description>
-			<Civilopedia>TXT_KEY_UNIT_MILITARY_HERO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MILITARY_HERO_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bPillage>1</bPillage>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_ATTACK</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_RESERVE</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_COUNTER</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_CITY_COUNTER</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<PrereqTech>TECH_WRITING</PrereqTech>
-			<iCost>-1</iCost>
-			<iMoves>1</iMoves>
-			<iCombat>6</iCombat>
-			<iXPValueAttack>4</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
-			<iWithdrawalProb>10</iWithdrawalProb>
-			<iAsset>6</iAsset>
-			<iPower>8</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>1.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>0</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_HORSEMAN</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_RETINUE_STRATEGIST</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-			</FreePromotions>
-		</UnitInfo>
-		<!-- HEROES -->
 		<UnitInfo>
 			<Class>UNITCLASS_HUITZILOPOCHTLI</Class>
 			<Type>UNIT_HUITZILOPOCHTLI</Type>
@@ -274,9 +85,9 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_WRITING</PrereqTech>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
+				<PrereqTech>TECH_WRITING</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_AZTEC</BonusType>
 			<iCost>750</iCost>
@@ -558,9 +369,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<BonusType>BONUS_INCAN</BonusType>
 			<iCost>1750</iCost>
 			<iMoves>2</iMoves>
@@ -992,9 +801,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_MONARCHY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<BonusType>BONUS_ROMAN</BonusType>
 			<iCost>800</iCost>
 			<iMoves>2</iMoves>
@@ -1483,9 +1290,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_THEOLOGY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<BonusType>BONUS_SPANISH</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
@@ -1601,9 +1406,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<BonusType>BONUS_SPANISH</BonusType>
 			<iCost>1650</iCost>
 			<iMoves>2</iMoves>
@@ -1738,9 +1541,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_HUMANISM</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_HUMANISM</PrereqTech>
 			<BonusType>BONUS_FRENCH</BonusType>
 			<iCost>1650</iCost>
 			<iMoves>2</iMoves>
@@ -1834,9 +1635,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<BonusType>BONUS_FRENCH</BonusType>
 			<iCost>1750</iCost>
 			<iMoves>2</iMoves>
@@ -1967,9 +1766,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_ASTRONOMY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
 			<BonusType>BONUS_ENGLISH</BonusType>
 			<iCost>1700</iCost>
 			<iMoves>2</iMoves>
@@ -2889,9 +2686,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_PERSIAN</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
@@ -3013,9 +2808,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<BonusType>BONUS_PERSIAN</BonusType>
 			<iCost>900</iCost>
 			<iMoves>2</iMoves>
@@ -3140,9 +2933,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_AESTHETICS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<BonusType>BONUS_INDIAN</BonusType>
 			<iCost>1050</iCost>
 			<iMoves>2</iMoves>
@@ -3272,9 +3063,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
 			<BonusType>BONUS_INDIAN</BonusType>
 			<iCost>2500</iCost>
 			<iMoves>2</iMoves>
@@ -3404,9 +3193,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_ASTROLABE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ASTROLABE</PrereqTech>
 			<BonusType>BONUS_CHINESE</BonusType>
 			<iCost>1640</iCost>
 			<iMoves>2</iMoves>
@@ -3536,9 +3323,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			<BonusType>BONUS_CHINESE</BonusType>
 			<iCost>1000</iCost>
 			<iMoves>2</iMoves>
@@ -3942,9 +3727,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_MONGOLIAN</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
@@ -4072,9 +3855,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_MONGOLIAN</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
@@ -4214,9 +3995,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_MUSIC</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MUSIC</PrereqTech>
 			<BonusType>BONUS_MALINESE</BonusType>
 			<iCost>1100</iCost>
 			<iMoves>2</iMoves>
@@ -4576,9 +4355,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_IRON_WORKING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<BonusType>BONUS_CARTHAGINIAN</BonusType>
 			<iCost>850</iCost>
 			<iMoves>2</iMoves>
@@ -4721,9 +4498,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_CALENDAR</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<BonusType>BONUS_CELTIC</BonusType>
 			<iCost>950</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
@@ -5105,9 +4880,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_VIKING</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
@@ -5246,9 +5019,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<BonusType>BONUS_OTTOMAN</BonusType>
 			<iCost>1750</iCost>
 			<iMoves>2</iMoves>
@@ -5372,9 +5143,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<BonusType>BONUS_OTTOMAN</BonusType>
 			<iCost>1650</iCost>
 			<iMoves>2</iMoves>
@@ -5513,9 +5282,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_CALENDAR</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<BonusType>BONUS_KOREAN</BonusType>
 			<iCost>950</iCost>
 			<iMoves>2</iMoves>
@@ -5637,9 +5404,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_ASTRONOMY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
 			<BonusType>BONUS_KOREAN</BonusType>
 			<iCost>1700</iCost>
 			<iMoves>2</iMoves>
@@ -6006,9 +5771,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_HUMANISM</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_HUMANISM</PrereqTech>
 			<BonusType>BONUS_IROQUOIS</BonusType>
 			<iCost>1650</iCost>
 			<iMoves>2</iMoves>
@@ -6130,9 +5893,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			<BonusType>BONUS_IROQUOIS</BonusType>
 			<iCost>1000</iCost>
 			<iMoves>2</iMoves>
@@ -6268,9 +6029,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_CALENDAR</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<BonusType>BONUS_MAYAN</BonusType>
 			<iCost>950</iCost>
 			<iMoves>2</iMoves>
@@ -6397,9 +6156,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_NATIONALISM</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<BonusType>BONUS_MAYAN</BonusType>
 			<iCost>2200</iCost>
 			<iMoves>2</iMoves>
@@ -6533,9 +6290,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_BYZANTINE</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
@@ -6668,9 +6423,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_NATIONALISM</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<BonusType>BONUS_BYZANTINE</BonusType>
 			<iCost>2200</iCost>
 			<iMoves>2</iMoves>
@@ -6809,9 +6562,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_COMPASS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_COMPASS</PrereqTech>
 			<BonusType>BONUS_PORTUGUESE</BonusType>
 			<iCost>1520</iCost>
 			<iMoves>2</iMoves>
@@ -7071,9 +6822,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
 			<BonusType>BONUS_DUTCH</BonusType>
 			<iCost>2500</iCost>
 			<iMoves>2</iMoves>
@@ -7328,9 +7077,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			<BonusType>BONUS_BABYLONIAN</BonusType>
 			<iCost>950</iCost>
 			<iMoves>2</iMoves>
@@ -7454,9 +7201,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_MATHEMATICS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<BonusType>BONUS_BABYLONIAN</BonusType>
 			<iCost>850</iCost>
 			<iMoves>2</iMoves>
@@ -7669,9 +7414,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_ALPHABET</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ALPHABET</PrereqTech>
 			<BonusType>BONUS_AKKAD</BonusType>
 			<iCost>850</iCost>
 			<iMoves>2</iMoves>
@@ -7784,9 +7527,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_MUSIC</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MUSIC</PrereqTech>
 			<BonusType>BONUS_KHMER</BonusType>
 			<iCost>1100</iCost>
 			<iMoves>2</iMoves>
@@ -8293,9 +8034,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_OPTICS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_OPTICS</PrereqTech>
 			<BonusType>BONUS_POLYNESIAN</BonusType>
 			<iCost>1330</iCost>
 			<iMoves>2</iMoves>
@@ -8446,9 +8185,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_LIBERALISM</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_LIBERALISM</PrereqTech>
 			<BonusType>BONUS_BRAZILIAN</BonusType>
 			<iCost>2050</iCost>
 			<iMoves>2</iMoves>
@@ -8959,9 +8696,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_MONOTHEISM</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MONOTHEISM</PrereqTech>
 			<BonusType>BONUS_ISRAELI</BonusType>
 			<iCost>750</iCost>
 			<iMoves>2</iMoves>
@@ -9234,9 +8969,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_THEOLOGY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<BonusType>BONUS_POLISH</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
@@ -9511,9 +9244,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_ASTRONOMY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
 			<BonusType>BONUS_TURKMEN</BonusType>
 			<iCost>1700</iCost>
 			<iMoves>2</iMoves>
@@ -9645,9 +9376,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<BonusType>BONUS_TURKMEN</BonusType>
 			<iCost>1650</iCost>
 			<iMoves>2</iMoves>
@@ -9918,9 +9647,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_THEOLOGY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<BonusType>BONUS_TIBETAN</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
@@ -10344,9 +10071,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_INDONESIAN</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
@@ -10571,9 +10296,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_MONARCHY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<BonusType>BONUS_NUBIAN</BonusType>
 			<iCost>800</iCost>
 			<iMoves>2</iMoves>
@@ -10849,9 +10572,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_COMPASS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_COMPASS</PrereqTech>
 			<BonusType>BONUS_SWAHILI</BonusType>
 			<iCost>1520</iCost>
 			<iMoves>2</iMoves>
@@ -10993,9 +10714,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<BonusType>BONUS_AUSTRIAN</BonusType>
 			<iCost>1750</iCost>
 			<iMoves>2</iMoves>
@@ -11127,9 +10846,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_RIFLING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_AUSTRIAN</BonusType>
 			<iCost>2150</iCost>
 			<iMoves>2</iMoves>
@@ -11547,9 +11264,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_NATIONALISM</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<BonusType>BONUS_UIGHUR</BonusType>
 			<iCost>2200</iCost>
 			<iMoves>2</iMoves>
@@ -11680,9 +11395,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_UIGHUR</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
@@ -11827,9 +11540,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_ALPHABET</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ALPHABET</PrereqTech>
 			<BonusType>BONUS_PHOENICAN</BonusType>
 			<iCost>850</iCost>
 			<iMoves>2</iMoves>
@@ -11957,9 +11668,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_MATHEMATICS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<BonusType>BONUS_PHOENICAN</BonusType>
 			<iCost>850</iCost>
 			<iMoves>2</iMoves>
@@ -12228,9 +11937,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_RIFLING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_CANADIAN</BonusType>
 			<iCost>2150</iCost>
 			<iMoves>2</iMoves>
@@ -12770,9 +12477,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<BonusType>BONUS_SIAMESE</BonusType>
 			<iCost>1750</iCost>
 			<iMoves>2</iMoves>
@@ -13007,9 +12712,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<BonusType>BONUS_CHOLA</BonusType>
 			<iCost>1750</iCost>
 			<iMoves>2</iMoves>
@@ -13152,9 +12855,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_MUSIC</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MUSIC</PrereqTech>
 			<BonusType>BONUS_HAUSA</BonusType>
 			<iCost>1100</iCost>
 			<iMoves>2</iMoves>
@@ -13423,9 +13124,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_KONGOLESE</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
@@ -13549,9 +13248,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<BonusType>BONUS_KONGOLESE</BonusType>
 			<iCost>1750</iCost>
 			<iMoves>2</iMoves>
@@ -13694,9 +13391,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_HUMANISM</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_HUMANISM</PrereqTech>
 			<BonusType>BONUS_HOLYROMAN</BonusType>
 			<iCost>1650</iCost>
 			<iMoves>2</iMoves>
@@ -13819,9 +13514,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_BANKING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_BANKING</PrereqTech>
 			<BonusType>BONUS_VENICE</BonusType>
 			<iCost>1500</iCost>
 			<iMoves>2</iMoves>
@@ -13967,9 +13660,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_ALCHEMY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<BonusType>BONUS_BERBER</BonusType>
 			<iCost>1300</iCost>
 			<iMoves>2</iMoves>
@@ -14096,9 +13787,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_BERBER</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
@@ -14239,9 +13928,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_MONARCHY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<BonusType>BONUS_ASSYRIAN</BonusType>
 			<iCost>800</iCost>
 			<iMoves>2</iMoves>
@@ -14365,9 +14052,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_ALPHABET</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ALPHABET</PrereqTech>
 			<BonusType>BONUS_ASSYRIAN</BonusType>
 			<iCost>850</iCost>
 			<iMoves>2</iMoves>
@@ -16232,9 +15917,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqBuilding>BUILDING_HORSE_TRAINER</PrereqBuilding>
-			<TechTypes>
-				<PrereqTech>TECH_RIFLING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_COMANCHE</BonusType>
 			<iCost>2150</iCost>
 			<iMoves>2</iMoves>
@@ -16469,9 +16152,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_RIFLING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_MEXICAN</BonusType>
 			<iCost>2150</iCost>
 			<iMoves>2</iMoves>
@@ -16689,9 +16370,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			<BonusType>BONUS_NAVAJO</BonusType>
 			<iCost>1000</iCost>
 			<iMoves>1</iMoves>
@@ -16815,9 +16494,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_RIFLING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_MEXICAN</BonusType>
 			<iCost>2150</iCost>
 			<iMoves>2</iMoves>
@@ -21398,9 +21075,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<BonusType>BONUS_ABBASID</BonusType>
 			<iCost>900</iCost>
 			<iMoves>2</iMoves>
@@ -21647,9 +21322,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_ALCHEMY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<BonusType>BONUS_KILLKE</BonusType>
 			<iCost>1300</iCost>
 			<iMoves>2</iMoves>
@@ -22340,9 +22013,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_KUSHAN</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
@@ -22892,9 +22563,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_ASTRONOMY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
 			<BonusType>BONUS_LEBANON</BonusType>
 			<iCost>1700</iCost>
 			<iMoves>2</iMoves>
@@ -23245,9 +22914,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<BonusType>BONUS_LONGOBARDI</BonusType>
 			<iCost>900</iCost>
 			<iMoves>2</iMoves>
@@ -23530,9 +23197,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_THEOLOGY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<BonusType>BONUS_LUNDA</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
@@ -23656,9 +23321,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_LUSITANI</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
@@ -23769,9 +23432,9 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_WRITING</PrereqTech>
+			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
+				<PrereqTech>TECH_WRITING</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_LYDIAN</BonusType>
 			<iCost>750</iCost>
@@ -25034,9 +24697,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_ASTRONOMY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
 			<BonusType>BONUS_MING</BonusType>
 			<iCost>1700</iCost>
 			<iMoves>2</iMoves>
@@ -25404,9 +25065,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<BonusType>BONUS_MOCHE</BonusType>
 			<iCost>900</iCost>
 			<iMoves>2</iMoves>
@@ -25554,9 +25213,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_THEOLOGY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<BonusType>BONUS_MOCOVI</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
@@ -25982,9 +25639,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_LIBERALISM</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_LIBERALISM</PrereqTech>
 			<BonusType>BONUS_MUISCA</BonusType>
 			<iCost>2050</iCost>
 			<iMoves>2</iMoves>
@@ -26658,9 +26313,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			<BonusType>BONUS_NAZCA</BonusType>
 			<iCost>950</iCost>
 			<iMoves>2</iMoves>
@@ -27208,9 +26861,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_MATHEMATICS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<BonusType>BONUS_NUMIDIAN</BonusType>
 			<iCost>850</iCost>
 			<iMoves>2</iMoves>
@@ -27335,9 +26986,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
 			<BonusType>BONUS_ODAWA</BonusType>
 			<iCost>2500</iCost>
 			<iMoves>2</iMoves>
@@ -27467,9 +27116,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_NATIONALISM</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<BonusType>BONUS_OMAN</BonusType>
 			<iCost>2200</iCost>
 			<iMoves>2</iMoves>
@@ -28147,9 +27794,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<BonusType>BONUS_PANAMAN</BonusType>
 			<iCost>1650</iCost>
 			<iMoves>2</iMoves>
@@ -28283,9 +27928,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
 			<BonusType>BONUS_PARAGUAYAN</BonusType>
 			<iCost>2500</iCost>
 			<iMoves>2</iMoves>
@@ -28717,9 +28360,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_CALENDAR</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<BonusType>BONUS_PHILISTINES</BonusType>
 			<iCost>950</iCost>
 			<iMoves>2</iMoves>
@@ -29433,9 +29074,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			<BonusType>BONUS_QIN</BonusType>
 			<iCost>1000</iCost>
 			<iMoves>2</iMoves>
@@ -30375,9 +30014,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_LIBERALISM</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_LIBERALISM</PrereqTech>
 			<BonusType>BONUS_GYPSY</BonusType>
 			<iCost>2050</iCost>
 			<iMoves>2</iMoves>
@@ -30636,9 +30273,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_ASTRONOMY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
 			<BonusType>BONUS_SAFAVIDS</BonusType>
 			<iCost>1700</iCost>
 			<iMoves>2</iMoves>
@@ -31564,9 +31199,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_MUSIC</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MUSIC</PrereqTech>
 			<BonusType>BONUS_SERBIAN</BonusType>
 			<iCost>1100</iCost>
 			<iMoves>2</iMoves>
@@ -31788,9 +31421,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_MATHEMATICS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<BonusType>BONUS_SICILIAN</BonusType>
 			<iCost>850</iCost>
 			<iMoves>2</iMoves>
@@ -33188,9 +32819,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_ALCHEMY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<BonusType>BONUS_TAIRONA</BonusType>
 			<iCost>1300</iCost>
 			<iMoves>2</iMoves>
@@ -33421,9 +33050,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_MATHEMATICS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<BonusType>BONUS_ADENA</BonusType>
 			<iCost>850</iCost>
 			<iMoves>2</iMoves>
@@ -33798,9 +33425,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_ASTRONOMY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
 			<BonusType>BONUS_TARASCAN</BonusType>
 			<iCost>1700</iCost>
 			<iMoves>2</iMoves>
@@ -34294,9 +33919,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			<BonusType>BONUS_THRACIAN</BonusType>
 			<iCost>1000</iCost>
 			<iMoves>2</iMoves>
@@ -34418,9 +34041,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<BonusType>BONUS_THREE_KINGDOMS</BonusType>
 			<iCost>900</iCost>
 			<iMoves>2</iMoves>
@@ -34533,9 +34154,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_MUSIC</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MUSIC</PrereqTech>
 			<BonusType>BONUS_TIMURID</BonusType>
 			<iCost>150</iCost>
 			<iMoves>2</iMoves>
@@ -34812,9 +34431,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_LIBERALISM</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_LIBERALISM</PrereqTech>
 			<BonusType>BONUS_TLAXCALTEC</BonusType>
 			<iCost>2050</iCost>
 			<iMoves>2</iMoves>
@@ -35817,9 +35434,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_THEOLOGY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<BonusType>BONUS_TUNISIAN</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
@@ -36452,9 +36067,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_HUMANISM</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_HUMANISM</PrereqTech>
 			<BonusType>BONUS_UZBEKS</BonusType>
 			<iCost>1650</iCost>
 			<iMoves>2</iMoves>
@@ -36594,9 +36207,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_HUMANISM</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_HUMANISM</PrereqTech>
 			<BonusType>BONUS_VALDIVIA</BonusType>
 			<iCost>1650</iCost>
 			<iMoves>2</iMoves>
@@ -38274,9 +37885,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_MUSIC</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MUSIC</PrereqTech>
 			<BonusType>BONUS_YAGUA</BonusType>
 			<iCost>1100</iCost>
 			<iMoves>2</iMoves>
@@ -38424,9 +38033,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_LIBERALISM</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_LIBERALISM</PrereqTech>
 			<BonusType>BONUS_YANOMAMI</BonusType>
 			<iCost>2050</iCost>
 			<iMoves>2</iMoves>
@@ -38571,9 +38178,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_THEOLOGY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<BonusType>BONUS_YEMEN</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
@@ -39427,9 +39032,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_HUMANISM</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_HUMANISM</PrereqTech>
 			<BonusType>BONUS_BATEK</BonusType>
 			<iCost>1650</iCost>
 			<iMoves>2</iMoves>
@@ -39704,9 +39307,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_ALCHEMY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<BonusType>BONUS_BEDOUIN</BonusType>
 			<iCost>1300</iCost>
 			<iMoves>2</iMoves>
@@ -39949,9 +39550,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
 			<BonusType>BONUS_AFGHANISTAN</BonusType>
 			<iCost>2500</iCost>
 			<iMoves>2</iMoves>
@@ -40278,9 +39877,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_BRITON</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
@@ -40609,9 +40206,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_HUMANISM</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_HUMANISM</PrereqTech>
 			<BonusType>BONUS_CANARI</BonusType>
 			<iCost>1650</iCost>
 			<iMoves>2</iMoves>
@@ -40829,9 +40424,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			<BonusType>BONUS_CARAL_SUPE</BonusType>
 			<iCost>1000</iCost>
 			<iMoves>2</iMoves>
@@ -41403,9 +40996,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_CALENDAR</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<BonusType>BONUS_CHAVIN</BonusType>
 			<iCost>950</iCost>
 			<iMoves>2</iMoves>
@@ -42416,9 +42007,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_LIBERALISM</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_LIBERALISM</PrereqTech>
 			<BonusType>BONUS_ALACALUFE</BonusType>
 			<iCost>2050</iCost>
 			<iMoves>2</iMoves>
@@ -42761,9 +42350,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			<BonusType>BONUS_DACIAN</BonusType>
 			<iCost>950</iCost>
 			<iMoves>2</iMoves>
@@ -43500,9 +43087,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			<BonusType>BONUS_ETRUSCAN</BonusType>
 			<iCost>1000</iCost>
 			<iMoves>2</iMoves>
@@ -44012,9 +43597,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_NATIONALISM</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<BonusType>BONUS_FINNISH</BonusType>
 			<iCost>2200</iCost>
 			<iMoves>2</iMoves>
@@ -44500,9 +44083,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_MATHEMATICS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<BonusType>BONUS_GALATIAN</BonusType>
 			<iCost>850</iCost>
 			<iMoves>2</iMoves>
@@ -44633,9 +44214,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
 			<BonusType>BONUS_GAUCHO</BonusType>
 			<iCost>2500</iCost>
 			<iMoves>2</iMoves>
@@ -45535,9 +45114,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<BonusType>BONUS_GUANCHES</BonusType>
 			<iCost>1650</iCost>
 			<iMoves>2</iMoves>
@@ -45656,9 +45233,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<BonusType>BONUS_GUARANI</BonusType>
 			<iCost>1650</iCost>
 			<iMoves>2</iMoves>
@@ -45777,9 +45352,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<BonusType>BONUS_GUATEMALA</BonusType>
 			<iCost>1650</iCost>
 			<iMoves>2</iMoves>
@@ -46024,9 +45597,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_MATHEMATICS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<BonusType>BONUS_HELVETII</BonusType>
 			<iCost>850</iCost>
 			<iMoves>2</iMoves>
@@ -46355,9 +45926,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_ASTRONOMY</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
 			<BonusType>BONUS_ALGIER</BonusType>
 			<iCost>1700</iCost>
 			<iMoves>2</iMoves>
@@ -46733,9 +46302,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_NATIONALISM</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<BonusType>BONUS_HOPI</BonusType>
 			<iCost>2200</iCost>
 			<iMoves>2</iMoves>
@@ -46845,9 +46412,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<TechTypes>
-				<PrereqTech>TECH_MUSIC</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_MUSIC</PrereqTech>
 			<BonusType>BONUS_HUASTEC</BonusType>
 			<iCost>1100</iCost>
 			<iMoves>2</iMoves>
@@ -47965,9 +47530,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_NATIONALISM</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<BonusType>BONUS_JORDANIAN</BonusType>
 			<iCost>2200</iCost>
 			<iMoves>2</iMoves>
@@ -48184,9 +47747,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<BonusType>BONUS_JUTES</BonusType>
 			<iCost>900</iCost>
 			<iMoves>2</iMoves>
@@ -48577,9 +48138,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<TechTypes>
-				<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<BonusType>BONUS_KHAZARS</BonusType>
 			<iCost>900</iCost>
 			<iMoves>2</iMoves>

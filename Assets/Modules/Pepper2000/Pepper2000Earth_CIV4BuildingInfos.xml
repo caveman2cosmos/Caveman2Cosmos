@@ -2247,8 +2247,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<iCost>4810</iCost>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
-			<iCost>4010</iCost>
 			<TechTypes>
 				<PrereqTech>TECH_FSYSTEMS</PrereqTech>
 			</TechTypes>
@@ -2425,7 +2425,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_QUANTUM_TELEPORTATION</PrereqTech>
-			<iCost>2405</iCost>
+			<iCost>2305</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
@@ -2864,7 +2864,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MILITARY_ROBOTS</PrereqTech>
-			<iCost>2405</iCost>
+			<iCost>2865</iCost>
 			<CommerceChanges>
 				<iCommerce>30</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -4858,7 +4858,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LEDLIGHTING</PrereqTech>
-			<iCost>2404</iCost>
+			<iCost>2405</iCost>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
@@ -5281,7 +5281,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WEARABLE_ELECTRONICS</PrereqTech>
-			<iCost>2405</iCost>
+			<iCost>2305</iCost>
 			<ObsoleteTech>TECH_BIONICS</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -5319,7 +5319,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WEARABLE_ELECTRONICS</PrereqTech>
-			<iCost>2405</iCost>
+			<iCost>2305</iCost>
 			<ObsoleteTech>TECH_CYBERNETICS</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
@@ -5367,7 +5367,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WEARABLE_ELECTRONICS</PrereqTech>
-			<iCost>2405</iCost>
+			<iCost>2305</iCost>
 			<ObsoleteTech>TECH_CYBERNETICS</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -6021,6 +6021,11 @@
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_CAPITAL_ADMINISTRATION</BuildingClass>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>3</iExtraCommerce>
+				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
@@ -6554,7 +6559,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMPUTATIONAL_SOCIOLOGY</PrereqTech>
-			<iCost>2625</iCost>
+			<iCost>2505</iCost>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -7593,7 +7598,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMPUTATIONAL_SOCIOLOGY</PrereqTech>
-			<iCost>2625</iCost>
+			<iCost>2505</iCost>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7816,7 +7821,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMPUTATIONAL_SOCIOLOGY</PrereqTech>
-			<iCost>5250</iCost>
+			<iCost>5010</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
@@ -7860,7 +7865,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMPUTATIONAL_SOCIOLOGY</PrereqTech>
-			<iCost>5250</iCost>
+			<iCost>5010</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
@@ -7902,7 +7907,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMPUTATIONAL_SOCIOLOGY</PrereqTech>
-			<iCost>5250</iCost>
+			<iCost>5010</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
@@ -8662,7 +8667,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_UNMANNEDSEA</PrereqTech>
-			<iCost>1845</iCost>
+			<iCost>2005</iCost>
 			<ObsoleteTech>TECH_OPTRONICS</ObsoleteTech>
 			<bWater>1</bWater>
 			<CommerceChanges>
@@ -11379,7 +11384,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_QUANTUM_TELEPORTATION</PrereqTech>
-			<iCost>2405</iCost>
+			<iCost>2305</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
@@ -22101,7 +22106,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_UNMANNEDSEA</PrereqTech>
-			<iCost>1845</iCost>
+			<iCost>2005</iCost>
 			<bWater>1</bWater>
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
@@ -22133,7 +22138,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_UNMANNEDSEA</PrereqTech>
-			<iCost>11070</iCost>
+			<iCost>12030</iCost>
 			<bWater>1</bWater>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
@@ -22901,6 +22906,11 @@
 					<BuildingClass>BUILDINGCLASS_AIRCRAFT_FACTORY</BuildingClass>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_MILITARY_INDUSTRIAL_COMPLEX</BuildingClass>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>6</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<FreeSpecialistCounts>
@@ -25311,6 +25321,16 @@
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_COLONY_ARCO</BuildingClass>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>3</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_LAUNCH_ARCO</BuildingClass>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>3</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
 					<BuildingClass>BUILDINGCLASS_STRATOSPHERIC_TOWER</BuildingClass>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
@@ -26325,7 +26345,22 @@
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_MARS_HYDROPONICS</BuildingClass>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>3</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_MARTIAN_VERTICAL_FARM</BuildingClass>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>3</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
 					<BuildingClass>BUILDINGCLASS_MARTIAN_EXPANDED_HABITAT</BuildingClass>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>3</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_MARTIAN_SKYSCRAPER</BuildingClass>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -26556,11 +26591,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_WEAPONIZED_LASERS</PrereqTech>
 			<iCost>17190</iCost>
-			<TechTypes>
-				<PrereqTech>TECH_SOLAR_PROPULSION</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_WEAPONIZED_LASERS</PrereqTech>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>40</iCommerce>
@@ -27043,6 +27075,10 @@
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_MILITARY_SPACEPORT</BuildingClassType>
+					<bPrereqBuildingClass>1</bPrereqBuildingClass>
+				</PrereqOrBuildingClass>
+				<PrereqOrBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_COMMERCIAL_SPACEPORT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
@@ -28004,12 +28040,16 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
+			<PrereqOrBuildingClasses>
+				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_MILITARY_SPACEPORT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+					<bPrereqBuildingClass>1</bPrereqBuildingClass>
+				</PrereqOrBuildingClass>
+				<PrereqOrBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_COMMERCIAL_SPACEPORT</BuildingClassType>
+					<bPrereqBuildingClass>1</bPrereqBuildingClass>
+				</PrereqOrBuildingClass>
+			</PrereqOrBuildingClasses>
 			<PropertiesAllCities>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -28434,6 +28474,18 @@
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
+			<GlobalBuildingExtraCommerces>
+				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_HOCKEY_RINK</BuildingClass>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>2</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_ATHLETIC_MEGACOMPLEX</BuildingClass>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>2</iExtraCommerce>
+				</BuildingExtraCommerce>
+			</GlobalBuildingExtraCommerces>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>
