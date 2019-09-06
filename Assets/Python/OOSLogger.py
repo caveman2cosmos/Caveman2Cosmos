@@ -23,13 +23,15 @@ def writeLog():
 	pFile.write("Total owned plots: %d\n" % MAP.getOwnedPlots())
 	pFile.write("Total num areas: %d\n\n\n" % MAP.getNumAreas())
 
+
 	# Player data
 	for iPlayer in xrange(GC.getMAX_PLAYERS()):
 		CyPlayer = GC.getPlayer(iPlayer)
 		if CyPlayer.isEverAlive():
 
-			pFile.write(2*SEP + "  PLAYER %d: %s\n" %(iPlayer, CvUtil.convertToStr(CyPlayer.getName())))
-			pFile.write("  Civilizations: %s\n" % CvUtil.convertToStr(CyPlayer.getCivilizationDescriptionKey()))
+			pFile.write(2*SEP + "%s player %d: %s\n" %(['NPC', 'Human'][CyPlayer.isHuman()], iPlayer, CvUtil.convertToStr(CyPlayer.getName())))
+			pFile.write("  Civilization: %s\n" % CvUtil.convertToStr(CyPlayer.getCivilizationDescriptionKey()))
+			pFile.write("  Alive: %s\n" % CyPlayer.isAlive())
 
 			pFile.write(2*SEP + "\n\nBasic data:\n-----------\n")
 
@@ -87,13 +89,15 @@ def writeLog():
 			if CyPlayer.getNumCities():
 				CyCity, i = CyPlayer.firstCity(False)
 				while CyCity:
-					pFile.write("\nX: %d, Y: %d\nFounded: %d\n" %(CyCity.getX(), CyCity.getY(), CyCity.getGameTurnFounded()))
-					pFile.write("Population: %d\nBuildings: %d\n" %(CyCity.getPopulation(), CyCity.getNumBuildings()))
-					pFile.write("Improved Plots: %d\nProducing: %s\n" %(CyCity.countNumImprovedPlots(), CvUtil.convertToStr(CyCity.getProductionName())))
-					pFile.write("%d Tiles Worked, %d Specialists, " %(CyCity.getWorkingPopulation(), CyCity.getSpecialistPopulation()))
-					pFile.write("%d Great People\n" % CyCity.getNumGreatPeople())
-
-					CyCity, i = CyPlayer.nextCity(i, False)
+					pFile.write(
+"\nX: %d, Y: %d\nFounded: %d\nPopulation: %d\nBuildings: %d\nImproved Plots: %d\nProducing: %s (%d Hammers invested)\n%d Tiles Worked, %d Specialists\n\
+Great People (GP)\n  %d Settled GP\n  GP Progress: %d\n  GP Base Rate: %d\n  GP Rate: %d\n"
+%(
+	CyCity.getX(), CyCity.getY(), CyCity.getGameTurnFounded(), CyCity.getPopulation(), CyCity.getNumBuildings(), CyCity.countNumImprovedPlots(), 
+	CvUtil.convertToStr(CyCity.getProductionName()), CyCity.getProduction(), CyCity.getWorkingPopulation(), CyCity.getSpecialistPopulation(),
+	CyCity.getNumGreatPeople(), CyCity.getGreatPeopleProgress(), CyCity.getBaseGreatPeopleRate(), CyCity.getGreatPeopleRate()
+)
+					); CyCity, i = CyPlayer.nextCity(i, False)
 			else:
 				pFile.write("\nNo Cities")
 
