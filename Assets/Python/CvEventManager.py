@@ -1576,7 +1576,7 @@ class CvEventManager:
 						bOK = False
 						continue
 					CyPlot = MAP.plotByIndex(i)
-					if CyPlot.getOwner() == iPlayer and CyPlot.getArea() == iArea and CyPlot.getImprovementType() != iBunker:
+					if CyPlot.getOwner() == iPlayer and CyPlot.getArea() == iArea and CyPlot.getImprovementType() != iBunker and CyPlot.canHaveImprovement(iBunker, -1, True):
 						x = CyPlot.getX()
 						y = CyPlot.getY()
 						iEast = x + 1
