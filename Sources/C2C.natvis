@@ -13,7 +13,12 @@
       <Item Name="[cities]" ExcludeView="simple">m_cities</Item>
      </Expand>
   </Type>
-
+  <Type Name="CvInfoBase">
+    <DisplayString>{{ {m_szType} }}</DisplayString>
+    <Expand>
+      <Item Name="[type]" ExcludeView="simple">m_szType</Item>
+    </Expand>
+  </Type>
   <Type Name="CvUnit">
     <DisplayString>[owner = {CvPlayerAI::m_aPlayers[m_eOwner]}, class = {gGlobals->m_paUnitClassInfo[m_pUnitInfo->m_iUnitClassType]->m_szType} ({m_pUnitInfo->m_iUnitClassType}), type = {gGlobals->m_paUnitInfo[m_eUnitType]->m_szType} ({m_eUnitType})]</DisplayString>
     <Expand>

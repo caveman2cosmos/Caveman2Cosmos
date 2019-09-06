@@ -5136,7 +5136,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 {
 	PROFILE_FUNC();
 
-	// If we are focusing on cheap things then we just score by turns to complete only
+	// If we want score for the capital building (palace then we just give the production turns)
 	if (iFocusFlags & BUILDINGFOCUS_CAPITAL)
 	{
 		for (std::vector<BuildingTypes>::const_iterator itr = possibleBuildings.begin(); itr != possibleBuildings.end(); ++itr)
