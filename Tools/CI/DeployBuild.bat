@@ -67,7 +67,8 @@ set ROBOCOPY_FLAGS=/MIR /NFL /NDL /NJH /NJS /NS /NC
 robocopy Assets "%build_dir%\Assets" %ROBOCOPY_FLAGS%
 robocopy PrivateMaps "%build_dir%\PrivateMaps" %ROBOCOPY_FLAGS%
 robocopy Resource "%build_dir%\Resource" %ROBOCOPY_FLAGS%
-xcopy Caveman2Cosmos.ini "%build_dir%" /R /Y
+robocopy Docs "%build_dir%\Docs" %ROBOCOPY_FLAGS%
+xcopy "Caveman2Cosmos.ini" "%build_dir%" /R /Y
 xcopy "Caveman2Cosmos Config.ini" "%build_dir%" /R /Y
 xcopy "C2C.ico" "%build_dir%" /R /Y
 xcopy "CIV_C2C.ico" "%build_dir%" /R /Y
@@ -97,8 +98,7 @@ echo Commiting new build to SVN...
 
 :: SET SVN RELEASE TAG -----------------------------------------
 echo Setting SVN commit tag on git ...
-svnversion > svn_rev.txt
-set /p %svn_rev%=<svn_rev.txt
+for /f "delims=" %%a in ('svnversion') do @set svn_rev=%%a
 
 POPD
 

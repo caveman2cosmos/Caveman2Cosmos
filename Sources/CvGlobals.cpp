@@ -3,7 +3,6 @@
 //
 #include "CvGameCoreDLL.h"
 #include "CvMapExternal.h"
-#include "version.h"
 
 #define COPY(dst, src, typeName) \
 	{ \
@@ -473,7 +472,7 @@ void CreateMiniDump(EXCEPTION_POINTERS *pep)
 {
 	_TCHAR filename[100];
 
-	_stprintf(filename, _T("MiniDump_%s-%s.dmp"), build_c2c_version, build_git_version);
+	_stprintf(filename, _T("MiniDump.dmp"));
 	/* Open a file to store the minidump. */
 	HANDLE hFile = CreateFile(filename,
 	                          GENERIC_READ | GENERIC_WRITE,

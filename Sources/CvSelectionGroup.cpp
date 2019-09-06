@@ -534,9 +534,6 @@ void CvSelectionGroup::updateTimers()
 // Returns true if group was killed...
 bool CvSelectionGroup::doDelayedDeath()
 {
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
-
 	FAssert(getOwnerINLINE() != NO_PLAYER);
 
 	if (isBusy())

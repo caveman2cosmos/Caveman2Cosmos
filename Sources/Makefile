@@ -48,8 +48,6 @@ RC="$(PSDK)\bin\rc.exe"
 ## Overwritten by enviroment variable FASTDEP_FULL_PATH
 FD="..\Build\deps\fastdep\fastdep.exe"
 
-GITVERSION="..\Tools\C2C-GitVersion.exe"
-
 #### DEFINES ####
 ## copy the following lines into "Additional options" in NMAKE properties
 ## This will make VC++ aware of what is defined and what isn't, which affects the help popup and red lines
@@ -250,10 +248,6 @@ source_list: Make_Dir
 	@ECHO OBJS= \>> $(FILE_DEPENDS)
 	@FOR %j in ($(SUBDIRS)) DO @(FOR /F "delims=." %i IN ('dir /b $(SOURCE_DIR)\%j\*.cpp') DO @ECHO. $(TARGET_DIR)\%j\%i.obj \>> $(FILE_DEPENDS))
 	@ECHO.>> $(FILE_DEPENDS)
-
-gitversion:
-	@ECHO Running GitVersion
-	@$(GITVERSION)
 
 fastdep:
 	@ECHO Running fastdep

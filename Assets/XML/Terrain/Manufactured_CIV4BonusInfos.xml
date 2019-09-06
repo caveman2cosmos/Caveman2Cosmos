@@ -137,7 +137,7 @@
 			<Civilopedia>TXT_KEY_BONUS_BAMBOO_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_BAMBOO</ArtDefineTag>
-			<TechReveal>TECH_GATHERING</TechReveal>
+			<TechReveal>TECH_WEAVING</TechReveal>
 			<TechCityTrade>TECH_WEAVING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
@@ -337,6 +337,8 @@
 			<Civilopedia>TXT_KEY_BONUS_BUG_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_BUG</ArtDefineTag>
+			<TechReveal>TECH_SCAVENGING</TechReveal>
+			<TechCityTrade>TECH_SCAVENGING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Caesium Ore -->
@@ -929,7 +931,7 @@
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_FLINT</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
-			<TechCityTrade>TECH_FLINT_KNAPPING</TechCityTrade>
+			<TechCityTrade>TECH_GATHERING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Flour -->
@@ -2922,7 +2924,7 @@
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_WOOD</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
-			<TechCityTrade>TECH_SIMPLE_WOOD_WORKING</TechCityTrade>
+			<TechCityTrade>TECH_GATHERING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Woodwind Instruments -->

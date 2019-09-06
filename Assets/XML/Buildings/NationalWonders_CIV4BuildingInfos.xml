@@ -1138,7 +1138,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Cost -->
-			<iCost>3690</iCost>
+			<iCost>2950</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_DEEP_SPACE_RESEARCH</ConstructSound>
@@ -2093,6 +2093,12 @@
 				<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_APOTHECARY_SHOP</BuildingClassType>
+					<iNumBuildingNeeded>3</iNumBuildingNeeded>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_APOTHECARY_SHOP</BuildingClassType>
@@ -2130,6 +2136,11 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingClass>BUILDINGCLASS_APOTHECARY_SHOP</BuildingClass>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_PHARMACY</BuildingClass>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2280,6 +2291,12 @@
 				<PrereqTech>TECH_SMITHING</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_FORGE</BuildingClassType>
+					<iNumBuildingNeeded>3</iNumBuildingNeeded>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_FORGE</BuildingClassType>
@@ -2320,6 +2337,11 @@
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_FOUNDRY</BuildingClass>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -2338,6 +2360,12 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_BUTCHERY</BuildingClassType>
+					<iNumBuildingNeeded>3</iNumBuildingNeeded>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_BUTCHERY</BuildingClassType>
@@ -2375,6 +2403,11 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingClass>BUILDINGCLASS_BUTCHERY</BuildingClass>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_MEATPACKING_PLANT</BuildingClass>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2462,16 +2495,22 @@
 				<PrereqTech>TECH_GUILDS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PAPER_MAKER</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
+					<iNumBuildingNeeded>3</iNumBuildingNeeded>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
+			<PrereqOrBuildingClasses>
+				<PrereqOrBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_PAPER_MAKER</BuildingClassType>
+					<bPrereqBuildingClass>1</bPrereqBuildingClass>
+				</PrereqOrBuildingClass>
+				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PAPER_FACTORY</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+					<bPrereqBuildingClass>1</bPrereqBuildingClass>
+				</PrereqOrBuildingClass>
+			</PrereqOrBuildingClasses>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -2499,6 +2538,11 @@
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_PAPER_FACTORY</BuildingClass>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
@@ -2523,6 +2567,12 @@
 				<PrereqTech>TECH_GUILDS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CRAFT_HUT</BuildingClassType>
+					<iNumBuildingNeeded>3</iNumBuildingNeeded>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_CRAFT_HUT</BuildingClassType>
@@ -2560,6 +2610,11 @@
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_AMERICAN_MALL</BuildingClass>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
@@ -2584,6 +2639,12 @@
 				<PrereqTech>TECH_HERALDRY</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_SEAMSTRESS_HUT</BuildingClassType>
+					<iNumBuildingNeeded>3</iNumBuildingNeeded>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_SEAMSTRESS_HUT</BuildingClassType>
@@ -2625,6 +2686,16 @@
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_TEXTILE_MILL</BuildingClass>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_TEXTILE_FACTORY</BuildingClass>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
@@ -2649,6 +2720,12 @@
 				<PrereqTech>TECH_GUILDS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_KNIGHT_STABLE</BuildingClassType>
+					<iNumBuildingNeeded>3</iNumBuildingNeeded>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_KNIGHT_STABLE</BuildingClassType>
@@ -2683,6 +2760,11 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingClass>BUILDINGCLASS_KNIGHT_STABLE</BuildingClass>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_MODERN_STABLE</BuildingClass>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2942,6 +3024,11 @@
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_SUPERMARKET</BuildingClass>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
@@ -3029,6 +3116,12 @@
 				<PrereqTech>TECH_ARCHITECTURE</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_BRICK_MASON</BuildingClassType>
+					<iNumBuildingNeeded>3</iNumBuildingNeeded>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_BRICK_MASON</BuildingClassType>
@@ -3066,6 +3159,11 @@
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_BRICK_FACTORY</BuildingClass>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
 			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
@@ -3090,6 +3188,12 @@
 				<PrereqTech>TECH_USURY</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_BAZAAR</BuildingClassType>
+					<iNumBuildingNeeded>3</iNumBuildingNeeded>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_BAZAAR</BuildingClassType>
@@ -3124,6 +3228,11 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingClass>BUILDINGCLASS_BAZAAR</BuildingClass>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_AMERICAN_MALL</BuildingClass>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3344,6 +3453,12 @@
 				<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_PUB</BuildingClassType>
+					<iNumBuildingNeeded>3</iNumBuildingNeeded>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PUB</BuildingClassType>
@@ -3378,6 +3493,11 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingClass>BUILDINGCLASS_PUB</BuildingClass>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_DIVE_BAR</BuildingClass>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3822,7 +3942,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>210</iCost>
+			<iCost>208</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Local -->

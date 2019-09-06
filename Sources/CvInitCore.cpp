@@ -1,6 +1,5 @@
 // game.cpp
 #include "CvGameCoreDLL.h"
-#include "version.h"
 
 // BUG - EXE/DLL Paths - start
 #include <shlobj.h>
@@ -68,7 +67,6 @@ CvInitCore::CvInitCore()
 	bPathsSet = false;
 // BUG - EXE/DLL Paths - end
 
-	m_svnRev = -1;
 	m_bRecalcRequestProcessed = false;
 	//m_uiAssetCheckSum = -1;
 	m_uiSavegameAssetCheckSum = -1;
@@ -546,7 +544,6 @@ void CvInitCore::resetGame()
 	m_eTurnTimer = (TurnTimerTypes)GC.getDefineINT("STANDARD_TURNTIMER");	// NO_ option?
 	m_eCalendar = (CalendarTypes)GC.getDefineINT("STANDARD_CALENDAR");		// NO_ option?
 
-	m_svnRev = -1;
 	m_uiSavegameAssetCheckSum = -1;
 
 	// Map-specific custom parameters
@@ -592,8 +589,6 @@ void CvInitCore::resetGame()
 	// Temp vars
 	m_szTemp.clear();
 
-	m_gitSHA.clear();
-	
 	OutputDebugString("Reseting Game: End");
 }
 
@@ -1983,17 +1978,12 @@ void CvInitCore::read(FDataStreamBase* pStream)
 		throw std::invalid_argument(reason);
 	}
 
-	//	SVN rev of the build that did the save
-	m_svnRev = -1;	//	If save doesn't have the info
-	//	GIT commit of the build that did the save
-	m_gitSHA.clear();	//	If save doesn't have the info
 	m_bRecalcRequestProcessed = false;
+	int m_svnRev = -1;
 	WRAPPER_READ_DECORATED(wrapper, "CvInitCore", &m_svnRev, "m_svnRev");
-	OutputDebugString(CvString::format("SVN Rev of save is %d\n", m_svnRev).c_str());
 	if (m_svnRev == -1)
 	{
-		WRAPPER_READ_STRING_DECORATED(wrapper, "CvInitCore", m_gitSHA, "m_gitSHA");
-		OutputDebugString(CvString::format("Git commit of save is %s\n", m_gitSHA.c_str()).c_str());
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvInitCore", m_gitSHA, SAVE_VALUE_ANY);
 	}
 
 	//	Asset checksum of the build that did the save
@@ -2303,10 +2293,6 @@ void CvInitCore::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_DECORATED(wrapper, "CvInitCore", (int)SAVE_FORMAT_VERSION, "SAVE_FORMAT_VERSION");
 
-	//	record -1 as default SVN rev
-	WRAPPER_WRITE_DECORATED(wrapper, "CvInitCore", (int)-1, "m_svnRev");
-	//	record the Git commit of the build doing the save
-	WRAPPER_WRITE_STRING_DECORATED(wrapper, "CvInitCore", std::string(build_git_sha), "m_gitSHA");
 	// record the asset checksum of the build doing the save
 	WRAPPER_WRITE_DECORATED(wrapper, "CvInitCore", m_uiAssetCheckSum, "m_uiSavegameAssetCheckSum");
 
@@ -2614,35 +2600,6 @@ void CvInitCore::checkInitialCivics()
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-const char* CvInitCore::getC2CVersion()
-{
-	return  build_c2c_version;
-}
-
-const char* CvInitCore::getGitVersion()
-{
-	return  build_git_version;
-}
-
-const char* CvInitCore::getGitSHA()
-{
-	return build_git_sha;
-}
-
-const char* CvInitCore::getGitShortSHA()
-{
-	return build_git_short_sha;
-}
-
-std::string CvInitCore::getGameSaveGitSHA() const
-{
-	return m_gitSHA;
-}
-
-int CvInitCore::getGameSaveSvnRev() const
-{
-	return m_svnRev;
-}
 
 unsigned int CvInitCore::getAssetCheckSum() const
 {
@@ -2668,9 +2625,8 @@ void CvInitCore::checkVersions()
 {
 	if (!m_bRecalcRequestProcessed && !getNewGame())
 	{
-		bool bDLLChanged = strcmp(m_gitSHA.c_str(), getGitSHA()) != 0;
 		bool bAssetsChanged = m_uiSavegameAssetCheckSum != GC.getInitCore().getAssetCheckSum();
-		if (bDLLChanged || bAssetsChanged)
+		if (bAssetsChanged)
 		{
 			// DLL or assets changed, recommend modifier reloading
 			if ( NO_PLAYER != GC.getGameINLINE().getActivePlayer() )

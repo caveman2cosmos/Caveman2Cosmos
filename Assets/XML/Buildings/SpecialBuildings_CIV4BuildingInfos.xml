@@ -11176,7 +11176,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
-			<iCost>-1</iCost>
+			<iCost>1475</iCost>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>

@@ -13,9 +13,9 @@ import CvUtil
 import BugUtil
 from CvPythonExtensions import *
 from operator import itemgetter
-from random import random, shuffle
 
 GC = CyGlobalContext()
+GAME = GC.getGame()
 TRNSLTR = CyTranslator()
 
 
@@ -31,7 +31,7 @@ def canTriggerBlessedSea(argsList):
   kTriggeredData = argsList[0]
   map = GC.getMap()
 
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(kTriggeredData.ePlayer).isHuman():
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(kTriggeredData.ePlayer).isHuman():
     return False
 
   iMapMinLandmass = 2 * GC.getWorldInfo(map.getWorldSize()).getDefaultPlayers()
@@ -170,7 +170,7 @@ def getHelpHolyMountain1(argsList):
 def canTriggerHolyMountain(argsList):
 	data = argsList[0]
 
-	if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE):
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE):
 		return False
 
 	CyPlot = GC.getMap().plot(data.iPlotX, data.iPlotY)
@@ -251,7 +251,7 @@ def canTriggerHolyMountainRevealed(argsList):
 def doHolyMountainRevealed(argsList):
 	data = argsList[1]
 
-	if data.ePlayer == GC.getGame().getActivePlayer():
+	if data.ePlayer == GAME.getActivePlayer():
 		CyCamera().JustLookAtPlot(GC.getMap().plot(data.iPlotX, data.iPlotY))
 
 	return 1
@@ -311,7 +311,7 @@ def canDoWeddingFeud3(argsList):
     return False
 
   # do not use this event in multiplayer
-  if GC.getGame().isNetworkMultiPlayer():
+  if GAME.isNetworkMultiPlayer():
     return False
 
   return True
@@ -526,10 +526,10 @@ def applyLooters3(argsList):
 					break
 			else: aList.append(i)
 
-	iMax = GC.getGame().getSorenRandNum(2, "Looters event number of buildings destroyed") + 1
+	iMax = GAME.getSorenRandNum(2, "Looters event number of buildings destroyed") + 1
 	iCount = 0
 	while aList and iCount < iMax:
-		iBuilding = aList[GC.getGame().getSorenRandNum(len(aList), "Looters event building destroyed")]
+		iBuilding = aList[GAME.getSorenRandNum(len(aList), "Looters event building destroyed")]
 		szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBuilding).getTextKey(), ))
 		CyInterface().addMessage(kTriggeredData.eOtherPlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getBuildingInfo(iBuilding).getButton(), GC.getInfoTypeForString("COLOR_RED"), CyCity.getX(), CyCity.getY(), True, True)
 		CyCity.setNumRealBuilding(iBuilding, 0)
@@ -645,7 +645,7 @@ def applyHurricane1(argsList):
 		else: aList.append(i)
 
 	if aList:
-		iBuilding = aList[GC.getGame().getSorenRandNum(len(aList), "Hurricane")]
+		iBuilding = aList[GAME.getSorenRandNum(len(aList), "Hurricane")]
 		szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBuilding).getTextKey(), ))
 		CyInterface().addMessage(kTriggeredData.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getBuildingInfo(iBuilding).getButton(), GC.getInfoTypeForString("COLOR_RED"), CyCity.getX(), CyCity.getY(), True, True)
 		CyCity.setNumRealBuilding(iBuilding, 0)
@@ -728,7 +728,7 @@ def applyTsunami2(argsList):
 
 	for i in xrange(5):
 		if len(listBuildings) > 0:
-			iBuilding = listBuildings[GC.getGame().getSorenRandNum(len(listBuildings), "Tsunami event building destroyed")]
+			iBuilding = listBuildings[GAME.getSorenRandNum(len(listBuildings), "Tsunami event building destroyed")]
 			szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBuilding).getTextKey(), ))
 			CyInterface().addMessage(kTriggeredData.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getBuildingInfo(iBuilding).getButton(), GC.getInfoTypeForString("COLOR_RED"), CyCity.getX(), CyCity.getY(), True, True)
 			CyCity.setNumRealBuilding(iBuilding, 0)
@@ -820,7 +820,7 @@ def applyVolcano1(argsList):
 
   for i in xrange(3):
     if len(listPlots) > 0:
-      plot = listPlots[GC.getGame().getSorenRandNum(len(listPlots), "Volcano event improvement destroyed")]
+      plot = listPlots[GAME.getSorenRandNum(len(listPlots), "Volcano event improvement destroyed")]
       iImprovement = plot.getImprovementType()
       szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getImprovementInfo(iImprovement).getTextKey(), ))
       CyInterface().addMessage(kTriggeredData.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getImprovementInfo(iImprovement).getButton(), GC.getInfoTypeForString("COLOR_RED"), plot.getX(), plot.getY(), True, True)
@@ -830,7 +830,7 @@ def applyVolcano1(argsList):
         plot.setImprovementType(-1)
       listPlots.remove(plot)
 
-      if i == 1 and GC.getGame().getSorenRandNum(100, "Volcano event num improvements destroyed") < 50:
+      if i == 1 and GAME.getSorenRandNum(100, "Volcano event num improvements destroyed") < 50:
         break
 
 ######## DUSTBOWL ###########
@@ -952,7 +952,7 @@ def applySaltpeter(argsList):
     if iCount == 0:
       break
     iCount -= 1
-    GC.getGame().setPlotExtraYield(loopPlot[1].getX(), loopPlot[1].getY(), YieldTypes.YIELD_COMMERCE, 1)
+    GAME.setPlotExtraYield(loopPlot[1].getX(), loopPlot[1].getY(), YieldTypes.YIELD_COMMERCE, 1)
     CyInterface().addMessage(kTriggeredData.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), TRNSLTR.getText("TXT_KEY_EVENT_SALTPETER_DISCOVERED", ()), "", InterfaceMessageTypes.MESSAGE_TYPE_INFO, None, GC.getInfoTypeForString("COLOR_WHITE"), loopPlot[1].getX(), loopPlot[1].getY(), True, True)
 
 ######## GREAT DEPRESSION ###########
@@ -1107,7 +1107,7 @@ def applyInfluenza2(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
   eventCity = player.getCity(kTriggeredData.iCityId)
 
-  iNumCities = 2 + GC.getGame().getSorenRandNum(3, "Influenza event number of cities")
+  iNumCities = 2 + GAME.getSorenRandNum(3, "Influenza event number of cities")
 
   listCities = []
   (loopCity, iter) = player.firstCity(False)
@@ -1161,7 +1161,7 @@ def canTriggerSoloFlight(argsList):
   if (map.getNumLandAreas() < iMinLandmass):
     return False
 
-  if GC.getGame().isGameMultiPlayer():
+  if GAME.isGameMultiPlayer():
     return False
 
   return True
@@ -1613,7 +1613,7 @@ def canTriggerHeroicGesture(argsList):
     return False
 
   # do not use this event in multiplayer
-  if GC.getGame().isNetworkMultiPlayer():
+  if GAME.isNetworkMultiPlayer():
     return False
 
   return True
@@ -1687,7 +1687,7 @@ def canTriggerGreatMediator(argsList):
     return False
 
   # do not use this event in multiplayer
-  if GC.getGame().isNetworkMultiPlayer():
+  if GAME.isNetworkMultiPlayer():
     return False
 
   return True
@@ -1817,7 +1817,7 @@ def canTriggerTheHuns(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
     return False
 
 #   At least one civ on the board must know Mounted Archery.
@@ -1898,7 +1898,7 @@ def applyTheHuns1(argsList):
   if 0 == len(listPlots):
     return
 
-  plot = map.plotByIndex(listPlots[GC.getGame().getSorenRandNum(len(listPlots), "Hun event location")])
+  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "Hun event location")])
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
     iNumUnits  = 2
@@ -1928,7 +1928,7 @@ def canTriggerTheVandals(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
     return False
 
 #   At least one civ on the board must know Metal Casting.
@@ -2009,7 +2009,7 @@ def applyTheVandals1(argsList):
   if 0 == len(listPlots):
     return
 
-  plot = map.plotByIndex(listPlots[GC.getGame().getSorenRandNum(len(listPlots), "Vandal event location")])
+  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "Vandal event location")])
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
     iNumUnits  = 2
@@ -2039,7 +2039,7 @@ def canTriggerTheGoths(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
     return False
 
 #   At least one civ on the board must know Mathematics.
@@ -2120,7 +2120,7 @@ def applyTheGoths1(argsList):
   if 0 == len(listPlots):
     return
 
-  plot = map.plotByIndex(listPlots[GC.getGame().getSorenRandNum(len(listPlots), "Goth event location")])
+  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "Goth event location")])
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
     iNumUnits  = 2
@@ -2150,7 +2150,7 @@ def canTriggerThePhilistines(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
     return False
 
 #   At least one civ on the board must know Monotheism.
@@ -2231,7 +2231,7 @@ def applyThePhilistines1(argsList):
   if 0 == len(listPlots):
     return
 
-  plot = map.plotByIndex(listPlots[GC.getGame().getSorenRandNum(len(listPlots), "Philistine event location")])
+  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "Philistine event location")])
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
     iNumUnits  = 2
@@ -2261,7 +2261,7 @@ def canTriggerTheVedicAryans(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
     return False
 
 #   At least one civ on the board must know Polytheism.
@@ -2342,7 +2342,7 @@ def applyTheVedicAryans1(argsList):
   if 0 == len(listPlots):
     return
 
-  plot = map.plotByIndex(listPlots[GC.getGame().getSorenRandNum(len(listPlots), "Vedic Aryan event location")])
+  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "Vedic Aryan event location")])
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
     iNumUnits  = 2
@@ -2410,7 +2410,7 @@ def canTriggerTea(argsList):
 def canTriggerHorseWhispering(argsList):
   kTriggeredData = argsList[0]
 
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(kTriggeredData.ePlayer).isHuman():
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(kTriggeredData.ePlayer).isHuman():
     return False
 
   return True
@@ -2482,7 +2482,7 @@ def canTriggerHarbormaster(argsList):
   trigger = GC.getEventTriggerInfo(kTriggeredData.eTrigger)
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(kTriggeredData.ePlayer).isHuman():
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(kTriggeredData.ePlayer).isHuman():
     return False
 
   map = GC.getMap()
@@ -2522,7 +2522,7 @@ def canTriggerHarbormasterDone(argsList):
 def canTriggerClassicLiterature(argsList):
   kTriggeredData = argsList[0]
 
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(kTriggeredData.ePlayer).isHuman():
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(kTriggeredData.ePlayer).isHuman():
     return False
 
   return True
@@ -2584,7 +2584,7 @@ def applyClassicLiteratureDone2(argsList):
       listTechs.append(iTech)
 
   if len(listTechs) > 0:
-    iTech = listTechs[GC.getGame().getSorenRandNum(len(listTechs), "Classic Literature Event Tech selection")]
+    iTech = listTechs[GAME.getSorenRandNum(len(listTechs), "Classic Literature Event Tech selection")]
     GC.getTeam(player.getTeam()).setHasTech(iTech, True, kTriggeredData.ePlayer, True, True)
 
 def getHelpClassicLiteratureDone3(argsList):
@@ -2645,7 +2645,7 @@ def applyClassicLiteratureDone3(argsList):
 def canTriggerMasterBlacksmith(argsList):
   kTriggeredData = argsList[0]
 
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(kTriggeredData.ePlayer).isHuman():
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(kTriggeredData.ePlayer).isHuman():
     return False
 
   return True
@@ -2752,7 +2752,7 @@ def canApplyMasterBlacksmithDone3(argsList):
 def canTriggerBestDefense(argsList):
   kTriggeredData = argsList[0]
 
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(kTriggeredData.ePlayer).isHuman():
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(kTriggeredData.ePlayer).isHuman():
     return False
 
   return True
@@ -2821,7 +2821,7 @@ def canApplyBestDefenseDone3(argsList):
 def canTriggerSportsLeague(argsList):
   kTriggeredData = argsList[0]
 
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(kTriggeredData.ePlayer).isHuman():
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(kTriggeredData.ePlayer).isHuman():
     return False
 
   return True
@@ -2872,9 +2872,9 @@ def canTriggerCrusade(argsList):
   trigger = GC.getEventTriggerInfo(kTriggeredData.eTrigger)
   player = GC.getPlayer(kTriggeredData.ePlayer)
   otherPlayer = GC.getPlayer(kTriggeredData.eOtherPlayer)
-  holyCity = GC.getGame().getHolyCity(kTriggeredData.eReligion)
+  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
 
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(kTriggeredData.ePlayer).isHuman():
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(kTriggeredData.ePlayer).isHuman():
     return False
 
   if holyCity.getOwner() != kTriggeredData.eOtherPlayer:
@@ -2890,7 +2890,7 @@ def getHelpCrusade1(argsList):
   kTriggeredData = argsList[1]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  holyCity = GC.getGame().getHolyCity(kTriggeredData.eReligion)
+  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
 
   szHelp = TRNSLTR.getText("TXT_KEY_EVENT_CRUSADE_HELP_1", (holyCity.getNameKey(), ))
 
@@ -2901,7 +2901,7 @@ def expireCrusade1(argsList):
   kTriggeredData = argsList[1]
   player = GC.getPlayer(kTriggeredData.ePlayer)
   otherPlayer = GC.getPlayer(kTriggeredData.eOtherPlayer)
-  holyCity = GC.getGame().getHolyCity(kTriggeredData.eReligion)
+  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
 
   if holyCity.getOwner() == kTriggeredData.ePlayer:
     return False
@@ -2923,7 +2923,7 @@ def canTriggerCrusadeDone(argsList):
   trigger = GC.getEventTriggerInfo(kTriggeredData.eTrigger)
 
   kOrigTriggeredData = player.getEventOccured(trigger.getPrereqEvent(0))
-  holyCity = GC.getGame().getHolyCity(kOrigTriggeredData.eReligion)
+  holyCity = GAME.getHolyCity(kOrigTriggeredData.eReligion)
 
   if holyCity.getOwner() != kTriggeredData.ePlayer:
     return False
@@ -2944,7 +2944,7 @@ def getHelpCrusadeDone1(argsList):
   iEvent = argsList[0]
   kTriggeredData = argsList[1]
 
-  holyCity = GC.getGame().getHolyCity(kTriggeredData.eReligion)
+  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
   szUnit = GC.getUnitInfo(holyCity.getConscriptUnit()).getTextKey()
   iNumUnits = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() / 2 + 1
   szHelp = TRNSLTR.getText("TXT_KEY_EVENT_CRUSADE_DONE_HELP_1", (iNumUnits, szUnit, holyCity.getNameKey()))
@@ -2955,7 +2955,7 @@ def canApplyCrusadeDone1(argsList):
   iEvent = argsList[0]
   kTriggeredData = argsList[1]
 
-  holyCity = GC.getGame().getHolyCity(kTriggeredData.eReligion)
+  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
   if -1 == holyCity.getConscriptUnit():
     return False
 
@@ -2966,7 +2966,7 @@ def applyCrusadeDone1(argsList):
   kTriggeredData = argsList[1]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  holyCity = GC.getGame().getHolyCity(kTriggeredData.eReligion)
+  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
   iUnitType = holyCity.getConscriptUnit()
   iNumUnits = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() / 2 + 1
 
@@ -2978,7 +2978,7 @@ def getHelpCrusadeDone2(argsList):
   iEvent = argsList[0]
   kTriggeredData = argsList[1]
 
-  holyCity = GC.getGame().getHolyCity(kTriggeredData.eReligion)
+  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
 
   szHelp = TRNSLTR.getText("TXT_KEY_EVENT_CRUSADE_DONE_HELP_2", (GC.getBuildingInfo(kTriggeredData.eBuilding).getTextKey(), holyCity.getNameKey()))
 
@@ -2988,7 +2988,7 @@ def canApplyCrusadeDone2(argsList):
   iEvent = argsList[0]
   kTriggeredData = argsList[1]
 
-  holyCity = GC.getGame().getHolyCity(kTriggeredData.eReligion)
+  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
 
   if -1 == kTriggeredData.eBuilding or holyCity.isHasBuilding(kTriggeredData.eBuilding):
     return False
@@ -2999,10 +2999,10 @@ def applyCrusadeDone2(argsList):
   iEvent = argsList[0]
   kTriggeredData = argsList[1]
 
-  holyCity = GC.getGame().getHolyCity(kTriggeredData.eReligion)
+  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
   holyCity.setNumRealBuilding(kTriggeredData.eBuilding, 1)
 
-  if (not GC.getGame().isNetworkMultiPlayer() and kTriggeredData.ePlayer == GC.getGame().getActivePlayer()):
+  if (not GAME.isNetworkMultiPlayer() and kTriggeredData.ePlayer == GAME.getActivePlayer()):
     popupInfo = CyPopupInfo()
     popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
     popupInfo.setData1(kTriggeredData.eBuilding)
@@ -3016,7 +3016,7 @@ def getHelpCrusadeDone3(argsList):
   kTriggeredData = argsList[1]
 
   iNumCities = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
-  holyCity = GC.getGame().getHolyCity(kTriggeredData.eReligion)
+  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
 
   szHelp = TRNSLTR.getText("TXT_KEY_EVENT_CRUSADE_DONE_HELP_3", (GC.getReligionInfo(kTriggeredData.eReligion).getTextKey(), iNumCities))
 
@@ -3028,7 +3028,7 @@ def canApplyCrusadeDone3(argsList):
 
   iNumCities = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
 
-  if GC.getGame().getNumCities() == GC.getGame().countReligionLevels(kTriggeredData.eReligion):
+  if GAME.getNumCities() == GAME.countReligionLevels(kTriggeredData.eReligion):
     return False
 
   return True
@@ -3036,7 +3036,7 @@ def canApplyCrusadeDone3(argsList):
 def applyCrusadeDone3(argsList):
   iEvent = argsList[0]
   kTriggeredData = argsList[1]
-  holyCity = GC.getGame().getHolyCity(kTriggeredData.eReligion)
+  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
 
   listCities = []
   for iPlayer in xrange(GC.getMAX_PC_PLAYERS()):
@@ -3124,7 +3124,7 @@ def canTriggerExperiencedCaptain(argsList):
 def getNumPartisanUnits(plot, iPlayer):
   for i in xrange(GC.getNumCultureLevelInfos()):
     iI = GC.getNumCultureLevelInfos() - i - 1
-    if plot.getCulture(iPlayer) >= GC.getCultureLevelInfo(iI).getSpeedThreshold(GC.getGame().getGameSpeedType()):
+    if plot.getCulture(iPlayer) >= GC.getCultureLevelInfo(iI).getSpeedThreshold(GAME.getGameSpeedType()):
       return iI
   return 0
 
@@ -3181,7 +3181,7 @@ def applyPartisans1(argsList):
 
     if len(listPlots) > 0:
       for i in xrange(iNumUnits):
-        iPlot = GC.getGame().getSorenRandNum(len(listPlots), "Partisan event placement")
+        iPlot = GAME.getSorenRandNum(len(listPlots), "Partisan event placement")
         player.initUnit(capital.getConscriptUnit(), listPlots[iPlot].getX(), listPlots[iPlot].getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 
 def getHelpPartisans2(argsList):
@@ -3231,43 +3231,56 @@ def canTriggerGreed(argsList):
 	if not GC.getTeam(iTeam).canChangeWarPeace(CyPlayerOther.getTeam()):
 		return False
 
-	listBonuses = []
+	bonuses = []
+	iCount = 0
 	iOil = GC.getInfoTypeForString("BONUS_OIL")
 	if not CyPlayer.getNumAvailableBonuses(iOil):
-		listBonuses.append(iOil)
+		bonuses.append(iOil)
+		iCount += 1
 	iIron = GC.getInfoTypeForString("BONUS_IRON")
 	if not CyPlayer.getNumAvailableBonuses(iIron):
-		listBonuses.append(iIron)
+		bonuses.append(iIron)
+		iCount += 1
 	iHorse = GC.getInfoTypeForString("BONUS_HORSE")
 	if not CyPlayer.getNumAvailableBonuses(iHorse):
-		listBonuses.append(iHorse)
+		bonuses.append(iHorse)
+		iCount += 1
 	iCopper = GC.getInfoTypeForString("BONUS_COPPER")
 	if not CyPlayer.getNumAvailableBonuses(iCopper):
-		listBonuses.append(iCopper)
+		bonuses.append(iCopper)
+		iCount += 1
 	iSulphur = GC.getInfoTypeForString("BONUS_SULPHUR")
 	if not CyPlayer.getNumAvailableBonuses(iSulphur):
-		listBonuses.append(iSulphur)
+		bonuses.append(iSulphur)
+		iCount += 1
 	iElephant = GC.getInfoTypeForString("BONUS_ELEPHANT")
 	if not CyPlayer.getNumAvailableBonuses(iElephant):
-		listBonuses.append(iElephant)
-	shuffle(listBonuses)
+		bonuses.append(iElephant)
+		iCount += 1
 
+	if not iCount:
+		return False
+
+	shuffledRange = CvUtil.shuffle(iCount, GAME.getMapRand())
 	MAP = GC.getMap()
 	iNumPlots = MAP.numPlots()
 	listPlots = []
-	for iBonus in listBonuses:
+	iCount = 0
+	while shuffledRange:
+		iBonus = bonuses[shuffledRange.pop()]
 		for i in xrange(iNumPlots):
 			CyPlot = MAP.plotByIndex(i)
 			if CyPlot.isWater() or not CyPlot.isRevealed(iTeam, False):
 				continue
 			if CyPlot.getOwner() == kTriggeredData.eOtherPlayer and CyPlot.getBonusType(iTeam) == iBonus:
 				listPlots.append(CyPlot)
+				iCount += 1
 		if listPlots:
 			break
 	if not listPlots:
 		return False
 
-	CyPlot = listPlots[int(random()*len(listPlots))]
+	CyPlot = listPlots[GAME.getSorenRandNum(iCount, "Random Plot")]
 
 	if -1 == getGreedUnit(CyPlayer, CyPlot):
 		return False
@@ -3284,7 +3297,7 @@ def getHelpGreed1(argsList):
 	CyPlayerOther = GC.getPlayer(kTriggeredData.eOtherPlayer)
 	iBonus = GC.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY).getBonusType(CyPlayer.getTeam())
 
-	iTurns = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getGrowthPercent()
+	iTurns = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent()
 
 	szHelp = TRNSLTR.getText("TXT_KEY_EVENT_GREED_HELP_1", (CyPlayerOther.getCivilizationShortDescriptionKey(), GC.getBonusInfo(iBonus).getTextKey(), iTurns))
 
@@ -3299,7 +3312,7 @@ def expireGreed1(argsList):
 	if iOwner == -1 or iOwner == kTriggeredData.ePlayer:
 		return False
 
-	if GC.getGame().getGameTurn() >= kTriggeredData.iTurn + GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getGrowthPercent():
+	if GAME.getGameTurn() >= kTriggeredData.iTurn + GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent():
 		return True
 
 	if iOwner != kTriggeredData.eOtherPlayer:
@@ -3713,7 +3726,7 @@ def applyOverwhelmDone3(argsList):
   iEvent = argsList[0]
   kTriggeredData = argsList[1]
 
-  GC.getGame().changeNoNukesCount(1)
+  GAME.changeNoNukesCount(1)
 
 ######## CORPORATE EXPANSION ###########
 
@@ -3721,13 +3734,13 @@ def canTriggerCorporateExpansion(argsList):
   kTriggeredData = argsList[0]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  city = GC.getGame().getHeadquarters(kTriggeredData.eCorporation)
+  city = GAME.getHeadquarters(kTriggeredData.eCorporation)
   if None == city or city.isNone():
     return False
 
   # Hack to remember the number of cities you already have with the Corporation
   kActualTriggeredDataObject = player.getEventTriggered(kTriggeredData.iId)
-  kActualTriggeredDataObject.iOtherPlayerCityId = GC.getGame().countCorporationLevels(kTriggeredData.eCorporation)
+  kActualTriggeredDataObject.iOtherPlayerCityId = GAME.countCorporationLevels(kTriggeredData.eCorporation)
   kActualTriggeredDataObject.iCityId = city.getID()
   kActualTriggeredDataObject.iPlotX = city.getX()
   kActualTriggeredDataObject.iPlotY = city.getY()
@@ -3773,7 +3786,7 @@ def canTriggerCorporateExpansionDone(argsList):
 
   iNumCitiesRequired = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() + 1 + kOrigTriggeredData.iOtherPlayerCityId
 
-  if iNumCitiesRequired > GC.getGame().countCorporationLevels(kOrigTriggeredData.eCorporation):
+  if iNumCitiesRequired > GAME.countCorporationLevels(kOrigTriggeredData.eCorporation):
     return False
 
 
@@ -3809,10 +3822,10 @@ def canTriggerHostileTakeover(argsList):
   kTriggeredData = argsList[0]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(kTriggeredData.ePlayer).isHuman():
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(kTriggeredData.ePlayer).isHuman():
     return False
 
-  city = GC.getGame().getHeadquarters(kTriggeredData.eCorporation)
+  city = GAME.getHeadquarters(kTriggeredData.eCorporation)
   if None == city or city.isNone():
     return False
 
@@ -4512,7 +4525,7 @@ def canTriggerCarnationUnit(argsList):
     return False
 
   # do not use this event in multiplayer
-  if GC.getGame().isNetworkMultiPlayer():
+  if GAME.isNetworkMultiPlayer():
     return False
 
   return True
@@ -4885,7 +4898,7 @@ def canTriggerTheBuccaneers(argsList):
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
     return False
 
 #   At least one civ on the board must know Gunpowder.
@@ -4948,7 +4961,7 @@ def applyTheBuccaneers1(argsList):
   if 0 == len(listPlots):
     return
 
-  plot = map.plotByIndex(listPlots[GC.getGame().getSorenRandNum(len(listPlots), "Buccaneers event location")])
+  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "Buccaneers event location")])
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
     iNumUnits  = 2
@@ -4979,7 +4992,7 @@ def canTriggerBlackbeard(argsList):
   map = GC.getMap()
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
     return False
 
 ###     kTriggeredData.ePlayer must have less than a variable number of combat ships based on map size.
@@ -5090,7 +5103,7 @@ def applyBlackbeard1(argsList):
   if 0 == len(listPlots):
     return
 
-  plot = map.plotByIndex(listPlots[GC.getGame().getSorenRandNum(len(listPlots), "Blackbeard event location")])
+  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "Blackbeard event location")])
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
     iNumUnit1  = 1
@@ -5131,7 +5144,7 @@ def canTriggerPiratesoftheNeutralZones(argsList):
   map = GC.getMap()
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
     return False
 
 ###     kTriggeredData.ePlayer must have less than a variable number of combat ships based on map size
@@ -5235,7 +5248,7 @@ def applyPiratesoftheNeutralZones1(argsList):
   if 0 == len(listPlots):
     return
 
-  plot = map.plotByIndex(listPlots[GC.getGame().getSorenRandNum(len(listPlots), "PiratesoftheNeutralZones event location")])
+  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "PiratesoftheNeutralZones event location")])
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
     iNumUnit1  = 4
@@ -5274,7 +5287,7 @@ def canTriggerMalaccanPirates(argsList):
   map = GC.getMap()
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
     return False
 
 ###     kTriggeredData.ePlayer must have less than a variable number of combat ships based on map size
@@ -5380,7 +5393,7 @@ def applyMalaccanPirates1(argsList):
   if 0 == len(listPlots):
     return
 
-  plot = map.plotByIndex(listPlots[GC.getGame().getSorenRandNum(len(listPlots), "MalaccanPirates event location")])
+  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "MalaccanPirates event location")])
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
     iNumUnit1  = 5
@@ -5424,7 +5437,7 @@ def canTriggerHenryMorgan(argsList):
   map = GC.getMap()
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
     return False
 
 ###     kTriggeredData.ePlayer must have less than a variable number of combat ships based on map size
@@ -5535,7 +5548,7 @@ def applyHenryMorgan1(argsList):
   if 0 == len(listPlots):
     return
 
-  plot = map.plotByIndex(listPlots[GC.getGame().getSorenRandNum(len(listPlots), "HenryMorgan event location")])
+  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "HenryMorgan event location")])
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
     iNumUnit1  = 1
@@ -5591,7 +5604,7 @@ def canTriggerStedeBonnet(argsList):
   map = GC.getMap()
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
     return False
 
 ###     kTriggeredData.ePlayer must have less than a variable number of combat ships based on map size
@@ -5708,7 +5721,7 @@ def applyStedeBonnet1(argsList):
   if 0 == len(listPlots):
     return
 
-  plot = map.plotByIndex(listPlots[GC.getGame().getSorenRandNum(len(listPlots), "StedeBonnet event location")])
+  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "StedeBonnet event location")])
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
     iNumUnit1  = 1
@@ -5757,7 +5770,7 @@ def canTriggerTheCorsairs(argsList):
   map = GC.getMap()
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
     return False
 
 ###     kTriggeredData.ePlayer must have less than a variable number of combat ships based on map size
@@ -5861,7 +5874,7 @@ def applyTheCorsairs1(argsList):
   if 0 == len(listPlots):
     return
 
-  plot = map.plotByIndex(listPlots[GC.getGame().getSorenRandNum(len(listPlots), "Corsairs event location")])
+  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "Corsairs event location")])
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
     iNumUnit1  = 2
@@ -5900,7 +5913,7 @@ def canTriggerIllyrianPirates(argsList):
   map = GC.getMap()
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
     return False
 
 ###     kTriggeredData.ePlayer must have less than a variable number of combat ships based on map size
@@ -6019,7 +6032,7 @@ def applyIllyrianPirates1(argsList):
   if 0 == len(listPlots):
     return
 
-  plot = map.plotByIndex(listPlots[GC.getGame().getSorenRandNum(len(listPlots), "IllyrianPirates event location")])
+  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "IllyrianPirates event location")])
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
     iNumUnit1  = 1
@@ -6055,7 +6068,7 @@ def canTriggerMahdiArmy(argsList):
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
     return False
 
 #   At least one civ on the board must know Flintlock.
@@ -6117,7 +6130,7 @@ def applyMahdiArmy1(argsList):
   if 0 == len(listPlots):
     return
 
-  plot = map.plotByIndex(listPlots[GC.getGame().getSorenRandNum(len(listPlots), "Mahdi Army event location")])
+  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "Mahdi Army event location")])
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
     iNumUnits  = 2
@@ -6147,7 +6160,7 @@ def canTriggerTheTaliban(argsList):
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
     return False
 
 #   At least one civ on the board must know Satellites.
@@ -6209,7 +6222,7 @@ def applyTheTaliban1(argsList):
   if 0 == len(listPlots):
     return
 
-  plot = map.plotByIndex(listPlots[GC.getGame().getSorenRandNum(len(listPlots), "The Taliban event location")])
+  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "The Taliban event location")])
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
     iNumUnits1 = 2
@@ -6252,7 +6265,7 @@ def canTriggerV_Ger(argsList):
   if pPlayer.getBuildingClassCountWithUpgrades(iObsrvty) < 1:
     return False
 
-  if GC.getGame().isVictoryValid(GC.getInfoTypeForString("VICTORY_SPACE_RACE")):
+  if GAME.isVictoryValid(GC.getInfoTypeForString("VICTORY_SPACE_RACE")):
     return True
 
   return False
@@ -6309,7 +6322,7 @@ def canTriggerMercenariesAncient(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
     return False
 
 #   At least one civ on the board must know Archery.
@@ -6390,7 +6403,7 @@ def applyMercenariesAncient1(argsList):
   if 0 == len(listPlots):
     return
 
-  plot = map.plotByIndex(listPlots[GC.getGame().getSorenRandNum(len(listPlots), "Mercenary event location")])
+  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "Mercenary event location")])
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
     iNumUnits  = 1
@@ -6432,7 +6445,7 @@ def applyMercenariesAncient2(argsList):
   if 0 == len(listPlots):
     return
 
-  plot = map.plotByIndex(listPlots[GC.getGame().getSorenRandNum(len(listPlots), "Mercenary event location")])
+  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "Mercenary event location")])
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
     iNumUnits  = 1
@@ -6466,7 +6479,7 @@ def canTriggerMercenariesClassical(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
     return False
 
 #   At least one civ on the board must know Archery.
@@ -6547,7 +6560,7 @@ def applyMercenariesClassical1(argsList):
   if 0 == len(listPlots):
     return
 
-  plot = map.plotByIndex(listPlots[GC.getGame().getSorenRandNum(len(listPlots), "Mercenary event location")])
+  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "Mercenary event location")])
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
     iNumUnits  = 1
@@ -6589,7 +6602,7 @@ def applyMercenariesClassical2(argsList):
   if 0 == len(listPlots):
     return
 
-  plot = map.plotByIndex(listPlots[GC.getGame().getSorenRandNum(len(listPlots), "Mercenary event location")])
+  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "Mercenary event location")])
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
     iNumUnits  = 1
@@ -6623,7 +6636,7 @@ def canTriggerMercenariesMedieval(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
     return False
 
 #   At least one civ on the board must know Feudalism.
@@ -6704,7 +6717,7 @@ def applyMercenariesMedieval1(argsList):
   if 0 == len(listPlots):
     return
 
-  plot = map.plotByIndex(listPlots[GC.getGame().getSorenRandNum(len(listPlots), "Mercenary event location")])
+  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "Mercenary event location")])
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
     iNumUnits  = 1
@@ -6747,7 +6760,7 @@ def applyMercenariesMedieval2(argsList):
   if 0 == len(listPlots):
     return
 
-  plot = map.plotByIndex(listPlots[GC.getGame().getSorenRandNum(len(listPlots), "Mercenary event location")])
+  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "Mercenary event location")])
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
     iNumUnits  = 1
@@ -6822,7 +6835,7 @@ def applyEarthquake1(argsList):
 
   for i in xrange(3):
     if len(listPlots) > 0:
-      plot = listPlots[GC.getGame().getSorenRandNum(len(listPlots), "Earthquake event improvement destroyed")]
+      plot = listPlots[GAME.getSorenRandNum(len(listPlots), "Earthquake event improvement destroyed")]
       iImprovement = plot.getImprovementType()
       szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getImprovementInfo(iImprovement).getTextKey(), ))
       CyInterface().addMessage(kTriggeredData.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getImprovementInfo(iImprovement).getButton(), GC.getInfoTypeForString("COLOR_RED"), plot.getX(), plot.getY(), True, True)
@@ -6832,7 +6845,7 @@ def applyEarthquake1(argsList):
         plot.setImprovementType(-1)
       listPlots.remove(plot)
 
-      if i == 1 and GC.getGame().getSorenRandNum(100, "Earthquake event num improvements destroyed") < 50:
+      if i == 1 and GAME.getSorenRandNum(100, "Earthquake event num improvements destroyed") < 50:
         break
 
 
@@ -6901,7 +6914,7 @@ def applyBlackDeath2(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
   eventCity = player.getCity(kTriggeredData.iCityId)
 
-  iNumCities = 2 + GC.getGame().getSorenRandNum(3, "Black Death event number of cities")
+  iNumCities = 2 + GAME.getSorenRandNum(3, "Black Death event number of cities")
 
   listCities = []
   (loopCity, iter) = player.firstCity(False)
@@ -6959,7 +6972,7 @@ def applySmallpox2(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
   eventCity = player.getCity(kTriggeredData.iCityId)
 
-  iNumCities = 1 + GC.getGame().getSorenRandNum(3, "Smallpox event number of cities")
+  iNumCities = 1 + GAME.getSorenRandNum(3, "Smallpox event number of cities")
 
   listCities = []
   (loopCity, iter) = player.firstCity(False)
@@ -7019,7 +7032,7 @@ def canTriggerSilverRain(argsList):
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
     return False
 
 #   At least one civ on the board must know Weather control
@@ -7069,7 +7082,7 @@ def applySilverRain1(argsList):
   if 0 == len(listPlots):
     return
 
-  plot = map.plotByIndex(listPlots[GC.getGame().getSorenRandNum(len(listPlots), "The Silver Rain event location")])
+  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "The Silver Rain event location")])
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
     iNumUnits1 = 1
@@ -7116,7 +7129,7 @@ def applySilverRain3(argsList):
   if 0 == len(listPlots):
     return
 
-  plot = map.plotByIndex(listPlots[GC.getGame().getSorenRandNum(len(listPlots), "Silver Rain event location")])
+  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "Silver Rain event location")])
 
 
   if (GC.getDefineINT("CIV4_VERSION") >= 317):
@@ -7495,7 +7508,7 @@ def TriggerSuperVirus1(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
   eventCity = player.getCity(kTriggeredData.iCityId)
 
-  iNumCities = 4 + GC.getGame().getSorenRandNum(5, "Super Virus event number of cities")
+  iNumCities = 4 + GAME.getSorenRandNum(5, "Super Virus event number of cities")
 
   listCities = []
   (loopCity, iter) = player.firstCity(False)
@@ -7537,7 +7550,7 @@ def TriggerSuperVirus2(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
   eventCity = player.getCity(kTriggeredData.iCityId)
 
-  iNumCities = 1 + GC.getGame().getSorenRandNum(3, "Super Virus event number of cities")
+  iNumCities = 1 + GAME.getSorenRandNum(3, "Super Virus event number of cities")
 
   iRequireGold = 100 + player.getNumCities() * 35
   player.changeGold(-iRequireGold)
@@ -7930,7 +7943,7 @@ def doVolcanoAdjustFertility(argsList):
     tPlot = CvUtil.plotDirection(iX, iY, DirectionTypes(i))
     if not tPlot.isNone():
       if not tPlot.isCity():
-        GC.getGame().setPlotExtraYield(tPlot.getX(), tPlot.getY(), YieldTypes.YIELD_FOOD, extraFood)
+        GAME.setPlotExtraYield(tPlot.getX(), tPlot.getY(), YieldTypes.YIELD_FOOD, extraFood)
 
 def doVolcanoNeighbouringPlots(pPlot):
   # Directional eruption that picks an adjacent valid plot to erupt towards.
@@ -7989,7 +8002,7 @@ def doVolcanoNeighbouringPlots(pPlot):
       listVolcanoPlotsY.append(plot.getY())
 
   # Select a target plot
-  targetplot = listVolcanoPlots[GC.getGame().getSorenRandNum(len(listVolcanoPlots), "Volcano direction")]
+  targetplot = listVolcanoPlots[GAME.getSorenRandNum(len(listVolcanoPlots), "Volcano direction")]
   listAffectedPlots.append(targetplot)
 
   listAdjacentPlots.append(CvUtil.plotDirection(targetplot.getX(), targetplot.getY(), DirectionTypes.DIRECTION_NORTH))
@@ -8008,7 +8021,7 @@ def doVolcanoNeighbouringPlots(pPlot):
   #Loops through the list of affected plots applying eruption effects
   for i in xrange(len(listAffectedPlots)):
     if len(listAffectedPlots) > 0:
-      plot = listAffectedPlots[GC.getGame().getSorenRandNum(len(listAffectedPlots), "Volcano event improvement destroyed")]
+      plot = listAffectedPlots[GAME.getSorenRandNum(len(listAffectedPlots), "Volcano event improvement destroyed")]
       iPlayer = plot.getOwner()
       iImprovement = plot.getImprovementType()
 
@@ -8176,7 +8189,7 @@ def doVolcanoExtinction(argsList):
   iY = pPlot.getY()
 
 
-  if GC.getGame().getSorenRandNum(100, 'Volcanic minerals chance') < 50:
+  if GAME.getSorenRandNum(100, 'Volcanic minerals chance') < 50:
     iBonus = GC.getInfoTypeForString('BONUS_OBSIDIAN')
     pPlot.setBonusType(iBonus)
     itechresource = GC.getInfoTypeForString("TECH_STONE_TOOLS")
@@ -8247,7 +8260,7 @@ def doMinorFire(argsList):
 				if iBuilding > -1 and CyCity.getNumRealBuilding(iBuilding) > 0 and CvBuilding.isReplaceBuildingClass(k):
 					break
 			else:
-				randNum = GC.getGame().getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
+				randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
 				iFlamm = CvBuilding.getProperties().getValueByProperty(GC.getInfoTypeForString("PROPERTY_FLAMMABILITY"))
 				iFlammScore = iFlamm + randNum
 				if iFlammScore > iHighFlamm:
@@ -8288,7 +8301,7 @@ def doMajorFire(argsList):
 					if iBuilding > -1 and CyCity.getNumRealBuilding(iBuilding) > 0 and CvBuilding.isReplaceBuildingClass(k):
 						break
 				else:
-					randNum = GC.getGame().getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
+					randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
 					iFlamm = CvBuilding.getProperties().getValueByProperty(GC.getInfoTypeForString("PROPERTY_FLAMMABILITY"))
 					iFlammScore = iFlamm + randNum
 					if iFlammScore > iHighFlamm:
@@ -8313,7 +8326,6 @@ def doCatastrophicFire(argsList):
 	iFlammEnd = iFlammStart/2
 	iFlammRange = iFlammStart/5
 
-	GAME = GC.getGame()
 	iKilledRand = GAME.getSorenRandNum(iFlammEnd, "People killed by fire.")
 	iKilledPop = iPop * iKilledRand / (iFlammStart + popScore)
 	if iKilledPop == 0:
@@ -8377,19 +8389,15 @@ def getHelpCatastrophicFire(argsList):
   return szHelp
 
 def canTriggerBlarneyVisit(argsList):
-  kTriggeredData = argsList[0]
-  game = GC.getGame()
-  iGameTurn = game.getGameTurn()
-
-  if (iGameTurn % 50 == 0):
-    return True
-  return False
+	if not GAME.getGameTurn() % 50:
+		return True
+	return False
 
 def doGlobalWarming(argsList):
   iEvent = argsList[0]
   kTriggeredData = argsList[1]
 
-  maxRand = GC.getGame().getEstimateEndTurn() * GC.getMap().numPlots()
+  maxRand = GAME.getEstimateEndTurn() * GC.getMap().numPlots()
 
   iGW = 0
   countIce = 1
@@ -8458,7 +8466,7 @@ def doGlobalWarming(argsList):
 
   for i in xrange(GC.getMap().numPlots()):
     iPlot = GC.getMap().plotByIndex(i)
-    randGW = GC.getGame().getSorenRandNum(maxRand, "Global Warming index of plot affected")
+    randGW = GAME.getSorenRandNum(maxRand, "Global Warming index of plot affected")
     if (iGW > randGW) and ((iPlot.getFeatureType()) == GC.getInfoTypeForString("FEATURE_ICE")):
         iPlot.setFeatureType(FeatureTypes.NO_FEATURE,-1)
     elif iGW > randGW:
@@ -8502,7 +8510,7 @@ def doGlobalWarming(argsList):
               if (iDX != 0 or iDY != 0):
                 iDPlot = CyMap().plot(iDX, iDY)
                 if iDPlot.getPlotType() == GC.getInfoTypeForString("PLOT_LAND") and not iDPlot.isCity():
-                  randFlood = GC.getGame().getSorenRandNum(100, "Global Warming flooding chance")
+                  randFlood = GAME.getSorenRandNum(100, "Global Warming flooding chance")
                   if iIce > randFlood:
                     iDPlot.setFeatureType(FeatureTypes.NO_FEATURE,-1)
                     iDPlot.setImprovementType(GC.getInfoTypeForString("NO_IMPROVEMENT"))
@@ -8538,17 +8546,23 @@ def getHelpGlobalWarming(argsList):
 ######## TORNADO ###########
 def canDoTornado(argsList):
 	EventTriggeredData = argsList[0]
-	x, y = EventTriggeredData.iPlotX, EventTriggeredData.iPlotY
-	CyPlot = GC.getMap().plot(x, y)
+
+	CyPlot = GC.getMap().plot(EventTriggeredData.iPlotX, EventTriggeredData.iPlotY)
 	if CyPlot.isCity():
 		return 0
+
+	if not CyPlot.canHaveFeature(GC.getInfoTypeForString('FEATURE_TORNADO')):
+		return 0
+
 	iLatitude = CyPlot.getLatitude()
 	if iLatitude < 50 and 30 < iLatitude:
 		return 1
-	elif iLatitude < 60 and 20 < iLatitude:
-		if random() < 0.20:
+
+	iRandom = GAME.getSorenRandNum(101, "Random Plot") # 0 <-> 100
+	if iLatitude < 60 and 20 < iLatitude:
+		if iRandom < 20:
 			return 1
-	elif random() < 0.04:
+	elif iRandom < 5:
 		return 1
 	return 0
 
@@ -8556,12 +8570,15 @@ def doTornado(argsList):
 	EventTriggeredData = argsList[1]
 	x, y = EventTriggeredData.iPlotX, EventTriggeredData.iPlotY
 	CyPlot = GC.getMap().plot(x, y)
-	if random() < 0.5:
+	if 50 > GAME.getSorenRandNum(101, "Random Plot"):
 		CyPlot.setImprovementType(-1)
-	if random() < 0.25:
+
+	if 25 > GAME.getSorenRandNum(101, "Random Plot"):
 		CyPlot.setRouteType(-1)
+
 	if CyPlot.getFeatureType() == -1:
 		CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_TORNADO'), 0)
+
 	iUnits = CyPlot.getNumUnits()
 	for iUnit in xrange(iUnits):
 		CyPlot.getUnit(iUnit).setImmobileTimer(1)
@@ -8590,20 +8607,10 @@ def canApplyNativegood1(argsList):
           return 0
 
 def helpNativegood1(argsList):
-        iEvent = argsList[0]
-        kTriggeredData = argsList[1]
-
-        szHelp = TRNSLTR.getText("TXT_KEY_EVENT_NATIVEGOOD1_1HELP",())
-
-        return szHelp
+	return TRNSLTR.getText("TXT_KEY_EVENT_NATIVEGOOD1_1HELP",())
 
 def ApplyNativegood11(argsList):
-        iEvent = argsList[0]
-        kTriggeredData = argsList[1]
-
-        player = GC.getPlayer(kTriggeredData.ePlayer)
-        player.CreateRandomCityBonus()
-
+	GC.getPlayer(argsList[1].ePlayer).CreateRandomCityBonus()
 
 ######## Native Good 2 -- Recruits ###########
 
@@ -8705,7 +8712,7 @@ def ApplyNativegood3(argsList):
         kTriggeredData = argsList[1]
 
         player = GC.getPlayer(kTriggeredData.ePlayer)
-        player.changeGold(50 + GC.getGame().getSorenRandNum(50, "random native gold"))
+        player.changeGold(50 + GAME.getSorenRandNum(50, "random native gold"))
 
 ######## Native Good 4 -- Ancient Tech ###########
 
@@ -8775,8 +8782,7 @@ def doEventLawyer(argsList):
 			iHC = -75
 
 	# Does litigation succeed
-	irandom = GC.getGame().getSorenRandNum(100,"")
-	if irandom < 95 - ((len( lCityCorporations ))*5) + iHC:
+	if GAME.getSorenRandNum(101, "Lawyer") < 95 - ((len( lCityCorporations ))*5) + iHC:
 
 		# Removes buildings
 		for iBuildingLoop in xrange(GC.getNumBuildingInfos( )):
@@ -8844,7 +8850,7 @@ def doRemoveWVSlavery(argsList):
 		iUnitMerCaravan = GC.getInfoTypeForString("UNIT_EARLY_MERCHANT_C2C")
 		iUnitHealth = GC.getInfoTypeForString("UNIT_HEALER")
 
-		bMessage = iPlayer == GC.getGame().getActivePlayer()
+		bMessage = iPlayer == GAME.getActivePlayer()
 		if bMessage:
 			msg = "Slavery worldview eradicated"
 			CvUtil.sendMessage(msg, iPlayer, 16, CyUnit.getButton(), ColorTypes(8), CyUnit.getX(), CyUnit.getY(), True, True, 0, "AS2D_DISCOVERBONUS")
@@ -9724,7 +9730,7 @@ def canTriggerCivilWar(argsList):
 	player = GC.getPlayer(kTriggeredData.ePlayer)
 	pCity = player.getCity(kTriggeredData.iCityId)
 
-	if GC.getMAX_PC_PLAYERS() == GC.getGame().countCivPlayersAlive():
+	if GC.getMAX_PC_PLAYERS() == GAME.countCivPlayersAlive():
 		return False
 	if player.getNumCities() <= 1:
 		return False
@@ -9737,7 +9743,7 @@ def canTriggerCivilWar(argsList):
 def applyCivilWar(argsList):
 	kTriggeredData = argsList[1]
 	DeclareWar = True
-	dice = GC.getGame().getMapRand()
+	dice = GAME.getMapRand()
 
 	lAlive = []
 	del lAlive[:]
@@ -9791,7 +9797,7 @@ def applyCivilWar(argsList):
 			return False
 
 	# Add the player to the game
-	GC.getGame().addPlayer(iNewID, NewLeaderID, iNewCiv)
+	GAME.addPlayer(iNewID, NewLeaderID, iNewCiv)
 
 	pNewPlayer = GC.getPlayer(iNewID)
 	pNewTeam = GC.getTeam(pNewPlayer.getTeam())
@@ -9842,7 +9848,7 @@ def applyCivilWar(argsList):
 
 ################ BEST HUNTERS ################
 def canDoBestHunters1(argsList):
-	if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_WITHOUT_WARNING): return True
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_WITHOUT_WARNING): return True
 	return False
 
 ################ BOUNTIFUL ANIMALS ################

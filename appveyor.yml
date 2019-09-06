@@ -27,10 +27,6 @@ environment:
   build_dir: _build
   release_branch: release
 
-install:
-  - set PATH=C:\Ruby26-x64\bin;%PATH%
-  - gem install github_changelog_generator
-
 build_script:
 - cmd: >-
     call Powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%APPVEYOR_BUILD_FOLDER%\Tools\CI\fix_sources_timestamps.ps1"
