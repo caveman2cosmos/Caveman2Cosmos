@@ -4,7 +4,7 @@ $xml_path = Resolve-Path "..\..\Assets\XML\A_New_Dawn_GlobalDefines.xml"
 
 foreach ($item in $xml.Civ4Defines.ChildNodes) {
     if ($item.DefineName -eq "C2C_VERSION") {
-        $item.DefineTextVal = "$($env:version)"
+        $item.DefineTextVal = "$($env:C2C_VERSION)"
     }
 }
 

@@ -11,13 +11,13 @@ if "%APPVEYOR_PULL_REQUEST_TITLE%" neq "" (
 )
 
 PUSHD "%~dp0..\.."
-SET version=v%APPVEYOR_BUILD_VERSION%-alpha
+SET C2C_VERSION=v%APPVEYOR_BUILD_VERSION%-alpha
 SET "root_dir=%cd%"
 if not exist "%build_dir%" goto :skip_delete
 rmdir /Q /S "%build_dir%"
 :skip_delete
 
-echo C2C %version% DEPLOYMENT
+echo C2C %C2C_VERSION% DEPLOYMENT
 echo.
 
 :: WRITE VERSION TO XML ---------------------------------------
@@ -28,7 +28,7 @@ powershell -ExecutionPolicy Bypass -File "%~dp0\InitGit.ps1"
 
 :: SET GIT RELEASE TAG -----------------------------------------
 echo Setting release version build tag on git ...
-git tag -a %version% %APPVEYOR_REPO_COMMIT% -m "%version%"
+git tag -a %C2C_VERSION% %APPVEYOR_REPO_COMMIT% -m "%C2C_VERSION%"
 git push --tags
 
 :: COMPILE -----------------------------------------------------
@@ -78,12 +78,12 @@ xcopy "CIV_C2C.ico" "%build_dir%" /R /Y
 
 :: GENERATE NEW CHANGES LOG ------------------------------------
 echo Generate SVN commit description...
-call Tools\CI\git-chglog_windows_amd64.exe --output "%root_dir%\commit_desc.md" --config Tools\CI\.chglog\config.yml %version%
+call Tools\CI\git-chglog_windows_amd64.exe --output "%root_dir%\commit_desc.md" --config Tools\CI\.chglog\config.yml %C2C_VERSION%
 
 :: GENERATE FULL CHANGELOG -------------------------------------
 echo Update full SVN changelog ...
 call Tools\CI\git-chglog_windows_amd64.exe --output "%build_dir%\CHANGELOG.md" --config Tools\CI\.chglog\config.yml
-REM call github_changelog_generator --cache-file "github-changelog-http-cache" --cache-log "github-changelog-logger.log" -u caveman2cosmos --token %git_access_token% --future-release %version% --release-branch %release_branch% --output "%build_dir%\CHANGELOG.md"
+REM call github_changelog_generator --cache-file "github-changelog-http-cache" --cache-log "github-changelog-logger.log" -u caveman2cosmos --token %git_access_token% --future-release %C2C_VERSION% --release-branch %release_branch% --output "%build_dir%\CHANGELOG.md"
 
 :: DETECT SVN CHANGES ------------------------------------------
 echo Detecting working copy changes...

@@ -70,11 +70,18 @@ CUSTOM_LDFLAGS =
 # !ENDIF
 # !include Makefile.settings
 
+!IFDEF C2C_VERSION
+VERSION_DEFINE=/DC2C_VERSION="\"$(C2C_VERSION)\""
+!ELSE
+VERSION_DEFINE=
+!ENDIF
+
 # /nologo /MD /Z7 /O2 /Oy /Oi /G7 /DWIN32 /D_WINDOWS /D_USRDLL /DCVGAMECOREDLL_EXPORTS /DNDEBUG /DFINAL_RELEASE /GR /Gy /W3 /EHsc /Gd /Gm- /Fd"TARGET_DIR_files\Profile\CvGameCoreDLL.pdb"   /Z7 /Yu"CvGameCoreDLL.h" /Fp"temp_files\Profile\CvGameCoreDLL.pch" /I"deps/Boost-1.32.0/include" /I"deps/Python24/include" /I"./include" /I"deps\Microsoft Visual C++ Toolkit 2003/include" /I"deps\Microsoft Platform SDK/Include" /I"deps\Microsoft Platform SDK/Include/mfc" /YcCvGameCoreDLL.h /Fo"temp_files\Profile\_precompile.obj" /c .\_precompile.cpp
 PRECOMPILE_DEPENDENCIES = 
-PROJECT_CFLAGS = /arch:SSE2 /Zm200 /DXERCES_STATIC_LIBRARY /D_MOD_SENTRY /D_MOD_FRACTRADE /D_MOD_GOVWORKERS /DQC_MASTERY_VICTORY /DLOG_AI /D_MOD_GWARM /D_MOD_SHAM_SPOILER /DC2C_BUILD
+PROJECT_CFLAGS = /arch:SSE2 /Zm200 /DXERCES_STATIC_LIBRARY /D_MOD_SENTRY /D_MOD_FRACTRADE /D_MOD_GOVWORKERS /DQC_MASTERY_VICTORY /DLOG_AI /D_MOD_GWARM /D_MOD_SHAM_SPOILER /DC2C_BUILD $(VERSION_DEFINE)
 PROJECT_LDFLAGS = /NODEFAULTLIB:msvcprtd.lib /DEF:CvGameCoreDLL.def /PDBALTPATH:%_PDB%
 SOURCE_DIR = .
+
 
 SUBDIRPATH1 = ../
 SUBDIRPATH2 = ../
