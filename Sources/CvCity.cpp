@@ -20842,12 +20842,16 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCity", (int*)&m_eOwner);
 	WRAPPER_READ(wrapper, "CvCity", (int*)&m_ePreviousOwner);
 	WRAPPER_READ(wrapper, "CvCity", (int*)&m_eOriginalOwner);
-	WRAPPER_READ(wrapper, "CvCity", (int*)&m_eCultureLevel);
-	if ( m_eCultureLevel >= GC.getNumCultureLevelInfos() )
+	CultureLevelTypes eTempCultureLevel;
+	WRAPPER_READ_DECORATED(wrapper, "CvCity", (int*)& eTempCultureLevel, "m_eCultureLevel");
+	if (eTempCultureLevel >= GC.getNumCultureLevelInfos() )
 	{
 		m_eCultureLevel = (CultureLevelTypes)(GC.getNumCultureLevelInfos() - 1);
 	}
-
+	else
+	{
+		m_eCultureLevel = (CultureLevelTypes)wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_CULTURELEVELS, eTempCultureLevel);
+	}
 /************************************************************************************************/
 /* REVOLUTION_MOD                         06/10/08                                jdog5000      */
 /*                                                                                              */
@@ -20972,7 +20976,7 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_pabHadVicinityBonus);
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvCity", REMAPPED_CLASS_TYPE_CIVILIZATIONS, &m_iCiv);
 	WRAPPER_READ(wrapper, "CvCity", &m_iExtraYieldTurns);
-	WRAPPER_READ(wrapper, "CvCity", (int*)&m_eOccupationCultureLevel);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "CvCity", REMAPPED_CLASS_TYPE_CULTURELEVELS, (int*)&m_eOccupationCultureLevel);
 	WRAPPER_READ(wrapper, "CvCity", &m_iLineOfSight);
 	WRAPPER_READ(wrapper, "CvCity", &m_iLandmarkAngerTimer);
 	WRAPPER_READ(wrapper, "CvCity", &m_iInvasionChance);
@@ -21465,7 +21469,7 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvCity", m_eOwner);
 	WRAPPER_WRITE(wrapper, "CvCity", m_ePreviousOwner);
 	WRAPPER_WRITE(wrapper, "CvCity", m_eOriginalOwner);
-	WRAPPER_WRITE(wrapper, "CvCity", m_eCultureLevel);
+	WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_eCultureLevel, "m_eCultureLevel");
 
 /************************************************************************************************/
 /* REVOLUTION_MOD                         06/10/08                                jdog5000      */
@@ -21580,7 +21584,7 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_pabHadVicinityBonus);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvCity", REMAPPED_CLASS_TYPE_CIVILIZATIONS, m_iCiv);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iExtraYieldTurns);
-	WRAPPER_WRITE(wrapper, "CvCity", m_eOccupationCultureLevel);
+	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvCity", REMAPPED_CLASS_TYPE_CULTURELEVELS, m_eOccupationCultureLevel);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iLineOfSight);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iLandmarkAngerTimer);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iInvasionChance);
