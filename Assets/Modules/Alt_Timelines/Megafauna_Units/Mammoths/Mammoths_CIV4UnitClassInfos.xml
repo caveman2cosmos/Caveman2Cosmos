@@ -3,7 +3,6 @@
 	<UnitClassInfos>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TRAINED_MAMMOTH</Type>
-			<Description>TXT_KEY_UNIT_TRAINED_MAMMOTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
@@ -12,7 +11,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_NEANDERTHAL_MAMMOTH_RIDER</Type>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_MAMMOTH_RIDER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
@@ -20,7 +18,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WAR_MAMMOTH</Type>
-			<Description>TXT_KEY_UNIT_WAR_MAMMOTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
@@ -29,7 +26,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BALLISTA_MAMMOTH</Type>
-			<Description>TXT_KEY_UNIT_BALLISTA_MAMMOTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
@@ -38,7 +34,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BOMBARD_MAMMOTH</Type>
-			<Description>TXT_KEY_UNIT_BOMBARD_MAMMOTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
@@ -47,7 +42,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WORKMAMMOTH</Type>
-			<Description>TXT_KEY_UNIT_WORKMAMMOTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>

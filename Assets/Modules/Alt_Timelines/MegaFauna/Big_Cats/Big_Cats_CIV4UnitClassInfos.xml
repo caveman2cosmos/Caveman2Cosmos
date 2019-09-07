@@ -9,7 +9,6 @@
 	<UnitClassInfos>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TRAINEDCAT</Type>
-			<Description>TXT_KEY_UNIT_TRAINEDCAT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -18,7 +17,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARCAT</Type>
-			<Description>TXT_KEY_UNIT_WARCAT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -27,7 +25,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_GUARDCAT</Type>
-			<Description>TXT_KEY_UNIT_GUARDCAT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -36,7 +33,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_POLICE_CAT</Type>
-			<Description>TXT_KEY_UNIT_POLICE_CAT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -45,7 +41,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_FELINE_SUPERIOR</Type>
-			<Description>TXT_KEY_UNIT_FELINE_SUPERIOR</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>

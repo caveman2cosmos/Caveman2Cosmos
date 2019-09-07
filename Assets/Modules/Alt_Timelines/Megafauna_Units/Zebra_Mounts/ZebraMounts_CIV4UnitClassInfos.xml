@@ -3,7 +3,6 @@
 	<UnitClassInfos>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ZEBRA_ARCHER</Type>
-			<Description>TXT_KEY_UNIT_ZEBRA_ARCHER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -12,7 +11,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ZEBRA_CAVALRY</Type>
-			<Description>TXT_KEY_UNIT_ZEBRA_CAVALRY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -21,7 +19,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ZEBRA_CHARIOT</Type>
-			<Description>TXT_KEY_UNIT_ZEBRA_CHARIOT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -30,7 +27,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ZEBRA_CUIRASSIER</Type>
-			<Description>TXT_KEY_UNIT_ZEBRA_CUIRASSIER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -39,7 +35,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ZEBRA_KNIGHT</Type>
-			<Description>TXT_KEY_UNIT_ZEBRA_KNIGHT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>

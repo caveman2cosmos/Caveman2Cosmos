@@ -8,7 +8,6 @@
 	<UnitClassInfos>
 		<UnitClassInfo>
 			<Type>UNITCLASS_CLOCKWORK_GOLEM</Type>
-			<Description>TXT_KEY_UNIT_CLOCKWORK_GOLEM</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
@@ -17,7 +16,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_DAVINCI_TANK</Type>
-			<Description>TXT_KEY_UNIT_DAVINCI_TANK</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
@@ -26,7 +24,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ORNITHOPTER</Type>
-			<Description>TXT_KEY_UNIT_ORNITHOPTER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
@@ -35,7 +32,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_REPEATING_CROSSBOWMAN</Type>
-			<Description>TXT_KEY_UNIT_REPEATING_CROSSBOWMAN</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
@@ -44,7 +40,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ZEPHYR</Type>
-			<Description>TXT_KEY_UNIT_ZEPHYR</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>

@@ -9,7 +9,6 @@
 	<UnitClassInfos>
 		<UnitClassInfo>
 			<Type>UNITCLASS_DEER_ARCHER</Type>
-			<Description>TXT_KEY_UNIT_DEER_ARCHER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
@@ -18,7 +17,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_DEERRIDER</Type>
-			<Description>TXT_KEY_UNIT_DEERRIDER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
@@ -27,7 +25,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_DEER_LIGHT</Type>
-			<Description>TXT_KEY_UNIT_DEER_LIGHT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>

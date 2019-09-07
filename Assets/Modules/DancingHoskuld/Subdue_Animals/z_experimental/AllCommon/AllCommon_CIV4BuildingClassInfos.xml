@@ -7,7 +7,6 @@
 	<BuildingClassInfos>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_AMPHIBIAN_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_AMPHIBIAN_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -15,7 +14,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_AMPHIBIAN_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_AMPHIBIAN_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -23,7 +21,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_AMPHIBIAN_STORY</Type>
-			<Description>TXT_KEY_BUILDING_AMPHIBIAN_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -31,7 +28,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_AMPHIBIAN_STORIES</Type>
-			<Description>TXT_KEY_BUILDING_AMPHIBIAN_STORIES</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -39,7 +35,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_AMPHIBIAN_STORIES_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_AMPHIBIAN_STORIES_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -47,7 +42,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BIRD_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_BIRD_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -55,7 +49,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BIRD_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_BIRD_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -63,7 +56,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BIRD_STORY</Type>
-			<Description>TXT_KEY_BUILDING_BIRD_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -71,7 +63,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BIRD_STORIES</Type>
-			<Description>TXT_KEY_BUILDING_BIRD_STORIES</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -79,7 +70,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BIRD_STORIES_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_BIRD_STORIES_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -87,7 +77,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FLIGHTLESS_BIRD_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -95,7 +84,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FLIGHTLESS_BIRD_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -103,7 +91,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FLIGHTLESS_BIRD_STORY</Type>
-			<Description>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -111,7 +98,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FLIGHTLESS_BIRD_STORIES</Type>
-			<Description>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_STORIES</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -119,7 +105,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FLIGHTLESS_BIRD_STORIES_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_STORIES_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -127,7 +112,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SEA_BIRD_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_SEA_BIRD_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -135,7 +119,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SEA_BIRD_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_SEA_BIRD_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -143,7 +126,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SEA_BIRD_STORY</Type>
-			<Description>TXT_KEY_BUILDING_SEA_BIRD_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -151,7 +133,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SEA_BIRD_STORIES</Type>
-			<Description>TXT_KEY_BUILDING_SEA_BIRD_STORIES</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -159,7 +140,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SEA_BIRD_STORIES_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_SEA_BIRD_STORIES_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -167,7 +147,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_OWL_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_OWL_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -175,7 +154,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_OWL_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_OWL_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -183,7 +161,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_OWL_STORY</Type>
-			<Description>TXT_KEY_BUILDING_OWL_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -191,7 +168,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_OWL_STORIES</Type>
-			<Description>TXT_KEY_BUILDING_OWL_STORIES</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -199,17 +175,13 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_OWL_STORIES_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_OWL_STORIES_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_OWL_STORIES_EFFECT</DefaultBuilding>
 		</BuildingClassInfo>
-
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_RAPTOR_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_RAPTOR_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -217,7 +189,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_RAPTOR_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_RAPTOR_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -225,7 +196,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_RAPTOR_STORY</Type>
-			<Description>TXT_KEY_BUILDING_RAPTOR_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -233,7 +203,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_RAPTOR_STORIES</Type>
-			<Description>TXT_KEY_BUILDING_RAPTOR_STORIES</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -241,16 +210,13 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_RAPTOR_STORIES_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_RAPTOR_STORIES_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_RAPTOR_STORIES_EFFECT</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_LOCAL_FISH_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_LOCAL_FISH_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -258,7 +224,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FISH_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_FISH_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -266,7 +231,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FISH_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_FISH_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -274,7 +238,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FISH_STORY</Type>
-			<Description>TXT_KEY_BUILDING_FISH_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -282,7 +245,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FISH_STORIES</Type>
-			<Description>TXT_KEY_BUILDING_FISH_STORIES</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -290,16 +252,13 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FISH_STORIES_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_FISH_STORIES_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_FISH_STORIES_EFFECT</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_REPTILE_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_REPTILE_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -307,7 +266,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_REPTILE_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_REPTILE_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -315,7 +273,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_REPTILE_STORY</Type>
-			<Description>TXT_KEY_BUILDING_REPTILE_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -323,7 +280,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_REPTILE_STORIES</Type>
-			<Description>TXT_KEY_BUILDING_REPTILE_STORIES</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -331,16 +287,13 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_REPTILE_STORIES_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_REPTILE_STORIES_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_REPTILE_STORIES_EFFECT</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_RODENT_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_RODENT_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -348,7 +301,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_RODENT_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_RODENT_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -356,7 +308,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_RODENT_STORY</Type>
-			<Description>TXT_KEY_BUILDING_RODENT_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -364,7 +315,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_RODENT_STORIES</Type>
-			<Description>TXT_KEY_BUILDING_RODENT_STORIES</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -372,7 +322,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_RODENT_STORIES_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_RODENT_STORIES_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -380,7 +329,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BUG_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_BUG_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -388,7 +336,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BUG_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_BUG_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -396,7 +343,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BUG_STORY</Type>
-			<Description>TXT_KEY_BUILDING_BUG_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -404,7 +350,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BUG_STORIES</Type>
-			<Description>TXT_KEY_BUILDING_BUG_STORIES</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -412,7 +357,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BUG_STORIES_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_BUG_STORIES_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -420,7 +364,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_WOLF_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_WOLF_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -428,7 +371,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_WOLF_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_WOLF_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -436,7 +378,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_WOLF_STORY</Type>
-			<Description>TXT_KEY_BUILDING_WOLF_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -444,7 +385,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_WOLF_STORIES</Type>
-			<Description>TXT_KEY_BUILDING_WOLF_STORIES</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -452,7 +392,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_WOLF_STORIES_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_WOLF_STORIES_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -460,7 +399,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PENGUIN_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_PENGUIN_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -468,7 +406,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PENGUIN_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_PENGUIN_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -476,7 +413,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PENGUIN_STORY</Type>
-			<Description>TXT_KEY_BUILDING_PENGUIN_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -484,7 +420,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PENGUIN_STORIES</Type>
-			<Description>TXT_KEY_BUILDING_PENGUIN_STORIES</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -492,16 +427,13 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PENGUIN_STORIES_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_PENGUIN_STORIES_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_PENGUIN_STORIES_EFFECT</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NEW_W_MONKEY_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_NEW_W_MONKEY_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -509,7 +441,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NEW_W_MONKEY_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_NEW_W_MONKEY_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -517,7 +448,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NEW_W_MONKEY_STORY</Type>
-			<Description>TXT_KEY_BUILDING_NEW_W_MONKEY_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -525,7 +455,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NEW_W_MONKEY_STORIES</Type>
-			<Description>TXT_KEY_BUILDING_NEW_W_MONKEY_STORIES</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -533,16 +462,13 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NEW_W_MONKEY_STORIES_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_NEW_W_MONKEY_STORIES_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_NEW_W_MONKEY_STORIES_EFFECT</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_OLD_W_MONKEY_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_OLD_W_MONKEY_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -550,7 +476,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_OLD_W_MONKEY_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_OLD_W_MONKEY_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -558,7 +483,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_OLD_W_MONKEY_STORY</Type>
-			<Description>TXT_KEY_BUILDING_OLD_W_MONKEY_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -566,7 +490,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_OLD_W_MONKEY_STORIES</Type>
-			<Description>TXT_KEY_BUILDING_OLD_W_MONKEY_STORIES</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -574,7 +497,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_OLD_W_MONKEY_STORIES_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_OLD_W_MONKEY_STORIES_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>

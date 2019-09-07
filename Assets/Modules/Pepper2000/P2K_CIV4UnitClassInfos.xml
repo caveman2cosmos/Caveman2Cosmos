@@ -7,7 +7,6 @@
 	<UnitClassInfos>
 		<UnitClassInfo>
 			<Type>UNITCLASS_CISLUNARSETTLER</Type>
-			<Description>TXT_KEY_UNIT_CISLUNARSETTLER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -15,7 +14,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_LUNARSETTLER</Type>
-			<Description>TXT_KEY_UNIT_LUNARSETTLER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -23,7 +21,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_PLANETARYSETTLER</Type>
-			<Description>TXT_KEY_UNIT_PLANETARYSETTLER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -31,7 +28,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_ONEILLSETTLER</Type>
-			<Description>TXT_KEY_UNIT_ONEILLSETTLER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -39,7 +35,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_WORLDSHIP</Type>
-			<Description>TXT_KEY_UNIT_WORLDSHIP</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -47,7 +42,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_WORLDSHIP2</Type>
-			<Description>TXT_KEY_UNIT_WORLDSHIP2</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -55,7 +49,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_WORLDSHIP3</Type>
-			<Description>TXT_KEY_UNIT_WORLDSHIP3</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -63,7 +56,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_WORLDSHIP4</Type>
-			<Description>TXT_KEY_UNIT_WORLDSHIP4</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -71,7 +63,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_HYPERSHIP</Type>
-			<Description>TXT_KEY_UNIT_HYPERSHIP</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -79,7 +70,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_ATTACKSHIP</Type>
-			<Description>TXT_KEY_UNIT_ATTACKSHIP</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -87,7 +77,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_CISLUNAR_INVADER</Type>
-			<Description>TXT_KEY_UNIT_CISLUNAR_INVADER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -95,7 +84,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_INT_INVADER</Type>
-			<Description>TXT_KEY_UNIT_INT_INVADER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -103,7 +91,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_INT_BATTLECRUISER</Type>
-			<Description>TXT_KEY_UNIT_INT_BATTLECRUISER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -111,7 +98,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_HYPER_BATTLECRUISER</Type>
-			<Description>TXT_KEY_UNIT_HYPER_BATTLECRUISER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -119,7 +105,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_CISLUNAR_INFANTRY</Type>
-			<Description>TXT_KEY_UNIT_CISLUNAR_INFANTRY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -127,7 +112,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_DEEPSPACE_INFANTRY</Type>
-			<Description>TXT_KEY_UNIT_DEEPSPACE_INFANTRY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -135,7 +119,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_WORLDSHIP_DEFENDER</Type>
-			<Description>TXT_KEY_UNIT_WORLDSHIP_DEFENDER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -143,7 +126,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_LUNAR_INFANTRY</Type>
-			<Description>TXT_KEY_UNIT_LUNAR_INFANTRY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -151,7 +133,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_MARTIAN_INFANTRY</Type>
-			<Description>TXT_KEY_UNIT_MARTIAN_INFANTRY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -159,7 +140,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_VENUS_INFANTRY</Type>
-			<Description>TXT_KEY_UNIT_VENUS_INFANTRY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -167,7 +147,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_PLANETARY_INFANTRY</Type>
-			<Description>TXT_KEY_UNIT_PLANETARY_INFANTRY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -175,7 +154,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_HYPERSPACE_DEFENDER</Type>
-			<Description>TXT_KEY_UNIT_HYPERSPACE_DEFENDER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -183,7 +161,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_MARTIAN_WORKER</Type>
-			<Description>TXT_KEY_UNIT_MARTIAN_WORKER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -191,7 +168,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_VENUS_WORKER</Type>
-			<Description>TXT_KEY_UNIT_VENUS_WORKER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -199,7 +175,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_CISLUNAR_WORKER</Type>
-			<Description>TXT_KEY_UNIT_CISLUNAR_WORKER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -207,7 +182,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_SOLAR_WORKER</Type>
-			<Description>TXT_KEY_UNIT_SOLAR_WORKER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -215,7 +189,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_WORMHOLE_WORKER</Type>
-			<Description>TXT_KEY_UNIT_WORMHOLE_WORKER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -223,7 +196,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_MARSSETTLER</Type>
-			<Description>TXT_KEY_UNIT_MARSSETTLER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -231,7 +203,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_VENUS_SETTLER</Type>
-			<Description>TXT_KEY_UNIT_VENUS_SETTLER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -239,7 +210,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_SOLARSAIL_WORKER</Type>
-			<Description>TXT_KEY_UNIT_SOLARSAIL_WORKER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -247,7 +217,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_MAGSAIL_WORKER</Type>
-			<Description>TXT_KEY_UNIT_MAGSAIL_WORKER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -255,7 +224,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_SPACE_WORK_CREW</Type>
-			<Description>TXT_KEY_UNIT_SPACE_WORK_CREW</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -263,7 +231,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_CYBERNETIC_WORK_CREW</Type>
-			<Description>TXT_KEY_UNIT_CYBERNETIC_WORK_CREW</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -271,7 +238,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_TRANSHUMAN_WORK_CREW</Type>
-			<Description>TXT_KEY_UNIT_TRANSHUMAN_WORK_CREW</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -279,7 +245,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_POSTHUMAN_WORK_CREW</Type>
-			<Description>TXT_KEY_UNIT_POSTHUMAN_WORK_CREW</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -287,7 +252,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_COSMIC_WORK_CREW</Type>
-			<Description>TXT_KEY_UNIT_COSMIC_WORK_CREW</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -295,7 +259,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_SHAPESHIFTING_WORK_CREW</Type>
-			<Description>TXT_KEY_UNIT_SHAPESHIFTING_WORK_CREW</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -303,7 +266,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_HYPERINTELLIGENT_WORK_CREW</Type>
-			<Description>TXT_KEY_UNIT_HYPERINTELLIGENT_WORK_CREW</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -311,7 +273,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_SATELLITE</Type>
-			<Description>TXT_KEY_UNIT_SATELLITE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -319,7 +280,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_SPACE_SHUTTLE</Type>
-			<Description>TXT_KEY_UNIT_SPACE_SHUTTLE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>2</iMaxPlayerInstances>
@@ -327,7 +287,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_PLANET_PROBE</Type>
-			<Description>TXT_KEY_UNIT_PLANET_PROBE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
@@ -335,7 +294,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_INTERSTELLAR_PROBE</Type>
-			<Description>TXT_KEY_UNIT_INTERSTELLAR_PROBE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
@@ -343,7 +301,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_BRACEWELL_PROBE</Type>
-			<Description>TXT_KEY_UNIT_BRACEWELL_PROBE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
@@ -351,7 +308,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_VON_NEUMANN_PROBE</Type>
-			<Description>TXT_KEY_UNIT_VON_NEUMANN_PROBE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
@@ -359,7 +315,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_QUANTUM_PROBE</Type>
-			<Description>TXT_KEY_UNIT_QUANTUM_PROBE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
@@ -367,7 +322,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_INTERDIMENSIONAL_PROBE</Type>
-			<Description>TXT_KEY_UNIT_INTERDIMENSIONAL_PROBE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
@@ -375,7 +329,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_HEAVY_ROCKET</Type>
-			<Description>TXT_KEY_UNIT_HEAVY_ROCKET</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
@@ -383,7 +336,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_CAPTURED_ASTEROID</Type>
-			<Description>TXT_KEY_UNIT_CAPTURED_ASTEROID</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -391,7 +343,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_CAPTURED_COMET</Type>
-			<Description>TXT_KEY_UNIT_CAPTURED_COMET</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -399,7 +350,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_BACTERIA_SWARM</Type>
-			<Description>TXT_KEY_UNIT_BACTERIA_SWARM</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -407,7 +357,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_LIFE_SWARM</Type>
-			<Description>TXT_KEY_UNIT_LIFE_SWARM</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -415,7 +364,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_ENERGY_ENTITY</Type>
-			<Description>TXT_KEY_UNIT_ENERGY_ENTITY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -423,7 +371,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_INTERSTELLAR_WORKER</Type>
-			<Description>TXT_KEY_UNIT_INTERSTELLAR_WORKER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -431,7 +378,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_LOE_REWARD</Type>
-			<Description>TXT_KEY_UNIT_LOE_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -439,7 +385,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_SS1_REWARD</Type>
-			<Description>TXT_KEY_UNIT_SS1_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -447,7 +392,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_SS2_REWARD</Type>
-			<Description>TXT_KEY_UNIT_SS2_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -455,7 +399,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_SS3_REWARD</Type>
-			<Description>TXT_KEY_UNIT_SS3_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -463,7 +406,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_CISLUNAR_REWARD</Type>
-			<Description>TXT_KEY_UNIT_CISLUNAR_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -471,7 +413,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_LUNAR_REWARD</Type>
-			<Description>TXT_KEY_UNIT_LUNAR_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -479,7 +420,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_INNER_SOLAR_SYSTEM_REWARD</Type>
-			<Description>TXT_KEY_UNIT_INNER_SOLAR_SYSTEM_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -487,7 +427,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_OUTER_SOLAR_SYSTEM_REWARD</Type>
-			<Description>TXT_KEY_UNIT_OUTER_SOLAR_SYSTEM_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -495,7 +434,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_TRANSNEPTUNIAN_REWARD</Type>
-			<Description>TXT_KEY_UNIT_TRANSNEPTUNIAN_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -503,7 +441,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_INTERSTELLAR_REWARD</Type>
-			<Description>TXT_KEY_UNIT_INTERSTELLAR_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -511,7 +448,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_GALACTIC_REWARD</Type>
-			<Description>TXT_KEY_UNIT_GALACTIC_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -519,7 +455,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_INTERGALACTIC_REWARD</Type>
-			<Description>TXT_KEY_UNIT_INTERGALACTIC_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -527,7 +462,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_MERCURY_REWARD</Type>
-			<Description>TXT_KEY_UNIT_MERCURY_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -535,7 +469,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_VENUS_REWARD</Type>
-			<Description>TXT_KEY_UNIT_VENUS_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -543,7 +476,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_MARS_REWARD</Type>
-			<Description>TXT_KEY_UNIT_MARS_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -551,7 +483,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_ASTEROID_REWARD</Type>
-			<Description>TXT_KEY_UNIT_ASTEROID_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -559,7 +490,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_JUPITER_REWARD</Type>
-			<Description>TXT_KEY_UNIT_JUPITER_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -567,7 +497,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_SATURN_REWARD</Type>
-			<Description>TXT_KEY_UNIT_SATURN_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -575,7 +504,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_EUROPA_REWARD</Type>
-			<Description>TXT_KEY_UNIT_EUROPA_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -583,7 +511,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_TITAN_REWARD</Type>
-			<Description>TXT_KEY_UNIT_TITAN_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -591,7 +518,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_URANUS_REWARD</Type>
-			<Description>TXT_KEY_UNIT_URANUS_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -599,7 +525,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_NEPTUNE_REWARD</Type>
-			<Description>TXT_KEY_UNIT_NEPTUNE_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -607,7 +532,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_KBO_REWARD</Type>
-			<Description>TXT_KEY_UNIT_KBO_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -615,7 +539,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_SEDNOID_REWARD</Type>
-			<Description>TXT_KEY_UNIT_SEDNOID_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -623,7 +546,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_EXOPLANET_REWARD</Type>
-			<Description>TXT_KEY_UNIT_EXOPLANET_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -631,7 +553,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_OORT_CLOUD_REWARD</Type>
-			<Description>TXT_KEY_UNIT_OORT_CLOUD_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -639,7 +560,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_DISTANT_COSMOS_REWARD</Type>
-			<Description>TXT_KEY_UNIT_DISTANT_COSMOS_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -647,7 +567,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_HYPERSPACE_REWARD</Type>
-			<Description>TXT_KEY_UNIT_HYPERSPACE_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -655,7 +574,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_MULTIVERSE_REWARD</Type>
-			<Description>TXT_KEY_UNIT_MULTIVERSE_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -663,7 +581,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_ANCIENT_CIVILIZATION_REWARD</Type>
-			<Description>TXT_KEY_UNIT_ANCIENT_CIVILIZATION_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -671,7 +588,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_SOLAR_SYSTEM_LIFE_REWARD</Type>
-			<Description>TXT_KEY_UNIT_SOLAR_SYSTEM_LIFE_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -679,7 +595,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_INTERSTELLAR_LIFE_REWARD</Type>
-			<Description>TXT_KEY_UNIT_INTERSTELLAR_LIFE_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -687,7 +602,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_GALACTIC_CORE_REWARD</Type>
-			<Description>TXT_KEY_UNIT_GALACTIC_CORE_REWARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -695,7 +609,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_NANOWORKER</Type>
-			<Description>TXT_KEY_UNIT_NANOWORKER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -703,7 +616,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_COSMIC_WORKER</Type>
-			<Description>TXT_KEY_UNIT_COSMIC_WORKER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -711,7 +623,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_CHRONOFORM_SHIP</Type>
-			<Description>TXT_KEY_UNIT_CHRONOFORM_SHIP</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -719,7 +630,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_WARLORDVI</Type>
-			<Description>TXT_KEY_UNIT_WARLORDVI</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>6</iMaxPlayerInstances>
@@ -729,7 +639,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_WARLORDVIS</Type>
-			<Description>TXT_KEY_UNIT_WARLORDVIS</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -738,7 +647,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_WARLORDVII</Type>
-			<Description>TXT_KEY_UNIT_WARLORDVII</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>7</iMaxPlayerInstances>
@@ -748,7 +656,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_WARLORDVIIS</Type>
-			<Description>TXT_KEY_UNIT_WARLORDVIIS</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -757,7 +664,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_WARLORDVIII</Type>
-			<Description>TXT_KEY_UNIT_WARLORDVIII</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>8</iMaxPlayerInstances>
@@ -767,7 +673,6 @@
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_WARLORDVIIIS</Type>
-			<Description>TXT_KEY_UNIT_WARLORDVIIIS</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -776,7 +681,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_CONSTRUCTION_SHIP</Type>
-			<Description>TXT_KEY_UNIT_CONSTRUCTION_SHIP</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -785,7 +689,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SUPPLY_SHIP</Type>
-			<Description>TXT_KEY_UNIT_SUPPLY_SHIP</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -794,7 +697,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_LUNAR_BULLDOZER</Type>
-			<Description>TXT_KEY_UNIT_LUNAR_BULLDOZER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -803,7 +705,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_LUNAR_WORKER</Type>
-			<Description>TXT_KEY_UNIT_LUNAR_WORKER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>

@@ -7,7 +7,6 @@
 	<BuildingClassInfos>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_HORSE_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_HORSE_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -15,7 +14,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_HORSE_STORY</Type>
-			<Description>TXT_KEY_BUILDING_HORSE_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -23,7 +21,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_HORSE_STORIES</Type>
-			<Description>TXT_KEY_BUILDING_HORSE_STORIES</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -31,7 +28,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_HORSE_STORIES_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_HORSE_STORIES_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>

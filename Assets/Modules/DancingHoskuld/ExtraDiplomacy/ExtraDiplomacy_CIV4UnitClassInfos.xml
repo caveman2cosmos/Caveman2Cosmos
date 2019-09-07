@@ -9,7 +9,6 @@
 	<UnitClassInfos>
 		<UnitClassInfo>
 			<Type>UNITCLASS_DIPLOMAT_MESSENGER</Type>
-			<Description>TXT_KEY_UNIT_DIPLOMAT_MESSENGER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -18,7 +17,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_DIPLOMAT_EARLY</Type>
-			<Description>TXT_KEY_UNIT_DIPLOMAT_EARLY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
@@ -27,7 +25,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_DIPLOMAT_INDUST</Type>
-			<Description>TXT_KEY_UNIT_DIPLOMAT_INDUST</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -36,7 +33,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_DIPLOMAT_MODERN</Type>
-			<Description>TXT_KEY_UNIT_DIPLOMAT_MODERN</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -45,7 +41,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_DIPLOMAT_GALACTIC</Type>
-			<Description>TXT_KEY_UNIT_DIPLOMAT_GALACTIC</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -54,7 +49,6 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_GREAT_STATESMAN</Type>
-			<Description>TXT_KEY_UNIT_GREAT_STATESMAN</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>

@@ -8,7 +8,6 @@
 	<BuildingClassInfos>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_EJE_SONG</Type>
-			<Description>TXT_KEY_BUILDING_EJE_SONG</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -16,7 +15,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_KING_GESAR_SONG</Type>
-			<Description>TXT_KEY_BUILDING_KING_GESAR_SONG</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -24,7 +22,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SHAMANS_YURTA</Type>
-			<Description>TXT_KEY_BUILDING_SHAMANS_YURTA</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -32,7 +29,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_TENGRI_SHRINE</Type>
-			<Description>TXT_KEY_BUILDING_TENGRI_SHRINE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -40,7 +36,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_TENGRI_SONG</Type>
-			<Description>TXT_KEY_BUILDING_TENGRI_SONG</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>

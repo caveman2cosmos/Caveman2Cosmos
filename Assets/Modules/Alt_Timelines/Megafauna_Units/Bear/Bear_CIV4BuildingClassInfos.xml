@@ -8,7 +8,6 @@
 	<BuildingClassInfos>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BEAR_TRAINER</Type>
-			<Description>TXT_KEY_BUILDING_BEAR_TRAINER</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -16,7 +15,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BEAR_TRAINER_HERITAGE</Type>
-			<Description>TXT_KEY_BUILDING_BEAR_TRAINER_HERITAGE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -24,7 +22,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BEAR_TRAINER_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_BEAR_TRAINER_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -32,7 +29,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_ANIMAL_TOTEM_BEARS</Type>
-			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_BEARS</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>

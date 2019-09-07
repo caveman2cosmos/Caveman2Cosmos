@@ -8,7 +8,6 @@
 	<BuildingClassInfos>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MORMON_CATHEDRAL</Type>
-			<Description>TXT_KEY_BUILDING_MORMON_CATHEDRAL</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -16,7 +15,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MORMON_MONASTERY</Type>
-			<Description>TXT_KEY_BUILDING_MORMON_MONASTERY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -24,7 +22,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MORMON_SHRINE</Type>
-			<Description>TXT_KEY_BUILDING_MORMON_SHRINE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -32,7 +29,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MORMON_TEMPLE</Type>
-			<Description>TXT_KEY_BUILDING_MORMON_TEMPLE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -40,7 +36,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_TEMPLE_SQUARE</Type>
-			<Description>TXT_KEY_BUILDING_TEMPLE_SQUARE</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -48,7 +43,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MISSIONARY_TRAINING_CENTER</Type>
-			<Description>TXT_KEY_BUILDING_MISSIONARY_TRAINING_CENTER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -56,7 +50,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BISHOPS_STOREHOUSE</Type>
-			<Description>TXT_KEY_BUILDING_BISHOPS_STOREHOUSE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -64,7 +57,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_WELFARE_SQUARE</Type>
-			<Description>TXT_KEY_BUILDING_WELFARE_SQUARE</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -72,7 +64,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MORMON_SEMINARY</Type>
-			<Description>TXT_KEY_BUILDING_MORMON_SEMINARY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>

@@ -8,7 +8,6 @@
 	<BuildingClassInfos>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIRST_TO_DISCOVER_MT_SINAI</Type>
-			<Description>TXT_KEY_BUILDING_FIRST_TO_DISCOVER_MT_SINAI</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -16,7 +15,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIRST_TO_DISCOVER_GREAT_BARRIER_REEF</Type>
-			<Description>TXT_KEY_BUILDING_FIRST_TO_DISCOVER_GREAT_BARRIER_REEF</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -24,7 +22,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIRST_TO_DISCOVER_MT_EVEREST</Type>
-			<Description>TXT_KEY_BUILDING_FIRST_TO_DISCOVER_MT_EVEREST</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -32,7 +29,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIRST_TO_DISCOVER_MT_FUJI</Type>
-			<Description>TXT_KEY_BUILDING_FIRST_TO_DISCOVER_MT_FUJI</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -40,7 +36,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIRST_TO_DISCOVER_BAIKAL</Type>
-			<Description>TXT_KEY_BUILDING_FIRST_TO_DISCOVER_BAIKAL</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -48,7 +43,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIRST_TO_DISCOVER_BARRINGER_CRATER</Type>
-			<Description>TXT_KEY_BUILDING_FIRST_TO_DISCOVER_BARRINGER_CRATER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -56,7 +50,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIRST_TO_DISCOVER_BASALT_ORGAN</Type>
-			<Description>TXT_KEY_BUILDING_FIRST_TO_DISCOVER_BASALT_ORGAN</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -64,7 +57,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIRST_TO_DISCOVER_DEVILS_TABLE</Type>
-			<Description>TXT_KEY_BUILDING_FIRST_TO_DISCOVER_DEVILS_TABLE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -72,7 +64,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIRST_TO_DISCOVER_SOPKA</Type>
-			<Description>TXT_KEY_BUILDING_FIRST_TO_DISCOVER_SOPKA</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -80,7 +71,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIRST_TO_DISCOVER_KRAKATOA</Type>
-			<Description>TXT_KEY_BUILDING_FIRST_TO_DISCOVER_KRAKATOA</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -88,7 +78,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIRST_TO_DISCOVER_NGORONGORO_CRATER</Type>
-			<Description>TXT_KEY_BUILDING_FIRST_TO_DISCOVER_NGORONGORO_CRATER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -96,7 +85,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIRST_TO_DISCOVER_NUKUORO</Type>
-			<Description>TXT_KEY_BUILDING_FIRST_TO_DISCOVER_NUKUORO</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -104,7 +92,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIRST_TO_DISCOVER_PAMUKKALE</Type>
-			<Description>TXT_KEY_BUILDING_FIRST_TO_DISCOVER_PAMUKKALE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -112,7 +99,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIRST_TO_DISCOVER_PRAVCICKA_BRANA</Type>
-			<Description>TXT_KEY_BUILDING_FIRST_TO_DISCOVER_PRAVCICKA_BRANA</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -120,7 +106,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIRST_TO_DISCOVER_SHARK_BAY</Type>
-			<Description>TXT_KEY_BUILDING_FIRST_TO_DISCOVER_SHARK_BAY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -128,7 +113,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIRST_TO_DISCOVER_SUGARLOAF</Type>
-			<Description>TXT_KEY_BUILDING_FIRST_TO_DISCOVER_SUGARLOAF</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -136,7 +120,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIRST_TO_DISCOVER_ULURU</Type>
-			<Description>TXT_KEY_BUILDING_FIRST_TO_DISCOVER_ULURU</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -144,7 +127,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIRST_TO_DISCOVER_VICTORIA_FALLS</Type>
-			<Description>TXT_KEY_BUILDING_FIRST_TO_DISCOVER_VICTORIA_FALLS</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -152,7 +134,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIRST_TO_DISCOVER_KILIMANJARO</Type>
-			<Description>TXT_KEY_BUILDING_FIRST_TO_DISCOVER_KILIMANJARO</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -160,7 +141,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIRST_TO_DISCOVER_DEAD_SEA</Type>
-			<Description>TXT_KEY_BUILDING_FIRST_TO_DISCOVER_DEAD_SEA</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -168,16 +148,13 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIRST_TO_DISCOVER_AUYANTEPUI</Type>
-			<Description>TXT_KEY_BUILDING_FIRST_TO_DISCOVER_AUYANTEPUI</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_FIRST_TO_DISCOVER_AUYANTEPUI</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DISCOVERY_MT_SINAI</Type>
-			<Description>TXT_KEY_BUILDING_DISCOVERY_MT_SINAI</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -185,7 +162,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DISCOVERY_GREAT_BARRIER_REEF</Type>
-			<Description>TXT_KEY_BUILDING_DISCOVERY_GREAT_BARRIER_REEF</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -193,7 +169,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DISCOVERY_MT_EVEREST</Type>
-			<Description>TXT_KEY_BUILDING_DISCOVERY_MT_EVEREST</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -201,7 +176,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DISCOVERY_MT_FUJI</Type>
-			<Description>TXT_KEY_BUILDING_DISCOVERY_MT_FUJI</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -209,7 +183,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DISCOVERY_BAIKAL</Type>
-			<Description>TXT_KEY_BUILDING_DISCOVERY_BAIKAL</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -217,7 +190,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DISCOVERY_BARRINGER_CRATER</Type>
-			<Description>TXT_KEY_BUILDING_DISCOVERY_BARRINGER_CRATER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -225,7 +197,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DISCOVERY_BASALT_ORGAN</Type>
-			<Description>TXT_KEY_BUILDING_DISCOVERY_BASALT_ORGAN</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -233,7 +204,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DISCOVERY_DEVILS_TABLE</Type>
-			<Description>TXT_KEY_BUILDING_DISCOVERY_DEVILS_TABLE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -241,7 +211,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DISCOVERY_SOPKA</Type>
-			<Description>TXT_KEY_BUILDING_DISCOVERY_SOPKA</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -249,7 +218,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DISCOVERY_KRAKATOA</Type>
-			<Description>TXT_KEY_BUILDING_DISCOVERY_KRAKATOA</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -257,7 +225,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DISCOVERY_NGORONGORO_CRATER</Type>
-			<Description>TXT_KEY_BUILDING_DISCOVERY_NGORONGORO_CRATER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -265,7 +232,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DISCOVERY_NUKUORO</Type>
-			<Description>TXT_KEY_BUILDING_DISCOVERY_NUKUORO</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -273,7 +239,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DISCOVERY_PAMUKKALE</Type>
-			<Description>TXT_KEY_BUILDING_DISCOVERY_PAMUKKALE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -281,7 +246,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DISCOVERY_PRAVCICKA_BRANA</Type>
-			<Description>TXT_KEY_BUILDING_DISCOVERY_PRAVCICKA_BRANA</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -289,7 +253,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DISCOVERY_SHARK_BAY</Type>
-			<Description>TXT_KEY_BUILDING_DISCOVERY_SHARK_BAY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -297,7 +260,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DISCOVERY_SUGARLOAF</Type>
-			<Description>TXT_KEY_BUILDING_DISCOVERY_SUGARLOAF</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -305,7 +267,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DISCOVERY_ULURU</Type>
-			<Description>TXT_KEY_BUILDING_DISCOVERY_ULURU</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -313,7 +274,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DISCOVERY_VICTORIA_FALLS</Type>
-			<Description>TXT_KEY_BUILDING_DISCOVERY_VICTORIA_FALLS</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -321,7 +281,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DISCOVERY_KILIMANJARO</Type>
-			<Description>TXT_KEY_BUILDING_DISCOVERY_KILIMANJARO</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -329,7 +288,6 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DISCOVERY_DEAD_SEA</Type>
-			<Description>TXT_KEY_BUILDING_DISCOVERY_DEAD_SEA</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -337,16 +295,13 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DISCOVERY_AUYANTEPUI</Type>
-			<Description>TXT_KEY_BUILDING_DISCOVERY_AUYANTEPUI</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_DISCOVERY_AUYANTEPUI</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MOVIE_AUYANTEPUI</Type>
-			<Description>TXT_KEY_BUILDING_MOVIE_AUYANTEPUI</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
