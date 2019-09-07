@@ -93,7 +93,7 @@ def writeLog():
 			pFile.write("\n\nUnitAI Types Info:\n------------------\n")
 
 			for iUnitAIType in xrange(int(UnitAITypes.NUM_UNITAI_TYPES)):
-				pFile.write("Player %d, %s, Unit AI Type count: %d\n" % (iPlayer, GC.getUnitAIInfo(iUnitAIType).getDescription(), CyPlayer.AI_totalUnitAIs(UnitAITypes(iUnitAIType))))
+				pFile.write("Player %d, %s, Unit AI Type count: %d\n" % (iPlayer, GC.getUnitAIInfo(iUnitAIType).getType(), CyPlayer.AI_totalUnitAIs(UnitAITypes(iUnitAIType))))
 
 			pFile.write("\n\nCity Info:\n----------")
 
