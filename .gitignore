@@ -13,6 +13,7 @@ Assets/fpklive_token.txt
 !/Tools/*.dll
 XmlValidator.log
 desktop.ini
+Assets/Python/.idea/
 
 .vscode/settings.json
 
