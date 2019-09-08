@@ -11,7 +11,7 @@
 
 /Tools/Autocorrect/LanguageTool.zip
 /Tools/Autocorrect/LanguageTool-*
-!/Tools/*.dll
+!/Tools/**/*.dll
 XmlValidator.log
 
 .vscode/settings.json
