@@ -9,6 +9,7 @@
 <!-- EgyptianMyth -->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PTAH</Type>
+			<Description>TXT_KEY_BUILDING_PTAH</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -16,6 +17,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_TOTH</Type>
+			<Description>TXT_KEY_BUILDING_TOTH</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -24,6 +26,7 @@
 <!-- Hellenism -->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_ERECTION</Type>
+			<Description>TXT_KEY_BUILDING_ERECHTHEUM</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -31,6 +34,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIDIAS</Type>
+			<Description>TXT_KEY_BUILDING_FIDIAS</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -38,6 +42,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NECROMANTEION</Type>
+			<Description>TXT_KEY_BUILDING_NECROMANTEION</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -46,6 +51,7 @@
 <!-- Nagualismo -->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PYRAMID_OF_THE_MOON</Type>
+			<Description>TXT_KEY_BUILDING_PYRAMID_OF_THE_MOON</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -53,6 +59,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PYRAMID_OF_THE_SUN</Type>
+			<Description>TXT_KEY_BUILDING_PYRAMID_OF_THE_SUN</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -61,6 +68,7 @@
 <!-- Zoroasterism -->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_HAMMURABI</Type>
+			<Description>TXT_KEY_BUILDING_HAMMURABI</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -68,6 +76,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NIMRUD_PALACE</Type>
+			<Description>TXT_KEY_BUILDING_NIMRUD_PALACE</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -75,6 +84,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BEHISTUN_INSCRIPTION</Type>
+			<Description>TXT_KEY_BUILDING_BEHISTUN_INSCRIPTION</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -82,6 +92,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PIR_E_NARAKI</Type>
+			<Description>TXT_KEY_BUILDING_PIR_E_NARAKI</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -89,6 +100,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SETI_PIR</Type>
+			<Description>TXT_KEY_BUILDING_SETI_PIR</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -96,6 +108,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_TOWER_OF_SILENCE</Type>
+			<Description>TXT_KEY_BUILDING_TOWER_OF_SILENCE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>

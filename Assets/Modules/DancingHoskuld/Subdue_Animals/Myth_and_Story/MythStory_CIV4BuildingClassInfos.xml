@@ -7,6 +7,7 @@
 	<BuildingClassInfos>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_ANTELOPE_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_ANTELOPE_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -14,6 +15,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_ANTELOPE_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_ANTELOPE_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -21,6 +23,7 @@
 		</BuildingClassInfo>
 		<!--BuildingClassInfo>
 			<Type>BUILDINGCLASS_ANTELOPE_STORY</Type>
+			<Description>TXT_KEY_BUILDING_ANTELOPE_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -28,6 +31,7 @@
 		</BuildingClassInfo-->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BULL_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_BULL_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -35,6 +39,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BULL_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_BULL_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -42,6 +47,7 @@
 		</BuildingClassInfo>
 		<!--BuildingClassInfo>
 			<Type>BUILDINGCLASS_BULL_STORY</Type>
+			<Description>TXT_KEY_BUILDING_BULL_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -49,6 +55,7 @@
 		</BuildingClassInfo-->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CAMEL_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_CAMEL_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -56,6 +63,7 @@
 		</BuildingClassInfo>
 		<!--BuildingClassInfo>
 			<Type>BUILDINGCLASS_CAMEL_STORY</Type>
+			<Description>TXT_KEY_BUILDING_CAMEL_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -63,6 +71,7 @@
 		</BuildingClassInfo-->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DEER_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_DEER_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -70,6 +79,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DEER_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_DEER_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -77,6 +87,7 @@
 		</BuildingClassInfo>
 		<!--BuildingClassInfo>
 			<Type>BUILDINGCLASS_DEER_STORY</Type>
+			<Description>TXT_KEY_BUILDING_DEER_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -84,6 +95,7 @@
 		</BuildingClassInfo-->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_ELEPHANT_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_ELEPHANT_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -91,6 +103,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_ELEPHANT_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_ELEPHANT_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -98,6 +111,7 @@
 		</BuildingClassInfo>
 		<!--BuildingClassInfo>
 			<Type>BUILDINGCLASS_ELEPHANT_STORY</Type>
+			<Description>TXT_KEY_BUILDING_ELEPHANT_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -105,6 +119,7 @@
 		</BuildingClassInfo-->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIRE_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_FIRE_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -112,6 +127,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIRE_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_FIRE_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -119,6 +135,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_GOAT_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_GOAT_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -126,6 +143,7 @@
 		</BuildingClassInfo>
 		<!--BuildingClassInfo>
 			<Type>BUILDINGCLASS_GOAT_STORY</Type>
+			<Description>TXT_KEY_BUILDING_GOAT_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -133,6 +151,7 @@
 		</BuildingClassInfo-->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_HORSE_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_HORSE_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -140,6 +159,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_LLAMA_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_LLAMA_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -147,6 +167,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MARSUPIAL_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_MARSUPIAL_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -154,6 +175,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MARSUPIAL_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_MARSUPIAL_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -161,6 +183,7 @@
 		</BuildingClassInfo>
 		<!--BuildingClassInfo>
 			<Type>BUILDINGCLASS_MARSUPIAL_STORY</Type>
+			<Description>TXT_KEY_BUILDING_MARSUPIAL_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -168,6 +191,7 @@
 		</BuildingClassInfo-->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MERMAID_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_MERMAID_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -175,6 +199,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_OLD_MAN_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_OLD_MAN_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -182,6 +207,7 @@
 		</BuildingClassInfo>
 		<!--BuildingClassInfo>
 			<Type>BUILDINGCLASS_OLD_MAN_STORY</Type>
+			<Description>TXT_KEY_BUILDING_OLD_MAN_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -189,6 +215,7 @@
 		</BuildingClassInfo-->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_RAY_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_RAY_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -196,6 +223,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_RAY_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_RAY_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -203,6 +231,7 @@
 		</BuildingClassInfo>
 		<!--BuildingClassInfo>
 			<Type>BUILDINGCLASS_RAY_STORY</Type>
+			<Description>TXT_KEY_BUILDING_RAY_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -210,6 +239,7 @@
 		</BuildingClassInfo-->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SCAVENGER_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_SCAVENGER_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -217,6 +247,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SCAVENGER_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_SCAVENGER_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -224,6 +255,7 @@
 		</BuildingClassInfo>
 		<!--BuildingClassInfo>
 			<Type>BUILDINGCLASS_SCAVENGER_STORY</Type>
+			<Description>TXT_KEY_BUILDING_SCAVENGER_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -231,6 +263,7 @@
 		</BuildingClassInfo-->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SHARK_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_SHARK_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -238,6 +271,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SPOTTED_CAT_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_SPOTTED_CAT_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -245,6 +279,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SPOTTED_CAT_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_SPOTTED_CAT_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -252,6 +287,7 @@
 		</BuildingClassInfo>
 		<!--BuildingClassInfo>
 			<Type>BUILDINGCLASS_SPOTTED_CAT_STORY</Type>
+			<Description>TXT_KEY_BUILDING_SPOTTED_CAT_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -259,6 +295,7 @@
 		</BuildingClassInfo-->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_TIGER_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_TIGER_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -266,6 +303,7 @@
 		</BuildingClassInfo>
 		<!--BuildingClassInfo>
 			<Type>BUILDINGCLASS_TIGER_STORY</Type>
+			<Description>TXT_KEY_BUILDING_TIGER_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -273,6 +311,7 @@
 		</BuildingClassInfo-->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_TUNA_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_TUNA_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -280,6 +319,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_WEASEL_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_WEASEL_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -287,6 +327,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_WEASEL_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_WEASEL_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -294,6 +335,7 @@
 		</BuildingClassInfo>
 		<!--BuildingClassInfo>
 			<Type>BUILDINGCLASS_WEASEL_STORY</Type>
+			<Description>TXT_KEY_BUILDING_WEASEL_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -301,6 +343,7 @@
 		</BuildingClassInfo-->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_UNICORN_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_UNICORN_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -308,6 +351,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DRAGON_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_DRAGON_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -315,6 +359,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PHOENIX_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_PHOENIX_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -322,6 +367,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PALEOLITHIC_BIRD_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -329,6 +375,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PALEOLITHIC_BIRD_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -336,6 +383,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PALEOLITHIC_BIRD_STORY</Type>
+			<Description>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -343,6 +391,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PALEOLITHIC_BIRD_STORIES</Type>
+			<Description>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_STORIES</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -350,6 +399,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PALEOLITHIC_BIRD_STORIES_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_STORIES_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -357,6 +407,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PALEOLITHIC_CAT_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_PALEOLITHIC_CAT_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -364,6 +415,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PALEOLITHIC_CAT_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -371,6 +423,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PALEOLITHIC_CAT_STORY</Type>
+			<Description>TXT_KEY_BUILDING_PALEOLITHIC_CAT_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -378,6 +431,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PALEOLITHIC_CAT_STORIES</Type>
+			<Description>TXT_KEY_BUILDING_PALEOLITHIC_CAT_STORIES</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -385,6 +439,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PALEOLITHIC_CAT_STORIES_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_PALEOLITHIC_CAT_STORIES_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -392,6 +447,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PALEOLITHIC_GROUNDSLOTH_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_PALEOLITHIC_GROUNDSLOTH_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -399,6 +455,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PALEOLITHIC_GROUNDSLOTH_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_PALEOLITHIC_GROUNDSLOTH_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -406,6 +463,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PALEOLITHIC_MARSUPIAL_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_MYTH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -413,6 +471,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -420,6 +479,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PALEOLITHIC_MARSUPIAL_STORY</Type>
+			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_STORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -427,6 +487,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PALEOLITHIC_MARSUPIAL_STORIES</Type>
+			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_STORIES</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -434,6 +495,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PALEOLITHIC_MARSUPIAL_STORIES_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_STORIES_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>

@@ -9,6 +9,7 @@
 <!-- Buddhist -->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CAVES</Type>
+			<Description>TXT_KEY_BUILDING_CAVES</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -16,6 +17,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NARA</Type>
+			<Description>TXT_KEY_BUILDING_NARA</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -24,6 +26,7 @@
 <!-- Christian -->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SAN_MARCOS_CATHEDRAL</Type>
+			<Description>TXT_KEY_BUILDING_SAN_MARCOS_CATHEDRAL</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -31,6 +34,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_VATICAN_LIBRARY</Type>
+			<Description>TXT_KEY_BUILDING_VATICAN_LIBRARY</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -39,6 +43,7 @@
 <!-- Confucian -->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CONFUCIAN_SCHOOL</Type>
+			<Description>TXT_KEY_BUILDING_CONFUCIAN_SCHOOL</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -47,6 +52,7 @@
 <!-- Judaism -->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SOLOMON</Type>
+			<Description>TXT_KEY_BUILDING_SOLOMON</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -55,6 +61,7 @@
 <!-- Hindu -->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_AKSHARDHAM</Type>
+			<Description>TXT_KEY_BUILDING_AKSHARDHAM</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -62,6 +69,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MEENAKSHI</Type>
+			<Description>TXT_KEY_BUILDING_MEENAKSHI</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -70,6 +78,7 @@
 <!-- Islam -->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BLUE_MOSQUE</Type>
+			<Description>TXT_KEY_BUILDING_BLUE_MOSQUE</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -77,6 +86,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DESERT</Type>
+			<Description>TXT_KEY_BUILDING_DESERT</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -84,6 +94,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SULTAN</Type>
+			<Description>TXT_KEY_BUILDING_SULTAN</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -92,6 +103,7 @@
 <!-- Taoist -->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_QUANZHEN</Type>
+			<Description>TXT_KEY_BUILDING_QUANZHEN</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -99,6 +111,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_WUDANG</Type>
+			<Description>TXT_KEY_BUILDING_WUDANG</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>

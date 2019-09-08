@@ -9,6 +9,7 @@
 	<UnitClassInfos>
 		<UnitClassInfo>
 			<Type>UNITCLASS_GIRAFFE_ARCHER</Type>
+			<Description>TXT_KEY_UNIT_GIRAFFE_ARCHER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
@@ -17,6 +18,7 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_GIRAFFE_CROSSBOW</Type>
+			<Description>TXT_KEY_UNIT_GIRAFFE_CROSSBOW</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
@@ -25,6 +27,7 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_GIRAFFE_CUIRASSIER</Type>
+			<Description>TXT_KEY_UNIT_GIRAFFE_CUIRASSIER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
@@ -33,6 +36,7 @@
 		</UnitClassInfo>
         	<UnitClassInfo>
 			<Type>UNITCLASS_GIRAFFE_DRAGOON</Type>
+			<Description>TXT_KEY_UNIT_GIRAFFE_DRAGOON</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
@@ -41,6 +45,7 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_GIRAFFE_CARABINIER</Type>
+			<Description>TXT_KEY_UNIT_GIRAFFE_CARABINIER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
@@ -49,6 +54,7 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_GIRAFFE_CAVALRY</Type>
+			<Description>TXT_KEY_UNIT_GIRAFFE_CAVALRY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
@@ -57,6 +63,7 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_GIRAFFE_TRENCH_CAVALRY</Type>
+			<Description>TXT_KEY_UNIT_GIRAFFE_TRENCH_CAVALRY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
@@ -65,6 +72,7 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_URBAN_GIRAFFEMAN</Type>
+			<Description>TXT_KEY_UNIT_URBAN_GIRAFFEMAN</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>

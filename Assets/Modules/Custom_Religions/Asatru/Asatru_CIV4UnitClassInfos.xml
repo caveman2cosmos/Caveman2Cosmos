@@ -8,6 +8,7 @@
 	<UnitClassInfos>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ASATRU_MISSIONARY</Type>
+			<Description>Asatru missionary</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -16,6 +17,7 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_LOKI</Type>
+			<Description>Loki fist</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>

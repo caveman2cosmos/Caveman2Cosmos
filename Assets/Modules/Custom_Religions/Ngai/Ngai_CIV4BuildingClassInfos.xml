@@ -8,6 +8,7 @@
 	<BuildingClassInfos>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NAITERUKOB</Type>
+			<Description>TXT_KEY_BUILDING_NAITERUKOB</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -15,6 +16,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NGAI</Type>
+			<Description>TXT_KEY_BUILDING_NGAI</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -22,13 +24,16 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NGAINANYOKE</Type>
+			<Description>TXT_KEY_BUILDING_NGAINANYOKE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_NGAINANYOKE</DefaultBuilding>
 		</BuildingClassInfo>
+
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NGAINAROK</Type>
+			<Description>TXT_KEY_BUILDING_NGAINAROK</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -36,6 +41,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NGAINAROK_COW</Type>
+			<Description>TXT_KEY_BUILDING_NGAINAROK_COW</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -43,6 +49,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NGAINAROK_PIG</Type>
+			<Description>TXT_KEY_BUILDING_NGAINAROK_PIG</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -50,13 +57,16 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NGAINAROK_SHEEP</Type>
+			<Description>TXT_KEY_BUILDING_NGAINAROK_SHEEP</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_NGAINAROK_SHEEP</DefaultBuilding>
 		</BuildingClassInfo>
+
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NGAI_SHRINE</Type>
+			<Description>TXT_KEY_BUILDING_NGAI_SHRINE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>

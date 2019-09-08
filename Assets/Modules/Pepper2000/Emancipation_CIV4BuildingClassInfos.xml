@@ -3,6 +3,7 @@
 	<BuildingClassInfos>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_EMANCIPATION_PROCLAMATION</Type>
+			<Description>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
@@ -10,6 +11,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_EMANCIPATION_PROCLAMATION_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>

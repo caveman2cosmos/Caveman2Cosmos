@@ -8,6 +8,7 @@
 	<UnitClassInfos>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SHINTO_MISSIONARY</Type>
+			<Description>Shinto missionary</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
