@@ -1046,7 +1046,8 @@ public:
 	void setXY(int iX, int iY, bool bGroup = false, bool bUpdate = true, bool bShow = false, bool bCheckPlotVisible = false, bool bInit = false);	// Exposed to Python
 	bool isTempUnit() const;
 	bool at(int iX, int iY) const;																														// Exposed to Python
-	void addMission(CvMissionDefinition* pMission);
+	void addMission(const CvMissionDefinition& mission);
+
 	DllExport bool atPlot(const CvPlot* pPlot) const;																					// Exposed to Python
 	CvPlot* plot() const;																														// Exposed to Python
 	DllExport CvPlot* plotExternal() const;																														// Exposed to Python
@@ -2255,7 +2256,7 @@ public:
 	virtual bool AI_getHasAttacked() = 0;
 	virtual int AI_beneficialPropertyValueToCity(CvCity* pCity, PropertyTypes eProperty) const = 0;
 
-	bool isUsingDummyEntities();
+	bool isUsingDummyEntities() const;
 	static bool isDummyEntity(const CvEntity* entity);
 	static bool isRealEntity(const CvEntity* entity);
 
