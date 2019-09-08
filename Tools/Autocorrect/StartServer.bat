@@ -9,6 +9,7 @@ echo Unzipping ...
 echo Installing the Python library ...
 set PYTHONIOENCODING=UTF-8
 pip install pylanguagetool
+pip install lxml
 
 PUSHD "%~dp0\LanguageTool-4.6"
 start cmd /c "java -cp languagetool-server.jar org.languagetool.server.HTTPServer --port 8081 --allow-origin '*'"
