@@ -1,0 +1,772 @@
+{
+    "software": {
+        "name": "LanguageTool",
+        "version": "4.6",
+        "buildDate": "2019-06-26 07:28",
+        "apiVersion": 1,
+        "premium": false,
+        "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+        "status": ""
+    },
+    "warnings": {
+        "incompleteResults": false
+    },
+    "language": {
+        "name": "English (US)",
+        "code": "en-US",
+        "detectedLanguage": {
+            "name": "English (US)",
+            "code": "en-US",
+            "confidence": 0.9999954
+        }
+    },
+    "matches": [
+        {
+            "message": "Possible spelling mistake found",
+            "shortMessage": "Spelling mistake",
+            "replacements": [
+                {
+                    "value": "weight",
+                    "shortDescription": "mass"
+                },
+                {
+                    "value": "weights",
+                    "shortDescription": "determine the weight of"
+                },
+                {
+                    "value": "weighty"
+                },
+                {
+                    "value": "waft"
+                },
+                {
+                    "value": "wafts"
+                }
+            ],
+            "offset": 139,
+            "length": 7,
+            "context": {
+                "text": "...ss. Lead glass contains typically 18-40 weight% lead(II) oxide (PbO), while modern [BOL...",
+                "offset": 43,
+                "length": 7
+            },
+            "sentence": "Lead glass contains typically 18-40 weight% lead(II) oxide (PbO), while modern [BOLD]lead crystal[\\BOLD], historically also known as flint glass due to the original silica source, contains a minimum of 24% PbO.",
+            "type": {
+                "typeName": "Other"
+            },
+            "rule": {
+                "id": "MORFOLOGIK_RULE_EN_US",
+                "description": "Possible spelling mistake",
+                "issueType": "misspelling",
+                "category": {
+                    "id": "TYPOS",
+                    "name": "Possible Typo"
+                }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 0
+        },
+        {
+            "message": "Possible spelling mistake found",
+            "shortMessage": "Spelling mistake",
+            "replacements": [
+                {
+                    "value": "Pro"
+                },
+                {
+                    "value": "HBO"
+                },
+                {
+                    "value": "PBA"
+                },
+                {
+                    "value": "PBL"
+                },
+                {
+                    "value": "FBO"
+                },
+                {
+                    "value": "PBX"
+                },
+                {
+                    "value": "PSO"
+                },
+                {
+                    "value": "PTO"
+                },
+                {
+                    "value": "CBO"
+                },
+                {
+                    "value": "BBO"
+                },
+                {
+                    "value": "BO"
+                },
+                {
+                    "value": "DBO"
+                },
+                {
+                    "value": "IBO"
+                },
+                {
+                    "value": "Ibo"
+                },
+                {
+                    "value": "LBO"
+                },
+                {
+                    "value": "OBO"
+                },
+                {
+                    "value": "PAO"
+                },
+                {
+                    "value": "PB"
+                },
+                {
+                    "value": "PB5"
+                },
+                {
+                    "value": "PBB"
+                },
+                {
+                    "value": "PBC"
+                },
+                {
+                    "value": "PBI"
+                },
+                {
+                    "value": "PBN"
+                },
+                {
+                    "value": "PBR"
+                },
+                {
+                    "value": "PBS"
+                },
+                {
+                    "value": "PBT"
+                },
+                {
+                    "value": "PDO"
+                },
+                {
+                    "value": "PFO"
+                },
+                {
+                    "value": "PGO"
+                },
+                {
+                    "value": "PIO"
+                },
+                {
+                    "value": "PLO"
+                },
+                {
+                    "value": "PMO"
+                },
+                {
+                    "value": "PO"
+                },
+                {
+                    "value": "POO"
+                },
+                {
+                    "value": "PPO"
+                },
+                {
+                    "value": "PRO"
+                },
+                {
+                    "value": "Pb"
+                },
+                {
+                    "value": "Po"
+                },
+                {
+                    "value": "Poo"
+                },
+                {
+                    "value": "Pb O"
+                }
+            ],
+            "offset": 163,
+            "length": 3,
+            "context": {
+                "text": "...typically 18-40 weight% lead(II) oxide (PbO), while modern [BOLD]lead crystal[\\BOLD...",
+                "offset": 43,
+                "length": 3
+            },
+            "sentence": "Lead glass contains typically 18-40 weight% lead(II) oxide (PbO), while modern [BOLD]lead crystal[\\BOLD], historically also known as flint glass due to the original silica source, contains a minimum of 24% PbO.",
+            "type": {
+                "typeName": "Other"
+            },
+            "rule": {
+                "id": "MORFOLOGIK_RULE_EN_US",
+                "description": "Possible spelling mistake",
+                "issueType": "misspelling",
+                "category": {
+                    "id": "TYPOS",
+                    "name": "Possible Typo"
+                }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 0
+        },
+        {
+            "message": "Possible spelling mistake found",
+            "shortMessage": "Spelling mistake",
+            "replacements": [
+                {
+                    "value": "Pro"
+                },
+                {
+                    "value": "HBO"
+                },
+                {
+                    "value": "PBA"
+                },
+                {
+                    "value": "PBL"
+                },
+                {
+                    "value": "FBO"
+                },
+                {
+                    "value": "PBX"
+                },
+                {
+                    "value": "PSO"
+                },
+                {
+                    "value": "PTO"
+                },
+                {
+                    "value": "CBO"
+                },
+                {
+                    "value": "BBO"
+                },
+                {
+                    "value": "BO"
+                },
+                {
+                    "value": "DBO"
+                },
+                {
+                    "value": "IBO"
+                },
+                {
+                    "value": "Ibo"
+                },
+                {
+                    "value": "LBO"
+                },
+                {
+                    "value": "OBO"
+                },
+                {
+                    "value": "PAO"
+                },
+                {
+                    "value": "PB"
+                },
+                {
+                    "value": "PB5"
+                },
+                {
+                    "value": "PBB"
+                },
+                {
+                    "value": "PBC"
+                },
+                {
+                    "value": "PBI"
+                },
+                {
+                    "value": "PBN"
+                },
+                {
+                    "value": "PBR"
+                },
+                {
+                    "value": "PBS"
+                },
+                {
+                    "value": "PBT"
+                },
+                {
+                    "value": "PDO"
+                },
+                {
+                    "value": "PFO"
+                },
+                {
+                    "value": "PGO"
+                },
+                {
+                    "value": "PIO"
+                },
+                {
+                    "value": "PLO"
+                },
+                {
+                    "value": "PMO"
+                },
+                {
+                    "value": "PO"
+                },
+                {
+                    "value": "POO"
+                },
+                {
+                    "value": "PPO"
+                },
+                {
+                    "value": "PRO"
+                },
+                {
+                    "value": "Pb"
+                },
+                {
+                    "value": "Po"
+                },
+                {
+                    "value": "Poo"
+                },
+                {
+                    "value": "Pb O"
+                }
+            ],
+            "offset": 309,
+            "length": 3,
+            "context": {
+                "text": "...ilica source, contains a minimum of 24% PbO. Lead glass is desirable owing to its d...",
+                "offset": 43,
+                "length": 3
+            },
+            "sentence": "Lead glass contains typically 18-40 weight% lead(II) oxide (PbO), while modern [BOLD]lead crystal[\\BOLD], historically also known as flint glass due to the original silica source, contains a minimum of 24% PbO.",
+            "type": {
+                "typeName": "Other"
+            },
+            "rule": {
+                "id": "MORFOLOGIK_RULE_EN_US",
+                "description": "Possible spelling mistake",
+                "issueType": "misspelling",
+                "category": {
+                    "id": "TYPOS",
+                    "name": "Possible Typo"
+                }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 0
+        },
+        {
+            "message": "Three successive sentences begin with the same word. Consider rewording the sentence or use a thesaurus to find a synonym.",
+            "shortMessage": "Three successive sentences begin with the same word.",
+            "replacements": [],
+            "offset": 314,
+            "length": 4,
+            "context": {
+                "text": "... source, contains a minimum of 24% PbO. Lead glass is desirable owing to its decorat...",
+                "offset": 43,
+                "length": 4
+            },
+            "sentence": "Lead glass is desirable owing to its decorative properties.[PARAGRAPH:2]Originally discovered by Englishman George Ravenscroft in 1674, the technique of adding lead oxide (in quantities of between 10 and 30%) improved the appearance of the glass and made it easier to melt using sea-coal as a furnace fuel.",
+            "type": {
+                "typeName": "Other"
+            },
+            "rule": {
+                "id": "ENGLISH_WORD_REPEAT_BEGINNING_RULE",
+                "description": "Successive sentences beginning with the same word",
+                "issueType": "style",
+                "category": {
+                    "id": "STYLE",
+                    "name": "Style"
+                }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+        },
+        {
+            "message": "Consider using \"discovered\".",
+            "shortMessage": "Redundant phrase",
+            "replacements": [
+                {
+                    "value": "Discovered"
+                }
+            ],
+            "offset": 386,
+            "length": 21,
+            "context": {
+                "text": "... its decorative properties.[PARAGRAPH:2]Originally discovered by Englishman George Ravenscroft in 167...",
+                "offset": 43,
+                "length": 21
+            },
+            "sentence": "Lead glass is desirable owing to its decorative properties.[PARAGRAPH:2]Originally discovered by Englishman George Ravenscroft in 1674, the technique of adding lead oxide (in quantities of between 10 and 30%) improved the appearance of the glass and made it easier to melt using sea-coal as a furnace fuel.",
+            "type": {
+                "typeName": "Hint"
+            },
+            "rule": {
+                "id": "ORIGINALLY_DISCOVERED",
+                "subId": "1",
+                "description": "originally discovered (discovered)",
+                "issueType": "style",
+                "category": {
+                    "id": "REDUNDANCY",
+                    "name": "Redundant Phrases"
+                }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 0
+        },
+        {
+            "message": "Possible spelling mistake found",
+            "shortMessage": "Spelling mistake",
+            "replacements": [
+                {
+                    "value": "Ravens croft"
+                }
+            ],
+            "offset": 429,
+            "length": 11,
+            "context": {
+                "text": "...ginally discovered by Englishman George Ravenscroft in 1674, the technique of adding lead o...",
+                "offset": 43,
+                "length": 11
+            },
+            "sentence": "Lead glass is desirable owing to its decorative properties.[PARAGRAPH:2]Originally discovered by Englishman George Ravenscroft in 1674, the technique of adding lead oxide (in quantities of between 10 and 30%) improved the appearance of the glass and made it easier to melt using sea-coal as a furnace fuel.",
+            "type": {
+                "typeName": "Other"
+            },
+            "rule": {
+                "id": "MORFOLOGIK_RULE_EN_US",
+                "description": "Possible spelling mistake",
+                "issueType": "misspelling",
+                "category": {
+                    "id": "TYPOS",
+                    "name": "Possible Typo"
+                }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 0
+        },
+        {
+            "message": "Use a smart opening quote here: \"“\".",
+            "shortMessage": "Use smart quotes",
+            "replacements": [
+                {
+                    "value": "“"
+                }
+            ],
+            "offset": 651,
+            "length": 1,
+            "context": {
+                "text": "...ace fuel. This technique also increased \"working period\" making the glass easier ...",
+                "offset": 43,
+                "length": 1
+            },
+            "sentence": "This technique also increased \"working period\" making the glass easier to manipulate.[PARAGRAPH:2]The term lead crystal is, by technicality, not an accurate term to describe lead glass, as glass, an amorphous solid, lacks a crystalline structure.",
+            "type": {
+                "typeName": "Other"
+            },
+            "rule": {
+                "id": "EN_QUOTES",
+                "subId": "1",
+                "description": "Smart quotes (“”)",
+                "issueType": "typographical",
+                "urls": [
+                    {
+                        "value": "https://en.wikipedia.org/wiki/Smart_quote#Electronic_documents"
+                    }
+                ],
+                "category": {
+                    "id": "TYPOGRAPHY",
+                    "name": "Typography"
+                }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 0
+        },
+        {
+            "message": "Use a smart closing quote here: \"”\".",
+            "shortMessage": "Use smart quotes",
+            "replacements": [
+                {
+                    "value": "”"
+                }
+            ],
+            "offset": 666,
+            "length": 1,
+            "context": {
+                "text": "...technique also increased \"working period\" making the glass easier to manipulate.[...",
+                "offset": 43,
+                "length": 1
+            },
+            "sentence": "This technique also increased \"working period\" making the glass easier to manipulate.[PARAGRAPH:2]The term lead crystal is, by technicality, not an accurate term to describe lead glass, as glass, an amorphous solid, lacks a crystalline structure.",
+            "type": {
+                "typeName": "Other"
+            },
+            "rule": {
+                "id": "EN_QUOTES",
+                "subId": "2",
+                "description": "Smart quotes (“”)",
+                "issueType": "typographical",
+                "urls": [
+                    {
+                        "value": "https://en.wikipedia.org/wiki/Smart_quote#Electronic_documents"
+                    }
+                ],
+                "category": {
+                    "id": "TYPOGRAPHY",
+                    "name": "Typography"
+                }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+        },
+        {
+            "message": "Possible spelling mistake found",
+            "shortMessage": "Spelling mistake",
+            "replacements": [
+                {
+                    "value": "crystal"
+                },
+                {
+                    "value": "crystals"
+                },
+                {
+                    "value": "Crystal"
+                },
+                {
+                    "value": "Costello"
+                },
+                {
+                    "value": "Castillo"
+                },
+                {
+                    "value": "crustal"
+                },
+                {
+                    "value": "distally"
+                },
+                {
+                    "value": "Criollo"
+                }
+            ],
+            "offset": 994,
+            "length": 9,
+            "context": {
+                "text": ".... It is retained from the Venetian word cristallo to describe the rock crystal imitated b...",
+                "offset": 43,
+                "length": 9
+            },
+            "sentence": "It is retained from the Venetian word cristallo to describe the rock crystal imitated by Murano glassmakers.",
+            "type": {
+                "typeName": "Other"
+            },
+            "rule": {
+                "id": "MORFOLOGIK_RULE_EN_US",
+                "description": "Possible spelling mistake",
+                "issueType": "misspelling",
+                "category": {
+                    "id": "TYPOS",
+                    "name": "Possible Typo"
+                }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 0
+        },
+        {
+            "message": "Possible spelling mistake found",
+            "shortMessage": "Spelling mistake",
+            "replacements": [
+                {
+                    "value": "Mutant"
+                },
+                {
+                    "value": "Mural"
+                },
+                {
+                    "value": "Murals"
+                },
+                {
+                    "value": "Moran"
+                },
+                {
+                    "value": "Duran"
+                },
+                {
+                    "value": "Mariano"
+                },
+                {
+                    "value": "Moreno"
+                },
+                {
+                    "value": "Purana"
+                },
+                {
+                    "value": "Guano"
+                },
+                {
+                    "value": "Durant"
+                },
+                {
+                    "value": "Murat"
+                },
+                {
+                    "value": "Cyrano"
+                },
+                {
+                    "value": "Merino"
+                },
+                {
+                    "value": "Drano"
+                },
+                {
+                    "value": "Murine"
+                }
+            ],
+            "offset": 1045,
+            "length": 6,
+            "context": {
+                "text": "...o describe the rock crystal imitated by Murano glassmakers. This naming convention has...",
+                "offset": 43,
+                "length": 6
+            },
+            "sentence": "It is retained from the Venetian word cristallo to describe the rock crystal imitated by Murano glassmakers.",
+            "type": {
+                "typeName": "Other"
+            },
+            "rule": {
+                "id": "MORFOLOGIK_RULE_EN_US",
+                "description": "Possible spelling mistake",
+                "issueType": "misspelling",
+                "category": {
+                    "id": "TYPOS",
+                    "name": "Possible Typo"
+                }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 0
+        },
+        {
+            "message": "Possible spelling mistake found",
+            "shortMessage": "Spelling mistake",
+            "replacements": [
+                {
+                    "value": "glass makers"
+                }
+            ],
+            "offset": 1052,
+            "length": 11,
+            "context": {
+                "text": "...ibe the rock crystal imitated by Murano glassmakers. This naming convention has been mainta...",
+                "offset": 43,
+                "length": 11
+            },
+            "sentence": "It is retained from the Venetian word cristallo to describe the rock crystal imitated by Murano glassmakers.",
+            "type": {
+                "typeName": "Other"
+            },
+            "rule": {
+                "id": "MORFOLOGIK_RULE_EN_US",
+                "description": "Possible spelling mistake",
+                "issueType": "misspelling",
+                "category": {
+                    "id": "TYPOS",
+                    "name": "Possible Typo"
+                }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 0
+        },
+        {
+            "message": "Possible spelling mistake found",
+            "shortMessage": "Spelling mistake",
+            "replacements": [
+                {
+                    "value": "disperse"
+                },
+                {
+                    "value": "dispersion"
+                },
+                {
+                    "value": "dispersing"
+                },
+                {
+                    "value": "discursive"
+                }
+            ],
+            "offset": 1559,
+            "length": 10,
+            "context": {
+                "text": "...stal, but it is lighter and it has less dispersive power.[PARAGRAPH:2]Source: Wikipedia",
+                "offset": 43,
+                "length": 10
+            },
+            "sentence": "Lead-free crystal has a similar refractive index to lead crystal, but it is lighter and it has less dispersive power.[PARAGRAPH:2]Source: Wikipedia",
+            "type": {
+                "typeName": "Other"
+            },
+            "rule": {
+                "id": "MORFOLOGIK_RULE_EN_US",
+                "description": "Possible spelling mistake",
+                "issueType": "misspelling",
+                "category": {
+                    "id": "TYPOS",
+                    "name": "Possible Typo"
+                }
+            },
+            "ignoreForIncompleteSentence": false,
+            "contextForSureMatch": 0
+        },
+        {
+            "message": "Please add a punctuation mark at the end of paragraph",
+            "shortMessage": "",
+            "replacements": [
+                {
+                    "value": "Wikipedia."
+                },
+                {
+                    "value": "Wikipedia!"
+                },
+                {
+                    "value": "Wikipedia?"
+                },
+                {
+                    "value": "Wikipedia:"
+                },
+                {
+                    "value": "Wikipedia,"
+                },
+                {
+                    "value": "Wikipedia;"
+                }
+            ],
+            "offset": 1597,
+            "length": 9,
+            "context": {
+                "text": "...s dispersive power.[PARAGRAPH:2]Source: Wikipedia",
+                "offset": 43,
+                "length": 9
+            },
+            "sentence": "Lead-free crystal has a similar refractive index to lead crystal, but it is lighter and it has less dispersive power.[PARAGRAPH:2]Source: Wikipedia",
+            "type": {
+                "typeName": "Other"
+            },
+            "rule": {
+                "id": "PUNCTUATION_PARAGRAPH_END",
+                "description": "No punctuation mark at the end of paragraph",
+                "issueType": "grammar",
+                "category": {
+                    "id": "PUNCTUATION",
+                    "name": "Punctuation"
+                }
+            },
+            "ignoreForIncompleteSentence": true,
+            "contextForSureMatch": -1
+        }
+    ]
+}
