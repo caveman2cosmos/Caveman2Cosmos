@@ -177,10 +177,13 @@ class BarbarianCiv:
 						civs = aList
 				iCivType = civs[GAME.getSorenRandNum(len(civs),'Pick civ')]
 
-		if iCivType < 0:
-			print "[WARNING] Unexpected lack of unused civ types." + POST_FIX
-			return
-		del civs, CyPlayerCulture, iCult, iCulture, iDeadCulture
+			del civs
+
+			if iCivType < 0:
+				print "[WARNING] Unexpected lack of unused civ types." + POST_FIX
+				return
+
+		del CyPlayerCulture, iCult, iCulture, iDeadCulture
 
 		# Choose a leader for the new civ
 		aList = [] # Claimed Leaders
