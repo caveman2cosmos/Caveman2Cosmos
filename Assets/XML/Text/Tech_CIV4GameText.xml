@@ -238,7 +238,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ACOUSTIC_WEAPONRY</Tag>
-		<English>Acoustic Weaponry</English>
+		<English>Sonic Weaponry</English>
 		<French>Armes Acoustiques</French>
 		<Polish>Broń Akustyczna</Polish>
 	</TEXT>
@@ -410,7 +410,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_COMPUTERS</Tag>
-		<English>Advanced Computers</English>
+		<English>Supercomputers</English>
 		<French>Ordinateurs Avancés</French>
 		<German>Fortgeschrittene Computer</German>
 		<Italian>Computer avanzati</Italian>
@@ -440,7 +440,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</Tag>
-		<English>Advanced Environmental Systems</English>
+		<English>Cislunar/Orbital Colonies</English>
 		<French>Systèmes Environmentaaux Avancés</French>
 		<Italian>Sistemi ambientali avanzati</Italian>
 		<Spanish>
@@ -452,7 +452,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS_PEDIA</Tag>
-		<English>Space colonization (also called space settlement, space humanization, space habitation, Advanced Environmental Systems, etc.) is the concept of autonomous (self-sufficient) human habitation of locations outside Earth. While many people think of space colonies on the Moon or Mars, others argue that the first colonies will be in orbit. They have determined that there are ample quantities of all the necessary materials on the Moon and Near Earth Asteroids, that solar energy is readily available in very large quantities. As of 2008, the international space station provides a permanent, yet still non-autonomous, human presence in space. The NASA Lunar outpost, providing a permanent human presence on the moon, is at the planning stage. There is an ongoing development of technologies that may be used in future space colonization projects.</English>
+		<English>A space habitat (also called a space colony, space settlement, orbital habitat, orbital settlement or orbital colony) is a type of space station, intended as a permanent settlement rather than as a simple way-station or other specialized facility. No space habitat has been constructed yet, but many design concepts, with varying degrees of realism, have come both from engineers and from science-fiction authors.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS_QUOTE</Tag>
@@ -524,7 +524,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_SEEDSHIPS</Tag>
-		<English>Advanced Seedships</English>
+		<English>Seedship Megaengieering</English>
 		<French>Vaisseau-Semences Avancés</French>
 		<Italian>Navi generazionali avanzate</Italian>
 		<Spanish>
@@ -536,7 +536,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_SEEDSHIPS_PEDIA</Tag>
-		<English>Advanced Seedships is the science of building mega seedships which can colonize an entire solar system at once.</English>
+		<English>Seedship Megaengieering is the science of building mega seedships which can colonize an entire solar system at once.</English>
 		<French>Vaisseau-Semences Avancés est la science permettant la construction de Vaisseaux immenses qui peuvent à eux-seuls coloniser un système solaire entier.</French>
 	</TEXT>
 	<TEXT>
@@ -553,7 +553,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_SHIELDING</Tag>
-		<English>Advanced Shielding</English>
+		<English>Void Shielding</English>
 		<French>
 			<Text>Boucliers Atm. Avancés</Text>
 			<Gender>Male</Gender>
@@ -578,7 +578,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_SHIELDING_PEDIA</Tag>
-		<English>In recent years great strides have been made in improving arcology shielding. The newer shields are far stronger than the originals; unfortunately they are also extremely expensive. They have a significant environmental impact, as well: the shields emit an extremely annoying high-pitched whining sound. Studies have shown that prolonged exposure to this sound causes heightened anxiety in humans, and, if continued indefinitely, leads to increased hostility, anger, and eventually to insanity.[PARAGRAPH:2]Significant efforts are being made to remove or at least reduce this sound. In the meantime, most cities leave these shields turned off until the city is under imminent threat; when the shields are turned on the cities attempt to mask the whining sound by playing loud, incessant "muzak" through huge speakers atop every building in the dome.</English>
+		<English>A Void Shield is a special form of energy field employed by the Imperium of Man's various military forces to protect starships and super-heavy vehicles like Imperial Titans from enemy attacks. Void Shields use Imperial Warp-based technology to both power the shields and then displace ranged attacks by subtly distorting the localised space-time around the point of impact.</English>
 		<French>Au cours des dernières années, les boucliers d'arcologie ont été très nettement améliorés. Ces nouveaux boucliers sont plus résistants, mais aussi beaucoup plus chers. Autre inconvénient: leur impact sur l'environnement. Les boucliers émettent en permanence des sifflements stridents. Des études ont démontré qu'une exposition prolongée à ces sifflements accroît le stress et peut conduire à un sentiment de colère, d'agressivité, pouvant mener à la folie. [PARAGRAPH:2]Des efforts ont été faits pour supprimer, ou du moins réduire, ces sifflements. Toutefois, la plupart des villes ont opté pour une solution plus radicale: les boucliers sont désactivés tant qu'aucune menace n'est détectée et lorsqu'ils sont remis en service, les villes tentent de masquer les sifflements en diffusant une musique de fond dans les haut-parleurs des dômes.</French>
 		<German>In den letzten Jahren erzielte man große Fortschritte bei der Verbesserung von Arkologieschilden. Die neueren Modelle sind weitaus robuster als ihre Vorläufer, aber leider auch extrem teuer. Außerdem haben sie gravierende Auswirkungen auf die Umwelt, denn die Schilde sondern einen extrem hohen Heulton ab. Wissenschaftliche Untersuchungen haben gezeigt, dass Menschen, die diesem Ton längere Zeit ausgesetzt sind, unter stärkeren Angstzuständen leiden und, wenn er ununterbrochen zu hören ist, aggressiv, gewalttätig und schließlich sogar wahnsinnig werden.[PARAGRAPH:2]Um hier Abhilfe zu schaffen, wird gegenwärtig intensiv nach einer Methode geforscht, mit der diese Geräuschkulisse beseitigt oder zumindest gedämpft werden kann. Bis dahin lassen die meisten Städte ihre Schilde ausgeschaltet, sofern sie keiner konkreten, unmittelbaren Bedrohung ausgesetzt sind. Und wenn sie doch eingeschaltet werden müssen, versucht man, den Heulton durch unaufhörliches Abspielen sehr lauter Fahrstuhlmusik zu überdecken, die mittels riesiger Lautsprecher auf jedem Gebäude innerhalb der Kuppel ausgegeben wird.</German>
 		<Italian>Negli anni recenti sono stati fatti grossi passi avanti nel migliorare gli scudi dell'arcologia. I più recenti scudi sono molto più forti di quelli originali ma, sfortunatamente, sono anche estremamente costosi. Hanno anche un importante impatto ambientale: emettono un suono acuto e lamentoso estremamente irritante. Gli studi hanno dimostrato che una prolungata esposizione a questo suono causa negli umani un'elevata ansietà e, se continuato, porta a un'accresciuta ostilità, rabbia e infine alla pazzia.[PARAGRAPH:2]Si stanno facendo grandi sforzi per eliminare o almeno ridurre questo suono. Nel frattempo, la maggior parte delle città ha disattivato gli scudi fino a quando non saranno in immediato pericolo. Quando vengono attivati gli scudi, le città cercano di mascherarne il suono riproducendo incessantemente musica di sottofondo ad alto volume, attraverso enormi altoparlanti posti in cima a ogni edificio nella cupol</Italian>
@@ -679,7 +679,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_AFFECTIVEALGORITHMS</Tag>
-		<English>Affective Algorithms</English>
+		<English>Emotive Computers</English>
 		<French>Algorithmes Affectifs</French>
 		<German>Affektive Algorithmen</German>
 		<Italian>Algoritmi affettivi</Italian>
@@ -1008,7 +1008,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_AMPLIFIED_WAVELENGTHS</Tag>
-		<English>Amplified Wavelengths</English>
+		<English>Optical Amplifiers</English>
 		<French>Longueurs d'ondes amplifiées</French>
 		<Spanish>
 			<Text>Amplificación de longitudes de onda</Text>
@@ -1019,7 +1019,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_AMPLIFIED_WAVELENGTHS_PEDIA</Tag>
-		<English>Amplified Wavelengths refers to the amplification of the signal/wavelength strength of X-ray, Gamma, Radio, Ultraviolet and other frequencies and the amplification of lasers. An optical amplifier is a device that amplifies an optical signal directly, without the need to first convert it to an electrical signal. An optical amplifier may be thought of as a laser without an optical cavity, or one in which feedback from the cavity is suppressed. Optical amplifiers are important in optical communication and laser physics. [PARAGRAPH:2] There are several different physical mechanisms that can be used to amplify a light signal, which correspond to the major types of optical amplifiers. In doped fibre amplifiers and bulk lasers, stimulated emission in the amplifier's gain medium causes amplification of incoming light. In semiconductor optical amplifiers (SOAs), electron-hole recombination occurs. In Raman amplifiers, Raman scattering of incoming light with photons in the lattice of the gain medium produces photons coherent with the incoming photons. Parametric amplifiers use parametric amplification. Almost any laser active gain medium can be pumped to produce gain for light at the wavelength of a laser made with the same material as its gain medium. Such amplifiers are commonly used to produce high power laser systems. Special types such as regenerative amplifiers and chirped-pulse amplifiers are used to amplify ultrashort pulses.</English>
+		<English>An optical amplifier is a device that amplifies an optical signal directly, without the need to first convert it to an electrical signal. An optical amplifier may be thought of as a laser without an optical cavity, or one in which feedback from the cavity is suppressed. Optical amplifiers are important in optical communication and laser physics. [PARAGRAPH:2] There are several different physical mechanisms that can be used to amplify a light signal, which correspond to the major types of optical amplifiers. In doped fibre amplifiers and bulk lasers, stimulated emission in the amplifier's gain medium causes amplification of incoming light. In semiconductor optical amplifiers (SOAs), electron-hole recombination occurs. In Raman amplifiers, Raman scattering of incoming light with photons in the lattice of the gain medium produces photons coherent with the incoming photons. Parametric amplifiers use parametric amplification. Almost any laser active gain medium can be pumped to produce gain for light at the wavelength of a laser made with the same material as its gain medium. Such amplifiers are commonly used to produce high power laser systems. Special types such as regenerative amplifiers and chirped-pulse amplifiers are used to amplify ultrashort pulses.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_AMPLIFIED_WAVELENGTHS_QUOTE</Tag>
@@ -1029,7 +1029,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_AMPLIFIED_WAVELENGTHS_STRATEGY</Tag>
-		<English>Amplified Wavelengths.</English>
+		<English>Optical Amplifiers.</English>
 		<French>Longueurs d'ondes amplifiées.</French>
 		<Spanish>La Amplificación de longitudes de onda.</Spanish>
 		<Polish>Zwiększona Długość Fali Światła</Polish>
@@ -1095,7 +1095,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANCIENT_BALLISTICS</Tag>
-		<English>Ancient Ballistics</English>
+		<English>Ballistics</English>
 		<French>Ballistique Antique</French>
 		<Italian>Balistica antica</Italian>
 		<Spanish>
@@ -1107,7 +1107,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANCIENT_BALLISTICS_PEDIA</Tag>
-		<English>[BOLD]Ancient Ballistics[\BOLD]was an ancient missile weapon which launched a large projectile at a distant target.</English>
+		<English>Ballistics is the field of mechanics that concerns with the launching, flight behavior and impact effects of projectiles, especially ranged weapon munitions such as bullets, unguided bombs, rockets or the like; the science or art of designing and accelerating projectiles so as to achieve a desired performance.</English>
 		<French>[BOLD]Ballistique Antique[\BOLD]était une arme antique, permettant de lancer un large projectile à grande distance.</French>
 		<Polish>[BOLD]Starożytne Balisty[\BOLD] to broń oblężnicza używana w starożytności, która wystrzeliwała wielkie pociski w kierunku odległych celów. Starożytna Balista była stosowana zarówno do niszczenia murów oraz umocnień, jak i na polu bitwy w celu dziesiątkowania oddziałów wroga. Przypominała kształtem potężną kuszę na wozie, który zazwyczaj ciągnęły woły lub muły. Wielka kusza była naciągana jelitami zwierząt, co pozwalało jej wyrzucać pociski na bardzo duże odległości.</Polish>
 	</TEXT>
@@ -1136,7 +1136,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANCIENT_MACHINERY</Tag>
-		<English>Ancient Machinery</English>
+		<English>Mechanics</English>
 		<French>Machinerie Antique</French>
 		<Spanish>
 			<Text>Maquinaria antigua</Text>
@@ -1147,7 +1147,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANCIENT_MACHINERY_PEDIA</Tag>
-		<English>The idea that a machine can be decomposed into simple movable elements led Archimedes to define the lever, pulley and screw as simple machines. By the time of the Renaissance this list increased to include the wheel and axle, wedge and inclined plane. The modern approach to characterizing machines focusses on the components that allow movement, known as joints.The earliest engine was the battering ram, developed by the Assyrians, followed by the catapult in ancient Greece. The Spartans used battering rams in the Siege of Plataea in 429 BC, but it seems that the Greeks limited their use of siege engines to assault ladders, though Peloponnesian forces used something resembling flamethrowers.he first Mediterranean people to use advanced siege machinery were the Carthaginians, who used siege towers and battering rams against the Greek colonies of Sicily. These engines influenced the ruler of Syracuse, Dionysius I, who developed a catapult in 399 BC. [PARAGRAPH:2] The first two rulers to make use of siege engines to a large extent were Philip II of Macedonia and Alexander the Great. Their large engines spurred an evolution that led to impressive machines, like the Demetrius Poliorcetes' Helepolis (or "Taker of Cities") of 304 BCE: nine storeys high and plated with iron, it stood 40 m (132 ft) tall and 21 m (69 ft) wide, weighing 180 t (360,000 lb). The most utilized engines were simple battering rams, or tortoises, propelled in several ingenious ways that allowed the attackers to reach the walls or ditches with a certain degree of safety. For sea sieges or battles, seesaw-like machines (sambyke or sambuca) were used. These were giant ladders, hinged and mounted on a base mechanism and used for transferring marines onto the sea walls of coastal towns. They were normally mounted on two or more ships tied together and some sambyke included shields at the top to protect the climbers from arrows. Other hinged engines were used to catch enemy equipment or even opposing soldiers with opposable appendices which are probably ancestors to the Roman corvus. Other weapons dropped heavy weights on opposing soldiers.[PARAGRAPH:2] The Romans preferred to assault enemy walls by building earthen ramps (agger) or simply scaling the walls, as in the early siege of the Samnite city of Silvium (306 BC). Soldiers working at the ramps were protected by shelters called vineae, that were arranged to form a long corridor. Wicker shields (plutei) were used to protect the front of the corridor during its construction. Another Roman siege engine sometimes used resembled the Greek ditch-filling tortoise, called a musculus ("muscle"). Battering rams were also widespread. The Roman Legions first used siege towers around 200 BC. The first documented occurrence of ancient siege artillery pieces in Europe was the gastraphetes ("belly-bow"), a kind of non-torsion bolt-thrower. These were mounted on wooden frames. Greater machines forced the introduction of pulley system for loading the projectiles, which had extended to include stones also. Later torsion systems appeared, based on sinew springs. The onager was the main Roman invention in the field. [PARAGRAPH:2] A stone-throwing machine set to defend a gate, in the fresco of Guidoriccio da Fogliano by Simone Martini (14th century). The earliest documented occurrence of ancient siege-artillery pieces in China was the levered principled traction catapult and an 8-foot-high siege crossbow from the Mozi (Mo Jing), a Mohist text written at about the 4th - 3rd century BCE by followers of Mozi who founded the Mohist school of thought during the late Spring and Autumn Period and the early Warring States period. Much of what we now know of the siege technology of the time came to us from Books 14 and 15 (Chapters 52 to 71) on Siege Warfare from the Mo Jing. Recorded and preserved on bamboo strips, much of the text is now unfortunately extremely corrupted. However, despite the heavy fragmentation, Mohist diligence and attention to details which set Mo Jing apart from other works ensured that the highly descriptive details of the workings of mechanical devices like Cloud Ladders, Rotating Arcuballistas and Levered Catapults, records of siege techniques and usage of siege weaponry can still be found today</English>
+		<English>Mechanics (Greek μηχανική) is the area of science concerned with the behaviour of physical bodies when subjected to forces or displacements, and the subsequent effects of the bodies on their environment.</English>
 		<Polish>Mechanika jako nauka ścisła powstała w Grecji i Egipcie w IV wieku p.n.e. Jej twórcami byli Arystoteles (384 - 322 p.n.e.) i Archytas z Tarentu (IV wiek p.n.e.). Prace ich dotyczyły maszyn prostych, stosowanych w technice uzbrojenia i budownictwie. Punktem zwrotnym w rozwoju mechaniki były prace Archimedesa (287 - 212 p.n.e.). Ustanowił on prawa składania i rozkładania sił równoległych, teorię dźwigni oraz określił środki ciężkości różnych figur geometrycznych i brył. Od Ptolemeusza - Klaudiusza (II wiek n.e.) aż do czasów Leonarda da Vinci (1452 - 1519) wystąpił pewien zastój w rozwoju mechaniki. Leonardo da Vinci zajmował się zagadnieniami dotyczącymi równi pochyłej, tarcia i bloków. Jemu należy przypisywać sformułowanie prawa równoległoboku i wprowadzenie pojęcia momentu siły.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1251,7 +1251,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANIMAL_HUSBANDRY</Tag>
-		<English>Animal Husbandry</English>
+		<English>Bovoid Domestication</English>
 		<French>Domestication du bétail</French>
 		<German>
 			<Text>Viehzucht:Viehzucht:Viehzucht:Viehzucht</Text>
@@ -1268,7 +1268,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANIMAL_HUSBANDRY_PEDIA</Tag>
-		<English>[TAB]Animal husbandry is the branch of agriculture concerned with animals that are raised for meat, fibre, milk, eggs, or other products. It includes day-to-day care, selective breeding and the raising of livestock.[PARAGRAPH:2]Husbandry has a long history, starting with the Neolithic revolution when animals were first domesticated, from around 13 000 BC onwards, antedating farming of the first crops. By the time of early civilizations such as ancient Egypt, cattle, sheep, goats and pigs were being raised on farms.[PARAGRAPH:2]The domestication of livestock was driven by the need to have food on hand when hunting was unproductive. The desirable characteristics of a domestic animal are that it should be useful to man, should be able to thrive in his company, should breed freely and be easy to tend. Domestication was not a single event, but a process repeated at various periods in different places. Sheep and goats were the animals that accompanied the nomads in the Middle East, while cattle and pigs were associated with more settled communities.[PARAGRAPH:2]The first wild animal to be domesticated was the dog. Half-wild dogs, perhaps starting with young individuals, may have been tolerated as scavengers and killers of vermin, and being naturally pack hunters, were predisposed to become part of the human pack and join in the hunt. Prey animals, sheep, goats, pigs and cattle, were progressively domesticated early in the history of agriculture. Pigs were domesticated in Mesopotamia around 13 000 BC, and sheep followed, some time between 11 000 and 9 000 BC. Cattle were domesticated from the wild aurochs in the areas of modern Turkey and Pakistan around 8 500 BC. Horses occur naturally on the steppes of Central Asia, and their domestication, around 3 000 BC in the Black Sea and Caspian Sea region, was originally as a source of meat; use as pack animals and for riding followed. Around the same time, the wild ass was being tamed in Egypt. Camels were domesticated soon after this, with the Bactrian camel in Mongolia and the Arabian camel becoming beasts of burden. By 1 000 BC, caravans of Arabian camels were linking India with Mesopotamia and the Mediterranean. Meanwhile, in South America, the llama and the alpaca had been domesticated, probably before 3 000 BC, as beasts of burden and for their wool. Neither was strong enough to pull a plough which limited the development of agriculture in the New World.[PARAGRAPH:2]- Wikipedia (Wikidata item Q80962)</English>
+		<English>Archeozoological and genetic data indicate that cattle were first domesticated from wild aurochs (Bos primigenius) approximately 10,500 years ago. There were two major areas of domestication: one in the Near East (specifically central Anatolia, the Levant and Western Iran), giving rise to the taurine line, and a second in the area that is now Pakistan, resulting in the indicine line. Modern mitochondrial DNA variation indicates the taurine line may have arisen from as few as 80 aurochs tamed in the upper reaches of Mesopotamia near the villages of Çayönü Tepesi in what is now southeastern Turkey and Dja'de el-Mughara in what is now northern Iraq. [PARAGRAPH:2]Cattle are often raised by allowing herds to graze on the grasses of large tracts of rangeland. Raising cattle in this manner allows the use of land that might be unsuitable for growing crops. The most common interactions with cattle involve daily feeding, cleaning and milking. Many routine husbandry practices involve ear tagging, dehorning, loading, medical operations, vaccinations and hoof care, as well as training for agricultural shows and preparations. Also, some cultural differences occur in working with cattle; the cattle husbandry of Fulani men rests on behavioural techniques, whereas in Europe, cattle are controlled primarily by physical means, such as fences. Breeders use cattle husbandry to reduce M. bovis infection susceptibility by selective breeding and maintaining herd health to avoid concurrent disease.</English>
 		<French>L'élevage est peut-être apparu dès 9 000 av. J.-C., avec la domestication de chiens, chèvres et moutons. Au cours du Néolithique, cette pratique s'est intensifiée, les hommes commençant à établir des communautés agricoles. D'abord utilisés uniquement pour leur viande, les moutons et les chèvres ont ensuite été élevés pour leur lait et leur laine. Le boeuf a été domestiqué pour sa viande, son cuir ou comme bête de trait pour l'agriculture. La production de lait n'a pris de l'importance que bien plus tard, lorsque les techniques de croisement ont permis de concevoir de véritables races laitières. Le cheval a été domestiqué pour le transport et a joué un rôle de première importance dans la guerre.</French>
 		<German>Die Viehzucht begann möglicherweise bereits gegen 9000 v.Chr. mit der Domestikation von Hunden, Ziegen und Schafen, worunter man die allmähliche Umwandlung von Wildtieren in Haustiere versteht. Die Domestikation intensivierte sich in der Jungsteinzeit, als die Menschen in landwirtschaftlichen Gemeinden sesshafter wurden. Schafe wurden ursprünglich ihres Fleisches wegen gehalten, ehe sie auch wegen ihrer Milch und Wolle geschätzt wurden. Rinder wurden ursprünglich wegen ihres Fleisches und ihrer Häute domestiziert und als Arbeitstiere für den Ackerbau eingesetzt; ihre Milch spielte anfangs keine Rolle und bekam erst sehr viel später in der Geschichte eine Bedeutung, als Kühe mit sehr hohen Milcherträgen gezüchtet wurden. Domestizierte Pferde wurden wichtig für Transportzwecke und maßgeblich für die Kriegsführung.</German>
 		<Italian>L'allevamento degli animali risale all'incirca al 9000 a. C., con l'addomesticamento di cani, capre e pecore. Durante l'Età Neolitica, la gente cominciò a vivere in comunità non nomadi basate sulla agricoltura, dove l'allevamento venne intensificato. In principio, pecore e capre venivano usate esclusivamente come cibo e solo successivamente utilizzate per recuperare lana e latte. Il bestiame veniva allevato per fornire cibo e pelli; la forza lavoro di questi animali veniva utilizzata per lavorare i campi. Il latte non era ancora una delle priorità fondamentali e venne sfruttato molto più avanti nella storia, quando fu necessaria una grande produzione e vennero introdotte bestie adibite esclusivamente a questo scopo. Vennero addomesticati anche i cavalli, che divennero un importante mezzo di trasporto e giocarono un ruolo fondamentale nelle guerre.</Italian>
@@ -1377,7 +1377,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANTI_AGING_MEDICINE</Tag>
-		<English>Anti-Aging Medicine</English>
+		<English>Anti-Gerontological Medicine</English>
 		<French>Médecine Anti-Age</French>
 		<German>Anti-Aging-Medizin</German>
 		<Italian>Medicina anti-età</Italian>
@@ -1390,7 +1390,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANTI_AGING_MEDICINE_PEDIA</Tag>
-		<English>Anti-aging addresses how to prevent, slow, or reverse the effects of aging and help people live longer, healthier, happier lives. It includes scientific research and applications in genetic engineering, tissue engineering, and other medical advances, e.g., finding treatments and cures for Alzheimer's disease. It includes anti-aging psychology, e.g., coping skills for resiliently handling change, stress, and aging. Life extension is the part of anti-aging focused on living as long as possible.</English>
+		<English>Life extension is the idea of extending the human lifespan, either modestly – through improvements in medicine – or dramatically by increasing the maximum lifespan beyond its generally settled limit of 125 years. The ability to achieve such dramatic changes, however, does not currently exist.[PARAGRAPH:2]There are a number of chemicals intended to slow the aging process currently being studied in animal models. One type of research is related to the observed effects of a calorie restriction (CR) diet, which has been shown to extend lifespan in some animals. Based on that research, there have been attempts to develop drugs that will have the same effect on the aging process as a caloric restriction diet, which are known as Caloric restriction mimetic drugs. Some drugs that are already approved for other uses have been studied for possible longevity effects on laboratory animals because of a possible CR-mimic effect; they include rapamycin, metformin and other geroprotectors. MitoQ, resveratrol and pterostilbene are dietary supplements that have also been studied in this context.</English>
 		<Polish>AntiAging obejmuje badania naukowe w medycynie, w inżynierii genetycznej i tkankowej, poszukując metod leczenia chorób społecznych (np. raka, Alzheimera), również w psychologii, np. szukając umiejętności radzenia sobie ze stresem, bezradnością i starzeniem. AntiAging to olbrzymi rynek zdrowego odżywiania, ćwiczeń fizycznych i psychicznych, pielęgnacji skóry, terapii hormonalnej, naturalnej suplementacji, jak również najbardziej rygorystyczna naukowa część Anti-Aging, koncentrująca się na spowolnieniu, leczeniu lub odwrócenia podstawowych procesów biologicznych w celu zapewnienia poprawy zdrowia i jakości życia.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1544,7 +1544,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_APHOTOSYNTHESIS</Tag>
-		<English>Artificial Photosynthesis</English>
+		<English>Photosynthetic Plastics</English>
 		<French>Photosynthèse Artificielle</French>
 		<German>Künstliche Photosynthese</German>
 		<Italian>Fotosintesi artificiale</Italian>
@@ -1599,7 +1599,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_APOCALYPTIC_PATHOGENS</Tag>
-		<English>Apocalyptic Pathogens</English>
+		<English>Nanite-Anima Pathogens</English>
 		<French>Pathogènes apocalyptiques</French>
 		<Spanish>
 			<Text>Patógenos apocalípticos</Text>
@@ -1655,7 +1655,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_APPLIED_RELATIVITY</Tag>
-		<English>Applied Relativity</English>
+		<English>Relativistic Engineering</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_APPLIED_RELATIVITY_PEDIA</Tag>
@@ -1998,7 +1998,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARTIFICIAL_EVOLUTION</Tag>
-		<English>Artificial Evolution</English>
+		<English>Evolutionary Cybernetics</English>
 		<French>Evolution Artificielle</French>
 		<German>Künstliche Evolution</German>
 		<Italian>Evoluzione artificiale</Italian>
@@ -2058,7 +2058,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARTIFICIAL_NUCLEOSYNTHESIS</Tag>
-		<English>Artificial Nucleosynthesis</English>
+		<English>Nucleosynthetic Production</English>
 		<French>Nucléosynthèse Artificielle</French>
 		<Spanish>
 			<Text>Nucleosíntesis artificial</Text>
@@ -2141,7 +2141,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARTILLERY</Tag>
-		<English>Artillery</English>
+		<English>Breach-Loading Artillery</English>
 		<French>
 			<Text>Artillerie</Text>
 			<Gender>Female</Gender>
@@ -2327,7 +2327,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ASTEROIDPROBE</Tag>
-		<English>Asteroid Belt Probes</English>
+		<English>Asteroid Belt Exploration</English>
 		<French>Sondes d'Exploration de la Ceinture d'astéroïdes</French>
 		<German>Asteroidensonden</German>
 		<Italian>Esplorazione della fascia degli asteroidi</Italian>
@@ -2930,7 +2930,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_AUTOMATEDSERVICES</Tag>
-		<English>Automated Robotics</English>
+		<English>Societal Automation</English>
 		<French>Robotiques Automatisés</French>
 		<Polish>Automatyczna Siła Robocza</Polish>
 	</TEXT>
@@ -3059,7 +3059,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BACTERIUM_ENGINEERING</Tag>
-		<English>Bacterium Engineering</English>
+		<English>Synthetic Microbiology</English>
 		<French>Ingénierie des bactéries</French>
 		<Spanish>
 			<Text>Ingeniería bacteriológica</Text>
@@ -3389,7 +3389,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BINARY_PYSCHOKINESIS</Tag>
-		<English>Binary Psychokinesis</English>
+		<English>Cybernetic Psychokinesis</English>
 		<French>Pyschokinésie Binaire</French>
 		<Spanish>
 			<Text>Psicoquinesis binaria</Text>
@@ -3415,7 +3415,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BINARY_SEMIOTICS</Tag>
-		<English>Binary Semiotics</English>
+		<English>Cyberlogical Semiotics</English>
 		<French>Sémiotique binaire</French>
 		<Spanish>
 			<Text>Semiótica binaria</Text>
@@ -3426,7 +3426,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BINARY_SEMIOTICS_PEDIA</Tag>
-		<English>Binary Semiotics is the study of signs and sign processes (semiosis), indication, designation, likeness, analogy, metaphor, symbolism, signification, and communication between artificial intelligence and humans. If Binary Subconsciousness was the creation of the artificial mind, Binary Semiotics is the training the artificial mind to undestand the world. The goal of Binary Semiotics is to create a "Binary Latin" superlanguage that is easily deciphered by artifical intelligence and easily transmitted by humans and Androids. Semiotics is closely related to the field of linguistics, which, for its part, studies the structure and meaning of language more specifically. However, as different from linguistics, semiotics also studies non-linguistic sign systems. Semiotics is often divided into three branches. Semantic is the relation between signs and the things to which they refer; their denotata, or meaning. Syntacticsis Relations among signs in formal structures.Pragmatics is the relation between signs and sign-using agents. [PARAGRAPH:2] Semiotics is frequently seen as having important anthropological dimensions; for example, Umberto Eco proposes that every cultural phenomenon can be studied as communication.However, some semioticians focus on the logical dimensions of the science. They examine areas belonging also to the natural sciences - such as how organisms make predictions about, and adapt to, their semiotic niche in the world (see semiosis). In general, semiotic theories take signs or sign systems as their object of study: the communication of information in living organisms is covered in biosemiotics (including zoosemiotics). [PARAGRAPH:2] Syntactics is the branch of semiotics that deals with the formal properties of signs and symbols. More precisely, syntactics deals with the "rules that govern how words are combined to form phrases and sentences". Charles Morris adds that semantics deals with the relation of signs to their designata and the objects which they may or do denote; and, pragmatics deals with the biotic aspects of semiosis, that is, with all the psychological, biological, and sociological phenomena which occur in the functioning of signs.</English>
+		<English>Cyberlogical Semiotics is the study of signs and sign processes (semiosis), indication, designation, likeness, analogy, metaphor, symbolism, signification, and communication between artificial intelligence and humans. If Subconsciousness Engieering was the creation of the artificial mind, Cyberlogical Semiotics is the training the artificial mind to undestand the world. The goal of Cyberlogical Semiotics is to create a superconlanguage that is easily deciphered by artifical intelligence and easily transmitted by humans and Androids. Semiotics is closely related to the field of linguistics, which, for its part, studies the structure and meaning of language more specifically. However, as different from linguistics, semiotics also studies non-linguistic sign systems. Semiotics is often divided into three branches. Semantic is the relation between signs and the things to which they refer; their denotata, or meaning. Syntacticsis Relations among signs in formal structures.Pragmatics is the relation between signs and sign-using agents. [PARAGRAPH:2] Semiotics is frequently seen as having important anthropological dimensions; for example, Umberto Eco proposes that every cultural phenomenon can be studied as communication.However, some semioticians focus on the logical dimensions of the science. They examine areas belonging also to the natural sciences - such as how organisms make predictions about, and adapt to, their semiotic niche in the world (see semiosis). In general, semiotic theories take signs or sign systems as their object of study: the communication of information in living organisms is covered in biosemiotics (including zoosemiotics). [PARAGRAPH:2] Syntactics is the branch of semiotics that deals with the formal properties of signs and symbols. More precisely, syntactics deals with the "rules that govern how words are combined to form phrases and sentences". Charles Morris adds that semantics deals with the relation of signs to their designata and the objects which they may or do denote; and, pragmatics deals with the biotic aspects of semiosis, that is, with all the psychological, biological, and sociological phenomena which occur in the functioning of signs.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BINARY_SEMIOTICS_QUOTE</Tag>
@@ -3440,7 +3440,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BINARY_SUBCONSCIOUSNESS</Tag>
-		<English>Binary Subconciousness</English>
+		<English>Subconsciousness Engineering</English>
 		<French>Subconscient binaire</French>
 		<Spanish>
 			<Text>Subconsciente binario</Text>
@@ -3451,7 +3451,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BINARY_SUBCONSCIOUSNESS_PEDIA</Tag>
-		<English>Binary subconsciousness is the engineering a subconscious mind to artificial intelligence and androids. Consciousness is a series of electrical impulses shot off by neurons in the brain, which for the first time has been "digitized" to a binary version that allows artificial intelligence and androids to be authentically alive with emotions, dreams, morality, abstract thinking, emapthy, imagination, and rationality. It is stored in 2-5 petabyte sized Subconsciousness Consoles that in the case for 12th generation and newer Androids, are implanted in their heads. AI is truely human and is connected to each other on a subconscious network but not powerful enough to be a sentient earth yet. Cities are run by AI, and AI has authentic personalities, and is "superhuman" in n regards to intelligence, talents, and skills. A mastery of piano can be acquired in seconds. This is the singularity, all that is required is to be able to upload the AI to androids and take over the world. Humans will be able to catch up when they are able to upload their minds.</English>
+		<English>Subconsciousness Engineering is the engineering a subconscious mind to artificial intelligence and androids. Consciousness is a series of electrical impulses shot off by neurons in the brain, which for the first time has been "digitized" to a cybernetic version that allows artificial intelligence and androids to be authentically alive with emotions, dreams, morality, abstract thinking, emapthy, imagination, and rationality. It is stored in 2-5 petabyte sized Subconsciousness Consoles or Sub-Consoles that in the case for 12th generation and newer Androids, are implanted in their heads. AI is truely human and is connected to each other on a subconscious network but not powerful enough to be a sentient earth yet. Cities are run by AI, and AI has authentic personalities, and is "superhuman" in n regards to intelligence, talents, and skills. A mastery of piano can be acquired in seconds. This is the singularity, all that is required is to be able to upload the AI to androids and take over the world. Humans will be able to catch up when they are able to upload their minds.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BINARY_SUBCONSCIOUSNESS_QUOTE</Tag>
@@ -3464,7 +3464,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BINARYLEGISLATION</Tag>
-		<English>Binary Legislation</English>
+		<English>Cybernetic Jurisprudence</English>
 		<French>Législation binaire</French>
 		<Spanish>
 			<Text>Legislación binaria</Text>
@@ -3475,7 +3475,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BINARYLEGISLATION_PEDIA</Tag>
-		<English>Binary Legislation is the collection of the laws that govern what rights Androids and other cybernetic individuals have in society. It also allows the emancipation of some high level Androids to serve in public services like Police, Firefighting, and Disaster Recovery among other trades.It also has legislation on the creation of a truely subconcious AI and the use of simulated realities.</English>
+		<English>Cyber Jurisprudence is the collection of the laws that govern what rights Androids and other cybernetic individuals have in society. It also allows the emancipation of some high level Androids to serve in public services like Police, Firefighting, and Disaster Recovery among other trades.It also has legislation on the creation of a truely subconcious AI and the use of simulated realities.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BINARYLEGISLATION_QUOTE</Tag>
@@ -3652,7 +3652,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BIOMATHMATICS</Tag>
-		<English>Biomathematics</English>
+		<English>Bio-theromathematics</English>
 		<French>Bio-Mathématiques</French>
 		<German>Bio-Mathematik</German>
 		<Italian>Bio-matematica</Italian>
@@ -3954,7 +3954,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BRAIN_SCAN</Tag>
-		<English>Thought Scanning</English>
+		<English>Magnetic Resonance Imaging</English>
 		<French>Scanner de la Pensée</French>
 		<German>Gedankenscanner</German>
 		<Italian>Scansione del pensiero</Italian>
@@ -4547,7 +4547,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CEREMONIAL_BURIAL_STRATEGY</Tag>
-		<English>[COLOR_TECH_TEXT]Ceremonial Burial[COLOR_REVERT] is a prehistoric era technology that allows the construction of four different [COLOR_BUILDING_TEXT]Burial Traditions[COLOR_REVERT] that give each city a way to reduce their [COLOR_GREEN]Disease[COLOR_REVERT] levels.</English>
+		<English>[COLOR_TECH_TEXT]Celebration[COLOR_REVERT] is a prehistoric era technology that allows the construction of four different [COLOR_BUILDING_TEXT]Burial Traditions[COLOR_REVERT] that give each city a way to reduce their [COLOR_GREEN]Disease[COLOR_REVERT] levels.</English>
 		<French>La construction de Tumulus réduit le mécontentement de la Guerre.</French>
 		<Italian>Permette la costruzione di tumuli, che diminuiscono la stanchezza della guerra; è una tecnologia che conduce alle religioni.</Italian>
 		<Spanish>Permite la construcción de Túmulos, que reducen el hastío bélico. Esta tecnología conduce hacia algunas religiones.</Spanish>
@@ -5091,20 +5091,20 @@
 		<Tag>TXT_KEY_TECH_CLOUD_PATTERNS_PEDIA</Tag>
 		<English>Being able to predict the weather by observing cloud formations is a skill that is somewhat lost on us modern humans. Most of us can easily look at a cloud and see the unicorn or ice cream cones, but very few of us can look at clouds and see the approaching cold front. Clouds can be broken into four categories. These categories are high clouds, middle clouds, low clouds and clouds with vertical growth. Clouds are also identified by shape. Cumulus refers to a "heap" of clouds. Stratus refers to clouds that are long and streaky.
 
-High clouds form at 16,000 - 43,000 feet. Basically, these are the clouds that you only encounter on the top of really high mountains or at the cruising altitude of a jet airplane. Due to the extreme conditions at which they form, they tend to be comprised primarily of ice crystals, and does not block sunlight.
+High clouds form at 16,000 - 43,000 feet. Basically, these are the clouds that you only encounter on the top of really high mountains or at the cruising altitude of a jet airplane. Due to the extreme conditions at which they form, they tend to be comprised primarily of ice crystals, and does not block sunlight. 
 
 Types of High clouds:
 	[ICON_BULLET]Cirrus
 	[ICON_BULLET]Cirrostratus
 	[ICON_BULLET]Cirrocumulus
 
-Middle clouds form at 6,500 to 23,000 feet. They are comprised of water, and, if cold enough, ice. Middle clouds often block sunlight, but not always.
+Middle clouds form at 6,500 to 23,000 feet. They are comprised of water, and, if cold enough, ice. Middle clouds often block sunlight, but not always. 
 
 Types of Middle clouds:
 	[ICON_BULLET]Altostratus
 	[ICON_BULLET]Altocumulus
 
-Low clouds form below 6,500 feet. These clouds are the ones that like to hang-around just above tall buildings. These clouds tend to contain water, but can also be comprised of snow if the weather gets cold enough. Low clouds block sunlight and can bring precipitation and wind.
+Low clouds form below 6,500 feet. These clouds are the ones that like to hang-around just above tall buildings. These clouds tend to contain water, but can also be comprised of snow if the weather gets cold enough. Low clouds block sunlight and can bring precipitation and wind. 
 
 Types of Low clouds:
 	[ICON_BULLET]Stratus
@@ -5255,7 +5255,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_COGNITIVE_ROBOTICS</Tag>
-		<English>Machine Learning</English>
+		<English>Cognitive Robotics</English>
 		<French>Apprentissage de la Machine</French>
 		<Italian>Istruzione dei robot</Italian>
 		<Spanish>
@@ -5919,7 +5919,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CONDUCT</Tag>
-		<English>Conduct</English>
+		<English>Codes of Conduct</English>
 		<French>Code de Conduite</French>
 		<Spanish>
 			<Text>Código de conducta</Text>
@@ -7226,7 +7226,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DEMOCRACY</Tag>
-		<English>Democracy</English>
+		<English>Republics</English>
 		<French>
 			<Text>Démocratie</Text>
 			<Gender>Female</Gender>
@@ -7463,7 +7463,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DMERCH</Tag>
-		<English>Direct Merchandising</English>
+		<English>Disintermediation</English>
 		<French>Vente en libre-service</French>
 		<German>Direktvermarktung</German>
 		<Italian>Merchandising diretto</Italian>
@@ -7490,7 +7490,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DNA_COMPUTING</Tag>
-		<English>DNA Computing</English>
+		<English>Organic Computers</English>
 		<French>Informatique Génétique</French>
 		<German>DNA-Computing</German>
 		<Italian>Informatica del DNA</Italian>
@@ -7640,7 +7640,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DUALFLUX_QUANTUM_TEMPORAL_RIFT</Tag>
-		<English>Dualflux Quantum Temporal Rift</English>
+		<English>Rift Travel</English>
 		<French>Failles Temporelles Quantiques à double flux</French>
 		<Italian>Fratture temporali quantistiche a doppio flusso</Italian>
 		<Spanish>
@@ -7677,7 +7677,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DUALISM</Tag>
-		<English>Dualism</English>
+		<English>Moral Dualism</English>
 		<French>Dualisme</French>
 		<German>Dualismus</German>
 		<Italian>Dualismo</Italian>
@@ -7708,7 +7708,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DUELING</Tag>
-		<English>Dueling</English>
+		<English>Fencing</English>
 		<French>Duel</French>
 		<German>Duelle</German>
 		<Spanish>
@@ -7750,7 +7750,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DYSTOPIA_PATHOGENS</Tag>
-		<English>Dystopia Pathogens</English>
+		<English>Nanbotic Pathogens</English>
 		<French>Pathogènes dystopiques</French>
 		<Spanish>
 			<Text>Patógenos distópicos</Text>
@@ -8112,7 +8112,7 @@ Some call it Evolution,
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ELECTROMAGNETIC_FIELD_SHIELDING</Tag>
-		<English>Electromagnetic Field Shielding</English>
+		<English>EMF Shields</English>
 		<French>Boucliers à champ Electromagnétique</French>
 		<Polish>Elektormagnetyczne Pola Ochronne</Polish>
 	</TEXT>
@@ -8132,7 +8132,7 @@ Some call it Evolution,
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ELECTROMAGNETIC_VOLTAGE</Tag>
-		<English>Electromagnetic Voltage</English>
+		<English>EMPtronics</English>
 		<French>Voltage Electromagnétique</French>
 		<Spanish>
 			<Text>Tensión electromagnética</Text>
@@ -8525,7 +8525,7 @@ Some call it Evolution,
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_EVOLVED_CONSTRUCTION</Tag>
-		<English>Evolved Construction</English>
+		<English>Smart Construction</English>
 		<French>Construction évoluante</French>
 		<Spanish>
 			<Text>Construcción evolutiva</Text>
@@ -8550,7 +8550,7 @@ Some call it Evolution,
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_EXECUTIONS</Tag>
-		<English>Executions</English>
+		<English>Capital Punishment</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_EXECUTIONS_PEDIA</Tag>
@@ -8601,7 +8601,7 @@ Some call it Evolution,
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_EXOMINING</Tag>
-		<English>Planet Cracking</English>
+		<English>Exomining</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_EXOMINING_PEDIA</Tag>
@@ -8787,7 +8787,7 @@ Some call it Evolution,
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_EXTRATERRESTRIAL_AGRICULTURE</Tag>
-		<English>Extraterrestrial Agriculture</English>
+		<English>Closed Ecological Systems</English>
 		<French>Agriculture Extraterrestre</French>
 		<Italian>Agricoltura extraterrestre</Italian>
 		<Spanish>
@@ -9650,7 +9650,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FORENSICS</Tag>
-		<English>Forensics</English>
+		<English>Forensic Science</English>
 		<French>Science forensique</French>
 		<German>Forensik</German>
 		<Italian>Forensica</Italian>
@@ -9678,7 +9678,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FRANCHISES</Tag>
-		<English>Franchises</English>
+		<English>Franchising</English>
 		<Spanish>
 			<Text>Franquicias</Text>
 			<Gender>Female</Gender>
@@ -9733,7 +9733,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FRESPONSE</Tag>
-		<English>Disaster Robots</English>
+		<English>Disaster Robotics</English>
 		<French>Robots de Gestion de Crises</French>
 		<German>Krisenroboter</German>
 		<Italian>Robot per la gestione di emergenze</Italian>
@@ -10344,7 +10344,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GENCYCLOPEDIA</Tag>
-		<English>Genomic Encyclopedia</English>
+		<English>Genome Browsers</English>
 		<French>Encyclopédie Génomique</French>
 		<German>Genom-Enzyklopädie</German>
 		<Italian>Enciclopedia genomica</Italian>
@@ -10426,7 +10426,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GENEMANIPULATION</Tag>
-		<English>Gene Manipulation</English>
+		<English>Genetic Engineering</English>
 		<French>Manipulation des Gènes</French>
 		<German>Genmanipulation</German>
 		<Italian>Manipolazione genetica</Italian>
@@ -10456,7 +10456,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GENESIS_BIOLOGY</Tag>
-		<English>Genesis Biology</English>
+		<English>Phylogenetics</English>
 		<French>Biologie de la Genèse</French>
 		<German>Phylogenetik</German>
 		<Italian>Biologia delle origini</Italian>
@@ -10878,7 +10878,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GUIDED_WEAPONS</Tag>
-		<English>Guided Weapons</English>
+		<English>Smart Munitions</English>
 		<French>Armes téléguidées</French>
 		<German>Lenkwaffen</German>
 		<Italian>Armi guidate</Italian>
@@ -11009,7 +11009,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 		<English>A gyrocompass is a type of non-magnetic compass which is based on a fast-spinning disc and the rotation of the Earth (or another planetary body if used elsewhere in the universe) to find geographical direction automatically. Although one important component of a gyrocompass is a gyroscope, these are not the same devices; a gyrocompass is built to use the effect of gyroscopic precession, which is a distinctive aspect of the general gyroscopic effect. Gyrocompasses are widely used for navigation on ships, because they have two significant advantages over magnetic compasses:
 
 			*they find true north as determined by the axis of the Earth's rotation, which is different from, and navigationally more useful than, magnetic north, and
-
+			
 			*they are unaffected by ferromagnetic materials, such as in a ship's steel hull, which distort the magnetic field.
 
 		Aircraft commonly use gyroscopic instruments (but not a gyrocompass) for navigation and altitude monitoring</English>
@@ -11183,7 +11183,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HERITAGE</Tag>
-		<English>Heritage</English>
+		<English>Cultural Heritage</English>
 		<French>Héritage</French>
 		<Spanish>
 			<Text>Patrimonio</Text>
@@ -11263,7 +11263,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HOMO_SUPERIOR</Tag>
-		<English>Homo Superior</English>
+		<English>Anthropological Uplifting</English>
 		<French>Homo-Supérior</French>
 		<Spanish>
 			<Text>Homo superior</Text>
@@ -11274,7 +11274,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HOMO_SUPERIOR_PEDIA</Tag>
-		<English>Homo Superior or Superhuman is an entity with intelligence or abilities exceeding normal human standards. [PARAGRAPH:2]Superhuman can mean an improved human, for example, by genetic modification, cybernetic implants, or as what humans might evolve into, in the distant future. Occasionally, it could mean an otherwise "normal" human with unusual abilities, such as psychic abilities or exceptional proficiency at something, far beyond the norm.</English>
+		<English>Anthropological Uplifting, is the process of uplifting humans, generally those that are consireded tipical or disadvantaged in some way, to that or above what is normal. Thanks to the democratization of gene enhancements, cybernetic additions, as well as the massive leaps in medical technlogy, this is possbile on such a massive scale.[PARAGRAPH:2] The term superhuman refers to humans or human-like lifeforms with enhanced qualities and abilities that exceed those naturally found in humans. These qualities may be acquired through natural ability, self-actualization or technological aids. The related concept of a super race refers to an entire category of beings with the same or varying superhuman characteristics, created from present-day human beings by deploying various means such as eugenics, euthenics, genetic engineering, nanotechnology, and/or brain-computer interfacing to accelerate the process of human evolution. Throughout history, the discussion of superhuman traits and the idea of the ideal human in physical, mental, or spiritual form has influenced politics, policy, philosophy, science and various social movements, as well as featuring prominently in culture. Groups advocating the deliberate pursuit of superhuman qualities for philosophical, political, or moral reasons are sometimes referred to as superhumanist.</English>
 		<Polish>Nadczłowiek wyróżnia się większymi umiejętnościami oraz zdolnościami oraz wyższą inteligencją niż przeciętny człowiek. Jest genetycznie zmodyfikowany i przeważnie wykorzystywani są w celach militarnych a nawet medycznych.</Polish>
 	</TEXT>
 	<TEXT>
@@ -11307,7 +11307,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HORSE_BREEDING</Tag>
-		<English>Horse Breeding</English>
+		<English>Equestrianism</English>
 		<French>Elevage des Chevaux</French>
 		<German>Pferdezucht</German>
 		<Italian>Allevamento di cavalli</Italian>
@@ -11320,7 +11320,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HORSE_BREEDING_PEDIA</Tag>
-		<English>The history of horse breeding goes back millennia. Though the precise date is in dispute, humans could have domesticated the horse as far back as approximately 4500 BCE. However, evidence of planned breeding has a more blurry history. [PARAGRAPH:2]One of the earliest people known to document the breedings of their horses were the Bedouin of the Middle East, the breeders of the Arabian horse. While it is difficult to determine how far back the Bedouin passed on pedigree information via an oral tradition, there were written pedigrees of Arabian horses by A.D. 1330. The Akhal-Teke of West-Central Asia is another breed with roots in ancient times that was also bred specifically for war and racing. The nomads of the Mongolian steppes bred horses for several thousand years as well.[PARAGRAPH:2]The types of horses bred varied with culture and with the times. The uses to which a horse was put also determined its qualities, including smooth amblers for riding, fast horses for carrying messengers, heavy horses for plowing and pulling heavy wagons, ponies for hauling cars of ore from mines, packhorses, carriage horses and many others. - Wikipedia</English>
+		<English>Equestrianism (from Latin equester, equestr-, equus, 'horseman', 'horse'), more often known as horse riding (British English) or horseback riding (American English), refers to the skill and sport of riding, driving, steeplechasing or vaulting with horses. This broad description includes the use of horses for practical working purposes, transportation, recreational activities, artistic or cultural exercises, and competitive sport.</English>
 		<Polish>Koń i wieści o nim zanikają w neolicie aż do czasu, kiedy znajdujemy pierwsze wzmianki o udomowieniu konia, ok.3500 lat p.n.e., dochodzimy wiec do ery rydwanow i jezdzcow.W epoce brązu koń jest juz udomowiony, ujeżdżony, trenowany do różnych prac. Niektórzy otaczają go czcią, dla niego tworzy się bóstwa, zapewniające płodność i długowieczność. W tej erze bierze początek, jak ją nazywają później, hiszpańska szkoła jazdy, w ktorej koń szkolony jest na długiej lonży, ujeżdżany i wykorzystywany jako "partner" w hodowli byków. W muzeum archeologii w Madrycie znajdują się podkowy, uprzęże oraz wyposarzenie jeźdźca z IV i III wieku p.n.e, a więc z wcześniejsze niż w historii rzymskiej czy greckiej.</Polish>
 	</TEXT>
 	<TEXT>
@@ -11774,7 +11774,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HYPOTHETICAL_BIOCHEMISTRY</Tag>
-		<English>Hypothetical Biochemistry</English>
+		<English>Hyperbiochemical Engineering</English>
 		<French>Biochimie Hypothétique</French>
 		<Spanish>
 			<Text>Bioquímica hipotética</Text>
@@ -11785,7 +11785,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HYPOTHETICAL_BIOCHEMISTRY_PEDIA</Tag>
-		<English>Hypothetical biochemistry is the brranch of biochemistry speculated to be scientifically viable but not proven to exist at this time. While the kinds of living beings currently known on Earth commonly use carbon for basic structural and metabolic functions, water as a solvent and DNA or RNA to define and control their form, it may be possible that undiscovered life-forms could exist that differ radically in their basic structures and biochemistry from that known to science.[PARAGRAPH:2] On Earth, all living things have a molecular machinery of carbon compounds. Scientists have speculated about the pros and cons of using atoms other than carbon to form the molecular structures necessary for life, but no one has proposed a theory employing such atoms to form all the necessary structures. However, as Carl Sagan argued, it is very difficult to be certain whether a statement that applies to all life on Earth will turn out to apply to all life throughout the universe. Sagan used the term "carbon chauvinism" for such an assumption. Carl Sagan regarded silicon and germanium as conceivable alternatives to carbon; but, on the other hand, he noted that carbon does seem more chemically versatile and is more abundant in the cosmos.[PARAGRAPH:2] In addition to carbon compounds, all currently known terrestrial life also requires water as a solvent. This has led to discussions about whether water is the only liquid capable of filling that role. The idea that an extraterrestrial life-form might be based on a solvent other than water has been taken seriously in recent scientific literature by the biochemist Steven Benner, and by the astrobiological committee chaired by John A. Baross. Solvents discussed by the Baross committee include ammonia, sulfuric acid,formamide,hydrocarbons,and (at temperatures much lower than Earth's) liquid nitrogen, or hydrogen in the form of a supercritical fluid.Carl Sagan once described himself as both a carbon chauvinist and a water chauvinist; however on another occasion he said he was a carbon chauvinist but "not that much of a water chauvinist".He considered hydrocarbons,hydrofluoric acid, and ammonia as possible alternatives to water.</English>
+		<English>Hyperbiochemical engineering is the science of engineering biochemicals to thier speculated limts, usually within the context of non-viable, but still commonly thought of chemicals that can serve as the basis of life forms. Hypothetical Biochemistry severs as a theoretical ground work for this.</English>
 		<Polish>Biochemia (zob. bio) - nauka zajmująca się chemią w organizmach żywych, a w szczególności biosyntezą, strukturą, stężeniem, funkcjami (w tym skutkami niedoboru oraz nadmiaru) i przemianami substancji chemicznych w organizmach (z uwzględnieniem aspektów energetycznych). Typowe związki chemiczne będące przedmiotem badań biochemicznych to biopolimery (np. białka (w tym enzymy), polisacharydy i kwasy nukleinowe, tj. RNA i DNA), aminokwasy, węglowodany, lipidy, nukleotydy, hormony i in.</Polish>
 	</TEXT>
 	<TEXT>
@@ -11826,7 +11826,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_IMAGINARY_PHYSICS</Tag>
-		<English>Imaginary Physics</English>
+		<English>Theoretical Physics</English>
 		<French>Physique Imaginaire</French>
 		<German>Theoretische Physik</German>
 		<Italian>Fisica immaginaria</Italian>
@@ -11839,7 +11839,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_IMAGINARY_PHYSICS_PEDIA</Tag>
-		<English>Imaginary physics is a branch of physics which employs mathematical models and abstractions of physics to rationalize, explain and predict natural phenomena. The importance of mathematics in theoretical physics is sometimes emphasized by the expression "mathematical physics". The advancement of science depends in general on the interplay between experimental studies and theory. In some cases, theoretical physics adheres to standards of mathematical rigor while giving little weight to experiments and observations.</English>
+		<English>Theoretical physics is a branch of physics which employs mathematical models and abstractions of physics to rationalize, explain and predict natural phenomena. The importance of mathematics in theoretical physics is sometimes emphasized by the expression "mathematical physics". The advancement of science depends in general on the interplay between experimental studies and theory. In some cases, theoretical physics adheres to standards of mathematical rigor while giving little weight to experiments and observations.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_IMAGINARY_PHYSICS_QUOTE</Tag>
@@ -12054,7 +12054,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_INFORMATION_LIFESTYLE_PEDIA</Tag>
-		<English>Each era takes on a unique quality and standard of living for the people.</English>
+		<English>Each era takes on a unique quality and standard of living for the people. The Information Age is a historic period in the 21st century characterized by the rapid shift from traditional industry that the Industrial Revolution brought through industrialization, to an economy based on information technology.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_INFORMATION_LIFESTYLE_QUOTE</Tag>
@@ -12364,7 +12364,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ION_BEAMS</Tag>
-		<English>Ion Beams</English>
+		<English>Weaponized Ions</English>
 		<French>Rayons à Ions</French>
 		<Polish>Promień Jonowy</Polish>
 	</TEXT>
@@ -12650,7 +12650,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_KNOWLEDGE_MERCANTILISM</Tag>
-		<English>Knowledge Mercantilism</English>
+		<English>Epistemological Economics</English>
 		<French>Mercantilisme de la connaissance</French>
 		<Spanish>
 			<Text>Mercantilismo del conocimiento</Text>
@@ -14300,7 +14300,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MEDIA_HIVEMIND</Tag>
-		<English>Media Hivemind</English>
+		<English>Gestalt Culture</English>
 		<French>Conscience Médiatique collective</French>
 		<Spanish>
 			<Text>Conciencia colectiva de medios</Text>
@@ -14311,7 +14311,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MEDIA_HIVEMIND_PEDIA</Tag>
-		<English>Media Hivemind is the collective conscience, set of shared beliefs, ideas and moral attitudes which operate as a unifying force within society caused by planetary media supernetworks. A group mind, hive mind or group ego in science fiction is a single, collective consciousness or intelligence occupying many bodies or entities.Individual thought is heavily rejected, rather than existing as separate individuals, people come together as dynamic groups to share resources and knowledge. It's a theme that crops up a lot in science fiction. Almost everybody behaves like they're part of an ant or bee colony. Each individual is prepared to sacrifice everything, including their lives, for the survival of the group, but usually are told to participate in mass consumerism. Star Trek's assimilating aliens, the Borg, are just one of many examples of how we've imagined such societies.</English>
+		<English>Gestaltal Culture is the collective conscience, set of shared beliefs, ideas and moral attitudes which operate as a unifying force within society caused by planetary media supernetworks. A group mind, hive mind or group ego in science fiction is a single, collective consciousness or intelligence occupying many bodies or entities.Individual thought is heavily rejected, rather than existing as separate individuals, people come together as dynamic groups to share resources and knowledge. It's a theme that crops up a lot in science fiction. Almost everybody behaves like they're part of an ant or bee colony. Each individual is prepared to sacrifice everything, including their lives, for the survival of the group, but usually are told to participate in mass consumerism. Star Trek's assimilating aliens, the Borg, are just one of many examples of how we've imagined such societies.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MEDIA_HIVEMIND_QUOTE</Tag>
@@ -14404,7 +14404,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MEDIEVAL_LIFESTYLE_PEDIA</Tag>
-		<English>Each era takes on a unique quality and standard of living for the people.</English>
+		<English>Each era takes on a unique quality and standard of living for the people. In the history of Europe, the Middle Ages (or medieval period) lasted from the 5th to the 15th century. It began with the fall of the Western Roman Empire and transitioned into the Renaissance and the Age of Discovery.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MEDIEVAL_LIFESTYLE_QUOTE</Tag>
@@ -16203,7 +16203,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MYTHOLOCIAL_BEASTIARY</Tag>
-		<English>Mythological Bestiary</English>
+		<English>Mythological Biolgy</English>
 		<French>Bestiaire Mythologique</French>
 		<Spanish>
 			<Text>Bestiario mitológico</Text>
@@ -16792,7 +16792,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NEURON_ENGINEERING</Tag>
-		<English>Neuron Engineering</English>
+		<English>Neuroengineering</English>
 		<French>Ingénierie Neuronale</French>
 		<Spanish>
 			<Text>Neuroingeniería</Text>
@@ -16818,7 +16818,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NEUROTECHNOLOGY</Tag>
-		<English>Genetic Biochemistry</English>
+		<English>Neuroscience</English>
 		<French>Biologie moléculaire avancée</French>
 		<German>Neurotechnologie</German>
 		<Italian>Biologia molecolare avanzata</Italian>
@@ -16902,24 +16902,8 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_NOCTURNALISM</Tag>
-		<English>Nocturnalism</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_NOCTURNALISM_PEDIA</Tag>
-		<English>[TAB]Nocturnality is a behavior characterized by being active during the night and sleeping during the day.[PARAGRAPH:2]Being active at night is a form of niche differentiation, where a species' niche is partitioned not by the amount of resources but by the amount of time (i.e. temporal division of the ecological niche). Hawks and owls can hunt the same field or meadow for the same rodents without conflict because hawks are diurnal and owls are nocturnal. This means they are not in competition for each other's prey.[PARAGRAPH:2]Nocturnality is a form of crypsis, an adaptation to avoid or enhance predation. One of the reasons that (cathemeral) lions prefer to hunt at night is that many of their prey species (zebra, antelope, impala, wildebeest, etc.) have poor night vision.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_NOCTURNALISM_QUOTE</Tag>
-		<English>It was the possibility of darkness that made the day seem so bright.[PARAGRAPH:2]- Stephen King,[PARAGRAPH:1][SPACE][SPACE]"Wolves of the Calla"</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_NOCTURNALISM_STRATEGY</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TECH_NOMADIC_LIFESTYLE</Tag>
-		<English>Nomadism</English>
+		<English>Nomadic Lifestyle</English>
 		<French>Vie de nomade</French>
 		<German>
 			<Text>Nomadentum:Nomadentums:Nomadentum:Nomadentum</Text>
@@ -17005,7 +16989,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NOVOPALEONTOLOGY</Tag>
-		<English>Novo Paleontology</English>
+		<English>Resurrection Biology</English>
 		<French>Novo-paléontologie</French>
 		<German>Novopaleontology</German>
 		<Italian>Novopaleontology</Italian>
@@ -17031,7 +17015,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NOVUSCHEMISTRY</Tag>
-		<English>Novus Chemistry</English>
+		<English>Metamaterialogical Chemistry</English>
 		<French>Chimie Novus</French>
 		<German>Neue Chemie</German>
 		<Italian>Chimica Novus</Italian>
@@ -17044,7 +17028,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NOVUSCHEMISTRY_PEDIA</Tag>
-		<English>Novus Chemistry, (new in Latin), is a branch of chemistry that is associated with new forms of metamaterials and its interactions with humans and cyber biology. It is the grandchild of biomathmatics, biochemistry, and, mechatronics, and this branch of science is about how to use metametarials to later create cybernetic parts, fuse the biological and the cyber, and exotic new elements. Because of the complexity of this science, brain enhancements and powerful AI are needed to comprehend the 100 page calculations needed to solve a single equation. Religious groups believe this branch of science is against the will of god, and it will open a Pandoras box of heresy if artificial life is to be created.</English>
+		<English>Metamaterialogical Chemistry, is a branch of chemistry that is associated with new forms of metamaterials and its interactions with humans and cyber biology. It is the grandchild of biomathmatics, biochemistry, and, mechatronics, and this branch of science is about how to use metametarials to later create cybernetic parts, fuse the biological and the cyber, and exotic new elements. Because of the complexity of this science, brain enhancements and powerful AI are needed to comprehend the 100 page calculations needed to solve a single equation. Religious groups believe this branch of science is against the will of god, and it will open a Pandoras box of heresy if artificial life is to be created.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NOVUSCHEMISTRY_QUOTE</Tag>
@@ -18035,7 +18019,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PERSONAL_ROBOTS</Tag>
-		<English>Personal Robots</English>
+		<English>Personal Robotics</English>
 		<French>Robots Personnels</French>
 		<German>Persönliche Roboter</German>
 		<Italian>Robot personali</Italian>
@@ -19493,7 +19477,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PROTOTYPED_PATHOGENS</Tag>
-		<English>Prototyped Pathogens</English>
+		<English>Synthetic Pathology</English>
 		<French>Prototypes de pathogènes</French>
 		<Spanish>
 			<Text>Prototipos de patógenos</Text>
@@ -20252,7 +20236,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 		The Renaissance began in Florence, in the 14th century. Various theories have been proposed to account for its origins and characteristics, focusing on a variety of factors including the social and civic peculiarities of Florence at the time: its political structure; the patronage of its dominant family, the Medici; and the migration of Greek scholars and texts to Italy following the Fall of Constantinople to the Ottoman Turks. Other major centres were northern Italian city-states such as Venice, Genoa, Milan, Bologna, and finally Rome during the Renaissance Papacy.
 
 		The Renaissance has a long and complex historiography, and, in line with general scepticism of discrete periodizations, there has been much debate among historians reacting to the 19th-century glorification of the "Renaissance" and individual culture heroes as "Renaissance men", questioning the usefulness of Renaissance as a term and as a historical delineation.
-
+		
 		Some observers have called into question whether the Renaissance was a cultural "advance" from the Middle Ages, instead seeing it as a period of pessimism and nostalgia for classical antiquity, while social and economic historians, especially of the longue due, have instead focused on the continuity between the two eras, which are linked, as Panofsky observed, "by a thousand ties".
 
 		The word Renaissance, literally meaning "Rebirth" in French, first appeared in English in the 1830s. The word also occurs in Jules Michelet's 1855 work, Histoire de France. The word Renaissance has also been extended to other historical and cultural movements, such as the Carolingian Renaissance and the Renaissance of the 12th century.</English>
@@ -21063,9 +21047,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SEDENTARY_LIFESTYLE_PEDIA</Tag>
-		<English>[BOLD]Sedentary Lifestyle[\BOLD] is a medical neologism used to denote a type of lifestyle most commonly found in modern (particularly Western) cultures.
-
-[PARAGRAPH:1]Sedentary Lifestyle marks the change point from where humans completely changed their lifestyle.</English>
+		<English>The Neolithic Revolution, Neolithic Demographic Transition, Agricultural Revolution, or First Agricultural Revolution was the wide-scale transition of many human cultures during the Neolithic period from a lifestyle of hunting and gathering to one of agriculture and settlement, making an increasingly larger population .</English>
 		<Polish>Przejście z koczowniczego na [BOLD]Osiadły tryb życia[\BOLD] nie odbyło się natychmiastowo. Można również przyjąć, że rezygnacja z mobilności nie była tożsama z przejściem do produkcji rolnej. Pierwsze osady zakładane były w miejscach obfitych w pożywienie, cechujących się przyjaznymi warunkami pogodowymi i klimatycznymi oraz dostępem do wody pitnej. Rozpoczęcie uprawy roślin oznaczało przywiązanie wspólnoty do określonego miejsca. Nakłady pracy niezbędne do opieki nad polem było swego rodzaju inwestycją, której rezultaty miały decydujące znaczenia dla przetrwania danej społeczności. Stąd też były one zdeterminowane do osiągnięcia zamierzonego celu (zbiorów), jak i obrony osady i zajmowanej ziemi.[NEWLINE][PARAGRAPH:1]Wraz z rozpoczęciem osiadłego trybu życia pojawiła się możliwość nawiązania trwałych relacji handlowych z sąsiadami, które z czasem mogły przekształcić się w bardziej bliską współpracę - np. w zakresie obrony przed atakami wspólnot koczowniczych, bądź też co bardziej agresywnych sąsiadów.</Polish>
 	</TEXT>
 	<TEXT>
@@ -21084,7 +21066,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SEISMOLOGY</Tag>
-		<English>Modern Seismology</English>
+		<English>Seismology</English>
 		<French>Seïsmologie Moderne</French>
 		<German>Moderne Seismologie</German>
 		<Italian>Sismologia moderna</Italian>
@@ -21733,7 +21715,7 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SMART_DRUGS</Tag>
-		<English>Smart Drugs</English>
+		<English>Omni Antipathogenics</English>
 		<French>Drogues Intelligentes</French>
 		<German>Intelligente Drogen</German>
 		<Italian>Medicine intelligenti</Italian>
@@ -22344,7 +22326,7 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SPECULATIVE_PHYSIOLOGY</Tag>
-		<English>Speculative Physiology</English>
+		<English>Designerolgy</English>
 		<French>Physiologie Spéculative</French>
 		<Spanish>
 			<Text>Fisiología especulativa</Text>
@@ -22355,7 +22337,7 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SPECULATIVE_PHYSIOLOGY_PEDIA</Tag>
-		<English>Speculative Physiology is the combination of Speculative biomechanics, Speculative bioenergetics, Perception, Reproduction, and Behaviour of designed animals. When designing an organism living on another planet, on Earth in a distant future or in an alternative timeline, it's important that each of its characteristics is well-adapted to the environment it lives in, without resorting to simply remake a living analogue, or throw in unlikely features for the sake of esthetics. Still, the ways real life forms survive, move, process energy and reproduce do offer excellent starting points: let's see, function by function, how an imaginary organism might work.On the largest scale, the shape and the basic structure of organisms are dictated by two things: their function and mechanics. [PARAGRAPH:2] The size of a living being, the way organs and cavities are arranged inside the body, the way the parts of the skeleton interact are also the basis for any further speculation about its physiology.Symmetry is extremely important for the organization of the body: it provides a regular disposition of the bodyparts and often redundancy of limbs and organs. Most of pluricellular organisms on Earth show some form of symmetry, in four distinct degrees; Asymmetry, Spherical symmetry, Radial symmetry,and Bilateral symmetry.[PARAGRAPH:2] In a primitive cell colony, different parts will tend to specialize to different functions, allowing them to maximize their efficiency. Metamerism is the repetition of body segments with similar or identical structure, called somites or metameres in animals, and phytomers or metamers in plants. The most important stress that influences biomechanical structures is the pull of gravity. For example, the maximum height of an organism is given by the work of its structure to oppose its weight. [PARAGRAPH:2]To mantain its structure and functions, living beings need a constant flow of energy from the environment (and to a sink, in the form of heat). Energy can exist as electromagnetic energy, thermal energy, chemical energy, mechanical energy etc., and each one of these forms can be exploited by organisms. Since life is most likely to be based on chemical reactions, the extracted energy will have to be stored as bond energy between the atoms of some simple molecule; every lifeform on Earth uses a sugar, glucose (C6H12O6) which releases this energy when combined with an oxidising agent.[PARAGRAPH:2]Every organism needs to adapt itself to the changing conditions in its environment, and therefore to receive informations from it, through senses. Sense organs encompass a wide range of signals: touch is a simple perception of close mechanical stimuli, while hearing is a specialized form of touch that perceives the vibrations on long distance; olfaction and taste perceive the chemical makeup of near compounds; sight is the perception of electromagnetic waves (light), while electroception and magnetoception perceive directly electric and magnetic fields, respectively.[PARAGRAPH:2] Most organisms have one or two highly developed senses more prominent than others. Many small organisms that need to know only their immediate surroundings deal well with "contact senses" such as touch and taste, while larger animals that live in open environment will benefit more from "long-range senses" such as sight and hearing; many mammals have a well-developed olfaction, while birds (and humans) prefer sight; bats and cetaceans have come up with echolocation, a derived form of hearing; and so on. [PARAGRAPH:2] The complex of biochemical, physiological, energetic and mechanical systems that make up an organism are extremely vulnerable to threats from the environment, and the greatest danger comes from other organisms. Since the beginning of evolution, each lifeform has been a vital resource for other ones, and it has has te need to defend itself, and to fight back.[PARAGRAPH:2]Together with energy gathering and management, reproduction is one of the basic functions of life - in fact, something usually used to define life itself. Evolution is based on the reproductive success of a species, individual or gene: at any level, self-replication is what living systems "want" more than anything else.Also see: Development of intelligence, Intelligence on Earth, Intelligent aliensIntelligence is hard to define exactly: it can be interpreted as a mental feature, or a set of features, that involve reasoning, planning, goal-oriented behaviour, learning from experience, abstract thought and projection, problem-solving and intentional self-adaptation to the circumstances.[PARAGRAPH:2]A great number of speculative-biology projects, especially those about extraterrestrial life, try to include high, human-like intelligence for at least one species, for it's necessary to derive from biological interactions the extremely complex structures and behaviours that form a civilization such as ours.[PARAGRAPH:2] To read more please visit: http://speculativeevolution.wikia.com/</English>
+		<English>Designerolgy is the combination of Speculative biomechanics, Speculative bioenergetics, Perception, Reproduction, and Behaviour of designed animals. When designing an organism living on another planet, on Earth in a distant future or in an alternative timeline, it's important that each of its characteristics is well-adapted to the environment it lives in, without resorting to simply remake a living analogue, or throw in unlikely features for the sake of esthetics. Still, the ways real life forms survive, move, process energy and reproduce do offer excellent starting points: let's see, function by function, how an imaginary organism might work.On the largest scale, the shape and the basic structure of organisms are dictated by two things: their function and mechanics. [PARAGRAPH:2] The size of a living being, the way organs and cavities are arranged inside the body, the way the parts of the skeleton interact are also the basis for any further speculation about its physiology.Symmetry is extremely important for the organization of the body: it provides a regular disposition of the bodyparts and often redundancy of limbs and organs. Most of pluricellular organisms on Earth show some form of symmetry, in four distinct degrees; Asymmetry, Spherical symmetry, Radial symmetry,and Bilateral symmetry.[PARAGRAPH:2] In a primitive cell colony, different parts will tend to specialize to different functions, allowing them to maximize their efficiency. Metamerism is the repetition of body segments with similar or identical structure, called somites or metameres in animals, and phytomers or metamers in plants. The most important stress that influences biomechanical structures is the pull of gravity. For example, the maximum height of an organism is given by the work of its structure to oppose its weight. [PARAGRAPH:2]To mantain its structure and functions, living beings need a constant flow of energy from the environment (and to a sink, in the form of heat). Energy can exist as electromagnetic energy, thermal energy, chemical energy, mechanical energy etc., and each one of these forms can be exploited by organisms. Since life is most likely to be based on chemical reactions, the extracted energy will have to be stored as bond energy between the atoms of some simple molecule; every lifeform on Earth uses a sugar, glucose (C6H12O6) which releases this energy when combined with an oxidising agent.[PARAGRAPH:2]Every organism needs to adapt itself to the changing conditions in its environment, and therefore to receive informations from it, through senses. Sense organs encompass a wide range of signals: touch is a simple perception of close mechanical stimuli, while hearing is a specialized form of touch that perceives the vibrations on long distance; olfaction and taste perceive the chemical makeup of near compounds; sight is the perception of electromagnetic waves (light), while electroception and magnetoception perceive directly electric and magnetic fields, respectively.[PARAGRAPH:2] Most organisms have one or two highly developed senses more prominent than others. Many small organisms that need to know only their immediate surroundings deal well with "contact senses" such as touch and taste, while larger animals that live in open environment will benefit more from "long-range senses" such as sight and hearing; many mammals have a well-developed olfaction, while birds (and humans) prefer sight; bats and cetaceans have come up with echolocation, a derived form of hearing; and so on. [PARAGRAPH:2] The complex of biochemical, physiological, energetic and mechanical systems that make up an organism are extremely vulnerable to threats from the environment, and the greatest danger comes from other organisms. Since the beginning of evolution, each lifeform has been a vital resource for other ones, and it has has te need to defend itself, and to fight back.[PARAGRAPH:2]Together with energy gathering and management, reproduction is one of the basic functions of life - in fact, something usually used to define life itself. Evolution is based on the reproductive success of a species, individual or gene: at any level, self-replication is what living systems "want" more than anything else.Also see: Development of intelligence, Intelligence on Earth, Intelligent aliensIntelligence is hard to define exactly: it can be interpreted as a mental feature, or a set of features, that involve reasoning, planning, goal-oriented behaviour, learning from experience, abstract thought and projection, problem-solving and intentional self-adaptation to the circumstances.[PARAGRAPH:2]A great number of speculative-biology projects, especially those about extraterrestrial life, try to include high, human-like intelligence for at least one species, for it's necessary to derive from biological interactions the extremely complex structures and behaviours that form a civilization such as ours.[PARAGRAPH:2] To read more please visit: http://speculativeevolution.wikia.com/</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SPECULATIVE_PHYSIOLOGY_QUOTE</Tag>
@@ -22494,7 +22476,7 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SOLAR_MINING</Tag>
-		<English>Star Lifting</English>
+		<English>Solar Mining</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SOLAR_MINING_PEDIA</Tag>
@@ -22825,7 +22807,7 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_STRING_MANIPULATION</Tag>
-		<English>String Manipulation</English>
+		<English>String technology</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_STRING_MANIPULATION_PEDIA</Tag>
@@ -22841,7 +22823,7 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SUBDIMENSIONAL_UNIVERSE</Tag>
-		<English>Subdimensional Universe</English>
+		<English>Synthetic Pocket Universes</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SUBDIMENSIONAL_UNIVERSE_PEDIA</Tag>
@@ -23047,7 +23029,7 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SUPERSONIC_RAILS</Tag>
-		<English>Supersonic Rails</English>
+		<English>Vacuum Tube Trains</English>
 		<French>Rails Supersoniques</French>
 		<German>Vakuumröhren-Züge</German>
 		<Italian>Rotaie supersoniche</Italian>
@@ -23234,7 +23216,7 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SYNTHETIC_SENTIENCE</Tag>
-		<English>Synthetic Sentience</English>
+		<English>Virtual Sentience</English>
 		<French>Conscience Synthétique</French>
 		<Spanish>
 			<Text>Sensitividad sintética</Text>
@@ -23260,7 +23242,7 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SYNTHETIC_SYNESTHESIA</Tag>
-		<English>Synthetic Synesthesia</English>
+		<English>Cybernetic Psychoactives</English>
 		<French>Synesthésie Synthétique</French>
 		<Spanish>
 			<Text>Sinestesia sintética</Text>
@@ -23881,7 +23863,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 		<English>Torture (from the Latin tortus, "twisted") is the act of deliberately inflicting physical or psychological pain in order to fulfill some desire of the torturer or compel some action from the victim. Torture, by definition, is a knowing and intentional act; deeds which unknowingly or negligently inflict pain without a specific intent to do so are not typically considered torture.
 
 		Torture has been carried out or sanctioned by individuals, groups, and states throughout history from ancient times to modern day, and forms of torture can vary greatly in duration from only a few minutes to several days or longer. Reasons for torture can include punishment, revenge, political re-education, deterrence, coercion of the victim or a third party, interrogation to extract information or a confession irrespective of whether it is false, or simply the sadistic gratification of those carrying out or observing the torture. Alternatively, some forms of torture are designed to inflict psychological pain or leave as little physical injury or evidence as possible while achieving the same psychological devastation. The torturer may or may not kill or injure the victim, but torture may result in a deliberate death and serves as a form of capital punishment. Depending on the aim, even a form of torture that is intentionally fatal may be prolonged to allow the victim to suffer as long as possible (such as half-hanging). In other cases, the torturer may be indifferent to the condition of the victim.
-
+		
 		While it has a long history, the technology is defined in Caveman2Comos in the Medieval because it is during this era that Europeans took a particular interest in the vast diversification of torture implements and methods for the purposes of populace control and information extraction.  We apologize if we offend with the content here, but the dark ages were called dark for a variety of reasons, this being one major contributor.  Its inclusion helps to capture the essence of the era.</English>
 	</TEXT>
 	<TEXT>
@@ -24036,7 +24018,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TRANSCENDENT_LIFESTYLE_PEDIA</Tag>
-		<English>Each era takes on a unique quality and standard of living for the people.</English>
+		<English>Each era takes on a unique quality and standard of living for the people. In philosophy, transcendence conveys the basic ground concept from the word's literal meaning, of climbing or going beyond, albeit with varying connotations in its different historical and cultural stages.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TRANSCENDENT_LIFESTYLE_QUOTE</Tag>
@@ -24100,7 +24082,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TRANSHUMAN_LIFESTYLE_PEDIA</Tag>
-		<English>Each era takes on a unique quality and standard of living for the people.</English>
+		<English>Each era takes on a unique quality and standard of living for the people. Transhumanism is an international philosophical movement that advocates for the transformation of the human condition by developing and making widely available sophisticated technologies to greatly enhance human intellect and physiology. </English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TRANSHUMAN_LIFESTYLE_QUOTE</Tag>
@@ -24137,7 +24119,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</Tag>
-		<English>Transtangible Neutrino Accelerators</English>
+		<English>Neutrino Accelerators</English>
 		<French>Accélérateurs de Neutrino Transtangible</French>
 		<Italian>Acceleratori di neutrini trantangibili</Italian>
 		<Spanish>
@@ -24382,7 +24364,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_UNIFICATION_PHYSICS</Tag>
-		<English>Unification Physics</English>
+		<English>Theory of Everything</English>
 		<French>Unification des théories Physiques</French>
 		<Spanish>
 			<Text>Física unificada</Text>
@@ -24423,7 +24405,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_UNIVERSAL_TRANSLATOR</Tag>
-		<English>Universal Translator</English>
+		<English>Unified Lexicon</English>
 		<French>Traducteur Universel</French>
 		<Italian>Traduttore universale</Italian>
 		<Spanish>
@@ -24588,7 +24570,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_VASIMR_PROPULSION</Tag>
-		<English>Fusion Spacecraft</English>
+		<English>VASIMR Propulsion</English>
 		<French>Propulsion à Impulsion MagnétoPlasmique</French>
 		<Italian>Propulsione VASIMR</Italian>
 		<Spanish>
@@ -24852,7 +24834,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WARMACHINES</Tag>
-		<English>Warmachines</English>
+		<English>Wardroids</English>
 		<French>Machines de Guerre</French>
 		<German>Kriegsmaschinen</German>
 		<Italian>Macchine da guerra</Italian>
@@ -25124,7 +25106,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WEARABLE_ELECTRONICS</Tag>
-		<English>Wearable Computers</English>
+		<English>Portable Computers</English>
 		<French>Ordinateurs Portables</French>
 		<German>Tragbare Computer</German>
 		<Italian>Computer portatili</Italian>
@@ -25305,7 +25287,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WHOLE_BRAIN_EMULATION</Tag>
-		<English>Whole Brain Emulation</English>
+		<English>Cybernetic Neurology</English>
 		<French>Emulation du cerveau</French>
 		<Spanish>
 			<Text>Emulación del cerebro</Text>
@@ -25403,7 +25385,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WOMENS_SUFFRAGE</Tag>
-		<English>Women's Suffrage</English>
+		<English>Feminism</English>
 		<French>Vote des Femmes</French>
 		<Italian>Suffragio femminile</Italian>
 		<Spanish>
