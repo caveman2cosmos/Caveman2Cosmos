@@ -30,7 +30,7 @@
 # Note: $(PROGRAMFILES) converts to "C:\Program Files", "C:\Program Files (x86)" or whatever fits your system.
 # run "nmake.exe /P" in cmd.exe to see what it is on your system
 TOOLKIT=..\Build\deps\Microsoft Visual C++ Toolkit 2003
-PSDK=..\Build\deps\Microsoft Platform SDK
+PSDK=..\Build\deps\Microsoft SDKs\Windows\v6.0
 ## Uncomment to have newly compiled dlls copied to your mod's Assets directory
 YOURMOD=..
 
@@ -76,7 +76,7 @@ VERSION_DEFINE=/DC2C_VERSION="\"$(C2C_VERSION)\""
 VERSION_DEFINE=
 !ENDIF
 
-# /nologo /MD /Z7 /O2 /Oy /Oi /G7 /DWIN32 /D_WINDOWS /D_USRDLL /DCVGAMECOREDLL_EXPORTS /DNDEBUG /DFINAL_RELEASE /GR /Gy /W3 /EHsc /Gd /Gm- /Fd"TARGET_DIR_files\Profile\CvGameCoreDLL.pdb"   /Z7 /Yu"CvGameCoreDLL.h" /Fp"temp_files\Profile\CvGameCoreDLL.pch" /I"deps/Boost-1.32.0/include" /I"deps/Python24/include" /I"./include" /I"deps\Microsoft Visual C++ Toolkit 2003/include" /I"deps\Microsoft Platform SDK/Include" /I"deps\Microsoft Platform SDK/Include/mfc" /YcCvGameCoreDLL.h /Fo"temp_files\Profile\_precompile.obj" /c .\_precompile.cpp
+# /nologo /MD /Z7 /O2 /Oy /Oi /G7 /DWIN32 /D_WINDOWS /D_USRDLL /DCVGAMECOREDLL_EXPORTS /DNDEBUG /DFINAL_RELEASE /GR /Gy /W3 /EHsc /Gd /Gm- /Fd"TARGET_DIR_files\Profile\CvGameCoreDLL.pdb"   /Z7 /Yu"CvGameCoreDLL.h" /Fp"temp_files\Profile\CvGameCoreDLL.pch" /I"deps/Boost-1.32.0/include" /I"deps/Python24/include" /I"./include" /I"deps\Microsoft Visual C++ Toolkit 2003/include" /I"deps\Microsoft SDKs\Windows\v6.0/Include" /I"deps\Microsoft SDKs\Windows\v6.0/Include/mfc" /YcCvGameCoreDLL.h /Fo"temp_files\Profile\_precompile.obj" /c .\_precompile.cpp
 PRECOMPILE_DEPENDENCIES = 
 PROJECT_CFLAGS = /arch:SSE2 /Zm200 /DXERCES_STATIC_LIBRARY /D_MOD_SENTRY /D_MOD_FRACTRADE /D_MOD_GOVWORKERS /DQC_MASTERY_VICTORY /DLOG_AI /D_MOD_GWARM /D_MOD_SHAM_SPOILER /DC2C_BUILD $(VERSION_DEFINE)
 PROJECT_LDFLAGS = /NODEFAULTLIB:msvcprtd.lib /DEF:CvGameCoreDLL.def /PDBALTPATH:%_PDB%
