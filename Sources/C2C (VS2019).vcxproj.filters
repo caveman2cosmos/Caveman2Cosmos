@@ -435,6 +435,12 @@
     <ClCompile Include="CyPlayerInterface3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CvAllocator.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CvAllocator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BetterBTSAI.h">

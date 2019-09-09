@@ -7224,7 +7224,9 @@ void CvGame::doTurn()
 	stopProfilingDLL(true);
 	gDLL->getEngineIFace()->AutoSave();
 
-	//gDLL->getEngineIFace()->AutoSave();
+#ifdef MEMTRACK
+	MemTrack::TrackListMemoryUsage();
+#endif
 }
 
 
