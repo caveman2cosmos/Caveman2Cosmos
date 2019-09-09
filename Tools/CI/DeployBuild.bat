@@ -96,8 +96,12 @@ del ..\missing.list 2>NUL
 
 :: COMMIT TO SVN -----------------------------------------------
 echo Commiting new build to SVN...
-:: TODO auto generate a good changelist
 "%SVN%" commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
+
+:: REFRESH SVN -------------------------------------------------
+:: Ensuring that the svnversion call below will give a clean 
+:: revision number
+"%SVN%" update
 
 :: SET SVN RELEASE TAG -----------------------------------------
 echo Setting SVN commit tag on git ...

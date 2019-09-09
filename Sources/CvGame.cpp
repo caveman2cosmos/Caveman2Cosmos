@@ -7224,7 +7224,9 @@ void CvGame::doTurn()
 	stopProfilingDLL(true);
 	gDLL->getEngineIFace()->AutoSave();
 
-	//gDLL->getEngineIFace()->AutoSave();
+#ifdef MEMTRACK
+	MemTrack::TrackListMemoryUsage();
+#endif
 }
 
 
@@ -10421,13 +10423,10 @@ int CvGame::calculateSyncChecksum()
 {
 	PROFILE_FUNC();
 
-	CvUnit* pLoopUnit;
-	int iMultiplier;
-	int iValue;
 	int iLoop;
-	int iI, iJ;
+	int iJ;
 
-	iValue = 0;
+	int iValue = 0;
 
 	iValue += getMapRand().getSeed();
 	iValue += getSorenRand().getSeed();
@@ -10439,23 +10438,27 @@ int CvGame::calculateSyncChecksum()
 	iValue += GC.getMapINLINE().getOwnedPlots();
 	iValue += GC.getMapINLINE().getNumAreas();
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isEverAlive())
 		{
-			iMultiplier = getPlayerScore((PlayerTypes)iI);
+			int iMultiplier = getPlayerScore((PlayerTypes)iI);
 
 			switch (getTurnSlice() % 4)
 			{
 			case 0:
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getTotalPopulation() * 543);
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getTotalLand() * 327);
+				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getGreaterGold());
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getGold());
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getAssets());
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getPower());
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getNumCities() * 436);
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getNumUnits());
 				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getNumSelectionGroups());
+				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getHandicapType() * 271);
+				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getStateReligion() * 382);
+				iMultiplier += (GET_PLAYER((PlayerTypes)iI).getCulture());
 				break;
 
 			case 1:
@@ -10467,6 +10470,33 @@ int CvGame::calculateSyncChecksum()
 				for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 				{
 					iMultiplier += (GET_PLAYER((PlayerTypes)iI).getCommerceRate((CommerceTypes)iJ));
+				}
+				
+				CvCity* pLoopCity;
+
+				for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+				{
+					for (iJ = 0; iJ < GC.getNumEventInfos(); iJ++)
+					{
+						iMultiplier += (iJ + 1) * pLoopCity->isEventOccured((EventTypes)iJ);
+					}
+				}
+
+				for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+				{
+					iMultiplier += pLoopCity->getX();
+					iMultiplier += pLoopCity->getY();
+					iMultiplier += pLoopCity->getPopulation();
+					iMultiplier += pLoopCity->getNumBuildings();
+					iMultiplier += pLoopCity->countNumImprovedPlots();
+					iMultiplier += pLoopCity->getWorkingPopulation();
+					iMultiplier += pLoopCity->getSpecialistPopulation();
+					iMultiplier += pLoopCity->getNumGreatPeople();					
+					iMultiplier += pLoopCity->goodHealth();
+					iMultiplier += pLoopCity->badHealth();
+					iMultiplier += pLoopCity->happyLevel();
+					iMultiplier += pLoopCity->unhappyLevel();
+					iMultiplier += pLoopCity->getFood();
 				}
 				break;
 
@@ -10497,9 +10527,25 @@ int CvGame::calculateSyncChecksum()
 				{
 					iMultiplier += (GET_PLAYER((PlayerTypes)iI).AI_totalUnitAIs((UnitAITypes)iJ) * 64);
 				}
+				
+				for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+				{
+					for (iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
+					{
+						if (pLoopCity->isHasReligion((ReligionTypes)iJ))
+							iMultiplier += pLoopCity->getID() * (iJ + 1);
+					}
+					for (iJ = 0; iJ < GC.getNumCorporationInfos(); iJ++)
+					{
+						if (pLoopCity->isHasCorporation((CorporationTypes)iJ))
+							iMultiplier += (pLoopCity->getID() + 1) * (iJ + 1);
+					}
+				}
 				break;
 
 			case 3:
+				CvUnit * pLoopUnit;
+
 				for (pLoopUnit = GET_PLAYER((PlayerTypes)iI).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER((PlayerTypes)iI).nextUnit(&iLoop))
 				{
 					iMultiplier += (pLoopUnit->getX_INLINE() * 87);
@@ -10507,12 +10553,18 @@ int CvGame::calculateSyncChecksum()
 					iMultiplier += (pLoopUnit->getDamage() * 73);
 					iMultiplier += (pLoopUnit->getExperience() * 82);
 					iMultiplier += (pLoopUnit->getLevel() * 36);
-					PromotionIterator itEnd = pLoopUnit->getPromotionEnd();
-					for (PromotionIterator it = pLoopUnit->getPromotionBegin(); it != itEnd; ++it)
+					for (PromotionIterator it = pLoopUnit->getPromotionBegin(), itEnd = pLoopUnit->getPromotionEnd(); it != itEnd; ++it)
 					{
 						if (it->second.m_bHasPromotion)
 						{
 							iMultiplier += ((int)it->first) * 57;
+						}
+					}
+					for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pLoopUnit->getUnitCombatKeyedInfo().begin(), end = pLoopUnit->getUnitCombatKeyedInfo().end(); it != end; ++it)
+					{
+						if (it->second.m_bHasUnitCombat)
+						{
+							iMultiplier += ((int)it->first) * 13;
 						}
 					}
 				}

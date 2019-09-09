@@ -502,6 +502,8 @@ static bool bFoundEvictable = true;
 
 void CvPlot::EvictGraphicsIfNecessary()
 {
+	bFoundEvictable = true;
+
 	while(bFoundEvictable && NeedToFreeMemory())
 	{
 		int iEvictionIndex = findOldestEvictablePagingEntry();

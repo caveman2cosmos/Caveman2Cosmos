@@ -118,6 +118,8 @@
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;_DEBUG;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;QC_MASTERY_VICTORY;LOG_AI;_MOD_GWARM;_MOD_SHAM_SPOILER;C2C_BUILD;MULTI_FEATURE_MOD;FASSERT_ENABLE</NMakePreprocessorDefinitions>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="CvAllocator.cpp" />
+    <ClCompile Include="CvAllocator.h" />
     <ClCompile Include="CyPlayerInterface3.cpp" />
     <ClCompile Include="_precompile.cpp" />
     <ClCompile Include="BetterBTSAI.cpp" />
@@ -410,6 +412,7 @@
   </ItemGroup>
   <ItemGroup>
     <Natvis Include="C2C.natvis" />
+    <Natvis Include="std.natvis" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

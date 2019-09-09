@@ -19152,7 +19152,7 @@
 			<Strategy>TXT_KEY_BUILDING_CAMEL_HERD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAMEL_HERD</ArtDefineTag>
-			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_CAMEL</FreeBonus>
@@ -19350,7 +19350,7 @@
 			<Strategy>TXT_KEY_BUILDING_COW_HERD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COW_HERD</ArtDefineTag>
-			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
       		<FreeBonus>BONUS_COW</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -19507,7 +19507,7 @@
 			<Strategy>TXT_KEY_BUILDING_DONKEY_HERD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DONKEY_HERD</ArtDefineTag>
-			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
       		<FreeBonus>BONUS_DONKEY</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -19801,7 +19801,7 @@
 			<Strategy>TXT_KEY_BUILDING_HORSE_HERD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HORSE_HERD</ArtDefineTag>
-			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
       		<FreeBonus>BONUS_HORSE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -20134,7 +20134,7 @@
 			<Strategy>TXT_KEY_BUILDING_MUSKOX_HERD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MUSKOX_HERD</ArtDefineTag>
-			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
       		<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>-1</iCost>
@@ -20242,7 +20242,7 @@
 			<Strategy>TXT_KEY_BUILDING_PIG_HERD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PIG_HERD</ArtDefineTag>
-			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
       		<FreeBonus>BONUS_PIG</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
