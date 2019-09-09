@@ -412,6 +412,7 @@
   </ItemGroup>
   <ItemGroup>
     <Natvis Include="C2C.natvis" />
+    <Natvis Include="std.natvis" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

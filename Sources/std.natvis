@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+
+  <!--
+  Parts of debugger visualizers for Microsoft Visual Studio 11.
+  Author: Mateusz Loskot <mateusz@loskot.net>
+  Purpose: C/C++ Standard Library
+	Usage: Copy the file to %USERPROFILE%\My Documents\Visual Studio Dev11\Visualizers\
+    
+	This file contains improved version of debugger visualizers shipped with Visual Studio 11
+	See also: http://connect.microsoft.com/VisualStudio/feedback/details/705993/
+-->
+
+  <!--std::reference_wrapper from <functional>-->
+  <Type Name="std::reference_wrapper&lt;*&gt;">
+    <!--For ordinary T, reference_wrapper<T> stores a T * _Callee._Ptr
+      ; which is non-null. Actual references are previewed with what they
+      ; refer to, so reference_wrapper<T> is previewed with dereferencing its
+        ; stored pointer.-->
+    <DisplayString Condition="_Callee._EEN_INDIRECT == 1">{*_Callee._Ptr}</DisplayString>
+    <!--When T is a pointer to data member type, reference_wrapper<T>
+      ; stores a T _Callee._Object directly.-->
+    <DisplayString>{_Callee._Object}</DisplayString>
+    <Expand>
+      <!--
+      ; Actual references have the same children as what they refer to.
+      ; Unfortunately, there appears to be no way to imitate this exactly.
+      ; Therefore, we make reference_wrapper<T>
+        appear to have a single child, its stored pointer, with a fake name of [ptr]. 
+        -->
+      <Item Name="[ptr]" Condition="_Callee._EEN_INDIRECT == 1">_Callee._Ptr</Item>
+      <!--			; When T is a pointer to data member type, T has no children,
+      ; so we make reference_wrapper<T> appear to have no children.-->
+    </Expand>
+  </Type>
+
+  <!--std::shared_ptr from <memory>-->
+  <Type Name="std::_Ref_count&lt;*&gt;">
+    <DisplayString>default</DisplayString>
+    <Expand/>
+  </Type>
+  <Type Name="std::_Ref_count_del&lt;*&gt;">
+    <DisplayString>custom deleter</DisplayString>
+    <Expand>
+      <Item Name="[deleter]">_Dtor</Item>
+    </Expand>
+  </Type>
+  <Type Name="std::_Ref_count_del_alloc&lt;*&gt;">
+    <DisplayString>custom deleter, custom allocator</DisplayString>
+    <Expand>
+      <Item Name="[deleter]">_Dtor</Item>
+      <Item Name="[allocator]">_Myal</Item>
+    </Expand>
+  </Type>
+  <Type Name="std::_Ref_count_obj&lt;*&gt;">
+    <DisplayString>make_shared</DisplayString>
+    <Expand/>
+  </Type>
+  <Type Name="std::_Ref_count_obj_alloc&lt;*&gt;">
+    <DisplayString>allocate_shared</DisplayString>
+    <Expand>
+      <Item Name="[allocator]">_Myal</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="std::shared_ptr&lt;*&gt;">
+    <!--; A default-constructed shared_ptr has a null _Ptr and a null _Rep,
+      ; and is formally said to be empty.
+      ; A shared_ptr constructed from a null pointer has a null _Ptr
+      ; and a NON-null _Rep . It is formally said to own the null pointer.
+      ; We preview both with "empty".
+    -->
+    <DisplayString Condition="_Ptr == 0">empty</DisplayString>
+    <!--; Raw pointers are previewed with "<pointer value> <object>".
+      ; auto_ptr is previewed with "auto_ptr <object>".
+      ; Following these examples, shared_ptr is previewed with
+      ; "shared_ptr <object> [N strong refs, M weak refs]". -->
+
+    <DisplayString Condition="(_Rep-&gt;_Uses == 1) &amp;&amp; (_Rep-&gt;_Weaks - 1 &gt; 0) &amp;&amp; (_Rep-&gt;_Weaks - 1 == 1)">shared_ptr {*_Ptr} [{_Rep-&gt;_Uses} strong ref, {_Rep-&gt;_Weaks - 1} weak ref] [{*_Rep}] </DisplayString>
+    <DisplayString Condition="(_Rep-&gt;_Uses == 1) &amp;&amp; (_Rep-&gt;_Weaks - 1 &gt; 0) &amp;&amp; (_Rep-&gt;_Weaks - 1 != 1)">shared_ptr {*_Ptr} [{_Rep-&gt;_Uses} strong ref, {_Rep-&gt;_Weaks - 1} weak refs] [{*_Rep}] </DisplayString>
+
+    <DisplayString Condition="(_Rep-&gt;_Uses != 1) &amp;&amp; (_Rep-&gt;_Weaks - 1 &gt; 0) &amp;&amp; (_Rep-&gt;_Weaks - 1 == 1)">shared_ptr {*_Ptr} [{_Rep-&gt;_Uses} strong refs, {_Rep-&gt;_Weaks - 1} weak ref] [{*_Rep}] </DisplayString>
+    <DisplayString Condition="(_Rep-&gt;_Uses != 1) &amp;&amp; (_Rep-&gt;_Weaks - 1 &gt; 0) &amp;&amp; (_Rep-&gt;_Weaks - 1 != 1)">shared_ptr {*_Ptr} [{_Rep-&gt;_Uses} strong refs, {_Rep-&gt;_Weaks - 1} weak refs] [{*_Rep}] </DisplayString>
+
+    <DisplayString Condition="(_Rep-&gt;_Uses == 1) &amp;&amp; (_Rep-&gt;_Weaks - 1 &lt;= 0)">shared_ptr {*_Ptr} [{_Rep-&gt;_Uses} strong ref] [{*_Rep}] </DisplayString>
+    <DisplayString Condition="(_Rep-&gt;_Uses != 1) &amp;&amp; (_Rep-&gt;_Weaks - 1 &lt;= 0)">shared_ptr {*_Ptr} [{_Rep-&gt;_Uses} strong refs] [{*_Rep}] </DisplayString>
+
+    <DisplayString>shared_ptr {*_Ptr} [{_Rep-&gt;_Uses}] [{*_Rep}] </DisplayString>
+
+    <!-- Note: _Rep->_Uses counts how many shared_ptrs share ownership of the object,
+      ; so we directly display it as the strong reference count.
+      ; _Rep->_Weaks counts how many shared_ptrs and weak_ptrs share ownership of
+      ; the "representation object" (or "control block"). All of the shared_ptrs are
+      ; counted as a single owner. That is, _Weaks is initialized to 1, and when
+      ; _Uses falls to 0, _Weaks is decremented. This avoids incrementing and decrementing
+      ; _Weaks every time that a shared_ptr gains or loses ownership. Therefore,
+      ; _Weaks - 1 is the weak reference count, the number of weak_ptrs that are observing
+      ; the shared object.
+    -->
+    <Expand>
+      <!--We make shared_ptr appear to have two children-->
+      <!--ts stored pointer, with a fake name of [ptr]-->
+      <Item Name="[ptr]" Condition="_Ptr != 0">_Ptr</Item>
+      <!--Its deleter and allocator, which may be default or custom-->
+      <Item Name="[deleter and allocator]" Condition="_Ptr != 0">*_Rep</Item>
+    </Expand>
+  </Type>
+
+  <!--std::weak_ptr from <memory>-->
+  <Type Name="std::weak_ptr&lt;*&gt;">
+    <DisplayString Condition="_Ptr == 0">empty</DisplayString>
+    <!--weak_ptr is just like shared_ptr, except that a weak_ptr can be expired.-->
+
+    <DisplayString Condition="(_Rep-&gt;_Uses == 1) &amp;&amp; (_Rep-&gt;_Weaks - 1 &gt; 0) &amp;&amp; (_Rep-&gt;_Weaks - 1 == 1)">weak_ptr {*_Ptr} [{_Rep-&gt;_Uses} strong ref, {_Rep-&gt;_Weaks - 1} weak ref] [{*_Rep}] </DisplayString>
+    <DisplayString Condition="(_Rep-&gt;_Uses == 1) &amp;&amp; (_Rep-&gt;_Weaks - 1 &gt; 0) &amp;&amp; (_Rep-&gt;_Weaks - 1 != 1)">weak_ptr {*_Ptr} [{_Rep-&gt;_Uses} strong ref, {_Rep-&gt;_Weaks - 1} weak refs] [{*_Rep}] </DisplayString>
+
+    <DisplayString Condition="(_Rep-&gt;_Uses != 1) &amp;&amp; (_Rep-&gt;_Weaks - 1 &gt; 0) &amp;&amp; (_Rep-&gt;_Weaks - 1 == 1)">weak_ptr {*_Ptr} [{_Rep-&gt;_Uses} strong refs, {_Rep-&gt;_Weaks - 1} weak ref] [{*_Rep}] </DisplayString>
+    <DisplayString Condition="(_Rep-&gt;_Uses != 1) &amp;&amp; (_Rep-&gt;_Weaks - 1 &gt; 0) &amp;&amp; (_Rep-&gt;_Weaks - 1 != 1)">weak_ptr {*_Ptr} [{_Rep-&gt;_Uses} strong refs, {_Rep-&gt;_Weaks - 1} weak refs] [{*_Rep}] </DisplayString>
+
+    <DisplayString Condition="(_Rep-&gt;_Uses == 1) &amp;&amp; (_Rep-&gt;_Weaks - 1 &lt;= 0)">weak_ptr {*_Ptr} [{_Rep-&gt;_Uses} strong ref] [{*_Rep}] </DisplayString>
+    <DisplayString Condition="(_Rep-&gt;_Uses != 1) &amp;&amp; (_Rep-&gt;_Weaks - 1 &lt;= 0)">weak_ptr {*_Ptr} [{_Rep-&gt;_Uses} strong refs] [{*_Rep}] </DisplayString>
+
+    <DisplayString>weak_ptr {*_Ptr} [{_Rep-&gt;_Uses}] [{*_Rep}] </DisplayString>
+
+    <Expand>
+      <!-- When a weak_ptr is expired, we show its deleter and allocator.
+        The deleter has already been used, but the control block has not yet been deallocated. -->
+      <Item Name="[deleter and allocator]" Condition="(_Ptr != 0) &amp;&amp; (_Rep-&gt;_Uses == 0)">*_Rep</Item>
+      <Item Name="[ptr]" Condition="(_Ptr != 0) &amp;&amp; ( _Rep-&gt;_Uses != 0)">_Ptr</Item>
+      <Item Name="[deleter and allocator]" Condition="(_Ptr != 0) &amp;&amp; (_Rep-&gt;_Uses != 0)">*_Rep</Item>
+    </Expand>
+  </Type>
+
+  <!--std::mem_fn() from <functional>-->
+  <!--; Note that when mem_fn() is given a data member pointer, it returns a _Call_wrapper<_Callable_pmd<*> > .
+; Data member pointers themselves don't have useful previews, so we don't attempt to visualize this.
+; When mem_fn() is given a member function pointer, it returns a _Mem_fn[N], which we can visualize.
+-->
+  <Type Name="std::_Mem_fn1&lt;*&gt;">
+    <AlternativeType Name="std::_Mem_fn2&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Mem_fn3&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Mem_fn4&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Mem_fn5&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Mem_fn6&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Mem_fn7&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Mem_fn8&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Mem_fn9&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Mem_fn10&lt;*&gt;"></AlternativeType>
+    <DisplayString>mem_fn({_Callee._Object})</DisplayString>
+    <Expand/>
+  </Type>
+
+  <!--std::bind() from <functional>-->
+  <!--; bind() placeholders are previewed with their names.
+     They have no state, so they have no children.-->
+  <Type Name="std::_Ph&lt;1&gt;">
+    <DisplayString>_1</DisplayString>
+    <Expand/>
+    <!--Declaring an empty Expand node disables expansion for this type-->
+  </Type>
+  <Type Name="std::_Ph&lt;2&gt;">
+    <DisplayString>_2</DisplayString>
+    <Expand/>
+  </Type>
+  <Type Name="std::_Ph&lt;3&gt;">
+    <DisplayString>_3</DisplayString>
+    <Expand/>
+  </Type>
+  <Type Name="std::_Ph&lt;4&gt;">
+    <DisplayString>_4</DisplayString>
+    <Expand/>
+  </Type>
+  <Type Name="std::_Ph&lt;5&gt;">
+    <DisplayString>_5</DisplayString>
+    <Expand/>
+  </Type>
+  <Type Name="std::_Ph&lt;6&gt;">
+    <DisplayString>_6</DisplayString>
+    <Expand/>
+  </Type>
+  <Type Name="std::_Ph&lt;7&gt;">
+    <DisplayString>_7</DisplayString>
+    <Expand/>
+  </Type>
+  <Type Name="std::_Ph&lt;8&gt;">
+    <DisplayString>_8</DisplayString>
+    <Expand/>
+  </Type>
+  <Type Name="std::_Ph&lt;9&gt;">
+    <DisplayString>_9</DisplayString>
+    <Expand/>
+  </Type>
+  <Type Name="std::_Ph&lt;10&gt;">
+    <DisplayString>_10</DisplayString>
+    <Expand/>
+  </Type>
+
+  <!--The functor returned by bind(f, t1, t2) is previewed with "bind(f, t1, t2)".
+; It has children with the fake names of [f], [t1], [t2], etc.-->
+  <Type Name="std::_Bind&lt;*,*,std::_Bind0&lt;*&gt; &gt;">
+    <AlternativeType Name="std::_Bind_fty&lt;*,*,std::_Bind0&lt;*&gt; &gt;"></AlternativeType>
+    <DisplayString>bind({_Bx._Callee._Object})</DisplayString>
+    <Expand>
+      <Item Name="[f]">_Bx._Callee._Object</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="std::_Bind&lt;*,*,std::_Bind1&lt;*&gt; &gt;">
+    <AlternativeType Name="std::_Bind_fty&lt;*,*,std::_Bind1&lt;*&gt; &gt;"></AlternativeType>
+    <DisplayString>bind({_Bx._Callee._Object}, {_Bx._Vx0})</DisplayString>
+    <Expand>
+      <Item Name="[f]">_Bx._Callee._Object</Item>
+      <Item Name="[t1]">_Bx._Vx0</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="std::_Bind&lt;*,*,std::_Bind2&lt;*&gt; &gt;">
+    <AlternativeType Name="std::_Bind_fty&lt;*,*,std::_Bind2&lt;*&gt; &gt;"></AlternativeType>
+    <DisplayString>bind({_Bx._Callee._Object}, {_Bx._Vx0}, {_Bx._Vx1})</DisplayString>
+    <Expand>
+      <Item Name="[f]">_Bx._Callee._Object</Item>
+      <Item Name="[t1]">_Bx._Vx0</Item>
+      <Item Name="[t2]">_Bx._Vx1</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="std::_Bind&lt;*,*,std::_Bind3&lt;*&gt; &gt;">
+    <AlternativeType Name="std::_Bind_fty&lt;*,*,std::_Bind3&lt;*&gt; &gt;"></AlternativeType>
+    <DisplayString>bind({_Bx._Callee._Object}, {_Bx._Vx0}, {_Bx._Vx1}, {_Bx._Vx2})</DisplayString>
+    <Expand>
+      <Item Name="[f]">_Bx._Callee._Object</Item>
+      <Item Name="[t1]">_Bx._Vx0</Item>
+      <Item Name="[t2]">_Bx._Vx1</Item>
+      <Item Name="[t3]">_Bx._Vx2</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="std::_Bind&lt;*,*,std::_Bind4&lt;*&gt; &gt;">
+    <AlternativeType Name="std::_Bind_fty&lt;*,*,std::_Bind4&lt;*&gt; &gt;"></AlternativeType>
+    <DisplayString>bind({_Bx._Callee._Object}, {_Bx._Vx0}, {_Bx._Vx1}, {_Bx._Vx2}, {_Bx._Vx3})</DisplayString>
+    <Expand>
+      <Item Name="[f]">_Bx._Callee._Object</Item>
+      <Item Name="[t1]">_Bx._Vx0</Item>
+      <Item Name="[t2]">_Bx._Vx1</Item>
+      <Item Name="[t3]">_Bx._Vx2</Item>
+      <Item Name="[t4]">_Bx._Vx3</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="std::_Bind&lt;*,*,std::_Bind5&lt;*&gt; &gt;">
+    <AlternativeType Name="std::_Bind_fty&lt;*,*,std::_Bind5&lt;*&gt; &gt;"></AlternativeType>
+    <DisplayString>bind({_Bx._Callee._Object}, {_Bx._Vx0}, {_Bx._Vx1}, {_Bx._Vx2}, {_Bx._Vx3}, {_Bx._Vx4})</DisplayString>
+    <Expand>
+      <Item Name="[f]">_Bx._Callee._Object</Item>
+      <Item Name="[t1]">_Bx._Vx0</Item>
+      <Item Name="[t2]">_Bx._Vx1</Item>
+      <Item Name="[t3]">_Bx._Vx2</Item>
+      <Item Name="[t4]">_Bx._Vx3</Item>
+      <Item Name="[t5]">_Bx._Vx4</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="std::_Bind&lt;*,*,std::_Bind6&lt;*&gt; &gt;">
+    <AlternativeType Name="std::_Bind_fty&lt;*,*,std::_Bind6&lt;*&gt; &gt;"></AlternativeType>
+    <DisplayString>bind({_Bx._Callee._Object}, {_Bx._Vx0}, {_Bx._Vx1}, {_Bx._Vx2}, {_Bx._Vx3}, {_Bx._Vx4}, {_Bx._Vx5})</DisplayString>
+    <Expand>
+      <Item Name="[f]">_Bx._Callee._Object</Item>
+      <Item Name="[t1]">_Bx._Vx0</Item>
+      <Item Name="[t2]">_Bx._Vx1</Item>
+      <Item Name="[t3]">_Bx._Vx2</Item>
+      <Item Name="[t4]">_Bx._Vx3</Item>
+      <Item Name="[t5]">_Bx._Vx4</Item>
+      <Item Name="[t6]">_Bx._Vx5</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="std::_Bind&lt;*,*,std::_Bind7&lt;*&gt; &gt;">
+    <AlternativeType Name="std::_Bind_fty&lt;*,*,std::_Bind7&lt;*&gt; &gt;"></AlternativeType>
+    <DisplayString>bind({_Bx._Callee._Object}, {_Bx._Vx0}, {_Bx._Vx1}, {_Bx._Vx2}, {_Bx._Vx3}, {_Bx._Vx4}, {_Bx._Vx5}, {_Bx._Vx6})</DisplayString>
+    <Expand>
+      <Item Name="[f]">_Bx._Callee._Object</Item>
+      <Item Name="[t1]">_Bx._Vx0</Item>
+      <Item Name="[t2]">_Bx._Vx1</Item>
+      <Item Name="[t3]">_Bx._Vx2</Item>
+      <Item Name="[t4]">_Bx._Vx3</Item>
+      <Item Name="[t5]">_Bx._Vx4</Item>
+      <Item Name="[t6]">_Bx._Vx5</Item>
+      <Item Name="[t7]">_Bx._Vx6</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="std::_Bind&lt;*,*,std::_Bind8&lt;*&gt; &gt;">
+    <AlternativeType Name="std::_Bind_fty&lt;*,*,std::_Bind8&lt;*&gt; &gt;"></AlternativeType>
+    <DisplayString>bind({_Bx._Callee._Object}, {_Bx._Vx0}, {_Bx._Vx1}, {_Bx._Vx2}, {_Bx._Vx3}, {_Bx._Vx4}, {_Bx._Vx5}, {_Bx._Vx6}, {_Bx._Vx7})</DisplayString>
+    <Expand>
+      <Item Name="[f]">_Bx._Callee._Object</Item>
+      <Item Name="[t1]">_Bx._Vx0</Item>
+      <Item Name="[t2]">_Bx._Vx1</Item>
+      <Item Name="[t3]">_Bx._Vx2</Item>
+      <Item Name="[t4]">_Bx._Vx3</Item>
+      <Item Name="[t5]">_Bx._Vx4</Item>
+      <Item Name="[t6]">_Bx._Vx5</Item>
+      <Item Name="[t7]">_Bx._Vx6</Item>
+      <Item Name="[t8]">_Bx._Vx7</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="std::_Bind&lt;*,*,std::_Bind9&lt;*&gt; &gt;">
+    <AlternativeType Name="std::_Bind_fty&lt;*,*,std::_Bind9&lt;*&gt; &gt;"></AlternativeType>
+    <DisplayString>bind({_Bx._Callee._Object}, {_Bx._Vx0}, {_Bx._Vx1}, {_Bx._Vx2}, {_Bx._Vx3}, {_Bx._Vx4}, {_Bx._Vx5}, {_Bx._Vx6}, {_Bx._Vx7}, {_Bx._Vx8})</DisplayString>
+    <Expand>
+      <Item Name="[f]">_Bx._Callee._Object</Item>
+      <Item Name="[t1]">_Bx._Vx0</Item>
+      <Item Name="[t2]">_Bx._Vx1</Item>
+      <Item Name="[t3]">_Bx._Vx2</Item>
+      <Item Name="[t4]">_Bx._Vx3</Item>
+      <Item Name="[t5]">_Bx._Vx4</Item>
+      <Item Name="[t6]">_Bx._Vx5</Item>
+      <Item Name="[t7]">_Bx._Vx6</Item>
+      <Item Name="[t8]">_Bx._Vx7</Item>
+      <Item Name="[t9]">_Bx._Vx8</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="std::_Bind&lt;*,*,std::_Bind10&lt;*&gt; &gt;">
+    <AlternativeType Name="std::_Bind_fty&lt;*,*,std::_Bind10&lt;*&gt; &gt;"></AlternativeType>
+    <DisplayString>bind({_Bx._Callee._Object}, {_Bx._Vx0}, {_Bx._Vx1}, {_Bx._Vx2}, {_Bx._Vx3}, {_Bx._Vx4}, {_Bx._Vx5}, {_Bx._Vx6}, {_Bx._Vx7}, {_Bx._Vx8}, {_Bx._Vx9})</DisplayString>
+    <Expand>
+      <Item Name="[f]">_Bx._Callee._Object</Item>
+      <Item Name="[t1]">_Bx._Vx0</Item>
+      <Item Name="[t2]">_Bx._Vx1</Item>
+      <Item Name="[t3]">_Bx._Vx2</Item>
+      <Item Name="[t4]">_Bx._Vx3</Item>
+      <Item Name="[t5]">_Bx._Vx4</Item>
+      <Item Name="[t6]">_Bx._Vx5</Item>
+      <Item Name="[t7]">_Bx._Vx6</Item>
+      <Item Name="[t8]">_Bx._Vx7</Item>
+      <Item Name="[t9]">_Bx._Vx8</Item>
+      <Item Name="[t10]">_Bx._Vx9</Item>
+    </Expand>
+  </Type>
+
+  <!--std::function from <functional>-->
+  <Type Name="std::_Impl_no_alloc0&lt;*&gt;">
+    <AlternativeType Name="std::_Impl_no_alloc1&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Impl_no_alloc2&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Impl_no_alloc3&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Impl_no_alloc4&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Impl_no_alloc5&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Impl_no_alloc6&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Impl_no_alloc7&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Impl_no_alloc8&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Impl_no_alloc9&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Impl_no_alloc10&lt;*&gt;"></AlternativeType>
+    <DisplayString>{_Callee._Object}</DisplayString>
+    <Expand>
+      <Item Name="[functor]">_Callee._Object</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="std::_Impl0&lt;*&gt;">
+    <AlternativeType Name="std::_Impl1&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Impl2&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Impl3&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Impl4&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Impl5&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Impl6&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Impl7&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Impl8&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Impl9&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::_Impl10&lt;*&gt;"></AlternativeType>
+    <DisplayString>{_Callee._Object}</DisplayString>
+    <Expand>
+      <Item Name="[functor]">_Callee._Object</Item>
+      <Item Name="[allocator]">_Myval</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="std::function&lt;*&gt;">
+    <DisplayString Condition="_Impl == 0">empty</DisplayString>
+    <DisplayString>*_Impl</DisplayString>
+    <Expand>
+      <Item Name="[functor and allocator]" Condition="_Impl != 0">*._Impl</Item>
+    </Expand>
+  </Type>
+
+  <!--std::tuple from <tuple>-->
+  <Type Name="std::tuple&lt;std::_Nil,std::_Nil,std::_Nil,std::_Nil,std::_Nil,std::_Nil,std::_Nil,std::_Nil,std::_Nil,std::_Nil&gt;">
+    <DisplayString>()</DisplayString>
+    <Expand/>
+  </Type>
+
+  <Type Name="std::tuple&lt;*,std::_Nil,std::_Nil,std::_Nil,std::_Nil,std::_Nil,std::_Nil,std::_Nil,std::_Nil,std::_Nil&gt;">
+    <Expand>
+      <Item Name="[0]">_Impl._Value</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="std::tuple&lt;*,*,std::_Nil,std::_Nil,std::_Nil,std::_Nil,std::_Nil,std::_Nil,std::_Nil,std::_Nil&gt;">
+    <Expand>
+      <Item Name="[0]">_Impl._Value</Item>
+      <Item Name="[1]">_Impl._Tail._Value</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="std::tuple&lt;*,*,*,std::_Nil,std::_Nil,std::_Nil,std::_Nil,std::_Nil,std::_Nil,std::_Nil&gt;">
+    <Expand>
+      <Item Name="[0]">_Impl._Value</Item>
+      <Item Name="[1]">_Impl._Tail._Value</Item>
+      <Item Name="[2]">_Impl._Tail._Tail._Value</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="std::tuple&lt;*,*,*,*,std::_Nil,std::_Nil,std::_Nil,std::_Nil,std::_Nil,std::_Nil&gt;">
+    <Expand>
+      <Item Name="[0]">_Impl._Value</Item>
+      <Item Name="[1]">_Impl._Tail._Value</Item>
+      <Item Name="[2]">_Impl._Tail._Tail._Value</Item>
+      <Item Name="[3]">_Impl._Tail._Tail._Tail._Value</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="std::tuple&lt;*,*,*,*,*,std::_Nil,std::_Nil,std::_Nil,std::_Nil,std::_Nil&gt;">
+    <Expand>
+      <Item Name="[0]">_Impl._Value</Item>
+      <Item Name="[1]">_Impl._Tail._Value</Item>
+      <Item Name="[2]">_Impl._Tail._Tail._Value</Item>
+      <Item Name="[3]">_Impl._Tail._Tail._Tail._Value</Item>
+      <Item Name="[4]">_Impl._Tail._Tail._Tail._Tail._Value</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="std::tuple&lt;*,*,*,*,*,*,std::_Nil,std::_Nil,std::_Nil,std::_Nil&gt;">
+    <Expand>
+      <Item Name="[0]">_Impl._Value</Item>
+      <Item Name="[1]">_Impl._Tail._Value</Item>
+      <Item Name="[2]">_Impl._Tail._Tail._Value</Item>
+      <Item Name="[3]">_Impl._Tail._Tail._Tail._Value</Item>
+      <Item Name="[4]">_Impl._Tail._Tail._Tail._Tail._Value</Item>
+      <Item Name="[5]">_Impl._Tail._Tail._Tail._Tail._Tail._Value</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="std::tuple&lt;*,*,*,*,*,*,*,std::_Nil,std::_Nil,std::_Nil&gt;">
+    <Expand>
+      <Item Name="[0]">_Impl._Value</Item>
+      <Item Name="[1]">_Impl._Tail._Value</Item>
+      <Item Name="[2]">_Impl._Tail._Tail._Value</Item>
+      <Item Name="[3]">_Impl._Tail._Tail._Tail._Value</Item>
+      <Item Name="[4]">_Impl._Tail._Tail._Tail._Tail._Value</Item>
+      <Item Name="[5]">_Impl._Tail._Tail._Tail._Tail._Tail._Value</Item>
+      <Item Name="[6]">_Impl._Tail._Tail._Tail._Tail._Tail._Tail._Value</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="std::tuple&lt;*,*,*,*,*,*,*,*,std::_Nil,std::_Nil&gt;">
+    <Expand>
+      <Item Name="[0]">_Impl._Value</Item>
+      <Item Name="[1]">_Impl._Tail._Value</Item>
+      <Item Name="[2]">_Impl._Tail._Tail._Value</Item>
+      <Item Name="[3]">_Impl._Tail._Tail._Tail._Value</Item>
+      <Item Name="[4]">_Impl._Tail._Tail._Tail._Tail._Value</Item>
+      <Item Name="[5]">_Impl._Tail._Tail._Tail._Tail._Tail._Value</Item>
+      <Item Name="[6]">_Impl._Tail._Tail._Tail._Tail._Tail._Tail._Value</Item>
+      <Item Name="[7]">_Impl._Tail._Tail._Tail._Tail._Tail._Tail._Tail._Value</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="std::tuple&lt;*,*,*,*,*,*,*,*,*,std::_Nil&gt;">
+    <Expand>
+      <Item Name="[0]">_Impl._Value</Item>
+      <Item Name="[1]">_Impl._Tail._Value</Item>
+      <Item Name="[2]">_Impl._Tail._Tail._Value</Item>
+      <Item Name="[3]">_Impl._Tail._Tail._Tail._Value</Item>
+      <Item Name="[4]">_Impl._Tail._Tail._Tail._Tail._Value</Item>
+      <Item Name="[5]">_Impl._Tail._Tail._Tail._Tail._Tail._Value</Item>
+      <Item Name="[6]">_Impl._Tail._Tail._Tail._Tail._Tail._Tail._Value</Item>
+      <Item Name="[7]">_Impl._Tail._Tail._Tail._Tail._Tail._Tail._Tail._Value</Item>
+      <Item Name="[8]">_Impl._Tail._Tail._Tail._Tail._Tail._Tail._Tail._Tail._Value</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="std::tuple&lt;*,*,*,*,*,*,*,*,*,*&gt;">
+    <Expand>
+      <Item Name="[0]">_Impl._Value</Item>
+      <Item Name="[1]">_Impl._Tail._Value</Item>
+      <Item Name="[2]">_Impl._Tail._Tail._Value</Item>
+      <Item Name="[3]">_Impl._Tail._Tail._Tail._Value</Item>
+      <Item Name="[4]">_Impl._Tail._Tail._Tail._Tail._Value</Item>
+      <Item Name="[5]">_Impl._Tail._Tail._Tail._Tail._Tail._Value</Item>
+      <Item Name="[6]">_Impl._Tail._Tail._Tail._Tail._Tail._Tail._Value</Item>
+      <Item Name="[7]">_Impl._Tail._Tail._Tail._Tail._Tail._Tail._Tail._Value</Item>
+      <Item Name="[8]">_Impl._Tail._Tail._Tail._Tail._Tail._Tail._Tail._Tail._Value</Item>
+      <Item Name="[9]">_Impl._Tail._Tail._Tail._Tail._Tail._Tail._Tail._Tail._Tail._Value</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="std::array&lt;*&gt;">
+    <DisplayString>{{size = {_EEN_SIZE}}}</DisplayString>
+    <Expand>
+      <Item Name="[size]">_EEN_SIZE</Item>
+      <ArrayItems>
+        <Size>_EEN_SIZE</Size>
+        <ValuePointer>_Elems</ValuePointer>
+      </ArrayItems>
+      <!--We make end iterators appear to have no children.-->
+    </Expand>
+  </Type>
+
+  <!--stdext::hash_map from <hash_map>
+;  stdext::hash_multimap from <hash_map>
+;  stdext::hash_set from <hash_set>
+;  stdext::hash_multiset from <hash_set>-->
+  <Type Name="std::hash_map&lt;*&gt;">
+    <AlternativeType Name="stdext::hash_map&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::hash_multimap&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="stdext::hash_set&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::hash_set&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::hash_multiset&lt;*&gt;"></AlternativeType>
+    <DisplayString>{{size = {_List._Mysize}}}</DisplayString>
+    <Expand>
+      <Item Name="[size]">_List._Mysize</Item>
+      <LinkedListItems>
+        <Size>_List._Mysize</Size>
+        <HeadPointer>_List._Myhead-&gt;_Next</HeadPointer>
+        <NextPointer>_Next</NextPointer>
+        <ValueNode>_Myval</ValueNode>
+      </LinkedListItems>
+    </Expand>
+  </Type>
+
+  <!--std::unordered_map from <unordered_map>
+;  std::unordered_multimap from <unordered_map>
+;  std::unordered_set from <unordered_set>
+;  std::unordered_multiset from <unordered_set> -->
+  <!--<Type Name="std::hash&lt;*&gt;">
+    <DisplayString>hash</DisplayString>
+    <Expand/>
+  </Type>-->
+  <Type Name="std::unordered_map&lt;*&gt;">
+    <AlternativeType Name="std::unordered_multimap&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::unordered_set&lt;*&gt;"></AlternativeType>
+    <AlternativeType Name="std::unordered_multiset&lt;*&gt;"></AlternativeType>
+    <DisplayString>{{size = {_List._Mysize}}}</DisplayString>
+    <Expand>
+      <Item Name="[size]">_List._Mysize</Item>
+      <Item Name="[hash]">comp._Hashobj</Item>
+      <Item Name="[equal]">comp._Keyeqobj</Item>
+      <LinkedListItems>
+        <Size>_List._Mysize</Size>
+        <HeadPointer>_List._Myhead-&gt;_Next</HeadPointer>
+        <NextPointer>_Next</NextPointer>
+        <ValueNode>_Myval</ValueNode>
+      </LinkedListItems>
+    </Expand>
+  </Type>
+
+
+  <!--std::basic_regex from <regex>-->
+  <Type Name="std::basic_regex&lt;*&gt;">
+    <!--Default construction creates an empty basic_regex.-->
+    <DisplayString Condition="_Rep == 0">empty</DisplayString>
+    <!--By default, _ENHANCED_REGEX_VISUALIZER is defined to be 1 in debug and 0 in ship.
+     When it is 1, basic_regex stores the string from which it was constructed.
+     When it is 0, basic_regex stores only the resulting finite state machine. -->
+    <DisplayString Condition="_EEN_VIS == 1">{_Visualization}</DisplayString>
+    <!--basic_regex contains many static const flags, which would be shown in the preview by default.
+     Its actual members are _Rep and _Traits. _Rep holds the finite state machine, so we
+     use it to preview basic_regex. (It does contain some human-readable information.) -->
+    <DisplayString>{*_Rep}</DisplayString>
+    <Expand>
+      <!--We want to hide those static const flags.
+     We also want to give _Visualization a fake name.-->
+      <Item Name="[str]" Condition="(_Rep != 0) &amp;&amp; (_EEN_VIS == 1)">_Visualization</Item>
+      <Item Name="_Rep" Condition="_Rep != 0">_Rep</Item>
+      <Item Name="_Traits" Condition="_Rep != 0">_Traits</Item>
+      <!--We want to hide those static const flags.-->
+      <!--We make empty basic_regexes appear to have no children.-->
+    </Expand>
+
+  </Type>
+
+  <!-- std::sub_match from <regex> -->
+  <Type Name="std::sub_match&lt;char const *&gt;">
+    <AlternativeType Name="std::sub_match&lt;wchar_t const *&gt;"></AlternativeType>
+    <AlternativeType Name="std::sub_match&lt;unsigned short const *&gt;"></AlternativeType>
+    <AlternativeType Name="std::sub_match&lt;char *&gt;"></AlternativeType>
+    <AlternativeType Name="std::sub_match&lt;wchar_t *&gt;"></AlternativeType>
+    <AlternativeType Name="std::sub_match&lt;unsigned short *&gt;"></AlternativeType>
+    <!--It would be nice if we could preview sub_match with its str().
+		; However, visualizers cannot handle strings represented by pointer pairs.
+		; Therefore, our preview contains more limited information.-->
+    <!-- If this sub_match participated in a match,
+			; we preview it with its length().-->
+    <DisplayString Condition="matched">{second - first}</DisplayString>
+    <!--Otherwise, we preview it with its matched bool (i.e. "false").
+			; (Why not length() (i.e. "0")? It's meaningful to have
+			; matched == true and length() == 0. -->
+    <DisplayString>false</DisplayString>
+    <Expand>
+      <!--sub_match's three data members are public, but we list them here
+			; (a) to display matched before first and second, and
+			; (b) to gloss over the fact that sub_match derives from std::pair.-->
+      <Item Name="matched">matched</Item>
+      <Item Name="first">first</Item>
+      <Item Name="second">second</Item>
+    </Expand>
+  </Type>
+
+
+  <Type Name="std::sub_match&lt;std::_String_const_iterator&lt;*&gt; &gt;">
+    <!--			; We visualize ssub_match and wssub_match just like csub_match and wcsub_match,
+			; except that when determining the length(), we can't subtract iterators.
+			; We have to subtract their stored pointers.-->
+    <DisplayString Condition="matched">{second._Ptr - first._Ptr}</DisplayString>
+    <DisplayString>false</DisplayString>
+    <Expand>
+      <Item Name="matched">matched</Item>
+      <Item Name="first">first</Item>
+      <Item Name="second">second</Item>
+    </Expand>
+  </Type>
+
+  <!--std::match_results from <regex>-->
+  <Type Name="std::match_results&lt;*&gt;">
+    <!--A match_results object is empty iff its vector _Matches is empty.-->
+    <DisplayString Condition="_Matches._Myfirst == _Matches._Mylast">empty</DisplayString>
+    <!--We preview a non-empty match_results object with its vector.-->
+    <DisplayString>{_Matches}</DisplayString>
+    <Expand>
+      <!--As match_results has operator[](), prefix(), and suffix() member functions,
+        ; we make it appear to directly contain [0], [1], [2], etc. elements,
+        ; as well as [prefix] and [suffix] elements.-->
+      <Item Name="[prefix]" Condition="_Matches._Myfirst != _Matches._Mylast">_Prefix</Item>
+      <Item Name="[suffix]" Condition="_Matches._Myfirst != _Matches._Mylast">_Suffix</Item>
+      <ArrayItems Condition="_Matches._Myfirst != _Matches._Mylast">
+        <Size>_Matches._Mylast - _Matches._Myfirst</Size>
+        <ValuePointer>_Matches._Myfirst</ValuePointer>
+      </ArrayItems>
+      <!--We make empty match_results appear to have no children.-->
+    </Expand>
+  </Type>
+
+
+  <!--std::regex_iterator from <regex>-->
+  <Type Name="std::regex_iterator&lt;*&gt;">
+    <!--We represent end-of-sequence regex_iterators with null regex pointers.-->
+    <DisplayString Condition="_MyRe == 0">end</DisplayString>
+    <!--Dereferenceable regex_iterators return match_results when dereferenced,
+			; so we'll preview them with that.-->
+    <DisplayString>{_MyVal}</DisplayString>
+    <Expand>
+      <!--			; For ease of understanding, we make dereferenceable regex_iterators
+			; appear to have data members with the "for exposition only" names from TR1. -->
+      <Item Name="[begin]" Condition="_MyRe != 0">_Begin</Item>
+      <Item Name="[end]" Condition="_MyRe != 0">_End</Item>
+      <Item Name="[pregex]" Condition="_MyRe != 0">_MyRe</Item>
+      <Item Name="[flags]" Condition="_MyRe != 0">_Flags</Item>
+      <Item Name="[match]" Condition="_MyRe != 0">_MyVal</Item>
+      <!--			; We make end-of-sequence regex_iterators appear to have no children.-->
+    </Expand>
+  </Type>
+
+  <!--std::regex_token_iterator from <regex>-->
+  <Type Name="std::regex_token_iterator&lt;*&gt;">
+    <!--			; We represent end-of-sequence regex_token_iterators with null result pointers.-->
+    <DisplayString Condition="_Res == 0">end</DisplayString>
+    <!--			; Dereferenceable regex_token_iterators return *result when dereferenced,
+			; so we'll preview them with that. -->
+    <DisplayString>{*_Res}</DisplayString>
+    <Expand>
+      <!-- 			; For ease of understanding, we make dereferenceable regex_token_iterators
+			; appear to have data members with the "for exposition only" names from TR1.-->
+      <Item Name="[position]" Condition="_Res != 0">_Pos</Item>
+      <Item Name="[result]" Condition="_Res != 0">_Res</Item>
+      <Item Name="[suffix]" Condition="_Res != 0">_Suffix</Item>
+      <Item Name="[N]" Condition="_Res != 0">_Cur</Item>
+      <Item Name="[subs]" Condition="_Res != 0">_Subs</Item>
+      <!--			; We make end-of-sequence regex_token_iterators appear to have no children.-->
+    </Expand>
+  </Type>
+
+</AutoVisualizer>

@@ -871,5 +871,6 @@
   </ItemGroup>
   <ItemGroup>
     <Natvis Include="C2C.natvis" />
+    <Natvis Include="std.natvis" />
   </ItemGroup>
 </Project>
