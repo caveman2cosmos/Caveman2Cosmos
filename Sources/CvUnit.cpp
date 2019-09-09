@@ -1863,7 +1863,8 @@ void CvUnit::updateAirStrike(CvPlot* pPlot, bool bQuick, bool bFinish)
 
 		if (!bQuick)
 		{
-			bVisible = isCombatVisible(NULL);
+			// Always show human air strikes
+			bVisible = isHuman() || isCombatVisible(NULL);
 		}
 
 /************************************************************************************************/
