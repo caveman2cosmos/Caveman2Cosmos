@@ -11,24 +11,9 @@ import BugOptionsTab
 import BugUtil
 import CvUtil
 import BugCore
-gc = CyGlobalContext()
+GC = CyGlobalContext()
 ANewDawnOpt = BugCore.game.AutomatedSettings
 g_BuildNames = None
-
-def remove_diacriticals(text):
-
-	#BugUtil.debug(text)
-	text = CvUtil.convertToStr(text)
-
-	accent = ['é', 'è', 'ê', 'à', 'ù', 'û', 'ç', 'ô', 'î', 'ï', 'â' ,'õ' ,'ä' ,'ö' ,'ü']
-	sans_accent = ['e', 'e', 'e', 'a', 'u', 'u', 'c', 'o', 'i', 'i', 'a', 'o', 'a' ,'o' ,'u']
-
-	#BugUtil.debug(text)
-	for i in xrange(len(accent)):
-		text = text.replace(accent[i], sans_accent[i])
-	#BugUtil.debug(text)
-
-	return CvUtil.convertToStr(text)
 
 class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 
@@ -37,10 +22,10 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 
 	def normalizeBuildNames(self):
 		global g_BuildNames
-		g_BuildNames = [(0,0)] * gc.getNumBuildInfos()
-		for iI in range(gc.getNumBuildInfos()):
+		g_BuildNames = [(0,0)] * GC.getNumBuildInfos()
+		for iI in range(GC.getNumBuildInfos()):
 			#Strips the <link="IMPROVEMENT_FOOBAR"> and </link> pair from the description while retaining the bit between them
-			szDescription = str( remove_diacriticals(gc.getBuildInfo(iI).getDescription()))
+			szDescription = CvUtil.remove_diacriticals(GC.getBuildInfo(iI).getDescription())
 			szNewDescription = ""
 			iStartIndex = szDescription.rfind("<link")
 			iEndIndex = szDescription.rfind("'>") + 2
@@ -217,8 +202,8 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 		if g_BuildNames == None:
 			self.normalizeBuildNames()
 
-		player = gc.getPlayer(gc.getGame().getActivePlayer())
-		team = gc.getTeam(gc.getGame().getActiveTeam())
+		player = GC.getPlayer(GC.getGame().getActivePlayer())
+		team = GC.getTeam(GC.getGame().getActiveTeam())
 		(loopCity, iter) = player.firstCity(False)
 
 		if ANewDawnOpt.isShowCityAutomations():
@@ -228,18 +213,18 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 					self.addSpacer(screen, left, "City Spacer")
 				bFirst = False
 
-				szCityName = remove_diacriticals(loopCity.getName())
+				szCityName = CvUtil.remove_diacriticals(loopCity.getName())
 
 				self.addLabel(screen, left, str(BugUtil.getText("TXT_KEY_AUTOMATED_WORKERS_CAN_BUILD_CITY", szCityName)), str(BugUtil.getText("TXT_KEY_AUTOMATED_WORKERS_CAN_BUILD_CITY", szCityName)), None, False, True)
 				col1, col2, col3, col4, col5 = self.addMultiColumnLayout(screen, left, 5, "Automate_Workers")
 
 				iCount = 0
-				for iI in range(gc.getNumBuildInfos()):
-					if (team.isHasTech(gc.getBuildInfo(iI).getTechPrereq())):
+				for iI in range(GC.getNumBuildInfos()):
+					if team.isHasTech(GC.getBuildInfo(iI).getTechPrereq()):
 
 						columnKey = self.determineColumnPlacement(5, iCount, (col1, col2, col3, col4, col5))
 
-						control = str(szCityName + gc.getBuildInfo(iI).getDescription() + "Check")
+						control = str(szCityName + GC.getBuildInfo(iI).getDescription() + "Check")
 						bEnabled = loopCity.isAutomatedCanBuild(iI)
 
 						szNewDescription = g_BuildNames[iI]
@@ -256,16 +241,17 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 		col1, col2, col3, col4, col5 = self.addMultiColumnLayout(screen, left, 5, "Automate_Workers")
 
 		iCount = 0
-		for iI in range(gc.getNumBuildInfos()):
-			if (team.isHasTech(gc.getBuildInfo(iI).getTechPrereq())):
+		for iI in range(GC.getNumBuildInfos()):
+			if team.isHasTech(GC.getBuildInfo(iI).getTechPrereq()):
 
 				columnKey = self.determineColumnPlacement(5, iCount, (col1, col2, col3, col4, col5))
 
-				control = str(remove_diacriticals(player.getNameKey() + gc.getBuildInfo(iI).getDescription() + "Check"))
+				control = CvUtil.remove_diacriticals(player.getNameKey() + GC.getBuildInfo(iI).getDescription() + "Check")
 				bEnabled = player.isAutomatedCanBuild(iI)
 
 				szNewDescription = g_BuildNames[iI]
 
+				print ("WAKAWAKA", control)
 				screen.attachCheckBox(columnKey, control, szNewDescription , "CvOptionsScreenCallbackInterface", "handleNationalAutomatedBuildCheckboxClicked", control, bEnabled)
 				screen.setToolTip(control, BugUtil.getText("TXT_KEY_NATIONAL_AUTOMATED_WORKERS_CAN_BUILD", szNewDescription))
 

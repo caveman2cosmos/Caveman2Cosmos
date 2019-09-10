@@ -402,10 +402,10 @@ def handleAutomatedBuildCheckboxClicked(argsList):
 
 	CyCity, i = CyPlayer.firstCity(False)
 	if CyCity:
-		import ANDAutomationsTab
+		import CvUtil
 		iNumBuildInfos = GC.getNumBuildInfos()
 	while CyCity:
-		if szName.rfind(ANDAutomationsTab.remove_diacriticals(CyCity.getName())) > -1:
+		if szName.rfind(CvUtil.remove_diacriticals(CyCity.getName())) > -1:
 			iCityID = CyCity.getID()
 			for k in range(iNumBuildInfos):
 				if szName.rfind(GC.getBuildInfo(k).getDescription()) > -1:
