@@ -194,7 +194,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Bonus/llama.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,4,7</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_MAMMOTH</Type>
@@ -460,7 +460,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Bonus/Kava.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,3,7</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_GUAVA</Type>
@@ -574,7 +574,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Bonus/squash.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,7,7</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_WHEAT</Type>
@@ -764,7 +764,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/blank.dds.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,1,14</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,1,7</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PAPAYA</Type>
@@ -802,7 +802,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Bonus/pistachio.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,6,7</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_WINE</Type>
@@ -992,7 +992,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Buildings/ChichenItza.dds,Art/RoM_Atlas.dds,8,1</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,2,7</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_INCENSE</Type>
@@ -1068,7 +1068,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Bonus/papyrus.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,5,7</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PEYOTE</Type>
@@ -1239,7 +1239,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Bonus/vanilla.dds</Button>
+			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,8,7</Button>
 		</BuildInfo>
 	</BuildInfos>
 </Civ4BuildInfos>
