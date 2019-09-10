@@ -3060,8 +3060,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRAPPING</PrereqTech>
-			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_ANIMAL_HUSBANDRY</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>35</iCost>
 			<!-- Main effects -->
