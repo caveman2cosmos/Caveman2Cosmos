@@ -3023,7 +3023,6 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_CHIEFDOM</PrereqTech>
 				<PrereqTech>TECH_FIRE_MAKING</PrereqTech>
 				<PrereqTech>TECH_PICTOGRAPHS</PrereqTech>
 				<PrereqTech>TECH_TATTOOS</PrereqTech>
