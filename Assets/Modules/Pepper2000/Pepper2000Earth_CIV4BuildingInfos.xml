@@ -28372,7 +28372,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bGoldenAge>1</bGoldenAge>
 			<iCost>300000</iCost>
 			<PrereqTech>TECH_ASCENSION</PrereqTech>
 			<fVisibilityPriority>10000</fVisibilityPriority>
@@ -28380,7 +28379,6 @@
 			<bCenterInCity>1</bCenterInCity>
 			<ArtDefineTag>ART_DEF_BUILDING_ASCENSION_GATE</ArtDefineTag>
 			<Civilopedia>TXT_KEY_BUILDING_ASCENSION_GATE_PEDIA</Civilopedia>
-			<iGoldenAgeModifier>100</iGoldenAgeModifier>
 			<Description>TXT_KEY_BUILDING_ASCENSION_GATE</Description>
 			<Help>TXT_KEY_BUILDING_ASCENSION_GATE_HELP</Help>
 			<VictoryPrereq>VICTORY_SCIENTIFIC</VictoryPrereq>

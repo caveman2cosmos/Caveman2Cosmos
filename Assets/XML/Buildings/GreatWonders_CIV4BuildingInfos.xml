@@ -810,7 +810,6 @@
 			<!-- Cost -->
 			<iCost>167130</iCost>
 			<!-- Misc. Effects -->
-			<iGoldenAgeModifier>100</iGoldenAgeModifier>
 			<iGlobalPopulationChange>-30</iGlobalPopulationChange>
 			<!-- Unique effects -->
 			<VictoryPrereq>VICTORY_SCIENTIFIC</VictoryPrereq>
@@ -7733,7 +7732,7 @@
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
-			<iGoldenAgeModifier>50</iGoldenAgeModifier>
+			<iGoldenAgeModifier>30</iGoldenAgeModifier>
 			<!-- Misc -->
 			<iAsset>12</iAsset>
 			<iConquestProb>100</iConquestProb>
@@ -15058,7 +15057,6 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iAnarchyModifier>-25</iAnarchyModifier>
-			<iGoldenAgeModifier>25</iGoldenAgeModifier>
 			<iGlobalWarWearinessModifier>-10</iGlobalWarWearinessModifier>
 			<FreeBuilding>BUILDINGCLASS_PRESS_AGENCY</FreeBuilding>
 			<!-- Misc -->
