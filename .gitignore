@@ -27,3 +27,5 @@ Assets/**/*.kf
 
 Sources/cov-int/
 Build/
+
+Tools/Autocorrect/Autocorrect.log
