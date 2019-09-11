@@ -861,7 +861,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MONARCHY</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>136</iCost>
+			<iCost>160</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<!-- Local -->

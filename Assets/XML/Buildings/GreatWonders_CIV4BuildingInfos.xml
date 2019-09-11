@@ -8090,7 +8090,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>320</iCost>
+			<iCost>444</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>2</iYield>

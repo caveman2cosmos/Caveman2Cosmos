@@ -1914,51 +1914,6 @@ Current techs which are not in this file:-
 			<Button>Art/Interface/Buttons/TechTree/Button_Microlith.dds</Button>
 		</TechInfo>
 		<TechInfo>
-			<Type>TECH_PORTABLE_SHELTERS</Type>
-			<Description>TXT_KEY_TECH_PORTABLE_SHELTERS</Description>
-			<Civilopedia>TXT_KEY_TECH_PORTABLE_SHELTERS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_PORTABLE_SHELTERS_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iCost>17</iCost>
-			<Era>ERA_ANCIENT</Era>
-			<iAsset>4</iAsset>
-			<bTrade>1</bTrade>
-			<iGridX>9</iGridX>
-			<iGridY>9</iGridY>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>6</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>8</iFlavor>
-				</Flavor>
-			</Flavors>
-			<OrPreReqs>
-				<PrereqTech>TECH_HUNTING</PrereqTech>
-			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_SKINNING</PrereqTech>
-			</AndPreReqs>
-			<Quote>TXT_KEY_TECH_PORTABLE_SHELTERS_QUOTE</Quote>
-			<Sound>AS2D_TECH_PORTABLE_SHELTERS</Sound>
-			<SoundMP>AS2D_TECH_PORTABLE_SHELTERS</SoundMP>
-			<Button>Art/Interface/Buttons/TechTree/portableshelter.dds</Button>
-		</TechInfo>
-		<TechInfo>
 			<Type>TECH_NATUROPATHY</Type>
 			<Description>TXT_KEY_TECH_NATUROPATHY</Description>
 			<Civilopedia>TXT_KEY_TECH_NATUROPATHY_PEDIA</Civilopedia>
@@ -2247,6 +2202,51 @@ Current techs which are not in this file:-
 			<Sound>AS2D_TECH_AXE_MAKING</Sound>
 			<SoundMP>AS2D_TECH_AXE_MAKING</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/axemaking.dds</Button>
+		</TechInfo>
+		<TechInfo>
+			<Type>TECH_PORTABLE_SHELTERS</Type>
+			<Description>TXT_KEY_TECH_PORTABLE_SHELTERS</Description>
+			<Civilopedia>TXT_KEY_TECH_PORTABLE_SHELTERS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_PORTABLE_SHELTERS_STRATEGY</Strategy>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<iCost>20</iCost>
+			<Era>ERA_ANCIENT</Era>
+			<iAsset>4</iAsset>
+			<bTrade>1</bTrade>
+			<iGridX>10</iGridX>
+			<iGridY>9</iGridY>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>6</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GROWTH</FlavorType>
+					<iFlavor>8</iFlavor>
+				</Flavor>
+			</Flavors>
+			<OrPreReqs>
+				<PrereqTech>TECH_HUNTING</PrereqTech>
+			</OrPreReqs>
+			<AndPreReqs>
+				<PrereqTech>TECH_SKINNING</PrereqTech>
+			</AndPreReqs>
+			<Quote>TXT_KEY_TECH_PORTABLE_SHELTERS_QUOTE</Quote>
+			<Sound>AS2D_TECH_PORTABLE_SHELTERS</Sound>
+			<SoundMP>AS2D_TECH_PORTABLE_SHELTERS</SoundMP>
+			<Button>Art/Interface/Buttons/TechTree/portableshelter.dds</Button>
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_TATTOOS</Type>
@@ -2778,40 +2778,6 @@ Current techs which are not in this file:-
 			<Button>Art/Interface/Buttons/TechTree/atlatlmaking.dds</Button>
 		</TechInfo>
 		<TechInfo>
-			<Type>TECH_CHIEFDOM</Type>
-			<Description>TXT_KEY_TECH_CHIEFDOM</Description>
-			<Civilopedia>TXT_KEY_TECH_CHIEFDOM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_CHIEFDOM_STRATEGY</Strategy>
-			<Advisor>ADVISOR_GROWTH</Advisor>
-			<iCost>26</iCost>
-			<Era>ERA_ANCIENT</Era>
-			<iAsset>4</iAsset>
-			<bTrade>1</bTrade>
-			<bGoodyTech>1</bGoodyTech>
-			<iGridX>12</iGridX>
-			<iGridY>9</iGridY>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
-			<OrPreReqs>
-				<PrereqTech>TECH_PORTABLE_SHELTERS</PrereqTech>
-			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_PERSONAL_ADORNMENT</PrereqTech>
-			</AndPreReqs>
-			<Quote>TXT_KEY_TECH_CHIEFDOM_QUOTE</Quote>
-			<Sound>AS2D_TECH_CHIEFDOM</Sound>
-			<SoundMP>AS2D_TECH_CHIEFDOM</SoundMP>
-			<Button>Art/Interface/Buttons/TechTree/Button_Chiefdom.dds</Button>
-		</TechInfo>
-		<TechInfo>
 			<Type>TECH_PICTOGRAPHS</Type>
 			<Description>TXT_KEY_TECH_PICTOGRAPHS</Description>
 			<Civilopedia>TXT_KEY_TECH_PICTOGRAPHS_PEDIA</Civilopedia>
@@ -2954,6 +2920,46 @@ Current techs which are not in this file:-
 			<Button>Art/Interface/Buttons/TechTree/huntingtactics.dds</Button>
 		</TechInfo>
 		<TechInfo>
+			<Type>TECH_TRIBALISM</Type>
+			<Description>TXT_KEY_TECH_TRIBALISM</Description>
+			<Civilopedia>TXT_KEY_TECH_TRIBALISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_TRIBALISM_STRATEGY</Strategy>
+			<Advisor>ADVISOR_GROWTH</Advisor>
+			<iCost>30</iCost>
+			<Era>ERA_ANCIENT</Era>
+			<iAsset>4</iAsset>
+			<iPower>2</iPower>
+			<bTrade>1</bTrade>
+			<bGoodyTech>1</bGoodyTech>
+			<iGridX>13</iGridX>
+			<iGridY>9</iGridY>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>6</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GROWTH</FlavorType>
+					<iFlavor>6</iFlavor>
+				</Flavor>
+			</Flavors>
+			<OrPreReqs>
+				<PrereqTech>TECH_PORTABLE_SHELTERS</PrereqTech>
+			</OrPreReqs>
+			<AndPreReqs>
+				<PrereqTech>TECH_BARTER</PrereqTech>
+				<PrereqTech>TECH_CARPENTRY</PrereqTech>
+			</AndPreReqs>
+			<Quote>TXT_KEY_TECH_TRIBALISM_QUOTE</Quote>
+			<Sound>AS2D_TECH_TRIBALISM</Sound>
+			<SoundMP>AS2D_TECH_TRIBALISM</SoundMP>
+			<Button>Art/Interface/Buttons/TechTree/Button_Tribalism.dds</Button>
+		</TechInfo>
+		<TechInfo>
 			<Type>TECH_BOAT_BUILDING</Type>
 			<Description>TXT_KEY_TECH_BOAT_BUILDING</Description>
 			<Civilopedia>TXT_KEY_TECH_BOAT_BUILDING_PEDIA</Civilopedia>
@@ -3087,43 +3093,38 @@ Current techs which are not in this file:-
 			<Button>Art/Interface/Buttons/TechTree/Button_Nocturnalism.dds</Button>
 		</TechInfo>
 		<TechInfo>
-			<Type>TECH_TRIBALISM</Type>
-			<Description>TXT_KEY_TECH_TRIBALISM</Description>
-			<Civilopedia>TXT_KEY_TECH_TRIBALISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_TRIBALISM_STRATEGY</Strategy>
+			<Type>TECH_CHIEFDOM</Type>
+			<Description>TXT_KEY_TECH_CHIEFDOM</Description>
+			<Civilopedia>TXT_KEY_TECH_CHIEFDOM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_CHIEFDOM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<iCost>34</iCost>
 			<Era>ERA_ANCIENT</Era>
 			<iAsset>4</iAsset>
-			<iPower>2</iPower>
 			<bTrade>1</bTrade>
 			<bGoodyTech>1</bGoodyTech>
 			<iGridX>14</iGridX>
-			<iGridY>13</iGridY>
+			<iGridY>9</iGridY>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
 					<iFlavor>2</iFlavor>
 				</Flavor>
 				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>6</iFlavor>
-				</Flavor>
-				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>6</iFlavor>
+					<iFlavor>2</iFlavor>
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_ANIMISM</PrereqTech>
+				<PrereqTech>TECH_TRIBALISM</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_CARPENTRY</PrereqTech>
+				<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
 			</AndPreReqs>
-			<Quote>TXT_KEY_TECH_TRIBALISM_QUOTE</Quote>
-			<Sound>AS2D_TECH_TRIBALISM</Sound>
-			<SoundMP>AS2D_TECH_TRIBALISM</SoundMP>
-			<Button>Art/Interface/Buttons/TechTree/Button_Tribalism.dds</Button>
+			<Quote>TXT_KEY_TECH_CHIEFDOM_QUOTE</Quote>
+			<Sound>AS2D_TECH_CHIEFDOM</Sound>
+			<SoundMP>AS2D_TECH_CHIEFDOM</SoundMP>
+			<Button>Art/Interface/Buttons/TechTree/Button_Chiefdom.dds</Button>
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_FISHING</Type>
@@ -3137,7 +3138,7 @@ Current techs which are not in this file:-
 			<bTrade>1</bTrade>
 			<bGoodyTech>1</bGoodyTech>
 			<iGridX>14</iGridX>
-			<iGridY>9</iGridY>
+			<iGridY>13</iGridY>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -3170,48 +3171,35 @@ Current techs which are not in this file:-
 <!--	(014, 17) TECH_ANIMISM		-->
 <!--	(014, 19) TECH_DRUIDISM		-->
 		<TechInfo>
-			<Type>TECH_SLAVERY</Type>
-			<Description>TXT_KEY_TECH_SLAVERY</Description>
-			<Civilopedia>TXT_KEY_TECH_SLAVERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_SLAVERY_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<Type>TECH_WARFARE</Type>
+			<Description>TXT_KEY_TECH_WARFARE</Description>
+			<Civilopedia>TXT_KEY_TECH_WARFARE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_WARFARE_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iCost>39</iCost>
 			<Era>ERA_ANCIENT</Era>
-			<iAsset>8</iAsset>
-			<iPower>6</iPower>
+			<iAsset>4</iAsset>
 			<bTrade>1</bTrade>
 			<bGoodyTech>1</bGoodyTech>
 			<iGridX>15</iGridX>
-			<iGridY>13</iGridY>
+			<iGridY>7</iGridY>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
 					<iFlavor>10</iFlavor>
 				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_TRIBALISM</PrereqTech>
+				<PrereqTech>TECH_CHIEFDOM</PrereqTech>
 			</OrPreReqs>
-			<Quote>TXT_KEY_TECH_SLAVERY_QUOTE</Quote>
-			<Sound>AS2D_TECH_SLAVERY</Sound>
-			<SoundMP>AS2D_TECH_SLAVERY</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/slave.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,3,16</Button>
+			<AndPreReqs>
+				<PrereqTech>TECH_NOCTURNALISM</PrereqTech>
+				<PrereqTech>TECH_THEFT</PrereqTech>
+			</AndPreReqs>
+			<Quote>TXT_KEY_TECH_WARFARE_QUOTE</Quote>
+			<Sound>AS2D_TECH_WARFARE</Sound>
+			<SoundMP>AS2D_TECH_WARFARE</SoundMP>
+			<Button>Art/Interface/Buttons/TechTree/Button_Warfare.dds</Button>
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_ANIMAL_HUSBANDRY</Type>
@@ -3253,7 +3241,7 @@ Current techs which are not in this file:-
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_TRIBALISM</PrereqTech>
+				<PrereqTech>TECH_CHIEFDOM</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
@@ -3264,14 +3252,15 @@ Current techs which are not in this file:-
 			<Button>,Art/Interface/Buttons/TechTree/Animal_Husbandry.dds,Art/Interface/Buttons/TechTree_Atlas.dds,3,1</Button>
 		</TechInfo>
 		<TechInfo>
-			<Type>TECH_WARFARE</Type>
-			<Description>TXT_KEY_TECH_WARFARE</Description>
-			<Civilopedia>TXT_KEY_TECH_WARFARE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_WARFARE_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
+			<Type>TECH_SLAVERY</Type>
+			<Description>TXT_KEY_TECH_SLAVERY</Description>
+			<Civilopedia>TXT_KEY_TECH_SLAVERY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_SLAVERY_STRATEGY</Strategy>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iCost>39</iCost>
 			<Era>ERA_ANCIENT</Era>
-			<iAsset>4</iAsset>
+			<iAsset>8</iAsset>
+			<iPower>6</iPower>
 			<bTrade>1</bTrade>
 			<bGoodyTech>1</bGoodyTech>
 			<iGridX>15</iGridX>
@@ -3281,18 +3270,30 @@ Current techs which are not in this file:-
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
 					<iFlavor>10</iFlavor>
 				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GROWTH</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_TRIBALISM</PrereqTech>
+				<PrereqTech>TECH_CHIEFDOM</PrereqTech>
 			</OrPreReqs>
-			<AndPreReqs>
-				<PrereqTech>TECH_NOCTURNALISM</PrereqTech>
-				<PrereqTech>TECH_THEFT</PrereqTech>
-			</AndPreReqs>
-			<Quote>TXT_KEY_TECH_WARFARE_QUOTE</Quote>
-			<Sound>AS2D_TECH_WARFARE</Sound>
-			<SoundMP>AS2D_TECH_WARFARE</SoundMP>
-			<Button>Art/Interface/Buttons/TechTree/Button_Warfare.dds</Button>
+			<Quote>TXT_KEY_TECH_SLAVERY_QUOTE</Quote>
+			<Sound>AS2D_TECH_SLAVERY</Sound>
+			<SoundMP>AS2D_TECH_SLAVERY</SoundMP>
+			<Button>,Art/Interface/Buttons/TechTree/slave.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,3,16</Button>
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_HARPOON_MAKING</Type>
@@ -3307,7 +3308,7 @@ Current techs which are not in this file:-
 			<bTrade>1</bTrade>
 			<bGoodyTech>1</bGoodyTech>
 			<iGridX>15</iGridX>
-			<iGridY>7</iGridY>
+			<iGridY>13</iGridY>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>

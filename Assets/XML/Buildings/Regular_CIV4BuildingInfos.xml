@@ -22384,7 +22384,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_HERALDRY</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>68</iCost>
+			<iCost>80</iCost>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -103529,7 +103529,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>80</iCost>
+			<iCost>74</iCost>
 			<!-- Special Yield and Commerce modifiers -->
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -104733,7 +104733,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>50</iCost>
+			<iCost>56</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -106910,7 +106910,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>80</iCost>
+			<iCost>74</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_ORGANIZED</ProductionTraitType>
