@@ -68,6 +68,19 @@ public:
 };
 #endif
 
+enum ECvPlotGraphics
+{
+	PLOT_GRAPHICS_NONE = 0,
+	PLOT_GRAPHICS_SYMBOLS = 1 << 0,
+	PLOT_GRAPHICS_FEATURE = 1 << 1,
+	PLOT_GRAPHICS_RIVER = 1 << 2,
+	PLOT_GRAPHICS_ROUTE = 1 << 3,
+	PLOT_GRAPHICS_UNIT = 1 << 4,
+	PLOT_GRAPHICS_CITY = 1 << 5,
+	PLOT_GRAPHICS_ALL = PLOT_GRAPHICS_SYMBOLS | PLOT_GRAPHICS_FEATURE | PLOT_GRAPHICS_RIVER | PLOT_GRAPHICS_ROUTE | PLOT_GRAPHICS_UNIT | PLOT_GRAPHICS_CITY,
+	PLOT_GRAPHICS_NUM = 6
+}; 
+
 class CvPlot
 {
 friend CvPathPlotInfoStore;
@@ -503,10 +516,34 @@ public:
 		return m_iY;
 	}
 	bool isInViewport(int comfortBorderSize = 0) const;
-	static void EvictGraphicsIfNecessary();
-	void setShouldHaveFullGraphics(bool bShouldHaveFullGraphics);
-	bool shouldHaveFullGraphics() const;
+
+	static bool EvictGraphicsIfNecessary();
+
+	// Set what graphics we require to be visible (probably based on camera position)
+	void setRequireGraphicsVisible(ECvPlotGraphics graphics, bool visible);
+	bool isGraphicsVisible(ECvPlotGraphics graphics) const;
+	bool isGraphicsRequiredVisible(ECvPlotGraphics graphics) const;
+	bool isGraphicPagingEnabled() const;
+
+	//// Show or hide specific graphic
+	//void setGraphicsVisible(ECvPlotGraphics graphics, bool visible);
+
+	// Show all required but not visible graphics
+	void showRequiredGraphics();
+
+	// Hide all non required but visible graphics
+	void hideNonRequiredGraphics();
+
+
+	// Get mask of all graphics components that aren't required to be visible but currently are
+	ECvPlotGraphics getNonRequiredGraphicsMask() const;
+	void enableGraphicsPaging();
+	void disableGraphicsPaging();
+
+	//void setShouldHaveFullGraphics(bool bShouldHaveFullGraphics);
+	//bool shouldHaveFullGraphics() const;
 	bool shouldHaveGraphics() const;
+
 	bool at(int iX, int iY) const;																																		// Exposed to Python
 // BUG - Lat/Long Coordinates - start
 	int calculateMinutes(int iPlotIndex, int iPlotCount, bool bWrap, int iDegreeMin, int iDegreeMax) const;
@@ -1091,11 +1128,14 @@ public:
 	const CvProperties* getPropertiesConst() const;
 
 	void pageGraphicsOut();
-	static void notePageRenderStart(int iRenderArea);
+	//static void notePageRenderStart(int iRenderArea);
 
 protected:
 	bool m_bInhibitCenterUnitCalculation;
 	bool m_bIgnoringImprovementUpgrade;
+
+	ECvPlotGraphics m_requiredVisibleGraphics;
+	ECvPlotGraphics m_visibleGraphics;
 	short m_iGraphicsPageIndex;
 };
 

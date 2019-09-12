@@ -851,6 +851,9 @@
     <ClInclude Include="idinfo_iterator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Stopwatch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CvGameCoreDLL.rc">

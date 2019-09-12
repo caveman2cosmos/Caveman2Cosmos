@@ -26,7 +26,11 @@
 		<DefineName>MAX_DESIRED_MEMORY_USED</DefineName>
 		<iDefineIntVal>1835008</iDefineIntVal>
 	</Define>
-	
+
+	<Define>
+		<DefineName>PAGING_FRAME_TIME_MS</DefineName>
+		<iDefineIntVal>200</iDefineIntVal>
+	</Define>
 	<!--
  Default uses the normal tag for the language set in Civ4's option dialog.
 	     All tags used in the text files are possible with English used as fallback when the chosen language is not available for some text.
