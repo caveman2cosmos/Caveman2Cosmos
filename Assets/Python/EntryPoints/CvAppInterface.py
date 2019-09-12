@@ -37,12 +37,10 @@ def init():
 	sys.stdout = CvUtil.RedirectDebug()
 
 def onSave():
-	import CvWBDesc
 	import cPickle
 	import CvEventInterface
 	# if the tutorial is active, it will save out the Shown Messages list
-	saveDataStr = cPickle.dumps(CvEventInterface.onEvent(('OnSave', 0, 0, 0, 0, 0)))
-	return saveDataStr
+	return cPickle.dumps(CvEventInterface.onEvent(('OnSave', 0, 0, 0, 0, 0)))
 
 def onLoad(argsList):
 	import cPickle

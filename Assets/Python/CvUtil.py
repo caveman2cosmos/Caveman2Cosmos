@@ -40,20 +40,38 @@ FONT_CENTER_JUSTIFY=1<<2
 FONT_RIGHT_JUSTIFY=1<<1
 FONT_LEFT_JUSTIFY=1<<0
 
+# if the string is non unicode, convert it to unicode by decoding it using 8859-1, latin_1
 def convertToUnicode(s):
-	"if the string is non unicode, convert it to unicode by decoding it using 8859-1, latin_1"
-	if (isinstance(s, str)):
+	if isinstance(s, str):
 		return s.decode("latin_1")
 	return s
 
-def convertToStr(s):
-	"if the string is unicode, convert it to str by encoding it using 8859-1, latin_1"
-	if (isinstance(s, unicode)):
-		try:
-			return s.encode("latin_1")
-		except:
-			return s
-	return s
+# if the string is unicode, convert it to str by encoding it using 8859-1, latin_1
+def convertToStr(txt):
+	if isinstance(txt, unicode):
+		i = 0
+		length = len(txt)
+		while i < length:
+			ordinal = ord(txt[i])
+			if ordinal > 255:
+				txt[i] = '?'
+			i += 1
+		return txt.encode("latin_1")
+	return txt
+
+def remove_diacriticals(txt):
+	txt = convertToStr(txt)
+	accent = [
+		('à', 'a'), ('ä', 'a'), ('â', 'a'),
+		('é', 'e'), ('è', 'e'), ('ê', 'e'),
+		('ù', 'u'), ('û', 'u'), ('ü', 'u'),
+		('ô', 'o'), ('õ', 'o'), ('ö', 'o'),
+		('ç', 'c'), ('î', 'i'), ('ï', 'i')
+	]
+	while accent:
+		a, b = accent.pop()
+		txt = txt.replace(a, b)
+	return txt
 
 class RedirectDebug:
 	"""Send Debug Messages to Civ Engine"""
@@ -86,7 +104,7 @@ def pyPrint(stuff):
 	sys.stdout.write('PY:' + stuff + "\n")
 
 def pyAssert(cond, msg):
-	if cond == False:
+	if not cond:
 		sys.stderr.write(msg)
 	assert(cond, msg)
 
@@ -107,7 +125,7 @@ def findInfoTypeNum(infoGetter, numInfos, typeStr):
 	if typeStr == 'NONE':
 		return -1
 	idx = GC.getInfoTypeForString(typeStr)
-	pyAssert(idx != -1, "Can't find type enum for type tag %s" %(typeStr,))
+	pyAssert(idx != -1, "Can't find type enum for type tag %s" % typeStr)
 	return idx
 
 def combatDetailMessageBuilder(cdUnit, ePlayer, iChange):

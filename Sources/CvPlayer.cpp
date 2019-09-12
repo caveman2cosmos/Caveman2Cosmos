@@ -15050,6 +15050,7 @@ void CvPlayer::updateWarWearinessPercentAnger()
 	int iI;
 
 	iNewWarWearinessPercentAnger = 0;
+	int iEquation = 0;
 
 	if (!isNPC() && !isMinorCiv())
 	{
@@ -15060,7 +15061,10 @@ void CvPlayer::updateWarWearinessPercentAnger()
 			{
 				if (kTeam.isAtWar(getTeam()))
 				{
-					iNewWarWearinessPercentAnger += (GET_TEAM(getTeam()).getWarWeariness((TeamTypes)iI) * std::max(0, 100 + kTeam.getEnemyWarWearinessModifier())) / 10000;
+					iEquation = 0;
+					iEquation = (GET_TEAM(getTeam()).getWarWeariness((TeamTypes)iI) * std::max(0, 100 + kTeam.getEnemyWarWearinessModifier()));
+					iEquation /= 1000000;
+					iNewWarWearinessPercentAnger += iEquation;
 				}
 			}
 		}
@@ -15671,7 +15675,7 @@ int CvPlayer::getAssets() const
 void CvPlayer::changeAssets(int iChange)
 {
 	m_iAssets = (m_iAssets + iChange);
-	FAssert(getAssets() >= 0);
+	FAssertRecalcMsg(getAssets() >= 0, "Player assets value fell below 0");
 }
 
 

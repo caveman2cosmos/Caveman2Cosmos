@@ -2,13 +2,6 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 import CvUtil
-from random import random
-from math import sqrt
-import sys
-
-## For placing Natural Wonders ##
-import NaturalWonders
-## Natural Wonders ##
 
 """
 NOTES ABOUT THE MAP UTILITIES
@@ -1174,16 +1167,16 @@ class TerrainGenerator:
 		elif lat >= self.fPermafrostLatitude:
 			terrainVal = self.terrainPermafrost
 		elif lat >= self.fTundraLatitude:
-			if plot.isHills() and random() < 0.24:
+			if plot.isHills() and 24 > self.mapRand.get(100, "HillTundraRocky"):
 				terrainVal = self.terrainRockyCold
-			elif random() < 0.08:
+			elif 8 > self.mapRand.get(100, "TundraRocky"):
 				terrainVal = self.terrainRockyCold
 			else:
 				terrainVal = self.terrainTundra
 		elif lat >= self.fTaigaLatitude:
-			if plot.isHills() and random() < 0.24:
+			if plot.isHills() and 24 > self.mapRand.get(100, "HillTaigaRocky"):
 				terrainVal = self.terrainRockyCold
-			elif random() < 0.08:
+			elif 8 > self.mapRand.get(100, "TaigaRocky"):
 				terrainVal = self.terrainRockyCold
 			else:
 				terrainVal = self.terrainTaiga
@@ -1194,16 +1187,16 @@ class TerrainGenerator:
 			if rainmapVal < self.saltflatsThreshold:
 				terrainVal = self.terrainSaltFlats
 			elif rainmapVal < self.dunesThreshold:
-				if plot.isHills() and random() < 0.24:
+				if plot.isHills() and 24 > self.mapRand.get(100, "HillDuneRocky"):
 					terrainVal = self.terrainRockyArid
-				elif random() < 0.08:
+				elif 8 > self.mapRand.get(100, "DuneRocky"):
 					terrainVal = self.terrainRockyArid
 				else:
 					terrainVal = self.terrainDunes
 			elif rainmapVal < self.desertThreshold:
-				if plot.isHills() and random() < 0.24:
+				if plot.isHills() and 24 > self.mapRand.get(100, "HillDesertRocky"):
 					terrainVal = self.terrainRockyArid
-				elif random() < 0.08:
+				elif 8 > self.mapRand.get(100, "DesertRocky"):
 					terrainVal = self.terrainRockyArid
 				else:
 					terrainVal = self.terrainDesert
@@ -1912,10 +1905,9 @@ def placeC2CBonuses():
 
 	c2CMapReport("After adjustment")
 
+	## For placing Natural Wonders ##
+	import NaturalWonders
 	NaturalWonders.NaturalWonders().placeNaturalWonders()
-
-
+	## Natural Wonders ##
 
 	# c2CMapReport("After placing Natural Wonders")
-
-

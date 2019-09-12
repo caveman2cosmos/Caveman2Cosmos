@@ -165,8 +165,8 @@ __forceinline float DWtoF( dword n ) { return *(float*)&n; }
 __forceinline float MaxFloat() { return DWtoF(0x7f7fffff); }
 
 
-#ifdef _DEBUG
-//#define	MEMORY_TRACKING
+#ifdef USE_INTERNAL_PROFILER
+#define MEMTRACK
 #endif
 
 void startProfilingDLL(bool longLived);
@@ -188,58 +188,10 @@ void EnableDetailedTrace(bool enable);
 void IFPSetCount(ProfileSample* sample, int count);
 #endif
 
-#ifdef MEMORY_TRACKING
-class CMemoryTrack
-{
-#define	MAX_TRACKED_ALLOCS	1000
-	void*	m_track[MAX_TRACKED_ALLOCS];
-	char*	m_trackName[MAX_TRACKED_ALLOCS];
-	int		m_allocSeq[MAX_TRACKED_ALLOCS];
-	int		m_allocSize[MAX_TRACKED_ALLOCS];
-	int		m_highWater;
-	const char* m_name;
-	bool	m_valid;
-	int		m_seq;
-#define MAX_TRACK_DEPTH		50
-	static	CMemoryTrack*	trackStack[MAX_TRACK_DEPTH];
-	static	int m_trackStackDepth;
-
-public:
-	CMemoryTrack(const char* name, bool valid);
-
-	~CMemoryTrack();
-
-	void NoteAlloc(void* ptr, int size);
-	void NoteDeAlloc(void* ptr);
-
-	static CMemoryTrack* GetCurrent();
-};
-
-class CMemoryTrace
-{
-	SIZE_T				m_start;
-	const char*			m_name;
-
-public:
-	CMemoryTrace(const char* name);
-
-	~CMemoryTrace();
-};
-
-void DumpMemUsage(const char* fn, int line);
-
-#define DUMP_MEMORY_USAGE()	DumpMemUsage(__FUNCTION__,__LINE__);
-#define MEMORY_TRACK()	CMemoryTrack __memoryTrack(__FUNCTION__, true);
-#define MEMORY_TRACK_NAME(x)	CMemoryTrack __memoryTrack(x, true);
-#define MEMORY_TRACK_EXEMPT()	CMemoryTrack __memoryTrackExemption(NULL, false);
-#define MEMORY_TRACE_FUNCTION()	CMemoryTrace __memoryTrace(__FUNCTION__);
-#else
-#define DUMP_MEMORY_USAGE()	
 #define	MEMORY_TRACK()
 #define MEMORY_TRACK_EXEMPT()
 #define MEMORY_TRACE_FUNCTION()
 #define MEMORY_TRACK_NAME(x)
-#endif
 
 // Python
 #ifdef _DEBUG
@@ -261,7 +213,25 @@ void DumpMemUsage(const char* fn, int line);
 #include <boost/python/object.hpp>
 #include <boost/python/def.hpp>
 
+//
+// xercesc for XML loading
+// 
+#include <xercesc/dom/DOM.hpp>
+#include <xercesc/util/XMLString.hpp>
+#include <xercesc/util/PlatformUtils.hpp>
+#include <xercesc/parsers/XercesDOMParser.hpp>
+#include <xercesc/sax/SAXException.hpp>
+#include <xercesc/sax/HandlerBase.hpp>
+#include <xercesc/sax/SAXException.hpp>
+#include <xercesc/sax/HandlerBase.hpp>
+#include <xercesc/framework/MemBufInputSource.hpp>
+#include <xercesc/framework/XMLGrammarPoolImpl.hpp>
+#include <xercesc/framework/Wrapper4InputSource.hpp>
+#include <xercesc/validators/common/Grammar.hpp>
+
 namespace python = boost::python;
+
+#include "CvAllocator.h"
 
 #include "FAssert.h"
 #include "CheckSum.h"

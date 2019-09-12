@@ -3,7 +3,14 @@
 //
 #include "CvGameCoreDLL.h"
 #include "CvMapExternal.h"
-#include "version.h"
+
+static char gVersionString[64] = { 0 };
+
+// Use macro override when available. Version string might not be loaded in time for
+// applying it to the mini-dump so we will use macro version string for releases
+#ifndef C2C_VERSION
+#	define C2C_VERSION gVersionString
+#endif
 
 #define COPY(dst, src, typeName) \
 	{ \
@@ -444,6 +451,7 @@ m_cszModDir("NONE")
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 ,m_bIsInPedia(false)
+,m_iLastTypeID(-1)
 ,m_iActiveLandscapeID(0),
 // uninitialized variables bugfix
 m_iNumPlayableCivilizationInfos(0),
@@ -473,7 +481,7 @@ void CreateMiniDump(EXCEPTION_POINTERS *pep)
 {
 	_TCHAR filename[100];
 
-	_stprintf(filename, _T("MiniDump_%s-%s.dmp"), build_c2c_version, build_git_version);
+	_stprintf(filename, _T("MiniDump-%s.dmp"), C2C_VERSION);
 	/* Open a file to store the minidump. */
 	HANDLE hFile = CreateFile(filename,
 	                          GENERIC_READ | GENERIC_WRITE,
@@ -3822,6 +3830,9 @@ FVariableSystem* cvInternalGlobals::getDefinesVarSystem()
 void cvInternalGlobals::cacheGlobals()
 {
 	OutputDebugString("Caching Globals: Start");
+
+	strcpy(gVersionString, getDefineSTRING("C2C_VERSION"));
+
 /************************************************************************************************/
 /* Mod Globals    Start                          09/13/10                           phungus420  */
 /*                                                                                              */
@@ -5482,6 +5493,19 @@ void cvInternalGlobals::setInfoTypeFromString(const char* szType, int idx)
 	char* strCpy = new char[strlen(szType)+1];
 
 	m_infosMap[strcpy(strCpy, szType)] = idx;
+}
+
+// returns the ID if it exists, otherwise assigns a new ID
+int cvInternalGlobals::getOrCreateInfoTypeForString(const char* szType)
+{
+	int iID = getInfoTypeForString(szType, true);
+	if (iID < 0)
+	{
+		m_iLastTypeID++;
+		iID = m_iLastTypeID;
+		setInfoTypeFromString(szType, iID);
+	}
+	return iID;
 }
 
 void cvInternalGlobals::logInfoTypeMap(const char* tagMsg)

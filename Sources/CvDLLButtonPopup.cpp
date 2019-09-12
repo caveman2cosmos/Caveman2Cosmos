@@ -1388,14 +1388,15 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 		{
 			BuildingTypes building = ((BuildingTypes)(GC.getCivilizationInfo(pCity->getCivilizationType()).getCivilizationBuildings(idx)));
 
-			if (building != NO_BUILDING && building != eProductionBuilding && pCity->canConstruct(building))
+			// Make sure to exclude Palace from the recommended list (it is the only one with isCaptial)!
+			if (building != NO_BUILDING && building != eProductionBuilding && pCity->canConstruct(building) && !GC.getBuildingInfo(building).isCapital())
 			{
 				possibleBuildings.push_back(building);
 			}
 		}
 
 		std::vector<CvCity::ScoredBuilding> bestBuildings;
-		if (pCity->AI_scoreBuildingsFromListThreshold(bestBuildings, possibleBuildings, 0, 50))
+		if (pCity->AI_scoreBuildingsFromListThreshold(bestBuildings, possibleBuildings, 0, 50, 0, true))
 		{
 			// Work out statistics about the spread of the building scores so we can see if any are highly recommended
 			float average;
@@ -1521,6 +1522,7 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 
 		// Sort the projects by turns to complete
 		std::sort(projects.begin(), projects.end());
+
 		// Lets only keep 5 (probably there will never be this many projects)
 		projects.resize(std::min<int>(5, projects.size()));
 

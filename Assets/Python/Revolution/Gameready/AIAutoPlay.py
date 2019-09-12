@@ -31,11 +31,11 @@ class AIAutoPlay :
 
 		self.refortify = True
 		self.bSaveAllDeaths = True
-		self.bEnableNextTurnArray = list()
-		self.bDisableNextTurnArray = list()
-		self.bDisableNextTurnArray2 = list()
-		self.NumberOfTurns = list()
-		self.TurnsToAuto = list()
+		self.bEnableNextTurnArray = []
+		self.bDisableNextTurnArray = []
+		self.bDisableNextTurnArray2 = []
+		self.NumberOfTurns = []
+		self.TurnsToAuto = []
 		for i in range(GC.getMAX_PC_PLAYERS()):
 			self.bEnableNextTurnArray.append(0)
 			self.bDisableNextTurnArray.append(0)

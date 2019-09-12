@@ -104,10 +104,9 @@ CyPlayer* CyGlobalContext::getCyPlayer(int idx)
 		bInit=true;
 	}
 
-	FAssert(idx>=0);
-	FAssert(idx<MAX_PLAYERS);
+	FAssertMsg(idx >= 0 && idx < MAX_PLAYERS, "Player index requested isn't valid");
 
-	return idx < MAX_PLAYERS && idx != NO_PLAYER ? &cyPlayers[idx] : NULL;
+	return idx >= 0 && idx < MAX_PLAYERS ? &cyPlayers[idx] : NULL;
 }
 
 
@@ -758,17 +757,53 @@ bool CyGlobalContext::isCtrlDown() const {
 	return gDLL->ctrlKey();
 }
 
+namespace util {
+	struct EnumWindowsCallbackArgs {
+		EnumWindowsCallbackArgs(DWORD p) : pid(p) { }
+		const DWORD pid;
+		std::vector<HWND> handles;
+	};
+
+	static BOOL CALLBACK EnumWindowsCallback(HWND hnd, LPARAM lParam)
+	{
+		EnumWindowsCallbackArgs* args = (EnumWindowsCallbackArgs*)lParam;
+
+		DWORD windowPID;
+		(void)::GetWindowThreadProcessId(hnd, &windowPID);
+		if (windowPID == args->pid) {
+			args->handles.push_back(hnd);
+		}
+
+		return TRUE;
+	}
+
+	HWND getToplevelWindow()
+	{
+		EnumWindowsCallbackArgs args(::GetCurrentProcessId());
+		if (::EnumWindows(&EnumWindowsCallback, (LPARAM)& args) == FALSE) 
+		{
+			return NULL;
+		}
+		return args.handles[0];
+	}
+}
+
 POINT CyGlobalContext::getCursorPos() const
 {
 	POINT p;
 	// Just assume these work, if they don't then we have bigger problems that mouse pos not being correct
 	::GetCursorPos(&p);
-	::ScreenToClient(::GetActiveWindow(), &p);
+	::ScreenToClient(getToplevelWindow(), &p);
 	return p;
 }
 
 POINT CyGlobalContext::screenToClient(POINT screenPos) const
 {
-	::ScreenToClient(::GetActiveWindow(), &screenPos);
+	::ScreenToClient(getToplevelWindow(), &screenPos);
 	return screenPos;
+}
+
+HWND CyGlobalContext::getToplevelWindow() const
+{
+	return util::getToplevelWindow();
 }

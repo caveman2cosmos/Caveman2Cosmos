@@ -3060,8 +3060,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRAPPING</PrereqTech>
-			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_ANIMAL_HUSBANDRY</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>35</iCost>
 			<!-- Main effects -->
@@ -3089,9 +3087,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MODERNPHYSICS</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ANTIBIOTICS</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -8067,7 +8062,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<!-- Unit effects -->
 			<UnitCombatExtraStrengths>
 				<UnitCombatExtraStrength>
@@ -8209,7 +8204,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>150</iCost>
+			<iCost>300</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
@@ -8431,9 +8426,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_TANNING</PrereqTech>
+			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_CARPENTRY</PrereqTech>
+				<PrereqTech>TECH_TANNING</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_BAMBOO</Bonus>
@@ -9427,6 +9422,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Base Jumping Site -->
@@ -11207,9 +11203,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_EXOCORTEXNETWORKS</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_COMPUTERS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ADVANCED_COMPUTERS</PrereqTech>
+				<PrereqTech>TECH_EXOCORTEXNETWORKS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -11531,7 +11527,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2405</iCost>
+			<iCost>2205</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
@@ -12374,7 +12370,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2005</iCost>
+			<iCost>2205</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12543,7 +12539,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2005</iCost>
+			<iCost>2205</iCost>
 			<!-- Main effects -->
 			<iHappiness>4</iHappiness>
 			<CommerceChanges>
@@ -13807,9 +13803,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CASTE_SYSTEM</PrereqTech>
+			<PrereqTech>TECH_WRITING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_WRITING</PrereqTech>
+				<PrereqTech>TECH_CASTE_SYSTEM</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqReligion>RELIGION_HINDUISM</PrereqReligion>
@@ -17725,7 +17721,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>950</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -20139,7 +20135,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>150</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-3</iCommerce>
@@ -20186,7 +20182,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>178</iCost>
+			<iCost>356</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_HUMANITARIAN</ProductionTraitType>
@@ -20272,7 +20268,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>150</iCost>
+			<iCost>300</iCost>
 			<!-- Defense effects -->
 			<iNoEntryDefenseLevel>30</iNoEntryDefenseLevel>
 			<!-- Other -->
@@ -20324,7 +20320,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>155</iCost>
+			<iCost>310</iCost>
 			<!-- Special Yield and Commerce modifiers -->
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -20446,7 +20442,7 @@
 			</PrereqOrBuildingClasses>
 			<ExtendsBuildingClass>BUILDINGCLASS_CASTLE</ExtendsBuildingClass>
 			<!-- Construction cost -->
-			<iCost>150</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>5</iCommerce>
@@ -22388,7 +22384,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_HERALDRY</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>68</iCost>
+			<iCost>80</iCost>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -23145,7 +23141,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ENLIGHTENMENT</PrereqTech>
+			<PrereqTech>TECH_COMPULSORY_EDUCATION</PrereqTech>
 			<Bonus>BONUS_FURNITURE</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
@@ -23163,7 +23159,7 @@
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
-			<iCost>495</iCost>
+			<iCost>870</iCost>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceModifiers>
@@ -23840,7 +23836,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ECONOMICS</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>150</iCost>
+			<iCost>300</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -27665,9 +27661,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_FERMENTATION</PrereqTech>
+			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_METAL_CASTING</PrereqTech>
+				<PrereqTech>TECH_FERMENTATION</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_WOOD</Bonus>
@@ -28081,9 +28077,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_FISHING</PrereqTech>
+			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
+				<PrereqTech>TECH_FISHING</PrereqTech>
 			</TechTypes>
 			<bWater>1</bWater>
 			<VicinityBonus>BONUS_POULTRY</VicinityBonus>
@@ -29834,9 +29830,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LAWN_SPORTS</PrereqTech>
+			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_REFRIGERATION</PrereqTech>
+				<PrereqTech>TECH_LAWN_SPORTS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqOrBuildingClasses>
@@ -31065,10 +31061,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MELECTRONICS</PrereqTech>
+			<PrereqTech>TECH_ELECTRIC_ARC_WEAPONRY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_GRAPHENE</PrereqTech>
-				<PrereqTech>TECH_ELECTRIC_ARC_WEAPONRY</PrereqTech>
+				<PrereqTech>TECH_MELECTRONICS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -31954,9 +31949,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MMO</PrereqTech>
+			<PrereqTech>TECH_COGNITIVE_ROBOTICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_COGNITIVE_ROBOTICS</PrereqTech>
+				<PrereqTech>TECH_MMO</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -32057,7 +32052,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2005</iCost>
+			<iCost>2205</iCost>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -35594,7 +35589,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2625</iCost>
+			<iCost>2505</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
@@ -36959,7 +36954,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2625</iCost>
+			<iCost>2505</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -37032,7 +37027,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2005</iCost>
+			<iCost>2205</iCost>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>12</iCommerce>
@@ -40152,9 +40147,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_FIREFIGHTING</PrereqTech>
+			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
+				<PrereqTech>TECH_FIREFIGHTING</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
@@ -45624,7 +45619,7 @@
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
-			<iCost>550</iCost>
+			<iCost>555</iCost>
 			<!-- Special Yield and Commerce modifiers -->
 			<GlobalCommerceModifiers>
 				<iCommerce>7</iCommerce>
@@ -51170,9 +51165,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WRITING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			</TechTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_TIMBER</Bonus>
@@ -51183,7 +51175,7 @@
 				<VicinityBonus>BONUS_STONE</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Construction cost -->
-			<iCost>92</iCost>
+			<iCost>176</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -56133,9 +56125,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GAMES</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_BINDING</PrereqTech>
-			</TechTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_ROPE</Bonus>
 			</PrereqBonuses>
@@ -57361,9 +57350,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ADHESIVES</PrereqTech>
+			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
+				<PrereqTech>TECH_ADHESIVES</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_RESIN</Bonus>
 			<PrereqBonuses>
@@ -58048,9 +58037,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
+			<PrereqTech>TECH_LASER</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_LASER</PrereqTech>
+				<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -58611,9 +58600,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LEAD_WORKING</PrereqTech>
+			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_METAL_CASTING</PrereqTech>
+				<PrereqTech>TECH_LEAD_WORKING</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_INGOT_LEAD</Bonus>
@@ -60164,7 +60153,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
-			<iCost>830</iCost>
+			<iCost>870</iCost>
 			<!-- Special Yield and Commerce modifiers -->
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -63483,7 +63472,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2625</iCost>
+			<iCost>2505</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -64474,9 +64463,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
+			<PrereqTech>TECH_HOLOGRAPHICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_HOLOGRAPHICS</PrereqTech>
+				<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -65161,9 +65150,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_SADDLES</Bonus>
 			<BuildingClassNeededs>
@@ -65986,9 +65975,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
@@ -66539,9 +66525,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
+			<PrereqTech>TECH_MILITARY_ROBOTS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MILITARY_ROBOTS</PrereqTech>
+				<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<Bonus>BONUS_ROCKETFUEL</Bonus>
@@ -68114,7 +68100,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>150</iCost>
+			<iCost>300</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
@@ -68150,9 +68136,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_SEMI_AUTOMATIC_WEAPONS</PrereqTech>
+			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
+				<PrereqTech>TECH_SEMI_AUTOMATIC_WEAPONS</PrereqTech>
 			</TechTypes>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -72032,9 +72018,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_NEUROTECHNOLOGY</PrereqTech>
+			<PrereqTech>TECH_NEURAL_NETWORK</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_NEURAL_NETWORK</PrereqTech>
+				<PrereqTech>TECH_NEUROTECHNOLOGY</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -72050,7 +72036,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2105</iCost>
+			<iCost>2205</iCost>
 			<!-- Main effects -->
 			<iHealth>2</iHealth>
 			<CommerceChanges>
@@ -72156,9 +72142,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_JOURNALISM</PrereqTech>
+			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
+				<PrereqTech>TECH_JOURNALISM</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_NEWSPAPERS</Bonus>
 			<BuildingClassNeededs>
@@ -73229,7 +73215,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<VicinityBonus>BONUS_OBSIDIAN</VicinityBonus>
 			<!-- Construction cost -->
-			<iCost>145</iCost>
+			<iCost>146</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -73943,7 +73929,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2405</iCost>
+			<iCost>2205</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -74343,9 +74329,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_MAGLEV</PrereqTech>
-			</TechTypes>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -74455,10 +74438,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ASTEROIDPROBE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CSPACECRAFT</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -78797,9 +78777,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PERSONAL_ADORNMENT</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_PIERCING</PrereqTech>
-			</TechTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_JEWELRY</Bonus>
 				<Bonus>BONUS_BONE</Bonus>
@@ -83506,7 +83483,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2405</iCost>
+			<iCost>2305</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
@@ -84564,7 +84541,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>2625</iCost>
+			<iCost>2505</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -85510,7 +85487,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
-			<iCost>1845</iCost>
+			<iCost>2005</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -86605,9 +86582,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CURRENCY</PrereqTech>
+			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
+				<PrereqTech>TECH_CURRENCY</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bRiver>1</bRiver>
@@ -88299,7 +88276,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>139</iCost>
+			<iCost>160</iCost>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<!-- Special Yield and Commerce modifiers -->
@@ -88957,9 +88934,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SALT_PROCESSING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_MONARCHY</PrereqTech>
-			</TechTypes>
 			<bWater>1</bWater>
 			<PrereqBonuses>
 				<Bonus>BONUS_WARE_COPPER</Bonus>
@@ -88984,7 +88958,7 @@
 				</PrereqNotBuildingClass>
 			</PrereqNotBuildingClasses>
 			<!-- Construction cost -->
-			<iCost>200</iCost>
+			<iCost>153</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -91211,7 +91185,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_LABOR_UNION</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>150</iCost>
+			<iCost>300</iCost>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -92312,6 +92286,7 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Shopping Drone Control Center -->
@@ -92532,10 +92507,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_SCREW_PROPELLER</PrereqTech>
+			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
-				<PrereqTech>TECH_MEDICINE</PrereqTech>
+				<PrereqTech>TECH_SCREW_PROPELLER</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqCorporation>CORPORATION_2</PrereqCorporation>
@@ -92694,9 +92669,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
+			<PrereqTech>TECH_WARSIMULATION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_WARSIMULATION</PrereqTech>
+				<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -95352,9 +95327,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MMO</PrereqTech>
+			<PrereqTech>TECH_COGNITIVE_ROBOTICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_COGNITIVE_ROBOTICS</PrereqTech>
+				<PrereqTech>TECH_MMO</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -97091,7 +97066,7 @@
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
-			<iCost>140</iCost>
+			<iCost>368</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_ORGANIZED</ProductionTraitType>
@@ -97486,7 +97461,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<VicinityBonus>BONUS_STONE</VicinityBonus>
 			<!-- Construction cost -->
-			<iCost>145</iCost>
+			<iCost>146</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -97934,7 +97909,7 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<!-- Construction cost -->
-			<iCost>120</iCost>
+			<iCost>118</iCost>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
@@ -102492,7 +102467,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>130</iCost>
+			<iCost>261</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -103554,7 +103529,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
 			<!-- Construction cost -->
-			<iCost>80</iCost>
+			<iCost>74</iCost>
 			<!-- Special Yield and Commerce modifiers -->
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -104319,6 +104294,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Traffic Cameras -->
@@ -104757,7 +104733,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>50</iCost>
+			<iCost>56</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -105458,9 +105434,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_JOURNALISM</PrereqTech>
+			<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
+				<PrereqTech>TECH_JOURNALISM</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<ConstructCondition>
@@ -106934,7 +106910,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>80</iCost>
+			<iCost>74</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_ORGANIZED</ProductionTraitType>
@@ -111154,10 +111130,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_GBIOLOGY</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_CSPACECRAFT</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<PrereqBonuses>
@@ -111400,7 +111373,7 @@
 				<Bonus>BONUS_FIBERGLASS</Bonus>
 			</PrereqBonuses>
 			<!-- Construction cost -->
-			<iCost>335</iCost>
+			<iCost>535</iCost>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -112591,106 +112564,7 @@
 			</Flavors>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SPY_NETWORK</BuildingClass>
-			<Type>BUILDING_SPY_NETWORK</Type>
-			<NotGameOption>GAMEOPTION_NO_ESPIONAGE</NotGameOption>
-			<Description>TXT_KEY_BUILDING_SPY_NETWORK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SPY_NETWORK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SPY_NETWORK_STRATEGY</Strategy>
-			<ArtDefineTag>ART_DEF_BUILDING_SPY_NETWORK</ArtDefineTag>
-			<!-- Prerequisites -->
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_WRITING</PrereqTech>
-			<!-- Construction -->
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<iCost>-1</iCost>
-			<!-- Main -->
-			<CommerceChanges>
-				<iCommerce>-1</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_PRINTING_PRESS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_ELECTRONICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<!-- Power -->
-			<iEspionageDefense>2</iEspionageDefense>
-			<UnitCombatFreeExperiences>
-				<UnitCombatFreeExperience>
-					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
-					<iExperience>1</iExperience>
-				</UnitCombatFreeExperience>
-				<UnitCombatFreeExperience>
-					<UnitCombatType>UNITCOMBAT_DIPLOMAT</UnitCombatType>
-					<iExperience>1</iExperience>
-				</UnitCombatFreeExperience>
-				<UnitCombatFreeExperience>
-					<UnitCombatType>UNITCOMBAT_LAW_ENFORCEMENT</UnitCombatType>
-					<iExperience>1</iExperience>
-				</UnitCombatFreeExperience>
-			</UnitCombatFreeExperiences>
-			<!-- Specialist -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
-			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<SpecialistCounts>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_SPY</SpecialistType>
-					<iSpecialistCount>1</iSpecialistCount>
-				</SpecialistCount>
-			</SpecialistCounts>
-			<TechSpecialistChanges>
-				<TechSpecialistChange>
-					<PrereqTech>TECH_ELECTRONICS</PrereqTech>
-					<SpecialistCounts>
-						<SpecialistCount>
-							<SpecialistType>SPECIALIST_SPY</SpecialistType>
-							<iSpecialistCount>1</iSpecialistCount>
-						</SpecialistCount>
-					</SpecialistCounts>
-				</TechSpecialistChange>
-			</TechSpecialistChanges>
-			<!-- Other -->
-			<iAsset>8</iAsset>
-			<iPower>8</iPower>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-		</BuildingInfo>
+		</BuildingInfo>		
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_SPY_HIDEOUT</BuildingClass>
 			<Type>BUILDING_SPY_HIDEOUT</Type>
@@ -112865,90 +112739,7 @@
 					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-		</BuildingInfo>
-		<!-- Elemental Myths and Myth Effects -->
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_EARTH_MYTH</BuildingClass>
-			<Type>BUILDING_EARTH_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_EARTH_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EARTH_MYTH</ArtDefineTag>
-			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<FreeBuilding>BUILDINGCLASS_EARTH_MYTH_EFFECT</FreeBuilding>
-			<iCost>-1</iCost>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_EARTH_MYTH_EFFECT</BuildingClassMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_CHEMISTRY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_EARTH_MYTH_EFFECT</BuildingClass>
-			<Type>BUILDING_EARTH_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_EARTH_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EARTH_MYTH_EFFECT</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<iCost>-1</iCost>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<bGraphicalOnly>1</bGraphicalOnly>
-		</BuildingInfo>
+		</BuildingInfo>		
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_FIRE_MYTH</BuildingClass>
 			<Type>BUILDING_FIRE_MYTH</Type>
@@ -113019,23 +112810,7 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FIRE_MYTH_EFFECT</BuildingClass>
-			<Type>BUILDING_FIRE_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_FIRE_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FIRE_MYTH_EFFECT</ArtDefineTag>
-			<FreeStartEra>ERA_MEDIEVAL</FreeStartEra>
-			<bNeverCapture>1</bNeverCapture>
-			<iCost>-1</iCost>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<bGraphicalOnly>1</bGraphicalOnly>
-		</BuildingInfo>
+		</BuildingInfo>		
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_METAL_MYTH</BuildingClass>
 			<Type>BUILDING_METAL_MYTH</Type>
@@ -113113,190 +112888,7 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_METAL_MYTH_EFFECT</BuildingClass>
-			<Type>BUILDING_METAL_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_METAL_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_METAL_MYTH_EFFECT</ArtDefineTag>
-			<FreeStartEra>ERA_MEDIEVAL</FreeStartEra>
-			<bNeverCapture>1</bNeverCapture>
-			<iCost>-1</iCost>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<bGraphicalOnly>1</bGraphicalOnly>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SEA_MYTH</BuildingClass>
-			<Type>BUILDING_SEA_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_SEA_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SEA_MYTH</ArtDefineTag>
-			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<FreeStartEra>ERA_MEDIEVAL</FreeStartEra>
-			<FreeBuilding>BUILDINGCLASS_SEA_MYTH_EFFECT</FreeBuilding>
-			<iCost>-1</iCost>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_SEA_MYTH_EFFECT</BuildingClassMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_CHEMISTRY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SEA_MYTH_EFFECT</BuildingClass>
-			<Type>BUILDING_SEA_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_SEA_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SEA_MYTH_EFFECT</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<iCost>-1</iCost>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<bGraphicalOnly>1</bGraphicalOnly>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SKY_MYTH</BuildingClass>
-			<Type>BUILDING_SKY_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_SKY_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SKY_MYTH</ArtDefineTag>
-			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<FreeBuilding>BUILDINGCLASS_SKY_MYTH_EFFECT</FreeBuilding>
-			<iCost>-1</iCost>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_SKY_MYTH_EFFECT</BuildingClassMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_CHEMISTRY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SKY_MYTH_EFFECT</BuildingClass>
-			<Type>BUILDING_SKY_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_SKY_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SKY_MYTH_EFFECT</ArtDefineTag>
-			<FreeStartEra>ERA_MEDIEVAL</FreeStartEra>
-			<bNeverCapture>1</bNeverCapture>
-			<iCost>-1</iCost>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<bGraphicalOnly>1</bGraphicalOnly>
-		</BuildingInfo>
+		</BuildingInfo>		
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_STONE_MYTH</BuildingClass>
 			<Type>BUILDING_STONE_MYTH</Type>
@@ -113367,175 +112959,7 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_STONE_MYTH_EFFECT</BuildingClass>
-			<Type>BUILDING_STONE_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_STONE_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_STONE_MYTH_EFFECT</ArtDefineTag>
-			<FreeStartEra>ERA_MEDIEVAL</FreeStartEra>
-			<bNeverCapture>1</bNeverCapture>
-			<iCost>-1</iCost>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<bGraphicalOnly>1</bGraphicalOnly>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRAGON_MYTH</BuildingClass>
-			<Type>BUILDING_DRAGON_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_DRAGON_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRAGON_MYTH</ArtDefineTag>
-			<iCost>-1</iCost>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_EARTH_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_FIRE_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MERMAID_MYTH</BuildingClass>
-			<Type>BUILDING_MERMAID_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_MERMAID_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MERMAID_MYTH</ArtDefineTag>
-			<bWater>1</bWater>
-			<iCost>-1</iCost>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SEA_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<UnitCombatFreeExperiences>
-				<UnitCombatFreeExperience>
-					<UnitCombatType>UNITCOMBAT_ENTERTAINER</UnitCombatType>
-					<iExperience>1</iExperience>
-				</UnitCombatFreeExperience>
-			</UnitCombatFreeExperiences>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PHOENIX_MYTH</BuildingClass>
-			<Type>BUILDING_PHOENIX_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_PHOENIX_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PHOENIX_MYTH</ArtDefineTag>
-			<iCost>-1</iCost>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
-			<iHappiness>1</iHappiness>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_FIRE_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SKY_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_UNICORN_MYTH</BuildingClass>
-			<Type>BUILDING_UNICORN_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_UNICORN_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_UNICORN_MYTH</ArtDefineTag>
-			<iCost>-1</iCost>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<UnitCombatFreeExperiences>
-				<UnitCombatFreeExperience>
-					<UnitCombatType>UNITCOMBAT_HEALTH_CARE</UnitCombatType>
-					<iExperience>1</iExperience>
-				</UnitCombatFreeExperience>
-			</UnitCombatFreeExperiences>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-		</BuildingInfo>
+		</BuildingInfo>		
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_NEGOTIATOR_HUT</BuildingClass>
 			<Type>BUILDING_NEGOTIATOR_HUT</Type>
@@ -114446,7 +113870,7 @@
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
-			<iCost>100</iCost>
+			<iCost>168</iCost>
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_INDUSTRIOUS</ProductionTraitType>
@@ -114491,235 +113915,7 @@
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
 			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_ALUMINUM_NEAR</BuildingClass>
-			<Type>BUILDING_AUTOBUILD_ALUMINUM_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_ALUMINUM_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_ALUMINUM_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_BAUXITE</RawVicinityBonus>
-			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<!-- Other -->
-            <bAutoBuild>1</bAutoBuild>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_COPPER_NEAR</BuildingClass>
-			<Type>BUILDING_AUTOBUILD_COPPER_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_COPPER_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_COPPER_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_COPPER</RawVicinityBonus>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<!-- Other -->
-            <bAutoBuild>1</bAutoBuild>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_GOLD_NEAR</BuildingClass>
-			<Type>BUILDING_AUTOBUILD_GOLD_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_GOLD_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_GOLD_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_GOLD</RawVicinityBonus>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<!-- Other -->
-            <bAutoBuild>1</bAutoBuild>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_IRON_NEAR</BuildingClass>
-			<Type>BUILDING_AUTOBUILD_IRON_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_IRON_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_IRON_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_IRON</RawVicinityBonus>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<!-- Other -->
-            <bAutoBuild>1</bAutoBuild>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_LEAD_NEAR</BuildingClass>
-			<Type>BUILDING_AUTOBUILD_LEAD_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_LEAD_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_LEAD_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_LEAD</RawVicinityBonus>
-			<PrereqTech>TECH_MINING</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<!-- Other -->
-            <bAutoBuild>1</bAutoBuild>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_PLATINUM_NEAR</BuildingClass>
-			<Type>BUILDING_AUTOBUILD_PLATINUM_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_PLATINUM_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_PLATINUM_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_PLATINUM</RawVicinityBonus>
-			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<!-- Other -->
-            <bAutoBuild>1</bAutoBuild>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_SILVER_NEAR</BuildingClass>
-			<Type>BUILDING_AUTOBUILD_SILVER_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_SILVER_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_SILVER_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_SILVER</RawVicinityBonus>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<!-- Other -->
-            <bAutoBuild>1</bAutoBuild>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_TIN_NEAR</BuildingClass>
-			<Type>BUILDING_AUTOBUILD_TIN_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_TIN_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_TIN_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_TIN</RawVicinityBonus>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<!-- Other -->
-            <bAutoBuild>1</bAutoBuild>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_TITANIUM_NEAR</BuildingClass>
-			<Type>BUILDING_AUTOBUILD_TITANIUM_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_TITANIUM_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_TITANIUM_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_TITANIUM</RawVicinityBonus>
-			<PrereqTech>TECH_ADVANCED_METALLURGY</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<!-- Other -->
-			<bAutoBuild>1</bAutoBuild>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_CAMEL_NEAR</BuildingClass>
-			<Type>BUILDING_AUTOBUILD_CAMEL_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_CAMEL_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_ANIMAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_CAMEL_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_CAMEL</RawVicinityBonus>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<!-- Other -->
-			<bAutoBuild>1</bAutoBuild>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_ELEPHANT_NEAR</BuildingClass>
-			<Type>BUILDING_AUTOBUILD_ELEPHANT_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_ELEPHANT_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_ANIMAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_ELEPHANT_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<!-- Prerequisites -->
-			<RawVicinityBonus>BONUS_ELEPHANT</RawVicinityBonus>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<!-- Other -->
-            <bAutoBuild>1</bAutoBuild>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_HORSE_NEAR</BuildingClass>
-			<Type>BUILDING_AUTOBUILD_HORSE_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_HORSE_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_ANIMAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_HORSE_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_HORSE</RawVicinityBonus>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<!-- Other -->
-            <bAutoBuild>1</bAutoBuild>
-		</BuildingInfo>
+		</BuildingInfo>		
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_BURIAL_TRADITION_CAVE</BuildingClass>
 			<Type>BUILDING_BURIAL_TRADITION_CAVE</Type>
@@ -115358,306 +114554,7 @@
 					<iAmountPerTurn>-8</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_WV_SLAVERY</BuildingClass>
-			<Type>BUILDING_WV_SLAVERY</Type>
-			<EnabledCivilizationTypes>
-				<EnabledCivilizationType>
-					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
-				</EnabledCivilizationType>
-			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_WV_SLAVERY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WV_SLAVERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WV_SLAVERY_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_WV_SLAVERY_HELP</Help>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WV_SLAVERY</ArtDefineTag>
-			<PrereqTech>TECH_SLAVERY</PrereqTech>
-			<FreeBuilding>BUILDINGCLASS_SLAVERY</FreeBuilding>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
-			<Hurrys>
-				<Hurry>
-					<HurryType>HURRY_POPULATION</HurryType>
-					<bHurry>1</bHurry>
-				</Hurry>
-			</Hurrys>
-			<iNationalCaptureProbabilityModifier>10</iNationalCaptureProbabilityModifier>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_STREET_CLEANER</BuildingClassType>
-					<iProductionModifier>-50</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_TREADMILL_CRANE</BuildingClassType>
-					<iProductionModifier>-50</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_WATERMILL</BuildingClassType>
-					<iProductionModifier>-50</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_WINDMILL</BuildingClassType>
-					<iProductionModifier>-50</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_DONKEY_MILL</BuildingClassType>
-					<iProductionModifier>-50</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_LUMBERMILL</BuildingClassType>
-					<iProductionModifier>-50</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_MODERN_MILL</BuildingClassType>
-					<iProductionModifier>-50</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_OXEN_MILL</BuildingClassType>
-					<iProductionModifier>-50</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_STEEL_MILL</BuildingClassType>
-					<iProductionModifier>-50</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SLAVERY</BuildingClass>
-			<Type>BUILDING_SLAVERY</Type>
-			<EnabledCivilizationTypes>
-				<EnabledCivilizationType>
-					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
-				</EnabledCivilizationType>
-			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_SLAVERY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WV_SLAVERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WV_SLAVERY_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WV_SLAVERY</ArtDefineTag>
-			<ProductionTrait>
-				<ProductionTraitType>TRAIT_PROGRESSIST</ProductionTraitType>
-				<iProductionTrait>50</iProductionTrait>
-			</ProductionTrait>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<SpecialistCounts>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
-					<iSpecialistCount>3</iSpecialistCount>
-				</SpecialistCount>
-			</SpecialistCounts>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_HUMANISM</TechType>
-					<iModifier>-5</iModifier>
-				</TechHappinessType>
-				<TechHappinessType>
-					<TechType>TECH_ENLIGHTENMENT</TechType>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-				<TechHappinessType>
-					<TechType>TECH_EMANCIPATION</TechType>
-					<iModifier>-2</iModifier>
-				</TechHappinessType>
-				<TechHappinessType>
-					<TechType>TECH_LABOR_UNION</TechType>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-				<TechHappinessType>
-					<TechType>TECH_UTOPIA</TechType>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-				<TechHappinessType>
-					<TechType>TECH_MINORITY_RIGHTS</TechType>
-					<iModifier>-5</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
-			<TechCommerceModifiers>
-				<TechCommerceModifier>
-					<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
-						<iCommerce>-5</iCommerce>
-					</TechCommerce>
-				</TechCommerceModifier>
-				<TechCommerceModifier>
-					<PrereqTech>TECH_INVENTION</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
-					</TechCommerce>
-				</TechCommerceModifier>
-				<TechCommerceModifier>
-					<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
-						<iCommerce>-5</iCommerce>
-					</TechCommerce>
-				</TechCommerceModifier>
-				<TechCommerceModifier>
-					<PrereqTech>TECH_HUMANISM</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-10</iCommerce>
-					</TechCommerce>
-				</TechCommerceModifier>
-				<TechCommerceModifier>
-					<PrereqTech>TECH_SOCIAL_CONTRACT</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
-					</TechCommerce>
-				</TechCommerceModifier>
-				<TechCommerceModifier>
-					<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
-					</TechCommerce>
-				</TechCommerceModifier>
-				<TechCommerceModifier>
-					<PrereqTech>TECH_ENLIGHTENMENT</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
-					</TechCommerce>
-				</TechCommerceModifier>
-				<TechCommerceModifier>
-					<PrereqTech>TECH_LIBERALISM</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
-					</TechCommerce>
-				</TechCommerceModifier>
-				<TechCommerceModifier>
-					<PrereqTech>TECH_ECONOMICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
-					</TechCommerce>
-				</TechCommerceModifier>
-				<TechCommerceModifier>
-					<PrereqTech>TECH_ROMANTICISM</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
-						<iCommerce>-5</iCommerce>
-					</TechCommerce>
-				</TechCommerceModifier>
-				<TechCommerceModifier>
-					<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-15</iCommerce>
-						<iCommerce>-5</iCommerce>
-					</TechCommerce>
-				</TechCommerceModifier>
-				<TechCommerceModifier>
-					<PrereqTech>TECH_WOMENS_SUFFRAGE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
-						<iCommerce>-10</iCommerce>
-					</TechCommerce>
-				</TechCommerceModifier>
-				<TechCommerceModifier>
-					<PrereqTech>TECH_MANAGEMENT</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-10</iCommerce>
-					</TechCommerce>
-				</TechCommerceModifier>
-				<TechCommerceModifier>
-					<PrereqTech>TECH_ABSTRACT_MATHEMATICS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-10</iCommerce>
-					</TechCommerce>
-				</TechCommerceModifier>
-				<TechCommerceModifier>
-					<PrereqTech>TECH_CONSUMERISM</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
-					</TechCommerce>
-				</TechCommerceModifier>
-				<TechCommerceModifier>
-					<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
-						<iCommerce>-10</iCommerce>
-					</TechCommerce>
-				</TechCommerceModifier>
-				<TechCommerceModifier>
-					<PrereqTech>TECH_MINORITY_RIGHTS</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-5</iCommerce>
-						<iCommerce>-5</iCommerce>
-					</TechCommerce>
-				</TechCommerceModifier>
-				<TechCommerceModifier>
-					<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-25</iCommerce>
-					</TechCommerce>
-				</TechCommerceModifier>
-			</TechCommerceModifiers>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
-					<iProductionModifier>-100</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
-		</BuildingInfo>
+		</BuildingInfo>		
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_SLAVE_MARKET</BuildingClass>
 			<Type>BUILDING_SLAVE_MARKET</Type>
@@ -115716,514 +114613,6 @@
 				</Flavor>
 			</Flavors>
 			<iPrereqPopulation>6</iPrereqPopulation>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SLAVERY_BAD_ZORO_I</BuildingClass>
-			<Type>BUILDING_SLAVERY_BAD_ZORO_I</Type>
-			<Description>TXT_KEY_BUILDING_SLAVERY_BAD_ZORO_I</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SLAVERY_ZORO_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SLAVERY_BAD_ZORO</ArtDefineTag>
-			<ReligionType>RELIGION_ZOROASTRIANISM</ReligionType>
-			<PrereqReligion>RELIGION_ZOROASTRIANISM</PrereqReligion>
-			<bNeverCapture>1</bNeverCapture>
-			<iHappiness>-1</iHappiness>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SLAVERY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<bAutoBuild>1</bAutoBuild>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SLAVERY_BAD_ZORO_II</BuildingClass>
-			<Type>BUILDING_SLAVERY_BAD_ZORO_II</Type>
-			<Description>TXT_KEY_BUILDING_SLAVERY_BAD_ZORO_II</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SLAVERY_ZORO_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SLAVERY_BAD_ZORO</ArtDefineTag>
-			<StateReligion>RELIGION_ZOROASTRIANISM</StateReligion>
-			<bNeverCapture>1</bNeverCapture>
-			<iHappiness>-3</iHappiness>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SLAVERY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<bAutoBuild>1</bAutoBuild>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SLAVE_COMPOUND</BuildingClass>
-			<Type>BUILDING_SLAVE_COMPOUND</Type>
-			<EnabledCivilizationTypes>
-				<EnabledCivilizationType>
-					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
-				</EnabledCivilizationType>
-			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SLAVE_COMPOUND_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_SLAVE_COMPOUND_HELP</Help>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_MARKET</ArtDefineTag>
-			<PrereqTech>TECH_SLAVERY</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<iMilitaryProductionModifier>-5</iMilitaryProductionModifier>
-			<iAsset>3</iAsset>
-			<YieldModifiers>
-				<iYield>0</iYield>
-				<iYield>5</iYield>
-			</YieldModifiers>
-			<SpecialistCounts>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
-					<iSpecialistCount>1</iSpecialistCount>
-				</SpecialistCount>
-			</SpecialistCounts>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SLAVERY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SLAVE_COMPOUND_MILITARY_SUPPORT</BuildingClass>
-			<Type>BUILDING_SLAVE_COMPOUND_MILITARY_SUPPORT</Type>
-			<EnabledCivilizationTypes>
-				<EnabledCivilizationType>
-					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
-				</EnabledCivilizationType>
-			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_MILITARY_SUPPORT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SLAVE_COMPOUND_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_SLAVE_COMPOUND_HELP</Help>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_MILITARY</ArtDefineTag>
-			<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<SpecialistCounts>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
-					<iSpecialistCount>1</iSpecialistCount>
-				</SpecialistCount>
-			</SpecialistCounts>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GARRISON</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SLAVE_COMPOUND</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SLAVE_COMPOUND_ENTERTAINMENT</BuildingClass>
-			<Type>BUILDING_SLAVE_COMPOUND_ENTERTAINMENT</Type>
-			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_ENTERTAINMENT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SLAVE_COMPOUND_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_SLAVE_COMPOUND_HELP</Help>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_ENTERTAINMENT</ArtDefineTag>
-			<PrereqTech>TECH_SLAVERY</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<iHappiness>1</iHappiness>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>2</iCommerce>
-			</CommerceChanges>
-			<SpecialistCounts>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
-					<iSpecialistCount>1</iSpecialistCount>
-				</SpecialistCount>
-			</SpecialistCounts>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_STORYTELLERS_HUT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_DANCE_HUT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_DANCE_HALL</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MUSIC_HUT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MUSICIAN_SCHOOL</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ACTORS_SCHOOL</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ARENA</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SLAVE_COMPOUND</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SLAVE_COMPOUND_FOOD</BuildingClass>
-			<Type>BUILDING_SLAVE_COMPOUND_FOOD</Type>
-			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_FOOD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SLAVE_COMPOUND_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_SLAVE_COMPOUND_HELP</Help>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_FOOD</ArtDefineTag>
-			<PrereqTech>TECH_SLAVERY</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<YieldChanges>
-				<iYield>2</iYield>
-			</YieldChanges>
-			<SpecialistCounts>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
-					<iSpecialistCount>1</iSpecialistCount>
-				</SpecialistCount>
-			</SpecialistCounts>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SLAVE_COMPOUND</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SLAVE_COMPOUND_PRODUCTION</BuildingClass>
-			<Type>BUILDING_SLAVE_COMPOUND_PRODUCTION</Type>
-			<EnabledCivilizationTypes>
-				<EnabledCivilizationType>
-					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
-				</EnabledCivilizationType>
-			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_PRODUCTION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SLAVE_COMPOUND_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_SLAVE_COMPOUND_HELP</Help>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_PRODUCTION</ArtDefineTag>
-			<PrereqTech>TECH_SLAVERY</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>2</iYield>
-			</YieldChanges>
-			<SpecialistCounts>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
-					<iSpecialistCount>1</iSpecialistCount>
-				</SpecialistCount>
-			</SpecialistCounts>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SLAVE_COMPOUND</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SLAVE_COMPOUND_COMMERCE</BuildingClass>
-			<Type>BUILDING_SLAVE_COMPOUND_COMMERCE</Type>
-			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_COMMERCE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SLAVE_COMPOUND_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_SLAVE_COMPOUND_HELP</Help>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_COMMERCE</ArtDefineTag>
-			<PrereqTech>TECH_TRADE</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
-				<iYield>2</iYield>
-			</YieldChanges>
-			<SpecialistCounts>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
-					<iSpecialistCount>1</iSpecialistCount>
-				</SpecialistCount>
-			</SpecialistCounts>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SLAVE_COMPOUND</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SLAVE_COMPOUND_SANITATION</BuildingClass>
-			<Type>BUILDING_SLAVE_COMPOUND_SANITATION</Type>
-			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_SANITATION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SLAVE_COMPOUND_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_SLAVE_COMPOUND_HELP</Help>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_SANITATION</ArtDefineTag>
-			<PrereqTech>TECH_SANITATION</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<iHealth>1</iHealth>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SLAVE_COMPOUND</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<SpecialistCounts>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
-					<iSpecialistCount>1</iSpecialistCount>
-				</SpecialistCount>
-			</SpecialistCounts>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>-2</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SLAVE_COMPOUND_CRIME_PREVENTION</BuildingClass>
-			<Type>BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</Type>
-			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SLAVE_COMPOUND_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_SLAVE_COMPOUND_HELP</Help>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</ArtDefineTag>
-			<PrereqTech>TECH_SANITATION</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SENTRY_POST</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_TTWATCH_TOWER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_TOWN_PATROL</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SHERIFFS_OFFICE</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_POLICE_STATION</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_POLICE_PRECINCT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SLAVE_COMPOUND</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<SpecialistCounts>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
-					<iSpecialistCount>1</iSpecialistCount>
-				</SpecialistCount>
-			</SpecialistCounts>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-2</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-		</BuildingInfo>
+		</BuildingInfo>		
 	</BuildingInfos>
 </Civ4BuildingInfos>

@@ -21,10 +21,19 @@ if "%1"=="build" (
     nmake fastdep
     nmake precompile
     ..\Build\deps\jom\jom build
+    nmake stage
 )
 if "%1"=="rebuild" (
     echo Rebuilding DLL in %2 configuration ...
     nmake clean
+    nmake source_list
+    nmake fastdep
+    nmake precompile
+    ..\Build\deps\jom\jom build
+    nmake stage
+)
+if "%1"=="autobuild" (
+    echo Autobuilding DLL in %2 configuration ...
     nmake source_list
     nmake fastdep
     nmake precompile

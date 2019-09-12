@@ -191,119 +191,43 @@ class BuildUnitName(AbstractBuildUnitName):
 
 		eventManager.addEventHandler("kbdEvent", self.onKbdEvent)
 		eventManager.addEventHandler("unitBuilt", self.onUnitBuilt)
-		eventManager.addEventHandler("cityBuilt", self.onCityBuilt)
-		eventManager.addEventHandler("goodyReceived", self.onGoodyReceived)
 
 		self.eventMgr = eventManager
 		self.config = None
 
 	def onKbdEvent(self, argsList):
 		eventType,key,mx,my,px,py = argsList
-		if ( eventType == self.eventMgr.EventKeyDown ):
-			if (int(key) == int(InputTypes.KB_N)
-			and self.eventMgr.bCtrl
-			and self.eventMgr.bAlt):
-
+		if eventType == self.eventMgr.EventKeyDown:
+			if key == InputTypes.KB_N and self.eventMgr.bCtrl and self.eventMgr.bAlt:
 				if UnitNamingOpt.isEnabled():
 					self.eventMgr.beginEvent(RENAME_EVENT_ID)
 
 		return 0
 
 	def onUnitBuilt(self, argsList):
-		'Unit Completed'
-
-		pCity = argsList[0]
 		pUnit = argsList[1]
 		iPlayer = pUnit.getOwner()
+
+		if not pUnit or pUnit.isNone():
+			return
+		if iPlayer != gc.getGame().getActivePlayer() or not UnitNamingOpt.isEnabled():
+			# Not having the same name for a unit will cause OOS issues if unit names are considered part of the game-state.
+			# Remove "iPlayer != gc.getGame().getActivePlayer()" to fix it if that's the case.
+			return
+
+		pCity = argsList[0]
 		pPlayer = gc.getPlayer(iPlayer)
 		lUnitReName = UnitReName()
-
-		#BUGPrint("onUnitBuild-A")
-
-		if (pUnit == None
-		or pUnit.isNone()):
-			return
-
-		#BUGPrint("onUnitBuild-B %s %s %s" % (iPlayer, CyGame().getActivePlayer(), UnitNamingOpt.isEnabled()))
-
-		if not (iPlayer == CyGame().getActivePlayer()
-		and UnitNamingOpt.isEnabled()):
-			return
-
-		#BUGPrint("onUnitBuild-C")
 
 		zsEra = gc.getEraInfo(pPlayer.getCurrentEra()).getType()
 		zsUnitCombat = lUnitReName.getUnitCombat(pUnit)
 		zsUnitClass = gc.getUnitClassInfo(pUnit.getUnitClassType()).getType()
 
-		#BUGPrint("ERA(%s)" % (zsEra))
-		#BUGPrint("Combat(%s)" % (zsUnitCombat))
-		#BUGPrint("Class(%s)" % (zsUnitClass))
-
 		zsUnitNameConv = lUnitReName.getUnitNameConvFromIniFile(zsEra, zsUnitClass, zsUnitCombat)
 		zsUnitName = lUnitReName.getUnitName(zsUnitNameConv, pUnit, pCity, True)
 
-		#BUGPrint("onUnitBuild-D")
-
-		if not (zsUnitName == ""):
+		if zsUnitName:
 			pUnit.setName(zsUnitName)
-
-		#BUGPrint("onUnitBuild-E")
-
-		return
-
-	def onCityBuilt(self, argsList):
-		"""
-		If this is the first city founded, apply naming to each unit without a name.
-		"""
-		pCity = argsList[0]
-		pPlayer = gc.getPlayer(pCity.getOwner())
-		if not (pCity.isCapital()
-		and pPlayer.getNumCities() == 1
-		and pCity.getOwner() == PlayerUtil.getActivePlayerID()
-		and UnitNamingOpt.isEnabled()):
-			return
-		lUnitReName = UnitReName()
-		zsEra = gc.getEraInfo(pPlayer.getCurrentEra()).getType()
-		for pUnit in PlayerUtil.playerUnits(pPlayer):
-			if pUnit.getNameNoDesc() == "":
-				zsUnitCombat = lUnitReName.getUnitCombat(pUnit)
-				zsUnitClass = gc.getUnitClassInfo(pUnit.getUnitClassType()).getType()
-				zsUnitNameConv = lUnitReName.getUnitNameConvFromIniFile(zsEra, zsUnitClass, zsUnitCombat)
-				zsUnitName = lUnitReName.getUnitName(zsUnitNameConv, pUnit, pCity, True)
-				if zsUnitName:
-					pUnit.setName(zsUnitName)
-
-	def onGoodyReceived(self, argsList):
-		"""
-		Name free units from goody huts.
-		"""
-		iPlayer, pPlot, pUnit, iGoodyType = argsList
-		goody = gc.getGoodyInfo(iGoodyType)
-		if goody.getUnitClassType() != -1:
-			if iPlayer == PlayerUtil.getActivePlayerID() and UnitNamingOpt.isEnabled():
-				pPlayer = gc.getPlayer(iPlayer)
-				pCity = pPlayer.getCapitalCity()
-				if pCity is None or pCity.isNone():
-					class EmpireAsCity:
-						def __init__(self, name):
-							self.name = name
-						def getName(self):
-							return self.name
-					pCity = EmpireAsCity(pPlayer.getCivilizationAdjective(0))
-				lUnitReName = UnitReName()
-				zsEra = gc.getEraInfo(pPlayer.getCurrentEra()).getType()
-				for i in range(pPlot.getNumUnits()):
-					pUnit = pPlot.getUnit(i)
-					if pUnit and not pUnit.isNone() and pUnit.getOwner() == iPlayer:
-						if pUnit.getNameNoDesc() == "":
-							zsUnitCombat = lUnitReName.getUnitCombat(pUnit)
-							zsUnitClass = gc.getUnitClassInfo(pUnit.getUnitClassType()).getType()
-							zsUnitNameConv = lUnitReName.getUnitNameConvFromIniFile(zsEra, zsUnitClass, zsUnitCombat)
-							zsUnitName = lUnitReName.getUnitName(zsUnitNameConv, pUnit, pCity, True)
-							if zsUnitName:
-								pUnit.setName(zsUnitName)
-
 
 
 class UnitReName(object):

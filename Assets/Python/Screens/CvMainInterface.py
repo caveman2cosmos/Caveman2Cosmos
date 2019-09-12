@@ -816,7 +816,7 @@ class CvMainInterface:
 		x = xRes - 156
 		y = 48
 		iFoV = self.iField_View
-		screen.addSlider("FoVSlider", x, y, 132, 12, iFoV, 1, 100, eWidGen, 0, 0, False)
+		screen.addSlider("FoVSlider", x, y, 132, 12, iFoV, 20, 80, eWidGen, 0, 0, False)
 		screen.hide("FoVSlider")
 		self.iX_FoVSlider = x
 		self.iY_FoVSlider = y
@@ -1354,6 +1354,11 @@ class CvMainInterface:
 				else:
 					screen.setHelpTextArea(self.xMidL, FontTypes.GAME_FONT, 4, self.yRes - 8, 0, False, "", True, False, 1<<0, 0)
 					self.bHelpTextFullY = True
+				if self.bSetStartZoom:
+					# CAMERA_START_DISTANCE also defines camera zoom where music is turned on/off, we want that to be quite low and the start zoom to be higher.
+					# Max zoom change from game to game, so the percentage zoom is relative to the initial zoom from CAMERA_START_DISTANCE
+					CyCamera().SetZoom(CyCamera().GetZoom() * 1.9)
+					self.bSetStartZoom = False
 
 			# This will update the flag widget for SP hotseat and debugging
 			IFT = CyIF.getShowInterface()
@@ -5255,16 +5260,17 @@ class CvMainInterface:
 			elif BASE == "PlotList":
 				if TYPE in ("Button", "Health"):
 					CyUnit = self.aPlotListList[ID][0]
-					if TYPE == "Button":
-						szTxt = CyGameTextMgr().getSpecificUnitHelp(CyUnit, False, False)
-						x = self.xRes / 4
-						y = self.yPlotListTT
-						self.dataTT = [bCtrl, bShift, bAlt, "spcfc", CyUnit]
-					elif TYPE == "Health":
-						szTxt = "HP: %d/%d" %(CyUnit.currHitPoints(), CyUnit.maxHitPoints())
-						x = -1
-						y = -1
-					self.updateTooltip(screen, szTxt, x, y)
+					if not CyUnit.isDead():
+						if TYPE == "Button":
+							szTxt = CyGameTextMgr().getSpecificUnitHelp(CyUnit, False, False)
+							x = self.xRes / 4
+							y = self.yPlotListTT
+							self.dataTT = [bCtrl, bShift, bAlt, "spcfc", CyUnit]
+						elif TYPE == "Health":
+							szTxt = "HP: %d/%d" %(CyUnit.currHitPoints(), CyUnit.maxHitPoints())
+							x = -1
+							y = -1
+						self.updateTooltip(screen, szTxt, x, y)
 
 			elif BASE == "BldgList":
 				if TYPE == "Demolish":

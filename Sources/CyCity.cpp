@@ -3278,3 +3278,8 @@ void CyCity::removeSpecialistBan(int eSpecialist)
 	if (m_pCity)
 		m_pCity->removeSpecialistBan((SpecialistTypes)eSpecialist);
 }
+
+bool CyCity::isEventOccured(int eEvent) const
+{
+	return m_pCity ? m_pCity->isEventOccured((EventTypes)eEvent) : false;
+}

@@ -1,0 +1,7 @@
+dll: sources/*
+
+tool: tools/*
+
+xml: assets/*.xml
+
+python: assets/python/*

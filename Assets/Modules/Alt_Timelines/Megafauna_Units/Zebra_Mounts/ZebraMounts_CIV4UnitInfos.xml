@@ -94,6 +94,9 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_ZEBRA_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+			</TechTypes>
 			<iCost>235</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>8</iCombat>
@@ -252,6 +255,9 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_ZEBRA_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+			</TechTypes>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -436,6 +442,9 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_ZEBRA_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_CHARIOTRY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+			</TechTypes>
 			<iCost>130</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>4</iCombat>
@@ -562,6 +571,9 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_ZEBRA_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_CAVALRY_TACTICS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+			</TechTypes>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -743,6 +755,9 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_ZEBRA_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+			</TechTypes>
 			<PrereqBonuses>
 				<BonusType>BONUS_WARE_IRON</BonusType>
 			</PrereqBonuses>

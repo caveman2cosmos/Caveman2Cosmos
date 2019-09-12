@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+  <Type Name="CvUnitInfo" Priority="Low">
+    <DisplayString>{gGlobals->m_paUnitClassInfo[m_iUnitClassType]->m_szType}</DisplayString>
+  </Type>
+  <!--
+  Some useful globals:
+  CvGame: gGlobals->m_game
+  Current map: gGlobals->m_maps[gGlobals->m_game->m_eCurrentMap]
+  Current viewport: gGlobals->m_maps[gGlobals->m_game->m_eCurrentMap]->m_viewports[m_iCurrentViewportIndex]
+  Plot at xy: gGlobals->m_maps[gGlobals->m_game->m_eCurrentMap]->m_pMapPlots[Y*m_iGridWidth+X]
+  
+  -->
+  <Type Name="CvPlayer">
+    <DisplayString Condition="m_szName._Mysize != 0">{{ {m_szName} [units = {m_units} cities = {m_cities}] }}</DisplayString>
+    <DisplayString Condition="m_szName._Mysize == 0 &amp;&amp; gGlobals->m_initCore->m_aszLeaderName[m_eID]._Mysize != 0">{{ {gGlobals->m_initCore->m_aszLeaderName[m_eID]} [units = {m_units} cities = {m_cities}] }}</DisplayString>
+    <DisplayString>{{ {gGlobals->m_paLeaderHeadInfo[gGlobals->m_initCore->m_aeLeader[m_eID]]->m_aCachedDescriptions[0]} [units = {m_units} cities = {m_cities}] }}</DisplayString>
+    <Expand>
+      <Item Name="[units]" ExcludeView="simple">m_units</Item>
+      <Item Name="[cities]" ExcludeView="simple">m_cities</Item>
+     </Expand>
+  </Type>
+  <Type Name="CvInfoBase">
+    <DisplayString>{{ {m_szType} }}</DisplayString>
+    <Expand>
+      <Item Name="[type]" ExcludeView="simple">m_szType</Item>
+    </Expand>
+  </Type>
+  <Type Name="CvUnit">
+    <DisplayString>[owner = {CvPlayerAI::m_aPlayers[m_eOwner]}, class = {gGlobals->m_paUnitClassInfo[m_pUnitInfo->m_iUnitClassType]->m_szType} ({m_pUnitInfo->m_iUnitClassType}), type = {gGlobals->m_paUnitInfo[m_eUnitType]->m_szType} ({m_eUnitType})]</DisplayString>
+    <Expand>
+      <Item Name="[owner]" ExcludeView="simple">CvPlayerAI::m_aPlayers[m_eOwner]</Item>
+      <Item Name="[id]" ExcludeView="simple">m_iID</Item>
+      <Item Name="[class]" ExcludeView="simple">gGlobals->m_paUnitClassInfo[m_pUnitInfo->m_iUnitClassType]->m_szType</Item>
+      <Item Name="[type]" ExcludeView="simple">gGlobals->m_paUnitInfo[m_eUnitType]->m_szType</Item>
+      <Item Name="[x]" ExcludeView="simple">m_iX</Item>
+      <Item Name="[y]" ExcludeView="simple">m_iY</Item>
+      <Item Name="[plot]" ExcludeView="simple">gGlobals->m_maps[gGlobals->m_game->m_eCurrentMap]->m_pMapPlots[m_iY*gGlobals->m_maps[gGlobals->m_game->m_eCurrentMap]->m_iGridWidth+m_iX]</Item>
+      <Item Name="[is dummy]">m_pEntity != nullptr &amp;&amp; g_dummyEntity == m_pEntity</Item>
+    
+    </Expand>
+  </Type>
+  <Type Name="CvPlot">
+    <DisplayString>[{{ &lt;{m_iX}, {m_iY}&gt; owner = {CvPlayerAI::m_aPlayers[m_eOwner]} }}]</DisplayString>
+    <Expand>
+      <Item Name="[x]" ExcludeView="simple">m_iX</Item>
+      <Item Name="[y]" ExcludeView="simple">m_iY</Item>
+      <Item Name="[owner]" ExcludeView="simple">CvPlayerAI::m_aPlayers[m_eOwner]</Item>
+      <Item Name="[terrain]" ExcludeView="simple">gGlobals->m_paTerrainInfo[m_eTerrainType]</Item>
+      <Item Name="[feature]" ExcludeView="simple">m_eFeatureType == -1? nullptr : gGlobals->m_paFeatureInfo[m_eFeatureType]</Item>
+      <Item Name="[bonus]" ExcludeView="simple">m_eBonusType == -1? nullptr : gGlobals->m_paBonusInfo[m_eBonusType]</Item>
+      <Item Name="[route]" ExcludeView="simple">m_eRouteType == -1? nullptr : gGlobals->m_paRouteInfo[m_eRouteType]</Item>
+      <Item Name="[improvement]" ExcludeView="simple">m_eImprovementType == -1? nullptr : gGlobals->m_paImprovementInfo[m_eImprovementType]</Item>
+      <!--Recreating the CLinkList<IDinfo> iteration with lookup into FFreeListTrashArray<CvUnitAI> by ID-->
+      <CustomListItems MaxItemsPerView="50" ExcludeView="Test">
+        <Variable Name="idx" InitialValue="0" />
+        <Variable Name="FLTA_INDEX_MASK" InitialValue="(1 &lt;&lt; 13) - 1"/>
+        <Variable Name="FLTA_ID_MASK" InitialValue="~((1 &lt;&lt; 13) - 1)"/>
+        <Variable Name="iIndex" InitialValue="0" />
+        <Variable Name="pHead" InitialValue="m_units.m_pHead" />
+        <Variable Name="pData" InitialValue="(CvUnit*)0" />
+        <Variable Name="pUnits" InitialValue="(FFreeListTrashArray&lt;CvUnitAI&gt;*)0" />
+        <Size>m_units.m_iLength</Size>
+        <Loop>
+          <Break Condition="pHead == nullptr" />
+          <Exec>pData = nullptr</Exec>
+          <Exec>idx = pHead->m_data.iID</Exec>
+          <Exec>pUnits = &amp;(CvPlayerAI::m_aPlayers[pHead->m_data.eOwner].m_units)</Exec>
+          <!--FFreeListTrashArray<T>::getAt(int iID)-->
+          <Exec>iIndex = idx &amp; FLTA_INDEX_MASK</Exec>
+          <If Condition="(iIndex &lt;= pUnits-&gt;m_iLastIndex) &amp;&amp; (pUnits-&gt;m_pArray[iIndex].pData != nullptr)">
+            <If Condition="((idx &amp; FLTA_ID_MASK) == 0) || (pUnits-&gt;m_pArray[iIndex].pData->m_iID == idx)">
+              <Exec>pData = pUnits-&gt;m_pArray[iIndex].pData</Exec>
+            </If>
+          </If>
+          <Item>pData</Item>
+          <Exec>pHead = pHead->m_pNext</Exec>
+        </Loop>
+      </CustomListItems>
+    </Expand>
+  </Type>
+  <Type Name="CvCity">
+    <DisplayString>[{m_szName} owner = {CvPlayerAI::m_aPlayers[m_eOwner]}]</DisplayString>
+    <Expand>
+      <Item Name="[name]" ExcludeView="simple">m_szName</Item>
+      <Item Name="[owner]" ExcludeView="simple">CvPlayerAI::m_aPlayers[m_eOwner]</Item>
+      <Item Name="[id]" ExcludeView="simple">m_iID</Item>
+      <Item Name="[x]" ExcludeView="simple">m_iX</Item>
+      <Item Name="[y]" ExcludeView="simple">m_iY</Item>
+      <Item Name="[plot]" ExcludeView="simple">gGlobals->m_maps[gGlobals->m_game->m_eCurrentMap]->m_pMapPlots[m_iY*gGlobals->m_maps[gGlobals->m_game->m_eCurrentMap]->m_iGridWidth+m_iX]</Item>
+    </Expand>
+  </Type>
+  
+  <Type Name="PropertySpawns">
+    <DisplayString>[property = {gGlobals->m_paPropertyInfo[eProperty]->m_szType} ({eProperty}), unit class = {gGlobals->m_paUnitClassInfo[eUnitClass]->m_szType} ({eUnitClass})]</DisplayString>
+    <Expand>
+      <Item Name="[property]" ExcludeView="simple">gGlobals->m_paPropertyInfo[eProperty]->m_szType</Item>
+      <Item Name="[unit class]" ExcludeView="simple">gGlobals->m_paUnitClassInfo[eUnitClass]->m_szType</Item>
+    </Expand>
+  </Type>
+  
+  <Type Name="CLinkList&lt;*&gt;" Priority="MediumLow">
+    <DisplayString>{{ {m_iLength} }}</DisplayString>
+    <Expand>
+      <LinkedListItems>
+        <Size>m_iLength</Size>
+        <HeadPointer>m_pHead</HeadPointer>
+        <NextPointer>m_pNext</NextPointer>
+        <ValueNode>m_data</ValueNode>
+      </LinkedListItems>
+    </Expand>
+  </Type>
+  
+  <Type Name="CvSelectionGroup">
+    <DisplayString>{{ id = {m_iID}, units = {m_units} }}</DisplayString>
+    <Expand>
+      <Item Name="[units]" ExcludeView="simple">m_units</Item>
+      <!--Recreating the CLinkList<IDinfo> iteration with lookup into FFreeListTrashArray<CvUnitAI> by ID-->
+      <CustomListItems MaxItemsPerView="50" ExcludeView="Test">
+        <Variable Name="idx" InitialValue="0" />
+        <Variable Name="FLTA_INDEX_MASK" InitialValue="(1 &lt;&lt; 13) - 1"/>
+        <Variable Name="FLTA_ID_MASK" InitialValue="~((1 &lt;&lt; 13) - 1)"/>
+        <Variable Name="iIndex" InitialValue="0" />
+        <Variable Name="pHead" InitialValue="m_units.m_pHead" />
+        <Variable Name="pData" InitialValue="(CvUnit*)0" />
+        <Variable Name="pUnits" InitialValue="(FFreeListTrashArray&lt;CvUnitAI&gt;*)0" />
+        <Size>m_units.m_iLength</Size>
+        <Loop>
+          <Break Condition="pHead == nullptr" />
+          <Exec>pData = nullptr</Exec>
+          <Exec>idx = pHead->m_data.iID</Exec>
+          <Exec>pUnits = &amp;(CvPlayerAI::m_aPlayers[pHead->m_data.eOwner].m_units)</Exec>
+          <!--FFreeListTrashArray<T>::getAt(int iID)-->
+          <Exec>iIndex = idx &amp; FLTA_INDEX_MASK</Exec>
+          <If Condition="(iIndex &lt;= pUnits-&gt;m_iLastIndex) &amp;&amp; (pUnits-&gt;m_pArray[iIndex].pData != nullptr)">
+            <If Condition="((idx &amp; FLTA_ID_MASK) == 0) || (pUnits-&gt;m_pArray[iIndex].pData->m_iID == idx)">
+              <Exec>pData = pUnits-&gt;m_pArray[iIndex].pData</Exec>
+            </If>
+          </If>
+          <Item>pData</Item>
+          <Exec>pHead = pHead->m_pNext</Exec>
+        </Loop>
+      </CustomListItems>
+    </Expand>
+  </Type>
+  
+  <Type Name="FFreeListTrashArray&lt;*&gt;" Priority="MediumLow">
+    <DisplayString>{{ {m_iLastIndex - m_iFreeListCount + 1 - m_iCorruptedAdjustment} }}</DisplayString>
+    <Expand>
+      <!--Recreating the FFreeListTrashArray<T> iteration logic-->
+      <CustomListItems MaxItemsPerView="5000" ExcludeView="Test">
+        <Variable Name="idx" InitialValue="0" />
+        <Variable Name="FLTA_INDEX_MASK" InitialValue="(1 &lt;&lt; 13) - 1"/>
+        <Variable Name="FLTA_ID_MASK" InitialValue="~((1 &lt;&lt; 13) - 1)"/>
+        <Variable Name="iIndex" InitialValue="0" />
+        <Variable Name="pData" InitialValue="($T1*)0" />
+        <Size>m_iLastIndex - m_iFreeListCount + 1 - m_iCorruptedAdjustment</Size>
+        <Loop>
+          <!--FFreeListTrashArray<T>::nextIter(int* pIterIdx)-->
+          <Loop>
+            <Exec>pData = nullptr</Exec>
+            <If Condition="idx &lt; m_iLastIndex + 1">
+              <!--FFreeListTrashArray<T>::getAt(int iID)-->
+              <Exec>iIndex = idx &amp; FLTA_INDEX_MASK</Exec>
+              <If Condition="(iIndex &lt;= m_iLastIndex) &amp;&amp; (m_pArray[iIndex].pData != nullptr)">
+                <If Condition="((idx &amp; FLTA_ID_MASK) == 0) || (m_pArray[iIndex].pData->m_iID == idx)">
+                  <Exec>pData = m_pArray[iIndex].pData</Exec>
+                  <Exec>idx++</Exec>
+                </If>
+              </If>
+              <Break Condition="pData != 0" />
+              <Exec>idx++</Exec>
+            </If>
+          </Loop>
+          <Break Condition="idx &gt; m_iLastIndex" />
+          <Item>pData</Item>
+        </Loop>
+      </CustomListItems>
+    </Expand>
+  </Type>
+</AutoVisualizer>

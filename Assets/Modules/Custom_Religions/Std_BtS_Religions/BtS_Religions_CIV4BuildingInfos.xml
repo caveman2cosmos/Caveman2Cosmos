@@ -107,7 +107,7 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>0</iConquestProb>
 			<iAnarchyModifier>-50</iAnarchyModifier>
-			<iGoldenAgeModifier>50</iGoldenAgeModifier>
+			<iGoldenAgeModifier>20</iGoldenAgeModifier>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>

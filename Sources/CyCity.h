@@ -731,7 +731,7 @@ public:
 	bool isSpecialistBanned(int /*SpecialistTypes*/ eSpecialist);
 	void banSpecialist(int /*SpecialistTypes*/ eSpecialist);
 	void removeSpecialistBan(int /*SpecialistTypes*/ eSpecialist);
-
+	bool isEventOccured(int /*EventTypes*/ eEvent) const;
 
 	std::string getScriptData() const;
 	void setScriptData(std::string szNewValue);

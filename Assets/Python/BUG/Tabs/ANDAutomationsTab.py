@@ -8,59 +8,18 @@
 
 from CvPythonExtensions import *
 import BugOptionsTab
-import BugUtil
-import CvUtil
-import BugCore
-gc = CyGlobalContext()
-ANewDawnOpt = BugCore.game.AutomatedSettings
-g_BuildNames = None
-
-def remove_diacriticals(text):
-
-	#BugUtil.debug(text)
-	text = CvUtil.convertToStr(text)
-
-	accent = ['é', 'è', 'ê', 'à', 'ù', 'û', 'ç', 'ô', 'î', 'ï', 'â' ,'õ' ,'ä' ,'ö' ,'ü']
-	sans_accent = ['e', 'e', 'e', 'a', 'u', 'u', 'c', 'o', 'i', 'i', 'a', 'o', 'a' ,'o' ,'u']
-
-	#BugUtil.debug(text)
-	for i in xrange(len(accent)):
-		text = text.replace(accent[i], sans_accent[i])
-	#BugUtil.debug(text)
-
-	return CvUtil.convertToStr(text)
 
 class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 
 	def __init__(self, screen):
+		self.buildNames = None
+		import BugCore
+		self.ANewDawnOpt = BugCore.game.AutomatedSettings
 		BugOptionsTab.BugOptionsTab.__init__(self, "AutomatedSettings", "Automations")
-
-	def normalizeBuildNames(self):
-		global g_BuildNames
-		g_BuildNames = [(0,0)] * gc.getNumBuildInfos()
-		for iI in range(gc.getNumBuildInfos()):
-			#Strips the <link="IMPROVEMENT_FOOBAR"> and </link> pair from the description while retaining the bit between them
-			szDescription = str( remove_diacriticals(gc.getBuildInfo(iI).getDescription()))
-			szNewDescription = ""
-			iStartIndex = szDescription.rfind("<link")
-			iEndIndex = szDescription.rfind("'>") + 2
-			#BugUtil.debug("Start Index is %d, End Index is %d", iStartIndex, iEndIndex)
-			if (iStartIndex > -1):
-				szNewDescription = szDescription[0:iStartIndex] + szDescription[iEndIndex:len(szDescription)]
-				iStartIndex2 = szNewDescription.rfind("</link>")
-
-				szNewDescription = szNewDescription[0:iStartIndex2] + szNewDescription[iStartIndex2+7:len(szDescription)]
-			else:
-				szNewDescription = szDescription
-			g_BuildNames[iI] = szNewDescription
-
-	def determineColumnPlacement(self, numberOfColumns, number, columnsList):
-		return columnsList[number % numberOfColumns]
 
 	def create(self, screen):
 		tab = self.createTab(screen)
 		panel = self.createMainPanel(screen)
-
 
 		#Standard Settings
 		self.addLabel(screen, panel, "AutomatedSettings__AutomatedSettings")
@@ -213,62 +172,82 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 
 		bFirst = True
 
-		global g_BuildNames
-		if g_BuildNames == None:
-			self.normalizeBuildNames()
+		import CvUtil
+		GC = CyGlobalContext()
 
-		player = gc.getPlayer(gc.getGame().getActivePlayer())
-		team = gc.getTeam(gc.getGame().getActiveTeam())
-		(loopCity, iter) = player.firstCity(False)
+		if self.buildNames is None:
+			iNumBuilds = GC.getNumBuildInfos()
+			self.buildNames = [(0,0)] * iNumBuilds
+			# Strip the <link="IMPROVEMENT_FOOBAR"> and </link> pair from the description while retaining the bit between them
+			for iI in range(iNumBuilds):
+				szDescription = CvUtil.remove_diacriticals(GC.getBuildInfo(iI).getDescription())
+				szNewDescription = ""
+				iStartIndex = szDescription.rfind("<link")
+				iEndIndex = szDescription.rfind("'>") + 2
+				if iStartIndex > -1:
+					szNewDescription = szDescription[0:iStartIndex] + szDescription[iEndIndex:len(szDescription)]
+					iStartIndex2 = szNewDescription.rfind("</link>")
 
-		if ANewDawnOpt.isShowCityAutomations():
-			while(loopCity):
-				BugUtil.debug("Timer")
+					szNewDescription = szNewDescription[0:iStartIndex2] + szNewDescription[iStartIndex2+7:len(szDescription)]
+				else:
+					szNewDescription = szDescription
+				self.buildNames[iI] = szNewDescription
+
+		GAME = GC.getGame()
+		CyPlayer = GC.getPlayer(GAME.getActivePlayer())
+		CyTeam = GC.getTeam(GAME.getActiveTeam())
+
+		TRNSLTR = CyTranslator()
+		iNumBuilds = GC.getNumBuildInfos()
+		if self.ANewDawnOpt.isShowCityAutomations():
+			CyCity, i = CyPlayer.firstCity(False)
+			while CyCity:
 				if not bFirst:
 					self.addSpacer(screen, left, "City Spacer")
 				bFirst = False
 
-				szCityName = remove_diacriticals(loopCity.getName())
+				szCityName = CvUtil.remove_diacriticals(CyCity.getName())
 
-				self.addLabel(screen, left, str(BugUtil.getText("TXT_KEY_AUTOMATED_WORKERS_CAN_BUILD_CITY", szCityName)), str(BugUtil.getText("TXT_KEY_AUTOMATED_WORKERS_CAN_BUILD_CITY", szCityName)), None, False, True)
+				self.addLabel(screen, left, TRNSLTR.getText("TXT_KEY_AUTOMATED_WORKERS_CAN_BUILD_CITY", (szCityName,)), TRNSLTR.getText("TXT_KEY_AUTOMATED_WORKERS_CAN_BUILD_CITY", (szCityName,)), None, False, True)
 				col1, col2, col3, col4, col5 = self.addMultiColumnLayout(screen, left, 5, "Automate_Workers")
 
 				iCount = 0
-				for iI in range(gc.getNumBuildInfos()):
-					if (team.isHasTech(gc.getBuildInfo(iI).getTechPrereq())):
+				for j in range(iNumBuilds):
+					CvBuildInfo = GC.getBuildInfo(j)
+					if CyTeam.isHasTech(CvBuildInfo.getTechPrereq()):
 
-						columnKey = self.determineColumnPlacement(5, iCount, (col1, col2, col3, col4, col5))
+						columnKey = (col1, col2, col3, col4, col5)[iCount % 5]
 
-						control = str(szCityName + gc.getBuildInfo(iI).getDescription() + "Check")
-						bEnabled = loopCity.isAutomatedCanBuild(iI)
+						control = str(szCityName + CvBuildInfo.getDescription() + "Check")
+						bEnabled = CyCity.isAutomatedCanBuild(j)
 
-						szNewDescription = g_BuildNames[iI]
+						szNewDescription = self.buildNames[j]
 
 						screen.attachCheckBox(columnKey, control, szNewDescription , "CvOptionsScreenCallbackInterface", "handleAutomatedBuildCheckboxClicked", control, bEnabled)
-						screen.setToolTip(control, BugUtil.getText("TXT_KEY_AUTOMATED_WORKERS_CAN_BUILD", (szCityName, szNewDescription)))
+						screen.setToolTip(control, TRNSLTR.getText("TXT_KEY_AUTOMATED_WORKERS_CAN_BUILD", (szCityName, szNewDescription)))
 
 						iCount += 1
-				(loopCity, iter) = player.nextCity(iter, False)
+				CyCity, i = CyPlayer.nextCity(i, False)
 
 			self.addSpacer(screen, left, "City Spacer")
 		self.addLabel(screen, left, "AutomatedSettings__NationalWorkerSettings")
 		self.addLabel(screen, left, "AutomatedSettings__NationalWorkerSettingsHover")
 		col1, col2, col3, col4, col5 = self.addMultiColumnLayout(screen, left, 5, "Automate_Workers")
 
+		szNameKey = CyPlayer.getNameKey()
 		iCount = 0
-		for iI in range(gc.getNumBuildInfos()):
-			if (team.isHasTech(gc.getBuildInfo(iI).getTechPrereq())):
+		for i in range(iNumBuilds):
+			CvBuildInfo = GC.getBuildInfo(i)
+			if CyTeam.isHasTech(CvBuildInfo.getTechPrereq()):
 
-				columnKey = self.determineColumnPlacement(5, iCount, (col1, col2, col3, col4, col5))
+				columnKey = (col1, col2, col3, col4, col5)[iCount % 5]
 
-				control = str(remove_diacriticals(player.getNameKey() + gc.getBuildInfo(iI).getDescription() + "Check"))
-				bEnabled = player.isAutomatedCanBuild(iI)
+				control = CvUtil.remove_diacriticals(szNameKey + CvBuildInfo.getDescription() + "Check")
+				bEnabled = CyPlayer.isAutomatedCanBuild(i)
 
-				szNewDescription = g_BuildNames[iI]
+				szNewDescription = self.buildNames[i]
 
 				screen.attachCheckBox(columnKey, control, szNewDescription , "CvOptionsScreenCallbackInterface", "handleNationalAutomatedBuildCheckboxClicked", control, bEnabled)
-				screen.setToolTip(control, BugUtil.getText("TXT_KEY_NATIONAL_AUTOMATED_WORKERS_CAN_BUILD", szNewDescription))
+				screen.setToolTip(control, TRNSLTR.getText("TXT_KEY_NATIONAL_AUTOMATED_WORKERS_CAN_BUILD", (szNewDescription,)))
 
 				iCount += 1
-
-	

@@ -1994,29 +1994,29 @@ void CvGameObjectPlot::disposePythonArgument(void *pArgument)
 }
 
 
-int CvGameObject::adaptValueToGame(uint uiID, int iValue) const
+int CvGameObject::adaptValueToGame(int iID, int iValue) const
 {
-	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getPercent(uiID)) / 100;
-	return (iValue * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getPercent(uiID)) / 100;
+	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getPercent(iID)) / 100;
+	return (iValue * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getPercent(iID)) / 100;
 }
 
-int CvGameObjectPlayer::adaptValueToGame(uint uiID, int iValue) const
+int CvGameObjectPlayer::adaptValueToGame(int iID, int iValue) const
 {
-	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getPercent(uiID)) / 100;
-	iValue = (iValue * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getPercent(uiID)) / 100;
-	return (iValue * GC.getHandicapInfo(m_pPlayer->getHandicapType()).getPercent(uiID)) / 100;
+	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getPercent(iID)) / 100;
+	iValue = (iValue * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getPercent(iID)) / 100;
+	return (iValue * GC.getHandicapInfo(m_pPlayer->getHandicapType()).getPercent(iID)) / 100;
 }
 
-int CvGameObjectCity::adaptValueToGame(uint uiID, int iValue) const
+int CvGameObjectCity::adaptValueToGame(int iID, int iValue) const
 {
-	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getPercent(uiID)) / 100;
-	iValue = (iValue * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getPercent(uiID)) / 100;
-	return (iValue * GC.getHandicapInfo(GET_PLAYER(m_pCity->getOwnerINLINE()).getHandicapType()).getPercent(uiID)) / 100;
+	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getPercent(iID)) / 100;
+	iValue = (iValue * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getPercent(iID)) / 100;
+	return (iValue * GC.getHandicapInfo(GET_PLAYER(m_pCity->getOwnerINLINE()).getHandicapType()).getPercent(iID)) / 100;
 }
 
-int CvGameObjectUnit::adaptValueToGame(uint uiID, int iValue) const
+int CvGameObjectUnit::adaptValueToGame(int iID, int iValue) const
 {
-	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getPercent(uiID)) / 100;
-	iValue = (iValue * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getPercent(uiID)) / 100;
-	return (iValue * GC.getHandicapInfo(GET_PLAYER(m_pUnit->getOwnerINLINE()).getHandicapType()).getPercent(uiID)) / 100;
+	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getPercent(iID)) / 100;
+	iValue = (iValue * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getPercent(iID)) / 100;
+	return (iValue * GC.getHandicapInfo(GET_PLAYER(m_pUnit->getOwnerINLINE()).getHandicapType()).getPercent(iID)) / 100;
 }

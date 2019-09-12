@@ -21,6 +21,12 @@
 		<DefineName>MAX_NUM_LANGUAGES</DefineName>
 		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
+
+	<Define>
+		<DefineName>MAX_DESIRED_MEMORY_USED</DefineName>
+		<iDefineIntVal>1835008</iDefineIntVal>
+	</Define>
+	
 	<!--
  Default uses the normal tag for the language set in Civ4's option dialog.
 	     All tags used in the text files are possible with English used as fallback when the chosen language is not available for some text.
@@ -648,7 +654,7 @@
 	</Define>
 	<Define>
 		<DefineName>GOLDEN_AGE_LENGTH</DefineName>
-		<iDefineIntVal>8</iDefineIntVal>
+		<iDefineIntVal>4</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>GOLDEN_AGE_GREAT_PEOPLE_MODIFIER</DefineName>
@@ -1230,7 +1236,7 @@
 	</Define>
 	<Define>
 		<DefineName>CAMERA_START_DISTANCE</DefineName>
-		<fDefineFloatVal>4000</fDefineFloatVal>
+		<fDefineFloatVal>1800</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>CAMERA_MAX_TRAVEL_DISTANCE</DefineName>
@@ -1304,7 +1310,7 @@
 	</Define>
 	<Define>
 		<DefineName>FIELD_OF_VIEW</DefineName>
-		<fDefineFloatVal>50.0</fDefineFloatVal>
+		<fDefineFloatVal>42.0</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>IMPROVEMENT_SCALE</DefineName>

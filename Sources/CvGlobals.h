@@ -362,6 +362,7 @@ public:
 /************************************************************************************************/
 	void addToInfosVectors(void *infoVector);
 	void infosReset();
+	int getOrCreateInfoTypeForString(const char* szType);
 
 	void addDelayedResolution(int* pType, CvString szString);
 	CvString* getDelayedResolution(int* pType);
@@ -1527,6 +1528,8 @@ protected:
 	typedef stdext::hash_map<const char* /* type */, int /* info index */, SZStringHash> InfosMap;
 	InfosMap m_infosMap;
 	std::vector<std::vector<CvInfoBase *> *> m_aInfoVectors;
+
+	int m_iLastTypeID; // last generic type ID assigned (for type strings that do not have an assigned info class) 
 
 	// AIAndy: Delayed resolution of type strings
 	typedef std::map<int*,std::pair<CvString,CvString> > DelayedResolutionMap;

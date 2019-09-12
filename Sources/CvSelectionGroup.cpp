@@ -534,9 +534,6 @@ void CvSelectionGroup::updateTimers()
 // Returns true if group was killed...
 bool CvSelectionGroup::doDelayedDeath()
 {
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
-
 	FAssert(getOwnerINLINE() != NO_PLAYER);
 
 	if (isBusy())
@@ -544,16 +541,21 @@ bool CvSelectionGroup::doDelayedDeath()
 		return false;
 	}
 
-	pUnitNode = headUnitNode();
-
-	while (pUnitNode != NULL)
+	// Keep looping the unit list until no more units have delayed death.
+	// We need to restart loop each time a unit is actually killed because it can invalidate the 
+	// unit iterators by deleting other units.
+	bool wasDeath = true;
+	while (wasDeath)
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = nextUnitNode(pUnitNode);
-
-		if (pLoopUnit != NULL && !GET_PLAYER(getOwnerINLINE()).isTempUnit(pLoopUnit) )
+		wasDeath = false;
+		for (unit_iterator itr = beginValidUnits(); itr != endValidUnits(); ++itr)
 		{
-			pLoopUnit->doDelayedDeath();
+			if(!GET_PLAYER(getOwnerINLINE()).isTempUnit(&(*itr))
+				&& itr->doDelayedDeath())
+			{
+				wasDeath = true;
+				break;
+			}
 		}
 	}
 
@@ -2165,13 +2167,7 @@ bool CvSelectionGroup::startMission()
 						//just play animation, not golden age - JW
 						if (headMissionQueueNode()->m_data.iData1 != -1)
 						{
-							CvMissionDefinition kMission;
-							kMission.setMissionTime(GC.getMissionInfo(MISSION_GOLDEN_AGE).getTime() * gDLL->getSecsPerTurn());
-							kMission.setUnit(BATTLE_UNIT_ATTACKER, pLoopUnit);
-							kMission.setUnit(BATTLE_UNIT_DEFENDER, NULL);
-							kMission.setPlot(pLoopUnit->plot());
-							kMission.setMissionType(MISSION_GOLDEN_AGE);
-							pLoopUnit->addMission(&kMission);
+							pLoopUnit->addMission(CvMissionDefinition(MISSION_GOLDEN_AGE, pLoopUnit->plot(), pLoopUnit));
 							pLoopUnit->NotifyEntity(MISSION_GOLDEN_AGE);
 							bAction = true;
 						}

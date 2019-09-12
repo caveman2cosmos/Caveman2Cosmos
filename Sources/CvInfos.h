@@ -5109,7 +5109,7 @@ public:
 	int isFreeTechs(int i) const;				// Exposed to Python
 	int isAIFreeTechs(int i) const;				// Exposed to Python
 
-	int getPercent(uint uiID) const;
+	int getPercent(int iID) const;
 
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
@@ -5255,7 +5255,7 @@ public:
 
 	void allocateGameTurnInfos(const int iSize);
 
-	int getPercent(uint uiID) const;
+	int getPercent(int iID) const;
 
 	//TB GameSpeed begin
 	int getTraitGainPercent() const;
@@ -6894,7 +6894,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 
-	int getPercent(uint uiID) const;
+	int getPercent(int iID) const;
 
 	void copyNonDefaults(CvWorldInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
 
