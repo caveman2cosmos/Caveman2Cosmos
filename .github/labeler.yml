@@ -1,7 +1,7 @@
-dll: Sources/*
+dll: Sources/**/*
 
-tool: Tools/*
+tool: Tools/**/*
 
-xml: Assets/*.xml
+xml: Assets/**/*.xml
 
-python: Assets/Python/*
+python: Assets/Python/**/*
