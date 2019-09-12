@@ -132,7 +132,7 @@ def showVictoryMovie(argsList):
 	screenMap[VICTORY_MOVIE_SCREEN].interfaceScreen(argsList[0])
 
 def showWonderMovie(argsList):
-	screenMap[WONDER_MOVIE_SCREEN].interfaceScreen(argsList[0], argsList[1], argsList[2])
+	screenMap[WONDER_MOVIE_SCREEN].interfaceScreen(argsList[0], argsList[1], argsList[2], WONDER_MOVIE_SCREEN)
 
 def showEraMovie(argsList):
 	screenMap[ERA_MOVIE_SCREEN].interfaceScreen(argsList[0])

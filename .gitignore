@@ -13,6 +13,8 @@
 /Tools/Autocorrect/LanguageTool-*
 !/Tools/**/*.dll
 XmlValidator.log
+desktop.ini
+Assets/Python/.idea/
 
 .vscode/settings.json
 
@@ -29,3 +31,7 @@ Sources/cov-int/
 Build/
 
 Tools/Autocorrect/Autocorrect.log
+
+test-gen.bat
+
+CHANGELOG.md

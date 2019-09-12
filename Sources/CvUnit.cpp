@@ -257,9 +257,9 @@ CvUnit::~CvUnit()
 
 }
 
-bool CvUnit::isUsingDummyEntities()
+bool CvUnit::isUsingDummyEntities() const
 {
-	CvEntity* entity = getEntity();
+	const CvEntity* entity = getEntity();
 
 	return (entity != NULL && g_dummyEntity == entity);// || (m_eUnitType == 701);
 }
@@ -1604,16 +1604,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 					
 
 					// Add a captured mission
-					if ( !pkCapturedUnit->isUsingDummyEntities() )
-					{
-						CvMissionDefinition kMission;
-						kMission.setMissionTime(GC.getMissionInfo(MISSION_CAPTURED).getTime() * gDLL->getSecsPerTurn());
-						kMission.setUnit(BATTLE_UNIT_ATTACKER, pkCapturedUnit);
-						kMission.setUnit(BATTLE_UNIT_DEFENDER, NULL);
-						kMission.setPlot(pPlot);
-						kMission.setMissionType(MISSION_CAPTURED);
-						addMission(&kMission);
-					}
+					addMission(CvMissionDefinition(MISSION_CAPTURED, pPlot, pkCapturedUnit));
 
 					pkCapturedUnit->finishMoves();
 
@@ -1872,7 +1863,8 @@ void CvUnit::updateAirStrike(CvPlot* pPlot, bool bQuick, bool bFinish)
 
 		if (!bQuick)
 		{
-			bVisible = isCombatVisible(NULL);
+			// Always show human air strikes
+			bVisible = isHuman() || isCombatVisible(NULL);
 		}
 
 /************************************************************************************************/
@@ -1895,21 +1887,10 @@ void CvUnit::updateAirStrike(CvPlot* pPlot, bool bQuick, bool bFinish)
 
 		if (airStrike(pPlot) && bVisible)
 		{
-			CvAirMissionDefinition kAirMission;
-			kAirMission.setMissionType(MISSION_AIRSTRIKE);
-			kAirMission.setUnit(BATTLE_UNIT_ATTACKER, this);
-			kAirMission.setUnit(BATTLE_UNIT_DEFENDER, NULL);
-			kAirMission.setDamage(BATTLE_UNIT_DEFENDER, 0);
-			kAirMission.setDamage(BATTLE_UNIT_ATTACKER, 0);
-			kAirMission.setPlot(pPlot);
 			setCombatTimer(GC.getMissionInfo(MISSION_AIRSTRIKE).getTime());
 			GC.getGameINLINE().incrementTurnTimer(getCombatTimer());
-			kAirMission.setMissionTime(getCombatTimer() * gDLL->getSecsPerTurn());
 
-			//if (pPlot->isActiveVisible(false))
-			//{
-			//	addMission(&kAirMission);
-			//}
+			addMission(CvAirMissionDefinition(MISSION_AIRSTRIKE, pPlot, this, NULL, getCombatTimer() * gDLL->getSecsPerTurn()));
 
 			return;
 		}
@@ -2198,18 +2179,7 @@ void CvUnit::updateAirCombat(bool bQuick)
 		FAssertMsg(plot()->isFighting(), "Current unit instance plot is not fighting as expected");
 		FAssertMsg(pInterceptor->plot()->isFighting(), "pPlot is not fighting as expected");
 
-		CvAirMissionDefinition kAirMission;
-		if (DOMAIN_AIR != getDomainType())
-		{
-			kAirMission.setMissionType(MISSION_PARADROP);
-		}
-		else
-		{
-			kAirMission.setMissionType(MISSION_AIRSTRIKE);
-		}
-		kAirMission.setUnit(BATTLE_UNIT_ATTACKER, this);
-		kAirMission.setUnit(BATTLE_UNIT_DEFENDER, pInterceptor);
-
+		CvAirMissionDefinition kAirMission(getDomainType() == DOMAIN_AIR ? MISSION_AIRSTRIKE : MISSION_PARADROP, pPlot, this, pInterceptor, GC.getMissionInfo(MISSION_AIRSTRIKE).getTime() * gDLL->getSecsPerTurn());
 		resolveAirCombat(pInterceptor, pPlot, kAirMission);
 
 		if (!bVisible)
@@ -2218,15 +2188,9 @@ void CvUnit::updateAirCombat(bool bQuick)
 		}
 		else
 		{
-			kAirMission.setPlot(pPlot);
-			kAirMission.setMissionTime(GC.getMissionInfo(MISSION_AIRSTRIKE).getTime() * gDLL->getSecsPerTurn());
 			setCombatTimer(GC.getMissionInfo(MISSION_AIRSTRIKE).getTime());
 			GC.getGameINLINE().incrementTurnTimer(getCombatTimer());
-
-			//if (pPlot->isActiveVisible(false))
-			//{
-			//	addMission(&kAirMission);
-			//}
+			addMission(kAirMission);
 		}
 
 		changeMoves(GC.getMOVE_DENOMINATOR());
@@ -3444,16 +3408,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			}
 			else
 			{
-				if ( !pDefender->isUsingDummyEntities() )
-				{
-					CvMissionDefinition kMission;
-					kMission.setMissionTime(getCombatTimer() * gDLL->getSecsPerTurn());
-					kMission.setMissionType(MISSION_SURRENDER);
-					kMission.setUnit(BATTLE_UNIT_ATTACKER, this);
-					kMission.setUnit(BATTLE_UNIT_DEFENDER, pDefender);
-					kMission.setPlot(pPlot);
-					addMission(&kMission);
-				}
+				addMission(CvMissionDefinition(MISSION_SURRENDER, pPlot, this, pDefender, getCombatTimer() * gDLL->getSecsPerTurn()));
 
 				// Surrender mission
 				setCombatTimer(GC.getMissionInfo(MISSION_SURRENDER).getTime());
@@ -3480,11 +3435,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-			CvBattleDefinition kBattle;
-			kBattle.setUnit(BATTLE_UNIT_ATTACKER, this);
-			kBattle.setUnit(BATTLE_UNIT_DEFENDER, pDefender);
-			kBattle.setDamage(BATTLE_UNIT_ATTACKER, BATTLE_TIME_BEGIN, getDamage());
-			kBattle.setDamage(BATTLE_UNIT_DEFENDER, BATTLE_TIME_BEGIN, pDefender->getDamage());
+			CvBattleDefinition kBattle(pPlot, this, pDefender);
 
 			//	Koshling - save pre-combat helath so we can use health loss as
 			//	a basis for more granular war weariness
@@ -3546,7 +3497,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				int iTurns = planBattle( kBattle);
 				kBattle.setMissionTime(iTurns * gDLL->getSecsPerTurn());
 				setCombatTimer(iTurns);
-				kBattle.setPlot(pPlot);
 				//TB Debug: Without plot set, this routine ended up causing a crash at addMission below.
 
 				GC.getGameINLINE().incrementTurnTimer(getCombatTimer());
@@ -3555,7 +3505,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				{
 					//TB sameplot?
 					ExecuteMove(0.5f, true);
-					addMission(&kBattle);
+					addMission(kBattle);
 				}
 			}
 		}
@@ -7343,11 +7293,7 @@ void CvUnit::attackForDamage(CvUnit *pDefender, int attackerDamageChange, int de
 	FAssertMsg(pPlot->isFighting(), "pPlot is not fighting as expected");
 
 	//setup battle object
-	CvBattleDefinition kBattle;
-	kBattle.setUnit(BATTLE_UNIT_ATTACKER, this);
-	kBattle.setUnit(BATTLE_UNIT_DEFENDER, pDefender);
-	kBattle.setDamage(BATTLE_UNIT_ATTACKER, BATTLE_TIME_BEGIN, getDamage());
-	kBattle.setDamage(BATTLE_UNIT_DEFENDER, BATTLE_TIME_BEGIN, pDefender->getDamage());
+	CvBattleDefinition kBattle(pPlot, this, pDefender);
 
 	changeDamage(attackerDamageChange, pDefender->getOwnerINLINE());
 	//TB Combat Mod begin
@@ -7382,7 +7328,7 @@ void CvUnit::attackForDamage(CvUnit *pDefender, int attackerDamageChange, int de
 		if (pPlot->isActiveVisible(false) && !pDefender->isUsingDummyEntities())
 		{
 			ExecuteMove(0.5f, true);
-			addMission(&kBattle);
+			addMission(kBattle);
 		}
 	}
 	else
@@ -8643,14 +8589,8 @@ void CvUnit::airCircle(bool bStart)
 
 		if (bStart)
 		{
-			CvAirMissionDefinition kDefinition;
-			kDefinition.setPlot(plot());
-			kDefinition.setUnit(BATTLE_UNIT_ATTACKER, this);
-			kDefinition.setUnit(BATTLE_UNIT_DEFENDER, NULL);
-			kDefinition.setMissionType(MISSION_AIRPATROL);
-			kDefinition.setMissionTime(1.0f); // patrol is indefinite - time is ignored
-
-			addMission( &kDefinition );
+			// patrol is indefinite - time is ignored
+			addMission(CvAirMissionDefinition(MISSION_AIRPATROL, plot(), this, NULL, 1.f)); 
 		}
 	}
 }
@@ -9670,19 +9610,9 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 				}
 			}
 
-			if (pPlot->isActiveVisible(false))
-			{
-				// Nuke entity mission
-				CvMissionDefinition kDefiniton;
-				kDefiniton.setMissionTime(GC.getMissionInfo(MISSION_NUKE).getTime() * gDLL->getSecsPerTurn());
-				kDefiniton.setMissionType(MISSION_NUKE);
-				kDefiniton.setPlot(pPlot);
-				kDefiniton.setUnit(BATTLE_UNIT_ATTACKER, this);
-				kDefiniton.setUnit(BATTLE_UNIT_DEFENDER, this);
-
-				// Add the intercepted mission (defender is not NULL)
-				addMission(&kDefiniton);
-			}
+			// Nuke entity mission
+			// Add the intercepted mission (defender is not NULL)
+			addMission(CvMissionDefinition(MISSION_NUKE, pPlot, this, this));
 
 			kill(true, NO_PLAYER, true);
 			return true; // Intercepted!!! (XXX need special event for this...)
@@ -9720,7 +9650,7 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 	}
 	// < M.A.D. Nukes Start >
 
-	if (pPlot->isActiveVisible(false))
+	if (pPlot->isActiveVisible(false) && !isUsingDummyEntities() && isInViewport())
 	{
 /************************************************************************************************/
 /* DCM                                     04/19/09                                Johny Smith  */
@@ -9728,31 +9658,14 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 		// Dale - NB: A-Bomb START
 		if(airBaseCombatStr() != 0)
 		{
-			//CvAirMissionDefinition kAirMission;
-
-			//kAirMission.setMissionTime(GC.getMissionInfo(MISSION_AIRSTRIKE).getTime() * gDLL->getSecsPerTurn());
-			//kAirMission.setMissionType(MISSION_AIRSTRIKE);
-			//kAirMission.setPlot(pPlot);
-			//kAirMission.setUnit(BATTLE_UNIT_ATTACKER, this);
-			//kAirMission.setUnit(BATTLE_UNIT_DEFENDER, NULL);
-			//kAirMission.setDamage(BATTLE_UNIT_DEFENDER, 0);
-			//kAirMission.setDamage(BATTLE_UNIT_ATTACKER, 0);
-
-			//addMission(&kAirMission);
+			addMission(CvAirMissionDefinition(MISSION_AIRSTRIKE, pPlot, this));
 		}
 		else
 		{
 			// Nuke entity mission
-			CvMissionDefinition kDefiniton;
-
-			kDefiniton.setMissionTime(GC.getMissionInfo(MISSION_NUKE).getTime() * gDLL->getSecsPerTurn());
-			kDefiniton.setMissionType(MISSION_NUKE);
-			kDefiniton.setPlot(pPlot);
-			kDefiniton.setUnit(BATTLE_UNIT_ATTACKER, this);
-			kDefiniton.setUnit(BATTLE_UNIT_DEFENDER, NULL);
-
 			// Add the non-intercepted mission (defender is NULL)
-			addMission(&kDefiniton);
+			addMission(CvMissionDefinition(MISSION_NUKE, pPlot, this));
+			CvMissionDefinition kDefiniton;
 		}
 		// Dale - NB: A-Bomb END
 /************************************************************************************************/
@@ -9924,22 +9837,8 @@ bool CvUnit::recon(int iX, int iY)
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-	//TB DEBUG: We had units (in particular the ornithopter) crashing here due to graphic flaws.
-	//Animation is not quite as necessary as effect.
-	//TBANIMATION
-	//if (pPlot->isActiveVisible(false))
-	//{
-	//	CvAirMissionDefinition kAirMission;
-	//	kAirMission.setMissionType(MISSION_AIRBOMB);
-	//	//kAirMission.setMissionType(MISSION_RECON);
-	//	kAirMission.setUnit(BATTLE_UNIT_ATTACKER, this);
-	//	kAirMission.setUnit(BATTLE_UNIT_DEFENDER, NULL);
-	//	kAirMission.setDamage(BATTLE_UNIT_DEFENDER, 0);
-	//	kAirMission.setDamage(BATTLE_UNIT_ATTACKER, 0);
-	//	kAirMission.setPlot(pPlot);
-	//	kAirMission.setMissionTime(GC.getMissionInfo((MissionTypes)MISSION_RECON).getTime() * gDLL->getSecsPerTurn());
-	//	addMission(&kAirMission);
-	//}
+
+	addMission(CvAirMissionDefinition(MISSION_RECON, pPlot, this, NULL));
 
 	return true;
 }
@@ -10061,18 +9960,7 @@ bool CvUnit::paradrop(int iX, int iY)
 /* Afforess	                     END                                                            */
 /************************************************************************************************/	
 	//play paradrop animation by itself
-	if (pPlot->isActiveVisible(false))
-	{
-		CvAirMissionDefinition kAirMission;
-		kAirMission.setMissionType(MISSION_PARADROP);
-		kAirMission.setUnit(BATTLE_UNIT_ATTACKER, this);
-		kAirMission.setUnit(BATTLE_UNIT_DEFENDER, NULL);
-		kAirMission.setDamage(BATTLE_UNIT_DEFENDER, 0);
-		kAirMission.setDamage(BATTLE_UNIT_ATTACKER, 0);
-		kAirMission.setPlot(pPlot);
-		kAirMission.setMissionTime(GC.getMissionInfo((MissionTypes)MISSION_PARADROP).getTime() * gDLL->getSecsPerTurn());
-		addMission(&kAirMission);
-	}
+	addMission(CvAirMissionDefinition(MISSION_PARADROP, pPlot, this));
 
 	return true;
 }
@@ -10550,19 +10438,7 @@ bool CvUnit::airBomb(int iX, int iY)
 	setMadeAttack(true);
 	changeMoves(GC.getMOVE_DENOMINATOR());
 
-	//if (pPlot->isActiveVisible(false))
-	//{
-	//	CvAirMissionDefinition kAirMission;
-	//	kAirMission.setMissionType(MISSION_AIRBOMB);
-	//	kAirMission.setUnit(BATTLE_UNIT_ATTACKER, this);
-	//	kAirMission.setUnit(BATTLE_UNIT_DEFENDER, NULL);
-	//	kAirMission.setDamage(BATTLE_UNIT_DEFENDER, 0);
-	//	kAirMission.setDamage(BATTLE_UNIT_ATTACKER, 0);
-	//	kAirMission.setPlot(pPlot);
-	//	kAirMission.setMissionTime(GC.getMissionInfo((MissionTypes)MISSION_AIRBOMB).getTime() * gDLL->getSecsPerTurn());
-
-	//	addMission(&kAirMission);
-	//}
+	addMission(CvAirMissionDefinition(MISSION_AIRBOMB, pPlot, this));
 
 	if (isSuicide())
 	{
@@ -10771,25 +10647,12 @@ bool CvUnit::bombard()
 			//CvUnit *pDefender = pBombardCity->plot()->getBestDefender(NO_PLAYER, getOwnerINLINE(), this, true); - Original Code
 			// Super Forts end
 
-			if ( pDefender != NULL && !pDefender->isUsingDummyEntities() )
-			{
-				// Bombard entity mission
-				CvMissionDefinition kDefiniton;
-				kDefiniton.setMissionTime(GC.getMissionInfo(MISSION_BOMBARD).getTime() * gDLL->getSecsPerTurn());
-				kDefiniton.setMissionType(MISSION_BOMBARD);
-				// Super Forts begin *bombard*
-				kDefiniton.setPlot(pTargetPlot);
-				//kDefiniton.setPlot(pBombardCity->plot()); - Original Code
-				// Super Forts end
-				kDefiniton.setUnit(BATTLE_UNIT_ATTACKER, this);
-				kDefiniton.setUnit(BATTLE_UNIT_DEFENDER, pDefender);
-				addMission(&kDefiniton);
-			}
+			// Bombard entity mission
+			addMission(CvMissionDefinition(MISSION_BOMBARD, pTargetPlot, this, pDefender));
 		}
 	}
 	return true;
 }
-
 
 bool CvUnit::canPillage(const CvPlot* pPlot) const
 {
@@ -11147,28 +11010,19 @@ bool CvUnit::pillage()
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-		if (GC.getGameINLINE().isModderGameOption(MODDERGAMEOPTION_IMPROVED_XP) && !pPlot->isRoute())
-		{
-			 setExperience100(getExperience100() + getRandomMinExperienceTimes100(), -1);
-		}
-		else if (iPillageGold > 0 && pPlot->getOwner() != getOwner())
-		{
-			changeExperience100(iPillageGold);
-		}
+	if (GC.getGameINLINE().isModderGameOption(MODDERGAMEOPTION_IMPROVED_XP) && !pPlot->isRoute())
+	{
+		setExperience100(getExperience100() + getRandomMinExperienceTimes100(), -1);
+	}
+	else if (iPillageGold > 0 && pPlot->getOwner() != getOwner())
+	{
+		changeExperience100(iPillageGold);
+	}
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-	if (pPlot->isActiveVisible(false))
-	{
-		// Pillage entity mission
-		CvMissionDefinition kDefiniton;
-		kDefiniton.setMissionTime(GC.getMissionInfo(MISSION_PILLAGE).getTime() * gDLL->getSecsPerTurn());
-		kDefiniton.setMissionType(MISSION_PILLAGE);
-		kDefiniton.setPlot(pPlot);
-		kDefiniton.setUnit(BATTLE_UNIT_ATTACKER, this);
-		kDefiniton.setUnit(BATTLE_UNIT_DEFENDER, NULL);
-		addMission(&kDefiniton);
-	}
+
+	addMission(CvMissionDefinition(MISSION_PILLAGE, pPlot, this));
 
 	if (eTempImprovement != NO_IMPROVEMENT || eTempRoute != NO_ROUTE)
 	{
@@ -19517,7 +19371,8 @@ CvPlot* CvUnit::plot() const
 
 CvPlot* CvUnit::plotExternal() const
 {
-	FAssert ( isInViewport() );
+	FAssertMsg(isInViewport(), "Can't get plot of unit that is not in the viewport");
+	FAssertMsg(!isUsingDummyEntities(), "Can't get plot of unit that is using dummy entities");
 	return GC.getMapINLINE().plotSorenINLINE(getX_INLINE(), getY_INLINE());
 }
 
@@ -19955,16 +19810,16 @@ int CvUnit::SMgetCargo() const
 	return m_iSMCargo;
 }
 
-void CvUnit::changeCargo(int iChange)																
+void CvUnit::changeCargo(int iChange)
 {
 	m_iCargo += iChange;
-	FAssert(getCargo() >= 0);
+	FAssertRecalcMsg(getCargo() >= 0, "Transported units is less than 0");
 }
 
-void CvUnit::SMchangeCargo(int iChange)																
+void CvUnit::SMchangeCargo(int iChange)
 {
 	m_iSMCargo += iChange;
-	FAssert(SMgetCargo() >= 0);
+	FAssertOptionRecalcMsg(GAMEOPTION_SIZE_MATTERS, SMgetCargo() >= 0, "Transported cargo is less than 0");
 }
 
 void CvUnit::getCargoUnits(std::vector<CvUnit*>& aUnits) const
@@ -19995,16 +19850,13 @@ void CvUnit::getCargoUnits(std::vector<CvUnit*>& aUnits) const
 		}
 	}
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
-	{
-		bool bIsLoadVolumeCorrect = (SMgetCargo() == iCheck);
-		FAssert(bIsLoadVolumeCorrect);
-	}
-	FAssert(getCargo() == aUnits.size());
+	FAssertOptionRecalcMsg(GAMEOPTION_SIZE_MATTERS, SMgetCargo() == iCheck, "Cargo size doesn't match expectations");
+	FAssertRecalcMsg(getCargo() == aUnits.size(), "Number of cargo units found doesn't match cached number");
 }
 
 void CvUnit::validateCargoUnits()
 {
+#if FASSERT_ENABLE
 	int iCheck = 0;
 	int iCount = 0;
 	CvPlot* pPlot = plot();
@@ -20103,6 +19955,7 @@ void CvUnit::validateCargoUnits()
 		FAssert(iCheck == iCount);
 	}
 	FAssert(getCargo() == iCount);
+#endif
 }
 
 CvPlot* CvUnit::getAttackPlot() const
@@ -23073,7 +22926,6 @@ void CvUnit::setTransportUnit(CvUnit* pTransportUnit)
 				pTransportUnit->validateCargoUnits();
 			}
 		}
-
 
 		getGroup()->validateLocations();
 #endif
@@ -27051,16 +26903,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 			info->m_iPromotionFreeCount = g_paiTempPromotionFreeCount[iI];
 		}
-		else if (GC.getLoadedInitCore().getGameSaveSvnRev() != -1 && GC.getLoadedInitCore().getGameSaveSvnRev() < 5080 && isHasPromotion((PromotionTypes)iI) )
-		{
-			if ( !canKeepPromotion((PromotionTypes)iI, false, false) )
-			{
-				//	We have a promotion it doesn't look like we should be able to keep
-				//	but for the sake of old save games we allow it at load time, or else
-				//	all pre-combat mod games will lose promotions given by Python
-				setPromotionFreeCount((PromotionTypes)iI, 1);
-			}
-		}
 	}
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatKnockbacks);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatRepels);
@@ -30109,33 +29951,25 @@ bool CvUnit::rangeStrike(int iX, int iY)
 	}
 	//TB Combat Mod end
 
-	if (pPlot->isActiveVisible(false) && !pDefender->isUsingDummyEntities() )
-	{
-		// Range strike entity mission
-		CvMissionDefinition kDefiniton;
-		kDefiniton.setMissionTime(GC.getMissionInfo(MISSION_RANGE_ATTACK).getTime() * gDLL->getSecsPerTurn());
-		kDefiniton.setMissionType(MISSION_RANGE_ATTACK);
-		kDefiniton.setPlot(pDefender->plot());
-		kDefiniton.setUnit(BATTLE_UNIT_ATTACKER, this);
-		kDefiniton.setUnit(BATTLE_UNIT_DEFENDER, pDefender);
-		addMission(&kDefiniton);
 
-		//delay death
+	// Range strike entity mission
+	addMission(CvMissionDefinition(MISSION_RANGE_ATTACK, pDefender->plot(), this, pDefender));
+
+	//delay death
 /************************************************************************************************/
 /* UNOFFICIAL_PATCH                       05/10/10                             jdog5000         */
 /*                                                                                              */
 /* Bugfix                                                                                       */
 /************************************************************************************************/
 /* original bts code
-		pDefender->getGroup()->setMissionTimer(GC.getMissionInfo(MISSION_RANGE_ATTACK).getTime());
+	pDefender->getGroup()->setMissionTimer(GC.getMissionInfo(MISSION_RANGE_ATTACK).getTime());
 */
-		// mission timer is not used like this in any other part of code, so it might cause OOS
-		// issues ... at worst I think unit dies before animation is complete, so no real
-		// harm in commenting it out.
+	// mission timer is not used like this in any other part of code, so it might cause OOS
+	// issues ... at worst I think unit dies before animation is complete, so no real
+	// harm in commenting it out.
 /************************************************************************************************/
 /* UNOFFICIAL_PATCH                        END                                                  */
 /************************************************************************************************/
-	}
 
 	return true;
 }
@@ -31299,19 +31133,8 @@ bool CvUnit::airBomb1(int iX, int iY)
 	setMadeAttack(true);
 	changeMoves(GC.getMOVE_DENOMINATOR());
 
-	//if (pPlot->isActiveVisible(false))
-	//{
-	//	CvAirMissionDefinition kAirMission;
-	//	kAirMission.setMissionType(MISSION_AIRBOMB);
-	//	kAirMission.setUnit(BATTLE_UNIT_ATTACKER, this);
-	//	kAirMission.setUnit(BATTLE_UNIT_DEFENDER, NULL);
-	//	kAirMission.setDamage(BATTLE_UNIT_DEFENDER, 0);
-	//	kAirMission.setDamage(BATTLE_UNIT_ATTACKER, 0);
-	//	kAirMission.setPlot(pPlot);
-	//	kAirMission.setMissionTime(GC.getMissionInfo((MissionTypes)MISSION_AIRBOMB).getTime() * gDLL->getSecsPerTurn());
+	addMission(CvAirMissionDefinition(MISSION_AIRBOMB, pPlot, this));
 
-	//	addMission(&kAirMission);
-	//}
 	if (isSuicide())
 	{
 		kill(true);
@@ -31573,18 +31396,9 @@ bool CvUnit::airBomb2(int iX, int iY)
 	setReconPlot(pPlot);
 	setMadeAttack(true);
 	changeMoves(GC.getMOVE_DENOMINATOR());
-	//if (pPlot->isActiveVisible(false))
-	//{
-	//	CvAirMissionDefinition kAirMission;
-	//	kAirMission.setMissionType(MISSION_AIRBOMB);
-	//	kAirMission.setUnit(BATTLE_UNIT_ATTACKER, this);
-	//	kAirMission.setUnit(BATTLE_UNIT_DEFENDER, NULL);
-	//	kAirMission.setDamage(BATTLE_UNIT_DEFENDER, 0);
-	//	kAirMission.setDamage(BATTLE_UNIT_ATTACKER, 0);
-	//	kAirMission.setPlot(pPlot);
-	//	kAirMission.setMissionTime(GC.getMissionInfo((MissionTypes)MISSION_AIRBOMB).getTime() * gDLL->getSecsPerTurn());
-	//	addMission(&kAirMission);
-	//}
+
+	addMission(CvAirMissionDefinition(MISSION_AIRBOMB, pPlot, this));
+
 	if (isSuicide())
 	{
 		kill(true);
@@ -31851,18 +31665,9 @@ bool CvUnit::airBomb3(int iX, int iY)
 			}
 		}
 	}
-	//if (pPlot->isActiveVisible(false))
-	//{
-	//	CvAirMissionDefinition kAirMission;
-	//	kAirMission.setMissionType(MISSION_AIRBOMB);
-	//	kAirMission.setUnit(BATTLE_UNIT_ATTACKER, this);
-	//	kAirMission.setUnit(BATTLE_UNIT_DEFENDER, NULL);
-	//	kAirMission.setDamage(BATTLE_UNIT_DEFENDER, 0);
-	//	kAirMission.setDamage(BATTLE_UNIT_ATTACKER, 0);
-	//	kAirMission.setPlot(pPlot);
-	//	kAirMission.setMissionTime(GC.getMissionInfo((MissionTypes)MISSION_AIRBOMB).getTime() * gDLL->getSecsPerTurn());
-	//	addMission(&kAirMission);
-	//}
+
+	addMission(CvAirMissionDefinition(MISSION_AIRBOMB, pPlot, this));
+
 	if (isSuicide())
 	{
 		kill(true);
@@ -32163,18 +31968,9 @@ bool CvUnit::airBomb4(int iX, int iY)
 			}
 		}
 	}
-	//if (pPlot->isActiveVisible(false))
-	//{
-	//	CvAirMissionDefinition kAirMission;
-	//	kAirMission.setMissionType(MISSION_AIRBOMB);
-	//	kAirMission.setUnit(BATTLE_UNIT_ATTACKER, this);
-	//	kAirMission.setUnit(BATTLE_UNIT_DEFENDER, NULL);
-	//	kAirMission.setDamage(BATTLE_UNIT_DEFENDER, 0);
-	//	kAirMission.setDamage(BATTLE_UNIT_ATTACKER, 0);
-	//	kAirMission.setPlot(pPlot);
-	//	kAirMission.setMissionTime(GC.getMissionInfo((MissionTypes)MISSION_AIRBOMB).getTime() * gDLL->getSecsPerTurn());
-	//	addMission(&kAirMission);
-	//}
+
+	addMission(CvAirMissionDefinition(MISSION_AIRBOMB, pPlot, this));
+
 	if (isSuicide())
 	{
 		kill(true);
@@ -32381,18 +32177,9 @@ bool CvUnit::airBomb5(int iX, int iY)
 			}
 		}
 	}
-	//if (pPlot->isActiveVisible(false))
-	//{
-	//	CvAirMissionDefinition kAirMission;
-	//	kAirMission.setMissionType(MISSION_AIRBOMB);
-	//	kAirMission.setUnit(BATTLE_UNIT_ATTACKER, this);
-	//	kAirMission.setUnit(BATTLE_UNIT_DEFENDER, NULL);
-	//	kAirMission.setDamage(BATTLE_UNIT_DEFENDER, 0);
-	//	kAirMission.setDamage(BATTLE_UNIT_ATTACKER, 0);
-	//	kAirMission.setPlot(pPlot);
-	//	kAirMission.setMissionTime(GC.getMissionInfo((MissionTypes)MISSION_AIRBOMB).getTime() * gDLL->getSecsPerTurn());
-	//	addMission(&kAirMission);
-	//}
+
+	addMission(CvAirMissionDefinition(MISSION_AIRBOMB, pPlot, this));
+
 	if (isSuicide())
 	{
 		kill(true);
@@ -32737,25 +32524,15 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 /************************************************************************************************/
 		}
 	}
+
 	if (!sAttack)
 	{
 		setMadeAttack(true);
 		changeMoves(GC.getMOVE_DENOMINATOR());
 	}
 
-	if (pPlot->isActiveVisible(false))
-	{
-		FAssertMsg(pLoopUnit != NULL, "Bombard mission requires a valid defending unit");
+	addMission(CvMissionDefinition(MISSION_BOMBARD, pPlot, this, pLoopUnit, GC.getMissionInfo(MISSION_RBOMBARD).getTime()* gDLL->getSecsPerTurn()));
 
-		// Bombard entity mission
-		CvMissionDefinition kDefiniton;
-		kDefiniton.setMissionTime(GC.getMissionInfo(MISSION_RBOMBARD).getTime() * gDLL->getSecsPerTurn());
-		kDefiniton.setMissionType(MISSION_BOMBARD);
-		kDefiniton.setPlot(pPlot);
-		kDefiniton.setUnit(BATTLE_UNIT_ATTACKER, this);
-		kDefiniton.setUnit(BATTLE_UNIT_DEFENDER, pLoopUnit);
-		addMission(&kDefiniton);
-	}
 	return true;
 }
 
@@ -32913,17 +32690,9 @@ void CvUnit::doOpportunityFire()
 				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_OPP_FIRE", getNameKey(), pDefender->getNameKey());
 				AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pAttackPlot->getX_INLINE(), pAttackPlot->getY_INLINE(), true, true);
 			}
-			if (pAttackPlot->isActiveVisible(false) && !pDefender->isUsingDummyEntities())
-			{
-				// Bombard entity mission
-				CvMissionDefinition kDefiniton;
-				kDefiniton.setMissionTime(GC.getMissionInfo(MISSION_BOMBARD).getTime() * gDLL->getSecsPerTurn());
-				kDefiniton.setMissionType(MISSION_BOMBARD);
-				kDefiniton.setPlot(pAttackPlot);
-				kDefiniton.setUnit(BATTLE_UNIT_ATTACKER, this);
-				kDefiniton.setUnit(BATTLE_UNIT_DEFENDER, pDefender);
-				addMission(&kDefiniton);
-			}
+
+			// Bombard entity mission
+			addMission(CvMissionDefinition(MISSION_BOMBARD, pAttackPlot, this, pDefender));
 		}
 	}
 }
@@ -32989,20 +32758,13 @@ void CvUnit::doActiveDefense()
 							pDefender->setColdDamage(iUnitDamage);
 						}
 						//TB Combat mod end
-						//if (pLoopPlot->isActiveVisible(false) && !pDefender->isUsingDummyEntities())
-						//{
-						//	CvAirMissionDefinition kAirMission;
-						//	kAirMission.setMissionType(MISSION_AIRSTRIKE);
-						//	kAirMission.setUnit(BATTLE_UNIT_ATTACKER, this);
-						//	kAirMission.setUnit(BATTLE_UNIT_DEFENDER, pDefender);
-						//	kAirMission.setDamage(BATTLE_UNIT_DEFENDER, 0);
-						//	kAirMission.setDamage(BATTLE_UNIT_ATTACKER, 0);
-						//	kAirMission.setPlot(pLoopPlot);
-						//	setCombatTimer(GC.getMissionInfo(MISSION_AIRSTRIKE).getTime());
-						//	GC.getGameINLINE().incrementTurnTimer(getCombatTimer());
-						//	kAirMission.setMissionTime(getCombatTimer() * gDLL->getSecsPerTurn());
-						//	addMission(&kAirMission);
-						//}
+						if (pLoopPlot->isActiveVisible(false) && (!pDefender->isUsingDummyEntities() && pDefender->isInViewport()))
+						{
+							setCombatTimer(GC.getMissionInfo(MISSION_AIRSTRIKE).getTime());
+							GC.getGameINLINE().incrementTurnTimer(getCombatTimer());
+
+							addMission(CvAirMissionDefinition(MISSION_AIRSTRIKE, pLoopPlot, this, pDefender));
+						}
 					}
 				}
 				if (bSuccess)
@@ -33266,17 +33028,10 @@ bool CvUnit::archerBombard(int iX, int iY, bool supportAttack)
 		setMadeAttack(true);
 		changeMoves(GC.getMOVE_DENOMINATOR());
 	}
-	if (pPlot->isActiveVisible(false) && !pLoopUnit->isUsingDummyEntities())
-	{
-		// Bombard entity mission
-		CvMissionDefinition kDefiniton;
-		kDefiniton.setMissionTime(GC.getMissionInfo(MISSION_ABOMBARD).getTime() * gDLL->getSecsPerTurn());
-		kDefiniton.setMissionType(MISSION_BOMBARD);
-		kDefiniton.setPlot(pPlot);
-		kDefiniton.setUnit(BATTLE_UNIT_ATTACKER, this);
-		kDefiniton.setUnit(BATTLE_UNIT_DEFENDER, pLoopUnit);
-		addMission(&kDefiniton);
-	}
+
+	// Bombard entity mission
+	addMission(CvMissionDefinition(MISSION_BOMBARD, pPlot, this, pLoopUnit, GC.getMissionInfo(MISSION_ABOMBARD).getTime()* gDLL->getSecsPerTurn()));
+
 	return true;
 }
 // Dale - ARB: Archer Bombard END
@@ -33400,19 +33155,15 @@ bool CvUnit::fighterEngage(int iX, int iY)
 	}
 	if (pDefender != NULL)
 	{
-		CvAirMissionDefinition kAirMission;
-		kAirMission.setMissionType(MISSION_AIRSTRIKE);
-		kAirMission.setUnit(BATTLE_UNIT_ATTACKER, this);
-		kAirMission.setUnit(BATTLE_UNIT_DEFENDER, pDefender);
+		CvAirMissionDefinition kAirMission(MISSION_AIRSTRIKE, pPlot, this, pDefender);
 		resolveAirCombat(pDefender, pPlot, kAirMission);
-		//if (pPlot->isActiveVisible(false))
-		//{
-		//	kAirMission.setPlot(pPlot);
-		//	kAirMission.setMissionTime(GC.getMissionInfo(MISSION_AIRSTRIKE).getTime() * gDLL->getSecsPerTurn());
-		//	setCombatTimer(GC.getMissionInfo(MISSION_AIRSTRIKE).getTime());
-		//	GC.getGameINLINE().incrementTurnTimer(getCombatTimer());
-		//	//addMission(&kAirMission);
-		//}
+		if (kAirMission.isValid())
+		{
+			setCombatTimer(GC.getMissionInfo(MISSION_AIRSTRIKE).getTime());
+			GC.getGameINLINE().incrementTurnTimer(getCombatTimer());
+			addMission(kAirMission);
+		}
+
 		if (isDead())
 		{
 			MEMORY_TRACK_EXEMPT();
@@ -36022,18 +35773,11 @@ const CvProperties* CvUnit::getPropertiesConst() const
 	return &m_Properties;
 }
 
-void CvUnit::addMission(CvMissionDefinition* pMission)
+void CvUnit::addMission(const CvMissionDefinition& mission)
 {
-	if ( !isUsingDummyEntities() && isInViewport() )
+	if (mission.isValid())
 	{		
-		if ( pMission->getPlot() == NULL || (pMission->getPlot() != NULL && !pMission->getPlot()->isInViewport()) ||
-			 (pMission->getUnit(BATTLE_UNIT_ATTACKER) != NULL && !pMission->getUnit(BATTLE_UNIT_ATTACKER)->isInViewport()) ||
-			 (pMission->getUnit(BATTLE_UNIT_DEFENDER) != NULL && !pMission->getUnit(BATTLE_UNIT_DEFENDER)->isInViewport()) )
-		{
-			return;
-		}
-
-		gDLL->getEntityIFace()->AddMission(pMission);
+		gDLL->getEntityIFace()->AddMission(&mission);
 	}
 }
 //TB Archery Bombard Fix (with Koshling's professional assistance ;) )
@@ -43522,7 +43266,7 @@ void CvUnit::setSMAssetValue(bool bForLoad)
 		int iChange = m_iSMAssetValue - iOldSMAssetValue;
 		GET_PLAYER(getOwnerINLINE()).changeAssets(iChange);
 	}
-	FAssert(getSMAssetValue() >= 0);
+	FAssertOptionRecalcMsg(GAMEOPTION_SIZE_MATTERS, getSMAssetValue() >= 0, "Asset value fell below 0");
 }
 
 int CvUnit::getCargoVolumeModifier() const

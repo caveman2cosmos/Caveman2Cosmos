@@ -16550,7 +16550,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEGATOWER_AIR_SCRUBBER</Tag>
-		<English>Megatower (Air Scrubber Crown)</English>
+		<English>Megatower (Air Scrubber Crown Section)</English>
 		<French>Mégatour (Couronne de dépollueurs aériens)</French>
 		<Polish>Megawieża (Korona Drapacza Chmur)</Polish>
 	</TEXT>
@@ -16560,13 +16560,13 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEGATOWER_AIR_SCRUBBER_STRATEGY</Tag>
-		<English>Build a Megatower (Air Scrubber Crown) to decrease your cities air pollution.</English>
+		<English>Build a Megatower (Air Scrubber Crown Section) to decrease your cities air pollution.</English>
 		<French>Construisez une [COLOR_BUILDING_TEXT]Mégatour (Couronne de dépollueurs aériens)[COLOR_REVERT] pour réduire la pollution de l'air dans votre ville.</French>
 		<Polish>Zbuduj Megatower (Air Scrubber Crown) by zmniejszyć zanieczyszczenie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEGATOWER_BIODOME</Tag>
-		<English>Megatower (Biodome Park Crown)</English>
+		<English>Megatower (Biodome Park Crown Section)</English>
 		<French>
 			<Text>Mégatour (Biodome avec parc)</Text>
 			<Gender>Female</Gender>
@@ -16581,7 +16581,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEGATOWER_BIODOME_STRATEGY</Tag>
-		<English>Build a Megatower (Biodome Park Crown) to decrease your cities pollution.</English>
+		<English>Build a Megatower (Biodome Park Crown Section) to decrease your cities pollution.</English>
 		<French>Construisez une [COLOR_BUILDING_TEXT]Mégatour (Biodome avec parc)[COLOR_REVERT] pour diminuer la pollution de votre ville.</French>
 		<Polish>Zbuduj Megatower (Biodome Park Crown) to decrease your cities pollution.</Polish>
 	</TEXT>
@@ -16629,7 +16629,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEGATOWER_HOLOGRAM_ADVERTISING</Tag>
-		<English>Megatower (Hologram Advertising Crown)</English>
+		<English>Megatower (Hologram Advertising Crown Section)</English>
 		<French>Mégatour (Couronne d'Hologrammes publicitaires)</French>
 		<Polish>Megawieża (Korona HoloRozrywki)</Polish>
 	</TEXT>
@@ -16639,7 +16639,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEGATOWER_HOLOGRAM_ADVERTISING_STRATEGY</Tag>
-		<English>Build a Megatower (Hologram Advertising Crown) to increase your cities gold.</English>
+		<English>Build a Megatower (Hologram Advertising Crown Section) to increase your cities gold.</English>
 		<French>Construisez une [COLOR_BUILDING_TEXT]Mégatour (Couronne d'Hologrammes publicitaires)[COLOR_REVERT] pour augmenter l'or de votre ville.</French>
 		<Polish>Zbuduj Megatower (Hologram Advertising Crown) by zwiększyć ilość złota w Twoim mieście.</Polish>
 	</TEXT>
@@ -16795,7 +16795,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEGATOWER_SOLAR_CROWN</Tag>
-		<English>Megatower (Solar Power Crown)</English>
+		<English>Megatower (Solar Power Crown Section)</English>
 		<French>
 			<Text>Mégatour (Couronne de panneaux solaires)</Text>
 			<Gender>Female</Gender>
@@ -16810,7 +16810,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEGATOWER_SOLAR_CROWN_STRATEGY</Tag>
-		<English>Build a Megatower (Solar Power Crown) to increase your cities electricity and therefore it's production.</English>
+		<English>Build a Megatower (Solar Power Crown Section) to increase your cities electricity and therefore it's production.</English>
 		<French>Construisez une [COLOR_BUILDING_TEXT]Mégatour (Couronne de Panneaux Solaires)[COLOR_REVERT] pour augmenter la production d'électricité dans votre ville.</French>
 		<Polish>Zbuduj Megatower (Solar Power Crown) to increase your cities electricity and therefore it's production.</Polish>
 	</TEXT>
@@ -16843,7 +16843,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEGATOWER_THEME_PARK</Tag>
-		<English>Megatower (Theme Park Crown)</English>
+		<English>Megatower (Theme Park Crown Section)</English>
 		<French>
 			<Text>Mégatour (Couronne de parc d'attraction)</Text>
 			<Gender>Female</Gender>
@@ -16858,13 +16858,13 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEGATOWER_THEME_PARK_STRATEGY</Tag>
-		<English>Build a Megatower (Theme Park Crown) to increase your cities gold.</English>
+		<English>Build a Megatower (Theme Park Crown Section) to increase your cities gold.</English>
 		<French>Construisez une [COLOR_BUILDING_TEXT]Mégatour (Couronne de parc d'attraction)[COLOR_REVERT] pour augmenter l'or de votre ville.</French>
 		<Polish>Zbuduj Megatower (Theme Park Crown) by zwiększyć ilość złota w Twoim mieście.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEGATOWER_WIND_POWER</Tag>
-		<English>Megatower (Wind Power Crown)</English>
+		<English>Megatower (Wind Power Crown Section)</English>
 		<French>
 			<Text>Mégatour (Couronne d'éoliennes)</Text>
 			<Gender>Female</Gender>
@@ -16879,7 +16879,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEGATOWER_WIND_POWER_STRATEGY</Tag>
-		<English>Build a Megatower (Wind Power Crown) to increase your cities electricity and therefore it's production.</English>
+		<English>Build a Megatower (Wind Power Crown Section) to increase your cities electricity and therefore it's production.</English>
 		<French>Construisez une [COLOR_BUILDING_TEXT]Mégatour (Couronne d'éoliennes)[COLOR_REVERT] pour augmenter la production d'électricité dans votre ville.</French>
 		<Polish>Zbuduj Megatower (Wind Power Crown) to increase your cities electricity and therefore it's production.</Polish>
 	</TEXT>

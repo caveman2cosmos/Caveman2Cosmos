@@ -220,6 +220,9 @@
 			<bNoNonOwnedCityEntry>1</bNoNonOwnedCityEntry>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+			</TechTypes>
 			<PrereqBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</PrereqBuilding>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
@@ -353,6 +356,9 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_LEADERSHIP</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+			</TechTypes>
 			<PrereqBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</PrereqBuilding>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
@@ -509,6 +515,9 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+			</TechTypes>
 			<PrereqBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</PrereqBuilding>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
@@ -693,6 +702,9 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_HOMO_SUPERIOR</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+			</TechTypes>
 			<PrereqBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</PrereqBuilding>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>

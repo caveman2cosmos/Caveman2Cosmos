@@ -5178,12 +5178,13 @@ int CvPlayerAI::AI_costAsPercentIncome(int iExtraCost) const
 	//	Koshling - we're never in financial trouble if we can run at current deficits for more than
 	//	50 turns and stay in healthy territory (100 + 100*era as per REV calculation), so claim full
 	//	funding or even excess funding in such a case!
-	int iEraGoldThreshold = 100 + 100*GC.getGameINLINE().getCurrentEra();
-	int iWarningGoldAmount = getEffectiveGold() + 50*(iNetCommerce - iNetExpenses);
-	FAssert(iWarningGoldAmount < (GC.getGREATER_COMMERCE_SWITCH_POINT() * 2)); //Warning: we're about to possibly overflow in the next statement.
+	int iEraGoldThreshold = 100 + 100 * GC.getGameINLINE().getCurrentEra();
+
+	FAssertMsg(getEffectiveGold() + 50 * (iNetCommerce - iNetExpenses) < (GC.getGREATER_COMMERCE_SWITCH_POINT() * 2), "Might be about to overflow gold calculation");
+
 	if ( getEffectiveGold() > iEraGoldThreshold &&
 		 (AI_avoidScience() || getCommercePercent(COMMERCE_RESEARCH) > 50) &&	//	If we're forcing science below 50 to achieve this don't exempt it
-		 ((iNetCommerce - iNetExpenses) >= 0 || getEffectiveGold() + 50*(iNetCommerce - iNetExpenses) > iEraGoldThreshold) )//Could still overload here perhaps depending on how much (50*(iNetCommerce - iNetExpenses)) can total up to.
+		 ((iNetCommerce - iNetExpenses) >= 0 || getEffectiveGold() + 50 * (iNetCommerce - iNetExpenses) > iEraGoldThreshold) )//Could still overload here perhaps depending on how much (50*(iNetCommerce - iNetExpenses)) can total up to.
 	{
 		int iValue = 100 + (getEffectiveGold()/iEraGoldThreshold);
 
@@ -24809,15 +24810,7 @@ void CvPlayerAI::read(FDataStreamBase* pStream)
 
 		for (int i = 0; i < MAX_PLAYERS; i++)
 		{
-			if (GC.getLoadedInitCore().getGameSaveSvnRev() != -1 && GC.getLoadedInitCore().getGameSaveSvnRev() < 7895)
-			{
-				WRAPPER_READ_ARRAY(wrapper, "CvPlayerAI", NUM_CONTACT_TYPES - 1, m_aaiContactTimer[i]);
-				m_aaiContactTimer[i][NUM_CONTACT_TYPES - 1] = 0;
-			}
-			else
-			{
-				WRAPPER_READ_ARRAY(wrapper, "CvPlayerAI", NUM_CONTACT_TYPES, m_aaiContactTimer[i]);
-			}
+			WRAPPER_READ_ARRAY(wrapper, "CvPlayerAI", NUM_CONTACT_TYPES, m_aaiContactTimer[i]);
 		}
 		for (int i = 0; i < MAX_PLAYERS; i++)
 		{
@@ -28471,37 +28464,30 @@ int CvPlayerAI::AI_averageCommerceExchange(CommerceTypes eCommerce) const
 
 void CvPlayerAI::AI_calculateAverages() const
 {
-	CvCity* pLoopCity;
-	int iLoop;
-	int iI;
-	
-	int iPopulation;
-	int iTotalPopulation;
-
 	if ( m_iAveragesCacheTurn != GC.getGameINLINE().getGameTurn() )
 	{
-		for (iI = 0; iI < NUM_YIELD_TYPES; iI++)
+		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 		{
 			m_aiAverageYieldMultiplier[iI] = 0;		
 		}
-		for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 		{
 			m_aiAverageCommerceMultiplier[iI] = 0;	
 		}
 		m_iAverageGreatPeopleMultiplier = 0;
 		
-		iTotalPopulation = 0;
-		
-		for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+		int iTotalPopulation = 0;
+		int iLoop = 0;
+		for (CvCity* pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 		{
-			iPopulation = std::max(pLoopCity->getPopulation(), NUM_CITY_PLOTS);
+			int iPopulation = std::max(pLoopCity->getPopulation(), NUM_CITY_PLOTS);
 			iTotalPopulation += iPopulation;
 				
-			for (iI = 0; iI < NUM_YIELD_TYPES; iI++)
+			for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 			{
 				m_aiAverageYieldMultiplier[iI] += iPopulation * pLoopCity->AI_yieldMultiplier((YieldTypes)iI);
 			}
-			for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+			for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 			{
 				m_aiAverageCommerceMultiplier[iI] += iPopulation * pLoopCity->getTotalCommerceRateModifier((CommerceTypes)iI);
 			}
@@ -28511,52 +28497,23 @@ void CvPlayerAI::AI_calculateAverages() const
 		
 		if (iTotalPopulation > 0)
 		{
-			for (iI = 0; iI < NUM_YIELD_TYPES; iI++)
+			for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 			{
-				m_aiAverageYieldMultiplier[iI] /= iTotalPopulation;
-				FAssert(m_aiAverageYieldMultiplier[iI] > 0);
-	/************************************************************************************************/
-	/* Afforess	                  Start		 06/04/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-				m_aiAverageYieldMultiplier[iI] = std::max(1, m_aiAverageYieldMultiplier[iI]);
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
+				m_aiAverageYieldMultiplier[iI] = std::max(1, m_aiAverageYieldMultiplier[iI] / iTotalPopulation);
 			}
-			for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+			for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 			{
-				m_aiAverageCommerceMultiplier[iI] /= iTotalPopulation;	
-				FAssert(m_aiAverageCommerceMultiplier[iI] > 0);	
-	/************************************************************************************************/
-	/* Afforess	                  Start		 06/04/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-				m_aiAverageCommerceMultiplier[iI] = std::max(1, m_aiAverageCommerceMultiplier[iI]);
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
+				m_aiAverageCommerceMultiplier[iI] = std::max(1, m_aiAverageCommerceMultiplier[iI] / iTotalPopulation);
 			}
-			m_iAverageGreatPeopleMultiplier /= iTotalPopulation;
-	/************************************************************************************************/
-	/* Afforess	                  Start		 06/04/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-			m_iAverageGreatPeopleMultiplier = std::max(1, m_iAverageGreatPeopleMultiplier);
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
+			m_iAverageGreatPeopleMultiplier = std::max(1, m_iAverageGreatPeopleMultiplier / iTotalPopulation);
 		}
 		else
 		{
-			for (iI = 0; iI < NUM_YIELD_TYPES; iI++)
+			for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 			{
 				m_aiAverageYieldMultiplier[iI] = 100;
 			}
-			for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+			for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 			{
 				m_aiAverageCommerceMultiplier[iI] = 100;
 			}
@@ -28566,34 +28523,33 @@ void CvPlayerAI::AI_calculateAverages() const
 		
 		//Calculate Exchange Rate
 		
-		for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 		{
 			m_aiAverageCommerceExchange[iI] = 0;		
 		}
 		
-		int iCommerce = 0;
 		int iTotalCommerce = 0;
-		
-		for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+		iLoop = 0;
+		for (CvCity* pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 		{
-			iCommerce = pLoopCity->getYieldRate(YIELD_COMMERCE);
+			int iCommerce = pLoopCity->getYieldRate(YIELD_COMMERCE);
 			iTotalCommerce += iCommerce;
 			
 			int iExtraCommerce = 0;
-			for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+			for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 			{
 				iExtraCommerce +=((pLoopCity->getSpecialistPopulation() + pLoopCity->getNumGreatPeople()) * getSpecialistExtraCommerce((CommerceTypes)iI));
 				iExtraCommerce += (pLoopCity->getBuildingCommerce((CommerceTypes)iI) + pLoopCity->getSpecialistCommerce((CommerceTypes)iI) + pLoopCity->getReligionCommerce((CommerceTypes)iI) + getFreeCityCommerce((CommerceTypes)iI));
 			}
 			iTotalCommerce += iExtraCommerce;
 			
-			for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+			for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 			{
 				m_aiAverageCommerceExchange[iI] += ((iCommerce + iExtraCommerce) * pLoopCity->getTotalCommerceRateModifier((CommerceTypes)iI)) / 100;		
 			}
 		}
 
-		for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 		{
 			if (m_aiAverageCommerceExchange[iI] > 0)
 			{

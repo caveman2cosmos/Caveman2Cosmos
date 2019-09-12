@@ -100,7 +100,7 @@
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
-<!-- Afforess:
+		<!-- Afforess:
 	Sets a Maximum Airlift and Rebase range for aircraft. -1 for no limit to range or rebase.
 
 	Toffer: This is only used for the AI perceived value of a tech; and for wheter to display the can rebase anywhere information for air units.
@@ -270,7 +270,7 @@
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
-<!-- Use the following to determine what building art is displayed on cities.
+		<!-- Use the following to determine what building art is displayed on cities.
 It is a bitmask of flags which may be added together:
 	1	= Wonders
 	2	= City defences
@@ -301,7 +301,7 @@ We default to all of them (1+2+128 = 131)
 		<DefineName>TREAT_NEGATIVE_GOLD_AS_MAINTENANCE</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
-<!-- Don't Escort:
+	<!-- Don't Escort:
 if set to 0 you will need to escort subdued animals back to your lands.
 if set to 1 they will "teleport" to the nearest city when captured. -->
 	<Define>
@@ -312,9 +312,9 @@ if set to 1 they will "teleport" to the nearest city when captured. -->
 		<DefineName>DONT_ESCORT_SUBDUED_SEA_ANIMAL</DefineName>
 		<bDefineBoolVal>1</bDefineBoolVal>
 	</Define>
-<!-- \Don't Escort -->
+	<!-- \Don't Escort -->
 	<Define>
-<!-- If dynamic Great Wall is set to a non-0 value the great wall will be re-evaluated and positioned every turn to reflect the owner's expanding borders.
+		<!-- If dynamic Great Wall is set to a non-0 value the great wall will be re-evaluated and positioned every turn to reflect the owner's expanding borders.
 Note that this has no functional effect (the Great Wall prevents barbarians from entering all of your territory however it's displayed - the effect is just graphical.
 The Great Wall is always dynamic if viewports are enabled regardless of this setting -->
 		<DefineName>DYNAMIC_GREAT_WALL</DefineName>
@@ -322,7 +322,8 @@ The Great Wall is always dynamic if viewports are enabled regardless of this set
 	</Define>
 	<Define>
 		<DefineName>PROFILER_ALTERNATE_SAMPLE_SET_SOURCE</DefineName>
-		<DefineTextVal></DefineTextVal>
+		<DefineTextVal>
+		</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>ENABLE_BACKGROUND_PROFILING</DefineName>
@@ -335,5 +336,9 @@ The Great Wall is always dynamic if viewports are enabled regardless of this set
 	<Define>
 		<DefineName>RIVER_EXTRA_MOVEMENT</DefineName>
 		<iDefineIntVal>3</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>C2C_VERSION</DefineName>
+		<DefineTextVal>v40-dev</DefineTextVal>
 	</Define>
 </Civ4Defines>

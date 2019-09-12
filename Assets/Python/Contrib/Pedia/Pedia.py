@@ -1736,7 +1736,7 @@ class Pedia:
 					if not path: return
 				else: return
 				self.bMovie = True
-				screen.playMovie(path, self.X_PEDIA_PAGE, self.Y_PEDIA_PAGE, 700, 525, 0)
+				screen.playMovie(path, self.X_PEDIA_PAGE, self.Y_PEDIA_PAGE, 720, 480, 0)
 		elif szSplit[0] == "Letter":
 			LIST = "Index" + str(iData1)
 			nRows = self.nIndexLists[1][iData1]

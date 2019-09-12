@@ -30,7 +30,7 @@
 # Note: $(PROGRAMFILES) converts to "C:\Program Files", "C:\Program Files (x86)" or whatever fits your system.
 # run "nmake.exe /P" in cmd.exe to see what it is on your system
 TOOLKIT=..\Build\deps\Microsoft Visual C++ Toolkit 2003
-PSDK=..\Build\deps\Microsoft Platform SDK
+PSDK=..\Build\deps\Microsoft SDKs\Windows\v6.0
 ## Uncomment to have newly compiled dlls copied to your mod's Assets directory
 YOURMOD=..
 
@@ -48,8 +48,6 @@ RC="$(PSDK)\bin\rc.exe"
 ## Overwritten by enviroment variable FASTDEP_FULL_PATH
 FD="..\Build\deps\fastdep\fastdep.exe"
 
-GITVERSION="..\Tools\C2C-GitVersion.exe"
-
 #### DEFINES ####
 ## copy the following lines into "Additional options" in NMAKE properties
 ## This will make VC++ aware of what is defined and what isn't, which affects the help popup and red lines
@@ -57,8 +55,8 @@ GITVERSION="..\Tools\C2C-GitVersion.exe"
 ## Assert adds /DFASSERT_ENABLE, which should be added to additional options too, if you care.
 ## However you will only be able to tell a difference if you do something with asserts other than FAssert() or FAssertMsg()
 
-Debug_DEFINES=/DWIN32 /D_WINDOWS /D_USRDLL /D_DEBUG
-Release_DEFINES=/DWIN32 /D_WINDOWS /D_USRDLL /DNDEBUG /DFINAL_RELEASE
+Debug_DEFINES=/DWIN32 /D_WINDOWS /D_USRDLL /D_DEBUG /DBUILD_TARGET=$(TARGET)
+Release_DEFINES=/DWIN32 /D_WINDOWS /D_USRDLL /DNDEBUG /DFINAL_RELEASE /DBUILD_TARGET=$(TARGET)
 
 #### You shouldn't need to modify anything beyond this point ####
 #################################################################
@@ -72,11 +70,18 @@ CUSTOM_LDFLAGS =
 # !ENDIF
 # !include Makefile.settings
 
-# /nologo /MD /Z7 /O2 /Oy /Oi /G7 /DWIN32 /D_WINDOWS /D_USRDLL /DCVGAMECOREDLL_EXPORTS /DNDEBUG /DFINAL_RELEASE /GR /Gy /W3 /EHsc /Gd /Gm- /Fd"TARGET_DIR_files\Profile\CvGameCoreDLL.pdb"   /Z7 /Yu"CvGameCoreDLL.h" /Fp"temp_files\Profile\CvGameCoreDLL.pch" /I"deps/Boost-1.32.0/include" /I"deps/Python24/include" /I"./include" /I"deps\Microsoft Visual C++ Toolkit 2003/include" /I"deps\Microsoft Platform SDK/Include" /I"deps\Microsoft Platform SDK/Include/mfc" /YcCvGameCoreDLL.h /Fo"temp_files\Profile\_precompile.obj" /c .\_precompile.cpp
+!IFDEF C2C_VERSION
+VERSION_DEFINE=/DC2C_VERSION="\"$(C2C_VERSION)\""
+!ELSE
+VERSION_DEFINE=
+!ENDIF
+
+# /nologo /MD /Z7 /O2 /Oy /Oi /G7 /DWIN32 /D_WINDOWS /D_USRDLL /DCVGAMECOREDLL_EXPORTS /DNDEBUG /DFINAL_RELEASE /GR /Gy /W3 /EHsc /Gd /Gm- /Fd"TARGET_DIR_files\Profile\CvGameCoreDLL.pdb"   /Z7 /Yu"CvGameCoreDLL.h" /Fp"temp_files\Profile\CvGameCoreDLL.pch" /I"deps/Boost-1.32.0/include" /I"deps/Python24/include" /I"./include" /I"deps\Microsoft Visual C++ Toolkit 2003/include" /I"deps\Microsoft SDKs\Windows\v6.0/Include" /I"deps\Microsoft SDKs\Windows\v6.0/Include/mfc" /YcCvGameCoreDLL.h /Fo"temp_files\Profile\_precompile.obj" /c .\_precompile.cpp
 PRECOMPILE_DEPENDENCIES = 
-PROJECT_CFLAGS = /arch:SSE2 /Zm200 /DXERCES_STATIC_LIBRARY /D_MOD_SENTRY /D_MOD_FRACTRADE /D_MOD_GOVWORKERS /DQC_MASTERY_VICTORY /DLOG_AI /D_MOD_GWARM /D_MOD_SHAM_SPOILER /DC2C_BUILD
+PROJECT_CFLAGS = /arch:SSE2 /Zm200 /DXERCES_STATIC_LIBRARY /D_MOD_SENTRY /D_MOD_FRACTRADE /D_MOD_GOVWORKERS /DQC_MASTERY_VICTORY /DLOG_AI /D_MOD_GWARM /D_MOD_SHAM_SPOILER /DC2C_BUILD $(VERSION_DEFINE)
 PROJECT_LDFLAGS = /NODEFAULTLIB:msvcprtd.lib /DEF:CvGameCoreDLL.def /PDBALTPATH:%_PDB%
 SOURCE_DIR = .
+
 
 SUBDIRPATH1 = ../
 SUBDIRPATH2 = ../
@@ -233,6 +238,8 @@ clean:
 		$(Target_PCH) $(Target_PDB) $(Target_OTHER)) DO @IF EXIST "%i" DEL "%i"
 
 build: $(Target_BIN)
+
+stage: $(Target_BIN)
 !IFDEF YOURMOD
 	-COPY "$(Target_BIN)" "$(YOURMOD)\Assets\."
 	-COPY "$(Target_PDB)" "$(YOURMOD)\Assets\."
@@ -240,7 +247,7 @@ build: $(Target_BIN)
 
 precompile: Make_Dir Target_unfinished $(Target_PCH)
 
-source_list: gitversion Make_Dir
+source_list: Make_Dir
 	@ECHO Building source list
 	@ECHO SOURCES= \> $(FILE_DEPENDS)
 	@FOR %j in ($(SUBDIRS)) DO @(FOR %i IN ($(SOURCE_DIR)\%j\*.cpp) DO @ECHO %i \>> $(FILE_DEPENDS))
@@ -248,10 +255,6 @@ source_list: gitversion Make_Dir
 	@ECHO OBJS= \>> $(FILE_DEPENDS)
 	@FOR %j in ($(SUBDIRS)) DO @(FOR /F "delims=." %i IN ('dir /b $(SOURCE_DIR)\%j\*.cpp') DO @ECHO. $(TARGET_DIR)\%j\%i.obj \>> $(FILE_DEPENDS))
 	@ECHO.>> $(FILE_DEPENDS)
-
-gitversion:
-	@ECHO Running GitVersion
-	@$(GITVERSION)
 
 fastdep:
 	@ECHO Running fastdep

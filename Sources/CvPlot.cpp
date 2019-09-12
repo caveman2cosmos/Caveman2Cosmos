@@ -502,6 +502,8 @@ static bool bFoundEvictable = true;
 
 void CvPlot::EvictGraphicsIfNecessary()
 {
+	bFoundEvictable = true;
+
 	while(bFoundEvictable && NeedToFreeMemory())
 	{
 		int iEvictionIndex = findOldestEvictablePagingEntry();
@@ -4058,7 +4060,12 @@ int CvPlot::getFeatureProduction(BuildTypes eBuild, TeamTypes eTeam, CvCity** pp
 
 CvUnit* CvPlot::getBestDefenderExternal(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar, bool bTestPotentialEnemy, bool bTestCanMove) const
 {
-	return getBestDefender(eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove);
+	CvUnit* bestDefender = getBestDefender(eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove);
+	if (bestDefender == NULL || !bestDefender->isInViewport() || bestDefender->isUsingDummyEntities())
+	{
+		return NULL;
+	}
+	return bestDefender;
 }
 
 CvUnit* CvPlot::getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar, bool bTestPotentialEnemy, bool bTestCanMove, bool bAssassinate, bool bClearCache) const
@@ -5108,7 +5115,7 @@ int CvPlot::movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const
 			CvRouteInfo& toRoute = GC.getRouteInfo(toRouteType);
 
 			int iRouteCost = fromRoute.getMovementCost() + GET_TEAM(pUnit->getTeam()).getRouteChange(fromRouteType);
-			FAssert(iRouteCost > 0);
+			FAssertMsg(iRouteCost > 0, "Route cost is expected to be greater than 0");
 			if (toRouteType != fromRouteType)
 			{
 				const int iToRouteCost = toRoute.getMovementCost() + GET_TEAM(pUnit->getTeam()).getRouteChange(toRouteType);

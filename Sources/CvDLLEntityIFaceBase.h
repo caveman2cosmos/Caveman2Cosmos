@@ -41,6 +41,7 @@ public:
 	virtual void ExecuteMove(CvUnitEntity*, float fTimeToExecute, bool bCombat )  { FAssertMsg(false, "can't get here"); }
 	virtual void SetPosition(CvUnitEntity* pEntity, const CvPlot * pkPlot )  { FAssertMsg(false, "can't get here"); }
 	virtual void AddMission(const CvMissionDefinition* pDefinition) { FAssertMsg(false, "can't get here"); };
+	// Remove this unit from any active mission
 	virtual void RemoveUnitFromBattle(CvUnit* pUnit) { FAssertMsg(false, "can't get here"); };
 	virtual void showPromotionGlow(CvUnitEntity* pEntity, bool show) { FAssertMsg(false, "can't get here"); };
 	virtual void updateEnemyGlow(CvUnitEntity* pEntity) { FAssertMsg(false, "can't get here"); };

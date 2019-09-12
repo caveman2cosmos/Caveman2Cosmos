@@ -15,13 +15,6 @@
 #ifndef XML_LOAD_UTILITY_H
 #define XML_LOAD_UTILITY_H
 
-#include <xercesc/dom/DOM.hpp>
-#include <xercesc/util/XMLString.hpp>
-#include <xercesc/util/PlatformUtils.hpp>
-#include <xercesc/parsers/XercesDOMParser.hpp>
-#include <xercesc/sax/SAXException.hpp>
-#include <xercesc/sax/HandlerBase.hpp>
-
 //#include "CvStructs.h"
 #include "CvInfos.h"
 #include "CvGlobals.h"

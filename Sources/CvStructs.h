@@ -791,7 +791,7 @@ typedef std::vector<CvBattleRound> CvBattleRoundVector;		//!< Type declaration f
 class CvMissionDefinition
 {
 public:
-	CvMissionDefinition();
+	CvMissionDefinition(MissionTypes type = NO_MISSION, CvPlot* plot = NULL, CvUnit* attacker = NULL, CvUnit* defender = NULL, float time = 0.f);
 
 	DllExport MissionTypes getMissionType() const;
 	void setMissionType(MissionTypes missionType);
@@ -805,6 +805,8 @@ public:
 	DllExport const CvPlot *getPlot() const;
 	void setPlot(const CvPlot *plot);
 
+	// Check that this mission is valid to send to the exe for displaying
+	bool isValid() const;
 protected:
 	MissionTypes		m_eMissionType;			//!< The type of event
 	CvUnit *			m_aUnits[BATTLE_UNIT_COUNT];		//!< The units involved
@@ -819,7 +821,7 @@ protected:
 class CvBattleDefinition : public CvMissionDefinition
 {
 public:
-	CvBattleDefinition();
+	CvBattleDefinition(CvPlot * plot, CvUnit * attacker, CvUnit * defender);
 	DllExport CvBattleDefinition( const CvBattleDefinition & kCopy );
 	DllExport ~CvBattleDefinition();
 
@@ -868,7 +870,7 @@ private:
 class CvAirMissionDefinition : public CvMissionDefinition
 {
 public:
-	CvAirMissionDefinition();
+	CvAirMissionDefinition(MissionTypes type = MISSION_AIRPATROL, CvPlot * plot = NULL, CvUnit * attacker = NULL, CvUnit * defender = NULL, float time = -1.f);
 	DllExport CvAirMissionDefinition( const CvAirMissionDefinition & kCopy );
 
 	DllExport int getDamage(BattleUnitTypes unitType) const;

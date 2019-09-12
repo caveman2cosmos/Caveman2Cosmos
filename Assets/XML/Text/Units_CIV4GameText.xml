@@ -15746,29 +15746,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Przedstawiciel Mile High</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MILITARY_HERO</Tag>
-		<English>Military Hero</English>
-		<French>Héros Militaire</French>
-		<Italian>Eroe militare</Italian>
-		<Spanish>
-			<Text>Héroe militar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Bohater Wojskowy</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MILITARY_HERO_PEDIA</Tag>
-		<English>A hero is a real or mythical person of great bravery who carries out extraordinary deeds. Scholars have classified different types of heroes. A culture hero, for example, is a mythological hero specific to some group (cultural, ethnic, racial, religious, etc.) who changes the world through invention or discovery. An epic hero, on the other hand, is an important figure from a history or legend, usually favored by or even partially descended from deities, but aligned more closely with mortal figures in popular portrayals. Throughout history, many great rulers, military commanders, and ordinary soldiers and laypersons have been labeled as heroes by later generations for their bravery and capability.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MILITARY_HERO_STRATEGY</Tag>
-		<English>Each civilization has a unique [COLOR_UNIT_TEXT]Military Hero[COLOR_REVERT]. They are usually the stronger units available for a civilization, and can make a difference in the battlefield.</English>
-		<French>Chaque civilisation possède un unique [COLOR_UNIT_TEXT] Héros militaire [COLOR_REVERT]. Ils sont souvent les plus fortes unités disponibles à une civilisation, et peut faire une nette différence sur le champ de bataille.</French>
-		<Spanish>Cada cultura posee un [COLOR_UNIT_TEXT]Héroe militar[COLOR_REVERT] único. Normalmente son las unidades más fuertes disponibles para la civilización, y pueden marcar la diferencia en el campo de batalla.</Spanish>
-		<Polish>Bohater Wojskowy</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_MILITIA_INDUSTRIAL</Tag>
 		<English>Militia (Industrial)</English>
 		<French>
@@ -17044,31 +17021,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NARWHAL_PEDIA</Tag>
 		<English>The narwhal, or narwhale (Monodon monoceros), is a medium-sized toothed whale and possesses a large "tusk" from a protruding canine tooth. It lives year-round in the Arctic waters around Greenland, Canada, and Russia. It is one of two living species of whale in the Monodontidae family, along with the beluga whale. The narwhal males are distinguished by a long, straight, helical tusk, which is an elongated upper left canine. The narwhal was one of many species described by Carolus Linnaeus in his publication Systema Naturae in 1758.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_NATIONAL_HERO</Tag>
-		<English>National Hero</English>
-		<French>Héros national</French>
-		<Italian>Eroe nazionale</Italian>
-		<Spanish>
-			<Text>Héroe nacional</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Bohater Narodowy</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_NATIONAL_HERO_PEDIA</Tag>
-		<English>A hero is a real or mythical person of great bravery who carries out extraordinary deeds. Scholars have classified different types of heroes. A culture hero, for example, is a mythological hero specific to some group (cultural, ethnic, racial, religious, etc.) who changes the world through invention or discovery. An epic hero, on the other hand, is an important figure from a history or legend, usually favored by or even partially descended from deities, but aligned more closely with mortal figures in popular portrayals. Throughout history, many great rulers, military commanders, and ordinary soldiers and laypersons have been labeled as heroes by later generations for their bravery and capability.</English>
-		<Polish>Bohater osoba, która odznaczyła się niezwykłymi czynami, męstwem i ofiarnością dla innych ludzi. Osoby będące bohaterami często doczekują się poświęconych im dzieł literackich, opowieści w postaci legend, mitów czy epopei. W wielu przypadkach opisywani bohaterowie nie musieli w ogóle istnieć w rzeczywistości, lub ich istnienie jest wątpliwe. Istniejący w zachowanych w kulturze dziełach czy opowieściach bohaterowie są zazwyczaj osobami, które działają zgodnie z przyjętymi imperatywami kulturowymi i są wzorcami moralnymi dla społeczności. Pełnią także często funkcję wychowawczą w socjalizacji jednostki. W mitologiach bohaterowie są osobami, które zazwyczaj potrafią dokonać czynów, jakie przysługują tylko bogom.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_NATIONAL_HERO_STRATEGY</Tag>
-		<English>Each civilization has a unique [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT]. They are extremely powerful; though not as strong as the [COLOR_UNIT_TEXT]Military Hero[COLOR_REVERT], but they can also build a Unique National Wonder.</English>
-		<French>Chaque civilisation ou culture possède un [COLOR_UNIT_TEXT]Héros national[COLOR_REVERT] unique. Ces Héros sont extrêmement puissants, quoique pas aussi fort qu'un [COLOR_UNIT_TEXT]Héros militaire[COLOR_REVERT], mais ils peuvent aussi construire une [COLOR_BUILDING_TEXT]merveille unique nationale[COLOR_REVERT].</French>
-		<Italian>Ogni cultura possiede un [COLOR_UNIT_TEXT]Eroe nazionale [COLOR_REVERT] unico. Sono estremamente potenti, anche se non al livello di un [COLOR_UNIT_TEXT]Eroe militare[COLOR_REVERT], ma possono anche costruire una meraviglia nazionale unica.</Italian>
-		<Spanish>Cada cultura posee un [COLOR_UNIT_TEXT]Héroe nacional[COLOR_REVERT] único. Son extremadamente poderosos; no son tan fuertes como los [COLOR_UNIT_TEXT]Héroes militares[COLOR_REVERT], pero también pueden construir una Maravilla nacional única.</Spanish>
-		<Polish>Każda cywilizacja posiada jednego [COLOR_UNIT_TEXT]Bohatera Narodowego[COLOR_REVERT]. Jest on wyjątkowo potężny, jednak nie aż tak potężny jak [COLOR_UNIT_TEXT]Bohater Wojskowy[COLOR_REVERT]. Za jego pomocą można stworzyć [COLOR_BUILDING_TEXT]Narodowy Cud[COLOR_REVERT].</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NATIVE_AMERICA_DOG_SOLDIER</Tag>

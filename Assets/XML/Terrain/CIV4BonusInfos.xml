@@ -5915,7 +5915,7 @@
 			<Civilopedia>TXT_KEY_BONUS_COPPER_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_RUSH</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_COPPER</ArtDefineTag>
-			<TechReveal>TECH_SCAVENGING</TechReveal>
+			<TechReveal>TECH_SOFT_HAMMER_PERCUSSION</TechReveal>
 			<TechCityTrade>TECH_COPPER_WORKING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
@@ -6559,7 +6559,7 @@
 			<Civilopedia>TXT_KEY_BONUS_GOLD_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_GOLD</ArtDefineTag>
-			<TechReveal>TECH_SCAVENGING</TechReveal>
+			<TechReveal>TECH_SOFT_HAMMER_PERCUSSION</TechReveal>
 			<TechCityTrade>TECH_MINING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
@@ -6819,7 +6819,7 @@
 			<Civilopedia>TXT_KEY_BONUS_IRON_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_RUSH</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_IRON</ArtDefineTag>
-			<TechReveal>TECH_SCAVENGING</TechReveal>
+			<TechReveal>TECH_MINING</TechReveal>
 			<TechCityTrade>TECH_IRON_WORKING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
@@ -8190,7 +8190,7 @@
 			<Civilopedia>TXT_KEY_BONUS_SILVER_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SILVER</ArtDefineTag>
-			<TechReveal>TECH_SCAVENGING</TechReveal>
+			<TechReveal>TECH_SOFT_HAMMER_PERCUSSION</TechReveal>
 			<TechCityTrade>TECH_MINING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
@@ -8610,7 +8610,7 @@
 			<Civilopedia>TXT_KEY_BONUS_TIN_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TIN</ArtDefineTag>
-			<TechReveal>TECH_SCAVENGING</TechReveal>
+			<TechReveal>TECH_SOFT_HAMMER_PERCUSSION</TechReveal>
 			<TechCityTrade>TECH_BRONZE_WORKING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>

@@ -150,7 +150,7 @@
 			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_BISON_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
-			<PrereqTech>TECH_CULTURAL_IDENTITY</PrereqTech>
+			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -197,6 +197,31 @@
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
+		</BuildingInfo>
+		<BuildingInfo>
+			<BuildingClass>BUILDINGCLASS_PLEISTO_PARK</BuildingClass>
+			<Type>BUILDING_PLEISTO_PARK</Type>
+			<BuildingHappinessChanges>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_BISON_TRAINER</BuildingType>
+					<iHappinessChange>2</iHappinessChange>
+				</BuildingHappinessChange>
+			</BuildingHappinessChanges>
+			<GlobalBuildingExtraCommerces>
+				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_BISON_TRAINER</BuildingClass>
+					<CommerceType>COMMERCE_GOLD</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_BISON_TRAINER</BuildingClass>
+					<CommerceType>COMMERCE_RESEARCH</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
+			</GlobalBuildingExtraCommerces>
+			<AndDependencyTypes>
+				<DependencyType>BUILDINGCLASS_BISON_TRAINER</DependencyType>
+			</AndDependencyTypes>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

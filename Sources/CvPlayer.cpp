@@ -15675,7 +15675,7 @@ int CvPlayer::getAssets() const
 void CvPlayer::changeAssets(int iChange)
 {
 	m_iAssets = (m_iAssets + iChange);
-	FAssert(getAssets() >= 0);
+	FAssertRecalcMsg(getAssets() >= 0, "Player assets value fell below 0");
 }
 
 

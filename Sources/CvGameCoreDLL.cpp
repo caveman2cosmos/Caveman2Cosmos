@@ -1,170 +1,38 @@
 #include "CvGameCoreDLL.h"
 
-#include "CvGameCoreDLLUndefNew.h"
-
-#include <new>
-
 #include <psapi.h>
 
-#ifdef MEMORY_TRACKING
-void	ProfileTrackAlloc(void* ptr, int size);
-
-void	ProfileTrackDeAlloc(void* ptr);
-
-void DumpMemUsage(const char* fn, int line)
-{
-	PROCESS_MEMORY_COUNTERS pmc;
-
-	if ( GetProcessMemoryInfo( GetCurrentProcess(), &pmc, sizeof(pmc)) )
-	{
-		char buffer[200];
-
-		sprintf(buffer, "memory (%s,%d): %d Kbytes, peak %d\n", fn, line, (int)(pmc.WorkingSetSize/1024), (int)(pmc.PeakWorkingSetSize/1024));
-		OutputDebugString(buffer);
-	}
-}
-
-#define	PROFILE_TRACK_ALLOC(x,n)	ProfileTrackAlloc(x,n);
-#define	PROFILE_TRACK_DEALLOC(x)	ProfileTrackDeAlloc(x);
-#else
-#define	PROFILE_TRACK_ALLOC(x,n)	
-#define	PROFILE_TRACK_DEALLOC(x)	
-#endif
-
-static int allocCount = 0;
 static CRITICAL_SECTION g_cPythonSection;
 #ifdef USE_INTERNAL_PROFILER
 static CRITICAL_SECTION cSampleSection;
 #endif
 
-//
-// operator global new and delete override for gamecore DLL 
-//
-void *__cdecl operator new(size_t size)
-{
-	if (g_DLL)
-	{
-#if 0
-		char buffer[200];
-		sprintf(buffer,"Alloc %d\n", size);
-		OutputDebugString(buffer);
-#endif
-
-		void* result = NULL;
-
-		try
-		{
-			result = g_DLL->newMem(size, __FILE__, __LINE__);
-#ifdef _DEBUG
-			memset(result, 0xDA, size);
-#endif
-			PROFILE_TRACK_ALLOC(result, size);
-		}
-		catch(std::exception&)
-		{
-			OutputDebugString("Allocation failure\n");
-		}
-
-		return result;
-	}
-
-	OutputDebugString("Alloc [unsafe]");
-	::MessageBoxA(NULL,"UNsafe alloc","CvGameCore",MB_OK);
-	return malloc(size);
-}
-
-void __cdecl operator delete (void *p)
-{
-	if (g_DLL)
-	{
-		PROFILE_TRACK_DEALLOC(p);
-
-		g_DLL->delMem(p, __FILE__, __LINE__);
-
-	}
-	else
-	{
-		free(p);
-	}
-}
-
-void* operator new[](size_t size)
-{
-	if (g_DLL)
-	{
-		//OutputDebugString("Alloc [safe]");
-
-		void* result = g_DLL->newMemArray(size, __FILE__, __LINE__);
-#ifdef _DEBUG
-		memset(result, 0xDA, size);
-#endif
-		return result;
-	}
-
-	OutputDebugString("Alloc [unsafe]");
-	::MessageBoxA(NULL,"UNsafe alloc","CvGameCore",MB_OK);
-	return malloc(size);
-}
-
-void operator delete[](void* pvMem)
-{
-	if (g_DLL)
-	{
-		g_DLL->delMemArray(pvMem, __FILE__, __LINE__);
-	}
-	else
-	{
-		free(pvMem);
-	}
-}
-
-void *__cdecl operator new(size_t size, char* pcFile, int iLine)
-{
-	void* result = g_DLL->newMem(size, pcFile, iLine);
-#ifdef _DEBUG
-	memset(result, 0xDA, size);
-#endif
-	return result;
-}
-
-void *__cdecl operator new[](size_t size, char* pcFile, int iLine)
-{
-	void* result = g_DLL->newMem(size, pcFile, iLine);
-#ifdef _DEBUG
-	memset(result, 0xDA, size);
-#endif
-	return result;
-}
-
-void __cdecl operator delete(void* pvMem, char* pcFile, int iLine)
-{
-	g_DLL->delMem(pvMem, pcFile, iLine);
-}
-
-void __cdecl operator delete[](void* pvMem, char* pcFile, int iLine)
-{
-	g_DLL->delMem(pvMem, pcFile, iLine);
-}
-
-
-void* reallocMem(void* a, unsigned int uiBytes, const char* pcFile, int iLine)
-{
-	void* result;
-
-	result = g_DLL->reallocMem(a, uiBytes, pcFile, iLine);
-
-	return result;
-}
-
-unsigned int memSize(void* a)
-{
-	unsigned int result = g_DLL->memSize(a);
-
-	return result;
-}
-
 // BUG - EXE/DLL Paths - start
 HANDLE dllModule = NULL;
+
+bool runProcess(const std::string& exe, const std::string& workingDir)
+{
+	STARTUPINFOA startupInfo;
+	ZeroMemory(&startupInfo, sizeof(startupInfo));
+	startupInfo.cb = sizeof(startupInfo);
+	PROCESS_INFORMATION procInfo;
+	ZeroMemory(&procInfo, sizeof(procInfo));
+
+	bool success = false;
+	// This isn't really considered safe to call in a DLLmain: it could cause other dlls to be loaded to fulfill the request.
+	// HOWEVER: this DLL is loaded by LoadLibrary later in exe startup so we appear to have the required dlls already loaded at this point.
+	if (::CreateProcessA(NULL, (LPSTR)exe.c_str(), NULL, NULL, TRUE, 0, NULL, workingDir.c_str(), &startupInfo, &procInfo))
+	{
+		success = ::WaitForSingleObject(procInfo.hProcess, 600000) == WAIT_OBJECT_0;
+	}
+	::CloseHandle(procInfo.hProcess);
+	::CloseHandle(procInfo.hThread);
+	return success;
+}
+
+#define STRINGIFY(x) #x
+#define TOSTRING(x) STRINGIFY(x)
+
 // BUG - EXE/DLL Paths - end
 
 BOOL APIENTRY DllMain(HANDLE hModule, 
@@ -205,39 +73,31 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 		MMRESULT iTimeSet = timeBeginPeriod(1);		// set timeGetTime and sleep resolution to 1 ms, otherwise it's 10-16ms
 		FAssertMsg(iTimeSet==TIMERR_NOERROR, "failed setting timer resolution to 1 ms");
 
+		// Get DLL directory
 		CHAR pathBuffer[MAX_PATH];
 		GetModuleFileNameA((HMODULE)dllModule, pathBuffer, sizeof(pathBuffer));
 		std::string dllPath = pathBuffer;
 		std::string dllDir = dllPath.substr(0, dllPath.length() - strlen("CvGameCoreDLL.dll"));
 		std::string tokenFile = dllDir + "\\..\\git_directory.txt";
 		std::ifstream stream(tokenFile.c_str());
+		// If we loaded the directory token file we are in a dev environment and should run FPKLive, and check for DLL changes
 		if (!stream.fail())
 		{
 			std::string git_dir;
 			std::getline(stream, git_dir);
-			// CvString cwd = GC.getInitCore().getDLLPath() + "\\..";
-			std::string fpkLiveExe = git_dir + "\\Tools\\FPKLive.exe";
 
-			STARTUPINFOA startupInfo;
-			ZeroMemory(&startupInfo, sizeof(startupInfo));
-			startupInfo.cb = sizeof(startupInfo);
-			PROCESS_INFORMATION procInfo;
-			ZeroMemory(&procInfo, sizeof(procInfo));
-			// This isn't really considered safe to call in a DLLmain: it could cause other dlls to be loaded to fulfill the request.
-			// HOWEVER: this DLL is loaded by LoadLibrary later in exe startup so we appear to have the required dlls already loaded at this point.
-			if (!::CreateProcessA(NULL, (LPSTR)fpkLiveExe.c_str(), NULL, NULL, TRUE, CREATE_NO_WINDOW, NULL, (git_dir + "\\Tools").c_str(), &startupInfo, &procInfo))
+			if(!runProcess(git_dir + "\\Tools\\FPKLive.exe", git_dir + "\\Tools"))
 			{
-				MessageBox(0, "Creation of FPK packs timed out after 10 minutes! It shouldn't take this long!", "ERROR!", 0);
+				MessageBox(0, "Creation of FPK packs failed, are you sure you set up the development environment correctly?", "ERROR!", 0);
 				return FALSE;
 			}
-			if (::WaitForSingleObject(procInfo.hProcess, 600000) == WAIT_TIMEOUT)
+			if (!runProcess("cmd.exe /C \"" + git_dir + "\\Tools\\_BootDLLCheck.bat\" " + TOSTRING(BUILD_TARGET), git_dir + "\\Tools"))
 			{
-				MessageBox(0, "Creation of FPK packs timed out after 10 minutes! It shouldn't take this long!", "ERROR!", 0);
+				MessageBox(0, "DLL update failed!", "ERROR!", 0);
 				return FALSE;
 			}
-			::CloseHandle(procInfo.hProcess);
-			::CloseHandle(procInfo.hThread);
 		}
+
 		}
 		break;
 	case DLL_THREAD_ATTACH:
@@ -1006,169 +866,3 @@ void stopProfilingDLL(bool longLived)
 	}
 #endif
 }
-
-#ifdef MEMORY_TRACKING
-CMemoryTrack*	CMemoryTrack::trackStack[MAX_TRACK_DEPTH];
-int CMemoryTrack::m_trackStackDepth = 0;
-
-CMemoryTrack::CMemoryTrack(const char* name, bool valid)
-{
-	if ( bIsMainThread )
-	{
-		m_highWater = 0;
-		m_seq = 0;
-		m_name = name;
-		m_valid = valid;
-
-		if ( m_trackStackDepth < MAX_TRACK_DEPTH )
-		{
-			trackStack[m_trackStackDepth++] = this;
-		}
-	}
-	else
-	{
-		m_valid = false;
-	}
-}
-
-CMemoryTrack::~CMemoryTrack()
-{
-	if ( bIsMainThread )
-	{
-		if ( m_valid )
-		{
-			for(int i = 0; i < m_highWater; i++)
-			{
-				if ( m_track[i] != NULL )
-				{
-					char buffer[200];
-
-					sprintf(buffer, "Apparent memory leak (size %d) detected in %s (from %s:%d)\n", m_allocSize[i], m_name, m_trackName[i], m_allocSeq[i]);
-					OutputDebugString(buffer);
-				}
-			}
-		}
-
-		if ( trackStack[m_trackStackDepth-1] == this )
-		{
-			m_trackStackDepth--;
-		}
-	}
-}
-
-void CMemoryTrack::NoteAlloc(void* ptr, int size)
-{
-	if ( m_valid )
-	{
-		for(int i = 0; i < m_highWater; i++)
-		{
-			if ( m_track[i] == NULL )
-			{
-				if ( i == m_highWater )
-				{
-					if ( m_highWater < MAX_TRACKED_ALLOCS )
-					{
-						m_highWater++;
-					}
-					else
-					{
-						m_valid = false;
-						return;
-					}
-				}
-
-				m_track[i] = ptr;
-				m_allocSeq[i] = m_seq++;
-				m_allocSize[i] = size;
-#ifdef USE_INTERNAL_PROFILER
-				m_trackName[i] = _currentSample == NULL || _currentSample->sample == NULL ? "<None>" : _currentSample->sample->Name;
-#else
-				m_trackName[i] = "";
-#endif
-			}
-		}
-	}
-}
-
-void CMemoryTrack::NoteDeAlloc(void* ptr)
-{
-	if ( m_valid )
-	{
-		for(int i = 0; i < m_highWater; i++)
-		{
-			if ( m_track[i] == ptr )
-			{
-				m_track[i] = NULL;
-				break;
-			}
-		}
-	}
-}
-
-CMemoryTrack* CMemoryTrack::GetCurrent()
-{
-	if ( 0 < m_trackStackDepth && m_trackStackDepth < MAX_TRACK_DEPTH )
-	{
-		return trackStack[m_trackStackDepth-1];
-	}
-	else
-	{
-		return NULL;
-	}
-}
-
-CMemoryTrace::CMemoryTrace(const char* name)
-{
-	PROCESS_MEMORY_COUNTERS pmc;
-
-	GetProcessMemoryInfo( GetCurrentProcess(), &pmc, sizeof(pmc));
-	m_name = name;
-	m_start = pmc.WorkingSetSize;
-}
-
-CMemoryTrace::~CMemoryTrace()
-{
-	static PROCESS_MEMORY_COUNTERS lastPmc;
-	PROCESS_MEMORY_COUNTERS pmc;
-
-	if ( bIsMainThread )
-	{
-		if ( GetProcessMemoryInfo( GetCurrentProcess(), &pmc, sizeof(pmc)) && (pmc.WorkingSetSize != m_start || lastPmc.WorkingSetSize/1024 != pmc.WorkingSetSize/1024))
-		{
-			char buffer[200];
-
-			sprintf(buffer, "function %s added %dK bytes, total now %uK\n", m_name, ((int)(pmc.WorkingSetSize - m_start))/1024, (unsigned int)pmc.WorkingSetSize/1024);
-			OutputDebugString(buffer);
-		}
-
-		memcpy(&lastPmc, &pmc, sizeof(pmc));
-	}
-}
-
-void ProfileTrackAlloc(void* ptr, int size)
-{
-	if ( bIsMainThread )
-	{
-		CMemoryTrack* current = CMemoryTrack::GetCurrent();
-
-		if ( current != NULL )
-		{
-			current->NoteAlloc(ptr, size);
-		}
-	}
-}
-
-void ProfileTrackDeAlloc(void* ptr)
-{
-	if ( bIsMainThread )
-	{
-		CMemoryTrack* current = CMemoryTrack::GetCurrent();
-
-		if ( current != NULL )
-		{
-			current->NoteDeAlloc(ptr);
-		}
-	}
-}
-
-#endif

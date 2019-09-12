@@ -5466,6 +5466,11 @@
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
+				<BuildingExtraCommerce>
+					<BuildingClass>BUILDINGCLASS_MILKY_WAY_COLONY</BuildingClass>
+					<CommerceType>COMMERCE_RESEARCH</CommerceType>
+					<iExtraCommerce>5</iExtraCommerce>
+				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>

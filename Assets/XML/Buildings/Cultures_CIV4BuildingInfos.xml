@@ -532,7 +532,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>300</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -820,7 +820,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -862,7 +862,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>1700</iCost>
+			<iCost>2550</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -904,7 +904,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>710</iCost>
+			<iCost>2136</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1004,7 +1004,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>2550</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1040,7 +1040,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>710</iCost>
+			<iCost>2136</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1076,7 +1076,7 @@
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<RawVicinityBonus>BONUS_SULPHUR</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>2460</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1112,7 +1112,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>300</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1160,7 +1160,7 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_LEAD</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>300</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1200,7 +1200,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>2640</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1243,7 +1243,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>665</iCost>
+			<iCost>1992</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1292,7 +1292,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>300</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1391,7 +1391,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>235</iCost>
+			<iCost>708</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1443,7 +1443,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>1056</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1479,7 +1479,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>552</iCost>
+			<iCost>1350</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1515,7 +1515,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>3210</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1557,7 +1557,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>1800</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1599,7 +1599,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>1860</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1641,7 +1641,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>470</iCost>
+			<iCost>1404</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1677,7 +1677,7 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_BISON</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>372</iCost>
+			<iCost>1104</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1723,7 +1723,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>2640</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1766,7 +1766,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>470</iCost>
+			<iCost>1404</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1808,7 +1808,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>1566</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1848,7 +1848,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>1800</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1889,7 +1889,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>1600</iCost>
+			<iCost>3930</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1941,7 +1941,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>2850</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1988,7 +1988,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>710</iCost>
+			<iCost>2136</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2068,7 +2068,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>300</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2104,7 +2104,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>665</iCost>
+			<iCost>1992</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2146,7 +2146,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>1230</iCost>
+			<iCost>1296</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2203,7 +2203,7 @@
 			<PrereqTech>TECH_SPECIES_UPLIFTING</PrereqTech>
 			<RawVicinityBonus>BONUS_WHALE</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>12800</iCost>
+			<iCost>30330</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2240,7 +2240,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>1512</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2282,7 +2282,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>1458</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2324,7 +2324,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>1296</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2406,7 +2406,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>792</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2509,7 +2509,7 @@
 			<PrereqTech>TECH_ANCIENT_MEDICINE</PrereqTech>
 			<RawVicinityBonus>BONUS_COCA</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>1458</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2545,7 +2545,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>1566</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2622,7 +2622,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>2208</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2668,7 +2668,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>1404</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2715,7 +2715,7 @@
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>3210</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2787,7 +2787,7 @@
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<RawVicinityBonus>BONUS_APPLE</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>1800</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2824,7 +2824,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>1600</iCost>
+			<iCost>3780</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2861,7 +2861,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>910</iCost>
+			<iCost>2730</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2897,7 +2897,7 @@
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<RawVicinityBonus>BONUS_GOLD</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>2064</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2987,7 +2987,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>2640</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3040,7 +3040,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>1404</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3088,7 +3088,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>140</iCost>
+			<iCost>834</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3158,7 +3158,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>1200</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3253,7 +3253,7 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_LEAD</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>372</iCost>
+			<iCost>1104</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3301,7 +3301,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>1800</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3338,7 +3338,7 @@
 			<PrereqTech>TECH_RUDDER</PrereqTech>
 			<RawVicinityBonus>BONUS_CRAB</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>1860</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3374,7 +3374,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>665</iCost>
+			<iCost>1992</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3410,7 +3410,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>372</iCost>
+			<iCost>1104</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3452,7 +3452,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>1296</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3557,7 +3557,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>750</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3599,7 +3599,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>2460</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3670,7 +3670,7 @@
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<RawVicinityBonus>BONUS_BANANA</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>2064</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3706,7 +3706,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>1296</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3742,7 +3742,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>300</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3829,7 +3829,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>1104</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3917,7 +3917,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>2640</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3953,7 +3953,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>918</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3990,7 +3990,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>385</iCost>
+			<iCost>1152</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4032,7 +4032,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>1070</iCost>
+			<iCost>3210</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4068,7 +4068,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>834</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4104,7 +4104,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>1512</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4165,7 +4165,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>750</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4201,7 +4201,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>235</iCost>
+			<iCost>708</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4283,7 +4283,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>1860</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4362,7 +4362,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>430</iCost>
+			<iCost>1296</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4404,7 +4404,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>300</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4453,7 +4453,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>1104</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4526,7 +4526,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>505</iCost>
+			<iCost>1512</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4605,7 +4605,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>2970</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4689,7 +4689,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>1104</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4736,7 +4736,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>2064</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4788,7 +4788,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>2640</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4831,7 +4831,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>1800</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4979,7 +4979,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>1600</iCost>
+			<iCost>3330</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5015,7 +5015,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>430</iCost>
+			<iCost>1296</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5051,7 +5051,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>792</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5093,7 +5093,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>1512</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5176,7 +5176,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>300</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5218,7 +5218,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>1600</iCost>
+			<iCost>5940</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5260,7 +5260,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>918</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5307,7 +5307,7 @@
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<RawVicinityBonus>BONUS_PLATINUM</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>665</iCost>
+			<iCost>1992</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5385,7 +5385,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>918</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5421,7 +5421,7 @@
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<RawVicinityBonus>BONUS_CAMEL</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>918</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5457,7 +5457,7 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_COPPER</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>300</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5493,7 +5493,7 @@
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 			<RawVicinityBonus>BONUS_COCONUT</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>1600</iCost>
+			<iCost>5700</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5529,7 +5529,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>918</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5580,7 +5580,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>1404</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5616,7 +5616,7 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<RawVicinityBonus>BONUS_CANNABIS</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>1860</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5731,7 +5731,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>750</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5767,7 +5767,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<RawVicinityBonus>BONUS_TURQUOISE</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5867,7 +5867,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>1200</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5907,7 +5907,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>2850</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5994,7 +5994,7 @@
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<RawVicinityBonus>BONUS_CORN</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>918</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6073,7 +6073,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>834</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6155,7 +6155,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>910</iCost>
+			<iCost>2730</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6197,7 +6197,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>1920</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6246,7 +6246,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6282,7 +6282,7 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_SILVER</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>300</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6324,7 +6324,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>500</iCost>
+			<iCost>1512</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6435,7 +6435,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6476,7 +6476,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>2640</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6512,7 +6512,7 @@
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<RawVicinityBonus>BONUS_GOLD</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>918</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6590,7 +6590,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>3200</iCost>
+			<iCost>4260</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6626,7 +6626,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>235</iCost>
+			<iCost>708</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6682,41 +6682,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-		</BuildingInfo>
-		<BuildingInfo>
-			<!-- Culture (Oman) -->
-			<BuildingClass>BUILDINGCLASS_OMAN_EMBASSY</BuildingClass>
-			<Type>BUILDING_OMAN_EMBASSY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_OMAN_EMBASSY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_OMAN_EMBASSY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_OMAN_EMBASSY_STRATEGY</Strategy>
-			<Advisor>ADVISOR_CULTURE</Advisor>
-			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_OMAN_EMBASSY</ArtDefineTag>
-			<!-- Prerequisites -->
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_MIDDLEEASTERN</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<!-- Construction -->
-			<iCost>-1</iCost>
-			<!-- Main effects -->
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<FreeBonus>BONUS_OMAN</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<!-- Special properties -->
-			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<bNukeImmune>1</bNukeImmune>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-		</BuildingInfo>
+		</BuildingInfo>		
 		<BuildingInfo>
 			<!-- Culture (Ottoman) -->
 			<BuildingClass>BUILDINGCLASS_OTTOMAN_EMBASSY</BuildingClass>
@@ -6738,7 +6704,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>2460</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6771,41 +6737,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-		</BuildingInfo>
-		<BuildingInfo>
-			<!-- Culture (Paiute) -->
-			<BuildingClass>BUILDINGCLASS_PAIUTE_EMBASSY</BuildingClass>
-			<Type>BUILDING_PAIUTE_EMBASSY</Type>
-			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_PAIUTE_EMBASSY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PAIUTE_EMBASSY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PAIUTE_EMBASSY_STRATEGY</Strategy>
-			<Advisor>ADVISOR_CULTURE</Advisor>
-			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_PAIUTE_EMBASSY</ArtDefineTag>
-			<!-- Prerequisites -->
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_NAMERICAN</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<!-- Construction -->
-			<iCost>-1</iCost>
-			<!-- Main effects -->
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<FreeBonus>BONUS_PAIUTE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<!-- Special properties -->
-			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<bNukeImmune>1</bNukeImmune>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-		</BuildingInfo>
+		</BuildingInfo>		
 		<BuildingInfo>
 			<!-- Culture (Pakistani) -->
 			<BuildingClass>BUILDINGCLASS_PAKISTANI_EMBASSY</BuildingClass>
@@ -6827,7 +6759,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>1800</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6905,7 +6837,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>450</iCost>
+			<iCost>1350</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7013,7 +6945,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>792</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7049,7 +6981,7 @@
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_MUSHROOMS</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>1296</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7085,7 +7017,7 @@
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<RawVicinityBonus>BONUS_SULPHUR</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>3330</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7121,7 +7053,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>1800</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7164,7 +7096,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>265</iCost>
+			<iCost>792</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7200,7 +7132,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>665</iCost>
+			<iCost>1992</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7236,7 +7168,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>3480</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7272,7 +7204,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>1512</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7314,7 +7246,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>372</iCost>
+			<iCost>3480</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7398,7 +7330,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>1600</iCost>
+			<iCost>4800</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7434,7 +7366,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>1056</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7565,7 +7497,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>1992</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7681,7 +7613,7 @@
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<RawVicinityBonus>BONUS_PEARLS</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>1070</iCost>
+			<iCost>3210</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7723,7 +7655,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>918</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7759,7 +7691,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>1296</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7801,7 +7733,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>750</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7848,7 +7780,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>1404</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7890,7 +7822,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>235</iCost>
+			<iCost>708</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7926,7 +7858,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>834</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7968,7 +7900,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>552</iCost>
+			<iCost>1350</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8025,7 +7957,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>620</iCost>
+			<iCost>1860</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8107,7 +8039,7 @@
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<RawVicinityBonus>BONUS_POULTRY</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>1700</iCost>
+			<iCost>2550</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8144,7 +8076,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>1152</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8180,7 +8112,7 @@
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<RawVicinityBonus>BONUS_IRON</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>2208</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8220,7 +8152,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>3780</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8268,7 +8200,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>1600</iCost>
+			<iCost>5940</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8304,7 +8236,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>1800</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8359,7 +8291,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>372</iCost>
+			<iCost>1104</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8401,7 +8333,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>708</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8437,7 +8369,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>552</iCost>
+			<iCost>1350</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8473,7 +8405,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>1296</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8515,7 +8447,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>2064</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8566,7 +8498,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>836</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8603,7 +8535,7 @@
 			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			<RawVicinityBonus>BONUS_CLAM</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>430</iCost>
+			<iCost>1296</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8640,7 +8572,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>1600</iCost>
+			<iCost>5700</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8719,7 +8651,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>372</iCost>
+			<iCost>1104</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8759,7 +8691,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>1070</iCost>
+			<iCost>3210</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8801,7 +8733,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>2208</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8843,7 +8775,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>1296</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8886,7 +8818,7 @@
 			<PrereqTech>TECH_MUSIC</PrereqTech>
 			<RawVicinityBonus>BONUS_SILVER</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>1680</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9031,7 +8963,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>50</iCost>
+			<iCost>792</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9067,7 +8999,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>305</iCost>
+			<iCost>918</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9103,7 +9035,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>300</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9187,7 +9119,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>235</iCost>
+			<iCost>708</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9223,7 +9155,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>710</iCost>
+			<iCost>2136</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9259,7 +9191,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>200</iCost>
+			<iCost>1404</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9296,7 +9228,7 @@
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<RawVicinityBonus>BONUS_INDIGO</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>1056</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9332,7 +9264,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>800</iCost>
+			<iCost>3480</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9374,7 +9306,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>1600</iCost>
+			<iCost>4260</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9422,7 +9354,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>792</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9469,7 +9401,7 @@
 			<PrereqTech>TECH_OIL_LAMPS</PrereqTech>
 			<RawVicinityBonus>BONUS_COCOA</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>918</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9505,7 +9437,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>1920</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9588,7 +9520,7 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_PEARLS</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>300</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9625,7 +9557,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>1296</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9661,7 +9593,7 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_LLAMA</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>372</iCost>
+			<iCost>1104</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9697,7 +9629,7 @@
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<RawVicinityBonus>BONUS_BARLEY</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>400</iCost>
+			<iCost>1800</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9787,7 +9719,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction -->
-			<iCost>300</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9830,7 +9762,7 @@
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<RawVicinityBonus>BONUS_POTATO</RawVicinityBonus>
 			<!-- Construction -->
-			<iCost>100</iCost>
+			<iCost>918</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9867,7 +9799,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1350</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9905,7 +9837,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>372</iCost>
+			<iCost>1104</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9943,7 +9875,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>3780</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -9981,7 +9913,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1458</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10019,7 +9951,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1296</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10057,7 +9989,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>665</iCost>
+			<iCost>1992</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10095,7 +10027,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1296</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10133,7 +10065,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1152</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10171,7 +10103,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>1070</iCost>
+			<iCost>3210</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10209,7 +10141,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>235</iCost>
+			<iCost>708</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10247,7 +10179,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>3330</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10285,7 +10217,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1860</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10323,7 +10255,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>450</iCost>
+			<iCost>1350</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10361,7 +10293,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>834</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10399,7 +10331,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>1700</iCost>
+			<iCost>2550</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10437,7 +10369,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>450</iCost>
+			<iCost>1350</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10513,7 +10445,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1566</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10551,7 +10483,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1200</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10589,7 +10521,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1404</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10627,7 +10559,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>750</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10665,7 +10597,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>470</iCost>
+			<iCost>1404</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10703,7 +10635,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>640</iCost>
+			<iCost>1920</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10741,7 +10673,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>750</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10779,7 +10711,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>910</iCost>
+			<iCost>2730</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10817,7 +10749,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>710</iCost>
+			<iCost>2136</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10855,7 +10787,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1512</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10893,7 +10825,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1296</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10931,7 +10863,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>990</iCost>
+			<iCost>2970</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -10969,7 +10901,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>918</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11007,7 +10939,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>372</iCost>
+			<iCost>1104</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11045,7 +10977,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>792</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11083,7 +11015,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>836</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11121,7 +11053,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>235</iCost>
+			<iCost>708</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11159,7 +11091,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>372</iCost>
+			<iCost>1104</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11235,7 +11167,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>2640</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11273,7 +11205,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>2640</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11311,7 +11243,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>372</iCost>
+			<iCost>1104</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11349,7 +11281,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1860</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11387,7 +11319,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>2208</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11425,7 +11357,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>230</iCost>
+			<iCost>1404</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11463,7 +11395,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>335</iCost>
+			<iCost>1008</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11501,7 +11433,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>450</iCost>
+			<iCost>1350</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11539,7 +11471,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>1070</iCost>
+			<iCost>3210</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11577,7 +11509,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1800</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11615,7 +11547,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>750</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11653,7 +11585,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1404</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11691,7 +11623,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>2064</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11767,7 +11699,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>450</iCost>
+			<iCost>1350</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11805,7 +11737,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>372</iCost>
+			<iCost>1104</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11843,7 +11775,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>1160</iCost>
+			<iCost>3480</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11881,7 +11813,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>750</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11919,7 +11851,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>665</iCost>
+			<iCost>1992</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11957,7 +11889,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>918</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11995,7 +11927,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>665</iCost>
+			<iCost>1992</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12033,7 +11965,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>372</iCost>
+			<iCost>1104</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12071,7 +12003,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>372</iCost>
+			<iCost>1104</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12109,7 +12041,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>665</iCost>
+			<iCost>1992</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12147,7 +12079,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>2460</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12185,7 +12117,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>708</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12223,7 +12155,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>430</iCost>
+			<iCost>1296</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12261,7 +12193,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>235</iCost>
+			<iCost>708</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12299,7 +12231,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>918</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12337,7 +12269,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>2640</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12375,7 +12307,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>305</iCost>
+			<iCost>918</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12413,7 +12345,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>350</iCost>
+			<iCost>1056</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12489,7 +12421,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>430</iCost>
+			<iCost>1296</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12527,7 +12459,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>760</iCost>
+			<iCost>2280</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12565,7 +12497,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>335</iCost>
+			<iCost>1008</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12603,7 +12535,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1800</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12641,7 +12573,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>3930</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12679,7 +12611,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>300</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12717,7 +12649,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12755,7 +12687,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>1070</iCost>
+			<iCost>3210</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12793,7 +12725,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>910</iCost>
+			<iCost>2730</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12831,7 +12763,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1296</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12869,7 +12801,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>335</iCost>
+			<iCost>1008</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12907,7 +12839,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>918</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12945,7 +12877,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>690</iCost>
+			<iCost>2064</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -12983,7 +12915,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>750</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13021,7 +12953,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>2064</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13059,7 +12991,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>792</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13097,7 +13029,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>450</iCost>
+			<iCost>1350</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13135,7 +13067,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>4260</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13173,7 +13105,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>910</iCost>
+			<iCost>2730</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13211,7 +13143,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>910</iCost>
+			<iCost>2730</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13249,7 +13181,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>792</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13287,7 +13219,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1056</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13325,7 +13257,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>2208</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13363,7 +13295,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>300</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13401,7 +13333,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>836</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13439,7 +13371,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>235</iCost>
+			<iCost>708</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13477,7 +13409,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>708</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13515,7 +13447,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>235</iCost>
+			<iCost>708</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13553,7 +13485,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>2064</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13591,7 +13523,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>305</iCost>
+			<iCost>918</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13629,7 +13561,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>300</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13667,7 +13599,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13705,7 +13637,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>1700</iCost>
+			<iCost>2550</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13743,7 +13675,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>750</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13781,7 +13713,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>750</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13819,7 +13751,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>750</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13857,7 +13789,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>918</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13895,7 +13827,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>665</iCost>
+			<iCost>1992</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13933,7 +13865,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>505</iCost>
+			<iCost>1512</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -13971,7 +13903,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>600</iCost>
+			<iCost>1800</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14009,7 +13941,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14047,7 +13979,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>372</iCost>
+			<iCost>1104</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14085,7 +14017,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1458</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14123,7 +14055,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>400</iCost>
+			<iCost>1200</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14161,7 +14093,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>665</iCost>
+			<iCost>1992</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14199,7 +14131,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>430</iCost>
+			<iCost>1296</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14237,7 +14169,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>600</iCost>
+			<iCost>1800</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14275,7 +14207,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>320</iCost>
+			<iCost>960</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14313,7 +14245,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1152</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14351,7 +14283,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>640</iCost>
+			<iCost>1920</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14389,7 +14321,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>1260</iCost>
+			<iCost>3780</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14427,7 +14359,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>3930</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14465,7 +14397,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>2460</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14503,7 +14435,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>3780</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14579,7 +14511,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>1700</iCost>
+			<iCost>2550</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14617,7 +14549,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1800</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14655,7 +14587,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>750</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14693,7 +14625,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>300</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14731,7 +14663,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>372</iCost>
+			<iCost>1104</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14769,7 +14701,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>918</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14807,7 +14739,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>834</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14845,7 +14777,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>920</iCost>
+			<iCost>918</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14883,7 +14815,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1296</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14921,7 +14853,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>710</iCost>
+			<iCost>2136</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14959,7 +14891,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>1070</iCost>
+			<iCost>3210</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14997,7 +14929,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>918</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15035,7 +14967,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>750</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15073,7 +15005,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>1100</iCost>
+			<iCost>1104</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15149,7 +15081,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>2550</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15187,7 +15119,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1200</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15225,7 +15157,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>372</iCost>
+			<iCost>1104</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15263,7 +15195,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1296</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15301,7 +15233,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1800</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15339,7 +15271,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>300</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15377,7 +15309,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>750</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15415,7 +15347,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>2064</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15453,7 +15385,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1680</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15491,7 +15423,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1800</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15529,7 +15461,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15567,7 +15499,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>750</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15605,7 +15537,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>2064</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15643,7 +15575,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>1070</iCost>
+			<iCost>3210</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15681,7 +15613,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>665</iCost>
+			<iCost>1992</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15719,7 +15651,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1566</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15757,7 +15689,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>910</iCost>
+			<iCost>2730</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15795,7 +15727,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>2640</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15833,7 +15765,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1296</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15871,7 +15803,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>918</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15909,7 +15841,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>600</iCost>
+			<iCost>1800</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15947,7 +15879,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>2208</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15985,7 +15917,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>600</iCost>
+			<iCost>1800</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16023,7 +15955,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>710</iCost>
+			<iCost>2136</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16061,7 +15993,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1512</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16099,7 +16031,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>430</iCost>
+			<iCost>1296</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16137,7 +16069,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>1100</iCost>
+			<iCost>1104</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16175,7 +16107,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>910</iCost>
+			<iCost>2730</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16289,7 +16221,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>836</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16327,7 +16259,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1800</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16365,7 +16297,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>3210</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16403,7 +16335,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>1860</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16441,7 +16373,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>710</iCost>
+			<iCost>2136</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16479,7 +16411,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>820</iCost>
+			<iCost>2460</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16555,7 +16487,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>792</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16593,7 +16525,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>750</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16631,7 +16563,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>910</iCost>
+			<iCost>2730</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16669,7 +16601,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>2064</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16707,7 +16639,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>470</iCost>
+			<iCost>1404</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16745,7 +16677,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>335</iCost>
+			<iCost>1008</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16783,7 +16715,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>455</iCost>
+			<iCost>2730</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16821,7 +16753,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>300</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16897,7 +16829,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>300</iCost>
+			<iCost>876</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16973,7 +16905,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>100</iCost>
+			<iCost>2460</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -17011,7 +16943,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>335</iCost>
+			<iCost>1008</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -17049,7 +16981,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
-			<iCost>235</iCost>
+			<iCost>708</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
