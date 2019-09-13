@@ -1894,23 +1894,22 @@ class CvMainInterface:
 			iMaxCols = w / iSize4
 			iMaxUnits = iMaxCols * iMaxRows
 
+		# Auto-scroll?
 		if self.bPlotListAutoScroll:
 			self.cleanPlotList(screen)
 			iTopRow = 0
 			if not self.InCity:
 				# Find selected unit list position
-				iPos = i = 0
+				i = iPos = 0
 				while i < iUnits:
 					CyUnit = CyPlot.getUnit(i)
-					if not self.bDebugMode and CyUnit.isInvisible(iTeamAct, False):
-						i += 1
-					else:
+					if self.bDebugMode or not CyUnit.isInvisible(iTeamAct, False):
 						if CyUnit.IsSelected():
 							if iPos >= iMaxUnits:
 								self.iPlotListTopRow = iTopRow = 1 + (iPos - iMaxUnits)/iMaxCols
 							break
 						iPos += 1
-						i += 1
+					i += 1
 		else:
 			iTopRow = self.iPlotListTopRow
 			self.bPlotListAutoScroll = True
@@ -1918,7 +1917,7 @@ class CvMainInterface:
 		aMap = {}
 		aList = []
 		iStart = iTopRow * iMaxCols
-		iPos = i = iStart
+		i = iPos = iStart
 		while i < iUnits and iPos - iStart < iMaxUnits:
 			CyUnit = CyPlot.getUnit(i)
 			i += 1
@@ -2029,11 +2028,19 @@ class CvMainInterface:
 		if aList == self.aPlotListList:
 			return
 
-		if iMaxUnits < iUnits:
+		# Total visible units count
+		i = iVisibleUnits = 0
+		while i < iUnits:
+			CyUnit = CyPlot.getUnit(i)
+			if self.bDebugMode or not CyUnit.isInvisible(iTeamAct, False):
+				iVisibleUnits += 1
+			i += 1
+		# Scroll buttons?
+		if iMaxUnits < iVisibleUnits:
 			screen.show("PlotListScroll")
 			if iTopRow:
 				screen.show("PlotList|Scroll0")
-			self.iMaxPlotListScroll = 1 + (iUnits-1-iMaxUnits)/iMaxCols
+			self.iMaxPlotListScroll = 1 + (iVisibleUnits-1-iMaxUnits)/iMaxCols
 			if iTopRow < self.iMaxPlotListScroll:
 				screen.show("PlotList|Scroll1")
 		else:
@@ -2059,20 +2066,21 @@ class CvMainInterface:
 		iLeaderPromo = self.PROMOTION_LEADER
 
 		# Draw plot list
+		iDisplayedUnits = len(aList)
 		i = iMaxRows - 1
 		if bCityScreen:
 			y0 = iSize6 * i
-		elif iUnits < i * iMaxCols + 1:
-			y0 = iSize6 * (i - iUnits/iMaxCols)
+		elif iDisplayedUnits <= i * iMaxCols:
+			y0 = iSize6 * (i - (iDisplayedUnits - 1)/iMaxCols)
 		else:
 			y0 = 0
 		self.yPlotListTT = y + y0
 		halfSize = iSize0/2
 		actSize = iSize6/3
 		upgSize = iSize6/2
-		i = -1
-		for i, entry in enumerate(aList):
-			CyUnit, iUnitType, bEnable, bSelected, fHP, iDot, szActivity, bPromo, bUpg = entry
+		i = 0
+		while i < iDisplayedUnits:
+			CyUnit, iUnitType, bEnable, bSelected, fHP, iDot, szActivity, bPromo, bUpg = aList[i]
 			iDot0, iDot1 = iDot
 			x = (i % iMaxCols) * iSize4
 			y = y0 + (i / iMaxCols) * iSize8
@@ -2126,6 +2134,7 @@ class CvMainInterface:
 					iColor = cCoGreen
 				screen.setStackedBarColors(Bar, InfoBarTypes.INFOBAR_STORED, iColor)
 				screen.setImageButtonAt("PlotList|Health" + str(i), Area, "", x+2, y+iSize0, iSize1, 11, eWidGen, 1, 1)
+			i += 1
 
 
 	def updateSelectionButtons(self, screen):
