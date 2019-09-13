@@ -111,7 +111,6 @@ class BarbarianCiv:
 			CyCity, i = CyPlayerBarb.nextCity(i, False)
 
 		if bNoGo: return
-		del iRange, fOdds, bNoGo
 		'''
 		Create Minor Civ
 		'''
@@ -177,13 +176,9 @@ class BarbarianCiv:
 						civs = aList
 				iCivType = civs[GAME.getSorenRandNum(len(civs),'Pick civ')]
 
-			del civs
-
 			if iCivType < 0:
 				print "[WARNING] Unexpected lack of unused civ types." + POST_FIX
 				return
-
-		del CyPlayerCulture, iCult, iCulture, iDeadCulture
 
 		# Choose a leader for the new civ
 		aList = [] # Claimed Leaders
@@ -207,7 +202,6 @@ class BarbarianCiv:
 			print "[ERROR] Unexpected lack of possible leaders." + POST_FIX
 			return
 		iLeader = leaders[GAME.getSorenRandNum(len(leaders), 'Pick leader')]
-		del leaders, bLeadAnyCiv
 
 		iX = CyCity.getX()
 		iY = CyCity.getY()
@@ -689,11 +683,8 @@ class BarbarianCiv:
 		iLen = len(aList); iCount = 0
 
 		while iCount < iMax and iLen:
-			if iLen > 1:
-				iTemp = GAME.getSorenRandNum(iLen, 'Great Person')
-			else: iTemp = 0
-			iUnit = aList[iTemp]
-			del aList[iTemp]
+
+			iUnit = aList.pop(GAME.getSorenRandNum(iLen, 'Great Person'))
 			iLen -= 1
 			iUnitAI = GC.getUnitInfo(iUnit).getDefaultUnitAIType()
 			CyPlayer.initUnit(iUnit, iX, iY, UnitAITypes(iUnitAI), DirectionTypes.DIRECTION_SOUTH)

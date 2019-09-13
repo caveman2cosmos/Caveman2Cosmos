@@ -7,7 +7,7 @@
 # This should happen automatically when using the build batch files, otherwise run Tools\InstallDeps.bat
 TOOLKIT=deps\Microsoft Visual C++ Toolkit 2003
 COMPILER_TOOLKIT=$(TOOLKIT)
-PSDK=deps\Microsoft Platform SDK
+PSDK=deps\Microsoft SDKs\Windows\v6.0
 GLOBALBOOST=deps\Boost-1.32.0
 GLOBALPYTHON=deps\Python24
 # TORTOISE="C:\Program files\TortoiseSVN"

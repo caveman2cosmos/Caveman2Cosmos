@@ -175,7 +175,7 @@
             <standard>4</standard>
             <incDir>
               <pElem>deps/Microsoft Visual C++ Toolkit 2003/include</pElem>
-              <pElem>deps/Microsoft Platform SDK/Include</pElem>
+              <pElem>deps/Microsoft SDKs\Windows\v6.0/Include</pElem>
               <pElem>deps/Boost-1.32.0/include</pElem>
               <pElem>deps/Python24/include</pElem>
               <pElem>include</pElem>
@@ -503,7 +503,7 @@
             <standard>4</standard>
             <incDir>
               <pElem>deps/Microsoft Visual C++ Toolkit 2003/include</pElem>
-              <pElem>deps/Microsoft Platform SDK/Include</pElem>
+              <pElem>deps/Microsoft SDKs\Windows\v6.0/Include</pElem>
               <pElem>deps/Boost-1.32.0/include</pElem>
               <pElem>deps/Python24/include</pElem>
               <pElem>include</pElem>
@@ -831,7 +831,7 @@
             <standard>4</standard>
             <incDir>
               <pElem>deps/Microsoft Visual C++ Toolkit 2003/include</pElem>
-              <pElem>deps/Microsoft Platform SDK/Include</pElem>
+              <pElem>deps/Microsoft SDKs\Windows\v6.0/Include</pElem>
               <pElem>deps/Boost-1.32.0/include</pElem>
               <pElem>deps/Python24/include</pElem>
               <pElem>include</pElem>
@@ -1160,7 +1160,7 @@
             <standard>4</standard>
             <incDir>
               <pElem>deps/Microsoft Visual C++ Toolkit 2003/include</pElem>
-              <pElem>deps/Microsoft Platform SDK/Include</pElem>
+              <pElem>deps/Microsoft SDKs\Windows\v6.0/Include</pElem>
               <pElem>deps/Boost-1.32.0/include</pElem>
               <pElem>deps/Python24/include</pElem>
               <pElem>include</pElem>

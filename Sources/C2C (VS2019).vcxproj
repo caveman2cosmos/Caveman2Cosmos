@@ -74,7 +74,7 @@
     <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" build $(Configuration)</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" rebuild $(Configuration)</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" clean $(Configuration)</NMakeCleanCommandLine>
-    <IncludePath>.;include;deps\Microsoft Visual C++ Toolkit 2003\include;deps\Microsoft Platform SDK\Include;deps\Microsoft Platform SDK\Include\mfc;$(IncludePath)</IncludePath>
+    <IncludePath>.;include;deps\Microsoft Visual C++ Toolkit 2003\include;deps\Microsoft SDKs\Windows\v6.0\Include;deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(IncludePath)</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;QC_MASTERY_VICTORY;LOG_AI;_MOD_GWARM;_MOD_SHAM_SPOILER;C2C_BUILD;MULTI_FEATURE_MOD;FP_PROFILE_ENABLE;USE_INTERNAL_PROFILER</NMakePreprocessorDefinitions>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Assert|Win32'">
@@ -84,7 +84,7 @@
     <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" build $(Configuration)</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" rebuild $(Configuration)</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" clean $(Configuration)</NMakeCleanCommandLine>
-    <IncludePath>.;include;deps\Microsoft Visual C++ Toolkit 2003\include;deps\Microsoft Platform SDK\Include;deps\Microsoft Platform SDK\Include\mfc;$(IncludePath)</IncludePath>
+    <IncludePath>.;include;deps\Microsoft Visual C++ Toolkit 2003\include;deps\Microsoft SDKs\Windows\v6.0\Include;deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(IncludePath)</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;NDEBUG;FINAL_RELEASE;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;QC_MASTERY_VICTORY;LOG_AI;_MOD_GWARM;_MOD_SHAM_SPOILER;C2C_BUILD;MULTI_FEATURE_MOD;FASSERT_ENABLE</NMakePreprocessorDefinitions>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -94,7 +94,7 @@
     <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" build $(Configuration)</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" rebuild $(Configuration)</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" clean $(Configuration)</NMakeCleanCommandLine>
-    <IncludePath>.;include;deps\Microsoft Visual C++ Toolkit 2003\include;deps\Microsoft Platform SDK\Include;deps\Microsoft Platform SDK\Include\mfc;$(IncludePath)</IncludePath>
+    <IncludePath>.;include;deps\Microsoft Visual C++ Toolkit 2003\include;deps\Microsoft SDKs\Windows\v6.0\Include;deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(IncludePath)</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;NDEBUG;FINAL_RELEASE;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;QC_MASTERY_VICTORY;LOG_AI;_MOD_GWARM;_MOD_SHAM_SPOILER;C2C_BUILD;MULTI_FEATURE_MOD</NMakePreprocessorDefinitions>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='FinalRelease|Win32'">
@@ -104,7 +104,7 @@
     <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" build $(Configuration)</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" rebuild $(Configuration)</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" clean $(Configuration)</NMakeCleanCommandLine>
-    <IncludePath>.;include;deps\Microsoft Visual C++ Toolkit 2003\include;deps\Microsoft Platform SDK\Include;deps\Microsoft Platform SDK\Include\mfc;$(IncludePath)</IncludePath>
+    <IncludePath>.;include;deps\Microsoft Visual C++ Toolkit 2003\include;deps\Microsoft SDKs\Windows\v6.0\Include;deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(IncludePath)</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;NDEBUG;FINAL_RELEASE;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;QC_MASTERY_VICTORY;LOG_AI;_MOD_GWARM;_MOD_SHAM_SPOILER;C2C_BUILD;MULTI_FEATURE_MOD</NMakePreprocessorDefinitions>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -114,7 +114,7 @@
     <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" build $(Configuration)</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" rebuild $(Configuration)</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" clean $(Configuration)</NMakeCleanCommandLine>
-    <IncludePath>.;include;deps\Microsoft Visual C++ Toolkit 2003\include;deps\Microsoft Platform SDK\Include;deps\Microsoft Platform SDK\Include\mfc;$(IncludePath)</IncludePath>
+    <IncludePath>.;include;deps\Microsoft Visual C++ Toolkit 2003\include;deps\Microsoft SDKs\Windows\v6.0\Include;deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(IncludePath)</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;_DEBUG;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;QC_MASTERY_VICTORY;LOG_AI;_MOD_GWARM;_MOD_SHAM_SPOILER;C2C_BUILD;MULTI_FEATURE_MOD;FASSERT_ENABLE</NMakePreprocessorDefinitions>
   </PropertyGroup>
   <ItemGroup>

@@ -53,7 +53,7 @@ def writeLog():
 			pFile.write("Player %d Num Units: %d\n" % (iPlayer, pPlayer.getNumUnits()))
 			pFile.write("Player %d Num Selection Groups: %d\n" % (iPlayer, pPlayer.getNumSelectionGroups()))
 			pFile.write("Player %d Difficulty: %d\n" % (iPlayer, pPlayer.getHandicapType()))
-			pFile.write("Player %d State Religion: %s\n" % (iPlayer, CvUtil.convertToStr(pPlayer.getStateReligionNameKey())))
+			pFile.write("Player %d State Religion: %s\n" % (iPlayer, CvUtil.convertToStr(pPlayer.getStateReligionKey())))
 			pFile.write("Player %d Culture: %d\n" % (iPlayer, pPlayer.getCulture()))
 
 			pFile.write("\n\nYields:\n-------\n")

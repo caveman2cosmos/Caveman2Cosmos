@@ -21018,7 +21018,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
             <RawVicinityBonus>BONUS_COPPER</RawVicinityBonus>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
+			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21037,7 +21037,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
             <RawVicinityBonus>BONUS_GOLD</RawVicinityBonus>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
+			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21056,7 +21056,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
             <RawVicinityBonus>BONUS_IRON</RawVicinityBonus>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
+			<PrereqTech>TECH_MINING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21113,7 +21113,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
             <RawVicinityBonus>BONUS_SILVER</RawVicinityBonus>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
+			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21132,7 +21132,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
             <RawVicinityBonus>BONUS_TIN</RawVicinityBonus>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
+			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

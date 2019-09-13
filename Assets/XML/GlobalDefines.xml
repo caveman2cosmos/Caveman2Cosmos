@@ -654,7 +654,7 @@
 	</Define>
 	<Define>
 		<DefineName>GOLDEN_AGE_LENGTH</DefineName>
-		<iDefineIntVal>8</iDefineIntVal>
+		<iDefineIntVal>4</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>GOLDEN_AGE_GREAT_PEOPLE_MODIFIER</DefineName>
