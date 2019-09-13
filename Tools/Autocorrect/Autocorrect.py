@@ -9,6 +9,7 @@ from pylanguagetool import api
 import logging
 import colorama
 from colorama import Fore, Back, Style
+from spellchecker import SpellChecker
 
 class Mode:
     DETECT = 0
@@ -36,10 +37,12 @@ def namespace(element):
 class ExitEarly(Exception):
    pass
 
-def autocorrect(files, mode, fancy):
+def autocorrect(files, mode, fancy, dict):
     ignore_words = load_string_list('ignore_word_list.txt')
     ignore_tags = load_string_list('ignore_tag_list.txt')
     ignore_rules = load_string_list('ignore_rules_list.txt')
+    if dict:
+        
 
     for filename in files:
         print(filename)
@@ -266,6 +269,7 @@ if __name__ == "__main__":
     parser.add_argument('--log', dest='log_file', action='store', help='override log file name', default='Autocorrect.log')
     parser.add_argument('--non-fancy', dest='fancy', action='store_false',
                             help="don't use colors for markup", default=True)
+    parser.add_argument('--dict', dest='dict', help="use specified spellcheck dictionary", default=None)
     mode_group = parser.add_mutually_exclusive_group(required=False)
     mode_group.add_argument('--automatic', dest='automatic', action='store_true',
                             help='apply the proposed changes automatically')
@@ -295,6 +299,6 @@ if __name__ == "__main__":
     else:
         print('Processing %d files...' % len(unique_files))
         try:
-            autocorrect(unique_files, mode, args.fancy)
+            autocorrect(unique_files, mode, args.fancy, args.dict)
         except requests.exceptions.ConnectionError as ex:
             print(Fore.RED + "ERROR: Can't connect to LanguageTool server, did you forget to start it?")
