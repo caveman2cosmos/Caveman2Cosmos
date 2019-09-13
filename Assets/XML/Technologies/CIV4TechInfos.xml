@@ -137,7 +137,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<iCost>4</iCost>
 			<Era>ERA_ANCIENT</Era>
-			<iAsset>4</iAsset>
+			<iAsset>8</iAsset>
 			<bTrade>1</bTrade>
 			<bGoodyTech>1</bGoodyTech>
 			<iGridX>2</iGridX>
@@ -585,9 +585,9 @@ Current techs which are not in this file:-
 			<Civilopedia>TXT_KEY_TECH_HARD_HAMMER_PERCUSSION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_HARD_HAMMER_PERCUSSION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<iCost>8</iCost>
+			<iCost>7</iCost>
 			<Era>ERA_ANCIENT</Era>
-			<iAsset>7</iAsset>
+			<iAsset>8</iAsset>
 			<iPower>1</iPower>
 			<bTrade>1</bTrade>
 			<bGoodyTech>1</bGoodyTech>
