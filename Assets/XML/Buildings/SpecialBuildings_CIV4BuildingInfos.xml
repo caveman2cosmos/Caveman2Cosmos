@@ -11187,8 +11187,6 @@
 			<FreePromotion_2>PROMOTION_WEATHER_FORECAST_AIR</FreePromotion_2>
 			<FreePromotion_3>PROMOTION_WEATHER_FORECAST_NAVAL</FreePromotion_3>
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
-			<!-- Misc. Effects -->
-			<iMaintenanceModifier>25</iMaintenanceModifier>
 			<!-- Special properties -->
 			<iAsset>5</iAsset>
 		</BuildingInfo>
