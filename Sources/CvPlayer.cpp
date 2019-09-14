@@ -21555,21 +21555,16 @@ int CvPlayer::getEspionageMissionCostModifier(EspionageMissionTypes eMission, Pl
 			iModifier /= 100;
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
+	iModifier += GC.getESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT();
+	
 	if (iModifier > MAX_INT)
 	{
 		iModifier = MAX_INT;
-}
+	}
 	return (int)iModifier;
 }
 
-/************************************************************************************************/
-/* Afforess	                  Start		 02/01/10                                               */
-/*                                                                                              */
-/*        New Parameter                                                                         */
-/************************************************************************************************/
 bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, CvPlot* pPlot, int iExtraData, CvUnit* pSpyUnit, bool bCaught)
 {
 	TCHAR szSound[1024] = "AS2D_DEAL_CANCELLED";
