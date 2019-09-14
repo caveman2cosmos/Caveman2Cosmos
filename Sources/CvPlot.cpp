@@ -4,17 +4,8 @@
 #include "CvDLLSymbolIFaceBase.h"
 #include "CvDLLPlotBuilderIFaceBase.h"
 #include "CvDLLFlagEntityIFaceBase.h"
-/************************************************************************************************/
-/* Afforess	                  Start		 04/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-#include <time.h>
-#include <psapi.h>
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
+#include "CvPlotPaging.h"
 
 #define STANDARD_MINIMAP_ALPHA		(0.6f)
 
@@ -42,9 +33,9 @@ static stdext::hash_map<int, unitDefenderInfo>*	g_bestDefenderCache = NULL;
 CvPlot::CvPlot() 
 	: m_GameObject(this)
 	, m_Properties(this)
-	, m_visibleGraphics(PLOT_GRAPHICS_NONE)
-	, m_requiredVisibleGraphics(PLOT_GRAPHICS_NONE)
-	, m_iGraphicsPageIndex(-1)
+	, m_visibleGraphics(ECvPlotGraphics::NONE)
+	, m_requiredVisibleGraphics(ECvPlotGraphics::NONE)
+	, m_pagingHandle(CvPlotPaging::INVALID_HANDLE)
 {
 	if ( m_resultHashMap == NULL )
 	{
@@ -384,221 +375,81 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	m_bPlotGroupsDirty = false;
 }
 
-struct GraphicsPagingInfo
-{
-	CvPlot* pPlot;
-	unsigned int iSeq;
-	GraphicsPagingInfo () : pPlot(NULL), iSeq(0U) {}
-};
-
-static unsigned int iNumPagedInPlots = 0;
-// static unsigned int iRenderStartSeq = 0;
-static unsigned int iCurrentSeq = 0;
-static unsigned int iOldestSearchSeqHint = 0;
-static std::vector<GraphicsPagingInfo> pagingTable;
-
-#define	MAX_VALID_PAGING_INDEX 65534
-
-int findFreePagingTableSlot()
-{
-	static size_t iSearchStartHintIndex = 0;
-
-	for(size_t iI = 0; iI < pagingTable.size(); iI++)
-	{
-		int iIndex = iSearchStartHintIndex++;
-
-		if (iSearchStartHintIndex >= pagingTable.size())
-		{
-			iSearchStartHintIndex = 0;
-		}
-
-		if ( pagingTable[iIndex].pPlot == NULL )
-		{
-			return iIndex;
-		}
-	}
-
-	return -1;
-}
-
-int allocateNewPagingEntry()
-{
-	if (pagingTable.size() <= iNumPagedInPlots++ )
-	{
-		pagingTable.push_back(GraphicsPagingInfo());
-		return pagingTable.size() - 1;
-	}
-	else
-	{
-		return findFreePagingTableSlot();
-	}
-}
-
-int findOldestEvictablePagingEntry()
-{
-	unsigned int iOldest = MAX_INT;
-	int iResult = -1;
-
-	for(int iI = 0; iI < static_cast<int>(pagingTable.size()); iI++)
-	{
-		if ( pagingTable[iI].pPlot != NULL && pagingTable[iI].pPlot->getNonRequiredGraphicsMask() != PLOT_GRAPHICS_NONE)
-		{
-			if ( pagingTable[iI].iSeq < iOldest )
-			{
-				iOldest = pagingTable[iI].iSeq;
-				iResult = iI;
-			}
-		}
-	}
-
-	return iResult;
-}
-
-#define DEFAULT_MAX_WORKING_SET_THRESHOLD_BEFORE_EVICTION ((size_t)1024*(size_t)1024*(size_t)1024*(size_t)2)
-#define DEFAULT_OS_MEMORY_ALLOWANCE ((size_t)1024*(size_t)1024*(size_t)512)
-
-bool NeedToFreeMemory()
-{
-	PROCESS_MEMORY_COUNTERS pmc;
-	static unsigned int uiMaxMem = 0xFFFFFFFF;
-
-	if ( uiMaxMem == 0xFFFFFFFF )
-	{
-		MEMORYSTATUSEX memoryStatus;
-
-		memoryStatus.dwLength = sizeof(memoryStatus);
-		GlobalMemoryStatusEx(&memoryStatus);
-
-		uiMaxMem = 1024*GC.getDefineINT("MAX_DESIRED_MEMORY_USED", DEFAULT_MAX_WORKING_SET_THRESHOLD_BEFORE_EVICTION/1024);
-
-		DWORDLONG usableMemory = memoryStatus.ullTotalPhys - 1024*(DWORDLONG)GC.getDefineINT("OS_MEMORY_ALLOWANCE", DEFAULT_OS_MEMORY_ALLOWANCE/1024);
-		if ( usableMemory < uiMaxMem )
-		{
-			uiMaxMem = (unsigned int)usableMemory;
-		}
-	}
-
-	GetProcessMemoryInfo( GetCurrentProcess(), &pmc, sizeof(pmc));
-	
-	if ( pmc.WorkingSetSize > uiMaxMem )
-	{
-		OutputDebugString(CvString::format("Found need to free memory: %d used vs %d target\n", pmc.WorkingSetSize, uiMaxMem).c_str());
-		return true;
-	}
-	else
-	{
-		return false;
-	}
-}
-
-// static bool bFoundEvictable = true;
-
-bool CvPlot::EvictGraphicsIfNecessary()
-{
-	//bool bFoundEvictable = true;
-
-	//while(bFoundEvictable && NeedToFreeMemory())
-	//{
-	int iEvictionIndex = findOldestEvictablePagingEntry();
-
-	if ( iEvictionIndex == -1 )
-	{
-		return false;
-	}
-
-	pagingTable[iEvictionIndex].pPlot->hideNonRequiredGraphics();
-	return true;
-	//}
-}
 
 void CvPlot::pageGraphicsOut()
 {
-	//bFoundEvictable = true;
-
-	if ( m_iGraphicsPageIndex != -1 )
+	if ( m_pagingHandle != CvPlotPaging::INVALID_HANDLE)
 	{
-		pagingTable[m_iGraphicsPageIndex].pPlot = NULL;
-		--iNumPagedInPlots;
-		//if ( --iNumPagedInPlots == 0 )
-		//{
-		//	SAFE_DELETE_ARRAY(pagingTable);
-
-		//	iPageTableSize = 0;
-		//}
+		CvPlotPaging::RemovePlot(m_pagingHandle);
+		m_pagingHandle = CvPlotPaging::INVALID_HANDLE;
 	}
 
-	m_iGraphicsPageIndex = -1;
 }
 
-//void CvPlot::notePageRenderStart(int iRenderArea)
-//{
-//	iRenderStartSeq = std::max(0, iCurrentSeq-iRenderArea);
-//}
-
-void CvPlot::setRequireGraphicsVisible(ECvPlotGraphics graphics, bool visible)
+void CvPlot::setRequireGraphicsVisible(ECvPlotGraphics::type graphics, bool visible)
 {
 	if (visible)
 	{
-		m_requiredVisibleGraphics = static_cast<ECvPlotGraphics>(static_cast<int>(m_requiredVisibleGraphics) | static_cast<int>(graphics));
+		m_requiredVisibleGraphics = m_requiredVisibleGraphics | graphics;
 	}
 	else
 	{
-		m_requiredVisibleGraphics = static_cast<ECvPlotGraphics>(static_cast<int>(m_requiredVisibleGraphics) & ~static_cast<int>(graphics));
+		m_requiredVisibleGraphics = m_requiredVisibleGraphics & ~graphics;
 	}
 
 	showRequiredGraphics();
 }
 
-bool CvPlot::isGraphicsVisible(ECvPlotGraphics graphics) const
+bool CvPlot::isGraphicsVisible(ECvPlotGraphics::type graphics) const
 {
-	return (static_cast<int>(m_visibleGraphics) & static_cast<int>(graphics)) != 0;
+	return (m_visibleGraphics & graphics) != 0;
 }
 
-bool CvPlot::isGraphicsRequiredVisible(ECvPlotGraphics graphics) const
+bool CvPlot::isGraphicsRequiredVisible(ECvPlotGraphics::type graphics) const
 {
-	return (static_cast<int>(m_requiredVisibleGraphics) & static_cast<int>(graphics)) != 0;
+	return (m_requiredVisibleGraphics & graphics) != 0;
 }
 
 bool CvPlot::isGraphicPagingEnabled() const
 {
-	return m_iGraphicsPageIndex != -1;
+	return m_pagingHandle != CvPlotPaging::INVALID_HANDLE;
 }
 
 void CvPlot::showRequiredGraphics()
 {
-	ECvPlotGraphics toShow = static_cast<ECvPlotGraphics>((m_requiredVisibleGraphics ^ m_visibleGraphics) & m_requiredVisibleGraphics);
+	ECvPlotGraphics::type toShow = (m_requiredVisibleGraphics ^ m_visibleGraphics) & m_requiredVisibleGraphics;
 
 	if (!isGraphicPagingEnabled())
 	{
 		enableGraphicsPaging();
 	}
 
-	if (toShow != PLOT_GRAPHICS_NONE)
+	if (toShow != ECvPlotGraphics::NONE)
 	{
 		setLayoutDirty(true);
 	}
-	if (toShow & PLOT_GRAPHICS_SYMBOLS)
+	if (toShow & ECvPlotGraphics::SYMBOLS)
 	{
 		updateSymbols();
 	}
-	if (toShow & PLOT_GRAPHICS_FEATURE)
+	if (toShow & ECvPlotGraphics::FEATURE)
 	{
 		updateFeatureSymbol();
 	}
-	if (toShow & PLOT_GRAPHICS_RIVER)
+	if (toShow & ECvPlotGraphics::RIVER)
 	{
 		updateRiverSymbol();
 	}
-	if (toShow & PLOT_GRAPHICS_ROUTE)
+	if (toShow & ECvPlotGraphics::ROUTE)
 	{
 		updateRouteSymbol();
 	}
-	if (toShow & PLOT_GRAPHICS_UNIT)
+	if (toShow & ECvPlotGraphics::UNIT)
 	{
 		updateCenterUnit();
 		updateFlagSymbol();
 	}
-	if (toShow & PLOT_GRAPHICS_CITY)
+	if (toShow & ECvPlotGraphics::CITY)
 	{
 		if (getPlotCity() != NULL)
 		{
@@ -606,18 +457,18 @@ void CvPlot::showRequiredGraphics()
 		}
 	}
 
-	m_visibleGraphics = static_cast<ECvPlotGraphics>(m_visibleGraphics | toShow);
+	m_visibleGraphics = m_visibleGraphics | toShow;
 }
 
 void CvPlot::hideNonRequiredGraphics()
 {
-	ECvPlotGraphics toHide = getNonRequiredGraphicsMask();
+	ECvPlotGraphics::type toHide = getNonRequiredGraphicsMask();
 
-	if (toHide & PLOT_GRAPHICS_SYMBOLS)
+	if (toHide & ECvPlotGraphics::SYMBOLS)
 	{
 		deleteAllSymbols();
 	}
-	if (toHide & PLOT_GRAPHICS_FEATURE)
+	if (toHide & ECvPlotGraphics::FEATURE)
 	{
 		gDLL->getFeatureIFace()->destroy(m_pFeatureSymbol);
 		m_pFeatureSymbol = NULL;
@@ -627,17 +478,17 @@ void CvPlot::hideNonRequiredGraphics()
 			m_pPlotBuilder = NULL;
 		}
 	}
-	if (toHide & PLOT_GRAPHICS_RIVER)
+	if (toHide & ECvPlotGraphics::RIVER)
 	{
 		gDLL->getRiverIFace()->destroy(m_pRiverSymbol);
 		m_pRiverSymbol = NULL;
 	}
-	if (toHide & PLOT_GRAPHICS_ROUTE)
+	if (toHide & ECvPlotGraphics::ROUTE)
 	{
 		gDLL->getRouteIFace()->destroy(m_pRouteSymbol);
 		m_pRouteSymbol = NULL;
 	}
-	if (toHide & PLOT_GRAPHICS_UNIT)
+	if (toHide & ECvPlotGraphics::UNIT)
 	{
 		updateCenterUnit();
 		m_pCenterUnit = NULL;
@@ -646,7 +497,7 @@ void CvPlot::hideNonRequiredGraphics()
 		m_pFlagSymbol = NULL;
 		m_pFlagSymbolOffset = NULL;
 	}
-	if (toHide & PLOT_GRAPHICS_CITY)
+	if (toHide & ECvPlotGraphics::CITY)
 	{
 		if (getPlotCity() != NULL)
 		{
@@ -654,39 +505,34 @@ void CvPlot::hideNonRequiredGraphics()
 		}
 	}
 
-	m_visibleGraphics = static_cast<ECvPlotGraphics>(m_visibleGraphics & ~toHide);
+	m_visibleGraphics = m_visibleGraphics & ~toHide;
 	// All graphics are pages out now so we can remove ourselves from the active plot list
-	if (m_visibleGraphics == PLOT_GRAPHICS_NONE)
+	if (m_visibleGraphics == ECvPlotGraphics::NONE)
 	{
 		pageGraphicsOut();
 	}
 
 }
 
-ECvPlotGraphics CvPlot::getNonRequiredGraphicsMask() const
+ECvPlotGraphics::type CvPlot::getNonRequiredGraphicsMask() const
 {
-	return static_cast<ECvPlotGraphics>((m_requiredVisibleGraphics ^ m_visibleGraphics) & m_visibleGraphics);
+	return (m_requiredVisibleGraphics ^ m_visibleGraphics) & m_visibleGraphics;
 }
 
 void CvPlot::enableGraphicsPaging()
 {
 	FAssertMsg(!isGraphicPagingEnabled(), "Graphics paging is already enabled");
 
-	m_iGraphicsPageIndex = allocateNewPagingEntry();
-
-	GraphicsPagingInfo* pPagingInfo = &pagingTable[m_iGraphicsPageIndex];
-
-	pPagingInfo->iSeq = ++iCurrentSeq;
-	pPagingInfo->pPlot = this;
+	m_pagingHandle = CvPlotPaging::AddPlot(this);
 }
 
 void CvPlot::disableGraphicsPaging()
 {
 	FAssertMsg(isGraphicPagingEnabled(), "Graphics paging is not enabled");
 	// Show all graphics, as we aren't paging any more
-	setRequireGraphicsVisible(PLOT_GRAPHICS_ALL, true);
+	setRequireGraphicsVisible(ECvPlotGraphics::ALL, true);
 	// Disable paging 
-	m_iGraphicsPageIndex = -1;
+	pageGraphicsOut();
 }
 
 //bool	CvPlot::shouldHaveFullGraphics() const
@@ -1292,7 +1138,7 @@ void CvPlot::updateSymbolDisplay()
 	CvSymbol* pLoopSymbol;
 	int iLoop;
 
-	if ( !isGraphicsVisible(PLOT_GRAPHICS_SYMBOLS))
+	if ( !isGraphicsVisible(ECvPlotGraphics::SYMBOLS))
 	{
 		return;
 	}
@@ -1325,7 +1171,7 @@ void CvPlot::updateSymbolVisibility()
 	CvSymbol* pLoopSymbol;
 	int iLoop;
 
-	if ( !isGraphicsVisible(PLOT_GRAPHICS_SYMBOLS) )
+	if ( !isGraphicsVisible(ECvPlotGraphics::SYMBOLS) )
 	{
 		return;
 	}
@@ -1357,7 +1203,7 @@ bool CvPlot::updateSymbolsInternal()
 	MEMORY_TRACK_EXEMPT();
 	PROFILE_FUNC();
 
-	if ( !isGraphicsRequiredVisible(PLOT_GRAPHICS_SYMBOLS))
+	if ( !isGraphicsRequiredVisible(ECvPlotGraphics::SYMBOLS))
 	{
 		return false;
 	}
@@ -1464,7 +1310,7 @@ void CvPlot::updateCenterUnit()
 	CvUnit* pOldCenterUnit = getCenterUnit();
 	CvUnit* pNewCenterUnit;
 
-	if ( m_bInhibitCenterUnitCalculation || !isGraphicsRequiredVisible(PLOT_GRAPHICS_UNIT) )
+	if ( m_bInhibitCenterUnitCalculation || !isGraphicsRequiredVisible(ECvPlotGraphics::UNIT) )
 	{
 		//	Because we are inhibitting recalculation until all the adjusting code has run
 		//	(rather than have it update multiple times) the currently cached center unit
@@ -12249,7 +12095,7 @@ void CvPlot::updateFeatureSymbolVisibility()
 {
 	PROFILE_FUNC();
 
-	if (!isGraphicsVisible(PLOT_GRAPHICS_FEATURE))
+	if (!isGraphicsVisible(ECvPlotGraphics::FEATURE))
 	{
 		return;
 	}
@@ -12293,7 +12139,7 @@ void CvPlot::updateFeatureSymbol(bool bForce)
 		gDLL->getEngineIFace()->RebuildTileArt(getViewportX(),getViewportY());
 	}
 
-	if ( !isGraphicsRequiredVisible(PLOT_GRAPHICS_FEATURE) )
+	if ( !isGraphicsRequiredVisible(ECvPlotGraphics::FEATURE) )
 	{
 		return;
 	}
@@ -12340,7 +12186,7 @@ void CvPlot::updateRouteSymbol(bool bForce, bool bAdjacent)
 	RouteTypes eRoute;
 	int iI;
 
-	if ( !isGraphicsRequiredVisible(PLOT_GRAPHICS_ROUTE) )
+	if ( !isGraphicsRequiredVisible(ECvPlotGraphics::ROUTE) )
 	{
 		return;
 	}
@@ -12400,7 +12246,7 @@ void CvPlot::updateRiverSymbol(bool bForce, bool bAdjacent)
 
 	CvPlot* pAdjacentPlot;
 
-	if ( !isGraphicsRequiredVisible(PLOT_GRAPHICS_RIVER) )
+	if ( !isGraphicsRequiredVisible(ECvPlotGraphics::RIVER) )
 	{
 		return;
 	}
@@ -12504,7 +12350,7 @@ void CvPlot::updateFlagSymbol()
 {
 	PROFILE_FUNC();
 
-	if ( !isGraphicsRequiredVisible(PLOT_GRAPHICS_UNIT) )
+	if ( !isGraphicsRequiredVisible(ECvPlotGraphics::UNIT) )
 	{
 		return;
 	}
@@ -14632,7 +14478,7 @@ void CvPlot::setLayoutDirty(bool bDirty)
 
 bool CvPlot::updatePlotBuilder()
 {
-	if ( !isGraphicsRequiredVisible(PLOT_GRAPHICS_FEATURE) )
+	if ( !isGraphicsRequiredVisible(ECvPlotGraphics::FEATURE) )
 	{
 		return false;
 	}

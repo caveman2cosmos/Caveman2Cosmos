@@ -31,9 +31,6 @@ CvGame::CvGame()
 : m_GameObject()
 , m_Properties(this)
 , m_iChokePointCalculationVersion(0)
-, m_iLastLookatX(-1)
-, m_iLastLookatY(-1)
-, m_bWasGraphicsPagingEnabled(false)
 , m_eCurrentMap(MAP_INITIAL)
 
 {
@@ -1183,9 +1180,8 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	m_lastGraphicUpdateRequestTickCount = -1;
 
 	m_plotGroupHashesInitialized = false;
-	m_bWasGraphicsPagingEnabled = false;
-	m_iLastLookatX = -1;
-	m_iLastLookatY = -1;
+
+	CvPlotPaging::ResetPaging();
 }
 
 
@@ -2647,37 +2643,6 @@ int CvGame::getTeamClosenessScore(int** aaiDistances, int* aiStartingLocs)
 	return iScore;
 }
 
-float ToroidalDistanceSq (int x1, int y1, int x2, int y2, int w, int h)
-{
-	float dx = std::abs(x2 - x1);
-	float dy = std::abs(y2 - y1);
-
-	if (dx > w/2)
-		dx = w - dx;
-
-	if (dy > h/2)
-		dy = h - dy;
-
-	return dx * dx + dy * dy;
-}
-
-struct PlotDist
-{
-	CvPlot* plot;
-	int dist2;
-
-	PlotDist(CvPlot* plot, int dist2) : plot(plot), dist2(dist2)
-	{
-	}
-
-	PlotDist() : plot(NULL), dist2(0) {}
-
-	bool operator<(const PlotDist& other) const
-	{
-		return dist2 < other.dist2;
-	}
-};
-
 void CvGame::update()
 {
 	MEMORY_TRACE_FUNCTION();
@@ -2696,170 +2661,7 @@ void CvGame::update()
 
 	startProfilingDLL(false);
 
-	CvPlot* lookatPlot = gDLL->getInterfaceIFace()->getLookAtPlot();
-	if ( lookatPlot != NULL )
-	{
-		//	Sample th BUG setting in the main thread on entry to game update here (it requires a Python call
-		//	so we don't want it happening in background, or more frequently than once per turn slice)
-		bool bPagingEnabled = getBugOptionBOOL("MainInterface__EnableGraphicalPaging", true);
-		GC.setGraphicalDetailPagingEnabled(bPagingEnabled);
-
-		//if (m_bWasGraphicsPagingEnabled != bPagingEnabled)
-		//{
-		//	for(int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
-		//	{
-		//		CvPlot*	pPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
-		//		if ( pPlot != NULL )
-		//		{
-		//			if (m_bWasGraphicsPagingEnabled)
-		//			{
-		//				pPlot->setRequireGraphicsVisible(PLOT_GRAPHICS_ALL, true);
-		//			}
-		//			else
-		//			{
-		//				pPlot->setRequireGraphicsVisible(PLOT_GRAPHICS_ALL, false);
-		//			}
-		//		}
-		//	}
-		//}
-
-		//m_bWasGraphicsPagingEnabled = bPagingEnabled;
-
-		{
-			int pageInRange2 = GC.getGraphicalDetailPageInRange() * GC.getGraphicalDetailPageInRange();
-			win32::Stopwatch pageTimer;
-			pageTimer.Start();
-			int centerX = lookatPlot->getX_INLINE();
-			int centerY = lookatPlot->getY_INLINE();
-			
-			int moveDist2 = (centerX - m_iLastLookatX) * (centerX - m_iLastLookatX) + (centerY - m_iLastLookatY) * (centerY - m_iLastLookatY);
-
-			int pagingFrameTime = 10 + 200 / (1 + moveDist2);
-
-			// Evict graphics first
-			while (CvPlot::EvictGraphicsIfNecessary() && pageTimer.ElapsedMilliseconds() < pagingFrameTime * 0.5) {}
-
-			static int Distances[] = {
-				100, //  PLOT_GRAPHICS_SYMBOLS
-				7, 	 //  PLOT_GRAPHICS_FEATURE
-				40,  //  PLOT_GRAPHICS_RIVER
-				100, //  PLOT_GRAPHICS_ROUTE
-				15,  //  PLOT_GRAPHICS_UNIT
-				5,  //  PLOT_GRAPHICS_CITY
-			};
-
-
-			std::vector<PlotDist> plots;
-			CvMap& map = GC.getMapINLINE();
-			plots.reserve(map.numPlotsINLINE());
-			for (int i = 0; i < map.numPlotsINLINE(); i++)
-			{
-				CvPlot* plot = map.plotByIndexINLINE(i);
-				if (plot != NULL)
-				{
-					plots.push_back(PlotDist(map.plotByIndexINLINE(i), ToroidalDistanceSq(centerX, centerY, plot->getX_INLINE(), plot->getY_INLINE(), map.getGridWidthINLINE(), map.getGridHeightINLINE())));
-				}
-			}
-
-			std::sort(plots.begin(), plots.end());
-
-			//for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE() && pageTimer.ElapsedMilliseconds() < pagingFrameTime; iI++)
-			for(std::vector<PlotDist>::iterator itr = plots.begin(); itr != plots.end() && pageTimer.ElapsedMilliseconds() < pagingFrameTime; ++itr)
-			{
-				//CvPlot* pPlot = itr->plot;
-				if (bPagingEnabled)
-				{
-					//pPlot->setRequireGraphicsVisible(PLOT_GRAPHICS_FLAG, true);
-					for (int graphicsType = 0; graphicsType < PLOT_GRAPHICS_NUM; ++graphicsType)
-					{
-						if (Distances[graphicsType] != -1)
-						{
-							itr->plot->setRequireGraphicsVisible(static_cast<ECvPlotGraphics>(1 << graphicsType), itr->dist2 < Distances[graphicsType] * Distances[graphicsType]);
-						}
-					}
-				}
-				else
-				{
-					itr->plot->disableGraphicsPaging();
-				}
-			}
-
-			m_iLastLookatX = lookatPlot->getX_INLINE();
-			m_iLastLookatY = lookatPlot->getY_INLINE();
-		}
-
-		//if ( GC.getGraphicalDetailPagingEnabled() )
-		//{
-		//	//if ( (m_iLastLookatX != lookatPlot->getX_INLINE() || m_iLastLookatY != lookatPlot->getY_INLINE()) )
-		//	//{
-		//	int pageInRange = GC.getGraphicalDetailPageInRange();
-		//	//CvPlot::notePageRenderStart((pageInRange * 2 + 1) * (pageInRange * 2 + 1));
-
-		//	win32::Stopwatch pageTimer;
-		//	pageTimer.Start();
-		//	int pagingFrameTime = GC.getDefineINT("PAGING_FRAME_TIME_MS", 20);
-		//	// Spiral outward from center
-		//	for (int i = 0; i < pageInRange && pageTimer.ElapsedMilliseconds() < pagingFrameTime; i++)
-		//	{
-		//		for (int x = -i; x <= i && pageTimer.ElapsedMilliseconds() < pagingFrameTime; x++)
-		//		{
-		//			{
-		//				CvPlot* pPlot = plotXY(lookatPlot->getX_INLINE(), lookatPlot->getY_INLINE(), x, i);
-
-		//				if (pPlot != NULL)
-		//				{
-		//					pPlot->setRequireGraphicsVisible(PLOT_GRAPHICS_ALL, true);
-		//				}
-		//			}
-		//			{
-		//				CvPlot* pPlot = plotXY(lookatPlot->getX_INLINE(), lookatPlot->getY_INLINE(), x, -i);
-
-		//				if (pPlot != NULL)
-		//				{
-		//					pPlot->setRequireGraphicsVisible(PLOT_GRAPHICS_ALL, true);
-		//				}
-		//			}
-		//		}
-		//		for (int y = -i; y <= i && pageTimer.ElapsedMilliseconds() < pagingFrameTime; y++)
-		//		{
-		//			{
-		//				CvPlot* pPlot = plotXY(lookatPlot->getX_INLINE(), lookatPlot->getY_INLINE(), i, y);
-
-		//				if (pPlot != NULL)
-		//				{
-		//					pPlot->setRequireGraphicsVisible(PLOT_GRAPHICS_ALL, true);
-		//				}
-		//			}
-		//			{
-		//				CvPlot* pPlot = plotXY(lookatPlot->getX_INLINE(), lookatPlot->getY_INLINE(), -i, y);
-
-		//				if (pPlot != NULL)
-		//				{
-		//					pPlot->setRequireGraphicsVisible(PLOT_GRAPHICS_ALL, true);
-		//				}
-		//			}
-		//		}
-		//	}
-		//	//for (int iX = -pageInRange; iX <= pageInRange && pageTimer.ElapsedMilliseconds() < pagingFrameTime; iX++)
-		//	//{
-		//	//	for (int iY = -pageInRange; iY <= pageInRange && pageTimer.ElapsedMilliseconds() < pagingFrameTime; iY++)
-		//	//	{
-		//	//		CvPlot* pPlot = plotXY(lookatPlot->getX_INLINE(), lookatPlot->getY_INLINE(), iX, iY);
-
-		//	//		if (pPlot != NULL)
-		//	//		{
-		//	//			pPlot->setShouldHaveFullGraphics(true);
-		//	//		}
-		//	//	}
-		//	//}
-
-		//	m_iLastLookatX = lookatPlot->getX_INLINE();
-		//	m_iLastLookatY = lookatPlot->getY_INLINE();
-		//	//}
-
-		//	CvPlot::EvictGraphicsIfNecessary();
-		//}
-	}
+	CvPlotPaging::UpdatePaging();
 
 	//OutputDebugString(CvString::format("Start profiling(false) for CvGame::update()\n").c_str());
 	PROFILE_BEGIN("CvGame::update");

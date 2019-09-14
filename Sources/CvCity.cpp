@@ -21793,7 +21793,7 @@ public:
 void CvCity::getVisibleBuildings(std::list<BuildingTypes>& kChosenVisible, int& iChosenNumGenerics)
 {
 
-	if ( !plot()->isGraphicsRequiredVisible(PLOT_GRAPHICS_CITY) )
+	if ( !plot()->isGraphicsRequiredVisible(ECvPlotGraphics::CITY) )
 	{
 		iChosenNumGenerics = 0;
 		return;

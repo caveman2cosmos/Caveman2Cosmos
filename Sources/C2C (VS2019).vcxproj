@@ -120,6 +120,7 @@
   <ItemGroup>
     <ClCompile Include="CvAllocator.cpp" />
     <ClCompile Include="CvAllocator.h" />
+    <ClCompile Include="CvPlotPaging.cpp" />
     <ClCompile Include="CyPlayerInterface3.cpp" />
     <ClCompile Include="_precompile.cpp" />
     <ClCompile Include="BetterBTSAI.cpp" />
@@ -263,6 +264,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BetterBTSAI.h" />
+    <ClInclude Include="CvPlotPaging.h" />
+    <ClInclude Include="EnumFlags.h" />
     <ClInclude Include="idinfo_iterator.h" />
     <ClInclude Include="CvMapExternal.h" />
     <ClInclude Include="CvMapInterfaceBase.h" />
@@ -306,6 +309,7 @@
     <ClInclude Include="CvDLLUtilityIFaceBase.h" />
     <ClInclude Include="CvDLLWidgetData.h" />
     <ClInclude Include="CvDLLXMLIFaceBase.h" />
+    <ClInclude Include="NiPoint.h" />
     <ClInclude Include="Stopwatch.h" />
     <ClInclude Include="wchar_utils.h" />
     <ClInclude Include="CvEnums.h" />
