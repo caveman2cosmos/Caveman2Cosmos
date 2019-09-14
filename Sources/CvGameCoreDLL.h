@@ -18,7 +18,6 @@
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 #include <MMSystem.h>
-#include <EnumFlags.h>
 
 //#if defined _DEBUG && !defined USE_MEMMANAGER
 //#define USE_MEMMANAGER
@@ -43,6 +42,7 @@
 
 #define DllExport   __declspec( dllexport ) 
 
+#include "EnumFlags.h"
 #include "NiPoint.h"
 
 typedef unsigned char    byte;
