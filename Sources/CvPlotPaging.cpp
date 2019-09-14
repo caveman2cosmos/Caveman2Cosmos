@@ -21,7 +21,7 @@ namespace {
 
 	int g_iLastLookatX = -1;
 	int g_iLastLookatY = -1;
-	int g_bWasGraphicsPagingEnabled = false;
+	bool g_bWasGraphicsPagingEnabled = false;
 
 	int findFreePagingTableSlot()
 	{
@@ -78,8 +78,8 @@ namespace {
 		return iResult;
 	}
 
-	const int DEFAULT_MAX_WORKING_SET_THRESHOLD_BEFORE_EVICTION = 1024 * 1024 * 1024 * 2; // 2 GB
-	const int DEFAULT_OS_MEMORY_ALLOWANCE = 1024 * 1024 * 512; // 512 MB
+	static const unsigned int DEFAULT_MAX_WORKING_SET_THRESHOLD_BEFORE_EVICTION = 1024U * 1024U * 1024U * 2U; // 2 GB
+	static const unsigned int DEFAULT_OS_MEMORY_ALLOWANCE = 1024U * 1024U * 512U; // 512 MB
 
 	bool NeedToFreeMemory()
 	{
@@ -92,7 +92,7 @@ namespace {
 		{
 			std::vector<void*> test_allocs;
 			bool success = true;
-			for (int i = 0; i < PAGING_TEST_ALLOC_NUM; ++i)
+			for (unsigned int i = 0; i < PAGING_TEST_ALLOC_NUM; ++i)
 			{
 				void* test_alloc = malloc(PAGING_TEST_ALLOC);
 				if (test_alloc == NULL)
@@ -105,7 +105,7 @@ namespace {
 					test_allocs.push_back(test_alloc);
 				}
 			}
-			for (int i = 0; i < test_allocs.size(); ++i)
+			for (size_t i = 0; i < test_allocs.size(); ++i)
 			{
 				free(test_allocs[i]);
 			}
@@ -189,7 +189,7 @@ CvPlotPaging::paging_handle CvPlotPaging::AddPlot(CvPlot* plot)
 
 void CvPlotPaging::RemovePlot(CvPlotPaging::paging_handle handle)
 {
-	FAssertMsg(handle >= 0 && handle < g_pagingTable.size(), "CvPlot paging handle is not valid");
+	FAssertMsg(handle >= 0 && handle < static_cast<CvPlotPaging::paging_handle>(g_pagingTable.size()), "CvPlot paging handle is not valid");
 	FAssertMsg(g_pagingTable[handle].pPlot != NULL, "CvPlot was not paged");
 	g_pagingTable[handle].pPlot = NULL;
 	--g_iNumPagedInPlots;
