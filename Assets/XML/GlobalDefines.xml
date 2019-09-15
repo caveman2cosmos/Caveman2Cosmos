@@ -22,11 +22,62 @@
 		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 
+	<!-- GRAPHICS PAGING OPTIONS -->
+
+	<!-- Start paging out if memory exceeds this amount (in KB) -->
 	<Define>
 		<DefineName>MAX_DESIRED_MEMORY_USED</DefineName>
 		<iDefineIntVal>1835008</iDefineIntVal>
 	</Define>
+
+	<!-- If specified, instead of MAX_DESIRED_MEMORY_USED, a set of test 
+		allocations will be performed to test for low memory conditions -->
+	<!-- Size of each test allocation -->
+	<!-- <Define>
+		<DefineName>PAGING_TEST_ALLOC</DefineName>
+		<iDefineIntVal>10240</iDefineIntVal>
+	</Define> -->
+	<!-- Number of test allocations -->
+	<!-- <Define>
+		<DefineName>PAGING_TEST_ALLOC_NUM</DefineName>
+		<iDefineIntVal>5</iDefineIntVal>
+	</Define> -->
+
+	<!-- Maximum amount of time in a frame that can be spent on paging operations.
+		Higher values mean faster paging in at the expense of more stuttering.
+	 -->
+	<Define>
+		<DefineName>MAX_PAGING_FRAME_TIME_MS</DefineName>
+		<iDefineIntVal>100</iDefineIntVal>
+	</Define>
+	<!-- Distance in tiles at which to page in different components -->
+	 <Define>
+		<DefineName>PAGE_IN_DIST_SYMBOLS</DefineName>
+		<iDefineIntVal>100</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>PAGE_IN_DIST_FEATURES</DefineName>
+		<iDefineIntVal>5</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>PAGE_IN_DIST_RIVER</DefineName>
+		<iDefineIntVal>40</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>PAGE_IN_DIST_ROUTE</DefineName>
+		<iDefineIntVal>100</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>PAGE_IN_DIST_UNIT</DefineName>
+		<iDefineIntVal>15</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>PAGE_IN_DIST_CITY</DefineName>
+		<iDefineIntVal>15</iDefineIntVal>
+	</Define>
 	
+	<!-- GRAPHICS PAGING OPTIONS END -->
+
 	<!--
  Default uses the normal tag for the language set in Civ4's option dialog.
 	     All tags used in the text files are possible with English used as fallback when the chosen language is not available for some text.
