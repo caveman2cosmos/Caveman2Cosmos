@@ -2419,8 +2419,7 @@ class CvMainInterface:
 							screen.setBarPercentage("ResearchBar", InfoBarTypes.INFOBAR_RATE, 0)
 						screen.show("ResearchBar")
 
-						szTxt = GC.getTechInfo(iCurrentResearch).getDescription()
-						szTxt += u' (%d)' %(CyPlayer.getResearchTurnsLeft(iCurrentResearch, true))
+						szTxt = GC.getTechInfo(iCurrentResearch).getDescription() + " (" + str(CyPlayer.getResearchTurnsLeft(iCurrentResearch, True)) + ')'
 						screen.setText("WID|TECH|ProgBar1", "", szTxt, 1<<2, x, 2, 0, eFontGame, eWidGen, iCurrentResearch, 0)
 
 				# Great General Bar
@@ -2448,6 +2447,7 @@ class CvMainInterface:
 						y = 2
 					x += w / 2
 					screen.setText("GreatPersonBar1", "", szTxt, 1<<2, x, y, 0, eFontGame, eWidGen, 0, 0)
+					screen.setHitTest("GreatPersonBar1", HitTestTypes.HITTEST_NOHIT)
 					if CyCity:
 						fThreshold = float(GC.getPlayer(CyCity.getOwner()).greatPeopleThreshold(False))
 						fRate = float(CyCity.getGreatPeopleRate())
@@ -5245,14 +5245,13 @@ class CvMainInterface:
 
 				elif TYPE == "TECH":
 					szTxt = ""
-					if CASE:
-						if CASE[0] == "Selection":
-							szTxt += "Research: "
-						elif CASE[0] == "ProgBar":
-							szTxt += "Researching: "
-							iType = GC.getPlayer(self.iPlayer).getCurrentResearch()
-						elif CASE[0] == "Score":
-							szTxt += "Researching: "
+					if CASE[0] == "Selection":
+						szTxt += "Research: "
+					elif CASE[0] == "ProgBar":
+						szTxt += "Researching: "
+						iType = GC.getPlayer(self.iPlayer).getCurrentResearch()
+					elif CASE[0] == "Score":
+						szTxt += "Researching: "
 					szTxt += CyGameTextMgr().getTechHelp(iType, False, True, True, True, -1)
 					self.updateTooltip(screen, szTxt)
 

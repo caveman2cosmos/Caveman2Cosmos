@@ -6,7 +6,6 @@ from CvScreenEnums import *
 import types
 
 import CvMainInterface
-import CvTechChooser
 
 import CvOptionsScreen
 import CvReplayScreen
@@ -78,10 +77,9 @@ def reinitMainInterface():
 
 def numPlotListButtons(): return 0 # Called from exe.
 
-techChooser = CvTechChooser.CvTechChooser()
 def showTechChooser():
 	if CyGame().getActivePlayer() != -1:
-		techChooser.interfaceScreen()
+		screenMap[TECH_CHOOSER].interfaceScreen(TECH_CHOOSER)
 
 def showHallOfFame(argsList):
 	screenMap[HALL_OF_FAME].interfaceScreen(argsList[0])
@@ -1060,7 +1058,7 @@ def onClose(argsList):
 # Forced screen update
 def forceScreenUpdate(argsList):
 	if argsList[0] == TECH_CHOOSER:
-		techChooser.updateTechRecords(False)
+		screenMap[TECH_CHOOSER].updateTechRecords(False)
 	# Main interface Screen
 	elif argsList[0] == MAIN_INTERFACE:
 		mainInterface.updateScreen()
@@ -1074,7 +1072,7 @@ def forceScreenRedraw(argsList):
 	if argsList[0] == MAIN_INTERFACE:
 		mainInterface.redraw()
 	elif argsList[0] == TECH_CHOOSER:
-		techChooser.updateTechRecords(True)
+		screenMap[TECH_CHOOSER].updateTechRecords(True)
 	elif argsList[0] == ESPIONAGE_ADVISOR:
 		screen = CyGInterfaceScreen("EspionageAdvisor", ESPIONAGE_ADVISOR)
 		screenMap[ESPIONAGE_ADVISOR].redraw(screen)
@@ -1240,7 +1238,6 @@ def selectOneEvent(argsList):
 ####################
 screenMap = {
 	MAIN_INTERFACE			: mainInterface,
-	TECH_CHOOSER			: techChooser,
 	OPTIONS_SCREEN			: optionsScreen,
 	REPLAY_SCREEN			: replayScreen,
 	BUILD_LIST_SCREEN		: buildListScreen,
@@ -1270,6 +1267,7 @@ def lateInit():
 	import CvTopCivs
 	import Forgetful
 	import CvDebugInfoScreen
+	import CvTechChooser
 	screenMap[CORPORATION_SCREEN]	= CvCorporationScreen.CvCorporationScreen()
 	screenMap[ESPIONAGE_ADVISOR]	= CvEspionageAdvisor.CvEspionageAdvisor()
 	screenMap[MILITARY_ADVISOR]		= CvMilitaryAdvisor.CvMilitaryAdvisor(MILITARY_ADVISOR)
@@ -1285,6 +1283,7 @@ def lateInit():
 	screenMap[TOP_CIVS]				= CvTopCivs.CvTopCivs(TOP_CIVS)
 	screenMap[FORGETFUL_SCREEN]		= Forgetful.Forgetful()
 	screenMap[DEBUG_INFO_SCREEN]	= CvDebugInfoScreen.CvDebugInfoScreen()
+	screenMap[TECH_CHOOSER]			= CvTechChooser.CvTechChooser()
 
 def earlyInit():
 

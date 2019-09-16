@@ -2371,6 +2371,8 @@ with GFC_Control_Panel
 				layer {
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
 					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate,Modulate);
+					FactorColor		= GColor(100,100,100,255);
 					Image			= GBitmap("../../../../Resource/Civ4/Custom/tech_panel02.tga", HVGrid, 1, 1, 0, 0);
 					Margin			= GRectMargin(4,24,0,0);
 					Indent			= GRectMargin(8,8,8,8);
