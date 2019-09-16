@@ -859,10 +859,6 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MAPINGUARI_GUARD</BuildingType>
-					<iBuildingProductionModifier>25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SHOOTING_CLUB</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
@@ -1407,10 +1403,6 @@
 			<iDomesticGreatGeneralRateModifier>20</iDomesticGreatGeneralRateModifier>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MAPINGUARI_GUARD</BuildingType>
-					<iBuildingProductionModifier>25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SHOOTING_CLUB</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
@@ -1832,10 +1824,6 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_CLOCKPUNK_AIRPORT</BuildingType>
-					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MAPINGUARI_GUARD</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2378,10 +2366,6 @@
 			<iGreatGeneralRateModifier>-20</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>-20</iDomesticGreatGeneralRateModifier>
 			<BuildingProductionModifierTypes>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MAPINGUARI_GUARD</BuildingType>
-					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SHOOTING_CLUB</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
