@@ -37,12 +37,15 @@ def namespace(element):
 class ExitEarly(Exception):
    pass
 
-def autocorrect(files, mode, fancy, dict):
+def autocorrect(files, mode, fancy, spell_dict):
     ignore_words = load_string_list('ignore_word_list.txt')
     ignore_tags = load_string_list('ignore_tag_list.txt')
-    ignore_rules = load_string_list('ignore_rules_list.txt')
-    if dict:
-        
+    ignore_rules = load_string_list('ignore_rules_list.txt') + ['__ignore']
+
+    if spell_dict:
+        spell = SpellChecker(local_dictionary=spell_dict)
+    else:
+        spell = SpellChecker()
 
     for filename in files:
         print(filename)
@@ -59,7 +62,7 @@ def autocorrect(files, mode, fancy, dict):
                     eng_elem = text_elem.find('English', nsmap)
                     if eng_elem is not None:
                         autocorrect_element(
-                            eng_elem, tag_elem.text, ignore_words, ignore_tags, ignore_rules, mode, '  ', fancy)
+                            eng_elem, tag_elem.text, ignore_words, ignore_tags, ignore_rules, mode, '  ', fancy, spell)
         except ExitEarly:
             pass
 
@@ -70,15 +73,36 @@ def autocorrect(files, mode, fancy, dict):
     if mode == Mode.INTERACTIVE:
         save_string_list('ignore_word_list.txt', ignore_words)
         save_string_list('ignore_tag_list.txt', ignore_tags)
+        ignore_rules.remove('__ignore')
         save_string_list('ignore_rules_list.txt', ignore_rules)
 
+spell_check_replacement_rules = ['MORFOLOGIK_RULE_EN_US']
 
-def autocorrect_element(eng_elem, tag, ignore_words, ignore_tags, ignore_rules, mode, indent, fancy):
+def apply_spellcheck(matches, ignore_words, spell):
+    for match in [m for m in matches if m['rule']['id'] in spell_check_replacement_rules]:
+        match['rule']['id'] = 'spellcheck_replacement'
+        text = match['sentence']
+        word = text[match['offset']:match['offset']+match['length']]
+        if word in ignore_words:
+            # ignore this as the word is in our ignore list (shouldn't be here if it is but whatevs)
+            match['rule']['id'] = '__ignore'
+            continue
+        candidates = spell.candidates(word)
+        if len(candidates) == 0:
+            # ignore this as it isn't a misspelling according to spellcheck dictionary
+            match['rule']['id'] = '__ignore'
+        else:
+            if word == word.capitalize():
+                candidates = set([c.capitalize() for c in candidates])
+            new_replacements = set([r['value'] for r in match['replacements']]) | candidates
+            match['replacements'] = [{'value': v} for v in new_replacements]
+
+def autocorrect_element(eng_elem, tag, ignore_words, ignore_tags, ignore_rules, mode, indent, fancy, spell):
     results = api.check(eng_elem.text,
                         api_url='http://localhost:8081/v2/', lang='en-US', disabled_rules=ignore_rules, pwl=ignore_words)
     if results and 'matches' in results and len(results['matches']) > 0:
-        matches = [r for r in results['matches'] if eng_elem.text[r['offset']
-            :r['offset']+r['length']] not in ignore_words and r['rule']['id'] not in ignore_rules]
+        apply_spellcheck(results['matches'], ignore_words, spell)
+        matches = [r for r in results['matches'] if r['rule']['id'] not in ignore_rules]
         if len(matches) > 0:
             # Make sure its sorted by offset (it should be already)
             matches.sort(key=lambda x: x['offset'])
@@ -269,7 +293,7 @@ if __name__ == "__main__":
     parser.add_argument('--log', dest='log_file', action='store', help='override log file name', default='Autocorrect.log')
     parser.add_argument('--non-fancy', dest='fancy', action='store_false',
                             help="don't use colors for markup", default=True)
-    parser.add_argument('--dict', dest='dict', help="use specified spellcheck dictionary", default=None)
+    parser.add_argument('--dict', dest='spell_dict', help="use specified spellcheck dictionary", default='dicts\\en_full.json')
     mode_group = parser.add_mutually_exclusive_group(required=False)
     mode_group.add_argument('--automatic', dest='automatic', action='store_true',
                             help='apply the proposed changes automatically')
@@ -299,6 +323,6 @@ if __name__ == "__main__":
     else:
         print('Processing %d files...' % len(unique_files))
         try:
-            autocorrect(unique_files, mode, args.fancy, args.dict)
+            autocorrect(unique_files, mode, args.fancy, args.spell_dict)
         except requests.exceptions.ConnectionError as ex:
             print(Fore.RED + "ERROR: Can't connect to LanguageTool server, did you forget to start it?")
