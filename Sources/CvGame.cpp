@@ -837,6 +837,8 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 {
 	int iI;
 
+    CvPlotPaging::ResetPaging();
+
 	//--------------------------------
 	// Uninit class
 	uninit();

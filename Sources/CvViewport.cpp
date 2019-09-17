@@ -627,11 +627,6 @@ int CvViewport::pointXToPlotX(float fX)
 	float fNormalizedX = fX + (fWidth/2.0f);
 	int iResult = fNormalizedX >= 0 ? (int)((fNormalizedX / fWidth) * getGridWidth()) : INVALID_PLOT_COORD;
 
-	if ( iResult >= m_iXSize )
-	{
-		iResult = INVALID_PLOT_COORD;
-	}
-
 	return iResult;
 }
 
@@ -649,11 +644,6 @@ int CvViewport::pointYToPlotY(float fY)
 
 	float fNormalizedY = fY + (fHeight/2.0f);
 	int iResult = fNormalizedY >= 0 ? (int)((fNormalizedY / fHeight) * getGridHeight()) : INVALID_PLOT_COORD;
-
-	if ( iResult >= m_iYSize )
-	{
-		iResult = INVALID_PLOT_COORD;
-	}
 
 	return iResult;
 }

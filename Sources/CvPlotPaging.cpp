@@ -21,7 +21,7 @@ namespace {
 
 	int g_iLastLookatX = -1;
 	int g_iLastLookatY = -1;
-	bool g_bWasGraphicsPagingEnabled = false;
+	bool g_bWasGraphicsPagingEnabled = true;
 
 	int findFreePagingTableSlot()
 	{
@@ -196,7 +196,7 @@ void CvPlotPaging::RemovePlot(CvPlotPaging::paging_handle handle)
 }
 void CvPlotPaging::ResetPaging()
 {
-	g_bWasGraphicsPagingEnabled = false;
+	g_bWasGraphicsPagingEnabled = true;
 	g_iLastLookatX = -1;
 	g_iLastLookatY = -1;
 }
@@ -221,61 +221,20 @@ int ToroidalDistanceSq (int x1, int y1, int x2, int y2, int w, int h)
 
 void CvPlotPaging::UpdatePaging()
 {
-	const CvPlot* lookatPlot = gDLL->getInterfaceIFace()->getLookAtPlot();
-	if (lookatPlot == NULL)
-	{
-		return;
-	}
-
 	// Check if the paging setting changed
 	bool bPagingEnabled = getBugOptionBOOL("MainInterface__EnableGraphicalPaging", true);
 	GC.setGraphicalDetailPagingEnabled(bPagingEnabled);
-
-	if (!bPagingEnabled && g_bWasGraphicsPagingEnabled != bPagingEnabled)
+	
+	if(bPagingEnabled || (!bPagingEnabled && g_bWasGraphicsPagingEnabled))
 	{
-		const CvMap& map = GC.getMapINLINE();
-		for (int i = 0; i < map.numPlotsINLINE(); i++)
-		{
-			CvPlot* plot = map.plotByIndexINLINE(i);
-			if (plot != NULL)
-			{
-				plot->disableGraphicsPaging();
-			}
-		}
-	}
-	else if(bPagingEnabled)
-	{
-		win32::Stopwatch pageTimer;
-		pageTimer.Start();
+        const CvPlot* lookatPlot = gDLL->getInterfaceIFace()->getLookAtPlot();
+        if (lookatPlot == NULL)
+        {
+            return;
+        }
 
 		const int centerX = lookatPlot->getX_INLINE();
 		const int centerY = lookatPlot->getY_INLINE();
-
-		// How far did the camera move since last frame?
-		const int moveDist2 = (centerX - g_iLastLookatX) * (centerX - g_iLastLookatX) + (centerY - g_iLastLookatY) * (centerY - g_iLastLookatY);
-
-		// How much time we can allow for paging this frame, it varies by how fast the camera is moving
-		const int pagingFrameTime = 10 + GC.getDefineINT("PAGING_FRAME_TIME_MS", 100) / (1 + moveDist2);
-
-		// Evict graphics first, allowing at least 1/2 our time budget for it (we definitely want to make sure we don't run out of memory!)
-		while (NeedToFreeMemory() && pageTimer.ElapsedMilliseconds() < pagingFrameTime * 0.5) 
-		{
-			if (!EvictGraphics())
-			{
-				// we in trouble now!
-				break;
-			}
-		}
-
-		// The min distance different plot graphics should be paged in at
-		const int pageInDistances[] = {
-			GC.getDefineINT("PAGE_IN_DIST_SYMBOLS", 100),
-			GC.getDefineINT("PAGE_IN_DIST_FEATURES", 7),
-			GC.getDefineINT("PAGE_IN_DIST_RIVER", 40),
-			GC.getDefineINT("PAGE_IN_DIST_ROUTE", 100),
-			GC.getDefineINT("PAGE_IN_DIST_UNIT", 15),
-			GC.getDefineINT("PAGE_IN_DIST_CITY", 5),
-		};
 
 		// Gather and sort all plots by distance to view center
 		std::vector<PlotDist> plots;
@@ -291,23 +250,75 @@ void CvPlotPaging::UpdatePaging()
 		}
 		std::sort(plots.begin(), plots.end());
 
-		// Loop all plots in order from distance to the view center, toggling the appropriate plot graphics flags
-		for (std::vector<PlotDist>::iterator itr = plots.begin(); itr != plots.end() && pageTimer.ElapsedMilliseconds() < pagingFrameTime; ++itr)
+		if (!bPagingEnabled && g_bWasGraphicsPagingEnabled)
 		{
-			for (int graphicsType = 0; graphicsType < ECvPlotGraphics::NUM; ++graphicsType)
+			// How much time we can allow for paging this frame, it varies by how fast the camera is moving
+			const int pagingFrameTime = 10 + GC.getDefineINT("PAGING_FRAME_TIME_MS", 100);
+
+			win32::Stopwatch pageTimer;
+			pageTimer.Start();
+
+			const CvMap& map = GC.getMapINLINE();
+			
+			bool timedout = false;
+			for (std::vector<PlotDist>::iterator itr = plots.begin(); !timedout && itr != plots.end(); ++itr)
 			{
-				if (pageInDistances[graphicsType] != -1)
+				itr->plot->disableGraphicsPaging();
+				timedout = pageTimer.ElapsedMilliseconds() > pagingFrameTime;
+			}
+			// Keep paging flag off until we make it through all the tiles
+			g_bWasGraphicsPagingEnabled = timedout;
+		}
+		else if (bPagingEnabled)
+		{
+			// How far did the camera move since last frame?
+			const int moveDist2 = (centerX - g_iLastLookatX) * (centerX - g_iLastLookatX) + (centerY - g_iLastLookatY) * (centerY - g_iLastLookatY);
+
+			// How much time we can allow for paging this frame, it varies by how fast the camera is moving
+			const int pagingFrameTime = 10 + GC.getDefineINT("PAGING_FRAME_TIME_MS", 100) / (1 + moveDist2);
+
+			win32::Stopwatch pageTimer;
+			pageTimer.Start();
+
+			// Evict graphics first, allowing at least 1/2 our time budget for it (we definitely want to make sure we don't run out of memory!)
+			while (NeedToFreeMemory() && pageTimer.ElapsedMilliseconds() < pagingFrameTime * 0.5)
+			{
+				if (!EvictGraphics())
 				{
-					itr->plot->setRequireGraphicsVisible(ECvPlotGraphics::fromIndex(graphicsType), itr->dist2 < pageInDistances[graphicsType] * pageInDistances[graphicsType]);
+					// we in trouble now!
+					break;
 				}
 			}
+
+			// The min distance different plot graphics should be paged in at
+			const int pageInDistances[] = {
+				GC.getDefineINT("PAGE_IN_DIST_SYMBOLS", 100),
+				GC.getDefineINT("PAGE_IN_DIST_FEATURES", 7),
+				GC.getDefineINT("PAGE_IN_DIST_RIVER", 40),
+				GC.getDefineINT("PAGE_IN_DIST_ROUTE", 100),
+				GC.getDefineINT("PAGE_IN_DIST_UNIT", 15),
+				GC.getDefineINT("PAGE_IN_DIST_CITY", 5),
+			};
+
+
+			// Loop all plots in order from distance to the view center, toggling the appropriate plot graphics flags
+			for (std::vector<PlotDist>::iterator itr = plots.begin(); itr != plots.end() && pageTimer.ElapsedMilliseconds() < pagingFrameTime; ++itr)
+			{
+				for (int graphicsType = 0; graphicsType < ECvPlotGraphics::NUM; ++graphicsType)
+				{
+					if (pageInDistances[graphicsType] != -1)
+					{
+						itr->plot->setRequireGraphicsVisible(ECvPlotGraphics::fromIndex(graphicsType), itr->dist2 < pageInDistances[graphicsType] * pageInDistances[graphicsType]);
+					}
+				}
+			}
+
+			g_iLastLookatX = lookatPlot->getX_INLINE();
+			g_iLastLookatY = lookatPlot->getY_INLINE();
+
+			g_bWasGraphicsPagingEnabled = true;
 		}
-
-		g_iLastLookatX = lookatPlot->getX_INLINE();
-		g_iLastLookatY = lookatPlot->getY_INLINE();
 	}
-
-	g_bWasGraphicsPagingEnabled = bPagingEnabled;
 }
 
 const int CvPlotPaging::INVALID_HANDLE = -1;
