@@ -42,10 +42,10 @@ def autocorrect(files, mode, fancy, spell_dict):
     ignore_tags = load_string_list('ignore_tag_list.txt')
     ignore_rules = load_string_list('ignore_rules_list.txt') + ['__ignore']
 
-    if spell_dict:
-        spell = SpellChecker(local_dictionary=spell_dict)
-    else:
-        spell = SpellChecker()
+    #if spell_dict:
+    #    spell = SpellChecker(local_dictionary=spell_dict, distance=1)
+    #else:
+    spell = SpellChecker()
 
     for filename in files:
         print(filename)
@@ -87,11 +87,14 @@ def apply_spellcheck(matches, ignore_words, spell):
             # ignore this as the word is in our ignore list (shouldn't be here if it is but whatevs)
             match['rule']['id'] = '__ignore'
             continue
-        candidates = spell.candidates(word)
+        candidates = spell.candidates(word.lower())
         if len(candidates) == 0:
             # ignore this as it isn't a misspelling according to spellcheck dictionary
             match['rule']['id'] = '__ignore'
         else:
+            # If spellcheck couldn't find the word then it returns the word itself, so remove it!
+            if word.lower() in candidates:
+                candidates.remove(word.lower())
             if word == word.capitalize():
                 candidates = set([c.capitalize() for c in candidates])
             new_replacements = set([r['value'] for r in match['replacements']]) | candidates
@@ -119,35 +122,38 @@ def autocorrect_element(eng_elem, tag, ignore_words, ignore_tags, ignore_rules, 
                 print(Fore.GREEN + indent + u'Corrected text:')
                 print(Fore.WHITE + indent + '    ' + corrected_text_with_markers)
 
-            indent = indent + '    '
+            indent2 = indent + '    '
 
             if mode == Mode.INTERACTIVE:
                 if eng_elem.text != corrected_text:
-                    print(Fore.BLUE + indent + 'Accept all (return), Skip (s), Interactive (space), Ignore %s (x), Exit (esc)?' % tag),
+                    print(Fore.BLUE + indent2 + 'Accept all (return), Skip (s), Interactive (space), Ignore %s (x), Exit (esc)?' % tag),
                 else:
-                    print(Fore.BLUE + indent + 'Skip (s), Interactive (space), Ignore %s (x), Exit (esc)?' % tag),
+                    print(Fore.BLUE + indent2 + 'Skip (s), Interactive (space), Ignore %s (x), Exit (esc)?' % tag),
 
                 key = msvcrt.getch()
                 print('')
                 if key == b'\r':
                     eng_elem.text = corrected_text
-                    print(Fore.GREEN + indent + 'Applied all suggested changes')
+                    print(Fore.GREEN + indent2 + 'Applied all suggested changes')
                 elif key == b' ':
-                    print(Fore.GREEN + indent + 'Entering interactive mode')
+                    print(Fore.GREEN + indent2 + 'Entering interactive mode')
                     corrected_text, corrected_text_with_markers = apply_corrections_interactive(
-                        eng_elem.text, matches, ignore_words, ignore_rules, indent + '  ', fancy)
-                    print(Fore.GREEN + indent + u'Corrected text: ' + Fore.WHITE + corrected_text_with_markers)
+                        eng_elem.text, matches, ignore_words, ignore_rules, indent2 + '  ', fancy)
+                    print(Fore.GREEN + indent + u'Corrected text:')
+                    print(Fore.WHITE + indent + '    ' + corrected_text_with_markers)
+                    #print(Fore.GREEN + indent2 + u'Corrected text: ' + Fore.WHITE + corrected_text_with_markers)
+                    
                     eng_elem.text = corrected_text
                 elif key == b'x':
                     ignore_tags.append(tag)
-                    print(Fore.GREEN + indent + 'Added ' + Fore.WHITE + tag + Fore.GREEN + ' to the global ignore list')
+                    print(Fore.GREEN + indent2 + 'Added ' + Fore.WHITE + tag + Fore.GREEN + ' to the global ignore list')
                 elif key == b's':
-                    print(Fore.GREEN + indent + 'Skipping ' + Fore.WHITE + tag)
+                    print(Fore.GREEN + indent2 + 'Skipping ' + Fore.WHITE + tag)
                 else:
                     raise ExitEarly
             elif mode == Mode.AUTOMATIC:
                 eng_elem.text = corrected_text
-            print('\n\n\n')
+            print('\n' + Fore.GREEN + indent + u'Continuing search ...\n')
 
 def apply_corrections(text, matches, fancy):
     # We need to keep track of changes introduced by corrections to
@@ -197,9 +203,11 @@ def create_error_underlines(context):
     length = context['length']
     return ' ' * offset + '^' * length
 
-def replace(replacement, match, offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks):
+def replace(replacement, match, offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks, fancy):
     # nonlocal offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks
-
+    if fancy:
+        start_marker_corrected = Fore.GREEN
+        end_marker_corrected = Style.RESET_ALL
     offset = match['offset'] + offs_adj
     length = match['length']
     orig_text_len = len(corrected_text)
@@ -208,7 +216,7 @@ def replace(replacement, match, offs_adj, corrected_text, offs_adj_mrks, correct
 
     offset = match['offset'] + offs_adj_mrks
     orig_text_len = len(corrected_text_mrks)
-    corrected_text_mrks = corrected_text_mrks[:offset] + replacement + corrected_text_mrks[offset+length:]
+    corrected_text_mrks = corrected_text_mrks[:offset] + start_marker_corrected + replacement + end_marker_corrected + corrected_text_mrks[offset+length:]
     offs_adj_mrks = offs_adj_mrks + (len(corrected_text_mrks) - orig_text_len)
 
     return offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks
@@ -257,7 +265,7 @@ def apply_corrections_interactive(text, matches, ignore_words, ignore_rules, ind
                 if key >= b'0' and key <= b'9':
                     index = ord(key) - ord(b'0')
                 # offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks = replace(match['replacements'][index]['value'], match, offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks)
-                offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks = replace(match['replacements'][index]['value'], match, offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks)
+                offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks = replace(match['replacements'][index]['value'], match, offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks, fancy)
                 # replacement = match['replacements'][index]['value']
                 # orig_text_len = len(corrected_text)
                 # corrected_text = corrected_text[:offset] + replacement + corrected_text[offset+length:]
@@ -273,7 +281,7 @@ def apply_corrections_interactive(text, matches, ignore_words, ignore_rules, ind
                 ignore_rules.append(match['rule']['id'])
             elif can_fix and key == b'c':
                 #offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks = replace(input('Enter text to replace %s > ' % to_replace), match, offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks)
-                offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks = replace(raw_input(u'Enter text to replace {0} > '.format(to_replace)), match, offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks)
+                offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks = replace(raw_input(u'Enter text to replace {0} > '.format(to_replace)), match, offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks, fancy)
             elif key == b's':
                 pass
             else:
@@ -324,5 +332,7 @@ if __name__ == "__main__":
         print('Processing %d files...' % len(unique_files))
         try:
             autocorrect(unique_files, mode, args.fancy, args.spell_dict)
+
+            print('... Complete!')
         except requests.exceptions.ConnectionError as ex:
             print(Fore.RED + "ERROR: Can't connect to LanguageTool server, did you forget to start it?")
