@@ -16,6 +16,9 @@ XmlValidator.log
 desktop.ini
 Assets/Python/.idea/
 
+# Ignore python venv
+env/
+
 .vscode/settings.json
 
 git_installer.exe

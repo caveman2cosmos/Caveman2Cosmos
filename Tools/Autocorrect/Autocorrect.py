@@ -115,30 +115,30 @@ def autocorrect_element(eng_elem, tag, ignore_words, ignore_tags, ignore_rules, 
             corrected_text, corrected_text_with_markers, orig_text_with_markers = apply_corrections(
                 eng_elem.text, matches, fancy)
 
-            print(Fore.YELLOW + indent + str(len(matches)) + u' errors found in text: ')
+            print(Fore.YELLOW + indent + str(len(matches)) + ' errors found in ' + Fore.CYAN + tag + Fore.YELLOW + ': ')
             print(Fore.WHITE + indent + '    ' + orig_text_with_markers)
 
             if eng_elem.text != corrected_text:
-                print(Fore.GREEN + indent + u'Corrected text:')
+                print(Fore.GREEN + indent + u'Suggested text:')
                 print(Fore.WHITE + indent + '    ' + corrected_text_with_markers)
 
             indent2 = indent + '    '
 
             if mode == Mode.INTERACTIVE:
                 if eng_elem.text != corrected_text:
-                    print(Fore.BLUE + indent2 + 'Accept all (return), Skip (s), Interactive (space), Ignore %s (x), Exit (esc)?' % tag),
+                    print(Fore.BLUE + indent + '> Accept all (return), Skip (s), Interactive (space), Ignore ' + Fore.CYAN + tag + Fore.BLUE + ' (x), Exit (esc)?', end = '')
                 else:
-                    print(Fore.BLUE + indent2 + 'Skip (s), Interactive (space), Ignore %s (x), Exit (esc)?' % tag),
+                    print(Fore.BLUE + indent + '> Skip (s), Interactive (space), Ignore ' + Fore.CYAN + tag + Fore.BLUE + ' (x), Exit (esc)?', end = '')
 
                 key = msvcrt.getch()
                 print('')
                 if key == b'\r':
                     eng_elem.text = corrected_text
-                    print(Fore.GREEN + indent2 + 'Applied all suggested changes')
+                    print(Fore.GREEN + indent + 'Applied all suggested changes')
                 elif key == b' ':
-                    print(Fore.GREEN + indent2 + 'Entering interactive mode')
+                    print(Fore.GREEN + indent + 'Entering interactive mode')
                     corrected_text, corrected_text_with_markers = apply_corrections_interactive(
-                        eng_elem.text, matches, ignore_words, ignore_rules, indent2 + '  ', fancy)
+                        eng_elem.text, matches, ignore_words, ignore_rules, indent + '    ', fancy)
                     print(Fore.GREEN + indent + u'Corrected text:')
                     print(Fore.WHITE + indent + '    ' + corrected_text_with_markers)
                     #print(Fore.GREEN + indent2 + u'Corrected text: ' + Fore.WHITE + corrected_text_with_markers)
@@ -146,9 +146,9 @@ def autocorrect_element(eng_elem, tag, ignore_words, ignore_tags, ignore_rules, 
                     eng_elem.text = corrected_text
                 elif key == b'x':
                     ignore_tags.append(tag)
-                    print(Fore.GREEN + indent2 + 'Added ' + Fore.WHITE + tag + Fore.GREEN + ' to the global ignore list')
+                    print(Fore.GREEN + indent + 'Added ' + Fore.CYAN + tag + Fore.GREEN + ' to the global ignore list')
                 elif key == b's':
-                    print(Fore.GREEN + indent2 + 'Skipping ' + Fore.WHITE + tag)
+                    print(Fore.GREEN + indent + 'Skipping ' + Fore.CYAN + tag)
                 else:
                     raise ExitEarly
             elif mode == Mode.AUTOMATIC:
@@ -253,12 +253,12 @@ def apply_corrections_interactive(text, matches, ignore_words, ignore_rules, ind
             can_fix = 'replacements' in match and len(match['replacements']) > 0
             if can_fix:
                 print(Fore.GREEN + indent + u'Suggestions: ' + u', '.join([Fore.GREEN + '[' + str(idx) + '] ' + Fore.WHITE + v['value'] for idx, v in enumerate(match['replacements'][:10])]))
-                print(Fore.BLUE + indent + '> Accept best (return), Add to ignore (a), Select suggestion (0-9), Skip (s), Ignore rule (e), Custom entry (c), Exit(esc)?'),
+                print(Fore.BLUE + indent + '> Accept best (return), Add to ignore (a), Select suggestion (0-9), Skip (s), Ignore rule (e), Custom entry (c), Exit(esc)?', end = '')
             else:
-                print(Fore.BLUE + indent + '> Skip (s), Ignore rule (e), Exit(esc)?'),
+                print(Fore.BLUE + indent + '> Skip (s), Ignore rule (e), Exit(esc)?', end = '')
 
             key = msvcrt.getch()
-            print('\n')
+            print('')
 
             if can_fix and (key == b'\r' or (key >= b'0' and key <= b'9')):
                 index = 0
@@ -281,7 +281,8 @@ def apply_corrections_interactive(text, matches, ignore_words, ignore_rules, ind
                 ignore_rules.append(match['rule']['id'])
             elif can_fix and key == b'c':
                 #offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks = replace(input('Enter text to replace %s > ' % to_replace), match, offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks)
-                offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks = replace(raw_input(u'Enter text to replace {0} > '.format(to_replace)), match, offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks, fancy)
+                print(Fore.BLUE + indent + 'Enter text to replace ' + Fore.RED + to_replace + Fore.BLUE + ' > ' + Fore.WHITE, end = '')
+                offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks = replace(input(), match, offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks, fancy)
             elif key == b's':
                 pass
             else:
