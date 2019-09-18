@@ -16914,6 +16914,9 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_POLICE_CAT</BuildingClass>
 			<Type>BUILDING_POLICE_CAT</Type>
+			<AndDependencyTypes>
+				<DependencyType>BUILDINGCLASS_POLICE_CAT</DependencyType>
+ 			</AndDependencyTypes>
 			<ObsoleteTech>TECH_HOMO_SUPERIOR</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -18485,6 +18488,9 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_FARNSWORTH_LAB</BuildingClass>
 			<Type>BUILDING_FARNSWORTH_LAB</Type>
+			<AndDependencyTypes>
+				<DependencyType>BUILDINGCLASS_FARNSWORTH_LAB</DependencyType>
+ 			</AndDependencyTypes>
 			<ObsoleteTech>TECH_CLOUDCOMPUTING</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -21155,6 +21161,9 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_RADIOPLEX</BuildingClass>
 			<Type>BUILDING_RADIOPLEX</Type>
+			<AndDependencyTypes>
+				<DependencyType>BUILDINGCLASS_RADIOPLEX</DependencyType>
+ 			</AndDependencyTypes>
 			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>

@@ -16,12 +16,6 @@
 					<!--> Modular? Yes v38  Initial Test Only<-->
 				</Module>
 				<Module>
-					<Directory>Megafauna</Directory>
-					<bLoad>1</bLoad>
-					<!--> Modular? NO   <-->
-					<!--> This contains sub modules some of which may be modular. As each is made modular it will be moved to  Megafauna_Units <-->
-				</Module>
-				<Module>
 					<Directory>Megafauna_Units</Directory>
 					<bLoad>1</bLoad>
 					<!--> Modular? Yes v38  Initial Test Only<-->
@@ -40,17 +34,17 @@
 				<Module>
 					<Directory>Dieselpunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular?  NO   Work is in progress but eartly stages at the moment<-->
+					<!--> Modular?  NO   Work is in progress but early stages at the moment<-->
 				</Module>
 				<Module>
 					<Directory>Biopunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular?  NO   Biopunk and Cyberpunk cross reference each other. Both must be on or both must be off<-->
+					<!--> Modular?  Yes  <-->
 				</Module>
 				<Module>
 					<Directory>Cyberpunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular?  NO   Biopunk and Cyberpunk cross reference each other. Both must be on or both must be off<-->
+					<!--> Modular?  Yes  <-->
 				</Module>
 				<Module>
 					<Directory>Apocalypse</Directory>
@@ -70,17 +64,17 @@
 				<Module>
 					<Directory>Crystalpunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular?  NO   Work is in progress but eartly stages at the moment<-->
+					<!--> Modular?  NO   Work is in progress but early stages at the moment<-->
 				</Module>
 				<Module>
 					<Directory>Spacepunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular?  NO   Work is in progress but eartly stages at the moment<-->
+					<!--> Modular?  NO   Work is in progress but early stages at the moment<-->
 				</Module>
 				<Module>
 					<Directory>Starpunk</Directory>
 					<bLoad>1</bLoad>
-					<!--> Modular?  NO   Work is in progress but eartly stages at the moment<-->
+					<!--> Modular?  NO   Work is in progress but early stages at the moment<-->
 				</Module>
 			</Modules>
 		</ConfigurationInfo>

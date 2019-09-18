@@ -11139,7 +11139,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-		</BuildingInfo>		
+		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Cave Dwelling -->
 			<BuildingClass>BUILDINGCLASS_CAVE_DWELLING</BuildingClass>
@@ -20004,7 +20004,7 @@
 					<iFlavor>2</iFlavor>
 				</Flavor>
 			</Flavors>
-		</BuildingInfo>		
+		</BuildingInfo>
 		<!-- Safety (Alcatraz) -->
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_GOOD_ALCATRAZ</BuildingClass>

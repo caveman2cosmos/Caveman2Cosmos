@@ -32522,4 +32522,20 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<English>Zurich-Orbital Uplink increases your gold and espionage production, and protects your cities against enemy spies.</English>
 		<Italian>Gli uplink dell'Orbitale di Zurigo proteggono la tua produzione di oro e spionaggio, proteggendo le tue città dalle spie nemiche.</Italian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ORGANIC_COMPUTER_LAB</Tag>
+		<English>Organic Computer Lab</English>
+		<French>Laboratoire d'Ordinateurs Organiques</French>
+		<Polish>Laboratorium Bio-Informatyki</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ORGANIC_COMPUTER_LAB_STRATEGY</Tag>
+		<English>Build an Organic Computer Lab to increase your cities Science.</English>
+		<French>Construire un [COLOR_BUILDING_TEXT]Laboratoire d'Ordinateurs Organiques[COLOR_REVERT] améliorera la science de votre ville.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ORGANIC_COMPUTER_LAB_PEDIA</Tag>
+		<English>Organic computing is a form of biologically-inspired computing with organic properties. It has emerged recently as a challenging vision for future information processing systems. Organic Computing is based on the insight that we will soon be surrounded by large collections of autonomous systems, which are equipped with sensors and actuators, aware of their environment, communicate freely, and organise themselves in order to perform the actions and services that seem to be required.</English>
+		<Polish>Biokomputer to komputer, w którym obliczenia zachodzą dzięki reakcjom chemicznym między cząsteczkami DNA.</Polish>
+	</TEXT>
 </Civ4GameText>

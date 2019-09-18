@@ -4710,7 +4710,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<ForceObsoleteTech>TECH_TRACKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_PERSISTENCE_HUNTING</ForceObsoleteTech>
 			<ForceObsoleteUnitClasses>
 				<ForceObsoleteUnitClass>
 					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_WANDERER</ForceObsoleteUnitClassType>
@@ -16396,10 +16396,6 @@
 				</UnitClassUpgrade>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_LANCER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_DRAGOON</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
@@ -57244,7 +57240,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<ForceObsoleteTech>TECH_TRACKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_PERSISTENCE_HUNTING</ForceObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_GATHERER</Class>
