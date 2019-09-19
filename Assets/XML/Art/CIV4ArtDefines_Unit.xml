@@ -14020,23 +14020,6 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_SACAGAWEA</Type>
-			<Button>Art/Interface/Buttons/Units/heroes/sacagawea.dds</Button>
-			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Units/healer/Explorer.nif</NIF>
-			<KFM>Art/Units/Healer/explorer.kfm</KFM>
-			<SHADERNIF>Art/Units/healer/Explorer.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
-				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_SHARKTOOTH_ARCHER</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/culture/sharktoothbowman.dds</Button>
 			<fScale>0.44</fScale>

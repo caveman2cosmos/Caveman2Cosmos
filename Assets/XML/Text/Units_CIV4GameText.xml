@@ -20656,35 +20656,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Tygrys Szablozębny</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SACAGAWEA</Tag>
-		<English>Native Explorer</English>
-		<French>
-			<Text>Explorateur Autochtone</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>Esploratore nativo</Italian>
-		<Spanish>
-			<Text>Explorador nativo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Zwiadowczyni</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SACAGAWEA_PEDIA</Tag>
-		<English>Europeans who colonized the Americas often sought help from Native American scouts. The scouts were mostly used to gather intelligence on enemy military movements. In 1866, Congress passed a statute that established a branch of the military known as the "Indian Scouting Service." This formalized the relationship between Native American Scouts and the United States Army. When fighting Native Americans in the west, the United States made use of historic tribal animosities by recruiting scouts from the enemy of whomever they were fighting. For example, Pawnees scouted against the Cheyenne, and Crow scouts helped General Custer before the Battle of Little Bighorn.</English>
-		<Spanish>Explorador nativo.</Spanish>
-		<Polish>Sacagawea była Szoszonką, która z korpusem ekspedycyjnym Meriwethera Lewisa i William Clarka brała udział w eksploracji terenów zachodnich stanów, przemierzywszy tysiące mil od Północnej Dakoty do Pacyfiku w latach 1804-1806. [NEWLINE]Sacagawea przyszła na świat około 1787 roku w szczepie Agaidika w plemieniu Szoszonów w obecnym stanie Idaho. Kiedy miała dziesięć lat podczas walk plemiennych została porwana i uprowadzona do wioski plemienia Hidatsa. W wieku 13 lat według jednych źródeł została sprzedana francuskiemu traperowi Toussaint Charbonneau, jako żona a według innych została wygrana w jakieś grze hazardowej. W 1804 roku blisko wioski przybył korpus ekspedycyjny kapitana Meriwethera Lewisa i Williama Clarka. Zbudowali oni Fort Mandan, aby przezimować. Podczas zimy poszukiwali, przewodników, którzy pomogliby im w dalszej wyprawie, kiedy dowiedzieli się, że żona Charbonneau posługuje się wężowym językiem, bo tak nazywali język Szoszonów postanowili ją zabrać wraz ze sobą. Zimą przyszedł na świat syn Toussainta i Sacagawea Jean Baptiste Charbonneau zwany Pompy. Wiosną 1805 roku wyprawa ruszyła w górę rzeki Missouri. Była to ciężka i długa wyprawa, ponieważ ciągnięto załadowane wozy. 14 Maja Sacagawea uratowała dobytek Lewisa i Clarka w czasie przeprawy przez, rzekę, kiedy to ich łódź wywróciła się. 20 Maja pierwsza napotkana na drodze rzeka została ochrzczona imieniem Szoszonki. W sierpniu wyprawa dotarła do ziem Szoszonów. W czasie rozmów, odkryto ze wodzem plemienia jest brat wężowej kobiety Cameahwait. Kupiono od Indian konie i wyprawa ruszyła przez Góry Skaliste. W listopadzie podróżnicy dotarli do Oceanu, gdzie odbyło się powszechne głosowanie nad tym gdzie należy wybudować kolejny fort, Fort Clatsop. W 1806 roku wyprawa powróciła do miejsca przeznaczenia. Sacagawea wraz mężem i dzieckiem spędziła jeszcze trzy lata w wiosce Hidatsa a następnie przyjmując zaproszenie Clarka i Lewisa przeprowadziła się do St. Louis. W 1810 roku urodziła córkę imieniem Squanto Lisette. Umarła w 1812 roku z powodu strasznej gorączki. [PARAGRAPH:1]Według legend i historii przekazywanych sobie ustnie przez różne plemiona Sacagawea opuściła męża i zakochała się Indianinie z plemienia Wielkich Równin, po jego śmierci powróciła do swojej rodzinnej wioski Szoszonów. Inna historia opowiada o wielkiej miłości miedzy nią a Lewisem lub Clarkiem. W 1884 roku w Rezerwacie Indian Rzeki Wiatrów w Wyoming zmarła kobieta imieniem Porivo, nad jej grobem wielebny John Roberts powiedział, że była to Sacagawea. W 1963 postawiono tam pomnik na cześć dzielnej Szoszonki. [PARAGRAPH:1]Sacagawea to najbardziej rozpowszechniony zapis i wymowa jej imienia. Plemiona Hidatsa w Północnej Dakocie piszą to jako Sakakawea a Szoszońskie jako Sacajawea. [NEWLINE]Kobieta ta na stałe zapisała się w historii USA, jej imieniem nazwano rzekę, jezioro, statek oraz dolara.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SACAGAWEA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Native Explorer[COLOR_REVERT].</English>
-		<French>[COLOR_UNIT_TEXT]Explorateur Native[COLOR_REVERT].</French>
-		<Spanish>El [COLOR_UNIT_TEXT]Explorador nativo[COLOR_REVERT].</Spanish>
-		<Polish>Dzięki [COLOR_UNIT_TEXT]Zwiadowcom[COLOR_REVERT] poznasz nowe tereny. Uzyskują oni lepsze efekty, gdy odkrywają [COLOR_HIGHLIGHT_TEXT]wioski plemienne[COLOR_REVERT]. Mogą się jednak tylko bronić.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SACRED_BAND</Tag>
 		<English>Sacred Band</English>
 		<French>

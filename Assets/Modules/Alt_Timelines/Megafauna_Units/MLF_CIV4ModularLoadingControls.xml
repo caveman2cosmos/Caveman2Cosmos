@@ -21,7 +21,15 @@
 					<bLoad>1</bLoad>
 				</Module>
 				<Module>
+					<Directory>Big_Cats</Directory>
+					<bLoad>1</bLoad>
+				</Module>				
+				<Module>
 					<Directory>Bison_Rider</Directory>
+					<bLoad>1</bLoad>
+				</Module>
+				<Module>
+					<Directory>DeerRider</Directory>
 					<bLoad>1</bLoad>
 				</Module>
 				<Module>
@@ -34,6 +42,10 @@
 				</Module>
 				<Module>
 					<Directory>Rhinoceros</Directory>
+					<bLoad>1</bLoad>
+				</Module>
+				<Module>
+					<Directory>Llama</Directory>
 					<bLoad>1</bLoad>
 				</Module>
 				<Module>

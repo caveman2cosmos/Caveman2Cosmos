@@ -1014,10 +1014,6 @@ protected:
 	//	points evaluated
 	int m_iChokePointCalculationVersion;
 
-	int m_iLastLookatX;
-	int m_iLastLookatY;
-	bool m_bWasGraphicsPagingEnabled;
-
 public:
 	//	Super forts adaptation to C2C - calc choke points if not already done
 	void ensureChokePointsEvaluated();

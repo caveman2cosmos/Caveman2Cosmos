@@ -49,7 +49,7 @@ Current techs which are not in this file:-
 			<Civilopedia>TXT_KEY_TECH_CAVE_DWELLING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_CAVE_DWELLING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iCost>5</iCost>
+			<iCost>3</iCost>
 			<Era>ERA_ANCIENT</Era>
 			<iHealth>1</iHealth>
 			<iAsset>2</iAsset>
@@ -78,7 +78,7 @@ Current techs which are not in this file:-
 			<Civilopedia>TXT_KEY_TECH_NOMADIC_LIFESTYLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_NOMADIC_LIFESTYLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<iCost>5</iCost>
+			<iCost>3</iCost>
 			<Era>ERA_ANCIENT</Era>
 			<iAsset>2</iAsset>
 			<bTrade>1</bTrade>
@@ -106,7 +106,7 @@ Current techs which are not in this file:-
 			<Civilopedia>TXT_KEY_TECH_LANGUAGE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_LANGUAGE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<iCost>5</iCost>
+			<iCost>3</iCost>
 			<Era>ERA_ANCIENT</Era>
 			<iHappiness>1</iHappiness>
 			<iAsset>2</iAsset>
@@ -135,7 +135,7 @@ Current techs which are not in this file:-
 			<Civilopedia>TXT_KEY_TECH_SCAVENGING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_SCAVENGING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<iCost>6</iCost>
+			<iCost>4</iCost>
 			<Era>ERA_ANCIENT</Era>
 			<iAsset>8</iAsset>
 			<bTrade>1</bTrade>
@@ -178,7 +178,7 @@ Current techs which are not in this file:-
 			<Civilopedia>TXT_KEY_TECH_GATHERING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_GATHERING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<iCost>6</iCost>
+			<iCost>4</iCost>
 			<Era>ERA_ANCIENT</Era>
 			<FirstFreeUnitClass>UNITCLASS_GATHERER</FirstFreeUnitClass>
 			<iAsset>2</iAsset>
@@ -211,7 +211,7 @@ Current techs which are not in this file:-
 			<Civilopedia>TXT_KEY_TECH_TRACKING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_TRACKING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<iCost>7</iCost>
+			<iCost>5</iCost>
 			<Era>ERA_ANCIENT</Era>
 			<iAsset>8</iAsset>
 			<bTrade>1</bTrade>
@@ -262,7 +262,7 @@ Current techs which are not in this file:-
 			<Civilopedia>TXT_KEY_TECH_DECEPTION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_DECEPTION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<iCost>7</iCost>
+			<iCost>5</iCost>
 			<Era>ERA_ANCIENT</Era>
 			<iAsset>2</iAsset>
 			<iPower>1</iPower>
@@ -298,7 +298,7 @@ Current techs which are not in this file:-
 			<Civilopedia>TXT_KEY_TECH_TOOL_MAKING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_TOOL_MAKING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iCost>7</iCost>
+			<iCost>5</iCost>
 			<Era>ERA_ANCIENT</Era>
 			<iWorkerSpeedModifier>10</iWorkerSpeedModifier>
 			<iAsset>8</iAsset>
@@ -354,7 +354,7 @@ Current techs which are not in this file:-
 			<Civilopedia>TXT_KEY_TECH_HERBALISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_HERBALISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<iCost>7</iCost>
+			<iCost>5</iCost>
 			<Era>ERA_ANCIENT</Era>
 			<iAsset>4</iAsset>
 			<bTrade>1</bTrade>
@@ -389,7 +389,7 @@ Current techs which are not in this file:-
 			<Civilopedia>TXT_KEY_TECH_CONTROLLED_FIRE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_CONTROLLED_FIRE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<iCost>7</iCost>
+			<iCost>5</iCost>
 			<Era>ERA_ANCIENT</Era>
 			<iAsset>3</iAsset>
 			<bTrade>1</bTrade>
@@ -416,7 +416,7 @@ Current techs which are not in this file:-
 			<Civilopedia>TXT_KEY_TECH_WEAVING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_WEAVING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iCost>7</iCost>
+			<iCost>5</iCost>
 			<Era>ERA_ANCIENT</Era>
 			<iAsset>3</iAsset>
 			<bTrade>1</bTrade>
@@ -463,7 +463,7 @@ Current techs which are not in this file:-
 			<Civilopedia>TXT_KEY_TECH_ORAL_TRADITION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_ORAL_TRADITION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<iCost>7</iCost>
+			<iCost>5</iCost>
 			<Era>ERA_ANCIENT</Era>
 			<iHappiness>1</iHappiness>
 			<iAsset>2</iAsset>
@@ -496,7 +496,7 @@ Current techs which are not in this file:-
 			<Civilopedia>TXT_KEY_TECH_SHELTER_BUILDING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_SHELTER_BUILDING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iCost>8</iCost>
+			<iCost>7</iCost>
 			<Era>ERA_ANCIENT</Era>
 			<iAsset>4</iAsset>
 			<bTrade>1</bTrade>
@@ -542,7 +542,7 @@ Current techs which are not in this file:-
 			<Civilopedia>TXT_KEY_TECH_COOPERATION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_COOPERATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<iCost>8</iCost>
+			<iCost>7</iCost>
 			<Era>ERA_ANCIENT</Era>
 			<iWorkerSpeedModifier>5</iWorkerSpeedModifier>
 			<iAsset>4</iAsset>
@@ -585,7 +585,7 @@ Current techs which are not in this file:-
 			<Civilopedia>TXT_KEY_TECH_HARD_HAMMER_PERCUSSION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_HARD_HAMMER_PERCUSSION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<iCost>8</iCost>
+			<iCost>7</iCost>
 			<Era>ERA_ANCIENT</Era>
 			<iAsset>8</iAsset>
 			<iPower>1</iPower>
@@ -632,7 +632,7 @@ Current techs which are not in this file:-
 			<Civilopedia>TXT_KEY_TECH_PERSISTENCE_HUNTING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_PERSISTENCE_HUNTING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<iCost>8</iCost>
+			<iCost>7</iCost>
 			<Era>ERA_ANCIENT</Era>
 			<iAsset>8</iAsset>
 			<iPower>2</iPower>
@@ -679,7 +679,7 @@ Current techs which are not in this file:-
 			<Civilopedia>TXT_KEY_TECH_BASKETRY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_BASKETRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iCost>8</iCost>
+			<iCost>7</iCost>
 			<Era>ERA_ANCIENT</Era>
 			<iAsset>6</iAsset>
 			<iPower>4</iPower>
@@ -727,7 +727,7 @@ Current techs which are not in this file:-
 			<Civilopedia>TXT_KEY_TECH_PREHISTORIC_MUSIC_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_PREHISTORIC_MUSIC_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<iCost>8</iCost>
+			<iCost>7</iCost>
 			<Era>ERA_ANCIENT</Era>
 			<iAsset>5</iAsset>
 			<iPower>1</iPower>

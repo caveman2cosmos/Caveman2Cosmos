@@ -11478,7 +11478,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HUNTING</Tag>
-		<English>Hunting</English>
+		<English>Tracking</English>
 		<French>
 			<Text>Chasse</Text>
 			<Gender>Female</Gender>
@@ -11527,7 +11527,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HUNTING_TACTICS</Tag>
-		<English>Hunting Tactics</English>
+		<English>Hunting</English>
 		<French>Tactiques de Chasse</French>
 		<Italian>Tattiche di caccia</Italian>
 		<Spanish>
@@ -23957,7 +23957,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TRACKING</Tag>
-		<English>Tracking</English>
+		<English>Trails</English>
 		<French>Traque</French>
 		<German>Trampelpfade</German>
 		<Italian>Tracciatura di sentieri</Italian>
