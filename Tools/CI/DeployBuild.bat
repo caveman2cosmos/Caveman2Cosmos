@@ -13,8 +13,10 @@ if "%APPVEYOR_PULL_REQUEST_TITLE%" neq "" (
 PUSHD "%~dp0..\.."
 SET C2C_VERSION=v%APPVEYOR_BUILD_VERSION%-alpha
 SET "root_dir=%cd%"
+set SVN=svn.exe
 if not exist "%build_dir%" goto :skip_delete
 rmdir /Q /S "%build_dir%"
+
 :skip_delete
 
 echo C2C %C2C_VERSION% DEPLOYMENT
@@ -45,7 +47,17 @@ call Tools\CI\DoSourceIndexing.bat
 
 :: CHECK OUT SVN -----------------------------------------------
 echo Checking out SVN working copy for deployment...
-svn checkout %svn_url% "%build_dir%"
+PUSHD "%build_dir%"
+%SVN% checkout %svn_url% "%build_dir%"
+if %ERRORLEVEL% neq 0 (
+    %SVN% cleanup --non-interactive
+    call :retry_svn_command update
+    if %ERRORLEVEL% neq 0 (
+        echo SVN checkout failed after 5 retries, aborting...
+        exit /B 3
+    )
+)
+POPD
 
 :: PACK FPKS ---------------------------------------------------
 :: We copy built FPKs and the fpklive token back from SVN 
@@ -88,7 +100,6 @@ REM call github_changelog_generator --cache-file "github-changelog-http-cache" -
 :: DETECT SVN CHANGES ------------------------------------------
 echo Detecting working copy changes...
 PUSHD "%build_dir%"
-set SVN=svn.exe
 "%SVN%" status | findstr /R "^!" > ..\missing.list
 for /F "tokens=* delims=! " %%A in (..\missing.list) do (svn delete "%%A")
 del ..\missing.list 2>NUL
@@ -96,12 +107,27 @@ del ..\missing.list 2>NUL
 
 :: COMMIT TO SVN -----------------------------------------------
 echo Commiting new build to SVN...
-"%SVN%" commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
+REM "%SVN%" commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
+PUSHD "%build_dir%"
+call :retry_svn_command commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
+if %ERRORLEVEL% neq 0 (
+    echo SVN commit failed after 5 retries, aborting...
+    exit /B 3
+)
+POPD
 
 :: REFRESH SVN -------------------------------------------------
 :: Ensuring that the svnversion call below will give a clean 
 :: revision number
-"%SVN%" update
+echo Refreshing SVN working copy...
+REM "%SVN%" update
+PUSHD "%build_dir%"
+call :retry_svn_command update
+if %ERRORLEVEL% neq 0 (
+    echo SVN update failed after 5 retries, aborting...
+    exit /B 3
+)
+POPD
 
 :: SET SVN RELEASE TAG -----------------------------------------
 echo Setting SVN commit tag on git ...
@@ -115,7 +141,19 @@ git push --tags
 REM 7z a -r -x!.svn "%release_prefix%-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\*.*"
 REM 7z a -x!.svn "%release_prefix%-CvGameCoreDLL-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\Assets\CvGameCoreDLL.*"
 
+POPD
+
 echo Done!
 exit /B 0
 
-POPD
+:retry_svn_command
+set count=5
+:DoWhile
+    if %count%==0 goto EndDoWhile
+    set /a count = %count% -1
+    call %svn% %*
+    if %errorlevel%==0 exit /B 0
+    call %svn% cleanup --non-interactive
+    if %count% gtr 0 goto DoWhile
+:EndDoWhile
+exit /B 1

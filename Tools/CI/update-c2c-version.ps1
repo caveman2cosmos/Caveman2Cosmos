@@ -1,5 +1,5 @@
 
-$xml_path = Resolve-Path "..\..\Assets\XML\A_New_Dawn_GlobalDefines.xml"
+$xml_path = Resolve-Path "Assets\XML\A_New_Dawn_GlobalDefines.xml"
 [xml]$xml = Get-Content $xml_path
 
 foreach ($item in $xml.Civ4Defines.ChildNodes) {

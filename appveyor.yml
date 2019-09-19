@@ -7,6 +7,7 @@ skip_branch_with_pr: true
 cache:
 - Build\Debug -> Tools\deps.exe, Tools\_MakeDLL.bat, Sources\, appveyor.yml
 - Build\Release -> Tools\deps.exe, Tools\_MakeDLL.bat, Sources\, appveyor.yml
+- Build\FinalRelease -> Tools\deps.exe, Tools\_MakeDLL.bat, Sources\, appveyor.yml
 
 # setup remote desktop access
 init:
