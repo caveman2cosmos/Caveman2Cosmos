@@ -580,20 +580,20 @@ class BarbarianCiv:
 			if iTeamX != iTeam and not CyTeam.isHasMet(iTeamX): continue
 			hasMet.append([iPlayerX, CyPlayerX])
 			if CyPlayerX.isMinorCiv():
-				iTemp += 2
-			else: odds += 10
+				iTemp += 5
+			else: odds += 50
 
 		# New world requires contact with a major civ.
 		if bNewWorld and not odds: return
 
 		odds += iTemp # Value from contact with other minor civs.
-		odds += 10*iCities + CyPlayer.getTotalPopulation() + 40*CyPlayer.countHolyCities()
+		odds += 12*iCities + CyPlayer.getTotalPopulation() + 32*CyPlayer.countHolyCities()
 		odds += CyPlayer.getNumMilitaryUnits()/(4*GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities())
-		odds += 5*CyPlayer.getWondersScore() # 25 points per wonder, see getWonderScore in CvGameCoreUtils.cpp.
-		if odds < 128: return
+		odds += 4*CyPlayer.getWondersScore() # 20 points per wonder, see getWonderScore in CvGameCoreUtils.cpp.
+		if odds < 512: return
 
 		iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent()
-		if not GAME.getSorenRandNum(10*iFactorGS + odds, 'minor2major') < odds: return
+		if not GAME.getSorenRandNum(32*iFactorGS + odds, 'minor2major') < odds: return
 
 		# Turn a minor BarbCiv into a full civ, give more bonuses to launch into the world
 		civName = CyPlayer.getCivilizationShortDescription(0)
@@ -610,7 +610,7 @@ class BarbarianCiv:
 		iNumBarbDefenders = GC.getHandicapInfo(GAME.getHandicapType()).getBarbarianInitialDefenders()
 		fMilitaryMod = self.RevOpt.getMilitaryStrength()
 
-		iMaxDistance = 8 * GC.getWorldInfo(MAP.getWorldSize()).getDefaultPlayers()
+		iMaxDistance = 5 * GC.getWorldInfo(MAP.getWorldSize()).getDefaultPlayers()
 		CyPlayerBarb = GC.getPlayer(iPlayerBarb)
 		aList = ()
 		CyCityX, i = CyPlayerBarb.firstCity(False)
@@ -648,21 +648,24 @@ class BarbarianCiv:
 		i3 = iAttack
 		i4 = iAttackCity
 		i5 = iMerchant
-		aList = (i1, i1, i2, i3, i3, i3, i3, i4, i4, i4, i5, i5, i5)
-		amount = (bNewWorld * iEra * 2 + iEra + iNumBarbDefenders - iCities) * fMilitaryMod
-		if amount < 1:
-			amount = 1
-		iLen = len(aList); iCount = 0
-		for iUnit in aList:
-			# if the list only consist of "-1" elements then the while loop would never finish.
-			if iUnit > -1:
-				while iCount < amount:
-					iUnit = aList[GAME.getSorenRandNum(iLen, 'Military')]
-					if iUnit == -1: continue
-					CyUnit = CyPlayer.initUnit(iUnit, iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-					CyUnit.changeExperience(iEra + GAME.getSorenRandNum(2*(iEra+1), 'Experience'), -1, False, False, False)
-					iCount += 1
-			break
+		aList = [i1, i1, i2, i3, i3, i3, i3, i4, i4, i4, i5, i5, i5]
+		iLen = len(aList); i = 0
+		while i < iLen:
+			if aList[i] < 0:
+				aList.pop(i)
+				iLen -= 1
+			else: i += 1
+
+		if iLen:
+			amount = (bNewWorld * iEra * 2 + iEra - iCities) * fMilitaryMod
+			if amount < 1:
+				amount = 1
+			iCount = 0
+			while iCount < amount:
+				iUnit = aList[GAME.getSorenRandNum(iLen, 'Military')]
+				CyUnit = CyPlayer.initUnit(iUnit, iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+				CyUnit.changeExperience(iEra + GAME.getSorenRandNum(2*(iEra+1), 'Experience'), -1, False, False, False)
+				iCount += 1
 
 		# Great persons
 		i1 = GC.getInfoTypeForString("UNIT_PROPHET")

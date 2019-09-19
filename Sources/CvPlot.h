@@ -181,6 +181,7 @@ public:
 	void updateMinimapColor();
 
 	bool unitHere(const CvUnit* pUnit) const;
+	CvUnit* getPreferredCenterUnit() const;
 	void updateCenterUnit();
 	void enableCenterUnitRecalc(bool bEnable);
 
