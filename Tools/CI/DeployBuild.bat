@@ -47,7 +47,6 @@ call Tools\CI\DoSourceIndexing.bat
 
 :: CHECK OUT SVN -----------------------------------------------
 echo Checking out SVN working copy for deployment...
-PUSHD "%build_dir%"
 %SVN% checkout %svn_url% "%build_dir%"
 if %ERRORLEVEL% neq 0 (
     %SVN% cleanup --non-interactive
@@ -57,7 +56,6 @@ if %ERRORLEVEL% neq 0 (
         exit /B 3
     )
 )
-POPD
 
 :: PACK FPKS ---------------------------------------------------
 :: We copy built FPKs and the fpklive token back from SVN 
@@ -108,26 +106,22 @@ del ..\missing.list 2>NUL
 :: COMMIT TO SVN -----------------------------------------------
 echo Commiting new build to SVN...
 REM "%SVN%" commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
-PUSHD "%build_dir%"
 call :retry_svn_command commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
 if %ERRORLEVEL% neq 0 (
     echo SVN commit failed after 5 retries, aborting...
     exit /B 3
 )
-POPD
 
 :: REFRESH SVN -------------------------------------------------
 :: Ensuring that the svnversion call below will give a clean 
 :: revision number
 echo Refreshing SVN working copy...
 REM "%SVN%" update
-PUSHD "%build_dir%"
 call :retry_svn_command update
 if %ERRORLEVEL% neq 0 (
     echo SVN update failed after 5 retries, aborting...
     exit /B 3
 )
-POPD
 
 :: SET SVN RELEASE TAG -----------------------------------------
 echo Setting SVN commit tag on git ...
