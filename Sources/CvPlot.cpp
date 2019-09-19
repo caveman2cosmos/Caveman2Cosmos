@@ -419,6 +419,8 @@ void CvPlot::showRequiredGraphics()
 {
 	ECvPlotGraphics::type toShow = (m_requiredVisibleGraphics ^ m_visibleGraphics) & m_requiredVisibleGraphics;
 
+	m_visibleGraphics = m_visibleGraphics | toShow;
+
 	if (!isGraphicPagingEnabled())
 	{
 		enableGraphicsPaging();
@@ -456,8 +458,6 @@ void CvPlot::showRequiredGraphics()
 			getPlotCity()->setLayoutDirty(true);
 		}
 	}
-
-	m_visibleGraphics = m_visibleGraphics | toShow;
 }
 
 void CvPlot::hideNonRequiredGraphics()
@@ -1303,14 +1303,44 @@ bool CvPlot::unitHere(const CvUnit* pUnit) const
 	return false;
 }
 
+CvUnit* CvPlot::getPreferredCenterUnit() const
+{
+	CvUnit*  pNewCenterUnit = getSelectedUnit();
+
+	FAssertMsg(pNewCenterUnit == NULL || pNewCenterUnit->atPlot(this), "Selected unit isn't in the plot that owns it");
+	if (pNewCenterUnit != NULL)
+	{
+		return pNewCenterUnit;
+	}
+	pNewCenterUnit = getBestDefender(GC.getGameINLINE().getActivePlayer(), NO_PLAYER, NULL, false, false, true);
+	if (pNewCenterUnit != NULL)
+	{
+		return pNewCenterUnit;
+	}
+	pNewCenterUnit = getBestDefender(GC.getGameINLINE().getActivePlayer());
+	if (pNewCenterUnit != NULL)
+	{
+		return pNewCenterUnit;
+	}
+	pNewCenterUnit = getBestDefender(NO_PLAYER, GC.getGameINLINE().getActivePlayer(), gDLL->getInterfaceIFace()->getHeadSelectedUnit(), true);
+	if (pNewCenterUnit != NULL)
+	{
+		return pNewCenterUnit;
+	}
+	pNewCenterUnit = getBestDefender(NO_PLAYER, GC.getGameINLINE().getActivePlayer(), gDLL->getInterfaceIFace()->getHeadSelectedUnit());
+	if (pNewCenterUnit != NULL)
+	{
+		return pNewCenterUnit;
+	}
+	pNewCenterUnit = getBestDefender(NO_PLAYER, GC.getGameINLINE().getActivePlayer());
+	return pNewCenterUnit;
+}
+
 void CvPlot::updateCenterUnit()
 {
 	PROFILE_FUNC();
 
-	CvUnit* pOldCenterUnit = getCenterUnit();
-	CvUnit* pNewCenterUnit;
-
-	if ( m_bInhibitCenterUnitCalculation || !isGraphicsRequiredVisible(ECvPlotGraphics::UNIT) )
+	if (m_bInhibitCenterUnitCalculation)
 	{
 		//	Because we are inhibitting recalculation until all the adjusting code has run
 		//	(rather than have it update multiple times) the currently cached center unit
@@ -1321,51 +1351,19 @@ void CvPlot::updateCenterUnit()
 		m_pCenterUnit = NULL;
 		return;
 	}
-	else
+
+	CvUnit* pOldCenterUnit = getCenterUnit();
+	CvUnit* pNewCenterUnit = NULL;
+
+	// We check isGraphicsVisible instead of isGraphicsRequiredVisible because this function will be called
+	// to switch the visible unit graphics, e.g. on selection and combat, not just when showing or hiding due
+	// to paging.
+	if(isActiveVisible(true) && isGraphicsVisible(ECvPlotGraphics::UNIT))
 	{
-		pNewCenterUnit = NULL;
+		pNewCenterUnit = getPreferredCenterUnit();
 	}
 
-	if (!isActiveVisible(true))
-	{
-		pNewCenterUnit = NULL;
-	}
-	else
-	{
-		pNewCenterUnit = getSelectedUnit();
-
-		if (pNewCenterUnit != NULL && !pNewCenterUnit->atPlot(this))
-		{
-			pNewCenterUnit = NULL;
-		}
-
-		if (pNewCenterUnit == NULL)
-		{
-			pNewCenterUnit = getBestDefender(GC.getGameINLINE().getActivePlayer(), NO_PLAYER, NULL, false, false, true);
-		}
-
-		if (pNewCenterUnit == NULL)
-		{
-			pNewCenterUnit = getBestDefender(GC.getGameINLINE().getActivePlayer());
-		}
-
-		if (pNewCenterUnit == NULL)
-		{
-			pNewCenterUnit = getBestDefender(NO_PLAYER, GC.getGameINLINE().getActivePlayer(), gDLL->getInterfaceIFace()->getHeadSelectedUnit(), true);
-		}
-
-		if (pNewCenterUnit == NULL)
-		{
-			pNewCenterUnit = getBestDefender(NO_PLAYER, GC.getGameINLINE().getActivePlayer(), gDLL->getInterfaceIFace()->getHeadSelectedUnit());
-		}
-
-		if (pNewCenterUnit == NULL)
-		{
-			pNewCenterUnit = getBestDefender(NO_PLAYER, GC.getGameINLINE().getActivePlayer());
-		}
-	}
-
-	if ( pNewCenterUnit != pOldCenterUnit )
+	if (pNewCenterUnit != pOldCenterUnit)
 	{
 #if 0
 		OutputDebugString(CvString::format("Center unit change for plot (%d,%d) from %08lx to %08lx\n", m_iX, m_iY, pOldCenterUnit, pNewCenterUnit).c_str());
@@ -1382,13 +1380,17 @@ void CvPlot::updateCenterUnit()
 			}
 		}
 #endif
+		setCenterUnit(pNewCenterUnit);
 
-		if ( pNewCenterUnit != NULL )
+		if (pOldCenterUnit != NULL)
+		{
+			pOldCenterUnit->reloadEntity(true);
+		}
+
+		if (pNewCenterUnit != NULL)
 		{
 			pNewCenterUnit->reloadEntity(true);
 		}
-
-		setCenterUnit(pNewCenterUnit);
 	}
 	else
 	{
@@ -12487,6 +12489,7 @@ void CvPlot::setCenterUnit(CvUnit* pNewValue)
 	if (pOldValue != pNewValue)
 	{
 		m_pCenterUnit = pNewValue;
+
 		updateMinimapColor();
 
 		setFlagDirty(true);
