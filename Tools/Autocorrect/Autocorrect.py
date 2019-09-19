@@ -2,6 +2,7 @@ import argparse
 from lxml import etree
 # import xml.etree.ElementTree as ET
 import re
+import os
 import msvcrt
 import glob
 import requests
@@ -11,6 +12,8 @@ import colorama
 from colorama import Fore, Back, Style
 from spellchecker import SpellChecker
 
+script_dir = os.path.dirname(os.path.realpath(__file__))
+
 class Mode:
     DETECT = 0
     AUTOMATIC = 1
@@ -18,13 +21,13 @@ class Mode:
 
 def load_string_list(filename):
     try:
-        return [line.strip() for line in open(filename)]
+        return [line.strip() for line in open(os.path.join(script_dir, filename))]
     except:
         return []
 
 
-def save_string_list(filenamem, strings):
-    with open(filenamem, 'w') as f:
+def save_string_list(filename, strings):
+    with open(os.path.join(script_dir, filename), 'w') as f:
         for item in strings:
             f.write('%s\n' % item)
 
@@ -47,14 +50,13 @@ def autocorrect(files, mode, fancy, spell_dict):
     #else:
     spell = SpellChecker()
 
-    for filename in files:
-        print(filename)
-        # text_file = ET.parse(filename)
-        root = etree.parse(filename).getroot()
-        #nspace = namespace(root)
-        nsmap = {'': namespace(root)}
-
-        try:
+    try:
+        for filename in files:
+            print(filename)
+            # text_file = ET.parse(filename)
+            root = etree.parse(filename).getroot()
+            #nspace = namespace(root)
+            nsmap = {'': namespace(root)}
             # .register_namespace('', nspace)
             for text_elem in root.findall('TEXT', nsmap):
                 tag_elem = text_elem.find('Tag', nsmap)
@@ -63,11 +65,11 @@ def autocorrect(files, mode, fancy, spell_dict):
                     if eng_elem is not None:
                         autocorrect_element(
                             eng_elem, tag_elem.text, ignore_words, ignore_tags, ignore_rules, mode, '  ', fancy, spell)
-        except ExitEarly:
-            pass
-
-        if mode != Mode.DETECT:
-            etree.ElementTree(root).write(filename, encoding="utf-8", xml_declaration=True, pretty_print=True)
+            if mode != Mode.DETECT:
+                etree.ElementTree(root).write(filename, encoding="utf-8", xml_declaration=True, pretty_print=True)
+    except ExitEarly:
+        print('\n\nExited early, progress has been saved')
+        pass
 
     # We can't have changed the lists unless we were in interactive mode
     if mode == Mode.INTERACTIVE:
@@ -81,8 +83,9 @@ spell_check_replacement_rules = ['MORFOLOGIK_RULE_EN_US']
 def apply_spellcheck(matches, ignore_words, spell):
     for match in [m for m in matches if m['rule']['id'] in spell_check_replacement_rules]:
         match['rule']['id'] = 'spellcheck_replacement'
-        text = match['sentence']
-        word = text[match['offset']:match['offset']+match['length']]
+        context = match['context']
+        text = context['text']
+        word = text[context['offset']:context['offset']+context['length']]
         if word in ignore_words:
             # ignore this as the word is in our ignore list (shouldn't be here if it is but whatevs)
             match['rule']['id'] = '__ignore'
@@ -115,7 +118,7 @@ def autocorrect_element(eng_elem, tag, ignore_words, ignore_tags, ignore_rules, 
             corrected_text, corrected_text_with_markers, orig_text_with_markers = apply_corrections(
                 eng_elem.text, matches, fancy)
 
-            print(Fore.YELLOW + indent + str(len(matches)) + ' errors found in ' + Fore.CYAN + tag + Fore.YELLOW + ': ')
+            print(Fore.YELLOW + indent + str(len(matches)) + ' possible errors found in ' + Fore.CYAN + tag + Fore.YELLOW + ': ')
             print(Fore.WHITE + indent + '    ' + orig_text_with_markers)
 
             if eng_elem.text != corrected_text:
@@ -150,6 +153,7 @@ def autocorrect_element(eng_elem, tag, ignore_words, ignore_tags, ignore_rules, 
                 elif key == b's':
                     print(Fore.GREEN + indent + 'Skipping ' + Fore.CYAN + tag)
                 else:
+                    print(Fore.GREEN + indent + 'Exiting...')
                     raise ExitEarly
             elif mode == Mode.AUTOMATIC:
                 eng_elem.text = corrected_text
@@ -264,8 +268,10 @@ def apply_corrections_interactive(text, matches, ignore_words, ignore_rules, ind
                 index = 0
                 if key >= b'0' and key <= b'9':
                     index = ord(key) - ord(b'0')
+                replacement = match['replacements'][index]['value']
+                print(Fore.GREEN + indent + 'Applied suggestion ' + Fore.WHITE + replacement)
                 # offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks = replace(match['replacements'][index]['value'], match, offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks)
-                offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks = replace(match['replacements'][index]['value'], match, offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks, fancy)
+                offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks = replace(replacement, match, offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks, fancy)
                 # replacement = match['replacements'][index]['value']
                 # orig_text_len = len(corrected_text)
                 # corrected_text = corrected_text[:offset] + replacement + corrected_text[offset+length:]
@@ -276,16 +282,20 @@ def apply_corrections_interactive(text, matches, ignore_words, ignore_rules, ind
                 # corrected_text_mrks = corrected_text_mrks[:offset] + replacement + corrected_text_mrks[offset+length:]
                 # offs_adj_mrks = offs_adj_mrks + (len(corrected_text_mrks) - orig_text_len)
             elif can_fix and key == b'a':
+                print(Fore.GREEN + indent + 'Added word ' + Fore.RED + to_replace + Fore.GREEN + ' to the global ignore list')
                 ignore_words.append(to_replace)
             elif key == b'e':
+                print(Fore.GREEN + indent + 'Added rule ' + Fore.WHITE + match['rule']['id'] + Fore.GREEN + ' to the global ignore list')
                 ignore_rules.append(match['rule']['id'])
             elif can_fix and key == b'c':
                 #offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks = replace(input('Enter text to replace %s > ' % to_replace), match, offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks)
                 print(Fore.BLUE + indent + 'Enter text to replace ' + Fore.RED + to_replace + Fore.BLUE + ' > ' + Fore.WHITE, end = '')
                 offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks = replace(input(), match, offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks, fancy)
             elif key == b's':
+                print(Fore.GREEN + indent + 'Skipping this suggestion')
                 pass
             else:
+                print(Fore.GREEN + indent + 'Exiting...')
                 raise ExitEarly
 
     return corrected_text, corrected_text_mrks
