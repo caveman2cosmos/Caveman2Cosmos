@@ -37466,8 +37466,6 @@ int CvUnit::getDefenderSupportValue(const CvUnit* pAttacker) const
 	iTotalSupport += getDefenderSecondFrontSupportValue(pAttacker, pPlot);
 	iTotalSupport += getDefenderFirstShortRangeSupportValue(pAttacker, pPlot);
 	iTotalSupport += getDefenderSecondShortRangeSupportValue(pAttacker, pPlot);
-	iTotalSupport += getDefenderFirstShortRangeSupportValue(pAttacker, pPlot);
-	iTotalSupport += getDefenderSecondShortRangeSupportValue(pAttacker, pPlot);
 	iTotalSupport += getDefenderFirstMediumRangeSupportValue(pAttacker, pPlot);
 	iTotalSupport += getDefenderSecondMediumRangeSupportValue(pAttacker, pPlot);
 	iTotalSupport += getDefenderFirstLongRangeSupportValue(pAttacker, pPlot);
