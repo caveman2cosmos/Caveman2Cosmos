@@ -71,8 +71,8 @@ class CvTechChooser:
 		self.CyTeam = GC.getTeam(self.CyPlayer.getTeam())
 		self.iEraFirst = self.iEraFinal = self.iCurrentEra = self.iCurrentEra0 = self.CyPlayer.getCurrentEra()
 		self.aiCurrentState = [-1] * self.iNumTechs
-		self.updateBenefits()
 		self.Advisors = ["[ICON_STRENGTH]", "[ICON_RELIGION]", "[ICON_GOLD]", "[ICON_RESEARCH]", "[ICON_CULTURE]", "[ICON_FOOD]"]
+		self.updateBenefits()
 
 		self.iResearch0 = -1
 
@@ -410,79 +410,110 @@ class CvTechChooser:
 	def updateBenefits(self):
 		TechBenefits = {}
 		iNumTechs = self.iNumTechs
-		for iTech in xrange(iNumTechs):
+		iNumDomains = int(DomainTypes.NUM_DOMAIN_TYPES)
+		iNumCommerce = int(CommerceTypes.NUM_COMMERCE_TYPES)
+		iNumTerrains = GC.getNumTerrainInfos()
+
+		iTech = 0
+		while iTech < iNumTechs:
 			TechBenefits[iTech] = []
-			CvTechInfo = GC.getTechInfo(iTech)
-			if CvTechInfo.getGridX() < 1: continue
-
-			for j in xrange(GC.getNumRouteInfos()):
-				if GC.getRouteInfo(j).getTechMovementChange(iTech) != 0:
-					TechBenefits[iTech].append(["RouteChange", j])
-			iType = CvTechInfo.getFirstFreeUnitClass()
-			if iType > -1:
-				iType = GC.getUnitClassInfo(iType).getDefaultUnitIndex()
+			info = GC.getTechInfo(iTech)
+			if info.getGridX() > 0:
+				iType = info.getFirstFreeUnitClass()
 				if iType > -1:
-					TechBenefits[iTech].append(["FreeUnit", iType])
-			if CvTechInfo.getTradeRoutes():
-				TechBenefits[iTech].append(["TradeRoute", -1])
-			if CvTechInfo.getHealth():
-				TechBenefits[iTech].append(["Health", -1])
-			if CvTechInfo.getHappiness():
-				TechBenefits[iTech].append(["Happiness", -1])
-			if CvTechInfo.getFirstFreeTechs():
-				TechBenefits[iTech].append(["FreeTech", -1])
-			if CvTechInfo.isExtraWaterSeeFrom():
-				TechBenefits[iTech].append(["WaterSight", -1])
-			if CvTechInfo.isMapCentering():
-				TechBenefits[iTech].append(["MapCentering", -1])
-			if CvTechInfo.isMapVisible():
-				TechBenefits[iTech].append(["MapVisible", -1])
-			if CvTechInfo.isMapTrading():
-				TechBenefits[iTech].append(["MapTrading", -1])
-			if CvTechInfo.isTechTrading():
-				TechBenefits[iTech].append(["TechTrading", -1])
-			if CvTechInfo.isGoldTrading():
-				TechBenefits[iTech].append(["GoldTrading", -1])
-			if CvTechInfo.isOpenBordersTrading():
-				TechBenefits[iTech].append(["OpenBorders", -1])
-			if CvTechInfo.isDefensivePactTrading():
-				TechBenefits[iTech].append(["DefensivePact", -1])
-			if CvTechInfo.isPermanentAllianceTrading():
-				TechBenefits[iTech].append(["PermanentAlliance", -1])
-			if CvTechInfo.isVassalStateTrading():
-				TechBenefits[iTech].append(["VassalState", -1])
-			if CvTechInfo.isIrrigation():
-				TechBenefits[iTech].append(["EnablesIrrigation", -1])
-			if CvTechInfo.isIgnoreIrrigation():
-				TechBenefits[iTech].append(["IgnoreIrrigation", -1])
-			if CvTechInfo.isWaterWork():
-				TechBenefits[iTech].append(["WaterWork", -1])
-			for j in xrange(DomainTypes.NUM_DOMAIN_TYPES):
-				if CvTechInfo.getDomainExtraMoves(j):
-					TechBenefits[iTech].append(["DomainMoves", j])
-			for j in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-				if CvTechInfo.isCommerceFlexible(j):
-					TechBenefits[iTech].append(["CommerceFlexible", j])
-			for j in xrange(GC.getNumTerrainInfos()):
-				if CvTechInfo.isTerrainTrade(j):
-					TechBenefits[iTech].append(["TerrainTrade", j])
-			if CvTechInfo.isRiverTrade():
-				TechBenefits[iTech].append(["RiverTrade", -1])
-			for j in xrange(GC.getNumImprovementInfos()):
-				for k in xrange(YieldTypes.NUM_YIELD_TYPES):
-					if GC.getImprovementInfo(j).getTechYieldChanges(iTech, k):
-						TechBenefits[iTech].append(["ImprovementYield", j])
-			if CvTechInfo.getFeatureProductionModifier():
-				TechBenefits[iTech].append(["FeatureProduction", -1])
-			if CvTechInfo.getWorkerSpeedModifier():
-				TechBenefits[iTech].append(["WorkerSpeed", -1])
+					iType = GC.getUnitClassInfo(iType).getDefaultUnitIndex()
+					if iType > -1:
+						TechBenefits[iTech].append(["FreeUnit", iType])
+				if info.getTradeRoutes():
+					TechBenefits[iTech].append(["TradeRoute", -1])
+				if info.getHealth():
+					TechBenefits[iTech].append(["Health", -1])
+				if info.getHappiness():
+					TechBenefits[iTech].append(["Happiness", -1])
+				if info.getFirstFreeTechs():
+					TechBenefits[iTech].append(["FreeTech", -1])
+				if info.isExtraWaterSeeFrom():
+					TechBenefits[iTech].append(["WaterSight", -1])
+				if info.isMapCentering():
+					TechBenefits[iTech].append(["MapCentering", -1])
+				if info.isMapVisible():
+					TechBenefits[iTech].append(["MapVisible", -1])
+				if info.isMapTrading():
+					TechBenefits[iTech].append(["MapTrading", -1])
+				if info.isTechTrading():
+					TechBenefits[iTech].append(["TechTrading", -1])
+				if info.isGoldTrading():
+					TechBenefits[iTech].append(["GoldTrading", -1])
+				if info.isOpenBordersTrading():
+					TechBenefits[iTech].append(["OpenBorders", -1])
+				if info.isDefensivePactTrading():
+					TechBenefits[iTech].append(["DefensivePact", -1])
+				if info.isPermanentAllianceTrading():
+					TechBenefits[iTech].append(["PermanentAlliance", -1])
+				if info.isVassalStateTrading():
+					TechBenefits[iTech].append(["VassalState", -1])
+				if info.isIrrigation():
+					TechBenefits[iTech].append(["EnablesIrrigation", -1])
+				if info.isIgnoreIrrigation():
+					TechBenefits[iTech].append(["IgnoreIrrigation", -1])
+				if info.isWaterWork():
+					TechBenefits[iTech].append(["WaterWork", -1])
+				iType = 0
+				while iType < iNumDomains:
+					if info.getDomainExtraMoves(iType):
+						TechBenefits[iTech].append(["DomainMoves", iType])
+					iType += 1
+				iType = 0
+				while iType < iNumCommerce:
+					if info.isCommerceFlexible(iType):
+						TechBenefits[iTech].append(["CommerceFlexible", iType])
+					iType += 1
+				iType = 0
+				while iType < iNumTerrains:
+					if info.isTerrainTrade(iType):
+						TechBenefits[iTech].append(["TerrainTrade", iType])
+					iType += 1
+				if info.isRiverTrade():
+					TechBenefits[iTech].append(["RiverTrade", -1])
+				if info.getFeatureProductionModifier():
+					TechBenefits[iTech].append(["FeatureProduction", -1])
+				if info.getWorkerSpeedModifier():
+					TechBenefits[iTech].append(["WorkerSpeed", -1])
+			iTech += 1
 
-		for iType in xrange(GC.getNumUnitInfos()):
+		iType = 0
+		while iType < GC.getNumRouteInfos():
+			info = GC.getRouteInfo(iType)
+			iTech = 0
+			while iTech < iNumTechs:
+				if info.getTechMovementChange(iTech):
+					TechBenefits[iTech].append(["RouteChange", iType])
+				iTech += 1
+			iType += 1
+
+		iNumYields = int(YieldTypes.NUM_YIELD_TYPES)
+		iType = 0
+		while iType < GC.getNumImprovementInfos():
+			info = GC.getImprovementInfo(iType)
+			iTech = 0
+			while iTech < iNumTechs:
+				i = 0
+				while i < iNumYields:
+					if info.getTechYieldChanges(iTech, i):
+						TechBenefits[iTech].append(["ImprovementYield", iType])
+					i += 1
+				iTech += 1
+			iType += 1
+
+		iType = 0
+		while iType < GC.getNumUnitInfos():
 			iTech = GC.getUnitInfo(iType).getPrereqAndTech()
 			if iTech > -1:
 				TechBenefits[iTech].append(["UnlockUnit", iType])
+			iType += 1
 
-		for iType in xrange(GC.getNumBuildingInfos()):
+		iType = 0
+		while iType < GC.getNumBuildingInfos():
 			info = GC.getBuildingInfo(iType)
 			iTech = info.getPrereqAndTech()
 			if iTech > -1:
@@ -490,8 +521,10 @@ class CvTechChooser:
 			iTech = info.getObsoleteTech()
 			if iTech > -1:
 				TechBenefits[iTech].append(["ObsoleteBuilding", iType])
+			iType += 1
 
-		for iType in xrange(GC.getNumSpecialBuildingInfos()):
+		iType = 0
+		while iType < GC.getNumSpecialBuildingInfos():
 			info = GC.getSpecialBuildingInfo(iType)
 			iTech = info.getTechPrereq()
 			if iTech > -1:
@@ -499,8 +532,10 @@ class CvTechChooser:
 			iTech = info.getObsoleteTech()
 			if iTech > -1:
 				TechBenefits[iTech].append(["ObsoleteSpecialBuilding", iType])
+			iType += 1
 
-		for iType in xrange(GC.getNumBonusInfos()):
+		iType = 0
+		while iType < GC.getNumBonusInfos():
 			info = GC.getBonusInfo(iType)
 			iTech = info.getTechReveal()
 			if iTech > -1:
@@ -508,49 +543,63 @@ class CvTechChooser:
 			iTech = info.getTechObsolete()
 			if iTech > -1:
 				TechBenefits[iTech].append(["ObsoleteBonus", iType])
+			iType += 1
 
-		for j in xrange(GC.getNumPromotionInfos()):
-			iTech = GC.getPromotionInfo(j).getTechPrereq()
+		iType = 0
+		while iType < GC.getNumPromotionInfos():
+			iTech = GC.getPromotionInfo(iType).getTechPrereq()
 			if iTech > -1:
-				TechBenefits[iTech].append(["UnlockPromotion", j])
+				TechBenefits[iTech].append(["UnlockPromotion", iType])
+			iType += 1
 
 		iFeatures = GC.getNumFeatureInfos()
-		for iType in xrange(GC.getNumBuildInfos()):
+		iType = 0
+		while iType < GC.getNumBuildInfos():
 			info = GC.getBuildInfo(iType)
 			iTech = info.getTechPrereq()
 			if iTech > -1:
 				TechBenefits[iTech].append(["UnlockImprovement", iType])
-				continue
+			else:
+				for i in xrange(iFeatures):
+					iTech = info.getFeatureTech(i)
+					if iTech > -1:
+						TechBenefits[iTech].append(["UnlockImprovement", iType])
+			iType += 1
 
-			for j in xrange(iFeatures):
-				iTech = info.getFeatureTech(j)
-				if iTech > -1:
-					TechBenefits[iTech].append(["UnlockImprovement", iType])
-
-		for j in xrange(GC.getNumCivicInfos()):
-			iTech = GC.getCivicInfo(j).getTechPrereq()
+		iType = 0
+		while iType < GC.getNumCivicInfos():
+			iTech = GC.getCivicInfo(iType).getTechPrereq()
 			if iTech > -1:
-				TechBenefits[iTech].append(["UnlockCivic", j])
+				TechBenefits[iTech].append(["UnlockCivic", iType])
+			iType += 1
 
-		for j in xrange(GC.getNumProjectInfos()):
-			iTech = GC.getProjectInfo(j).getTechPrereq()
+		iType = 0
+		while iType < GC.getNumProjectInfos():
+			iTech = GC.getProjectInfo(iType).getTechPrereq()
 			if iTech > -1:
-				TechBenefits[iTech].append(["UnlockProject", j])
+				TechBenefits[iTech].append(["UnlockProject", iType])
+			iType += 1
 
-		for j in xrange(GC.getNumProcessInfos()):
-			iTech = GC.getProcessInfo(j).getTechPrereq()
+		iType = 0
+		while iType < GC.getNumProcessInfos():
+			iTech = GC.getProcessInfo(iType).getTechPrereq()
 			if iTech > -1:
-				TechBenefits[iTech].append(["UnlockProcess", j])
+				TechBenefits[iTech].append(["UnlockProcess", iType])
+			iType += 1
 
-		for j in xrange(GC.getNumReligionInfos()):
-			iTech = GC.getReligionInfo(j).getTechPrereq()
+		iType = 0
+		while iType < GC.getNumReligionInfos():
+			iTech = GC.getReligionInfo(iType).getTechPrereq()
 			if iTech > -1:
-				TechBenefits[iTech].append(["UnlockReligion", j])
+				TechBenefits[iTech].append(["UnlockReligion", iType])
+			iType += 1
 
-		for j in xrange(GC.getNumCorporationInfos()):
-			iTech = GC.getCorporationInfo(j).getTechPrereq()
+		iType = 0
+		while iType < GC.getNumCorporationInfos():
+			iTech = GC.getCorporationInfo(iType).getTechPrereq()
 			if iTech > -1:
-				TechBenefits[iTech].append(["UnlockCorporation", j])
+				TechBenefits[iTech].append(["UnlockCorporation", iType])
+			iType += 1
 		self.TechBenefits = TechBenefits
 
 	def updateTechRecords(self, bForce):
