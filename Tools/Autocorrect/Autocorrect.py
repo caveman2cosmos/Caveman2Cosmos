@@ -11,6 +11,7 @@ import logging
 import colorama
 from colorama import Fore, Back, Style
 from spellchecker import SpellChecker
+from googlesp import GoogleSp
 
 script_dir = os.path.dirname(os.path.realpath(__file__))
 
@@ -31,7 +32,6 @@ def save_string_list(filename, strings):
         for item in strings:
             f.write('%s\n' % item)
 
-
 def namespace(element):
     m = re.match(r'\{(.*)\}', element.tag)
     return m.group(1) if m else ''
@@ -40,15 +40,23 @@ def namespace(element):
 class ExitEarly(Exception):
    pass
 
-def autocorrect(files, mode, fancy, spell_dict):
+def autocorrect(files, mode, args):
     ignore_words = load_string_list('ignore_word_list.txt')
     ignore_tags = load_string_list('ignore_tag_list.txt')
     ignore_rules = load_string_list('ignore_rules_list.txt') + ['__ignore']
 
-    #if spell_dict:
-    #    spell = SpellChecker(local_dictionary=spell_dict, distance=1)
-    #else:
-    spell = SpellChecker()
+    if args.pyspellchecker:
+        spell = SpellChecker()
+    else:
+        spell = None
+
+    if args.google:
+        google = GoogleSp()
+    else:
+        google = None
+
+    fancy = args.fancy
+    languagetool_sp = args.languagetool
 
     try:
         for filename in files:
@@ -64,7 +72,7 @@ def autocorrect(files, mode, fancy, spell_dict):
                     eng_elem = text_elem.find('English', nsmap)
                     if eng_elem is not None:
                         autocorrect_element(
-                            eng_elem, tag_elem.text, ignore_words, ignore_tags, ignore_rules, mode, '  ', fancy, spell)
+                            eng_elem, tag_elem.text, ignore_words, ignore_tags, ignore_rules, mode, '  ', fancy, spell, google, languagetool_sp)
             if mode != Mode.DETECT:
                 etree.ElementTree(root).write(filename, encoding="utf-8", xml_declaration=True, pretty_print=True)
     except ExitEarly:
@@ -80,7 +88,17 @@ def autocorrect(files, mode, fancy, spell_dict):
 
 spell_check_replacement_rules = ['MORFOLOGIK_RULE_EN_US']
 
-def apply_spellcheck(matches, ignore_words, spell):
+def get_spellchecker_candidates(word, spell):
+    candidates = spell.candidates(word.lower())
+    # If spellcheck couldn't find the word then it returns the word itself, so remove it!
+    if word.lower() in candidates:
+        candidates.remove(word.lower())
+    # Correct capitalization
+    if word == word.capitalize():
+        candidates = set([c.capitalize() for c in candidates])
+    return candidates
+
+def apply_spellcheck(matches, ignore_words, spell, google, languagetool_sp):
     for match in [m for m in matches if m['rule']['id'] in spell_check_replacement_rules]:
         match['rule']['id'] = 'spellcheck_replacement'
         context = match['context']
@@ -90,24 +108,31 @@ def apply_spellcheck(matches, ignore_words, spell):
             # ignore this as the word is in our ignore list (shouldn't be here if it is but whatevs)
             match['rule']['id'] = '__ignore'
             continue
-        candidates = spell.candidates(word.lower())
+
+        candidates = []
+        # prefer google
+        if google:
+            google_candidate = google.correct(word)
+            if google_candidate and google_candidate != word:
+                candidates = candidates + [google_candidate]
+        # pyspellchecker second
+        if spell:
+            candidates = candidates + get_spellchecker_candidates(word, spell)
+        # languagetool suggestions last
+        if languagetool_sp:
+            candidates = candidates + [r['value'] for r in match['replacements']]
+
         if len(candidates) == 0:
             # ignore this as it isn't a misspelling according to spellcheck dictionary
             match['rule']['id'] = '__ignore'
         else:
-            # If spellcheck couldn't find the word then it returns the word itself, so remove it!
-            if word.lower() in candidates:
-                candidates.remove(word.lower())
-            if word == word.capitalize():
-                candidates = set([c.capitalize() for c in candidates])
-            new_replacements = set([r['value'] for r in match['replacements']]) | candidates
-            match['replacements'] = [{'value': v} for v in new_replacements]
+            match['replacements'] = [{'value': v} for v in set(candidates)]
 
-def autocorrect_element(eng_elem, tag, ignore_words, ignore_tags, ignore_rules, mode, indent, fancy, spell):
+def autocorrect_element(eng_elem, tag, ignore_words, ignore_tags, ignore_rules, mode, indent, fancy, spell, google, languagetool_sp):
     results = api.check(eng_elem.text,
                         api_url='http://localhost:8081/v2/', lang='en-US', disabled_rules=ignore_rules, pwl=ignore_words)
     if results and 'matches' in results and len(results['matches']) > 0:
-        apply_spellcheck(results['matches'], ignore_words, spell)
+        apply_spellcheck(results['matches'], ignore_words, spell, google, languagetool_sp)
         matches = [r for r in results['matches'] if r['rule']['id'] not in ignore_rules]
         if len(matches) > 0:
             # Make sure its sorted by offset (it should be already)
@@ -312,6 +337,12 @@ if __name__ == "__main__":
     parser.add_argument('--log', dest='log_file', action='store', help='override log file name', default='Autocorrect.log')
     parser.add_argument('--non-fancy', dest='fancy', action='store_false',
                             help="don't use colors for markup", default=True)
+    parser.add_argument('--google', dest='google', action='store_true',
+                            help="use google for spell check suggestion", default=False)
+    parser.add_argument('--pyspellchecker', dest='pyspellchecker', action='store_true',
+                            help="use pyspellchecker for spell check suggestions", default=False)
+    parser.add_argument('--languagetool', dest='languagetool', action='store_true',
+                            help="use LanguageTool for spell check suggestions", default=False)
     parser.add_argument('--dict', dest='spell_dict', help="use specified spellcheck dictionary", default='dicts\\en_full.json')
     mode_group = parser.add_mutually_exclusive_group(required=False)
     mode_group.add_argument('--automatic', dest='automatic', action='store_true',
@@ -342,7 +373,7 @@ if __name__ == "__main__":
     else:
         print('Processing %d files...' % len(unique_files))
         try:
-            autocorrect(unique_files, mode, args.fancy, args.spell_dict)
+            autocorrect(unique_files, mode, args)
 
             print('... Complete!')
         except requests.exceptions.ConnectionError as ex:
