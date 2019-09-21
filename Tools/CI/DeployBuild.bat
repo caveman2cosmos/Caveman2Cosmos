@@ -47,9 +47,9 @@ call Tools\CI\DoSourceIndexing.bat
 
 :: CHECK OUT SVN -----------------------------------------------
 echo Checking out SVN working copy for deployment...
-%SVN% checkout %svn_url% "%build_dir%"
+call %SVN% checkout %svn_url% "%build_dir%"
 if %ERRORLEVEL% neq 0 (
-    %SVN% cleanup --non-interactive
+    call %SVN% cleanup --non-interactive
     call :retry_svn_command update
     if %ERRORLEVEL% neq 0 (
         echo SVN checkout failed after 5 retries, aborting...
@@ -101,14 +101,14 @@ REM call github_changelog_generator --cache-file "github-changelog-http-cache" -
 :: DETECT SVN CHANGES ------------------------------------------
 echo Detecting working copy changes...
 PUSHD "%build_dir%"
-"%SVN%" status | findstr /R "^!" > ..\missing.list
+call %SVN% status | findstr /R "^!" > ..\missing.list
 for /F "tokens=* delims=! " %%A in (..\missing.list) do (svn delete "%%A")
 del ..\missing.list 2>NUL
-"%SVN%" add * --force
+call %SVN% add * --force
 
 :: COMMIT TO SVN -----------------------------------------------
 echo Commiting new build to SVN...
-REM "%SVN%" commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
+REM %SVN% commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
 call :retry_svn_command commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
 if %ERRORLEVEL% neq 0 (
     echo SVN commit failed after 5 retries, aborting...
@@ -119,7 +119,7 @@ if %ERRORLEVEL% neq 0 (
 :: Ensuring that the svnversion call below will give a clean 
 :: revision number
 echo Refreshing SVN working copy...
-REM "%SVN%" update
+REM %SVN% update
 call :retry_svn_command update
 if %ERRORLEVEL% neq 0 (
     echo SVN update failed after 5 retries, aborting...
@@ -132,15 +132,13 @@ for /f "delims=" %%a in ('svnversion') do @set svn_rev=%%a
 
 POPD
 
-git tag -a SVN-%svn_rev% %APPVEYOR_REPO_COMMIT% -m "SVN-%svn_rev%"
-git push --tags
+call git tag -a SVN-%svn_rev% %APPVEYOR_REPO_COMMIT% -m "SVN-%svn_rev%"
+call git push --tags
 
 REM 7z a -r -x!.svn "%release_prefix%-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\*.*"
 REM 7z a -x!.svn "%release_prefix%-CvGameCoreDLL-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\Assets\CvGameCoreDLL.*"
 
 POPD
-
-echo Done!
 
 echo FORUM COMMIT MESSAGE ----------------------------------------------------------
 echo -------------------------------------------------------------------------------
@@ -150,6 +148,9 @@ type "%root_dir%\commit_desc.txt"
 echo.
 echo -------------------------------------------------------------------------------
 echo -------------------------------------------------------------------------------
+
+echo Done!
+
 exit /B 0
 
 :retry_svn_command
@@ -157,9 +158,10 @@ set count=5
 :DoWhile
     if %count%==0 goto EndDoWhile
     set /a count = %count% -1
-    call %svn% %*
+    call %SVN% %*
     if %errorlevel%==0 exit /B 0
-    call %svn% cleanup --non-interactive
+    echo SVN command failed, performing cleanup then retrying (%count% attempts remaining) ...
+    call %SVN% cleanup --non-interactive
     if %count% gtr 0 goto DoWhile
 :EndDoWhile
 exit /B 1
