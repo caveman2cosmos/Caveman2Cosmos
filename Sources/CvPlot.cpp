@@ -464,6 +464,8 @@ void CvPlot::hideNonRequiredGraphics()
 {
 	ECvPlotGraphics::type toHide = getNonRequiredGraphicsMask();
 
+	m_visibleGraphics = m_visibleGraphics & ~toHide;
+
 	if (toHide & ECvPlotGraphics::SYMBOLS)
 	{
 		deleteAllSymbols();
@@ -505,7 +507,6 @@ void CvPlot::hideNonRequiredGraphics()
 		}
 	}
 
-	m_visibleGraphics = m_visibleGraphics & ~toHide;
 	// All graphics are pages out now so we can remove ourselves from the active plot list
 	if (m_visibleGraphics == ECvPlotGraphics::NONE)
 	{
@@ -1203,7 +1204,7 @@ bool CvPlot::updateSymbolsInternal()
 	MEMORY_TRACK_EXEMPT();
 	PROFILE_FUNC();
 
-	if ( !isGraphicsRequiredVisible(ECvPlotGraphics::SYMBOLS))
+	if ( !isGraphicsVisible(ECvPlotGraphics::SYMBOLS))
 	{
 		return false;
 	}
@@ -1340,7 +1341,7 @@ void CvPlot::updateCenterUnit()
 {
 	PROFILE_FUNC();
 
-	if (m_bInhibitCenterUnitCalculation)
+	if (m_bInhibitCenterUnitCalculation || !isGraphicsVisible(ECvPlotGraphics::UNIT))
 	{
 		//	Because we are inhibitting recalculation until all the adjusting code has run
 		//	(rather than have it update multiple times) the currently cached center unit
@@ -1355,10 +1356,7 @@ void CvPlot::updateCenterUnit()
 	CvUnit* pOldCenterUnit = getCenterUnit();
 	CvUnit* pNewCenterUnit = NULL;
 
-	// We check isGraphicsVisible instead of isGraphicsRequiredVisible because this function will be called
-	// to switch the visible unit graphics, e.g. on selection and combat, not just when showing or hiding due
-	// to paging.
-	if(isActiveVisible(true) && isGraphicsVisible(ECvPlotGraphics::UNIT))
+	if(isActiveVisible(true) /*&& isGraphicsVisible(ECvPlotGraphics::UNIT)*/)
 	{
 		pNewCenterUnit = getPreferredCenterUnit();
 	}
@@ -1380,17 +1378,17 @@ void CvPlot::updateCenterUnit()
 			}
 		}
 #endif
-		setCenterUnit(pNewCenterUnit);
 
-		if (pOldCenterUnit != NULL)
-		{
-			pOldCenterUnit->reloadEntity(true);
-		}
+		//if (pOldCenterUnit != NULL)
+		//{
+		//	pOldCenterUnit->reloadEntity(true);
+		//}
 
 		if (pNewCenterUnit != NULL)
 		{
 			pNewCenterUnit->reloadEntity(true);
 		}
+		setCenterUnit(pNewCenterUnit);
 	}
 	else
 	{
@@ -12141,7 +12139,7 @@ void CvPlot::updateFeatureSymbol(bool bForce)
 		gDLL->getEngineIFace()->RebuildTileArt(getViewportX(),getViewportY());
 	}
 
-	if ( !isGraphicsRequiredVisible(ECvPlotGraphics::FEATURE) )
+	if ( !isGraphicsVisible(ECvPlotGraphics::FEATURE) )
 	{
 		return;
 	}
@@ -12188,7 +12186,7 @@ void CvPlot::updateRouteSymbol(bool bForce, bool bAdjacent)
 	RouteTypes eRoute;
 	int iI;
 
-	if ( !isGraphicsRequiredVisible(ECvPlotGraphics::ROUTE) )
+	if ( !isGraphicsVisible(ECvPlotGraphics::ROUTE) )
 	{
 		return;
 	}
@@ -12248,7 +12246,7 @@ void CvPlot::updateRiverSymbol(bool bForce, bool bAdjacent)
 
 	CvPlot* pAdjacentPlot;
 
-	if ( !isGraphicsRequiredVisible(ECvPlotGraphics::RIVER) )
+	if ( !isGraphicsVisible(ECvPlotGraphics::RIVER) )
 	{
 		return;
 	}
@@ -12352,7 +12350,7 @@ void CvPlot::updateFlagSymbol()
 {
 	PROFILE_FUNC();
 
-	if ( !isGraphicsRequiredVisible(ECvPlotGraphics::UNIT) )
+	if ( !isGraphicsVisible(ECvPlotGraphics::UNIT) )
 	{
 		return;
 	}
@@ -14481,7 +14479,7 @@ void CvPlot::setLayoutDirty(bool bDirty)
 
 bool CvPlot::updatePlotBuilder()
 {
-	if ( !isGraphicsRequiredVisible(ECvPlotGraphics::FEATURE) )
+	if ( !isGraphicsVisible(ECvPlotGraphics::FEATURE) )
 	{
 		return false;
 	}

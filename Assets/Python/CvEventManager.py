@@ -13,6 +13,7 @@ import CvScreensInterface
 import Popup as PyPopup
 import CvAdvisorUtils
 import DebugUtils
+import SdToolKit as SDTK
 
 # globals
 GC = CyGlobalContext()
@@ -275,7 +276,8 @@ class CvEventManager:
 					"PROMOTION_SEA_HUNTER_GREAT"	: GC.getInfoTypeForString('PROMOTION_SEA_HUNTER_GREAT'),
 					"PROMOTION_SNEAK"				: GC.getInfoTypeForString('PROMOTION_SNEAK'),
 					"PROMOTION_MARAUDER"			: GC.getInfoTypeForString('PROMOTION_MARAUDER'),
-					"PROMOTION_INDUSTRYESPIONAGE"	: GC.getInfoTypeForString('PROMOTION_INDUSTRYESPIONAGE')
+					"PROMOTION_INDUSTRYESPIONAGE"	: GC.getInfoTypeForString('PROMOTION_INDUSTRYESPIONAGE'),
+					"PROMOTION_RETINUE_MESSENGER"	: GC.getInfoTypeForString('PROMOTION_RETINUE_MESSENGER')
 				}
 				self.mapDomain = {
 					"DOMAIN_LAND"		: GC.getInfoTypeForString('DOMAIN_LAND'),
@@ -862,6 +864,22 @@ class CvEventManager:
 		iRespawn1 = mapPromoType['PROMOTION_LIVE1']
 		bRespawn2 = CyUnitL.isHasPromotion(iRespawn2)
 
+		# Messenger (Hero) promo
+		if CyUnitW.isHasPromotion(mapPromoType['PROMOTION_RETINUE_MESSENGER']):
+			# 10% chance
+			if not GAME.getSorenRandNum(10, "Gods"):
+
+				if not SDTK.sdObjectExists('Promo', CyUnitW):
+					CyUnitW.setDamage(0, False)
+					SDTK.sdObjectInit('Promo', CyUnitW, {'HealTurn' : GAME.getGameTurn()})
+				else:
+					iHealTurn = SDTK.sdObjectGetVal('Promo', CyUnitW, 'HealTurn')
+					iTurn = GAME.getGameTurn()
+					if iHealTurn is None or iTurn > iHealTurn:
+						CyUnitW.setDamage(0, False)
+						SDTK.sdObjectSetVal('Promo', CyUnitW, 'HealTurn', iTurn)
+
+		# Respawn promo
 		if CyUnitL.isHasPromotion(iRespawn1) or bRespawn2:
 			iUnit = CyUnitL.getUnitType()
 			iX = -1
@@ -2107,7 +2125,18 @@ class CvEventManager:
 		CvAdvisorUtils.unitBuiltFeats(CyCity, CyUnit)
 		CyPlayer = GC.getPlayer(CyUnit.getOwner())
 		iUnit = CyUnit.getUnitType()
-
+		'''
+		## Hero Movie (Not implemented yet)
+		iPlayer = CyUnit.getOwner()
+		if not self.bNetworkMP and iPlayer == GAME.getActivePlayer() and isWorldUnitClass(CyUnit.getUnitClassType()):
+			popupInfo = CyPopupInfo()
+			popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
+			popupInfo.setData1(iUnit)
+			popupInfo.setData2(CyCity.getID())
+			popupInfo.setData3(4)
+			popupInfo.setText("showWonderMovie")
+			popupInfo.addPopup(iPlayer)
+		'''
 		# Star Signs
 		if not CyUnit.isNPC() and not GAME.getSorenRandNum(100, "Random to get a Sign"):
 			# 1% chance of getting a "sign promotion"

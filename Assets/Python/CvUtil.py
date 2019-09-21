@@ -291,6 +291,11 @@ def sendMessage(szTxt, iPlayer=None, iTime=16, szIcon=None, eColor=-1, iMapX=-1,
 			iPlayer = GC.getGame().getActivePlayer()
 		if iPlayer == -1: return
 
+		if GC.getGame().getAIAutoPlay(iPlayer):
+			szIcon = None
+			iMapX = iMapY = iTime = -1
+			bForce = bOffArrow = bOnArrow = False
+
 		CyIF.addMessage(iPlayer, bForce, iTime, SR.aFontList[5] + szTxt, szSound, eMsgType, szIcon, eColor, iMapX, iMapY, bOffArrow, bOnArrow)
 
 def sendImmediateMessage(szTxt, szSound=None):
