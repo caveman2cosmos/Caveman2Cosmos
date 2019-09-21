@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Tim McCracken (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -12,7 +12,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_INFILTRATE_HELP</Tag>
-		<English>This order will have the Spy or Criminal infiltrate a foreign city to bring home useful information (Espionage Points) about the rival. Spies use Espionage Points and are consumed.  Criminals must pass an investigation check to be successful.  If they are, they are sent back to the capital.  Otherwise they become wanted and lose the rest of their movement for that turn.</English>
+		<English>This order will have the Spy or Criminal infiltrate a foreign city to bring home useful information (Espionage Points) about the rival. Spies use Espionage Points and are consumed.  Criminals must pass an investigation check to be successful.  If they are, they are sent back to the capital.  Otherwise, they become wanted and lose the rest of their movement for that turn.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CONDUCT_TRADE_MISSION_HELP</Tag>

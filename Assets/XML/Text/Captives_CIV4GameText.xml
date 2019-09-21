@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -109,7 +109,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FREED_SLAVE_PEDIA</Tag>
-		<English>If you capture a city which has settled slaves in it some of them will become eligable for upgrade into workers. The cost of the upgrade represents the cost of providing them with the tools and infrastructure your other workers have.</English>
+		<English>If you capture a city which has settled slaves in it some of them will become eligible for upgrade into workers. The cost of the upgrade represents the cost of providing them with the tools and infrastructure your other workers have.</English>
 		<Italian>Se catturi una città in cui sono stanziati degli schiavi, alcuni di essi potrebbero diventare lavoratori. Il costo dei miglioramenti rappresenta il costo del fornirli con gli utensili e le infrastrutture che gli altri tuoi lavoratori hanno.</Italian>
 	</TEXT>
 	<TEXT>
@@ -161,7 +161,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_IMMIGRANT</Tag>
-		<English>Upgrade a Captive to a Immigrant.</English>
+		<English>Upgrade a Captive to an Immigrant.</English>
 		<French>Convertir le prisonnier en Immigrant.</French>
 		<Italian>Migliora il tuo prigioniero in un immigrante.</Italian>
 		<Polish>Ulepsz Jeńca do Immigranta.</Polish>
@@ -244,7 +244,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_ARCHER</Tag>
-		<English>Upgrade a Captive to a Archer.</English>
+		<English>Upgrade a Captive to an Archer.</English>
 		<French>Convertir le Prisonnier en Archer.</French>
 		<Italian>Migliora il tuo prigioniero in un arciere.</Italian>
 		<Polish>Ulepsz Jeńca do Łucznika.</Polish>
@@ -265,7 +265,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_AXEMAN</Tag>
-		<English>Upgrade a Captive to a Axeman.</English>
+		<English>Upgrade a Captive to an Axeman.</English>
 		<French>Convertir le Prisonnier en Guerrier avec hache.</French>
 		<Italian>Migliora il tuo prigioniero in un guerriero con ascia.</Italian>
 		<Polish>Ulepsz Jeńca do Topornika.</Polish>

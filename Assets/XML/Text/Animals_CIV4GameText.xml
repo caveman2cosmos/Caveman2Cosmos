@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_MYTH_REQUIRE</Tag>
@@ -225,7 +225,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARCTICFOX_PEDIA</Tag>
-		<English>The arctic fox, also known as the white fox, polar fox, or snow fox, is a small fox native to the Arctic regions of the Northern Hemisphere and common throughout the Arctic tundra biome. It is well adapted to living in cold environments. [PARAGRAPH:2]In C2C for game balance the Artic Fox may appear in the Antarctic.[PARAGRAPH:2]Source: Wikipedia</English>
+		<English>The arctic fox, also known as the white fox, polar fox, or snow fox, is a small fox native to the Arctic regions of the Northern Hemisphere and common throughout the Arctic tundra biome. It is well adapted to living in cold environments. [PARAGRAPH:2]In C2C for game balance the Arctic Fox may appear in the Antarctic.[PARAGRAPH:2]Source: Wikipedia</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ARCTICFOX_HELP</Tag>
@@ -269,11 +269,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DHOLE_PEDIA</Tag>
-		<English>The dhole (Cuon alpinus), also called the Asiatic wild dog or Indian wild dog, is a species of canid native to South and Southeast Asia. It is the only extant member of the genus Cuon, which differs from Canis by the reduced number of molars and greater number of teats. The dholes are classed as endangered by the IUCN, due to ongoing habitat loss, depletion of its prey base, competition from other predators, persecution and possibly diseases from domestic and feral dogs.[PARAGRAPH:2]The dhole is a highly social animal, living in large clans which occasionally split up into small packs to hunt. It primarily preys on medium-sized ungulates, which it hunts by tiring them out in long chases, and kills by disemboweling them. Unlike most social canids (but similar to African wild dogs), dholes let their pups eat first at a kill. Though fearful of humans, dhole packs are bold enough to attack large and dangerous animals such as wild boar, water buffalo, and even tigers.[PARAGRAPH:2]Source: Wikipedia</English>
+		<English>The dhole (Cuon alpinus), also called the Asiatic wild dog or Indian wild dog, is a species of canid native to South and Southeast Asia. It is the only extant member of the genus Cuon, which differs from Canis by the reduced number of molars and greater number of teats. The dholes are classed as endangered by the IUCN, due to ongoing habitat loss, depletion of its prey base, competition from other predators, persecution and possibly diseases from domestic and feral dogs.[PARAGRAPH:2]The dhole is a highly social animal, living in large clans which occasionally split up into small packs to hunt. It primarily preys on medium-sized ungulates, which it hunts by tiring them out in long chases, and kills by disemboweling them. Unlike most social canids (but similar to African wild dogs), dholes let their pups eat first at a kill. Though fearful of humans, dhole packs are bold enough to attack large and dangerous animals such as wild boar, water buffalo, and even tigers.[PARAGRAPH:2]Source: Wikipedia.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DHOLE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Dhole[NEWLINE][ICON_BULLET]Myth of Canines[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Dhole[NEWLINE][ICON_BULLET]Myth of Canines[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Cuon d'Asie[NEWLINE][ICON_BULLET]Myth of Canines[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure</French>
 	</TEXT>
 	<TEXT>
@@ -307,7 +307,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DINGO_PEDIA</Tag>
-		<English>The dingo (Canis lupus dingo) is a free-ranging dog found mainly in Australia, as well as Southeast Asia, where it is said to have originated. It is currently classified as a subspecies of the grey wolf, Canis lupus.[PARAGRAPH:2]The dingo's habitat ranges from deserts to grasslands and the edges of forests. Dingoes will normally make their dens in deserted rabbit holes and hollow logs close to an essential supply of water.[PARAGRAPH:2]The dingo is the largest terrestrial predator in Australia, and plays an important role as an apex predator. However, the dingo is seen as a pest by livestock farmers due to attacks on animals. Conversely, their predation on rabbits, kangaroos and rats may be of benefit to graziers.[PARAGRAPH:2]For many Australians, the dingo is a cultural icon. There is fear of the species becoming extinct. The dingo is seen by many as being responsible for thylacine extinction on the Australian mainland about two thousand years ago, although a recent study challenges this view. Dingoes have a prominent role in the culture of Aboriginal Australians as a feature of stories and ceremonies, and they are depicted on rock carvings and cave paintings.[PARAGRAPH:2]Source: Wikipedia[PARAGRAPH:2]Note: Not the same as the American Dingo from Southeastern  USA.</English>
+		<English>The dingo (Canis lupus dingo) is a free-ranging dog found mainly in Australia, as well as Southeast Asia, where it is said to have originated. It is currently classified as a subspecies of the gray wolf, Canis lupus.[PARAGRAPH:2]The dingo's habitat ranges from deserts to grasslands and the edges of forests. Dingoes will normally make their dens in deserted rabbit holes and hollow logs close to an essential supply of water.[PARAGRAPH:2]The dingo is the largest terrestrial predator in Australia, and plays an important role as an apex predator. However, the dingo is seen as a pest by livestock farmers due to attacks on animals. Conversely, their predation on rabbits, kangaroos and rats may be of benefit to graziers.[PARAGRAPH:2]For many Australians, the dingo is a cultural icon. There is fear of the species becoming extinct. The dingo is seen by many as being responsible for thylacine extinction on the Australian mainland about two thousand years ago, although a recent study challenges this view. Dingoes have a prominent role in the culture of Aboriginal Australians as a feature of stories and ceremonies, and they are depicted on rock carvings and cave paintings.[PARAGRAPH:2]Source: Wikipedia[PARAGRAPH:2]Note: Not the same as the American Dingo from Southeastern USA.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DINGO</Tag>
@@ -316,7 +316,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DINGO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Dingo[NEWLINE][ICON_BULLET]Dog Breeder and Kennels[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Dingo[NEWLINE][ICON_BULLET]Dog Breeder and Kennels[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Dingo[NEWLINE][ICON_BULLET]Dog Breeder and Kennels[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure</French>
 	</TEXT>
 	<TEXT>
