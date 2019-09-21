@@ -66,15 +66,16 @@ def autocorrect(files, mode, args):
             #nspace = namespace(root)
             nsmap = {'': namespace(root)}
             # .register_namespace('', nspace)
-            for text_elem in root.findall('TEXT', nsmap):
-                tag_elem = text_elem.find('Tag', nsmap)
-                if tag_elem is not None and tag_elem.text not in ignore_tags:
-                    eng_elem = text_elem.find('English', nsmap)
-                    if eng_elem is not None:
-                        autocorrect_element(
-                            eng_elem, tag_elem.text, ignore_words, ignore_tags, ignore_rules, mode, '  ', fancy, spell, google, languagetool_sp)
-            if mode != Mode.DETECT:
-                etree.ElementTree(root).write(filename, encoding="utf-8", xml_declaration=True, pretty_print=True)
+            try:
+                for text_elem in root.findall('TEXT', nsmap):
+                    tag_elem = text_elem.find('Tag', nsmap)
+                    if tag_elem is not None and tag_elem.text not in ignore_tags:
+                        eng_elem = text_elem.find('English', nsmap)
+                        if eng_elem is not None:
+                            autocorrect_element(eng_elem, tag_elem.text, ignore_words, ignore_tags, ignore_rules, mode, '  ', fancy, spell, google, languagetool_sp)
+            finally:
+                if mode != Mode.DETECT:
+                    etree.ElementTree(root).write(filename, encoding="utf-8", xml_declaration=True, pretty_print=True)
     except ExitEarly:
         print('\n\nExited early, progress has been saved')
         pass

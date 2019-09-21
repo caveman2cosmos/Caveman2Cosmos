@@ -23,3 +23,5 @@ heathlands
 Akkadian
 Abu
 Simbel
+DmgChange%%
+spearmen
