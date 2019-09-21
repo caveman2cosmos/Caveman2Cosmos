@@ -1380,17 +1380,17 @@ void CvPlot::updateCenterUnit()
 			}
 		}
 #endif
-		setCenterUnit(pNewCenterUnit);
 
-		if (pOldCenterUnit != NULL)
-		{
-			pOldCenterUnit->reloadEntity(true);
-		}
+		//if (pOldCenterUnit != NULL)
+		//{
+		//	pOldCenterUnit->reloadEntity(true);
+		//}
 
 		if (pNewCenterUnit != NULL)
 		{
 			pNewCenterUnit->reloadEntity(true);
 		}
+		setCenterUnit(pNewCenterUnit);
 	}
 	else
 	{
