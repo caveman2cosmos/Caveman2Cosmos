@@ -14,10 +14,10 @@ options:
   commit_groups:
     group_by: Type
     title_maps:
-      feat: Features
-      fix: Bug Fixes
-      balance: Balance
-      perf: Performance Improvements
+      feat: "Features :hammer:"
+      fix: "Bug Fixes :sniper::rotfl:"
+      balance: "Balance :think:"
+      perf: "Performance Improvements :whipped:"
   header:
     pattern: "^(\\w*)(?:\\(([\\w\\$\\.\\-\\*\\s]*)\\))?\\:\\s(.*)$"
     pattern_maps:

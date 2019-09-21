@@ -203,10 +203,10 @@ function WriteStreamHeader {
   Write-Verbose "Preparing stream header section..."
 
   Add-Content -value "SRCSRV: ini ------------------------------------------------" -path $streamPath
-  Add-Content -value "VERSION=1" -path $streamPath
-  Add-Content -value "INDEXVERSION=2" -path $streamPath
-  Add-Content -value "VERCTL=Archive" -path $streamPath
-  Add-Content -value ("DATETIME=" + ([System.DateTime]::Now)) -path $streamPath
+  Add-Content -value "VERSION=2" -path $streamPath
+  # Add-Content -value "INDEXVERSION=2" -path $streamPath
+  # Add-Content -value "VERCTL=http" -path $streamPath
+  # Add-Content -value ("DATETIME=" + ([System.DateTime]::Now)) -path $streamPath
 }
 
 ###############################################################
@@ -217,11 +217,12 @@ function WriteStreamVariables {
   Write-Verbose "Preparing stream variables section..."
 
   Add-Content -value "SRCSRV: variables ------------------------------------------" -path $streamPath
-  Add-Content -value "SRCSRVVERCTRL=http" -path $streamPath
+  Add-Content -value "TRGFILE=%targ%\%fnbksl%(%var3%/%var4%/%var5%)" -path $streamPath
   Add-Content -value "HTTP_ALIAS=$gitHubUrl" -path $streamPath
-  Add-Content -value "HTTP_EXTRACT_TARGET=%HTTP_ALIAS%/%var2%/%var3%/var4%/%var5%" -path $streamPath
-  Add-Content -value "SRCSRVTRG=%http_extract_target%" -path $streamPath
-  Add-Content -value "SRCSRVCMD=" -path $streamPath
+  #Add-Content -value "SRCSRVVERCTRL=https" -path $streamPath
+  Add-Content -value "HTTP_EXTRACT_TARGET=%HTTP_ALIAS%/%var2%/%var3%/%var4%/%var5%" -path $streamPath
+  Add-Content -value "SRCSRVTRG=%TRGFILE%" -path $streamPath
+  Add-Content -value "SRCSRVCMD=powershell -NoProfile -Command ""(new-object net.webclient).DownloadFile('%HTTP_EXTRACT_TARGET%','%TRGFILE%')""" -path $streamPath
 }
 
 ###############################################################
