@@ -3,6 +3,7 @@
 //
 #include "CvGameCoreDLL.h"
 #include "CvMapExternal.h"
+#include <time.h> 
 
 static char gVersionString[64] = { 0 };
 
@@ -480,9 +481,15 @@ cvInternalGlobals::~cvInternalGlobals()
 
 void CreateMiniDump(EXCEPTION_POINTERS *pep)
 {
-	_TCHAR filename[100];
+	_TCHAR filename[256];
 
-	_stprintf(filename, _T("MiniDump-%s.dmp"), C2C_VERSION);
+	time_t rawtime;
+	struct tm* timeinfo;
+	time (&rawtime);
+	timeinfo = localtime (&rawtime);
+
+	_stprintf(filename, _T("MiniDump-%s-%d%02d%02d-%02d%02d%02d.dmp"), C2C_VERSION, 1900 + timeinfo->tm_year, timeinfo->tm_mon, timeinfo->tm_mday, timeinfo->tm_hour, timeinfo->tm_min, timeinfo->tm_sec);
+
 	/* Open a file to store the minidump. */
 	HANDLE hFile = CreateFile(filename,
 	                          GENERIC_READ | GENERIC_WRITE,
