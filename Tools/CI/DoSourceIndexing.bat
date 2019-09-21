@@ -2,8 +2,7 @@
 
 PUSHD "%~dp0..\.."
 
-set GIT_SHA=%APPVEYOR_REPO_COMMIT% 
-
+set GIT_SHA=%APPVEYOR_REPO_COMMIT%
 if "%GIT_SHA%" == "" ( 
     call :get_git_sha
 )
@@ -11,7 +10,7 @@ if "%GIT_SHA%" == "" (
 rem for /f %%i in ('git config --global user.name') do set "GIT_USER=%%i"
 
 :: Important: github expects correct casing for names, so verifyLocalRepo is imperitive. Add  -verbose for more detailed output
-powershell -ExecutionPolicy Bypass -File ".\Tools\CI\github-sourceindexer.ps1" -dbgToolsPath "%cd%\Build\deps\srcsrv" -symbolsFolder "%cd%\Assets" -userId "caveman2cosmos" -repository "Caveman2Cosmos" -commit %GIT_SHA% -sourcesRoot "%cd%" -verifyLocalRepo
+powershell -ExecutionPolicy Bypass -File ".\Tools\CI\github-sourceindexer.ps1" -dbgToolsPath "%cd%\Build\deps\srcsrv" -symbolsFolder "%cd%\Assets" -userId "caveman2cosmos" -repository "Caveman2Cosmos" -commit %GIT_SHA% -sourcesRoot "%cd%" -ignoreUnknown -verifyLocalRepo
 set errorlevel_saved=%errorlevel%
 
 POPD
