@@ -1,13 +1,13 @@
 {{ $repourl := .Info.RepositoryURL -}}
 {{ range .Versions -}}
 {{ if .Commits }}
-[size=5][b] {{ .Tag.Name }} - {{ datetime "2006-01-02" .Tag.Date }} [/b][/size]
+[size=6][b] {{ .Tag.Name }} - {{ datetime "2006-01-02" .Tag.Date }} [/b][/size]
+
 {{ if .CommitGroups -}}
 {{ range .CommitGroups -}}
-[size=4]{{ .Title }}[/size]
-[list]
+[size=5]{{ .Title }}[/size][INDENT]
 {{ range .Commits -}}
-[*]{{ if .Scope }}[b]{{ .Scope }}:[/b] {{ end }}{{ .Subject }} ([i]{{ .Author.Name }}[/i])
+{{ if .Scope }}[b]{{ .Scope }}:[/b] {{ end }}{{ .Subject }} -- [i]{{ .Author.Name }}[/i]
 {{- if .Refs }}
 {{- range .Refs }}
 {{- if .Action }}
@@ -15,14 +15,14 @@
 {{- end }}
 {{- end }}
 {{- end }}
-[/list]
-{{ end }}
+{{ end -}}
+[/INDENT]
 {{- end }}
-{{- end }}
-[size=4]All Changes[/size]
-[list]
+{{ end -}}
+[size=5]All Changes[/size]
+[size=3][INDENT]
 {{ range .Commits -}}
-[*]{{ if .Scope }}[b]{{ .Scope }}:[/b] {{ .Subject }}{{ else }}{{ .Header }}{{ end }} ([i]{{ .Author.Name }}[/i])
+{{ if .Scope }}[b]{{ .Scope }}:[/b] {{ .Subject }}{{ else }}{{ .Header }}{{ end }} -- [i]{{ .Author.Name }}[/i]
 {{- if .Refs }}
 {{- range .Refs }}
 {{- if .Action }}
@@ -30,7 +30,7 @@
 {{- end }}
 {{- end }}
 {{- end }}
-[/list]
+{{ end -}}
+[/INDENT][/size]
 {{ end }}
-{{- end }}
 {{- end }}
