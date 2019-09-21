@@ -1,0 +1,36 @@
+{{ $repourl := .Info.RepositoryURL -}}
+{{ range .Versions -}}
+{{ if .Commits }}
+[size=5][b] {{ .Tag.Name }} - {{ datetime "2006-01-02" .Tag.Date }} [/b][/size]
+{{ if .CommitGroups -}}
+{{ range .CommitGroups -}}
+[size=4]{{ .Title }}[/size]
+[list]
+{{ range .Commits -}}
+[*]{{ if .Scope }}[b]{{ .Scope }}:[/b] {{ end }}{{ .Subject }} ([i]{{ .Author.Name }}[/i])
+{{- if .Refs }}
+{{- range .Refs }}
+{{- if .Action }}
+    [b]{{ .Action }} [url={{ $repourl }}/issues/{{ .Ref }}]#{{ .Ref }}[/url][/b]
+{{- end }}
+{{- end }}
+{{- end }}
+[/list]
+{{ end }}
+{{- end }}
+{{- end }}
+[size=4]All Changes[/size]
+[list]
+{{ range .Commits -}}
+[*]{{ if .Scope }}[b]{{ .Scope }}:[/b] {{ .Subject }}{{ else }}{{ .Header }}{{ end }} ([i]{{ .Author.Name }}[/i])
+{{- if .Refs }}
+{{- range .Refs }}
+{{- if .Action }}
+    [b]{{ .Action }} [url={{ $repourl }}/issues/{{ .Ref }}]#{{ .Ref }}[/url][/b]
+{{- end }}
+{{- end }}
+{{- end }}
+[/list]
+{{ end }}
+{{- end }}
+{{- end }}
