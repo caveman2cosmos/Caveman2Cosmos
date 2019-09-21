@@ -69,7 +69,7 @@
 	</Define>
 	<Define>
 		<DefineName>PAGE_IN_DIST_UNIT</DefineName>
-		<iDefineIntVal>999</iDefineIntVal>
+		<iDefineIntVal>15</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>PAGE_IN_DIST_CITY</DefineName>

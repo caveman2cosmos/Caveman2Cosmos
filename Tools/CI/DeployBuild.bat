@@ -90,6 +90,9 @@ xcopy "CIV_C2C.ico" "%build_dir%" /R /Y
 echo Generate SVN commit description...
 call Tools\CI\git-chglog_windows_amd64.exe --output "%root_dir%\commit_desc.md" --config Tools\CI\.chglog\config.yml %C2C_VERSION%
 
+echo Generate forum commit description...
+call Tools\CI\git-chglog_windows_amd64.exe --output "%root_dir%\commit_desc.txt" --config Tools\CI\.chglog\config-bbcode.yml %C2C_VERSION%
+
 :: GENERATE FULL CHANGELOG -------------------------------------
 echo Update full SVN changelog ...
 call Tools\CI\git-chglog_windows_amd64.exe --output "%build_dir%\CHANGELOG.md" --config Tools\CI\.chglog\config.yml
@@ -138,6 +141,15 @@ REM 7z a -x!.svn "%release_prefix%-CvGameCoreDLL-%APPVEYOR_BUILD_VERSION%.zip" "
 POPD
 
 echo Done!
+
+echo FORUM COMMIT MESSAGE ----------------------------------------------------------
+echo -------------------------------------------------------------------------------
+echo.
+echo [size=6][b]SVN-%svn_rev%[/b][/size]
+type "%root_dir%\commit_desc.txt"
+echo.
+echo -------------------------------------------------------------------------------
+echo -------------------------------------------------------------------------------
 exit /B 0
 
 :retry_svn_command

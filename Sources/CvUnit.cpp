@@ -987,6 +987,51 @@ void CvUnit::setupGraphical()
 	{
 		airCircle(true);
 	}
+	else
+	{
+		// This forces multi-unit graphics to update. If it isn't done then only 1 unit shows up, then the rest 
+		// appear 10s or more later. I tried every other command on the CvDLLEntityIFaceBase to trigger update
+		// of these graphics (I didn't test every animation and mission type though), but only found this 
+		// one that actually works.
+		ExecuteMove(0, false);
+
+		// TEST CODE (billw 21/9/2019) >>>>>>
+		// Anyone can remove this later if no problems show up with using ExecuteMode(0, false) above
+		// 
+		//static int mode = 1;
+		//switch (mode)
+		//{
+		//case 0: ExecuteMove(0, false); break;
+		//case 1: SetPosition(plot()); break;
+		//case 2: {
+		//	static AnimationTypes eAnim = NONE_ANIMATION;
+		//	static float fSpeed = 1.0f;
+		//	static bool bQueue = false;
+		//	static int iLayer = 0;
+		//	static float fStartPct = 0.0f;
+		//	static float fEndPct = 1.0f;
+		//	PlayAnimation(eAnim, fSpeed, bQueue, iLayer, fStartPct, fEndPct);
+		//	break;
+		//};
+		//case 3: setVisible(true); break;
+		//case 4: setVisible(false); setVisible(true); break;
+		//case 5: gDLL->getEntityIFace()->updatePosition(getEntity()); break;
+		//case 6: MoveTo(plot()); break;
+		//case 7: QueueMove(plot()); break;
+		//case 8: {
+		//	static MissionTypes eMission = NO_MISSION;
+		//	NotifyEntity(eMission);
+		//	break;
+		//}
+		//case 9: gDLL->getEntityIFace()->updateGraphicEra(getUnitEntity()); break;
+		//case 10: gDLL->getEntityIFace()->showPromotionGlow(getUnitEntity(), true); break;
+		//case 11: gDLL->getEntityIFace()->updateEnemyGlow(getUnitEntity()); break;
+		//case 12: gDLL->getEntityIFace()->updatePromotionLayers(getUnitEntity()); break;
+		//case 13: gDLL->getEntityIFace()->StopAnimation(getEntity()); break;
+		//default: break;
+		//};
+		// <<<<< TEST CODE
+	}
 }
 
 
