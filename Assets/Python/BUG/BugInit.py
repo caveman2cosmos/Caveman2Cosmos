@@ -10,6 +10,7 @@
 
 from CvPythonExtensions import *
 import BugConfig
+import BugOptions
 import SystemPaths as SP
 
 g_initDone = False
@@ -23,6 +24,8 @@ def init():
 	if g_initDone:
 		print "BugInit.init - already complete"
 		return True
+
+	BugOptions.initUserSettings()
 
 	import BugPath
 	BugPath.init()

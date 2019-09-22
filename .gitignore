@@ -44,3 +44,5 @@ Autocorrect.log
 Tools/Autocorrect/__pycache__/
 
 Tools/python/
+
+.vscode/.ropeproject/
