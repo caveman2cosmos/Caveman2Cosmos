@@ -12,11 +12,6 @@ GAME = GC.getGame()
 class CvTechChooser:
 
 	def __init__(self):
-		# Advanced Start
-		self.m_iSelectedTech = -1
-		self.m_bSelectedTechDirty = False
-		self.m_bTechRecordsDirty = False
-
 		# Cache minimum X coordinate per era for era partitioning.
 		minEraX = [""] * GC.getNumEraInfos() # (string > integer) is True
 		for iTech in xrange(GC.getNumTechInfos()):
@@ -30,6 +25,26 @@ class CvTechChooser:
 
 	def screen(self):
 		return CyGInterfaceScreen("TechChooser", self.screenId)
+
+	def cachePlayer(self, iPlayer):
+		self.iPlayer = iPlayer
+		self.CyPlayer = CyPlayer = GC.getPlayer(iPlayer)
+		self.CyTeam = CyTeam = GC.getTeam(CyPlayer.getTeam())
+
+		self.iEraFirst = self.iEraFinal = self.iCurrentEra = self.iCurrentEra0 = CyPlayer.getCurrentEra()
+
+		currentTechState = self.currentTechState
+		iTech = 0
+		while iTech < self.iNumTechs:
+			if CyTeam.isHasTech(iTech):
+				currentTechState[iTech] = "CIV_HAS_TECH"
+			elif CyPlayer.canEverResearch(iTech):
+				if CyPlayer.isResearchingTech(iTech):
+					currentTechState[iTech] = "CIV_IS_RESEARCHING"
+				else: currentTechState[iTech] = "CIV_TECH_AVAILABLE"
+			else:
+				currentTechState[iTech] = "CIV_NO_RESEARCH"
+			iTech += 1
 
 	def interfaceScreen(self, screenId):
 		if GAME.isPitbossHost(): return
@@ -65,23 +80,10 @@ class CvTechChooser:
 
 		self.iNumTechs = GC.getNumTechInfos()
 		self.iNumEras = GC.getNumEraInfos()
-		self.iPlayer = iPlayer = GAME.getActivePlayer()
-		self.CyPlayer = GC.getPlayer(iPlayer)
-		self.CyTeam = GC.getTeam(self.CyPlayer.getTeam())
-		self.iEraFirst = self.iEraFinal = self.iCurrentEra = self.iCurrentEra0 = self.CyPlayer.getCurrentEra()
-		self.aiCurrentState = [-1] * self.iNumTechs
-		self.Advisors = ["[ICON_STRENGTH]", "[ICON_RELIGION]", "[ICON_GOLD]", "[ICON_RESEARCH]", "[ICON_CULTURE]", "[ICON_FOOD]"]
-		self.updateBenefits()
-
-		self.iResearch0 = -1
-
-		self.colorNoResearch	= [222,  30,  30]
-		self.colorHasTech		= [222, 222, 222]
-		self.colorResearching	= [  0, 255,   0]
-
-		self.colorArchaicTech	= [128,  64,   0]
-		self.colorCoevalTech	= [ 64,  92, 164]
-		self.colorNeoTech		= [  0, 255, 255]
+		self.currentTechState = [-1] * self.iNumTechs
+		iPlayer = GAME.getActivePlayer()
+		self.cachePlayer(iPlayer)
+		self.cacheBenefits()
 
 		# Base Screen
 		screen = self.screen()
@@ -99,10 +101,15 @@ class CvTechChooser:
 		screen.setStackedBarColors(stackBar, InfoBarTypes.INFOBAR_STORED, GC.getInfoTypeForString("COLOR_RESEARCH_STORED"))
 		screen.setStackedBarColors(stackBar, InfoBarTypes.INFOBAR_RATE, GC.getInfoTypeForString("COLOR_RESEARCH_RATE"))
 		screen.setStackedBarColors(stackBar, InfoBarTypes.INFOBAR_EMPTY, GC.getInfoTypeForString("COLOR_EMPTY"))
-		screen.setImageButton("WID|TECH|CURRENT0", "", 256, 3, xRes - 512, 30, eWidGen, 0, 0)
+		screen.hide(stackBar)
+		screen.setImageButton("WID|TECH|CURRENT0", "", 256, 3, xRes - 512, 30, eWidGen, 1, 2)
+		screen.hide("WID|TECH|CURRENT0")
+		self.iResearch0 = -1
 
 		screen.setButtonGFC("ERA|Prev", "", "", xRes/2 + 8, yRes - 30, 24, 24, eWidGen, 1, 2, ButtonStyles.BUTTON_STYLE_ARROW_LEFT)
 		screen.setButtonGFC("ERA|Next", "", "", xRes/2 + 48, yRes - 30, 24, 24, eWidGen, 1, 2, ButtonStyles.BUTTON_STYLE_ARROW_RIGHT)
+
+		screen.setButtonGFC("ERA|All", "", "", 8, yRes - 28, 24, 24, eWidGen, 1, 2, ButtonStyles.BUTTON_STYLE_CITY_PLUS)
 		# Debug
 		import DebugUtils
 		if DebugUtils.bDebugMode:
@@ -112,6 +119,11 @@ class CvTechChooser:
 				CyPlayerX = GC.getPlayer(iPlayerX)
 				if CyPlayerX.isAlive():
 					screen.addPullDownString(DDB, CyPlayerX.getName(), iPlayerX, iPlayerX, iPlayer == iPlayerX)
+
+		self.iSelectedTech = -1
+		if self.CyPlayer.getAdvancedStartPoints() > -1:
+			screen.setButtonGFC("AddTechButton", TRNSLTR.getText("TXT_KEY_WB_AS_ADD_TECH", ()), "", xRes/2 - 158, 4, 150, 30, eWidGen, 1, 2, ButtonStyles.BUTTON_STYLE_STANDARD)
+			screen.hide("AddTechButton")
 
 		screen.setRenderInterfaceOnly(True)
 		screen.showWindowBackground(False)
@@ -163,10 +175,6 @@ class CvTechChooser:
 				screen.addPullDownString("PlatyHideFromEra", GC.getEraInfo(iEra).getDescription(), iEra, iEra, iEra == iEraFirst)
 			if iEra >= iEraFirst:
 				screen.addPullDownString("PlatyHideToEra", GC.getEraInfo(iEra).getDescription(), iEra, iEra, iEra == iEraFinal)
-
-		if CyPlayer.getAdvancedStartPoints() > -1:
-			self.m_bSelectedTechDirty = True
-			screen.setButtonGFC("AddTechButton", TRNSLTR.getText("TXT_KEY_WB_AS_ADD_TECH", ()), "", 8, yRes - 38, 150, 30, eWidGen, 1, 2, ButtonStyles.BUTTON_STYLE_STANDARD)
 
 		ScrPnl = "TechList"
 		iHeight = yRes - 85
@@ -226,15 +234,6 @@ class CvTechChooser:
 			screen.attachPanelAt(ScrPnl, "CELL" + szTech, "", "", True, False, PanelStyles.PANEL_STYLE_TECH, iX,  iY, wCell, hCell, eWidGen, 0, 0)
 			screen.setImageButtonAt(szTechRecord, ScrPnl, "", iX + 2, iY + 2, wCell - 8, hCell - 8, eWidGen, 1, 2)
 
-			if CyTeam.isHasTech(iTech):
-				self.aiCurrentState[iTech] = "CIV_HAS_TECH"
-			elif CyPlayer.isResearchingTech(iTech):
-				self.aiCurrentState[iTech] = "CIV_IS_RESEARCHING"
-			elif CyPlayer.canEverResearch(iTech):
-				self.aiCurrentState[iTech] = "CIV_TECH_AVAILABLE"
-			else:
-				self.aiCurrentState[iTech] = "CIV_NO_RESEARCH"
-
 			temp = "TechButtonID" + szTech
 			screen.addDDSGFCAt(temp, szTechRecord, CvTechInfo.getButton(), 6, 6, sIcon0, sIcon0, eWidGen, 1, 2, False)
 			screen.setHitTest(temp, HitTestTypes.HITTEST_NOHIT)
@@ -245,7 +244,7 @@ class CvTechChooser:
 				iTechX = CvTechInfo.getPrereqAndTechs(i)
 				if iTechX == -1: break
 				iX -= dx
-				screen.addDDSGFCAt(temp + str(i) + temp, szTechRecord, GC.getTechInfo(iTechX).getButton(), iX, 6, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_TECH_PREPREQ, iTechX, -1, False)
+				screen.setImageButtonAt("WID|TECH|REQ" + str(iTechX) + "|" + szTech, szTechRecord, GC.getTechInfo(iTechX).getButton(), iX, 6, sIcon1, sIcon1, eWidGen, 1, 2)
 
 			for i in xrange(NUM_OR_TECH_PREREQS):
 				iTechX = CvTechInfo.getPrereqOrTechs(i)
@@ -413,8 +412,142 @@ class CvTechChooser:
 		screen.setFocus(ScrPnl)
 		self.updateTechRecords(True)
 
+	def updateTechRecords(self, bForce):
+		if GAME.isPitbossHost(): return
 
-	def updateBenefits(self):
+		screen = self.screen()
+		eWidGen = WidgetTypes.WIDGET_GENERAL
+		eFontTitle = FontTypes.TITLE_FONT
+
+		CyPlayer = self.CyPlayer
+		iEraFirst = self.iEraFirst
+		iEraFinal = self.iEraFinal
+
+		# Progress Bar
+		iTech = CyPlayer.getCurrentResearch()
+		if self.iResearch0 != iTech:
+			if iTech > -1:
+				screen.hide("TC_Header")
+				iProgress = self.CyTeam.getResearchProgress(iTech)
+				iCost = self.CyTeam.getResearchCost(iTech)
+				iOverflow = CyPlayer.getOverflowResearch() * CyPlayer.calculateResearchModifier(iTech) /100
+				stackBar = "progressBar"
+				screen.setBarPercentage(stackBar, InfoBarTypes.INFOBAR_STORED, iProgress * 1.0 / iCost)
+				if iCost > iProgress + iOverflow:
+					screen.setBarPercentage(stackBar, InfoBarTypes.INFOBAR_RATE, CyPlayer.calculateResearchRate(iTech) * 1.0 / (iCost - iProgress - iOverflow))
+				screen.show(stackBar)
+
+				szTxt = "<font=3>" + GC.getTechInfo(iTech).getDescription() + ' (' + str(CyPlayer.getResearchTurnsLeft(iTech, True)) + ")"
+				screen.setLabel("Researching", "", szTxt, 1<<2, self.xRes/2, 6, 0, eFontTitle, eWidGen, iTech, 0)
+				screen.setHitTest("Researching", HitTestTypes.HITTEST_NOHIT)
+				screen.moveToFront("WID|TECH|CURRENT0")
+				screen.show("WID|TECH|CURRENT0")
+			else:
+				screen.hide("WID|TECH|CURRENT0")
+				screen.hide("Researching")
+				screen.hide("progressBar")
+				screen.show("TC_Header")
+			self.iResearch0 = iTech
+
+		if iEraFirst == iEraFinal:
+			bSingleEra = True
+			iCurrentEra = self.iCurrentEra
+			if iCurrentEra + 1 < self.iNumEras:
+				xNext = self.minEraX[iCurrentEra + 1]
+			else: xNext = self.minEraX[iCurrentEra]
+		else:
+			bSingleEra = False
+
+		currentTechState = self.currentTechState
+
+		# Analyze change
+		lChanged = []
+		iTech = 0
+		while iTech < self.iNumTechs:
+			CvTechInfo = GC.getTechInfo(iTech)
+			iX = CvTechInfo.getGridX()
+			if iX > 0:
+				iEra = CvTechInfo.getEra()
+				if bSingleEra and (iEra == iCurrentEra or iX == xNext) or not bSingleEra and iEra >= iEraFirst and iEra <= iEraFinal:
+
+					if currentTechState[iTech] == "CIV_HAS_TECH":
+						if bForce:
+							lChanged.append((iTech, CvTechInfo, iEra))
+
+					elif currentTechState[iTech] == "CIV_NO_RESEARCH":
+						if bForce:
+							lChanged.append((iTech, CvTechInfo, iEra))
+
+					elif CyPlayer.isResearchingTech(iTech):
+						currentTechState[iTech] = "CIV_IS_RESEARCHING"
+						lChanged.append((iTech, CvTechInfo, iEra))
+
+					elif bForce or currentTechState[iTech] != "CIV_TECH_AVAILABLE":
+						currentTechState[iTech] = "CIV_TECH_AVAILABLE"
+						lChanged.append((iTech, CvTechInfo, iEra))
+			iTech += 1
+
+		# Make change
+		if lChanged:
+			advisors = [unichr(8855), unichr(8857), unichr(8500), unichr(8501), unichr(8502), unichr(8483)]
+			iX = self.sIcon0 + 6
+			iCurrentEra0 = self.iCurrentEra0
+			szFont = self.aFontList[3]
+			while lChanged:
+				iTech, CvTechInfo, iEra = lChanged.pop()
+				szTech = str(iTech)
+
+				szState = currentTechState[iTech]
+
+				szTechID = "TechID" + szTech
+				szTechString = szFont
+				iAdvisor = CvTechInfo.getAdvisorType()
+				if iAdvisor > -1:
+					szTechString += advisors[iAdvisor]
+				if szState == "CIV_IS_RESEARCHING":
+					szTechString += str(CyPlayer.getQueuePosition(iTech)) + ") "
+				szTechString += CvTechInfo.getDescription()
+				screen.setLabelAt(szTechID, "WID|TECH|CHOICE" + szTech, szTechString, 1<<0, iX, 7, 0, eFontTitle, eWidGen, 1, 2)
+				screen.setHitTest(szTechID, HitTestTypes.HITTEST_NOHIT)
+
+				# Colours
+				if szState == "CIV_HAS_TECH":
+					screen.setPanelColor("CELL" + szTech, 222, 222, 222)
+
+				elif szState == "CIV_IS_RESEARCHING":
+					screen.setPanelColor("CELL" + szTech, 0, 255, 0)
+
+				elif szState == "CIV_TECH_AVAILABLE":
+					if iEra > iCurrentEra0:
+						r = 0; g = 255; b = 255
+					elif iEra < iCurrentEra0:
+						r = 128; g = 64; b = 0
+					else:
+						r = 64; g = 92; b = 164
+					screen.setPanelColor("CELL" + szTech, r, g, b)
+				else:
+					screen.setPanelColor("CELL" + szTech, 222, 30, 30)
+
+	def updateSelectedTech(self, screen, iTech):
+		self.iSelectedTech = iTech
+		screen.hide("ASPointsLabel")
+		screen.hide("AddTechButton")
+		if iTech > -1:
+			iCost = self.CyPlayer.getAdvancedStartTechCost(iTech, True)
+			if iCost > 0:
+				iPoints = self.CyPlayer.getAdvancedStartPoints()
+				screen.setLabel("ASPointsLabel", "", "<font=4>" + TRNSLTR.getText("TXT_KEY_WB_AS_SELECTED_TECH_COST", (iCost, iPoints)), 1<<0, 180, self.yRes - 42, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 2)
+				if iPoints >= iCost:
+					screen.show("AddTechButton")
+			szTxt = "<font=4b>" + GC.getTechInfo(iTech).getDescription() + " (" + str(iCost) + unichr(8500) + ')'
+			screen.setLabel("SelectedTechLabel", "", szTxt, 1<<0, self.xRes/2, 4, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 2)
+			screen.hide("TC_Header")
+		else:
+			screen.hide("SelectedTechLabel")
+			screen.show("TC_Header")
+
+
+	def cacheBenefits(self):
 		TechBenefits = {}
 		iNumTechs = self.iNumTechs
 		iNumDomains = int(DomainTypes.NUM_DOMAIN_TYPES)
@@ -609,154 +742,6 @@ class CvTechChooser:
 			iType += 1
 		self.TechBenefits = TechBenefits
 
-	def updateTechRecords(self, bForce):
-		if GAME.isPitbossHost(): return
-
-		eWidGen = WidgetTypes.WIDGET_GENERAL
-		eFontTitle = FontTypes.TITLE_FONT
-		screen = self.screen()
-		lChanged = []
-		CyPlayer = self.CyPlayer
-		CyTeam = self.CyTeam
-		iEraFirst = self.iEraFirst
-		iEraFinal = self.iEraFinal
-
-		# Progress Bar
-		iTech = CyPlayer.getCurrentResearch()
-		if self.iResearch0 != iTech:
-			if iTech > -1:
-				screen.hide("TC_Header")
-				iProgress = CyTeam.getResearchProgress(iTech)
-				iCost = CyTeam.getResearchCost(iTech)
-				iOverflow = CyPlayer.getOverflowResearch() * CyPlayer.calculateResearchModifier(iTech) /100
-				stackBar = "progressBar"
-				screen.setBarPercentage(stackBar, InfoBarTypes.INFOBAR_STORED, iProgress * 1.0 / iCost)
-				if iCost > iProgress + iOverflow:
-					screen.setBarPercentage(stackBar, InfoBarTypes.INFOBAR_RATE, CyPlayer.calculateResearchRate(iTech) * 1.0 / (iCost - iProgress - iOverflow))
-				screen.show(stackBar)
-
-				szTxt = "<font=3>" + GC.getTechInfo(iTech).getDescription() + ' (' + str(CyPlayer.getResearchTurnsLeft(iTech, True)) + ")"
-				screen.setLabel("Researching", "", szTxt, 1<<2, self.xRes/2, 6, 0, eFontTitle, eWidGen, iTech, 0)
-				screen.setHitTest("Researching", HitTestTypes.HITTEST_NOHIT)
-				screen.moveToFront("WID|TECH|CURRENT0")
-				screen.show("WID|TECH|CURRENT0")
-			else:
-				screen.hide("WID|TECH|CURRENT0")
-				screen.hide("Researching")
-				screen.hide("progressBar")
-				screen.show("TC_Header")
-			self.iResearch0 = iTech
-
-		if iEraFirst == iEraFinal:
-			bSingleEra = True
-			iCurrentEra = self.iCurrentEra
-			if iCurrentEra + 1 < self.iNumEras:
-				xNext = self.minEraX[iCurrentEra + 1]
-			else: xNext = self.minEraX[iCurrentEra]
-		else:
-			bSingleEra = False
-
-		# Analyze change
-		for iTech in xrange(self.iNumTechs):
-
-			CvTechInfo = GC.getTechInfo(iTech)
-			iX = CvTechInfo.getGridX()
-			if iX < 1: continue
-
-			iEra = CvTechInfo.getEra()
-			if bSingleEra:
-				if iEra != iCurrentEra and iX != xNext:
-					continue
-
-			elif iEra < iEraFirst or iEra > iEraFinal:
-				continue
-
-			if CyTeam.isHasTech(iTech):
-				if self.aiCurrentState[iTech] != "CIV_HAS_TECH":
-					self.aiCurrentState[iTech] = "CIV_HAS_TECH"
-					lChanged.append((iTech, CvTechInfo, iEra))
-				elif bForce:
-					lChanged.append((iTech, CvTechInfo, iEra))
-
-			elif CyPlayer.isResearchingTech(iTech):
-				self.aiCurrentState[iTech] = "CIV_IS_RESEARCHING"
-				lChanged.append((iTech, CvTechInfo, iEra))
-
-			elif CyPlayer.canEverResearch(iTech):
-				if self.aiCurrentState[iTech] != "CIV_TECH_AVAILABLE":
-					self.aiCurrentState[iTech] = "CIV_TECH_AVAILABLE"
-					lChanged.append((iTech, CvTechInfo, iEra))
-				elif bForce:
-					lChanged.append((iTech, CvTechInfo, iEra))
-
-			elif self.aiCurrentState[iTech] != "CIV_NO_RESEARCH":
-				self.aiCurrentState[iTech] = "CIV_NO_RESEARCH"
-				lChanged.append((iTech, CvTechInfo, iEra))
-			elif bForce:
-				lChanged.append((iTech, CvTechInfo, iEra))
-
-		# Make change
-		if lChanged:
-			iX = self.sIcon0 + 6
-			iCurrentEra0 = self.iCurrentEra0
-			iMinX = self.minEraX[iEraFirst]
-			wCell = self.wCell
-			while lChanged:
-				iTech, CvTechInfo, iEra = lChanged.pop()
-				szTech = str(iTech)
-
-				szState = self.aiCurrentState[iTech]
-
-				szTechID = "TechID" + szTech
-				szTechString = self.aFontList[5]
-				iAdvisor = CvTechInfo.getAdvisorType()
-				if iAdvisor > -1:
-					szTechString += TRNSLTR.getText(self.Advisors[iAdvisor], ())
-				if szState == "CIV_IS_RESEARCHING":
-					szTechString += str(CyPlayer.getQueuePosition(iTech)) + ") "
-				szTechString += CvTechInfo.getDescription()
-				screen.setLabelAt(szTechID, "WID|TECH|CHOICE" + szTech, szTechString, 1<<0, iX, 7, 0, eFontTitle, eWidGen, 1, 2)
-				screen.setHitTest(szTechID, HitTestTypes.HITTEST_NOHIT)
-
-				# Colours
-				if szState == "CIV_HAS_TECH":
-					screen.setPanelColor("CELL" + szTech, self.colorHasTech[0], self.colorHasTech[1], self.colorHasTech[2])
-
-				elif szState == "CIV_IS_RESEARCHING":
-					screen.setPanelColor("CELL" + szTech, self.colorResearching[0], self.colorResearching[1], self.colorResearching[2])
-
-				elif szState == "CIV_TECH_AVAILABLE":
-					if iEra > iCurrentEra0:
-						r, g, b = self.colorNeoTech
-					elif iEra < iCurrentEra0:
-						r, g, b = self.colorArchaicTech
-					else:
-						r, g, b = self.colorCoevalTech
-					screen.setPanelColor("CELL" + szTech, r, g, b)
-				else:
-					screen.setPanelColor("CELL" + szTech, self.colorNoResearch[0], self.colorNoResearch[1], self.colorNoResearch[2])
-
-	def updateSelectedTech(self):
-		screen = self.screen()
-		CyPlayer = GC.getPlayer(GAME.getActivePlayer())
-
-		szName = ""
-		iCost = 0
-		if self.m_iSelectedTech > -1:
-			szName = GC.getTechInfo(self.m_iSelectedTech).getDescription()
-			iCost = CyPlayer.getAdvancedStartTechCost(self.m_iSelectedTech, True)
-
-		screen.hide("ASPointsLabel")
-		screen.hide("AddTechButton")
-		if iCost > 0:
-			iPoints = CyPlayer.getAdvancedStartPoints()
-			screen.setLabel("ASPointsLabel", "", "<font=4>" + TRNSLTR.getText("TXT_KEY_WB_AS_SELECTED_TECH_COST", (iCost, iPoints)), 1<<0, 180, self.yRes - 42, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 2)
-			if iPoints >= iCost:
-				screen.show("AddTechButton")
-
-		szText = "<font=4>" + szName + " (" + str(iCost) + ')'
-		screen.setLabel("SelectedTechLabel", "", szText, 1<<2, self.xRes / 2, self.yRes - 42, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 2)
-
 	# Tooltip
 	def updateTooltip(self, screen, szText, xPos = -1, yPos = -1, uFont = ""):
 		if not szText:
@@ -778,30 +763,13 @@ class CvTechChooser:
 			self.bLockedTT = True
 
 	def update(self, fDelta):
-		screen = self.screen()
-		if CyInterface().isDirty(InterfaceDirtyBits.Advanced_Start_DIRTY_BIT):
-			CyInterface().setDirty(InterfaceDirtyBits.Advanced_Start_DIRTY_BIT, False)
-
-			if self.m_bSelectedTechDirty:
-				self.m_bSelectedTechDirty = False
-				self.updateSelectedTech()
-
-			if self.m_bTechRecordsDirty:
-				self.m_bTechRecordsDirty = False
-				self.updateTechRecords(True)
-
-			if GC.getPlayer(GAME.getActivePlayer()).getAdvancedStartPoints() < 0:
-				screen.hide("AddTechButton")
-				screen.hide("ASPointsLabel")
-				screen.hide("SelectedTechLabel")
-
 		if self.bLockedTT:
 			POINT = GC.getCursorPos()
 			iX = POINT.x + self.iOffsetTT[0]
 			iY = POINT.y + self.iOffsetTT[1]
 			if iX < 0: iX = 0
 			if iY < 0: iY = 0
-			screen.moveItem("Tooltip", iX, iY, 0)
+			self.screen().moveItem("Tooltip", iX, iY, 0)
 
 	def handleInput(self, inputClass):
 		screen = self.screen()
@@ -855,15 +823,16 @@ class CvTechChooser:
 		if iCode == 4: # Mouse Enter
 			if BASE == "WID":
 				if TYPE == "TECH":
-					szTxt = ""
 					if CASE[0] == "CURRENT":
-						szTxt += "Researching: "
-						iType = self.CyPlayer.getCurrentResearch()
-					szTxt += CyGameTextMgr().getTechHelp(iType, False, True, True, True, -1)
+						szTxt = "Researching: " + CyGameTextMgr().getTechHelp(self.CyPlayer.getCurrentResearch(), False, True, True, True, -1)
+					elif CASE[0] == "REQ":
+						szTxt = TRNSLTR.getText("TXT_KEY_MISC_TECH_REQUIRES_KNOWLEDGE_OF", (GC.getTechInfo(ID).getTextKey(),))
+					else:
+						szTxt = CyGameTextMgr().getTechHelp(ID, False, True, True, True, -1)
 					self.updateTooltip(screen, szTxt)
 				elif TYPE == "UNIT":
-					self.updateTooltip(screen, CyGameTextMgr().getUnitHelp(iType, False, True, True, None))
-					self.iUnitTT = iType
+					self.updateTooltip(screen, CyGameTextMgr().getUnitHelp(ID, False, True, True, None))
+					self.iUnitTT = ID
 					self.bUnitTT = True
 				elif TYPE == "BUILDING":
 					if CASE[0] == "OBS":
@@ -873,40 +842,35 @@ class CvTechChooser:
 					self.updateTooltip(screen, szTxt)
 
 		elif not iCode: # click
-			CyPlayer = self.CyPlayer
-			if CyPlayer.getAdvancedStartPoints() > -1:
-				if NAME == "AddTechButton":
-					if CyPlayer.getAdvancedStartTechCost(self.m_iSelectedTech, True) > -1:
-						CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_TECH, self.iPlayer, -1, -1, self.m_iSelectedTech, True)	#Action, Player, X, Y, Data, bAdd
-						self.m_bTechRecordsDirty = True
-						self.m_bSelectedTechDirty = True
-
-				elif iBtn == WidgetTypes.WIDGET_TECH_TREE:
-					self.m_iSelectedTech = iData1
-					self.updateSelectedTech()
-				return
 
 			if BASE == "WID":
 
 				if szFlag == "MOUSE_RBUTTONUP":
 					if TYPE == "UNIT":
-						UP.pediaJumpToUnit([iType])
+						UP.pediaJumpToUnit([ID])
 					elif TYPE == "BUILDING":
-						UP.pediaJumpToBuilding([iType])
+						UP.pediaJumpToBuilding([ID])
 					elif TYPE == "PROJECT":
-						UP.pediaJumpToProject([iType])
+						UP.pediaJumpToProject([ID])
 					elif TYPE == "PROMO":
-						UP.pediaJumpToPromotion([iType])
+						UP.pediaJumpToPromotion([ID])
 					elif TYPE == "TECH":
 						if CASE[0] == "CURRENT":
-							iType = self.CyPlayer.getCurrentResearch()
-						UP.pediaJumpToTech([iType])
+							UP.pediaJumpToTech([self.CyPlayer.getCurrentResearch()])
+						else: UP.pediaJumpToTech([iType])
 
 				elif szFlag == "MOUSE_LBUTTONUP":
 					if TYPE == "TECH":
-						if self.CyPlayer.canEverResearch(iType):
-							CyMessageControl().sendResearch(iType, bShift)
-							self.updateTechRecords(False)
+						if self.CyPlayer.getAdvancedStartPoints() > -1:
+							if CASE[0] == "CHOICE":
+								self.updateSelectedTech(screen, ID)
+						elif GAME.getActivePlayer() == self.iPlayer:
+							if CASE[0] == "CURRENT":
+								CyMessageControl().sendResearch(-1, bShift)
+								self.updateTechRecords(False)
+							elif CASE[0] == "CHOICE" and (self.currentTechState[iType] == "CIV_TECH_AVAILABLE" or not bShift and self.currentTechState[iType] == "CIV_IS_RESEARCHING"):
+								CyMessageControl().sendResearch(iType, bShift)
+								self.updateTechRecords(False)
 
 			elif BASE == "ERA":
 				if TYPE == "Next":
@@ -920,27 +884,29 @@ class CvTechChooser:
 						self.iCurrentEra -= 1
 						self.iEraFirst = self.iEraFinal = self.iCurrentEra
 						self.fullRefresh(screen)
+				elif TYPE == "All":
+					self.iEraFirst = 0
+					self.iEraFinal = self.iNumEras - 1
+					self.fullRefresh(screen)
 				else:
 					self.iEraFirst = self.iEraFinal = self.iCurrentEra = self.iCurrentEra0
 					self.fullRefresh(screen)
 
+			elif NAME == "AddTechButton":
+				CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_TECH, self.iPlayer, -1, -1, self.iSelectedTech, True)	#Action, Player, X, Y, Data, bAdd
+				self.updateSelectedTech(screen, -1)
+
 		elif iCode == 11: # List Select
 			if NAME == "TC_DebugDD":
-				iIndex = screen.getSelectedPullDownID(NAME)
-				self.iPlayer = iPlayer = screen.getPullDownData(NAME, iIndex)
-				self.CyPlayer = CyPlayer = GC.getPlayer(iPlayer)
-				self.CyTeam = GC.getTeam(CyPlayer.getTeam())
-				self.iEraFirst = self.iEraFinal = self.iCurrentEra = self.iCurrentEra0 = CyPlayer.getCurrentEra()
+				self.cachePlayer(screen.getPullDownData(NAME, screen.getSelectedPullDownID(NAME)))
 				self.fullRefresh(screen)
 
 			elif NAME == "PlatyHideFromEra":
-				iIndex = screen.getSelectedPullDownID("PlatyHideFromEra")
-				self.iEraFirst = screen.getPullDownData("PlatyHideFromEra", iIndex)
+				self.iEraFirst = screen.getPullDownData("PlatyHideFromEra", screen.getSelectedPullDownID("PlatyHideFromEra"))
 				self.fullRefresh(screen)
 
 			elif NAME == "PlatyHideToEra":
-				iIndex = screen.getSelectedPullDownID("PlatyHideToEra")
-				self.iEraFinal = screen.getPullDownData("PlatyHideToEra", iIndex)
+				self.iEraFinal = screen.getPullDownData("PlatyHideToEra", screen.getSelectedPullDownID("PlatyHideToEra"))
 				self.fullRefresh(screen)
 
 	def back(self):
@@ -967,7 +933,7 @@ class CvTechChooser:
 			CyInterface().setDirty(InterfaceDirtyBits.Advanced_Start_DIRTY_BIT, True)
 		del (
 			self.screenId, self.InputData, self.szTxtTT, self.iOffsetTT, self.bLockedTT, self.iUnitTT, self.bUnitTT,
-			self.xRes, self.yRes, self.aFontList, self.wCell,
-			self.colorNoResearch, self.colorHasTech, self.colorResearching, self.colorArchaicTech, self.colorCoevalTech, self.colorNeoTech,
-			self.iEraFirst, self.iEraFinal, self.iCurrentEra, self.iCurrentEra0, self.aiCurrentState, self.TechBenefits, self.Advisors
+			self.xRes, self.yRes, self.aFontList, self.wCell, self.hCell, self.sIcon0, self.sIcon1, self.iSelectedTech,
+			self.iNumTechs, self.iNumEras, self.iPlayer, self.CyPlayer, self.CyTeam, self.iResearch0,
+			self.iEraFirst, self.iEraFinal, self.iCurrentEra, self.iCurrentEra0, self.currentTechState, self.TechBenefits
 		)
