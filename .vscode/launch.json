@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${workspaceFolder}\\Tools\\Autocorrect\\Autocorrect.py",
             "console": "integratedTerminal",
-            "args": ["${workspaceFolder}\\Tools\\Autocorrect\\AutocorrectTest.xml", "--interactive", "--google"],
+            "args": ["${workspaceFolder}\\Tools\\Autocorrect\\AutocorrectTest.xml", "--interactive"],
             "cwd": "${workspaceFolder}\\Tools\\Autocorrect"
         },
         {
