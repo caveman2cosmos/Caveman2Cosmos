@@ -295,7 +295,7 @@ We default to all of them (1+2+128 = 131)
 	<Define>
 		<!-- Set to non-0 value to enable dynamic activation of unit graphics entities (reduced memory usage and growth) -->
 		<DefineName>ENABLE_DYNAMIC_UNIT_ENTITIES</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>TREAT_NEGATIVE_GOLD_AS_MAINTENANCE</DefineName>

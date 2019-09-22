@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Modified by the World of Civilization Team -->
+<!-- Game Text Infos -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_CRYSTAL_GLASSWARE</Tag>
+		<English>Crystal Glassware</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_CRYSTAL_GLASSWARE_PEDIA</Tag>
+		<English>Lead glass is a variety of glass in which lead replaces the calcium content of a typical potash glass. Lead glass contains typically 18-40 weight% lead(II) oxide (PbO), while modern [BOLD]lead crystal[\BOLD], historically also known as flint glass due to the original silica source, contains a minimum of 24% PbO. Lead glass is desirable owing to its decorative properties.[PARAGRAPH:2]Discovered by Englishman George Ravenscroft in 1674, the technique of adding lead oxide (in quantities of between 10 and 30%) improved the appearance of the glass and made it easier to melt using sea-coal as a furnace fuel. This technique also increased "working period" making the glass easier to manipulate.[PARAGRAPH:2]The term lead crystal is, by technicality, not an accurate term to describe lead glass, as glass, an amorphous solid, lacks a crystalline structure. The use of the term lead crystal remains popular for historical and commercial reasons. It is retained from the Venetian word cristallo to describe the rock crystal imitated by Murano glassmakers. This naming convention has been maintained to the present day to describe decorative hollow-ware.[PARAGRAPH:2]Lead crystal glassware was formerly used to store and serve drinks, but due to the potential health risks of lead, this is rare nowadays. One alternative material is [BOLD]crystal glass[\BOLD], in which barium oxide, zinc oxide, or potassium oxide are employed instead of lead oxide. Lead-free crystal has a similar refractive index to lead crystal, but it is lighter and it has less dispersive power.[PARAGRAPH:2]Source: Wikipedia.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_FAKE_GEMS</Tag>
+		<English>Fake Gems</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_FAKE_GEMS_PEDIA</Tag>
+		<English>Faience beads were common in the ancient world, being similar to glaze they were made by grinding quartz, mixing it with a colouring agent and firing. The Harappan craftsmen made fake Turquoise and Lapis beads that were considered better than the natural stone because they did not tarnish.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_MING_VASE</Tag>
+		<English>Ming Vase</English>
+	</TEXT>
+</Civ4GameText>
