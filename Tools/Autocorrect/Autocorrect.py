@@ -130,22 +130,22 @@ def apply_spellcheck(matches, ignore_words, spell, google):
             if not google_candidate or google_candidate == word:
                 match['rule']['id'] = '__ignore'
                 continue
+            candidates = [google_candidate] + candidates 
         except urllib.error.HTTPError as ex:
             print('**** ERROR: google spell check request failed: ' + ex.reason)
             print('**** Falling back to default spellcheck')
 
         candidates = candidates + [r['value'] for r in match['replacements']]
-
+        unique_candidates = []
+        [unique_candidates.append(x) for x in candidates if x not in unique_candidates]
         if len(candidates) == 0:
             match['rule']['id'] = '__ignore'
         else:
-            match['replacements'] = [{'value': v} for v in set(candidates)]
+            match['replacements'] = [{'value': v} for v in unique_candidates]
 
 def autocorrect_element(eng_elem, tag, ignore_words, ignore_tags, ignore_rules, mode, indent, fancy, langtool, spell, google):
     print_progress(Fore.BLUE)
-    #start = time.time()
-    results = langtool.check(eng_elem.text) # , disabled_rules=ignore_rules, pwl=ignore_words
-    # print('lt: ' + str(time.time() - start))
+    results = langtool.check(eng_elem.text)
     if results and 'matches' in results and len(results['matches']) > 0:
         apply_spellcheck(results['matches'], ignore_words, spell, google)
 
@@ -333,7 +333,7 @@ if __name__ == "__main__":
     parser.add_argument('--log', dest='log_file', action='store', help='override log file name', default='Autocorrect.log')
     parser.add_argument('--non-fancy', dest='fancy', action='store_false',
                             help="don't use colors for markup", default=True)
-    parser.add_argument('--dict', dest='spell_dict', help="use specified spellcheck dictionary", default='dicts\\en_full.json')
+    parser.add_argument('--dict', dest='spell_dict', help="use specified spellcheck dictionary", default=None)
     mode_group = parser.add_mutually_exclusive_group(required=False)
     mode_group.add_argument('--automatic', dest='automatic', action='store_true',
                             help='apply the proposed changes automatically')
