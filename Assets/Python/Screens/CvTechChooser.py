@@ -1,14 +1,12 @@
 from CvPythonExtensions import *
 import CvScreensInterface as UP
-import CvScreenEnums
 import HandleInputUtil
 import PythonToolTip as pyTT
-import BugUtil
+#import BugUtil
 
 GC = CyGlobalContext()
 TRNSLTR = CyTranslator()
 AFM = CyArtFileMgr()
-GAME = GC.getGame()
 
 CIV_NO_RESEARCH = -1
 CIV_HAS_TECH = 0
@@ -55,7 +53,7 @@ class CvTechChooser:
 			iTech += 1
 
 	def interfaceScreen(self, screenId):
-		if GAME.isPitbossHost(): return
+		if GC.getGame().isPitbossHost(): return
 		self.screenId = screenId
 		self.iNumTechs = GC.getNumTechInfos()
 		self.iNumEras = GC.getNumEraInfos()
@@ -89,7 +87,7 @@ class CvTechChooser:
 		eFontTitle = FontTypes.TITLE_FONT
 
 		self.currentTechState = [-1] * self.iNumTechs
-		iPlayer = GAME.getActivePlayer()
+		iPlayer = GC.getGame().getActivePlayer()
 		self.cachePlayer(iPlayer)
 
 		# Base Screen
@@ -139,7 +137,7 @@ class CvTechChooser:
 		self.fullRefresh(screen)
 
 	def fullRefresh(self, screen):
-		timer = BugUtil.Timer('fullRefresh')
+		#timer = BugUtil.Timer('fullRefresh')
 		iNumTechs = self.iNumTechs
 		iNumEras = self.iNumEras
 		iPlayer = self.iPlayer
@@ -249,10 +247,7 @@ class CvTechChooser:
 			iY = yEmptySpace + ((y0 - 1) * yCellDist) / 2
 			szTechRecord = TECH_CHOICE + szTech
 
-			#screen.attachPanelAt(ScrPnl, szTechRecord, "", "", True, False, PanelStyles.PANEL_STYLE_TECH, iX,  iY, wCell, hCell, eWidGen, 0, 0)
 			screen.setImageButtonAt(szTechRecord, ScrPnl, "", iX, iY, wCell, hCell, eWidGen, 1, 2)
-			screen.setStyle(szTechRecord , "GFC_Control_StandardButton_Style")
-			screen.setHitTest(szTechRecord, HitTestTypes.HITTEST_ON)
 			screen.addDDSGFCAt(ICON + szTech, szTechRecord, CvTechInfo.getButton(), 3, 5, sIcon0, sIcon0, eWidGen, 1, 2, False)
 			screen.setHitTest(ICON + szTech, HitTestTypes.HITTEST_NOHIT)
 
@@ -419,21 +414,16 @@ class CvTechChooser:
 				elif sType == "UnlockProcess":
 					screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, GC.getProcessInfo(iItem).getButton(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_PROCESS_INFO, iTech, iItem, False)
 				elif sType == "UnlockReligion":
-					if GAME.isOption(GameOptionTypes.GAMEOPTION_PICK_RELIGION):
-						szButton = AFM.getInterfaceArtInfo("INTERFACE_POPUPBUTTON_RELIGION").getPath()
-					else:
-						szButton = GC.getReligionInfo(iItem).getButton()
-					screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, szButton, iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_FOUND_RELIGION, iTech, iItem, False)
+					screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, GC.getReligionInfo(iItem).getButton(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_FOUND_RELIGION, iTech, iItem, False)
 				elif sType == "UnlockCorporation":
 					screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, GC.getCorporationInfo(iItem).getButton(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_FOUND_CORPORATION, iTech, iItem, False)
 				iX += dx
 				i += 1
 
-		timer.log()
+		#timer.log()
 		self.updateTechRecords(True)
 
 	def updateTechRecords(self, bForce):
-		timer = BugUtil.Timer('updateTechRecords')
 
 		screen = self.screen()
 		eWidGen = WidgetTypes.WIDGET_GENERAL
@@ -546,7 +536,6 @@ class CvTechChooser:
 					else:
 						screen.setStyle(szTechRecord, "Button_TechCoeval_Style")
 				else: screen.setStyle(szTechRecord, "Button_TechNo_Style")
-		timer.log()
 
 	def updateSelectedTech(self, screen, iTech):
 		self.iSelectedTech = iTech
@@ -792,17 +781,11 @@ class CvTechChooser:
 
 	def handleInput(self, inputClass):
 		screen = self.screen()
-		if not screen.isActive():
-			return
-		HandleInputUtil.debugInput(inputClass)
 		bAlt, bCtrl, bShift = self.InputData.getModifierKeys()
 		iCode	= inputClass.eNotifyCode
 		iData	= inputClass.iData
 		ID		= inputClass.iItemID
 		NAME	= inputClass.szFunctionName
-		iBtn	= inputClass.iButtonType
-		iData1	= inputClass.iData1
-		iData2	= inputClass.iData2
 		szFlag	= HandleInputUtil.MOUSE_FLAGS.get(inputClass.uiFlags, "UNKNOWN")
 
 
@@ -883,7 +866,7 @@ class CvTechChooser:
 						if self.CyPlayer.getAdvancedStartPoints() > -1:
 							if CASE[0] == "CHOICE":
 								self.updateSelectedTech(screen, ID)
-						elif GAME.getActivePlayer() == self.iPlayer:
+						elif GC.getGame().getActivePlayer() == self.iPlayer:
 							if CASE[0] == "CURRENT":
 								CyMessageControl().sendResearch(-1, bShift)
 								self.updateTechRecords(False)
@@ -949,7 +932,7 @@ class CvTechChooser:
 
 	def onClose(self):
 		print "Exit Tech Tree"
-		if GC.getPlayer(GAME.getActivePlayer()).getAdvancedStartPoints() > -1:
+		if GC.getPlayer(GC.getGame().getActivePlayer()).getAdvancedStartPoints() > -1:
 			CyInterface().setDirty(InterfaceDirtyBits.Advanced_Start_DIRTY_BIT, True)
 		del (
 			self.screenId, self.InputData, self.szTxtTT, self.iOffsetTT, self.bLockedTT, self.iUnitTT, self.bUnitTT,
