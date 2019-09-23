@@ -3,20 +3,25 @@ import CvScreensInterface as UP
 import CvScreenEnums
 import HandleInputUtil
 import PythonToolTip as pyTT
+import BugUtil
 
 GC = CyGlobalContext()
 TRNSLTR = CyTranslator()
 AFM = CyArtFileMgr()
 GAME = GC.getGame()
 
+CIV_NO_RESEARCH = -1
+CIV_HAS_TECH = 0
+CIV_TECH_AVAILABLE = 1
+CIV_IS_RESEARCHING = 2
+
 class CvTechChooser:
 
 	def __init__(self):
 		# Cache minimum X coordinate per era for era partitioning.
-		self.iNumTechs = GC.getNumTechInfos()
-		self.iNumEras = GC.getNumEraInfos()
-		minEraX = [""] * self.iNumEras # (string > integer) is True
-		for iTech in xrange(self.iNumTechs):
+		minEraX = [""] * GC.getNumEraInfos() # (string > integer) is True
+		iNumTechs = GC.getNumTechInfos()
+		for iTech in xrange(iNumTechs):
 			info = GC.getTechInfo(iTech)
 			iX = info.getGridX()
 			if iX > 0:
@@ -24,7 +29,7 @@ class CvTechChooser:
 				if minEraX[iEra] > iX:
 					minEraX[iEra] = iX
 		self.minEraX = minEraX
-		self.cacheBenefits()
+		self.cacheBenefits(iNumTechs)
 
 	def screen(self):
 		return CyGInterfaceScreen("TechChooser", self.screenId)
@@ -40,18 +45,20 @@ class CvTechChooser:
 		iTech = 0
 		while iTech < self.iNumTechs:
 			if CyTeam.isHasTech(iTech):
-				currentTechState[iTech] = "CIV_HAS_TECH"
+				currentTechState[iTech] = CIV_HAS_TECH
 			elif CyPlayer.canEverResearch(iTech):
 				if CyPlayer.isResearchingTech(iTech):
-					currentTechState[iTech] = "CIV_IS_RESEARCHING"
-				else: currentTechState[iTech] = "CIV_TECH_AVAILABLE"
+					currentTechState[iTech] = CIV_IS_RESEARCHING
+				else: currentTechState[iTech] = CIV_TECH_AVAILABLE
 			else:
-				currentTechState[iTech] = "CIV_NO_RESEARCH"
+				currentTechState[iTech] = CIV_NO_RESEARCH
 			iTech += 1
 
 	def interfaceScreen(self, screenId):
 		if GAME.isPitbossHost(): return
 		self.screenId = screenId
+		self.iNumTechs = GC.getNumTechInfos()
+		self.iNumEras = GC.getNumEraInfos()
 
 		import InputData
 		self.InputData = InputData.instance
@@ -73,10 +80,10 @@ class CvTechChooser:
 		elif yRes > 800:
 			self.sIcon0 = sIcon0 = 56
 		else:
-			self.sIcon0 = sIcon0 = 42
+			self.sIcon0 = sIcon0 = 48
 
-		self.hCell = sIcon0 + 16
-		self.sIcon1 = sIcon0 / 2 - 1
+		self.hCell = sIcon0 + 8
+		self.sIcon1 = sIcon0 / 2
 
 		eWidGen = WidgetTypes.WIDGET_GENERAL
 		eFontTitle = FontTypes.TITLE_FONT
@@ -92,7 +99,7 @@ class CvTechChooser:
 
 		screen.addPanel("TC_BarTop", "", "", True, False, 0, 0, xRes, 42, PanelStyles.PANEL_STYLE_TOPBAR)
 		screen.addPanel("TC_BarBot", "", "", True, False, 0, yRes - 42, xRes, 42, PanelStyles.PANEL_STYLE_BOTTOMBAR)
-		screen.setLabel("TC_Header", "",  "<font=4b>" + TRNSLTR.getText("TXT_KEY_TECH_CHOOSER_TITLE", ()), 1<<2, xRes/2, 4, 0, eFontTitle, eWidGen, 1, 2)
+		screen.setLabel("TC_Header", "", "<font=4b>" + TRNSLTR.getText("TXT_KEY_TECH_CHOOSER_TITLE", ()), 1<<2, xRes/2, 4, 0, eFontTitle, eWidGen, 1, 2)
 
 		screen.setText("TC_Exit", "", "<font=4b>" + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()), 1<<1, xRes - 8, 2, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
 
@@ -132,6 +139,7 @@ class CvTechChooser:
 		self.fullRefresh(screen)
 
 	def fullRefresh(self, screen):
+		timer = BugUtil.Timer('fullRefresh')
 		iNumTechs = self.iNumTechs
 		iNumEras = self.iNumEras
 		iPlayer = self.iPlayer
@@ -170,20 +178,24 @@ class CvTechChooser:
 		screen.addDropDownBoxGFC("PlatyHideToEra", xRes - 132, yRes - 33, 128, eWidGen, 1, 2, eFontTitle)
 		screen.addDropDownBoxGFC("PlatyHideFromEra", xRes - 268, yRes - 33, 128, eWidGen, 1, 2, eFontTitle)
 
-		for iEra in xrange(iNumEras):
+		iEra = 0
+		while iEra < iNumEras:
 			if iEra <= iEraFinal:
 				screen.addPullDownString("PlatyHideFromEra", GC.getEraInfo(iEra).getDescription(), iEra, iEra, iEra == iEraFirst)
-			if iEra >= iEraFirst:
+				if iEra == iEraFirst:
+					screen.addPullDownString("PlatyHideToEra", GC.getEraInfo(iEra).getDescription(), iEra, iEra, iEra == iEraFinal)
+			elif iEra >= iEraFirst:
 				screen.addPullDownString("PlatyHideToEra", GC.getEraInfo(iEra).getDescription(), iEra, iEra, iEra == iEraFinal)
+			iEra += 1
 
 		ScrPnl = "TechList"
-		iHeight = yRes - 85
-		screen.addScrollPanel(ScrPnl, "", -8, 29, xRes + 16, iHeight, PanelStyles.PANEL_STYLE_EXTERNAL)
+		dy = yRes - 85
+		screen.addScrollPanel(ScrPnl, "", -8, 29, xRes + 16, dy, PanelStyles.PANEL_STYLE_EXTERNAL)
 
 		sIcon0 = self.sIcon0
 		sIcon1 = self.sIcon1
 		hCell = self.hCell
-		yEmptySpace = (iHeight - 10 * hCell) / 10
+		yEmptySpace = (dy - 10 * hCell) / 10
 		if yEmptySpace < 0:
 			yEmptySpace = 0
 		yCellDist = yEmptySpace + hCell
@@ -206,12 +218,18 @@ class CvTechChooser:
 		yArrow2 = hCell / 4
 		yArrow3 = hCell*5/8
 		yArrow4 = hCell*3/4
-		xReq = wCell - 10
 		techBenefits = self.techBenefits
 		dx = sIcon1 + 1
 		iCount = 0
 		iMaxElements = (wCell - sIcon0 - 8) / dx
-		for iTech in xrange(iNumTechs):
+
+		CELL = "CELL"
+		ICON = "ICON"
+		TECH_CHOICE = "WID|TECH|CHOICE"
+		TECH_REQ = "WID|TECH|REQ"
+		iTech = -1
+		while iTech < iNumTechs - 1:
+			iTech += 1
 
 			CvTechInfo = GC.getTechInfo(iTech)
 			x0 = CvTechInfo.getGridX()
@@ -229,22 +247,22 @@ class CvTechChooser:
 			y0 = CvTechInfo.getGridY()
 			iX = (x0 - iMinX) * xCellDist
 			iY = yEmptySpace + ((y0 - 1) * yCellDist) / 2
-			szTechRecord = "WID|TECH|CHOICE" + szTech
+			szTechRecord = TECH_CHOICE + szTech
 
-			screen.attachPanelAt(ScrPnl, "CELL" + szTech, "", "", True, False, PanelStyles.PANEL_STYLE_TECH, iX,  iY, wCell, hCell, eWidGen, 0, 0)
-			screen.setImageButtonAt(szTechRecord, ScrPnl, "", iX + 2, iY + 2, wCell - 8, hCell - 8, eWidGen, 1, 2)
-
-			temp = "TechButtonID" + szTech
-			screen.addDDSGFCAt(temp, szTechRecord, CvTechInfo.getButton(), 6, 6, sIcon0, sIcon0, eWidGen, 1, 2, False)
-			screen.setHitTest(temp, HitTestTypes.HITTEST_NOHIT)
+			#screen.attachPanelAt(ScrPnl, szTechRecord, "", "", True, False, PanelStyles.PANEL_STYLE_TECH, iX,  iY, wCell, hCell, eWidGen, 0, 0)
+			screen.setImageButtonAt(szTechRecord, ScrPnl, "", iX, iY, wCell, hCell, eWidGen, 1, 2)
+			screen.setStyle(szTechRecord , "GFC_Control_StandardButton_Style")
+			screen.setHitTest(szTechRecord, HitTestTypes.HITTEST_ON)
+			screen.addDDSGFCAt(ICON + szTech, szTechRecord, CvTechInfo.getButton(), 3, 5, sIcon0, sIcon0, eWidGen, 1, 2, False)
+			screen.setHitTest(ICON + szTech, HitTestTypes.HITTEST_NOHIT)
 
 			# Requires
-			iX = xReq
+			iX = wCell
 			for i in xrange(NUM_AND_TECH_PREREQS):
 				iTechX = CvTechInfo.getPrereqAndTechs(i)
 				if iTechX == -1: break
 				iX -= dx
-				screen.setImageButtonAt("WID|TECH|REQ" + str(iTechX) + "|" + szTech, szTechRecord, GC.getTechInfo(iTechX).getButton(), iX, 6, sIcon1, sIcon1, eWidGen, 1, 2)
+				screen.setImageButtonAt(TECH_REQ + str(iTechX) + "|" + szTech, szTechRecord, GC.getTechInfo(iTechX).getButton(), iX, 2, sIcon1, sIcon1, eWidGen, 1, 2)
 
 			for i in xrange(NUM_OR_TECH_PREREQS):
 				iTechX = CvTechInfo.getPrereqOrTechs(i)
@@ -257,12 +275,12 @@ class CvTechChooser:
 
 				x1 = techInfoX.getGridX()
 				y1 = techInfoX.getGridY()
-				iX = (x1 - iMinX) * xCellDist + wCell - 6
+				iX = (x1 - iMinX) * xCellDist + wCell - 2
 				iY = yEmptySpace + ((y1 - 1) * yCellDist) / 2 - 4
 
 				xDiff = x0 - x1
 				yDiff = y0 - y1
-				xOff = xDiff * 64 + (xDiff - 1) * wCell
+				xOff = xDiff * 62 + (xDiff - 1) * wCell
 
 				if not yDiff:
 					screen.addDDSGFCAt("", ScrPnl, ARROW_X, iX, iY + yArrow0, xOff, 8, eWidGen, 1, 2, False)
@@ -411,11 +429,11 @@ class CvTechChooser:
 				iX += dx
 				i += 1
 
-		screen.setFocus(ScrPnl)
+		timer.log()
 		self.updateTechRecords(True)
 
 	def updateTechRecords(self, bForce):
-		if GAME.isPitbossHost(): return
+		timer = BugUtil.Timer('updateTechRecords')
 
 		screen = self.screen()
 		eWidGen = WidgetTypes.WIDGET_GENERAL
@@ -472,20 +490,20 @@ class CvTechChooser:
 				iEra = CvTechInfo.getEra()
 				if bSingleEra and (iEra == iCurrentEra or iX == xNext) or not bSingleEra and iEra >= iEraFirst and iEra <= iEraFinal:
 
-					if currentTechState[iTech] == "CIV_HAS_TECH":
+					if currentTechState[iTech] == CIV_HAS_TECH:
 						if bForce:
 							lChanged.append((iTech, CvTechInfo, iEra))
 
-					elif currentTechState[iTech] == "CIV_NO_RESEARCH":
+					elif currentTechState[iTech] == CIV_NO_RESEARCH:
 						if bForce:
 							lChanged.append((iTech, CvTechInfo, iEra))
 
 					elif CyPlayer.isResearchingTech(iTech):
-						currentTechState[iTech] = "CIV_IS_RESEARCHING"
+						currentTechState[iTech] = CIV_IS_RESEARCHING
 						lChanged.append((iTech, CvTechInfo, iEra))
 
-					elif bForce or currentTechState[iTech] != "CIV_TECH_AVAILABLE":
-						currentTechState[iTech] = "CIV_TECH_AVAILABLE"
+					elif bForce or currentTechState[iTech] != CIV_TECH_AVAILABLE:
+						currentTechState[iTech] = CIV_TECH_AVAILABLE
 						lChanged.append((iTech, CvTechInfo, iEra))
 			iTech += 1
 
@@ -495,40 +513,40 @@ class CvTechChooser:
 			iX = self.sIcon0 + 6
 			iCurrentEra0 = self.iCurrentEra0
 			szFont = self.aFontList[3]
+			TECH_CHOICE = "WID|TECH|CHOICE"
+			TECH_NAME = "TechName"
 			while lChanged:
 				iTech, CvTechInfo, iEra = lChanged.pop()
-				szTech = str(iTech)
+				szTechRecord = TECH_CHOICE + str(iTech)
 
 				szState = currentTechState[iTech]
 
-				szTechID = "TechID" + szTech
 				szTechString = szFont
 				iAdvisor = CvTechInfo.getAdvisorType()
 				if iAdvisor > -1:
 					szTechString += advisors[iAdvisor]
-				if szState == "CIV_IS_RESEARCHING":
+				if szState == CIV_IS_RESEARCHING:
 					szTechString += str(CyPlayer.getQueuePosition(iTech)) + ") "
 				szTechString += CvTechInfo.getDescription()
-				screen.setLabelAt(szTechID, "WID|TECH|CHOICE" + szTech, szTechString, 1<<0, iX, 7, 0, eFontTitle, eWidGen, 1, 2)
-				screen.setHitTest(szTechID, HitTestTypes.HITTEST_NOHIT)
+				screen.setLabelAt(TECH_NAME + str(iTech), szTechRecord, szTechString, 1<<0, iX, 5, 0, eFontTitle, eWidGen, 1, 2)
+				screen.setHitTest(TECH_NAME + str(iTech), HitTestTypes.HITTEST_NOHIT)
 
 				# Colours
-				if szState == "CIV_HAS_TECH":
-					screen.setPanelColor("CELL" + szTech, 222, 222, 222)
+				if szState == CIV_HAS_TECH:
+					screen.setStyle(szTechRecord, "Button_TechHas_Style")
 
-				elif szState == "CIV_IS_RESEARCHING":
-					screen.setPanelColor("CELL" + szTech, 0, 255, 0)
+				elif szState == CIV_IS_RESEARCHING:
+					screen.setStyle(szTechRecord, "Button_TechQueue_Style")
 
-				elif szState == "CIV_TECH_AVAILABLE":
+				elif szState == CIV_TECH_AVAILABLE:
 					if iEra > iCurrentEra0:
-						r = 0; g = 255; b = 255
+						screen.setStyle(szTechRecord, "Button_TechNeo_Style")
 					elif iEra < iCurrentEra0:
-						r = 128; g = 64; b = 0
+						screen.setStyle(szTechRecord, "Button_TechArchaic_Style")
 					else:
-						r = 64; g = 92; b = 164
-					screen.setPanelColor("CELL" + szTech, r, g, b)
-				else:
-					screen.setPanelColor("CELL" + szTech, 222, 30, 30)
+						screen.setStyle(szTechRecord, "Button_TechCoeval_Style")
+				else: screen.setStyle(szTechRecord, "Button_TechNo_Style")
+		timer.log()
 
 	def updateSelectedTech(self, screen, iTech):
 		self.iSelectedTech = iTech
@@ -549,8 +567,7 @@ class CvTechChooser:
 			screen.show("TC_Header")
 
 
-	def cacheBenefits(self):
-		iNumTechs = self.iNumTechs
+	def cacheBenefits(self, iNumTechs):
 		techBenefits = []
 		iNumDomains = int(DomainTypes.NUM_DOMAIN_TYPES)
 		iNumCommerce = int(CommerceTypes.NUM_COMMERCE_TYPES)
@@ -870,7 +887,7 @@ class CvTechChooser:
 							if CASE[0] == "CURRENT":
 								CyMessageControl().sendResearch(-1, bShift)
 								self.updateTechRecords(False)
-							elif CASE[0] == "CHOICE" and (self.currentTechState[iType] == "CIV_TECH_AVAILABLE" or not bShift and self.currentTechState[iType] == "CIV_IS_RESEARCHING"):
+							elif CASE[0] == "CHOICE" and (self.currentTechState[iType] == CIV_TECH_AVAILABLE or not bShift and self.currentTechState[iType] == CIV_IS_RESEARCHING):
 								CyMessageControl().sendResearch(iType, bShift)
 								self.updateTechRecords(False)
 
@@ -887,9 +904,10 @@ class CvTechChooser:
 						self.iEraFirst = self.iEraFinal = self.iCurrentEra
 						self.fullRefresh(screen)
 				elif TYPE == "All":
-					self.iEraFirst = 0
-					self.iEraFinal = self.iNumEras - 1
-					self.fullRefresh(screen)
+					if self.iEraFirst != 0 or self.iEraFinal != self.iNumEras - 1:
+						self.iEraFirst = 0
+						self.iEraFinal = self.iNumEras - 1
+						self.fullRefresh(screen)
 				else:
 					self.iEraFirst = self.iEraFinal = self.iCurrentEra = self.iCurrentEra0
 					self.fullRefresh(screen)
@@ -936,6 +954,6 @@ class CvTechChooser:
 		del (
 			self.screenId, self.InputData, self.szTxtTT, self.iOffsetTT, self.bLockedTT, self.iUnitTT, self.bUnitTT,
 			self.xRes, self.yRes, self.aFontList, self.wCell, self.hCell, self.sIcon0, self.sIcon1, self.iSelectedTech,
-			self.iPlayer, self.CyPlayer, self.CyTeam, self.iResearch0, self.currentTechState,
+			self.iPlayer, self.CyPlayer, self.CyTeam, self.iResearch0, self.currentTechState, self.iNumTechs, self.iNumEras,
 			self.iEraFirst, self.iEraFinal, self.iCurrentEra, self.iCurrentEra0
 		)
