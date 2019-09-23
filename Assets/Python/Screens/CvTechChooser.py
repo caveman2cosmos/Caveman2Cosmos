@@ -180,7 +180,7 @@ class CvTechChooser:
 		while iEra < iNumEras:
 			if iEra <= iEraFinal:
 				screen.addPullDownString("PlatyHideFromEra", GC.getEraInfo(iEra).getDescription(), iEra, iEra, iEra == iEraFirst)
-				if iEra == iEraFirst:
+				if iEra == iEraFinal:
 					screen.addPullDownString("PlatyHideToEra", GC.getEraInfo(iEra).getDescription(), iEra, iEra, iEra == iEraFinal)
 			elif iEra >= iEraFirst:
 				screen.addPullDownString("PlatyHideToEra", GC.getEraInfo(iEra).getDescription(), iEra, iEra, iEra == iEraFinal)
