@@ -37,7 +37,6 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 	CvArea* pArea;
 	CvPlot* pPlot;
 	CvPlot* pLoopPlot;
-	int iRange;
 	int iDX, iDY;
 	int iI;
 
@@ -88,7 +87,8 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 	}
 
 	CvBonusInfo& pInfo = GC.getBonusInfo(eBonus);
-	CvBonusClassInfo& pClassInfo = GC.getBonusClassInfo((BonusClassTypes) pInfo.getBonusClassType());
+	int iBonusClassType = pInfo.getBonusClassType();
+	CvBonusClassInfo& pClassInfo = GC.getBonusClassInfo((BonusClassTypes) iBonusClassType);
 
 	if (pPlot->isWater())
 	{
@@ -97,31 +97,60 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 			return false;
 		}
 	}
-
 	// Make sure there are no bonuses of the same class (but a different type) nearby:
-
-	iRange = pClassInfo.getUniqueRange() + GC.getMapINLINE().getWorldSize();
-	if (GC.getGame().isOption(GAMEOPTION_MORE_RESOURCES))
+	int iRange0 = pClassInfo.getUniqueRange();
+	if (iRange0 > 0)
 	{
-		iRange /= 2;
-	}
+		iRange0 += (GC.getMapINLINE().getWorldSize() + 1) / 3;
 
-	for (iDX = -(iRange); iDX <= iRange; iDX++)
-	{
-		for (iDY = -(iRange); iDY <= iRange; iDY++)
+		if (GC.getGame().isOption(GAMEOPTION_MORE_RESOURCES))
 		{
-			pLoopPlot	= plotXY(iX, iY, iDX, iDY);
-
-			if (pLoopPlot != NULL)
+			iRange0 /= 2;
+		}
+		for (iDX = -(iRange0); iDX <= iRange0; iDX++)
+		{
+			for (iDY = -(iRange0); iDY <= iRange0; iDY++)
 			{
-				if (pLoopPlot->area() == pArea)
+				if (iDX || iDY)
 				{
-					if (plotDistance(iX, iY, pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE()) <= iRange)
+					pLoopPlot	= plotXY(iX, iY, iDX, iDY);
+
+					if (pLoopPlot != NULL && pLoopPlot->area() == pArea)
 					{
 						BonusTypes eOtherBonus = pLoopPlot->getBonusType();
-						if (eOtherBonus != NO_BONUS)
+						if (eOtherBonus == eBonus || eOtherBonus != NO_BONUS && GC.getBonusInfo(eOtherBonus).getBonusClassType() == pInfo.getBonusClassType())
 						{
-							if (GC.getBonusInfo(eOtherBonus).getBonusClassType() == pInfo.getBonusClassType())
+							return false;
+						}
+					}
+				}
+			}
+		}
+	}
+	// Make sure there are none of the same bonus nearby:
+	int iRange1 = pInfo.getUniqueRange();
+
+	if (iRange1 > 0)
+	{
+		iRange1 += (GC.getMapINLINE().getWorldSize() + 1) / 2;
+
+		if (GC.getGame().isOption(GAMEOPTION_MORE_RESOURCES))
+		{
+			iRange1 /= 2;
+		}
+		if (iRange1 > iRange0)
+		{
+			for (iDX = -(iRange1); iDX <= iRange1; iDX++)
+			{
+				if (iRange0 < 1 || (iDX < -iRange0 || iDX > iRange0))
+				{
+					for (iDY = -(iRange1); iDY <= iRange1; iDY++)
+					{
+						if (iRange0 < 1 && (iDX || iDY) || iRange0 > 0 && (iDY < -iRange0 || iDY > iRange0))
+						{
+							pLoopPlot	= plotXY(iX, iY, iDX, iDY);
+
+							if (pLoopPlot != NULL && pLoopPlot->area() == pArea && pLoopPlot->getBonusType() == eBonus)
 							{
 								return false;
 							}
@@ -131,38 +160,6 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 			}
 		}
 	}
-
-	// Make sure there are none of the same bonus nearby:
-
-	iRange = pInfo.getUniqueRange() + GC.getMapINLINE().getWorldSize();
-
-	if (GC.getGame().isOption(GAMEOPTION_MORE_RESOURCES))
-	{
-		iRange /= 2;
-	}
-
-	for (iDX = -(iRange); iDX <= iRange; iDX++)
-	{
-		for (iDY = -(iRange); iDY <= iRange; iDY++)
-		{
-			pLoopPlot	= plotXY(iX, iY, iDX, iDY);
-
-			if (pLoopPlot != NULL)
-			{
-				if (pLoopPlot->area() == pArea)
-				{
-					if (plotDistance(iX, iY, pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE()) <= iRange)
-					{
-						if (pLoopPlot->getBonusType() == eBonus)
-						{
-							return false;
-						}
-					}
-				}
-			}
-		}
-	}
-
 	return true;
 }
 
