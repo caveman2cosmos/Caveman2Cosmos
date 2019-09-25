@@ -3,4 +3,5 @@ if([Environment]::Is64BitOperatingSystem) {
 }
 else {
     & "..\Utils\nuget.exe" install pythonx86 -ExcludeVersion -OutputDirectory ..
+    Rename-Item ..\pythonx86 python
 }

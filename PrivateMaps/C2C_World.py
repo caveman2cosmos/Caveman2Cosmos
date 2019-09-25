@@ -3035,24 +3035,24 @@ class BonusPlacer:
 			bonus = BonusArea()
 			bonus.indeXML = iBonus
 			# Calculate desired amount
-			rand1 = randint(0, CvBonusInfo.getRandAppearance1())
-			rand2 = randint(0, CvBonusInfo.getRandAppearance2())
-			rand3 = randint(0, CvBonusInfo.getRandAppearance3())
-			rand4 = randint(0, CvBonusInfo.getRandAppearance4())
-			fBaseCount = (CvBonusInfo.getConstAppearance() + rand1 + rand2 + rand3 + rand4) / 100.0
+			fBaseCount = (
+				(
+					randint(0, CvBonusInfo.getRandAppearance1()) + randint(0, CvBonusInfo.getRandAppearance2()) +
+					randint(0, CvBonusInfo.getRandAppearance3()) + randint(0, CvBonusInfo.getRandAppearance4()) + CvBonusInfo.getConstAppearance()
+				) / 100.0
+			)
 			if iWorldSize:
-				fBaseCount += fBaseCount * iWorldSize / 3.0
-			#fPlayerCount = CyGame().countCivPlayersAlive() * CvBonusInfo.getPercentPerPlayer() / 100.0 # iPlayer tag from BonusInfo XML
+				fBaseCount += fBaseCount * iWorldSize / 4.0
 			iTilesPer = CvBonusInfo.getTilesPer()
 			fDensityCount = 0
 			if iTilesPer > 0:
-				fNumPossible = 0.0
+				iNumPossible = 0
 				for i in plotIndexList:
 					plot = MAP.plotByIndex(i)
 					if self.PlotCanHaveBonus(plot, iBonus, True, False):
-						fNumPossible += 1
-				fDensityCount = fNumPossible / iTilesPer
-			iBonusCount = int(BonusBonus * (fDensityCount + fBaseCount)) # + fPlayerCount))
+						iNumPossible += 1
+				fDensityCount = 10.0 * iNumPossible / (iTilesPer * (iWorldSize + 7))
+			iBonusCount = int(BonusBonus * (fBaseCount + fDensityCount))
 			print "%s - Base Count = %.2f - Density Count = %.2f - Multiplier: %.1f\n\tSum = %d" % (CvBonusInfo.getType(), fBaseCount, fDensityCount, BonusBonus, iBonusCount)
 			if iBonusCount < 1:
 				iBonusCount = 1

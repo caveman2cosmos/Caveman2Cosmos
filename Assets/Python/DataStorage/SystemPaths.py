@@ -1,5 +1,8 @@
 # Data storage python, values are set in CvEventManager.onInit.
 from os import path
+from os import mkdir
+import sys
+
 appName = ""
 userDir = ""
 rootDir = ""
@@ -7,12 +10,11 @@ logDir = ""
 appDir = ""
 modDir = ""
 modName = "Caveman2Cosmos"
+userSettingsDir = ""
 
 def init():
 	global appName, userDir, rootDir, logDir, appDir, modDir
 
-	from os import mkdir
-	import sys
 	#############################################
 	def __getRegValue(subkey, name):
 		import _winreg
@@ -23,6 +25,7 @@ def init():
 		except:
 			pass
 	#############################################
+
 	myDocuments = None
 	try:
 		myDocuments = __getRegValue(r"Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders", "Personal")
@@ -33,7 +36,7 @@ def init():
 			pass
 
 	if myDocuments:
-		userDir = str(myDocuments) + "\My Games"
+		userDir = str(myDocuments) + "\\My Games"
 	else:
 		print "Cannot find 'My Documents' folder registry key"
 		userDir = "\\"
@@ -41,18 +44,13 @@ def init():
 	appDir = str(path.dirname(sys.executable))
 	appName = str(path.basename(appDir))
 
-	modDir = appDir + "\Mods\Caveman2Cosmos"
+	modDir = appDir + "\\Mods\\Caveman2Cosmos"
 
 	# Create UserSettings folders if missing.
-	szTemp = modDir + "\UserSettings"
-	if not path.isdir(szTemp):
-		mkdir(szTemp)
-	szTemp += "\DomesticAdv"
-	if not path.isdir(szTemp):
-		mkdir(szTemp)
+	initUserSettingsDir()
 
-	rootDir = str("%s\\%s" %(userDir, appName))
-	logDir = "%s\\%s" %(rootDir, "Logs")
+	rootDir = str("%s\\%s" % (userDir, appName))
+	logDir = "%s\\%s" % (rootDir, "Logs")
 
 	print "------------------------ SystemPaths.init ---------------------------\n"
 	sprint = " The following paths are now stored here with these variable names\n"
@@ -68,6 +66,15 @@ def init():
 	print sprint
 
 	return rootDir
+
+def initUserSettingsDir():
+	global userSettingsDir, modDir
+	userSettingsDir = modDir + "\\UserSettings"
+	if not path.isdir(userSettingsDir):
+		mkdir(userSettingsDir)
+	domesticAdvDir = userSettingsDir + "\\DomesticAdv"
+	if not path.isdir(domesticAdvDir):
+		mkdir(domesticAdvDir)
 
 def isFile(aPath):
 	return path.isfile(aPath)

@@ -115,6 +115,8 @@ import ColorUtil
 from configobj import ConfigObj
 import re
 import types
+import time
+import os
 
 # regular expressions used for DLL handling in tooltips
 
@@ -122,111 +124,6 @@ RE_DLL_ALL_TAGS = re.compile(r"(\[DLL\].*\[/DLL\]|\[DLLERR\])", re.DOTALL)
 RE_DLL_START_END_TAGS = re.compile(r"\[/?DLL[= ]?[0-9]*\]")
 RE_DLL_MSG_TAG = re.compile(r"\[DLLMSG\]")
 
-class Options(object):
-	"""Manages maps of Options and IniFiles, each indexed by a unique string ID."""
-
-	def __init__(self):
-		"""Initializes empty dictionaries of Options and IniFiles."""
-		#self.mods = {}
-		self.files = {}
-		self.options = {}
-		self.loaded = True
-
-	def getFile(self, id):
-		"""Returns the IniFile with the given ID."""
-		if (id in self.files):
-			return self.files[id]
-		else:
-			raise BugUtil.ConfigError("Missing file: %s", id)
-
-	def addFile(self, file):
-		"""Adds the given IniFile to the dictionary."""
-		if file.id in self.files:
-			BugUtil.error("BugOptions - duplicate INI file: %s", file.id)
-		else:
-			self.files[file.id] = file
-			self.createFileGetter(file)
-
-	def isLoaded(self):
-		return self.loaded
-
-	def read(self):
-		"""Reads each IniFile."""
-		for file in self.files.itervalues():
-			file.read()
-		self.loaded = True
-
-	def write(self):
-		"""Writes each IniFile that is dirty."""
-		if self.isLoaded():
-			for file in self.files.itervalues():
-				file.write()
-
-
-	def findOption(self, id):
-		"""Returns the Option with the given ID or returns None of not found."""
-		if (id in self.options):
-			return self.options[id]
-		else:
-			return None
-
-	def getOption(self, id):
-		"""Returns the Option with the given ID or raises an error if not found."""
-		if (id in self.options):
-			return self.options[id]
-		else:
-			raise BugUtil.ConfigError("Missing option: %s", id)
-
-	def addOption(self, option):
-		"""Adds an Option to the dictionary if its ID doesn't clash."""
-		if option.id in self.options:
-			BugUtil.error("BugOptions - duplicate option %s", option.id)
-		else:
-			self.options[option.id] = option
-			BugUtil.debug("BugOptions - added option %s", str(option))
-
-	def clearAllTranslations(self):
-		"""Clears the translations of all options in response to the user choosing a language."""
-		for option in self.options.itervalues():
-			option.clearTranslation()
-
-	def resetOptions(self):
-		"""Resets all options to their default values."""
-		for option in self.options.itervalues():
-			option.resetValue()
-
-
-	def createFileGetter(self, file):
-		"""Creates a getter for the given IniFile."""
-		def get():
-			return file
-		getter = "get" + file.id
-		setattr(self, getter, get)
-		BugUtil.debug("BugOptions - %s will return IniFile %s", getter, file.id)
-
-
-# The singleton Options object that holds all Option and IniFile objects.
-
-g_options = Options()
-def getOptions(fileID=None):
-	if fileID is None:
-		return g_options
-	return g_options.getFile(fileID)
-
-def findOption(id):
-	return g_options.findOption(id)
-
-def getOption(id):
-	return g_options.getOption(id)
-
-def clearAllTranslations(argsList=None):
-	g_options.clearAllTranslations()
-
-def read():
-	g_options.read()
-
-def write():
-	g_options.write()
 
 
 class IniFile(object):
@@ -235,7 +132,7 @@ class IniFile(object):
 	def __init__(self, id, name):
 		self.id = id
 		self.name = name
-		self.path = SP.modDir + "\\UserSettings\\" + self.name
+		self.path = SP.userSettingsDir + "\\" + self.name
 		self.config = None
 		self.dirty = False
 		self.options = []
@@ -378,6 +275,154 @@ class IniFile(object):
 						section, key, str(old), str(value))
 				return True
 		return False
+
+class Options(object):
+	"""Manages maps of Options and IniFiles, each indexed by a unique string ID."""
+	VERSION = 1
+
+	def __init__(self):
+		"""Initializes empty dictionaries of Options and IniFiles."""
+		#self.mods = {}
+		self.files = {}
+		self.options = {}
+		self.loaded = True
+
+	def initUserSettings(self):
+		print "Options.initUserSettings - starting"
+		# if theres no version file then we better check if we need to fix up or
+		# clear existing settings
+		self.versionFilePath = SP.userSettingsDir + "\\version.txt"
+		if not os.path.isfile(self.versionFilePath):
+			print "Options.initUserSettings - version file " + self.versionFilePath + " not found"
+			mainini = IniFile("test", "BUG Main Interface.ini")
+			mainini.read()
+			testValue = mainini.getInt("Main", "Unit Icon Size", default=None)
+			# if the test value doesn't exist at all then we need to clear the user settings so they will get 
+			# recreated from scratch (legacy settings upgrade)
+			if not testValue:
+				print "Options.initUserSettings - test value not found in mainini, resetting UserSettings directory"
+				userSettingsBackupDir = SP.modDir + "\\UserSettings_" + time.strftime("%Y%m%d-%H%M%S")
+				print(SP.userSettingsDir)
+				os.rename(SP.userSettingsDir, userSettingsBackupDir)
+				SP.initUserSettingsDir()
+
+			self._writeVersionFile()
+		else:
+			file = open(self.versionFilePath, 'r')
+			version = int(file.read().strip())
+			file.close()
+
+			print "Options.initUserSettings - version file " + self.versionFilePath + " found, version " + str(version) + " User Settings detected"
+			# Add version upgrade code here
+			if version != Options.VERSION:
+				# Only have one version that is valid so far, so throw if we get something different
+				raise "Unexpected settings version!"
+
+	def getFile(self, id):
+		"""Returns the IniFile with the given ID."""
+		if (id in self.files):
+			return self.files[id]
+		else:
+			raise BugUtil.ConfigError("Missing file: %s", id)
+
+	def addFile(self, file):
+		"""Adds the given IniFile to the dictionary."""
+		if file.id in self.files:
+			BugUtil.error("BugOptions - duplicate INI file: %s", file.id)
+		else:
+			self.files[file.id] = file
+			self.createFileGetter(file)
+
+	def isLoaded(self):
+		return self.loaded
+
+	def read(self):
+		"""Reads each IniFile."""
+
+		for file in self.files.itervalues():
+			file.read()
+		self.loaded = True
+
+	def _writeVersionFile(self):
+		file = open(self.versionFilePath, 'w')
+		file.write(str(Options.VERSION))
+		file.close()
+		
+	def write(self):
+		"""Writes each IniFile that is dirty."""
+		if self.isLoaded():
+			for file in self.files.itervalues():
+				file.write()
+		self._writeVersionFile()
+
+	def findOption(self, id):
+		"""Returns the Option with the given ID or returns None of not found."""
+		if (id in self.options):
+			return self.options[id]
+		else:
+			return None
+
+	def getOption(self, id):
+		"""Returns the Option with the given ID or raises an error if not found."""
+		if (id in self.options):
+			return self.options[id]
+		else:
+			raise BugUtil.ConfigError("Missing option: %s", id)
+
+	def addOption(self, option):
+		"""Adds an Option to the dictionary if its ID doesn't clash."""
+		if option.id in self.options:
+			BugUtil.error("BugOptions - duplicate option %s", option.id)
+		else:
+			self.options[option.id] = option
+			BugUtil.debug("BugOptions - added option %s", str(option))
+
+	def clearAllTranslations(self):
+		"""Clears the translations of all options in response to the user choosing a language."""
+		for option in self.options.itervalues():
+			option.clearTranslation()
+
+	def resetOptions(self):
+		"""Resets all options to their default values."""
+		for option in self.options.itervalues():
+			option.resetValue()
+
+
+	def createFileGetter(self, file):
+		"""Creates a getter for the given IniFile."""
+		def get():
+			return file
+		getter = "get" + file.id
+		setattr(self, getter, get)
+		BugUtil.debug("BugOptions - %s will return IniFile %s", getter, file.id)
+
+
+# The singleton Options object that holds all Option and IniFile objects.
+
+g_options = Options()
+def initUserSettings():
+	g_options.initUserSettings()
+
+def getOptions(fileID=None):
+	if fileID is None:
+		return g_options
+	return g_options.getFile(fileID)
+
+
+def findOption(id):
+	return g_options.findOption(id)
+
+def getOption(id):
+	return g_options.getOption(id)
+
+def clearAllTranslations(argsList=None):
+	g_options.clearAllTranslations()
+
+def read():
+	g_options.read()
+
+def write():
+	g_options.write()
 
 
 NONE_TYPE = "none"

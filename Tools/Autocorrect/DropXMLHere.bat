@@ -1,6 +1,6 @@
 @echo off
 
-PUSHD "%~dp0..\.."
+PUSHD "%~dp0"
 
 set PYTHON="%~dp0..\python\tools\python.exe"
 
@@ -10,6 +10,6 @@ if not exist "%PYTHON%" (
     pause
     exit /B 1
 )
-%PYTHON% Tools\Autocorrect\Autocorrect.py --interactive --google %*
+%PYTHON% Autocorrect.py --interactive %*
 
 POPD

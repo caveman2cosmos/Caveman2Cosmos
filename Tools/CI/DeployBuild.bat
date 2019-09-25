@@ -50,9 +50,9 @@ echo Checking out SVN working copy for deployment...
 call %SVN% checkout %svn_url% "%build_dir%"
 if %ERRORLEVEL% neq 0 (
     call %SVN% cleanup --non-interactive
-    call :retry_svn_command update
+    call %SVN% checkout %svn_url% "%build_dir%"
     if %ERRORLEVEL% neq 0 (
-        echo SVN checkout failed after 5 retries, aborting...
+        echo SVN checkout failed, aborting...
         exit /B 3
     )
 )
@@ -109,10 +109,14 @@ call %SVN% add * --force
 :: COMMIT TO SVN -----------------------------------------------
 echo Commiting new build to SVN...
 REM %SVN% commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
-call :retry_svn_command commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
+call %SVN% commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
 if %ERRORLEVEL% neq 0 (
-    echo SVN commit failed after 5 retries, aborting...
-    exit /B 3
+    call %SVN% cleanup --non-interactive
+    call %SVN% commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
+    if %ERRORLEVEL% neq 0 (
+        echo SVN commit failed, aborting...
+        exit /B 3
+    )
 )
 
 :: REFRESH SVN -------------------------------------------------
@@ -120,10 +124,14 @@ if %ERRORLEVEL% neq 0 (
 :: revision number
 echo Refreshing SVN working copy...
 REM %SVN% update
-call :retry_svn_command update
+call %SVN% update
 if %ERRORLEVEL% neq 0 (
-    echo SVN update failed after 5 retries, aborting...
-    exit /B 3
+    call %SVN% cleanup --non-interactive
+    call %SVN% update
+    if %ERRORLEVEL% neq 0 (
+        echo SVN update failed, aborting...
+        exit /B 3
+    )
 )
 
 :: SET SVN RELEASE TAG -----------------------------------------
@@ -152,16 +160,3 @@ echo ---------------------------------------------------------------------------
 echo Done!
 
 exit /B 0
-
-:retry_svn_command
-set count=5
-:DoWhile
-    if %count%==0 goto EndDoWhile
-    set /a count = %count% -1
-    call %SVN% %*
-    if %errorlevel%==0 exit /B 0
-    echo SVN command failed, performing cleanup then retrying (%count% attempts remaining) ...
-    call %SVN% cleanup --non-interactive
-    if %count% gtr 0 goto DoWhile
-:EndDoWhile
-exit /B 1
