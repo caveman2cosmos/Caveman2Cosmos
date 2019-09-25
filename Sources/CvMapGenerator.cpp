@@ -100,7 +100,7 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 
 	// Make sure there are no bonuses of the same class (but a different type) nearby:
 
-	iRange = pClassInfo.getUniqueRange();
+	iRange = pClassInfo.getUniqueRange() + GC.getMapINLINE().getWorldSize();
 	if (GC.getGame().isOption(GAMEOPTION_MORE_RESOURCES))
 	{
 		iRange /= 2;
@@ -134,7 +134,7 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 
 	// Make sure there are none of the same bonus nearby:
 
-	iRange = pInfo.getUniqueRange();
+	iRange = pInfo.getUniqueRange() + GC.getMapINLINE().getWorldSize();
 
 	if (GC.getGame().isOption(GAMEOPTION_MORE_RESOURCES))
 	{
@@ -1197,20 +1197,18 @@ int CvMapGenerator::calculateNumBonusesToAdd(BonusTypes eBonusType)
 	CvBonusInfo& pBonusInfo = GC.getBonusInfo(eBonusType);
 
 	// Calculate iBonusCount, the amount of this bonus to be placed:
-	double fBaseCount =
+	int iBaseCount =
 	(
-		(
-			pBonusInfo.getConstAppearance() +
-			GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance1(), "calculateNumBonusesToAdd-1") +
-			GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance2(), "calculateNumBonusesToAdd-2") +
-			GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance3(), "calculateNumBonusesToAdd-3") +
-			GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance4(), "calculateNumBonusesToAdd-4")
-		) / 100.0
+		pBonusInfo.getConstAppearance() +
+		GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance1(), "calculateNumBonusesToAdd-1") +
+		GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance2(), "calculateNumBonusesToAdd-2") +
+		GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance3(), "calculateNumBonusesToAdd-3") +
+		GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance4(), "calculateNumBonusesToAdd-4")
 	);
-	if (GC.getMapINLINE().getWorldSize())
-	{
-		fBaseCount += fBaseCount * GC.getMapINLINE().getWorldSize() / 3.0;
-	}
+	iBaseCount += iBaseCount * GC.getMapINLINE().getWorldSize() / 4; // Scale by map size
+
+	iBaseCount += GC.getGameINLINE().countCivPlayersAlive() * pBonusInfo.getPercentPerPlayer(); // Toffer: Should imo be removed.
+
 	// Calculate iNumPossible, the number of plots that are eligible to have this bonus:
 	bool bIgnoreLatitude = GC.getGameINLINE().pythonIsBonusIgnoreLatitudes();
 
@@ -1225,17 +1223,18 @@ int CvMapGenerator::calculateNumBonusesToAdd(BonusTypes eBonusType)
 				iNumPossible++;
 			}
 		}
-		fBaseCount += (iNumPossible * 1.0 / pBonusInfo.getTilesPer());
+		iBaseCount += iNumPossible * 1000 / (pBonusInfo.getTilesPer() * (GC.getMapINLINE().getWorldSize() + 7)); // Density scaled by map size, less dense on large maps.
 	}
 
-	int iBonusCount = (int) fBaseCount + GC.getGameINLINE().countCivPlayersAlive() * pBonusInfo.getPercentPerPlayer() / 100.0;
 	if (GC.getGame().isOption(GAMEOPTION_MORE_RESOURCES))
 	{
-		iBonusCount *= (GC.getDefineINT("BONUS_COUNT_PERCENTAGE_MODIFIER_ON_MORE_RESOURCES") + 100);
-		iBonusCount /= 100;
+		iBaseCount *= (GC.getDefineINT("BONUS_COUNT_PERCENTAGE_MODIFIER_ON_MORE_RESOURCES") + 100);
+		iBaseCount /= 100;
 	}
-	if (iBonusCount < 1) { return 1; }
-	return iBonusCount;
+	iBaseCount /= 100;
+
+	if (iBaseCount < 1) { return 1; }
+	return iBaseCount;
 }
 
 /*********************************/

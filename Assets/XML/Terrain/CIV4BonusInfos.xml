@@ -5673,16 +5673,16 @@
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iHealth>-1</iHealth>
-			<iConstAppearance>300</iConstAppearance>
-			<iMinAreaSize>3</iMinAreaSize>
+			<iConstAppearance>400</iConstAppearance>
+			<iMinAreaSize>4</iMinAreaSize>
 			<Rands>
 				<iRandApp1>25</iRandApp1>
 				<iRandApp2>25</iRandApp2>
 				<iRandApp3>25</iRandApp3>
 				<iRandApp4>25</iRandApp4>
 			</Rands>
-			<iTilesPer>128</iTilesPer>
-			<iUnique>4</iUnique>
+			<iTilesPer>400</iTilesPer>
+			<iUnique>3</iUnique>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
 			<TerrainBooleans>
@@ -6835,7 +6835,7 @@
 				<iRandApp4>25</iRandApp4>
 			</Rands>
 			<iTilesPer>128</iTilesPer>
-			<iUnique>7</iUnique>
+			<iUnique>4</iUnique>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
 			<TerrainBooleans>
@@ -9146,7 +9146,7 @@
 				<iRandApp4>25</iRandApp4>
 			</Rands>
 			<iTilesPer>128</iTilesPer>
-			<iUnique>6</iUnique>
+			<iUnique>5</iUnique>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
 			<TerrainBooleans>
@@ -10661,7 +10661,7 @@
 				<iRandApp4>25</iRandApp4>
 			</Rands>
 			<iTilesPer>92</iTilesPer>
-			<iUnique>5</iUnique>
+			<iUnique>3</iUnique>
 			<bHills>1</bHills>
 			<bNoRiverSide>1</bNoRiverSide>
 			<bNormalize>1</bNormalize>
@@ -10912,7 +10912,7 @@
 				<iRandApp4>25</iRandApp4>
 			</Rands>
 			<iTilesPer>256</iTilesPer>
-			<iUnique>6</iUnique>
+			<iUnique>4</iUnique>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
 			<TerrainBooleans>
@@ -11467,7 +11467,7 @@
 			</Rands>
 			<iTilesPer>92</iTilesPer>
 			<iMinLandPercent>62</iMinLandPercent>
-			<iUnique>7</iUnique>
+			<iUnique>5</iUnique>
 			<bFlatlands>1</bFlatlands>
 			<bNoRiverSide>1</bNoRiverSide>
 			<TerrainBooleans>
@@ -11824,7 +11824,7 @@
 			</YieldChanges>
 			<iAITradeModifier>20</iAITradeModifier>
 			<iHealth>-1</iHealth>
-			<iConstAppearance>200</iConstAppearance>
+			<iConstAppearance>400</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<Rands>
 				<iRandApp1>25</iRandApp1>
@@ -11832,9 +11832,9 @@
 				<iRandApp3>25</iRandApp3>
 				<iRandApp4>25</iRandApp4>
 			</Rands>
-			<iTilesPer>128</iTilesPer>
+			<iTilesPer>400</iTilesPer>
 			<iMinLandPercent>62</iMinLandPercent>
-			<iUnique>7</iUnique>
+			<iUnique>3</iUnique>
 			<bFlatlands>1</bFlatlands>
 			<TerrainBooleans>
 				<TerrainBoolean>
