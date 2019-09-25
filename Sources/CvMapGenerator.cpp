@@ -1197,18 +1197,23 @@ int CvMapGenerator::calculateNumBonusesToAdd(BonusTypes eBonusType)
 	CvBonusInfo& pBonusInfo = GC.getBonusInfo(eBonusType);
 
 	// Calculate iBonusCount, the amount of this bonus to be placed:
-
-	int iRand1 = GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance1(), "calculateNumBonusesToAdd-1");
-	int iRand2 = GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance2(), "calculateNumBonusesToAdd-2");
-	int iRand3 = GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance3(), "calculateNumBonusesToAdd-3");
-	int iRand4 = GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance4(), "calculateNumBonusesToAdd-4");
-	int iBaseCount = pBonusInfo.getConstAppearance() + iRand1 + iRand2 + iRand3 + iRand4;
-
+	double fBaseCount =
+	(
+		(
+			pBonusInfo.getConstAppearance() +
+			GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance1(), "calculateNumBonusesToAdd-1") +
+			GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance2(), "calculateNumBonusesToAdd-2") +
+			GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance3(), "calculateNumBonusesToAdd-3") +
+			GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance4(), "calculateNumBonusesToAdd-4")
+		) / 100.0
+	);
+	if (GC.getMapINLINE().getWorldSize())
+	{
+		fBaseCount += fBaseCount * GC.getMapINLINE().getWorldSize() / 3.0;
+	}
+	// Calculate iNumPossible, the number of plots that are eligible to have this bonus:
 	bool bIgnoreLatitude = GC.getGameINLINE().pythonIsBonusIgnoreLatitudes();
 
-	// Calculate iNumPossible, the number of plots that are eligible to have this bonus:
-
-	int iLandTiles = 0;
 	if (pBonusInfo.getTilesPer() > 0)
 	{
 		int iNumPossible = 0;
@@ -1220,17 +1225,16 @@ int CvMapGenerator::calculateNumBonusesToAdd(BonusTypes eBonusType)
 				iNumPossible++;
 			}
 		}
-		iLandTiles += (iNumPossible / pBonusInfo.getTilesPer());
+		fBaseCount += (iNumPossible * 1.0 / pBonusInfo.getTilesPer());
 	}
 
-	int iPlayers = (GC.getGameINLINE().countCivPlayersAlive() * pBonusInfo.getPercentPerPlayer()) / 100;
-	int iBonusCount = (iBaseCount * (iLandTiles + iPlayers)) / 100;
+	int iBonusCount = (int) fBaseCount + GC.getGameINLINE().countCivPlayersAlive() * pBonusInfo.getPercentPerPlayer() / 100.0;
 	if (GC.getGame().isOption(GAMEOPTION_MORE_RESOURCES))
 	{
 		iBonusCount *= (GC.getDefineINT("BONUS_COUNT_PERCENTAGE_MODIFIER_ON_MORE_RESOURCES") + 100);
 		iBonusCount /= 100;
 	}
-	iBonusCount = std::max(1, iBonusCount);
+	if (iBonusCount < 1) { return 1; }
 	return iBonusCount;
 }
 
