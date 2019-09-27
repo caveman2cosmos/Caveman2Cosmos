@@ -101,7 +101,7 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 	int iRange0 = pClassInfo.getUniqueRange();
 	if (iRange0 > 0)
 	{
-		iRange0 += (GC.getMapINLINE().getWorldSize() + 1) / 3;
+		iRange0 += (GC.getMapINLINE().getWorldSize() + 1) / 2;
 
 		if (GC.getGame().isOption(GAMEOPTION_MORE_RESOURCES))
 		{
@@ -134,7 +134,7 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 
 	if (iRange1 > 0)
 	{
-		iRange1 += (GC.getMapINLINE().getWorldSize() + 1) / 2;
+		iRange1 += GC.getMapINLINE().getWorldSize();
 
 		if (GC.getGame().isOption(GAMEOPTION_MORE_RESOURCES))
 		{

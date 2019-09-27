@@ -3266,7 +3266,7 @@ class BonusPlacer:
 		if classInfo:
 			iRange0 = classInfo.getUniqueRange()
 			if iRange0 > 0:
-				iRange0 += (mc.iWorldSize + 1) / 3
+				iRange0 += (mc.iWorldSize + 1) / 2
 				for dx in xrange(-iRange0, iRange0 + 1):
 					for dy in xrange(-iRange0, iRange0 + 1):
 						if dx or dy:
@@ -3280,7 +3280,7 @@ class BonusPlacer:
 		#Make sure there are no bonuses of the same type nearby:
 		iRange1 = bonusInfo.getUniqueRange()
 		if iRange1 > 0:
-			iRange1 += (mc.iWorldSize + 1) / 2
+			iRange1 += mc.iWorldSize
 			if iRange1 > iRange0:
 				for dx in xrange(-iRange1, iRange1 + 1):
 					for dy in xrange(-iRange1, iRange1 + 1):
