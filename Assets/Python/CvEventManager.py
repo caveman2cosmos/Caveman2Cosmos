@@ -2777,14 +2777,14 @@ class CvEventManager:
 				KEY = aWonderTuple[0][i]
 
 				if KEY == "CRUSADE":
-					if not int(GAME.getGameTurn() % 3 * self.fTrainPrcntGS):
+					if not GAME.getGameTurn() % int(5 * self.fTrainPrcntGS):
 						CyPlayer = GC.getPlayer(iPlayer)
 						iUnit = GC.getInfoTypeForString("UNIT_CRUSADER")
 						CyUnit = CyPlayer.initUnit(iUnit, CyCity.getX(), CyCity.getY(), UnitAITypes.UNITAI_ATTACK_CITY, DirectionTypes.NO_DIRECTION)
 						CyCity.addProductionExperience(CyUnit, False)
 
 				elif KEY == "KENTUCKY_DERBY":
-					if int(GAME.getGameTurn() % 2 * self.fTrainPrcntGS): continue
+					if GAME.getGameTurn() % int(3 * self.fTrainPrcntGS): continue
 					CyPlayer = GC.getPlayer(iPlayer)
 					iUnit = GC.getInfoTypeForString("UNIT_SUBDUED_HORSE")
 					iX = CyCity.getX()
