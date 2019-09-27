@@ -3275,18 +3275,16 @@ class BonusPlacer:
 								eOtherBonus = CyPlotX.getBonusType(TeamTypes.NO_TEAM)
 								if eOtherBonus > -1 and GC.getBonusInfo(eOtherBonus).getBonusClassType() == iBonusClass:
 									return False
+			elif iRange0 < 0:
+				iRange0 = 0
 		#Make sure there are no bonuses of the same type nearby:
 		iRange1 = bonusInfo.getUniqueRange()
 		if iRange1 > 0:
-			iRange0 += (mc.iWorldSize + 1) / 2
-			iRange1 += mc.iWorldSize
+			iRange1 += (mc.iWorldSize + 1) / 2
 			if iRange1 > iRange0:
 				for dx in xrange(-iRange1, iRange1 + 1):
-					if iRange0 > 0 and dx >= -iRange0 and dx <= iRange0:
-						continue
 					for dy in xrange(-iRange1, iRange1 + 1):
-						if not dx and not dy or iRange0 > 0 and dy >= -iRange0 and dy <= iRange0:
-							continue
+						if dx >= -iRange0 and dx <= iRange0 and dy >= -iRange0 and dy <= iRange0: continue
 						CyPlotX = self.plotXY(x, y, dx, dy)
 						if CyPlotX and areaID == CyPlotX.getArea() and CyPlotX.getBonusType(TeamTypes.NO_TEAM) == indeXML:
 							return False

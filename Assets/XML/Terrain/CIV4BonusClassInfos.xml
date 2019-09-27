@@ -19,11 +19,11 @@
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_RUSH</Type>
-			<iUnique>2</iUnique>
+			<iUnique>3</iUnique>
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_MODERN</Type>
-			<iUnique>1</iUnique>
+			<iUnique>3</iUnique>
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_WONDER</Type>
@@ -35,7 +35,7 @@
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_FUEL</Type>
-			<iUnique>2</iUnique>
+			<iUnique>3</iUnique>
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_MANUFACTURED</Type>

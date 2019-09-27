@@ -1776,7 +1776,7 @@
 			<iAITradeModifier>4</iAITradeModifier>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>5</iPlacementOrder>
-			<iConstAppearance>100</iConstAppearance>
+			<iConstAppearance>400</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMaxLatitude>30</iMaxLatitude>
 			<Rands>
@@ -1785,8 +1785,8 @@
 				<iRandApp3>25</iRandApp3>
 				<iRandApp4>25</iRandApp4>
 			</Rands>
-			<iTilesPer>128</iTilesPer>
-			<iUnique>3</iUnique>
+			<iTilesPer>160</iTilesPer>
+			<iUnique>6</iUnique>
 			<iGroupRange>1</iGroupRange>
 			<iGroupRand>50</iGroupRand>
 			<bArea>1</bArea>
@@ -2639,7 +2639,7 @@
 			<iAITradeModifier>2</iAITradeModifier>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>5</iPlacementOrder>
-			<iConstAppearance>100</iConstAppearance>
+			<iConstAppearance>400</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMinLatitude>20</iMinLatitude>
 			<iMaxLatitude>60</iMaxLatitude>
@@ -2649,8 +2649,8 @@
 				<iRandApp3>25</iRandApp3>
 				<iRandApp4>25</iRandApp4>
 			</Rands>
-			<iTilesPer>64</iTilesPer>
-			<iUnique>4</iUnique>
+			<iTilesPer>128</iTilesPer>
+			<iUnique>6</iUnique>
 			<iGroupRange>1</iGroupRange>
 			<iGroupRand>50</iGroupRand>
 			<bArea>1</bArea>
@@ -9148,7 +9148,7 @@
 				<iRandApp3>25</iRandApp3>
 				<iRandApp4>25</iRandApp4>
 			</Rands>
-			<iTilesPer>128</iTilesPer>
+			<iTilesPer>512</iTilesPer>
 			<iUnique>12</iUnique>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>

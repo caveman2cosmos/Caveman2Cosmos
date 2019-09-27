@@ -113,7 +113,7 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 			{
 				if (iDX || iDY)
 				{
-					pLoopPlot	= plotXY(iX, iY, iDX, iDY);
+					pLoopPlot = plotXY(iX, iY, iDX, iDY);
 
 					if (pLoopPlot != NULL && pLoopPlot->area() == pArea)
 					{
@@ -127,6 +127,8 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 			}
 		}
 	}
+	else if (iRange0 < 0) { iRange0 = 0; }
+
 	// Make sure there are none of the same bonus nearby:
 	int iRange1 = pInfo.getUniqueRange();
 
@@ -142,18 +144,15 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 		{
 			for (iDX = -(iRange1); iDX <= iRange1; iDX++)
 			{
-				if (iRange0 < 1 || (iDX < -iRange0 || iDX > iRange0))
+				for (iDY = -(iRange1); iDY <= iRange1; iDY++)
 				{
-					for (iDY = -(iRange1); iDY <= iRange1; iDY++)
+					if (iDY < -iRange0 || iDY > iRange0 || iDX < -iRange0 || iDX > iRange0)
 					{
-						if (iRange0 < 1 && (iDX || iDY) || iRange0 > 0 && (iDY < -iRange0 || iDY > iRange0))
-						{
-							pLoopPlot	= plotXY(iX, iY, iDX, iDY);
+						pLoopPlot = plotXY(iX, iY, iDX, iDY);
 
-							if (pLoopPlot != NULL && pLoopPlot->area() == pArea && pLoopPlot->getBonusType() == eBonus)
-							{
-								return false;
-							}
+						if (pLoopPlot != NULL && pLoopPlot->area() == pArea && pLoopPlot->getBonusType() == eBonus)
+						{
+							return false;
 						}
 					}
 				}
