@@ -19163,7 +19163,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 /*****************************************************************************************************/
 		if (isPillageOnMove())
 		{
-			if (pNewPlot->isOwned())
+			if (pNewPlot->isOwned() && GET_PLAYER(pNewPlot->getOwner()).getTeam() != GET_PLAYER(getOwner()).getTeam())
             {
                 if (pNewPlot->getImprovementType() != NO_IMPROVEMENT)
                 {
@@ -22788,11 +22788,19 @@ void CvUnit::setCombatUnit(CvUnit* pCombatUnit, bool bAttacking, bool bStealthAt
 			setCombatFirstStrikes(stealthStrikesTotal());
 		}
 		//TB Combat mod begin
+		int iKnockbackAttempts = 0;
 		setCombatPowerShots(powerShotsTotal());
-		int iKnockbackAttempts = knockbackRetriesTotal() + 1;
-		setCombatKnockbacks(iKnockbackAttempts);
-		int iRepelAttempts = repelRetriesTotal() + 1;
-		setCombatRepels(iRepelAttempts);
+		if (knockbackTotal() > 0)
+		{
+			iKnockbackAttempts = knockbackRetriesTotal() + 1;
+			setCombatKnockbacks(iKnockbackAttempts);
+		}
+		int iRepelAttempts = 0;
+		if (repelTotal() > 0)
+		{
+			iRepelAttempts = repelRetriesTotal() + 1;
+			setCombatRepels(iRepelAttempts);
+		}
 		setCombatStuns(0);
 		//TB Combat Mod end
 	}
@@ -38390,7 +38398,7 @@ void CvUnit::setCombatPowerShots(int iNewValue)
 
 void CvUnit::changeCombatPowerShots(int iChange)			
 {
-	setCombatPowerShots(getCombatPowerShots() + iChange);
+	setCombatPowerShots(m_iCombatPowerShots + iChange);
 }
 
 int CvUnit::getCombatKnockbacks() const
@@ -38406,7 +38414,7 @@ void CvUnit::setCombatKnockbacks(int iNewValue)
 
 void CvUnit::changeCombatKnockbacks(int iChange)			
 {
-	setCombatKnockbacks(getCombatKnockbacks() + iChange);
+	setCombatKnockbacks(m_iCombatKnockbacks + iChange);
 }
 
 int CvUnit::getCombatRepels() const
@@ -38422,7 +38430,7 @@ void CvUnit::setCombatRepels(int iNewValue)
 
 void CvUnit::changeCombatRepels(int iChange)			
 {
-	setCombatRepels(getCombatRepels() + iChange);
+	setCombatRepels(m_iCombatRepels + iChange);
 }
 
 void CvUnit::checkForCritical(int iDamage, CvUnit* pOpponent)

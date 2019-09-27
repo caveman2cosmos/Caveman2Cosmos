@@ -4188,6 +4188,7 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
+			<IgnoreTerrainDamage>TERRAIN_ROCKY_ARID</IgnoreTerrainDamage>
 			<Button>art/Tweaks/art/ruggedcombat2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -4277,6 +4278,7 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
+			<IgnoreTerrainDamage>TERRAIN_ROCKY_COLD</IgnoreTerrainDamage>
 			<Button>art/Tweaks/art/ruggedcombat3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>

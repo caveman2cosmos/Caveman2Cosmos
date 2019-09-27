@@ -1776,7 +1776,7 @@
 			<iAITradeModifier>4</iAITradeModifier>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>5</iPlacementOrder>
-			<iConstAppearance>100</iConstAppearance>
+			<iConstAppearance>400</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMaxLatitude>30</iMaxLatitude>
 			<Rands>
@@ -1785,8 +1785,8 @@
 				<iRandApp3>25</iRandApp3>
 				<iRandApp4>25</iRandApp4>
 			</Rands>
-			<iTilesPer>128</iTilesPer>
-			<iUnique>3</iUnique>
+			<iTilesPer>160</iTilesPer>
+			<iUnique>6</iUnique>
 			<iGroupRange>1</iGroupRange>
 			<iGroupRand>50</iGroupRand>
 			<bArea>1</bArea>
@@ -2419,7 +2419,7 @@
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>2</iPlacementOrder>
-			<iConstAppearance>200</iConstAppearance>
+			<iConstAppearance>300</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<Rands>
 				<iRandApp1>25</iRandApp1>
@@ -2427,7 +2427,7 @@
 				<iRandApp3>25</iRandApp3>
 				<iRandApp4>25</iRandApp4>
 			</Rands>
-			<iTilesPer>24</iTilesPer>
+			<iTilesPer>30</iTilesPer>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
@@ -2466,7 +2466,7 @@
 			</YieldChanges>
 			<iHealth>1</iHealth>
 			<iPlacementOrder>5</iPlacementOrder>
-			<iConstAppearance>200</iConstAppearance>
+			<iConstAppearance>300</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<Rands>
 				<iRandApp1>25</iRandApp1>
@@ -2474,7 +2474,7 @@
 				<iRandApp3>25</iRandApp3>
 				<iRandApp4>25</iRandApp4>
 			</Rands>
-			<iTilesPer>24</iTilesPer>
+			<iTilesPer>30</iTilesPer>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
 			<TerrainBooleans>
@@ -2512,17 +2512,17 @@
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>5</iPlacementOrder>
-			<iConstAppearance>100</iConstAppearance>
+			<iConstAppearance>400</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMinLatitude>20</iMinLatitude>
 			<iMaxLatitude>50</iMaxLatitude>
 			<Rands>
-				<iRandApp1>25</iRandApp1>
-				<iRandApp2>25</iRandApp2>
-				<iRandApp3>25</iRandApp3>
-				<iRandApp4>25</iRandApp4>
+				<iRandApp1>50</iRandApp1>
+				<iRandApp2>50</iRandApp2>
+				<iRandApp3>50</iRandApp3>
+				<iRandApp4>50</iRandApp4>
 			</Rands>
-			<iTilesPer>80</iTilesPer>
+			<iTilesPer>200</iTilesPer>
 			<iGroupRange>1</iGroupRange>
 			<iGroupRand>50</iGroupRand>
 			<bArea>1</bArea>
@@ -2639,7 +2639,7 @@
 			<iAITradeModifier>2</iAITradeModifier>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>5</iPlacementOrder>
-			<iConstAppearance>100</iConstAppearance>
+			<iConstAppearance>400</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMinLatitude>20</iMinLatitude>
 			<iMaxLatitude>60</iMaxLatitude>
@@ -2649,8 +2649,8 @@
 				<iRandApp3>25</iRandApp3>
 				<iRandApp4>25</iRandApp4>
 			</Rands>
-			<iTilesPer>64</iTilesPer>
-			<iUnique>4</iUnique>
+			<iTilesPer>128</iTilesPer>
+			<iUnique>6</iUnique>
 			<iGroupRange>1</iGroupRange>
 			<iGroupRand>50</iGroupRand>
 			<bArea>1</bArea>
@@ -5411,16 +5411,16 @@
 			</YieldChanges>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iPlacementOrder>1</iPlacementOrder>
-			<iConstAppearance>200</iConstAppearance>
+			<iConstAppearance>300</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<Rands>
-				<iRandApp1>25</iRandApp1>
-				<iRandApp2>25</iRandApp2>
-				<iRandApp3>25</iRandApp3>
-				<iRandApp4>25</iRandApp4>
+				<iRandApp1>50</iRandApp1>
+				<iRandApp2>50</iRandApp2>
+				<iRandApp3>50</iRandApp3>
+				<iRandApp4>50</iRandApp4>
 			</Rands>
-			<iTilesPer>128</iTilesPer>
-			<iUnique>4</iUnique>
+			<iTilesPer>500</iTilesPer>
+			<iUnique>6</iUnique>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
 			<TerrainBooleans>
@@ -6571,15 +6571,15 @@
 			</YieldChanges>
 			<iAITradeModifier>6</iAITradeModifier>
 			<iPlacementOrder>3</iPlacementOrder>
-			<iConstAppearance>200</iConstAppearance>
+			<iConstAppearance>400</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<Rands>
-				<iRandApp1>25</iRandApp1>
-				<iRandApp2>25</iRandApp2>
-				<iRandApp3>25</iRandApp3>
-				<iRandApp4>25</iRandApp4>
+				<iRandApp1>50</iRandApp1>
+				<iRandApp2>50</iRandApp2>
+				<iRandApp3>50</iRandApp3>
+				<iRandApp4>50</iRandApp4>
 			</Rands>
-			<iTilesPer>128</iTilesPer>
+			<iTilesPer>400</iTilesPer>
 			<iUnique>3</iUnique>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
@@ -6829,7 +6829,7 @@
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>10</iAITradeModifier>
-			<iConstAppearance>300</iConstAppearance>
+			<iConstAppearance>400</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<Rands>
 				<iRandApp1>25</iRandApp1>
@@ -6837,8 +6837,8 @@
 				<iRandApp3>25</iRandApp3>
 				<iRandApp4>25</iRandApp4>
 			</Rands>
-			<iTilesPer>128</iTilesPer>
-			<iUnique>4</iUnique>
+			<iTilesPer>400</iTilesPer>
+			<iUnique>8</iUnique>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
 			<TerrainBooleans>
@@ -7424,16 +7424,16 @@
 			<iAITradeModifier>10</iAITradeModifier>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>3</iPlacementOrder>
-			<iConstAppearance>200</iConstAppearance>
+			<iConstAppearance>300</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<Rands>
-				<iRandApp1>25</iRandApp1>
-				<iRandApp2>25</iRandApp2>
-				<iRandApp3>25</iRandApp3>
-				<iRandApp4>25</iRandApp4>
+				<iRandApp1>50</iRandApp1>
+				<iRandApp2>50</iRandApp2>
+				<iRandApp3>50</iRandApp3>
+				<iRandApp4>50</iRandApp4>
 			</Rands>
-			<iTilesPer>144</iTilesPer>
-			<iUnique>3</iUnique>
+			<iTilesPer>500</iTilesPer>
+			<iUnique>6</iUnique>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
 			<bNormalize>1</bNormalize>
@@ -8202,15 +8202,15 @@
 			</YieldChanges>
 			<iAITradeModifier>2</iAITradeModifier>
 			<iPlacementOrder>3</iPlacementOrder>
-			<iConstAppearance>100</iConstAppearance>
+			<iConstAppearance>400</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<Rands>
-				<iRandApp1>25</iRandApp1>
-				<iRandApp2>25</iRandApp2>
-				<iRandApp3>25</iRandApp3>
-				<iRandApp4>25</iRandApp4>
+				<iRandApp1>50</iRandApp1>
+				<iRandApp2>50</iRandApp2>
+				<iRandApp3>50</iRandApp3>
+				<iRandApp4>50</iRandApp4>
 			</Rands>
-			<iTilesPer>128</iTilesPer>
+			<iTilesPer>400</iTilesPer>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
 			<TerrainBooleans>
@@ -9148,8 +9148,8 @@
 				<iRandApp3>25</iRandApp3>
 				<iRandApp4>25</iRandApp4>
 			</Rands>
-			<iTilesPer>128</iTilesPer>
-			<iUnique>12</iUnique>
+			<iTilesPer>512</iTilesPer>
+			<iUnique>16</iUnique>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
 			<TerrainBooleans>
