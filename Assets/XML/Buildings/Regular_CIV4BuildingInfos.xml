@@ -32587,7 +32587,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_FLASHMEMORY</ObsoleteTech>
+			<ObsoleteTech>TECH_WEARABLE_ELECTRONICS</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>1410</iCost>
 			<!-- Main effects -->

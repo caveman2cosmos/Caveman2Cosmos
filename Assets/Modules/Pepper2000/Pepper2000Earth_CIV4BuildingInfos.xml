@@ -16167,7 +16167,7 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_MUNITIONS_FACTORY</BuildingClass>
 			<Type>BUILDING_MUNITIONS_FACTORY</Type>
-			<ObsoleteTech>TECH_COILGUN</ObsoleteTech>
+			<ObsoleteTech>TECH_WARMACHINES</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_MILITARY_INDUSTRIAL_COMPLEX</BuildingClassType>
