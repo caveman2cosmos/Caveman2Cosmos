@@ -165,7 +165,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FISHING</PrereqTech>
-			<VicinityBonus>BONUS_PEARLS</VicinityBonus>
+			<RawVicinityBonus>BONUS_PEARLS</RawVicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_MUREX</VicinityBonus>
 			</PrereqVicinityBonuses>
@@ -2022,7 +2022,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BARTER</PrereqTech>
-			<VicinityBonus>BONUS_AMBER</VicinityBonus>
+			<RawVicinityBonus>BONUS_AMBER</RawVicinityBonus>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CURRENCY</ObsoleteTech>
 			<ReplaceBuildings>
@@ -7024,7 +7024,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<VicinityBonus>BONUS_COW</VicinityBonus>
+			<RawVicinityBonus>BONUS_COW</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_HUNTERS_CAMP</BuildingClassType>
@@ -12770,7 +12770,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<VicinityBonus>BONUS_PIG</VicinityBonus>
+			<RawVicinityBonus>BONUS_PIG</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_HUNTERS_CAMP</BuildingClassType>
@@ -31760,7 +31760,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
-			<VicinityBonus>BONUS_OIL</VicinityBonus>
+			<RawVicinityBonus>BONUS_OIL</RawVicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL</VicinityBonus>
 			</PrereqVicinityBonuses>
@@ -49186,7 +49186,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NATURAL_PIGMENTS</PrereqTech>
-			<VicinityBonus>BONUS_OBSIDIAN</VicinityBonus>
+			<RawVicinityBonus>BONUS_OBSIDIAN</RawVicinityBonus>
 			<!-- Construction cost -->
 			<iCost>35</iCost>
 			<!-- Main effects -->
@@ -54882,7 +54882,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
-			<VicinityBonus>BONUS_JADE</VicinityBonus>
+			<RawVicinityBonus>BONUS_JADE</RawVicinityBonus>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CURRENCY</ObsoleteTech>
 			<ReplaceBuildings>
@@ -69775,7 +69775,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<VicinityBonus>BONUS_SHEEP</VicinityBonus>
+			<RawVicinityBonus>BONUS_SHEEP</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_HUNTERS_CAMP</BuildingClassType>
@@ -70186,7 +70186,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
-			<VicinityBonus>BONUS_MUREX</VicinityBonus>
+			<RawVicinityBonus>BONUS_MUREX</RawVicinityBonus>
 			<!-- Construction cost -->
 			<iCost>45</iCost>
 			<!-- Main effects -->
@@ -74964,7 +74964,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<VicinityBonus>BONUS_POULTRY</VicinityBonus>
+			<RawVicinityBonus>BONUS_POULTRY</RawVicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_ELEPHANT</VicinityBonus>
 			</PrereqVicinityBonuses>
@@ -77397,7 +77397,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
-			<VicinityBonus>BONUS_PEARLS</VicinityBonus>
+			<RawVicinityBonus>BONUS_PEARLS</RawVicinityBonus>
 			<!-- Construction cost -->
 			<iCost>45</iCost>
 			<!-- Main effects -->
@@ -86131,10 +86131,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<VicinityBonus>BONUS_POULTRY</VicinityBonus>
-			<PrereqVicinityBonuses>
+			<RawVicinityBonus>BONUS_POULTRY</RawVicinityBonus>
+			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_LLAMA</VicinityBonus>
-			</PrereqVicinityBonuses>
+			</PrereqRawVicinityBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_HUNTERS_CAMP</BuildingClassType>
@@ -100923,7 +100923,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONY</PrereqTech>
-			<VicinityBonus>BONUS_TEA</VicinityBonus>
+			<RawVicinityBonus>BONUS_TEA</RawVicinityBonus>
 			<!-- Construction cost -->
 			<iCost>153</iCost>
 			<!-- Main effects -->
@@ -109831,7 +109831,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
-			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
+			<RawVicinityBonus>BONUS_MUSHROOMS</RawVicinityBonus>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_FUNGICULTURE</ObsoleteTech>
 			<!-- Construction cost -->
