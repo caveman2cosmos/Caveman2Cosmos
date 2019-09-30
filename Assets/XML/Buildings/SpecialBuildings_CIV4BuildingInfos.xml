@@ -14672,7 +14672,7 @@
 				<Bonus>BONUS_CLOTH</Bonus>
 				<Bonus>BONUS_LEATHER</Bonus>
 			</PrereqBonuses>
-			<VicinityBonus>BONUS_HORSE</VicinityBonus>
+			<RawVicinityBonus>BONUS_HORSE</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_GRASS</TerrainType>
