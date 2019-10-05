@@ -169,18 +169,10 @@ void CvPlot::uninit()
 {
 	SAFE_DELETE_ARRAY(m_szScriptData);
 
-	gDLL->getFeatureIFace()->destroy(m_pFeatureSymbol);
-	if(m_pPlotBuilder)
-	{
-		gDLL->getPlotBuilderIFace()->destroy(m_pPlotBuilder);
-	}
-	gDLL->getRouteIFace()->destroy(m_pRouteSymbol);
-	gDLL->getRiverIFace()->destroy(m_pRiverSymbol);
-	gDLL->getFlagEntityIFace()->destroy(m_pFlagSymbol);
-	gDLL->getFlagEntityIFace()->destroy(m_pFlagSymbolOffset);
-	m_pCenterUnit = NULL;
-
-	deleteAllSymbols();
+	hideGraphics(ECvPlotGraphics::ALL);
+	m_bPlotLayoutDirty = false;
+	m_bLayoutStateWorked = false;
+	m_bFlagDirty = false;
 
 	//	Don't use 'clear' - we want to release the memory so we need to
 	//	ensure the capcity goes to 0
@@ -402,12 +394,7 @@ void CvPlot::setRequireGraphicsVisible(ECvPlotGraphics::type graphics, bool visi
 
 bool CvPlot::isGraphicsVisible(ECvPlotGraphics::type graphics) const
 {
-	return (m_visibleGraphics & graphics) != 0;
-}
-
-bool CvPlot::isGraphicsRequiredVisible(ECvPlotGraphics::type graphics) const
-{
-	return (m_requiredVisibleGraphics & graphics) != 0;
+	return (m_visibleGraphics & graphics) != 0 && isInViewport();
 }
 
 bool CvPlot::isGraphicPagingEnabled() const
@@ -417,10 +404,16 @@ bool CvPlot::isGraphicPagingEnabled() const
 
 void CvPlot::showRequiredGraphics()
 {
-	ECvPlotGraphics::type toShow = (m_requiredVisibleGraphics ^ m_visibleGraphics) & m_requiredVisibleGraphics;
+	if (isInViewport())
+	{
+		ECvPlotGraphics::type toShow = (m_requiredVisibleGraphics ^ m_visibleGraphics) & m_requiredVisibleGraphics;
+		m_visibleGraphics = m_visibleGraphics | toShow;
+		updateGraphics(toShow);
+	}
+}
 
-	m_visibleGraphics = m_visibleGraphics | toShow;
-
+void CvPlot::updateGraphics(ECvPlotGraphics::type toShow /*= ECvPlotGraphics::ALL*/)
+{
 	if (!isGraphicPagingEnabled())
 	{
 		enableGraphicsPaging();
@@ -463,7 +456,11 @@ void CvPlot::showRequiredGraphics()
 void CvPlot::hideNonRequiredGraphics()
 {
 	ECvPlotGraphics::type toHide = getNonRequiredGraphicsMask();
+	hideGraphics(toHide);
+}
 
+void CvPlot::hideGraphics(ECvPlotGraphics::type toHide /*= ECvPlotGraphics::ALL*/)
+{
 	m_visibleGraphics = m_visibleGraphics & ~toHide;
 
 	if (toHide & ECvPlotGraphics::SYMBOLS)
@@ -506,13 +503,12 @@ void CvPlot::hideNonRequiredGraphics()
 			getPlotCity()->setLayoutDirty(true);
 		}
 	}
-
-	// All graphics are pages out now so we can remove ourselves from the active plot list
+	// All graphics are paged out now so we can remove ourselves from the active plot list
 	if (m_visibleGraphics == ECvPlotGraphics::NONE)
 	{
 		pageGraphicsOut();
 	}
-
+	setLayoutDirty(true);
 }
 
 ECvPlotGraphics::type CvPlot::getNonRequiredGraphicsMask() const
@@ -554,16 +550,18 @@ void CvPlot::setupGraphical()
 	//MEMORY_TRACE_FUNCTION();
 	PROFILE_FUNC();
 
-	if ( !shouldHaveGraphics() )
-	{
-		return;
-	}
+	showRequiredGraphics();
 
-	//updateSymbols();
-	
-	updateFeatureSymbol();
-	updateRiverSymbol();
-	updateMinimapColor();
+	//if ( !shouldHaveGraphics() )
+	//{
+	//	return;
+	//}
+
+	////updateSymbols();
+	//
+	//updateFeatureSymbol();
+	//updateRiverSymbol();
+	//updateMinimapColor();
 
 	updateVisibility();
 }
@@ -1204,7 +1202,7 @@ bool CvPlot::updateSymbolsInternal()
 	MEMORY_TRACK_EXEMPT();
 	PROFILE_FUNC();
 
-	if ( !isGraphicsVisible(ECvPlotGraphics::SYMBOLS))
+	if (!isGraphicsVisible(ECvPlotGraphics::SYMBOLS))
 	{
 		return false;
 	}
@@ -11576,17 +11574,28 @@ void CvPlot::setRevealed(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly, Tea
 
 				//Update terrain graphics
 				gDLL->getEngineIFace()->RebuildPlot(getViewportX(), getViewportY(),true,true);
+				//updateFeatureSymbol();
+				//updateRiverSymbol(false, true);
+			}
+
+			hideGraphics(ECvPlotGraphics::ALL);
+			if (bNewValue)
+			{
+				//updateFeatureSymbol(true);
+				updateGraphics();
 				//gDLL->getEngineIFace()->SetDirty(MinimapTexture_DIRTY_BIT, true); //minimap does a partial update
 				//gDLL->getEngineIFace()->SetDirty(GlobeTexture_DIRTY_BIT, true);
-				updateFeatureSymbol();
-				updateRiverSymbol(false, true);
 			}
-			updateSymbols();
+
+			//updateSymbols();
 			updateFog();
 			updateVisibility();
 
 			gDLL->getInterfaceIFace()->setDirty(MinimapSection_DIRTY_BIT, true);
 			gDLL->getInterfaceIFace()->setDirty(GlobeLayer_DIRTY_BIT, true);
+
+			// showRequiredGraphics();
+			// hideNonRequiredGraphics();
 		}
 
 		if (isRevealed(eTeam, false))
@@ -12126,7 +12135,7 @@ void CvPlot::updateFeatureSymbol(bool bForce)
 
 	FeatureTypes eFeature;
 
-	if ( !shouldHaveGraphics() )
+	if (!isGraphicsVisible(ECvPlotGraphics::FEATURE) && !bForce)
 	{
 		return;
 	}
@@ -12137,11 +12146,6 @@ void CvPlot::updateFeatureSymbol(bool bForce)
 		//CMemoryTrace __memoryTrace("RebuildTileArt");
 
 		gDLL->getEngineIFace()->RebuildTileArt(getViewportX(),getViewportY());
-	}
-
-	if ( !isGraphicsVisible(ECvPlotGraphics::FEATURE) )
-	{
-		return;
 	}
 
 	if ( eFeature == NO_FEATURE ||
@@ -12246,7 +12250,7 @@ void CvPlot::updateRiverSymbol(bool bForce, bool bAdjacent)
 
 	CvPlot* pAdjacentPlot;
 
-	if ( !isGraphicsVisible(ECvPlotGraphics::RIVER) )
+	if (!isGraphicsVisible(ECvPlotGraphics::RIVER))
 	{
 		return;
 	}
@@ -12271,6 +12275,12 @@ void CvPlot::updateRiverSymbol(bool bForce, bool bAdjacent)
 	{
 		gDLL->getRiverIFace()->destroy(m_pRiverSymbol);
 		return;
+	}
+
+	for (int i = 0; i < NUM_DIRECTION_TYPES; i++)
+	{
+		pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)i));
+		FAssertMsg(pAdjacentPlot != NULL, "Adjacent plot is NULL!");
 	}
 
 	if (bForce || (m_pRiverSymbol == NULL))
@@ -16564,28 +16574,32 @@ void	CvPlot::NextCachePathEpoch()
 
 void CvPlot::destroyGraphics()
 {
-	gDLL->getFeatureIFace()->destroy(m_pFeatureSymbol);
-	if(m_pPlotBuilder)
-	{
-		gDLL->getPlotBuilderIFace()->destroy(m_pPlotBuilder);
-		m_pPlotBuilder = NULL;
-	}
-	gDLL->getRouteIFace()->destroy(m_pRouteSymbol);
-	gDLL->getRiverIFace()->destroy(m_pRiverSymbol);
-	gDLL->getFlagEntityIFace()->destroy(m_pFlagSymbol);
-	gDLL->getFlagEntityIFace()->destroy(m_pFlagSymbolOffset);
-	m_pCenterUnit = NULL;
-	m_pFeatureSymbol = NULL;
-	m_pRouteSymbol = NULL;
-	m_pRiverSymbol = NULL;
-	m_pFlagSymbol = NULL;
-	m_pFlagSymbolOffset = NULL;
+	//gDLL->getFeatureIFace()->destroy(m_pFeatureSymbol);
+	//if(m_pPlotBuilder)
+	//{
+	//	gDLL->getPlotBuilderIFace()->destroy(m_pPlotBuilder);
+	//	m_pPlotBuilder = NULL;
+	//}
+	//gDLL->getRouteIFace()->destroy(m_pRouteSymbol);
+	//gDLL->getRiverIFace()->destroy(m_pRiverSymbol);
+	//gDLL->getFlagEntityIFace()->destroy(m_pFlagSymbol);
+	//gDLL->getFlagEntityIFace()->destroy(m_pFlagSymbolOffset);
+	//m_pCenterUnit = NULL;
+	//m_pFeatureSymbol = NULL;
+	//m_pRouteSymbol = NULL;
+	//m_pRiverSymbol = NULL;
+	//m_pFlagSymbol = NULL;
+	//m_pFlagSymbolOffset = NULL;
+	
+	hideGraphics(ECvPlotGraphics::ALL);
 
 	m_bPlotLayoutDirty = false;
 	m_bLayoutStateWorked = false;
 	m_bFlagDirty = false;
 
-	deleteAllSymbols();
+	// deleteAllSymbols();
+
+	// m_visibleGraphics = ECvPlotGraphics::NONE;
 }
 
 bool CvPlot::isNull() const

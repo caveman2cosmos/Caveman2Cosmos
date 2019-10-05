@@ -227,11 +227,11 @@ void CvPlotPaging::UpdatePaging()
 	
 	if(bPagingEnabled || (!bPagingEnabled && g_bWasGraphicsPagingEnabled))
 	{
-        const CvPlot* lookatPlot = gDLL->getInterfaceIFace()->getLookAtPlot();
-        if (lookatPlot == NULL)
-        {
-            return;
-        }
+		const CvPlot* lookatPlot = gDLL->getInterfaceIFace()->getLookAtPlot();
+		if (lookatPlot == NULL)
+		{
+			return;
+		}
 
 		const int centerX = lookatPlot->getX_INLINE();
 		const int centerY = lookatPlot->getY_INLINE();
