@@ -68,8 +68,8 @@ void* CvMalloc(size_t size)
 		return result;
 	}
 
-	OutputDebugString("Alloc [unsafe]");
-	::MessageBoxA(NULL, "UNsafe alloc", "CvGameCore", MB_OK);
+	//OutputDebugString("Alloc [unsafe]");
+	//::MessageBoxA(NULL, "UNsafe alloc", "CvGameCore", MB_OK);
 
 	return malloc(size);
 }
@@ -77,8 +77,16 @@ void* CvMalloc(size_t size)
 
 void CvFree(void* p)
 {
+	FAssertMsg(p != NULL, "Deleting a null pointer!");
+
+	if (p == NULL)
+		return;
+
 	if (g_DLL)
 	{
+#ifdef _DEBUG
+		memset(p, 0xFA, g_DLL->memSize(p));
+#endif
 		g_DLL->delMem(p, __FILE__, __LINE__);
 
 	}
@@ -101,15 +109,23 @@ void* CvMallocArray(size_t size)
 		return result;
 	}
 
-	OutputDebugString("Alloc [unsafe]");
-	::MessageBoxA(NULL, "UNsafe alloc", "CvGameCore", MB_OK);
+	// OutputDebugString("Alloc [unsafe]");
+	// ::MessageBoxA(NULL, "UNsafe alloc", "CvGameCore", MB_OK);
 	return malloc(size);
 }
 
 void CvFreeArray(void* p)
 {
+	FAssertMsg(p != NULL, "Deleting a null pointer!");
+
+	if (p == NULL)
+		return;
+
 	if (g_DLL)
 	{
+#ifdef _DEBUG
+		memset(p, 0xFA, g_DLL->memSize(p));
+#endif
 		g_DLL->delMemArray(p, __FILE__, __LINE__);
 	}
 	else
