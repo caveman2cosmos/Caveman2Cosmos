@@ -3529,7 +3529,7 @@ public:
 	{
 		if ( pDll != NULL )
 		{
-			g_DLL = pDll;
+			FAssertMsg(g_DLL == NULL, "Dll interface already set?");
 
 			OutputDebugString("setDLLIFace()\n");
 			if (gGlobals == NULL)
@@ -3537,12 +3537,14 @@ public:
 				OutputDebugString("Constructing internal globals\n");
 				gGlobals = new cvInternalGlobals();
 			}
+
+			g_DLL = pDll;
 		}
 		else
 		{
-			delete gGlobals;
-
+			FAssertMsg(g_DLL != NULL, "Dll interface not set?");
 			g_DLL = NULL;
+			delete gGlobals;
 		}
 	}
 

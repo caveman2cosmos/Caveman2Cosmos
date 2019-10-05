@@ -14,8 +14,11 @@ CvDLLWidgetData& CvDLLWidgetData::getInstance()
 
 void CvDLLWidgetData::freeInstance()
 {
-	delete m_pInst;
-	m_pInst = NULL;
+	if (m_pInst != NULL)
+	{
+		delete m_pInst;
+		m_pInst = NULL;
+	}
 }
 
 void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &widgetDataStruct)
