@@ -63,15 +63,9 @@ def init():
 	import SystemPaths as SP
 	import BugConfigTracker
 
-	global _rootDir, _userDir, _appDir
-	_rootDir	= SP.rootDir
-	_userDir	= SP.userDir
-	_appDir		= SP.appDir
-
-	global _modName, _modDir, _settingsDir
-	_modName = SP.modName
+	global _modDir, _settingsDir
 	_modDir = SP.modDir
-	_settingsDir = _modDir + "\UserSettings"
+	_settingsDir = SP.userSettingsDir
 	BugConfigTracker.add("Mod_Directory", _modDir)
 	BugConfigTracker.add("Settings_Directory", _settingsDir)
 

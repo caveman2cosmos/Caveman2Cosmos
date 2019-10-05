@@ -544,14 +544,15 @@ public:
 	// Set what graphics we require to be visible (probably based on camera position)
 	void setRequireGraphicsVisible(ECvPlotGraphics::type graphics, bool visible);
 	bool isGraphicsVisible(ECvPlotGraphics::type graphics) const;
-	bool isGraphicsRequiredVisible(ECvPlotGraphics::type graphics) const;
 	bool isGraphicPagingEnabled() const;
 
 	// Show all required but not visible graphics
 	void showRequiredGraphics();
+	void updateGraphics(ECvPlotGraphics::type toShow = ECvPlotGraphics::ALL);
 
 	// Hide all non required but visible graphics
 	void hideNonRequiredGraphics();
+	void hideGraphics(ECvPlotGraphics::type toHide = ECvPlotGraphics::ALL);
 
 	// Get mask of all graphics components that aren't required to be visible but currently are
 	ECvPlotGraphics::type getNonRequiredGraphicsMask() const;

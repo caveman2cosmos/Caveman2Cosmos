@@ -1,11 +1,13 @@
 ## AutoSave
-from CvPythonExtensions import *
-GAME = CyGame()
+from CvPythonExtensions import CyGlobalContext
+GC = CyGlobalContext()
+GAME = GC.getGame()
+MAP = GC.getMap()
 
 def init():
 	import SystemPaths as SP
 	global _saveDir, options
-	_saveDir = SP.rootDir + "\\Saves"
+	_saveDir = SP.userDir + "\\Saves"
 	import BugCore
 	options = BugCore.game.AutoSave
 	import CvEventInterface
@@ -22,8 +24,6 @@ def save(type, prefix, iTurn):
 	dir = "%s\\%s\\" %(_saveDir, type)
 	if prefix:
 		dir += prefix + "'"
-	MAP = CyMap()
-	GC = CyGlobalContext()
 	CyPlayer = GC.getActivePlayer()
 
 	if iTurn:

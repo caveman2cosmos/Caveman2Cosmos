@@ -9,7 +9,7 @@ def writeLog():
 	GAME = GC.getGame()
 	iPlayer = GAME.getActivePlayer()
 	szName = CvUtil.convertToStr(GC.getActivePlayer().getName())
-	szName = SP.logDir + "\\%s - Player %d - Turn %d OOSLog.txt" % (szName, iPlayer, GAME.getGameTurn())
+	szName = SP.userDir + "\\Logs\\%s - Player %d - Turn %d OOSLog.txt" % (szName, iPlayer, GAME.getGameTurn())
 	pFile = open(szName, "w")
 
 	SEP = "-----------------------------------------------------------------\n"

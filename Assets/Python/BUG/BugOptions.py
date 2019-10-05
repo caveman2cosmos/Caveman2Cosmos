@@ -289,25 +289,35 @@ class Options(object):
 
 	def initUserSettings(self):
 		print "Options.initUserSettings - starting"
-		# if theres no version file then we better check if we need to fix up or
-		# clear existing settings
 		self.versionFilePath = SP.userSettingsDir + "\\version.txt"
+
+		# if not os.path.isdir(SP.userSettingsDir):
+		# 	# if there is no UserSettings directory at all then just create it and the version file
+		# 	print "Options.initUserSettings - UserSettings directory " + SP.userSettingsDir + " not found, creating it"
+		# 	SP.initUserSettingsDir()
+		# 	self._writeVersionFile()
 		if not os.path.isfile(self.versionFilePath):
-			print "Options.initUserSettings - version file " + self.versionFilePath + " not found"
+			# if theres no version file then we better check if we need to fix up or
+			# clear existing settings
+			print "Options.initUserSettings - version file " + self.versionFilePath + " not found, creating it"
+
 			mainini = IniFile("test", "BUG Main Interface.ini")
-			mainini.read()
-			testValue = mainini.getInt("Main", "Unit Icon Size", default=None)
-			# if the test value doesn't exist at all then we need to clear the user settings so they will get 
-			# recreated from scratch (legacy settings upgrade)
-			if not testValue:
-				print "Options.initUserSettings - test value not found in mainini, resetting UserSettings directory"
-				userSettingsBackupDir = SP.modDir + "\\UserSettings_" + time.strftime("%Y%m%d-%H%M%S")
-				print(SP.userSettingsDir)
-				os.rename(SP.userSettingsDir, userSettingsBackupDir)
-				SP.initUserSettingsDir()
+			if mainini.fileExists():
+				mainini.read()
+				testValue = mainini.getInt("Main", "Unit Icon Size", default=None)
+				# if the test value doesn't exist at all then we need to clear the user settings so they will get 
+				# recreated from scratch (legacy settings upgrade)
+				if not testValue:
+					print "Options.initUserSettings - test value not found in BUG Main Interface.ini, resetting UserSettings directory"
+					userSettingsBackupDir = SP.modDir + "\\UserSettings_" + time.strftime("%Y%m%d-%H%M%S")
+					os.rename(SP.userSettingsDir, userSettingsBackupDir)
+					SP.initUserSettingsDir()
+			else:
+				print "Options.initUserSettings - BUG Main Interface.ini not found, new settings will be created"
 
 			self._writeVersionFile()
 		else:
+			# settings exist, load them normally
 			file = open(self.versionFilePath, 'r')
 			version = int(file.read().strip())
 			file.close()

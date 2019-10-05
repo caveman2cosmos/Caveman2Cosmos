@@ -42,29 +42,13 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 	switch( ul_reason_for_call ) {
 	case DLL_PROCESS_ATTACH:
 		{
-
-// BUG - EXE/DLL Paths - start
 		dllModule = hModule;
 
-#ifdef _DEBUG
-/************************************************************************************************/
-/* Afforess	                  Start		 07/30/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-//Irritating, and meaningless.
-//	MessageBox(0, "DLL attached", "Message", 0);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-#endif
-// BUG - EXE/DLL Paths - end
-
 		// The DLL is being loaded into the virtual address space of the current process as a result of the process starting up 
-		OutputDebugString("DLL_PROCESS_ATTACH\n");
+		OutputDebugString("[C2C] DLL_PROCESS_ATTACH\n");
 
 		InitializeCriticalSection(&g_cPythonSection);
-		
+
 #ifdef USE_INTERNAL_PROFILER
 		InitializeCriticalSectionAndSpinCount(&cSampleSection,2000);
 #endif
@@ -101,10 +85,10 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 		}
 		break;
 	case DLL_THREAD_ATTACH:
-		OutputDebugString(CvString::format("DLL_THREAD_ATTACH: %d\n", GetCurrentThreadId()).c_str());
+		OutputDebugString(CvString::format("[C2C] DLL_THREAD_ATTACH: %d\n", GetCurrentThreadId()).c_str());
 		break;
 	case DLL_THREAD_DETACH:
-		OutputDebugString(CvString::format("DLL_THREAD_DETACH: %d\n", GetCurrentThreadId()).c_str());
+		OutputDebugString(CvString::format("[C2C] DLL_THREAD_DETACH: %d\n", GetCurrentThreadId()).c_str());
 		break;
 	case DLL_PROCESS_DETACH:
 
@@ -112,11 +96,11 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 		dllModule = NULL;
 // BUG - EXE/DLL Paths - end
 
-		OutputDebugString("DLL_PROCESS_DETACH\n");
+		OutputDebugString("[C2C] DLL_PROCESS_DETACH\n");
 		timeEndPeriod(1);
 		break;
 	}
-	
+
 	return TRUE;	// success
 }
 
