@@ -25,3 +25,5 @@ Abu
 Simbel
 DmgChange%%
 spearmen
+barb wire
+resurrectio
