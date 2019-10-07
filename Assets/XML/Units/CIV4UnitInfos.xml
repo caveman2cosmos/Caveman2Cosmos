@@ -11676,11 +11676,11 @@
 			</TrainCondition>
 			<iCost>125</iCost>
 			<iMoves>1</iMoves>
-			<iCombat>8</iCombat>
+			<iCombat>6</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
 			<iChanceFirstStrikes>2</iChanceFirstStrikes>
-			<iWithdrawalProb>17</iWithdrawalProb>
+			<iWithdrawalProb>15</iWithdrawalProb>
 			<iEarlyWithdraw>30</iEarlyWithdraw>
 			<iCollateralDamage>6</iCollateralDamage>
 			<iCollateralDamageLimit>17</iCollateralDamageLimit>
@@ -11692,7 +11692,7 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<iBombardRate>7</iBombardRate>
+			<iBombardRate>3</iBombardRate>
 			<iAsset>3</iAsset>
 			<iPower>20</iPower>
 			<UnitMeshGroups>

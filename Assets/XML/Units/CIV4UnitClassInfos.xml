@@ -2583,7 +2583,7 @@
 			<Description>TXT_KEY_UNIT_ARSONIST</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>20</iMaxPlayerInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_ARSONIST</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
