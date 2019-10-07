@@ -1696,14 +1696,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARSONIST_PEDIA</Tag>
-		<English>[COLOR_UNIT_TEXT]Arsonist[COLOR_REVERT] is the crime of intentionally or maliciously setting fire to structures or wildland areas. It may be distinguished from other causes such as spontaneous combustion and natural wildfires.</English>
+		<English>Arson is the crime of intentionally or maliciously setting fire to structures or wildland areas. It may be distinguished from other causes such as spontaneous combustion and natural wildfires. An [COLOR_UNIT_TEXT]Arsonist[COLOR_REVERT] is one who commits arson.</English>
 		<French>[COLOR_UNIT_TEXT]Le Guerrier pyromane[COLOR_REVERT] est le criminel  mettant le feu intentionnellement à des structures ou des zones de végétation.</French>
 		<Spanish>El [COLOR_UNIT_TEXT]Pirómano[COLOR_REVERT] es el criminal que incendia de forma premeditada o maliciosa estructuras o áreas forestales. Este tipo de incendios se distinguen de otros causados por combustión espontánea u otras causas naturales.</Spanish>
 		<Polish>Podpalacz podkłada ogień pod cudzą własność.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARSONIST_STRATEGY</Tag>
-		<English>Arsonist are fires deliberately set to the property of another or to one's own property.</English>
+		<English>The [COLOR_UNIT_TEXT]Arsonist[COLOR_REVERT] is particularly useful against cities.</English>
 		<French>Les Guerriers Pyromanes mettent le feu délibérément sur tout ce qu'ils trouvent. Idéal contre les armes de siège.</French>
 		<Spanish>Los pirómanos incendian intencionadamente sus propias propiedades o las de otros.</Spanish>
 		<Polish>[COLOR_UNIT_TEXT]Podpalacz[COLOR_REVERT] jednostka przydatna przy zdobywaniu wrogich miast.</Polish>
