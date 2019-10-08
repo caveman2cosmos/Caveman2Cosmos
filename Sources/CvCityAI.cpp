@@ -9547,16 +9547,14 @@ int CvCityAI::AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImproveme
 	{
 		for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 		{
-			if (GC.getBuildInfo(unitItr->getBuildType()).getImprovement() != NO_IMPROVEMENT)
+			BuildTypes eForcedBuild = unitItr->getBuildType();
+			if (eForcedBuild != NO_BUILD && GC.getBuildInfo(eForcedBuild).getImprovement() == eImprovement)
 			{
-				BuildTypes eForcedBuild = unitItr->getBuildType();
-				if (eForcedBuild != NO_BUILD && GC.getBuildInfo(eForcedBuild).getImprovement() == eImprovement)
-				{
-					eBestTempBuild = eForcedBuild; //If a worker is already building a build, force that Build.
-				}
+				eBestTempBuild = eForcedBuild; //If a worker is already building a build, force that Build.
 				break;
 			}
 		}
+
 		if (eBestTempBuild == NO_BUILD)
 		{
 			int iBestTempBuildValue = 0;
