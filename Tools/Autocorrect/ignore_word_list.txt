@@ -27,3 +27,6 @@ DmgChange%%
 spearmen
 barb wire
 resurrectio
+hybridises
+Vulpes vulpes
+amphibius
