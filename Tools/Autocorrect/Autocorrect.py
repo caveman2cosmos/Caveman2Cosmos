@@ -8,6 +8,7 @@ import msvcrt
 import glob
 import random
 import requests
+import pickle
 # from pylanguagetool import api
 import logging
 import colorama
@@ -21,6 +22,8 @@ import urllib
 
 script_dir = os.path.dirname(os.path.realpath(__file__))
 
+google_cache = {}
+
 class Mode:
     DETECT = 0
     AUTOMATIC = 1
@@ -32,11 +35,18 @@ def load_string_list(filename):
     except:
         return []
 
-
 def save_string_list(filename, strings):
     with open(os.path.join(script_dir, filename), 'w') as f:
         for item in strings:
             f.write('%s\n' % item)
+
+def save_obj(obj, name):
+    with open(os.path.join(script_dir, name + '.pkl'), 'wb') as f:
+        pickle.dump(obj, f, pickle.HIGHEST_PROTOCOL)
+
+def load_obj(name):
+    with open(os.path.join(script_dir, name + '.pkl'), 'rb') as f:
+        return pickle.load(f)
 
 def namespace(element):
     m = re.match(r'\{(.*)\}', element.tag)
@@ -49,6 +59,13 @@ def autocorrect(files, mode, args):
     ignore_words = load_string_list('ignore_word_list.txt')
     ignore_tags = load_string_list('ignore_tag_list.txt')
     ignore_rules = load_string_list('ignore_rules_list.txt') + ['__ignore']
+
+    global google_cache
+
+    try:
+        google_cache = load_obj('google_cache')
+    except:
+        google_cache = {}
 
     langtool = LanguageTool(api_url='http://localhost:8081/v2/', lang='en-US')
     spell = SpellChecker(distance=1, local_dictionary=args.spell_dict)
@@ -76,13 +93,15 @@ def autocorrect(files, mode, args):
     except ExitEarly:
         print('\n\nExited early, progress has been saved')
         pass
-
-    # We can't have changed the lists unless we were in interactive mode
-    if mode == Mode.INTERACTIVE:
-        save_string_list('ignore_word_list.txt', ignore_words)
-        save_string_list('ignore_tag_list.txt', ignore_tags)
-        ignore_rules.remove('__ignore')
-        save_string_list('ignore_rules_list.txt', ignore_rules)
+    finally:
+        # We can't have changed the lists unless we were in interactive mode
+        if mode == Mode.INTERACTIVE:
+            print('Saving ignore lists and caches')
+            save_string_list('ignore_word_list.txt', ignore_words)
+            save_string_list('ignore_tag_list.txt', ignore_tags)
+            ignore_rules.remove('__ignore')
+            save_string_list('ignore_rules_list.txt', ignore_rules)
+            save_obj(google_cache, 'google_cache')
 
 spell_check_replacement_rules = ['MORFOLOGIK_RULE_EN_US']
 
@@ -106,6 +125,8 @@ def print_progress(color = Style.RESET_ALL):
 
 def apply_spellcheck(matches, ignore_words, spell, google):
     global last_googled
+    global google_cache
+
     for match in [m for m in matches if m['rule']['id'] in spell_check_replacement_rules]:
         match['rule']['id'] = 'spellcheck_replacement'
         context = match['context']
@@ -122,11 +143,16 @@ def apply_spellcheck(matches, ignore_words, spell, google):
             match['rule']['id'] = '__ignore'
             continue
         try:
-            # don't spam google too hard...
-            sleep(max(0.01, 1 - (time.time() - last_googled)))
-            print_progress(Fore.RED)
-            google_candidate = google.correct(word)
-            last_googled = time.time()
+            if word in google_cache:
+                google_candidate = google_cache[word]
+            else:
+                # don't spam google too hard...
+                sleep(max(0.01, 1 - (time.time() - last_googled)))
+                print_progress(Fore.RED)
+                google_candidate = google.correct(word)
+                last_googled = time.time()
+                google_cache[word] = google_candidate
+
             if not google_candidate or google_candidate == word:
                 match['rule']['id'] = '__ignore'
                 continue
@@ -145,7 +171,12 @@ def apply_spellcheck(matches, ignore_words, spell, google):
 
 def autocorrect_element(eng_elem, tag, ignore_words, ignore_tags, ignore_rules, mode, indent, fancy, langtool, spell, google):
     print_progress(Fore.BLUE)
-    results = langtool.check(eng_elem.text)
+    try:
+        results = langtool.check(eng_elem.text)
+    except ValueError as ex:
+        print ("Exception checking " + str(eng_elem) + " from " + str(tag) + ":")
+        print (str(ex))
+        return
     if results and 'matches' in results and len(results['matches']) > 0:
         apply_spellcheck(results['matches'], ignore_words, spell, google)
 

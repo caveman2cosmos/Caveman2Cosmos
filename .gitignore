@@ -46,3 +46,5 @@ Tools/Autocorrect/__pycache__/
 Tools/python/
 
 .vscode/.ropeproject/
+
+Tools/Autocorrect/google_cache.pkl
