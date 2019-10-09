@@ -5,6 +5,8 @@
 
 #include <psapi.h>
 
+#include "civ/structures.h"
+
 namespace {
 
 	struct GraphicsPagingInfo
@@ -143,6 +145,33 @@ namespace {
 			}
 		}
 	}
+
+	// static address of NiRenderer inside the exe module: 0x00BCA6F0
+	NiDX9Renderer** pRenderer = reinterpret_cast<NiDX9Renderer **>(0x00BCA6F0);
+
+	NiDX9Renderer* GetRenderer()
+	{
+		return *pRenderer;
+	}
+
+	void DoUpdateLights()
+	{
+		//typedef void (NiDX9LightManager::*NiDX9LightManager__UpdateLights)(const NiDynamicEffectState * pkState);
+		//// typedef void (__thiscall * NiDX9LightManager__UpdateLights)(const NiDynamicEffectState * pkState);
+
+		//static NiDX9LightManager__UpdateLights UpdateLights = reinterpret_cast<NiDX9LightManager__UpdateLights>(0x009AF9B0);
+
+		//(*pRenderer->m_pkLightManager).UpdateLights(NULL);
+		//UpdateLights(pRenderer->m_pkLightManager, NULL);
+		void* lightm = GetRenderer()->m_pkLightManager;
+		void* fn = reinterpret_cast<void*>(0x009AF9B0);
+		__asm {
+			mov ecx, lightm;
+			xor eax, eax;
+			push eax;
+			call fn;
+		}
+	}
 }
 
 bool EvictGraphics()
@@ -194,6 +223,7 @@ void CvPlotPaging::RemovePlot(CvPlotPaging::paging_handle handle)
 	g_pagingTable[handle].pPlot = NULL;
 	--g_iNumPagedInPlots;
 }
+
 void CvPlotPaging::ResetPaging()
 {
 	g_bWasGraphicsPagingEnabled = true;
@@ -218,9 +248,10 @@ int ToroidalDistanceSq (int x1, int y1, int x2, int y2, int w, int h)
 	return dx * dx + dy * dy;
 }
 
-
 void CvPlotPaging::UpdatePaging()
 {
+	DoUpdateLights();
+
 	// Check if the paging setting changed
 	bool bPagingEnabled = getBugOptionBOOL("MainInterface__EnableGraphicalPaging", true);
 	GC.setGraphicalDetailPagingEnabled(bPagingEnabled);
