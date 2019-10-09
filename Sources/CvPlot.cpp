@@ -12277,12 +12277,6 @@ void CvPlot::updateRiverSymbol(bool bForce, bool bAdjacent)
 		return;
 	}
 
-	for (int i = 0; i < NUM_DIRECTION_TYPES; i++)
-	{
-		pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)i));
-		FAssertMsg(pAdjacentPlot != NULL, "Adjacent plot is NULL!");
-	}
-
 	if (bForce || (m_pRiverSymbol == NULL))
 	{
 		//create river
@@ -12895,29 +12889,23 @@ void CvPlot::addUnit(CvUnit* pUnit, bool bUpdate)
 
 void CvPlot::removeUnit(CvUnit* pUnit, bool bUpdate)
 {
-	CLLNode<IDInfo>* pUnitNode;
-
-	pUnitNode = headUnitNode();
-
-	while (pUnitNode != NULL)
+	for (CLLNode<IDInfo>* pUnitNode = headUnitNode(); pUnitNode != NULL; )
 	{
 		if (::getUnit(pUnitNode->m_data) == pUnit)
 		{
 			FAssertMsg(::getUnit(pUnitNode->m_data)->at(getX_INLINE(), getY_INLINE()), "The current unit instance is expected to be at getX_INLINE and getY_INLINE");
-			m_units.deleteNode(pUnitNode);
+			pUnitNode = m_units.deleteNode(pUnitNode);
 			/*break;*///TBDebug: It has been found possible that a node may have somehow duplicated itself and thus the plot may have more than 1 of the node.  If these duplicates aren't destroyed, we get a crash as well.  Best case would be to somehow catch how this gets setup but in the debugging case that discovered this, it likely happened long beforehand.  Jumptonearestvalidplot is the suspected culprit as it was an exile that showed the issue.
 		}
-		//else
-		//{
-		//TBMaybeproblem - recent change here could've introduced some pain
+		else
+		{
 			pUnitNode = nextUnitNode(pUnitNode);
-		//}
+		}
 	}
 
 	if (bUpdate)
 	{
 		updateCenterUnit();
-
 		setFlagDirty(true);
 	}
 }
