@@ -48,3 +48,5 @@ Tools/python/
 .vscode/.ropeproject/
 
 lights-found.txt
+
+Tools/Autocorrect/google_cache.pkl
