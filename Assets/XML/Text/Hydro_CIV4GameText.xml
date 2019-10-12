@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -160,7 +160,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERMITE_MOUND_PEDIA</Tag>
-		<English>Termite Mounds occur when an above-ground nest grows beyond its initially concaling surface.</English>
+		<English>Termite Mounds occur when an above-ground nest grows beyond its initially concealed surface.</English>
 		<French>une Termitièress occur when an above-ground nest grows beyond its initially concaling surface.</French>
 		<Italian>I termitai si originao quando un nido di termiti costruito sottoterra si sviluppa fuori dalla superficie.</Italian>
 		<Polish>Termity (Isoptera) - rzad owadów spolecznych z podgromady uskrzydlonych. Nazwa Isoptera jest polaczeniem gr. iso- czyli równy, i -ptera, czyli skrzydla - co oznacza równoskrzydle owady dorosle (w przeciwienstwie do mrówek, których formy uskrzydlone maja przednia pare skrzydel wieksza od drugiej pary skrzydel). Przechodza przeobrazenie niezupelne. Termity maja aparat gebowy gryzacy. Typowa wielkosc termita waha sie od 4 do 11 mm dlugosci. Przystosowaniem termitów do odzywiania sie drewnem sa wystepujace w ukladzie pokarmowym, rozkladajace celuloze, pierwotniaki.</Polish>
@@ -264,7 +264,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIDEPOOLS</Tag>
-		<English>Tidepool Scavanger</English>
+		<English>Tidepool Scavenger</English>
 		<French>
 			<Text>Mare résiduelle</Text>
 			<Gender>Female</Gender>
@@ -323,7 +323,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAPS_STRATEGY</Tag>
-		<English>Build a Animal Snare Traps to increase your cities food.</English>
+		<English>Build an Animal Snare Traps to increase your cities food.</English>
 		<French>Construisez des [COLOR_BUILDING_TEXT]Pièges à collets[COLOR_REVERT] pour augmenter la nourriture de votre ville.</French>
 		<Italian>Builda Animal Snare Traps to increase your cities food.</Italian>
 		<Polish>Zbuduj Animal Snare Traps by zwiększyć produkcję żywności w Twoich miastach.</Polish>
@@ -354,7 +354,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WILD_HERBS_PEDIA</Tag>
-		<English>An herb is a plant that is valued for flavor, scent, medicinal or other qualities other than its food value. Herbs are used in cooking, as medicines, and for spiritual purposes.</English>
+		<English>A herb is a plant that is valued for flavor, scent, medicinal or other qualities other than its food value. Herbs are used in cooking, as medicines, and for spiritual purposes.</English>
 		<Italian>Un'erba è una pianta con un certo valore per sapore, profumo, qualità medicinali o altre diverse dal proprio valore alimentare. Le erbe sono utilizzate in cucina, come farmaci o per scopi spirituali.</Italian>
 		<Polish>Ziola, rosliny zielarskie - rosliny zawierajace substancje wplywajace na metabolizm czlowieka (np. olejki eteryczne) i dostarczajace surowców zielarskich. Sa to gatunki lecznicze, przyprawowe, a takze trujace. Grupa ta obejmuje przede wszystkim jednoroczne i dwuletnie rosliny zielne, ale takze drzewa, krzewy, warzywa i byliny. Zalicza sie do nich takze niektóre grzyby. Ziola stosowane sa m.in. w ziololecznictwie, aromaterapii i jakoprzyprawy.</Polish>
 	</TEXT>
@@ -641,7 +641,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHEARING_BARN_PEDIA</Tag>
-		<English>Sheep shearing is the process by which the woollen fleece of a sheep is cut off. The person who removes the sheep's wool is called a shearer. Typically each adult sheep is shorn once each year.</English>
+		<English>Sheep shearing is the process by which the woollen fleece of a sheep is cut off. The person who removes the sheep's wool is called a shearer. Typically, each adult sheep is shorn once each year.</English>
 		<Italian>La tosatura delle pecore è il processo in cui il manto lanoso delle pecore viene tagliato; la persona che taglia la lana viene chiamata tosatore. Normalmente, ogni pecora adulta viene tosata una volta all'anno.</Italian>
 		<Polish>Owczarnia - budynek w którym trzyma sie owce</Polish>
 	</TEXT>
@@ -714,7 +714,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BAMBOO_ARMOURER_PEDIA</Tag>
-		<English>The majority of Samuari armor was made from bamboo.</English>
+		<English>The majority of Samurai armor was made from bamboo.</English>
 		<Italian>La maggioranza delle armature dei samurai era fatta di bambù.</Italian>
 		<Polish>Rzemieslnik produkujacy pancerze i tarcze z bambusa.</Polish>
 	</TEXT>
@@ -744,7 +744,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROOT_TUBERS_PEDIA</Tag>
-		<English>Tubers are various types of modified plant structures that are enlarged to store nutrients. They are used by plants to survive the winter or dry months and provide energy and nutrients for regrowth during the next growing season and they are a means of asexual reproduction.</English>
+		<English>Tubers are various types of modified plant structures that are enlarged to store nutrients. They are used by plants to survive the winter or dry months and provide energy and nutrients for regrowth during the next growing season, and they are a means of asexual reproduction.</English>
 		<German>Bei Pflanzenknollen handelt es sich um verdickte Speicherorgane, die sich unter der Erde befinden. Man unterscheidet dabei Spross-  und Wurzelknollen. Diese Knollen dienen der Speicherung von Nährstoffen für die Überdauerung ungünstiger Lebensverhältnisse. Von vielen Tierarten (z.B. von Schweinen) ist bekannt, dass sie nach essbaren unterirdischen Knollen graben. Es ist zu vermuten, dass die frühen Menschen sich dieses Verhalten abgeschaut haben.</German>
 		<Italian>I tuberi sono vari tipi di strutture di piante modificate per contenere più sostanze nutritive. Vengono usati dalle piante per sopravvivere all'inverno o ai mesi più secchi e per fornire e energia e nutrienti durante la successiva stagione di crescita; sono un mezzo di riproduzione asessuata.</Italian>
 		<Polish>Znaczenie spozywcze maja liczne warzywa korzeniowe i rzepowate, wytwarzajace korzenie spichrzowe gromadzace substancje zapasowe. Warzywami, u których spozywane sa w istocie korzenie spichrzowe sa: maniok jadalny (Manihot esculenta), batat (wilec ziemniaczany) (Ipomoea batatas), cibora jadalna (Cyperus esculentus), klebian katowaty (Pachyrrhizus erosus), Ensete ventricosum i salep (bulwy storczyków, gl. storczyka meskiego Orchis maculata). Wiele warzyw korzeniowych wyksztalca bulwy hipokotylowe ze spichrzowym, dolnym odcinkiem pedu zrosnietym ze zgrubialym korzeniem, np.: pasternak zwyczajny (Pastinaca sativa), burak cwiklowy (Beta vulgaris), marchew zwyczajna (Daucus carota), pietruszka korzeniowa (Petroselinum hortense ssp. microcarpum), seler korzeniowy (Apium graveolens var. rapaceum), swierzabek bulwiasty (Chaerophyllum bulbosum), wezymord czarny korzen (skorzonera, Skorzonera hispanica), kozibród porolistny (Tragopogon porrifolius). Do grupy tej naleza tez warzywa rzepowate (np. rzodkiewka, rzepa i brukiew).</Polish>
@@ -1784,7 +1784,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DYE_MAKER_PEDIA</Tag>
-		<English>The majority of natural dyes are from plant sources? roots, berries, bark, leaves, and wood, fungi, and lichens. Textile dyeing date back to the Neolithic period. Throughout history, people have dyed their textiles using common, locally available materials. Scarce dyestuffs that produced brilliant and permanent colors such as the natural invertebrate dyes Tyrian purple and crimson kermes were highly prized luxury items in the ancient and medieval world. Plant-based dyes such as woad, indigo, saffron, and madder were raised commercially and were important trade goods in the economies of Asia and Europe.</English>
+		<English>The majority of natural dyes are from plant sources: roots, berries, bark, leaves, and wood, fungi, and lichens. Textile dyeing date back to the Neolithic period. Throughout history, people have dyed their textiles using common, locally available materials. Scarce dyestuffs that produced brilliant and permanent colors such as the natural invertebrate dyes Tyrian purple and crimson kermes were highly prized luxury items in the ancient and medieval world. Plant-based dyes such as woad, indigo, saffron, and madder were raised commercially and were important trade goods in the economies of Asia and Europe.</English>
 		<Italian>La maggior parte delle tinture naturali derivano da piante come radici, bacche, foglie, legni, funghi e licheni. La tintura dei tessuti risale al periodo Neolitico; nel corso della storia, le tecniche di tintura sono state basate su materiali comuni e disponibili localmente. Nel mondo antico e medievale alcune tinture rare che producevano colori brillanti e permanenti come la porpora di Tiro e il cremisi erano oggetti di lusso con un valore molto elevato. I coloranti a base di piante come guado, indaco, zafferano e robbia sono stati commerciati e sono stati prodotti commerciali importanti nelle economie di Asia ed Europa.</Italian>
 		<Polish>Barwnik - jest substancją przepuszczającą światło i zabarwiającą sobą ośrodek, w którym jest rozpuszczona lub stopiona. Może również reagować z tym ośrodkiem. W odróżnieniu od pigmentów, wśród barwników występuje również wiele substancji organicznych. W przemyśle chemii organicznej barwnikami są substancje wchodzące w reakcję chemiczną z włóknem naturalnym, sztucznym lub skórą. Rozpowszechnione naturalne barwniki to np.hemoglobina - czerwony barwnik krwi, chlorofile - zielone barwniki roślinne.</Polish>
 	</TEXT>
@@ -1921,7 +1921,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ICECREAM_PARLOR_STRATEGY</Tag>
-		<English>Build a Ice Cream Parlor to increase your cities food.</English>
+		<English>Build an Ice Cream Parlor to increase your cities food.</English>
 		<French>Augmente la nourriture de votre ville.</French>
 		<Italian>Costruisci una gelateria per incrementare la produzione di cibo della tua città.</Italian>
 		<Polish>Zbuduj Ice Cream Parlor by zwiększyć produkcję żywności w Twoich miastach.</Polish>
@@ -2096,7 +2096,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANTIQUE_SHOP_PEDIA</Tag>
-		<English>An antique shop (or antiques shop) is a retail store specializing in the selling of antiques. Antiques shops can be located either locally and with the advent of the Internet found online. An online Antique shop can also be located within an Antique Mall, where an individual Antique seller can open a shop and display their items for sell within the mall.</English>
+		<English>An antique shop (or antiques shop) is a retail store specializing in the selling of antiques. Antique shops can be located either locally and with the advent of the Internet found online. An online Antique shop can also be located within an Antique Mall, where an individual Antique seller can open a shop and display their items for sale within the mall.</English>
 		<Italian>Un negozio d'antiquariato è un esercizio commerciale specializzato nella vendita di reperti storici. Un negozio di antiquariato può essere sia un negozio fisico, sia un negozio online; inoltre' può essere anche all'interno di un centro commerciale.</Italian>
 		<Polish>Antykwariat (od łac. antiquarius - osoba zajmująca się starożytnościami) - firma zajmująca się handlem starymi przedmiotami, mającymi wartość historyczną, estetyczną lub materialną; sklep oferujący antyki bądź książki (głównie używane).</Polish>
 	</TEXT>
@@ -2239,7 +2239,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STICK_GATHERER_STRATEGY</Tag>
-		<English>Gather Sticks for fuel or building materals.</English>
+		<English>Gather Sticks for fuel or building materials.</English>
 		<French>Récolte des Branchages comme combustible ou matière première.</French>
 		<German>[COLOR_BUILDING_TEXT]Reisigsammler[COLOR_REVERT] steigern die Produktivität früher Städte.</German>
 		<Italian>Raccogli dei bastoncini come combustibile o come materiale da costruzione.</Italian>
@@ -2264,7 +2264,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROCK_GATHERER_STRATEGY</Tag>
-		<English>Gather Rocks for tools or building materals.</English>
+		<English>Gather Rocks for tools or building materials.</English>
 		<French>Récolte les Roches utiles pour les outils.</French>
 		<Italian>Raccogli le rocce per usarle come utensili o come materiali da costruzione.</Italian>
 	</TEXT>
@@ -2334,7 +2334,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BARK_GATHERER_STRATEGY</Tag>
-		<English>Gather Bark for building materals.</English>
+		<English>Gather Bark for building materials.</English>
 		<French>Récolte les écorces utiles pour les outils.</French>
 		<German>Gather Bark for tools or building materals.</German>
 		<Italian>Raccogli la corteccia per usarla come utensile o come materiale da costruzione.</Italian>
@@ -2342,7 +2342,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BARK_GATHERER_PEDIA</Tag>
-		<English>Bark is the outermost layers of stems and roots of woody plants. Plants with bark include trees, woody vines, and shrubs. Bark refers to all the tissues outside of the vascular cambium and is a nontechnical term.</English>
+		<English>Bark is the outermost layers of stems and roots of woody plants. Plants with bark include trees, woody vines, and shrubs. Bark refers to all the tissues outside the vascular cambium and is a nontechnical term.</English>
 		<Italian>La corteccia è lo strato più esterno di steli e radici delle piante legnose. Piante con corteccia includono alberi, viti e arbusti. Corteccia si riferisce a tutti i tessuti al di fuori del cambium vascolare ed è un termine non tecnico.</Italian>
 		<Polish>Zbiera korę z drzew.</Polish>
 	</TEXT>
@@ -2512,7 +2512,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FIRE_DANCE_PEDIA</Tag>
-		<English>Fire dancing is a group of performance arts or disciplines that involve manipulation of objects on fire. Typically these objects have one or more bundles of wicking, which are soaked in fuel and ignited.</English>
+		<English>Fire dancing is a group of performance arts or disciplines that involve manipulation of objects on fire. Typically, these objects have one or more bundles of wicking, which are soaked in fuel and ignited.</English>
 		<Italian>La danza del fuoco è un gruppo di arti performative o discipline che comportano la manipolazione di oggetti in fiamme. Tipicamente questi oggetti hanno uno o più fasci di materiali assorbenti, imbevuti di carburante e poi accesi.</Italian>
 		<Polish>Taniec na cześć duchów ognia i płomieni.</Polish>
 	</TEXT>
@@ -2703,7 +2703,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COFFEE_SHOP_PEDIA</Tag>
-		<English>A coffee shop is an establishment which primarily serves prepared coffee or other hot beverages. It shares some of the characteristics of a bar, and some of the characteristics of a restaurant, but it is different from a cafeteria. As the name suggests, coffeehouses focus on providing coffee and tea as well as light snacks.</English>
+		<English>A coffee shop is an establishment which primarily serves prepared coffee or other hot beverages. It shares some characteristics of a bar, and some characteristics of a restaurant, but it is different from a cafeteria. As the name suggests, coffeehouses focus on providing coffee and tea as well as light snacks.</English>
 		<Italian>Una caffetteria è un esercizio commerciale che vende caffè e altre bevande calde. Ha caratteristiche tipiche sia di un bar sia di un ristorante; le caffetterie vendono caffè e tè, oltre a piccoli snack.</Italian>
 		<Polish>Kawa - napój sporządzany z palonych, a następnie zmielonych lub poddanych instantyzacji ziaren kawowca, zwykle podawana na gorąco. Pochodzi z Etiopii, w Europie pojawiła się około XVI wieku. Jedna z najpopularniejszych używek na świecie i główne źródło kofeiny. Działa pobudzająco i orzeźwiająco oraz przyspiesza przemianę materii. Zawieraprzeciwutleniacze, które zapobiegają powstawaniu wolnych rodników. Spożywana w dużych ilościach może jednak być szkodliwa dla zdrowia. Rocznie produkuje się około 6,7 miliona ton kawy</Polish>
 	</TEXT>
@@ -2823,7 +2823,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STAINEDGLASS_WORKSHOP_PEDIA</Tag>
-		<English>The term stained glass can refer to coloured glass as a material or to works produced from it. Throughout its thousand-year history, the term has been applied almost exclusively to the windows of churches and other significant buildings. Although traditionally made in flat panels and used as windows, the creations of modern stained glass artists also include three-dimensional structures and sculpture.</English>
+		<English>The term stained-glass can refer to coloured glass as a material or to works produced from it. Throughout its thousand-year history, the term has been applied almost exclusively to the windows of churches and other significant buildings. Although traditionally made in flat panels and used as windows, the creations of modern stained-glass artists also include three-dimensional structures and sculpture.</English>
 		<Italian>Il termine vetro colorato può riferirsi sia al vetro colorato come materiale sia alle opere da esso derivate. Nel corso della sua storia millenaria, il termine è stato applicato quasi esclusivamente alle finestre di chiese e altri edifici di rilievo. Anche se tradizionalmente realizzato in pannelli piani e utilizzato come finestre, le creazioni di artisti moderni in vetro colorato includono anche strutture tridimensionali e sculture.</Italian>
 		<Polish>Witraż - ozdobne wypełnienie okna, wykonane z kawałków kolorowego szkławprawianych w ołowiane ramki osadzone między żelazne sztaby. Ramki stanowią kontur rysunku, kreskowanie na szkle lub malowanie na nim przeźroczystymi farbami podkreśla charakterystyczne elementy (głowę, oczy, ręce, fałdowanie szat, cieniowanie figur itp.). Witraże stosowano głównie w budownictwie sakralnym. Technika witrażu znana była w starożytności jednak została rozpowszechniona od wczesnego średniowiecza, a rozwinęła się wsztuce gotyckiej. Renesans witrażownictwa nastąpił na przełomie wieków XIX iXX w sztuce secesji.</Polish>
 	</TEXT>
@@ -3497,7 +3497,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BRICK_FACTORY_PEDIA</Tag>
-		<English>A brick is a block, or a single unit of a ceramic material used in masonry construction. Typically bricks are stacked together, or laid as brickwork using various kinds of mortar to hold the bricks together and make a permanent structure. Bricks are typically produced in common or standard sizes in bulk quantities. They have been regarded as one of the longest lasting and strongest building materials used throughout history.</English>
+		<English>A brick is a block, or a single unit of a ceramic material used in masonry construction. Typically, bricks are stacked together, or laid as brickwork using various kinds of mortar to hold the bricks together and make a permanent structure. Bricks are typically produced in common or standard sizes in bulk quantities. They have been regarded as one of the longest lasting and strongest building materials used throughout history.</English>
 		<Italian>Un mattone è un blocco o una singola unità di un materiale ceramico utilizzato in opere di muratura. In genere i mattoni sono accatastati insieme o disposti come un muro utilizzando vari tipi di malta per tenere insieme i mattoni e fare una struttura permanente. I mattoni sono in genere prodotti nelle misure comuni o standard allo stato sfuso. Essi sono stati considerati come uno dei più resitenti e durevoli materiali da costruzione utilizzati nel corso della storia.</Italian>
 		<Polish>Cegielnia - zakład wytwórczy, zajmujący się produkcją cegieł ceramicznych, wypalanych z gliny. Cegielnie stawia się najczęściej w pobliżu miejsc bogatych w zasoby gliny, co pozwala zredukować koszty transportu surowca. Budowa cegielni, szczególnie po zmechanizowaniu produkcji cegieł w pierwszej połowie XIX wieku, była widomym znakiem pojawiania się w okolicy przemysłu i budownictwa przemysłowego, potrzebującego materiałów budowlanych.</Polish>
 	</TEXT>
@@ -3713,7 +3713,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POTATOCHIP_FACTORY_PEDIA</Tag>
-		<English>A potato chip is a thin slice of potato that is deep fried or baked until crunchy. Potato chips are commonly served as an appetizer, side dish, or snack. The basic chips are cooked and salted; additional varieties are manufactured using various flavorings and ingredients including seasonings, herbs, spices, cheeses, and artificial additives.</English>
+		<English>A potato chip is a thin slice of potato that is deep-fried or baked until crunchy. Potato chips are commonly served as an appetizer, side dish, or snack. The basic chips are cooked and salted; additional varieties are manufactured using various flavorings and ingredients including seasonings, herbs, spices, cheeses, and artificial additives.</English>
 		<Italian>Una patatina fritta è una fetta sottile di patata che viene fritta o cotta fino a diventare croccante. Le patatine fritte sono comunemente servite come antipasto, contorno o spuntino. Le patatine normali sono cotte e salate; varietà aggiuntive sono realizzate con vari aromi e ingredienti tra cui condimenti, erbe, spezie, formaggi e additivi artificiali.</Italian>
 		<Polish>Chipsy (lub czipsy) - popularna przekąska w postaci cienkich, osuszonych plastrów ziemniaków (najczęściej) lub innych warzyw, zazwyczaj obsmażonych w głębokim, gorącym tłuszczu. Ze względu na wysoką wartość energetyczną chipsów, do ich produkcji stosowane są również zamienniki tłuszczu oraz nowoczesne technologie produkcji, takie jak na przykład gotowanie z zastosowaniem mikrofal, a następnie spryskiwanie niewielką ilością oleju (bez zanurzenia w tłuszczu). Poszczególne smaki uzyskuje się dzięki doborowi przypraw i aromatów, rzadziej ziół.</Polish>
 	</TEXT>
@@ -4169,7 +4169,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REED_GATHERER_PEDIA</Tag>
-		<English>In polyphyletic botany, a reed is a type of tall, grass-like plant of wet places, it is also very flamable; the namesake vegetation of reed beds.</English>
+		<English>In polyphyletic botany, a reed is a type of tall, grass-like plant of wet places, it is also very flammable; the namesake vegetation of reed beds.</English>
 		<Italian>In botanica, una canna è un tipo di erba altache cresce in luoghi umidi, ma è anche molto infiammabile; l'omonima vegetazione sono i canneti.</Italian>
 		<Polish>Trzcina (Phragmites L.) - rodzaj roślin należący do rodziny wiechlinowatych. Należy do niego 4-5 gatunków. W Polsce w środowisku naturalnym rośnie jeden tylko gatunek - trzcina pospolita (Phragmites australis), jest to zarazem gatunek typowy rodzaju.</Polish>
 	</TEXT>
@@ -4467,7 +4467,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STATIONARY_STORE</Tag>
-		<English>Stationary Store</English>
+		<English>Stationery Store</English>
 		<French>
 			<Text>Boutique de Cartes de voeux</Text>
 			<Gender>Female</Gender>
@@ -4478,14 +4478,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STATIONARY_STORE_STRATEGY</Tag>
-		<English>Build a Stationary Store to increase your cities wealth.</English>
+		<English>Build a Stationery Store to increase your cities wealth.</English>
 		<French>Construire une [COLOR_BUILDING_TEXT]Boutique de Cartes de voeux[COLOR_REVERT] pour augmenter la richesse de la ville.</French>
 		<Italian>Costruisci una cartoleria per incrementare la ricchezza della tua città.</Italian>
 		<Polish>Zbuduj Stationary Store by zwiększyć bogactwo w Twoich miastach.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STATIONARY_STORE_PEDIA</Tag>
-		<English>A Stationary Store is a store the specilizes in paper and greeting cards.</English>
+		<English>A Stationery Store is a store that specilizes in paper and greeting cards.</English>
 		<French>A une Boutique de Cartes de voeux is a store the specilizes in paper and greeting cards.</French>
 		<Italian>Una cartoleria è un negozio specializzato in carta e biglietti di auguri, oltre a vari oggetti per l'ufficio.</Italian>
 		<Polish>Sklep Papierniczy</Polish>
@@ -4704,7 +4704,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DRIED_MEAT_PEDIA</Tag>
-		<English>Jerky is lean meat that has been trimmed of fat, cut into strips, and then dried to prevent spoilage. Normally, this drying includes the addition of salt, to prevent bacteria from developing on the meat before sufficient moisture has been removed. The word "jerky" is a corruption of the Spanish charqui which is from the Quechua word ch'arki. which means to burn (meat).</English>
+		<English>Jerky is lean meat that has been trimmed of fat, cut into strips, and then dried to prevent spoilage. Normally, this drying includes the addition of salt, to prevent bacteria from developing on the meat before sufficient moisture has been removed. The word "jerky" is a corruption of the Spanish charqui which is from the Quechua word ch'arki, which means to burn (meat).</English>
 		<Italian>Jerky è carne magra da cui è stato rimosso il grasso, tagliata a strisce e poi essiccata per impedire il deterioramento. Normalmente, quest'essiccazione comprende l'aggiunta di sale, per impedire ai batteri di svilupparsi sulla carne prima che l'umidità sia stata rimossa. La parola "jerky" è una corruzione dello spagnolo charqui che deriva dalla parola Quechua ch'arki  che significa bruciare (carne).</Italian>
 		<Polish>Suszenie żywności to jedna z najstarszych metod konserwacji znanej człowiekowi. Polega na usunięciu wody w produkcie przez jej wyparowanie. Suszenie żywności znane było już w czasach prehistorycznych kiedy to suszono mięso (w tym również ryby). Pierwotnie suszono mięso z wykorzystaniem słońca i wiatru. Następnie ognia, przy czym proces ten często przypominał wędzenie. Obecnie wykorzystuje się, na skalę przemysłową suszarnie elektryczne, są również niewielkie aparaty umożliwiające suszenie w warunkach domowych (można też wykorzystać piekarnik elektryczny ale wiąże się to ze znacznie większym zużyciem prądu elektrycznego).</Polish>
 	</TEXT>
@@ -5128,7 +5128,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAIL_FACTORY_PEDIA</Tag>
-		<English>A sail is a surface, typically made of fabric and supported by a mast, whose purpose to propel a sailing vessel. Occasionally sails may also be found on land vehicles.</English>
+		<English>A sail is a surface, typically made of fabric and supported by a mast, whose purpose is to propel a sailing-vessel. Occasionally sails may also be found on land vehicles.</English>
 		<Italian>Una vela è un qualsiasi tipo di superficie con lo scopo di generare una spinta piazzandosi in posizione verticale all'interno di una corrente d'aria. Le vele erano molto usate nella navigazione fino all'avvento dei motori a vapore. A volte le vele possono essere trovate anche sui veicoli di terra.</Italian>
 		<Polish>Żagiel - rodzaj pędnika wiatrowego stosowanego do napędzania żaglowców, jachtów, bojerów, żaglowozów itd. Jest to odpowiednio ukształtowany płat tkaniny (ew. innego tworzywa) rozpięty na omasztowaniu jednostek żaglowych, stawiany fałami i kierowany szotami lub brasami (najczęściej przy użyciu lin pomocniczych). Zadaniem żagla jest wytworzenie siły aerodynamicznej napędzającej jednostkę. Zespół żagli tworzy ożaglowanie.</Polish>
 	</TEXT>
@@ -5272,7 +5272,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEWSPAPER_FACTORY_PEDIA</Tag>
-		<English>A newspaper is a periodical publication containing news regarding current events, informative articles, diverse features, editorials, and advertising. It usually is printed on relatively inexpensive, low-grade paper such as newsprint.</English>
+		<English>A newspaper is a periodical publication containing news regarding current events, informative articles, diverse features, editorials, and advertising. It is usually printed on relatively inexpensive, low-grade paper such as newsprint.</English>
 		<Italian>Un giornale è una pubblicazione periodica che contiene notizie riguardanti eventi attuali, articoli informativi, diverse caratteristiche, editoriali e pubblicitarie. Di solito è stampato su carta relativamente poco costoso, di qualità inferiore, come carta da giornale.</Italian>
 		<Polish>Gazeta - rodzaj wydawnictwa ciągłego, czasopismo ukazujące się częściej niż raz w tygodniu, najczęściej codziennie (dziennik) - w rozumieniu wszystkich dni roboczych.</Polish>
 	</TEXT>
@@ -5313,7 +5313,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORGAN_FACTORY_STRATEGY</Tag>
-		<English>Build a Replecement Organ Factory to increase your cities health.</English>
+		<English>Build a Replacement Organ Factory to increase your cities health.</English>
 		<French>Construisez une [COLOR_BUILDING_TEXT]Usine d'Organes de Remplacement[COLOR_REVERT] pour augmenter la santé de votre ville.</French>
 		<Italian>Costruisci una fabbrica di organi di ricambio per incrementare la salute della tua città.</Italian>
 		<Polish>Zbuduj Replecement Organ Factory by poprawić jakość zdrowia Twoich poddanych w miastach.</Polish>
@@ -5415,7 +5415,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ECOSCRAPER_PEDIA</Tag>
-		<English>An everomentally friendly skyscraper that helps reduce polution.</English>
+		<English>An everomentally friendly skyscraper that helps reduce pollution.</English>
 		<Polish>Ekodrapacz Chmur to wysoki budyne z zamknietym ekosystemem.</Polish>
 	</TEXT>
 	<TEXT>
@@ -6583,7 +6583,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRIME_TRESSPASSING</Tag>
-		<English>Crime (Tresspassing)</English>
+		<English>Crime (Trespassing)</English>
 		<French>Crime (Usurpation)</French>
 		<Italian>Crimine (Usurpazione)</Italian>
 		<Polish>Przestępstwa (Naruszanie prywatności)</Polish>
@@ -6616,7 +6616,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRIME_HATECRIME_PEDIA</Tag>
-		<English>In crime and law, hate crimes  occur when a perpetrator targets a victim because of his or her perceived membership in a certain social group, usually defined by racial group, religion, sexual orientation, disability, class, ethnicity, nationality, age, sex, or gender identity.</English>
+		<English>In crime and law, hate crimes occur when a perpetrator targets a victim because of his or her perceived membership in a certain social group, usually defined by racial group, religion, sexual orientation, disability, class, ethnicity, nationality, age, sex, or gender identity.</English>
 		<Italian>Secondo la legge, l'odio razziale si ha quando una persona sceglie una vittima a causa della sua appartenenza ad un determinato gruppo sociale, di solito definito dal gruppo razziale, religioso, si orientamento sessuale, di disabilità, di classe, di etnia, di nazionalità, di età, di sesso o  di identità.</Italian>
 	</TEXT>
 	<TEXT>
@@ -6767,7 +6767,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRIME_RIOTING_PEDIA</Tag>
-		<English>A riot is a form of civil disorder characterized often by what is thought of as disorganized groups lashing out in a sudden and intense rash of violence against authority, property or people. While individuals may attempt to lead or control a riot, riots are thought to be typically chaotic and exhibit herd behaviour, and usually generated by civil unrest. However, there is a growing body of evidence to suggest that riots are not irrational, herd-like behaviour, but follow inverted social norms.</English>
+		<English>A riot is a form of civil disorder often characterized by what is thought of as disorganized groups lashing out in a sudden and intense rash of violence against authority, property or people. While individuals may attempt to lead or control a riot, riots are thought to be typically chaotic and exhibit herd behaviour, and usually generated by civil unrest. However, there is a growing body of evidence to suggest that riots are not irrational, herd-like behaviour, but follow inverted social norms.</English>
 		<Italian>Una sommossa è una forma di disordine civile caratterizzata spesso da ciò che sembro un gruppo disorganizzato di persone che, in preda a un improvviso ed intenso raptus di violenza, si scaglia contro un'autorità, una proprietà e una persona. Anche se alcuni individui possono tentare di controllare una sommossa, essa è tipicamente caotica e mostra comportamenti tipici dei branchi animali, dato che è generata dall'agitazione popolare. In ogni caso, ci sono varie prove che suggeriscono che le sommosse non sono irrazionali, bensì seguono determinate norme sociali.</Italian>
 	</TEXT>
 	<TEXT>
@@ -7065,7 +7065,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRIME_ANIMALABUSE_PEDIA</Tag>
-		<English>Animal Abuse is the human infliction of suffering or harm upon non-human animals, for purposes other than self-defense or survival. More narrowly, it can be harm for specific gain, such as killing animals for food or for their fur, although opinions differ with respect to the method of slaughter. It usually encompasses inflicting harm for personal amusement (see zoosadism). Diverging viewpoints are held by jurisdictions throughout the world. Laws concerning animal cruelty are designed to prevent needless cruelty to animals, rather than killing for other aims such as food, or they concern species not eaten as food in the country involved, such as those regarded as pets.</English>
+		<English>Animal Abuse is the human infliction of suffering or harm upon non-human animals, for purposes other than self-defense or survival. More narrowly, it can be harm for specific gain, such as killing animals for food or for their fur, although opinions differ with respect to the method of slaughter. It usually encompasses inflicting harm for personal amusement (see zoosadism). Diverging viewpoints are held by jurisdictions throughout the world. Laws concerning animal cruelty are designed to prevent needless cruelty to animals, rather than killing for other aims, such as food, or they concern species not eaten as food in the country involved, such as those regarded as pets.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRIME_ELDERABUSE</Tag>
@@ -7858,7 +7858,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COFFEE_PLANTATION_PEDIA</Tag>
-		<English>Coffee is a flowering shrubs or small trees, native to subtropical Africa and southern Asia. Seeds of several species are the source of the popular beverage coffee.</English>
+		<English>Coffee is a flowering shrub or small trees, native to subtropical Africa and southern Asia. Seeds of several species are the source of the popular beverage coffee.</English>
 		<Italian>Il caffè è un arbusto o una piccola pianta fiorita, originaria dell'Africa e dell'Asia meridionale subtropicali. I semi di diverse specie sono la fonte della popolare bevanda al caffè.</Italian>
 		<Polish>Kawa - napój sporządzany z palonych, a następnie zmielonych lub poddanych instantyzacji ziaren kawowca, zwykle podawana na gorąco. Pochodzi z Etiopii, w Europie pojawiła się około XVI wieku. Jedna z najpopularniejszych używek na świecie i główne źródło kofeiny. Działa pobudzająco i orzeźwiająco oraz przyspiesza przemianę materii. Zawieraprzeciwutleniacze, które zapobiegają powstawaniu wolnych rodników. Spożywana w dużych ilościach może jednak być szkodliwa dla zdrowia. Rocznie produkuje się około 6,7 miliona ton kawy</Polish>
 	</TEXT>
@@ -8243,7 +8243,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COCOA_PLANTATION_PEDIA</Tag>
-		<English>Its seeds are used to make cocoa powder and chocolate.Cultivation, cultural elaboration and use of cacao were extensive and early in Mesoamerica.</English>
+		<English>Its seeds are used to make cocoa powder and chocolate. Cultivation, cultural elaboration and use of cacao were extensive and early in Mesoamerica.</English>
 		<Italian>I semi del cacao vengono usati per produrre la polvere di cacao e il cioccolato. La coltivazione e l'uso del cacao erano molto diffusi nella Mesoamerica precolombiana.</Italian>
 		<Polish>Kakao - ziarno kakaowe - nasiona z owoców kakaowca, z których proszek stosowany jest jako skladnik wielu wyrobów cukierniczych: tabliczek czekolady, napojów, polew, wiórków czekoladowych, mas czekoladowych, cukierków.</Polish>
 	</TEXT>
@@ -8499,7 +8499,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PEAR_ORCHARD_PEDIA</Tag>
-		<English>Pears are native to coastal and mildly temperate regions of the Old World, from western Europe and north Africa east right across Asia.</English>
+		<English>Pears are native to coastal and mildly temperate regions of the Old World, from Western Europe and North Africa east right across Asia.</English>
 		<Polish>Grusza (Pyrus L. ) - rodzaj w wiekszosci niewielkich drzew z rodzinyrózowatych (Rosaceae). Pierwotnie caly rodzaj wystepowal w strefie umiarkowanej Eurazji nie siegajac jednak tak daleko na pólnoc jak jablon, gdyz wymagania cieplne grusz sa wyzsze. Systematyka grusz jest bardzo zawila. Gatunki latwo sie ze soba krzyzuja, tworzac liczne podgatunki i formy przejsciowe. Dlatego wsród systematyków brak zgody co do podzialu grusz, rozgraniczenia i liczby ich gatunków oraz odmian botanicznych. Obecnie szacuje sie (w zaleznosci od autora), ze rodzaj Pyrus zawiera od 30 do 60 gatunków. W ciagu liczacej co najmniej 30 wieków uprawy gruszy wyselekcjonowano kilka tysiecy odmian uprawnych, które dzieli sie na dwie grupy w zaleznosci od dominujacego udzialu genów z poszczególnych gatunków na grusze zachodnie (europejskie) i grusze wschodnie(azjatyckie). Gatunkiem typowym jest Pyrus communis L..</Polish>
 	</TEXT>
 	<TEXT>
@@ -8591,7 +8591,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEAN_FARM_PEDIA</Tag>
-		<English>The common bean is an herbaceous annual plant domesticated independently in ancient Mesoamerica and the Andes, and now grown worldwide for its edible bean, popular both dry and as a green bean.</English>
+		<English>The common bean is a herbaceous annual plant domesticated independently in ancient Mesoamerica and the Andes, and now grown worldwide for its edible bean, popular both dry and as a green bean.</English>
 		<Polish>Fasola (Phaseolus L.) - rodzaj roslin jednorocznych i bylin nalezacy do rodziny bobowatych. Naturalnie wystepuja w Ameryce Poludniowej iPólnocnej, na pólnocy siegajac po Connecticut, ale najwieksze zróznicowanie osiagaja w tropikach. Rodzaj obejmuje co najmniej od ok. 36 do 96 gatunków. Liczne gatunki zostaly rozpowszechnione w uprawie na calym swiecie po odkryciu Ameryki przez Krzysztofa Kolumba, przy czym wiekszosc w strefie tropikalnej. W klimacie umiarkowanym, w tym w Europie i Polsce, najwazniejsze znaczenie uzytkowe maja dwa gatunki - fasola zwykla i wielokwiatowa. Rosliny z tego rodzaju naleza do wazniejszychroslin uprawnych w skali swiata.</Polish>
 	</TEXT>
 	<TEXT>
@@ -9884,7 +9884,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEEK_FARM_PEDIA</Tag>
-		<English>Dried specimens from archaeological sites in ancient Egypt, as well as wall carvings and drawings, led Zohary and Hopf to conclude that the leek was a part of the Egyptian diet from at least the 2nd millennium BCE onwards</English>
+		<English>Dried specimens from archaeological sites in ancient Egypt, as well as wall carvings and drawings, led Zohary and Hopf to conclude that the leek was a part of the Egyptian diet from at least the 2nd millennium BCE onward</English>
 		<Polish>Por (Allium ampeloprasum L.) - gatunek rosliny dwuletniej z rodzinyamarylkowatych (podrodzina czosnkowe). Pochodzi z Azji Mniejszej, uprawiano ja w celach konsumpcyjnych w starozytnym Egipcie, Grecji iRzymie. Na tereny Polski trafila w sredniowieczu. Jest takze jednym z symboli narodowych Walii.</Polish>
 	</TEXT>
 	<TEXT>
@@ -9978,7 +9978,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRANBERRY_FARM_PEDIA</Tag>
-		<English>Historically, cranberry beds were constructed in wetlands. Currently cranberry beds are constructed in upland areas that have a shallow water table.</English>
+		<English>Historically, cranberry beds were constructed in wetlands. Currently, cranberry beds are constructed in upland areas that have a shallow water table.</English>
 		<Polish>Zurawina (d. Oxycoccus, wlasc. Vaccinium sect. Oxycoccus) - roslinydawniej wyodrebniane jako rodzaj z rodziny wrzosowatych (Ericaceae), od lat 80. XX wieku w swiatowej literaturze botanicznej opisywane juz raczej tylko jako sekcja w obrebie rodzaju borówka (Vaccinium). W taksonietym wyodrebniano dawniej zwykle 4 gatunki, jednak po rewizji taksonomicznej, której wyniki opublikowal Sam Vander Kloet w 1983, akceptowane sa zwykle tylko 2 gatunki - pólnocnoamerykanska zurawina wielkoowocowa (Vaccinium macrocarpon) i zurawina blotna (Vaccinium oxycoccus) rozprzestrzeniona na pólkuli pólnocnej. Oba gatunki wystepuja w Polsce, pierwszy jako zadomowiony antropofit, drugi jako gatunek rodzimy. Oba gatunki dostarczaja jadalnych owoców sluzacych do wyrobu róznych przetworów, ale istotne znaczenie gospodarcze mazurawina wielkoowocowa.</Polish>
 	</TEXT>
 	<TEXT>
@@ -10530,7 +10530,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VIOLET_FARM_PEDIA</Tag>
-		<English>The plants known to gardeners as "violas" are common bedding and pot plants world wide.</English>
+		<English>The plants known to gardeners as "violas" are common bedding and pot plants worldwide.</English>
 		<Polish>Fiołek (Viola L.) - rodzaj roślin z rodziny fiołkowatych (Violaceae). Obejmuje około 400 gatunków, rosnących głównie w Europie (92 gatunki, w tym w Polsce 25), w Azji, Ameryce Północnej i Południowej, poza tym także w Australii. Większość gatunków rośnie w strefie klimatu umiarkowanego oraz na obszarach górskich. Zasiedlają bardzo zróżnicowane siedliska - lasy, łąki i mokradła, ale najczęściej murawy wysokogórskie i miejsca skaliste w górach. Liczne odmiany uprawne fiołków, popularne jako jednoroczne rośliny ozdobne powstały w wyniku zmieszania fiołka trójbarwnego i fiołka ałtajskiego. Dodatkowo skrzyżowanie z pirenejskim fiołkiem rogatym pozwolił uzyskać trwałe rośliny uprawne.</Polish>
 	</TEXT>
 	<TEXT>
@@ -10576,7 +10576,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PANSY_FARM_PEDIA</Tag>
-		<English>In the early years of the 19th century, Lady Mary Elizabeth Bennet (1785 - 1861), daughter of the Lord of Tankerville, collcted and cultivated every sort of Viola tricolor (commonly, heartsease) she could procure in her father's garden at Walton-upon-Thames, Surrey. Under the supervision of her gardener, William Richardson, a large variety of plants was produced via cross-breeding. In 1812, she introduced her pansies to the horticultural world, and, in 1813, Mr. Lee, a well-known florist and nurseryman, further cultivated the flower. Other nurserymen followed Lee's example, and the pansy became a favorite among the public.</English>
+		<English>In the early years of the 19th century, Lady Mary Elizabeth Bennet (1785 - 1861), daughter of the Lord of Tankerville, collected and cultivated every sort of Viola tricolor (commonly, heartsease) she could procure in her father's garden at Walton-upon-Thames, Surrey. Under the supervision of her gardener, William Richardson, a large variety of plants was produced via cross-breeding. In 1812, she introduced her pansies to the horticultural world, and, in 1813, Mr. Lee, a well-known florist and nurseryman, further cultivated the flower. Other nurserymen followed Lee's example, and the pansy became a favorite among the public.</English>
 		<Polish>Fiołek trójbarwny (Viola tricolor L.) - gatunek rośliny należący do rodzinyfiołkowatych (Violaceae Batsch.). Nazwy ludowe: bratek polny, macoszka,sierotki, kwiatek Świętej Trójcy. Występuje w stanie dzikim w Europie iAzji (Zachodnia Syberia, Turcja, Iran). W Polsce pospolity.</Polish>
 	</TEXT>
 	<TEXT>
@@ -11105,7 +11105,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OYSTER_MUSHROOM_PEDIA</Tag>
-		<English>The Oyster Mushroom is one of the most widely eaten mushrooms.They are some of the most commonly cultivated edible mushrooms in the world.</English>
+		<English>The Oyster Mushroom is one of the most widely eaten mushrooms. They are some of the most commonly cultivated edible mushrooms in the world.</English>
 		<Polish>Większość gatunków boczniaka jest jadalna. W Polsce jest uprawiany i znajduje się w sprzedaży boczniak ostrygowaty.</Polish>
 	</TEXT>
 	<TEXT>
@@ -11707,7 +11707,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CINNAMOMUM_GROVE_PEDIA</Tag>
-		<English>Cinnamomum bark is used to make a Cinnamon-like spice. However it is not true cinnamon.</English>
+		<English>Cinnamomum bark is used to make a Cinnamon-like spice. However, it is not true cinnamon.</English>
 		<Italian>La corteccia del cinnamomo viene usata per produrre una spezia simile alla cannella; in ogni caso, il cinnamomo è diverso dalla cannella.</Italian>
 		<Polish>Cynamon to popularna przyprawa kuchenna otrzymywana z wysuszonej kory cynamonowca. Występuje w dwóch postaciach, utarty na proszek lub w niewielkich, zwiniętych w rulonik kawałkach, ma kolor rdzawy i dzięki zawartemu w niej olejkowi cynamonowemu charakterystyczny słodkawo-korzenny, lekko piekący smak i silny aromat.</Polish>
 	</TEXT>
@@ -12096,7 +12096,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RYE_FARM_PEDIA</Tag>
-		<English>Rye is a grass grown extensively as a grain and as a forage crop. It is is closely related to barley and wheat. Rye grain is used for flour, rye bread, rye beer, some whiskeys, some vodkas, and animal fodder. It can also be eaten whole, either as boiled rye berries, or by being rolled, similar to rolled oats.</English>
+		<English>Rye is a grass grown extensively as a grain and as a forage crop. It is closely related to barley and wheat. Rye grain is used for flour, rye bread, rye beer, some whiskeys, some vodkas, and animal fodder. It can also be eaten whole, either as boiled rye berries, or by being rolled, similar to rolled oats.</English>
 		<Polish>Żyto jest popularną rośliną uprawną, choć jego powierzchnia uprawy i znaczenie gospodarcze spada. Ziarniaki żyta są stosowane do wyrobu pasz dla bydła i trzody chlewnej. Z żyta produkuje się również mąkę którą stosuje się głównie do wypieku chleba. Produkuje się z niego też alkohol etylowy. Słomę żytnią stosowano do wyrobu strzech, oraz jako ściółkę dla zwierząt.</Polish>
 	</TEXT>
 	<TEXT>
@@ -12778,7 +12778,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STREET_LIGHTS_STRATEGY</Tag>
-		<English>Build Electric Lamps to increase your Production and Saftey.</English>
+		<English>Build Electric Lamps to increase your Production and Safety.</English>
 		<French>Augmente la production de votre ville.</French>
 		<German>Build Electric Lamps to increase your cities Production and Saftey.</German>
 		<Italian>Costruisci dei lampioni elettrici per incrementare la produzione e la sicurezza della tua città.</Italian>
@@ -12804,7 +12804,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TORCHES_STRATEGY</Tag>
-		<English>Build Torches to increase your cities Production and Saftey.</English>
+		<English>Build Torches to increase your cities Production and Safety.</English>
 		<French>Construisez des [COLOR_BUILDING_TEXT]Torches[COLOR_REVERT] pour augmenter la production de la ville, et y réduire la criminalité.</French>
 		<Italian>Costruisci delle torce per incrementare la produzione e la sicurezza della tua città.</Italian>
 		<Polish>Zbuduj Torches to increase your cities Production and Saftey.</Polish>
@@ -12828,7 +12828,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OIL_LAMPS_STRATEGY</Tag>
-		<English>Build Oil Lamps to increase your cities Production and Saftey.</English>
+		<English>Build Oil Lamps to increase your cities Production and Safety.</English>
 		<French>Construisez des [COLOR_BUILDING_TEXT]Lampes à Huile[COLOR_REVERT] pour réduire la criminalité et augmenter la production ainsi que le bonheur de votre ville.</French>
 		<Italian>Costruisci delle lampade ad olio per incrementare la produzione e la sicurezza della tua città.</Italian>
 		<Polish>Zbuduj Oil Lamps to increase your cities Production and Saftey.</Polish>
@@ -12852,7 +12852,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GAS_LAMPS_STRATEGY</Tag>
-		<English>Build Gas Lamps to increase your cities Production and Saftey.</English>
+		<English>Build Gas Lamps to increase your cities Production and Safety.</English>
 		<French>Construisez des [COLOR_BUILDING_TEXT]Lampes au Gaz[COLOR_REVERT] pour réduire la criminalité et augmenter la production ainsi que le bonheur de votre ville..</French>
 		<Italian>Costruisci dei lampioni a gas per incrementare la produzione e la sicurezza della tua città.</Italian>
 		<Polish>Zbuduj Gas Lamps to increase your cities Production and Saftey.</Polish>
@@ -12876,7 +12876,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORGANIC_LAMPS_STRATEGY</Tag>
-		<English>Build Organic Lamps to increase your cities Production and Saftey.</English>
+		<English>Build Organic Lamps to increase your cities Production and Safety.</English>
 		<French>Construisez des [COLOR_BUILDING_TEXT]Lampes Organiques[COLOR_REVERT] pour réduire la criminalité et augmenter la production ainsi que le bonheur de votre ville.</French>
 		<Italian>Costruisci dei lampioni organici per incrementare la produzione e la sicurezza della tua città.</Italian>
 		<Polish>Zbuduj Organic Lamps to increase your cities Production and Saftey.</Polish>
@@ -12900,7 +12900,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_PARKINGLOT_PEDIA</Tag>
-		<English>A Solar Parking Lot uses solar cell canopies to both shade parked cars and create electricty.</English>
+		<English>A Solar Parking Lot uses solar cell canopies to both shade parked cars and create electricity.</English>
 		<French>A Parking Solaire uses solar cell canopies to both shade parked cars and create electricty.</French>
 		<Polish>Parking wyłożony panelami słonecznymi.</Polish>
 	</TEXT>
@@ -12922,7 +12922,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_HIGHWAY_PEDIA</Tag>
-		<English>A Highway uses solar cell canopies over roads to both shade driving cars and create electricty.</English>
+		<English>A Highway uses solar cell canopies over roads to both shade driving cars and create electricity.</English>
 		<French>A Autoroutes uses solar cell canopies over roads to both shade driving cars and create electricty.</French>
 		<Polish>Autostrada wyłożona panelami słonecznymi.</Polish>
 	</TEXT>
@@ -12944,7 +12944,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WIND_HIGHWAY_PEDIA</Tag>
-		<English>A Wind Turbine Highway hanesses the power created by fast moving vehicles though arches places along a roadway and/or along side the roadway.</English>
+		<English>A Wind Turbine Highway harnesses the power created by fast moving vehicles though arches places along a roadway and/or alongside the roadway.</English>
 		<French>A une Autoroutes à Turbines hanesses the power created by fast moving vehicles though arches places along a roadway and/or along side the roadway.</French>
 	</TEXT>
 	<TEXT>
@@ -13600,7 +13600,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RA_FIST_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Ra Fists[COLOR_REVERT] are very powerful melee unit which is available to build by civilization with Kemetism State Religion. Disadvantagous of this unit is low national limit: only one unit.</English>
+		<English>[COLOR_UNIT_TEXT]Ra Fists[COLOR_REVERT] are very powerful melee units, available to civilizations with Kemetism as their State Religion. You can only have one of these units in your nation!</English>
 		<French>[COLOR_UNIT_TEXT]une Main de Ras[COLOR_REVERT] are very powerful melee unit which is available to build by civilization with Kemetism State Religion. Disadvantagous of this unit is low national limit: only one unit.</French>
 	</TEXT>
 	<TEXT>
@@ -13619,7 +13619,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RA_KNIGHT_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Ra Knights[COLOR_REVERT] are very powerful Knight unit which is available to build by civilization with Kemetism State Religion. Disadvantagous of this unit is low national limit: only one unit.</English>
+		<English>[COLOR_UNIT_TEXT]Ra Knights[COLOR_REVERT] are very powerful Knight units, available to civilizations with Kemetism as their State Religion. You can only have one of these units in your nation!</English>
 		<French>[COLOR_UNIT_TEXT]un Chevalier de Ras[COLOR_REVERT] are very powerful Knight unit which is available to build by civilization with Kemetism State Religion. Disadvantagous of this unit is low national limit: only one unit.</French>
 	</TEXT>
 	<TEXT>
@@ -14857,7 +14857,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIBETAN_EMBASSY_PEDIA</Tag>
-		<English>The history of a unified Tibet begins with the rule of Songtsan Gampo (604 - 650 CE) who united parts of the Yarlung River Valley and founded the Tibetan Empire. He also brought in many reforms and Tibetan power spread rapidly creating a large and powerful empire. It is traditionally considered that his first wife was the Princess of Nepal, Bhrikuti, and that she played a great role in establishment of Buddhism in Tibet. In 640 he married Princess Wencheng, the niece of the powerful Chinese emperor Taizong of Tang China.</English>
+		<English>The history of a unified Tibet begins with the rule of Songtsan Gampo (604 - 650 CE) who united parts of the Yarlung River Valley and founded the Tibetan Empire. He also brought in many reforms and Tibetan power spread rapidly creating a large and powerful empire. It is traditionally considered that his first wife was the Princess of Nepal, Bhrikuti, and that she played a great role in establishment of Buddhism in Tibet. In 640, he married Princess Wencheng, the niece of the powerful Chinese emperor Taizong of Tang China.</English>
 		<Polish>Tradycyjna tybetańska historiografia opisuje dzieje tego kraju z punktu widzeniabuddyzmu, dzieląc je na trzy epoki: "wczesne rozpowszechnienie" buddyzmu, "ciemny" okres, cechujący się nieobecnością buddyzmu i "późniejsze rozpowszechnienie" buddyzmu. Tybet jawi się w niej jako kraj, w którym zachowała się czysta nauka Buddy, a tybetański, religijny porządek świata zostaje podniesiony do wymiaru uniwersalnego. Jednak zachowane podanie na temat pierwszego króla Tybetu ma wyraźnie niebuddyjski charakter. Niatri Cenpo miał być "boskim synem", który zstąpił z niebios za pomocą "niebiańskiego sznura" na świętą górę Jarlha Szampo w dolinie Jarlungu. Pierwszym po całym szeregu mitycznych królów władcą dynastii z Jarlungu, co do którego stoimy na pewniejszym historycznym gruncie, był Namri Lontsen (ok. 570 - ok. 618), któremu udało się zjednoczyć większość Tybetu. Jego syn, Songcen Gampo (ok. 618 - ok. 649), podporządkował sobie królestwa Żangżung oraz Tuyuhun i prowadził pomyślne wojny z Chinami. Polityka ekspansji była kontynuowana przez jego następców, zaś szczyt potęgi Tybet osiągnął za panowania Trisong Decena (755-797), kiedy Tybetańczycy wykorzystali osłabienie Chin rebelią An Lushana i w 763 roku zdobyli stolicę cesarstwa, Chang'an. Tybetańsko-chiński układ pokojowy z 783 roku potwierdzał panowanie Tybetu nad Chińskim Turkiestanem, Gansu i większą częściąSyczuanu. Tybetańskie imperium zaczęło się załamywać, kiedy za panowania Ralpaczena (815 - ok. 836) w rządzie królestwa coraz większe wpływy zaczęli uzyskiwać buddyjscy mnisi, co spotkało się ze sprzeciwem tradycyjnej arystokracji, która doprowadziła do zamachu na króla. Wskutek wewnętrznych napięć za jego następcy, Langdarmy (ok. 836-842), "wielkie królestwo" Tybetu uległo dezintegracji.</Polish>
 	</TEXT>
 	<TEXT>
@@ -15088,7 +15088,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAPUCHE_EMBASSY_PEDIA</Tag>
-		<English>The Mapuche were an argiculturally based tribe from South America, particularly southern Chile and Argentina.</English>
+		<English>The Mapuche are a group of indigenous inhabitants of south-central Chile and southwestern Argentina, including parts of present-day Patagonia. The collective term refers to a wide-ranging ethnicity composed of various groups who shared a common social, religious, and economic structure, as well as a common linguistic heritage as Mapudungun speakers.</English>
 		<Italian>I Mapuche erano una tribù agricola del Sudamerica, stanziata in Argentina e nel Cile meridionale.</Italian>
 		<Polish>Klon (Acer L.) - rodzaj roślin z rodziny mydleńcowatych (Sapindaceae) (czasem, zwłaszcza dawniej z wyodrębnianej osobno rodzinyklonowatych Aceraceae). Do rodzaju należy około 100 gatunkówdrzewiastych i krzewiastych (według niektórych źródeł jest to nawet 150 gatunków), występujących głównie w strefie umiarkowanej (kilka w górach tropikalnych). Występują w największym zróżnicowaniu w Azji, poza tym w Ameryce Północnej i Środkowej, Europie, północnej Afryce.Gatunkiem typowym jest klon jawor (Acer pseudoplatanus L.).</Polish>
 	</TEXT>
@@ -15175,7 +15175,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEMINOLE_EMBASSY_PEDIA</Tag>
-		<English>Lower Creek nation that moved into Florida so they wouldn't be dominated by their enemies, and merged with the indigenous tribes already at that location. They provided a tough resistance against European attacks, but fell despite their valiant efforts.</English>
+		<English>Lower Creek nation that moved into Florida, so they wouldn't be dominated by their enemies, and merged with the indigenous tribes already at that location. They provided a tough resistance against European attacks, but fell despite their valiant efforts.</English>
 		<Italian>Una tribù dei Lower Creek che si spostò in Florida per non essere dominata dai propri nemici, dove si unì alle tribù indigene già presenti. Opposero una grande resistenza agli attacchi degli Europei, ma caddero nonostante i loro coraggiosi sforzi.</Italian>
 		<Polish>Seminole - plemię Indian z muskogeńskiej rodziny Indian Ameryki Północnej sprzymierzone z Hitczitami i Krikami. Pierwotnie zamieszkiwali północną Florydę i południowa Georgię. Powszechnie uważa się ich za mieszkańców południowej Florydy, ale na bagienne tereny dzisiejszego Parku Narodowego Everglades wkroczyli uciekając przed białymi. Ich zatargi z białymi zaczęły się w roku 1812, ale nabrały szczególnego natężenia w latach 1817-1818, podczas tzw. pierwszej wojny z Seminolami. Wojna zaczęła się od oskarżenia Seminolów o ochranianie uciekających z niewolniczych plantacji murzyńskich niewolników. Armia amerykańska pod wodzą generała Andrew Jacksona dokonała inwazji zabijając ponad 300 Seminolów. Pozostali uciekli na południe, w rejon bagien.</Polish>
 	</TEXT>
@@ -15782,7 +15782,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UIGHUR_EMBASSY_PEDIA</Tag>
-		<English>Throughout history, the term Uyghur has taken on an increasingly expansive definition. Initially signifying only a small coalition of Tiele tribes in Northern China, Mongolia, and the Altay Mountains, it later denoted citizenship in the Uyghur Khaganate. Finally it was expanded to an ethnicity, whose ancestry originates with the fall of the Uyghur Khaganate in the year 842 AD, which caused Uyghur migration from Mongolia into the Tarim Basin. This migration assimilated and replaced the Indo-Europeans of the region to create a distinct identity, as the language and culture of the Turkic migrants eventually supplanted the original Indo-European influences.</English>
+		<English>Throughout history, the term Uyghur has taken on an increasingly expansive definition. Initially signifying only a small coalition of Tiele tribes in Northern China, Mongolia, and the Altay Mountains, it later denoted citizenship in the Uyghur Khaganate. Finally, it was expanded to an ethnicity, whose ancestry originates with the fall of the Uyghur Khaganate in the year 842 AD, which caused Uyghur migration from Mongolia into the Tarim Basin. This migration assimilated and replaced the Indo-Europeans of the region to create a distinct identity, as the language and culture of the Turkic migrants eventually supplanted the original Indo-European influences.</English>
 		<Polish>Pierwsze wzmianki o Ujgurach pojawiają się w odniesieniu do plemion Tiele w czasie Północnego Wei (386-584), do których mieliby pierwotnie należeć. Byli opisywani jako ludzie nie posiadający stałych mieszkań, prowadzący koczowniczy tryb życia. Między V a VI wiekiem, lud ujgurski zaczął przemieszczać się z wcześniej zajmowanego terenu, na północny zachód od rzeki Orchon w górnej Mongolii, na wschód, w pobliże rzeki Tula. Mniejsza grupa wyemigrowała w okolice gór Tienszan. W połowie VI wieku znowu się przenieśli, tym razem w pobliże rzeki Selenga. W VII i VIII wieku Ujgurzy stali się potężną nacją. Współpracowali z dynastią Tang w celu pokonania Tujue - grupy, z którą Ujgurzy walczyli już wcześniej. Gdy Ujgurzy ustanowili swój własny chanat ich sposób życia zmienił się z koczowniczego na osiadły. W roku 840 ujgurski chanat upadł i Ujgurzy przemieścili się na południe oraz zachód. Większość osiedliła się w pobliżu gór Tienszan. Następnie podzielili się na trzy grupy: pierwsza przeniosła się na Wyżynę Pamirską, zakładając królestwo, którego panowanie trwało od IX do XIII wieku; druga ulokowała się w Korytarzu Gansu (później podbita przez Zachodnie Xia w pierwszej połowie XI wieku); trzecia natomiast wyemigrowała do dzisiejszej prefektury Turfanu, tworząc królestwo podbite przez mongolską dynastię Yuan w XIII wieku.</Polish>
 	</TEXT>
 	<TEXT>
@@ -16156,7 +16156,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MERINA_EMBASSY_PEDIA</Tag>
-		<English>The Merina are an ethnic group from Madagascar.The Merina are concentrated in the Highlands and speak the official dialect of the Malagasy language, which is a branch of the Malayo-Polynesian language group derived from the Barito languages, spoken in southern Borneo.</English>
+		<English>The Merina are an ethnic group from Madagascar. The Merina are concentrated in the Highlands and speak the official dialect of the Malagasy language, which is a branch of the Malayo-Polynesian language group derived from the Barito languages, spoken in southern Borneo.</English>
 		<Polish>Królestwo Merina (także Imerina, Królestwo Madagaskaru) - historyczne królestwo na terenie Madagaskaru istniejące między XVI a XIX wiekiem, będące państwem ludu Merina. Założyli je po 1540 spadkobiercy Andriamanelo, wodza miasta Alasora na wyżynie Imerinapołożonej w centrum wyspy.</Polish>
 	</TEXT>
 	<TEXT>
@@ -17050,7 +17050,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SYRIAN_EMBASSY_PEDIA</Tag>
-		<English>The Syrian people are the inhabitants and citizens of the Syrian Arab Republic. While modern-day Syrians are commonly described as Arabs by virtue of their modern-day language and bonds to Arab culture and history, they are, in fact, largely a blend of the various Aramaic, Arab, and Arabic-speaking groups indigenous to the region. Most Syrians reside primarily in Syria; however 17 million Syrians, mostly Christians live outside of Syria and they stay connected to their cultural roots by listening to Syrian music, watching Syrian Television, and preparing Syrian cuisine.</English>
+		<English>The Syrian people are the inhabitants and citizens of the Syrian Arab Republic. While modern-day Syrians are commonly described as Arabs by virtue of their modern-day language and bonds to Arab culture and history, they are, in fact, largely a blend of the various Aramaic, Arab, and Arabic-speaking groups indigenous to the region. Most Syrians reside primarily in Syria; however 17 million Syrians, mostly Christians live outside of Syria, and they stay connected to their cultural roots by listening to Syrian music, watching Syrian Television, and preparing Syrian cuisine.</English>
 		<Polish>Pierwsze państwo na terytorium Syrii to Ebla, po raz pierwszy wymieniona w tekście syryjskim datowanym na ok. 2500-2400 p.n.e. Później była ważną prowincją rzymską, podbitą w roku 64 p.n.e. przez Pompejusza. Pozostała pod panowaniem rzymskim (bizantyjskim). W latach 634-637 Syria została podbita przez Arabów. W 661 roku Damaszek stał się stolicą kalifatuUmajjadów, stając się centrum kulturalnym świata islamu. Po przeniesieniu przez Abbasydów stolicy do Bagdadu w 750 roku Syria znalazła się na obrzeżach muzułmańskiego świata. W 877 Tulunidzi przyłączyli ją doEgiptu. Na terenie Syrii dynastie egipskie toczyli wojny z Mongołami, krzyżowcami i Bizancjum. Doprowadziło to do wyludnienia kraju i osłabienia go gospodarczo. W latach 1400-1401 miał miejsce najazd wojsk Timura na północną Syrię, złupienie i wymordowanie mieszkańców Allepo, Hamy,Homs i Damaszku. W 1517 Syrię przyłączono do Imperium Osmańskiego. W 1831 Syrię zajęły wojska paszy Egiptu Muhammada Alego, jednak na skutek nacisków europejskich mocarstw i buntu miejscowej ludności wojska musiały wycofać się z Syrii na rzecz Turcji w 1840. Pod koniec XIX wieku wzrosła świadomość narodowa, co spowodował kontakt z kulturą Zachodu; Syria stała się odrodzona politycznie i gospodarczo (przyczyniła się do tego m.in. budowa Kanału Sueskiego).</Polish>
 	</TEXT>
 	<TEXT>
@@ -17938,7 +17938,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AKKAD_EMBASSY_PEDIA</Tag>
-		<English>The Akkadian Empir was an ancient Semitic empire centered in the city of Akkad and its surrounding region in ancient Mesopotamia which united all the indigenous Akkadian speaking Semites and the Sumerian speakers under one rule within a multilingual empire. The Akkadian Empire controlled Mesopotamia, the Levant, and parts of Iran.</English>
+		<English>The Akkadian Empire was an ancient Semitic empire centered in the city of Akkad and its surrounding region in ancient Mesopotamia which united all the indigenous Akkadian speaking Semites and the Sumerian speakers under one rule within a multilingual empire. The Akkadian Empire controlled Mesopotamia, the Levant, and parts of Iran.</English>
 		<Polish>Akkad - starożytne miasto w Mezopotamii, stolica imperium akadyjskiego za czasów panowania Sargona Wielkiego i jego następców; nierozpoznane archeologicznie.</Polish>
 	</TEXT>
 	<TEXT>
@@ -17989,7 +17989,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BULGARIAN_EMBASSY_PEDIA</Tag>
-		<English>The Bulgarians are a South Slavic nation and ethnic group who speak Bulgarian and are native to Bulgaria and neighbouring regions. Historically, Bulgarians have lived between the Danube, the Agean, Adriatic, and Black Seas in southeastern Europe for over one thousand years.</English>
+		<English>The Bulgarians are a South Slavic nation and ethnic group who speak Bulgarian, and are native to Bulgaria and neighbouring regions. Historically, Bulgarians have lived between the Danube, the Aegean, Adriatic, and Black Seas in southeastern Europe for over one thousand years.</English>
 		<Polish>W połowie IV tysiąclecia p.n.e. rozpoczął się napływ na tereny obecnej Bułgarii plemion koczowniczych z Azji Środkowej. W V wieku p.n.e. jedno z plemion trackich utworzyło nawet organizm państwowy - Królestwo Odrysów. Tereny te zdobyli Rzymianie i w pierwszej połowie I wieku (6-9 r. n.e.) pomiędzyDunajem a pasmem Starej Płaniny utworzyli rzymską prowincję Mezję, która w roku 86 n.e. została podzielona na Mezję Dolną i na Mezję Górną. W połowie I w. n.e. na południe od Starej Płaniny powstała rzymska prowincja Tracja. Z czasem tereny obecnej Bułgarii stały się miejscem najazdów Hunów i Gotów.</Polish>
 	</TEXT>
 	<TEXT>
@@ -18777,7 +18777,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NIGHT_CLUB_PEDIA</Tag>
-		<English>A nightclub is a drinking, dancing and entertainment venue  which does its primary business after dark.</English>
+		<English>A nightclub is a drinking, dancing and entertainment venue which does its primary business after dark.</English>
 		<Polish>Klub nocny, klub muzyczny lub po prostu klub - miejsce organizacji występów muzycznych i artystycznych, imprez tematycznych lub po prostu miejsce spotkań młodych ludzi, którzy bawią się przy akompaniamencie muzyki, najczęściej opracowywanej przez DJa lub grupę DJ-ów.</Polish>
 	</TEXT>
 	<TEXT>
@@ -19591,7 +19591,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FAIR_GROUNDS_STRATEGY</Tag>
-		<English>Build a Fairgrounds to increase your cities happiness and culture.</English>
+		<English>Build Fairgrounds to increase your cities happiness and culture.</English>
 		<French>Construisez une [COLOR_BUILDING_TEXT]Foire Champêtre[COLOR_REVERT] pour augmenter le bonheur et la culture.</French>
 		<Italian>Costruisci un centro fieristico per incrementare la felicità e la cultura della tua città.</Italian>
 		<Polish>Zbuduj Fairgrounds by zwiększyć zadowolenie i kulturę w Twoich miastach.</Polish>
@@ -19913,7 +19913,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COASTAL_PRESERVE_STRATEGY</Tag>
-		<English>Build a Coastal Perserve in your city to reduce your cities pollution.</English>
+		<English>Build a Coastal Preserve in your city to reduce your cities pollution.</English>
 		<French>Construisez une [COLOR_BUILDING_TEXT]Réserve côtière[COLOR_REVERT] dans votre ville pour y réduire la pollution.</French>
 		<Italian>Costruisci una riserva costiera per ridurre l'inquinamento della tua città.</Italian>
 		<Polish>Zbuduj Coastal Perserve by zmniejszyć zanieczyszczenie.</Polish>
@@ -20355,7 +20355,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOXIC_WASTE_DUMP_PEDIA</Tag>
-		<English>Toxic waste is waste material that can cause death or injury to living creatures. It can be spread quite easily and contaminate lakes and rivers. The term is often used interchangeably with hazardous waste, or discarded material that can pose a long-term risk to health or environment.[NEWLINE]As with most pollution problems, toxic waste began to be a significant issue during the industrial revolution. It usually is the product of industry or commerce, but comes also from residential use (e.g. cleaning products, cosmetics, lawn care products), agriculture (e.g. chemical fertilizers, pesticides), the military (nuclear weapons testing, chemical warfare, medical facilities (e.g. pharmaceuticals), radioactive sources, and light industry, such as dry cleaning establishments.</English>
+		<English>Toxic waste is waste material that can cause death or injury to living creatures. It can be spread quite easily and contaminate lakes and rivers. The term is often used interchangeably with hazardous waste, or discarded material that can pose a long-term risk to health or environment.[NEWLINE]As with most pollution problems, toxic waste began to be a significant issue during the industrial revolution. It is usually the product of industry or commerce, but comes also from residential use (e.g. cleaning products, cosmetics, lawn care products), agriculture (e.g. chemical fertilizers, pesticides), the military (nuclear weapons testing, chemical warfare, medical facilities (e.g. pharmaceuticals), radioactive sources, and light industry, such as dry cleaning establishments.</English>
 		<Italian>I rifiuti tossici sono materiali di scarto che possono causare morte o lesioni alle creature viventi. Possono diffondersi molto facilmente, contaminando laghi e fiumi. Il termine è spesso usato in modo intercambiabile con Rifiuti pericolosi, oppure materiali che possono rappresentare un rischio a lungo termine per la salute o l'ambiente. [NEWLINE] Come con la maggior parte dei problemi di inquinamento, rifiuti tossici hanno cominciato ad essere un problema significativo durante la rivoluzione industriale. Sono di solito prodotti dell'industria o del commercio, ma provengono anche da case residenziali (ad esempio, prodotti per la pulizia, cosmetici, prodotti per la cura del prato), l'agricoltura (ad esempio fertilizzanti chimici, pesticidi), i militari (test di armi nucleari e chimiche), strutture mediche (ad esempio, i prodotti farmaceutici), sorgenti radioattive e l'industria leggera, come le attività di lavaggio a secco.</Italian>
 		<Polish>Oprócz, zużytego paliwa jądrowego z elektrowni jądrowych, odpadów powstających przy ponownym uzdatnianiu paliwa jądrowego (stanowiących najmniejszą objętościowo część odpadów promieniotwórczych), zalicza się do odpadów promieniotwórczych również inne materiały, które zostały skażone promieniotwórczo. Materiały te zostają najczęściej skażone w procesach produkcyjnych elektrowni jądrowych, w medycynie, przemyśle i w wyniku przeprowadzanych badań naukowych.</Polish>
 	</TEXT>
@@ -20380,7 +20380,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GCA_PEDIA</Tag>
-		<English>Waste collection is the component of waste management which results in the passage of a waste material from the source of production to either the point of treatment  or final disposal. Waste collection also includes the kerbside collection of recyclable materials that technically are not waste, as part of a municipal landfill diversion program.</English>
+		<English>Waste collection is the component of waste management which results in the passage of a waste material from the source of production to either the point of treatment or final disposal. Waste collection also includes the kerbside collection of recyclable materials that technically are not waste, as part of a municipal landfill diversion program.</English>
 		<Italian>La raccolta dei rifiuti è la componente di gestione dei rifiuti che comporta il passaggio di un materiale di scarto dalla fonte di produzione al punto di trattamento o di smaltimento finale. La raccolta dei rifiuti comprende anche la raccolta differenziata porta a porta dei materiali riciclabili che tecnicamente non sono rifiuti, come parte di un programma per svuotare le discariche.</Italian>
 		<Polish>Miejskie Przedsiębiorstwo Oczyszczalnia</Polish>
 	</TEXT>
@@ -21179,7 +21179,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INSANE_ASYLUM_PEDIA</Tag>
-		<English>Mental hospitals, are hospitals  specializing in the treatment of serious mental disorder.</English>
+		<English>Mental hospitals, are hospitals specializing in the treatment of serious mental disorder.</English>
 		<Polish>Szpital psychiatryczny - miejsce terapii psychiatrycznej chorych. Szpitale psychiatryczne dziela sie otwarte i zamkniete specjalizujace sie w leczeniu chorób lub uzaleznien. Podobna funkcje pelni oddzial psychiatryczny bedacy oddzialem szpitala ogólnego.</Polish>
 	</TEXT>
 	<TEXT>
@@ -21189,12 +21189,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VETRTINARIAN_PEDIA</Tag>
-		<English>A veterinarian, is a physician  for animals (excluding humans) and a practitioner of veterinary medicine.</English>
+		<English>A veterinarian, is a physician for animals (excluding humans) and a practitioner of veterinary medicine.</English>
 		<Polish>Lekarz weterynarii (pot. weterynarz, staropol. konowal) - przedstawiciel jednej z trzech nauk lekarskich (obok medycyny i stomatologii) - osoba, która ukonczyla 5,5-letnie studia na jednym z wydzialów medycyny weterynaryjnej i uzyskala prawo do wykonywania zawodu nadawane przez okregowa izbe lekarsko-weterynaryjna, posiadajaca kwalifikacje do badania i leczenia zwierzat oraz do kontroli srodków spozywczychpochodzenia zwierzecego.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REHABILITATION_CENTER_PEDIA</Tag>
-		<English>Drug rehabilitation (often drug rehab or just rehab) is an umbrella term for the processes of medical and/or psychotherapeutic treatment, for dependency on psychoactive substances such as alcohol, prescription drugs, and so-called street drugs such as cocaine, heroin  or amphetamines.</English>
+		<English>Drug rehabilitation (often drug rehab or just rehab) is an umbrella term for the processes of medical and/or psychotherapeutic treatment, for dependency on psychoactive substances such as alcohol, prescription drugs, and so-called street drugs such as cocaine, heroin or amphetamines.</English>
 		<Polish>Rehabilitacja medyczna - kompleksowe i zespolowe dzialanie na rzecz osoby niepelnosprawnej fizycznie lub psychicznie (lub z deficytem w ww. obszarach), które ma na celu przywrócenie tej osobie pelnej lub maksymalnej do osiagniecia sprawnosci fizycznej lub psychicznej, a takze zdolnosci do pracy oraz do brania czynnego udzialu w zyciu spolecznym. Rehabilitacja jest integralna czescia procesu terapeutycznego, na równi z innymi metodami leczenia, wspóldecydujaca o jego ostatecznej efektywnosci. Ze wzgledu na zróznicowanie oddzialywan rehabilitacja (szczególnie rehabilitacja neurologiczna - neurorehabilitacja) jest czesto prowadzona przez interdyscyplinarny zespól terapeutyczny skladajacy sie z lekarzy róznych specjalnosci, fizjoterapeutów, terapeutów zajeciowych, pielegniarek, logopedów, psychologów, muzykoterapeutów itp.</Polish>
 	</TEXT>
 	<TEXT>
@@ -21221,14 +21221,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ACUPUNCTURISTS_SHOP_STRATEGY</Tag>
-		<English>Build a Acupuncturist's Shop to increase your cities health.</English>
+		<English>Build an Acupuncturist's Shop to increase your cities health.</English>
 		<French>Construisez un [COLOR_BUILDING_TEXT]Acuponcteur[COLOR_REVERT] pour augmenter la santé de votre ville.</French>
 		<Italian>Costruisci un negozio dell'agopuntore per incrementare la salute della tua città.</Italian>
 		<Polish>Zbuduj Acupuncturist's Shop by poprawić jakość zdrowia Twoich poddanych w miastach.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ACUPUNCTURISTS_SHOP_PEDIA</Tag>
-		<English>Acupuncture is the procedure of inserting and manipulating filiform needles into various points on the body to relieve pain  or for therapeutic purposes.</English>
+		<English>Acupuncture is the procedure of inserting and manipulating filiform needles into various points on the body to relieve pain or for therapeutic purposes.</English>
 		<Polish>Akupunktura (z lac. acus - igla, punctura - (u)klucie) - technika leczenia wywodzaca sie ze Wschodu (Chiny, Japonia, Mongolia). Jest obecnie uznawana w wielu krajach jako uzupelnienie medycyny konwencjonalnej, chociaz jej skutecznosc jest przedmiotem debat i trwajacych badan klinicznych. Akupunktura sluzy do przywracania równowagi energii qi organizmu, bedacej warunkiem jego sprawnego funkcjonowania co w efekcie ma dawac poprawe u pacjenta objawowa taka jak np. redukcja bólu.</Polish>
 	</TEXT>
 	<TEXT>
@@ -21528,7 +21528,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEDICAL_DATABASE_PEDIA</Tag>
-		<English>The National Medical Database links all medical centers together so they can share information with each other more efficiently.</English>
+		<English>The National Medical Database links all medical centers together, so they can share information with each other more efficiently.</English>
 		<French>The une Base de données Médicale Nationale links all medical centers together so they can share information with each other more efficiently.</French>
 		<Italian>Il Database medico nazionale collega tra di loro tutti i centri medici, in modo che possano scambiare informazioni in modo più efficiente.</Italian>
 		<Polish>Medycyna (lac. medicina "sztuka lekarska") - nauka empiryczna (oparta na doswiadczeniu) obejmujaca calosc wiedzy o zdrowiu i chorobach czlowieka oraz sposobach ich zapobiegania, oraz ich leczenia. Medycyna weterynaryjna rozszerza zakres zainteresowan medycyny na stan zdrowia zwierzat. Za prekursora medycyny starozytnej uwaza sie Hipokratesa, a nowozytnej Paracelsusa. W czasach najnowszych wprowadza sie zasadymedycyny opartej na faktach.</Polish>
@@ -21548,7 +21548,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEDICAL_DATABASE_GOOD_PEDIA</Tag>
-		<English>The National Medical Database links all medical centers together so they can share information with each other more efficiently.</English>
+		<English>The National Medical Database links all medical centers together, so they can share information with each other more efficiently.</English>
 		<French>The une Base de données Médicale Nationale links all medical centers together so they can share information with each other more efficiently.</French>
 		<Italian>Il Database medico nazionale collega tra di loro tutti i centri medici, in modo che possano scambiare informazioni in modo più efficiente.</Italian>
 		<Polish>Medycyna (lac. medicina "sztuka lekarska") - nauka empiryczna (oparta na doswiadczeniu) obejmujaca calosc wiedzy o zdrowiu i chorobach czlowieka oraz sposobach ich zapobiegania, oraz ich leczenia. Medycyna weterynaryjna rozszerza zakres zainteresowan medycyny na stan zdrowia zwierzat. Za prekursora medycyny starozytnej uwaza sie Hipokratesa, a nowozytnej Paracelsusa. W czasach najnowszych wprowadza sie zasadymedycyny opartej na faktach.</Polish>
@@ -22416,7 +22416,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOUSE_ERA4_MDMW</Tag>
-		<English>Housing (High-Tech Appartments)</English>
+		<English>Housing (High-Tech Apartments)</English>
 		<French>
 			<Text>Habitations (Appartements High-Tech )</Text>
 			<Gender>Male</Gender>
@@ -22429,7 +22429,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOUSE_ERA4_MDMW_STRATEGY</Tag>
-		<English>Build High-Tech Appartments to increase your cities wealth and production.</English>
+		<English>Build High-Tech Apartments to increase your cities wealth and production.</English>
 		<French>Augmente la richesse et la production de votre ville.</French>
 		<Italian>Costruisci degli appartamenti high-tech per incrementare la ricchezza e la produzione della tua città.</Italian>
 		<Polish>Buduj Nowoczesne Apartamenty by zwiększyć produkcję i bogactwo w twoich miastach.</Polish>
@@ -22599,7 +22599,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOUSE_ERA4_SDHW</Tag>
-		<English>Housing (Arcology Upperclass)</English>
+		<English>Housing (Arcology Upper Class)</English>
 		<French>
 			<Text>Habitations (Arcologies supérieures)</Text>
 			<Gender>Female</Gender>
@@ -22612,7 +22612,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOUSE_ERA4_SDHW_STRATEGY</Tag>
-		<English>Build Arcology Upperclass to increase your cities wealth and production.</English>
+		<English>Build Arcology Upper Class to increase your cities wealth and production.</English>
 		<French>Construisez des [COLOR_BUILDING_TEXT]Arcology Upperclass[COLOR_REVERT] pour augmenter la richesse et la production de votre ville.</French>
 		<Italian>Costruisci abitazioni nell'arcologia per cittadini di fascia alta per incrementare la ricchezza e la produzione della tua città.</Italian>
 		<Polish>Buduj Arkologia - Klasa Wyższa by zwiększyć produkcję i bogactwo w twoich miastach.</Polish>
@@ -22664,7 +22664,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LAUNCH_ARCO_PEDIA</Tag>
-		<English>The Launch Arcology is a city sized moble arcology.</English>
+		<English>The Launch Arcology is a city sized mobile arcology.</English>
 		<French>The Lancer un projet d'arcologie is a city sized moble arcology.</French>
 		<Italian>L'arcologia da lancio è un'arcologia, di dimensioni paragonabili a quelle di una città, che può essere anche spostata.</Italian>
 		<Polish>Arkologia - struktura lub osiedle o niezwykle wysokiej gestosci zaludnienia, czesto osiagajaca wysokosc powyzej 1 kilometra. Termin zostal stworzony przez architekta Paolo Soleriego jako polaczenie "architektury" z "ekologia". Jak na razie konstrukcje te nie wyszly poza faze projektów i rozwazan teoretycznych oraz eksperymentów przeprowadzanych w Arcosanti w centralnej Arizonie (USA). Popularne w fantastyce naukowej, sa przedstawiane jako rozwiazanie problemów przeludnienia i degradacji srodowiska, poniewaz zmniejszaja zapotrzebowanie miast na teren i zasoby, chociaz cechuja sie wieksza niz normalna gestoscia zaludnienia oraz powazna modyfikacja okreslonego obszaru. Wiekszosc miast rozrasta sie jedynie w plaszczyznie poziomej, zajmujac coraz wieksze polacie ziemi, arkologie zas sa konstrukcjami nieco bardziej "trójwymiarowymi".</Polish>
@@ -23754,7 +23754,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FEDERAL_PRISON_STRATEGY</Tag>
-		<English>Building a Maximum Security Prison may upset the locals, but it can be useful to "interrogate" enemy combantants.</English>
+		<English>Building a Maximum Security Prison may upset the locals, but it can be useful to "interrogate" enemy combatants.</English>
 		<French>Building a une Prison de Haute Sécurité may upset the locals, but it can be useful to "interrogate" enemy combantants.</French>
 		<Italian>Costruire una prigione di massima sicurezza potrebbe far innervosire gli abitnti locali, ma può essere utile per "interrogare" i combattenti nemici.</Italian>
 	</TEXT>
@@ -23836,7 +23836,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STOCKS_PEDIA</Tag>
-		<English>Stocks are devices used in the medieval times as a form of physical punishment involving public humiliation. The stocks partially immobilized its victims and they were often exposed in a public place such as the site of a market to the scorn of those who passed by. Since the purpose of putting offenders in the stocks was to expose them to ridicule and mockery, passers-by were encouraged to throw at those being punished mud, rotten eggs, mouldy fruit and vegetables, smelly fish, offal, and excrement (both animal and human). Consequently, many of those who sat in the stocks were very dirty and smelly by the time that they were let out.</English>
+		<English>Stocks are devices used in the medieval times as a form of physical punishment involving public humiliation. The stocks partially immobilized its victims, and they were often exposed in a public place such as the site of a market to the scorn of those who passed by. Since the purpose of putting offenders in the stocks was to expose them to ridicule and mockery, passers-by were encouraged to throw at those being punished mud, rotten eggs, mouldy fruit and vegetables, smelly fish, offal, and excrement (both animal and human). Consequently, many of those who sat in the stocks were very dirty and smelly by the time that they were let out.</English>
 		<French>un Carcan are devices used in the medieval times as a form of physical punishment involving public humiliation. The stocks partially immobilized its victims and they were often exposed in a public place such as the site of a market to the scorn of those who passed by. Since the purpose of putting offenders in the stocks was to expose them to ridicule and mockery, passers-by were encouraged to throw at those being punished mud, rotten eggs, mouldy fruit and vegetables, smelly fish, offal, and excrement (both animal and human). Consequently, many of those who sat in the stocks were very dirty and smelly by the time that they were let out.</French>
 		<Polish>Dyby - pierwotne pęta drewniane, w postaci desek lub kłód z otworami umożliwiającymi zamknięcie rąk i nóg więźnia. Nazwą tą często określa się też gąsior lub kłodę.</Polish>
 	</TEXT>
@@ -24069,7 +24069,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FORENSICS_LAB_PEDIA</Tag>
-		<English>In modern use, the term "forensics" in the place of "forensic science" can be considered correct as the term "forensic" is effectively a synonym for "legal" or "related to courts". However the term is now so closely associated with the scientific field that many dictionaries include the meaning that equates the word "forensics" with "forensic science".</English>
+		<English>In modern use, the term "forensics" in the place of "forensic science" can be considered correct as the term "forensic" is effectively a synonym for "legal" or "related to courts". However, the term is now so closely associated with the scientific field that many dictionaries include the meaning that equates the word "forensics" with "forensic science".</English>
 		<Polish>Celem techniki śledczej jest ustalenie sprawcy przestępstwa lub metody, narzędzia przez niego zastosowanego, albo jeśli to niemożliwe, potwierdzenie, że przestępstwo miało miejsce (zabezpieczono czyste dyplomy ukończenia studiów i potwierdzono że są wydrukowane przez fałszerzy).</Polish>
 	</TEXT>
 	<TEXT>
@@ -25188,7 +25188,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TURQOISE_MINE_STRATEGY</Tag>
-		<English>Build a Turqoise Mine to increase your cities wealth.</English>
+		<English>Build a Turquoise Mine to increase your cities wealth.</English>
 		<French>Augmente la richesse de votre ville.</French>
 		<Italian>Costruisci una miniera di turchesi per incrementare la ricchezza della tua città.</Italian>
 		<Polish>Zbuduj Turqoise Mine by zwiększyć bogactwo w Twoich miastach.</Polish>
@@ -25567,7 +25567,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ONYX_MINE_STRATEGY</Tag>
-		<English>Build a Onyx Mine to increase your cities wealth.</English>
+		<English>Build an Onyx Mine to increase your cities wealth.</English>
 		<French>Augmente la richesse de votre ville.</French>
 		<Italian>Costruisci una miniera di onice per incrementare la ricchezza della tua città.</Italian>
 		<Polish>Zbuduj Onyx Mine by zwiększyć bogactwo w Twoich miastach.</Polish>
@@ -26550,7 +26550,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GUARDHOUSE_PEDIA</Tag>
-		<English>Guardhouse keep the commoners out of the palace.</English>
+		<English>Guardhouse keeps the commoners out of the palace.</English>
 		<French>un Poste de garde du palais keep the commoners out of the palace.</French>
 		<Italian>Le guardie del palazzo tengono la gente comune fuori dal tuo palazzo.</Italian>
 		<Polish>Stróżówka</Polish>
@@ -26576,7 +26576,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SERVANTS_QUARTERS_PEDIA</Tag>
-		<English>Servants Quarters house the servents who keep the palace clean and organized.</English>
+		<English>Servants Quarters house the servants who keep the palace clean and organized.</English>
 		<French>un Palais - Quartiers des Serviteurs house the servents who keep the palace clean and organized.</French>
 		<Italian>I quartieri dei servitori ospitano le persone che si occupano di tenere il palazzo pulito ed organizzato.</Italian>
 		<Polish>Służący (służąca, sługa, służka, także: pomoc domowa, podręczny, podręczna, posługacz, posługaczka, pachołek) - pracownik (zwykle fizyczny), który pracuje (a bardzo często także mieszka) w domu (zwykle majętnego) pracodawcy.</Polish>
@@ -26602,7 +26602,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THRONE_ROOM_PEDIA</Tag>
-		<English>A throne room is the room, in the official residence of the crown, either a palace or a fortified castle, where the throne  of a senior figure (usually a monarch) is set up with elaborate pomp? usually raised, often with steps, and under a canopy.</English>
+		<English>A throne room is the room, in the official residence of the crown, either a palace or a fortified castle, where the throne of a senior figure (usually a monarch) is set up with elaborate pomp: usually raised, often with steps, and under a canopy.</English>
 		<Italian>La sala del trono è una stanza presente nella residenza officiale della Corona, solitamente un palazzo o un castello fortificato, dove è presente il trono del re, solitamente rialzato e dotato di scalini, oltre ad essere spesso ricoperto da un baldacchino.</Italian>
 		<Polish>Tron (gr. thronos, thranus, łac. thronus - taboret, siedzenie) - oficjalne określenie siedziska najczęściej o kształcie krzesła, na którym monarcha zasiada przy oficjalnych okazjach. W sensie abstrakcyjnym tron określa również władzę monarchii. Wstąpienie monarchy na tron (intronizacja) podczas obrzędu koronacjioznacza początek panowania władcy.</Polish>
 	</TEXT>
@@ -26916,13 +26916,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZOO_STRATEGY</Tag>
-		<English>Zoo's provide an excellant boost to culture and revenue.</English>
+		<English>Zoos provide an excellent boost to culture and revenue.</English>
 		<Italian>Gli zoo forniscono un eccellente bonus alla cultura.</Italian>
 		<Polish>Pet Shops are excellant ways to monopolize on domesticated animals</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AQUARIUM_STRATEGY</Tag>
-		<English>Aquariums can offer an excellant boost to culture and revenue.</English>
+		<English>Aquariums can offer an excellent boost to culture and revenue.</English>
 		<Italian>Gli acquari forniscono un eccellente bonus alla cultura.</Italian>
 	</TEXT>
 	<TEXT>
@@ -26932,7 +26932,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PET_SHOP_STRATEGY</Tag>
-		<English>Pet Shops are excellant ways to monopolize on domesticated animals</English>
+		<English>Pet Shops are excellent ways to monopolize on domesticated animals</English>
 		<French>une Animaleries are excellant ways to monopolize on domesticated animals</French>
 	</TEXT>
 	<TEXT>
@@ -27469,7 +27469,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOG_BREEDER_PEDIA</Tag>
-		<English>Dogs come in many breeds and are used as pets, herding, removing vermin, hunting, entertainment, law enforcment, pulling sleds as well as many other uses.</English>
+		<English>Dogs come in many breeds and are used as pets, herding, removing vermin, hunting, entertainment, law enforcement, pulling sleds as well as many other uses.</English>
 		<Polish>Psy ze względu na funkcje jakie pełnią dla człowieka, zostały podzielone na typy, bądź grupy związane z użytkowością.</Polish>
 	</TEXT>
 	<TEXT>
@@ -27895,7 +27895,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RABBIT_BREEDER_PEDIA</Tag>
-		<English>Domestic rabbits can be kept as pets in a back yard hutch or indoors in a cage or house trained to have free roam. Rabbits kept indoors are often referred to as house rabbits. House rabbits typically have an indoor pen or cage and a rabbit-safe place to run and exercise, such as an exercise pen, living room or family room. Rabbits can be trained to use a litter box and some can learn to come when called. Domestic rabbits that do not live indoors can also serve as companions for their owners, typically living in a protected hutch outdoors. Some pet rabbits live in outside hutches during the day for the benefit of fresh air and natural daylight and are brought inside at night.</English>
+		<English>Domestic rabbits can be kept as pets in a back yard hutch or indoors in a cage or house-trained to have free roam. Rabbits kept indoors are often referred to as house rabbits. House rabbits typically have an indoor pen or cage and a rabbit-safe place to run and exercise, such as an exercise pen, living room or family room. Rabbits can be trained to use a litter box and some can learn to come when called. Domestic rabbits that do not live indoors can also serve as companions for their owners, typically living in a protected hutch outdoors. Some pet rabbits live in outside hutches during the day for the benefit of fresh air and natural daylight and are brought inside at night.</English>
 		<Polish>Królik - polska nazwa zwyczajowa kilku gatunków zajęczaków z rodziny zającowatych. Mianem tym określa się zwierzęta należące do rodzajów Sylvilagus (m.in. królik bagienny i królik błotny) oraz Oryctolagus, do którego należy królik europejski (królik dziki) oraz jego udomowiona forma - królik domowy.</Polish>
 	</TEXT>
 	<TEXT>
@@ -28116,7 +28116,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MODERN_STABLE_PEDIA</Tag>
-		<English>A stable is a building in which livestock, especially horses, are kept. It most commonly means a building that is divided into separate stalls for individual animals. There are many different types of stables in use today such as the American barn which is a large barn with a door each end and individual stalls inside or free standing stables with the classic top and bottom opening doors. The term "stable" is also used to describe a group of animals kept by one owner, regardless of housing or location.</English>
+		<English>A stable is a building in which livestock, especially horses, are kept. It most commonly means a building that is divided into separate stalls for individual animals. There are many types of stables in use today such as the American barn which is a large barn with a door each end and individual stalls inside or freestanding stables with the classic top and bottom opening doors. The term "stable" is also used to describe a group of animals kept by one owner, regardless of housing or location.</English>
 		<Polish>Stajnia - budynek w którym trzyma się konie lub ogół koni należących do jednego właściciela. W prawidłowym wyposażeniu stajni powinno się znajdować sprzęt pożarowy, czyli gaśnice, węże, sprzęt do sprzątania. Powinien obowiązywać rygorystyczny zakaz palenia, ze względu na zagrożenie pożarowe. Stajnia składa się przeważnie z kilku pomieszczeń, z których każde ma określoną funkcję. Najważniejsze to stajnia główna, gdzie znajdują się boksy lub stanowiska, w których stoją konie. Drugim takim pomieszczeniem jest siodlarnia, gdzie trzyma się sprzęt jeździecki. Oba te pomieszczenia powinny mieć zapewnioną doskonałą wentylację, a siodlarnia dodatkowo ogrzewanie, aby można było wysuszyć zawilgocony sprzęt. Kolejnym pomieszczeniem może być paszarnia, gdzie przechowuje się i przygotowuje paszę (jedzenie) dla koni. Często w stajniach znajdują się pomieszczenia pomocnicze, w których trzyma się np. narzędzia do sprzątania lub przybory do podkuwania koni.</Polish>
 	</TEXT>
 	<TEXT>
@@ -28739,7 +28739,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHEMISTRY_LAB_PEDIA</Tag>
-		<English>Chemistry is the science  of matter  and the changes it undergoes.</English>
+		<English>Chemistry is the science of matter and the changes it undergoes.</English>
 		<Italian>La chimica è la scienza che studia la materia e le trasformazioni che essa subisce.</Italian>
 		<Polish>Analiza chemiczna polega na ustaleniu, które związki chemiczne, pierwiastki, jony lub rodniki wchodzą w skład badanego materiału, bez ustalania jego ilości w substancji. Składniki identyfikuje się na podstawie reakcji charakterystycznych lub metodami instrumentalnymi. Współczesna analiza jakościowa wykorzystuje przede wszystkim metody instrumentalne: spektrometrię atomową emisyjną, fluorescencję rentgenowską, spektrometrię mas, neutronową analizę aktywacyjną, spektrometrię ramanowska i wiele innych.</Polish>
 	</TEXT>
@@ -28860,7 +28860,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_LAB_PEDIA</Tag>
-		<English>Animal testing, also known as animal experimentation, animal research, and in vivo testing, is the use of non-human animals in experiments. Worldwide it is estimated that the number of vertebrate animals? from zebrafish to non-human primates ranges from the tens of millions to more than 100 million used annually.</English>
+		<English>Animal testing, also known as animal experimentation, animal research, and in vivo testing, is the use of non-human animals in experiments. Worldwide it is estimated that the number of vertebrate animals, from zebrafish to non-human primates, ranges from the tens of millions to more than 100 million used annually.</English>
 		<French>Animal testing, also known as animal experimentation, animal research, and in vivo testing, is the use of non-human animals in experiments. Worldwide it is estimated that the number of vertebrate animals? from zebrafish to non-human primates? ranges from the tens of millions to more than 100 million used annually.</French>
 		<Italian>La sperimentazione sugli animali, conosciuta anche come la sperimentazione animale, ricerca animale e  sperimentazione in vivo, è l'uso di animali negli esperimenti. In tutto il mondo si stima che il numero di animali utilizzati ogni anno negli esperimenti scientifici varia da decine di milioni a oltre 100 milioni.</Italian>
 		<Spanish>Animal testing, also known as animal experimentation, animal research, and in vivo testing, is the use of non-human animals in experiments. Worldwide it is estimated that the number of vertebrate animals (from zebrafish to non-human primates) ranges from the tens of millions to more than 100 million used annually.</Spanish>
@@ -29034,7 +29034,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROBOTICS_LAB_PEDIA</Tag>
-		<English>Robotics is the branch of technology that deals with the design, construction, operation, structural disposition, manufacture and application of robots  and computer systems for their control, sensory feedback, and information processing.</English>
+		<English>Robotics is the branch of technology that deals with the design, construction, operation, structural disposition, manufacture and application of robots and computer systems for their control, sensory feedback, and information processing.</English>
 		<Italian>La robotica è un ramo della tecnologia che si occupa della progettazione, costruzione, operazione, composizione strutturale, produzione ed applicazione dei robot e dei computer necessari per il loro controllo, le loro letture e le loro decisioni.</Italian>
 		<Polish>Robotyka - interdyscyplinarna dziedzina wiedzy działająca na styku mechaniki, automatyki, elektroniki, sensoryki, cybernetyki oraz informatyki. Domeną robotyki są również rozważania nad sztuczną inteligencją - w niektórych środowiskach robotyka jest wręcz z nią utożsamiana.</Polish>
 	</TEXT>
@@ -29563,13 +29563,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EQ_STRATEGY</Tag>
-		<English>Raise your education to get benifits.</English>
+		<English>Raise your education to get benefits.</English>
 		<French>Améliorer votre éducation vous apportera des bénéfices.</French>
 		<German>Bildung bringt Vorteile für die Stadt und sollte nie vernachlässigt werden.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EQ_PEDIA</Tag>
-		<English>The higher your Education the more benifits you get. The lower your Education the more penalties you get.</English>
+		<English>The higher your Education the more benefits you get. The lower your Education the more penalties you get.</English>
 		<French>Plus votre Education sera importante, plus important en seront les bénéfices retirés.</French>
 		<German>Eine gute Bildung zahlt sich letzten Endes aus und verschafft Vorteile, während schlechte Bildung mit Nachteilen verbunden ist. Einige Gebäude lassen sich außerdem nur in Städten bauen, die einen bestimmten Bildungsstand aufweisen.</German>
 	</TEXT>
@@ -30411,7 +30411,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LOBSTER_TRAPS_PEDIA</Tag>
-		<English>A lobster trap or lobster pot is a portable trap which traps lobsters or crayfish and is used in lobster fishing. A lobster trap can hold several lobsters. Lobster traps were traditionally constructed out of wood but they are now usually plastic.</English>
+		<English>A lobster trap or lobster pot is a portable trap which traps lobsters or crayfish and is used in lobster fishing. A lobster trap can hold several lobsters. Lobster traps were traditionally constructed out of wood, but they are now usually plastic.</English>
 		<Polish>Homary (Nephropidae) - rodzina skorupiaków należąca do rzędu dziesięcionogów. Poławiane gospodarczo na dużą skalę. Są źródłem mięsa, zaliczanym do owoców morza. Żyją w strefie dennej zbiorników wód słonych. Ich ciało składa się ze szczypiec, odnóży krocznych, głowotułowia i odwłoku.</Polish>
 	</TEXT>
 	<TEXT>
@@ -30722,7 +30722,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ABALONE_DIGGERS_PEDIA</Tag>
-		<English>The meat (foot muscle) of abalone is used for food, and the shells of abalone are used as decorative items and as a source of mother of pearl for jewelry and other decorative items. Its pearls have also been collected for centuries.</English>
+		<English>The meat (foot muscle) of abalone is used for food, and the shells of abalone are used as decorative items and as a source of mother-of-pearl for jewelry and other decorative items. Its pearls have also been collected for centuries.</English>
 		<Polish>Ślimaki lądowe w kuchni - ślimaki lądowe stanowią od tysięcy lat formę pożywienia dla ludzi, świadczą o tym wykopaliska archeologiczne związane z kulturą mezolityczną dokonane na terenie dzisiejszej Algierii i Tunezji. Dowody kulinarnego zastosowania ślimaków, czyli osmolone skorupy odnaleziono także w innych stanowiskach archeologicznych regionu śródziemnomorskiego sprzed od 12000 do 6000 lat.</Polish>
 	</TEXT>
 	<TEXT>
@@ -31212,7 +31212,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WONDER_SACRIFICIAL_ALTAR_STRATEGY</Tag>
-		<English>Build Tlaloc's Altar to get a free Sacrifical Alter in EVERY city.</English>
+		<English>Build Tlaloc's Altar to get a free Sacrificial Alter in EVERY city.</English>
 		<French>Permet un Autel de sacrifice dans Chaque Ville.</French>
 		<Italian>Costruisci l'Altare di Tlaoc per ottenere un altare dei sacrifici gratuito in ogni città.</Italian>
 		<Polish>Zbuduj Tlaloc's Altar to get a free Sacrifical Alter in EVERY city.</Polish>
@@ -31267,7 +31267,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REVIVALIST_CHURCH2_PEDIA</Tag>
-		<English>Christian revival is a term that generally refers to a specific period of increased spiritual interest or renewal in the life of a church congregation or many churches, either regionally or globally. This should be distinguished from the use of the term "revival" to refer to a evangelistic meeting or series of meetings.</English>
+		<English>Christian revival is a term that generally refers to a specific period of increased spiritual interest or renewal in the life of a church congregation or many churches, either regionally or globally. This should be distinguished from the use of the term "revival" to refer to an evangelistic meeting or series of meetings.</English>
 		<Italian>Revivalismo cristiano è un termine che si riferisce generalmente ad un periodo specifico di crescente interesse spirituale o rinnovamento nella vita di una Congregazione religiosa, sia regionale o globale. Dovrebbe essere distinto dall'uso del termine "rinascita" per fare riferimento a una riunione evangelistica o serie di incontri.</Italian>
 		<Polish>Kościół Odrodzenia to termin w teologii jaki przypisuje się wzmorzonym ruchom religijnym ruchom szukającym sposobów powrotu do korzeni religii.</Polish>
 	</TEXT>
@@ -31649,7 +31649,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WAVE_RACING_PEDIA</Tag>
-		<English>Jetsprint, or Sprint Boat Racing is a form of racing sport in which jetboats with a crew of two race individually against the clock through twisting series of channels in less than a metre of water.[NEWLINE]Tracks are typically designed for spectators, and racing is fast and loud, with boat motors usually V8s developing well over 500hp. Jetsprinting as an organised sport originated in New Zealand in 1981, and events were originally held in the same natural braided rivers that had inspired Sir William Hamilton to develop the jetboat, but when the sport was introduced to Australia in the mid-1980s permanent artificial courses were used and this is now the norm even in New Zealand.[NEWLINE]A fiercely contested Tasman championship has now led to a three way world championship (with the introduction of the sport into the USA}, under the auspices of the Union Internationale Motonautique. The host nation rotates between New Zealand, Australia and the U.S.A</English>
+		<English>Jetsprint, or Sprint Boat Racing is a form of racing sport in which jetboats with a crew of two race individually against the clock through twisting series of channels in less than a metre of water.[NEWLINE]Tracks are typically designed for spectators, and racing is fast and loud, with boat motors usually V8s developing well over 500hp. Jetsprinting as an organised sport originated in New Zealand in 1981, and events were originally held in the same natural braided rivers that had inspired Sir William Hamilton to develop the jetboat, but when the sport was introduced to Australia in the mid-1980s permanent artificial courses were used and this is now the norm even in New Zealand.[NEWLINE]A fiercely contested Tasman championship has now led to a three-way world championship (with the introduction of the sport into the USA}, under the auspices of the Union Internationale Motonautique. The host nation rotates between New Zealand, Australia and the U.S.A</English>
 		<Polish>Tor wodny, szlak żeglowny (z niderl. farwater) - droga dla statków, bezpieczna o odpowiedniej głębokości, wyznaczona na akwenie trudnym lub niebezpiecznym, oznaczona stałymi (np. brama torowa) lub pływającymiznakami nawigacyjnymi, na której może odbywać się bezpiecznie i swobodnie ruch żeglugowy. Kierunek (prawa i lewa strona) toru wodnego, prowadzi zawsze z morza do portu, ujścia rzeki lub do innej drogi wodnej.</Polish>
 	</TEXT>
 	<TEXT>
@@ -31660,7 +31660,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRAINING_DOJO_STRATEGY</Tag>
-		<English>Training Dojo's are useful for teaching melee troops martial arts.</English>
+		<English>Training Dojos are useful for teaching melee troops martial arts.</English>
 		<French>un Dojo d'entraînement's est utile pour apprendre à vos unités les arts martiaux. Ils en retireront de l'expérience.</French>
 		<Italian>I dojo d'allenamento forniscono alle truppe da combattimento ravvicinato le nozioni base sulle arti marziali.</Italian>
 		<Polish>Sale Treningowe Dojo są przydatne do nauczania oddziałów sztuki wojennej.</Polish>
@@ -31693,7 +31693,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MINOR_LEAGUE_STADIUM_STRATEGY</Tag>
-		<English>Minor League Stadium's bring an income and happiness to any city that has them.</English>
+		<English>Minor League Stadiums bring an income and happiness to any city that has them.</English>
 		<French>un Stade de Championnat augmente le bonheur et les revenus de la ville.</French>
 		<Italian>Gli stadi locali forniscono felicità e una piccola dose di oro.</Italian>
 		<Polish>Stadiony Drugiej Ligi przynoszą dochody i szczęście dla miast w których się znajduje</Polish>
@@ -31721,7 +31721,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BATTLEBOT_ARENA_STRATEGY</Tag>
-		<English>Battlebot Arena's are hi-tech battle rooms, for catering to a more advanced crowds.</English>
+		<English>Battlebot Arenas are hi-tech battle rooms, for catering to a more advanced crowds.</English>
 		<French>une Arène de Robots's are hi-tech battle rooms, for catering to a more advanced crowds.</French>
 		<Italian>Le arene per robot sono arene progettate per il combattimento fra dispositivi hi-tech; attirano grandi folle.</Italian>
 		<Polish>Areny Botów są najnowszymi polami bitwy,ponieważ dostarczają jeszcze większych wrażeń poddanym</Polish>
@@ -31740,7 +31740,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AIRFIELD_STRATEGY</Tag>
-		<English>Airfields attract small time fliers and racing enthusiasts.</English>
+		<English>Airfields attract small-time fliers and racing enthusiasts.</English>
 		<French>un Aérodromes attract small time fliers and racing enthusiasts.</French>
 		<Italian>I campi di volo attirano amatori del volo e amanti delle gare.</Italian>
 	</TEXT>
@@ -31825,7 +31825,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOFTBALL_FIELD_PEDIA</Tag>
-		<English>On Thanksgiving day 1887 the best game ever softball was played for the first time. It took place at the Farragut Boat Club to hear the outcome of the Yale and Harvard football game.</English>
+		<English>The earliest known softball game was played in Chicago, Illinois on Thanksgiving Day, 1887. It took place at the Farragut Boat Club at a gathering to hear the outcome of the Yale University and Harvard University football game. When the score was announced and bets were settled, a Yale alumnus threw a boxing glove at a Harvard supporter. The Harvard fan grabbed a stick and swung at the rolled up glove. George Hancock, a reporter there, called out "Play ball!" and the game began, with the boxing glove tightened into a ball, a broom handle serving as a bat. This first contest ended with a score of 41–40. The ball, being soft, was fielded barehanded.</English>
 		<Polish>Softball - gra podobna do baseballu, lecz rozgrywana na mniejszym boisku, większą piłką oraz lżejszą i grubszą pałką. Rywalizują ze sobą dwie drużyny po 9 zawodników. Główna część pola gry jest kwadratem o boku 18,3 m. W narożnikach umieszczone są bazy (jedna z baz to baza domowa). W grze używa się piłki o obwodzie blisko 30 cm (11 lub 12 cali w zależności od rodzaju rozgrywek ) i wadze 166-173 g oraz kija o długości około 86 cm i wadze około 1 kg. Mecz składa się z 7 inningów. W każdej z nich obie drużyny grają na przemian w ataku i w obronie. Drużyna atakująca odbija kijem piłkę rzuconą (od dołu) przez miotacza z drużyny przeciwnej.</Polish>
 	</TEXT>
 	<TEXT>
@@ -32516,7 +32516,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CEMENT_BARRIER_PEDIA</Tag>
-		<English>Large, fortified walls made out of concrete are used as barriers against human traffic.  Such walls commonly have checkpoints and heavily armed soldiers to prevent against tresspass.  The most famous examples are the Berlin Wall and the West Bank Barrier.</English>
+		<English>Large, fortified walls made out of concrete are used as barriers against human traffic.  Such walls commonly have checkpoints and heavily armed soldiers to prevent against trespass.  The most famous examples are the Berlin Wall and the West Bank Barrier.</English>
 		<Italian>Grandi mura fortificate in cemento che vengono usate come barriere contro il traffico. Solitamente esistono dei checkpoint sorvegliati da soldati pesantemente armati che permettono di attraversare queste mura. Gli esempi più famosi sono il Muro di Berlino e la Barriera di separazione israeliana.</Italian>
 		<Polish>Bariera przeciwczołgowa - to zapora inżynieryjna budowane na kierunkach prawdopodobnego ruchu czołgów i innych wozów bojowych przeciwnika. Bariery swą konstrukcją są zbliżone do barykad.</Polish>
 	</TEXT>
@@ -32545,7 +32545,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FRONTIER_OUTPOST_PEDIA</Tag>
-		<English>Outposts are structures commonly made of wood or stone. They serve as an early warning to approaching enemy forces.</English>
+		<English>Outposts are structures commonly made of wood or stone. They serve as an early warning of approaching enemy forces.</English>
 		<Italian>Gli avamposti sono strutture costruite in legno o pietra; sono delle postazioni di avvistamento per difendersi dagli attacchi nemici.</Italian>
 		<Polish>Przejście graniczne - ustalone na drodze umów międzypaństwowych miejsce na granicy pomiędzy państwami służące do jej przekraczania zarówno przez podróżnych, jak i pojazdy.</Polish>
 	</TEXT>
@@ -32567,7 +32567,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FORTIFIED_OUTPOST_PEDIA</Tag>
-		<English>Outposts are structures commonly made of wood or stone. They serve as an early warning to approaching enemy forces.</English>
+		<English>Outposts are structures commonly made of wood or stone. They serve as an early warning of approaching enemy forces.</English>
 		<Italian>Gli avamposti sono strutture costruite in legno o pietra; sono delle postazioni di avvistamento per difendersi dagli attacchi nemici.</Italian>
 		<Polish>Przejście graniczne - ustalone na drodze umów międzypaństwowych miejsce na granicy pomiędzy państwami służące do jej przekraczania zarówno przez podróżnych, jak i pojazdy.</Polish>
 	</TEXT>
@@ -33217,7 +33217,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMP_TRAPS_STRATEGY</Tag>
-		<English>Build a EMP Traps to protect your city.</English>
+		<English>Build an EMP Traps to protect your city.</English>
 		<French>Construisez des [COLOR_BUILDING_TEXT]Pièges EMP[COLOR_REVERT] pour protéger votre ville.</French>
 		<Polish>Elektromagnetyczne Pułapki impulsowe</Polish>
 	</TEXT>
@@ -33413,7 +33413,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOMOBILE_FACTORY_STRATEGY</Tag>
-		<English>Build an Autombile Factory to increase your cities wealth and production.</English>
+		<English>Build an Automobile Factory to increase your cities wealth and production.</English>
 		<French>Augmente la richesse et la production de votre ville.</French>
 		<Italian>Costruisci una fabbrica di automobili per incrementare la ricchezza e la produzione della tua città.</Italian>
 	</TEXT>
@@ -33915,7 +33915,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTELLIGENT_PAVEMENT_STRATEGY</Tag>
-		<English>Build a Intelligent Pavement to increase your cities efficiency.</English>
+		<English>Build an Intelligent Pavement to increase your cities efficiency.</English>
 		<French>Construisez des [COLOR_BUILDING_TEXT]Trottoirs Intelligents[COLOR_REVERT] pour améliorer l'efficacité de votre ville.</French>
 		<Italian>Costruisci le pavimentazioni intelligenti per incrementare l'efficienza della tua città.</Italian>
 		<Polish>Zbuduj Intelligent Pavement to increase your cities efficiency.</Polish>
@@ -34966,7 +34966,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRAVEL_AGENCY_STRATEGY</Tag>
-		<English>Increases production of travel related builings.</English>
+		<English>Increases production of travel related buildings.</English>
 		<Italian>Incrementa la produttività degli edifici correlati ai viaggi.</Italian>
 	</TEXT>
 	<TEXT>
@@ -35716,7 +35716,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRUMP_TOWER_PEDIA</Tag>
-		<English>World Tower is a residential skyscraper at 845 United Nations Plaza (First Avenue between 47th and 48th Streets) in Manhattan, New York City. Construction began in 1999 and concluded in 2001. Designed by the Greek architect Costas Kondylis, the building is 861 feet high and has 72 constructed floors (but lists 90 stories on elevator panels) with curtain wall facades of dark, bronze-tinted glass. The resulting large windows allow for extensive views of the East River and midtown Manhattan. The building is constructed with concrete to improve its wind resistance.</English>
+		<English>World Tower is a residential skyscraper at 845 United Nations Plaza (First Avenue between 47th and 48th Streets) in Manhattan, New York City. Construction began in 1999 and concluded in 2001. Designed by the Greek architect Costas Kondylis, the building is 861 feet (262.43 m) high and has 72 constructed floors (but lists 90 stories on elevator panels) with curtain wall facades of dark, bronze-tinted glass. The resulting large windows allow for extensive views of the East River and midtown Manhattan. The building is constructed with concrete to improve its wind resistance.</English>
 		<French>La Tour World is a residential skyscraper at 845 United Nations une Place (First Avenue between 47th and 48th Streets) in Manhattan, New York City. Construction began in 1999 and concluded in 2001. Designed by the Greek architect Costas Kondylis, the building is 861 feet high and has 72 constructed floors (but lists 90 stories on elevator panels) with curtain wall facades of dark, bronze-tinted glass. The resulting large windows allow for extensive views of the East River and midtown Manhattan. The building is constructed with concrete to improve its wind resistance.</French>
 		<Polish>World Tower - 262-metrowy wieżowiec na Manhattanie w Nowym Jorku w USA. Ma 72 piętra które zajmują 83 403 m2. Cały budynek jest przeznaczony na cele mieszkaniowe. Znajduje się tutaj prawie 400 apartamentów. Został zaprojektowany przez Costas Kondylis and Partners LLP Architects, a jego głównymi materiałami budulcowymi były: beton, stal i szkło. Wcześniej w tym miejscu stał 23-piętrowy gmach, jednak został wyburzony. Natomiast prace nad tym budynkiem rozpoczęły się w 1999 roku, a zakończyły się w 2001.</Polish>
 	</TEXT>
@@ -35930,7 +35930,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANGOLAN_EMBASSY_PEDIA</Tag>
-		<English>Angola is a country in Southern Africa. It is the seventh-largest country in Africa, and is bordered by Namibia to the south, the Democratic Republic of the Congo to the north, Zambia to the east, and the Atlantic Ocean to west. The exclave province of Cabinda has borders with the Republic of the Congo and the Democratic Republic of the Congo. The capital and largest city is Luanda. Although its territory has been inhabited since the Paleolithic Era, modern Angola originates in Portuguese colonization, which began with, and was for centuries limited to, coastal settlements and trading posts established from the 16th century onwards. In the 19th century, European settlers slowly and hesitantly began to establish themselves in the interior. As a Portuguese colony, Angola did not encompass its present borders until the early 20th century, following resistance by groups such as the Cuamato, the Kwanyama and the Mbunda. Independence was achieved in 1975 after the protracted liberation war. That same year, Angola descended into an intense civil war that lasted until 2002. It has since become a relatively stable unitary presidential republic.</English>
+		<English>Angola is a country in Southern Africa. It is the seventh-largest country in Africa, and is bordered by Namibia to the south, the Democratic Republic of the Congo to the north, Zambia to the east, and the Atlantic Ocean to west. The exclave province of Cabinda has borders with the Republic of the Congo and the Democratic Republic of the Congo. The capital and largest city is Luanda. Although its territory has been inhabited since the Paleolithic Era, modern Angola originates in Portuguese colonization, which began with, and was for centuries limited to, coastal settlements and trading posts established from the 16th century onward. In the 19th century, European settlers slowly and hesitantly began to establish themselves in the interior. As a Portuguese colony, Angola did not encompass its present borders until the early 20th century, following resistance by groups such as the Cuamato, the Kwanyama and the Mbunda. Independence was achieved in 1975 after the protracted liberation war. That same year, Angola descended into an intense civil war that lasted until 2002. It has since become a relatively stable unitary presidential republic.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARAGON_EMBASSY</Tag>
@@ -36190,7 +36190,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPAYAN_EMBASSY_PEDIA</Tag>
-		<English>The Capayanes were an indigenous people nowadays extinct that lived in Argentine territory. They knew the technology of the thread, and spun the wool of guanaco and llamas. Also they knew the metallurgy of copper and gold. They constructed channels and irrigation ditches to water their farmlands. Their cultivars were maize, zapallo, potato and quínoa. They widely used ceramics, principally in the production of funeral urns, decorated geometrically with the colors black, red and white, known as Sanagasta style or Angualasto style.Their houses were of mud and adobe and were sometimes built at the foot of a great tree used as a roof. This technology of construction, still lasts in the Riojan zone of Vinchina.</English>
+		<English>The Capayanes were an indigenous people nowadays extinct that lived in Argentine territory. They knew the technology of the thread, and spun the wool of guanaco and llamas. Also, they knew the metallurgy of copper and gold. They constructed channels and irrigation ditches to water their farmlands. Their cultivars were maize, zapallo, potato and quínoa. They widely used ceramics, principally in the production of funeral urns, decorated geometrically with the colors black, red and white, known as Sanagasta style or Angualasto style. Their houses were of mud and adobe and were sometimes built at the foot of a great tree used as a roof. This technology of construction, still lasts in the Riojan zone of Vinchina.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARAL_SUPE_EMBASSY</Tag>
@@ -36489,7 +36489,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GEORGIAN_EMBASSY_PEDIA</Tag>
-		<English>Georgia is a country in Eurasia, located on the crossroads of Eastern Europe and West Asia. Nestled between the Greater Caucasus and Lesser Caucasus mountain ranges, it is bounded to the west by the Black Sea, to the north and northeast by Russia, to the south by Turkey and Armenia, and to the southeast by Azerbaijan. The capital and largest city is Tbilisi. During classical antiquity, several independent kingdoms became established in what is now Georgia. The kingdoms of Colchis and Iberia adopted Christianity as their state religion in the early 4th century, leading to the decline and elimination of previously dominant paganism, Zoroastrianism, and Mithraism. A unified Kingdom of Georgia reached the peak of its political and economic strength during the reign of King David IV and Queen Tamar from the late 11th to the early 13th centuries. Thereafter and throughout the early modern period Georgia became fractured and fell into decline due to the onslaught of various hostile empires, including the Mongols, the Ottoman Empire, and successive dynasties of Iran. In 1783, the eastern Georgian kingdom of Kartli-Kakheti forged an alliance with the Russian Empire, which led to the gradual annexation of Georgia by Russia starting in 1801. After a brief period of independence following the Russian Revolution of 1917, the first Georgian Republic was occupied by Soviet Russia in 1921, and absorbed into the Soviet Union as the Georgian Soviet Socialist Republic in 1922. After restoring its independence in 1991, post-communist Georgia suffered from civil unrest and an economic crisis for most of the 1990s. Following a peaceful change of power in the Rose Revolution of 2003, Georgia pursued a strongly pro-Western foreign policy, introducing a series of political and economic reforms.</English>
+		<English>Georgia is a country in Eurasia, located on the crossroads of Eastern Europe and West Asia. Nestled between the Greater Caucasus and Lesser Caucasus mountain ranges, it is bounded to the west by the Black Sea, to the north and northeast by Russia, to the south by Turkey and Armenia, and to the southeast by Azerbaijan. The capital and largest city is Tbilisi. During classical antiquity, several independent kingdoms became established in what is now Georgia. The kingdoms of Colchis and Iberia adopted Christianity as their state religion in the early 4th century, leading to the decline and elimination of previously dominant paganism, Zoroastrianism, and Mithraism. A unified Kingdom of Georgia reached the peak of its political and economic strength during the reign of King David IV and Queen Tamar from the late 11th to the early 13th centuries. Thereafter, and throughout the early modern period Georgia became fractured and fell into decline due to the onslaught of various hostile empires, including the Mongols, the Ottoman Empire, and successive dynasties of Iran. In 1783, the eastern Georgian kingdom of Kartli-Kakheti forged an alliance with the Russian Empire, which led to the gradual annexation of Georgia by Russia starting in 1801. After a brief period of independence following the Russian Revolution of 1917, the first Georgian Republic was occupied by Soviet Russia in 1921, and absorbed into the Soviet Union as the Georgian Soviet Socialist Republic in 1922. After restoring its independence in 1991, post-communist Georgia suffered from civil unrest and an economic crisis for most of the 1990s. Following a peaceful change of power in the Rose Revolution of 2003, Georgia pursued a strongly pro-Western foreign policy, introducing a series of political and economic reforms.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GHURID_EMBASSY</Tag>
@@ -36950,7 +36950,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LA_PLATA_EMBASSY_PEDIA</Tag>
-		<English>The Viceroyalty of the Río de la Plata (Spanish: Virreinato del Río de la Plata) was the last to be organized and the one with the shortest life of the Viceroyalty of the Spanish Empire in the Americas. The Viceroyalty was established in 1776 from several former Viceroyalty of Perú dependencies that mainly extended over the Río de la Plata Basin, roughly the present-day territories of Argentina, Bolivia, Paraguay and Uruguay, extending inland from the Atlantic Coast. Buenos Aires, located on the western shore of the Río de la Plata estuary flowing into the Atlantic Ocean, opposite the Portuguese outpost of Colonia del Sacramento, was chosen as the capital. Usually considered one of the late Bourbon Reforms, the organization of this viceroyalty was motivated on both commercial grounds (Buenos Aires was by then a major spot for illegal trade), as well as on security concerns brought about by the growing interest of competing foreign powers in the area. The Spanish Crown wanted to protect its territory against Great Britain and the Kingdom of Portugal.</English>
+		<English>The Viceroyalty of the Río de la Plata (Spanish: Virreinato del Río de la Plata) was the last to be organized and the one with the shortest life of the Viceroyalty of the Spanish Empire in the Americas. The Viceroyalty was established in 1776 from several former Viceroyalty of Perú dependencies that mainly extended over the Río de la Plata Basin, roughly the present-day territories of Argentina, Bolivia, Paraguay and Uruguay, extending inland from the Atlantic Coast. Buenos Aires, located on the western shore of the Río de la Plata estuary flowing into the Atlantic Ocean, opposite the Portuguese outpost of Colonia del Sacramento, was chosen as the capital. Usually considered one of the late Bourbon Reforms, the organization of this viceroyalty was motivated on both commercial grounds (Buenos Aires was by then a major spot for illegal trade), and on security concerns brought about by the growing interest of competing foreign powers in the area. The Spanish Crown wanted to protect its territory against Great Britain and the Kingdom of Portugal.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEBANON_EMBASSY</Tag>
@@ -37093,7 +37093,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEDES_EMBASSY_PEDIA</Tag>
-		<English>The Medes were an ancient Iranian people who lived in an area known as Media (Northwestern Iran) and who spoke the Median language. Their arrival to the region is associated with the first wave of migrating Iranic Aryan tribes into Ancient Iran from the late 2nd millennium BCE (circa 1000 BC) (the Bronze Age collapse) through the beginning of the 1st millennium BCE (circa 900 BC). Greek references to "Median" people make no clear distinction between the "Persians" and the "Medians"; in fact for a Greek to become "too closely associated with Iranian culture" was "to become medianized, not persianized". The Median kingdom was a short-lived Iranian state and the textual and archaeological sources of that period are rare and little could be known from the Median culture which nevertheless made a "profound, and lasting, contribution to the greater world of Iranian culture".</English>
+		<English>The Medes were an ancient Iranian people who lived in an area known as Media (Northwestern Iran) and who spoke the Median language. Their arrival in the region is associated with the first wave of migrating Iranic Aryan tribes into Ancient Iran from the late 2nd millennium BCE (circa 1000 BC) (the Bronze Age collapse) through the beginning of the 1st millennium BCE (circa 900 BC). Greek references to "Median" people make no clear distinction between the "Persians" and the "Medians"; in fact for a Greek to become "too closely associated with Iranian culture" was "to become medianized, not persianized". The Median kingdom was a short-lived Iranian state and the textual and archaeological sources of that period are rare and little could be known from the Median culture which nevertheless made a "profound, and lasting, contribution to the greater world of Iranian culture".</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MELANESIAN_EMBASSY</Tag>
@@ -37268,7 +37268,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NOONGAR_EMBASSY_PEDIA</Tag>
-		<English>The Noongar are an Indigenous Australian people who live in the south-west corner of Western Australia, from Geraldton on the west coast to Esperance on the south coast. Traditionally, they inhabited the region from Jurien Bay to the southern coast of Western Australia, and east to what is now Ravensthorpe and Southern Cross, south west of the circumcision line separating those Aboriginal groups of central Australia that practised male circumcision upon initiation from those who did not. Noongar country, according to Norman Tindale, was occupied by 14 different groups: Amangu, Ballardong, Yued, Kaneang, Koreng, Mineng, Njakinjaki, Njunga, Pibelmen, Binjareb, Wardandi, Whadjuk, Wilman and Wudjari. The Noongar traditionally spoke dialects of the Noongar language, a member of the large Pama-Nyungan language family, but generally today speak Australian Aboriginal English (a dialect of the English language) combined with Noongar words and grammar. Although Noongar today still recognise the existence of these groups, most Noongar today trace their ancestry to more than one of these groups.</English>
+		<English>The Noongar are an Indigenous Australian people who live in the south-west corner of Western Australia, from Geraldton on the west coast to Esperance on the south coast. Traditionally, they inhabited the region from Jurien Bay to the southern coast of Western Australia, and east to what is now Ravensthorpe and Southern Cross, south-west of the circumcision line separating those Aboriginal groups of central Australia that practised male circumcision upon initiation from those who did not. Noongar country, according to Norman Tindale, was occupied by 14 different groups: Amangu, Ballardong, Yued, Kaneang, Koreng, Mineng, Njakinjaki, Njunga, Pibelmen, Binjareb, Wardandi, Whadjuk, Wilman and Wudjari. The Noongar traditionally spoke dialects of the Noongar language, a member of the large Pama-Nyungan language family, but generally today speak Australian Aboriginal English (a dialect of the English language) combined with Noongar words and grammar. Although Noongar today still recognise the existence of these groups, most Noongar today trace their ancestry to more than one of these groups.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NORMAN_EMBASSY</Tag>
@@ -37398,7 +37398,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PARAGUAYAN_EMBASSY_PEDIA</Tag>
-		<English>Paraguay is a landlocked country in central South America, bordered by Argentina to the south and southwest, Brazil to the east and northeast, and Bolivia to the northwest. Paraguay lies on both banks of the Paraguay River, which runs through the center of the country from north to south. Due to its central location in South America, it is sometimes referred to as Corazón de Sudamérica ("Heart of South America").The indigenous Guaraní had been living in Paraguay for at least a millennium before the Spanish conquered the territory in the 16th century. Spanish settlers and Jesuit missions introduced Christianity and Spanish culture to the region. Paraguay was a peripheral colony of the Spanish Empire, with few urban centers and settlers. Following independence from Spain in 1811, Paraguay was ruled by a series of dictators who generally implemented isolationist and protectionist policies. Following the disastrous Paraguayan War (1864-1870), the country lost 60 to 70 percent of its population through war and disease, and about 140,000 square kilometers (54,054 sq mi) of territory to Argentina and Brazil. Through the 20th century, Paraguay continued to endure a succession of authoritarian governments, culminating in the regime of Alfredo Stroessner, who led South America's longest-lived military dictatorship from 1954 to 1989. He was toppled in an internal military coup, and free multi-party elections were organized and held for the first time in 1993. A year later, Paraguay joined Argentina, Brazil and Uruguay to found Mercosur, a regional economic collaborative.</English>
+		<English>Paraguay is a landlocked country in central South America, bordered by Argentina to the south and southwest, Brazil to the east and northeast, and Bolivia to the northwest. Paraguay lies on both banks of the Paraguay River, which runs through the center of the country from north to south. Due to its central location in South America, it is sometimes referred to as Corazón de Sudamérica ("Heart of South America"). The indigenous Guaraní had been living in Paraguay for at least a millennium before the Spanish conquered the territory in the 16th century. Spanish settlers and Jesuit missions introduced Christianity and Spanish culture to the region. Paraguay was a peripheral colony of the Spanish Empire, with few urban centers and settlers. Following independence from Spain in 1811, Paraguay was ruled by a series of dictators who generally implemented isolationist and protectionist policies. Following the disastrous Paraguayan War (1864-1870), the country lost 60 to 70 percent of its population through war and disease, and about 140,000 square kilometers (54,054 sq mi) of territory to Argentina and Brazil. Through the 20th century, Paraguay continued to endure a succession of authoritarian governments, culminating in the regime of Alfredo Stroessner, who led South America's longest-lived military dictatorship from 1954 to 1989. He was toppled in an internal military coup, and free multi-party elections were organized and held for the first time in 1993. A year later, Paraguay joined Argentina, Brazil and Uruguay to found Mercosur, a regional economic collaborative.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PASHTUN_EMBASSY</Tag>
@@ -37437,7 +37437,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PHILIPINO_EMBASSY_PEDIA</Tag>
-		<English>The Philippines is a sovereign island country in Southeast Asia situated in the western Pacific Ocean. It consists of about 7,641 islands that are categorized broadly under three main geographical divisions: Luzon, Visayas, and Mindanao. The capital city of the Philippines is Manila and the most populous city is Quezon City; both are part of Metro Manila. To the North of the Philippines across the Luzon Strait lies Taiwan; China and the territories of Hong Kong and Macao lie in the Northeast; Vietnam sits West across the South China Sea; Southwest lie Brunei, Indonesia and Malaysia in the island of Borneo; the Celebes Sea separates it from other islands of Indonesia in the South; while to the Southeast it is bounded by the Philippine Sea, Indonesia and the island-nation of Palau; far East lie the United States territories of Guam the Northern Mariana Islands; small islands of Japan are found in the Northeast. Its location on the Pacific Ring of Fire and close to the equator makes the Philippines prone to earthquakes and typhoons, but also endows it with abundant natural resources and some of the world's greatest biodiversity. At approximately 300,000 square kilometers (115,831 sq mi), the Philippines is the 72nd-largest country in the world.</English>
+		<English>The Philippines is a sovereign island country in Southeast Asia situated in the western Pacific Ocean. It consists of about 7,641 islands that are categorized broadly under three main geographical divisions: Luzon, Visayas, and Mindanao. The capital city of the Philippines is Manila and the most populous city is Quezon City; both are part of Metro Manila. To the North of the Philippines across the Luzon Strait lies Taiwan; China and the territories of Hong Kong and Macao lie in the Northeast; Vietnam sits West across the South China Sea; Southwest lie Brunei, Indonesia and Malaysia on the island of Borneo; the Celebes Sea separates it from other islands of Indonesia in the South; while to the Southeast it is bounded by the Philippine Sea, Indonesia and the island-nation of Palau; far East lie the United States territories of Guam the Northern Mariana Islands; small islands of Japan are found in the Northeast. Its location on the Pacific Ring of Fire and close to the equator makes the Philippines prone to earthquakes and typhoons, but also endows it with abundant natural resources and some of the world's greatest biodiversity. At approximately 300,000 square kilometers (115,831 sq mi), the Philippines is the 72nd-largest country in the world.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PHILISTINES_EMBASSY</Tag>
@@ -37489,7 +37489,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POYA_EMBASSY_PEDIA</Tag>
-		<English>The Poyas were a subgroup of indigenous Tehuelche people living in the Andes of Llanquihue and Palena Province as well as on the southern shores of Nahuel Huapi Lake in present-day Argentina. The Jesuit priest Nicolas Mascardi divided the Poya language into two linguistically distinct groups the one spoken by the "comarcanos" of Nahuelhuapi and another one spoken further east as far away as to the Atlanctic Ocean.</English>
+		<English>The Poyas were a subgroup of indigenous Tehuelche people living in the Andes of Llanquihue and Palena Province as well as on the southern shores of Nahuel Huapi Lake in present-day Argentina. The Jesuit priest Nicolas Mascardi divided the Poya language into two linguistically distinct groups the one spoken by the "comarcanos" of Nahuelhuapi and another one spoken further east as far away as to the Atlantic Ocean.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PUELCHE_EMBASSY</Tag>
@@ -37580,7 +37580,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_QULLA_EMBASSY_PEDIA</Tag>
-		<English>The Qulla (Quechua for south, hispanicized and mixed spellings Colla, Kolla) are an indigenous people of Western Bolivia, Chile, and Argentina, living in Jujuy and Salta Provinces. The 2004 Complementary Indigenous Survey reported 53,019 Qulla households living in Argentina. They moved freely between the borders of Argentina and Bolivia. Their lands are part of the yungas or high altitude forests at the edge of the Amazon rainforest. The Qulla have lived in their region for centuries, before the arrival of the Inca Empire in the 15th century. Sillustani is a prehistoric Qulla cemetery in Peru, with elaborate stone chullpas. Several groups made up the Qulla people, including the Zenta, and Gispira. The Qulla came into contact with Spaniards in 1540. They resisted Spanish invasion for 110 years but ultimately lost the Santiago Estate to the Spanish. One particularly famous rebel leader was Ñusta Willaq, a female warrior who fought the Spanish in 1780. With Argentinian independence in 1810, the situation of the Qulla people did not improve and they worked for minimal wages.</English>
+		<English>The Qulla (Quechua for south, hispanicized and mixed spellings Colla, Kolla) are an indigenous people of Western Bolivia, Chile, and Argentina, living in Jujuy and Salta Provinces. The 2004 Complementary Indigenous Survey reported 53,019 Qulla households living in Argentina. They moved freely between the borders of Argentina and Bolivia. Their lands are part of the yungas or high altitude forests at the edge of the Amazon rainforest. The Qulla have lived in their region for centuries, before the arrival of the Inca Empire in the 15th century. Sillustani is a prehistoric Qulla cemetery in Peru, with elaborate stone chullpas. Several groups made up the Qulla people, including the Zenta, and Gispira. The Qulla came into contact with Spaniards in 1540. They resisted Spanish invasion for 110 years but ultimately lost the Santiago Estate to the Spanish. One particularly famous rebel leader was Ñusta Willaq, a female warrior who fought the Spanish in 1780. With Argentinian independence in 1810, the situation of the Qulla people did not improve, and they worked for minimal wages.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RED_OCHER_EMBASSY</Tag>
@@ -37658,7 +37658,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SARMATIANS_EMBASSY_PEDIA</Tag>
-		<English>The Sarmatians were a large confederation of Iranian people during classical antiquity, flourishing from about the 5th century BC to the 4th century AD. They spoke Scythian, an Indo-European language from the Eastern Iranian family. Originating in Central Asia, the Sarmatians started their westward migration around the 6th century BC, coming to dominate the closely related Scythians by the 2nd century BC. The Sarmatians differed from the Scythians in their veneration of the god of fire rather than god of nature, and women's prominent role in warfare, which possibly served as the inspiration for the Amazons. At their greatest reported extent, around 1st century AD, these tribes ranged from the Vistula River to the mouth of the Danube and eastward to the Volga, bordering the shores of the Black and Caspian seas as well as the Caucasus to the south. Their territory, which was known as Sarmatia to Greco-Roman ethnographers, corresponded to the western part of greater Scythia (mostly modern Ukraine and Southern Russia, also to a smaller extent north eastern Balkans around Moldova). According to authors Arrowsmith, Fellowes and Graves Hansard in their book A Grammar of Ancient Geography published in 1832, Sarmatia had two parts, Sarmatia Europea  and Sarmatia Asiatica  covering a combined area of 503,000 sq mi or 1,302,764 km2.</English>
+		<English>The Sarmatians were a large confederation of Iranian people during classical antiquity, flourishing from about the 5th century BC to the 4th century AD. They spoke Scythian, an Indo-European language from the Eastern Iranian family. Originating in Central Asia, the Sarmatians started their westward migration around the 6th century BC, coming to dominate the closely related Scythians by the 2nd century BC. The Sarmatians differed from the Scythians in their veneration of the god of fire rather than god of nature, and women's prominent role in warfare, which possibly served as the inspiration for the Amazons. At their greatest reported extent, around 1st century AD, these tribes ranged from the Vistula River to the mouth of the Danube and eastward to the Volga, bordering the shores of the Black and Caspian seas as well as the Caucasus to the south. Their territory, which was known as Sarmatia to Greco-Roman ethnographers, corresponded to the western part of greater Scythia (mostly modern Ukraine and Southern Russia, also to a smaller extent north-eastern Balkans around Moldova). According to authors Arrowsmith, Fellowes and Graves Hansard in their book A Grammar of Ancient Geography published in 1832, Sarmatia had two parts, Sarmatia Europea and Sarmatia Asiatica covering a combined area of 503,000 sq mi or 1,302,764 km2.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SELJUKS_EMBASSY</Tag>
@@ -37723,7 +37723,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SERBIAN_EMBASSY_PEDIA</Tag>
-		<English>Following the Slavic migrations to the Balkans from the 6th century onwards, Serbs established several states in the early Middle Ages. The Serbian Kingdom obtained recognition by Rome and Constantinople in 1217; it reached its peak in 1346 as a relatively short-lived Serbian Empire. By the mid-16th century, the entire territory of modern-day Serbia was annexed by the Ottoman Empire, at times interrupted by the Habsburgs. In the early 19th century, the Serbian Revolution established the nation-state as the region's first constitutional monarchy, which subsequently expanded its territory. Following disastrous casualties in World War I, and subsequent unification of Habsburg crownland of Vojvodina with Serbia, the country co-founded Yugoslavia with other South Slavic peoples, which would exist in various political formations until the Yugoslav Wars of the 1990s, which had devastating effects for the region. As a result, Serbia formed a union with Montenegro in 1992, which broke apart in 2006, when Serbia again became an independent country. In 2008 the parliament of Kosovo, Serbia's southern province with an Albanian ethnic majority, declared independence, with mixed responses from the international community.</English>
+		<English>Following the Slavic migrations to the Balkans from the 6th century onward, Serbs established several states in the early Middle Ages. The Serbian Kingdom obtained recognition by Rome and Constantinople in 1217; it reached its peak in 1346 as a relatively short-lived Serbian Empire. By the mid-16th century, the entire territory of modern-day Serbia was annexed by the Ottoman Empire, at times interrupted by the Habsburgs. In the early 19th century, the Serbian Revolution established the nation-state as the region's first constitutional monarchy, which subsequently expanded its territory. Following disastrous casualties in World War I, and subsequent unification of Habsburg crownland of Vojvodina with Serbia, the country co-founded Yugoslavia with other South Slavic peoples, which would exist in various political formations until the Yugoslav Wars of the 1990s, which had devastating effects for the region. As a result, Serbia formed a union with Montenegro in 1992, which broke apart in 2006, when Serbia again became an independent country. In 2008 the parliament of Kosovo, Serbia's southern province with an Albanian ethnic majority, declared independence, with mixed responses from the international community.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SICAN_EMBASSY</Tag>
@@ -37762,7 +37762,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SINTASHTA_EMBASSY_PEDIA</Tag>
-		<English>Sintashtais an archaeological site in Chelyabinsk Oblast, Russia. It is the remains of a fortified settlement dating to the Bronze Age, c. 2800-1600 BC, and is the type site of the Sintashta culture. The site has been characterised "fortified metallurgical industrial center". Sintashta is situated in the steppe just east of the Ural Mountains. The site is named for the adjacent Sintashta River, a tributary to the Tobol. The shifting course of the river over time has destroyed half of the site, leaving behind thirty one of the approximately fifty or sixty houses in the settlement. The settlement consisted of rectangular houses arranged in a circle 140 m in diameter and surrounded by a timber-reinforced earthen wall with gate towers and a deep ditch on its exterior. The fortifications at Sintashta and similar settlements such as Arkaim were of unprecedented scale for the steppe region. There is evidence of copper and bronze metallurgy taking place in every house excavated at Sintashta, again an unprecedented intensity of metallurgical production for the steppe. Early Abashevo culture ceramic styles strongly influenced Sintashta ceramics. Due to the assimilation of tribes in the region of the Urals, such as the Pit-grave, Catacomb, Poltavka, and northern Abashevo into the Novokumak horizon, it would seem inaccurate to provide Sintashta with a purely Aryan attribution. In the origin of Sintashta, the Abashevo culture would play an important role.</English>
+		<English>Sintashtais an archaeological site in Chelyabinsk Oblast, Russia. It is the remains of a fortified settlement dating to the Bronze Age, c. 2800-1600 BC, and is the type site of the Sintashta culture. The site has been characterised "fortified metallurgical industrial center". Sintashta is situated in the steppe just east of the Ural Mountains. The site is named for the adjacent Sintashta River, a tributary to the Tobol. The shifting course of the river over time has destroyed half of the site, leaving behind thirty-one of the approximately fifty or sixty houses in the settlement. The settlement consisted of rectangular houses arranged in a circle 140 m in diameter and surrounded by a timber-reinforced earthen wall with gate towers and a deep ditch on its exterior. The fortifications at Sintashta and similar settlements such as Arkaim were of unprecedented scale for the steppe region. There is evidence of copper and bronze metallurgy taking place in every house excavated at Sintashta, again an unprecedented intensity of metallurgical production for the steppe. Early Abashevo culture ceramic styles strongly influenced Sintashta ceramics. Due to the assimilation of tribes in the region of the Urals, such as the Pit-grave, Catacomb, Poltavka, and northern Abashevo into the Novokumak horizon, it would seem inaccurate to provide Sintashta with a purely Aryan attribution. In the origin of Sintashta, the Abashevo culture would play an important role.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLOVENIAN_EMBASSY</Tag>
@@ -37788,7 +37788,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SUDANESE_EMBASSY_PEDIA</Tag>
-		<English>Sudan was home to numerous ancient civilizations, such as the Kingdom of Kush, Kerma, Nobatia, Alodia, Makuria, Meroë and others, most of which flourished along the Nile. During the pre-dynastic period Nubia and Nagadan Upper Egypt were identical, simultaneously evolved systems of pharaonic kingship by 3300 BC. By virtue of its proximity to Egypt, the Sudan participated in the wider history of the Near East inasmuch as it was Christianized by the 6th century, and Islamized in the 15th. As a result of Christianization, the Old Nubian language stands as the oldest recorded Nilo-Saharan language (earliest records dating to the 9th century). Sudan was the largest country in Africa and the Arab world until 2011, when South Sudan separated into an independent country, following an independence referendum. Sudan is now the third largest country in Africa (after Algeria and the Democratic Republic of the Congo) and also the third largest country in the Arab world (after Algeria and Saudi Arabia).</English>
+		<English>Sudan was home to numerous ancient civilizations, such as the Kingdom of Kush, Kerma, Nobatia, Alodia, Makuria, Meroë and others, most of which flourished along the Nile. During the predynastic period Nubia and Nagadan Upper Egypt were identical, simultaneously evolved systems of pharaonic kingship by 3300 BC. By virtue of its proximity to Egypt, the Sudan participated in the wider history of the Near East inasmuch as it was Christianized by the 6th century, and Islamized in the 15th. As a result of Christianization, the Old Nubian language stands as the oldest recorded Nilo-Saharan language (the earliest records dating to the 9th century). Sudan was the largest country in Africa and the Arab world until 2011, when South Sudan separated into an independent country, following an independence referendum. Sudan is now the third largest country in Africa (after Algeria and the Democratic Republic of the Congo) and also the third largest country in the Arab world (after Algeria and Saudi Arabia).</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SUNDANESE_EMBASSY</Tag>
@@ -37944,7 +37944,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THREE_KINGDOMS_EMBASSY_PEDIA</Tag>
-		<English>The Three Kingdoms (AD 220-280) was the tripartite division of China between the states of Wei, Shu, and Wu, following the Han dynasty and preceding the Jin dynasty. The term "Three Kingdoms" itself is something of a mistranslation, since each state was eventually headed not by a king, but by an emperor who claimed legitimate succession from the Han dynasty. Nevertheless, the term "Three Kingdoms" has become standard among sinologists. To further distinguish the three states from other historical Chinese states of similar names, historians have added a relevant character: Wei is also known as Cao Wei, Shu is also known as Shu Han, and Wu is also known as Dong (or Eastern) Wu. In a strict academic sense, the period of the Three Kingdoms refers to the period between the foundation of the state of Wei in 220 AD and the conquest of the state of Wu by the Jin dynasty in 280. The earlier, "unofficial" part of the period, from 184 to 220, was marked by chaotic infighting between warlords in various parts of China. The middle part of the period, from 220 and 263, was marked by a more militarily stable arrangement between three rival states of Wei, Shu, and Wu. The later part of the era was marked by the conquest of Shu by Wei (263), the overthrow of Wei by the Jin dynasty (265), and the conquest of Wu by the Jin (280).</English>
+		<English>The Three Kingdoms (AD 220-280) was the tripartite division of China between the states of Wei, Shu, and Wu, following the Han dynasty and preceding the Jin dynasty. The term "Three Kingdoms" itself is something of a mistranslation, since each state was eventually headed not by a king, but by an emperor who claimed legitimate succession from the Han dynasty. Nevertheless, the term "Three Kingdoms" has become standard among sinologists. To further distinguish the three states from other historical Chinese states of similar names, historians have added a relevant character: Wei is also known as Cao Wei, Shu is also known as Shu Han, and Wu is also known as Dong (or Eastern) Wu. In a strict academic sense, the period of the Three Kingdoms refers to the period between the foundation of the state of Wei in 220 AD and the conquest of the state of Wu by the Jin dynasty in 280. The earlier, "unofficial" part of the period, from 184 to 220, was marked by chaotic infighting between warlords in various parts of China. The middle part of the period, from 220 to 263, was marked by a more militarily stable arrangement between three rival states of Wei, Shu, and Wu. The later part of the era was marked by the conquest of Shu by Wei (263), the overthrow of Wei by the Jin dynasty (265), and the conquest of Wu by the Jin (280).</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIWI_EMBASSY</Tag>
@@ -38113,7 +38113,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VANATU_EMBASSY_PEDIA</Tag>
-		<English>Vanuatu is a Pacific island nation located in the South Pacific Ocean. The archipelago, which is of volcanic origin, is some 1,750 kilometres (1,090 mi) east of northern Australia, 500 kilometres (310 mi) northeast of New Caledonia, east of New Guinea, southeast of the Solomon Islands, and west of Fiji. Vanuatu was first inhabited by Melanesian people. The first Europeans to visit the islands were a Spanish expedition led by Portuguese navigator Fernandes de Queirós, who arrived on the largest island in 1606. He then claimed the archipelago for Spain, as part of the colonial Spanish East Indies, and named it Austrialia del Espiritu Santo.</English>
+		<English>Vanuatu is a Pacific island nation located in the South Pacific Ocean. The archipelago, which is of volcanic origin, is some 1,750 kilometres (1,090 mi) east of northern Australia, 500 kilometres (310 mi) northeast of New Caledonia, east of New Guinea, southeast of the Solomon Islands, and west of Fiji. Vanuatu was first inhabited by Melanesian people. The first Europeans to visit the islands were a Spanish expedition led by Portuguese navigator Fernandes de Queirós, who arrived at the largest island in 1606. He then claimed the archipelago for Spain, as part of the colonial Spanish East Indies, and named it Australia del Espiritu Santo.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VANDAL_EMBASSY</Tag>
@@ -38170,7 +38170,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WARAY_EMBASSY_PEDIA</Tag>
-		<English>The Waray people are a subgroup of the Visayan people whose primary language is the Waray-Waray language, an Austronesian language native to the islands of Samar, Leyte and Biliran, which together comprise the Eastern Visayan region of the Philippines. Waray people inhabit the whole island of Samar and there they are called Samareños while on the island of Leyte they are called Leyteños. On Leyte island, Waray people occupy only the northern part of the island as it is divided by a mountain range in the middle of the island. Hence the language division between the Waray-Waray speaking people in the northern part and the Cebuano speaking people in the southern part. On the island of Biliran, Waray-Waray speaking people live in the eastern part of the island facing the island of Samar. They are commonly referred to using the Waray-Waray term Biliranon. On the island of Ticao, which belongs to the province of Masbate in the Bicol region, Waray-Waray speaking people live in most parts of the island. They are commonly referred to as Ticaonon. However, the Ticaonon have their affinity with the Bicolano speaking people of Masbate island as it is their home province. The Bicol and Waray-Waray languages are more similar in vocabulary to each other than to the Cebuano language.</English>
+		<English>The Waray people are a subgroup of the Visayan people whose primary language is the Waray-Waray language, an Austronesian language native to the islands of Samar, Leyte and Biliran, which together comprise the Eastern Visayan region of the Philippines. Waray people inhabit the whole island of Samar and there they are called Samareños while on the island of Leyte they are called Leyteños. On Leyte island, Waray people occupy only the northern part of the island as it is divided by a mountain range in the middle of the island. Hence, the language division between the Waray-Waray speaking people in the northern part and the Cebuano-speaking people in the southern part. On the island of Biliran, Waray-Waray speaking people live in the eastern part of the island facing the island of Samar. They are commonly referred to using the Waray-Waray term Biliranon. On the island of Ticao, which belongs to the province of Masbate in the Bicol region, Waray-Waray speaking people live in most parts of the island. They are commonly referred to as Ticaonon. However, the Ticaonon have their affinity with the Bicolano speaking people of Masbate island as it is their home province. The Bicol and Waray-Waray languages are more similar in vocabulary to each other than to the Cebuano language.</English>
 		<German>Bei den [COLOR_HIGHLIGHT_TEXT]Waray[COLOR_REVERT] handelt es sich um eine Untergruppe aus dem Volk der Visaya, die auf den philippinischen Inseln Samar, Leyte und Biliran heimisch ist. Die Waray sind Nachfahren der austronesischsprachigen Einwanderer, die in der Eisenzeit auf die Philippinen kamen. Sie waren die Herrscher der Meere und betätigten sich zeitweise auch als Piraten und griffen Küstendörfer an. Ihre Gefangenen wurden in eine Art Knechtschaft gezwungen und mussten in der Landwirtschaft arbeiten oder Kriegsdienst leisten. Damit ähnelt die Geschichte der Waray sehr der der Wikinger in Nordeuropa.[NEWLINE]Die Waray waren die ersten Filipinos, die 1521 von den Europäern unter Ferdinand Magellan entdeckt wurden. Paradoxerweise konvertierten sie zwar als eine der ersten philippinischen Ethnien zum Christentum, behielten aber trotzdem parallel noch am längsten ihre traditionellen heidnischen Praktiken bei.</German>
 	</TEXT>
 	<TEXT>
@@ -38184,7 +38184,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WARI_EMBASSY_PEDIA</Tag>
-		<English>The Wari (Spanish: Huari) were a Middle Horizon civilization that flourished in the south-central Andes and coastal area of modern-day Peru, from about AD 500 to 1000. (The Wari culture is not to be confused with the modern ethnic group and language known as Wari', with which it has no known link.) Wari, as the former capital city was called, is located 11 km (6.8 mi) north-east of the modern city of Ayacucho, Peru. This city was the center of a civilization that covered much of the highlands and coast of modern Peru. The best-preserved remnants, beside the Wari Ruins, are the recently discovered Northern Wari ruins near the city of Chiclayo, and Cerro Baul in Moquegua. Also well-known are the Wari ruins of Pikillaqta ("Flea Town"), a short distance south-east of Cuzco en route to Lake Titicaca.</English>
+		<English>The Wari (Spanish: Huari) were a Middle Horizon civilization that flourished in the south-central Andes and coastal area of modern-day Peru, from about AD 500 to 1000. (The Wari culture is not to be confused with the modern ethnic group and language known as Wari', with which it has no known link.) Wari, as the former capital city was called, is located 11 km (6.8 mi) north-east of the modern city of Ayacucho, Peru. This city was the center of a civilization that covered much of the highlands and coast of modern Peru. The best-preserved remnants, beside the Wari Ruins, are the recently discovered Northern Wari ruins near the city of Chiclayo, and Cerro Baul in Moquegua. Also, well-known are the Wari ruins of Pikillaqta ("Flea Town"), a short distance south-east of Cuzco en route to Lake Titicaca.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WAYUU_EMBASSY</Tag>
@@ -38288,7 +38288,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZIMBABWE_EMBASSY_PEDIA</Tag>
-		<English>Great Zimbabwe served as a royal palace for the Zimbabwean monarch and would have been used as the seat of political power. One of its most prominent features were the walls, some of which were over five metres high and which were constructed without mortar. Eventually the city was abandoned and fell into ruin. The earliest known written mention of the ruins was in 1531 by Vicente Pegado, captain of the Portuguese garrison of Sofala, who recorded it as Symbaoe. The first European visit may have been made by the Portuguese traveler António Fernandes in 1513-1515, who crossed twice and reported in detail the region of present-day Zimbabwe (including the Shona kingdoms) and also fortified centers in stone without mortar. However, passing en route a few miles north and about 35 miles south of the site, he did not make a reference to the Great Zimbabwe riddle.</English>
+		<English>Great Zimbabwe served as a royal palace for the Zimbabwean monarch and would have been used as the seat of political power. One of its most prominent features were the walls, some of which were over five metres high and which were constructed without mortar. Eventually the city was abandoned and fell into ruin. The earliest known written mention of the ruins was in 1531 by Vicente Pegado, captain of the Portuguese garrison of Sofala, who recorded it as Symbaoe. The first European visit may have been made by the Portuguese traveler António Fernandes in 1513-1515, who crossed twice and reported in detail the region of present-day Zimbabwe (including the Shona kingdoms) and also fortified centers in stone without mortar. However, passing en route a few miles north and about 35 miles (56.33 km) south of the site, he did not make a reference to the Great Zimbabwe riddle.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SCARECROWS</Tag>
