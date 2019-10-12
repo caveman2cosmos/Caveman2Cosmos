@@ -9,6 +9,7 @@ import glob
 import random
 import requests
 import pickle
+import hashlib
 # from pylanguagetool import api
 import logging
 import colorama
@@ -59,6 +60,7 @@ def autocorrect(files, mode, args):
     ignore_words = load_string_list('ignore_word_list.txt')
     ignore_tags = load_string_list('ignore_tag_list.txt')
     ignore_rules = load_string_list('ignore_rules_list.txt') + ['__ignore']
+    ignore_instances = set(load_string_list('ignore_instances_list.txt'))
 
     global google_cache
 
@@ -86,7 +88,7 @@ def autocorrect(files, mode, args):
                     if tag_elem is not None and tag_elem.text not in ignore_tags:
                         eng_elem = text_elem.find('English', nsmap)
                         if eng_elem is not None:
-                            autocorrect_element(eng_elem, tag_elem.text, ignore_words, ignore_tags, ignore_rules, mode, indent, fancy, langtool, spell, google)
+                            autocorrect_element(eng_elem, tag_elem.text, ignore_words, ignore_tags, ignore_rules, ignore_instances, mode, indent, fancy, langtool, spell, google)
             finally:
                 if mode != Mode.DETECT:
                     etree.ElementTree(root).write(filename, encoding="utf-8", xml_declaration=True, pretty_print=True)
@@ -96,11 +98,12 @@ def autocorrect(files, mode, args):
     finally:
         # We can't have changed the lists unless we were in interactive mode
         if mode == Mode.INTERACTIVE:
-            print('Saving ignore lists and caches')
+            print('\n\nSaving ignore lists and caches')
             save_string_list('ignore_word_list.txt', ignore_words)
             save_string_list('ignore_tag_list.txt', ignore_tags)
             ignore_rules.remove('__ignore')
             save_string_list('ignore_rules_list.txt', ignore_rules)
+            save_string_list('ignore_instances_list.txt', ignore_instances)
             save_obj(google_cache, 'google_cache')
 
 spell_check_replacement_rules = ['MORFOLOGIK_RULE_EN_US']
@@ -127,20 +130,20 @@ def apply_spellcheck(matches, ignore_words, spell, google):
     global last_googled
     global google_cache
 
-    for match in [m for m in matches if m['rule']['id'] in spell_check_replacement_rules]:
-        match['rule']['id'] = 'spellcheck_replacement'
+    spelling_matches = [m for m in matches if m['rule']['id'] in spell_check_replacement_rules]
+    for match in spelling_matches:
         context = match['context']
         text = context['text']
         word = text[context['offset']:context['offset']+context['length']]
         if word in ignore_words:
-            match['rule']['id'] = '__ignore'
+            matches.remove(match)
             continue
 
         print_progress(Fore.YELLOW)
         candidates = get_spellchecker_candidates(word, spell)
 
         if not candidates or len(candidates) == 0:
-            match['rule']['id'] = '__ignore'
+            matches.remove(match)
             continue
         try:
             if word in google_cache:
@@ -154,7 +157,7 @@ def apply_spellcheck(matches, ignore_words, spell, google):
                 google_cache[word] = google_candidate
 
             if not google_candidate or google_candidate == word:
-                match['rule']['id'] = '__ignore'
+                matches.remove(match)
                 continue
             candidates = [google_candidate] + candidates 
         except urllib.error.HTTPError as ex:
@@ -165,11 +168,21 @@ def apply_spellcheck(matches, ignore_words, spell, google):
         unique_candidates = []
         [unique_candidates.append(x) for x in candidates if x not in unique_candidates]
         if len(candidates) == 0:
-            match['rule']['id'] = '__ignore'
+            matches.remove(match)
         else:
             match['replacements'] = [{'value': v} for v in unique_candidates]
 
-def autocorrect_element(eng_elem, tag, ignore_words, ignore_tags, ignore_rules, mode, indent, fancy, langtool, spell, google):
+def get_instance_key(tag, match):
+    hash_str = match['rule']['id'] + str(match['context'])
+    return tag + ' ' + hashlib.md5(hash_str.encode()).hexdigest()
+
+def matches_summary(matches, indent):
+    messages = [m['message'] for m in matches]
+    for m in set(messages): 
+        freq = messages.count(m) 
+        print (Fore.YELLOW + indent + str(freq) + 'x ' + m)
+
+def autocorrect_element(eng_elem, tag, ignore_words, ignore_tags, ignore_rules, ignore_instances, mode, indent, fancy, langtool, spell, google):
     print_progress(Fore.BLUE)
     try:
         results = langtool.check(eng_elem.text)
@@ -177,10 +190,13 @@ def autocorrect_element(eng_elem, tag, ignore_words, ignore_tags, ignore_rules, 
         print ("Exception checking " + str(eng_elem) + " from " + str(tag) + ":")
         print (str(ex))
         return
-    if results and 'matches' in results and len(results['matches']) > 0:
-        apply_spellcheck(results['matches'], ignore_words, spell, google)
 
-        matches = [r for r in results['matches'] if r['rule']['id'] not in ignore_rules]
+    if results and 'matches' in results and len(results['matches']) > 0:
+        matches = [m for m in results['matches'] if (m['rule']['id'] not in ignore_rules and get_instance_key(tag, m) not in ignore_instances)]
+        
+        # remove_ignore_matches(result.matches, ignore_tags, ignore_rules, ignore_instances)
+        apply_spellcheck(matches, ignore_words, spell, google)
+
         if len(matches) > 0:
             print()
             # Make sure its sorted by offset (it should be already)
@@ -192,6 +208,7 @@ def autocorrect_element(eng_elem, tag, ignore_words, ignore_tags, ignore_rules, 
                 eng_elem.text, matches, fancy)
 
             print(Fore.YELLOW + indent + str(len(matches)) + ' possible errors found in ' + Fore.CYAN + tag + Fore.YELLOW + ': ')
+            matches_summary(matches, indent + '- ')
             print(Fore.WHITE + indent + '    ' + orig_text_with_markers)
 
             if eng_elem.text != corrected_text:
@@ -200,9 +217,9 @@ def autocorrect_element(eng_elem, tag, ignore_words, ignore_tags, ignore_rules, 
 
             if mode == Mode.INTERACTIVE:
                 if eng_elem.text != corrected_text:
-                    print(Fore.BLUE + indent + '> Accept all (return), Skip (s), Interactive (space), Ignore ' + Fore.CYAN + tag + Fore.BLUE + ' (x), Exit (esc)?', end = '')
+                    print(Fore.BLUE + indent + '> Accept all (return), Skip (s), Interactive (space), Ignore all (i), Ignore ' + Fore.CYAN + tag + Fore.BLUE + ' (x), Exit (esc)?', end = '')
                 else:
-                    print(Fore.BLUE + indent + '> Skip (s), Interactive (space), Ignore ' + Fore.CYAN + tag + Fore.BLUE + ' (x), Exit (esc)?', end = '')
+                    print(Fore.BLUE + indent + '> Skip (s), Interactive (space), Ignore all (i), Ignore ' + Fore.CYAN + tag + Fore.BLUE + ' (x), Exit (esc)?', end = '')
                 key = msvcrt.getch()
                 print('')
                 if key == b'\r':
@@ -211,10 +228,14 @@ def autocorrect_element(eng_elem, tag, ignore_words, ignore_tags, ignore_rules, 
                 elif key == b' ':
                     print(Fore.GREEN + indent + 'Entering interactive mode')
                     corrected_text, corrected_text_with_markers = apply_corrections_interactive(
-                        eng_elem.text, matches, ignore_words, ignore_rules, indent + '    ', fancy)
+                        tag, eng_elem.text, matches, ignore_words, ignore_rules, ignore_instances, indent + '    ', fancy)
                     print(Fore.GREEN + indent + u'Corrected text:')
                     print(Fore.WHITE + indent + '    ' + corrected_text_with_markers)
                     eng_elem.text = corrected_text
+                elif key == b'i':
+                    for m in matches:
+                        ignore_instances.add(get_instance_key(tag, m))
+                    print(Fore.GREEN + indent + 'Added all errors to the ignore list')
                 elif key == b'x':
                     ignore_tags.append(tag)
                     print(Fore.GREEN + indent + 'Added ' + Fore.CYAN + tag + Fore.GREEN + ' to the global ignore list')
@@ -289,7 +310,7 @@ def replace(replacement, match, offs_adj, corrected_text, offs_adj_mrks, correct
 
     return offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks
 
-def apply_corrections_interactive(text, matches, ignore_words, ignore_rules, indent, fancy):
+def apply_corrections_interactive(tag, text, matches, ignore_words, ignore_rules, ignore_instances, indent, fancy):
     # We need to keep track of changes introduced by corrections to
     # correctly apply consecutive ones
     offs_adj = 0
@@ -321,9 +342,9 @@ def apply_corrections_interactive(text, matches, ignore_words, ignore_rules, ind
             can_fix = 'replacements' in match and len(match['replacements']) > 0
             if can_fix:
                 print(Fore.GREEN + indent + u'Suggestions: ' + u', '.join([Fore.GREEN + '[' + str(idx) + '] ' + Fore.WHITE + v['value'] for idx, v in enumerate(match['replacements'][:10])]))
-                print(Fore.BLUE + indent + '> Accept best (return), Add to ignore (a), Select suggestion (0-9), Skip (s), Ignore rule (e), Custom entry (c), Exit(esc)?', end = '')
+                print(Fore.BLUE + indent + '> Accept best (return), Add to dictionary (a), Select suggestion (0-9), Ignore (i), Skip (s), Custom entry (c), Exit(esc)?', end = '')
             else:
-                print(Fore.BLUE + indent + '> Skip (s), Ignore rule (e), Exit(esc)?', end = '')
+                print(Fore.BLUE + indent + '> Skip (s), Ignore (i), Exit(esc)?', end = '')
 
             key = msvcrt.getch()
             print('')
@@ -338,9 +359,12 @@ def apply_corrections_interactive(text, matches, ignore_words, ignore_rules, ind
             elif can_fix and key == b'a':
                 print(Fore.GREEN + indent + 'Added word ' + Fore.RED + to_replace + Fore.GREEN + ' to the global ignore list')
                 ignore_words.append(to_replace)
-            elif key == b'e':
-                print(Fore.GREEN + indent + 'Added rule ' + Fore.WHITE + match['rule']['id'] + Fore.GREEN + ' to the global ignore list')
-                ignore_rules.append(match['rule']['id'])
+            elif key == b'i':
+                print(Fore.GREEN + indent + 'Added instance to the ignore list')
+                ignore_instances.add(get_instance_key(tag, match))
+            # elif key == b'e':
+            #     print(Fore.GREEN + indent + 'Added rule ' + Fore.WHITE + match['rule']['id'] + Fore.GREEN + ' to the global ignore list')
+            #     ignore_rules.append(match['rule']['id'])
             elif can_fix and key == b'c':
                 print(Fore.BLUE + indent + 'Enter text to replace ' + Fore.RED + to_replace + Fore.BLUE + ' > ' + Fore.WHITE, end = '')
                 offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks = replace(input(), match, offs_adj, corrected_text, offs_adj_mrks, corrected_text_mrks, fancy)
