@@ -2665,6 +2665,8 @@ def expireMasterBlacksmith1(argsList):
   iEvent = argsList[0]
   kTriggeredData = argsList[1]
   player = GC.getPlayer(kTriggeredData.ePlayer)
+  if player == None:
+    return True
   city = player.getCity(kTriggeredData.iCityId)
   if city == None or city.getOwner() != kTriggeredData.ePlayer:
     return True
