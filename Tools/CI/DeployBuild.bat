@@ -63,9 +63,15 @@ if %ERRORLEVEL% neq 0 (
 :: much we need to push back to SVN, and how much players
 :: need to sync
 echo Copying FPKs from SVN...
+
+:: Only copy existing FPKs if we didn't request clean FPK build
+if "%APPVEYOR_REPO_COMMIT_MESSAGE:FPKCLEAN=%"=="%APPVEYOR_REPO_COMMIT_MESSAGE%" (
+    goto :fpk_live
+)
 xcopy "%build_dir%\Assets\*.FPK" "Assets" /Y
 xcopy "%build_dir%\Assets\fpklive_token.txt" "Assets" /Y
 
+:fpk_live
 echo Packing FPKs...
 call Tools\FPKLive.exe
 if %ERRORLEVEL% neq 0 (
@@ -83,8 +89,11 @@ robocopy Resource "%build_dir%\Resource" %ROBOCOPY_FLAGS%
 robocopy Docs "%build_dir%\Docs" %ROBOCOPY_FLAGS%
 xcopy "Caveman2Cosmos.ini" "%build_dir%" /R /Y
 xcopy "Caveman2Cosmos Config.ini" "%build_dir%" /R /Y
-xcopy "C2C.ico" "%build_dir%" /R /Y
-xcopy "CIV_C2C.ico" "%build_dir%" /R /Y
+xcopy "C2C1.ico" "%build_dir%" /R /Y
+xcopy "C2C2.ico" "%build_dir%" /R /Y
+xcopy "C2C3.ico" "%build_dir%" /R /Y
+xcopy "C2C4.ico" "%build_dir%" /R /Y
+xcopy "Tools\CI\C2C.bat" "%build_dir%" /R /Y
 
 :: GENERATE NEW CHANGES LOG ------------------------------------
 echo Generate SVN commit description...

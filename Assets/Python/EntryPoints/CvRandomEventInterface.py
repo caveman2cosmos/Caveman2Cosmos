@@ -2643,35 +2643,31 @@ def applyClassicLiteratureDone3(argsList):
 ######## MASTER BLACKSMITH ###########
 
 def canTriggerMasterBlacksmith(argsList):
-  kTriggeredData = argsList[0]
 
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(kTriggeredData.ePlayer).isHuman():
-    return False
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(argsList[0].ePlayer).isHuman():
+		return False
+	return True
 
-  return True
 
 def getHelpMasterBlacksmith1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
+	iRequired = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
 
-  iRequired = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
+	return TRNSLTR.getText("TXT_KEY_EVENT_MASTER_BLACKSMITH_HELP_1", (iRequired, GC.getPlayer(argsList[1].ePlayer).getCity(argsList[1].iCityId).getNameKey()))
 
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_MASTER_BLACKSMITH_HELP_1", (iRequired, player.getCity(kTriggeredData.iCityId).getNameKey()))
-
-  return szHelp
 
 def expireMasterBlacksmith1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-  if player == None:
-    return True
-  city = player.getCity(kTriggeredData.iCityId)
-  if city == None or city.getOwner() != kTriggeredData.ePlayer:
-    return True
+	iPlayer = argsList[1].ePlayer
+	CyPlayer = GC.getPlayer(iPlayer)
+	# A player reported a 'NoneType' object has no attribute 'getCity' exception in this function on SVN 11031.
+	# CyPlayer could never be None/null here in vanilla BtS. Issue name: NEW_EXPIRE_QUEST_PARADIGM
+	if not CyPlayer:
+		print "[WARNING] CvRandonEventInterface.expireMasterBlacksmith1\n\tEVENTTRIGGER_MASTER_BLACKSMITH triggered for a non valid player (iPlayer not in range(51) == True)"
+	else:
+		CyCity = CyPlayer.getCity(argsList[1].iCityId)
+		if not CyCity or CyCity.getOwner() != iPlayer:
+			return True
+	return False
 
-  return False
 
 def canTriggerMasterBlacksmithDone(argsList):
   kTriggeredData = argsList[0]
@@ -4709,8 +4705,8 @@ def getHelpAlternativeEnergy1(argsList):
 def expireAlternativeEnergy1(argsList):
 
 	CyPlayer = GC.getPlayer(argsList[1].ePlayer)
-
 	# A player reported a 'NoneType' object has no attribute 'getBuildingClassCountWithUpgrades' exception in this function on SVN 11024.
+	# CyPlayer could never be None/null here in vanilla BtS. Issue name: NEW_EXPIRE_QUEST_PARADIGM
 	if not CyPlayer:
 		print "[WARNING] CvRandonEventInterface.expireAlternativeEnergy1\n\tEVENTTRIGGER_ALTERNATIVE_ENERGY triggered for a non valid player (iPlayer not in range(51) == True)"
 	else:
