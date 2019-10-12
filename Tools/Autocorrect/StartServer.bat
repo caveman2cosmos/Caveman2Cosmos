@@ -32,7 +32,7 @@ set PYTHONIOENCODING=UTF-8
 %PYTHON% -m pip install pylanguagetool pyspellchecker lxml colorama --no-warn-script-location
 
 echo Starting server ...
-PUSHD "%~dp0\LanguageTool-4.6"
+PUSHD "%~dp0\LanguageTool-4.7"
 start cmd /c "java -cp languagetool-server.jar org.languagetool.server.HTTPServer --port 8081 --allow-origin '*' --config ..\language-tool.properties"
 POPD
 
