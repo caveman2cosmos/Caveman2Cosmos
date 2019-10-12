@@ -1019,6 +1019,8 @@
 			<Civilopedia>TXT_KEY_BONUS_GEOGLYPH_PLANS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_GEOGLYPH_PLANS</ArtDefineTag>
+			<TechReveal>TECH_MATHEMATICS</TechReveal>
+			<TechCityTrade>TECH_MATHEMATICS</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Ghee Oil -->
@@ -3514,6 +3516,8 @@
 			<Civilopedia>TXT_KEY_BONUS_WATERPROOF_CEMENT_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_WATERPROOF_CEMENT</ArtDefineTag>
+			<TechReveal>TECH_WATERPROOF_CEMENT</TechReveal>
+			<TechCityTrade>TECH_WATERPROOF_CEMENT</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	</BonusInfos>
