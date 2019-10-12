@@ -15,7 +15,7 @@ class GoogleSp:
         # open('page.html', 'w').write(html)
 
         # pull pieces out
-        match = re.search(r'(?:Showing results for|Did you mean|Including results for)[^\0]*?<a.*?>(.*?)</a>', html)
+        match = re.search(r'(?:Showing results for|Did you mean|Including results for).*?<a.*?>(.*?)</a>', html)
         if match is None:
             fix = text
         else:
@@ -36,7 +36,7 @@ class GoogleSp:
         headers = {'User-Agent':user_agent,}
         req = urllib.request.Request(url, None, headers)
         page = urllib.request.urlopen(req)
-        html = str(page.read())
+        html = str(page.read().decode())
         page.close()
         return html
 
