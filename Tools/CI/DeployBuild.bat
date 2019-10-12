@@ -65,7 +65,7 @@ if %ERRORLEVEL% neq 0 (
 echo Copying FPKs from SVN...
 
 :: Only copy existing FPKs if we didn't request clean FPK build
-if "%APPVEYOR_REPO_COMMIT_MESSAGE:FPKCLEAN=%"=="%APPVEYOR_REPO_COMMIT_MESSAGE%" (
+if not "%APPVEYOR_REPO_COMMIT_MESSAGE:FPKCLEAN=%"=="%APPVEYOR_REPO_COMMIT_MESSAGE%" (
     goto :fpk_live
 )
 xcopy "%build_dir%\Assets\*.FPK" "Assets" /Y
