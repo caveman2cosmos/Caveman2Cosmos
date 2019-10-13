@@ -3278,13 +3278,16 @@ CvTaggedSaveFormatWrapper::ReadClassArrayOfClassEnum(const char* name, int& idHi
 		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CLASS_BOOL_ARRAY) )
 		{
 			value_entry_class_class_array	entry;
-			m_stream->Read(VALUE_ENTRY_CLASS_CLASS_ARRAY_SIZE_FROM_NUM(0)-sizeof(int), (byte*)&entry.classType);
+
+			m_stream->Read(sizeof(RemappedClassType), (byte*)&entry.classType);
+			m_stream->Read(sizeof(RemappedClassType), (byte*)&entry.valueClassType);
+			m_stream->Read(&entry.numValues);
 
 			FAssert ( indexClassType == entry.classType && valueClassType == entry.valueClassType );
 
-			int*	arrayBuffer = new int[entry.numValues];
+			boost::scoped_array<int> arrayBuffer(new int[entry.numValues]);
 
-			m_stream->Read(entry.numValues, arrayBuffer);
+			m_stream->Read(entry.numValues, arrayBuffer.get());
 
 			std::vector<EnumInfo>& mapVector = m_enumMaps[indexClassType];
 
@@ -3307,8 +3310,6 @@ CvTaggedSaveFormatWrapper::ReadClassArrayOfClassEnum(const char* name, int& idHi
 					values[info.m_id] = getNewClassEnumValue(valueClassType, arrayBuffer[i]);
 				}
 			}
-
-			SAFE_DELETE_ARRAY(arrayBuffer);
 		}
 	}
 	else
