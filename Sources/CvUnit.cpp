@@ -40929,8 +40929,8 @@ void CvUnit::recover(PromotionLineTypes eAfflictionLine)
 {
 	int iI;
 	CvWString szBuffer;
-	PromotionTypes eAfflictionHad;
-	PromotionTypes eAfflictionGained;
+	PromotionTypes eAfflictionHad = NO_PROMOTION;
+	PromotionTypes eAfflictionGained = NO_PROMOTION;
 	for (iI = 0; iI < GC.getPromotionLineInfo(eAfflictionLine).getNumPromotions(); iI++)
 	{
 		PromotionTypes eAffliction = (PromotionTypes)GC.getPromotionLineInfo(eAfflictionLine).getPromotion(iI);
