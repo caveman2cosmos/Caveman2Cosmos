@@ -3370,7 +3370,9 @@ CvTaggedSaveFormatWrapper::ReadClassEnumArray(const char* name, int& idHint, int
 		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CLASS_ENUM_ARRAY) )
 		{
 			value_class_enum_array	entry;
-			m_stream->Read(sizeof(entry)-sizeof(int), (byte*)&entry.classType);
+
+			m_stream->Read(sizeof(RemappedClassType), (byte*)& entry.classType);
+			m_stream->Read(&entry.count);
 
 			if ( entry.count != count )
 			{
