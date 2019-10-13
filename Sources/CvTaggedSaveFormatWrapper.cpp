@@ -3122,46 +3122,43 @@ CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& id
 			m_stream->Read(sizeof(RemappedClassType), (byte*)&entry.classType);
 			m_stream->Read(&entry.numInts);
 
-			if (entry.numInts > 0)
+			boost::scoped_array<int> arrayBuffer(new int[entry.numInts]);
+
+			FAssert (classType == entry.classType);
+
+			m_stream->Read(entry.numInts, &arrayBuffer[0]);
+
+			std::vector<EnumInfo>& mapVector = m_enumMaps[classType];
+
+			for (int i = 0; i < entry.numInts; i++)
 			{
-				std::vector<int> arrayBuffer(entry.numInts);
+				EnumInfo& info = mapVector[i];
 
-				FAssert (classType == entry.classType);
-
-				m_stream->Read(entry.numInts, &arrayBuffer[0]);
-
-				std::vector<EnumInfo>& mapVector = m_enumMaps[classType];
-
-				for (int i = 0; i < entry.numInts; i++)
+				if (info.m_id == -1 && !info.m_lookedUp)
 				{
-					EnumInfo& info = mapVector[i];
+					info.m_id = GC.getInfoTypeForString(info.m_szType, true);
 
-					if (info.m_id == -1 && !info.m_lookedUp)
+					//	If some objects are missing be tolerant provided their value was 0, -1, MIN_INT (assumed likely defaults
+					//	for most int array entries).  Need to do something like this because these arrays generally
+					//	represent values about every possible member of an entity type, so even if they are not
+					//	actually instantiated they will be present (but are ignorable if we are right about the 0/-1/MIN_INT
+					//	defaulting which is the 'risky' part - should perhaps take an extra argument to specify the
+					//	not-referenced default)
+					int currentValue = arrayBuffer[i];
+					if (info.m_id == -1 && currentValue != 0 && currentValue != -1 && currentValue != MIN_INT)
 					{
-						info.m_id = GC.getInfoTypeForString(info.m_szType, true);
-
-						//	If some objects are missing be tolerant provided their value was 0, -1, MIN_INT (assumed likely defaults
-						//	for most int array entries).  Need to do something like this because these arrays generally
-						//	represent values about every possible member of an entity type, so even if they are not
-						//	actually instantiated they will be present (but are ignorable if we are right about the 0/-1/MIN_INT
-						//	defaulting which is the 'risky' part - should perhaps take an extra argument to specify the
-						//	not-referenced default)
-						int currentValue = arrayBuffer[i];
-						if (info.m_id == -1 && currentValue != 0 && currentValue != -1 && currentValue != MIN_INT)
-						{
-							//	Instantiated object uses class no longer defined - game is not save compatible
-							HandleRecoverableIncompatibleSave(CvString::format("Current assets are missing in-use class %s - any instances will have been removed", info.m_szType.c_str()).c_str());
-						}
-
-						info.m_lookedUp = true;
+						//	Instantiated object uses class no longer defined - game is not save compatible
+						HandleRecoverableIncompatibleSave(CvString::format("Current assets are missing in-use class %s - any instances will have been removed", info.m_szType.c_str()).c_str());
 					}
 
-					if (info.m_id != -1)
-					{
-						FAssert(info.m_id < count);
+					info.m_lookedUp = true;
+				}
 
-						values[info.m_id] = arrayBuffer[i];
-					}
+				if (info.m_id != -1)
+				{
+					FAssert(info.m_id < count);
+
+					values[info.m_id] = arrayBuffer[i];
 				}
 			}
 		}
@@ -3199,21 +3196,23 @@ CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& id
 		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CLASS_BOOL_ARRAY) )
 		{
 			value_entry_class_bool_array	entry;
-			m_stream->Read(VALUE_ENTRY_CLASS_BOOL_ARRAY_SIZE_FROM_NUM(0)-sizeof(int), (byte*)&entry.classType);
 
-			FAssert ( classType == entry.classType );
+			m_stream->Read(sizeof(RemappedClassType), (byte*)& entry.classType);
+			m_stream->Read(&entry.numBools);
 
-			bool*	arrayBuffer = new bool[entry.numBools];
+			FAssert (classType == entry.classType);
 
-			m_stream->Read(entry.numBools, arrayBuffer);
+			boost::scoped_array<bool> arrayBuffer(new bool[entry.numBools]);
+
+			m_stream->Read(entry.numBools, arrayBuffer.get());
 
 			std::vector<EnumInfo>& mapVector = m_enumMaps[classType];
 
-			for(int i = 0; i < entry.numBools; i++)
+			for (int i = 0; i < entry.numBools; i++)
 			{
 				EnumInfo& info = mapVector[i];
 
-				if ( info.m_id == -1 && !info.m_lookedUp )
+				if (info.m_id == -1 && !info.m_lookedUp)
 				{
 					info.m_id = GC.getInfoTypeForString(info.m_szType, true);
 
@@ -3223,7 +3222,7 @@ CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& id
 					//	actually instantiated they will be present (but are ignorable if we are right about the 0
 					//	defaulting which is the 'risky' part - should perhaps take an extra argument to specify the
 					//	not-referenced default)
-					if ( info.m_id == -1 && arrayBuffer[i] && !allowMissing)
+					if (info.m_id == -1 && arrayBuffer[i] && !allowMissing)
 					{
 						//	Instantiated object uses class no longer defined - game is not save compatible
 						HandleIncompatibleSave(CvString::format("Save format is not compatible due to missing class %s", info.m_szType.c_str()).c_str());
@@ -3232,15 +3231,13 @@ CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& id
 					info.m_lookedUp = true;
 				}
 
-				if ( info.m_id != -1 )
+				if (info.m_id != -1)
 				{
-					FAssert( info.m_id < count );
+					FAssert(info.m_id < count);
 
 					values[info.m_id] = arrayBuffer[i];
 				}
 			}
-
-			SAFE_DELETE_ARRAY(arrayBuffer);
 		}
 		else if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_BOOL_ARRAY) )
 		{
