@@ -2713,10 +2713,10 @@ bool CvTeam::canSignDefensivePact(TeamTypes eTeam)
 /************************************************************************************************/
 	if (GC.getGameINLINE().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
 	{
-	    if (!isHasEmbassy(eTeam))
-	    {
-	        return false;
-	    }
+		if (!isHasEmbassy(eTeam))
+		{
+			return false;
+		}
 	}
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -3685,7 +3685,7 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 	if (GC.getGame().isOption(GAMEOPTION_BEELINE_STINGS))
 	{
 		int iTechEra = GC.getTechInfo(eTech).getEra();
-		int iPlayerEra;
+		int iPlayerEra = MAXINT;
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
@@ -3694,6 +3694,8 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 				break;
 			}
 		}
+		FAssertMsg(iPlayerEra != MAXINT, "No player found on team!");
+
 		if (iTechEra < iPlayerEra)
 		{
 			for (int iI = 0; iI < GC.getNumEraInfos(); iI++)
@@ -8413,7 +8415,7 @@ void CvTeam::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvTeam", &m_iCorporationRevenueModifier);
 	WRAPPER_READ(wrapper, "CvTeam", &m_iCorporationMaintenanceModifier);
 
-    WRAPPER_READ_ARRAY(wrapper, "CvTeam", MAX_TEAMS, m_abEmbassy);
+	WRAPPER_READ_ARRAY(wrapper, "CvTeam", MAX_TEAMS, m_abEmbassy);
 	WRAPPER_READ_ARRAY(wrapper, "CvTeam", MAX_TEAMS, m_abLimitedBorders);
 	WRAPPER_READ_ARRAY(wrapper, "CvTeam", MAX_TEAMS, m_abFreeTrade);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiTechExtraBuildingHappiness);
@@ -8572,7 +8574,7 @@ void CvTeam::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvTeam", m_iCorporationRevenueModifier);
 	WRAPPER_WRITE(wrapper, "CvTeam", m_iCorporationMaintenanceModifier);
 	
-    WRAPPER_WRITE_ARRAY(wrapper, "CvTeam", MAX_TEAMS, m_abEmbassy);
+	WRAPPER_WRITE_ARRAY(wrapper, "CvTeam", MAX_TEAMS, m_abEmbassy);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvTeam", MAX_TEAMS, m_abLimitedBorders);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvTeam", MAX_TEAMS, m_abFreeTrade);
 
@@ -8980,38 +8982,38 @@ bool CvTeam::canSignOpenBorders(TeamTypes eTeam)
 {
 	if (GC.getGameINLINE().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
 	{
-	    if (!isHasEmbassy(eTeam))
-	    {
-	        return false;
+		if (!isHasEmbassy(eTeam))
+		{
+			return false;
 		}
-    }
-    return true;
+	}
+	return true;
 }
 
 void CvTeam::sendAmbassador(TeamTypes eTeam)
 {
-    CLinkList<TradeData> ourList;
-    CLinkList<TradeData> theirList;
-    TradeData item;
+	CLinkList<TradeData> ourList;
+	CLinkList<TradeData> theirList;
+	TradeData item;
 
-    FAssert(eTeam != NO_TEAM);
-    FAssert(eTeam != getID());
+	FAssert(eTeam != NO_TEAM);
+	FAssert(eTeam != getID());
 
-    if (!isAtWar(eTeam) && (getID() != eTeam))
-    {
-        setTradeItem(&item, TRADE_EMBASSY);
+	if (!isAtWar(eTeam) && (getID() != eTeam))
+	{
+		setTradeItem(&item, TRADE_EMBASSY);
 
-        if (GET_PLAYER(getLeaderID()).canTradeItem(GET_TEAM(eTeam).getLeaderID(), item) && GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).canTradeItem(getLeaderID(), item))
-        {
-            ourList.clear();
-            theirList.clear();
+		if (GET_PLAYER(getLeaderID()).canTradeItem(GET_TEAM(eTeam).getLeaderID(), item) && GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).canTradeItem(getLeaderID(), item))
+		{
+			ourList.clear();
+			theirList.clear();
 
-            ourList.insertAtEnd(item);
-            theirList.insertAtEnd(item);
+			ourList.insertAtEnd(item);
+			theirList.insertAtEnd(item);
 
-            GC.getGameINLINE().implementDeal(getLeaderID(), (GET_TEAM(eTeam).getLeaderID()), &ourList, &theirList);
-        }
-    }
+			GC.getGameINLINE().implementDeal(getLeaderID(), (GET_TEAM(eTeam).getLeaderID()), &ourList, &theirList);
+		}
+	}
 }
 
 
@@ -9028,15 +9030,15 @@ bool CvTeam::isHasEmbassy(TeamTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
-    return m_abEmbassy[eIndex];
+	return m_abEmbassy[eIndex];
 }
 
 void CvTeam::setHasEmbassy(TeamTypes eIndex, bool bNewValue)
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
-    if (isHasEmbassy(eIndex) != bNewValue)
-    {
+	if (isHasEmbassy(eIndex) != bNewValue)
+	{
 	//Removed due to bugs
 	//Fixed by damgo and reinstated by ls612
 		CvCity* pCapital;
@@ -9065,25 +9067,25 @@ void CvTeam::setHasEmbassy(TeamTypes eIndex, bool bNewValue)
 		}
 		//m_abEmbassy[eIndex] = bNewValue;
 		//End Embassy Visibility Fix
-    }
+	}
 }
 
 int CvTeam::getEmbassyTradingCount() const
 {
-    return m_iEmbassyTradingCount;
+	return m_iEmbassyTradingCount;
 }
 
 bool CvTeam::isEmbassyTrading() const
 {
-    return (getEmbassyTradingCount() > 0);
+	return (getEmbassyTradingCount() > 0);
 }
 
 void CvTeam::changeEmbassyTradingCount(int iChange)
 {
-    if (iChange != 0)
-    {
-        m_iEmbassyTradingCount = (m_iEmbassyTradingCount + iChange);
-    }
+	if (iChange != 0)
+	{
+		m_iEmbassyTradingCount = (m_iEmbassyTradingCount + iChange);
+	}
 }
 
 /************************************************************************************************/
