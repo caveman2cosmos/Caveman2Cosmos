@@ -507,7 +507,7 @@ public:
 	
 	DllExport PlayerTypes getNationality() const;
 	void setNationality(PlayerTypes eNewNationality);
- 	void combatWon(CvUnit* pLoser, bool bAttacking);
+	void combatWon(CvUnit* pLoser, bool bAttacking);
 
 	int interceptionChance(const CvPlot* pPlot) const;
 	
@@ -1762,7 +1762,7 @@ public:
 	virtual bool AI_isCityAIType() const = 0;
 	virtual UnitAITypes AI_getUnitAIType() const = 0;																				// Exposed to Python
 	virtual void AI_setUnitAIType(UnitAITypes eNewValue) = 0;
-    virtual int AI_sacrificeValue(const CvPlot* pPlot) const = 0;
+	virtual int AI_sacrificeValue(const CvPlot* pPlot) const = 0;
 	virtual bool AI_isAwaitingContract() const = 0;
 	virtual bool AI_isCityGarrison(const CvCity* pCity) const = 0;
 	virtual void AI_setAsGarrison(const CvCity* pCity) = 0;
@@ -2299,7 +2299,10 @@ public:
 	int getFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLineType) const;
 	void changeFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLineType, int iChange);
 	void setFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLineType, int iChange);
+
 	int getCityRepel() const;
+
+#ifdef STRENGTH_IN_NUMBERS
 	int getCityFrontSupportPercentModifier() const;
 	int getCityShortRangeSupportPercentModifier() const;
 	int getCityMediumRangeSupportPercentModifier() const;
@@ -2402,6 +2405,7 @@ public:
 	bool isSupporting();
 	void setSupportCount(int iChange);
 	void ClearSupports();
+#endif
 
 	int getOngoingTrainingCount(UnitCombatTypes eUnitCombatType) const;
 	void changeOngoingTrainingCount(UnitCombatTypes eUnitCombatType, int iChange);

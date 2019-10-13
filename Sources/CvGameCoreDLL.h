@@ -45,6 +45,7 @@
 #include "EnumFlags.h"
 #include "NiPoint.h"
 
+// Basic types
 typedef unsigned char    byte;
 typedef unsigned short   word;
 typedef unsigned int     uint;
@@ -52,6 +53,7 @@ typedef unsigned long    dword;
 typedef unsigned __int64 qword;
 typedef wchar_t          wchar;
 
+// Type traits
 #define MAX_CHAR                            (0x7f)
 #define MIN_CHAR                            (0x80)
 #define MAX_SHORT                           (0x7fff)
@@ -81,7 +83,12 @@ __forceinline DWORD FtoDW( float f ) { return *(DWORD*)&f; }
 __forceinline float DWtoF( dword n ) { return *(float*)&n; }
 __forceinline float MaxFloat() { return DWtoF(0x7f7fffff); }
 
+//
+// Feature macros
+//
+// #define STRENGTH_IN_NUMBERS
 
+// Profiler
 #ifdef USE_INTERNAL_PROFILER
 #define MEMTRACK
 #endif
@@ -123,6 +130,7 @@ void IFPSetCount(ProfileSample* sample, int count);
 // Boost
 //
 #include <boost/shared_ptr.hpp>
+#include <boost/lambda/lambda.hpp>
 
 //
 // Boost Python

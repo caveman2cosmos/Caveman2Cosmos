@@ -11008,11 +11008,13 @@ public:
 	int getDynamicDefenseChange(bool bForLoad = false) const;
 	int getStrengthChange() const;
 	int getFortitudeChange() const;
+
 	int getFrontSupportPercentChange(bool bForLoad = false) const;
 	int getShortRangeSupportPercentChange(bool bForLoad = false) const;
 	int getMediumRangeSupportPercentChange(bool bForLoad = false) const;
 	int getLongRangeSupportPercentChange(bool bForLoad = false) const;
 	int getFlankSupportPercentChange(bool bForLoad = false) const;
+
 	int getDodgeModifierChange() const;
 	int getPrecisionModifierChange() const;
 	int getPowerShotsChange() const;

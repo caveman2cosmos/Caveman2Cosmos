@@ -3565,11 +3565,13 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 		PROFILE("CvUnit::updateCombat.Finish");
 		
 		bStealthDefense =	m_combatResult.bStealthDefense;
+#ifdef STRENGTH_IN_NUMBERS
 		//TB Combat Mod begin
 		if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 		{
 			ClearSupports();
 		}
+#endif // STRENGTH_IN_NUMBERS
 		if (bVisible)
 		{
 			if (isCombatFocus() && gDLL->getInterfaceIFace()->isCombatFocus())
@@ -7215,10 +7217,12 @@ void CvUnit::attack(CvPlot* pPlot, bool bQuick, bool bStealth, bool bNoCache)
 			}
 		}
 		CvPlot* aPlot = plot();
+#ifdef STRENGTH_IN_NUMBERS
 		if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 		{
 			setAttackFromPlot(aPlot);
 		}
+#endif // STRENGTH_IN_NUMBERS
 		//TB Combat Mods end
 		setAttackPlot(pPlot, false);
 
@@ -24920,11 +24924,15 @@ void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPro
 	{
 		changeExtraAidChange((PropertyTypes)iI, kUnitCombat.getAidChange(iI) * iChange);//no merge/split
 	}
+
+#ifdef STRENGTH_IN_NUMBERS
 	changeExtraFrontSupportPercent(kUnitCombat.getFrontSupportPercentChange() * iChange);//no merge/split
 	changeExtraShortRangeSupportPercent(kUnitCombat.getShortRangeSupportPercentChange() * iChange);//no merge/split
 	changeExtraMediumRangeSupportPercent(kUnitCombat.getMediumRangeSupportPercentChange() * iChange);//no merge/split
 	changeExtraLongRangeSupportPercent(kUnitCombat.getLongRangeSupportPercentChange() * iChange);//no merge/split
 	changeExtraFlankSupportPercent(kUnitCombat.getFlankSupportPercentChange() * iChange);//no merge/split
+#endif // STRENGTH_IN_NUMBERS
+
 	changeExtraDodgeModifier(kUnitCombat.getDodgeModifierChange() * iChange);//no merge/split
 	changeExtraPrecisionModifier(kUnitCombat.getPrecisionModifierChange() * iChange);//no merge/split
 	changeExtraPowerShots(kUnitCombat.getPowerShotsChange() * iChange);//no merge/split
@@ -25557,11 +25565,15 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	{
 		changeExtraAidChange((PropertyTypes)iI, kPromotion.getAidChange(iI) * iChange);
 	}
+
+#ifdef STRENGTH_IN_NUMBERS
 	changeExtraFrontSupportPercent(kPromotion.getFrontSupportPercentChange() * iChange);
 	changeExtraShortRangeSupportPercent(kPromotion.getShortRangeSupportPercentChange() * iChange);
 	changeExtraMediumRangeSupportPercent(kPromotion.getMediumRangeSupportPercentChange() * iChange);
 	changeExtraLongRangeSupportPercent(kPromotion.getLongRangeSupportPercentChange() * iChange);
 	changeExtraFlankSupportPercent(kPromotion.getFlankSupportPercentChange() * iChange);
+#endif // STRENGTH_IN_NUMBERS
+
 	changeExtraDodgeModifier(kPromotion.getDodgeModifierChange() * iChange);
 	changeExtraPrecisionModifier(kPromotion.getPrecisionModifierChange() * iChange);
 	changeExtraPowerShots(kPromotion.getPowerShotsChange() * iChange);
@@ -30405,13 +30417,6 @@ int CvUnit::getDropRange() const
 void CvUnit::getDefenderCombatValues(CvUnit& kDefender, const CvPlot* pPlot, int iOurStrength, int iOurFirepower, int& iTheirOdds, int& iTheirStrength, int& iOurDamage, int& iTheirDamage, CombatDetails* pTheirDetails, CvUnit* pDefender) const
 {
 	//TB Combat Mod begin
-	int iTheirSupportStrength = 0;
-	int iOurSupportStrength = 0;
-	if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
-	{
-		iTheirSupportStrength = kDefender.getDefenderSupportValue(this);
-		iOurSupportStrength = getAttackerSupportValue();
-	}
 	iTheirStrength = std::max(1,kDefender.currCombatStr(pPlot, this, pTheirDetails));
 	int iTheirFirepower = std::max(1,kDefender.currFirepower(pPlot, this));
 
@@ -30426,10 +30431,17 @@ void CvUnit::getDefenderCombatValues(CvUnit& kDefender, const CvPlot* pPlot, int
 		iOurFirepower += ((iOurFirepower * powerShotCombatModifierTotal())/100);
 	}
 
-	iOurStrength += iOurSupportStrength;
-	iOurFirepower += iOurSupportStrength;	
-	iTheirStrength += iTheirSupportStrength;
-	iTheirFirepower += iTheirSupportStrength;
+#ifdef STRENGTH_IN_NUMBERS
+	if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	{
+		int iTheirSupportStrength = kDefender.getDefenderSupportValue(this);
+		int iOurSupportStrength = getAttackerSupportValue();
+		iOurStrength += iOurSupportStrength;
+		iOurFirepower += iOurSupportStrength;	
+		iTheirStrength += iTheirSupportStrength;
+		iTheirFirepower += iTheirSupportStrength;
+	}
+#endif // STRENGTH_IN_NUMBERS
 	
 	//TB Combat Mod end
 
@@ -36456,6 +36468,8 @@ int CvUnit::getCityRepel() const
 	return iCityRepel;
 }
 
+#ifdef STRENGTH_IN_NUMBERS
+
 int CvUnit::getCityFrontSupportPercentModifier() const
 {
 	PROFILE_FUNC();
@@ -38231,6 +38245,8 @@ void CvUnit::ClearSupports()
 		dflIIUnit.reset();
 	}
 }
+
+#endif // #ifdef STRENGTH_IN_NUMBERS
 
 int CvUnit::getOngoingTrainingCount(UnitCombatTypes eUnitCombatType) const
 {

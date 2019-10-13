@@ -738,20 +738,25 @@ int getCombatOdds(CvUnit* pAttacker, CvUnit* pDefender)
 	//////
 	//TB Combat Mod begin
 
-	int iDefenderSupportStrength = 0;
-	int iAttackerSupportStrength = 0;
+	//Added ST
+	iAttackerStrength = pAttacker->currCombatStr(NULL, NULL);
+	iAttackerFirepower = pAttacker->currFirepower(NULL, NULL);
+
+	iDefenderStrength = pDefender->currCombatStr(pDefender->plot(), pAttacker);
+	iDefenderFirepower = pDefender->currFirepower(pDefender->plot(), pAttacker);
+
+#ifdef STRENGTH_IN_NUMBERS
 	if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
-		iDefenderSupportStrength = pDefender->getDefenderSupportValue(pAttacker);
-		iAttackerSupportStrength = pAttacker->getAttackerSupportValue();
+		int iAttackerSupportStrength = pAttacker->getAttackerSupportValue();
+		iAttackerStrength += iAttackerSupportStrength;
+		iAttackerFirepower += iAttackerSupportStrength;
+		int iDefenderSupportStrength = pDefender->getDefenderSupportValue(pAttacker);
+		iDefenderStrength += iDefenderSupportStrength;
+		iDefenderFirepower += iDefenderSupportStrength;
 	}
+#endif // STRENGTH_IN_NUMBERS
 	
-	//Added ST
-	iAttackerStrength = pAttacker->currCombatStr(NULL, NULL) + iAttackerSupportStrength;
-	iAttackerFirepower = pAttacker->currFirepower(NULL, NULL) + iAttackerSupportStrength;
-
-	iDefenderStrength = pDefender->currCombatStr(pDefender->plot(), pAttacker) + iDefenderSupportStrength;
-	iDefenderFirepower = pDefender->currFirepower(pDefender->plot(), pAttacker) + iDefenderSupportStrength;
 	//TB Combat Mod end
 	FAssert((iAttackerStrength + iDefenderStrength) > 0);
 	FAssert((iAttackerFirepower + iDefenderFirepower) > 0);
@@ -1075,19 +1080,24 @@ float getCombatOddsSpecific(CvUnit* pAttacker, CvUnit* pDefender, int n_A, int n
 	int iDefenderArmor = (100 - iModifiedDefenderArmor);
 	int iAttackerArmor = (100 - iModifiedAttackerArmor);
 
-	int iDefenderSupportStrength = 0;
-	int iAttackerSupportStrength = 0;
+    iAttackerStrength = pAttacker->currCombatStr(NULL, NULL);
+    iAttackerFirepower = pAttacker->currFirepower(NULL, NULL);
+    iDefenderStrength = pDefender->currCombatStr(pDefender->plot(), pAttacker);
+    iDefenderFirepower = pDefender->currFirepower(pDefender->plot(), pAttacker);
+
+#ifdef STRENGTH_IN_NUMBERS
 	if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
-		iDefenderSupportStrength = pDefender->getDefenderSupportValue(pAttacker);
-		iAttackerSupportStrength = pAttacker->getAttackerSupportValue();
+		int iDefenderSupportStrength = pDefender->getDefenderSupportValue(pAttacker);
+		int iAttackerSupportStrength = pAttacker->getAttackerSupportValue();
+		iAttackerStrength += iAttackerSupportStrength;
+		iAttackerFirepower += iAttackerSupportStrength;
+		iDefenderStrength += iDefenderSupportStrength;
+		iDefenderFirepower += iDefenderSupportStrength;
 	}
-	//TB Combat Mods End
+#endif // STRENGTH_IN_NUMBERS
 
-    iAttackerStrength = pAttacker->currCombatStr(NULL, NULL) + iAttackerSupportStrength;
-    iAttackerFirepower = pAttacker->currFirepower(NULL, NULL) + iAttackerSupportStrength;
-    iDefenderStrength = pDefender->currCombatStr(pDefender->plot(), pAttacker) + iDefenderSupportStrength;
-    iDefenderFirepower = pDefender->currFirepower(pDefender->plot(), pAttacker) + iDefenderSupportStrength;
+	//TB Combat Mods End
 
     iStrengthFactor = ((iAttackerFirepower + iDefenderFirepower + 1) / 2);
 

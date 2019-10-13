@@ -35345,6 +35345,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
+#ifdef STRENGTH_IN_NUMBERS
 	if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		iTemp = kPromotion.getFrontSupportPercentChange();
@@ -35392,6 +35393,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 			iValue += iTemp * 4;
 		}
 	}
+#endif // STRENGTH_IN_NUMBERS
 
 	iTemp = kPromotion.getRoundStunProbChange();
 	if (iTemp != 0)
@@ -40346,6 +40348,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 		}
 	}
 
+#ifdef STRENGTH_IN_NUMBERS
 	if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		iTemp = kUnitCombat.getFrontSupportPercentChange();
@@ -40393,6 +40396,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 			iValue += iTemp * 4;
 		}
 	}
+#endif // STRENGTH_IN_NUMBERS
 
 	iTemp = kUnitCombat.getRoundStunProbChange();
 	if (iTemp != 0)

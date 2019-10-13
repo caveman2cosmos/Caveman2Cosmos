@@ -3026,6 +3026,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 			}
 
 			//Strength in Numbers offered support
+#ifdef STRENGTH_IN_NUMBERS
 			if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 			{
 				if (pUnit->frontSupportPercentTotal() > 0)
@@ -3094,6 +3095,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					}
 				}
 			}
+#endif // STRENGTH_IN_NUMBERS
 
 			//Property Manipulators
 			pUnit->getPropertiesConst()->buildDisplayString(szString);
@@ -4546,6 +4548,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 			{
 				//TB Combat Mod begin
 				CvPlot* aPlot = pAttacker->plot();
+#ifdef STRENGTH_IN_NUMBERS
 				CvUnit* paFIUnit = pAttacker->getAttackerFirstFrontSupportingUnit();
 				CvUnit* paFIIUnit = pAttacker->getAttackerSecondFrontSupportingUnit();
 				CvUnit* paSRIUnit = pAttacker->getAttackerFirstShortRangeSupportingUnit();
@@ -4566,6 +4569,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 				CvUnit* pdLRIIUnit = pDefender->getDefenderSecondLongRangeSupportingUnit();
 				CvUnit* pdFLIUnit = pDefender->getDefenderFirstFlankSupportingUnit();
 				CvUnit* pdFLIIUnit = pDefender->getDefenderSecondFlankSupportingUnit();
+#endif // STRENGTH_IN_NUMBERS
 				if (!bSINView)
 				{
 					if (pAttacker->isBreakdownCombat(pPlot))
@@ -5637,6 +5641,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							}
 						}
 
+#ifdef STRENGTH_IN_NUMBERS
 						if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 						{
 							if (pAttacker->getAttackerSupportValue() > 0)
@@ -5656,6 +5661,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 								szString.append(szTempBuffer.GetCString());
 							}
 						}
+#endif // STRENGTH_IN_NUMBERS
 
 						if (pAttacker->currentStrAdjperAttTotal() > 0)
 						{
@@ -8490,6 +8496,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 					}
 				}
 
+#ifdef STRENGTH_IN_NUMBERS
 				//Strength in Numbers extended alternative display
 				else if (bSINView && GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 				{
@@ -8635,6 +8642,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						szString.append(szTempBuffer.GetCString());
 					}
 				}
+#endif // STRENGTH_IN_NUMBERS
 			}
 			return true;
 		}
