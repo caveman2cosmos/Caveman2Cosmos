@@ -16719,13 +16719,16 @@
 			<Type>UNIT_DRAGOON</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_PLUS_SHIELD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_PLUS_SHIELD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_TWO_HANDED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_LONG_BLADE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_DIST_RIFLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SHIELD_SMALL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>

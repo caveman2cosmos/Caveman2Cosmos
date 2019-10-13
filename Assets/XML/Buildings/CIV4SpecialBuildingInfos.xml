@@ -188,5 +188,15 @@
 			<bValid>1</bValid>
 			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
 		</SpecialBuildingInfo>
+		<SpecialBuildingInfo>
+			<Type>SPECIALBUILDING_GROUP_DELUXE_WINERIES</Type>
+			<Description>TXT_KEY_SPECIALBUILDING_GROUP_DELUXE_WINERIES</Description>
+			<ObsoleteTech>NONE</ObsoleteTech>
+			<TechPrereq>NONE</TechPrereq>
+			<TechPrereqAnyone>NONE</TechPrereqAnyone>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bValid>1</bValid>
+			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
+		</SpecialBuildingInfo>
 	</SpecialBuildingInfos>
 </Civ4SpecialBuildingInfos>

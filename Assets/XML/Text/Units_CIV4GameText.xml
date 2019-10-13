@@ -24096,24 +24096,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAOIST_MISSIONARY</Tag>
-		<English>Alchemist</English>
-		<French>Alchimiste</French>
-		<German>
-			<Text>Qiandao:Qiandaos:Qiandao:Qiandao:Qiandaos:Qiandaos:Qiandaos:Qiandaos</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
-			<Plural>0:0:0:0:1:1:1:1</Plural>
-		</German>
-		<Italian>Alchimista</Italian>
-		<Spanish>
-			<Text>Alquimista</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Alchemik</Polish>
+		<English>Daoshi</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAOIST_MISSIONARY_PEDIA</Tag>
-		<English>Taoism had two distinct parts, the classical Tao Chia, which was mystical and stemmed primarily from Laozi and Zhuangzi, and the more popular Tao Chiao, which was the popular, magical and alchemical side of Taoism. Cooper states that a common viewpoint is that classical Taoism [Daoism] was original but was too austere and rarefied for the general populace... [but] Tao Chiao fulfilled the day-to-day needs of the people.</English>
+		<English>A daoshi, translated as Taoist priest, Taoist monk, Taoist master or Professional Taoist, is a priest in Taoism. Along with Han Chinese priests, there are also many practicing ethnic minority priests in China. Some orders are monastic, while the majority are not.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TARKAN</Tag>

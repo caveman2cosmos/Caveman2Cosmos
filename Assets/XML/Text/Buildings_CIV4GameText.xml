@@ -5467,15 +5467,8 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 		<Polish>Zwiększa złoto i daje darmowego kupca. Wymaga doktryny Korporacyjnej O.Z.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CHAMPAGNE_CLUB</Tag>
-		<English>Connoisseur Club - Champagne</English>
-		<French>Club des Sommeliers de Champagne</French>
-		<Italian>Club dei sommelier-Champagne</Italian>
-		<Polish>Klub Konesera - Szampan</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHAMPAGNE_WINERY</Tag>
-		<English>Winery - Champagne</English>
+		<English>DW - Champagne</English>
 		<French>Vignoble - Champagne</French>
 		<Italian>Azienda vinicola-Champagne</Italian>
 		<Polish>Winnica - Szampan</Polish>
@@ -22575,13 +22568,6 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Czerwony Krzyż</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RED_WINE_CLUB</Tag>
-		<English>Connoisseur Club - Red Wine</English>
-		<French>Club des Sommeliers - Vin Rouge</French>
-		<Italian>Club dei sommelier-Vino rosso</Italian>
-		<Polish>Klub Konesera - Czerwone Wino</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REDPANDA_MYTH</Tag>
 		<English>Myth - Red Panda</English>
 		<French>Mythe du Panda roux</French>
@@ -27739,14 +27725,14 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VINTAGE_RED_WINERY</Tag>
-		<English>Winery - Vintage Red</English>
+		<English>DW - Vintage Red</English>
 		<French>Vignoble - Vendange Rouge</French>
 		<Italian>Azienda vinicola-Rosso d'annata</Italian>
 		<Polish>Winniarnia - Vintage Czerwone</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VINTAGE_WHITE_WINERY</Tag>
-		<English>Winery - Vintage White</English>
+		<English>DW - Vintage White</English>
 		<French>Vignoble - Vendange Blanc</French>
 		<Italian>Azienda vinicola-Bianco d'annata</Italian>
 		<Polish>Winniarnia - Vintage Białe</Polish>
@@ -27759,7 +27745,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VINTAGE_WINERY_STRATEGY</Tag>
-		<English>In game terms "vintage" just means best of type in the world.</English>
+		<English>DELUXE WINERIES. Group Wonder - only one of these can be built in empire.[NEWLINE]In game terms "vintage" just means best of type in the world.</English>
 		<Italian>Un vino d'annata è, in termini di gioco, il miglior vino al mondo.</Italian>
 	</TEXT>
 	<TEXT>
@@ -28251,13 +28237,6 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Zwiększa handel oraz dochód</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WHITE_WINE_CLUB</Tag>
-		<English>Connoisseur Club - White Wine</English>
-		<French>Club de Sommeliers - Vin blanc</French>
-		<Italian>Club dei sommelier-Vino bianco</Italian>
-		<Polish>Klub Konesera Białego Wina</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WIKIA</Tag>
 		<English>Wikia</English>
 		<French>
@@ -28312,17 +28291,6 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<English>Build a Wild West Hotel to increase your cities gold.</English>
 		<French>Construisez un [COLOR_BUILDING_TEXT]Hotel de Far-ouest[COLOR_REVERT] pour augmenter l'or de votre ville.</French>
 		<Polish>Zbuduj Wild West Hotel by zwiększyć ilość złota w Twoim mieście.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WINE_CLUB_PEDIA</Tag>
-		<English>The Connoisseur Clubs are a game technique to stop the various wine wonders being built by the same nation.</English>
-		<Italian>I club dei sommelier impediscono che la stessa civiltà ottenga tutti i tipi di vino.</Italian>
-		<Polish>Koneser - wytrawny znawca i miłośnik rzeczy w dobrym gatunku.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WINE_CLUB_STRATEGY</Tag>
-		<English>The Connoisseur Clubs can not be built. They are free when you build the Wonder.</English>
-		<Italian>Il Club dei sommelier non può essere costruito; e un edificio creato gratuitamente nelle tue città quando costruisci le relative Meraviglie.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WIRELESS_NETWORK</Tag>
@@ -29621,6 +29589,10 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<German>Legendäre Landschaften</German>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_SPECIALBUILDING_GROUP_DELUXE_WINERIES</Tag>
+		<English>Deluxe Wineries</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISNEYLAND_EFFECT</Tag>
 		<English>Effect - Disneyland</English>
 	</TEXT>
@@ -30727,13 +30699,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATACOMBS_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Catacombs of Kom el Shoqafa[COLOR_REVERT] has a chance of killing the enemy whenever a unit died defending in a city. Chance increases for badly damaged enemy units.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CATACOMBS_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Chance for Enemy to Die with Slain Unit in All Cities</English>
-		<French>[ICON_BULLET]Lors d'une attaque de vos villes, probabilité pour l'attaquant de mourir en même temsp que le défenseur</French>
-		<Polish>[ICON_BULLET]Szansa na zniszczenie wrogiej jednostki za kazda zabita Twoja jednostke.</Polish>
+		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_MASS_BURIAL</Tag>
