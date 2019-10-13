@@ -40043,12 +40043,21 @@ bool CvPropertyInfo::read(CvXMLLoadUtility* pXML)
 				do
 				{
 					int iChangePercent;
-					pXML->GetChildXmlValByName(szTextVal, L"GameObjectTypeFrom");
-					int eFrom = pXML->GetInfoClass(szTextVal);
-					pXML->GetChildXmlValByName(szTextVal, L"GameObjectTypeTo");
-					int eTo = pXML->GetInfoClass(szTextVal);
+					CvString from;
+					pXML->GetChildXmlValByName(from, L"GameObjectTypeFrom");
+					int eFrom = pXML->GetInfoClass(from);
+					CvString to;
+					pXML->GetChildXmlValByName(to, L"GameObjectTypeTo");
+					int eTo = pXML->GetInfoClass(to);
 					pXML->GetChildXmlValByName(&iChangePercent, L"iChangePercent");
-					m_aaiChangePropagator[eFrom][eTo] = iChangePercent;
+					if (eFrom == -1 || eTo == -1)
+					{
+						CvXMLLoadUtility::showXMLError("ChangePropagator From (%s) and To (%s) must both be valid", from.c_str(), to.c_str());
+					}
+					else
+					{
+						m_aaiChangePropagator[eFrom][eTo] = iChangePercent;
+					}
 				}
 				while(pXML->TryMoveToXmlNextSibling());
 			}

@@ -17,6 +17,21 @@
 
 static const int kBufSize = 2048;
 
+void CvXMLLoadUtility::showXMLError(const char* const format, ...)
+{
+	char buf[kBufSize];
+
+	va_list args;
+	va_start(args, format);
+
+	_vsnprintf(buf, kBufSize - 1, format, args);
+
+	OutputDebugString(buf);
+	gDLL->logMsg("xml.log", buf);
+
+	gDLL->MessageBox(buf, "XML Error");
+}
+
 //
 // for logging
 //
@@ -507,10 +522,10 @@ int CvXMLLoadUtility::GetInfoClass(const TCHAR* pszVal)
 		return idx;
 	}
 
-	if (_tcscmp(pszVal,"NONE")!=0 && _tcscmp(pszVal,"")!=0)
+	if (_tcscmp(pszVal, "NONE") != 0 && _tcscmp(pszVal, "") != 0)
 	{
 		char errorMsg[1024];
-		sprintf(errorMsg, "Tag: %s in Info class was incorrect \n Current XML file is: %s", pszVal, GC.getCurrentXMLFile().GetCString());
+		sprintf(errorMsg, "Tag: %s in Info class was incorrect\n Current XML file is: %s", pszVal, GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(errorMsg, "XML Error");
 	}
 

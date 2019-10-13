@@ -533,11 +533,11 @@ public:
 /**								Defines Function for Use in .cpp								**/
 /*************************************************************************************************/
 	// acquire a list of unknown length of String data from a Child setup in a String (typically for Pass 3 Use)
-    void SetStringWithChildList(int* iNumEntries, std::vector<CvString>* aszXMLLoad);
+	void SetStringWithChildList(int* iNumEntries, std::vector<CvString>* aszXMLLoad);
 	// acquire a list of unknown length of String data from a Child setup in an Array of INTs
-    void SetIntWithChildList(int* iNumEntries, int** piXMLLoad);
+	void SetIntWithChildList(int* iNumEntries, int** piXMLLoad);
 	// acquire a list of known length of String data from a Child setup true values in an Array of BOOLs
-    void SetBoolFromChildList(int iNumEntries, bool** pbXMLLoad);
+	void SetBoolFromChildList(int iNumEntries, bool** pbXMLLoad);
 /*************************************************************************************************/
 /**	New Tag Defs							END													**/
 /*************************************************************************************************/
@@ -775,6 +775,8 @@ public:
 /************************************************************************************************/
 /* XML_MODULAR_ART_LOADING                 END                                                  */
 /************************************************************************************************/
+	static void showXMLError(const char* const format, ...);
+
 	//---------------------------------------PRIVATE MEMBER VARIABLES---------------------------------
 private:
 	xercesc::DOMElement*      m_pCurrentXmlElement;
@@ -879,6 +881,7 @@ private:
 	CvWString CreateKeyStringFromKBCode(const TCHAR* pszHotKey);
 
 	void orderHotkeyInfo(int** ppiSortedIndex, int* pHotkeyIndex, int iLength);
+
 	void logMsg(char* format, ... );
 	void logMsgW(wchar_t* format, ... );
 /************************************************************************************************/
