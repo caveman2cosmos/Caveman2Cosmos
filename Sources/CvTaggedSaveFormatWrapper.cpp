@@ -3118,49 +3118,52 @@ CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& id
 		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CLASS_INT_ARRAY) )
 		{
 			value_entry_class_int_array	entry;
-			m_stream->Read(VALUE_ENTRY_CLASS_INT_ARRAY_SIZE_FROM_NUM(0)-sizeof(int), (byte*)&entry.classType);
 
-			int*	arrayBuffer = new int[entry.numInts];
+			m_stream->Read(sizeof(RemappedClassType), (byte*)&entry.classType);
+			m_stream->Read(&entry.numInts);
 
-			FAssert ( classType == entry.classType );
-
-			m_stream->Read(entry.numInts, arrayBuffer);
-
-			std::vector<EnumInfo>& mapVector = m_enumMaps[classType];
-
-			for(int i = 0; i < entry.numInts; i++)
+			if (entry.numInts > 0)
 			{
-				EnumInfo& info = mapVector[i];
+				std::vector<int> arrayBuffer(entry.numInts);
 
-				if ( info.m_id == -1 && !info.m_lookedUp )
+				FAssert (classType == entry.classType);
+
+				m_stream->Read(entry.numInts, &arrayBuffer[0]);
+
+				std::vector<EnumInfo>& mapVector = m_enumMaps[classType];
+
+				for (int i = 0; i < entry.numInts; i++)
 				{
-					info.m_id = GC.getInfoTypeForString(info.m_szType, true);
+					EnumInfo& info = mapVector[i];
 
-					//	If some objects are missing be tolerant provided their value was 0, -1, MIN_INT (assumed likely defaults
-					//	for most int array entries).  Need to do something like this because these arrays generally
-					//	represent values about every possible member of an entity type, so even if they are not
-					//	actually instantiated they will be present (but are ignorable if we are right about the 0/-1/MIN_INT
-					//	defaulting which is the 'risky' part - should perhaps take an extra argument to specify the
-					//	not-referenced default)
-					int currentValue = arrayBuffer[i];
-					if ( info.m_id == -1 && currentValue != 0 && currentValue != -1 && currentValue != MIN_INT )
+					if (info.m_id == -1 && !info.m_lookedUp)
 					{
-						//	Instantiated object uses class no longer defined - game is not save compatible
-						HandleRecoverableIncompatibleSave(CvString::format("Current assets are missing in-use class %s - any instances will have been removed", info.m_szType.c_str()).c_str());
+						info.m_id = GC.getInfoTypeForString(info.m_szType, true);
+
+						//	If some objects are missing be tolerant provided their value was 0, -1, MIN_INT (assumed likely defaults
+						//	for most int array entries).  Need to do something like this because these arrays generally
+						//	represent values about every possible member of an entity type, so even if they are not
+						//	actually instantiated they will be present (but are ignorable if we are right about the 0/-1/MIN_INT
+						//	defaulting which is the 'risky' part - should perhaps take an extra argument to specify the
+						//	not-referenced default)
+						int currentValue = arrayBuffer[i];
+						if (info.m_id == -1 && currentValue != 0 && currentValue != -1 && currentValue != MIN_INT)
+						{
+							//	Instantiated object uses class no longer defined - game is not save compatible
+							HandleRecoverableIncompatibleSave(CvString::format("Current assets are missing in-use class %s - any instances will have been removed", info.m_szType.c_str()).c_str());
+						}
+
+						info.m_lookedUp = true;
 					}
 
-					info.m_lookedUp = true;
-				}
+					if (info.m_id != -1)
+					{
+						FAssert(info.m_id < count);
 
-				if ( info.m_id != -1 )
-				{
-					FAssert( info.m_id < count );
-
-					values[info.m_id] = arrayBuffer[i];
+						values[info.m_id] = arrayBuffer[i];
+					}
 				}
 			}
-
-			SAFE_DELETE_ARRAY(arrayBuffer);
 		}
 		else if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_INT_ARRAY) )
 		{
