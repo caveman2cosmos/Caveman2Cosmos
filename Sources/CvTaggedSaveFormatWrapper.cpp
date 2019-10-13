@@ -3048,7 +3048,9 @@ CvTaggedSaveFormatWrapper::ReadClassEnum(const char* name, int& idHint, int& idS
 		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CLASS_ENUM) )
 		{
 			value_class_enum	entry;
-			m_stream->Read(sizeof(entry)-sizeof(int), (byte*)&entry.classType);
+
+			m_stream->Read(sizeof(RemappedClassType), (byte*)& entry.classType);
+			m_stream->Read(&entry.value);
 
 			if ( entry.value == -1 )
 			{
@@ -3081,7 +3083,9 @@ CvTaggedSaveFormatWrapper::ReadClassEnum(const char* name, int& idHint, int& idS
 		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CLASS_ENUM) )
 		{
 			value_class_enum	entry;
-			m_stream->Read(sizeof(entry)-sizeof(int), (byte*)&entry.classType);
+
+			m_stream->Read(sizeof(RemappedClassType), (byte*)& entry.classType);
+			m_stream->Read(&entry.value);
 
 			if ( entry.value == -1 )
 			{
