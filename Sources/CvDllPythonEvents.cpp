@@ -747,27 +747,17 @@ void CvDllPythonEvents::reportSelectionGroupPushMission(CvSelectionGroup* pSelec
 		eventData.add("selectionGroupPushMission");						// add key to lookup python handler fxn
 		eventData.add(pSelectionGroup->getOwner());
 		eventData.add(eMission);
-		int iNumUnits = pSelectionGroup->getNumUnits();
-		eventData.add(iNumUnits);
 
-		int* aiUnitIds = new int[iNumUnits];
-		CLLNode<IDInfo>* pUnitNode = pSelectionGroup->headUnitNode();
-		for (int i = 0; pUnitNode; i++)
+		std::vector<int> aiUnitIds;
+		for (CvSelectionGroup::unit_iterator itr = pSelectionGroup->beginUnits(); itr != pSelectionGroup->endUnits(); ++itr)
 		{
-			CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-			pUnitNode = pSelectionGroup->nextUnitNode(pUnitNode);
-			aiUnitIds[i] = pLoopUnit->getID();
-			FAssert(i < iNumUnits);
+			aiUnitIds.push_back(itr->getID());
 		}
 
-		if (aiUnitIds)
-		{
-			eventData.add(aiUnitIds, iNumUnits);
-		}
+		eventData.add(aiUnitIds.size());
+		eventData.add(aiUnitIds);
 
 		postEvent(eventData, "selectionGroupPushMission");
-
-		delete[] aiUnitIds;
 	}
 }
 
