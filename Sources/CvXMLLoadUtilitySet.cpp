@@ -2429,31 +2429,30 @@ void CvXMLLoadUtility::SetGlobalClassInfoTwoPassReplacement(std::vector<T*>& aIn
 			GetOptionalChildXmlValByName(&bForceOverwrite, L"bForceOverwrite");
 			// (4) Read off the Replacement condition
 			uint uiReplacementID = 0;
-			BoolExpr* pReplacementCondition = NULL;
+			boost::shared_ptr<BoolExpr> pReplacementCondition;
 			if (GetOptionalChildXmlValByName(szTypeReplace, L"ReplacementID") && szTypeReplace.size()) {
 				uiReplacementID = CvInfoReplacements<T>::getReplacementIDForString(szTypeReplace);
 				if (TryMoveToXmlFirstChild(L"ReplacementCondition")) {
 					if (TryMoveToXmlFirstChild()) {
-						pReplacementCondition = BoolExpr::read(this);
+						pReplacementCondition.reset(BoolExpr::read(this));
 						MoveToXmlParent();
 					}
 					MoveToXmlParent();
 				}
 			}
-			T* pClassInfo = new T();
-			if (pClassInfo->readPass2(this))
+			T pClassInfo;
+			if (pClassInfo.readPass2(this))
 			{
 				uint uiExistPosition = GC.getInfoTypeForString(szTypeName);
 				if (szTypeReplace.empty())
-					aInfos[uiExistPosition]->copyNonDefaultsReadPass2(pClassInfo, this, bForceOverwrite);
+					aInfos[uiExistPosition]->copyNonDefaultsReadPass2(&pClassInfo, this, bForceOverwrite);
 				else
 				{
 					CvInfoReplacement<T>* pExisting = pReplacements->getReplacement(uiExistPosition, uiReplacementID);
 					FAssertMsg(pExisting != NULL, CvString::format("Must have an existing replacement object of ID %s on the list!", szTypeReplace.c_str()))
-					pExisting->getInfo()->copyNonDefaultsReadPass2(pClassInfo, this, bForceOverwrite);
+					pExisting->getInfo()->copyNonDefaultsReadPass2(&pClassInfo, this, bForceOverwrite);
 				}
 			}
-			SAFE_DELETE(pClassInfo)
 		} while (TryMoveToXmlNextSibling());
 //			T* pClassInfo = new T();
 //
@@ -4682,16 +4681,16 @@ bool CvXMLLoadUtility::doResetInfoClasses()
 //------------------------------------------------------------------------------------------------------
 void CvXMLLoadUtility::SetStringWithChildList(int* iNumEntries, std::vector<CvString>* aszXMLLoad)
 {
-    std::vector<CvString> paszXMLLoad;
+	std::vector<CvString> paszXMLLoad;
 	CvString szTextVal;
 
-    int iNumSibs = GetXmlChildrenNumber();
-    if (0 < iNumSibs)
-    {
-        if (GetChildXmlVal(szTextVal))
-        {
-            for (int iI = 0; iI < iNumSibs; iI++)
-            {
+	int iNumSibs = GetXmlChildrenNumber();
+	if (0 < iNumSibs)
+	{
+		if (GetChildXmlVal(szTextVal))
+		{
+			for (int iI = 0; iI < iNumSibs; iI++)
+			{
 				bool bLoad = true;
 				int iSize = paszXMLLoad.size();
 				for (int iJ = 0; iJ < iSize; ++iJ)
@@ -4703,18 +4702,18 @@ void CvXMLLoadUtility::SetStringWithChildList(int* iNumEntries, std::vector<CvSt
 				}
 				if (bLoad)
 				{
-	                paszXMLLoad.push_back(szTextVal);
+					paszXMLLoad.push_back(szTextVal);
 				}
-                if (!GetNextXmlVal(szTextVal))
-                {
-                    break;
-                }
-            }
+				if (!GetNextXmlVal(szTextVal))
+				{
+					break;
+				}
+			}
 
-            MoveToXmlParent();
-        }
-    }
-    MoveToXmlParent();
+			MoveToXmlParent();
+		}
+	}
+	MoveToXmlParent();
 
 	*iNumEntries = paszXMLLoad.size();
 	*aszXMLLoad = paszXMLLoad;
@@ -4733,14 +4732,14 @@ void CvXMLLoadUtility::SetIntWithChildList(int* iNumEntries, int** piXMLLoad)
 	CvString szTextVal;
 	std::vector<int> szTemp;
 
-    int iNumSibs = GetXmlChildrenNumber();
-    if (iNumSibs > 0)
-    {
-        if (GetChildXmlVal(szTextVal))
-        {
-            for (int iI = 0; iI < iNumSibs; iI++)
-            {
-                int iNew = GetInfoClass(szTextVal);
+	int iNumSibs = GetXmlChildrenNumber();
+	if (iNumSibs > 0)
+	{
+		if (GetChildXmlVal(szTextVal))
+		{
+			for (int iI = 0; iI < iNumSibs; iI++)
+			{
+				int iNew = GetInfoClass(szTextVal);
 				if(iNew == -1)
 				{
 					char szMessage[1024];
@@ -4763,15 +4762,15 @@ void CvXMLLoadUtility::SetIntWithChildList(int* iNumEntries, int** piXMLLoad)
 						szTemp.push_back(iNew);
 					}
 				}
-                if (!GetNextXmlVal(szTextVal))
-                {
-                    break;
-                }
-            }
+				if (!GetNextXmlVal(szTextVal))
+				{
+					break;
+				}
+			}
 
-            MoveToXmlParent();
-        }
-    }
+			MoveToXmlParent();
+		}
+	}
 	MoveToXmlParent();
 
 	int iSize = szTemp.size();
@@ -4795,42 +4794,42 @@ void CvXMLLoadUtility::SetIntWithChildList(int* iNumEntries, int** piXMLLoad)
 //------------------------------------------------------------------------------------------------------
 void CvXMLLoadUtility::SetBoolFromChildList(int iNumEntries, bool** pbXMLLoad)
 {
-    bool* ppbXMLLoad = NULL;
+	bool* ppbXMLLoad = NULL;
 	ppbXMLLoad = *pbXMLLoad;
 	CvString szTextVal;
 
-    int iNumSibs = GetXmlChildrenNumber();
-    if (iNumEntries < iNumSibs)
+	int iNumSibs = GetXmlChildrenNumber();
+	if (iNumEntries < iNumSibs)
 	{
 		char	szMessage[1024];
-        sprintf(szMessage, "Too many Children values \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
-        gDLL->MessageBox(szMessage, "XML Error");
+		sprintf(szMessage, "Too many Children values \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
+		gDLL->MessageBox(szMessage, "XML Error");
 	}
-    if (iNumSibs > 0)
-    {
+	if (iNumSibs > 0)
+	{
 		if (GetChildXmlVal(szTextVal))
-        {
-            for (int iI = 0; iI < iNumSibs; iI++)
-            {
-                int eLoad = GetInfoClass(szTextVal);
+		{
+			for (int iI = 0; iI < iNumSibs; iI++)
+			{
+				int eLoad = GetInfoClass(szTextVal);
 				if(eLoad == -1)
 				{
 					char szMessage[1024];
 					sprintf(szMessage, "Index is -1 inside function \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 					gDLL->MessageBox(szMessage, "XML Error");
 				}
-                ppbXMLLoad[eLoad] = true;
-                if (!GetNextXmlVal(szTextVal))
-                {
-                    break;
-                }
-            }
+				ppbXMLLoad[eLoad] = true;
+				if (!GetNextXmlVal(szTextVal))
+				{
+					break;
+				}
+			}
 
-            MoveToXmlParent();
-        }
-    }
+			MoveToXmlParent();
+		}
+	}
 
-    MoveToXmlParent();
+	MoveToXmlParent();
 }
 /*************************************************************************************************/
 /**	New Tag Defs							END													**/

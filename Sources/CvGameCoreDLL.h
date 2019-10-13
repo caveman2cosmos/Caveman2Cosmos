@@ -120,6 +120,11 @@ void IFPSetCount(ProfileSample* sample, int count);
 #endif
 
 //
+// Boost
+//
+#include <boost/shared_ptr.hpp>
+
+//
 // Boost Python
 //
 #include <boost/python/list.hpp>
