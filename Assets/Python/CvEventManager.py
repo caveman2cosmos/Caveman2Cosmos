@@ -2192,7 +2192,7 @@ class CvEventManager:
 						CyUnitNew.setImmobileTimer(8)
 						# Message
 						if iPlayerL == GAME.getActivePlayer():
-							CvUtil.sendMessage(TRNSLTR.getText("TXT_GG_REVIVE", (szName,)), iPlayerL, 16, 'Art/Cyrus_Tomb/cyrustomb_button.dds', ColorTypes(11), iX, iY, True, True, bForce=False)
+							CvUtil.sendMessage(TRNSLTR.getText("TXT_GG_REVIVE", (szName,)), iPlayerL, 16, 'Art/Interface/Buttons/Great_Wonders/cyrustomb.dds', ColorTypes(11), iX, iY, True, True, bForce=False)
 
 		# Beastmaster
 		iLeaderUnit = CyUnit.getLeaderUnitType()
