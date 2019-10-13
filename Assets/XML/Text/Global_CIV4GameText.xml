@@ -6713,7 +6713,7 @@
 		<Tag>TXT_KEY_ERA_COSMIC</Tag>
 		<English>Cosmic</English>
 		<German>
-			<Text>Kosmisches Zeitalter:Kosmischen Zeitalters:Kosmischen Zeitalter:Kosmische Zeitalter</Text>
+			<Text>Kosmoszeitalter:Kosmoszeitalters:Kosmoszeitalter:Kosmoszeitalter</Text>
 			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -6756,7 +6756,7 @@
 		<English>Galactic</English>
 		<French>Galactique</French>
 		<German>
-			<Text>Galaktisches Zeitalter:Galaktischen Zeitalters:Galaktischen Zeitalter:Galaktische Zeitalter</Text>
+			<Text>Galaxiezeitalter:Galaxiezeitalters:Galaxiezeitalter:Galaxiezeitalter</Text>
 			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -6801,7 +6801,7 @@
 		<Tag>TXT_KEY_ERA_INFORMATION</Tag>
 		<English>Information</English>
 		<German>
-			<Text>Informationszeitalter:Informationszeitalters:Informationszeitalter:Informationszeitalter</Text>
+			<Text>Digitalzeitalter:Digitalzeitalters:Digitalzeitalter:Digitalzeitalter</Text>
 			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -6842,6 +6842,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_ERA_MODERN</Tag>
 		<English>Atomic</English>
+		<German>
+			<Text>Atomzeitalter:Atomzeitalters:Atomzeitalter:Atomzeitalter</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_MODERN_STRATEGY</Tag>
@@ -13806,13 +13811,13 @@
 		<Tag>TXT_KEY_MISSION_AUTO_BUILDUP</Tag>
 		<English>Automate Build Ups</English>
 		<French>Installation Automatisé</French>
-		<German>Weiterentwicklung (automatisiert)</German>
+		<German>Training (automatisiert)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_AUTO_BUILDUP_HELP</Tag>
 		<English>Automate build up selections for all units selected.</English>
 		<French>Automatise l'installation pour toutes les unités sélectionnées.</French>
-		<German>Automatische Weiterentwicklung der ausgewählten Einheiten.</German>
+		<German>Automatisches Training der ausgewählten Einheiten.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_BECOME_BARBARIAN</Tag>
@@ -13854,14 +13859,14 @@
 		<Tag>TXT_KEY_MISSION_BUILDUP</Tag>
 		<English>Build Up</English>
 		<French>Développement</French>
-		<German>Weiterentwicklung</German>
+		<German>Training</German>
 		<Polish>Koncentracja</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_BUILDUP_HELP</Tag>
 		<English>Select a Promotion Line and gain an additional auto-promotion from the next level on that line for each round (up to 5) that the unit stays building up the ability.  Unit loses all Build Up promotions when it next moves.  (An alternative form of Fortification.)</English>
 		<French>Permet de Choisir une Spécialisation et de développer des compétences (sous forme de promotion) à chaque tour tant que l'unité reste sur place. (Il s'agit d'une alternative au retranchement.)</French>
-		<German>Einheit zur Weiterentwicklung in einer bestimmten Beförderungsreihe abstellen. Pro Runde Training erhält die Einheit eine Zusatzbeförderung (maximal 5 Runden lang). Diese Beförderungen sind nicht dauerhaft. Sie gehen verloren, sobald sich die Einheit bewegt.</German>
+		<German>Einheit zum Training in einer bestimmten Beförderungsreihe abstellen. Pro Runde Training erhält die Einheit eine Zusatzbeförderung (maximal 5 Runden lang). Diese Beförderungen sind nicht dauerhaft. Sie gehen verloren, sobald sich die Einheit bewegt.</German>
 		<Polish>Wybierz Linię Promocji i otrzymaj dodatkową auto-promocję z następnego poziomu tej linii promocji za każda turę Koncentracji na danym terenie (max 5 promocji). Jednostka traci Koncentrację kiedy się poruszy. (To jest alternatywa do Fortyfikacji jednostek).</Polish>
 	</TEXT>
 	<TEXT>
@@ -14044,7 +14049,7 @@
 		<Tag>TXT_KEY_MISSION_HEAL_BUILDUP</Tag>
 		<English>Automate Build Up Selections for Healing</English>
 		<French>Automatise l'installation avec comme spécialisation le soin.</French>
-		<German>Weiterentwicklung (automatisiert) - Heilung</German>
+		<German>Training (automatisiert) - Heilung</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_HEAL_BUILDUP_HELP</Tag>
