@@ -124,7 +124,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CYBER_INSECT_LAB</ArtDefineTag>
 			<!-- RevolutionDCM End  -->
-			<ObsoleteTech>TECH_BIOMIMETICS</ObsoleteTech>
 			<PrereqTech>TECH_CYBERPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -200,7 +199,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INSECT_MANIPULATION_LAB</ArtDefineTag>
 			<!-- RevolutionDCM End  -->
-			<ObsoleteTech>TECH_BIOMIMETICS</ObsoleteTech>
 			<PrereqTech>TECH_CYBERPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

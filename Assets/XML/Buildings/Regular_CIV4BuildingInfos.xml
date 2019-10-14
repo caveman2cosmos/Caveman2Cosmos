@@ -10528,7 +10528,7 @@
 				<VicinityBonus>BONUS_TIMBER</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>35</iCost>
 			<!-- Main effects -->
@@ -13878,12 +13878,16 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HEAT_TREATMENT</PrereqTech>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
+			<PrereqOrBuildingClasses>
+				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_FIREPIT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+					<bPrereqBuildingClass>1</bPrereqBuildingClass>
+				</PrereqOrBuildingClass>
+				<PrereqOrBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_BONFIRE</BuildingClassType>
+					<bPrereqBuildingClass>1</bPrereqBuildingClass>
+				</PrereqOrBuildingClass>
+			</PrereqOrBuildingClasses>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_OBEDIENCE</CivicOption>
@@ -22658,7 +22662,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>35</iCost>
 			<!-- Main effects -->
@@ -27661,16 +27665,14 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_FERMENTATION</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_FERMENTATION</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_WOOD</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_WARE_COPPER</Bonus>
 				<Bonus>BONUS_WARE_BRONZE</Bonus>
 				<Bonus>BONUS_WARE_IRON</Bonus>
+				<Bonus>BONUS_WARE_LEAD</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -27687,7 +27689,7 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Construction cost -->
-			<iCost>153</iCost>
+			<iCost>146</iCost>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -42132,7 +42134,7 @@
 			<PrereqTech>TECH_TRAPPING</PrereqTech>
 			<VicinityBonus>BONUS_FUR</VicinityBonus>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>35</iCost>
 			<!-- Main effects -->
@@ -49168,7 +49170,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Hematite Gatherer -->
+			<!-- Haematite Gatherer -->
 			<BuildingClass>BUILDINGCLASS_HEMATITE_PIT</BuildingClass>
 			<Type>BUILDING_HEMATITE_PIT</Type>
 			<EnabledCivilizationTypes>
@@ -58600,24 +58602,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_LEAD_WORKING</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_LEAD_WORKING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_INGOT_LEAD</Bonus>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_FORGE</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_FOUNDRY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
-			<iCost>153</iCost>
+			<iCost>146</iCost>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -62671,7 +62660,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_GUILDS</ObsoleteTech>
+			<ObsoleteTech>TECH_NANOBOTICS</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>50</iCost>
 			<!-- Main effects -->
@@ -67764,7 +67753,7 @@
 				<VicinityBonus>BONUS_SHRIMP</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>35</iCost>
 			<!-- Main effects -->
@@ -83854,7 +83843,7 @@
 			<PrereqTech>TECH_TRAPPING</PrereqTech>
 			<VicinityBonus>BONUS_RABBIT</VicinityBonus>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>35</iCost>
 			<!-- Main effects -->
@@ -83901,7 +83890,7 @@
 				<VicinityBonus>BONUS_CRAB</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>35</iCost>
 			<!-- Main effects -->
@@ -90398,7 +90387,7 @@
 				<VicinityBonus>BONUS_CLAM</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>35</iCost>
 			<!-- Main effects -->
@@ -109398,7 +109387,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_ELECTRICITY</ObsoleteTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>344</iCost>
 			<!-- Main effects -->
@@ -113871,7 +113860,7 @@
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_POTTER</BuildingClassType>
-					<iNumBuildingNeeded>2</iNumBuildingNeeded>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<iCost>168</iCost>

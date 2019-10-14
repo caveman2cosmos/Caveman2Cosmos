@@ -8456,30 +8456,6 @@
 			<DefaultBuilding>BUILDING_CHAMPAGNE_WINERY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_RED_WINE_CLUB</Type>
-			<Description>TXT_KEY_BUILDING_RED_WINE_CLUB</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<DefaultBuilding>BUILDING_RED_WINE_CLUB</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_WHITE_WINE_CLUB</Type>
-			<Description>TXT_KEY_BUILDING_WHITE_WINE_CLUB</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<DefaultBuilding>BUILDING_WHITE_WINE_CLUB</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_CHAMPAGNE_CLUB</Type>
-			<Description>TXT_KEY_BUILDING_CHAMPAGNE_CLUB</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<DefaultBuilding>BUILDING_CHAMPAGNE_CLUB</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_AESOP</Type>
 			<Description>TXT_KEY_BUILDING_AESOP</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>

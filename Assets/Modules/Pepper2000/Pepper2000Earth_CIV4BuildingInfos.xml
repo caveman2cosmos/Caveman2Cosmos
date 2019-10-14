@@ -1764,6 +1764,22 @@
 					<FreeBonus>BONUS_WAX</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FERTILIZERS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ECSTASY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_LSD</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_METH</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -3761,6 +3777,14 @@
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_WHALEOIL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FINE_LEATHER</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_O_FEATHERS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -15293,7 +15317,7 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_GHEE_FACTORY</BuildingClass>
 			<Type>BUILDING_GHEE_FACTORY</Type>
-			<ObsoleteTech>TECH_BIOFUELS</ObsoleteTech>
+			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_GOLD_VAULT</BuildingClass>
@@ -15323,7 +15347,7 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_HEMATITE_PIT</BuildingClass>
 			<Type>BUILDING_HEMATITE_PIT</Type>
-			<ObsoleteTech>TECH_CRUCIBLE_STEEL</ObsoleteTech>
+			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_PIGEON_COOP</BuildingClass>
@@ -19033,7 +19057,7 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_BELUGA_CAMP</BuildingClass>
 			<Type>BUILDING_BELUGA_CAMP</Type>
-			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_BISON_CAMP</BuildingClass>
@@ -19063,7 +19087,7 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_ELEPHANTSEAL_CAMP</BuildingClass>
 			<Type>BUILDING_ELEPHANTSEAL_CAMP</Type>
-			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_EMU_CAMP</BuildingClass>
@@ -19163,7 +19187,7 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_RABBIT_TRAPS</BuildingClass>
 			<Type>BUILDING_RABBIT_TRAPS</Type>
-			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_RHEA_CAMP</BuildingClass>
@@ -19178,7 +19202,7 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_SEALHUNTERS_CAMP</BuildingClass>
 			<Type>BUILDING_SEALHUNTERS_CAMP</Type>
-			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_TOUCAN</BuildingClass>
