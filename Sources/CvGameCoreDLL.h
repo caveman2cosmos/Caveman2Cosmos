@@ -134,6 +134,8 @@ void IFPSetCount(ProfileSample* sample, int count);
 #include <boost/shared_ptr.hpp>
 #include <boost/shared_array.hpp>
 #include <boost/lambda/lambda.hpp>
+#include <boost/bind.hpp>
+#include <boost/function.hpp>
 
 //
 // Boost Python
