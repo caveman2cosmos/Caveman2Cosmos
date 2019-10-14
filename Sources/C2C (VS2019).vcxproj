@@ -405,6 +405,7 @@
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".clang-format" />
     <None Include="FVariableSystem.inl" />
     <None Include="interfaceDirtyBits.inl" />
     <None Include="Makefile" />
