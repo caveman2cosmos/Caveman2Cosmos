@@ -22,14 +22,14 @@ typedef std::map<CvGameObject*, CvProperties> PropertySolverMapType;
 
 class PropertySolverMap
 {
-public:
-	int getPredictValue(CvGameObject* pObject, PropertyTypes eProperty);
+  public:
+	int	 getPredictValue(CvGameObject* pObject, PropertyTypes eProperty);
 	void addChange(CvGameObject* pObject, PropertyTypes eProperty, int iChange);
 
 	void computePredictValues();
 	void applyChanges();
 
-protected:
+  protected:
 	PropertySolverMapType m_mapProperties;
 	PropertySolverMapType m_mapPropertyChanges;
 };
@@ -38,77 +38,77 @@ class CvPropertySolver;
 
 class PropertySourceContext
 {
-public:
+  public:
 	PropertySourceContext(CvPropertySource* pSource, CvGameObject* pObject);
 	CvPropertySource* getSource();
-	CvGameObject* getObject();
-	int getData1();
-	int getData2();
-	void setData1(int iData);
-	void setData2(int iData);
+	CvGameObject*	  getObject();
+	int				  getData1();
+	int				  getData2();
+	void			  setData1(int iData);
+	void			  setData2(int iData);
 
 	void doPredict(CvPropertySolver* pSolver);
 	void doCorrect(CvPropertySolver* pSolver);
 
-protected:
+  protected:
 	CvPropertySource* m_pSource;
-	CvGameObject* m_pObject;
-	int m_iCurrentAmount;
-	int m_iData1;
-	int m_iData2;
+	CvGameObject*	  m_pObject;
+	int				  m_iCurrentAmount;
+	int				  m_iData1;
+	int				  m_iData2;
 };
 
 class PropertyInteractionContext
 {
-public:
+  public:
 	PropertyInteractionContext(CvPropertyInteraction* pInteraction, CvGameObject* pObject);
 	CvPropertyInteraction* getInteraction();
-	CvGameObject* getObject();
+	CvGameObject*		   getObject();
 
 	void doPredict(CvPropertySolver* pSolver);
 	void doCorrect(CvPropertySolver* pSolver);
 
-protected:
+  protected:
 	CvPropertyInteraction* m_pInteraction;
-	CvGameObject* m_pObject;
-	int m_iCurrentAmountSource;
-	int m_iCurrentAmountTarget;
+	CvGameObject*		   m_pObject;
+	int					   m_iCurrentAmountSource;
+	int					   m_iCurrentAmountTarget;
 };
 
 class PropertyPropagatorContext
 {
-public:
+  public:
 	PropertyPropagatorContext(CvPropertyPropagator* pPropagator, CvGameObject* pObject);
-	CvPropertyPropagator* getPropagator();
-	CvGameObject* getObject();
+	CvPropertyPropagator*		getPropagator();
+	CvGameObject*				getObject();
 	std::vector<CvGameObject*>* getTargetObjects();
 
 	void doPredict(CvPropertySolver* pSolver);
 	void doCorrect(CvPropertySolver* pSolver);
 
-protected:
-	CvPropertyPropagator* m_pPropagator;
-	CvGameObject* m_pObject;
+  protected:
+	CvPropertyPropagator*	   m_pPropagator;
+	CvGameObject*			   m_pObject;
 	std::vector<CvGameObject*> m_apTargetObjects;
-	std::vector<int> m_aiCurrentAmount;
+	std::vector<int>		   m_aiCurrentAmount;
 };
 
 class CvMainPropertySolver;
 
 class CvPropertySolver
 {
-public:
+  public:
 	void instantiateSource(CvGameObject* pObject, CvPropertySource* pSource);
 	void instantiateInteraction(CvGameObject* pObject, CvPropertyInteraction* pInteraction);
 	void instantiatePropagator(CvGameObject* pObject, CvPropertyPropagator* pPropagator);
 	void instantiateManipulators(CvGameObject* pObject, CvPropertyManipulators* pMani);
 	void instantiateGlobalManipulators(CvGameObject* pObject);
 	void gatherActiveManipulators();
-	
+
 	void predictSources();
 	void correctSources();
 	void clearSources();
-	
+
 	void predictInteractions();
 	void correctInteractions();
 	void clearInteractions();
@@ -124,27 +124,27 @@ public:
 
 	// Passed on to the solver map
 	void addChange(CvGameObject* pObject, PropertyTypes eProperty, int iChange);
-	int getPredictValue(CvGameObject* pObject, PropertyTypes eProperty);
+	int	 getPredictValue(CvGameObject* pObject, PropertyTypes eProperty);
 
-protected:
-	std::vector<PropertySourceContext> m_aSourceContexts;
+  protected:
+	std::vector<PropertySourceContext>		m_aSourceContexts;
 	std::vector<PropertyInteractionContext> m_aInteractionContexts;
-	std::vector<PropertyPropagatorContext> m_aPropagatorContexts;
-	CvMainPropertySolver* m_pMainSolver;
-	std::vector<int> m_aiCache1;
-	std::vector<int> m_aiCache2;
+	std::vector<PropertyPropagatorContext>	m_aPropagatorContexts;
+	CvMainPropertySolver*					m_pMainSolver;
+	std::vector<int>						m_aiCache1;
+	std::vector<int>						m_aiCache2;
 };
 
 class CvMainPropertySolver
 {
-public:
+  public:
 	CvMainPropertySolver();
 
 	PropertySolverMap* getSolverMap();
 
-	void addGlobalManipulators(CvPropertyManipulators* pMani);
-	void gatherGlobalManipulators();
-	int getNumGlobalManipulators();
+	void					addGlobalManipulators(CvPropertyManipulators* pMani);
+	void					gatherGlobalManipulators();
+	int						getNumGlobalManipulators();
 	CvPropertyManipulators* getGlobalManipulator(int index);
 
 	void resetPropertyChanges();
@@ -153,10 +153,10 @@ public:
 
 	void doTurn();
 
-protected:
+  protected:
 	std::vector<CvPropertyManipulators*> m_apGlobalManipulators;
-	CvPropertySolver m_Solver;
-	PropertySolverMap m_mapProperties;
+	CvPropertySolver					 m_Solver;
+	PropertySolverMap					 m_mapProperties;
 };
 
 

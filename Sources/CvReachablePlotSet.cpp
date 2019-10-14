@@ -2,7 +2,8 @@
 #include "CvGameCoreDLL.h"
 #include "CvReachablePlotSet.h"
 
-CvReachablePlotSet::const_iterator::const_iterator(CvReachablePlotSet& parent, stdext::hash_map<CvPlot*,CvReachablePlotInfo>::const_iterator& itr) : m_parent(parent)
+CvReachablePlotSet::const_iterator::const_iterator(CvReachablePlotSet& parent, stdext::hash_map<CvPlot*, CvReachablePlotInfo>::const_iterator& itr)
+	: m_parent(parent)
 {
 	m_itr = itr;
 }
@@ -12,7 +13,7 @@ CvReachablePlotSet::const_iterator& CvReachablePlotSet::const_iterator::operator
 	do
 	{
 		++m_itr;
-	} while( m_itr != m_parent.end().m_itr && m_itr->second.iStepDistance > m_parent.m_iRange );
+	} while (m_itr != m_parent.end().m_itr && m_itr->second.iStepDistance > m_parent.m_iRange);
 
 	return (*this);
 }
@@ -29,15 +30,15 @@ bool CvReachablePlotSet::const_iterator::operator!=(const_iterator& other)
 
 CvReachablePlotSet::const_iterator& CvReachablePlotSet::const_iterator::operator=(const_iterator& other)
 {
-	m_itr = other.m_itr;
+	m_itr	 = other.m_itr;
 	m_parent = other.m_parent;
 
 	return (*this);
 }
 
-CvPlot*	CvReachablePlotSet::const_iterator::plot()
+CvPlot* CvReachablePlotSet::const_iterator::plot()
 {
-	if ( m_itr == m_parent.end().m_itr )
+	if (m_itr == m_parent.end().m_itr)
 	{
 		return NULL;
 	}
@@ -49,7 +50,7 @@ CvPlot*	CvReachablePlotSet::const_iterator::plot()
 
 int CvReachablePlotSet::const_iterator::stepDistance()
 {
-	if ( m_itr == m_parent.end().m_itr )
+	if (m_itr == m_parent.end().m_itr)
 	{
 		return MAX_INT;
 	}
@@ -61,7 +62,7 @@ int CvReachablePlotSet::const_iterator::stepDistance()
 
 int CvReachablePlotSet::const_iterator::outsideBorderDistance()
 {
-	if ( m_itr == m_parent.end().m_itr )
+	if (m_itr == m_parent.end().m_itr)
 	{
 		return MAX_INT;
 	}
@@ -73,7 +74,7 @@ int CvReachablePlotSet::const_iterator::outsideBorderDistance()
 
 int CvReachablePlotSet::const_iterator::getOpaqueInfo(int iActivityId) const
 {
-	if ( m_itr == m_parent.end().m_itr )
+	if (m_itr == m_parent.end().m_itr)
 	{
 		return 0;
 	}
@@ -85,13 +86,13 @@ int CvReachablePlotSet::const_iterator::getOpaqueInfo(int iActivityId) const
 
 void CvReachablePlotSet::const_iterator::setOpaqueInfo(int iActivityId, int iValue)
 {
-	if ( m_itr != m_parent.end().m_itr )
+	if (m_itr != m_parent.end().m_itr)
 	{
 		*(int*)&(m_itr->second.iOpaqueInfo[iActivityId]) = iValue;
 	}
 }
 
-CvReachablePlotSet::CvReachablePlotSet(CvSelectionGroup * group, int iFlags, int iRange, bool bCachable, int iOutsideOwnedRange)
+CvReachablePlotSet::CvReachablePlotSet(CvSelectionGroup* group, int iFlags, int iRange, bool bCachable, int iOutsideOwnedRange)
 {
 	m_group = group;
 	//	Always include move-through-enemy flag when constructing reachable sets
@@ -99,13 +100,13 @@ CvReachablePlotSet::CvReachablePlotSet(CvSelectionGroup * group, int iFlags, int
 	//	(so has an enemy in its terminal node) will register as unreachable
 	m_iFlags = iFlags | MOVE_THROUGH_ENEMY;
 
-	m_proxyTo = NULL;
-	m_iRange = -1;
+	m_proxyTo			 = NULL;
+	m_iRange			 = -1;
 	m_iOutsideOwnedRange = iOutsideOwnedRange;
-	m_bCachable = bCachable;
-	m_reachablePlots = NULL;
+	m_bCachable			 = bCachable;
+	m_reachablePlots	 = NULL;
 
-	if ( iRange != -1 )
+	if (iRange != -1)
 	{
 		Populate(iRange);
 	}
@@ -119,8 +120,8 @@ CvReachablePlotSet::~CvReachablePlotSet()
 CvReachablePlotSet::const_iterator CvReachablePlotSet::begin()
 {
 	CvReachablePlotSet::const_iterator result = CvReachablePlotSet::const_iterator(*this, (m_proxyTo == NULL ? m_reachablePlots->begin() : m_proxyTo->m_reachablePlots->begin()));
-	
-	while( result != end() && result.stepDistance() > m_iRange )
+
+	while (result != end() && result.stepDistance() > m_iRange)
 	{
 		++result;
 	};
@@ -135,7 +136,7 @@ CvReachablePlotSet::const_iterator CvReachablePlotSet::end()
 
 CvReachablePlotSet::const_iterator CvReachablePlotSet::find(CvPlot* plot)
 {
-	if ( m_proxyTo == NULL )
+	if (m_proxyTo == NULL)
 	{
 		return CvReachablePlotSet::const_iterator(*this, m_reachablePlots->find(plot));
 	}
@@ -143,7 +144,7 @@ CvReachablePlotSet::const_iterator CvReachablePlotSet::find(CvPlot* plot)
 	{
 		CvReachablePlotSet::const_iterator result = m_proxyTo->find(plot);
 
-		if ( result.stepDistance() <= m_iRange )
+		if (result.stepDistance() <= m_iRange)
 		{
 			return result;
 		}
@@ -156,7 +157,7 @@ CvReachablePlotSet::const_iterator CvReachablePlotSet::find(CvPlot* plot)
 
 int CvReachablePlotSet::getRange() const
 {
-	if ( m_proxyTo == NULL )
+	if (m_proxyTo == NULL)
 	{
 		return m_iRange;
 	}
@@ -168,7 +169,7 @@ int CvReachablePlotSet::getRange() const
 
 void CvReachablePlotSet::setRange(int iRange)
 {
-	if ( m_proxyTo == NULL )
+	if (m_proxyTo == NULL)
 	{
 		m_iRange = iRange;
 	}
@@ -180,24 +181,24 @@ void CvReachablePlotSet::setRange(int iRange)
 
 typedef struct CvReachablePlotSetCacheEntry
 {
-	CvReachablePlotSet*	plotSet;
+	CvReachablePlotSet* plotSet;
 	int					iLRUSeq;
 } CvReachablePlotSetCacheEntry;
 
-#define	PLOT_SET_CACHE_SIZE	2
+#define PLOT_SET_CACHE_SIZE 2
 typedef struct
 {
-	CvReachablePlotSetCacheEntry	cacheEntries[PLOT_SET_CACHE_SIZE];
-	int								iNextLRU;
+	CvReachablePlotSetCacheEntry cacheEntries[PLOT_SET_CACHE_SIZE];
+	int							 iNextLRU;
 } PlotSetCache;
 
 static PlotSetCache* CachedPlotSets = NULL;
 
 void CvReachablePlotSet::ClearCache()
 {
-	if ( CachedPlotSets != NULL )
+	if (CachedPlotSets != NULL)
 	{
-		for(int iI = 0; iI < PLOT_SET_CACHE_SIZE; iI++)
+		for (int iI = 0; iI < PLOT_SET_CACHE_SIZE; iI++)
 		{
 			SAFE_DELETE(CachedPlotSets->cacheEntries[iI].plotSet);
 		}
@@ -206,48 +207,48 @@ void CvReachablePlotSet::ClearCache()
 
 CvReachablePlotSet* CvReachablePlotSet::findCachedPlotSet(CvSelectionGroup* pGroup, int iFlags, int iOutsideOwnedRange)
 {
-	if ( CachedPlotSets == NULL )
+	if (CachedPlotSets == NULL)
 	{
 		CachedPlotSets = new PlotSetCache;
 
 		CachedPlotSets->iNextLRU = 1;
 
-		for(int iI = 0; iI < PLOT_SET_CACHE_SIZE; iI++)
+		for (int iI = 0; iI < PLOT_SET_CACHE_SIZE; iI++)
 		{
 			CachedPlotSets->cacheEntries[iI].iLRUSeq = 0;
 			CachedPlotSets->cacheEntries[iI].plotSet = NULL;
 		}
 	}
 
-	CvReachablePlotSetCacheEntry*	pLRUEntry = NULL;
-	int iBestLRU = MAX_INT;
+	CvReachablePlotSetCacheEntry* pLRUEntry = NULL;
+	int							  iBestLRU	= MAX_INT;
 
-	for(int iI = 0; iI < PLOT_SET_CACHE_SIZE; iI++)
+	for (int iI = 0; iI < PLOT_SET_CACHE_SIZE; iI++)
 	{
 		CvReachablePlotSetCacheEntry* entry = &CachedPlotSets->cacheEntries[iI];
 
-		if ( entry->plotSet == NULL )
+		if (entry->plotSet == NULL)
 		{
 			pLRUEntry = entry;
 			break;
 		}
-		else if ( entry->plotSet->m_group == pGroup && entry->plotSet->m_iFlags == iFlags && entry->plotSet->m_iOutsideOwnedRange == iOutsideOwnedRange)
+		else if (entry->plotSet->m_group == pGroup && entry->plotSet->m_iFlags == iFlags && entry->plotSet->m_iOutsideOwnedRange == iOutsideOwnedRange)
 		{
 			entry->iLRUSeq = CachedPlotSets->iNextLRU++;
 			return entry->plotSet;
 		}
-		else if ( entry->iLRUSeq < iBestLRU )
+		else if (entry->iLRUSeq < iBestLRU)
 		{
-			iBestLRU = entry->iLRUSeq;
+			iBestLRU  = entry->iLRUSeq;
 			pLRUEntry = entry;
 		}
 	}
 
 	SAFE_DELETE(pLRUEntry->plotSet);
 
-	pLRUEntry->plotSet = new CvReachablePlotSet(pGroup, iFlags);
-	pLRUEntry->plotSet->m_reachablePlots = new stdext::hash_map<CvPlot*,CvReachablePlotInfo>();
-	pLRUEntry->iLRUSeq = CachedPlotSets->iNextLRU++;
+	pLRUEntry->plotSet					 = new CvReachablePlotSet(pGroup, iFlags);
+	pLRUEntry->plotSet->m_reachablePlots = new stdext::hash_map<CvPlot*, CvReachablePlotInfo>();
+	pLRUEntry->iLRUSeq					 = CachedPlotSets->iNextLRU++;
 
 	return pLRUEntry->plotSet;
 }
@@ -258,15 +259,15 @@ void CvReachablePlotSet::Populate(int iRange)
 
 	MEMORY_TRACK_EXEMPT();
 
-	if ( m_bCachable )
+	if (m_bCachable)
 	{
 		m_proxyTo = findCachedPlotSet(m_group, m_iFlags, m_iOutsideOwnedRange);
 	}
 	else
 	{
-		if ( m_reachablePlots == NULL )
+		if (m_reachablePlots == NULL)
 		{
-			m_reachablePlots = new stdext::hash_map<CvPlot*,CvReachablePlotInfo>();
+			m_reachablePlots = new stdext::hash_map<CvPlot*, CvReachablePlotInfo>();
 		}
 		else
 		{
@@ -276,36 +277,36 @@ void CvReachablePlotSet::Populate(int iRange)
 
 	m_iRange = getRange();
 
-	if ( m_iRange < iRange )
+	if (m_iRange < iRange)
 	{
-		std::vector<std::pair<CvPlot*,int> > seedPlots;
+		std::vector<std::pair<CvPlot*, int> > seedPlots;
 
-		if ( m_iRange == -1 )
+		if (m_iRange == -1)
 		{
 			stdext::hash_map<CvPlot*, CvReachablePlotInfo>* reachablePlots = (m_proxyTo == NULL ? m_reachablePlots : m_proxyTo->m_reachablePlots);
 
-			CvReachablePlotInfo	info;
+			CvReachablePlotInfo info;
 
 			memset(&info, 0, sizeof(info));
 
 			(*reachablePlots)[m_group->plot()] = info;
-			seedPlots.push_back(std::make_pair(m_group->plot(),0));
+			seedPlots.push_back(std::make_pair(m_group->plot(), 0));
 
 			m_iRange = 0;
 			setRange(0);
 		}
 		else
 		{
-			for(CvReachablePlotSet::const_iterator itr = begin(), itrend = end(); itr != itrend; ++itr)
+			for (CvReachablePlotSet::const_iterator itr = begin(), itrend = end(); itr != itrend; ++itr)
 			{
-				if ( itr.stepDistance() == m_iRange )
+				if (itr.stepDistance() == m_iRange)
 				{
 					seedPlots.push_back(std::make_pair(itr.plot(), itr.outsideBorderDistance()));
 				}
 			}
 		}
 
-		enumerateReachablePlotsInternal(iRange - getRange(), getRange()+1, seedPlots);
+		enumerateReachablePlotsInternal(iRange - getRange(), getRange() + 1, seedPlots);
 
 		setRange(iRange);
 	}
@@ -322,7 +323,7 @@ bool CvReachablePlotSet::canMoveBetweenWithFlags(CvSelectionGroup* group, CvPlot
 		{
 			if (!(GC.getMapINLINE().plotINLINE(pFromPlot->getX_INLINE(), pToPlot->getY_INLINE())->isWater()) && !(GC.getMapINLINE().plotINLINE(pToPlot->getX_INLINE(), pFromPlot->getY_INLINE())->isWater()))
 			{
-				if( !(group->canMoveAllTerrain()) )
+				if (!(group->canMoveAllTerrain()))
 				{
 					return false;
 				}
@@ -331,13 +332,13 @@ bool CvReachablePlotSet::canMoveBetweenWithFlags(CvSelectionGroup* group, CvPlot
 
 		//	If told to allow adjacent coasts to be included in the generated set
 		//	do so now
-		if ( (MOVE_ALLOW_ADJACENT_COASTAL & iFlags) != 0 )
+		if ((MOVE_ALLOW_ADJACENT_COASTAL & iFlags) != 0)
 		{
 			if (pFromPlot->isWater() && pToPlot->isCoastalLand())
 			{
 				return true;
 			}
-			else if ( !pFromPlot->isWater() && !pFromPlot->isFriendlyCity(*group->getHeadUnit(), true) )
+			else if (!pFromPlot->isWater() && !pFromPlot->isFriendlyCity(*group->getHeadUnit(), true))
 			{
 				return false;
 			}
@@ -348,16 +349,16 @@ bool CvReachablePlotSet::canMoveBetweenWithFlags(CvSelectionGroup* group, CvPlot
 	{
 		//	Need to handle ZOCs
 		//	ZOCs don't apply into cities of the unit owner
-		TeamTypes	eTeam = group->getTeam();
+		TeamTypes	eTeam  = group->getTeam();
 		PlayerTypes eOwner = group->getHeadOwner();
-	
-		if ( pToPlot->getPlotCity() == NULL || pToPlot->getPlotCity()->getTeam() != eTeam )
+
+		if (pToPlot->getPlotCity() == NULL || pToPlot->getPlotCity()->getTeam() != eTeam)
 		{
 			//Fort ZOC
 			PlayerTypes eDefender = pFromPlot->controlsAdjacentZOCSource(eTeam);
 			if (eDefender != NO_PLAYER)
 			{
-				const CvPlot* pZoneOfControl = pFromPlot->isInFortControl(true, eDefender, eOwner);
+				const CvPlot* pZoneOfControl		= pFromPlot->isInFortControl(true, eDefender, eOwner);
 				const CvPlot* pForwardZoneOfControl = pToPlot->isInFortControl(true, eDefender, eOwner);
 				if (pZoneOfControl != NULL && pForwardZoneOfControl != NULL)
 				{
@@ -367,7 +368,7 @@ bool CvReachablePlotSet::canMoveBetweenWithFlags(CvSelectionGroup* group, CvPlot
 					}
 				}
 			}
-			
+
 			//City ZoC
 			if (pFromPlot->isInCityZoneOfControl(eOwner) && pToPlot->isInCityZoneOfControl(eOwner) && !group->canIgnoreZoneofControl())
 			{
@@ -387,26 +388,26 @@ bool CvReachablePlotSet::canMoveBetweenWithFlags(CvSelectionGroup* group, CvPlot
 	return moveToValid(group, pToPlot, iFlags);
 }
 
-void CvReachablePlotSet::enumerateReachablePlotsInternal(int iRange, int iDepth, std::vector< std::pair<CvPlot*,int> >& prevRing)
+void CvReachablePlotSet::enumerateReachablePlotsInternal(int iRange, int iDepth, std::vector<std::pair<CvPlot*, int> >& prevRing)
 {
-	if ( iRange > 0 && !prevRing.empty() )
+	if (iRange > 0 && !prevRing.empty())
 	{
-		std::vector<std::pair<CvPlot*,int> >	nextRing;
+		std::vector<std::pair<CvPlot*, int> > nextRing;
 
 		stdext::hash_map<CvPlot*, CvReachablePlotInfo>* reachablePlots = (m_proxyTo == NULL ? m_reachablePlots : m_proxyTo->m_reachablePlots);
 
-		for( std::vector<std::pair<CvPlot*,int> >::const_iterator itr = prevRing.begin(), itrend = prevRing.end(); itr != itrend; ++itr)
+		for (std::vector<std::pair<CvPlot*, int> >::const_iterator itr = prevRing.begin(), itrend = prevRing.end(); itr != itrend; ++itr)
 		{
 			for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
 			{
 				CvPlot* pAdjacentPlot = plotDirection((*itr).first->getX_INLINE(), (*itr).first->getY_INLINE(), ((DirectionTypes)iI));
 
-				if ( pAdjacentPlot != NULL && reachablePlots->find(pAdjacentPlot) == reachablePlots->end() )
+				if (pAdjacentPlot != NULL && reachablePlots->find(pAdjacentPlot) == reachablePlots->end())
 				{
 					bool bValidAsTerminus = false;
-					bool bValid = ContextFreeNewPathValidFunc(m_group, (*itr).first->getX_INLINE(), (*itr).first->getY_INLINE(), pAdjacentPlot->getX_INLINE(), pAdjacentPlot->getY_INLINE(), m_iFlags, false, false, 0, NULL, &bValidAsTerminus);
+					bool bValid			  = ContextFreeNewPathValidFunc(m_group, (*itr).first->getX_INLINE(), (*itr).first->getY_INLINE(), pAdjacentPlot->getX_INLINE(), pAdjacentPlot->getY_INLINE(), m_iFlags, false, false, 0, NULL, &bValidAsTerminus);
 
-					if ( !bValid )
+					if (!bValid)
 					{
 						bool bDummy;
 
@@ -414,18 +415,18 @@ void CvReachablePlotSet::enumerateReachablePlotsInternal(int iRange, int iDepth,
 					}
 
 					//if ( canMoveBetweenWithFlags(m_group, (*itr), pAdjacentPlot, m_iFlags) )
-					if ( bValid || bValidAsTerminus )
+					if (bValid || bValidAsTerminus)
 					{
-						CvReachablePlotInfo	info;
+						CvReachablePlotInfo info;
 
 						memset(&info, 0, sizeof(info));
 						info.iStepDistance = iDepth;
 
-						if ( (*itr).first->getTeam() != m_group->getTeam() )
+						if ((*itr).first->getTeam() != m_group->getTeam())
 						{
 							info.iOutsideOwnedDistance = (*itr).second + 1;
 
-							if ( m_iOutsideOwnedRange != -1 && info.iOutsideOwnedDistance >= m_iOutsideOwnedRange )
+							if (m_iOutsideOwnedRange != -1 && info.iOutsideOwnedDistance >= m_iOutsideOwnedRange)
 							{
 								bValid = false;
 							}
@@ -437,7 +438,7 @@ void CvReachablePlotSet::enumerateReachablePlotsInternal(int iRange, int iDepth,
 
 						(*reachablePlots)[pAdjacentPlot] = info;
 
-						if ( bValid && pAdjacentPlot->isRevealed(m_group->getTeam(), false) )
+						if (bValid && pAdjacentPlot->isRevealed(m_group->getTeam(), false))
 						{
 							nextRing.push_back(std::make_pair(pAdjacentPlot, info.iOutsideOwnedDistance));
 						}

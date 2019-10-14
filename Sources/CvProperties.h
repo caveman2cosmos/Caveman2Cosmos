@@ -26,23 +26,23 @@ class CvGameObject;
 
 struct PropertyBuilding
 {
-	int iMinValue;
-	int iMaxValue;
+	int			  iMinValue;
+	int			  iMaxValue;
 	BuildingTypes eBuilding;
 };
 
 struct PropertyPromotion
 {
-	int iMinValue;
-	int iMaxValue;
+	int			   iMinValue;
+	int			   iMaxValue;
 	PromotionTypes ePromotion;
 };
 
 class CvProperties
 {
-public:
+  public:
 	CvProperties();
-	
+
 	explicit CvProperties(CvGame* pGame);
 	explicit CvProperties(CvTeam* pTeam);
 	explicit CvProperties(CvPlayer* pPlayer);
@@ -50,14 +50,14 @@ public:
 	explicit CvProperties(CvUnit* pUnit);
 	explicit CvProperties(CvPlot* pPlot);
 
-	int getProperty(int index) const;
-	int getValue(int index) const;
-	int getChangeProperty(int index) const;
-	int getChange(int index) const;
-	int getNumProperties() const;
-	int getPositionByProperty(int eProp) const;
-	int getValueByProperty(int eProp) const;
-	int getChangeByProperty(int eProp) const;
+	int	 getProperty(int index) const;
+	int	 getValue(int index) const;
+	int	 getChangeProperty(int index) const;
+	int	 getChange(int index) const;
+	int	 getNumProperties() const;
+	int	 getPositionByProperty(int eProp) const;
+	int	 getValueByProperty(int eProp) const;
+	int	 getChangeByProperty(int eProp) const;
 	void setValue(int index, int iVal);
 	void setChange(int index, int iVal);
 	void setValueByProperty(int eProp, int iVal);
@@ -66,7 +66,7 @@ public:
 	void changeValueByProperty(int eProp, int iChange);
 	void changeChangeByProperty(int eProp, int iChange);
 	void propagateChange(int eProp, int iChange);
-	
+
 	void addProperties(const CvProperties* pProp);
 	void subtractProperties(const CvProperties* pProp);
 
@@ -93,19 +93,20 @@ public:
 
 	// For Python
 	std::wstring getPropertyDisplay(int index) const;
-	
+
 	void read(FDataStreamBase* pStream);
 	void readWrapper(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
 	void writeWrapper(FDataStreamBase* pStream);
 	bool read(CvXMLLoadUtility* pXML, const wchar_t* szTagName = L"Properties");
-	void copyNonDefaults(CvProperties* pProp, CvXMLLoadUtility* pXML );
+	void copyNonDefaults(CvProperties* pProp, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
-protected:
-	std::vector<std::pair<int,int> > m_aiProperty;
-	std::vector<std::pair<int,int> > m_aiPropertyChange;
-	
+
+  protected:
+	std::vector<std::pair<int, int> > m_aiProperty;
+	std::vector<std::pair<int, int> > m_aiPropertyChange;
+
 	// Pointer to the object to which the properties belong
 	CvGameObject* m_pGameObject;
 };

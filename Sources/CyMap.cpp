@@ -1,16 +1,18 @@
 //
-// Python wrapper class for CvMap 
-// 
+// Python wrapper class for CvMap
+//
 
 #include "CvGameCoreDLL.h"
 #include "CvMapGenerator.h"
 
-CyMap::CyMap() : m_pMap(NULL)
+CyMap::CyMap()
+	: m_pMap(NULL)
 {
 	m_pMap = &GC.getMapINLINE();
 }
 
-CyMap::CyMap(CvMap* pMap) : m_pMap(pMap)
+CyMap::CyMap(CvMap* pMap)
+	: m_pMap(pMap)
 {
 }
 
@@ -40,36 +42,36 @@ bool CyMap::viewportsEnabled()
 	return GC.viewportsEnabled();
 }
 
-int	CyMap::getViewportWidth()
+int CyMap::getViewportWidth()
 {
 	return GC.getCurrentViewport()->getGridWidth();
 }
 
-int	CyMap::getViewportHeight()
+int CyMap::getViewportHeight()
 {
 	return GC.getCurrentViewport()->getGridHeight();
 }
 
-int	CyMap::getMapXFromViewportX(int iX)
+int CyMap::getMapXFromViewportX(int iX)
 {
 	return GC.getCurrentViewport()->getMapXFromViewportX(iX);
 }
 
-int	CyMap::getMapYFromViewportY(int iY)
+int CyMap::getMapYFromViewportY(int iY)
 {
 	return GC.getCurrentViewport()->getMapYFromViewportY(iY);
 }
 
-int	CyMap::getViewportXFromMapX(int iX)
+int CyMap::getViewportXFromMapX(int iX)
 {
 	return GC.getCurrentViewport()->getViewportXFromMapX(iX);
 }
 
-int	CyMap::getViewportYFromMapY(int iY)
+int CyMap::getViewportYFromMapY(int iY)
 {
 	return GC.getCurrentViewport()->getViewportYFromMapY(iY);
 }
-	
+
 bool CyMap::isInViewport(int iX, int iY)
 {
 	return GC.getCurrentViewport()->isInViewport(iX, iY);
@@ -98,7 +100,7 @@ void CyMap::erasePlots()
 void CyMap::setRevealedPlots(int /*TeamTypes*/ eTeam, bool bNewValue, bool bTerrainOnly)
 {
 	if (m_pMap)
-		m_pMap->setRevealedPlots((TeamTypes) eTeam, bNewValue, bTerrainOnly);
+		m_pMap->setRevealedPlots((TeamTypes)eTeam, bNewValue, bTerrainOnly);
 }
 
 void CyMap::resetRevealedPlots(int /*TeamTypes*/ eTeam)
@@ -110,7 +112,7 @@ void CyMap::resetRevealedPlots(int /*TeamTypes*/ eTeam)
 void CyMap::setAllPlotTypes(int /*PlotTypes*/ ePlotType)
 {
 	if (m_pMap)
-		m_pMap->setAllPlotTypes((PlotTypes) ePlotType);
+		m_pMap->setAllPlotTypes((PlotTypes)ePlotType);
 }
 
 /************************************************************************************************/
@@ -120,7 +122,7 @@ void CyMap::setAllPlotTypes(int /*PlotTypes*/ ePlotType)
 /************************************************************************************************/
 void CyMap::verifyUnitValidPlot()
 {
-	if( m_pMap )
+	if (m_pMap)
 		m_pMap->verifyUnitValidPlot();
 }
 /************************************************************************************************/
@@ -187,7 +189,7 @@ int CyMap::plotY(int iIndex)
 	return m_pMap ? m_pMap->plotY(iIndex) : -1;
 }
 
-int CyMap::getGridWidth() 
+int CyMap::getGridWidth()
 {
 	return m_pMap->getGridWidthINLINE();
 }
@@ -297,7 +299,7 @@ CyPlot* CyMap::sPlotByIndex(int iIndex)
 	return NULL;
 }
 
-CyPlot* CyMap::plot(int iX, int iY) 
+CyPlot* CyMap::plot(int iX, int iY)
 {
 	return new CyPlot(m_pMap->plotINLINE(iX, iY));
 }
@@ -305,7 +307,7 @@ CyPlot* CyMap::plot(int iX, int iY)
 //
 // static version
 //
-CyPlot* CyMap::sPlot(int iX, int iY) 
+CyPlot* CyMap::sPlot(int iX, int iY)
 {
 	static CyPlot p;
 	p.setPlot(m_pMap->plotINLINE(iX, iY));
@@ -356,7 +358,7 @@ int CyMap::calculatePathDistance(CyPlot* pSource, CyPlot* pDest)
 	return -1;
 }
 
-void CyMap::rebuild(int iGridW, int iGridH, int iTopLatitude, int iBottomLatitude, bool bWrapX, bool bWrapY, WorldSizeTypes eWorldSize, ClimateTypes eClimate, SeaLevelTypes eSeaLevel, int iNumCustomMapOptions, CustomMapOptionTypes * aeCustomMapOptions)
+void CyMap::rebuild(int iGridW, int iGridH, int iTopLatitude, int iBottomLatitude, bool bWrapX, bool bWrapY, WorldSizeTypes eWorldSize, ClimateTypes eClimate, SeaLevelTypes eSeaLevel, int iNumCustomMapOptions, CustomMapOptionTypes* aeCustomMapOptions)
 {
 	if (m_pMap)
 	{
@@ -402,9 +404,9 @@ void CyMap::updateMinOriginalStartDist(CyArea* pArea)
 }
 
 
-bool CyMap::generatePathForHypotheticalUnit(CyPlot *pFrom, CyPlot *pTo, int ePlayer, int eUnit, int iFlags, int iMaxTurns)
+bool CyMap::generatePathForHypotheticalUnit(CyPlot* pFrom, CyPlot* pTo, int ePlayer, int eUnit, int iFlags, int iMaxTurns)
 {
-	return m_pMap ? m_pMap->generatePathForHypotheticalUnit(pFrom->getPlot(), pTo->getPlot(), (PlayerTypes) ePlayer, (UnitTypes) eUnit, iFlags, iMaxTurns) : false;
+	return m_pMap ? m_pMap->generatePathForHypotheticalUnit(pFrom->getPlot(), pTo->getPlot(), (PlayerTypes)ePlayer, (UnitTypes)eUnit, iFlags, iMaxTurns) : false;
 }
 
 int CyMap::getLastPathStepNum()
@@ -424,10 +426,10 @@ CyPlot* CyMap::getLastPathPlotByIndex(int index)
 /************************************************************************************************/
 python::tuple CyMap::firstArea(bool bRev)
 {
-	int iterIn = 0;
-	CvArea* pvObj = m_pMap ? m_pMap->firstArea(&iterIn, bRev) : NULL;
-	CyArea* pyObj = pvObj ? new CyArea(pvObj) : NULL;
-	python::tuple tup=python::make_tuple(pyObj, iterIn);
+	int			  iterIn = 0;
+	CvArea*		  pvObj	 = m_pMap ? m_pMap->firstArea(&iterIn, bRev) : NULL;
+	CyArea*		  pyObj	 = pvObj ? new CyArea(pvObj) : NULL;
+	python::tuple tup	 = python::make_tuple(pyObj, iterIn);
 	delete pyObj;
 	return tup;
 }
@@ -435,9 +437,9 @@ python::tuple CyMap::firstArea(bool bRev)
 // returns tuple of (CyArea, iterOut)
 python::tuple CyMap::nextArea(int iterIn, bool bRev)
 {
-	CvArea* pvObj = m_pMap ? m_pMap->nextArea(&iterIn, bRev) : NULL;
-	CyArea* pyObj = pvObj ? new CyArea(pvObj) : NULL;
-	python::tuple tup=python::make_tuple(pyObj, iterIn);
+	CvArea*		  pvObj = m_pMap ? m_pMap->nextArea(&iterIn, bRev) : NULL;
+	CyArea*		  pyObj = pvObj ? new CyArea(pvObj) : NULL;
+	python::tuple tup	= python::make_tuple(pyObj, iterIn);
 	delete pyObj;
 	return tup;
 }
@@ -448,7 +450,7 @@ python::tuple CyMap::nextArea(int iterIn, bool bRev)
 // Super Forts begin *canal* *choke*
 void CyMap::calculateCanalAndChokePoints()
 {
-	if(m_pMap)
+	if (m_pMap)
 	{
 		m_pMap->calculateCanalAndChokePoints();
 	}

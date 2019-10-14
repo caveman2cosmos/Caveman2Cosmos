@@ -1,14 +1,16 @@
 //
-// Python wrapper class for CvTeam 
+// Python wrapper class for CvTeam
 // updated 6-5
 //
 #include "CvGameCoreDLL.h"
 
-CyTeam::CyTeam() : m_pTeam(NULL)
+CyTeam::CyTeam()
+	: m_pTeam(NULL)
 {
 }
 
-CyTeam::CyTeam(CvTeam* pTeam) : m_pTeam(pTeam)
+CyTeam::CyTeam(CvTeam* pTeam)
+	: m_pTeam(pTeam)
 {
 }
 
@@ -27,24 +29,24 @@ bool CyTeam::isSingleCityTeam()
 	return m_pTeam ? m_pTeam->isSingleCityTeam() : false;
 }
 
-bool CyTeam::isRebelAgainst( int iTeam )
+bool CyTeam::isRebelAgainst(int iTeam)
 {
 	if (m_pTeam)
-		return m_pTeam->isRebelAgainst( (TeamTypes)iTeam );
+		return m_pTeam->isRebelAgainst((TeamTypes)iTeam);
 	else
 		return false;
 }
 
-void CyTeam::setRebelAgainst( int iTeam, bool bNewValue )
+void CyTeam::setRebelAgainst(int iTeam, bool bNewValue)
 {
 	if (m_pTeam)
-		m_pTeam->setRebelAgainst( (TeamTypes)iTeam, bNewValue );
+		m_pTeam->setRebelAgainst((TeamTypes)iTeam, bNewValue);
 }
 
-int CyTeam::countRebelAgainst( )
+int CyTeam::countRebelAgainst()
 {
 	if (m_pTeam)
-		return m_pTeam->countRebelAgainst( );
+		return m_pTeam->countRebelAgainst();
 	else
 		return -1;
 }
@@ -138,7 +140,7 @@ int CyTeam::getAtWarCount(bool bIgnoreMinors)
 
 int CyTeam::getWarPlanCount(int /*WarPlanTypes*/ eWarPlan, bool bIgnoreMinors)
 {
-	return m_pTeam ? m_pTeam->getWarPlanCount((WarPlanTypes) eWarPlan, bIgnoreMinors) : -1;
+	return m_pTeam ? m_pTeam->getWarPlanCount((WarPlanTypes)eWarPlan, bIgnoreMinors) : -1;
 }
 
 int CyTeam::getAnyWarPlanCount(bool bIgnoreMinors)
@@ -231,7 +233,7 @@ int CyTeam::countEnemyPowerByArea(CyArea* pArea)
 
 int CyTeam::countNumAIUnitsByArea(CyArea* pArea, int /*UnitAITypes*/ eUnitAI)
 {
-	return m_pTeam ? m_pTeam->countNumAIUnitsByArea(pArea->getArea(), (UnitAITypes) eUnitAI) : -1;
+	return m_pTeam ? m_pTeam->countNumAIUnitsByArea(pArea->getArea(), (UnitAITypes)eUnitAI) : -1;
 }
 
 int CyTeam::countEnemyDangerByArea(CyArea* pArea)
@@ -288,13 +290,13 @@ bool CyTeam::isMinorCiv()
 /*                                                                                              */
 /* For minor civs                                                                               */
 /************************************************************************************************/
-void CyTeam::setIsMinorCiv( bool bNewValue, bool bDoBarbCivCheck )
+void CyTeam::setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck)
 {
-	if( m_pTeam )
+	if (m_pTeam)
 	{
-		for(int iI = 0; iI < MAX_PC_PLAYERS; iI++)
+		for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 		{
-			if( GET_PLAYER((PlayerTypes)iI).getTeam() == m_pTeam->getID() )
+			if (GET_PLAYER((PlayerTypes)iI).getTeam() == m_pTeam->getID())
 			{
 				if (GET_PLAYER((PlayerTypes)iI).getCivilizationType() < 0)
 				{
@@ -305,7 +307,7 @@ void CyTeam::setIsMinorCiv( bool bNewValue, bool bDoBarbCivCheck )
 				}
 			}
 		}
-		
+
 		m_pTeam->setIsMinorCiv(bNewValue, bDoBarbCivCheck);
 	}
 }
@@ -395,7 +397,7 @@ int CyTeam::getExtraWaterSeeFromCount()
 	return m_pTeam ? m_pTeam->getExtraWaterSeeFromCount() : -1;
 }
 
-bool CyTeam::isExtraWaterSeeFrom()	 
+bool CyTeam::isExtraWaterSeeFrom()
 {
 	return m_pTeam ? m_pTeam->isExtraWaterSeeFrom() : false;
 }
@@ -653,7 +655,7 @@ void CyTeam::setWarWeariness(int /*TeamTypes*/ eIndex, int iNewValue)
 		m_pTeam->setWarWeariness((TeamTypes)eIndex, iNewValue);
 }
 
-void CyTeam::changeWarWeariness(int /*TeamTypes*/ eIndex, int iChange)	 
+void CyTeam::changeWarWeariness(int /*TeamTypes*/ eIndex, int iChange)
 {
 	if (m_pTeam)
 		m_pTeam->changeWarWeariness((TeamTypes)eIndex, iChange);
@@ -712,7 +714,7 @@ bool CyTeam::isHasMet(int /*TeamTypes*/ eIndex)
 #ifdef _DEBUG
 		throw new std::exception();
 #endif
-        return false;
+		return false;
 	}
 
 	return m_pTeam ? m_pTeam->isHasMet((TeamTypes)eIndex) : false;
@@ -720,7 +722,8 @@ bool CyTeam::isHasMet(int /*TeamTypes*/ eIndex)
 
 bool CyTeam::isAtWar(int /*TeamTypes*/ iIndex)
 {
-	if (iIndex == NO_TEAM) return false;
+	if (iIndex == NO_TEAM)
+		return false;
 	return m_pTeam ? m_pTeam->isAtWar((TeamTypes)iIndex) : false;
 }
 
@@ -745,17 +748,17 @@ bool CyTeam::isOpenBorders(int /*TeamTypes*/ eIndex)
 	return m_pTeam ? m_pTeam->isOpenBorders((TeamTypes)eIndex) : false;
 }
 
-bool CyTeam::isForcePeace(int /*TeamTypes*/ eIndex)				 
+bool CyTeam::isForcePeace(int /*TeamTypes*/ eIndex)
 {
 	return m_pTeam ? m_pTeam->isForcePeace((TeamTypes)eIndex) : false;
 }
 
-bool CyTeam::isVassal(int /*TeamTypes*/ eIndex)				 
+bool CyTeam::isVassal(int /*TeamTypes*/ eIndex)
 {
 	return m_pTeam ? m_pTeam->isVassal((TeamTypes)eIndex) : false;
 }
 
-void CyTeam::setVassal(int /*TeamTypes*/ eIndex, bool bVassal, bool bCapitulated)				 
+void CyTeam::setVassal(int /*TeamTypes*/ eIndex, bool bVassal, bool bCapitulated)
 {
 	if (m_pTeam)
 	{
@@ -763,7 +766,7 @@ void CyTeam::setVassal(int /*TeamTypes*/ eIndex, bool bVassal, bool bCapitulated
 	}
 }
 
-void CyTeam::assignVassal(int /*TeamTypes*/ eIndex, bool bSurrender)				 
+void CyTeam::assignVassal(int /*TeamTypes*/ eIndex, bool bSurrender)
 {
 	if (m_pTeam)
 	{
@@ -771,7 +774,7 @@ void CyTeam::assignVassal(int /*TeamTypes*/ eIndex, bool bSurrender)
 	}
 }
 
-void CyTeam::freeVassal(int /*TeamTypes*/ eIndex)				 
+void CyTeam::freeVassal(int /*TeamTypes*/ eIndex)
 {
 	if (m_pTeam)
 	{
@@ -779,7 +782,7 @@ void CyTeam::freeVassal(int /*TeamTypes*/ eIndex)
 	}
 }
 
-bool CyTeam::isDefensivePact(int /*TeamTypes*/ eIndex)				 
+bool CyTeam::isDefensivePact(int /*TeamTypes*/ eIndex)
 {
 	return m_pTeam ? m_pTeam->isDefensivePact((TeamTypes)eIndex) : false;
 }
@@ -807,13 +810,13 @@ int CyTeam::getProjectDefaultArtType(int /*ProjectTypes*/ eIndex)
 
 void CyTeam::setProjectDefaultArtType(int /*ProjectTypes*/ eIndex, int value)
 {
-	if(m_pTeam != NULL)
+	if (m_pTeam != NULL)
 		m_pTeam->setProjectDefaultArtType((ProjectTypes)eIndex, value);
 }
 
 int CyTeam::getProjectArtType(int /*ProjectTypes*/ eIndex, int number)
 {
-	if(m_pTeam != NULL)
+	if (m_pTeam != NULL)
 		return m_pTeam->getProjectArtType((ProjectTypes)eIndex, number);
 	else
 		return -1;
@@ -821,7 +824,7 @@ int CyTeam::getProjectArtType(int /*ProjectTypes*/ eIndex, int number)
 
 void CyTeam::setProjectArtType(int /*ProjectTypes*/ eIndex, int number, int value)
 {
-	if(m_pTeam != NULL)
+	if (m_pTeam != NULL)
 		m_pTeam->setProjectArtType((ProjectTypes)eIndex, number, value);
 }
 
@@ -985,19 +988,19 @@ int CyTeam::getLaunchSuccessRate(int /*VictoryTypes*/ eVictory)
 
 int CyTeam::getEspionagePointsAgainstTeam(int /*TeamTypes*/ eIndex)
 {
-	return m_pTeam ? m_pTeam->getEspionagePointsAgainstTeam((TeamTypes) eIndex) : -1;
+	return m_pTeam ? m_pTeam->getEspionagePointsAgainstTeam((TeamTypes)eIndex) : -1;
 }
 
 void CyTeam::setEspionagePointsAgainstTeam(int /*TeamTypes*/ eIndex, int iValue)
 {
 	if (m_pTeam)
-		m_pTeam->setEspionagePointsAgainstTeam((TeamTypes) eIndex, iValue);
+		m_pTeam->setEspionagePointsAgainstTeam((TeamTypes)eIndex, iValue);
 }
 
 void CyTeam::changeEspionagePointsAgainstTeam(int /*TeamTypes*/ eIndex, int iChange)
 {
 	if (m_pTeam)
-		m_pTeam->changeEspionagePointsAgainstTeam((TeamTypes) eIndex, iChange);
+		m_pTeam->changeEspionagePointsAgainstTeam((TeamTypes)eIndex, iChange);
 }
 
 int CyTeam::getEspionagePointsEver()
@@ -1019,36 +1022,36 @@ void CyTeam::changeEspionagePointsEver(int iChange)
 
 int CyTeam::getCounterespionageTurnsLeftAgainstTeam(int /*TeamTypes*/ eIndex)
 {
-	return m_pTeam ? m_pTeam->getCounterespionageTurnsLeftAgainstTeam((TeamTypes) eIndex) : -1;
+	return m_pTeam ? m_pTeam->getCounterespionageTurnsLeftAgainstTeam((TeamTypes)eIndex) : -1;
 }
 
 void CyTeam::setCounterespionageTurnsLeftAgainstTeam(int /*TeamTypes*/ eIndex, int iValue)
 {
 	if (m_pTeam)
-		m_pTeam->setCounterespionageTurnsLeftAgainstTeam((TeamTypes) eIndex, iValue);
+		m_pTeam->setCounterespionageTurnsLeftAgainstTeam((TeamTypes)eIndex, iValue);
 }
 
 void CyTeam::changeCounterespionageTurnsLeftAgainstTeam(int /*TeamTypes*/ eIndex, int iChange)
 {
 	if (m_pTeam)
-		m_pTeam->changeCounterespionageTurnsLeftAgainstTeam((TeamTypes) eIndex, iChange);
+		m_pTeam->changeCounterespionageTurnsLeftAgainstTeam((TeamTypes)eIndex, iChange);
 }
 
 int CyTeam::getCounterespionageModAgainstTeam(int /*TeamTypes*/ eIndex)
 {
-	return m_pTeam ? m_pTeam->getCounterespionageModAgainstTeam((TeamTypes) eIndex) : -1;
+	return m_pTeam ? m_pTeam->getCounterespionageModAgainstTeam((TeamTypes)eIndex) : -1;
 }
 
 void CyTeam::setCounterespionageModAgainstTeam(int /*TeamTypes*/ eIndex, int iValue)
 {
 	if (m_pTeam)
-		m_pTeam->setCounterespionageModAgainstTeam((TeamTypes) eIndex, iValue);
+		m_pTeam->setCounterespionageModAgainstTeam((TeamTypes)eIndex, iValue);
 }
 
 void CyTeam::changeCounterespionageModAgainstTeam(int /*TeamTypes*/ eIndex, int iChange)
 {
 	if (m_pTeam)
-		m_pTeam->changeCounterespionageModAgainstTeam((TeamTypes) eIndex, iChange);
+		m_pTeam->changeCounterespionageModAgainstTeam((TeamTypes)eIndex, iChange);
 }
 
 
@@ -1111,4 +1114,3 @@ bool CyTeam::isHasEmbassy(int /*TeamTypes*/ eTeam) const
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-

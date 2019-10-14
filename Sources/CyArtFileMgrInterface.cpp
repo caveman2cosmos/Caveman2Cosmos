@@ -14,8 +14,8 @@ void CyArtFileMgrPythonInterface()
 		.def("Reset", &CyArtFileMgr::Reset, "void ()")
 		.def("buildArtFileInfoMaps", &CyArtFileMgr::buildArtFileInfoMaps, "void ()")
 
-		.def("getInterfaceArtInfo", &CyArtFileMgr::getInterfaceArtInfo,  python::return_value_policy<python::reference_existing_object>(), "CvArtInfoInterface ()")
-		.def("getMovieArtInfo", &CyArtFileMgr::getMovieArtInfo,  python::return_value_policy<python::reference_existing_object>(), "CvArtInfoMovie ()")
+		.def("getInterfaceArtInfo", &CyArtFileMgr::getInterfaceArtInfo, python::return_value_policy<python::reference_existing_object>(), "CvArtInfoInterface ()")
+		.def("getMovieArtInfo", &CyArtFileMgr::getMovieArtInfo, python::return_value_policy<python::reference_existing_object>(), "CvArtInfoMovie ()")
 		.def("getMiscArtInfo", &CyArtFileMgr::getMiscArtInfo, python::return_value_policy<python::reference_existing_object>(), "CvArtInfoMisc ()")
 		.def("getUnitArtInfo", &CyArtFileMgr::getUnitArtInfo, python::return_value_policy<python::reference_existing_object>(), "CvArtInfoUnit ()")
 		.def("getBuildingArtInfo", &CyArtFileMgr::getBuildingArtInfo, python::return_value_policy<python::reference_existing_object>(), "CvArtInfoBuilding ()")
@@ -24,7 +24,5 @@ void CyArtFileMgrPythonInterface()
 		.def("getBonusArtInfo", &CyArtFileMgr::getBonusArtInfo, python::return_value_policy<python::reference_existing_object>(), "CvArtInfoBonus ()")
 		.def("getImprovementArtInfo", &CyArtFileMgr::getImprovementArtInfo, python::return_value_policy<python::reference_existing_object>(), "CvArtInfoImprovement ()")
 		.def("getTerrainArtInfo", &CyArtFileMgr::getTerrainArtInfo, python::return_value_policy<python::reference_existing_object>(), "CvArtInfoTerrain ()")
-		.def("getFeatureArtInfo", &CyArtFileMgr::getFeatureArtInfo, python::return_value_policy<python::reference_existing_object>(), "CvArtInfoFeature ()")
-	;
+		.def("getFeatureArtInfo", &CyArtFileMgr::getFeatureArtInfo, python::return_value_policy<python::reference_existing_object>(), "CvArtInfoFeature ()");
 }
-

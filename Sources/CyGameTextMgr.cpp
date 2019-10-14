@@ -1,18 +1,18 @@
 //
-// Python wrapper class for CyGameTextMgr 
-// 
+// Python wrapper class for CyGameTextMgr
+//
 #include "CvGameCoreDLL.h"
 #include "CyGameTextMgr.h"
 
-CyGameTextMgr::CyGameTextMgr() : 
-m_pGameTextMgr(NULL)
+CyGameTextMgr::CyGameTextMgr()
+	: m_pGameTextMgr(NULL)
 {
 	m_pGameTextMgr = &CvGameTextMgr::GetInstance();
 }
 
-CyGameTextMgr::CyGameTextMgr(CvGameTextMgr* pGameTextMgr) : m_pGameTextMgr(pGameTextMgr)
+CyGameTextMgr::CyGameTextMgr(CvGameTextMgr* pGameTextMgr)
+	: m_pGameTextMgr(pGameTextMgr)
 {
-
 }
 
 void CyGameTextMgr::Reset()
@@ -173,35 +173,35 @@ std::wstring CyGameTextMgr::getTerrainHelp(int iTerrain, bool bCivilopediaText)
 std::wstring CyGameTextMgr::parseCivicInfo(int /*CivicTypes*/ iCivicType, bool bCivilopediaText, bool bPlayerContext, bool bSkipName)
 {
 	CvWStringBuffer szBuffer;
-	GAMETEXT.parseCivicInfo(szBuffer, (CivicTypes) iCivicType, bCivilopediaText, bPlayerContext, bSkipName);
+	GAMETEXT.parseCivicInfo(szBuffer, (CivicTypes)iCivicType, bCivilopediaText, bPlayerContext, bSkipName);
 	return szBuffer.getCString();
 }
 
 std::wstring CyGameTextMgr::parseReligionInfo(int /*ReligionTypes*/ iReligionType, bool bCivilopediaText)
 {
 	CvWStringBuffer szBuffer;
-	GAMETEXT.setReligionHelp(szBuffer, (ReligionTypes) iReligionType, bCivilopediaText);
+	GAMETEXT.setReligionHelp(szBuffer, (ReligionTypes)iReligionType, bCivilopediaText);
 	return szBuffer.getCString();
 }
 
 std::wstring CyGameTextMgr::parseCorporationInfo(int /*CorporationTypes*/ iCorporationType, bool bCivilopediaText)
 {
 	CvWStringBuffer szBuffer;
-	GAMETEXT.setCorporationHelp(szBuffer, (CorporationTypes) iCorporationType, bCivilopediaText);
+	GAMETEXT.setCorporationHelp(szBuffer, (CorporationTypes)iCorporationType, bCivilopediaText);
 	return szBuffer.getCString();
 }
 
 std::wstring CyGameTextMgr::parseCivInfos(int /*CivilizationTypes*/ iCivilization, bool bDawnOfMan)
 {
 	CvWStringBuffer szBuffer;
-	GAMETEXT.parseCivInfos(szBuffer, (CivilizationTypes) iCivilization, bDawnOfMan);
+	GAMETEXT.parseCivInfos(szBuffer, (CivilizationTypes)iCivilization, bDawnOfMan);
 	return szBuffer.getCString();
 }
 
 std::wstring CyGameTextMgr::parseLeaderTraits(int /*LeaderHeadTypes*/ iLeader, int /*CivilizationTypes*/ iCivilization, bool bDawnOfMan, bool bCivilopediaText)
 {
 	CvWStringBuffer szBuffer;
-	GAMETEXT.parseLeaderTraits(szBuffer, (LeaderHeadTypes)iLeader, (CivilizationTypes) iCivilization, bDawnOfMan, bCivilopediaText);
+	GAMETEXT.parseLeaderTraits(szBuffer, (LeaderHeadTypes)iLeader, (CivilizationTypes)iCivilization, bDawnOfMan, bCivilopediaText);
 	return szBuffer.getCString();
 }
 /************************************************************************************************/
@@ -223,7 +223,7 @@ std::wstring CyGameTextMgr::getTradeString(TradeData* pTradeData, int iPlayer1, 
 	CvWStringBuffer szBuffer;
 	if (NULL != pTradeData)
 	{
-		GAMETEXT.getTradeString(szBuffer, *pTradeData, (PlayerTypes)iPlayer1, (PlayerTypes) iPlayer2);
+		GAMETEXT.getTradeString(szBuffer, *pTradeData, (PlayerTypes)iPlayer1, (PlayerTypes)iPlayer2);
 	}
 	return szBuffer.getCString();
 }
@@ -231,7 +231,7 @@ std::wstring CyGameTextMgr::getTradeString(TradeData* pTradeData, int iPlayer1, 
 std::wstring CyGameTextMgr::getSpecialistHelp(int iSpecialist, bool bCivilopediaText)
 {
 	CvWStringBuffer szBuffer;
-	GAMETEXT.parseSpecialistHelp(szBuffer, (SpecialistTypes) iSpecialist, NULL, bCivilopediaText);
+	GAMETEXT.parseSpecialistHelp(szBuffer, (SpecialistTypes)iSpecialist, NULL, bCivilopediaText);
 	return szBuffer.getCString();
 }
 
@@ -245,14 +245,14 @@ std::wstring CyGameTextMgr::buildHintsList()
 std::wstring CyGameTextMgr::getAttitudeString(int iPlayer, int iTargetPlayer)
 {
 	CvWStringBuffer szBuffer;
-	GAMETEXT.getAttitudeString(szBuffer, (PlayerTypes)iPlayer, (PlayerTypes) iTargetPlayer);
+	GAMETEXT.getAttitudeString(szBuffer, (PlayerTypes)iPlayer, (PlayerTypes)iTargetPlayer);
 	return szBuffer.getCString();
 }
 
 std::wstring CyGameTextMgr::setConvertHelp(int iPlayer, int iReligion)
 {
 	CvWStringBuffer szBuffer;
-	GAMETEXT.setConvertHelp(szBuffer, (PlayerTypes)iPlayer, (ReligionTypes) iReligion);
+	GAMETEXT.setConvertHelp(szBuffer, (PlayerTypes)iPlayer, (ReligionTypes)iReligion);
 	return szBuffer.getCString();
 }
 

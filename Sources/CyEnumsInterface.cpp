@@ -1,7 +1,7 @@
 #include "CvGameCoreDLL.h"
 
 #include "CvGameCoreDLLUnDefNew.h"
-# include <boost/python/enum.hpp>
+#include <boost/python/enum.hpp>
 #include "CvGameCoreDLLDefNew.h"
 
 // Dale - AB: Bombing PLEASE NOTE!
@@ -41,35 +41,30 @@ void CyEnumsPythonInterface()
 	python::enum_<GameStateTypes>("GameStateTypes")
 		.value("GAMESTATE_ON", GAMESTATE_ON)
 		.value("GAMESTATE_OVER", GAMESTATE_OVER)
-		.value("GAMESTATE_EXTENDED", GAMESTATE_EXTENDED)
-		;
+		.value("GAMESTATE_EXTENDED", GAMESTATE_EXTENDED);
 
 	python::enum_<PopupStates>("PopupStates")
 		.value("POPUPSTATE_IMMEDIATE", POPUPSTATE_IMMEDIATE)
 		.value("POPUPSTATE_QUEUED", POPUPSTATE_QUEUED)
-		.value("POPUPSTATE_MINIMIZED", POPUPSTATE_MINIMIZED)
-		;
+		.value("POPUPSTATE_MINIMIZED", POPUPSTATE_MINIMIZED);
 
 	python::enum_<CameraLookAtTypes>("CameraLookAtTypes")
 		.value("CAMERALOOKAT_NORMAL", CAMERALOOKAT_NORMAL)
 		.value("CAMERALOOKAT_CITY_ZOOM_IN", CAMERALOOKAT_CITY_ZOOM_IN)
 		.value("CAMERALOOKAT_BATTLE", CAMERALOOKAT_BATTLE)
 		.value("CAMERALOOKAT_BATTLE_ZOOM_IN", CAMERALOOKAT_BATTLE_ZOOM_IN)
-		.value("CAMERALOOKAT_IMMEDIATE", CAMERALOOKAT_IMMEDIATE)
-		;
+		.value("CAMERALOOKAT_IMMEDIATE", CAMERALOOKAT_IMMEDIATE);
 
 	python::enum_<CameraMovementSpeeds>("CameraMovementSpeeds")
 		.value("CAMERAMOVEMENTSPEED_NORMAL", CAMERAMOVEMENTSPEED_NORMAL)
 		.value("CAMERAMOVEMENTSPEED_SLOW", CAMERAMOVEMENTSPEED_SLOW)
-		.value("CAMERAMOVEMENTSPEED_FAST", CAMERAMOVEMENTSPEED_FAST)
-		;
+		.value("CAMERAMOVEMENTSPEED_FAST", CAMERAMOVEMENTSPEED_FAST);
 
 	python::enum_<ZoomLevelTypes>("ZoomLevelTypes")
 		.value("ZOOM_UNKNOWN", ZOOM_UNKNOWN)
 		.value("ZOOM_GLOBEVIEW", ZOOM_GLOBEVIEW)
 		.value("ZOOM_NORMAL", ZOOM_NORMAL)
-		.value("ZOOM_DETAIL", ZOOM_DETAIL)
-		;
+		.value("ZOOM_DETAIL", ZOOM_DETAIL);
 
 	python::enum_<DirectionTypes>("DirectionTypes")
 		.value("NO_DIRECTION", NO_DIRECTION)
@@ -81,8 +76,7 @@ void CyEnumsPythonInterface()
 		.value("DIRECTION_SOUTHWEST", DIRECTION_SOUTHWEST)
 		.value("DIRECTION_WEST", DIRECTION_WEST)
 		.value("DIRECTION_NORTHWEST", DIRECTION_NORTHWEST)
-		.value("NUM_DIRECTION_TYPES", NUM_DIRECTION_TYPES)
-		;
+		.value("NUM_DIRECTION_TYPES", NUM_DIRECTION_TYPES);
 
 	python::enum_<CardinalDirectionTypes>("CardinalDirectionTypes")
 		.value("NO_CARDINALDIRECTION", NO_CARDINALDIRECTION)
@@ -90,16 +84,13 @@ void CyEnumsPythonInterface()
 		.value("CARDINALDIRECTION_EAST", CARDINALDIRECTION_EAST)
 		.value("CARDINALDIRECTION_SOUTH", CARDINALDIRECTION_SOUTH)
 		.value("CARDINALDIRECTION_WEST", CARDINALDIRECTION_WEST)
-		.value("NUM_CARDINALDIRECTION_TYPES", NUM_CARDINALDIRECTION_TYPES)
-		;
+		.value("NUM_CARDINALDIRECTION_TYPES", NUM_CARDINALDIRECTION_TYPES);
 
 	python::enum_<ColorTypes>("ColorTypes")
-		.value("NO_COLOR", NO_COLOR)
-		;
+		.value("NO_COLOR", NO_COLOR);
 
 	python::enum_<PlayerColorTypes>("PlayerColorTypes")
-		.value("NO_PLAYERCOLOR", NO_PLAYERCOLOR)
-		;
+		.value("NO_PLAYERCOLOR", NO_PLAYERCOLOR);
 
 	python::enum_<PlotStyles>("PlotStyles")
 		.value("PLOT_STYLE_NONE", PLOT_STYLE_NONE)
@@ -129,8 +120,7 @@ void CyEnumsPythonInterface()
 		.value("PLOT_STYLE_DOT_TARGET", PLOT_STYLE_DOT_TARGET)
 		.value("PLOT_STYLE_WAVES", PLOT_STYLE_WAVES)
 		.value("PLOT_STYLE_DOTS", PLOT_STYLE_DOTS)
-		.value("PLOT_STYLE_CIRCLES", PLOT_STYLE_CIRCLES)
-		;
+		.value("PLOT_STYLE_CIRCLES", PLOT_STYLE_CIRCLES);
 
 	python::enum_<PlotLandscapeLayers>("PlotLandscapeLayers")
 		.value("PLOT_LANDSCAPE_LAYER_ALL", PLOT_LANDSCAPE_LAYER_ALL)
@@ -138,8 +128,7 @@ void CyEnumsPythonInterface()
 		.value("PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS", PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS)
 		.value("PLOT_LANDSCAPE_LAYER_WORLD_BUILDER", PLOT_LANDSCAPE_LAYER_WORLD_BUILDER)
 		.value("PLOT_LANDSCAPE_LAYER_NUMPAD_HELP", PLOT_LANDSCAPE_LAYER_NUMPAD_HELP)
-		.value("PLOT_LANDSCAPE_LAYER_REVEALED_PLOTS", PLOT_LANDSCAPE_LAYER_REVEALED_PLOTS)
-		;
+		.value("PLOT_LANDSCAPE_LAYER_REVEALED_PLOTS", PLOT_LANDSCAPE_LAYER_REVEALED_PLOTS);
 
 	python::enum_<AreaBorderLayers>("AreaBorderLayers")
 		.value("AREA_BORDER_LAYER_REVEALED_PLOTS", AREA_BORDER_LAYER_REVEALED_PLOTS)
@@ -150,8 +139,7 @@ void CyEnumsPythonInterface()
 		.value("AREA_BORDER_LAYER_HIGHLIGHT_PLOT", AREA_BORDER_LAYER_HIGHLIGHT_PLOT)
 		.value("AREA_BORDER_LAYER_BLOCKADING", AREA_BORDER_LAYER_BLOCKADING)
 		.value("AREA_BORDER_LAYER_BLOCKADED", AREA_BORDER_LAYER_BLOCKADED)
-		.value("NUM_AREA_BORDER_LAYERS", NUM_AREA_BORDER_LAYERS)
-		;
+		.value("NUM_AREA_BORDER_LAYERS", NUM_AREA_BORDER_LAYERS);
 
 	python::enum_<InterfaceModeTypes>("InterfaceModeTypes")
 		.value("NO_INTERFACEMODE", NO_INTERFACEMODE)
@@ -174,9 +162,9 @@ void CyEnumsPythonInterface()
 		.value("INTERFACEMODE_REBASE", INTERFACEMODE_REBASE)
 		.value("INTERFACEMODE_PYTHON_PICK_PLOT", INTERFACEMODE_PYTHON_PICK_PLOT)
 		.value("INTERFACEMODE_SAVE_PLOT_NIFS", INTERFACEMODE_SAVE_PLOT_NIFS)
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* DCM                                     04/19/09                                Johny Smith  */
+		/************************************************************************************************/
 		.value("INTERFACEMODE_AIRBOMB1", INTERFACEMODE_AIRBOMB1)
 		.value("INTERFACEMODE_AIRBOMB2", INTERFACEMODE_AIRBOMB2)
 		.value("INTERFACEMODE_AIRBOMB3", INTERFACEMODE_AIRBOMB3)
@@ -193,22 +181,21 @@ void CyEnumsPythonInterface()
 #ifdef _MOD_SENTRY
 		.value("INTERFACEMODE_GO_TO_SENTRY", INTERFACEMODE_GO_TO_SENTRY)
 #endif
-// BUG - Sentry Actions - end
+		// BUG - Sentry Actions - end
 		// < M.A.D. Nukes Start >
 		.value("INTERFACEMODE_PRETARGET_NUKE", INTERFACEMODE_PRETARGET_NUKE)
 		// < M.A.D. Nukes End   >
-/************************************************************************************************/
-/* Afforess	                  Start		 09/16/10                                               */
-/*                                                                                              */
-/* Advanced Automations                                                                         */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                  Start		 09/16/10                                               */
+		/*                                                                                              */
+		/* Advanced Automations                                                                         */
+		/************************************************************************************************/
 		.value("INTERFACEMODE_SHADOW_UNIT", INTERFACEMODE_SHADOW_UNIT)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                     END                                                            */
+		/************************************************************************************************/
 
-		.value("NUM_INTERFACEMODE_TYPES", NUM_INTERFACEMODE_TYPES)
-		;
+		.value("NUM_INTERFACEMODE_TYPES", NUM_INTERFACEMODE_TYPES);
 
 	python::enum_<InterfaceMessageTypes>("InterfaceMessageTypes")
 		.value("NO_MESSAGE_TYPE", NO_MESSAGE_TYPE)
@@ -219,8 +206,7 @@ void CyEnumsPythonInterface()
 		.value("MESSAGE_TYPE_CHAT", MESSAGE_TYPE_CHAT)
 		.value("MESSAGE_TYPE_COMBAT_MESSAGE", MESSAGE_TYPE_COMBAT_MESSAGE)
 		.value("MESSAGE_TYPE_QUEST", MESSAGE_TYPE_QUEST)
-		.value("NUM_INTERFACE_MESSAGE_TYPES", NUM_INTERFACE_MESSAGE_TYPES)
-		;
+		.value("NUM_INTERFACE_MESSAGE_TYPES", NUM_INTERFACE_MESSAGE_TYPES);
 
 	python::enum_<MinimapModeTypes>("MinimapModeTypes")
 		.value("NO_MINIMAPMODE", NO_MINIMAPMODE)
@@ -228,15 +214,13 @@ void CyEnumsPythonInterface()
 		.value("MINIMAPMODE_TERRAIN", MINIMAPMODE_TERRAIN)
 		.value("MINIMAPMODE_REPLAY", MINIMAPMODE_REPLAY)
 		.value("MINIMAPMODE_MILITARY", MINIMAPMODE_MILITARY)
-		.value("NUM_MINIMAPMODE_TYPES", NUM_MINIMAPMODE_TYPES)
-		;
+		.value("NUM_MINIMAPMODE_TYPES", NUM_MINIMAPMODE_TYPES);
 
 	python::enum_<EngineDirtyBits>("EngineDirtyBits")
 		.value("GlobeTexture_DIRTY_BIT", GlobeTexture_DIRTY_BIT)
 		.value("MinimapTexture_DIRTY_BIT", MinimapTexture_DIRTY_BIT)
 		.value("CultureBorders_DIRTY_BIT", CultureBorders_DIRTY_BIT)
-		.value("NUM_ENGINE_DIRTY_BITS", NUM_ENGINE_DIRTY_BITS)
-		;
+		.value("NUM_ENGINE_DIRTY_BITS", NUM_ENGINE_DIRTY_BITS);
 
 	python::enum_<InterfaceDirtyBits>("InterfaceDirtyBits")
 		.value("SelectionCamera_DIRTY_BIT", SelectionCamera_DIRTY_BIT)
@@ -274,15 +258,13 @@ void CyEnumsPythonInterface()
 		.value("Domestic_Advisor_DIRTY_BIT", Domestic_Advisor_DIRTY_BIT)
 		.value("Espionage_Advisor_DIRTY_BIT", Espionage_Advisor_DIRTY_BIT)
 		.value("Advanced_Start_DIRTY_BIT", Advanced_Start_DIRTY_BIT)
-		.value("NUM_INTERFACE_DIRTY_BITS", NUM_INTERFACE_DIRTY_BITS)
-		;
+		.value("NUM_INTERFACE_DIRTY_BITS", NUM_INTERFACE_DIRTY_BITS);
 
 	python::enum_<CityTabTypes>("CityTabTypes")
 		.value("CITYTAB_UNITS", CITYTAB_UNITS)
 		.value("CITYTAB_BUILDINGS", CITYTAB_BUILDINGS)
 		.value("CITYTAB_WONDERS", CITYTAB_WONDERS)
-		.value("NUM_CITYTAB_TYPES", NUM_CITYTAB_TYPES)
-		;
+		.value("NUM_CITYTAB_TYPES", NUM_CITYTAB_TYPES);
 
 	python::enum_<WidgetTypes>("WidgetTypes")
 		.value("WIDGET_PLOT_LIST", WIDGET_PLOT_LIST)
@@ -480,10 +462,9 @@ void CyEnumsPythonInterface()
 		.value("WIDGET_CITY_GOTO", WIDGET_CITY_GOTO)
 		.value("WIDGET_PEDIA_JUMP_TO_ROUTE", WIDGET_PEDIA_JUMP_TO_ROUTE)
 		.value("WIDGET_HELP_IMPROVEMENT_ACTUAL", WIDGET_HELP_IMPROVEMENT_ACTUAL)
-		.value("WIDGET_HELP_BUILDUP", WIDGET_HELP_BUILDUP)	
+		.value("WIDGET_HELP_BUILDUP", WIDGET_HELP_BUILDUP)
 
-		.value("NUM_WIDGET_TYPES", NUM_WIDGET_TYPES)
-		;
+		.value("NUM_WIDGET_TYPES", NUM_WIDGET_TYPES);
 
 	python::enum_<ButtonPopupTypes>("ButtonPopupTypes")
 		.value("BUTTONPOPUP_TEXT", BUTTONPOPUP_TEXT)
@@ -523,20 +504,16 @@ void CyEnumsPythonInterface()
 		.value("BUTTONPOPUP_LAUNCH", BUTTONPOPUP_LAUNCH)
 		.value("BUTTONPOPUP_FOUND_RELIGION", BUTTONPOPUP_FOUND_RELIGION)
 
-		.value("NUM_BUTTONPOPUP_TYPES", NUM_BUTTONPOPUP_TYPES)
-		;
+		.value("NUM_BUTTONPOPUP_TYPES", NUM_BUTTONPOPUP_TYPES);
 
 	python::enum_<ClimateTypes>("ClimateTypes")
-		.value("NO_CLIMATE", NO_CLIMATE)
-		;
+		.value("NO_CLIMATE", NO_CLIMATE);
 
 	python::enum_<SeaLevelTypes>("SeaLevelTypes")
-		.value("NO_SEALEVEL", NO_SEALEVEL)
-		;
+		.value("NO_SEALEVEL", NO_SEALEVEL);
 
 	python::enum_<CustomMapOptionTypes>("CustomMapOptionTypes")
-		.value("NO_CUSTOM_MAPOPTION", NO_CUSTOM_MAPOPTION)
-		;
+		.value("NO_CUSTOM_MAPOPTION", NO_CUSTOM_MAPOPTION);
 
 	python::enum_<WorldSizeTypes>("WorldSizeTypes")
 		.value("NO_WORLDSIZE", NO_WORLDSIZE)
@@ -546,12 +523,10 @@ void CyEnumsPythonInterface()
 		.value("WORLDSIZE_STANDARD", WORLDSIZE_STANDARD)
 		.value("WORLDSIZE_LARGE", WORLDSIZE_LARGE)
 		.value("WORLDSIZE_HUGE", WORLDSIZE_HUGE)
-		.value("NUM_WORLDSIZE_TYPES", NUM_WORLDSIZE_TYPES)
-		;
+		.value("NUM_WORLDSIZE_TYPES", NUM_WORLDSIZE_TYPES);
 
 	python::enum_<TerrainTypes>("TerrainTypes")
-		.value("NO_TERRAIN", NO_TERRAIN)
-		;
+		.value("NO_TERRAIN", NO_TERRAIN);
 
 	python::enum_<PlotTypes>("PlotTypes")
 		.value("NO_PLOT", NO_PLOT)
@@ -559,36 +534,30 @@ void CyEnumsPythonInterface()
 		.value("PLOT_HILLS", PLOT_HILLS)
 		.value("PLOT_LAND", PLOT_LAND)
 		.value("PLOT_OCEAN", PLOT_OCEAN)
-		.value("NUM_PLOT_TYPES", NUM_PLOT_TYPES)
-		;
+		.value("NUM_PLOT_TYPES", NUM_PLOT_TYPES);
 
 	python::enum_<YieldTypes>("YieldTypes")
 		.value("NO_YIELD", NO_YIELD)
 		.value("YIELD_FOOD", YIELD_FOOD)
 		.value("YIELD_PRODUCTION", YIELD_PRODUCTION)
 		.value("YIELD_COMMERCE", YIELD_COMMERCE)
-		.value("NUM_YIELD_TYPES", NUM_YIELD_TYPES)
-		;
+		.value("NUM_YIELD_TYPES", NUM_YIELD_TYPES);
 
 	python::enum_<CommerceTypes>("CommerceTypes")
 		.value("COMMERCE_GOLD", COMMERCE_GOLD)
 		.value("COMMERCE_RESEARCH", COMMERCE_RESEARCH)
 		.value("COMMERCE_CULTURE", COMMERCE_CULTURE)
 		.value("COMMERCE_ESPIONAGE", COMMERCE_ESPIONAGE)
-		.value("NUM_COMMERCE_TYPES", NUM_COMMERCE_TYPES)
-		;
+		.value("NUM_COMMERCE_TYPES", NUM_COMMERCE_TYPES);
 
 	python::enum_<AdvisorTypes>("AdvisorTypes")
-		.value("NO_ADVISOR", NO_ADVISOR)
-		;
+		.value("NO_ADVISOR", NO_ADVISOR);
 
 	python::enum_<FlavorTypes>("FlavorTypes")
-		.value("NO_FLAVOR", NO_FLAVOR)
-		;
+		.value("NO_FLAVOR", NO_FLAVOR);
 
 	python::enum_<EmphasizeTypes>("EmphasizeTypes")
-		.value("NO_EMPHASIZE", NO_EMPHASIZE)
-		;
+		.value("NO_EMPHASIZE", NO_EMPHASIZE);
 
 	python::enum_<GameOptionTypes>("GameOptionTypes")
 		.value("NO_GAMEOPTION", NO_GAMEOPTION)
@@ -613,9 +582,9 @@ void CyEnumsPythonInterface()
 		.value("GAMEOPTION_NO_GOODY_HUTS", GAMEOPTION_NO_GOODY_HUTS)
 		.value("GAMEOPTION_NO_EVENTS", GAMEOPTION_NO_EVENTS)
 		.value("GAMEOPTION_NO_ESPIONAGE", GAMEOPTION_NO_ESPIONAGE)
-// RevolutionDCM - BarbarianWorld - thanks Kael
+		// RevolutionDCM - BarbarianWorld - thanks Kael
 		.value("GAMEOPTION_BARBARIAN_WORLD", GAMEOPTION_BARBARIAN_WORLD)
-// RevolutionDCM End
+		// RevolutionDCM End
 
 		/********************************************************************************/
 		/**		REVOLUTION_MOD							5/27/08				jdog5000	*/
@@ -631,12 +600,12 @@ void CyEnumsPythonInterface()
 		/********************************************************************************/
 		/**		REVOLUTION_MOD							END								*/
 		/********************************************************************************/
-		
-/************************************************************************************************/
-/* Afforess			 		Last Update: 7/21/10                                                */
-/*                              New Gameoptions                                                 */
-/*                                                                                              */
-/************************************************************************************************/
+
+		/************************************************************************************************/
+		/* Afforess			 		Last Update: 7/21/10                                                */
+		/*                              New Gameoptions                                                 */
+		/*                                                                                              */
+		/************************************************************************************************/
 		.value("GAMEOPTION_MOUNTAINS", GAMEOPTION_MOUNTAINS)
 		.value("GAMEOPTION_SAD", GAMEOPTION_SAD)
 		.value("GAMEOPTION_ADVANCED_DIPLOMACY", GAMEOPTION_ADVANCED_DIPLOMACY)
@@ -719,9 +688,9 @@ void CyEnumsPythonInterface()
 		.value("GAMEOPTION_DANGEROUS_WILDLIFE", GAMEOPTION_DANGEROUS_WILDLIFE)
 		.value("GAMEOPTION_HISTORICAL_WONDERS", GAMEOPTION_HISTORICAL_WONDERS)
 #endif
-/************************************************************************************************/
-/*C2C                                     End                                                */
-/************************************************************************************************/		
+		/************************************************************************************************/
+		/*C2C                                     End                                                */
+		/************************************************************************************************/
 
 		//.value("NUM_GAMEOPTION_TYPES", NUM_GAMEOPTION_TYPES)
 		;
@@ -733,14 +702,12 @@ void CyEnumsPythonInterface()
 		.value("MPOPTION_SHUFFLE_TEAMS", MPOPTION_SHUFFLE_TEAMS)
 		.value("MPOPTION_ANONYMOUS", MPOPTION_ANONYMOUS)
 		.value("MPOPTION_TURN_TIMER", MPOPTION_TURN_TIMER)
-		.value("NUM_MPOPTION_TYPES", NUM_MPOPTION_TYPES)
-		;
+		.value("NUM_MPOPTION_TYPES", NUM_MPOPTION_TYPES);
 
 	python::enum_<SpecialOptionTypes>("SpecialOptionTypes")
 		.value("NO_SPECIALOPTION", NO_SPECIALOPTION)
 		.value("SPECIALOPTION_REPORT_STATS", SPECIALOPTION_REPORT_STATS)
-		.value("NUM_SPECIALOPTION_TYPES", NUM_SPECIALOPTION_TYPES)
-		;
+		.value("NUM_SPECIALOPTION_TYPES", NUM_SPECIALOPTION_TYPES);
 
 	python::enum_<PlayerOptionTypes>("PlayerOptionTypes")
 		.value("NO_PLAYEROPTION", NO_PLAYEROPTION)
@@ -766,8 +733,7 @@ void CyEnumsPythonInterface()
 		.value("PLAYEROPTION_MODDER_1", PLAYEROPTION_MODDER_1)
 		.value("PLAYEROPTION_MODDER_2", PLAYEROPTION_MODDER_2)
 		.value("PLAYEROPTION_MODDER_3", PLAYEROPTION_MODDER_3)
-		.value("NUM_PLAYEROPTION_TYPES", NUM_PLAYEROPTION_TYPES)
-		;
+		.value("NUM_PLAYEROPTION_TYPES", NUM_PLAYEROPTION_TYPES);
 
 	python::enum_<GraphicOptionTypes>("GraphicOptionTypes")
 		.value("NO_GRAPHICOPTION", NO_GRAPHICOPTION)
@@ -784,8 +750,7 @@ void CyEnumsPythonInterface()
 		.value("GRAPHICOPTION_HIRES_TERRAIN", GRAPHICOPTION_HIRES_TERRAIN)
 		.value("GRAPHICOPTION_NO_MOVIES", GRAPHICOPTION_NO_MOVIES)
 		.value("GRAPHICOPTION_CITY_RADIUS", GRAPHICOPTION_CITY_RADIUS)
-		.value("NUM_GRAPHICOPTION_TYPES", NUM_GRAPHICOPTION_TYPES)
-		;
+		.value("NUM_GRAPHICOPTION_TYPES", NUM_GRAPHICOPTION_TYPES);
 
 	python::enum_<ForceControlTypes>("ForceControlTypes")
 		.value("NO_FORCECONTROL", NO_FORCECONTROL)
@@ -796,48 +761,37 @@ void CyEnumsPythonInterface()
 		.value("FORCECONTROL_MAX_TURNS", FORCECONTROL_MAX_TURNS)
 		.value("FORCECONTROL_MAX_CITY_ELIMINATIONS", FORCECONTROL_MAX_CITY_ELIMINATION)
 		.value("FORCECONTROL_ADVANCED_START", FORCECONTROL_ADVANCED_START)
-		.value("NUM_FORCECONTROL_TYPES", NUM_FORCECONTROL_TYPES)
-		;
+		.value("NUM_FORCECONTROL_TYPES", NUM_FORCECONTROL_TYPES);
 
 	python::enum_<VictoryTypes>("VictoryTypes")
-		.value("NO_VICTORY", NO_VICTORY)
-		;
+		.value("NO_VICTORY", NO_VICTORY);
 
 	python::enum_<FeatureTypes>("FeatureTypes")
-		.value("NO_FEATURE", NO_FEATURE)
-		;
+		.value("NO_FEATURE", NO_FEATURE);
 
 	python::enum_<BonusTypes>("BonusTypes")
-		.value("NO_BONUS", NO_BONUS)
-		;
+		.value("NO_BONUS", NO_BONUS);
 
 	python::enum_<BonusClassTypes>("BonusClassTypes")
-		.value("NO_BONUSCLASS", NO_BONUSCLASS)
-		;
+		.value("NO_BONUSCLASS", NO_BONUSCLASS);
 
 	python::enum_<ImprovementTypes>("ImprovementTypes")
-		.value("NO_IMPROVEMENT", NO_IMPROVEMENT)
-		;
+		.value("NO_IMPROVEMENT", NO_IMPROVEMENT);
 
 	python::enum_<RouteTypes>("RouteTypes")
-		.value("NO_ROUTE", NO_ROUTE)
-		;
+		.value("NO_ROUTE", NO_ROUTE);
 
 	python::enum_<RiverTypes>("RiverTypes")
-		.value("NO_RIVER", NO_RIVER)
-		;
+		.value("NO_RIVER", NO_RIVER);
 
 	python::enum_<GoodyTypes>("GoodyTypes")
-		.value("NO_GOODY", NO_GOODY)
-		;
+		.value("NO_GOODY", NO_GOODY);
 
 	python::enum_<BuildTypes>("BuildTypes")
-		.value("NO_BUILD", NO_BUILD)
-		;
+		.value("NO_BUILD", NO_BUILD);
 
 	python::enum_<SymbolTypes>("SymbolTypes")
-		.value("NO_SYMBOL", NO_SYMBOL)
-		;
+		.value("NO_SYMBOL", NO_SYMBOL);
 
 	python::enum_<FontSymbols>("FontSymbols")
 		.value("HAPPY_CHAR", HAPPY_CHAR)
@@ -863,11 +817,11 @@ void CyEnumsPythonInterface()
 		.value("MAP_CHAR", MAP_CHAR)
 		.value("OCCUPATION_CHAR", OCCUPATION_CHAR)
 		.value("POWER_CHAR", POWER_CHAR)
-// BUG - start
+		// BUG - start
 		.value("CITIZEN_CHAR", CITIZEN_CHAR)
 		.value("GREAT_GENERAL_CHAR", GREAT_GENERAL_CHAR)
 		.value("AIRPORT_CHAR", AIRPORT_CHAR)
-// BUG - end
+		// BUG - end
 		.value("ANGRY_CIV_CHAR", ANGRY_CIV_CHAR)
 		.value("UNHAPPY_CIV_CHAR", UNHAPPY_CIV_CHAR)
 		.value("NORMAL_CIV_CHAR", NORMAL_CIV_CHAR)
@@ -876,78 +830,62 @@ void CyEnumsPythonInterface()
 		.value("CROSSED_CHAR", CROSSED_CHAR)
 		.value("RANDOM_CHAR", RANDOM_CHAR)
 
-		.value("MAX_NUM_SYMBOLS", MAX_NUM_SYMBOLS)
-		;
+		.value("MAX_NUM_SYMBOLS", MAX_NUM_SYMBOLS);
 
 	python::enum_<HandicapTypes>("HandicapTypes")
-		.value("NO_HANDICAP", NO_HANDICAP)
-		;
+		.value("NO_HANDICAP", NO_HANDICAP);
 
 	python::enum_<GameSpeedTypes>("GameSpeedTypes")
-		.value("NO_GAMESPEED", NO_GAMESPEED)
-		;
+		.value("NO_GAMESPEED", NO_GAMESPEED);
 
 	python::enum_<TurnTimerTypes>("TurnTimerTypes")
-		.value("NO_TURNTIMER", NO_TURNTIMER)
-		;
+		.value("NO_TURNTIMER", NO_TURNTIMER);
 
 	python::enum_<EraTypes>("EraTypes")
-		.value("NO_ERA", NO_ERA)
-		;
+		.value("NO_ERA", NO_ERA);
 
 	python::enum_<CivilizationTypes>("CivilizationTypes")
-		.value("NO_CIVILIZATION", NO_CIVILIZATION)
-		;
+		.value("NO_CIVILIZATION", NO_CIVILIZATION);
 
 	python::enum_<LeaderHeadTypes>("LeaderHeadTypes")
-		.value("NO_LEADER", NO_LEADER)
-		;
+		.value("NO_LEADER", NO_LEADER);
 
 	python::enum_<ArtStyleTypes>("ArtStyleTypes")
-		.value("NO_ARTSTYLE", NO_ARTSTYLE)
-		;
+		.value("NO_ARTSTYLE", NO_ARTSTYLE);
 
 	python::enum_<CitySizeTypes>("CitySizeTypes")
 		.value("NO_CITYSIZE", NO_CITYSIZE)
 		.value("CITYSIZE_SMALL", CITYSIZE_SMALL)
 		.value("CITYSIZE_MEDIUM", CITYSIZE_MEDIUM)
 		.value("CITYSIZE_LARGE", CITYSIZE_LARGE)
-		.value("NUM_CITYSIZE_TYPES", NUM_CITYSIZE_TYPES)
-		;
+		.value("NUM_CITYSIZE_TYPES", NUM_CITYSIZE_TYPES);
 
 	python::enum_<FootstepAudioTypes>("FootstepAudioTypes")
-		.value("NO_FOOTSTEPAUDIO", NO_FOOTSTEPAUDIO)
-		;
+		.value("NO_FOOTSTEPAUDIO", NO_FOOTSTEPAUDIO);
 
 	python::enum_<FootstepAudioTags>("FootstepAudioTags")
-		.value("NO_FOOTSTEPAUDIO_TAG", NO_FOOTSTEPAUDIO_TAG)
-		;
+		.value("NO_FOOTSTEPAUDIO_TAG", NO_FOOTSTEPAUDIO_TAG);
 
 	python::enum_<ChatTargetTypes>("ChatTargetTypes")
 		.value("NO_CHATTARGET", NO_CHATTARGET)
 		.value("CHATTARGET_ALL", CHATTARGET_ALL)
-		.value("CHATTARGET_TEAM", CHATTARGET_TEAM)
-		;
+		.value("CHATTARGET_TEAM", CHATTARGET_TEAM);
 
 	python::enum_<VoiceTargetTypes>("VoiceTargetTypes")
 		.value("NO_VOICETARGET", NO_VOICETARGET)
 		.value("VOICETARGET_DIPLO", VOICETARGET_DIPLO)
 		.value("VOICETARGET_TEAM", VOICETARGET_TEAM)
 		.value("VOICETARGET_ALL", VOICETARGET_ALL)
-		.value("NUM_VOICETARGETS", NUM_VOICETARGETS)
-		;
+		.value("NUM_VOICETARGETS", NUM_VOICETARGETS);
 
 	python::enum_<TeamTypes>("TeamTypes")
-		.value("NO_TEAM", NO_TEAM)
-		;
+		.value("NO_TEAM", NO_TEAM);
 
 	python::enum_<PlayerTypes>("PlayerTypes")
-		.value("NO_PLAYER", NO_PLAYER)
-		;
+		.value("NO_PLAYER", NO_PLAYER);
 
 	python::enum_<TraitTypes>("TraitTypes")
-		.value("NO_TRAIT", NO_TRAIT)
-		;
+		.value("NO_TRAIT", NO_TRAIT);
 
 	python::enum_<OrderTypes>("OrderTypes")
 		.value("NO_ORDER", NO_ORDER)
@@ -956,8 +894,7 @@ void CyEnumsPythonInterface()
 		.value("ORDER_CREATE", ORDER_CREATE)
 		.value("ORDER_MAINTAIN", ORDER_MAINTAIN)
 		.value("ORDER_LIST", ORDER_LIST)
-		.value("NUM_ORDER_TYPES", NUM_ORDER_TYPES)
-		;
+		.value("NUM_ORDER_TYPES", NUM_ORDER_TYPES);
 
 	python::enum_<TaskTypes>("TaskTypes")
 		.value("TASK_RAZE", TASK_RAZE)
@@ -977,32 +914,25 @@ void CyEnumsPythonInterface()
 		.value("TASK_LIBERATE", TASK_LIBERATE)
 		.value("TASK_EMPHASIZE_SPECIALIST", TASK_EMPHASIZE_SPECIALIST)
 		.value("TASK_KEEP", TASK_KEEP)
-		.value("NUM_TASK_TYPES", NUM_TASK_TYPES)
-		;
+		.value("NUM_TASK_TYPES", NUM_TASK_TYPES);
 
 	python::enum_<BuildingClassTypes>("BuildingClassTypes")
-		.value("NO_BUILDINGCLASS", NO_BUILDINGCLASS)
-		;
+		.value("NO_BUILDINGCLASS", NO_BUILDINGCLASS);
 
 	python::enum_<BuildingTypes>("BuildingTypes")
-		.value("NO_BUILDING", NO_BUILDING)
-		;
+		.value("NO_BUILDING", NO_BUILDING);
 
 	python::enum_<SpecialBuildingTypes>("SpecialBuildingTypes")
-		.value("NO_SPECIALBUILDING", NO_SPECIALBUILDING)
-		;
+		.value("NO_SPECIALBUILDING", NO_SPECIALBUILDING);
 
 	python::enum_<ProjectTypes>("ProjectTypes")
-		.value("NO_PROJECT", NO_PROJECT)
-		;
+		.value("NO_PROJECT", NO_PROJECT);
 
 	python::enum_<ProcessTypes>("ProcessTypes")
-		.value("NO_PROCESS", NO_PROCESS)
-		;
+		.value("NO_PROCESS", NO_PROCESS);
 
 	python::enum_<VoteTypes>("VoteTypes")
-		.value("NO_VOTE", NO_VOTE)
-		;
+		.value("NO_VOTE", NO_VOTE);
 
 	python::enum_<PlayerVoteTypes>("PlayerVoteTypes")
 		.value("NO_PLAYER_VOTE_CHECKED", NO_PLAYER_VOTE_CHECKED)
@@ -1010,53 +940,46 @@ void CyEnumsPythonInterface()
 		.value("PLAYER_VOTE_ABSTAIN", PLAYER_VOTE_ABSTAIN)
 		.value("PLAYER_VOTE_NO", PLAYER_VOTE_NO)
 		.value("PLAYER_VOTE_YES", PLAYER_VOTE_YES)
-		.value("NO_PLAYER_VOTE", NO_PLAYER_VOTE)
-		;
+		.value("NO_PLAYER_VOTE", NO_PLAYER_VOTE);
 
 	python::enum_<InfoBarTypes>("InfoBarTypes")
 		.value("INFOBAR_STORED", INFOBAR_STORED)
 		.value("INFOBAR_RATE", INFOBAR_RATE)
 		.value("INFOBAR_RATE_EXTRA", INFOBAR_RATE_EXTRA)
 		.value("INFOBAR_EMPTY", INFOBAR_EMPTY)
-		.value("NUM_INFOBAR_TYPES", NUM_INFOBAR_TYPES)
-		;
+		.value("NUM_INFOBAR_TYPES", NUM_INFOBAR_TYPES);
 
 	python::enum_<HealthBarTypes>("HealthBarTypes")
 		.value("HEALTHBAR_ALIVE_ATTACK", HEALTHBAR_ALIVE_ATTACK)
 		.value("HEALTHBAR_ALIVE_DEFEND", HEALTHBAR_ALIVE_DEFEND)
 		.value("HEALTHBAR_DEAD", HEALTHBAR_DEAD)
-		.value("NUM_HEALTHBAR_TYPES", NUM_HEALTHBAR_TYPES)
-		;
+		.value("NUM_HEALTHBAR_TYPES", NUM_HEALTHBAR_TYPES);
 
 	python::enum_<ConceptTypes>("ConceptTypes")
-		.value("NO_CONCEPT", NO_CONCEPT)
-		;
+		.value("NO_CONCEPT", NO_CONCEPT);
 
 	python::enum_<NewConceptTypes>("NewConceptTypes")
-		.value("NO_NEW_CONCEPT", NO_NEW_CONCEPT)
-		;
+		.value("NO_NEW_CONCEPT", NO_NEW_CONCEPT);
 
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-// Dale - DCM: Pedia Concepts START
+	/************************************************************************************************/
+	/* DCM                                     04/19/09                                Johny Smith  */
+	/************************************************************************************************/
+	// Dale - DCM: Pedia Concepts START
 	python::enum_<DCMConceptTypes>("DCMConceptTypes")
-		.value("NO_DCM_CONCEPT", NO_DCM_CONCEPT)
-		;
-// Dale - DCM: Pedia Concepts END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
+		.value("NO_DCM_CONCEPT", NO_DCM_CONCEPT);
+	// Dale - DCM: Pedia Concepts END
+	/************************************************************************************************/
+	/* DCM                                     END                                                  */
+	/************************************************************************************************/
 
-/************************************************************************************************/
-/* Afforess                                     11/13/09                                        */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* Afforess                                     11/13/09                                        */
+	/************************************************************************************************/
 	python::enum_<ANDConceptTypes>("ANDConceptTypes")
-		.value("NO_AND_CONCEPT", NO_AND_CONCEPT)
-		;
-/************************************************************************************************/
-/* Afforess                                END                                                  */
-/************************************************************************************************/
+		.value("NO_AND_CONCEPT", NO_AND_CONCEPT);
+	/************************************************************************************************/
+	/* Afforess                                END                                                  */
+	/************************************************************************************************/
 	python::enum_<CalendarTypes>("CalendarTypes")
 		.value("CALENDAR_DEFAULT", CALENDAR_DEFAULT)
 		.value("CALENDAR_BI_YEARLY", CALENDAR_BI_YEARLY)
@@ -1065,16 +988,13 @@ void CyEnumsPythonInterface()
 		.value("CALENDAR_SEASONS", CALENDAR_SEASONS)
 		.value("CALENDAR_MONTHS", CALENDAR_MONTHS)
 		.value("CALENDAR_WEEKS", CALENDAR_WEEKS)
-		.value("CALENDAR_NO_SEASONS", CALENDAR_NO_SEASONS)
-		;
+		.value("CALENDAR_NO_SEASONS", CALENDAR_NO_SEASONS);
 
 	python::enum_<SeasonTypes>("SeasonTypes")
-		.value("NO_SEASON", NO_SEASON)
-		;
+		.value("NO_SEASON", NO_SEASON);
 
 	python::enum_<MonthTypes>("MonthTypes")
-		.value("NO_MONTH", NO_MONTH)
-		;
+		.value("NO_MONTH", NO_MONTH);
 
 	python::enum_<DenialTypes>("DenialTypes")
 		.value("NO_DENIAL", NO_DENIAL)
@@ -1101,54 +1021,43 @@ void CyEnumsPythonInterface()
 		.value("DENIAL_RECENT_CANCEL", DENIAL_RECENT_CANCEL)
 		.value("DENIAL_WORST_ENEMY", DENIAL_WORST_ENEMY)
 		.value("DENIAL_POWER_YOUR_ENEMIES", DENIAL_POWER_YOUR_ENEMIES)
-		.value("DENIAL_TOO_FAR", DENIAL_TOO_FAR)
-		;
+		.value("DENIAL_TOO_FAR", DENIAL_TOO_FAR);
 
 	python::enum_<DomainTypes>("DomainTypes")
 		.value("DOMAIN_SEA", DOMAIN_SEA)
 		.value("DOMAIN_AIR", DOMAIN_AIR)
 		.value("DOMAIN_LAND", DOMAIN_LAND)
 		.value("DOMAIN_IMMOBILE", DOMAIN_IMMOBILE)
-		.value("NUM_DOMAIN_TYPES", NUM_DOMAIN_TYPES)
-		;
+		.value("NUM_DOMAIN_TYPES", NUM_DOMAIN_TYPES);
 
 	python::enum_<UnitClassTypes>("UnitClassTypes")
-		.value("NO_UNITCLASS", NO_UNITCLASS)
-		;
+		.value("NO_UNITCLASS", NO_UNITCLASS);
 
 	python::enum_<UnitTypes>("UnitTypes")
-		.value("NO_UNIT", NO_UNIT)
-		;
+		.value("NO_UNIT", NO_UNIT);
 
 	python::enum_<SpecialUnitTypes>("SpecialUnitTypes")
-		.value("NO_SPECIALUNIT", NO_SPECIALUNIT)
-		;
+		.value("NO_SPECIALUNIT", NO_SPECIALUNIT);
 
 	python::enum_<UnitCombatTypes>("UnitCombatTypes")
-		.value("NO_UNITCOMBAT", NO_UNITCOMBAT)
-		;
+		.value("NO_UNITCOMBAT", NO_UNITCOMBAT);
 
 	//TB Promotion Line Mod begin
 	python::enum_<PromotionLineTypes>("PromotionLineTypes")
-		.value("NO_PROMOTIONLINE", NO_PROMOTIONLINE)
-		;
+		.value("NO_PROMOTIONLINE", NO_PROMOTIONLINE);
 	//TB Promotion Line Mod end
 
 	python::enum_<MapCategoryTypes>("MapCategoryTypes")
-		.value("NO_MAPCATEGORY", NO_MAPCATEGORY)
-		;
+		.value("NO_MAPCATEGORY", NO_MAPCATEGORY);
 
 	python::enum_<IdeaClassTypes>("IdeaClassTypes")
-		.value("NO_IDEACLASS", NO_IDEACLASS)
-		;
+		.value("NO_IDEACLASS", NO_IDEACLASS);
 
 	python::enum_<IdeaTypes>("IdeaTypes")
-		.value("NO_IDEA", NO_IDEA)
-		;
+		.value("NO_IDEA", NO_IDEA);
 
 	python::enum_<TraitOptionEditsTypes>("TraitOptionEditsTypes")
-		.value("NO_TRAITOPTIONEDITS", NO_TRAITOPTIONEDIT)
-		;
+		.value("NO_TRAITOPTIONEDITS", NO_TRAITOPTIONEDIT);
 
 	python::enum_<UnitAITypes>("UnitAITypes")
 		.value("NO_UNITAI", NO_UNITAI)
@@ -1201,23 +1110,19 @@ void CyEnumsPythonInterface()
 		.value("UNITAI_PROPERTY_CONTROL_SEA", UNITAI_PROPERTY_CONTROL_SEA)
 		.value("UNITAI_HEALER_SEA", UNITAI_HEALER_SEA)
 		.value("UNITAI_HUNTER_ESCORT", UNITAI_HUNTER_ESCORT)
-		.value("NUM_UNITAI_TYPES", NUM_UNITAI_TYPES)
-		;
+		.value("NUM_UNITAI_TYPES", NUM_UNITAI_TYPES);
 
 	python::enum_<InvisibleTypes>("InvisibleTypes")
-		.value("NO_INVISIBLE", NO_INVISIBLE)
-		;
+		.value("NO_INVISIBLE", NO_INVISIBLE);
 
 	python::enum_<VoteSourceTypes>("VoteSourceTypes")
-		.value("NO_VOTESOURCE", NO_VOTESOURCE)
-		;
+		.value("NO_VOTESOURCE", NO_VOTESOURCE);
 
 	python::enum_<ProbabilityTypes>("ProbabilityTypes")
 		.value("NO_PROBABILITY", NO_PROBABILITY)
 		.value("PROBABILITY_LOW", PROBABILITY_LOW)
 		.value("PROBABILITY_REAL", PROBABILITY_REAL)
-		.value("PROBABILITY_HIGH", PROBABILITY_HIGH)
-		;
+		.value("PROBABILITY_HIGH", PROBABILITY_HIGH);
 
 	python::enum_<ActivityTypes>("ActivityTypes")
 		.value("NO_ACTIVITY", NO_ACTIVITY)
@@ -1236,9 +1141,8 @@ void CyEnumsPythonInterface()
 		.value("ACTIVITY_SENTRY_NAVAL_UNITS", ACTIVITY_SENTRY_NAVAL_UNITS)
 		.value("ACTIVITY_SENTRY_LAND_UNITS", ACTIVITY_SENTRY_LAND_UNITS)
 #endif
-// BUG - Sentry Actions - end
-		.value("NUM_ACTIVITY_TYPES", NUM_ACTIVITY_TYPES)
-		;
+		// BUG - Sentry Actions - end
+		.value("NUM_ACTIVITY_TYPES", NUM_ACTIVITY_TYPES);
 
 	python::enum_<AutomateTypes>("AutomateTypes")
 		.value("NO_AUTOMATE", NO_AUTOMATE)
@@ -1247,11 +1151,11 @@ void CyEnumsPythonInterface()
 		.value("AUTOMATE_CITY", AUTOMATE_CITY)
 		.value("AUTOMATE_EXPLORE", AUTOMATE_EXPLORE)
 		.value("AUTOMATE_RELIGION", AUTOMATE_RELIGION)
-/************************************************************************************************/
-/* Afforess	                  Start		 09/16/10                                               */
-/*                                                                                              */
-/* Advanced Automations                                                                         */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                  Start		 09/16/10                                               */
+		/*                                                                                              */
+		/* Advanced Automations                                                                         */
+		/************************************************************************************************/
 		.value("AUTOMATE_PILLAGE", AUTOMATE_PILLAGE)
 		.value("AUTOMATE_HUNT", AUTOMATE_HUNT)
 		.value("AUTOMATE_CITY_DEFENSE", AUTOMATE_CITY_DEFENSE)
@@ -1266,11 +1170,10 @@ void CyEnumsPythonInterface()
 		.value("AUTOMATE_PROMOTIONS", AUTOMATE_PROMOTIONS)
 		.value("AUTOMATE_CANCEL_PROMOTIONS", AUTOMATE_CANCEL_PROMOTIONS)
 		.value("AUTOMATE_SHADOW", AUTOMATE_SHADOW)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-		.value("NUM_AUTOMATE_TYPES", NUM_AUTOMATE_TYPES)
-		;
+		/************************************************************************************************/
+		/* Afforess	                     END                                                            */
+		/************************************************************************************************/
+		.value("NUM_AUTOMATE_TYPES", NUM_AUTOMATE_TYPES);
 
 	python::enum_<MissionTypes>("MissionTypes")
 		.value("NO_MISSION", NO_MISSION)
@@ -1318,25 +1221,25 @@ void CyEnumsPythonInterface()
 		.value("MISSION_SENTRY_LAND_UNITS", MISSION_SENTRY_LAND_UNITS)
 		.value("MISSION_MOVE_TO_SENTRY", MISSION_MOVE_TO_SENTRY)
 #endif
-// BUG - Sentry Actions - end
+		// BUG - Sentry Actions - end
 		.value("MISSION_GOLDEN_AGE", MISSION_GOLDEN_AGE)
 		.value("MISSION_BUILD", MISSION_BUILD)
-		.value("MISSION_BEGIN_COMBAT", MISSION_BEGIN_COMBAT )
-		.value("MISSION_END_COMBAT", MISSION_END_COMBAT )
-		.value("MISSION_AIRSTRIKE", MISSION_AIRSTRIKE )
-		.value("MISSION_SURRENDER", MISSION_SURRENDER )
-		.value("MISSION_CAPTURED", MISSION_CAPTURED )
-		.value("MISSION_IDLE", MISSION_IDLE )
-		.value("MISSION_DIE", MISSION_DIE )
-		.value("MISSION_DAMAGE", MISSION_DAMAGE )
-		.value("MISSION_MULTI_SELECT", MISSION_MULTI_SELECT )
-		.value("MISSION_MULTI_DESELECT", MISSION_MULTI_DESELECT )
+		.value("MISSION_BEGIN_COMBAT", MISSION_BEGIN_COMBAT)
+		.value("MISSION_END_COMBAT", MISSION_END_COMBAT)
+		.value("MISSION_AIRSTRIKE", MISSION_AIRSTRIKE)
+		.value("MISSION_SURRENDER", MISSION_SURRENDER)
+		.value("MISSION_CAPTURED", MISSION_CAPTURED)
+		.value("MISSION_IDLE", MISSION_IDLE)
+		.value("MISSION_DIE", MISSION_DIE)
+		.value("MISSION_DAMAGE", MISSION_DAMAGE)
+		.value("MISSION_MULTI_SELECT", MISSION_MULTI_SELECT)
+		.value("MISSION_MULTI_DESELECT", MISSION_MULTI_DESELECT)
 		//TSHEEP Assassin Mission
 		//.value("MISSION_ASSASSIN", MISSION_ASSASSIN)
 		//TSHEEP End
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* DCM                                     04/19/09                                Johny Smith  */
+		/************************************************************************************************/
 		.value("MISSION_AIRBOMB1", MISSION_AIRBOMB1)
 		.value("MISSION_AIRBOMB2", MISSION_AIRBOMB2)
 		.value("MISSION_AIRBOMB3", MISSION_AIRBOMB3)
@@ -1344,11 +1247,11 @@ void CyEnumsPythonInterface()
 		.value("MISSION_AIRBOMB5", MISSION_AIRBOMB5)
 		.value("MISSION_ABOMBARD", MISSION_ABOMBARD)
 		.value("MISSION_FENGAGE", MISSION_FENGAGE)
-/************************************************************************************************/
-/* Afforess	                  Start		 06/11/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                  Start		 06/11/10                                               */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
 		.value("MISSION_HURRY_FOOD", MISSION_HURRY_FOOD)
 		.value("MISSION_INQUISITION", MISSION_INQUISITION)
 		.value("MISSION_CLAIM_TERRITORY", MISSION_CLAIM_TERRITORY)
@@ -1356,12 +1259,12 @@ void CyEnumsPythonInterface()
 		.value("MISSION_GREAT_COMMANDER", MISSION_GREAT_COMMANDER)
 		.value("MISSION_SHADOW", MISSION_SHADOW)
 		.value("MISSION_WAIT_FOR_TECH", MISSION_WAIT_FOR_TECH)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                     END                                                            */
+		/************************************************************************************************/
+		/************************************************************************************************/
+		/* DCM                                     END                                                  */
+		/************************************************************************************************/
 		// < M.A.D. Nukes Start >
 		.value("MISSION_PRETARGET_NUKE", MISSION_PRETARGET_NUKE)
 		.value("MISSION_BUTCHER", MISSION_BUTCHER)
@@ -1398,8 +1301,7 @@ void CyEnumsPythonInterface()
 		.value("MISSION_ANIMAL_COMBAT", MISSION_ANIMAL_COMBAT)
 		.value("MISSION_ANIMAL_STUDY", MISSION_ANIMAL_STUDY)
 		.value("MISSION_ANIMAL_SACRIFICE", MISSION_ANIMAL_SACRIFICE)
-		.value("MISSION_BUILD_DOMESTICATED_HERD", MISSION_BUILD_DOMESTICATED_HERD)
-		;
+		.value("MISSION_BUILD_DOMESTICATED_HERD", MISSION_BUILD_DOMESTICATED_HERD);
 
 	python::enum_<MissionAITypes>("MissionAITypes")
 		.value("NO_MISSIONAI", NO_MISSIONAI)
@@ -1426,17 +1328,17 @@ void CyEnumsPythonInterface()
 		.value("MISSIONAI_ASSAULT", MISSIONAI_ASSAULT)
 		.value("MISSIONAI_CARRIER", MISSIONAI_CARRIER)
 		.value("MISSIONAI_PICKUP", MISSIONAI_PICKUP)
-/************************************************************************************************/
-/* Afforess	                  Start		 02/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                  Start		 02/14/10                                               */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
 		.value("MISSIONAI_CLAIM_TERRITORY", MISSIONAI_CLAIM_TERRITORY)
 		.value("MISSIONAI_HURRY_FOOD", MISSIONAI_HURRY_FOOD)
 		.value("MISSIONAI_INQUISITION", MISSIONAI_INQUISITION)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                     END                                                            */
+		/************************************************************************************************/
 		;
 
 	// any additions need to be reflected in GlobalTypes.xml
@@ -1462,8 +1364,7 @@ void CyEnumsPythonInterface()
 		.value("COMMAND_STATUS", COMMAND_STATUS)
 		.value("COMMAND_ARREST", COMMAND_ARREST)
 		.value("COMMAND_AMBUSH", COMMAND_AMBUSH)
-		.value("NUM_COMMAND_TYPES", NUM_COMMAND_TYPES)
-		;
+		.value("NUM_COMMAND_TYPES", NUM_COMMAND_TYPES);
 
 	python::enum_<ControlTypes>("ControlTypes")
 		.value("NO_CONTROL", NO_CONTROL)
@@ -1531,48 +1432,37 @@ void CyEnumsPythonInterface()
 		.value("CONTROL_ESPIONAGE_SCREEN", CONTROL_ESPIONAGE_SCREEN)
 		.value("CONTROL_FREE_COLONY", CONTROL_FREE_COLONY)
 
-		.value("NUM_CONTROL_TYPES", NUM_CONTROL_TYPES)
-		;
+		.value("NUM_CONTROL_TYPES", NUM_CONTROL_TYPES);
 
 	python::enum_<PromotionTypes>("PromotionTypes")
-		.value("NO_PROMOTION", NO_PROMOTION)
-		;
+		.value("NO_PROMOTION", NO_PROMOTION);
 
 	python::enum_<TechTypes>("TechTypes")
-		.value("NO_TECH", NO_TECH)
-		;
+		.value("NO_TECH", NO_TECH);
 
 	python::enum_<SpecialistTypes>("SpecialistTypes")
-		.value("NO_SPECIALIST", NO_SPECIALIST)
-		;
+		.value("NO_SPECIALIST", NO_SPECIALIST);
 
 	python::enum_<ReligionTypes>("ReligionTypes")
-		.value("NO_RELIGION", NO_RELIGION)
-		;
+		.value("NO_RELIGION", NO_RELIGION);
 
 	python::enum_<CorporationTypes>("CorporationTypes")
-		.value("NO_CORPORATION", NO_CORPORATION)
-		;
+		.value("NO_CORPORATION", NO_CORPORATION);
 
 	python::enum_<HurryTypes>("HurryTypes")
-		.value("NO_HURRY", NO_HURRY)
-		;
+		.value("NO_HURRY", NO_HURRY);
 
 	python::enum_<UpkeepTypes>("UpkeepTypes")
-		.value("NO_UPKEEP", NO_UPKEEP)
-		;
+		.value("NO_UPKEEP", NO_UPKEEP);
 
 	python::enum_<CultureLevelTypes>("CultureLevelTypes")
-		.value("NO_CULTURELEVEL", NO_CULTURELEVEL)
-		;
+		.value("NO_CULTURELEVEL", NO_CULTURELEVEL);
 
 	python::enum_<CivicOptionTypes>("CivicOptionTypes")
-		.value("NO_CIVICOPTION", NO_CIVICOPTION)
-		;
+		.value("NO_CIVICOPTION", NO_CIVICOPTION);
 
 	python::enum_<CivicTypes>("CivicTypes")
-		.value("NO_CIVIC", NO_CIVIC)
-		;
+		.value("NO_CIVIC", NO_CIVIC);
 
 	python::enum_<WarPlanTypes>("WarPlanTypes")
 		.value("NO_WARPLAN", NO_WARPLAN)
@@ -1582,8 +1472,7 @@ void CyEnumsPythonInterface()
 		.value("WARPLAN_PREPARING_TOTAL", WARPLAN_PREPARING_TOTAL)
 		.value("WARPLAN_LIMITED", WARPLAN_LIMITED)
 		.value("WARPLAN_TOTAL", WARPLAN_TOTAL)
-		.value("WARPLAN_DOGPILE", WARPLAN_DOGPILE)
-		;
+		.value("WARPLAN_DOGPILE", WARPLAN_DOGPILE);
 
 	python::enum_<AreaAITypes>("AreaAITypes")
 		.value("NO_AREAAI", NO_AREAAI)
@@ -1591,21 +1480,18 @@ void CyEnumsPythonInterface()
 		.value("AREAAI_DEFENSIVE", AREAAI_DEFENSIVE)
 		.value("AREAAI_MASSING", AREAAI_MASSING)
 		.value("AREAAI_ASSAULT", AREAAI_ASSAULT)
-		.value("AREAAI_NEUTRAL", AREAAI_NEUTRAL)
-		;
+		.value("AREAAI_NEUTRAL", AREAAI_NEUTRAL);
 
 	python::enum_<EndTurnButtonStates>("EndTurnButtonStates")
 		.value("END_TURN_GO", END_TURN_GO)
 		.value("END_TURN_OVER_HIGHLIGHT", END_TURN_OVER_HIGHLIGHT)
 		.value("END_TURN_OVER_DARK", END_TURN_OVER_DARK)
-		.value("NUM_END_TURN_STATES", NUM_END_TURN_STATES)
-		;
+		.value("NUM_END_TURN_STATES", NUM_END_TURN_STATES);
 
 	python::enum_<FogOfWarModeTypes>("FogOfWarModeTypes")
 		.value("FOGOFWARMODE_OFF", FOGOFWARMODE_OFF)
 		.value("FOGOFWARMODE_UNEXPLORED", FOGOFWARMODE_UNEXPLORED)
-		.value("NUM_FOGOFWARMODE_TYPES", NUM_FOGOFWARMODE_TYPES)
-		;
+		.value("NUM_FOGOFWARMODE_TYPES", NUM_FOGOFWARMODE_TYPES);
 
 	python::enum_<AnimationTypes>("AnimationTypes")
 		.value("NONE_ANIMATION", NONE_ANIMATION)
@@ -1618,44 +1504,39 @@ void CyEnumsPythonInterface()
 		.value("IMPROVEMENTANIMATION_ON_EXTRA_1", IMPROVEMENTANIMATION_ON_EXTRA_1)
 		.value("IMPROVEMENTANIMATION_ON_EXTRA_2", IMPROVEMENTANIMATION_ON_EXTRA_2)
 		.value("IMPROVEMENTANIMATION_ON_EXTRA_3", IMPROVEMENTANIMATION_ON_EXTRA_3)
-		.value("IMPROVEMENTANIMATION_ON_EXTRA_4", IMPROVEMENTANIMATION_ON_EXTRA_4)
-		;
+		.value("IMPROVEMENTANIMATION_ON_EXTRA_4", IMPROVEMENTANIMATION_ON_EXTRA_4);
 
 	python::enum_<EntityEventTypes>("EntityEventTypes")
-		.value( "ENTITY_EVENT_NONE", ENTITY_EVENT_NONE )
-		;
+		.value("ENTITY_EVENT_NONE", ENTITY_EVENT_NONE);
 
 	python::enum_<AnimationPathTypes>("AnimationPathTypes")
-		.value( "ANIMATIONPATH_NONE", ANIMATIONPATH_NONE )
-		.value( "ANIMATIONPATH_IDLE", ANIMATIONPATH_IDLE )
-		.value( "ANIMATIONPATH_MOVE", ANIMATIONPATH_MOVE )
-		.value( "ANIMATIONPATH_RANDOMIZE_ANIMATION_SET", ANIMATIONPATH_RANDOMIZE_ANIMATION_SET )
-		.value( "ANIMATIONPATH_NUKE_STRIKE", ANIMATIONPATH_NUKE_STRIKE )
-		.value( "ANIMATIONPATH_MELEE_STRIKE", ANIMATIONPATH_MELEE_STRIKE )
-		.value( "ANIMATIONPATH_MELEE_HURT", ANIMATIONPATH_MELEE_HURT )
-		.value( "ANIMATIONPATH_MELEE_DIE", ANIMATIONPATH_MELEE_DIE )
-		.value( "ANIMATIONPATH_MELEE_FORTIFIED", ANIMATIONPATH_MELEE_FORTIFIED )
-		.value( "ANIMATIONPATH_MELEE_DIE_FADE", ANIMATIONPATH_MELEE_DIE_FADE )
-		.value( "ANIMATIONPATH_RANGED_STRIKE", ANIMATIONPATH_RANGED_STRIKE )
-		.value( "ANIMATIONPATH_RANGED_DIE", ANIMATIONPATH_RANGED_DIE )
-		.value( "ANIMATIONPATH_RANGED_FORTIFIED", ANIMATIONPATH_RANGED_FORTIFIED )
-		.value( "ANIMATIONPATH_RANGED_RUNHIT", ANIMATIONPATH_RANGED_RUNHIT )
-		.value( "ANIMATIONPATH_RANGED_RUNDIE", ANIMATIONPATH_RANGED_RUNDIE )
-		.value( "ANIMATIONPATH_RANGED_DIE_FADE", ANIMATIONPATH_RANGED_DIE_FADE )
-		.value( "ANIMATIONPATH_LEADER_COMMAND", ANIMATIONPATH_LEADER_COMMAND )
-		.value( "ANIMATIONPATH_AIRFADEIN", ANIMATIONPATH_AIRFADEIN )
-		.value( "ANIMATIONPATH_AIRFADEOUT", ANIMATIONPATH_AIRFADEOUT )
-		.value( "ANIMATIONPATH_AIRSTRIKE", ANIMATIONPATH_AIRSTRIKE )
-		.value( "ANIMATIONPATH_AIRBOMB", ANIMATIONPATH_AIRBOMB )
-		;
+		.value("ANIMATIONPATH_NONE", ANIMATIONPATH_NONE)
+		.value("ANIMATIONPATH_IDLE", ANIMATIONPATH_IDLE)
+		.value("ANIMATIONPATH_MOVE", ANIMATIONPATH_MOVE)
+		.value("ANIMATIONPATH_RANDOMIZE_ANIMATION_SET", ANIMATIONPATH_RANDOMIZE_ANIMATION_SET)
+		.value("ANIMATIONPATH_NUKE_STRIKE", ANIMATIONPATH_NUKE_STRIKE)
+		.value("ANIMATIONPATH_MELEE_STRIKE", ANIMATIONPATH_MELEE_STRIKE)
+		.value("ANIMATIONPATH_MELEE_HURT", ANIMATIONPATH_MELEE_HURT)
+		.value("ANIMATIONPATH_MELEE_DIE", ANIMATIONPATH_MELEE_DIE)
+		.value("ANIMATIONPATH_MELEE_FORTIFIED", ANIMATIONPATH_MELEE_FORTIFIED)
+		.value("ANIMATIONPATH_MELEE_DIE_FADE", ANIMATIONPATH_MELEE_DIE_FADE)
+		.value("ANIMATIONPATH_RANGED_STRIKE", ANIMATIONPATH_RANGED_STRIKE)
+		.value("ANIMATIONPATH_RANGED_DIE", ANIMATIONPATH_RANGED_DIE)
+		.value("ANIMATIONPATH_RANGED_FORTIFIED", ANIMATIONPATH_RANGED_FORTIFIED)
+		.value("ANIMATIONPATH_RANGED_RUNHIT", ANIMATIONPATH_RANGED_RUNHIT)
+		.value("ANIMATIONPATH_RANGED_RUNDIE", ANIMATIONPATH_RANGED_RUNDIE)
+		.value("ANIMATIONPATH_RANGED_DIE_FADE", ANIMATIONPATH_RANGED_DIE_FADE)
+		.value("ANIMATIONPATH_LEADER_COMMAND", ANIMATIONPATH_LEADER_COMMAND)
+		.value("ANIMATIONPATH_AIRFADEIN", ANIMATIONPATH_AIRFADEIN)
+		.value("ANIMATIONPATH_AIRFADEOUT", ANIMATIONPATH_AIRFADEOUT)
+		.value("ANIMATIONPATH_AIRSTRIKE", ANIMATIONPATH_AIRSTRIKE)
+		.value("ANIMATIONPATH_AIRBOMB", ANIMATIONPATH_AIRBOMB);
 
 	python::enum_<AnimationCategoryTypes>("AnimationCategoryTypes")
-		.value("ANIMCAT_NONE", ANIMCAT_NONE)
-		;
+		.value("ANIMCAT_NONE", ANIMCAT_NONE);
 
 	python::enum_<CursorTypes>("CursorTypes")
-		.value("NO_CURSOR", NO_CURSOR)
-		;
+		.value("NO_CURSOR", NO_CURSOR);
 
 	python::enum_<TradeableItems>("TradeableItems")
 		.value("NO_TRADEABLE_ITEMS", TRADE_ITEM_NONE)
@@ -1677,11 +1558,11 @@ void CyEnumsPythonInterface()
 		.value("TRADE_EMBARGO", TRADE_EMBARGO)
 		.value("TRADE_CIVIC", TRADE_CIVIC)
 		.value("TRADE_RELIGION", TRADE_RELIGION)
-/************************************************************************************************/
-/* Afforess	                  Start		 06/16/10                                               */
-/*                                                                                              */
-/* Advanced Diplomacy                                                                           */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                  Start		 06/16/10                                               */
+		/*                                                                                              */
+		/* Advanced Diplomacy                                                                           */
+		/************************************************************************************************/
 		.value("TRADE_EMBASSY", TRADE_EMBASSY)
 		.value("TRADE_WORKER", TRADE_WORKER)
 		.value("TRADE_MILITARY_UNIT", TRADE_MILITARY_UNIT)
@@ -1693,12 +1574,11 @@ void CyEnumsPythonInterface()
 		.value("TRADE_PLEDGE_VOTE", TRADE_PLEDGE_VOTE)
 		.value("TRADE_RITE_OF_PASSAGE", TRADE_RITE_OF_PASSAGE)
 		.value("TRADE_FREE_TRADE_ZONE", TRADE_FREE_TRADE_ZONE)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                     END                                                            */
+		/************************************************************************************************/
 		.value("NUM_TRADEABLE_HEADINGS", NUM_TRADEABLE_HEADINGS)
-		.value("NUM_TRADEABLE_ITEMS", NUM_TRADEABLE_ITEMS)
-		;
+		.value("NUM_TRADEABLE_ITEMS", NUM_TRADEABLE_ITEMS);
 
 	python::enum_<DiploEventTypes>("DiploEventTypes")
 		.value("NO_DIPLOEVENT", NO_DIPLOEVENT)
@@ -1723,27 +1603,25 @@ void CyEnumsPythonInterface()
 		.value("DIPLOEVENT_RESEARCH_TECH", DIPLOEVENT_RESEARCH_TECH)
 		.value("DIPLOEVENT_TARGET_CITY", DIPLOEVENT_TARGET_CITY)
 		.value("DIPLOEVENT_MADE_DEMAND_VASSAL", DIPLOEVENT_MADE_DEMAND_VASSAL)
-/************************************************************************************************/
-/* Afforess	                  Start		 02/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                  Start		 02/14/10                                               */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
 		.value("DIPLOEVENT_MAKE_PEACE_WITH", DIPLOEVENT_MAKE_PEACE_WITH)
 		.value("DIPLOEVENT_NO_MAKE_PEACE_WITH", DIPLOEVENT_NO_MAKE_PEACE_WITH)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                     END                                                            */
+		/************************************************************************************************/
 		// RevolutionDCM start - new diplomacy option
 		.value("DIPLOEVENT_DO_NOT_BOTHER", DIPLOEVENT_DO_NOT_BOTHER)
 		.value("DIPLOEVENT_RESUME_BOTHER", DIPLOEVENT_RESUME_BOTHER)
 		// RevolutionDCM end
 
-		.value("NUM_DIPLOEVENT_TYPES", NUM_DIPLOEVENT_TYPES)
-		;
+		.value("NUM_DIPLOEVENT_TYPES", NUM_DIPLOEVENT_TYPES);
 
 	python::enum_<DiploCommentTypes>("DiploCommentTypes")
-		.value("NO_DIPLOCOMMENT", NO_DIPLOCOMMENT)
-		;
+		.value("NO_DIPLOCOMMENT", NO_DIPLOCOMMENT);
 
 	python::enum_<NetContactTypes>("NetContactTypes")
 		.value("NO_NETCONTACT", NO_NETCONTACT)
@@ -1751,8 +1629,7 @@ void CyEnumsPythonInterface()
 		.value("NETCONTACT_RESPONSE", NETCONTACT_RESPONSE)
 		.value("NETCONTACT_ESTABLISHED", NETCONTACT_ESTABLISHED)
 		.value("NETCONTACT_BUSY", NETCONTACT_BUSY)
-		.value("NUM_NETCONTACT_TYPES", NUM_NETCONTACT_TYPES)
-		;
+		.value("NUM_NETCONTACT_TYPES", NUM_NETCONTACT_TYPES);
 
 	python::enum_<ContactTypes>("ContactTypes")
 		.value("CONTACT_RELIGION_PRESSURE", CONTACT_RELIGION_PRESSURE)
@@ -1769,11 +1646,11 @@ void CyEnumsPythonInterface()
 		.value("CONTACT_TRADE_TECH", CONTACT_TRADE_TECH)
 		.value("CONTACT_TRADE_BONUS", CONTACT_TRADE_BONUS)
 		.value("CONTACT_TRADE_MAP", CONTACT_TRADE_MAP)
-/************************************************************************************************/
-/* Afforess	                  Start		 08/01/10                                               */
-/*                                                                                              */
-/* Advanced Diplomacy                                                                           */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                  Start		 08/01/10                                               */
+		/*                                                                                              */
+		/* Advanced Diplomacy                                                                           */
+		/************************************************************************************************/
 		.value("CONTACT_PEACE_PRESSURE", CONTACT_PEACE_PRESSURE)
 		.value("CONTACT_EMBASSY", CONTACT_EMBASSY)
 		.value("CONTACT_TRADE_STOP_TRADING", CONTACT_TRADE_STOP_TRADING)
@@ -1784,11 +1661,10 @@ void CyEnumsPythonInterface()
 		.value("CONTACT_TRADE_CONTACTS", CONTACT_TRADE_CONTACTS)
 		.value("CONTACT_TRADE_CORPORATION", CONTACT_TRADE_CORPORATION)
 		.value("CONTACT_TRADE_BUY_WAR", CONTACT_TRADE_BUY_WAR)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-		.value("NUM_CONTACT_TYPES", NUM_CONTACT_TYPES)
-		;
+		/************************************************************************************************/
+		/* Afforess	                     END                                                            */
+		/************************************************************************************************/
+		.value("NUM_CONTACT_TYPES", NUM_CONTACT_TYPES);
 
 	python::enum_<MemoryTypes>("MemoryTypes")
 		.value("MEMORY_DECLARED_WAR", MEMORY_DECLARED_WAR)
@@ -1824,22 +1700,21 @@ void CyEnumsPythonInterface()
 		.value("MEMORY_EVENT_GOOD_TO_US", MEMORY_EVENT_GOOD_TO_US)
 		.value("MEMORY_EVENT_BAD_TO_US", MEMORY_EVENT_BAD_TO_US)
 		.value("MEMORY_LIBERATED_CITIES", MEMORY_LIBERATED_CITIES)
-/************************************************************************************************/
-/* Afforess	                  Start		 02/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                  Start		 02/14/10                                               */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
 		.value("MEMORY_RECALLED_AMBASSADOR", MEMORY_RECALLED_AMBASSADOR)
 		.value("MEMORY_WARMONGER", MEMORY_WARMONGER)
 		.value("MEMORY_MADE_PEACE", MEMORY_MADE_PEACE)
 		.value("MEMORY_INQUISITION", MEMORY_INQUISITION)
 		.value("MEMORY_SACKED_CITY", MEMORY_SACKED_CITY)
 		.value("MEMORY_SACKED_HOLY_CITY", MEMORY_SACKED_HOLY_CITY)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-		.value("NUM_MEMORY_TYPES", NUM_MEMORY_TYPES)
-		;
+		/************************************************************************************************/
+		/* Afforess	                     END                                                            */
+		/************************************************************************************************/
+		.value("NUM_MEMORY_TYPES", NUM_MEMORY_TYPES);
 
 	python::enum_<AttitudeTypes>("AttitudeTypes")
 		.value("NO_ATTITUDE", NO_ATTITUDE)
@@ -1848,29 +1723,26 @@ void CyEnumsPythonInterface()
 		.value("ATTITUDE_CAUTIOUS", ATTITUDE_CAUTIOUS)
 		.value("ATTITUDE_PLEASED", ATTITUDE_PLEASED)
 		.value("ATTITUDE_FRIENDLY", ATTITUDE_FRIENDLY)
-		.value("NUM_ATTITUDE_TYPES", NUM_ATTITUDE_TYPES)
-		;
+		.value("NUM_ATTITUDE_TYPES", NUM_ATTITUDE_TYPES);
 
 	python::enum_<LeaderheadAction>("LeaderheadAction")
-		.value( "NO_LEADERANIM", NO_LEADERANIM )
-		.value( "LEADERANIM_GREETING", LEADERANIM_GREETING )
-		.value( "LEADERANIM_FRIENDLY", LEADERANIM_FRIENDLY )
-		.value( "LEADERANIM_PLEASED", LEADERANIM_PLEASED )
-		.value( "LEADERANIM_CAUTIOUS", LEADERANIM_CAUTIOUS )
-		.value( "LEADERANIM_ANNOYED", LEADERANIM_ANNOYED )
-		.value( "LEADERANIM_FURIOUS", LEADERANIM_FURIOUS )
-		.value( "LEADERANIM_DISAGREE", LEADERANIM_DISAGREE )
-		.value( "LEADERANIM_AGREE", LEADERANIM_AGREE )
-		.value( "NUM_LEADERANIM_TYPES", NUM_LEADERANIM_TYPES )
-		;
+		.value("NO_LEADERANIM", NO_LEADERANIM)
+		.value("LEADERANIM_GREETING", LEADERANIM_GREETING)
+		.value("LEADERANIM_FRIENDLY", LEADERANIM_FRIENDLY)
+		.value("LEADERANIM_PLEASED", LEADERANIM_PLEASED)
+		.value("LEADERANIM_CAUTIOUS", LEADERANIM_CAUTIOUS)
+		.value("LEADERANIM_ANNOYED", LEADERANIM_ANNOYED)
+		.value("LEADERANIM_FURIOUS", LEADERANIM_FURIOUS)
+		.value("LEADERANIM_DISAGREE", LEADERANIM_DISAGREE)
+		.value("LEADERANIM_AGREE", LEADERANIM_AGREE)
+		.value("NUM_LEADERANIM_TYPES", NUM_LEADERANIM_TYPES);
 
 	python::enum_<DiplomacyPowerTypes>("DiplomacyPowerTypes")
 		.value("NO_DIPLOMACYPOWER", NO_DIPLOMACYPOWER)
 		.value("DIPLOMACYPOWER_WEAKER", DIPLOMACYPOWER_WEAKER)
 		.value("DIPLOMACYPOWER_EQUAL", DIPLOMACYPOWER_EQUAL)
 		.value("DIPLOMACYPOWER_STRONGER", DIPLOMACYPOWER_STRONGER)
-		.value("NUM_DIPLOMACYPOWER_TYPES", NUM_DIPLOMACYPOWER_TYPES)
-		;
+		.value("NUM_DIPLOMACYPOWER_TYPES", NUM_DIPLOMACYPOWER_TYPES);
 
 	python::enum_<FeatTypes>("FeatTypes")
 		.value("FEAT_UNITCOMBAT_ARCHER", FEAT_UNITCOMBAT_ARCHER)
@@ -1904,8 +1776,7 @@ void CyEnumsPythonInterface()
 		.value("FEAT_POPULATION_2_BILLION", FEAT_POPULATION_2_BILLION)
 		.value("FEAT_CORPORATION_ENABLED", FEAT_CORPORATION_ENABLED)
 		.value("FEAT_PAD", FEAT_PAD)
-		.value("NUM_FEAT_TYPES", NUM_FEAT_TYPES)
-		;
+		.value("NUM_FEAT_TYPES", NUM_FEAT_TYPES);
 
 	python::enum_<SaveGameTypes>("SaveGameTypes")
 		.value("SAVEGAME_NONE", SAVEGAME_NONE)
@@ -1918,8 +1789,7 @@ void CyEnumsPythonInterface()
 		.value("SAVEGAME_DROP_CONTINUE", SAVEGAME_DROP_CONTINUE)
 		.value("SAVEGAME_PBEM", SAVEGAME_PBEM)
 		.value("SAVEGAME_REPLAY", SAVEGAME_REPLAY)
-		.value("NUM_SAVEGAME_TYPES", NUM_SAVEGAME_TYPES)
-		;
+		.value("NUM_SAVEGAME_TYPES", NUM_SAVEGAME_TYPES);
 
 	python::enum_<GameType>("GameType")
 		.value("GAME_NONE", GAME_NONE)
@@ -1936,31 +1806,27 @@ void CyEnumsPythonInterface()
 		.value("GAME_PBEM_SCENARIO", GAME_PBEM_SCENARIO)
 		.value("GAME_PBEM_LOAD", GAME_PBEM_LOAD)
 		.value("GAME_REPLAY", GAME_REPLAY)
-		.value("NUM_GAMETYPES", NUM_GAMETYPES)
-		;
+		.value("NUM_GAMETYPES", NUM_GAMETYPES);
 
 	python::enum_<GameMode>("GameMode")
 		.value("NO_GAMEMODE", NO_GAMEMODE)
 		.value("GAMEMODE_NORMAL", GAMEMODE_NORMAL)
 		.value("GAMEMODE_PITBOSS", GAMEMODE_PITBOSS)
-		.value("NUM_GAMEMODES", NUM_GAMEMODES)
-		;
+		.value("NUM_GAMEMODES", NUM_GAMEMODES);
 
 	python::enum_<InterfaceVisibility>("InterfaceVisibility")
 		.value("INTERFACE_SHOW", INTERFACE_SHOW)
 		.value("INTERFACE_HIDE", INTERFACE_HIDE)
 		.value("INTERFACE_HIDE_ALL", INTERFACE_HIDE_ALL)
 		.value("INTERFACE_MINIMAP_ONLY", INTERFACE_MINIMAP_ONLY)
-		.value("INTERFACE_ADVANCED_START", INTERFACE_ADVANCED_START)
-		;
+		.value("INTERFACE_ADVANCED_START", INTERFACE_ADVANCED_START);
 
 	python::enum_<GenericButtonSizes>("GenericButtonSizes")
 		.value("BUTTON_SIZE_46", BUTTON_SIZE_46)
 		.value("BUTTON_SIZE_32", BUTTON_SIZE_32)
 		.value("BUTTON_SIZE_24", BUTTON_SIZE_24)
 		.value("BUTTON_SIZE_16", BUTTON_SIZE_16)
-		.value("BUTTON_SIZE_CUSTOM", BUTTON_SIZE_CUSTOM)
-		;
+		.value("BUTTON_SIZE_CUSTOM", BUTTON_SIZE_CUSTOM);
 
 	python::enum_<WorldBuilderPopupTypes>("WorldBuilderPopupTypes")
 		.value("WBPOPUP_NONE", WBPOPUP_NONE)
@@ -1973,8 +1839,7 @@ void CyEnumsPythonInterface()
 		.value("WBPOPUP_FEATURE", WBPOPUP_FEATURE)
 		.value("WBPOPUP_IMPROVEMENT", WBPOPUP_IMPROVEMENT)
 		.value("WBPOPUP_GAME", WBPOPUP_GAME)
-		.value("NUM_WBPOPUP", NUM_WBPOPUP)
-		;
+		.value("NUM_WBPOPUP", NUM_WBPOPUP);
 
 	python::enum_<EventType>("EventType")
 		.value("EVT_LBUTTONDOWN", EVT_LBUTTONDOWN)
@@ -1983,83 +1848,79 @@ void CyEnumsPythonInterface()
 		.value("EVT_BACK", EVT_BACK)
 		.value("EVT_FORWARD", EVT_FORWARD)
 		.value("EVT_KEYDOWN", EVT_KEYDOWN)
-		.value("EVT_KEYUP", EVT_KEYUP)
-		;
+		.value("EVT_KEYUP", EVT_KEYUP);
 
 	python::enum_<LoadType>("LoadType")
 		.value("LOAD_NORMAL", LOAD_NORMAL)
 		.value("LOAD_INIT", LOAD_INIT)
 		.value("LOAD_SETUP", LOAD_SETUP)
 		.value("LOAD_GAMETYPE", LOAD_GAMETYPE)
-		.value("LOAD_REPLAY", LOAD_REPLAY)
-		;
+		.value("LOAD_REPLAY", LOAD_REPLAY);
 
 	python::enum_<FontTypes>("FontTypes")
 		.value("TITLE_FONT", TITLE_FONT)
 		.value("GAME_FONT", GAME_FONT)
 		.value("SMALL_FONT", SMALL_FONT)
 		.value("MENU_FONT", MENU_FONT)
-		.value("MENU_HIGHLIGHT_FONT", MENU_HIGHLIGHT_FONT)
-		;
+		.value("MENU_HIGHLIGHT_FONT", MENU_HIGHLIGHT_FONT);
 
 	python::enum_<PanelStyles>("PanelStyles")
-		.value("PANEL_STYLE_STANDARD",PANEL_STYLE_STANDARD)
-		.value("PANEL_STYLE_SOLID",PANEL_STYLE_SOLID)
-		.value("PANEL_STYLE_EMPTY",PANEL_STYLE_EMPTY)
-		.value("PANEL_STYLE_FLAT",PANEL_STYLE_FLAT)
-		.value("PANEL_STYLE_IN",PANEL_STYLE_IN)
-		.value("PANEL_STYLE_OUT",PANEL_STYLE_OUT)
-		.value("PANEL_STYLE_EXTERNAL",PANEL_STYLE_EXTERNAL)
-		.value("PANEL_STYLE_DEFAULT",PANEL_STYLE_DEFAULT)
+		.value("PANEL_STYLE_STANDARD", PANEL_STYLE_STANDARD)
+		.value("PANEL_STYLE_SOLID", PANEL_STYLE_SOLID)
+		.value("PANEL_STYLE_EMPTY", PANEL_STYLE_EMPTY)
+		.value("PANEL_STYLE_FLAT", PANEL_STYLE_FLAT)
+		.value("PANEL_STYLE_IN", PANEL_STYLE_IN)
+		.value("PANEL_STYLE_OUT", PANEL_STYLE_OUT)
+		.value("PANEL_STYLE_EXTERNAL", PANEL_STYLE_EXTERNAL)
+		.value("PANEL_STYLE_DEFAULT", PANEL_STYLE_DEFAULT)
 
-		.value("PANEL_STYLE_CIVILPEDIA",PANEL_STYLE_CIVILPEDIA)
-		.value("PANEL_STYLE_STONE",PANEL_STYLE_STONE)
-		.value("PANEL_STYLE_BLUELARGE",PANEL_STYLE_BLUELARGE)
-		.value("PANEL_STYLE_UNITSTAT",PANEL_STYLE_UNITSTAT)
-		.value("PANEL_STYLE_BLUE50",PANEL_STYLE_BLUE50)
-		
-		.value("PANEL_STYLE_TOPBAR",PANEL_STYLE_TOPBAR)
-		.value("PANEL_STYLE_BOTTOMBAR",PANEL_STYLE_BOTTOMBAR)
-		.value("PANEL_STYLE_TECH",PANEL_STYLE_TECH)
+		.value("PANEL_STYLE_CIVILPEDIA", PANEL_STYLE_CIVILPEDIA)
+		.value("PANEL_STYLE_STONE", PANEL_STYLE_STONE)
+		.value("PANEL_STYLE_BLUELARGE", PANEL_STYLE_BLUELARGE)
+		.value("PANEL_STYLE_UNITSTAT", PANEL_STYLE_UNITSTAT)
+		.value("PANEL_STYLE_BLUE50", PANEL_STYLE_BLUE50)
 
-		.value("PANEL_STYLE_GAMEHUD_LEFT",PANEL_STYLE_GAMEHUD_LEFT)
-		.value("PANEL_STYLE_GAMEHUD_RIGHT",PANEL_STYLE_GAMEHUD_RIGHT)
-		.value("PANEL_STYLE_GAMEHUD_CENTER",PANEL_STYLE_GAMEHUD_CENTER)
-		.value("PANEL_STYLE_GAMEHUD_STATS",PANEL_STYLE_GAMEHUD_STATS)
-		.value("PANEL_STYLE_GAME_MAP",PANEL_STYLE_GAME_MAP)
-		.value("PANEL_STYLE_GAME_TOPBAR",PANEL_STYLE_GAME_TOPBAR)
+		.value("PANEL_STYLE_TOPBAR", PANEL_STYLE_TOPBAR)
+		.value("PANEL_STYLE_BOTTOMBAR", PANEL_STYLE_BOTTOMBAR)
+		.value("PANEL_STYLE_TECH", PANEL_STYLE_TECH)
+
+		.value("PANEL_STYLE_GAMEHUD_LEFT", PANEL_STYLE_GAMEHUD_LEFT)
+		.value("PANEL_STYLE_GAMEHUD_RIGHT", PANEL_STYLE_GAMEHUD_RIGHT)
+		.value("PANEL_STYLE_GAMEHUD_CENTER", PANEL_STYLE_GAMEHUD_CENTER)
+		.value("PANEL_STYLE_GAMEHUD_STATS", PANEL_STYLE_GAMEHUD_STATS)
+		.value("PANEL_STYLE_GAME_MAP", PANEL_STYLE_GAME_MAP)
+		.value("PANEL_STYLE_GAME_TOPBAR", PANEL_STYLE_GAME_TOPBAR)
 		.value("PANEL_STYLE_HUD_HELP", PANEL_STYLE_HUD_HELP)
 
-		.value("PANEL_STYLE_CITY_LEFT",PANEL_STYLE_CITY_LEFT)
-		.value("PANEL_STYLE_CITY_RIGHT",PANEL_STYLE_CITY_RIGHT)
-		.value("PANEL_STYLE_CITY_TOP",PANEL_STYLE_CITY_TOP)
-		.value("PANEL_STYLE_CITY_TANSHADE",PANEL_STYLE_CITY_TANSHADE)
-		.value("PANEL_STYLE_CITY_INFO",PANEL_STYLE_CITY_INFO)
-		.value("PANEL_STYLE_CITY_TANTL",PANEL_STYLE_CITY_TANTL)
-		.value("PANEL_STYLE_CITY_TANTR",PANEL_STYLE_CITY_TANTR)
-		.value("PANEL_STYLE_CITY_COLUMNL",PANEL_STYLE_CITY_COLUMNL)
-		.value("PANEL_STYLE_CITY_COLUMNC",PANEL_STYLE_CITY_COLUMNC)
-		.value("PANEL_STYLE_CITY_COLUMNR",PANEL_STYLE_CITY_COLUMNR)
-		.value("PANEL_STYLE_CITY_TITLE",PANEL_STYLE_CITY_TITLE)
-	
-		.value("PANEL_STYLE_DAWN",PANEL_STYLE_DAWN)
-		.value("PANEL_STYLE_DAWNTOP",PANEL_STYLE_DAWNTOP)
-		.value("PANEL_STYLE_DAWNBOTTOM",PANEL_STYLE_DAWNBOTTOM)
+		.value("PANEL_STYLE_CITY_LEFT", PANEL_STYLE_CITY_LEFT)
+		.value("PANEL_STYLE_CITY_RIGHT", PANEL_STYLE_CITY_RIGHT)
+		.value("PANEL_STYLE_CITY_TOP", PANEL_STYLE_CITY_TOP)
+		.value("PANEL_STYLE_CITY_TANSHADE", PANEL_STYLE_CITY_TANSHADE)
+		.value("PANEL_STYLE_CITY_INFO", PANEL_STYLE_CITY_INFO)
+		.value("PANEL_STYLE_CITY_TANTL", PANEL_STYLE_CITY_TANTL)
+		.value("PANEL_STYLE_CITY_TANTR", PANEL_STYLE_CITY_TANTR)
+		.value("PANEL_STYLE_CITY_COLUMNL", PANEL_STYLE_CITY_COLUMNL)
+		.value("PANEL_STYLE_CITY_COLUMNC", PANEL_STYLE_CITY_COLUMNC)
+		.value("PANEL_STYLE_CITY_COLUMNR", PANEL_STYLE_CITY_COLUMNR)
+		.value("PANEL_STYLE_CITY_TITLE", PANEL_STYLE_CITY_TITLE)
 
-		.value("PANEL_STYLE_MAIN",PANEL_STYLE_MAIN)
-		.value("PANEL_STYLE_MAIN_BLACK25",PANEL_STYLE_MAIN_BLACK25)
-		.value("PANEL_STYLE_MAIN_BLACK50",PANEL_STYLE_MAIN_BLACK50)
-		.value("PANEL_STYLE_MAIN_WHITE",PANEL_STYLE_MAIN_WHITE)
-		.value("PANEL_STYLE_MAIN_WHITETAB",PANEL_STYLE_MAIN_WHITETAB)
-		.value("PANEL_STYLE_MAIN_TAN",PANEL_STYLE_MAIN_TAN)
-		.value("PANEL_STYLE_MAIN_TAN15",PANEL_STYLE_MAIN_TAN15)
-		.value("PANEL_STYLE_MAIN_TANL",PANEL_STYLE_MAIN_TANL)
-		.value("PANEL_STYLE_MAIN_TANR",PANEL_STYLE_MAIN_TANR)
-		.value("PANEL_STYLE_MAIN_TANT",PANEL_STYLE_MAIN_TANT)
-		.value("PANEL_STYLE_MAIN_TANB",PANEL_STYLE_MAIN_TANB)
-		.value("PANEL_STYLE_MAIN_BOTTOMBAR",PANEL_STYLE_MAIN_BOTTOMBAR)
-		.value("PANEL_STYLE_MAIN_SELECT",PANEL_STYLE_MAIN_SELECT)
-		;
+		.value("PANEL_STYLE_DAWN", PANEL_STYLE_DAWN)
+		.value("PANEL_STYLE_DAWNTOP", PANEL_STYLE_DAWNTOP)
+		.value("PANEL_STYLE_DAWNBOTTOM", PANEL_STYLE_DAWNBOTTOM)
+
+		.value("PANEL_STYLE_MAIN", PANEL_STYLE_MAIN)
+		.value("PANEL_STYLE_MAIN_BLACK25", PANEL_STYLE_MAIN_BLACK25)
+		.value("PANEL_STYLE_MAIN_BLACK50", PANEL_STYLE_MAIN_BLACK50)
+		.value("PANEL_STYLE_MAIN_WHITE", PANEL_STYLE_MAIN_WHITE)
+		.value("PANEL_STYLE_MAIN_WHITETAB", PANEL_STYLE_MAIN_WHITETAB)
+		.value("PANEL_STYLE_MAIN_TAN", PANEL_STYLE_MAIN_TAN)
+		.value("PANEL_STYLE_MAIN_TAN15", PANEL_STYLE_MAIN_TAN15)
+		.value("PANEL_STYLE_MAIN_TANL", PANEL_STYLE_MAIN_TANL)
+		.value("PANEL_STYLE_MAIN_TANR", PANEL_STYLE_MAIN_TANR)
+		.value("PANEL_STYLE_MAIN_TANT", PANEL_STYLE_MAIN_TANT)
+		.value("PANEL_STYLE_MAIN_TANB", PANEL_STYLE_MAIN_TANB)
+		.value("PANEL_STYLE_MAIN_BOTTOMBAR", PANEL_STYLE_MAIN_BOTTOMBAR)
+		.value("PANEL_STYLE_MAIN_SELECT", PANEL_STYLE_MAIN_SELECT);
 
 	python::enum_<ButtonStyles>("ButtonStyles")
 		.value("BUTTON_STYLE_STANDARD", BUTTON_STYLE_STANDARD)
@@ -2071,7 +1932,7 @@ void CyEnumsPythonInterface()
 		.value("BUTTON_STYLE_SQUARE", BUTTON_STYLE_SQUARE)
 		.value("BUTTON_STYLE_TOOL", BUTTON_STYLE_TOOL)
 		.value("BUTTON_STYLE_DEFAULT", BUTTON_STYLE_DEFAULT)
-		
+
 		.value("BUTTON_STYLE_CIRCLE", BUTTON_STYLE_CIRCLE)
 		.value("BUTTON_STYLE_CITY_B01", BUTTON_STYLE_CITY_B01)
 		.value("BUTTON_STYLE_CITY_B02TL", BUTTON_STYLE_CITY_B02TL)
@@ -2088,8 +1949,7 @@ void CyEnumsPythonInterface()
 		.value("BUTTON_STYLE_CITY_PLUS", BUTTON_STYLE_CITY_PLUS)
 		.value("BUTTON_STYLE_CITY_MINUS", BUTTON_STYLE_CITY_MINUS)
 		.value("BUTTON_STYLE_ARROW_LEFT", BUTTON_STYLE_ARROW_LEFT)
-		.value("BUTTON_STYLE_ARROW_RIGHT", BUTTON_STYLE_ARROW_RIGHT)
-		;
+		.value("BUTTON_STYLE_ARROW_RIGHT", BUTTON_STYLE_ARROW_RIGHT);
 
 	python::enum_<TableStyles>("TableStyles")
 		.value("TABLE_STYLE_STANDARD", TABLE_STYLE_STANDARD)
@@ -2098,14 +1958,12 @@ void CyEnumsPythonInterface()
 		.value("TABLE_STYLE_CITY", TABLE_STYLE_CITY)
 		.value("TABLE_STYLE_EMPTYSELECTINACTIVE", TABLE_STYLE_EMPTYSELECTINACTIVE)
 		.value("TABLE_STYLE_ALTDEFAULT", TABLE_STYLE_ALTDEFAULT)
-		.value("TABLE_STYLE_STAGINGROOM", TABLE_STYLE_STAGINGROOM)
-		;
+		.value("TABLE_STYLE_STAGINGROOM", TABLE_STYLE_STAGINGROOM);
 
 	python::enum_<EventContextTypes>("EventContextTypes")
 		.value("NO_EVENTCONTEXT", NO_EVENTCONTEXT)
 		.value("EVENTCONTEXT_SELF", EVENTCONTEXT_SELF)
-		.value("EVENTCONTEXT_ALL", EVENTCONTEXT_ALL)
-		;
+		.value("EVENTCONTEXT_ALL", EVENTCONTEXT_ALL);
 
 	python::enum_<TabGroupTypes>("TabGroupTypes")
 		.value("NO_TABGROUP", NO_TABGROUP)
@@ -2116,8 +1974,7 @@ void CyEnumsPythonInterface()
 		.value("TABGROUP_AUDIO", TABGROUP_AUDIO)
 		.value("TABGROUP_CLOCK", TABGROUP_CLOCK)
 
-		.value("NUM_TABGROUPS", NUM_TABGROUPS)
-		;
+		.value("NUM_TABGROUPS", NUM_TABGROUPS);
 
 	python::enum_<ReplayMessageTypes>("ReplayMessageTypes")
 		.value("NO_REPLAY_MESSAGE", NO_REPLAY_MESSAGE)
@@ -2126,8 +1983,7 @@ void CyEnumsPythonInterface()
 		.value("REPLAY_MESSAGE_CITY_FOUNDED", REPLAY_MESSAGE_CITY_FOUNDED)
 		.value("REPLAY_MESSAGE_PLOT_OWNER_CHANGE", REPLAY_MESSAGE_PLOT_OWNER_CHANGE)
 
-		.value("NUM_REPLAY_MESSAGE_TYPES", NUM_REPLAY_MESSAGE_TYPES)
-		;
+		.value("NUM_REPLAY_MESSAGE_TYPES", NUM_REPLAY_MESSAGE_TYPES);
 
 	python::enum_<AudioTag>("AudioTag")
 		.value("AUDIOTAG_NONE", AUDIOTAG_NONE)
@@ -2140,8 +1996,7 @@ void CyEnumsPythonInterface()
 		.value("AUDIOTAG_POSITION", AUDIOTAG_POSITION)
 		.value("AUDIOTAG_SCRIPTTYPE", AUDIOTAG_SCRIPTTYPE)
 		.value("AUDIOTAG_LOADTYPE", AUDIOTAG_LOADTYPE)
-		.value("AUDIOTAG_COUNT", AUDIOTAG_COUNT)
-		;
+		.value("AUDIOTAG_COUNT", AUDIOTAG_COUNT);
 
 	python::enum_<CivilopediaPageTypes>("CivilopediaPageTypes")
 		.value("NO_CIVILOPEDIA_PAGE", NO_CIVILOPEDIA_PAGE)
@@ -2162,29 +2017,28 @@ void CyEnumsPythonInterface()
 		.value("CIVILOPEDIA_PAGE_PROJECT", CIVILOPEDIA_PAGE_PROJECT)
 		.value("CIVILOPEDIA_PAGE_CONCEPT", CIVILOPEDIA_PAGE_CONCEPT)
 		.value("CIVILOPEDIA_PAGE_CONCEPT_NEW", CIVILOPEDIA_PAGE_CONCEPT_NEW)
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-// Dale - DCM: Pedia Concepts START
+		/************************************************************************************************/
+		/* DCM                                     04/19/09                                Johny Smith  */
+		/************************************************************************************************/
+		// Dale - DCM: Pedia Concepts START
 		.value("CIVILOPEDIA_PAGE_CONCEPT_DCM", CIVILOPEDIA_PAGE_CONCEPT_DCM)
-// Dale - DCM: Pedia Concepts END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* Afforess                                     11/13/09                                        */
-/************************************************************************************************/
+		// Dale - DCM: Pedia Concepts END
+		/************************************************************************************************/
+		/* DCM                                     END                                                  */
+		/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess                                     11/13/09                                        */
+		/************************************************************************************************/
 		.value("CIVILOPEDIA_PAGE_CONCEPT_AND", CIVILOPEDIA_PAGE_CONCEPT_AND)
-/************************************************************************************************/
-/* Afforess                                END                                                  */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess                                END                                                  */
+		/************************************************************************************************/
 		.value("CIVILOPEDIA_PAGE_SPECIALIST", CIVILOPEDIA_PAGE_SPECIALIST)
 		.value("CIVILOPEDIA_PAGE_TERRAIN", CIVILOPEDIA_PAGE_TERRAIN)
 		.value("CIVILOPEDIA_PAGE_FEATURE", CIVILOPEDIA_PAGE_FEATURE)
 		.value("CIVILOPEDIA_PAGE_HINTS", CIVILOPEDIA_PAGE_HINTS)
 
-		.value("NUM_CIVILOPEDIA_PAGE_TYPES", NUM_CIVILOPEDIA_PAGE_TYPES)
-		;
+		.value("NUM_CIVILOPEDIA_PAGE_TYPES", NUM_CIVILOPEDIA_PAGE_TYPES);
 
 	python::enum_<ActionSubTypes>("ActionSubTypes")
 		.value("NO_ACTIONSUBTYPE", NO_ACTIONSUBTYPE)
@@ -2201,8 +2055,7 @@ void CyEnumsPythonInterface()
 		.value("ACTIONSUBTYPE_AUTOMATE", ACTIONSUBTYPE_AUTOMATE)
 		.value("ACTIONSUBTYPE_MISSION", ACTIONSUBTYPE_MISSION)
 
-		.value("NUM_ACTIONSUBTYPES", NUM_ACTIONSUBTYPES)
-		;
+		.value("NUM_ACTIONSUBTYPES", NUM_ACTIONSUBTYPES);
 
 	python::enum_<GameMessageTypes>("GameMessageTypes")
 		.value("GAMEMESSAGE_NETWORK_READY", GAMEMESSAGE_NETWORK_READY)
@@ -2216,7 +2069,7 @@ void CyEnumsPythonInterface()
 		.value("GAMEMESSAGE_FILE_INFO", GAMEMESSAGE_FILE_INFO)
 		.value("GAMEMESSAGE_PICK_YOUR_CIV", GAMEMESSAGE_PICK_YOUR_CIV)
 		.value("GAMEMESSAGE_CIV_CHOICE", GAMEMESSAGE_CIV_CHOICE)
-		.value("GAMEMESSAGE_CONFIRM_CIV_CLAIM", GAMEMESSAGE_CONFIRM_CIV_CLAIM) 
+		.value("GAMEMESSAGE_CONFIRM_CIV_CLAIM", GAMEMESSAGE_CONFIRM_CIV_CLAIM)
 		.value("GAMEMESSAGE_CLAIM_INFO", GAMEMESSAGE_CLAIM_INFO)
 		.value("GAMEMESSAGE_CIV_CHOICE_ACK", GAMEMESSAGE_CIV_CHOICE_ACK)
 		.value("GAMEMESSAGE_CIV_CHOICE_NACK", GAMEMESSAGE_CIV_CHOICE_NACK)
@@ -2307,24 +2160,21 @@ void CyEnumsPythonInterface()
 		.value("GAMEMESSAGE_IMPROVEMENT_UPGRADE", GAMEMESSAGE_IMPROVEMENT_UPGRADE)
 		.value("GAMEMESSAGE_CHOOSE_BUILDUP", GAMEMESSAGE_CHOOSE_BUILDUP)
 		.value("GAMEMESSAGE_CHOOSE_ARREST_UNIT", GAMEMESSAGE_CHOOSE_ARREST_UNIT)
-		.value("GAMEMESSAGE_CONFIRM_AMBUSH", GAMEMESSAGE_CONFIRM_AMBUSH)
-		;
+		.value("GAMEMESSAGE_CONFIRM_AMBUSH", GAMEMESSAGE_CONFIRM_AMBUSH);
 
 	python::enum_<PopupControlLayout>("PopupControlLayout")
 		.value("POPUP_LAYOUT_LEFT", POPUP_LAYOUT_LEFT)
 		.value("POPUP_LAYOUT_CENTER", POPUP_LAYOUT_CENTER)
 		.value("POPUP_LAYOUT_RIGHT", POPUP_LAYOUT_RIGHT)
 		.value("POPUP_LAYOUT_STRETCH", POPUP_LAYOUT_STRETCH)
-		.value("POPUP_LAYOUT_NUMLAYOUTS", POPUP_LAYOUT_NUMLAYOUTS)
-		;
+		.value("POPUP_LAYOUT_NUMLAYOUTS", POPUP_LAYOUT_NUMLAYOUTS);
 
 	python::enum_<JustificationTypes>("JustificationTypes")
 		.value("DLL_FONT_LEFT_JUSTIFY", DLL_FONT_LEFT_JUSTIFY)
 		.value("DLL_FONT_RIGHT_JUSTIFY", DLL_FONT_RIGHT_JUSTIFY)
 		.value("DLL_FONT_CENTER_JUSTIFY", DLL_FONT_CENTER_JUSTIFY)
 		.value("DLL_FONT_CENTER_VERTICALLY", DLL_FONT_CENTER_VERTICALLY)
-		.value("DLL_FONT_ADDITIVE", DLL_FONT_ADDITIVE)
-		;
+		.value("DLL_FONT_ADDITIVE", DLL_FONT_ADDITIVE);
 
 	python::enum_<ToolTipAlignTypes>("ToolTipAlignTypes")
 		.value("TOOLTIP_TOP_LEFT", TOOLTIP_TOP_LEFT)
@@ -2345,43 +2195,36 @@ void CyEnumsPythonInterface()
 
 		.value("TOOLTIP_INBOTTOM_LEFT", TOOLTIP_INBOTTOM_LEFT)
 		.value("TOOLTIP_CENTER_LEFT", TOOLTIP_CENTER_LEFT)
-		.value("TOOLTIP_INTOP_LEFT", TOOLTIP_INTOP_LEFT)
-		;
+		.value("TOOLTIP_INTOP_LEFT", TOOLTIP_INTOP_LEFT);
 
 	python::enum_<ActivationTypes>("ActivationTypes")
 		.value("ACTIVATE_NORMAL", ACTIVATE_NORMAL)
 		.value("ACTIVATE_CHILDFOCUS", ACTIVATE_CHILDFOCUS)
 		.value("ACTIVATE_MIMICPARENT", ACTIVATE_MIMICPARENT)
-		.value("ACTIVATE_MIMICPARENTFOCUS", ACTIVATE_MIMICPARENTFOCUS)
-		;
+		.value("ACTIVATE_MIMICPARENTFOCUS", ACTIVATE_MIMICPARENTFOCUS);
 
 	python::enum_<HitTestTypes>("HitTestTypes")
 		.value("HITTEST_DEFAULT", HITTEST_DEFAULT)
 		.value("HITTEST_NOHIT", HITTEST_NOHIT)
 		.value("HITTEST_SOLID", HITTEST_SOLID)
 		.value("HITTEST_ON", HITTEST_ON)
-		.value("HITTEST_CHILDREN", HITTEST_CHILDREN)
-		;
+		.value("HITTEST_CHILDREN", HITTEST_CHILDREN);
 
 	python::enum_<GraphicLevelTypes>("GraphicLevelTypes")
 		.value("GRAPHICLEVEL_HIGH", GRAPHICLEVEL_HIGH)
 		.value("GRAPHICLEVEL_MEDIUM", GRAPHICLEVEL_MEDIUM)
 		.value("GRAPHICLEVEL_LOW", GRAPHICLEVEL_LOW)
 		.value("GRAPHICLEVEL_CURRENT", GRAPHICLEVEL_CURRENT)
-		.value("NUM_GRAPHICLEVELS", NUM_GRAPHICLEVELS)
-		;
+		.value("NUM_GRAPHICLEVELS", NUM_GRAPHICLEVELS);
 
 	python::enum_<EventTypes>("EventTypes")
-		.value("NO_EVENT", NO_EVENT)
-		;
+		.value("NO_EVENT", NO_EVENT);
 
 	python::enum_<EventTriggerTypes>("EventTriggerTypes")
-		.value("NO_EVENTTRIGGER", NO_EVENTTRIGGER)
-		;
+		.value("NO_EVENTTRIGGER", NO_EVENTTRIGGER);
 
 	python::enum_<EspionageMissionTypes>("EspionageMissionTypes")
-		.value("NO_ESPIONAGEMISSION", NO_ESPIONAGEMISSION)
-		;
+		.value("NO_ESPIONAGEMISSION", NO_ESPIONAGEMISSION);
 
 	python::enum_<AdvancedStartActionTypes>("AdvancedStartActionTypes")
 		.value("NO_ADVANCEDSTARTACTION", NO_ADVANCEDSTARTACTION)
@@ -2396,17 +2239,16 @@ void CyEnumsPythonInterface()
 		.value("ADVANCEDSTARTACTION_ROUTE", ADVANCEDSTARTACTION_ROUTE)
 		.value("ADVANCEDSTARTACTION_TECH", ADVANCEDSTARTACTION_TECH)
 		.value("ADVANCEDSTARTACTION_VISIBILITY", ADVANCEDSTARTACTION_VISIBILITY)
-		.value("ADVANCEDSTARTACTION_AUTOMATE", ADVANCEDSTARTACTION_AUTOMATE)
-		;
-		
-/************************************************************************************************/
-/* Afforess	                  Start		 06/01/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		.value("ADVANCEDSTARTACTION_AUTOMATE", ADVANCEDSTARTACTION_AUTOMATE);
+
+	/************************************************************************************************/
+	/* Afforess	                  Start		 06/01/10                                               */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
 	python::enum_<ModderOptionTypes>("ModderOptionTypes")
 		.value("NO_MODDEROPTION", NO_MODDEROPTION)
-		
+
 		.value("MODDEROPTION_FLEXIBLE_DIFFICULTY", MODDEROPTION_FLEXIBLE_DIFFICULTY)
 		.value("MODDEROPTION_SHOW_COASTAL_BUILDINGS", MODDEROPTION_SHOW_COASTAL_BUILDINGS)
 		.value("MODDEROPTION_HIDE_OBSOLETE_BUILDINGS", MODDEROPTION_HIDE_OBSOLETE_BUILDINGS)
@@ -2455,14 +2297,14 @@ void CyEnumsPythonInterface()
 		.value("MODDEROPTION_UPGRADE_MIN_GOLD", MODDEROPTION_UPGRADE_MIN_GOLD)
 		.value("MODDEROPTION_HIDE_AUTO_PROMOTE", MODDEROPTION_HIDE_AUTO_PROMOTE)
 		.value("MODDEROPTION_INFRASTRUCTURE_IGNORES_IMPROVEMENTS", MODDEROPTION_INFRASTRUCTURE_IGNORES_IMPROVEMENTS)
-		
+
 		.value("NUM_MODDEROPTION_TYPES", NUM_MODDEROPTION_TYPES)
 
 		;
 
 	python::enum_<ModderGameOptionTypes>("ModderGameOptionTypes")
 		.value("NO_MODDERGAMEOPTION", NO_MODDERGAMEOPTION)
-		
+
 		.value("MODDERGAMEOPTION_DEFENDER_WITHDRAW", MODDERGAMEOPTION_DEFENDER_WITHDRAW)
 		.value("MODDERGAMEOPTION_MAX_UNITS_PER_TILES", MODDERGAMEOPTION_MAX_UNITS_PER_TILES)
 		.value("MODDERGAMEOPTION_MAX_BOMBARD_DEFENSE", MODDERGAMEOPTION_MAX_BOMBARD_DEFENSE)
@@ -2480,12 +2322,11 @@ void CyEnumsPythonInterface()
 		.value("MODDERGAMEOPTION_STRATEGIC_EVENTS", MODDERGAMEOPTION_STRATEGIC_EVENTS)
 		.value("MODDERGAMEOPTION_NO_AUTO_CORPORATION_FOUNDING", MODDERGAMEOPTION_NO_AUTO_CORPORATION_FOUNDING)
 		.value("MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY", MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY)
-		
-		.value("NUM_MODDERGAMEOPTION_TYPES", NUM_MODDERGAMEOPTION_TYPES)
-	;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
+		.value("NUM_MODDERGAMEOPTION_TYPES", NUM_MODDERGAMEOPTION_TYPES);
+	/************************************************************************************************/
+	/* Afforess	                     END                                                            */
+	/************************************************************************************************/
 
 	//AIAndy: Expose the PathGenerator flags to Python
 	python::enum_<int>("PathingFlags")
@@ -2500,8 +2341,7 @@ void CyEnumsPythonInterface()
 		.value("MOVE_AVOID_ENEMY_WEIGHT_3", MOVE_AVOID_ENEMY_WEIGHT_3)
 		.value("MOVE_AVOID_ENEMY_UNITS", MOVE_AVOID_ENEMY_UNITS)
 		.value("MOVE_WITH_CAUTION", MOVE_WITH_CAUTION)
-		.value("MOVE_OUR_TERRITORY", MOVE_OUR_TERRITORY)
-	;
+		.value("MOVE_OUR_TERRITORY", MOVE_OUR_TERRITORY);
 
 	python::enum_<BuildingFilterTypes>("BuildingFilterTypes")
 		.value("NO_BUILDING_FILTER", NO_BUILDING_FILTER)
@@ -2529,16 +2369,14 @@ void CyEnumsPythonInterface()
 		.value("BUILDING_FILTER_SHOW_DISEASE", BUILDING_FILTER_SHOW_DISEASE)
 		.value("BUILDING_FILTER_SHOW_AIR_POLLUTION", BUILDING_FILTER_SHOW_AIR_POLLUTION)
 		.value("BUILDING_FILTER_SHOW_WATER_POLLUTION", BUILDING_FILTER_SHOW_WATER_POLLUTION)
-		.value("BUILDING_FILTER_SHOW_TOURISM", BUILDING_FILTER_SHOW_TOURISM)
-		;
-	
+		.value("BUILDING_FILTER_SHOW_TOURISM", BUILDING_FILTER_SHOW_TOURISM);
+
 	python::enum_<BuildingGroupingTypes>("BuildingGroupingTypes")
 		.value("NO_BUILDING_GROUPING", NO_BUILDING_GROUPING)
 		.value("BUILDING_GROUPING_SINGLE", BUILDING_GROUPING_SINGLE)
 		.value("BUILDING_GROUPING_WONDER_TYPE", BUILDING_GROUPING_WONDER_TYPE)
-		.value("BUILDING_GROUPING_DOMAIN", BUILDING_GROUPING_DOMAIN)
-		;
-	
+		.value("BUILDING_GROUPING_DOMAIN", BUILDING_GROUPING_DOMAIN);
+
 	python::enum_<BuildingSortTypes>("BuildingSortTypes")
 		.value("NO_BUILDING_SORT", NO_BUILDING_SORT)
 		.value("BUILDING_SORT_NAME", BUILDING_SORT_NAME)
@@ -2552,9 +2390,8 @@ void CyEnumsPythonInterface()
 		.value("BUILDING_SORT_HAPPINESS", BUILDING_SORT_HAPPINESS)
 		.value("BUILDING_SORT_HEALTH", BUILDING_SORT_HEALTH)
 		.value("BUILDING_SORT_CRIME", BUILDING_SORT_CRIME)
-		.value("BUILDING_SORT_FLAMMABILITY", BUILDING_SORT_FLAMMABILITY)
-		;
-	
+		.value("BUILDING_SORT_FLAMMABILITY", BUILDING_SORT_FLAMMABILITY);
+
 	python::enum_<UnitFilterTypes>("UnitFilterTypes")
 		.value("NO_UNIT_FILTER", NO_UNIT_FILTER)
 		.value("UNIT_FILTER_HIDE_BASIC_INVISIBLE", UNIT_FILTER_HIDE_BASIC_INVISIBLE)
@@ -2571,17 +2408,15 @@ void CyEnumsPythonInterface()
 		.value("UNIT_FILTER_SHOW_HEROES", UNIT_FILTER_SHOW_HEROES)
 		.value("UNIT_FILTER_SHOW_MILITARY", UNIT_FILTER_SHOW_MILITARY)
 		.value("UNIT_FILTER_SHOW_DEFENSE", UNIT_FILTER_SHOW_DEFENSE)
-		.value("UNIT_FILTER_SHOW_MISSIONARY", UNIT_FILTER_SHOW_MISSIONARY)
-		;
-	
+		.value("UNIT_FILTER_SHOW_MISSIONARY", UNIT_FILTER_SHOW_MISSIONARY);
+
 	python::enum_<UnitGroupingTypes>("UnitGroupingTypes")
 		.value("NO_UNIT_GROUPING", NO_UNIT_GROUPING)
 		.value("UNIT_GROUPING_SINGLE", UNIT_GROUPING_SINGLE)
 		.value("UNIT_GROUPING_COMBAT", UNIT_GROUPING_COMBAT)
 		.value("UNIT_GROUPING_DOMAIN", UNIT_GROUPING_DOMAIN)
-		.value("UNIT_GROUPING_HERO", UNIT_GROUPING_HERO)
-		;
-	
+		.value("UNIT_GROUPING_HERO", UNIT_GROUPING_HERO);
+
 	python::enum_<UnitSortTypes>("UnitSortTypes")
 		.value("NO_UNIT_SORT", NO_UNIT_SORT)
 		.value("UNIT_SORT_NAME", UNIT_SORT_NAME)
@@ -2593,7 +2428,5 @@ void CyEnumsPythonInterface()
 		.value("UNIT_SORT_BOMBARD", UNIT_SORT_BOMBARD)
 		.value("UNIT_SORT_CARGO", UNIT_SORT_CARGO)
 		.value("UNIT_SORT_WITHDRAWAL", UNIT_SORT_WITHDRAWAL)
-		.value("UNIT_SORT_POWER", UNIT_SORT_POWER)
-		;
-
+		.value("UNIT_SORT_POWER", UNIT_SORT_POWER);
 }

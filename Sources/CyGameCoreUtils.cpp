@@ -42,9 +42,10 @@ CyPlot* cyPlotCardinalDirection(int iX, int iY, CardinalDirectionTypes eCardDire
 }
 
 CyPlot* cysPlotCardinalDirection(int iX, int iY, CardinalDirectionTypes eCardDirection)
-{	static CyPlot plot;
-plot.setPlot(plotCardinalDirection(iX, iY, eCardDirection));
-return &plot;
+{
+	static CyPlot plot;
+	plot.setPlot(plotCardinalDirection(iX, iY, eCardDirection));
+	return &plot;
 }
 
 CyPlot* cyPlotXY(int iX, int iY, int iDX, int iDY)
@@ -126,7 +127,7 @@ CyUnit* cyGetUnit(IDInfo unit)
 
 bool cyIsPromotionValid(int /*PromotionTypes*/ ePromotion, int /*UnitTypes*/ eUnit, bool bLeader)
 {
-	return isPromotionValid((PromotionTypes) ePromotion, (UnitTypes) eUnit, bLeader);
+	return isPromotionValid((PromotionTypes)ePromotion, (UnitTypes)eUnit, bLeader);
 }
 
 int cyGetPopulationAsset(int iPopulation)
@@ -166,17 +167,17 @@ int cyGetWonderScore(int /*BuildingClassTypes*/ eWonderClass)
 
 int /*ImprovementTypes*/ cyFinalImprovementUpgrade(int /*ImprovementTypes*/ eImprovement, int iCount)
 {
-	return finalImprovementUpgrade((ImprovementTypes) eImprovement, iCount);
+	return finalImprovementUpgrade((ImprovementTypes)eImprovement, iCount);
 }
 
 int cyGetWorldSizeMaxConscript(int /*CivicTypes*/ eCivic)
 {
-	return getWorldSizeMaxConscript((CivicTypes) eCivic);
+	return getWorldSizeMaxConscript((CivicTypes)eCivic);
 }
 
 bool cyIsReligionTech(int /*TechTypes*/ eTech)
 {
-	return isReligionTech((TechTypes) eTech);
+	return isReligionTech((TechTypes)eTech);
 }
 
 bool cyIsTechRequiredForUnit(int /*TechTypes*/ eTech, int /*UnitTypes*/ eUnit)
@@ -270,4 +271,3 @@ int cyCalculateLevel(int iExperience, int ePlayer)
 	return calculateLevel(iExperience, (PlayerTypes)ePlayer);
 }
 // BUG - Unit Experience - end
-

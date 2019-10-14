@@ -72,15 +72,15 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 		.def("getColorInfo", &CyGlobalContext::getColorInfo, python::return_value_policy<python::reference_existing_object>(), "ColorInfo (int id)")
 
 		.def("getInfoTypeForString", &CyGlobalContext::getInfoTypeForString, "int (string) - returns the info index with the matching type string")
-/************************************************************************************************/
-/* Afforess	                  Start		 03/18/10                                               */
-/*                                                                                              */
-/* Hides the assert if the return value is -1. Only meant to be used when safe to do so.         */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                  Start		 03/18/10                                               */
+		/*                                                                                              */
+		/* Hides the assert if the return value is -1. Only meant to be used when safe to do so.         */
+		/************************************************************************************************/
 		.def("getInfoTypeForStringWithHiddenAssert", &CyGlobalContext::getInfoTypeForStringWithHiddenAssert, "int (string) - returns the info index with the matching type string")
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                     END                                                            */
+		/************************************************************************************************/
 		.def("getTypesEnum", &CyGlobalContext::getTypesEnum, "int (string) - returns the type enum from a type string")
 
 		.def("getNumPlayerColorInfos", &CyGlobalContext::getNumPlayerColorInfos, "int () - Returns number of PlayerColorInfos")
@@ -106,17 +106,17 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 
 		.def("getNumMainMenus", &CyGlobalContext::getNumMainMenus, "int () - Returns number")
 		.def("getMainMenus", &CyGlobalContext::getMainMenus, python::return_value_policy<python::reference_existing_object>(), "MainMenus () - Returns info object")
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 02/19/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-// Python Modular Loading
+		/************************************************************************************************/
+		/* MODULAR_LOADING_CONTROL                 02/19/08                                MRGENIE      */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
+		// Python Modular Loading
 		.def("getNumPythonModulesInfos", &CyGlobalContext::getNumPythonModulesInfos, "int () - Returns number")
 		.def("getPythonModulesInfo", &CyGlobalContext::getPythonModulesInfo, python::return_value_policy<python::reference_existing_object>(), "getPythonModulesInfo () - Returns info object")
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* MODULAR_LOADING_CONTROL                 END                                                  */
+		/************************************************************************************************/
 
 		.def("getNumVoteSourceInfos", &CyGlobalContext::getNumVoteSourceInfos, "int ()")
 		.def("getVoteSourceInfo", &CyGlobalContext::getVoteSourceInfo, python::return_value_policy<python::reference_existing_object>(), "Returns info object")
@@ -187,6 +187,5 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 		.def("getPropertyInfo", &CyGlobalContext::getPropertyInfo, python::return_value_policy<python::reference_existing_object>(), "PropertyInfo (int)")
 
 		.def("getCursorPos", &CyGlobalContext::getCursorPos, "POINT getCursorPos() - Returns window relative mouse position")
-		.def("screenToClient", &CyGlobalContext::screenToClient, "POINT screenToClient(POINT) - Convert point from screen relative to window relative")
-		;
+		.def("screenToClient", &CyGlobalContext::screenToClient, "POINT screenToClient(POINT) - Convert point from screen relative to window relative");
 }

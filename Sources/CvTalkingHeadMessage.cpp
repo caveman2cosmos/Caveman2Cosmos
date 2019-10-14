@@ -1,20 +1,7 @@
 #include "CvGameCoreDLL.h"
 
-CvTalkingHeadMessage::CvTalkingHeadMessage(int iMessageTurn, int iLen, LPCWSTR pszDesc, LPCTSTR pszSound, InterfaceMessageTypes eType, LPCTSTR pszIcon, ColorTypes eColor, int iX, int iY, bool bShowOffScreenArrows, bool bShowOnScreenArrows) :
-	m_iTurn(iMessageTurn),
-	m_szDescription(pszDesc),
-	m_szSound(pszSound),
-	m_szIcon(pszIcon),
-	m_iLength(iLen),
-	m_eFlashColor(eColor),
-	m_iFlashX(iX),
-	m_iFlashY(iY),
-	m_bOffScreenArrows(bShowOffScreenArrows),
-	m_bOnScreenArrows(bShowOnScreenArrows),
-	m_eMessageType(eType),
-	m_eFromPlayer(NO_PLAYER),
-	m_eTarget(NO_CHATTARGET),
-	m_bShown(false)
+CvTalkingHeadMessage::CvTalkingHeadMessage(int iMessageTurn, int iLen, LPCWSTR pszDesc, LPCTSTR pszSound, InterfaceMessageTypes eType, LPCTSTR pszIcon, ColorTypes eColor, int iX, int iY, bool bShowOffScreenArrows, bool bShowOnScreenArrows)
+	: m_iTurn(iMessageTurn), m_szDescription(pszDesc), m_szSound(pszSound), m_szIcon(pszIcon), m_iLength(iLen), m_eFlashColor(eColor), m_iFlashX(iX), m_iFlashY(iY), m_bOffScreenArrows(bShowOffScreenArrows), m_bOnScreenArrows(bShowOnScreenArrows), m_eMessageType(eType), m_eFromPlayer(NO_PLAYER), m_eTarget(NO_CHATTARGET), m_bShown(false)
 {
 }
 
@@ -211,7 +198,7 @@ int CvTalkingHeadMessage::getExpireTurn()
 	case MESSAGE_TYPE_CHAT:
 		iExpireTurn += 20;
 		break;
-    case MESSAGE_TYPE_COMBAT_MESSAGE:
+	case MESSAGE_TYPE_COMBAT_MESSAGE:
 		iExpireTurn += 20;
 		break;
 	case MESSAGE_TYPE_MINOR_EVENT:

@@ -23,6 +23,5 @@ void CyMessageControlInterface()
 		.def("GetConnState", &CyMessageControl::GetConnState, "int (int iPlayer)")
 		.def("sendChooseTrait", &CyMessageControl::sendChooseTrait, "void ( int /*TraitTypes*/ iTrait, bool bNewValue )")
 		.def("sendMergeUnit", &CyMessageControl::sendMergeUnit, "void ( int iUnitID )")
-		.def("sendSplitUnit", &CyMessageControl::sendSplitUnit, "void ( bool bConfirm )")
-	;
+		.def("sendSplitUnit", &CyMessageControl::sendSplitUnit, "void ( bool bConfirm )");
 }

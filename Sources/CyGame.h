@@ -3,7 +3,7 @@
 #ifndef CyGame_h
 #define CyGame_h
 //
-// Python wrapper class for CvGame 
+// Python wrapper class for CvGame
 // SINGLETON
 // updated 6-5
 
@@ -19,22 +19,22 @@ class CyPlot;
 
 class CyGame
 {
-public:
+  public:
 	CyGame();
-	explicit CyGame(CvGame* pGame);			// Call from C++
-	explicit CyGame(CvGameAI* pGame);		// Call from C++;
+	explicit CyGame(CvGame* pGame); // Call from C++
+	explicit CyGame(CvGameAI* pGame); // Call from C++;
 
-	CvGame* getGame() { return m_pGame;	}	// Call from C++
-	bool isNone() { return (m_pGame==NULL); }
-/************************************************************************************************/
-/* REVOLUTION_MOD                                                                 lemmy101      */
-/*                                                                                jdog5000      */
-/*                                                                                              */
-/************************************************************************************************/
+	CvGame* getGame() { return m_pGame; } // Call from C++
+	bool	isNone() { return (m_pGame == NULL); }
+	/************************************************************************************************/
+	/* REVOLUTION_MOD                                                                 lemmy101      */
+	/*                                                                                jdog5000      */
+	/*                                                                                              */
+	/************************************************************************************************/
 	bool isMultiplayer();
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* REVOLUTION_MOD                          END                                                  */
+	/************************************************************************************************/
 	void updateScore(bool bForce);
 	void cycleCities(bool bForward, bool bAdd);
 	void cycleSelectionGroups(bool bClear, bool bForward, bool bWorkers);
@@ -55,11 +55,11 @@ public:
 	bool isTeamVote(int /*VoteTypes*/ eVote) const;
 	bool isChooseElection(int /*VoteTypes*/ eVote) const;
 	bool isTeamVoteEligible(int /*TeamTypes*/ eTeam, int /*VoteSourceTypes*/ eVoteSource) const;
-	int countPossibleVote(int /*VoteTypes*/ eVote, int /*VoteSourceTypes*/ eVoteSource) const;
-	int getVoteRequired(int /*VoteTypes*/ eVote, int /*VoteSourceTypes*/ eVoteSource) const;
-	int getSecretaryGeneral(int /*VoteSourceTypes*/ eVoteSource) const;
+	int	 countPossibleVote(int /*VoteTypes*/ eVote, int /*VoteSourceTypes*/ eVoteSource) const;
+	int	 getVoteRequired(int /*VoteTypes*/ eVote, int /*VoteSourceTypes*/ eVoteSource) const;
+	int	 getSecretaryGeneral(int /*VoteSourceTypes*/ eVoteSource) const;
 	bool canHaveSecretaryGeneral(int /*VoteSourceTypes*/ eVoteSource) const;
-	int getVoteSourceReligion(int /*VoteSourceTypes*/ eVoteSource) const;
+	int	 getVoteSourceReligion(int /*VoteSourceTypes*/ eVoteSource) const;
 	void setVoteSourceReligion(int /*VoteSourceTypes*/ eVoteSource, int /*ReligionTypes*/ eReligion, bool bAnnounce);
 
 	int countCivPlayersAlive();
@@ -73,68 +73,68 @@ public:
 	int countKnownTechNumTeams(int /*TechTypes*/ eTech);
 	int getNumFreeBonuses(int /*BuildingTypes*/ eBuilding);
 
-	int countReligionLevels(int /*ReligionTypes*/ eReligion);	
+	int countReligionLevels(int /*ReligionTypes*/ eReligion);
 	int calculateReligionPercent(int /* ReligionTypes*/ eReligion);
-	int countCorporationLevels(int /*CorporationTypes*/ eCorporation);	
+	int countCorporationLevels(int /*CorporationTypes*/ eCorporation);
 
-	int goldenAgeLength();
-	int victoryDelay(int /*VictoryTypes*/ eVictory);
-	int getImprovementUpgradeTime(int /* ImprovementTypes*/ eImprovement);
+	int	 goldenAgeLength();
+	int	 victoryDelay(int /*VictoryTypes*/ eVictory);
+	int	 getImprovementUpgradeTime(int /* ImprovementTypes*/ eImprovement);
 	bool canTrainNukes();
 
-/************************************************************************************************/
-/* RevDCM	                  Start		 11/04/10                                phungus420     */
-/*                                                                                              */
-/* New World Logic                                                                              */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* RevDCM	                  Start		 11/04/10                                phungus420     */
+	/*                                                                                              */
+	/* New World Logic                                                                              */
+	/************************************************************************************************/
 	int /* EraTypes */ getHighestEra();
-/************************************************************************************************/
-/* New World Logic                 END                                                          */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* New World Logic                 END                                                          */
+	/************************************************************************************************/
 	int /* EraTypes */ getCurrentEra();
 
-	int getActiveTeam();
+	int							getActiveTeam();
 	int /* CivilizationTypes */ getActiveCivilizationType();
-	bool isNetworkMultiPlayer();
-	bool isGameMultiPlayer();
-	bool isTeamGame();
+	bool						isNetworkMultiPlayer();
+	bool						isGameMultiPlayer();
+	bool						isTeamGame();
 
 	bool isModem();
 	void setModem(bool bModem);
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                                                                  lemmy101     */
-/*                                                                                 jdog5000     */
-/*                                                                                              */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* REVOLUTION_MOD                                                                  lemmy101     */
+	/*                                                                                 jdog5000     */
+	/*                                                                                              */
+	/************************************************************************************************/
 	void reviveActivePlayer();
 	void revivePlayer(int /*PlayerTypes*/ iPlayer);
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* REVOLUTION_MOD                          END                                                  */
+	/************************************************************************************************/
 
-	int getNumHumanPlayers();
-	int getGameTurn();
+	int	 getNumHumanPlayers();
+	int	 getGameTurn();
 	void setGameTurn(int iNewValue);
-	int getTurnYear(int iGameTurn);
-	int getGameTurnYear();
-	
-	int getElapsedGameTurns();
-	int getMaxTurns() const;
+	int	 getTurnYear(int iGameTurn);
+	int	 getGameTurnYear();
+
+	int	 getElapsedGameTurns();
+	int	 getMaxTurns() const;
 	void setMaxTurns(int iNewValue);
 	void changeMaxTurns(int iChange);
-	int getMaxCityElimination() const;
+	int	 getMaxCityElimination() const;
 	void setMaxCityElimination(int iNewValue);
-	int getNumAdvancedStartPoints() const;
+	int	 getNumAdvancedStartPoints() const;
 	void setNumAdvancedStartPoints(int iNewValue);
-	int getStartTurn() const;
-	int getStartYear() const;
+	int	 getStartTurn() const;
+	int	 getStartYear() const;
 	void setStartYear(int iNewValue);
-	int getEstimateEndTurn() const;
+	int	 getEstimateEndTurn() const;
 	void setEstimateEndTurn(int iNewValue);
-	int getTurnSlice() const;
-	int getMinutesPlayed() const;
-	int getTargetScore() const;
+	int	 getTurnSlice() const;
+	int	 getMinutesPlayed() const;
+	int	 getTargetScore() const;
 	void setTargetScore(int iNewValue);
 
 	int getNumGameTurnActive();
@@ -143,17 +143,17 @@ public:
 	int getNumCivCities();
 	int getTotalPopulation();
 
-	int getTradeRoutes() const;
+	int	 getTradeRoutes() const;
 	void changeTradeRoutes(int iChange);
-	int getFreeTradeCount() const;
+	int	 getFreeTradeCount() const;
 	bool isFreeTrade() const;
 	void changeFreeTradeCount(int iChange);
-	int getNoNukesCount() const;
+	int	 getNoNukesCount() const;
 	bool isNoNukes() const;
 	void changeNoNukesCount(int iChange);
-	int getSecretaryGeneralTimer(int iVoteSource) const;
-	int getVoteTimer(int iVoteSource) const;
-	int getNukesExploded() const;
+	int	 getSecretaryGeneralTimer(int iVoteSource) const;
+	int	 getVoteTimer(int iVoteSource) const;
+	int	 getNukesExploded() const;
 	void changeNukesExploded(int iChange);
 
 	int getMaxPopulation() const;
@@ -166,33 +166,33 @@ public:
 	int getInitWonders() const;
 	// < M.A.D. Nukes Start >
 	CyPlot* getLastNukeStrikePlot();
-	void setLastNukeStrikePlot(CyPlot* pPlot);
+	void	setLastNukeStrikePlot(CyPlot* pPlot);
 	// < M.A.D. Nukes End   >
-/************************************************************************************************/
-/* REVOLUTION_MOD                                                                 lemmy101      */
-/*                                                                                jdog5000      */
-/*                                                                                              */
-/************************************************************************************************/
-	int getAIAutoPlay(int iPlayer) const;
+	/************************************************************************************************/
+	/* REVOLUTION_MOD                                                                 lemmy101      */
+	/*                                                                                jdog5000      */
+	/*                                                                                              */
+	/************************************************************************************************/
+	int	 getAIAutoPlay(int iPlayer) const;
 	void setAIAutoPlay(int iPlayer, int iNewValue);
 
 	bool isForcedAIAutoPlay(int iPlayer) const;
-	int getForcedAIAutoPlay(int iPlayer) const;
+	int	 getForcedAIAutoPlay(int iPlayer) const;
 	void setForcedAIAutoPlay(int iPlayer, int iNewValue, bool bForced = false);
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* REVOLUTION_MOD                          END                                                  */
+	/************************************************************************************************/
 
 	// < Water Animals Start >
-	int getWaterAnimalSpawnChance() const;
+	int	 getWaterAnimalSpawnChance() const;
 	void setWaterAnimalSpawnChance(int iNewValue);
 	void changeWaterAnimalSpawnChance(int iChange);
-	
-	int getXResolution() const;
+
+	int	 getXResolution() const;
 	void setXResolution(int iNewValue);
 	void changeXResolution(int iChange);
-	
-	int getYResolution() const;
+
+	int	 getYResolution() const;
 	void setYResolution(int iNewValue);
 	void changeYResolution(int iChange);
 	// < Water Animals End   >
@@ -204,17 +204,17 @@ public:
 	void changeDiploVote(int /*VoteSourceTypes*/ eVoteSource, int iChange);
 	bool isDebugMode() const;
 	void toggleDebugMode();
-/************************************************************************************************/
-/* REVOLUTION_MOD                         03/18/09                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* REVOLUTION_MOD                         03/18/09                                jdog5000      */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
 	int getChtLvl() const;
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* REVOLUTION_MOD                          END                                                  */
+	/************************************************************************************************/
 
-	int getPitbossTurnTime();
+	int	 getPitbossTurnTime();
 	void setPitbossTurnTime(int iHours);
 	bool isHotSeat();
 	bool isPbem();
@@ -224,67 +224,67 @@ public:
 	bool isFinalInitialized();
 
 	int /*PlayerTypes*/ getActivePlayer();
-	void setActivePlayer(int /*PlayerTypes*/ eNewValue, bool bForceHotSeat);
-	int getPausePlayer();
-	bool isPaused();
-	int /*UnitTypes*/ getBestLandUnit();
-	int getBestLandUnitCombat();
+	void				setActivePlayer(int /*PlayerTypes*/ eNewValue, bool bForceHotSeat);
+	int					getPausePlayer();
+	bool				isPaused();
+	int /*UnitTypes*/	getBestLandUnit();
+	int					getBestLandUnitCombat();
 #if defined QC_MASTERY_VICTORY
-//Sevo Begin--VCM
+	//Sevo Begin--VCM
 	bool getStarshipLaunched(int ID);
 	bool getDiplomaticVictoryAchieved(int ID);
-//Sevo End VCM
+	//Sevo End VCM
 #endif
-	
-	int /*TeamTypes*/ getWinner();
-	int /*VictoryTypes*/ getVictory();
-	void setWinner(int /*TeamTypes*/ eNewWinner, int /*VictoryTypes*/ eNewVictory);
-	int /*GameStateTypes*/ getGameState();
-	int /*HandicapTypes*/ getHandicapType();
-	CalendarTypes getCalendar() const;
-	int /*EraTypes*/ getStartEra();
-	int /*GameSpeedTypes*/ getGameSpeedType();	
-	/*PlayerTypes*/ int getRankPlayer(int iRank);
-	int getPlayerRank(int /*PlayerTypes*/ iIndex);
-	int getPlayerScore(int /*PlayerTypes*/ iIndex);
-	int /*TeamTypes*/ getRankTeam(int iRank);
-	int getTeamRank(int /*TeamTypes*/ iIndex);
-	int getTeamScore(int /*TeamTypes*/ iIndex);
-	bool isOption(int /*GameOptionTypes*/ eIndex);
-	void setOption(int /*GameOptionTypes*/ eIndex, bool bEnabled);
-	bool isMPOption(int /*MultiplayerOptionTypes*/ eIndex);
-	bool isForcedControl(int /*ForceControlTypes*/ eIndex);
-	int getUnitCreatedCount(int /*UnitTypes*/ eIndex);
-	int getUnitClassCreatedCount(int /*UnitClassTypes*/ eIndex);
-	bool isUnitClassMaxedOut(int /*UnitClassTypes*/ eIndex, int iExtra);
-	int getBuildingClassCreatedCount(int /*BuildingClassTypes*/ eIndex);
-	bool isBuildingClassMaxedOut(int /*BuildingClassTypes*/ eIndex, int iExtra);
 
-	int getProjectCreatedCount(int /*ProjectTypes*/ eIndex);
+	int /*TeamTypes*/	   getWinner();
+	int /*VictoryTypes*/   getVictory();
+	void				   setWinner(int /*TeamTypes*/ eNewWinner, int /*VictoryTypes*/ eNewVictory);
+	int /*GameStateTypes*/ getGameState();
+	int /*HandicapTypes*/  getHandicapType();
+	CalendarTypes		   getCalendar() const;
+	int /*EraTypes*/	   getStartEra();
+	int /*GameSpeedTypes*/ getGameSpeedType();
+	/*PlayerTypes*/ int	   getRankPlayer(int iRank);
+	int					   getPlayerRank(int /*PlayerTypes*/ iIndex);
+	int					   getPlayerScore(int /*PlayerTypes*/ iIndex);
+	int /*TeamTypes*/	   getRankTeam(int iRank);
+	int					   getTeamRank(int /*TeamTypes*/ iIndex);
+	int					   getTeamScore(int /*TeamTypes*/ iIndex);
+	bool				   isOption(int /*GameOptionTypes*/ eIndex);
+	void				   setOption(int /*GameOptionTypes*/ eIndex, bool bEnabled);
+	bool				   isMPOption(int /*MultiplayerOptionTypes*/ eIndex);
+	bool				   isForcedControl(int /*ForceControlTypes*/ eIndex);
+	int					   getUnitCreatedCount(int /*UnitTypes*/ eIndex);
+	int					   getUnitClassCreatedCount(int /*UnitClassTypes*/ eIndex);
+	bool				   isUnitClassMaxedOut(int /*UnitClassTypes*/ eIndex, int iExtra);
+	int					   getBuildingClassCreatedCount(int /*BuildingClassTypes*/ eIndex);
+	bool				   isBuildingClassMaxedOut(int /*BuildingClassTypes*/ eIndex, int iExtra);
+
+	int	 getProjectCreatedCount(int /*ProjectTypes*/ eIndex);
 	bool isProjectMaxedOut(int /*ProjectTypes*/ eIndex, int iExtra);
 
-	int getForceCivicCount(int /*CivicTypes*/ eIndex);
+	int	 getForceCivicCount(int /*CivicTypes*/ eIndex);
 	bool isForceCivic(int /*CivicTypes*/ eIndex);
 	bool isForceCivicOption(int /*CivicOptionTypes*/ eCivicOption);
 
 	int getVoteOutcome(int /*VoteTypes*/ eIndex);
 
-	int getReligionGameTurnFounded(int /*ReligionTypes*/ eIndex);
+	int	 getReligionGameTurnFounded(int /*ReligionTypes*/ eIndex);
 	bool isReligionFounded(int /*ReligionTypes*/ eIndex);
 	bool isReligionSlotTaken(int /*ReligionTypes*/ eIndex);
-/************************************************************************************************/
-/* RevDCM	                  Start		 4/29/10                                                */
-/*                                                                                              */
-/* OC_LIMITED_RELIGIONS                                                                         */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* RevDCM	                  Start		 4/29/10                                                */
+	/*                                                                                              */
+	/* OC_LIMITED_RELIGIONS                                                                         */
+	/************************************************************************************************/
 	bool isGameStart();
-	int countNumReligionsFounded();
-	int countNumReligionTechsDiscovered();
+	int	 countNumReligionsFounded();
+	int	 countNumReligionTechsDiscovered();
 	bool isTechCanFoundReligion(int /*TechTypes*/ eIndex);
-/************************************************************************************************/
-/* LIMITED_RELIGIONS               END                                                          */
-/************************************************************************************************/
-	int getCorporationGameTurnFounded(int /*CorporationTypes*/ eIndex);
+	/************************************************************************************************/
+	/* LIMITED_RELIGIONS               END                                                          */
+	/************************************************************************************************/
+	int	 getCorporationGameTurnFounded(int /*CorporationTypes*/ eIndex);
 	bool isCorporationFounded(int /*CorporationTypes*/ eIndex);
 	bool isVotePassed(int /*VoteTypes*/ eIndex) const;
 	bool isVictoryValid(int /*VictoryTypes*/ eIndex);
@@ -298,78 +298,78 @@ public:
 	bool isInAdvancedStart();
 
 	CyCity* getHolyCity(int /*ReligionTypes*/ eIndex);
-	void setHolyCity(int /*ReligionTypes*/ eIndex, CyCity* pNewValue, bool bAnnounce);
-	void clearHolyCity(int /*ReligionTypes*/ eIndex);
+	void	setHolyCity(int /*ReligionTypes*/ eIndex, CyCity* pNewValue, bool bAnnounce);
+	void	clearHolyCity(int /*ReligionTypes*/ eIndex);
 
 	CyCity* getHeadquarters(int /*CorporationTypes*/ eIndex);
-	void setHeadquarters(int /*CorporationTypes*/ eIndex, CyCity* pNewValue, bool bAnnounce);
-	void clearHeadquarters(int /*CorporationTypes*/ eIndex);
+	void	setHeadquarters(int /*CorporationTypes*/ eIndex, CyCity* pNewValue, bool bAnnounce);
+	void	clearHeadquarters(int /*CorporationTypes*/ eIndex);
 
 	int getPlayerVote(int /*PlayerTypes*/ eOwnerIndex, int iVoteId);
 
 	std::string getScriptData() const;
-	void setScriptData(std::string szNewValue);
+	void		setScriptData(std::string szNewValue);
 
-	void setName(TCHAR* szName);
+	void		 setName(TCHAR* szName);
 	std::wstring getName();
-	int getIndexAfterLastDeal();
-	int getNumDeals();
-	CyDeal* getDeal(int iID);
-	CyDeal* addDeal();
-	void deleteDeal(int iID);
-	CvRandom& getMapRand();
-	int getMapRandNum(int iNum, TCHAR* pszLog);
-	CvRandom& getSorenRand();
-	int getSorenRandNum(int iNum, TCHAR* pszLog);
-	int calculateSyncChecksum();
-	int calculateOptionsChecksum();
-	bool GetWorldBuilderMode() const;				// remove once CvApp is exposed
-	bool isPitbossHost() const;				// remove once CvApp is exposed
-	int getCurrentLanguage() const;				// remove once CvApp is exposed
-	void setCurrentLanguage(int iNewLanguage);				// remove once CvApp is exposed
+	int			 getIndexAfterLastDeal();
+	int			 getNumDeals();
+	CyDeal*		 getDeal(int iID);
+	CyDeal*		 addDeal();
+	void		 deleteDeal(int iID);
+	CvRandom&	 getMapRand();
+	int			 getMapRandNum(int iNum, TCHAR* pszLog);
+	CvRandom&	 getSorenRand();
+	int			 getSorenRandNum(int iNum, TCHAR* pszLog);
+	int			 calculateSyncChecksum();
+	int			 calculateOptionsChecksum();
+	bool		 GetWorldBuilderMode() const; // remove once CvApp is exposed
+	bool		 isPitbossHost() const; // remove once CvApp is exposed
+	int			 getCurrentLanguage() const; // remove once CvApp is exposed
+	void		 setCurrentLanguage(int iNewLanguage); // remove once CvApp is exposed
 
-	int getReplayMessageTurn(int i) const;
+	int				   getReplayMessageTurn(int i) const;
 	ReplayMessageTypes getReplayMessageType(int i) const;
-	int getReplayMessagePlotX(int i) const;
-	int getReplayMessagePlotY(int i) const;
-	int getReplayMessagePlayer(int i) const;
-	ColorTypes getReplayMessageColor(int i) const;
-	std::wstring getReplayMessageText(int i) const;
-	uint getNumReplayMessages() const;
-	CyReplayInfo* getReplayInfo() const;
-	bool hasSkippedSaveChecksum() const;
+	int				   getReplayMessagePlotX(int i) const;
+	int				   getReplayMessagePlotY(int i) const;
+	int				   getReplayMessagePlayer(int i) const;
+	ColorTypes		   getReplayMessageColor(int i) const;
+	std::wstring	   getReplayMessageText(int i) const;
+	uint			   getNumReplayMessages() const;
+	CyReplayInfo*	   getReplayInfo() const;
+	bool			   hasSkippedSaveChecksum() const;
 
 	void saveReplay(int iPlayer);
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                                                                 lemmy101      */
-/*                                                                                jdog5000      */
-/*                                                                                              */
-/************************************************************************************************/
-	void addPlayer(int /*PlayerTypes*/ eNewPlayer, int /*LeaderHeadTypes*/ eLeader, int /*CivilizationTypes*/ eCiv, bool bSetAlive );
-	void changeHumanPlayer( int /*PlayerTypes*/ eOldHuman , int /*PlayerTypes*/ eNewHuman );
+	/************************************************************************************************/
+	/* REVOLUTION_MOD                                                                 lemmy101      */
+	/*                                                                                jdog5000      */
+	/*                                                                                              */
+	/************************************************************************************************/
+	void addPlayer(int /*PlayerTypes*/ eNewPlayer, int /*LeaderHeadTypes*/ eLeader, int /*CivilizationTypes*/ eCiv, bool bSetAlive);
+	void changeHumanPlayer(int /*PlayerTypes*/ eOldHuman, int /*PlayerTypes*/ eNewHuman);
 	void addReplayMessage(int /*ReplayMessageTypes*/ eType, int /*PlayerTypes*/ ePlayer, std::wstring pszText, int iPlotX, int iPlotY, int /*ColorTypes*/ eColor);
 	void log(TCHAR* str);
 	void logw(std::wstring str);
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* REVOLUTION_MOD                          END                                                  */
+	/************************************************************************************************/
 
-/************************************************************************************************/
-/* RevolutionDCM	                  Start		 05/31/10                        Afforess       */
-/*                                                                                              */
-/* Battle Effects                                                                               */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* RevolutionDCM	                  Start		 05/31/10                        Afforess       */
+	/*                                                                                              */
+	/* Battle Effects                                                                               */
+	/************************************************************************************************/
 	void drawBattleEffects();
-/************************************************************************************************/
-/* RevolutionDCM	             Battle Effects END                                             */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* RevolutionDCM	             Battle Effects END                                             */
+	/************************************************************************************************/
 
 	int getCultureThreshold(int /*CultureLevelTypes*/ eLevel);
 
 	void setPlotExtraYield(int iX, int iY, int /*YieldTypes*/ eYield, int iExtraYield);
 	void changePlotExtraCost(int iX, int iY, int iExtraCost);
-	
+
 	bool isCivEverActive(int /*CivilizationTypes*/ eCivilization);
 	bool isLeaderEverActive(int /*LeaderHeadTypes*/ eLeader);
 	bool isUnitEverActive(int /*UnitTypes*/ eUnit);
@@ -378,41 +378,42 @@ public:
 	bool isEventActive(int /*EventTriggerTypes*/ eTrigger);
 	void doControl(int iControl);
 
-// BUG - MapFinder - start
+	// BUG - MapFinder - start
 	bool canRegenerateMap() const;
 	bool regenerateMap();
 
 	void saveGame(std::string fileName) const;
 	bool takeJPEGScreenShot(std::string fileName) const;
-// BUG - MapFinder - end
+	// BUG - MapFinder - end
 
-// BUG - EXE/DLL Paths - start
+	// BUG - EXE/DLL Paths - start
 	std::string getDLLPath() const;
 	std::string getExePath() const;
-// BUG - EXE/DLL Paths - end
-/************************************************************************************************/
-/* Afforess	                  Start		 01/12/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	int getCutLosersCounter() const;
-    int getHighToLowCounter() const;
+	// BUG - EXE/DLL Paths - end
+	/************************************************************************************************/
+	/* Afforess	                  Start		 01/12/10                                               */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
+	int	 getCutLosersCounter() const;
+	int	 getHighToLowCounter() const;
 	bool cheatCodesEnabled();
 	void setVictoryValid(int iVictory, bool bNewVal);
-	bool isModderGameOption(int /*ModderGameOptionTypes*/ eIndex);	
-	int getModderGameOption(int /*ModderGameOptionTypes*/ eIndex);	
+	bool isModderGameOption(int /*ModderGameOptionTypes*/ eIndex);
+	int	 getModderGameOption(int /*ModderGameOptionTypes*/ eIndex);
 	void setModderGameOption(int /*ModderGameOptionTypes*/ eIndex, int iNewValue);
 	void setFutureEras();
 	bool canEverResearch(int iTech) const;
 	bool canEverConstruct(int iBuilding) const;
 	bool canEverTrain(int iUnit) const;
 	bool canEverSpread(int iCorporation) const;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* Afforess	                     END                                                            */
+	/************************************************************************************************/
 	const char* getC2CVersion() const;
-protected:
+
+  protected:
 	CvGame* m_pGame;
 };
 
-#endif	// #ifndef CyGame
+#endif // #ifndef CyGame

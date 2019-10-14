@@ -6,12 +6,12 @@
 
 void FDataIOStream::OpenRead(CvString szFile)
 {
-	stream.open(szFile.c_str(),std::ios::binary | std::ios::in);
+	stream.open(szFile.c_str(), std::ios::binary | std::ios::in);
 }
 
 void FDataIOStream::OpenWrite(CvString szFile)
 {
-	stream.open(szFile.c_str(),std::ios::binary | std::ios::out | std::ios::trunc);
+	stream.open(szFile.c_str(), std::ios::binary | std::ios::out | std::ios::trunc);
 	FAssert(stream.good());
 }
 
@@ -27,7 +27,6 @@ bool FDataIOStream::IsOpen()
 
 void FDataIOStream::Rewind()
 {
-
 }
 
 bool FDataIOStream::AtEnd()
@@ -37,7 +36,6 @@ bool FDataIOStream::AtEnd()
 
 void FDataIOStream::FastFwd()
 {
-
 }
 
 unsigned int FDataIOStream::GetPosition() const
@@ -47,17 +45,14 @@ unsigned int FDataIOStream::GetPosition() const
 
 void FDataIOStream::SetPosition(unsigned int position)
 {
-
 }
 
 void FDataIOStream::Truncate()
 {
-
 }
 
 void FDataIOStream::Flush()
 {
-
 }
 
 unsigned int FDataIOStream::GetEOF() const
@@ -70,19 +65,18 @@ unsigned int FDataIOStream::GetSizeLeft() const
 	return 0;
 }
 
-void FDataIOStream::CopyToMem(void *mem)
+void FDataIOStream::CopyToMem(void* mem)
 {
-
 }
 
-unsigned int FDataIOStream::WriteString(const wchar *szName)
+unsigned int FDataIOStream::WriteString(const wchar* szName)
 {
-	stream.write((char*)szName, (std::wcslen(szName) + 1) * sizeof (wchar));
+	stream.write((char*)szName, (std::wcslen(szName) + 1) * sizeof(wchar));
 	FAssert(stream.good());
 	return 0;
 }
 
-unsigned int FDataIOStream::WriteString(const char *szName)
+unsigned int FDataIOStream::WriteString(const char* szName)
 {
 	stream.write(szName, std::strlen(szName) + 1);
 	FAssert(stream.good());
@@ -98,14 +92,14 @@ unsigned int FDataIOStream::WriteString(const std::string& szName)
 
 unsigned int FDataIOStream::WriteString(const std::wstring& szName)
 {
-	stream.write((char*)szName.c_str(), (szName.length() + 1) * sizeof (wchar));
+	stream.write((char*)szName.c_str(), (szName.length() + 1) * sizeof(wchar));
 	FAssert(stream.good());
 	return 0;
 }
 
 unsigned int FDataIOStream::WriteString(int count, std::string values[])
 {
-	for (int i=0; i<count; i++)
+	for (int i = 0; i < count; i++)
 	{
 		WriteString(values[i]);
 	}
@@ -114,14 +108,14 @@ unsigned int FDataIOStream::WriteString(int count, std::string values[])
 
 unsigned int FDataIOStream::WriteString(int count, std::wstring values[])
 {
-	for (int i=0; i<count; i++)
+	for (int i = 0; i < count; i++)
 	{
 		WriteString(values[i]);
 	}
 	return 0;
 }
-	
-unsigned int FDataIOStream::ReadString(char *szName)
+
+unsigned int FDataIOStream::ReadString(char* szName)
 {
 	char c;
 	do
@@ -129,12 +123,11 @@ unsigned int FDataIOStream::ReadString(char *szName)
 		stream.get(c);
 		*szName = c;
 		szName++;
-	}
-	while (c != '\0');
+	} while (c != '\0');
 	FAssert(stream.good());
 	return 0;
 }
-unsigned int FDataIOStream::ReadString(wchar *szName)
+unsigned int FDataIOStream::ReadString(wchar* szName)
 {
 	wchar c;
 	do
@@ -142,8 +135,7 @@ unsigned int FDataIOStream::ReadString(wchar *szName)
 		stream.read((char*)&c, sizeof(wchar));
 		*szName = c;
 		szName++;
-	}
-	while (c != L'\0');
+	} while (c != L'\0');
 	FAssert(stream.good());
 	return 0;
 }
@@ -177,7 +169,7 @@ unsigned int FDataIOStream::ReadString(std::wstring& szName)
 }
 unsigned int FDataIOStream::ReadString(int count, std::string values[])
 {
-	for (int i=0; i<count; i++)
+	for (int i = 0; i < count; i++)
 	{
 		ReadString(values[i]);
 	}
@@ -185,38 +177,38 @@ unsigned int FDataIOStream::ReadString(int count, std::string values[])
 }
 unsigned int FDataIOStream::ReadString(int count, std::wstring values[])
 {
-	for (int i=0; i<count; i++)
+	for (int i = 0; i < count; i++)
 	{
 		ReadString(values[i]);
 	}
 	return 0;
 }
-	
-char * FDataIOStream::ReadString()		// allocates memory 
+
+char* FDataIOStream::ReadString() // allocates memory
 {
 	CvString s;
 	ReadString(s);
-	char* szName = new char[s.length()+1];
-	memcpy((void*)szName, (void*)s.c_str(), s.length()+1);
+	char* szName = new char[s.length() + 1];
+	memcpy((void*)szName, (void*)s.c_str(), s.length() + 1);
 	return szName;
 }
 
-wchar * FDataIOStream::ReadWideString()	// allocates memory 
+wchar* FDataIOStream::ReadWideString() // allocates memory
 {
 	CvWString s;
 	ReadString(s);
-	wchar* szName = new wchar[s.length()+1];
-	memcpy((void*)szName, (void*)s.c_str(), (s.length()+1)*sizeof(wchar));
+	wchar* szName = new wchar[s.length() + 1];
+	memcpy((void*)szName, (void*)s.c_str(), (s.length() + 1) * sizeof(wchar));
 	return szName;
 }
 
-void FDataIOStream::Read(char * pC)
+void FDataIOStream::Read(char* pC)
 {
 	stream.get(*pC);
 	FAssert(stream.good());
 }
 
-void FDataIOStream::Read(byte *pC)
+void FDataIOStream::Read(byte* pC)
 {
 	stream.get(*((char*)pC));
 	FAssert(stream.good());
@@ -234,7 +226,7 @@ void FDataIOStream::Read(int count, byte values[])
 	FAssert(stream.good());
 }
 
-void FDataIOStream::Read(bool *b)
+void FDataIOStream::Read(bool* b)
 {
 	stream.read((char*)b, sizeof(bool));
 	FAssert(stream.good());
@@ -242,17 +234,17 @@ void FDataIOStream::Read(bool *b)
 
 void FDataIOStream::Read(int count, bool values[])
 {
-	stream.read((char*)values, sizeof(bool)*count);
+	stream.read((char*)values, sizeof(bool) * count);
 	FAssert(stream.good());
 }
 
-void FDataIOStream::Read(short	*s)
+void FDataIOStream::Read(short* s)
 {
 	stream.read((char*)s, sizeof(short));
 	FAssert(stream.good());
 }
 
-void FDataIOStream::Read(unsigned short	*s)
+void FDataIOStream::Read(unsigned short* s)
 {
 	stream.read((char*)s, sizeof(unsigned short));
 	FAssert(stream.good());
@@ -260,13 +252,13 @@ void FDataIOStream::Read(unsigned short	*s)
 
 void FDataIOStream::Read(int count, short values[])
 {
-	stream.read((char*)values, sizeof(short)*count);
+	stream.read((char*)values, sizeof(short) * count);
 	FAssert(stream.good());
 }
 
 void FDataIOStream::Read(int count, unsigned short values[])
 {
-	stream.read((char*)values, sizeof(unsigned short)*count);
+	stream.read((char*)values, sizeof(unsigned short) * count);
 	FAssert(stream.good());
 }
 
@@ -284,13 +276,13 @@ void FDataIOStream::Read(unsigned int* i)
 
 void FDataIOStream::Read(int count, int values[])
 {
-	stream.read((char*)values, sizeof(int)*count);
+	stream.read((char*)values, sizeof(int) * count);
 	FAssert(stream.good());
 }
 
 void FDataIOStream::Read(int count, unsigned int values[])
 {
-	stream.read((char*)values, sizeof(unsigned int)*count);
+	stream.read((char*)values, sizeof(unsigned int) * count);
 	FAssert(stream.good());
 }
 
@@ -309,13 +301,13 @@ void FDataIOStream::Read(unsigned long* l)
 
 void FDataIOStream::Read(int count, long values[])
 {
-	stream.read((char*)values, sizeof(long)*count);
+	stream.read((char*)values, sizeof(long) * count);
 	FAssert(stream.good());
 }
 
 void FDataIOStream::Read(int count, unsigned long values[])
 {
-	stream.read((char*)values, sizeof(unsigned long)*count);
+	stream.read((char*)values, sizeof(unsigned long) * count);
 	FAssert(stream.good());
 }
 
@@ -328,7 +320,7 @@ void FDataIOStream::Read(float* value)
 
 void FDataIOStream::Read(int count, float values[])
 {
-	stream.read((char*)values, sizeof(float)*count);
+	stream.read((char*)values, sizeof(float) * count);
 	FAssert(stream.good());
 }
 
@@ -341,7 +333,7 @@ void FDataIOStream::Read(double* value)
 
 void FDataIOStream::Read(int count, double values[])
 {
-	stream.read((char*)values, sizeof(double)*count);
+	stream.read((char*)values, sizeof(double) * count);
 	FAssert(stream.good());
 }
 
@@ -357,7 +349,7 @@ bool FDataIOStream::TryRead(unsigned long* l)
 	return stream.good();
 }
 
-void FDataIOStream::Write( char value)
+void FDataIOStream::Write(char value)
 {
 	stream.put(value);
 	FAssert(stream.good());
@@ -369,13 +361,13 @@ void FDataIOStream::Write(byte value)
 	FAssert(stream.good());
 }
 
-void FDataIOStream::Write(int count, const  char values[])
+void FDataIOStream::Write(int count, const char values[])
 {
 	stream.write(values, count);
 	FAssert(stream.good());
 }
 
-void FDataIOStream::Write(int count, const  byte values[])
+void FDataIOStream::Write(int count, const byte values[])
 {
 	stream.write((char*)values, count);
 	FAssert(stream.good());
@@ -390,7 +382,7 @@ void FDataIOStream::Write(bool value)
 
 void FDataIOStream::Write(int count, const bool values[])
 {
-	stream.write((char*)values, sizeof(bool)*count);
+	stream.write((char*)values, sizeof(bool) * count);
 	FAssert(stream.good());
 }
 
@@ -409,13 +401,13 @@ void FDataIOStream::Write(unsigned short value)
 
 void FDataIOStream::Write(int count, const short values[])
 {
-	stream.write((char*)values, sizeof(short)*count);
+	stream.write((char*)values, sizeof(short) * count);
 	FAssert(stream.good());
 }
 
 void FDataIOStream::Write(int count, const unsigned short values[])
 {
-	stream.write((char*)values, sizeof(unsigned short)*count);
+	stream.write((char*)values, sizeof(unsigned short) * count);
 	FAssert(stream.good());
 }
 
@@ -434,13 +426,13 @@ void FDataIOStream::Write(unsigned int value)
 
 void FDataIOStream::Write(int count, const int values[])
 {
-	stream.write((char*)values, sizeof(int)*count);
+	stream.write((char*)values, sizeof(int) * count);
 	FAssert(stream.good());
 }
 
 void FDataIOStream::Write(int count, const unsigned int values[])
 {
-	stream.write((char*)values, sizeof(unsigned int)*count);
+	stream.write((char*)values, sizeof(unsigned int) * count);
 	FAssert(stream.good());
 }
 
@@ -451,7 +443,7 @@ void FDataIOStream::Write(long value)
 	FAssert(stream.good());
 }
 
-void FDataIOStream::Write(unsigned long  value)
+void FDataIOStream::Write(unsigned long value)
 {
 	stream.write((char*)&value, sizeof(unsigned long));
 	FAssert(stream.good());
@@ -459,13 +451,13 @@ void FDataIOStream::Write(unsigned long  value)
 
 void FDataIOStream::Write(int count, const long values[])
 {
-	stream.write((char*)values, sizeof(long)*count);
+	stream.write((char*)values, sizeof(long) * count);
 	FAssert(stream.good());
 }
 
 void FDataIOStream::Write(int count, const unsigned long values[])
 {
-	stream.write((char*)values, sizeof(unsigned long)*count);
+	stream.write((char*)values, sizeof(unsigned long) * count);
 	FAssert(stream.good());
 }
 
@@ -478,7 +470,7 @@ void FDataIOStream::Write(float value)
 
 void FDataIOStream::Write(int count, const float values[])
 {
-	stream.write((char*)values, sizeof(float)*count);
+	stream.write((char*)values, sizeof(float) * count);
 	FAssert(stream.good());
 }
 
@@ -491,9 +483,6 @@ void FDataIOStream::Write(double value)
 
 void FDataIOStream::Write(int count, const double values[])
 {
-	stream.write((char*)values, sizeof(double)*count);
+	stream.write((char*)values, sizeof(double) * count);
 	FAssert(stream.good());
 }
-
-
-

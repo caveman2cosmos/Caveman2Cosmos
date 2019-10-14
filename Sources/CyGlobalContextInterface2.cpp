@@ -12,17 +12,17 @@ void CyGlobalContextPythonInterface2(python::class_<CyGlobalContext>& x)
 
 	x
 		// global defines.xml
-/************************************************************************************************/
-/* MOD_COMPONENT_CONTROL                   08/02/07                            MRGENIE          */
-/*                                                                                              */
-/* Return true/false from                                                                       */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* MOD_COMPONENT_CONTROL                   08/02/07                            MRGENIE          */
+		/*                                                                                              */
+		/* Return true/false from                                                                       */
+		/************************************************************************************************/
 		.def("getDefineBOOL", &CyGlobalContext::getDefineBOOL, "bool ( string szName)")
-/************************************************************************************************/
-/* Mod Globals    Start                          09/13/10                           phungus420  */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Mod Globals    Start                          09/13/10                           phungus420  */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
 		.def("isDCM_BATTLE_EFFECTS", &CyGlobalContext::isDCM_BATTLE_EFFECTS, "bool ()")
 		.def("getBATTLE_EFFECT_LESS_FOOD", &CyGlobalContext::getBATTLE_EFFECT_LESS_FOOD, "int ()")
 		.def("getBATTLE_EFFECT_LESS_PRODUCTION", &CyGlobalContext::getBATTLE_EFFECT_LESS_PRODUCTION, "int ()")
@@ -66,27 +66,27 @@ void CyGlobalContextPythonInterface2(python::class_<CyGlobalContext>& x)
 		.def("isSS_ENABLED", &CyGlobalContext::isSS_ENABLED, "bool ()")
 		.def("isSS_BRIBE", &CyGlobalContext::isSS_BRIBE, "bool ()")
 		.def("isSS_ASSASSINATE", &CyGlobalContext::isSS_ASSASSINATE, "bool ()")
-/************************************************************************************************/
-/* Mod Globals                        END                                           phungus420  */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Mod Globals                        END                                           phungus420  */
+		/************************************************************************************************/
 
-		.def("getDefineINT", &CyGlobalContext::getDefineINT, "int ( string szName )" )
-		.def("getDefineFLOAT", &CyGlobalContext::getDefineFLOAT, "float ( string szName )" )
-		.def("getDefineSTRING", &CyGlobalContext::getDefineSTRING, "string getDefineSTRING( string szName )" )
-		.def("setDefineINT", &CyGlobalContext::setDefineINT, "void ( string szName, int iValue )" )
-		.def("setDefineFLOAT", &CyGlobalContext::setDefineFLOAT, "void setDefineFLOAT( string szName, float fValue )" )
-		.def("setDefineSTRING", &CyGlobalContext::setDefineSTRING, "void ( string szName, string szValue )" )
-/************************************************************************************************/
-/* Afforess	                  Start		 08/29/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-		.def("setNoUpdateDefineINT", &CyGlobalContext::setNoUpdateDefineINT, "void ( string szName, int iValue )" )
-		.def("setNoUpdateDefineFLOAT", &CyGlobalContext::setNoUpdateDefineFLOAT, "void setDefineFLOAT( string szName, float fValue )" )
-		.def("setNoUpdateDefineSTRING", &CyGlobalContext::setNoUpdateDefineSTRING, "void ( string szName, string szValue )" )
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		.def("getDefineINT", &CyGlobalContext::getDefineINT, "int ( string szName )")
+		.def("getDefineFLOAT", &CyGlobalContext::getDefineFLOAT, "float ( string szName )")
+		.def("getDefineSTRING", &CyGlobalContext::getDefineSTRING, "string getDefineSTRING( string szName )")
+		.def("setDefineINT", &CyGlobalContext::setDefineINT, "void ( string szName, int iValue )")
+		.def("setDefineFLOAT", &CyGlobalContext::setDefineFLOAT, "void setDefineFLOAT( string szName, float fValue )")
+		.def("setDefineSTRING", &CyGlobalContext::setDefineSTRING, "void ( string szName, string szValue )")
+		/************************************************************************************************/
+		/* Afforess	                  Start		 08/29/10                                               */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
+		.def("setNoUpdateDefineINT", &CyGlobalContext::setNoUpdateDefineINT, "void ( string szName, int iValue )")
+		.def("setNoUpdateDefineFLOAT", &CyGlobalContext::setNoUpdateDefineFLOAT, "void setDefineFLOAT( string szName, float fValue )")
+		.def("setNoUpdateDefineSTRING", &CyGlobalContext::setNoUpdateDefineSTRING, "void ( string szName, string szValue )")
+		/************************************************************************************************/
+		/* Afforess	                     END                                                            */
+		/************************************************************************************************/
 
 		.def("getMOVE_DENOMINATOR", &CyGlobalContext::getMOVE_DENOMINATOR, "int ()")
 		.def("getNUM_UNIT_PREREQ_OR_BONUSES", &CyGlobalContext::getNUM_UNIT_PREREQ_OR_BONUSES, "int ()")
@@ -94,27 +94,27 @@ void CyGlobalContextPythonInterface2(python::class_<CyGlobalContext>& x)
 		.def("getFOOD_CONSUMPTION_PER_POPULATION", &CyGlobalContext::getFOOD_CONSUMPTION_PER_POPULATION, "int ()")
 		.def("getMAX_HIT_POINTS", &CyGlobalContext::getMAX_HIT_POINTS, "int ()")
 		.def("getHILLS_EXTRA_DEFENSE", &CyGlobalContext::getHILLS_EXTRA_DEFENSE, "int ()")
-/************************************************************************************************/
-/* Afforess	Mountains Start		 08/03/09                                           		 */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	Mountains Start		 08/03/09                                           		 */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
 		.def("getPEAK_EXTRA_DEFENSE", &CyGlobalContext::getPEAK_EXTRA_DEFENSE, "int ()")
-/************************************************************************************************/
-/* Afforess	Mountains End       END        		                                             */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	Mountains End       END        		                                             */
+		/************************************************************************************************/
 		.def("getRIVER_ATTACK_MODIFIER", &CyGlobalContext::getRIVER_ATTACK_MODIFIER, "int ()")
 		.def("getAMPHIB_ATTACK_MODIFIER", &CyGlobalContext::getAMPHIB_ATTACK_MODIFIER, "int ()")
 		.def("getHILLS_EXTRA_MOVEMENT", &CyGlobalContext::getHILLS_EXTRA_MOVEMENT, "int ()")
-/************************************************************************************************/
-/* Afforess	Mountains Start		 08/03/09                                           		 */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	Mountains Start		 08/03/09                                           		 */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
 		.def("getPEAK_EXTRA_MOVEMENT", &CyGlobalContext::getPEAK_EXTRA_MOVEMENT, "int ()")
-/************************************************************************************************/
-/* Afforess	Mountains End       END        		                                             */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	Mountains End       END        		                                             */
+		/************************************************************************************************/
 		.def("getMAX_PLOT_LIST_ROWS", &CyGlobalContext::getMAX_PLOT_LIST_ROWS, "int ()")
 		.def("getUNIT_MULTISELECT_MAX", &CyGlobalContext::getUNIT_MULTISELECT_MAX, "int ()")
 		.def("getPERCENT_ANGER_DIVISOR", &CyGlobalContext::getPERCENT_ANGER_DIVISOR, "int ()")
@@ -187,6 +187,5 @@ void CyGlobalContextPythonInterface2(python::class_<CyGlobalContext>& x)
 		.def("getNPC8_TEAM", &CyGlobalContext::getNPC8_TEAM, "int ()")
 		.def("getINVALID_PLOT_COORD", &CyGlobalContext::getINVALID_PLOT_COORD, "int ()")
 		.def("getNUM_CITY_PLOTS", &CyGlobalContext::getNUM_CITY_PLOTS, "int ()")
-		.def("getCITY_HOME_PLOT", &CyGlobalContext::getCITY_HOME_PLOT, "int ()")
-		;
+		.def("getCITY_HOME_PLOT", &CyGlobalContext::getCITY_HOME_PLOT, "int ()");
 }

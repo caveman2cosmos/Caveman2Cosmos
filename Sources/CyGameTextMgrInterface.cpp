@@ -38,15 +38,15 @@ void CyGameTextMgrInterface()
 		.def("parseCorporationInfo", &CyGameTextMgr::parseCorporationInfo, "wstring (int /*CorporationTypes*/ iCorporationType, bool bCivilopediaText)")
 		.def("parseCivInfos", &CyGameTextMgr::parseCivInfos, "wstring (int /*CivilizationTypes*/ iCivilization, bool bDawnOfMan)")
 		.def("parseLeaderTraits", &CyGameTextMgr::parseLeaderTraits, "wstring (int /*LeaderHeadTypes*/ iLeader, int /*CivilizationTypes*/ iCivilization, bool bDawnOfMan, bool bCivilopediaText)")
-/************************************************************************************************/
-/* Afforess	                  Start		 08/26/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                  Start		 08/26/10                                               */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
 		.def("parseTraits", &CyGameTextMgr::parseTraits, "wstring (int /*TraitTypes*/ eTrait, int /*CivilizationTypes*/ eCivilization, bool bDawnOfMan, boolbEffectsOnly)")
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                     END                                                            */
+		/************************************************************************************************/
 		.def("getSpecialistHelp", &CyGameTextMgr::getSpecialistHelp, "wstring (TradeData* pTradeData, int iPlayer1, int iPlayer2)")
 		.def("getTradeString", &CyGameTextMgr::getTradeString, "wstring (int iSpecialist, bool bCivilopediaText)")
 		.def("buildHintsList", &CyGameTextMgr::buildHintsList, "wstring ()")
@@ -55,6 +55,5 @@ void CyGameTextMgrInterface()
 		.def("setRevolutionHelp", &CyGameTextMgr::setRevolutionHelp, "wstring (int iPlayer)")
 		.def("setVassalRevoltHelp", &CyGameTextMgr::setVassalRevoltHelp, "wstring (int iMaster, int iVassal)")
 		.def("getActiveDealsString", &CyGameTextMgr::getActiveDealsString, "wstring (int iThisPlayer, int iOtherPlayer)")
-		.def("getDealString", &CyGameTextMgr::getDealString, "wstring (CyDeal* pDeal, int iPlayerPerspective)")
-	;
+		.def("getDealString", &CyGameTextMgr::getDealString, "wstring (CyDeal* pDeal, int iPlayerPerspective)");
 }

@@ -31,14 +31,14 @@ bool CvEventReporter::kbdEvent(int evt, int key, int iCursorX, int iCursorY)
 {
 	bool bResult = m_kPythonEventMgr.reportKbdEvent(evt, key, iCursorX, iCursorY);
 
-	if ( !bResult )
+	if (!bResult)
 	{
 		//	Trap ctrl-shift-TAB to cycle viewports for testing purposes
-		if (gDLL->ctrlKey() && gDLL->shiftKey() && evt == 7 && key == 41 )
+		if (gDLL->ctrlKey() && gDLL->shiftKey() && evt == 7 && key == 41)
 		{
 			static bool bClearSigns = true;
 
-			if ( bClearSigns )
+			if (bClearSigns)
 			{
 				GC.clearSigns();
 			}
@@ -50,23 +50,23 @@ bool CvEventReporter::kbdEvent(int evt, int key, int iCursorX, int iCursorY)
 			bClearSigns = !bClearSigns;
 		}
 		// key up for ctrl-shift-R - recalc modifiers
-		if ( gDLL->ctrlKey() && gDLL->shiftKey() && evt == 7 && (key == 30 || key == 32) )
+		if (gDLL->ctrlKey() && gDLL->shiftKey() && evt == 7 && (key == 30 || key == 32))
 		{
 			// TESTING ONLY ... GET_PLAYER((PlayerTypes)0/*GC.getGame().getActivePlayer()*/).AI_doCivics();
 			//GC.getGameINLINE().recalculateModifiers();
 			//AIAndy: Changed to use a message to make it multiplayer safe
 			CvMessageControl::getInstance().sendRecalculateModifiers();
 		}
-		if ( gDLL->altKey() && gDLL->shiftKey() && evt == 7 && (key == 30) )
+		if (gDLL->altKey() && gDLL->shiftKey() && evt == 7 && (key == 30))
 		{
 			GC.getMapINLINE().toggleCitiesDisplay();
 		}
-		if ( gDLL->altKey() && gDLL->shiftKey() && evt == 7 && (key == 32) )
+		if (gDLL->altKey() && gDLL->shiftKey() && evt == 7 && (key == 32))
 		{
 			GC.getMapINLINE().toggleUnitsDisplay();
 		}
 #ifndef FINAL_RELEASE
-		if ( gDLL->altKey() && gDLL->ctrlKey() && evt ==7 && key == FInputDevice::KB_P )
+		if (gDLL->altKey() && gDLL->ctrlKey() && evt == 7 && key == FInputDevice::KB_P)
 		{
 			//	Shift-C to center the viewport on the current selection
 			startProfilingDLL(false);
@@ -78,40 +78,40 @@ bool CvEventReporter::kbdEvent(int evt, int key, int iCursorX, int iCursorY)
 			bResult = true;
 		}
 #endif
-		if ( gDLL->altKey() && gDLL->ctrlKey() && evt ==7 && key == FInputDevice::KB_C )
+		if (gDLL->altKey() && gDLL->ctrlKey() && evt == 7 && key == FInputDevice::KB_C)
 		{
 			//	ctrl-alt-P to run pathing test code
 			GC.getCurrentViewport()->centerOnSelection();
 			bResult = true;
 		}
-		if ( gDLL->altKey() && evt ==7 && key == FInputDevice::KB_NUMPAD4 )
+		if (gDLL->altKey() && evt == 7 && key == FInputDevice::KB_NUMPAD4)
 		{
 			//	alt-numpad 4 (which is the left arrow also) pans the viewport left one full viewport width
 			GC.getCurrentViewport()->panLeft();
 			bResult = true;
 		}
-		if ( gDLL->altKey() && evt ==7 && key == FInputDevice::KB_NUMPAD6 )
+		if (gDLL->altKey() && evt == 7 && key == FInputDevice::KB_NUMPAD6)
 		{
 			//	alt-numpad 6 (which is the right arrow also) pans the viewport right one full viewport width
 			GC.getCurrentViewport()->panRight();
 			bResult = true;
 		}
-		if ( gDLL->altKey() && evt ==7 && key == FInputDevice::KB_NUMPAD8 )
+		if (gDLL->altKey() && evt == 7 && key == FInputDevice::KB_NUMPAD8)
 		{
 			//	alt-numpad 8 (which is the up arrow also) pans the viewport up one full viewport height
 			GC.getCurrentViewport()->panUp();
 			bResult = true;
 		}
-		if ( gDLL->altKey() && evt ==7 && key == FInputDevice::KB_NUMPAD2 )
+		if (gDLL->altKey() && evt == 7 && key == FInputDevice::KB_NUMPAD2)
 		{
 			//	alt-numpad 2 (which is the down arrow also) pans the viewport down one full viewport height
 			GC.getCurrentViewport()->panDown();
 			bResult = true;
 		}
 		//	Trap escape as a way out of advisor screens (can't find another way to trap this)
-		if ( evt == 7 && key == 1 )
+		if (evt == 7 && key == 1)
 		{
-			GC.getCurrentViewport()->closeAdvisor(-1,-1,-1,-1,-1);
+			GC.getCurrentViewport()->closeAdvisor(-1, -1, -1, -1, -1);
 			GC.setIsInPedia(false);
 		}
 	}
@@ -119,10 +119,9 @@ bool CvEventReporter::kbdEvent(int evt, int key, int iCursorX, int iCursorY)
 	return bResult;
 }
 
-void CvEventReporter::genericEvent(const char* szEventName, void *pyArgs)
+void CvEventReporter::genericEvent(const char* szEventName, void* pyArgs)
 {
 	m_kPythonEventMgr.reportGenericEvent(szEventName, pyArgs);
-	
 }
 
 void CvEventReporter::newGame()
@@ -131,7 +130,7 @@ void CvEventReporter::newGame()
 	// Called at the launch of a game (new or loaded)
 
 	// Report initial stats for the game
-	m_kStatistics.setMapName( CvString(GC.getInitCore().getMapScriptName()).GetCString() );
+	m_kStatistics.setMapName(CvString(GC.getInitCore().getMapScriptName()).GetCString());
 	m_kStatistics.setEra(GC.getInitCore().getEra());
 }
 
@@ -256,38 +255,38 @@ void CvEventReporter::routeBuilt(int iRouteType, int iX, int iY)
 	m_kPythonEventMgr.reportRouteBuilt(iRouteType, iX, iY);
 }
 
-void CvEventReporter::plotRevealed(CvPlot *pPlot, TeamTypes eTeam)
+void CvEventReporter::plotRevealed(CvPlot* pPlot, TeamTypes eTeam)
 {
 	m_kPythonEventMgr.reportPlotRevealed(pPlot, eTeam);
 }
 
-void CvEventReporter::plotFeatureRemoved(CvPlot *pPlot, FeatureTypes eFeature, CvCity* pCity)
+void CvEventReporter::plotFeatureRemoved(CvPlot* pPlot, FeatureTypes eFeature, CvCity* pCity)
 {
 	m_kPythonEventMgr.reportPlotFeatureRemoved(pPlot, eFeature, pCity);
 }
 
-void CvEventReporter::plotPicked(CvPlot *pPlot)
+void CvEventReporter::plotPicked(CvPlot* pPlot)
 {
 	m_kPythonEventMgr.reportPlotPicked(pPlot);
 }
 
-void CvEventReporter::nukeExplosion(CvPlot *pPlot, CvUnit* pNukeUnit)
+void CvEventReporter::nukeExplosion(CvPlot* pPlot, CvUnit* pNukeUnit)
 {
 	m_kPythonEventMgr.reportNukeExplosion(pPlot, pNukeUnit);
 }
 
-void CvEventReporter::gotoPlotSet(CvPlot *pPlot, PlayerTypes ePlayer)
+void CvEventReporter::gotoPlotSet(CvPlot* pPlot, PlayerTypes ePlayer)
 {
 	m_kPythonEventMgr.reportGotoPlotSet(pPlot, ePlayer);
 }
 
-void CvEventReporter::cityBuilt( CvCity *pCity, CvUnit *pUnit )
+void CvEventReporter::cityBuilt(CvCity* pCity, CvUnit* pUnit)
 {
 	m_kPythonEventMgr.reportCityBuilt(pCity, pUnit);
 	m_kStatistics.cityBuilt(pCity);
 }
 
-void CvEventReporter::cityRazed( CvCity *pCity, PlayerTypes ePlayer )
+void CvEventReporter::cityRazed(CvCity* pCity, PlayerTypes ePlayer)
 {
 	m_kPythonEventMgr.reportCityRazed(pCity, ePlayer);
 	m_kStatistics.cityRazed(pCity, ePlayer);
@@ -303,22 +302,22 @@ void CvEventReporter::cityAcquiredAndKept(PlayerTypes iPlayer, CvCity* pCity)
 	m_kPythonEventMgr.reportCityAcquiredAndKept(iPlayer, pCity);
 }
 
-void CvEventReporter::cityLost( CvCity *pCity)
+void CvEventReporter::cityLost(CvCity* pCity)
 {
 	m_kPythonEventMgr.reportCityLost(pCity);
 }
 
-void CvEventReporter::cultureExpansion( CvCity *pCity, PlayerTypes ePlayer )
+void CvEventReporter::cultureExpansion(CvCity* pCity, PlayerTypes ePlayer)
 {
 	m_kPythonEventMgr.reportCultureExpansion(pCity, ePlayer);
 }
 
-void CvEventReporter::cityGrowth(CvCity *pCity, PlayerTypes ePlayer)
+void CvEventReporter::cityGrowth(CvCity* pCity, PlayerTypes ePlayer)
 {
 	m_kPythonEventMgr.reportCityGrowth(pCity, ePlayer);
 }
 
-void CvEventReporter::cityDoTurn( CvCity *pCity, PlayerTypes ePlayer )
+void CvEventReporter::cityDoTurn(CvCity* pCity, PlayerTypes ePlayer)
 {
 	m_kPythonEventMgr.reportCityProduction(pCity, ePlayer);
 }
@@ -372,18 +371,18 @@ void CvEventReporter::unitSetXY(CvPlot* pPlot, CvUnit* pUnit)
 	m_kPythonEventMgr.reportUnitSetXY(pPlot, pUnit);
 }
 
-void CvEventReporter::unitCreated(CvUnit *pUnit)
+void CvEventReporter::unitCreated(CvUnit* pUnit)
 {
 	m_kPythonEventMgr.reportUnitCreated(pUnit);
 }
 
-void CvEventReporter::unitBuilt(CvCity *pCity, CvUnit *pUnit)
+void CvEventReporter::unitBuilt(CvCity* pCity, CvUnit* pUnit)
 {
 	m_kPythonEventMgr.reportUnitBuilt(pCity, pUnit);
 	m_kStatistics.unitBuilt(pUnit);
 }
 
-void CvEventReporter::unitKilled(CvUnit *pUnit, PlayerTypes eAttacker )
+void CvEventReporter::unitKilled(CvUnit* pUnit, PlayerTypes eAttacker)
 {
 	m_kPythonEventMgr.reportUnitKilled(pUnit, eAttacker);
 	m_kStatistics.unitKilled(pUnit, eAttacker);
@@ -396,24 +395,24 @@ void CvEventReporter::unitCaptured(PlayerTypes eFromPlayer, UnitTypes eUnitType,
 }
 // BUG - Unit Captured Event - end
 
-void CvEventReporter::unitLost(CvUnit *pUnit)
+void CvEventReporter::unitLost(CvUnit* pUnit)
 {
 	m_kPythonEventMgr.reportUnitLost(pUnit);
 }
 
-void CvEventReporter::unitPromoted(CvUnit *pUnit, PromotionTypes ePromotion)
+void CvEventReporter::unitPromoted(CvUnit* pUnit, PromotionTypes ePromotion)
 {
 	m_kPythonEventMgr.reportUnitPromoted(pUnit, ePromotion);
 }
 
 // BUG - Upgrade Unit Event - start
-void CvEventReporter::unitUpgraded(CvUnit *pOldUnit, CvUnit *pNewUnit, int iPrice)
+void CvEventReporter::unitUpgraded(CvUnit* pOldUnit, CvUnit* pNewUnit, int iPrice)
 {
 	m_kPythonEventMgr.reportUnitUpgraded(pOldUnit, pNewUnit, iPrice);
 }
 // BUG - Upgrade Unit Event - end
 
-void CvEventReporter::unitSelected( CvUnit *pUnit)
+void CvEventReporter::unitSelected(CvUnit* pUnit)
 {
 	m_kPythonEventMgr.reportUnitSelected(pUnit);
 }
@@ -443,18 +442,18 @@ void CvEventReporter::unitBuildImprovement(CvUnit* pUnit, BuildTypes eBuild, boo
 	m_kPythonEventMgr.reportUnitBuildImprovement(pUnit, eBuild, bFinished);
 }
 
-void CvEventReporter::goodyReceived(PlayerTypes ePlayer, CvPlot *pGoodyPlot, CvUnit *pGoodyUnit, GoodyTypes eGoodyType)
+void CvEventReporter::goodyReceived(PlayerTypes ePlayer, CvPlot* pGoodyPlot, CvUnit* pGoodyUnit, GoodyTypes eGoodyType)
 {
 	m_kPythonEventMgr.reportGoodyReceived(ePlayer, pGoodyPlot, pGoodyUnit, eGoodyType);
 }
 
-void CvEventReporter::greatPersonBorn(CvUnit *pUnit, PlayerTypes ePlayer, CvCity *pCity)
+void CvEventReporter::greatPersonBorn(CvUnit* pUnit, PlayerTypes ePlayer, CvCity* pCity)
 {
-	m_kPythonEventMgr.reportGreatPersonBorn( pUnit, ePlayer, pCity);
+	m_kPythonEventMgr.reportGreatPersonBorn(pUnit, ePlayer, pCity);
 	m_kStatistics.unitBuilt(pUnit);
 }
 
-void CvEventReporter::buildingBuilt(CvCity *pCity, BuildingTypes eBuilding)
+void CvEventReporter::buildingBuilt(CvCity* pCity, BuildingTypes eBuilding)
 {
 	m_kPythonEventMgr.reportBuildingBuilt(pCity, eBuilding);
 	m_kStatistics.buildingBuilt(pCity, eBuilding);
@@ -465,7 +464,7 @@ void CvEventReporter::civicChanged(PlayerTypes ePlayer, CivicTypes eOldCivic, Ci
 	m_kPythonEventMgr.reportCivicChanged(ePlayer, eOldCivic, eNewCivic);
 }
 
-void CvEventReporter::projectBuilt(CvCity *pCity, ProjectTypes eProject)
+void CvEventReporter::projectBuilt(CvCity* pCity, ProjectTypes eProject)
 {
 	m_kPythonEventMgr.reportProjectBuilt(pCity, eProject);
 }
@@ -527,9 +526,9 @@ void CvEventReporter::changeWar(bool bWar, TeamTypes eTeam, TeamTypes eOtherTeam
 	m_kPythonEventMgr.reportChangeWar(bWar, eTeam, eOtherTeam);
 }
 
-void CvEventReporter::setPlayerAlive( PlayerTypes ePlayerID, bool bNewValue )
+void CvEventReporter::setPlayerAlive(PlayerTypes ePlayerID, bool bNewValue)
 {
-	m_kPythonEventMgr.reportSetPlayerAlive( ePlayerID, bNewValue );
+	m_kPythonEventMgr.reportSetPlayerAlive(ePlayerID, bNewValue);
 }
 
 void CvEventReporter::playerChangeStateReligion(PlayerTypes ePlayerID, ReligionTypes eNewReligion, ReligionTypes eOldReligion)
@@ -608,7 +607,7 @@ void CvEventReporter::getPlayerStatistics(PlayerTypes ePlayer, std::vector<CvSta
 	{
 		aStats.push_back(new CvStatInt("victorytype", pRecord->getVictory()));
 		aStats.push_back(new CvStatInt("timeplayed", pRecord->getMinutesPlayed()));
-		aStats.push_back(new CvStatInt("leader", pRecord->getLeader()-1));  // -1 because index 0 is barb
+		aStats.push_back(new CvStatInt("leader", pRecord->getLeader() - 1)); // -1 because index 0 is barb
 		aStats.push_back(new CvStatInt("citiesbuilt", pRecord->getNumCitiesBuilt()));
 		aStats.push_back(new CvStatInt("citiesrazed", pRecord->getNumCitiesRazed()));
 		aStats.push_back(new CvStatInt("goldenages", pRecord->getNumGoldenAges()));

@@ -17,23 +17,22 @@ struct CvDateIncrement;
 
 class CvDate
 {
-public:
-
+  public:
 	CvDate();
 	explicit CvDate(unsigned int iTick);
 
-	int getYear() const;
-	int getMonth() const;
-	int getWeek() const; // number of the week in a month
-	SeasonTypes getSeason() const;
-	int getDay() const;
+	int			 getYear() const;
+	int			 getMonth() const;
+	int			 getWeek() const; // number of the week in a month
+	SeasonTypes	 getSeason() const;
+	int			 getDay() const;
 	unsigned int GetTick() const;
 
 	CvDateIncrement getIncrement(GameSpeedTypes eGameSpeed = NO_GAMESPEED) const;
-	void increment(GameSpeedTypes eGameSpeed = NO_GAMESPEED);
-	void increment(int iTurns, GameSpeedTypes eGameSpeed = NO_GAMESPEED); // inefficient
-	static CvDate getDate(int iTurn, GameSpeedTypes eGameSpeed = NO_GAMESPEED);
-	static CvDate getStartingDate();
+	void			increment(GameSpeedTypes eGameSpeed = NO_GAMESPEED);
+	void			increment(int iTurns, GameSpeedTypes eGameSpeed = NO_GAMESPEED); // inefficient
+	static CvDate	getDate(int iTurn, GameSpeedTypes eGameSpeed = NO_GAMESPEED);
+	static CvDate	getStartingDate();
 
 	static void calculateEndDates(GameSpeedTypes eGameSpeed);
 
@@ -44,22 +43,23 @@ public:
 	bool operator==(const CvDate& kDate) const;
 	bool operator!=(const CvDate& kDate) const;
 
-protected:
+  protected:
 	unsigned int m_iTick;
 };
 
 struct CvDateIncrement
 {
-	CvDateIncrement() 
+	CvDateIncrement()
 		: m_iendTurn(0)
 		, m_iIncrementMonth(0)
 		, m_iIncrementDay(0)
-	{}
+	{
+	}
 
 	CvDate m_endDate;
-	int m_iendTurn;
-	int m_iIncrementMonth;
-	int m_iIncrementDay;
+	int	   m_iendTurn;
+	int	   m_iIncrementMonth;
+	int	   m_iIncrementDay;
 };
 
 #endif

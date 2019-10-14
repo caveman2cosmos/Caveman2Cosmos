@@ -13,14 +13,14 @@
 
 class CvOutcomeMission
 {
-public:
+  public:
 	CvOutcomeMission();
 	~CvOutcomeMission();
-	MissionTypes getMission();
+	MissionTypes   getMission();
 	CvOutcomeList* getOutcomeList();
-	CvProperties* getPropertyCost();
-	bool isKill();
-//	IntExpr* getCost();
+	CvProperties*  getPropertyCost();
+	bool		   isKill();
+	//	IntExpr* getCost();
 	GameObjectTypes getPayerType();
 
 	bool isPossible(CvUnit* pUnit, bool bTestVisible = false);
@@ -28,19 +28,19 @@ public:
 	void execute(CvUnit* pUnit);
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvOutcomeMission* pOutcomeMission, CvXMLLoadUtility* pXML );
+	void copyNonDefaults(CvOutcomeMission* pOutcomeMission, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum);
 
-protected:
-	MissionTypes m_eMission;
-	CvOutcomeList m_OutcomeList;
-	CvProperties m_PropertyCost;
+  protected:
+	MissionTypes	m_eMission;
+	CvOutcomeList	m_OutcomeList;
+	CvProperties	m_PropertyCost;
 	GameObjectTypes m_ePayerType;
-	bool m_bKill;
-	IntExpr* m_iCost;
-	BoolExpr* m_pPlotCondition;
-	BoolExpr* m_pUnitCondition;
+	bool			m_bKill;
+	IntExpr*		m_iCost;
+	BoolExpr*		m_pPlotCondition;
+	BoolExpr*		m_pUnitCondition;
 };
 
 #endif

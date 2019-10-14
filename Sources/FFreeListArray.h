@@ -6,15 +6,14 @@
 template <class T>
 class FFreeListArray
 {
-public:
-
+  public:
 	FFreeListArray();
 	~FFreeListArray();
 
 	void init(int iNumSlots = 8);
 	void uninit();
-	T* getAt(int iIndex);
-	T* operator[](int iIndex) const { return getAt(iIndex); }
+	T*	 getAt(int iIndex);
+	T*	 operator[](int iIndex) const { return getAt(iIndex); }
 
 	// start at the beginning of the list and return the first item or NULL when done
 	T* beginIter(int* pIterIdx) const;
@@ -32,7 +31,7 @@ public:
 	int getIndexAfterLast() const { return m_iLastIndex + 1; }
 
 	// Returns the number of elements in the array (NOTE: this is a non-packed array, so this value is NOT the last iIndex in the array...)
-	int getCount()	const { return m_iLastIndex - m_iFreeListCount + 1 - m_iCorruptedAdjustment; }
+	int getCount() const { return m_iLastIndex - m_iFreeListCount + 1 - m_iCorruptedAdjustment; }
 
 	void insert(T data);
 	void insertAt(T data, int iIndex);
@@ -44,11 +43,11 @@ public:
 	bool removeAt(int iIndex);
 	void removeAll();
 
-	void Read( FDataStreamBase* pStream );
-	void Write( FDataStreamBase* pStream );
+	void Read(FDataStreamBase* pStream);
+	void Write(FDataStreamBase* pStream);
 
 
-private:
+  private:
 	int m_iFreeListHead;
 	int m_iFreeListCount;
 	int m_iLastIndex;
@@ -58,14 +57,13 @@ private:
 	struct DArrayNode
 	{
 		int iNextFreeIndex;
-		T		data;
+		T	data;
 	};
 
 	DArrayNode* m_pArray;
 
 	void growArray();
 };
-
 
 
 // Public Functions...
@@ -78,7 +76,8 @@ FFreeListArray<T>::FFreeListArray()
 	, m_iNumSlots(0)
 	, m_iCorruptedAdjustment(0)
 	, m_pArray(NULL)
-{}
+{
+}
 
 
 template <class T>
@@ -93,10 +92,10 @@ void FFreeListArray<T>::init(int iNumSlots)
 {
 	uninit();
 
-	m_iFreeListHead = FFreeList::FREE_LIST_INDEX;
+	m_iFreeListHead	 = FFreeList::FREE_LIST_INDEX;
 	m_iFreeListCount = 0;
-	m_iLastIndex = FFreeList::INVALID_INDEX;
-	m_iNumSlots = iNumSlots;
+	m_iLastIndex	 = FFreeList::INVALID_INDEX;
+	m_iNumSlots		 = iNumSlots;
 
 	if (m_iNumSlots > 0)
 	{
@@ -142,7 +141,7 @@ T* FFreeListArray<T>::nextIter(int* pIterIdx) const
 		T* pObj = getAt((*pIterIdx));
 		if (pObj)
 		{
-			(*pIterIdx)++;	// prime for next call
+			(*pIterIdx)++; // prime for next call
 			return pObj;
 		}
 	}
@@ -166,7 +165,7 @@ T* FFreeListArray<T>::prevIter(int* pIterIdx) const
 		T* pObj = getAt((*pIterIdx));
 		if (pObj)
 		{
-			(*pIterIdx)--;	// prime for next call
+			(*pIterIdx)--; // prime for next call
 			return pObj;
 		}
 	}
@@ -177,13 +176,13 @@ template <class T>
 void FFreeListArray<T>::insert(T data)
 {
 
-	if (m_pArray == NULL) 
+	if (m_pArray == NULL)
 	{
 		init();
 	}
 
-	if ((m_iLastIndex == m_iNumSlots - 1) && 
-		(m_iFreeListCount == 0)) 
+	if ((m_iLastIndex == m_iNumSlots - 1) &&
+		(m_iFreeListCount == 0))
 	{
 		growArray();
 	}
@@ -191,7 +190,7 @@ void FFreeListArray<T>::insert(T data)
 	int iIndex;
 	if (m_iFreeListCount > 0)
 	{
-		iIndex = m_iFreeListHead;
+		iIndex			= m_iFreeListHead;
 		m_iFreeListHead = m_pArray[m_iFreeListHead].iNextFreeIndex;
 		m_iFreeListCount--;
 	}
@@ -201,7 +200,7 @@ void FFreeListArray<T>::insert(T data)
 		iIndex = m_iLastIndex;
 	}
 
-	m_pArray[iIndex].data = data;
+	m_pArray[iIndex].data			= data;
 	m_pArray[iIndex].iNextFreeIndex = FFreeList::INVALID_INDEX;
 }
 
@@ -209,7 +208,7 @@ void FFreeListArray<T>::insert(T data)
 template <class T>
 void FFreeListArray<T>::insertAt(T data, int iIndex)
 {
-	if (m_pArray == NULL) 
+	if (m_pArray == NULL)
 	{
 		init();
 	}
@@ -234,7 +233,7 @@ void FFreeListArray<T>::insertAt(T data, int iIndex)
 		{
 			m_iLastIndex++;
 			m_pArray[m_iLastIndex].iNextFreeIndex = m_iFreeListHead;
-			m_iFreeListHead = m_iLastIndex;
+			m_iFreeListHead						  = m_iLastIndex;
 			m_iFreeListCount++;
 		}
 
@@ -276,13 +275,13 @@ void FFreeListArray<T>::insertFirst(T data)
 {
 	int iI;
 
-	if (m_pArray == NULL) 
+	if (m_pArray == NULL)
 	{
 		init();
 	}
 
-	if ((m_iLastIndex == m_iNumSlots - 1) && 
-		(m_iFreeListCount == 0)) 
+	if ((m_iLastIndex == m_iNumSlots - 1) &&
+		(m_iFreeListCount == 0))
 	{
 		growArray();
 	}
@@ -308,7 +307,7 @@ T* FFreeListArray<T>::getAt(int iIndex)
 		return NULL;
 	}
 
-	if ((iIndex >= 0) && (iIndex <= m_iLastIndex)) 
+	if ((iIndex >= 0) && (iIndex <= m_iLastIndex))
 	{
 		if (m_pArray[iIndex].iNextFreeIndex == FFreeList::INVALID_INDEX)
 		{
@@ -377,7 +376,7 @@ bool FFreeListArray<T>::removeAt(int iIndex)
 		if (m_pArray[iIndex].iNextFreeIndex == FFreeList::INVALID_INDEX)
 		{
 			m_pArray[iIndex].iNextFreeIndex = m_iFreeListHead;
-			m_iFreeListHead = iIndex;
+			m_iFreeListHead					= iIndex;
 			m_iFreeListCount++;
 
 			return true;
@@ -398,9 +397,9 @@ void FFreeListArray<T>::removeAll()
 		return;
 	}
 
-	m_iFreeListHead = FFreeList::FREE_LIST_INDEX;
+	m_iFreeListHead	 = FFreeList::FREE_LIST_INDEX;
 	m_iFreeListCount = 0;
-	m_iLastIndex = FFreeList::INVALID_INDEX;
+	m_iLastIndex	 = FFreeList::INVALID_INDEX;
 
 	for (iI = 0; iI < m_iNumSlots; iI++)
 	{
@@ -414,10 +413,10 @@ template <class T>
 void FFreeListArray<T>::growArray()
 {
 	DArrayNode* pOldArray;
-	int iOldNumSlots;
-	int iI;
+	int			iOldNumSlots;
+	int			iI;
 
-	pOldArray = m_pArray;
+	pOldArray	 = m_pArray;
 	iOldNumSlots = m_iNumSlots;
 
 	m_iNumSlots *= 2;
@@ -435,41 +434,41 @@ void FFreeListArray<T>::growArray()
 		}
 	}
 
-	delete [] pOldArray;
+	delete[] pOldArray;
 }
 
 //
 // use when list contains non-streamable types
 //
-template < class T >
-inline void FFreeListArray< T >::Read( FDataStreamBase* pStream )
+template <class T>
+inline void FFreeListArray<T>::Read(FDataStreamBase* pStream)
 {
 	int iCount = 0;
-	pStream->Read( &iCount );
-	init( iCount );
+	pStream->Read(&iCount);
+	init(iCount);
 
-	if ( iCount )
+	if (iCount)
 	{
-		for ( int i = 0; i < iCount; i++ )
+		for (int i = 0; i < iCount; i++)
 		{
 			T* pData = new T;
-			pStream->Read( sizeof ( T ), ( byte* )pData );
-			insert( pData );
+			pStream->Read(sizeof(T), (byte*)pData);
+			insert(pData);
 		}
 	}
 }
 
-template < class T >
-inline void FFreeListArray< T >::Write( FDataStreamBase* pStream )
+template <class T>
+inline void FFreeListArray<T>::Write(FDataStreamBase* pStream)
 {
 	int iCount = getCount();
-	pStream->Write( iCount );
+	pStream->Write(iCount);
 
-	for ( int i = 0; i < getIndexAfterLast(); i++ )
+	for (int i = 0; i < getIndexAfterLast(); i++)
 	{
-		if ( getAt( i ) )
+		if (getAt(i))
 		{
-			pStream->Write( sizeof ( T ), ( byte* )getAt( i ) );
+			pStream->Write(sizeof(T), (byte*)getAt(i));
 		}
 	}
 }
@@ -481,20 +480,20 @@ inline void FFreeListArray< T >::Write( FDataStreamBase* pStream )
 //
 // use when list contains streamable types
 //
-template < class T >
-inline void ReadStreamableFFreeListArray( FFreeListArray< T >& flist, FDataStreamBase* pStream )
+template <class T>
+inline void ReadStreamableFFreeListArray(FFreeListArray<T>& flist, FDataStreamBase* pStream)
 {
 	int iCount = 0;
-	pStream->Read( &iCount );
-	flist.init( iCount );
+	pStream->Read(&iCount);
+	flist.init(iCount);
 
-	if ( iCount )
+	if (iCount)
 	{
-		for ( int i = 0; i < iCount; i++ )
+		for (int i = 0; i < iCount; i++)
 		{
 			T* pData = new T;
-			pData->read( pStream );
-			flist.insert( pData );
+			pData->read(pStream);
+			flist.insert(pData);
 		}
 	}
 }
@@ -502,17 +501,17 @@ inline void ReadStreamableFFreeListArray( FFreeListArray< T >& flist, FDataStrea
 //
 // use when list contains streamable types
 //
-template < class T >
-inline void WriteStreamableFFreeListArray( FFreeListArray< T >& flist, FDataStreamBase* pStream )
+template <class T>
+inline void WriteStreamableFFreeListArray(FFreeListArray<T>& flist, FDataStreamBase* pStream)
 {
 	int iCount = flist.getCount();
-	pStream->Write( iCount );
+	pStream->Write(iCount);
 
-	for ( int i = 0; i < flist.getIndexAfterLast(); i++ )
+	for (int i = 0; i < flist.getIndexAfterLast(); i++)
 	{
-		if ( flist[ i ] )
+		if (flist[i])
 		{
-			flist[ i ]->write( pStream );
+			flist[i]->write(pStream);
 		}
 	}
 }

@@ -21,11 +21,11 @@ extern int gCityLogLevel;
 extern int gUnitLogLevel;
 #else
 #define gPlayerLogLevel 0
-#define gTeamLogLevel   0
-#define gCityLogLevel   0
-#define gUnitLogLevel   0
+#define gTeamLogLevel	0
+#define gCityLogLevel	0
+#define gUnitLogLevel	0
 #endif
 
-void logBBAI(char* format, ... );
+void logBBAI(char* format, ...);
 
-#endif  //BETTERBTSAI_H
+#endif //BETTERBTSAI_H

@@ -27,7 +27,7 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 		.def("shareAdjacentArea", &CyPlot::shareAdjacentArea, "bool (CyPlot)")
 		.def("isAdjacentToLand", &CyPlot::isAdjacentToLand, "bool ()")
 		.def("isCoastalLand", &CyPlot::isCoastalLand, "bool ()")
-		
+
 		.def("isWithinTeamCityRadius", &CyPlot::isWithinTeamCityRadius, "bool (int /*TeamTypes*/ eTeam, int /*PlayerTypes*/ eIgnorePlayer)")
 
 		.def("isLake", &CyPlot::isLake, "bool ()")
@@ -227,7 +227,7 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 
 		.def("getRevealedOwner", &CyPlot::getRevealedOwner, "int (int (TeamTypes) eTeam, bool bDebug)")
 		.def("getRevealedTeam", &CyPlot::getRevealedTeam, "int (int /*TeamTypes*/ eTeam, bool bDebug)")
-		
+
 		.def("isRiverCrossing", &CyPlot::isRiverCrossing, "bool (DirectionTypes eIndex)")
 
 		.def("isRevealed", &CyPlot::isRevealed, "bool (int /*TeamTypes*/ eTeam, bool bDebug)")
@@ -249,15 +249,15 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 
 		.def("getScriptData", &CyPlot::getScriptData, "str () - Get stored custom data")
 		.def("setScriptData", &CyPlot::setScriptData, "void (str) - Set stored custom data")
-/************************************************************************************************/
-/* Afforess	                  Start		 02/25/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                  Start		 02/25/10                                               */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
 		.def("getRevoltProtection", &CyPlot::getRevoltProtection, "int ()")
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                     END                                                            */
+		/************************************************************************************************/
 		.def("isInViewport", &CyPlot::isInViewport, "bool ()")
 		.def("cloneToViewport", &CyPlot::cloneToViewport, python::return_value_policy<python::manage_new_object>(), "CyPlot* ()")
 
@@ -267,5 +267,5 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 		.def("getChokeValue", &CyPlot::getChokeValue, "int ()")
 		.def("calculateChokeValue", &CyPlot::calculateChokeValue, "void ()")
 		// Super Forts end
-	;
+		;
 }

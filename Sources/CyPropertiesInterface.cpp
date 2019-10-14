@@ -20,6 +20,5 @@ void CyPropertiesPythonInterface()
 		.def("setValueByProperty", &CvProperties::setValueByProperty, "void (int, int)")
 		.def("changeValueByProperty", &CvProperties::changeValueByProperty, "void (int, int)")
 		.def("getChangeByProperty", &CvProperties::getChangeByProperty, "int (int)")
-		.def("getPropertyDisplay", &CvProperties::getPropertyDisplay, "wstring (int)")
-		;
+		.def("getPropertyDisplay", &CvProperties::getPropertyDisplay, "wstring (int)");
 }

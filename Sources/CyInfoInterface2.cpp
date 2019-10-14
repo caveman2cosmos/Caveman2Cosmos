@@ -21,8 +21,7 @@ void CyInfoPythonInterface2()
 
 		// Arrays
 
-		.def("getVictoryThreshold", &CvBuildingClassInfo::getVictoryThreshold, "int (int i)")
-		;
+		.def("getVictoryThreshold", &CvBuildingClassInfo::getVictoryThreshold, "int (int i)");
 
 	python::class_<CvRouteModelInfo, python::bases<CvInfoBase> >("CvRouteModelInfo")
 
@@ -33,8 +32,7 @@ void CyInfoPythonInterface2()
 
 		.def("getConnectString", &CvRouteModelInfo::getConnectString, "string ()")
 		.def("getModelConnectString", &CvRouteModelInfo::getModelConnectString, "string ()")
-		.def("getRotateString", &CvRouteModelInfo::getRotateString, "string ()")
-		;
+		.def("getRotateString", &CvRouteModelInfo::getRotateString, "string ()");
 
 	python::class_<CvCivilizationInfo, python::bases<CvInfoBase> >("CvCivilizationInfo")
 		.def("getDefaultPlayerColor", &CvCivilizationInfo::getDefaultPlayerColor, "int ()")
@@ -69,8 +67,7 @@ void CyInfoPythonInterface2()
 		.def("isCivilizationFreeTechs", &CvCivilizationInfo::isCivilizationFreeTechs, "bool (int i)")
 		.def("isCivilizationDisableTechs", &CvCivilizationInfo::isCivilizationDisableTechs, "bool (int i)")
 
-		.def("getCityNames", &CvCivilizationInfo::getCityNames, "string (int i)")
-		;
+		.def("getCityNames", &CvCivilizationInfo::getCityNames, "string (int i)");
 
 	python::class_<CvVictoryInfo, python::bases<CvInfoBase> >("CvVictoryInfo")
 		.def("getPopulationPercentLead", &CvVictoryInfo::getPopulationPercentLead, "int ()")
@@ -80,15 +77,15 @@ void CyInfoPythonInterface2()
 		.def("getCityCulture", &CvVictoryInfo::getCityCulture, "int ()")
 		.def("getNumCultureCities", &CvVictoryInfo::getNumCultureCities, "int ()")
 		.def("getTotalCultureRatio", &CvVictoryInfo::getTotalCultureRatio, "int ()")
-/************************************************************************************************/
-/* Afforess	                  Start		 06/12/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                  Start		 06/12/10                                               */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
 		.def("isTotalVictory", &CvVictoryInfo::isTotalVictory, "bool ()")
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                     END                                                            */
+		/************************************************************************************************/
 		.def("getVictoryDelayTurns", &CvVictoryInfo::getVictoryDelayTurns, "int ()")
 
 		.def("isTargetScore", &CvVictoryInfo::isTargetScore, "bool ()")
@@ -97,15 +94,13 @@ void CyInfoPythonInterface2()
 		.def("isDiploVote", &CvVictoryInfo::isDiploVote, "bool ()")
 		.def("isPermanent", &CvVictoryInfo::isPermanent, "bool ()")
 
-		.def("getMovie", &CvVictoryInfo::getMovie, "string ()")
-		;
+		.def("getMovie", &CvVictoryInfo::getMovie, "string ()");
 
 	python::class_<CvHurryInfo, python::bases<CvInfoBase> >("CvHurryInfo")
 		.def("getGoldPerProduction", &CvHurryInfo::getGoldPerProduction, "int ()")
 		.def("getProductionPerPopulation", &CvHurryInfo::getProductionPerPopulation, "int ()")
 
-		.def("isAnger", &CvHurryInfo::isAnger, "bool ()")
-		;
+		.def("isAnger", &CvHurryInfo::isAnger, "bool ()");
 
 	python::class_<CvHandicapInfo, python::bases<CvInfoBase> >("CvHandicapInfo")
 		.def("getFreeWinsVsBarbs", &CvHandicapInfo::getFreeWinsVsBarbs, "int ()")
@@ -168,21 +163,20 @@ void CyInfoPythonInterface2()
 		.def("getAIPerEraModifier", &CvHandicapInfo::getAIPerEraModifier, "int ()")
 		.def("getAIAdvancedStartPercent", &CvHandicapInfo::getAIAdvancedStartPercent, "int ()")
 		.def("getNumGoodies", &CvHandicapInfo::getNumGoodies, "int ()")
-/************************************************************************************************/
-/* Afforess	                  Start		 07/12/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                  Start		 07/12/10                                               */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
 		.def("getRevolutionIndexPercent", &CvHandicapInfo::getRevolutionIndexPercent, "int ()")
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                     END                                                            */
+		/************************************************************************************************/
 		// Arrays
 
 		.def("getGoodies", &CvHandicapInfo::getGoodies, "int (int i)")
 		.def("isFreeTechs", &CvHandicapInfo::isFreeTechs, "int (int i)")
-		.def("isAIFreeTechs", &CvHandicapInfo::isAIFreeTechs, "int (int i)")
-		;
+		.def("isAIFreeTechs", &CvHandicapInfo::isAIFreeTechs, "int (int i)");
 
 	python::class_<CvGameSpeedInfo, python::bases<CvInfoBase> >("CvGameSpeedInfo")
 		.def("getGrowthPercent", &CvGameSpeedInfo::getGrowthPercent, "int ()")
@@ -209,15 +203,13 @@ void CyInfoPythonInterface2()
 		.def("getNumTurnIncrements", &CvGameSpeedInfo::getNumTurnIncrements, "int ()")
 
 		.def("getGameTurnInfo", &CvGameSpeedInfo::getGameTurnInfo, python::return_value_policy<python::reference_existing_object>(), "GameTurnInfo ()")
-		.def("getDateIncrement", &CvGameSpeedInfo::getDateIncrement, python::return_value_policy<python::reference_existing_object>(), "CvDateIncrement ()")
-		;
+		.def("getDateIncrement", &CvGameSpeedInfo::getDateIncrement, python::return_value_policy<python::reference_existing_object>(), "CvDateIncrement ()");
 
 	python::class_<CvTurnTimerInfo, python::bases<CvInfoBase> >("CvTurnTimerInfo")
 		.def("getBaseTime", &CvTurnTimerInfo::getBaseTime, "int ()")
 		.def("getCityBonus", &CvTurnTimerInfo::getCityBonus, "int ()")
 		.def("getUnitBonus", &CvTurnTimerInfo::getUnitBonus, "int ()")
-		.def("getFirstTurnMultiplier", &CvTurnTimerInfo::getFirstTurnMultiplier, "int ()")
-		;
+		.def("getFirstTurnMultiplier", &CvTurnTimerInfo::getFirstTurnMultiplier, "int ()");
 
 	python::class_<CvBuildInfo, python::bases<CvInfoBase> >("CvBuildInfo")
 		.def("getTime", &CvBuildInfo::getTime, "int ()")
@@ -229,16 +221,16 @@ void CyInfoPythonInterface2()
 		.def("getMissionType", &CvBuildInfo::getMissionType, "int ()")
 
 		.def("isKill", &CvBuildInfo::isKill, "bool ()")
-/************************************************************************************************/
-/* Afforess	                  Start		 07/20/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                  Start		 07/20/10                                               */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
 		.def("isDisabled", &CvBuildInfo::isDisabled, "bool ()")
 		.def("setDisabled", &CvBuildInfo::setDisabled, "bool ()")
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                     END                                                            */
+		/************************************************************************************************/
 
 		// Arrays
 
@@ -246,8 +238,7 @@ void CyInfoPythonInterface2()
 		.def("getFeatureTime", &CvBuildInfo::getFeatureTime, "int (int i)")
 		.def("getFeatureProduction", &CvBuildInfo::getFeatureProduction, "int (int i)")
 
-		.def("isFeatureRemove", &CvBuildInfo::isFeatureRemove, "bool (int i)")
-		;
+		.def("isFeatureRemove", &CvBuildInfo::isFeatureRemove, "bool (int i)");
 
 	python::class_<CvGoodyInfo, python::bases<CvInfoBase> >("CvGoodyInfo")
 		.def("getGold", &CvGoodyInfo::getGold, "int ()")
@@ -267,8 +258,7 @@ void CyInfoPythonInterface2()
 		.def("isTech", &CvGoodyInfo::isTech, "bool ()")
 		.def("isBad", &CvGoodyInfo::isBad, "bool ()")
 
-		.def("getSound", &CvGoodyInfo::getSound, "string ()")
-		;
+		.def("getSound", &CvGoodyInfo::getSound, "string ()");
 
 	python::class_<CvRouteInfo, python::bases<CvInfoBase> >("CvRouteInfo")
 		.def("getValue", &CvRouteInfo::getValue, "int ()")
@@ -280,8 +270,7 @@ void CyInfoPythonInterface2()
 
 		.def("getYieldChange", &CvRouteInfo::getYieldChange, "int (int i)")
 		.def("getTechMovementChange", &CvRouteInfo::getTechMovementChange, "int (int i)")
-		.def("getPrereqOrBonus", &CvRouteInfo::getPrereqOrBonus, "int (int i)")
-		;
+		.def("getPrereqOrBonus", &CvRouteInfo::getPrereqOrBonus, "int (int i)");
 
 	python::class_<CvImprovementBonusInfo, python::bases<CvInfoBase> >("CvImprovementBonusInfo")
 		.def("getDiscoverRand", &CvImprovementBonusInfo::getDiscoverRand, "int ()")
@@ -291,8 +280,7 @@ void CyInfoPythonInterface2()
 
 		// Arrays
 
-		.def("getYieldChange", &CvImprovementBonusInfo::getYieldChange, "int (int i)")
-		;
+		.def("getYieldChange", &CvImprovementBonusInfo::getYieldChange, "int (int i)");
 
 	python::class_<CvImprovementInfo, python::bases<CvInfoBase> >("CvImprovementInfo")
 
@@ -302,36 +290,36 @@ void CyInfoPythonInterface2()
 		.def("getUpgradeTime", &CvImprovementInfo::getUpgradeTime, "int ()")
 		.def("getAirBombDefense", &CvImprovementInfo::getAirBombDefense, "int ()")
 		.def("getDefenseModifier", &CvImprovementInfo::getDefenseModifier, "int ()")
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       02/12/10                             jdog5000         */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
-/* original bts code
+		/************************************************************************************************/
+		/* UNOFFICIAL_PATCH                       02/12/10                             jdog5000         */
+		/*                                                                                              */
+		/* Bugfix                                                                                       */
+		/************************************************************************************************/
+		/* original bts code
 		.def("getHappiness", &CvImprovementInfo::getDefenseModifier, "int ()")
 */
 		.def("getHappiness", &CvImprovementInfo::getHappiness, "int ()")
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* UNOFFICIAL_PATCH                        END                                                  */
+		/************************************************************************************************/
 		.def("getPillageGold", &CvImprovementInfo::getPillageGold, "int ()")
 		.def("getImprovementPillage", &CvImprovementInfo::getImprovementPillage, "int ()")
 		.def("getImprovementUpgrade", &CvImprovementInfo::getImprovementUpgrade, "int ()")
 
 		.def("isActsAsCity", &CvImprovementInfo::isActsAsCity, "bool ()")
 		.def("isHillsMakesValid", &CvImprovementInfo::isHillsMakesValid, "bool ()")
-/************************************************************************************************/
-/* Afforess	                  Start		 06/16/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                  Start		 06/16/10                                               */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
 		.def("isPeakMakesValid", &CvImprovementInfo::isPeakMakesValid, "bool ()")
 		.def("getHealthPercent", &CvImprovementInfo::getHealthPercent, "int ()")
 		.def("getPrereqTech", &CvImprovementInfo::getPrereqTech, "int ()")
 		//.def("getTraitYieldChanges", &CvImprovementInfo::getTraitYieldChanges, "int (int i, int j)")
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                     END                                                            */
+		/************************************************************************************************/
 		.def("isFreshWaterMakesValid", &CvImprovementInfo::isFreshWaterMakesValid, "bool ()")
 		.def("isRiverSideMakesValid", &CvImprovementInfo::isRiverSideMakesValid, "bool ()")
 		.def("isNoFreshWater", &CvImprovementInfo::isNoFreshWater, "bool ()")
@@ -364,12 +352,10 @@ void CyInfoPythonInterface2()
 		.def("getImprovementBonusDiscoverRand", &CvImprovementInfo::getImprovementBonusDiscoverRand, "int (int i)")
 
 		.def("getTechYieldChanges", &CvImprovementInfo::getTechYieldChanges, "int (int i, int j)")
-		.def("getRouteYieldChanges", &CvImprovementInfo::getRouteYieldChanges, "int (int i, int j)")
-		;
+		.def("getRouteYieldChanges", &CvImprovementInfo::getRouteYieldChanges, "int (int i, int j)");
 
 	python::class_<CvBonusClassInfo, python::bases<CvInfoBase> >("CvBonusClassInfo")
-		.def("getUniqueRange", &CvBonusClassInfo::getUniqueRange)
-		;
+		.def("getUniqueRange", &CvBonusClassInfo::getUniqueRange);
 
 	python::class_<CvBonusInfo, python::bases<CvInfoBase> >("CvBonusInfo")
 
@@ -400,15 +386,15 @@ void CyInfoPythonInterface2()
 
 		.def("isOneArea", &CvBonusInfo::isOneArea, "bool ()")
 		.def("isHills", &CvBonusInfo::isHills, "bool ()")
-/************************************************************************************************/
-/* Afforess	Mountains Start		 08/03/09                                           		 */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	Mountains Start		 08/03/09                                           		 */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
 		.def("isPeaks", &CvBonusInfo::isPeaks, "bool ()")
-/************************************************************************************************/
-/* Afforess	Mountains End       END        		                                             */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	Mountains End       END        		                                             */
+		/************************************************************************************************/
 		.def("isFlatlands", &CvBonusInfo::isFlatlands, "bool ()")
 		.def("isNoRiverSide", &CvBonusInfo::isNoRiverSide, "bool ()")
 		.def("isNormalize", &CvBonusInfo::isNormalize, "bool ()")
@@ -424,8 +410,7 @@ void CyInfoPythonInterface2()
 		.def("isFeatureTerrain", &CvBonusInfo::isFeatureTerrain, "bool (int i)")
 
 		.def("getButton", &CvBonusInfo::getButton, "string ()")
-		.def("getArtInfo", &CvBonusInfo::getArtInfo,  python::return_value_policy<python::reference_existing_object>(), "CvArtInfoBonus ()")
-		;
+		.def("getArtInfo", &CvBonusInfo::getArtInfo, python::return_value_policy<python::reference_existing_object>(), "CvArtInfoBonus ()");
 
 	python::class_<CvFeatureInfo, python::bases<CvInfoBase> >("CvFeatureInfo")
 
@@ -439,7 +424,7 @@ void CyInfoPythonInterface2()
 		.def("getAdvancedStartRemoveCost", &CvFeatureInfo::getAdvancedStartRemoveCost, "int ()")
 		.def("getTurnDamage", &CvFeatureInfo::getTurnDamage, "int ()")
 		.def("getWarmingDefense", &CvFeatureInfo::getWarmingDefense, "int ()") //GWMod new XML field M.A.
-		
+
 		.def("isNoCoast", &CvFeatureInfo::isNoCoast, "bool ()")
 		.def("isNoRiver", &CvFeatureInfo::isNoRiver, "bool ()")
 		.def("isNoAdjacent", &CvFeatureInfo::isNoAdjacent, "bool ()")
@@ -459,8 +444,7 @@ void CyInfoPythonInterface2()
 		.def("getHillsYieldChange", &CvFeatureInfo::getHillsYieldChange, "int (int i)")
 
 		.def("isTerrain", &CvFeatureInfo::isTerrain, "bool (int i)")
-		.def("getNumVarieties", &CvFeatureInfo::getNumVarieties, "int ()")
-		;
+		.def("getNumVarieties", &CvFeatureInfo::getNumVarieties, "int ()");
 
 	python::class_<CvCommerceInfo, python::bases<CvInfoBase> >("CvCommerceInfo")
 		.def("getChar", &CvCommerceInfo::getChar, "int ()")
@@ -468,6 +452,5 @@ void CyInfoPythonInterface2()
 		.def("getInitialHappiness", &CvCommerceInfo::getInitialHappiness, "int ()")
 		.def("getAIWeightPercent", &CvCommerceInfo::getAIWeightPercent, "int ()")
 
-		.def("isFlexiblePercent", &CvCommerceInfo::isFlexiblePercent, "bool ()")
-		;
+		.def("isFlexiblePercent", &CvCommerceInfo::isFlexiblePercent, "bool ()");
 }

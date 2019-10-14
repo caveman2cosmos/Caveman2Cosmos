@@ -76,9 +76,9 @@ float getDefineFLOAT(const char* xmlKey, float fDefault)
 	}
 }
 
-const char * getDefineSTRING(const char* xmlKey, const char * szDefault)
+const char* getDefineSTRING(const char* xmlKey, const char* szDefault)
 {
-	const char * szResult = NULL;
+	const char* szResult = NULL;
 	if (GC.getDefinesVarSystem()->GetValue(xmlKey, szResult))
 	{
 		return szResult;
@@ -97,7 +97,7 @@ bool getBugOptionBOOL(const char* id, bool bDefault, const char* xmlKey)
 	if (isBug())
 	{
 		CyArgsList argsList;
-		long lResult = 0;
+		long	   lResult = 0;
 
 		argsList.add(id);
 		argsList.add(bDefault);
@@ -129,7 +129,7 @@ int getBugOptionINT(const char* id, int iDefault, const char* xmlKey)
 	if (isBug())
 	{
 		CyArgsList argsList;
-		long lResult = 0;
+		long	   lResult = 0;
 
 		argsList.add(id);
 		argsList.add(iDefault);

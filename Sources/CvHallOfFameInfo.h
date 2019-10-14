@@ -7,15 +7,15 @@
 
 class CvHallOfFameInfo
 {
-public:
+  public:
 	CvHallOfFameInfo();
 	virtual ~CvHallOfFameInfo();
 
-	void loadReplays();
-	int getNumGames() const;
+	void		  loadReplays();
+	int			  getNumGames() const;
 	CvReplayInfo* getReplayInfo(int i);
 
-protected:
+  protected:
 	std::vector<CvReplayInfo*> m_aReplays;
 };
 

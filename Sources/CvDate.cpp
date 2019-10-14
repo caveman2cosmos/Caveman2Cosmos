@@ -14,8 +14,8 @@ CvDate::CvDate()
 	m_iTick = 0;
 }
 
-CvDate::CvDate(unsigned int iTick) :
-m_iTick(iTick)
+CvDate::CvDate(unsigned int iTick)
+	: m_iTick(iTick)
 {
 }
 
@@ -74,7 +74,7 @@ CvDateIncrement CvDate::getIncrement(GameSpeedTypes eGameSpeed) const
 	{
 		eActualGameSpeed = GC.getGameINLINE().getGameSpeedType();
 	}
-	CvGameSpeedInfo& kInfo = GC.getGameSpeedInfo(eActualGameSpeed);
+	CvGameSpeedInfo&			  kInfo		  = GC.getGameSpeedInfo(eActualGameSpeed);
 	std::vector<CvDateIncrement>& aIncrements = kInfo.getIncrements();
 	if (!kInfo.getEndDatesCalculated())
 	{
@@ -88,7 +88,7 @@ CvDateIncrement CvDate::getIncrement(GameSpeedTypes eGameSpeed) const
 			return *it;
 		}
 	}
-	return aIncrements[aIncrements.size()-1];
+	return aIncrements[aIncrements.size() - 1];
 }
 
 void CvDate::increment(GameSpeedTypes eGameSpeed)
@@ -100,40 +100,40 @@ void CvDate::increment(GameSpeedTypes eGameSpeed)
 
 void CvDate::increment(int iTurns, GameSpeedTypes eGameSpeed)
 {
-	for (int i=0; i<iTurns; i++)
+	for (int i = 0; i < iTurns; i++)
 	{
 		increment(eGameSpeed);
 	}
 }
 
-bool CvDate::operator !=(const CvDate &kDate) const
+bool CvDate::operator!=(const CvDate& kDate) const
 {
 	return !(*this == kDate);
 }
 
-bool CvDate::operator ==(const CvDate &kDate) const
+bool CvDate::operator==(const CvDate& kDate) const
 {
 	return m_iTick == kDate.GetTick();
 }
 
-bool CvDate::operator <(const CvDate &kDate) const
+bool CvDate::operator<(const CvDate& kDate) const
 {
 	return m_iTick < kDate.GetTick();
 }
 
-bool CvDate::operator >(const CvDate &kDate) const
+bool CvDate::operator>(const CvDate& kDate) const
 {
 	return m_iTick > kDate.GetTick();
 }
 
-bool CvDate::operator <=(const CvDate &kDate) const
+bool CvDate::operator<=(const CvDate& kDate) const
 {
-	return ! (*this > kDate);
+	return !(*this > kDate);
 }
 
-bool CvDate::operator >=(const CvDate &kDate) const
+bool CvDate::operator>=(const CvDate& kDate) const
 {
-	return ! (*this < kDate);
+	return !(*this < kDate);
 }
 
 CvDate CvDate::getStartingDate()
@@ -144,41 +144,41 @@ CvDate CvDate::getStartingDate()
 CvDate CvDate::getDate(int iTurn, GameSpeedTypes eGameSpeed)
 {
 	CvDate date;
-	int iRemainingTurns = 0;
+	int	   iRemainingTurns = 0;
 
 	GameSpeedTypes eActualGameSpeed = eGameSpeed;
 	if (eGameSpeed == NO_GAMESPEED)
 	{
 		eActualGameSpeed = GC.getGameINLINE().getGameSpeedType();
 	}
-	CvGameSpeedInfo& kInfo = GC.getGameSpeedInfo(eActualGameSpeed);
+	CvGameSpeedInfo&			  kInfo		  = GC.getGameSpeedInfo(eActualGameSpeed);
 	std::vector<CvDateIncrement>& aIncrements = kInfo.getIncrements();
 	if (!kInfo.getEndDatesCalculated())
 	{
 		calculateEndDates(eActualGameSpeed);
 	}
-	
 
-	for (int i=0; i<(int)aIncrements.size(); i++)
+
+	for (int i = 0; i < (int)aIncrements.size(); i++)
 	{
 		if (iTurn <= aIncrements[i].m_iendTurn)
 		{
-			if (i==0)
+			if (i == 0)
 			{
 				iRemainingTurns = iTurn;
-				date = getStartingDate();
+				date			= getStartingDate();
 			}
 			else
 			{
-				iRemainingTurns = iTurn - aIncrements[i-1].m_iendTurn;
-				date = aIncrements[i-1].m_endDate;
+				iRemainingTurns = iTurn - aIncrements[i - 1].m_iendTurn;
+				date			= aIncrements[i - 1].m_endDate;
 			}
 			break;
 		}
-		else if (i==(int)aIncrements.size())
+		else if (i == (int)aIncrements.size())
 		{
 			iRemainingTurns = iTurn - aIncrements[i].m_iendTurn;
-			date = aIncrements[i].m_endDate;
+			date			= aIncrements[i].m_endDate;
 		}
 	}
 	date.increment(iRemainingTurns, eGameSpeed);
@@ -187,10 +187,10 @@ CvDate CvDate::getDate(int iTurn, GameSpeedTypes eGameSpeed)
 
 void CvDate::calculateEndDates(GameSpeedTypes eGameSpeed)
 {
-	CvGameSpeedInfo& kInfo = GC.getGameSpeedInfo(eGameSpeed);
+	CvGameSpeedInfo&			  kInfo		  = GC.getGameSpeedInfo(eGameSpeed);
 	std::vector<CvDateIncrement>& aIncrements = kInfo.getIncrements();
 	kInfo.setEndDatesCalculated(true);
-	for (int i=0; i<(int)aIncrements.size(); i++)
+	for (int i = 0; i < (int)aIncrements.size(); i++)
 	{
 		aIncrements[i].m_endDate = CvDate(MAX_UNSIGNED_INT);
 		aIncrements[i].m_endDate = getDate(aIncrements[i].m_iendTurn, eGameSpeed);

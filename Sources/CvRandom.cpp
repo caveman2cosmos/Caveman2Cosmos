@@ -2,18 +2,18 @@
 
 #include "CvGameCoreDLL.h"
 
-#define RANDOM_A      (1103515245)
-#define RANDOM_C      (12345)
-#define RANDOM_SHIFT  (16)
+#define RANDOM_A	 (1103515245)
+#define RANDOM_C	 (12345)
+#define RANDOM_SHIFT (16)
 
 CvRandom::CvRandom()
-{ 
+{
 	reset();
 }
 
 
 CvRandom::~CvRandom()
-{ 
+{
 	uninit();
 }
 
@@ -70,10 +70,10 @@ unsigned short CvRandom::get(unsigned short usNum, const TCHAR* pszLog)
 		}
 	}
 #endif
-/**								----  End Original Code  ----									**/
-/*************************************************************************************************/
-/**	Tweak									END													**/
-/*************************************************************************************************/
+	/**								----  End Original Code  ----									**/
+	/*************************************************************************************************/
+	/**	Tweak									END													**/
+	/*************************************************************************************************/
 	m_ulRandomSeed = ((RANDOM_A * m_ulRandomSeed) + RANDOM_C);
 
 	unsigned short us = ((unsigned short)((((m_ulRandomSeed >> RANDOM_SHIFT) & MAX_UNSIGNED_SHORT) * ((unsigned long)usNum)) / (MAX_UNSIGNED_SHORT + 1)));
@@ -83,7 +83,7 @@ unsigned short CvRandom::get(unsigned short usNum, const TCHAR* pszLog)
 
 unsigned int CvRandom::getInt()
 {
-	return get(MAX_UNSIGNED_SHORT,NULL) + (get(MAX_UNSIGNED_SHORT,NULL) << 16);
+	return get(MAX_UNSIGNED_SHORT, NULL) + (get(MAX_UNSIGNED_SHORT, NULL) << 16);
 }
 
 
@@ -107,7 +107,7 @@ unsigned long CvRandom::getSeed()
 
 void CvRandom::read(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
@@ -123,7 +123,7 @@ void CvRandom::read(FDataStreamBase* pStream)
 
 void CvRandom::write(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 

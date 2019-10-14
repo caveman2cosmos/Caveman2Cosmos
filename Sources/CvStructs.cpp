@@ -13,53 +13,53 @@
 
 #include "CvGameCoreDLL.h"
 
-int EventTriggeredData::getID() const 
-{ 
-	return m_iId; 
+int EventTriggeredData::getID() const
+{
+	return m_iId;
 }
 
-void EventTriggeredData::setID(int iID) 
-{ 
-	m_iId = iID; 
+void EventTriggeredData::setID(int iID)
+{
+	m_iId = iID;
 }
 
 void EventTriggeredData::read(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	WRAPPER_READ(wrapper, "EventTriggeredData",&m_iId);
-	WRAPPER_READ(wrapper, "EventTriggeredData",(int*)&m_eTrigger);
+	WRAPPER_READ(wrapper, "EventTriggeredData", &m_iId);
+	WRAPPER_READ(wrapper, "EventTriggeredData", (int*)&m_eTrigger);
 	m_eTrigger = (EventTriggerTypes)wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_EVENT_TRIGGERS, m_eTrigger, true);
-	WRAPPER_READ(wrapper, "EventTriggeredData",&m_iTurn);
-	WRAPPER_READ(wrapper, "EventTriggeredData",(int*)&m_ePlayer);
-	WRAPPER_READ(wrapper, "EventTriggeredData",&m_iCityId);
-	WRAPPER_READ(wrapper, "EventTriggeredData",&m_iPlotX);
-	WRAPPER_READ(wrapper, "EventTriggeredData",&m_iPlotY);
-	WRAPPER_READ(wrapper, "EventTriggeredData",&m_iUnitId);
-	WRAPPER_READ(wrapper, "EventTriggeredData",(int*)&m_eOtherPlayer);
-	WRAPPER_READ(wrapper, "EventTriggeredData",&m_iOtherPlayerCityId);
-	
+	WRAPPER_READ(wrapper, "EventTriggeredData", &m_iTurn);
+	WRAPPER_READ(wrapper, "EventTriggeredData", (int*)&m_ePlayer);
+	WRAPPER_READ(wrapper, "EventTriggeredData", &m_iCityId);
+	WRAPPER_READ(wrapper, "EventTriggeredData", &m_iPlotX);
+	WRAPPER_READ(wrapper, "EventTriggeredData", &m_iPlotY);
+	WRAPPER_READ(wrapper, "EventTriggeredData", &m_iUnitId);
+	WRAPPER_READ(wrapper, "EventTriggeredData", (int*)&m_eOtherPlayer);
+	WRAPPER_READ(wrapper, "EventTriggeredData", &m_iOtherPlayerCityId);
+
 	//	Expiration was not stored in older saves (which didn;t store expired events for replay)
 	//	so default to false if absent
 	m_bExpired = false;
-	WRAPPER_READ(wrapper, "EventTriggeredData",&m_bExpired);
+	WRAPPER_READ(wrapper, "EventTriggeredData", &m_bExpired);
 
-	WRAPPER_READ_CLASS_ENUM(wrapper, "EventTriggeredData",REMAPPED_CLASS_TYPE_RELIGIONS,(int*)&m_eReligion);
-	WRAPPER_READ_CLASS_ENUM(wrapper, "EventTriggeredData",REMAPPED_CLASS_TYPE_CORPORATIONS,(int*)&m_eCorporation);
-	WRAPPER_READ_CLASS_ENUM(wrapper, "EventTriggeredData",REMAPPED_CLASS_TYPE_BUILDINGS,(int*)&m_eBuilding);
-	WRAPPER_READ_STRING(wrapper, "EventTriggeredData",m_szText);
-	WRAPPER_READ_STRING(wrapper, "EventTriggeredData",m_szGlobalText);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "EventTriggeredData", REMAPPED_CLASS_TYPE_RELIGIONS, (int*)&m_eReligion);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "EventTriggeredData", REMAPPED_CLASS_TYPE_CORPORATIONS, (int*)&m_eCorporation);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "EventTriggeredData", REMAPPED_CLASS_TYPE_BUILDINGS, (int*)&m_eBuilding);
+	WRAPPER_READ_STRING(wrapper, "EventTriggeredData", m_szText);
+	WRAPPER_READ_STRING(wrapper, "EventTriggeredData", m_szGlobalText);
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 }
 
 void EventTriggeredData::write(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
@@ -85,39 +85,39 @@ void EventTriggeredData::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
-int VoteSelectionData::getID() const 
-{ 
-	return iId; 
+int VoteSelectionData::getID() const
+{
+	return iId;
 }
 
-void VoteSelectionData::setID(int iID) 
-{ 
-	iId = iID; 
+void VoteSelectionData::setID(int iID)
+{
+	iId = iID;
 }
 
 void VoteSelectionData::read(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	WRAPPER_READ(wrapper, "VoteSelectionData",&iId);
-	WRAPPER_READ_CLASS_ENUM(wrapper, "VoteSelectionData", REMAPPED_CLASS_TYPE_VOTE_SOURCES,(int*)&eVoteSource);
+	WRAPPER_READ(wrapper, "VoteSelectionData", &iId);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "VoteSelectionData", REMAPPED_CLASS_TYPE_VOTE_SOURCES, (int*)&eVoteSource);
 	int iSize = 0;
-	WRAPPER_READ_DECORATED(wrapper, "VoteSelectionData",(unsigned int*)&iSize,"aVoteOption.size");
+	WRAPPER_READ_DECORATED(wrapper, "VoteSelectionData", (unsigned int*)&iSize, "aVoteOption.size");
 
-	if ( iSize < 50 )	//	Old bug left loaded size uninitialized so sanity check and ignore larger
+	if (iSize < 50) //	Old bug left loaded size uninitialized so sanity check and ignore larger
 	{
 		for (int i = 0; i < iSize; ++i)
 		{
 			VoteSelectionSubData kData;
-			WRAPPER_READ_CLASS_ENUM_DECORATED(wrapper, "VoteSelectionData",REMAPPED_CLASS_TYPE_VOTES,(int*)&kData.eVote, "voteOption.eVote");
-			WRAPPER_READ_DECORATED(wrapper, "VoteSelectionData",(int*)&kData.ePlayer, "voteOption.ePlayer");
-			WRAPPER_READ_DECORATED(wrapper, "VoteSelectionData",&kData.iCityId, "voteOption.iCityId");
-			WRAPPER_READ_DECORATED(wrapper, "VoteSelectionData",(int*)&kData.eOtherPlayer, "voteOption.eOtherPlayer");
-			WRAPPER_READ_STRING_DECORATED(wrapper, "VoteSelectionData",kData.szText, "voteOption.szText");
+			WRAPPER_READ_CLASS_ENUM_DECORATED(wrapper, "VoteSelectionData", REMAPPED_CLASS_TYPE_VOTES, (int*)&kData.eVote, "voteOption.eVote");
+			WRAPPER_READ_DECORATED(wrapper, "VoteSelectionData", (int*)&kData.ePlayer, "voteOption.ePlayer");
+			WRAPPER_READ_DECORATED(wrapper, "VoteSelectionData", &kData.iCityId, "voteOption.iCityId");
+			WRAPPER_READ_DECORATED(wrapper, "VoteSelectionData", (int*)&kData.eOtherPlayer, "voteOption.eOtherPlayer");
+			WRAPPER_READ_STRING_DECORATED(wrapper, "VoteSelectionData", kData.szText, "voteOption.szText");
 			aVoteOptions.push_back(kData);
 		}
 	}
@@ -127,7 +127,7 @@ void VoteSelectionData::read(FDataStreamBase* pStream)
 
 void VoteSelectionData::write(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
@@ -135,7 +135,7 @@ void VoteSelectionData::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE(wrapper, "VoteSelectionData", iId);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "VoteSelectionData", REMAPPED_CLASS_TYPE_VOTE_SOURCES, eVoteSource);
-	WRAPPER_WRITE_DECORATED(wrapper, "VoteSelectionData", aVoteOptions.size(),"aVoteOption.size");
+	WRAPPER_WRITE_DECORATED(wrapper, "VoteSelectionData", aVoteOptions.size(), "aVoteOption.size");
 	for (std::vector<VoteSelectionSubData>::iterator it = aVoteOptions.begin(); it != aVoteOptions.end(); ++it)
 	{
 		WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "VoteSelectionData", REMAPPED_CLASS_TYPE_VOTES, (*it).eVote, "voteOption.eVote");
@@ -148,38 +148,38 @@ void VoteSelectionData::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
-int VoteTriggeredData::getID() const 
-{ 
-	return iId; 
+int VoteTriggeredData::getID() const
+{
+	return iId;
 }
 
-void VoteTriggeredData::setID(int iID) 
-{ 
-	iId = iID; 
+void VoteTriggeredData::setID(int iID)
+{
+	iId = iID;
 }
 
 void VoteTriggeredData::read(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	WRAPPER_READ(wrapper, "VoteTriggeredData",&iId);
-	WRAPPER_READ_CLASS_ENUM(wrapper, "VoteTriggeredData", REMAPPED_CLASS_TYPE_VOTE_SOURCES,(int*)&eVoteSource);
-	WRAPPER_READ_CLASS_ENUM(wrapper, "VoteTriggeredData", REMAPPED_CLASS_TYPE_VOTES,(int*)&kVoteOption.eVote);
-	WRAPPER_READ(wrapper, "VoteTriggeredData",(int*)&kVoteOption.ePlayer);
-	WRAPPER_READ(wrapper, "VoteTriggeredData",&kVoteOption.iCityId);
-	WRAPPER_READ(wrapper, "VoteTriggeredData",(int*)&kVoteOption.eOtherPlayer);
-	WRAPPER_READ_STRING(wrapper, "VoteTriggeredData",kVoteOption.szText);
+	WRAPPER_READ(wrapper, "VoteTriggeredData", &iId);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "VoteTriggeredData", REMAPPED_CLASS_TYPE_VOTE_SOURCES, (int*)&eVoteSource);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "VoteTriggeredData", REMAPPED_CLASS_TYPE_VOTES, (int*)&kVoteOption.eVote);
+	WRAPPER_READ(wrapper, "VoteTriggeredData", (int*)&kVoteOption.ePlayer);
+	WRAPPER_READ(wrapper, "VoteTriggeredData", &kVoteOption.iCityId);
+	WRAPPER_READ(wrapper, "VoteTriggeredData", (int*)&kVoteOption.eOtherPlayer);
+	WRAPPER_READ_STRING(wrapper, "VoteTriggeredData", kVoteOption.szText);
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 }
 
 void VoteTriggeredData::write(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
@@ -198,19 +198,19 @@ void VoteTriggeredData::write(FDataStreamBase* pStream)
 
 void PlotExtraYield::read(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	WRAPPER_READ(wrapper, "PlotExtraYield",&m_iX);
-	WRAPPER_READ(wrapper, "PlotExtraYield",&m_iY);
+	WRAPPER_READ(wrapper, "PlotExtraYield", &m_iX);
+	WRAPPER_READ(wrapper, "PlotExtraYield", &m_iY);
 	m_aeExtraYield.clear();
 	for (int i = 0; i < NUM_YIELD_TYPES; ++i)
 	{
 		int iYield;
-		WRAPPER_READ_DECORATED(wrapper, "PlotExtraYield",&iYield, "iYield");
+		WRAPPER_READ_DECORATED(wrapper, "PlotExtraYield", &iYield, "iYield");
 		m_aeExtraYield.push_back(iYield);
 	}
 
@@ -219,7 +219,7 @@ void PlotExtraYield::read(FDataStreamBase* pStream)
 
 void PlotExtraYield::write(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
@@ -237,22 +237,22 @@ void PlotExtraYield::write(FDataStreamBase* pStream)
 
 void PlotExtraCost::read(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	WRAPPER_READ(wrapper, "PlotExtraCost",&m_iX);
-	WRAPPER_READ(wrapper, "PlotExtraCost",&m_iY);
-	WRAPPER_READ(wrapper, "PlotExtraCost",&m_iCost);
+	WRAPPER_READ(wrapper, "PlotExtraCost", &m_iX);
+	WRAPPER_READ(wrapper, "PlotExtraCost", &m_iY);
+	WRAPPER_READ(wrapper, "PlotExtraCost", &m_iCost);
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 }
 
 void PlotExtraCost::write(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
@@ -267,22 +267,22 @@ void PlotExtraCost::write(FDataStreamBase* pStream)
 
 void BuildingYieldChange::read(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingYieldChange", REMAPPED_CLASS_TYPE_BUILDING_CLASSES,(int*)&eBuildingClass);
-	WRAPPER_READ(wrapper, "BuildingYieldChange",(int*)&eYield);
-	WRAPPER_READ(wrapper, "BuildingYieldChange",&iChange);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingYieldChange", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, (int*)&eBuildingClass);
+	WRAPPER_READ(wrapper, "BuildingYieldChange", (int*)&eYield);
+	WRAPPER_READ(wrapper, "BuildingYieldChange", &iChange);
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 }
 
 void BuildingYieldChange::write(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
@@ -297,22 +297,22 @@ void BuildingYieldChange::write(FDataStreamBase* pStream)
 
 void BuildingCommerceChange::read(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingCommerceChange",REMAPPED_CLASS_TYPE_BUILDING_CLASSES,(int*)&eBuildingClass);
-	WRAPPER_READ(wrapper, "BuildingCommerceChange",(int*)&eCommerce);
-	WRAPPER_READ(wrapper, "BuildingCommerceChange",&iChange);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingCommerceChange", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, (int*)&eBuildingClass);
+	WRAPPER_READ(wrapper, "BuildingCommerceChange", (int*)&eCommerce);
+	WRAPPER_READ(wrapper, "BuildingCommerceChange", &iChange);
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 }
 
 void PropertySpawns::read(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
@@ -343,7 +343,7 @@ void PropertySpawns::read(FDataStreamBase* pStream)
 
 void PropertySpawns::write(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
@@ -366,7 +366,7 @@ void PropertySpawns::write(FDataStreamBase* pStream)
 
 void BuildingCommerceChange::write(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
@@ -386,22 +386,22 @@ void BuildingCommerceChange::write(FDataStreamBase* pStream)
 /************************************************************************************************/
 void BuildingYieldModifier::read(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingYieldModifier",REMAPPED_CLASS_TYPE_BUILDING_CLASSES,(int*)&eBuildingClass);
-	WRAPPER_READ(wrapper, "BuildingYieldModifier",(int*)&eYield);
-	WRAPPER_READ(wrapper, "BuildingYieldModifier",&iChange);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingYieldModifier", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, (int*)&eBuildingClass);
+	WRAPPER_READ(wrapper, "BuildingYieldModifier", (int*)&eYield);
+	WRAPPER_READ(wrapper, "BuildingYieldModifier", &iChange);
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 }
 
 void BuildingYieldModifier::write(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
@@ -416,22 +416,22 @@ void BuildingYieldModifier::write(FDataStreamBase* pStream)
 
 void BuildingCommerceModifier::read(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingCommerceModifier",REMAPPED_CLASS_TYPE_BUILDING_CLASSES,(int*)&eBuildingClass);
-	WRAPPER_READ(wrapper, "BuildingCommerceModifier",(int*)&eCommerce);
-	WRAPPER_READ(wrapper, "BuildingCommerceModifier",&iChange);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingCommerceModifier", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, (int*)&eBuildingClass);
+	WRAPPER_READ(wrapper, "BuildingCommerceModifier", (int*)&eCommerce);
+	WRAPPER_READ(wrapper, "BuildingCommerceModifier", &iChange);
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 }
 
 void BuildingCommerceModifier::write(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
@@ -453,9 +453,8 @@ void checkBattleUnitType(BattleUnitTypes unitType)
 	FAssertMsg((unitType >= 0) && (unitType < BATTLE_UNIT_COUNT), "[Jason] Invalid battle unit type.");
 }
 
-CvBattleRound::CvBattleRound() :
-	m_iWaveSize(0),
-	m_bRangedRound(false) 
+CvBattleRound::CvBattleRound()
+	: m_iWaveSize(0), m_bRangedRound(false)
 {
 	m_aNumKilled[BATTLE_UNIT_ATTACKER] = m_aNumKilled[BATTLE_UNIT_DEFENDER] = 0;
 	m_aNumAlive[BATTLE_UNIT_ATTACKER] = m_aNumAlive[BATTLE_UNIT_DEFENDER] = 0;
@@ -557,24 +556,24 @@ void CvMissionDefinition::setMissionTime(float time)
 	m_fMissionTime = time;
 }
 
-CvUnit *CvMissionDefinition::getUnit(BattleUnitTypes unitType) const
+CvUnit* CvMissionDefinition::getUnit(BattleUnitTypes unitType) const
 {
 	checkBattleUnitType(unitType);
 	return m_aUnits[unitType];
 }
 
-void CvMissionDefinition::setUnit(BattleUnitTypes unitType, CvUnit *unit)
+void CvMissionDefinition::setUnit(BattleUnitTypes unitType, CvUnit* unit)
 {
 	checkBattleUnitType(unitType);
 	m_aUnits[unitType] = unit;
 }
 
-const CvPlot *CvMissionDefinition::getPlot() const
+const CvPlot* CvMissionDefinition::getPlot() const
 {
 	return m_pPlot;
 }
 
-void CvMissionDefinition::setPlot(const CvPlot *plot)
+void CvMissionDefinition::setPlot(const CvPlot* plot)
 {
 	m_pPlot = plot;
 }
@@ -612,10 +611,10 @@ CvBattleDefinition::CvBattleDefinition(CvPlot* plot, CvUnit* attacker, CvUnit* d
 	FAssertMsg(attacker != NULL, "Attacker must be valid in a Battle");
 	FAssertMsg(defender != NULL, "Defender must be valid in a Battle");
 
-	for(int i=0;i<BATTLE_UNIT_COUNT;i++)
+	for (int i = 0; i < BATTLE_UNIT_COUNT; i++)
 	{
 		m_aFirstStrikes[i] = 0;
-		for(int j=0;j<BATTLE_TIME_COUNT;j++)
+		for (int j = 0; j < BATTLE_TIME_COUNT; j++)
 		{
 			m_aDamage[i][j] = 0;
 		}
@@ -630,26 +629,28 @@ CvBattleDefinition::CvBattleDefinition(CvPlot* plot, CvUnit* attacker, CvUnit* d
 //! \brief      Copy constructor
 //! \param      kCopy The object to copy
 //------------------------------------------------------------------------------------------------
-CvBattleDefinition::CvBattleDefinition( const CvBattleDefinition & kCopy ) :
-	m_bAdvanceSquare( kCopy.m_bAdvanceSquare )
+CvBattleDefinition::CvBattleDefinition(const CvBattleDefinition& kCopy)
+	: m_bAdvanceSquare(kCopy.m_bAdvanceSquare)
 {
-	m_fMissionTime = kCopy.m_fMissionTime;
-	m_eMissionType = MISSION_BEGIN_COMBAT;
-	m_iNumMeleeRounds = kCopy.m_iNumMeleeRounds;
+	m_fMissionTime	   = kCopy.m_fMissionTime;
+	m_eMissionType	   = MISSION_BEGIN_COMBAT;
+	m_iNumMeleeRounds  = kCopy.m_iNumMeleeRounds;
 	m_iNumRangedRounds = kCopy.m_iNumRangedRounds;
 
-	for(int i=0;i<BATTLE_UNIT_COUNT;i++)
+	for (int i = 0; i < BATTLE_UNIT_COUNT; i++)
 	{
-		m_aUnits[i] = kCopy.m_aUnits[i];
+		m_aUnits[i]		   = kCopy.m_aUnits[i];
 		m_aFirstStrikes[i] = kCopy.m_aFirstStrikes[i];
-		for(int j=0;j<BATTLE_TIME_COUNT;j++)
+		for (int j = 0; j < BATTLE_TIME_COUNT; j++)
 			m_aDamage[i][j] = kCopy.m_aDamage[i][j];
 	}
 
 	m_aBattleRounds.assign(kCopy.m_aBattleRounds.begin(), kCopy.m_aBattleRounds.end());
 }
 
-CvBattleDefinition::~CvBattleDefinition() {}
+CvBattleDefinition::~CvBattleDefinition()
+{
+}
 
 int CvBattleDefinition::getDamage(BattleUnitTypes unitType, BattleTimeTypes timeType) const
 {
@@ -740,24 +741,24 @@ void CvBattleDefinition::clearBattleRounds()
 	m_aBattleRounds.clear();
 }
 
-CvBattleRound &CvBattleDefinition::getBattleRound(int index)
+CvBattleRound& CvBattleDefinition::getBattleRound(int index)
 {
 	checkBattleRound(index);
 	return m_aBattleRounds[index];
 }
 
-const CvBattleRound &CvBattleDefinition::getBattleRound(int index) const
+const CvBattleRound& CvBattleDefinition::getBattleRound(int index) const
 {
 	checkBattleRound(index);
 	return m_aBattleRounds[index];
 }
 
-void CvBattleDefinition::addBattleRound(const CvBattleRound &round)
+void CvBattleDefinition::addBattleRound(const CvBattleRound& round)
 {
 	m_aBattleRounds.push_back(round);
 }
 
-void CvBattleDefinition::setBattleRound(int index, const CvBattleRound &round)
+void CvBattleDefinition::setBattleRound(int index, const CvBattleRound& round)
 {
 	m_aBattleRounds.assign(index, round);
 }
@@ -776,8 +777,8 @@ void CvBattleDefinition::checkBattleRound(int index) const
 // FUNCTION:    CvAirMissionDefinition::CvAirMissionDefinition
 //! \brief      Constructor
 //------------------------------------------------------------------------------------------------
-CvAirMissionDefinition::CvAirMissionDefinition(MissionTypes type /*= MISSION_AIRPATROL*/, CvPlot * plot /*= NULL*/, CvUnit * attacker /*= NULL*/, CvUnit * defender /*= NULL*/, float time /*= -1.f*/) :
-	CvMissionDefinition(type, plot, attacker, defender, time)
+CvAirMissionDefinition::CvAirMissionDefinition(MissionTypes type /*= MISSION_AIRPATROL*/, CvPlot* plot /*= NULL*/, CvUnit* attacker /*= NULL*/, CvUnit* defender /*= NULL*/, float time /*= -1.f*/)
+	: CvMissionDefinition(type, plot, attacker, defender, time)
 {
 
 	m_aDamage[BATTLE_UNIT_ATTACKER] = 0;
@@ -789,16 +790,16 @@ CvAirMissionDefinition::CvAirMissionDefinition(MissionTypes type /*= MISSION_AIR
 //! \brief      Copy constructor
 //! \param      kCopy The object to copy
 //------------------------------------------------------------------------------------------------
-CvAirMissionDefinition::CvAirMissionDefinition( const CvAirMissionDefinition & kCopy )
+CvAirMissionDefinition::CvAirMissionDefinition(const CvAirMissionDefinition& kCopy)
 {
 	m_fMissionTime = kCopy.m_fMissionTime;
 	m_eMissionType = kCopy.m_eMissionType;
-	m_pPlot = kCopy.m_pPlot;
+	m_pPlot		   = kCopy.m_pPlot;
 
-	for(int i=0;i<BATTLE_UNIT_COUNT;i++)
+	for (int i = 0; i < BATTLE_UNIT_COUNT; i++)
 	{
 		m_aDamage[i] = kCopy.m_aDamage[i];
-		m_aUnits[i] = kCopy.m_aUnits[i];
+		m_aUnits[i]	 = kCopy.m_aUnits[i];
 	}
 }
 
@@ -818,7 +819,7 @@ bool CvAirMissionDefinition::isDead(BattleUnitTypes unitType) const
 {
 	checkBattleUnitType(unitType);
 	FAssertMsg(getUnit(unitType) != NULL, "[Jason] Invalid battle unit type.");
-	if(getDamage(unitType) >= getUnit(unitType)->maxHitPoints())
+	if (getDamage(unitType) >= getUnit(unitType)->maxHitPoints())
 		return true;
 	else
 		return false;
@@ -848,4 +849,3 @@ PBGameSetupData::PBGameSetupData()
 		abMPOptions.push_back(false);
 	}
 }
-

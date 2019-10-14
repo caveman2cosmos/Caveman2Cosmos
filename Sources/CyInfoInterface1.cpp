@@ -29,8 +29,7 @@ void CyInfoPythonInterface1()
 
 	python::class_<CvScalableInfo>("CvScalableInfo")
 		.def("setScale", &CvScalableInfo::setScale, "void (float fScale)")
-		.def("getScale", &CvScalableInfo::getScale, "float  ()")
-		;
+		.def("getScale", &CvScalableInfo::getScale, "float  ()");
 
 	python::class_<CvSpecialistInfo, python::bases<CvInfoBase> >("CvSpecialistInfo")
 		.def("getGreatPeopleUnitClass", &CvSpecialistInfo::getGreatPeopleUnitClass, "int ()")
@@ -38,22 +37,22 @@ void CyInfoPythonInterface1()
 		.def("getMissionType", &CvSpecialistInfo::getMissionType, "int ()")
 
 		.def("isVisible", &CvSpecialistInfo::isVisible, "bool ()")
-		
+
 		.def("getYieldChange", &CvSpecialistInfo::getYieldChange, "int (int i)")
 		.def("getCommerceChange", &CvSpecialistInfo::getCommerceChange, "int (int i)")
 		.def("getExperience", &CvSpecialistInfo::getExperience, "int ()")
 		.def("getFlavorValue", &CvSpecialistInfo::getFlavorValue, "int (int i)")
 
 		.def("getTexture", &CvSpecialistInfo::getTexture, "string ()")
-/************************************************************************************************/
-/* Afforess	                  Start		 03/26/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                  Start		 03/26/10                                               */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
 		.def("isSlave", &CvSpecialistInfo::isSlave, "string ()")
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                     END                                                            */
+		/************************************************************************************************/
 		;
 
 	python::class_<CvTechInfo, python::bases<CvInfoBase> >("CvTechInfo")
@@ -106,26 +105,25 @@ void CyInfoPythonInterface1()
 
 		.def("isCommerceFlexible", &CvTechInfo::isCommerceFlexible, "bool (int i)")
 		.def("isTerrainTrade", &CvTechInfo::isTerrainTrade, "bool (int i)")
-/************************************************************************************************/
-/* Afforess	                  Start		 03/30/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                  Start		 03/30/10                                               */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
 		.def("isEmbassyTrading", &CvTechInfo::isEmbassyTrading, "bool ()")
 		.def("isCanPassPeaks", &CvTechInfo::isCanPassPeaks, "bool ()")
 		.def("setPrereqOrTech", &CvTechInfo::setPrereqOrTech, "int (int i)")
 		.def("setPrereqAndTech", &CvTechInfo::setPrereqAndTech, "int (int i)")
 		.def("getUnitClassStrengthChange", &CvTechInfo::getUnitClassStrengthChange, "int (int i)")
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                     END                                                            */
+		/************************************************************************************************/
 		.def("getNumPrereqBuildingClasses", &CvTechInfo::getNumPrereqBuildingClasses, "int ()")
 		.def("getPrereqBuildingClassType", &CvTechInfo::getPrereqBuildingClassType, "int (int i)")
 		.def("getPrereqBuildingClassMinimumRequired", &CvTechInfo::getPrereqBuildingClassMinimumRequired, "int (int i)")
 		.def("getNumPrereqOrBuildingClasses", &CvTechInfo::getNumPrereqOrBuildingClasses, "int ()")
 		.def("getPrereqOrBuildingClassType", &CvTechInfo::getPrereqOrBuildingClassType, "int (int i)")
-		.def("getPrereqOrBuildingClassMinimumRequired", &CvTechInfo::getPrereqOrBuildingClassMinimumRequired, "int (int i)")
-		;
+		.def("getPrereqOrBuildingClassMinimumRequired", &CvTechInfo::getPrereqOrBuildingClassMinimumRequired, "int (int i)");
 
 	python::class_<CvPromotionInfo, python::bases<CvInfoBase> >("CvPromotionInfo")
 
@@ -165,13 +163,13 @@ void CyInfoPythonInterface1()
 		.def("getUpgradeDiscount", &CvPromotionInfo::getUpgradeDiscount, "int ()")
 		.def("getExperiencePercent", &CvPromotionInfo::getExperiencePercent, "int ()")
 		.def("getKamikazePercent", &CvPromotionInfo::getKamikazePercent, "int ()")
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre                                                                          **/
-/**  Date: 16.09.2009                                                                               **/
-/**  ModComp: TLOTags                                                                               **/
-/**  Reason Added: Expose New Promotions to Python                                                  **/
-/**  Notes:                                                                                         **/
-/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		/**  Author: TheLadiesOgre                                                                          **/
+		/**  Date: 16.09.2009                                                                               **/
+		/**  ModComp: TLOTags                                                                               **/
+		/**  Reason Added: Expose New Promotions to Python                                                  **/
+		/**  Notes:                                                                                         **/
+		/*****************************************************************************************************/
 		.def("getAirCombatLimitChange", &CvPromotionInfo::getAirCombatLimitChange, "int ()")
 		.def("getCelebrityHappy", &CvPromotionInfo::getCelebrityHappy, "int ()")
 		.def("getCollateralDamageLimitChange", &CvPromotionInfo::getCollateralDamageLimitChange, "int ()")
@@ -179,9 +177,9 @@ void CyInfoPythonInterface1()
 		.def("getCombatLimitChange", &CvPromotionInfo::getCombatLimitChange, "int ()")
 		.def("getExtraDropRange", &CvPromotionInfo::getExtraDropRange, "int ()")
 		.def("getVictoryHeal", &CvPromotionInfo::getVictoryHeal, "int ()")
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 16.09.2009; TLOTags                                                             **/
-/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		/**  TheLadiesOgre; 16.09.2009; TLOTags                                                             **/
+		/*****************************************************************************************************/
 
 		.def("isLeader", &CvPromotionInfo::isLeader, "bool ()")
 		.def("isBlitz", &CvPromotionInfo::isBlitz, "bool ()")
@@ -191,13 +189,13 @@ void CyInfoPythonInterface1()
 		.def("isAlwaysHeal", &CvPromotionInfo::isAlwaysHeal, "bool ()")
 		.def("isHillsDoubleMove", &CvPromotionInfo::isHillsDoubleMove, "bool ()")
 		.def("isImmuneToFirstStrikes", &CvPromotionInfo::isImmuneToFirstStrikes, "bool ()")
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre                                                                          **/
-/**  Date: 16.09.2009                                                                               **/
-/**  ModComp: TLOTags                                                                               **/
-/**  Reason Added: Expose New Promotions to Python                                                  **/
-/**  Notes:                                                                                         **/
-/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		/**  Author: TheLadiesOgre                                                                          **/
+		/**  Date: 16.09.2009                                                                               **/
+		/**  ModComp: TLOTags                                                                               **/
+		/**  Reason Added: Expose New Promotions to Python                                                  **/
+		/**  Notes:                                                                                         **/
+		/*****************************************************************************************************/
 		.def("isDefensiveVictoryMove", &CvPromotionInfo::isDefensiveVictoryMove, "bool ()")
 		.def("isFreeDrop", &CvPromotionInfo::isFreeDrop, "bool ()")
 		.def("isOffensiveVictoryMove", &CvPromotionInfo::isOffensiveVictoryMove, "bool ()")
@@ -207,20 +205,20 @@ void CyInfoPythonInterface1()
 		.def("isPillageOnMove", &CvPromotionInfo::isPillageOnMove, "bool ()")
 		.def("isPillageOnVictory", &CvPromotionInfo::isPillageOnVictory, "bool ()")
 		.def("isPillageResearch", &CvPromotionInfo::isPillageResearch, "bool ()")
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 16.09.2009; TLOTags                                                             **/
-/*****************************************************************************************************/
-		
-/************************************************************************************************/
-/* Afforess Promotion Changes                             12/5/09                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		/*****************************************************************************************************/
+		/**  TheLadiesOgre; 16.09.2009; TLOTags                                                             **/
+		/*****************************************************************************************************/
+
+		/************************************************************************************************/
+		/* Afforess Promotion Changes                             12/5/09                               */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
 		.def("getNumPromotionOverwrites", &CvPromotionInfo::getNumPromotionOverwrites, "int ()")
 		.def("getObsoleteTech", &CvPromotionInfo::getObsoleteTech, "int ()")
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/			
+		/************************************************************************************************/
+		/* Afforess	                         END                                                        */
+		/************************************************************************************************/
 
 		.def("getSound", &CvPromotionInfo::getSound, "string ()")
 
@@ -290,8 +288,7 @@ void CyInfoPythonInterface1()
 		.def("getQualifiedUnitCombatType", &CvPromotionInfo::getQualifiedUnitCombatType, "int (int i)")
 		.def("getNumQualifiedUnitCombatTypes", &CvPromotionInfo::getNumQualifiedUnitCombatTypes, "int ()")
 		.def("isQualifiedUnitCombatType", &CvPromotionInfo::isQualifiedUnitCombatType, "bool (int i)")
-		.def("isStatus", &CvPromotionInfo::isStatus, "bool ()")
-		;
+		.def("isStatus", &CvPromotionInfo::isStatus, "bool ()");
 
 	python::class_<CvMissionInfo, python::bases<CvInfoBase> >("CvMissionInfo")
 		.def("getTime", &CvMissionInfo::getTime, "int ()")
@@ -301,8 +298,7 @@ void CyInfoPythonInterface1()
 		.def("isBuild", &CvMissionInfo::isBuild, "bool ()")
 		.def("getVisible", &CvMissionInfo::getVisible, "bool ()")
 
-		.def("getWaypoint", &CvMissionInfo::getWaypoint, "string ()")
-		;
+		.def("getWaypoint", &CvMissionInfo::getWaypoint, "string ()");
 
 	python::class_<CvActionInfo>("CvActionInfo")
 		.def("getMissionData", &CvActionInfo::getMissionData, "int ()")
@@ -318,8 +314,7 @@ void CyInfoPythonInterface1()
 		.def("isVisible", &CvActionInfo::isVisible, "bool ()")
 
 		.def("getHotKey", &CvActionInfo::getHotKey, "string ()")
-		.def("getButton", &CvActionInfo::getButton, "string ()")
-		;
+		.def("getButton", &CvActionInfo::getButton, "string ()");
 
 	python::class_<CvUnitInfo, python::bases<CvInfoBase, CvScalableInfo> >("CvUnitInfo")
 
@@ -382,19 +377,19 @@ void CyInfoPythonInterface1()
 		.def("getNumSeeInvisibleTypes", &CvUnitInfo::getNumSeeInvisibleTypes, "int ()")
 		.def("getSeeInvisibleType", &CvUnitInfo::getSeeInvisibleType, "int (int)")
 		.def("getAdvisorType", &CvUnitInfo::getAdvisorType, "int ()")
-/************************************************************************************************/
-/* REVDCM                                 02/16/10                                phungus420    */
-/*                                                                                              */
-/* CanTrain                                                                                     */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* REVDCM                                 02/16/10                                phungus420    */
+		/*                                                                                              */
+		/* CanTrain                                                                                     */
+		/************************************************************************************************/
 		.def("getMaxStartEra", &CvUnitInfo::getMaxStartEra, "int ()")
 		.def("getForceObsoleteTech", &CvUnitInfo::getForceObsoleteTech, "int ()")
 		.def("isStateReligion", &CvUnitInfo::isStateReligion, "bool ()")
 		.def("getPrereqGameOption", &CvUnitInfo::getPrereqGameOption, "int ()")
 		.def("getNotGameOption", &CvUnitInfo::getNotGameOption, "int ()")
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* REVDCM                                  END                                                  */
+		/************************************************************************************************/
 		.def("getHolyCity", &CvUnitInfo::getHolyCity, "int ()")
 		.def("getReligionType", &CvUnitInfo::getReligionType, "int ()")
 		.def("getStateReligion", &CvUnitInfo::getStateReligion, "int ()")
@@ -414,15 +409,15 @@ void CyInfoPythonInterface1()
 
 		.def("isFoodProduction", &CvUnitInfo::isFoodProduction, "bool ()")
 		.def("isNoBadGoodies", &CvUnitInfo::isNoBadGoodies, "bool ()")
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       03/20/10                       Afforess & jdog5000    */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* UNOFFICIAL_PATCH                       03/20/10                       Afforess & jdog5000    */
+		/*                                                                                              */
+		/* Bugfix                                                                                       */
+		/************************************************************************************************/
 		.def("isOnlyDefensive", &CvUnitInfo::isOnlyDefensive, "bool ()")
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* UNOFFICIAL_PATCH                        END                                                  */
+		/************************************************************************************************/
 		.def("isNoCapture", &CvUnitInfo::isNoCapture, "bool ()")
 		.def("isRivalTerritory", &CvUnitInfo::isRivalTerritory, "bool ()")
 		.def("isMilitaryHappiness", &CvUnitInfo::isMilitaryHappiness, "bool ()")
@@ -447,15 +442,15 @@ void CyInfoPythonInterface1()
 		.def("isFlatMovementCost", &CvUnitInfo::isFlatMovementCost, "bool ()")
 		.def("isIgnoreTerrainCost", &CvUnitInfo::isIgnoreTerrainCost, "bool ()")
 		.def("isNukeImmune", &CvUnitInfo::isNukeImmune, "bool ()")
-/************************************************************************************************/
-/* REVDCM_OC                              02/16/10                                phungus420    */
-/*                                                                                              */
-/* Inquisitions                                                                                 */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* REVDCM_OC                              02/16/10                                phungus420    */
+		/*                                                                                              */
+		/* Inquisitions                                                                                 */
+		/************************************************************************************************/
 		.def("isInquisitor", &CvUnitInfo::isInquisitor, "bool ()")
-/************************************************************************************************/
-/* REVDCM_OC                               END                                                  */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* REVDCM_OC                               END                                                  */
+		/************************************************************************************************/
 		.def("isPrereqBonuses", &CvUnitInfo::isPrereqBonuses, "bool ()")
 		.def("isPrereqReligion", &CvUnitInfo::isPrereqReligion, "bool ()")
 		.def("isMechUnit", &CvUnitInfo::isMechUnit, "bool ()")
@@ -464,37 +459,37 @@ void CyInfoPythonInterface1()
 		.def("isLineOfSight", &CvUnitInfo::isLineOfSight, "bool ()")
 		.def("isHiddenNationality", &CvUnitInfo::isHiddenNationality, "bool ()")
 		.def("isAlwaysHostile", &CvUnitInfo::isAlwaysHostile, "bool ()")
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre                                                                          **/
-/**  Date: 21.09.2009                                                                               **/
-/**  ModComp: TLOTags                                                                               **/
-/**  Reason Added: New Tag Definition                                                               **/
-/**  Notes:                                                                                         **/
-/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		/**  Author: TheLadiesOgre                                                                          **/
+		/**  Date: 21.09.2009                                                                               **/
+		/**  ModComp: TLOTags                                                                               **/
+		/**  Reason Added: New Tag Definition                                                               **/
+		/**  Notes:                                                                                         **/
+		/*****************************************************************************************************/
 		.def("isFreeDrop", &CvUnitInfo::isFreeDrop, "bool ()")
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 21.09.2009; TLOTags                                                             **/
-/*****************************************************************************************************/
+		/*****************************************************************************************************/
+		/**  TheLadiesOgre; 21.09.2009; TLOTags                                                             **/
+		/*****************************************************************************************************/
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
 		.def("isCanBeRebel", &CvUnitInfo::isCanBeRebel, "bool ()")
 		.def("isCanRebelCapture", &CvUnitInfo::isCanRebelCapture, "bool ()")
 		.def("isCannotDeffect", &CvUnitInfo::isCannotDefect, "bool ()")
 		.def("isCanQuellRebellion", &CvUnitInfo::isCanQuellRebellion, "bool ()")
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* REVOLUTION_MOD                          END                                                  */
+		/************************************************************************************************/
 
 		.def("getUnitMaxSpeed", &CvUnitInfo::getUnitMaxSpeed, "float ()")
 		.def("getUnitPadTime", &CvUnitInfo::getUnitPadTime, "float ()")
-		
-// BUG - Unit Experience - start
+
+		// BUG - Unit Experience - start
 		.def("canAcquireExperience", &CvUnitInfo::canAcquireExperience, "int ()")
-// BUG - Unit Experience - end
+		// BUG - Unit Experience - end
 
 		// Arrays
 
@@ -512,19 +507,19 @@ void CyInfoPythonInterface1()
 		.def("getDomainModifier", &CvUnitInfo::getDomainModifier, "int (int i)")
 		.def("getBonusProductionModifier", &CvUnitInfo::getBonusProductionModifier, "int (int i)")
 		.def("getUnitGroupRequired", &CvUnitInfo::getUnitGroupRequired, "int (int i)")
-/************************************************************************************************/
-/* REVDCM                                 02/16/10                                phungus420    */
-/*                                                                                              */
-/* CanTrain                                                                                     */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* REVDCM                                 02/16/10                                phungus420    */
+		/*                                                                                              */
+		/* CanTrain                                                                                     */
+		/************************************************************************************************/
 		.def("isPrereqOrCivics", &CvUnitInfo::isPrereqOrCivics, "bool (int i)")
 		.def("isPrereqBuildingClass", &CvUnitInfo::isPrereqBuildingClass, "bool (int i)")
 		.def("getPrereqBuildingClassOverrideTech", &CvUnitInfo::getPrereqBuildingClassOverrideTech, "int (int i)")
 		.def("getPrereqBuildingClassOverrideEra", &CvUnitInfo::getPrereqBuildingClassOverrideEra, "int (int i)")
 		.def("getForceObsoleteUnitClass", &CvUnitInfo::getForceObsoleteUnitClass, "bool (int i)")
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* REVDCM                                  END                                                  */
+		/************************************************************************************************/
 		.def("getUpgradeUnitClass", &CvUnitInfo::getUpgradeUnitClass, "bool (int i)")
 		.def("getTargetUnitClass", &CvUnitInfo::getTargetUnitClass, "bool (int i)")
 		.def("getTargetUnitCombat", &CvUnitInfo::getTargetUnitCombat, "bool (int i)")
@@ -549,11 +544,11 @@ void CyInfoPythonInterface1()
 		.def("getFreePromotions", &CvUnitInfo::getFreePromotions, "bool (int i)")
 		.def("getLeaderPromotion", &CvUnitInfo::getLeaderPromotion, "int ()")
 		.def("getLeaderExperience", &CvUnitInfo::getLeaderExperience, "int ()")
-/************************************************************************************************/
-/* Afforess	                  Start		 03/10/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                  Start		 03/10/10                                               */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
 		.def("getEarlyArtDefineTag", &CvUnitInfo::getEarlyArtDefineTag, "string (int i, UnitArtStyleTypes eStyle)")
 		.def("getClassicalArtDefineTag", &CvUnitInfo::getClassicalArtDefineTag, "string (int i, UnitArtStyleTypes eStyle)")
 		.def("getMiddleArtDefineTag", &CvUnitInfo::getMiddleArtDefineTag, "string (int i, UnitArtStyleTypes eStyle)")
@@ -561,11 +556,11 @@ void CyInfoPythonInterface1()
 		.def("getIndustrialArtDefineTag", &CvUnitInfo::getIndustrialArtDefineTag, "string (int i, UnitArtStyleTypes eStyle)")
 		.def("getLateArtDefineTag", &CvUnitInfo::getLateArtDefineTag, "string (int i, UnitArtStyleTypes eStyle)")
 		.def("getFutureArtDefineTag", &CvUnitInfo::getFutureArtDefineTag, "string (int i, UnitArtStyleTypes eStyle)")
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                     END                                                            */
+		/************************************************************************************************/
 		.def("getUnitNames", &CvUnitInfo::getUnitNames, "string (int i)")
-		.def("getArtInfo", &CvUnitInfo::getArtInfo,  python::return_value_policy<python::reference_existing_object>(), "CvArtInfoUnit* (int i, bool bLate)")
+		.def("getArtInfo", &CvUnitInfo::getArtInfo, python::return_value_policy<python::reference_existing_object>(), "CvArtInfoUnit* (int i, bool bLate)")
 		//TB SubCombat Mod begin  TB Combat Mods Begin
 		//integers
 		.def("getAttackCombatModifier", &CvUnitInfo::getAttackCombatModifier, "int ()")
@@ -665,11 +660,11 @@ void CyInfoPythonInterface1()
 		.def("getStateReligionBuildingProductionModifier", &CvCivicInfo::getStateReligionBuildingProductionModifier, "int ()")
 		.def("getStateReligionFreeExperience", &CvCivicInfo::getStateReligionFreeExperience, "int ()")
 		.def("getExpInBorderModifier", &CvCivicInfo::getExpInBorderModifier, "bool ()")
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
 		.def("isAllowInquisitions", &CvCivicInfo::isAllowInquisitions, "bool ()")
 		.def("isDisallowInquisitions", &CvCivicInfo::isDisallowInquisitions, "bool ()")
 		.def("getRevIdxLocal", &CvCivicInfo::getRevIdxLocal, "int ()")
@@ -690,9 +685,9 @@ void CyInfoPythonInterface1()
 		.def("isCommunism", &CvCivicInfo::isCommunism, "bool ()")
 		.def("isFreeSpeech", &CvCivicInfo::isFreeSpeech, "bool ()")
 		.def("isCanDoElection", &CvCivicInfo::isCanDoElection, "bool ()")
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* REVOLUTION_MOD                          END                                                  */
+		/************************************************************************************************/
 
 		.def("isMilitaryFoodProduction", &CvCivicInfo::isMilitaryFoodProduction, "bool ()")
 		.def("isNoUnhealthyPopulation", &CvCivicInfo::isNoUnhealthyPopulation, "bool ()")
@@ -723,8 +718,7 @@ void CyInfoPythonInterface1()
 		.def("isSpecialBuildingNotRequired", &CvCivicInfo::isSpecialBuildingNotRequired, "bool (int i)")
 		.def("isSpecialistValid", &CvCivicInfo::isSpecialistValid, "bool (int i)")
 
-		.def("getImprovementYieldChanges", &CvCivicInfo::getImprovementYieldChanges, "int (int i, int j)")
-		;
+		.def("getImprovementYieldChanges", &CvCivicInfo::getImprovementYieldChanges, "int (int i, int j)");
 
 	python::class_<CvUnitClassInfo, python::bases<CvInfoBase> >("CvUnitClassInfo")
 		.def("getMaxGlobalInstances", &CvUnitClassInfo::getMaxGlobalInstances, "int ()")
@@ -732,8 +726,7 @@ void CyInfoPythonInterface1()
 		.def("getMaxPlayerInstances", &CvUnitClassInfo::getMaxPlayerInstances, "int ()")
 		.def("getUnlimitedException", &CvUnitClassInfo::isUnlimitedException, "bool ()")
 		.def("getInstanceCostModifier", &CvUnitClassInfo::getInstanceCostModifier, "int ()")
-		.def("getDefaultUnitIndex", &CvUnitClassInfo::getDefaultUnitIndex, "int ()")
-		;
+		.def("getDefaultUnitIndex", &CvUnitClassInfo::getDefaultUnitIndex, "int ()");
 
 	python::class_<CvBuildingInfo, python::bases<CvInfoBase, CvScalableInfo> >("CvBuildingInfo")
 
@@ -799,16 +792,16 @@ void CyInfoPythonInterface1()
 		.def("getPowerValue", &CvBuildingInfo::getPowerValue, "int ()")
 		.def("getSpecialBuildingType", &CvBuildingInfo::getSpecialBuildingType, "int ()")
 		.def("getAdvisorType", &CvBuildingInfo::getAdvisorType, "int ()")
-/************************************************************************************************/
-/* REVDCM                                 02/16/10                                phungus420    */
-/*                                                                                              */
-/* CanConstruct                                                                                 */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* REVDCM                                 02/16/10                                phungus420    */
+		/*                                                                                              */
+		/* CanConstruct                                                                                 */
+		/************************************************************************************************/
 		.def("getPrereqGameOption", &CvBuildingInfo::getPrereqGameOption, "int ()")
 		.def("getNotGameOption", &CvBuildingInfo::getNotGameOption, "int ()")
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* REVDCM                                  END                                                  */
+		/************************************************************************************************/
 		.def("getHolyCity", &CvBuildingInfo::getHolyCity, "int ()")
 		.def("getReligionType", &CvBuildingInfo::getReligionType, "int ()")
 		.def("getStateReligion", &CvBuildingInfo::getStateReligion, "int ()")
@@ -835,18 +828,18 @@ void CyInfoPythonInterface1()
 		.def("getBombardDefenseModifier", &CvBuildingInfo::getBombardDefenseModifier, "int ()")
 		.def("getAllCityDefenseModifier", &CvBuildingInfo::getAllCityDefenseModifier, "int ()")
 		.def("getEspionageDefenseModifier", &CvBuildingInfo::getEspionageDefenseModifier, "int ()")
-/********************************************************************************/
-/**		REVDCM									4/09/10				phungus420	*/
-/**																				*/
-/**		Building Effects														*/
-/********************************************************************************/
+		/********************************************************************************/
+		/**		REVDCM									4/09/10				phungus420	*/
+		/**																				*/
+		/**		Building Effects														*/
+		/********************************************************************************/
 		.def("getUnitUpgradePriceModifier", &CvBuildingInfo::getUnitUpgradePriceModifier, "int ()")
 		.def("getRevIdxLocal", &CvBuildingInfo::getRevIdxLocal, "int ()")
 		.def("getRevIdxNational", &CvBuildingInfo::getRevIdxNational, "int ()")
 		.def("getRevIdxDistanceModifier", &CvBuildingInfo::getRevIdxDistanceModifier, "int ()")
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
+		/********************************************************************************/
+		/**		REVDCM									END								*/
+		/********************************************************************************/
 		.def("getMaxPopulationAllowed", &CvBuildingInfo::getMaxPopulationAllowed, "int ()")
 		.def("getMaxPopulationChange", &CvBuildingInfo::getMaxPopulationChange, "int ()")
 
@@ -923,31 +916,31 @@ void CyInfoPythonInterface1()
 		.def("getPrereqNumOfBuildingClass", &CvBuildingInfo::getPrereqNumOfBuildingClass, "int (int i)")
 		.def("getFlavorValue", &CvBuildingInfo::getFlavorValue, "int (int i)")
 		.def("getImprovementFreeSpecialist", &CvBuildingInfo::getImprovementFreeSpecialist, "int (int i)")
-		
-/************************************************************************************************/
-/* Afforess	                  Start		 06/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
+		/************************************************************************************************/
+		/* Afforess	                  Start		 06/14/10                                               */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
 		.def("isPrereqOrCivics", &CvBuildingInfo::isPrereqOrCivics, "bool (int i)")
 		.def("isPrereqAndCivics", &CvBuildingInfo::isPrereqAndCivics, "bool (int i)")
-		
+
 		.def("isPrereqOrTerrain", &CvBuildingInfo::isPrereqOrTerrain, "bool (int i)")
 		.def("isPrereqAndTerrain", &CvBuildingInfo::isPrereqAndTerrain, "bool (int i)")
-		
+
 		.def("isPrereqOrImprovement", &CvBuildingInfo::isPrereqOrImprovement, "bool (int i)")
 		.def("isPrereqOrFeature", &CvBuildingInfo::isPrereqOrFeature, "bool (int i)")
-		
-		.def("getTechHealthChanges", &CvBuildingInfo::getTechHealthChanges, "int (int i)") 
-		
+
+		.def("getTechHealthChanges", &CvBuildingInfo::getTechHealthChanges, "int (int i)")
+
 		.def("isReplaceBuildingClass", &CvBuildingInfo::isReplaceBuildingClass, "bool (int i)")
-		
+
 		.def("isPrereqOrBuildingClass", &CvBuildingInfo::isPrereqOrBuildingClass, "bool (int i)")
-		
+
 		.def("getNumPopulationEmployed", &CvBuildingInfo::getNumPopulationEmployed, "int")
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                     END                                                            */
+		/************************************************************************************************/
 		.def("isCommerceFlexible", &CvBuildingInfo::isCommerceFlexible, "bool (int i)")
 		.def("isCommerceChangeOriginalOwner", &CvBuildingInfo::isCommerceChangeOriginalOwner, "bool (int i)")
 		.def("isBuildingClassNeededInCity", &CvBuildingInfo::isBuildingClassNeededInCity, "bool (int i)")
@@ -957,7 +950,7 @@ void CyInfoPythonInterface1()
 
 		.def("getProperties", &CvBuildingInfo::getProperties, python::return_value_policy<python::reference_existing_object>(), "CvProperties ()")
 
-		.def("getArtInfo", &CvBuildingInfo::getArtInfo,  python::return_value_policy<python::reference_existing_object>())
+		.def("getArtInfo", &CvBuildingInfo::getArtInfo, python::return_value_policy<python::reference_existing_object>())
 		//TB Combat Mods (Buildings) begin
 		//integers
 		.def("getTradeCommunicability", &CvBuildingInfo::getTradeCommunicability, "int (int i)")
@@ -1031,8 +1024,7 @@ void CyInfoPythonInterface1()
 		.def("getNumTechOvercomeChanges", &CvPromotionLineInfo::getNumTechOvercomeChanges, "int ()")
 		.def("getTechOvercomeChange", &CvPromotionLineInfo::getTechOvercomeChange, "int (int iTech)")
 		.def("isTechOvercomeChange", &CvPromotionLineInfo::isTechOvercomeChange, "bool (int iTech)")
-		.def("isBuildUp", &CvPromotionLineInfo::isBuildUp, "bool ()")
-		;
+		.def("isBuildUp", &CvPromotionLineInfo::isBuildUp, "bool ()");
 
 	python::class_<CvUnitCombatInfo, python::bases<CvInfoBase> >("CvUnitCombatInfo")
 		.def("getAssetMultiplier", &CvUnitCombatInfo::getAssetMultiplier, "int ()")
@@ -1159,6 +1151,5 @@ void CyInfoPythonInterface1()
 		.def("changesMoveThroughPlots", &CvUnitCombatInfo::changesMoveThroughPlots, "bool ()")
 		.def("isCanMovePeaks", &CvUnitCombatInfo::isCanMovePeaks, "bool ()")
 		.def("isCanLeadThroughPeaks", &CvUnitCombatInfo::isCanLeadThroughPeaks, "bool ()")
-		.def("isZoneOfControl", &CvUnitCombatInfo::isZoneOfControl, "bool ()")
-		;
+		.def("isZoneOfControl", &CvUnitCombatInfo::isZoneOfControl, "bool ()");
 }

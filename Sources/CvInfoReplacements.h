@@ -20,22 +20,22 @@ class CvInfoBase;
 template <class T>
 class CvInfoReplacement
 {
-protected:
-	uint m_uiID;
-	uint m_uiReplID;
+  protected:
+	uint	  m_uiID;
+	uint	  m_uiReplID;
 	BoolExpr* m_pCondition;
-	T* m_pInfo;
+	T*		  m_pInfo;
 
-public:
-	CvInfoReplacement(uint uiID = 0, uint uiReplID = 0, BoolExpr* pCondition = NULL, T* pInfo = NULL):
-		m_uiID(uiID), m_uiReplID(uiReplID), m_pCondition(pCondition), m_pInfo(pInfo) {}
+  public:
+	CvInfoReplacement(uint uiID = 0, uint uiReplID = 0, BoolExpr* pCondition = NULL, T* pInfo = NULL)
+		: m_uiID(uiID), m_uiReplID(uiReplID), m_pCondition(pCondition), m_pInfo(pInfo) {}
 
 	void read(FDataStreamBase* pStream)
 	{
 		pStream->Read(&m_uiID);
 		pStream->Read(&m_uiReplID);
 		m_pCondition = BoolExpr::readExpression(pStream);
-		m_pInfo = new T();
+		m_pInfo		 = new T();
 		((CvInfoBase*)m_pInfo)->read(pStream);
 	}
 
@@ -72,38 +72,38 @@ public:
 		m_pInfo = pInfo;
 	}
 
-//	void updateInfo(BoolExpr* pCondition, T* pInfo, bool bPassTwo = false)
-//	{
-//		if (bPassTwo)
-//		{
-//			SAFE_DELETE(pCondition);
-//			m_pInfo->copyNonDefaultsReadPass2(pInfo, NULL);
-//			SAFE_DELETE(pInfo);
-//		}
-//		else
-//		{
-//			m_pCondition = pCondition;
-//			pInfo->copyNonDefaults(m_pInfo, NULL);
-//			SAFE_DELETE(m_pInfo);
-//			m_pInfo = pInfo;
-//		}
-//	}
+	//	void updateInfo(BoolExpr* pCondition, T* pInfo, bool bPassTwo = false)
+	//	{
+	//		if (bPassTwo)
+	//		{
+	//			SAFE_DELETE(pCondition);
+	//			m_pInfo->copyNonDefaultsReadPass2(pInfo, NULL);
+	//			SAFE_DELETE(pInfo);
+	//		}
+	//		else
+	//		{
+	//			m_pCondition = pCondition;
+	//			pInfo->copyNonDefaults(m_pInfo, NULL);
+	//			SAFE_DELETE(m_pInfo);
+	//			m_pInfo = pInfo;
+	//		}
+	//	}
 };
 
 template <class T>
 class CvInfoReplacements
 {
-protected:
-	std::vector<CvInfoReplacement<T>* > m_apReplacements;
-	std::vector<std::pair<int, T*> > m_apBackups;
-	static std::vector<std::pair<uint,CvString> > s_IDmap;
+  protected:
+	std::vector<CvInfoReplacement<T>*>			   m_apReplacements;
+	std::vector<std::pair<int, T*> >			   m_apBackups;
+	static std::vector<std::pair<uint, CvString> > s_IDmap;
 
-public:
+  public:
 	void read(FDataStreamBase* pStream)
 	{
 		unsigned int iSize;
 		pStream->Read(&iSize);
-		for (unsigned int i=0; i<iSize; i++)
+		for (unsigned int i = 0; i < iSize; i++)
 		{
 			CvInfoReplacement<T>* pReplacement = new CvInfoReplacement<T>();
 			pReplacement->read(pStream);
@@ -115,7 +115,7 @@ public:
 	{
 		unsigned int iSize = m_apReplacements.size();
 		pStream->Write(iSize);
-		for (unsigned int i=0; i<iSize; i++)
+		for (unsigned int i = 0; i < iSize; i++)
 		{
 			m_apReplacements[i]->write(pStream);
 		}
@@ -126,7 +126,7 @@ public:
 	CvInfoReplacement<T>* getReplacement(uint uiID, uint uiReplID)
 	{
 		unsigned int iSize = m_apReplacements.size();
-		for (unsigned int i=0; i<iSize; i++)
+		for (unsigned int i = 0; i < iSize; i++)
 		{
 			CvInfoReplacement<T>* pReplacement = m_apReplacements[i];
 			if ((pReplacement->getID() == uiID) && (pReplacement->getReplacementID() == uiReplID))
@@ -134,19 +134,19 @@ public:
 		}
 		return NULL;
 	}
-	
+
 	// This adds a replacement or updates an existing one
 	void addReplacement(uint uiID, uint uiReplID, BoolExpr* pCondition, T* pInfo, bool bPassTwo = false)
 	{
-//		CvInfoReplacement<T>* pExisting = getReplacement(iID, iReplID);
-//		if (pExisting)
-//		{
-//			pExisting->updateInfo(pCondition, pInfo, bPassTwo);
-//		}
-//		else
-//		{
-			m_apReplacements.push_back(new CvInfoReplacement<T>(uiID, uiReplID, pCondition, pInfo));
-//		}
+		//		CvInfoReplacement<T>* pExisting = getReplacement(iID, iReplID);
+		//		if (pExisting)
+		//		{
+		//			pExisting->updateInfo(pCondition, pInfo, bPassTwo);
+		//		}
+		//		else
+		//		{
+		m_apReplacements.push_back(new CvInfoReplacement<T>(uiID, uiReplID, pCondition, pInfo));
+		//		}
 	}
 
 	T* getReplacementInfo(uint uiID, uint uiReplID)
@@ -161,7 +161,7 @@ public:
 
 	void readPass3()
 	{
-		for (unsigned int i=0; i<m_apReplacements.size(); i++)
+		for (unsigned int i = 0; i < m_apReplacements.size(); i++)
 		{
 			m_apReplacements[i]->getInfo()->readPass3();
 		}
@@ -171,7 +171,7 @@ public:
 	{
 		// Restore base info classes from backup
 		unsigned int iSize = m_apBackups.size();
-		for (unsigned int i=0; i<iSize; i++)
+		for (unsigned int i = 0; i < iSize; i++)
 		{
 			aInfos[m_apBackups[i].first] = m_apBackups[i].second;
 		}
@@ -179,12 +179,12 @@ public:
 
 		// Switch in all replacements for which the condition is true, but only the first right one if there is more than one
 		std::set<int> setSwitched;
-		
+
 		iSize = m_apReplacements.size();
-		for (unsigned int i=0; i<iSize; i++)
+		for (unsigned int i = 0; i < iSize; i++)
 		{
 			CvInfoReplacement<T>* pReplacement = m_apReplacements[i];
-			int iID = pReplacement->getID();
+			int					  iID		   = pReplacement->getID();
 
 			if (setSwitched.count(iID) == 0)
 			{
@@ -200,12 +200,12 @@ public:
 };
 
 template <class T>
-std::vector<std::pair<uint,CvString> > CvInfoReplacements<T>::s_IDmap;
+std::vector<std::pair<uint, CvString> > CvInfoReplacements<T>::s_IDmap;
 
 template <class T>
 uint CvInfoReplacements<T>::getReplacementIDForString(const char* szType)
 {
-	for (std::vector<std::pair<uint,CvString> >::iterator it = s_IDmap.begin(); it != s_IDmap.end(); ++it)
+	for (std::vector<std::pair<uint, CvString> >::iterator it = s_IDmap.begin(); it != s_IDmap.end(); ++it)
 	{
 		if (it->second.CompareNoCase(szType) == 0)
 		{

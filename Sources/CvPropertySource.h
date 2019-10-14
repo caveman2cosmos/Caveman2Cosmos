@@ -22,44 +22,45 @@ class PropertySourceContext;
 // Base class of which the actual property source classes are derived
 class CvPropertySource
 {
-public:
+  public:
 	CvPropertySource();
 	explicit CvPropertySource(PropertyTypes eProperty);
 	virtual ~CvPropertySource();
-	PropertyTypes getProperty() const;
-	void setProperty(PropertyTypes eProperty);
+	PropertyTypes	getProperty() const;
+	void			setProperty(PropertyTypes eProperty);
 	GameObjectTypes getObjectType() const;
-	void setObjectType(GameObjectTypes eObjectType);
-	RelationTypes getRelation() const;
-	void setRelation(RelationTypes eRelation);
-	int getRelationData() const;
-	void setRelationData(int iRelationData);
+	void			setObjectType(GameObjectTypes eObjectType);
+	RelationTypes	getRelation() const;
+	void			setRelation(RelationTypes eRelation);
+	int				getRelationData() const;
+	void			setRelationData(int iRelationData);
 
 	virtual bool isActive(CvGameObject* pObject);
 
 	virtual PropertySourceTypes getType() = 0;
 
-	virtual int getSourcePredict(const CvGameObject* pObject, int iCurrentAmount, PropertySourceContext* pContext = NULL) = 0;
+	virtual int getSourcePredict(const CvGameObject* pObject, int iCurrentAmount, PropertySourceContext* pContext = NULL)						= 0;
 	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, PropertySourceContext* pContext = NULL) = 0;
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 
 	virtual bool read(CvXMLLoadUtility* pXML);
-	virtual void copyNonDefaults(CvPropertySource* pProp, CvXMLLoadUtility* pXML );
+	virtual void copyNonDefaults(CvPropertySource* pProp, CvXMLLoadUtility* pXML);
 
 	virtual void getCheckSum(unsigned int& iSum);
-protected:
-	PropertyTypes m_eProperty;
+
+  protected:
+	PropertyTypes	m_eProperty;
 	GameObjectTypes m_eObjectType;
-	RelationTypes m_eRelation;
-	int m_iRelationData;
-	BoolExpr* m_pExprActive;
+	RelationTypes	m_eRelation;
+	int				m_iRelationData;
+	BoolExpr*		m_pExprActive;
 };
 
 
 class CvPropertySourceConstant : public CvPropertySource
 {
-public:
+  public:
 	CvPropertySourceConstant();
 	explicit CvPropertySourceConstant(PropertyTypes eProperty);
 	CvPropertySourceConstant(PropertyTypes eProperty, IntExpr* pAmountPerTurn);
@@ -72,19 +73,19 @@ public:
 	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, PropertySourceContext* pContext = NULL);
 
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
-	
+
 	virtual bool read(CvXMLLoadUtility* pXML);
-	virtual void copyNonDefaults(CvPropertySource* pProp, CvXMLLoadUtility* pXML );
+	virtual void copyNonDefaults(CvPropertySource* pProp, CvXMLLoadUtility* pXML);
 
 	virtual void getCheckSum(unsigned int& iSum);
 
-protected:
+  protected:
 	IntExpr* m_pAmountPerTurn;
 };
 
 class CvPropertySourceConstantLimited : public CvPropertySource
 {
-public:
+  public:
 	CvPropertySourceConstantLimited();
 	explicit CvPropertySourceConstantLimited(PropertyTypes eProperty);
 	CvPropertySourceConstantLimited(PropertyTypes eProperty, int iAmountPerTurn, int iLimit);
@@ -100,18 +101,18 @@ public:
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 
 	virtual bool read(CvXMLLoadUtility* pXML);
-	virtual void copyNonDefaults(CvPropertySource* pProp, CvXMLLoadUtility* pXML );
+	virtual void copyNonDefaults(CvPropertySource* pProp, CvXMLLoadUtility* pXML);
 
 	virtual void getCheckSum(unsigned int& iSum);
 
-protected:
+  protected:
 	int m_iAmountPerTurn;
 	int m_iLimit;
 };
 
 class CvPropertySourceDecay : public CvPropertySource
 {
-public:
+  public:
 	CvPropertySourceDecay();
 	explicit CvPropertySourceDecay(PropertyTypes eProperty);
 	CvPropertySourceDecay(PropertyTypes eProperty, int iPercent, int iNoDecayAmount);
@@ -129,24 +130,24 @@ public:
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 
 	virtual bool read(CvXMLLoadUtility* pXML);
-	virtual void copyNonDefaults(CvPropertySource* pProp, CvXMLLoadUtility* pXML );
+	virtual void copyNonDefaults(CvPropertySource* pProp, CvXMLLoadUtility* pXML);
 
 	virtual void getCheckSum(unsigned int& iSum);
 
-protected:
+  protected:
 	int m_iPercent;
 	int m_iNoDecayAmount;
 };
 
 class CvPropertySourceAttributeConstant : public CvPropertySource
 {
-public:
+  public:
 	CvPropertySourceAttributeConstant();
 	explicit CvPropertySourceAttributeConstant(PropertyTypes eProperty);
 	CvPropertySourceAttributeConstant(PropertyTypes eProperty, AttributeTypes eAttribute, int iAmountPerTurn);
 
 	AttributeTypes getAttribute();
-	int getAmountPerTurn();
+	int			   getAmountPerTurn();
 
 	virtual PropertySourceTypes getType();
 
@@ -156,13 +157,13 @@ public:
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 
 	virtual bool read(CvXMLLoadUtility* pXML);
-	virtual void copyNonDefaults(CvPropertySource* pProp, CvXMLLoadUtility* pXML );
+	virtual void copyNonDefaults(CvPropertySource* pProp, CvXMLLoadUtility* pXML);
 
 	virtual void getCheckSum(unsigned int& iSum);
 
-protected:
+  protected:
 	AttributeTypes m_eAttribute;
-	int m_iAmountPerTurn;
+	int			   m_iAmountPerTurn;
 };
 
 #endif

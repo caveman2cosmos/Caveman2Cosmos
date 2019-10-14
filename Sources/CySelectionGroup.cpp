@@ -1,17 +1,17 @@
 //
 // Python wrapper class for CySelectionGroup
-// 
+//
 //
 #include "CvGameCoreDLL.h"
 
-CySelectionGroup::CySelectionGroup() : m_pSelectionGroup(NULL)
+CySelectionGroup::CySelectionGroup()
+	: m_pSelectionGroup(NULL)
 {
-
 }
 
-CySelectionGroup::CySelectionGroup(CvSelectionGroup* pSelectionGroup) : m_pSelectionGroup(pSelectionGroup)
+CySelectionGroup::CySelectionGroup(CvSelectionGroup* pSelectionGroup)
+	: m_pSelectionGroup(pSelectionGroup)
 {
-
 }
 
 void CySelectionGroup::pushMission(MissionTypes eMission, int iData1, int iData2, int iFlags, bool bAppend, bool bManual, MissionAITypes eMissionAI, CyPlot* pMissionAIPlot, CyUnit* pMissionAIUnit)
@@ -99,12 +99,12 @@ bool CySelectionGroup::hasMoved()
 
 bool CySelectionGroup::canEnterTerritory(int /*TeamTypes*/ eTeam, bool bIgnoreRightOfPassage)
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->canEnterTerritory((TeamTypes) eTeam, bIgnoreRightOfPassage) : false;
+	return m_pSelectionGroup ? m_pSelectionGroup->canEnterTerritory((TeamTypes)eTeam, bIgnoreRightOfPassage) : false;
 }
 
 bool CySelectionGroup::canEnterArea(int /*TeamTypes*/ eTeam, CyArea* pArea, bool bIgnoreRightOfPassage)
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->canEnterArea((TeamTypes) eTeam, pArea->getArea(), bIgnoreRightOfPassage) : false;
+	return m_pSelectionGroup ? m_pSelectionGroup->canEnterArea((TeamTypes)eTeam, pArea->getArea(), bIgnoreRightOfPassage) : false;
 }
 
 bool CySelectionGroup::canMoveInto(CyPlot* pPlot, bool bAttack)
@@ -139,7 +139,7 @@ bool CySelectionGroup::alwaysInvisible()
 
 bool CySelectionGroup::isInvisible(int /*TeamTypes*/ eTeam)
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->isInvisible((TeamTypes) eTeam) : false;
+	return m_pSelectionGroup ? m_pSelectionGroup->isInvisible((TeamTypes)eTeam) : false;
 }
 
 int CySelectionGroup::countNumUnitAIType(UnitAITypes eUnitAI)
@@ -177,12 +177,12 @@ bool CySelectionGroup::atPlot(CyPlot* pPlot)
 
 CyPlot* CySelectionGroup::plot()
 {
-	return m_pSelectionGroup ? new CyPlot( m_pSelectionGroup->plot() ) : NULL;
+	return m_pSelectionGroup ? new CyPlot(m_pSelectionGroup->plot()) : NULL;
 }
 
 CyArea* CySelectionGroup::area()
 {
-	return m_pSelectionGroup ? new CyArea( m_pSelectionGroup->area() ) : NULL;
+	return m_pSelectionGroup ? new CyArea(m_pSelectionGroup->area()) : NULL;
 }
 
 int /*RouteTypes*/ CySelectionGroup::getBestBuildRoute(CyPlot* pPlot, BuildTypes* peBestBuild)
@@ -221,23 +221,23 @@ int /*PlayerTypes*/ CySelectionGroup::getOwner()
 
 int /*TeamTypes*/ CySelectionGroup::getTeam()
 {
-	return m_pSelectionGroup ? (TeamTypes) m_pSelectionGroup->getTeam() : -1;
+	return m_pSelectionGroup ? (TeamTypes)m_pSelectionGroup->getTeam() : -1;
 }
 
 int /*ActivityTypes*/ CySelectionGroup::getActivityType()
 {
-	return m_pSelectionGroup ? (ActivityTypes) m_pSelectionGroup->getActivityType() : -1;
+	return m_pSelectionGroup ? (ActivityTypes)m_pSelectionGroup->getActivityType() : -1;
 }
 
 void CySelectionGroup::setActivityType(int /*ActivityTypes*/ eNewValue)
 {
 	if (m_pSelectionGroup)
-		m_pSelectionGroup->setActivityType((ActivityTypes) eNewValue);
+		m_pSelectionGroup->setActivityType((ActivityTypes)eNewValue);
 }
 
-int /*AutomateTypes*/ CySelectionGroup::getAutomateType() 
+int /*AutomateTypes*/ CySelectionGroup::getAutomateType()
 {
-	return m_pSelectionGroup ? (AutomateTypes) m_pSelectionGroup->getAutomateType() : -1;
+	return m_pSelectionGroup ? (AutomateTypes)m_pSelectionGroup->getAutomateType() : -1;
 }
 
 bool CySelectionGroup::isAutomated()
@@ -248,7 +248,7 @@ bool CySelectionGroup::isAutomated()
 void CySelectionGroup::setAutomateType(int /*AutomateTypes*/ eNewValue)
 {
 	if (m_pSelectionGroup)
-		m_pSelectionGroup->setAutomateType((AutomateTypes) eNewValue);
+		m_pSelectionGroup->setAutomateType((AutomateTypes)eNewValue);
 }
 
 CyPlot* CySelectionGroup::getPathFirstPlot()
@@ -303,17 +303,17 @@ CyUnit* CySelectionGroup::getUnitAt(int index)
 	return m_pSelectionGroup ? new CyUnit(m_pSelectionGroup->getUnitAt(index)) : NULL;
 }
 
-int CySelectionGroup::getMissionType( int iNode )
+int CySelectionGroup::getMissionType(int iNode)
 {
 	return m_pSelectionGroup ? m_pSelectionGroup->getMissionType(iNode) : -1;
 }
 
-int CySelectionGroup::getMissionData1( int iNode )
+int CySelectionGroup::getMissionData1(int iNode)
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->getMissionData1( iNode ) : -1;
+	return m_pSelectionGroup ? m_pSelectionGroup->getMissionData1(iNode) : -1;
 }
 
-int CySelectionGroup::getMissionData2( int iNode )
+int CySelectionGroup::getMissionData2(int iNode)
 {
-	return m_pSelectionGroup ? m_pSelectionGroup->getMissionData2( iNode ) : -1;
+	return m_pSelectionGroup ? m_pSelectionGroup->getMissionData2(iNode) : -1;
 }

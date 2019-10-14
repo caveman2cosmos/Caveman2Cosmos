@@ -12,14 +12,14 @@
 
 #ifndef _USRDLL
 // use non inline functions when not in the dll
-#define getMapINLINE	getMap
-#define getGridHeightINLINE	getGridHeight
+#define getMapINLINE		getMap
+#define getGridHeightINLINE getGridHeight
 #define getGridWidthINLINE	getGridWidth
-#define isWrapYINLINE	isWrapY
-#define isWrapXINLINE	isWrapX
-#define plotINLINE	plot
-#define getX_INLINE	getX
-#define getY_INLINE	getY
+#define isWrapYINLINE		isWrapY
+#define isWrapXINLINE		isWrapX
+#define plotINLINE			plot
+#define getX_INLINE			getX
+#define getY_INLINE			getY
 
 #endif
 
@@ -34,14 +34,18 @@ class CvInfoBase;
 
 
 #ifndef SQR
-#define SQR(x) ( (x)*(x))
+#define SQR(x) ((x) * (x))
 #endif
 
 #undef max
 #undef min
 
 //sign function taken from FirePlace - JW
-template<class T> __forceinline T getSign( T x ) { return (( x < 0 ) ? T(-1) : x > 0 ? T(1) : T(0)); };
+template <class T>
+__forceinline T getSign(T x)
+{
+	return ((x < 0) ? T(-1) : x > 0 ? T(1) : T(0));
+};
 
 inline int range(int iNum, int iLow, int iHigh)
 {
@@ -116,12 +120,12 @@ inline int yDistance(int iFromY, int iToY)
 	return coordDistance(iFromY, iToY, GC.getMapINLINE().getGridHeightINLINE(), GC.getMapINLINE().isWrapYINLINE());
 }
 
-inline int dxWrap(int iDX)																													// Exposed to Python
+inline int dxWrap(int iDX) // Exposed to Python
 {
 	return wrapCoordDifference(iDX, GC.getMapINLINE().getGridWidthINLINE(), GC.getMapINLINE().isWrapXINLINE());
 }
 
-inline int dyWrap(int iDY)																													// Exposed to Python
+inline int dyWrap(int iDY) // Exposed to Python
 {
 	return wrapCoordDifference(iDY, GC.getMapINLINE().getGridHeightINLINE(), GC.getMapINLINE().isWrapYINLINE());
 }
@@ -141,7 +145,7 @@ inline int dyWrap(int iDY)																													// Exposed to Python
 // 4 | 4 | 3 | 3 | 3 | 4 | 4
 //
 // Returns the distance between plots according to the pattern above...
-inline int plotDistance(int iX1, int iY1, int iX2, int iY2)													// Exposed to Python
+inline int plotDistance(int iX1, int iY1, int iX2, int iY2) // Exposed to Python
 {
 	int iDX;
 	int iDY;
@@ -167,14 +171,14 @@ inline int plotDistance(int iX1, int iY1, int iX2, int iY2)													// Expos
 // 3 | 3 | 3 | 3 | 3 | 3 | 3
 //
 // Returns the distance between plots according to the pattern above...
-inline int stepDistance(int iX1, int iY1, int iX2, int iY2)													// Exposed to Python
+inline int stepDistance(int iX1, int iY1, int iX2, int iY2) // Exposed to Python
 {
 	return std::max(xDistance(iX1, iX2), yDistance(iY1, iY2));
 }
 
-inline CvPlot* plotDirection(int iX, int iY, DirectionTypes eDirection)							// Exposed to Python
+inline CvPlot* plotDirection(int iX, int iY, DirectionTypes eDirection) // Exposed to Python
 {
-	if(eDirection == NO_DIRECTION)
+	if (eDirection == NO_DIRECTION)
 	{
 		return GC.getMapINLINE().plotINLINE(iX, iY);
 	}
@@ -189,17 +193,17 @@ inline CvPlot* plotDirection(CvPlot* pPlot, DirectionTypes eDirection)
 	return plotDirection(pPlot->getX_INLINE(), pPlot->getY_INLINE(), eDirection);
 }
 
-inline CvPlot* plotCardinalDirection(int iX, int iY, CardinalDirectionTypes eCardinalDirection)	// Exposed to Python
+inline CvPlot* plotCardinalDirection(int iX, int iY, CardinalDirectionTypes eCardinalDirection) // Exposed to Python
 {
 	return GC.getMapINLINE().plotINLINE((iX + GC.getPlotCardinalDirectionX()[eCardinalDirection]), (iY + GC.getPlotCardinalDirectionY()[eCardinalDirection]));
 }
 
-inline CvPlot* plotXY(int iX, int iY, int iDX, int iDY)																// Exposed to Python
+inline CvPlot* plotXY(int iX, int iY, int iDX, int iDY) // Exposed to Python
 {
 	return GC.getMapINLINE().plotINLINE((iX + iDX), (iY + iDY));
 }
 
-inline DirectionTypes directionXY(int iDX, int iDY)																		// Exposed to Python
+inline DirectionTypes directionXY(int iDX, int iDY) // Exposed to Python
 {
 	if ((abs(iDX) > DIRECTION_RADIUS) || (abs(iDY) > DIRECTION_RADIUS))
 	{
@@ -211,12 +215,12 @@ inline DirectionTypes directionXY(int iDX, int iDY)																		// Exposed 
 	}
 }
 
-inline DirectionTypes reverseDirection(DirectionTypes iDirection)																		// Exposed to Python
+inline DirectionTypes reverseDirection(DirectionTypes iDirection) // Exposed to Python
 {
-	return (DirectionTypes)((iDirection + 4)%NUM_DIRECTION_TYPES);
+	return (DirectionTypes)((iDirection + 4) % NUM_DIRECTION_TYPES);
 }
 
-inline DirectionTypes directionXY(const CvPlot* pFromPlot, const CvPlot* pToPlot)			// Exposed to Python
+inline DirectionTypes directionXY(const CvPlot* pFromPlot, const CvPlot* pToPlot) // Exposed to Python
 {
 	return directionXY(dxWrap(pToPlot->getX_INLINE() - pFromPlot->getX_INLINE()), dyWrap(pToPlot->getY_INLINE() - pFromPlot->getY_INLINE()));
 }
@@ -224,67 +228,67 @@ inline DirectionTypes directionXY(const CvPlot* pFromPlot, const CvPlot* pToPlot
 inline DirectionTypes getAdjacentDirection(DirectionTypes eDirection, bool bClockwise)
 {
 	int iDir = (int)eDirection;
-	 iDir += bClockwise ? 1 : -1;
+	iDir += bClockwise ? 1 : -1;
 	return (DirectionTypes)((iDir + NUM_DIRECTION_TYPES) % NUM_DIRECTION_TYPES);
 }
 
-CvPlot* plotCity(int iX, int iY, int iIndex);																			// Exposed to Python
-int plotCityXY(int iDX, int iDY);																									// Exposed to Python
-int plotCityXY(const CvCity* pCity, const CvPlot* pPlot);													// Exposed to Python
+CvPlot* plotCity(int iX, int iY, int iIndex); // Exposed to Python
+int		plotCityXY(int iDX, int iDY); // Exposed to Python
+int		plotCityXY(const CvCity* pCity, const CvPlot* pPlot); // Exposed to Python
 
-CardinalDirectionTypes getOppositeCardinalDirection(CardinalDirectionTypes eDir);	// Exposed to Python 
-DirectionTypes cardinalDirectionToDirection(CardinalDirectionTypes eCard);				// Exposed to Python
-DllExport bool isCardinalDirection(DirectionTypes eDirection);															// Exposed to Python
-DirectionTypes estimateDirection(int iDX, int iDY);																// Exposed to Python
+CardinalDirectionTypes	 getOppositeCardinalDirection(CardinalDirectionTypes eDir); // Exposed to Python
+DirectionTypes			 cardinalDirectionToDirection(CardinalDirectionTypes eCard); // Exposed to Python
+DllExport bool			 isCardinalDirection(DirectionTypes eDirection); // Exposed to Python
+DirectionTypes			 estimateDirection(int iDX, int iDY); // Exposed to Python
 DllExport DirectionTypes estimateDirection(const CvPlot* pFromPlot, const CvPlot* pToPlot);
-DllExport float directionAngle(DirectionTypes eDirection);
+DllExport float			 directionAngle(DirectionTypes eDirection);
 
-bool atWar(TeamTypes eTeamA, TeamTypes eTeamB);												// Exposed to Python
-bool isPotentialEnemy(TeamTypes eOurTeam, TeamTypes eTheirTeam);			// Exposed to Python
+bool atWar(TeamTypes eTeamA, TeamTypes eTeamB); // Exposed to Python
+bool isPotentialEnemy(TeamTypes eOurTeam, TeamTypes eTheirTeam); // Exposed to Python
 
-DllExport CvCity* getCity(IDInfo city);	// Exposed to Python
-DllExport CvUnit* getUnit(IDInfo unit);	// Exposed to Python
+DllExport CvCity* getCity(IDInfo city); // Exposed to Python
+DllExport CvUnit* getUnit(IDInfo unit); // Exposed to Python
 
 bool isBeforeUnitCycle(const CvUnit* pFirstUnit, const CvUnit* pSecondUnit);
-bool isPromotionValid(PromotionTypes ePromotion, UnitTypes eUnit, bool bLeader);	// Exposed to Python
+bool isPromotionValid(PromotionTypes ePromotion, UnitTypes eUnit, bool bLeader); // Exposed to Python
 
-int getPopulationAsset(int iPopulation);								// Exposed to Python
-int getLandPlotsAsset(int iLandPlots);									// Exposed to Python
-int getPopulationPower(int iPopulation);								// Exposed to Python
-int getPopulationScore(int iPopulation);								// Exposed to Python
-int getLandPlotsScore(int iLandPlots);									// Exposed to Python
-int getTechScore(TechTypes eTech);											// Exposed to Python
-int getWonderScore(BuildingClassTypes eWonderClass);		// Exposed to Python
+int getPopulationAsset(int iPopulation); // Exposed to Python
+int getLandPlotsAsset(int iLandPlots); // Exposed to Python
+int getPopulationPower(int iPopulation); // Exposed to Python
+int getPopulationScore(int iPopulation); // Exposed to Python
+int getLandPlotsScore(int iLandPlots); // Exposed to Python
+int getTechScore(TechTypes eTech); // Exposed to Python
+int getWonderScore(BuildingClassTypes eWonderClass); // Exposed to Python
 
-ImprovementTypes finalImprovementUpgrade(ImprovementTypes eImprovement, int iCount = 0);		// Exposed to Python
+ImprovementTypes finalImprovementUpgrade(ImprovementTypes eImprovement, int iCount = 0); // Exposed to Python
 
-int getWorldSizeMaxConscript(CivicTypes eCivic);								// Exposed to Python
+int getWorldSizeMaxConscript(CivicTypes eCivic); // Exposed to Python
 
-bool isReligionTech(TechTypes eTech);														// Exposed to Python
+bool isReligionTech(TechTypes eTech); // Exposed to Python
 
-bool isTechRequiredForUnit(TechTypes eTech, UnitTypes eUnit);							// Exposed to Python
-bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding);	// Exposed to Python
-bool isTechRequiredForProject(TechTypes eTech, ProjectTypes eProject);		// Exposed to Python
+bool isTechRequiredForUnit(TechTypes eTech, UnitTypes eUnit); // Exposed to Python
+bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding); // Exposed to Python
+bool isTechRequiredForProject(TechTypes eTech, ProjectTypes eProject); // Exposed to Python
 
-bool isWorldUnitClass(UnitClassTypes eUnitClass);											// Exposed to Python
-bool isTeamUnitClass(UnitClassTypes eUnitClass);											// Exposed to Python
-bool isNationalUnitClass(UnitClassTypes eUnitClass);									// Exposed to Python
-bool isLimitedUnitClass(UnitClassTypes eUnitClass);										// Exposed to Python
+bool isWorldUnitClass(UnitClassTypes eUnitClass); // Exposed to Python
+bool isTeamUnitClass(UnitClassTypes eUnitClass); // Exposed to Python
+bool isNationalUnitClass(UnitClassTypes eUnitClass); // Exposed to Python
+bool isLimitedUnitClass(UnitClassTypes eUnitClass); // Exposed to Python
 
-bool isWorldWonderClass(BuildingClassTypes eBuildingClass);						// Exposed to Python
-bool isTeamWonderClass(BuildingClassTypes eBuildingClass);						// Exposed to Python
-bool isNationalWonderClass(BuildingClassTypes eBuildingClass);				// Exposed to Python
+bool isWorldWonderClass(BuildingClassTypes eBuildingClass); // Exposed to Python
+bool isTeamWonderClass(BuildingClassTypes eBuildingClass); // Exposed to Python
+bool isNationalWonderClass(BuildingClassTypes eBuildingClass); // Exposed to Python
 bool isNationalWonderGroupClass(BuildingClassTypes eBuildingClass);
 bool isNationalWonderGroupSpecialBuilding(SpecialBuildingTypes eSpecialBuilding);
-bool isLimitedWonderClass(BuildingClassTypes eBuildingClass);					// Exposed to Python
-int limitedWonderClassLimit(BuildingClassTypes eBuildingClass);
+bool isLimitedWonderClass(BuildingClassTypes eBuildingClass); // Exposed to Python
+int	 limitedWonderClassLimit(BuildingClassTypes eBuildingClass);
 
-bool isWorldProject(ProjectTypes eProject);														// Exposed to Python
-bool isTeamProject(ProjectTypes eProject);														// Exposed to Python
-bool isLimitedProject(ProjectTypes eProject);													// Exposed to Python
+bool isWorldProject(ProjectTypes eProject); // Exposed to Python
+bool isTeamProject(ProjectTypes eProject); // Exposed to Python
+bool isLimitedProject(ProjectTypes eProject); // Exposed to Python
 
 __int64 getBinomialCoefficient(int iN, int iK);
-int getCombatOdds(CvUnit* pAttacker, CvUnit* pDefender);							// Exposed to Python
+int		getCombatOdds(CvUnit* pAttacker, CvUnit* pDefender); // Exposed to Python
 /////////////////////////////////////////////////////////////////
 // ADVANCED COMABT ODDS                         PieceOfMind    //
 // BEGIN                                                       //
@@ -295,7 +299,7 @@ float getCombatOddsSpecific(CvUnit* pAttacker, CvUnit* pDefender, int n_A, int n
 // END                                                         //
 /////////////////////////////////////////////////////////////////
 
-int getEspionageModifier(TeamTypes eOurTeam, TeamTypes eTargetTeam);							// Exposed to Python
+int getEspionageModifier(TeamTypes eOurTeam, TeamTypes eTargetTeam); // Exposed to Python
 
 DllExport void setTradeItem(TradeData* pItem, TradeableItems eItemType = TRADE_ITEM_NONE, int iData = 0);
 
@@ -308,50 +312,50 @@ void setListHelp(CvWString& szBuffer, const wchar* szStart, const wchar* szItem,
 void setListHelp(CvWStringBuffer& szBuffer, const wchar* szStart, const wchar* szItem, const wchar* szSeparator, bool bFirst);
 
 // PlotUnitFunc's...
-bool PUF_isGroupHead( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_isPlayer( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_isTeam( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isGroupHead(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isPlayer(const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isTeam(const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_isCombatTeam(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis = NULL);
-bool PUF_isOtherPlayer( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_isOtherTeam( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_isEnemy( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_isEnemyTarget( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isOtherPlayer(const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isOtherTeam(const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isEnemy(const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isEnemyTarget(const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_isParadrop(const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_isNonAlly(const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_isVisible( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_isVisibleDebug( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_canSiege( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_isPotentialEnemy( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_canDeclareWar( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_canDefend( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_canAttack( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isVisible(const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isVisibleDebug(const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_canSiege(const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isPotentialEnemy(const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_canDeclareWar(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_canDefend(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_canAttack(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_isCriminal(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_isWantedCriminal(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_isCityGarrison(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_cannotDefend( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_canDefendGroupHead( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_canDefendEnemy( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_canDefendEnemyNoAnimal( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_canDefendPotentialEnemy( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_cannotDefend(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_canDefendGroupHead(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_canDefendEnemy(const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_canDefendEnemyNoAnimal(const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_canDefendPotentialEnemy(const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_canDefendPotentialEnemyAgainst(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis = NULL);
 bool PUF_canDefenselessPotentialEnemyAgainst(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis);
-bool PUF_canAirAttack( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_canAirDefend( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_isFighting( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_isAnimal( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_isMilitaryHappiness( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_isInvestigate( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_isCounterSpy( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_isSpy( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_isUnitType( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_isHealUnitCombatType(const CvUnit* pUnit, /*UnitCombatType*/int iData1, /*DomainType*/int iData2, const CvUnit* pThis = NULL);
+bool PUF_canAirAttack(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_canAirDefend(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isFighting(const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isAnimal(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isMilitaryHappiness(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isInvestigate(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isCounterSpy(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isSpy(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isUnitType(const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isHealUnitCombatType(const CvUnit* pUnit, /*UnitCombatType*/ int iData1, /*DomainType*/ int iData2, const CvUnit* pThis = NULL);
 bool PUF_isMountainLeader(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis = NULL);
-bool PUF_isInjuredUnitCombatType(const CvUnit* pUnit, /*UnitCombatType*/int iData1, /*DomainType*/int iData2, const CvUnit* pThis = NULL);
-bool PUF_isDomainType( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_isUnitAIType( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_isCityAIType( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_isNotCityAIType( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_isSelected( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isInjuredUnitCombatType(const CvUnit* pUnit, /*UnitCombatType*/ int iData1, /*DomainType*/ int iData2, const CvUnit* pThis = NULL);
+bool PUF_isDomainType(const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isUnitAIType(const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isCityAIType(const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isNotCityAIType(const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isSelected(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_makeInfoBarDirty(CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_isNoMission(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_isMissionAI(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
@@ -369,7 +373,7 @@ bool PUF_isUnitAITypeGroupie(const CvUnit* pUnit, int iData1, int iData2, const 
 bool PUF_isFiniteRangeAndNotJustProduced(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis = NULL);
 bool PUF_isMissionary(const CvUnit* pUnit, int /*ReligionTypes*/ iData1, int /*PlayerTypes*/ iData2, const CvUnit* pThis = NULL);
 bool PUF_isAfflicted(const CvUnit* pUnit, int /*PromotionLineTypes*/ iData1, int iData2, const CvUnit* pThis = NULL);
-bool PUF_isTunneledEnemy( const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis = NULL);
+bool PUF_isTunneledEnemy(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis = NULL);
 bool PUF_isNonTunneledEnemy(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis = NULL);
 
 // FAStarFunc...
@@ -406,8 +410,8 @@ int countRegion(FAStarNode* parent, FAStarNode* node, int data, const void* poin
 bool moveToValid(CvSelectionGroup* pSelectionGroup, CvPlot* pToPlot, int iFlags);
 
 //	Koashling - new pathing generator callback functions
-int	NewPathHeuristicFunc(CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int& iLimitCost);
-int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, int& iMovementRemaining, int iPathTurns, int& iToNodeCost, bool bIsTerminalNode);
+int	 NewPathHeuristicFunc(CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int& iLimitCost);
+int	 NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, int& iMovementRemaining, int iPathTurns, int& iToNodeCost, bool bIsTerminalNode);
 bool ContextFreeNewPathValidFunc(CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, bool isTerminus, bool bMoveTerminationChecksOnly, int iPathTurns, bool* pbToNodeInvalidity, bool* pbValidAsTerminus);
 bool NewPathValidFunc(CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, bool isTerminus, bool bMoveTerminationChecksOnly, int iPathTurns, bool& bToNodeInvalidity);
 bool NewPathDestValid(CvSelectionGroup* pSelectionGroup, int iToX, int iToY, int iFlags, bool& bRequiresWar);
@@ -418,7 +422,7 @@ int baseYieldToSymbol(int iNumYieldTypes, int iYieldStack);
 bool isPickableName(const TCHAR* szName);
 
 DllExport int* shuffle(int iNum, CvRandom& rand);
-void shuffleArray(int* piShuffle, int iNum, CvRandom& rand);
+void		   shuffleArray(int* piShuffle, int iNum, CvRandom& rand);
 
 int getTurnMonthForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, GameSpeedTypes eSpeed);
 int getTurnYearForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, GameSpeedTypes eSpeed);
@@ -434,8 +438,8 @@ void getUnitAIString(CvWString& szString, UnitAITypes eUnitAI);
 /*
  * Calculates the experience needed to reach the next level after the given level.
  */
-int calculateExperience(int iLevel, PlayerTypes ePlayer);								// Exposed to Python
-int calculateLevel(int iExperience, PlayerTypes ePlayer);								// Exposed to Python
+int calculateExperience(int iLevel, PlayerTypes ePlayer); // Exposed to Python
+int calculateLevel(int iExperience, PlayerTypes ePlayer); // Exposed to Python
 // BUG - Unit Experience - end
 /************************************************************************************************/
 /* Afforess	                  Start		 06/15/10                                               */
@@ -443,32 +447,40 @@ int calculateLevel(int iExperience, PlayerTypes ePlayer);								// Exposed to P
 /*                                                                                              */
 /************************************************************************************************/
 DirectionTypes getOppositeDirection(DirectionTypes eDirection);
-bool isAdjacentDirection(DirectionTypes eFacingDirection, DirectionTypes eOtherDirection);
+bool		   isAdjacentDirection(DirectionTypes eFacingDirection, DirectionTypes eOtherDirection);
 /************************************************************************************************/
 /* Afforess	                         END                                                        */
-/************************************************************************************************/	
+/************************************************************************************************/
 
 //	Koshling - abstract treaty length from the define int to allow scaling
 int getTreatyLength();
 
 void AddDLLMessage(PlayerTypes ePlayer, bool bForce, int iLength, CvWString szString, LPCTSTR pszSound = NULL,
-		InterfaceMessageTypes eType = MESSAGE_TYPE_INFO, LPCSTR pszIcon = NULL, ColorTypes eFlashColor = NO_COLOR,
-		int iFlashX = -1, int iFlashY = -1, bool bShowOffScreenArrows = false, bool bShowOnScreenArrows = false);
+				   InterfaceMessageTypes eType = MESSAGE_TYPE_INFO, LPCSTR pszIcon = NULL, ColorTypes eFlashColor = NO_COLOR,
+				   int iFlashX = -1, int iFlashY = -1, bool bShowOffScreenArrows = false, bool bShowOnScreenArrows = false);
 
 //	Koshling - better checksum algorithm that can be used when reasonably high quality
 //	hashes are needed
-class CvChecksum {
-public:
-    CvChecksum() { clear(); }
-    void clear() { sum = 0; r = 55665; c1 = 52845; c2 = 22719;}
-    void add(int i);
-    void add(byte b);
-    int get() { return (int)sum; }
-protected:
-    WORD r;
-    WORD c1;
-    WORD c2;
-    DWORD sum;
-}; 
+class CvChecksum
+{
+  public:
+	CvChecksum() { clear(); }
+	void clear()
+	{
+		sum = 0;
+		r	= 55665;
+		c1	= 52845;
+		c2	= 22719;
+	}
+	void add(int i);
+	void add(byte b);
+	int	 get() { return (int)sum; }
+
+  protected:
+	WORD  r;
+	WORD  c1;
+	WORD  c2;
+	DWORD sum;
+};
 
 #endif

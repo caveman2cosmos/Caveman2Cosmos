@@ -1,5 +1,5 @@
 #include "CvGameCoreDLL.h"
-# include <boost/python/overloads.hpp>
+#include <boost/python/overloads.hpp>
 using namespace boost::python;
 
 BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS(CvRandom_get_overloads, CvRandom::get, 2, 2)
@@ -12,8 +12,7 @@ void CyRandomPythonInterface()
 	OutputDebugString("Python Extension Module - CyRandomPythonInterface\n");
 
 	python::class_<CvRandom>("CyRandom")
-		.def("get", &CvRandom::get, CvRandom_get_overloads( args("usNum", "pszLog"), "returns a random number"))
+		.def("get", &CvRandom::get, CvRandom_get_overloads(args("usNum", "pszLog"), "returns a random number"))
 		.def("init", &CvRandom::init, "void (unsigned long int ulSeed)")
-		.def("getSeed", &CvRandom::getSeed, "int () current seed")
-		;
+		.def("getSeed", &CvRandom::getSeed, "int () current seed");
 }

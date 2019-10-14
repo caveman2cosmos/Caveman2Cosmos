@@ -37,120 +37,136 @@ enum BoolExprTypes
 
 class BoolExpr
 {
-public:
+  public:
 	virtual ~BoolExpr();
-	virtual bool evaluate(CvGameObject* pObject) = 0;
+	virtual bool	 evaluate(CvGameObject* pObject) = 0;
 	static BoolExpr* read(CvXMLLoadUtility* pXML);
-	virtual void getCheckSum(unsigned int& iSum) = 0;
-	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const = 0;
-	virtual int getBindingStrength() const = 0; // How strong the operator binds in language so brackets can be placed appropriately
+	virtual void	 getCheckSum(unsigned int& iSum)					 = 0;
+	virtual void	 buildDisplayString(CvWStringBuffer& szBuffer) const = 0;
+	virtual int		 getBindingStrength() const							 = 0; // How strong the operator binds in language so brackets can be placed appropriately
 };
 
 class BoolExprConstant : public BoolExpr
 {
-public:
-	BoolExprConstant(bool bValue = false) : m_bValue(bValue) {}
+  public:
+	BoolExprConstant(bool bValue = false)
+		: m_bValue(bValue) {}
 	virtual bool evaluate(CvGameObject* pObject);
-	void readConstant(CvXMLLoadUtility* pXML);
+	void		 readConstant(CvXMLLoadUtility* pXML);
 	virtual void getCheckSum(unsigned int& iSum);
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
-	virtual int getBindingStrength() const;
-protected:
+	virtual int	 getBindingStrength() const;
+
+  protected:
 	bool m_bValue;
 };
 
 class BoolExprHas : public BoolExpr
 {
-public:
-	BoolExprHas(GOMTypes eGOM = NO_GOM, int iID = -1) : m_eGOM(eGOM), m_iID(iID) {}
+  public:
+	BoolExprHas(GOMTypes eGOM = NO_GOM, int iID = -1)
+		: m_eGOM(eGOM), m_iID(iID) {}
 	virtual ~BoolExprHas();
 	virtual bool evaluate(CvGameObject* pObject);
-	void readContent(CvXMLLoadUtility* pXML);
+	void		 readContent(CvXMLLoadUtility* pXML);
 	virtual void getCheckSum(unsigned int& iSum);
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
-	virtual int getBindingStrength() const;
-protected:
+	virtual int	 getBindingStrength() const;
+
+  protected:
 	GOMTypes m_eGOM;
-	int m_iID;
+	int		 m_iID;
 };
 
 class BoolExprIs : public BoolExpr
 {
-public:
-	BoolExprIs(TagTypes eTag = NO_TAG) : m_eTag(eTag) {}
+  public:
+	BoolExprIs(TagTypes eTag = NO_TAG)
+		: m_eTag(eTag) {}
 	virtual bool evaluate(CvGameObject* pObject);
 	virtual void getCheckSum(unsigned int& iSum);
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
-	virtual int getBindingStrength() const;
-protected:
+	virtual int	 getBindingStrength() const;
+
+  protected:
 	TagTypes m_eTag;
 };
 
 class BoolExprNot : public BoolExpr
 {
-public:
-	BoolExprNot(BoolExpr* pExpr = NULL) : m_pExpr(pExpr) {}
+  public:
+	BoolExprNot(BoolExpr* pExpr = NULL)
+		: m_pExpr(pExpr) {}
 	virtual ~BoolExprNot();
 	virtual bool evaluate(CvGameObject* pObject);
 	virtual void getCheckSum(unsigned int& iSum);
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
-	virtual int getBindingStrength() const;
-protected:
+	virtual int	 getBindingStrength() const;
+
+  protected:
 	BoolExpr* m_pExpr;
 };
 
 class BoolExprAnd : public BoolExpr
 {
-public:
-	BoolExprAnd(BoolExpr* pExpr1 = NULL, BoolExpr* pExpr2 = NULL) : m_pExpr1(pExpr1), m_pExpr2(pExpr2) {}
+  public:
+	BoolExprAnd(BoolExpr* pExpr1 = NULL, BoolExpr* pExpr2 = NULL)
+		: m_pExpr1(pExpr1), m_pExpr2(pExpr2) {}
 	virtual ~BoolExprAnd();
 	virtual bool evaluate(CvGameObject* pObject);
 	virtual void getCheckSum(unsigned int& iSum);
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
-	virtual int getBindingStrength() const;
-protected:
+	virtual int	 getBindingStrength() const;
+
+  protected:
 	BoolExpr* m_pExpr1;
 	BoolExpr* m_pExpr2;
 };
 
 class BoolExprOr : public BoolExpr
 {
-public:
-	BoolExprOr(BoolExpr* pExpr1 = NULL, BoolExpr* pExpr2 = NULL) : m_pExpr1(pExpr1), m_pExpr2(pExpr2) {}
+  public:
+	BoolExprOr(BoolExpr* pExpr1 = NULL, BoolExpr* pExpr2 = NULL)
+		: m_pExpr1(pExpr1), m_pExpr2(pExpr2) {}
 	virtual ~BoolExprOr();
 	virtual bool evaluate(CvGameObject* pObject);
 	virtual void getCheckSum(unsigned int& iSum);
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
-	virtual int getBindingStrength() const;
-protected:
+	virtual int	 getBindingStrength() const;
+
+  protected:
 	BoolExpr* m_pExpr1;
 	BoolExpr* m_pExpr2;
 };
 
 class BoolExprBEqual : public BoolExpr
 {
-public:
-	BoolExprBEqual(BoolExpr* pExpr1 = NULL, BoolExpr* pExpr2 = NULL) : m_pExpr1(pExpr1), m_pExpr2(pExpr2) {}
+  public:
+	BoolExprBEqual(BoolExpr* pExpr1 = NULL, BoolExpr* pExpr2 = NULL)
+		: m_pExpr1(pExpr1), m_pExpr2(pExpr2) {}
 	virtual ~BoolExprBEqual();
 	virtual bool evaluate(CvGameObject* pObject);
 	virtual void getCheckSum(unsigned int& iSum);
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
-	virtual int getBindingStrength() const;
-protected:
+	virtual int	 getBindingStrength() const;
+
+  protected:
 	BoolExpr* m_pExpr1;
 	BoolExpr* m_pExpr2;
 };
 
 class BoolExprIf : public BoolExpr
 {
-public:
-	BoolExprIf(BoolExpr* pExprIf = NULL, BoolExpr* pExprThen = NULL, BoolExpr* pExprElse = NULL) : m_pExprIf(pExprIf), m_pExprThen(pExprThen), m_pExprElse(pExprElse) {}
+  public:
+	BoolExprIf(BoolExpr* pExprIf = NULL, BoolExpr* pExprThen = NULL, BoolExpr* pExprElse = NULL)
+		: m_pExprIf(pExprIf), m_pExprThen(pExprThen), m_pExprElse(pExprElse) {}
 	virtual ~BoolExprIf();
 	virtual bool evaluate(CvGameObject* pObject);
 	virtual void getCheckSum(unsigned int& iSum);
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
-	virtual int getBindingStrength() const;
-protected:
+	virtual int	 getBindingStrength() const;
+
+  protected:
 	BoolExpr* m_pExprIf;
 	BoolExpr* m_pExprThen;
 	BoolExpr* m_pExprElse;
@@ -158,60 +174,67 @@ protected:
 
 class BoolExprIntegrateOr : public BoolExpr
 {
-public:
-	BoolExprIntegrateOr(BoolExpr* pExpr = NULL, RelationTypes eRelation = NO_RELATION, int iData = -1, GameObjectTypes eType = NO_GAMEOBJECT) : m_pExpr(pExpr), m_eRelation(eRelation), m_iData(iData), m_eType(eType) {}
+  public:
+	BoolExprIntegrateOr(BoolExpr* pExpr = NULL, RelationTypes eRelation = NO_RELATION, int iData = -1, GameObjectTypes eType = NO_GAMEOBJECT)
+		: m_pExpr(pExpr), m_eRelation(eRelation), m_iData(iData), m_eType(eType) {}
 	virtual ~BoolExprIntegrateOr();
 	virtual bool evaluate(CvGameObject* pObject);
 	virtual void getCheckSum(unsigned int& iSum);
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
-	virtual int getBindingStrength() const;
-protected:
-	BoolExpr* m_pExpr;
-	RelationTypes m_eRelation;
-	int m_iData;
+	virtual int	 getBindingStrength() const;
+
+  protected:
+	BoolExpr*		m_pExpr;
+	RelationTypes	m_eRelation;
+	int				m_iData;
 	GameObjectTypes m_eType;
 };
 
 class BoolExprComp : public BoolExpr
 {
-public:
-	BoolExprComp(IntExpr* pExpr1 = NULL, IntExpr* pExpr2 = NULL) : m_pExpr1(pExpr1), m_pExpr2(pExpr2) {}
+  public:
+	BoolExprComp(IntExpr* pExpr1 = NULL, IntExpr* pExpr2 = NULL)
+		: m_pExpr1(pExpr1), m_pExpr2(pExpr2) {}
 	virtual ~BoolExprComp();
-	virtual void getCheckSum(unsigned int& iSum);
-	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
-	virtual BoolExprTypes getType() const = 0;
-	virtual void buildOpNameString(CvWStringBuffer& szBuffer) const = 0;
-	virtual int getBindingStrength() const;
-protected:
+	virtual void		  getCheckSum(unsigned int& iSum);
+	virtual void		  buildDisplayString(CvWStringBuffer& szBuffer) const;
+	virtual BoolExprTypes getType() const									 = 0;
+	virtual void		  buildOpNameString(CvWStringBuffer& szBuffer) const = 0;
+	virtual int			  getBindingStrength() const;
+
+  protected:
 	IntExpr* m_pExpr1;
 	IntExpr* m_pExpr2;
 };
 
 class BoolExprGreater : public BoolExprComp
 {
-public:
-	BoolExprGreater(IntExpr* pExpr1 = NULL, IntExpr* pExpr2 = NULL) : BoolExprComp(pExpr1, pExpr2) {}
-	virtual bool evaluate(CvGameObject* pObject);
+  public:
+	BoolExprGreater(IntExpr* pExpr1 = NULL, IntExpr* pExpr2 = NULL)
+		: BoolExprComp(pExpr1, pExpr2) {}
+	virtual bool		  evaluate(CvGameObject* pObject);
 	virtual BoolExprTypes getType() const;
-	virtual void buildOpNameString(CvWStringBuffer& szBuffer) const;
+	virtual void		  buildOpNameString(CvWStringBuffer& szBuffer) const;
 };
 
 class BoolExprGreaterEqual : public BoolExprComp
 {
-public:
-	BoolExprGreaterEqual(IntExpr* pExpr1 = NULL, IntExpr* pExpr2 = NULL) : BoolExprComp(pExpr1, pExpr2) {}
-	virtual bool evaluate(CvGameObject* pObject);
+  public:
+	BoolExprGreaterEqual(IntExpr* pExpr1 = NULL, IntExpr* pExpr2 = NULL)
+		: BoolExprComp(pExpr1, pExpr2) {}
+	virtual bool		  evaluate(CvGameObject* pObject);
 	virtual BoolExprTypes getType() const;
-	virtual void buildOpNameString(CvWStringBuffer& szBuffer) const;
+	virtual void		  buildOpNameString(CvWStringBuffer& szBuffer) const;
 };
 
 class BoolExprEqual : public BoolExprComp
 {
-public:
-	BoolExprEqual(IntExpr* pExpr1 = NULL, IntExpr* pExpr2 = NULL) : BoolExprComp(pExpr1, pExpr2) {}
-	virtual bool evaluate(CvGameObject* pObject);
+  public:
+	BoolExprEqual(IntExpr* pExpr1 = NULL, IntExpr* pExpr2 = NULL)
+		: BoolExprComp(pExpr1, pExpr2) {}
+	virtual bool		  evaluate(CvGameObject* pObject);
 	virtual BoolExprTypes getType() const;
-	virtual void buildOpNameString(CvWStringBuffer& szBuffer) const;
+	virtual void		  buildOpNameString(CvWStringBuffer& szBuffer) const;
 };
 
 #endif

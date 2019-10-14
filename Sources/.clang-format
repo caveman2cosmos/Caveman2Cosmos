@@ -1,13 +1,16 @@
 ﻿AlignEscapedNewlines: Left
 AlignTrailingComments: false
-# AllowAllArgumentsOnNextLine: true
-# AllowAllConstructorInitializersOnNextLine: true
+AlignConsecutiveMacros: true
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
+AllowAllArgumentsOnNextLine: true
+AllowAllConstructorInitializersOnNextLine: true
 AllowAllParametersOfDeclarationOnNextLine: true
 AllowShortBlocksOnASingleLine: false
 AllowShortCaseLabelsOnASingleLine: true
 AllowShortFunctionsOnASingleLine: InlineOnly
-# AllowShortIfStatementsOnASingleLine: Never
-# AllowShortLambdasOnASingleLine: All
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: All
 AllowShortLoopsOnASingleLine: false
 AlwaysBreakAfterDefinitionReturnType: None
 AlwaysBreakAfterReturnType: None
@@ -15,12 +18,12 @@ BreakBeforeBraces: Allman
 BreakConstructorInitializers: BeforeComma
 ColumnLimit: 0
 ConstructorInitializerAllOnOneLineOrOnePerLine: true
-IncludeBlocks: Preserve
-IndentPPDirectives: None
 IndentWidth: 4
 Language: Cpp
 MaxEmptyLinesToKeep: 2
 NamespaceIndentation: None
+PointerAlignment: Left
 Standard: Cpp03
+SortIncludes: false
 TabWidth: 4
 UseTab: Always

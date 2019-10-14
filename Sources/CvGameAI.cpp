@@ -85,26 +85,26 @@ int CvGameAI::AI_combatValue(UnitTypes eUnit)
 	{
 		iValue *= GC.getUnitInfo(eUnit).getCombat();
 		//TB Combat Mods Begin
-		iValue += (((100 + GC.getUnitInfo(eUnit).getArmor())/100)/5);
-		iValue += (((100 + GC.getUnitInfo(eUnit).getPuncture())/100)/5);
-		iValue += (((100 + GC.getUnitInfo(eUnit).getPrecisionModifier())/100)/5);
-		iValue += (((100 + GC.getUnitInfo(eUnit).getDodgeModifier())/100)/5);
-		iValue += (((100 + GC.getUnitInfo(eUnit).getDamageModifier())/100)/5);
+		iValue += (((100 + GC.getUnitInfo(eUnit).getArmor()) / 100) / 5);
+		iValue += (((100 + GC.getUnitInfo(eUnit).getPuncture()) / 100) / 5);
+		iValue += (((100 + GC.getUnitInfo(eUnit).getPrecisionModifier()) / 100) / 5);
+		iValue += (((100 + GC.getUnitInfo(eUnit).getDodgeModifier()) / 100) / 5);
+		iValue += (((100 + GC.getUnitInfo(eUnit).getDamageModifier()) / 100) / 5);
 		//TB Combat Mods End
 
 		// UncutDragon
 		// original
 		//iValue *= ((((GC.getUnitInfo(eUnit).getFirstStrikes() * 2) + GC.getUnitInfo(eUnit).getChanceFirstStrikes()) * (GC.getDefineINT("COMBAT_DAMAGE") / 5)) + 100);
 		// modified
-			iValue *= ((((GC.getUnitInfo(eUnit).getFirstStrikes() * 2) + GC.getUnitInfo(eUnit).getChanceFirstStrikes()) * (GC.getCOMBAT_DAMAGE() / 5)) + 100);
+		iValue *= ((((GC.getUnitInfo(eUnit).getFirstStrikes() * 2) + GC.getUnitInfo(eUnit).getChanceFirstStrikes()) * (GC.getCOMBAT_DAMAGE() / 5)) + 100);
 		// /UncutDragon
 		iValue /= 100;
 	}
 	if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		int iOffset = GC.getUnitInfo(eUnit).getSMRankTotal() - 15;
-		int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER");
-		bool bPositive = ((iOffset > 0) ? true : false);
+		int	 iOffset	   = GC.getUnitInfo(eUnit).getSMRankTotal() - 15;
+		int	 iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER");
+		bool bPositive	   = ((iOffset > 0) ? true : false);
 		iValue *= 100;
 		if (bPositive)
 		{
@@ -149,8 +149,8 @@ void CvGameAI::read(FDataStreamBase* pStream)
 {
 	CvGame::read(pStream);
 
-	uint uiFlag=0;
-	pStream->Read(&uiFlag);	// flags for expansion
+	uint uiFlag = 0;
+	pStream->Read(&uiFlag); // flags for expansion
 
 	pStream->Read(&m_iPad);
 }
@@ -160,8 +160,8 @@ void CvGameAI::write(FDataStreamBase* pStream)
 {
 	CvGame::write(pStream);
 
-	uint uiFlag=0;
-	pStream->Write(uiFlag);		// flag for expansion
+	uint uiFlag = 0;
+	pStream->Write(uiFlag); // flag for expansion
 
 	pStream->Write(m_iPad);
 }

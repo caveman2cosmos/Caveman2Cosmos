@@ -18,30 +18,29 @@ typedef struct
 
 typedef struct
 {
-	plotGroupHashInfo	hashInfo;
-	int					groupGenerationNumber;
+	plotGroupHashInfo hashInfo;
+	int				  groupGenerationNumber;
 } plotGroupCheckInfo;
 
 class CvPlot;
 class CvPlotGroup
 {
-friend class CvPlot;
+	friend class CvPlot;
 
-public:
-
+  public:
 	CvPlotGroup();
 	virtual ~CvPlotGroup();
 
 
 	void init(int iID, PlayerTypes eOwner, CvPlot* pPlot, bool bRecalculateBonuses = true);
 	void uninit();
-	void reset(int iID = 0, PlayerTypes eOwner = NO_PLAYER, bool bConstructorCall=false);
+	void reset(int iID = 0, PlayerTypes eOwner = NO_PLAYER, bool bConstructorCall = false);
 
 	void addPlot(CvPlot* pPlot, bool bRecalculateBonuses);
 	void removePlot(CvPlot* pPlot, bool bRecalculateBonuses = true);
-	void recalculatePlots();														
+	void recalculatePlots();
 
-	int getID() const;
+	int	 getID() const;
 	void setID(int iID);
 
 	PlayerTypes getOwner() const;
@@ -51,8 +50,8 @@ public:
 		return m_eOwner;
 	}
 #endif
-	int getNumBonuses(BonusTypes eBonus) const;
-	bool hasBonus(BonusTypes eBonus);										
+	int	 getNumBonuses(BonusTypes eBonus) const;
+	bool hasBonus(BonusTypes eBonus);
 	void changeNumBonuses(BonusTypes eBonus, int iChange);
 
 	int getNumCities();
@@ -66,37 +65,36 @@ public:
 
 	inline int getLengthPlots() { return m_numPlots; }
 
-	void mergeIn(CvPlotGroup* from, bool bRecalculateBonuses);
+	void		mergeIn(CvPlotGroup* from, bool bRecalculateBonuses);
 	static void colorRegion(CvPlot* pStartPlot, PlayerTypes eOwner, bool bRecalculateBonuses);
 	static void startBulkRecalculate();
 	static void endBulkRecalculate();
 
-private:
-	CvPlot* getRepresentativePlot() const;
-	void plotEnumerator(bool (*pfFunc)(CvPlotGroup* onBehalfOf, CvPlot*, void*), void* param);
+  private:
+	CvPlot*				getRepresentativePlot() const;
+	void				plotEnumerator(bool (*pfFunc)(CvPlotGroup* onBehalfOf, CvPlot*, void*), void* param);
 	static CvPlotGroup* colorRegionInternal(CvPlot* pPlot, PlayerTypes eOwner, CvPlotGroup* pPlotGroup, bool bRecalculateBonuses);
 
-	int m_sessionAllocSeq;
-	int m_sessionRecalcSeq;
+	int		   m_sessionAllocSeq;
+	int		   m_sessionRecalcSeq;
 	static int m_allocationSeqForSession;
 	static int m_recalcSeqForSession;
 	static int m_bulkRecalcStartSeq;
 
-protected:
-
+  protected:
 	int m_iID;
 
 	PlayerTypes m_eOwner;
 
-	int* m_paiNumBonuses;
+	int*		m_paiNumBonuses;
 	mutable int m_seedPlotX;
 	mutable int m_seedPlotY;
 
 	plotGroupHashInfo m_zobristHashes;
-						//	XOR of the zobrist contributions from all
-						//	constituent plots 
-public:
-	int m_numPlots;
+	//	XOR of the zobrist contributions from all
+	//	constituent plots
+  public:
+	int			m_numPlots;
 	mutable int m_numCities;
 	//CLinkList<XYCoords> m_plots;
 };

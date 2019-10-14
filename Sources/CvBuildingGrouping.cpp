@@ -10,7 +10,7 @@
 #include "CvGameCoreDLLUnDefNew.h"
 #include "CvGameCoreDLLDefNew.h"
 
-int BuildingGroupingBase::getGroup(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+int BuildingGroupingBase::getGroup(CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding)
 {
 	int iInverse = m_bInvert ? -1 : 1;
 	return iInverse * getGroupBuilding(pPlayer, pCity, eBuilding);
@@ -18,15 +18,14 @@ int BuildingGroupingBase::getGroup(CvPlayer *pPlayer, CvCity *pCity, BuildingTyp
 
 BuildingGroupingBase::~BuildingGroupingBase()
 {
-
 }
 
-int BuildingGroupingSingle::getGroupBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+int BuildingGroupingSingle::getGroupBuilding(CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding)
 {
 	return 1;
 }
 
-int BuildingGroupingWonderType::getGroupBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+int BuildingGroupingWonderType::getGroupBuilding(CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding)
 {
 	if (!isLimitedWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()))
 		return 0;
@@ -37,7 +36,7 @@ int BuildingGroupingWonderType::getGroupBuilding(CvPlayer *pPlayer, CvCity *pCit
 	return 2;
 }
 
-int BuildingGroupingFilters::getGroupBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+int BuildingGroupingFilters::getGroupBuilding(CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding)
 {
 	int iSize = m_apFilters.size();
 	for (int i = 0; i < iSize; i++)
@@ -46,7 +45,7 @@ int BuildingGroupingFilters::getGroupBuilding(CvPlayer *pPlayer, CvCity *pCity, 
 	return iSize;
 }
 
-void BuildingGroupingFilters::addGroupingFilter(BuildingFilterBase *pFilter)
+void BuildingGroupingFilters::addGroupingFilter(BuildingFilterBase* pFilter)
 {
 	m_apFilters.push_back(pFilter);
 }
@@ -57,14 +56,14 @@ BuildingGroupingFilters::~BuildingGroupingFilters()
 		delete m_apFilters[i];
 }
 
-BuildingGroupingList::BuildingGroupingList(CvPlayer *pPlayer, CvCity *pCity)
+BuildingGroupingList::BuildingGroupingList(CvPlayer* pPlayer, CvCity* pCity)
 {
 	m_pPlayer = pPlayer;
-	m_pCity = pCity;
-	
-	m_apBuildingGrouping[BUILDING_GROUPING_SINGLE] = new BuildingGroupingSingle();
+	m_pCity	  = pCity;
+
+	m_apBuildingGrouping[BUILDING_GROUPING_SINGLE]		= new BuildingGroupingSingle();
 	m_apBuildingGrouping[BUILDING_GROUPING_WONDER_TYPE] = new BuildingGroupingWonderType();
-	BuildingGroupingFilters* pGrouping = new BuildingGroupingFilters();
+	BuildingGroupingFilters* pGrouping					= new BuildingGroupingFilters();
 	pGrouping->addGroupingFilter(new BuildingFilterIsMilitary());
 	pGrouping->addGroupingFilter(new BuildingFilterIsCityDefense());
 	m_apBuildingGrouping[BUILDING_GROUPING_DOMAIN] = pGrouping;
@@ -90,12 +89,12 @@ BuildingGroupingTypes BuildingGroupingList::getActiveGrouping()
 	return m_eActiveGrouping;
 }
 
-void BuildingGroupingList::setCity(CvCity *pCity)
+void BuildingGroupingList::setCity(CvCity* pCity)
 {
 	m_pCity = pCity;
 }
 
-void BuildingGroupingList::setPlayer(CvPlayer *pPlayer)
+void BuildingGroupingList::setPlayer(CvPlayer* pPlayer)
 {
 	m_pPlayer = pPlayer;
 }
@@ -104,7 +103,7 @@ bool BuildingGroupingList::setActiveGrouping(BuildingGroupingTypes eActiveGroupi
 {
 	FAssertMsg(eActiveGrouping < NUM_BUILDING_GROUPING, "Index out of bounds");
 	FAssertMsg(eActiveGrouping > -1, "Index out of bounds");
-	bool bChanged = m_eActiveGrouping != eActiveGrouping;
+	bool bChanged	  = m_eActiveGrouping != eActiveGrouping;
 	m_eActiveGrouping = eActiveGrouping;
 	return bChanged;
 }

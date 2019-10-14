@@ -1,13 +1,15 @@
 //
-// Python wrapper class for CvArea 
-// 
+// Python wrapper class for CvArea
+//
 #include "CvGameCoreDLL.h"
 
-CyArea::CyArea() : m_pArea(NULL)
+CyArea::CyArea()
+	: m_pArea(NULL)
 {
 }
 
-CyArea::CyArea(CvArea* pArea) : m_pArea(pArea)
+CyArea::CyArea(CvArea* pArea)
+	: m_pArea(pArea)
 {
 }
 
@@ -93,52 +95,52 @@ bool CyArea::isWater()
 
 int CyArea::getUnitsPerPlayer(int /*PlayerTypes*/ eIndex)
 {
-	return m_pArea ? m_pArea->getUnitsPerPlayer((PlayerTypes) eIndex) : -1;
+	return m_pArea ? m_pArea->getUnitsPerPlayer((PlayerTypes)eIndex) : -1;
 }
 
 int CyArea::getAnimalsPerPlayer(int /*PlayerTypes*/ eIndex)
 {
-	return m_pArea ? m_pArea->getAnimalsPerPlayer((PlayerTypes) eIndex) : -1;
+	return m_pArea ? m_pArea->getAnimalsPerPlayer((PlayerTypes)eIndex) : -1;
 }
 
 int CyArea::getCitiesPerPlayer(int /*PlayerTypes*/ eIndex)
 {
-	return m_pArea ? m_pArea->getCitiesPerPlayer((PlayerTypes) eIndex) : -1;
+	return m_pArea ? m_pArea->getCitiesPerPlayer((PlayerTypes)eIndex) : -1;
 }
 
 int CyArea::getPopulationPerPlayer(int /*PlayerTypes*/ eIndex)
 {
-	return m_pArea ? m_pArea->getPopulationPerPlayer((PlayerTypes) eIndex) : -1;
+	return m_pArea ? m_pArea->getPopulationPerPlayer((PlayerTypes)eIndex) : -1;
 }
 
 int CyArea::getBuildingGoodHealth(int /*PlayerTypes*/ eIndex)
 {
-	return m_pArea ? m_pArea->getBuildingGoodHealth((PlayerTypes) eIndex) : -1;
+	return m_pArea ? m_pArea->getBuildingGoodHealth((PlayerTypes)eIndex) : -1;
 }
 
 int CyArea::getBuildingBadHealth(int /*PlayerTypes*/ eIndex)
 {
-	return m_pArea ? m_pArea->getBuildingBadHealth((PlayerTypes) eIndex) : -1;
+	return m_pArea ? m_pArea->getBuildingBadHealth((PlayerTypes)eIndex) : -1;
 }
 
 int CyArea::getBuildingHappiness(int /*PlayerTypes*/ eIndex)
 {
-	return m_pArea ? m_pArea->getBuildingHappiness((PlayerTypes) eIndex) : -1;
+	return m_pArea ? m_pArea->getBuildingHappiness((PlayerTypes)eIndex) : -1;
 }
 
 int CyArea::getFreeSpecialist(int /*PlayerTypes*/ eIndex)
 {
-	return m_pArea ? m_pArea->getFreeSpecialist((PlayerTypes) eIndex) : -1;
+	return m_pArea ? m_pArea->getFreeSpecialist((PlayerTypes)eIndex) : -1;
 }
 
 int CyArea::getPower(int /*PlayerTypes*/ eIndex)
 {
-	return m_pArea ? m_pArea->getPower((PlayerTypes) eIndex) : -1;
+	return m_pArea ? m_pArea->getPower((PlayerTypes)eIndex) : -1;
 }
 
 int CyArea::getBestFoundValue(int /*PlayerTypes*/ eIndex)
 {
-	return m_pArea ? m_pArea->getBestFoundValue((PlayerTypes) eIndex) : -1;
+	return m_pArea ? m_pArea->getBestFoundValue((PlayerTypes)eIndex) : -1;
 }
 
 int CyArea::getNumRevealedTiles(int /*TeamTypes*/ eIndex)
@@ -163,27 +165,27 @@ bool CyArea::isBorderObstacle(int /*TeamTypes*/ eIndex)
 
 int /*AreaAITypes*/ CyArea::getAreaAIType(int /*TeamTypes*/ eIndex)
 {
-	return m_pArea ? (AreaAITypes) m_pArea->getAreaAIType((TeamTypes)eIndex) : -1;
+	return m_pArea ? (AreaAITypes)m_pArea->getAreaAIType((TeamTypes)eIndex) : -1;
 }
 
 CyCity* CyArea::getTargetCity(int /*PlayerTypes*/ eIndex)
 {
-	return m_pArea ? new CyCity(m_pArea->getTargetCity((PlayerTypes) eIndex)) : NULL;
+	return m_pArea ? new CyCity(m_pArea->getTargetCity((PlayerTypes)eIndex)) : NULL;
 }
 
 int CyArea::getYieldRateModifier(int /*PlayerTypes*/ eIndex1, int /*YieldTypes*/ eIndex2)
 {
-	return m_pArea ? m_pArea->getYieldRateModifier((PlayerTypes)eIndex1, (YieldTypes) eIndex2) : -1;
+	return m_pArea ? m_pArea->getYieldRateModifier((PlayerTypes)eIndex1, (YieldTypes)eIndex2) : -1;
 }
 
 int CyArea::getNumTrainAIUnits(int /*PlayerTypes*/ eIndex1, int /*UnitAITypes*/ eIndex2)
 {
-	return m_pArea ? m_pArea->getNumTrainAIUnits((PlayerTypes)eIndex1, (UnitAITypes) eIndex2) : -1;
+	return m_pArea ? m_pArea->getNumTrainAIUnits((PlayerTypes)eIndex1, (UnitAITypes)eIndex2) : -1;
 }
 
 int CyArea::getNumAIUnits(int /*PlayerTypes*/ eIndex1, int /*UnitAITypes*/ eIndex2)
 {
-	return m_pArea ? m_pArea->getNumAIUnits((PlayerTypes)eIndex1, (UnitAITypes) eIndex2) : -1;
+	return m_pArea ? m_pArea->getNumAIUnits((PlayerTypes)eIndex1, (UnitAITypes)eIndex2) : -1;
 }
 
 int CyArea::getNumBonuses(int /*BonusTypes*/ eBonus)
@@ -199,7 +201,7 @@ int CyArea::getNumTotalBonuses()
 
 int CyArea::getNumImprovements(int /*ImprovementTypes*/ eImprovement)
 {
-	return m_pArea ? m_pArea->getNumImprovements( (ImprovementTypes)eImprovement) : -1;
+	return m_pArea ? m_pArea->getNumImprovements((ImprovementTypes)eImprovement) : -1;
 }
 
 /************************************************************************************************/
@@ -209,9 +211,9 @@ int CyArea::getNumImprovements(int /*ImprovementTypes*/ eImprovement)
 /************************************************************************************************/
 void CyArea::changeCleanPowerCount(int /*TeamTypes*/ eIndex, int iChange)
 {
-    if (m_pArea)
-        m_pArea->changeCleanPowerCount((TeamTypes)eIndex, iChange);
-}  
+	if (m_pArea)
+		m_pArea->changeCleanPowerCount((TeamTypes)eIndex, iChange);
+}
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/

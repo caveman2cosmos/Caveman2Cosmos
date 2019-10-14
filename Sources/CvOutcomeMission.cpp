@@ -9,13 +9,8 @@
 #include "CvGameCoreDLL.h"
 #include <boost/bind.hpp>
 
-CvOutcomeMission::CvOutcomeMission() :
-m_eMission(NO_MISSION),
-m_iCost(NULL),
-m_bKill(true),
-m_ePayerType(NO_GAMEOBJECT),
-m_pPlotCondition(NULL),
-m_pUnitCondition(NULL)
+CvOutcomeMission::CvOutcomeMission()
+	: m_eMission(NO_MISSION), m_iCost(NULL), m_bKill(true), m_ePayerType(NO_GAMEOBJECT), m_pPlotCondition(NULL), m_pUnitCondition(NULL)
 {
 }
 
@@ -68,17 +63,17 @@ bool CvOutcomeMission::isPossible(CvUnit* pUnit, bool bTestVisible)
 
 	//if (!bTestVisible)
 	//{
-		if (m_iCost)
+	if (m_iCost)
+	{
+		if (pOwner->getEffectiveGold() < m_iCost->evaluate(pUnit->getGameObject()))
 		{
-			if (pOwner->getEffectiveGold() < m_iCost->evaluate(pUnit->getGameObject()))
-			{
-				return false;
-			}
+			return false;
 		}
+	}
 
-		if (m_pPlotCondition)
-			if (!m_pPlotCondition->evaluate(pUnit->plot()->getGameObject()))
-				return false;
+	if (m_pPlotCondition)
+		if (!m_pPlotCondition->evaluate(pUnit->plot()->getGameObject()))
+			return false;
 	//}
 
 	if (m_pUnitCondition)
@@ -92,34 +87,34 @@ bool CvOutcomeMission::isPossible(CvUnit* pUnit, bool bTestVisible)
 
 	//if (!bTestVisible)
 	//{
-		if (!getPropertyCost()->isEmpty())
+	if (!getPropertyCost()->isEmpty())
+	{
+		CvGameObject* pPayer = NULL;
+		if ((m_ePayerType == NO_GAMEOBJECT) || (m_ePayerType == GAMEOBJECT_UNIT))
 		{
-			CvGameObject* pPayer = NULL;
-			if ((m_ePayerType == NO_GAMEOBJECT) || (m_ePayerType == GAMEOBJECT_UNIT))
-			{
-				pPayer = pUnit->getGameObject();
-			}
-			else
-			{
-				pUnit->getGameObject()->foreach(m_ePayerType, boost::bind(callSetPayer, _1, &pPayer));
-			}
-
-			if (!pPayer)
-			{
-				return false;
-			}
-
-			if (! (*(pPayer->getProperties()) > m_PropertyCost ))
-			{
-				return false;
-			}
+			pPayer = pUnit->getGameObject();
 		}
+		else
+		{
+			pUnit->getGameObject()->foreach (m_ePayerType, boost::bind(callSetPayer, _1, &pPayer));
+		}
+
+		if (!pPayer)
+		{
+			return false;
+		}
+
+		if (!(*(pPayer->getProperties()) > m_PropertyCost))
+		{
+			return false;
+		}
+	}
 	//}
 
 	return true;
 }
 
-void CvOutcomeMission::buildDisplayString(CvWStringBuffer &szBuffer, CvUnit *pUnit)
+void CvOutcomeMission::buildDisplayString(CvWStringBuffer& szBuffer, CvUnit* pUnit)
 {
 	if (!m_PropertyCost.isEmpty())
 	{
@@ -127,11 +122,11 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer &szBuffer, CvUnit *pUn
 		szBuffer.append(L"Cost: ");
 		m_PropertyCost.buildCompactChangesString(szBuffer);
 	}
-	
+
 	if (m_iCost)
 	{
-		if (m_iCost->evaluate(pUnit->getGameObject())!=0)
-		{	/*GC.getGameINLINE().getGameObject()->adaptValueToGame(m_iID, m_pExpr->evaluate(GC.getGameINLINE().getGameObject())*/
+		if (m_iCost->evaluate(pUnit->getGameObject()) != 0)
+		{ /*GC.getGameINLINE().getGameObject()->adaptValueToGame(m_iID, m_pExpr->evaluate(GC.getGameINLINE().getGameObject())*/
 			CvWString szTempBuffer;
 
 			szBuffer.append(NEWLINE);
@@ -188,7 +183,7 @@ void CvOutcomeMission::execute(CvUnit* pUnit)
 		}
 		else
 		{
-			pUnit->getGameObject()->foreach(m_ePayerType, boost::bind(callSetPayer, _1, &pPayer));
+			pUnit->getGameObject()->foreach (m_ePayerType, boost::bind(callSetPayer, _1, &pPayer));
 		}
 
 		if (pPayer)
@@ -200,7 +195,7 @@ void CvOutcomeMission::execute(CvUnit* pUnit)
 	pUnit->finishMoves();
 }
 
-bool CvOutcomeMission::read(CvXMLLoadUtility *pXML)
+bool CvOutcomeMission::read(CvXMLLoadUtility* pXML)
 {
 	CvString szTextVal;
 	pXML->GetChildXmlValByName(szTextVal, L"MissionType");
@@ -208,7 +203,7 @@ bool CvOutcomeMission::read(CvXMLLoadUtility *pXML)
 	//m_eMission = (MissionTypes) pXML->FindInInfoClass(szTextVal);
 	pXML->GetOptionalChildXmlValByName(&m_bKill, L"bKill", true);
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PayerType");
-	m_ePayerType = (GameObjectTypes) pXML->GetInfoClass(szTextVal);
+	m_ePayerType = (GameObjectTypes)pXML->GetInfoClass(szTextVal);
 	m_PropertyCost.read(pXML, L"PropertyCost");
 	m_OutcomeList.read(pXML, L"ActionOutcomes");
 	if (pXML->TryMoveToXmlFirstChild(L"PlotCondition"))
@@ -232,7 +227,7 @@ bool CvOutcomeMission::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvOutcomeMission::copyNonDefaults(CvOutcomeMission *pOutcomeMission, CvXMLLoadUtility *pXML)
+void CvOutcomeMission::copyNonDefaults(CvOutcomeMission* pOutcomeMission, CvXMLLoadUtility* pXML)
 {
 	GC.copyNonDefaultDelayedResolution((int*)&m_eMission, (int*)&(pOutcomeMission->m_eMission));
 	//if (m_eMission == NO_MISSION)
@@ -254,24 +249,24 @@ void CvOutcomeMission::copyNonDefaults(CvOutcomeMission *pOutcomeMission, CvXMLL
 	m_OutcomeList.copyNonDefaults(pOutcomeMission->getOutcomeList(), pXML);
 	if (!m_pPlotCondition)
 	{
-		m_pPlotCondition = pOutcomeMission->m_pPlotCondition;
+		m_pPlotCondition				  = pOutcomeMission->m_pPlotCondition;
 		pOutcomeMission->m_pPlotCondition = NULL;
 	}
 
 	if (!m_pUnitCondition)
 	{
-		m_pUnitCondition = pOutcomeMission->m_pUnitCondition;
+		m_pUnitCondition				  = pOutcomeMission->m_pUnitCondition;
 		pOutcomeMission->m_pUnitCondition = NULL;
 	}
-	
+
 	if (!m_iCost)
 	{
-		m_iCost = pOutcomeMission->m_iCost;
+		m_iCost					 = pOutcomeMission->m_iCost;
 		pOutcomeMission->m_iCost = NULL;
 	}
 }
 
-void CvOutcomeMission::getCheckSum(unsigned int &iSum)
+void CvOutcomeMission::getCheckSum(unsigned int& iSum)
 {
 	CheckSum(iSum, m_eMission);
 	CheckSum(iSum, m_bKill);

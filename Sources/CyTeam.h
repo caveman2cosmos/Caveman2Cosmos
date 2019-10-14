@@ -4,7 +4,7 @@
 #define CyTeam_h
 //
 // Python wrapper class for CvTeam
-// 
+//
 
 // //#include "CvEnums.h"
 
@@ -12,27 +12,27 @@ class CvTeam;
 class CyArea;
 class CyTeam
 {
-public:
+  public:
 	CyTeam();
-	explicit CyTeam(CvTeam* pTeam);		// Call from C++
+	explicit CyTeam(CvTeam* pTeam); // Call from C++
 
-	CvTeam* getTeam() { return m_pTeam;	}	// Call from C++
+	CvTeam* getTeam() { return m_pTeam; } // Call from C++
 
-	bool isNone() { return (m_pTeam==NULL); }
+	bool isNone() { return (m_pTeam == NULL); }
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
 	bool isRebel();
 	bool isSingleCityTeam();
-	bool isRebelAgainst( int iTeam );
-	void setRebelAgainst( int iTeam, bool bNewValue );
-	int countRebelAgainst( );
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+	bool isRebelAgainst(int iTeam);
+	void setRebelAgainst(int iTeam, bool bNewValue);
+	int	 countRebelAgainst();
+	/************************************************************************************************/
+	/* REVOLUTION_MOD                          END                                                  */
+	/************************************************************************************************/
 	void addTeam(int /*TeamTypes*/ eTeam);
 
 	bool canChangeWarPeace(int /*TeamTypes*/ eTeam);
@@ -49,18 +49,18 @@ public:
 	int getDefensivePower();
 	int getNumNukeUnits();
 #if defined QC_MASTERY_VICTORY
-//Sevo Begin--VCM
+	//Sevo Begin--VCM
 	int getTotalVictoryScore();
-//Sevo End VCM
+	//Sevo End VCM
 #endif
 
-	int getAtWarCount(bool bIgnoreMinors);
-	int getWarPlanCount(int /*WarPlanTypes*/ eWarPlan, bool bIgnoreMinors);
-	int getAnyWarPlanCount(bool bIgnoreMinors);
-	int getChosenWarCount(bool bIgnoreMinors);
-	int getHasMetCivCount(bool bIgnoreMinors);
+	int	 getAtWarCount(bool bIgnoreMinors);
+	int	 getWarPlanCount(int /*WarPlanTypes*/ eWarPlan, bool bIgnoreMinors);
+	int	 getAnyWarPlanCount(bool bIgnoreMinors);
+	int	 getChosenWarCount(bool bIgnoreMinors);
+	int	 getHasMetCivCount(bool bIgnoreMinors);
 	bool hasMetHuman();
-	int getDefensivePactCount();
+	int	 getDefensivePactCount();
 	bool isAVassal() const;
 
 	int getUnitClassMaking(int /*UnitClassTypes*/ eUnitClass);
@@ -91,75 +91,75 @@ public:
 	bool isNPC();
 	bool isHominid();
 	bool isMinorCiv();
-/************************************************************************************************/
-/* REVOLUTION_MOD                         10/23/08                                jdog5000      */
-/*                                                                                              */
-/* For minor civs                                                                               */
-/************************************************************************************************/
-	void setIsMinorCiv( bool bNewValue, bool bDoBarbCivCheck );
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
-	int /*PlayerTypes*/ getLeaderID();
-	int /*PlayerTypes*/ getSecretaryID();
+	/************************************************************************************************/
+	/* REVOLUTION_MOD                         10/23/08                                jdog5000      */
+	/*                                                                                              */
+	/* For minor civs                                                                               */
+	/************************************************************************************************/
+	void setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck);
+	/************************************************************************************************/
+	/* REVOLUTION_MOD                          END                                                  */
+	/************************************************************************************************/
+	int /*PlayerTypes*/	  getLeaderID();
+	int /*PlayerTypes*/	  getSecretaryID();
 	int /*HandicapTypes*/ getHandicapType();
-	std::wstring getName();
+	std::wstring		  getName();
 
-	int getNumMembers();
+	int	 getNumMembers();
 	bool isAlive();
 	bool isEverAlive();
-	int getNumCities();
-	int getTotalPopulation();
-	int getTotalLand();
-	int getNukeInterception();
-	void changeNukeInterception(int iChange);	 
+	int	 getNumCities();
+	int	 getTotalPopulation();
+	int	 getTotalLand();
+	int	 getNukeInterception();
+	void changeNukeInterception(int iChange);
 
-	int getForceTeamVoteEligibilityCount(int /*VoteSourceTypes*/ eVoteSource);
+	int	 getForceTeamVoteEligibilityCount(int /*VoteSourceTypes*/ eVoteSource);
 	bool isForceTeamVoteEligible(int /*VoteSourceTypes*/ eVoteSource);
 	void changeForceTeamVoteEligibilityCount(int /*VoteSourceTypes*/ eVoteSource, int iChange);
-	int getExtraWaterSeeFromCount();
-	bool isExtraWaterSeeFrom();		 
+	int	 getExtraWaterSeeFromCount();
+	bool isExtraWaterSeeFrom();
 	void changeExtraWaterSeeFromCount(int iChange);
-	int getMapTradingCount();
+	int	 getMapTradingCount();
 	bool isMapTrading();
 	void changeMapTradingCount(int iChange);
-	int getTechTradingCount();
+	int	 getTechTradingCount();
 	bool isTechTrading();
 	void changeTechTradingCount(int iChange);
-	int getGoldTradingCount();
+	int	 getGoldTradingCount();
 	bool isGoldTrading();
 	void changeGoldTradingCount(int iChange);
-	int getOpenBordersTradingCount();
+	int	 getOpenBordersTradingCount();
 	bool isOpenBordersTrading();
 	void changeOpenBordersTradingCount(int iChange);
-	int getDefensivePactTradingCount();
+	int	 getDefensivePactTradingCount();
 	bool isDefensivePactTrading();
-	void changeDefensivePactTradingCount(int iChange);															
-	int getPermanentAllianceTradingCount();
+	void changeDefensivePactTradingCount(int iChange);
+	int	 getPermanentAllianceTradingCount();
 	bool isPermanentAllianceTrading();
-	void changePermanentAllianceTradingCount(int iChange);													
-	int getVassalTradingCount();
+	void changePermanentAllianceTradingCount(int iChange);
+	int	 getVassalTradingCount();
 	bool isVassalStateTrading();
-	void changeVassalTradingCount(int iChange);													
-	int getBridgeBuildingCount();
+	void changeVassalTradingCount(int iChange);
+	int	 getBridgeBuildingCount();
 	bool isBridgeBuilding();
-	void changeBridgeBuildingCount(int iChange);																		
-	int getIrrigationCount();
+	void changeBridgeBuildingCount(int iChange);
+	int	 getIrrigationCount();
 	bool isIrrigation();
-	void changeIrrigationCount(int iChange);																				
-	int getIgnoreIrrigationCount();
+	void changeIrrigationCount(int iChange);
+	int	 getIgnoreIrrigationCount();
 	bool isIgnoreIrrigation();
-	void changeIgnoreIrrigationCount(int iChange);																	
-	int getWaterWorkCount();
+	void changeIgnoreIrrigationCount(int iChange);
+	int	 getWaterWorkCount();
 	bool isWaterWork();
-	void changeWaterWorkCount(int iChange);																	
+	void changeWaterWorkCount(int iChange);
 
-	int getVassalPower() const;
+	int	 getVassalPower() const;
 	void setVassalPower(int iPower);
-	int getMasterPower() const;
+	int	 getMasterPower() const;
 	void setMasterPower(int iPower);
 
-	int getEnemyWarWearinessModifier() const;																																			// Exposed to Python
+	int	 getEnemyWarWearinessModifier() const; // Exposed to Python
 	void changeEnemyWarWearinessModifier(int iChange);
 
 	bool isMapCentering();
@@ -168,17 +168,17 @@ public:
 	int getID();
 
 	bool isStolenVisibility(int /*TeamTypes*/ eIndex);
-	int getWarWeariness(int /*TeamTypes*/ eIndex);								 
-	void setWarWeariness(int /*TeamTypes*/ eIndex, int iNewValue);	 
-	void changeWarWeariness(int /*TeamTypes*/ eIndex, int iChange);	 
-	int getTechShareCount(int iIndex);
+	int	 getWarWeariness(int /*TeamTypes*/ eIndex);
+	void setWarWeariness(int /*TeamTypes*/ eIndex, int iNewValue);
+	void changeWarWeariness(int /*TeamTypes*/ eIndex, int iChange);
+	int	 getTechShareCount(int iIndex);
 	bool isTechShare(int iIndex);
 	void changeTechShareCount(int iIndex, int iChange);
-	int getCommerceFlexibleCount(int /*CommerceTypes*/ eIndex);
+	int	 getCommerceFlexibleCount(int /*CommerceTypes*/ eIndex);
 	bool isCommerceFlexible(int /*CommerceTypes*/ eIndex);
 	void changeCommerceFlexibleCount(int /*CommerceTypes*/ eIndex, int iChange);
 
-	int getExtraMoves(int /*DomainTypes*/ eIndex);
+	int	 getExtraMoves(int /*DomainTypes*/ eIndex);
 	void changeExtraMoves(int /*DomainTypes*/ eIndex, int iChange);
 
 	bool isHasMet(int /*TeamTypes*/ eIndex);
@@ -194,28 +194,28 @@ public:
 	void assignVassal(int /*TeamTypes*/ eIndex, bool bSurrender);
 	void freeVassal(int /*TeamTypes*/ eIndex);
 	bool isDefensivePact(int /*TeamTypes*/ eIndex);
-	int getRouteChange(int /*RouteTypes*/ eIndex);
+	int	 getRouteChange(int /*RouteTypes*/ eIndex);
 	void changeRouteChange(int /*RouteTypes*/ eIndex, int iChange);
-	int getProjectCount(int /*ProjectTypes*/ eIndex);
-	int getProjectDefaultArtType(int /*ProjectTypes*/ eIndex);
+	int	 getProjectCount(int /*ProjectTypes*/ eIndex);
+	int	 getProjectDefaultArtType(int /*ProjectTypes*/ eIndex);
 	void setProjectDefaultArtType(int /*ProjectTypes*/ eIndex, int value);
-	int getProjectArtType(int /*ProjectTypes*/ eIndex, int number);
+	int	 getProjectArtType(int /*ProjectTypes*/ eIndex, int number);
 	void setProjectArtType(int /*ProjectTypes*/ eIndex, int number, int value);
 	bool isProjectMaxedOut(int /*ProjectTypes*/ eIndex, int iExtra);
 	bool isProjectAndArtMaxedOut(int /*ProjectTypes*/ eIndex);
 	void changeProjectCount(int /*ProjectTypes*/ eIndex, int iChange);
-	int getProjectMaking(int /*ProjectTypes*/ eIndex);
-	int getUnitClassCount(int /*UnitClassTypes*/ eIndex);
+	int	 getProjectMaking(int /*ProjectTypes*/ eIndex);
+	int	 getUnitClassCount(int /*UnitClassTypes*/ eIndex);
 	bool isUnitClassMaxedOut(int /*UnitClassTypes*/ eIndex, int iExtra);
-	int getBuildingClassCount(int /*BuildingClassTypes*/ eIndex);
+	int	 getBuildingClassCount(int /*BuildingClassTypes*/ eIndex);
 	bool isBuildingClassMaxedOut(int /*BuildingClassTypes*/ eIndex, int iExtra);
-	int getObsoleteBuildingCount(int /*BuildingTypes*/ eIndex);
+	int	 getObsoleteBuildingCount(int /*BuildingTypes*/ eIndex);
 	bool isObsoleteBuilding(int /*BuildingTypes*/ eIndex);
 
-	int getResearchProgress(int /*TechTypes*/ eIndex);
+	int	 getResearchProgress(int /*TechTypes*/ eIndex);
 	void setResearchProgress(int /*TechTypes*/ eIndex, int iNewValue, int /*PlayerTypes*/ ePlayer);
 	void changeResearchProgress(int /*TechTypes*/ eIndex, int iChange, int /*PlayerTypes*/ ePlayer);
-	int getTechCount(int /*TechTypes*/ eIndex);
+	int	 getTechCount(int /*TechTypes*/ eIndex);
 
 	bool isTerrainTrade(int /*TerrainTypes*/ eIndex);
 	bool isRiverTrade();
@@ -224,7 +224,7 @@ public:
 	bool isNoTradeTech(int /*TechType */ iIndex);
 	void setNoTradeTech(int /*TechTypes*/ eIndex, bool bNewValue);
 
-	int getImprovementYieldChange(int /*ImprovementTypes*/ eIndex, int /*YieldTypes*/ eIndex2);
+	int	 getImprovementYieldChange(int /*ImprovementTypes*/ eIndex, int /*YieldTypes*/ eIndex2);
 	void changeImprovementYieldChange(int /*ImprovementTypes*/ eIndex1, int /*YieldTypes*/ eIndex2, int iChange);
 
 	//***************************************
@@ -236,52 +236,51 @@ public:
 	//***************************************
 
 
-	int getVictoryCountdown(int /*VictoryTypes*/ eVictory);
-	int getVictoryDelay(int /*VictoryTypes*/ eVictory);
+	int	 getVictoryCountdown(int /*VictoryTypes*/ eVictory);
+	int	 getVictoryDelay(int /*VictoryTypes*/ eVictory);
 	bool canLaunch(int /*VictoryTypes*/ eVictory);
-	int getLaunchSuccessRate(int /*VictoryTypes*/ eVictory);
+	int	 getLaunchSuccessRate(int /*VictoryTypes*/ eVictory);
 
-	int getEspionagePointsAgainstTeam(int /*TeamTypes*/ eIndex);
+	int	 getEspionagePointsAgainstTeam(int /*TeamTypes*/ eIndex);
 	void setEspionagePointsAgainstTeam(int /*TeamTypes*/ eIndex, int iValue);
 	void changeEspionagePointsAgainstTeam(int /*TeamTypes*/ eIndex, int iChange);
-	int getEspionagePointsEver();
+	int	 getEspionagePointsEver();
 	void setEspionagePointsEver(int iValue);
 	void changeEspionagePointsEver(int iChange);
-	int getCounterespionageTurnsLeftAgainstTeam(int /*TeamTypes*/ eIndex);
+	int	 getCounterespionageTurnsLeftAgainstTeam(int /*TeamTypes*/ eIndex);
 	void setCounterespionageTurnsLeftAgainstTeam(int /*TeamTypes*/ eIndex, int iValue);
 	void changeCounterespionageTurnsLeftAgainstTeam(int /*TeamTypes*/ eIndex, int iChange);
-	int getCounterespionageModAgainstTeam(int /*TeamTypes*/ eIndex);
+	int	 getCounterespionageModAgainstTeam(int /*TeamTypes*/ eIndex);
 	void setCounterespionageModAgainstTeam(int /*TeamTypes*/ eIndex, int iValue);
 	void changeCounterespionageModAgainstTeam(int /*TeamTypes*/ eIndex, int iChange);
 
 	bool AI_shareWar(int /*TeamTypes*/ eTeam);
 	void AI_setWarPlan(int /*TeamTypes*/ eIndex, int /*WarPlanTypes*/ eNewValue);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      01/12/09                                jdog5000      */
-/*                                                                                              */
-/* Player Interface                                                                             */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* BETTER_BTS_AI_MOD                      01/12/09                                jdog5000      */
+	/*                                                                                              */
+	/* Player Interface                                                                             */
+	/************************************************************************************************/
 	int AI_getWarPlan(int /*TeamTypes*/ eIndex) const;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* BETTER_BTS_AI_MOD                       END                                                  */
+	/************************************************************************************************/
 	int AI_getAtWarCounter(int /*TeamTypes*/ eTeam) const;
 	int AI_getAtPeaceCounter(int /*TeamTypes*/ eTeam) const;
 	int AI_getWarSuccess(int /*TeamTypes*/ eIndex) const;
-/************************************************************************************************/
-/* Afforess	                  Start		 03/10/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* Afforess	                  Start		 03/10/10                                               */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
 	bool isHasEmbassy(int /*TeamTypes*/ eIndex) const;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* Afforess	                     END                                                            */
+	/************************************************************************************************/
 	int getWinForLosingResearchModifier() const;
-protected:
 
+  protected:
 	CvTeam* m_pTeam;
-
 };
 
-#endif	// #ifndef CyTeam
+#endif // #ifndef CyTeam

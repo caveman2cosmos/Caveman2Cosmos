@@ -41,98 +41,105 @@ enum UnitFilterTypes
 
 class UnitFilterBase
 {
-public:
-	UnitFilterBase(bool bInvert = false): m_bInvert(bInvert), m_bActive(false) {};
+  public:
+	UnitFilterBase(bool bInvert = false)
+		: m_bInvert(bInvert), m_bActive(false){};
 	virtual ~UnitFilterBase();
 	// Returns true if the unit has the filter property
-	bool isFiltered(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit);
+	bool isFiltered(CvPlayer* pPlayer, CvCity* pCity, UnitTypes eUnit);
 	bool isActive();
 	bool setActive(bool bActive);
 	void Activate();
 	void Deactivate();
 
-protected:
-	virtual bool isFilteredUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit) = 0;
-	bool m_bActive;
-	bool m_bInvert;
+  protected:
+	virtual bool isFilteredUnit(CvPlayer* pPlayer, CvCity* pCity, UnitTypes eUnit) = 0;
+	bool		 m_bActive;
+	bool		 m_bInvert;
 };
 
 class UnitFilterCanBuild : public UnitFilterBase
 {
-public:
-	UnitFilterCanBuild(bool bShowSomeUnconstructable = false, bool bInvert = false) : UnitFilterBase(bInvert), m_bShowSomeUnconstructable(bShowSomeUnconstructable) {};
-	bool isFilteredUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit);
+  public:
+	UnitFilterCanBuild(bool bShowSomeUnconstructable = false, bool bInvert = false)
+		: UnitFilterBase(bInvert), m_bShowSomeUnconstructable(bShowSomeUnconstructable){};
+	bool isFilteredUnit(CvPlayer* pPlayer, CvCity* pCity, UnitTypes eUnit);
 
-protected:
+  protected:
 	bool m_bShowSomeUnconstructable;
 };
 
 class UnitFilterIsCombat : public UnitFilterBase
 {
-public:
-	explicit UnitFilterIsCombat(UnitCombatTypes eCombat, bool bInvert = false) : UnitFilterBase(bInvert), m_eCombat(eCombat) {};
-	bool isFilteredUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit);
+  public:
+	explicit UnitFilterIsCombat(UnitCombatTypes eCombat, bool bInvert = false)
+		: UnitFilterBase(bInvert), m_eCombat(eCombat){};
+	bool isFilteredUnit(CvPlayer* pPlayer, CvCity* pCity, UnitTypes eUnit);
 
-protected:
+  protected:
 	UnitCombatTypes m_eCombat;
 };
 
 class UnitFilterIsCombats : public UnitFilterBase
 {
-public:
-	UnitFilterIsCombats(bool bInvert = false) : UnitFilterBase(bInvert) {};
-	bool isFilteredUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit);
+  public:
+	UnitFilterIsCombats(bool bInvert = false)
+		: UnitFilterBase(bInvert){};
+	bool isFilteredUnit(CvPlayer* pPlayer, CvCity* pCity, UnitTypes eUnit);
 	void addCombat(UnitCombatTypes eCombat);
 	bool isEmpty();
 
-protected:
+  protected:
 	std::vector<UnitCombatTypes> m_eCombats;
 };
 
 class UnitFilterIsLimited : public UnitFilterBase
 {
-public:
-	UnitFilterIsLimited(bool bInvert = false) : UnitFilterBase(bInvert) {};
-	bool isFilteredUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit);
+  public:
+	UnitFilterIsLimited(bool bInvert = false)
+		: UnitFilterBase(bInvert){};
+	bool isFilteredUnit(CvPlayer* pPlayer, CvCity* pCity, UnitTypes eUnit);
 };
 
 class UnitFilterIsDomain : public UnitFilterBase
 {
-public:
-	explicit UnitFilterIsDomain(DomainTypes eDomain, bool bInvert = false) : UnitFilterBase(bInvert), m_eDomain(eDomain) {};
-	bool isFilteredUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit);
+  public:
+	explicit UnitFilterIsDomain(DomainTypes eDomain, bool bInvert = false)
+		: UnitFilterBase(bInvert), m_eDomain(eDomain){};
+	bool isFilteredUnit(CvPlayer* pPlayer, CvCity* pCity, UnitTypes eUnit);
 
-protected:
+  protected:
 	DomainTypes m_eDomain;
 };
 
 class UnitFilterIsDefense : public UnitFilterBase
 {
-public:
-	UnitFilterIsDefense(bool bInvert = false) : UnitFilterBase(bInvert) {};
-	bool isFilteredUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit);
+  public:
+	UnitFilterIsDefense(bool bInvert = false)
+		: UnitFilterBase(bInvert){};
+	bool isFilteredUnit(CvPlayer* pPlayer, CvCity* pCity, UnitTypes eUnit);
 };
 
 class UnitFilterList
 {
-public:
-	UnitFilterList(CvPlayer *pPlayer = NULL, CvCity *pCity = NULL);
+  public:
+	UnitFilterList(CvPlayer* pPlayer = NULL, CvCity* pCity = NULL);
 	~UnitFilterList();
 	void init();
 	bool isFilterActive(UnitFilterTypes i);
 	bool setFilterActive(UnitFilterTypes i, bool bActive);
-	int getNumFilters();
+	int	 getNumFilters();
 	void setPlayer(CvPlayer* pPlayer);
 	void setCity(CvCity* pCity);
 	bool isFiltered(UnitTypes eUnit);
 
 	static void setFilterActiveAll(UnitFilterTypes eFilter, bool bActive);
 
-protected:
+  protected:
 	UnitFilterBase* m_apUnitFilters[NUM_UNIT_FILTERS];
-	CvCity* m_pCity;
-	CvPlayer* m_pPlayer;
-	bool m_bInit;
+	CvCity*			m_pCity;
+	CvPlayer*		m_pPlayer;
+	bool			m_bInit;
 };
 
 #endif

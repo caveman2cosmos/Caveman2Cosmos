@@ -10,33 +10,15 @@
 #include <boost/algorithm/string.hpp>
 
 
-CvOutcome::CvOutcome(): m_eUnitType(NO_UNIT),
-						m_iChance(NULL),
-						m_eType(NO_OUTCOME),
-						m_ePromotionType(NO_PROMOTION),
-						m_iGPP(0),
-						m_eGPUnitType(NO_UNIT),
-						m_eBonusType(NO_BONUS),
-						m_bUnitToCity(NULL),
-						m_eEventTrigger(NO_EVENTTRIGGER),
-						m_pPlotCondition(NULL),
-						m_pUnitCondition(NULL),
-						m_bKill(false),
-						m_iChancePerPop(0),
-						m_iHappinessTimer(0),
-						m_iPopulationBoost(0),
-						m_iReduceAnarchyLength(NULL),
-						m_pPythonAIFunc(NULL),
-						m_pPythonDisplayFunc(NULL),
-						m_pPythonExecFunc(NULL),
-						m_pPythonPossibleFunc(NULL)
+CvOutcome::CvOutcome()
+	: m_eUnitType(NO_UNIT), m_iChance(NULL), m_eType(NO_OUTCOME), m_ePromotionType(NO_PROMOTION), m_iGPP(0), m_eGPUnitType(NO_UNIT), m_eBonusType(NO_BONUS), m_bUnitToCity(NULL), m_eEventTrigger(NO_EVENTTRIGGER), m_pPlotCondition(NULL), m_pUnitCondition(NULL), m_bKill(false), m_iChancePerPop(0), m_iHappinessTimer(0), m_iPopulationBoost(0), m_iReduceAnarchyLength(NULL), m_pPythonAIFunc(NULL), m_pPythonDisplayFunc(NULL), m_pPythonExecFunc(NULL), m_pPythonPossibleFunc(NULL)
 {
-	for (int i=0; i<NUM_YIELD_TYPES; i++)
+	for (int i = 0; i < NUM_YIELD_TYPES; i++)
 	{
 		m_aiYield[i] = NULL;
 	}
 
-	for (int i=0; i<NUM_COMMERCE_TYPES; i++)
+	for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
 	{
 		m_aiCommerce[i] = NULL;
 	}
@@ -56,11 +38,11 @@ CvOutcome::~CvOutcome()
 	SAFE_DELETE(m_pPlotCondition);
 	SAFE_DELETE(m_pUnitCondition);
 
-	for (int i=0; i<NUM_YIELD_TYPES; i++)
+	for (int i = 0; i < NUM_YIELD_TYPES; i++)
 	{
 		SAFE_DELETE(m_aiYield[i]);
 	}
-	for (int i=0; i<NUM_COMMERCE_TYPES; i++)
+	for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
 	{
 		SAFE_DELETE(m_aiCommerce[i]);
 	}
@@ -153,7 +135,7 @@ int CvOutcome::getPopulationBoost()
 	return m_iPopulationBoost;
 }
 
-int CvOutcome::getReduceAnarchyLength(const CvUnit &kUnit) const
+int CvOutcome::getReduceAnarchyLength(const CvUnit& kUnit) const
 {
 	if (m_iReduceAnarchyLength)
 	{
@@ -197,13 +179,13 @@ void preparePython(CvString& szCode)
 
 	// we want to remove the amount of space at the start of first code line from all code lines as there might be arbitrary indentation from the XML
 	CvString szXMLSpace;
-	bool bFinished = false;
+	bool	 bFinished = false;
 
 	// read the string line by line
 	while (!bFinished)
 	{
-		int iPos = 0;
-		bool bComment = false;
+		int	 iPos		   = 0;
+		bool bComment	   = false;
 		bool bLineFinished = false;
 		szXMLSpace.clear();
 		while (!bFinished && !bLineFinished)
@@ -218,41 +200,40 @@ void preparePython(CvString& szCode)
 			char c = szCode[iPos];
 			switch (c)
 			{
-				case ' ':
-				case '\t':
-					if (!bComment)
-					{
-						szXMLSpace.append(1, c);
-					}
-					break;
+			case ' ':
+			case '\t':
+				if (!bComment)
+				{
+					szXMLSpace.append(1, c);
+				}
+				break;
 
-				case '\r':
-					break;
+			case '\r':
+				break;
 
-				case '\n':
-					// end of line, erase it from the string
-					szCode.erase(0, iPos + 1);
-					bLineFinished = true;
-					break;
+			case '\n':
+				// end of line, erase it from the string
+				szCode.erase(0, iPos + 1);
+				bLineFinished = true;
+				break;
 
-				case '#':
-					// comment
-					bComment = true;
-					break;
+			case '#':
+				// comment
+				bComment = true;
+				break;
 
-				default:
-					// something else, assume actual code, remove line until this char without itself
-					szCode.erase(0, iPos);
-					bFinished = true;
-					break;
+			default:
+				// something else, assume actual code, remove line until this char without itself
+				szCode.erase(0, iPos);
+				bFinished = true;
+				break;
 			}
 			iPos++;
 		}
 	}
 
 	// now remove this amount of white space from every line
-	boost::replace_all(szCode, "\n"+szXMLSpace, "\n");
-	
+	boost::replace_all(szCode, "\n" + szXMLSpace, "\n");
 }
 
 void CvOutcome::compilePython()
@@ -275,31 +256,31 @@ void CvOutcome::compilePython()
 	{
 		return;
 	}
-	
-	PyObject* pDictionary = PyModule_GetDict(pModule);   // borrowed reference
 
-	PyObject* pFunc = PyDict_GetItemString(pDictionary, "isPossible");     // borrowed reference
+	PyObject* pDictionary = PyModule_GetDict(pModule); // borrowed reference
+
+	PyObject* pFunc = PyDict_GetItemString(pDictionary, "isPossible"); // borrowed reference
 	if (pFunc)
 	{
 		Py_INCREF(pFunc);
 		m_pPythonPossibleFunc = pFunc;
 	}
 
-	pFunc = PyDict_GetItemString(pDictionary, "doOutcome");     // borrowed reference
+	pFunc = PyDict_GetItemString(pDictionary, "doOutcome"); // borrowed reference
 	if (pFunc)
 	{
 		Py_INCREF(pFunc);
 		m_pPythonExecFunc = pFunc;
 	}
 
-	pFunc = PyDict_GetItemString(pDictionary, "getDisplay");     // borrowed reference
+	pFunc = PyDict_GetItemString(pDictionary, "getDisplay"); // borrowed reference
 	if (pFunc)
 	{
 		Py_INCREF(pFunc);
 		m_pPythonDisplayFunc = pFunc;
 	}
 
-	pFunc = PyDict_GetItemString(pDictionary, "getAIValue");     // borrowed reference
+	pFunc = PyDict_GetItemString(pDictionary, "getAIValue"); // borrowed reference
 	if (pFunc)
 	{
 		Py_INCREF(pFunc);
@@ -307,13 +288,12 @@ void CvOutcome::compilePython()
 	}
 
 	Py_XDECREF(pModule);
-
 }
 
-int CvOutcome::getChance(const CvUnit &kUnit) const
+int CvOutcome::getChance(const CvUnit& kUnit) const
 {
-	int iChance = m_iChance->evaluate(const_cast<CvUnit&>(kUnit).getGameObject());
-	CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
+	int			   iChance = m_iChance->evaluate(const_cast<CvUnit&>(kUnit).getGameObject());
+	CvOutcomeInfo& kInfo   = GC.getOutcomeInfo(m_eType);
 
 	CvCity* pCity = kUnit.plot()->getPlotCity();
 
@@ -321,8 +301,8 @@ int CvOutcome::getChance(const CvUnit &kUnit) const
 	{
 		iChance += getChancePerPop() * pCity->getPopulation();
 	}
-	
-	for (int i=0; i<kInfo.getNumExtraChancePromotions(); i++)
+
+	for (int i = 0; i < kInfo.getNumExtraChancePromotions(); i++)
 	{
 		if (kUnit.isHasPromotion(kInfo.getExtraChancePromotion(i)))
 		{
@@ -334,7 +314,7 @@ int CvOutcome::getChance(const CvUnit &kUnit) const
 
 bool CvOutcome::isPossible(const CvUnit& kUnit) const
 {
-	CvTeam& kTeam = GET_TEAM(kUnit.getTeam());
+	CvTeam&		   kTeam = GET_TEAM(kUnit.getTeam());
 	CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
 
 	if (!kTeam.isHasTech(kInfo.getPrereqTech()))
@@ -382,8 +362,8 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 		}
 	}
 
-	TeamTypes eOwnerTeam = GET_PLAYER(kUnit.getOwnerINLINE()).getTeam();
-	CvTeam& kOwnerTeam = GET_TEAM(eOwnerTeam);
+	TeamTypes	eOwnerTeam = GET_PLAYER(kUnit.getOwnerINLINE()).getTeam();
+	CvTeam&		kOwnerTeam = GET_TEAM(eOwnerTeam);
 	PlayerTypes ePlotOwner = kUnit.plot()->getOwnerINLINE();
 	if (ePlotOwner == NO_PLAYER)
 	{
@@ -404,7 +384,7 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 		else
 		{
 			TeamTypes ePlotOwnerTeam = GET_PLAYER(ePlotOwner).getTeam();
-			CvTeam& kPlotOwnerTeam = GET_TEAM(ePlotOwnerTeam);
+			CvTeam&	  kPlotOwnerTeam = GET_TEAM(ePlotOwnerTeam);
 			if (kOwnerTeam.isAtWar(ePlotOwnerTeam))
 			{
 				if (!kInfo.getHostileTerritory())
@@ -438,7 +418,7 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 			return false;
 		}
 
-		for (int i=0; i<iPrereqBuildings; i++)
+		for (int i = 0; i < iPrereqBuildings; i++)
 		{
 			if (pCity->getNumBuilding(kInfo.getPrereqBuilding(i)) <= 0)
 			{
@@ -522,7 +502,7 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 
 	if (m_eEventTrigger != NO_EVENTTRIGGER)
 	{
-		CvPlayer& kOwner = GET_PLAYER(kUnit.getOwnerINLINE());
+		CvPlayer&			kOwner		 = GET_PLAYER(kUnit.getOwnerINLINE());
 		CvEventTriggerInfo& kTriggerInfo = GC.getEventTriggerInfo(m_eEventTrigger);
 		if (!kOwner.isEventTriggerPossible(m_eEventTrigger, true))
 		{
@@ -568,14 +548,14 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 
 	if (m_pPythonPossibleFunc)
 	{
-		CyUnit cyUnit(const_cast<CvUnit*>(&kUnit));
+		CyUnit	  cyUnit(const_cast<CvUnit*>(&kUnit));
 		PyObject* pyUnit = gDLL->getPythonIFace()->makePythonObject(&cyUnit);
-		CyPlot cyPlot(const_cast<CvPlot*>(kUnit.plot()));
+		CyPlot	  cyPlot(const_cast<CvPlot*>(kUnit.plot()));
 		PyObject* pyPlot = gDLL->getPythonIFace()->makePythonObject(&cyPlot);
-		
+
 		PyObject* pyResult = PyObject_CallFunctionObjArgs(m_pPythonPossibleFunc, pyUnit, pyPlot, NULL);
-		bool bResult = boost::python::extract<bool>(pyResult);
-		
+		bool	  bResult  = boost::python::extract<bool>(pyResult);
+
 		Py_XDECREF(pyResult);
 		Py_DECREF(pyUnit);
 		Py_DECREF(pyPlot);
@@ -592,7 +572,7 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 // Can return a false positive if an outcome requires a building combination
 bool CvOutcome::isPossibleSomewhere(const CvUnit& kUnit) const
 {
-	CvTeam& kTeam = GET_TEAM(kUnit.getTeam());
+	CvTeam&		   kTeam = GET_TEAM(kUnit.getTeam());
 	CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
 
 	if (!kTeam.isHasTech(kInfo.getPrereqTech()))
@@ -622,7 +602,7 @@ bool CvOutcome::isPossibleSomewhere(const CvUnit& kUnit) const
 	int iPrereqBuildings = kInfo.getNumPrereqBuildings();
 	if (iPrereqBuildings > 0)
 	{
-		for (int i=0; i<iPrereqBuildings; i++)
+		for (int i = 0; i < iPrereqBuildings; i++)
 		{
 			if (GET_PLAYER(kUnit.getOwnerINLINE()).getBuildingClassCount((BuildingClassTypes)GC.getBuildingInfo(kInfo.getPrereqBuilding(i)).getBuildingClassType()) <= 0)
 			{
@@ -686,7 +666,7 @@ bool CvOutcome::isPossibleSomewhere(const CvUnit& kUnit) const
 
 bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool bForTrade) const
 {
-	CvTeam& kTeam = GET_TEAM(kUnit.getTeam());
+	CvTeam&		   kTeam = GET_TEAM(kUnit.getTeam());
 	CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
 
 	if (!kTeam.isHasTech(kInfo.getPrereqTech()))
@@ -726,8 +706,8 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 		}
 	}
 
-	TeamTypes eOwnerTeam = GET_PLAYER(kUnit.getOwnerINLINE()).getTeam();
-	CvTeam& kOwnerTeam = GET_TEAM(eOwnerTeam);
+	TeamTypes	eOwnerTeam = GET_PLAYER(kUnit.getOwnerINLINE()).getTeam();
+	CvTeam&		kOwnerTeam = GET_TEAM(eOwnerTeam);
 	PlayerTypes ePlotOwner = kPlot.getOwnerINLINE();
 	if (ePlotOwner == NO_PLAYER)
 	{
@@ -748,7 +728,7 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 		else
 		{
 			TeamTypes ePlotOwnerTeam = GET_PLAYER(ePlotOwner).getTeam();
-			CvTeam& kPlotOwnerTeam = GET_TEAM(ePlotOwnerTeam);
+			CvTeam&	  kPlotOwnerTeam = GET_TEAM(ePlotOwnerTeam);
 			if (kOwnerTeam.isAtWar(ePlotOwnerTeam))
 			{
 				if (!kInfo.getHostileTerritory())
@@ -782,7 +762,7 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 			return false;
 		}
 
-		for (int i=0; i<iPrereqBuildings; i++)
+		for (int i = 0; i < iPrereqBuildings; i++)
 		{
 			if (pCity->getNumBuilding(kInfo.getPrereqBuilding(i)) <= 0)
 			{
@@ -866,7 +846,7 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 
 	if (m_eEventTrigger != NO_EVENTTRIGGER)
 	{
-		CvPlayer& kOwner = GET_PLAYER(kUnit.getOwnerINLINE());
+		CvPlayer&			kOwner		 = GET_PLAYER(kUnit.getOwnerINLINE());
 		CvEventTriggerInfo& kTriggerInfo = GC.getEventTriggerInfo(m_eEventTrigger);
 		if (!kOwner.isEventTriggerPossible(m_eEventTrigger, true))
 		{
@@ -912,13 +892,13 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 
 	if (m_pPythonPossibleFunc)
 	{
-		CyUnit cyUnit(const_cast<CvUnit*>(&kUnit));
+		CyUnit	  cyUnit(const_cast<CvUnit*>(&kUnit));
 		PyObject* pyUnit = gDLL->getPythonIFace()->makePythonObject(&cyUnit);
-		CyPlot cyPlot(const_cast<CvPlot*>(&kPlot));
+		CyPlot	  cyPlot(const_cast<CvPlot*>(&kPlot));
 		PyObject* pyPlot = gDLL->getPythonIFace()->makePythonObject(&cyPlot);
 
 		PyObject* pyResult = PyObject_CallFunctionObjArgs(m_pPythonPossibleFunc, pyUnit, pyPlot, NULL);
-		bool bResult = boost::python::extract<bool>(pyResult);
+		bool	  bResult  = boost::python::extract<bool>(pyResult);
 
 		Py_XDECREF(pyResult);
 		Py_DECREF(pyUnit);
@@ -935,7 +915,7 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 
 bool CvOutcome::isPossible(const CvPlayerAI& kPlayer) const
 {
-	CvTeam& kTeam = GET_TEAM(kPlayer.getTeam());
+	CvTeam&		   kTeam = GET_TEAM(kPlayer.getTeam());
 	CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
 
 	if (!kTeam.isHasTech(kInfo.getPrereqTech()))
@@ -1003,7 +983,7 @@ bool CvOutcome::isPossible(const CvPlayerAI& kPlayer) const
 	return true;
 }
 
-bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitTypes eDefeatedUnitType) const
+bool CvOutcome::execute(CvUnit& kUnit, PlayerTypes eDefeatedUnitPlayer, UnitTypes eDefeatedUnitType) const
 {
 	if (!isPossible(kUnit))
 	{
@@ -1012,8 +992,8 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 
 	CvWStringBuffer szBuffer;
 
-	CvPlayer& kPlayer = GET_PLAYER(kUnit.getOwnerINLINE());
-	bool bToCoastalCity = GC.getOutcomeInfo(getType()).getToCoastalCity();
+	CvPlayer&	kPlayer		   = GET_PLAYER(kUnit.getOwnerINLINE());
+	bool		bToCoastalCity = GC.getOutcomeInfo(getType()).getToCoastalCity();
 	CvUnitInfo* pUnitInfo;
 	if (eDefeatedUnitType > NO_UNIT)
 		pUnitInfo = &GC.getUnitInfo(eDefeatedUnitType);
@@ -1021,7 +1001,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 		pUnitInfo = &kUnit.getUnitInfo();
 
 	CvWString& szMessage = GC.getOutcomeInfo(getType()).getMessageText();
-	bool bNothing = true;
+	bool	   bNothing	 = true;
 	if (!szMessage.empty())
 	{
 		szBuffer.append(gDLL->getText(szMessage, kUnit.getNameKey(), pUnitInfo->getDescription()));
@@ -1046,10 +1026,10 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 	}
 
 	bool bUnitToCity = getUnitToCity(kUnit);
-	if (GC.getGame().isOption(GAMEOPTION_TELEPORT_HUNTING_AWARDS) && 
-		m_eUnitType > NO_UNIT && 
+	if (GC.getGame().isOption(GAMEOPTION_TELEPORT_HUNTING_AWARDS) &&
+		m_eUnitType > NO_UNIT &&
 		(GC.getUnitInfo(m_eUnitType).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_SUBDUED")) ||
-		GC.getUnitInfo(m_eUnitType).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_IDEA"))))
+		 GC.getUnitInfo(m_eUnitType).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_IDEA"))))
 	{
 		bUnitToCity = true;
 	}
@@ -1058,7 +1038,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 		CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, kUnit.plot()->getX_INLINE(), kUnit.plot()->getY_INLINE(), (UnitAITypes)GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
 		FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
 		int iDmg = GC.getDefineINT("ANIMAL_DAMAGE_PERCENT_AFTER_SUBDUE");
-		iDmg = (iDmg * pUnit->maxHitPoints())/100;
+		iDmg	 = (iDmg * pUnit->maxHitPoints()) / 100;
 		pUnit->setDamage(iDmg, NO_PLAYER, false);
 		pUnit->finishMoves();
 
@@ -1077,12 +1057,12 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 	int aiYield[NUM_YIELD_TYPES];
 	int aiCommerce[NUM_COMMERCE_TYPES];
 
-	for (int i=0; i<NUM_YIELD_TYPES; i++)
+	for (int i = 0; i < NUM_YIELD_TYPES; i++)
 	{
 		aiYield[i] = getYield((YieldTypes)i, kUnit);
 	}
 
-	for (int i=0; i<NUM_COMMERCE_TYPES; i++)
+	for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
 	{
 		aiCommerce[i] = getCommerce((CommerceTypes)i, kUnit);
 	}
@@ -1168,7 +1148,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 			if (iReduce)
 			{
 				int iOccupation = pCity->getOccupationTimer();
-				iReduce = std::min(iReduce, iOccupation);
+				iReduce			= std::min(iReduce, iOccupation);
 				if (iReduce)
 				{
 					pCity->changeOccupationTimer(-iReduce);
@@ -1182,7 +1162,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 				CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, pCity->getX_INLINE(), pCity->getY_INLINE(), (UnitAITypes)GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
 				FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
 				int iDmg = GC.getDefineINT("ANIMAL_DAMAGE_PERCENT_AFTER_SUBDUE");
-				iDmg = (iDmg * pUnit->maxHitPoints())/100;
+				iDmg	 = (iDmg * pUnit->maxHitPoints()) / 100;
 				pUnit->setDamage(iDmg, NO_PLAYER, false);
 				pUnit->finishMoves();
 
@@ -1197,21 +1177,21 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 		}
 	}
 
-	int iGoldTimes100 = 0;
-	int iResearchTimes100 = 0;
+	int iGoldTimes100	   = 0;
+	int iResearchTimes100  = 0;
 	int iEspionageTimes100 = 0;
 
 	if (aiYield[YIELD_COMMERCE])
 	{
-		iGoldTimes100 = aiYield[YIELD_COMMERCE] * kPlayer.getCommercePercent(COMMERCE_GOLD);
-		iResearchTimes100 = aiYield[YIELD_COMMERCE] * kPlayer.getCommercePercent(COMMERCE_RESEARCH);
+		iGoldTimes100	   = aiYield[YIELD_COMMERCE] * kPlayer.getCommercePercent(COMMERCE_GOLD);
+		iResearchTimes100  = aiYield[YIELD_COMMERCE] * kPlayer.getCommercePercent(COMMERCE_RESEARCH);
 		iEspionageTimes100 = aiYield[YIELD_COMMERCE] * kPlayer.getCommercePercent(COMMERCE_ESPIONAGE);
 	}
 
 	iGoldTimes100 += aiCommerce[COMMERCE_GOLD] * 100;
 	iResearchTimes100 += aiCommerce[COMMERCE_RESEARCH] * 100;
 	iEspionageTimes100 += aiCommerce[COMMERCE_ESPIONAGE] * 100;
-	
+
 	if (iGoldTimes100)
 	{
 		kPlayer.changeGold(iGoldTimes100 / 100);
@@ -1331,7 +1311,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 
 		long lResult;
 
-		CyUnit* pyUnit = new CyUnit(&kUnit);
+		CyUnit*	   pyUnit = new CyUnit(&kUnit);
 		CyArgsList argsList;
 		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyUnit));
 		argsList.add((int)eDefeatedUnitPlayer);
@@ -1343,11 +1323,11 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 
 	if (m_pPythonExecFunc)
 	{
-		CyUnit cyUnit(&kUnit);
+		CyUnit	  cyUnit(&kUnit);
 		PyObject* pyUnit = gDLL->getPythonIFace()->makePythonObject(&cyUnit);
-		CyPlot cyPlot(kUnit.plot());
-		PyObject* pyPlot = gDLL->getPythonIFace()->makePythonObject(&cyPlot);
-		PyObject* pyDefeatedPlayer = gDLL->getPythonIFace()->makePythonObject(&eDefeatedUnitPlayer);
+		CyPlot	  cyPlot(kUnit.plot());
+		PyObject* pyPlot			 = gDLL->getPythonIFace()->makePythonObject(&cyPlot);
+		PyObject* pyDefeatedPlayer	 = gDLL->getPythonIFace()->makePythonObject(&eDefeatedUnitPlayer);
 		PyObject* pyDefeatedUnitType = gDLL->getPythonIFace()->makePythonObject(&eDefeatedUnitType);
 
 		PyObject* pyResult = PyObject_CallFunctionObjArgs(m_pPythonExecFunc, pyUnit, pyPlot, pyDefeatedPlayer, pyDefeatedUnitType, NULL);
@@ -1368,7 +1348,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 	return true;
 }
 
-int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool bForTrade) const
+int CvOutcome::AI_getValueInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool bForTrade) const
 {
 	if (!isPossibleInPlot(kUnit, kPlot, bForTrade))
 	{
@@ -1377,8 +1357,8 @@ int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool 
 
 	int iValue = 0;
 
-	CvPlayerAI& kPlayer = GET_PLAYER(kUnit.getOwnerINLINE());
-	bool bToCoastalCity = GC.getOutcomeInfo(getType()).getToCoastalCity();
+	CvPlayerAI& kPlayer		   = GET_PLAYER(kUnit.getOwnerINLINE());
+	bool		bToCoastalCity = GC.getOutcomeInfo(getType()).getToCoastalCity();
 	//CvUnitInfo* pUnitInfo = &kUnit.getUnitInfo();
 
 	if (m_ePromotionType > NO_PROMOTION)
@@ -1386,9 +1366,9 @@ int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool 
 		iValue += kPlayer.AI_promotionValue(m_ePromotionType, kUnit.getUnitType(), &kUnit, kUnit.AI_getUnitAIType());
 	}
 
-	if ( m_eEventTrigger != NO_EVENTTRIGGER )
+	if (m_eEventTrigger != NO_EVENTTRIGGER)
 	{
-		int iTempValue;
+		int					iTempValue;
 		EventTriggeredData* pTriggerData;
 
 		CvEventTriggerInfo& kTriggerInfo = GC.getEventTriggerInfo(m_eEventTrigger);
@@ -1401,11 +1381,11 @@ int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool 
 			pTriggerData = kPlayer.initTriggeredData(m_eEventTrigger, false, -1, kPlot.getX_INLINE(), kPlot.getY_INLINE());
 		}
 
-		if ( NO_EVENT != kPlayer.AI_chooseEvent(pTriggerData->getID(), &iTempValue) )
+		if (NO_EVENT != kPlayer.AI_chooseEvent(pTriggerData->getID(), &iTempValue))
 		{
 			iValue += iTempValue;
 		}
-		
+
 		kPlayer.deleteEventTriggered(pTriggerData->getID());
 	}
 
@@ -1418,12 +1398,12 @@ int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool 
 	int aiYield[NUM_YIELD_TYPES];
 	int aiCommerce[NUM_COMMERCE_TYPES];
 
-	for (int i=0; i<NUM_YIELD_TYPES; i++)
+	for (int i = 0; i < NUM_YIELD_TYPES; i++)
 	{
 		aiYield[i] = getYield((YieldTypes)i, kUnit);
 	}
 
-	for (int i=0; i<NUM_COMMERCE_TYPES; i++)
+	for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
 	{
 		aiCommerce[i] = getCommerce((CommerceTypes)i, kUnit);
 	}
@@ -1432,11 +1412,11 @@ int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool 
 	if (aiYield[YIELD_PRODUCTION] || aiYield[YIELD_FOOD] || aiYield[YIELD_COMMERCE] || aiCommerce[COMMERCE_GOLD] || aiCommerce[COMMERCE_RESEARCH] || aiCommerce[COMMERCE_CULTURE] || aiCommerce[COMMERCE_ESPIONAGE] || m_iGPP)
 	{
 		// short circuit plot city as this method will be called for city plots most of the time
-		CvCityAI* pCity = (CvCityAI*) kPlot.getPlotCity();
+		CvCityAI* pCity = (CvCityAI*)kPlot.getPlotCity();
 		if (!pCity || (bToCoastalCity && (!pCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))))
-			pCity = (CvCityAI*) GC.getMapINLINE().findCity(kPlot.getX_INLINE(), kPlot.getY_INLINE(), kUnit.getOwnerINLINE(), NO_TEAM, true, bToCoastalCity);
+			pCity = (CvCityAI*)GC.getMapINLINE().findCity(kPlot.getX_INLINE(), kPlot.getY_INLINE(), kUnit.getOwnerINLINE(), NO_TEAM, true, bToCoastalCity);
 		if (!pCity)
-			pCity = (CvCityAI*) GC.getMapINLINE().findCity(kPlot.getX_INLINE(), kPlot.getY_INLINE(), kUnit.getOwnerINLINE(), NO_TEAM, false, bToCoastalCity);
+			pCity = (CvCityAI*)GC.getMapINLINE().findCity(kPlot.getX_INLINE(), kPlot.getY_INLINE(), kUnit.getOwnerINLINE(), NO_TEAM, false, bToCoastalCity);
 
 		if (pCity)
 		{
@@ -1445,9 +1425,9 @@ int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool 
 				// We need shorts and not ints
 				short aiYields[NUM_YIELD_TYPES];
 				short aiCommerces[NUM_COMMERCE_TYPES];
-				for (int i=0; i<NUM_YIELD_TYPES; i++)
+				for (int i = 0; i < NUM_YIELD_TYPES; i++)
 					aiYields[i] = (short)aiYield[i];
-				for (int i=0; i<NUM_COMMERCE_TYPES; i++)
+				for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
 					aiCommerces[i] = (short)aiCommerce[i];
 				iValue += pCity->AI_yieldValue(aiYields, aiCommerces, false, false);
 			}
@@ -1475,18 +1455,17 @@ int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool 
 			if (iReduce)
 			{
 				int iOccupation = pCity->getOccupationTimer();
-				iReduce = std::min(iReduce, iOccupation);
+				iReduce			= std::min(iReduce, iOccupation);
 				iValue += iReduce * 50; // pure guess, might be more or less valuable or some more complex code might be needed
 			}
 		}
-
 	}
 
 	if (m_pPythonAIFunc)
 	{
-		CyUnit cyUnit(const_cast<CvUnit*>(&kUnit));
+		CyUnit	  cyUnit(const_cast<CvUnit*>(&kUnit));
 		PyObject* pyUnit = gDLL->getPythonIFace()->makePythonObject(&cyUnit);
-		CyPlot cyPlot(const_cast<CvPlot*>(&kPlot));
+		CyPlot	  cyPlot(const_cast<CvPlot*>(&kPlot));
 		PyObject* pyPlot = gDLL->getPythonIFace()->makePythonObject(&cyPlot);
 
 		PyObject* pyResult = PyObject_CallFunctionObjArgs(m_pPythonAIFunc, pyUnit, pyPlot, NULL);
@@ -1543,16 +1522,16 @@ bool CvOutcome::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bKill, L"bKill");
 	pXML->GetOptionalChildXmlValByName(m_szPythonModuleName, L"PythonName");
 	pXML->GetOptionalChildXmlValByName(m_szPythonCode, L"Python");
-	
+
 	if (!m_szPythonCode.empty())
 	{
 		preparePython(m_szPythonCode);
 		compilePython();
 	}
-	
-	if(pXML->TryMoveToXmlFirstChild(L"Yields"))
+
+	if (pXML->TryMoveToXmlFirstChild(L"Yields"))
 	{
-		if(pXML->TryMoveToXmlFirstChild())
+		if (pXML->TryMoveToXmlFirstChild())
 		{
 
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"iYield"))
@@ -1563,16 +1542,16 @@ bool CvOutcome::read(CvXMLLoadUtility* pXML)
 					//pXML->GetXmlVal(&m_aiYield[iI]);
 					m_aiYield[iI] = IntExpr::read(pXML);
 					iI++;
-				} while(pXML->TryMoveToXmlNextSibling());
+				} while (pXML->TryMoveToXmlNextSibling());
 			}
 			pXML->MoveToXmlParent();
 		}
 		pXML->MoveToXmlParent();
 	}
 
-	if(pXML->TryMoveToXmlFirstChild(L"Commerces"))
+	if (pXML->TryMoveToXmlFirstChild(L"Commerces"))
 	{
-		if(pXML->TryMoveToXmlFirstChild())
+		if (pXML->TryMoveToXmlFirstChild())
 		{
 
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"iCommerce"))
@@ -1583,7 +1562,7 @@ bool CvOutcome::read(CvXMLLoadUtility* pXML)
 					//pXML->GetXmlVal(&m_aiCommerce[iI]);
 					m_aiCommerce[iI] = IntExpr::read(pXML);
 					iI++;
-				} while(pXML->TryMoveToXmlNextSibling());
+				} while (pXML->TryMoveToXmlNextSibling());
 			}
 			pXML->MoveToXmlParent();
 		}
@@ -1607,7 +1586,7 @@ bool CvOutcome::read(CvXMLLoadUtility* pXML)
 	return true;
 }
 
-void CvOutcome::copyNonDefaults(CvOutcome* pOutcome, CvXMLLoadUtility* pXML )
+void CvOutcome::copyNonDefaults(CvOutcome* pOutcome, CvXMLLoadUtility* pXML)
 {
 	GC.copyNonDefaultDelayedResolution((int*)&m_eType, (int*)&(pOutcome->m_eType));
 	//if (m_eType == NO_OUTCOME)
@@ -1616,7 +1595,7 @@ void CvOutcome::copyNonDefaults(CvOutcome* pOutcome, CvXMLLoadUtility* pXML )
 	//}
 	if (!m_iChance)
 	{
-		m_iChance = pOutcome->m_iChance;
+		m_iChance			= pOutcome->m_iChance;
 		pOutcome->m_iChance = NULL;
 	}
 	GC.copyNonDefaultDelayedResolution((int*)&m_eUnitType, (int*)&(pOutcome->m_eUnitType));
@@ -1626,7 +1605,7 @@ void CvOutcome::copyNonDefaults(CvOutcome* pOutcome, CvXMLLoadUtility* pXML )
 	//}
 	if (!m_bUnitToCity)
 	{
-		m_bUnitToCity = pOutcome->m_bUnitToCity;
+		m_bUnitToCity			= pOutcome->m_bUnitToCity;
 		pOutcome->m_bUnitToCity = NULL;
 	}
 	GC.copyNonDefaultDelayedResolution((int*)&m_ePromotionType, (int*)&(pOutcome->m_ePromotionType));
@@ -1657,35 +1636,35 @@ void CvOutcome::copyNonDefaults(CvOutcome* pOutcome, CvXMLLoadUtility* pXML )
 
 	if (!m_iReduceAnarchyLength)
 	{
-		m_iReduceAnarchyLength = pOutcome->m_iReduceAnarchyLength;
+		m_iReduceAnarchyLength			 = pOutcome->m_iReduceAnarchyLength;
 		pOutcome->m_iReduceAnarchyLength = NULL;
 	}
 
-	GC.copyNonDefaultDelayedResolution((int*)&m_eEventTrigger,(int*)&(pOutcome->m_eEventTrigger));
+	GC.copyNonDefaultDelayedResolution((int*)&m_eEventTrigger, (int*)&(pOutcome->m_eEventTrigger));
 
 	bool bDefault = true;
-	for (int i=0; i<NUM_YIELD_TYPES; i++)
+	for (int i = 0; i < NUM_YIELD_TYPES; i++)
 	{
 		bDefault = bDefault && !m_aiYield[i];
 	}
 	if (bDefault)
 	{
-		for (int i=0; i<NUM_YIELD_TYPES; i++)
+		for (int i = 0; i < NUM_YIELD_TYPES; i++)
 		{
-			m_aiYield[i] = pOutcome->m_aiYield[i];
+			m_aiYield[i]		   = pOutcome->m_aiYield[i];
 			pOutcome->m_aiYield[i] = NULL;
 		}
 	}
 	bDefault = true;
-	for (int i=0; i<NUM_COMMERCE_TYPES; i++)
+	for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
 	{
 		bDefault = bDefault && !m_aiCommerce[i];
 	}
 	if (bDefault)
 	{
-		for (int i=0; i<NUM_COMMERCE_TYPES; i++)
+		for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
 		{
-			m_aiCommerce[i] = pOutcome->m_aiCommerce[i];
+			m_aiCommerce[i]			  = pOutcome->m_aiCommerce[i];
 			pOutcome->m_aiCommerce[i] = NULL;
 		}
 	}
@@ -1694,44 +1673,47 @@ void CvOutcome::copyNonDefaults(CvOutcome* pOutcome, CvXMLLoadUtility* pXML )
 
 	if (!m_pPlotCondition)
 	{
-		m_pPlotCondition = pOutcome->m_pPlotCondition;
+		m_pPlotCondition		   = pOutcome->m_pPlotCondition;
 		pOutcome->m_pPlotCondition = NULL;
 	}
 
 	if (!m_pUnitCondition)
 	{
-		m_pUnitCondition = pOutcome->m_pUnitCondition;
+		m_pUnitCondition		   = pOutcome->m_pUnitCondition;
 		pOutcome->m_pUnitCondition = NULL;
 	}
 
-	if (m_szPythonCallback.empty()) m_szPythonCallback = pOutcome->m_szPythonCallback;
-	if (!m_bKill) m_bKill = pOutcome->m_bKill;
-	if (m_szPythonModuleName.empty()) m_szPythonModuleName = pOutcome->m_szPythonModuleName;
-	if (m_szPythonCode.empty()) m_szPythonCode = pOutcome->m_szPythonCode;
+	if (m_szPythonCallback.empty())
+		m_szPythonCallback = pOutcome->m_szPythonCallback;
+	if (!m_bKill)
+		m_bKill = pOutcome->m_bKill;
+	if (m_szPythonModuleName.empty())
+		m_szPythonModuleName = pOutcome->m_szPythonModuleName;
+	if (m_szPythonCode.empty())
+		m_szPythonCode = pOutcome->m_szPythonCode;
 	if (!m_pPythonAIFunc)
 	{
-		m_pPythonAIFunc = pOutcome->m_pPythonAIFunc;
+		m_pPythonAIFunc			  = pOutcome->m_pPythonAIFunc;
 		pOutcome->m_pPythonAIFunc = NULL;
 	}
 	if (!m_pPythonDisplayFunc)
 	{
-		m_pPythonDisplayFunc = pOutcome->m_pPythonDisplayFunc;
+		m_pPythonDisplayFunc		   = pOutcome->m_pPythonDisplayFunc;
 		pOutcome->m_pPythonDisplayFunc = NULL;
 	}
 	if (!m_pPythonExecFunc)
 	{
-		m_pPythonExecFunc = pOutcome->m_pPythonExecFunc;
+		m_pPythonExecFunc			= pOutcome->m_pPythonExecFunc;
 		pOutcome->m_pPythonExecFunc = NULL;
 	}
 	if (!m_pPythonPossibleFunc)
 	{
-		m_pPythonPossibleFunc = pOutcome->m_pPythonPossibleFunc;
+		m_pPythonPossibleFunc			= pOutcome->m_pPythonPossibleFunc;
 		pOutcome->m_pPythonPossibleFunc = NULL;
 	}
-
 }
 
-void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUnit) const
+void CvOutcome::buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit& kUnit) const
 {
 
 	//CvPlayer& kPlayer = GET_PLAYER(kUnit.getOwnerINLINE());
@@ -1757,10 +1739,10 @@ void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUni
 	}
 
 	bool bUnitToCity = getUnitToCity(kUnit);
-	if (GC.getGame().isOption(GAMEOPTION_TELEPORT_HUNTING_AWARDS) && 
-		m_eUnitType > NO_UNIT && 
+	if (GC.getGame().isOption(GAMEOPTION_TELEPORT_HUNTING_AWARDS) &&
+		m_eUnitType > NO_UNIT &&
 		(GC.getUnitInfo(m_eUnitType).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_SUBDUED")) ||
-		GC.getUnitInfo(m_eUnitType).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_IDEA"))))
+		 GC.getUnitInfo(m_eUnitType).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_IDEA"))))
 	{
 		bUnitToCity = true;
 	}
@@ -1897,7 +1879,7 @@ void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUni
 
 	//iGoldTimes100 += m_aiCommerce[COMMERCE_GOLD] * 100;
 	//iResearchTimes100 += m_aiCommerce[COMMERCE_RESEARCH] * 100;
-	
+
 	//if (iGoldTimes100)
 	if (m_aiCommerce[COMMERCE_GOLD])
 	{
@@ -1990,9 +1972,9 @@ void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUni
 			bFirst = false;
 		}
 
-		CyUnit cyUnit(const_cast<CvUnit*>(&kUnit));
+		CyUnit	  cyUnit(const_cast<CvUnit*>(&kUnit));
 		PyObject* pyUnit = gDLL->getPythonIFace()->makePythonObject(&cyUnit);
-		CyPlot cyPlot(const_cast<CvPlot*>(kUnit.plot()));
+		CyPlot	  cyPlot(const_cast<CvPlot*>(kUnit.plot()));
 		PyObject* pyPlot = gDLL->getPythonIFace()->makePythonObject(&cyPlot);
 
 		PyObject* pyResult = PyObject_CallFunctionObjArgs(m_pPythonDisplayFunc, pyUnit, pyPlot, NULL);
@@ -2006,7 +1988,7 @@ void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUni
 	szBuffer.append(L" )");
 }
 
-void CvOutcome::getCheckSum(unsigned int &iSum)
+void CvOutcome::getCheckSum(unsigned int& iSum)
 {
 	CheckSum(iSum, m_eType);
 	m_iChance->getCheckSum(iSum);
@@ -2017,12 +1999,12 @@ void CvOutcome::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_eBonusType);
 	CheckSum(iSum, m_iGPP);
 	CheckSum(iSum, m_eGPUnitType);
-	for (int i=0; i<NUM_YIELD_TYPES; i++)
+	for (int i = 0; i < NUM_YIELD_TYPES; i++)
 	{
 		if (m_aiYield[i])
 			m_aiYield[i]->getCheckSum(iSum);
 	}
-	for (int i=0; i<NUM_COMMERCE_TYPES; i++)
+	for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
 	{
 		if (m_aiCommerce[i])
 			m_aiCommerce[i]->getCheckSum(iSum);

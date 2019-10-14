@@ -20,324 +20,326 @@
 // XXX these should not be in the DLL per se (if the user changes them, we are screwed...)
 
 //TB Combat Mod
-typedef std::vector< std::pair<UnitCombatTypes, int> > UnitCombatModifierArray;
-typedef std::vector< std::pair<TechTypes, int> > TechModifierArray;
-typedef std::vector< std::pair<TerrainTypes, int> > TerrainModifierArray;
-typedef std::vector< std::pair<FeatureTypes, int> > FeatureModifierArray;
-typedef std::vector< std::pair<BuildTypes, int> > BuildModifierArray;
-typedef std::vector< std::pair<BonusTypes, int> > BonusModifierArray;
+typedef std::vector<std::pair<UnitCombatTypes, int> > UnitCombatModifierArray;
+typedef std::vector<std::pair<TechTypes, int> >		  TechModifierArray;
+typedef std::vector<std::pair<TerrainTypes, int> >	  TerrainModifierArray;
+typedef std::vector<std::pair<FeatureTypes, int> >	  FeatureModifierArray;
+typedef std::vector<std::pair<BuildTypes, int> >	  BuildModifierArray;
+typedef std::vector<std::pair<BonusTypes, int> >	  BonusModifierArray;
 //typedef std::vector< std::pair<PromotionTypes, int> > PromotionModifierArray;
-typedef std::vector< std::pair<PromotionLineTypes, int> > PromotionLineModifierArray;
+typedef std::vector<std::pair<PromotionLineTypes, int> > PromotionLineModifierArray;
 //typedef std::vector< std::pair<ImprovementTypes, int> > ImprovementModifierArray;
-typedef std::vector< std::pair<InvisibleTypes, int> > InvisibilityArray;
-typedef std::vector< std::pair<EraTypes, int> > EraArray;
-typedef std::vector< std::pair<PropertyTypes, int> > AidArray;
+typedef std::vector<std::pair<InvisibleTypes, int> > InvisibilityArray;
+typedef std::vector<std::pair<EraTypes, int> >		 EraArray;
+typedef std::vector<std::pair<PropertyTypes, int> >	 AidArray;
 struct AidStruct
-{	
+{
 	PropertyTypes eProperty;
-	int iChange;
-	operator int() const {return (int)eProperty;}
-	bool operator< (const AidStruct& rhs) const {return (int)eProperty < (int)rhs.eProperty;}
+	int			  iChange;
+	operator int() const { return (int)eProperty; }
+	bool operator<(const AidStruct& rhs) const { return (int)eProperty < (int)rhs.eProperty; }
 };
 struct PromotionModifier
-{	
+{
 	PromotionTypes ePromotion;
-	int iModifier;
-	operator int() const {return (int)ePromotion;}
-	bool operator< (const PromotionModifier& rhs) const {return (int)ePromotion < (int)rhs.ePromotion;}
+	int			   iModifier;
+	operator int() const { return (int)ePromotion; }
+	bool operator<(const PromotionModifier& rhs) const { return (int)ePromotion < (int)rhs.ePromotion; }
 };
 struct PromotionLineModifier
-{	
+{
 	PromotionLineTypes ePromotionLine;
-	int iModifier;
-	operator int() const {return (int)ePromotionLine;}
-	bool operator< (const PromotionLineModifier& rhs) const {return (int)ePromotionLine < (int)rhs.ePromotionLine;}
+	int				   iModifier;
+	operator int() const { return (int)ePromotionLine; }
+	bool operator<(const PromotionLineModifier& rhs) const { return (int)ePromotionLine < (int)rhs.ePromotionLine; }
 };
 struct AfflictOnAttackChange
-{	
+{
 	PromotionLineTypes eAfflictionLine;
-	int iProbabilityChange;
-	int iMelee;
-	int iDistance;
-	int iImmediate;
-	operator int() const {return (int)eAfflictionLine;}
-	bool operator< (const AfflictOnAttackChange& rhs) const {return (int)eAfflictionLine < (int)rhs.eAfflictionLine;}
+	int				   iProbabilityChange;
+	int				   iMelee;
+	int				   iDistance;
+	int				   iImmediate;
+	operator int() const { return (int)eAfflictionLine; }
+	bool operator<(const AfflictOnAttackChange& rhs) const { return (int)eAfflictionLine < (int)rhs.eAfflictionLine; }
 };
 struct PlotTeamVisibilityIntensity
-{	
-	TeamTypes eTeam;
+{
+	TeamTypes	   eTeam;
 	InvisibleTypes eInvisibility;
-	int iUnitID;
-	int iIntensity;
-	int iCount;
-	operator int() const {return (int)eTeam;}
-	bool operator< (const PlotTeamVisibilityIntensity& rhs) const {return (int)eTeam < (int)rhs.eTeam;}
+	int			   iUnitID;
+	int			   iIntensity;
+	int			   iCount;
+	operator int() const { return (int)eTeam; }
+	bool operator<(const PlotTeamVisibilityIntensity& rhs) const { return (int)eTeam < (int)rhs.eTeam; }
 };
 struct FreePromoTypes
-{	
+{
 	PromotionTypes ePromotion;
-	BoolExpr* m_pExprFreePromotionCondition;
-	operator int() const {return (int)ePromotion;}
-	bool operator< (const FreePromoTypes& rhs) const {return (int)ePromotion < (int)rhs.ePromotion;}
+	BoolExpr*	   m_pExprFreePromotionCondition;
+	operator int() const { return (int)ePromotion; }
+	bool operator<(const FreePromoTypes& rhs) const { return (int)ePromotion < (int)rhs.ePromotion; }
 };
 struct FreeTraitTypes
-{	
+{
 	TraitTypes eTrait;
-	operator int() const {return (int)eTrait;}
-	bool operator< (const FreeTraitTypes& rhs) const {return (int)eTrait < (int)rhs.eTrait;}
+	operator int() const { return (int)eTrait; }
+	bool operator<(const FreeTraitTypes& rhs) const { return (int)eTrait < (int)rhs.eTrait; }
 };
 struct AfflictOnAttack
-{	
+{
 	PromotionLineTypes eAfflictionLine;
-	int iProbability;
-	int iMelee;
-	int iDistance;
-	int iImmediate;
-	operator int() const {return (int)eAfflictionLine;}
-	bool operator< (const AfflictOnAttack& rhs) const {return (int)eAfflictionLine < (int)rhs.eAfflictionLine;}
+	int				   iProbability;
+	int				   iMelee;
+	int				   iDistance;
+	int				   iImmediate;
+	operator int() const { return (int)eAfflictionLine; }
+	bool operator<(const AfflictOnAttack& rhs) const { return (int)eAfflictionLine < (int)rhs.eAfflictionLine; }
 };
 struct TerrainModifier
-{	
+{
 	TerrainTypes eTerrain;
-	int iModifier;
-	operator int() const {return (int)eTerrain;}
-	bool operator< (const TerrainModifier& rhs) const {return (int)eTerrain < (int)rhs.eTerrain;}
+	int			 iModifier;
+	operator int() const { return (int)eTerrain; }
+	bool operator<(const TerrainModifier& rhs) const { return (int)eTerrain < (int)rhs.eTerrain; }
 };
 struct FeatureModifier
-{	
+{
 	FeatureTypes eFeature;
-	int iModifier;
-	operator int() const {return (int)eFeature;}
-	bool operator< (const FeatureModifier& rhs) const {return (int)eFeature < (int)rhs.eFeature;}
+	int			 iModifier;
+	operator int() const { return (int)eFeature; }
+	bool operator<(const FeatureModifier& rhs) const { return (int)eFeature < (int)rhs.eFeature; }
 };
 struct BuildModifier
-{	
+{
 	BuildTypes eBuild;
-	int iModifier;
-	operator int() const {return (int)eBuild;}
-	bool operator< (const BuildModifier& rhs) const {return (int)eBuild < (int)rhs.eBuild;}
+	int		   iModifier;
+	operator int() const { return (int)eBuild; }
+	bool operator<(const BuildModifier& rhs) const { return (int)eBuild < (int)rhs.eBuild; }
 };
 struct UnitCombatModifier
-{	
+{
 	UnitCombatTypes eUnitCombat;
-	int iModifier;
-	operator int() const {return (int)eUnitCombat;}
-	bool operator< (const UnitCombatModifier& rhs) const {return (int)eUnitCombat < (int)rhs.eUnitCombat;}
+	int				iModifier;
+	operator int() const { return (int)eUnitCombat; }
+	bool operator<(const UnitCombatModifier& rhs) const { return (int)eUnitCombat < (int)rhs.eUnitCombat; }
 };
 struct BonusModifier
-{	
+{
 	BonusTypes eBonus;
-	int iModifier;
-	operator int() const {return (int)eBonus;}
-	bool operator< (const BonusModifier& rhs) const {return (int)eBonus < (int)rhs.eBonus;}
+	int		   iModifier;
+	operator int() const { return (int)eBonus; }
+	bool operator<(const BonusModifier& rhs) const { return (int)eBonus < (int)rhs.eBonus; }
 };
 struct ImprovementModifier
-{	
+{
 	ImprovementTypes eImprovement;
-	int iModifier;
-	operator int() const {return (int)eImprovement;}
-	bool operator< (const ImprovementModifier& rhs) const {return (int)eImprovement < (int)rhs.eImprovement;}
+	int				 iModifier;
+	operator int() const { return (int)eImprovement; }
+	bool operator<(const ImprovementModifier& rhs) const { return (int)eImprovement < (int)rhs.eImprovement; }
 };
 struct DisallowedTraitType
-{	
+{
 	TraitTypes eTrait;
-	operator int() const {return (int)eTrait;}
-	bool operator< (const DisallowedTraitType& rhs) const {return (int)eTrait < (int)rhs.eTrait;}
+	operator int() const { return (int)eTrait; }
+	bool operator<(const DisallowedTraitType& rhs) const { return (int)eTrait < (int)rhs.eTrait; }
 };
 struct DomainModifier
-{	
+{
 	DomainTypes eDomain;
-	int iModifier;
-	operator int() const {return (int)eDomain;}
-	bool operator< (const DomainModifier& rhs) const {return (int)eDomain < (int)rhs.eDomain;}
+	int			iModifier;
+	operator int() const { return (int)eDomain; }
+	bool operator<(const DomainModifier& rhs) const { return (int)eDomain < (int)rhs.eDomain; }
 };
 struct TechModifier
-{	
+{
 	TechTypes eTech;
-	int iModifier;
-	operator int() const {return (int)eTech;}
-	bool operator< (const TechModifier& rhs) const {return (int)eTech < (int)rhs.eTech;}
+	int		  iModifier;
+	operator int() const { return (int)eTech; }
+	bool operator<(const TechModifier& rhs) const { return (int)eTech < (int)rhs.eTech; }
 };
 struct BuildingModifier
-{	
+{
 	BuildingTypes eBuilding;
-	int iModifier;
-	int* operator&() {return reinterpret_cast<int*>(&eBuilding);}
-	operator int() const {return (int)eBuilding;}
-	bool operator< (const BuildingModifier& rhs) const {return (int)eBuilding < (int)rhs.eBuilding;}
+	int			  iModifier;
+	int*		  operator&() { return reinterpret_cast<int*>(&eBuilding); }
+	operator int() const { return (int)eBuilding; }
+	bool operator<(const BuildingModifier& rhs) const { return (int)eBuilding < (int)rhs.eBuilding; }
 };
 struct SpecialBuildingModifier
-{	
+{
 	SpecialBuildingTypes eSpecialBuilding;
-	int iModifier;
-	operator int() const {return (int)eSpecialBuilding;}
-	bool operator< (const SpecialBuildingModifier& rhs) const {return (int)eSpecialBuilding < (int)rhs.eSpecialBuilding;}
+	int					 iModifier;
+	operator int() const { return (int)eSpecialBuilding; }
+	bool operator<(const SpecialBuildingModifier& rhs) const { return (int)eSpecialBuilding < (int)rhs.eSpecialBuilding; }
 };
 struct UnitModifier
-{	
+{
 	UnitTypes eUnit;
-	int iModifier;
-	operator int() const {return (int)eUnit;}
-	bool operator< (const UnitModifier& rhs) const {return (int)eUnit < (int)rhs.eUnit;}
+	int		  iModifier;
+	operator int() const { return (int)eUnit; }
+	bool operator<(const UnitModifier& rhs) const { return (int)eUnit < (int)rhs.eUnit; }
 };
 struct SpecialUnitModifier
-{	
+{
 	SpecialUnitTypes eSpecialUnit;
-	int iModifier;
-	operator int() const {return (int)eSpecialUnit;}
-	bool operator< (const SpecialUnitModifier& rhs) const {return (int)eSpecialUnit < (int)rhs.eSpecialUnit;}
+	int				 iModifier;
+	operator int() const { return (int)eSpecialUnit; }
+	bool operator<(const SpecialUnitModifier& rhs) const { return (int)eSpecialUnit < (int)rhs.eSpecialUnit; }
 };
 struct ImprovementYieldModifier
 {
 	ImprovementTypes eImprovement;
-	YieldTypes eYield;
-	int iModifier;
-	operator int() const {return (int)eImprovement;}
-	bool operator< (const ImprovementYieldModifier& rhs) const {return (int)eImprovement < (int)rhs.eImprovement;}
+	YieldTypes		 eYield;
+	int				 iModifier;
+	operator int() const { return (int)eImprovement; }
+	bool operator<(const ImprovementYieldModifier& rhs) const { return (int)eImprovement < (int)rhs.eImprovement; }
 };
 struct CivicOptionTypeBool
-{	
+{
 	CivicOptionTypes eCivicOption;
-	bool bBool;
-	operator int() const {return (int)eCivicOption;}
-	bool operator< (const CivicOptionTypeBool& rhs) const {return (int)eCivicOption < (int)rhs.eCivicOption;}
+	bool			 bBool;
+	operator int() const { return (int)eCivicOption; }
+	bool operator<(const CivicOptionTypeBool& rhs) const { return (int)eCivicOption < (int)rhs.eCivicOption; }
 };
 struct GameOptionTypeBool
-{	
+{
 	GameOptionTypes eGameOption;
-	bool bBool;
-	operator int() const {return (int)eGameOption;}
-	bool operator< (const GameOptionTypeBool& rhs) const {return (int)eGameOption < (int)rhs.eGameOption;}
+	bool			bBool;
+	operator int() const { return (int)eGameOption; }
+	bool operator<(const GameOptionTypeBool& rhs) const { return (int)eGameOption < (int)rhs.eGameOption; }
 };
 struct HealUnitCombat
-{	
+{
 	UnitCombatTypes eUnitCombat;
-	int iHeal;
-	int iAdjacentHeal;
-	operator int() const {return (int)eUnitCombat;}
-	bool operator< (const HealUnitCombat& rhs) const {return (int)eUnitCombat < (int)rhs.eUnitCombat;}
+	int				iHeal;
+	int				iAdjacentHeal;
+	operator int() const { return (int)eUnitCombat; }
+	bool operator<(const HealUnitCombat& rhs) const { return (int)eUnitCombat < (int)rhs.eUnitCombat; }
 };
 struct GroupSpawnUnitCombat
-{	
+{
 	UnitCombatTypes eUnitCombat;
-	int iChance;
-	CvWString m_szTitle;
-	operator int() const {return (int)eUnitCombat;}
-	bool operator< (const GroupSpawnUnitCombat& rhs) const {return (int)eUnitCombat < (int)rhs.eUnitCombat;}
+	int				iChance;
+	CvWString		m_szTitle;
+	operator int() const { return (int)eUnitCombat; }
+	bool operator<(const GroupSpawnUnitCombat& rhs) const { return (int)eUnitCombat < (int)rhs.eUnitCombat; }
 };
 struct InvisibleTerrainChanges
-{	
+{
 	InvisibleTypes eInvisible;
-	TerrainTypes eTerrain;
-	int iIntensity;
-	operator int() const {return (int)eInvisible;}
-	bool operator< (const InvisibleTerrainChanges& rhs) const {return (int)eInvisible < (int)rhs.eInvisible;}
+	TerrainTypes   eTerrain;
+	int			   iIntensity;
+	operator int() const { return (int)eInvisible; }
+	bool operator<(const InvisibleTerrainChanges& rhs) const { return (int)eInvisible < (int)rhs.eInvisible; }
 };
 struct InvisibleFeatureChanges
-{	
+{
 	InvisibleTypes eInvisible;
-	FeatureTypes eFeature;
-	int iIntensity;
-	operator int() const {return (int)eInvisible;}
-	bool operator< (const InvisibleFeatureChanges& rhs) const {return (int)eInvisible < (int)rhs.eInvisible;}
+	FeatureTypes   eFeature;
+	int			   iIntensity;
+	operator int() const { return (int)eInvisible; }
+	bool operator<(const InvisibleFeatureChanges& rhs) const { return (int)eInvisible < (int)rhs.eInvisible; }
 };
 struct InvisibleImprovementChanges
-{	
-	InvisibleTypes eInvisible;
+{
+	InvisibleTypes	 eInvisible;
 	ImprovementTypes eImprovement;
-	int iIntensity;
-	operator int() const {return (int)eInvisible;}
-	bool operator< (const InvisibleImprovementChanges& rhs) const {return (int)eInvisible < (int)rhs.eInvisible;}
+	int				 iIntensity;
+	operator int() const { return (int)eInvisible; }
+	bool operator<(const InvisibleImprovementChanges& rhs) const { return (int)eInvisible < (int)rhs.eInvisible; }
 };
 struct EnabledCivilizations
-{	
+{
 	CivilizationTypes eCivilization;
-	operator int() const {return (int)eCivilization;}
-	bool operator< (const EnabledCivilizations& rhs) const {return (int)eCivilization < (int)rhs.eCivilization;}
+	operator int() const { return (int)eCivilization; }
+	bool operator<(const EnabledCivilizations& rhs) const { return (int)eCivilization < (int)rhs.eCivilization; }
 };
 struct AfflictionLineChanges
-{	
+{
 	PromotionLineTypes eAfflictionLine;
-	int iChange;
-	operator int() const {return (int)eAfflictionLine;}
-	bool operator< (const AfflictionLineChanges& rhs) const {return (int)eAfflictionLine < (int)rhs.eAfflictionLine;}
+	int				   iChange;
+	operator int() const { return (int)eAfflictionLine; }
+	bool operator<(const AfflictionLineChanges& rhs) const { return (int)eAfflictionLine < (int)rhs.eAfflictionLine; }
 };
 struct BonusAidModifiers
-{	
-	BonusTypes eBonusType;
+{
+	BonusTypes	  eBonusType;
 	PropertyTypes ePropertyType;
-	int iModifier;
-	operator int() const {return (int)eBonusType;}
-	bool operator< (const BonusAidModifiers& rhs) const {return (int)eBonusType < (int)rhs.eBonusType;}
+	int			  iModifier;
+	operator int() const { return (int)eBonusType; }
+	bool operator<(const BonusAidModifiers& rhs) const { return (int)eBonusType < (int)rhs.eBonusType; }
 };
 struct AidRateChanges
 {
 	PropertyTypes ePropertyType;
-	int iChange;
-	operator int() const {return (int)ePropertyType;}
-	bool operator< (const AidRateChanges& rhs) const {return (int)ePropertyType < (int)rhs.ePropertyType;}
+	int			  iChange;
+	operator int() const { return (int)ePropertyType; }
+	bool operator<(const AidRateChanges& rhs) const { return (int)ePropertyType < (int)rhs.ePropertyType; }
 };
 struct PrereqBuildingClass
-{	
+{
 	BuildingClassTypes eBuildingClass;
-	int iMinimumRequired;
-	operator int() const {return (int)eBuildingClass;}
-	bool operator< (const PrereqBuildingClass& rhs) const {return (int)eBuildingClass < (int)rhs.eBuildingClass;}
+	int				   iMinimumRequired;
+	operator int() const { return (int)eBuildingClass; }
+	bool operator<(const PrereqBuildingClass& rhs) const { return (int)eBuildingClass < (int)rhs.eBuildingClass; }
 };
 struct TerrainStructs
-{	
+{
 	TerrainTypes eTerrain;
-	TechTypes ePrereqTech;
-	int iTime;
-	operator int() const {return (int)eTerrain;}
-	bool operator< (const TerrainStructs& rhs) const {return (int)eTerrain < (int)rhs.eTerrain;}
+	TechTypes	 ePrereqTech;
+	int			 iTime;
+	operator int() const { return (int)eTerrain; }
+	bool operator<(const TerrainStructs& rhs) const { return (int)eTerrain < (int)rhs.eTerrain; }
 };
 struct PlaceBonusTypes
-{	
-	BonusTypes eBonus;
-	int iProbability;
-	bool bRequiresAccess;
-	TechTypes ePrereqTech;
-	TerrainTypes ePrereqTerrain;
-	FeatureTypes ePrereqFeature;
+{
+	BonusTypes		 eBonus;
+	int				 iProbability;
+	bool			 bRequiresAccess;
+	TechTypes		 ePrereqTech;
+	TerrainTypes	 ePrereqTerrain;
+	FeatureTypes	 ePrereqFeature;
 	MapCategoryTypes ePrereqMapCategory;
-	operator int() const {return (int)eBonus;}
-	bool operator< (const PlaceBonusTypes& rhs) const {return (int)eBonus < (int)rhs.eBonus;}
+	operator int() const { return (int)eBonus; }
+	bool operator<(const PlaceBonusTypes& rhs) const { return (int)eBonus < (int)rhs.eBonus; }
 };
 struct PromotionLineAfflictionModifier
-{	
+{
 	PromotionLineTypes ePromotionLine;
-	int iModifier;
-	bool bWorkedTile;
-	bool bVicinity;
-	bool bAccessVolume;
-	operator int() const {return (int)ePromotionLine;}
-	bool operator< (const PromotionLineAfflictionModifier& rhs) const {return (int)ePromotionLine < (int)rhs.ePromotionLine;}
+	int				   iModifier;
+	bool			   bWorkedTile;
+	bool			   bVicinity;
+	bool			   bAccessVolume;
+	operator int() const { return (int)ePromotionLine; }
+	bool operator<(const PromotionLineAfflictionModifier& rhs) const { return (int)ePromotionLine < (int)rhs.ePromotionLine; }
 };
 //TB Combat Mod end
 
 struct XYCoords
 {
-	XYCoords(int x=0, int y=0) : iX(x), iY(y) {}
+	XYCoords(int x = 0, int y = 0)
+		: iX(x), iY(y) {}
 	int iX;
 	int iY;
 
-	bool operator<  (const XYCoords xy) const { return ((iY < xy.iY) || (iY == xy.iY && iX < xy.iX)); }
-	bool operator<= (const XYCoords xy) const { return ((iY < xy.iY) || (iY == xy.iY && iX <= xy.iX)); }
-	bool operator!= (const XYCoords xy) const { return (iY != xy.iY || iX != xy.iX); }
-	bool operator== (const XYCoords xy) const { return (!(iY != xy.iY || iX != xy.iX)); }
-	bool operator>= (const XYCoords xy) const { return ((iY > xy.iY) || (iY == xy.iY && iX >= xy.iX)); }
-	bool operator>  (const XYCoords xy) const { return ((iY > xy.iY) || (iY == xy.iY && iX > xy.iX)); }
+	bool operator<(const XYCoords xy) const { return ((iY < xy.iY) || (iY == xy.iY && iX < xy.iX)); }
+	bool operator<=(const XYCoords xy) const { return ((iY < xy.iY) || (iY == xy.iY && iX <= xy.iX)); }
+	bool operator!=(const XYCoords xy) const { return (iY != xy.iY || iX != xy.iX); }
+	bool operator==(const XYCoords xy) const { return (!(iY != xy.iY || iX != xy.iX)); }
+	bool operator>=(const XYCoords xy) const { return ((iY > xy.iY) || (iY == xy.iY && iX >= xy.iX)); }
+	bool operator>(const XYCoords xy) const { return ((iY > xy.iY) || (iY == xy.iY && iX > xy.iX)); }
 };
 
 struct IDInfo
 {
 
-	IDInfo(PlayerTypes eOwner=NO_PLAYER, int iID=FFreeList::INVALID_INDEX) : eOwner(eOwner), iID(iID) {}
+	IDInfo(PlayerTypes eOwner = NO_PLAYER, int iID = FFreeList::INVALID_INDEX)
+		: eOwner(eOwner), iID(iID) {}
 	PlayerTypes eOwner;
-	int iID;
+	int			iID;
 
-	bool operator== (const IDInfo& info) const
+	bool operator==(const IDInfo& info) const
 	{
 		return (eOwner == info.eOwner && iID == info.iID);
 	}
@@ -345,26 +347,28 @@ struct IDInfo
 	void reset()
 	{
 		eOwner = NO_PLAYER;
-		iID = FFreeList::INVALID_INDEX;
+		iID	   = FFreeList::INVALID_INDEX;
 	}
 };
 
-struct GameTurnInfo				// Exposed to Python
+struct GameTurnInfo // Exposed to Python
 {
 	int iMonthIncrement;
 	int iNumGameTurnsPerIncrement;
 
-	GameTurnInfo() : iMonthIncrement(0), iNumGameTurnsPerIncrement(0) {}
+	GameTurnInfo()
+		: iMonthIncrement(0), iNumGameTurnsPerIncrement(0) {}
 };
 
-struct OrderData					// Exposed to Python
+struct OrderData // Exposed to Python
 {
 	OrderTypes eOrderType;
-	int iData1;
-	int iData2;
-	bool bSave;
+	int		   iData1;
+	int		   iData2;
+	bool	   bSave;
 
-	OrderData() : eOrderType(NO_ORDER), iData1(0), iData2(0), bSave(0) {}
+	OrderData()
+		: eOrderType(NO_ORDER), iData1(0), iData2(0), bSave(0) {}
 };
 
 //	Koshling - need to cram some extra info into some orders.  Existing usage
@@ -373,63 +377,65 @@ struct OrderData					// Exposed to Python
 //	is to head once built (if any)
 //	iData2 gets the UnitAI being built against in the external (previous usage) and the contract-requested
 //	UnitAI in the auxiliary (which can be NO_UNITAI)
-#define	EXTERNAL_ORDER_IDATA(iData)				(short)((iData) & 0xFFFF)
-#define	INTERNAL_AUXILIARY_ORDER_IDATA(iData)	(short)(((iData) & 0xffff0000) >> 16)
-#define	PACK_INTERNAL_ORDER_IDATA(iBase, iAux)	(((unsigned int)(iBase) & 0xFFFF) | (((unsigned int)(iAux)) << 16))
+#define EXTERNAL_ORDER_IDATA(iData)			   (short)((iData)&0xFFFF)
+#define INTERNAL_AUXILIARY_ORDER_IDATA(iData)  (short)(((iData)&0xffff0000) >> 16)
+#define PACK_INTERNAL_ORDER_IDATA(iBase, iAux) (((unsigned int)(iBase)&0xFFFF) | (((unsigned int)(iAux)) << 16))
 
 //	Contract auxiliary flags
-#define	AUX_CONTRACT_FLAG_IS_UNIT_CONTRACT	0x01
+#define AUX_CONTRACT_FLAG_IS_UNIT_CONTRACT 0x01
 
-struct MissionData				// Exposed to Python
+struct MissionData // Exposed to Python
 {
 	MissionTypes eMissionType;
-	int iData1;
-	int iData2;
-	int iFlags;
-	int iPushTurn;
+	int			 iData1;
+	int			 iData2;
+	int			 iFlags;
+	int			 iPushTurn;
 
-	MissionData() 
+	MissionData()
 		: eMissionType(NO_MISSION)
 		, iData1(0)
 		, iData2(0)
 		, iFlags(0)
 		, iPushTurn(0)
-	{}
+	{
+	}
 };
 
 struct TradeData // Exposed to Python
 {
 	TradeableItems m_eItemType; //What type of item is this
-	int m_iData; //Any additional data?
-	bool m_bOffering; // Is this item up for grabs?
-	bool m_bHidden; // Are we hidden?
+	int			   m_iData; //Any additional data?
+	bool		   m_bOffering; // Is this item up for grabs?
+	bool		   m_bHidden; // Are we hidden?
 
 	TradeData()
 		: m_eItemType(TRADE_ITEM_NONE)
 		, m_iData(0)
 		, m_bOffering(0)
 		, m_bHidden(0)
-	{}
+	{
+	}
 };
 
 struct EventTriggeredData
 {
-	int m_iId;
+	int				  m_iId;
 	EventTriggerTypes m_eTrigger;
-	int m_iTurn;
-	PlayerTypes m_ePlayer;
-	int m_iCityId;
-	int m_iPlotX;
-	int m_iPlotY;
-	int m_iUnitId;
-	PlayerTypes m_eOtherPlayer;
-	int m_iOtherPlayerCityId;
-	ReligionTypes m_eReligion;
-	CorporationTypes m_eCorporation;
-	BuildingTypes m_eBuilding;
-	CvWString m_szText;
-	CvWString m_szGlobalText;
-	bool m_bExpired;
+	int				  m_iTurn;
+	PlayerTypes		  m_ePlayer;
+	int				  m_iCityId;
+	int				  m_iPlotX;
+	int				  m_iPlotY;
+	int				  m_iUnitId;
+	PlayerTypes		  m_eOtherPlayer;
+	int				  m_iOtherPlayerCityId;
+	ReligionTypes	  m_eReligion;
+	CorporationTypes  m_eCorporation;
+	BuildingTypes	  m_eBuilding;
+	CvWString		  m_szText;
+	CvWString		  m_szGlobalText;
+	bool			  m_bExpired;
 
 	EventTriggeredData()
 		: m_iId(0)
@@ -446,9 +452,10 @@ struct EventTriggeredData
 		, m_eCorporation(NO_CORPORATION)
 		, m_eBuilding(NO_BUILDING)
 		, m_bExpired(false)
-	{}
+	{
+	}
 
-	int getID() const;
+	int	 getID() const;
 	void setID(int iID);
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -456,32 +463,34 @@ struct EventTriggeredData
 
 struct VoteSelectionSubData
 {
-	VoteTypes eVote;
+	VoteTypes	eVote;
 	PlayerTypes ePlayer;
-	int iCityId;
+	int			iCityId;
 	PlayerTypes eOtherPlayer;
-	CvWString szText;
+	CvWString	szText;
 
 	VoteSelectionSubData()
 		: eVote(NO_VOTE)
 		, ePlayer(NO_PLAYER)
 		, iCityId(0)
 		, eOtherPlayer(NO_PLAYER)
-	{}
+	{
+	}
 };
 
 struct VoteSelectionData
 {
-	int iId;
-	VoteSourceTypes eVoteSource;
+	int								  iId;
+	VoteSourceTypes					  eVoteSource;
 	std::vector<VoteSelectionSubData> aVoteOptions;
 
 	VoteSelectionData()
 		: iId(0)
 		, eVoteSource(NO_VOTESOURCE)
-	{}
+	{
+	}
 
-	int getID() const;
+	int	 getID() const;
 	void setID(int iID);
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -489,16 +498,17 @@ struct VoteSelectionData
 
 struct VoteTriggeredData
 {
-	int iId;
-	VoteSourceTypes eVoteSource;
+	int					 iId;
+	VoteSourceTypes		 eVoteSource;
 	VoteSelectionSubData kVoteOption;
 
 	VoteTriggeredData()
 		: iId(0)
 		, eVoteSource(NO_VOTESOURCE)
-	{}
+	{
+	}
 
-	int getID() const;
+	int	 getID() const;
 	void setID(int iID);
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -507,30 +517,32 @@ struct VoteTriggeredData
 struct EventMessage
 {
 	CvWString szDescription;
-	int iExpirationTurn;
-	int iX;
-	int iY;
+	int		  iExpirationTurn;
+	int		  iX;
+	int		  iY;
 
 	EventMessage()
 		: iExpirationTurn(0)
 		, iX(0)
 		, iY(0)
-	{}
+	{
+	}
 
 	// python friendly accessors
-	std::wstring getDescription() const { return szDescription;	}
+	std::wstring getDescription() const { return szDescription; }
 };
 
 struct PlotExtraYield
 {
-	int m_iX;
-	int m_iY;
+	int				 m_iX;
+	int				 m_iY;
 	std::vector<int> m_aeExtraYield;
 
 	PlotExtraYield()
 		: m_iX(0)
 		, m_iY(0)
-	{}
+	{
+	}
 
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -546,25 +558,27 @@ struct PlotExtraCost
 		: m_iX(0)
 		, m_iY(0)
 		, m_iCost(0)
-	{}
+	{
+	}
 
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
 };
 
-typedef std::vector< std::pair<BuildingClassTypes, int> > BuildingChangeArray;
+typedef std::vector<std::pair<BuildingClassTypes, int> > BuildingChangeArray;
 
 struct BuildingYieldChange
 {
 	BuildingClassTypes eBuildingClass;
-	YieldTypes eYield;
-	int iChange;
+	YieldTypes		   eYield;
+	int				   iChange;
 
 	BuildingYieldChange()
 		: eBuildingClass(NO_BUILDINGCLASS)
 		, eYield(NO_YIELD)
 		, iChange(0)
-	{}
+	{
+	}
 
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -573,14 +587,15 @@ struct BuildingYieldChange
 struct BuildingCommerceChange
 {
 	BuildingClassTypes eBuildingClass;
-	CommerceTypes eCommerce;
-	int iChange;
+	CommerceTypes	   eCommerce;
+	int				   iChange;
 
 	BuildingCommerceChange()
 		: eBuildingClass(NO_BUILDINGCLASS)
 		, eCommerce(NO_COMMERCE)
 		, iChange(0)
-	{}
+	{
+	}
 
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -593,13 +608,14 @@ struct BuildingCommerceChange
 /************************************************************************************************/
 struct PropertySpawns
 {
-	PropertyTypes eProperty;
+	PropertyTypes  eProperty;
 	UnitClassTypes eUnitClass;
 
 	PropertySpawns()
 		: eProperty(NO_PROPERTY)
 		, eUnitClass(NO_UNITCLASS)
-	{}
+	{
+	}
 
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -607,14 +623,15 @@ struct PropertySpawns
 struct BuildingYieldModifier
 {
 	BuildingClassTypes eBuildingClass;
-	YieldTypes eYield;
-	int iChange;
+	YieldTypes		   eYield;
+	int				   iChange;
 
 	BuildingYieldModifier()
 		: eBuildingClass(NO_BUILDINGCLASS)
 		, eYield(NO_YIELD)
 		, iChange(0)
-	{}
+	{
+	}
 
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -623,14 +640,15 @@ struct BuildingYieldModifier
 struct BuildingCommerceModifier
 {
 	BuildingClassTypes eBuildingClass;
-	CommerceTypes eCommerce;
-	int iChange;
+	CommerceTypes	   eCommerce;
+	int				   iChange;
 
 	BuildingCommerceModifier()
 		: eBuildingClass(NO_BUILDINGCLASS)
 		, eCommerce(NO_COMMERCE)
 		, iChange(0)
-	{}
+	{
+	}
 
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -641,16 +659,16 @@ struct BuildingCommerceModifier
 /************************************************************************************************/
 
 
-
 struct FOWVis
 {
-	uint uiCount;
-	POINT* pOffsets;  // array of "Offset" points
+	uint   uiCount;
+	POINT* pOffsets; // array of "Offset" points
 
 	FOWVis()
 		: uiCount(0)
 		, pOffsets(NULL)
-	{}
+	{
+	}
 
 	// python friendly accessors
 	POINT getOffsets(int i) const { return pOffsets[i]; }
@@ -671,22 +689,22 @@ struct DllExport PBGameSetupData
 	int iAdvancedStartPoints;
 	int iTurnTime;
 
-	int iNumCustomMapOptions;
-	int * aiCustomMapOptions;
-	int getCustomMapOption(int iOption) {return aiCustomMapOptions[iOption];}
+	int	 iNumCustomMapOptions;
+	int* aiCustomMapOptions;
+	int	 getCustomMapOption(int iOption) { return aiCustomMapOptions[iOption]; }
 
-	int iNumVictories;
-	bool * abVictories;
-	bool getVictory(int iVictory) {return abVictories[iVictory];}
+	int	  iNumVictories;
+	bool* abVictories;
+	bool  getVictory(int iVictory) { return abVictories[iVictory]; }
 
 	std::wstring szMapName;
-	std::wstring getMapName() {return szMapName;}
+	std::wstring getMapName() { return szMapName; }
 
 	std::vector<bool> abOptions;
-	bool getOptionAt(int iOption) {return abOptions[iOption];}
+	bool			  getOptionAt(int iOption) { return abOptions[iOption]; }
 
 	std::vector<bool> abMPOptions;
-	bool getMPOptionAt(int iOption) {return abMPOptions[iOption];}
+	bool			  getMPOptionAt(int iOption) { return abMPOptions[iOption]; }
 };
 
 struct DllExport PBPlayerSetupData
@@ -703,29 +721,31 @@ struct DllExport PBPlayerSetupData
 		, iLeader(0)
 		, iTeam(0)
 		, iDifficulty(0)
-	{}
+	{
+	}
 
 	std::wstring szStatusText;
-	std::wstring getStatusText() {return szStatusText;}
+	std::wstring getStatusText() { return szStatusText; }
 };
 
 struct DllExport PBPlayerAdminData
 {
 	std::wstring szName;
-	std::wstring getName() {return szName;}
+	std::wstring getName() { return szName; }
 	std::wstring szPing;
-	std::wstring getPing() {return szPing;}
+	std::wstring getPing() { return szPing; }
 	std::wstring szScore;
-	std::wstring getScore() {return szScore;}
-	bool bHuman;
-	bool bClaimed;
-	bool bTurnActive;
+	std::wstring getScore() { return szScore; }
+	bool		 bHuman;
+	bool		 bClaimed;
+	bool		 bTurnActive;
 
 	PBPlayerAdminData()
 		: bHuman(false)
 		, bClaimed(false)
 		, bTurnActive(false)
-	{}
+	{
+	}
 };
 
 class CvUnit;
@@ -734,9 +754,9 @@ class CvPlot;
 //! An enumeration for indexing units within a CvBattleDefinition
 enum BattleUnitTypes
 {
-	BATTLE_UNIT_ATTACKER,	//!< Index referencing the attacking unit
-	BATTLE_UNIT_DEFENDER,	//!< Index referencing the defending unit
-	BATTLE_UNIT_COUNT		//!< The number of unit index references
+	BATTLE_UNIT_ATTACKER, //!< Index referencing the attacking unit
+	BATTLE_UNIT_DEFENDER, //!< Index referencing the defending unit
+	BATTLE_UNIT_COUNT //!< The number of unit index references
 };
 
 void checkBattleUnitType(BattleUnitTypes unitType);
@@ -756,33 +776,33 @@ enum BattleTimeTypes
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvBattleRound
 {
-public:
+  public:
 	CvBattleRound();
 	bool isValid() const;
 
 	DllExport bool isRangedRound() const;
-	void setRangedRound(bool value);
+	void		   setRangedRound(bool value);
 
-	DllExport int getWaveSize() const;
+	DllExport int  getWaveSize() const;
 	DllExport void setWaveSize(int size);
 
-	DllExport int getNumKilled(BattleUnitTypes unitType) const;
+	DllExport int  getNumKilled(BattleUnitTypes unitType) const;
 	DllExport void setNumKilled(BattleUnitTypes unitType, int value);
-	void addNumKilled(BattleUnitTypes unitType, int increment);
+	void		   addNumKilled(BattleUnitTypes unitType, int increment);
 
-	DllExport int getNumAlive(BattleUnitTypes unitType) const;
+	DllExport int  getNumAlive(BattleUnitTypes unitType) const;
 	DllExport void setNumAlive(BattleUnitTypes unitType, int value);
 
-private:
-	int		m_aNumKilled[BATTLE_UNIT_COUNT];		//!< The number of units killed during this round for both sides
-	int		m_aNumAlive[BATTLE_UNIT_COUNT];		//!< The number of units alive at the end of this round for both sides
-	int		m_iWaveSize;				//!< The number of units that can perform exchanges
-	bool	m_bRangedRound;				//!< true if this round is ranged, false otherwise
+  private:
+	int	 m_aNumKilled[BATTLE_UNIT_COUNT]; //!< The number of units killed during this round for both sides
+	int	 m_aNumAlive[BATTLE_UNIT_COUNT]; //!< The number of units alive at the end of this round for both sides
+	int	 m_iWaveSize; //!< The number of units that can perform exchanges
+	bool m_bRangedRound; //!< true if this round is ranged, false otherwise
 };
 
 //------------------------------------------------------------------------------------------------
 
-typedef std::vector<CvBattleRound> CvBattleRoundVector;		//!< Type declaration for a collection of battle round definitions
+typedef std::vector<CvBattleRound> CvBattleRoundVector; //!< Type declaration for a collection of battle round definitions
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //  CLASS:      CvMissionDefinition
@@ -790,28 +810,29 @@ typedef std::vector<CvBattleRound> CvBattleRoundVector;		//!< Type declaration f
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvMissionDefinition
 {
-public:
+  public:
 	CvMissionDefinition(MissionTypes type = NO_MISSION, CvPlot* plot = NULL, CvUnit* attacker = NULL, CvUnit* defender = NULL, float time = 0.f);
 
 	DllExport MissionTypes getMissionType() const;
-	void setMissionType(MissionTypes missionType);
+	void				   setMissionType(MissionTypes missionType);
 
 	DllExport float getMissionTime() const;
-	void setMissionTime(float time);
+	void			setMissionTime(float time);
 
-	DllExport CvUnit *getUnit(BattleUnitTypes unitType) const;
-	void setUnit(BattleUnitTypes unitType, CvUnit *unit);
+	DllExport CvUnit* getUnit(BattleUnitTypes unitType) const;
+	void			  setUnit(BattleUnitTypes unitType, CvUnit* unit);
 
-	DllExport const CvPlot *getPlot() const;
-	void setPlot(const CvPlot *plot);
+	DllExport const CvPlot* getPlot() const;
+	void					setPlot(const CvPlot* plot);
 
 	// Check that this mission is valid to send to the exe for displaying
 	bool isValid() const;
-protected:
-	MissionTypes		m_eMissionType;			//!< The type of event
-	CvUnit *			m_aUnits[BATTLE_UNIT_COUNT];		//!< The units involved
-	float				m_fMissionTime;			//!< The amount of time that the event will take
-	const CvPlot *		m_pPlot;					//!< The plot associated with the event
+
+  protected:
+	MissionTypes  m_eMissionType; //!< The type of event
+	CvUnit*		  m_aUnits[BATTLE_UNIT_COUNT]; //!< The units involved
+	float		  m_fMissionTime; //!< The amount of time that the event will take
+	const CvPlot* m_pPlot; //!< The plot associated with the event
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -820,47 +841,47 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvBattleDefinition : public CvMissionDefinition
 {
-public:
-	CvBattleDefinition(CvPlot * plot, CvUnit * attacker, CvUnit * defender);
-	DllExport CvBattleDefinition( const CvBattleDefinition & kCopy );
+  public:
+	CvBattleDefinition(CvPlot* plot, CvUnit* attacker, CvUnit* defender);
+	DllExport CvBattleDefinition(const CvBattleDefinition& kCopy);
 	DllExport ~CvBattleDefinition();
 
 	DllExport int getDamage(BattleUnitTypes unitType, BattleTimeTypes timeType) const;
-	void setDamage(BattleUnitTypes unitType, BattleTimeTypes timeType, int damage);
-	void addDamage(BattleUnitTypes unitType, BattleTimeTypes timeType, int increment);
-	
-	DllExport int getFirstStrikes(BattleUnitTypes unitType) const;
-	void setFirstStrikes(BattleUnitTypes unitType, int firstStrikes);
-	void addFirstStrikes(BattleUnitTypes unitType, int increment);
-	
-	DllExport bool isAdvanceSquare() const;
-	void setAdvanceSquare(bool advanceSquare);
+	void		  setDamage(BattleUnitTypes unitType, BattleTimeTypes timeType, int damage);
+	void		  addDamage(BattleUnitTypes unitType, BattleTimeTypes timeType, int increment);
 
-	int getNumRangedRounds() const;
+	DllExport int getFirstStrikes(BattleUnitTypes unitType) const;
+	void		  setFirstStrikes(BattleUnitTypes unitType, int firstStrikes);
+	void		  addFirstStrikes(BattleUnitTypes unitType, int increment);
+
+	DllExport bool isAdvanceSquare() const;
+	void		   setAdvanceSquare(bool advanceSquare);
+
+	int	 getNumRangedRounds() const;
 	void setNumRangedRounds(int count);
 	void addNumRangedRounds(int increment);
-	
-	int getNumMeleeRounds() const;
+
+	int	 getNumMeleeRounds() const;
 	void setNumMeleeRounds(int count);
 	void addNumMeleeRounds(int increment);
 
-	DllExport int getNumBattleRounds() const;
+	DllExport int  getNumBattleRounds() const;
 	DllExport void clearBattleRounds();
-	DllExport CvBattleRound &getBattleRound(int index);
-	DllExport const CvBattleRound &getBattleRound(int index) const;
-	DllExport void addBattleRound(const CvBattleRound &round);
-	void setBattleRound(int index, const CvBattleRound &round);
+	DllExport CvBattleRound& getBattleRound(int index);
+	DllExport const CvBattleRound& getBattleRound(int index) const;
+	DllExport void				   addBattleRound(const CvBattleRound& round);
+	void						   setBattleRound(int index, const CvBattleRound& round);
 
-private:
+  private:
 	void checkBattleTimeType(BattleTimeTypes timeType) const;
 	void checkBattleRound(int index) const;
 
-	int					m_aDamage[BATTLE_UNIT_COUNT][BATTLE_TIME_COUNT];	//!< The beginning damage of the units
-	int					m_aFirstStrikes[BATTLE_UNIT_COUNT];		//!< The number of ranged first strikes the units made
-	int					m_iNumRangedRounds;				//!< The number of ranged rounds
-	int					m_iNumMeleeRounds;				//!< The number of melee rounds
-	bool				m_bAdvanceSquare;					//!< true if the attacking unit should move into the new square
-	CvBattleRoundVector	m_aBattleRounds;					//!< The rounds that define the battle plan
+	int					m_aDamage[BATTLE_UNIT_COUNT][BATTLE_TIME_COUNT]; //!< The beginning damage of the units
+	int					m_aFirstStrikes[BATTLE_UNIT_COUNT]; //!< The number of ranged first strikes the units made
+	int					m_iNumRangedRounds; //!< The number of ranged rounds
+	int					m_iNumMeleeRounds; //!< The number of melee rounds
+	bool				m_bAdvanceSquare; //!< true if the attacking unit should move into the new square
+	CvBattleRoundVector m_aBattleRounds; //!< The rounds that define the battle plan
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -869,38 +890,39 @@ private:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvAirMissionDefinition : public CvMissionDefinition
 {
-public:
-	CvAirMissionDefinition(MissionTypes type = MISSION_AIRPATROL, CvPlot * plot = NULL, CvUnit * attacker = NULL, CvUnit * defender = NULL, float time = -1.f);
-	DllExport CvAirMissionDefinition( const CvAirMissionDefinition & kCopy );
+  public:
+	CvAirMissionDefinition(MissionTypes type = MISSION_AIRPATROL, CvPlot* plot = NULL, CvUnit* attacker = NULL, CvUnit* defender = NULL, float time = -1.f);
+	DllExport CvAirMissionDefinition(const CvAirMissionDefinition& kCopy);
 
-	DllExport int getDamage(BattleUnitTypes unitType) const;
-	void setDamage(BattleUnitTypes unitType, int damage);
+	DllExport int  getDamage(BattleUnitTypes unitType) const;
+	void		   setDamage(BattleUnitTypes unitType, int damage);
 	DllExport bool isDead(BattleUnitTypes unitType) const;
 
-private:
-	int					m_aDamage[BATTLE_UNIT_COUNT];		//!< The ending damage of the units
+  private:
+	int m_aDamage[BATTLE_UNIT_COUNT]; //!< The ending damage of the units
 };
 
 struct CvWidgetDataStruct
 {
-	int m_iData1;										//	The first bit of data
-	int m_iData2;										//	The second piece of data
+	int m_iData1; //	The first bit of data
+	int m_iData2; //	The second piece of data
 
-	bool m_bOption;									//	A boolean piece of data
+	bool m_bOption; //	A boolean piece of data
 
-	WidgetTypes m_eWidgetType;			//	What the 'type' of this widget is (for parsing help and executing actions)
+	WidgetTypes m_eWidgetType; //	What the 'type' of this widget is (for parsing help and executing actions)
 
 	CvWidgetDataStruct()
 		: m_iData1(0)
 		, m_iData2(0)
 		, m_bOption(false)
 		, m_eWidgetType(WIDGET_PLOT_LIST)
-	{}
+	{
+	}
 };
 
 struct DllExport CvPlotIndicatorData
 {
-	CvPlotIndicatorData() 
+	CvPlotIndicatorData()
 		: m_kColor()
 		, m_eVisibility(PLOT_INDICATOR_VISIBLE_ALWAYS)
 		, m_bFlashing(false)
@@ -908,75 +930,83 @@ struct DllExport CvPlotIndicatorData
 		, m_bTestEnemyVisibility(false)
 		, m_bVisibleOnlyIfSelected(false)
 		, m_bPersistentRotation(false)
-	{}
+	{
+	}
 
-	CvString m_strIcon;
-	CvString m_strLabel;
-	NiColor m_kColor;
-	CvWString m_strHelpText;
+	CvString					 m_strIcon;
+	CvString					 m_strLabel;
+	NiColor						 m_kColor;
+	CvWString					 m_strHelpText;
 	PlotIndicatorVisibilityFlags m_eVisibility;
-	bool m_bFlashing;
-	NiPoint2 m_Target;
-	const CvUnit* m_pUnit;
-	bool m_bTestEnemyVisibility;
-	bool m_bVisibleOnlyIfSelected;
-	bool m_bPersistentRotation;
+	bool						 m_bFlashing;
+	NiPoint2					 m_Target;
+	const CvUnit*				 m_pUnit;
+	bool						 m_bTestEnemyVisibility;
+	bool						 m_bVisibleOnlyIfSelected;
+	bool						 m_bPersistentRotation;
 };
 
 struct DllExport CvGlobeLayerData
 {
-	explicit CvGlobeLayerData(GlobeLayerTypes eType) : m_eType(eType), m_bGlobeViewRequired(true), m_bShouldCitiesZoom(false), m_iNumOptions(0) { }
+	explicit CvGlobeLayerData(GlobeLayerTypes eType)
+		: m_eType(eType), m_bGlobeViewRequired(true), m_bShouldCitiesZoom(false), m_iNumOptions(0) {}
 	GlobeLayerTypes m_eType;
-	CvString m_strName;
-	CvString m_strButtonHelpTag;
-	CvString m_strButtonStyle;
-	bool m_bGlobeViewRequired;
-	bool m_bShouldCitiesZoom;
-	int m_iNumOptions;
+	CvString		m_strName;
+	CvString		m_strButtonHelpTag;
+	CvString		m_strButtonStyle;
+	bool			m_bGlobeViewRequired;
+	bool			m_bShouldCitiesZoom;
+	int				m_iNumOptions;
 };
 
 struct DllExport CvFlyoutMenuData
 {
-	CvFlyoutMenuData(FlyoutTypes eType, int iId, int iX, int iY, const wchar* strTitle) : m_eFlyout(eType), m_iID(iId), m_iX(iX), m_iY(iY), m_strTitle(strTitle) { }
+	CvFlyoutMenuData(FlyoutTypes eType, int iId, int iX, int iY, const wchar* strTitle)
+		: m_eFlyout(eType), m_iID(iId), m_iX(iX), m_iY(iY), m_strTitle(strTitle) {}
 	FlyoutTypes m_eFlyout;
-	int m_iID;
-	int m_iX;
-	int m_iY;
-	CvWString m_strTitle;
+	int			m_iID;
+	int			m_iX;
+	int			m_iY;
+	CvWString	m_strTitle;
 };
 
 struct CvStatBase
 {
-	explicit CvStatBase(const char* strKey) : m_strKey(strKey) { }
-	virtual ~CvStatBase() { }
+	explicit CvStatBase(const char* strKey)
+		: m_strKey(strKey) {}
+	virtual ~CvStatBase() {}
 	CvString m_strKey;
 };
 
 struct CvStatInt : public CvStatBase
 {
-	CvStatInt(const char* strKey, int iValue) : CvStatBase(strKey), m_iValue(iValue) { }
+	CvStatInt(const char* strKey, int iValue)
+		: CvStatBase(strKey), m_iValue(iValue) {}
 	int m_iValue;
 };
 
 struct CvStatString : public CvStatBase
 {
-	CvStatString(const char* strKey, const char* strValue) : CvStatBase(strKey), m_strValue(strValue) { }
+	CvStatString(const char* strKey, const char* strValue)
+		: CvStatBase(strKey), m_strValue(strValue) {}
 	CvString m_strValue;
 };
 
 struct CvStatFloat : public CvStatBase
 {
-	CvStatFloat(const char* strKey, float fValue) : CvStatBase(strKey), m_fValue(fValue) { }
+	CvStatFloat(const char* strKey, float fValue)
+		: CvStatBase(strKey), m_fValue(fValue) {}
 	float m_fValue;
 };
 
 struct DllExport CvWBData
 {
-	CvWBData(int iId, const wchar* strHelp, const char* strButton) : m_iId(iId), m_strHelp(strHelp), m_strButton(strButton) { }
-	int m_iId;
+	CvWBData(int iId, const wchar* strHelp, const char* strButton)
+		: m_iId(iId), m_strHelp(strHelp), m_strButton(strButton) {}
+	int		  m_iId;
 	CvWString m_strHelp;
-	CvString m_strButton;
+	CvString  m_strButton;
 };
 
 
-#endif	// CVSTRUCTS_H
+#endif // CVSTRUCTS_H

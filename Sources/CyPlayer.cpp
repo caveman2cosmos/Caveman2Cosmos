@@ -1,14 +1,16 @@
 //
-// Python wrapper class for CvPlayer 
+// Python wrapper class for CvPlayer
 //
 
 #include "CvGameCoreDLL.h"
 
-CyPlayer::CyPlayer() : m_pPlayer(NULL)
+CyPlayer::CyPlayer()
+	: m_pPlayer(NULL)
 {
 }
 
-CyPlayer::CyPlayer(CvPlayer* pPlayer) : m_pPlayer(pPlayer)
+CyPlayer::CyPlayer(CvPlayer* pPlayer)
+	: m_pPlayer(pPlayer)
 {
 }
 
@@ -17,21 +19,21 @@ CyPlayer::CyPlayer(CvPlayer* pPlayer) : m_pPlayer(pPlayer)
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-void CyPlayer::changeLeader( int /*LeaderHeadTypes*/ eNewLeader )
+void CyPlayer::changeLeader(int /*LeaderHeadTypes*/ eNewLeader)
 {
-	if( m_pPlayer )
-		m_pPlayer->changeLeader( (LeaderHeadTypes)eNewLeader );
+	if (m_pPlayer)
+		m_pPlayer->changeLeader((LeaderHeadTypes)eNewLeader);
 }
 
-void CyPlayer::changeCiv( int /*CivilizationTypes*/ eNewCiv )
+void CyPlayer::changeCiv(int /*CivilizationTypes*/ eNewCiv)
 {
-	if( m_pPlayer )
-		m_pPlayer->changeCiv( (CivilizationTypes)eNewCiv );
+	if (m_pPlayer)
+		m_pPlayer->changeCiv((CivilizationTypes)eNewCiv);
 }
-void CyPlayer::setIsHuman( bool bNewValue )
+void CyPlayer::setIsHuman(bool bNewValue)
 {
-	if( m_pPlayer )
-		m_pPlayer->setIsHuman( bNewValue );
+	if (m_pPlayer)
+		m_pPlayer->setIsHuman(bNewValue);
 }
 /************************************************************************************************/
 /* CHANGE_PLAYER                          END                                                   */
@@ -41,62 +43,62 @@ void CyPlayer::setIsHuman( bool bNewValue )
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-void CyPlayer::setIsRebel( bool bNewValue )
+void CyPlayer::setIsRebel(bool bNewValue)
 {
-	if( m_pPlayer )
-		m_pPlayer->setIsRebel( bNewValue );
+	if (m_pPlayer)
+		m_pPlayer->setIsRebel(bNewValue);
 }
 
-bool CyPlayer::isRebel( )
+bool CyPlayer::isRebel()
 {
-	if( m_pPlayer )
+	if (m_pPlayer)
 		return m_pPlayer->isRebel();
 	else
 		return false;
 }
 
-int CyPlayer::getStabilityIndex( )
+int CyPlayer::getStabilityIndex()
 {
-	if( m_pPlayer )
+	if (m_pPlayer)
 		return m_pPlayer->getStabilityIndex();
 	else
 		return -1;
 }
 
-void CyPlayer::setStabilityIndex( int iNewValue )
+void CyPlayer::setStabilityIndex(int iNewValue)
 {
-	if( m_pPlayer )
-		m_pPlayer->setStabilityIndex( iNewValue );
+	if (m_pPlayer)
+		m_pPlayer->setStabilityIndex(iNewValue);
 }
 
-void CyPlayer::changeStabilityIndex( int iChange )
+void CyPlayer::changeStabilityIndex(int iChange)
 {
-	if( m_pPlayer )
-		m_pPlayer->changeStabilityIndex( iChange );
+	if (m_pPlayer)
+		m_pPlayer->changeStabilityIndex(iChange);
 }
 
-int CyPlayer::getStabilityIndexAverage( )
+int CyPlayer::getStabilityIndexAverage()
 {
-	if( m_pPlayer )
+	if (m_pPlayer)
 		return m_pPlayer->getStabilityIndexAverage();
 	else
 		return -1;
 }
 
-void CyPlayer::setStabilityIndexAverage( int iNewValue )
+void CyPlayer::setStabilityIndexAverage(int iNewValue)
 {
-	if( m_pPlayer )
-		m_pPlayer->setStabilityIndexAverage( iNewValue );
+	if (m_pPlayer)
+		m_pPlayer->setStabilityIndexAverage(iNewValue);
 }
 
-void CyPlayer::updateStabilityIndexAverage( )
+void CyPlayer::updateStabilityIndexAverage()
 {
-	if( m_pPlayer )
-		m_pPlayer->updateStabilityIndexAverage( );
+	if (m_pPlayer)
+		m_pPlayer->updateStabilityIndexAverage();
 }
 void CyPlayer::setColor(int /*PlayerColorTypes*/ iColor)
 {
-	if( m_pPlayer )
+	if (m_pPlayer)
 		m_pPlayer->setColor((PlayerColorTypes)iColor);
 }
 /************************************************************************************************/
@@ -106,7 +108,7 @@ void CyPlayer::setColor(int /*PlayerColorTypes*/ iColor)
 // RevolutionDCM start - new diplomacy option
 bool CyPlayer::isDoNotBotherStatus(int /*PlayerTypes*/ playerID)
 {
-	if( m_pPlayer )
+	if (m_pPlayer)
 		return m_pPlayer->isDoNotBotherStatus((PlayerTypes)playerID);
 	else
 		return false;
@@ -118,22 +120,22 @@ int CyPlayer::startingPlotRange()
 	return m_pPlayer ? m_pPlayer->startingPlotRange() : -1;
 }
 
-bool CyPlayer::startingPlotWithinRange(CyPlot *pPlot, int /*PlayerTypes*/ ePlayer, int iRange, int iPass)
+bool CyPlayer::startingPlotWithinRange(CyPlot* pPlot, int /*PlayerTypes*/ ePlayer, int iRange, int iPass)
 {
 	if (m_pPlayer && pPlot != NULL && !pPlot->isNone())
 	{
-		CvPlot *pcvPlot = pPlot->getPlot();
+		CvPlot* pcvPlot = pPlot->getPlot();
 		return m_pPlayer->startingPlotWithinRange(pcvPlot, (PlayerTypes)ePlayer, iRange, iPass);
 	}
 	return NULL;
 }
 
-CyPlot* CyPlayer::findStartingPlot(bool bRandomize) 
+CyPlot* CyPlayer::findStartingPlot(bool bRandomize)
 {
 	return m_pPlayer ? new CyPlot(m_pPlayer->findStartingPlot(bRandomize)) : NULL;
 }
 
-CyCity* CyPlayer::initCity(int x, int y) 
+CyCity* CyPlayer::initCity(int x, int y)
 {
 	return m_pPlayer ? new CyCity(m_pPlayer->initCity(x, y, true, true)) : NULL;
 }
@@ -157,12 +159,12 @@ std::wstring CyPlayer::getNewCityName()
 
 CyUnit* CyPlayer::initUnit(int /*UnitTypes*/ iIndex, int iX, int iY, UnitAITypes eUnitAI, DirectionTypes eFacingDirection)
 {
-/************************************************************************************************/
-/* Afforess	                  Start		 09/29/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	if( m_pPlayer )
+	/************************************************************************************************/
+	/* Afforess	                  Start		 09/29/10                                               */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
+	if (m_pPlayer)
 	{
 		FAssertMsg(iIndex != -1, "Initiating NO_UNIT Type!");
 		if (iIndex == -1)
@@ -170,10 +172,10 @@ CyUnit* CyPlayer::initUnit(int /*UnitTypes*/ iIndex, int iX, int iY, UnitAITypes
 			return NULL;
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-	return m_pPlayer ? new CyUnit(m_pPlayer->initUnit((UnitTypes) iIndex, iX, iY, eUnitAI, eFacingDirection, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"))) : NULL;
+	/************************************************************************************************/
+	/* Afforess	                     END                                                            */
+	/************************************************************************************************/
+	return m_pPlayer ? new CyUnit(m_pPlayer->initUnit((UnitTypes)iIndex, iX, iY, eUnitAI, eFacingDirection, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"))) : NULL;
 }
 
 void CyPlayer::disbandUnit(bool bAnnounce)
@@ -189,7 +191,7 @@ void CyPlayer::killUnits()
 
 bool CyPlayer::hasTrait(int /*TraitTypes*/ iIndex)
 {
-	return m_pPlayer ? m_pPlayer->hasTrait((TraitTypes) iIndex) : false;
+	return m_pPlayer ? m_pPlayer->hasTrait((TraitTypes)iIndex) : false;
 }
 
 bool CyPlayer::isHuman()
@@ -237,8 +239,8 @@ std::wstring CyPlayer::getName()
 /************************************************************************************************/
 void CyPlayer::setName(std::wstring szNewValue)
 {
-	if( m_pPlayer )
-		m_pPlayer->setName( szNewValue );
+	if (m_pPlayer)
+		m_pPlayer->setName(szNewValue);
 }
 /************************************************************************************************/
 /* REVOLUTION_MOD                          END                                                  */
@@ -265,7 +267,7 @@ std::wstring CyPlayer::getCivilizationDescription(int iForm)
 /************************************************************************************************/
 void CyPlayer::setCivName(std::wstring szNewDesc, std::wstring szNewShort, std::wstring szNewAdj)
 {
-	if( m_pPlayer )
+	if (m_pPlayer)
 		m_pPlayer->setCivName(szNewDesc, szNewShort, szNewAdj);
 }
 /************************************************************************************************/
@@ -292,12 +294,12 @@ std::wstring CyPlayer::getCivilizationAdjective(int iForm)
 	return m_pPlayer ? m_pPlayer->getCivilizationAdjective((uint)iForm) : std::wstring();
 }
 
-std::wstring CyPlayer::getCivilizationAdjectiveKey( )
+std::wstring CyPlayer::getCivilizationAdjectiveKey()
 {
 	return m_pPlayer ? m_pPlayer->getCivilizationAdjectiveKey() : std::wstring();
 }
 
-std::wstring CyPlayer::getFlagDecal( )
+std::wstring CyPlayer::getFlagDecal()
 {
 	return m_pPlayer ? m_pPlayer->getFlagDecal() : std::wstring();
 }
@@ -312,7 +314,7 @@ std::wstring CyPlayer::getStateReligionName(int iForm)
 	return m_pPlayer ? m_pPlayer->getStateReligionName((int)iForm) : std::wstring();
 }
 
-std::wstring CyPlayer::getStateReligionKey( )
+std::wstring CyPlayer::getStateReligionKey()
 {
 	return m_pPlayer ? m_pPlayer->getStateReligionKey() : std::wstring();
 }
@@ -334,7 +336,7 @@ std::wstring CyPlayer::getBestAttackUnitKey()
 
 int /*ArtStyleTypes*/ CyPlayer::getArtStyleType()
 {
-	return m_pPlayer ? (int) m_pPlayer->getArtStyleType() : -1;
+	return m_pPlayer ? (int)m_pPlayer->getArtStyleType() : -1;
 }
 
 std::string CyPlayer::getUnitButton(int eUnit)
@@ -342,14 +344,14 @@ std::string CyPlayer::getUnitButton(int eUnit)
 	return m_pPlayer ? m_pPlayer->getUnitButton((UnitTypes)eUnit) : "";
 }
 
-int CyPlayer::findBestFoundValue( )
+int CyPlayer::findBestFoundValue()
 {
 	return m_pPlayer ? m_pPlayer->findBestFoundValue() : -1;
 }
 
 int CyPlayer::countReligionSpreadUnits(CyArea* pArea, int /*ReligionTypes*/ eReligion)
 {
-	return m_pPlayer ? m_pPlayer->countReligionSpreadUnits(pArea->getArea(), (ReligionTypes) eReligion) : -1;
+	return m_pPlayer ? m_pPlayer->countReligionSpreadUnits(pArea->getArea(), (ReligionTypes)eReligion) : -1;
 }
 
 int CyPlayer::countNumCoastalCities()
@@ -389,12 +391,12 @@ int CyPlayer::countUnimprovedBonuses(CyArea* pArea, CyPlot* pFromPlot)
 
 int CyPlayer::countCityFeatures(int /*FeatureTypes*/ eFeature)
 {
-	return m_pPlayer ? m_pPlayer->countCityFeatures((FeatureTypes) eFeature) : -1;
+	return m_pPlayer ? m_pPlayer->countCityFeatures((FeatureTypes)eFeature) : -1;
 }
 
 int CyPlayer::countNumBuildings(int /*BuildingTypes*/ eBuilding)
 {
-	return m_pPlayer ? m_pPlayer->countNumBuildings((BuildingTypes) eBuilding) : -1;
+	return m_pPlayer ? m_pPlayer->countNumBuildings((BuildingTypes)eBuilding) : -1;
 }
 
 int CyPlayer::countPotentialForeignTradeCities(CyArea* pIgnoreArea)
@@ -455,7 +457,7 @@ int CyPlayer::getNumTradeableBonuses(int /*BonusTypes*/ eBonus)
 
 int CyPlayer::getNumTradeBonusImports(int /*PlayerTypes*/ ePlayer)
 {
-	return m_pPlayer ? m_pPlayer->getNumTradeBonusImports((PlayerTypes) ePlayer) : -1;
+	return m_pPlayer ? m_pPlayer->getNumTradeBonusImports((PlayerTypes)ePlayer) : -1;
 }
 
 bool CyPlayer::hasBonus(int /*BonusTypes*/ eBonus)
@@ -465,13 +467,13 @@ bool CyPlayer::hasBonus(int /*BonusTypes*/ eBonus)
 
 bool CyPlayer::canStopTradingWithTeam(int /*TeamTypes*/ eTeam)
 {
-	return m_pPlayer ? m_pPlayer->canStopTradingWithTeam((TeamTypes) eTeam) : false;
+	return m_pPlayer ? m_pPlayer->canStopTradingWithTeam((TeamTypes)eTeam) : false;
 }
 
 void CyPlayer::stopTradingWithTeam(int /*TeamTypes*/ eTeam)
 {
 	if (m_pPlayer)
-		m_pPlayer->stopTradingWithTeam((TeamTypes) eTeam);
+		m_pPlayer->stopTradingWithTeam((TeamTypes)eTeam);
 }
 
 void CyPlayer::killAllDeals()
@@ -515,13 +517,13 @@ void CyPlayer::disband(CyCity* pCity)
 
 bool CyPlayer::canReceiveGoody(CyPlot* pPlot, int /*GoodyTypes*/ iIndex, CyUnit* pUnit)
 {
-	return m_pPlayer ? m_pPlayer->canReceiveGoody(pPlot->getPlot(), (GoodyTypes) iIndex, pUnit->getUnit()) : false;
+	return m_pPlayer ? m_pPlayer->canReceiveGoody(pPlot->getPlot(), (GoodyTypes)iIndex, pUnit->getUnit()) : false;
 }
 
 void CyPlayer::receiveGoody(CyPlot* pPlot, int /*GoodyTypes*/ iIndex, CyUnit* pUnit)
 {
 	if (m_pPlayer)
-		m_pPlayer->receiveGoody(pPlot->getPlot(), (GoodyTypes) iIndex, pUnit->getUnit());
+		m_pPlayer->receiveGoody(pPlot->getPlot(), (GoodyTypes)iIndex, pUnit->getUnit());
 }
 
 void CyPlayer::doGoody(CyPlot* pPlot, CyUnit* pUnit)
@@ -535,10 +537,10 @@ bool CyPlayer::canFound(int iX, int iY)
 	return m_pPlayer ? m_pPlayer->canFound(iX, iY) : false;
 }
 
-void CyPlayer::found(int x, int y) 
+void CyPlayer::found(int x, int y)
 {
 	if (m_pPlayer)
-		m_pPlayer->found(x,y);
+		m_pPlayer->found(x, y);
 }
 
 bool CyPlayer::canTrain(int /*UnitTypes*/ eUnit, bool bContinue, bool bTestVisible)
@@ -546,7 +548,7 @@ bool CyPlayer::canTrain(int /*UnitTypes*/ eUnit, bool bContinue, bool bTestVisib
 	return m_pPlayer ? m_pPlayer->canTrain((UnitTypes)eUnit, bContinue, bTestVisible) : false;
 }
 
-bool CyPlayer::canConstruct(int /*BuildingTypes*/eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost)
+bool CyPlayer::canConstruct(int /*BuildingTypes*/ eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost)
 {
 	return m_pPlayer ? m_pPlayer->canConstruct((BuildingTypes)eBuilding, bContinue, bTestVisible, bIgnoreCost) : false;
 }
@@ -563,27 +565,27 @@ bool CyPlayer::canMaintain(int /*ProcessTypes*/ eProcess, bool bContinue)
 
 bool CyPlayer::isProductionMaxedUnitClass(int /*UnitClassTypes*/ eUnitClass)
 {
-	return m_pPlayer ? m_pPlayer->isProductionMaxedUnitClass((UnitClassTypes) eUnitClass) : false;
+	return m_pPlayer ? m_pPlayer->isProductionMaxedUnitClass((UnitClassTypes)eUnitClass) : false;
 }
 
 bool CyPlayer::isProductionMaxedBuildingClass(int /*BuildingClassTypes*/ eBuildingClass, bool bAcquireCity)
 {
-	return m_pPlayer ? m_pPlayer->isProductionMaxedBuildingClass((BuildingClassTypes) eBuildingClass, bAcquireCity) : false;
+	return m_pPlayer ? m_pPlayer->isProductionMaxedBuildingClass((BuildingClassTypes)eBuildingClass, bAcquireCity) : false;
 }
 
 bool CyPlayer::isProductionMaxedProject(int /*ProjectTypes*/ eProject)
 {
-	return m_pPlayer ? m_pPlayer->isProductionMaxedProject((ProjectTypes) eProject) : false;
+	return m_pPlayer ? m_pPlayer->isProductionMaxedProject((ProjectTypes)eProject) : false;
 }
 
 int CyPlayer::getUnitProductionNeeded(int /*UnitTypes*/ iIndex)
 {
-	return m_pPlayer ? m_pPlayer->getProductionNeeded((UnitTypes) iIndex) : -1;
+	return m_pPlayer ? m_pPlayer->getProductionNeeded((UnitTypes)iIndex) : -1;
 }
 
 int CyPlayer::getBuildingProductionNeeded(int /*BuildingTypes*/ iIndex)
 {
-	return m_pPlayer ? m_pPlayer->getProductionNeeded((BuildingTypes) iIndex) : -1;
+	return m_pPlayer ? m_pPlayer->getProductionNeeded((BuildingTypes)iIndex) : -1;
 }
 
 int CyPlayer::getProjectProductionNeeded(int /*ProjectTypes*/ iIndex)
@@ -593,7 +595,7 @@ int CyPlayer::getProjectProductionNeeded(int /*ProjectTypes*/ iIndex)
 
 int CyPlayer::getBuildingClassPrereqBuilding(int /*BuildingTypes*/ eBuilding, int /*BuildingClassTypes*/ ePrereqBuildingClass, int iExtra)
 {
-	return m_pPlayer ? m_pPlayer->getBuildingClassPrereqBuilding((BuildingTypes) eBuilding, (BuildingClassTypes) ePrereqBuildingClass, iExtra) : -1;
+	return m_pPlayer ? m_pPlayer->getBuildingClassPrereqBuilding((BuildingTypes)eBuilding, (BuildingClassTypes)ePrereqBuildingClass, iExtra) : -1;
 }
 
 void CyPlayer::removeBuildingClass(int /*BuildingClassTypes*/ eBuildingClass)
@@ -609,12 +611,12 @@ bool CyPlayer::canBuild(CyPlot* pPlot, int /*BuildTypes*/ eBuild, bool bTestEra,
 
 int /*RouteTypes*/ CyPlayer::getBestRoute(CyPlot* pPlot) const
 {
-	return m_pPlayer ? (int) m_pPlayer->getBestRoute(NULL != pPlot ? pPlot->getPlot() : NULL) : -1;
+	return m_pPlayer ? (int)m_pPlayer->getBestRoute(NULL != pPlot ? pPlot->getPlot() : NULL) : -1;
 }
 
 int CyPlayer::getImprovementUpgradeRate(int /*ImprovementTypes*/ eImprovement) const
 {
-	return m_pPlayer ? m_pPlayer->getImprovementUpgradeRateTimes100((ImprovementTypes)eImprovement)/100 : -1;
+	return m_pPlayer ? m_pPlayer->getImprovementUpgradeRateTimes100((ImprovementTypes)eImprovement) / 100 : -1;
 }
 
 int CyPlayer::calculateTotalYield(int /*YieldTypes*/ eYield)
@@ -687,9 +689,9 @@ int CyPlayer::getFreeUnitCountdown()
 	return m_pPlayer ? m_pPlayer->getFreeUnitCountdown() : 0;
 }
 
-void CyPlayer::setFreeUnitCountdown( int iValue )
+void CyPlayer::setFreeUnitCountdown(int iValue)
 {
-	if( m_pPlayer )
+	if (m_pPlayer)
 		m_pPlayer->setFreeUnitCountdown(iValue);
 }
 /************************************************************************************************/
@@ -738,7 +740,7 @@ bool CyPlayer::canResearch(int /*TechTypes*/ eTech, bool bTrade)
 
 int /* TechTypes */ CyPlayer::getCurrentResearch()
 {
-	return m_pPlayer ? (int) m_pPlayer->getCurrentResearch() : (int) NO_TECH;
+	return m_pPlayer ? (int)m_pPlayer->getCurrentResearch() : (int)NO_TECH;
 }
 
 bool CyPlayer::isCurrentResearchRepeat()
@@ -779,12 +781,12 @@ void CyPlayer::revolution(int /*CivicTypes**/ paeNewCivics, bool bForce)
 
 int CyPlayer::getCivicPercentAnger(int /*CivicTypes*/ eCivic)
 {
-	return m_pPlayer ? m_pPlayer->getCivicPercentAnger((CivicTypes) eCivic) : -1;
+	return m_pPlayer ? m_pPlayer->getCivicPercentAnger((CivicTypes)eCivic) : -1;
 }
 
 bool CyPlayer::canDoReligion(int /*ReligionTypes*/ eReligion)
 {
-	return m_pPlayer ? m_pPlayer->canDoReligion((ReligionTypes) eReligion) : false;
+	return m_pPlayer ? m_pPlayer->canDoReligion((ReligionTypes)eReligion) : false;
 }
 
 bool CyPlayer::canChangeReligion()
@@ -868,7 +870,7 @@ int CyPlayer::getCivicAnarchyLength(boost::python::list& /*CivicTypes**/ paeNewC
 	gDLL->getPythonIFace()->putSeqInArray(paeNewCivics.ptr() /*src*/, &pCivics /*dst*/);
 
 	int iRet = m_pPlayer ? m_pPlayer->getCivicAnarchyLength((CivicTypes*)pCivics) : -1;
-	delete [] pCivics;
+	delete[] pCivics;
 	return iRet;
 }
 
@@ -954,17 +956,17 @@ int CyPlayer::getTotalLandScored()
 	return m_pPlayer ? m_pPlayer->getTotalLandScored() : -1;
 }
 
-int CyPlayer::getEffectiveGold() 
+int CyPlayer::getEffectiveGold()
 {
 	return m_pPlayer ? m_pPlayer->getEffectiveGold() : -1;
 }
 
-int CyPlayer::getGold() 
+int CyPlayer::getGold()
 {
 	return m_pPlayer ? m_pPlayer->getGold() : -1;
 }
 
-int CyPlayer::getGreaterGold() 
+int CyPlayer::getGreaterGold()
 {
 	return m_pPlayer ? m_pPlayer->getGreaterGold() : -1;
 }
@@ -998,7 +1000,7 @@ int CyPlayer::getGoldPerTurn()
 	return m_pPlayer ? m_pPlayer->getGoldPerTurn() : -1;
 }
 
-int CyPlayer::getAdvancedStartPoints() 
+int CyPlayer::getAdvancedStartPoints()
 {
 	return m_pPlayer ? m_pPlayer->getAdvancedStartPoints() : -1;
 }
@@ -1017,7 +1019,7 @@ void CyPlayer::changeAdvancedStartPoints(int iChange)
 
 int CyPlayer::getAdvancedStartUnitCost(int /*UnitTypes*/ eUnit, bool bAdd, CyPlot* pPlot)
 {
-	return m_pPlayer ? m_pPlayer->getAdvancedStartUnitCost((UnitTypes) eUnit, bAdd, NULL != pPlot ? pPlot->getPlot() : NULL) : -1;
+	return m_pPlayer ? m_pPlayer->getAdvancedStartUnitCost((UnitTypes)eUnit, bAdd, NULL != pPlot ? pPlot->getPlot() : NULL) : -1;
 }
 
 int CyPlayer::getAdvancedStartCityCost(bool bAdd, CyPlot* pPlot)
@@ -1037,22 +1039,22 @@ int CyPlayer::getAdvancedStartCultureCost(bool bAdd, CyCity* pCity)
 
 int CyPlayer::getAdvancedStartBuildingCost(int /*BuildingTypes*/ eBuilding, bool bAdd, CyCity* pCity)
 {
-	return m_pPlayer ? m_pPlayer->getAdvancedStartBuildingCost((BuildingTypes) eBuilding, bAdd, pCity->getCity()) : -1;
+	return m_pPlayer ? m_pPlayer->getAdvancedStartBuildingCost((BuildingTypes)eBuilding, bAdd, pCity->getCity()) : -1;
 }
 
 int CyPlayer::getAdvancedStartImprovementCost(int /*ImprovementTypes*/ eImprovement, bool bAdd, CyPlot* pPlot)
 {
-	return m_pPlayer ? m_pPlayer->getAdvancedStartImprovementCost((ImprovementTypes) eImprovement, bAdd, NULL != pPlot ? pPlot->getPlot() : NULL) : -1;
+	return m_pPlayer ? m_pPlayer->getAdvancedStartImprovementCost((ImprovementTypes)eImprovement, bAdd, NULL != pPlot ? pPlot->getPlot() : NULL) : -1;
 }
 
 int CyPlayer::getAdvancedStartRouteCost(int /*RouteTypes*/ eRoute, bool bAdd, CyPlot* pPlot)
 {
-	return m_pPlayer ? m_pPlayer->getAdvancedStartRouteCost((RouteTypes) eRoute, bAdd, NULL != pPlot ? pPlot->getPlot() : NULL) : -1;
+	return m_pPlayer ? m_pPlayer->getAdvancedStartRouteCost((RouteTypes)eRoute, bAdd, NULL != pPlot ? pPlot->getPlot() : NULL) : -1;
 }
 
 int CyPlayer::getAdvancedStartTechCost(int /*TechTypes*/ eTech, bool bAdd)
 {
-	return m_pPlayer ? m_pPlayer->getAdvancedStartTechCost((TechTypes) eTech, bAdd) : -1;
+	return m_pPlayer ? m_pPlayer->getAdvancedStartTechCost((TechTypes)eTech, bAdd) : -1;
 }
 
 int CyPlayer::getAdvancedStartVisibilityCost(bool bAdd, CyPlot* pPlot)
@@ -1062,40 +1064,40 @@ int CyPlayer::getAdvancedStartVisibilityCost(bool bAdd, CyPlot* pPlot)
 
 int CyPlayer::getEspionageSpending(int /*TeamTypes*/ eIndex)
 {
-	return m_pPlayer ? m_pPlayer->getEspionageSpending((TeamTypes) eIndex) : -1;
+	return m_pPlayer ? m_pPlayer->getEspionageSpending((TeamTypes)eIndex) : -1;
 }
 
 bool CyPlayer::canDoEspionageMission(int /*EspionageMissionTypes*/ eMission, int /*PlayerTypes*/ eTargetPlayer, CyPlot* pPlot, int iExtraData)
 {
-	return m_pPlayer ? m_pPlayer->canDoEspionageMission((EspionageMissionTypes) eMission, (PlayerTypes) eTargetPlayer, NULL != pPlot ? pPlot->getPlot() : NULL, iExtraData, NULL) : false;
+	return m_pPlayer ? m_pPlayer->canDoEspionageMission((EspionageMissionTypes)eMission, (PlayerTypes)eTargetPlayer, NULL != pPlot ? pPlot->getPlot() : NULL, iExtraData, NULL) : false;
 }
 
 int CyPlayer::getEspionageMissionCost(int /*EspionageMissionTypes*/ eMission, int /*PlayerTypes*/ eTargetPlayer, CyPlot* pPlot, int iExtraData)
 {
-	return m_pPlayer ? m_pPlayer->getEspionageMissionCost((EspionageMissionTypes) eMission, (PlayerTypes) eTargetPlayer, NULL != pPlot ? pPlot->getPlot() : NULL, iExtraData) : -1;
+	return m_pPlayer ? m_pPlayer->getEspionageMissionCost((EspionageMissionTypes)eMission, (PlayerTypes)eTargetPlayer, NULL != pPlot ? pPlot->getPlot() : NULL, iExtraData) : -1;
 }
 
 void CyPlayer::doEspionageMission(int /*EspionageMissionTypes*/ eMission, int /*PlayerTypes*/ eTargetPlayer, CyPlot* pPlot, int iExtraData, CyUnit* pUnit)
 {
 	if (m_pPlayer)
-		m_pPlayer->doEspionageMission((EspionageMissionTypes) eMission, (PlayerTypes) eTargetPlayer, NULL != pPlot ? pPlot->getPlot() : NULL, iExtraData, pUnit->getUnit());
+		m_pPlayer->doEspionageMission((EspionageMissionTypes)eMission, (PlayerTypes)eTargetPlayer, NULL != pPlot ? pPlot->getPlot() : NULL, iExtraData, pUnit->getUnit());
 }
 
 int CyPlayer::getEspionageSpendingWeightAgainstTeam(int /*TeamTypes*/ eIndex)
 {
-	return m_pPlayer ? m_pPlayer->getEspionageSpendingWeightAgainstTeam((TeamTypes) eIndex) : -1;
+	return m_pPlayer ? m_pPlayer->getEspionageSpendingWeightAgainstTeam((TeamTypes)eIndex) : -1;
 }
 
 void CyPlayer::setEspionageSpendingWeightAgainstTeam(int /*TeamTypes*/ eIndex, int iValue)
 {
 	if (m_pPlayer)
-		m_pPlayer->setEspionageSpendingWeightAgainstTeam((TeamTypes) eIndex, iValue);
+		m_pPlayer->setEspionageSpendingWeightAgainstTeam((TeamTypes)eIndex, iValue);
 }
 
 void CyPlayer::changeEspionageSpendingWeightAgainstTeam(int /*TeamTypes*/ eIndex, int iChange)
 {
 	if (m_pPlayer)
-		m_pPlayer->changeEspionageSpendingWeightAgainstTeam((TeamTypes) eIndex, iChange);
+		m_pPlayer->changeEspionageSpendingWeightAgainstTeam((TeamTypes)eIndex, iChange);
 }
 
 int CyPlayer::getGoldenAgeTurns()
@@ -1177,7 +1179,6 @@ void CyPlayer::createGreatPeople(int eGreatPersonUnit, bool bIncrementThreshold,
 	{
 		m_pPlayer->createGreatPeople((UnitTypes)eGreatPersonUnit, bIncrementThreshold, bIncrementExperience, iX, iY);
 	}
-
 }
 
 int CyPlayer::getGreatPeopleCreated()
@@ -1277,7 +1278,7 @@ int CyPlayer::getCityDefenseModifier()
 /************************************************************************************************/
 int CyPlayer::getBestUnitType(int /*UnitAITypes*/ eUnitAI) const
 {
-    return m_pPlayer ? (int) m_pPlayer->getBestUnitType(UnitAITypes(eUnitAI)) : -1;
+	return m_pPlayer ? (int)m_pPlayer->getBestUnitType(UnitAITypes(eUnitAI)) : -1;
 }
 /************************************************************************************************/
 /* LoR                            END                                                           */
@@ -1290,12 +1291,12 @@ int CyPlayer::getBestUnitType(int /*UnitAITypes*/ eUnitAI) const
 /************************************************************************************************/
 bool CyPlayer::isNonStateReligionCommerce() const
 {
-    return m_pPlayer ? m_pPlayer->isNonStateReligionCommerce() : false;
+	return m_pPlayer ? m_pPlayer->isNonStateReligionCommerce() : false;
 }
 
 bool CyPlayer::isUpgradeAnywhere() const
 {
-    return m_pPlayer ? m_pPlayer->isUpgradeAnywhere() : false;
+	return m_pPlayer ? m_pPlayer->isUpgradeAnywhere() : false;
 }
 
 int CyPlayer::getRevIdxLocal()
@@ -1737,17 +1738,17 @@ bool CyPlayer::isMinorCiv()
 	return m_pPlayer ? m_pPlayer->isMinorCiv() : false;
 }
 
-bool CyPlayer::isAlive() 
+bool CyPlayer::isAlive()
 {
 	return m_pPlayer ? m_pPlayer->isAlive() : false;
 }
 
-bool CyPlayer::isEverAlive() 
+bool CyPlayer::isEverAlive()
 {
 	return m_pPlayer ? m_pPlayer->isEverAlive() : false;
 }
 
-bool CyPlayer::isExtendedGame() 
+bool CyPlayer::isExtendedGame()
 {
 	return m_pPlayer ? m_pPlayer->isExtendedGame() : false;
 }
@@ -1763,28 +1764,28 @@ bool CyPlayer::isFoundedFirstCity()
 /************************************************************************************************/
 void CyPlayer::setFoundedFirstCity(bool bNewValue)
 {
-	if( m_pPlayer ) 
+	if (m_pPlayer)
 		m_pPlayer->setFoundedFirstCity(bNewValue);
 	return;
 }
 
 void CyPlayer::setAlive(bool bNewValue)
 {
-	if( m_pPlayer ) 
+	if (m_pPlayer)
 		m_pPlayer->setAlive(bNewValue);
 	return;
 }
 
 void CyPlayer::setNewPlayerAlive(bool bNewValue)
 {
-	if( m_pPlayer ) 
+	if (m_pPlayer)
 		m_pPlayer->setNewPlayerAlive(bNewValue);
 	return;
 }
 
 void CyPlayer::changeTechScore(int iChange)
 {
-	if( m_pPlayer ) 
+	if (m_pPlayer)
 		m_pPlayer->changeTechScore(iChange);
 }
 
@@ -1799,7 +1800,7 @@ bool CyPlayer::isMADNukesEnabled() const
 
 void CyPlayer::setMADNukesEnabled(bool bNewValue)
 {
-	if(m_pPlayer)
+	if (m_pPlayer)
 		m_pPlayer->changeMADNukesCount(bNewValue ? 1 : -1);
 }
 // < M.A.D. Nukes End   >
@@ -1815,50 +1816,50 @@ int CyPlayer::getID()
 
 int /* HandicapTypes */ CyPlayer::getHandicapType()
 {
-	return m_pPlayer ? (int) m_pPlayer->getHandicapType() : -1;
+	return m_pPlayer ? (int)m_pPlayer->getHandicapType() : -1;
 }
 
-int /* CivilizationTypes */  CyPlayer::getCivilizationType() 
+int /* CivilizationTypes */ CyPlayer::getCivilizationType()
 {
-	return m_pPlayer ? (int) m_pPlayer->getCivilizationType() : NO_CIVILIZATION;
+	return m_pPlayer ? (int)m_pPlayer->getCivilizationType() : NO_CIVILIZATION;
 }
 
 int /*LeaderHeadTypes*/ CyPlayer::getLeaderType()
 {
-	return m_pPlayer ? (int) m_pPlayer->getLeaderType() : -1;
+	return m_pPlayer ? (int)m_pPlayer->getLeaderType() : -1;
 }
 
 int /*LeaderHeadTypes*/ CyPlayer::getPersonalityType()
 {
-	return m_pPlayer ? (int) m_pPlayer->getPersonalityType() : -1;
+	return m_pPlayer ? (int)m_pPlayer->getPersonalityType() : -1;
 }
 
 void CyPlayer::setPersonalityType(int /*LeaderHeadTypes*/ eNewValue)
 {
 	if (m_pPlayer)
-		m_pPlayer->setPersonalityType((LeaderHeadTypes) eNewValue);
+		m_pPlayer->setPersonalityType((LeaderHeadTypes)eNewValue);
 }
 
 int /*ErasTypes*/ CyPlayer::getCurrentEra()
 {
-	return m_pPlayer ? (int) m_pPlayer->getCurrentEra() : NO_ERA;
+	return m_pPlayer ? (int)m_pPlayer->getCurrentEra() : NO_ERA;
 }
 
 void CyPlayer::setCurrentEra(int /*EraTypes*/ iNewValue)
 {
 	if (m_pPlayer)
-		m_pPlayer->setCurrentEra((EraTypes) iNewValue);
+		m_pPlayer->setCurrentEra((EraTypes)iNewValue);
 }
 
 int /*ReligonTypes*/ CyPlayer::getStateReligion()
 {
-	return m_pPlayer ? (int) m_pPlayer->getStateReligion() : NO_RELIGION;
+	return m_pPlayer ? (int)m_pPlayer->getStateReligion() : NO_RELIGION;
 }
 
 void CyPlayer::setLastStateReligion(int /*ReligionTypes*/ iNewReligion)
 {
 	if (m_pPlayer)
-		m_pPlayer->setLastStateReligion((ReligionTypes) iNewReligion);
+		m_pPlayer->setLastStateReligion((ReligionTypes)iNewReligion);
 }
 
 int CyPlayer::getTeam()
@@ -1868,7 +1869,7 @@ int CyPlayer::getTeam()
 
 int /*PlayerColorTypes*/ CyPlayer::getPlayerColor()
 {
-	return m_pPlayer ? (int) m_pPlayer->getPlayerColor() : NO_COLOR;
+	return m_pPlayer ? (int)m_pPlayer->getPlayerColor() : NO_COLOR;
 }
 
 int CyPlayer::getPlayerTextColorR()
@@ -1893,7 +1894,7 @@ int CyPlayer::getPlayerTextColorA()
 
 int CyPlayer::getSeaPlotYield(YieldTypes eIndex)
 {
-	return m_pPlayer ? (int) m_pPlayer->getSeaPlotYield(eIndex) : NO_YIELD;
+	return m_pPlayer ? (int)m_pPlayer->getSeaPlotYield(eIndex) : NO_YIELD;
 }
 
 int CyPlayer::getYieldRateModifier(YieldTypes eIndex)
@@ -1970,10 +1971,10 @@ bool CyPlayer::isCommerceFlexible(int /*CommerceTypes*/ eIndex)
 
 int CyPlayer::getGoldPerTurnByPlayer(int /*PlayerTypes*/ eIndex)
 {
-	return m_pPlayer ? m_pPlayer->getGoldPerTurnByPlayer((PlayerTypes) eIndex) : -1;
+	return m_pPlayer ? m_pPlayer->getGoldPerTurnByPlayer((PlayerTypes)eIndex) : -1;
 }
 
-bool CyPlayer::isFeatAccomplished(int /*FeatTypes*/ eIndex)	
+bool CyPlayer::isFeatAccomplished(int /*FeatTypes*/ eIndex)
 {
 	//TB Something's wrong in the python and this allows me to protect against it.
 	if (eIndex < 0 || eIndex > NUM_FEAT_TYPES)
@@ -2000,7 +2001,7 @@ void CyPlayer::setFeatAccomplished(int /*FeatTypes*/ eIndex, bool bNewValue)
 	}
 }
 
-bool CyPlayer::isOption(int /*PlayerOptionTypes*/ eIndex)	
+bool CyPlayer::isOption(int /*PlayerOptionTypes*/ eIndex)
 {
 	return m_pPlayer ? m_pPlayer->isOption((PlayerOptionTypes)eIndex) : false;
 }
@@ -2011,7 +2012,7 @@ void CyPlayer::setOption(int /*PlayerOptionTypes*/ eIndex, bool bNewValue)
 		m_pPlayer->setOption((PlayerOptionTypes)eIndex, bNewValue);
 }
 
-bool CyPlayer::isLoyalMember(int /*VoteSourceTypes*/ eIndex)	
+bool CyPlayer::isLoyalMember(int /*VoteSourceTypes*/ eIndex)
 {
 	return m_pPlayer ? m_pPlayer->isLoyalMember((VoteSourceTypes)eIndex) : false;
 }
@@ -2095,22 +2096,22 @@ int CyPlayer::getFeatureHappiness(int /*FeatureTypes*/ iIndex)
 
 int CyPlayer::getUnitClassCount(int /*UnitClassTypes*/ eIndex)
 {
-	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitClassCount((UnitClassTypes) eIndex) : 0;
+	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitClassCount((UnitClassTypes)eIndex) : 0;
 }
 
 bool CyPlayer::isUnitClassMaxedOut(int /*UnitClassTypes*/ eIndex, int iExtra)
 {
-	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->isUnitClassMaxedOut((UnitClassTypes) eIndex, iExtra) : false;
+	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->isUnitClassMaxedOut((UnitClassTypes)eIndex, iExtra) : false;
 }
 
 int CyPlayer::getUnitClassMaking(int /*UnitClassTypes*/ eIndex)
 {
-	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitClassMaking((UnitClassTypes) eIndex) : 0;
+	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitClassMaking((UnitClassTypes)eIndex) : 0;
 }
 
 int CyPlayer::getUnitClassCountPlusMaking(int /*UnitClassTypes*/ eIndex)
 {
-	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitClassCountPlusMaking((UnitClassTypes) eIndex) : 0;
+	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitClassCountPlusMaking((UnitClassTypes)eIndex) : 0;
 }
 
 int CyPlayer::getBuildingClassCount(int /*BuildingClassTypes*/ iIndex)
@@ -2135,12 +2136,12 @@ int CyPlayer::getBuildingClassCountPlusMaking(int /*BuildingClassTypes*/ iIndex)
 
 int CyPlayer::getHurryCount(int /*HurryTypes*/ eIndex)
 {
-	return m_pPlayer ? m_pPlayer->getHurryCount((HurryTypes)eIndex) : (int) NO_HURRY;
+	return m_pPlayer ? m_pPlayer->getHurryCount((HurryTypes)eIndex) : (int)NO_HURRY;
 }
 
 bool CyPlayer::canHurry(int /*HurryTypes*/ eIndex)
 {
-	return m_pPlayer ? m_pPlayer->canHurry((HurryTypes)eIndex) : (int) NO_HURRY;
+	return m_pPlayer ? m_pPlayer->canHurry((HurryTypes)eIndex) : (int)NO_HURRY;
 }
 
 int CyPlayer::getSpecialBuildingNotRequiredCount(int /*SpecialBuildingTypes*/ eIndex)
@@ -2155,7 +2156,7 @@ bool CyPlayer::isSpecialBuildingNotRequired(int /*SpecialBuildingTypes*/ eIndex)
 
 bool CyPlayer::isHasCivicOption(int /*CivicOptionTypes*/ eIndex)
 {
-	return m_pPlayer ? m_pPlayer->isHasCivicOption((CivicOptionTypes) eIndex) : false;
+	return m_pPlayer ? m_pPlayer->isHasCivicOption((CivicOptionTypes)eIndex) : false;
 }
 
 bool CyPlayer::isNoCivicUpkeep(int /*CivicOptionTypes*/ iIndex)
@@ -2190,7 +2191,7 @@ int CyPlayer::findHighestHasReligionCount()
 
 int CyPlayer::getUpkeepCount(int /*UpkeepTypes*/ eIndex)
 {
-	return m_pPlayer ? m_pPlayer->getUpkeepCount((UpkeepTypes) eIndex) : -1;
+	return m_pPlayer ? m_pPlayer->getUpkeepCount((UpkeepTypes)eIndex) : -1;
 }
 
 bool CyPlayer::isSpecialistValid(int /*SpecialistTypes*/ iIndex)
@@ -2210,7 +2211,7 @@ int /* CivicTypes */ CyPlayer::getCivics(int /*CivicOptionTypes*/ iIndex)
 
 int CyPlayer::getSingleCivicUpkeep(int /*CivicTypes*/ eCivic, bool bIgnoreAnarchy)
 {
-	return m_pPlayer ? m_pPlayer->getSingleCivicUpkeep((CivicTypes) eCivic, bIgnoreAnarchy) : -1;
+	return m_pPlayer ? m_pPlayer->getSingleCivicUpkeep((CivicTypes)eCivic, bIgnoreAnarchy) : -1;
 }
 
 int CyPlayer::getCivicUpkeep(boost::python::list& /*CivicTypes*/ paiCivics, bool bIgnoreAnarchy)
@@ -2218,14 +2219,14 @@ int CyPlayer::getCivicUpkeep(boost::python::list& /*CivicTypes*/ paiCivics, bool
 	int* pCivics = NULL;
 	gDLL->getPythonIFace()->putSeqInArray(paiCivics.ptr() /*src*/, &pCivics /*dst*/);
 	int iRet = m_pPlayer ? m_pPlayer->getCivicUpkeep((CivicTypes*)pCivics, bIgnoreAnarchy) : -1;
-	delete [] pCivics;
+	delete[] pCivics;
 	return iRet;
 }
 
 void CyPlayer::setCivics(int /*CivicOptionTypes*/ eIndex, int /*CivicTypes*/ eNewValue)
 {
 	if (m_pPlayer)
-		m_pPlayer->setCivics((CivicOptionTypes) eIndex, (CivicTypes) eNewValue);
+		m_pPlayer->setCivics((CivicOptionTypes)eIndex, (CivicTypes)eNewValue);
 }
 
 int CyPlayer::getCombatExperience() const
@@ -2243,7 +2244,6 @@ void CyPlayer::changeCombatExperience(int iChange)
 	{
 		m_pPlayer->changeCombatExperience(iChange);
 	}
-	
 }
 
 void CyPlayer::setCombatExperience(int iExperience)
@@ -2252,12 +2252,11 @@ void CyPlayer::setCombatExperience(int iExperience)
 	{
 		m_pPlayer->setCombatExperience(iExperience);
 	}
-
 }
 
 int CyPlayer::getExtraSpecialistYield(int /*SpecialistTypes*/ eIndex1, int /*YieldTypes*/ eIndex2)
 {
-	return m_pPlayer ? m_pPlayer->getExtraSpecialistYield((SpecialistTypes) eIndex1, (YieldTypes) eIndex2) : -1;
+	return m_pPlayer ? m_pPlayer->getExtraSpecialistYield((SpecialistTypes)eIndex1, (YieldTypes)eIndex2) : -1;
 }
 
 int CyPlayer::findPathLength(int /*TechTypes*/ eTech, bool bCost)
@@ -2265,7 +2264,7 @@ int CyPlayer::findPathLength(int /*TechTypes*/ eTech, bool bCost)
 	return m_pPlayer ? m_pPlayer->findPathLength((TechTypes)eTech, bCost) : -1;
 }
 
-int CyPlayer::getQueuePosition( int /* TechTypes */ eTech )
+int CyPlayer::getQueuePosition(int /* TechTypes */ eTech)
 {
 	if (m_pPlayer)
 	{
@@ -2288,7 +2287,7 @@ bool CyPlayer::pushResearch(int /*TechTypes*/ iIndex, bool bClear)
 void CyPlayer::popResearch(int /*TechTypes*/ eTech)
 {
 	if (m_pPlayer)
-		m_pPlayer->popResearch((TechTypes) eTech);
+		m_pPlayer->popResearch((TechTypes)eTech);
 }
 
 int CyPlayer::getLengthResearchQueue()
@@ -2315,10 +2314,10 @@ std::wstring CyPlayer::getCityName(int iIndex)
 // returns tuple of (CyCity, iterOut)
 python::tuple CyPlayer::firstCity(bool bRev)
 {
-	int iterIn = 0;
-	CvCity* pvObj = m_pPlayer ? m_pPlayer->firstCity(&iterIn, bRev) : NULL;
-	CyCity* pyObj = pvObj ? new CyCity(pvObj) : NULL;
-	python::tuple tup=python::make_tuple(pyObj, iterIn);
+	int			  iterIn = 0;
+	CvCity*		  pvObj	 = m_pPlayer ? m_pPlayer->firstCity(&iterIn, bRev) : NULL;
+	CyCity*		  pyObj	 = pvObj ? new CyCity(pvObj) : NULL;
+	python::tuple tup	 = python::make_tuple(pyObj, iterIn);
 	delete pyObj;
 	return tup;
 }
@@ -2326,9 +2325,9 @@ python::tuple CyPlayer::firstCity(bool bRev)
 // returns tuple of (CyCity, iterOut)
 python::tuple CyPlayer::nextCity(int iterIn, bool bRev)
 {
-	CvCity* pvObj = m_pPlayer ? m_pPlayer->nextCity(&iterIn, bRev) : NULL;
-	CyCity* pyObj = pvObj ? new CyCity(pvObj) : NULL;
-	python::tuple tup=python::make_tuple(pyObj, iterIn);
+	CvCity*		  pvObj = m_pPlayer ? m_pPlayer->nextCity(&iterIn, bRev) : NULL;
+	CyCity*		  pyObj = pvObj ? new CyCity(pvObj) : NULL;
+	python::tuple tup	= python::make_tuple(pyObj, iterIn);
 	delete pyObj;
 	return tup;
 }
@@ -2346,10 +2345,10 @@ CyCity* CyPlayer::getCity(int iID)
 // returns tuple of (CyUnit, iterOut)
 python::tuple CyPlayer::firstUnit(bool bRev)
 {
-	int iterIn = 0;
-	CvUnit* pvUnit = m_pPlayer ? m_pPlayer->firstUnit(&iterIn, bRev) : NULL;
-	CyUnit* pyUnit = pvUnit ? new CyUnit(pvUnit) : NULL;
-	python::tuple tup=python::make_tuple(pyUnit, iterIn);
+	int			  iterIn = 0;
+	CvUnit*		  pvUnit = m_pPlayer ? m_pPlayer->firstUnit(&iterIn, bRev) : NULL;
+	CyUnit*		  pyUnit = pvUnit ? new CyUnit(pvUnit) : NULL;
+	python::tuple tup	 = python::make_tuple(pyUnit, iterIn);
 	delete pyUnit;
 	return tup;
 }
@@ -2357,12 +2356,11 @@ python::tuple CyPlayer::firstUnit(bool bRev)
 // returns tuple of (CyUnit, iterOut)
 python::tuple CyPlayer::nextUnit(int iterIn, bool bRev)
 {
-	CvUnit* pvObj = m_pPlayer ? m_pPlayer->nextUnit(&iterIn, bRev) : NULL;
-	CyUnit* pyObj = pvObj ? new CyUnit(pvObj) : NULL;
-	python::tuple tup=python::make_tuple(pyObj, iterIn);
+	CvUnit*		  pvObj = m_pPlayer ? m_pPlayer->nextUnit(&iterIn, bRev) : NULL;
+	CyUnit*		  pyObj = pvObj ? new CyUnit(pvObj) : NULL;
+	python::tuple tup	= python::make_tuple(pyObj, iterIn);
 	delete pyObj;
 	return tup;
-
 }
 
 int CyPlayer::getNumUnits()
@@ -2378,10 +2376,10 @@ CyUnit* CyPlayer::getUnit(int iID)
 // returns tuple of (CySelectionGroup, iterOut)
 python::tuple CyPlayer::firstSelectionGroup(bool bRev)
 {
-	int iterIn = 0;
-	CvSelectionGroup* pvObj = m_pPlayer ? m_pPlayer->firstSelectionGroup(&iterIn, bRev) : NULL;
-	CySelectionGroup* pyObj = pvObj ? new CySelectionGroup(pvObj) : NULL;
-	python::tuple tup=python::make_tuple(pyObj, iterIn);
+	int				  iterIn = 0;
+	CvSelectionGroup* pvObj	 = m_pPlayer ? m_pPlayer->firstSelectionGroup(&iterIn, bRev) : NULL;
+	CySelectionGroup* pyObj	 = pvObj ? new CySelectionGroup(pvObj) : NULL;
+	python::tuple	  tup	 = python::make_tuple(pyObj, iterIn);
 	delete pyObj;
 	return tup;
 }
@@ -2391,7 +2389,7 @@ python::tuple CyPlayer::nextSelectionGroup(int iterIn, bool bRev)
 {
 	CvSelectionGroup* pvObj = m_pPlayer ? m_pPlayer->nextSelectionGroup(&iterIn, bRev) : NULL;
 	CySelectionGroup* pyObj = pvObj ? new CySelectionGroup(pvObj) : NULL;
-	python::tuple tup=python::make_tuple(pyObj, iterIn);
+	python::tuple	  tup	= python::make_tuple(pyObj, iterIn);
 	delete pyObj;
 	return tup;
 }
@@ -2406,13 +2404,12 @@ CySelectionGroup* CyPlayer::getSelectionGroup(int iID)
 	return m_pPlayer ? new CySelectionGroup(m_pPlayer->getSelectionGroup(iID)) : NULL;
 }
 
-void CyPlayer::trigger(/*EventTriggerTypes*/int eEventTrigger)
+void CyPlayer::trigger(/*EventTriggerTypes*/ int eEventTrigger)
 {
 	if (m_pPlayer)
 	{
 		m_pPlayer->trigger((EventTriggerTypes)eEventTrigger);
 	}
-
 }
 
 const EventTriggeredData* CyPlayer::getEventOccured(int /*EventTypes*/ eEvent) const
@@ -2451,7 +2448,7 @@ void CyPlayer::AI_updateFoundValues(bool bStartingLoc)
 		m_pPlayer->AI_updateFoundValues(true);
 }
 
-int CyPlayer::AI_foundValue(int iX, int iY, int iMinUnitRange/* = -1*/, bool bStartingLoc/* = false*/)
+int CyPlayer::AI_foundValue(int iX, int iY, int iMinUnitRange /* = -1*/, bool bStartingLoc /* = false*/)
 {
 	return m_pPlayer ? m_pPlayer->AI_foundValue(iX, iY, iMinUnitRange, bStartingLoc) : -1;
 }
@@ -2477,7 +2474,7 @@ AttitudeTypes CyPlayer::AI_getAttitude(int /*PlayerTypes*/ ePlayer)
 #ifdef _DEBUG
 			throw new std::exception();
 #endif
-		   return NO_ATTITUDE;
+			return NO_ATTITUDE;
 		}
 	}
 	//Fuyu end
@@ -2627,7 +2624,7 @@ void CyPlayer::setScriptData(std::string szNewValue)
 
 void CyPlayer::chooseTech(int iDiscover, std::wstring szText, bool bFront)
 {
-	if ( m_pPlayer )
+	if (m_pPlayer)
 	{
 		m_pPlayer->chooseTech(iDiscover, szText.c_str(), bFront);
 	}
@@ -2688,11 +2685,11 @@ bool CyPlayer::canSplitArea(int iAreaId) const
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-bool CyPlayer::assimilatePlayer( int iPlayer )
+bool CyPlayer::assimilatePlayer(int iPlayer)
 {
 	if (m_pPlayer)
 	{
-		return m_pPlayer->assimilatePlayer( (PlayerTypes) iPlayer );
+		return m_pPlayer->assimilatePlayer((PlayerTypes)iPlayer);
 	}
 
 	return false;
@@ -2706,7 +2703,7 @@ bool CyPlayer::canHaveTradeRoutesWith(int iPlayer)
 	return m_pPlayer ? m_pPlayer->canHaveTradeRoutesWith((PlayerTypes)iPlayer) : false;
 }
 
-void  CyPlayer::forcePeace(int iPlayer)
+void CyPlayer::forcePeace(int iPlayer)
 {
 	if (m_pPlayer)
 		m_pPlayer->forcePeace((PlayerTypes)iPlayer);
@@ -2756,12 +2753,12 @@ void CyPlayer::setHandicap(int iNewVal)
 		m_pPlayer->setHandicap(iNewVal);
 }
 
-bool CyPlayer::isModderOption(int /*ModderOptionTypes*/ eIndex)	
+bool CyPlayer::isModderOption(int /*ModderOptionTypes*/ eIndex)
 {
 	return m_pPlayer ? m_pPlayer->isModderOption((ModderOptionTypes)eIndex) : false;
 }
 
-int CyPlayer::getModderOption(int /*ModderOptionTypes*/ eIndex)	
+int CyPlayer::getModderOption(int /*ModderOptionTypes*/ eIndex)
 {
 	return m_pPlayer ? m_pPlayer->getModderOption((ModderOptionTypes)eIndex) : 0;
 }
@@ -2778,10 +2775,10 @@ void CyPlayer::doRevolution(boost::python::list& /*CivicTypes**/ paeNewCivics, b
 	gDLL->getPythonIFace()->putSeqInArray(paeNewCivics.ptr() /*src*/, &pCivics /*dst*/);
 	if (m_pPlayer)
 		m_pPlayer->revolution((CivicTypes*)pCivics, bForce);
-	delete [] pCivics;
+	delete[] pCivics;
 }
 
-bool CyPlayer::isAutomatedCanBuild(int /*BuildTypes*/ eIndex)	
+bool CyPlayer::isAutomatedCanBuild(int /*BuildTypes*/ eIndex)
 {
 	return m_pPlayer ? m_pPlayer->isAutomatedCanBuild((BuildTypes)eIndex) : true;
 }
@@ -3017,7 +3014,7 @@ void CyPlayer::setPlayerWideAfflictionCount(int /*PromotionLineTypes*/ ePromotio
 	}
 }
 
-int CyPlayer::countAfflictedUnits (int /*PromotionLineTypes*/ eAfflictionLine)
+int CyPlayer::countAfflictedUnits(int /*PromotionLineTypes*/ eAfflictionLine)
 {
 	return m_pPlayer ? m_pPlayer->countAfflictedUnits((PromotionLineTypes)eAfflictionLine) : 0;
 }
@@ -3033,12 +3030,12 @@ void CyPlayer::recalculateAfflictedUnitCount()
 //TB Combat Mod end
 
 //TB Traits begin
-int CyPlayer::getCivicAnarchyModifier( ) const
+int CyPlayer::getCivicAnarchyModifier() const
 {
 	return m_pPlayer ? m_pPlayer->getCivicAnarchyModifier() : 0;
 }
 
-void CyPlayer::setCivicAnarchyModifier( int iNewValue )
+void CyPlayer::setCivicAnarchyModifier(int iNewValue)
 {
 	if (m_pPlayer)
 	{
@@ -3046,7 +3043,7 @@ void CyPlayer::setCivicAnarchyModifier( int iNewValue )
 	}
 }
 
-void CyPlayer::changeCivicAnarchyModifier( int iChange )
+void CyPlayer::changeCivicAnarchyModifier(int iChange)
 {
 	if (m_pPlayer)
 	{
@@ -3054,12 +3051,12 @@ void CyPlayer::changeCivicAnarchyModifier( int iChange )
 	}
 }
 
-int CyPlayer::getReligiousAnarchyModifier( ) const
+int CyPlayer::getReligiousAnarchyModifier() const
 {
 	return m_pPlayer ? m_pPlayer->getReligiousAnarchyModifier() : 0;
 }
 
-void CyPlayer::setReligiousAnarchyModifier( int iNewValue )
+void CyPlayer::setReligiousAnarchyModifier(int iNewValue)
 {
 	if (m_pPlayer)
 	{
@@ -3067,7 +3064,7 @@ void CyPlayer::setReligiousAnarchyModifier( int iNewValue )
 	}
 }
 
-void CyPlayer::changeReligiousAnarchyModifier( int iChange )
+void CyPlayer::changeReligiousAnarchyModifier(int iChange)
 {
 	if (m_pPlayer)
 	{
@@ -3101,12 +3098,12 @@ void CyPlayer::changeBuildWorkerSpeedModifierSpecific(int /*BuildTypes*/ eBuild,
 	}
 }
 
-int CyPlayer::getAIAttitudeModifier( ) const
+int CyPlayer::getAIAttitudeModifier() const
 {
 	return m_pPlayer ? m_pPlayer->getAIAttitudeModifier() : 0;
 }
 
-void CyPlayer::setAIAttitudeModifier( int iNewValue )
+void CyPlayer::setAIAttitudeModifier(int iNewValue)
 {
 	if (m_pPlayer)
 	{
@@ -3114,7 +3111,7 @@ void CyPlayer::setAIAttitudeModifier( int iNewValue )
 	}
 }
 
-void CyPlayer::changeAIAttitudeModifier( int iChange )
+void CyPlayer::changeAIAttitudeModifier(int iChange)
 {
 	if (m_pPlayer)
 	{
@@ -3278,8 +3275,8 @@ void CyPlayer::removeBLList(int iID)
 	CvMessageControl::getInstance().sendBuildListEdit(iID, "", true);
 }
 
-void CyPlayer::doGoldenAgebyPercentage( int iPercent )
+void CyPlayer::doGoldenAgebyPercentage(int iPercent)
 {
-	if( m_pPlayer )
-		m_pPlayer->doGoldenAgebyPercentage( iPercent );
+	if (m_pPlayer)
+		m_pPlayer->doGoldenAgebyPercentage(iPercent);
 }

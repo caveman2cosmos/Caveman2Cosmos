@@ -1,13 +1,12 @@
 //
-// Python wrapper class for CvGame 
-// 
+// Python wrapper class for CvGame
+//
 
 #include "CvGameCoreDLL.h"
 
-CyDeal::CyDeal(CvDeal* pDeal) :
-	m_pDeal(pDeal)
+CyDeal::CyDeal(CvDeal* pDeal)
+	: m_pDeal(pDeal)
 {
-
 }
 
 CyDeal::~CyDeal()
@@ -15,8 +14,8 @@ CyDeal::~CyDeal()
 }
 
 bool CyDeal::isNone()
-{ 
-	return (NULL == m_pDeal); 
+{
+	return (NULL == m_pDeal);
 }
 
 int CyDeal::getID() const
@@ -54,7 +53,7 @@ TradeData* CyDeal::getFirstTrade(int i) const
 	if (i < getLengthFirstTrades() && NULL != m_pDeal && NULL != m_pDeal->getFirstTrades())
 	{
 		const CLinkList<TradeData>& listTradeData = *(m_pDeal->getFirstTrades());
-		int iCount = 0;
+		int							iCount		  = 0;
 		for (CLLNode<TradeData>* pNode = listTradeData.head(); NULL != pNode; pNode = listTradeData.next(pNode))
 		{
 			if (iCount == i)
@@ -72,7 +71,7 @@ TradeData* CyDeal::getSecondTrade(int i) const
 	if (i < getLengthSecondTrades() && NULL != m_pDeal && NULL != m_pDeal->getSecondTrades())
 	{
 		const CLinkList<TradeData>& listTradeData = *(m_pDeal->getSecondTrades());
-		int iCount = 0;
+		int							iCount		  = 0;
 		for (CLLNode<TradeData>* pNode = listTradeData.head(); NULL != pNode; pNode = listTradeData.next(pNode))
 		{
 			if (iCount == i)
@@ -105,7 +104,7 @@ bool CyDeal::isCancelable(int /*PlayerTypes*/ eByPlayer, bool bIgnoreWaitingPeri
 
 		return m_pDeal->isCancelable((PlayerTypes)eByPlayer, NULL);
 	}
-	
+
 	return false;
 }
 

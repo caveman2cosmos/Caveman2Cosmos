@@ -9,14 +9,14 @@ class CyReplayInfo;
 
 class CyHallOfFameInfo
 {
-public:
+  public:
 	CyHallOfFameInfo();
 
-	void loadReplays();
-	int getNumGames() const;
+	void		  loadReplays();
+	int			  getNumGames() const;
 	CyReplayInfo* getReplayInfo(int i);
 
-private:
+  private:
 	CvHallOfFameInfo m_hallOfFame;
 };
 

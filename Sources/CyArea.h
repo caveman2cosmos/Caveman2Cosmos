@@ -9,30 +9,29 @@
 
 class CyCity;
 class CvArea;
-class CyArea 
+class CyArea
 {
-public:
-
+  public:
 	CyArea();
-	explicit CyArea(CvArea* pArea);					// Call from C++
-	CvArea* getArea() { return m_pArea;	}	// Call from C++
-	bool isNone() { return (m_pArea==NULL); }
+	explicit CyArea(CvArea* pArea); // Call from C++
+	CvArea* getArea() { return m_pArea; } // Call from C++
+	bool	isNone() { return (m_pArea == NULL); }
 
-	int calculateTotalBestNatureYield();
-	int countCoastalLand();
-	int countNumUniqueBonusTypes();
-	int countHasReligion(int /*ReligionTypes*/ eReligion, int /*PlayerTypes*/ eOwner);
-	int countHasCorporation(int /*CorporationTypes*/ eCorporation, int /*PlayerTypes*/ eOwner);
-	int getID();
-	int getNumTiles();
+	int	 calculateTotalBestNatureYield();
+	int	 countCoastalLand();
+	int	 countNumUniqueBonusTypes();
+	int	 countHasReligion(int /*ReligionTypes*/ eReligion, int /*PlayerTypes*/ eOwner);
+	int	 countHasCorporation(int /*CorporationTypes*/ eCorporation, int /*PlayerTypes*/ eOwner);
+	int	 getID();
+	int	 getNumTiles();
 	bool isLake();
-	int getNumOwnedTiles();
-	int getNumUnownedTiles();
-	int getNumRiverEdges();
-	int getNumCities();
-	int getNumUnits();
-	int getTotalPopulation();
-	int getNumStartingPlots();
+	int	 getNumOwnedTiles();
+	int	 getNumUnownedTiles();
+	int	 getNumRiverEdges();
+	int	 getNumCities();
+	int	 getNumUnits();
+	int	 getTotalPopulation();
+	int	 getNumStartingPlots();
 	bool isWater();
 
 	int getUnitsPerPlayer(int /*PlayerTypes*/ eIndex);
@@ -53,26 +52,25 @@ public:
 	bool isBorderObstacle(int /*TeamTypes*/ eIndex);
 
 	int /*AreaAITypes*/ getAreaAIType(int /*TeamTypes*/ eIndex);
-	CyCity* getTargetCity(int /*PlayerTypes*/ eIndex);
-	int getYieldRateModifier(int /*PlayerTypes*/ eIndex1, int /*YieldTypes*/ eIndex2);
-	int getNumTrainAIUnits(int /*PlayerTypes*/ eIndex1, int /*UnitAITypes*/ eIndex2);
-	int getNumAIUnits(int /*PlayerTypes*/ eIndex1, int /*UnitAITypes*/ eIndex2);
+	CyCity*				getTargetCity(int /*PlayerTypes*/ eIndex);
+	int					getYieldRateModifier(int /*PlayerTypes*/ eIndex1, int /*YieldTypes*/ eIndex2);
+	int					getNumTrainAIUnits(int /*PlayerTypes*/ eIndex1, int /*UnitAITypes*/ eIndex2);
+	int					getNumAIUnits(int /*PlayerTypes*/ eIndex1, int /*UnitAITypes*/ eIndex2);
 
 	int getNumBonuses(int /*BonusTypes*/ eBonus);
 	int getNumTotalBonuses();
 	int getNumImprovements(int /*ImprovementTypes*/ eImprovement);
-/************************************************************************************************/
-/* Afforess	                  Start		 07/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* Afforess	                  Start		 07/15/10                                               */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
 	void changeCleanPowerCount(int /*TeamTypes*/ eIndex, int iChange);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-protected:
-
+	/************************************************************************************************/
+	/* Afforess	                     END                                                            */
+	/************************************************************************************************/
+  protected:
 	CvArea* m_pArea;
 };
 
-#endif	// #ifndef CyArea
+#endif // #ifndef CyArea

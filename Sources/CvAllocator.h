@@ -6,36 +6,38 @@
 
 namespace MemTrack
 {
-	/* ---------------------------------------- class MemStamp */
+/* ---------------------------------------- class MemStamp */
 
-	class MemStamp
-	{
-	public:        // member variables
-		char const* const filename;
-		int const lineNum;
-	public:        // construction/destruction
-		MemStamp(char const* filename, int lineNum)
-			: filename(filename), lineNum(lineNum) { }
-		~MemStamp() { }
-	};
+class MemStamp
+{
+  public: // member variables
+	char const* const filename;
+	int const		  lineNum;
 
-	/* ---------------------------------------- memory allocation and stamping prototypes */
+  public: // construction/destruction
+	MemStamp(char const* filename, int lineNum)
+		: filename(filename), lineNum(lineNum) {}
+	~MemStamp() {}
+};
 
-	void* TrackMalloc(size_t size);
-	void TrackFree(void* p);
-	void TrackStamp(void* p, const MemStamp& stamp, char const* typeName);
-	void TrackDumpBlocks();
-	void TrackListMemoryUsage();
+/* ---------------------------------------- memory allocation and stamping prototypes */
 
-	/* ---------------------------------------- operator * (MemStamp, ptr) */
+void* TrackMalloc(size_t size);
+void  TrackFree(void* p);
+void  TrackStamp(void* p, const MemStamp& stamp, char const* typeName);
+void  TrackDumpBlocks();
+void  TrackListMemoryUsage();
 
-	template <class T> inline T* operator*(const MemStamp& stamp, T* p)
-	{
-		TrackStamp(p, stamp, typeid(T).name());
-		return p;
-	}
+/* ---------------------------------------- operator * (MemStamp, ptr) */
 
-}    // namespace MemTrack
+template <class T>
+inline T* operator*(const MemStamp& stamp, T* p)
+{
+	TrackStamp(p, stamp, typeid(T).name());
+	return p;
+}
+
+} // namespace MemTrack
 
 /* ---------------------------------------- new macro */
 
@@ -45,7 +47,7 @@ namespace MemTrack
 #endif
 
 //
-// operator global new and delete override for gamecore DLL 
+// operator global new and delete override for gamecore DLL
 //
 
 //void* __cdecl operator new(size_t size)

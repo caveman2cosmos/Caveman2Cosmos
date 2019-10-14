@@ -21,4 +21,3 @@ CyReplayInfo* CyHallOfFameInfo::getReplayInfo(int i)
 {
 	return (new CyReplayInfo(m_hallOfFame.getReplayInfo(i)));
 }
-

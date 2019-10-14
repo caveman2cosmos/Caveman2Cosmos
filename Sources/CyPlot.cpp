@@ -1,21 +1,22 @@
 //
-// Python wrapper class for CvPlot 
-// 
+// Python wrapper class for CvPlot
+//
 //
 #include "CvGameCoreDLL.h"
 
-CyPlot::CyPlot(CvPlot* pPlot, bool bInViewportSpace) : m_pPlot(pPlot), m_bIsInViewportSpace(bInViewportSpace)
+CyPlot::CyPlot(CvPlot* pPlot, bool bInViewportSpace)
+	: m_pPlot(pPlot), m_bIsInViewportSpace(bInViewportSpace)
 {
 }
 
-CyPlot::CyPlot(CvPlot* pPlot) : m_pPlot(pPlot), m_bIsInViewportSpace(false)
+CyPlot::CyPlot(CvPlot* pPlot)
+	: m_pPlot(pPlot), m_bIsInViewportSpace(false)
 {
-
 }
 
-CyPlot::CyPlot() : m_pPlot(NULL), m_bIsInViewportSpace(false)
+CyPlot::CyPlot()
+	: m_pPlot(NULL), m_bIsInViewportSpace(false)
 {
-
 }
 
 void CyPlot::erase()
@@ -26,7 +27,7 @@ void CyPlot::erase()
 
 NiPoint3 CyPlot::getPoint()
 {
-	return m_pPlot ? m_pPlot->getPoint() : NiPoint3(0,0,0);
+	return m_pPlot ? m_pPlot->getPoint() : NiPoint3(0, 0, 0);
 }
 
 int CyPlot::getTeam()
@@ -47,22 +48,22 @@ bool CyPlot::isConnectedTo(CyCity* pCity)
 
 bool CyPlot::isConnectedToCapital(int /*PlayerTypes*/ ePlayer)
 {
-	return m_pPlot ? m_pPlot->isConnectedToCapital((PlayerTypes) ePlayer): false;
+	return m_pPlot ? m_pPlot->isConnectedToCapital((PlayerTypes)ePlayer) : false;
 }
 
 int CyPlot::getPlotGroupConnectedBonus(int /*PlayerTypes*/ ePlayer, int /*BonusTypes*/ eBonus)
 {
-	return m_pPlot ? m_pPlot->getPlotGroupConnectedBonus((PlayerTypes) ePlayer, (BonusTypes) eBonus) : -1;
+	return m_pPlot ? m_pPlot->getPlotGroupConnectedBonus((PlayerTypes)ePlayer, (BonusTypes)eBonus) : -1;
 }
 
 bool CyPlot::isPlotGroupConnectedBonus(int /*PlayerTypes*/ ePlayer, int /*BonusTypes*/ eBonus)
 {
-	return m_pPlot ? m_pPlot->isPlotGroupConnectedBonus((PlayerTypes) ePlayer, (BonusTypes) eBonus) : false;
+	return m_pPlot ? m_pPlot->isPlotGroupConnectedBonus((PlayerTypes)ePlayer, (BonusTypes)eBonus) : false;
 }
 
 bool CyPlot::isAdjacentPlotGroupConnectedBonus(int /*PlayerTypes*/ ePlayer, int /*BonusTypes*/ eBonus)
 {
-	return m_pPlot ? m_pPlot->isAdjacentPlotGroupConnectedBonus((PlayerTypes) ePlayer, (BonusTypes) eBonus) : false;
+	return m_pPlot ? m_pPlot->isAdjacentPlotGroupConnectedBonus((PlayerTypes)ePlayer, (BonusTypes)eBonus) : false;
 }
 
 void CyPlot::updateVisibility()
@@ -95,7 +96,7 @@ bool CyPlot::isCoastalLand()
 
 bool CyPlot::isWithinTeamCityRadius(int /*TeamTypes*/ eTeam, int /*PlayerTypes*/ eIgnorePlayer)
 {
-	return m_pPlot ? m_pPlot->isWithinTeamCityRadius((TeamTypes) eTeam, (PlayerTypes) eIgnorePlayer) : false;
+	return m_pPlot ? m_pPlot->isWithinTeamCityRadius((TeamTypes)eTeam, (PlayerTypes)eIgnorePlayer) : false;
 }
 bool CyPlot::isLake()
 {
@@ -134,7 +135,7 @@ bool CyPlot::isRiver()
 
 bool CyPlot::isRiverConnection(int /*DirectionTypes*/ eDirection)
 {
-	return m_pPlot ? m_pPlot->isRiverConnection((DirectionTypes) eDirection) : false;
+	return m_pPlot ? m_pPlot->isRiverConnection((DirectionTypes)eDirection) : false;
 }
 
 int CyPlot::getNearestLandArea()
@@ -169,7 +170,7 @@ bool CyPlot::canHaveImprovement(int /* ImprovementTypes */ eImprovement, int /*T
 
 bool CyPlot::canBuild(int /*BuildTypes*/ eBuild, int /*PlayerTypes*/ ePlayer, bool bTestVisible)
 {
-	return m_pPlot ? m_pPlot->canBuild((BuildTypes) eBuild, (PlayerTypes) ePlayer, bTestVisible) : false;
+	return m_pPlot ? m_pPlot->canBuild((BuildTypes)eBuild, (PlayerTypes)ePlayer, bTestVisible) : false;
 }
 
 int CyPlot::getBuildTime(int /* BuildTypes */ eBuild)
@@ -179,19 +180,19 @@ int CyPlot::getBuildTime(int /* BuildTypes */ eBuild)
 
 int CyPlot::getBuildTurnsLeft(int /*BuildTypes*/ eBuild, int iNowExtra, int iThenExtra)
 {
-	return m_pPlot ? m_pPlot->getBuildTurnsLeft((BuildTypes) eBuild, iNowExtra, iThenExtra) : -1;
+	return m_pPlot ? m_pPlot->getBuildTurnsLeft((BuildTypes)eBuild, iNowExtra, iThenExtra) : -1;
 }
 
 int CyPlot::getFeatureProduction(int /*BuildTypes*/ eBuild, int /*TeamTypes*/ eTeam, CyCity* ppCity)
 {
 	CvCity* tempCity = ppCity->getCity();
-	return m_pPlot ? m_pPlot->getFeatureProduction((BuildTypes) eBuild, (TeamTypes) eTeam, &tempCity) : -1;
+	return m_pPlot ? m_pPlot->getFeatureProduction((BuildTypes)eBuild, (TeamTypes)eTeam, &tempCity) : -1;
 }
 
 CyUnit* CyPlot::getBestDefender(int /*PlayerTypes*/ eOwner, int /*PlayerTypes*/ eAttackingPlayer, CyUnit* pAttacker, bool bTestAtWar, bool bTestPotentialEnemy, bool bTestCanMove)
 {
-	return m_pPlot ? new CyUnit(m_pPlot->getBestDefender((PlayerTypes) eOwner, (PlayerTypes) eAttackingPlayer, pAttacker->getUnit(), bTestAtWar, bTestPotentialEnemy, bTestCanMove)) : NULL;
-}	
+	return m_pPlot ? new CyUnit(m_pPlot->getBestDefender((PlayerTypes)eOwner, (PlayerTypes)eAttackingPlayer, pAttacker->getUnit(), bTestAtWar, bTestPotentialEnemy, bTestCanMove)) : NULL;
+}
 
 CyUnit* CyPlot::getSelectedUnit()
 {
@@ -296,22 +297,22 @@ bool CyPlot::isVisibleToWatchingHuman()
 
 bool CyPlot::isAdjacentVisible(int /*TeamTypes*/ eTeam, bool bDebug)
 {
-	return m_pPlot ? m_pPlot->isAdjacentVisible((TeamTypes) eTeam, bDebug) : false;
+	return m_pPlot ? m_pPlot->isAdjacentVisible((TeamTypes)eTeam, bDebug) : false;
 }
 
 bool CyPlot::isAdjacentNonvisible(int /*TeamTypes*/ eTeam)
 {
-	return m_pPlot ? m_pPlot->isAdjacentNonvisible((TeamTypes) eTeam) : false;
+	return m_pPlot ? m_pPlot->isAdjacentNonvisible((TeamTypes)eTeam) : false;
 }
 
 bool CyPlot::isAdjacentRevealed(int /*TeamTypes*/ eTeam)
 {
-	return m_pPlot ? m_pPlot->isAdjacentRevealed((TeamTypes) eTeam) : false;
+	return m_pPlot ? m_pPlot->isAdjacentRevealed((TeamTypes)eTeam) : false;
 }
 
 bool CyPlot::isAdjacentNonrevealed(int /*TeamTypes*/ eTeam)
 {
-	return m_pPlot ? m_pPlot->isAdjacentNonrevealed((TeamTypes) eTeam) : false;
+	return m_pPlot ? m_pPlot->isAdjacentNonrevealed((TeamTypes)eTeam) : false;
 }
 
 void CyPlot::removeGoody()
@@ -329,7 +330,7 @@ bool CyPlot::isGoody()
 
 bool CyPlot::isRevealedGoody(int /*TeamTypes*/ eTeam)
 {
-	return m_pPlot ? m_pPlot->isRevealedGoody((TeamTypes) eTeam) : false;
+	return m_pPlot ? m_pPlot->isRevealedGoody((TeamTypes)eTeam) : false;
 }
 
 bool CyPlot::isCity()
@@ -337,12 +338,12 @@ bool CyPlot::isCity()
 	return m_pPlot ? m_pPlot->isCity() : false;
 }
 
-bool CyPlot::isFriendlyCity(CyUnit* pUnit, bool bCheckImprovement)													
+bool CyPlot::isFriendlyCity(CyUnit* pUnit, bool bCheckImprovement)
 {
 	return m_pPlot ? m_pPlot->isFriendlyCity(*(pUnit->getUnit()), bCheckImprovement) : false;
 }
 
-bool CyPlot::isEnemyCity(CyUnit* pUnit)														
+bool CyPlot::isEnemyCity(CyUnit* pUnit)
 {
 	return m_pPlot ? m_pPlot->isEnemyCity(*(pUnit->getUnit())) : false;
 }
@@ -364,7 +365,7 @@ bool CyPlot::isUnit()
 
 bool CyPlot::isInvestigate(int /*TeamTypes*/ eTeam)
 {
-	return m_pPlot ? m_pPlot->isInvestigate((TeamTypes) eTeam) : false;
+	return m_pPlot ? m_pPlot->isInvestigate((TeamTypes)eTeam) : false;
 }
 
 bool CyPlot::isVisibleEnemyDefender(CyUnit* pUnit)
@@ -374,7 +375,7 @@ bool CyPlot::isVisibleEnemyDefender(CyUnit* pUnit)
 
 int CyPlot::getNumDefenders(int /*PlayerTypes*/ ePlayer)
 {
-	return m_pPlot ? m_pPlot->getNumDefenders((PlayerTypes) ePlayer) : -1;
+	return m_pPlot ? m_pPlot->getNumDefenders((PlayerTypes)ePlayer) : -1;
 }
 
 int CyPlot::getNumVisibleEnemyDefenders(CyUnit* pUnit)
@@ -389,12 +390,12 @@ int CyPlot::getNumVisiblePotentialEnemyDefenders(CyUnit* pUnit)
 
 bool CyPlot::isVisibleEnemyUnit(int /*PlayerTypes*/ ePlayer)
 {
-	return m_pPlot ? m_pPlot->isVisibleEnemyUnit((PlayerTypes) ePlayer) : false;
+	return m_pPlot ? m_pPlot->isVisibleEnemyUnit((PlayerTypes)ePlayer) : false;
 }
 
 bool CyPlot::isVisibleOtherUnit(int /*PlayerTypes*/ ePlayer)
 {
-	return m_pPlot ? m_pPlot->isVisibleOtherUnit((PlayerTypes) ePlayer) : false;
+	return m_pPlot ? m_pPlot->isVisibleOtherUnit((PlayerTypes)ePlayer) : false;
 }
 
 bool CyPlot::isFighting()
@@ -414,16 +415,16 @@ bool CyPlot::isRoute()
 
 bool CyPlot::isNetworkTerrain(int /*TeamTypes*/ eTeam)
 {
-	return m_pPlot ? m_pPlot->isNetworkTerrain((TeamTypes) eTeam) : false;
+	return m_pPlot ? m_pPlot->isNetworkTerrain((TeamTypes)eTeam) : false;
 }
 
 bool CyPlot::isBonusNetwork(int /*TeamTypes*/ eTeam)
 {
-	return m_pPlot ? m_pPlot->isBonusNetwork((TeamTypes) eTeam) : false;
+	return m_pPlot ? m_pPlot->isBonusNetwork((TeamTypes)eTeam) : false;
 }
 bool CyPlot::isTradeNetworkImpassable(int /*TeamTypes*/ eTeam)
 {
-	return m_pPlot ? m_pPlot->isTradeNetworkImpassable((TeamTypes) eTeam) : false;
+	return m_pPlot ? m_pPlot->isTradeNetworkImpassable((TeamTypes)eTeam) : false;
 }
 
 bool CyPlot::isTradeNetwork(int /*TeamTypes*/ eTeam)
@@ -451,12 +452,12 @@ bool CyPlot::isImpassable()
 	return m_pPlot ? m_pPlot->isImpassable() : false;
 }
 
-int CyPlot::getX() 
+int CyPlot::getX()
 {
 	return m_pPlot ? (m_bIsInViewportSpace ? m_pPlot->getViewportX() : m_pPlot->getX_INLINE()) : -1;
 }
 
-int CyPlot::getY() 
+int CyPlot::getY()
 {
 	return m_pPlot ? (m_bIsInViewportSpace ? m_pPlot->getViewportY() : m_pPlot->getY_INLINE()) : -1;
 }
@@ -466,12 +467,12 @@ bool CyPlot::at(int iX, int iY)
 	return m_pPlot ? (m_pPlot->getX() == iX && m_pPlot->getY() == iY) : false;
 }
 
-int CyPlot::getLatitude()																						
+int CyPlot::getLatitude()
 {
 	return m_pPlot ? m_pPlot->getLatitude() : -1;
 }
 
-int CyPlot::getLongitude()																						
+int CyPlot::getLongitude()
 {
 	return m_pPlot ? m_pPlot->getLongitude() : -1;
 }
@@ -493,24 +494,24 @@ int CyPlot::getArea()
 
 int CyPlot::getUpgradeProgress()
 {
-	return m_pPlot ? m_pPlot->getUpgradeProgressHundredths()/100 : -1;
+	return m_pPlot ? m_pPlot->getUpgradeProgressHundredths() / 100 : -1;
 }
 
 int CyPlot::getUpgradeTimeLeft(int /*ImprovementTypes*/ eImprovement, int /*PlayerTypes*/ ePlayer)
 {
-	return m_pPlot ? m_pPlot->getUpgradeTimeLeft((ImprovementTypes) eImprovement, (PlayerTypes) ePlayer) : -1;
+	return m_pPlot ? m_pPlot->getUpgradeTimeLeft((ImprovementTypes)eImprovement, (PlayerTypes)ePlayer) : -1;
 }
 
 void CyPlot::setUpgradeProgress(int iNewValue)
 {
 	if (m_pPlot)
-		m_pPlot->setUpgradeProgressHundredths(iNewValue*100);
+		m_pPlot->setUpgradeProgressHundredths(iNewValue * 100);
 }
 
 void CyPlot::changeUpgradeProgress(int iChange)
 {
 	if (m_pPlot)
-		m_pPlot->changeUpgradeProgressHundredths(iChange*100);
+		m_pPlot->changeUpgradeProgressHundredths(iChange * 100);
 }
 
 int CyPlot::getForceUnownedTimer()
@@ -628,13 +629,13 @@ int CyPlot::getOwner()
 void CyPlot::setOwner(int /*PlayerTypes*/ eNewValue)
 {
 	if (m_pPlot)
-		m_pPlot->setOwner((PlayerTypes) eNewValue, true, true);
+		m_pPlot->setOwner((PlayerTypes)eNewValue, true, true);
 }
 
 void CyPlot::setOwnerNoUnitCheck(int /*PlayerTypes*/ eNewValue)
 {
 	if (m_pPlot)
-		m_pPlot->setOwner((PlayerTypes) eNewValue, false, true);
+		m_pPlot->setOwner((PlayerTypes)eNewValue, false, true);
 }
 PlotTypes CyPlot::getPlotType()
 {
@@ -691,25 +692,25 @@ void CyPlot::setFeatureType(int /*FeatureTypes*/ eNewValue, int iVariety)
 
 void CyPlot::setFeatureDummyVisibility(std::string dummyTag, bool show)
 {
-	if(m_pPlot)
+	if (m_pPlot)
 		m_pPlot->setFeatureDummyVisibility(dummyTag.c_str(), show);
 }
 
 void CyPlot::addFeatureDummyModel(std::string dummyTag, std::string modelTag)
 {
-	if(m_pPlot)
+	if (m_pPlot)
 		m_pPlot->addFeatureDummyModel(dummyTag.c_str(), modelTag.c_str());
 }
 
 void CyPlot::setFeatureDummyTexture(std::string dummyTag, std::string textureTag)
 {
-	if(m_pPlot)
+	if (m_pPlot)
 		m_pPlot->setFeatureDummyTexture(dummyTag.c_str(), textureTag.c_str());
 }
 
 std::string CyPlot::pickFeatureDummyTag(int mouseX, int mouseY)
 {
-	if(m_pPlot)
+	if (m_pPlot)
 		return m_pPlot->pickFeatureDummyTag(mouseX, mouseY);
 	else
 		return "";
@@ -717,7 +718,7 @@ std::string CyPlot::pickFeatureDummyTag(int mouseX, int mouseY)
 
 void CyPlot::resetFeatureModel()
 {
-	if(m_pPlot)
+	if (m_pPlot)
 		m_pPlot->resetFeatureModel();
 }
 
@@ -800,7 +801,7 @@ int /* RouteTypes */ CyPlot::getRouteType()
 void CyPlot::setRouteType(int /*RouteTypes*/ eNewValue)
 {
 	if (m_pPlot)
-		m_pPlot->setRouteType((RouteTypes) eNewValue, true);
+		m_pPlot->setRouteType((RouteTypes)eNewValue, true);
 }
 
 CyCity* CyPlot::getPlotCity()
@@ -866,7 +867,7 @@ int CyPlot::calculateTotalBestNatureYield(TeamTypes eTeam)
 
 int CyPlot::calculateImprovementYieldChange(int /*ImprovementTypes*/ eImprovement, YieldTypes eYield, int /*PlayerTypes*/ ePlayer, bool bOptimal)
 {
-	return m_pPlot ? m_pPlot->calculateImprovementYieldChange((ImprovementTypes) eImprovement, eYield, (PlayerTypes) ePlayer, bOptimal) : -1;
+	return m_pPlot ? m_pPlot->calculateImprovementYieldChange((ImprovementTypes)eImprovement, eYield, (PlayerTypes)ePlayer, bOptimal) : -1;
 }
 
 int CyPlot::calculateYield(YieldTypes eIndex, bool bDisplay)
@@ -894,12 +895,12 @@ int /*TeamTypes*/ CyPlot::findHighestCultureTeam()
 	return m_pPlot ? m_pPlot->findHighestCultureTeam() : -1;
 }
 
-int CyPlot::calculateCulturePercent(int /*PlayerTypes*/ eIndex)	
+int CyPlot::calculateCulturePercent(int /*PlayerTypes*/ eIndex)
 {
 	return m_pPlot ? m_pPlot->calculateCulturePercent((PlayerTypes)eIndex) : -1;
 }
 
-int CyPlot::calculateTeamCulturePercent(int /*TeamTypes*/ eIndex)	
+int CyPlot::calculateTeamCulturePercent(int /*TeamTypes*/ eIndex)
 {
 	return m_pPlot ? m_pPlot->calculateTeamCulturePercent((TeamTypes)eIndex) : -1;
 }
@@ -921,22 +922,22 @@ int CyPlot::countNumAirUnits(int /*TeamTypes*/ eTeam)
 	return m_pPlot ? m_pPlot->countNumAirUnits((TeamTypes)eTeam) : -1;
 }
 
-int CyPlot::getFoundValue(int /*PlayerTypes*/ eIndex)	
+int CyPlot::getFoundValue(int /*PlayerTypes*/ eIndex)
 {
 	return m_pPlot ? m_pPlot->getFoundValue((PlayerTypes)eIndex) : -1;
 }
 
-bool CyPlot::isBestAdjacentFound(int /*PlayerTypes*/ eIndex)	
+bool CyPlot::isBestAdjacentFound(int /*PlayerTypes*/ eIndex)
 {
 	return m_pPlot ? m_pPlot->isBestAdjacentFound((PlayerTypes)eIndex) : false;
 }
 
-int CyPlot::getPlayerCityRadiusCount(int /*PlayerTypes*/ eIndex)	
+int CyPlot::getPlayerCityRadiusCount(int /*PlayerTypes*/ eIndex)
 {
 	return m_pPlot ? m_pPlot->getPlayerCityRadiusCount((PlayerTypes)eIndex) : -1;
 }
 
-bool CyPlot::isPlayerCityRadius(int /*PlayerTypes*/ eIndex)	
+bool CyPlot::isPlayerCityRadius(int /*PlayerTypes*/ eIndex)
 {
 	return m_pPlot ? m_pPlot->isPlayerCityRadius((PlayerTypes)eIndex) : false;
 }
@@ -949,7 +950,7 @@ int CyPlot::getVisibilityCount(int /*TeamTypes*/ eTeam)
 void CyPlot::changeVisibilityCount(int /*TeamTypes*/ eTeam, int iChange, int /*InvisibleTypes*/ eSeeInvisible)
 {
 	if (m_pPlot)
-		m_pPlot->changeVisibilityCount((TeamTypes) eTeam, iChange, (InvisibleTypes) eSeeInvisible, true);
+		m_pPlot->changeVisibilityCount((TeamTypes)eTeam, iChange, (InvisibleTypes)eSeeInvisible, true);
 }
 
 int CyPlot::getStolenVisibilityCount(int /*TeamTypes*/ eTeam)
@@ -997,7 +998,7 @@ int /* RouteTypes */ CyPlot::getRevealedRouteType(int /*TeamTypes*/ eTeam, bool 
 	return m_pPlot ? m_pPlot->getRevealedRouteType((TeamTypes)eTeam, bDebug) : -1;
 }
 
-int CyPlot::getBuildProgress(int /*BuildTypes*/ eBuild)												
+int CyPlot::getBuildProgress(int /*BuildTypes*/ eBuild)
 {
 	return m_pPlot ? m_pPlot->getBuildProgress((BuildTypes)eBuild) : -1;
 }
@@ -1009,28 +1010,28 @@ bool CyPlot::changeBuildProgress(int /*BuildTypes*/ eBuild, int iChange, int /*T
 
 int CyPlot::getCultureRangeCities(int /*PlayerTypes*/ eOwnerIndex, int iRangeIndex)
 {
-	return m_pPlot ? m_pPlot->getCultureRangeCities((PlayerTypes) eOwnerIndex, iRangeIndex) : -1;
+	return m_pPlot ? m_pPlot->getCultureRangeCities((PlayerTypes)eOwnerIndex, iRangeIndex) : -1;
 }
 
 bool CyPlot::isCultureRangeCity(int /*PlayerTypes*/ eOwnerIndex, int iRangeIndex)
 {
-	return m_pPlot ? m_pPlot->isCultureRangeCity((PlayerTypes) eOwnerIndex, iRangeIndex) : false;
+	return m_pPlot ? m_pPlot->isCultureRangeCity((PlayerTypes)eOwnerIndex, iRangeIndex) : false;
 }
 
 int CyPlot::getInvisibleVisibilityCount(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible)
 {
-	return m_pPlot ? m_pPlot->getInvisibleVisibilityCount((TeamTypes) eTeam, (InvisibleTypes) eInvisible) : -1;
+	return m_pPlot ? m_pPlot->getInvisibleVisibilityCount((TeamTypes)eTeam, (InvisibleTypes)eInvisible) : -1;
 }
 
 bool CyPlot::isInvisibleVisible(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible)
 {
-	return m_pPlot ? m_pPlot->isInvisibleVisible((TeamTypes) eTeam, (InvisibleTypes) eInvisible) : -1;
+	return m_pPlot ? m_pPlot->isInvisibleVisible((TeamTypes)eTeam, (InvisibleTypes)eInvisible) : -1;
 }
 
 void CyPlot::changeInvisibleVisibilityCount(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible, int iChange, int iIntensity)
 {
 	if (m_pPlot)
-		m_pPlot->changeInvisibleVisibilityCount((TeamTypes) eTeam, (InvisibleTypes) eInvisible, iChange, iIntensity);
+		m_pPlot->changeInvisibleVisibilityCount((TeamTypes)eTeam, (InvisibleTypes)eInvisible, iChange, iIntensity);
 }
 
 int CyPlot::getNumUnits()
@@ -1074,7 +1075,7 @@ bool CyPlot::isInViewport()
 
 CyPlot* CyPlot::cloneToViewport()
 {
-	return new CyPlot(m_pPlot,true);
+	return new CyPlot(m_pPlot, true);
 }
 
 // Super Forts begin *canal* *choke*

@@ -11,7 +11,7 @@
 
 CvBuildLists::~CvBuildLists()
 {
-	for (int i=0; i<(int)m_Lists.size(); i++)
+	for (int i = 0; i < (int)m_Lists.size(); i++)
 	{
 		delete m_Lists[i];
 	}
@@ -41,7 +41,7 @@ void CvBuildLists::pushOrder(int iID, OrderTypes eOrder, int iData1, int iData2,
 		return;
 
 	BuildList* pList = m_Lists[index];
-	
+
 	if (bPop)
 	{
 		popOrder(iID, 0);
@@ -49,9 +49,9 @@ void CvBuildLists::pushOrder(int iID, OrderTypes eOrder, int iData1, int iData2,
 
 	OrderData order;
 	order.eOrderType = eOrder;
-	order.iData1 = iData1;
-	order.iData2 = iData2;
-	order.bSave = bSave;
+	order.iData1	 = iData1;
+	order.iData2	 = iData2;
+	order.bSave		 = bSave;
 
 	if (bAppend)
 	{
@@ -107,7 +107,7 @@ int CvBuildLists::getNumLists()
 
 int CvBuildLists::getIndexByID(int iID)
 {
-	for (int i=0; i<(int)m_Lists.size(); i++)
+	for (int i = 0; i < (int)m_Lists.size(); i++)
 		if (m_Lists[i]->iID == iID)
 			return i;
 	return -1;
@@ -158,9 +158,9 @@ int CvBuildLists::addList(CvString szName, int iID)
 	}
 	int iLast = (int)m_Lists.size();
 	m_Lists.push_back(new BuildList());
-	m_Lists[iLast]->iID = iID;
+	m_Lists[iLast]->iID	   = iID;
 	m_Lists[iLast]->szName = szName;
-	m_iCurrentList = m_iMaxID;
+	m_iCurrentList		   = m_iMaxID;
 	return m_iMaxID;
 }
 
@@ -200,7 +200,7 @@ void CvBuildLists::renameList(int iID, CvString szName)
 
 void CvBuildLists::readFromFile()
 {
-	CvString szFile = GC.getInitCore().getDLLPath() + "\\..\\UserSettings\\BuildLists.txt";
+	CvString	  szFile = GC.getInitCore().getDLLPath() + "\\..\\UserSettings\\BuildLists.txt";
 	std::ifstream stream;
 	stream.open(szFile.c_str());
 	if (!stream.is_open())
@@ -217,7 +217,7 @@ void CvBuildLists::readFromFile()
 		{
 			int iID = -1;
 			stream >> iID;
-			addList(szLine+2, iID);
+			addList(szLine + 2, iID);
 		}
 		else if ((szLine[0] == 'u') || (szLine[0] == 'b') || (szLine[0] == 'p'))
 		{
@@ -227,7 +227,7 @@ void CvBuildLists::readFromFile()
 				addList("");
 				index = 0;
 			}
-			
+
 			OrderTypes eOrder = NO_ORDER;
 			if (szLine[0] == 'u')
 				eOrder = ORDER_TRAIN;
@@ -236,9 +236,9 @@ void CvBuildLists::readFromFile()
 			else
 				eOrder = ORDER_CREATE;
 
-			bool bSave = szLine[1] == '*';
-			int iData1 = GC.getInfoTypeForString(szLine+2);
-			int iData2 = 0;
+			bool bSave	= szLine[1] == '*';
+			int	 iData1 = GC.getInfoTypeForString(szLine + 2);
+			int	 iData2 = 0;
 			pushOrder(getID(index), eOrder, iData1, iData2, bSave, false, true);
 		}
 	}
@@ -247,19 +247,20 @@ void CvBuildLists::readFromFile()
 
 void CvBuildLists::writeToFile()
 {
-	CvString szFile = GC.getInitCore().getDLLPath() + "\\..\\UserSettings\\BuildLists.txt";
+	CvString	  szFile = GC.getInitCore().getDLLPath() + "\\..\\UserSettings\\BuildLists.txt";
 	std::ofstream stream;
 	stream.open(szFile.c_str(), std::ios::trunc);
 	if (!stream.is_open())
 		return;
 
-	for (int iList=0; iList < getNumLists(); iList++)
+	for (int iList = 0; iList < getNumLists(); iList++)
 	{
-		stream << "l:" << getListName(iList).c_str() << std::endl << getID(iList) << std::endl;
+		stream << "l:" << getListName(iList).c_str() << std::endl
+			   << getID(iList) << std::endl;
 
-		for (int i=0; i < getListLength(iList); i++)
+		for (int i = 0; i < getListLength(iList); i++)
 		{
-			CvString szType;
+			CvString   szType;
 			OrderData* pOrder = getOrder(iList, i);
 			if (pOrder->eOrderType == ORDER_TRAIN)
 			{
@@ -276,12 +277,12 @@ void CvBuildLists::writeToFile()
 				stream << 'p';
 				szType = GC.getProjectInfo((ProjectTypes)pOrder->iData1).getType();
 			}
-			
+
 			if (pOrder->bSave)
 				stream << '*';
 			else
 				stream << ':';
-			
+
 			stream << szType.c_str() << std::endl;
 		}
 
@@ -290,13 +291,13 @@ void CvBuildLists::writeToFile()
 	stream.close();
 }
 
-void CvBuildLists::read(FDataStreamBase *pStream)
+void CvBuildLists::read(FDataStreamBase* pStream)
 {
 	int iNum = 0;
 	pStream->Read(&m_iMaxID);
 	pStream->Read(&iNum);
 	m_Lists.resize(iNum);
-	for (int i=0; i<iNum; i++)
+	for (int i = 0; i < iNum; i++)
 	{
 		m_Lists[i] = new BuildList();
 		pStream->Read(&(m_Lists[i]->iID));
@@ -314,12 +315,12 @@ void CvBuildLists::read(FDataStreamBase *pStream)
 	}
 }
 
-void CvBuildLists::write(FDataStreamBase *pStream)
+void CvBuildLists::write(FDataStreamBase* pStream)
 {
 	pStream->Write(m_iMaxID);
 	int iNum = getNumLists();
 	pStream->Write(iNum);
-	for (int i=0; i<iNum; i++)
+	for (int i = 0; i < iNum; i++)
 	{
 		pStream->Write(m_Lists[i]->iID);
 		pStream->WriteString(m_Lists[i]->szName);
@@ -327,14 +328,14 @@ void CvBuildLists::write(FDataStreamBase *pStream)
 	}
 }
 
-void CvBuildLists::readSubset(FDataStreamBase *pStream)
+void CvBuildLists::readSubset(FDataStreamBase* pStream)
 {
 	int iList = 0;
 	pStream->Read(&m_iMaxID);
 	pStream->Read(&iList);
-	
+
 	// make new lists if necessary
-	for (int i=getNumLists(); i<=iList; i++)
+	for (int i = getNumLists(); i <= iList; i++)
 	{
 		m_Lists.push_back(new BuildList());
 	}
@@ -342,7 +343,7 @@ void CvBuildLists::readSubset(FDataStreamBase *pStream)
 	pStream->Read(&(m_Lists[iList]->iID));
 	pStream->ReadString(m_Lists[iList]->szName);
 	m_Lists[iList]->orderQueue.ReadNonWrapperSubset(pStream);
-	
+
 	// Update current list
 	if (iList >= 0)
 	{
@@ -354,7 +355,7 @@ void CvBuildLists::readSubset(FDataStreamBase *pStream)
 	}
 }
 
-void CvBuildLists::writeSubset(FDataStreamBase *pStream, int iList, int index, int iNum)
+void CvBuildLists::writeSubset(FDataStreamBase* pStream, int iList, int index, int iNum)
 {
 	if (iList >= getNumLists())
 		return;

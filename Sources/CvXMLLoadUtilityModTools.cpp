@@ -27,77 +27,77 @@ using namespace std;
 //i.e. original XML holds 60citynames for america
 //you add 5new in a module, this one will append those 5
 //to the array of 60(technically, it's the other way around,but who cares)
-void CvXMLLoadUtilityModTools::StringArrayExtend(CvString **ppszListNew, int* pNumNewListElements,
-												 CvString **ppszListOld, int iNumOldListElements,
+void CvXMLLoadUtilityModTools::StringArrayExtend(CvString** ppszListNew, int* pNumNewListElements,
+												 CvString** ppszListOld, int iNumOldListElements,
 												 CvString szDefaultListVal) const
 {
 	CvString* pszListNew;
 	CvString* pszListOld;
-	pszListNew = *ppszListNew;
-	pszListOld = *ppszListOld;
+	pszListNew		   = *ppszListNew;
+	pszListOld		   = *ppszListOld;
 	int m_iAddNumNames = 0;
 	int iCount;
 	int iNumNewListElements = *pNumNewListElements;
 
-	for ( int j = 0; j < iNumNewListElements; j++ )
-	{	
+	for (int j = 0; j < iNumNewListElements; j++)
+	{
 		iCount = 0;
-		for ( int i = 0; i < iNumOldListElements; i++ )
+		for (int i = 0; i < iNumOldListElements; i++)
 		{
-			if ( pszListNew[j] == pszListOld[i] )
+			if (pszListNew[j] == pszListOld[i])
 			{
 				break;
 			}
-			else 
+			else
 			{
 				iCount++;
 			}
-		}		
-		if ( iCount == iNumOldListElements ) //it's not a dupe, we want to add it to the array
-		{			
-			m_iAddNumNames++;		// Nr of Elements to add to the new array
 		}
-		else  //set empty, don't want a dupe!
+		if (iCount == iNumOldListElements) //it's not a dupe, we want to add it to the array
+		{
+			m_iAddNumNames++; // Nr of Elements to add to the new array
+		}
+		else //set empty, don't want a dupe!
 		{
 			pszListNew[j] = szDefaultListVal;
 		}
 	}
-	
 
-	// Make a temp Array of the new size		
-	CvString* m_paszTempList = new CvString[iNumOldListElements + m_iAddNumNames];	
-	iCount = 0;
+
+	// Make a temp Array of the new size
+	CvString* m_paszTempList = new CvString[iNumOldListElements + m_iAddNumNames];
+	iCount					 = 0;
 
 	//read values from previous infoclass object, we want them to be first...
-	for ( int i = 0; i < iNumOldListElements; i++ )
-	{	
-		m_paszTempList[i] = pszListOld[i];	
+	for (int i = 0; i < iNumOldListElements; i++)
+	{
+		m_paszTempList[i] = pszListOld[i];
 		iCount++;
 	}
-	
+
 	//read values from new infoclass object
-	for ( int i = 0; i < iNumNewListElements; i++ )
+	for (int i = 0; i < iNumNewListElements; i++)
 	{
-		if ( pszListNew[i] != szDefaultListVal)
+		if (pszListNew[i] != szDefaultListVal)
 		{
 			m_paszTempList[iCount] = pszListNew[i];
 			iCount++;
-		}			
+		}
 	}
-	
+
 	// set Number of array elements need for the additional list plus old list
 	*pNumNewListElements = iNumOldListElements + m_iAddNumNames;
 	// delete infoclass array ppszListNew
-	if ( NULL != *ppszListNew )
+	if (NULL != *ppszListNew)
 	{
 		SAFE_DELETE_ARRAY(*ppszListNew);
 	}
 	//new instance of infoclass array with new number of elements
 	*ppszListNew = new CvString[*pNumNewListElements];
-	pszListNew = *ppszListNew;
+	pszListNew	 = *ppszListNew;
 
 	// copy values from Temp array
-	for ( int i = 0; i < *pNumNewListElements; i++ )
+	for (int i = 0; i < *pNumNewListElements; i++)
 	{
 		pszListNew[i] = m_paszTempList[i];
 	}
@@ -105,34 +105,34 @@ void CvXMLLoadUtilityModTools::StringArrayExtend(CvString **ppszListNew, int* pN
 	SAFE_DELETE_ARRAY(m_paszTempList);
 }
 
-bool CvXMLLoadUtilityModTools::isDuplicate(int iNumValueNew, int *ppiListNew, int iValueOld) const
-{	
-	for ( int j = 0; j < iNumValueNew; j++ )
-	{	
-		if ( ppiListNew[j] == iValueOld)
+bool CvXMLLoadUtilityModTools::isDuplicate(int iNumValueNew, int* ppiListNew, int iValueOld) const
+{
+	for (int j = 0; j < iNumValueNew; j++)
+	{
+		if (ppiListNew[j] == iValueOld)
 		{
-			return true; 			
+			return true;
 		}
-	}	
+	}
 	return false;
 }
 
-bool CvXMLLoadUtilityModTools::isDuplicate(int iNumValueNew, CvWString *ppiListNew, CvWString wValueOld) const
-{	
-	for ( int j = 0; j < iNumValueNew; j++ )
-	{	
-		if ( ppiListNew[j] == wValueOld)
+bool CvXMLLoadUtilityModTools::isDuplicate(int iNumValueNew, CvWString* ppiListNew, CvWString wValueOld) const
+{
+	for (int j = 0; j < iNumValueNew; j++)
+	{
+		if (ppiListNew[j] == wValueOld)
 		{
-			return true; 			
+			return true;
 		}
-	}	
+	}
 	return false;
 }
 
 // WARNING WARNING WARNING WARNING
 // the p_szLogWrite->XmlArtTagVerification can cause CTD because of memory overflow
 // If too much is parsed into the XmlArtTagVerification method!!
-void CvXMLLoadUtilityModTools::setLocationName( CvString *pszTextVal, const char* szDirName)
+void CvXMLLoadUtilityModTools::setLocationName(CvString* pszTextVal, const char* szDirName)
 {
 #if (DEBUG_IS_MODULAR_ART == 1)
 	CvString szDebugBuffer;
@@ -146,26 +146,26 @@ void CvXMLLoadUtilityModTools::setLocationName( CvString *pszTextVal, const char
 	std::string szFiraxisLoad = "NONE";
 	if (szDirName == szFiraxisLoad) //non modular loading doesn't need this method
 	{
-//#if (DEBUG_IS_MODULAR_ART == 1)
-//	szDebugBuffer.Format("DirName == NONE, exiting?");
-//	gDLL->logMsg("CvXMLLoadUtilityModTools_setLocationName.log", szDebugBuffer.c_str());
-//
-//	szDebugBuffer.Format("=== setLocationName END ===");
-//	gDLL->logMsg("CvXMLLoadUtilityModTools_setLocationName.log", szDebugBuffer.c_str());
-//#endif
+		//#if (DEBUG_IS_MODULAR_ART == 1)
+		//	szDebugBuffer.Format("DirName == NONE, exiting?");
+		//	gDLL->logMsg("CvXMLLoadUtilityModTools_setLocationName.log", szDebugBuffer.c_str());
+		//
+		//	szDebugBuffer.Format("=== setLocationName END ===");
+		//	gDLL->logMsg("CvXMLLoadUtilityModTools_setLocationName.log", szDebugBuffer.c_str());
+		//#endif
 
 		return;
 	}
 	CvString szModular = szDirName;
 	CvString szTextVal = *pszTextVal;
-	szModular = szModular + szTextVal;
+	szModular		   = szModular + szTextVal;
 
 	CvXMLLoadUtility* p_szLogWrite = new CvXMLLoadUtility;
 
 	if (isExcludedFile(szTextVal)) // These are special files that are relative to the Directory of Civ4BeyondSword.exe
 	{
-		if ( isModularArt(szModular))
-		{			
+		if (isModularArt(szModular))
+		{
 			szTextVal = gDLL->getModName();
 			szTextVal += "Assets\\";
 			szTextVal += szModular;
@@ -174,8 +174,8 @@ void CvXMLLoadUtilityModTools::setLocationName( CvString *pszTextVal, const char
 		else
 		{
 #ifdef _DEBUG
-		//the passed is crap, we don't want to continue anything with it
-/*
+			//the passed is crap, we don't want to continue anything with it
+			/*
 		if ( szTextVal == "" )	// this shouldn't exist
 		{
 			p_szLogWrite->XmlArtTagVerification("CRASH WARNING, Your theme <Path> tag is found emtpy in: %s\\%s", szDirName.GetCString(), GC.getCurrentXMLFile().GetCString());
@@ -188,7 +188,7 @@ void CvXMLLoadUtilityModTools::setLocationName( CvString *pszTextVal, const char
 		{
 		}
 */
-			p_szLogWrite->XmlArtTagVerification("CRASH WARNING, Your theme <Path> %s, seems not to be relative to the Module path: %s", szTextVal.GetCString(), szDirName);		
+			p_szLogWrite->XmlArtTagVerification("CRASH WARNING, Your theme <Path> %s, seems not to be relative to the Module path: %s", szTextVal.GetCString(), szDirName);
 #endif
 		}
 	}
@@ -196,42 +196,42 @@ void CvXMLLoadUtilityModTools::setLocationName( CvString *pszTextVal, const char
 	{
 #ifdef _DEBUG
 		//the passed is crap, we don't want to continue anything with it
-		if ( szTextVal == "" )
+		if (szTextVal == "")
 		{
 			p_szLogWrite->XmlArtTagVerification("One art tag is found emtpy in: %s", GC.getCurrentXMLFile().GetCString());
 		}
 		else if (szTextVal == "None")
 		{
-			p_szLogWrite->XmlArtTagVerification("One art tag is set to: %s in: %s", szTextVal.GetCString(), GC.getCurrentXMLFile().GetCString());		
+			p_szLogWrite->XmlArtTagVerification("One art tag is set to: %s in: %s", szTextVal.GetCString(), GC.getCurrentXMLFile().GetCString());
 		}
 		else
-		{		
-			p_szLogWrite->XmlArtTagVerification("One art tag: %s, seems not to be relative to the module path in: %s", szTextVal.GetCString(), GC.getCurrentXMLFile().GetCString());		
+		{
+			p_szLogWrite->XmlArtTagVerification("One art tag: %s, seems not to be relative to the module path in: %s", szTextVal.GetCString(), GC.getCurrentXMLFile().GetCString());
 		}
 #endif
-	}	
+	}
 	else
 	{
-		if ( isModularArt(szModular))
+		if (isModularArt(szModular))
 		{
 			szTextVal = szModular;
 		}
 		else
 		{
 #ifdef _DEBUG
-		//the passed is crap, we don't want to continue anything with it
-		if ( szTextVal == "" )
-		{
-			p_szLogWrite->XmlArtTagVerification("One art tag is found emtpy in: %s", GC.getCurrentXMLFile().GetCString());
-		}
-		else if (szTextVal == "None")
-		{
-			p_szLogWrite->XmlArtTagVerification("One art tag is set to: %s in: %s", szTextVal.GetCString(), GC.getCurrentXMLFile().GetCString());		
-		}
-		else
-		{		
-			p_szLogWrite->XmlArtTagVerification("One art tag: %s, seems not to be relative to the module path in: %s", szTextVal.GetCString(), GC.getCurrentXMLFile().GetCString());		
-		}
+			//the passed is crap, we don't want to continue anything with it
+			if (szTextVal == "")
+			{
+				p_szLogWrite->XmlArtTagVerification("One art tag is found emtpy in: %s", GC.getCurrentXMLFile().GetCString());
+			}
+			else if (szTextVal == "None")
+			{
+				p_szLogWrite->XmlArtTagVerification("One art tag is set to: %s in: %s", szTextVal.GetCString(), GC.getCurrentXMLFile().GetCString());
+			}
+			else
+			{
+				p_szLogWrite->XmlArtTagVerification("One art tag: %s, seems not to be relative to the module path in: %s", szTextVal.GetCString(), GC.getCurrentXMLFile().GetCString());
+			}
 #endif
 		}
 	}
@@ -250,13 +250,13 @@ void CvXMLLoadUtilityModTools::setLocationName( CvString *pszTextVal, const char
 
 bool CvXMLLoadUtilityModTools::isExcludedFile(const char* szLocationName)
 {
-	CvString szLocationNameStripDot = szLocationName;
-	CvString szLocationNameStripTemp = szLocationName;	
+	CvString szLocationNameStripDot	 = szLocationName;
+	CvString szLocationNameStripTemp = szLocationName;
 
 	string::size_type posDot = szLocationNameStripDot.find_last_of('.');
 
-	if(posDot != string::npos) 
-	{		
+	if (posDot != string::npos)
+	{
 		//force lowercase for comparison
 		int length = szLocationNameStripDot.size();
 		for (int i = 0; i < length; ++i)
@@ -267,12 +267,12 @@ bool CvXMLLoadUtilityModTools::isExcludedFile(const char* szLocationName)
 		//delete everything after first dir
 		szLocationNameStripTemp.erase(posDot);
 		//compare
-		if ( szLocationNameStripTemp == "mht" )  //if its a thema file, force static linking
+		if (szLocationNameStripTemp == "mht") //if its a thema file, force static linking
 		{
 #ifdef _DEBUG
-		CvXMLLoadUtility* p_szLogWrite = new CvXMLLoadUtility;
-		p_szLogWrite->XmlArtTagVerification("You are now loading an alternative theme: %s", szLocationName);
-		SAFE_DELETE(p_szLogWrite);
+			CvXMLLoadUtility* p_szLogWrite = new CvXMLLoadUtility;
+			p_szLogWrite->XmlArtTagVerification("You are now loading an alternative theme: %s", szLocationName);
+			SAFE_DELETE(p_szLogWrite);
 #endif
 			return true;
 		}
@@ -280,7 +280,7 @@ bool CvXMLLoadUtilityModTools::isExcludedFile(const char* szLocationName)
 	return false;
 }
 
-bool CvXMLLoadUtilityModTools::isCommaFile(CvString *pszTextVal, const char* szDirName)
+bool CvXMLLoadUtilityModTools::isCommaFile(CvString* pszTextVal, const char* szDirName)
 {
 #if (DEBUG_IS_MODULAR_ART == 1)
 	CvString szDebugBuffer;
@@ -293,7 +293,7 @@ bool CvXMLLoadUtilityModTools::isCommaFile(CvString *pszTextVal, const char* szD
 
 	string::size_type posComma = (*pszTextVal).find_first_of(',');
 
-	if(posComma != string::npos) //if no comma found at all, return false
+	if (posComma != string::npos) //if no comma found at all, return false
 	{
 
 #if (DEBUG_IS_MODULAR_ART == 1)
@@ -301,10 +301,10 @@ bool CvXMLLoadUtilityModTools::isCommaFile(CvString *pszTextVal, const char* szD
 		gDLL->logMsg("CvXMLLoadUtilityModTools_isCommaFile.log", szDebugBuffer.c_str());
 #endif
 		CvString szTempLocation;
-		CvString szAppend = " ";
-		int iCountComma = 0;
+		CvString szAppend	 = " ";
+		int		 iCountComma = 0;
 		CvString szLocationNameStripComma;
-		// Check how many comma's we have in the string and how many Button Files		
+		// Check how many comma's we have in the string and how many Button Files
 
 #if (DEBUG_IS_MODULAR_ART == 1)
 		std::vector<CvString> asTagParts;
@@ -320,16 +320,15 @@ bool CvXMLLoadUtilityModTools::isCommaFile(CvString *pszTextVal, const char* szD
 		}
 #else
 		szLocationNameStripComma = *pszTextVal;
-		for ( int i = 0; i < szLocationNameStripComma.GetLength(); i++)
+		for (int i = 0; i < szLocationNameStripComma.GetLength(); i++)
 		{
 			if (szLocationNameStripComma[i] == 44) // "," = 44 (ASCII)
 			{
-			  iCountComma++;
+				iCountComma++;
 			}
-		}		
+		}
 #endif
 
-		
 
 #if (DEBUG_IS_MODULAR_ART == 1)
 		CvString szButtonsString;
@@ -355,30 +354,31 @@ bool CvXMLLoadUtilityModTools::isCommaFile(CvString *pszTextVal, const char* szD
 		// determine the append string at the end of the tag
 		bool bContinue = true;
 		szTempLocation = *pszTextVal;
-		while ( bContinue)
+		while (bContinue)
 		{
 			posComma = szTempLocation.find_first_of(',');
-			if(posComma != string::npos) //Prevent Null pointer deletion
+			if (posComma != string::npos) //Prevent Null pointer deletion
 			{
-				szTempLocation = szTempLocation.substr(szTempLocation.find(",")+1);
-				if (isdigit(szTempLocation[0]))  //We found the Append
-				{					
+				szTempLocation = szTempLocation.substr(szTempLocation.find(",") + 1);
+				if (isdigit(szTempLocation[0])) //We found the Append
+				{
 					bContinue = false;
 				}
 			}
-			else break;			
+			else
+				break;
 		}
-		if (!bContinue )
+		if (!bContinue)
 		{
 			szAppend = "," + szTempLocation;
 		}
 #endif
 
-std::vector<CvString> vecButtonArtFile;
+		std::vector<CvString> vecButtonArtFile;
 #if (DEBUG_IS_MODULAR_ART == 1)
-	szButtonsString.getTokens(CvString(","), vecButtonArtFile);
-	szDebugBuffer.Format(" Button art vector size after tokenizing by ',': %i", vecButtonArtFile.size());
-	gDLL->logMsg("CvXMLLoadUtilityModTools_isCommaFile.log", szDebugBuffer.c_str());
+		szButtonsString.getTokens(CvString(","), vecButtonArtFile);
+		szDebugBuffer.Format(" Button art vector size after tokenizing by ',': %i", vecButtonArtFile.size());
+		gDLL->logMsg("CvXMLLoadUtilityModTools_isCommaFile.log", szDebugBuffer.c_str());
 #else
 		// set Button Array
 		// Array to hold the Button art files
@@ -387,24 +387,25 @@ std::vector<CvString> vecButtonArtFile;
 		while (true)
 		{
 			posComma = szTempLocation.find_first_of(',');
-			if(posComma != string::npos) //Prevent Null pointer deletion
+			if (posComma != string::npos) //Prevent Null pointer deletion
 			{
 				if (szTempLocation[0] == 44) // "," = 44 (ASCII)
 				{
-					szTempLocation = szTempLocation.substr(szTempLocation.find(",")+1);
+					szTempLocation = szTempLocation.substr(szTempLocation.find(",") + 1);
 				}
 				szTempLocationSubstr = szTempLocation;
-				posComma = szTempLocationSubstr.find_first_of(',');
-				if(posComma != string::npos) //Prevent Null pointer deletion
+				posComma			 = szTempLocationSubstr.find_first_of(',');
+				if (posComma != string::npos) //Prevent Null pointer deletion
 				{
 					szTempLocationSubstr.erase(posComma);
 					if (!isdigit(szTempLocationSubstr[0]))
 					{
 						vecButtonArtFile.push_back(szTempLocationSubstr);
 					}
-					else break;
+					else
+						break;
 				}
-				szTempLocation = szTempLocation.substr(szTempLocation.find(",")+1);
+				szTempLocation = szTempLocation.substr(szTempLocation.find(",") + 1);
 			}
 			else if (szTempLocation.GetLength() >= 1)
 			{
@@ -414,37 +415,38 @@ std::vector<CvString> vecButtonArtFile;
 				}
 				break;
 			}
-			else break;
-		}		
+			else
+				break;
+		}
 #endif
 
 		//Check if we need to modularize the files
 		bool bNeedChange = false;
-/************************************************************************************************/
-/* Afforess	                  Start		 06/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                  Start		 06/15/10                                               */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
 		CvString m_szFolderPath = GC.getInitCore().getDLLPath() + "//";
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                     END                                                            */
+		/************************************************************************************************/
 
-		m_szFolderPath += szDirName;			// "Modules\Modules\ModuleXXX" 
-		for ( unsigned int i = 0; i < vecButtonArtFile.size(); i++)
+		m_szFolderPath += szDirName; // "Modules\Modules\ModuleXXX"
+		for (unsigned int i = 0; i < vecButtonArtFile.size(); i++)
 		{
 			szTempLocation = m_szFolderPath;
 			szTempLocation += vecButtonArtFile[i];
 			//set the Slash properly
-			for ( int j = 0; j < szTempLocation.GetLength(); j++)
+			for (int j = 0; j < szTempLocation.GetLength(); j++)
 			{
-				if ( szTempLocation[j] == 47)  // 47 = "/"
+				if (szTempLocation[j] == 47) // 47 = "/"
 				{
-					szTempLocation[j] = 92;  //92 = "\\", actually 1 backslash of course
+					szTempLocation[j] = 92; //92 = "\\", actually 1 backslash of course
 				}
 			}
 
-			FILE *file = fopen(szTempLocation , "rb");
+			FILE* file = fopen(szTempLocation, "rb");
 			if (file != NULL)
 			{
 				vecButtonArtFile[i] = szDirName + vecButtonArtFile[i];
@@ -464,19 +466,20 @@ std::vector<CvString> vecButtonArtFile;
 			{
 				szTempLocation = 0;
 			}
-			for ( unsigned int i = 0; i < vecButtonArtFile.size(); i++)
+			for (unsigned int i = 0; i < vecButtonArtFile.size(); i++)
 			{
-				if (i != 0) szTempLocation += ",";
+				if (i != 0)
+					szTempLocation += ",";
 				szTempLocation += vecButtonArtFile[i];
 			}
-			if (szAppend[0] == 44)   // "," = 44 (ASCII)
+			if (szAppend[0] == 44) // "," = 44 (ASCII)
 			{
 				szTempLocation += szAppend;
 			}
 			*pszTextVal = szTempLocation;
 			return true;
-		}	
-	} 
+		}
+	}
 	return false;
 }
 
@@ -497,58 +500,58 @@ bool CvXMLLoadUtilityModTools::isModularArt(const char* szLocationName)
 #endif
 
 	//the passed is crap, we don't want to continue anything with it
-	if (szLocationName == NULL || strcmp(szLocationName, "") == 0 || strcmp(szLocationName, "None") == 0 || strcmp(szLocationName, "NONE") == 0 )
+	if (szLocationName == NULL || strcmp(szLocationName, "") == 0 || strcmp(szLocationName, "None") == 0 || strcmp(szLocationName, "NONE") == 0)
 	{
 #if (DEBUG_IS_MODULAR_ART == 1)
 		szDebugBuffer.Format(" EMPTY location, aborting.");
 		gDLL->logMsg("CvXMLLoadUtilityModTools_isModularArt.log", szDebugBuffer.c_str());
-#endif	
+#endif
 		return false;
 	}
 
 	// Dir where the Civ4BeyondSword.exe is started from
-/************************************************************************************************/
-/* Afforess	                  Start		 06/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* Afforess	                  Start		 06/15/10                                               */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
 	CvString m_szFolderPath = GC.getInitCore().getDLLPath() + "\\";
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* Afforess	                     END                                                            */
+	/************************************************************************************************/
 
 
-	#if (DEBUG_IS_MODULAR_ART == 1)
-		szDebugBuffer.Format(" Complete path (with Assets dir): %s", m_szFolderPath.c_str());
-		gDLL->logMsg("CvXMLLoadUtilityModTools_isModularArt.log", szDebugBuffer.c_str());
-	#endif
+#if (DEBUG_IS_MODULAR_ART == 1)
+	szDebugBuffer.Format(" Complete path (with Assets dir): %s", m_szFolderPath.c_str());
+	gDLL->logMsg("CvXMLLoadUtilityModTools_isModularArt.log", szDebugBuffer.c_str());
+#endif
 
-	m_szFolderPath += szLocationName;		// where the tag points to, usually "Art\filename.xxx"
+	m_szFolderPath += szLocationName; // where the tag points to, usually "Art\filename.xxx"
 
 #if (DEBUG_IS_MODULAR_ART == 1)
 	szDebugBuffer.Format("  Path WITH given location: '%s'", m_szFolderPath.c_str());
 	gDLL->logMsg("CvXMLLoadUtilityModTools_isModularArt.log", szDebugBuffer.c_str());
 #endif
 
-	int iReplaced = m_szFolderPath.Replace('/','\\');
+	int iReplaced = m_szFolderPath.Replace('/', '\\');
 #if (DEBUG_IS_MODULAR_ART == 1)
-	
+
 	szDebugBuffer.Format("  Replaced %i occurrences of '/' with '\\'.", iReplaced);
 	gDLL->logMsg("CvXMLLoadUtilityModTools_isModularArt.log", szDebugBuffer.c_str());
 
 #endif
 
-	iReplaced = m_szFolderPath.Replace(CvString("\\\\"),CvString("\\"));
+	iReplaced = m_szFolderPath.Replace(CvString("\\\\"), CvString("\\"));
 #if (DEBUG_IS_MODULAR_ART == 1)
 	szDebugBuffer.Format("  Replaced %i occurrences of '\\\\' with '\\'.", iReplaced);
-	gDLL->logMsg("CvXMLLoadUtilityModTools_isModularArt.log", szDebugBuffer.c_str());	
+	gDLL->logMsg("CvXMLLoadUtilityModTools_isModularArt.log", szDebugBuffer.c_str());
 
 	szDebugBuffer.Format("  Path WITH given location: '%s'", m_szFolderPath.c_str());
 	gDLL->logMsg("CvXMLLoadUtilityModTools_isModularArt.log", szDebugBuffer.c_str());
 #endif
-	FILE *file;
+	FILE* file;
 	DWORD dwAttr = GetFileAttributes(m_szFolderPath.c_str());
-	if(dwAttr != 0xffffffff && (dwAttr & FILE_ATTRIBUTE_DIRECTORY)) 
+	if (dwAttr != 0xffffffff && (dwAttr & FILE_ATTRIBUTE_DIRECTORY))
 	{
 #if (DEBUG_IS_MODULAR_ART == 1)
 		szDebugBuffer.Format(" '%s' is a DIRECTORY, no modular art?", m_szFolderPath.c_str());
@@ -561,20 +564,20 @@ bool CvXMLLoadUtilityModTools::isModularArt(const char* szLocationName)
 		file = fopen(m_szFolderPath.c_str(), "rb");
 	}
 
-/************************************************************************************************/
-/* DEBUG_IS_MODULAR_ART                    END                                                  */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* DEBUG_IS_MODULAR_ART                    END                                                  */
+	/************************************************************************************************/
 
-	if (file == NULL) 
+	if (file == NULL)
 	{
-		return false;		
+		return false;
 	}
 	fclose(file);
 
 #if (DEBUG_IS_MODULAR_ART == 1)
 	szDebugBuffer.Format("=== isModularArt END ===");
 	gDLL->logMsg("CvXMLLoadUtilityModTools_isModularArt.log", szDebugBuffer.c_str());
-#endif	
+#endif
 
 	return true;
 }
@@ -583,14 +586,14 @@ bool CvXMLLoadUtilityModTools::isModularArt(const char* szLocationName)
 CvString CvXMLLoadUtilityModTools::GetProgramDir()
 {
 	CvString szExeLocation = _pgmptr;
-	if ( szExeLocation == NULL)
+	if (szExeLocation == NULL)
 	{
 		FAssertMsg(false, "Not running Stdlib Compatible Operating System?");
 	}
-	
+
 	string::size_type posDot = szExeLocation.find_last_of('\\');
 
-	if(posDot != string::npos) 
+	if (posDot != string::npos)
 	{
 		szExeLocation.erase(posDot + 1);
 	}
@@ -599,10 +602,10 @@ CvString CvXMLLoadUtilityModTools::GetProgramDir()
 }
 
 CvString CvXMLLoadUtilityModTools::deleteFileName(const char* szDirName, const char szLocateChar)
-{	
-	CvString szDirNameStrip = szDirName;
-	string::size_type pos = szDirNameStrip.find_last_of(szLocateChar);
-	if(pos != string::npos) 
+{
+	CvString		  szDirNameStrip = szDirName;
+	string::size_type pos			 = szDirNameStrip.find_last_of(szLocateChar);
+	if (pos != string::npos)
 	{
 		szDirNameStrip.erase(pos + 1);
 	}
@@ -615,9 +618,9 @@ CvString CvXMLLoadUtilityModTools::deleteFileName(const char* szDirName, const c
 }
 
 void CvXMLLoadUtilityModTools::writeThm(const char* szTextVal)
-{	
-	CvString tszTextVal = szTextVal;
-	int posCut;
+{
+	CvString		  tszTextVal = szTextVal;
+	int				  posCut;
 	string::size_type posBackSlash = tszTextVal.find_last_of('\\');
 	string::size_type posSlashForw = tszTextVal.find_last_of('/');
 
@@ -630,7 +633,7 @@ void CvXMLLoadUtilityModTools::writeThm(const char* szTextVal)
 		posCut = posSlashForw;
 	}
 
-	if(posCut != string::npos) 
+	if (posCut != string::npos)
 	{
 		tszTextVal.erase(posCut);
 	}
@@ -638,13 +641,13 @@ void CvXMLLoadUtilityModTools::writeThm(const char* szTextVal)
 	{
 		FAssertMsg(false, "Something went wrong with the Theme file");
 	}
-	
-	FILE *pFile = fopen(szTextVal, "w");
 
-	if (pFile == NULL) 
+	FILE* pFile = fopen(szTextVal, "w");
+
+	if (pFile == NULL)
 	{
 		return;
-/*
+		/*
 #ifdef _DEBUG
 		CvString szPrint = GetProgramDir();
 		szPrint.append(szTextVal);
@@ -654,9 +657,9 @@ void CvXMLLoadUtilityModTools::writeThm(const char* szTextVal)
 #endif
 */
 	}
-	
-	//set the proper string to write to the Theme file	
-	CvString szOutput = "resource_path\t";	
+
+	//set the proper string to write to the Theme file
+	CvString szOutput = "resource_path\t";
 	szOutput.append("\"");
 	szOutput.append(tszTextVal);
 	szOutput.append("\";\n");
@@ -664,7 +667,7 @@ void CvXMLLoadUtilityModTools::writeThm(const char* szTextVal)
 	szOutput.append("include\t");
 	szOutput.append("\"");
 	szOutput.append(tszTextVal);
-	szOutput.append("\\Themes\\Civ4\\Civ4Theme.thm");	
+	szOutput.append("\\Themes\\Civ4\\Civ4Theme.thm");
 	szOutput.append("\";\n");
 
 	//write the file

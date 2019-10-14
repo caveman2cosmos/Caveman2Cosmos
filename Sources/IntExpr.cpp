@@ -14,7 +14,7 @@ IntExpr::~IntExpr()
 {
 }
 
-IntExpr* IntExpr::read(CvXMLLoadUtility *pXML)
+IntExpr* IntExpr::read(CvXMLLoadUtility* pXML)
 {
 	// In general we assume no comments to simplify reading code
 
@@ -43,7 +43,7 @@ IntExpr* IntExpr::read(CvXMLLoadUtility *pXML)
 			{
 				// read the subnode
 				IntExpr* pExpr = read(pXML);
-				
+
 				pXML->MoveToXmlParent();
 				return new IntExprRandom(pExpr);
 			}
@@ -68,7 +68,7 @@ IntExpr* IntExpr::read(CvXMLLoadUtility *pXML)
 			{
 				// read the subnode
 				IntExpr* pExpr = read(pXML);
-				
+
 				pXML->MoveToXmlParent();
 				return new IntExprAdapt(pExpr);
 			}
@@ -84,7 +84,7 @@ IntExpr* IntExpr::read(CvXMLLoadUtility *pXML)
 				pXML->TryMoveToXmlNextSibling();
 				// read the subnode
 				IntExpr* pExpr = read(pXML);
-				
+
 				pXML->MoveToXmlParent();
 				return new IntExprAdapt(pExpr, GC.getOrCreateInfoTypeForString(szTextVal));
 			}
@@ -118,7 +118,7 @@ IntExpr* IntExpr::read(CvXMLLoadUtility *pXML)
 			{
 				// read the first node
 				IntExpr* pExpr = read(pXML);
-				
+
 				// read nodes until there are no more siblings
 				while (pXML->TryMoveToXmlNextSibling())
 				{
@@ -158,7 +158,7 @@ IntExpr* IntExpr::read(CvXMLLoadUtility *pXML)
 			{
 				// read the first node
 				IntExpr* pExpr = read(pXML);
-				
+
 				// read nodes until there are no more siblings
 				while (pXML->TryMoveToXmlNextSibling())
 				{
@@ -185,7 +185,7 @@ IntExpr* IntExpr::read(CvXMLLoadUtility *pXML)
 			{
 				// read the first node
 				IntExpr* pExpr = read(pXML);
-				
+
 				// read the second node
 				if (pXML->TryMoveToXmlNextSibling())
 				{
@@ -212,7 +212,7 @@ IntExpr* IntExpr::read(CvXMLLoadUtility *pXML)
 			{
 				// read the first node
 				IntExpr* pExpr = read(pXML);
-				
+
 				// read the second node
 				if (pXML->TryMoveToXmlNextSibling())
 				{
@@ -238,10 +238,10 @@ IntExpr* IntExpr::read(CvXMLLoadUtility *pXML)
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// read the if node
-				BoolExpr* pIfExpr = BoolExpr::read(pXML);
-				IntExpr* pThenExpr = NULL;
-				IntExpr* pElseExpr = NULL;
-				
+				BoolExpr* pIfExpr	= BoolExpr::read(pXML);
+				IntExpr*  pThenExpr = NULL;
+				IntExpr*  pElseExpr = NULL;
+
 				// read the then node
 				if (pXML->TryMoveToXmlNextSibling())
 				{
@@ -264,22 +264,23 @@ IntExpr* IntExpr::read(CvXMLLoadUtility *pXML)
 	{
 		CvString szTextVal;
 		pXML->GetChildXmlValByName(szTextVal, L"RelationType");
-		RelationTypes eRelation = (RelationTypes) pXML->GetInfoClass(szTextVal);
-		int iData = -1;
+		RelationTypes eRelation = (RelationTypes)pXML->GetInfoClass(szTextVal);
+		int			  iData		= -1;
 		pXML->GetOptionalChildXmlValByName(&iData, L"iDistance");
 		pXML->GetChildXmlValByName(szTextVal, L"GameObjectType");
-		GameObjectTypes eType = (GameObjectTypes) pXML->GetInfoClass(szTextVal);
-		
-		IntExpr* pExpr = NULL;
+		GameObjectTypes eType = (GameObjectTypes)pXML->GetInfoClass(szTextVal);
+
+		IntExpr*  pExpr	 = NULL;
 		BoolExpr* pBExpr = NULL;
 		// Find the expression and read it
 		if (pXML->TryMoveToXmlFirstChild())
 		{
-			bool bFound = false;;
+			bool bFound = false;
+			;
 			while (pXML->TryMoveToXmlNextSibling())
 			{
 				const wchar_t* szInnerTag = pXML->GetXmlTagName();
-				
+
 				if (!((wcscmp(szInnerTag, L"RelationType") == 0) || (wcscmp(szInnerTag, L"iDistance") == 0) || (wcscmp(szInnerTag, L"GameObjectType") == 0)))
 				{
 					bFound = true;
@@ -359,12 +360,12 @@ bool IntExpr::isConstantZero()
 }
 
 
-int IntExprConstant::evaluate(CvGameObject *pObject)
+int IntExprConstant::evaluate(CvGameObject* pObject)
 {
 	return m_iValue;
 }
 
-void IntExprConstant::buildDisplayString(CvWStringBuffer &szBuffer) const
+void IntExprConstant::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
 	CvWString s;
 	s.Format(L"%+d", m_iValue);
@@ -381,40 +382,40 @@ bool IntExprConstant::isConstantZero()
 	return m_iValue == 0;
 }
 
-void IntExprConstant::getCheckSum(unsigned int &iSum)
+void IntExprConstant::getCheckSum(unsigned int& iSum)
 {
 	CheckSum(iSum, m_iValue);
 }
 
 
-int IntExprAttribute::evaluate(CvGameObject *pObject)
+int IntExprAttribute::evaluate(CvGameObject* pObject)
 {
 	return pObject->getAttribute(m_eAttribute);
 }
 
-void IntExprAttribute::buildDisplayString(CvWStringBuffer &szBuffer) const
+void IntExprAttribute::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
 	CvWString s;
 	switch (m_eAttribute)
 	{
-		case ATTRIBUTE_POPULATION:
-			s.Format(L"%c", gDLL->getSymbolID(CITIZEN_CHAR));
-			szBuffer.append(s);
-			break;
-		case ATTRIBUTE_HEALTH:
-			s.Format(L"%c", gDLL->getSymbolID(HEALTHY_CHAR));
-			szBuffer.append(s);
-			break;
-		case ATTRIBUTE_HAPPINESS:
-			s.Format(L"%c", gDLL->getSymbolID(HAPPY_CHAR));
-			szBuffer.append(s);
-			break;
-		case ATTRIBUTE_PLAYERS:
-			szBuffer.append("Players");
-			break;
-		case ATTRIBUTE_TEAMS:
-			szBuffer.append("Teams");
-			break;
+	case ATTRIBUTE_POPULATION:
+		s.Format(L"%c", gDLL->getSymbolID(CITIZEN_CHAR));
+		szBuffer.append(s);
+		break;
+	case ATTRIBUTE_HEALTH:
+		s.Format(L"%c", gDLL->getSymbolID(HEALTHY_CHAR));
+		szBuffer.append(s);
+		break;
+	case ATTRIBUTE_HAPPINESS:
+		s.Format(L"%c", gDLL->getSymbolID(HAPPY_CHAR));
+		szBuffer.append(s);
+		break;
+	case ATTRIBUTE_PLAYERS:
+		szBuffer.append("Players");
+		break;
+	case ATTRIBUTE_TEAMS:
+		szBuffer.append("Teams");
+		break;
 	}
 }
 
@@ -423,18 +424,18 @@ int IntExprAttribute::getBindingStrength() const
 	return 100;
 }
 
-void IntExprAttribute::getCheckSum(unsigned int &iSum)
+void IntExprAttribute::getCheckSum(unsigned int& iSum)
 {
 	CheckSum(iSum, (int)m_eAttribute);
 }
 
 
-int IntExprProperty::evaluate(CvGameObject *pObject)
+int IntExprProperty::evaluate(CvGameObject* pObject)
 {
 	return pObject->getProperties()->getValueByProperty((int)m_eProperty);
 }
 
-void IntExprProperty::buildDisplayString(CvWStringBuffer &szBuffer) const
+void IntExprProperty::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
 	CvWString s;
 	s.Format(L"%c", GC.getPropertyInfo(m_eProperty).getChar());
@@ -446,7 +447,7 @@ int IntExprProperty::getBindingStrength() const
 	return 100;
 }
 
-void IntExprProperty::getCheckSum(unsigned int &iSum)
+void IntExprProperty::getCheckSum(unsigned int& iSum)
 {
 	CheckSum(iSum, (int)m_eProperty);
 }
@@ -458,7 +459,7 @@ IntExprOp::~IntExprOp()
 	SAFE_DELETE(m_pExpr2);
 }
 
-void IntExprOp::buildDisplayString(CvWStringBuffer &szBuffer) const
+void IntExprOp::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
 	bool bBrackets1 = false;
 	bool bBrackets2 = false;
@@ -481,7 +482,7 @@ void IntExprOp::buildDisplayString(CvWStringBuffer &szBuffer) const
 		szBuffer.append(")");
 }
 
-void IntExprOp::getCheckSum(unsigned int &iSum)
+void IntExprOp::getCheckSum(unsigned int& iSum)
 {
 	CheckSum(iSum, (int)getType());
 	m_pExpr1->getCheckSum(iSum);
@@ -489,7 +490,7 @@ void IntExprOp::getCheckSum(unsigned int &iSum)
 }
 
 
-int IntExprPlus::evaluate(CvGameObject *pObject)
+int IntExprPlus::evaluate(CvGameObject* pObject)
 {
 	return m_pExpr1->evaluate(pObject) + m_pExpr2->evaluate(pObject);
 }
@@ -499,7 +500,7 @@ IntExprTypes IntExprPlus::getType() const
 	return INTEXPR_PLUS;
 }
 
-void IntExprPlus::buildOpNameString(CvWStringBuffer &szBuffer) const
+void IntExprPlus::buildOpNameString(CvWStringBuffer& szBuffer) const
 {
 	szBuffer.append("+");
 }
@@ -510,7 +511,7 @@ int IntExprPlus::getBindingStrength() const
 }
 
 
-int IntExprMinus::evaluate(CvGameObject *pObject)
+int IntExprMinus::evaluate(CvGameObject* pObject)
 {
 	return m_pExpr1->evaluate(pObject) - m_pExpr2->evaluate(pObject);
 }
@@ -520,7 +521,7 @@ IntExprTypes IntExprMinus::getType() const
 	return INTEXPR_MINUS;
 }
 
-void IntExprMinus::buildOpNameString(CvWStringBuffer &szBuffer) const
+void IntExprMinus::buildOpNameString(CvWStringBuffer& szBuffer) const
 {
 	szBuffer.append("-");
 }
@@ -531,7 +532,7 @@ int IntExprMinus::getBindingStrength() const
 }
 
 
-int IntExprMult::evaluate(CvGameObject *pObject)
+int IntExprMult::evaluate(CvGameObject* pObject)
 {
 	return m_pExpr1->evaluate(pObject) * m_pExpr2->evaluate(pObject);
 }
@@ -541,7 +542,7 @@ IntExprTypes IntExprMult::getType() const
 	return INTEXPR_MULT;
 }
 
-void IntExprMult::buildOpNameString(CvWStringBuffer &szBuffer) const
+void IntExprMult::buildOpNameString(CvWStringBuffer& szBuffer) const
 {
 	szBuffer.append("*");
 }
@@ -552,7 +553,7 @@ int IntExprMult::getBindingStrength() const
 }
 
 
-int IntExprDiv::evaluate(CvGameObject *pObject)
+int IntExprDiv::evaluate(CvGameObject* pObject)
 {
 	int iDiv = m_pExpr2->evaluate(pObject);
 	return iDiv ? m_pExpr1->evaluate(pObject) / iDiv : m_pExpr1->evaluate(pObject);
@@ -563,7 +564,7 @@ IntExprTypes IntExprDiv::getType() const
 	return INTEXPR_DIV;
 }
 
-void IntExprDiv::buildOpNameString(CvWStringBuffer &szBuffer) const
+void IntExprDiv::buildOpNameString(CvWStringBuffer& szBuffer) const
 {
 	szBuffer.append("/");
 }
@@ -581,14 +582,14 @@ IntExprIf::~IntExprIf()
 	SAFE_DELETE(m_pExprElse);
 }
 
-int IntExprIf::evaluate(CvGameObject *pObject)
+int IntExprIf::evaluate(CvGameObject* pObject)
 {
 	return m_pExprIf->evaluate(pObject) ? m_pExprThen->evaluate(pObject) : m_pExprElse->evaluate(pObject);
 }
 
-void IntExprIf::buildDisplayString(CvWStringBuffer &szBuffer) const
+void IntExprIf::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
-	bool bBracketsIf = false;
+	bool bBracketsIf   = false;
 	bool bBracketsThen = false;
 	bool bBracketsElse = false;
 	if (getBindingStrength() > m_pExprIf->getBindingStrength())
@@ -622,7 +623,7 @@ int IntExprIf::getBindingStrength() const
 	return 25;
 }
 
-void IntExprIf::getCheckSum(unsigned int &iSum)
+void IntExprIf::getCheckSum(unsigned int& iSum)
 {
 	m_pExprIf->getCheckSum(iSum);
 	m_pExprThen->getCheckSum(iSum);
@@ -635,14 +636,14 @@ IntExprIntegrateOp::~IntExprIntegrateOp()
 	SAFE_DELETE(m_pExpr);
 }
 
-int IntExprIntegrateOp::evaluate(CvGameObject *pObject)
+int IntExprIntegrateOp::evaluate(CvGameObject* pObject)
 {
 	int iAcc = 0;
 	pObject->foreachRelated(m_eType, m_eRelation, boost::bind(getOp(), _1, m_pExpr, &iAcc));
 	return iAcc;
 }
 
-void IntExprIntegrateOp::buildDisplayString(CvWStringBuffer &szBuffer) const
+void IntExprIntegrateOp::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
 	// TODO: Proper rendering of relations
 	m_pExpr->buildDisplayString(szBuffer);
@@ -654,7 +655,7 @@ int IntExprIntegrateOp::getBindingStrength() const
 	return m_pExpr->getBindingStrength();
 }
 
-void IntExprIntegrateOp::getCheckSum(unsigned int &iSum)
+void IntExprIntegrateOp::getCheckSum(unsigned int& iSum)
 {
 	CheckSum(iSum, (int)getType());
 	CheckSum(iSum, (int)m_eRelation);
@@ -691,12 +692,12 @@ IntExprTypes IntExprIntegrateAvg::getType() const
 	return INTEXPR_INTEGRATE_AVG;
 }
 
-int IntExprIntegrateAvg::evaluate(CvGameObject *pObject)
+int IntExprIntegrateAvg::evaluate(CvGameObject* pObject)
 {
-	int iAcc = 0;
+	int iAcc   = 0;
 	int iCount = 0;
 	pObject->foreachRelated(m_eType, m_eRelation, boost::bind(evalExprIntegrateAvg, _1, m_pExpr, &iAcc, &iCount));
-	return iCount ? iAcc/iCount : 0;
+	return iCount ? iAcc / iCount : 0;
 }
 
 IntegrateOpFunc IntExprIntegrateAvg::getOp()
@@ -718,14 +719,14 @@ IntExprIntegrateCount::~IntExprIntegrateCount()
 	SAFE_DELETE(m_pExpr);
 }
 
-int IntExprIntegrateCount::evaluate(CvGameObject *pObject)
+int IntExprIntegrateCount::evaluate(CvGameObject* pObject)
 {
 	int iAcc = 0;
 	pObject->foreachRelated(m_eType, m_eRelation, boost::bind(evalExprIntegrateCount, _1, m_pExpr, &iAcc));
 	return iAcc;
 }
 
-void IntExprIntegrateCount::buildDisplayString(CvWStringBuffer &szBuffer) const
+void IntExprIntegrateCount::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
 	// TODO: Proper rendering of relations
 	m_pExpr->buildDisplayString(szBuffer);
@@ -737,7 +738,7 @@ int IntExprIntegrateCount::getBindingStrength() const
 	return m_pExpr->getBindingStrength();
 }
 
-void IntExprIntegrateCount::getCheckSum(unsigned int &iSum)
+void IntExprIntegrateCount::getCheckSum(unsigned int& iSum)
 {
 	CheckSum(iSum, (int)m_eRelation);
 	CheckSum(iSum, m_iData);
@@ -751,12 +752,12 @@ IntExprRandom::~IntExprRandom()
 	SAFE_DELETE(m_pExpr);
 }
 
-int IntExprRandom::evaluate(CvGameObject *pObject)
+int IntExprRandom::evaluate(CvGameObject* pObject)
 {
 	return GC.getGameINLINE().getSorenRandNum(m_pExpr->evaluate(pObject), "Random integer expression");
 }
 
-void IntExprRandom::buildDisplayString(CvWStringBuffer &szBuffer) const
+void IntExprRandom::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
 	szBuffer.append(CvWString::format(L"%c(", gDLL->getSymbolID(RANDOM_CHAR)));
 	m_pExpr->buildDisplayString(szBuffer);
@@ -768,7 +769,7 @@ int IntExprRandom::getBindingStrength() const
 	return 100;
 }
 
-void IntExprRandom::getCheckSum(unsigned int &iSum)
+void IntExprRandom::getCheckSum(unsigned int& iSum)
 {
 	m_pExpr->getCheckSum(iSum);
 }
@@ -779,12 +780,12 @@ IntExprAdapt::~IntExprAdapt()
 	SAFE_DELETE(m_pExpr);
 }
 
-int IntExprAdapt::evaluate(CvGameObject *pObject)
+int IntExprAdapt::evaluate(CvGameObject* pObject)
 {
 	return pObject->adaptValueToGame(m_iID, m_pExpr->evaluate(pObject));
 }
 
-void IntExprAdapt::buildDisplayString(CvWStringBuffer &szBuffer) const
+void IntExprAdapt::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
 	CvWString szTextVal;
 	szTextVal.Format(L"%d", GC.getGameINLINE().getGameObject()->adaptValueToGame(m_iID, m_pExpr->evaluate(GC.getGameINLINE().getGameObject())));
@@ -796,20 +797,20 @@ int IntExprAdapt::getBindingStrength() const
 	return 100;
 }
 
-void IntExprAdapt::getCheckSum(unsigned int &iSum)
+void IntExprAdapt::getCheckSum(unsigned int& iSum)
 {
 	m_pExpr->getCheckSum(iSum);
 	CheckSum(iSum, m_iID);
 }
 
 
-int IntExprPython::evaluate(CvGameObject *pObject)
+int IntExprPython::evaluate(CvGameObject* pObject)
 {
 
 	long lResult;
 
 	CyArgsList argsList;
-	void* pArgument = pObject->addPythonArgument(&argsList);
+	void*	   pArgument = pObject->addPythonArgument(&argsList);
 
 	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYRandomEventModule, m_szPythonCallback, argsList.makeFunctionArgs(), &lResult);
 
@@ -818,7 +819,7 @@ int IntExprPython::evaluate(CvGameObject *pObject)
 	return lResult;
 }
 
-void IntExprPython::buildDisplayString(CvWStringBuffer &szBuffer) const
+void IntExprPython::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
 
 	CvWString szResult;
@@ -836,7 +837,7 @@ int IntExprPython::getBindingStrength() const
 	return 100;
 }
 
-void IntExprPython::getCheckSum(unsigned int &iSum)
+void IntExprPython::getCheckSum(unsigned int& iSum)
 {
 	CheckSumC(iSum, m_szPythonCallback);
 }

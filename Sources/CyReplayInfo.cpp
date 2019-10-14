@@ -6,7 +6,8 @@ CyReplayInfo::CyReplayInfo()
 	m_pHoF = &m_replay;
 }
 
-CyReplayInfo::CyReplayInfo(CvReplayInfo* pReplayInfo) : m_pHoF(pReplayInfo)
+CyReplayInfo::CyReplayInfo(CvReplayInfo* pReplayInfo)
+	: m_pHoF(pReplayInfo)
 {
 }
 

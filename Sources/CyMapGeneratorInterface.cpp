@@ -38,6 +38,5 @@ void CyMapGeneratorPythonInterface()
 
 		.def("afterGeneration", &CyMapGenerator::afterGeneration, "void ()")
 
-		.def("setPlotTypes", &CyMapGenerator::setPlotTypes, "void (list lPlotTypes) - set plot types to the contents of the given list")
-		;
+		.def("setPlotTypes", &CyMapGenerator::setPlotTypes, "void (list lPlotTypes) - set plot types to the contents of the given list");
 }

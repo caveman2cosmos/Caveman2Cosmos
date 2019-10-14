@@ -40,15 +40,15 @@ void CySelectionGroupInterface()
 		.def("isInvisible", &CySelectionGroup::isInvisible, "bool (int eTeam)")
 		.def("countNumUnitAIType", &CySelectionGroup::countNumUnitAIType, "int (int (UnitAITypes) eUnitAI")
 		.def("hasWorker", &CySelectionGroup::hasWorker, "bool ()")
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      11/30/08                                jdog5000      */
-/*                                                                                              */
-/* General AI                                                                                   */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* BETTER_BTS_AI_MOD                      11/30/08                                jdog5000      */
+		/*                                                                                              */
+		/* General AI                                                                                   */
+		/************************************************************************************************/
 		.def("isStranded", &CySelectionGroup::isStranded, "bool ()")
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* BETTER_BTS_AI_MOD                       END                                                  */
+		/************************************************************************************************/
 
 
 		.def("at", &CySelectionGroup::at, "bool (iX, iY) - is the group at plot iX, iY?")
@@ -76,7 +76,7 @@ void CySelectionGroupInterface()
 		.def("generatePath", &CySelectionGroup::generatePath, "bool (CyPlot* pFromPlot, CyPlot* pToPlot, int iFlags, bool bReuse, int* piPathTurns)")
 		.def("resetPath", &CySelectionGroup::resetPath, "void ()")
 
-		.def("getNumUnits", &CySelectionGroup::getNumUnits, "int ()")			// JS Help!
+		.def("getNumUnits", &CySelectionGroup::getNumUnits, "int ()") // JS Help!
 		.def("clearMissionQueue", &CySelectionGroup::clearMissionQueue, "void ()")
 		.def("getLengthMissionQueue", &CySelectionGroup::getLengthMissionQueue, "int ()")
 		.def("getMissionFromQueue", &CySelectionGroup::getMissionFromQueue, python::return_value_policy<python::manage_new_object>(), "MissionData* (int iIndex)")
@@ -84,6 +84,5 @@ void CySelectionGroupInterface()
 		.def("getUnitAt", &CySelectionGroup::getUnitAt, python::return_value_policy<python::manage_new_object>(), "CyUnit* (int index)")
 		.def("getMissionType", &CySelectionGroup::getMissionType, "int (int iNode)")
 		.def("getMissionData1", &CySelectionGroup::getMissionData1, "int (int iNode)")
-		.def("getMissionData2", &CySelectionGroup::getMissionData2, "int (int iNode)")
-		;
+		.def("getMissionData2", &CySelectionGroup::getMissionData2, "int (int iNode)");
 }

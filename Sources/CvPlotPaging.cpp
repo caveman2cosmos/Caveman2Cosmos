@@ -5,145 +5,147 @@
 
 #include <psapi.h>
 
-namespace {
+namespace
+{
 
-	struct GraphicsPagingInfo
+struct GraphicsPagingInfo
+{
+	CvPlot*		 pPlot;
+	unsigned int iSeq;
+	GraphicsPagingInfo()
+		: pPlot(NULL), iSeq(0U) {}
+};
+
+unsigned int					g_iNumPagedInPlots	   = 0;
+unsigned int					g_iCurrentSeq		   = 0;
+unsigned int					g_iOldestSearchSeqHint = 0;
+std::vector<GraphicsPagingInfo> g_pagingTable;
+
+int	 g_iLastLookatX				 = -1;
+int	 g_iLastLookatY				 = -1;
+bool g_bWasGraphicsPagingEnabled = true;
+
+int findFreePagingTableSlot()
+{
+	static size_t iSearchStartHintIndex = 0;
+
+	for (size_t iI = 0; iI < g_pagingTable.size(); iI++)
 	{
-		CvPlot* pPlot;
-		unsigned int iSeq;
-		GraphicsPagingInfo () : pPlot(NULL), iSeq(0U) {}
-	};
+		int iIndex = iSearchStartHintIndex++;
 
-	unsigned int g_iNumPagedInPlots = 0;
-	unsigned int g_iCurrentSeq = 0;
-	unsigned int g_iOldestSearchSeqHint = 0;
-	std::vector<GraphicsPagingInfo> g_pagingTable;
-
-	int g_iLastLookatX = -1;
-	int g_iLastLookatY = -1;
-	bool g_bWasGraphicsPagingEnabled = true;
-
-	int findFreePagingTableSlot()
-	{
-		static size_t iSearchStartHintIndex = 0;
-
-		for (size_t iI = 0; iI < g_pagingTable.size(); iI++)
+		if (iSearchStartHintIndex >= g_pagingTable.size())
 		{
-			int iIndex = iSearchStartHintIndex++;
-
-			if (iSearchStartHintIndex >= g_pagingTable.size())
-			{
-				iSearchStartHintIndex = 0;
-			}
-
-			if (g_pagingTable[iIndex].pPlot == NULL)
-			{
-				return iIndex;
-			}
+			iSearchStartHintIndex = 0;
 		}
 
-		return -1;
-	}
-
-	int allocateNewPagingEntry()
-	{
-		if (g_pagingTable.size() <= g_iNumPagedInPlots++)
+		if (g_pagingTable[iIndex].pPlot == NULL)
 		{
-			g_pagingTable.push_back(GraphicsPagingInfo());
-			return g_pagingTable.size() - 1;
-		}
-		else
-		{
-			return findFreePagingTableSlot();
+			return iIndex;
 		}
 	}
 
-	int findOldestEvictablePagingEntry()
-	{
-		unsigned int iOldest = MAX_INT;
-		int iResult = -1;
+	return -1;
+}
 
-		for (int iI = 0; iI < static_cast<int>(g_pagingTable.size()); iI++)
+int allocateNewPagingEntry()
+{
+	if (g_pagingTable.size() <= g_iNumPagedInPlots++)
+	{
+		g_pagingTable.push_back(GraphicsPagingInfo());
+		return g_pagingTable.size() - 1;
+	}
+	else
+	{
+		return findFreePagingTableSlot();
+	}
+}
+
+int findOldestEvictablePagingEntry()
+{
+	unsigned int iOldest = MAX_INT;
+	int			 iResult = -1;
+
+	for (int iI = 0; iI < static_cast<int>(g_pagingTable.size()); iI++)
+	{
+		if (g_pagingTable[iI].pPlot != NULL && g_pagingTable[iI].pPlot->getNonRequiredGraphicsMask() != ECvPlotGraphics::NONE)
 		{
-			if (g_pagingTable[iI].pPlot != NULL && g_pagingTable[iI].pPlot->getNonRequiredGraphicsMask() != ECvPlotGraphics::NONE)
+			if (g_pagingTable[iI].iSeq < iOldest)
 			{
-				if (g_pagingTable[iI].iSeq < iOldest)
-				{
-					iOldest = g_pagingTable[iI].iSeq;
-					iResult = iI;
-				}
+				iOldest = g_pagingTable[iI].iSeq;
+				iResult = iI;
 			}
 		}
-
-		return iResult;
 	}
 
-	static const unsigned int DEFAULT_MAX_WORKING_SET_THRESHOLD_BEFORE_EVICTION = 1024U * 1024U * 1024U * 2U; // 2 GB
-	static const unsigned int DEFAULT_OS_MEMORY_ALLOWANCE = 1024U * 1024U * 512U; // 512 MB
+	return iResult;
+}
 
-	bool NeedToFreeMemory()
+static const unsigned int DEFAULT_MAX_WORKING_SET_THRESHOLD_BEFORE_EVICTION = 1024U * 1024U * 1024U * 2U; // 2 GB
+static const unsigned int DEFAULT_OS_MEMORY_ALLOWANCE						= 1024U * 1024U * 512U; // 512 MB
+
+bool NeedToFreeMemory()
+{
+	PROCESS_MEMORY_COUNTERS	  pmc;
+	static unsigned int		  uiMaxMem				= 0xFFFFFFFF;
+	static const unsigned int PAGING_TEST_ALLOC		= GC.getDefineINT("PAGING_TEST_ALLOC", 0);
+	static const unsigned int PAGING_TEST_ALLOC_NUM = GC.getDefineINT("PAGING_TEST_ALLOC_NUM", 0);
+
+	if (PAGING_TEST_ALLOC != 0 && PAGING_TEST_ALLOC_NUM != 0)
 	{
-		PROCESS_MEMORY_COUNTERS pmc;
-		static unsigned int uiMaxMem = 0xFFFFFFFF;
-		static const unsigned int PAGING_TEST_ALLOC = GC.getDefineINT("PAGING_TEST_ALLOC", 0);
-		static const unsigned int PAGING_TEST_ALLOC_NUM = GC.getDefineINT("PAGING_TEST_ALLOC_NUM", 0);
-
-		if (PAGING_TEST_ALLOC != 0 && PAGING_TEST_ALLOC_NUM != 0)
+		std::vector<void*> test_allocs;
+		bool			   success = true;
+		for (unsigned int i = 0; i < PAGING_TEST_ALLOC_NUM; ++i)
 		{
-			std::vector<void*> test_allocs;
-			bool success = true;
-			for (unsigned int i = 0; i < PAGING_TEST_ALLOC_NUM; ++i)
+			void* test_alloc = malloc(PAGING_TEST_ALLOC);
+			if (test_alloc == NULL)
 			{
-				void* test_alloc = malloc(PAGING_TEST_ALLOC);
-				if (test_alloc == NULL)
-				{
-					success = false;
-					break;
-				}
-				else
-				{
-					test_allocs.push_back(test_alloc);
-				}
-			}
-			for (size_t i = 0; i < test_allocs.size(); ++i)
-			{
-				free(test_allocs[i]);
-			}
-
-			return false;
-		}
-		else
-		{
-			if (uiMaxMem == 0xFFFFFFFF)
-			{
-				MEMORYSTATUSEX memoryStatus;
-
-				memoryStatus.dwLength = sizeof(memoryStatus);
-				GlobalMemoryStatusEx(&memoryStatus);
-
-				uiMaxMem = 1024 * GC.getDefineINT("MAX_DESIRED_MEMORY_USED", DEFAULT_MAX_WORKING_SET_THRESHOLD_BEFORE_EVICTION / 1024);
-
-				DWORDLONG usableMemory = memoryStatus.ullTotalPhys - 1024 * (DWORDLONG)GC.getDefineINT("OS_MEMORY_ALLOWANCE", DEFAULT_OS_MEMORY_ALLOWANCE / 1024);
-				if (usableMemory < uiMaxMem)
-				{
-					uiMaxMem = (unsigned int)usableMemory;
-				}
-			}
-
-			GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc));
-
-			if (pmc.WorkingSetSize > uiMaxMem)
-			{
-				OutputDebugString(CvString::format("Found need to free memory: %d used vs %d target\n", pmc.WorkingSetSize, uiMaxMem).c_str());
-				return true;
+				success = false;
+				break;
 			}
 			else
 			{
-				return false;
+				test_allocs.push_back(test_alloc);
 			}
+		}
+		for (size_t i = 0; i < test_allocs.size(); ++i)
+		{
+			free(test_allocs[i]);
+		}
+
+		return false;
+	}
+	else
+	{
+		if (uiMaxMem == 0xFFFFFFFF)
+		{
+			MEMORYSTATUSEX memoryStatus;
+
+			memoryStatus.dwLength = sizeof(memoryStatus);
+			GlobalMemoryStatusEx(&memoryStatus);
+
+			uiMaxMem = 1024 * GC.getDefineINT("MAX_DESIRED_MEMORY_USED", DEFAULT_MAX_WORKING_SET_THRESHOLD_BEFORE_EVICTION / 1024);
+
+			DWORDLONG usableMemory = memoryStatus.ullTotalPhys - 1024 * (DWORDLONG)GC.getDefineINT("OS_MEMORY_ALLOWANCE", DEFAULT_OS_MEMORY_ALLOWANCE / 1024);
+			if (usableMemory < uiMaxMem)
+			{
+				uiMaxMem = (unsigned int)usableMemory;
+			}
+		}
+
+		GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc));
+
+		if (pmc.WorkingSetSize > uiMaxMem)
+		{
+			OutputDebugString(CvString::format("Found need to free memory: %d used vs %d target\n", pmc.WorkingSetSize, uiMaxMem).c_str());
+			return true;
+		}
+		else
+		{
+			return false;
 		}
 	}
 }
+} // namespace
 
 bool EvictGraphics()
 {
@@ -161,13 +163,15 @@ bool EvictGraphics()
 struct PlotDist
 {
 	CvPlot* plot;
-	int dist2;
+	int		dist2;
 
-	PlotDist(CvPlot* plot, int dist2) : plot(plot), dist2(dist2)
+	PlotDist(CvPlot* plot, int dist2)
+		: plot(plot), dist2(dist2)
 	{
 	}
 
-	PlotDist() : plot(NULL), dist2(0) {}
+	PlotDist()
+		: plot(NULL), dist2(0) {}
 
 	bool operator<(const PlotDist& other) const
 	{
@@ -181,7 +185,7 @@ CvPlotPaging::paging_handle CvPlotPaging::AddPlot(CvPlot* plot)
 
 	GraphicsPagingInfo* pPagingInfo = &g_pagingTable[newHandle];
 
-	pPagingInfo->iSeq = ++g_iCurrentSeq;
+	pPagingInfo->iSeq  = ++g_iCurrentSeq;
 	pPagingInfo->pPlot = plot;
 
 	return newHandle;
@@ -197,14 +201,14 @@ void CvPlotPaging::RemovePlot(CvPlotPaging::paging_handle handle)
 void CvPlotPaging::ResetPaging()
 {
 	g_bWasGraphicsPagingEnabled = true;
-	g_iLastLookatX = -1;
-	g_iLastLookatY = -1;
+	g_iLastLookatX				= -1;
+	g_iLastLookatY				= -1;
 }
 
 // Straight line distance squared, wrapped in x and y direction.
 // It doesn't really matter that some maps don't wrap, perf of the paging will
 // be consistent regardless.
-int ToroidalDistanceSq (int x1, int y1, int x2, int y2, int w, int h)
+int ToroidalDistanceSq(int x1, int y1, int x2, int y2, int w, int h)
 {
 	int dx = std::abs(x2 - x1);
 	int dy = std::abs(y2 - y1);
@@ -224,8 +228,8 @@ void CvPlotPaging::UpdatePaging()
 	// Check if the paging setting changed
 	bool bPagingEnabled = getBugOptionBOOL("MainInterface__EnableGraphicalPaging", true);
 	GC.setGraphicalDetailPagingEnabled(bPagingEnabled);
-	
-	if(bPagingEnabled || (!bPagingEnabled && g_bWasGraphicsPagingEnabled))
+
+	if (bPagingEnabled || (!bPagingEnabled && g_bWasGraphicsPagingEnabled))
 	{
 		const CvPlot* lookatPlot = gDLL->getInterfaceIFace()->getLookAtPlot();
 		if (lookatPlot == NULL)
@@ -238,7 +242,7 @@ void CvPlotPaging::UpdatePaging()
 
 		// Gather and sort all plots by distance to view center
 		std::vector<PlotDist> plots;
-		const CvMap& map = GC.getMapINLINE();
+		const CvMap&		  map = GC.getMapINLINE();
 		plots.reserve(map.numPlotsINLINE());
 		for (int i = 0; i < map.numPlotsINLINE(); i++)
 		{
@@ -259,7 +263,7 @@ void CvPlotPaging::UpdatePaging()
 			pageTimer.Start();
 
 			const CvMap& map = GC.getMapINLINE();
-			
+
 			bool timedout = false;
 			for (std::vector<PlotDist>::iterator itr = plots.begin(); !timedout && itr != plots.end(); ++itr)
 			{

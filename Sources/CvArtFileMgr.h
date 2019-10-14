@@ -42,32 +42,34 @@ class CvArtInfoInterface;
 
 
 // Example usage: ART_INFO_DECL(Unit)
-#define ART_INFO_DECL(name) \
-public: \
-	friend class Cv##name##ArtInfoItem; \
-	DllExport CvArtInfo##name * get##name##ArtInfo(const char *szArtDefineTag) const; \
-	int getNum##name##ArtInfos() { return (int)m_pa##name##ArtInfo.size(); } \
-	std::vector<CvArtInfo##name *>& get##name##ArtInfo() { return m_pa##name##ArtInfo; } \
-	CvArtInfo##name & get##name##ArtInfo(int i); \
-private: \
-	typedef std::map<const char* /* index */,CvArtInfo##name * /*value */, ltstr> ArtInfo##name##MapType; \
-	ArtInfo##name##MapType * m_map##name##ArtInfos; \
-	std::vector<CvArtInfo##name *> m_pa##name##ArtInfo; \
+#define ART_INFO_DECL(name)                                                                               \
+  public:                                                                                                 \
+	friend class Cv##name##ArtInfoItem;                                                                   \
+	DllExport CvArtInfo##name*	   get##name##ArtInfo(const char* szArtDefineTag) const;                  \
+	int							   getNum##name##ArtInfos() { return (int)m_pa##name##ArtInfo.size(); }   \
+	std::vector<CvArtInfo##name*>& get##name##ArtInfo() { return m_pa##name##ArtInfo; }                   \
+	CvArtInfo##name&			   get##name##ArtInfo(int i);                                             \
+                                                                                                          \
+  private:                                                                                                \
+	typedef std::map<const char* /* index */, CvArtInfo##name* /*value */, ltstr> ArtInfo##name##MapType; \
+	ArtInfo##name##MapType*														  m_map##name##ArtInfos;  \
+	std::vector<CvArtInfo##name*>												  m_pa##name##ArtInfo;
 
 #define ART_INFO_INIT(name) m_map##name##ArtInfos(NULL)
 
 class CvArtFileMgr
 {
-public:
+  public:
 	class ArtInfoItem
 	{
-	public:
+	  public:
 		ArtInfoItem() { CvArtFileMgr::GetInstance().addArtInfoItem(this); }
-		virtual void init() = 0;
-		virtual void deInit() = 0;
+		virtual void init()		= 0;
+		virtual void deInit()	= 0;
 		virtual void buildMap() = 0;
 	};
-public:
+
+  public:
 	// singleton accessor
 	DllExport static CvArtFileMgr& GetInstance();
 
@@ -83,22 +85,22 @@ public:
 		, ART_INFO_INIT(Terrain)
 		, ART_INFO_INIT(Feature)
 		, ART_INFO_INIT(Movie)
-		, ART_INFO_INIT(Interface)
-	{};
-	virtual ~CvArtFileMgr() {};
+		, ART_INFO_INIT(Interface){};
+	virtual ~CvArtFileMgr(){};
 
 	DllExport void Init();
 	DllExport void DeInit();
 
 	// Deletes Maps, Reloads Infos from XML, Rebuilds Maps
-	DllExport void Reset();																														// Exposed to Python
-	
+	DllExport void Reset(); // Exposed to Python
+
 	// Builds Maps
-	DllExport void buildArtFileInfoMaps();																							// Exposed to Python
+	DllExport void buildArtFileInfoMaps(); // Exposed to Python
 
 	// Adds an Art File List
-	void addArtInfoItem(CvArtFileMgr::ArtInfoItem* item) { m_artInfoItems.push_back(item);	}
-private:
+	void addArtInfoItem(CvArtFileMgr::ArtInfoItem* item) { m_artInfoItems.push_back(item); }
+
+  private:
 	struct ltstr
 	{
 		bool operator()(const char* s1, const char* s2) const

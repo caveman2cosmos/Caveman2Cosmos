@@ -1,9 +1,10 @@
 #include "CvGameCoreDLL.h"
 
-static int g_numEntitiesCreated = 0;
+static int g_numEntitiesCreated	  = 0;
 static int g_numEntitiesDestroyed = 0;
 
-CvDLLEntity::CvDLLEntity() : m_pEntity(NULL)
+CvDLLEntity::CvDLLEntity()
+	: m_pEntity(NULL)
 {
 }
 
@@ -35,7 +36,7 @@ void CvDLLEntity::createUnitEntity(CvUnit* pUnit)
 {
 	g_numEntitiesCreated++;
 
-	if ( g_numEntitiesCreated%100 == 0 )
+	if (g_numEntitiesCreated % 100 == 0)
 	{
 		OutputDebugString(CvString::format("Num unit entities created: %d, destroyed: %d - %d extant\n", g_numEntitiesCreated, g_numEntitiesDestroyed, g_numEntitiesCreated - g_numEntitiesDestroyed).c_str());
 	}
@@ -59,7 +60,7 @@ bool CvDLLEntity::IsSelected() const
 
 void CvDLLEntity::PlayAnimation(AnimationTypes eAnim, float fSpeed, bool bQueue, int iLayer, float fStartPct, float fEndPct)
 {
-	if ( CvUnit::isRealEntity(getEntity()) )
+	if (CvUnit::isRealEntity(getEntity()))
 	{
 		gDLL->getEntityIFace()->PlayAnimation(getEntity(), eAnim, fSpeed, bQueue, iLayer, fStartPct, fEndPct);
 	}
@@ -67,63 +68,63 @@ void CvDLLEntity::PlayAnimation(AnimationTypes eAnim, float fSpeed, bool bQueue,
 
 void CvDLLEntity::StopAnimation(AnimationTypes eAnim)
 {
-	if ( CvUnit::isRealEntity(getEntity()) )
+	if (CvUnit::isRealEntity(getEntity()))
 	{
 		gDLL->getEntityIFace()->StopAnimation(getEntity(), eAnim);
 	}
 }
 
-void CvDLLEntity::MoveTo( const CvPlot * pkPlot )
+void CvDLLEntity::MoveTo(const CvPlot* pkPlot)
 {
-	if ( CvUnit::isRealEntity(getEntity()) )
+	if (CvUnit::isRealEntity(getEntity()))
 	{
-		gDLL->getEntityIFace()->MoveTo(getUnitEntity(), pkPlot );
+		gDLL->getEntityIFace()->MoveTo(getUnitEntity(), pkPlot);
 	}
 }
 
-void CvDLLEntity::QueueMove( const CvPlot * pkPlot )
+void CvDLLEntity::QueueMove(const CvPlot* pkPlot)
 {
-	if ( CvUnit::isRealEntity(getEntity()) )
+	if (CvUnit::isRealEntity(getEntity()))
 	{
-		gDLL->getEntityIFace()->QueueMove(getUnitEntity(), pkPlot );
+		gDLL->getEntityIFace()->QueueMove(getUnitEntity(), pkPlot);
 	}
 }
 
-void CvDLLEntity::ExecuteMove( float fTimeToExecute, bool bCombat )
+void CvDLLEntity::ExecuteMove(float fTimeToExecute, bool bCombat)
 {
-	if ( CvUnit::isRealEntity(getEntity()) && static_cast<CvUnit*>(this)->isInViewport() )
+	if (CvUnit::isRealEntity(getEntity()) && static_cast<CvUnit*>(this)->isInViewport())
 	{
-		gDLL->getEntityIFace()->ExecuteMove(getUnitEntity(), fTimeToExecute, bCombat );
+		gDLL->getEntityIFace()->ExecuteMove(getUnitEntity(), fTimeToExecute, bCombat);
 	}
 }
 
-void CvDLLEntity::SetPosition( const CvPlot * pkPlot )
+void CvDLLEntity::SetPosition(const CvPlot* pkPlot)
 {
-	if ( CvUnit::isRealEntity(getEntity()) )
+	if (CvUnit::isRealEntity(getEntity()))
 	{
-		gDLL->getEntityIFace()->SetPosition(getUnitEntity(), pkPlot );
+		gDLL->getEntityIFace()->SetPosition(getUnitEntity(), pkPlot);
 	}
 }
 
-void CvDLLEntity::NotifyEntity( MissionTypes eMission )
+void CvDLLEntity::NotifyEntity(MissionTypes eMission)
 {
-	if ( CvUnit::isRealEntity(getEntity()) )
+	if (CvUnit::isRealEntity(getEntity()))
 	{
-		gDLL->getEntityIFace()->NotifyEntity( getUnitEntity(), eMission );
+		gDLL->getEntityIFace()->NotifyEntity(getUnitEntity(), eMission);
 	}
 }
 
 void CvDLLEntity::SetSiegeTower(bool show)
 {
-	if ( CvUnit::isRealEntity(getEntity()) )
+	if (CvUnit::isRealEntity(getEntity()))
 	{
-		gDLL->getEntityIFace()->SetSiegeTower( getUnitEntity(), show );
+		gDLL->getEntityIFace()->SetSiegeTower(getUnitEntity(), show);
 	}
 }
 
 bool CvDLLEntity::GetSiegeTower()
 {
-	if ( CvUnit::isRealEntity(getEntity()) )
+	if (CvUnit::isRealEntity(getEntity()))
 	{
 		return gDLL->getEntityIFace()->GetSiegeTower(getUnitEntity());
 	}

@@ -11,7 +11,7 @@
 //
 // WINDOWS
 //
-#pragma warning( disable: 4530 )	// C++ exception handler used, but unwind semantics are not enabled
+#pragma warning(disable : 4530) // C++ exception handler used, but unwind semantics are not enabled
 
 #define NOMINMAX
 #define _WIN32_WINNT 0x0600
@@ -40,46 +40,76 @@
 #include <set>
 #include <fstream>
 
-#define DllExport   __declspec( dllexport ) 
+#define DllExport __declspec(dllexport)
 
 #include "EnumFlags.h"
 #include "NiPoint.h"
 
-typedef unsigned char    byte;
-typedef unsigned short   word;
-typedef unsigned int     uint;
-typedef unsigned long    dword;
+typedef unsigned char	 byte;
+typedef unsigned short	 word;
+typedef unsigned int	 uint;
+typedef unsigned long	 dword;
 typedef unsigned __int64 qword;
-typedef wchar_t          wchar;
+typedef wchar_t			 wchar;
 
-#define MAX_CHAR                            (0x7f)
-#define MIN_CHAR                            (0x80)
-#define MAX_SHORT                           (0x7fff)
-#define MIN_SHORT                           (0x8000)
-#define MAX_INT                             (0x7fffffff)
-#define MIN_INT                             (0x80000000)
-#define MAX_UNSIGNED_CHAR                   (0xff)
-#define MIN_UNSIGNED_CHAR                   (0x00)
-#define MAX_UNSIGNED_SHORT                  (0xffff)
-#define MIN_UNSIGNED_SHORT                  (0x0000)
-#define MAX_UNSIGNED_INT                    (0xffffffff)
-#define MIN_UNSIGNED_INT                    (0x00000000)
+#define MAX_CHAR		   (0x7f)
+#define MIN_CHAR		   (0x80)
+#define MAX_SHORT		   (0x7fff)
+#define MIN_SHORT		   (0x8000)
+#define MAX_INT			   (0x7fffffff)
+#define MIN_INT			   (0x80000000)
+#define MAX_UNSIGNED_CHAR  (0xff)
+#define MIN_UNSIGNED_CHAR  (0x00)
+#define MAX_UNSIGNED_SHORT (0xffff)
+#define MIN_UNSIGNED_SHORT (0x0000)
+#define MAX_UNSIGNED_INT   (0xffffffff)
+#define MIN_UNSIGNED_INT   (0x00000000)
 
-#define SAFE_DELETE(p)       { if(p) { delete (p);     (p)=NULL; } }
-#define SAFE_DELETE_ARRAY(p) { if(p) { delete[] (p);   (p)=NULL; } }
-#define SAFE_RELEASE(p)      { if(p) { (p)->Release(); (p)=NULL; } }
+#define SAFE_DELETE(p)  \
+	{                   \
+		if (p)          \
+		{               \
+			delete (p); \
+			(p) = NULL; \
+		}               \
+	}
+#define SAFE_DELETE_ARRAY(p) \
+	{                        \
+		if (p)               \
+		{                    \
+			delete[](p);     \
+			(p) = NULL;      \
+		}                    \
+	}
+#define SAFE_RELEASE(p)     \
+	{                       \
+		if (p)              \
+		{                   \
+			(p)->Release(); \
+			(p) = NULL;     \
+		}                   \
+	}
 
-#define SQR(x)      ( (x) * (x) )
-#define DEGTORAD(x) ( (float)( (x) * (M_PI / 180) ))
+#define SQR(x)						  ((x) * (x))
+#define DEGTORAD(x)					  ((float)((x) * (M_PI / 180)))
 #define LIMIT_RANGE(low, value, high) value = (value < low ? low : (value > high ? high : value));
-#define M_PI       3.14159265358979323846
-#define fM_PI		3.141592654f		//!< Pi (float)
+#define M_PI						  3.14159265358979323846
+#define fM_PI						  3.141592654f //!< Pi (float)
 
 // cppcheck-suppress invalidPointerCast
-__forceinline DWORD FtoDW( float f ) { return *(DWORD*)&f; }
+__forceinline DWORD FtoDW(float f)
+{
+	return *(DWORD*)&f;
+}
 // cppcheck-suppress invalidPointerCast
-__forceinline float DWtoF( dword n ) { return *(float*)&n; }
-__forceinline float MaxFloat() { return DWtoF(0x7f7fffff); }
+__forceinline float DWtoF(dword n)
+{
+	return *(float*)&n;
+}
+__forceinline float MaxFloat()
+{
+	return DWtoF(0x7f7fffff);
+}
 
 
 #ifdef USE_INTERNAL_PROFILER
@@ -105,18 +135,18 @@ void EnableDetailedTrace(bool enable);
 void IFPSetCount(ProfileSample* sample, int count);
 #endif
 
-#define	MEMORY_TRACK()
+#define MEMORY_TRACK()
 #define MEMORY_TRACK_EXEMPT()
 #define MEMORY_TRACE_FUNCTION()
 #define MEMORY_TRACK_NAME(x)
 
 // Python
 #ifdef _DEBUG
-  #undef _DEBUG
-  #include "Python.h"
-  #define _DEBUG
+#undef _DEBUG
+#include "Python.h"
+#define _DEBUG
 #else
-  #include "Python.h"
+#include "Python.h"
 #endif
 
 //
@@ -132,7 +162,7 @@ void IFPSetCount(ProfileSample* sample, int count);
 
 //
 // xercesc for XML loading
-// 
+//
 #include <xercesc/dom/DOM.hpp>
 #include <xercesc/util/XMLString.hpp>
 #include <xercesc/util/PlatformUtils.hpp>
@@ -217,4 +247,4 @@ namespace python = boost::python;
 #define OutputDebugString(x)
 #endif //FINAL_RELEASE
 
-#endif	// CvGameCoreDLL_h
+#endif // CvGameCoreDLL_h

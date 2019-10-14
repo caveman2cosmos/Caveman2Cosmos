@@ -10,7 +10,7 @@
 #include "CvGameCoreDLLUnDefNew.h"
 #include "CvGameCoreDLLDefNew.h"
 
-int UnitGroupingBase::getGroup(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
+int UnitGroupingBase::getGroup(CvPlayer* pPlayer, CvCity* pCity, UnitTypes eUnit)
 {
 	int iInverse = m_bInvert ? -1 : 1;
 	return iInverse * getGroupUnit(pPlayer, pCity, eUnit);
@@ -18,25 +18,24 @@ int UnitGroupingBase::getGroup(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit
 
 UnitGroupingBase::~UnitGroupingBase()
 {
-
 }
 
-int UnitGroupingSingle::getGroupUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
+int UnitGroupingSingle::getGroupUnit(CvPlayer* pPlayer, CvCity* pCity, UnitTypes eUnit)
 {
 	return 1;
 }
 
-int UnitGroupingCombat::getGroupUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
+int UnitGroupingCombat::getGroupUnit(CvPlayer* pPlayer, CvCity* pCity, UnitTypes eUnit)
 {
 	return GC.getUnitInfo(eUnit).getUnitCombatType();
 }
 
-int UnitGroupingDomain::getGroupUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
+int UnitGroupingDomain::getGroupUnit(CvPlayer* pPlayer, CvCity* pCity, UnitTypes eUnit)
 {
 	return GC.getUnitInfo(eUnit).getDomainType();
 }
 
-int UnitGroupingFilters::getGroupUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
+int UnitGroupingFilters::getGroupUnit(CvPlayer* pPlayer, CvCity* pCity, UnitTypes eUnit)
 {
 	int iSize = m_apFilters.size();
 	for (int i = 0; i < iSize; i++)
@@ -45,7 +44,7 @@ int UnitGroupingFilters::getGroupUnit(CvPlayer *pPlayer, CvCity *pCity, UnitType
 	return iSize;
 }
 
-void UnitGroupingFilters::addGroupingFilter(UnitFilterBase *pFilter)
+void UnitGroupingFilters::addGroupingFilter(UnitFilterBase* pFilter)
 {
 	m_apFilters.push_back(pFilter);
 }
@@ -56,7 +55,7 @@ UnitGroupingFilters::~UnitGroupingFilters()
 		delete m_apFilters[i];
 }
 
-UnitGroupingList::UnitGroupingList(CvPlayer *pPlayer, CvCity *pCity)
+UnitGroupingList::UnitGroupingList(CvPlayer* pPlayer, CvCity* pCity)
 	: m_apUnitGrouping()
 	, m_pCity(pCity)
 	, m_pPlayer(pPlayer)
@@ -87,13 +86,13 @@ void UnitGroupingList::init()
 		m_apUnitGrouping[UNIT_GROUPING_SINGLE] = new UnitGroupingSingle();
 		m_apUnitGrouping[UNIT_GROUPING_COMBAT] = new UnitGroupingCombat();
 		m_apUnitGrouping[UNIT_GROUPING_DOMAIN] = new UnitGroupingDomain();
-		UnitGroupingFilters* pGrouping = new UnitGroupingFilters();
+		UnitGroupingFilters* pGrouping		   = new UnitGroupingFilters();
 		pGrouping->addGroupingFilter(new UnitFilterIsCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_HERO")));
 		pGrouping->addGroupingFilter(new UnitFilterIsLimited());
 		m_apUnitGrouping[UNIT_GROUPING_HERO] = pGrouping;
 
 		m_eActiveGrouping = UNIT_GROUPING_SINGLE;
-		m_bInit = true;
+		m_bInit			  = true;
 	}
 }
 
@@ -107,12 +106,12 @@ UnitGroupingTypes UnitGroupingList::getActiveGrouping()
 	return m_eActiveGrouping;
 }
 
-void UnitGroupingList::setCity(CvCity *pCity)
+void UnitGroupingList::setCity(CvCity* pCity)
 {
 	m_pCity = pCity;
 }
 
-void UnitGroupingList::setPlayer(CvPlayer *pPlayer)
+void UnitGroupingList::setPlayer(CvPlayer* pPlayer)
 {
 	m_pPlayer = pPlayer;
 }
@@ -121,7 +120,7 @@ bool UnitGroupingList::setActiveGrouping(UnitGroupingTypes eActiveGrouping)
 {
 	FAssertMsg(eActiveGrouping < NUM_UNIT_GROUPING, "Index out of bounds");
 	FAssertMsg(eActiveGrouping > -1, "Index out of bounds");
-	bool bChanged = m_eActiveGrouping != eActiveGrouping;
+	bool bChanged	  = m_eActiveGrouping != eActiveGrouping;
 	m_eActiveGrouping = eActiveGrouping;
 	return bChanged;
 }

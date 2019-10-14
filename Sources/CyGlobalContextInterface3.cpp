@@ -27,30 +27,30 @@ void CyGlobalContextPythonInterface3(python::class_<CyGlobalContext>& x)
 		.def("getNumNewConceptInfos", &CyGlobalContext::getNumNewConceptInfos, "int () - NumNewConceptInfos")
 		.def("getNewConceptInfo", &CyGlobalContext::getNewConceptInfo, python::return_value_policy<python::reference_existing_object>(), "New Concept Info () - Returns info object")
 
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* DCM                                     04/19/09                                Johny Smith  */
+		/************************************************************************************************/
 		// Dale - DCM: Pedia Concepts START
 		.def("getNumDCMConceptInfos", &CyGlobalContext::getNumDCMConceptInfos, "int () - NumDCMConceptInfos")
 		.def("getDCMConceptInfo", &CyGlobalContext::getDCMConceptInfo, python::return_value_policy<python::reference_existing_object>(), "DCM Concept Info () - Returns info object")
 		// Dale - DCM: Pedia Concepts END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/*Afforess                                     11/13/09                                         */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* DCM                                     END                                                  */
+		/************************************************************************************************/
+		/************************************************************************************************/
+		/*Afforess                                     11/13/09                                         */
+		/************************************************************************************************/
 		.def("getNumANDConceptInfos", &CyGlobalContext::getNumANDConceptInfos, "int () - NumANDConceptInfos")
 		.def("getANDConceptInfo", &CyGlobalContext::getANDConceptInfo, python::return_value_policy<python::reference_existing_object>(), "AND Concept Info () - Returns info object")
-/************************************************************************************************/
-/* Afforess                                END                                                  */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess                                END                                                  */
+		/************************************************************************************************/
 		.def("getNumCityTabInfos", &CyGlobalContext::getNumCityTabInfos, "int () - Returns NumCityTabInfos")
 		.def("getCityTabInfo", &CyGlobalContext::getCityTabInfo, python::return_value_policy<python::reference_existing_object>(), "CityTabInfo - () - Returns Info object")
 
 		.def("getNumCalendarInfos", &CyGlobalContext::getNumCalendarInfos, "int () - Returns NumCalendarInfos")
 		.def("getCalendarInfo", &CyGlobalContext::getCalendarInfo, python::return_value_policy<python::reference_existing_object>(), "CalendarInfo () - Returns Info object")
-		 
+
 		.def("getNumGameOptionInfos", &CyGlobalContext::getNumGameOptionInfos, "int () - Returns NumGameOptionInfos")
 		.def("getGameOptionInfo", &CyGlobalContext::getGameOptionInfo, python::return_value_policy<python::reference_existing_object>(), "GameOptionInfo () - Returns Info object")
 
@@ -67,6 +67,5 @@ void CyGlobalContextPythonInterface3(python::class_<CyGlobalContext>& x)
 		.def("getMonthInfo", &CyGlobalContext::getMonthInfo, python::return_value_policy<python::reference_existing_object>(), "MonthInfo () - Returns Info object")
 
 		.def("getNumDenialInfos", &CyGlobalContext::getNumDenialInfos, "int () - Returns NumDenialInfos")
-		.def("getDenialInfo", &CyGlobalContext::getDenialInfo, python::return_value_policy<python::reference_existing_object>(), "DenialInfo () - Returns Info object")
-		;
+		.def("getDenialInfo", &CyGlobalContext::getDenialInfo, python::return_value_policy<python::reference_existing_object>(), "DenialInfo () - Returns Info object");
 }

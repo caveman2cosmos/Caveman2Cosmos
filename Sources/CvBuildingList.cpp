@@ -8,18 +8,8 @@
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
 
-CvBuildingList::CvBuildingList(CvPlayer* pPlayer, CvCity* pCity) :
-m_bFilteringValid(false),
-m_bGroupingValid(false),
-m_bSortingValid(false),
-m_pCity(pCity),
-m_pPlayer(pPlayer),
-m_aaiGroupedBuildingList(NULL),
-m_BuildingFilters(pPlayer, pCity),
-m_BuildingGrouping(pPlayer, pCity),
-m_BuildingSort(pPlayer, pCity),
-m_eSelectedBuilding(NO_BUILDING),
-m_eSelectedWonder(NO_BUILDING)
+CvBuildingList::CvBuildingList(CvPlayer* pPlayer, CvCity* pCity)
+	: m_bFilteringValid(false), m_bGroupingValid(false), m_bSortingValid(false), m_pCity(pCity), m_pPlayer(pPlayer), m_aaiGroupedBuildingList(NULL), m_BuildingFilters(pPlayer, pCity), m_BuildingGrouping(pPlayer, pCity), m_BuildingSort(pPlayer, pCity), m_eSelectedBuilding(NO_BUILDING), m_eSelectedWonder(NO_BUILDING)
 {
 }
 
@@ -34,7 +24,7 @@ void CvBuildingList::setPlayerToOwner()
 	if (m_pCity && !m_pPlayer)
 	{
 		CvPlayer* pPlayer = &GET_PLAYER(m_pCity->getOwnerINLINE());
-		m_pPlayer = pPlayer;
+		m_pPlayer		  = pPlayer;
 		m_BuildingFilters.setPlayer(pPlayer);
 		m_BuildingGrouping.setPlayer(pPlayer);
 		m_BuildingSort.setPlayer(pPlayer);
@@ -44,8 +34,8 @@ void CvBuildingList::setPlayerToOwner()
 void CvBuildingList::setInvalid()
 {
 	m_bFilteringValid = false;
-	m_bGroupingValid = false;
-	m_bSortingValid = false;
+	m_bGroupingValid  = false;
+	m_bSortingValid	  = false;
 }
 
 bool CvBuildingList::getFilterActive(BuildingFilterTypes eFilter)
@@ -58,8 +48,8 @@ void CvBuildingList::setFilterActive(BuildingFilterTypes eFilter, bool bActive)
 	if (m_BuildingFilters.setFilterActive(eFilter, bActive))
 	{
 		m_bFilteringValid = false;
-		m_bGroupingValid = false;
-		m_bSortingValid = false;
+		m_bGroupingValid  = false;
+		m_bSortingValid	  = false;
 	}
 }
 
@@ -73,7 +63,7 @@ void CvBuildingList::setGroupingActive(BuildingGroupingTypes eGrouping)
 	if (m_BuildingGrouping.setActiveGrouping(eGrouping))
 	{
 		m_bGroupingValid = false;
-		m_bSortingValid = false;
+		m_bSortingValid	 = false;
 	}
 }
 
@@ -105,7 +95,7 @@ int CvBuildingList::getNumInGroup(int iGroup)
 	{
 		doGroup();
 	}
-	FAssertMsg(iGroup < (int) m_aaiGroupedBuildingList.size(), "Index out of bounds");
+	FAssertMsg(iGroup < (int)m_aaiGroupedBuildingList.size(), "Index out of bounds");
 	FAssertMsg(iGroup > -1, "Index out of bounds");
 	return m_aaiGroupedBuildingList[iGroup]->size();
 }
@@ -128,7 +118,7 @@ void CvBuildingList::doFilter()
 	m_aiBuildingList.clear();
 	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
 	{
-		BuildingTypes eBuilding = (BuildingTypes) i;
+		BuildingTypes eBuilding = (BuildingTypes)i;
 		if (m_BuildingFilters.isFiltered(eBuilding))
 			m_aiBuildingList.push_back(eBuilding);
 	}
@@ -140,19 +130,19 @@ void CvBuildingList::doGroup()
 	if (!m_bFilteringValid)
 		doFilter();
 
-	for(unsigned int i=0; i<m_aaiGroupedBuildingList.size(); i++)
+	for (unsigned int i = 0; i < m_aaiGroupedBuildingList.size(); i++)
 	{
 		delete m_aaiGroupedBuildingList[i];
 	}
 	m_aaiGroupedBuildingList.clear();
 
-	int iSize = m_aiBuildingList.size();
+	int								  iSize = m_aiBuildingList.size();
 	std::multimap<int, BuildingTypes> mmap_Buildings;
 
-	for (int i=0; i < iSize; i++)
-		mmap_Buildings.insert(std::pair<int,BuildingTypes>(m_BuildingGrouping.getGroup(m_aiBuildingList[i]), m_aiBuildingList[i]));
-	
-	int index = -1;
+	for (int i = 0; i < iSize; i++)
+		mmap_Buildings.insert(std::pair<int, BuildingTypes>(m_BuildingGrouping.getGroup(m_aiBuildingList[i]), m_aiBuildingList[i]));
+
+	int index	 = -1;
 	int iLastKey = MIN_INT;
 	for (std::multimap<int, BuildingTypes>::iterator it = mmap_Buildings.begin(); it != mmap_Buildings.end(); ++it)
 	{
@@ -173,7 +163,7 @@ void CvBuildingList::doSort()
 		doGroup();
 
 	BuildingSortListWrapper* pWrapper = new BuildingSortListWrapper(&m_BuildingSort);
-	for (unsigned int i=0; i<m_aaiGroupedBuildingList.size(); i++)
+	for (unsigned int i = 0; i < m_aaiGroupedBuildingList.size(); i++)
 	{
 		std::stable_sort(m_aaiGroupedBuildingList[i]->begin(), m_aaiGroupedBuildingList[i]->end(), *pWrapper);
 		pWrapper->deleteCache();
@@ -186,7 +176,7 @@ int CvBuildingList::getBuildingSelectionRow()
 {
 	if (m_eSelectedBuilding != NO_BUILDING)
 	{
-		for (unsigned int i=0; i<m_aaiGroupedBuildingList.size(); i++)
+		for (unsigned int i = 0; i < m_aaiGroupedBuildingList.size(); i++)
 		{
 			if (std::find(m_aaiGroupedBuildingList[i]->begin(), m_aaiGroupedBuildingList[i]->end(), m_eSelectedBuilding) != m_aaiGroupedBuildingList[i]->end())
 				return i;
@@ -194,9 +184,9 @@ int CvBuildingList::getBuildingSelectionRow()
 		m_eSelectedBuilding = NO_BUILDING;
 	}
 	// Find first normal building
-	for (unsigned int i=0; i<m_aaiGroupedBuildingList.size(); i++)
+	for (unsigned int i = 0; i < m_aaiGroupedBuildingList.size(); i++)
 	{
-		for (unsigned int j=0; j<m_aaiGroupedBuildingList[i]->size(); j++)
+		for (unsigned int j = 0; j < m_aaiGroupedBuildingList[i]->size(); j++)
 		{
 			BuildingTypes eBuilding = (*m_aaiGroupedBuildingList[i])[j];
 			if (!isLimitedWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()))
@@ -210,7 +200,7 @@ int CvBuildingList::getWonderSelectionRow()
 {
 	if (m_eSelectedWonder != NO_BUILDING)
 	{
-		for (unsigned int i=0; i<m_aaiGroupedBuildingList.size(); i++)
+		for (unsigned int i = 0; i < m_aaiGroupedBuildingList.size(); i++)
 		{
 			if (std::find(m_aaiGroupedBuildingList[i]->begin(), m_aaiGroupedBuildingList[i]->end(), m_eSelectedWonder) != m_aaiGroupedBuildingList[i]->end())
 				return i;
@@ -218,9 +208,9 @@ int CvBuildingList::getWonderSelectionRow()
 		m_eSelectedWonder = NO_BUILDING;
 	}
 	// Find first wonder
-	for (unsigned int i=0; i<m_aaiGroupedBuildingList.size(); i++)
+	for (unsigned int i = 0; i < m_aaiGroupedBuildingList.size(); i++)
 	{
-		for (unsigned int j=0; j<m_aaiGroupedBuildingList[i]->size(); j++)
+		for (unsigned int j = 0; j < m_aaiGroupedBuildingList[i]->size(); j++)
 		{
 			BuildingTypes eBuilding = (*m_aaiGroupedBuildingList[i])[j];
 			if (isLimitedWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()))

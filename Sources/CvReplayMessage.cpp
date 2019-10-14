@@ -1,13 +1,8 @@
 #include "CvGameCoreDLL.h"
 #include "CvReplaymessage.h"
 
-CvReplayMessage::CvReplayMessage(int iTurn, ReplayMessageTypes eType, PlayerTypes ePlayer) :
-	m_iTurn(iTurn),
-	m_ePlayer(ePlayer),
-	m_eType(eType),
-	m_iPlotX(-1),
-	m_iPlotY(-1),
-	m_eColor(NO_COLOR)
+CvReplayMessage::CvReplayMessage(int iTurn, ReplayMessageTypes eType, PlayerTypes ePlayer)
+	: m_iTurn(iTurn), m_ePlayer(ePlayer), m_eType(eType), m_iPlotX(-1), m_iPlotY(-1), m_eColor(NO_COLOR)
 {
 }
 
@@ -17,13 +12,13 @@ CvReplayMessage::~CvReplayMessage()
 
 const CvReplayMessage& CvReplayMessage::operator=(const CvReplayMessage& other)
 {
-	m_iTurn = other.m_iTurn;
-	m_eType = other.m_eType;
-	m_iPlotX = other.m_iPlotX;
-	m_iPlotY = other.m_iPlotY;
+	m_iTurn	  = other.m_iTurn;
+	m_eType	  = other.m_eType;
+	m_iPlotX  = other.m_iPlotX;
+	m_iPlotY  = other.m_iPlotY;
 	m_ePlayer = other.m_ePlayer;
-	m_szText = other.m_szText;
-	m_eColor = other.m_eColor;
+	m_szText  = other.m_szText;
+	m_eColor  = other.m_eColor;
 
 	return (*this);
 }
@@ -97,29 +92,29 @@ ColorTypes CvReplayMessage::getColor() const
 
 void CvReplayMessage::read(FDataStreamBase& stream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(&stream);
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	WRAPPER_READ(wrapper, "CvReplayMessage" ,&m_iTurn);
-	WRAPPER_READ(wrapper, "CvReplayMessage" ,(int*)&m_eType);
+	WRAPPER_READ(wrapper, "CvReplayMessage", &m_iTurn);
+	WRAPPER_READ(wrapper, "CvReplayMessage", (int*)&m_eType);
 
-	WRAPPER_READ(wrapper, "CvReplayMessage" ,&m_iPlotX);
-	WRAPPER_READ(wrapper, "CvReplayMessage" ,&m_iPlotY);
+	WRAPPER_READ(wrapper, "CvReplayMessage", &m_iPlotX);
+	WRAPPER_READ(wrapper, "CvReplayMessage", &m_iPlotY);
 
-	WRAPPER_READ(wrapper, "CvReplayMessage" ,(int*)&m_ePlayer);
+	WRAPPER_READ(wrapper, "CvReplayMessage", (int*)&m_ePlayer);
 
-	WRAPPER_READ_STRING(wrapper, "CvReplayMessage" ,m_szText);
-	WRAPPER_READ(wrapper, "CvReplayMessage" ,(int*)&m_eColor);
+	WRAPPER_READ_STRING(wrapper, "CvReplayMessage", m_szText);
+	WRAPPER_READ(wrapper, "CvReplayMessage", (int*)&m_eColor);
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 }
 
 void CvReplayMessage::write(FDataStreamBase& stream) const
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(&stream);
 
@@ -135,4 +130,3 @@ void CvReplayMessage::write(FDataStreamBase& stream) const
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
-

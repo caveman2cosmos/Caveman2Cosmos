@@ -10,7 +10,7 @@
 #include "CvGameCoreDLLUnDefNew.h"
 #include "CvGameCoreDLLDefNew.h"
 
-bool BuildingSortBase::isLesserBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding1, BuildingTypes eBuilding2)
+bool BuildingSortBase::isLesserBuilding(CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding1, BuildingTypes eBuilding2)
 {
 	int iVal1;
 	int iVal2;
@@ -18,7 +18,7 @@ bool BuildingSortBase::isLesserBuilding(CvPlayer *pPlayer, CvCity *pCity, Buildi
 	stdext::hash_map<BuildingTypes, int>::iterator it = m_mapValueCache.find(eBuilding1);
 	if (it == m_mapValueCache.end())
 	{
-		iVal1 = getBuildingValue(pPlayer, pCity, eBuilding1);
+		iVal1						= getBuildingValue(pPlayer, pCity, eBuilding1);
 		m_mapValueCache[eBuilding1] = iVal1;
 	}
 	else
@@ -27,7 +27,7 @@ bool BuildingSortBase::isLesserBuilding(CvPlayer *pPlayer, CvCity *pCity, Buildi
 	it = m_mapValueCache.find(eBuilding2);
 	if (it == m_mapValueCache.end())
 	{
-		iVal2 = getBuildingValue(pPlayer, pCity, eBuilding2);
+		iVal2						= getBuildingValue(pPlayer, pCity, eBuilding2);
 		m_mapValueCache[eBuilding2] = iVal2;
 	}
 	else
@@ -48,7 +48,7 @@ bool BuildingSortBase::isInverse()
 bool BuildingSortBase::setInverse(bool bInvert)
 {
 	bool bChanged = bInvert != m_bInvert;
-	m_bInvert = bInvert;
+	m_bInvert	  = bInvert;
 	return bChanged;
 }
 
@@ -59,20 +59,20 @@ void BuildingSortBase::deleteCache()
 
 BuildingSortBase::~BuildingSortBase()
 {
-
 }
 
-BuildingSortCommerce::BuildingSortCommerce(CommerceTypes eCommerce, bool bInvert) : BuildingSortBase(bInvert)
+BuildingSortCommerce::BuildingSortCommerce(CommerceTypes eCommerce, bool bInvert)
+	: BuildingSortBase(bInvert)
 {
 	m_eCommerce = eCommerce;
 }
 
-int BuildingSortCommerce::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+int BuildingSortCommerce::getBuildingValue(CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding)
 {
 	if (pCity)
 	{
 		int iYieldCommerce = pCity->getAdditionalYieldByBuilding(YIELD_COMMERCE, eBuilding);
-		int iCommerce = pCity->getAdditionalCommerceTimes100ByBuilding(m_eCommerce, eBuilding);
+		int iCommerce	   = pCity->getAdditionalCommerceTimes100ByBuilding(m_eCommerce, eBuilding);
 		iCommerce += iYieldCommerce * pPlayer->getCommercePercent(m_eCommerce);
 		if (m_eCommerce == COMMERCE_GOLD)
 			iCommerce += pCity->getSavedMaintenanceTimes100ByBuilding(eBuilding);
@@ -81,18 +81,19 @@ int BuildingSortCommerce::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, Bui
 	else
 	{
 		int iYieldCommerce = GC.getBuildingInfo(eBuilding).getYieldChange(YIELD_COMMERCE) + GC.getBuildingInfo(eBuilding).getYieldPerPopChange(YIELD_COMMERCE) + GC.getBuildingInfo(eBuilding).getYieldModifier(YIELD_COMMERCE) / 5;
-		int iCommerce = GC.getBuildingInfo(eBuilding).getCommerceChange(m_eCommerce) + GC.getBuildingInfo(eBuilding).getCommercePerPopChange(m_eCommerce) + GC.getBuildingInfo(eBuilding).getCommerceModifier(m_eCommerce) / 5;
+		int iCommerce	   = GC.getBuildingInfo(eBuilding).getCommerceChange(m_eCommerce) + GC.getBuildingInfo(eBuilding).getCommercePerPopChange(m_eCommerce) + GC.getBuildingInfo(eBuilding).getCommerceModifier(m_eCommerce) / 5;
 		iCommerce += iYieldCommerce * pPlayer->getCommercePercent(m_eCommerce);
 		return iCommerce;
 	}
 }
 
-BuildingSortYield::BuildingSortYield(YieldTypes eYield, bool bInvert) : BuildingSortBase(bInvert)
+BuildingSortYield::BuildingSortYield(YieldTypes eYield, bool bInvert)
+	: BuildingSortBase(bInvert)
 {
 	m_eYield = eYield;
 }
 
-int BuildingSortYield::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+int BuildingSortYield::getBuildingValue(CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding)
 {
 	if (pCity)
 	{
@@ -104,7 +105,7 @@ int BuildingSortYield::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, Buildi
 	}
 }
 
-int BuildingSortHappiness::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+int BuildingSortHappiness::getBuildingValue(CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding)
 {
 	if (pCity)
 	{
@@ -116,7 +117,7 @@ int BuildingSortHappiness::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, Bu
 	}
 }
 
-int BuildingSortHealth::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+int BuildingSortHealth::getBuildingValue(CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding)
 {
 	if (pCity)
 	{
@@ -128,7 +129,7 @@ int BuildingSortHealth::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, Build
 	}
 }
 
-int BuildingSortCost::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+int BuildingSortCost::getBuildingValue(CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding)
 {
 	if (pCity)
 	{
@@ -141,13 +142,13 @@ int BuildingSortCost::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, Buildin
 }
 
 // dummy
-int BuildingSortName::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+int BuildingSortName::getBuildingValue(CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding)
 {
 	return 0;
 }
 
 // name sorting defaults to A first
-bool BuildingSortName::isLesserBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding1, BuildingTypes eBuilding2)
+bool BuildingSortName::isLesserBuilding(CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding1, BuildingTypes eBuilding2)
 {
 	if (m_bInvert)
 		return wcscmp(GC.getBuildingInfo(eBuilding1).getDescription(), GC.getBuildingInfo(eBuilding2).getDescription()) > 0;
@@ -155,14 +156,14 @@ bool BuildingSortName::isLesserBuilding(CvPlayer *pPlayer, CvCity *pCity, Buildi
 		return wcscmp(GC.getBuildingInfo(eBuilding1).getDescription(), GC.getBuildingInfo(eBuilding2).getDescription()) < 0;
 }
 
-int BuildingSortProperty::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
+int BuildingSortProperty::getBuildingValue(CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding)
 {
 	CvBuildingInfo& kInfo = GC.getBuildingInfo(eBuilding);
-	int iSum = kInfo.getProperties()->getValueByProperty((int)m_eProperty) + kInfo.getPropertiesAllCities()->getValueByProperty((int)m_eProperty);
+	int				iSum  = kInfo.getProperties()->getValueByProperty((int)m_eProperty) + kInfo.getPropertiesAllCities()->getValueByProperty((int)m_eProperty);
 
 	CvPropertyManipulators* pMani = kInfo.getPropertyManipulators();
-	int iNum = pMani->getNumSources();
-	for (int i=0; i<iNum; i++)
+	int						iNum  = pMani->getNumSources();
+	for (int i = 0; i < iNum; i++)
 	{
 		CvPropertySource* pSource = pMani->getSource(i);
 		if (pSource->getProperty() == m_eProperty)
@@ -173,10 +174,10 @@ int BuildingSortProperty::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, Bui
 	return iSum;
 }
 
-BuildingSortList::BuildingSortList(CvPlayer *pPlayer, CvCity *pCity)
+BuildingSortList::BuildingSortList(CvPlayer* pPlayer, CvCity* pCity)
 {
 	m_pPlayer = pPlayer;
-	m_pCity = pCity;
+	m_pCity	  = pCity;
 
 	for (int i = 0; i < NUM_BUILDING_SORT; i++)
 	{
@@ -201,17 +202,17 @@ void BuildingSortList::init()
 		SAFE_DELETE(m_apBuildingSort[i]);
 	}
 
-	m_apBuildingSort[BUILDING_SORT_NAME] = new BuildingSortName();
-	m_apBuildingSort[BUILDING_SORT_COST] = new BuildingSortCost(true);
-	m_apBuildingSort[BUILDING_SORT_SCIENCE] = new BuildingSortCommerce(COMMERCE_RESEARCH);
-	m_apBuildingSort[BUILDING_SORT_CULTURE] = new BuildingSortCommerce(COMMERCE_CULTURE);
-	m_apBuildingSort[BUILDING_SORT_ESPIONAGE] = new BuildingSortCommerce(COMMERCE_ESPIONAGE);
-	m_apBuildingSort[BUILDING_SORT_GOLD] = new BuildingSortCommerce(COMMERCE_GOLD);
-	m_apBuildingSort[BUILDING_SORT_FOOD] = new BuildingSortYield(YIELD_FOOD);
-	m_apBuildingSort[BUILDING_SORT_PRODUCTION] = new BuildingSortYield(YIELD_PRODUCTION);
-	m_apBuildingSort[BUILDING_SORT_HAPPINESS] = new BuildingSortHappiness();
-	m_apBuildingSort[BUILDING_SORT_HEALTH] = new BuildingSortHealth();
-	m_apBuildingSort[BUILDING_SORT_CRIME] = new BuildingSortProperty((PropertyTypes)GC.getInfoTypeForString("PROPERTY_CRIME"), true);
+	m_apBuildingSort[BUILDING_SORT_NAME]		 = new BuildingSortName();
+	m_apBuildingSort[BUILDING_SORT_COST]		 = new BuildingSortCost(true);
+	m_apBuildingSort[BUILDING_SORT_SCIENCE]		 = new BuildingSortCommerce(COMMERCE_RESEARCH);
+	m_apBuildingSort[BUILDING_SORT_CULTURE]		 = new BuildingSortCommerce(COMMERCE_CULTURE);
+	m_apBuildingSort[BUILDING_SORT_ESPIONAGE]	 = new BuildingSortCommerce(COMMERCE_ESPIONAGE);
+	m_apBuildingSort[BUILDING_SORT_GOLD]		 = new BuildingSortCommerce(COMMERCE_GOLD);
+	m_apBuildingSort[BUILDING_SORT_FOOD]		 = new BuildingSortYield(YIELD_FOOD);
+	m_apBuildingSort[BUILDING_SORT_PRODUCTION]	 = new BuildingSortYield(YIELD_PRODUCTION);
+	m_apBuildingSort[BUILDING_SORT_HAPPINESS]	 = new BuildingSortHappiness();
+	m_apBuildingSort[BUILDING_SORT_HEALTH]		 = new BuildingSortHealth();
+	m_apBuildingSort[BUILDING_SORT_CRIME]		 = new BuildingSortProperty((PropertyTypes)GC.getInfoTypeForString("PROPERTY_CRIME"), true);
 	m_apBuildingSort[BUILDING_SORT_FLAMMABILITY] = new BuildingSortProperty((PropertyTypes)GC.getInfoTypeForString("PROPERTY_FLAMMABILITY"), true);
 }
 
@@ -234,17 +235,17 @@ bool BuildingSortList::setActiveSort(BuildingSortTypes eActiveSort)
 	return bChanged;
 }
 
-void BuildingSortList::setCity(CvCity *pCity)
+void BuildingSortList::setCity(CvCity* pCity)
 {
 	m_pCity = pCity;
 }
 
-void BuildingSortList::setPlayer(CvPlayer *pPlayer)
+void BuildingSortList::setPlayer(CvPlayer* pPlayer)
 {
 	m_pPlayer = pPlayer;
 }
 
-bool BuildingSortList::operator ()(BuildingTypes eBuilding1, BuildingTypes eBuilding2)
+bool BuildingSortList::operator()(BuildingTypes eBuilding1, BuildingTypes eBuilding2)
 {
 	return m_apBuildingSort[m_eActiveSort]->isLesserBuilding(m_pPlayer, m_pCity, eBuilding1, eBuilding2);
 }

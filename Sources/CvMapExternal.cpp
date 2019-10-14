@@ -13,21 +13,21 @@
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-#include <direct.h>			// for getcwd()
-#include <stdlib.h>			// for MAX_PATH
+#include <direct.h> // for getcwd()
+#include <stdlib.h> // for MAX_PATH
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
 
 // Public Functions...
 
-CvMapExternal::CvMapExternal() : m_proxiedMap(NULL),
-								 m_bMapCoordinates(false)
+CvMapExternal::CvMapExternal()
+	: m_proxiedMap(NULL), m_bMapCoordinates(false)
 {
 }
 
-CvMapExternal::CvMapExternal(CvMapInterfaceBase* proxiedMap) : m_proxiedMap(proxiedMap),
-															   m_bMapCoordinates(false)
+CvMapExternal::CvMapExternal(CvMapInterfaceBase* proxiedMap)
+	: m_proxiedMap(proxiedMap), m_bMapCoordinates(false)
 {
 }
 
@@ -42,7 +42,7 @@ CvMapExternal::~CvMapExternal()
 //	pInitInfo					- Optional init structure (used for WB load)
 // Returns:
 //	nothing.
-void CvMapExternal::init(CvMapInitData* pInitInfo/*=NULL*/)
+void CvMapExternal::init(CvMapInitData* pInitInfo /*=NULL*/)
 {
 	m_proxiedMap->init(pInitInfo);
 }
@@ -115,18 +115,18 @@ CvSelectionGroup* CvMapExternal::findSelectionGroup(int iX, int iY, PlayerTypes 
 	return m_proxiedMap->findSelectionGroup(iX, iY, eOwner, bReadyToSelect, bWorkers);
 }
 
-bool CvMapExternal::isPlot(int iX, int iY) const																		// Exposed to Python
+bool CvMapExternal::isPlot(int iX, int iY) const // Exposed to Python
 {
 	return m_proxiedMap->isPlot(iX, iY);
 }
 
-int CvMapExternal::numPlots() const 																								// Exposed to Python
+int CvMapExternal::numPlots() const // Exposed to Python
 {
 	return m_proxiedMap->numPlots();
 }
 
 
-int CvMapExternal::plotNum(int iX, int iY) const																		// Exposed to Python
+int CvMapExternal::plotNum(int iX, int iY) const // Exposed to Python
 {
 	return m_proxiedMap->plotNum(iX, iY);
 }
@@ -156,65 +156,64 @@ float CvMapExternal::plotYToPointY(int iY)
 }
 
 
-int CvMapExternal::getGridWidth() const																		// Exposed to Python
+int CvMapExternal::getGridWidth() const // Exposed to Python
 {
 	return m_proxiedMap->getGridWidth();
 }
 
 
-int CvMapExternal::getGridHeight() const																	// Exposed to Python
+int CvMapExternal::getGridHeight() const // Exposed to Python
 {
 	return m_proxiedMap->getGridHeight();
 }
 
 
-int CvMapExternal::getLandPlots()																					// Exposed to Python
+int CvMapExternal::getLandPlots() // Exposed to Python
 {
 	return m_proxiedMap->getLandPlots();
 }
 
 
-int CvMapExternal::getOwnedPlots()																				// Exposed to Python
+int CvMapExternal::getOwnedPlots() // Exposed to Python
 {
 	return m_proxiedMap->getOwnedPlots();
 }
 
 
-bool CvMapExternal::isWrapX()																							// Exposed to Python
+bool CvMapExternal::isWrapX() // Exposed to Python
 {
 	return m_proxiedMap->isWrapX();
 }
 
 
-bool CvMapExternal::isWrapY()																							// Exposed to Python
+bool CvMapExternal::isWrapY() // Exposed to Python
 {
 	return m_proxiedMap->isWrapY();
 }
 
 
-bool CvMapExternal::isWrap()																							// Exposed to Python
+bool CvMapExternal::isWrap() // Exposed to Python
 {
 	return m_proxiedMap->isWrap();
 }
 
 
-WorldSizeTypes CvMapExternal::getWorldSize()															// Exposed to Python
+WorldSizeTypes CvMapExternal::getWorldSize() // Exposed to Python
 {
 	return m_proxiedMap->getWorldSize();
 }
 
 
-ClimateTypes CvMapExternal::getClimate()																	// Exposed to Python
+ClimateTypes CvMapExternal::getClimate() // Exposed to Python
 {
 	return m_proxiedMap->getClimate();
 }
 
 
-SeaLevelTypes CvMapExternal::getSeaLevel()																// Exposed to Python
+SeaLevelTypes CvMapExternal::getSeaLevel() // Exposed to Python
 {
 	return m_proxiedMap->getSeaLevel();
 }
-
 
 
 int CvMapExternal::getNumCustomMapOptions()
@@ -223,18 +222,18 @@ int CvMapExternal::getNumCustomMapOptions()
 }
 
 
-CustomMapOptionTypes CvMapExternal::getCustomMapOption(int iOption)				// Exposed to Python
+CustomMapOptionTypes CvMapExternal::getCustomMapOption(int iOption) // Exposed to Python
 {
 	return m_proxiedMap->getCustomMapOption(iOption);
 }
 
 
-CvPlot* CvMapExternal::plotByIndex(int iIndex) const											// Exposed to Python
+CvPlot* CvMapExternal::plotByIndex(int iIndex) const // Exposed to Python
 {
-	FAssert( 0 <= iIndex && iIndex < numPlots());
+	FAssert(0 <= iIndex && iIndex < numPlots());
 	CvPlot* result = m_proxiedMap->plotByIndex(iIndex);
 
-	if ( result == NULL )
+	if (result == NULL)
 	{
 		OutputDebugString(CvString::format("    Plot at (%d,%d): NULL\n").c_str());
 	}
@@ -242,11 +241,11 @@ CvPlot* CvMapExternal::plotByIndex(int iIndex) const											// Exposed to Pyt
 }
 
 
-CvPlot* CvMapExternal::plot(int iX, int iY) const													// Exposed to Python
+CvPlot* CvMapExternal::plot(int iX, int iY) const // Exposed to Python
 {
 	CvPlot* result;
-	
-	if ( !m_bMapCoordinates )
+
+	if (!m_bMapCoordinates)
 	{
 		result = m_proxiedMap->getUnderlyingMap()->plot(iX, iY);
 	}
@@ -265,7 +264,7 @@ CvPlot* CvMapExternal::pointToPlot(float fX, float fY)
 }
 
 
-int CvMapExternal::getNumAreas()														// Exposed to Python
+int CvMapExternal::getNumAreas() // Exposed to Python
 {
 	return m_proxiedMap->getNumAreas();
 }
@@ -282,16 +281,16 @@ void CvMapExternal::read(FDataStreamBase* pStream)
 {
 	PROFILE_FUNC();
 
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
-	bool bInitialized = false;
+	bool bInitialized	 = false;
 	bool bMultiMapFormat = false;
 
 	WRAPPER_READ(wrapper, "CvMapExternal", &bMultiMapFormat);
 
-	if ( bMultiMapFormat )
+	if (bMultiMapFormat)
 	{
 		for (int i = 0; i < GC.getNumMapInfos(); i++)
 		{
@@ -302,13 +301,13 @@ void CvMapExternal::read(FDataStreamBase* pStream)
 				//	If this is a load straight from the startup menus then only map 0 will
 				//	have been initialized, so any others in the save must be initialized too before
 				//	they can be loaded
-				if ( !GC.mapInitialized((MapTypes)i) )
+				if (!GC.mapInitialized((MapTypes)i))
 				{
 					GC.initializeMap((MapTypes)i);
 				}
 
 				// Cast to the internal class
-				CvMap&	map = GC.getMapByIndex((MapTypes)i);
+				CvMap& map = GC.getMapByIndex((MapTypes)i);
 
 				map.read(pStream);
 			}
@@ -326,11 +325,11 @@ void CvMapExternal::write(FDataStreamBase* pStream)
 {
 	PROFILE_FUNC();
 
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
-	bool bMultiMapFormat = true;	//	Always save in multimap format
+	bool bMultiMapFormat = true; //	Always save in multimap format
 
 	WRAPPER_WRITE(wrapper, "CvMapExternal", bMultiMapFormat);
 
@@ -340,10 +339,10 @@ void CvMapExternal::write(FDataStreamBase* pStream)
 
 		WRAPPER_WRITE(wrapper, "CvMapExternal", bInitialized);
 
-		if ( bInitialized )
+		if (bInitialized)
 		{
 			// Cast to the internal class
-			CvMap&	map = GC.getMapByIndex((MapTypes)iI);
+			CvMap& map = GC.getMapByIndex((MapTypes)iI);
 
 			map.write(pStream);
 		}

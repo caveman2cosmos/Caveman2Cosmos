@@ -5,7 +5,7 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 {
 	OutputDebugString("Python Extension Module - CyPlayerPythonInterface1\n");
 
-	// set the docstring of the current module scope 
+	// set the docstring of the current module scope
 	python::scope().attr("__doc__") = "Civilization IV Player Class";
 	x
 		.def("getAdvancedStartPoints", &CyPlayer::getAdvancedStartPoints, "int ()")
@@ -165,7 +165,7 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 #if defined QC_MASTERY_VICTORY
 		//Sevo Begin--VCM
 		.def("getSevoWondersScore", &CyPlayer::getSevoWondersScore, "int ()")
-		//Sevo End VCM
+	//Sevo End VCM
 #endif
 		.def("getWondersScore", &CyPlayer::getWondersScore, "int ()")
 		.def("getTechScore", &CyPlayer::getTechScore, "int ()")
@@ -305,6 +305,5 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getEventTriggered", &CyPlayer::getEventTriggered, python::return_value_policy<python::reference_existing_object>(), "EventTriggeredData* (int iID)")
 		.def("initTriggeredData", &CyPlayer::initTriggeredData, python::return_value_policy<python::reference_existing_object>(), "EventTriggeredData* (int eEventTrigger, bool bFire, int iCityId, int iPlotX, int iPlotY, PlayerTypes eOtherPlayer, int iOtherPlayerCityId, ReligionTypes eReligion, CorporationTypes eCorporation, int iUnitId, BuildingTypes eBuilding)")
 		.def("getEventTriggerWeight", &CyPlayer::getEventTriggerWeight, "int getEventTriggerWeight(int eEventTrigger)")
-		.def("doGoldenAgebyPercentage", &CyPlayer::doGoldenAgebyPercentage, "void doGoldenAgebyPercentage(int iPercent)")
-		;
+		.def("doGoldenAgebyPercentage", &CyPlayer::doGoldenAgebyPercentage, "void doGoldenAgebyPercentage(int iPercent)");
 }

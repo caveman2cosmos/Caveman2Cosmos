@@ -6,24 +6,24 @@
 
 CvArea::CvArea()
 {
-	m_aiUnitsPerPlayer = new int[MAX_PLAYERS];
-	m_aiAnimalsPerPlayer = new int[MAX_PLAYERS];
-	m_aiCitiesPerPlayer = new int[MAX_PLAYERS];
+	m_aiUnitsPerPlayer		= new int[MAX_PLAYERS];
+	m_aiAnimalsPerPlayer	= new int[MAX_PLAYERS];
+	m_aiCitiesPerPlayer		= new int[MAX_PLAYERS];
 	m_aiPopulationPerPlayer = new int[MAX_PLAYERS];
-	m_aiBuildingGoodHealth = new int[MAX_PLAYERS];
-	m_aiBuildingBadHealth = new int[MAX_PLAYERS];
-	m_aiBuildingHappiness = new int[MAX_PLAYERS];
-	m_aiFreeSpecialist = new int[MAX_PLAYERS];
-	m_aiPower = new int[MAX_PLAYERS];
-	m_aiBestFoundValue = new int[MAX_PLAYERS];
+	m_aiBuildingGoodHealth	= new int[MAX_PLAYERS];
+	m_aiBuildingBadHealth	= new int[MAX_PLAYERS];
+	m_aiBuildingHappiness	= new int[MAX_PLAYERS];
+	m_aiFreeSpecialist		= new int[MAX_PLAYERS];
+	m_aiPower				= new int[MAX_PLAYERS];
+	m_aiBestFoundValue		= new int[MAX_PLAYERS];
 	//DPII < Maintenance Modifiers >
-	m_aiMaintenanceModifier = new int[MAX_PLAYERS];
-	m_aiHomeAreaMaintenanceModifier = new int[MAX_PLAYERS];
+	m_aiMaintenanceModifier			 = new int[MAX_PLAYERS];
+	m_aiHomeAreaMaintenanceModifier	 = new int[MAX_PLAYERS];
 	m_aiOtherAreaMaintenanceModifier = new int[MAX_PLAYERS];
-	m_abHomeArea = new bool[MAX_PLAYERS];
+	m_abHomeArea					 = new bool[MAX_PLAYERS];
 	//DPII < Maintenance Modifiers >
-	m_aiNumRevealedTiles = new int[MAX_TEAMS];
-	m_aiCleanPowerCount = new int[MAX_TEAMS];
+	m_aiNumRevealedTiles	= new int[MAX_TEAMS];
+	m_aiCleanPowerCount		= new int[MAX_TEAMS];
 	m_aiBorderObstacleCount = new int[MAX_TEAMS];
 
 	m_aeAreaAIType = new AreaAITypes[MAX_TEAMS];
@@ -46,8 +46,8 @@ CvArea::CvArea()
 		m_aaiNumAIUnits[i] = new int[NUM_UNITAI_TYPES];
 	}
 
-	m_paiNumBonuses = NULL;
-	m_paiNumImprovements = NULL;
+	m_paiNumBonuses			= NULL;
+	m_paiNumImprovements	= NULL;
 	m_aiSpawnValidPlotCount = NULL;
 
 
@@ -95,7 +95,6 @@ CvArea::~CvArea()
 		SAFE_DELETE_ARRAY(m_aaiNumAIUnits[i]);
 	}
 	SAFE_DELETE_ARRAY(m_aaiNumAIUnits);
-
 }
 
 
@@ -131,41 +130,41 @@ void CvArea::reset(int iID, bool bWater, bool bConstructorCall)
 	// Uninit class
 	uninit();
 
-	m_iID = iID;
-	m_iNumTiles = 0;
-	m_iNumOwnedTiles = 0;
-	m_iNumRiverEdges = 0;
-	m_iNumUnits = 0;
-	m_iNumCities = 0;
-	m_iTotalPopulation = 0;
+	m_iID				= iID;
+	m_iNumTiles			= 0;
+	m_iNumOwnedTiles	= 0;
+	m_iNumRiverEdges	= 0;
+	m_iNumUnits			= 0;
+	m_iNumCities		= 0;
+	m_iTotalPopulation	= 0;
 	m_iNumStartingPlots = 0;
 
 	m_bWater = bWater;
 
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		m_aiUnitsPerPlayer[iI] = 0;
-		m_aiAnimalsPerPlayer[iI] = 0;
-		m_aiCitiesPerPlayer[iI] = 0;
+		m_aiUnitsPerPlayer[iI]		= 0;
+		m_aiAnimalsPerPlayer[iI]	= 0;
+		m_aiCitiesPerPlayer[iI]		= 0;
 		m_aiPopulationPerPlayer[iI] = 0;
-		m_aiBuildingGoodHealth[iI] = 0;
-		m_aiBuildingBadHealth[iI] = 0;
-		m_aiBuildingHappiness[iI] = 0;
-		m_aiFreeSpecialist[iI] = 0;
-		m_aiPower[iI] = 0;
-		m_aiBestFoundValue[iI] = 0;
+		m_aiBuildingGoodHealth[iI]	= 0;
+		m_aiBuildingBadHealth[iI]	= 0;
+		m_aiBuildingHappiness[iI]	= 0;
+		m_aiFreeSpecialist[iI]		= 0;
+		m_aiPower[iI]				= 0;
+		m_aiBestFoundValue[iI]		= 0;
 		//DPII < Maintenance Modifiers >
-		m_aiMaintenanceModifier[iI] = 0;
-		m_aiHomeAreaMaintenanceModifier[iI] = 0;
+		m_aiMaintenanceModifier[iI]			 = 0;
+		m_aiHomeAreaMaintenanceModifier[iI]	 = 0;
 		m_aiOtherAreaMaintenanceModifier[iI] = 0;
-		m_abHomeArea[iI] = 0;
+		m_abHomeArea[iI]					 = 0;
 		//DPII < Maintenance Modifiers >
 	}
 
 	for (iI = 0; iI < MAX_TEAMS; iI++)
 	{
-		m_aiNumRevealedTiles[iI] = 0;
-		m_aiCleanPowerCount[iI] = 0;
+		m_aiNumRevealedTiles[iI]	= 0;
+		m_aiCleanPowerCount[iI]		= 0;
 		m_aiBorderObstacleCount[iI] = 0;
 	}
 
@@ -189,13 +188,13 @@ void CvArea::reset(int iID, bool bWater, bool bConstructorCall)
 		for (iJ = 0; iJ < NUM_UNITAI_TYPES; iJ++)
 		{
 			m_aaiNumTrainAIUnits[iI][iJ] = 0;
-			m_aaiNumAIUnits[iI][iJ] = 0;
+			m_aaiNumAIUnits[iI][iJ]		 = 0;
 		}
 	}
 
 	//	Empty the combat record
 	m_iLastGameTurnRecorded = -1;
-	for(int i = 0; i < COMBAT_RECORD_LENGTH; i++)
+	for (int i = 0; i < COMBAT_RECORD_LENGTH; i++)
 	{
 		m_combatRecord[i].clear();
 	}
@@ -222,13 +221,13 @@ void CvArea::reset(int iID, bool bWater, bool bConstructorCall)
 }
 
 
-int CvArea::getID() const						
+int CvArea::getID() const
 {
 	return m_iID;
 }
 
 
-void CvArea::setID(int iID)														
+void CvArea::setID(int iID)
 {
 	m_iID = iID;
 }
@@ -240,7 +239,7 @@ int CvArea::calculateTotalBestNatureYield() const
 
 	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
 	{
-		CvPlot*  pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
 		if (pLoopPlot->getArea() == getID())
 		{
 			iCount += pLoopPlot->calculateTotalBestNatureYield(NO_TEAM);
@@ -358,7 +357,7 @@ int CvArea::getNumTiles() const
 }
 
 
-bool CvArea::isLake() const							
+bool CvArea::isLake() const
 {
 	return (isWater() && (getNumTiles() <= GC.getLAKE_MAX_AREA_SIZE()));
 }
@@ -395,7 +394,7 @@ int CvArea::getNumUnownedTiles() const
 }
 
 
-void CvArea::changeNumOwnedTiles(int iChange)									
+void CvArea::changeNumOwnedTiles(int iChange)
 {
 	m_iNumOwnedTiles = (m_iNumOwnedTiles + iChange);
 	FAssert(getNumOwnedTiles() >= 0);
@@ -403,32 +402,32 @@ void CvArea::changeNumOwnedTiles(int iChange)
 }
 
 
-int CvArea::getNumRiverEdges() const												
+int CvArea::getNumRiverEdges() const
 {
 	return m_iNumRiverEdges;
 }
 
 
-void CvArea::changeNumRiverEdges(int iChange)									
+void CvArea::changeNumRiverEdges(int iChange)
 {
 	m_iNumRiverEdges = (m_iNumRiverEdges + iChange);
 	FAssert(getNumRiverEdges() >= 0);
 }
 
 
-int CvArea::getNumUnits() const					
+int CvArea::getNumUnits() const
 {
 	return m_iNumUnits;
 }
 
 
-int CvArea::getNumCities() const					
+int CvArea::getNumCities() const
 {
 	return m_iNumCities;
 }
 
 
-int CvArea::getTotalPopulation() const					
+int CvArea::getTotalPopulation() const
 {
 	return m_iTotalPopulation;
 }
@@ -447,13 +446,13 @@ void CvArea::changeNumStartingPlots(int iChange)
 }
 
 
-bool CvArea::isWater() const							
+bool CvArea::isWater() const
 {
 	return m_bWater;
 }
 
 
-int CvArea::getUnitsPerPlayer(PlayerTypes eIndex) const												
+int CvArea::getUnitsPerPlayer(PlayerTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
 	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
@@ -461,7 +460,7 @@ int CvArea::getUnitsPerPlayer(PlayerTypes eIndex) const
 }
 
 
-void CvArea::changeUnitsPerPlayer(PlayerTypes eIndex, int iChange)							
+void CvArea::changeUnitsPerPlayer(PlayerTypes eIndex, int iChange)
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
 	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
@@ -472,7 +471,7 @@ void CvArea::changeUnitsPerPlayer(PlayerTypes eIndex, int iChange)
 }
 
 
-int CvArea::getAnimalsPerPlayer(PlayerTypes eIndex) const			
+int CvArea::getAnimalsPerPlayer(PlayerTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
 	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
@@ -497,7 +496,7 @@ int CvArea::getCitiesPerPlayer(PlayerTypes eIndex) const
 }
 
 
-void CvArea::changeCitiesPerPlayer(PlayerTypes eIndex, int iChange)							
+void CvArea::changeCitiesPerPlayer(PlayerTypes eIndex, int iChange)
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
 	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
@@ -516,7 +515,7 @@ int CvArea::getPopulationPerPlayer(PlayerTypes eIndex) const
 }
 
 
-void CvArea::changePopulationPerPlayer(PlayerTypes eIndex, int iChange)							
+void CvArea::changePopulationPerPlayer(PlayerTypes eIndex, int iChange)
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
 	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
@@ -527,7 +526,7 @@ void CvArea::changePopulationPerPlayer(PlayerTypes eIndex, int iChange)
 }
 
 
-int CvArea::getBuildingGoodHealth(PlayerTypes eIndex) const 
+int CvArea::getBuildingGoodHealth(PlayerTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
 	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
@@ -651,7 +650,7 @@ bool CvArea::hasBestFoundValue(PlayerTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
 	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
-	
+
 	return (m_aiBestFoundValue[eIndex] != -1);
 }
 
@@ -664,7 +663,7 @@ int CvArea::getBestFoundValue(PlayerTypes eIndex) const
 	iResult = m_aiBestFoundValue[eIndex];
 
 	//	Calculate on demand
-	if ( iResult == -1 )
+	if (iResult == -1)
 	{
 		GET_PLAYER(eIndex).AI_updateFoundValues(false, const_cast<CvArea*>(this));
 		iResult = m_aiBestFoundValue[eIndex] == -1;
@@ -691,66 +690,66 @@ void CvArea::setBestFoundValue(PlayerTypes eIndex, int iNewValue)
 //DPII < Maintenance Modifiers >
 int CvArea::getMaintenanceModifier(PlayerTypes eIndex) const
 {
-    FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
-    FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
-    return m_aiMaintenanceModifier[eIndex];
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
+	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
+	return m_aiMaintenanceModifier[eIndex];
 }
 
 void CvArea::changeMaintenanceModifier(PlayerTypes eIndex, int iChange)
 {
-    FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
-    FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
-    m_aiMaintenanceModifier[eIndex] = (m_aiMaintenanceModifier[eIndex] + iChange);
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
+	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
+	m_aiMaintenanceModifier[eIndex] = (m_aiMaintenanceModifier[eIndex] + iChange);
 }
 
 int CvArea::getHomeAreaMaintenanceModifier(PlayerTypes eIndex) const
 {
-    FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
-    FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
-    return m_aiHomeAreaMaintenanceModifier[eIndex];
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
+	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
+	return m_aiHomeAreaMaintenanceModifier[eIndex];
 }
 
 void CvArea::changeHomeAreaMaintenanceModifier(PlayerTypes eIndex, int iChange)
 {
-    FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
-    FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
-    m_aiHomeAreaMaintenanceModifier[eIndex] = (m_aiHomeAreaMaintenanceModifier[eIndex] + iChange);
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
+	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
+	m_aiHomeAreaMaintenanceModifier[eIndex] = (m_aiHomeAreaMaintenanceModifier[eIndex] + iChange);
 }
 
 void CvArea::setHomeAreaMaintenanceModifier(PlayerTypes eIndex, int iNewValue)
 {
-    FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
-    FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
-    m_aiHomeAreaMaintenanceModifier[eIndex] = iNewValue;
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
+	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
+	m_aiHomeAreaMaintenanceModifier[eIndex] = iNewValue;
 }
 
 int CvArea::getOtherAreaMaintenanceModifier(PlayerTypes eIndex) const
 {
-    FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
-    FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
-    return m_aiOtherAreaMaintenanceModifier[eIndex];
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
+	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
+	return m_aiOtherAreaMaintenanceModifier[eIndex];
 }
 
 void CvArea::changeOtherAreaMaintenanceModifier(PlayerTypes eIndex, int iChange)
 {
-    FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
-    FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
-    m_aiOtherAreaMaintenanceModifier[eIndex] = (m_aiOtherAreaMaintenanceModifier[eIndex] + iChange);
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
+	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
+	m_aiOtherAreaMaintenanceModifier[eIndex] = (m_aiOtherAreaMaintenanceModifier[eIndex] + iChange);
 }
 
 void CvArea::setOtherAreaMaintenanceModifier(PlayerTypes eIndex, int iNewValue)
 {
-    FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
-    FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
-    m_aiOtherAreaMaintenanceModifier[eIndex] = iNewValue;
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
+	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
+	m_aiOtherAreaMaintenanceModifier[eIndex] = iNewValue;
 }
 
 
 bool CvArea::isHomeArea(PlayerTypes eIndex) const
 {
-    FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
-    FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
-    return m_abHomeArea[eIndex];
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
+	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
+	return m_abHomeArea[eIndex];
 }
 
 /* DPII: Any new area modifiers for things like yield, happiness or health have to have the modifiers switched here
@@ -760,7 +759,7 @@ bool CvArea::isHomeArea(PlayerTypes eIndex) const
  If you've done this correctly, no Area should have both a HomeArea and an OtherArea modifier value.*/
 void CvArea::setHomeArea(PlayerTypes ePlayer, CvArea* pOldHomeArea)
 {
-	if ( pOldHomeArea != NULL && pOldHomeArea != this )
+	if (pOldHomeArea != NULL && pOldHomeArea != this)
 	{
 		setHomeAreaMaintenanceModifier(ePlayer, (pOldHomeArea->getHomeAreaMaintenanceModifier(ePlayer)));
 		pOldHomeArea->setHomeAreaMaintenanceModifier(ePlayer, 0);
@@ -776,11 +775,11 @@ void CvArea::setHomeArea(PlayerTypes ePlayer, CvArea* pOldHomeArea)
 
 int CvArea::getTotalAreaMaintenanceModifier(PlayerTypes ePlayer) const
 {
-    int iModifier;
+	int iModifier;
 
-    iModifier = (getHomeAreaMaintenanceModifier(ePlayer) + getOtherAreaMaintenanceModifier(ePlayer) + getMaintenanceModifier(ePlayer));
+	iModifier = (getHomeAreaMaintenanceModifier(ePlayer) + getOtherAreaMaintenanceModifier(ePlayer) + getMaintenanceModifier(ePlayer));
 
-    return iModifier;
+	return iModifier;
 }
 //DPII < Maintenance Modifiers >
 
@@ -811,14 +810,14 @@ int CvArea::getNumRevealedFeatureTiles(TeamTypes eTeam, FeatureTypes eFeature) c
 	m_iCachedTurnPlotTypeCounts = GC.getGameINLINE().getGameTurn();
 	m_eCachedTeamPlotTypeCounts = eTeam;
 
-	std::map<FeatureTypes, int>::const_iterator	itr = m_plotFeatureCountCache.find(eFeature);
+	std::map<FeatureTypes, int>::const_iterator itr = m_plotFeatureCountCache.find(eFeature);
 	if (itr == m_plotFeatureCountCache.end())
 	{
-		int	iResult = 0;
+		int iResult = 0;
 
 		for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
 		{
-			CvPlot*	pPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+			CvPlot* pPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
 			if (pPlot != NULL &&
 				pPlot->area() == this &&
 				pPlot->isRevealed(eTeam, false) &&
@@ -848,14 +847,14 @@ int CvArea::getNumRevealedTerrainTiles(TeamTypes eTeam, TerrainTypes eTerrain) c
 	m_iCachedTurnPlotTypeCounts = GC.getGameINLINE().getGameTurn();
 	m_eCachedTeamPlotTypeCounts = eTeam;
 
-	std::map<TerrainTypes, int>::const_iterator	itr = m_plotTerrainCountCache.find(eTerrain);
+	std::map<TerrainTypes, int>::const_iterator itr = m_plotTerrainCountCache.find(eTerrain);
 	if (itr == m_plotTerrainCountCache.end())
 	{
-		int	iResult = 0;
+		int iResult = 0;
 
 		for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
 		{
-			CvPlot*	pPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+			CvPlot* pPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
 			if (pPlot != NULL &&
 				pPlot->area() == this &&
 				pPlot->isRevealed(eTeam, false) &&
@@ -906,7 +905,7 @@ void CvArea::changeCleanPowerCount(TeamTypes eIndex, int iChange)
 		bool bWasCleanPower = isCleanPower(eIndex);
 
 		m_aiCleanPowerCount[eIndex] = (m_aiCleanPowerCount[eIndex] + iChange);
-		
+
 		// cppcheck-suppress knownConditionTrueFalse
 		if (bWasCleanPower != isCleanPower(eIndex))
 		{
@@ -951,7 +950,6 @@ void CvArea::changeBorderObstacleCount(TeamTypes eIndex, int iChange)
 		GC.getMapINLINE().verifyUnitValidPlot();
 	}
 }
-
 
 
 AreaAITypes CvArea::getAreaAIType(TeamTypes eIndex) const
@@ -1014,7 +1012,7 @@ void CvArea::changeYieldRateModifier(PlayerTypes eIndex1, YieldTypes eIndex2, in
 	if (iChange != 0)
 	{
 		m_aaiYieldRateModifier[eIndex1][eIndex2] = (m_aaiYieldRateModifier[eIndex1][eIndex2] + iChange);
-		
+
 		GET_PLAYER(eIndex1).invalidateYieldRankCache(eIndex2);
 
 		if (eIndex2 == YIELD_COMMERCE)
@@ -1095,7 +1093,7 @@ int CvArea::getNumTotalBonuses() const
 }
 
 
-void CvArea::changeNumBonuses(BonusTypes eBonus, int iChange)					
+void CvArea::changeNumBonuses(BonusTypes eBonus, int iChange)
 {
 	FAssertMsg(eBonus >= 0, "eBonus expected to be >= 0");
 	FAssertMsg(eBonus < GC.getNumBonusInfos(), "eBonus expected to be < GC.getNumBonusInfos");
@@ -1112,7 +1110,7 @@ int CvArea::getNumImprovements(ImprovementTypes eImprovement) const
 }
 
 
-void CvArea::changeNumImprovements(ImprovementTypes eImprovement, int iChange)	
+void CvArea::changeNumImprovements(ImprovementTypes eImprovement, int iChange)
 {
 	FAssertMsg(eImprovement >= 0, "eImprovement expected to be >= 0");
 	FAssertMsg(eImprovement < GC.getNumImprovementInfos(), "eImprovement expected to be < GC.getNumImprovementInfos");
@@ -1123,7 +1121,7 @@ void CvArea::changeNumImprovements(ImprovementTypes eImprovement, int iChange)
 
 void CvArea::read(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
@@ -1132,8 +1130,8 @@ void CvArea::read(FDataStreamBase* pStream)
 	// Init saved data
 	reset();
 
-	uint uiFlag=0;
-	WRAPPER_READ(wrapper, "CvArea", &uiFlag);	// flags for expansion
+	uint uiFlag = 0;
+	WRAPPER_READ(wrapper, "CvArea", &uiFlag); // flags for expansion
 
 	WRAPPER_READ(wrapper, "CvArea", &m_iID);
 	WRAPPER_READ(wrapper, "CvArea", &m_iNumTiles);
@@ -1191,14 +1189,14 @@ void CvArea::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvArea", REMAPPED_CLASS_TYPE_IMPROVEMENTS, GC.getNumImprovementInfos(), m_paiNumImprovements);
 
 	WRAPPER_READ(wrapper, "CvArea", &m_iLastGameTurnRecorded);
-	for(int iI = 0; iI < COMBAT_RECORD_LENGTH; iI++)
+	for (int iI = 0; iI < COMBAT_RECORD_LENGTH; iI++)
 	{
 		TurnCombatResults& turnRecord = m_combatRecord[iI];
-		int numRecords = 0;
+		int				   numRecords = 0;
 
 		WRAPPER_READ(wrapper, "CvArea", &numRecords);
 
-		for(int iJ = 0; iJ < numRecords; iJ++)
+		for (int iJ = 0; iJ < numRecords; iJ++)
 		{
 			CombatResultRecord record;
 
@@ -1216,14 +1214,14 @@ void CvArea::read(FDataStreamBase* pStream)
 
 void CvArea::write(FDataStreamBase* pStream)
 {
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	uint uiFlag=0;
-	WRAPPER_WRITE(wrapper, "CvArea", uiFlag);		// flag for expansion
+	uint uiFlag = 0;
+	WRAPPER_WRITE(wrapper, "CvArea", uiFlag); // flag for expansion
 
 	WRAPPER_WRITE(wrapper, "CvArea", m_iID);
 	WRAPPER_WRITE(wrapper, "CvArea", m_iNumTiles);
@@ -1280,14 +1278,14 @@ void CvArea::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvArea", REMAPPED_CLASS_TYPE_IMPROVEMENTS, GC.getNumImprovementInfos(), m_paiNumImprovements);
 
 	WRAPPER_WRITE(wrapper, "CvArea", m_iLastGameTurnRecorded);
-	for(int iI = 0; iI < COMBAT_RECORD_LENGTH; iI++)
+	for (int iI = 0; iI < COMBAT_RECORD_LENGTH; iI++)
 	{
 		TurnCombatResults& turnRecord = m_combatRecord[iI];
-		int numRecords = turnRecord.size();
+		int				   numRecords = turnRecord.size();
 
 		WRAPPER_WRITE(wrapper, "CvArea", numRecords);
 
-		for(int iJ = 0; iJ < numRecords; iJ++)
+		for (int iJ = 0; iJ < numRecords; iJ++)
 		{
 			CombatResultRecord& record = turnRecord[iJ];
 
@@ -1309,17 +1307,17 @@ void CvArea::recordCombatDeath(PlayerTypes ePlayer, UnitTypes lostUnitType, Unit
 
 	CombatResultRecord record;
 
-	record.eLoser = ePlayer;
-	record.eDefeatedUnitType = lostUnitType;
+	record.eLoser					= ePlayer;
+	record.eDefeatedUnitType		= lostUnitType;
 	record.eVictoriousEnemyUnitType = lostToUnitType;
 
-	if ( m_iLastGameTurnRecorded == -1 )
+	if (m_iLastGameTurnRecorded == -1)
 	{
 		m_iLastGameTurnRecorded = GC.getGame().getGameTurn();
 	}
 	else
 	{
-		while ( m_iLastGameTurnRecorded != GC.getGame().getGameTurn() )
+		while (m_iLastGameTurnRecorded != GC.getGame().getGameTurn())
 		{
 			m_combatRecord[++m_iLastGameTurnRecorded % COMBAT_RECORD_LENGTH].clear();
 		}
@@ -1330,46 +1328,46 @@ void CvArea::recordCombatDeath(PlayerTypes ePlayer, UnitTypes lostUnitType, Unit
 
 //	Return the number of units of the specified type recently lost per 100 turns (normalized figure)
 //	If eUnit is NO_UNIT all types will be tallied
-int	CvArea::getRecentCombatDeathRate(PlayerTypes ePlayer, UnitTypes eUnit) const
+int CvArea::getRecentCombatDeathRate(PlayerTypes ePlayer, UnitTypes eUnit) const
 {
-	int	totalDeaths = 0;
+	int totalDeaths = 0;
 
-	for(int i = 0; i < COMBAT_RECORD_LENGTH; i++)
+	for (int i = 0; i < COMBAT_RECORD_LENGTH; i++)
 	{
-		const TurnCombatResults&	turnResults = m_combatRecord[i % COMBAT_RECORD_LENGTH];
+		const TurnCombatResults& turnResults = m_combatRecord[i % COMBAT_RECORD_LENGTH];
 
-		for( std::vector<CombatResultRecord>::const_iterator itr = turnResults.begin(); itr != turnResults.end(); ++itr)
+		for (std::vector<CombatResultRecord>::const_iterator itr = turnResults.begin(); itr != turnResults.end(); ++itr)
 		{
-			if ( (*itr).eLoser == ePlayer && (eUnit == NO_UNIT || (*itr).eDefeatedUnitType == eUnit) )
+			if ((*itr).eLoser == ePlayer && (eUnit == NO_UNIT || (*itr).eDefeatedUnitType == eUnit))
 			{
 				totalDeaths++;
 			}
 		}
 	}
 
-	return (100*totalDeaths)/COMBAT_RECORD_LENGTH;
+	return (100 * totalDeaths) / COMBAT_RECORD_LENGTH;
 }
 
 //	Return the number of units of the specified type recently lost per 100 turns (normalized figure)
 //	If eUnit is NO_UNIT all types will be tallied
-int	CvArea::getRecentCombatDeathRate(PlayerTypes ePlayer, UnitAITypes eUnitAIType) const
+int CvArea::getRecentCombatDeathRate(PlayerTypes ePlayer, UnitAITypes eUnitAIType) const
 {
-	int	totalDeaths = 0;
+	int totalDeaths = 0;
 
-	for(int i = 0; i < COMBAT_RECORD_LENGTH; i++)
+	for (int i = 0; i < COMBAT_RECORD_LENGTH; i++)
 	{
-		const TurnCombatResults&	turnResults = m_combatRecord[i % COMBAT_RECORD_LENGTH];
+		const TurnCombatResults& turnResults = m_combatRecord[i % COMBAT_RECORD_LENGTH];
 
-		for( std::vector<CombatResultRecord>::const_iterator itr = turnResults.begin(); itr != turnResults.end(); ++itr)
+		for (std::vector<CombatResultRecord>::const_iterator itr = turnResults.begin(); itr != turnResults.end(); ++itr)
 		{
-			if ( (*itr).eLoser == ePlayer && (eUnitAIType == NO_UNITAI || ((*itr).eDefeatedUnitType != NO_UNIT && GC.getUnitInfo((*itr).eDefeatedUnitType).getDefaultUnitAIType() == eUnitAIType)) )
+			if ((*itr).eLoser == ePlayer && (eUnitAIType == NO_UNITAI || ((*itr).eDefeatedUnitType != NO_UNIT && GC.getUnitInfo((*itr).eDefeatedUnitType).getDefaultUnitAIType() == eUnitAIType)))
 			{
 				totalDeaths++;
 			}
 		}
 	}
 
-	return (100*totalDeaths)/COMBAT_RECORD_LENGTH;
+	return (100 * totalDeaths) / COMBAT_RECORD_LENGTH;
 }
 
 void CvArea::clearModifierTotals()
@@ -1377,13 +1375,13 @@ void CvArea::clearModifierTotals()
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		m_aiBuildingGoodHealth[iI] = 0;
-		m_aiBuildingBadHealth[iI] = 0;
-		m_aiBuildingHappiness[iI] = 0;
-		m_aiFreeSpecialist[iI] = 0;
-		m_aiPower[iI] = 0;
+		m_aiBuildingBadHealth[iI]  = 0;
+		m_aiBuildingHappiness[iI]  = 0;
+		m_aiFreeSpecialist[iI]	   = 0;
+		m_aiPower[iI]			   = 0;
 		//DPII < Maintenance Modifiers >
-		m_aiMaintenanceModifier[iI] = 0;
-		m_aiHomeAreaMaintenanceModifier[iI] = 0;
+		m_aiMaintenanceModifier[iI]			 = 0;
+		m_aiHomeAreaMaintenanceModifier[iI]	 = 0;
 		m_aiOtherAreaMaintenanceModifier[iI] = 0;
 		//DPII < Maintenance Modifiers >
 	}
@@ -1414,7 +1412,7 @@ void CvArea::setNumValidPlotsbySpawn(SpawnTypes eSpawn, int iAmount)
 			m_aiSpawnValidPlotCount[iI] = -1;
 		}
 	}
-	m_aiSpawnValidPlotCount[eSpawn] = iAmount; 
+	m_aiSpawnValidPlotCount[eSpawn] = iAmount;
 }
 
 int CvArea::getNumValidPlotsbySpawn(SpawnTypes eSpawn) const

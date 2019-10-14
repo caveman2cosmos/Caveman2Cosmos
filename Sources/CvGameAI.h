@@ -10,13 +10,12 @@
 class CvGameAI : public CvGame
 {
 
-public:
+  public:
+	CvGameAI();
+	virtual ~CvGameAI();
 
-  CvGameAI();
-  virtual ~CvGameAI();
-
-  void AI_init();
-  void AI_uninit();
+	void AI_init();
+	void AI_uninit();
 	void AI_reset();
 
 	void AI_makeAssignWorkDirty();
@@ -29,10 +28,8 @@ public:
 	virtual void read(FDataStreamBase* pStream);
 	virtual void write(FDataStreamBase* pStream);
 
-protected:
-
-  int m_iPad;
-
+  protected:
+	int m_iPad;
 };
 
 #endif

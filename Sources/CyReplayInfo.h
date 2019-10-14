@@ -7,31 +7,31 @@
 
 class CyReplayInfo
 {
-public:
+  public:
 	CyReplayInfo();
 	CyReplayInfo(CvReplayInfo* pInfo);
 	const CvReplayInfo* getReplayInfo() const { return m_pHoF; }
-	bool isNone() { return (NULL == m_pHoF); }
+	bool				isNone() { return (NULL == m_pHoF); }
 
-	void createInfo(int iPlayer);
-	int getActivePlayer() const;
-	int getLeader(int iPlayer) const;
-	int getColor(int iPlayer) const;
-	int getDifficulty() const;
+	void		 createInfo(int iPlayer);
+	int			 getActivePlayer() const;
+	int			 getLeader(int iPlayer) const;
+	int			 getColor(int iPlayer) const;
+	int			 getDifficulty() const;
 	std::wstring getLeaderName() const;
 	std::wstring getCivDescription() const;
 	std::wstring getShortCivDescription() const;
 	std::wstring getCivAdjective() const;
 	std::wstring getMapScriptName() const;
-	int getWorldSize() const;
-	int getClimate() const;
-	int getSeaLevel() const;
-	int getEra() const;
-	int getGameSpeed() const;
-	bool isGameOption(int iOption) const;
-	bool isVictoryCondition(int iVictory) const;
-	int getVictoryType() const;
-	bool isMultiplayer() const;
+	int			 getWorldSize() const;
+	int			 getClimate() const;
+	int			 getSeaLevel() const;
+	int			 getEra() const;
+	int			 getGameSpeed() const;
+	bool		 isGameOption(int iOption) const;
+	bool		 isVictoryCondition(int iVictory) const;
+	int			 getVictoryType() const;
+	bool		 isMultiplayer() const;
 
 	int getNumPlayers() const;
 	int getPlayerScore(int iPlayer, int iTurn) const;
@@ -41,20 +41,20 @@ public:
 
 	int getNormalizedScore() const;
 
-	int getReplayMessageTurn(int i) const;
-	int getReplayMessageType(int i) const;
-	int getReplayMessagePlotX(int i) const;
-	int getReplayMessagePlotY(int i) const;
-	int getReplayMessagePlayer(int i) const;
+	int				   getReplayMessageTurn(int i) const;
+	int				   getReplayMessageType(int i) const;
+	int				   getReplayMessagePlotX(int i) const;
+	int				   getReplayMessagePlotY(int i) const;
+	int				   getReplayMessagePlayer(int i) const;
 	const std::wstring getReplayMessageText(int i) const;
-	int getNumReplayMessages() const;
-	int getReplayMessageColor(int i) const;
+	int				   getNumReplayMessages() const;
+	int				   getReplayMessageColor(int i) const;
 
-	int getInitialTurn() const;
-	int getStartYear() const;
-	int getFinalTurn() const;
+	int				   getInitialTurn() const;
+	int				   getStartYear() const;
+	int				   getFinalTurn() const;
 	const std::wstring getFinalDate() const;
-	int getCalendar() const;
+	int				   getCalendar() const;
 
 	int getFinalScore() const;
 	int getFinalEconomy() const;
@@ -66,7 +66,7 @@ public:
 
 	const char* getModName() const;
 
-private:
+  private:
 	CvReplayInfo* m_pHoF;
 
 	CvReplayInfo m_replay;

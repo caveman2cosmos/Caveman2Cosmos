@@ -9,29 +9,13 @@
 
 #include "CvGameCoreDLL.h"
 
-CvPropertyPropagator::CvPropertyPropagator() : 
-									m_eProperty(NO_PROPERTY),
-									m_eObjectType(NO_GAMEOBJECT),
-									m_eRelation(NO_RELATION),
-									m_iRelationData(0),
-									m_eTargetRelation(NO_RELATION),
-									m_eTargetObjectType(NO_GAMEOBJECT),
-									m_iTargetRelationData(0),
-									m_pExprActive(NULL),
-									m_pExprTargetCondition(NULL)
+CvPropertyPropagator::CvPropertyPropagator()
+	: m_eProperty(NO_PROPERTY), m_eObjectType(NO_GAMEOBJECT), m_eRelation(NO_RELATION), m_iRelationData(0), m_eTargetRelation(NO_RELATION), m_eTargetObjectType(NO_GAMEOBJECT), m_iTargetRelationData(0), m_pExprActive(NULL), m_pExprTargetCondition(NULL)
 {
 }
 
-CvPropertyPropagator::CvPropertyPropagator(PropertyTypes eProperty) :
-									m_eProperty(eProperty),
-									m_eObjectType(NO_GAMEOBJECT),
-									m_eRelation(NO_RELATION),
-									m_iRelationData(0),
-									m_eTargetRelation(NO_RELATION),
-									m_eTargetObjectType(NO_GAMEOBJECT),
-									m_iTargetRelationData(0),
-									m_pExprActive(NULL),
-									m_pExprTargetCondition(NULL)
+CvPropertyPropagator::CvPropertyPropagator(PropertyTypes eProperty)
+	: m_eProperty(eProperty), m_eObjectType(NO_GAMEOBJECT), m_eRelation(NO_RELATION), m_iRelationData(0), m_eTargetRelation(NO_RELATION), m_eTargetObjectType(NO_GAMEOBJECT), m_iTargetRelationData(0), m_pExprActive(NULL), m_pExprTargetCondition(NULL)
 {
 }
 
@@ -111,7 +95,7 @@ void CvPropertyPropagator::setTargetObjectType(GameObjectTypes eObjectType)
 	m_eTargetObjectType = eObjectType;
 }
 
-bool CvPropertyPropagator::isActive(CvGameObject *pObject)
+bool CvPropertyPropagator::isActive(CvGameObject* pObject)
 {
 	if ((m_eObjectType == NO_GAMEOBJECT) || (m_eObjectType == pObject->getGameObjectType()))
 	{
@@ -136,7 +120,7 @@ void CvPropertyPropagator::getTargetObjects(CvGameObject* pObject, std::vector<C
 	}
 	else
 	{
-		for (int i=0; i<NUM_GAMEOBJECTS; i++)
+		for (int i = 0; i < NUM_GAMEOBJECTS; i++)
 		{
 			pObject->enumerateRelatedCond(apGameObjects, (GameObjectTypes)i, m_eTargetRelation, m_pExprTargetCondition, m_iTargetRelationData);
 		}
@@ -144,22 +128,22 @@ void CvPropertyPropagator::getTargetObjects(CvGameObject* pObject, std::vector<C
 	// TODO: Should still filter out the source object from the vector
 }
 
-bool CvPropertyPropagator::read(CvXMLLoadUtility *pXML)
+bool CvPropertyPropagator::read(CvXMLLoadUtility* pXML)
 {
 	CvString szTextVal;
 	pXML->GetChildXmlValByName(szTextVal, L"PropertyType");
-//	m_eProperty = (PropertyTypes) pXML->GetInfoClass(szTextVal);
+	//	m_eProperty = (PropertyTypes) pXML->GetInfoClass(szTextVal);
 	GC.addDelayedResolution((int*)&m_eProperty, szTextVal);
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"GameObjectType");
-	m_eObjectType = (GameObjectTypes) pXML->GetInfoClass(szTextVal);
+	m_eObjectType = (GameObjectTypes)pXML->GetInfoClass(szTextVal);
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"RelationType");
-	m_eRelation = (RelationTypes) pXML->GetInfoClass(szTextVal);
+	m_eRelation = (RelationTypes)pXML->GetInfoClass(szTextVal);
 	if (m_eRelation == RELATION_NEAR)
 		pXML->GetOptionalChildXmlValByName(&m_iRelationData, L"iDistance");
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"TargetObjectType");
-	m_eTargetObjectType = (GameObjectTypes) pXML->GetInfoClass(szTextVal);
+	m_eTargetObjectType = (GameObjectTypes)pXML->GetInfoClass(szTextVal);
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"TargetRelationType");
-	m_eTargetRelation = (RelationTypes) pXML->GetInfoClass(szTextVal);
+	m_eTargetRelation = (RelationTypes)pXML->GetInfoClass(szTextVal);
 	if (m_eTargetRelation == RELATION_NEAR)
 		pXML->GetOptionalChildXmlValByName(&m_iTargetRelationData, L"iTargetDistance");
 	if (pXML->TryMoveToXmlFirstChild(L"Active"))
@@ -175,11 +159,11 @@ bool CvPropertyPropagator::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertyPropagator::copyNonDefaults(CvPropertyPropagator *pProp, CvXMLLoadUtility *pXML)
+void CvPropertyPropagator::copyNonDefaults(CvPropertyPropagator* pProp, CvXMLLoadUtility* pXML)
 {
-//	if (m_eProperty == NO_PROPERTY)
-//		m_eProperty = pProp->getProperty();
-	GC.copyNonDefaultDelayedResolution((int*)&m_eProperty,(int*)&(pProp->m_eProperty));
+	//	if (m_eProperty == NO_PROPERTY)
+	//		m_eProperty = pProp->getProperty();
+	GC.copyNonDefaultDelayedResolution((int*)&m_eProperty, (int*)&(pProp->m_eProperty));
 	if (m_eObjectType == NO_GAMEOBJECT)
 		m_eObjectType = pProp->getObjectType();
 	if (m_eRelation == NO_RELATION)
@@ -194,17 +178,17 @@ void CvPropertyPropagator::copyNonDefaults(CvPropertyPropagator *pProp, CvXMLLoa
 		m_iTargetRelationData = pProp->getTargetRelationData();
 	if (m_pExprActive == NULL)
 	{
-		m_pExprActive = pProp->m_pExprActive;
+		m_pExprActive		 = pProp->m_pExprActive;
 		pProp->m_pExprActive = NULL;
 	}
 	if (m_pExprTargetCondition == NULL)
 	{
-		m_pExprTargetCondition = pProp->m_pExprTargetCondition;
+		m_pExprTargetCondition		  = pProp->m_pExprTargetCondition;
 		pProp->m_pExprTargetCondition = NULL;
 	}
 }
 
-void CvPropertyPropagator::buildDisplayString(CvWStringBuffer &szBuffer) const
+void CvPropertyPropagator::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
 	if ((m_eRelation != NO_RELATION) || (m_pExprActive))
 	{
@@ -224,24 +208,24 @@ void CvPropertyPropagator::buildDisplayString(CvWStringBuffer &szBuffer) const
 	}
 }
 
-void CvPropertyPropagator::getCheckSum(unsigned int &iSum)
+void CvPropertyPropagator::getCheckSum(unsigned int& iSum)
 {
 	CheckSum(iSum, m_eProperty);
 }
 
 
-
-CvPropertyPropagatorSpread::CvPropertyPropagatorSpread() :	CvPropertyPropagator(),
-															m_iPercent(0)
+CvPropertyPropagatorSpread::CvPropertyPropagatorSpread()
+	: CvPropertyPropagator(), m_iPercent(0)
 {
 }
 
-CvPropertyPropagatorSpread::CvPropertyPropagatorSpread(PropertyTypes eProperty) : CvPropertyPropagator(eProperty),
-																				m_iPercent(0)
+CvPropertyPropagatorSpread::CvPropertyPropagatorSpread(PropertyTypes eProperty)
+	: CvPropertyPropagator(eProperty), m_iPercent(0)
 {
 }
 
-CvPropertyPropagatorSpread::CvPropertyPropagatorSpread(PropertyTypes eProperty, int iPercent) : CvPropertyPropagator(eProperty), m_iPercent(iPercent)
+CvPropertyPropagatorSpread::CvPropertyPropagatorSpread(PropertyTypes eProperty, int iPercent)
+	: CvPropertyPropagator(eProperty), m_iPercent(iPercent)
 {
 }
 
@@ -270,10 +254,10 @@ int CvPropertyPropagatorSpread::getPercent()
 void CvPropertyPropagatorSpread::getPredict(std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredict)
 {
 	int iCurrentAmount = aiCurrentAmount[0];
-	aiPredict[0] = 0;
-	for(int iI=1; iI<(int)aiCurrentAmount.size(); iI++)
+	aiPredict[0]	   = 0;
+	for (int iI = 1; iI < (int)aiCurrentAmount.size(); iI++)
 	{
-		int iDiff = iCurrentAmount - aiCurrentAmount[iI];
+		int iDiff	  = iCurrentAmount - aiCurrentAmount[iI];
 		aiPredict[iI] = std::max(0, (iDiff * m_iPercent) / 100);
 	}
 }
@@ -281,8 +265,8 @@ void CvPropertyPropagatorSpread::getPredict(std::vector<int>& aiCurrentAmount, s
 void CvPropertyPropagatorSpread::getCorrect(std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredictedAmount, std::vector<int>& aiCorrect)
 {
 	int iCurrentAmount = aiCurrentAmount[0];
-	aiCorrect[0] = 0;
-	for(int iI=1; iI<(int)aiCurrentAmount.size(); iI++)
+	aiCorrect[0]	   = 0;
+	for (int iI = 1; iI < (int)aiCurrentAmount.size(); iI++)
 	{
 		int iDiff = iCurrentAmount - aiCurrentAmount[iI];
 		if (iDiff < 0)
@@ -292,7 +276,7 @@ void CvPropertyPropagatorSpread::getCorrect(std::vector<int>& aiCurrentAmount, s
 		else
 		{
 			int iPredicted = aiCurrentAmount[iI] + (iDiff * m_iPercent) / 100;
-			int iExtra = aiPredictedAmount[iI] - iPredicted;
+			int iExtra	   = aiPredictedAmount[iI] - iPredicted;
 			if (iExtra > 0)
 			{
 				//use half of extra to base spreading on
@@ -301,13 +285,13 @@ void CvPropertyPropagatorSpread::getCorrect(std::vector<int>& aiCurrentAmount, s
 			}
 			else
 			{
-				aiCorrect[iI] =(iDiff * m_iPercent) / 100;
+				aiCorrect[iI] = (iDiff * m_iPercent) / 100;
 			}
 		}
 	}
 }
 
-void CvPropertyPropagatorSpread::buildDisplayString(CvWStringBuffer &szBuffer) const
+void CvPropertyPropagatorSpread::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
 	CvWString szTemp;
 	szTemp.Format(L"Spreads %d%% %c difference / Turn", m_iPercent, GC.getPropertyInfo(getProperty()).getChar());
@@ -315,14 +299,14 @@ void CvPropertyPropagatorSpread::buildDisplayString(CvWStringBuffer &szBuffer) c
 	CvPropertyPropagator::buildDisplayString(szBuffer);
 }
 
-bool CvPropertyPropagatorSpread::read(CvXMLLoadUtility *pXML)
+bool CvPropertyPropagatorSpread::read(CvXMLLoadUtility* pXML)
 {
 	CvPropertyPropagator::read(pXML);
 	pXML->GetOptionalChildXmlValByName(&m_iPercent, L"iPercent");
 	return true;
 }
 
-void CvPropertyPropagatorSpread::copyNonDefaults(CvPropertyPropagator *pProp, CvXMLLoadUtility *pXML)
+void CvPropertyPropagatorSpread::copyNonDefaults(CvPropertyPropagator* pProp, CvXMLLoadUtility* pXML)
 {
 	CvPropertyPropagator::copyNonDefaults(pProp, pXML);
 	CvPropertyPropagatorSpread* pOther = static_cast<CvPropertyPropagatorSpread*>(pProp);
@@ -330,25 +314,25 @@ void CvPropertyPropagatorSpread::copyNonDefaults(CvPropertyPropagator *pProp, Cv
 		m_iPercent = pOther->getPercent();
 }
 
-void CvPropertyPropagatorSpread::getCheckSum(unsigned int &iSum)
+void CvPropertyPropagatorSpread::getCheckSum(unsigned int& iSum)
 {
 	CvPropertyPropagator::getCheckSum(iSum);
 	CheckSum(iSum, m_iPercent);
 }
 
 
-
-CvPropertyPropagatorGather::CvPropertyPropagatorGather() :	CvPropertyPropagator(),
-															m_iAmountPerTurn(0)
+CvPropertyPropagatorGather::CvPropertyPropagatorGather()
+	: CvPropertyPropagator(), m_iAmountPerTurn(0)
 {
 }
 
-CvPropertyPropagatorGather::CvPropertyPropagatorGather(PropertyTypes eProperty) : CvPropertyPropagator(eProperty),
-																				m_iAmountPerTurn(0)
+CvPropertyPropagatorGather::CvPropertyPropagatorGather(PropertyTypes eProperty)
+	: CvPropertyPropagator(eProperty), m_iAmountPerTurn(0)
 {
 }
 
-CvPropertyPropagatorGather::CvPropertyPropagatorGather(PropertyTypes eProperty, int iAmountPerTurn) : CvPropertyPropagator(eProperty), m_iAmountPerTurn(iAmountPerTurn)
+CvPropertyPropagatorGather::CvPropertyPropagatorGather(PropertyTypes eProperty, int iAmountPerTurn)
+	: CvPropertyPropagator(eProperty), m_iAmountPerTurn(iAmountPerTurn)
 {
 }
 
@@ -365,7 +349,7 @@ int CvPropertyPropagatorGather::getAmountPerTurn()
 void CvPropertyPropagatorGather::getPredict(std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredict)
 {
 	aiPredict[0] = 0;
-	for(int iI=1; iI<(int)aiCurrentAmount.size(); iI++)
+	for (int iI = 1; iI < (int)aiCurrentAmount.size(); iI++)
 	{
 		if (aiCurrentAmount[iI] < m_iAmountPerTurn)
 		{
@@ -383,7 +367,7 @@ void CvPropertyPropagatorGather::getPredict(std::vector<int>& aiCurrentAmount, s
 void CvPropertyPropagatorGather::getCorrect(std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredictedAmount, std::vector<int>& aiCorrect)
 {
 	aiCorrect[0] = 0;
-	for(int iI=1; iI<(int)aiCurrentAmount.size(); iI++)
+	for (int iI = 1; iI < (int)aiCurrentAmount.size(); iI++)
 	{
 		if (aiPredictedAmount[iI] >= 0)
 		{
@@ -408,7 +392,7 @@ void CvPropertyPropagatorGather::getCorrect(std::vector<int>& aiCurrentAmount, s
 	}
 }
 
-void CvPropertyPropagatorGather::buildDisplayString(CvWStringBuffer &szBuffer) const
+void CvPropertyPropagatorGather::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
 	CvWString szTemp;
 	szTemp.Format(L"Gathers %d %c / Turn", m_iAmountPerTurn, GC.getPropertyInfo(getProperty()).getChar());
@@ -416,14 +400,14 @@ void CvPropertyPropagatorGather::buildDisplayString(CvWStringBuffer &szBuffer) c
 	CvPropertyPropagator::buildDisplayString(szBuffer);
 }
 
-bool CvPropertyPropagatorGather::read(CvXMLLoadUtility *pXML)
+bool CvPropertyPropagatorGather::read(CvXMLLoadUtility* pXML)
 {
 	CvPropertyPropagator::read(pXML);
 	pXML->GetOptionalChildXmlValByName(&m_iAmountPerTurn, L"iAmountPerTurn");
 	return true;
 }
 
-void CvPropertyPropagatorGather::copyNonDefaults(CvPropertyPropagator *pProp, CvXMLLoadUtility *pXML)
+void CvPropertyPropagatorGather::copyNonDefaults(CvPropertyPropagator* pProp, CvXMLLoadUtility* pXML)
 {
 	CvPropertyPropagator::copyNonDefaults(pProp, pXML);
 	CvPropertyPropagatorGather* pOther = static_cast<CvPropertyPropagatorGather*>(pProp);
@@ -431,24 +415,25 @@ void CvPropertyPropagatorGather::copyNonDefaults(CvPropertyPropagator *pProp, Cv
 		m_iAmountPerTurn = pOther->getAmountPerTurn();
 }
 
-void CvPropertyPropagatorGather::getCheckSum(unsigned int &iSum)
+void CvPropertyPropagatorGather::getCheckSum(unsigned int& iSum)
 {
 	CvPropertyPropagator::getCheckSum(iSum);
 	CheckSum(iSum, m_iAmountPerTurn);
 }
 
 
-CvPropertyPropagatorDiffuse::CvPropertyPropagatorDiffuse() :	CvPropertyPropagator(),
-															m_iPercent(0)
+CvPropertyPropagatorDiffuse::CvPropertyPropagatorDiffuse()
+	: CvPropertyPropagator(), m_iPercent(0)
 {
 }
 
-CvPropertyPropagatorDiffuse::CvPropertyPropagatorDiffuse(PropertyTypes eProperty) : CvPropertyPropagator(eProperty),
-																				m_iPercent(0)
+CvPropertyPropagatorDiffuse::CvPropertyPropagatorDiffuse(PropertyTypes eProperty)
+	: CvPropertyPropagator(eProperty), m_iPercent(0)
 {
 }
 
-CvPropertyPropagatorDiffuse::CvPropertyPropagatorDiffuse(PropertyTypes eProperty, int iPercent) : CvPropertyPropagator(eProperty), m_iPercent(iPercent)
+CvPropertyPropagatorDiffuse::CvPropertyPropagatorDiffuse(PropertyTypes eProperty, int iPercent)
+	: CvPropertyPropagator(eProperty), m_iPercent(iPercent)
 {
 }
 
@@ -477,11 +462,11 @@ int CvPropertyPropagatorDiffuse::getPercent()
 void CvPropertyPropagatorDiffuse::getPredict(std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredict)
 {
 	int iCurrentAmount = aiCurrentAmount[0];
-	aiPredict[0] = 0;
-	for(int iI=1; iI<(int)aiCurrentAmount.size(); iI++)
+	aiPredict[0]	   = 0;
+	for (int iI = 1; iI < (int)aiCurrentAmount.size(); iI++)
 	{
-		int iDiff = iCurrentAmount - aiCurrentAmount[iI];
-		int iChange = std::max(0, (iDiff * m_iPercent) / 100);
+		int iDiff	  = iCurrentAmount - aiCurrentAmount[iI];
+		int iChange	  = std::max(0, (iDiff * m_iPercent) / 100);
 		aiPredict[iI] = iChange;
 		aiPredict[0] -= iChange;
 	}
@@ -489,12 +474,12 @@ void CvPropertyPropagatorDiffuse::getPredict(std::vector<int>& aiCurrentAmount, 
 
 void CvPropertyPropagatorDiffuse::getCorrect(std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredictedAmount, std::vector<int>& aiCorrect)
 {
-	int iCurrentAmount = aiCurrentAmount[0];
-	int iPredictedAmount = aiPredictedAmount[0];
-	int iPredictedSelf = 0;
+	int iCurrentAmount		= aiCurrentAmount[0];
+	int iPredictedAmount	= aiPredictedAmount[0];
+	int iPredictedSelf		= 0;
 	int iPredictedTotalSelf = iPredictedAmount - iCurrentAmount;
-	aiCorrect[0] = 0;
-	for(int iI=1; iI<(int)aiCurrentAmount.size(); iI++)
+	aiCorrect[0]			= 0;
+	for (int iI = 1; iI < (int)aiCurrentAmount.size(); iI++)
 	{
 		int iDiff = iCurrentAmount - aiCurrentAmount[iI];
 		if (iDiff < 0)
@@ -503,7 +488,7 @@ void CvPropertyPropagatorDiffuse::getCorrect(std::vector<int>& aiCurrentAmount, 
 		}
 		else
 		{
-			int iChange = (iDiff * m_iPercent) / 100;
+			int iChange	   = (iDiff * m_iPercent) / 100;
 			int iPredicted = aiCurrentAmount[iI] + iChange;
 			iPredictedSelf -= iChange;
 			int iExtra = aiPredictedAmount[iI] - iPredicted;
@@ -512,13 +497,13 @@ void CvPropertyPropagatorDiffuse::getCorrect(std::vector<int>& aiCurrentAmount, 
 				//use half of extra to base diffusion on
 				iDiff -= iExtra / 2;
 			}
-			
-			iChange = std::max(0, (iDiff * m_iPercent) / 100);
+
+			iChange		  = std::max(0, (iDiff * m_iPercent) / 100);
 			aiCorrect[iI] = iChange;
 			aiCorrect[0] -= iChange;
 		}
 	}
-	
+
 	if (iPredictedTotalSelf < iPredictedSelf)
 	{
 		int iSelfChangeByOthers = iPredictedTotalSelf - iPredictedSelf;
@@ -527,7 +512,7 @@ void CvPropertyPropagatorDiffuse::getCorrect(std::vector<int>& aiCurrentAmount, 
 
 		aiCorrect[0] = 0;
 
-		for(int iI=1; iI<(int)aiCurrentAmount.size(); iI++)
+		for (int iI = 1; iI < (int)aiCurrentAmount.size(); iI++)
 		{
 			int iDiff = iAssumedAmount - aiCurrentAmount[iI];
 			if (iDiff < 0)
@@ -536,16 +521,16 @@ void CvPropertyPropagatorDiffuse::getCorrect(std::vector<int>& aiCurrentAmount, 
 			}
 			else
 			{
-				int iChange = (iDiff * m_iPercent) / 100;
+				int iChange	   = (iDiff * m_iPercent) / 100;
 				int iPredicted = aiCurrentAmount[iI] + iChange;
-				int iExtra = aiPredictedAmount[iI] - iPredicted;
+				int iExtra	   = aiPredictedAmount[iI] - iPredicted;
 				if (iExtra > 0)
 				{
 					//use half of extra to base diffusion on
 					iDiff -= iExtra / 2;
 				}
-				
-				iChange = std::max(0, (iDiff * m_iPercent) / 100);
+
+				iChange		  = std::max(0, (iDiff * m_iPercent) / 100);
 				aiCorrect[iI] = iChange;
 				aiCorrect[0] -= iChange;
 			}
@@ -553,7 +538,7 @@ void CvPropertyPropagatorDiffuse::getCorrect(std::vector<int>& aiCurrentAmount, 
 	}
 }
 
-void CvPropertyPropagatorDiffuse::buildDisplayString(CvWStringBuffer &szBuffer) const
+void CvPropertyPropagatorDiffuse::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
 	CvWString szTemp;
 	szTemp.Format(L"%d%% %c diffusion / Turn", m_iPercent, GC.getPropertyInfo(getProperty()).getChar());
@@ -561,14 +546,14 @@ void CvPropertyPropagatorDiffuse::buildDisplayString(CvWStringBuffer &szBuffer) 
 	CvPropertyPropagator::buildDisplayString(szBuffer);
 }
 
-bool CvPropertyPropagatorDiffuse::read(CvXMLLoadUtility *pXML)
+bool CvPropertyPropagatorDiffuse::read(CvXMLLoadUtility* pXML)
 {
 	CvPropertyPropagator::read(pXML);
 	pXML->GetOptionalChildXmlValByName(&m_iPercent, L"iPercent");
 	return true;
 }
 
-void CvPropertyPropagatorDiffuse::copyNonDefaults(CvPropertyPropagator *pProp, CvXMLLoadUtility *pXML)
+void CvPropertyPropagatorDiffuse::copyNonDefaults(CvPropertyPropagator* pProp, CvXMLLoadUtility* pXML)
 {
 	CvPropertyPropagator::copyNonDefaults(pProp, pXML);
 	CvPropertyPropagatorDiffuse* pOther = static_cast<CvPropertyPropagatorDiffuse*>(pProp);
@@ -576,7 +561,7 @@ void CvPropertyPropagatorDiffuse::copyNonDefaults(CvPropertyPropagator *pProp, C
 		m_iPercent = pOther->getPercent();
 }
 
-void CvPropertyPropagatorDiffuse::getCheckSum(unsigned int &iSum)
+void CvPropertyPropagatorDiffuse::getCheckSum(unsigned int& iSum)
 {
 	CvPropertyPropagator::getCheckSum(iSum);
 	CheckSum(iSum, m_iPercent);

@@ -1,7 +1,7 @@
 //
 //	FILE:	 CyMapGenerator.h
 //	AUTHOR:  Mustafa Thamer
-//	PURPOSE: 
+//	PURPOSE:
 //			Python wrapper class for CvMapGenerator
 //
 //-----------------------------------------------------------------------------
@@ -13,21 +13,23 @@
 #include "CyMapGenerator.h"
 #include "CvMapGenerator.h"
 
-CyMapGenerator::CyMapGenerator() : m_pMapGenerator(NULL)
+CyMapGenerator::CyMapGenerator()
+	: m_pMapGenerator(NULL)
 {
 	m_pMapGenerator = &CvMapGenerator::GetInstance();
 }
 
-CyMapGenerator::CyMapGenerator(CvMapGenerator* pMapGenerator) : m_pMapGenerator(pMapGenerator)
+CyMapGenerator::CyMapGenerator(CvMapGenerator* pMapGenerator)
+	: m_pMapGenerator(pMapGenerator)
 {
 }
 
-bool CyMapGenerator::canPlaceBonusAt(int /*BonusTypes*/ eBonus, int iX, int iY, bool bIgnoreLatitude)	 
+bool CyMapGenerator::canPlaceBonusAt(int /*BonusTypes*/ eBonus, int iX, int iY, bool bIgnoreLatitude)
 {
 	return m_pMapGenerator ? m_pMapGenerator->canPlaceBonusAt((BonusTypes)eBonus, iX, iY, bIgnoreLatitude) : false;
 }
 
-bool CyMapGenerator::canPlaceGoodyAt(int /*ImprovementTypes*/ eImprovement, int iX, int iY)	 
+bool CyMapGenerator::canPlaceGoodyAt(int /*ImprovementTypes*/ eImprovement, int iX, int iY)
 {
 	return m_pMapGenerator ? m_pMapGenerator->canPlaceGoodyAt((ImprovementTypes)eImprovement, iX, iY) : false;
 }
@@ -144,5 +146,5 @@ void CyMapGenerator::setPlotTypes(boost::python::list& listPlotTypes)
 	int* paiPlotTypes = NULL;
 	gDLL->getPythonIFace()->putSeqInArray(listPlotTypes.ptr() /*src*/, &paiPlotTypes /*dst*/);
 	m_pMapGenerator->setPlotTypes(paiPlotTypes);
-	delete [] paiPlotTypes;
+	delete[] paiPlotTypes;
 }

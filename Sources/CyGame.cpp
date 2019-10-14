@@ -1,24 +1,25 @@
 //
-// Python wrapper class for CvGame 
-// 
+// Python wrapper class for CvGame
+//
 
 #include "CvGameCoreDLL.h"
 #include "CyReplayInfo.h"
 #include "CvReplayInfo.h"
 
-CyGame::CyGame() : m_pGame(NULL)
+CyGame::CyGame()
+	: m_pGame(NULL)
 {
 	m_pGame = &GC.getGameINLINE();
 }
 
-CyGame::CyGame(CvGame* pGame) : m_pGame(pGame)
+CyGame::CyGame(CvGame* pGame)
+	: m_pGame(pGame)
 {
-
 }
 
-CyGame::CyGame(CvGameAI* pGame) : m_pGame(pGame)
+CyGame::CyGame(CvGameAI* pGame)
+	: m_pGame(pGame)
 {
-
 }
 
 /************************************************************************************************/
@@ -33,7 +34,7 @@ bool CyGame::isMultiplayer()
 /************************************************************************************************/
 /* REVOLUTION_MOD                          END                                                  */
 /************************************************************************************************/
-	
+
 void CyGame::updateScore(bool bForce)
 {
 	if (m_pGame)
@@ -91,57 +92,57 @@ int CyGame::getSymbolID(int iSymbol)
 
 int CyGame::getProductionPerPopulation(int /*HurryTypes*/ eHurry)
 {
-	return m_pGame ? m_pGame->getProductionPerPopulation((HurryTypes) eHurry) : -1;
+	return m_pGame ? m_pGame->getProductionPerPopulation((HurryTypes)eHurry) : -1;
 }
 
 int CyGame::getAdjustedPopulationPercent(int /*VictoryTypes*/ eVictory)
 {
-	return m_pGame ? m_pGame->getAdjustedPopulationPercent((VictoryTypes) eVictory) : -1;
+	return m_pGame ? m_pGame->getAdjustedPopulationPercent((VictoryTypes)eVictory) : -1;
 }
 
 int CyGame::getAdjustedLandPercent(int /* VictoryTypes*/ eVictory)
 {
-	return m_pGame ? m_pGame->getAdjustedLandPercent((VictoryTypes) eVictory) : -1;
+	return m_pGame ? m_pGame->getAdjustedLandPercent((VictoryTypes)eVictory) : -1;
 }
 
 bool CyGame::isTeamVote(int /*VoteTypes*/ eVote) const
 {
-	return m_pGame ? m_pGame->isTeamVote((VoteTypes) eVote) : false;
+	return m_pGame ? m_pGame->isTeamVote((VoteTypes)eVote) : false;
 }
 
 bool CyGame::isChooseElection(int /*VoteTypes*/ eVote) const
 {
-	return m_pGame ? m_pGame->isChooseElection((VoteTypes) eVote) : false;
+	return m_pGame ? m_pGame->isChooseElection((VoteTypes)eVote) : false;
 }
 
 bool CyGame::isTeamVoteEligible(int /*TeamTypes*/ eTeam, int /*VoteSourceTypes*/ eVoteSource) const
 {
-	return m_pGame ? m_pGame->isTeamVoteEligible((TeamTypes) eTeam, (VoteSourceTypes)eVoteSource) : false;
+	return m_pGame ? m_pGame->isTeamVoteEligible((TeamTypes)eTeam, (VoteSourceTypes)eVoteSource) : false;
 }
 
 int CyGame::countPossibleVote(int /*VoteTypes*/ eVote, int /*VoteSourceTypes*/ eVoteSource) const
 {
-	return m_pGame ? m_pGame->countPossibleVote((VoteTypes) eVote, (VoteSourceTypes)eVoteSource) : -1;
+	return m_pGame ? m_pGame->countPossibleVote((VoteTypes)eVote, (VoteSourceTypes)eVoteSource) : -1;
 }
 
 int CyGame::getVoteRequired(int /*VoteTypes*/ eVote, int /*VoteSourceTypes*/ eVoteSource) const
 {
-	return m_pGame ? (int)m_pGame->getVoteRequired((VoteTypes)eVote, (VoteSourceTypes) eVoteSource) : -1;
+	return m_pGame ? (int)m_pGame->getVoteRequired((VoteTypes)eVote, (VoteSourceTypes)eVoteSource) : -1;
 }
 
 int CyGame::getSecretaryGeneral(int /*VoteSourceTypes*/ eVoteSource) const
 {
-	return m_pGame ? (int)m_pGame->getSecretaryGeneral((VoteSourceTypes) eVoteSource) : -1;
+	return m_pGame ? (int)m_pGame->getSecretaryGeneral((VoteSourceTypes)eVoteSource) : -1;
 }
 
 bool CyGame::canHaveSecretaryGeneral(int /*VoteSourceTypes*/ eVoteSource) const
 {
-	return m_pGame ? (int)m_pGame->canHaveSecretaryGeneral((VoteSourceTypes) eVoteSource) : -1;
+	return m_pGame ? (int)m_pGame->canHaveSecretaryGeneral((VoteSourceTypes)eVoteSource) : -1;
 }
 
 int CyGame::getVoteSourceReligion(int /*VoteSourceTypes*/ eVoteSource) const
 {
-	return m_pGame ? (int)m_pGame->getVoteSourceReligion((VoteSourceTypes) eVoteSource) : -1;
+	return m_pGame ? (int)m_pGame->getVoteSourceReligion((VoteSourceTypes)eVoteSource) : -1;
 }
 
 void CyGame::setVoteSourceReligion(int /*VoteSourceTypes*/ eVoteSource, int /*ReligionTypes*/ eReligion, bool bAnnounce)
@@ -189,27 +190,27 @@ int CyGame::countTotalNukeUnits()
 
 int CyGame::countKnownTechNumTeams(int /*TechTypes*/ eTech)
 {
-	return m_pGame ? m_pGame->countKnownTechNumTeams((TechTypes) eTech) : -1;
+	return m_pGame ? m_pGame->countKnownTechNumTeams((TechTypes)eTech) : -1;
 }
 
 int CyGame::getNumFreeBonuses(int /*BuildingTypes*/ eBuilding)
 {
-	return m_pGame ? m_pGame->getNumFreeBonuses((BuildingTypes) eBuilding) : -1;
+	return m_pGame ? m_pGame->getNumFreeBonuses((BuildingTypes)eBuilding) : -1;
 }
 
 int CyGame::countReligionLevels(int /*ReligionTypes*/ eReligion)
 {
-	return m_pGame ? m_pGame->countReligionLevels((ReligionTypes) eReligion) : -1;
+	return m_pGame ? m_pGame->countReligionLevels((ReligionTypes)eReligion) : -1;
 }
 
 int CyGame::countCorporationLevels(int /*CorporationTypes*/ eCorporation)
 {
-	return m_pGame ? m_pGame->countCorporationLevels((CorporationTypes) eCorporation) : -1;
+	return m_pGame ? m_pGame->countCorporationLevels((CorporationTypes)eCorporation) : -1;
 }
 
 int CyGame::calculateReligionPercent(int /*ReligionTypes*/ eReligion)
 {
-	return m_pGame ? m_pGame->calculateReligionPercent((ReligionTypes) eReligion) : -1;
+	return m_pGame ? m_pGame->calculateReligionPercent((ReligionTypes)eReligion) : -1;
 }
 
 int CyGame::goldenAgeLength()
@@ -224,7 +225,7 @@ int CyGame::victoryDelay(int iVictory)
 
 int CyGame::getImprovementUpgradeTime(int /*ImprovementTypes*/ eImprovement)
 {
-	return m_pGame ? m_pGame->getImprovementUpgradeTime((ImprovementTypes) eImprovement) : -1;
+	return m_pGame ? m_pGame->getImprovementUpgradeTime((ImprovementTypes)eImprovement) : -1;
 }
 
 bool CyGame::canTrainNukes()
@@ -239,24 +240,24 @@ bool CyGame::canTrainNukes()
 /************************************************************************************************/
 int CyGame::getHighestEra()
 {
-	return m_pGame ? (int) m_pGame->getHighestEra() : (int) NO_ERA;
+	return m_pGame ? (int)m_pGame->getHighestEra() : (int)NO_ERA;
 }
 /************************************************************************************************/
 /* New World Logic                 END                                                          */
 /************************************************************************************************/
 int CyGame::getCurrentEra()
 {
-	return m_pGame ? (int) m_pGame->getCurrentEra() : (int) NO_ERA;
+	return m_pGame ? (int)m_pGame->getCurrentEra() : (int)NO_ERA;
 }
 
 int CyGame::getActiveTeam()
 {
-	return m_pGame ? (int) m_pGame->getActiveTeam() : (int) NO_TEAM;
+	return m_pGame ? (int)m_pGame->getActiveTeam() : (int)NO_TEAM;
 }
 
 int /* CivilizationTypes */ CyGame::getActiveCivilizationType()
 {
-	return m_pGame ? (int) m_pGame->getActiveCivilizationType() : (int) NO_CIVILIZATION;
+	return m_pGame ? (int)m_pGame->getActiveCivilizationType() : (int)NO_CIVILIZATION;
 }
 
 bool CyGame::isNetworkMultiPlayer()
@@ -276,7 +277,7 @@ bool CyGame::isTeamGame()
 
 bool CyGame::isModem()
 {
-	return m_pGame ? m_pGame->isModem() : true;	// err on the side of caution
+	return m_pGame ? m_pGame->isModem() : true; // err on the side of caution
 }
 
 void CyGame::setModem(bool bModem)
@@ -323,12 +324,12 @@ void CyGame::setGameTurn(int iNewValue)
 
 int CyGame::getTurnYear(int iGameTurn)
 {
-	return  m_pGame ? m_pGame->getTurnYear(iGameTurn) : -1;
+	return m_pGame ? m_pGame->getTurnYear(iGameTurn) : -1;
 }
 
 int CyGame::getGameTurnYear()
 {
-	return  m_pGame ? m_pGame->getGameTurnYear() : -1;
+	return m_pGame ? m_pGame->getGameTurnYear() : -1;
 }
 
 int CyGame::getElapsedGameTurns()
@@ -708,7 +709,7 @@ bool CyGame::isFinalInitialized()
 	return m_pGame ? m_pGame->isFinalInitialized() : false;
 }
 
-int /*PlayerTypes*/ CyGame::getActivePlayer() 
+int /*PlayerTypes*/ CyGame::getActivePlayer()
 {
 	return m_pGame ? (int)m_pGame->getActivePlayer() : -1;
 }
@@ -729,12 +730,12 @@ bool CyGame::isPaused()
 	return m_pGame ? m_pGame->isPaused() : false;
 }
 
-int /*PlayerTypes*/ CyGame::getBestLandUnit() 
+int /*PlayerTypes*/ CyGame::getBestLandUnit()
 {
 	return m_pGame ? (int)m_pGame->getBestLandUnit() : -1;
 }
 
-int CyGame::getBestLandUnitCombat() 
+int CyGame::getBestLandUnitCombat()
 {
 	return m_pGame ? m_pGame->getBestLandUnitCombat() : -1;
 }
@@ -753,12 +754,12 @@ bool CyGame::getDiplomaticVictoryAchieved(int playaID)
 //Sevo End VCM
 #endif
 
-int /*TeamTypes*/ CyGame::getWinner() 
+int /*TeamTypes*/ CyGame::getWinner()
 {
 	return m_pGame ? (int)m_pGame->getWinner() : -1;
 }
 
-int /*VictoryTypes*/ CyGame::getVictory() 
+int /*VictoryTypes*/ CyGame::getVictory()
 {
 	return m_pGame ? (int)m_pGame->getVictory() : -1;
 }
@@ -766,17 +767,17 @@ int /*VictoryTypes*/ CyGame::getVictory()
 void CyGame::setWinner(int /*TeamTypes*/ eNewWinner, int /*VictoryTypes*/ eNewVictory)
 {
 	if (m_pGame)
-		m_pGame->setWinner((TeamTypes) eNewWinner, (VictoryTypes) eNewVictory);
+		m_pGame->setWinner((TeamTypes)eNewWinner, (VictoryTypes)eNewVictory);
 }
 
-int /*GameStateTypes*/ CyGame::getGameState() 
+int /*GameStateTypes*/ CyGame::getGameState()
 {
 	return m_pGame ? (int)m_pGame->getGameState() : -1;
 }
 
 int /* HandicapTypes */ CyGame::getHandicapType()
 {
-	return m_pGame ? (int) m_pGame->getHandicapType() : (int) NO_HANDICAP;
+	return m_pGame ? (int)m_pGame->getHandicapType() : (int)NO_HANDICAP;
 }
 
 CalendarTypes CyGame::getCalendar() const
@@ -860,9 +861,9 @@ bool CyGame::isUnitClassMaxedOut(int /*UnitClassTypes*/ eIndex, int iExtra)
 	return m_pGame ? m_pGame->isUnitClassMaxedOut((UnitClassTypes)eIndex, iExtra) : -1;
 }
 
-int CyGame::getBuildingClassCreatedCount(int /*BuildingClassTypes*/ eIndex) 
+int CyGame::getBuildingClassCreatedCount(int /*BuildingClassTypes*/ eIndex)
 {
-	return m_pGame ? m_pGame->getBuildingClassCreatedCount((BuildingClassTypes) eIndex) : -1;
+	return m_pGame ? m_pGame->getBuildingClassCreatedCount((BuildingClassTypes)eIndex) : -1;
 }
 
 bool CyGame::isBuildingClassMaxedOut(int /*BuildingClassTypes*/ eIndex, int iExtra)
@@ -870,9 +871,9 @@ bool CyGame::isBuildingClassMaxedOut(int /*BuildingClassTypes*/ eIndex, int iExt
 	return m_pGame ? m_pGame->isBuildingClassMaxedOut((BuildingClassTypes)eIndex, iExtra) : false;
 }
 
-int CyGame::getProjectCreatedCount(int /*ProjectTypes*/ eIndex) 
+int CyGame::getProjectCreatedCount(int /*ProjectTypes*/ eIndex)
 {
-	return m_pGame ? m_pGame->getProjectCreatedCount((ProjectTypes) eIndex) : -1;
+	return m_pGame ? m_pGame->getProjectCreatedCount((ProjectTypes)eIndex) : -1;
 }
 
 bool CyGame::isProjectMaxedOut(int /*ProjectTypes*/ eIndex, int iExtra)
@@ -880,9 +881,9 @@ bool CyGame::isProjectMaxedOut(int /*ProjectTypes*/ eIndex, int iExtra)
 	return m_pGame ? m_pGame->isProjectMaxedOut((ProjectTypes)eIndex, iExtra) : false;
 }
 
-int CyGame::getForceCivicCount(int /*CivicTypes*/ eIndex) 
+int CyGame::getForceCivicCount(int /*CivicTypes*/ eIndex)
 {
-	return m_pGame ? m_pGame->getForceCivicCount((CivicTypes) eIndex) : -1;
+	return m_pGame ? m_pGame->getForceCivicCount((CivicTypes)eIndex) : -1;
 }
 
 bool CyGame::isForceCivic(int /*CivicTypes*/ eIndex)
@@ -895,24 +896,24 @@ bool CyGame::isForceCivicOption(int /*CivicOptionTypes*/ eCivicOption)
 	return m_pGame ? m_pGame->isForceCivicOption((CivicOptionTypes)eCivicOption) : false;
 }
 
-int CyGame::getVoteOutcome(int /*VoteTypes*/ eIndex) 
+int CyGame::getVoteOutcome(int /*VoteTypes*/ eIndex)
 {
-	return m_pGame ? m_pGame->getVoteOutcome((VoteTypes) eIndex) : NO_PLAYER_VOTE;
+	return m_pGame ? m_pGame->getVoteOutcome((VoteTypes)eIndex) : NO_PLAYER_VOTE;
 }
 
 int CyGame::getReligionGameTurnFounded(int /*ReligionTypes*/ eIndex)
 {
-	return m_pGame ? m_pGame->getReligionGameTurnFounded((ReligionTypes) eIndex) : -1;
+	return m_pGame ? m_pGame->getReligionGameTurnFounded((ReligionTypes)eIndex) : -1;
 }
 
 bool CyGame::isReligionFounded(int /*ReligionTypes*/ eIndex)
 {
-	return m_pGame ? m_pGame->isReligionFounded((ReligionTypes) eIndex) : false;
+	return m_pGame ? m_pGame->isReligionFounded((ReligionTypes)eIndex) : false;
 }
 
 bool CyGame::isReligionSlotTaken(int /*ReligionTypes*/ eIndex)
 {
-	return m_pGame ? m_pGame->isReligionSlotTaken((ReligionTypes) eIndex) : false;
+	return m_pGame ? m_pGame->isReligionSlotTaken((ReligionTypes)eIndex) : false;
 }
 
 /************************************************************************************************/
@@ -937,7 +938,7 @@ int CyGame::countNumReligionTechsDiscovered()
 
 bool CyGame::isTechCanFoundReligion(int /*TechTypes*/ eIndex)
 {
-	return m_pGame ? m_pGame->isTechCanFoundReligion((TechTypes) eIndex) : false;
+	return m_pGame ? m_pGame->isTechCanFoundReligion((TechTypes)eIndex) : false;
 }
 /************************************************************************************************/
 /* LIMITED_RELIGIONS               END                                                          */
@@ -945,12 +946,12 @@ bool CyGame::isTechCanFoundReligion(int /*TechTypes*/ eIndex)
 
 int CyGame::getCorporationGameTurnFounded(int /*CorporationTypes*/ eIndex)
 {
-	return m_pGame ? m_pGame->getCorporationGameTurnFounded((CorporationTypes) eIndex) : -1;
+	return m_pGame ? m_pGame->getCorporationGameTurnFounded((CorporationTypes)eIndex) : -1;
 }
 
 bool CyGame::isCorporationFounded(int /*CorporationTypes*/ eIndex)
 {
-	return m_pGame ? m_pGame->isCorporationFounded((CorporationTypes) eIndex) : false;
+	return m_pGame ? m_pGame->isCorporationFounded((CorporationTypes)eIndex) : false;
 }
 
 bool CyGame::isVotePassed(int /*VoteTypes*/ eIndex) const
@@ -971,7 +972,7 @@ bool CyGame::isSpecialUnitValid(int /*SpecialUnitTypes*/ eSpecialUnitType)
 void CyGame::makeSpecialUnitValid(int /*SpecialUnitTypes*/ eSpecialUnitType)
 {
 	if (m_pGame)
-		m_pGame->makeSpecialUnitValid((SpecialUnitTypes) eSpecialUnitType);
+		m_pGame->makeSpecialUnitValid((SpecialUnitTypes)eSpecialUnitType);
 }
 
 bool CyGame::isSpecialBuildingValid(int /*SpecialBuildingTypes*/ eIndex)
@@ -982,7 +983,7 @@ bool CyGame::isSpecialBuildingValid(int /*SpecialBuildingTypes*/ eIndex)
 void CyGame::makeSpecialBuildingValid(int /*SpecialBuildingTypes*/ eIndex)
 {
 	if (m_pGame)
-		m_pGame->makeSpecialBuildingValid((SpecialBuildingTypes) eIndex);
+		m_pGame->makeSpecialBuildingValid((SpecialBuildingTypes)eIndex);
 }
 
 //TB Nukefix (Reversal) The following 2 classes should be commented out
@@ -1004,41 +1005,41 @@ bool CyGame::isInAdvancedStart()
 
 CyCity* CyGame::getHolyCity(int /*ReligionTypes*/ eIndex)
 {
-	return m_pGame ? new CyCity(m_pGame->getHolyCity((ReligionTypes) eIndex)) : NULL;
+	return m_pGame ? new CyCity(m_pGame->getHolyCity((ReligionTypes)eIndex)) : NULL;
 }
 
 void CyGame::setHolyCity(int /*ReligionTypes*/ eIndex, CyCity* pNewValue, bool bAnnounce)
 {
 	if (m_pGame)
-		m_pGame->setHolyCity((ReligionTypes) eIndex, pNewValue->getCity(), bAnnounce);
+		m_pGame->setHolyCity((ReligionTypes)eIndex, pNewValue->getCity(), bAnnounce);
 }
 
 void CyGame::clearHolyCity(int /*ReligionTypes*/ eIndex)
 {
 	if (m_pGame)
-		m_pGame->setHolyCity((ReligionTypes) eIndex, NULL, false);
+		m_pGame->setHolyCity((ReligionTypes)eIndex, NULL, false);
 }
 
 CyCity* CyGame::getHeadquarters(int /*CorporationTypes*/ eIndex)
 {
-	return m_pGame ? new CyCity(m_pGame->getHeadquarters((CorporationTypes) eIndex)) : NULL;
+	return m_pGame ? new CyCity(m_pGame->getHeadquarters((CorporationTypes)eIndex)) : NULL;
 }
 
 void CyGame::setHeadquarters(int /*CorporationTypes*/ eIndex, CyCity* pNewValue, bool bAnnounce)
 {
 	if (m_pGame)
-		m_pGame->setHeadquarters((CorporationTypes) eIndex, pNewValue->getCity(), bAnnounce);
+		m_pGame->setHeadquarters((CorporationTypes)eIndex, pNewValue->getCity(), bAnnounce);
 }
 
 void CyGame::clearHeadquarters(int /*CorporationTypes*/ eIndex)
 {
 	if (m_pGame)
-		m_pGame->setHeadquarters((CorporationTypes) eIndex, NULL, false);
+		m_pGame->setHeadquarters((CorporationTypes)eIndex, NULL, false);
 }
 
 int CyGame::getPlayerVote(int /*PlayerTypes*/ eOwnerIndex, int iVoteId)
 {
-	return m_pGame ? m_pGame->getPlayerVote((PlayerTypes) eOwnerIndex, iVoteId) : NO_PLAYER_VOTE;
+	return m_pGame ? m_pGame->getPlayerVote((PlayerTypes)eOwnerIndex, iVoteId) : NO_PLAYER_VOTE;
 }
 
 std::string CyGame::getScriptData() const
@@ -1063,12 +1064,12 @@ std::wstring CyGame::getName()
 	return m_pGame ? m_pGame->getName() : "";
 }
 
-int CyGame::getIndexAfterLastDeal() 
+int CyGame::getIndexAfterLastDeal()
 {
 	return m_pGame ? m_pGame->getIndexAfterLastDeal() : -1;
 }
 
-int CyGame::getNumDeals() 
+int CyGame::getNumDeals()
 {
 	return m_pGame ? m_pGame->getNumDeals() : -1;
 }
@@ -1111,7 +1112,7 @@ CvRandom& CyGame::getMapRand()
 	return (m_pGame->getMapRand());
 }
 
-int CyGame::getMapRandNum(int iNum, TCHAR* pszLog) 
+int CyGame::getMapRandNum(int iNum, TCHAR* pszLog)
 {
 	return m_pGame ? m_pGame->getMapRandNum(iNum, pszLog) : -1;
 }
@@ -1122,7 +1123,7 @@ CvRandom& CyGame::getSorenRand()
 	return (m_pGame->getSorenRand());
 }
 
-int CyGame::getSorenRandNum(int iNum, TCHAR* pszLog) 
+int CyGame::getSorenRandNum(int iNum, TCHAR* pszLog)
 {
 	return m_pGame ? m_pGame->getSorenRandNum(iNum, pszLog) : -1;
 }
@@ -1139,22 +1140,22 @@ int CyGame::calculateOptionsChecksum()
 
 // JS - can't access protected member declared in class CvGame
 
-bool CyGame::GetWorldBuilderMode() const				// remove once CvApp is exposed
+bool CyGame::GetWorldBuilderMode() const // remove once CvApp is exposed
 {
 	return gDLL->GetWorldBuilderMode();
 }
 
-bool CyGame::isPitbossHost() const				// remove once CvApp is exposed
+bool CyGame::isPitbossHost() const // remove once CvApp is exposed
 {
 	return gDLL->IsPitbossHost();
 }
 
-int CyGame::getCurrentLanguage() const				// remove once CvApp is exposed
+int CyGame::getCurrentLanguage() const // remove once CvApp is exposed
 {
 	return gDLL->getCurrentLanguage();
 }
 
-void CyGame::setCurrentLanguage(int iNewLanguage)			// remove once CvApp is exposed
+void CyGame::setCurrentLanguage(int iNewLanguage) // remove once CvApp is exposed
 {
 	gDLL->setCurrentLanguage(iNewLanguage);
 }
@@ -1230,7 +1231,7 @@ void CyGame::addPlayer(int eNewPlayer, int eLeader, int eCiv, bool bSetAlive)
 	}
 }
 
-void CyGame::changeHumanPlayer( int eOldHuman, int eNewHuman )
+void CyGame::changeHumanPlayer(int eOldHuman, int eNewHuman)
 {
 	if (m_pGame)
 	{
@@ -1240,14 +1241,14 @@ void CyGame::changeHumanPlayer( int eOldHuman, int eNewHuman )
 
 void CyGame::logw(std::wstring str)
 {
-	if(m_pGame)
+	if (m_pGame)
 	{
 		m_pGame->logMsg((TCHAR*)(CvString(str) + "\n").c_str());
 	}
 }
 void CyGame::log(TCHAR* str)
 {
-	if(m_pGame)
+	if (m_pGame)
 	{
 		m_pGame->logMsg(str);
 	}
@@ -1255,7 +1256,7 @@ void CyGame::log(TCHAR* str)
 
 void CyGame::addReplayMessage(int /*ReplayMessageTypes*/ eType, int /*PlayerTypes*/ ePlayer, std::wstring pszText, int iPlotX, int iPlotY, int /*ColorTypes*/ eColor)
 {
-	if(m_pGame)
+	if (m_pGame)
 	{
 		m_pGame->addReplayMessage((ReplayMessageTypes)eType, (PlayerTypes)ePlayer, pszText, iPlotX, iPlotY, (ColorTypes)eColor);
 	}
@@ -1282,7 +1283,7 @@ void CyGame::drawBattleEffects()
 
 int CyGame::getCultureThreshold(int eLevel)
 {
-	return (m_pGame ? m_pGame->getCultureThreshold((CultureLevelTypes) eLevel) : -1);
+	return (m_pGame ? m_pGame->getCultureThreshold((CultureLevelTypes)eLevel) : -1);
 }
 
 void CyGame::setPlotExtraYield(int iX, int iY, int /*YieldTypes*/ eYield, int iExtraYield)
@@ -1330,7 +1331,7 @@ void CyGame::doControl(int iControl)
 {
 	if (m_pGame)
 	{
-		m_pGame->doControl((ControlTypes) iControl);
+		m_pGame->doControl((ControlTypes)iControl);
 	}
 }
 
@@ -1355,7 +1356,7 @@ bool CyGame::regenerateMap()
 void CyGame::saveGame(std::string fileName) const
 {
 	//m_pGame->setFileType(SAVE_HOFMOD);
-	gDLL->getEngineIFace()->SaveGame((CvString &)fileName, SAVEGAME_NORMAL);
+	gDLL->getEngineIFace()->SaveGame((CvString&)fileName, SAVEGAME_NORMAL);
 	//m_pGame->setFileType(SAVE_NORMAL);
 }
 
@@ -1405,12 +1406,12 @@ void CyGame::setVictoryValid(int iVictory, bool bNewVal)
 	}
 }
 
-bool CyGame::isModderGameOption(int /*ModderGameOptionTypes*/ eIndex)	
+bool CyGame::isModderGameOption(int /*ModderGameOptionTypes*/ eIndex)
 {
 	return m_pGame ? m_pGame->isModderGameOption((ModderGameOptionTypes)eIndex) : false;
 }
 
-int CyGame::getModderGameOption(int /*ModderGameOptionTypes*/ eIndex)	
+int CyGame::getModderGameOption(int /*ModderGameOptionTypes*/ eIndex)
 {
 	return m_pGame ? m_pGame->getModderGameOption((ModderGameOptionTypes)eIndex) : 0;
 }

@@ -79,8 +79,8 @@ int CvProperties::getNumProperties() const
 
 int CvProperties::getPositionByProperty(int eProp) const
 {
-	for (std::vector<std::pair<int,int> >::const_iterator it = m_aiProperty.begin();it!=m_aiProperty.end(); ++it)
-		if ( it->first==eProp )
+	for (std::vector<std::pair<int, int> >::const_iterator it = m_aiProperty.begin(); it != m_aiProperty.end(); ++it)
+		if (it->first == eProp)
 			return it - m_aiProperty.begin();
 	return -1;
 }
@@ -96,29 +96,31 @@ int CvProperties::getValueByProperty(int eProp) const
 
 int CvProperties::getChangeByProperty(int eProp) const
 {
-	for (std::vector<std::pair<int,int> >::const_iterator it = m_aiPropertyChange.begin();it!=m_aiPropertyChange.end(); ++it)
-		if ( it->first==eProp )
+	for (std::vector<std::pair<int, int> >::const_iterator it = m_aiPropertyChange.begin(); it != m_aiPropertyChange.end(); ++it)
+		if (it->first == eProp)
 			return it->second;
 	return 0;
 }
 
 void CvProperties::setChangeByProperty(int eProp, int iVal)
 {
-	for (std::vector<std::pair<int,int> >::iterator it = m_aiPropertyChange.begin();it!=m_aiPropertyChange.end(); ++it)
-		if ( it->first==eProp )
+	for (std::vector<std::pair<int, int> >::iterator it = m_aiPropertyChange.begin(); it != m_aiPropertyChange.end(); ++it)
+		if (it->first == eProp)
 		{
 			it->second = iVal;
 			return;
 		}
-	m_aiPropertyChange.push_back(std::pair<int, int>(eProp,iVal));;
+	m_aiPropertyChange.push_back(std::pair<int, int>(eProp, iVal));
+	;
 }
 
 void CvProperties::changeChangeByProperty(int eProp, int iChange)
 {
-	for (std::vector<std::pair<int,int> >::iterator it = m_aiPropertyChange.begin();it!=m_aiPropertyChange.end(); ++it)
-		if ( it->first==eProp )
+	for (std::vector<std::pair<int, int> >::iterator it = m_aiPropertyChange.begin(); it != m_aiPropertyChange.end(); ++it)
+		if (it->first == eProp)
 			it->second += iChange;
-	m_aiPropertyChange.push_back(std::pair<int, int>(eProp,iChange));;
+	m_aiPropertyChange.push_back(std::pair<int, int>(eProp, iChange));
+	;
 }
 
 void CvProperties::setValue(int index, int iVal)
@@ -159,7 +161,7 @@ void CvProperties::setValueByProperty(int eProp, int iVal)
 	{
 		if (iVal != 0)
 		{
-			m_aiProperty.push_back(std::pair<int, int>(eProp,iVal));
+			m_aiProperty.push_back(std::pair<int, int>(eProp, iVal));
 			if (m_pGameObject)
 				m_pGameObject->eventPropertyChanged((PropertyTypes)eProp, iVal);
 		}
@@ -195,7 +197,7 @@ void CvProperties::changeValueByProperty(int eProp, int iChange)
 	int index = getPositionByProperty(eProp);
 	if (index < 0)
 	{
-		m_aiProperty.push_back(std::pair<int, int>(eProp,iChange));
+		m_aiProperty.push_back(std::pair<int, int>(eProp, iChange));
 		changeChangeByProperty(eProp, iChange);
 		if (m_pGameObject)
 		{
@@ -222,7 +224,7 @@ void CvProperties::propagateChange(int eProp, int iChange)
 		if (iChangePercent)
 		{
 			int iPropChange = (iChange * iChangePercent) / 100;
-			m_pGameObject->foreach((GameObjectTypes)iI, boost::bind(callChangeValueByProperty, _1, eProp, iPropChange));
+			m_pGameObject->foreach ((GameObjectTypes)iI, boost::bind(callChangeValueByProperty, _1, eProp, iPropChange));
 		}
 	}
 }
@@ -241,7 +243,7 @@ void CvProperties::subtractProperties(const CvProperties* pProp)
 	int num = pProp->getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
-		changeValueByProperty(pProp->getProperty(index), - pProp->getValue(index));
+		changeValueByProperty(pProp->getProperty(index), -pProp->getValue(index));
 	}
 }
 
@@ -260,7 +262,7 @@ void CvProperties::clearChange()
 	m_aiPropertyChange.clear();
 }
 
-bool isNotSourceDrainProperty(const std::pair<int,int>& p)
+bool isNotSourceDrainProperty(const std::pair<int, int>& p)
 {
 	return !GC.getPropertyInfo((PropertyTypes)p.first).isSourceDrain();
 }
@@ -270,12 +272,12 @@ void CvProperties::clearForRecalculate()
 	m_aiProperty.erase(std::remove_if(m_aiProperty.begin(), m_aiProperty.end(), isNotSourceDrainProperty), m_aiProperty.end());
 }
 
-void CvProperties::read(FDataStreamBase *pStream)
+void CvProperties::read(FDataStreamBase* pStream)
 {
 	int num;
 	int eProp;
 	int iVal;
-	
+
 	// This function replaces the current content if any so clear first
 	m_aiProperty.clear();
 	m_aiPropertyChange.clear();
@@ -292,13 +294,13 @@ void CvProperties::read(FDataStreamBase *pStream)
 	}
 }
 
-void CvProperties::readWrapper(FDataStreamBase *pStream)
+void CvProperties::readWrapper(FDataStreamBase* pStream)
 {
 	int iPropertyNum = 0;
 	int eProp;
 	int iVal;
 
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 	wrapper.AttachToStream(pStream);
 
 	//WRAPPER_READ_OBJECT_START(wrapper);
@@ -307,7 +309,7 @@ void CvProperties::readWrapper(FDataStreamBase *pStream)
 	m_aiProperty.clear();
 	m_aiPropertyChange.clear();
 
-	WRAPPER_READ(wrapper, "CvProperties",&iPropertyNum);
+	WRAPPER_READ(wrapper, "CvProperties", &iPropertyNum);
 	for (int i = 0; i < iPropertyNum; i++)
 	{
 		eProp = -1;
@@ -315,7 +317,7 @@ void CvProperties::readWrapper(FDataStreamBase *pStream)
 		if (eProp == -1)
 		{
 			// Handle old save game before property remapping
-			WRAPPER_READ(wrapper, "CvProperties",&eProp);
+			WRAPPER_READ(wrapper, "CvProperties", &eProp);
 			if (eProp == 0) // crime
 				eProp = GC.getInfoTypeForString("PROPERTY_CRIME");
 			else if (eProp == 1) // flammability
@@ -326,7 +328,7 @@ void CvProperties::readWrapper(FDataStreamBase *pStream)
 				continue;
 			}
 		}
-		WRAPPER_READ(wrapper, "CvProperties",&iVal);
+		WRAPPER_READ(wrapper, "CvProperties", &iVal);
 		// AIAndy: Changed to avoid usage of the methods that trigger property change events
 		//setValueByProperty(eProp, iVal);
 		if (eProp > -1)
@@ -334,12 +336,12 @@ void CvProperties::readWrapper(FDataStreamBase *pStream)
 	}
 
 	int iPropertyChangeNum = 0;
-	WRAPPER_READ(wrapper, "CvProperties",&iPropertyChangeNum);
+	WRAPPER_READ(wrapper, "CvProperties", &iPropertyChangeNum);
 	for (int i = 0; i < iPropertyChangeNum; i++)
 	{
 		eProp = -1;
 		WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper, "CvProperties", REMAPPED_CLASS_TYPE_PROPERTIES, &eProp);
-		WRAPPER_READ(wrapper, "CvProperties",&iVal);
+		WRAPPER_READ(wrapper, "CvProperties", &iVal);
 		if (eProp > -1)
 			m_aiPropertyChange.push_back(std::make_pair(eProp, iVal));
 	}
@@ -347,7 +349,7 @@ void CvProperties::readWrapper(FDataStreamBase *pStream)
 	//WRAPPER_READ_OBJECT_END(wrapper);
 }
 
-void CvProperties::write(FDataStreamBase *pStream)
+void CvProperties::write(FDataStreamBase* pStream)
 {
 	int iPropertyNum = getNumProperties();
 	pStream->Write(iPropertyNum);
@@ -358,34 +360,34 @@ void CvProperties::write(FDataStreamBase *pStream)
 	}
 }
 
-void CvProperties::writeWrapper(FDataStreamBase *pStream)
+void CvProperties::writeWrapper(FDataStreamBase* pStream)
 {
 	int iPropertyNum = getNumProperties();
 
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 	wrapper.AttachToStream(pStream);
 
 	//WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	WRAPPER_WRITE(wrapper, "CvProperties",iPropertyNum);
+	WRAPPER_WRITE(wrapper, "CvProperties", iPropertyNum);
 	for (int i = 0; i < iPropertyNum; i++)
 	{
 		int eProp = getProperty(i);
-		int iVal = getValue(i);
+		int iVal  = getValue(i);
 
 		WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvProperties", REMAPPED_CLASS_TYPE_PROPERTIES, eProp);
-		WRAPPER_WRITE(wrapper, "CvProperties",iVal);
+		WRAPPER_WRITE(wrapper, "CvProperties", iVal);
 	}
 
 	int iPropertyChangeNum = (int)m_aiPropertyChange.size();
-	WRAPPER_WRITE(wrapper, "CvProperties",iPropertyChangeNum);
+	WRAPPER_WRITE(wrapper, "CvProperties", iPropertyChangeNum);
 	for (int i = 0; i < iPropertyChangeNum; i++)
 	{
 		int eProp = getChangeProperty(i);
-		int iVal = getChange(i);
+		int iVal  = getChange(i);
 
 		WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvProperties", REMAPPED_CLASS_TYPE_PROPERTIES, eProp);
-		WRAPPER_WRITE(wrapper, "CvProperties",iVal);
+		WRAPPER_WRITE(wrapper, "CvProperties", iVal);
 	}
 
 	//WRAPPER_WRITE_OBJECT_END(wrapper);
@@ -393,22 +395,22 @@ void CvProperties::writeWrapper(FDataStreamBase *pStream)
 
 bool CvProperties::read(CvXMLLoadUtility* pXML, const wchar_t* szTagName)
 {
-	if(pXML->TryMoveToXmlFirstChild(szTagName))
+	if (pXML->TryMoveToXmlFirstChild(szTagName))
 	{
-		if(pXML->TryMoveToXmlFirstChild())
+		if (pXML->TryMoveToXmlFirstChild())
 		{
 
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"Property"))
 			{
 				do
 				{
-					int iVal;
+					int		 iVal;
 					CvString szTextVal;
 					pXML->GetChildXmlValByName(szTextVal, L"PropertyType");
 					int eProp = pXML->GetInfoClass(szTextVal);
 					pXML->GetOptionalChildXmlValByName(&iVal, L"iPropertyValue");
 					setValueByProperty(eProp, iVal);
-				} while(pXML->TryMoveToXmlNextSibling());
+				} while (pXML->TryMoveToXmlNextSibling());
 			}
 			pXML->MoveToXmlParent();
 		}
@@ -418,7 +420,7 @@ bool CvProperties::read(CvXMLLoadUtility* pXML, const wchar_t* szTagName)
 	return true;
 }
 
-void CvProperties::copyNonDefaults(CvProperties* pProp, CvXMLLoadUtility* pXML )
+void CvProperties::copyNonDefaults(CvProperties* pProp, CvXMLLoadUtility* pXML)
 {
 	int num = pProp->getNumProperties();
 	for (int index = 0; index < num; index++)
@@ -583,7 +585,7 @@ std::wstring CvProperties::getPropertyDisplay(int index) const
 	return szTemp.GetCString();
 }
 
-void CvProperties::getCheckSum(unsigned int &iSum)
+void CvProperties::getCheckSum(unsigned int& iSum)
 {
 	CheckSumC(iSum, m_aiProperty);
 }

@@ -14,7 +14,7 @@ enum DirtyBits
 	SelectionButtons_DIRTY_BIT,
 	CitizenButtons_DIRTY_BIT,
 	ResearchButtons_DIRTY_BIT,
-	ReplayButtons_DIRTY_BIT	,
+	ReplayButtons_DIRTY_BIT,
 	Event_DIRTY_BIT,
 	Center_DIRTY_BIT,
 	GameData_DIRTY_BIT,

@@ -22,25 +22,23 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvXMLLoadUtilityModTools
 {
-//---------------------------------------PUBLIC INTERFACE---------------------------------
-public:
-	
-	void StringArrayExtend( CvString **ppszListNew, int* iNumNewListElements,
-							CvString **ppszListOld, int iNumOldListElements,
-							CvString szDefaultListVal = CvString()) const;
+	//---------------------------------------PUBLIC INTERFACE---------------------------------
+  public:
+	void StringArrayExtend(CvString** ppszListNew, int* iNumNewListElements,
+						   CvString** ppszListOld, int iNumOldListElements,
+						   CvString szDefaultListVal = CvString()) const;
 
-	bool isDuplicate(int iNumValueNew, int *ppiListNew, int iValueOld) const;
-	bool isDuplicate(int iNumValueNew, CvWString *ppiListNew, CvWString wValueOld) const;
-	
-	void setLocationName( CvString *pszTextVal, const char* szDirName);
-	bool isExcludedFile(const char* szLocationName);
-	bool isCommaFile(CvString *pszTextVal, const char* szDirName);
-	bool isModularArt(const char* szLocationName);
+	bool isDuplicate(int iNumValueNew, int* ppiListNew, int iValueOld) const;
+	bool isDuplicate(int iNumValueNew, CvWString* ppiListNew, CvWString wValueOld) const;
+
+	void	 setLocationName(CvString* pszTextVal, const char* szDirName);
+	bool	 isExcludedFile(const char* szLocationName);
+	bool	 isCommaFile(CvString* pszTextVal, const char* szDirName);
+	bool	 isModularArt(const char* szLocationName);
 	CvString GetProgramDir();
 	CvString deleteFileName(const char* szDirName, const char szLocateChar);
 
 	void writeThm(const char* szTextVal);
-
 };
 
-#endif	// XML_LOAD_UTILITY_H
+#endif // XML_LOAD_UTILITY_H

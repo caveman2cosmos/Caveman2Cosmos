@@ -13,64 +13,64 @@ CvMessageData* CvMessageData::createMessage(GameMessageTypes eType)
 		return new CvNetTurnComplete();
 	case GAMEMESSAGE_PUSH_ORDER:
 		return new CvNetPushOrder();
-	case GAMEMESSAGE_POP_ORDER: 
+	case GAMEMESSAGE_POP_ORDER:
 		return new CvNetPopOrder();
 	case GAMEMESSAGE_DO_TASK:
 		return new CvNetDoTask();
-	case GAMEMESSAGE_UPDATE_CIVICS: 
+	case GAMEMESSAGE_UPDATE_CIVICS:
 		return new CvNetUpdateCivics();
-	case GAMEMESSAGE_RESEARCH: 
+	case GAMEMESSAGE_RESEARCH:
 		return new CvNetResearch();
-	case GAMEMESSAGE_ESPIONAGE_CHANGE: 
+	case GAMEMESSAGE_ESPIONAGE_CHANGE:
 		return new CvNetEspionageChange();
 	case GAMEMESSAGE_ADVANCED_START_ACTION:
 		return new CvNetAdvancedStartAction();
-	case GAMEMESSAGE_MOD_NET_MESSAGE: 
+	case GAMEMESSAGE_MOD_NET_MESSAGE:
 		return new CvNetModNetMessage();
-	case GAMEMESSAGE_CONVERT: 
+	case GAMEMESSAGE_CONVERT:
 		return new CvNetConvert();
-	case GAMEMESSAGE_EMPIRE_SPLIT: 
+	case GAMEMESSAGE_EMPIRE_SPLIT:
 		return new CvNetEmpireSplit();
-	case GAMEMESSAGE_FOUND_RELIGION: 
+	case GAMEMESSAGE_FOUND_RELIGION:
 		return new CvNetFoundReligion();
-	case GAMEMESSAGE_LAUNCH_SPACESHIP: 
+	case GAMEMESSAGE_LAUNCH_SPACESHIP:
 		return new CvNetLaunchSpaceship();
-	case GAMEMESSAGE_EVENT_TRIGGERED: 
+	case GAMEMESSAGE_EVENT_TRIGGERED:
 		return new CvNetEventTriggered();
-	case GAMEMESSAGE_JOIN_GROUP: 
+	case GAMEMESSAGE_JOIN_GROUP:
 		return new CvNetJoinGroup();
-	case GAMEMESSAGE_PUSH_MISSION: 
+	case GAMEMESSAGE_PUSH_MISSION:
 		return new CvNetPushMission();
-	case GAMEMESSAGE_AUTO_MISSION: 
+	case GAMEMESSAGE_AUTO_MISSION:
 		return new CvNetAutoMission();
-	case GAMEMESSAGE_DO_COMMAND: 
+	case GAMEMESSAGE_DO_COMMAND:
 		return new CvNetDoCommand();
-	case GAMEMESSAGE_PERCENT_CHANGE: 
+	case GAMEMESSAGE_PERCENT_CHANGE:
 		return new CvNetPercentChange();
-	case GAMEMESSAGE_CHANGE_VASSAL: 
+	case GAMEMESSAGE_CHANGE_VASSAL:
 		return new CvNetChangeVassal();
-	case GAMEMESSAGE_CHOOSE_ELECTION: 
+	case GAMEMESSAGE_CHOOSE_ELECTION:
 		return new CvNetChooseElection();
-	case GAMEMESSAGE_DIPLO_VOTE: 
+	case GAMEMESSAGE_DIPLO_VOTE:
 		return new CvNetDiploVote();
-	case GAMEMESSAGE_CHANGE_WAR: 
+	case GAMEMESSAGE_CHANGE_WAR:
 		return new CvNetChangeWar();
-	case GAMEMESSAGE_PING: 
+	case GAMEMESSAGE_PING:
 		return new CvNetPing();
-// BUG - Reminder Mod - start
-	case GAMEMESSAGE_ADD_REMINDER: 
+		// BUG - Reminder Mod - start
+	case GAMEMESSAGE_ADD_REMINDER:
 		return new CvNetAddReminder();
-// BUG - Reminder Mod - end
-/************************************************************************************************/
-/* Afforess	                  Start		 08/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	case GAMEMESSAGE_SET_GLOBAL_DEFINE: 
+		// BUG - Reminder Mod - end
+		/************************************************************************************************/
+		/* Afforess	                  Start		 08/18/10                                               */
+		/*                                                                                              */
+		/*                                                                                              */
+		/************************************************************************************************/
+	case GAMEMESSAGE_SET_GLOBAL_DEFINE:
 		return new CvGlobalDefineUpdate();
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                     END                                                            */
+		/************************************************************************************************/
 	case GAMEMESSAGE_RECALCULATE_MODIFIERS:
 		return new CvNetRecalculateModifiers();
 	case GAMEMESSAGE_BUILD_LISTS:
@@ -81,19 +81,19 @@ CvMessageData* CvMessageData::createMessage(GameMessageTypes eType)
 		return new CvNetBuildListPopOrder();
 	case GAMEMESSAGE_BUILD_LIST_EDIT:
 		return new CvNetBuildListEdit();
-	case GAMEMESSAGE_CHOOSE_TRAIT: 
+	case GAMEMESSAGE_CHOOSE_TRAIT:
 		return new CvNetChooseTrait();
-	case GAMEMESSAGE_CHOOSE_MERGE_UNIT: 
+	case GAMEMESSAGE_CHOOSE_MERGE_UNIT:
 		return new CvNetChooseMergeUnit();
-	case GAMEMESSAGE_CONFIRM_SPLIT_UNIT: 
+	case GAMEMESSAGE_CONFIRM_SPLIT_UNIT:
 		return new CvNetConfirmSplitUnit();
 	case GAMEMESSAGE_IMPROVEMENT_UPGRADE:
 		return new CvNetImprovementUpgrade();
-	case GAMEMESSAGE_CHOOSE_BUILDUP: 
+	case GAMEMESSAGE_CHOOSE_BUILDUP:
 		return new CvNetChooseBuildUp();
-	case GAMEMESSAGE_CHOOSE_ARREST_UNIT: 
+	case GAMEMESSAGE_CHOOSE_ARREST_UNIT:
 		return new CvNetChooseArrestUnit();
-	case GAMEMESSAGE_CONFIRM_AMBUSH: 
+	case GAMEMESSAGE_CONFIRM_AMBUSH:
 		return new CvNetConfirmAmbush();
 	default:
 		FAssertMsg(false, "Unknown message type");
@@ -101,12 +101,13 @@ CvMessageData* CvMessageData::createMessage(GameMessageTypes eType)
 	return NULL;
 }
 
-CvMessageData::CvMessageData(GameMessageTypes eType) : m_eType(eType) 
-{ 
+CvMessageData::CvMessageData(GameMessageTypes eType)
+	: m_eType(eType)
+{
 }
 
-CvMessageData::~CvMessageData() 
-{ 
+CvMessageData::~CvMessageData()
+{
 }
 
 GameMessageTypes CvMessageData::getType() const
@@ -114,8 +115,9 @@ GameMessageTypes CvMessageData::getType() const
 	return m_eType;
 }
 
-CvNetExtendedGame::CvNetExtendedGame(PlayerTypes ePlayer) : CvMessageData(GAMEMESSAGE_EXTENDED_GAME), m_ePlayer(ePlayer) 
-{ 
+CvNetExtendedGame::CvNetExtendedGame(PlayerTypes ePlayer)
+	: CvMessageData(GAMEMESSAGE_EXTENDED_GAME), m_ePlayer(ePlayer)
+{
 }
 
 void CvNetExtendedGame::Debug(char* szAddendum)
@@ -143,8 +145,9 @@ void CvNetExtendedGame::SetFromBuffer(FDataStreamBase* pStream)
 	GC.getGameINLINE().logDebugMsg("Reading CvNetExtendedGame message with payload [%d]\n", m_ePlayer);
 }
 
-CvNetAutoMoves::CvNetAutoMoves(PlayerTypes ePlayer) : CvMessageData(GAMEMESSAGE_AUTO_MOVES), m_ePlayer(ePlayer) 
-{ 
+CvNetAutoMoves::CvNetAutoMoves(PlayerTypes ePlayer)
+	: CvMessageData(GAMEMESSAGE_AUTO_MOVES), m_ePlayer(ePlayer)
+{
 }
 
 void CvNetAutoMoves::Debug(char* szAddendum)
@@ -178,8 +181,9 @@ void CvNetAutoMoves::SetFromBuffer(FDataStreamBase* pStream)
 	GC.getGameINLINE().logDebugMsg("Reading CvNetAutoMoves message with payload [%d]\n", m_ePlayer);
 }
 
-CvNetTurnComplete::CvNetTurnComplete(PlayerTypes ePlayer) : CvMessageData(GAMEMESSAGE_TURN_COMPLETE), m_ePlayer(ePlayer) 
-{ 
+CvNetTurnComplete::CvNetTurnComplete(PlayerTypes ePlayer)
+	: CvMessageData(GAMEMESSAGE_TURN_COMPLETE), m_ePlayer(ePlayer)
+{
 }
 
 void CvNetTurnComplete::Debug(char* szAddendum)
@@ -213,11 +217,13 @@ void CvNetTurnComplete::SetFromBuffer(FDataStreamBase* pStream)
 	GC.getGameINLINE().logDebugMsg("Reading CvNetTurnComplete message with payload [%d]\n", m_ePlayer);
 }
 
-CvNetPushOrder::CvNetPushOrder() : CvMessageData(GAMEMESSAGE_PUSH_ORDER), m_ePlayer(NO_PLAYER), m_iCityID(-1), m_eOrder(NO_ORDER), m_iData(-1), m_bAlt(false), m_bShift(false), m_bCtrl(false)
+CvNetPushOrder::CvNetPushOrder()
+	: CvMessageData(GAMEMESSAGE_PUSH_ORDER), m_ePlayer(NO_PLAYER), m_iCityID(-1), m_eOrder(NO_ORDER), m_iData(-1), m_bAlt(false), m_bShift(false), m_bCtrl(false)
 {
 }
 
-CvNetPushOrder::CvNetPushOrder(PlayerTypes ePlayer, int iCityID, OrderTypes eOrder, int iData, bool bAlt, bool bShift, bool bCtrl) : CvMessageData(GAMEMESSAGE_PUSH_ORDER), m_ePlayer(ePlayer), m_iCityID(iCityID), m_eOrder(eOrder), m_iData(iData), m_bAlt(bAlt), m_bShift(bShift), m_bCtrl(bCtrl)
+CvNetPushOrder::CvNetPushOrder(PlayerTypes ePlayer, int iCityID, OrderTypes eOrder, int iData, bool bAlt, bool bShift, bool bCtrl)
+	: CvMessageData(GAMEMESSAGE_PUSH_ORDER), m_ePlayer(ePlayer), m_iCityID(iCityID), m_eOrder(eOrder), m_iData(iData), m_bAlt(bAlt), m_bShift(bShift), m_bCtrl(bCtrl)
 {
 }
 
@@ -277,17 +283,19 @@ void CvNetPushOrder::SetFromBuffer(FDataStreamBase* pStream)
 	GC.getGameINLINE().logDebugMsg("Reading CvNetPushOrder message with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eOrder, m_iData, m_bAlt, m_bShift, m_bCtrl);
 }
 
-CvNetPopOrder::CvNetPopOrder() : CvMessageData(GAMEMESSAGE_POP_ORDER), m_ePlayer(NO_PLAYER), m_iCityID(-1), m_iNum(0)
+CvNetPopOrder::CvNetPopOrder()
+	: CvMessageData(GAMEMESSAGE_POP_ORDER), m_ePlayer(NO_PLAYER), m_iCityID(-1), m_iNum(0)
 {
 }
 
-CvNetPopOrder::CvNetPopOrder(PlayerTypes ePlayer, int iCityID, int iNum) : CvMessageData(GAMEMESSAGE_POP_ORDER), m_ePlayer(ePlayer), m_iCityID(iCityID), m_iNum(iNum)
+CvNetPopOrder::CvNetPopOrder(PlayerTypes ePlayer, int iCityID, int iNum)
+	: CvMessageData(GAMEMESSAGE_POP_ORDER), m_ePlayer(ePlayer), m_iCityID(iCityID), m_iNum(iNum)
 {
 }
 
-void CvNetPopOrder::Debug(char* szAddendum) 
-{	
-	sprintf(szAddendum, "Pop Order at City, city ID is %d", m_iCityID);	
+void CvNetPopOrder::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Pop Order at City, city ID is %d", m_iCityID);
 }
 
 void CvNetPopOrder::Execute()
@@ -335,11 +343,13 @@ void CvNetPopOrder::SetFromBuffer(FDataStreamBase* pStream)
 	GC.getGameINLINE().logDebugMsg("Reading CvNetPopOrder message with payload [%d, %d, %d]\n", m_ePlayer, m_iCityID, m_iNum);
 }
 
-CvNetDoTask::CvNetDoTask() : CvMessageData(GAMEMESSAGE_DO_TASK), m_ePlayer(NO_PLAYER), m_iCityID(-1), m_eTask(NO_TASK), m_iData1(-1), m_iData2(-1), m_bOption(false), m_bAlt(false), m_bShift(false), m_bCtrl(false)
+CvNetDoTask::CvNetDoTask()
+	: CvMessageData(GAMEMESSAGE_DO_TASK), m_ePlayer(NO_PLAYER), m_iCityID(-1), m_eTask(NO_TASK), m_iData1(-1), m_iData2(-1), m_bOption(false), m_bAlt(false), m_bShift(false), m_bCtrl(false)
 {
 }
 
-CvNetDoTask::CvNetDoTask(PlayerTypes ePlayer, int iCityID, TaskTypes eTask, int iData1, int iData2, bool bOption, bool bAlt, bool bShift, bool bCtrl) : CvMessageData(GAMEMESSAGE_DO_TASK), m_ePlayer(ePlayer), m_iCityID(iCityID), m_eTask(eTask), m_iData1(iData1), m_iData2(iData2), m_bOption(bOption), m_bAlt(bAlt), m_bShift(bShift), m_bCtrl(bCtrl)
+CvNetDoTask::CvNetDoTask(PlayerTypes ePlayer, int iCityID, TaskTypes eTask, int iData1, int iData2, bool bOption, bool bAlt, bool bShift, bool bCtrl)
+	: CvMessageData(GAMEMESSAGE_DO_TASK), m_ePlayer(ePlayer), m_iCityID(iCityID), m_eTask(eTask), m_iData1(iData1), m_iData2(iData2), m_bOption(bOption), m_bAlt(bAlt), m_bShift(bShift), m_bCtrl(bCtrl)
 {
 }
 
@@ -398,11 +408,13 @@ void CvNetDoTask::SetFromBuffer(FDataStreamBase* pStream)
 	GC.getGameINLINE().logDebugMsg("Reading CvNetDoTask message with payload [%d, %d, %d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eTask, m_iData1, m_iData2, m_bOption, m_bAlt, m_bShift, m_bCtrl);
 }
 
-CvNetUpdateCivics::CvNetUpdateCivics() : CvMessageData(GAMEMESSAGE_UPDATE_CIVICS), m_ePlayer(NO_PLAYER), m_aeCivics(GC.getNumCivicOptionInfos(), NO_CIVIC)
+CvNetUpdateCivics::CvNetUpdateCivics()
+	: CvMessageData(GAMEMESSAGE_UPDATE_CIVICS), m_ePlayer(NO_PLAYER), m_aeCivics(GC.getNumCivicOptionInfos(), NO_CIVIC)
 {
 }
 
-CvNetUpdateCivics::CvNetUpdateCivics(PlayerTypes ePlayer, const std::vector<CivicTypes>& aeCivics) : CvMessageData(GAMEMESSAGE_UPDATE_CIVICS), m_ePlayer(ePlayer), m_aeCivics(aeCivics)
+CvNetUpdateCivics::CvNetUpdateCivics(PlayerTypes ePlayer, const std::vector<CivicTypes>& aeCivics)
+	: CvMessageData(GAMEMESSAGE_UPDATE_CIVICS), m_ePlayer(ePlayer), m_aeCivics(aeCivics)
 {
 }
 
@@ -423,7 +435,7 @@ void CvNetUpdateCivics::Execute()
 void CvNetUpdateCivics::PutInBuffer(FDataStreamBase* pStream)
 {
 	pStream->Write(m_ePlayer);
-	for (int i = 0; i < GC.getNumCivicOptionInfos(); i++) 
+	for (int i = 0; i < GC.getNumCivicOptionInfos(); i++)
 	{
 		pStream->Write(m_aeCivics[i]);
 	}
@@ -432,23 +444,25 @@ void CvNetUpdateCivics::PutInBuffer(FDataStreamBase* pStream)
 void CvNetUpdateCivics::SetFromBuffer(FDataStreamBase* pStream)
 {
 	pStream->Read((int*)&m_ePlayer);
-	for (int i = 0; i < GC.getNumCivicOptionInfos(); i++) 
+	for (int i = 0; i < GC.getNumCivicOptionInfos(); i++)
 	{
 		pStream->Read((int*)&m_aeCivics[i]);
 	}
 }
 
-CvNetResearch::CvNetResearch() : CvMessageData(GAMEMESSAGE_RESEARCH), m_ePlayer(NO_PLAYER), m_iDiscover(-1), m_bShift(false), m_eTech(NO_TECH)
+CvNetResearch::CvNetResearch()
+	: CvMessageData(GAMEMESSAGE_RESEARCH), m_ePlayer(NO_PLAYER), m_iDiscover(-1), m_bShift(false), m_eTech(NO_TECH)
 {
 }
 
-CvNetResearch::CvNetResearch(PlayerTypes ePlayer, TechTypes eTech, int iDiscover, bool bShift) : CvMessageData(GAMEMESSAGE_RESEARCH), m_ePlayer(ePlayer), m_iDiscover(iDiscover), m_bShift(bShift), m_eTech(eTech)
+CvNetResearch::CvNetResearch(PlayerTypes ePlayer, TechTypes eTech, int iDiscover, bool bShift)
+	: CvMessageData(GAMEMESSAGE_RESEARCH), m_ePlayer(ePlayer), m_iDiscover(iDiscover), m_bShift(bShift), m_eTech(eTech)
 {
 }
 
-void CvNetResearch::Debug(char* szAddendum) 
-{		
-	sprintf(szAddendum, "Research, %d",	m_eTech); 
+void CvNetResearch::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Research, %d", m_eTech);
 }
 
 void CvNetResearch::Execute()
@@ -507,17 +521,19 @@ void CvNetResearch::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read((int*)&m_eTech);
 }
 
-CvNetEspionageChange::CvNetEspionageChange() : CvMessageData(GAMEMESSAGE_ESPIONAGE_CHANGE), m_ePlayer(NO_PLAYER), m_eTargetTeam(NO_TEAM), m_iChange(0)
+CvNetEspionageChange::CvNetEspionageChange()
+	: CvMessageData(GAMEMESSAGE_ESPIONAGE_CHANGE), m_ePlayer(NO_PLAYER), m_eTargetTeam(NO_TEAM), m_iChange(0)
 {
 }
 
-CvNetEspionageChange::CvNetEspionageChange(PlayerTypes ePlayer, TeamTypes eTargetTeam, int iChange) : CvMessageData(GAMEMESSAGE_ESPIONAGE_CHANGE), m_ePlayer(ePlayer), m_eTargetTeam(eTargetTeam), m_iChange(iChange)
+CvNetEspionageChange::CvNetEspionageChange(PlayerTypes ePlayer, TeamTypes eTargetTeam, int iChange)
+	: CvMessageData(GAMEMESSAGE_ESPIONAGE_CHANGE), m_ePlayer(ePlayer), m_eTargetTeam(eTargetTeam), m_iChange(iChange)
 {
 }
 
-void CvNetEspionageChange::Debug(char* szAddendum) 
-{ 
-	sprintf(szAddendum, "TargetTeam: %d, Espionage Change: %d", m_eTargetTeam, m_iChange); 
+void CvNetEspionageChange::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "TargetTeam: %d, Espionage Change: %d", m_eTargetTeam, m_iChange);
 }
 
 void CvNetEspionageChange::Execute()
@@ -527,7 +543,7 @@ void CvNetEspionageChange::Execute()
 		GET_PLAYER(m_ePlayer).changeEspionageSpendingWeightAgainstTeam(m_eTargetTeam, m_iChange);
 	}
 }
-	
+
 void CvNetEspionageChange::PutInBuffer(FDataStreamBase* pStream)
 {
 	pStream->Write(m_ePlayer);
@@ -542,19 +558,14 @@ void CvNetEspionageChange::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read(&m_iChange);
 }
 
-CvNetAdvancedStartAction::CvNetAdvancedStartAction(AdvancedStartActionTypes eAction, PlayerTypes ePlayer, int iX, int iY, int iData, bool bAdd) : CvMessageData(GAMEMESSAGE_ADVANCED_START_ACTION),
-	m_eAction(eAction),
-	m_ePlayer(ePlayer),
-	m_iX(iX),
-	m_iY(iY),
-	m_iData(iData),
-	m_bAdd(bAdd)
+CvNetAdvancedStartAction::CvNetAdvancedStartAction(AdvancedStartActionTypes eAction, PlayerTypes ePlayer, int iX, int iY, int iData, bool bAdd)
+	: CvMessageData(GAMEMESSAGE_ADVANCED_START_ACTION), m_eAction(eAction), m_ePlayer(ePlayer), m_iX(iX), m_iY(iY), m_iData(iData), m_bAdd(bAdd)
 {
 }
 
-void CvNetAdvancedStartAction::Debug(char* szAddendum) 
-{ 	
-	sprintf(szAddendum, "Non-simultaneous Advanced Start Action notification");	
+void CvNetAdvancedStartAction::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Non-simultaneous Advanced Start Action notification");
 }
 
 void CvNetAdvancedStartAction::Execute()
@@ -588,13 +599,14 @@ void CvNetAdvancedStartAction::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read(&m_bAdd);
 }
 
-CvNetModNetMessage::CvNetModNetMessage(int iData1, int iData2, int iData3, int iData4, int iData5) : CvMessageData(GAMEMESSAGE_MOD_NET_MESSAGE), m_iData1(iData1), m_iData2(iData2), m_iData3(iData3), m_iData4(iData4), m_iData5(iData5)
+CvNetModNetMessage::CvNetModNetMessage(int iData1, int iData2, int iData3, int iData4, int iData5)
+	: CvMessageData(GAMEMESSAGE_MOD_NET_MESSAGE), m_iData1(iData1), m_iData2(iData2), m_iData3(iData3), m_iData4(iData4), m_iData5(iData5)
 {
 }
 
-void CvNetModNetMessage::Debug(char* szAddendum) 
-{ 	
-	sprintf(szAddendum, "Non-simultaneous ModNetMessage notification");	
+void CvNetModNetMessage::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Non-simultaneous ModNetMessage notification");
 }
 
 void CvNetModNetMessage::Execute()
@@ -624,13 +636,14 @@ void CvNetModNetMessage::SetFromBuffer(FDataStreamBase* pStream)
 	GC.getGameINLINE().logDebugMsg("Reading CvNetModNetMessage message with payload [%d, %d, %d, %d, %d]\n", m_iData1, m_iData2, m_iData3, m_iData4, m_iData5);
 }
 
-CvNetConvert::CvNetConvert(PlayerTypes ePlayer, ReligionTypes eReligion) : CvMessageData(GAMEMESSAGE_CONVERT), m_ePlayer(ePlayer), m_eReligion(eReligion)
+CvNetConvert::CvNetConvert(PlayerTypes ePlayer, ReligionTypes eReligion)
+	: CvMessageData(GAMEMESSAGE_CONVERT), m_ePlayer(ePlayer), m_eReligion(eReligion)
 {
 }
 
-void CvNetConvert::Debug(char* szAddendum) 
-{ 
-	sprintf(szAddendum, "Religion: %d", m_eReligion); 
+void CvNetConvert::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Religion: %d", m_eReligion);
 }
 
 void CvNetConvert::Execute()
@@ -653,15 +666,14 @@ void CvNetConvert::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read((int*)&m_eReligion);
 }
 
-CvNetEmpireSplit::CvNetEmpireSplit(PlayerTypes ePlayer, int iAreaId) : CvMessageData(GAMEMESSAGE_EMPIRE_SPLIT),
-	m_ePlayer(ePlayer),
-	m_iAreaId(iAreaId)
+CvNetEmpireSplit::CvNetEmpireSplit(PlayerTypes ePlayer, int iAreaId)
+	: CvMessageData(GAMEMESSAGE_EMPIRE_SPLIT), m_ePlayer(ePlayer), m_iAreaId(iAreaId)
 {
 }
 
-void CvNetEmpireSplit::Debug(char* szAddendum) 
-{ 	
-	sprintf(szAddendum, "Non-simultaneous empire split notification");	
+void CvNetEmpireSplit::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Non-simultaneous empire split notification");
 }
 
 void CvNetEmpireSplit::Execute()
@@ -684,16 +696,14 @@ void CvNetEmpireSplit::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read(&m_iAreaId);
 }
 
-CvNetFoundReligion::CvNetFoundReligion(PlayerTypes ePlayer, ReligionTypes eReligion, ReligionTypes eSlotReligion) : CvMessageData(GAMEMESSAGE_FOUND_RELIGION),
-	m_ePlayer(ePlayer),
-	m_eReligion(eReligion),
-	m_eSlotReligion(eSlotReligion)
+CvNetFoundReligion::CvNetFoundReligion(PlayerTypes ePlayer, ReligionTypes eReligion, ReligionTypes eSlotReligion)
+	: CvMessageData(GAMEMESSAGE_FOUND_RELIGION), m_ePlayer(ePlayer), m_eReligion(eReligion), m_eSlotReligion(eSlotReligion)
 {
 }
 
-void CvNetFoundReligion::Debug(char* szAddendum) 
-{ 	
-	sprintf(szAddendum, "Non-simultaneous found religion notification");	
+void CvNetFoundReligion::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Non-simultaneous found religion notification");
 }
 
 void CvNetFoundReligion::Execute()
@@ -718,15 +728,14 @@ void CvNetFoundReligion::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read((int*)&m_eSlotReligion);
 }
 
-CvNetLaunchSpaceship::CvNetLaunchSpaceship(PlayerTypes ePlayer, VictoryTypes eVictory) : CvMessageData(GAMEMESSAGE_LAUNCH_SPACESHIP),
-	m_ePlayer(ePlayer),
-	m_eVictory(eVictory)
+CvNetLaunchSpaceship::CvNetLaunchSpaceship(PlayerTypes ePlayer, VictoryTypes eVictory)
+	: CvMessageData(GAMEMESSAGE_LAUNCH_SPACESHIP), m_ePlayer(ePlayer), m_eVictory(eVictory)
 {
 }
 
 void CvNetLaunchSpaceship::Debug(char* szAddendum)
-{ 	
-	sprintf(szAddendum, "Non-simultaneous spaceship launch notification");	
+{
+	sprintf(szAddendum, "Non-simultaneous spaceship launch notification");
 }
 
 void CvNetLaunchSpaceship::Execute()
@@ -749,16 +758,14 @@ void CvNetLaunchSpaceship::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read((int*)&m_eVictory);
 }
 
-CvNetEventTriggered::CvNetEventTriggered(PlayerTypes ePlayer, EventTypes eEvent, int iEventTriggeredId) : CvMessageData(GAMEMESSAGE_EVENT_TRIGGERED),
-	m_ePlayer(ePlayer),
-	m_eEvent(eEvent),
-	m_iEventTriggeredId(iEventTriggeredId)
+CvNetEventTriggered::CvNetEventTriggered(PlayerTypes ePlayer, EventTypes eEvent, int iEventTriggeredId)
+	: CvMessageData(GAMEMESSAGE_EVENT_TRIGGERED), m_ePlayer(ePlayer), m_eEvent(eEvent), m_iEventTriggeredId(iEventTriggeredId)
 {
 }
 
-void CvNetEventTriggered::Debug(char* szAddendum) 
-{ 	
-	sprintf(szAddendum, "Non-simultaneous event trigger notification");	
+void CvNetEventTriggered::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Non-simultaneous event trigger notification");
 }
 
 void CvNetEventTriggered::Execute()
@@ -783,17 +790,19 @@ void CvNetEventTriggered::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read((int*)&m_iEventTriggeredId);
 }
 
-CvNetJoinGroup::CvNetJoinGroup() : CvMessageData(GAMEMESSAGE_JOIN_GROUP), m_ePlayer(NO_PLAYER), m_iUnitID(-1), m_iHeadID(-1)
+CvNetJoinGroup::CvNetJoinGroup()
+	: CvMessageData(GAMEMESSAGE_JOIN_GROUP), m_ePlayer(NO_PLAYER), m_iUnitID(-1), m_iHeadID(-1)
 {
 }
 
-CvNetJoinGroup::CvNetJoinGroup(PlayerTypes ePlayer, int iUnitID, int iHeadID) : CvMessageData(GAMEMESSAGE_JOIN_GROUP), m_ePlayer(ePlayer), m_iUnitID(iUnitID), m_iHeadID(iHeadID)
+CvNetJoinGroup::CvNetJoinGroup(PlayerTypes ePlayer, int iUnitID, int iHeadID)
+	: CvMessageData(GAMEMESSAGE_JOIN_GROUP), m_ePlayer(ePlayer), m_iUnitID(iUnitID), m_iHeadID(iHeadID)
 {
 }
 
-void CvNetJoinGroup::Debug(char* szAddendum) 
-{ 
-	sprintf(szAddendum, "Join Group unit %d -> head unit %d", m_iUnitID, m_iHeadID); 
+void CvNetJoinGroup::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Join Group unit %d -> head unit %d", m_iUnitID, m_iHeadID);
 }
 
 void CvNetJoinGroup::Execute()
@@ -814,7 +823,6 @@ void CvNetJoinGroup::Execute()
 				pUnit->joinGroup(NULL);
 			}
 			GC.getGameINLINE().logDebugMsg("Executed CvNetJoinGroup message with payload [%d, %d, %d]\n", m_ePlayer, m_iUnitID, m_iHeadID);
-
 		}
 		else
 		{
@@ -833,8 +841,6 @@ void CvNetJoinGroup::PutInBuffer(FDataStreamBase* pStream)
 	pStream->Write(m_iUnitID);
 	pStream->Write(m_iHeadID);
 	GC.getGameINLINE().logDebugMsg("Writing CvNetJoinGroup message with payload [%d, %d, %d]\n", m_ePlayer, m_iUnitID, m_iHeadID);
-
-
 }
 
 void CvNetJoinGroup::SetFromBuffer(FDataStreamBase* pStream)
@@ -843,19 +849,20 @@ void CvNetJoinGroup::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read(&m_iUnitID);
 	pStream->Read(&m_iHeadID);
 	GC.getGameINLINE().logDebugMsg("Reading CvNetJoinGroup message with payload [%d, %d, %d]\n", m_ePlayer, m_iUnitID, m_iHeadID);
-
 }
 
-CvNetPushMission::CvNetPushMission() : CvMessageData(GAMEMESSAGE_PUSH_MISSION), m_ePlayer(NO_PLAYER), m_iUnitID(-1), m_eMission(NO_MISSION), m_iData1(-1), m_iData2(-1), m_iFlags(0), m_bShift(false)
+CvNetPushMission::CvNetPushMission()
+	: CvMessageData(GAMEMESSAGE_PUSH_MISSION), m_ePlayer(NO_PLAYER), m_iUnitID(-1), m_eMission(NO_MISSION), m_iData1(-1), m_iData2(-1), m_iFlags(0), m_bShift(false)
 {
 }
 
-CvNetPushMission::CvNetPushMission(PlayerTypes ePlayer, int iUnitID, MissionTypes eMission, int iData1, int iData2, int iFlags, bool bShift) : CvMessageData(GAMEMESSAGE_PUSH_MISSION), m_ePlayer(ePlayer), m_iUnitID(iUnitID), m_eMission(eMission), m_iData1(iData1), m_iData2(iData2), m_iFlags(iFlags), m_bShift(bShift)
+CvNetPushMission::CvNetPushMission(PlayerTypes ePlayer, int iUnitID, MissionTypes eMission, int iData1, int iData2, int iFlags, bool bShift)
+	: CvMessageData(GAMEMESSAGE_PUSH_MISSION), m_ePlayer(ePlayer), m_iUnitID(iUnitID), m_eMission(eMission), m_iData1(iData1), m_iData2(iData2), m_iFlags(iFlags), m_bShift(bShift)
 {
 }
 
-void CvNetPushMission::Debug(char* szAddendum) 
-{		
+void CvNetPushMission::Debug(char* szAddendum)
+{
 	sprintf(szAddendum, "Do Mission, who is %d, unit ID is %d, mission is %S", m_ePlayer, m_iUnitID, GC.getMissionInfo(m_eMission).getDescription());
 }
 
@@ -913,17 +920,19 @@ void CvNetPushMission::SetFromBuffer(FDataStreamBase* pStream)
 	GC.getGameINLINE().logDebugMsg("Reading CvNetPushMission message with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eMission, m_iData1, m_iData2, m_iFlags, m_bShift);
 }
 
-CvNetAutoMission::CvNetAutoMission() : CvMessageData(GAMEMESSAGE_AUTO_MISSION), m_ePlayer(NO_PLAYER), m_iUnitID(-1)
+CvNetAutoMission::CvNetAutoMission()
+	: CvMessageData(GAMEMESSAGE_AUTO_MISSION), m_ePlayer(NO_PLAYER), m_iUnitID(-1)
 {
 }
 
-CvNetAutoMission::CvNetAutoMission(PlayerTypes ePlayer, int iUnitID) : CvMessageData(GAMEMESSAGE_AUTO_MISSION), m_ePlayer(ePlayer), m_iUnitID(iUnitID)
+CvNetAutoMission::CvNetAutoMission(PlayerTypes ePlayer, int iUnitID)
+	: CvMessageData(GAMEMESSAGE_AUTO_MISSION), m_ePlayer(ePlayer), m_iUnitID(iUnitID)
 {
 }
 
-void CvNetAutoMission::Debug(char* szAddendum) 
-{ 
-	sprintf(szAddendum, "Auto Mission, unit ID is %d",	m_iUnitID); 
+void CvNetAutoMission::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Auto Mission, unit ID is %d", m_iUnitID);
 }
 
 void CvNetAutoMission::Execute()
@@ -970,15 +979,17 @@ void CvNetAutoMission::SetFromBuffer(FDataStreamBase* pStream)
 	GC.getGameINLINE().logDebugMsg("Reading CvNetAutoMission message with payload [%d, %d]\n", m_ePlayer, m_iUnitID);
 }
 
-CvNetDoCommand::CvNetDoCommand() : CvMessageData(GAMEMESSAGE_DO_COMMAND), m_ePlayer(NO_PLAYER), m_iUnitID(-1), m_eCommand(NO_COMMAND), m_iData1(-1), m_iData2(-1), m_bAlt(false) 
+CvNetDoCommand::CvNetDoCommand()
+	: CvMessageData(GAMEMESSAGE_DO_COMMAND), m_ePlayer(NO_PLAYER), m_iUnitID(-1), m_eCommand(NO_COMMAND), m_iData1(-1), m_iData2(-1), m_bAlt(false)
 {
 }
 
-CvNetDoCommand::CvNetDoCommand(PlayerTypes ePlayer, int iUnitID, CommandTypes eCommand, int iData1, int iData2, bool bAlt) : CvMessageData(GAMEMESSAGE_DO_COMMAND), m_ePlayer(ePlayer), m_iUnitID(iUnitID), m_eCommand(eCommand), m_iData1(iData1), m_iData2(iData2), m_bAlt(bAlt) 
+CvNetDoCommand::CvNetDoCommand(PlayerTypes ePlayer, int iUnitID, CommandTypes eCommand, int iData1, int iData2, bool bAlt)
+	: CvMessageData(GAMEMESSAGE_DO_COMMAND), m_ePlayer(ePlayer), m_iUnitID(iUnitID), m_eCommand(eCommand), m_iData1(iData1), m_iData2(iData2), m_bAlt(bAlt)
 {
 }
 
-void CvNetDoCommand::Debug(char* szAddendum) 
+void CvNetDoCommand::Debug(char* szAddendum)
 {
 	sprintf(szAddendum, "Do Command, who is %d, unit ID is %d, command is %d", m_ePlayer, m_iUnitID, m_eCommand);
 }
@@ -993,12 +1004,12 @@ void CvNetDoCommand::Execute()
 			if (m_bAlt && GC.getCommandInfo(m_eCommand).getAll())
 			{
 				int iLoop;
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       07/08/09                                jdog5000      */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
-/* orginal bts code
+				/************************************************************************************************/
+				/* UNOFFICIAL_PATCH                       07/08/09                                jdog5000      */
+				/*                                                                                              */
+				/* Bugfix                                                                                       */
+				/************************************************************************************************/
+				/* orginal bts code
 				
 				for (CvUnit* pLoopUnit = GET_PLAYER(m_ePlayer).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(m_ePlayer).nextUnit(&iLoop))
 				{
@@ -1009,9 +1020,9 @@ void CvNetDoCommand::Execute()
 				for (CvUnit* pLoopUnit = GET_PLAYER(m_ePlayer).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(m_ePlayer).nextUnit(&iLoop))
 				{
 					if (pLoopUnit->getUnitType() == eUpgradeType)
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
+					/************************************************************************************************/
+					/* UNOFFICIAL_PATCH                        END                                                  */
+					/************************************************************************************************/
 					{
 						GC.getGameINLINE().logDebugMsg("Executing CvNetDoCommand message (all of same unit type) with payload [%d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eCommand, m_iData1, m_iData2, m_bAlt);
 						pLoopUnit->doCommand(m_eCommand, m_iData1, m_iData2);
@@ -1029,7 +1040,7 @@ void CvNetDoCommand::Execute()
 		{
 			GC.getGameINLINE().logDebugMsg("Skipping CvNetDoCommand message due to invalid unit id with payload [%d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eCommand, m_iData1, m_iData2, m_bAlt);
 		}
-		}
+	}
 	else
 	{
 		GC.getGameINLINE().logDebugMsg("Skipping CvNetDoCommand message due to invalid player with payload [%d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eCommand, m_iData1, m_iData2, m_bAlt);
@@ -1058,17 +1069,19 @@ void CvNetDoCommand::SetFromBuffer(FDataStreamBase* pStream)
 	GC.getGameINLINE().logDebugMsg("Reading CvNetDoCommand message with payload [%d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eCommand, m_iData1, m_iData2, m_bAlt);
 }
 
-CvNetPercentChange::CvNetPercentChange() : CvMessageData(GAMEMESSAGE_PERCENT_CHANGE), m_ePlayer(NO_PLAYER), m_iChange(0), m_eCommerce(NO_COMMERCE)
+CvNetPercentChange::CvNetPercentChange()
+	: CvMessageData(GAMEMESSAGE_PERCENT_CHANGE), m_ePlayer(NO_PLAYER), m_iChange(0), m_eCommerce(NO_COMMERCE)
 {
 }
 
-CvNetPercentChange::CvNetPercentChange(PlayerTypes ePlayer, CommerceTypes eCommerce, int iChange) : CvMessageData(GAMEMESSAGE_PERCENT_CHANGE), m_ePlayer(ePlayer), m_iChange(iChange), m_eCommerce(eCommerce)
+CvNetPercentChange::CvNetPercentChange(PlayerTypes ePlayer, CommerceTypes eCommerce, int iChange)
+	: CvMessageData(GAMEMESSAGE_PERCENT_CHANGE), m_ePlayer(ePlayer), m_iChange(iChange), m_eCommerce(eCommerce)
 {
 }
 
-void CvNetPercentChange::Debug(char* szAddendum) 
-{ 
-	sprintf(szAddendum, "Commerce: %d, Percent Change: %d", m_eCommerce, m_iChange); 
+void CvNetPercentChange::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Commerce: %d, Percent Change: %d", m_eCommerce, m_iChange);
 }
 
 void CvNetPercentChange::Execute()
@@ -1093,17 +1106,19 @@ void CvNetPercentChange::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read((int*)&m_eCommerce);
 }
 
-CvNetChangeVassal::CvNetChangeVassal() : CvMessageData(GAMEMESSAGE_CHANGE_VASSAL), m_ePlayer(NO_PLAYER), m_eMasterTeam(NO_TEAM), m_bVassal(false), m_bCapitulated(false)
+CvNetChangeVassal::CvNetChangeVassal()
+	: CvMessageData(GAMEMESSAGE_CHANGE_VASSAL), m_ePlayer(NO_PLAYER), m_eMasterTeam(NO_TEAM), m_bVassal(false), m_bCapitulated(false)
 {
 }
 
-CvNetChangeVassal::CvNetChangeVassal(PlayerTypes ePlayer, TeamTypes eMasterTeam, bool bVassal, bool bCapitulated) : CvMessageData(GAMEMESSAGE_CHANGE_VASSAL), m_ePlayer(ePlayer), m_eMasterTeam(eMasterTeam), m_bVassal(bVassal), m_bCapitulated(bCapitulated)
+CvNetChangeVassal::CvNetChangeVassal(PlayerTypes ePlayer, TeamTypes eMasterTeam, bool bVassal, bool bCapitulated)
+	: CvMessageData(GAMEMESSAGE_CHANGE_VASSAL), m_ePlayer(ePlayer), m_eMasterTeam(eMasterTeam), m_bVassal(bVassal), m_bCapitulated(bCapitulated)
 {
 }
 
-void CvNetChangeVassal::Debug(char* szAddendum) 
-{	
-	sprintf(szAddendum, "Change Vassal, master team is %d", m_eMasterTeam);	
+void CvNetChangeVassal::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Change Vassal, master team is %d", m_eMasterTeam);
 }
 
 void CvNetChangeVassal::Execute()
@@ -1131,17 +1146,19 @@ void CvNetChangeVassal::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read(&m_bCapitulated);
 }
 
-CvNetChooseElection::CvNetChooseElection() : CvMessageData(GAMEMESSAGE_CHOOSE_ELECTION), m_ePlayer(NO_PLAYER), m_iSelection(-1), m_iVoteId(-1)
+CvNetChooseElection::CvNetChooseElection()
+	: CvMessageData(GAMEMESSAGE_CHOOSE_ELECTION), m_ePlayer(NO_PLAYER), m_iSelection(-1), m_iVoteId(-1)
 {
 }
 
-CvNetChooseElection::CvNetChooseElection(PlayerTypes ePlayer, int iSelection, int iVoteId) : CvMessageData(GAMEMESSAGE_CHOOSE_ELECTION), m_ePlayer(ePlayer), m_iSelection(iSelection), m_iVoteId(iVoteId)
+CvNetChooseElection::CvNetChooseElection(PlayerTypes ePlayer, int iSelection, int iVoteId)
+	: CvMessageData(GAMEMESSAGE_CHOOSE_ELECTION), m_ePlayer(ePlayer), m_iSelection(iSelection), m_iVoteId(iVoteId)
 {
 }
 
-void CvNetChooseElection::Debug(char* szAddendum) 
-{	
-	sprintf(szAddendum, "Choose Election: %d", m_iSelection);	
+void CvNetChooseElection::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Choose Election: %d", m_iSelection);
 }
 
 void CvNetChooseElection::Execute()
@@ -1163,17 +1180,19 @@ void CvNetChooseElection::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read(&m_iVoteId);
 }
 
-CvNetDiploVote::CvNetDiploVote() : CvMessageData(GAMEMESSAGE_DIPLO_VOTE), m_ePlayer(NO_PLAYER), m_iVoteId(-1), m_eChoice(NO_PLAYER_VOTE) 
+CvNetDiploVote::CvNetDiploVote()
+	: CvMessageData(GAMEMESSAGE_DIPLO_VOTE), m_ePlayer(NO_PLAYER), m_iVoteId(-1), m_eChoice(NO_PLAYER_VOTE)
 {
 }
 
-CvNetDiploVote::CvNetDiploVote(PlayerTypes ePlayer, int iVoteId, PlayerVoteTypes eChoice) : CvMessageData(GAMEMESSAGE_DIPLO_VOTE), m_ePlayer(ePlayer), m_iVoteId(iVoteId), m_eChoice(eChoice) 
+CvNetDiploVote::CvNetDiploVote(PlayerTypes ePlayer, int iVoteId, PlayerVoteTypes eChoice)
+	: CvMessageData(GAMEMESSAGE_DIPLO_VOTE), m_ePlayer(ePlayer), m_iVoteId(iVoteId), m_eChoice(eChoice)
 {
 }
 
-void CvNetDiploVote::Debug(char* szAddendum) 
-{	
-	sprintf(szAddendum, "Diplo Vote for %d; Choice is %d", m_iVoteId, m_eChoice);	
+void CvNetDiploVote::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Diplo Vote for %d; Choice is %d", m_iVoteId, m_eChoice);
 }
 
 void CvNetDiploVote::Execute()
@@ -1195,17 +1214,19 @@ void CvNetDiploVote::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read((int*)&m_eChoice);
 }
 
-CvNetChangeWar::CvNetChangeWar() : CvMessageData(GAMEMESSAGE_CHANGE_WAR), m_ePlayer(NO_PLAYER), m_eRivalTeam(NO_TEAM), m_bWar(false)
+CvNetChangeWar::CvNetChangeWar()
+	: CvMessageData(GAMEMESSAGE_CHANGE_WAR), m_ePlayer(NO_PLAYER), m_eRivalTeam(NO_TEAM), m_bWar(false)
 {
 }
 
-CvNetChangeWar::CvNetChangeWar(PlayerTypes ePlayer, TeamTypes eRivalTeam, bool bWar) : CvMessageData(GAMEMESSAGE_CHANGE_WAR), m_ePlayer(ePlayer), m_eRivalTeam(eRivalTeam), m_bWar(bWar)
+CvNetChangeWar::CvNetChangeWar(PlayerTypes ePlayer, TeamTypes eRivalTeam, bool bWar)
+	: CvMessageData(GAMEMESSAGE_CHANGE_WAR), m_ePlayer(ePlayer), m_eRivalTeam(eRivalTeam), m_bWar(bWar)
 {
 }
 
-void CvNetChangeWar::Debug(char* szAddendum) 
-{	
-	sprintf(szAddendum, "Change War, rival team is %d", m_eRivalTeam);	
+void CvNetChangeWar::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Change War, rival team is %d", m_eRivalTeam);
 }
 
 void CvNetChangeWar::Execute()
@@ -1217,7 +1238,7 @@ void CvNetChangeWar::Execute()
 		{
 			GET_TEAM(GET_PLAYER(m_ePlayer).getTeam()).declareWar(m_eRivalTeam, false, NO_WARPLAN);
 
-			if (gDLL->isDiplomacy() && GET_PLAYER((PlayerTypes) gDLL->getDiplomacyPlayer()).getTeam() == m_eRivalTeam)
+			if (gDLL->isDiplomacy() && GET_PLAYER((PlayerTypes)gDLL->getDiplomacyPlayer()).getTeam() == m_eRivalTeam)
 			{
 				gDLL->endDiplomacy();
 			}
@@ -1243,13 +1264,14 @@ void CvNetChangeWar::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read(&m_bWar);
 }
 
-CvNetPing::CvNetPing(PlayerTypes ePlayer, int iX, int iY) : CvMessageData(GAMEMESSAGE_PING), m_ePlayer(ePlayer), m_iX(iX), m_iY(iY) 
-{ 
+CvNetPing::CvNetPing(PlayerTypes ePlayer, int iX, int iY)
+	: CvMessageData(GAMEMESSAGE_PING), m_ePlayer(ePlayer), m_iX(iX), m_iY(iY)
+{
 }
 
-void CvNetPing::Debug(char* szAddendum) 
-{ 
-	sprintf(szAddendum, "Ping message received");	
+void CvNetPing::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Ping message received");
 }
 
 void CvNetPing::PutInBuffer(FDataStreamBase* pStream)
@@ -1280,11 +1302,12 @@ void CvNetPing::Execute()
 // BUG - Reminder Mod - start
 #include "CyArgsList.h"
 #include "CvDLLPythonIFaceBase.h"
-CvNetAddReminder::CvNetAddReminder(PlayerTypes ePlayer, int iGameTurn, CvWString szMessage) : CvMessageData(GAMEMESSAGE_ADD_REMINDER), m_ePlayer(ePlayer), m_iGameTurn(iGameTurn), m_szMessage(szMessage)
+CvNetAddReminder::CvNetAddReminder(PlayerTypes ePlayer, int iGameTurn, CvWString szMessage)
+	: CvMessageData(GAMEMESSAGE_ADD_REMINDER), m_ePlayer(ePlayer), m_iGameTurn(iGameTurn), m_szMessage(szMessage)
 {
 }
 
-void CvNetAddReminder::Debug(char* szAddendum) 
+void CvNetAddReminder::Debug(char* szAddendum)
 {
 	sprintf(szAddendum, "Add Reminder, player %d on turn %d: %s", m_ePlayer, m_iGameTurn, m_szMessage.c_str());
 }
@@ -1295,7 +1318,7 @@ void CvNetAddReminder::Execute()
 	{
 
 		CyArgsList argsList;
-		long lResult = 0;
+		long	   lResult = 0;
 
 		argsList.add(m_ePlayer);
 		argsList.add(m_iGameTurn);
@@ -1325,7 +1348,8 @@ void CvNetAddReminder::SetFromBuffer(FDataStreamBase* pStream)
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-CvGlobalDefineUpdate::CvGlobalDefineUpdate(CvWString szName, int iValue, float fValue, CvWString szValue) : CvMessageData(GAMEMESSAGE_SET_GLOBAL_DEFINE), m_szDefine(szName), m_iValue(iValue), m_fValue(fValue), m_szValue(szValue)
+CvGlobalDefineUpdate::CvGlobalDefineUpdate(CvWString szName, int iValue, float fValue, CvWString szValue)
+	: CvMessageData(GAMEMESSAGE_SET_GLOBAL_DEFINE), m_szDefine(szName), m_iValue(iValue), m_fValue(fValue), m_szValue(szValue)
 {
 }
 
@@ -1341,22 +1365,22 @@ void CvGlobalDefineUpdate::Execute()
 		if (m_iValue != -1)
 		{
 			char szDefine[255];
-			sprintf(szDefine,"%S",m_szDefine.c_str());
+			sprintf(szDefine, "%S", m_szDefine.c_str());
 			GC.setDefineINT(szDefine, m_iValue, false);
 		}
 		if (m_fValue != -1.0f)
 		{
 			char szDefine[255];
-			sprintf(szDefine,"%S",m_szDefine.c_str());
+			sprintf(szDefine, "%S", m_szDefine.c_str());
 			GC.setDefineFLOAT(szDefine, m_fValue, false);
 		}
 		if (!m_szValue.empty())
 		{
 			char szDefine[255];
-			sprintf(szDefine,"%S",m_szDefine.c_str());
+			sprintf(szDefine, "%S", m_szDefine.c_str());
 
 			char szValue[255];
-			sprintf(szValue,"%S",m_szValue.c_str());
+			sprintf(szValue, "%S", m_szValue.c_str());
 			GC.setDefineSTRING(szDefine, szValue, false);
 		}
 	}
@@ -1381,11 +1405,12 @@ void CvGlobalDefineUpdate::SetFromBuffer(FDataStreamBase* pStream)
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 
-CvNetRecalculateModifiers::CvNetRecalculateModifiers() : CvMessageData(GAMEMESSAGE_RECALCULATE_MODIFIERS)
+CvNetRecalculateModifiers::CvNetRecalculateModifiers()
+	: CvMessageData(GAMEMESSAGE_RECALCULATE_MODIFIERS)
 {
 }
 
-void CvNetRecalculateModifiers::Debug(char *szAddendum)
+void CvNetRecalculateModifiers::Debug(char* szAddendum)
 {
 	sprintf(szAddendum, "Starting modifier recalculation");
 }
@@ -1406,7 +1431,8 @@ void CvNetRecalculateModifiers::SetFromBuffer(FDataStreamBase* pStream)
 }
 
 
-CvNetBuildLists::CvNetBuildLists(PlayerTypes ePlayer, int iList, int iIndex, int iNum) : CvMessageData(GAMEMESSAGE_BUILD_LISTS), m_ePlayer(ePlayer), m_iList(iList), m_iIndex(iIndex), m_iNum(iNum)
+CvNetBuildLists::CvNetBuildLists(PlayerTypes ePlayer, int iList, int iIndex, int iNum)
+	: CvMessageData(GAMEMESSAGE_BUILD_LISTS), m_ePlayer(ePlayer), m_iList(iList), m_iIndex(iIndex), m_iNum(iNum)
 {
 	//m_pBuildLists = new CvBuildLists();
 	//if (bLoad)
@@ -1418,7 +1444,7 @@ CvNetBuildLists::~CvNetBuildLists()
 	//SAFE_DELETE(m_pBuildLists);
 }
 
-void CvNetBuildLists::Debug(char *szAddendum)
+void CvNetBuildLists::Debug(char* szAddendum)
 {
 	sprintf(szAddendum, "Sending build lists");
 }
@@ -1450,11 +1476,13 @@ void CvNetBuildLists::SetFromBuffer(FDataStreamBase* pStream)
 }
 
 
-CvNetBuildListPushOrder::CvNetBuildListPushOrder() : CvMessageData(GAMEMESSAGE_BUILD_LIST_PUSH_ORDER), m_ePlayer(NO_PLAYER), m_iID(0), m_eOrder(NO_ORDER), m_iData(-1), m_bAlt(false), m_bShift(false), m_bCtrl(false)
+CvNetBuildListPushOrder::CvNetBuildListPushOrder()
+	: CvMessageData(GAMEMESSAGE_BUILD_LIST_PUSH_ORDER), m_ePlayer(NO_PLAYER), m_iID(0), m_eOrder(NO_ORDER), m_iData(-1), m_bAlt(false), m_bShift(false), m_bCtrl(false)
 {
 }
 
-CvNetBuildListPushOrder::CvNetBuildListPushOrder(PlayerTypes ePlayer, int iID, OrderTypes eOrder, int iData, bool bAlt, bool bShift, bool bCtrl) : CvMessageData(GAMEMESSAGE_BUILD_LIST_PUSH_ORDER), m_ePlayer(ePlayer), m_iID(iID), m_eOrder(eOrder), m_iData(iData), m_bAlt(bAlt), m_bShift(bShift), m_bCtrl(bCtrl)
+CvNetBuildListPushOrder::CvNetBuildListPushOrder(PlayerTypes ePlayer, int iID, OrderTypes eOrder, int iData, bool bAlt, bool bShift, bool bCtrl)
+	: CvMessageData(GAMEMESSAGE_BUILD_LIST_PUSH_ORDER), m_ePlayer(ePlayer), m_iID(iID), m_eOrder(eOrder), m_iData(iData), m_bAlt(bAlt), m_bShift(bShift), m_bCtrl(bCtrl)
 {
 }
 
@@ -1497,17 +1525,19 @@ void CvNetBuildListPushOrder::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read(&m_bCtrl);
 }
 
-CvNetBuildListPopOrder::CvNetBuildListPopOrder() : CvMessageData(GAMEMESSAGE_BUILD_LIST_POP_ORDER), m_ePlayer(NO_PLAYER), m_iID(0), m_iNum(0)
+CvNetBuildListPopOrder::CvNetBuildListPopOrder()
+	: CvMessageData(GAMEMESSAGE_BUILD_LIST_POP_ORDER), m_ePlayer(NO_PLAYER), m_iID(0), m_iNum(0)
 {
 }
 
-CvNetBuildListPopOrder::CvNetBuildListPopOrder(PlayerTypes ePlayer, int iID, int iNum) : CvMessageData(GAMEMESSAGE_BUILD_LIST_POP_ORDER), m_ePlayer(ePlayer), m_iID(iID), m_iNum(iNum)
+CvNetBuildListPopOrder::CvNetBuildListPopOrder(PlayerTypes ePlayer, int iID, int iNum)
+	: CvMessageData(GAMEMESSAGE_BUILD_LIST_POP_ORDER), m_ePlayer(ePlayer), m_iID(iID), m_iNum(iNum)
 {
 }
 
-void CvNetBuildListPopOrder::Debug(char* szAddendum) 
-{	
-	sprintf(szAddendum, "Pop Order on list, list ID is %d", m_iID);	
+void CvNetBuildListPopOrder::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Pop Order on list, list ID is %d", m_iID);
 }
 
 void CvNetBuildListPopOrder::Execute()
@@ -1537,17 +1567,19 @@ void CvNetBuildListPopOrder::SetFromBuffer(FDataStreamBase* pStream)
 }
 
 
-CvNetBuildListEdit::CvNetBuildListEdit() : CvMessageData(GAMEMESSAGE_BUILD_LIST_EDIT), m_ePlayer(NO_PLAYER), m_iID(0), m_bDelete(false)
+CvNetBuildListEdit::CvNetBuildListEdit()
+	: CvMessageData(GAMEMESSAGE_BUILD_LIST_EDIT), m_ePlayer(NO_PLAYER), m_iID(0), m_bDelete(false)
 {
 }
 
-CvNetBuildListEdit::CvNetBuildListEdit(PlayerTypes ePlayer, int iID, CvString szName, bool bDelete) : CvMessageData(GAMEMESSAGE_BUILD_LIST_EDIT), m_ePlayer(ePlayer), m_iID(iID), m_szName(szName), m_bDelete(bDelete)
+CvNetBuildListEdit::CvNetBuildListEdit(PlayerTypes ePlayer, int iID, CvString szName, bool bDelete)
+	: CvMessageData(GAMEMESSAGE_BUILD_LIST_EDIT), m_ePlayer(ePlayer), m_iID(iID), m_szName(szName), m_bDelete(bDelete)
 {
 }
 
-void CvNetBuildListEdit::Debug(char* szAddendum) 
-{	
-	sprintf(szAddendum, "Editing build list, list ID is %d", m_iID);	
+void CvNetBuildListEdit::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Editing build list, list ID is %d", m_iID);
 }
 
 void CvNetBuildListEdit::Execute()
@@ -1589,17 +1621,19 @@ void CvNetBuildListEdit::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read(&m_bDelete);
 }
 
-CvNetChooseBuildUp::CvNetChooseBuildUp() : CvMessageData(GAMEMESSAGE_CHOOSE_BUILDUP), m_ePlayer(NO_PLAYER), m_ePromotionLine(NO_PROMOTIONLINE), m_iID(-1)
+CvNetChooseBuildUp::CvNetChooseBuildUp()
+	: CvMessageData(GAMEMESSAGE_CHOOSE_BUILDUP), m_ePlayer(NO_PLAYER), m_ePromotionLine(NO_PROMOTIONLINE), m_iID(-1)
 {
 }
 
-CvNetChooseBuildUp::CvNetChooseBuildUp(PlayerTypes ePlayer, PromotionLineTypes ePromotionLine, int iID) : CvMessageData(GAMEMESSAGE_CHOOSE_BUILDUP), m_ePlayer(ePlayer), m_ePromotionLine(ePromotionLine), m_iID(iID)
+CvNetChooseBuildUp::CvNetChooseBuildUp(PlayerTypes ePlayer, PromotionLineTypes ePromotionLine, int iID)
+	: CvMessageData(GAMEMESSAGE_CHOOSE_BUILDUP), m_ePlayer(ePlayer), m_ePromotionLine(ePromotionLine), m_iID(iID)
 {
 }
 
-void CvNetChooseBuildUp::Debug(char* szAddendum) 
-{ 
-	sprintf(szAddendum, "Choosing Build Up"); 
+void CvNetChooseBuildUp::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Choosing Build Up");
 }
 
 void CvNetChooseBuildUp::Execute()
@@ -1634,17 +1668,19 @@ void CvNetChooseBuildUp::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read(&m_iID);
 }
 
-CvNetChooseTrait::CvNetChooseTrait() : CvMessageData(GAMEMESSAGE_CHOOSE_TRAIT), m_ePlayer(NO_PLAYER), m_eTrait(NO_TRAIT), m_bNewValue(false)
+CvNetChooseTrait::CvNetChooseTrait()
+	: CvMessageData(GAMEMESSAGE_CHOOSE_TRAIT), m_ePlayer(NO_PLAYER), m_eTrait(NO_TRAIT), m_bNewValue(false)
 {
 }
 
-CvNetChooseTrait::CvNetChooseTrait(PlayerTypes ePlayer, TraitTypes eTrait, bool bNewValue) : CvMessageData(GAMEMESSAGE_CHOOSE_TRAIT), m_ePlayer(ePlayer), m_eTrait(eTrait), m_bNewValue(bNewValue)
+CvNetChooseTrait::CvNetChooseTrait(PlayerTypes ePlayer, TraitTypes eTrait, bool bNewValue)
+	: CvMessageData(GAMEMESSAGE_CHOOSE_TRAIT), m_ePlayer(ePlayer), m_eTrait(eTrait), m_bNewValue(bNewValue)
 {
 }
 
-void CvNetChooseTrait::Debug(char* szAddendum) 
-{ 
-	sprintf(szAddendum, "Selecting Trait: %d", m_eTrait); 
+void CvNetChooseTrait::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Selecting Trait: %d", m_eTrait);
 }
 
 void CvNetChooseTrait::Execute()
@@ -1669,17 +1705,19 @@ void CvNetChooseTrait::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read(&m_bNewValue);
 }
 
-CvNetChooseMergeUnit::CvNetChooseMergeUnit() : CvMessageData(GAMEMESSAGE_CHOOSE_MERGE_UNIT), m_ePlayer(NO_PLAYER), m_iUnitID(NO_UNIT)
+CvNetChooseMergeUnit::CvNetChooseMergeUnit()
+	: CvMessageData(GAMEMESSAGE_CHOOSE_MERGE_UNIT), m_ePlayer(NO_PLAYER), m_iUnitID(NO_UNIT)
 {
 }
 
-CvNetChooseMergeUnit::CvNetChooseMergeUnit(PlayerTypes ePlayer, int iUnitID) : CvMessageData(GAMEMESSAGE_CHOOSE_MERGE_UNIT), m_ePlayer(ePlayer), m_iUnitID(iUnitID)
+CvNetChooseMergeUnit::CvNetChooseMergeUnit(PlayerTypes ePlayer, int iUnitID)
+	: CvMessageData(GAMEMESSAGE_CHOOSE_MERGE_UNIT), m_ePlayer(ePlayer), m_iUnitID(iUnitID)
 {
 }
 
-void CvNetChooseMergeUnit::Debug(char* szAddendum) 
-{ 
-	sprintf(szAddendum, "Selecting Merge Unit: %d", m_iUnitID); 
+void CvNetChooseMergeUnit::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Selecting Merge Unit: %d", m_iUnitID);
 }
 
 void CvNetChooseMergeUnit::Execute()
@@ -1705,17 +1743,17 @@ void CvNetChooseMergeUnit::Execute()
 		else if (GET_PLAYER(m_ePlayer).getBaseMergeSelectionUnit() != FFreeList::INVALID_INDEX && GET_PLAYER(m_ePlayer).getFirstMergeSelectionUnit() != FFreeList::INVALID_INDEX)
 		{
 			GET_PLAYER(m_ePlayer).setSecondMergeSelectionUnit(m_iUnitID);
-			CvUnit* pUnit1 = GET_PLAYER(m_ePlayer).getUnit(GET_PLAYER(m_ePlayer).getBaseMergeSelectionUnit());
-			CvUnit* pUnit2 = GET_PLAYER(m_ePlayer).getUnit(GET_PLAYER(m_ePlayer).getFirstMergeSelectionUnit());
-			CvUnit* pUnit3 = GET_PLAYER(m_ePlayer).getUnit(GET_PLAYER(m_ePlayer).getSecondMergeSelectionUnit());
+			CvUnit*	  pUnit1	= GET_PLAYER(m_ePlayer).getUnit(GET_PLAYER(m_ePlayer).getBaseMergeSelectionUnit());
+			CvUnit*	  pUnit2	= GET_PLAYER(m_ePlayer).getUnit(GET_PLAYER(m_ePlayer).getFirstMergeSelectionUnit());
+			CvUnit*	  pUnit3	= GET_PLAYER(m_ePlayer).getUnit(GET_PLAYER(m_ePlayer).getSecondMergeSelectionUnit());
 			UnitTypes eUnitType = pUnit1->getUnitType();
 
 			CvUnit* pkMergedUnit = GET_PLAYER(m_ePlayer).initUnit(eUnitType, pUnit1->getX_INLINE(), pUnit1->getY_INLINE(), NO_UNITAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
 			PROFILE_FUNC();
 
-			int iTotalGroupOffset = 1;
-			int iTotalQualityOffset = 0;
-			bool bSet = false;
+			int	 iTotalGroupOffset	 = 1;
+			int	 iTotalQualityOffset = 0;
+			bool bSet				 = false;
 			pUnit1->setFortifyTurns(0);
 			pUnit2->setFortifyTurns(0);
 			pUnit3->setFortifyTurns(0);
@@ -1862,7 +1900,7 @@ void CvNetChooseMergeUnit::Execute()
 			int iXP1 = pUnit1->getExperience100();
 			int iXP2 = pUnit2->getExperience100();
 			int iXP3 = pUnit3->getExperience100();
-			int iXP = iXP1 + iXP2 + iXP3;
+			int iXP	 = iXP1 + iXP2 + iXP3;
 			if (iXP != 0)
 			{
 				iXP /= 3;
@@ -1917,17 +1955,19 @@ void CvNetChooseMergeUnit::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read((int*)&m_iUnitID);
 }
 
-CvNetConfirmSplitUnit::CvNetConfirmSplitUnit() : CvMessageData(GAMEMESSAGE_CONFIRM_SPLIT_UNIT), m_ePlayer(NO_PLAYER), m_bConfirm(false)
+CvNetConfirmSplitUnit::CvNetConfirmSplitUnit()
+	: CvMessageData(GAMEMESSAGE_CONFIRM_SPLIT_UNIT), m_ePlayer(NO_PLAYER), m_bConfirm(false)
 {
 }
 
-CvNetConfirmSplitUnit::CvNetConfirmSplitUnit(PlayerTypes ePlayer, bool bConfirm) : CvMessageData(GAMEMESSAGE_CONFIRM_SPLIT_UNIT), m_ePlayer(ePlayer), m_bConfirm(bConfirm)
+CvNetConfirmSplitUnit::CvNetConfirmSplitUnit(PlayerTypes ePlayer, bool bConfirm)
+	: CvMessageData(GAMEMESSAGE_CONFIRM_SPLIT_UNIT), m_ePlayer(ePlayer), m_bConfirm(bConfirm)
 {
 }
 
-void CvNetConfirmSplitUnit::Debug(char* szAddendum) 
-{ 
-	sprintf(szAddendum, "Confirming Split Unit"); 
+void CvNetConfirmSplitUnit::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Confirming Split Unit");
 }
 
 void CvNetConfirmSplitUnit::Execute()
@@ -1936,17 +1976,17 @@ void CvNetConfirmSplitUnit::Execute()
 	{
 		if (GET_PLAYER(m_ePlayer).getSplittingUnit() != FFreeList::INVALID_INDEX && m_bConfirm)
 		{
-			CvUnit* pUnit0 = GET_PLAYER(m_ePlayer).getUnit(GET_PLAYER(m_ePlayer).getSplittingUnit());
+			CvUnit*	  pUnit0	= GET_PLAYER(m_ePlayer).getUnit(GET_PLAYER(m_ePlayer).getSplittingUnit());
 			UnitTypes eUnitType = pUnit0->getUnitType();
-			CvUnit* pUnit1 = GET_PLAYER(m_ePlayer).initUnit(eUnitType, pUnit0->getX_INLINE(), pUnit0->getY_INLINE(), NO_UNITAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
-			CvUnit* pUnit2 = GET_PLAYER(m_ePlayer).initUnit(eUnitType, pUnit0->getX_INLINE(), pUnit0->getY_INLINE(), NO_UNITAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
-			CvUnit* pUnit3 = GET_PLAYER(m_ePlayer).initUnit(eUnitType, pUnit0->getX_INLINE(), pUnit0->getY_INLINE(), NO_UNITAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+			CvUnit*	  pUnit1	= GET_PLAYER(m_ePlayer).initUnit(eUnitType, pUnit0->getX_INLINE(), pUnit0->getY_INLINE(), NO_UNITAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+			CvUnit*	  pUnit2	= GET_PLAYER(m_ePlayer).initUnit(eUnitType, pUnit0->getX_INLINE(), pUnit0->getY_INLINE(), NO_UNITAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+			CvUnit*	  pUnit3	= GET_PLAYER(m_ePlayer).initUnit(eUnitType, pUnit0->getX_INLINE(), pUnit0->getY_INLINE(), NO_UNITAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
 			PROFILE_FUNC();
 
-			int iTotalGroupOffset = -1;
-			int iTotalQualityOffset = 0;
-			bool bHasAdjusted = false;
-			bool bSet = false;
+			int	 iTotalGroupOffset	 = -1;
+			int	 iTotalQualityOffset = 0;
+			bool bHasAdjusted		 = false;
+			bool bSet				 = false;
 			pUnit0->setFortifyTurns(0);
 			for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 			{
@@ -2110,7 +2150,7 @@ void CvNetConfirmSplitUnit::Execute()
 			pUnit1->m_eOriginalOwner = pUnit0->getOriginalOwner();
 			pUnit2->m_eOriginalOwner = pUnit0->getOriginalOwner();
 			pUnit3->m_eOriginalOwner = pUnit0->getOriginalOwner();
-			
+
 			pUnit1->setAutoPromoting(pUnit0->isAutoPromoting());
 			pUnit2->setAutoPromoting(pUnit0->isAutoPromoting());
 			pUnit3->setAutoPromoting(pUnit0->isAutoPromoting());
@@ -2146,17 +2186,19 @@ void CvNetConfirmSplitUnit::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read((bool*)&m_bConfirm);
 }
 
-CvNetImprovementUpgrade::CvNetImprovementUpgrade() : CvMessageData(GAMEMESSAGE_IMPROVEMENT_UPGRADE), m_ePlayer(NO_PLAYER), m_eImprovement(NO_IMPROVEMENT), m_iX(-1), m_iY(-1), m_bConfirm(false)
+CvNetImprovementUpgrade::CvNetImprovementUpgrade()
+	: CvMessageData(GAMEMESSAGE_IMPROVEMENT_UPGRADE), m_ePlayer(NO_PLAYER), m_eImprovement(NO_IMPROVEMENT), m_iX(-1), m_iY(-1), m_bConfirm(false)
 {
 }
 
-CvNetImprovementUpgrade::CvNetImprovementUpgrade(PlayerTypes ePlayer, ImprovementTypes eImprovement, int iX, int iY, bool bConfirm) : CvMessageData(GAMEMESSAGE_IMPROVEMENT_UPGRADE), m_ePlayer(ePlayer), m_eImprovement(eImprovement), m_iX(iX), m_iY(iY), m_bConfirm(bConfirm)
+CvNetImprovementUpgrade::CvNetImprovementUpgrade(PlayerTypes ePlayer, ImprovementTypes eImprovement, int iX, int iY, bool bConfirm)
+	: CvMessageData(GAMEMESSAGE_IMPROVEMENT_UPGRADE), m_ePlayer(ePlayer), m_eImprovement(eImprovement), m_iX(iX), m_iY(iY), m_bConfirm(bConfirm)
 {
 }
 
-void CvNetImprovementUpgrade::Debug(char* szAddendum) 
-{ 
-	sprintf(szAddendum, "Selecting Improvement: %d", m_eImprovement); 
+void CvNetImprovementUpgrade::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Selecting Improvement: %d", m_eImprovement);
 }
 
 void CvNetImprovementUpgrade::Execute()
@@ -2186,17 +2228,19 @@ void CvNetImprovementUpgrade::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read(&m_bConfirm);
 }
 
-CvNetChooseArrestUnit::CvNetChooseArrestUnit() : CvMessageData(GAMEMESSAGE_CHOOSE_ARREST_UNIT), m_ePlayer(NO_PLAYER), m_ePlayerT(NO_PLAYER), m_iUnitID(NO_UNIT)
+CvNetChooseArrestUnit::CvNetChooseArrestUnit()
+	: CvMessageData(GAMEMESSAGE_CHOOSE_ARREST_UNIT), m_ePlayer(NO_PLAYER), m_ePlayerT(NO_PLAYER), m_iUnitID(NO_UNIT)
 {
 }
 
-CvNetChooseArrestUnit::CvNetChooseArrestUnit(PlayerTypes ePlayer, PlayerTypes ePlayerT, int iUnitID) : CvMessageData(GAMEMESSAGE_CHOOSE_ARREST_UNIT), m_ePlayer(ePlayer), m_ePlayerT(ePlayerT), m_iUnitID(iUnitID)
+CvNetChooseArrestUnit::CvNetChooseArrestUnit(PlayerTypes ePlayer, PlayerTypes ePlayerT, int iUnitID)
+	: CvMessageData(GAMEMESSAGE_CHOOSE_ARREST_UNIT), m_ePlayer(ePlayer), m_ePlayerT(ePlayerT), m_iUnitID(iUnitID)
 {
 }
 
-void CvNetChooseArrestUnit::Debug(char* szAddendum) 
-{ 
-	sprintf(szAddendum, "Selecting Unit to Arrest: %d", m_iUnitID); 
+void CvNetChooseArrestUnit::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Selecting Unit to Arrest: %d", m_iUnitID);
 }
 
 void CvNetChooseArrestUnit::Execute()
@@ -2207,7 +2251,7 @@ void CvNetChooseArrestUnit::Execute()
 		{
 			GET_PLAYER(m_ePlayerT).setArrestedUnit(m_iUnitID);
 			CvUnit* pArrestingUnit = GET_PLAYER(m_ePlayer).getUnit(GET_PLAYER(m_ePlayer).getArrestingUnit());
-			CvUnit* pArrestedUnit = GET_PLAYER(m_ePlayerT).getUnit(GET_PLAYER(m_ePlayerT).getArrestedUnit());
+			CvUnit* pArrestedUnit  = GET_PLAYER(m_ePlayerT).getUnit(GET_PLAYER(m_ePlayerT).getArrestedUnit());
 
 			pArrestingUnit->attackSamePlotSpecifiedUnit(pArrestedUnit, true);
 
@@ -2231,17 +2275,19 @@ void CvNetChooseArrestUnit::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read((int*)&m_iUnitID);
 }
 
-CvNetConfirmAmbush::CvNetConfirmAmbush() : CvMessageData(GAMEMESSAGE_CONFIRM_AMBUSH), m_ePlayer(NO_PLAYER), m_bConfirm(false)
+CvNetConfirmAmbush::CvNetConfirmAmbush()
+	: CvMessageData(GAMEMESSAGE_CONFIRM_AMBUSH), m_ePlayer(NO_PLAYER), m_bConfirm(false)
 {
 }
 
-CvNetConfirmAmbush::CvNetConfirmAmbush(PlayerTypes ePlayer, bool bConfirm) : CvMessageData(GAMEMESSAGE_CONFIRM_AMBUSH), m_ePlayer(ePlayer), m_bConfirm(bConfirm)
+CvNetConfirmAmbush::CvNetConfirmAmbush(PlayerTypes ePlayer, bool bConfirm)
+	: CvMessageData(GAMEMESSAGE_CONFIRM_AMBUSH), m_ePlayer(ePlayer), m_bConfirm(bConfirm)
 {
 }
 
-void CvNetConfirmAmbush::Debug(char* szAddendum) 
-{ 
-	sprintf(szAddendum, "Confirming Ambush"); 
+void CvNetConfirmAmbush::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Confirming Ambush");
 }
 
 void CvNetConfirmAmbush::Execute()
@@ -2250,8 +2296,8 @@ void CvNetConfirmAmbush::Execute()
 	{
 		if (GET_PLAYER(m_ePlayer).getAmbushingUnit() != FFreeList::INVALID_INDEX && m_bConfirm)
 		{
-			CvUnit* pAttacker = GET_PLAYER(m_ePlayer).getUnit(GET_PLAYER(m_ePlayer).getAmbushingUnit());
-			bool bAssassinate = GET_PLAYER(m_ePlayer).isAssassinate();
+			CvUnit* pAttacker	 = GET_PLAYER(m_ePlayer).getUnit(GET_PLAYER(m_ePlayer).getAmbushingUnit());
+			bool	bAssassinate = GET_PLAYER(m_ePlayer).isAssassinate();
 			if (pAttacker->plot() == NULL)
 			{
 				return;

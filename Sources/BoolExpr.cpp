@@ -15,7 +15,7 @@ BoolExpr::~BoolExpr()
 {
 }
 
-BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
+BoolExpr* BoolExpr::read(CvXMLLoadUtility* pXML)
 {
 	// In general we assume no comments to simplify reading code
 
@@ -28,7 +28,7 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 
 	//if (strcmp(szTag, "Not") == 0)
 	//wchar_t szLog[1000];
-	//swprintf(szLog, 1000, L"BoolExp '%s' ?= 'Not' is %i", pXML->GetXmlTagName(), 
+	//swprintf(szLog, 1000, L"BoolExp '%s' ?= 'Not' is %i", pXML->GetXmlTagName(),
 	//	     (int)equal(pXML->GetXmlTagName(), L"Not") );
 	//OutputDebugStringW(szLog);
 
@@ -51,10 +51,10 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 		}
 	}
 
-	//swprintf(szLog, 1000, L"BoolExp '%s' ?= 'And' is %i", pXML->GetXmlTagName(), 
+	//swprintf(szLog, 1000, L"BoolExp '%s' ?= 'And' is %i", pXML->GetXmlTagName(),
 	//	     (int)equal(pXML->GetXmlTagName(), L"And") );
 	//OutputDebugStringW(szLog);
-	
+
 	//if (strcmp(szTag, "And") == 0)
 	if (equal(pXML->GetXmlTagName(), L"And"))
 	{
@@ -86,7 +86,7 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			{
 				// read the first node
 				BoolExpr* pExpr = read(pXML);
-				
+
 				// read nodes until there are no more siblings
 				//while (pXML->TryMoveToXmlNextSibling())
 				while (pXML->TryMoveToXmlNextSibling())
@@ -129,7 +129,7 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			{
 				// read the first node
 				BoolExpr* pExpr = read(pXML);
-				
+
 				// read nodes until there are no more siblings
 				while (pXML->TryMoveToXmlNextSibling())
 				{
@@ -157,7 +157,7 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			{
 				// read the first node
 				BoolExpr* pExpr = read(pXML);
-				
+
 				// read the second node
 				if (pXML->TryMoveToXmlNextSibling())
 				{
@@ -184,9 +184,9 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// read the first node
-				IntExpr* pExpr = IntExpr::read(pXML);
+				IntExpr*  pExpr	 = IntExpr::read(pXML);
 				BoolExpr* pBExpr = NULL;
-				
+
 				// read the second node
 				if (pXML->TryMoveToXmlNextSibling())
 				{
@@ -213,9 +213,9 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// read the first node
-				IntExpr* pExpr = IntExpr::read(pXML);
+				IntExpr*  pExpr	 = IntExpr::read(pXML);
 				BoolExpr* pBExpr = NULL;
-				
+
 				// read the second node
 				if (pXML->TryMoveToXmlNextSibling())
 				{
@@ -242,9 +242,9 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// read the first node
-				IntExpr*  pExpr  = IntExpr::read(pXML);
+				IntExpr*  pExpr	 = IntExpr::read(pXML);
 				BoolExpr* pBExpr = NULL;
-				
+
 				// read the second node
 				if (pXML->TryMoveToXmlNextSibling())
 				{
@@ -271,10 +271,10 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// read the if node
-				BoolExpr* pIfExpr = read(pXML);
+				BoolExpr* pIfExpr	= read(pXML);
 				BoolExpr* pThenExpr = NULL;
 				BoolExpr* pElseExpr = NULL;
-				
+
 				// read the then node
 				if (pXML->TryMoveToXmlNextSibling())
 				{
@@ -297,12 +297,12 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 	{
 		CvString szTextVal;
 		pXML->GetChildXmlValByName(szTextVal, L"RelationType");
-		RelationTypes eRelation = (RelationTypes) pXML->GetInfoClass(szTextVal);
-		int iData = -1;
+		RelationTypes eRelation = (RelationTypes)pXML->GetInfoClass(szTextVal);
+		int			  iData		= -1;
 		pXML->GetOptionalChildXmlValByName(&iData, L"iDistance", -1);
 		pXML->GetChildXmlValByName(szTextVal, L"GameObjectType");
-		GameObjectTypes eType = (GameObjectTypes) pXML->GetInfoClass(szTextVal);
-		
+		GameObjectTypes eType = (GameObjectTypes)pXML->GetInfoClass(szTextVal);
+
 		// Find the expression and read it
 		if (pXML->TryMoveToXmlFirstChild())
 		{
@@ -313,17 +313,16 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 				//{
 				//if (GETXML->GetLastLocatedNodeTagName(pXML->GetXML(), szInnerTag))
 				//{
-				if ( !(equal(pXML->GetXmlTagName(), L"RelationType")   || 
-					   equal(pXML->GetXmlTagName(), L"iDistance")      || 
-					   equal(pXML->GetXmlTagName(), L"GameObjectType")   ) )
+				if (!(equal(pXML->GetXmlTagName(), L"RelationType") ||
+					  equal(pXML->GetXmlTagName(), L"iDistance") ||
+					  equal(pXML->GetXmlTagName(), L"GameObjectType")))
 				{
 					pExpr = BoolExpr::read(pXML);
 					break;
 				}
 				//}
 				//}
-			}
-			while (pXML->TryMoveToXmlNextSibling());
+			} while (pXML->TryMoveToXmlNextSibling());
 
 			pXML->MoveToXmlParent();
 
@@ -335,8 +334,8 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 		}
 	}
 
-	
-	//swprintf(szLog, 1000, L"BoolExp '%s' ?= 'Has' is %i", pXML->GetXmlTagName(), 
+
+	//swprintf(szLog, 1000, L"BoolExp '%s' ?= 'Has' is %i", pXML->GetXmlTagName(),
 	//	     (int)equal(pXML->GetXmlTagName(), L"Has") );
 	//OutputDebugStringW(szLog);
 
@@ -383,7 +382,7 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 	}
 }
 
-bool BoolExprConstant::evaluate(CvGameObject *pObject)
+bool BoolExprConstant::evaluate(CvGameObject* pObject)
 {
 	return m_bValue;
 }
@@ -397,10 +396,9 @@ void BoolExprConstant::readConstant(CvXMLLoadUtility* pXML)
 	{
 		pXML->GetXmlVal(&m_bValue);
 	}
-
 }
 
-void BoolExprConstant::buildDisplayString(CvWStringBuffer &szBuffer) const
+void BoolExprConstant::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
 	szBuffer.append(m_bValue ? gDLL->getText("TXT_KEY_EXPR_TRUE") : gDLL->getText("TXT_KEY_EXPR_FALSE"));
 }
@@ -410,11 +408,10 @@ int BoolExprConstant::getBindingStrength() const
 	return 100;
 }
 
-void BoolExprConstant::getCheckSum(unsigned int &iSum)
+void BoolExprConstant::getCheckSum(unsigned int& iSum)
 {
 	CheckSum(iSum, m_bValue);
 }
-
 
 
 BoolExprHas::~BoolExprHas()
@@ -422,7 +419,7 @@ BoolExprHas::~BoolExprHas()
 	GC.removeDelayedResolution(&m_iID);
 }
 
-bool BoolExprHas::evaluate(CvGameObject *pObject)
+bool BoolExprHas::evaluate(CvGameObject* pObject)
 {
 	return pObject->hasGOM(m_eGOM, m_iID);
 }
@@ -436,61 +433,61 @@ void BoolExprHas::readContent(CvXMLLoadUtility* pXML)
 	GC.addDelayedResolution(&m_iID, szTextVal);
 }
 
-void BoolExprHas::buildDisplayString(CvWStringBuffer &szBuffer) const
+void BoolExprHas::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
 	switch (m_eGOM)
 	{
-		case GOM_BUILDING:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getBuildingInfo((BuildingTypes)m_iID).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)m_iID).getDescription()));
-			break;
-		case GOM_PROMOTION:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getPromotionInfo((PromotionTypes)m_iID).getType()).GetCString(), GC.getPromotionInfo((PromotionTypes)m_iID).getDescription()));
-			break;
-		case GOM_TRAIT:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getTraitInfo((TraitTypes)m_iID).getType()).GetCString(), GC.getTraitInfo((TraitTypes)m_iID).getDescription()));
-			break;
-		case GOM_FEATURE:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getFeatureInfo((FeatureTypes)m_iID).getType()).GetCString(), GC.getFeatureInfo((FeatureTypes)m_iID).getDescription()));
-			break;
-		case GOM_OPTION:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getGameOptionInfo((GameOptionTypes)m_iID).getType()).GetCString(), GC.getGameOptionInfo((GameOptionTypes)m_iID).getDescription()));
-			break;
-		case GOM_TERRAIN:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getTerrainInfo((TerrainTypes)m_iID).getType()).GetCString(), GC.getTerrainInfo((TerrainTypes)m_iID).getDescription()));
-			break;
-		case GOM_GAMESPEED:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getGameSpeedInfo((GameSpeedTypes)m_iID).getType()).GetCString(), GC.getGameSpeedInfo((GameSpeedTypes)m_iID).getDescription()));
-			break;
-		case GOM_ROUTE:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getRouteInfo((RouteTypes)m_iID).getType()).GetCString(), GC.getRouteInfo((RouteTypes)m_iID).getDescription()));
-			break;
-		case GOM_BONUS:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getBonusInfo((BonusTypes)m_iID).getType()).GetCString(), GC.getBonusInfo((BonusTypes)m_iID).getDescription()));
-			break;
-		case GOM_UNITTYPE:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getUnitInfo((UnitTypes)m_iID).getType()).GetCString(), GC.getUnitInfo((UnitTypes)m_iID).getDescription()));
-			break;
-		case GOM_TECH:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getTechInfo((TechTypes)m_iID).getType()).GetCString(), GC.getTechInfo((TechTypes)m_iID).getDescription()));
-			break;
-		case GOM_CIVIC:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getCivicInfo((CivicTypes)m_iID).getType()).GetCString(), GC.getCivicInfo((CivicTypes)m_iID).getDescription()));
-			break;
-		case GOM_RELIGION:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getReligionInfo((ReligionTypes)m_iID).getType()).GetCString(), GC.getReligionInfo((ReligionTypes)m_iID).getDescription()));
-			break;
-		case GOM_CORPORATION:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getCorporationInfo((CorporationTypes)m_iID).getType()).GetCString(), GC.getCorporationInfo((CorporationTypes)m_iID).getDescription()));
-			break;
-		case GOM_IMPROVEMENT:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getImprovementInfo((ImprovementTypes)m_iID).getType()).GetCString(), GC.getImprovementInfo((ImprovementTypes)m_iID).getDescription()));
-			break;
-		case GOM_UNITCOMBAT:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getUnitCombatInfo((UnitCombatTypes)m_iID).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)m_iID).getDescription()));
-			break;
-		case GOM_HANDICAP:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getHandicapInfo((HandicapTypes)m_iID).getType()).GetCString(), GC.getHandicapInfo((HandicapTypes)m_iID).getDescription()));
-			break;
+	case GOM_BUILDING:
+		szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getBuildingInfo((BuildingTypes)m_iID).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)m_iID).getDescription()));
+		break;
+	case GOM_PROMOTION:
+		szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getPromotionInfo((PromotionTypes)m_iID).getType()).GetCString(), GC.getPromotionInfo((PromotionTypes)m_iID).getDescription()));
+		break;
+	case GOM_TRAIT:
+		szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getTraitInfo((TraitTypes)m_iID).getType()).GetCString(), GC.getTraitInfo((TraitTypes)m_iID).getDescription()));
+		break;
+	case GOM_FEATURE:
+		szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getFeatureInfo((FeatureTypes)m_iID).getType()).GetCString(), GC.getFeatureInfo((FeatureTypes)m_iID).getDescription()));
+		break;
+	case GOM_OPTION:
+		szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getGameOptionInfo((GameOptionTypes)m_iID).getType()).GetCString(), GC.getGameOptionInfo((GameOptionTypes)m_iID).getDescription()));
+		break;
+	case GOM_TERRAIN:
+		szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getTerrainInfo((TerrainTypes)m_iID).getType()).GetCString(), GC.getTerrainInfo((TerrainTypes)m_iID).getDescription()));
+		break;
+	case GOM_GAMESPEED:
+		szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getGameSpeedInfo((GameSpeedTypes)m_iID).getType()).GetCString(), GC.getGameSpeedInfo((GameSpeedTypes)m_iID).getDescription()));
+		break;
+	case GOM_ROUTE:
+		szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getRouteInfo((RouteTypes)m_iID).getType()).GetCString(), GC.getRouteInfo((RouteTypes)m_iID).getDescription()));
+		break;
+	case GOM_BONUS:
+		szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getBonusInfo((BonusTypes)m_iID).getType()).GetCString(), GC.getBonusInfo((BonusTypes)m_iID).getDescription()));
+		break;
+	case GOM_UNITTYPE:
+		szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getUnitInfo((UnitTypes)m_iID).getType()).GetCString(), GC.getUnitInfo((UnitTypes)m_iID).getDescription()));
+		break;
+	case GOM_TECH:
+		szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getTechInfo((TechTypes)m_iID).getType()).GetCString(), GC.getTechInfo((TechTypes)m_iID).getDescription()));
+		break;
+	case GOM_CIVIC:
+		szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getCivicInfo((CivicTypes)m_iID).getType()).GetCString(), GC.getCivicInfo((CivicTypes)m_iID).getDescription()));
+		break;
+	case GOM_RELIGION:
+		szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getReligionInfo((ReligionTypes)m_iID).getType()).GetCString(), GC.getReligionInfo((ReligionTypes)m_iID).getDescription()));
+		break;
+	case GOM_CORPORATION:
+		szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getCorporationInfo((CorporationTypes)m_iID).getType()).GetCString(), GC.getCorporationInfo((CorporationTypes)m_iID).getDescription()));
+		break;
+	case GOM_IMPROVEMENT:
+		szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getImprovementInfo((ImprovementTypes)m_iID).getType()).GetCString(), GC.getImprovementInfo((ImprovementTypes)m_iID).getDescription()));
+		break;
+	case GOM_UNITCOMBAT:
+		szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getUnitCombatInfo((UnitCombatTypes)m_iID).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)m_iID).getDescription()));
+		break;
+	case GOM_HANDICAP:
+		szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getHandicapInfo((HandicapTypes)m_iID).getType()).GetCString(), GC.getHandicapInfo((HandicapTypes)m_iID).getDescription()));
+		break;
 	}
 }
 
@@ -499,50 +496,50 @@ int BoolExprHas::getBindingStrength() const
 	return 100;
 }
 
-void BoolExprHas::getCheckSum(unsigned int &iSum)
+void BoolExprHas::getCheckSum(unsigned int& iSum)
 {
 	CheckSum(iSum, (int)m_eGOM);
 	CheckSum(iSum, m_iID);
 }
 
 
-bool BoolExprIs::evaluate(CvGameObject *pObject)
+bool BoolExprIs::evaluate(CvGameObject* pObject)
 {
 	return pObject->isTag(m_eTag);
 }
 
-void BoolExprIs::buildDisplayString(CvWStringBuffer &szBuffer) const
+void BoolExprIs::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
 	// This is only the quick and dirty variant. Needs some proper text usage still.
 	switch (m_eTag)
 	{
-		case TAG_WATER:
-			szBuffer.append(gDLL->getText("TXT_KEY_EXPR_IS_WATER"));
-			break;
-		case TAG_FRESH_WATER:
-			szBuffer.append(gDLL->getText("TXT_KEY_EXPR_IS_FRESH_WATER"));
-			break;
-		case TAG_PEAK:
-			szBuffer.append(gDLL->getText("TXT_KEY_EXPR_IS_PEAK"));
-			break;
-		case TAG_HILL:
-			szBuffer.append(gDLL->getText("TXT_KEY_EXPR_IS_HILL"));
-			break;
-		case TAG_FLATLAND:
-			szBuffer.append(gDLL->getText("TXT_KEY_EXPR_IS_FLAT_LAND"));
-			break;
-		case TAG_OWNED:
-			szBuffer.append(gDLL->getText("TXT_KEY_EXPR_IS_OWNED"));
-			break;
-		case TAG_CITY:
-			szBuffer.append(gDLL->getText("TXT_KEY_EXPR_IS_CITY"));
-			break;
-		case TAG_ANARCHY:
-			szBuffer.append(gDLL->getText("TXT_KEY_EXPR_IS_IN_ANARCHY"));
-			break;
-		case TAG_COASTAL:
-			szBuffer.append(gDLL->getText("TXT_KEY_EXPR_IS_COASTAL"));
-			break;
+	case TAG_WATER:
+		szBuffer.append(gDLL->getText("TXT_KEY_EXPR_IS_WATER"));
+		break;
+	case TAG_FRESH_WATER:
+		szBuffer.append(gDLL->getText("TXT_KEY_EXPR_IS_FRESH_WATER"));
+		break;
+	case TAG_PEAK:
+		szBuffer.append(gDLL->getText("TXT_KEY_EXPR_IS_PEAK"));
+		break;
+	case TAG_HILL:
+		szBuffer.append(gDLL->getText("TXT_KEY_EXPR_IS_HILL"));
+		break;
+	case TAG_FLATLAND:
+		szBuffer.append(gDLL->getText("TXT_KEY_EXPR_IS_FLAT_LAND"));
+		break;
+	case TAG_OWNED:
+		szBuffer.append(gDLL->getText("TXT_KEY_EXPR_IS_OWNED"));
+		break;
+	case TAG_CITY:
+		szBuffer.append(gDLL->getText("TXT_KEY_EXPR_IS_CITY"));
+		break;
+	case TAG_ANARCHY:
+		szBuffer.append(gDLL->getText("TXT_KEY_EXPR_IS_IN_ANARCHY"));
+		break;
+	case TAG_COASTAL:
+		szBuffer.append(gDLL->getText("TXT_KEY_EXPR_IS_COASTAL"));
+		break;
 	}
 }
 
@@ -551,11 +548,10 @@ int BoolExprIs::getBindingStrength() const
 	return 100;
 }
 
-void BoolExprIs::getCheckSum(unsigned int &iSum)
+void BoolExprIs::getCheckSum(unsigned int& iSum)
 {
 	CheckSum(iSum, (int)m_eTag);
 }
-
 
 
 BoolExprNot::~BoolExprNot()
@@ -563,12 +559,12 @@ BoolExprNot::~BoolExprNot()
 	SAFE_DELETE(m_pExpr);
 }
 
-bool BoolExprNot::evaluate(CvGameObject *pObject)
+bool BoolExprNot::evaluate(CvGameObject* pObject)
 {
 	return !m_pExpr->evaluate(pObject);
 }
 
-void BoolExprNot::buildDisplayString(CvWStringBuffer &szBuffer) const
+void BoolExprNot::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
 	szBuffer.append(gDLL->getText("TXT_KEY_EXPR_NOT_"));
 	m_pExpr->buildDisplayString(szBuffer);
@@ -580,7 +576,7 @@ int BoolExprNot::getBindingStrength() const
 	return 40;
 }
 
-void BoolExprNot::getCheckSum(unsigned int &iSum)
+void BoolExprNot::getCheckSum(unsigned int& iSum)
 {
 	m_pExpr->getCheckSum(iSum);
 }
@@ -592,12 +588,12 @@ BoolExprAnd::~BoolExprAnd()
 	SAFE_DELETE(m_pExpr2);
 }
 
-bool BoolExprAnd::evaluate(CvGameObject *pObject)
+bool BoolExprAnd::evaluate(CvGameObject* pObject)
 {
 	return m_pExpr1->evaluate(pObject) && m_pExpr2->evaluate(pObject);
 }
 
-void BoolExprAnd::buildDisplayString(CvWStringBuffer &szBuffer) const
+void BoolExprAnd::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
 	bool bBrackets1 = false;
 	bool bBrackets2 = false;
@@ -623,12 +619,11 @@ int BoolExprAnd::getBindingStrength() const
 	return 20;
 }
 
-void BoolExprAnd::getCheckSum(unsigned int &iSum)
+void BoolExprAnd::getCheckSum(unsigned int& iSum)
 {
 	m_pExpr1->getCheckSum(iSum);
 	m_pExpr2->getCheckSum(iSum);
 }
-
 
 
 BoolExprOr::~BoolExprOr()
@@ -637,12 +632,12 @@ BoolExprOr::~BoolExprOr()
 	SAFE_DELETE(m_pExpr2);
 }
 
-bool BoolExprOr::evaluate(CvGameObject *pObject)
+bool BoolExprOr::evaluate(CvGameObject* pObject)
 {
 	return m_pExpr1->evaluate(pObject) || m_pExpr2->evaluate(pObject);
 }
 
-void BoolExprOr::buildDisplayString(CvWStringBuffer &szBuffer) const
+void BoolExprOr::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
 	bool bBrackets1 = false;
 	bool bBrackets2 = false;
@@ -668,7 +663,7 @@ int BoolExprOr::getBindingStrength() const
 	return 10;
 }
 
-void BoolExprOr::getCheckSum(unsigned int &iSum)
+void BoolExprOr::getCheckSum(unsigned int& iSum)
 {
 	m_pExpr1->getCheckSum(iSum);
 	m_pExpr2->getCheckSum(iSum);
@@ -681,12 +676,12 @@ BoolExprBEqual::~BoolExprBEqual()
 	SAFE_DELETE(m_pExpr2);
 }
 
-bool BoolExprBEqual::evaluate(CvGameObject *pObject)
+bool BoolExprBEqual::evaluate(CvGameObject* pObject)
 {
 	return m_pExpr1->evaluate(pObject) == m_pExpr2->evaluate(pObject);
 }
 
-void BoolExprBEqual::buildDisplayString(CvWStringBuffer &szBuffer) const
+void BoolExprBEqual::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
 	bool bBrackets1 = false;
 	bool bBrackets2 = false;
@@ -712,7 +707,7 @@ int BoolExprBEqual::getBindingStrength() const
 	return 30;
 }
 
-void BoolExprBEqual::getCheckSum(unsigned int &iSum)
+void BoolExprBEqual::getCheckSum(unsigned int& iSum)
 {
 	m_pExpr1->getCheckSum(iSum);
 	m_pExpr2->getCheckSum(iSum);
@@ -726,14 +721,14 @@ BoolExprIf::~BoolExprIf()
 	SAFE_DELETE(m_pExprElse);
 }
 
-bool BoolExprIf::evaluate(CvGameObject *pObject)
+bool BoolExprIf::evaluate(CvGameObject* pObject)
 {
 	return m_pExprIf->evaluate(pObject) ? m_pExprThen->evaluate(pObject) : m_pExprElse->evaluate(pObject);
 }
 
-void BoolExprIf::buildDisplayString(CvWStringBuffer &szBuffer) const
+void BoolExprIf::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
-	bool bBracketsIf = false;
+	bool bBracketsIf   = false;
 	bool bBracketsThen = false;
 	bool bBracketsElse = false;
 	if (getBindingStrength() > m_pExprIf->getBindingStrength())
@@ -767,7 +762,7 @@ int BoolExprIf::getBindingStrength() const
 	return 25;
 }
 
-void BoolExprIf::getCheckSum(unsigned int &iSum)
+void BoolExprIf::getCheckSum(unsigned int& iSum)
 {
 	m_pExprIf->getCheckSum(iSum);
 	m_pExprThen->getCheckSum(iSum);
@@ -785,14 +780,14 @@ BoolExprIntegrateOr::~BoolExprIntegrateOr()
 	SAFE_DELETE(m_pExpr);
 }
 
-bool BoolExprIntegrateOr::evaluate(CvGameObject *pObject)
+bool BoolExprIntegrateOr::evaluate(CvGameObject* pObject)
 {
 	bool bAcc = false;
 	pObject->foreachRelated(m_eType, m_eRelation, boost::bind(evalExprIntegrateOr, _1, m_pExpr, &bAcc));
 	return bAcc;
 }
 
-void BoolExprIntegrateOr::buildDisplayString(CvWStringBuffer &szBuffer) const
+void BoolExprIntegrateOr::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
 	// TODO: Proper rendering of relations
 	m_pExpr->buildDisplayString(szBuffer);
@@ -804,7 +799,7 @@ int BoolExprIntegrateOr::getBindingStrength() const
 	return m_pExpr->getBindingStrength();
 }
 
-void BoolExprIntegrateOr::getCheckSum(unsigned int &iSum)
+void BoolExprIntegrateOr::getCheckSum(unsigned int& iSum)
 {
 	CheckSum(iSum, (int)m_eRelation);
 	CheckSum(iSum, m_iData);
@@ -819,7 +814,7 @@ BoolExprComp::~BoolExprComp()
 	SAFE_DELETE(m_pExpr2);
 }
 
-void BoolExprComp::buildDisplayString(CvWStringBuffer &szBuffer) const
+void BoolExprComp::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
 	bool bBrackets1 = false;
 	bool bBrackets2 = false;
@@ -847,7 +842,7 @@ int BoolExprComp::getBindingStrength() const
 	return 5;
 }
 
-void BoolExprComp::getCheckSum(unsigned int &iSum)
+void BoolExprComp::getCheckSum(unsigned int& iSum)
 {
 	CheckSum(iSum, (int)getType());
 	m_pExpr1->getCheckSum(iSum);
@@ -855,7 +850,7 @@ void BoolExprComp::getCheckSum(unsigned int &iSum)
 }
 
 
-bool BoolExprGreater::evaluate(CvGameObject *pObject)
+bool BoolExprGreater::evaluate(CvGameObject* pObject)
 {
 	return m_pExpr1->evaluate(pObject) > m_pExpr2->evaluate(pObject);
 }
@@ -865,13 +860,13 @@ BoolExprTypes BoolExprGreater::getType() const
 	return BOOLEXPR_GREATER;
 }
 
-void BoolExprGreater::buildOpNameString(CvWStringBuffer &szBuffer) const
+void BoolExprGreater::buildOpNameString(CvWStringBuffer& szBuffer) const
 {
 	szBuffer.append(">");
 }
 
 
-bool BoolExprGreaterEqual::evaluate(CvGameObject *pObject)
+bool BoolExprGreaterEqual::evaluate(CvGameObject* pObject)
 {
 	return m_pExpr1->evaluate(pObject) >= m_pExpr2->evaluate(pObject);
 }
@@ -881,13 +876,13 @@ BoolExprTypes BoolExprGreaterEqual::getType() const
 	return BOOLEXPR_GREATER_EQUAL;
 }
 
-void BoolExprGreaterEqual::buildOpNameString(CvWStringBuffer &szBuffer) const
+void BoolExprGreaterEqual::buildOpNameString(CvWStringBuffer& szBuffer) const
 {
 	szBuffer.append(">=");
 }
 
 
-bool BoolExprEqual::evaluate(CvGameObject *pObject)
+bool BoolExprEqual::evaluate(CvGameObject* pObject)
 {
 	return m_pExpr1->evaluate(pObject) == m_pExpr2->evaluate(pObject);
 }
@@ -897,7 +892,7 @@ BoolExprTypes BoolExprEqual::getType() const
 	return BOOLEXPR_EQUAL;
 }
 
-void BoolExprEqual::buildOpNameString(CvWStringBuffer &szBuffer) const
+void BoolExprEqual::buildOpNameString(CvWStringBuffer& szBuffer) const
 {
 	szBuffer.append("=");
 }

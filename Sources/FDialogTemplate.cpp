@@ -9,7 +9,7 @@
 CDialogTemplate::CDialogTemplate(LPCSTR caption, DWORD style, int x, int y, int w, int h,
 								 LPCSTR font, WORD fontSize)
 {
-	usedBufferLength = sizeof(DLGTEMPLATE);
+	usedBufferLength  = sizeof(DLGTEMPLATE);
 	totalBufferLength = usedBufferLength;
 
 	dialogTemplate = (DLGTEMPLATE*)malloc(totalBufferLength);
@@ -21,11 +21,11 @@ CDialogTemplate::CDialogTemplate(LPCSTR caption, DWORD style, int x, int y, int 
 		dialogTemplate->style |= DS_SETFONT;
 	}
 
-	dialogTemplate->x     = x;
-	dialogTemplate->y     = y;
-	dialogTemplate->cx    = w;
-	dialogTemplate->cy    = h;
-	dialogTemplate->cdit  = 0;
+	dialogTemplate->x	 = x;
+	dialogTemplate->y	 = y;
+	dialogTemplate->cx	 = w;
+	dialogTemplate->cy	 = h;
+	dialogTemplate->cdit = 0;
 
 	dialogTemplate->dwExtendedStyle = 0;
 
@@ -54,11 +54,11 @@ void CDialogTemplate::AddComponent(LPCSTR type, LPCSTR caption, DWORD style, DWO
 	DLGITEMTEMPLATE item;
 
 	item.style = style;
-	item.x     = x;
-	item.y     = y;
-	item.cx    = w;
-	item.cy    = h;
-	item.id    = id;
+	item.x	   = x;
+	item.y	   = y;
+	item.cx	   = w;
+	item.cy	   = h;
+	item.id	   = id;
 
 	item.dwExtendedStyle = exStyle;
 
@@ -141,12 +141,12 @@ void CDialogTemplate::AddStandardComponent(WORD type, LPCSTR caption, DWORD styl
 	// DWORD algin the beginning of the component data
 	AlignData(sizeof(DWORD));
 
-	item.style = style;
-	item.x     = x;
-	item.y     = y;
-	item.cx    = w;
-	item.cy    = h;
-	item.id    = id;
+	item.style			 = style;
+	item.x				 = x;
+	item.y				 = y;
+	item.cx				 = w;
+	item.cy				 = h;
+	item.id				 = id;
 	item.dwExtendedStyle = exStyle;
 
 	AppendData(&item, sizeof(DLGITEMTEMPLATE));

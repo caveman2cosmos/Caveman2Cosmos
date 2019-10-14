@@ -4,25 +4,10 @@
 
 int CvReplayInfo::REPLAY_VERSION = 4;
 
-CvReplayInfo::CvReplayInfo() :
-	m_iActivePlayer(0),
-	m_eDifficulty(NO_HANDICAP),
-	m_eWorldSize(NO_WORLDSIZE),
-	m_eClimate(NO_CLIMATE),
-	m_eSeaLevel(NO_SEALEVEL),
-	m_eEra(NO_ERA),
-	m_eGameSpeed(NO_GAMESPEED),
-	m_iInitialTurn(0),
-	m_iFinalTurn(0),
-	m_eVictoryType(NO_VICTORY),
-	m_iMapHeight(0),
-	m_iMapWidth(0),
-	m_pcMinimapPixels(NULL),
-	m_iNormalizedScore(0),
-	m_bMultiplayer(false),
-	m_iStartYear(0)
+CvReplayInfo::CvReplayInfo()
+	: m_iActivePlayer(0), m_eDifficulty(NO_HANDICAP), m_eWorldSize(NO_WORLDSIZE), m_eClimate(NO_CLIMATE), m_eSeaLevel(NO_SEALEVEL), m_eEra(NO_ERA), m_eGameSpeed(NO_GAMESPEED), m_iInitialTurn(0), m_iFinalTurn(0), m_eVictoryType(NO_VICTORY), m_iMapHeight(0), m_iMapWidth(0), m_pcMinimapPixels(NULL), m_iNormalizedScore(0), m_bMultiplayer(false), m_iStartYear(0)
 {
-	m_nMinimapSize = ((GC.getDefineINT("MINIMAP_RENDER_SIZE") * GC.getDefineINT("MINIMAP_RENDER_SIZE")) / 2); 
+	m_nMinimapSize = ((GC.getDefineINT("MINIMAP_RENDER_SIZE") * GC.getDefineINT("MINIMAP_RENDER_SIZE")) / 2);
 }
 
 CvReplayInfo::~CvReplayInfo()
@@ -38,18 +23,18 @@ CvReplayInfo::~CvReplayInfo()
 void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 {
 	CvGame& game = GC.getGameINLINE();
-/************************************************************************************************/
-/* Afforess	                  Start		 03/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* Afforess	                  Start		 03/18/10                                               */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
 	if (!game.isFinalInitialized())
 		return;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* Afforess	                     END                                                            */
+	/************************************************************************************************/
 	CvMap& map = GC.getMapINLINE();
-	
+
 	if (ePlayer == NO_PLAYER)
 	{
 		ePlayer = game.getActivePlayer();
@@ -58,17 +43,17 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 	{
 		CvPlayer& player = GET_PLAYER(ePlayer);
 
-		m_eDifficulty = player.getHandicapType();
-		m_szLeaderName = player.getName();
-		m_szCivDescription = player.getCivilizationDescription();
+		m_eDifficulty			= player.getHandicapType();
+		m_szLeaderName			= player.getName();
+		m_szCivDescription		= player.getCivilizationDescription();
 		m_szShortCivDescription = player.getCivilizationShortDescription();
-		m_szCivAdjective = player.getCivilizationAdjective();
-		m_szMapScriptName = GC.getInitCore().getMapScriptName();
-		m_eWorldSize = map.getWorldSize();
-		m_eClimate = map.getClimate();
-		m_eSeaLevel = map.getSeaLevel();
-		m_eEra = game.getStartEra();
-		m_eGameSpeed = game.getGameSpeedType();
+		m_szCivAdjective		= player.getCivilizationAdjective();
+		m_szMapScriptName		= GC.getInitCore().getMapScriptName();
+		m_eWorldSize			= map.getWorldSize();
+		m_eClimate				= map.getClimate();
+		m_eSeaLevel				= map.getSeaLevel();
+		m_eEra					= game.getStartEra();
+		m_eGameSpeed			= game.getGameSpeedType();
 
 		m_listGameOptions.clear();
 		for (int i = 0; i < NUM_GAMEOPTION_TYPES; i++)
@@ -105,8 +90,8 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 
 
 	m_iInitialTurn = GC.getGameINLINE().getStartTurn();
-	m_iStartYear = GC.getGameINLINE().getStartYear();
-	m_iFinalTurn = game.getGameTurn();
+	m_iStartYear   = GC.getGameINLINE().getStartYear();
+	m_iFinalTurn   = game.getGameTurn();
 	GAMETEXT.setYearStr(m_szFinalDate, m_iFinalTurn, false, GC.getGameINLINE().getCalendar(), GC.getGameINLINE().getStartYear(), GC.getGameINLINE().getGameSpeedType());
 
 	m_eCalendar = GC.getGameINLINE().getCalendar();
@@ -129,14 +114,14 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 
 			PlayerInfo playerInfo;
 			playerInfo.m_eLeader = player.getLeaderType();
-			playerInfo.m_eColor = (ColorTypes)GC.getPlayerColorInfo(player.getPlayerColor()).getColorTypePrimary();
+			playerInfo.m_eColor	 = (ColorTypes)GC.getPlayerColorInfo(player.getPlayerColor()).getColorTypePrimary();
 			for (int iTurn = m_iInitialTurn; iTurn <= m_iFinalTurn; iTurn++)
 			{
 				TurnData score;
-				score.m_iScore = player.getScoreHistory(iTurn);
+				score.m_iScore		 = player.getScoreHistory(iTurn);
 				score.m_iAgriculture = player.getAgricultureHistory(iTurn);
-				score.m_iIndustry = player.getIndustryHistory(iTurn);
-				score.m_iEconomy = player.getEconomyHistory(iTurn);
+				score.m_iIndustry	 = player.getIndustryHistory(iTurn);
+				score.m_iEconomy	 = player.getEconomyHistory(iTurn);
 
 				playerInfo.m_listScore.push_back(score);
 			}
@@ -157,7 +142,7 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 				pMsg->setText(game.getReplayMessageText(i));
 				pMsg->setPlot(game.getReplayMessagePlotX(i), game.getReplayMessagePlotY(i));
 				m_listReplayMessages.push_back(pMsg);
-			}	
+			}
 		}
 		else
 		{
@@ -168,17 +153,17 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 				pMsg->setText(game.getReplayMessageText(i));
 				pMsg->setPlot(game.getReplayMessagePlotX(i), game.getReplayMessagePlotY(i));
 				m_listReplayMessages.push_back(pMsg);
-			}	
+			}
 		}
 	}
 
-	m_iMapWidth = GC.getMapINLINE().getGridWidthINLINE();
+	m_iMapWidth	 = GC.getMapINLINE().getGridWidthINLINE();
 	m_iMapHeight = GC.getMapINLINE().getGridHeightINLINE();
-	
-	SAFE_DELETE(m_pcMinimapPixels);	
+
+	SAFE_DELETE(m_pcMinimapPixels);
 	m_pcMinimapPixels = new unsigned char[m_nMinimapSize];
-	
-	void *ptexture = (void*)gDLL->getInterfaceIFace()->getMinimapBaseTexture();
+
+	void* ptexture = (void*)gDLL->getInterfaceIFace()->getMinimapBaseTexture();
 	if (ptexture)
 		memcpy((void*)m_pcMinimapPixels, ptexture, m_nMinimapSize);
 
@@ -346,7 +331,7 @@ int CvReplayInfo::getReplayMessageTurn(uint i) const
 	{
 		return (-1);
 	}
-	const CvReplayMessage* pMessage =  m_listReplayMessages[i];
+	const CvReplayMessage* pMessage = m_listReplayMessages[i];
 	if (NULL == pMessage)
 	{
 		return (-1);
@@ -360,7 +345,7 @@ ReplayMessageTypes CvReplayInfo::getReplayMessageType(uint i) const
 	{
 		return (NO_REPLAY_MESSAGE);
 	}
-	const CvReplayMessage* pMessage =  m_listReplayMessages[i];
+	const CvReplayMessage* pMessage = m_listReplayMessages[i];
 	if (NULL == pMessage)
 	{
 		return (NO_REPLAY_MESSAGE);
@@ -374,7 +359,7 @@ int CvReplayInfo::getReplayMessagePlotX(uint i) const
 	{
 		return (-1);
 	}
-	const CvReplayMessage* pMessage =  m_listReplayMessages[i];
+	const CvReplayMessage* pMessage = m_listReplayMessages[i];
 	if (NULL == pMessage)
 	{
 		return (-1);
@@ -388,7 +373,7 @@ int CvReplayInfo::getReplayMessagePlotY(uint i) const
 	{
 		return (-1);
 	}
-	const CvReplayMessage* pMessage =  m_listReplayMessages[i];
+	const CvReplayMessage* pMessage = m_listReplayMessages[i];
 	if (NULL == pMessage)
 	{
 		return (-1);
@@ -402,7 +387,7 @@ PlayerTypes CvReplayInfo::getReplayMessagePlayer(uint i) const
 	{
 		return (NO_PLAYER);
 	}
-	const CvReplayMessage* pMessage =  m_listReplayMessages[i];
+	const CvReplayMessage* pMessage = m_listReplayMessages[i];
 	if (NULL == pMessage)
 	{
 		return (NO_PLAYER);
@@ -416,7 +401,7 @@ LPCWSTR CvReplayInfo::getReplayMessageText(uint i) const
 	{
 		return (NULL);
 	}
-	const CvReplayMessage* pMessage =  m_listReplayMessages[i];
+	const CvReplayMessage* pMessage = m_listReplayMessages[i];
 	if (NULL == pMessage)
 	{
 		return (NULL);
@@ -430,7 +415,7 @@ ColorTypes CvReplayInfo::getReplayMessageColor(uint i) const
 	{
 		return (NO_COLOR);
 	}
-	const CvReplayMessage* pMessage =  m_listReplayMessages[i];
+	const CvReplayMessage* pMessage = m_listReplayMessages[i];
 	if (NULL == pMessage)
 	{
 		return (NO_COLOR);
@@ -475,7 +460,7 @@ int CvReplayInfo::getPlayerScore(int iPlayer, int iTurn) const
 {
 	if (isValidPlayer(iPlayer) && isValidTurn(iTurn))
 	{
-		return m_listPlayerScoreHistory[iPlayer].m_listScore[iTurn-m_iInitialTurn].m_iScore;
+		return m_listPlayerScoreHistory[iPlayer].m_listScore[iTurn - m_iInitialTurn].m_iScore;
 	}
 	return 0;
 }
@@ -484,7 +469,7 @@ int CvReplayInfo::getPlayerEconomy(int iPlayer, int iTurn) const
 {
 	if (isValidPlayer(iPlayer) && isValidTurn(iTurn))
 	{
-		return m_listPlayerScoreHistory[iPlayer].m_listScore[iTurn-m_iInitialTurn].m_iEconomy;
+		return m_listPlayerScoreHistory[iPlayer].m_listScore[iTurn - m_iInitialTurn].m_iEconomy;
 	}
 	return 0;
 }
@@ -493,7 +478,7 @@ int CvReplayInfo::getPlayerIndustry(int iPlayer, int iTurn) const
 {
 	if (isValidPlayer(iPlayer) && isValidTurn(iTurn))
 	{
-		return m_listPlayerScoreHistory[iPlayer].m_listScore[iTurn-m_iInitialTurn].m_iIndustry;
+		return m_listPlayerScoreHistory[iPlayer].m_listScore[iTurn - m_iInitialTurn].m_iIndustry;
 	}
 	return 0;
 }
@@ -502,7 +487,7 @@ int CvReplayInfo::getPlayerAgriculture(int iPlayer, int iTurn) const
 {
 	if (isValidPlayer(iPlayer) && isValidTurn(iTurn))
 	{
-		return m_listPlayerScoreHistory[iPlayer].m_listScore[iTurn-m_iInitialTurn].m_iAgriculture;
+		return m_listPlayerScoreHistory[iPlayer].m_listScore[iTurn - m_iInitialTurn].m_iAgriculture;
 	}
 	return 0;
 }
@@ -555,8 +540,8 @@ const char* CvReplayInfo::getModName() const
 
 bool CvReplayInfo::read(FDataStreamBase& stream)
 {
-	int iType;
-	int iNumTypes;
+	int	 iType;
+	int	 iNumTypes;
 	bool bSuccess = true;
 
 	try

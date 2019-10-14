@@ -8,28 +8,26 @@
 class CvRandom
 {
 
-public:
-
+  public:
 	DllExport CvRandom();
 	DllExport virtual ~CvRandom();
 
 	DllExport void init(unsigned long ulSeed);
-	void uninit();
-	void reset(unsigned long ulSeed = 0);
+	void		   uninit();
+	void		   reset(unsigned long ulSeed = 0);
 
-	DllExport unsigned short get(unsigned short usNum, const TCHAR* pszLog = NULL);  //  Returns value from 0 to num-1 inclusive.
-	DllExport float getFloat();
-	unsigned int getInt();
+	DllExport unsigned short get(unsigned short usNum, const TCHAR* pszLog = NULL); //  Returns value from 0 to num-1 inclusive.
+	DllExport float			 getFloat();
+	unsigned int			 getInt();
 
-	void reseed(unsigned long ulNewValue);
+	void		  reseed(unsigned long ulNewValue);
 	unsigned long getSeed();
 
 	// for serialization
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
 
-protected:
-
+  protected:
 	unsigned long m_ulRandomSeed;
 };
 

@@ -29,58 +29,63 @@ enum BuildingGroupingTypes
 
 class BuildingGroupingBase
 {
-public:
-	BuildingGroupingBase(bool bInvert = false) : m_bInvert(bInvert) {};
+  public:
+	BuildingGroupingBase(bool bInvert = false)
+		: m_bInvert(bInvert){};
 	virtual ~BuildingGroupingBase();
 	// Returns the number of the group of the building
-	int getGroup(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
+	int getGroup(CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding);
 
-protected:
-	virtual int getGroupBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) = 0;
-	bool m_bInvert;
+  protected:
+	virtual int getGroupBuilding(CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding) = 0;
+	bool		m_bInvert;
 };
 
 class BuildingGroupingSingle : public BuildingGroupingBase
 {
-public:
-	BuildingGroupingSingle(bool bInvert = false) : BuildingGroupingBase(bInvert) {};
-	int getGroupBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
+  public:
+	BuildingGroupingSingle(bool bInvert = false)
+		: BuildingGroupingBase(bInvert){};
+	int getGroupBuilding(CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding);
 };
 
 class BuildingGroupingWonderType : public BuildingGroupingBase
 {
-public:
-	BuildingGroupingWonderType(bool bInvert = false) : BuildingGroupingBase(bInvert) {};
-	int getGroupBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
+  public:
+	BuildingGroupingWonderType(bool bInvert = false)
+		: BuildingGroupingBase(bInvert){};
+	int getGroupBuilding(CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding);
 };
 
 class BuildingGroupingFilters : public BuildingGroupingBase
 {
-public:
-	BuildingGroupingFilters(bool bInvert = false) : BuildingGroupingBase(bInvert) {};
+  public:
+	BuildingGroupingFilters(bool bInvert = false)
+		: BuildingGroupingBase(bInvert){};
 	~BuildingGroupingFilters();
 	void addGroupingFilter(BuildingFilterBase* pFilter);
-	int getGroupBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding);
-protected:
+	int	 getGroupBuilding(CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding);
+
+  protected:
 	std::vector<BuildingFilterBase*> m_apFilters;
 };
 
 class BuildingGroupingList
 {
-public:
-	BuildingGroupingList(CvPlayer *pPlayer = NULL, CvCity *pCity = NULL);
+  public:
+	BuildingGroupingList(CvPlayer* pPlayer = NULL, CvCity* pCity = NULL);
 	~BuildingGroupingList();
 	BuildingGroupingTypes getActiveGrouping();
-	bool setActiveGrouping(BuildingGroupingTypes eActiveGrouping);
-	int getNumGrouping();
-	void setPlayer(CvPlayer* pPlayer);
-	void setCity(CvCity* pCity);
-	int getGroup(BuildingTypes eBuilding);
+	bool				  setActiveGrouping(BuildingGroupingTypes eActiveGrouping);
+	int					  getNumGrouping();
+	void				  setPlayer(CvPlayer* pPlayer);
+	void				  setCity(CvCity* pCity);
+	int					  getGroup(BuildingTypes eBuilding);
 
-protected:
+  protected:
 	BuildingGroupingBase* m_apBuildingGrouping[NUM_BUILDING_GROUPING];
-	CvCity* m_pCity;
-	CvPlayer* m_pPlayer;
+	CvCity*				  m_pCity;
+	CvPlayer*			  m_pPlayer;
 	BuildingGroupingTypes m_eActiveGrouping;
 };
 

@@ -227,12 +227,12 @@ void CvMessageControl::sendBuildLists()
 	if (NO_PLAYER != GC.getGameINLINE().getActivePlayer())
 	{
 		// Split the build list data into a sufficient number of messages
-		CvPlayerAI& kPlayer = GET_PLAYER(GC.getGameINLINE().getActivePlayer());
-		int iNumLists = kPlayer.m_pBuildLists->getNumLists();
-		for (int i=0; i<iNumLists; i++)
+		CvPlayerAI& kPlayer	  = GET_PLAYER(GC.getGameINLINE().getActivePlayer());
+		int			iNumLists = kPlayer.m_pBuildLists->getNumLists();
+		for (int i = 0; i < iNumLists; i++)
 		{
 			int iListSize = kPlayer.m_pBuildLists->getListLength(i);
-			for (int j=0; j<iListSize; j+=100)
+			for (int j = 0; j < iListSize; j += 100)
 			{
 				gDLL->sendMessageData(new CvNetBuildLists(GC.getGameINLINE().getActivePlayer(), i, j, 100));
 			}

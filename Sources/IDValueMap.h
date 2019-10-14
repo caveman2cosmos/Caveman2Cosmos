@@ -18,7 +18,7 @@
 template <class ValueType, ValueType& defaultValue>
 class IDValueMap
 {
-public:
+  public:
 	void read(FDataStreamBase* pStream)
 	{
 		unsigned int iSize = 0;
@@ -53,7 +53,7 @@ public:
 				if (pXML->TryMoveToXmlFirstChild())
 				{
 					pXML->GetXmlVal(szTextVal);
-					int iID = GC.getOrCreateInfoTypeForString(szTextVal);
+					int		  iID = GC.getOrCreateInfoTypeForString(szTextVal);
 					ValueType val = defaultValue;
 					pXML->GetNextXmlVal(&val);
 					setValue(iID, val);
@@ -70,7 +70,7 @@ public:
 		for (unsigned int i = 0; i < pMap->m_map.size(); i++)
 		{
 			bool bNotFound = true;
-			int iID = pMap->m_map[i].first;
+			int	 iID	   = pMap->m_map[i].first;
 			for (unsigned int j = 0; j < m_map.size(); j++)
 			{
 				if (iID == m_map[j].first)
@@ -117,14 +117,14 @@ public:
 	}
 
 
-protected:
+  protected:
 	std::vector<std::pair<int, ValueType> > m_map;
 };
 
 extern int g_iPercentDefault;
 extern int g_iModifierDefault;
 
-typedef IDValueMap<int, g_iPercentDefault> IDValueMapPercent;
+typedef IDValueMap<int, g_iPercentDefault>	IDValueMapPercent;
 typedef IDValueMap<int, g_iModifierDefault> IDValueMapModifier;
 
 #endif

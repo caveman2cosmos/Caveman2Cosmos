@@ -23,7 +23,7 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("convert", &CyUnit::convert, "void (CyUnit* pUnit)")
 		.def("kill", &CyUnit::kill, "void (bool bDelay, int /*PlayerTypes*/ ePlayer)")
 		.def("NotifyEntity", &CyUnit::NotifyEntity, "void (int EntityEventType)")
-		
+
 		.def("isActionRecommended", &CyUnit::isActionRecommended, "int (int i)")
 		.def("isBetterDefenderThan", &CyUnit::isBetterDefenderThan, "bool (CyUnit* pDefender, CyUnit* pAttacker)")
 
@@ -228,24 +228,24 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("bestInterceptor", &CyUnit::bestInterceptor, python::return_value_policy<python::manage_new_object>(), "CyUnit* (CyPlot*)")
 
 		.def("isAutomated", &CyUnit::isAutomated, "bool ()")
-/************************************************************************************************/
-/* RevDCM	                  Start		 21/12/2010                                             */
-/*                                                                                              */
-/* Advanced Automations                                                                         */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* RevDCM	                  Start		 21/12/2010                                             */
+		/*                                                                                              */
+		/* Advanced Automations                                                                         */
+		/************************************************************************************************/
 		.def("isAutoPromoting", &CyUnit::isAutoPromoting, "bool ()")
 		.def("isAutoUpgrading", &CyUnit::isAutoUpgrading, "bool ()")
-/************************************************************************************************/
-/* Advanced Automations		end                                                                 */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Advanced Automations		end                                                                 */
+		/************************************************************************************************/
 		.def("isWaiting", &CyUnit::isWaiting, "bool ()")
 		.def("isFortifyable", &CyUnit::isFortifyable, "bool ()")
 		.def("fortifyModifier", &CyUnit::fortifyModifier, "int ()")
 		//TB Combat Mods begin
 		.def("fortifyRepelModifier", &CyUnit::fortifyRepelModifier, "int ()")
 		//TB Combat Mods end
-		.def("experienceNeeded", &CyUnit::experienceNeeded, "int ()") 
-		.def("attackXPValue", &CyUnit::attackXPValue, "int ()") 
+		.def("experienceNeeded", &CyUnit::experienceNeeded, "int ()")
+		.def("attackXPValue", &CyUnit::attackXPValue, "int ()")
 		.def("defenseXPValue", &CyUnit::defenseXPValue, "int ()")
 		.def("maxXPValue", &CyUnit::maxXPValue, "int ()")
 		.def("firstStrikes", &CyUnit::firstStrikes, "int ()")
@@ -264,15 +264,15 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("isNeverInvisible", &CyUnit::isNeverInvisible, "bool ()")
 		.def("isInvisible", &CyUnit::isInvisible, "bool (int (TeamTypes) eTeam, bool bDebug)")
 		.def("isNukeImmune", &CyUnit::isNukeImmune, "bool ()")
-/************************************************************************************************/
-/* REVDCM_OC                              02/16/10                                phungus420    */
-/*                                                                                              */
-/* Inquisitions                                                                                 */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* REVDCM_OC                              02/16/10                                phungus420    */
+		/*                                                                                              */
+		/* Inquisitions                                                                                 */
+		/************************************************************************************************/
 		.def("isInquisitor", &CyUnit::isInquisitor, "bool ()")
-/************************************************************************************************/
-/* REVDCM_OC                               END                                                  */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* REVDCM_OC                               END                                                  */
+		/************************************************************************************************/
 
 		.def("maxInterceptionProbability", &CyUnit::maxInterceptionProbability, "int ()")
 		.def("currInterceptionProbability", &CyUnit::currInterceptionProbability, "int ()")
@@ -330,14 +330,14 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("unitClassAttackModifier", &CyUnit::unitClassAttackModifier, "int (int /*UnitClassTypes*/ eUnitClass)")
 		.def("unitClassDefenseModifier", &CyUnit::unitClassDefenseModifier, "int (int /*UnitClassTypes*/ eUnitClass)")
 		.def("unitCombatModifier", &CyUnit::unitCombatModifier, "int (int /*UnitCombatTypes*/ eUnitCombat)")
-		.def("domainModifier", &CyUnit::domainModifier, "int (int /*DomainTypes*/ eDomain)") 
+		.def("domainModifier", &CyUnit::domainModifier, "int (int /*DomainTypes*/ eDomain)")
 
-		.def("bombardRate", &CyUnit::bombardRate, "int ()") 
+		.def("bombardRate", &CyUnit::bombardRate, "int ()")
 		.def("airBombBaseRate", &CyUnit::airBombBaseRate, "int ()")
 		.def("airBombCurrRate", &CyUnit::airBombCurrRate, "int ()")
 
-		.def("specialCargo", &CyUnit::specialCargo, "int ()") 
-		.def("domainCargo", &CyUnit::domainCargo, "int ()") 
+		.def("specialCargo", &CyUnit::specialCargo, "int ()")
+		.def("domainCargo", &CyUnit::domainCargo, "int ()")
 		.def("cargoSpace", &CyUnit::cargoSpace, "int ()")
 		.def("changeCargoSpace", &CyUnit::changeCargoSpace, "void (int)")
 		.def("isFull", &CyUnit::isFull, "bool ()")
@@ -363,7 +363,7 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("plot", &CyUnit::plot, python::return_value_policy<python::manage_new_object>(), "CyPlot* ()")
 		.def("area", &CyUnit::area, python::return_value_policy<python::manage_new_object>(), "CyArea* ()")
 		.def("getReconPlot", &CyUnit::getReconPlot, python::return_value_policy<python::manage_new_object>(), "CyPlot* ()")
-		.def("setReconPlot", &CyUnit::setReconPlot, "void (CyPlot)")				 
+		.def("setReconPlot", &CyUnit::setReconPlot, "void (CyPlot)")
 
 		.def("getGameTurnCreated", &CyUnit::getGameTurnCreated, "int ()")
 
@@ -531,13 +531,13 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("attackForDamage", &CyUnit::attackForDamage, "void attackForDamage(CyUnit *defender, int attakerDamageChange, int defenderDamageChange)")
 		.def("rangeStrike", &CyUnit::rangeStrike, "void rangeStrike(int iX, int iY)")
 
-		.def("getArtInfo", &CyUnit::getArtInfo,  python::return_value_policy<python::reference_existing_object>(), "CvArtInfoUnit* (int i, eEra)")
+		.def("getArtInfo", &CyUnit::getArtInfo, python::return_value_policy<python::reference_existing_object>(), "CvArtInfoUnit* (int i, eEra)")
 		.def("getButton", &CyUnit::getButton, "std::string ()")
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
+		/*                                                                                              */
+		/* Great Commanders                                                                             */
+		/************************************************************************************************/
 		.def("isCommander", &CyUnit::isCommander, "bool ()")
 		.def("controlPointsLeft", &CyUnit::controlPointsLeft, "int ()")
 		.def("controlPoints", &CyUnit::controlPoints, "int ()")
@@ -546,9 +546,9 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("getRealExperience", &CyUnit::getRealExperience, "float ()")
 		.def("setExperience100", &CyUnit::setExperience100, "void (int iNewValue)")
 		.def("changeExperience100", &CyUnit::changeExperience100, "void (int iChange, int iMax, bool bFromCombat, bool bInBorders, bool bUpdateGlobal)")
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* Afforess	                     END                                                            */
+		/************************************************************************************************/
 		.def("captureProbabilityTotal", &CyUnit::captureProbabilityTotal, "int ()")
 		.def("captureResistanceTotal", &CyUnit::captureResistanceTotal, "int ()")
 		.def("isUnitAtBaseGroup", &CyUnit::isUnitAtBaseGroup, "bool ()")
@@ -558,6 +558,5 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("doHNCapture", &CyUnit::doHNCapture, "void ()")
 
 		.def("getCapturingUnit", &CyUnit::getCapturingUnit, python::return_value_policy<python::manage_new_object>(), "CyUnit* ()")
-		.def("setCapturingUnit", &CyUnit::setCapturingUnit, "void (CyUnit* pCapturingUnit)")
-		;
+		.def("setCapturingUnit", &CyUnit::setCapturingUnit, "void (CyUnit* pCapturingUnit)");
 }
