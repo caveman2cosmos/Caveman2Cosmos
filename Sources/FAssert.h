@@ -73,6 +73,27 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
 	} \
 }
 
+
+#define FEnsure( expr )	\
+{ \
+	static bool bIgnoreAlways = false; \
+	if( !(expr) ) \
+	{ \
+		if( FAssertDlg( #expr, 0, __FILE__, __LINE__, bIgnoreAlways ) ) { _asm int 3 } \
+		throw std::exception(#expr); \
+	} \
+}
+
+#define FEnsureMsg( expr, msg ) \
+{ \
+	static bool bIgnoreAlways = false; \
+	if( !(expr) ) \
+	{ \
+		if( FAssertDlg( #expr, msg, __FILE__, __LINE__, bIgnoreAlways ) ) { _asm int 3 } \
+		throw std::exception(#expr); \
+	} \
+}
+
 #else
 // Non Win32 platforms--just use built-in FAssert
 #define FAssert( expr )	FAssert( expr )
@@ -81,6 +102,8 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
 #define FAssertOptionMsg( option, expr, msg ) FAssert( GC.getGameINLINE().isOption(option) && expr )
 #define FAssertOptionRecalcMsg( option, expr, msg) FAssert( GC.getGameINLINE().isOption(option) && expr )
 #define FErrorMsg( msg ) FAssert( false )
+#define FEnsure( expr ) { if( !(expr) ) throw std::exception(#expr); }
+#define FEnsureMsg( expr, msg ) { if( !(expr) ) throw std::exception(#expr); }
 
 #endif
 
@@ -92,7 +115,8 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
 #define FAssertOptionMsg( option, expr, msg )
 #define FAssertOptionRecalcMsg( option, expr, msg)
 #define FErrorMsg( msg )
-
+#define FEnsure( expr )
+#define FEnsureMsg( expr, msg )
 #endif
 
 #if defined(FASSERT_ENABLE) || !defined(_DEBUG)

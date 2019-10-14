@@ -1046,23 +1046,23 @@ int getCombatOdds(CvUnit* pAttacker, CvUnit* pDefender)
 //n_A = hits taken by attacker, n_D = hits taken by defender.
 float getCombatOddsSpecific(CvUnit* pAttacker, CvUnit* pDefender, int n_A, int n_D)
 {
-    int iAttackerStrength;
-    int iAttackerFirepower;
-    int iDefenderStrength;
-    int iDefenderFirepower;
-    int iDefenderOdds;
-    int iAttackerOdds;
-    int iStrengthFactor;
-    int iDamageToAttacker;
-    int iDamageToDefender;
-    int iNeededRoundsAttacker;
-    //int iNeededRoundsDefender;
+	int iAttackerStrength;
+	int iAttackerFirepower;
+	int iDefenderStrength;
+	int iDefenderFirepower;
+	int iDefenderOdds;
+	int iAttackerOdds;
+	int iStrengthFactor;
+	int iDamageToAttacker;
+	int iDamageToDefender;
+	int iNeededRoundsAttacker;
+	//int iNeededRoundsDefender;
 
-    int AttFSnet;
-    int AttFSC;
-    int DefFSC;
+	int AttFSnet;
+	int AttFSC;
+	int DefFSC;
 
-    int iDefenderHitLimit;
+	int iDefenderHitLimit;
 
 	//TB Combat Mods (Armor Compare)
 	int iAttackArmorTotal = pAttacker->armorVSOpponentProbTotal(pDefender);
@@ -1080,10 +1080,10 @@ float getCombatOddsSpecific(CvUnit* pAttacker, CvUnit* pDefender, int n_A, int n
 	int iDefenderArmor = (100 - iModifiedDefenderArmor);
 	int iAttackerArmor = (100 - iModifiedAttackerArmor);
 
-    iAttackerStrength = pAttacker->currCombatStr(NULL, NULL);
-    iAttackerFirepower = pAttacker->currFirepower(NULL, NULL);
-    iDefenderStrength = pDefender->currCombatStr(pDefender->plot(), pAttacker);
-    iDefenderFirepower = pDefender->currFirepower(pDefender->plot(), pAttacker);
+	iAttackerStrength = pAttacker->currCombatStr(NULL, NULL);
+	iAttackerFirepower = pAttacker->currFirepower(NULL, NULL);
+	iDefenderStrength = pDefender->currCombatStr(pDefender->plot(), pAttacker);
+	iDefenderFirepower = pDefender->currFirepower(pDefender->plot(), pAttacker);
 
 #ifdef STRENGTH_IN_NUMBERS
 	if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
@@ -1099,7 +1099,7 @@ float getCombatOddsSpecific(CvUnit* pAttacker, CvUnit* pDefender, int n_A, int n
 
 	//TB Combat Mods End
 
-    iStrengthFactor = ((iAttackerFirepower + iDefenderFirepower + 1) / 2);
+	iStrengthFactor = ((iAttackerFirepower + iDefenderFirepower + 1) / 2);
 
 	int iDefendDamageModifierTotal = pDefender->damageModifierTotal();
 	int iAttackDamageModifierTotal = pAttacker->damageModifierTotal();
@@ -1135,51 +1135,51 @@ float getCombatOddsSpecific(CvUnit* pAttacker, CvUnit* pDefender, int n_A, int n
 	iDefenderOdds = ((iDefenderHitOdds - iAttackerHitOdds)+ GC.getCOMBAT_DIE_SIDES())/2;
 	iAttackerOdds = ((iAttackerHitOdds - iDefenderHitOdds)+ GC.getCOMBAT_DIE_SIDES())/2;
 	//original:
-    //iDefenderOdds = ((GC.getDefineINT("COMBAT_DIE_SIDES") * iDefenderStrength) / (iAttackerStrength + iDefenderStrength));
-    //iAttackerOdds = GC.getDefineINT("COMBAT_DIE_SIDES") - iDefenderOdds;
+	//iDefenderOdds = ((GC.getDefineINT("COMBAT_DIE_SIDES") * iDefenderStrength) / (iAttackerStrength + iDefenderStrength));
+	//iAttackerOdds = GC.getDefineINT("COMBAT_DIE_SIDES") - iDefenderOdds;
 	//TB Combat Mods end (Dodge/Precision)
 
-    if (GC.getDefineINT("ACO_IgnoreBarbFreeWins")==0)
-    {
-        if (pDefender->isHominid())
-        {
-            //defender is barbarian
-            if (!GET_PLAYER(pAttacker->getOwnerINLINE()).isHominid() && GET_PLAYER(pAttacker->getOwnerINLINE()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(pAttacker->getOwnerINLINE()).getHandicapType()).getFreeWinsVsBarbs())
-            {
-                //attacker is not barb and attacker player has free wins left
-                //I have assumed in the following code only one of the units (attacker and defender) can be a barbarian
+	if (GC.getDefineINT("ACO_IgnoreBarbFreeWins")==0)
+	{
+		if (pDefender->isHominid())
+		{
+			//defender is barbarian
+			if (!GET_PLAYER(pAttacker->getOwnerINLINE()).isHominid() && GET_PLAYER(pAttacker->getOwnerINLINE()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(pAttacker->getOwnerINLINE()).getHandicapType()).getFreeWinsVsBarbs())
+			{
+				//attacker is not barb and attacker player has free wins left
+				//I have assumed in the following code only one of the units (attacker and defender) can be a barbarian
 
-                iDefenderOdds = std::min((10 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iDefenderOdds);
-                iAttackerOdds = std::max((90 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iAttackerOdds);
-            }
-        }
-        else if (pAttacker->isHominid())
-        {
-            //attacker is barbarian
-            if (!GET_PLAYER(pDefender->getOwnerINLINE()).isHominid() && GET_PLAYER(pDefender->getOwnerINLINE()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(pDefender->getOwnerINLINE()).getHandicapType()).getFreeWinsVsBarbs())
-            {
-                //defender is not barbarian and defender has free wins left and attacker is barbarian
-                iAttackerOdds = std::min((10 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iAttackerOdds);
-                iDefenderOdds = std::max((90 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iDefenderOdds);
-            }
-        }
-    }
+				iDefenderOdds = std::min((10 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iDefenderOdds);
+				iAttackerOdds = std::max((90 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iAttackerOdds);
+			}
+		}
+		else if (pAttacker->isHominid())
+		{
+			//attacker is barbarian
+			if (!GET_PLAYER(pDefender->getOwnerINLINE()).isHominid() && GET_PLAYER(pDefender->getOwnerINLINE()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(pDefender->getOwnerINLINE()).getHandicapType()).getFreeWinsVsBarbs())
+			{
+				//defender is not barbarian and defender has free wins left and attacker is barbarian
+				iAttackerOdds = std::min((10 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iAttackerOdds);
+				iDefenderOdds = std::max((90 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iDefenderOdds);
+			}
+		}
+	}
 
-    iDefenderHitLimit = pDefender->maxHitPoints() - pAttacker->combatLimit(pDefender);
+	iDefenderHitLimit = pDefender->maxHitPoints() - pAttacker->combatLimit(pDefender);
 
-    //iNeededRoundsAttacker = (std::max(0, pDefender->currHitPoints() - iDefenderHitLimit) + iDamageToDefender - (((pAttacker->combatLimit())==GC.getMAX_HIT_POINTS())?1:0) ) / iDamageToDefender;
-    iNeededRoundsAttacker = (pDefender->currHitPoints() - pDefender->maxHitPoints() + pAttacker->combatLimit(pDefender) - (((pAttacker->combatLimit(pDefender))==pDefender->maxHitPoints())?1:0))/iDamageToDefender + 1;
+	//iNeededRoundsAttacker = (std::max(0, pDefender->currHitPoints() - iDefenderHitLimit) + iDamageToDefender - (((pAttacker->combatLimit())==GC.getMAX_HIT_POINTS())?1:0) ) / iDamageToDefender;
+	iNeededRoundsAttacker = (pDefender->currHitPoints() - pDefender->maxHitPoints() + pAttacker->combatLimit(pDefender) - (((pAttacker->combatLimit(pDefender))==pDefender->maxHitPoints())?1:0))/iDamageToDefender + 1;
 	//TB Combat Mods begin
 	int iNeededRoundsDefender = (pAttacker->currHitPoints() + iDamageToAttacker - 1 ) / iDamageToAttacker;
 	//TB Combat Mods end
 
-    int N_D = (std::max(0, pDefender->currHitPoints() - iDefenderHitLimit) + iDamageToDefender - (((pAttacker->combatLimit(pDefender))==pDefender->maxHitPoints())?1:0) ) / iDamageToDefender;
+	int N_D = (std::max(0, pDefender->currHitPoints() - iDefenderHitLimit) + iDamageToDefender - (((pAttacker->combatLimit(pDefender))==pDefender->maxHitPoints())?1:0) ) / iDamageToDefender;
 
-    //int N_A = (pAttacker->currHitPoints() + iDamageToAttacker - 1 ) / iDamageToAttacker;  //same as next line
-    int N_A = (pAttacker->currHitPoints() - 1)/iDamageToAttacker + 1;
+	//int N_A = (pAttacker->currHitPoints() + iDamageToAttacker - 1 ) / iDamageToAttacker;  //same as next line
+	int N_A = (pAttacker->currHitPoints() - 1)/iDamageToAttacker + 1;
 
 
-    //int iRetreatOdds = std::max((pAttacker->withdrawalProbability()),100);
+	//int iRetreatOdds = std::max((pAttacker->withdrawalProbability()),100);
 	//  TB Combat Mods:
 	//  Determine Attack Withdraw odds
 	int iAttackerWithdraw = pAttacker->withdrawVSOpponentProbTotal(pDefender, pDefender->plot());
@@ -1278,155 +1278,155 @@ float getCombatOddsSpecific(CvUnit* pAttacker, CvUnit* pDefender, int n_A, int n
 	float KnockbackOdds = ((float)(std::min((EvaluatedKnockbackOdds),100)))/100.0f ;
 	//TB Combat Mods End (above original:float RetreatOdds = ((float)(std::min(pAttacker->withdrawalProbability(),100)))/100.0f ;
 
-    AttFSnet = ( (pDefender->immuneToFirstStrikes()) ? 0 : pAttacker->firstStrikes() ) - ((pAttacker->immuneToFirstStrikes()) ? 0 : pDefender->firstStrikes());
-    AttFSC = (pDefender->immuneToFirstStrikes()) ? 0 : (pAttacker->chanceFirstStrikes());
-    DefFSC = (pAttacker->immuneToFirstStrikes()) ? 0 : (pDefender->chanceFirstStrikes());
+	AttFSnet = ( (pDefender->immuneToFirstStrikes()) ? 0 : pAttacker->firstStrikes() ) - ((pAttacker->immuneToFirstStrikes()) ? 0 : pDefender->firstStrikes());
+	AttFSC = (pDefender->immuneToFirstStrikes()) ? 0 : (pAttacker->chanceFirstStrikes());
+	DefFSC = (pAttacker->immuneToFirstStrikes()) ? 0 : (pDefender->chanceFirstStrikes());
 
 
-    float P_A = (float)iAttackerOdds / GC.getDefineINT("COMBAT_DIE_SIDES");
-    float P_D = (float)iDefenderOdds / GC.getDefineINT("COMBAT_DIE_SIDES");
-    float answer = 0.0f;
-    if (n_A < N_A && n_D == iNeededRoundsAttacker)   // (1) Defender dies or is taken to combat limit
-    {
-        float sum1 = 0.0f;
-        for (int i = (-AttFSnet-AttFSC<1?1:-AttFSnet-AttFSC); i <= DefFSC - AttFSnet; i++)
-        {
-            for (int j = 0; j <= i; j++)
-            {
+	float P_A = (float)iAttackerOdds / GC.getDefineINT("COMBAT_DIE_SIDES");
+	float P_D = (float)iDefenderOdds / GC.getDefineINT("COMBAT_DIE_SIDES");
+	float answer = 0.0f;
+	if (n_A < N_A && n_D == iNeededRoundsAttacker)   // (1) Defender dies or is taken to combat limit
+	{
+		float sum1 = 0.0f;
+		for (int i = (-AttFSnet-AttFSC<1?1:-AttFSnet-AttFSC); i <= DefFSC - AttFSnet; i++)
+		{
+			for (int j = 0; j <= i; j++)
+			{
 
-                if (n_A >= j)
-                {
-                    sum1 += (float)getBinomialCoefficient(i,j) * pow(P_A,(float)(i-j)) * getBinomialCoefficient(iNeededRoundsAttacker-1+n_A-j,iNeededRoundsAttacker-1);
+				if (n_A >= j)
+				{
+					sum1 += (float)getBinomialCoefficient(i,j) * pow(P_A,(float)(i-j)) * getBinomialCoefficient(iNeededRoundsAttacker-1+n_A-j,iNeededRoundsAttacker-1);
 
-                } //if
-            }//for j
-        }//for i
-        sum1 *= pow(P_D,(float)n_A)*pow(P_A,(float)iNeededRoundsAttacker);
-        answer += sum1;
-
-
-        float sum2 = 0.0f;
+				} //if
+			}//for j
+		}//for i
+		sum1 *= pow(P_D,(float)n_A)*pow(P_A,(float)iNeededRoundsAttacker);
+		answer += sum1;
 
 
-        for (int i = (0<AttFSnet-DefFSC?AttFSnet-DefFSC:0); i <= AttFSnet + AttFSC; i++)
-        {
+		float sum2 = 0.0f;
 
-            for (int j = 0; j <= i; j++)
-            {
-                if (N_D > j)
-                {
-                    sum2 = sum2 + getBinomialCoefficient(n_A+iNeededRoundsAttacker-j-1,n_A) * (float)getBinomialCoefficient(i,j) * pow(P_A,(float)iNeededRoundsAttacker) * pow(P_D,(float)(n_A+i-j));
 
-                }
-                else if (n_A == 0)
-                {
-                    sum2 = sum2 + (float)getBinomialCoefficient(i,j) * pow(P_A,(float)j) * pow(P_D,(float)(i-j));
-                }
-                else
-                {
-                    sum2 = sum2 + 0.0f;
-                }
-            }//for j
+		for (int i = (0<AttFSnet-DefFSC?AttFSnet-DefFSC:0); i <= AttFSnet + AttFSC; i++)
+		{
 
-        }//for i
-        answer += sum2;
+			for (int j = 0; j <= i; j++)
+			{
+				if (N_D > j)
+				{
+					sum2 = sum2 + getBinomialCoefficient(n_A+iNeededRoundsAttacker-j-1,n_A) * (float)getBinomialCoefficient(i,j) * pow(P_A,(float)iNeededRoundsAttacker) * pow(P_D,(float)(n_A+i-j));
 
-    }
-    else if (n_D < N_D && n_A == N_A)  // (2) Attacker dies!
-    {
+				}
+				else if (n_A == 0)
+				{
+					sum2 = sum2 + (float)getBinomialCoefficient(i,j) * pow(P_A,(float)j) * pow(P_D,(float)(i-j));
+				}
+				else
+				{
+					sum2 = sum2 + 0.0f;
+				}
+			}//for j
 
-        float sum1 = 0.0f;
-        for (int i = (-AttFSnet-AttFSC<1?1:-AttFSnet-AttFSC); i <= DefFSC - AttFSnet; i++)
-        {
+		}//for i
+		answer += sum2;
 
-            for (int j = 0; j <= i; j++)
-            {
-                if (N_A>j)
-                {
-                    sum1 += getBinomialCoefficient(n_D+N_A-j-1,n_D) * (float)getBinomialCoefficient(i,j) * pow(P_D,(float)(N_A)) * pow(P_A,(float)(n_D+i-j));
-                }
-                else
-                {
-                    if (n_D == 0)
-                    {
-                        sum1 += (float)getBinomialCoefficient(i,j) * pow(P_D,(float)(j)) * pow(P_A,(float)(i-j));
-                    }//if (inside if) else sum += 0
-                }//if
-            }//for j
+	}
+	else if (n_D < N_D && n_A == N_A)  // (2) Attacker dies!
+	{
 
-        }//for i
-        answer += sum1;
-        float sum2 = 0.0f;
-        for (int i = (0<AttFSnet-DefFSC?AttFSnet-DefFSC:0); i <= AttFSnet + AttFSC; i++)
-        {
-            for (int j = 0; j <= i; j++)
-            {
-                if (n_D >= j)
-                {
-                    sum2 += (float)getBinomialCoefficient(i,j) * pow(P_D,(float)(i-j)) * getBinomialCoefficient(N_A-1+n_D-j,N_A-1);
-                } //if
-            }//for j
-        }//for i
-        sum2 *= pow(P_A,(float)(n_D))*pow(P_D,(float)(N_A));
-        answer += sum2;
+		float sum1 = 0.0f;
+		for (int i = (-AttFSnet-AttFSC<1?1:-AttFSnet-AttFSC); i <= DefFSC - AttFSnet; i++)
+		{
+
+			for (int j = 0; j <= i; j++)
+			{
+				if (N_A>j)
+				{
+					sum1 += getBinomialCoefficient(n_D+N_A-j-1,n_D) * (float)getBinomialCoefficient(i,j) * pow(P_D,(float)(N_A)) * pow(P_A,(float)(n_D+i-j));
+				}
+				else
+				{
+					if (n_D == 0)
+					{
+						sum1 += (float)getBinomialCoefficient(i,j) * pow(P_D,(float)(j)) * pow(P_A,(float)(i-j));
+					}//if (inside if) else sum += 0
+				}//if
+			}//for j
+
+		}//for i
+		answer += sum1;
+		float sum2 = 0.0f;
+		for (int i = (0<AttFSnet-DefFSC?AttFSnet-DefFSC:0); i <= AttFSnet + AttFSC; i++)
+		{
+			for (int j = 0; j <= i; j++)
+			{
+				if (n_D >= j)
+				{
+					sum2 += (float)getBinomialCoefficient(i,j) * pow(P_D,(float)(i-j)) * getBinomialCoefficient(N_A-1+n_D-j,N_A-1);
+				} //if
+			}//for j
+		}//for i
+		sum2 *= pow(P_A,(float)(n_D))*pow(P_D,(float)(N_A));
+		answer += sum2;
 		//TB Combat Mods (Repel & Knockback)
 //orig: answer = answer * (1.0f - RetreatOdds);
 		answer = answer * (1.0f - RetreatOdds) * (1.0f - RepelOdds) * (1.0f - KnockbackOdds) * (1.0f - DefRetreatOdds);
 		//TB Combat Mods End
 
-    }
+	}
 	//TB Combat Mods begin - original: else if (n_A == (N_A-1) && n_D < N_D)  // (3) Attacker retreats!
-    else if (n_A == (N_A-1) && n_D < N_D)  // (3) Attacker retreats, is repelled or knocks opponent back!
+	else if (n_A == (N_A-1) && n_D < N_D)  // (3) Attacker retreats, is repelled or knocks opponent back!
 	//TB Combat Mods end
-    {
-        float sum1 = 0.0f;
-        for (int i = (AttFSnet+AttFSC>-1?1:-AttFSnet-AttFSC); i <= DefFSC - AttFSnet; i++)
-        {
+	{
+		float sum1 = 0.0f;
+		for (int i = (AttFSnet+AttFSC>-1?1:-AttFSnet-AttFSC); i <= DefFSC - AttFSnet; i++)
+		{
 
-            for (int j = 0; j <= i; j++)
-            {
-                if (N_A>j)
-                {
-                    sum1 += getBinomialCoefficient(n_D+N_A-j-1,n_D) * (float)getBinomialCoefficient(i,j) * pow(P_D,(float)(N_A)) * pow(P_A,(float)(n_D+i-j));
-                }
-                else
-                {
-                    if (n_D == 0)
-                    {
-                        sum1 += (float)getBinomialCoefficient(i,j) * pow(P_D,(float)(j)) * pow(P_A,(float)(i-j));
-                    }//if (inside if) else sum += 0
-                }//if
-            }//for j
+			for (int j = 0; j <= i; j++)
+			{
+				if (N_A>j)
+				{
+					sum1 += getBinomialCoefficient(n_D+N_A-j-1,n_D) * (float)getBinomialCoefficient(i,j) * pow(P_D,(float)(N_A)) * pow(P_A,(float)(n_D+i-j));
+				}
+				else
+				{
+					if (n_D == 0)
+					{
+						sum1 += (float)getBinomialCoefficient(i,j) * pow(P_D,(float)(j)) * pow(P_A,(float)(i-j));
+					}//if (inside if) else sum += 0
+				}//if
+			}//for j
 
-        }//for i
-        answer += sum1;
+		}//for i
+		answer += sum1;
 
-        float sum2 = 0.0f;
-        for (int i = (0<AttFSnet-DefFSC?AttFSnet-DefFSC:0); i <= AttFSnet + AttFSC; i++)
-        {
-            for (int j = 0; j <= i; j++)
-            {
-                if (n_D >= j)
-                {
-                    sum2 += (float)getBinomialCoefficient(i,j) * pow(P_D,(float)(i-j)) * getBinomialCoefficient(N_A-1+n_D-j,N_A-1);
-                } //if
-            }//for j
-        }//for i
-        sum2 *= pow(P_A,(float)(n_D))*pow(P_D,(float)(N_A));
-        answer += sum2;
+		float sum2 = 0.0f;
+		for (int i = (0<AttFSnet-DefFSC?AttFSnet-DefFSC:0); i <= AttFSnet + AttFSC; i++)
+		{
+			for (int j = 0; j <= i; j++)
+			{
+				if (n_D >= j)
+				{
+					sum2 += (float)getBinomialCoefficient(i,j) * pow(P_D,(float)(i-j)) * getBinomialCoefficient(N_A-1+n_D-j,N_A-1);
+				} //if
+			}//for j
+		}//for i
+		sum2 *= pow(P_A,(float)(n_D))*pow(P_D,(float)(N_A));
+		answer += sum2;
 		//TB Combat Mods (Repel & Knockback)
 		//orig: answer = answer * RetreatOdds;
 		answer = answer * RetreatOdds * RepelOdds * KnockbackOdds * DefRetreatOdds;
 		//TB Combat Mods End
-        
-    }
-    else
-    {
-        //Unexpected value.  Process should not reach here.
-    }
+		
+	}
+	else
+	{
+		//Unexpected value.  Process should not reach here.
+	}
 
-    answer = answer / ((float)(AttFSC+DefFSC+1)); // dividing by (t+w+1) as is necessary
-    return answer;
+	answer = answer / ((float)(AttFSC+DefFSC+1)); // dividing by (t+w+1) as is necessary
+	return answer;
 }// getCombatOddsSpecific
 
 // I had to add this function to the header file CvGameCoreUtils.h
@@ -1510,56 +1510,40 @@ bool isPlotEventTrigger(EventTriggerTypes eTrigger)
 	return false;
 }
 
+namespace {
+	//	Small cache
+	std::vector<stdext::hash_map<UnitTypes, TechTypes> > g_discoveryTechCache;
+	int g_cachedTurn = -1;
+}
+
 TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer)
 {
 	PROFILE_FUNC();
-
-	//	Small cache
-	static	std::map<UnitTypes,TechTypes>* g_discoveryTechCache[MAX_PLAYERS];
-	static	int	g_cachedTurn = -1;
-
-	FAssert(ePlayer != NO_PLAYER);
-
-	TechTypes eBestTech = NO_TECH;
-	int iBestValue = 0;
-	CvPlayerAI&	kPlayer = GET_PLAYER(ePlayer);
-	CvTeam&	kTeam = GET_TEAM(kPlayer.getTeam());
-	int iI;
-
-	if ( g_cachedTurn == -1 )
-	{
-		for(iI = 0; iI < MAX_PLAYERS; iI++)
-		{
-			g_discoveryTechCache[iI] = NULL;
-		}
-	}
-	
-	if ( g_discoveryTechCache[ePlayer] == NULL )
-	{
-		g_discoveryTechCache[ePlayer] = new std::map<UnitTypes,TechTypes>();
-	}
+	FEnsureMsg(ePlayer != NO_PLAYER, "Player must be valid for this function");
 
 	if ( g_cachedTurn != GC.getGame().getGameTurn() )
 	{
-		for(iI = 0; iI < MAX_PLAYERS; iI++)
-		{
-			if ( g_discoveryTechCache[iI] != NULL )
-			{
-				g_discoveryTechCache[iI]->clear();
-			}
-		}
-
+		g_discoveryTechCache.clear();
 		g_cachedTurn = GC.getGame().getGameTurn();
 	}
 
-	std::map<UnitTypes,TechTypes>::const_iterator itr = g_discoveryTechCache[ePlayer]->find(eUnit);
-	if ( itr == g_discoveryTechCache[ePlayer]->end() )
+	// After the first turn this should not cause any allocation to occur as the max size required will have been reserved
+	g_discoveryTechCache.resize(std::max(g_discoveryTechCache.size(), static_cast<size_t>(ePlayer) + 1));
+
+	TechTypes eBestTech = NO_TECH;
+	stdext::hash_map<UnitTypes,TechTypes>::const_iterator itr = g_discoveryTechCache[ePlayer].find(eUnit);
+	if ( itr == g_discoveryTechCache[ePlayer].end() )
 	{
-		int* paiBonusClassRevealed = new int[GC.getNumBonusClassInfos()];
-		int* paiBonusClassUnrevealed = new int[GC.getNumBonusClassInfos()];
-		int* paiBonusClassHave = new int[GC.getNumBonusClassInfos()];
+		CvPlayerAI& kPlayer = GET_PLAYER(ePlayer);
+		CvTeam& kTeam = GET_TEAM(kPlayer.getTeam());
+
+		int iBestValue = 0;
+
+		std::vector<int> paiBonusClassRevealed(GC.getNumBonusClassInfos());
+		std::vector<int> paiBonusClassUnrevealed(GC.getNumBonusClassInfos());
+		std::vector<int> paiBonusClassHave(GC.getNumBonusClassInfos());
+
 		bool bBonusArrayCalculated = false;
-		int iJ;
 
 		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 		{
@@ -1567,7 +1551,7 @@ TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer)
 			{
 				int iValue = 0;
 
-				for (iJ = 0; iJ < GC.getNumFlavorTypes(); iJ++)
+				for (int iJ = 0; iJ < GC.getNumFlavorTypes(); iJ++)
 				{
 					iValue += (GC.getTechInfo((TechTypes) iI).getFlavorValue(iJ) * GC.getUnitInfo(eUnit).getFlavorValue(iJ));
 				}
@@ -1580,14 +1564,11 @@ TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer)
 					{
 						bBonusArrayCalculated = true;
 
-						for (iJ = 0; iJ < GC.getNumBonusClassInfos(); iJ++)
-						{
-							paiBonusClassRevealed[iJ] = 0;
-							paiBonusClassUnrevealed[iJ] = 0;
-							paiBonusClassHave[iJ] = 0;	    
-						}
-						
-						for (iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
+						std::fill(paiBonusClassRevealed.begin(), paiBonusClassRevealed.end(), 0);
+						std::fill(paiBonusClassUnrevealed.begin(), paiBonusClassUnrevealed.end(), 0);
+						std::fill(paiBonusClassHave.begin(), paiBonusClassHave.end(), 0);
+
+						for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
 						{
 							TechTypes eRevealTech = (TechTypes)GC.getBonusInfo((BonusTypes)iJ).getTechReveal();
 							BonusClassTypes eBonusClass = (BonusClassTypes)GC.getBonusInfo((BonusTypes)iJ).getBonusClassType();
@@ -1614,7 +1595,7 @@ TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer)
 						}
 					}
 
-					if (kPlayer.AI_techValue((TechTypes)iI, 1, true, kPlayer.isHuman(), paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave) > 1)
+					if (kPlayer.AI_techValue((TechTypes)iI, 1, true, kPlayer.isHuman(), &paiBonusClassRevealed[0], &paiBonusClassUnrevealed[0], &paiBonusClassHave[0]) > 1)
 					{
 						iBestValue = iValue;
 						eBestTech = ((TechTypes)iI);
@@ -1623,11 +1604,7 @@ TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer)
 			}
 		}
 
-		SAFE_DELETE_ARRAY(paiBonusClassRevealed);
-		SAFE_DELETE_ARRAY(paiBonusClassUnrevealed);
-		SAFE_DELETE_ARRAY(paiBonusClassHave);
-
-		g_discoveryTechCache[ePlayer]->insert(std::make_pair(eUnit,eBestTech));
+		g_discoveryTechCache[ePlayer].insert(std::make_pair(eUnit,eBestTech));
 	}
 	else
 	{
@@ -3095,15 +3072,15 @@ int	NewPathHeuristicFunc(CvSelectionGroup* pGroup, int iFromX, int iFromY, int i
 					}
 
 					int iPotentialExtraMoveEvery = iMin/iRouteCost;
-                    int iMoves = 0;
-                    if (iMin != 0)
-                    {
-                        iMoves = (iRouteCost*stepDistance(iFromX, iFromY, iToX, iToY) + iMin - 1)/iMin;
-                    }
-                    else 
-                    {
-                        iMoves = MAX_INT;
-                    }
+					int iMoves = 0;
+					if (iMin != 0)
+					{
+						iMoves = (iRouteCost*stepDistance(iFromX, iFromY, iToX, iToY) + iMin - 1)/iMin;
+					}
+					else 
+					{
+						iMoves = MAX_INT;
+					}
 					int iReducedMoves = iMoves - iMoves/(1+iPotentialExtraMoveEvery);
 
 					iLimitCost = (iLimitCost*iReducedMoves)/iMoves;
