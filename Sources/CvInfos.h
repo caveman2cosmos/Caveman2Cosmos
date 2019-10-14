@@ -8710,19 +8710,20 @@ typedef std::vector<std::pair<int, int> > CvTextureBlendSlotList;
 class CvArtInfoTerrain : public CvArtInfoAsset
 {
 public:
+	//!< number to blend textures.
+	static const int NUM_TEXTURE_BLENDS = 16;
 
 	CvArtInfoTerrain();
-	virtual ~CvArtInfoTerrain();
 
 	DllExport const TCHAR* getBaseTexture();
-	void setBaseTexture(const TCHAR* szTmp );
+	void setBaseTexture(const TCHAR* szTmp);
 	DllExport const TCHAR* getGridTexture();
-	void setGridTexture(const TCHAR* szTmp );
+	void setGridTexture(const TCHAR* szTmp);
 	DllExport const TCHAR* getDetailTexture();
 	void setDetailTexture(const TCHAR* szTmp);
 	DllExport int getLayerOrder();
 	DllExport bool useAlphaShader();
-	DllExport CvTextureBlendSlotList &getBlendList(int blendMask);
+	DllExport CvTextureBlendSlotList& getBlendList(int blendMask);
 
 	bool read(CvXMLLoadUtility* pXML);
 
@@ -8734,14 +8735,17 @@ public:
 
 protected:
 
-	CvString m_szDetailTexture;				//!< Detail texture associated with the Terrain base texture
+	//!< Detail texture associated with the Terrain base texture
+	CvString m_szDetailTexture; 
 	CvString m_szGridTexture;
 
-	int m_iLayerOrder;						//!< Layering order of texture
+	//!< Layering order of texture
+	int m_iLayerOrder; 
 	bool m_bAlphaShader;
-	int m_numTextureBlends;						//!< number to blend textures.
-	CvTextureBlendSlotList  **m_pTextureSlots;	//!< Array of Textureslots per blend tile
-	CvString**	m_pSlotNames;
+
+	//!< Array of Textureslots per blend tile
+	CvTextureBlendSlotList m_pTextureSlots[NUM_TEXTURE_BLENDS];
+	CvString m_pSlotNames[NUM_TEXTURE_BLENDS];
 };
 
 class CvArtInfoFeature : public CvArtInfoScalableAsset

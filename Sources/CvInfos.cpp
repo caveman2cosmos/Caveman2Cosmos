@@ -32819,28 +32819,10 @@ void CvArtInfoImprovement::copyNonDefaults(CvArtInfoImprovement* pClassInfo, CvX
 // CvArtInfoTerrain
 //////////////////////////////////////////////////////////////////////////
 
-CvArtInfoTerrain::CvArtInfoTerrain() :
-m_iLayerOrder(0),
-m_bAlphaShader(false),
-m_numTextureBlends(16)
+CvArtInfoTerrain::CvArtInfoTerrain() 
+	: m_iLayerOrder(0)
+	, m_bAlphaShader(false)
 {
-	m_pTextureSlots = new CvTextureBlendSlotList * [m_numTextureBlends];
-	m_pSlotNames = new CvString * [m_numTextureBlends];
-	for ( int i = 0; i < m_numTextureBlends; i++ )
-	{
-		m_pTextureSlots[i] = new CvTextureBlendSlotList;
-		m_pSlotNames[i] = NULL;
-	}
-
-}
-
-CvArtInfoTerrain::~CvArtInfoTerrain()
-{
-	for ( int i = 0; i < m_numTextureBlends; i++ )
-	{
-		SAFE_DELETE(m_pTextureSlots[i]);
-	}
-	SAFE_DELETE_ARRAY( m_pTextureSlots);
 }
 
 const TCHAR* CvArtInfoTerrain::getBaseTexture()
@@ -32883,10 +32865,10 @@ bool CvArtInfoTerrain::useAlphaShader()
 	return m_bAlphaShader;
 }
 
-CvTextureBlendSlotList &CvArtInfoTerrain::getBlendList(int blendMask)
+CvTextureBlendSlotList& CvArtInfoTerrain::getBlendList(int blendMask)
 {
-	FAssert(blendMask>0 && blendMask<16);
-	return *m_pTextureSlots[blendMask];
+	FAssertMsg(blendMask >= 1 && blendMask < NUM_TEXTURE_BLENDS, "blendMask index must be in valid range");
+	return m_pTextureSlots[blendMask];
 }
 
 void BuildSlotList( CvTextureBlendSlotList &list, CvString &numlist)
@@ -32940,15 +32922,15 @@ bool CvArtInfoTerrain::read(CvXMLLoadUtility* pXML)
 
 	// Parse texture slots for blend tile lists
 	wchar_t xmlName[] = L"TextureBlend00";
-	for(int i =1; i<m_numTextureBlends;i++ )
+	for (int i = 1; i < NUM_TEXTURE_BLENDS; i++)
 	{
-		swprintf(xmlName+(wcslen(xmlName)-2),L"%02d",i);
+		swprintf(xmlName + (wcslen(xmlName) - 2), L"%02d", i);
 		pXML->GetChildXmlValByName(szTextVal, xmlName);
 
-		aszDirName.setLocationName( &szTextVal, (GC.getModDir()).c_str());
+		aszDirName.setLocationName(&szTextVal, (GC.getModDir()).c_str());
 
-		m_pSlotNames[i] = new CvString(szTextVal);
-		BuildSlotList(*m_pTextureSlots[i], szTextVal);
+		m_pSlotNames[i] = szTextVal;
+		BuildSlotList(m_pTextureSlots[i], szTextVal);
 	}
 
 	// AIAndy: Reading CvArtInfoAsset again is bad
