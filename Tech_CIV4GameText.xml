@@ -24015,7 +24015,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TRADE_PEDIA</Tag>
-		<English>When tribes met they often traded goods like furs to pottery, fish to deer meat etc. Trading goods eventually led to written language and mutually used currencies from traditional barter and unwritten contracts.</English>
+		<English>Trade involves the transfer of goods or services from one person or entity to another, often in exchange for money. A system or network that allows trade is called a market. An early form of trade, barter, saw the direct exchange of goods and services for other goods and services.</English>
 		<Polish>Handel jest to proces gospodarczy polegający na sprzedaży, to znaczy na wymianie dóbr i usług na pieniądze, realizowany przez zawodowych pośredników w celu osiągnięcia zysku.</Polish>
 	</TEXT>
 	<TEXT>
@@ -24137,7 +24137,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</Tag>
-		<English>Transtangible Neutrino Accelerators</English>
+		<English>Neutrino Accelerators</English>
 		<French>Accélérateurs de Neutrino Transtangible</French>
 		<Italian>Acceleratori di neutrini trantangibili</Italian>
 		<Spanish>
@@ -24310,7 +24310,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TRIBALISM_STRATEGY</Tag>
-		<English>[COLOR_TECH_TEXT]Tribalism[COLOR_REVERT] is a prehistoric era technology that allows the construction of the very first [COLOR_UNIT_TEXT]Settler[COLOR_REVERT] construction of the very first [COLOR_UNIT_TEXT]Settler[COLOR_REVERT] unit, the [COLOR_UNIT_TEXT]Tribe[COLOR_REVERT].</English>
+		<English>[COLOR_TECH_TEXT]Tribalism[COLOR_REVERT] is a prehistoric era technology that allows the construction of the very first [COLOR_UNIT_TEXT]Settler[COLOR_REVERT] unit, the [COLOR_UNIT_TEXT]Tribe[COLOR_REVERT].</English>
 		<French>Permet d'étendre notre territoire grâce aux tribus. Permet l'accès à la doctrine Tribalisme.</French>
 		<Italian>Permette di costruire una Tribù e espandersi ulteriormente! Inoltre, permette anche il Tribalismo.</Italian>
 		<Spanish>Permite entrenar a una Tribu, ¡tu primera posibilidad de expansión! También desbloquea el principio del Tribalismo.</Spanish>
@@ -25694,4 +25694,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 		<Polish>"Jednakże jedyną nagrodą człowieka jest, że kiedy zwierzęta, by przeżyć dostosowują się do środowiska, człowiek żyje dostosowując środowisko do siebie." - Ayn Rand</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_ZOO
+		<Tag>TXT_KEY_TECH_ZOOLOGY_STRATEGY</Tag>
+		<English>TBD</English>
+	</TEXT>
+</Civ4GameText>
