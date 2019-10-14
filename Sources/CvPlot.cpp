@@ -16905,30 +16905,31 @@ int CvPlot::getOverloadedUnitCombatsSupportedByHealer(PlayerTypes ePlayer, UnitC
 
 void CvPlot::unitGameStateCorrections()
 {
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	bool bUpdate = false;
 
-	pUnitNode = headUnitNode();
-
-	while (pUnitNode != NULL)
+	for (CLLNode<IDInfo>* pUnitNode = headUnitNode(); pUnitNode != NULL; )
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
+		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 
 		if (pLoopUnit == NULL)
 		{
-			m_units.deleteNode(pUnitNode);
+			pUnitNode = m_units.deleteNode(pUnitNode);
+			bUpdate = true;
 		}
-		else if (!pLoopUnit->atPlot(this))
+		else
 		{
-			removeUnit(pLoopUnit);
+			if (!pLoopUnit->atPlot(this))
+			{
+				removeUnit(pLoopUnit);
+				bUpdate = true;
+			}
+			pUnitNode = nextUnitNode(pUnitNode);
 		}
-		pUnitNode = nextUnitNode(pUnitNode);
 	}
+
 	if (bUpdate)
 	{
 		updateCenterUnit();
-
 		setFlagDirty(true);
 	}
 }
