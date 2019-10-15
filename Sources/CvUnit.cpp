@@ -3291,11 +3291,8 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 	//FAssertMsg((pPlot == pDefender->plot()), "There is not expected to be a defender or the defender's plot is expected to be pPlot (the attack plot)");
 	
 	PlayerTypes eAttacker = getVisualOwner(pDefender->getTeam());
-	PlayerTypes eDefender = getVisualOwner();
-	if (pDefender != NULL)
-	{
-		eDefender = pDefender->getVisualOwner(getTeam());
-	}
+	PlayerTypes eDefender = pDefender->getVisualOwner(getTeam());
+
 	//if not finished and not fighting yet, set up combat damage and mission
 	if (!bFinish)
 	{
@@ -3785,7 +3782,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
 					}
 				}
-		
+
 				m_combatResult.bDefenderRefusedtoYieldSustain = false;
 			}
 			else
@@ -3805,7 +3802,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 						AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
 					}
 				}
-	
+
 				m_combatResult.bAttackerRefusedtoYieldSustain = false;
 
 				if (m_combatResult.bDefenderRefusedtoYieldSustain)
