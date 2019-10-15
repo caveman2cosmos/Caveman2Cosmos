@@ -77,8 +77,6 @@ void* CvMalloc(size_t size)
 
 void CvFree(void* p)
 {
-	FAssertMsg(p != NULL, "Deleting a null pointer!");
-
 	if (p == NULL)
 		return;
 
@@ -116,8 +114,6 @@ void* CvMallocArray(size_t size)
 
 void CvFreeArray(void* p)
 {
-	FAssertMsg(p != NULL, "Deleting a null pointer!");
-
 	if (p == NULL)
 		return;
 
