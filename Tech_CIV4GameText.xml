@@ -7566,7 +7566,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DROIDS</Tag>
-		<English>Droids</English>
+		<English>Service Droids</English>
 		<French>Droides</French>
 		<Polish>Droidy</Polish>
 	</TEXT>
@@ -24423,7 +24423,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_UNIVERSAL_TRANSLATOR</Tag>
-		<English>Universal Translator</English>
+		<English>Unified Lexicon</English>
 		<French>Traducteur Universel</French>
 		<Italian>Traduttore universale</Italian>
 		<Spanish>
@@ -24435,7 +24435,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_UNIVERSAL_TRANSLATOR_PEDIA</Tag>
-		<English>[BOLD]Universal Translator[\BOLD] purpose is to offer an instant translation of any language.</English>
+		<English>Universal language may refer to a hypothetical or historical language spoken and understood by all or most of the world's population. In some contexts, it refers to a means of communication said to be understood by all living things.</English>
 		<Polish>Uniwersalny Translator ma na celu dostarczać od ręki tłumaczenia na każdy język.</Polish>
 	</TEXT>
 	<TEXT>
@@ -24563,7 +24563,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_UTOPIA_DESTINY</Tag>
-		<English>Utopia Destiny</English>
+		<English>Utopian Destiny</English>
 		<French>Destinée utopique</French>
 		<Spanish>
 			<Text>Destino utópico</Text>
@@ -24574,7 +24574,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_UTOPIA_DESTINY_PEDIA</Tag>
-		<English>In the United States, during the 19th century, Manifest destiny was the widely held belief that American settlers were destined to expand across the continent.A Utopia is a community or society possessing highly desirable or perfect qualities. Utopian Destiny is the widely held belief that society should start the design and engineering of a Utopia. In this Utopian society, poverty eradication, super sanitation, cyber noah arks, meticulous sanitation, ecology, global welfare, global medical care, are some of the main topics of discussion. [PARAGRAPH:2] Chronologically, the first recorded utopian proposal is Plato's Republic. Part conversation, part fictional depiction, and part policy proposal, it proposes a categorization of citizens into a rigid class structure of "golden," "silver," "bronze" and "iron" socioeconomic classes. The golden citizens are trained in a rigorous 50-year long educational program to be benign oligarchs, the "philosopher-kings." The wisdom of these rulers will supposedly eliminate poverty and deprivation through fairly distributed resources, though the details on how to do this are unclear. The educational program for the rulers is the central notion of the proposal. It has few laws, no lawyers and rarely sends its citizens to war, but hires mercenaries from among its war-prone neighbors (these mercenaries were deliberately sent into dangerous situations in the hope that the more warlike populations of all surrounding countries will be weeded out, leaving peaceful peoples).</English>
+		<English>A utopia is an imagined community or society that possesses highly desirable or nearly perfect qualities for its citizens. Utopian fiction portrays a setting that agrees with the author's ethos, having various attributes of another reality intended to appeal to readers.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_UTOPIA_DESTINY_QUOTE</Tag>
@@ -24588,7 +24588,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_VASIMR_PROPULSION</Tag>
-		<English>Fusion Spacecraft</English>
+		<English>Fusion Propulsion</English>
 		<French>Propulsion à Impulsion MagnétoPlasmique</French>
 		<Italian>Propulsione VASIMR</Italian>
 		<Spanish>
@@ -24817,7 +24817,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WARFARE</Tag>
-		<English>Warfare</English>
+		<English>Prehistoric Warfare</English>
 		<French>Techniques de Guerre</French>
 		<German>Kriegsführung</German>
 		<Italian>Guerra</Italian>
@@ -24852,7 +24852,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WARMACHINES</Tag>
-		<English>Warmachines</English>
+		<English>Battle Droids</English>
 		<French>Machines de Guerre</French>
 		<German>Kriegsmaschinen</German>
 		<Italian>Macchine da guerra</Italian>
@@ -24865,7 +24865,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WARMACHINES_PEDIA</Tag>
-		<English>Warmachines are machines designed specificly for a military purpose. They may include tanks, missiles and landmines. Warmachines are typically very expensive, as in the case of an M1A2 tank, which costs US$6.21 million per unit, or the F35B Lightning II jet, which costs F-35B: US$150M per unit. Missiles such as the tomahawk cruise missile cost as much as US$600,000 apiece, leading to nicknames such as "million dollars a shot" weapons.</English>
+		<English>Battle droids, also known as combat droids or battle bots, were a type of droid designed for combat. Over the years, many different models of battle droid were been utilized by various factions throughout the galaxy. One such faction was the Confederacy of Independent Systems, which used a number of different models of battle droid during the Clone Wars to make up the Separatist Droid Army. Under the command of General Grievous, varying models of battle droid fought against the Galactic Republic's clone troopers until the final days of the war, when the Confederate battle droids were deactivated by the Galactic Empire.</English>
 		<Polish>Maszyny Wojenne to specjalny rodzaj pojazdów i maszyn zaprojektowanych tylko i wyłącznie do prowadzenia wojen.</Polish>
 	</TEXT>
 	<TEXT>
@@ -24880,7 +24880,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WARSIMULATION</Tag>
-		<English>War Simulations</English>
+		<English>Military Simulations</English>
 		<French>Simulations de Guerres</French>
 		<German>Kriegssimulationen</German>
 		<Italian>Simulazioni di guerra</Italian>
@@ -25305,7 +25305,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WHOLE_BRAIN_EMULATION</Tag>
-		<English>Whole Brain Emulation</English>
+		<English>Cybernetic Neruology</English>
 		<French>Emulation du cerveau</French>
 		<Spanish>
 			<Text>Emulación del cerebro</Text>
@@ -25403,7 +25403,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WOMENS_SUFFRAGE</Tag>
-		<English>Women's Suffrage</English>
+		<English>Feminism</English>
 		<French>Vote des Femmes</French>
 		<Italian>Suffragio femminile</Italian>
 		<Spanish>
