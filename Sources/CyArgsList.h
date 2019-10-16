@@ -29,6 +29,14 @@ public:
 	void push_back(void* p) { FAssertMsg(m_iCnt<MAX_CY_ARGS, "increase cyArgsList::MAX_CY_ARGS"); m_aList[m_iCnt++] = p; }
 	void clear() { m_iCnt=0;	}
 	void* m_aList[MAX_CY_ARGS];
+
+	template < class Ty_ >
+	CyArgsList& operator<<(const Ty_& arg)
+	{
+		add(arg);
+		return *this;
+	}
+
 protected:
 	int m_iCnt;
 };
