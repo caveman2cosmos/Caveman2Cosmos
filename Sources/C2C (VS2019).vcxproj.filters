@@ -866,6 +866,9 @@
     <ClInclude Include="CvPlotPaging.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CvPython.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CvGameCoreDLL.rc">

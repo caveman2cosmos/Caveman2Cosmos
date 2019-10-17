@@ -265,6 +265,7 @@
   <ItemGroup>
     <ClInclude Include="BetterBTSAI.h" />
     <ClInclude Include="CvPlotPaging.h" />
+    <ClInclude Include="CvPython.h" />
     <ClInclude Include="EnumFlags.h" />
     <ClInclude Include="idinfo_iterator.h" />
     <ClInclude Include="CvMapExternal.h" />
