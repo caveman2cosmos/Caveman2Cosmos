@@ -5,8 +5,6 @@
 #include "CvBugOptions.h"
 #include "CvPathGenerator.h"
 
-#include <boost/bind.hpp>
-
 #include "CvGameAI.h"
 #include "CvPlot.h"
 #include "CvPlayerAI.h"

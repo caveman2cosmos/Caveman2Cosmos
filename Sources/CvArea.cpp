@@ -125,8 +125,6 @@ void CvArea::uninit()
 // Initializes data members that are serialized.
 void CvArea::reset(int iID, bool bWater, bool bConstructorCall)
 {
-	int iI, iJ;
-
 	//--------------------------------
 	// Uninit class
 	uninit();
@@ -142,7 +140,7 @@ void CvArea::reset(int iID, bool bWater, bool bConstructorCall)
 
 	m_bWater = bWater;
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		m_aiUnitsPerPlayer[iI] = 0;
 		m_aiAnimalsPerPlayer[iI] = 0;
@@ -162,31 +160,31 @@ void CvArea::reset(int iID, bool bWater, bool bConstructorCall)
 		//DPII < Maintenance Modifiers >
 	}
 
-	for (iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		m_aiNumRevealedTiles[iI] = 0;
 		m_aiCleanPowerCount[iI] = 0;
 		m_aiBorderObstacleCount[iI] = 0;
 	}
 
-	for (iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		m_aeAreaAIType[iI] = NO_AREAAI;
 	}
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		m_aTargetCities[iI].reset();
 	}
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
+		for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 		{
 			m_aaiYieldRateModifier[iI][iJ] = 0;
 		}
 
-		for (iJ = 0; iJ < NUM_UNITAI_TYPES; iJ++)
+		for (int iJ = 0; iJ < NUM_UNITAI_TYPES; iJ++)
 		{
 			m_aaiNumTrainAIUnits[iI][iJ] = 0;
 			m_aaiNumAIUnits[iI][iJ] = 0;
@@ -204,14 +202,14 @@ void CvArea::reset(int iID, bool bWater, bool bConstructorCall)
 	{
 		FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvArea::reset");
 		m_paiNumBonuses = new int[GC.getNumBonusInfos()];
-		for (iI = 0; iI < GC.getNumBonusInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 		{
 			m_paiNumBonuses[iI] = 0;
 		}
 
 		FAssertMsg((0 < GC.getNumImprovementInfos()), "GC.getNumImprovementInfos() is not greater than zero but an array is being allocated in CvArea::reset");
 		m_paiNumImprovements = new int[GC.getNumImprovementInfos()];
-		for (iI = 0; iI < GC.getNumImprovementInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 		{
 			m_paiNumImprovements[iI] = 0;
 		}
@@ -667,7 +665,7 @@ int CvArea::getBestFoundValue(PlayerTypes eIndex) const
 	if ( iResult == -1 )
 	{
 		GET_PLAYER(eIndex).AI_updateFoundValues(false, const_cast<CvArea*>(this));
-		iResult = m_aiBestFoundValue[eIndex] == -1;
+		iResult = m_aiBestFoundValue[eIndex];
 
 		if (iResult == -1)
 		{
@@ -691,66 +689,66 @@ void CvArea::setBestFoundValue(PlayerTypes eIndex, int iNewValue)
 //DPII < Maintenance Modifiers >
 int CvArea::getMaintenanceModifier(PlayerTypes eIndex) const
 {
-    FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
-    FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
-    return m_aiMaintenanceModifier[eIndex];
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
+	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
+	return m_aiMaintenanceModifier[eIndex];
 }
 
 void CvArea::changeMaintenanceModifier(PlayerTypes eIndex, int iChange)
 {
-    FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
-    FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
-    m_aiMaintenanceModifier[eIndex] = (m_aiMaintenanceModifier[eIndex] + iChange);
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
+	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
+	m_aiMaintenanceModifier[eIndex] = (m_aiMaintenanceModifier[eIndex] + iChange);
 }
 
 int CvArea::getHomeAreaMaintenanceModifier(PlayerTypes eIndex) const
 {
-    FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
-    FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
-    return m_aiHomeAreaMaintenanceModifier[eIndex];
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
+	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
+	return m_aiHomeAreaMaintenanceModifier[eIndex];
 }
 
 void CvArea::changeHomeAreaMaintenanceModifier(PlayerTypes eIndex, int iChange)
 {
-    FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
-    FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
-    m_aiHomeAreaMaintenanceModifier[eIndex] = (m_aiHomeAreaMaintenanceModifier[eIndex] + iChange);
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
+	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
+	m_aiHomeAreaMaintenanceModifier[eIndex] = (m_aiHomeAreaMaintenanceModifier[eIndex] + iChange);
 }
 
 void CvArea::setHomeAreaMaintenanceModifier(PlayerTypes eIndex, int iNewValue)
 {
-    FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
-    FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
-    m_aiHomeAreaMaintenanceModifier[eIndex] = iNewValue;
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
+	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
+	m_aiHomeAreaMaintenanceModifier[eIndex] = iNewValue;
 }
 
 int CvArea::getOtherAreaMaintenanceModifier(PlayerTypes eIndex) const
 {
-    FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
-    FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
-    return m_aiOtherAreaMaintenanceModifier[eIndex];
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
+	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
+	return m_aiOtherAreaMaintenanceModifier[eIndex];
 }
 
 void CvArea::changeOtherAreaMaintenanceModifier(PlayerTypes eIndex, int iChange)
 {
-    FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
-    FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
-    m_aiOtherAreaMaintenanceModifier[eIndex] = (m_aiOtherAreaMaintenanceModifier[eIndex] + iChange);
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
+	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
+	m_aiOtherAreaMaintenanceModifier[eIndex] = (m_aiOtherAreaMaintenanceModifier[eIndex] + iChange);
 }
 
 void CvArea::setOtherAreaMaintenanceModifier(PlayerTypes eIndex, int iNewValue)
 {
-    FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
-    FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
-    m_aiOtherAreaMaintenanceModifier[eIndex] = iNewValue;
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
+	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
+	m_aiOtherAreaMaintenanceModifier[eIndex] = iNewValue;
 }
 
 
 bool CvArea::isHomeArea(PlayerTypes eIndex) const
 {
-    FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
-    FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
-    return m_abHomeArea[eIndex];
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
+	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
+	return m_abHomeArea[eIndex];
 }
 
 /* DPII: Any new area modifiers for things like yield, happiness or health have to have the modifiers switched here
@@ -776,11 +774,11 @@ void CvArea::setHomeArea(PlayerTypes ePlayer, CvArea* pOldHomeArea)
 
 int CvArea::getTotalAreaMaintenanceModifier(PlayerTypes ePlayer) const
 {
-    int iModifier;
+	int iModifier;
 
-    iModifier = (getHomeAreaMaintenanceModifier(ePlayer) + getOtherAreaMaintenanceModifier(ePlayer) + getMaintenanceModifier(ePlayer));
+	iModifier = (getHomeAreaMaintenanceModifier(ePlayer) + getOtherAreaMaintenanceModifier(ePlayer) + getMaintenanceModifier(ePlayer));
 
-    return iModifier;
+	return iModifier;
 }
 //DPII < Maintenance Modifiers >
 

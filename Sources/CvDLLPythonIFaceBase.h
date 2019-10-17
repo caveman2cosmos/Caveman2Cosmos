@@ -10,8 +10,10 @@
 //
 
 //#include "CvEnums.h"
-# include <boost/python/object.hpp>
+#ifndef __INTELLISENSE__
+#include <boost/python/object.hpp>
 namespace python = boost::python;
+#endif
 
 class CvUnit;
 class CvPlot;

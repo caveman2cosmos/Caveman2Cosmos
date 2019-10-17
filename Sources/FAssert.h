@@ -6,7 +6,7 @@
 // Only compile in FAssert's if FASSERT_ENABLE is defined.  By default, however, let's key off of
 // _DEBUG.  Sometimes, however, it's useful to enable asserts in release builds, and you can do that
 // simply by changing the following lines to define FASSERT_ENABLE or using project settings to override
-#if defined(_DEBUG) && !defined(FASSERT_ENABLE)
+#if (defined(_DEBUG) || defined(__COVERITY__)) && !defined(FASSERT_ENABLE)
 #define FASSERT_ENABLE
 #endif
 
@@ -17,7 +17,16 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
 #endif
 
 #ifdef FASSERT_ENABLE
-#ifdef WIN32
+#if defined(__COVERITY__)
+#define FAssert( expr )	if( !(expr) ) throw std::exception(#expr);
+#define FAssertMsg( expr, msg )	FAssert( expr )
+#define FAssertRecalcMsg( expr, msg ) FAssert( expr )
+#define FAssertOptionMsg( option, expr, msg ) FAssert( GC.getGameINLINE().isOption(option) && expr )
+#define FAssertOptionRecalcMsg( option, expr, msg) FAssert( GC.getGameINLINE().isOption(option) && expr )
+#define FErrorMsg( msg ) FAssert( false )
+#define FEnsure( expr ) { if( !(expr) ) throw std::exception(#expr); }
+#define FEnsureMsg( expr, msg ) { if( !(expr) ) throw std::exception(#expr); }
+#elif defined(WIN32)
 
 #define FAssert( expr )	\
 { \
@@ -157,7 +166,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
 #define STATIC_ASSERT(expression, message)\
   struct CONCATENATE(__static_assertion_at_line_, __LINE__)\
   {\
-    implementation::StaticAssertion<static_cast<bool>((expression))> CONCATENATE(CONCATENATE(CONCATENATE(STATIC_ASSERTION_FAILED_AT_LINE_, __LINE__), _), message);\
+	implementation::StaticAssertion<static_cast<bool>((expression))> CONCATENATE(CONCATENATE(CONCATENATE(STATIC_ASSERTION_FAILED_AT_LINE_, __LINE__), _), message);\
   };\
   typedef implementation::StaticAssertionTest<sizeof(CONCATENATE(__static_assertion_at_line_, __LINE__))> CONCATENATE(__static_assertion_test_at_line_, __LINE__)
 

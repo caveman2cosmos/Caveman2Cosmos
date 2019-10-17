@@ -2,7 +2,6 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvReachablePlotSet.h"
-#include <boost/bind.hpp>
 
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      10/02/09                                jdog5000      */

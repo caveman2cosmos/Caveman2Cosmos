@@ -7,7 +7,6 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-#include <boost/algorithm/string.hpp>
 
 
 CvOutcome::CvOutcome(): m_eUnitType(NO_UNIT),

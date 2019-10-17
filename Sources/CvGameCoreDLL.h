@@ -1,8 +1,5 @@
 #pragma once
 
-#ifndef CvGameCoreDLL_h
-#define CvGameCoreDLL_h
-
 //
 // includes (pch) for gamecore dll files
 // Author - Mustafa Thamer
@@ -12,6 +9,15 @@
 // WINDOWS
 //
 #pragma warning( disable: 4530 )	// C++ exception handler used, but unwind semantics are not enabled
+
+#ifdef __INTELLISENSE__
+#define BOOST_MSVC 1310
+// #undef _MSC_VER
+#define _MSC_VER 1310
+#define BOOST_FUNCTION_PARMS
+#define BOOST_FUNCTION_PARM
+#define BOOST_PP_VARIADICS 0
+#endif
 
 #define NOMINMAX
 #define _WIN32_WINNT 0x0600
@@ -26,6 +32,10 @@
 //#if !defined USE_MEMMANAGER
 //#define USE_MEMMANAGER
 //#endif
+
+//
+// Standard headers
+//
 #include <vector>
 #include <list>
 #include <tchar.h>
@@ -34,6 +44,7 @@
 #include <map>
 #define _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS
 #include <hash_map>
+#include <hash_set>
 #include <stdio.h>
 #include <utility>
 #include <algorithm>
@@ -135,11 +146,16 @@ void IFPSetCount(ProfileSample* sample, int count);
 #include <boost/shared_array.hpp>
 #include <boost/lambda/lambda.hpp>
 #include <boost/bind.hpp>
+#include <boost/optional.hpp>
+#include <boost/algorithm/string.hpp>
+#include <boost/format.hpp>
 #include <boost/function.hpp>
+
 
 //
 // Boost Python
 //
+#ifndef __INTELLISENSE__
 #include <boost/python/list.hpp>
 #include <boost/python/tuple.hpp>
 #include <boost/python/class.hpp>
@@ -147,6 +163,10 @@ void IFPSetCount(ProfileSample* sample, int count);
 #include <boost/python/return_value_policy.hpp>
 #include <boost/python/object.hpp>
 #include <boost/python/def.hpp>
+#include <boost/python/enum.hpp>
+namespace python = boost::python;
+#endif
+
 
 //
 // xercesc for XML loading
@@ -164,7 +184,6 @@ void IFPSetCount(ProfileSample* sample, int count);
 #include <xercesc/framework/Wrapper4InputSource.hpp>
 #include <xercesc/validators/common/Grammar.hpp>
 
-namespace python = boost::python;
 
 #include "CvAllocator.h"
 
@@ -234,5 +253,3 @@ namespace python = boost::python;
 #undef OutputDebugString
 #define OutputDebugString(x)
 #endif //FINAL_RELEASE
-
-#endif	// CvGameCoreDLL_h

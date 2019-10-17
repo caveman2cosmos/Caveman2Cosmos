@@ -13,7 +13,6 @@
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-#include <boost/bind.hpp>
 
 //Disable this passed in initialization list warning, as it is only stored in the constructor of CvBuildingList and not used
 #pragma warning( disable : 4355 )
@@ -8455,12 +8454,13 @@ int CvCity::hurryPopulation(HurryTypes eHurry) const
 
 int CvCity::getHurryPopulation(HurryTypes eHurry, int iHurryCost) const
 {
-	if (GC.getHurryInfo(eHurry).getProductionPerPopulation() == 0)
+	int prodPerPop = GC.getGameINLINE().getProductionPerPopulation(eHurry);
+	if (prodPerPop == 0)
 	{
 		return 0;
 	}
 
-	int iPopulation = (iHurryCost - 1) / GC.getGameINLINE().getProductionPerPopulation(eHurry);
+	int iPopulation = (iHurryCost - 1) / prodPerPop;
 
 	return std::max(1, (iPopulation + 1));
 }
@@ -8469,9 +8469,10 @@ int CvCity::hurryProduction(HurryTypes eHurry) const
 {
 	int iProduction;
 
-	if (GC.getHurryInfo(eHurry).getProductionPerPopulation() > 0)
+	int prodPerPop = GC.getGameINLINE().getProductionPerPopulation(eHurry);
+	if (prodPerPop > 0)
 	{
-		iProduction = (100 * getExtraProductionDifference(hurryPopulation(eHurry) * GC.getGameINLINE().getProductionPerPopulation(eHurry))) / std::max(1, getHurryCostModifier());
+		iProduction = (100 * getExtraProductionDifference(hurryPopulation(eHurry) * prodPerPop)) / std::max(1, getHurryCostModifier());
 		FAssert(iProduction >= productionLeft());
 	}
 	else
@@ -17845,6 +17846,7 @@ void CvCity::setNumRealBuildingTimed(BuildingTypes eIndex, int iNewValue, bool b
 bool CvCity::processGreatWall(bool bIn, bool bForce, bool bSeeded)
 {
 	return false;
+
 	/*
 	> TBNote: I've found both a crash scenario in PBEM and an infinite hang scenario in single player.
 	> A player complained about exceedingly strange graphic artifice when they encircle the globe with a singular culture that possesses the GW and the hang looked to have a similar basis.

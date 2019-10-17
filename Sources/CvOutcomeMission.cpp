@@ -7,7 +7,6 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-#include <boost/bind.hpp>
 
 CvOutcomeMission::CvOutcomeMission() :
 m_eMission(NO_MISSION),

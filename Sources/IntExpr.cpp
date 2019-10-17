@@ -8,7 +8,6 @@
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
 #include "IntExpr.h"
-#include <boost/bind.hpp>
 
 IntExpr::~IntExpr()
 {

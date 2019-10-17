@@ -3082,7 +3082,7 @@ CvTaggedSaveFormatWrapper::ReadClassEnum(const char* name, int& idHint, int& idS
 
 		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CLASS_ENUM) )
 		{
-			value_class_enum	entry;
+			value_class_enum entry;
 
 			m_stream->Read(sizeof(RemappedClassType), (byte*)& entry.classType);
 			m_stream->Read(&entry.value);
@@ -3734,7 +3734,9 @@ CvTaggedSaveFormatWrapper::SkipElement()
 		{
 			value_entry_class_int_array entry;
 
-			m_stream->Read(VALUE_ENTRY_CLASS_INT_ARRAY_SIZE_FROM_NUM(0) - sizeof(int), (byte*)&entry.classType);
+			m_stream->Read(sizeof(RemappedClassType), (byte*)&entry.classType);
+			m_stream->Read(&entry.numInts);
+
 			ConsumeBytes(sizeof(int)*entry.numInts);
 		}
 		break;
@@ -3742,7 +3744,9 @@ CvTaggedSaveFormatWrapper::SkipElement()
 		{
 			value_entry_class_bool_array entry;
 
-			m_stream->Read(VALUE_ENTRY_CLASS_BOOL_ARRAY_SIZE_FROM_NUM(0) - sizeof(int), (byte*)&entry.classType);
+			m_stream->Read(sizeof(RemappedClassType), (byte*)& entry.classType);
+			m_stream->Read(&entry.numBools);
+
 			ConsumeBytes(sizeof(bool)*entry.numBools);
 		}
 		break;
@@ -3750,7 +3754,9 @@ CvTaggedSaveFormatWrapper::SkipElement()
 		{
 			value_class_enum_array entry;
 
-			m_stream->Read(sizeof(value_class_enum_array) - sizeof(int), (byte*)&entry.classType);
+			m_stream->Read(sizeof(RemappedClassType), (byte*)& entry.classType);
+			m_stream->Read(&entry.count);
+
 			ConsumeBytes(sizeof(int)*entry.count);
 		}
 		break;
@@ -3820,7 +3826,8 @@ CvTaggedSaveFormatWrapper::ReadObjectDelimiter()
 
 	object_delimiter_entry_maximal entry;
 
-	m_stream->Read(sizeof(object_delimiter_entry_maximal) - sizeof(int) - sizeof(entry.name), (byte*)(&entry.bStart));
+	m_stream->Read(&entry.bStart);
+	m_stream->Read(&entry.nameLen);
 	m_stream->Read(entry.nameLen, (byte*)&entry.name);
 
 	FAssert(entry.nameLen <= 255);

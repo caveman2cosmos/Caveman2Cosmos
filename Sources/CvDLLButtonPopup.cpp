@@ -4,8 +4,6 @@
 #include "CvDLLButtonPopup.h"
 #include "CvPopupReturn.h"
 
-#include <boost/scoped_ptr.hpp>
-
 // Public Functions...
 
 #define PASSWORD_DEFAULT (L"*****")

@@ -8,7 +8,6 @@
 //------------------------------------------------------------------------------------------------
 
 #include "CvGameCoreDLL.h"
-#include <boost/bind.hpp>
 
 CvGameObjectGame::CvGameObjectGame()
 {

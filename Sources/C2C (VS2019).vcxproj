@@ -74,8 +74,10 @@
     <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" build $(Configuration)</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" rebuild $(Configuration)</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" clean $(Configuration)</NMakeCleanCommandLine>
-    <IncludePath>.;include;deps\Microsoft Visual C++ Toolkit 2003\include;deps\Microsoft SDKs\Windows\v6.0\Include;deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;QC_MASTERY_VICTORY;LOG_AI;_MOD_GWARM;_MOD_SHAM_SPOILER;C2C_BUILD;MULTI_FEATURE_MOD;FP_PROFILE_ENABLE;USE_INTERNAL_PROFILER</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
+    <AdditionalOptions>/std:c++14 /DBOOST_FUNCTION_PARMS=0 /DBOOST_FUNCTION_PARM=0</AdditionalOptions>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Assert|Win32'">
     <ReferencePath>..\Sources;$(ReferencePath)</ReferencePath>
@@ -84,8 +86,10 @@
     <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" build $(Configuration)</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" rebuild $(Configuration)</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" clean $(Configuration)</NMakeCleanCommandLine>
-    <IncludePath>.;include;deps\Microsoft Visual C++ Toolkit 2003\include;deps\Microsoft SDKs\Windows\v6.0\Include;deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;NDEBUG;FINAL_RELEASE;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;QC_MASTERY_VICTORY;LOG_AI;_MOD_GWARM;_MOD_SHAM_SPOILER;C2C_BUILD;MULTI_FEATURE_MOD;FASSERT_ENABLE</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
+    <AdditionalOptions>/std:c++14 /DBOOST_FUNCTION_PARMS=0 /DBOOST_FUNCTION_PARM=0</AdditionalOptions>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ReferencePath>..\Sources;$(ReferencePath)</ReferencePath>
@@ -94,8 +98,10 @@
     <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" build $(Configuration)</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" rebuild $(Configuration)</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" clean $(Configuration)</NMakeCleanCommandLine>
-    <IncludePath>.;include;deps\Microsoft Visual C++ Toolkit 2003\include;deps\Microsoft SDKs\Windows\v6.0\Include;deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;NDEBUG;FINAL_RELEASE;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;QC_MASTERY_VICTORY;LOG_AI;_MOD_GWARM;_MOD_SHAM_SPOILER;C2C_BUILD;MULTI_FEATURE_MOD</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
+    <AdditionalOptions>/std:c++14 /DBOOST_FUNCTION_PARMS=0 /DBOOST_FUNCTION_PARM=0</AdditionalOptions>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='FinalRelease|Win32'">
     <ReferencePath>..\Sources;$(ReferencePath)</ReferencePath>
@@ -104,8 +110,10 @@
     <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" build $(Configuration)</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" rebuild $(Configuration)</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" clean $(Configuration)</NMakeCleanCommandLine>
-    <IncludePath>.;include;deps\Microsoft Visual C++ Toolkit 2003\include;deps\Microsoft SDKs\Windows\v6.0\Include;deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;NDEBUG;FINAL_RELEASE;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;QC_MASTERY_VICTORY;LOG_AI;_MOD_GWARM;_MOD_SHAM_SPOILER;C2C_BUILD;MULTI_FEATURE_MOD</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
+    <AdditionalOptions>/std:c++14 /DBOOST_FUNCTION_PARMS=0 /DBOOST_FUNCTION_PARM=0</AdditionalOptions>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ReferencePath>..\Sources;$(ReferencePath)</ReferencePath>
@@ -114,8 +122,10 @@
     <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" build $(Configuration)</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" rebuild $(Configuration)</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" clean $(Configuration)</NMakeCleanCommandLine>
-    <IncludePath>.;include;deps\Microsoft Visual C++ Toolkit 2003\include;deps\Microsoft SDKs\Windows\v6.0\Include;deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;_DEBUG;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;QC_MASTERY_VICTORY;LOG_AI;_MOD_GWARM;_MOD_SHAM_SPOILER;C2C_BUILD;MULTI_FEATURE_MOD;FASSERT_ENABLE</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
+    <AdditionalOptions>/std:c++14 /DBOOST_FUNCTION_PARMS=0 /DBOOST_FUNCTION_PARM=0</AdditionalOptions>
   </PropertyGroup>
   <ItemGroup>
     <ClCompile Include="CvAllocator.cpp" />

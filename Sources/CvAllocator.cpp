@@ -41,7 +41,6 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <algorithm>
 #include <sstream>
 #include <new>
-#include <boost/format.hpp>
 
 #undef new    // IMPORTANT!
 

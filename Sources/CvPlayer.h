@@ -765,15 +765,15 @@ public:
 	bool isBuildingOnlyHealthy() const;																																				// Exposed to Python
 	
 	//DPII < Maintenance Modifiers >
-    int getMaintenanceModifier();
-    void changeMaintenanceModifier(int iChange);
+	int getMaintenanceModifier();
+	void changeMaintenanceModifier(int iChange);
 
-    int getCoastalDistanceMaintenanceModifier();
-    void changeCoastalDistanceMaintenanceModifier(int iChange);
+	int getCoastalDistanceMaintenanceModifier();
+	void changeCoastalDistanceMaintenanceModifier(int iChange);
 
-    int getConnectedCityMaintenanceModifier();
-    void changeConnectedCityMaintenanceModifier(int iChange);
-    //DPII < Maintenance Modifiers >
+	int getConnectedCityMaintenanceModifier();
+	void changeConnectedCityMaintenanceModifier(int iChange);
+	//DPII < Maintenance Modifiers >
 	
 /********************************************************************************/
 /* 	New Civic AI						02.08.2010				Fuyu			*/
@@ -1549,9 +1549,9 @@ public:
 	void doCheckForTaxationAnger();
 	bool hasEnemyDefenderUnit(CvPlot* pPlot);
 
-    CvCity* getBestHQCity(CorporationTypes eCorporation) const;
-    PlayerVoteTypes getPledgedVote() const;
-    void setPledgedVote(PlayerVoteTypes eIndex);
+	CvCity* getBestHQCity(CorporationTypes eCorporation) const;
+	PlayerVoteTypes getPledgedVote() const;
+	void setPledgedVote(PlayerVoteTypes eIndex);
 	TeamTypes getPledgedSecretaryGeneralVote() const;
 	void setPledgedSecretaryGeneralVote(TeamTypes eIndex);
 	int getUnitCombatProductionModifier(UnitCombatTypes eIndex) const;
@@ -1573,11 +1573,11 @@ public:
 	int getNumTradeImportsByBonus(PlayerTypes ePlayer, BonusTypes eBonus) const;
 	bool isTradingMilitaryBonus(PlayerTypes ePlayer) const;
 
-    DenialTypes AI_workerTrade(CvUnit* pUnit, PlayerTypes ePlayer) const;
+	DenialTypes AI_workerTrade(CvUnit* pUnit, PlayerTypes ePlayer) const;
 
 	DenialTypes AI_militaryUnitTrade(CvUnit* pUnit, PlayerTypes ePlayer) const;
-    DenialTypes AI_corporationTrade(CorporationTypes eCorporation, PlayerTypes ePlayer) const;
-    DenialTypes AI_pledgeVoteTrade(VoteTriggeredData* kData, PlayerVoteTypes ePlayerVote, PlayerTypes ePlayer) const;
+	DenialTypes AI_corporationTrade(CorporationTypes eCorporation, PlayerTypes ePlayer) const;
+	DenialTypes AI_pledgeVoteTrade(VoteTriggeredData* kData, PlayerVoteTypes ePlayerVote, PlayerTypes ePlayer) const;
 	DenialTypes AI_secretaryGeneralTrade(VoteSourceTypes eVoteSource, PlayerTypes ePlayer) const;
 	int getEnslavementChance() const;
 	void changeEnslavementChance(int iChange);
@@ -1735,7 +1735,7 @@ protected:
 	int* m_paiFreeSpecialistCount;
 	int* m_aiLandmarkYield;
 	int* m_aiModderOptions;
-    int m_iEnslavementChance;
+	int m_iEnslavementChance;
 	PlayerVoteTypes m_ePledgedVote;
 	TeamTypes m_eSecretaryGeneralVote;
 	UnitTypes m_eGreatGeneralTypetoAssign;
@@ -2652,7 +2652,7 @@ private:
 
 	CvContractBroker	m_contractBroker;
 
-	mutable CvUpgradeCache*	m_upgradeCache;
+	mutable boost::scoped_ptr<CvUpgradeCache> m_upgradeCache;
 
 	bool m_bInhibitPlotGroupRecalc;
 	mutable bool m_bMaintenanceDirty;

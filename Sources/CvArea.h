@@ -1,11 +1,6 @@
 #pragma once
 
-// area.h
-
-#ifndef CIV4_AREA_H
-#define CIV4_AREA_H
-
-//#include "CvStructs.h"
+#include "CvGameCoreDLL.h"
 
 class CvCity;
 class CvPlot;
@@ -98,23 +93,23 @@ public:
 	int getBestFoundValue(PlayerTypes eIndex) const;													// Exposed to Python
 	void setBestFoundValue(PlayerTypes eIndex, int iNewValue);
 
-    //DPII < Maintenance Modifiers >
-    int getMaintenanceModifier(PlayerTypes eIndex) const;
-    void changeMaintenanceModifier(PlayerTypes eIndex, int iChange);
+	//DPII < Maintenance Modifiers >
+	int getMaintenanceModifier(PlayerTypes eIndex) const;
+	void changeMaintenanceModifier(PlayerTypes eIndex, int iChange);
 
-    int getHomeAreaMaintenanceModifier(PlayerTypes eIndex) const;
-    void changeHomeAreaMaintenanceModifier(PlayerTypes eIndex, int iChange);
-    void setHomeAreaMaintenanceModifier(PlayerTypes eIndex, int iNewValue);
+	int getHomeAreaMaintenanceModifier(PlayerTypes eIndex) const;
+	void changeHomeAreaMaintenanceModifier(PlayerTypes eIndex, int iChange);
+	void setHomeAreaMaintenanceModifier(PlayerTypes eIndex, int iNewValue);
 
-    int getOtherAreaMaintenanceModifier(PlayerTypes eIndex) const;
-    void changeOtherAreaMaintenanceModifier(PlayerTypes eIndex, int iChange);
-    void setOtherAreaMaintenanceModifier(PlayerTypes eIndex, int iNewValue);
+	int getOtherAreaMaintenanceModifier(PlayerTypes eIndex) const;
+	void changeOtherAreaMaintenanceModifier(PlayerTypes eIndex, int iChange);
+	void setOtherAreaMaintenanceModifier(PlayerTypes eIndex, int iNewValue);
 
-    int getTotalAreaMaintenanceModifier(PlayerTypes ePlayer) const;
+	int getTotalAreaMaintenanceModifier(PlayerTypes ePlayer) const;
 
-    bool isHomeArea(PlayerTypes eIndex) const;
-    void setHomeArea(PlayerTypes ePlayer, CvArea* pOldHomeArea);
-    //DPII < Maintenance Modifiers >
+	bool isHomeArea(PlayerTypes eIndex) const;
+	void setHomeArea(PlayerTypes ePlayer, CvArea* pOldHomeArea);
+	//DPII < Maintenance Modifiers >
 
 	int getNumRevealedTiles(TeamTypes eIndex) const;													// Exposed to Python
 	int getNumUnrevealedTiles(TeamTypes eIndex) const;												// Exposed to Python
@@ -232,5 +227,3 @@ private:
 	TurnCombatResults	m_combatRecord[COMBAT_RECORD_LENGTH];
 
 };
-
-#endif
