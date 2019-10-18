@@ -1267,7 +1267,8 @@ void CvInitCore::setMode(GameMode eMode)
 const CvWString & CvInitCore::getLeaderName(PlayerTypes eID, uint uiForm) const
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eID, "CvInitCore::getLeaderName");
-	return gDLL->getObjectText(CvString(m_aszLeaderName[eID]).GetCString(), uiForm, true);
+	m_szTemp = gDLL->getObjectText(CvString(m_aszLeaderName[eID]).GetCString(), uiForm, true);
+	return m_szTemp;
 }
 
 void CvInitCore::setLeaderName(PlayerTypes eID, const CvWString & szLeaderName)
@@ -1289,8 +1290,8 @@ const CvWString & CvInitCore::getLeaderNameKey(PlayerTypes eID) const
 const CvWString & CvInitCore::getCivDescription(PlayerTypes eID, uint uiForm) const
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eID, "CvInitCore::getCivDescription");
-
-	return gDLL->getObjectText(CvString(m_aszCivDescription[eID]).GetCString(), uiForm, true);
+	m_szTemp = gDLL->getObjectText(CvString(m_aszCivDescription[eID]).GetCString(), uiForm, true);
+	return m_szTemp;
 }
 
 void CvInitCore::setCivDescription(PlayerTypes eID, const CvWString & szCivDescription)
@@ -1312,7 +1313,8 @@ const CvWString & CvInitCore::getCivShortDesc(PlayerTypes eID, uint uiForm) cons
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eID, "CvInitCore::getCivShortDesc");
 
 	// Assume we have stored the key
-	return gDLL->getObjectText(CvString(m_aszCivShortDesc[eID]).GetCString(), uiForm, true);
+	m_szTemp = gDLL->getObjectText(CvString(m_aszCivShortDesc[eID]).GetCString(), uiForm, true);
+	return m_szTemp;
 }
 
 void CvInitCore::setCivShortDesc(PlayerTypes eID, const CvWString & szCivShortDesc)
@@ -1334,7 +1336,8 @@ const CvWString & CvInitCore::getCivAdjective(PlayerTypes eID, uint uiForm) cons
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eID, "CvInitCore::getCivAdjective");
 
 	// Assume we have stored the key
-	return gDLL->getObjectText(CvString(m_aszCivAdjective[eID]).GetCString(), uiForm, true);
+	m_szTemp = gDLL->getObjectText(CvString(m_aszCivAdjective[eID]).GetCString(), uiForm, true);
+	return m_szTemp;
 }
 
 void CvInitCore::setCivAdjective(PlayerTypes eID, const CvWString & szCivAdjective)

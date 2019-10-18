@@ -520,12 +520,11 @@ namespace MemTrack
 		int div = 0;
 		size_t rem = 0;
 
-		while (size >= 1024 && div < (sizeof SIZES / sizeof * SIZES)) {
+		while (size >= 1024 && div < (sizeof SIZES / sizeof * SIZES) - 1) {
 			rem = (size % 1024);
 			div++;
 			size /= 1024;
 		}
-
 		double size_d = (float)size + (float)rem / 1024.0;
 		std::string result = convertToString(roundOff(size_d)) + " " + SIZES[div];
 		return result;
@@ -631,8 +630,7 @@ namespace MemTrack
 		// Create an array of "digests" summarizing memory usage by type.
 		size_t startPost = 0;
 		size_t uniqueTypeIndex = 0;
-		MemDigest* pMemDigestArray =
-			(MemDigest*)calloc(numUniqueTypes, sizeof(*pMemDigestArray));
+		MemDigest* pMemDigestArray = (MemDigest*)calloc(numUniqueTypes, sizeof(*pMemDigestArray));
 		for (size_t i = 1; i <= numBlocks; i++)    // yes, less than or *equal* to
 		{
 			char const* prevTypeName = ppBlockHeader[i - 1]->GetTypeName();
