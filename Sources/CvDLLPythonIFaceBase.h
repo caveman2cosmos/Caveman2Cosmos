@@ -32,6 +32,7 @@ public:
 	virtual PyObject* MakeFunctionArgs(void** args, int argc) = 0;
 
 	virtual bool moduleExists(const char* moduleName, bool bLoadIfNecessary) = 0;
+
 	virtual bool callFunction(const char* moduleName, const char* fxnName, void* fxnArg=NULL) = 0;
 	virtual bool callFunction(const char* moduleName, const char* fxnName, void* fxnArg, long* result) = 0;
 	virtual bool callFunction(const char* moduleName, const char* fxnName, void* fxnArg, CvString* result) = 0;
@@ -40,39 +41,62 @@ public:
 	virtual bool callFunction(const char* moduleName, const char* fxnName, void* fxnArg, std::vector<int> *pIntList) = 0;
 	virtual bool callFunction(const char* moduleName, const char* fxnName, void* fxnArg, int* pIntList, int* iListSize) = 0;
 	virtual bool callFunction(const char* moduleName, const char* fxnName, void* fxnArg, std::vector<float> *pFloatList) = 0;
+
 	virtual bool callPythonFunction(const char* szModName, const char* szFxnName, int iArg, long* result) = 0; // HELPER version that handles 1 arg for you
 
 	virtual bool pythonUsingDefaultImpl() = 0;
 };
 
-void IFPLockPythonAccess();
-void IFPUnlockPythonAccess();
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg=NULL);
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg, long* result);
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg, CvString* result);
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg, CvWString* result);
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg, std::vector<byte>* pList);
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg, std::vector<int> *pIntList);
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg, int* pIntList, int* iListSize);
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg, std::vector<float> *pFloatList);
+#define FPythonAssert(expr, moduleName, functionName) FAssertMsg(expr, CvString::format("%s.%s", moduleName, functionName).c_str()) 
 
-class CPythonAccessLock
+namespace CvPython
 {
-public:
-	CPythonAccessLock()
+	// Call Python function with no return value or arguments
+	inline void call(const char* const moduleName, const char* const functionName)
 	{
-		IFPLockPythonAccess();
+		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName);
+		FPythonAssert(bOK, moduleName, functionName);
 	}
-	~CPythonAccessLock()
-	{
-		IFPUnlockPythonAccess();
-	}
-};
 
-#define PYTHON_CALL_FUNCTION2(fn,x,y)		IFPPythonCall(fn,x,y)
-#define PYTHON_CALL_FUNCTION(fn,x,y,z)		IFPPythonCall(fn,x,y,z)
-#define PYTHON_CALL_FUNCTION4(fn,w,x,y,z)	IFPPythonCall(fn,w,x,y,z)
-#define	PYTHON_ACCESS_LOCK_SCOPE	CPythonAccessLock __pythonLock;
+	// Call Python function with return value but no arguments
+	template < class ReturnValueTy_ >
+	inline ReturnValueTy_ call(const char* const moduleName, const char* const functionName)
+	{
+		ReturnValueTy_ rval;
+		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName, NULL, &rval);
+		FPythonAssert(bOK, moduleName, functionName);
+		return rval;
+	}
+
+	// Call Python function with arguments but no return value
+	inline void call(const char* const moduleName, const char* const functionName, CyArgsList args)
+	{
+		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs());
+		FPythonAssert(bOK, moduleName, functionName);
+	}
+
+	// Call Python function with return value and arguments
+	template < class ReturnValueTy_ >
+	inline ReturnValueTy_ call(const char* const moduleName, const char* const functionName, CyArgsList args)
+	{
+		ReturnValueTy_ rval;
+		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs(), &rval);
+		FPythonAssert(bOK, moduleName, functionName);
+		return rval;
+	}
+}
+
+/* THESE MACROS ARE DEPRECATED, use CvPython::call and CyArgsList() << operation like so:
+
+std::vector<int> arr = CvPython::call(PYGameModule, "getOrderArray", CyArgsList() << arg1 << arg2 << CyArrayArg(enabled, 4));
+or
+std::vector<int> arr = CvPython::call(PYGameModule, "getOrderArray", arg1, arg2, CyArrayArg(enabled, 4));
+
+
+*/
+#define PYTHON_CALL_FUNCTION2(_callingfn_, _module_, _function_)					gDLL->getPythonIFace()->callFunction(_module_, _function_)
+#define PYTHON_CALL_FUNCTION(_callingfn_, _module_, _function_, _args_)				gDLL->getPythonIFace()->callFunction(_module_, _function_, _args_)
+#define PYTHON_CALL_FUNCTION4(_callingfn_, _module_, _function_, _args_, _result_)	gDLL->getPythonIFace()->callFunction(_module_, _function_, _args_, _result_)
 
 template <typename T>
 PyObject* CvDLLPythonIFaceBase::makePythonObject(T* pObj)

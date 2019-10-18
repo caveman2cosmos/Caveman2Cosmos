@@ -38,6 +38,24 @@ public:
 	template < class Ty_ >
 	void add(const CyArrayArg<Ty_>& arr) { add(arr.vals, arr.len); }
 
+	template < class Ty_ >
+	struct PyWrap
+	{
+		typedef Ty_ value_type;
+		PyWrap(const value_type& obj) : obj(obj)
+		{
+			pyobj = gDLL->getPythonIFace()->makePythonObject(&(this->obj));
+		}
+
+		Ty_ obj;
+		PyObject* pyobj;
+	};
+	template < class Ty_ >
+	void add(const Ty_& arg) 
+	{ 
+		add(gDLL->getPythonIFace()->makePythonObject(&arg));
+	}
+
 	int size() const { return m_nArgs; }
 	void clear() { m_nArgs = 0; }
 

@@ -1,22 +1,14 @@
 #pragma once
 
+#include "CyArgsList.h"
+
 namespace CvPython
 {
-	template < class ReturnValue >
-	ReturnValue call(const char* const callingFunction, const char* const module, const char* const function, ...)
+	template < class ReturnValueTy_ >
+	ReturnValueTy_ call(const char* const moduleName, const char* const functionName, const CyArgsList& args )
 	{
-		std::vector<int> coords;
-		bool bOK = false;
-		CyArgsList argsList;
-
-		va_list args;
-		va_start(args, function);
-
-		argsList.add(0);
-		bOK = PYTHON_CALL_FUNCTION4(__FUNCTION__, PYScreensModule, "WorldBuilderGetHighlightPlot", argsList.makeFunctionArgs(), &coords);
-		if (bOK && !coords.empty())
-		{
-			pNewPlot = GC.getMap().plot(coords[0], coords[1]);
-		}
+		ReturnValueTy_ rval;
+		bool bOK = IFPPythonCall(moduleName, functionName, args.makeFunctionArgs(), &rval);
+		return rval;
 	}
 }
