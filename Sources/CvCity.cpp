@@ -266,6 +266,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 		for (int iI = 0; iI < NUM_CITY_PLOTS_2; iI++)
 		{
 			CvPlot* pLoopPlot = getCityIndexPlot(iI);
+			FAssertMsg(pLoopPlot != NULL, CvString::format("pLoopPlot was null for iIndex %d", iI).c_str());
 			if (!pLoopPlot->getLandmarkName().empty() && pLoopPlot->getLandmarkType() != NO_LANDMARK)
 			{
 				setName(pLoopPlot->getLandmarkName());
@@ -7538,7 +7539,8 @@ int CvCity::getReligionPercentAnger() const
 		return 0;
 	}
 
-	if (getReligionCount() == 0)
+	int religionCount = getReligionCount();
+	if (religionCount == 0)
 	{
 		return 0;
 	}
@@ -7569,7 +7571,7 @@ int CvCity::getReligionPercentAnger() const
 	iAnger *= iCount;
 	iAnger /= GC.getGameINLINE().getNumCities();
 
-	iAnger /= getReligionCount();
+	iAnger /= religionCount;
 
 	return iAnger;
 }
@@ -17530,7 +17532,11 @@ void CvCity::setWorkingPlot(int iIndex, bool bNewValue)
 		if (bNewValue)
 		{
 			CvPlot* pPlot = getCityIndexPlot(iIndex);
-			pPlot->setPlotIgnoringImprovementUpgrade(false);
+			FAssertMsg(pPlot != NULL, CvString::format("pPlot was null for iIndex %d", iIndex).c_str());
+			if (pPlot)
+			{
+				pPlot->setPlotIgnoringImprovementUpgrade(false);
+			}
 		}
 	}
 }
@@ -17553,7 +17559,7 @@ void CvCity::alterWorkingPlot(int iIndex)
 	else
 	{
 		CvPlot* pPlot = getCityIndexPlot(iIndex);
-
+		FAssertMsg(pPlot != NULL, CvString::format("pPlot was null for iIndex %d", iIndex).c_str());
 		if (pPlot != NULL)
 		{
 			if (canWork(pPlot))
@@ -18641,9 +18647,9 @@ int CvCity::getTradeRoutes() const
 
 void CvCity::clearTradeRoutes()
 {
-	for (int iI = 0; iI < m_paTradeCities.size(); iI++)
+	for (int cityIdx = 0; cityIdx < static_cast<int>(m_paTradeCities.size()); cityIdx++)
 	{
-		CvCity* pLoopCity = getTradeCity(iI);
+		CvCity* pLoopCity = getTradeCity(cityIdx);
 
 		if (pLoopCity != NULL)
 		{
@@ -23574,9 +23580,10 @@ void CvCity::getBuildQueue(std::vector<std::string>& astrQueue) const
 
 		case ORDER_LIST:
 			astrQueue.push_back("List");
+			break;
 
 		default:
-			FAssert(false);
+			FErrorMsg(CvString::format("Unexpected eOrderType %d", pNode->m_data.eOrderType).c_str());
 			break;
 		}
 
@@ -26570,13 +26577,13 @@ void CvCity::removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeople
 		}
 
 		// check all the plots we working
-		for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
+		for (int plotIdx = 0; plotIdx < NUM_CITY_PLOTS; plotIdx++)
 		{
-			if (iI != CITY_HOME_PLOT)
+			if (plotIdx != CITY_HOME_PLOT)
 			{
-				if (isWorkingPlot(iI) && !abRemovedPlots[iI])
+				if (isWorkingPlot(plotIdx) && !abRemovedPlots[plotIdx])
 				{
-					CvPlot* pLoopPlot = getCityIndexPlot(iI);
+					const CvPlot* pLoopPlot = getCityIndexPlot(plotIdx);
 
 					if (pLoopPlot != NULL)
 					{
@@ -26586,7 +26593,7 @@ void CvCity::removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeople
 						{
 							iWorstValue = iValue;
 							eWorstSpecialist = NO_SPECIALIST;
-							iWorstPlot = iI;
+							iWorstPlot = plotIdx;
 						}
 					}
 				}
@@ -26614,7 +26621,7 @@ void CvCity::removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeople
 	{
 		if (paeRemovedSpecailists[iI] != NO_SPECIALIST)
 		{
-			CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(paeRemovedSpecailists[iI]);
+			const CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(paeRemovedSpecailists[iI]);
 			iHappiness -= kSpecialist.getHappinessPercent();
 			iHealthiness -= kSpecialist.getHealthPercent();
 			iGreatPeopleRate -= kSpecialist.getGreatPeopleRateChange();
@@ -26631,14 +26638,18 @@ void CvCity::removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeople
 	}
 	iHealthiness /= 100;
 	iHappiness /= 100;
-	for (int iJ = 0; iJ < NUM_CITY_PLOTS; iJ++)
+	for (int plotIdx = 0; plotIdx < NUM_CITY_PLOTS; plotIdx++)
 	{
-		if (abRemovedPlots[iJ])
+		if (abRemovedPlots[plotIdx])
 		{
-			CvPlot* pLoopPlot = getCityIndexPlot(iJ);
-			for (int iK = 0; iK < NUM_YIELD_TYPES; iK++)
+			const CvPlot* pLoopPlot = getCityIndexPlot(plotIdx);
+			FAssertMsg(pLoopPlot != NULL, CvString::format("pLoopPlot was null for iIndex %d", plotIdx).c_str());
+			if (pLoopPlot != NULL)
 			{
-				aiYields[iK] -= pLoopPlot->getYield((YieldTypes)iK);
+				for (int yieldIdx = 0; yieldIdx < NUM_YIELD_TYPES; yieldIdx++)
+				{
+					aiYields[yieldIdx] -= pLoopPlot->getYield((YieldTypes)yieldIdx);
+				}
 			}
 		}
 	}
