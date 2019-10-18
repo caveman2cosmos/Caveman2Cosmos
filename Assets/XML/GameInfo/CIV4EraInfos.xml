@@ -146,7 +146,7 @@
 			<iStartingWorkerUnits>1</iStartingWorkerUnits>
 			<iStartingExploreUnits>1</iStartingExploreUnits>
 			<iStartingGold>100</iStartingGold>
-			<iStartPercent>20</iStartPercent>
+			<iStartPercent>19</iStartPercent>
 			<iGrowthPercent>130</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
@@ -207,7 +207,7 @@
 			<iStartingWorkerUnits>1</iStartingWorkerUnits>
 			<iStartingExploreUnits>1</iStartingExploreUnits>
 			<iStartingGold>1000</iStartingGold>
-			<iStartPercent>30</iStartPercent>
+			<iStartPercent>25</iStartPercent>
 			<iGrowthPercent>120</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
@@ -285,7 +285,7 @@
 			<iStartingExploreUnits>1</iStartingExploreUnits>
 			<iStartingGold>4000</iStartingGold>
 			<iFreePopulation>1</iFreePopulation>
-			<iStartPercent>40</iStartPercent>
+			<iStartPercent>31</iStartPercent>
 			<iGrowthPercent>110</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
@@ -349,7 +349,7 @@
 			<iStartingExploreUnits>2</iStartingExploreUnits>
 			<iStartingGold>10000</iStartingGold>
 			<iFreePopulation>2</iFreePopulation>
-			<iStartPercent>50</iStartPercent>
+			<iStartPercent>37</iStartPercent>
 			<iGrowthPercent>100</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
@@ -411,7 +411,7 @@
 			<iStartingExploreUnits>2</iStartingExploreUnits>
 			<iStartingGold>20000</iStartingGold>
 			<iFreePopulation>2</iFreePopulation>
-			<iStartPercent>60</iStartPercent>
+			<iStartPercent>44</iStartPercent>
 			<iGrowthPercent>100</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
@@ -471,7 +471,7 @@
 			<iStartingExploreUnits>2</iStartingExploreUnits>
 			<iStartingGold>30000</iStartingGold>
 			<iFreePopulation>3</iFreePopulation>
-			<iStartPercent>70</iStartPercent>
+			<iStartPercent>55</iStartPercent>
 			<iGrowthPercent>100</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
@@ -531,7 +531,7 @@
 			<iStartingExploreUnits>2</iStartingExploreUnits>
 			<iStartingGold>40000</iStartingGold>
 			<iFreePopulation>3</iFreePopulation>
-			<iStartPercent>80</iStartPercent>
+			<iStartPercent>63</iStartPercent>
 			<iGrowthPercent>100</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
@@ -584,7 +584,7 @@
 			<iStartingExploreUnits>2</iStartingExploreUnits>
 			<iStartingGold>50000</iStartingGold>
 			<iFreePopulation>4</iFreePopulation>
-			<iStartPercent>85</iStartPercent>
+			<iStartPercent>73</iStartPercent>
 			<iGrowthPercent>100</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
@@ -637,7 +637,7 @@
 			<iStartingExploreUnits>2</iStartingExploreUnits>
 			<iStartingGold>60000</iStartingGold>
 			<iFreePopulation>4</iFreePopulation>
-			<iStartPercent>90</iStartPercent>
+			<iStartPercent>82</iStartPercent>
 			<iGrowthPercent>100</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
@@ -686,7 +686,7 @@
 			<iStartingExploreUnits>2</iStartingExploreUnits>
 			<iStartingGold>80000</iStartingGold>
 			<iFreePopulation>5</iFreePopulation>
-			<iStartPercent>95</iStartPercent>
+			<iStartPercent>89</iStartPercent>
 			<iGrowthPercent>100</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
@@ -736,7 +736,7 @@
 			<iStartingExploreUnits>2</iStartingExploreUnits>
 			<iStartingGold>100000</iStartingGold>
 			<iFreePopulation>5</iFreePopulation>
-			<iStartPercent>99</iStartPercent>
+			<iStartPercent>94</iStartPercent>
 			<iGrowthPercent>100</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>

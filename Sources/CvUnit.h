@@ -68,6 +68,35 @@ struct CombatResult
 	CvPlot* pPlot;
 	int iAttacksCount;
 	bool bStealthDefense;
+
+	CombatResult()
+		: bDefenderWithdrawn(false)
+		//TB Combat Mods Begin
+		, bAttackerPursued(false)
+		, bDefenderPursued(false)
+		, bAttackerPursuedSustain(false)
+		, bDefenderPursuedSustain(false)
+		, bAttackerRepelled(false)
+		, bAttackerRefusedtoYield(false)
+		, bDefenderRefusedtoYield(false)
+		, bAttackerRefusedtoYieldSustain(false)
+		, bDefenderRefusedtoYieldSustain(false)
+		, bDefenderKnockedBack(false)
+		, bAttackerStampedes(false)
+		, bAttackerWithdraws(false)
+		, bAttackerOnslaught(false)
+		, bAttackerInjured(false)
+		, bDefenderInjured(false)
+		, iTurnCount(0)
+		, bDeathMessaged(true)
+		, bDefenderHitAttackerWithDistanceAttack(false)
+		, bAttackerHitDefenderWithDistanceAttack(false)
+		, bNeverMelee(true)
+		//TB Combat Mods End
+		, pPlot(NULL)
+		, iAttacksCount(0)
+		, bStealthDefense(false)
+		{}
 };
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
