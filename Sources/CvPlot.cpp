@@ -11158,8 +11158,8 @@ void CvPlot::changeBlockadedCount(TeamTypes eTeam, int iChange)
 /*                                                                                              */
 /* Bugfix                                                                                       */
 /************************************************************************************************/
-		FAssert(getBlockadedCount(eTeam) >= 0);
-		FAssert(getBlockadedCount(eTeam) == 0 || isWater());
+		FAssertMsg(getBlockadedCount(eTeam) >= 0, CvString::format("Blockaded count on a plot should not go lower than 0, it is now %d", getBlockadedCount(eTeam)).c_str());
+		FAssertMsg(getBlockadedCount(eTeam) == 0 || isWater(), "Non water tiles cannot have a non-zero Blockaded count");
 
 		// Hack so that never get negative blockade counts as a result of fixing issue causing
 		// rare permanent blockades.

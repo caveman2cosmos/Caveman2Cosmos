@@ -4476,7 +4476,7 @@ void CvCityAI::AI_chooseProduction()
 	{
 		if (!AI_finalProcessSelection())
 		{
-			FAssert(false);
+			FErrorMsg(CvString::format("AI could not choose production for city %s", m_szName.c_str()).c_str());
 		}
 	}
 }
@@ -8512,13 +8512,7 @@ int CvCityAI::evaluateDanger()
 	if ( eDummyUnit == NO_UNIT )
 	{
 		eDummyUnit = GET_PLAYER(getOwnerINLINE()).bestBuildableUnitForAIType(DOMAIN_LAND, UNITAI_CITY_DEFENSE, &noGrowthCriteria);
-
-		FAssert(eDummyUnit != NO_UNIT);
-
-		if ( eDummyUnit == NO_UNIT )
-		{
-			OutputDebugString("Cannot find defender to use for strength test\n");
-		}
+		FAssertMsg(eDummyUnit != NO_UNIT, "Cannot find defender to use for strength test");
 	}
 
 	if ( eDummyUnit != NO_UNIT )
@@ -12363,12 +12357,16 @@ bool CvCityAI::AI_foodAvailable(int iExtra)
 		{
 			if (abPlotAvailable[iI])
 			{
-				int iValue = getCityIndexPlot(iI)->getYield(YIELD_FOOD);
-
-				if (iValue > iBestValue)
+				const CvPlot* pPlot = getCityIndexPlot(iI);
+				if (pPlot)
 				{
-					iBestValue = iValue;
-					iBestPlot = iI;
+					int iValue = pPlot->getYield(YIELD_FOOD);
+
+					if (iValue > iBestValue)
+					{
+						iBestValue = iValue;
+						iBestPlot = iI;
+					}
 				}
 			}
 		}
@@ -14621,8 +14619,10 @@ void CvCityAI::AI_buildGovernorChooseProduction()
 	{
 		if (getCommerceRate(COMMERCE_CULTURE) == 0)
 		{
-			AI_chooseBuilding(BUILDINGFOCUS_CULTURE);
-			return;
+			if(AI_chooseBuilding(BUILDINGFOCUS_CULTURE))
+			{
+				return;
+			}
 		}
 	}
 
@@ -15900,11 +15900,6 @@ void CvCityAI::AI_updateWorkersNeededHere()
 int CvCityAI::AI_workingCityPlotTargetMissionAIs(PlayerTypes ePlayer, MissionAITypes eMissionAI, UnitAITypes eUnitAI, bool bSameAreaOnly) const
 {
 	PROFILE_FUNC();
-
-	if (this == NULL)
-	{
-		return 0;
-	}
 
 	CvPlayer& kPlayer = GET_PLAYER(ePlayer);
 	bool bCanMoveAllTerrain = bSameAreaOnly; //only check if bSameAreaOnly
@@ -19851,12 +19846,15 @@ int CvCityAI::tradeRouteValue(CvBuildingInfo& kBuilding, YieldTypes eYield, bool
 			int iLoop;
 			pCity = kOwner.firstCity(&iLoop);
 		}
-		
-		iTradeRouteValue = calculateTradeYield(eYield, calculateTradeProfit(pCity));
 
-		if (kOwner.isNoForeignTrade())
+		if(pCity)
 		{
-			iTradeRouteValue /= 3;
+			iTradeRouteValue = calculateTradeYield(eYield, calculateTradeProfit(pCity));
+
+			if (kOwner.isNoForeignTrade())
+			{
+				iTradeRouteValue /= 3;
+			}
 		}
 	}
 
@@ -20601,15 +20599,18 @@ bool CvCityAI::AI_establishSeeInvisibleCoverage()
 bool CvCityAI::AI_establishInvestigatorCoverage()
 {
 	//Fox in the henhouse protocol
-	int iNumLocalCriminals = plot()->getNumCriminals();
 	CvPlot* pPlot = plot();
+
+	int iNumLocalCriminals = pPlot->getNumCriminals();
+
 	CvUnitSelectionCriteria criteria;
 	criteria.m_bNoNegativeProperties = true;
-	int iLocalInvestigators = GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(plot(), MISSIONAI_INVESTIGATOR_MAINTAIN, NULL, 0);//MISSIONAI_INVESTIGATOR_MAINTAIN is probably not working as designed due to the way the contract broker works.  Once answered, the unit can really only be tracked by its AI type as mission type has been generically set.
+
+	int iLocalInvestigators = GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pPlot, MISSIONAI_INVESTIGATOR_MAINTAIN, NULL, 0);//MISSIONAI_INVESTIGATOR_MAINTAIN is probably not working as designed due to the way the contract broker works.  Once answered, the unit can really only be tracked by its AI type as mission type has been generically set.
 	iLocalInvestigators += pPlot->getNumPlayerUnitAI(UNITAI_INVESTIGATOR, getOwnerINLINE());
 	iLocalInvestigators += GET_PLAYER(getOwnerINLINE()).getContractBroker().numRequestsOutstanding(UNITAI_INVESTIGATOR, false, pPlot);
 
-	if (iNumLocalCriminals > 0 && pPlot != NULL)//Yes, the first round the city has trained its first criminal it will run into this, even if no spawns ever occur.  Can never be too ready, right?
+	if (iNumLocalCriminals > 0) // Yes, the first round the city has trained its first criminal it will run into this, even if no spawns ever occur.  Can never be too ready, right?
 	{
 		//First try for a building that's quick to build and has investigation
 		int iMaxTurns = iNumLocalCriminals * 5;
