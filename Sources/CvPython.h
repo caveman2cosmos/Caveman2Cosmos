@@ -183,7 +183,7 @@ namespace Cy
 	struct PythonReturnVarMappingBase
 	{
 		typedef DesiredTy_ desired_type;
-
+		static DesiredTy_ default_value;
 
 		template <class Ty_, bool b>	struct EnumDetect				{ typedef Ty_ type; };
 		template <class Ty_>			struct EnumDetect<Ty_, true>	{ typedef long type; };
@@ -191,6 +191,9 @@ namespace Cy
 		typedef typename EnumDetect<PyTy_, boost::is_enum<DesiredTy_>::value>::type py_type;
 		static desired_type convert(const py_type& pyVal) { return static_cast<desired_type>(pyVal); }
 	};
+
+	template < class DesiredTy_, class PyTy_ >
+	DesiredTy_ Cy::PythonReturnVarMappingBase<DesiredTy_, PyTy_>::default_value = DesiredTy_();
 
 	// By default all types map to themselves
 	template < class DesiredTy_ >
@@ -230,7 +233,7 @@ namespace Cy
 	template < class ReturnValueTy_ >
 	inline ReturnValueTy_ call(const char* const moduleName, const char* const functionName, bool* bSucceeded = NULL)
 	{
-		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy;
+		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy = PythonReturnVarMapping<ReturnValueTy_>::default_value;
 		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName, NULL, &rvalPy);
 		FPythonAssert(bOK, moduleName, functionName);
 		if (bSucceeded != NULL)
@@ -266,7 +269,7 @@ namespace Cy
 	>::type call_override(const char* const moduleName, const char* const functionName, ReturnValueTy_& rval)
 	{
 		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy;
-		if (gDLL->getPythonIFace()->callFunction(moduleName, functionName, NULL, &rvalPy) 
+		if (gDLL->getPythonIFace()->callFunction(moduleName, functionName, NULL, &rvalPy)
 			&& !gDLL->getPythonIFace()->pythonUsingDefaultImpl())
 		{
 			rval = PythonReturnVarMapping<ReturnValueTy_>::convert(rvalPy);
@@ -302,7 +305,7 @@ namespace Cy
 	template < class ReturnValueTy_ >
 	inline ReturnValueTy_ call(const char* const moduleName, const char* const functionName, const Cy::Args& args, bool* bSucceeded = NULL)
 	{
-		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy;
+		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy = PythonReturnVarMapping<ReturnValueTy_>::default_value;
 		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs(), &rvalPy);
 		FPythonAssert(bOK, moduleName, functionName);
 		if (bSucceeded != NULL)
