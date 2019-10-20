@@ -23,7 +23,7 @@ CvInitCore::CvInitCore()
 
 	// Moved to Init as the number is no more predetermined
 	//m_abOptions = new bool[NUM_GAMEOPTION_TYPES];
- 	m_abOptions = NULL;
+	m_abOptions = NULL;
 	m_abMPOptions = new bool[NUM_MPOPTION_TYPES];
 	m_abForceControls = new bool[NUM_FORCECONTROL_TYPES];
 
@@ -997,38 +997,23 @@ void CvInitCore::refreshCustomMapOptions()
 	{
 		if ( gDLL->pythonMapExists(CvString(getMapScriptName()).GetCString()) )
 		{
-			bool bOK;
-			long iNumOptions = 0;
-
-			PYTHON_CALL_FUNCTION4(__FUNCTION__, CvString(getMapScriptName()).GetCString(), "getNumHiddenCustomMapOptions", NULL, &iNumOptions);
-			m_iNumHiddenCustomMapOptions = iNumOptions;
-
-			bOK = PYTHON_CALL_FUNCTION4(__FUNCTION__, CvString(getMapScriptName()).GetCString(), "getNumCustomMapOptions", NULL, &iNumOptions);
-			if (bOK)
+			Cy::call_optional<int>(CvString(getMapScriptName()).GetCString(), "getNumHiddenCustomMapOptions", m_iNumHiddenCustomMapOptions);
+			int iNumOptions = 0;
+			if (Cy::call_optional<int>(CvString(getMapScriptName()).GetCString(), "getNumCustomMapOptions", iNumOptions) 
+				&& iNumOptions > 0)
 			{
-
 				// Got number of custom map options - now get the option defaults
-				CustomMapOptionTypes *aeMapOptions = new CustomMapOptionTypes[iNumOptions];
+				std::vector<CustomMapOptionTypes> aeMapOptions(iNumOptions, NO_CUSTOM_MAPOPTION);
 				for (int i = 0; i < iNumOptions; ++i)
 				{	
-					long iOptionDefault = 0;
-					CyArgsList argsList;
-					argsList.add(i);
-
-					bOK = PYTHON_CALL_FUNCTION4(__FUNCTION__, CvString(getMapScriptName()).GetCString(), "getCustomMapOptionDefault", argsList.makeFunctionArgs(), &iOptionDefault);
-					FAssertMsg(bOK, "Call to python fn \"getCustomMapOptionDefault\" failed in CvInitCore::refreshCustomMapOptions");
-					if (bOK)
+					if (!Cy::call_optional(CvString(getMapScriptName()).GetCString(), "getCustomMapOptionDefault", Cy::Args() << i, aeMapOptions[i]))
 					{
-						aeMapOptions[i] = (CustomMapOptionTypes)iOptionDefault;
-					}
-					else
-					{
-						aeMapOptions[i] = NO_CUSTOM_MAPOPTION;
+						FErrorMsg(CvString::format("Python function getCustomMapOptionDefault in mapscript %s failed to return correctly for option index %d", getMapScriptName(), i).c_str());
 					}
 				}
 
-				setCustomMapOptions(iNumOptions, aeMapOptions);
-				SAFE_DELETE_ARRAY(aeMapOptions);
+				setCustomMapOptions(aeMapOptions.size(), &aeMapOptions[0]);
+				// SAFE_DELETE_ARRAY(aeMapOptions);
 			}
 		}
 	}
@@ -2508,7 +2493,7 @@ void CvInitCore::reassignPlayerAdvanced(PlayerTypes eOldID, PlayerTypes eNewID)
 		m_aszEmail[eNewID] = m_aszEmail[eOldID];
 		m_aszSmtpHost[eNewID] = m_aszSmtpHost[eOldID];
 		m_aeHandicap[eNewID] = m_aeHandicap[eOldID];
-        setSlotStatus(eNewID, m_aeSlotStatus[eOldID]);
+		setSlotStatus(eNewID, m_aeSlotStatus[eOldID]);
 		m_aeSlotClaim[eNewID] = m_aeSlotClaim[eOldID];
 		m_abPlayableCiv[eNewID] = m_abPlayableCiv[eOldID];
 		m_aiNetID[eNewID] = m_aiNetID[eOldID];
@@ -2519,7 +2504,7 @@ void CvInitCore::reassignPlayerAdvanced(PlayerTypes eOldID, PlayerTypes eNewID)
 		m_aszEmail[eOldID] = szEmail;
 		m_aszSmtpHost[eOldID] = szSmtpHost;
 		m_aeHandicap[eOldID] = eHandicap;
-        setSlotStatus(eOldID, eSlotStatus);
+		setSlotStatus(eOldID, eSlotStatus);
 		m_aeSlotClaim[eOldID] = eSlotClaim;
 		m_abPlayableCiv[eOldID] = bPlayableCiv;
 		m_aiNetID[eOldID] = iNetID;
@@ -2527,22 +2512,22 @@ void CvInitCore::reassignPlayerAdvanced(PlayerTypes eOldID, PlayerTypes eNewID)
 		m_aszPythonCheck[eOldID] = szPythonCheck;
 		m_aszXMLCheck[eOldID] = szXMLCheck;
 
-        for (int iI = 0; iI < NUM_PLAYEROPTION_TYPES; iI++)
-        {
-            GET_PLAYER(eNewID).setOption((PlayerOptionTypes)iI,GET_PLAYER(eOldID).isOption((PlayerOptionTypes)iI));
-            GET_PLAYER(eOldID).setOption((PlayerOptionTypes)iI,false);
-        }
+		for (int iI = 0; iI < NUM_PLAYEROPTION_TYPES; iI++)
+		{
+			GET_PLAYER(eNewID).setOption((PlayerOptionTypes)iI,GET_PLAYER(eOldID).isOption((PlayerOptionTypes)iI));
+			GET_PLAYER(eOldID).setOption((PlayerOptionTypes)iI,false);
+		}
 		
 		for (int iI = 0; iI < NUM_MODDEROPTION_TYPES; iI++)
-        {
+		{
 			GET_PLAYER(eNewID).setModderOption((ModderOptionTypes)iI,GET_PLAYER(eOldID).getModderOption((ModderOptionTypes)iI));
-            GET_PLAYER(eOldID).setModderOption((ModderOptionTypes)iI,0);
+			GET_PLAYER(eOldID).setModderOption((ModderOptionTypes)iI,0);
 		}
 
 		// We may have a new active player id...
 		if (getActivePlayer() == eOldID)
 		{
-		    GC.getGameINLINE().setActivePlayer(eNewID);
+			GC.getGameINLINE().setActivePlayer(eNewID);
 		}
 		else if (getActivePlayer() == eNewID)
 		{

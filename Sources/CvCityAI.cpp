@@ -1092,14 +1092,7 @@ void CvCityAI::AI_chooseProduction()
 /************************************************************************************************/
 	if(GC.getUSE_AI_CHOOSE_PRODUCTION_CALLBACK())
 	{
-		// allow python to handle it
-		CyCity* pyCity = new CyCity(this);
-		CyArgsList argsList;
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyCity));	// pass in city class
-		long lResult=0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "AI_chooseProduction", argsList.makeFunctionArgs(), &lResult);
-		delete pyCity;	// python fxn must not hold on to this pointer
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "AI_chooseProduction", Cy::Args() << this))
 		{
 			return;
 		}
@@ -4476,7 +4469,7 @@ void CvCityAI::AI_chooseProduction()
 	{
 		if (!AI_finalProcessSelection())
 		{
-			FAssert(false);
+			FErrorMsg(CvString::format("City %S could not choose something to build", m_szName.c_str()).c_str());
 		}
 	}
 }
@@ -4893,7 +4886,7 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 				//	the AI does I have decided to just remove this check for now
 				//if (!isHuman() || (GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType() == eUnitAI))
 				{
-				    
+					
 					if (!(bGrowMore && isFoodProduction(eLoopUnit)))
 					{
 						if (AI_meetsUnitSelectionCriteria(eLoopUnit, &tempCriteria) && canTrain(eLoopUnit))
@@ -4983,8 +4976,8 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 								}
 							}
 
-                            iValue *= (iPromotionValue + 100);
-                            iValue /= 100;
+							iValue *= (iPromotionValue + 100);
+							iValue /= 100;
 
 							if ( !bNoRand )
 							{
@@ -17228,8 +17221,14 @@ retry:
 			}
 			else
 			{
+				iResult = AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, iThreshold, bMaximizeFlaggedValue);
+				FAssertMsg(iResult == 0, CvString::format(
+					"City %S rated building %s non zero (%d) which is wrong somehow? This assert might be deprecated!",
+					m_szName.c_str(),
+					GC.getBuildingInfo(eBuilding).getType(),
+					iResult).c_str()
+				);
 				iResult = 0;
-				FAssert(AI_buildingValueThresholdOriginal(eBuilding, iFocusFlags, iThreshold, bMaximizeFlaggedValue) == 0);
 			}
 		}
 		else

@@ -1299,7 +1299,7 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 
 		case MISSION_BUILD:
 
-            FAssertMsg(((BuildTypes)iData1) < GC.getNumBuildInfos(), "Invalid Build");
+			FAssertMsg(((BuildTypes)iData1) < GC.getNumBuildInfos(), "Invalid Build");
 /************************************************************************************************/
 /* Afforess	                  Start		 06/01/10                                                */
 /*                                                                                              */
@@ -1313,9 +1313,9 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 /* Afforess	                     END                                                            */
 /************************************************************************************************/			
 
-            {
-                return true;
-            }
+			{
+				return true;
+			}
 			break;
 
 		case MISSION_LEAD:
@@ -3277,7 +3277,7 @@ void CvSelectionGroup::setupActionCache()
 	//cache busy calculation
 	m_bIsBusyCache = isBusy();
 
-    //cache different unit types
+	//cache different unit types
 	m_aDifferentUnitCache.erase(m_aDifferentUnitCache.begin(), m_aDifferentUnitCache.end());
 	CLLNode<IDInfo> *pUnitNode = headUnitNode();
 	while(pUnitNode != NULL)
@@ -3930,7 +3930,7 @@ int CvSelectionGroup::baseMoves()
 bool CvSelectionGroup::isWaiting() const
 {
 	return ((getActivityType() == ACTIVITY_HOLD) ||
-		      (getActivityType() == ACTIVITY_SLEEP) ||
+			  (getActivityType() == ACTIVITY_SLEEP) ||
 					(getActivityType() == ACTIVITY_HEAL) ||
 					(getActivityType() == ACTIVITY_SENTRY) ||
 // BUG - Sentry Actions - start
@@ -4643,7 +4643,11 @@ bool CvSelectionGroup::isHasPathToAreaPlayerCity( PlayerTypes ePlayer, int iFlag
 			}
 			else
 			{
-				FAssertMsg(false, "Pathing failed to apparently recahable city");
+				FErrorMsg(CvString::format("Pathing of units from plot <%d, %d> to failed to supposedly reachable city %S at <%d, %d>",
+					plot()->getX_INLINE(), plot()->getY_INLINE(),
+					pLoopCity->getName().c_str(),
+					pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE()).c_str()
+					);
 			}
 		}
 	}
@@ -5245,7 +5249,7 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 	FAssertMsg(pDestPlot != NULL, "DestPlot is not assigned a valid value");
 
 	bool bStack = (isHuman() && ((getDomainType() == DOMAIN_AIR) || GET_PLAYER(getOwnerINLINE()).isOption(PLAYEROPTION_STACK_ATTACK)));
-    
+	
 	bool bAttack = false;
 	bFailedAlreadyFighting = false;
 	bool bStealthDefense = bStealth;
@@ -5491,19 +5495,8 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 
 						if (GC.getUSE_CAN_DO_COMBAT_CALLBACK())
 						{
-
 							PROFILE("CvSelectionGroup::groupAttack.Python");
-
-							CySelectionGroup* pyGroup = new CySelectionGroup(this);
-							CyPlot* pyPlot = new CyPlot(pDestPlot);
-							CyArgsList argsList;
-							argsList.add(gDLL->getPythonIFace()->makePythonObject(pyGroup));	// pass in Selection Group class
-							argsList.add(gDLL->getPythonIFace()->makePythonObject(pyPlot));	// pass in Plot class
-							long lResult=0;
-							PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doCombat", argsList.makeFunctionArgs(), &lResult);
-							delete pyGroup;	// python fxn must not hold on to this pointer 
-							delete pyPlot;	// python fxn must not hold on to this pointer 
-							if (lResult == 1)
+							if (Cy::call<bool>(PYGameModule, "doCombat", Cy::Args() << this << pDestPlot))
 							{
 								break;
 							} 
@@ -5805,7 +5798,7 @@ bool CvSelectionGroup::groupPathTo(int iX, int iY, int iFlags)
 	bool bEndMove = false;
 	if(pPathPlot == pDestPlot)
 		bEndMove = true;
-    
+	
 	groupMove(pPathPlot, iFlags & MOVE_THROUGH_ENEMY, NULL, bEndMove);
 
 	return true;
@@ -5851,7 +5844,7 @@ bool CvSelectionGroup::groupBuild(BuildTypes eBuild)
 
 	pPlot = plot();
 
-    ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
+	ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
 	if (eImprovement != NO_IMPROVEMENT)
 	{
 		if (AI_isControlled())
@@ -5860,14 +5853,14 @@ bool CvSelectionGroup::groupBuild(BuildTypes eBuild)
 			{
 				if ((pPlot->getImprovementType() != NO_IMPROVEMENT) && (pPlot->getImprovementType() != (ImprovementTypes)(GC.getDefineINT("RUINS_IMPROVEMENT"))))
 				{
-				    BonusTypes eBonus = (BonusTypes)pPlot->getNonObsoleteBonusType(GET_PLAYER(getOwnerINLINE()).getTeam());
-				    if ((eBonus == NO_BONUS) || !GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eBonus))
-				    {
-                        if (GC.getImprovementInfo(eImprovement).getImprovementPillage() != NO_IMPROVEMENT)
-                        {
-                            return false;
-                        }
-				    }
+					BonusTypes eBonus = (BonusTypes)pPlot->getNonObsoleteBonusType(GET_PLAYER(getOwnerINLINE()).getTeam());
+					if ((eBonus == NO_BONUS) || !GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eBonus))
+					{
+						if (GC.getImprovementInfo(eImprovement).getImprovementPillage() != NO_IMPROVEMENT)
+						{
+							return false;
+						}
+					}
 				}
 			}
 //
@@ -8419,17 +8412,7 @@ bool CvSelectionGroup::groupStackAttack(int iX, int iY, int iFlags, bool& bFaile
 
 						if (GC.getUSE_CAN_DO_COMBAT_CALLBACK())
 						{
-
-							CySelectionGroup* pyGroup = new CySelectionGroup(this);
-							CyPlot* pyPlot = new CyPlot(pDestPlot);
-							CyArgsList argsList;
-							argsList.add(gDLL->getPythonIFace()->makePythonObject(pyGroup));	// pass in Selection Group class
-							argsList.add(gDLL->getPythonIFace()->makePythonObject(pyPlot));	// pass in Plot class
-							long lResult=0;
-							PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doCombat", argsList.makeFunctionArgs(), &lResult);
-							delete pyGroup;	// python fxn must not hold on to this pointer 
-							delete pyPlot;	// python fxn must not hold on to this pointer 
-							if (lResult == 1)
+							if (Cy::call<bool>(PYGameModule, "doCombat", Cy::Args() << this << pDestPlot))
 							{
 								break;
 							}

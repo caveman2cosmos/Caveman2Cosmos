@@ -3026,13 +3026,13 @@ int CyCity::getArea() const
 
 bool CyCity::isWeLoveTheKingDay() const
 {
-    return m_pCity ? m_pCity->isWeLoveTheKingDay() : false;
+	return m_pCity ? m_pCity->isWeLoveTheKingDay() : false;
 }
 
 void CyCity::setWeLoveTheKingDay(bool bWeLoveTheKingDay)
 {
-    if (m_pCity)
-        m_pCity->setWeLoveTheKingDay(bWeLoveTheKingDay);
+	if (m_pCity)
+		m_pCity->setWeLoveTheKingDay(bWeLoveTheKingDay);
 }  
 
 int CyCity::calculateCorporateTaxes() const
@@ -3042,8 +3042,8 @@ int CyCity::calculateCorporateTaxes() const
 
 void CyCity::changePowerCount(int iChange, bool bDirty)
 {
-    if (m_pCity)
-        m_pCity->changePowerCount(iChange, bDirty);
+	if (m_pCity)
+		m_pCity->changePowerCount(iChange, bDirty);
 } 
 
 int CyCity::getEventAnger()
@@ -3053,8 +3053,8 @@ int CyCity::getEventAnger()
 
 void CyCity::changeEventAnger(int iChange)
 {
-    if (m_pCity)
-        m_pCity->changeEventAnger(iChange);
+	if (m_pCity)
+		m_pCity->changeEventAnger(iChange);
 } 
 
 int CyCity::getNumPopulationEmployed()

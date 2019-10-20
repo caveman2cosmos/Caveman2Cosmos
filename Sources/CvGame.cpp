@@ -587,7 +587,7 @@ void CvGame::setInitialItems()
 #define PYCultureLinkModule		"CvCultureLinkInterface"
 	if (isOption(GAMEOPTION_CULTURALLY_LINKED_STARTS))
 	{
-		PYTHON_CALL_FUNCTION2(__FUNCTION__, PYCultureLinkModule, "assignCulturallyLinkedStarts"); 
+		Cy::call(PYCultureLinkModule, "assignCulturallyLinkedStarts"); 
 	}
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -596,16 +596,16 @@ void CvGame::setInitialItems()
 	
 // RevolutionDCM - BarbarianWorld - thanks Kael
 	// RevDCM TODO: What's right here?
-    if (!isOption(GAMEOPTION_NO_BARBARIANS) && isOption(GAMEOPTION_BARBARIAN_WORLD))
-    {
-        for (int iI = 0; iI < MAX_PLAYERS; iI++)
-        {
-            if (GET_PLAYER((PlayerTypes)iI).isAlive() && !GET_PLAYER((PlayerTypes)iI).isNPC())
-            {
-                foundBarbarianCity();
-            }
-        }
-    }
+	if (!isOption(GAMEOPTION_NO_BARBARIANS) && isOption(GAMEOPTION_BARBARIAN_WORLD))
+	{
+		for (int iI = 0; iI < MAX_PLAYERS; iI++)
+		{
+			if (GET_PLAYER((PlayerTypes)iI).isAlive() && !GET_PLAYER((PlayerTypes)iI).isNPC())
+			{
+				foundBarbarianCity();
+			}
+		}
+	}
 // RevolutionDCM End
 
 	initFreeUnits();
@@ -728,14 +728,14 @@ void CvGame::regenerateMap()
 /*************************************************************************************************/
 /**	ADDON (regenerate Map) Sephi                                             					**/
 /*************************************************************************************************/
-    CvEventReporter::getInstance().gameStart();
+	CvEventReporter::getInstance().gameStart();
 /*************************************************************************************************/
 /**	END	                                        												**/
 /*************************************************************************************************/
 	gDLL->getEngineIFace()->AutoSave(true);
 
 // BUG - AutoSave - start
-	PYTHON_CALL_FUNCTION2(__FUNCTION__, PYBugModule, "gameStartSave");
+	Cy::call(PYBugModule, "gameStartSave");
 // BUG - AutoSave - end
 
 	// EF - This doesn't work until after the game has had time to update.
@@ -837,7 +837,7 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 {
 	int iI;
 
-    CvPlotPaging::ResetPaging();
+	CvPlotPaging::ResetPaging();
 
 	//--------------------------------
 	// Uninit class
@@ -1397,11 +1397,12 @@ void CvGame::assignStartingPlots()
 		}
 	}
 
-	if (PYTHON_CALL_FUNCTION2(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "assignStartingPlots"))
-	{ 
-		if (!gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+	{
+		// Python override
+		bool bAssignStartingPlots = false;
+		if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "assignStartingPlots", bAssignStartingPlots)
+			&& bAssignStartingPlots)
 		{
-			// Python override
 			return;
 		}
 	}
@@ -1906,7 +1907,7 @@ void CvGame::normalizeRemoveBadFeatures()
 					}
 				}
 			}
-        }
+		}
 	}
 }
 
@@ -1936,60 +1937,60 @@ void CvGame::normalizeRemoveBadTerrain()
 
 			if (pStartingPlot != NULL)
 			{
-			    for (iX = -iMaxRange; iX <= iMaxRange; iX++)
-			    {
-			        for (iY = -iMaxRange; iY <= iMaxRange; iY++)
-			        {
-			            pLoopPlot = plotXY(pStartingPlot->getX_INLINE(), pStartingPlot->getY_INLINE(), iX, iY);
-                        if (pLoopPlot != NULL)
-                        {
-                            int iDistance = plotDistance(pStartingPlot->getX_INLINE(), pStartingPlot->getY_INLINE(), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE());
-                            if (iDistance <= iMaxRange)
-                            {
-                                if (!(pLoopPlot->isWater()) && ((iDistance <= iCityRange) || (pLoopPlot->isCoastalLand()) || (0 == getSorenRandNum(1 + iDistance - iCityRange, "Map Upgrade Terrain Food"))))
-                                {
-                                    iPlotFood = GC.getTerrainInfo(pLoopPlot->getTerrainType()).getYield(YIELD_FOOD);
-                                    iPlotProduction = GC.getTerrainInfo(pLoopPlot->getTerrainType()).getYield(YIELD_PRODUCTION);
-                                    if ((iPlotFood + iPlotProduction) <= 1)
-                                    {
-                                        iTargetFood = 1;
-                                        iTargetTotal = 1;
-                                        if (pLoopPlot->getBonusType(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_BONUS)
-                                        {
-                                            iTargetFood = 1;
-                                            iTargetTotal = 2;
-                                        }
-                                        else if ((iPlotFood == 1) || (iDistance <= iCityRange))
-                                        {
-                                            iTargetFood = 1 + getSorenRandNum(2, "Map Upgrade Terrain Food");
-                                            iTargetTotal = 2;
-                                        }
-                                        else
-                                        {
-                                            iTargetFood = pLoopPlot->isCoastalLand() ? 2 : 1;
-                                            iTargetTotal = 2;
-                                        }
-                                        
-                                        for (iK = 0; iK < GC.getNumTerrainInfos(); iK++)
-                                        {
-                                            if (!(GC.getTerrainInfo((TerrainTypes)iK).isWater()))
-                                            {
-                                                if ((GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_FOOD) >= iTargetFood) && 
-                                                    (GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_FOOD) + GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_PRODUCTION)) == iTargetTotal)
-                                                {
-                                                    if ((pLoopPlot->getFeatureType() == NO_FEATURE) || GC.getFeatureInfo(pLoopPlot->getFeatureType()).isTerrain(iK))
-                                                    {
-                                                        pLoopPlot->setTerrainType((TerrainTypes)iK);
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
+				for (iX = -iMaxRange; iX <= iMaxRange; iX++)
+				{
+					for (iY = -iMaxRange; iY <= iMaxRange; iY++)
+					{
+						pLoopPlot = plotXY(pStartingPlot->getX_INLINE(), pStartingPlot->getY_INLINE(), iX, iY);
+						if (pLoopPlot != NULL)
+						{
+							int iDistance = plotDistance(pStartingPlot->getX_INLINE(), pStartingPlot->getY_INLINE(), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE());
+							if (iDistance <= iMaxRange)
+							{
+								if (!(pLoopPlot->isWater()) && ((iDistance <= iCityRange) || (pLoopPlot->isCoastalLand()) || (0 == getSorenRandNum(1 + iDistance - iCityRange, "Map Upgrade Terrain Food"))))
+								{
+									iPlotFood = GC.getTerrainInfo(pLoopPlot->getTerrainType()).getYield(YIELD_FOOD);
+									iPlotProduction = GC.getTerrainInfo(pLoopPlot->getTerrainType()).getYield(YIELD_PRODUCTION);
+									if ((iPlotFood + iPlotProduction) <= 1)
+									{
+										iTargetFood = 1;
+										iTargetTotal = 1;
+										if (pLoopPlot->getBonusType(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_BONUS)
+										{
+											iTargetFood = 1;
+											iTargetTotal = 2;
+										}
+										else if ((iPlotFood == 1) || (iDistance <= iCityRange))
+										{
+											iTargetFood = 1 + getSorenRandNum(2, "Map Upgrade Terrain Food");
+											iTargetTotal = 2;
+										}
+										else
+										{
+											iTargetFood = pLoopPlot->isCoastalLand() ? 2 : 1;
+											iTargetTotal = 2;
+										}
+										
+										for (iK = 0; iK < GC.getNumTerrainInfos(); iK++)
+										{
+											if (!(GC.getTerrainInfo((TerrainTypes)iK).isWater()))
+											{
+												if ((GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_FOOD) >= iTargetFood) && 
+													(GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_FOOD) + GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_PRODUCTION)) == iTargetTotal)
+												{
+													if ((pLoopPlot->getFeatureType() == NO_FEATURE) || GC.getFeatureInfo(pLoopPlot->getFeatureType()).isTerrain(iK))
+													{
+														pLoopPlot->setTerrainType((TerrainTypes)iK);
+													}
+												}
+											}
+										}
+									}
+								}
+							}
   
-			            }
-			        }
+						}
+					}
 				}
 			}
 		}
@@ -2036,16 +2037,16 @@ void CvGame::normalizeAddFoodBonuses()
 								}
 							}
 							else if (pLoopPlot->calculateBestNatureYield(YIELD_FOOD, GET_PLAYER((PlayerTypes)iI).getTeam()) >= 2)
-						    {
-						        iGoodNatureTileCount++;
-						    }
+							{
+								iGoodNatureTileCount++;
+							}
 						}
 						else
 						{
-                            if (pLoopPlot->calculateBestNatureYield(YIELD_FOOD, GET_PLAYER((PlayerTypes)iI).getTeam()) >= 3)
-						    {
-						        iGoodNatureTileCount++;
-						    }
+							if (pLoopPlot->calculateBestNatureYield(YIELD_FOOD, GET_PLAYER((PlayerTypes)iI).getTeam()) >= 3)
+							{
+								iGoodNatureTileCount++;
+							}
 						}
 					}
 				}
@@ -2231,10 +2232,10 @@ void CvGame::normalizeAddExtras()
 			{
 				int iValue = GET_PLAYER((PlayerTypes)iI).AI_foundValue(pStartingPlot->getX_INLINE(), pStartingPlot->getY_INLINE(), -1, true);
 				iTotalValue += iValue;
-                iPlayerCount++;
-                
-                iBestValue = std::max(iValue, iBestValue);
-                iWorstValue = std::min(iValue, iWorstValue);
+				iPlayerCount++;
+				
+				iBestValue = std::max(iValue, iBestValue);
+				iWorstValue = std::min(iValue, iWorstValue);
 			}
 		}
 	}
@@ -2251,7 +2252,7 @@ void CvGame::normalizeAddExtras()
 
 			if (pStartingPlot != NULL)
 			{
-                int iCount = 0;
+				int iCount = 0;
 				int iFeatureCount = 0;
 				int aiShuffle[NUM_CITY_PLOTS];
 				shuffleArray(aiShuffle, NUM_CITY_PLOTS, getMapRand());
@@ -2332,33 +2333,33 @@ void CvGame::normalizeAddExtras()
 					}
 				}
 				
-			    bool bLandBias = (iWaterCount > NUM_CITY_PLOTS / 2);
-                
-                shuffleArray(aiShuffle, NUM_CITY_PLOTS, getMapRand());                
+				bool bLandBias = (iWaterCount > NUM_CITY_PLOTS / 2);
+				
+				shuffleArray(aiShuffle, NUM_CITY_PLOTS, getMapRand());                
 
 				for (iJ = 0; iJ < NUM_CITY_PLOTS; iJ++)
 				{
-				    CvPlot* pLoopPlot = plotCity(pStartingPlot->getX_INLINE(), pStartingPlot->getY_INLINE(), aiShuffle[iJ]);
+					CvPlot* pLoopPlot = plotCity(pStartingPlot->getX_INLINE(), pStartingPlot->getY_INLINE(), aiShuffle[iJ]);
 
-                    if ((pLoopPlot != NULL) && (pLoopPlot != pStartingPlot))
-                    {
-                        if (getSorenRandNum(((bLandBias && pLoopPlot->isWater()) ? 2 : 1), "Placing Bonuses") == 0)
-                        {
-                        	if ((iOtherCount * 3 + iOceanFoodCount * 2 + iCoastFoodCount * 2) >= 12)
-                        	{
-                        		break;
-                        	}
-                        	
-                            if (GET_PLAYER((PlayerTypes)iI).AI_foundValue(pStartingPlot->getX_INLINE(), pStartingPlot->getY_INLINE(), -1, true) >= iTargetValue)
-                            {
-                                break;
-                            }
+					if ((pLoopPlot != NULL) && (pLoopPlot != pStartingPlot))
+					{
+						if (getSorenRandNum(((bLandBias && pLoopPlot->isWater()) ? 2 : 1), "Placing Bonuses") == 0)
+						{
+							if ((iOtherCount * 3 + iOceanFoodCount * 2 + iCoastFoodCount * 2) >= 12)
+							{
+								break;
+							}
+							
+							if (GET_PLAYER((PlayerTypes)iI).AI_foundValue(pStartingPlot->getX_INLINE(), pStartingPlot->getY_INLINE(), -1, true) >= iTargetValue)
+							{
+								break;
+							}
 
-						    bool bCoast = (pLoopPlot->isWater() && pLoopPlot->isAdjacentToLand());
-						    bool bOcean = (pLoopPlot->isWater() && !bCoast);
+							bool bCoast = (pLoopPlot->isWater() && pLoopPlot->isAdjacentToLand());
+							bool bOcean = (pLoopPlot->isWater() && !bCoast);
 							if ((pLoopPlot != pStartingPlot)
-                                && !(bCoast && (iCoastFoodCount > 2))
-                                && !(bOcean && (iOceanFoodCount > 2)))
+								&& !(bCoast && (iCoastFoodCount > 2))
+								&& !(bOcean && (iOceanFoodCount > 2)))
 							{
 								for (int iPass = 0; iPass < 2; iPass++)
 								{
@@ -2368,7 +2369,7 @@ void CvGame::normalizeAddExtras()
 										{
 											if (GC.getBonusInfo((BonusTypes)iK).isNormalize())
 											{
-											    //???no bonuses with negative yields?
+												//???no bonuses with negative yields?
 												if ((GC.getBonusInfo((BonusTypes)iK).getYieldChange(YIELD_FOOD) >= 0) &&
 													  (GC.getBonusInfo((BonusTypes)iK).getYieldChange(YIELD_PRODUCTION) >= 0))
 												{
@@ -2518,20 +2519,12 @@ void CvGame::normalizeStartingPlots()
 
 	if (!(GC.getInitCore().getWBMapScript()) || GC.getInitCore().getWBMapNoPlayers())
 	{
-		if (!PYTHON_CALL_FUNCTION(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "normalizeStartingPlotLocations", NULL)  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+		if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeStartingPlotLocations"))
 		{
-/************************************************************************************************/
-/* Afforess	                  Start		 03/10/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 			if (!isOption(GAMEOPTION_CULTURALLY_LINKED_STARTS))
 			{
 				normalizeStartingPlotLocations();
 			}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 		}
 	}
 
@@ -2540,42 +2533,42 @@ void CvGame::normalizeStartingPlots()
 		return;
 	}
 
-	if (!PYTHON_CALL_FUNCTION(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddRiver", NULL)  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddRiver")  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
 	{
 		normalizeAddRiver();
 	}
 
-	if (!PYTHON_CALL_FUNCTION(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "normalizeRemovePeaks", NULL)  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeRemovePeaks"))
 	{
 		normalizeRemovePeaks();
 	}
 
-	if (!PYTHON_CALL_FUNCTION(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddLakes", NULL)  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddLakes"))
 	{
 		normalizeAddLakes();
 	}
 
-	if (!PYTHON_CALL_FUNCTION(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "normalizeRemoveBadFeatures", NULL)  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeRemoveBadFeatures"))
 	{
 		normalizeRemoveBadFeatures();
 	}
 
-	if (!PYTHON_CALL_FUNCTION(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "normalizeRemoveBadTerrain", NULL)  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeRemoveBadTerrain"))
 	{
 		normalizeRemoveBadTerrain();
 	}
 
-	if (!PYTHON_CALL_FUNCTION(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddFoodBonuses", NULL)  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddFoodBonuses"))
 	{
 		normalizeAddFoodBonuses();
 	}
 
-	if (!PYTHON_CALL_FUNCTION(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddGoodTerrain", NULL)  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddGoodTerrain"))
 	{
 		normalizeAddGoodTerrain();
 	}
 
-	if (!PYTHON_CALL_FUNCTION(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddExtras", NULL)  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddExtras"))
 	{
 		normalizeAddExtras();
 	}
@@ -4128,17 +4121,9 @@ void CvGame::reviveActivePlayer()
 		GC.getInitCore().setSlotStatus(getActivePlayer(), SS_TAKEN);
 		
 		// Let Python handle it
+		if (Cy::call<bool>(PYGameModule, "doReviveActivePlayer", Cy::Args() << getActivePlayer()))
 		{
-
-			long lResult=0;
-			CyArgsList argsList;
-			argsList.add(getActivePlayer());
-
-			PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doReviveActivePlayer", argsList.makeFunctionArgs(), &lResult);
-			if (lResult == 1)
-			{
-				return;
-			}
+			return;
 		}
 
 		GET_PLAYER(getActivePlayer()).initUnit(((UnitTypes)0), 0, 0, NO_UNITAI, NO_DIRECTION, 0);
@@ -4160,17 +4145,9 @@ void CvGame::reviveActivePlayer(PlayerTypes iPlayer)
 		GC.getInitCore().setSlotStatus(iPlayer, SS_TAKEN);
 		
 		// Let Python handle it
+		if (Cy::call<bool>(PYGameModule, "doReviveActivePlayer", Cy::Args() << iPlayer))
 		{
-
-			long lResult=0;
-			CyArgsList argsList;
-			argsList.add(iPlayer);
-
-			PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doReviveActivePlayer", argsList.makeFunctionArgs(), &lResult);
-			if (lResult == 1)
-			{
-				return;
-			}
+			return;
 		}
 
 		GET_PLAYER(iPlayer).initUnit(((UnitTypes)0), 0, 0, NO_UNITAI, NO_DIRECTION, 0);
@@ -4458,7 +4435,7 @@ int CvGame::getMaxTurnLen()
 		TurnTimerTypes eTurnTimer = GC.getInitCore().getTurnTimer();
 		FAssertMsg(eTurnTimer >= 0 && eTurnTimer < GC.getNumTurnTimerInfos(), "Invalid TurnTimer Selection in InitCore");
 		return ( GC.getTurnTimerInfo(eTurnTimer).getBaseTime() + 
-			    (GC.getTurnTimerInfo(eTurnTimer).getCityBonus()*iMaxCities) +
+				(GC.getTurnTimerInfo(eTurnTimer).getCityBonus()*iMaxCities) +
 				(GC.getTurnTimerInfo(eTurnTimer).getUnitBonus()*iMaxUnits) );
 	}
 }
@@ -4859,8 +4836,8 @@ void CvGame::setAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForced)
 
 void CvGame::setAIAutoPlayExternal(int iNewValue)
 {
-    PlayerTypes iPlayer = getActivePlayer();
-    return setAIAutoPlay(iPlayer, iNewValue);
+	PlayerTypes iPlayer = getActivePlayer();
+	return setAIAutoPlay(iPlayer, iNewValue);
 }
 
 void CvGame::changeAIAutoPlay(PlayerTypes iPlayer, int iChange)
@@ -5837,7 +5814,7 @@ void CvGame::setGameState(GameStateTypes eNewValue)
 			CvEventReporter::getInstance().gameEnd();
 
 // BUG - AutoSave - start
-			PYTHON_CALL_FUNCTION2(__FUNCTION__, PYBugModule, "gameEndSave");
+			Cy::call(PYBugModule, "gameEndSave");
 // BUG - AutoSave - end
 
 			showEndGameSequence();
@@ -8103,14 +8080,11 @@ void CvGame::doHolyCity()
 {
 	PlayerTypes eBestPlayer;
 	TeamTypes eBestTeam;
-	long lResult;
 	int iValue;
 	int iBestValue;
 	int iI, iJ, iK;
 
-	lResult = 0;
-	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doHolyCity", NULL, &lResult);
-	if (lResult == 1)
+	if (Cy::call<bool>(PYGameModule, "doHolyCity"))
 	{
 		return;
 	}
@@ -8480,9 +8454,7 @@ void CvGame::doHeadquarters()
 {
 	MEMORY_TRACE_FUNCTION();
 
-	long lResult = 0;
-	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doHeadquarters", NULL, &lResult);
-	if (lResult == 1)
+	if (Cy::call_optional(PYGameModule, "doHeadquarters"))
 	{
 		return;
 	}
@@ -8624,7 +8596,6 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 
 	CvPlot* pLoopPlot;
 	CvPlot* pBestPlot;
-	long lResult;
 	int iTargetCities;
 	int iValue;
 	int iBestValue;
@@ -8640,9 +8611,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 		return;
 	}
 
-	lResult = 0;
-	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "createBarbarianCities", NULL, &lResult);
-	if (lResult == 1)
+	if (Cy::call<bool>(PYGameModule, "createBarbarianCities"))
 	{
 		return;
 	}
@@ -8885,7 +8854,6 @@ void CvGame::createBarbarianUnits()
 	UnitAITypes eBarbUnitAI;
 	UnitTypes eBestUnit;
 	UnitTypes eLoopUnit;
-	long lResult;
 	int iNeededBarbs;
 	int iDivisor;
 	int iValue;
@@ -8893,9 +8861,7 @@ void CvGame::createBarbarianUnits()
 	int iLoop;
 	int iI, iJ;
 
-	lResult = 0;
-	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "createBarbarianUnits", NULL, &lResult);
-	if (lResult == 1)
+	if (Cy::call<bool>(PYGameModule, "createBarbarianUnits"))
 	{
 		return;
 	}
@@ -9741,12 +9707,7 @@ bool CvGame::testVictory(VictoryTypes eVictory, TeamTypes eTeam, bool* pbEndScor
 /************************************************************************************************/
 		if(GC.getUSE_IS_VICTORY_CALLBACK())
 		{
-
-			long lResult = 1;
-			CyArgsList argsList;
-			argsList.add(eVictory);
-			PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "isVictory", argsList.makeFunctionArgs(), &lResult);
-			if (0 == lResult)
+			if (!Cy::call<bool>(PYGameModule, "isVictory", Cy::Args() << eVictory))
 			{
 				bValid = false;
 			}
@@ -9763,9 +9724,9 @@ bool CvGame::testVictory(VictoryTypes eVictory, TeamTypes eTeam, bool* pbEndScor
 #if defined QC_MASTERY_VICTORY
 //Sevo Begin--VCM
 		else
-	  {
+		{
 			starshipLaunched[eTeam] = true;	  	
-	  }
+		}
 //Sevo End VCM
 #endif
 /************************************************************************************************/
@@ -9797,9 +9758,7 @@ void CvGame::testVictory()
 
 	updateScore();
 
-	long lResult = 1;
-	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "isVictoryTest", NULL, &lResult);
-	if (lResult == 0)
+	if (!Cy::call<bool>(PYGameModule, "isVictoryTest"))
 	{
 		return;
 	}
@@ -10345,7 +10304,7 @@ int CvGame::getSorenRandNum(int iNum, const char* pszLog)
 		iScale++;
 	}
 
-    int Result = m_sorenRand.get(iNum, pszLog);
+	int Result = m_sorenRand.get(iNum, pszLog);
 
 	while(iScale-- > 0)
 	{
@@ -12605,22 +12564,18 @@ void CvGame::processBuilding(BuildingTypes eBuilding, int iChange)
 
 bool CvGame::pythonIsBonusIgnoreLatitudes() const
 {
-	long lResult = -1;
-	if (PYTHON_CALL_FUNCTION4(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "isBonusIgnoreLatitude", NULL, &lResult))
+	bool lResult = false;
+	if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "isBonusIgnoreLatitude", lResult))
 	{
-		if (!gDLL->getPythonIFace()->pythonUsingDefaultImpl() && lResult != -1)
-		{
-			return (lResult != 0);
-		}
+		return lResult;
 	}
-
 	return false;
 }
 
 // RevolutionDCM - BarbarianWorld - thanks Kael
 void CvGame::foundBarbarianCity()
 {
-    bool bValid = true;
+	bool bValid = true;
 	int iBestValue = 0;
 	int iDist = 0;
 	int iValue = 0;
@@ -12640,19 +12595,19 @@ void CvGame::foundBarbarianCity()
 		iValue = 0;
 		if (pLoopPlot->isWater())
 		{
-		    bValid = false;
+			bValid = false;
 		}
 		else if (pLoopPlot->isImpassable())
 		{
-		    bValid = false;
+			bValid = false;
 		}
 		else if (pLoopPlot->isCity())
 		{
-		    bValid = false;
+			bValid = false;
 		}
 		else if (pLoopPlot->getImprovementType() != NO_IMPROVEMENT)
 		{
-		    bValid = false;
+			bValid = false;
 		}
 		else 
 		{
@@ -12697,10 +12652,10 @@ void CvGame::foundBarbarianCity()
 
 		}
 
-        if (bValid)
-        {
-            iValue += GET_PLAYER(BARBARIAN_PLAYER).AI_foundValue(pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE(), GC.getDefineINT("MIN_BARBARIAN_CITY_STARTING_DISTANCE"));
-            iValue += getSorenRandNum(250, "Barb City Found");
+		if (bValid)
+		{
+			iValue += GET_PLAYER(BARBARIAN_PLAYER).AI_foundValue(pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE(), GC.getDefineINT("MIN_BARBARIAN_CITY_STARTING_DISTANCE"));
+			iValue += getSorenRandNum(250, "Barb City Found");
 			if (iValue > iBestValue)
 			{
 				iBestValue = iValue;
@@ -12836,22 +12791,22 @@ bool CvGame::getStarshipLaunched(int ID)
 bool CvGame::getDiplomaticVictoryAchieved(int ID)
 {
   CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)ID);
-  	
+	
 	return diplomaticVictoryAchieved[kPlayer.getTeam()];
 }
 #endif
 
 int CvGame::getCurrentVoteID() const
 {
-    return m_iCurrentVoteID;
+	return m_iCurrentVoteID;
 }
 
 void CvGame::setCurrentVoteID(int iNewValue)
 {
-    if (iNewValue != getCurrentVoteID())
-    {
-        m_iCurrentVoteID = iNewValue;
-    }
+	if (iNewValue != getCurrentVoteID())
+	{
+		m_iCurrentVoteID = iNewValue;
+	}
 }
 
 int CvGame::getXResolution() const
@@ -12921,27 +12876,27 @@ void CvGame::doFinalFive()
 	int iI;
 	if (!GC.getGameINLINE().isGameMultiPlayer())
 	{
-	    if (isOption(GAMEOPTION_CHALLENGE_CUT_LOSERS))
-	    {
-	        if (countCivPlayersAlive() > 5)
-	        {
-	            changeCutLosersCounter(1);
-	            if (getCutLosersCounter() >= ((GC.getDefineINT("CUT_LOSERS_TURN_INCREMENT") * GC.getGameSpeedInfo(getGameSpeedType()).getAnarchyPercent()) / 100))
-	            {
-	                GET_PLAYER(getRankPlayer(countCivPlayersAlive() -1)).setAlive(false);
-	                changeCutLosersCounter(getCutLosersCounter() * -1);
+		if (isOption(GAMEOPTION_CHALLENGE_CUT_LOSERS))
+		{
+			if (countCivPlayersAlive() > 5)
+			{
+				changeCutLosersCounter(1);
+				if (getCutLosersCounter() >= ((GC.getDefineINT("CUT_LOSERS_TURN_INCREMENT") * GC.getGameSpeedInfo(getGameSpeedType()).getAnarchyPercent()) / 100))
+				{
+					GET_PLAYER(getRankPlayer(countCivPlayersAlive() -1)).setAlive(false);
+					changeCutLosersCounter(getCutLosersCounter() * -1);
 					 for (iI = 0; iI < MAX_PLAYERS; iI++)
-	                {
-	                    if (GET_PLAYER((PlayerTypes)iI).isAlive())
-	                    {
+					{
+						if (GET_PLAYER((PlayerTypes)iI).isAlive())
+						{
 							MEMORY_TRACK_EXEMPT();
 
 							AddDLLMessage((PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_LOW_PLAYER_DROPPED").GetCString(), "AS2D_FIRSTTOTECH", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"));
 						}
 					}
-	            }
-	        }
-	    }
+				}
+			}
+		}
 	}
 }
 
@@ -12952,32 +12907,32 @@ void CvGame::doHightoLow()
 	int iI;
 	if (!GC.getGameINLINE().isGameMultiPlayer())
 	{
-	    if (isOption(GAMEOPTION_CHALLENGE_HIGH_TO_LOW))
-	    {
-            if (getGameTurn() >= GC.getDefineINT("HIGH_TO_LOW_FIRST_TURN_CHECK"))
-            {
-                if (getHighToLowCounter() < 2)
-                {
-                    for (iI = 0; iI < MAX_PLAYERS; iI++)
-                    {
-                        if (GET_PLAYER((PlayerTypes)iI).isAlive())
-                        {
-                            if (GET_PLAYER((PlayerTypes)iI).isHuman())
-                            {
-                                if (getPlayerRank((PlayerTypes)iI) == 0)
-                                {
+		if (isOption(GAMEOPTION_CHALLENGE_HIGH_TO_LOW))
+		{
+			if (getGameTurn() >= GC.getDefineINT("HIGH_TO_LOW_FIRST_TURN_CHECK"))
+			{
+				if (getHighToLowCounter() < 2)
+				{
+					for (iI = 0; iI < MAX_PLAYERS; iI++)
+					{
+						if (GET_PLAYER((PlayerTypes)iI).isAlive())
+						{
+							if (GET_PLAYER((PlayerTypes)iI).isHuman())
+							{
+								if (getPlayerRank((PlayerTypes)iI) == 0)
+								{
 									MEMORY_TRACK_EXEMPT();
 
-                                    GC.getInitCore().reassignPlayerAdvanced((PlayerTypes)iI, getRankPlayer(countCivPlayersAlive() -1));
-                                    changeHighToLowCounter(1);
+									GC.getInitCore().reassignPlayerAdvanced((PlayerTypes)iI, getRankPlayer(countCivPlayersAlive() -1));
+									changeHighToLowCounter(1);
 									AddDLLMessage((PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_PLAYER_REASSIGNED").GetCString(), "AS2D_WELOVEKING", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"));
-                                }
-                            }
-                        }
-                    }
-			    }
+								}
+							}
+						}
+					}
+				}
 			}
-	    }
+		}
 	}
 }
 void CvGame::doIncreasingDifficulty()

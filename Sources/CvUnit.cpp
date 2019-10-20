@@ -5340,19 +5340,9 @@ bool CvUnit::isActionRecommended(int iAction)
 		return false;
 	}
 
+	if (Cy::call<bool>(PYGameModule, "isActionRecommended", Cy::Args() << this << iAction))
 	{
-
-		CyUnit* pyUnit = new CyUnit(this);
-		CyArgsList argsList;
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyUnit));	// pass in unit class
-		argsList.add(iAction);
-		long lResult=0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "isActionRecommended", argsList.makeFunctionArgs(), &lResult);
-		delete pyUnit;	// python fxn must not hold on to this pointer 
-		if (lResult == 1)
-		{
-			return true;
-		}
+		return true;
 	}
 
 	pPlot = gDLL->getInterfaceIFace()->getGotoPlot();
@@ -7147,17 +7137,12 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 
 	if (GC.getUSE_UNIT_CANNOT_MOVE_INTO_CALLBACK())
 	{
-
 		// Python Override
-		CyArgsList argsList;
-		argsList.add(getOwnerINLINE());	// Player ID
-		argsList.add(getID());	// Unit ID
-		argsList.add(pPlot->getX());	// Plot X
-		argsList.add(pPlot->getY());	// Plot Y
-		long lResult=0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "unitCannotMoveInto", argsList.makeFunctionArgs(), &lResult);
-
-		if (lResult != 0)
+		if (Cy::call<bool>(PYGameModule, "unitCannotMoveInto", Cy::Args()
+			<< getOwnerINLINE()
+			<< getID()
+			<< pPlot->getX()
+			<< pPlot->getY()))
 		{
 			return false;
 		}
@@ -11931,16 +11916,12 @@ bool CvUnit::canSpread(const CvPlot* pPlot, ReligionTypes eReligion, bool bTestV
 /************************************************************************************************/
 	if (GC.getUSE_USE_CANNOT_SPREAD_RELIGION_CALLBACK())
 	{
-
-		CyArgsList argsList;
-		argsList.add(getOwnerINLINE());
-		argsList.add(getID());
-		argsList.add((int) eReligion);
-		argsList.add(pPlot->getX());
-		argsList.add(pPlot->getY());
-		long lResult=0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "cannotSpreadReligion", argsList.makeFunctionArgs(), &lResult);
-		if (lResult > 0)
+		if (Cy::call<bool>(PYGameModule, "cannotSpreadReligion", Cy::Args()
+			<< getOwnerINLINE()
+			<< getID()
+			<< (int)eReligion
+			<< pPlot->getX()
+			<< pPlot->getY()))
 		{
 			return false;
 		}
@@ -14093,16 +14074,14 @@ int CvUnit::upgradePrice(UnitTypes eUnit) const
 /************************************************************************************************/
 	if(GC.getUSE_UPGRADE_UNIT_PRICE_CALLBACK())
 	{
-
-		CyArgsList argsList;
-		argsList.add(getOwnerINLINE());
-		argsList.add(getID());
-		argsList.add((int) eUnit);
-		long lResult=0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "getUpgradePriceOverride", argsList.makeFunctionArgs(), &lResult);
-		if (lResult >= 0)
+		int iResult = Cy::call<int>(PYGameModule, "getUpgradePriceOverride", Cy::Args()
+			<< getOwnerINLINE()
+			<< getID()
+			<< eUnit
+			);
+		if (iResult >= 0)
 		{
-			return lResult;
+			return iResult;
 		}
 	}
 /************************************************************************************************/
@@ -30573,17 +30552,10 @@ int CvUnit::getTriggerValue(EventTriggerTypes eTrigger, const CvPlot* pPlot, boo
 	//	and we'll often have decided the trigger is inapplicable before this
 	if (!CvString(kTrigger.getPythonCanDoUnit()).empty())
 	{
-
-		long lResult;
-
-		CyArgsList argsList;
-		argsList.add(eTrigger);
-		argsList.add(getOwnerINLINE());
-		argsList.add(getID());
-
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYRandomEventModule, kTrigger.getPythonCanDoUnit(), argsList.makeFunctionArgs(), &lResult);
-
-		if (0 == lResult)
+		if (!Cy::call<bool>(PYRandomEventModule, kTrigger.getPythonCanDoUnit(), Cy::Args()
+			<< eTrigger
+			<< getOwnerINLINE()
+			<< getID()))
 		{
 			return MIN_INT;
 		}

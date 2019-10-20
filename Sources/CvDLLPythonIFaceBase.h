@@ -1,15 +1,11 @@
 #pragma once
-
-#ifndef CvDLLPythonIFaceBase_h
-#define CvDLLPythonIFaceBase_h
-
+#pragma optimize("", off)
 //
 // abstract interface for Python functions used by DLL
 // Creator - Mustafa Thamer
 // Copyright 2005 Firaxis Games
 //
 
-//#include "CvEnums.h"
 # include <boost/python/object.hpp>
 namespace python = boost::python;
 
@@ -47,53 +43,14 @@ public:
 	virtual bool pythonUsingDefaultImpl() = 0;
 };
 
-#define FPythonAssert(expr, moduleName, functionName) FAssertMsg(expr, CvString::format("%s.%s", moduleName, functionName).c_str()) 
-
-namespace CvPython
-{
-	// Call Python function with no return value or arguments
-	inline void call(const char* const moduleName, const char* const functionName)
-	{
-		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName);
-		FPythonAssert(bOK, moduleName, functionName);
-	}
-
-	// Call Python function with return value but no arguments
-	template < class ReturnValueTy_ >
-	inline ReturnValueTy_ call(const char* const moduleName, const char* const functionName)
-	{
-		ReturnValueTy_ rval;
-		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName, NULL, &rval);
-		FPythonAssert(bOK, moduleName, functionName);
-		return rval;
-	}
-
-	// Call Python function with arguments but no return value
-	inline void call(const char* const moduleName, const char* const functionName, CyArgsList args)
-	{
-		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs());
-		FPythonAssert(bOK, moduleName, functionName);
-	}
-
-	// Call Python function with return value and arguments
-	template < class ReturnValueTy_ >
-	inline ReturnValueTy_ call(const char* const moduleName, const char* const functionName, CyArgsList args)
-	{
-		ReturnValueTy_ rval;
-		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs(), &rval);
-		FPythonAssert(bOK, moduleName, functionName);
-		return rval;
-	}
-}
 
 /* THESE MACROS ARE DEPRECATED, use CvPython::call and CyArgsList() << operation like so:
 
 std::vector<int> arr = CvPython::call(PYGameModule, "getOrderArray", CyArgsList() << arg1 << arg2 << CyArrayArg(enabled, 4));
 or
 std::vector<int> arr = CvPython::call(PYGameModule, "getOrderArray", arg1, arg2, CyArrayArg(enabled, 4));
-
-
 */
+
 #define PYTHON_CALL_FUNCTION2(_callingfn_, _module_, _function_)					gDLL->getPythonIFace()->callFunction(_module_, _function_)
 #define PYTHON_CALL_FUNCTION(_callingfn_, _module_, _function_, _args_)				gDLL->getPythonIFace()->callFunction(_module_, _function_, _args_)
 #define PYTHON_CALL_FUNCTION4(_callingfn_, _module_, _function_, _args_, _result_)	gDLL->getPythonIFace()->callFunction(_module_, _function_, _args_, _result_)
@@ -222,4 +179,5 @@ int CvDLLPythonIFaceBase::putStringSeqInArray(PyObject* src, T** aDst)
 	return size;
 }
 
-#endif	//  CvDLLPythonIFaceBase_h
+
+#pragma optimize("", on)

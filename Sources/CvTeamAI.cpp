@@ -496,16 +496,16 @@ AreaAITypes CvTeamAI::AI_calculateAreaAIType(CvArea* pArea, bool bPreparingTotal
 					}
 					else
 					{
-                        bAssault = true;
-                        if (AI_isSneakAttackPreparing((TeamTypes)iI))
-                        {
-                            bPreparingAssault = true;
-                        }
+						bAssault = true;
+						if (AI_isSneakAttackPreparing((TeamTypes)iI))
+						{
+							bPreparingAssault = true;
+						}
 					}
 				}
 			}
 		}
-        
+		
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                         01/12/10                             jdog5000      */
 /*                                                                                              */
@@ -660,7 +660,7 @@ AreaAITypes CvTeamAI::AI_calculateAreaAIType(CvArea* pArea, bool bPreparingTotal
 			{
 				if (AI_isPrimaryArea(pArea))
 				{
-                    if (bPreparingAssault)
+					if (bPreparingAssault)
 					{
 						return AREAAI_ASSAULT_MASSING;
 					}
@@ -1433,14 +1433,14 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 			iValue /= 10 * iOurPower;
 		}
 		
-	    // for now, we will always do the land mass check for domination
+		// for now, we will always do the land mass check for domination
 		// if we have more than half the land, then value peace at 90% * land ratio 
 		int iLandRatio = ((getTotalLand(true) * 100) / std::max(1, GET_TEAM(eTeam).getTotalLand(true)));
-	    if (iLandRatio > 120)
-	    {
+		if (iLandRatio > 120)
+		{
 			iValue *= 9 * 100;
 			iValue /= 10 * iLandRatio;
-	    }
+		}
 
 		// if in financial trouble, warmongers will continue the fight to make more money
 		if (bAnyFinancialTrouble)
@@ -1499,7 +1499,7 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 		iValue *= 2;
 	}
 	else if ((!(isHuman()) && (eWarPlan == WARPLAN_DOGPILE) && (GET_TEAM(eTeam).getAtWarCount(true) > 1)) ||
-		       (!(GET_TEAM(eTeam).isHuman()) && (GET_TEAM(eTeam).AI_getWarPlan(getID()) == WARPLAN_DOGPILE) && (getAtWarCount(true) > 1)))
+			   (!(GET_TEAM(eTeam).isHuman()) && (GET_TEAM(eTeam).AI_getWarPlan(getID()) == WARPLAN_DOGPILE) && (getAtWarCount(true) > 1)))
 	{
 		iValue *= 3;
 		iValue /= 2;
@@ -1884,40 +1884,40 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-    TechTypes eCurrentResearch = GET_PLAYER(getLeaderID()).getCurrentResearch();
-    TeamTypes eStrongestTeam = (TeamTypes)getID();
-    for (iI = 0; iI < MAX_PLAYERS; iI++)
-    {
-        if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
-        {
-            if (GET_TEAM((GET_PLAYER((PlayerTypes)iI)).getTeam()).getPower(true) > GET_TEAM(eStrongestTeam).getPower(true))
-            {
-                eCurrentResearch = GET_PLAYER((PlayerTypes)iI).getCurrentResearch();
-                eStrongestTeam = GET_PLAYER((PlayerTypes)iI).getTeam();
-            }
-        }
-    }
-    
-    
-    if (GC.getGameINLINE().isOption(GAMEOPTION_NO_TECH_BROKERING))
-    {
-        CvTeam& kTeam = GET_TEAM(eTeam);
-            
-        if (!kTeam.isHasTech(eTech))
-        {
-            if (!kTeam.isHuman())
-            {
-                if ((eTech == eCurrentResearch) || (GC.getGameINLINE().isOption(GAMEOPTION_NO_TECH_DIFFUSION)))
-                {
-                    if (2 * kTeam.getResearchProgress(eTech) > kTeam.getResearchCost(eTech))
-                    {
-                        return DENIAL_NO_GAIN;
-                    }
-                }
-            }
-        }
-    }
-    
+	TechTypes eCurrentResearch = GET_PLAYER(getLeaderID()).getCurrentResearch();
+	TeamTypes eStrongestTeam = (TeamTypes)getID();
+	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	{
+		if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+		{
+			if (GET_TEAM((GET_PLAYER((PlayerTypes)iI)).getTeam()).getPower(true) > GET_TEAM(eStrongestTeam).getPower(true))
+			{
+				eCurrentResearch = GET_PLAYER((PlayerTypes)iI).getCurrentResearch();
+				eStrongestTeam = GET_PLAYER((PlayerTypes)iI).getTeam();
+			}
+		}
+	}
+	
+	
+	if (GC.getGameINLINE().isOption(GAMEOPTION_NO_TECH_BROKERING))
+	{
+		CvTeam& kTeam = GET_TEAM(eTeam);
+			
+		if (!kTeam.isHasTech(eTech))
+		{
+			if (!kTeam.isHuman())
+			{
+				if ((eTech == eCurrentResearch) || (GC.getGameINLINE().isOption(GAMEOPTION_NO_TECH_DIFFUSION)))
+				{
+					if (2 * kTeam.getResearchProgress(eTech) > kTeam.getResearchCost(eTech))
+					{
+						return DENIAL_NO_GAIN;
+					}
+				}
+			}
+		}
+	}
+	
 /************************************************************************************************/
 /* Afforess                         END                                                            */
 /************************************************************************************************/ 
@@ -3212,7 +3212,7 @@ void CvTeamAI::AI_getWarRands( int &iMaxWarRand, int &iLimitedWarRand, int &iDog
 	
 	if (bFinalWar)
 	{
-	    iMaxWarRand /= 4;
+		iMaxWarRand /= 4;
 	}
 
 	iLimitedWarRand *= (2 + iNumMembers);
@@ -3403,9 +3403,9 @@ DenialTypes CvTeamAI::AI_makePeaceTrade(TeamTypes ePeaceTeam, TeamTypes eTeam) c
 		return DENIAL_CONTACT_THEM;
 	}
 	
-    int iLandRatio = ((getTotalLand(true) * 100) / std::max(20, GET_TEAM(eTeam).getTotalLand(true)));
-    if (iLandRatio > 250)
-    {
+	int iLandRatio = ((getTotalLand(true) * 100) / std::max(20, GET_TEAM(eTeam).getTotalLand(true)));
+	if (iLandRatio > 250)
+	{
 		return DENIAL_VICTORY;
 	}
 
@@ -5190,27 +5190,16 @@ void CvTeamAI::AI_doWar()
 	{
 		return;
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 04/29/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	if (GC.getUSE_AI_CAN_DO_WARPLANS_CALLBACK())
 	{
-
 		// allow python to handle it
-		CyArgsList argsList;
-		argsList.add(getID());
-		long lResult=0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "AI_doWar", argsList.makeFunctionArgs(), &lResult);
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "AI_doWar", Cy::Args() << getID()))
 		{
 			return;
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	int iEnemyPowerPercent = AI_getEnemyPowerPercent();
 
 	// Afforess 
@@ -5630,11 +5619,11 @@ void CvTeamAI::AI_doWar()
 			}
 		}
 
-	    // if random in this range is 0, we go to war of this type (so lower numbers are higher probablity)
+		// if random in this range is 0, we go to war of this type (so lower numbers are higher probablity)
 		// average of everyone on our team
 		int iTotalWarRand;
-	    int iLimitedWarRand;
-	    int iDogpileWarRand;
+		int iLimitedWarRand;
+		int iDogpileWarRand;
 		AI_getWarRands( iTotalWarRand, iLimitedWarRand, iDogpileWarRand );
 
 		int iTotalWarThreshold;
@@ -6423,7 +6412,7 @@ DenialTypes CvTeamAI::AI_contactTrade(TeamTypes eContactTeam, TeamTypes eTeam) c
 			}	
 		}
 	}
-    return NO_DENIAL;
+	return NO_DENIAL;
 }
 
 
@@ -6455,7 +6444,7 @@ int CvTeamAI::AI_LimitedBordersTradeVal(TeamTypes eTeam) const
 
 int CvTeamAI::AI_contactTradeVal(TeamTypes eContactTeam, TeamTypes eTeam) const
 {
-    int iValue = 5;
+	int iValue = 5;
 	int iAttitude = 0;
 	int iMetCount = 0;
 	int iPower = 0;
@@ -6631,7 +6620,7 @@ DenialTypes CvTeamAI::AI_FreeTradeAgreement(TeamTypes eTeam) const
 		}
 	}
 	
-    return NO_DENIAL;
+	return NO_DENIAL;
 }
 
 bool CvTeamAI::AI_hasAdjacentLandPlots(TeamTypes eTeam) const

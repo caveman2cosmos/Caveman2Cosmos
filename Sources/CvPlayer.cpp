@@ -2768,9 +2768,7 @@ void CvPlayer::addFreeUnit(UnitTypes eUnit, UnitAITypes eUnitAI)
 
 		if (isHuman())
 		{
-			long lResult=0;
-			PYTHON_CALL_FUNCTION4(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "startHumansOnSameTile", NULL, &lResult);
-			if (lResult == 0)
+			if (!Cy::call<bool>(gDLL->getPythonIFace()->getMapScriptModule(), "startHumansOnSameTile"))
 			{
 				if (!(GC.getUnitInfo(eUnit).isFound()))
 				{
@@ -2834,10 +2832,10 @@ int CvPlayer::startingPlotRange() const
 
 	iRange += std::min(((GC.getMapINLINE().getNumAreas() + 1) / 2), GC.getGameINLINE().countCivPlayersAlive());
 
-	long lResult=0;
-	if (PYTHON_CALL_FUNCTION4(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "minStartingDistanceModifier", NULL, &lResult))
+	int iResult = 0;
+	if (Cy::call_optional(gDLL->getPythonIFace()->getMapScriptModule(), "minStartingDistanceModifier", iResult))
 	{
-		iRange *= std::max<int>(0, (lResult + 100));
+		iRange *= std::max<int>(0, (iResult + 100));
 		iRange /= 100;
 	}
 
@@ -2904,21 +2902,16 @@ int CvPlayer::findStartingArea() const
 {
 	PROFILE_FUNC();
 
-	long result = -1;
-	CyArgsList argsList;
-	argsList.add(getID());		// pass in this players ID
-	if (PYTHON_CALL_FUNCTION4(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "findStartingArea", argsList.makeFunctionArgs(), &result))
+	int result = -1;
+	if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "findStartingArea", Cy::Args() << getID(), result))
 	{
-		if (!gDLL->getPythonIFace()->pythonUsingDefaultImpl()) // Python override
+		if (result == -1 || GC.getMapINLINE().getArea(result) != NULL)
 		{
-			if (result == -1 || GC.getMapINLINE().getArea(result) != NULL)
-			{
-				return result;
-			}
-			else
-			{
-				FAssertMsg(false, "python findStartingArea() must return -1 or the ID of a valid area");
-			}
+			return result;
+		}
+		else
+		{
+			FAssertMsg(false, "python findStartingArea() must return -1 or the ID of a valid area");
 		}
 	}
 
@@ -2966,22 +2959,17 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 
 	{
 
-		long result = -1;
-		CyArgsList argsList;
-		argsList.add(getID());		// pass in this players ID
-		if (PYTHON_CALL_FUNCTION4(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "findStartingPlot", argsList.makeFunctionArgs(), &result))
+		int result = -1;
+		if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "findStartingPlot", Cy::Args() << getID(), result))
 		{
-			if (!gDLL->getPythonIFace()->pythonUsingDefaultImpl()) // Python override
+			CvPlot *pPlot = GC.getMapINLINE().plotByIndexINLINE(result);
+			if (pPlot != NULL)
 			{
-				CvPlot *pPlot = GC.getMapINLINE().plotByIndexINLINE(result);
-				if (pPlot != NULL)
-				{
-					return pPlot;
-				}
-				else
-				{
-					FAssertMsg(false, "python findStartingPlot() returned an invalid plot index!");
-				}
+				return pPlot;
+			}
+			else
+			{
+				FAssertMsg(false, "python findStartingPlot() returned an invalid plot index!");
 			}
 		}
 	}
@@ -3859,16 +3847,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 	bool bConquestCanRaze = false;
 	if (bConquest)
 	{
-
-		CyCity* pyCity = new CyCity(pNewCity);
-		CyArgsList argsList;
-		argsList.add(getID());	// Player ID
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyCity));	// pass in city class
-		long lResult=0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "canRazeCity", argsList.makeFunctionArgs(), &lResult);
-		delete pyCity;	// python fxn must not hold on to this pointer 
-
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "canRazeCity", Cy::Args() << getID() << pNewCity))
 		{
 			bConquestCanRaze = true;
 		}
@@ -6285,15 +6264,7 @@ int CvPlayer::calculateScore(bool bFinal, bool bVictory) const
 		return 0;
 	}
 
-	long lScore = 0;
-
-	CyArgsList argsList;
-	argsList.add((int) getID());
-	argsList.add(bFinal);
-	argsList.add(bVictory);
-	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "calculateScore", argsList.makeFunctionArgs(), &lScore);
-
-	return ((int)lScore);
+	return Cy::call<int>(PYGameModule, "calculateScore", Cy::Args() << getID() << bFinal << bVictory);
 
 // A python clean-up by Toffer90 made the above code as fast as the hardcoded solution that's below.
 // I'll keep this commented out in the case we ever need it again, however unlikely that is. - KaTiON 
@@ -8370,17 +8341,9 @@ bool CvPlayer::canRaze(CvCity* pCity) const
 /************************************************************************************************/
 	if(GC.getUSE_CAN_RAZE_CITY_CALLBACK())
 	{
-
-		CyCity* pyCity = new CyCity(pCity);
-		CyArgsList argsList;
-		argsList.add(getID());	// Player ID
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyCity));	// pass in city class
-		long lResult=0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "canRazeCity", argsList.makeFunctionArgs(), &lResult);
-		delete pyCity;	// python fxn must not hold on to this pointer 
-		if (lResult == 0)
+		if (!Cy::call<bool>(PYGameModule, "canRazeCity", Cy::Args() << getID() << pCity))
 		{
-			return (false);
+			return false;
 		}
 	}
 /************************************************************************************************/
@@ -8880,17 +8843,8 @@ void CvPlayer::receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit)
 void CvPlayer::doGoody(CvPlot* pPlot, CvUnit* pUnit)
 {
 	{
-
-		CyPlot kGoodyPlot(pPlot);
-		CyUnit kGoodyUnit(pUnit);
-		CyArgsList argsList;
-		argsList.add(getID());		// pass in this players ID
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(&kGoodyPlot));
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(&kGoodyUnit));
-
-		long result=0;
-		bool ok = PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doGoody", argsList.makeFunctionArgs(), &result);
-		if (ok && result)
+		bool result = false;
+		if (Cy::call_optional(PYGameModule, "doGoody", Cy::Args() << getID() << pPlot << pUnit, result) && result)
 		{
 			return;
 		}
@@ -8949,17 +8903,9 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 
 	pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
 
-	long lResult=0;
 	if(GC.getUSE_CANNOT_FOUND_CITY_CALLBACK())
 	{
-
-		CyArgsList argsList;
-		argsList.add((int)getID());
-		argsList.add(iX);
-		argsList.add(iY);
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "cannotFoundCity", argsList.makeFunctionArgs(), &lResult);
-
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "cannotFoundCity", Cy::Args() << getID() << iX << iY))
 		{
 			return false;
 		}
@@ -9082,19 +9028,7 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 	{
 		if(GC.getUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK())
 		{
-
-			bValid = false;
-
-			CyArgsList argsList2;
-			argsList2.add(iX);
-			argsList2.add(iY);
-			lResult=0;
-			PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "canFoundCitiesOnWater", argsList2.makeFunctionArgs(), &lResult);
-
-			if (lResult == 1)
-			{
-				bValid = true;
-			}
+			bValid = Cy::call<bool>(PYGameModule, "canFoundCitiesOnWater", Cy::Args() << iX << iY);
 		}
 	}
 /************************************************************************************************/
@@ -10181,16 +10115,10 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 	// Python cost modifier
 	if(GC.getUSE_GET_UNIT_COST_MOD_CALLBACK())
 	{
-
-		CyArgsList argsList;
-		argsList.add(getID());	// Player ID
-		argsList.add((int)eUnit);
-		long lResult=0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "getUnitCostMod", argsList.makeFunctionArgs(), &lResult);
-
-		if (lResult > 1)
+		int iResult = Cy::call<bool>(PYGameModule, "getUnitCostMod", Cy::Args() << getID() << eUnit);
+		if (iResult > 1)
 		{
-			iProductionNeeded *= lResult;
+			iProductionNeeded *= iResult;
 			iProductionNeeded /= 100;
 		}
 	}
@@ -11371,28 +11299,12 @@ int CvPlayer::calculateUnitSupply(int& iPaidUnits, int& iBaseSupplyCost) const
 
 int CvPlayer::calculatePreInflatedCosts() const
 {
-/************************************************************************************************/
-/* Afforess	                  Start		 04/29/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	long lResult = 0;
 	if (GC.getUSE_EXTRA_PLAYER_COSTS_CALLBACK())
 	{
-
-		CyArgsList argsList;
-		argsList.add(getID());
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "getExtraCost", argsList.makeFunctionArgs(), &lResult);
+		lResult = Cy::call<long>(PYGameModule, "getExtraCost", Cy::Args() << getID());
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
-/************************************************************************************************/
-/* Afforess	                  Start		 06/19/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	int iCosts = 0;
 	//ls612: All of the following functions (except for Corporate Tax) are modified by a new Gamespeed Gold tag.
 	//This is done in order for the displayed numbers in the Financial Advisor to be correct.
@@ -11414,9 +11326,6 @@ int CvPlayer::calculatePreInflatedCosts() const
 
 	iCosts += (int)lResult;
 	return iCosts;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 }
 
 //	Called once per turn to update the current cost-to-turn-1-cost ratio
@@ -11824,13 +11733,7 @@ bool CvPlayer::isResearch() const
 {
 	if(GC.getUSE_IS_PLAYER_RESEARCH_CALLBACK())
 	{
-
-		CyArgsList argsList;
-		long lResult;
-		argsList.add(getID());
-		lResult = 1;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "isPlayerResearch", argsList.makeFunctionArgs(), &lResult);
-		if (lResult == 0)
+		if (!Cy::call<bool>(PYGameModule, "isPlayerResearch", Cy::Args() << getID()))
 		{
 			return false;
 		}
@@ -11899,14 +11802,7 @@ bool CvPlayer::canEverResearch(TechTypes eTech) const
 
 	if(GC.getUSE_CANNOT_RESEARCH_CALLBACK())
 	{
-
-		CyArgsList argsList;
-		argsList.add(getID());
-		argsList.add(eTech);
-		argsList.add(false);
-		long lResult=0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "cannotResearch", argsList.makeFunctionArgs(), &lResult);
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "cannotResearch", Cy::Args() << getID() << eTech << false))
 		{
 			return false;
 		}
@@ -11924,14 +11820,7 @@ bool CvPlayer::canResearch(TechTypes eTech, bool bTrade) const
 
 	if(GC.getUSE_CAN_RESEARCH_CALLBACK())
 	{
-
-		CyArgsList argsList;
-		argsList.add(getID());
-		argsList.add(eTech);
-		argsList.add(bTrade);
-		long lResult=0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "canResearch", argsList.makeFunctionArgs(), &lResult);
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "canResearch", Cy::Args() << getID() << eTech << bTrade))
 		{
 			return true;
 		}
@@ -12192,13 +12081,7 @@ bool CvPlayer::canDoCivics(CivicTypes eCivic) const
 /************************************************************************************************/
 	if(GC.getUSE_CAN_DO_CIVIC_CALLBACK())
 	{
-
-		CyArgsList argsList;
-		argsList.add(getID());
-		argsList.add(eCivic);
-		long lResult=0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "canDoCivic", argsList.makeFunctionArgs(), &lResult);
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "canDoCivic", Cy::Args() << getID() << eCivic))
 		{
 			return true;
 		}
@@ -12211,13 +12094,7 @@ bool CvPlayer::canDoCivics(CivicTypes eCivic) const
 
 	if(GC.getUSE_CANNOT_DO_CIVIC_CALLBACK())
 	{
-
-		CyArgsList argsList2; // XXX
-		argsList2.add(getID());
-		argsList2.add(eCivic);
-		long lResult=0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "cannotDoCivic", argsList2.makeFunctionArgs(), &lResult);
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "cannotDoCivic", Cy::Args() << getID() << eCivic))
 		{
 			return false;
 		}
@@ -15961,24 +15838,19 @@ void CvPlayer::sendReminder()
 
 		GAMETEXT.setTimeStr(szYearStr, GC.getGameINLINE().getGameTurn(), true);
 
-		// Generate our arguments
-		CyArgsList argsList;
-		argsList.add(getPbemEmailAddress());
-		argsList.add(gDLL->GetPitbossSmtpHost());
-		argsList.add(gDLL->GetPitbossSmtpLogin());
-		argsList.add(gDLL->GetPitbossSmtpPassword());
-		argsList.add(GC.getGameINLINE().getName());
-		argsList.add(GC.getGameINLINE().isMPOption(MPOPTION_TURN_TIMER));
-		argsList.add(GC.getGameINLINE().getPitbossTurnTime());
-		argsList.add(gDLL->GetPitbossEmail());
-		argsList.add(szYearStr);
-
 		// Now send our email via Python
-		long iResult;
-		bool bOK = PYTHON_CALL_FUNCTION4(__FUNCTION__, PYPitBossModule, "sendEmail", argsList.makeFunctionArgs(), &iResult);
+		int iReturnCode = Cy::call<int>(PYPitBossModule, "sendEmail", Cy::Args()
+			<< getPbemEmailAddress()
+			<< gDLL->GetPitbossSmtpHost()
+			<< gDLL->GetPitbossSmtpLogin()
+			<< gDLL->GetPitbossSmtpPassword()
+			<< GC.getGameINLINE().getName()
+			<< GC.getGameINLINE().isMPOption(MPOPTION_TURN_TIMER)
+			<< GC.getGameINLINE().getPitbossTurnTime()
+			<< gDLL->GetPitbossEmail()
+			<< szYearStr);
 
-		FAssertMsg( bOK, "Pitboss Python call to onSendEmail failed!" );
-		FAssertMsg( iResult == 0, "Pitboss Python fn onSendEmail encountered an error" );
+		FAssertMsg(iReturnCode == 0, "Pitboss Python fn onSendEmail encountered an error" );
 	}
 }
 
@@ -20568,12 +20440,7 @@ void CvPlayer::doGold()
 /************************************************************************************************/
 	if(GC.getUSE_CAN_DO_GOLD_CALLBACK())
 	{
-
-		CyArgsList argsList;
-		argsList.add(getID());
-		long lResult=0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doGold", argsList.makeFunctionArgs(), &lResult);
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "doGold", Cy::Args() << getID()))
 		{
 			return;
 		}
@@ -20648,12 +20515,7 @@ void CvPlayer::doResearch()
 /************************************************************************************************/
 	if(GC.getUSE_CAN_DO_RESEARCH_CALLBACK())
 	{
-
-		CyArgsList argsList;
-		argsList.add(getID());
-		long lResult=0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doResearch", argsList.makeFunctionArgs(), &lResult);
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "doResearch", Cy::Args() << getID()))
 		{
 			return;
 		}
@@ -26734,13 +26596,7 @@ void CvPlayer::setTriggerFired(const EventTriggeredData& kTriggeredData, bool bO
 
 	if (!CvString(kTrigger.getPythonCallback()).empty())
 	{
-
-		long lResult;
-
-		CyArgsList argsList;
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(&kTriggeredData));
-
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYRandomEventModule, kTrigger.getPythonCallback(), argsList.makeFunctionArgs(), &lResult);
+		Cy::call(PYRandomEventModule, kTrigger.getPythonCallback(), Cy::Args() << &kTriggeredData);
 	}
 
 	if (bAnnounce)
@@ -27265,15 +27121,7 @@ EventTriggeredData* CvPlayer::initTriggeredData(EventTriggerTypes eEventTrigger,
 
 	if (!CvString(kTrigger.getPythonCanDo()).empty())
 	{
-
-		long lResult;
-
-		CyArgsList argsList;
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pTriggerData));
-
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYRandomEventModule, kTrigger.getPythonCanDo(), argsList.makeFunctionArgs(), &lResult);
-
-		if (0 == lResult)
+		if (!Cy::call<bool>(PYRandomEventModule, kTrigger.getPythonCanDo(), Cy::Args() << pTriggerData))
 		{
 			deleteEventTriggered(pTriggerData->getID());
 			return NULL;
@@ -27676,16 +27524,7 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 
 	if (!CvString(kEvent.getPythonCanDo()).empty())
 	{
-
-		long lResult;
-
-		CyArgsList argsList;
-		argsList.add(eEvent);
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(&kTriggeredData));
-
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYRandomEventModule, kEvent.getPythonCanDo(), argsList.makeFunctionArgs(), &lResult);
-
-		if (0 == lResult)
+		if (!Cy::call<bool>(PYRandomEventModule, kEvent.getPythonCanDo(), Cy::Args() << eEvent << &kTriggeredData))
 		{
 			return false;
 		}
@@ -28065,14 +27904,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 
 		if (!CvString(kEvent.getPythonCallback()).empty())
 		{
-
-			long lResult;
-
-			CyArgsList argsList;
-			argsList.add(eEvent);
-			argsList.add(gDLL->getPythonIFace()->makePythonObject(pTriggeredData));
-
-			PYTHON_CALL_FUNCTION4(__FUNCTION__, PYRandomEventModule, kEvent.getPythonCallback(), argsList.makeFunctionArgs(), &lResult);
+			Cy::call(PYRandomEventModule, kEvent.getPythonCallback(), Cy::Args() << eEvent << pTriggeredData);
 		}
 
 		if (kEvent.getNumWorldNews() > 0)
@@ -28862,16 +28694,7 @@ bool CvPlayer::checkExpireEvent(EventTypes eEvent, const EventTriggeredData& kTr
 
 		if (!CvString(kEvent.getPythonExpireCheck()).empty())
 		{
-
-			long lResult;
-
-			CyArgsList argsList;
-			argsList.add(eEvent);
-			argsList.add(gDLL->getPythonIFace()->makePythonObject(&kTriggeredData));
-
-			PYTHON_CALL_FUNCTION4(__FUNCTION__, PYRandomEventModule, kEvent.getPythonExpireCheck(), argsList.makeFunctionArgs(), &lResult);
-
-			if (0 != lResult)
+			if (Cy::call<bool>(PYRandomEventModule, kEvent.getPythonExpireCheck(), Cy::Args() << eEvent << &kTriggeredData))
 			{
 				return true;
 			}
@@ -33641,14 +33464,7 @@ void CvPlayer::setShowLandmarks(bool bNewVal)
 			CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iPlot);
 			if (pLoopPlot->getLandmarkType() != NO_LANDMARK)
 			{
-
-				CyArgsList argsList;
-				CyPlot* pyPlot = new CyPlot(pLoopPlot);
-				argsList.add(gDLL->getPythonIFace()->makePythonObject(pyPlot));
-				argsList.add(getID());
-				argsList.add("");
-				PYTHON_CALL_FUNCTION(__FUNCTION__, PYCivModule, "AddSign", argsList.makeFunctionArgs());
-				delete pyPlot;
+				Cy::call(PYCivModule, "AddSign", Cy::Args() << pLoopPlot << getID() << "");
 			}
 		}
 	}
@@ -33659,14 +33475,7 @@ void CvPlayer::setShowLandmarks(bool bNewVal)
 			CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iPlot);
 			if (pLoopPlot->getLandmarkType() != NO_LANDMARK)
 			{
-
-				CyArgsList argsList;
-				CyPlot* pyPlot = new CyPlot(pLoopPlot);
-				argsList.add(gDLL->getPythonIFace()->makePythonObject(pyPlot));
-				argsList.add(getID());
-				argsList.add(pLoopPlot->getLandmarkMessage().GetCString());
-				PYTHON_CALL_FUNCTION(__FUNCTION__, PYCivModule, "AddSign", argsList.makeFunctionArgs());
-				delete pyPlot;
+				Cy::call(PYCivModule, "AddSign", Cy::Args() << pLoopPlot << getID() << pLoopPlot->getLandmarkMessage().GetCString());
 			}
 		}
 	}

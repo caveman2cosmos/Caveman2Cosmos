@@ -168,15 +168,7 @@ bool CvUnitAI::AI_update()
 /************************************************************************************************/
 	if(GC.getUSE_AI_UPDATE_UNIT_CALLBACK())
 	{
-
-		// allow python to handle it
-		CyUnit* pyUnit = new CyUnit(this);
-		CyArgsList argsList;
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyUnit));	// pass in unit class
-		long lResult=0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "AI_unitUpdate", argsList.makeFunctionArgs(), &lResult);
-		delete pyUnit;	// python fxn must not hold on to this pointer
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "AI_unitUpdate", Cy::Args() << this))
 		{
 			return false;
 		}

@@ -1,17 +1,9 @@
-// city.cpp
-
 #include "CvGameCoreDLL.h"
 #include "CvReachablePlotSet.h"
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      10/02/09                                jdog5000      */
-/*                                                                                              */
-/* AI logging                                                                                   */
-/************************************************************************************************/
 #include "BetterBTSAI.h"
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
+#include "CyCity.h"
 
 #include <boost/bind.hpp>
 
@@ -323,14 +315,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 		}
 	}
 
-	long lResult = 0;
-
-	CyArgsList argsList;
-	argsList.add(iX);
-	argsList.add(iY);
-	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "citiesDestroyFeatures", argsList.makeFunctionArgs(), &lResult);
-
-	if (lResult == 1)
+	if (Cy::call<bool>(PYGameModule, "citiesDestroyFeatures", Cy::Args(iX, iY)))
 	{
 		/************************************************************************************************/
 		/* UNOFFICIAL_PATCH                       10/30/09                     Mongoose & jdog5000      */
@@ -3220,18 +3205,14 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 	{
 		PROFILE("canTrain.Python");
 
-		CyCity* pyCity = new CyCity(const_cast<CvCity*>(this));
-		CyArgsList argsList;
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyCity));	// pass in city class
-		argsList.add(eUnit);
-		argsList.add(bContinue);
-		argsList.add(bTestVisible);
-		argsList.add(bIgnoreCost);
-		argsList.add(bIgnoreUpgrades);
-		long lResult = 0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "canTrain", argsList.makeFunctionArgs(), &lResult);
-		delete pyCity;	// python fxn must not hold on to this pointer 
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "canTrain", Cy::Args()
+			<< const_cast<CvCity*>(this)
+			<< eUnit
+			<< bContinue
+			<< bTestVisible
+			<< bIgnoreCost
+			<< bIgnoreUpgrades
+			))
 		{
 			return true;
 		}
@@ -3371,19 +3352,14 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 
 	if (GC.getUSE_CANNOT_TRAIN_CALLBACK(eUnit))
 	{
-
-		CyCity* pyCity = new CyCity(const_cast<CvCity*>(this));
-		CyArgsList argsList2; // XXX
-		argsList2.add(gDLL->getPythonIFace()->makePythonObject(pyCity));	// pass in city class
-		argsList2.add(eUnit);
-		argsList2.add(bContinue);
-		argsList2.add(bTestVisible);
-		argsList2.add(bIgnoreCost);
-		argsList2.add(bIgnoreUpgrades);
-		long lResult = 0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "cannotTrain", argsList2.makeFunctionArgs(), &lResult);
-		delete pyCity;	// python fxn must not hold on to this pointer 
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "cannotTrain", Cy::Args()
+			<< const_cast<CvCity*>(this)
+			<< eUnit
+			<< bContinue
+			<< bTestVisible
+			<< bIgnoreCost
+			<< bIgnoreUpgrades
+			))
 		{
 			return false;
 		}
@@ -3721,17 +3697,14 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 	if (GC.getUSE_CAN_CONSTRUCT_CALLBACK())
 	{
-		CyCity* pyCity = new CyCity(const_cast<CvCity*>(this));
-		CyArgsList argsList;
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyCity));	// pass in city class
-		argsList.add(eBuilding);
-		argsList.add(bContinue);
-		argsList.add(bTestVisible);
-		argsList.add(bIgnoreCost);
-		long lResult = 0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "canConstruct", argsList.makeFunctionArgs(), &lResult);
-		delete pyCity;	// python fxn must not hold on to this pointer 
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "canConstruct", Cy::Args()
+			// CyCity doesn't have a const only interface
+			<< const_cast<CvCity*>(this)
+			<< eBuilding
+			<< bContinue
+			<< bTestVisible
+			<< bIgnoreCost
+			))
 		{
 			return true;
 		}
@@ -4308,17 +4281,14 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 	if (GC.getUSE_CANNOT_CONSTRUCT_CALLBACK())
 	{
-		CyCity* pyCity = new CyCity(const_cast<CvCity*>(this));
-		CyArgsList argsList2; // XXX
-		argsList2.add(gDLL->getPythonIFace()->makePythonObject(pyCity));	// pass in city class
-		argsList2.add(eBuilding);
-		argsList2.add(bContinue);
-		argsList2.add(bTestVisible);
-		argsList2.add(bIgnoreCost);
-		long lResult = 0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "cannotConstruct", argsList2.makeFunctionArgs(), &lResult);
-		delete pyCity;	// python fxn must not hold on to this pointer 
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "cannotConstruct", Cy::Args()
+			// CyCity doesn't have a const only interface
+			<< const_cast<CvCity*>(this)
+			<< eBuilding
+			<< bContinue
+			<< bTestVisible
+			<< bIgnoreCost
+			))
 		{
 			return false;
 		}
@@ -4337,16 +4307,13 @@ bool CvCity::canCreate(ProjectTypes eProject, bool bContinue, bool bTestVisible)
 	/************************************************************************************************/
 	if (GC.getUSE_CAN_CREATE_PROJECT_CALLBACK())
 	{
-		CyCity* pyCity = new CyCity(const_cast<CvCity*>(this));
-		CyArgsList argsList;
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyCity));	// pass in city class
-		argsList.add(eProject);
-		argsList.add(bContinue);
-		argsList.add(bTestVisible);
-		long lResult = 0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "canCreate", argsList.makeFunctionArgs(), &lResult);
-		delete pyCity;	// python fxn must not hold on to this pointer 
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "canCreate", Cy::Args()
+			// CyCity doesn't have a const only interface
+			<< const_cast<CvCity*>(this)
+			<< eProject
+			<< bContinue
+			<< bTestVisible
+			))
 		{
 			return true;
 		}
@@ -4383,16 +4350,13 @@ bool CvCity::canCreate(ProjectTypes eProject, bool bContinue, bool bTestVisible)
 
 	if (GC.getUSE_CANNOT_CREATE_PROJECT_CALLBACK())
 	{
-		CyCity* pyCity = new CyCity(const_cast<CvCity*>(this));
-		CyArgsList argsList2; // XXX
-		argsList2.add(gDLL->getPythonIFace()->makePythonObject(pyCity));	// pass in city class
-		argsList2.add(eProject);
-		argsList2.add(bContinue);
-		argsList2.add(bTestVisible);
-		long lResult = 0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "cannotCreate", argsList2.makeFunctionArgs(), &lResult);
-		delete pyCity;	// python fxn must not hold on to this pointer 
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "cannotCreate", Cy::Args()
+			// CyCity doesn't have a const only interface
+			<< const_cast<CvCity*>(this)
+			<< eProject
+			<< bContinue
+			<< bTestVisible
+			))
 		{
 			return false;
 		}
@@ -4415,15 +4379,12 @@ bool CvCity::canMaintain(ProcessTypes eProcess, bool bContinue) const
 	/************************************************************************************************/
 	if (GC.getUSE_CAN_MAINTAIN_PROCESS_CALLBACK())
 	{
-		CyCity* pyCity = new CyCity(const_cast<CvCity*>(this));
-		CyArgsList argsList;
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyCity));	// pass in city class
-		argsList.add(eProcess);
-		argsList.add(bContinue);
-		long lResult = 0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "canMaintain", argsList.makeFunctionArgs(), &lResult);
-		delete pyCity;	// python fxn must not hold on to this pointer 
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "canMaintain", Cy::Args()
+			// CyCity doesn't have a const only interface
+			<< const_cast<CvCity*>(this)
+			<< eProcess
+			<< bContinue
+			))
 		{
 			return true;
 		}
@@ -4443,15 +4404,12 @@ bool CvCity::canMaintain(ProcessTypes eProcess, bool bContinue) const
 	/************************************************************************************************/
 	if (GC.getUSE_CANNOT_MAINTAIN_PROCESS_CALLBACK())
 	{
-		CyCity* pyCity = new CyCity(const_cast<CvCity*>(this));
-		CyArgsList argsList2; // XXX
-		argsList2.add(gDLL->getPythonIFace()->makePythonObject(pyCity));	// pass in city class
-		argsList2.add(eProcess);
-		argsList2.add(bContinue);
-		long lResult = 0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "cannotMaintain", argsList2.makeFunctionArgs(), &lResult);
-		delete pyCity;	// python fxn must not hold on to this pointer 
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "cannotMaintain", Cy::Args()
+			// CyCity doesn't have a const only interface
+			<< const_cast<CvCity*>(this)
+			<< eProcess
+			<< bContinue
+			))
 		{
 			return false;
 		}
@@ -5242,12 +5200,11 @@ int CvCity::getProductionNeeded(BuildingTypes eBuilding) const
 	// Python cost modifier
 	if (GC.getUSE_GET_BUILDING_COST_MOD_CALLBACK())
 	{
-		CyArgsList argsList;
-		argsList.add(getOwnerINLINE());	// Player ID
-		argsList.add(getID());	// City ID
-		argsList.add(eBuilding);	// Building ID
-		long lResult = 0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "getBuildingCostMod", argsList.makeFunctionArgs(), &lResult);
+		long lResult = Cy::call<long>(PYGameModule, "getBuildingCostMod", Cy::Args()
+			<< getOwnerINLINE()
+			<< getID()
+			<< eBuilding
+		);
 
 		if (lResult > 1)
 		{
@@ -5967,11 +5924,7 @@ UnitTypes CvCity::getConscriptUnit() const
 	}
 
 	// Allow the player to determine the conscripted unit type
-	CyArgsList argsList;
-	argsList.add(getOwnerINLINE());	// pass in player
-	long lConscriptUnit = -1;
-	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "getConscriptUnitType", argsList.makeFunctionArgs(), &lConscriptUnit);
-
+	long lConscriptUnit = Cy::call<long>(PYGameModule, "getConscriptUnitType", Cy::Args() << getOwnerINLINE());
 	if (lConscriptUnit != -1)
 	{
 		eBestUnit = ((UnitTypes)lConscriptUnit);
@@ -9564,7 +9517,7 @@ int CvCity::getTotalGreatPeopleRateModifier() const
 void CvCity::changeBaseGreatPeopleRate(int iChange)
 {
 	m_iBaseGreatPeopleRate = (m_iBaseGreatPeopleRate + iChange);
-	FAssert(getBaseGreatPeopleRate() >= 0);
+	FAssertMsg(getBaseGreatPeopleRate() >= 0, CvString::format("City %S m_iBaseGreatPeopleRate is %d", m_szName.c_str(), m_iBaseGreatPeopleRate).c_str());
 }
 
 
@@ -9589,7 +9542,7 @@ int CvCity::getGreatPeopleProgress() const
 void CvCity::changeGreatPeopleProgress(int iChange)
 {
 	m_iGreatPeopleProgress = (m_iGreatPeopleProgress + iChange);
-	FAssert(getGreatPeopleProgress() >= 0);
+	FAssertMsg(getGreatPeopleProgress() >= 0, CvString::format("City %S m_iGreatPeopleProgress is %d", m_szName.c_str(), m_iGreatPeopleProgress).c_str());
 }
 
 CvProperties* CvCity::getProperties()
@@ -19848,13 +19801,7 @@ void CvCity::doGrowth()
 	/************************************************************************************************/
 	if (GC.getUSE_CAN_DO_GROWTH_CALLBACK())
 	{
-		CyCity* pyCity = new CyCity(this);
-		CyArgsList argsList;
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyCity));	// pass in city class
-		long lResult = 0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doGrowth", argsList.makeFunctionArgs(), &lResult);
-		delete pyCity;	// python fxn must not hold on to this pointer 
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "doGrowth", Cy::Args() << this))
 		{
 			return;
 		}
@@ -19928,13 +19875,7 @@ void CvCity::doCulture()
 	/************************************************************************************************/
 	if (GC.getUSE_CAN_DO_CULTURE_CALLBACK())
 	{
-		CyCity* pyCity = new CyCity(this);
-		CyArgsList argsList;
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyCity));	// pass in city class
-		long lResult = 0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doCulture", argsList.makeFunctionArgs(), &lResult);
-		delete pyCity;	// python fxn must not hold on to this pointer 
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "doCulture", Cy::Args() << this))
 		{
 			return;
 		}
@@ -19957,16 +19898,12 @@ void CvCity::doPlotCulture(bool bUpdate, PlayerTypes ePlayer, int iCultureRate)
 	/************************************************************************************************/
 	if (GC.getUSE_CAN_DO_PLOT_CULTURE_CALLBACK())
 	{
-		CyCity* pyCity = new CyCity(this);
-		CyArgsList argsList;
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyCity));	// pass in city class
-		argsList.add(bUpdate);
-		argsList.add(ePlayer);
-		argsList.add(iCultureRate);
-		long lResult = 0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doPlotCulture", argsList.makeFunctionArgs(), &lResult);
-		delete pyCity;	// python fxn must not hold on to this pointer 
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "doPlotCulture", Cy::Args()
+			<< this
+			<< bUpdate
+			<< ePlayer
+			<< iCultureRate
+			))
 		{
 			return;
 		}
@@ -20194,13 +20131,7 @@ void CvCity::doProduction(bool bAllowNoProduction)
 	/************************************************************************************************/
 	if (GC.getUSE_CAN_DO_PRODUCTION_CALLBACK())
 	{
-		CyCity* pyCity = new CyCity(this);
-		CyArgsList argsList;
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyCity));	// pass in city class
-		long lResult = 0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doProduction", argsList.makeFunctionArgs(), &lResult);
-		delete pyCity;	// python fxn must not hold on to this pointer 
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "doProduction", Cy::Args() << this))
 		{
 			return;
 		}
@@ -20387,13 +20318,7 @@ void CvCity::doReligion()
 	/************************************************************************************************/
 	if (GC.getUSE_CAN_DO_RELIGION_CALLBACK())
 	{
-		CyCity* pyCity = new CyCity(this);
-		CyArgsList argsList;
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyCity));	// pass in city class
-		long lResult = 0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doReligion", argsList.makeFunctionArgs(), &lResult);
-		delete pyCity;	// python fxn must not hold on to this pointer 
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "doReligion", Cy::Args() << this))
 		{
 			return;
 		}
@@ -20563,13 +20488,7 @@ void CvCity::doGreatPeople()
 	/************************************************************************************************/
 	if (GC.getUSE_CAN_DO_GREATPEOPLE_CALLBACK())
 	{
-		CyCity* pyCity = new CyCity(this);
-		CyArgsList argsList;
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyCity));	// pass in city class
-		long lResult = 0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doGreatPeople", argsList.makeFunctionArgs(), &lResult);
-		delete pyCity;	// python fxn must not hold on to this pointer 
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "doGreatPeople", Cy::Args() << this))
 		{
 			return;
 		}
@@ -20637,13 +20556,7 @@ void CvCity::doMeltdown()
 	/************************************************************************************************/
 	if (GC.getUSE_CAN_DO_MELTDOWN_CALLBACK())
 	{
-		CyCity* pyCity = new CyCity(this);
-		CyArgsList argsList;
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyCity));	// pass in city class
-		long lResult = 0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doMeltdown", argsList.makeFunctionArgs(), &lResult);
-		delete pyCity;	// python fxn must not hold on to this pointer 
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "doMeltdown", Cy::Args() << this))
 		{
 			return;
 		}
@@ -22162,16 +22075,11 @@ bool CvCity::isEventTriggerPossible(EventTriggerTypes eTrigger) const
 
 	if (!CvString(kTrigger.getPythonCanDoCity()).empty())
 	{
-		long lResult;
-
-		CyArgsList argsList;
-		argsList.add(eTrigger);
-		argsList.add(getOwnerINLINE());
-		argsList.add(getID());
-
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYRandomEventModule, kTrigger.getPythonCanDoCity(), argsList.makeFunctionArgs(), &lResult);
-
-		if (0 == lResult)
+		if (!Cy::call<bool>(PYRandomEventModule, kTrigger.getPythonCanDoCity(), Cy::Args()
+			<< eTrigger
+			<< getOwnerINLINE()
+			<< getID()
+			))
 		{
 			return false;
 		}

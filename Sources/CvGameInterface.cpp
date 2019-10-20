@@ -15,7 +15,6 @@ void CvGame::updateColoredPlots()
 	CvPlot* pLoopPlot;
 	CvPlot* pBestPlot;
 	CvPlot* pNextBestPlot;
-	long lResult;
 	int iMaxAirRange;
 	int iRange;
 	int iDX, iDY;
@@ -31,9 +30,7 @@ void CvGame::updateColoredPlots()
 		gDLL->getEngineIFace()->clearColoredPlots(PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
 	}
 
-	lResult = 0;
-	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "updateColoredPlots", NULL, &lResult);
-	if (lResult == 1)
+	if (Cy::call<bool>(PYGameModule, "updateColoredPlots"))
 	{
 		return;
 	}
@@ -355,7 +352,7 @@ void CvGame::updateColoredPlots()
 												if (bBestBuildRemovesFeature)
 												{
 													if (ePlotBonus != NO_BONUS && eBestImprovement != NO_IMPROVEMENT 
-                                                        && GC.getImprovementInfo(eBestImprovement).isImprovementBonusTrade(ePlotBonus))
+														&& GC.getImprovementInfo(eBestImprovement).isImprovementBonusTrade(ePlotBonus))
 													{
 														// does the best build provide a bonus
 														bCanBeImproved = true;
@@ -534,7 +531,7 @@ void CvGame::updateColoredPlots()
 				{
 					if (pSelectedUnit->canArcherBombard(pSelectedUnit->plot()))
 					{
-                        iMaxAirRange = 1;
+						iMaxAirRange = 1;
 					}
 				}
 			}
@@ -1316,16 +1313,7 @@ void CvGame::selectionListMove(CvPlot* pPlot, bool bAlt, bool bShift, bool bCtrl
 		return;
 	}
 
-	CyPlot* pyPlot = new CyPlot(pPlot);
-	CyArgsList argsList;
-	argsList.add(gDLL->getPythonIFace()->makePythonObject(pyPlot));	// pass in plot class
-	argsList.add(bAlt);
-	argsList.add(bShift);
-	argsList.add(bCtrl);
-	long lResult=0;
-	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "cannotSelectionListMove", argsList.makeFunctionArgs(), &lResult);
-	delete pyPlot;	// python fxn must not hold on to this pointer 
-	if (lResult == 1)
+	if (Cy::call<bool>(PYGameModule, "cannotSelectionListMove", Cy::Args() << pPlot << bAlt << bShift << bCtrl))
 	{
 		return;
 	}
@@ -1394,17 +1382,8 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 	CvUnit* pHeadSelectedUnit;
 	CvUnit* pSelectedUnit;
 
-	CyArgsList argsList;
-	argsList.add(eMessage);	// pass in plot class
-	argsList.add(iData2);
-	argsList.add(iData3);
-	argsList.add(iData4);
-	argsList.add(iFlags);
-	argsList.add(bAlt);
-	argsList.add(bShift);
-	long lResult=0;
-	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "cannotSelectionListGameNetMessage", argsList.makeFunctionArgs(), &lResult);
-	if (lResult == 1)
+	if (Cy::call<bool>(PYGameModule, "cannotSelectionListGameNetMessage", Cy::Args() 
+		<< eMessage << iData2 << iData3 << iData4 << iFlags << bAlt << bShift))
 	{
 		return;
 	}
@@ -1459,7 +1438,7 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 					{
 						if (pLoopUnit->getUnitType() == kType)
 						{
-                            CvMessageControl::getInstance().sendDoCommand(pLoopUnit->getID(), ((CommandTypes)iData2), iData3, iData4, bAlt);
+							CvMessageControl::getInstance().sendDoCommand(pLoopUnit->getID(), ((CommandTypes)iData2), iData3, iData4, bAlt);
 						}
 					}
 				}
@@ -1499,7 +1478,7 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 						for(CvSelectionGroup* pLoopSelectionGroup = kPlayer.firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = kPlayer.nextSelectionGroup(&iLoop))
 						{
 							if (pLoopSelectionGroup->allMatch(eUnit))
-                                CvMessageControl::getInstance().sendPushMission(pLoopSelectionGroup->getHeadUnit()->getID(), ((MissionTypes)iData2), iData3, iData4, iFlags, bShift);
+								CvMessageControl::getInstance().sendPushMission(pLoopSelectionGroup->getHeadUnit()->getID(), ((MissionTypes)iData2), iData3, iData4, iFlags, bShift);
 						}
 					}
 					else
@@ -1607,15 +1586,7 @@ bool CvGame::canHandleAction(int iAction, CvPlot* pPlot, bool bTestVisible, bool
 
 	if(GC.getUSE_CANNOT_HANDLE_ACTION_CALLBACK())
 	{
-		CyPlot* pyPlot = new CyPlot(pPlot);
-		CyArgsList argsList;
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyPlot));	// pass in plot class
-		argsList.add(iAction);
-		argsList.add(bTestVisible);
-		long lResult=0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "cannotHandleAction", argsList.makeFunctionArgs(), &lResult);
-		delete pyPlot;	// python fxn must not hold on to this pointer 
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "cannotHandleAction", Cy::Args() << pPlot << iAction << bTestVisible))
 		{
 			return false;
 		}
@@ -1798,11 +1769,7 @@ void CvGame::handleAction(int iAction)
 
 bool CvGame::canDoControl(ControlTypes eControl) const
 {
-	CyArgsList argsList;
-	argsList.add(eControl);
-	long lResult=0;
-	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "cannotDoControl", argsList.makeFunctionArgs(), &lResult);
-	if (lResult == 1)
+	if (Cy::call<bool>(PYGameModule, "cannotHandleAction", Cy::Args() << eControl))
 	{
 		return false;
 	}
@@ -2222,7 +2189,7 @@ void CvGame::doControl(ControlTypes eControl)
 		break;
 
 	case CONTROL_OPTIONS_SCREEN:
-		PYTHON_CALL_FUNCTION2(__FUNCTION__, "CvScreensInterface", "showOptionsScreen");
+		Cy::call("CvScreensInterface", "showOptionsScreen");
 		break;
 
 	case CONTROL_RETIRE:
@@ -2317,31 +2284,29 @@ void CvGame::doControl(ControlTypes eControl)
 
 	case CONTROL_CIVILOPEDIA:
 		GC.setIsInPedia(true);
-		PYTHON_CALL_FUNCTION2(__FUNCTION__, PYScreensModule, "pediaShow");
+		Cy::call(PYScreensModule, "pediaShow");
 		break;
 
 	case CONTROL_RELIGION_SCREEN:
-		PYTHON_CALL_FUNCTION2(__FUNCTION__, PYScreensModule, "showReligionScreen");
+		Cy::call(PYScreensModule, "showReligionScreen");
 		break;
 
 	case CONTROL_CORPORATION_SCREEN:
-		PYTHON_CALL_FUNCTION2(__FUNCTION__, PYScreensModule, "showCorporationScreen");
+		Cy::call(PYScreensModule, "showCorporationScreen");
 		break;
 
 	case CONTROL_CIVICS_SCREEN:
-		PYTHON_CALL_FUNCTION2(__FUNCTION__, PYScreensModule, "showCivicsScreen");
+		Cy::call(PYScreensModule, "showCivicsScreen");
 		break;
 
 	case CONTROL_FOREIGN_SCREEN:
 		{
-			CyArgsList argsList;
-			argsList.add(-1);
-			PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "showForeignAdvisorScreen", argsList.makeFunctionArgs());
+			Cy::call(PYScreensModule, "showForeignAdvisorScreen", Cy::Args() << -1);
 		}
 		break;
 
 	case CONTROL_FINANCIAL_SCREEN:
-		PYTHON_CALL_FUNCTION2(__FUNCTION__, PYScreensModule, "showFinanceAdvisor");
+		Cy::call(PYScreensModule, "showFinanceAdvisor");
 		break;
 
 	case CONTROL_MILITARY_SCREEN:
@@ -2351,12 +2316,12 @@ void CvGame::doControl(ControlTypes eControl)
 		}
 		else
 		{
-			PYTHON_CALL_FUNCTION2(__FUNCTION__, PYScreensModule, "showMilitaryAdvisor");
+			Cy::call(PYScreensModule, "showMilitaryAdvisor");
 		}
 		break;
 
 	case CONTROL_TECH_CHOOSER:
-		PYTHON_CALL_FUNCTION2(__FUNCTION__, PYScreensModule, "showTechChooser");
+		Cy::call(PYScreensModule, "showTechChooser");
 		break;
 
 	case CONTROL_TURN_LOG:
@@ -2382,23 +2347,16 @@ void CvGame::doControl(ControlTypes eControl)
 
 	case CONTROL_DOMESTIC_SCREEN:
 		{
-			CyArgsList argsList;
-			argsList.add(-1);
-			PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "showDomesticAdvisor", argsList.makeFunctionArgs());
+			Cy::call(PYScreensModule, "showDomesticAdvisor", Cy::Args() << -1);
 		}
 		break;
 
 	case CONTROL_VICTORY_SCREEN:
-		PYTHON_CALL_FUNCTION2(__FUNCTION__, PYScreensModule, "showVictoryScreen");
+		Cy::call(PYScreensModule, "showVictoryScreen");
 		break;
 
 	case CONTROL_INFO:
-		{
-			CyArgsList args;
-			args.add(0);
-			args.add(getGameState() == GAMESTATE_ON ? 0 : 1);
-			PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "showInfoScreen", args.makeFunctionArgs());
-		}
+		Cy::call(PYScreensModule, "showInfoScreen", Cy::Args() << 0 << (getGameState() == GAMESTATE_ON ? 0 : 1));
 		break;
 
 	case CONTROL_GLOBE_VIEW:
@@ -2426,11 +2384,7 @@ void CvGame::doControl(ControlTypes eControl)
 		break;
 
 	case CONTROL_HALL_OF_FAME:
-		{
-			CyArgsList args;
-			args.add(true);
-			PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "showHallOfFame", args.makeFunctionArgs());
-		}
+		Cy::call(PYScreensModule, "showHallOfFame", Cy::Args() << true);
 		break;
 
 	case CONTROL_WORLD_BUILDER:
@@ -2450,7 +2404,7 @@ void CvGame::doControl(ControlTypes eControl)
 		break;
 
 	case CONTROL_ESPIONAGE_SCREEN:
-		PYTHON_CALL_FUNCTION2(__FUNCTION__, PYScreensModule, "showEspionageAdvisor");
+		Cy::call(PYScreensModule, "showEspionageAdvisor");
 		break;
 
 	case CONTROL_FREE_COLONY:
@@ -2856,14 +2810,12 @@ CvPlot* CvGame::getNewHighlightPlot() const
 	CvPlot* pNewPlot = NULL;
 	if (gDLL->GetWorldBuilderMode())
 	{
-		std::vector<int> coords;
 		bool bOK = false;
-		CyArgsList argsList;
-		argsList.add(0);
-		bOK = PYTHON_CALL_FUNCTION4(__FUNCTION__, PYScreensModule, "WorldBuilderGetHighlightPlot", argsList.makeFunctionArgs(), &coords);
+		std::vector<int> coords = Cy::call< std::vector<int> >(PYScreensModule, "WorldBuilderGetHighlightPlot", Cy::Args() << 0, &bOK);
 		if (bOK && !coords.empty())
 		{
-			pNewPlot = GC.getMap().plot(coords[0],coords[1]);
+			FAssertMsg(coords.size() >= 2, "Python callback WorldBuilderGetHighlightPlot didn't return valid coords array");
+			pNewPlot = GC.getMap().plot(coords[0], coords[1]);
 		}
 	}
 	else
@@ -2902,13 +2854,7 @@ ColorTypes CvGame::getPlotHighlightColor(CvPlot* pPlot) const
 				}
 				else
 				{
-					CyPlot* pyPlot = new CyPlot(pPlot);
-					CyArgsList argsList;
-					argsList.add(gDLL->getPythonIFace()->makePythonObject(pyPlot));	// pass in plot class
-					long lResult = 0;
-					PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "canPickPlot", argsList.makeFunctionArgs(), &lResult);
-					delete pyPlot;	// python fxn must not hold on to this pointer 
-					if (lResult == 0)
+					if (!Cy::call<bool>(PYGameModule, "canPickPlot", Cy::Args() << pPlot))
 					{
 						eColor = NO_COLOR;
 					}

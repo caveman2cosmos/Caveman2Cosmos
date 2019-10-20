@@ -1,17 +1,13 @@
 #pragma once
 
-#ifndef CyPlot_h
-#define CyPlot_h
-
-//#include "CvEnums.h"
-
-//
-// Python wrapper class for CvPlot
-// 
 class CyArea;
 class CvPlot;
 class CyUnit;
 class CyCity;
+
+//
+// Python wrapper class for CvPlot
+// 
 class CyPlot
 {
 public:
@@ -287,5 +283,5 @@ private:
 	CvPlot* m_pPlot;
 	bool	m_bIsInViewportSpace;
 };
-#endif	// CyPlot_h
 
+DECLARE_PY_WRAPPER(CyPlot, CvPlot*);
