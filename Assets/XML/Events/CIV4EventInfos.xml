@@ -6607,7 +6607,7 @@
 					<iExtraYield>3</iExtraYield>
 				</BuildingExtraYield>
 			</BuildingExtraYields>
-			<PythonCanDo>canTriggerDockWorkersStrike3</PythonCanDo>
+			<PythonCanDo></PythonCanDo>
 			<PythonHelp>getHelpDockWorkersStrike3</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>4000</iAIValue>
