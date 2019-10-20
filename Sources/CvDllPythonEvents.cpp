@@ -42,7 +42,7 @@ bool CvDllPythonEvents::postEvent(Cy::Args eventData, const char* eventName)
 	{
 		char profileName[256];
 
-		sprintf(profileName, "CvDllPythonEvents::;postEvent.%s", eventName);
+		sprintf(profileName, "CvDllPythonEvents::postEvent.%s", eventName);
 		pSample = new ProfileSample(profileName);
 
 		g_pythonProfiles->insert(std::make_pair(xSum.get(), pSample));
@@ -464,7 +464,8 @@ void CvDllPythonEvents::reportCityBuilt( CvCity *pCity, CvUnit *pUnit )
 	{
 		Cy::Args eventData;
 		eventData
-			<< "cityBuilt"			<< pCity
+			<< "cityBuilt"
+			<< pCity
 			<< pUnit;
 		postEvent(eventData, "cityBuilt");
 	}
@@ -529,11 +530,7 @@ void CvDllPythonEvents::reportCultureExpansion( CvCity *pCity, PlayerTypes ePlay
 {
 	if (preEvent())
 	{
-		Cy::Args eventData;
-		eventData
-			<< "cultureExpansion"			<< pCity
-			<< ePlayer;
-		postEvent(eventData, "cultureExpansion");
+		postEvent(Cy::Args() << "cultureExpansion" << pCity << ePlayer, "cultureExpansion");
 	}
 }
 
@@ -543,7 +540,8 @@ void CvDllPythonEvents::reportCityGrowth( CvCity *pCity, PlayerTypes ePlayer )
 	{
 		Cy::Args eventData;
 		eventData
-			<< "cityGrowth"			<< pCity
+			<< "cityGrowth"
+			<< pCity
 			<< ePlayer;
 		postEvent(eventData, "cityGrowth");
 	}
@@ -555,7 +553,8 @@ void CvDllPythonEvents::reportCityProduction( CvCity *pCity, PlayerTypes ePlayer
 	{
 		Cy::Args eventData;
 		eventData
-			<< "cityDoTurn"			<< pCity
+			<< "cityDoTurn"
+			<< pCity
 			<< ePlayer;
 		postEvent(eventData, "cityDoTurn");
 	}
@@ -567,7 +566,8 @@ void CvDllPythonEvents::reportCityBuildingUnit( CvCity *pCity, UnitTypes eUnitTy
 	{
 		Cy::Args eventData;
 		eventData
-			<< "cityBuildingUnit"			<< pCity
+			<< "cityBuildingUnit"
+			<< pCity
 			<< eUnitType;
 		postEvent(eventData, "cityBuildingUnit");
 	}
@@ -579,7 +579,8 @@ void CvDllPythonEvents::reportCityBuildingBuilding( CvCity *pCity, BuildingTypes
 	{
 		Cy::Args eventData;
 		eventData
-			<< "cityBuildingBuilding"			<< pCity
+			<< "cityBuildingBuilding"
+			<< pCity
 			<< eBuildingType;
 		postEvent(eventData, "cityBuildingBuilding");
 	}
@@ -592,7 +593,8 @@ void CvDllPythonEvents::reportCityBuildingProject( CvCity* pCity, ProjectTypes e
 	{
 		Cy::Args eventData;
 		eventData
-			<< "cityBuildingProject"			<< pCity
+			<< "cityBuildingProject"
+			<< pCity
 			<< eProjectType;
 		postEvent(eventData, "cityBuildingProject");
 	}
@@ -606,7 +608,8 @@ void CvDllPythonEvents::reportCityBuildingProcess( CvCity* pCity, ProcessTypes e
 	{
 		Cy::Args eventData;
 		eventData
-			<< "cityBuildingProcess"			<< pCity
+			<< "cityBuildingProcess"
+			<< pCity
 			<< eProcessType;
 		postEvent(eventData, "cityBuildingProcess");
 	}
@@ -619,7 +622,8 @@ void CvDllPythonEvents::reportCityRename( CvCity *pCity )
 	{
 		Cy::Args eventData;
 		eventData
-			<< "cityRename"			<< pCity;
+			<< "cityRename"
+			<< pCity;
 		postEvent(eventData, "cityRename");
 	}
 }
@@ -630,7 +634,8 @@ void CvDllPythonEvents::reportCityHurry( CvCity *pCity, HurryTypes eHurry )
 	{
 		Cy::Args eventData;
 		eventData
-			<< "cityHurry"			<< pCity
+			<< "cityHurry"
+			<< pCity
 			<< eHurry;
 		postEvent(eventData,"cityHurry");
 	}
@@ -814,7 +819,8 @@ void CvDllPythonEvents::reportUnitRename(CvUnit *pUnit)
 	{
 		Cy::Args eventData;
 		eventData
-			<< "UnitRename"			<< pUnit;
+			<< "UnitRename"
+			<< pUnit;
 		postEvent(eventData, "UnitRename");
 	}
 }
@@ -825,7 +831,8 @@ void CvDllPythonEvents::reportUnitPillage(CvUnit* pUnit, ImprovementTypes eImpro
 	{
 		Cy::Args eventData;
 		eventData
-			<< "unitPillage"			<< pUnit
+			<< "unitPillage"
+			<< pUnit
 			<< eImprovement
 			<< eRoute
 			<< ePlayer;
@@ -936,7 +943,8 @@ void CvDllPythonEvents::reportProjectBuilt(CvCity *pCity, ProjectTypes eProject)
 	{
 		Cy::Args eventData;
 		eventData
-			<< "projectBuilt"			<< pCity
+			<< "projectBuilt"
+			<< pCity
 			<< eProject;
 		postEvent(eventData, "projectBuilt");
 	}
