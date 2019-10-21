@@ -139,65 +139,53 @@ class CvTechChooser:
 
 	def fullRefresh(self, screen):
 		#timer = BugUtil.Timer('fullRefresh')
-		iNumTechs = self.iNumTechs
-		iNumEras = self.iNumEras
-		iPlayer = self.iPlayer
-		CyPlayer = self.CyPlayer
-		CyTeam = self.CyTeam
-		xRes = self.xRes
-		yRes = self.yRes
-		iCurrentEra = self.iCurrentEra
-		iEraFirst = self.iEraFirst
-		iEraFinal = self.iEraFinal
 
 		eWidGen = WidgetTypes.WIDGET_GENERAL
-		eFontTitle = FontTypes.TITLE_FONT
 
-		iMinX = self.minEraX[iEraFirst]
-		if iEraFirst == iEraFinal:
-			if iCurrentEra + 1 < iNumEras:
-				xNext = self.minEraX[iCurrentEra + 1]
-			else: xNext = self.minEraX[iCurrentEra]
-			bSingleEra = True
-			screen.setText("ERA", "", "<font=4b>" + GC.getEraInfo(self.iCurrentEra).getDescription(), 1<<1, xRes/2, yRes-32, 0, eFontTitle, eWidGen, 1, 2)
-		else:
-			self.iCurrentEra = None
-			bSingleEra = False
-			screen.setText("ERA", "", "<font=4b>" + GC.getEraInfo(self.iCurrentEra0).getDescription(), 1<<1, xRes/2, yRes-32, 0, eFontTitle, eWidGen, 1, 2)
+		#eFontTitle = FontTypes.TITLE_FONT
 
-		if bSingleEra and iCurrentEra:
-			screen.show("ERA|Prev")
-		else: screen.hide("ERA|Prev")
+		# if self.iEraFirst == self.iEraFinal:
+		# 	if self.iCurrentEra + 1 < self.iNumEras:
+		# 		xNext = self.minEraX[self.iCurrentEra + 1]
+		# 	else:
+		# 		xNext = self.minEraX[self.iCurrentEra]
+		# 	bSingleEra = True
+		# 	screen.setText("ERA", "", "<font=4b>" + GC.getEraInfo(self.iCurrentEra).getDescription(), 1<<1, self.xRes/2, self.yRes-32, 0, eFontTitle, eWidGen, 1, 2)
+		# else:
+		# 	self.iCurrentEra = None
+		# 	bSingleEra = False
+		# 	screen.setText("ERA", "", "<font=4b>" + GC.getEraInfo(self.iCurrentEra0).getDescription(), 1<<1, self.xRes/2, self.yRes-32, 0, eFontTitle, eWidGen, 1, 2)
 
-		if bSingleEra and iCurrentEra + 1 != iNumEras:
-			screen.show("ERA|Next")
-		else: screen.hide("ERA|Next")
+		# if bSingleEra and self.iCurrentEra:
+		# 	screen.show("ERA|Prev")
+		# else:
+		# 	screen.hide("ERA|Prev")
 
-		# Filter
-		screen.addDropDownBoxGFC("PlatyHideToEra", xRes - 132, yRes - 33, 128, eWidGen, 1, 2, eFontTitle)
-		screen.addDropDownBoxGFC("PlatyHideFromEra", xRes - 268, yRes - 33, 128, eWidGen, 1, 2, eFontTitle)
+		# if bSingleEra and self.iCurrentEra + 1 != self.iNumEras:
+		# 	screen.show("ERA|Next")
+		# else:
+		# 	screen.hide("ERA|Next")
 
-		iEra = 0
-		while iEra < iNumEras:
-			if iEra <= iEraFinal:
-				screen.addPullDownString("PlatyHideFromEra", GC.getEraInfo(iEra).getDescription(), iEra, iEra, iEra == iEraFirst)
-				if iEra == iEraFinal:
-					screen.addPullDownString("PlatyHideToEra", GC.getEraInfo(iEra).getDescription(), iEra, iEra, iEra == iEraFinal)
-			elif iEra >= iEraFirst:
-				screen.addPullDownString("PlatyHideToEra", GC.getEraInfo(iEra).getDescription(), iEra, iEra, iEra == iEraFinal)
-			iEra += 1
+		# # Filter
+		# screen.addDropDownBoxGFC("PlatyHideToEra", self.xRes - 132, self.yRes - 33, 128, eWidGen, 1, 2, eFontTitle)
+		# screen.addDropDownBoxGFC("PlatyHideFromEra", self.xRes - 268, self.yRes - 33, 128, eWidGen, 1, 2, eFontTitle)
+
+		# for iEra in range(self.iNumEras):
+		# 	if iEra <= self.iEraFinal:
+		# 		screen.addPullDownString("PlatyHideFromEra", GC.getEraInfo(iEra).getDescription(), iEra, iEra, iEra == self.iEraFirst)
+		# 		if iEra == self.iEraFinal:
+		# 			screen.addPullDownString("PlatyHideToEra", GC.getEraInfo(iEra).getDescription(), iEra, iEra, iEra == self.iEraFinal)
+		# 	elif iEra >= self.iEraFirst:
+		# 		screen.addPullDownString("PlatyHideToEra", GC.getEraInfo(iEra).getDescription(), iEra, iEra, iEra == self.iEraFinal)
 
 		ScrPnl = "TechList"
-		dy = yRes - 85
-		screen.addScrollPanel(ScrPnl, "", -8, 29, xRes + 16, dy, PanelStyles.PANEL_STYLE_EXTERNAL)
+		dy = self.yRes - 85
+		screen.addScrollPanel(ScrPnl, "", -8, 29, self.xRes + 16, dy, PanelStyles.PANEL_STYLE_EXTERNAL)
 
-		sIcon0 = self.sIcon0
-		sIcon1 = self.sIcon1
-		hCell = self.hCell
-		yEmptySpace = (dy - 10 * hCell) / 10
+		yEmptySpace = (dy - 10 * self.hCell) / 10
 		if yEmptySpace < 0:
 			yEmptySpace = 0
-		yCellDist = yEmptySpace + hCell
+		yCellDist = yEmptySpace + self.hCell
 		yEmptySpace /= 2
 		yBoxSpacing = yCellDist/2
 
@@ -209,38 +197,34 @@ class CvTechChooser:
 		ARROW_Y = AFM.getInterfaceArtInfo("ARROW_Y").getPath()
 		ARROW_HEAD = AFM.getInterfaceArtInfo("ARROW_HEAD").getPath()
 
-		wCell = self.wCell
-		xCellDist = 64 + wCell
-		ARROW = "Arrow"
-		yArrow0 = hCell / 2
-		yArrow1 = hCell*3/8
-		yArrow2 = hCell / 4
-		yArrow3 = hCell*5/8
-		yArrow4 = hCell*3/4
+		xCellDist = 64 + self.wCell
+		yArrow0 = self.hCell / 2
+		yArrow1 = self.hCell*3/8
+		yArrow2 = self.hCell / 4
+		yArrow3 = self.hCell*5/8
+		yArrow4 = self.hCell*3/4
 		techBenefits = self.techBenefits
-		dx = sIcon1 + 1
-		iCount = 0
-		iMaxElements = (wCell - sIcon0 - 8) / dx
+		dx = self.sIcon1 + 1
+		iMaxElements = (self.wCell - self.sIcon0 - 8) / dx
 
-		CELL = "CELL"
 		ICON = "ICON"
 		TECH_CHOICE = "WID|TECH|CHOICE"
 		TECH_REQ = "WID|TECH|REQ"
-		iTech = -1
-		while iTech < iNumTechs - 1:
-			iTech += 1
 
+		iMinX = self.minEraX[self.iEraFirst]
+
+		for iTech in range(self.iNumTechs):
 			CvTechInfo = GC.getTechInfo(iTech)
 			x0 = CvTechInfo.getGridX()
 			if x0 < 1: continue
 
 			iEra = CvTechInfo.getEra()
-			if bSingleEra:
-				if iEra != iCurrentEra and x0 != xNext:
-					continue
+			# if bSingleEra:
+			# 	if iEra != self.iCurrentEra and x0 != xNext:
+			# 		continue
 
-			elif iEra < iEraFirst or iEra > iEraFinal:
-				continue
+			# elif iEra < self.iEraFirst or iEra > self.iEraFinal:
+			# 	continue
 
 			szTech = str(iTech)
 			y0 = CvTechInfo.getGridY()
@@ -248,180 +232,183 @@ class CvTechChooser:
 			iY = yEmptySpace + ((y0 - 1) * yCellDist) / 2
 			szTechRecord = TECH_CHOICE + szTech
 
-			screen.setImageButtonAt(szTechRecord, ScrPnl, "", iX, iY, wCell, hCell, eWidGen, 1, 2)
-			screen.addDDSGFCAt(ICON + szTech, szTechRecord, CvTechInfo.getButton(), 3, 5, sIcon0, sIcon0, eWidGen, 1, 2, False)
+			screen.setImageButtonAt(szTechRecord, ScrPnl, "", iX, iY, self.wCell, self.hCell, eWidGen, 1, 2)
+			screen.addDDSGFCAt(ICON + szTech, szTechRecord, CvTechInfo.getButton(), 3, 5, self.sIcon0, self.sIcon0, eWidGen, 1, 2, False)
 			screen.setHitTest(ICON + szTech, HitTestTypes.HITTEST_NOHIT)
 
-			def update_tech():
-				# Requires
-				iX = wCell
-				for i in xrange(NUM_AND_TECH_PREREQS):
-					iTechX = CvTechInfo.getPrereqAndTechs(i)
-					if iTechX == -1: break
-					iX -= dx
-					screen.setImageButtonAt(TECH_REQ + str(iTechX) + "|" + szTech, szTechRecord, GC.getTechInfo(iTechX).getButton(), iX, 2, sIcon1, sIcon1, eWidGen, 1, 2)
+			# Requires
+			iX = self.wCell
+			for i in xrange(NUM_AND_TECH_PREREQS):
+				iTechX = CvTechInfo.getPrereqAndTechs(i)
+				if iTechX == -1: break
+				iX -= dx
+				screen.setImageButtonAt(TECH_REQ + str(iTechX) + "|" + szTech, szTechRecord, GC.getTechInfo(iTechX).getButton(), iX, 2, self.sIcon1, self.sIcon1, eWidGen, 1, 2)
 
-				for i in xrange(NUM_OR_TECH_PREREQS):
-					iTechX = CvTechInfo.getPrereqOrTechs(i)
-					if iTechX == -1: break
-					techInfoX = GC.getTechInfo(iTechX)
+			for i in xrange(NUM_OR_TECH_PREREQS):
+				iTechX = CvTechInfo.getPrereqOrTechs(i)
+				if iTechX == -1: break
+				techInfoX = GC.getTechInfo(iTechX)
 
-					iEra = techInfoX.getEra()
-					if iEra < iEraFirst or iEra > iEraFinal:
-						continue
+				iEra = techInfoX.getEra()
+				if iEra < self.iEraFirst or iEra > self.iEraFinal:
+					continue
 
-					x1 = techInfoX.getGridX()
-					y1 = techInfoX.getGridY()
-					iX = (x1 - iMinX) * xCellDist + wCell - 2
-					iY = yEmptySpace + ((y1 - 1) * yCellDist) / 2 - 4
+				x1 = techInfoX.getGridX()
+				y1 = techInfoX.getGridY()
+				iX = (x1 - iMinX) * xCellDist + self.wCell - 2
+				iY = yEmptySpace + ((y1 - 1) * yCellDist) / 2 - 4
 
-					xDiff = x0 - x1
-					yDiff = y0 - y1
-					xOff = xDiff * 62 + (xDiff - 1) * wCell
+				xDiff = x0 - x1
+				yDiff = y0 - y1
+				xOff = xDiff * 62 + (xDiff - 1) * self.wCell
 
-					if not yDiff:
-						screen.addDDSGFCAt("", ScrPnl, ARROW_X, iX, iY + yArrow0, xOff, 8, eWidGen, 1, 2, False)
-						screen.addDDSGFCAt("", ScrPnl, ARROW_HEAD, iX + xOff, iY + yArrow0, 8, 8, eWidGen, 1, 2, False)
-					elif yDiff < 0:
-						if yDiff < -3 and xDiff == 1:
-							dy = yDiff * yBoxSpacing + hCell/2
-							yArrow = iY + yArrow2
-							screen.addDDSGFCAt("", ScrPnl, ARROW_X, iX, yArrow, xOff/3 + 4, 8, eWidGen, 1, 2, False)
-							screen.addDDSGFCAt("", ScrPnl, ARROW_Y, iX + xOff/3, yArrow + 4 + dy, 8, -dy, eWidGen, 1, 2, False)
-							screen.addDDSGFCAt("", ScrPnl, ARROW_X, iX + 4 + xOff/3, yArrow + dy, xOff * 2/3, 8, eWidGen, 1, 2, False)
-							screen.addDDSGFCAt("", ScrPnl, ARROW_HEAD, iX + xOff, yArrow + dy, 8, 8, eWidGen, 1, 2, False)
-						else:
-							dy = yDiff * yBoxSpacing + hCell/4
-							yArrow = iY + yArrow1
-							screen.addDDSGFCAt("", ScrPnl, ARROW_X, iX, yArrow, xOff/2 + 4, 8, eWidGen, 1, 2, False)
-							screen.addDDSGFCAt("", ScrPnl, ARROW_Y, iX + xOff/2, yArrow + 4 + dy, 8, -dy, eWidGen, 1, 2, False)
-							screen.addDDSGFCAt("", ScrPnl, ARROW_X, iX + 4 + xOff/2, yArrow + dy, xOff/2, 8, eWidGen, 1, 2, False)
-							screen.addDDSGFCAt("", ScrPnl, ARROW_HEAD, iX + xOff, yArrow + dy, 8, 8, eWidGen, 1, 2, False)
+				if not yDiff:
+					screen.addDDSGFCAt("", ScrPnl, ARROW_X, iX, iY + yArrow0, xOff, 8, eWidGen, 1, 2, False)
+					screen.addDDSGFCAt("", ScrPnl, ARROW_HEAD, iX + xOff, iY + yArrow0, 8, 8, eWidGen, 1, 2, False)
+				elif yDiff < 0:
+					if yDiff < -3 and xDiff == 1:
+						dy = yDiff * yBoxSpacing + self.hCell/2
+						yArrow = iY + yArrow2
+						screen.addDDSGFCAt("", ScrPnl, ARROW_X, iX, yArrow, xOff/3 + 4, 8, eWidGen, 1, 2, False)
+						screen.addDDSGFCAt("", ScrPnl, ARROW_Y, iX + xOff/3, yArrow + 4 + dy, 8, -dy, eWidGen, 1, 2, False)
+						screen.addDDSGFCAt("", ScrPnl, ARROW_X, iX + 4 + xOff/3, yArrow + dy, xOff * 2/3, 8, eWidGen, 1, 2, False)
+						screen.addDDSGFCAt("", ScrPnl, ARROW_HEAD, iX + xOff, yArrow + dy, 8, 8, eWidGen, 1, 2, False)
 					else:
-						if yDiff > 3 and xDiff == 1:
-							dy = yDiff * yBoxSpacing - hCell/2
-							yArrow = iY + yArrow4
-							screen.addDDSGFCAt("", ScrPnl, ARROW_X, iX, yArrow, xOff/3 + 4, 8, eWidGen, 1, 2, False)
-							screen.addDDSGFCAt("", ScrPnl, ARROW_Y, iX + xOff/3, yArrow + 4, 8, dy, eWidGen, 1, 2, False)
-							screen.addDDSGFCAt("", ScrPnl, ARROW_X, iX + 4 + xOff/3, yArrow + dy, xOff * 2/3, 8, eWidGen, 1, 2, False)
-							screen.addDDSGFCAt("", ScrPnl, ARROW_HEAD, iX + xOff, yArrow + dy, 8, 8, eWidGen, 1, 2, False)
-						else:
-							dy = yDiff * yBoxSpacing - hCell/4
-							yArrow = iY + yArrow3
-							screen.addDDSGFCAt("", ScrPnl, ARROW_X, iX, yArrow, xOff/2 + 4, 8, eWidGen, 1, 2, False)
-							screen.addDDSGFCAt("", ScrPnl, ARROW_Y, iX + xOff/2, yArrow + 4, 8, dy, eWidGen, 1, 2, False)
-							screen.addDDSGFCAt("", ScrPnl, ARROW_X, iX + 4 + xOff/2, yArrow + dy, xOff/2, 8, eWidGen, 1, 2, False)
-							screen.addDDSGFCAt("", ScrPnl, ARROW_HEAD, iX + xOff, yArrow + dy, 8, 8, eWidGen, 1, 2, False)
+						dy = yDiff * yBoxSpacing + self.hCell/4
+						yArrow = iY + yArrow1
+						screen.addDDSGFCAt("", ScrPnl, ARROW_X, iX, yArrow, xOff/2 + 4, 8, eWidGen, 1, 2, False)
+						screen.addDDSGFCAt("", ScrPnl, ARROW_Y, iX + xOff/2, yArrow + 4 + dy, 8, -dy, eWidGen, 1, 2, False)
+						screen.addDDSGFCAt("", ScrPnl, ARROW_X, iX + 4 + xOff/2, yArrow + dy, xOff/2, 8, eWidGen, 1, 2, False)
+						screen.addDDSGFCAt("", ScrPnl, ARROW_HEAD, iX + xOff, yArrow + dy, 8, 8, eWidGen, 1, 2, False)
+				else:
+					if yDiff > 3 and xDiff == 1:
+						dy = yDiff * yBoxSpacing - self.hCell/2
+						yArrow = iY + yArrow4
+						screen.addDDSGFCAt("", ScrPnl, ARROW_X, iX, yArrow, xOff/3 + 4, 8, eWidGen, 1, 2, False)
+						screen.addDDSGFCAt("", ScrPnl, ARROW_Y, iX + xOff/3, yArrow + 4, 8, dy, eWidGen, 1, 2, False)
+						screen.addDDSGFCAt("", ScrPnl, ARROW_X, iX + 4 + xOff/3, yArrow + dy, xOff * 2/3, 8, eWidGen, 1, 2, False)
+						screen.addDDSGFCAt("", ScrPnl, ARROW_HEAD, iX + xOff, yArrow + dy, 8, 8, eWidGen, 1, 2, False)
+					else:
+						dy = yDiff * yBoxSpacing - self.hCell/4
+						yArrow = iY + yArrow3
+						screen.addDDSGFCAt("", ScrPnl, ARROW_X, iX, yArrow, xOff/2 + 4, 8, eWidGen, 1, 2, False)
+						screen.addDDSGFCAt("", ScrPnl, ARROW_Y, iX + xOff/2, yArrow + 4, 8, dy, eWidGen, 1, 2, False)
+						screen.addDDSGFCAt("", ScrPnl, ARROW_X, iX + 4 + xOff/2, yArrow + dy, xOff/2, 8, eWidGen, 1, 2, False)
+						screen.addDDSGFCAt("", ScrPnl, ARROW_HEAD, iX + xOff, yArrow + dy, 8, 8, eWidGen, 1, 2, False)
 
-				# Unlocks
-				iX = sIcon0 + 6
-				iY = sIcon0 + 4 - sIcon1
+			# Unlocks
+			iX = self.sIcon0 + 6
+			iY = self.sIcon0 + 4 - self.sIcon1
 
-				benefits = techBenefits[iTech]
-				iLength = len(benefits)
-				if iLength > iMaxElements:
-					iLength = iMaxElements
+			benefits = techBenefits[iTech]
+			iLength = len(benefits)
+			if iLength > iMaxElements:
+				iLength = iMaxElements
 
-				i = 0
-				while i < iLength:
-					sType, iItem = benefits[i]
-					if sType == "UnlockUnit":
-						screen.setImageButtonAt("WID|UNIT" + str(iItem) + '|' + str(iCount), szTechRecord, GC.getUnitInfo(iItem).getButton(), iX, iY, sIcon1, sIcon1, eWidGen, 1, 2)
-						iCount += 1
-					elif sType == "UnlockBuilding":
-						screen.setImageButtonAt("WID|BUILDING" + str(iItem) + '|' + str(iCount), szTechRecord, GC.getBuildingInfo(iItem).getButton(), iX, iY, sIcon1, sIcon1, eWidGen, 1, 2)
-						iCount += 1
-					elif sType == "ObsoleteBuilding":
-						screen.addDDSGFCAt("", szTechRecord, GC.getBuildingInfo(iItem).getButton(), iX, iY, sIcon1, sIcon1, eWidGen, 1, 2, False)
-						screen.setImageButtonAt("WID|BUILDING|OBS" + str(iItem), szTechRecord, RED_X, iX, iY, sIcon1, sIcon1, eWidGen, 1, 2)
-					elif sType == "UnlockSpecialBuilding":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, GC.getSpecialBuildingInfo(iItem).getButton(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_SPECIAL_BUILDING, iTech, iItem, False)
-					elif sType == "ObsoleteSpecialBuilding":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, GC.getSpecialBuildingInfo(iItem).getButton(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_OBSOLETE_SPECIAL, iTech, iItem, False)
-						screen.addDDSGFCAt("Obsolete" + str(iTech * 1000 + i), szTechRecord, RED_X, iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_OBSOLETE_SPECIAL, iItem, -1, False)
-					elif sType == "RevealBonus":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, GC.getBonusInfo(iItem).getButton(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_BONUS_REVEAL, iTech, iItem, False)
-					elif sType == "ObsoleteBonus":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, GC.getBonusInfo(iItem).getButton(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_OBSOLETE_BONUS, iTech, iItem, False)
-						screen.addDDSGFCAt("Obsolete" + str(iTech * 1000 + i), szTechRecord, RED_X, iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_OBSOLETE_BONUS, iItem, -1, False)
-					elif sType == "RouteChange":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_MOVE_BONUS").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_MOVE_BONUS, iTech, -1, False)
-					elif sType == "UnlockPromotion":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, GC.getPromotionInfo(iItem).getButton(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, iItem, -1, False)
-					elif sType == "FreeUnit":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, GC.getUnitInfo(iItem).getButton(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_FREE_UNIT, iItem, iTech, False)
-					elif sType == "FeatureProduction":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_FEATURE_PRODUCTION").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_FEATURE_PRODUCTION, iTech, -1, False)
-					elif sType == "WorkerSpeed":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_WORKER_SPEED").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_WORKER_RATE, iTech, -1, False)
-					elif sType == "TradeRoute":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_TRADE_ROUTES").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_TRADE_ROUTES, iTech, -1, False)
-					elif sType == "Health":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_HEALTH").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_HEALTH_RATE, iTech, -1, False)
-					elif sType == "Happiness":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_HAPPINESS").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_HAPPINESS_RATE, iTech, -1, False)
-					elif sType == "Population":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_POPULATION").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_HAPPINESS_RATE, iTech, -1, False)
-					elif sType == "FreeTech":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_FREETECH").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_FREE_TECH, iTech, -1, False)
-					elif sType == "WaterSight":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_LOS").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_LOS_BONUS, iTech, -1, False)
-					elif sType == "MapCentering":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_MAPCENTER").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_MAP_CENTER, iTech, -1, False)
-					elif sType == "MapVisible":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_MAPREVEAL").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_MAP_REVEAL, iTech, -1, False)
-					elif sType == "MapTrading":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_MAPTRADING").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_MAP_TRADE, iTech, -1, False)
-					elif sType == "TechTrading":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_TECHTRADING").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_TECH_TRADE, iTech, -1, False)
-					elif sType == "GoldTrading":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_GOLDTRADING").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_GOLD_TRADE, iTech, -1, False)
-					elif sType == "OpenBorders":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_OPENBORDERS").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_OPEN_BORDERS, iTech, -1, False)
-					elif sType == "DefensivePact":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_DEFENSIVEPACT").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_DEFENSIVE_PACT, iTech, -1, False)
-					elif sType == "PermanentAlliance":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_PERMALLIANCE").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_PERMANENT_ALLIANCE, iTech, -1, False)
-					elif sType == "VassalState":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_VASSAL").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_VASSAL_STATE, iTech, -1, False)
-					elif sType == "BridgeBuilding":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_BRIDGEBUILDING").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_BUILD_BRIDGE, iTech, -1, False)
-					elif sType == "EnablesIrrigation":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_IRRIGATION").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_IRRIGATION, iTech, -1, False)
-					elif sType == "IgnoreIrrigation":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_NOIRRIGATION").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_IGNORE_IRRIGATION, iTech, -1, False)
-					elif sType == "WaterWork":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_WATERWORK").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_WATER_WORK, iTech, -1, False)
-					elif sType == "UnlockImprovement":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, GC.getBuildInfo(iItem).getButton(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_IMPROVEMENT, iTech, iItem, False)
-					elif sType == "DomainMoves":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_WATERMOVES").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_DOMAIN_EXTRA_MOVES, iTech, iItem, False)
-					elif sType == "CommerceFlexible":
-						if iItem == CommerceTypes.COMMERCE_CULTURE:
-							temp = AFM.getInterfaceArtInfo("INTERFACE_TECH_CULTURE").getPath()
-						elif iItem == CommerceTypes.COMMERCE_ESPIONAGE:
-							temp = AFM.getInterfaceArtInfo("INTERFACE_TECH_ESPIONAGE").getPath()
-						else: temp = AFM.getInterfaceArtInfo("INTERFACE_GENERAL_QUESTIONMARK").getPath()
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, temp, iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_ADJUST, iTech, iItem, False)
-					elif sType == "TerrainTrade":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_WATERTRADE").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_TERRAIN_TRADE, iTech, iItem, False)
-					elif sType == "RiverTrade":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, AFM.getInterfaceArtInfo("INTERFACE_TECH_RIVERTRADE").getPath(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_TERRAIN_TRADE, iTech, GC.getNumTerrainInfos(), False)
-					elif sType == "ImprovementYield":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, GC.getImprovementInfo(iItem).getButton(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_YIELD_CHANGE, iTech, iItem, False)
-					elif sType == "UnlockCivic":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, GC.getCivicInfo(iItem).getButton(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_CIVIC_REVEAL, iTech, iItem, False)
-					elif sType == "UnlockProject":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, GC.getProjectInfo(iItem).getButton(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT, iItem, 1, False)
-					elif sType == "UnlockProcess":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, GC.getProcessInfo(iItem).getButton(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_PROCESS_INFO, iTech, iItem, False)
-					elif sType == "UnlockReligion":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, GC.getReligionInfo(iItem).getButton(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_FOUND_RELIGION, iTech, iItem, False)
-					elif sType == "UnlockCorporation":
-						screen.addDDSGFCAt("Item" + str(iTech * 1000 + i), szTechRecord, GC.getCorporationInfo(iItem).getButton(), iX, iY, sIcon1, sIcon1, WidgetTypes.WIDGET_HELP_FOUND_CORPORATION, iTech, iItem, False)
-					iX += dx
-					i += 1
-			self.updates.append((x0, update_tech))
+			for i in range(iLength):
+				sType, iItem = benefits[i]
+
+				def imageButton(key, button):
+					screen.setImageButtonAt(key + str(iTech * 1000 + i), szTechRecord, button, iX, iY, self.sIcon1, self.sIcon1, eWidGen, 1, 2)
+
+				def ddsgfc(key, button, widgetType, tech, item, flag):
+					screen.addDDSGFCAt(key + str(iTech * 1000 + i), szTechRecord, button, iX, iY, self.sIcon1, self.sIcon1, widgetType, tech, item, flag)
+
+				if sType == "UnlockUnit":
+					imageButton("WID|UNIT" + str(iItem) + '|', GC.getUnitInfo(iItem).getButton())
+				elif sType == "UnlockBuilding":
+					imageButton("WID|BUILDING" + str(iItem) + '|', GC.getBuildingInfo(iItem).getButton())
+				elif sType == "ObsoleteBuilding":
+					ddsgfc("", GC.getBuildingInfo(iItem).getButton(), eWidGen, 1, 2, False)
+					imageButton("WID|BUILDING|OBS" + str(iItem) + '|', RED_X)
+				elif sType == "UnlockSpecialBuilding":
+					ddsgfc("Item", GC.getSpecialBuildingInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_SPECIAL_BUILDING, iTech, iItem, False)
+				elif sType == "ObsoleteSpecialBuilding":
+					ddsgfc("Item", GC.getSpecialBuildingInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_OBSOLETE_SPECIAL, iTech, iItem, False)
+					ddsgfc("Obsolete", RED_X, WidgetTypes.WIDGET_HELP_OBSOLETE_SPECIAL, iItem, -1, False)
+				elif sType == "RevealBonus":
+					ddsgfc("Item", GC.getBonusInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_BONUS_REVEAL, iTech, iItem, False)
+				elif sType == "ObsoleteBonus":
+					ddsgfc("Item", GC.getBonusInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_OBSOLETE_BONUS, iTech, iItem, False)
+					ddsgfc("Obsolete", RED_X, WidgetTypes.WIDGET_HELP_OBSOLETE_BONUS, iItem, -1, False)
+				elif sType == "RouteChange":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_MOVE_BONUS").getPath(), WidgetTypes.WIDGET_HELP_MOVE_BONUS, iTech, -1, False)
+				elif sType == "UnlockPromotion":
+					ddsgfc("Item", GC.getPromotionInfo(iItem).getButton(), WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, iItem, -1, False)
+				elif sType == "FreeUnit":
+					ddsgfc("Item", GC.getUnitInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_FREE_UNIT, iItem, iTech, False)
+				elif sType == "FeatureProduction":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_FEATURE_PRODUCTION").getPath(), WidgetTypes.WIDGET_HELP_FEATURE_PRODUCTION, iTech, -1, False)
+				elif sType == "WorkerSpeed":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_WORKER_SPEED").getPath(), WidgetTypes.WIDGET_HELP_WORKER_RATE, iTech, -1, False)
+				elif sType == "TradeRoute":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_TRADE_ROUTES").getPath(), WidgetTypes.WIDGET_HELP_TRADE_ROUTES, iTech, -1, False)
+				elif sType == "Health":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_HEALTH").getPath(), WidgetTypes.WIDGET_HELP_HEALTH_RATE, iTech, -1, False)
+				elif sType == "Happiness":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_HAPPINESS").getPath(), WidgetTypes.WIDGET_HELP_HAPPINESS_RATE, iTech, -1, False)
+				elif sType == "Population":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_POPULATION").getPath(), WidgetTypes.WIDGET_HELP_HAPPINESS_RATE, iTech, -1, False)
+				elif sType == "FreeTech":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_FREETECH").getPath(), WidgetTypes.WIDGET_HELP_FREE_TECH, iTech, -1, False)
+				elif sType == "WaterSight":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_LOS").getPath(), WidgetTypes.WIDGET_HELP_LOS_BONUS, iTech, -1, False)
+				elif sType == "MapCentering":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_MAPCENTER").getPath(), WidgetTypes.WIDGET_HELP_MAP_CENTER, iTech, -1, False)
+				elif sType == "MapVisible":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_MAPREVEAL").getPath(), WidgetTypes.WIDGET_HELP_MAP_REVEAL, iTech, -1, False)
+				elif sType == "MapTrading":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_MAPTRADING").getPath(), WidgetTypes.WIDGET_HELP_MAP_TRADE, iTech, -1, False)
+				elif sType == "TechTrading":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_TECHTRADING").getPath(), WidgetTypes.WIDGET_HELP_TECH_TRADE, iTech, -1, False)
+				elif sType == "GoldTrading":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_GOLDTRADING").getPath(), WidgetTypes.WIDGET_HELP_GOLD_TRADE, iTech, -1, False)
+				elif sType == "OpenBorders":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_OPENBORDERS").getPath(), WidgetTypes.WIDGET_HELP_OPEN_BORDERS, iTech, -1, False)
+				elif sType == "DefensivePact":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_DEFENSIVEPACT").getPath(), WidgetTypes.WIDGET_HELP_DEFENSIVE_PACT, iTech, -1, False)
+				elif sType == "PermanentAlliance":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_PERMALLIANCE").getPath(), WidgetTypes.WIDGET_HELP_PERMANENT_ALLIANCE, iTech, -1, False)
+				elif sType == "VassalState":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_VASSAL").getPath(), WidgetTypes.WIDGET_HELP_VASSAL_STATE, iTech, -1, False)
+				elif sType == "BridgeBuilding":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_BRIDGEBUILDING").getPath(), WidgetTypes.WIDGET_HELP_BUILD_BRIDGE, iTech, -1, False)
+				elif sType == "EnablesIrrigation":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_IRRIGATION").getPath(), WidgetTypes.WIDGET_HELP_IRRIGATION, iTech, -1, False)
+				elif sType == "IgnoreIrrigation":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_NOIRRIGATION").getPath(), WidgetTypes.WIDGET_HELP_IGNORE_IRRIGATION, iTech, -1, False)
+				elif sType == "WaterWork":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_WATERWORK").getPath(), WidgetTypes.WIDGET_HELP_WATER_WORK, iTech, -1, False)
+				elif sType == "UnlockImprovement":
+					ddsgfc("Item", GC.getBuildInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_IMPROVEMENT, iTech, iItem, False)
+				elif sType == "DomainMoves":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_WATERMOVES").getPath(), WidgetTypes.WIDGET_HELP_DOMAIN_EXTRA_MOVES, iTech, iItem, False)
+				elif sType == "CommerceFlexible":
+					if iItem == CommerceTypes.COMMERCE_CULTURE:
+						temp = AFM.getInterfaceArtInfo("INTERFACE_TECH_CULTURE").getPath()
+					elif iItem == CommerceTypes.COMMERCE_ESPIONAGE:
+						temp = AFM.getInterfaceArtInfo("INTERFACE_TECH_ESPIONAGE").getPath()
+					else: temp = AFM.getInterfaceArtInfo("INTERFACE_GENERAL_QUESTIONMARK").getPath()
+					ddsgfc("Item", temp, WidgetTypes.WIDGET_HELP_ADJUST, iTech, iItem, False)
+				elif sType == "TerrainTrade":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_WATERTRADE").getPath(), WidgetTypes.WIDGET_HELP_TERRAIN_TRADE, iTech, iItem, False)
+				elif sType == "RiverTrade":
+					ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_RIVERTRADE").getPath(), WidgetTypes.WIDGET_HELP_TERRAIN_TRADE, iTech, GC.getNumTerrainInfos(), False)
+				elif sType == "ImprovementYield":
+					ddsgfc("Item", GC.getImprovementInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_YIELD_CHANGE, iTech, iItem, False)
+				elif sType == "UnlockCivic":
+					ddsgfc("Item", GC.getCivicInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_CIVIC_REVEAL, iTech, iItem, False)
+				elif sType == "UnlockProject":
+					ddsgfc("Item", GC.getProjectInfo(iItem).getButton(), WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT, iItem, 1, False)
+				elif sType == "UnlockProcess":
+					ddsgfc("Item", GC.getProcessInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_PROCESS_INFO, iTech, iItem, False)
+				elif sType == "UnlockReligion":
+					ddsgfc("Item", GC.getReligionInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_FOUND_RELIGION, iTech, iItem, False)
+				elif sType == "UnlockCorporation":
+					ddsgfc("Item", GC.getCorporationInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_FOUND_CORPORATION, iTech, iItem, False)
+				iX += dx
+
+		# self.updates.append((x0, update_tech))
 		#timer.log()
 		self.updateTechRecords(True)
 
@@ -781,14 +768,14 @@ class CvTechChooser:
 			if iY < 0: iY = 0
 			self.screen().moveItem("Tooltip", iX, iY, 0)
 
-			remaining_updates = self.updates.copy() # sorted(self.updates, key=lambda el: abs(el[0] - iX))
-			num = 0
-			for upd in remaining_updates:
-				upd[1]()
-				self.updates.remove(upd)
-				num = num + 1
-				if num > 50:
-					break
+			# remaining_updates = list(self.updates) # sorted(self.updates, key=lambda el: abs(el[0] - iX))
+			# num = 0
+			# for upd in remaining_updates:
+			# 	upd[1]()
+			# 	self.updates.remove(upd)
+			# 	num = num + 1
+			# 	if num > 50:
+			# 		break
 
 
 	def handleInput(self, inputClass):
