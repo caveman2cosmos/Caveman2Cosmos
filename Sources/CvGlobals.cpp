@@ -492,12 +492,12 @@ void CreateMiniDump(EXCEPTION_POINTERS *pep)
 
 	/* Open a file to store the minidump. */
 	HANDLE hFile = CreateFile(filename,
-	                          GENERIC_READ | GENERIC_WRITE,
-	                          0,
-	                          NULL,
-	                          CREATE_ALWAYS,
-	                          FILE_ATTRIBUTE_NORMAL,
-	                          NULL);
+							  GENERIC_READ | GENERIC_WRITE,
+							  0,
+							  NULL,
+							  CREATE_ALWAYS,
+							  FILE_ATTRIBUTE_NORMAL,
+							  NULL);
 
 	if((hFile == NULL) || (hFile == INVALID_HANDLE_VALUE)) {
 		_tprintf(_T("CreateFile failed. Error: %u \n"), GetLastError());
@@ -513,11 +513,11 @@ void CreateMiniDump(EXCEPTION_POINTERS *pep)
 	MINIDUMP_TYPE mdt       = MiniDumpNormal;
 
 	BOOL result = MiniDumpWriteDump(GetCurrentProcess(), GetCurrentProcessId(),
-	                                hFile,
-	                                mdt,
-	                                (pep != NULL) ? &mdei : NULL,
-	                                NULL,
-	                                NULL);
+									hFile,
+									mdt,
+									(pep != NULL) ? &mdei : NULL,
+									NULL,
+									NULL);
 
 	/* Close the file. */
 	CloseHandle(hFile);
@@ -652,13 +652,13 @@ void cvInternalGlobals::init()
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	    {-1, -1, 32, 33, 34, -1, -1},
-	    {-1, 31, 17, 18, 19, 35, -1},
-	    {30, 16, 6,   7,  8, 20, 36},
-	    {29, 15, 5,   0,  1,  9, 21},
-	    {28, 14, 4,   3,  2, 10, 22},
-	    {-1, 27, 13, 12, 11, 23, -1},
-	    {-1, -1, 26, 25, 24, -1, -1},
+		{-1, -1, 32, 33, 34, -1, -1},
+		{-1, 31, 17, 18, 19, 35, -1},
+		{30, 16, 6,   7,  8, 20, 36},
+		{29, 15, 5,   0,  1,  9, 21},
+		{28, 14, 4,   3,  2, 10, 22},
+		{-1, 27, 13, 12, 11, 23, -1},
+		{-1, -1, 26, 25, 24, -1, -1},
 /************************************************************************************************/
 /* JOOYO_ADDON                          END                                                     */
 /************************************************************************************************/
@@ -3650,7 +3650,7 @@ CvString& cvInternalGlobals::getArtStyleTypes(ArtStyleTypes e)
 
 int cvInternalGlobals::getNumUnitArtStyleTypeInfos()
 {
-    return (int)m_paUnitArtStyleTypeInfo.size();
+	return (int)m_paUnitArtStyleTypeInfo.size();
 }
 
 std::vector<CvUnitArtStyleTypeInfo*>& cvInternalGlobals::getUnitArtStyleTypeInfos()
@@ -5088,7 +5088,7 @@ int cvInternalGlobals::getTypesEnum(const char* szType) const
 		return it->second;
 	}
 
- 	FAssertMsg(strcmp(szType, "NONE")==0 || strcmp(szType, "")==0, CvString::format("type %s not found", szType).c_str());
+	FAssertMsg(strcmp(szType, "NONE")==0 || strcmp(szType, "")==0, CvString::format("type %s not found", szType).c_str());
 	return -1;
 }
 

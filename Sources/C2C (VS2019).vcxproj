@@ -121,7 +121,9 @@
     <ClCompile Include="CvAllocator.cpp" />
     <ClCompile Include="CvAllocator.h" />
     <ClCompile Include="CvPlotPaging.cpp" />
+    <ClCompile Include="CvPython.cpp" />
     <ClCompile Include="CyPlayerInterface3.cpp" />
+    <ClCompile Include="StackWalker.cpp" />
     <ClCompile Include="_precompile.cpp" />
     <ClCompile Include="BetterBTSAI.cpp" />
     <ClCompile Include="BoolExpr.cpp" />
@@ -311,6 +313,7 @@
     <ClInclude Include="CvDLLWidgetData.h" />
     <ClInclude Include="CvDLLXMLIFaceBase.h" />
     <ClInclude Include="NiPoint.h" />
+    <ClInclude Include="StackWalker.h" />
     <ClInclude Include="Stopwatch.h" />
     <ClInclude Include="wchar_utils.h" />
     <ClInclude Include="CvEnums.h" />

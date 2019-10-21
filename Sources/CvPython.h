@@ -340,4 +340,16 @@ namespace Cy
 		}
 		return false;
 	}
+
+	struct StackFrame
+	{
+		CvString filename;
+		int line;
+		CvString code;
+
+		StackFrame() {}
+		StackFrame(const CvString& filename, int line, const CvString& code) : filename(filename), line(line), code(code) {}
+	};
+
+	std::vector<StackFrame> get_stack_trace();
 }
