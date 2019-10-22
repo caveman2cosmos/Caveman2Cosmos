@@ -37,7 +37,11 @@ class CvTechChooser:
 		self.CyPlayer = CyPlayer = GC.getPlayer(iPlayer)
 		self.CyTeam = CyTeam = GC.getTeam(CyPlayer.getTeam())
 
-		self.iEraFirst = self.iEraFinal = self.iCurrentEra = self.iCurrentEra0 = CyPlayer.getCurrentEra()
+		self.iEraFirst = 0
+		self.iEraFinal = GC.getNumEraInfos() - 1
+
+		self.iCurrentEra = CyPlayer.getCurrentEra()
+		self.iCurrentEra0 = CyPlayer.getCurrentEra()
 
 		currentTechState = self.currentTechState
 		iTech = 0
@@ -179,8 +183,9 @@ class CvTechChooser:
 		# 		screen.addPullDownString("PlatyHideToEra", GC.getEraInfo(iEra).getDescription(), iEra, iEra, iEra == self.iEraFinal)
 
 		ScrPnl = "TechList"
+		screen.addScrollPanel(ScrPnl, "", -8, 29, self.xRes + 16, self.yRes - 85, PanelStyles.PANEL_STYLE_EXTERNAL)
+
 		dy = self.yRes - 85
-		screen.addScrollPanel(ScrPnl, "", -8, 29, self.xRes + 16, dy, PanelStyles.PANEL_STYLE_EXTERNAL)
 
 		yEmptySpace = (dy - 10 * self.hCell) / 10
 		if yEmptySpace < 0:
@@ -213,10 +218,12 @@ class CvTechChooser:
 
 		iMinX = self.minEraX[self.iEraFirst]
 
-		for iTech in range(self.iNumTechs):
+		for iTech in xrange(self.iNumTechs):
 			CvTechInfo = GC.getTechInfo(iTech)
+
 			x0 = CvTechInfo.getGridX()
-			if x0 < 1: continue
+			if x0 < 1:
+				continue
 
 			iEra = CvTechInfo.getEra()
 			# if bSingleEra:
@@ -305,7 +312,7 @@ class CvTechChooser:
 			if iLength > iMaxElements:
 				iLength = iMaxElements
 
-			for i in range(iLength):
+			for i in xrange(iLength):
 				sType, iItem = benefits[i]
 
 				def imageButton(key, button):
