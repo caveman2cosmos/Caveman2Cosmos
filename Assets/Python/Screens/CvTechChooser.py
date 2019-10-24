@@ -2,6 +2,7 @@ from CvPythonExtensions import *
 import CvScreensInterface as UP
 import HandleInputUtil
 import PythonToolTip as pyTT
+from sys import maxint
 #import BugUtil
 
 GC = CyGlobalContext()
@@ -18,6 +19,9 @@ TECH_CHOICE = "WID|TECH|CHOICE"
 TECH_REQ = "WID|TECH|REQ"
 TECH_NAME = "TechName"
 SCREEN_PANEL = "TechList"
+SCREEN_PANEL_BAR_H = 42
+SCREEN_PANEL_BOTTOM_BAR_H = 100
+SLIDER_BORDER = 50
 
 CELL_GAP = 64
 ARROW_SIZE = 8
@@ -95,18 +99,21 @@ class CvTechChooser:
 		self.sIcon1 = self.sIcon0 / 2
 
 		# Cache minimum X coordinate per era for era partitioning.
-		self.minEraX = [""] * GC.getNumEraInfos() # (string > integer) is True
+		self.minEraX = [maxint] * GC.getNumEraInfos()
+		self.minX = maxint
 		self.maxX = 0
 		for iTech in xrange(self.iNumTechs):
 			info = GC.getTechInfo(iTech)
 			iX = info.getGridX() * self.xCellDist
+			iX1 = (info.getGridX() + 1) * self.xCellDist
 			if iX > 0:
-				if iX > self.maxX:
-					self.maxX = iX
-
 				iEra = info.getEra()
-				if self.minEraX[iEra] > iX:
+				if iX < self.minEraX[iEra]:
 					self.minEraX[iEra] = iX
+				if iX1 > self.maxX:
+					self.maxX = iX1
+				if iX < self.minX:
+					self.minX = iX
 
 		eWidGen = WidgetTypes.WIDGET_GENERAL
 		eFontTitle = FontTypes.TITLE_FONT
@@ -120,8 +127,8 @@ class CvTechChooser:
 
 		screen.addDDSGFC("ScreenBackground", AFM.getInterfaceArtInfo("SCREEN_BG_OPAQUE").getPath(), 0, 0, self.xRes, self.yRes, eWidGen, 1, 2)
 
-		screen.addPanel("TC_BarTop", "", "", True, False, 0, 0, self.xRes, 42, PanelStyles.PANEL_STYLE_TOPBAR)
-		screen.addPanel("TC_BarBot", "", "", True, False, 0, self.yRes - 42, self.xRes, 42, PanelStyles.PANEL_STYLE_BOTTOMBAR)
+		screen.addPanel("TC_BarTop", "", "", True, False, 0, 0, self.xRes, SCREEN_PANEL_BAR_H, PanelStyles.PANEL_STYLE_TOPBAR)
+		screen.addPanel("TC_BarBot", "", "", True, False, 0, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H, self.xRes, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_BOTTOMBAR)
 		screen.setLabel("TC_Header", "", "<font=4b>" + TRNSLTR.getText("TXT_KEY_TECH_CHOOSER_TITLE", ()), 1<<2, self.xRes/2, 4, 0, eFontTitle, eWidGen, 1, 2)
 
 		screen.setText("TC_Exit", "", "<font=4b>" + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()), 1<<1, self.xRes - 8, 2, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
@@ -159,7 +166,7 @@ class CvTechChooser:
 		screen.showWindowBackground(False)
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
-		screen.addPanel(SCREEN_PANEL, "", "", False, True, 0, 29, self.maxX + self.xCellDist, self.yRes - 85, PanelStyles.PANEL_STYLE_EXTERNAL) # PanelStyles.PANEL_STYLE_EXTERNAL)
+		screen.addPanel(SCREEN_PANEL, "", "", False, True, 0, SCREEN_PANEL_BAR_H, self.maxX + self.xCellDist, self.yRes - SCREEN_PANEL_BAR_H - SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_EXTERNAL) # PanelStyles.PANEL_STYLE_EXTERNAL)
 		#screen.addScrollPanel(SCREEN_PANEL, "", -8, 29, self.xRes + 16, self.yRes - 85, PanelStyles.PANEL_STYLE_STANDARD) # PanelStyles.PANEL_STYLE_EXTERNAL)
 		# screen.addScrollPanel(UPGRADES_GRAPH_ID, u"", self.W_CATEGORIES, self.Y_PEDIA_PAGE - 13, self.xRes - self.W_CATEGORIES, self.H_MID_SECTION, PanelStyles.PANEL_STYLE_STANDARD)
 		#screen.setActivation(SCREEN_PANEL, ActivationTypes.ACTIVATE_NORMAL)
@@ -174,15 +181,25 @@ class CvTechChooser:
 		# 	#', '.join(s for s in x.im_func.func_code.co_varnames)
 		# 	# for arg in x.im_func.func_code.
 		self.refresh(xrange(self.iNumTechs), False)
-		screen.addSlider("HSlider", 8, self.yRes - 80, self.xRes - 16, 20, -self.scrollOffs, 0, self.maxX - self.xRes, WidgetTypes.WIDGET_GENERAL, 0, 0, False)
-		screen.moveItem("HSlider", 8, self.yRes - 80, 50)
+		screen.attachPanelAt ("TC_BarBot", "TC_BarBotSlider", "", "", True, False, PanelStyles.PANEL_STYLE_EXTERNAL, SLIDER_BORDER, 0, self.xRes - SLIDER_BORDER * 2, 20, WidgetTypes.WIDGET_GENERAL, 0, 0)
+		screen.attachSlider("TC_BarBotSlider", "HSlider", 0, 0, self.xRes, 20, self.scrollOffs, 0, self.maxX - self.xRes - self.minX, WidgetTypes.WIDGET_GENERAL, 0, 0, False)
+
+		for i in xrange(GC.getNumEraInfos()):
+			posX = SLIDER_BORDER + self.minEraX[i] * (self.xRes - SLIDER_BORDER * 2) / self.maxX
+			posY = self.yRes - SCREEN_PANEL_BOTTOM_BAR_H + 40
+			eraInfo = GC.getEraInfo(i)
+			img = eraInfo.getButton()
+			if img:
+				screen.setText("ERAIM|" + str(i), "", "<img=%s>" % (img), 0, posX, posY, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, iEra, 0)
+			screen.setText("ERATEXT|" + str(i), "", "<font=1>%s" % (eraInfo.getDescription()), 0, posX, posY + 28, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, iEra, 0)
+		#screen.moveItem("HSlider", 8, self.yRes - 80, -50)
 		#self.scrollOffs = -350
 		self.scroll()
 		#screen.moveItem(SCREEN_PANEL, -400, 29, 0)
 
 	def scroll(self):
 		screen = self.screen()
-		screen.moveItem(SCREEN_PANEL, self.scrollOffs, 29, 0)
+		screen.moveItem(SCREEN_PANEL, -self.scrollOffs, 29, 0)
 		# for id, x, y in self.widgets:
 		# 	screen.moveItem(id, x + self.scrollOffs, y, 0)
 
@@ -226,7 +243,7 @@ class CvTechChooser:
 		# 			screen.addPullDownString("PlatyHideToEra", GC.getEraInfo(iEra).getDescription(), iEra, iEra, iEra == self.iEraFinal)
 		# 	elif iEra >= self.iEraFirst:
 		# 		screen.addPullDownString("PlatyHideToEra", GC.getEraInfo(iEra).getDescription(), iEra, iEra, iEra == self.iEraFinal)
-		dy = self.yRes - 85
+		dy = self.yRes - SCREEN_PANEL_BAR_H - SCREEN_PANEL_BOTTOM_BAR_H
 
 		yEmptySpace = (dy - 10 * self.hCell) / 10
 		if yEmptySpace < 0:
@@ -252,7 +269,7 @@ class CvTechChooser:
 		dx = self.sIcon1 + 1
 		iMaxElements = (self.wCell - self.sIcon0 - 8) / dx
 
-		iMinX = 0 # self.minEraX[self.iEraFirst]
+		# iMinX = self.minX # self.minEraX[self.iEraFirst]
 
 		for iTech in techs:
 			CvTechInfo = GC.getTechInfo(iTech)
@@ -272,7 +289,7 @@ class CvTechChooser:
 			szTech = str(iTech)
 			szTechRecord = TECH_CHOICE + szTech
 			y0 = CvTechInfo.getGridY()
-			xRel = x0 * self.xCellDist
+			xRel = x0 * self.xCellDist - self.minX
 			iX = xRel
 			# if iX > self.maxX:
 			# 	self.maxX = iX
@@ -304,7 +321,7 @@ class CvTechChooser:
 
 					x1 = techInfoX.getGridX()
 					y1 = techInfoX.getGridY()
-					iX = (x1 - iMinX) * self.xCellDist + self.wCell - 2
+					iX = x1 * self.xCellDist + self.wCell - 2 - self.minX
 					iY = yEmptySpace + ((y1 - 1) * yCellDist) / 2 - 4
 
 					xDiff = x0 - x1
@@ -828,17 +845,10 @@ class CvTechChooser:
 			self.screen().moveItem("Tooltip", iX, iY, 0)
 
 			if len(self.updates) != 0:
-				self.updates = sorted(self.updates, key=lambda el: abs(el[0] - self.scrollOffs))
-				remaining_updates = self.updates[:10] # 
-				self.updates = self.updates[10:]
+				self.updates = sorted(self.updates, key=lambda el: abs(el[0] - self.scrollOffs - self.xRes / 2))
+				remaining_updates = self.updates[:5] # 
+				self.updates = self.updates[5:]
 				self.refresh((f[1] for f in remaining_updates), True)
-			# self.updates
-			# for upd in remaining_updates:
-			# 	upd[1]()
-			# 	self.updates.remove(upd)
-			# 	num = num + 1
-			# 	if num > 50:
-			# 		break
 
 	def getNotificationText(self, inputClass):
 		notifications = []
@@ -894,7 +904,7 @@ class CvTechChooser:
 		NAME	= inputClass.szFunctionName
 		szFlag	= HandleInputUtil.MOUSE_FLAGS.get(inputClass.uiFlags, "UNKNOWN")
 
-		#self.printInput(inputClass)
+		self.printInput(inputClass)
 		#if NAME == SCREEN_PANEL:
 		#print str((NAME, iCode, iData, ID, inputClass.uiFlags))
 
@@ -1008,8 +1018,9 @@ class CvTechChooser:
 			elif NAME == "AddTechButton":
 				CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_TECH, self.iPlayer, -1, -1, self.iSelectedTech, True)	#Action, Player, X, Y, Data, bAdd
 				self.updateSelectedTech(screen, -1)
-		elif NAME == "HSlider" and iCode == 20:
-			self.scrollOffs = -iData
+		elif NAME == "HSlider":
+			if iCode == 20:
+				self.scrollOffs = iData
 			self.scroll()
 		# elif iCode == 11: # List Select
 		# 	if NAME == "TC_DebugDD":
