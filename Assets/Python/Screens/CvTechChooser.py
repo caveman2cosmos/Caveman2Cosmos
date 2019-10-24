@@ -20,22 +20,16 @@ TECH_NAME = "TechName"
 SCREEN_PANEL = "TechList"
 
 CELL_GAP = 64
+ARROW_SIZE = 8
 
 class CvTechChooser:
 
 	def __init__(self):
-		# Cache minimum X coordinate per era for era partitioning.
-		minEraX = [""] * GC.getNumEraInfos() # (string > integer) is True
-		iNumTechs = GC.getNumTechInfos()
-		for iTech in xrange(iNumTechs):
-			info = GC.getTechInfo(iTech)
-			iX = info.getGridX()
-			if iX > 0:
-				iEra = info.getEra()
-				if minEraX[iEra] > iX:
-					minEraX[iEra] = iX
-		self.minEraX = minEraX
-		self.cacheBenefits(iNumTechs)
+		# 0 # self.0 # minEraX = minEraX
+		self.scrollOffs = 0
+		self.iNumEras = GC.getNumEraInfos()
+		self.iNumTechs = GC.getNumTechInfos()
+		self.cacheBenefits()
 
 	def screen(self):
 		return CyGInterfaceScreen("TechChooser", self.screenId)
@@ -69,8 +63,6 @@ class CvTechChooser:
 			return
 
 		self.screenId = screenId
-		self.iNumTechs = GC.getNumTechInfos()
-		self.iNumEras = GC.getNumEraInfos()
 
 		import InputData
 		self.InputData = InputData.instance
@@ -81,9 +73,8 @@ class CvTechChooser:
 		self.bUnitTT = False
 		self.updates = []
 		self.widgets = []
-		self.maxX = 0
-		self.scrollOffs = 0
 
+		# Set up widget sizes
 		import ScreenResolution as SR
 		self.xRes = SR.x
 		self.yRes = SR.y
@@ -91,7 +82,7 @@ class CvTechChooser:
 
 		self.wCell = 128 + self.xRes / 6
 
-		self.xCellDist = (CELL_GAP + self.wCell) * self.iNumTechs
+		self.xCellDist = CELL_GAP + self.wCell
 
 		if self.yRes > 1000:
 			self.sIcon0 = 64
@@ -102,6 +93,20 @@ class CvTechChooser:
 
 		self.hCell = self.sIcon0 + 8
 		self.sIcon1 = self.sIcon0 / 2
+
+		# Cache minimum X coordinate per era for era partitioning.
+		self.minEraX = [""] * GC.getNumEraInfos() # (string > integer) is True
+		self.maxX = 0
+		for iTech in xrange(self.iNumTechs):
+			info = GC.getTechInfo(iTech)
+			iX = info.getGridX() * self.xCellDist
+			if iX > 0:
+				if iX > self.maxX:
+					self.maxX = iX
+
+				iEra = info.getEra()
+				if self.minEraX[iEra] > iX:
+					self.minEraX[iEra] = iX
 
 		eWidGen = WidgetTypes.WIDGET_GENERAL
 		eFontTitle = FontTypes.TITLE_FONT
@@ -154,11 +159,11 @@ class CvTechChooser:
 		screen.showWindowBackground(False)
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
-		screen.addPanel(SCREEN_PANEL, "", "", False, True, -8, 29, self.xRes + 16, self.yRes - 85, PanelStyles.PANEL_STYLE_STANDARD) # PanelStyles.PANEL_STYLE_EXTERNAL)
+		screen.addPanel(SCREEN_PANEL, "", "", False, True, 0, 29, self.maxX + self.xCellDist, self.yRes - 85, PanelStyles.PANEL_STYLE_EXTERNAL) # PanelStyles.PANEL_STYLE_EXTERNAL)
 		#screen.addScrollPanel(SCREEN_PANEL, "", -8, 29, self.xRes + 16, self.yRes - 85, PanelStyles.PANEL_STYLE_STANDARD) # PanelStyles.PANEL_STYLE_EXTERNAL)
 		# screen.addScrollPanel(UPGRADES_GRAPH_ID, u"", self.W_CATEGORIES, self.Y_PEDIA_PAGE - 13, self.xRes - self.W_CATEGORIES, self.H_MID_SECTION, PanelStyles.PANEL_STYLE_STANDARD)
 		#screen.setActivation(SCREEN_PANEL, ActivationTypes.ACTIVATE_NORMAL)
-		screen.setHitTest(SCREEN_PANEL, HitTestTypes.HITTEST_NOHIT)
+		# screen.setHitTest(SCREEN_PANEL, HitTestTypes.HITTEST_NOHIT)
 		# import inspect
 		# import pprint
 		# members = inspect.getmembers(CyInterface(), inspect.ismethod)
@@ -169,17 +174,17 @@ class CvTechChooser:
 		# 	#', '.join(s for s in x.im_func.func_code.co_varnames)
 		# 	# for arg in x.im_func.func_code.
 		self.refresh(xrange(self.iNumTechs), False)
-		screen.addSlider("HSlider", -8, self.yRes - 28, self.xRes - 8, 20, self.scrollOffs, 0, self.maxX - self.xRes, WidgetTypes.WIDGET_GENERAL, 0, 0, False)
-
+		screen.addSlider("HSlider", 8, self.yRes - 80, self.xRes - 16, 20, -self.scrollOffs, 0, self.maxX - self.xRes, WidgetTypes.WIDGET_GENERAL, 0, 0, False)
+		screen.moveItem("HSlider", 8, self.yRes - 80, 50)
 		#self.scrollOffs = -350
 		self.scroll()
 		#screen.moveItem(SCREEN_PANEL, -400, 29, 0)
 
 	def scroll(self):
 		screen = self.screen()
-
-		for id, x, y in self.widgets:
-			screen.moveItem(id, x + self.scrollOffs, y, 0)
+		screen.moveItem(SCREEN_PANEL, self.scrollOffs, 29, 0)
+		# for id, x, y in self.widgets:
+		# 	screen.moveItem(id, x + self.scrollOffs, y, 0)
 
 	def refresh(self, techs, bFull):
 		#timer = BugUtil.Timer('fullRefresh')
@@ -190,9 +195,9 @@ class CvTechChooser:
 
 		# if self.iEraFirst == self.iEraFinal:
 		# 	if self.iCurrentEra + 1 < self.iNumEras:
-		# 		xNext = self.minEraX[self.iCurrentEra + 1]
+		# 		xNext = 0 # self.minEraX[self.iCurrentEra + 1]
 		# 	else:
-		# 		xNext = self.minEraX[self.iCurrentEra]
+		# 		xNext = 0 # self.minEraX[self.iCurrentEra]
 		# 	bSingleEra = True
 		# 	screen.setText("ERA", "", "<font=4b>" + GC.getEraInfo(self.iCurrentEra).getDescription(), 1<<1, self.xRes/2, self.yRes-32, 0, eFontTitle, eWidGen, 1, 2)
 		# else:
@@ -247,7 +252,7 @@ class CvTechChooser:
 		dx = self.sIcon1 + 1
 		iMaxElements = (self.wCell - self.sIcon0 - 8) / dx
 
-		iMinX = self.minEraX[self.iEraFirst]
+		iMinX = 0 # self.minEraX[self.iEraFirst]
 
 		for iTech in techs:
 			CvTechInfo = GC.getTechInfo(iTech)
@@ -267,10 +272,10 @@ class CvTechChooser:
 			szTech = str(iTech)
 			szTechRecord = TECH_CHOICE + szTech
 			y0 = CvTechInfo.getGridY()
-			xRel = (x0 - iMinX) * self.xCellDist
-			iX = xRel - self.scrollOffs 
-			if iX > self.maxX:
-				self.maxX = iX
+			xRel = x0 * self.xCellDist
+			iX = xRel
+			# if iX > self.maxX:
+			# 	self.maxX = iX
 			iY = yEmptySpace + ((y0 - 1) * yCellDist) / 2
 
 			if not bFull:
@@ -306,52 +311,50 @@ class CvTechChooser:
 					yDiff = y0 - y1
 					xOff = xDiff * 62 + (xDiff - 1) * self.wCell
 
-					ARROW_SIZE = 8
-
 					def add_arrow_head(x, y):
-						screen.addDDSGFCAt(szTechRecord + "PREREQ" + str(i) + "HEAD", SCREEN_PANEL, ARROW_HEAD, x, y, ARROW_SIZE, ARROW_SIZE, eWidGen, 1, 2, False)
-						self.widgets.append((szTechRecord + "PREREQ" + str(i) + "HEAD", x, y))
+						screen.addDDSGFCAt("", SCREEN_PANEL, ARROW_HEAD, x, y, ARROW_SIZE, ARROW_SIZE, eWidGen, 1, 2, False)
+						# self.widgets.append((szTechRecord + "PREREQ" + str(i) + "HEAD", x, y))
 
-					def add_line_h(id, x, y, len):
-						screen.addDDSGFCAt(szTechRecord + "PREREQ" + str(i) + "H" + str(id), SCREEN_PANEL, ARROW_X, x, y, len, ARROW_SIZE, eWidGen, 1, 2, False)
-						self.widgets.append((szTechRecord + "PREREQ" + str(i) + "H" + str(id), x, y))
+					def add_line_h(x, y, len):
+						screen.addDDSGFCAt("", SCREEN_PANEL, ARROW_X, x, y, len, ARROW_SIZE, eWidGen, 1, 2, False)
+						# self.widgets.append((szTechRecord + "PREREQ" + str(i) + "H" + str(id), x, y))
 
 					def add_line_v(x, y, len):
-						screen.addDDSGFCAt(szTechRecord + "PREREQ" + str(i) + "V", SCREEN_PANEL, ARROW_Y, x, y, ARROW_SIZE, len, eWidGen, 1, 2, False)
-						self.widgets.append((szTechRecord + "PREREQ" + str(i) + "V", x, y))
+						screen.addDDSGFCAt("", SCREEN_PANEL, ARROW_Y, x, y, ARROW_SIZE, len, eWidGen, 1, 2, False)
+						# self.widgets.append((szTechRecord + "PREREQ" + str(i) + "V", x, y))
 
 					if not yDiff:
-						add_line_h(0, iX, iY + yArrow0, xOff)
+						add_line_h(iX, iY + yArrow0, xOff)
 						add_arrow_head(iX + xOff, iY + yArrow0)
 					elif yDiff < 0:
 						if yDiff < -3 and xDiff == 1:
 							dy = yDiff * yBoxSpacing + self.hCell/2
 							yArrow = iY + yArrow2
-							add_line_h(0, iX, yArrow, xOff/3 + 4)
+							add_line_h(iX, yArrow, xOff/3 + 4)
 							add_line_v(iX + xOff/3, yArrow + 4 + dy, -dy)
-							add_line_h(1, iX + 4 + xOff/3, yArrow + dy, xOff * 2/3)
+							add_line_h(iX + 4 + xOff/3, yArrow + dy, xOff * 2/3)
 							add_arrow_head(iX + xOff, yArrow + dy)
 						else:
 							dy = yDiff * yBoxSpacing + self.hCell/4
 							yArrow = iY + yArrow1
-							add_line_h(0, iX, yArrow, xOff/2 + 4)
+							add_line_h(iX, yArrow, xOff/2 + 4)
 							add_line_v(iX + xOff/2, yArrow + 4 + dy, -dy)
-							add_line_h(1, iX + 4 + xOff/2, yArrow + dy, xOff/2)
+							add_line_h(iX + 4 + xOff/2, yArrow + dy, xOff/2)
 							add_arrow_head(iX + xOff, yArrow + dy)
 					else:
 						if yDiff > 3 and xDiff == 1:
 							dy = yDiff * yBoxSpacing - self.hCell/2
 							yArrow = iY + yArrow4
-							add_line_h(0, iX, yArrow, xOff/3 + 4)
+							add_line_h(iX, yArrow, xOff/3 + 4)
 							add_line_v(iX + xOff/3, yArrow + 4, dy)
-							add_line_h(1, iX + 4 + xOff/3, yArrow + dy, xOff * 2/3)
+							add_line_h(iX + 4 + xOff/3, yArrow + dy, xOff * 2/3)
 							add_arrow_head(iX + xOff, yArrow + dy)
 						else:
 							dy = yDiff * yBoxSpacing - self.hCell/4
 							yArrow = iY + yArrow3
-							add_line_h(0, iX, yArrow, xOff/2 + 4)
+							add_line_h(iX, yArrow, xOff/2 + 4)
 							add_line_v(iX + xOff/2, yArrow + 4, dy)
-							add_line_h(1, iX + 4 + xOff/2, yArrow + dy, xOff/2)
+							add_line_h(iX + 4 + xOff/2, yArrow + dy, xOff/2)
 							add_arrow_head(iX + xOff, yArrow + dy)
 
 				# Unlocks
@@ -507,14 +510,14 @@ class CvTechChooser:
 				screen.show("TC_Header")
 			self.iResearch0 = iTech
 
-		if iEraFirst == iEraFinal:
-			bSingleEra = True
-			iCurrentEra = self.iCurrentEra
-			if iCurrentEra + 1 < self.iNumEras:
-				xNext = self.minEraX[iCurrentEra + 1]
-			else: xNext = self.minEraX[iCurrentEra]
-		else:
-			bSingleEra = False
+		# if iEraFirst == iEraFinal:
+		# 	bSingleEra = True
+		# 	iCurrentEra = self.iCurrentEra
+		# 	if iCurrentEra + 1 < self.iNumEras:
+		# 		xNext = self.minEraX[iCurrentEra + 1]
+		# 	else: xNext = self.minEraX[iCurrentEra]
+		# else:
+		bSingleEra = False
 
 		currentTechState = self.currentTechState
 
@@ -601,14 +604,14 @@ class CvTechChooser:
 			screen.hide("SelectedTechLabel")
 			screen.show("TC_Header")
 
-	def cacheBenefits(self, iNumTechs):
+	def cacheBenefits(self):
 		techBenefits = []
 		iNumDomains = int(DomainTypes.NUM_DOMAIN_TYPES)
 		iNumCommerce = int(CommerceTypes.NUM_COMMERCE_TYPES)
 		iNumTerrains = GC.getNumTerrainInfos()
 
 		iTech = 0
-		while iTech < iNumTechs:
+		while iTech < self.iNumTechs:
 			techBenefits.append([])
 			info = GC.getTechInfo(iTech)
 			if info.getGridX() > 0:
@@ -678,7 +681,7 @@ class CvTechChooser:
 		while iType < GC.getNumRouteInfos():
 			info = GC.getRouteInfo(iType)
 			iTech = 0
-			while iTech < iNumTechs:
+			while iTech < self.iNumTechs:
 				if info.getTechMovementChange(iTech):
 					techBenefits[iTech].append(["RouteChange", iType])
 				iTech += 1
@@ -689,7 +692,7 @@ class CvTechChooser:
 		while iType < GC.getNumImprovementInfos():
 			info = GC.getImprovementInfo(iType)
 			iTech = 0
-			while iTech < iNumTechs:
+			while iTech < self.iNumTechs:
 				i = 0
 				while i < iNumYields:
 					if info.getTechYieldChanges(iTech, i):
@@ -825,7 +828,8 @@ class CvTechChooser:
 			self.screen().moveItem("Tooltip", iX, iY, 0)
 
 			if len(self.updates) != 0:
-				remaining_updates = self.updates[:10] # sorted(self.updates, key=lambda el: abs(el[0] - iX))
+				self.updates = sorted(self.updates, key=lambda el: abs(el[0] - self.scrollOffs))
+				remaining_updates = self.updates[:10] # 
 				self.updates = self.updates[10:]
 				self.refresh((f[1] for f in remaining_updates), True)
 			# self.updates
@@ -867,8 +871,6 @@ class CvTechChooser:
 		print "-----------new input-----------"
 		print "Notify code:  " + self.getNotificationText(inputClass)
 		print "Data:         " + str(inputClass.getData())
-		if inputClass.getNotifyCode() == NotifyCode.NOTIFY_CHARACTER:
-			print "Key (Data):   " + getKeyString(inputClass.getData())
 		print "Flags:        " + str(inputClass.getFlags())
 		print "ID:           " + str(inputClass.getID())
 		print "Func Name:    " + str(inputClass.getFunctionName())
@@ -892,7 +894,7 @@ class CvTechChooser:
 		NAME	= inputClass.szFunctionName
 		szFlag	= HandleInputUtil.MOUSE_FLAGS.get(inputClass.uiFlags, "UNKNOWN")
 
-		self.printInput(inputClass)
+		#self.printInput(inputClass)
 		#if NAME == SCREEN_PANEL:
 		#print str((NAME, iCode, iData, ID, inputClass.uiFlags))
 
@@ -1047,6 +1049,6 @@ class CvTechChooser:
 		del (
 			self.screenId, self.InputData, self.szTxtTT, self.iOffsetTT, self.bLockedTT, self.iUnitTT, self.bUnitTT,
 			self.xRes, self.yRes, self.aFontList, self.wCell, self.hCell, self.sIcon0, self.sIcon1, self.iSelectedTech,
-			self.iPlayer, self.CyPlayer, self.CyTeam, self.iResearch0, self.currentTechState, self.iNumTechs, self.iNumEras,
-			self.iEraFirst, self.iEraFinal, self.iCurrentEra, self.iCurrentEra0
+			self.iPlayer, self.CyPlayer, self.CyTeam, self.iResearch0, self.currentTechState,
+			self.iEraFirst, self.iEraFinal, self.iCurrentEra, self.iCurrentEra0, self.updates
 		)
