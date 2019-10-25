@@ -3,7 +3,6 @@ import CvScreensInterface as UP
 import HandleInputUtil
 import PythonToolTip as pyTT
 from sys import maxint
-#import BugUtil
 
 GC = CyGlobalContext()
 TRNSLTR = CyTranslator()
@@ -19,17 +18,24 @@ TECH_CHOICE = "WID|TECH|CHOICE"
 TECH_REQ = "WID|TECH|REQ"
 TECH_NAME = "TechName"
 SCREEN_PANEL = "TechList"
-SCREEN_PANEL_BAR_H = 42
-SCREEN_PANEL_BOTTOM_BAR_H = 100
-SLIDER_BORDER = 50
 
+# Top panel height
+SCREEN_PANEL_BAR_H = 42
+# Bottom panel height
+SCREEN_PANEL_BOTTOM_BAR_H = 100
+# Left/right border for the slider
+SLIDER_BORDER = 50
+# How many techs to page in per update tick, more is faster but more introduces more stutter
+# Could use a timer instead of a fixed count to allocate time slice for paging for more consistent behaviour
+TECH_PAGING_RATE = 5
+# Gap between techs
 CELL_GAP = 64
+# Size of dependency arrows
 ARROW_SIZE = 8
 
 class CvTechChooser:
 
 	def __init__(self):
-		# 0 # self.0 # minEraX = minEraX
 		self.scrollOffs = 0
 		self.iNumEras = GC.getNumEraInfos()
 		self.iNumTechs = GC.getNumTechInfos()
@@ -51,8 +57,8 @@ class CvTechChooser:
 		self.iCurrentEra0 = CyPlayer.getCurrentEra()
 
 		currentTechState = self.currentTechState
-		iTech = 0
-		while iTech < self.iNumTechs:
+
+		for iTech in xrange(self.iNumTechs):
 			if CyTeam.isHasTech(iTech):
 				currentTechState[iTech] = CIV_HAS_TECH
 			elif CyPlayer.canEverResearch(iTech):
@@ -61,10 +67,13 @@ class CvTechChooser:
 				else: currentTechState[iTech] = CIV_TECH_AVAILABLE
 			else:
 				currentTechState[iTech] = CIV_NO_RESEARCH
-			iTech += 1
 
 	def interfaceScreen(self, screenId):
-		if GC.getGame().isPitbossHost(): 
+		if GC.getGame().isPitbossHost():
+			return
+
+		# Make sure we don't initialize twice
+		if self.created:
 			return
 
 		self.created = True
@@ -72,13 +81,13 @@ class CvTechChooser:
 
 		import InputData
 		self.InputData = InputData.instance
+	
 		# Tool Tip
 		self.szTxtTT = ""
 		self.iOffsetTT = []
 		self.bLockedTT = False
 		self.bUnitTT = False
 		self.updates = []
-		self.widgets = []
 
 		# Set up widget sizes
 		import ScreenResolution as SR
@@ -126,7 +135,6 @@ class CvTechChooser:
 
 		# Base Screen
 		screen = self.screen()
-
 		screen.addDDSGFC("ScreenBackground", AFM.getInterfaceArtInfo("SCREEN_BG_OPAQUE").getPath(), 0, 0, self.xRes, self.yRes, eWidGen, 1, 2)
 
 		screen.addPanel("TC_BarTop", "", "", True, False, 0, 0, self.xRes, SCREEN_PANEL_BAR_H, PanelStyles.PANEL_STYLE_TOPBAR)
@@ -143,12 +151,9 @@ class CvTechChooser:
 		screen.hide(stackBar)
 		screen.setImageButton("WID|TECH|CURRENT0", "", 256, 3, self.xRes - 512, 30, eWidGen, 1, 2)
 		screen.hide("WID|TECH|CURRENT0")
+
 		self.iResearch0 = -1
 
-		# screen.setButtonGFC("ERA|Prev", "", "", self.xRes/2 + 8, self.yRes - 30, 24, 24, eWidGen, 1, 2, ButtonStyles.BUTTON_STYLE_ARROW_LEFT)
-		# screen.setButtonGFC("ERA|Next", "", "", self.xRes/2 + 48, self.yRes - 30, 24, 24, eWidGen, 1, 2, ButtonStyles.BUTTON_STYLE_ARROW_RIGHT)
-
-		# screen.setButtonGFC("ERA|All", "", "", 8, self.yRes - 28, 24, 24, eWidGen, 1, 2, ButtonStyles.BUTTON_STYLE_CITY_PLUS)
 		# Debug
 		import DebugUtils
 		if DebugUtils.bDebugMode:
@@ -168,46 +173,35 @@ class CvTechChooser:
 		screen.showWindowBackground(False)
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
-		screen.addPanel(SCREEN_PANEL, "", "", False, True, 0, SCREEN_PANEL_BAR_H, self.maxX + self.xCellDist, self.yRes - SCREEN_PANEL_BAR_H - SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_EMPTY) # PanelStyles.PANEL_STYLE_EXTERNAL)
-		#screen.addScrollPanel(SCREEN_PANEL, "", -8, 29, self.xRes + 16, self.yRes - 85, PanelStyles.PANEL_STYLE_STANDARD) # PanelStyles.PANEL_STYLE_EXTERNAL)
-		# screen.addScrollPanel(UPGRADES_GRAPH_ID, u"", self.W_CATEGORIES, self.Y_PEDIA_PAGE - 13, self.xRes - self.W_CATEGORIES, self.H_MID_SECTION, PanelStyles.PANEL_STYLE_STANDARD)
-		#screen.setActivation(SCREEN_PANEL, ActivationTypes.ACTIVATE_NORMAL)
-		# screen.setHitTest(SCREEN_PANEL, HitTestTypes.HITTEST_NOHIT)
-		# import inspect
-		# import pprint
-		# members = inspect.getmembers(CyInterface(), inspect.ismethod)
-		# pp = pprint.PrettyPrinter(depth=4)
-		# for tup in members:
-		# 	pp.pprint(tup)
-		# 	#print name + str(fn) + inspect.getargspec(fn.im_func)# str(GC.getVarnames(fn))
-		# 	#', '.join(s for s in x.im_func.func_code.co_varnames)
-		# 	# for arg in x.im_func.func_code.
-		self.refresh(xrange(self.iNumTechs), False)
-		screen.addPanel("TC_BarBotSlider", "", "", False, False, SLIDER_BORDER, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H - 12, self.xRes, 40, PanelStyles.PANEL_STYLE_EMPTY)
-		# screen.addSlider("HSlider", 0, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H, self.xRes, 20, self.scrollOffs, 0, self.maxX - self.xRes - self.minX, WidgetTypes.WIDGET_GENERAL, 0, 0, False)
+		# Main scrolling panel
+		screen.addPanel(SCREEN_PANEL, "", "", False, False, 0, SCREEN_PANEL_BAR_H, self.maxX + self.xCellDist, self.yRes - SCREEN_PANEL_BAR_H - SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_EMPTY)
 
+		# Create the tech button backgrounds
+		self.refresh(xrange(self.iNumTechs), False)
+
+		# A panel to put the horizontal slider in so we can position it correctly
+		screen.addPanel("TC_BarBotSlider", "", "", False, False, SLIDER_BORDER, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H - 12, self.xRes, 40, PanelStyles.PANEL_STYLE_EMPTY)
+
+		# Era buttons that can jump directly to an era
 		for i in xrange(GC.getNumEraInfos()):
 			posX = SLIDER_BORDER + self.minEraX[i] * (self.xRes - SLIDER_BORDER * 2) / self.maxX
 			posY = self.yRes - SCREEN_PANEL_BOTTOM_BAR_H + 24
 			eraInfo = GC.getEraInfo(i)
 			img = eraInfo.getButton()
 			if img:
-				screen.setText("WID|ERAIM|" + str(i), "", "<img=%s>" % (img), 0, posX, posY, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, iEra, 0)
-			yOffs = 20 * (i % 2)
-			screen.setText("WID|ERATEXT|" + str(i), "", "<font=1>%s" % (eraInfo.getDescription()), 0, posX, posY + 28 + yOffs, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, iEra, 0)
-		#screen.moveItem("HSlider", 8, self.yRes - 80, -50)
-		#self.scrollOffs = -350
+				screen.setText("WID|ERAIM|" + str(i), "", "<img=%s>" % (img), 0, posX, posY + 20, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, iEra, 0)
+			yOffs = 0 + 48 * (i % 2)
+			screen.setText("WID|ERATEXT|" + str(i), "", "<font=1>%s" % (eraInfo.getDescription()), 0, posX, posY + yOffs, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, iEra, 0)
+
+		# Finally scroll to our current offset (this is maintained when the screen is created and destroyed)
 		self.scrollTo(self.scrollOffs)
-		#screen.moveItem(SCREEN_PANEL, -400, 29, 0)
 
 	def scroll(self):
 		self.screen().moveItem(SCREEN_PANEL, -self.scrollOffs, 29, 0)
-		# for id, x, y in self.widgets:
-		# 	screen.moveItem(id, x + self.scrollOffs, y, 0)
 
 	def scrollTo(self, offs):
 		maxScroll = self.maxX - self.xRes - self.minX
-		self.scrollOffs = offs - self.minX
+		self.scrollOffs = offs
 		if self.scrollOffs < 0:
 			self.scrollOffs = 0
 		if self.scrollOffs > maxScroll:
@@ -312,7 +306,6 @@ class CvTechChooser:
 				screen.addDDSGFCAt(ICON + szTech, szTechRecord, CvTechInfo.getButton(), 3, 5, self.sIcon0, self.sIcon0, eWidGen, 1, 2, False)
 				screen.setHitTest(ICON + szTech, HitTestTypes.HITTEST_NOHIT)
 				self.updates.append((xRel, iTech))
-				self.widgets.append((szTechRecord, iX, iY))
 			else:
 				# Requires
 				iX = self.wCell
@@ -340,17 +333,15 @@ class CvTechChooser:
 					yDiff = y0 - y1
 					xOff = xDiff * 62 + (xDiff - 1) * self.wCell
 
+					# Helper functions for drawing the tech dependency arrows
 					def add_arrow_head(x, y):
 						screen.addDDSGFCAt("", SCREEN_PANEL, ARROW_HEAD, x, y, ARROW_SIZE, ARROW_SIZE, eWidGen, 1, 2, False)
-						# self.widgets.append((szTechRecord + "PREREQ" + str(i) + "HEAD", x, y))
 
 					def add_line_h(x, y, len):
 						screen.addDDSGFCAt("", SCREEN_PANEL, ARROW_X, x, y, len, ARROW_SIZE, eWidGen, 1, 2, False)
-						# self.widgets.append((szTechRecord + "PREREQ" + str(i) + "H" + str(id), x, y))
 
 					def add_line_v(x, y, len):
 						screen.addDDSGFCAt("", SCREEN_PANEL, ARROW_Y, x, y, ARROW_SIZE, len, eWidGen, 1, 2, False)
-						# self.widgets.append((szTechRecord + "PREREQ" + str(i) + "V", x, y))
 
 					if not yDiff:
 						add_line_h(iX, iY + yArrow0, xOff)
@@ -398,6 +389,7 @@ class CvTechChooser:
 				for i in xrange(iLength):
 					sType, iItem = benefits[i]
 
+					# Helpers for drawing the unlocks
 					def imageButton(key, button):
 						screen.setImageButtonAt(key + str(iTech * 1000 + i), szTechRecord, button, iX, iY, self.sIcon1, self.sIcon1, eWidGen, 1, 2)
 
@@ -498,13 +490,10 @@ class CvTechChooser:
 						ddsgfc("Item", GC.getCorporationInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_FOUND_CORPORATION, iTech, iItem, False)
 					iX += dx
 
-		# self.updates.append((x0, update_tech))
-		#timer.log()
 		if not bFull:
 			self.updateTechRecords(True)
 
 	def updateTechRecords(self, bForce):
-
 		screen = self.screen()
 		eWidGen = WidgetTypes.WIDGET_GENERAL
 		eFontTitle = FontTypes.TITLE_FONT
@@ -539,15 +528,6 @@ class CvTechChooser:
 				screen.show("TC_Header")
 			self.iResearch0 = iTech
 
-		# if iEraFirst == iEraFinal:
-		# 	bSingleEra = True
-		# 	iCurrentEra = self.iCurrentEra
-		# 	if iCurrentEra + 1 < self.iNumEras:
-		# 		xNext = self.minEraX[iCurrentEra + 1]
-		# 	else: xNext = self.minEraX[iCurrentEra]
-		# else:
-		bSingleEra = False
-
 		currentTechState = self.currentTechState
 
 		# Analyze change
@@ -558,23 +538,21 @@ class CvTechChooser:
 			iX = CvTechInfo.getGridX()
 			if iX > 0:
 				iEra = CvTechInfo.getEra()
-				if bSingleEra and (iEra == iCurrentEra or iX == xNext) or not bSingleEra and iEra >= iEraFirst and iEra <= iEraFinal:
-
-					if currentTechState[iTech] == CIV_HAS_TECH:
-						if bForce:
-							lChanged.append((iTech, CvTechInfo, iEra))
-
-					elif currentTechState[iTech] == CIV_NO_RESEARCH:
-						if bForce:
-							lChanged.append((iTech, CvTechInfo, iEra))
-
-					elif CyPlayer.isResearchingTech(iTech):
-						currentTechState[iTech] = CIV_IS_RESEARCHING
+				if currentTechState[iTech] == CIV_HAS_TECH:
+					if bForce:
 						lChanged.append((iTech, CvTechInfo, iEra))
 
-					elif bForce or currentTechState[iTech] != CIV_TECH_AVAILABLE:
-						currentTechState[iTech] = CIV_TECH_AVAILABLE
+				elif currentTechState[iTech] == CIV_NO_RESEARCH:
+					if bForce:
 						lChanged.append((iTech, CvTechInfo, iEra))
+
+				elif CyPlayer.isResearchingTech(iTech):
+					currentTechState[iTech] = CIV_IS_RESEARCHING
+					lChanged.append((iTech, CvTechInfo, iEra))
+
+				elif bForce or currentTechState[iTech] != CIV_TECH_AVAILABLE:
+					currentTechState[iTech] = CIV_TECH_AVAILABLE
+					lChanged.append((iTech, CvTechInfo, iEra))
 			iTech += 1
 
 		# Make change
@@ -856,12 +834,15 @@ class CvTechChooser:
 			if iY < 0: iY = 0
 			self.screen().moveItem("Tooltip", iX, iY, 0)
 
+			# If we still have techs to complete the initialization of
 			if len(self.updates) != 0:
+				# Sort them by distance to the current scroll offset so we can make sure to update what the player is looking at first
 				self.updates = sorted(self.updates, key=lambda el: abs(el[0] - self.scrollOffs - self.xRes / 2))
-				remaining_updates = self.updates[:5] # 
-				self.updates = self.updates[5:]
+				remaining_updates = self.updates[:TECH_PAGING_RATE]
+				self.updates = self.updates[TECH_PAGING_RATE:]
 				self.refresh((f[1] for f in remaining_updates), True)
 
+	## DEBUG CODE for investigating handleInput behaviour
 	def getNotificationText(self, inputClass):
 		notifications = []
 		notifications.append("NOTIFY_CLICKED")
@@ -916,9 +897,8 @@ class CvTechChooser:
 		NAME	= inputClass.szFunctionName
 		szFlag	= HandleInputUtil.MOUSE_FLAGS.get(inputClass.uiFlags, "UNKNOWN")
 
+		## DEBUG CODE
 		self.printInput(inputClass)
-		#if NAME == SCREEN_PANEL:
-		#print str((NAME, iCode, iData, ID, inputClass.uiFlags))
 
 		szSplit = NAME.split("|")
 		BASE = szSplit[0]
@@ -933,18 +913,17 @@ class CvTechChooser:
 
 		iType = ID
 
-		if iCode == 6: # Character
+		if iCode == NotifyCode.NOTIFY_CHARACTER: # Character
 			if iData in (45, 49, 56): # Ctrl, Shift, Alt
 				if self.bUnitTT:
 					self.updateTooltip(screen, CyGameTextMgr().getUnitHelp(self.iUnitTT, False, True, True, None))
 					self.bUnitTT = None
 			return 1
 		elif iCode == 17: # Key Up
-			# if iData in (13, 102):
-			# 	self.back()
-			# elif iData in (16, 103):
-			# 	self.forward()
-			# el
+			if iData == 13: # A
+				self.scrollTo(self.scrollOffs - self.xCellDist)
+			elif iData == 16: # D
+				self.scrollTo(self.scrollOffs + self.xCellDist)
 			if self.bUnitTT is None:
 				self.bUnitTT = True
 			return 1
@@ -978,7 +957,6 @@ class CvTechChooser:
 		elif not iCode: # click
 
 			if BASE == "WID":
-
 				if szFlag == "MOUSE_RBUTTONUP":
 					if TYPE == "UNIT":
 						UP.pediaJumpToUnit([ID])
@@ -1005,29 +983,7 @@ class CvTechChooser:
 								CyMessageControl().sendResearch(iType, bShift)
 								self.updateTechRecords(False)
 					elif TYPE == "ERAIM" or TYPE == "ERATEXT":
-						self.scrollTo(self.minEraX[ID])
-
-			# elif BASE == "ERA":
-			# 	if TYPE == "Next":
-			# 		if self.iCurrentEra + 1 != self.iNumEras:
-			# 			self.iCurrentEra += 1
-			# 			self.iEraFirst = self.iEraFinal = self.iCurrentEra
-			# 			self.fullRefresh(screen)
-
-			# 	elif TYPE == "Prev":
-			# 		if self.iCurrentEra:
-			# 			self.iCurrentEra -= 1
-			# 			self.iEraFirst = self.iEraFinal = self.iCurrentEra
-			# 			self.fullRefresh(screen)
-			# 	elif TYPE == "All":
-			# 		if self.iEraFirst != 0 or self.iEraFinal != self.iNumEras - 1:
-			# 			self.iEraFirst = 0
-			# 			self.iEraFinal = self.iNumEras - 1
-			# 			self.fullRefresh(screen)
-			# 	else:
-			# 		self.iEraFirst = self.iEraFinal = self.iCurrentEra = self.iCurrentEra0
-			# 		self.fullRefresh(screen)
-
+						self.scrollTo(self.minEraX[ID] - self.minX)
 			elif NAME == "AddTechButton":
 				CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_TECH, self.iPlayer, -1, -1, self.iSelectedTech, True)	#Action, Player, X, Y, Data, bAdd
 				self.updateSelectedTech(screen, -1)
@@ -1035,43 +991,17 @@ class CvTechChooser:
 			if iCode == 20:
 				self.scrollOffs = iData
 			self.scroll()
-		# elif iCode == 11: # List Select
-		# 	if NAME == "TC_DebugDD":
-		# 		self.cachePlayer(screen.getPullDownData(NAME, screen.getSelectedPullDownID(NAME)))
-		# 		self.fullRefresh(screen)
-
-		# 	elif NAME == "PlatyHideFromEra":
-		# 		self.iEraFirst = screen.getPullDownData("PlatyHideFromEra", screen.getSelectedPullDownID("PlatyHideFromEra"))
-		# 		self.fullRefresh(screen)
-
-		# 	elif NAME == "PlatyHideToEra":
-		# 		self.iEraFinal = screen.getPullDownData("PlatyHideToEra", screen.getSelectedPullDownID("PlatyHideToEra"))
-		# 		self.fullRefresh(screen)
-
-	# def back(self):
-	# 	if self.iCurrentEra is None:
-	# 		self.iEraFirst = self.iEraFinal = self.iCurrentEra = self.iCurrentEra0
-	# 		self.fullRefresh(self.screen())
-	# 	elif self.iCurrentEra:
-	# 		self.iCurrentEra -= 1
-	# 		self.iEraFirst = self.iEraFinal = self.iCurrentEra
-	# 		self.fullRefresh(self.screen())
-
-	# def forward(self):
-	# 	if self.iCurrentEra is None:
-	# 		self.iEraFirst = self.iEraFinal = self.iCurrentEra = self.iCurrentEra0
-	# 		self.fullRefresh(self.screen())
-	# 	elif self.iCurrentEra + 1 != self.iNumEras:
-	# 		self.iCurrentEra += 1
-	# 		self.iEraFirst = self.iEraFinal = self.iCurrentEra
-	# 		self.fullRefresh(self.screen())
+		elif iCode == 11: # List Select
+			if NAME == "TC_DebugDD":
+				self.cachePlayer(screen.getPullDownData(NAME, screen.getSelectedPullDownID(NAME)))
+				self.fullRefresh(screen)
 
 	def onClose(self):
 		print "Exit Tech Tree"
 		if GC.getPlayer(GC.getGame().getActivePlayer()).getAdvancedStartPoints() > -1:
 			CyInterface().setDirty(InterfaceDirtyBits.Advanced_Start_DIRTY_BIT, True)
 
-		# Only delete if 
+		# Only delete if actually created
 		if self.created:
 			del (
 				self.screenId, self.InputData, self.szTxtTT, self.iOffsetTT, self.bLockedTT, self.iUnitTT, self.bUnitTT,
