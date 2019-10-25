@@ -33,6 +33,7 @@ class CvTechChooser:
 		self.scrollOffs = 0
 		self.iNumEras = GC.getNumEraInfos()
 		self.iNumTechs = GC.getNumTechInfos()
+		self.created = False
 		self.cacheBenefits()
 
 	def screen(self):
@@ -66,6 +67,7 @@ class CvTechChooser:
 		if GC.getGame().isPitbossHost(): 
 			return
 
+		self.created = True
 		self.screenId = screenId
 
 		import InputData
@@ -166,7 +168,7 @@ class CvTechChooser:
 		screen.showWindowBackground(False)
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
-		screen.addPanel(SCREEN_PANEL, "", "", False, True, 0, SCREEN_PANEL_BAR_H, self.maxX + self.xCellDist, self.yRes - SCREEN_PANEL_BAR_H - SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_EXTERNAL) # PanelStyles.PANEL_STYLE_EXTERNAL)
+		screen.addPanel(SCREEN_PANEL, "", "", False, True, 0, SCREEN_PANEL_BAR_H, self.maxX + self.xCellDist, self.yRes - SCREEN_PANEL_BAR_H - SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_EMPTY) # PanelStyles.PANEL_STYLE_EXTERNAL)
 		#screen.addScrollPanel(SCREEN_PANEL, "", -8, 29, self.xRes + 16, self.yRes - 85, PanelStyles.PANEL_STYLE_STANDARD) # PanelStyles.PANEL_STYLE_EXTERNAL)
 		# screen.addScrollPanel(UPGRADES_GRAPH_ID, u"", self.W_CATEGORIES, self.Y_PEDIA_PAGE - 13, self.xRes - self.W_CATEGORIES, self.H_MID_SECTION, PanelStyles.PANEL_STYLE_STANDARD)
 		#screen.setActivation(SCREEN_PANEL, ActivationTypes.ACTIVATE_NORMAL)
@@ -181,27 +183,37 @@ class CvTechChooser:
 		# 	#', '.join(s for s in x.im_func.func_code.co_varnames)
 		# 	# for arg in x.im_func.func_code.
 		self.refresh(xrange(self.iNumTechs), False)
-		screen.attachPanelAt ("TC_BarBot", "TC_BarBotSlider", "", "", True, False, PanelStyles.PANEL_STYLE_EXTERNAL, SLIDER_BORDER, 0, self.xRes - SLIDER_BORDER * 2, 20, WidgetTypes.WIDGET_GENERAL, 0, 0)
-		screen.attachSlider("TC_BarBotSlider", "HSlider", 0, 0, self.xRes, 20, self.scrollOffs, 0, self.maxX - self.xRes - self.minX, WidgetTypes.WIDGET_GENERAL, 0, 0, False)
+		screen.addPanel("TC_BarBotSlider", "", "", False, False, SLIDER_BORDER, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H - 12, self.xRes, 40, PanelStyles.PANEL_STYLE_EMPTY)
+		# screen.addSlider("HSlider", 0, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H, self.xRes, 20, self.scrollOffs, 0, self.maxX - self.xRes - self.minX, WidgetTypes.WIDGET_GENERAL, 0, 0, False)
 
 		for i in xrange(GC.getNumEraInfos()):
 			posX = SLIDER_BORDER + self.minEraX[i] * (self.xRes - SLIDER_BORDER * 2) / self.maxX
-			posY = self.yRes - SCREEN_PANEL_BOTTOM_BAR_H + 40
+			posY = self.yRes - SCREEN_PANEL_BOTTOM_BAR_H + 24
 			eraInfo = GC.getEraInfo(i)
 			img = eraInfo.getButton()
 			if img:
-				screen.setText("ERAIM|" + str(i), "", "<img=%s>" % (img), 0, posX, posY, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, iEra, 0)
-			screen.setText("ERATEXT|" + str(i), "", "<font=1>%s" % (eraInfo.getDescription()), 0, posX, posY + 28, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, iEra, 0)
+				screen.setText("WID|ERAIM|" + str(i), "", "<img=%s>" % (img), 0, posX, posY, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, iEra, 0)
+			yOffs = 20 * (i % 2)
+			screen.setText("WID|ERATEXT|" + str(i), "", "<font=1>%s" % (eraInfo.getDescription()), 0, posX, posY + 28 + yOffs, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, iEra, 0)
 		#screen.moveItem("HSlider", 8, self.yRes - 80, -50)
 		#self.scrollOffs = -350
-		self.scroll()
+		self.scrollTo(self.scrollOffs)
 		#screen.moveItem(SCREEN_PANEL, -400, 29, 0)
 
 	def scroll(self):
-		screen = self.screen()
-		screen.moveItem(SCREEN_PANEL, -self.scrollOffs, 29, 0)
+		self.screen().moveItem(SCREEN_PANEL, -self.scrollOffs, 29, 0)
 		# for id, x, y in self.widgets:
 		# 	screen.moveItem(id, x + self.scrollOffs, y, 0)
+
+	def scrollTo(self, offs):
+		maxScroll = self.maxX - self.xRes - self.minX
+		self.scrollOffs = offs - self.minX
+		if self.scrollOffs < 0:
+			self.scrollOffs = 0
+		if self.scrollOffs > maxScroll:
+			self.scrollOffs = maxScroll
+		self.screen().attachSlider("TC_BarBotSlider", "HSlider", 0, 0, self.xRes - SLIDER_BORDER * 2, 20, self.scrollOffs, 0, maxScroll, WidgetTypes.WIDGET_GENERAL, 0, 0, False)
+		self.scroll()
 
 	def refresh(self, techs, bFull):
 		#timer = BugUtil.Timer('fullRefresh')
@@ -980,7 +992,6 @@ class CvTechChooser:
 						if CASE[0] == "CURRENT":
 							UP.pediaJumpToTech([self.CyPlayer.getCurrentResearch()])
 						else: UP.pediaJumpToTech([iType])
-
 				elif szFlag == "MOUSE_LBUTTONUP":
 					if TYPE == "TECH":
 						if self.CyPlayer.getAdvancedStartPoints() > -1:
@@ -993,6 +1004,8 @@ class CvTechChooser:
 							elif CASE[0] == "CHOICE" and (self.currentTechState[iType] == CIV_TECH_AVAILABLE or not bShift and self.currentTechState[iType] == CIV_IS_RESEARCHING):
 								CyMessageControl().sendResearch(iType, bShift)
 								self.updateTechRecords(False)
+					elif TYPE == "ERAIM" or TYPE == "ERATEXT":
+						self.scrollTo(self.minEraX[ID])
 
 			# elif BASE == "ERA":
 			# 	if TYPE == "Next":
@@ -1057,9 +1070,13 @@ class CvTechChooser:
 		print "Exit Tech Tree"
 		if GC.getPlayer(GC.getGame().getActivePlayer()).getAdvancedStartPoints() > -1:
 			CyInterface().setDirty(InterfaceDirtyBits.Advanced_Start_DIRTY_BIT, True)
-		del (
-			self.screenId, self.InputData, self.szTxtTT, self.iOffsetTT, self.bLockedTT, self.iUnitTT, self.bUnitTT,
-			self.xRes, self.yRes, self.aFontList, self.wCell, self.hCell, self.sIcon0, self.sIcon1, self.iSelectedTech,
-			self.iPlayer, self.CyPlayer, self.CyTeam, self.iResearch0, self.currentTechState,
-			self.iEraFirst, self.iEraFinal, self.iCurrentEra, self.iCurrentEra0, self.updates
-		)
+
+		# Only delete if 
+		if self.created:
+			del (
+				self.screenId, self.InputData, self.szTxtTT, self.iOffsetTT, self.bLockedTT, self.iUnitTT, self.bUnitTT,
+				self.xRes, self.yRes, self.aFontList, self.wCell, self.hCell, self.sIcon0, self.sIcon1, self.iSelectedTech,
+				self.iPlayer, self.CyPlayer, self.CyTeam, self.iResearch0, self.currentTechState,
+				self.iEraFirst, self.iEraFinal, self.iCurrentEra, self.iCurrentEra0, self.updates
+			)
+			self.created = False
