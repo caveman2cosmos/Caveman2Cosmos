@@ -13008,7 +13008,9 @@ bool CvUnit::infiltrate()
 
 	int iPoints = getEspionagePoints(NULL);
 
-	iPoints = (GC.getINFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT() * iPoints) / 100;
+	int iPointsAdj = (GC.getINFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT() * iPoints) / 100;
+
+	iPoints += iPointsAdj;
 
 	if (plot()->isActiveVisible(false))
 	{
