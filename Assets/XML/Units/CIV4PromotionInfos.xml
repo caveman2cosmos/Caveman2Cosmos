@@ -7500,7 +7500,7 @@
 			<PromotionPrereqOr2>PROMOTION_BARRAGE1</PromotionPrereqOr2>
 			<PromotionLine>PROMOTIONLINE_ACCURACY</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<iBombardRateChange>5</iBombardRateChange>
+			<iBombardRateChange>2</iBombardRateChange>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
@@ -7536,7 +7536,7 @@
 			<PromotionPrereqOr1>PROMOTION_ACCURACY</PromotionPrereqOr1>
 			<TechPrereq>TECH_GUIDED_WEAPONS</TechPrereq>
 			<iCollateralDamageChange>10</iCollateralDamageChange>
-			<iBombardRateChange>10</iBombardRateChange>
+			<iBombardRateChange>5</iBombardRateChange>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
@@ -7590,7 +7590,7 @@
 			<PromotionPrereqOr1>PROMOTION_ACCURACY</PromotionPrereqOr1>
 			<PromotionLine>PROMOTIONLINE_ACCURACY</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<iBombardRateChange>5</iBombardRateChange>
+			<iBombardRateChange>3</iBombardRateChange>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
@@ -8126,7 +8126,7 @@
 			<TechPrereq>TECH_NAVAL_CANNON</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_BOMBARDING</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<iBombardRateChange>3</iBombardRateChange>
+			<iBombardRateChange>2</iBombardRateChange>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
@@ -8154,7 +8154,7 @@
 			<PromotionPrereqOr1>PROMOTION_BOMBARDING1</PromotionPrereqOr1>
 			<PromotionLine>PROMOTIONLINE_BOMBARDING</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<iBombardRateChange>5</iBombardRateChange>
+			<iBombardRateChange>3</iBombardRateChange>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
@@ -8182,7 +8182,7 @@
 			<PromotionPrereqOr1>PROMOTION_BOMBARDING2</PromotionPrereqOr1>
 			<PromotionLine>PROMOTIONLINE_BOMBARDING</PromotionLine>
 			<iLinePriority>3</iLinePriority>
-			<iBombardRateChange>8</iBombardRateChange>
+			<iBombardRateChange>5</iBombardRateChange>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
@@ -14650,7 +14650,7 @@
 			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_ENGINEERCORPS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<iBombardRateChange>15</iBombardRateChange>
+			<iBombardRateChange>10</iBombardRateChange>
 			<iCityAttack>15</iCityAttack>
 			<UnitCombats>
 				<UnitCombat>
@@ -14668,7 +14668,7 @@
 			<PromotionLine>PROMOTIONLINE_ENGINEERCORPS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<bRiver>1</bRiver>
-			<iBombardRateChange>20</iBombardRateChange>
+			<iBombardRateChange>10</iBombardRateChange>
 			<iCityAttack>20</iCityAttack>
 			<UnitCombats>
 				<UnitCombat>
@@ -14686,7 +14686,7 @@
 			<PromotionLine>PROMOTIONLINE_ENGINEERCORPS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iMovesChange>1</iMovesChange>
-			<iBombardRateChange>25</iBombardRateChange>
+			<iBombardRateChange>10</iBombardRateChange>
 			<iCityAttack>25</iCityAttack>
 			<iHillsAttack>25</iHillsAttack>
 			<UnitCombats>
@@ -14724,7 +14724,7 @@
 			<PromotionLine>PROMOTIONLINE_SEAMANSHIP</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iWithdrawalChange>10</iWithdrawalChange>
-			<iBombardRateChange>10</iBombardRateChange>
+			<iBombardRateChange>5</iBombardRateChange>
 			<iCombatPercent>25</iCombatPercent>
 			<UnitCombats>
 				<UnitCombat>
@@ -15471,7 +15471,7 @@
 			<iLinePriority>1</iLinePriority>
 			<iVisibilityChange>1</iVisibilityChange>
 			<iMovesChange>1</iMovesChange>
-			<iBombardRateChange>15</iBombardRateChange>
+			<iBombardRateChange>10</iBombardRateChange>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
@@ -15490,7 +15490,7 @@
 			<iLinePriority>2</iLinePriority>
 			<bImmuneToFirstStrikes>1</bImmuneToFirstStrikes>
 			<iVisibilityChange>1</iVisibilityChange>
-			<iBombardRateChange>20</iBombardRateChange>
+			<iBombardRateChange>10</iBombardRateChange>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
@@ -15508,7 +15508,7 @@
 			<PromotionLine>PROMOTIONLINE_PROJECTION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iVisibilityChange>1</iVisibilityChange>
-			<iBombardRateChange>20</iBombardRateChange>
+			<iBombardRateChange>10</iBombardRateChange>
 			<iFirstStrikesChange>2</iFirstStrikesChange>
 			<UnitCombats>
 				<UnitCombat>
@@ -18943,7 +18943,7 @@
 			<PromotionPrereq>PROMOTION_POWER_BEAM2</PromotionPrereq>
 			<PromotionPrereqOr1>PROMOTION_WIDE_BEAM2</PromotionPrereqOr1>
 			<PromotionPrereqOr2>PROMOTION_SNIPER_BEAM2</PromotionPrereqOr2>
-			<iBombardRateChange></iBombardRateChange>
+			<iBombardRateChange>10</iBombardRateChange>
 			<iDCMBombRangeChange>1</iDCMBombRangeChange>
 			<iDCMBombAccuracyChange>25</iDCMBombAccuracyChange>
 			<iRBombardDamageChange>25</iRBombardDamageChange>
@@ -18958,7 +18958,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_BOLT_PUNCH</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<iBombardRateChange>4</iBombardRateChange>
+			<iBombardRateChange>3</iBombardRateChange>
 			<iDCMBombAccuracyChange>15</iDCMBombAccuracyChange>
 			<iRBombardDamageChange>10</iRBombardDamageChange>
 			<bRBombardPrereq>1</bRBombardPrereq>
@@ -18970,7 +18970,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_BOLT_PUNCH</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<iBombardRateChange>4</iBombardRateChange>
+			<iBombardRateChange>3</iBombardRateChange>
 			<iDCMBombAccuracyChange>20</iDCMBombAccuracyChange>
 			<iRBombardDamageChange>15</iRBombardDamageChange>
 			<iRBombardDamageLimitChange>5</iRBombardDamageLimitChange>
@@ -18983,7 +18983,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_BOLT_PUNCH</PromotionLine>
 			<iLinePriority>3</iLinePriority>
-			<iBombardRateChange>4</iBombardRateChange>
+			<iBombardRateChange>3</iBombardRateChange>
 			<iDCMBombRangeChange>1</iDCMBombRangeChange>
 			<iDCMBombAccuracyChange>25</iDCMBombAccuracyChange>
 			<iRBombardDamageChange>20</iRBombardDamageChange>
@@ -18997,7 +18997,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_HAIL_OF_STONES</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<iBombardRateChange>5</iBombardRateChange>
+			<iBombardRateChange>4</iBombardRateChange>
 			<iDCMBombAccuracyChange>5</iDCMBombAccuracyChange>
 			<iRBombardDamageChange>15</iRBombardDamageChange>
 			<iRBombardDamageLimitChange>10</iRBombardDamageLimitChange>
@@ -19010,7 +19010,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_HAIL_OF_STONES</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<iBombardRateChange>5</iBombardRateChange>
+			<iBombardRateChange>4</iBombardRateChange>
 			<iDCMBombAccuracyChange>10</iDCMBombAccuracyChange>
 			<iRBombardDamageChange>20</iRBombardDamageChange>
 			<iRBombardDamageLimitChange>15</iRBombardDamageLimitChange>
@@ -19023,7 +19023,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_HAIL_OF_STONES</PromotionLine>
 			<iLinePriority>3</iLinePriority>
-			<iBombardRateChange>5</iBombardRateChange>
+			<iBombardRateChange>4</iBombardRateChange>
 			<iDCMBombAccuracyChange>15</iDCMBombAccuracyChange>
 			<iRBombardDamageChange>25</iRBombardDamageChange>
 			<iRBombardDamageLimitChange>20</iRBombardDamageLimitChange>
@@ -19037,7 +19037,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_PYROTECHNICS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<iBombardRateChange>3</iBombardRateChange>
+			<iBombardRateChange>2</iBombardRateChange>
 			<iRBombardDamageChange>5</iRBombardDamageChange>
 			<iRBombardDamageLimitChange>10</iRBombardDamageLimitChange>
 			<iRBombardDamageMaxUnitsChange>1</iRBombardDamageMaxUnitsChange>
@@ -19050,7 +19050,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_PYROTECHNICS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<iBombardRateChange>3</iBombardRateChange>
+			<iBombardRateChange>2</iBombardRateChange>
 			<iDCMBombAccuracyChange>5</iDCMBombAccuracyChange>
 			<iRBombardDamageChange>10</iRBombardDamageChange>
 			<iRBombardDamageLimitChange>15</iRBombardDamageLimitChange>
@@ -19064,7 +19064,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_PYROTECHNICS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
-			<iBombardRateChange>3</iBombardRateChange>
+			<iBombardRateChange>2</iBombardRateChange>
 			<iDCMBombAccuracyChange>10</iDCMBombAccuracyChange>
 			<iRBombardDamageChange>15</iRBombardDamageChange>
 			<iRBombardDamageLimitChange>20</iRBombardDamageLimitChange>
@@ -19078,7 +19078,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_ROLLING_THUNDER</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<iBombardRateChange>6</iBombardRateChange>
+			<iBombardRateChange>5</iBombardRateChange>
 			<iDCMBombAccuracyChange>5</iDCMBombAccuracyChange>
 			<iRBombardDamageChange>15</iRBombardDamageChange>
 			<iRBombardDamageLimitChange>10</iRBombardDamageLimitChange>
@@ -19091,7 +19091,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_ROLLING_THUNDER</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<iBombardRateChange>6</iBombardRateChange>
+			<iBombardRateChange>5</iBombardRateChange>
 			<iDCMBombAccuracyChange>10</iDCMBombAccuracyChange>
 			<iRBombardDamageChange>20</iRBombardDamageChange>
 			<iRBombardDamageLimitChange>15</iRBombardDamageLimitChange>
@@ -19104,7 +19104,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_ROLLING_THUNDER</PromotionLine>
 			<iLinePriority>3</iLinePriority>
-			<iBombardRateChange>6</iBombardRateChange>
+			<iBombardRateChange>5</iBombardRateChange>
 			<iDCMBombAccuracyChange>15</iDCMBombAccuracyChange>
 			<iRBombardDamageChange>25</iRBombardDamageChange>
 			<iRBombardDamageLimitChange>20</iRBombardDamageLimitChange>
@@ -19118,7 +19118,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_SHRAPNEL_SHOWER</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<iBombardRateChange>8</iBombardRateChange>
+			<iBombardRateChange>6</iBombardRateChange>
 			<iDCMBombAccuracyChange>10</iDCMBombAccuracyChange>
 			<iRBombardDamageChange>10</iRBombardDamageChange>
 			<iRBombardDamageLimitChange>10</iRBombardDamageLimitChange>
@@ -19131,7 +19131,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_SHRAPNEL_SHOWER</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<iBombardRateChange>8</iBombardRateChange>
+			<iBombardRateChange>6</iBombardRateChange>
 			<iDCMBombAccuracyChange>15</iDCMBombAccuracyChange>
 			<iRBombardDamageChange>15</iRBombardDamageChange>
 			<iRBombardDamageLimitChange>15</iRBombardDamageLimitChange>
@@ -19145,7 +19145,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_SHRAPNEL_SHOWER</PromotionLine>
 			<iLinePriority>3</iLinePriority>
-			<iBombardRateChange>8</iBombardRateChange>
+			<iBombardRateChange>6</iBombardRateChange>
 			<iDCMBombRangeChange>1</iDCMBombRangeChange>
 			<iDCMBombAccuracyChange>20</iDCMBombAccuracyChange>
 			<iRBombardDamageChange>20</iRBombardDamageChange>
@@ -19160,7 +19160,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_SCORCHED_EARTH</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<iBombardRateChange>10</iBombardRateChange>
+			<iBombardRateChange>7</iBombardRateChange>
 			<iDCMBombAccuracyChange>15</iDCMBombAccuracyChange>
 			<iRBombardDamageChange>15</iRBombardDamageChange>
 			<iRBombardDamageLimitChange>15</iRBombardDamageLimitChange>
@@ -19173,7 +19173,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_SCORCHED_EARTH</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<iBombardRateChange>10</iBombardRateChange>
+			<iBombardRateChange>7</iBombardRateChange>
 			<iDCMBombAccuracyChange>20</iDCMBombAccuracyChange>
 			<iRBombardDamageChange>20</iRBombardDamageChange>
 			<iRBombardDamageLimitChange>20</iRBombardDamageLimitChange>
@@ -19187,7 +19187,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionLine>PROMOTIONLINE_SCORCHED_EARTH</PromotionLine>
 			<iLinePriority>3</iLinePriority>
-			<iBombardRateChange>10</iBombardRateChange>
+			<iBombardRateChange>7</iBombardRateChange>
 			<iDCMBombRangeChange>1</iDCMBombRangeChange>
 			<iDCMBombAccuracyChange>25</iDCMBombAccuracyChange>
 			<iRBombardDamageChange>25</iRBombardDamageChange>
