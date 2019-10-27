@@ -1243,7 +1243,7 @@ class CvMainInterface:
 					self.updateTooltip(screen, szTxt)
 				self.bUpdateUnitTT == False
 			# Tooltip sometimes get stuck...
-			POINT = GC.getCursorPos()
+			POINT = Win32.getCursorPos()
 			xDiff = POINT.x - self.xMouseTT
 			yDiff = POINT.y - self.yMouseTT
 			if xDiff < 0:
@@ -1424,7 +1424,7 @@ class CvMainInterface:
 			CyIF.setDirty(InterfaceDirtyBits.Help_DIRTY_BIT, False)
 		# Tooltip
 		if self.bTooltip and self.bLockedTT:
-			POINT = GC.getCursorPos()
+			POINT = Win32.getCursorPos()
 			iX = POINT.x + self.iOffsetTT[0]
 			iY = POINT.y + self.iOffsetTT[1]
 			if iX < 0: iX = 0
@@ -4959,7 +4959,7 @@ class CvMainInterface:
 	#######################
 	# Plot help
 	def updatePlotHelp(self, screen, uFont=None):
-		POINT = GC.getCursorPos()
+		POINT = Win32.getCursorPos()
 		xMouse = POINT.x
 		if xMouse < 40 or xMouse > self.xRes - 40:
 			screen.hide("PlotHelp")
@@ -5000,13 +5000,13 @@ class CvMainInterface:
 				uFont=self.aFontList[5]
 			self.szHelpText = szHelpText
 			iX, iY = pyTT.makeTooltip(screen, xPos, yPos, szHelpText, uFont, "Tooltip")
-			POINT = GC.getCursorPos()
+			POINT = Win32.getCursorPos()
 			self.iOffsetTT = [iX - POINT.x, iY - POINT.y]
 			self.xMouseTT = POINT.x
 			self.yMouseTT = POINT.y
 		else:
 			if xPos == yPos == -1:
-				POINT = GC.getCursorPos()
+				POINT = Win32.getCursorPos()
 				self.xMouseTT = POINT.x
 				self.yMouseTT = POINT.y
 				xOff, yOff = self.iOffsetTT
@@ -5319,7 +5319,7 @@ class CvMainInterface:
 				self.bPlotHelpBan = True
 				screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
 				screen.hide("PlotHelp")
-				POINT = GC.getCursorPos()
+				POINT = Win32.getCursorPos()
 				self.xMouseNoPlotHelp = POINT.x; self.yMouseNoPlotHelp = POINT.y
 
 			elif NAME == "AdvisorButton":

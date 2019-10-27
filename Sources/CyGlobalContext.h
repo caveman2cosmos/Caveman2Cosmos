@@ -115,7 +115,7 @@ public:
 	CvSeaLevelInfo * getSeaLevelInfo(int i) const;
 	CvInfoBase * getUnitAIInfo(int i) const;
 	CvColorInfo* getColorInfo(int i) const;
-    CvUnitArtStyleTypeInfo* getUnitArtStyleTypeInfo(int i) const;
+	CvUnitArtStyleTypeInfo* getUnitArtStyleTypeInfo(int i) const;
 	CvPropertyInfo* getPropertyInfo(int i) const;
 
 	int getInfoTypeForString(const char* szInfoType) const;
@@ -329,7 +329,7 @@ public:
 	int getNumFeatureArtInfos() const { return ARTFILEMGR.getNumFeatureArtInfos(); }
 	int getNumAnimationPathInfos() const { return GC.getNumAnimationPathInfos(); }
 	int getNumAnimationCategoryInfos() const { return GC.getNumAnimationCategoryInfos(); }
-    int getNumUnitArtStyleTypeInfos() const { return GC.getNumUnitArtStyleTypeInfos(); }
+	int getNumUnitArtStyleTypeInfos() const { return GC.getNumUnitArtStyleTypeInfos(); }
 
 
 	int getNumEntityEventTypes() const { return GC.getNumEntityEventTypes(); }
@@ -539,11 +539,6 @@ public:
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-
-	// UI functions
-	POINT getCursorPos() const;
-	POINT screenToClient(POINT screenPos) const;
-	HWND getToplevelWindow() const;
 };
 
 #endif	// CyGlobalContext_h
