@@ -123,6 +123,7 @@
     <ClCompile Include="CvPlotPaging.cpp" />
     <ClCompile Include="CvPython.cpp" />
     <ClCompile Include="CyPlayerInterface3.cpp" />
+    <ClCompile Include="Win32.cpp" />
     <ClCompile Include="StackWalker.cpp" />
     <ClCompile Include="_precompile.cpp" />
     <ClCompile Include="BetterBTSAI.cpp" />
@@ -407,6 +408,7 @@
     <ClInclude Include="IntExpr.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="Win32.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="FVariableSystem.inl" />

@@ -9750,7 +9750,7 @@
 			</ObsoleteTechs>
 			<bPickCity>1</bPickCity>
 			<bShowPlot>0</bShowPlot>
-			<PythonCanDo>canTriggerDockWorkersStrike</PythonCanDo>
+			<PythonCanDo></PythonCanDo>
 			<EventArt>Art/Event_Images/Strike.dds</EventArt>
 		</EventTriggerInfo>
 		<!-- Other -->

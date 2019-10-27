@@ -18561,7 +18561,7 @@ CvCity* CvCity::getTradeCity(int iIndex) const
 {
 	//int iMaxTradeRoutes = GC.getDefineINT("MAX_TRADE_ROUTES") + GET_PLAYER(getOwnerINLINE()).getMaxTradeRoutesAdjustment();
 	FAssert(iIndex >= 0);
-	FAssert(iIndex < m_paTradeCities.size());
+	FAssert(iIndex < static_cast<int>(m_paTradeCities.size()));
 	return getCity(m_paTradeCities[iIndex]);
 }
 
@@ -18592,9 +18592,9 @@ int CvCity::getTradeRoutes() const
 
 void CvCity::clearTradeRoutes()
 {
-	for (int iI = 0; iI < m_paTradeCities.size(); iI++)
+	for (size_t iI = 0; iI < m_paTradeCities.size(); iI++)
 	{
-		CvCity* pLoopCity = getTradeCity(iI);
+		CvCity* pLoopCity = getTradeCity(static_cast<int>(iI));
 
 		if (pLoopCity != NULL)
 		{

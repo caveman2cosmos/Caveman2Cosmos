@@ -217,16 +217,16 @@ public:
 	int AI_getMemoryAttitude(PlayerTypes ePlayer, MemoryTypes eMemory) const;
 	int AI_getColonyAttitude(PlayerTypes ePlayer) const;
 
-    // BEGIN: Show Hidden Attitude Mod 01/22/2010
+	// BEGIN: Show Hidden Attitude Mod 01/22/2010
 	int AI_getFirstImpressionAttitude(PlayerTypes ePlayer) const;
 	int AI_getTeamSizeAttitude(PlayerTypes ePlayer) const;
 	int AI_getBetterRankDifferenceAttitude(PlayerTypes ePlayer) const;
 	int AI_getWorseRankDifferenceAttitude(PlayerTypes ePlayer) const;
 	int AI_getLowRankAttitude(PlayerTypes ePlayer) const;
 	int AI_getLostWarAttitude(PlayerTypes ePlayer) const;
-    int AI_getKnownPlayerRank(PlayerTypes ePlayer) const;
+	int AI_getKnownPlayerRank(PlayerTypes ePlayer) const;
 	int AI_getTraitAttitude(PlayerTypes ePlayer) const;
-    // END: Show Hidden Attitude Mod
+	// END: Show Hidden Attitude Mod
 
 	PlayerVoteTypes AI_diploVote(const VoteSelectionSubData& kVoteData, VoteSourceTypes eVoteSource, bool bPropose);
 
@@ -439,10 +439,10 @@ public:
 
 	void AI_nowHasTech(TechTypes eTech);
 	
-    int AI_countDeadlockedBonuses(CvPlot* pPlot) const;
-    
-    int AI_getOurPlotStrength(CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const;
-    int AI_getEnemyPlotStrength(CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const;
+	int AI_countDeadlockedBonuses(CvPlot* pPlot) const;
+	
+	int AI_getOurPlotStrength(CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const;
+	int AI_getEnemyPlotStrength(CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const;
 
 	int AI_goldToUpgradeAllUnits(int iExpThreshold = 0) const;
 
@@ -544,10 +544,10 @@ public:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-    int AI_workerTradeVal(CvUnit* pUnit) const;
+	int AI_workerTradeVal(CvUnit* pUnit) const;
 	int AI_militaryUnitTradeVal(CvUnit* pUnit) const;
 	int AI_corporationTradeVal(CorporationTypes eCorporation, PlayerTypes ePlayer) const;
-    int AI_pledgeVoteTradeVal(VoteTriggeredData* kData, PlayerVoteTypes ePlayerVote, PlayerTypes ePlayer) const;
+	int AI_pledgeVoteTradeVal(VoteTriggeredData* kData, PlayerVoteTypes ePlayerVote, PlayerTypes ePlayer) const;
 	int AI_secretaryGeneralTradeVal(VoteSourceTypes eVoteSource, PlayerTypes ePlayer) const;
 	
 	int AI_getEmbassyAttitude(PlayerTypes ePlayer) const;
@@ -555,7 +555,7 @@ public:
 	TeamTypes AI_bestMakePeaceTeam(PlayerTypes ePlayer);
 	TeamTypes AI_bestStopTradeTeam(PlayerTypes ePlayer);
 	int AI_militaryBonusVal(BonusTypes eBonus);
-    int AI_getCivicShareAttitude(PlayerTypes ePlayer) const;
+	int AI_getCivicShareAttitude(PlayerTypes ePlayer) const;
 	int AI_getCivicAttitudeChange(PlayerTypes ePlayer) const;
 	bool AI_avoidIncreasingTaxes() const;
 	int AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, const CvUnit* pUnit = NULL, UnitAITypes eUnitAI = NO_UNITAI, bool bForBuildUp = false) const;

@@ -81,7 +81,6 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 				return FALSE;
 			}
 		}
-
 		}
 		break;
 	case DLL_THREAD_ATTACH:
@@ -91,7 +90,6 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 		OutputDebugString(CvString::format("[C2C] DLL_THREAD_DETACH: %d\n", GetCurrentThreadId()).c_str());
 		break;
 	case DLL_PROCESS_DETACH:
-
 // BUG - EXE/DLL Paths - start
 		dllModule = NULL;
 // BUG - EXE/DLL Paths - end

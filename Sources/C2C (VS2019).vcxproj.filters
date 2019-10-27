@@ -444,6 +444,9 @@
     <ClCompile Include="CvPlotPaging.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Win32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="CvPython.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -870,6 +873,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvPlotPaging.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Win32.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvPython.h">
