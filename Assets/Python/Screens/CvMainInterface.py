@@ -1243,7 +1243,7 @@ class CvMainInterface:
 					self.updateTooltip(screen, szTxt)
 				self.bUpdateUnitTT == False
 			# Tooltip sometimes get stuck...
-			POINT = GC.getCursorPos()
+			POINT = Win32.getCursorPos()
 			xDiff = POINT.x - self.xMouseTT
 			yDiff = POINT.y - self.yMouseTT
 			if xDiff < 0:
@@ -1424,7 +1424,7 @@ class CvMainInterface:
 			CyIF.setDirty(InterfaceDirtyBits.Help_DIRTY_BIT, False)
 		# Tooltip
 		if self.bTooltip and self.bLockedTT:
-			POINT = GC.getCursorPos()
+			POINT = Win32.getCursorPos()
 			iX = POINT.x + self.iOffsetTT[0]
 			iY = POINT.y + self.iOffsetTT[1]
 			if iX < 0: iX = 0
@@ -2419,8 +2419,7 @@ class CvMainInterface:
 							screen.setBarPercentage("ResearchBar", InfoBarTypes.INFOBAR_RATE, 0)
 						screen.show("ResearchBar")
 
-						szTxt = GC.getTechInfo(iCurrentResearch).getDescription()
-						szTxt += u' (%d)' %(CyPlayer.getResearchTurnsLeft(iCurrentResearch, true))
+						szTxt = GC.getTechInfo(iCurrentResearch).getDescription() + " (" + str(CyPlayer.getResearchTurnsLeft(iCurrentResearch, True)) + ')'
 						screen.setText("WID|TECH|ProgBar1", "", szTxt, 1<<2, x, 2, 0, eFontGame, eWidGen, iCurrentResearch, 0)
 
 				# Great General Bar
@@ -2448,6 +2447,7 @@ class CvMainInterface:
 						y = 2
 					x += w / 2
 					screen.setText("GreatPersonBar1", "", szTxt, 1<<2, x, y, 0, eFontGame, eWidGen, 0, 0)
+					screen.setHitTest("GreatPersonBar1", HitTestTypes.HITTEST_NOHIT)
 					if CyCity:
 						fThreshold = float(GC.getPlayer(CyCity.getOwner()).greatPeopleThreshold(False))
 						fRate = float(CyCity.getGreatPeopleRate())
@@ -4959,7 +4959,7 @@ class CvMainInterface:
 	#######################
 	# Plot help
 	def updatePlotHelp(self, screen, uFont=None):
-		POINT = GC.getCursorPos()
+		POINT = Win32.getCursorPos()
 		xMouse = POINT.x
 		if xMouse < 40 or xMouse > self.xRes - 40:
 			screen.hide("PlotHelp")
@@ -5000,13 +5000,13 @@ class CvMainInterface:
 				uFont=self.aFontList[5]
 			self.szHelpText = szHelpText
 			iX, iY = pyTT.makeTooltip(screen, xPos, yPos, szHelpText, uFont, "Tooltip")
-			POINT = GC.getCursorPos()
+			POINT = Win32.getCursorPos()
 			self.iOffsetTT = [iX - POINT.x, iY - POINT.y]
 			self.xMouseTT = POINT.x
 			self.yMouseTT = POINT.y
 		else:
 			if xPos == yPos == -1:
-				POINT = GC.getCursorPos()
+				POINT = Win32.getCursorPos()
 				self.xMouseTT = POINT.x
 				self.yMouseTT = POINT.y
 				xOff, yOff = self.iOffsetTT
@@ -5245,14 +5245,13 @@ class CvMainInterface:
 
 				elif TYPE == "TECH":
 					szTxt = ""
-					if CASE:
-						if CASE[0] == "Selection":
-							szTxt += "Research: "
-						elif CASE[0] == "ProgBar":
-							szTxt += "Researching: "
-							iType = GC.getPlayer(self.iPlayer).getCurrentResearch()
-						elif CASE[0] == "Score":
-							szTxt += "Researching: "
+					if CASE[0] == "Selection":
+						szTxt += "Research: "
+					elif CASE[0] == "ProgBar":
+						szTxt += "Researching: "
+						iType = GC.getPlayer(self.iPlayer).getCurrentResearch()
+					elif CASE[0] == "Score":
+						szTxt += "Researching: "
 					szTxt += CyGameTextMgr().getTechHelp(iType, False, True, True, True, -1)
 					self.updateTooltip(screen, szTxt)
 
@@ -5320,7 +5319,7 @@ class CvMainInterface:
 				self.bPlotHelpBan = True
 				screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
 				screen.hide("PlotHelp")
-				POINT = GC.getCursorPos()
+				POINT = Win32.getCursorPos()
 				self.xMouseNoPlotHelp = POINT.x; self.yMouseNoPlotHelp = POINT.y
 
 			elif NAME == "AdvisorButton":

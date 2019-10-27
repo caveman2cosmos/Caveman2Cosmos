@@ -1708,7 +1708,7 @@ protected:
 	std::vector<CvEventInfo*> m_paEventInfo;
 	CvInfoReplacements<CvEventInfo> m_EventInfoReplacements;
 	std::vector<CvEspionageMissionInfo*> m_paEspionageMissionInfo;
-    std::vector<CvUnitArtStyleTypeInfo*> m_paUnitArtStyleTypeInfo;
+	std::vector<CvUnitArtStyleTypeInfo*> m_paUnitArtStyleTypeInfo;
 	std::vector<CvPropertyInfo*> m_paPropertyInfo;
 	std::vector<CvOutcomeInfo*> m_paOutcomeInfo;
 	std::vector<CvCivNameInfo*> m_paCivNameInfo;

@@ -122,6 +122,7 @@
     <ClCompile Include="CvAllocator.h" />
     <ClCompile Include="CvPlotPaging.cpp" />
     <ClCompile Include="CyPlayerInterface3.cpp" />
+    <ClCompile Include="Win32.cpp" />
     <ClCompile Include="_precompile.cpp" />
     <ClCompile Include="BetterBTSAI.cpp" />
     <ClCompile Include="BoolExpr.cpp" />
@@ -403,6 +404,7 @@
     <ClInclude Include="IntExpr.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="Win32.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="FVariableSystem.inl" />
