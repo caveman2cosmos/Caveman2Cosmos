@@ -47,7 +47,6 @@ LRESULT CALLBACK WndProcWrapper(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 		{
 			g_mouse_wheel_cumulative[i].cumulative += wheelDelta;
 		}
-		OutputDebugStringA(CvString::format("WM_MOUSEWHEEL %d %d\n", wParam, lParam).c_str());
 		break;
 	}
 
@@ -62,13 +61,13 @@ void Win32::update_hooks()
 	EnumWindowsCallbackArgs args(::GetCurrentProcessId());
 	if (::EnumWindows(&EnumWindowsCallback, (LPARAM)&args))
 	{
-		for (int i = 0; i < args.handles.size(); ++i)
+		for (std::vector<HWND>::const_iterator itr = args.handles.begin(); itr != args.handles.end(); ++itr)
 		{
-			HWND hwnd = args.handles[i];
+			HWND hwnd = *itr;
 			if(g_prev_wnd_proc.find(hwnd) == g_prev_wnd_proc.end())
 			{
 				g_prev_wnd_proc[hwnd] = (WNDPROC)SetWindowLongPtr(hwnd, GWL_WNDPROC, (LONG_PTR)&WndProcWrapper);
-				OutputDebugStringA(CvString::format("Win32::update_hooks() wrapped new HWND 0x%08X\n", hwnd).c_str());
+				OutputDebugString(CvString::format("Win32::update_hooks() wrapped new HWND 0x%08X\n", hwnd).c_str());
 			}
 		}
 	}
@@ -114,7 +113,7 @@ int Win32::registerMouseWheelListener()
 	Win32::update_hooks();
 	int handle = ++g_nextHandle;
 	g_mouse_wheel_cumulative.push_back(MouseWheelInfo(handle));
-	OutputDebugStringA(CvString::format("Win32::registerMouseWheelListener %d\n", handle).c_str());
+	OutputDebugString(CvString::format("Win32::registerMouseWheelListener %d\n", handle).c_str());
 	return handle;
 }
 
@@ -128,7 +127,7 @@ void Win32::unregisterMouseWheelListener(int handle)
 			break;
 		}
 	}
-	OutputDebugStringA(CvString::format("Win32::unregisterMouseWheelListener %d\n", handle).c_str());
+	OutputDebugString(CvString::format("Win32::unregisterMouseWheelListener %d\n", handle).c_str());
 }
 
 float Win32::getMouseWheelDiff(int handle)
