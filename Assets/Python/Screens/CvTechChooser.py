@@ -326,7 +326,7 @@ class CvTechChooser:
 					x1 = techInfoX.getGridX()
 					y1 = techInfoX.getGridY()
 					iX = x1 * self.xCellDist + self.wCell - self.minX + CELL_BORDER + 12
-					iY = yEmptySpace + ((y1 - 1) * yCellDist) / 2 - 4
+					iY = yEmptySpace + ((y1 - 1) * yCellDist) / 2 + 4
 
 					xDiff = x0 - x1
 					yDiff = y0 - y1
