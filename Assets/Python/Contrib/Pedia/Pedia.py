@@ -1486,11 +1486,11 @@ class Pedia:
 			if not uFont:
 				uFont = self.aFontList[6]
 			iX, iY = pyTT.makeTooltip(screen, xPos, yPos, szText, uFont, "Tooltip")
-			POINT = GC.getCursorPos()
+			POINT = Win32.getCursorPos()
 			self.iOffsetTT = [iX - POINT.x, iY - POINT.y]
 		else:
 			if xPos == yPos == -1:
-				POINT = GC.getCursorPos()
+				POINT = Win32.getCursorPos()
 				screen.moveItem("Tooltip", POINT.x + self.iOffsetTT[0], POINT.y + self.iOffsetTT[1], 0)
 			screen.moveToFront("Tooltip")
 			screen.show("Tooltip")
@@ -1748,7 +1748,7 @@ class Pedia:
 	def update(self, fDelta):
 		if self.bLockedTT:
 			screen = self.screen()
-			POINT = GC.getCursorPos()
+			POINT = Win32.getCursorPos()
 			iX = POINT.x + self.iOffsetTT[0]
 			iY = POINT.y + self.iOffsetTT[1]
 			if iX < 0: iX = 0
