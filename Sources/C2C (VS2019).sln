@@ -12,6 +12,7 @@ Global
 		FinalRelease|x86 = FinalRelease|x86
 		Profile|x86 = Profile|x86
 		Release|x86 = Release|x86
+		Testing|x86 = Testing|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Assert|x86.ActiveCfg = Assert|Win32
@@ -24,6 +25,8 @@ Global
 		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Profile|x86.Build.0 = Profile|Win32
 		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Release|x86.ActiveCfg = Release|Win32
 		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Release|x86.Build.0 = Release|Win32
+		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Testing|x86.ActiveCfg = Testing|Win32
+		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Testing|x86.Build.0 = Testing|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -243,9 +243,14 @@ bool FAssertDlg( const char* szExpr, const char* szMsg, const char* szFile, unsi
 {
 //	FILL_CONTEXT( g_AssertInfo.context );
 
-	g_AssertInfo.szExpression = szExpr;
 	std::string pyTrace = getPyTrace();
 	std::string dllTrace = getDLLTrace();
+
+#ifdef FASSERT_LOGGING
+	gDLL->logMsg("Asserts.log", CvString::format("%s (%d): %s,  %s\n%s\n%s", szFile, line, szExpr, szMsg, pyTrace.c_str(), dllTrace.c_str()).c_str());
+	return false;
+#else
+	g_AssertInfo.szExpression = szExpr;
 	g_AssertInfo.szMessage = szMsg;
 	g_AssertInfo.szPythonCallstack = pyTrace.c_str();
 	g_AssertInfo.szDLLCallstack = dllTrace.c_str();
@@ -270,8 +275,8 @@ bool FAssertDlg( const char* szExpr, const char* szMsg, const char* szFile, unsi
 		exit(0);
 		break;
 	}
-
 	return true;
+#endif
 }
 
 #endif // FASSERT_ENABLE && WIN32
