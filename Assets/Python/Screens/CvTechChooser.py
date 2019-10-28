@@ -180,7 +180,7 @@ class CvTechChooser:
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
 		# Main scrolling panel
-		screen.addPanel(SCREEN_PANEL, "", "", False, False, 0, SCREEN_PANEL_BAR_H, self.maxX + self.xCellDist, self.yRes - SCREEN_PANEL_BAR_H - SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_EMPTY)
+		screen.addPanel(SCREEN_PANEL, "", "", False, False, 0, SCREEN_PANEL_BAR_H, self.maxX + self.xCellDist, self.yRes, PanelStyles.PANEL_STYLE_EMPTY)
 
 		# Create the tech button backgrounds
 		self.refresh(xrange(self.iNumTechs), False)
@@ -299,9 +299,9 @@ class CvTechChooser:
 				screen.addDDSGFCAt(ICON + szTech, szTechRecord, CvTechInfo.getButton(), 3 + CELL_BORDER, 5 + CELL_BORDER, self.sIcon0, self.sIcon0, eWidGen, 1, 2, False)
 				screen.setHitTest(ICON + szTech, HitTestTypes.HITTEST_NOHIT)
 				barId = szTechRecord + "BAR"
-				screen.addStackedBarGFCAt(barId, szTechRecord, 0, self.hCell, self.wCell + CELL_BORDER * 2, CELL_BORDER * 2, InfoBarTypes.NUM_INFOBAR_TYPES, eWidGen, 1, 2)
+				screen.addStackedBarGFCAt(barId, szTechRecord, CELL_BORDER, self.hCell, self.wCell, CELL_BORDER * 2, InfoBarTypes.NUM_INFOBAR_TYPES, eWidGen, 1, 2)
 				screen.setStackedBarColorsRGB(barId, InfoBarTypes.INFOBAR_STORED, 0, 215, 50, 255)
-				screen.setStackedBarColorsRGB(barId, InfoBarTypes.INFOBAR_RATE, 0, 215, 50, 128)
+				screen.setStackedBarColorsRGB(barId, InfoBarTypes.INFOBAR_RATE, 255, 255, 255, 64)
 				screen.setStackedBarColorsRGB(barId, InfoBarTypes.INFOBAR_EMPTY, 0, 0, 0, 0)
 				screen.hide(barId)
 				self.updates.append((iX, iTech))
