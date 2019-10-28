@@ -1905,7 +1905,6 @@
 			</OrPreReqs>
 			<bGlobal>1</bGlobal>
 			<bOwnPlot>1</bOwnPlot>
-			<PythonCanDo>canDoGameMigration</PythonCanDo>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_SEA_TURTLES</Type>
