@@ -315,18 +315,19 @@ class CvTechChooser:
 				screen.hide(barId)
 
 				# Minimap cell
-				style = PanelStyles.PANEL_STYLE_STONE
-				if iTech > 700:
-					style = PanelStyles.PANEL_STYLE_GAME_MAP
-				elif iTech > 500:
-					style = PanelStyles.PANEL_STYLE_GAME_TOPBAR
-				elif iTech > 400:
-					style = PanelStyles.PANEL_STYLE_GAMEHUD_LEFT
-				elif iTech > 300:
-					style = PanelStyles.PANEL_STYLE_GAMEHUD_CENTER
-				elif iTech > 200:
-					style = PanelStyles.PANEL_STYLE_UNITSTAT
-				screen.addPanel(szTechRecord + "MM", "", "", False, False, int(iX * minimapScaleX) + 20, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H + 20 + y0 * 2, minimapWid, 1, style)
+				style = PanelStyles.PANEL_STYLE_EMPTY
+				# if iTech > 700:
+				# 	style = PanelStyles.PANEL_STYLE_GAME_MAP
+				# elif iTech > 500:
+				# 	style = PanelStyles.PANEL_STYLE_GAME_TOPBAR
+				# elif iTech > 400:
+				# 	style = PanelStyles.PANEL_STYLE_GAMEHUD_LEFT
+				# elif iTech > 300:
+				# 	style = PanelStyles.PANEL_STYLE_GAMEHUD_CENTER
+				# elif iTech > 200:
+				# 	style = PanelStyles.PANEL_STYLE_UNITSTAT
+				screen.addPanel(szTechRecord + "MM", "", "", False, False, int(iX * minimapScaleX) + 20, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H + 20 + y0 * 2, minimapWid+4, 4, PanelStyles.PANEL_STYLE_STONE)
+				screen.setStyle(szTechRecord + "MM", "Panel_TechMinimapCell_Style")
 				#screen.attachPanelAt("TC_BarBot", szTechRecord + "MM", "", "", False, False, PanelStyles.PANEL_STYLE_FLAT, x0*4, y0*2, 3, 1, eWidGen, 1, 2)
 
 				self.updates.append((iX, iTech))
