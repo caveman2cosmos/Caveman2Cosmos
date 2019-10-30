@@ -45,7 +45,20 @@ MINIMAP_LENS_BORDER_H = 4
 MINIMAP_LENS_BORDER_V = 4
 
 ERA_HAS_STYLES = {
-	0: "Button_TechHas_0_Style"
+	0: "Button_TechHas_0_Style",
+	1: "Button_TechHas_1_Style",
+	2: "Button_TechHas_2_Style",
+	3: "Button_TechHas_3_Style",
+	4: "Button_TechHas_4_Style",
+	5: "Button_TechHas_5_Style",
+	6: "Button_TechHas_6_Style",
+	7: "Button_TechHas_7_Style",
+	8: "Button_TechHas_8_Style",
+	9: "Button_TechHas_9_Style",
+	10: "Button_TechHas_10_Style",
+	11: "Button_TechHas_11_Style",
+	12: "Button_TechHas_12_Style",
+	13: "Button_TechHas_13_Style",
 }
 ERA_HAS_DEFAULT_STYLE = "Button_TechHas_Style"
 
