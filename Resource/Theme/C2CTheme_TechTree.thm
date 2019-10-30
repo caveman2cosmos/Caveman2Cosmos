@@ -1700,4 +1700,77 @@ with GFC_Control_Button
 		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_StandardButton_Style;
 		map GFC_Control							= GFC_Control_StandardButton_Style;
 	}
+
+	style SF_CtrlTheme_Civ4_Control_Button_TechQueuePos_Style
+	{
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("GUI/TechTree/Default_Background.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= GRectMargin(0,0,0,0);
+					Indent			= GRectMargin(10,12,10,12);
+				}
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_PARTIAL);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("GUI/TechTree/Default_Border.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= GRectMargin(10,12,10,12);
+					Indent			= GRectMargin(0,0,0,0);
+				}
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_REGION);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("GUI/TechTree/Default_Border.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= GRectMargin(10,12,10,12);
+					Indent			= GRectMargin(0,0,0,0);
+				}
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("GUI/GradientLeftTop.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= GRectMargin(24,6,0,0);
+				}
+			}
+			.Rollover				= .Default;
+			.Press					= .Default;
+			.Disable				= .Default;
+			.Focus					= .Rollover;
+			.FocusPress				= .Press;
+			.FocusRollover			= .Rollover;
+			.FocusDisable			= .Disable;
+
+			.Toggle					= .Default;
+			.ToggleRollover			= .Rollover;
+			.TogglePress			= .Press;
+			.ToggleDisable			= .Disable;
+			.ToggleFocus			= .Toggle;
+			.ToggleFocusRollover	= .ToggleRollover;
+			.ToggleFocusPress		= .TogglePress;
+			.ToggleFocusDisable		= .FocusDisable;
+
+			.Inactive				= .Default;
+			.InactiveRollover		= .Rollover;
+			.InactivePress			= .Press;
+			.InactiveDisable		= .Disable;
+			.InactiveToggle			= .Toggle;
+			.InactiveToggleRollover	= .ToggleRollover;
+			.InactiveTogglePress	= .TogglePress;
+			.InactiveToggleDisable	= .ToggleDisable;
+
+			.Winoff					= .Default;
+			.WinoffRollover			= .Rollover;
+			.WinoffPress			= .Press;
+			.WinoffDisable			= .Disable;
+			.WinoffToggle			= .Toggle;
+			.WinoffToggleRollover	= .ToggleRollover;
+			.WinoffTogglePress		= .TogglePress;
+			.WinoffToggleDisable	= .ToggleDisable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_StandardButton_Style;
+		map GFC_Control							= GFC_Control_StandardButton_Style;
+	}
 }

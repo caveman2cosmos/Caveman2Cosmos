@@ -39,10 +39,13 @@ BOTTOM_BAR_NAME = "WID|BAR|BOTTOMBAR"
 BOTTOM_BAR_ID = BOTTOM_BAR_NAME + "0"
 BOTTOM_BAR_SLIDER_PANEL_ID = "TC_BarBotSlider"
 HSLIDER_ID = "HSlider"
-MINIMAP_TOP_MARGIN = 16
+MINIMAP_TOP_MARGIN = 30
 MINIMAP_LENS_ID = "MinimapLens"
 MINIMAP_LENS_BORDER_H = 4
 MINIMAP_LENS_BORDER_V = 4
+
+QUEUE_LABEL_W = 80
+QUEUE_LABEL_H = 24
 
 ERA_HAS_STYLES = {
 	0: "Button_TechHas_0_Style",
@@ -121,7 +124,6 @@ class CvTechChooser:
 		self.bUnitTT = False
 
 		self.scrolling = False
-		self.hoverMinimap = False
 		self.updates = []
 
 		# Set up widget sizes
@@ -219,6 +221,21 @@ class CvTechChooser:
 		#screen.setPanelColor(BOTTOM_BAR_ID, 64, 64, 64)
 		#screen.setHitTest(BOTTOM_BAR_ID, HitTestTypes.HITTEST_ON)
 
+		# Era buttons that can jump directly to an era
+		lastPosX = 0
+		for i in xrange(GC.getNumEraInfos()):
+			posX = self.treeToMinimapX(self.minEraX[i] - self.minX) # SLIDER_BORDER + self.minEraX[i] * (self.xRes - SLIDER_BORDER * 2) / self.maxX
+			posY = self.yRes - SCREEN_PANEL_BOTTOM_BAR_H + 5
+			eraInfo = GC.getEraInfo(i)
+			img = eraInfo.getButton()
+			if img:
+				screen.setText("WID|ERAIM|" + str(i), "", "<img=%s>" % (img), 0, posX - 4, posY, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, 0, 0)
+			if i > 0:
+				screen.addPanel("WID|ERAPANEL|" + str(i-1), "", "", False, False, lastPosX, posY, posX - lastPosX, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_DEFAULT)
+			lastPosX = posX
+				# screen.setHitTest("WID|ERAIM|" + str(i), HitTestTypes.HITTEST_NOHIT)
+			# yOffs = 0 + 48 * (i % 2)
+			# screen.setText("WID|ERATEXT|" + str(i), "", "<font=1>%s" % (eraInfo.getDescription()), 0, posX, posY + yOffs, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, iEra, 0)
 
 		# Create the tech button backgrounds
 		self.refresh(xrange(self.iNumTechs), False)
@@ -229,16 +246,7 @@ class CvTechChooser:
 		fullWidth = self.maxX - self.minX
 		self.minimapLensWidth = self.xRes * minimapWidth / fullWidth + MINIMAP_LENS_BORDER_H * 2
 		screen.addPanel(MINIMAP_LENS_ID, "", "", False, False, 0, 0, self.minimapLensWidth, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_MAIN_WHITE)
-		# # Era buttons that can jump directly to an era
-		# for i in xrange(GC.getNumEraInfos()):
-		# 	posX = SLIDER_BORDER + self.minEraX[i] * (self.xRes - SLIDER_BORDER * 2) / self.maxX
-		# 	posY = self.yRes - SCREEN_PANEL_BOTTOM_BAR_H + 24
-		# 	eraInfo = GC.getEraInfo(i)
-		# 	img = eraInfo.getButton()
-		# 	if img:
-		# 		screen.setText("WID|ERAIM|" + str(i), "", "<img=%s>" % (img), 0, posX, posY + 20, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, iEra, 0)
-		# 	yOffs = 0 + 48 * (i % 2)
-		# 	screen.setText("WID|ERATEXT|" + str(i), "", "<font=1>%s" % (eraInfo.getDescription()), 0, posX, posY + yOffs, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, iEra, 0)
+
 
 		# On first load we will scroll to the currently researched tech automatically
 		techToScrollTo = -1
@@ -353,6 +361,14 @@ class CvTechChooser:
 				screen.setImageButtonAt(techCellId, SCREEN_PANEL, "", iX + CELL_BORDER, iY + CELL_BORDER, self.wCell + CELL_BORDER * 2, self.hCell + CELL_BORDER * 2, eWidGen, 1, 2)
 				screen.addDDSGFCAt(ICON + iTechStr, techCellId, CvTechInfo.getButton(), 3 + CELL_BORDER, 5 + CELL_BORDER, self.sIcon0, self.sIcon0, eWidGen, 1, 2, False)
 				screen.setHitTest(ICON + iTechStr, HitTestTypes.HITTEST_NOHIT)
+
+				# Queue label
+				screen.setImageButtonAt("QUEUE_LABEL_PANEL" + iTechStr, SCREEN_PANEL, "", iX - QUEUE_LABEL_W / 2, iY - QUEUE_LABEL_H / 2, QUEUE_LABEL_W, QUEUE_LABEL_H, eWidGen, 1, 2)
+				screen.setStyle("QUEUE_LABEL_PANEL" + iTechStr, "Button_TechQueuePos_Style")
+				screen.setHitTest("QUEUE_LABEL_PANEL" + iTechStr, HitTestTypes.HITTEST_NOHIT)
+				#screen.attachPanelAt(SCREEN_PANEL, "QUEUE_LABEL_PANEL" + iTechStr, "", "", False, False, PanelStyles.PANEL_STYLE_MAIN, iX - QUEUE_LABEL_W / 2, iY - QUEUE_LABEL_H / 2, QUEUE_LABEL_W, QUEUE_LABEL_H, eWidGen, 1, 2)
+				#screen.moveItem("QUEUE_LABEL_PANEL" + iTechStr, iX - QUEUE_LABEL_W / 2, iY - QUEUE_LABEL_H / 2, 0)
+				screen.setLabel("QUEUE_LABEL" + iTechStr, "QUEUE_LABEL_PANEL" + iTechStr, "999", 1 << 1 + 1, QUEUE_LABEL_W / 2, QUEUE_LABEL_H / 2, 0, FontTypes.TITLE_FONT, eWidGen, 1, 2)
 				
 				# Progress bar
 				barId = techCellId + "BAR"
@@ -923,11 +939,11 @@ class CvTechChooser:
 			if iY < 0: iY = 0
 			self.screen().moveItem("Tooltip", iX, iY, 0)
 
+		mousePos = Win32.getCursorPos()
 		if self.scrolling:
-			POINT = Win32.getCursorPos()
-			self.scrollTo(self.minimapToTreeX(POINT.x - self.minimapLensWidth / 2))
+			self.scrollTo(self.minimapToTreeX(mousePos.x - self.minimapLensWidth / 2))
 			self.scrolling = Win32.isLMB()
-		elif self.hoverMinimap and Win32.isLMB():
+		elif mousePos.y > self.yRes - SCREEN_PANEL_BOTTOM_BAR_H and Win32.isLMB():
 			self.scrolling = True
 
 		# If we still have techs to complete the initialization of
@@ -942,51 +958,6 @@ class CvTechChooser:
 		if scrollDiff != 0:
 			self.scrollTo(int(self.scrollOffs - scrollDiff * self.xCellDist / 2))
 
-	## DEBUG CODE for investigating handleInput behaviour
-	def getNotificationText(self, inputClass):
-		notifications = []
-		notifications.append("NOTIFY_CLICKED")
-		notifications.append("NOTIFY_DBL_CLICKED")
-		notifications.append("NOTIFY_FOCUS")
-		notifications.append("NOTIFY_UNFOCUS")
-		notifications.append("NOTIFY_CURSOR_MOVE_ON")
-		notifications.append("NOTIFY_CURSOR_MOVE_OFF")
-		notifications.append("NOTIFY_CHARACTER")
-		notifications.append("NOTIFY_SCROLL_UP")
-		notifications.append("NOTIFY_SCROLL_DOWN")
-		notifications.append("NOTIFY_NEW_HORIZONTAL_STOP")
-		notifications.append("NOTIFY_NEW_VERTICAL_STOP")
-		notifications.append("NOTIFY_LISTBOX_ITEM_SELECTED")
-		notifications.append("NOTIFY_MOUSEMOVE") # 12 is also NOTIFY_FLYOUT_ITEM_SELECTED
-		notifications.append("13")
-		notifications.append("NOTIFY_MOUSEWHEELUP")
-		notifications.append("NOTIFY_MOUSEWHEELDOWN")
-		notifications.append("16")
-		notifications.append("17")
-		notifications.append("NOTIFY_LINKEXECUTE")
-		notifications.append("NOTIFY_MOVIE_DONE")
-		notifications.append("NOTIFY_SLIDER_NEWSTOP")
-		notifications.append("NOTIFY_TABLE_HEADER_SELECTED")
-
-		return notifications[inputClass.getNotifyCode()]
-
-	def printInput(self, inputClass):
-		print "-----------new input-----------"
-		print "Notify code:  " + self.getNotificationText(inputClass)
-		print "Data:         " + str(inputClass.getData())
-		print "Flags:        " + str(inputClass.getFlags())
-		print "ID:           " + str(inputClass.getID())
-		print "Func Name:    " + str(inputClass.getFunctionName())
-		print "Shift:        " + str(inputClass.isShiftKeyDown())
-		print "Control:      " + str(inputClass.isCtrlKeyDown())
-		print "Alt:          " + str(inputClass.isAltKeyDown())
-		print "MouseX:       " + str(inputClass.getMouseX())
-		print "MouseY:       " + str(inputClass.getMouseY())
-		# print "ButtonType:   " + self.getWidgetString()
-		print "Data1:        " + str(inputClass.getData1())
-		print "Data2:        " + str(inputClass.getData2())
-		print "Option:       " + str(inputClass.getOption())
-
 	def handleInput(self, inputClass):
 		screen = self.screen()
 		bAlt, bCtrl, bShift = self.InputData.getModifierKeys()
@@ -996,9 +967,6 @@ class CvTechChooser:
 		ID		= inputClass.iItemID
 		NAME	= inputClass.szFunctionName
 		szFlag	= HandleInputUtil.MOUSE_FLAGS.get(inputClass.uiFlags, "UNKNOWN")
-
-		## DEBUG CODE
-		self.printInput(inputClass)
 
 		szSplit = NAME.split("|")
 		BASE = szSplit[0]
@@ -1053,11 +1021,6 @@ class CvTechChooser:
 						szTxt = TRNSLTR.getText("TXT_KEY_TECH_OBSOLETES", (CvBuildingInfo.getType(), CvBuildingInfo.getTextKey()))
 					else: szTxt = CyGameTextMgr().getBuildingHelp(ID, False, False, True, None, False)
 					self.updateTooltip(screen, szTxt)
-				elif NAME == BOTTOM_BAR_NAME:
-					self.hoverMinimap = True
-		elif iCode == NotifyCode.NOTIFY_CURSOR_MOVE_OFF:
-			if NAME == BOTTOM_BAR_NAME:
-				self.hoverMinimap = False
 		elif iCode == NotifyCode.NOTIFY_CLICKED: # click
 			if BASE == "WID":
 				if szFlag == "MOUSE_RBUTTONUP":
