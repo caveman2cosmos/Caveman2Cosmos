@@ -44,6 +44,11 @@ MINIMAP_LENS_ID = "MinimapLens"
 MINIMAP_LENS_BORDER_H = 4
 MINIMAP_LENS_BORDER_V = 4
 
+ERA_HAS_STYLES = {
+	0: "Button_TechHas_0_Style"
+}
+ERA_HAS_DEFAULT_STYLE = "Button_TechHas_Style"
+
 class CvTechChooser:
 
 	def __init__(self):
@@ -625,7 +630,10 @@ class CvTechChooser:
 
 				# Colours
 				if techState == CIV_HAS_TECH:
-					screen.setStyle(techCellId, "Button_TechHas_Style")
+					if iEra in ERA_HAS_STYLES:
+						screen.setStyle(techCellId, ERA_HAS_STYLES[iEra])
+					else:
+						screen.setStyle(techCellId, ERA_HAS_DEFAULT_STYLE)
 					screen.setPanelColor(techMinimapCellId, 128, 128, 128)
 				elif techState == CIV_IS_RESEARCHING:
 					screen.setStyle(techCellId, "Button_TechResearching_Style")
@@ -639,13 +647,11 @@ class CvTechChooser:
 				elif techState == CIV_TECH_AVAILABLE:
 					if iEra > self.iCurrentEra:
 						screen.setStyle(techCellId, "Button_TechNeo_Style")
-						screen.setPanelColor(techMinimapCellId, 64, 0, 32)
 					elif iEra < self.iCurrentEra:
 						screen.setStyle(techCellId, "Button_TechArchaic_Style")
-						screen.setPanelColor(techMinimapCellId, 32, 16, 0)
 					else:
 						screen.setStyle(techCellId, "Button_TechCoeval_Style")
-						screen.setPanelColor(techMinimapCellId, 0, 32, 0)
+					screen.setPanelColor(techMinimapCellId, 32, 32, 64)
 				else: 
 					screen.setStyle(techCellId, "Button_TechNo_Style")
 					screen.setPanelColor(techMinimapCellId, 128, 0, 0)
