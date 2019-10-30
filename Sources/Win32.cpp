@@ -102,6 +102,21 @@ POINT Win32::getCursorPos()
 	return p;
 }
 
+bool Win32::isLMB()
+{
+	return ::GetAsyncKeyState(VK_LBUTTON) != 0;
+}
+
+bool Win32::isRMB()
+{
+	return ::GetAsyncKeyState(VK_RBUTTON) != 0;
+}
+
+bool Win32::isMMB()
+{
+	return ::GetAsyncKeyState(VK_MBUTTON) != 0;
+}
+
 POINT Win32::screenToClient(POINT screenPos)
 {
 	::ScreenToClient(getToplevelWindow(), &screenPos);
@@ -153,6 +168,13 @@ void Win32::pythonPublish()
 		.staticmethod("getCursorPos")
 		.def("screenToClient", &Win32::screenToClient)
 		.staticmethod("screenToClient")
+
+		.def("isLMB", &Win32::isLMB)
+		.staticmethod("isLMB")
+		.def("isRMB", &Win32::isRMB)
+		.staticmethod("isRMB")
+		.def("isMMB", &Win32::isMMB)
+		.staticmethod("isMMB")
 
 		.def("registerMouseWheelListener", &Win32::registerMouseWheelListener)
 		.staticmethod("registerMouseWheelListener")

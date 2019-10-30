@@ -25,7 +25,7 @@ CELL_BORDER = 6
 # Top panel height
 SCREEN_PANEL_BAR_H = 42
 # Bottom panel height
-SCREEN_PANEL_BOTTOM_BAR_H = 100
+SCREEN_PANEL_BOTTOM_BAR_H = 80
 # Left/right border for the slider
 SLIDER_BORDER = 50
 # How many techs to page in per update tick, more is faster but more introduces more stutter
@@ -35,6 +35,14 @@ TECH_PAGING_RATE = 5
 CELL_GAP = 64
 # Size of dependency arrows
 ARROW_SIZE = 8
+BOTTOM_BAR_NAME = "WID|BAR|BOTTOMBAR"
+BOTTOM_BAR_ID = BOTTOM_BAR_NAME + "0"
+BOTTOM_BAR_SLIDER_PANEL_ID = "TC_BarBotSlider"
+HSLIDER_ID = "HSlider"
+MINIMAP_TOP_MARGIN = 16
+MINIMAP_LENS_ID = "MinimapLens"
+MINIMAP_LENS_BORDER_H = 4
+MINIMAP_LENS_BORDER_V = 4
 
 class CvTechChooser:
 
@@ -93,6 +101,9 @@ class CvTechChooser:
 		self.iOffsetTT = []
 		self.bLockedTT = False
 		self.bUnitTT = False
+
+		self.scrolling = False
+		self.hoverMinimap = False
 		self.updates = []
 
 		# Set up widget sizes
@@ -132,6 +143,8 @@ class CvTechChooser:
 				if iX < self.minX:
 					self.minX = iX
 
+		self.minimapScaleX = (self.xRes - (SLIDER_BORDER * 2)) / float(self.maxX - self.minX)
+		
 		eWidGen = WidgetTypes.WIDGET_GENERAL
 		eFontTitle = FontTypes.TITLE_FONT
 
@@ -144,7 +157,6 @@ class CvTechChooser:
 		screen.addDDSGFC("ScreenBackground", AFM.getInterfaceArtInfo("SCREEN_BG_OPAQUE").getPath(), 0, 0, self.xRes, self.yRes, eWidGen, 1, 2)
 
 		screen.addPanel("TC_BarTop", "", "", True, False, 0, 0, self.xRes, SCREEN_PANEL_BAR_H, PanelStyles.PANEL_STYLE_TOPBAR)
-		screen.addPanel("TC_BarBot", "", "", True, False, 0, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H, self.xRes, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_BOTTOMBAR)
 		screen.setLabel("TC_Header", "", "<font=4b>" + TRNSLTR.getText("TXT_KEY_TECH_CHOOSER_TITLE", ()), 1<<2, self.xRes/2, 4, 0, eFontTitle, eWidGen, 1, 2)
 
 		screen.setText("TC_Exit", "", "<font=4b>" + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()), 1<<1, self.xRes - 8, 2, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
@@ -182,12 +194,23 @@ class CvTechChooser:
 		# Main scrolling panel
 		screen.addPanel(SCREEN_PANEL, "", "", False, False, 0, SCREEN_PANEL_BAR_H, self.maxX + self.xCellDist, self.yRes, PanelStyles.PANEL_STYLE_EMPTY)
 
+		screen.setImageButton(BOTTOM_BAR_ID, "", 0, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H, self.xRes, SCREEN_PANEL_BOTTOM_BAR_H, eWidGen, 1, 2)
+		#setButtonGFC(BOTTOM_BAR_ID, "", "", 0, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H, self.xRes, SCREEN_PANEL_BOTTOM_BAR_H, eWidGen, 1, 2, ButtonStyles.BUTTON_STYLE_STANDARD)
+		# screen.addPanel(BOTTOM_BAR_ID, "", "", True, False, 0, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H, self.xRes, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_BOTTOMBAR)
+		#screen.setStyle(BOTTOM_BAR_ID, "Panel_TechMinimapCell_Style")
+		#screen.setPanelColor(BOTTOM_BAR_ID, 64, 64, 64)
+		#screen.setHitTest(BOTTOM_BAR_ID, HitTestTypes.HITTEST_ON)
+
+
 		# Create the tech button backgrounds
 		self.refresh(xrange(self.iNumTechs), False)
 
 		# A panel to put the horizontal slider in so we can position it correctly
-		screen.addPanel("TC_BarBotSlider", "", "", False, False, SLIDER_BORDER, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H - 12, self.xRes, 40, PanelStyles.PANEL_STYLE_EMPTY)
-
+		#screen.addPanel(BOTTOM_BAR_SLIDER_PANEL_ID, "", "", False, False, SLIDER_BORDER, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H - 12, self.xRes, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_EMPTY)
+		minimapWidth = self.xRes - SLIDER_BORDER * 2
+		fullWidth = self.maxX - self.minX
+		self.minimapLensWidth = self.xRes * minimapWidth / fullWidth + MINIMAP_LENS_BORDER_H * 2
+		screen.addPanel(MINIMAP_LENS_ID, "", "", False, False, 0, 0, self.minimapLensWidth, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_MAIN_WHITE)
 		# # Era buttons that can jump directly to an era
 		# for i in xrange(GC.getNumEraInfos()):
 		# 	posX = SLIDER_BORDER + self.minEraX[i] * (self.xRes - SLIDER_BORDER * 2) / self.maxX
@@ -234,8 +257,16 @@ class CvTechChooser:
 					lastResearched = (idx, iX)
 		return lastResearched[0]
 
+	def minimapToTreeX(self, minimapX):
+		return int((minimapX - SLIDER_BORDER) / self.minimapScaleX)
+
+	def treeToMinimapX(self, treeX):
+		return int(treeX * self.minimapScaleX) + SLIDER_BORDER
+
 	def scroll(self):
-		self.screen().moveItem(SCREEN_PANEL, -self.scrollOffs, 29, 0)
+		screen = self.screen()
+		screen.moveItem(SCREEN_PANEL, -self.scrollOffs, 29, 0)
+		screen.moveItem(MINIMAP_LENS_ID, SLIDER_BORDER + (self.minimapScaleX * self.scrollOffs) - MINIMAP_LENS_BORDER_H, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H, 0)
 
 	def scrollToTech(self, idx):
 		self.scrollTo(self.getTechPos(idx) - self.xRes / 2 + self.xCellDist / 2)
@@ -247,7 +278,8 @@ class CvTechChooser:
 			self.scrollOffs = 0
 		if self.scrollOffs > maxScroll:
 			self.scrollOffs = maxScroll
-		self.screen().attachSlider("TC_BarBotSlider", "HSlider", 0, 0, self.xRes - SLIDER_BORDER * 2, 20, self.scrollOffs, 0, maxScroll, WidgetTypes.WIDGET_GENERAL, 0, 0, False)
+		#self.screen().attachSlider(BOTTOM_BAR_SLIDER_PANEL_ID, HSLIDER_ID, 0, 0, self.xRes - SLIDER_BORDER * 2, SCREEN_PANEL_BOTTOM_BAR_H, self.scrollOffs, 0, maxScroll, WidgetTypes.WIDGET_GENERAL, 0, 0, False)
+		#self.screen().setStyle(HSLIDER_ID, "TechMinimapSlider_Style")
 		self.scroll()
 
 	def refresh(self, techs, bFull):
@@ -281,10 +313,7 @@ class CvTechChooser:
 		dx = self.sIcon1 + 1
 		iMaxElements = (self.wCell - self.sIcon0 - 8) / dx
 
-		minimapScaleX = (self.xRes - 40) / float(self.maxX - self.minX)
-		minimapScaleY = 20 / self.yRes
-		minimapWid = int(self.xCellDist * minimapScaleX)
-		print ("minimapScaleX = " + str(minimapScaleX) + ", minimapWid = " + str(minimapWid))
+		minimapWid = int(self.xCellDist * self.minimapScaleX)
 
 		for iTech in techs:
 			CvTechInfo = GC.getTechInfo(iTech)
@@ -293,8 +322,9 @@ class CvTechChooser:
 			if x0 < 1:
 				continue
 
-			szTech = str(iTech)
-			szTechRecord = TECH_CHOICE + szTech
+			iTechStr = str(iTech)
+			techCellId = TECH_CHOICE + iTechStr
+			techMinimapCellId = TECH_CHOICE + "MM" + "|" + iTechStr
 			y0 = CvTechInfo.getGridY()
 
 			if not bFull:
@@ -302,33 +332,22 @@ class CvTechChooser:
 				iY = yEmptySpace + ((y0 - 1) * yCellDist) / 2
 
 				# Tech cell
-				screen.setImageButtonAt(szTechRecord, SCREEN_PANEL, "", iX + CELL_BORDER, iY + CELL_BORDER, self.wCell + CELL_BORDER * 2, self.hCell + CELL_BORDER * 2, eWidGen, 1, 2)
-				screen.addDDSGFCAt(ICON + szTech, szTechRecord, CvTechInfo.getButton(), 3 + CELL_BORDER, 5 + CELL_BORDER, self.sIcon0, self.sIcon0, eWidGen, 1, 2, False)
-				screen.setHitTest(ICON + szTech, HitTestTypes.HITTEST_NOHIT)
+				screen.setImageButtonAt(techCellId, SCREEN_PANEL, "", iX + CELL_BORDER, iY + CELL_BORDER, self.wCell + CELL_BORDER * 2, self.hCell + CELL_BORDER * 2, eWidGen, 1, 2)
+				screen.addDDSGFCAt(ICON + iTechStr, techCellId, CvTechInfo.getButton(), 3 + CELL_BORDER, 5 + CELL_BORDER, self.sIcon0, self.sIcon0, eWidGen, 1, 2, False)
+				screen.setHitTest(ICON + iTechStr, HitTestTypes.HITTEST_NOHIT)
 				
 				# Progress bar
-				barId = szTechRecord + "BAR"
-				screen.addStackedBarGFCAt(barId, szTechRecord, CELL_BORDER, self.hCell, self.wCell, CELL_BORDER * 2, InfoBarTypes.NUM_INFOBAR_TYPES, eWidGen, 1, 2)
+				barId = techCellId + "BAR"
+				screen.addStackedBarGFCAt(barId, techCellId, CELL_BORDER, self.hCell, self.wCell, CELL_BORDER * 2, InfoBarTypes.NUM_INFOBAR_TYPES, eWidGen, 1, 2)
 				screen.setStackedBarColorsRGB(barId, InfoBarTypes.INFOBAR_STORED, 0, 215, 50, 255)
 				screen.setStackedBarColorsRGB(barId, InfoBarTypes.INFOBAR_RATE, 255, 255, 255, 64)
 				screen.setStackedBarColorsRGB(barId, InfoBarTypes.INFOBAR_EMPTY, 0, 0, 0, 0)
 				screen.hide(barId)
 
 				# Minimap cell
-				style = PanelStyles.PANEL_STYLE_EMPTY
-				# if iTech > 700:
-				# 	style = PanelStyles.PANEL_STYLE_GAME_MAP
-				# elif iTech > 500:
-				# 	style = PanelStyles.PANEL_STYLE_GAME_TOPBAR
-				# elif iTech > 400:
-				# 	style = PanelStyles.PANEL_STYLE_GAMEHUD_LEFT
-				# elif iTech > 300:
-				# 	style = PanelStyles.PANEL_STYLE_GAMEHUD_CENTER
-				# elif iTech > 200:
-				# 	style = PanelStyles.PANEL_STYLE_UNITSTAT
-				screen.addPanel(szTechRecord + "MM", "", "", False, False, int(iX * minimapScaleX) + 20, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H + 20 + y0 * 2, minimapWid+4, 4, PanelStyles.PANEL_STYLE_STONE)
-				screen.setStyle(szTechRecord + "MM", "Panel_TechMinimapCell_Style")
-				#screen.attachPanelAt("TC_BarBot", szTechRecord + "MM", "", "", False, False, PanelStyles.PANEL_STYLE_FLAT, x0*4, y0*2, 3, 1, eWidGen, 1, 2)
+				screen.addPanel(techMinimapCellId, "", "", False, False, int(iX * self.minimapScaleX) + SLIDER_BORDER, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H + MINIMAP_TOP_MARGIN + y0 * 2, minimapWid, 4, PanelStyles.PANEL_STYLE_STONE)
+				screen.setStyle(techMinimapCellId, "Panel_TechMinimapCell_Style")
+				screen.setHitTest(techMinimapCellId, HitTestTypes.HITTEST_NOHIT)
 
 				self.updates.append((iX, iTech))
 			else:
@@ -339,7 +358,7 @@ class CvTechChooser:
 					iTechX = CvTechInfo.getPrereqAndTechs(i)
 					if iTechX == -1: break
 					iX -= dx
-					screen.setImageButtonAt(TECH_REQ + str(iTechX) + "|" + szTech, szTechRecord, GC.getTechInfo(iTechX).getButton(), iX, iY, self.sIcon1, self.sIcon1, eWidGen, 1, 2)
+					screen.setImageButtonAt(TECH_REQ + str(iTechX) + "|" + iTechStr, techCellId, GC.getTechInfo(iTechX).getButton(), iX, iY, self.sIcon1, self.sIcon1, eWidGen, 1, 2)
 
 				# Draw connecting arrows
 				for i in xrange(NUM_OR_TECH_PREREQS):
@@ -416,10 +435,10 @@ class CvTechChooser:
 
 					# Helpers for drawing the unlocks
 					def imageButton(key, button):
-						screen.setImageButtonAt(key + str(iTech * 1000 + i), szTechRecord, button, iX, iY, self.sIcon1, self.sIcon1, eWidGen, 1, 2)
+						screen.setImageButtonAt(key + str(iTech * 1000 + i), techCellId, button, iX, iY, self.sIcon1, self.sIcon1, eWidGen, 1, 2)
 
 					def ddsgfc(key, button, widgetType, tech, item, flag):
-						screen.addDDSGFCAt(key + str(iTech * 1000 + i), szTechRecord, button, iX, iY, self.sIcon1, self.sIcon1, widgetType, tech, item, flag)
+						screen.addDDSGFCAt(key + str(iTech * 1000 + i), techCellId, button, iX, iY, self.sIcon1, self.sIcon1, widgetType, tech, item, flag)
 
 					if sType == "UnlockUnit":
 						imageButton("WID|UNIT" + str(iItem) + '|', GC.getUnitInfo(iItem).getButton())
@@ -585,7 +604,9 @@ class CvTechChooser:
 			iY = 5 + CELL_BORDER
 			szFont = self.aFontList[3]
 			for iTech, CvTechInfo, iEra in lChanged:
-				szTechRecord = TECH_CHOICE + str(iTech)
+				iTechStr = str(iTech)
+				techCellId = TECH_CHOICE + iTechStr
+				techMinimapCellId = TECH_CHOICE + "MM" + "|" + iTechStr
 
 				techState = currentTechState[iTech]
 
@@ -599,38 +620,38 @@ class CvTechChooser:
 					szTechString += str(self.CyPlayer.getQueuePosition(iTech)) + ") "
 				szTechString += CvTechInfo.getDescription()
 
-				screen.setLabelAt(TECH_NAME + str(iTech), szTechRecord, szTechString, 1<<0, iX, iY, 0, eFontTitle, eWidGen, 1, 2)
-				screen.setHitTest(TECH_NAME + str(iTech), HitTestTypes.HITTEST_NOHIT)
+				screen.setLabelAt(TECH_NAME + iTechStr, techCellId, szTechString, 1<<0, iX, iY, 0, eFontTitle, eWidGen, 1, 2)
+				screen.setHitTest(TECH_NAME + iTechStr, HitTestTypes.HITTEST_NOHIT)
 
 				# Colours
 				if techState == CIV_HAS_TECH:
-					screen.setStyle(szTechRecord, "Button_TechHas_Style")
-					screen.setPanelColor(szTechRecord + "MM", 255, 255, 255)
+					screen.setStyle(techCellId, "Button_TechHas_Style")
+					screen.setPanelColor(techMinimapCellId, 128, 128, 128)
 				elif techState == CIV_IS_RESEARCHING:
-					screen.setStyle(szTechRecord, "Button_TechResearching_Style")
-					screen.setPanelColor(szTechRecord + "MM", 0, 255, 0)
+					screen.setStyle(techCellId, "Button_TechResearching_Style")
+					screen.setPanelColor(techMinimapCellId, 0, 255, 0)
 				elif techState == CIV_IS_QUEUED:
-					screen.setStyle(szTechRecord, "Button_TechQueue_Style")
-					screen.setPanelColor(szTechRecord + "MM", 255, 255, 0)
+					screen.setStyle(techCellId, "Button_TechQueue_Style")
+					screen.setPanelColor(techMinimapCellId, 192, 192, 0)
 				elif techState == CIV_IS_TARGET:
-					screen.setStyle(szTechRecord, "Button_TechTarget_Style")
-					screen.setPanelColor(szTechRecord + "MM", 255, 128, 0)
+					screen.setStyle(techCellId, "Button_TechTarget_Style")
+					screen.setPanelColor(techMinimapCellId, 255, 128, 0)
 				elif techState == CIV_TECH_AVAILABLE:
 					if iEra > self.iCurrentEra:
-						screen.setStyle(szTechRecord, "Button_TechNeo_Style")
-						screen.setPanelColor(szTechRecord + "MM", 128, 0, 64)
+						screen.setStyle(techCellId, "Button_TechNeo_Style")
+						screen.setPanelColor(techMinimapCellId, 64, 0, 32)
 					elif iEra < self.iCurrentEra:
-						screen.setStyle(szTechRecord, "Button_TechArchaic_Style")
-						screen.setPanelColor(szTechRecord + "MM", 64, 32, 0)
+						screen.setStyle(techCellId, "Button_TechArchaic_Style")
+						screen.setPanelColor(techMinimapCellId, 32, 16, 0)
 					else:
-						screen.setStyle(szTechRecord, "Button_TechCoeval_Style")
-						screen.setPanelColor(szTechRecord + "MM", 0, 64, 0)
+						screen.setStyle(techCellId, "Button_TechCoeval_Style")
+						screen.setPanelColor(techMinimapCellId, 0, 32, 0)
 				else: 
-					screen.setStyle(szTechRecord, "Button_TechNo_Style")
-					screen.setPanelColor(szTechRecord + "MM", 128, 0, 0)
+					screen.setStyle(techCellId, "Button_TechNo_Style")
+					screen.setPanelColor(techMinimapCellId, 128, 0, 0)
 
 				# Progress bar
-				barId = szTechRecord + "BAR"
+				barId = techCellId + "BAR"
 				if techState == CIV_HAS_TECH:
 					screen.hide(barId)
 				else:
@@ -883,6 +904,13 @@ class CvTechChooser:
 			if iY < 0: iY = 0
 			self.screen().moveItem("Tooltip", iX, iY, 0)
 
+		if self.scrolling:
+			POINT = Win32.getCursorPos()
+			self.scrollTo(self.minimapToTreeX(POINT.x - self.minimapLensWidth / 2))
+			self.scrolling = Win32.isLMB()
+		elif self.hoverMinimap and Win32.isLMB():
+			self.scrolling = True
+
 		# If we still have techs to complete the initialization of
 		if len(self.updates) != 0:
 			# Sort them by distance to the current scroll offset so we can make sure to update what the player is looking at first
@@ -951,7 +979,7 @@ class CvTechChooser:
 		szFlag	= HandleInputUtil.MOUSE_FLAGS.get(inputClass.uiFlags, "UNKNOWN")
 
 		## DEBUG CODE
-		# self.printInput(inputClass)
+		self.printInput(inputClass)
 
 		szSplit = NAME.split("|")
 		BASE = szSplit[0]
@@ -986,7 +1014,7 @@ class CvTechChooser:
 		self.iUnitTT = None
 		self.bUnitTT = False
 
-		if iCode == 4: # Mouse Enter
+		if iCode == NotifyCode.NOTIFY_CURSOR_MOVE_ON: # Mouse Enter
 			if BASE == "WID":
 				if TYPE == "TECH":
 					if CASE[0] == "CURRENT":
@@ -1006,7 +1034,12 @@ class CvTechChooser:
 						szTxt = TRNSLTR.getText("TXT_KEY_TECH_OBSOLETES", (CvBuildingInfo.getType(), CvBuildingInfo.getTextKey()))
 					else: szTxt = CyGameTextMgr().getBuildingHelp(ID, False, False, True, None, False)
 					self.updateTooltip(screen, szTxt)
-		elif iCode == 0: # click
+				elif NAME == BOTTOM_BAR_NAME:
+					self.hoverMinimap = True
+		elif iCode == NotifyCode.NOTIFY_CURSOR_MOVE_OFF:
+			if NAME == BOTTOM_BAR_NAME:
+				self.hoverMinimap = False
+		elif iCode == NotifyCode.NOTIFY_CLICKED: # click
 			if BASE == "WID":
 				if szFlag == "MOUSE_RBUTTONUP":
 					if TYPE == "UNIT":
@@ -1038,7 +1071,7 @@ class CvTechChooser:
 			elif NAME == "AddTechButton":
 				CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_TECH, self.iPlayer, -1, -1, self.iSelectedTech, True)	#Action, Player, X, Y, Data, bAdd
 				self.updateSelectedTech(screen, -1)
-		elif NAME == "HSlider":
+		elif NAME == HSLIDER_ID:
 			if iCode == 20:
 				self.scrollOffs = iData
 			self.scroll()
