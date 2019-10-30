@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Soren Johnson (Firaxis Games) -->
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4: Beyond the Sword -->
@@ -170,7 +170,7 @@
 			<ClearEvents/>
 			<PythonCallback/>
 			<PythonExpireCheck/>
-			<PythonCanDo>CanDoScholars2</PythonCanDo>
+			<PythonCanDo/>
 			<PythonHelp/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -329,10 +329,10 @@
 			<AdditionalEvents/>
 			<EventTimes/>
 			<ClearEvents/>
-			<PythonCallback>DoScholars4</PythonCallback>
+			<PythonCallback/>
 			<PythonExpireCheck/>
-			<PythonCanDo>CanDoScholars4</PythonCanDo>
-			<PythonHelp>helpScholars4</PythonHelp>
+			<PythonCanDo/>
+			<PythonHelp/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>

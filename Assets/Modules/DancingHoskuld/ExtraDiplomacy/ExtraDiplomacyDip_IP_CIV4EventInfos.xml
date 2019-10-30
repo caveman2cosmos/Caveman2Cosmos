@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Soren Johnson (Firaxis Games) -->
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4: Beyond the Sword -->
@@ -10,12 +10,12 @@
 		<EventInfo>
 			<Type>EVENT_IND_PEOPLES_JOIN</Type>
 			<Description>TXT_KEY_EVENT_IND_PEOPLES_JOIN</Description>
-			<PythonCallback>ApplyNativeJoin</PythonCallback>
+			<PythonCallback/>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PRAISE_IND_PEOPLES</Type>
 			<Description>TXT_KEY_EVENT_PRAISE_IND_PEOPLES</Description>
-			<PythonCallback>ApplyNativePraise</PythonCallback>
+			<PythonCallback/>
 		</EventInfo>
 	</EventInfos>
 </Civ4EventInfos>
