@@ -58,24 +58,6 @@ QUEUE_LABEL = "QUEUE_LABEL"
 QUEUE_LABEL_W = 54
 QUEUE_LABEL_H = 36
 
-ERA_HAS_STYLES = {
-	0: "Button_TechHas_0_Style",
-	1: "Button_TechHas_1_Style",
-	2: "Button_TechHas_2_Style",
-	3: "Button_TechHas_3_Style",
-	4: "Button_TechHas_4_Style",
-	5: "Button_TechHas_5_Style",
-	6: "Button_TechHas_6_Style",
-	7: "Button_TechHas_7_Style",
-	8: "Button_TechHas_8_Style",
-	9: "Button_TechHas_9_Style",
-	10: "Button_TechHas_10_Style",
-	11: "Button_TechHas_11_Style",
-	12: "Button_TechHas_12_Style",
-	13: "Button_TechHas_13_Style",
-}
-ERA_HAS_DEFAULT_STYLE = "Button_TechHas_Style"
-
 class CvTechChooser:
 
 	def __init__(self):
@@ -201,7 +183,7 @@ class CvTechChooser:
 		screen.setImageButton("WID|TECH|CURRENT0", "", 256, 3, self.xRes - 512, 30, eWidGen, 1, 2)
 		screen.hide("WID|TECH|CURRENT0")
 
-		self.iResearch0 = -1
+		self.iCurrentResearch = -1
 
 		# Debug
 		import DebugUtils
@@ -276,53 +258,6 @@ class CvTechChooser:
 			self.scrollToTech(techToScrollTo)
 		else:
 			self.scrollTo(self.scrollOffs)
-
-	def getTechPos(self, idx):
-		info = GC.getTechInfo(idx)
-		return info.getGridX() * self.xCellDist - self.minX
-
-	def getLastResearchingIdx(self):
-		lastTechInQueue = (-1, -1)
-		for idx in xrange(self.iNumTechs):
-			queuePos = self.CyPlayer.getQueuePosition(idx)
-			if queuePos > lastTechInQueue[1]:
-				lastTechInQueue = (idx, queuePos)
-		return lastTechInQueue[0]
-
-	def getLastResearchedIdx(self):
-		lastResearched = (-1, -1)
-		for idx in xrange(self.iNumTechs):
-			if self.CyTeam.isHasTech(idx):
-				info = GC.getTechInfo(idx)
-				iX = info.getGridX()
-				if iX > lastResearched[1]:
-					lastResearched = (idx, iX)
-		return lastResearched[0]
-
-	def minimapToTreeX(self, minimapX):
-		return int((minimapX - SLIDER_BORDER) / self.minimapScaleX)
-
-	def treeToMinimapX(self, treeX):
-		return int(treeX * self.minimapScaleX) + SLIDER_BORDER
-
-	def scroll(self):
-		screen = self.screen()
-		screen.moveItem(SCREEN_PANEL, -self.scrollOffs, 29, 0)
-		screen.moveItem(MINIMAP_LENS_ID, SLIDER_BORDER + (self.minimapScaleX * self.scrollOffs) - MINIMAP_LENS_BORDER_H, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H, 0)
-
-	def scrollToTech(self, idx):
-		self.scrollTo(self.getTechPos(idx) - self.xRes / 2 + self.xCellDist / 2)
-
-	def scrollTo(self, offs):
-		maxScroll = self.maxX - self.xRes - self.minX
-		self.scrollOffs = offs
-		if self.scrollOffs < 0:
-			self.scrollOffs = 0
-		if self.scrollOffs > maxScroll:
-			self.scrollOffs = maxScroll
-		#self.screen().attachSlider(BOTTOM_BAR_SLIDER_PANEL_ID, HSLIDER_ID, 0, 0, self.xRes - SLIDER_BORDER * 2, SCREEN_PANEL_BOTTOM_BAR_H, self.scrollOffs, 0, maxScroll, WidgetTypes.WIDGET_GENERAL, 0, 0, False)
-		#self.screen().setStyle(HSLIDER_ID, "TechMinimapSlider_Style")
-		self.scroll()
 
 	def refresh(self, techs, bFull):
 		screen = self.screen()
@@ -592,21 +527,21 @@ class CvTechChooser:
 		eFontTitle = FontTypes.TITLE_FONT
 
 		# Progress Bar
-		iTech = self.CyPlayer.getCurrentResearch()
-		if self.iResearch0 != iTech:
-			if iTech > -1:
+		iNewCurrentResearch = self.CyPlayer.getCurrentResearch()
+		if self.iCurrentResearch != iNewCurrentResearch:
+			if iNewCurrentResearch > -1:
 				screen.hide("TC_Header")
-				iProgress = self.CyTeam.getResearchProgress(iTech)
-				iCost = self.CyTeam.getResearchCost(iTech)
-				iOverflow = self.CyPlayer.getOverflowResearch() * self.CyPlayer.calculateResearchModifier(iTech) /100
+				iProgress = self.CyTeam.getResearchProgress(iNewCurrentResearch)
+				iCost = self.CyTeam.getResearchCost(iNewCurrentResearch)
+				iOverflow = self.CyPlayer.getOverflowResearch() * self.CyPlayer.calculateResearchModifier(iNewCurrentResearch) /100
 				stackBar = "progressBar"
 				screen.setBarPercentage(stackBar, InfoBarTypes.INFOBAR_STORED, iProgress * 1.0 / iCost)
 				if iCost > iProgress + iOverflow:
-					screen.setBarPercentage(stackBar, InfoBarTypes.INFOBAR_RATE, self.CyPlayer.calculateResearchRate(iTech) * 1.0 / (iCost - iProgress - iOverflow))
+					screen.setBarPercentage(stackBar, InfoBarTypes.INFOBAR_RATE, self.CyPlayer.calculateResearchRate(iNewCurrentResearch) * 1.0 / (iCost - iProgress - iOverflow))
 				screen.show(stackBar)
 
-				szTxt = "<font=3>" + GC.getTechInfo(iTech).getDescription() + ' (' + str(self.CyPlayer.getResearchTurnsLeft(iTech, True)) + ")"
-				screen.setLabel("Researching", "", szTxt, 1<<2, self.xRes/2, 6, 0, eFontTitle, eWidGen, iTech, 0)
+				szTxt = "<font=3>" + GC.getTechInfo(iNewCurrentResearch).getDescription() + ' (' + str(self.CyPlayer.getResearchTurnsLeft(iNewCurrentResearch, True)) + ")"
+				screen.setLabel("Researching", "", szTxt, 1<<2, self.xRes/2, 6, 0, eFontTitle, eWidGen, iNewCurrentResearch, 0)
 				screen.setHitTest("Researching", HitTestTypes.HITTEST_NOHIT)
 				screen.moveToFront("WID|TECH|CURRENT0")
 				screen.show("WID|TECH|CURRENT0")
@@ -615,111 +550,87 @@ class CvTechChooser:
 				screen.hide("Researching")
 				screen.hide("progressBar")
 				screen.show("TC_Header")
-			self.iResearch0 = iTech
-
-		currentTechState = self.currentTechState
+			self.iCurrentResearch = iNewCurrentResearch
 
 		# Analyze change
-		lChanged = []
+		changed = []
 
 		for iTech in xrange(self.iNumTechs):
 			CvTechInfo = GC.getTechInfo(iTech)
 			iX = CvTechInfo.getGridX()
-			if iX > 0:
-				iEra = CvTechInfo.getEra()
-				if currentTechState[iTech] == CIV_HAS_TECH:
-					if bForce:
-						lChanged.append((iTech, CvTechInfo, iEra))
-				elif currentTechState[iTech] == CIV_NO_RESEARCH:
-					if bForce:
-						lChanged.append((iTech, CvTechInfo, iEra))
-				elif self.CyPlayer.isResearchingTech(iTech):
-					queuePos = self.CyPlayer.getQueuePosition(iTech)
-					if queuePos == 1:
-						currentTechState[iTech] = CIV_IS_RESEARCHING
-					elif queuePos == self.CyPlayer.getLengthResearchQueue():
-						currentTechState[iTech] = CIV_IS_TARGET
-					else:
-						currentTechState[iTech] = CIV_IS_QUEUED
-					lChanged.append((iTech, CvTechInfo, iEra))
-				elif bForce or currentTechState[iTech] != CIV_TECH_AVAILABLE:
-					currentTechState[iTech] = CIV_TECH_AVAILABLE
-					lChanged.append((iTech, CvTechInfo, iEra))
+			if iX <= 0:
+				continue
+			iEra = CvTechInfo.getEra()
+			if self.currentTechState[iTech] == CIV_HAS_TECH:
+				if bForce:
+					changed.append(iTech)
+			elif self.currentTechState[iTech] == CIV_NO_RESEARCH:
+				if bForce:
+					changed.append(iTech)
+			elif self.CyPlayer.isResearchingTech(iTech):
+				queuePos = self.CyPlayer.getQueuePosition(iTech)
+				if queuePos == 1:
+					self.currentTechState[iTech] = CIV_IS_RESEARCHING
+				elif queuePos == self.CyPlayer.getLengthResearchQueue():
+					self.currentTechState[iTech] = CIV_IS_TARGET
+				else:
+					self.currentTechState[iTech] = CIV_IS_QUEUED
+				changed.append(iTech)
+			elif bForce or self.currentTechState[iTech] != CIV_TECH_AVAILABLE:
+				self.currentTechState[iTech] = CIV_TECH_AVAILABLE
+				changed.append(iTech)
 
 		# Make change
-		if lChanged:
-			advisors = [unichr(8855), unichr(8857), unichr(8500), unichr(8501), unichr(8502), unichr(8483)]
-			iX = self.sIcon0 + 6 + CELL_BORDER
-			iY = 5 + CELL_BORDER
-			szFont = self.aFontList[3]
-			for iTech, CvTechInfo, iEra in lChanged:
-				iTechStr = str(iTech)
-				techCellId = TECH_CHOICE + iTechStr
-				techMinimapCellId = TECH_CHOICE + "MM" + "|" + iTechStr
+		advisors = [unichr(8855), unichr(8857), unichr(8500), unichr(8501), unichr(8502), unichr(8483)]
+		iX = self.sIcon0 + 6 + CELL_BORDER
+		iY = 5 + CELL_BORDER
+		szFont = self.aFontList[3]
 
-				techState = currentTechState[iTech]
+		for iTech in changed:
+			iTechStr = str(iTech)
+			CvTechInfo = GC.getTechInfo(iTech)
+			iEra = CvTechInfo.getEra()
 
-				szTechString = szFont
-				iAdvisor = CvTechInfo.getAdvisorType()
-				if iAdvisor > -1:
-					szTechString += advisors[iAdvisor]
-				# if techState == CIV_IS_RESEARCHING:
-				# 	szTechString += "*) "
-				# elif techState == CIV_IS_QUEUED or techState == CIV_IS_TARGET:
-				# 	szTechString += str(self.CyPlayer.getQueuePosition(iTech)) + ") "
-				szTechString += CvTechInfo.getDescription()
+			techCellId = TECH_CHOICE + iTechStr
+			techMinimapCellId = TECH_CHOICE + "MM" + "|" + iTechStr
 
-				screen.setLabelAt(TECH_NAME + iTechStr, techCellId, szTechString, 1<<0, iX, iY, 0, eFontTitle, eWidGen, 1, 2)
-				screen.setHitTest(TECH_NAME + iTechStr, HitTestTypes.HITTEST_NOHIT)
+			techState = self.currentTechState[iTech]
 
-				# Colours
-				if techState == CIV_HAS_TECH:
-					if iEra in ERA_HAS_STYLES:
-						screen.setStyle(techCellId, ERA_HAS_STYLES[iEra])
-					else:
-						screen.setStyle(techCellId, ERA_HAS_DEFAULT_STYLE)
-					screen.setPanelColor(techMinimapCellId, 128, 128, 128)
-				elif techState == CIV_IS_RESEARCHING:
-					screen.setStyle(techCellId, "Button_TechResearching_Style")
-					screen.setPanelColor(techMinimapCellId, 0, 255, 0)
-				elif techState == CIV_IS_QUEUED:
-					screen.setStyle(techCellId, "Button_TechQueue_Style")
-					screen.setPanelColor(techMinimapCellId, 192, 192, 0)
-				elif techState == CIV_IS_TARGET:
-					screen.setStyle(techCellId, "Button_TechTarget_Style")
-					screen.setPanelColor(techMinimapCellId, 255, 128, 0)
-				elif techState == CIV_TECH_AVAILABLE:
-					if iEra > self.iCurrentEra:
-						screen.setStyle(techCellId, "Button_TechNeo_Style")
-					elif iEra < self.iCurrentEra:
-						screen.setStyle(techCellId, "Button_TechArchaic_Style")
-					else:
-						screen.setStyle(techCellId, "Button_TechCoeval_Style")
-					screen.setPanelColor(techMinimapCellId, 32, 32, 64)
-				else: 
-					screen.setStyle(techCellId, "Button_TechNo_Style")
-					screen.setPanelColor(techMinimapCellId, 128, 0, 0)
+			szTechString = szFont
+			iAdvisor = CvTechInfo.getAdvisorType()
+			if iAdvisor > -1:
+				szTechString += advisors[iAdvisor]
+			szTechString += CvTechInfo.getDescription()
 
-				# Progress bar
-				barId = techCellId + "BAR"
-				if techState == CIV_HAS_TECH:
-					screen.hide(barId)
-				else:
-					screen.show(barId)
-					iProgress = self.CyTeam.getResearchProgress(iTech)
-					iCost = self.CyTeam.getResearchCost(iTech)
-					iOverflow = self.CyPlayer.getOverflowResearch() * self.CyPlayer.calculateResearchModifier(iTech) / 100
-					screen.setBarPercentage(barId, InfoBarTypes.INFOBAR_STORED, iProgress * 1.0 / iCost)
-					if iCost > iProgress + iOverflow:
-						screen.setBarPercentage(barId, InfoBarTypes.INFOBAR_RATE, self.CyPlayer.calculateResearchRate(iTech) * 1.0 / (iCost - iProgress - iOverflow))
-				
-				# Queue labels
-				if techState == CIV_IS_RESEARCHING or techState == CIV_IS_QUEUED or techState == CIV_IS_TARGET:
-					screen.show(QUEUE_LABEL_PANEL + iTechStr)
-					queuePosLabel = "<font=3b>" + FONT_COLOR_MAP[techState] + str(self.CyPlayer.getQueuePosition(iTech))
-					screen.setLabelAt(QUEUE_LABEL + iTechStr, QUEUE_LABEL_PANEL + iTechStr, queuePosLabel, 1 << 2, QUEUE_LABEL_W / 2, 6, 0, eFontTitle, eWidGen, 1, 2)
-				else:
-					screen.hide(QUEUE_LABEL_PANEL + iTechStr)
+			screen.setLabelAt(TECH_NAME + iTechStr, techCellId, szTechString, 1<<0, iX, iY, 0, eFontTitle, eWidGen, 1, 2)
+			screen.setHitTest(TECH_NAME + iTechStr, HitTestTypes.HITTEST_NOHIT)
+
+			# Colours
+			techCellStyle = self.getTechStyleForState(techState, iEra)
+			screen.setStyle(techCellId, techCellStyle)
+			minimapCellColor = self.getTechColorForState(techState)
+			screen.setPanelColor(techMinimapCellId, minimapCellColor[0], minimapCellColor[1], minimapCellColor[2])
+
+			# Progress bar
+			barId = techCellId + "BAR"
+			if techState == CIV_HAS_TECH:
+				screen.hide(barId)
+			else:
+				screen.show(barId)
+				iProgress = self.CyTeam.getResearchProgress(iTech)
+				iCost = self.CyTeam.getResearchCost(iTech)
+				iOverflow = self.CyPlayer.getOverflowResearch() * self.CyPlayer.calculateResearchModifier(iTech) / 100
+				screen.setBarPercentage(barId, InfoBarTypes.INFOBAR_STORED, iProgress * 1.0 / iCost)
+				if iCost > iProgress + iOverflow:
+					screen.setBarPercentage(barId, InfoBarTypes.INFOBAR_RATE, self.CyPlayer.calculateResearchRate(iTech) * 1.0 / (iCost - iProgress - iOverflow))
+			
+			# Queue labels
+			if techState == CIV_IS_RESEARCHING or techState == CIV_IS_QUEUED or techState == CIV_IS_TARGET:
+				screen.show(QUEUE_LABEL_PANEL + iTechStr)
+				queuePosLabel = "<font=3b>" + FONT_COLOR_MAP[techState] + str(self.CyPlayer.getQueuePosition(iTech))
+				screen.setLabelAt(QUEUE_LABEL + iTechStr, QUEUE_LABEL_PANEL + iTechStr, queuePosLabel, 1 << 2, QUEUE_LABEL_W / 2, 6, 0, eFontTitle, eWidGen, 1, 2)
+			else:
+				screen.hide(QUEUE_LABEL_PANEL + iTechStr)
 
 	def updateSelectedTech(self, screen, iTech):
 		self.iSelectedTech = iTech
@@ -1096,6 +1007,93 @@ class CvTechChooser:
 			del (
 				self.screenId, self.InputData, self.szTxtTT, self.iOffsetTT, self.bLockedTT, self.iUnitTT, self.bUnitTT,
 				self.xRes, self.yRes, self.aFontList, self.wCell, self.hCell, self.sIcon0, self.sIcon1, self.iSelectedTech,
-				self.iPlayer, self.CyPlayer, self.CyTeam, self.iResearch0, self.currentTechState, self.iCurrentEra, self.updates
+				self.iPlayer, self.CyPlayer, self.CyTeam, self.iCurrentResearch, self.currentTechState, self.iCurrentEra, self.updates
 			)
 			self.created = False
+
+	def getTechPos(self, idx):
+		info = GC.getTechInfo(idx)
+		return info.getGridX() * self.xCellDist - self.minX
+
+	def getLastResearchingIdx(self):
+		lastTechInQueue = (-1, -1)
+		for idx in xrange(self.iNumTechs):
+			queuePos = self.CyPlayer.getQueuePosition(idx)
+			if queuePos > lastTechInQueue[1]:
+				lastTechInQueue = (idx, queuePos)
+		return lastTechInQueue[0]
+
+	def getLastResearchedIdx(self):
+		lastResearched = (-1, -1)
+		for idx in xrange(self.iNumTechs):
+			if self.CyTeam.isHasTech(idx):
+				info = GC.getTechInfo(idx)
+				iX = info.getGridX()
+				if iX > lastResearched[1]:
+					lastResearched = (idx, iX)
+		return lastResearched[0]
+
+	def minimapToTreeX(self, minimapX):
+		return int((minimapX - SLIDER_BORDER) / self.minimapScaleX)
+
+	def treeToMinimapX(self, treeX):
+		return int(treeX * self.minimapScaleX) + SLIDER_BORDER
+
+	def scroll(self):
+		screen = self.screen()
+		screen.moveItem(SCREEN_PANEL, -self.scrollOffs, 29, 0)
+		screen.moveItem(MINIMAP_LENS_ID, SLIDER_BORDER + (self.minimapScaleX * self.scrollOffs) - MINIMAP_LENS_BORDER_H, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H, 0)
+
+	def scrollToTech(self, idx):
+		self.scrollTo(self.getTechPos(idx) - self.xRes / 2 + self.xCellDist / 2)
+
+	def scrollTo(self, offs):
+		maxScroll = self.maxX - self.xRes - self.minX
+		self.scrollOffs = offs
+		if self.scrollOffs < 0:
+			self.scrollOffs = 0
+		if self.scrollOffs > maxScroll:
+			self.scrollOffs = maxScroll
+		self.scroll()
+
+	def getTechColorForState(self, state):
+		return {
+			CIV_HAS_TECH: [128, 128, 128],
+			CIV_IS_RESEARCHING: [0, 255, 0],
+			CIV_IS_QUEUED: [192, 192, 0],
+			CIV_IS_TARGET: [255, 128, 0],
+			CIV_TECH_AVAILABLE: [32, 32, 64],
+			CIV_NO_RESEARCH: [128, 0, 0],
+		}.get(state, [128, 0, 0])
+
+	def getTechStyleForState(self, state, era):
+		if state == CIV_HAS_TECH:
+			return {
+				0: "Button_TechHas_0_Style",
+				1: "Button_TechHas_1_Style",
+				2: "Button_TechHas_2_Style",
+				3: "Button_TechHas_3_Style",
+				4: "Button_TechHas_4_Style",
+				5: "Button_TechHas_5_Style",
+				6: "Button_TechHas_6_Style",
+				7: "Button_TechHas_7_Style",
+				8: "Button_TechHas_8_Style",
+				9: "Button_TechHas_9_Style",
+				10: "Button_TechHas_10_Style",
+				11: "Button_TechHas_11_Style",
+				12: "Button_TechHas_12_Style",
+				13: "Button_TechHas_13_Style",
+			}.get(era, "Button_TechHas_Style")
+		elif state == CIV_TECH_AVAILABLE:
+			if era > self.iCurrentEra:
+				return "Button_TechNeo_Style"
+			elif era < self.iCurrentEra:
+				return "Button_TechArchaic_Style"
+			else:
+				return "Button_TechCoeval_Style"
+		else:
+			return {
+				CIV_IS_RESEARCHING: "Button_TechResearching_Style",
+				CIV_IS_QUEUED: "Button_TechQueue_Style",
+				CIV_IS_TARGET: "Button_TechTarget_Style"
+			}.get(state, "Button_TechNo_Style")
