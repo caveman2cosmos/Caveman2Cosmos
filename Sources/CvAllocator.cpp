@@ -46,6 +46,8 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
 #undef new    // IMPORTANT!
 
 
+extern void CreateMiniDump(EXCEPTION_POINTERS *pep);
+
 void* CvMalloc(size_t size)
 {
 	if (g_DLL)
@@ -62,7 +64,7 @@ void* CvMalloc(size_t size)
 		}
 		catch (std::exception&)
 		{
-			OutputDebugString("Allocation failure\n");
+			CreateMiniDump(NULL);
 		}
 
 		return result;
@@ -100,10 +102,19 @@ void* CvMallocArray(size_t size)
 	{
 		//OutputDebugString("Alloc [safe]");
 
-		void* result = g_DLL->newMemArray(size, __FILE__, __LINE__);
+		void* result = NULL;
+		try
+		{
+			result = g_DLL->newMemArray(size, __FILE__, __LINE__);
 #ifdef _DEBUG
-		memset(result, 0xDA, size);
+			memset(result, 0xDA, size);
 #endif
+		}
+		catch (std::exception&)
+		{
+			CreateMiniDump(NULL);
+		}
+
 		return result;
 	}
 
