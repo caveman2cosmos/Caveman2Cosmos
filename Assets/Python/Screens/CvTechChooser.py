@@ -44,8 +44,8 @@ MINIMAP_LENS_ID = "MinimapLens"
 MINIMAP_LENS_BORDER_H = 4
 MINIMAP_LENS_BORDER_V = 4
 
-QUEUE_LABEL_W = 80
-QUEUE_LABEL_H = 24
+QUEUE_LABEL_W = 60
+QUEUE_LABEL_H = 20
 
 ERA_HAS_STYLES = {
 	0: "Button_TechHas_0_Style",
@@ -363,7 +363,7 @@ class CvTechChooser:
 				screen.setHitTest(ICON + iTechStr, HitTestTypes.HITTEST_NOHIT)
 
 				# Queue label
-				screen.setImageButtonAt("QUEUE_LABEL_PANEL" + iTechStr, SCREEN_PANEL, "", iX - QUEUE_LABEL_W / 2, iY - QUEUE_LABEL_H / 2, QUEUE_LABEL_W, QUEUE_LABEL_H, eWidGen, 1, 2)
+				screen.setImageButtonAt("QUEUE_LABEL_PANEL" + iTechStr, SCREEN_PANEL, "", iX  + CELL_BORDER - QUEUE_LABEL_W / 2, iY  + CELL_BORDER - QUEUE_LABEL_H / 2, QUEUE_LABEL_W, QUEUE_LABEL_H, eWidGen, 1, 2)
 				screen.setStyle("QUEUE_LABEL_PANEL" + iTechStr, "Button_TechQueuePos_Style")
 				screen.setHitTest("QUEUE_LABEL_PANEL" + iTechStr, HitTestTypes.HITTEST_NOHIT)
 				#screen.attachPanelAt(SCREEN_PANEL, "QUEUE_LABEL_PANEL" + iTechStr, "", "", False, False, PanelStyles.PANEL_STYLE_MAIN, iX - QUEUE_LABEL_W / 2, iY - QUEUE_LABEL_H / 2, QUEUE_LABEL_W, QUEUE_LABEL_H, eWidGen, 1, 2)
