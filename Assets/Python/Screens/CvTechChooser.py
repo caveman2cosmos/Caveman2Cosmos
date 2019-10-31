@@ -15,6 +15,14 @@ CIV_IS_QUEUED = 2
 CIV_IS_RESEARCHING = 3
 CIV_IS_TARGET = 4
 
+FONT_COLOR_MAP = {
+	CIV_IS_QUEUED: "<color=255,255,255,255>",
+	CIV_IS_RESEARCHING: "<color=255,255,255,255>",
+	CIV_IS_TARGET: "<color=255,255,255,255>",
+	# CIV_IS_QUEUED: "<color=255,255,10,255>",
+	# CIV_IS_RESEARCHING: "<color=0,255,10,255>",
+	# CIV_IS_TARGET: "<color=255,176,10,255>",
+}
 ICON = "ICON"
 TECH_CHOICE = "WID|TECH|CHOICE"
 TECH_REQ = "WID|TECH|REQ"
@@ -44,8 +52,11 @@ MINIMAP_LENS_ID = "MinimapLens"
 MINIMAP_LENS_BORDER_H = 4
 MINIMAP_LENS_BORDER_V = 4
 
-QUEUE_LABEL_W = 60
-QUEUE_LABEL_H = 20
+QUEUE_LABEL_PANEL = "QUEUE_LABEL_PANEL"
+QUEUE_LABEL = "QUEUE_LABEL"
+
+QUEUE_LABEL_W = 54
+QUEUE_LABEL_H = 36
 
 ERA_HAS_STYLES = {
 	0: "Button_TechHas_0_Style",
@@ -147,7 +158,7 @@ class CvTechChooser:
 		self.sIcon1 = self.sIcon0 / 2
 
 		# Cache minimum X coordinate per era for era partitioning.
-		self.minEraX = [maxint] * GC.getNumEraInfos()
+		self.minEraX = [maxint] * self.iNumEras
 		self.minX = maxint
 		self.maxX = 0
 		for iTech in xrange(self.iNumTechs):
@@ -211,10 +222,14 @@ class CvTechChooser:
 		screen.showWindowBackground(False)
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
+		# Minimap background
+		screen.addPanel(BOTTOM_BAR_ID, "", "", True, False, -20, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H - 80, self.xRes + 40, SCREEN_PANEL_BOTTOM_BAR_H + 100, PanelStyles.PANEL_STYLE_MAIN_TANB)
+		screen.setStyle(BOTTOM_BAR_ID, "Panel_TechMinimap_Style")
+		screen.setHitTest(BOTTOM_BAR_ID, HitTestTypes.HITTEST_NOHIT)
+
 		# Main scrolling panel
 		screen.addPanel(SCREEN_PANEL, "", "", False, False, 0, SCREEN_PANEL_BAR_H, self.maxX + self.xCellDist, self.yRes, PanelStyles.PANEL_STYLE_EMPTY)
 
-		screen.setImageButton(BOTTOM_BAR_ID, "", 0, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H, self.xRes, SCREEN_PANEL_BOTTOM_BAR_H, eWidGen, 1, 2)
 		#setButtonGFC(BOTTOM_BAR_ID, "", "", 0, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H, self.xRes, SCREEN_PANEL_BOTTOM_BAR_H, eWidGen, 1, 2, ButtonStyles.BUTTON_STYLE_STANDARD)
 		# screen.addPanel(BOTTOM_BAR_ID, "", "", True, False, 0, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H, self.xRes, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_BOTTOMBAR)
 		#screen.setStyle(BOTTOM_BAR_ID, "Panel_TechMinimapCell_Style")
@@ -223,12 +238,13 @@ class CvTechChooser:
 
 		# Era buttons that can jump directly to an era
 		lastPosX = 0
-		for i in xrange(GC.getNumEraInfos()):
+		
+		for i in xrange(self.iNumEras - 1):
 			posX = self.treeToMinimapX(self.minEraX[i] - self.minX) # SLIDER_BORDER + self.minEraX[i] * (self.xRes - SLIDER_BORDER * 2) / self.maxX
 			posY = self.yRes - SCREEN_PANEL_BOTTOM_BAR_H + 5
 			eraInfo = GC.getEraInfo(i)
 			img = eraInfo.getButton()
-			if img:
+			if img: # and i < self.iNumEras - 1: # exclude future icon
 				screen.setText("WID|ERAIM|" + str(i), "", "<img=%s>" % (img), 0, posX - 4, posY, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, 0, 0)
 			if i > 0:
 				screen.addPanel("WID|ERAPANEL|" + str(i-1), "", "", False, False, lastPosX, posY, posX - lastPosX, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_DEFAULT)
@@ -363,12 +379,11 @@ class CvTechChooser:
 				screen.setHitTest(ICON + iTechStr, HitTestTypes.HITTEST_NOHIT)
 
 				# Queue label
-				screen.setImageButtonAt("QUEUE_LABEL_PANEL" + iTechStr, SCREEN_PANEL, "", iX  + CELL_BORDER - QUEUE_LABEL_W / 2, iY  + CELL_BORDER - QUEUE_LABEL_H / 2, QUEUE_LABEL_W, QUEUE_LABEL_H, eWidGen, 1, 2)
-				screen.setStyle("QUEUE_LABEL_PANEL" + iTechStr, "Button_TechQueuePos_Style")
-				screen.setHitTest("QUEUE_LABEL_PANEL" + iTechStr, HitTestTypes.HITTEST_NOHIT)
-				#screen.attachPanelAt(SCREEN_PANEL, "QUEUE_LABEL_PANEL" + iTechStr, "", "", False, False, PanelStyles.PANEL_STYLE_MAIN, iX - QUEUE_LABEL_W / 2, iY - QUEUE_LABEL_H / 2, QUEUE_LABEL_W, QUEUE_LABEL_H, eWidGen, 1, 2)
-				#screen.moveItem("QUEUE_LABEL_PANEL" + iTechStr, iX - QUEUE_LABEL_W / 2, iY - QUEUE_LABEL_H / 2, 0)
-				screen.setLabel("QUEUE_LABEL" + iTechStr, "QUEUE_LABEL_PANEL" + iTechStr, "999", 1 << 1 + 1, QUEUE_LABEL_W / 2, QUEUE_LABEL_H / 2, 0, FontTypes.TITLE_FONT, eWidGen, 1, 2)
+				screen.setImageButtonAt(QUEUE_LABEL_PANEL + iTechStr, SCREEN_PANEL, "", iX + CELL_BORDER + 10 - QUEUE_LABEL_W / 2, iY + CELL_BORDER + 10  - QUEUE_LABEL_H / 2, QUEUE_LABEL_W, QUEUE_LABEL_H, eWidGen, 1, 2)
+				screen.setStyle(QUEUE_LABEL_PANEL + iTechStr, "Button_TechQueuePos_Style")
+				screen.setPanelColor(QUEUE_LABEL_PANEL + iTechStr, 0, 0, 0)
+				screen.setHitTest(QUEUE_LABEL_PANEL + iTechStr, HitTestTypes.HITTEST_NOHIT)
+				screen.hide(QUEUE_LABEL_PANEL + iTechStr)
 				
 				# Progress bar
 				barId = techCellId + "BAR"
@@ -648,10 +663,10 @@ class CvTechChooser:
 				iAdvisor = CvTechInfo.getAdvisorType()
 				if iAdvisor > -1:
 					szTechString += advisors[iAdvisor]
-				if techState == CIV_IS_RESEARCHING:
-					szTechString += "*) "
-				elif techState == CIV_IS_QUEUED or techState == CIV_IS_TARGET:
-					szTechString += str(self.CyPlayer.getQueuePosition(iTech)) + ") "
+				# if techState == CIV_IS_RESEARCHING:
+				# 	szTechString += "*) "
+				# elif techState == CIV_IS_QUEUED or techState == CIV_IS_TARGET:
+				# 	szTechString += str(self.CyPlayer.getQueuePosition(iTech)) + ") "
 				szTechString += CvTechInfo.getDescription()
 
 				screen.setLabelAt(TECH_NAME + iTechStr, techCellId, szTechString, 1<<0, iX, iY, 0, eFontTitle, eWidGen, 1, 2)
@@ -697,6 +712,14 @@ class CvTechChooser:
 					screen.setBarPercentage(barId, InfoBarTypes.INFOBAR_STORED, iProgress * 1.0 / iCost)
 					if iCost > iProgress + iOverflow:
 						screen.setBarPercentage(barId, InfoBarTypes.INFOBAR_RATE, self.CyPlayer.calculateResearchRate(iTech) * 1.0 / (iCost - iProgress - iOverflow))
+				
+				# Queue labels
+				if techState == CIV_IS_RESEARCHING or techState == CIV_IS_QUEUED or techState == CIV_IS_TARGET:
+					screen.show(QUEUE_LABEL_PANEL + iTechStr)
+					queuePosLabel = "<font=3b>" + FONT_COLOR_MAP[techState] + str(self.CyPlayer.getQueuePosition(iTech))
+					screen.setLabelAt(QUEUE_LABEL + iTechStr, QUEUE_LABEL_PANEL + iTechStr, queuePosLabel, 1 << 2, QUEUE_LABEL_W / 2, 6, 0, eFontTitle, eWidGen, 1, 2)
+				else:
+					screen.hide(QUEUE_LABEL_PANEL + iTechStr)
 
 	def updateSelectedTech(self, screen, iTech):
 		self.iSelectedTech = iTech
@@ -706,11 +729,11 @@ class CvTechChooser:
 			iCost = self.CyPlayer.getAdvancedStartTechCost(iTech, True)
 			if iCost > 0:
 				iPoints = self.CyPlayer.getAdvancedStartPoints()
-				screen.setLabel("ASPointsLabel", "", "<font=4>" + TRNSLTR.getText("TXT_KEY_WB_AS_SELECTED_TECH_COST", (iCost, iPoints)), 1<<0, 180, 4, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 2)
+				screen.setLabel("ASPointsLabel", "", "<font=4>" + TRNSLTR.getText("TXT_KEY_WB_AS_SELECTED_TECH_COST", (iCost, iPoints)), 1<<0, 180, 4, 0, eFontTitle, WidgetTypes.WIDGET_GENERAL, 1, 2)
 				if iPoints >= iCost:
 					screen.show("AddTechButton")
 			szTxt = "<font=4b>" + GC.getTechInfo(iTech).getDescription() + " (" + str(iCost) + unichr(8500) + ')'
-			screen.setLabel("SelectedTechLabel", "", szTxt, 1<<0, self.xRes/2, 4, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 2)
+			screen.setLabel("SelectedTechLabel", "", szTxt, 1<<0, self.xRes/2, 4, 0, eFontTitle, WidgetTypes.WIDGET_GENERAL, 1, 2)
 			screen.hide("TC_Header")
 		else:
 			screen.hide("SelectedTechLabel")
