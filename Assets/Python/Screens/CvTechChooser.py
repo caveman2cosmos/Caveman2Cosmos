@@ -30,6 +30,8 @@ TECH_NAME = "TechName"
 SCREEN_PANEL = "TechList"
 CELL_BORDER = 6
 
+ADVISORS = [unichr(8855), unichr(8857), unichr(8500), unichr(8501), unichr(8502), unichr(8483)]
+
 # Top panel height
 SCREEN_PANEL_BAR_H = 42
 # Bottom panel height
@@ -38,7 +40,7 @@ SCREEN_PANEL_BOTTOM_BAR_H = 80
 SLIDER_BORDER = 50
 # How many techs to page in per update tick, more is faster but more introduces more stutter
 # Could use a timer instead of a fixed count to allocate time slice for paging for more consistent behaviour
-TECH_PAGING_RATE = 5
+TECH_PAGING_RATE = 4
 # Gap between techs
 CELL_GAP = 64
 # Size of dependency arrows
@@ -118,6 +120,8 @@ class CvTechChooser:
 
 		self.scrolling = False
 		self.updates = []
+		#self.changed = []
+		self.cellDetails = [False] * self.iNumTechs
 
 		# Set up widget sizes
 		import ScreenResolution as SR
@@ -301,230 +305,233 @@ class CvTechChooser:
 
 			iTechStr = str(iTech)
 			techCellId = TECH_CHOICE + iTechStr
-			techMinimapCellId = TECH_CHOICE + "MM" + "|" + iTechStr
 			y0 = CvTechInfo.getGridY()
 
+			iX = x0 * self.xCellDist - self.minX
+			iY = yEmptySpace + ((y0 - 1) * yCellDist) / 2
+
 			if not bFull:
-				iX = x0 * self.xCellDist - self.minX
-				iY = yEmptySpace + ((y0 - 1) * yCellDist) / 2
-
-				# Tech cell
-				screen.setImageButtonAt(techCellId, SCREEN_PANEL, "", iX + CELL_BORDER, iY + CELL_BORDER, self.wCell + CELL_BORDER * 2, self.hCell + CELL_BORDER * 2, eWidGen, 1, 2)
-				screen.addDDSGFCAt(ICON + iTechStr, techCellId, CvTechInfo.getButton(), 3 + CELL_BORDER, 5 + CELL_BORDER, self.sIcon0, self.sIcon0, eWidGen, 1, 2, False)
-				screen.setHitTest(ICON + iTechStr, HitTestTypes.HITTEST_NOHIT)
-
-				# Queue label
-				screen.setImageButtonAt(QUEUE_LABEL_PANEL + iTechStr, SCREEN_PANEL, "", iX + CELL_BORDER + 10 - QUEUE_LABEL_W / 2, iY + CELL_BORDER + 10  - QUEUE_LABEL_H / 2, QUEUE_LABEL_W, QUEUE_LABEL_H, eWidGen, 1, 2)
-				screen.setStyle(QUEUE_LABEL_PANEL + iTechStr, "Button_TechQueuePos_Style")
-				screen.setPanelColor(QUEUE_LABEL_PANEL + iTechStr, 0, 0, 0)
-				screen.setHitTest(QUEUE_LABEL_PANEL + iTechStr, HitTestTypes.HITTEST_NOHIT)
-				screen.hide(QUEUE_LABEL_PANEL + iTechStr)
-				
-				# Progress bar
-				barId = techCellId + "BAR"
-				screen.addStackedBarGFCAt(barId, techCellId, CELL_BORDER, self.hCell, self.wCell, CELL_BORDER * 2, InfoBarTypes.NUM_INFOBAR_TYPES, eWidGen, 1, 2)
-				screen.setStackedBarColorsRGB(barId, InfoBarTypes.INFOBAR_STORED, 0, 215, 50, 255)
-				screen.setStackedBarColorsRGB(barId, InfoBarTypes.INFOBAR_RATE, 255, 255, 255, 64)
-				screen.setStackedBarColorsRGB(barId, InfoBarTypes.INFOBAR_EMPTY, 0, 0, 0, 0)
-				screen.hide(barId)
-
 				# Minimap cell
+				techMinimapCellId = TECH_CHOICE + "MM" + "|" + iTechStr
 				screen.addPanel(techMinimapCellId, "", "", False, False, int(iX * self.minimapScaleX) + SLIDER_BORDER, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H + MINIMAP_TOP_MARGIN + y0 * 2, minimapWid, 4, PanelStyles.PANEL_STYLE_STONE)
 				screen.setStyle(techMinimapCellId, "Panel_TechMinimapCell_Style")
 				screen.setHitTest(techMinimapCellId, HitTestTypes.HITTEST_NOHIT)
 
-				self.updates.append((iX, iTech))
+				#self.cellPos[iTech] = (iX, iY)
+				# self.updates.append((iX, iTech))
 			else:
-				# Requires
-				iX = self.wCell + CELL_BORDER
-				iY = 2 + CELL_BORDER
-				for i in xrange(NUM_AND_TECH_PREREQS):
-					iTechX = CvTechInfo.getPrereqAndTechs(i)
-					if iTechX == -1: break
-					iX -= dx
-					screen.setImageButtonAt(TECH_REQ + str(iTechX) + "|" + iTechStr, techCellId, GC.getTechInfo(iTechX).getButton(), iX, iY, self.sIcon1, self.sIcon1, eWidGen, 1, 2)
+				if not self.cellDetails[iTech]:
+					self.cellDetails[iTech] = True
+					# Tech cell
+					screen.setImageButtonAt(techCellId, SCREEN_PANEL, "", iX + CELL_BORDER, iY + CELL_BORDER, self.wCell + CELL_BORDER * 2, self.hCell + CELL_BORDER * 2, eWidGen, 1, 2)
+					screen.addDDSGFCAt(ICON + iTechStr, techCellId, CvTechInfo.getButton(), 3 + CELL_BORDER, 5 + CELL_BORDER, self.sIcon0, self.sIcon0, eWidGen, 1, 2, False)
+					screen.setHitTest(ICON + iTechStr, HitTestTypes.HITTEST_NOHIT)
 
-				# Draw connecting arrows
-				for i in xrange(NUM_OR_TECH_PREREQS):
-					iTechX = CvTechInfo.getPrereqOrTechs(i)
-					if iTechX == -1:
-						break
+					# Progress bar
+					barId = techCellId + "BAR"
+					screen.addStackedBarGFCAt(barId, techCellId, CELL_BORDER, self.hCell, self.wCell, CELL_BORDER * 2, InfoBarTypes.NUM_INFOBAR_TYPES, eWidGen, 1, 2)
+					screen.setStackedBarColorsRGB(barId, InfoBarTypes.INFOBAR_STORED, 0, 215, 50, 255)
+					screen.setStackedBarColorsRGB(barId, InfoBarTypes.INFOBAR_RATE, 255, 255, 255, 64)
+					screen.setStackedBarColorsRGB(barId, InfoBarTypes.INFOBAR_EMPTY, 0, 0, 0, 0)
+					screen.hide(barId)
 
-					techInfoX = GC.getTechInfo(iTechX)
+					# Queue label
+					screen.setImageButtonAt(QUEUE_LABEL_PANEL + iTechStr, SCREEN_PANEL, "", iX + CELL_BORDER + 10 - QUEUE_LABEL_W / 2, iY + CELL_BORDER + 10  - QUEUE_LABEL_H / 2, QUEUE_LABEL_W, QUEUE_LABEL_H, eWidGen, 1, 2)
+					screen.setStyle(QUEUE_LABEL_PANEL + iTechStr, "Button_TechQueuePos_Style")
+					screen.setPanelColor(QUEUE_LABEL_PANEL + iTechStr, 0, 0, 0)
+					screen.setHitTest(QUEUE_LABEL_PANEL + iTechStr, HitTestTypes.HITTEST_NOHIT)
+					screen.hide(QUEUE_LABEL_PANEL + iTechStr)
 
-					x1 = techInfoX.getGridX()
-					y1 = techInfoX.getGridY()
-					iX = x1 * self.xCellDist + self.wCell - self.minX + CELL_BORDER + 12
-					iY = yEmptySpace + ((y1 - 1) * yCellDist) / 2 + 4
+					# Requires
+					iX = self.wCell + CELL_BORDER
+					iY = 2 + CELL_BORDER
+					for i in xrange(NUM_AND_TECH_PREREQS):
+						iTechX = CvTechInfo.getPrereqAndTechs(i)
+						if iTechX == -1: break
+						iX -= dx
+						screen.setImageButtonAt(TECH_REQ + str(iTechX) + "|" + iTechStr, techCellId, GC.getTechInfo(iTechX).getButton(), iX, iY, self.sIcon1, self.sIcon1, eWidGen, 1, 2)
 
-					xDiff = x0 - x1
-					yDiff = y0 - y1
-					xOff = xDiff * CELL_GAP + (xDiff - 1) * self.wCell - 4 - CELL_BORDER * 2
+					# Draw connecting arrows
+					for i in xrange(NUM_OR_TECH_PREREQS):
+						iTechX = CvTechInfo.getPrereqOrTechs(i)
+						if iTechX == -1:
+							break
 
-					# Helper functions for drawing the tech dependency arrows
-					def add_arrow_head(x, y):
-						screen.addDDSGFCAt("", SCREEN_PANEL, ARROW_HEAD, x, y, ARROW_SIZE, ARROW_SIZE, eWidGen, 1, 2, False)
+						techInfoX = GC.getTechInfo(iTechX)
 
-					def add_line_h(x, y, len):
-						screen.addDDSGFCAt("", SCREEN_PANEL, ARROW_X, x, y, len, ARROW_SIZE, eWidGen, 1, 2, False)
+						x1 = techInfoX.getGridX()
+						y1 = techInfoX.getGridY()
+						iX = x1 * self.xCellDist + self.wCell - self.minX + CELL_BORDER + 12
+						iY = yEmptySpace + ((y1 - 1) * yCellDist) / 2 + 4
 
-					def add_line_v(x, y, len):
-						screen.addDDSGFCAt("", SCREEN_PANEL, ARROW_Y, x, y, ARROW_SIZE, len, eWidGen, 1, 2, False)
+						xDiff = x0 - x1
+						yDiff = y0 - y1
+						xOff = xDiff * CELL_GAP + (xDiff - 1) * self.wCell - 4 - CELL_BORDER * 2
 
-					if not yDiff:
-						add_line_h(iX, iY + yArrow0, xOff)
-						add_arrow_head(iX + xOff, iY + yArrow0)
-					elif yDiff < 0:
-						if yDiff < -3 and xDiff == 1:
-							dy = yDiff * yBoxSpacing + self.hCell/2
-							yArrow = iY + yArrow2
-							add_line_h(iX, yArrow, xOff/3 + 4)
-							add_line_v(iX + xOff/3, yArrow + 4 + dy, -dy)
-							add_line_h(iX + 4 + xOff/3, yArrow + dy, xOff * 2/3)
-							add_arrow_head(iX + xOff, yArrow + dy)
+						# Helper functions for drawing the tech dependency arrows
+						def add_arrow_head(x, y):
+							screen.addDDSGFCAt("", SCREEN_PANEL, ARROW_HEAD, x, y, ARROW_SIZE, ARROW_SIZE, eWidGen, 1, 2, False)
+
+						def add_line_h(x, y, len):
+							screen.addDDSGFCAt("", SCREEN_PANEL, ARROW_X, x, y, len, ARROW_SIZE, eWidGen, 1, 2, False)
+
+						def add_line_v(x, y, len):
+							screen.addDDSGFCAt("", SCREEN_PANEL, ARROW_Y, x, y, ARROW_SIZE, len, eWidGen, 1, 2, False)
+
+						if not yDiff:
+							add_line_h(iX, iY + yArrow0, xOff)
+							add_arrow_head(iX + xOff, iY + yArrow0)
+						elif yDiff < 0:
+							if yDiff < -3 and xDiff == 1:
+								dy = yDiff * yBoxSpacing + self.hCell/2
+								yArrow = iY + yArrow2
+								add_line_h(iX, yArrow, xOff/3 + 4)
+								add_line_v(iX + xOff/3, yArrow + 4 + dy, -dy)
+								add_line_h(iX + 4 + xOff/3, yArrow + dy, xOff * 2/3)
+								add_arrow_head(iX + xOff, yArrow + dy)
+							else:
+								dy = yDiff * yBoxSpacing + self.hCell/4
+								yArrow = iY + yArrow1
+								add_line_h(iX, yArrow, xOff/2 + 4)
+								add_line_v(iX + xOff/2, yArrow + 4 + dy, -dy)
+								add_line_h(iX + 4 + xOff/2, yArrow + dy, xOff/2)
+								add_arrow_head(iX + xOff, yArrow + dy)
 						else:
-							dy = yDiff * yBoxSpacing + self.hCell/4
-							yArrow = iY + yArrow1
-							add_line_h(iX, yArrow, xOff/2 + 4)
-							add_line_v(iX + xOff/2, yArrow + 4 + dy, -dy)
-							add_line_h(iX + 4 + xOff/2, yArrow + dy, xOff/2)
-							add_arrow_head(iX + xOff, yArrow + dy)
-					else:
-						if yDiff > 3 and xDiff == 1:
-							dy = yDiff * yBoxSpacing - self.hCell/2
-							yArrow = iY + yArrow4
-							add_line_h(iX, yArrow, xOff/3 + 4)
-							add_line_v(iX + xOff/3, yArrow + 4, dy)
-							add_line_h(iX + 4 + xOff/3, yArrow + dy, xOff * 2/3)
-							add_arrow_head(iX + xOff, yArrow + dy)
-						else:
-							dy = yDiff * yBoxSpacing - self.hCell/4
-							yArrow = iY + yArrow3
-							add_line_h(iX, yArrow, xOff/2 + 4)
-							add_line_v(iX + xOff/2, yArrow + 4, dy)
-							add_line_h(iX + 4 + xOff/2, yArrow + dy, xOff/2)
-							add_arrow_head(iX + xOff, yArrow + dy)
+							if yDiff > 3 and xDiff == 1:
+								dy = yDiff * yBoxSpacing - self.hCell/2
+								yArrow = iY + yArrow4
+								add_line_h(iX, yArrow, xOff/3 + 4)
+								add_line_v(iX + xOff/3, yArrow + 4, dy)
+								add_line_h(iX + 4 + xOff/3, yArrow + dy, xOff * 2/3)
+								add_arrow_head(iX + xOff, yArrow + dy)
+							else:
+								dy = yDiff * yBoxSpacing - self.hCell/4
+								yArrow = iY + yArrow3
+								add_line_h(iX, yArrow, xOff/2 + 4)
+								add_line_v(iX + xOff/2, yArrow + 4, dy)
+								add_line_h(iX + 4 + xOff/2, yArrow + dy, xOff/2)
+								add_arrow_head(iX + xOff, yArrow + dy)
 
-				# Draw unlocks
-				iX = self.sIcon0 + 6 + CELL_BORDER
-				iY = self.sIcon0 + 4 - self.sIcon1 + CELL_BORDER
+					# Draw unlocks
+					iX = self.sIcon0 + 6 + CELL_BORDER
+					iY = self.sIcon0 + 4 - self.sIcon1 + CELL_BORDER
 
-				benefits = techBenefits[iTech]
-				iLength = len(benefits)
-				if iLength > iMaxElements:
-					iLength = iMaxElements
+					benefits = techBenefits[iTech]
+					iLength = len(benefits)
+					if iLength > iMaxElements:
+						iLength = iMaxElements
 
-				for i in xrange(iLength):
-					sType, iItem = benefits[i]
+					for i in xrange(iLength):
+						sType, iItem = benefits[i]
 
-					# Helpers for drawing the unlocks
-					def imageButton(key, button):
-						screen.setImageButtonAt(key + str(iTech * 1000 + i), techCellId, button, iX, iY, self.sIcon1, self.sIcon1, eWidGen, 1, 2)
+						# Helpers for drawing the unlocks
+						def imageButton(key, button):
+							screen.setImageButtonAt(key + str(iTech * 1000 + i), techCellId, button, iX, iY, self.sIcon1, self.sIcon1, eWidGen, 1, 2)
 
-					def ddsgfc(key, button, widgetType, tech, item, flag):
-						screen.addDDSGFCAt(key + str(iTech * 1000 + i), techCellId, button, iX, iY, self.sIcon1, self.sIcon1, widgetType, tech, item, flag)
+						def ddsgfc(key, button, widgetType, tech, item, flag):
+							screen.addDDSGFCAt(key + str(iTech * 1000 + i), techCellId, button, iX, iY, self.sIcon1, self.sIcon1, widgetType, tech, item, flag)
 
-					if sType == "UnlockUnit":
-						imageButton("WID|UNIT" + str(iItem) + '|', GC.getUnitInfo(iItem).getButton())
-					elif sType == "UnlockBuilding":
-						imageButton("WID|BUILDING" + str(iItem) + '|', GC.getBuildingInfo(iItem).getButton())
-					elif sType == "ObsoleteBuilding":
-						ddsgfc("", GC.getBuildingInfo(iItem).getButton(), eWidGen, 1, 2, False)
-						imageButton("WID|BUILDING|OBS" + str(iItem) + '|', RED_X)
-					elif sType == "UnlockSpecialBuilding":
-						ddsgfc("Item", GC.getSpecialBuildingInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_SPECIAL_BUILDING, iTech, iItem, False)
-					elif sType == "ObsoleteSpecialBuilding":
-						ddsgfc("Item", GC.getSpecialBuildingInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_OBSOLETE_SPECIAL, iTech, iItem, False)
-						ddsgfc("Obsolete", RED_X, WidgetTypes.WIDGET_HELP_OBSOLETE_SPECIAL, iItem, -1, False)
-					elif sType == "RevealBonus":
-						ddsgfc("Item", GC.getBonusInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_BONUS_REVEAL, iTech, iItem, False)
-					elif sType == "ObsoleteBonus":
-						ddsgfc("Item", GC.getBonusInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_OBSOLETE_BONUS, iTech, iItem, False)
-						ddsgfc("Obsolete", RED_X, WidgetTypes.WIDGET_HELP_OBSOLETE_BONUS, iItem, -1, False)
-					elif sType == "RouteChange":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_MOVE_BONUS").getPath(), WidgetTypes.WIDGET_HELP_MOVE_BONUS, iTech, -1, False)
-					elif sType == "UnlockPromotion":
-						ddsgfc("Item", GC.getPromotionInfo(iItem).getButton(), WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, iItem, -1, False)
-					elif sType == "FreeUnit":
-						ddsgfc("Item", GC.getUnitInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_FREE_UNIT, iItem, iTech, False)
-					elif sType == "FeatureProduction":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_FEATURE_PRODUCTION").getPath(), WidgetTypes.WIDGET_HELP_FEATURE_PRODUCTION, iTech, -1, False)
-					elif sType == "WorkerSpeed":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_WORKER_SPEED").getPath(), WidgetTypes.WIDGET_HELP_WORKER_RATE, iTech, -1, False)
-					elif sType == "TradeRoute":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_TRADE_ROUTES").getPath(), WidgetTypes.WIDGET_HELP_TRADE_ROUTES, iTech, -1, False)
-					elif sType == "Health":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_HEALTH").getPath(), WidgetTypes.WIDGET_HELP_HEALTH_RATE, iTech, -1, False)
-					elif sType == "Happiness":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_HAPPINESS").getPath(), WidgetTypes.WIDGET_HELP_HAPPINESS_RATE, iTech, -1, False)
-					elif sType == "Population":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_POPULATION").getPath(), WidgetTypes.WIDGET_HELP_HAPPINESS_RATE, iTech, -1, False)
-					elif sType == "FreeTech":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_FREETECH").getPath(), WidgetTypes.WIDGET_HELP_FREE_TECH, iTech, -1, False)
-					elif sType == "WaterSight":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_LOS").getPath(), WidgetTypes.WIDGET_HELP_LOS_BONUS, iTech, -1, False)
-					elif sType == "MapCentering":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_MAPCENTER").getPath(), WidgetTypes.WIDGET_HELP_MAP_CENTER, iTech, -1, False)
-					elif sType == "MapVisible":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_MAPREVEAL").getPath(), WidgetTypes.WIDGET_HELP_MAP_REVEAL, iTech, -1, False)
-					elif sType == "MapTrading":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_MAPTRADING").getPath(), WidgetTypes.WIDGET_HELP_MAP_TRADE, iTech, -1, False)
-					elif sType == "TechTrading":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_TECHTRADING").getPath(), WidgetTypes.WIDGET_HELP_TECH_TRADE, iTech, -1, False)
-					elif sType == "GoldTrading":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_GOLDTRADING").getPath(), WidgetTypes.WIDGET_HELP_GOLD_TRADE, iTech, -1, False)
-					elif sType == "OpenBorders":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_OPENBORDERS").getPath(), WidgetTypes.WIDGET_HELP_OPEN_BORDERS, iTech, -1, False)
-					elif sType == "DefensivePact":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_DEFENSIVEPACT").getPath(), WidgetTypes.WIDGET_HELP_DEFENSIVE_PACT, iTech, -1, False)
-					elif sType == "PermanentAlliance":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_PERMALLIANCE").getPath(), WidgetTypes.WIDGET_HELP_PERMANENT_ALLIANCE, iTech, -1, False)
-					elif sType == "VassalState":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_VASSAL").getPath(), WidgetTypes.WIDGET_HELP_VASSAL_STATE, iTech, -1, False)
-					elif sType == "BridgeBuilding":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_BRIDGEBUILDING").getPath(), WidgetTypes.WIDGET_HELP_BUILD_BRIDGE, iTech, -1, False)
-					elif sType == "EnablesIrrigation":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_IRRIGATION").getPath(), WidgetTypes.WIDGET_HELP_IRRIGATION, iTech, -1, False)
-					elif sType == "IgnoreIrrigation":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_NOIRRIGATION").getPath(), WidgetTypes.WIDGET_HELP_IGNORE_IRRIGATION, iTech, -1, False)
-					elif sType == "WaterWork":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_WATERWORK").getPath(), WidgetTypes.WIDGET_HELP_WATER_WORK, iTech, -1, False)
-					elif sType == "UnlockImprovement":
-						ddsgfc("Item", GC.getBuildInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_IMPROVEMENT, iTech, iItem, False)
-					elif sType == "DomainMoves":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_WATERMOVES").getPath(), WidgetTypes.WIDGET_HELP_DOMAIN_EXTRA_MOVES, iTech, iItem, False)
-					elif sType == "CommerceFlexible":
-						if iItem == CommerceTypes.COMMERCE_CULTURE:
-							temp = AFM.getInterfaceArtInfo("INTERFACE_TECH_CULTURE").getPath()
-						elif iItem == CommerceTypes.COMMERCE_ESPIONAGE:
-							temp = AFM.getInterfaceArtInfo("INTERFACE_TECH_ESPIONAGE").getPath()
-						else: temp = AFM.getInterfaceArtInfo("INTERFACE_GENERAL_QUESTIONMARK").getPath()
-						ddsgfc("Item", temp, WidgetTypes.WIDGET_HELP_ADJUST, iTech, iItem, False)
-					elif sType == "TerrainTrade":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_WATERTRADE").getPath(), WidgetTypes.WIDGET_HELP_TERRAIN_TRADE, iTech, iItem, False)
-					elif sType == "RiverTrade":
-						ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_RIVERTRADE").getPath(), WidgetTypes.WIDGET_HELP_TERRAIN_TRADE, iTech, GC.getNumTerrainInfos(), False)
-					elif sType == "ImprovementYield":
-						ddsgfc("Item", GC.getImprovementInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_YIELD_CHANGE, iTech, iItem, False)
-					elif sType == "UnlockCivic":
-						ddsgfc("Item", GC.getCivicInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_CIVIC_REVEAL, iTech, iItem, False)
-					elif sType == "UnlockProject":
-						ddsgfc("Item", GC.getProjectInfo(iItem).getButton(), WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT, iItem, 1, False)
-					elif sType == "UnlockProcess":
-						ddsgfc("Item", GC.getProcessInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_PROCESS_INFO, iTech, iItem, False)
-					elif sType == "UnlockReligion":
-						ddsgfc("Item", GC.getReligionInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_FOUND_RELIGION, iTech, iItem, False)
-					elif sType == "UnlockCorporation":
-						ddsgfc("Item", GC.getCorporationInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_FOUND_CORPORATION, iTech, iItem, False)
-					iX += dx
+						if sType == "UnlockUnit":
+							imageButton("WID|UNIT" + str(iItem) + '|', GC.getUnitInfo(iItem).getButton())
+						elif sType == "UnlockBuilding":
+							imageButton("WID|BUILDING" + str(iItem) + '|', GC.getBuildingInfo(iItem).getButton())
+						elif sType == "ObsoleteBuilding":
+							ddsgfc("", GC.getBuildingInfo(iItem).getButton(), eWidGen, 1, 2, False)
+							imageButton("WID|BUILDING|OBS" + str(iItem) + '|', RED_X)
+						elif sType == "UnlockSpecialBuilding":
+							ddsgfc("Item", GC.getSpecialBuildingInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_SPECIAL_BUILDING, iTech, iItem, False)
+						elif sType == "ObsoleteSpecialBuilding":
+							ddsgfc("Item", GC.getSpecialBuildingInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_OBSOLETE_SPECIAL, iTech, iItem, False)
+							ddsgfc("Obsolete", RED_X, WidgetTypes.WIDGET_HELP_OBSOLETE_SPECIAL, iItem, -1, False)
+						elif sType == "RevealBonus":
+							ddsgfc("Item", GC.getBonusInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_BONUS_REVEAL, iTech, iItem, False)
+						elif sType == "ObsoleteBonus":
+							ddsgfc("Item", GC.getBonusInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_OBSOLETE_BONUS, iTech, iItem, False)
+							ddsgfc("Obsolete", RED_X, WidgetTypes.WIDGET_HELP_OBSOLETE_BONUS, iItem, -1, False)
+						elif sType == "RouteChange":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_MOVE_BONUS").getPath(), WidgetTypes.WIDGET_HELP_MOVE_BONUS, iTech, -1, False)
+						elif sType == "UnlockPromotion":
+							ddsgfc("Item", GC.getPromotionInfo(iItem).getButton(), WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, iItem, -1, False)
+						elif sType == "FreeUnit":
+							ddsgfc("Item", GC.getUnitInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_FREE_UNIT, iItem, iTech, False)
+						elif sType == "FeatureProduction":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_FEATURE_PRODUCTION").getPath(), WidgetTypes.WIDGET_HELP_FEATURE_PRODUCTION, iTech, -1, False)
+						elif sType == "WorkerSpeed":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_WORKER_SPEED").getPath(), WidgetTypes.WIDGET_HELP_WORKER_RATE, iTech, -1, False)
+						elif sType == "TradeRoute":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_TRADE_ROUTES").getPath(), WidgetTypes.WIDGET_HELP_TRADE_ROUTES, iTech, -1, False)
+						elif sType == "Health":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_HEALTH").getPath(), WidgetTypes.WIDGET_HELP_HEALTH_RATE, iTech, -1, False)
+						elif sType == "Happiness":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_HAPPINESS").getPath(), WidgetTypes.WIDGET_HELP_HAPPINESS_RATE, iTech, -1, False)
+						elif sType == "Population":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_POPULATION").getPath(), WidgetTypes.WIDGET_HELP_HAPPINESS_RATE, iTech, -1, False)
+						elif sType == "FreeTech":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_FREETECH").getPath(), WidgetTypes.WIDGET_HELP_FREE_TECH, iTech, -1, False)
+						elif sType == "WaterSight":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_LOS").getPath(), WidgetTypes.WIDGET_HELP_LOS_BONUS, iTech, -1, False)
+						elif sType == "MapCentering":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_MAPCENTER").getPath(), WidgetTypes.WIDGET_HELP_MAP_CENTER, iTech, -1, False)
+						elif sType == "MapVisible":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_MAPREVEAL").getPath(), WidgetTypes.WIDGET_HELP_MAP_REVEAL, iTech, -1, False)
+						elif sType == "MapTrading":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_MAPTRADING").getPath(), WidgetTypes.WIDGET_HELP_MAP_TRADE, iTech, -1, False)
+						elif sType == "TechTrading":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_TECHTRADING").getPath(), WidgetTypes.WIDGET_HELP_TECH_TRADE, iTech, -1, False)
+						elif sType == "GoldTrading":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_GOLDTRADING").getPath(), WidgetTypes.WIDGET_HELP_GOLD_TRADE, iTech, -1, False)
+						elif sType == "OpenBorders":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_OPENBORDERS").getPath(), WidgetTypes.WIDGET_HELP_OPEN_BORDERS, iTech, -1, False)
+						elif sType == "DefensivePact":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_DEFENSIVEPACT").getPath(), WidgetTypes.WIDGET_HELP_DEFENSIVE_PACT, iTech, -1, False)
+						elif sType == "PermanentAlliance":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_PERMALLIANCE").getPath(), WidgetTypes.WIDGET_HELP_PERMANENT_ALLIANCE, iTech, -1, False)
+						elif sType == "VassalState":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_VASSAL").getPath(), WidgetTypes.WIDGET_HELP_VASSAL_STATE, iTech, -1, False)
+						elif sType == "BridgeBuilding":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_BRIDGEBUILDING").getPath(), WidgetTypes.WIDGET_HELP_BUILD_BRIDGE, iTech, -1, False)
+						elif sType == "EnablesIrrigation":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_IRRIGATION").getPath(), WidgetTypes.WIDGET_HELP_IRRIGATION, iTech, -1, False)
+						elif sType == "IgnoreIrrigation":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_NOIRRIGATION").getPath(), WidgetTypes.WIDGET_HELP_IGNORE_IRRIGATION, iTech, -1, False)
+						elif sType == "WaterWork":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_WATERWORK").getPath(), WidgetTypes.WIDGET_HELP_WATER_WORK, iTech, -1, False)
+						elif sType == "UnlockImprovement":
+							ddsgfc("Item", GC.getBuildInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_IMPROVEMENT, iTech, iItem, False)
+						elif sType == "DomainMoves":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_WATERMOVES").getPath(), WidgetTypes.WIDGET_HELP_DOMAIN_EXTRA_MOVES, iTech, iItem, False)
+						elif sType == "CommerceFlexible":
+							if iItem == CommerceTypes.COMMERCE_CULTURE:
+								temp = AFM.getInterfaceArtInfo("INTERFACE_TECH_CULTURE").getPath()
+							elif iItem == CommerceTypes.COMMERCE_ESPIONAGE:
+								temp = AFM.getInterfaceArtInfo("INTERFACE_TECH_ESPIONAGE").getPath()
+							else: temp = AFM.getInterfaceArtInfo("INTERFACE_GENERAL_QUESTIONMARK").getPath()
+							ddsgfc("Item", temp, WidgetTypes.WIDGET_HELP_ADJUST, iTech, iItem, False)
+						elif sType == "TerrainTrade":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_WATERTRADE").getPath(), WidgetTypes.WIDGET_HELP_TERRAIN_TRADE, iTech, iItem, False)
+						elif sType == "RiverTrade":
+							ddsgfc("Item", AFM.getInterfaceArtInfo("INTERFACE_TECH_RIVERTRADE").getPath(), WidgetTypes.WIDGET_HELP_TERRAIN_TRADE, iTech, GC.getNumTerrainInfos(), False)
+						elif sType == "ImprovementYield":
+							ddsgfc("Item", GC.getImprovementInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_YIELD_CHANGE, iTech, iItem, False)
+						elif sType == "UnlockCivic":
+							ddsgfc("Item", GC.getCivicInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_CIVIC_REVEAL, iTech, iItem, False)
+						elif sType == "UnlockProject":
+							ddsgfc("Item", GC.getProjectInfo(iItem).getButton(), WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT, iItem, 1, False)
+						elif sType == "UnlockProcess":
+							ddsgfc("Item", GC.getProcessInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_PROCESS_INFO, iTech, iItem, False)
+						elif sType == "UnlockReligion":
+							ddsgfc("Item", GC.getReligionInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_FOUND_RELIGION, iTech, iItem, False)
+						elif sType == "UnlockCorporation":
+							ddsgfc("Item", GC.getCorporationInfo(iItem).getButton(), WidgetTypes.WIDGET_HELP_FOUND_CORPORATION, iTech, iItem, False)
+						iX += dx
+
+				self.updateTechState(iTech)
 
 		if not bFull:
 			self.updateTechRecords(True)
 
 	def updateTechRecords(self, bForce):
 		screen = self.screen()
-		eWidGen = WidgetTypes.WIDGET_GENERAL
-		eFontTitle = FontTypes.TITLE_FONT
 
 		# Progress Bar
 		iNewCurrentResearch = self.CyPlayer.getCurrentResearch()
@@ -541,7 +548,7 @@ class CvTechChooser:
 				screen.show(stackBar)
 
 				szTxt = "<font=3>" + GC.getTechInfo(iNewCurrentResearch).getDescription() + ' (' + str(self.CyPlayer.getResearchTurnsLeft(iNewCurrentResearch, True)) + ")"
-				screen.setLabel("Researching", "", szTxt, 1<<2, self.xRes/2, 6, 0, eFontTitle, eWidGen, iNewCurrentResearch, 0)
+				screen.setLabel("Researching", "", szTxt, 1<<2, self.xRes/2, 6, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, iNewCurrentResearch, 0)
 				screen.setHitTest("Researching", HitTestTypes.HITTEST_NOHIT)
 				screen.moveToFront("WID|TECH|CURRENT0")
 				screen.show("WID|TECH|CURRENT0")
@@ -557,16 +564,16 @@ class CvTechChooser:
 
 		for iTech in xrange(self.iNumTechs):
 			CvTechInfo = GC.getTechInfo(iTech)
-			iX = CvTechInfo.getGridX()
-			if iX <= 0:
+			x0 = CvTechInfo.getGridX()
+			if x0 <= 0:
 				continue
-			iEra = CvTechInfo.getEra()
+			iX = x0 * self.xCellDist - self.minX
 			if self.currentTechState[iTech] == CIV_HAS_TECH:
 				if bForce:
-					changed.append(iTech)
+					changed.append((iX, iTech))
 			elif self.currentTechState[iTech] == CIV_NO_RESEARCH:
 				if bForce:
-					changed.append(iTech)
+					changed.append((iX, iTech))
 			elif self.CyPlayer.isResearchingTech(iTech):
 				queuePos = self.CyPlayer.getQueuePosition(iTech)
 				if queuePos == 1:
@@ -575,62 +582,73 @@ class CvTechChooser:
 					self.currentTechState[iTech] = CIV_IS_TARGET
 				else:
 					self.currentTechState[iTech] = CIV_IS_QUEUED
-				changed.append(iTech)
+				changed.append((iX, iTech))
 			elif bForce or self.currentTechState[iTech] != CIV_TECH_AVAILABLE:
 				self.currentTechState[iTech] = CIV_TECH_AVAILABLE
-				changed.append(iTech)
+				changed.append((iX, iTech))
 
-		# Make change
-		advisors = [unichr(8855), unichr(8857), unichr(8500), unichr(8501), unichr(8502), unichr(8483)]
-		iX = self.sIcon0 + 6 + CELL_BORDER
-		iY = 5 + CELL_BORDER
-		szFont = self.aFontList[3]
-
-		for iTech in changed:
+		for _, iTech in changed:
 			iTechStr = str(iTech)
-			CvTechInfo = GC.getTechInfo(iTech)
-			iEra = CvTechInfo.getEra()
 
-			techCellId = TECH_CHOICE + iTechStr
+			# Minimap cell color
 			techMinimapCellId = TECH_CHOICE + "MM" + "|" + iTechStr
-
-			techState = self.currentTechState[iTech]
-
-			szTechString = szFont
-			iAdvisor = CvTechInfo.getAdvisorType()
-			if iAdvisor > -1:
-				szTechString += advisors[iAdvisor]
-			szTechString += CvTechInfo.getDescription()
-
-			screen.setLabelAt(TECH_NAME + iTechStr, techCellId, szTechString, 1<<0, iX, iY, 0, eFontTitle, eWidGen, 1, 2)
-			screen.setHitTest(TECH_NAME + iTechStr, HitTestTypes.HITTEST_NOHIT)
-
-			# Colours
-			techCellStyle = self.getTechStyleForState(techState, iEra)
-			screen.setStyle(techCellId, techCellStyle)
-			minimapCellColor = self.getTechColorForState(techState)
+			minimapCellColor = self.getTechColorForState(self.currentTechState[iTech])
 			screen.setPanelColor(techMinimapCellId, minimapCellColor[0], minimapCellColor[1], minimapCellColor[2])
 
-			# Progress bar
-			barId = techCellId + "BAR"
-			if techState == CIV_HAS_TECH:
-				screen.hide(barId)
-			else:
-				screen.show(barId)
-				iProgress = self.CyTeam.getResearchProgress(iTech)
-				iCost = self.CyTeam.getResearchCost(iTech)
-				iOverflow = self.CyPlayer.getOverflowResearch() * self.CyPlayer.calculateResearchModifier(iTech) / 100
-				screen.setBarPercentage(barId, InfoBarTypes.INFOBAR_STORED, iProgress * 1.0 / iCost)
-				if iCost > iProgress + iOverflow:
-					screen.setBarPercentage(barId, InfoBarTypes.INFOBAR_RATE, self.CyPlayer.calculateResearchRate(iTech) * 1.0 / (iCost - iProgress - iOverflow))
-			
-			# Queue labels
-			if techState == CIV_IS_RESEARCHING or techState == CIV_IS_QUEUED or techState == CIV_IS_TARGET:
-				screen.show(QUEUE_LABEL_PANEL + iTechStr)
-				queuePosLabel = "<font=3b>" + FONT_COLOR_MAP[techState] + str(self.CyPlayer.getQueuePosition(iTech))
-				screen.setLabelAt(QUEUE_LABEL + iTechStr, QUEUE_LABEL_PANEL + iTechStr, queuePosLabel, 1 << 2, QUEUE_LABEL_W / 2, 6, 0, eFontTitle, eWidGen, 1, 2)
-			else:
-				screen.hide(QUEUE_LABEL_PANEL + iTechStr)
+		self.updates.extend(changed)
+
+	def updateTechStates(self, techs):
+		for iTech in techs:
+			self.updateTechState(iTech)
+
+	def updateTechState(self, iTech):
+		screen = self.screen()
+		iTechStr = str(iTech)
+
+		# # Minimap cell color
+		# techMinimapCellId = TECH_CHOICE + "MM" + "|" + iTechStr
+		# minimapCellColor = self.getTechColorForState(techState)
+		# screen.setPanelColor(techMinimapCellId, minimapCellColor[0], minimapCellColor[1], minimapCellColor[2])
+
+		techState = self.currentTechState[iTech]
+
+		CvTechInfo = GC.getTechInfo(iTech)
+		szTechString = self.aFontList[3]
+		iAdvisor = CvTechInfo.getAdvisorType()
+		if iAdvisor > -1:
+			szTechString += ADVISORS[iAdvisor]
+		szTechString += CvTechInfo.getDescription()
+
+		techCellId = TECH_CHOICE + iTechStr
+
+		screen.setLabelAt(TECH_NAME + iTechStr, techCellId, szTechString, 1<<0, self.sIcon0 + 6 + CELL_BORDER, 5 + CELL_BORDER, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 2)
+		screen.setHitTest(TECH_NAME + iTechStr, HitTestTypes.HITTEST_NOHIT)
+
+		# Colours
+		iEra = CvTechInfo.getEra()
+		techCellStyle = self.getTechStyleForState(techState, iEra)
+		screen.setStyle(techCellId, techCellStyle)
+
+		# Progress bar
+		barId = techCellId + "BAR"
+		if techState == CIV_HAS_TECH:
+			screen.hide(barId)
+		else:
+			screen.show(barId)
+			iProgress = self.CyTeam.getResearchProgress(iTech)
+			iCost = self.CyTeam.getResearchCost(iTech)
+			iOverflow = self.CyPlayer.getOverflowResearch() * self.CyPlayer.calculateResearchModifier(iTech) / 100
+			screen.setBarPercentage(barId, InfoBarTypes.INFOBAR_STORED, iProgress * 1.0 / iCost)
+			if iCost > iProgress + iOverflow:
+				screen.setBarPercentage(barId, InfoBarTypes.INFOBAR_RATE, self.CyPlayer.calculateResearchRate(iTech) * 1.0 / (iCost - iProgress - iOverflow))
+		
+		# Queue labels
+		if techState == CIV_IS_RESEARCHING or techState == CIV_IS_QUEUED or techState == CIV_IS_TARGET:
+			screen.show(QUEUE_LABEL_PANEL + iTechStr)
+			queuePosLabel = "<font=3b>" + FONT_COLOR_MAP[techState] + str(self.CyPlayer.getQueuePosition(iTech))
+			screen.setLabelAt(QUEUE_LABEL + iTechStr, QUEUE_LABEL_PANEL + iTechStr, queuePosLabel, 1 << 2, QUEUE_LABEL_W / 2, 6, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 2)
+		else:
+			screen.hide(QUEUE_LABEL_PANEL + iTechStr)
 
 	def updateSelectedTech(self, screen, iTech):
 		self.iSelectedTech = iTech
@@ -880,12 +898,21 @@ class CvTechChooser:
 		elif mousePos.y > self.yRes - SCREEN_PANEL_BOTTOM_BAR_H and Win32.isLMB():
 			self.scrolling = True
 
-		# If we still have techs to complete the initialization of
-		if len(self.updates) != 0:
+		# if self.changed:
+		# 	self.changed = sorted(self.changed, key=lambda el: abs(el[0] - self.scrollOffs - self.xRes / 2))
+		# 	remaining_updates = self.changed[:TECH_PAGING_RATE]
+		# 	self.changed = self.changed[TECH_PAGING_RATE:]
+		# 	self.updateTechStates((f[1] for f in remaining_updates))
+		if self.updates:
 			# Sort them by distance to the current scroll offset so we can make sure to update what the player is looking at first
 			self.updates = sorted(self.updates, key=lambda el: abs(el[0] - self.scrollOffs - self.xRes / 2))
-			remaining_updates = self.updates[:TECH_PAGING_RATE]
-			self.updates = self.updates[TECH_PAGING_RATE:]
+			remaining_updates = [] # self.updates[:TECH_PAGING_RATE]
+			for el in self.updates:
+				dist = abs(el[0] - self.scrollOffs - self.xRes / 2)
+				if len(remaining_updates) > TECH_PAGING_RATE and dist > self.xRes:
+					break
+				remaining_updates.append(el)
+			self.updates = self.updates[len(remaining_updates):]
 			self.refresh((f[1] for f in remaining_updates), True)
 
 		scrollDiff = Win32.getMouseWheelDiff(self.mwlHandle)
