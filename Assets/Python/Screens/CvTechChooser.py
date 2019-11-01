@@ -28,7 +28,7 @@ TECH_CHOICE = "WID|TECH|CHOICE"
 TECH_REQ = "WID|TECH|REQ"
 TECH_NAME = "TechName"
 SCREEN_PANEL = "TechList"
-CELL_BORDER = 6
+CELL_BORDER = 3
 
 ADVISORS = [unichr(8855), unichr(8857), unichr(8500), unichr(8501), unichr(8502), unichr(8483)]
 
@@ -323,7 +323,7 @@ class CvTechChooser:
 				if not self.cellDetails[iTech]:
 					self.cellDetails[iTech] = True
 					# Tech cell
-					screen.setImageButtonAt(techCellId, SCREEN_PANEL, "", iX + CELL_BORDER, iY + CELL_BORDER, self.wCell + CELL_BORDER * 2, self.hCell + CELL_BORDER * 2, eWidGen, 1, 2)
+					screen.setImageButtonAt(techCellId, SCREEN_PANEL, "", iX, iY, self.wCell + CELL_BORDER * 2, self.hCell + CELL_BORDER * 2, eWidGen, 1, 2)
 					screen.addDDSGFCAt(ICON + iTechStr, techCellId, CvTechInfo.getButton(), 3 + CELL_BORDER, 5 + CELL_BORDER, self.sIcon0, self.sIcon0, eWidGen, 1, 2, False)
 					screen.setHitTest(ICON + iTechStr, HitTestTypes.HITTEST_NOHIT)
 
