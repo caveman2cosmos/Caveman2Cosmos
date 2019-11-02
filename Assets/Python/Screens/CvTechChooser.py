@@ -54,20 +54,23 @@ MINIMAP_LENS_ID = "MinimapLens"
 MINIMAP_LENS_BORDER_H = 4
 MINIMAP_LENS_BORDER_V = 4
 
+PROGRESSBAR_H = 14
+
 QUEUE_LABEL_PANEL = "QUEUE_LABEL_PANEL"
 QUEUE_LABEL = "QUEUE_LABEL"
 
 QUEUE_LABEL_W = 54
-QUEUE_LABEL_H = 36
+QUEUE_LABEL_H = 32
 
 class CvTechChooser:
 
 	def __init__(self):
+		print "CvTechChooser.__init__"
 		self.scrollOffs = 0
 		self.iNumEras = GC.getNumEraInfos()
 		self.iNumTechs = GC.getNumTechInfos()
 		self.created = False
-		self.firstLoad = True
+		self.skipNextExitKey = True
 		self.cacheBenefits()
 
 	def screen(self):
@@ -97,16 +100,21 @@ class CvTechChooser:
 		self.currentTechState = [self.getTechState(iTech) for iTech in xrange(self.iNumTechs)]
 
 	def interfaceScreen(self, screenId):
+		print "CvTechChooser.interfaceScreen"
+
 		if GC.getGame().isPitbossHost():
+			print "CvTechChooser.interfaceScreen - skipping, isPitbossHost"
 			return
 
 		# Make sure we don't initialize twice
 		if self.created:
+			print "CvTechChooser.interfaceScreen - skipping, already created"
 			return
 
 		self.mwlHandle = Win32.registerMouseWheelListener()
 
 		self.created = True
+		self.skipNextExitKey = True
 		self.screenId = screenId
 
 		import InputData
@@ -116,6 +124,7 @@ class CvTechChooser:
 		self.szTxtTT = ""
 		self.iOffsetTT = []
 		self.bLockedTT = False
+		self.iUnitTT = None
 		self.bUnitTT = False
 
 		self.scrolling = False
@@ -250,18 +259,17 @@ class CvTechChooser:
 		screen.addPanel(MINIMAP_LENS_ID, "", "", False, False, 0, 0, self.minimapLensWidth, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_MAIN_WHITE)
 
 
-		# On first load we will scroll to the currently researched tech automatically
-		techToScrollTo = -1
-		if self.firstLoad:
-			techToScrollTo = self.getLastResearchingIdx()
-			if techToScrollTo < 0:
-				techToScrollTo = self.getLastResearchedIdx()
-
 		# Finally scroll to our current offset (this is maintained when the screen is created and destroyed)
+		techToScrollTo = self.getLastResearchingIdx()
+		if techToScrollTo < 0:
+			techToScrollTo = self.getLastResearchedIdx()
+
 		if techToScrollTo != -1:
 			self.scrollToTech(techToScrollTo)
 		else:
 			self.scrollTo(self.scrollOffs)
+		
+		print "CvTechChooser.interfaceScreen - DONE"
 
 	def refresh(self, techs, bFull):
 		screen = self.screen()
@@ -294,13 +302,15 @@ class CvTechChooser:
 		dx = self.sIcon1 + 1
 		iMaxElements = (self.wCell - self.sIcon0 - 8) / dx
 
-		minimapWid = int(self.xCellDist * self.minimapScaleX)
+		minimapWid = int(self.xCellDist * self.minimapScaleX) - 1
+		if minimapWid < 2:
+			minimapWid = 2
 
 		for iTech in techs:
 			CvTechInfo = GC.getTechInfo(iTech)
 
 			x0 = CvTechInfo.getGridX()
-			if x0 < 1:
+			if x0 < 2:
 				continue
 
 			iTechStr = str(iTech)
@@ -325,12 +335,13 @@ class CvTechChooser:
 
 					# Tech cell
 					screen.setImageButtonAt(techCellId, SCREEN_PANEL, "", iX, iY, self.wCell + CELL_BORDER * 2, self.hCell + CELL_BORDER * 2, eWidGen, 1, 2)
+					screen.setHitTest(techCellId, HitTestTypes.HITTEST_CHILDREN)
 					screen.addDDSGFCAt(ICON + iTechStr, techCellId, CvTechInfo.getButton(), 3 + CELL_BORDER, 5 + CELL_BORDER, self.sIcon0, self.sIcon0, eWidGen, 1, 2, False)
 					screen.setHitTest(ICON + iTechStr, HitTestTypes.HITTEST_NOHIT)
 
 					# Progress bar
 					barId = techCellId + "BAR"
-					screen.addStackedBarGFCAt(barId, techCellId, CELL_BORDER, CELL_BORDER + self.hCell, self.wCell, CELL_BORDER * 2, InfoBarTypes.NUM_INFOBAR_TYPES, eWidGen, 1, 2)
+					screen.addStackedBarGFCAt(barId, techCellId, CELL_BORDER, CELL_BORDER + self.hCell - 6, self.wCell, PROGRESSBAR_H, InfoBarTypes.NUM_INFOBAR_TYPES, eWidGen, 1, 2)
 					screen.setStackedBarColorsRGB(barId, InfoBarTypes.INFOBAR_STORED, 0, 215, 50, 255)
 					screen.setStackedBarColorsRGB(barId, InfoBarTypes.INFOBAR_RATE, 255, 255, 255, 64)
 					screen.setStackedBarColorsRGB(barId, InfoBarTypes.INFOBAR_EMPTY, 0, 0, 0, 0)
@@ -921,6 +932,12 @@ class CvTechChooser:
 			self.scrollTo(int(self.scrollOffs - scrollDiff * self.xCellDist / 2))
 
 	def handleInput(self, inputClass):
+		if not self.created:
+			print "CvTechChooser.handleInput - aborted due to screen not being created"
+			return 0
+
+		print "CvTechChooser.handleInput"
+
 		screen = self.screen()
 		bAlt, bCtrl, bShift = self.InputData.getModifierKeys()
 		iCode	= inputClass.eNotifyCode
@@ -950,10 +967,17 @@ class CvTechChooser:
 					self.bUnitTT = None
 			return 1
 		elif iCode == 17: # Key Up
-			if iData == 13: # A
+			if iData == InputTypes.KB_A:
 				self.scrollTo(self.scrollOffs - self.xCellDist)
-			elif iData == 16: # D
+			elif iData == InputTypes.KB_D:
 				self.scrollTo(self.scrollOffs + self.xCellDist)
+			elif iData in (InputTypes.KB_ESCAPE, InputTypes.KB_F6):
+				# Stop F6 and ESC handlers from triggering on load
+				if self.skipNextExitKey:
+					self.skipNextExitKey = False
+				else:
+					screen.hideScreen()
+				return 1
 			if self.bUnitTT is None:
 				self.bUnitTT = True
 			return 1
@@ -1025,19 +1049,22 @@ class CvTechChooser:
 				self.fullRefresh(screen)
 
 	def onClose(self):
-		print "Exit Tech Tree"
+		print "CvTechChooser.onClose"
+
 		if GC.getPlayer(GC.getGame().getActivePlayer()).getAdvancedStartPoints() > -1:
 			CyInterface().setDirty(InterfaceDirtyBits.Advanced_Start_DIRTY_BIT, True)
 
 		# Only delete if actually created
 		if self.created:
+			print "CvTechChooser.onClose - deleting"
+			self.created = False
 			Win32.unregisterMouseWheelListener(self.mwlHandle)
 			del (
 				self.screenId, self.InputData, self.szTxtTT, self.iOffsetTT, self.bLockedTT, self.iUnitTT, self.bUnitTT,
 				self.xRes, self.yRes, self.aFontList, self.wCell, self.hCell, self.sIcon0, self.sIcon1, self.iSelectedTech,
 				self.iPlayer, self.CyPlayer, self.CyTeam, self.iCurrentResearch, self.currentTechState, self.iCurrentEra, self.updates
 			)
-			self.created = False
+		print "CvTechChooser.onClose - DONE"
 
 	def getTechPos(self, idx):
 		info = GC.getTechInfo(idx)
