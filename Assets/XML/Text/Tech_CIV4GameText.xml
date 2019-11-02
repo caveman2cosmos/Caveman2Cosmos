@@ -494,7 +494,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_ROCKETRY</Tag>
-		<English>intercontinental  Rocketry</English>
+		<English>Intercontinental Rocketry</English>
 		<French>Propulsion Avancée des Fusées</French>
 		<German>Fortgeschrittene Raketentechnik</German>
 		<Italian>Missilistica avanzata</Italian>
@@ -1515,7 +1515,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANTIMATTER_ROCKET</Tag>
-		<English>Antimatter Rockets</English>
+		<English>Antimatter Rocketry</English>
 		<French>Fusée à Antimatière</French>
 		<Italian>Razzi ad anti-materia</Italian>
 		<Spanish>
@@ -1638,7 +1638,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_APPLIED_ECONOMICS_PEDIA</Tag>
-		<English>After the wars of the early twentieth century, John Maynard Keynes led a reaction against what has been described as governmental abstention from economic affairs, advocating interventionist fiscal policy to stimulate economic demand and growth. With a world divided between the capitalist first world, the communist second world, and the poor of the third world, the post-war consensus broke down. Others like Milton Friedman and Friedrich von Hayek warned of The Road to Serfdom and socialism, focusing their theories on what could be achieved through better monetary policy and deregulation. As Keynesian policies seemed to falter in the 1970s there emerged the so called New Classical school, with prominent theorists such as Robert Lucas and Edward Prescott. Governmental economic policies from the 1980s were challenged, and development economists like Amartya Sen and information economists like Joseph Stiglitz introduced new ideas to economic thought in the twenty-first century.</English>
+		<English>Keynesian economics are various macroeconomic theories about how in the short run – and especially during recessions – economic output is strongly influenced by aggregate demand.</English>
 		<Polish>Na początku Keynes studiował matematykę i historię, ukończył także jeden semestr ekonomii na Cambridge. Studia ekonomiczne odbył pod kierunkiem ekonomistów liberalnych Artura Cecila Pigou i Alfreda Marshalla w latach 1905-1908. Jego poglądy na ekonomię wywarły decydujący wpływ na rozwój myśli ekonomicznej w latach 30. - 60. XX wieku.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1649,7 +1649,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_APPLIED_ECONOMICS_STRATEGY</Tag>
-		<English>[COLOR_TECH_TEXT]Applied Economics[COLOR_REVERT] allows you to construct [COLOR_PROJECT_TEXT]International Monetary Fund[COLOR_REVERT] project which enables [COLOR_BUILDING_TEXT]World Bank[COLOR_REVERT] National Wonder for all players. First to discover this tech receives [COLOR_HIGHLIGHT_TEXT]Great Merchant. The tech also enables [COLOR_HIGHLIGHT_TEXT]Regulated[COLOR_REVERT] economy civic option.</English>
+		<English>[COLOR_TECH_TEXT]Keynesian Economics[COLOR_REVERT] allows you to construct [COLOR_PROJECT_TEXT]International Monetary Fund[COLOR_REVERT] project which enables [COLOR_BUILDING_TEXT]World Bank[COLOR_REVERT] National Wonder for all players. First to discover this tech receives [COLOR_HIGHLIGHT_TEXT]Great Merchant. The tech also enables [COLOR_HIGHLIGHT_TEXT]Regulated[COLOR_REVERT] economy civic option.</English>
 		<French>[COLOR_TECH_TEXT]Economie Appliquée[COLOR_REVERT] vous permet de construire le projet [COLOR_PROJECT_TEXT]Fond Monétaire International[COLOR_REVERT] qui rend actif la [COLOR_BUILDING_TEXT]Banque Mondiale[COLOR_REVERT], merveille Nationale pour tous les joueurs. Le premier à découvrir cette technologie reçoit un[COLOR_HIGHLIGHT_TEXT]Marchand illustre. Cette tech. rend actif la doctrine économique [COLOR_HIGHLIGHT_TEXT]Régulée[COLOR_REVERT].</French>
 		<Spanish>La [COLOR_TECH_TEXT]Economía aplicada[COLOR_REVERT] te permite completar el proyecto del [COLOR_PROJECT_TEXT]Fondo Monetario Internacional[COLOR_REVERT], que permite la maravilla nacional del [COLOR_BUILDING_TEXT]Banco Mundial[COLOR_REVERT] a todos los jugadores. El primero en descubrir esta tecnología recibirá un [COLOR_HIGHLIGHT_TEXT]Gran mercader[COLOR_REVERT]. También desbloquea el principio económico de la [COLOR_HIGHLIGHT_TEXT]Regulación[COLOR_REVERT].</Spanish>
 	</TEXT>
@@ -1908,7 +1908,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARMOR_CRAFTING</Tag>
-		<English>Armor Crafting</English>
+		<English>Plated Armour</English>
 		<French>Fabrication d'Armures</French>
 		<German>Panzerbau</German>
 		<Italian>Fabbricazione di armature</Italian>
@@ -1921,7 +1921,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARMOR_CRAFTING_PEDIA</Tag>
-		<English>The technology to produce plate steel had been in place for many centuries: coats of plates, or brigandine, had been used for at least fifty years prior to the fourteenth century. These consisted of plates that were riveted to a cloth surface. In this image, several examples can be seen, but they are not immediately obvious: from the outside, they look like thick padded cloth or leather with rows of studs embedded in them ("Studded leather" as an armor is an ahistorical term that comes from not correctly recognizing brigandine). Brigandine protects from cuts, and is much better at shirking off impacts than is mail. However, brigandine does not quite give its wearer the freedom of movement that mail does, and it's not practical for armoring the limbs: often a brigandine "shirt" must be worn with either mail or with plates for the arms or legs.[PARAGRAPH:2]With the advent of larger forces of footmen armed with pole weapons, however, such protection was not always adequate. In addition, archery remained a problem with the widespread use of the crossbow among the Italian city-states. Since the links inevitably had holes, the heads of crossbow quarrels, and even the arrowheads of particularly powerful bows (such as the English longbow and the stronger composite bows such as used by some Hungarian troops and especially those used by Ottoman archers) could penetrate directly through a fighter's armor. Padding helped, but generally not enough. Therefore, during the course of the fourteenth century, plate steel was added to those places most likely to be hit by missile fire, and gradually complete suits of plate armor were created. This suit of transitional mail is an excellent example: the breastplate and backplate provide protection from missile fire, with the next areas armored being the forearms, which are very vulnerable on the battlefield. These suits had an additional advantage: while mail and brigandine provide excellent protection at a relatively slight cost to mobility, the wearer of a suit of full plate armor is essentially immune to cutting attacks from single-handed swords. Crossbow power and plate armor hardness each steadily increased, as armorers provided better protection, and crossbow makers increased the power of their weapons so that they would still be effective.</English>
+		<English>Plate armour is a historical type of personal body armour made from iron or steel plates, culminating in the iconic suit of armour entirely encasing the wearer.</English>
 		<Polish>Zbroja - część pasywnego uzbrojenia ochronnego wojowników, stosowana od starożytności do ok. XVII wieku. W Polsce przetrwały aż do wieku XVIII jako zbroje husarskie i kolczugi pancernych.Elementy zbroi pojawiały się później, jednak były to odosobnione przypadki. Na XVIII oraz XIX-wiecznych polach bitew walczyli ciężkozbrojni jeźdźcy, kirasjerzy, na wyposażeniu których były kirysy oraz skórzane bądź żelazne hełmy - tzw. kaski. Podczas I wojny światowej uprzywilejowani oficerowie zaopatrzeni byli w tzw. pancerze okopowe, które miały za zadanie osłaniać dowódców przed m.in. pociskami szrapnelowymi. Pod koniec XX wieku wrócono do idei wykorzystywania pancerzy w uzbrojeniu żołnierzy w postaci płyt ceramicznych lub tytanowych uzupełniających kamizelki kuloodporne.</Polish>
 	</TEXT>
 	<TEXT>
@@ -2083,7 +2083,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARTIFICIAL_PLANETS</Tag>
-		<English>Artificial Planets</English>
+		<English>Astronomical Engineering</English>
 		<French>Planètes Artificielles</French>
 		<Italian>Pianeti artificiali</Italian>
 		<Spanish>
@@ -2095,7 +2095,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARTIFICIAL_PLANETS_PEDIA</Tag>
-		<English>Artificial Planets is the science of designing and building planets and moons.</English>
+		<English>Artificial worlds or artificial planets have been created by writers in the fields of science speculation, speculative fiction and fiction. Such megastructures could have a variety of advantages over natural planets, such as efficient use of solar energy and immense living space, but their construction and/or maintenance would require technologies much in advance of that of 21st-century Earth.</English>
 		<Polish>Sztuczne Planety to proces tworzenia nowych planet i księżyców przez człowieka.</Polish>
 	</TEXT>
 	<TEXT>
@@ -2105,14 +2105,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARTIFICIAL_PLANETS_STRATEGY</Tag>
-		<English>Artificial Planets permits construction of the Artificial Moon.</English>
+		<English>Astronomical Engineering permits construction of the Artificial Moon.</English>
 		<French>Planètes Artificielles permet la construction de la Lune articielle.</French>
 		<Spanish>Los planetas artificiales permiten la construcción de una Luna artificial.</Spanish>
 		<Polish>Pozwala zbudować Sztuczny Księżyc.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARTIFICIAL_STARS</Tag>
-		<English>Artificial Stars</English>
+		<English>Stellar Engineering</English>
 		<French>Etoiles Artificielles</French>
 		<Italian>Stelle artificiali</Italian>
 		<Spanish>
@@ -2124,7 +2124,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARTIFICIAL_STARS_PEDIA</Tag>
-		<English>Artificial Stars is the science and building of Artifical Stars.</English>
+		<English>Stellar engineering is a type of engineering (currently a form of exploratory engineering) concerned with creating or modifying stars through artificial means. While humanity does not yet possess the technological ability to perform stellar engineering of any kind, stellar manipulation (or husbandry), requiring substantially less technological advancement than would be needed to create a new star, could eventually be performed in order to stabilize or prolong the lifetime of a star, mine it for useful material (known as star lifting) or use it as a direct energy source. Since a civilization advanced enough to be capable of manufacturing a new star would likely have vast material and energy resources at its disposal, it almost certainly wouldn't need to do so.</English>
 		<Polish>Sztuczne Gwiazdy to proces tworzenia nowych gwiazd przez człowieka.</Polish>
 	</TEXT>
 	<TEXT>
