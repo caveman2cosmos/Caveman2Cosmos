@@ -355,7 +355,7 @@ void CvGame::updateColoredPlots()
 												if (bBestBuildRemovesFeature)
 												{
 													if (ePlotBonus != NO_BONUS && eBestImprovement != NO_IMPROVEMENT 
-                                                        && GC.getImprovementInfo(eBestImprovement).isImprovementBonusTrade(ePlotBonus))
+														&& GC.getImprovementInfo(eBestImprovement).isImprovementBonusTrade(ePlotBonus))
 													{
 														// does the best build provide a bonus
 														bCanBeImproved = true;
@@ -534,7 +534,7 @@ void CvGame::updateColoredPlots()
 				{
 					if (pSelectedUnit->canArcherBombard(pSelectedUnit->plot()))
 					{
-                        iMaxAirRange = 1;
+						iMaxAirRange = 1;
 					}
 				}
 			}
@@ -1459,7 +1459,7 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 					{
 						if (pLoopUnit->getUnitType() == kType)
 						{
-                            CvMessageControl::getInstance().sendDoCommand(pLoopUnit->getID(), ((CommandTypes)iData2), iData3, iData4, bAlt);
+							CvMessageControl::getInstance().sendDoCommand(pLoopUnit->getID(), ((CommandTypes)iData2), iData3, iData4, bAlt);
 						}
 					}
 				}
@@ -1499,7 +1499,7 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 						for(CvSelectionGroup* pLoopSelectionGroup = kPlayer.firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = kPlayer.nextSelectionGroup(&iLoop))
 						{
 							if (pLoopSelectionGroup->allMatch(eUnit))
-                                CvMessageControl::getInstance().sendPushMission(pLoopSelectionGroup->getHeadUnit()->getID(), ((MissionTypes)iData2), iData3, iData4, iFlags, bShift);
+								CvMessageControl::getInstance().sendPushMission(pLoopSelectionGroup->getHeadUnit()->getID(), ((MissionTypes)iData2), iData3, iData4, iFlags, bShift);
 						}
 					}
 					else
