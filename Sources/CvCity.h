@@ -2124,7 +2124,7 @@ protected:
 	CvBuildingList m_BuildingList;
 	CvUnitList m_UnitList;
 
-	IDInfo* m_paTradeCities;
+	std::vector<IDInfo> m_paTradeCities;
 
 	mutable CLinkList<OrderData> m_orderQueue;
 

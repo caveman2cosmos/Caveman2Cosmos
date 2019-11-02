@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "Win32.h"
 
 void CyCityPythonInterface1(python::class_<CyCity>& x);
 /************************************************************************************************/
@@ -98,5 +99,7 @@ DllExport void DLLPublishToPython()
 	CyGlobalContextPythonInterface3(gc);					// publish it's methods
 	CyGlobalContextPythonInterface4(gc);					// publish it's methods 
 	
+	Win32::pythonPublish();
+
 	OutputDebugString("Publishing to Python: End");
 }

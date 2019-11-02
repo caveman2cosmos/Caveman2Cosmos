@@ -8817,6 +8817,12 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MAINSTREAM_CLONING</PrereqTech>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_CLONING_FACTORY</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -10211,87 +10217,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Connoisseur Club - Champagne -->
-			<BuildingClass>BUILDINGCLASS_CHAMPAGNE_CLUB</BuildingClass>
-			<Type>BUILDING_CHAMPAGNE_CLUB</Type>
-			<Description>TXT_KEY_BUILDING_CHAMPAGNE_CLUB</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WINE_CLUB_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WINE_CLUB_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_CONNOISSEUR_CHAMPAGNE</ArtDefineTag>
-			<!-- Prerequisites -->
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<!-- Obsolescence -->
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_ALCOCHOL_PROHIBITION</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
-			<!-- Construction cost -->
-			<iCost>-1</iCost>
-			<!-- Special properties -->
-			<bNukeImmune>1</bNukeImmune>
-			<iConquestProb>100</iConquestProb>
-		</BuildingInfo>
-		<BuildingInfo>
-			<!-- Connoisseur Club - Red Wine -->
-			<BuildingClass>BUILDINGCLASS_RED_WINE_CLUB</BuildingClass>
-			<Type>BUILDING_RED_WINE_CLUB</Type>
-			<Description>TXT_KEY_BUILDING_RED_WINE_CLUB</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WINE_CLUB_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WINE_CLUB_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_CONNOISSEUR_RED</ArtDefineTag>
-			<!-- Prerequisites -->
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<!-- Obsolescence -->
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_ALCOCHOL_PROHIBITION</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
-			<!-- Construction cost -->
-			<iCost>-1</iCost>
-			<!-- Special properties -->
-			<bNukeImmune>1</bNukeImmune>
-			<iConquestProb>100</iConquestProb>
-		</BuildingInfo>
-		<BuildingInfo>
-			<!-- Connoisseur Club - White Wine -->
-			<BuildingClass>BUILDINGCLASS_WHITE_WINE_CLUB</BuildingClass>
-			<Type>BUILDING_WHITE_WINE_CLUB</Type>
-			<Description>TXT_KEY_BUILDING_WHITE_WINE_CLUB</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WINE_CLUB_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WINE_CLUB_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_CONNOISSEUR_WHITE</ArtDefineTag>
-			<!-- Prerequisites -->
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<!-- Obsolescence -->
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_ALCOCHOL_PROHIBITION</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
-			<!-- Construction cost -->
-			<iCost>-1</iCost>
-			<!-- Special properties -->
-			<bNukeImmune>1</bNukeImmune>
-			<iConquestProb>100</iConquestProb>
-		</BuildingInfo>
-		<BuildingInfo>
 			<!-- Safety (Aesop's Fables) -->
 			<BuildingClass>BUILDINGCLASS_AESOP_CRIME</BuildingClass>
 			<Type>BUILDING_AESOP_CRIME</Type>
@@ -11139,58 +11064,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-		</BuildingInfo>
-		<BuildingInfo>
-			<!-- Weather Station -->
-			<BuildingClass>BUILDINGCLASS_WEATHER_STATION</BuildingClass>
-			<Type>BUILDING_WEATHER_STATION</Type>
-			<Description>TXT_KEY_BUILDING_WEATHER_STATION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WEATHER_STATION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WEATHER_STATION_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_WEATHER_STATION</ArtDefineTag>
-			<!-- Prerequisites -->
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_LONG_RANGE_FORECASTING</PrereqTech>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_OFFICES</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BROADCAST_TOWER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_COMMUNICATION_TOWER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_NETWORK_NODE</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
-			<!-- Construction cost -->
-			<iCost>1475</iCost>
-			<!-- Main effects -->
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>2</iCommerce>
-			</CommerceModifiers>
-			<!-- Unit effects -->
-			<FreePromotion>PROMOTION_WEATHER_FORECAST_LAND</FreePromotion>
-			<FreePromotion_2>PROMOTION_WEATHER_FORECAST_AIR</FreePromotion_2>
-			<FreePromotion_3>PROMOTION_WEATHER_FORECAST_NAVAL</FreePromotion_3>
-			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
-			<!-- Misc. Effects -->
-			<iMaintenanceModifier>25</iMaintenanceModifier>
-			<!-- Special properties -->
-			<iAsset>5</iAsset>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Cave Dwelling -->
@@ -14724,7 +14597,7 @@
 				<Bonus>BONUS_CLOTH</Bonus>
 				<Bonus>BONUS_LEATHER</Bonus>
 			</PrereqBonuses>
-			<VicinityBonus>BONUS_HORSE</VicinityBonus>
+			<RawVicinityBonus>BONUS_HORSE</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_GRASS</TerrainType>
@@ -20057,62 +19930,6 @@
 				</Flavor>
 			</Flavors>
 		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_HUMAN_SACRIFICE_ALTAR</BuildingClass>
-			<Type>BUILDING_HUMAN_SACRIFICE_ALTAR</Type>
-			<Description>TXT_KEY_BUILDING_HUMAN_SACRIFICE_ALTAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HUMAN_SACRIFICE_ALTAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HUMAN_SACRIFICE_ALTAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_SACRIFICE_ALTAR</ArtDefineTag>
-			<PrereqTech>TECH_BLOOD_CULT</PrereqTech>
-			<iHurryAngerModifier>-50</iHurryAngerModifier>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>139</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iConquestProb>0</iConquestProb>
-			<iHappiness>1</iHappiness>
-			<iAsset>4</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<SpecialistCounts>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
-					<iSpecialistCount>1</iSpecialistCount>
-				</SpecialistCount>
-			</SpecialistCounts>
-			<ConstructSound>AS2D_BUILD_CEREMONIAL_ALTAR</ConstructSound>
-			<BonusHappinessChanges>
-				<BonusHappinessChange>
-					<BonusType>BONUS_CANNABIS</BonusType>
-					<iHappinessChange>1</iHappinessChange>
-				</BonusHappinessChange>
-				<BonusHappinessChange>
-					<BonusType>BONUS_PEYOTE</BonusType>
-					<iHappinessChange>1</iHappinessChange>
-				</BonusHappinessChange>
-			</BonusHappinessChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_HUMAN_SACRIFICE</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_SACRIFICIAL_ALTAR</BuildingClassType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
-		</BuildingInfo>
 		<!-- Safety (Alcatraz) -->
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_GOOD_ALCATRAZ</BuildingClass>
@@ -21018,7 +20835,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
             <RawVicinityBonus>BONUS_COPPER</RawVicinityBonus>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
+			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21037,7 +20854,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
             <RawVicinityBonus>BONUS_GOLD</RawVicinityBonus>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
+			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21056,7 +20873,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
             <RawVicinityBonus>BONUS_IRON</RawVicinityBonus>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
+			<PrereqTech>TECH_MINING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21113,7 +20930,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
             <RawVicinityBonus>BONUS_SILVER</RawVicinityBonus>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
+			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21132,7 +20949,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
             <RawVicinityBonus>BONUS_TIN</RawVicinityBonus>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
+			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

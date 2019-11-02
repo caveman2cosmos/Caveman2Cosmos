@@ -1,0 +1,53 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Autocorrect.py Test",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\Tools\\Autocorrect\\Autocorrect.py",
+            "console": "integratedTerminal",
+            "args": ["${workspaceFolder}\\Tools\\Autocorrect\\AutocorrectTest.xml", "--interactive"],
+            "cwd": "${workspaceFolder}\\Tools\\Autocorrect"
+        },
+        {
+            "name": "Python: Autocorrect.py interactive all",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\Tools\\Autocorrect\\Autocorrect.py",
+            "console": "integratedTerminal",
+            "args": ["${workspaceFolder}\\Assets\\XML\\Text\\*_CIV4GameText.xml", "--interactive"],
+            "cwd": "${workspaceFolder}\\Tools\\Autocorrect"
+        },
+        {
+            "name": "Python: Autocorrect.py interactive current file",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\Tools\\Autocorrect\\Autocorrect.py",
+            "console": "integratedTerminal",
+            "args": ["${file}", "--interactive"],
+            "cwd": "${workspaceFolder}\\Tools\\Autocorrect"
+        },
+        {
+            "name": "Python: Autocorrect.py automatic all",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\Tools\\Autocorrect\\Autocorrect.py",
+            "console": "integratedTerminal",
+            "args": ["${workspaceFolder}\\Assets\\XML\\Text\\*_CIV4GameText.xml", "--automatic"],
+            "cwd": "${workspaceFolder}\\Tools\\Autocorrect"
+        },
+        {
+            "name": "Python: Autocorrect.py automatic current file",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\Tools\\Autocorrect\\Autocorrect.py",
+            "console": "integratedTerminal",
+            "args": ["${file}", "--automatic"],
+            "cwd": "${workspaceFolder}\\Tools\\Autocorrect"
+        }
+    ]
+}

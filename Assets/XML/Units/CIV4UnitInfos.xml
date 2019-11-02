@@ -4710,7 +4710,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<ForceObsoleteTech>TECH_TRACKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_PERSISTENCE_HUNTING</ForceObsoleteTech>
 			<ForceObsoleteUnitClasses>
 				<ForceObsoleteUnitClass>
 					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_WANDERER</ForceObsoleteUnitClassType>
@@ -8439,10 +8439,6 @@
 					<UnitClassUpgradeType>UNITCLASS_WOODEN_SPEARMAN</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_WARRIOR</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteUnitClasses>
 				<ForceObsoleteUnitClass>
@@ -8546,10 +8542,6 @@
 				</UnitClassUpgrade>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_STONE_MACEMAN</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_WARRIOR</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
@@ -11676,11 +11668,11 @@
 			</TrainCondition>
 			<iCost>125</iCost>
 			<iMoves>1</iMoves>
-			<iCombat>8</iCombat>
+			<iCombat>6</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
 			<iChanceFirstStrikes>2</iChanceFirstStrikes>
-			<iWithdrawalProb>17</iWithdrawalProb>
+			<iWithdrawalProb>15</iWithdrawalProb>
 			<iEarlyWithdraw>30</iEarlyWithdraw>
 			<iCollateralDamage>6</iCollateralDamage>
 			<iCollateralDamageLimit>17</iCollateralDamageLimit>
@@ -11692,7 +11684,7 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<iBombardRate>7</iBombardRate>
+			<iBombardRate>3</iBombardRate>
 			<iAsset>3</iAsset>
 			<iPower>20</iPower>
 			<UnitMeshGroups>
@@ -16398,10 +16390,6 @@
 					<UnitClassUpgradeType>UNITCLASS_LANCER</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_DRAGOON</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
@@ -16731,13 +16719,16 @@
 			<Type>UNIT_DRAGOON</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_PLUS_SHIELD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_PLUS_SHIELD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_TWO_HANDED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_LONG_BLADE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_DIST_RIFLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SHIELD_SMALL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
@@ -57244,7 +57235,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<ForceObsoleteTech>TECH_TRACKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_PERSISTENCE_HUNTING</ForceObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_GATHERER</Class>

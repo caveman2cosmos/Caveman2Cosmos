@@ -3035,24 +3035,24 @@ class BonusPlacer:
 			bonus = BonusArea()
 			bonus.indeXML = iBonus
 			# Calculate desired amount
-			rand1 = randint(0, CvBonusInfo.getRandAppearance1())
-			rand2 = randint(0, CvBonusInfo.getRandAppearance2())
-			rand3 = randint(0, CvBonusInfo.getRandAppearance3())
-			rand4 = randint(0, CvBonusInfo.getRandAppearance4())
-			fBaseCount = (CvBonusInfo.getConstAppearance() + rand1 + rand2 + rand3 + rand4) / 100.0
+			fBaseCount = (
+				(
+					randint(0, CvBonusInfo.getRandAppearance1()) + randint(0, CvBonusInfo.getRandAppearance2()) +
+					randint(0, CvBonusInfo.getRandAppearance3()) + randint(0, CvBonusInfo.getRandAppearance4()) + CvBonusInfo.getConstAppearance()
+				) / 100.0
+			)
 			if iWorldSize:
-				fBaseCount += fBaseCount * iWorldSize / 3.0
-			#fPlayerCount = CyGame().countCivPlayersAlive() * CvBonusInfo.getPercentPerPlayer() / 100.0 # iPlayer tag from BonusInfo XML
+				fBaseCount += fBaseCount * iWorldSize / 4.0
 			iTilesPer = CvBonusInfo.getTilesPer()
 			fDensityCount = 0
 			if iTilesPer > 0:
-				fNumPossible = 0.0
+				iNumPossible = 0
 				for i in plotIndexList:
 					plot = MAP.plotByIndex(i)
 					if self.PlotCanHaveBonus(plot, iBonus, True, False):
-						fNumPossible += 1
-				fDensityCount = fNumPossible / iTilesPer
-			iBonusCount = int(BonusBonus * (fDensityCount + fBaseCount)) # + fPlayerCount))
+						iNumPossible += 1
+				fDensityCount = 10.0 * iNumPossible / (iTilesPer * (iWorldSize + 7))
+			iBonusCount = int(BonusBonus * (fBaseCount + fDensityCount))
 			print "%s - Base Count = %.2f - Density Count = %.2f - Multiplier: %.1f\n\tSum = %d" % (CvBonusInfo.getType(), fBaseCount, fDensityCount, BonusBonus, iBonusCount)
 			if iBonusCount < 1:
 				iBonusCount = 1
@@ -3245,57 +3245,49 @@ class BonusPlacer:
 		self.bonusDict = bonusDictLoc
 
 
-	def CanPlaceBonus(self, plot, indeXML, bIgnoreArea):
-		if not self.PlotCanHaveBonus(plot, indeXML, bIgnoreArea):
+	def CanPlaceBonus(self, CyPlot, indeXML, bIgnoreArea):
+		if not self.PlotCanHaveBonus(CyPlot, indeXML, bIgnoreArea):
 			return False
 		GC = CyGlobalContext()
-		x = plot.getX()
-		y = plot.getY()
-		areaID = plot.getArea()
+		x = CyPlot.getX()
+		y = CyPlot.getY()
+		areaID = CyPlot.getArea()
 		bonusInfo = GC.getBonusInfo(indeXML)
-		classInfo = GC.getBonusClassInfo(bonusInfo.getBonusClassType())
 		''' Rewrite to something that actually makes sense.
-		if plot.isWater():
+		if CyPlot.isWater():
 			MAP = GC.getMap()
 			if 100 * MAP.getNumBonusesOnLand(indeXML) / (MAP.getNumBonuses(indeXML) + 1) < bonusInfo.getMinLandPercent():
 				return False
 		'''
 		#Make sure there are no bonuses of the same class (but a different type) nearby:
-		if classInfo != None:
-			iRange = classInfo.getUniqueRange()
-			if iRange > 0:
-				iBonusClass = bonusInfo.getBonusClassType()
-				for dx in xrange(-iRange, iRange + 1):
-					for dy in xrange(-iRange, iRange + 1):
-						if not dx and not dy: continue
-
-						loopPlot = self.plotXY(x, y, dx, dy)
-						if not loopPlot or areaID != loopPlot.getArea(): continue
-
-						eOtherBonus = loopPlot.getBonusType(TeamTypes.NO_TEAM)
-						if eOtherBonus == BonusTypes.NO_BONUS: continue
-
-						if GC.getBonusInfo(eOtherBonus).getBonusClassType() == iBonusClass:
-							return False
-		#Make sure there are no bonuses of the same type nearby:
-		iRange = bonusInfo.getUniqueRange()
-		groupRange = bonusInfo.getGroupRange()
-		if iRange < 0:
-			iRange = 0
-		for dx in xrange(-iRange, iRange + 1):
-			if dx <= groupRange and dx >= -groupRange:
-				continue
-			for dy in xrange(-iRange, iRange + 1):
-				if dy <= groupRange and dy >= -groupRange:
-					continue
-				loopPlot = self.plotXY(x, y, dx, dy)
-				if loopPlot != None:
-					if areaID == loopPlot.getArea():
-						if plotDistance(x, y, loopPlot.getX(), loopPlot.getY()) <= iRange:
-							eOtherBonus = loopPlot.getBonusType(TeamTypes.NO_TEAM)
-							if eOtherBonus != BonusTypes.NO_BONUS:
-								if eOtherBonus == indeXML:
+		iBonusClass = bonusInfo.getBonusClassType()
+		classInfo = GC.getBonusClassInfo(iBonusClass)
+		iRange0 = 0
+		if classInfo:
+			iRange0 = classInfo.getUniqueRange()
+			if iRange0 > 0:
+				iRange0 += (mc.iWorldSize + 1) / 2
+				for dx in xrange(-iRange0, iRange0 + 1):
+					for dy in xrange(-iRange0, iRange0 + 1):
+						if dx or dy:
+							CyPlotX = self.plotXY(x, y, dx, dy)
+							if CyPlotX and areaID == CyPlotX.getArea():
+								eOtherBonus = CyPlotX.getBonusType(TeamTypes.NO_TEAM)
+								if eOtherBonus > -1 and GC.getBonusInfo(eOtherBonus).getBonusClassType() == iBonusClass:
 									return False
+			elif iRange0 < 0:
+				iRange0 = 0
+		#Make sure there are no bonuses of the same type nearby:
+		iRange1 = bonusInfo.getUniqueRange()
+		if iRange1 > 0:
+			iRange1 += mc.iWorldSize
+			if iRange1 > iRange0:
+				for dx in xrange(-iRange1, iRange1 + 1):
+					for dy in xrange(-iRange1, iRange1 + 1):
+						if dx >= -iRange0 and dx <= iRange0 and dy >= -iRange0 and dy <= iRange0: continue
+						CyPlotX = self.plotXY(x, y, dx, dy)
+						if CyPlotX and areaID == CyPlotX.getArea() and CyPlotX.getBonusType(TeamTypes.NO_TEAM) == indeXML:
+							return False
 		return True
 
 

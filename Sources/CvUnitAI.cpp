@@ -34977,7 +34977,7 @@ bool CvUnitAI::AI_protectTarget(CvUnit* pTarget)
 		}
 		else if (!isWaitingOnUnitAIAny() && generatePath(pTarget->plot(), 0, true, &iPathTurns))
 		{
-			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE());
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pTarget->plot()->getX_INLINE(), pTarget->plot()->getY_INLINE());
 		}
 		else
 		{

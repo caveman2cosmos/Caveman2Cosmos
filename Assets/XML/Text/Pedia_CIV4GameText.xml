@@ -9,12 +9,13 @@
 		<Tag>TXT_KEY_CIVILOPEDIA_BACKGROUND</Tag>
 		<English>Background:[PARAGRAPH:1]</English>
 		<French>Contexte:[PARAGRAPH:1]</French>
-		<German>Hintergrund:[PARAGRAPH:1]</German>
+		<German>Hintergrund:[NEWLINE]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILOPEDIA_STRATEGY</Tag>
 		<English>Strategy:[PARAGRAPH:1]</English>
 		<French>Stratégie:[PARAGRAPH:1]</French>
+		<German>Strategie:[NEWLINE]</German>
 		<Italian>Strategia:[PARAGRAPH:1]</Italian>
 		<Spanish>Estrategia:[PARAGRAPH:1]</Spanish>
 	</TEXT>
@@ -24,6 +25,11 @@
 		<German>Attitüde: [BOLD]%d1%[\BOLD] (Basis) + [BOLD]%d2%[\BOLD] (gegenüber Kriegstreibern)[NEWLINE]</German>
 		<Spanish>Actitud: [BOLD]%d1%[\BOLD] (base) + [BOLD]%d2%[\BOLD] (estima bélica)[NEWLINE]</Spanish>
 		<Polish>Podstawa: [BOLD]%d1%%[\BOLD] (Baza) + [BOLD]%d2%[\BOLD] (Podżegacz Wojenny)[NEWLINE]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_AUTOBUILD</Tag>
+		<English>Auto-Build</English>
+		<German>automatisch</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_APPEARANCE_AND_TRADE</Tag>
@@ -96,9 +102,24 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_AFFLICTION_PROMOTION</Tag>
 		<English>(P) Afflictions</English>
-		<German>(B) Beschwerden</German>
+		<German>Beschwerden</German>
 		<Spanish>Alteraciones de estado</Spanish>
 		<Polish>Osłabienia</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_ALL_ERAS</Tag>
+		<English>All Eras</English>
+		<German>Alle Zeitalter</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_ANIMALISTIC_BUILDINGS</Tag>
+		<English>Animalistic</English>
+		<German>Tiere</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_ANIMALS</Tag>
+		<English>Animals</English>
+		<German>Tiere</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS</Tag>
@@ -141,7 +162,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_MAP</Tag>
 		<English>Map Bonuses</English>
 		<French>Bonus de Carte</French>
-		<German>Ressourcen</German>
+		<German>Rohstoffe</German>
 		<Spanish>Recursos del mapa</Spanish>
 		<Polish>Bonusy Mapy</Polish>
 	</TEXT>
@@ -167,10 +188,15 @@
 		<Polish>Budynki</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_BUILDINGS_SPECIAL</Tag>
+		<English>Special</English>
+		<German>Besonderheiten</German>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BUILDING_TREE</Tag>
 		<English>Building Tree</English>
 		<French>Améliorations des Bâtiments</French>
-		<German>Gebäudebaum</German>
+		<German>Gebäude</German>
 		<Italian>Miglioramenti degli edifici</Italian>
 		<Spanish>Árbol de edificios</Spanish>
 		<Polish>Ulepszenia Budynków</Polish>
@@ -184,6 +210,11 @@
 		<Spanish>Culturas de C2C</Spanish>
 		<Polish>Kultury C2C</Polish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_CHRONOLOGY</Tag>
+		<English>Chronology</English>
+		<German>Chronologisch</German>
+	</TEXT>	
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_CIV</Tag>
 		<English>Civilizations</English>
@@ -266,11 +297,21 @@
 		<Polish>Koncepcje BtS</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_CULTURAL_UNITS</Tag>
+		<English>Cultural Units</English>
+		<German>Kulturspezifisch</German>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_EQUIPMENT_PROMOTION</Tag>
 		<English>(P) Equipments</English>
-		<German>(B) Ausrüstung</German>
+		<German>Ausrüstung</German>
 		<Spanish>Equipamiento</Spanish>
 		<Polish>Ekwipunek</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_ERAS</Tag>
+		<English>Eras</English>
+		<German>Zeitalter</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_EVENT</Tag>
@@ -298,7 +339,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>(G) Merkmale</German>
+		<German>Merkmale</German>
 		<Italian>
 			<Text>Caratteristiche del terreno</Text>
 			<Gender>Female</Gender>
@@ -330,10 +371,15 @@
 		<Polish>Wielkie Cuda</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_GROUP_WONDERS</Tag>
+		<English>Group Wonders</English>
+		<German>Gruppenwunder</German>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_HERO</Tag>
 		<English>Heroes</English>
 		<French>Héros</French>
-		<German>(E) Helden</German>
+		<German>Helden</German>
 		<Italian>Eroi</Italian>
 		<Spanish>Héroes</Spanish>
 		<Polish>Bohaterowie</Polish>
@@ -402,6 +448,21 @@
 		<Polish>Przywódcy</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_LEADERSHIP</Tag>
+		<English>Leadership</English>
+		<German>Regierung</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_LANDSCAPE</Tag>
+		<English>Landscape</English>
+		<German>Landschaft</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_MISC_UNITS</Tag>
+		<English>Misc Units</English>
+		<German>Sonstige</German>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_NATIONAL_WONDERS</Tag>
 		<English>National Wonders</English>
 		<French>Merveilles Nationales</French>
@@ -456,7 +517,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_PROMOTION_TREE</Tag>
 		<English>Promotion Tree</English>
 		<French>Arborescence des Promotions</French>
-		<German>(B) Baum</German>
+		<German>Beförderungen</German>
 		<Italian>Albero Promoz.</Italian>
 		<Spanish>Árbol de ascensos</Spanish>
 		<Polish>Drzewko prom.</Polish>
@@ -483,6 +544,16 @@
 		<Polish>Religie</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_RESOURCES</Tag>
+		<English>Resources</English>
+		<German>Ressourcen</German>
+	</TEXT>	
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_RELIGIOUS_BUILDINGS</Tag>
+		<English>Religious</English>
+		<German>Religion</German>
+	</TEXT>	
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ROUTES</Tag>
 		<English>Routes</English>
 		<German>Verkehr</German>
@@ -497,6 +568,21 @@
 		<Italian>Scorciatoie</Italian>
 		<Spanish>Atajos de teclado</Spanish>
 		<Polish>Skróty</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIAL</Tag>
+		<English>Special</English>
+		<German>Weiteres</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIAL_BUILDINGS</Tag>
+		<English>Special Buildings</English>
+		<German>Spezialgebäude</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIAL_UNITS</Tag>
+		<English>Special Units</English>
+		<German>Spezialeinheiten</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIALIST</Tag>
@@ -523,7 +609,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SUBCOMBAT_TYPE</Tag>
 		<English>Sub Combat Types</English>
 		<French>Type de Spé-Combat</French>
-		<German>(E) Unterkategorien</German>
+		<German>Unterkategorien</German>
 		<Spanish>Subtipos de combate</Spanish>
 		<Polish>Typy Walki</Polish>
 	</TEXT>
@@ -598,7 +684,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>(E) Kategorien</German>
+		<German>Einheitenklassen</German>
 		<Italian>
 			<Text>Tipi di unità</Text>
 			<Gender>Male</Gender>
@@ -615,10 +701,20 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_UNIT_UPGRADES</Tag>
 		<English>Unit Upgrades</English>
 		<French>Améliorations des Unités</French>
-		<German>(E) Upgrades</German>
+		<German>Einheiten</German>
 		<Italian>Avanzamenti</Italian>
 		<Spanish>Árbol de unidades</Spanish>
 		<Polish>Ulepszenia jedn.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_UPGRADE_TREES</Tag>
+		<English>Upgrade Trees</English>
+		<German>Upgrades</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_WORKER_BUILDS</Tag>
+		<English>Worker Builds</English>
+		<German>Arbeitsaufträge</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_DOGPILE</Tag>
@@ -646,12 +742,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_HISTORY</Tag>
-		<English>History:[PARAGRAPH:1]</English>
-		<French>Historique:[PARAGRAPH:1]</French>
-		<German>Geschichte:[PARAGRAPH:1]</German>
-		<Italian>Storia:[PARAGRAPH:1]</Italian>
-		<Spanish>Historia:[PARAGRAPH:1]</Spanish>
-		<Polish>Historia:[PARAGRAPH:1]</Polish>
+		<English>History</English>
+		<French>Historique</French>
+		<German>Geschichte</German>
+		<Italian>Storia</Italian>
+		<Spanish>Historia</Spanish>
+		<Polish>Historia</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_IMPROVEMENT_AIR_DEFENSE</Tag>
@@ -670,6 +766,11 @@
 		<Italian>Può essere costruito all'esterno dei confini culturali</Italian>
 		<Spanish>Se puede construir fuera de las fronteras de la civilización</Spanish>
 		<Polish>Może zostać zbudowany wewnątrz granic kulturowych</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_LATITUDE</Tag>
+		<English>Exist in latitude:</English>
+		<German>Geografische Breite:</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_LIMITED_WAR</Tag>
@@ -719,6 +820,7 @@
 		<Tag>TXT_KEY_PEDIA_QUOTE</Tag>
 		<English>Quote</English>
 		<French>Citations</French>
+		<German>Zitat</German>
 		<Spanish>Cita</Spanish>
 		<Polish>Wpis</Polish>
 	</TEXT>
@@ -877,6 +979,11 @@
 		<German>wenn angeschlossen und abgebaut</German>
 		<Spanish>con camino y mejora</Spanish>
 		<Polish>z drogą i ulepszeniem</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_WELCOME_MESSAGE</Tag>
+		<English>Who are we, who is each one of us, if not a combination of experiences, information, books we have read, things imagined? Each life is an encyclopedia, a library, an inventory of objects, a series of styles, and everything can be constantly shuffled and reordered in every way conceivable.</English>
+		<German>"Wer sind wir denn, wer ist denn jeder von uns, wenn nicht eine Kombination von Erfahrungen, Informationen, Lektüren und Phantasien? Jedes Leben ist eine Enzyklopädie, eine Bibliothek, ein Inventar von Objekten, eine Musterkollektion von Stilen, worin alles jederzeit auf jede mögliche Weise neu gemischt und neu geordnet werden kann." - Italo Calvino (1923-1985)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_WONDER</Tag>

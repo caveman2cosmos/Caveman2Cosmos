@@ -1277,7 +1277,7 @@ int CyPlayer::getCityDefenseModifier()
 /************************************************************************************************/
 int CyPlayer::getBestUnitType(int /*UnitAITypes*/ eUnitAI) const
 {
-    return m_pPlayer ? (int) m_pPlayer->getBestUnitType(UnitAITypes(eUnitAI)) : -1;
+	return m_pPlayer ? (int) m_pPlayer->getBestUnitType(UnitAITypes(eUnitAI)) : -1;
 }
 /************************************************************************************************/
 /* LoR                            END                                                           */
@@ -1290,12 +1290,12 @@ int CyPlayer::getBestUnitType(int /*UnitAITypes*/ eUnitAI) const
 /************************************************************************************************/
 bool CyPlayer::isNonStateReligionCommerce() const
 {
-    return m_pPlayer ? m_pPlayer->isNonStateReligionCommerce() : false;
+	return m_pPlayer ? m_pPlayer->isNonStateReligionCommerce() : false;
 }
 
 bool CyPlayer::isUpgradeAnywhere() const
 {
-    return m_pPlayer ? m_pPlayer->isUpgradeAnywhere() : false;
+	return m_pPlayer ? m_pPlayer->isUpgradeAnywhere() : false;
 }
 
 int CyPlayer::getRevIdxLocal()
@@ -2319,7 +2319,7 @@ python::tuple CyPlayer::firstCity(bool bRev)
 	CvCity* pvObj = m_pPlayer ? m_pPlayer->firstCity(&iterIn, bRev) : NULL;
 	CyCity* pyObj = pvObj ? new CyCity(pvObj) : NULL;
 	python::tuple tup=python::make_tuple(pyObj, iterIn);
-	delete pyObj;
+	if(pyObj) delete pyObj;
 	return tup;
 }
 
@@ -2329,7 +2329,7 @@ python::tuple CyPlayer::nextCity(int iterIn, bool bRev)
 	CvCity* pvObj = m_pPlayer ? m_pPlayer->nextCity(&iterIn, bRev) : NULL;
 	CyCity* pyObj = pvObj ? new CyCity(pvObj) : NULL;
 	python::tuple tup=python::make_tuple(pyObj, iterIn);
-	delete pyObj;
+	if(pyObj) delete pyObj;
 	return tup;
 }
 
@@ -2350,7 +2350,7 @@ python::tuple CyPlayer::firstUnit(bool bRev)
 	CvUnit* pvUnit = m_pPlayer ? m_pPlayer->firstUnit(&iterIn, bRev) : NULL;
 	CyUnit* pyUnit = pvUnit ? new CyUnit(pvUnit) : NULL;
 	python::tuple tup=python::make_tuple(pyUnit, iterIn);
-	delete pyUnit;
+	if(pyUnit) delete pyUnit;
 	return tup;
 }
 
@@ -2360,7 +2360,7 @@ python::tuple CyPlayer::nextUnit(int iterIn, bool bRev)
 	CvUnit* pvObj = m_pPlayer ? m_pPlayer->nextUnit(&iterIn, bRev) : NULL;
 	CyUnit* pyObj = pvObj ? new CyUnit(pvObj) : NULL;
 	python::tuple tup=python::make_tuple(pyObj, iterIn);
-	delete pyObj;
+	if(pyObj) delete pyObj;
 	return tup;
 
 }
@@ -2382,7 +2382,7 @@ python::tuple CyPlayer::firstSelectionGroup(bool bRev)
 	CvSelectionGroup* pvObj = m_pPlayer ? m_pPlayer->firstSelectionGroup(&iterIn, bRev) : NULL;
 	CySelectionGroup* pyObj = pvObj ? new CySelectionGroup(pvObj) : NULL;
 	python::tuple tup=python::make_tuple(pyObj, iterIn);
-	delete pyObj;
+	if(pyObj) delete pyObj;
 	return tup;
 }
 
@@ -2392,7 +2392,7 @@ python::tuple CyPlayer::nextSelectionGroup(int iterIn, bool bRev)
 	CvSelectionGroup* pvObj = m_pPlayer ? m_pPlayer->nextSelectionGroup(&iterIn, bRev) : NULL;
 	CySelectionGroup* pyObj = pvObj ? new CySelectionGroup(pvObj) : NULL;
 	python::tuple tup=python::make_tuple(pyObj, iterIn);
-	delete pyObj;
+	if(pyObj) delete pyObj;
 	return tup;
 }
 

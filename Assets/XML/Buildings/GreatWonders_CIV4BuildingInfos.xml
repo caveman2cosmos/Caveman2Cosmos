@@ -810,7 +810,6 @@
 			<!-- Cost -->
 			<iCost>167130</iCost>
 			<!-- Misc. Effects -->
-			<iGoldenAgeModifier>100</iGoldenAgeModifier>
 			<iGlobalPopulationChange>-30</iGlobalPopulationChange>
 			<!-- Unique effects -->
 			<VictoryPrereq>VICTORY_SCIENTIFIC</VictoryPrereq>
@@ -7733,7 +7732,7 @@
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
-			<iGoldenAgeModifier>50</iGoldenAgeModifier>
+			<iGoldenAgeModifier>30</iGoldenAgeModifier>
 			<!-- Misc -->
 			<iAsset>12</iAsset>
 			<iConquestProb>100</iConquestProb>
@@ -8090,7 +8089,7 @@
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Cost -->
-			<iCost>320</iCost>
+			<iCost>444</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>2</iYield>
@@ -14761,6 +14760,7 @@
 			<!-- Winery - Champagne -->
 			<BuildingClass>BUILDINGCLASS_CHAMPAGNE_WINERY</BuildingClass>
 			<Type>BUILDING_CHAMPAGNE_WINERY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GROUP_DELUXE_WINERIES</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14772,28 +14772,12 @@
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_WINERY</BuildingClassType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_WINERY</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_WHITE_WINE_CLUB</BuildingClassMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_RED_WINE_CLUB</BuildingClassMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -14802,12 +14786,10 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Cost -->
-			<iCost>1920</iCost>
+			<iCost>1280</iCost>
 			<!-- Main effects -->
 			<FreeBonus>BONUS_CHAMPAGNE</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
-			<!-- Misc. Effects -->
-			<FreeBuilding>BUILDINGCLASS_CHAMPAGNE_CLUB</FreeBuilding>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<Flavors>
@@ -14829,6 +14811,7 @@
 			<!-- Winery - Vintage Red -->
 			<BuildingClass>BUILDINGCLASS_VINTAGE_RED_WINERY</BuildingClass>
 			<Type>BUILDING_VINTAGE_RED_WINERY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GROUP_DELUXE_WINERIES</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14840,28 +14823,12 @@
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_WINERY</BuildingClassType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_WINERY</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_WHITE_WINE_CLUB</BuildingClassMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_CHAMPAGNE_CLUB</BuildingClassMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -14870,12 +14837,10 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Cost -->
-			<iCost>1920</iCost>
+			<iCost>1280</iCost>
 			<!-- Main effects -->
 			<FreeBonus>BONUS_VINTAGE_RED_WINE</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
-			<!-- Misc. Effects -->
-			<FreeBuilding>BUILDINGCLASS_RED_WINE_CLUB</FreeBuilding>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<Flavors>
@@ -14896,6 +14861,7 @@
 			<!-- Winery - Vintage White -->
 			<BuildingClass>BUILDINGCLASS_VINTAGE_WHITE_WINERY</BuildingClass>
 			<Type>BUILDING_VINTAGE_WHITE_WINERY</Type>
+			<SpecialBuildingType>SPECIALBUILDING_GROUP_DELUXE_WINERIES</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14907,28 +14873,12 @@
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_WINERY</BuildingClassType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_WINERY</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_RED_WINE_CLUB</BuildingClassMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_CHAMPAGNE_CLUB</BuildingClassMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -14937,12 +14887,10 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<!-- Cost -->
-			<iCost>1920</iCost>
+			<iCost>1280</iCost>
 			<!-- Main effects -->
 			<FreeBonus>BONUS_VINTAGE_WHITE_WINE</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
-			<!-- Misc. Effects -->
-			<FreeBuilding>BUILDINGCLASS_WHITE_WINE_CLUB</FreeBuilding>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<Flavors>
@@ -15058,7 +15006,6 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iAnarchyModifier>-25</iAnarchyModifier>
-			<iGoldenAgeModifier>25</iGoldenAgeModifier>
 			<iGlobalWarWearinessModifier>-10</iGlobalWarWearinessModifier>
 			<FreeBuilding>BUILDINGCLASS_PRESS_AGENCY</FreeBuilding>
 			<!-- Misc -->
@@ -18567,7 +18514,6 @@
 			<Description>TXT_KEY_BUILDING_CATACOMBS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CATACOMBS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CATACOMBS_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CATACOMBS_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CATACOMBS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CATACOMBS_OF_KOM</MovieDefineTag>

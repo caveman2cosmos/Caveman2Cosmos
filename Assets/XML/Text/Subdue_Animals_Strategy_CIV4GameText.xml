@@ -110,13 +110,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PIG_HERD_STRATEGY</Tag>
-		<English>Only subdued pigs can build the pig herd.  It provides a pig resource.  There can only be one per civ. Based on an idea by Sarkyn.</English>
+		<English>Only subdued pigs can build the pig herd.  It provides a pig resource.</English>
 		<French>Le troupeau de cochons peut être construit directement par des sangliers apprivoisés.</French>
 		<Italian>Solo i maiali addomesticati possono costruire un Branco - Maiali; quest'edificio fornisce una fonte di maiali. Basato su un'idea di Sarkyn.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORSE_HERD_STRATEGY</Tag>
-		<English>Only subdued horses can build the horse herd.  It provides a horse resource.  There can only be one per civ. Based on an idea by Sarkyn.</English>
+		<English>Only subdued horses can build the horse herd.  It provides a horse resource.</English>
 		<French>Le troupeau de chevaux peut être construit directement par des chevaux apprivoisés.</French>
 		<Italian>Solo i cavalli addomesticati possono costruire un Branco - Cavalli; quest'edificio fornisce una fonte di cavalli. Basato su un'idea di Sarkyn.</Italian>
 	</TEXT>

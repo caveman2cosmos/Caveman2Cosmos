@@ -13,8 +13,10 @@ if "%APPVEYOR_PULL_REQUEST_TITLE%" neq "" (
 PUSHD "%~dp0..\.."
 SET C2C_VERSION=v%APPVEYOR_BUILD_VERSION%-alpha
 SET "root_dir=%cd%"
+set SVN=svn.exe
 if not exist "%build_dir%" goto :skip_delete
 rmdir /Q /S "%build_dir%"
+
 :skip_delete
 
 echo C2C %C2C_VERSION% DEPLOYMENT
@@ -45,7 +47,15 @@ call Tools\CI\DoSourceIndexing.bat
 
 :: CHECK OUT SVN -----------------------------------------------
 echo Checking out SVN working copy for deployment...
-svn checkout %svn_url% "%build_dir%"
+call %SVN% checkout %svn_url% "%build_dir%"
+if %ERRORLEVEL% neq 0 (
+    call %SVN% cleanup --non-interactive
+    call %SVN% checkout %svn_url% "%build_dir%"
+    if %ERRORLEVEL% neq 0 (
+        echo SVN checkout failed, aborting...
+        exit /B 3
+    )
+)
 
 :: PACK FPKS ---------------------------------------------------
 :: We copy built FPKs and the fpklive token back from SVN 
@@ -53,9 +63,15 @@ svn checkout %svn_url% "%build_dir%"
 :: much we need to push back to SVN, and how much players
 :: need to sync
 echo Copying FPKs from SVN...
+
+:: Only copy existing FPKs if we didn't request clean FPK build
+if not "%APPVEYOR_REPO_COMMIT_MESSAGE:FPKCLEAN=%"=="%APPVEYOR_REPO_COMMIT_MESSAGE%" (
+    goto :fpk_live
+)
 xcopy "%build_dir%\Assets\*.FPK" "Assets" /Y
 xcopy "%build_dir%\Assets\fpklive_token.txt" "Assets" /Y
 
+:fpk_live
 echo Packing FPKs...
 call Tools\FPKLive.exe
 if %ERRORLEVEL% neq 0 (
@@ -73,12 +89,18 @@ robocopy Resource "%build_dir%\Resource" %ROBOCOPY_FLAGS%
 robocopy Docs "%build_dir%\Docs" %ROBOCOPY_FLAGS%
 xcopy "Caveman2Cosmos.ini" "%build_dir%" /R /Y
 xcopy "Caveman2Cosmos Config.ini" "%build_dir%" /R /Y
-xcopy "C2C.ico" "%build_dir%" /R /Y
-xcopy "CIV_C2C.ico" "%build_dir%" /R /Y
+xcopy "C2C1.ico" "%build_dir%" /R /Y
+xcopy "C2C2.ico" "%build_dir%" /R /Y
+xcopy "C2C3.ico" "%build_dir%" /R /Y
+xcopy "C2C4.ico" "%build_dir%" /R /Y
+xcopy "Tools\CI\C2C.bat" "%build_dir%" /R /Y
 
 :: GENERATE NEW CHANGES LOG ------------------------------------
 echo Generate SVN commit description...
 call Tools\CI\git-chglog_windows_amd64.exe --output "%root_dir%\commit_desc.md" --config Tools\CI\.chglog\config.yml %C2C_VERSION%
+
+echo Generate forum commit description...
+call Tools\CI\git-chglog_windows_amd64.exe --output "%root_dir%\commit_desc.txt" --config Tools\CI\.chglog\config-bbcode.yml %C2C_VERSION%
 
 :: GENERATE FULL CHANGELOG -------------------------------------
 echo Update full SVN changelog ...
@@ -88,16 +110,38 @@ REM call github_changelog_generator --cache-file "github-changelog-http-cache" -
 :: DETECT SVN CHANGES ------------------------------------------
 echo Detecting working copy changes...
 PUSHD "%build_dir%"
-set SVN=svn.exe
-"%SVN%" status | findstr /R "^!" > ..\missing.list
+call %SVN% status | findstr /R "^!" > ..\missing.list
 for /F "tokens=* delims=! " %%A in (..\missing.list) do (svn delete "%%A")
 del ..\missing.list 2>NUL
-"%SVN%" add * --force
+call %SVN% add * --force
 
 :: COMMIT TO SVN -----------------------------------------------
 echo Commiting new build to SVN...
-:: TODO auto generate a good changelist
-"%SVN%" commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
+REM %SVN% commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
+call %SVN% commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
+if %ERRORLEVEL% neq 0 (
+    call %SVN% cleanup --non-interactive
+    call %SVN% commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
+    if %ERRORLEVEL% neq 0 (
+        echo SVN commit failed, aborting...
+        exit /B 3
+    )
+)
+
+:: REFRESH SVN -------------------------------------------------
+:: Ensuring that the svnversion call below will give a clean 
+:: revision number
+echo Refreshing SVN working copy...
+REM %SVN% update
+call %SVN% update
+if %ERRORLEVEL% neq 0 (
+    call %SVN% cleanup --non-interactive
+    call %SVN% update
+    if %ERRORLEVEL% neq 0 (
+        echo SVN update failed, aborting...
+        exit /B 3
+    )
+)
 
 :: SET SVN RELEASE TAG -----------------------------------------
 echo Setting SVN commit tag on git ...
@@ -105,13 +149,23 @@ for /f "delims=" %%a in ('svnversion') do @set svn_rev=%%a
 
 POPD
 
-git tag -a SVN-%svn_rev% %APPVEYOR_REPO_COMMIT% -m "SVN-%svn_rev%"
-git push --tags
+call git tag -a SVN-%svn_rev% %APPVEYOR_REPO_COMMIT% -m "SVN-%svn_rev%"
+call git push --tags
 
 REM 7z a -r -x!.svn "%release_prefix%-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\*.*"
 REM 7z a -x!.svn "%release_prefix%-CvGameCoreDLL-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\Assets\CvGameCoreDLL.*"
 
-echo Done!
-exit /B 0
-
 POPD
+
+echo FORUM COMMIT MESSAGE ----------------------------------------------------------
+echo -------------------------------------------------------------------------------
+echo.
+echo [size=6][b]SVN-%svn_rev%[/b][/size]
+type "%root_dir%\commit_desc.txt"
+echo.
+echo -------------------------------------------------------------------------------
+echo -------------------------------------------------------------------------------
+
+echo Done!
+
+exit /B 0

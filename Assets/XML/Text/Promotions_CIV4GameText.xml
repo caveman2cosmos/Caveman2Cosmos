@@ -2169,19 +2169,19 @@
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CHECKPOINTS1</Tag>
 		<English>Build Up (Checkpoints) I</English>
 		<French>Développement (Checkpoints) I</French>
-		<German>(Weiterentwicklung) Personenkontrolle I</German>
+		<German>(Training) Personenkontrolle I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CHECKPOINTS2</Tag>
 		<English>Build Up (Checkpoints) II</English>
 		<French>Développement (Checkpoints) II</French>
-		<German>(Weiterentwicklung) Personenkontrolle II</German>
+		<German>(Training) Personenkontrolle II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CHECKPOINTS3</Tag>
 		<English>Build Up (Checkpoints) III</English>
 		<French>Développement (Checkpoints) III</French>
-		<German>(Weiterentwicklung) Personenkontrolle III</German>
+		<German>(Training) Personenkontrolle III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CLEVERNESS1</Tag>
@@ -2467,35 +2467,35 @@
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY1</Tag>
 		<English>Build Up (Fortifications) I</English>
 		<French>Installation (Fortifications) I</French>
-		<German>(Weiterentwicklung) Befestigung I</German>
+		<German>(Training) Befestigung I</German>
 		<Polish>Koncentracja (Fortyfikacje) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY2</Tag>
 		<English>Build Up (Fortifications) II</English>
 		<French>Installation (Fortifications) II</French>
-		<German>(Weiterentwicklung) Befestigung II</German>
+		<German>(Training) Befestigung II</German>
 		<Polish>Koncentracja (Fortyfikacje) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY3</Tag>
 		<English>Build Up (Fortifications) III</English>
 		<French>Installation (Fortifications) III</French>
-		<German>(Weiterentwicklung) Befestigung III</German>
+		<German>(Training) Befestigung III</German>
 		<Polish>Koncentracja (Fortyfikacje) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY4</Tag>
 		<English>Build Up (Fortifications) IV</English>
 		<French>Installation (Fortifications) IV</French>
-		<German>(Weiterentwicklung) Befestigung IV</German>
+		<German>(Training) Befestigung IV</German>
 		<Polish>Koncentracja (Fortyfikacje) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY5</Tag>
 		<English>Build Up (Fortifications) V</English>
 		<French>Installation (Fortifications) V</French>
-		<German>(Weiterentwicklung) Befestigung V</German>
+		<German>(Training) Befestigung V</German>
 		<Polish>Koncentracja (Fortyfikacje) V</Polish>
 	</TEXT>
 	<TEXT>
@@ -2556,27 +2556,27 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_LIE_IN_WAIT1</Tag>
 		<English>Build Up (Lie in Wait) I</English>
-		<German>(Weiterentwicklung) Auflauern I</German>
+		<German>(Training) Auflauern I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_LIE_IN_WAIT2</Tag>
 		<English>Build Up (Lie in Wait) II</English>
-		<German>(Weiterentwicklung) Auflauern II</German>
+		<German>(Training) Auflauern II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_LIE_IN_WAIT3</Tag>
 		<English>Build Up (Lie in Wait) III</English>
-		<German>(Weiterentwicklung) Auflauern III</German>
+		<German>(Training) Auflauern III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_LIE_IN_WAIT4</Tag>
 		<English>Build Up (Lie in Wait) IV</English>
-		<German>(Weiterentwicklung) Auflauern IV</German>
+		<German>(Training) Auflauern IV</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_LIE_IN_WAIT5</Tag>
 		<English>Build Up (Lie in Wait) V</English>
-		<German>(Weiterentwicklung) Auflauern V</German>
+		<German>(Training) Auflauern V</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_MAINTENANCE_HANGAR1</Tag>
@@ -2677,35 +2677,35 @@
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_RESTFUL_RECOVERY1</Tag>
 		<English>Build Up (Restful Recovery) I</English>
 		<French>Installation (Equipe de récupération) I</French>
-		<German>(Weiterentwicklung) Wiederherstellung I</German>
+		<German>(Training) Wiederherstellung I</German>
 		<Polish>Koncentracja (Spokojny Wypoczynek) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_RESTFUL_RECOVERY2</Tag>
 		<English>Build Up (Restful Recovery) II</English>
 		<French>Installation (Equipe de récupération) II</French>
-		<German>(Weiterentwicklung) Wiederherstellung II</German>
+		<German>(Training) Wiederherstellung II</German>
 		<Polish>Koncentracja (Spokojny Wypoczynek) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_RESTFUL_RECOVERY3</Tag>
 		<English>Build Up (Restful Recovery) III</English>
 		<French>Installation (Equipe de récupération) III</French>
-		<German>(Weiterentwicklung) Wiederherstellung III</German>
+		<German>(Training) Wiederherstellung III</German>
 		<Polish>Koncentracja (Spokojny Wypoczynek) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_RESTFUL_RECOVERY4</Tag>
 		<English>Build Up (Restful Recovery) IV</English>
 		<French>Installation (Equipe de récupération) IV</French>
-		<German>(Weiterentwicklung) Wiederherstellung IV</German>
+		<German>(Training) Wiederherstellung IV</German>
 		<Polish>Koncentracja (Spokojny Wypoczynek) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_RESTFUL_RECOVERY5</Tag>
 		<English>Build Up (Restful Recovery) V</English>
 		<French>Installation (Equipe de récupération) V</French>
-		<German>(Weiterentwicklung) Wiederherstellung V</German>
+		<German>(Training) Wiederherstellung V</German>
 		<Polish>Koncentracja (Spokojny Wypoczynek) V</Polish>
 	</TEXT>
 	<TEXT>
@@ -8802,6 +8802,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INVISIBILE_PLOT_CHANGE_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Mod %F2_Icon Veil on %s3_Type.</English>
+		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Unsichtbarkeit %s3_Type.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INVISIBILITY_INTENSITY_CHANGE_TEXT</Tag>
@@ -17462,7 +17463,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_FORTIFY</Tag>
 		<English>Build Up (Fortifications) Promotionline</English>
 		<French>Spécialisation Fortifications</French>
-		<German>(Weiterentwicklung) Befestigung</German>
+		<German>(Training) Befestigung</German>
 		<Polish>Linia Promocji: Koncentracja (Fortyfikacje)</Polish>
 	</TEXT>
 	<TEXT>
@@ -17508,7 +17509,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_RESTFUL_RECOVERY</Tag>
 		<English>Build Up (Restful Recovery) Promotionline</English>
 		<French>Spécialisation Récupération</French>
-		<German>(Weiterentwicklung) Wiederherstellung</German>
+		<German>(Training) Wiederherstellung</German>
 		<Polish>Linia Promocji: Koncentracja (Spokojny odpoczynek)</Polish>
 	</TEXT>
 	<TEXT>
@@ -18987,7 +18988,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CHECKPOINTS</Tag>
 		<English>Build Up (Checkpoints) Promotionline</English>
 		<French>Spécialisation (Checkpoints)</French>
-		<German>(Weiterentwicklung) Personenkontrolle</German>
+		<German>(Training) Personenkontrolle</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CHECKPOINTS_HELP</Tag>
@@ -19390,7 +19391,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_LIE_IN_WAIT</Tag>
 		<English>Build Up (Lie in Wait) Promotionline</English>
-		<German>(Weiterentwicklung) Auflauern</German>
+		<German>(Training) Auflauern</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_LIE_IN_WAIT_HELP</Tag>

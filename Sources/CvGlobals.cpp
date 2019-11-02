@@ -3,6 +3,7 @@
 //
 #include "CvGameCoreDLL.h"
 #include "CvMapExternal.h"
+#include <time.h> 
 
 static char gVersionString[64] = { 0 };
 
@@ -324,6 +325,8 @@ m_iMAX_UNIT_VISIBILITY_RANGE(0),
 m_iGREATER_COMMERCE_SWITCH_POINT(0),
 m_iWORKER_TRADE_VALUE_PERCENT_ADJUSTMENT(0),
 m_iTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT(0),
+m_iINFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT(0),
+m_iESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT(0),
 m_iWATER_POTENTIAL_CITY_WORK_FOR_AREA(0),
 m_iSAD_MAX_MODIFIER(0),
 m_iUPSCALED_RESEARCH_COST_MODIFIER(0),
@@ -478,9 +481,15 @@ cvInternalGlobals::~cvInternalGlobals()
 
 void CreateMiniDump(EXCEPTION_POINTERS *pep)
 {
-	_TCHAR filename[100];
+	_TCHAR filename[256];
 
-	_stprintf(filename, _T("MiniDump-%s.dmp"), C2C_VERSION);
+	time_t rawtime;
+	struct tm* timeinfo;
+	time (&rawtime);
+	timeinfo = localtime (&rawtime);
+
+	_stprintf(filename, _T("MiniDump-%s-%d%02d%02d-%02d%02d%02d.dmp"), C2C_VERSION, 1900 + timeinfo->tm_year, timeinfo->tm_mon, timeinfo->tm_mday, timeinfo->tm_hour, timeinfo->tm_min, timeinfo->tm_sec);
+
 	/* Open a file to store the minidump. */
 	HANDLE hFile = CreateFile(filename,
 	                          GENERIC_READ | GENERIC_WRITE,
@@ -4080,6 +4089,8 @@ void cvInternalGlobals::cacheGlobals()
 	m_iGREATER_COMMERCE_SWITCH_POINT = getDefineINT("GREATER_COMMERCE_SWITCH_POINT");
 	m_iWORKER_TRADE_VALUE_PERCENT_ADJUSTMENT = getDefineINT("WORKER_TRADE_VALUE_PERCENT_ADJUSTMENT");
 	m_iTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT = getDefineINT("TRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT");
+	m_iINFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT = getDefineINT("INFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT");
+	m_iESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT = getDefineINT("ESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT");
 	m_iWATER_POTENTIAL_CITY_WORK_FOR_AREA = getDefineINT("WATER_POTENTIAL_CITY_WORK_FOR_AREA");
 	m_iSAD_MAX_MODIFIER = getDefineINT("SAD_MAX_MODIFIER");
 	m_iUPSCALED_RESEARCH_COST_MODIFIER = getDefineINT("UPSCALED_RESEARCH_COST_MODIFIER");
@@ -4671,6 +4682,16 @@ int cvInternalGlobals::getWORKER_TRADE_VALUE_PERCENT_ADJUSTMENT() const
 int cvInternalGlobals::getTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT() const
 {
 	return m_iTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT;
+}
+
+int cvInternalGlobals::getINFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT() const
+{
+	return m_iINFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT;
+}
+
+int cvInternalGlobals::getESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT() const
+{
+	return m_iESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT;
 }
 
 int cvInternalGlobals::getWATER_POTENTIAL_CITY_WORK_FOR_AREA() const
@@ -5598,12 +5619,12 @@ CvViewport* cvInternalGlobals::getCurrentViewport()
 
 int	cvInternalGlobals::getViewportSizeX() const
 {
-	return GC.viewportsEnabled() ? m_iViewportSizeX : m_maps[GC.getGame().getCurrentMap()]->getGridWidthINLINE();
+	return GC.viewportsEnabled() ? std::min(m_iViewportSizeX, m_maps[GC.getGame().getCurrentMap()]->getGridWidthINLINE()) : m_maps[GC.getGame().getCurrentMap()]->getGridWidthINLINE();
 }
 
 int	cvInternalGlobals::getViewportSizeY() const
 {
-	return GC.viewportsEnabled() ? m_iViewportSizeY : m_maps[GC.getGame().getCurrentMap()]->getGridHeightINLINE();
+	return GC.viewportsEnabled() ? std::min(m_iViewportSizeY, m_maps[GC.getGame().getCurrentMap()]->getGridHeightINLINE()) : m_maps[GC.getGame().getCurrentMap()]->getGridHeightINLINE();
 }
 
 int	cvInternalGlobals::getViewportSelectionBorder() const

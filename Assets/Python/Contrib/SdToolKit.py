@@ -206,15 +206,9 @@ def sdObjectSetVal(ModID, object, var, val):
 
 	cyTable = sdLoad(object)
 	if ModID in cyTable:
-		mTable = cyTable[ModID]
-		if var in mTable:
-			mTable[var] = val
-			object.setScriptData(cPickle.dumps(cyTable))
-			return True
-		else:
-			mTable[var] = val
-			object.setScriptData(cPickle.dumps(cyTable))
-			return True
+		cyTable[ModID][var] = val
+		object.setScriptData(cPickle.dumps(cyTable))
+		return True
 	return False
 
 # sdObjectChangeVal('MyModName', object, 'VariableName', change_in_value)

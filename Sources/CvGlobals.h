@@ -694,6 +694,8 @@ public:
 	int getGREATER_COMMERCE_SWITCH_POINT() const;
 	int getWORKER_TRADE_VALUE_PERCENT_ADJUSTMENT() const;
 	int getTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT() const;
+	int getINFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT() const;
+	int getESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT() const;
 	int getWATER_POTENTIAL_CITY_WORK_FOR_AREA() const;
 	int getSAD_MAX_MODIFIER() const;
 	int getUPSCALED_RESEARCH_COST_MODIFIER() const;
@@ -1706,7 +1708,7 @@ protected:
 	std::vector<CvEventInfo*> m_paEventInfo;
 	CvInfoReplacements<CvEventInfo> m_EventInfoReplacements;
 	std::vector<CvEspionageMissionInfo*> m_paEspionageMissionInfo;
-    std::vector<CvUnitArtStyleTypeInfo*> m_paUnitArtStyleTypeInfo;
+	std::vector<CvUnitArtStyleTypeInfo*> m_paUnitArtStyleTypeInfo;
 	std::vector<CvPropertyInfo*> m_paPropertyInfo;
 	std::vector<CvOutcomeInfo*> m_paOutcomeInfo;
 	std::vector<CvCivNameInfo*> m_paCivNameInfo;
@@ -1960,6 +1962,8 @@ protected:
 	int m_iGREATER_COMMERCE_SWITCH_POINT;
 	int m_iWORKER_TRADE_VALUE_PERCENT_ADJUSTMENT;
 	int m_iTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT;
+	int m_iINFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT;
+	int m_iESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT;
 	int m_iWATER_POTENTIAL_CITY_WORK_FOR_AREA;
 	int m_iSAD_MAX_MODIFIER;
 	int m_iUPSCALED_RESEARCH_COST_MODIFIER;
@@ -3525,7 +3529,7 @@ public:
 	{
 		if ( pDll != NULL )
 		{
-			g_DLL = pDll;
+			FAssertMsg(g_DLL == NULL, "Dll interface already set?");
 
 			OutputDebugString("setDLLIFace()\n");
 			if (gGlobals == NULL)
@@ -3533,12 +3537,14 @@ public:
 				OutputDebugString("Constructing internal globals\n");
 				gGlobals = new cvInternalGlobals();
 			}
+
+			g_DLL = pDll;
 		}
 		else
 		{
-			delete gGlobals;
-
+			FAssertMsg(g_DLL != NULL, "Dll interface not set?");
 			g_DLL = NULL;
+			delete gGlobals;
 		}
 	}
 

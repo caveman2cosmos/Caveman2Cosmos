@@ -37,7 +37,6 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 	CvArea* pArea;
 	CvPlot* pPlot;
 	CvPlot* pLoopPlot;
-	int iRange;
 	int iDX, iDY;
 	int iI;
 
@@ -88,7 +87,8 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 	}
 
 	CvBonusInfo& pInfo = GC.getBonusInfo(eBonus);
-	CvBonusClassInfo& pClassInfo = GC.getBonusClassInfo((BonusClassTypes) pInfo.getBonusClassType());
+	int iBonusClassType = pInfo.getBonusClassType();
+	CvBonusClassInfo& pClassInfo = GC.getBonusClassInfo((BonusClassTypes) iBonusClassType);
 
 	if (pPlot->isWater())
 	{
@@ -97,63 +97,28 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 			return false;
 		}
 	}
-
 	// Make sure there are no bonuses of the same class (but a different type) nearby:
-
-	iRange = pClassInfo.getUniqueRange();
-	if (GC.getGame().isOption(GAMEOPTION_MORE_RESOURCES))
+	int iRange0 = pClassInfo.getUniqueRange();
+	if (iRange0 > 0)
 	{
-		iRange /= 2;
-	}
+		iRange0 += (GC.getMapINLINE().getWorldSize() + 1) / 2;
 
-	for (iDX = -(iRange); iDX <= iRange; iDX++)
-	{
-		for (iDY = -(iRange); iDY <= iRange; iDY++)
+		if (GC.getGame().isOption(GAMEOPTION_MORE_RESOURCES))
 		{
-			pLoopPlot	= plotXY(iX, iY, iDX, iDY);
-
-			if (pLoopPlot != NULL)
+			iRange0 /= 2;
+		}
+		for (iDX = -(iRange0); iDX <= iRange0; iDX++)
+		{
+			for (iDY = -(iRange0); iDY <= iRange0; iDY++)
 			{
-				if (pLoopPlot->area() == pArea)
+				if (iDX || iDY)
 				{
-					if (plotDistance(iX, iY, pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE()) <= iRange)
+					pLoopPlot = plotXY(iX, iY, iDX, iDY);
+
+					if (pLoopPlot != NULL && pLoopPlot->area() == pArea)
 					{
 						BonusTypes eOtherBonus = pLoopPlot->getBonusType();
-						if (eOtherBonus != NO_BONUS)
-						{
-							if (GC.getBonusInfo(eOtherBonus).getBonusClassType() == pInfo.getBonusClassType())
-							{
-								return false;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	// Make sure there are none of the same bonus nearby:
-
-	iRange = pInfo.getUniqueRange();
-
-	if (GC.getGame().isOption(GAMEOPTION_MORE_RESOURCES))
-	{
-		iRange /= 2;
-	}
-
-	for (iDX = -(iRange); iDX <= iRange; iDX++)
-	{
-		for (iDY = -(iRange); iDY <= iRange; iDY++)
-		{
-			pLoopPlot	= plotXY(iX, iY, iDX, iDY);
-
-			if (pLoopPlot != NULL)
-			{
-				if (pLoopPlot->area() == pArea)
-				{
-					if (plotDistance(iX, iY, pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE()) <= iRange)
-					{
-						if (pLoopPlot->getBonusType() == eBonus)
+						if (eOtherBonus == eBonus || eOtherBonus != NO_BONUS && GC.getBonusInfo(eOtherBonus).getBonusClassType() == pInfo.getBonusClassType())
 						{
 							return false;
 						}
@@ -162,7 +127,38 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 			}
 		}
 	}
+	else if (iRange0 < 0) { iRange0 = 0; }
 
+	// Make sure there are none of the same bonus nearby:
+	int iRange1 = pInfo.getUniqueRange();
+
+	if (iRange1 > 0)
+	{
+		iRange1 += GC.getMapINLINE().getWorldSize();
+
+		if (GC.getGame().isOption(GAMEOPTION_MORE_RESOURCES))
+		{
+			iRange1 /= 2;
+		}
+		if (iRange1 > iRange0)
+		{
+			for (iDX = -(iRange1); iDX <= iRange1; iDX++)
+			{
+				for (iDY = -(iRange1); iDY <= iRange1; iDY++)
+				{
+					if (iDY < -iRange0 || iDY > iRange0 || iDX < -iRange0 || iDX > iRange0)
+					{
+						pLoopPlot = plotXY(iX, iY, iDX, iDY);
+
+						if (pLoopPlot != NULL && pLoopPlot->area() == pArea && pLoopPlot->getBonusType() == eBonus)
+						{
+							return false;
+						}
+					}
+				}
+			}
+		}
+	}
 	return true;
 }
 
@@ -1197,18 +1193,21 @@ int CvMapGenerator::calculateNumBonusesToAdd(BonusTypes eBonusType)
 	CvBonusInfo& pBonusInfo = GC.getBonusInfo(eBonusType);
 
 	// Calculate iBonusCount, the amount of this bonus to be placed:
+	int iBaseCount =
+	(
+		pBonusInfo.getConstAppearance() +
+		GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance1(), "calculateNumBonusesToAdd-1") +
+		GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance2(), "calculateNumBonusesToAdd-2") +
+		GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance3(), "calculateNumBonusesToAdd-3") +
+		GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance4(), "calculateNumBonusesToAdd-4")
+	);
+	iBaseCount += iBaseCount * GC.getMapINLINE().getWorldSize() / 4; // Scale by map size
 
-	int iRand1 = GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance1(), "calculateNumBonusesToAdd-1");
-	int iRand2 = GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance2(), "calculateNumBonusesToAdd-2");
-	int iRand3 = GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance3(), "calculateNumBonusesToAdd-3");
-	int iRand4 = GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance4(), "calculateNumBonusesToAdd-4");
-	int iBaseCount = pBonusInfo.getConstAppearance() + iRand1 + iRand2 + iRand3 + iRand4;
-
-	bool bIgnoreLatitude = GC.getGameINLINE().pythonIsBonusIgnoreLatitudes();
+	iBaseCount += GC.getGameINLINE().countCivPlayersAlive() * pBonusInfo.getPercentPerPlayer(); // Toffer: Should imo be removed.
 
 	// Calculate iNumPossible, the number of plots that are eligible to have this bonus:
+	bool bIgnoreLatitude = GC.getGameINLINE().pythonIsBonusIgnoreLatitudes();
 
-	int iLandTiles = 0;
 	if (pBonusInfo.getTilesPer() > 0)
 	{
 		int iNumPossible = 0;
@@ -1220,18 +1219,18 @@ int CvMapGenerator::calculateNumBonusesToAdd(BonusTypes eBonusType)
 				iNumPossible++;
 			}
 		}
-		iLandTiles += (iNumPossible / pBonusInfo.getTilesPer());
+		iBaseCount += iNumPossible * 1000 / (pBonusInfo.getTilesPer() * (GC.getMapINLINE().getWorldSize() + 7)); // Density scaled by map size, less dense on large maps.
 	}
 
-	int iPlayers = (GC.getGameINLINE().countCivPlayersAlive() * pBonusInfo.getPercentPerPlayer()) / 100;
-	int iBonusCount = (iBaseCount * (iLandTiles + iPlayers)) / 100;
 	if (GC.getGame().isOption(GAMEOPTION_MORE_RESOURCES))
 	{
-		iBonusCount *= (GC.getDefineINT("BONUS_COUNT_PERCENTAGE_MODIFIER_ON_MORE_RESOURCES") + 100);
-		iBonusCount /= 100;
+		iBaseCount *= (GC.getDefineINT("BONUS_COUNT_PERCENTAGE_MODIFIER_ON_MORE_RESOURCES") + 100);
+		iBaseCount /= 100;
 	}
-	iBonusCount = std::max(1, iBonusCount);
-	return iBonusCount;
+	iBaseCount /= 100;
+
+	if (iBaseCount < 1) { return 1; }
+	return iBaseCount;
 }
 
 /*********************************/

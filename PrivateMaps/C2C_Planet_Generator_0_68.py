@@ -1841,7 +1841,7 @@ def generatePlotTypes():
 	maxLandTiles = iW * (iH - poleSeparation * 2) * ((100 - oceanPercentage) / 100.0)
 	print "default max tiles:",maxLandTiles
 	if continentCount > 0 and maxLandTiles >=0:
-		newMaxLandTiles = ((( sqrt(maxLandTiles / float(continentCount))) - continentSeparation * 0.9)**2) * continentCount
+		newMaxLandTiles = ((( math.sqrt(maxLandTiles / float(continentCount))) - continentSeparation * 0.9)**2) * continentCount
 		if newMaxLandTiles > continentCount * 2:
 			maxLandTiles = newMaxLandTiles
 	maxLandTiles = int(maxLandTiles * 0.95)

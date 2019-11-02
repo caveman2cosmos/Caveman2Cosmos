@@ -1243,7 +1243,7 @@ class CvMainInterface:
 					self.updateTooltip(screen, szTxt)
 				self.bUpdateUnitTT == False
 			# Tooltip sometimes get stuck...
-			POINT = GC.getCursorPos()
+			POINT = Win32.getCursorPos()
 			xDiff = POINT.x - self.xMouseTT
 			yDiff = POINT.y - self.yMouseTT
 			if xDiff < 0:
@@ -1424,7 +1424,7 @@ class CvMainInterface:
 			CyIF.setDirty(InterfaceDirtyBits.Help_DIRTY_BIT, False)
 		# Tooltip
 		if self.bTooltip and self.bLockedTT:
-			POINT = GC.getCursorPos()
+			POINT = Win32.getCursorPos()
 			iX = POINT.x + self.iOffsetTT[0]
 			iY = POINT.y + self.iOffsetTT[1]
 			if iX < 0: iX = 0
@@ -1894,23 +1894,22 @@ class CvMainInterface:
 			iMaxCols = w / iSize4
 			iMaxUnits = iMaxCols * iMaxRows
 
+		# Auto-scroll?
 		if self.bPlotListAutoScroll:
 			self.cleanPlotList(screen)
 			iTopRow = 0
 			if not self.InCity:
 				# Find selected unit list position
-				iPos = i = 0
+				i = iPos = 0
 				while i < iUnits:
 					CyUnit = CyPlot.getUnit(i)
-					if not self.bDebugMode and CyUnit.isInvisible(iTeamAct, False):
-						i += 1
-					else:
+					if self.bDebugMode or not CyUnit.isInvisible(iTeamAct, False):
 						if CyUnit.IsSelected():
 							if iPos >= iMaxUnits:
 								self.iPlotListTopRow = iTopRow = 1 + (iPos - iMaxUnits)/iMaxCols
 							break
 						iPos += 1
-						i += 1
+					i += 1
 		else:
 			iTopRow = self.iPlotListTopRow
 			self.bPlotListAutoScroll = True
@@ -1918,7 +1917,7 @@ class CvMainInterface:
 		aMap = {}
 		aList = []
 		iStart = iTopRow * iMaxCols
-		iPos = i = iStart
+		i = iPos = iStart
 		while i < iUnits and iPos - iStart < iMaxUnits:
 			CyUnit = CyPlot.getUnit(i)
 			i += 1
@@ -2029,11 +2028,19 @@ class CvMainInterface:
 		if aList == self.aPlotListList:
 			return
 
-		if iMaxUnits < iUnits:
+		# Total visible units count
+		i = iVisibleUnits = 0
+		while i < iUnits:
+			CyUnit = CyPlot.getUnit(i)
+			if self.bDebugMode or not CyUnit.isInvisible(iTeamAct, False):
+				iVisibleUnits += 1
+			i += 1
+		# Scroll buttons?
+		if iMaxUnits < iVisibleUnits:
 			screen.show("PlotListScroll")
 			if iTopRow:
 				screen.show("PlotList|Scroll0")
-			self.iMaxPlotListScroll = 1 + (iUnits-1-iMaxUnits)/iMaxCols
+			self.iMaxPlotListScroll = 1 + (iVisibleUnits-1-iMaxUnits)/iMaxCols
 			if iTopRow < self.iMaxPlotListScroll:
 				screen.show("PlotList|Scroll1")
 		else:
@@ -2059,20 +2066,21 @@ class CvMainInterface:
 		iLeaderPromo = self.PROMOTION_LEADER
 
 		# Draw plot list
+		iDisplayedUnits = len(aList)
 		i = iMaxRows - 1
 		if bCityScreen:
 			y0 = iSize6 * i
-		elif iUnits < i * iMaxCols + 1:
-			y0 = iSize6 * (i - iUnits/iMaxCols)
+		elif iDisplayedUnits <= i * iMaxCols:
+			y0 = iSize6 * (i - (iDisplayedUnits - 1)/iMaxCols)
 		else:
 			y0 = 0
 		self.yPlotListTT = y + y0
 		halfSize = iSize0/2
 		actSize = iSize6/3
 		upgSize = iSize6/2
-		i = -1
-		for i, entry in enumerate(aList):
-			CyUnit, iUnitType, bEnable, bSelected, fHP, iDot, szActivity, bPromo, bUpg = entry
+		i = 0
+		while i < iDisplayedUnits:
+			CyUnit, iUnitType, bEnable, bSelected, fHP, iDot, szActivity, bPromo, bUpg = aList[i]
 			iDot0, iDot1 = iDot
 			x = (i % iMaxCols) * iSize4
 			y = y0 + (i / iMaxCols) * iSize8
@@ -2126,6 +2134,7 @@ class CvMainInterface:
 					iColor = cCoGreen
 				screen.setStackedBarColors(Bar, InfoBarTypes.INFOBAR_STORED, iColor)
 				screen.setImageButtonAt("PlotList|Health" + str(i), Area, "", x+2, y+iSize0, iSize1, 11, eWidGen, 1, 1)
+			i += 1
 
 
 	def updateSelectionButtons(self, screen):
@@ -2410,8 +2419,7 @@ class CvMainInterface:
 							screen.setBarPercentage("ResearchBar", InfoBarTypes.INFOBAR_RATE, 0)
 						screen.show("ResearchBar")
 
-						szTxt = GC.getTechInfo(iCurrentResearch).getDescription()
-						szTxt += u' (%d)' %(CyPlayer.getResearchTurnsLeft(iCurrentResearch, true))
+						szTxt = GC.getTechInfo(iCurrentResearch).getDescription() + " (" + str(CyPlayer.getResearchTurnsLeft(iCurrentResearch, True)) + ')'
 						screen.setText("WID|TECH|ProgBar1", "", szTxt, 1<<2, x, 2, 0, eFontGame, eWidGen, iCurrentResearch, 0)
 
 				# Great General Bar
@@ -2439,6 +2447,7 @@ class CvMainInterface:
 						y = 2
 					x += w / 2
 					screen.setText("GreatPersonBar1", "", szTxt, 1<<2, x, y, 0, eFontGame, eWidGen, 0, 0)
+					screen.setHitTest("GreatPersonBar1", HitTestTypes.HITTEST_NOHIT)
 					if CyCity:
 						fThreshold = float(GC.getPlayer(CyCity.getOwner()).greatPeopleThreshold(False))
 						fRate = float(CyCity.getGreatPeopleRate())
@@ -4950,7 +4959,7 @@ class CvMainInterface:
 	#######################
 	# Plot help
 	def updatePlotHelp(self, screen, uFont=None):
-		POINT = GC.getCursorPos()
+		POINT = Win32.getCursorPos()
 		xMouse = POINT.x
 		if xMouse < 40 or xMouse > self.xRes - 40:
 			screen.hide("PlotHelp")
@@ -4991,13 +5000,13 @@ class CvMainInterface:
 				uFont=self.aFontList[5]
 			self.szHelpText = szHelpText
 			iX, iY = pyTT.makeTooltip(screen, xPos, yPos, szHelpText, uFont, "Tooltip")
-			POINT = GC.getCursorPos()
+			POINT = Win32.getCursorPos()
 			self.iOffsetTT = [iX - POINT.x, iY - POINT.y]
 			self.xMouseTT = POINT.x
 			self.yMouseTT = POINT.y
 		else:
 			if xPos == yPos == -1:
-				POINT = GC.getCursorPos()
+				POINT = Win32.getCursorPos()
 				self.xMouseTT = POINT.x
 				self.yMouseTT = POINT.y
 				xOff, yOff = self.iOffsetTT
@@ -5236,14 +5245,13 @@ class CvMainInterface:
 
 				elif TYPE == "TECH":
 					szTxt = ""
-					if CASE:
-						if CASE[0] == "Selection":
-							szTxt += "Research: "
-						elif CASE[0] == "ProgBar":
-							szTxt += "Researching: "
-							iType = GC.getPlayer(self.iPlayer).getCurrentResearch()
-						elif CASE[0] == "Score":
-							szTxt += "Researching: "
+					if CASE[0] == "Selection":
+						szTxt += "Research: "
+					elif CASE[0] == "ProgBar":
+						szTxt += "Researching: "
+						iType = GC.getPlayer(self.iPlayer).getCurrentResearch()
+					elif CASE[0] == "Score":
+						szTxt += "Researching: "
 					szTxt += CyGameTextMgr().getTechHelp(iType, False, True, True, True, -1)
 					self.updateTooltip(screen, szTxt)
 
@@ -5260,16 +5268,17 @@ class CvMainInterface:
 			elif BASE == "PlotList":
 				if TYPE in ("Button", "Health"):
 					CyUnit = self.aPlotListList[ID][0]
-					if TYPE == "Button":
-						szTxt = CyGameTextMgr().getSpecificUnitHelp(CyUnit, False, False)
-						x = self.xRes / 4
-						y = self.yPlotListTT
-						self.dataTT = [bCtrl, bShift, bAlt, "spcfc", CyUnit]
-					elif TYPE == "Health":
-						szTxt = "HP: %d/%d" %(CyUnit.currHitPoints(), CyUnit.maxHitPoints())
-						x = -1
-						y = -1
-					self.updateTooltip(screen, szTxt, x, y)
+					if not CyUnit.isDead():
+						if TYPE == "Button":
+							szTxt = CyGameTextMgr().getSpecificUnitHelp(CyUnit, False, False)
+							x = self.xRes / 4
+							y = self.yPlotListTT
+							self.dataTT = [bCtrl, bShift, bAlt, "spcfc", CyUnit]
+						elif TYPE == "Health":
+							szTxt = "HP: %d/%d" %(CyUnit.currHitPoints(), CyUnit.maxHitPoints())
+							x = -1
+							y = -1
+						self.updateTooltip(screen, szTxt, x, y)
 
 			elif BASE == "BldgList":
 				if TYPE == "Demolish":
@@ -5310,7 +5319,7 @@ class CvMainInterface:
 				self.bPlotHelpBan = True
 				screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
 				screen.hide("PlotHelp")
-				POINT = GC.getCursorPos()
+				POINT = Win32.getCursorPos()
 				self.xMouseNoPlotHelp = POINT.x; self.yMouseNoPlotHelp = POINT.y
 
 			elif NAME == "AdvisorButton":

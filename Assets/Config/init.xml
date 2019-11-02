@@ -108,7 +108,6 @@
 	<load mod="CaptureSlaves"/>
 	<load mod="MasterModList"/>
 	<load mod="Partisan"/>
-	<load mod="Heroes"/>
 	<load mod="InitMilitaryPromos"/>
 	<load mod="NaturalWonders"/>
 	<load mod="GreatPersonBornDisplay"/>

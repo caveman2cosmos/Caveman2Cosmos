@@ -380,7 +380,7 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("isSpecialistBanned", &CyCity::isSpecialistBanned, "bool (int /*SpecialistTypes*/)")
 		.def("banSpecialist", &CyCity::banSpecialist, "banSpecialist(int /*SpecialistTypes*/)")
 		.def("removeSpecialistBan", &CyCity::removeSpecialistBan, "removeSpecialistBan(int /*SpecialistTypes*/)")
-
+		.def("isEventOccured", &CyCity::isEventOccured, "bool (int /*EventTypes*/)")
 
 		;
 }

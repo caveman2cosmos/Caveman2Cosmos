@@ -2167,13 +2167,7 @@ bool CvSelectionGroup::startMission()
 						//just play animation, not golden age - JW
 						if (headMissionQueueNode()->m_data.iData1 != -1)
 						{
-							CvMissionDefinition kMission;
-							kMission.setMissionTime(GC.getMissionInfo(MISSION_GOLDEN_AGE).getTime() * gDLL->getSecsPerTurn());
-							kMission.setUnit(BATTLE_UNIT_ATTACKER, pLoopUnit);
-							kMission.setUnit(BATTLE_UNIT_DEFENDER, NULL);
-							kMission.setPlot(pLoopUnit->plot());
-							kMission.setMissionType(MISSION_GOLDEN_AGE);
-							pLoopUnit->addMission(&kMission);
+							pLoopUnit->addMission(CvMissionDefinition(MISSION_GOLDEN_AGE, pLoopUnit->plot(), pLoopUnit));
 							pLoopUnit->NotifyEntity(MISSION_GOLDEN_AGE);
 							bAction = true;
 						}

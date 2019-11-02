@@ -37,12 +37,10 @@ def init():
 	sys.stdout = CvUtil.RedirectDebug()
 
 def onSave():
-	import CvWBDesc
 	import cPickle
 	import CvEventInterface
 	# if the tutorial is active, it will save out the Shown Messages list
-	saveDataStr = cPickle.dumps(CvEventInterface.onEvent(('OnSave', 0, 0, 0, 0, 0)))
-	return saveDataStr
+	return cPickle.dumps(CvEventInterface.onEvent(('OnSave', 0, 0, 0, 0, 0)))
 
 def onLoad(argsList):
 	import cPickle
@@ -52,19 +50,9 @@ def onLoad(argsList):
 		CvEventInterface.onEvent(('OnLoad', cPickle.loads(loadDataStr), 0, 0, 0, 0, 0))
 
 def preGameStart():
-	# BUG - core
 	import CvEventInterface
 	CvEventInterface.getEventManager().fireEvent("PreGameStart")
-	# continue
 	import CvScreensInterface
-	if not CyGame().isPitbossHost():
-		# Preload the tech chooser..., only do this release builds, in debug build we may not be raising the tech chooser
-		if not CyGlobalContext().isDebugBuild():
-			NiTextOut("Preloading tech chooser")
-			CvScreensInterface.showTechChooser()
-			CvScreensInterface.techChooser.hideScreen()
-
-	NiTextOut("Loading main interface...")
 	CvScreensInterface.showMainInterface()
 
 def onPbemSend(argsList):

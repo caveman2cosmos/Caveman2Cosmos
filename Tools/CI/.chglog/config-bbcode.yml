@@ -1,0 +1,29 @@
+style: github
+template: CHANGELOG.tpl.bbcode
+info:
+  title: CHANGELOG
+  repository_url: https://github.com/caveman2cosmos/Caveman2Cosmos
+options:
+  commits:
+    # filters:
+    #   Type:
+    #     - feat
+    #     - fix
+    #     - perf
+    #     - refactor
+  commit_groups:
+    group_by: Type
+    title_maps:
+      feat: "Features :hammer:"
+      fix: "Bug Fixes :sniper::rotfl:"
+      balance: "Balance :think:"
+      perf: "Performance Improvements :whipped:"
+  header:
+    pattern: "^(\\w*)(?:\\(([\\w\\$\\.\\-\\*\\s]*)\\))?\\:\\s(.*)$"
+    pattern_maps:
+      - Type
+      - Scope
+      - Subject
+  notes:
+    keywords:
+      - BREAKING CHANGE
