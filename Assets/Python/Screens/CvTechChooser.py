@@ -302,7 +302,7 @@ class CvTechChooser:
 		dx = self.sIcon1 + 1
 		iMaxElements = (self.wCell - self.sIcon0 - 8) / dx
 
-		minimapWid = int(self.xCellDist * self.minimapScaleX) - 1
+		minimapWid = int(self.xCellDist * self.minimapScaleX) - 2
 		if minimapWid < 2:
 			minimapWid = 2
 
@@ -310,7 +310,7 @@ class CvTechChooser:
 			CvTechInfo = GC.getTechInfo(iTech)
 
 			x0 = CvTechInfo.getGridX()
-			if x0 < 2:
+			if x0 < 1:
 				continue
 
 			iTechStr = str(iTech)
