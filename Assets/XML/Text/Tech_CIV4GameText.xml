@@ -5209,7 +5209,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CODE_OF_LAWS</Tag>
-		<English>Code of Laws</English>
+		<English>Law Codafication</English>
 		<French>
 			<Text>Livre des lois</Text>
 			<Gender>Male</Gender>
@@ -5234,7 +5234,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CODE_OF_LAWS_PEDIA</Tag>
-		<English>The earliest tribal civilizations were bonded together by mutual needs and beliefs. A tribal chieftain, who acted as an advisor and enforcer of the will of the gods, ruled these groups. No formal laws existed in these early cultures, but fear of the gods and a sense of tribal customs and morality kept order in the tribe. As societies became larger and more diverse, the need arose for established rules of conduct. The earliest known codes of laws existed in Babylon, India, and Palestine. The Twelve Tables of Rome, written in 500 BC, and its successors such as the Justinian Code, were the first codes of law to distinguish between public law, which involves the state, and private law, which concerns disputes between citizens. Roman law was the first formalized written system of laws, and went on to influence many of the legal systems of the modern world.</English>
+		<English>In law, codification is the process of collecting and restating the law of a jurisdiction in certain areas, usually by subject, forming a legal code, i.e. a codex of law. Codification is one of the defining features of civil law jurisdictions.</English>
 		<French>Les civilisations tribales primitives étaient formées d'individus partageant les mêmes croyances et besoins. Ces groupes étaient dirigés par un chef tribal, chargé d'interpréter et d'appliquer la volonté des dieux. Ces sociétés étaient dépourvues de lois officielles et l'ordre social reposait sur la crainte des dieux ainsi que le respect des coutumes tribales et des règles morales. Mais au fur et à mesure que ces sociétés s'élargissaient et se diversifiaient, la nécessité d'établir des règles de conduite strictes se faisait ressentir. Les premiers codes de lois connus sont apparus à Babylone, en Inde et en Palestine. Les Douze Tables de Rome, écrites en 500 av. J.-C., et les codes des lois romaines qui leur ont succédé, comme le Code Justinien, ont été les premiers à distinguer le droit public, qui intéresse l'Etat, et le droit privé, qui concerne les conflits entre citoyens. Le droit romain a été le premier code formel de lois écrites et a influencé de nombreux systèmes juridiques du monde contemporain.</French>
 		<German>Die frühesten Stammeskulturen wurden durch gemeinsame Bedürfnisse und Überzeugungen zusammengehalten. Die Leitung hatte ein Stammeshäuptling, welcher als weiser Vertrauter der Götter einen höheren, göttlichen Willen durchsetzte. In diesen frühen Gemeinschaften gab es keine formellen Gesetze, die Ordnung wurde durch die Furcht vor höheren Mächten und ein Gefühl für die Sitten und Moral des Stammes aufrecht gehalten. Als die Gesellschaften größer und mannigfaltiger wurden, entstand Bedarf nach festgelegten Verhaltensregeln. Die frühesten bekannten Gesetze entstanden in Babylonien, Indien und Palästina. Die Zwölf Tafeln Roms, welche 500 v.Chr. geschrieben wurden und deren Nachfolger, wie z.B. das Justinianische Gesetz, waren die ersten Gesetze, welche zwischen öffentlichem Recht und privatem Recht unterschieden. Damit wurden auf der einen Seite das Verhältnis des Bürgers zum Staat und auf der anderen Seite die Rechte und Pflichten unter den Bürgern geregelt. Das römische Recht bildete das erste formelle Gesetzessystem und es beeinflusst bis heute viele der nachfolgenden Rechtssysteme.</German>
 		<Italian>Le prime civiltà tribali erano legate tra loro da esigenze e credenze comuni. Questi gruppi erano guidati da capi tribù che agivano da consiglieri e da interpreti della volontà divina. In queste culture primitive non esistevano vere e proprie leggi, ma il timore degli dei e un senso di tradizione e morale tribale mantenevano l'ordine all'interno delle comunità. Man mano che le società si sviluppavano e si differenziavano, sorse per tutte l'esigenza di stabilire delle regole di comportamento. I primi codici di leggi conosciuti furono redatti a Babilonia, in India e in Palestina. Le Dodici Tavole di Roma, scritte nel 500 a. C., e il successivo Codice di Giustiniano, furono i primi codici a distinguere tra diritto pubblico, che riguarda lo Stato, e diritto privato, che riguarda le dispute tra cittadini. Il diritto Romano fu il primo sistema scritto di leggi e continua a influenzare ancora oggi molti sistemi legali.</Italian>
@@ -5267,7 +5267,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_COGNITIVE_ROBOTICS_PEDIA</Tag>
-		<English>Cognitive robotics is concerned with endowing robots with mammalian and human-like cognitive capabilities to enable the achievement of complex goals in complex environments. Cognitive robotics is focused on using animal cognition as a starting point for the development of robotic computational algorithms, as opposed to more traditional Artificial Intelligence techniques, which may or may not draw upon mammalian and human cognition as an inspiration for algorithm development. Robotic cognitive capabilities include perception processing, attention allocation, anticipation, planning, reasoning about other agents, and perhaps reasoning about their own mental states. Robotic cognition embodies the behaviour of intelligent agents in the physical world (or a virtual world, in the case of simulated CR). In the most ambitious version, this implies that the robot must also be able to act in this real world.[PARAGRAPH:2]Cognitive robotics involves the application and integration of various artificial intelligence disciplines but is primarily inspired by psychology and brain science research. On the other hand, the robot capabilities will be limited by the current state of the art in robotics: the mechanics and electronics of robots are still very inferior to what humans have available, especially in the areas of tactile and visual sensing, the smoothness and energy efficiency of motion (including walking and object manipulation with fingers), and the task-directed planning of actions.[PARAGRAPH:2]One of the learning techniques that are used for robots is learning by imitation: the robot, provided with all the sensors and physical hardware needed to perform a human task, is monitoring the human performing a task, and then the robot tries to imitate the same movements that the human performed in order to achieve the task. Using its sensors, the robot should be able to create a three-dimensional image of the environment, and to recognize the objects in that image. A major challenge is hence to interpret the scene, and to understand what objects are needed in the task and which are not.[PARAGRAPH:2]A more complex learning approach is autonomous knowledge acquisition: the robot now uses its sensors and its knowledge about the physical properties of the world, and is then left to explore the environment on its own. One of the terminologies of this behaviour is called motor babbling. Basically the whole idea of this approach is to let the robot discover its capabilities on its own.</English>
+		<English>Machine learning is the scientific study of algorithms and statistical models that computer systems use to perform a specific task without using explicit instructions, relying on patterns and inference instead. It is seen as a subset of artificial intelligence.</English>
 		<Polish>Robotyka kognitywna (ang. cognitive robotics) zajmuje się rozwojem i budową robotów o wysokich zdolnościach kognitywnych, potrafiących wykonać skomplikowane zadania w złożonym środowisku przy wykorzystaniu ograniczonych zasobów.Do robotycznych zdolności kognitywnych zalicza się przetwarzanie postrzegania, przydzielanie uwagi, przewidywanie, planowanie, świadomość istnienia innych obiektów, rozumowanie stanów mentalnych innych obiektów. Kognitywistyka robotyczna wyraża postępowanie obiektów inteligentnych w świecie fizycznym (lub w świecie wirtualnym - w przypadku symulacji kognitywistyki robotycznej).</Polish>
 	</TEXT>
 	<TEXT>
@@ -5459,7 +5459,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_COMBUSTION</Tag>
-		<English>Combustion</English>
+		<English>Combustion Engines</English>
 		<French>
 			<Text>Combustion</Text>
 			<Gender>Female</Gender>
@@ -5484,7 +5484,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_COMBUSTION_PEDIA</Tag>
-		<English>The development of internal combustion was a great advance of the Industrial Age. German engineer Nikolaus Otto built the forerunner of today's internal combustion engine in 1876. Refinements on Otto's design over the next ten years led to more efficient and powerful engines. The internal combustion engine forever changed world transportation. Early automobiles utilizing steam engines had proven to be both underpowered and impractical, but the fuel efficiency and compact size of the internal combustion engine allowed the automotive industry to flourish. Several variations, including the diesel engine designed by Rudolf Christian Karl Diesel, went on to revolutionize propulsion in shipping and other transportation industries.</English>
+		<English>An internal combustion engine (ICE) is a heat engine where the combustion of a fuel occurs with an oxidizer (usually air) in a combustion chamber that is an integral part of the working fluid flow circuit. In an internal combustion engine, the expansion of the high-temperature and high-pressure gases produced by combustion applies direct force to some component of the engine. The force is applied typically to pistons, turbine blades, rotor or a nozzle. This force moves the component over a distance, transforming chemical energy into useful mechanical energy.[PARAGRAPH:2]An external combustion engine (EC engine) is a heat engine where a working fluid, contained internally, is heated by combustion in an external source, through the engine wall or a heat exchanger. The fluid then, by expanding and acting on the mechanism of the engine, produces motion and usable work. The fluid is then cooled, compressed and reused (closed cycle), or dumped (open cycle). In these types of engine, the combustion is primarily used as a heat source, and the engine can work equally well with other types of heat source.</English>
 		<French>L'invention de la combustion interne a été l'un des grands progrès de l'ère industrielle. Le premier moteur à combustion interne a été conçu en 1876 par l'ingénieur allemand Nikolaus Otto. Au cours des dix années qui ont suivi, le modèle d'Otto a été perfectionné pour donner naissance à des mécanismes plus efficaces et plus puissants. Le moteur à combustion interne a révolutionné les transports. En effet, les premières automobiles utilisaient des moteurs à vapeur et s'étaient révélées peu puissantes et peu pratiques. Mais le rendement du carburant et la taille compacte du moteur à combustion interne ont permis à l'industrie automobile de prospérer. D'autres innovations, comme le moteur diesel inventé par Rudolf Christian Karl Diesel, sont venues ensuite révolutionner la propulsion dans la navigation et les autres modes de transport.</French>
 		<German>Die Entwicklung des Verbrennungsmotors kennzeichnete einen enormen Fortschritt des industriellen Zeitalters. Der Vorläufer des heutigen Verbrennungsmotors wurde 1876 von dem deutschen Ingenieur Nikolaus Otto entwickelt. Die in den darauf folgenden zehn Jahren durchgeführten Modifizierungen am "Otto-Motor" brachten verschiedene leistungsstärkere Motoren hervor. Allgemein hatte die Erfindung des Verbrennungsmotors einen nachhaltigen und wegweisenden Einfluss auf die weltweiten Transportsysteme. In den ersten Automobilen waren noch wuchtige Dampfmaschinen eingesetzt worden, die nur wenig Leistung brachten und zudem unpraktisch waren - erst die Entwicklung des Kraftstoffs und des kompakten Verbrennungsmotors läutete schließlich die Blütezeit der Automobilindustrie ein. Doch nicht nur dieser Bereich profitierte von der Erfindung des Verbrennungsmotors: Diverse neue Motorvarianten, wie der von Rudolf Christian Karl Diesel entwickelte Dieselmotor, revolutionierten zum Beispiel auch die Antriebsleistung in Schiffen und anderen Transportmitteln.</German>
 		<Italian>Lo sviluppo della combustione interna fu una delle scoperte più importanti dell'Età Industriale. Il predecessore del moderno motore a combustione interna fu ideato nel 1876 dall'ingegnere tedesco Nikolaus Otto. Le modifiche apportate nel decennio successivo al progetto di Otto portarono alla creazione di motori più efficaci e potenti. Il motore a combustione interna cambiò per sempre il mondo dei trasporti: i motori a vapore usati dalle prime automobili si erano infatti dimostrati poco pratici e poco potenti, ma l'efficacia del carburante e le dimensioni ridotte dei motori a combustione interna consentirono il fiorire dell'industria automobilistica. Diverse variazioni, incluso il motore diesel progettato da Rudolf Christian Karl Diesel, continuarono a rivoluzionare la propulsione in campo navale e in altre forme di trasporto.</Italian>
@@ -5614,7 +5614,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_COMMUNITY</Tag>
-		<English>Community</English>
+		<English>Communities</English>
 		<French>Communauté</French>
 		<Spanish>
 			<Text>Sociedad</Text>
@@ -5625,7 +5625,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_COMMUNITY_PEDIA</Tag>
-		<English>The process of learning to adopt the behaviour patterns of the community is called socialization. The most fertile time of socialization is usually the early stages of life, during which individuals develop the skills and knowledge and learn the roles necessary to function within their culture and social environment. For some psychologists, especially those in the psychodynamic tradition, the most important period of socialization is between the ages of one and ten. But socialization also includes adults moving into a significantly different environment, where they must learn a new set of behaviors. Socialization is influenced primarily by the family, through which children first learn community norms. Other important influences include schools, peer groups, people, mass media, the workplace, and government. The degree to which the norms of a particular society or community are adopted determines one's willingness to engage with others. The norms of tolerance, reciprocity, and trust are important "habits of the heart," as de Tocqueville put it, in an individual's involvement in community.</English>
+		<English>A community is a social unit (a group of living things) with commonality such as norms, religion, values, customs, or identity. Communities may share a sense of place situated in a given geographical area (e.g. a country, village, town, or neighbourhood) or in virtual space through communication platforms. Durable relations that extend beyond immediate genealogical ties also define a sense of community, important to their identity, practice, and roles in social institutions such as family, home, work, government, society, or humanity at large.</English>
 		<Polish>Wspólnota - typ zbiorowości oparty na silnych, emocjonalnych więziach, nieformalnej strukturze, dominujący przede wszystkim w społeczeństwach pierwotnych. W ujęciu Ferdinanda Tonniesa wspólnota (Gemeinschaft) jest przeciwstawnym typem zbiorowości wobec zrzeszenia (Gesellschaft) i charakteryzuje się tym, że więzi wytwarzane są w oparciu o pokrewieństwo lub braterstwo, kontrola społeczna sprawowana jest dzięki tradycji, natomiast podstawą gospodarki we wspólnotach jest własność zbiorowa.</Polish>
 	</TEXT>
 	<TEXT>
@@ -5640,7 +5640,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_COMPASS</Tag>
-		<English>Compass</English>
+		<English>Magnetic Compass</English>
 		<French>
 			<Text>Boussole</Text>
 			<Gender>Female</Gender>
@@ -5687,7 +5687,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_COMPOSITE_TOOLS</Tag>
-		<English>Composite Tools</English>
+		<English>Hafted Tools</English>
 		<French>Outils Composites</French>
 		<Italian>Utensili Compositi</Italian>
 		<Spanish>
@@ -5699,7 +5699,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_COMPOSITE_TOOLS_PEDIA</Tag>
-		<English>[TAB]A composite is any material that is made by combining two or more materials, often ones that have very different properties.[PARAGRAPH:2]People have been making composites for many thousands of years. One early example is mud bricks. Mud can be dried out into a brick shape to give a building material. It is strong if you try to squash it (it has good compressive strength) but it breaks quite easily if you try to bend it (it has poor tensile strength). Straw seems very strong if you try to stretch it, but you can crumple it up easily. By mixing mud and straw together it is possible to make bricks that are resistant to both squeezing and tearing and make excellent building blocks.[PARAGRAPH:2]Another ancient composite is concrete. Concrete is a mix of aggregate (small stones or gravel), cement and sand. It has good compressive strength (it resists squashing). In more recent times it has been found that adding metal rods or wires to the concrete can increase its tensile (bending) strength. Concrete containing such rods or wires is called reinforced concrete.[PARAGRAPH:2]- Composite Materials, The Royal Society of Chemistry.</English>
+		<English>Hafting is a process by which an artifact, often bone, metal, or stone is attached to a haft (handle or strap). This makes the artifact more useful by allowing it to be shot (arrow), thrown (spear), or used with more effective leverage (axe or hammer). When constructed properly, hafting can tremendously improve a weapon's damage and range. It is estimated that hafted weapons were most common during the Upper Paleolithic and Middle Paleolithic. Hafting was a significant milestone in the history of technology. It was one of the first tools where hominins took separate elements and united them into a single tool increasing the efficiency and use of it. The development of hafting was considered a significant milestone of humans by archaeologists. It was not only a significant improvement in the technology at the time but archaeologists also believe that hafting shows the progression and development of the human mind and shows the path toward a world of complex tool-making of the past. The idea of assembling two different kinds of materials into one object that improves the functioning of the tool overall shows the mental capacity of the people of that time and gives archaeologists a better understanding of the progression of human life.</English>
 		<Polish>Narzędzie - przedmiot lub urządzenie służące do bezpośredniego oddziaływania w procesie pracy na przedmiot pracy stanowiące wyposażenie człowieka lub maszyny. Większość prostych narzędzi jest maszynami prostymi. Narzędzie pozwala wykonać to, czego przeciętny człowiek nie byłby w stanie wykonać "gołymi rękami", lub ułatwia to, co może wykonać sam. Narzędziami posługują się też niektóre gatunki zwierząt.</Polish>
 	</TEXT>
 	<TEXT>
@@ -5976,7 +5976,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CONSCIOUSNESS</Tag>
-		<English>Consciousness</English>
+		<English>Entheogens</English>
 		<French>Conscience</French>
 		<Spanish>
 			<Text>Alteraciones de la consciencia</Text>
@@ -5987,7 +5987,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CONSCIOUSNESS_PEDIA</Tag>
-		<English>A variety of psychoactive drugs have notable effects on consciousness. These range from a simple dulling of awareness produced by sedatives, to increases in the intensity of sensory qualities produced by stimulants, cannabis, or most notably by the class of drugs known as psychedelics. LSD, mescaline, psilocybin, and others in this group can produce major distortions of perception, including hallucinations; some users even describe their drug-induced experiences as mystical or spiritual in quality. The brain mechanisms underlying these effects are not well understood, but there is substantial evidence that alterations in the brain system that uses the chemical neurotransmitter serotonin play an essential role. Historically, hallucinogens have been commonly used in religious or shamanic rituals. In this context they are referred to as entheogens, and they are used to facilitate healing, divination, communication with spirits, and coming-of-age ceremonies.[PARAGRAPH:2]Evidence exists for the use of entheogens in prehistoric times, as well as in numerous ancient cultures, including the Rus', Ancient Egyptian, Mycenaean, Ancient Greek, Vedic, Maya, Inca and Aztec cultures. The Upper Amazon is home to the strongest extant entheogenic tradition; the Urarina of Peruvian Amazonia, for instance, continue to practice an elaborate system of Ayahuasca shamanism, coupled with an animistic belief system. Hallucinogenic substances are among the oldest drugs used by human kind, as hallucinogenic substances naturally occur in mushrooms, cacti and a variety of other plants.[PARAGRAPH:2]Numerous cultures worldwide have endorsed the use of hallucinogens in medicine, religion and recreation, to varying extents, while some cultures have regulated or outright prohibited their use. Hallucinogens are a general group of pharmacological agents that can be divided into three broad categories: psychedelics, dissociatives, and deliriants. These classes of psychoactive drugs have in common that they can cause subjective changes in perception, thought, emotion and consciousness. Unlike other psychoactive drugs, such as stimulants and opioids, these drugs do not merely amplify familiar states of mind, but rather induce experiences that are qualitatively different from those of ordinary consciousness. These experiences are often compared to non-ordinary forms of consciousness such as trance, meditation, dreams, or insanity.</English>
+		<English>An entheogen is a class of psychoactive substances that induce any type of spiritual experience aimed at development or sacred use. The term entheogen is often chosen to contrast recreational use of the same drugs.</English>
 		<Polish>Świadomość - podstawowy i fundamentalny stan psychiczny, w którym jednostka zdaje sobie sprawę ze zjawisk wewnętrznych, takich jak własne procesy myślowe, oraz zjawisk zachodzących w środowisku zewnętrznym i jest w stanie reagować na nie (somatycznie lub autonomicznie).</Polish>
 	</TEXT>
 	<TEXT>
@@ -6551,7 +6551,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CRITICAL_THOUGHT</Tag>
-		<English>Critical Thought</English>
+		<English>Skeptical Philosophy</English>
 		<French>Pensée critique</French>
 		<Italian>Pensiero critico</Italian>
 		<Spanish>
@@ -6563,7 +6563,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CRITICAL_THOUGHT_PEDIA</Tag>
-		<English>[BOLD]Critical Thought[\BOLD], is a way of deciding whether a claim is always true, sometimes true, partly true, or false. Critical thinking can be traced in Western thought to the Socratic method of Ancient Greece and in the East, to the Buddhist kalama sutta and Abhidharma. Critical thinking is an important component of most professions. It is a part of the formal education process and is increasingly significant as students progress through university to graduate education, although there is debate among educators about its precise meaning and scope.</English>
+		<English>Skepticism (American English) or scepticism (British English, Australian English, and Canadian English) is generally a questioning attitude or doubt towards one or more items of putative knowledge or belief or dogma. It is often directed at domains, such as the supernatural, morality (moral skepticism), theism (skepticism about the existence of God), or knowledge (skepticism about the possibility of knowledge, or of certainty). Formally, skepticism as a topic occurs in the context of philosophy, particularly epistemology, although it can be applied to any topic such as politics, religion, and pseudoscience.</English>
 		<Polish>Krytyka (łac. criticus - osądzający) - analiza i ocena dobrych i złych stron z punktu widzenia określonych wartości (np. praktycznych, etycznych, poznawczych, naukowych, estetycznych, poprawnych) jako niezbędny element myślenia.</Polish>
 	</TEXT>
 	<TEXT>
@@ -6692,7 +6692,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CSPACECRAFT</Tag>
-		<English>Commercial Spaceflight</English>
+		<English>Space Tourism</English>
 		<French>Vol Commercial dans l'Espace</French>
 		<German>Kommerzielle Raumfahrt</German>
 		<Italian>Volo spaziale commerciale</Italian>
@@ -6705,7 +6705,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CSPACECRAFT_PEDIA</Tag>
-		<English>During the early years of spaceflight, since the mid twentieth century, only nation states had the resources to develop and fly spacecraft. Spaceflight was thus the monopoly province of a small group of national governments.mBoth the U.S. space program and Soviet space program were operated using mainly military pilots as astronauts. During this period, no commercial space launches were available to private operators, and no private organization was able to offer space launches. Eventually, private organizations were able to both offer and purchase space launches, thus beginning the period of private spaceflight. [PARAGRAPH:2] On January 18, 2006, NASA announced an opportunity for commercial providers to demonstrate orbital transportation services. NASA plans to spend $500 million through 2010 to finance development of private sector capability to transport payloads to the International Space Station (ISS). This is more challenging than extant commercial space transportation because it requires precision orbit insertion, rendezvous and possibly docking with another spacecraft. The commercial vendors will compete in specific service areas. The first phase of private space operation was the launch of the first commercial communications satellites.[PARAGRAPH:2] The European Space Agency was formed in 1975, largely following the same model of space technology development. Later on, large defense contractors began to develop and operate space launch systems, derived from government rockets and commercial satellites.  Private spaceflight in Earth orbit includes communications satellites, satellite television, satellite radio, astronaut transport and sub-orbital and orbital space tourism.[PARAGRAPH:2] History of full private space transportation includes early efforts by Germany OTRAG company in the 20th century and numerous modern projects of orbital and suborbital launch systems in the 21st century.  Last ones count the manned programs also - most famous and important of them are suborbital flights of Virgin Galactic and orbital flights of SpaceX and other COTS participants.</English>
+		<English>Space tourism is human space travel for recreational purposes. There are several different types of space tourism, including orbital, suborbital and lunar space tourism. To date, orbital space tourism has been performed only by the Russian Space Agency. Work also continues towards developing suborbital space tourism vehicles. This is being done by aerospace companies like Blue Origin and Virgin Galactic. In addition, SpaceX (an aerospace manufacturer) announced in 2018 that they are planning on sending space tourists, including Yusaku Maezawa, on a free-return trajectory around the Moon on the Starship.</English>
 		<Polish>Amerykański potentat motelowy Robert Bigelow wszedł w posiadanie planów napełnianych powietrzem modułów mieszkalnych wcześniej opracowywanych w ramach projektu Transhab, porzuconego przez NASA. Jego firma, Bigelow Aerospace, już dokonała wystrzelenia pierwszego napełnionego powietrzem modułu mieszkalnego o nazwie Genesis I dnia 12 lipca 2006. Drugi moduł testowy, Genesis II, wystrzelono 28 czerwca 2007. Firma planuje również pod koniec roku 2008 start prototypowego modułu stacji kosmicznej, zaś oficjalnie działalność komercyjnej stacji kosmicznej nazwanej "Nautilus" miałaby rozpocząć się w roku 2010. Stacja miałaby pojemność 330 metrów sześciennych i byłaby prawie tak duża jak stacja ISS, która ma pojemność 425 metrów sześciennych jeśli chodzi o przestrzeń użyteczności.</Polish>
 	</TEXT>
 	<TEXT>
@@ -7130,9 +7130,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DECREES_PEDIA</Tag>
-		<English>A decree is a rule of law usually issued by a head of state (such as the president of a republic or a monarch), according to certain procedures (usually established in a constitution). It has the force of law. The particular term used for this concept may vary from country to country. The executive orders made by the President of the United States, for example, are decrees (although a decree is not exactly an order). In non-legal English usage, however, the term refers to any authoritarian decision. Documents or archives in the format of royal decrees or farming were issued by rulers.
-
-		Law itself underwent a very long period of research and development in the Middle Ages and many standards we rely on today were established at this time.</English>
+		<English>A decree is a rule of law usually issued by a head of state (such as the president of a republic or a monarch), according to certain procedures (usually established in a constitution). It has the force of law. The particular term used for this concept may vary from country to country. The executive orders made by the President of the United States, for example, are decrees (although a decree is not exactly an order). In non-legal English usage, however, the term refers to any authoritarian decision. Documents or archives in the format of royal decrees or farming were issued by rulers. Law itself underwent a very long period of research and development in the Middle Ages and many standards we rely on today were established at this time.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DECREES_QUOTE</Tag>
@@ -7178,7 +7176,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DEEP_SEA_EXPLORATION_PEDIA</Tag>
-		<English>[BOLD]Deep Sea Exploration[\BOLD]is the investigation of physical, chemical, and biological conditions on the sea bed, for scientific or commercial purposes.</English>
+		<English>The deep sea or deep layeris the lowest layer in the ocean, existing below the thermocline and above the seabed, at a depth of 1000 fathoms (1800 m) or more. Little or no light penetrates this part of the ocean, and most of the organisms that live there rely for subsistence on falling organic matter produced in the photic zone. For this reason, scientists once assumed that life would be sparse in the deep ocean, but virtually every probe has revealed that, on the contrary, life is abundant in the deep ocean.[PARAGRAPH:2]Deep-sea exploration is the investigation of physical, chemical, and biological conditions on the sea bed, for scientific or commercial purposes. Deep-sea exploration is considered a relatively recent human activity compared to the other areas of geophysical research, as the depths of the sea have been investigated only during comparatively recent years. The ocean depths still remain a largely unexplored part of the planet, and form a relatively undiscovered domain.</English>
 		<French>L'[COLOR_TECH_TEXT]Exploration des Profondeurs de l'Océan[COLOR_REVERT] est la recherche des conditions physiques, chimiques et biologiques des fonds marins, pour des raisons scientifiques ou commerciales.</French>
 		<Polish>[BOLD]Eksploracja Dna Oceanu[\BOLD] jest badaniem fizycznych, chemicznych i biologicznych zasobów dna oceanicznego dla celów naukowych i komercyjnych. Eksploracja Dna Oceanu jest uważana za stosunkowo młodą aktywność człowieka w porównaniu do innych pól geofizycznych badań. Głębiny oceanów nadal pozostają dla nas w dużej mierze nieznane.</Polish>
 	</TEXT>
@@ -7226,7 +7224,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DEMOCRACY</Tag>
-		<English>Democracy</English>
+		<English>Direct Democracy</English>
 		<French>
 			<Text>Démocratie</Text>
 			<Gender>Female</Gender>
@@ -7251,7 +7249,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DEMOCRACY_PEDIA</Tag>
-		<English>[TAB]Democracy is a ruling system where the citizens have a great deal of control over the actions of the government, either directly or through elected representatives. Democratic governments can be traced back to the city-states of ancient Greece and Rome. Citizens would gather in a public forum, and each one would have the opportunity to speak and vote on issues affecting the community. This direct democracy system was possible due to the relatively small populations of the city-states. Starting in the 17th century, the monarchs of Europe began to be stripped of their absolute power, and by the end of the 19th century the citizens had a strong voice in government in many European nations. Large populations made public forums impractical, so the people elected groups of representatives to carry their views to the ruling powers. Strictly speaking, this type of system more closely resembles a republican system rather than a true democracy. This type of representative democracy is considered the best governing system in the modern world because of the personal and economic freedom enjoyed by the citizens.</English>
+		<English>Direct democracy or pure democracy is a form of democracy in which people decide on policy initiatives directly. This differs from the majority of currently established democracies, which are representative democracies.</English>
 		<French>[TAB]La démocratie est un régime politique au sein duquel les citoyens ont un droit de regard important sur les actions du gouvernement, que ce soit directement ou par l'intermédiaire de représentants élus. Les premiers gouvernements démocratiques sont apparus dans les cités-Etats de la Grèce antique et à Rome. Les citoyens se rassemblaient dans un lieu public, le forum, où chacun avait la possibilité de s'exprimer et de voter sur les problèmes concernant la communauté. Ce système de démocratie directe était possible car les populations des cités-Etats étaient relativement réduites. A partir du XVIIe siècle, les monarques d'Europe ont commencé à perdre leur pouvoir absolu et vers la fin du XIXe siècle, les citoyens étaient largement représentés dans les gouvernements de nombreuses nations européennes. La taille des populations rendait impossible la mise en place de forums publics et les citoyens élisaient donc des groupes de représentants chargés de défendre leurs points de vue auprès des instances dirigeantes. D'un point de vue strict, ce mode de gouvernement ressemble davantage à un système républicain qu'à une véritable démocratie. Ce type de démocratie représentative est considéré dans le monde moderne comme le meilleur système de gouvernement, du fait des libertés individuelles et économiques dont jouissent les citoyens.</French>
 		<German>[TAB]In einer Demokratie erfolgt die Ausübung der Staatsgewalt in hohem Maße durch die Bevölkerung selbst, sei es in direkter Form oder auch indirekt über gewählte Repräsentanten. Die ersten Beispiele für demokratische Regierungen waren die Stadtstaaten Griechenlands und des Römischen Reiches im Altertum. Die Bürger versammelten sich an einem öffentlichen Platz, wo jedermann Gelegenheit hatte, sich zu Wort zu melden und Angelegenheiten, die die Gemeinschaft betrafen, zu beraten sowie darüber abstimmen zu lassen. Die Anwendung dieses direkten demokratischen Systems war vor allem deshalb möglich, weil die Einwohnerzahlen in den Stadtstaaten seinerzeit relativ gering waren. Ab Anfang des 17. Jahrhunderts hielt der demokratische Gedanke zunehmend Einzug in alle Länder Europas, was zur Folge hatte, dass die zu dieser Zeit regierenden Monarchen immer mehr von ihren absolutistischen Machtpositionen verdrängt wurden. Etwa gegen Ende des 19. Jahrhunderts hatten sich die Bevölkerungen vieler europäischer Länder schließlich ein erhebliches Mitspracherecht in Bezug auf die Regierungsgeschäfte erkämpft. Da die Einwohnerzahlen in den Städten aber immer weiter anstiegen, waren die öffentlichen politischen Diskussionsforen kaum noch praktikabel, so dass man stattdessen dazu überging, Repräsentanten zu benennen, die die Interessen des Volkes bei den Regierungsmächten vertreten sollten - genau genommen besteht hierbei mehr Ähnlichkeit mit dem republikanischen System als mit der Demokratie im ursprünglichen Sinne. Nicht zuletzt wegen der persönlichen und kommerziellen Freiheit, die den Bürgern gewährt wird, gilt diese Art der repräsentativen Demokratie in der modernen Welt als das beste Regierungssystem.</German>
 		<Italian>[TAB]La democrazia è una sistema politico nel quale i cittadini hanno un grande controllo sulle azioni del governo, esercitato direttamente o tramite i rappresentanti eletti. I governi democratici affondano le proprie radici nell'antica Grecia e a Roma: i cittadini si riunivano in un'assemblea pubblica, dove ciascuno aveva l'opportunità di esprimere la propria opinione o parlare dei problemi che affliggevano la comunità. Questo sistema di democrazia diretta era possibile grazie alle popolazioni relativamente ridotte delle piccole città-stato. A partire dal XVII secolo, i monarchi d'Europa iniziarono a essere privati del loro potere assoluto e verso la fine del XIX secolo la maggioranza degli stati europei godeva di un governo democratico. Un maggior numero di abitanti rese le assemblee pubbliche improponibili, quindi la gente iniziò a eleggere dei rappresentanti, che potessero confrontarsi con il governo. In pratica, però, questo sistema è più simile a una gestione repubblicana, piuttosto che a una vera democrazia. Questo tipo di democrazia rappresentativa viene considerata la miglior forma di governo possibile nel mondo moderno, per via delle libertà indviduali ed economiche di ciascun cittadino.</Italian>
@@ -7677,7 +7675,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DUALISM</Tag>
-		<English>Dualism</English>
+		<English>Moral Dualism</English>
 		<French>Dualisme</French>
 		<German>Dualismus</German>
 		<Italian>Dualismo</Italian>
@@ -7708,7 +7706,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DUELING</Tag>
-		<English>Dueling</English>
+		<English>Fencing</English>
 		<French>Duel</French>
 		<German>Duelle</German>
 		<Spanish>
@@ -7720,7 +7718,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DUELING_PEDIA</Tag>
-		<English>As practiced from the 11th to 20th centuries in Western societies, a duel is an engagement in combat between two individuals, with matched weapons in accordance with their combat doctrines. In the modern application, the term is applied to aerial warfare between fighter pilots. A battle between two warships is also referred to as a duel or a naval duel, especially in the Age of Sail when such encounters were more common.</English>
+		<English>Fencing is a group of three related combat sports. The three disciplines in modern fencing are the foil, the épée, and the sabre (also saber); winning points are made through the weapon's contact with an opponent. A fourth discipline, singlestick, appeared in the 1904 Olympics but was dropped after that, and is not a part of modern fencing. Fencing was one of the first sports to be played in the Olympics. Based on the traditional skills of swordsmanship, the modern sport arose at the end of the 19th century, with the Italian school having modified the historical European martial art of classical fencing, and the French school later refining the Italian system. There are three forms of modern fencing, each of which uses a different kind of weapon and has different rules; thus the sport itself is divided into three competitive scenes: foil, épée, and sabre. Most competitive fencers choose to specialize in one weapon only.</English>
 		<Polish>Pojedynek - krwawy, choć zarazem uznawany za honorowy, sposób rozwiązywania konfliktów między dwoma rywalami. Pojedynki toczono między obrażonym a obrazicielem, choć zdarzały się także zniewagi obopólne. Walczono w nich o obronę dobrego imienia, niekiedy o władzę, sławę czy kobietę. W średniowieczu pojedynek sądowy był częstym i statecznym środkiem dowodowym.</Polish>
 	</TEXT>
 	<TEXT>
@@ -7955,7 +7953,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ECOSYNTHESIS_PEDIA</Tag>
-		<English>Directed panspermia concerns the deliberate transport of microorganisms in space to be used as introduced species on lifeless planets. Directed panspermia may have been sent to Earth to start life here, or may be sent from Earth to seed exoplanets with life.[PARAGRAPH:2]Source: Wikipedia</English>
+		<English>Ecosynthesis is the use of introduced species to fill niches in a disrupted environment, with the aim of increasing the speed of ecological restoration. This decreases the amount of physical damage done in a disrupted landscape. An example is using willow in a stream corridor for sediment and phosphorus capture. It aims to aid ecological restoration which, is the practice of renewing and restoring degraded, damaged, or destroyed ecosystems and habitats in the environment by active human intervention and action. Humans ecosynthesis to make environments more suitable for life, through restoration ecology (introduced species, vegetation mapping, habitat enhancement, remediation and mitigation.)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ECOSYNTHESIS_QUOTE</Tag>
@@ -8030,7 +8028,7 @@ Some call it Evolution,
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ELDER_COUNCIL_PEDIA</Tag>
-		<English>In the centuries after the development of anti-aging medication, a ruling elite emerged that social entrenched.  Gerontocracy refers to any number of governing and social protocols to manage this condition.</English>
+		<English>A gerontocracy is a form of oligarchical rule in which an entity is ruled by leaders who are significantly older than most of the adult population. The ancient Greeks were among the first to believe in this idea of gerontocracies; as famously stated by Plato, "it is for the elder man to rule and for the younger to submit".</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ELDER_COUNCIL_QUOTE</Tag>
@@ -8042,13 +8040,13 @@ Some call it Evolution,
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ELECTRIC_ARC_WEAPONRY</Tag>
-		<English>Electric Arc Weaponry</English>
+		<English>Electrolaser Weapons</English>
 		<French>Armes à Arcs Electrique</French>
 		<Polish>Broń Łuku Elektrycznego</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ELECTRIC_ARC_WEAPONRY_PEDIA</Tag>
-		<English>In many cultures, lightning has been viewed as part of a deity or a deity in and of itself. These include the Greek god Zeus, the Aztec god Tlaloc, the Mayan God K, Slavic mythology's Perun, the Baltic Perkons/Perkunas, Thor in Norse mythology, Ukko in Finnish mythology, the Hindu god Indra, and the Shinto god Raijin. In the traditional religion of the African Bantu tribes, lightning is a sign of the ire of the gods. Verses in the Jewish religion and in Islam also ascribe supernatural importance to lightning. In Christianity, the Second Coming of Jesus is compared to lightning.</English>
+		<English>An electrolaser is a type of electroshock weapon that is also a directed-energy weapon. It uses lasers to form an electrically conductive laser-induced plasma channel (LIPC). A fraction of a second later, a powerful electric current is sent down this plasma channel and delivered to the target, thus functioning overall as a large-scale, high energy, long-distance version of the Taser electroshock gun.</English>
 		<Polish>Broń elektryczna, która z założenia nie ma zabić przeciwnika. Wytwarza napięcie elektryczne rzędu 20 000 - 500 000 V, jednak o bardzo małym natężeniu. Poraża układ nerwowy napastnika, czyniąc go niezdolnym do dalszej walki. Stan ten trwa około kilkudziesięciu minut.</Polish>
 	</TEXT>
 	<TEXT>
@@ -8645,7 +8643,7 @@ Some call it Evolution,
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_EXOSKELETON</Tag>
-		<English>Powered Exoskeleton</English>
+		<English>Exoskeletal Suits</English>
 		<French>Exo-squelettes</French>
 		<German>Verstärktes Außenskelett</German>
 		<Italian>Esoscheletri</Italian>
@@ -9235,7 +9233,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FISHING</Tag>
-		<English>Fishing</English>
+		<English>Line Fishing</English>
 		<French>
 			<Text>Pêche</Text>
 			<Gender>Female</Gender>
@@ -9284,7 +9282,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FISSION</Tag>
-		<English>Fission</English>
+		<English>Fission Reactions</English>
 		<French>
 			<Text>Fission nucléaire</Text>
 			<Gender>Female</Gender>
@@ -9607,7 +9605,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FOODP</Tag>
-		<English>Food Preservation</English>
+		<English>Canning</English>
 		<French>Préservation de la Nourriture</French>
 		<German>Haltbarmachen von Nahrung</German>
 		<Italian>Conservazione del cibo</Italian>
@@ -9620,7 +9618,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FOODP_PEDIA</Tag>
-		<English>Food preservation is the process of treating and handling food to stop or slow down spoilage (loss of quality, edibility or nutritional value) and thus allow for longer storage.[PARAGRAPH:2]Preservation usually involves preventing the growth of bacteria, yeasts, fungi, and other micro-organisms (although some methods work by introducing benign bacteria, or fungi to the food), as well as retarding the oxidation of fats which cause rancidity. Food preservation can also include processes which inhibit visual deterioration (when something becomes less close to the original) that can occur during food preparation; such as the enzymatic browning reaction in apples after they are cut.[PARAGRAPH:2]Many processes designed to preserve food will involve a number of food preservation methods. Preserving fruit, by turning it into jam, for example, involves boiling (to reduce the fruit's moisture content and to kill bacteria, yeasts, etc.), sugaring (to prevent their re-growth) and sealing within an airtight jar (to prevent recontamination). There are many traditional methods of preserving food that limit the energy inputs and reduce carbon footprint.[PARAGRAPH:2] Maintaining or creating nutritional value, texture and flavour is an important aspect of food preservation, although, historically, some methods drastically altered the character of the food being preserved. In many cases these changes have now come to be seen as desirable qualities - cheese, yoghurt and pickled onions being common examples.</English>
+		<English>Canning is a method of preserving food in which the food contents are processed and sealed in an airtight container (jars like Mason jars, and steel and tin cans). Canning provides a shelf life typically ranging from one to five years, although under specific circumstances it can be much longer.[PARAGRAPH:2]A freeze-dried canned product, such as canned dried lentils, could last as long as 30 years in an edible state. In 1974, samples of canned food from the wreck of the Bertrand, a steamboat that sank in the Missouri River in 1865, were tested by the National Food Processors Association. Although appearance, smell and vitamin content had deteriorated, there was no trace of microbial growth and the 109-year-old food was determined to be still safe to eat.[PARAGRAPH:3]Based on Appert's methods of food preservation, the tin can process was allegedly developed by Frenchman Philippe de Girard, who came to London and used British merchant Peter Durand as an agent to patent his own idea in 1810.</English>
 		<Polish>Konserwacja żywności to różne sposoby przetwarzania i przechowywania żywności, których celem jest wydłużenie jej trwałości i zapewnienie bezpieczeństwa jej spożycia. Głównym czynnikiem powodującym psucie się żywności są mikroorganizmy, zabiegi konserwacyjne mają więc na celu uniemożliwienie im wzrostu i rozwoju w konserwowanym materiale i taką zmianę właściwości chemicznych żywności, lub takie jej opakowanie i zamknięcie, które ograniczyłoby ich przyszły rozwój, a tym samym podniosło bezpieczeństwo żywności.</Polish>
 	</TEXT>
 	<TEXT>
@@ -9678,7 +9676,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FRANCHISES</Tag>
-		<English>Franchises</English>
+		<English>Franchising</English>
 		<Spanish>
 			<Text>Franquicias</Text>
 			<Gender>Female</Gender>
@@ -9781,7 +9779,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FROST_BEAMS</Tag>
-		<English>Frost Weaponry</English>
+		<English>Weaponized Frost</English>
 		<French>Rayons Froid</French>
 		<Polish>Promienie Zimna</Polish>
 	</TEXT>
@@ -9940,7 +9938,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FUSION</Tag>
-		<English>Fusion</English>
+		<English>Fusion Reactions</English>
 		<French>
 			<Text>Fusion nucléaire</Text>
 			<Gender>Female</Gender>
@@ -12129,7 +12127,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_INTERCLUSTER_TRAVEL_PEDIA</Tag>
-		<English>Intercluster Travel--the ability to travel beyond the Virgo Supercluster--is the next stage in your advancing abilities in long-distance travel.</English>
+		<English>Intercluster Travel--the ability to travel beyond the Virgo Supercluster--is the next stage in your advancing abilities in long-distance travel. The Virgo Supercluster (Virgo SC) or the Local Supercluster (LSC or LS) is a mass concentration of galaxies containing the Virgo Cluster and Local Group, which in turn contains the Milky Way and Andromeda galaxies. At least 100 galaxy groups and clusters are located within its diameter of 33 megaparsecs (110 million light-years). The Virgo SC is one of about 10 million superclusters in the observable universe and is in the Pisces–Cetus Supercluster Complex, a galaxy filament.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_INTERCLUSTER_TRAVEL_QUOTE</Tag>
@@ -12161,7 +12159,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_INTERGALACTIC_EMPIRE_PEDIA</Tag>
-		<English>You can now build a coherent empire that span many galaxies.</English>
+		<English>Galactic empires are a common trope used in science fantasy and science fiction, particularly in works known as 'space operas'. Many authors have either used a galaxy-spanning empire as background or written about the growth and/or decline of such an empire. The capital of a galactic empire is frequently a core world, such as a planet relatively close to a galaxy's supermassive black hole, which has advanced considerably in science and technology compared to current human civilization. Characterizations can vary wildly from malevolent forces attacking sympathetic victims to apathetic bureaucracies to more reasonable entities focused on social progress and anywhere in between.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_INTERGALACTIC_EMPIRE_QUOTE</Tag>
@@ -12177,7 +12175,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_INTERGROUP_TRAVEL_PEDIA</Tag>
-		<English>Intercluster travel marks yet another advancement in advanced propulsion, allowing travel beyond the Virgo Supercluster.</English>
+		<English>Intercluster travel marks yet another advancement in advanced propulsion, allowing travel beyond the Virgo Supercluster. The Local Supercluster or Local SCl; also called Laniakea Supercluster (Laniakea, Hawaiian for open skies or immense heaven; sometimes Lenakaeia) is the galaxy supercluster that is home to the Milky Way and approximately 100,000 other nearby galaxies. It was defined in September 2014, when a group of astronomers including R. Brent Tully of the University of Hawaii, Hélène Courtois of the University of Lyon, Yehuda Hoffman of the Hebrew University of Jerusalem, and Daniel Pomarède of CEA Université Paris-Saclay published a new way of defining superclusters according to the relative velocities of galaxies. The new definition of the local supercluster subsumes the prior defined local supercluster, the Virgo Supercluster, as an appendage.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_INTERGROUP_TRAVEL_QUOTE</Tag>
@@ -12201,7 +12199,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_INTERSTELLAR_COLONIZATION_PEDIA</Tag>
-		<English>Interstellar Colonization is autonomous human habitation outside of our solar system.</English>
+		<English>Interstellar Colonization is autonomous human habitation outside of our solar system. Looking beyond the Solar System, there are up to several hundred billion potential stars with possible colonization targets. The main difficulty is the vast distances to other stars: roughly a hundred thousand times further away than the planets in the Solar System. This means that some combination of very high speed (some more-than-fractional percentage of the speed of light), or travel times lasting centuries or millennia, would be required. These speeds are far beyond what current spacecraft propulsion systems can provide.</English>
 		<Polish>Tak więc ewentualna kolonizacja światów ziemiopodobnych może być przeprowadzona natychmiast po zbudowaniu statku międzygwiezdnego i zlokalizowaniu zdatnej do zamieszkania planety. Co więcej, energia potrzebna do osiągnięcia c i skoku nadprzestrzennego jest minimalna, a to wskutek zastosowania antygrawitacji, która, jak wspomniałem, niweluje masę, a przez to redukuje ilość wymaganej energii. Lecz nawet gdyby potrzeby energetyczne były mimo wszystko duże, to i tak za czterdzieści lat fuzja jądrowa będzie stosowana tak powszechnie jak dziś reakcja atomowego rozpadu. Ponadto do czasu opracowania grawitacji i napędu nadprzestrzennego być może zdołamy skonstruować fuzyjny reaktor jądrowy używający antymaterii. Energia wyzwalana podczas procesów w nim zachodzących byłaby tak wielka, że można by zasilić nią całą międzygwiezdną armadę, a nie tylko jeden kosmiczny kajak. Kwestię energii możemy tym samym uznać za zamkniętą.</Polish>
 	</TEXT>
 	<TEXT>
@@ -12298,7 +12296,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_INTERSTELLAR_VOYAGE_PEDIA</Tag>
-		<English>This is the first tech that allows manned voyages into interstellar space.</English>
+		<English>Interstellar travel is crewed or uncrewed travel between stars or planetary systems. Interstellar travel will be much more difficult than interplanetary spaceflight; the distances between the planets in the Solar System are less than 30 astronomical units (AU)—whereas the distances between stars are typically hundreds of thousands of AU, and usually expressed in light-years. Because of the vastness of those distances, interstellar travel would require a high percentage of the speed of light; huge travel time, lasting from decades to millennia or longer.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_INTERSTELLAR_VOYAGE_QUOTE</Tag>
@@ -12364,7 +12362,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ION_BEAMS</Tag>
-		<English>Ion Beams</English>
+		<English>Weaponized Ions</English>
 		<French>Rayons à Ions</French>
 		<Polish>Promień Jonowy</Polish>
 	</TEXT>
@@ -12845,7 +12843,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_LAW_ENFORCEMENT_PEDIA</Tag>
-		<English>Once a code of laws had been defined, the natural next step would, of course, be to develop an official state-funded professional force of those tasked to enforce the law.</English>
+		<English>Law enforcement is any system by which some members of society act in an organized manner to enforce the law by discovering, deterring, rehabilitating, or punishing people who violate the rules and norms governing that society.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_LAW_ENFORCEMENT_QUOTE</Tag>
