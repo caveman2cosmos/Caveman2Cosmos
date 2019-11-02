@@ -204,12 +204,12 @@ class CvMainInterface:
 			self.artPathButtonGroupSplit		= afm.getInterfaceArtInfo("INTERFACE_BUTTONS_SPLITGROUP").getPath()
 			self.artPathButtonMilitary			= afm.getInterfaceArtInfo("INTERFACE_BTN_MILITARY").getPath()
 			self.artPathAngryCitizen			= afm.getInterfaceArtInfo("INTERFACE_ANGRYCITIZEN_TEXTURE").getPath()
-			self.artPathUnhealthyPerson			= afm.getInterfaceArtInfo("INTERFACE_UNHEALTHY_PERSON").getPath()
+			#self.artPathUnhealthyPerson			= afm.getInterfaceArtInfo("INTERFACE_UNHEALTHY_PERSON").getPath()
 			self.artPathResistance				= afm.getInterfaceArtInfo("INTERFACE_RESISTANCE").getPath()
 			self.artPathTechWorkerSpeed			= afm.getInterfaceArtInfo("INTERFACE_TECH_WORKER_SPEED").getPath()
 			self.artPathTechMoveBonus			= afm.getInterfaceArtInfo("INTERFACE_TECH_MOVE_BONUS").getPath()
-			self.artPathTechHappiness			= afm.getInterfaceArtInfo("INTERFACE_TECH_HAPPINESS").getPath()
-			self.artPathTechHealth				= afm.getInterfaceArtInfo("INTERFACE_TECH_HEALTH").getPath()
+			#self.artPathTechHappiness			= afm.getInterfaceArtInfo("INTERFACE_TECH_HAPPINESS").getPath()
+			#self.artPathTechHealth				= afm.getInterfaceArtInfo("INTERFACE_TECH_HEALTH").getPath()
 			self.artPathFilterCulture			= afm.getInterfaceArtInfo("INTERFACE_FILTER_CULTURE").getPath()
 			self.artPathFilterEspionage			= afm.getInterfaceArtInfo("INTERFACE_FILTER_ESPIONAGE").getPath()
 			self.artPathFilterResearch			= afm.getInterfaceArtInfo("INTERFACE_FILTER_RESEARCH").getPath()
@@ -1489,8 +1489,8 @@ class CvMainInterface:
 					'''
 					iFilterWidth = halfX - wSortButton - 70
 					iMod = iFilterWidth % 30
-					if iFilterWidth > 21 * 30:
-						iFilterWidth = 21 * 30
+					if iFilterWidth > 20 * 30:
+						iFilterWidth = 20 * 30
 					elif iMod > 4:
 						iFilterWidth -= iMod + 4
 					else:
@@ -1508,13 +1508,12 @@ class CvMainInterface:
 					screen.appendMultiListButton(ID, self.artPathRawYieldsCommerce, 0, iWidget, BuildingFilterTypes.BUILDING_FILTER_SHOW_GOLD, -1, False)
 					screen.appendMultiListButton(ID, self.artPathRawYieldsFood, 0, iWidget, BuildingFilterTypes.BUILDING_FILTER_SHOW_FOOD, -1, False)
 					screen.appendMultiListButton(ID, self.artPathRawYieldsProduction, 0, iWidget, BuildingFilterTypes.BUILDING_FILTER_SHOW_PRODUCTION, -1, False)
-					screen.appendMultiListButton(ID, self.artPathTechHappiness, 0, iWidget, BuildingFilterTypes.BUILDING_FILTER_SHOW_HAPPINESS, -1, False)
-					screen.appendMultiListButton(ID, self.artPathTechHealth, 0, iWidget, BuildingFilterTypes.BUILDING_FILTER_SHOW_HEALTH, -1, False)
-					screen.appendMultiListButton(ID, self.artPathResistance, 0, iWidget, BuildingFilterTypes.BUILDING_FILTER_SHOW_MILITARY, -1, False)
+					screen.appendMultiListButton(ID, "Art/Interface/buttons/filters/show_happy.dds", 0, iWidget, BuildingFilterTypes.BUILDING_FILTER_SHOW_HAPPINESS, -1, False)
+					screen.appendMultiListButton(ID, "Art/Interface/buttons/filters/hide_unhappy.dds", 0, iWidget, BuildingFilterTypes.BUILDING_FILTER_HIDE_UNHAPPINESS, -1, False)
+					screen.appendMultiListButton(ID, "Art/Interface/buttons/filters/show_health.dds", 0, iWidget, BuildingFilterTypes.BUILDING_FILTER_SHOW_HEALTH, -1, False)
+					screen.appendMultiListButton(ID, "Art/Interface/buttons/filters/hide_unhealth.dds", 0, iWidget, BuildingFilterTypes.BUILDING_FILTER_HIDE_UNHEALTHINESS, -1, False)
+					screen.appendMultiListButton(ID, "Art/Interface/buttons/filters/show_military.dds", 0, iWidget, BuildingFilterTypes.BUILDING_FILTER_SHOW_MILITARY, -1, False)
 					screen.appendMultiListButton(ID, self.artPathButtonMilitary, 0, iWidget, BuildingFilterTypes.BUILDING_FILTER_SHOW_CITY_DEFENSE, -1, False)
-					screen.appendMultiListButton(ID, self.artPathAngryCitizen, 0, iWidget, BuildingFilterTypes.BUILDING_FILTER_HIDE_UNHAPPINESS, -1, False)
-					screen.appendMultiListButton(ID, self.artPathUnhealthyPerson, 0, iWidget, BuildingFilterTypes.BUILDING_FILTER_HIDE_UNHEALTHINESS, -1, False)
-					screen.appendMultiListButton(ID, self.artPathTechWorkerSpeed, 0, iWidget, BuildingFilterTypes.BUILDING_FILTER_HIDE_NORMAL, -1, False)
 					if CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_SHOW_CRIME):
 						screen.appendMultiListButton(ID, "Art/Interface/buttons/filters/showcrimeOn.dds", 0, iWidget, BuildingFilterTypes.BUILDING_FILTER_SHOW_CRIME, -1, False)
 					else:
@@ -2208,14 +2207,18 @@ class CvMainInterface:
 				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_SHOW_FOOD), 0, 5)
 				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_SHOW_PRODUCTION), 0, 6)
 				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_SHOW_HAPPINESS), 0, 7)
-				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_SHOW_HEALTH), 0, 8)
-				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_SHOW_MILITARY), 0, 9)
-				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_SHOW_CITY_DEFENSE), 0, 10)
-				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_HIDE_UNHAPPINESS), 0, 11)
-				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_HIDE_UNHEALTHINESS), 0, 12)
-				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_HIDE_GREAT_WONDER), 0, 13)
-				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_HIDE_NATIONAL_WONDER), 0, 14)
-				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_HIDE_NORMAL), 0, 15)
+				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_HIDE_UNHAPPINESS), 0, 8)
+				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_SHOW_HEALTH), 0, 9)
+				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_HIDE_UNHEALTHINESS), 0, 10)
+				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_SHOW_MILITARY), 0, 11)
+				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_SHOW_CITY_DEFENSE), 0, 12)
+				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_SHOW_CRIME), 0, 13)
+				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_SHOW_DISEASE), 0, 14)
+				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_SHOW_EDUCATION), 0, 15)
+				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_SHOW_FLAMMABILITY), 0, 16)
+				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_SHOW_WATER_POLLUTION), 0, 17)
+				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_SHOW_AIR_POLLUTION), 0, 18)
+				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_SHOW_TOURISM), 0, 19)
 
 		elif AtUnit:
 			CyUnit = AtUnit.CyUnit
