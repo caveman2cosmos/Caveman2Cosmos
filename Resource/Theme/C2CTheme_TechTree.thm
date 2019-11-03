@@ -88,7 +88,7 @@ with GFC_Control_Button
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					Image			= GBitmap("GUI/TechTree/GradientLeftTop.tga", HVGrid, 1, 1, 0, 0);
-					Indent			= GRectMargin(64,0,0,0);
+					Indent			= GRectMargin(64,0,60,0);
 				}
 			}
 			.Rollover				= .Default;
@@ -145,7 +145,7 @@ with GFC_Control_Button
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					Image			= GBitmap("GUI/TechTree/GradientLeftTop.tga", HVGrid, 1, 1, 0, 0);
-					Indent			= GRectMargin(64,0,0,0);
+					Indent			= GRectMargin(64,0,60,0);
 				}
 			}
 			.Rollover				= .Default;
@@ -202,7 +202,7 @@ with GFC_Control_Button
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					Image			= GBitmap("GUI/TechTree/GradientLeftTop.tga", HVGrid, 1, 1, 0, 0);
-					Indent			= GRectMargin(64,0,0,0);
+					Indent			= GRectMargin(64,0,60,0);
 				}
 			}
 			.Rollover				= .Default;
@@ -259,7 +259,7 @@ with GFC_Control_Button
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					Image			= GBitmap("GUI/TechTree/GradientLeftTop.tga", HVGrid, 1, 1, 0, 0);
-					Indent			= GRectMargin(64,0,0,0);
+					Indent			= GRectMargin(64,0,60,0);
 				}
 			}
 			.Rollover				= .Default;
@@ -307,31 +307,16 @@ with GFC_Control_Button
 			.Default
 			{
 				layer {
-					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
-					DestCombine		= GColorCombine(BlendSource,Disable);
-					Image			= GBitmap("GUI/TechTree/4_Background.tga", HVGrid, 1, 1, 0, 0);
-					Margin			= GRectMargin(0,0,0,0);
-					Indent			= GRectMargin(10,12,10,12);
-				}
-				layer {
-					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_PARTIAL);
-					DestCombine		= GColorCombine(BlendSource,Disable);
-					Image			= GBitmap("GUI/TechTree/4_Border.tga", HVGrid, 1, 1, 0, 0);
-					Margin			= GRectMargin(10,12,10,12);
-					Indent			= GRectMargin(0,0,0,0);
-				}
-				layer {
-					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_REGION);
-					DestCombine		= GColorCombine(BlendSource,Disable);
-					Image			= GBitmap("GUI/TechTree/4_Border.tga", HVGrid, 1, 1, 0, 0);
-					Margin			= GRectMargin(10,12,10,12);
-					Indent			= GRectMargin(0,0,0,0);
+					LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/4_RenaissanceCell.tga", HVGrid, 1, 1, 0, 0);
+					Margin			=	GRectMargin(20,0,20,0);
 				}
 				layer {
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					Image			= GBitmap("GUI/TechTree/GradientLeftTop.tga", HVGrid, 1, 1, 0, 0);
-					Indent			= GRectMargin(20,0,0,0);
+					Indent			= GRectMargin(64,0,60,0);
 				}
 			}
 			.Rollover				= .Default;
@@ -379,31 +364,16 @@ with GFC_Control_Button
 			.Default
 			{
 				layer {
-					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
-					DestCombine		= GColorCombine(BlendSource,Disable);
-					Image			= GBitmap("GUI/TechTree/5_Background.tga", HVGrid, 1, 1, 0, 0);
-					Margin			= GRectMargin(0,0,0,0);
-					Indent			= GRectMargin(10,12,10,12);
-				}
-				layer {
-					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_PARTIAL);
-					DestCombine		= GColorCombine(BlendSource,Disable);
-					Image			= GBitmap("GUI/TechTree/5_Border.tga", HVGrid, 1, 1, 0, 0);
-					Margin			= GRectMargin(10,12,10,12);
-					Indent			= GRectMargin(0,0,0,0);
-				}
-				layer {
-					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_REGION);
-					DestCombine		= GColorCombine(BlendSource,Disable);
-					Image			= GBitmap("GUI/TechTree/5_Border.tga", HVGrid, 1, 1, 0, 0);
-					Margin			= GRectMargin(10,12,10,12);
-					Indent			= GRectMargin(0,0,0,0);
+					LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/5_IndustrialCell.tga", HVGrid, 1, 1, 0, 0);
+					Margin			=	GRectMargin(20,0,20,0);
 				}
 				layer {
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					Image			= GBitmap("GUI/TechTree/GradientLeftTop.tga", HVGrid, 1, 1, 0, 0);
-					Indent			= GRectMargin(20,0,0,0);
+					Indent			= GRectMargin(64,0,60,0);
 				}
 			}
 			.Rollover				= .Default;
@@ -451,31 +421,16 @@ with GFC_Control_Button
 			.Default
 			{
 				layer {
-					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
-					DestCombine		= GColorCombine(BlendSource,Disable);
-					Image			= GBitmap("GUI/TechTree/6_Background.tga", HVGrid, 1, 1, 0, 0);
-					Margin			= GRectMargin(0,0,0,0);
-					Indent			= GRectMargin(10,12,10,12);
-				}
-				layer {
-					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_PARTIAL);
-					DestCombine		= GColorCombine(BlendSource,Disable);
-					Image			= GBitmap("GUI/TechTree/6_Border.tga", HVGrid, 1, 1, 0, 0);
-					Margin			= GRectMargin(10,12,10,12);
-					Indent			= GRectMargin(0,0,0,0);
-				}
-				layer {
-					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_REGION);
-					DestCombine		= GColorCombine(BlendSource,Disable);
-					Image			= GBitmap("GUI/TechTree/6_Border.tga", HVGrid, 1, 1, 0, 0);
-					Margin			= GRectMargin(10,12,10,12);
-					Indent			= GRectMargin(0,0,0,0);
+					LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/6_AtomicCell.tga", HVGrid, 1, 1, 0, 0);
+					Margin			=	GRectMargin(20,0,20,0);
 				}
 				layer {
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					Image			= GBitmap("GUI/TechTree/GradientLeftTop.tga", HVGrid, 1, 1, 0, 0);
-					Indent			= GRectMargin(20,0,0,0);
+					Indent			= GRectMargin(64,0,60,0);
 				}
 			}
 			.Rollover				= .Default;
@@ -523,31 +478,16 @@ with GFC_Control_Button
 			.Default
 			{
 				layer {
-					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
-					DestCombine		= GColorCombine(BlendSource,Disable);
-					Image			= GBitmap("GUI/TechTree/7_Background.tga", HVGrid, 1, 1, 0, 0);
-					Margin			= GRectMargin(0,0,0,0);
-					Indent			= GRectMargin(10,12,10,12);
-				}
-				layer {
-					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_PARTIAL);
-					DestCombine		= GColorCombine(BlendSource,Disable);
-					Image			= GBitmap("GUI/TechTree/7_Border.tga", HVGrid, 1, 1, 0, 0);
-					Margin			= GRectMargin(10,12,10,12);
-					Indent			= GRectMargin(0,0,0,0);
-				}
-				layer {
-					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_REGION);
-					DestCombine		= GColorCombine(BlendSource,Disable);
-					Image			= GBitmap("GUI/TechTree/7_Border.tga", HVGrid, 1, 1, 0, 0);
-					Margin			= GRectMargin(10,12,10,12);
-					Indent			= GRectMargin(0,0,0,0);
+					LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/7_InformationCell.tga", HVGrid, 1, 1, 0, 0);
+					Margin			=	GRectMargin(20,0,20,0);
 				}
 				layer {
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					Image			= GBitmap("GUI/TechTree/GradientLeftTop.tga", HVGrid, 1, 1, 0, 0);
-					Indent			= GRectMargin(20,0,0,0);
+					Indent			= GRectMargin(64,0,60,0);
 				}
 			}
 			.Rollover				= .Default;
@@ -595,31 +535,16 @@ with GFC_Control_Button
 			.Default
 			{
 				layer {
-					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
-					DestCombine		= GColorCombine(BlendSource,Disable);
-					Image			= GBitmap("GUI/TechTree/8_Background.tga", HVGrid, 1, 1, 0, 0);
-					Margin			= GRectMargin(0,0,0,0);
-					Indent			= GRectMargin(10,12,10,12);
-				}
-				layer {
-					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_PARTIAL);
-					DestCombine		= GColorCombine(BlendSource,Disable);
-					Image			= GBitmap("GUI/TechTree/8_Border.tga", HVGrid, 1, 1, 0, 0);
-					Margin			= GRectMargin(10,12,10,12);
-					Indent			= GRectMargin(0,0,0,0);
-				}
-				layer {
-					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_REGION);
-					DestCombine		= GColorCombine(BlendSource,Disable);
-					Image			= GBitmap("GUI/TechTree/8_Border.tga", HVGrid, 1, 1, 0, 0);
-					Margin			= GRectMargin(10,12,10,12);
-					Indent			= GRectMargin(0,0,0,0);
+					LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/8_NanotechCell.tga", HVGrid, 1, 1, 0, 0);
+					Margin			=	GRectMargin(20,0,20,0);
 				}
 				layer {
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					Image			= GBitmap("GUI/TechTree/GradientLeftTop.tga", HVGrid, 1, 1, 0, 0);
-					Indent			= GRectMargin(20,0,0,0);
+					Indent			= GRectMargin(64,0,60,0);
 				}
 			}
 			.Rollover				= .Default;
@@ -667,31 +592,16 @@ with GFC_Control_Button
 			.Default
 			{
 				layer {
-					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_NOTVISIBLE);
-					DestCombine		= GColorCombine(BlendSource,Disable);
-					Image			= GBitmap("GUI/TechTree/9_Background.tga", HVGrid, 1, 1, 0, 0);
-					Margin			= GRectMargin(0,0,0,0);
-					Indent			= GRectMargin(10,12,10,12);
-				}
-				layer {
-					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_PARTIAL);
-					DestCombine		= GColorCombine(BlendSource,Disable);
-					Image			= GBitmap("GUI/TechTree/9_Border.tga", HVGrid, 1, 1, 0, 0);
-					Margin			= GRectMargin(10,12,10,12);
-					Indent			= GRectMargin(0,0,0,0);
-				}
-				layer {
-					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_BILINEAR, GFC_BITMAPSKIN_BACKCAPS_REGION);
-					DestCombine		= GColorCombine(BlendSource,Disable);
-					Image			= GBitmap("GUI/TechTree/9_Border.tga", HVGrid, 1, 1, 0, 0);
-					Margin			= GRectMargin(10,12,10,12);
-					Indent			= GRectMargin(0,0,0,0);
+					LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_BILINEAR);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/9_TranshumanCell.tga", HVGrid, 1, 1, 0, 0);
+					Margin			=	GRectMargin(20,0,20,0);
 				}
 				layer {
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					Image			= GBitmap("GUI/TechTree/GradientLeftTop.tga", HVGrid, 1, 1, 0, 0);
-					Indent			= GRectMargin(20,0,0,0);
+					Indent			= GRectMargin(64,0,60,0);
 				}
 			}
 			.Rollover				= .Default;
@@ -1056,7 +966,7 @@ with GFC_Control_Button
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					Image			= GBitmap("GUI/TechTree/GradientLeftTop.tga", HVGrid, 1, 1, 0, 0);
-					Indent			= GRectMargin(64,0,0,0);
+					Indent			= GRectMargin(64,0,60,0);
 				}
 			}
 			.Rollover				= .Default;
@@ -1132,7 +1042,7 @@ with GFC_Control_Button
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					Image			= GBitmap("GUI/TechTree/GradientLeftTop.tga", HVGrid, 1, 1, 0, 0);
-					Indent			= GRectMargin(64,0,0,0);
+					Indent			= GRectMargin(64,0,60,0);
 				}
 			}
 			.Rollover				= .Default;
@@ -1208,7 +1118,7 @@ with GFC_Control_Button
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					Image			= GBitmap("GUI/TechTree/GradientLeftTop.tga", HVGrid, 1, 1, 0, 0);
-					Indent			= GRectMargin(64,0,0,0);
+					Indent			= GRectMargin(64,0,60,0);
 				}
 			}
 			.Rollover				= .Default;
@@ -1284,7 +1194,7 @@ with GFC_Control_Button
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					Image			= GBitmap("GUI/TechTree/GradientLeftTop.tga", HVGrid, 1, 1, 0, 0);
-					Indent			= GRectMargin(64,0,0,0);
+					Indent			= GRectMargin(64,0,60,0);
 				}
 			}
 			.Rollover
@@ -1314,7 +1224,7 @@ with GFC_Control_Button
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					Image			= GBitmap("GUI/TechTree/GradientLeftTop.tga", HVGrid, 1, 1, 0, 0);
-					Indent			= GRectMargin(64,0,0,0);
+					Indent			= GRectMargin(64,0,60,0);
 				}
 			}
 			.Press					= .Default;
@@ -1389,7 +1299,7 @@ with GFC_Control_Button
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					Image			= GBitmap("GUI/TechTree/GradientLeftTop.tga", HVGrid, 1, 1, 0, 0);
-					Indent			= GRectMargin(64,0,0,0);
+					Indent			= GRectMargin(64,0,60,0);
 				}
 			}
 			.Rollover
@@ -1419,7 +1329,7 @@ with GFC_Control_Button
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					Image			= GBitmap("GUI/TechTree/GradientLeftTop.tga", HVGrid, 1, 1, 0, 0);
-					Indent			= GRectMargin(64,0,0,0);
+					Indent			= GRectMargin(64,0,60,0);
 				}
 			}
 			.Press					= .Default;
@@ -1494,7 +1404,7 @@ with GFC_Control_Button
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					Image			= GBitmap("GUI/TechTree/GradientLeftTop.tga", HVGrid, 1, 1, 0, 0);
-					Indent			= GRectMargin(64,0,0,0);
+					Indent			= GRectMargin(64,0,60,0);
 				}
 			}
 			.Rollover
@@ -1524,7 +1434,7 @@ with GFC_Control_Button
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					Image			= GBitmap("GUI/TechTree/GradientLeftTop.tga", HVGrid, 1, 1, 0, 0);
-					Indent			= GRectMargin(64,0,0,0);
+					Indent			= GRectMargin(64,0,60,0);
 				}
 			}
 			.Press					= .Default;
@@ -1599,7 +1509,7 @@ with GFC_Control_Button
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
 					DestCombine		= GColorCombine(BlendSource,Disable);
 					Image			= GBitmap("GUI/TechTree/GradientLeftTop.tga", HVGrid, 1, 1, 0, 0);
-					Indent			= GRectMargin(64,0,0,0);
+					Indent			= GRectMargin(64,0,60,0);
 				}
 			}
 			.Rollover				= .Default;
