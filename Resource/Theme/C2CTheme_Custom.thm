@@ -1085,6 +1085,111 @@ with GFC_Control_Scroll
 		map GFC_CtrlTheme_Bitmap_Control_Panel	= GFC_Control_DefaultScroll_Style;
 		map GFC_Control							= GFC_Control_DefaultScroll_Style;
 	}
+
+	style SF_CtrlTheme_Civ4_Control_Scroll_Min_Style
+	{
+		with .StyleId
+		{
+			.UpButton		= GPropertyId(SF_CtrlTheme_Civ4_Control_UpButton_Alt_Style);
+			.DownButton		= GPropertyId(SF_CtrlTheme_Civ4_Control_DownButton_Alt_Style);
+			.LeftButton		= GPropertyId(SF_CtrlTheme_Civ4_Control_AltTable_Standard_Scroll_LeftButton_Style);
+			.RightButton	= GPropertyId(SF_CtrlTheme_Civ4_Control_AltTable_Standard_Scroll_RightButton_Style);
+			.VGrip			= GPropertyId(SF_CtrlTheme_Civ4_Control_VGrip_Alt_Style);
+			.HGrip			= GPropertyId(SF_CtrlTheme_Civ4_Control_HGrip_Alt_Style);
+		}
+		with .Size
+		{
+			.HGripLength	= 16;
+			.VGripLength	= 16;
+			.HGripMinLength	= 8;
+			.VGripMinLength	= 8;
+			.HGripInset		= GRangeMargin(0,0);
+			.VGripInset		= GRangeMargin(0,0);
+			.HDefault		= 0;
+			.VDefault		= 0;
+		}
+		with .Flag
+		{
+			.NoUpDownButtons	= GFlags(GScrollCtrl, GFC_CF_SCROLL_NOUPDOWNBUTTONS);
+		}
+		with GFC_CtrlTheme_Bitmap_Control_Scroll_Skin_HShaft
+		{
+			.Default
+			{
+				layer {
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+					Image		= GBitmap("../../../../Resource/Civ4/scroll02_track.tga", HVGrid, 1, 2, 0, 0);
+					Indent		= GRectMargin(0,1,0,1);
+				}
+			}
+			.Press			= .Default;
+			.Rollover		= .Press;
+			.Disable		= .Press;
+			.Winoff			= .Press;
+			.WinoffPress	= .Press;
+			.WinoffRollover	= .Press;
+			.WinoffDisable	= .Press;
+		}
+		with GFC_CtrlTheme_Bitmap_Control_Scroll_Skin_VShaft
+		{
+			.Default
+			{
+				layer {
+					DestCombine	= GColorCombine(BlendSource,Disable);
+					LayerFlags	= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE, GFC_BITMAPSKIN_SIDES_SCALE);
+					Image		= GBitmap("../../../../Resource/Civ4/scroll02_track.tga", HVGrid, 1, 2, 0, 0);
+					Indent		= GRectMargin(1,0,1,0);
+				}
+			}
+			.Press			= .Default;
+			.Rollover		= .Press;
+			.Disable		= .Press;
+			.Winoff			= .Press;
+			.WinoffPress	= .Press;
+			.WinoffRollover	= .Press;
+			.WinoffDisable	= .Press;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Panel	= GFC_Control_DefaultScroll_Style;
+		map GFC_Control							= GFC_Control_DefaultScroll_Style;
+	}
+
+	style SF_CtrlTheme_Civ4_Control_Scroll_None_Style
+	{
+		with .Child
+		{
+			.UpButton		= 0;
+			.DownButton		= 0;
+			.LeftButton		= 0;
+			.RightButton	= 0;
+			.HGrip			= 0;
+			.VGrip			= 0;
+			.HPopupMenu		= 0;
+			.VPopupMenu		= 0;
+		}
+		with .StyleId
+		{
+			.UpButton		= 0;
+			.DownButton		= 0;
+			.LeftButton		= 0;
+			.RightButton	= 0;
+			.VGrip			= 0;
+			.HGrip			= 0;
+		}
+		with .Size
+		{
+			.HGripLength	= 0;
+			.VGripLength	= 0;
+			.HGripMinLength	= 0;
+			.VGripMinLength	= 0;
+			.HGripInset		= GRangeMargin(0,0);
+			.VGripInset		= GRangeMargin(0,0);
+			.HDefault		= 0;
+			.VDefault		= 0;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Panel	= GFC_Control_DefaultScroll_Style;
+		map GFC_Control							= GFC_Control_DefaultScroll_Style;
+	}
 } //End Scroll Control
 
 
@@ -4833,6 +4938,31 @@ with GFC_Control_Edit
 } //End Edit Control
 
 
+style SF_CtrlTheme_Civ4_Control_Table_CityTabFilter_Style
+{
+	with GFC_Control_Table
+	{
+		with .StyleId
+		{
+			.HScroll		= GPropertyId(SF_CtrlTheme_Civ4_Control_Scroll_None_Style);
+			.VScroll		= GPropertyId(SF_CtrlTheme_Civ4_Control_Scroll_Min_Style);
+		}
+		with .Flag
+		{
+			.NoBorder		= GFlags(GTableCtrl, GFC_CF_TABLE_NOBORDER);
+			.NoInnerBorder	= GFlags(GTableCtrl, GFC_CF_TABLE_NOINNERBORDER);
+		}
+		with .Size
+		{
+			.Scroll					= GSize(8,8);
+			.CellContentMargin		= GRectMargin(0,0,0,0);
+			.CellTextMargin			= GRectMargin(0,0,0,0);
+		}
+	}
+	map GFC_CtrlTheme_Bitmap_Control_Panel	= GFC_Control_DefaultTable_Style;
+	map GFC_Control							= GFC_Control_DefaultTable_Style;
+}
+
 style SF_CtrlTheme_Civ4_Control_Table_Alt_Style
 {
 	with GFC_Control_Table
@@ -4902,6 +5032,14 @@ style SF_CtrlTheme_Civ4_Control_ScrollFrame_Min_Style
 	map GFC_Control									= GFC_Control_DefaultScrollFrame_Style;
 }
 
+// CityTab filter ScrollFrame style
+style SF_CtrlTheme_Civ4_Control_ScrollFrame_CityTabFilter_Style
+{
+	GFC_Control_ScrollFrame_StyleId_Table			= GPropertyId(SF_CtrlTheme_Civ4_Control_Table_CityTabFilter_Style);
+
+	map GFC_CtrlTheme_Bitmap_Control_ScrollFrame	= GFC_Control_DefaultScrollFrame_Style;
+	map GFC_Control									= GFC_Control_DefaultScrollFrame_Style;
+}
 
 with GFC_Control_ScrollPanel
 {
@@ -4917,6 +5055,15 @@ with GFC_Control_ScrollPanel
 	style SF_CtrlTheme_Civ4_Control_ScrollPanel_Min_Style
 	{
 		.StyleId_ScrollFrame = GPropertyId(SF_CtrlTheme_Civ4_Control_ScrollFrame_Min_Style);
+
+		map GFC_CtrlTheme_Bitmap_Control_ScrollPanel	= GFC_Control_DefaultScrollPanel_Style;
+		map GFC_Control									= GFC_Control_DefaultScrollPanel_Style;
+	}
+
+	// CityTab filter ScrollPanel style
+	style SF_CtrlTheme_Civ4_Control_ScrollPanel_CityTabFilter_Style
+	{
+		.StyleId_ScrollFrame = GPropertyId(SF_CtrlTheme_Civ4_Control_ScrollFrame_CityTabFilter_Style);
 
 		map GFC_CtrlTheme_Bitmap_Control_ScrollPanel	= GFC_Control_DefaultScrollPanel_Style;
 		map GFC_Control									= GFC_Control_DefaultScrollPanel_Style;

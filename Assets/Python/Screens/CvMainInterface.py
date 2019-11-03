@@ -616,54 +616,6 @@ class CvMainInterface:
 		screen.setStyle(Btn, "Button_CityT1_Style")
 		screen.hide(Btn)
 
-		# Filter and grouping
-		x = a4thX + 8
-		iLanguage = GAME.getCurrentLanguage()
-		if not iLanguage: # English
-			wGroupButton = 96
-			wSortButton = 134
-		elif iLanguage == 1: # French
-			wGroupButton = 110
-			wSortButton = 160
-		else:
-			wGroupButton = 96
-			wSortButton = 134
-		'''
-		elif iLanguage == 2: # German
-		elif iLanguage == 3: # Italian
-		elif iLanguage == 4: # Spanish
-		'''
-		iFilterWidth = halfX - wGroupButton - wSortButton - 70
-		iMod = iFilterWidth % 30
-		if iFilterWidth > 13 * 30:
-			iFilterWidth = 13 * 30
-		elif iMod > 4:
-			iFilterWidth -= iMod + 4
-		else:
-			iFilterWidth -= iMod + 1
-			iFilterWidth -= iFilterWidth % 30 + 4
-		iWidget = WidgetTypes.WIDGET_UNIT_FILTER
-		ID = "CT|UnitFilter"
-		screen.addMultiListControlGFC(ID, "", x, 142, iFilterWidth, 30, 1, 28, 28, TableStyles.TABLE_STYLE_STANDARD)
-		screen.hide("CT|UnitFilter")
-		screen.appendMultiListButton(ID, self.artPathButtonNoProduction, 0, iWidget, UnitFilterTypes.UNIT_FILTER_HIDE_UNBUILDABLE, -1, False)
-		screen.appendMultiListButton(ID, self.artPathWorldWonderOnBUG, 0, iWidget, UnitFilterTypes.UNIT_FILTER_HIDE_LIMITED, -1, False)
-		screen.appendMultiListButton(ID, self.artPathFilterLandPLE, 0, iWidget, UnitFilterTypes.UNIT_FILTER_SHOW_LAND, -1, False)
-		screen.appendMultiListButton(ID, self.artPathFilterAirPLE, 0, iWidget, UnitFilterTypes.UNIT_FILTER_SHOW_AIR, -1, False)
-		screen.appendMultiListButton(ID, self.artPathFilterSeaPLE, 0, iWidget, UnitFilterTypes.UNIT_FILTER_SHOW_WATER, -1, False)
-		screen.appendMultiListButton(ID, self.artPathTechWorkerSpeed, 0, iWidget, UnitFilterTypes.UNIT_FILTER_SHOW_WORKERS, -1, False)
-		screen.appendMultiListButton(ID, self.artPathFilterCivilianPLE, 0, iWidget, UnitFilterTypes.UNIT_FILTER_SHOW_CIVILIAN, -1, False)
-		screen.appendMultiListButton(ID, self.artPathFilterSiegePLE, 0, iWidget, UnitFilterTypes.UNIT_FILTER_SHOW_SIEGE, -1, False)
-		screen.appendMultiListButton(ID, self.artPathTechMoveBonus, 0, iWidget, UnitFilterTypes.UNIT_FILTER_SHOW_MOUNTED, -1, False)
-		screen.appendMultiListButton(ID, self.artPathFilterHeroPLE, 0, iWidget, UnitFilterTypes.UNIT_FILTER_SHOW_HEROES, -1, False)
-		screen.appendMultiListButton(ID, self.artPathResistance, 0, iWidget, UnitFilterTypes.UNIT_FILTER_SHOW_MILITARY, -1, False)
-		screen.appendMultiListButton(ID, self.artPathButtonMilitary, 0, iWidget, UnitFilterTypes.UNIT_FILTER_SHOW_DEFENSE, -1, False)
-		screen.appendMultiListButton(ID, self.artPathAngryCitizen, 0, iWidget, UnitFilterTypes.UNIT_FILTER_SHOW_MISSIONARY, -1, False)
-
-		self.xUnitGrouping = x + iFilterWidth + 4
-		self.wUnitGroupButton = wGroupButton
-		self.wUnitSortButton = wSortButton
-
 		################
 		# Trade Routes #
 		x = 8
@@ -831,13 +783,13 @@ class CvMainInterface:
 		screen.hide(panel)
 
 		# Promotion Scroll Panel
-		panel = "PromoPanel"
-		screen.addScrollPanel(panel, "", xMidL, yBotBar + 18, xMidR - xMidL, 38, iPanelEmpty)
-		screen.setStyle(panel, "ScrollPanel_Min_Style")
+		ScPnl = "PromoPanel"
+		screen.addScrollPanel(ScPnl, "", xMidL, yBotBar + 18, xMidR - xMidL, 38, iPanelEmpty)
+		screen.setStyle(ScPnl, "ScrollPanel_Min_Style")
 		szChild = "WID|PROMO|PromoPanel"
 		for iPromo in xrange(self.iNumPromotionInfos):
 			name = szChild + str(iPromo)
-			screen.setImageButtonAt(name, panel, GC.getPromotionInfo(iPromo).getButton(), 0, 0, 32, 32, eWidGen, 0, 0)
+			screen.setImageButtonAt(name, ScPnl, GC.getPromotionInfo(iPromo).getButton(), 0, 0, 32, 32, eWidGen, 0, 0)
 			screen.hide(name)
 		self.aHideList = []
 		self.aSelUnitPromoList = []
@@ -1546,7 +1498,7 @@ class CvMainInterface:
 					self.xBuildingSorting = x + iFilterWidth + 4
 					self.wBuildingSortButton = wSortButton
 
-					self.buildCitySelectionUI(screen, bFirst, InCity)
+					self.buildCitySelectionUI(screen, bFirst, CyCity)
 					if iTab > -1:
 						self.openCityTab(screen, iTab)
 		else: # No City Selected
@@ -2157,6 +2109,7 @@ class CvMainInterface:
 			if self.bBuildWorkQueue:
 				self.buildCityWorkQueue(screen, InCity)
 				self.bBuildWorkQueue = False
+
 			if self.bCityChange:
 				if iTab > -1:
 					self.openCityTab(screen, iTab)
@@ -2181,23 +2134,8 @@ class CvMainInterface:
 				screen.enable(szButtonID, CyCity.canHurry(i, False))
 			# Draft
 			screen.enable("Conscript", CyCity.canConscript())
-			if not iTab:
-				# Update filter buttons
-				ID = "CT|UnitFilter"
-				screen.enableMultiListPulse(ID, CyCity.getUnitListFilterActive(UnitFilterTypes.UNIT_FILTER_HIDE_UNBUILDABLE), 0, 0)
-				screen.enableMultiListPulse(ID, CyCity.getUnitListFilterActive(UnitFilterTypes.UNIT_FILTER_HIDE_LIMITED), 0, 1)
-				screen.enableMultiListPulse(ID, CyCity.getUnitListFilterActive(UnitFilterTypes.UNIT_FILTER_SHOW_LAND), 0, 2)
-				screen.enableMultiListPulse(ID, CyCity.getUnitListFilterActive(UnitFilterTypes.UNIT_FILTER_SHOW_AIR), 0, 3)
-				screen.enableMultiListPulse(ID, CyCity.getUnitListFilterActive(UnitFilterTypes.UNIT_FILTER_SHOW_WATER), 0, 4)
-				screen.enableMultiListPulse(ID, CyCity.getUnitListFilterActive(UnitFilterTypes.UNIT_FILTER_SHOW_WORKERS), 0, 5)
-				screen.enableMultiListPulse(ID, CyCity.getUnitListFilterActive(UnitFilterTypes.UNIT_FILTER_SHOW_CIVILIAN), 0, 6)
-				screen.enableMultiListPulse(ID, CyCity.getUnitListFilterActive(UnitFilterTypes.UNIT_FILTER_SHOW_SIEGE), 0, 7)
-				screen.enableMultiListPulse(ID, CyCity.getUnitListFilterActive(UnitFilterTypes.UNIT_FILTER_SHOW_MOUNTED), 0, 8)
-				screen.enableMultiListPulse(ID, CyCity.getUnitListFilterActive(UnitFilterTypes.UNIT_FILTER_SHOW_HEROES), 0, 9)
-				screen.enableMultiListPulse(ID, CyCity.getUnitListFilterActive(UnitFilterTypes.UNIT_FILTER_SHOW_MILITARY), 0, 10)
-				screen.enableMultiListPulse(ID, CyCity.getUnitListFilterActive(UnitFilterTypes.UNIT_FILTER_SHOW_DEFENSE), 0, 11)
-				screen.enableMultiListPulse(ID, CyCity.getUnitListFilterActive(UnitFilterTypes.UNIT_FILTER_SHOW_MISSIONARY), 0, 12)
-			elif iTab != -1:
+
+			if iTab > 0:
 				ID = "CT|BuildingFilter"
 				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_HIDE_UNBUILDABLE), 0, 0)
 				screen.enableMultiListPulse(ID, CyCity.getBuildingListFilterActive(BuildingFilterTypes.BUILDING_FILTER_SHOW_SCIENCE), 0, 1)
@@ -3387,17 +3325,33 @@ class CvMainInterface:
 
 		InCity.QueueIndex = iOrders
 
-	def buildCitySelectionUI(self, screen, bFirst, InCity):
-		CyCity = InCity.CyCity
+	def buildCitySelectionUI(self, screen, bFirst, CyCity):
+
 		if bFirst:
 			self.buildCityTabButtons(screen, CyCity)
 		# Unit Group/Sort
-		iTab = self.iCityTab
+		iLanguage = GAME.getCurrentLanguage()
+		if not iLanguage: # English
+			wGroupButton = 96
+			wSortButton = 134
+		elif iLanguage == 1: # French
+			wGroupButton = 110
+			wSortButton = 160
+		else:
+			wGroupButton = 96
+			wSortButton = 134
+		'''
+		elif iLanguage == 2: # German
+		elif iLanguage == 3: # Italian
+		elif iLanguage == 4: # Spanish
+		'''
+		self.wUnitGroupButton = wGroupButton
+		self.wUnitSortButton = wSortButton
+
 		ID = "CT|UnitGrouping"
 		SELECTED = CyCity.getUnitListGrouping()
-		x = self.xUnitGrouping
-		w = self.wUnitGroupButton
-		screen.addDropDownBoxGFC(ID, x, 140, w, WidgetTypes.WIDGET_UNIT_GROUPING, 0, 0, FontTypes.SMALL_FONT)
+		x = self.xRes - self.xRes/4 - 50 - wGroupButton
+		screen.addDropDownBoxGFC(ID, x, 140, wGroupButton, WidgetTypes.WIDGET_UNIT_GROUPING, 0, 0, FontTypes.SMALL_FONT)
 		TYPE = UnitGroupingTypes.UNIT_GROUPING_SINGLE
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_GROUPING_SINGLE", ()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitGroupingTypes.UNIT_GROUPING_COMBAT
@@ -3409,9 +3363,8 @@ class CvMainInterface:
 
 		ID = "CT|UnitSorting"
 		SELECTED = CyCity.getUnitListSorting()
-		x += w + 4
-		w = self.wUnitSortButton
-		screen.addDropDownBoxGFC(ID, x, 140, w, WidgetTypes.WIDGET_UNIT_SORT, -1, -1, FontTypes.SMALL_FONT)
+		x -= wSortButton + 4
+		screen.addDropDownBoxGFC(ID, x, 140, wSortButton, WidgetTypes.WIDGET_UNIT_SORT, -1, -1, FontTypes.SMALL_FONT)
 		TYPE = UnitSortTypes.UNIT_SORT_NAME
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_SORT_NAME",		()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitSortTypes.UNIT_SORT_COST
@@ -3433,6 +3386,7 @@ class CvMainInterface:
 		TYPE = UnitSortTypes.UNIT_SORT_POWER
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_SORT_POWER",		()), TYPE, TYPE, SELECTED == TYPE)
 
+		iTab = self.iCityTab
 		if iTab:
 			screen.hide("CT|UnitGrouping")
 			screen.hide("CT|UnitSorting")
@@ -3472,10 +3426,7 @@ class CvMainInterface:
 			screen.hide("CT|BuildingSorting")
 
 	def buildCityTabButtons(self, screen, CyCity):
-		eWidGen		= WidgetTypes.WIDGET_GENERAL
-		iPanelEmpty	= PanelStyles.PANEL_STYLE_EMPTY
-		xMidR = self.xMidR
-		xMidL = self.xMidL
+		eWidGen = WidgetTypes.WIDGET_GENERAL
 		# City Tabs
 		y = self.yBotBar + 32
 		iSize = MainOpt.getBuildIconSize()
@@ -3487,7 +3438,7 @@ class CvMainInterface:
 			"CityBuilding.dds",
 			"CityWonder.dds"
 		]
-		x = xMidL
+		x = self.xMidL
 		for i in xrange(3):
 			ID = str(i)
 			Btn = "CityTab" + ID
@@ -3499,9 +3450,9 @@ class CvMainInterface:
 			screen.setHitTest(Img, HitTestTypes.HITTEST_NOHIT)
 			x += dx + 2
 
-		w = xMidR - x - 16
+		w = self.xMidR - x - 16
 		Pnl = "ProcessPanel"
-		screen.addScrollPanel(Pnl, "", x, y-8, w, iSize-6, iPanelEmpty)
+		screen.addScrollPanel(Pnl, "", x, y-8, w, iSize-6, PanelStyles.PANEL_STYLE_EMPTY)
 		screen.setStyle(Pnl, "ScrollPanel_Alt_Style")
 		x = 0
 		for i in xrange(self.iNumProcessInfos):
@@ -3512,9 +3463,9 @@ class CvMainInterface:
 				x += dx
 		# Build Lists
 		y += dx + 2
-		w = xMidR - xMidL - 16
+		w = self.xMidR - self.xMidL - 16
 		Pnl = "ScrollPanelBL"
-		screen.addScrollPanel(Pnl, "", xMidL-8, y-8, w, iSize-6, iPanelEmpty)
+		screen.addScrollPanel(Pnl, "", self.xMidL-8, y-8, w, iSize-6, PanelStyles.PANEL_STYLE_EMPTY)
 		screen.setStyle(Pnl, "ScrollPanel_Alt_Style")
 		CyPlayer = self.InCity.CyPlayer
 		iListNum = CyPlayer.getBLNumLists()
@@ -3534,37 +3485,34 @@ class CvMainInterface:
 
 
 	def openCityTab(self, screen, iTab):
+		if self.iCityTab > -1:
+			if self.iCityTab:
+				screen.hide("CT|UnitFilter")
+				screen.hide("CT|UnitGrouping")
+				screen.hide("CT|UnitSorting")
+			elif not iTab:
+				screen.hide("CT|BuildingFilter")
+				screen.hide("CT|BuildingSorting")
+
 		self.iCityTab = iTab
 		self.bLockedTT = True
-		eWidGen = WidgetTypes.WIDGET_GENERAL
-		iPanelMain = PanelStyles.PANEL_STYLE_MAIN
 		xRes = self.xRes
 		a4thX = xRes/4
 		halfX = xRes/2
 
 		yMax = self.yBotBar + 18
 
-		screen.setImageButton("CityTab|BG0", "", 0, 0, xRes, yMax - 6, eWidGen, 1, 1)
-		bCityScreen = self.bCityScreen
-		if bCityScreen:
-			x = a4thX
-			w = halfX
-		else:
-			x = self.xMidL
-			w = self.xMidR - x
-		y = 138
-		Pnl = "FilterGroupSortPanel"
-		screen.addPanel(Pnl, "", "", True, True, a4thX + 4, y, halfX - 8, 60, iPanelMain)
-		screen.setStyle(Pnl, "Panel_City_Title_Style")
-		y += 28
-		h = yMax - y
-		Pnl = "CityTabWindow"
-		screen.addPanel(Pnl, "", "", True, True, x, y, w, h, iPanelMain)
+		screen.setImageButton("CityTab|BG0", "", 0, 0, xRes, yMax - 6, WidgetTypes.WIDGET_GENERAL, 1, 1)
+
+		# Header bar
+		ID = "CityTabHeader"
+		screen.addPanel(ID, "", "", True, True, a4thX + 4, 138, halfX - 8, 60, PanelStyles.PANEL_STYLE_MAIN)
+		screen.setStyle(ID, "Panel_City_Title_Style")
+
 		if not iTab:
-			screen.moveToFront("CT|UnitFilter")
+			self.fillUnitCityTabHeader(screen)
 			screen.moveToFront("CT|UnitGrouping")
 			screen.moveToFront("CT|UnitSorting")
-			screen.show("CT|UnitFilter")
 			screen.show("CT|UnitGrouping")
 			screen.show("CT|UnitSorting")
 		else:
@@ -3572,9 +3520,67 @@ class CvMainInterface:
 			screen.moveToFront("CT|BuildingSorting")
 			screen.show("CT|BuildingFilter")
 			screen.show("CT|BuildingSorting")
+
+		if self.bCityScreen:
+			x = a4thX
+			w = halfX
+		else:
+			x = self.xMidL
+			w = self.xMidR - x
+
+		y = 166
+		h = yMax - y
+		Pnl = "CityTabWindow"
+		screen.addPanel(Pnl, "", "", True, True, x, y, w, h, PanelStyles.PANEL_STYLE_MAIN)
 		h -= 28
 		self.updateCityTab(screen, iTab, x, y, w, h)
-		screen.setText("CT|Options0", "", "<img=Art/Interface/Buttons/general/optionIcon1.dds>", 1<<0, xRes - xRes/4 - 42, 138, 0, FontTypes.GAME_FONT, eWidGen, 0, 0)
+		screen.setText("CT|Options0", "", "<img=Art/Interface/Buttons/general/optionIcon1.dds>", 1<<0, xRes - xRes/4 - 42, 138, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, 0, 0)
+
+	def fillUnitCityTabHeader(self, screen):
+		CyCity = self.InCity.CyCity
+		# Filter and grouping
+		iFilterWidth = self.xRes/2 - self.wUnitGroupButton - self.wUnitSortButton - 42
+		if iFilterWidth > 13 * 30 + 24:
+			iFilterWidth = 13 * 30 + 24
+		else:
+			iMod = iFilterWidth % 30
+			if iMod > 24:
+				iFilterWidth -= iMod - 24
+			elif iMod < 24:
+				iFilterWidth -= 6 + iMod
+
+		ScPnl = "CT|UnitFilter"
+		screen.addScrollPanel(ScPnl, "", self.xRes/4, 132, iFilterWidth, 17, PanelStyles.PANEL_STYLE_EMPTY)
+		screen.setStyle(ScPnl, "ScrollPanel_CityTabFilter_Style")
+
+		aList = [
+			[int(UnitFilterTypes.UNIT_FILTER_HIDE_UNBUILDABLE),	self.artPathButtonNoProduction],
+			[int(UnitFilterTypes.UNIT_FILTER_HIDE_LIMITED),		self.artPathWorldWonderOnBUG],
+			[int(UnitFilterTypes.UNIT_FILTER_SHOW_LAND),		self.artPathFilterLandPLE],
+			[int(UnitFilterTypes.UNIT_FILTER_SHOW_AIR),			self.artPathFilterAirPLE],
+			[int(UnitFilterTypes.UNIT_FILTER_SHOW_WATER),		self.artPathFilterSeaPLE],
+			[int(UnitFilterTypes.UNIT_FILTER_SHOW_WORKERS),		self.artPathTechWorkerSpeed],
+			[int(UnitFilterTypes.UNIT_FILTER_SHOW_CIVILIAN),	self.artPathFilterCivilianPLE],
+			[int(UnitFilterTypes.UNIT_FILTER_SHOW_SIEGE),		self.artPathFilterSiegePLE],
+			[int(UnitFilterTypes.UNIT_FILTER_SHOW_MOUNTED),		self.artPathTechMoveBonus],
+			[int(UnitFilterTypes.UNIT_FILTER_SHOW_HEROES),		self.artPathFilterHeroPLE],
+			[int(UnitFilterTypes.UNIT_FILTER_SHOW_MILITARY),	"Art/Interface/buttons/filters/show_military.dds"],
+			[int(UnitFilterTypes.UNIT_FILTER_SHOW_DEFENSE),		self.artPathButtonMilitary],
+			[int(UnitFilterTypes.UNIT_FILTER_SHOW_MISSIONARY),	self.artPathAngryCitizen]
+		]
+		eWidGen = WidgetTypes.WIDGET_GENERAL
+		eBtnLabel = ButtonStyles.BUTTON_STYLE_LABEL
+		x = -1
+		y = 1
+		while aList:
+			iFilter, art = aList.pop(0)
+			name = ScPnl + str(iFilter)
+			screen.addCheckBoxGFCAt(ScPnl, name, art, self.artPathHilite, x, y, 30, 30, eWidGen, 1, 2, eBtnLabel, False)
+			screen.setState(name, CyCity.getUnitListFilterActive(iFilter))
+			x += 30
+			if x > iFilterWidth - 48:
+				x = -1
+				y += 30
 
 
 	def updateCityTab(self, screen, iTab, x=-1, y=166, w=-1, h=-1):
@@ -3780,13 +3786,14 @@ class CvMainInterface:
 				x += dx
 				iCount += 1
 
+
 	def exitCityTab(self, screen, iTab):
 		screen.deleteWidget("CityTab|BG0")
 		screen.deleteWidget("CityTabWindow")
+		screen.deleteWidget("CityTabHeader")
 		screen.deleteWidget("CityTabScrPnl")
-		screen.deleteWidget("FilterGroupSortPanel")
 		screen.deleteWidget("CT|Options0")
-		screen.hide("CT|UnitFilter")
+		screen.deleteWidget("CT|UnitFilter")
 		screen.hide("CT|UnitGrouping")
 		screen.hide("CT|UnitSorting")
 		screen.hide("CT|BuildingFilter")
@@ -5314,6 +5321,25 @@ class CvMainInterface:
 						szKey = "D"
 					szTxt += " Tab  <color=144,255,72>&#60" + szKey + "&#62"
 				self.updateTooltip(screen, szTxt, -1, y)
+			elif BASE == "CT":
+				if TYPE == "UnitFilter":
+					aMap = {
+						UnitFilterTypes.UNIT_FILTER_HIDE_UNBUILDABLE: "TXT_KEY_LIST_UNIT_FILTER_SHOW_BUILDABLE",
+						UnitFilterTypes.UNIT_FILTER_HIDE_LIMITED	: "TXT_KEY_LIST_UNIT_FILTER_HIDE_LIMITED",
+						UnitFilterTypes.UNIT_FILTER_SHOW_LAND		: "TXT_KEY_LIST_UNIT_FILTER_SHOW_LAND",
+						UnitFilterTypes.UNIT_FILTER_SHOW_AIR		: "TXT_KEY_LIST_UNIT_FILTER_SHOW_AIR",
+						UnitFilterTypes.UNIT_FILTER_SHOW_WATER		: "TXT_KEY_LIST_UNIT_FILTER_SHOW_WATER",
+						UnitFilterTypes.UNIT_FILTER_SHOW_WORKERS	: "TXT_KEY_LIST_UNIT_FILTER_SHOW_WORKERS",
+						UnitFilterTypes.UNIT_FILTER_SHOW_CIVILIAN	: "TXT_KEY_LIST_UNIT_FILTER_SHOW_CIVILIAN",
+						UnitFilterTypes.UNIT_FILTER_SHOW_SIEGE		: "TXT_KEY_LIST_UNIT_FILTER_SHOW_SIEGE",
+						UnitFilterTypes.UNIT_FILTER_SHOW_MOUNTED	: "TXT_KEY_LIST_UNIT_FILTER_SHOW_MOUNTED",
+						UnitFilterTypes.UNIT_FILTER_SHOW_HEROES		: "TXT_KEY_LIST_UNIT_FILTER_SHOW_HEROES",
+						UnitFilterTypes.UNIT_FILTER_SHOW_MILITARY	: "TXT_KEY_LIST_UNIT_FILTER_SHOW_MILITARY",
+						UnitFilterTypes.UNIT_FILTER_SHOW_DEFENSE	: "TXT_KEY_LIST_UNIT_FILTER_SHOW_DEFENSE",
+						UnitFilterTypes.UNIT_FILTER_SHOW_MISSIONARY	: "TXT_KEY_LIST_UNIT_FILTER_SHOW_MISSIONARY"
+					}
+					if ID in aMap:
+						self.updateTooltip(screen, TRNSLTR.getText(aMap[ID], ()))
 
 			elif NAME == "GreatPersonBar":
 				self.helpGreatPersonBar(screen)
@@ -5565,7 +5591,11 @@ class CvMainInterface:
 					self.openCityTab(screen, ID)
 
 			elif BASE == "CT":
-				if TYPE == "Options":
+				if TYPE == "UnitFilter":
+					self.InCity.CyCity.setUnitListFilterActive(ID, not self.InCity.CyCity.getUnitListFilterActive(ID))
+					self.updateCityTab(screen, self.iCityTab)
+
+				elif TYPE == "Options":
 					popup = CyPopup(4999, EventContextTypes.EVENTCONTEXT_SELF, True)
 					popup.setPosition(self.xRes/3, self.yRes/3)
 					popup.setBodyString(self.aFontList[5] + TRNSLTR.getText("TXT_KEY_ICON_SIZE", ()), 1<<0)
