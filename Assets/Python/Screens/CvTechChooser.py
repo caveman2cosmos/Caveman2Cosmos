@@ -28,7 +28,8 @@ TECH_CHOICE = "WID|TECH|CHOICE"
 TECH_REQ = "WID|TECH|REQ"
 TECH_NAME = "TechName"
 SCREEN_PANEL = "TechList"
-CELL_BORDER = 6
+CELL_BORDER_W = 20
+CELL_BORDER_H = 0
 
 ADVISORS = [unichr(8855), unichr(8857), unichr(8500), unichr(8501), unichr(8502), unichr(8483)]
 
@@ -42,7 +43,7 @@ SLIDER_BORDER = 50
 # Could use a timer instead of a fixed count to allocate time slice for paging for more consistent behaviour
 TECH_PAGING_RATE = 4
 # Gap between techs
-CELL_GAP = 64
+CELL_GAP = CELL_BORDER_W * 2 + 32
 # Size of dependency arrows
 ARROW_SIZE = 8
 BOTTOM_BAR_NAME = "WID|BAR|BOTTOMBAR"
@@ -334,29 +335,29 @@ class CvTechChooser:
 					self.cellDetails[iTech] = True
 
 					# Tech cell
-					screen.setImageButtonAt(techCellId, SCREEN_PANEL, "", iX, iY, self.wCell + CELL_BORDER * 2, self.hCell + CELL_BORDER * 2, eWidGen, 1, 2)
+					screen.setImageButtonAt(techCellId, SCREEN_PANEL, "", iX, iY, self.wCell + CELL_BORDER_W * 2, self.hCell + CELL_BORDER_H * 2, eWidGen, 1, 2)
 					screen.setHitTest(techCellId, HitTestTypes.HITTEST_CHILDREN)
-					screen.addDDSGFCAt(ICON + iTechStr, techCellId, CvTechInfo.getButton(), 3 + CELL_BORDER, 5 + CELL_BORDER, self.sIcon0, self.sIcon0, eWidGen, 1, 2, False)
+					screen.addDDSGFCAt(ICON + iTechStr, techCellId, CvTechInfo.getButton(), 3 + CELL_BORDER_W, 5 + CELL_BORDER_H, self.sIcon0, self.sIcon0, eWidGen, 1, 2, False)
 					screen.setHitTest(ICON + iTechStr, HitTestTypes.HITTEST_NOHIT)
 
 					# Progress bar
 					barId = techCellId + "BAR"
-					screen.addStackedBarGFCAt(barId, techCellId, CELL_BORDER, CELL_BORDER + self.hCell - 6, self.wCell, PROGRESSBAR_H, InfoBarTypes.NUM_INFOBAR_TYPES, eWidGen, 1, 2)
+					screen.addStackedBarGFCAt(barId, techCellId, CELL_BORDER_W, CELL_BORDER_H + self.hCell - 6, self.wCell, PROGRESSBAR_H, InfoBarTypes.NUM_INFOBAR_TYPES, eWidGen, 1, 2)
 					screen.setStackedBarColorsRGB(barId, InfoBarTypes.INFOBAR_STORED, 0, 215, 50, 255)
 					screen.setStackedBarColorsRGB(barId, InfoBarTypes.INFOBAR_RATE, 255, 255, 255, 64)
 					screen.setStackedBarColorsRGB(barId, InfoBarTypes.INFOBAR_EMPTY, 0, 0, 0, 0)
 					screen.hide(barId)
 
 					# Queue label
-					screen.setImageButtonAt(QUEUE_LABEL_PANEL + iTechStr, SCREEN_PANEL, "", iX + CELL_BORDER - QUEUE_LABEL_W / 2, iY + CELL_BORDER - QUEUE_LABEL_H / 2, QUEUE_LABEL_W, QUEUE_LABEL_H, eWidGen, 1, 2)
+					screen.setImageButtonAt(QUEUE_LABEL_PANEL + iTechStr, SCREEN_PANEL, "", iX + CELL_BORDER_W - QUEUE_LABEL_W / 2, iY + CELL_BORDER_H - QUEUE_LABEL_H / 2, QUEUE_LABEL_W, QUEUE_LABEL_H, eWidGen, 1, 2)
 					screen.setStyle(QUEUE_LABEL_PANEL + iTechStr, "Button_TechQueuePos_Style")
 					screen.setPanelColor(QUEUE_LABEL_PANEL + iTechStr, 0, 0, 0)
 					screen.setHitTest(QUEUE_LABEL_PANEL + iTechStr, HitTestTypes.HITTEST_NOHIT)
 					screen.hide(QUEUE_LABEL_PANEL + iTechStr)
 
 					# Requires
-					iX = self.wCell + CELL_BORDER - 2
-					iY = 5 + CELL_BORDER
+					iX = self.wCell + CELL_BORDER_W - 2
+					iY = 5 + CELL_BORDER_H
 					for i in xrange(NUM_AND_TECH_PREREQS):
 						iTechX = CvTechInfo.getPrereqAndTechs(i)
 						if iTechX == -1: break
@@ -373,12 +374,12 @@ class CvTechChooser:
 
 						x1 = techInfoX.getGridX()
 						y1 = techInfoX.getGridY()
-						iX = x1 * self.xCellDist + self.wCell + CELL_BORDER * 2 - self.minX
+						iX = x1 * self.xCellDist + self.wCell + CELL_BORDER_W * 2 - self.minX
 						iY = yEmptySpace + ((y1 - 1) * yCellDist) / 2 + 4
 
 						xDiff = x0 - x1
 						yDiff = y0 - y1
-						xOff = xDiff * CELL_GAP + (xDiff - 1) * self.wCell - CELL_BORDER * 2
+						xOff = xDiff * CELL_GAP + (xDiff - 1) * self.wCell - CELL_BORDER_W * 2
 
 						# Helper functions for drawing the tech dependency arrows
 						def add_arrow_head(x, y):
@@ -425,8 +426,8 @@ class CvTechChooser:
 								add_arrow_head(iX + xOff, yArrow + dy)
 
 					# Draw unlocks
-					iX = self.sIcon0 + 6 + CELL_BORDER
-					iY = self.sIcon0 + 4 - self.sIcon1 + CELL_BORDER
+					iX = self.sIcon0 + 6 + CELL_BORDER_W
+					iY = self.sIcon0 + 4 - self.sIcon1 + CELL_BORDER_H
 
 					benefits = techBenefits[iTech]
 					iLength = len(benefits)
@@ -633,7 +634,7 @@ class CvTechChooser:
 
 		techCellId = TECH_CHOICE + iTechStr
 
-		screen.setLabelAt(TECH_NAME + iTechStr, techCellId, szTechString, 1<<0, self.sIcon0 + 7 + CELL_BORDER, 7 + CELL_BORDER, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 2)
+		screen.setLabelAt(TECH_NAME + iTechStr, techCellId, szTechString, 1<<0, self.sIcon0 + 7 + CELL_BORDER_W, 7 + CELL_BORDER_H, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 2)
 		screen.setHitTest(TECH_NAME + iTechStr, HitTestTypes.HITTEST_NOHIT)
 
 		# Colours
