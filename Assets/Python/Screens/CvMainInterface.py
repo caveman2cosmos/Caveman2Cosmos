@@ -204,12 +204,9 @@ class CvMainInterface:
 			self.artPathButtonGroupSplit		= afm.getInterfaceArtInfo("INTERFACE_BUTTONS_SPLITGROUP").getPath()
 			self.artPathButtonMilitary			= afm.getInterfaceArtInfo("INTERFACE_BTN_MILITARY").getPath()
 			self.artPathAngryCitizen			= afm.getInterfaceArtInfo("INTERFACE_ANGRYCITIZEN_TEXTURE").getPath()
-			#self.artPathUnhealthyPerson			= afm.getInterfaceArtInfo("INTERFACE_UNHEALTHY_PERSON").getPath()
 			self.artPathResistance				= afm.getInterfaceArtInfo("INTERFACE_RESISTANCE").getPath()
 			self.artPathTechWorkerSpeed			= afm.getInterfaceArtInfo("INTERFACE_TECH_WORKER_SPEED").getPath()
 			self.artPathTechMoveBonus			= afm.getInterfaceArtInfo("INTERFACE_TECH_MOVE_BONUS").getPath()
-			#self.artPathTechHappiness			= afm.getInterfaceArtInfo("INTERFACE_TECH_HAPPINESS").getPath()
-			#self.artPathTechHealth				= afm.getInterfaceArtInfo("INTERFACE_TECH_HEALTH").getPath()
 			self.artPathFilterCulture			= afm.getInterfaceArtInfo("INTERFACE_FILTER_CULTURE").getPath()
 			self.artPathFilterEspionage			= afm.getInterfaceArtInfo("INTERFACE_FILTER_ESPIONAGE").getPath()
 			self.artPathFilterResearch			= afm.getInterfaceArtInfo("INTERFACE_FILTER_RESEARCH").getPath()
@@ -239,7 +236,13 @@ class CvMainInterface:
 			self.artPathFilterSiegePLE			= afm.getInterfaceArtInfo("PLE_GRP_UNITTYPE").getPath()
 			self.artPathFilterHeroPLE			= afm.getInterfaceArtInfo("PLE_FILTER_MIL").getPath()
 			self.artPathWorldWonderOnBUG		= afm.getInterfaceArtInfo("BUG_WORLDWONDER_ON").getPath()
-			self.artPathNationalWonderOnBUG		= afm.getInterfaceArtInfo("BUG_NATWONDER_ON").getPath()
+
+			self.artFILTER_SHOW_MILITARY		= afm.getInterfaceArtInfo("ART_DEF_FILTER_SHOW_MILITARY").getPath()
+			self.artFILTER_SHOW_HAPPY			= afm.getInterfaceArtInfo("ART_DEF_FILTER_SHOW_HAPPY").getPath()
+			self.artFILTER_HIDE_UNHAPPY			= afm.getInterfaceArtInfo("ART_DEF_FILTER_HIDE_UNHAPPY").getPath()
+			self.artFILTER_SHOW_HEALTH			= afm.getInterfaceArtInfo("ART_DEF_FILTER_SHOW_HEALTH").getPath()
+			self.artFILTER_HIDE_UNHEALTH		= afm.getInterfaceArtInfo("ART_DEF_FILTER_HIDE_UNHEALTH").getPath()
+
 			self.artPathListUnitStatusDot = [
 				(afm.getInterfaceArtInfo("OVERLAY_FORTIFY").getPath(), afm.getInterfaceArtInfo("OVERLAY_FORTIFY_INJURED").getPath()),
 				(afm.getInterfaceArtInfo("OVERLAY_FORTIFY_GG").getPath(), afm.getInterfaceArtInfo("OVERLAY_FORTIFY_INJURED_GG").getPath()),
@@ -3478,7 +3481,7 @@ class CvMainInterface:
 			[int(UnitFilterTypes.UNIT_FILTER_SHOW_SIEGE),		self.artPathFilterSiegePLE],
 			[int(UnitFilterTypes.UNIT_FILTER_SHOW_MOUNTED),		self.artPathTechMoveBonus],
 			[int(UnitFilterTypes.UNIT_FILTER_SHOW_HEROES),		self.artPathFilterHeroPLE],
-			[int(UnitFilterTypes.UNIT_FILTER_SHOW_MILITARY),	"Art/Interface/buttons/filters/show_military.dds"],
+			[int(UnitFilterTypes.UNIT_FILTER_SHOW_MILITARY),	self.artFILTER_SHOW_MILITARY],
 			[int(UnitFilterTypes.UNIT_FILTER_SHOW_DEFENSE),		self.artPathButtonMilitary],
 			[int(UnitFilterTypes.UNIT_FILTER_SHOW_MISSIONARY),	self.artPathAngryCitizen]
 		]
@@ -3522,11 +3525,11 @@ class CvMainInterface:
 			[int(BuildingFilterTypes.BUILDING_FILTER_SHOW_GOLD),			self.artPathRawYieldsCommerce],
 			[int(BuildingFilterTypes.BUILDING_FILTER_SHOW_FOOD),			self.artPathRawYieldsFood],
 			[int(BuildingFilterTypes.BUILDING_FILTER_SHOW_PRODUCTION),		self.artPathRawYieldsProduction],
-			[int(BuildingFilterTypes.BUILDING_FILTER_SHOW_HAPPINESS),		"Art/Interface/buttons/filters/show_happy.dds"],
-			[int(BuildingFilterTypes.BUILDING_FILTER_HIDE_UNHAPPINESS),		"Art/Interface/buttons/filters/hide_unhappy.dds"],
-			[int(BuildingFilterTypes.BUILDING_FILTER_SHOW_HEALTH),			"Art/Interface/buttons/filters/show_health.dds"],
-			[int(BuildingFilterTypes.BUILDING_FILTER_HIDE_UNHEALTHINESS),	"Art/Interface/buttons/filters/hide_unhealth.dds"],
-			[int(BuildingFilterTypes.BUILDING_FILTER_SHOW_MILITARY),		"Art/Interface/buttons/filters/show_military.dds"],
+			[int(BuildingFilterTypes.BUILDING_FILTER_SHOW_HAPPINESS),		self.artFILTER_SHOW_HAPPY],
+			[int(BuildingFilterTypes.BUILDING_FILTER_HIDE_UNHAPPINESS),		self.artFILTER_HIDE_UNHAPPY],
+			[int(BuildingFilterTypes.BUILDING_FILTER_SHOW_HEALTH),			self.artFILTER_SHOW_HEALTH],
+			[int(BuildingFilterTypes.BUILDING_FILTER_HIDE_UNHEALTHINESS),	self.artFILTER_HIDE_UNHEALTH],
+			[int(BuildingFilterTypes.BUILDING_FILTER_SHOW_MILITARY),		self.artFILTER_SHOW_MILITARY],
 			[int(BuildingFilterTypes.BUILDING_FILTER_SHOW_CITY_DEFENSE),	self.artPathButtonMilitary],
 			[int(BuildingFilterTypes.BUILDING_FILTER_SHOW_CRIME),			"Art/Interface/buttons/filters/showcrimeOff.dds"],
 			[int(BuildingFilterTypes.BUILDING_FILTER_SHOW_DISEASE),			"Art/Interface/buttons/filters/showdiseaseOff.dds"],
