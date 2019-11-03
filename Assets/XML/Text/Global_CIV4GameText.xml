@@ -9291,6 +9291,33 @@
 		<Polish>ZAPISZ</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LIST_BUILDING_FILTER_HIDE_GREAT_WONDER</Tag>
+		<English>Hide world wonders</English>
+		<French>Masquer les Merveilles mondiales</French>
+		<German>Verberge Weltwunder</German>
+		<Italian>Nascondi Grandi Meraviglie</Italian>
+		<Spanish>Ocultar Maravillas del mundo</Spanish>
+		<Polish>Ukryj cuda świata</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LIST_BUILDING_FILTER_HIDE_NATIONAL_WONDER</Tag>
+		<English>Hide national wonders</English>
+		<French>Masquer les Merveilles nationales</French>
+		<German>Verberge nationale Wunder</German>
+		<Italian>Nascondi Meraviglie Nazionali</Italian>
+		<Spanish>Ocultar Maravillas nacionales</Spanish>
+		<Polish>Ukryj cuda narodowe</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LIST_BUILDING_FILTER_HIDE_NORMAL</Tag>
+		<English>Hide normal buildings</English>
+		<French>Masquer les bâtiments standards</French>
+		<German>Verberge normale Gebäude</German>
+		<Italian>Nascondi edific normali</Italian>
+		<Spanish>Ocultar edificios normales</Spanish>
+		<Polish>Ukryj normalne budynki</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LIST_BUILDING_FILTER_HIDE_UNHAPPINESS</Tag>
 		<English>Hide any buildings that cause unhappiness</English>
 		<French>Masquer les bâtiments qui engendrent du mécontentement</French>
