@@ -2767,8 +2767,9 @@ void CvPlayer::addFreeUnit(UnitTypes eUnit, UnitAITypes eUnitAI)
 		pBestPlot = NULL;
 
 		if (isHuman())
-		{
-			if (!Cy::call<bool>(gDLL->getPythonIFace()->getMapScriptModule(), "startHumansOnSameTile"))
+		{	
+			bool startOnSameTile = false;
+			if (!Cy::call_optional(gDLL->getPythonIFace()->getMapScriptModule(), "startHumansOnSameTile", startOnSameTile) || !startOnSameTile)
 			{
 				if (!(GC.getUnitInfo(eUnit).isFound()))
 				{

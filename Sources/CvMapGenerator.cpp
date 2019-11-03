@@ -49,8 +49,8 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 	}
 
 	{
-		bool result = Cy::call<bool>(gDLL->getPythonIFace()->getMapScriptModule(), "canPlaceBonusAt", Cy::Args() << pPlot);
-		if (!gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+		bool result = false;
+		if (Cy::call_override<bool>(gDLL->getPythonIFace()->getMapScriptModule(), "canPlaceBonusAt", Cy::Args() << pPlot, result))
 		{
 			return result;
 		}
@@ -965,7 +965,7 @@ void CvMapGenerator::generateRandomMap()
 {
 	PROFILE("generateRandomMap()");
 
-	Cy::call(gDLL->getPythonIFace()->getMapScriptModule(), "beforeGeneration");
+	Cy::call_optional (gDLL->getPythonIFace()->getMapScriptModule(), "beforeGeneration");
 
 	if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "generateRandomMap"))
 	{
@@ -1034,7 +1034,7 @@ void CvMapGenerator::afterGeneration()
 {
 	PROFILE("CvMapGenerator::afterGeneration");
 
-	Cy::call(gDLL->getPythonIFace()->getMapScriptModule(), "afterGeneration");
+	Cy::call_optional(gDLL->getPythonIFace()->getMapScriptModule(), "afterGeneration");
 }
 
 void CvMapGenerator::setPlotTypes(const int* paiPlotTypes)
