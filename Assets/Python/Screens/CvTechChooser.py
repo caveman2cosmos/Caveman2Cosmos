@@ -63,6 +63,11 @@ QUEUE_LABEL = "QUEUE_LABEL"
 QUEUE_LABEL_W = 54
 QUEUE_LABEL_H = 32
 
+FOREGROUND_PARA_H = 256
+BACKGROUND_PARA_AMOUNT = 100
+FOREGROUND_PARA_AMOUNT = 200
+
+
 class CvTechChooser:
 
 	def __init__(self):
@@ -244,10 +249,24 @@ class CvTechChooser:
 				screen.setText("WID|ERAIM|" + str(i), "", "<img=%s>" % (img), 0, posX - 4, posY, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, 0, 0)
 			if i > 0:
 				screen.addPanel("WID|ERAPANEL|" + str(i-1), "", "", False, False, lastPosX, posY, posX - lastPosX, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_DEFAULT)
-				bgPanelName = "WID|ERABGPANEL|" + str(i-1)
-				screen.attachPanelAt(SCREEN_PANEL, bgPanelName, "", "", False, False, PanelStyles.PANEL_STYLE_STANDARD, self.minEraX[i-1] - self.minX, 0, self.minEraX[i] - self.minEraX[i-1], self.yRes - SCREEN_PANEL_BOTTOM_BAR_H - SCREEN_PANEL_TOP_BAR_H, WidgetTypes.WIDGET_GENERAL, 0, 0)
-				screen.setStyle(bgPanelName, self.getBackgroundStyleForEra(i-1))
-				screen.addPanel("WID|ERAPANEL|" + str(i-1), "", "", False, False, lastPosX, posY, posX - lastPosX, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_DEFAULT)
+			
+			# Backdrop
+			backDropPanelName = "ERA_BG_PANEL_" + str(i)
+			bgName = "ERA_BG_" + str(i)
+			fgName = "ERA_FG_" + str(i)
+			bgPanelWid = self.minEraX[i+1] - self.minEraX[i] + self.xCellDist
+			bgPanelHgt = self.yRes - SCREEN_PANEL_BOTTOM_BAR_H - SCREEN_PANEL_TOP_BAR_H
+			screen.attachPanelAt(SCREEN_PANEL, backDropPanelName, "", "", False, False, PanelStyles.PANEL_STYLE_STANDARD, self.minEraX[i] - self.minX - self.xCellDist / 2, 0, bgPanelWid, bgPanelHgt, WidgetTypes.WIDGET_GENERAL, 0, 0)
+			screen.setImageButtonAt(bgName, backDropPanelName, "", 0, 0, self.xRes + BACKGROUND_PARA_AMOUNT * 2, bgPanelHgt, WidgetTypes.WIDGET_GENERAL, 1, 2)
+			screen.setStyle(bgName, self.getBackgroundStyleForEra(i))
+			screen.setHitTest(bgName, HitTestTypes.HITTEST_NOHIT)
+			#screen.attachPanelAt(SCREEN_PANEL, bgPanelName, "", "", False, False, PanelStyles.PANEL_STYLE_STANDARD, self.minEraX[i] - self.minX - self.xCellDist / 2, 0, bgPanelWid, bgPanelHgt, WidgetTypes.WIDGET_GENERAL, 0, 0)
+			#screen.attachPanelAt(bgPanelName, fgPanelName, "", "", False, False, PanelStyles.PANEL_STYLE_STANDARD, 0, bgPanelHgt - FOREGROUND_PARA_H, bgPanelWid, FOREGROUND_PARA_H, WidgetTypes.WIDGET_GENERAL, 0, 0)
+			screen.setImageButtonAt(fgName, backDropPanelName, "", 0, 0, self.xRes + FOREGROUND_PARA_AMOUNT * 2, FOREGROUND_PARA_H, WidgetTypes.WIDGET_GENERAL, 1, 2)
+			screen.setStyle(fgName, self.getForegroundStyleForEra(i))
+			screen.setHitTest(fgName, HitTestTypes.HITTEST_NOHIT)
+
+			# screen.addPanel("WID|ERAPANEL|" + str(i-1), "", "", False, False, lastPosX, posY, posX - lastPosX, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_DEFAULT)
 			lastPosX = posX
 				# screen.setHitTest("WID|ERAIM|" + str(i), HitTestTypes.HITTEST_NOHIT)
 			# yOffs = 0 + 48 * (i % 2)
@@ -1101,8 +1120,27 @@ class CvTechChooser:
 
 	def scroll(self):
 		screen = self.screen()
+
+		# Move the main tech panel
 		screen.moveItem(SCREEN_PANEL, -self.scrollOffs, 29, 0)
+
+		# Move the minimap lens
 		screen.moveItem(MINIMAP_LENS_ID, SLIDER_BORDER + (self.minimapScaleX * self.scrollOffs) - MINIMAP_LENS_BORDER_H, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H, 0)
+
+		# Parallax Scroll the backdrops
+		for i in xrange(1): #self.iNumEras - 1):
+			bgName = "ERA_BG_" + str(i)
+			fgName = "ERA_FG_" + str(i)
+
+			eraStart = self.minEraX[i] - self.minX - self.xCellDist / 2
+			eraEnd = self.minEraX[i + 1] - self.minX - self.xCellDist / 2
+			eraWidth = eraEnd - eraStart
+			eraOffs = self.scrollOffs - eraStart
+			eraFrac = 1 - max(0, min(1, eraOffs / float(eraWidth)))
+			screen.setText("FRRAC", "", str((self.scrollOffs, eraStart, eraEnd, eraWidth, eraFrac)), 0, 70, 35, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+			screen.moveItem(bgName, eraOffs - BACKGROUND_PARA_AMOUNT + int(BACKGROUND_PARA_AMOUNT * 2 * eraFrac), 0, 0)
+			bgPanelHgt = self.yRes - SCREEN_PANEL_BOTTOM_BAR_H - SCREEN_PANEL_TOP_BAR_H
+			screen.moveItem(fgName, eraOffs - FOREGROUND_PARA_AMOUNT + int(FOREGROUND_PARA_AMOUNT * 2 * eraFrac), bgPanelHgt - FOREGROUND_PARA_H, 0)
 
 	def scrollToTech(self, idx):
 		self.scrollTo(self.getTechPos(idx) - self.xRes / 2 + self.xCellDist / 2)
@@ -1160,18 +1198,54 @@ class CvTechChooser:
 	
 	def getBackgroundStyleForEra(self, era):
 		return {
-			0: "Panel_TechBackground_0_Style",
-			1: "Panel_TechBackground_1_Style",
-			# 2: "Panel_TechBackground_2_Style",
-			# 3: "Panel_TechBackground_3_Style",
-			# 4: "Panel_TechBackground_4_Style",
-			# 5: "Panel_TechBackground_5_Style",
-			# 6: "Panel_TechBackground_6_Style",
-			# 7: "Panel_TechBackground_7_Style",
-			# 8: "Panel_TechBackground_8_Style",
-			# 9: "Panel_TechBackground_9_Style",
-			# 10: "Panel_TechBackground_10_Style",
-			# 11: "Panel_TechBackground_11_Style",
-			# 12: "Panel_TechBackground_12_Style",
-			# 13: "Panel_TechBackground_13_Style",
-		}.get(era, "Panel_TechBackground_0_Style")
+			0: "Button_TechBackground_0_Style",
+			1: "Button_TechBackground_1_Style",
+			# 2: "Button_TechBackground_2_Style",
+			# 3: "Button_TechBackground_3_Style",
+			# 4: "Button_TechBackground_4_Style",
+			# 5: "Button_TechBackground_5_Style",
+			# 6: "Button_TechBackground_6_Style",
+			# 7: "Button_TechBackground_7_Style",
+			# 8: "Button_TechBackground_8_Style",
+			# 9: "Button_TechBackground_9_Style",
+			# 10: "Button_TechBackground_10_Style",
+			# 11: "Button_TechBackground_11_Style",
+			# 12: "Button_TechBackground_12_Style",
+			# 13: "Button_TechBackground_13_Style",
+		}.get(era, "Button_TechBackground_0_Style")
+
+	def getForegroundStyleForEra(self, era):
+		return {
+			0: "Button_TechForeground_0_Style",
+			1: "Button_TechForeground_1_Style",
+			# 2: "Button_TechForeground_2_Style",
+			# 3: "Button_TechForeground_3_Style",
+			# 4: "Button_TechForeground_4_Style",
+			# 5: "Button_TechForeground_5_Style",
+			# 6: "Button_TechForeground_6_Style",
+			# 7: "Button_TechForeground_7_Style",
+			# 8: "Button_TechForeground_8_Style",
+			# 9: "Button_TechForeground_9_Style",
+			# 10: "Button_TechForeground_10_Style",
+			# 11: "Button_TechForeground_11_Style",
+			# 12: "Button_TechForeground_12_Style",
+			# 13: "Button_TechForeground_13_Style",
+		}.get(era, "Button_TechForeground_0_Style")
+	
+	def getIntroStyleForEra(self, era):
+		return {
+			0: "Panel_TechIntro_0_Style",
+			1: "Panel_TechIntro_1_Style",
+			# 2: "Panel_TechIntro_2_Style",
+			# 3: "Panel_TechIntro_3_Style",
+			# 4: "Panel_TechIntro_4_Style",
+			# 5: "Panel_TechIntro_5_Style",
+			# 6: "Panel_TechIntro_6_Style",
+			# 7: "Panel_TechIntro_7_Style",
+			# 8: "Panel_TechIntro_8_Style",
+			# 9: "Panel_TechIntro_9_Style",
+			# 10: "Panel_TechIntro_10_Style",
+			# 11: "Panel_TechIntro_11_Style",
+			# 12: "Panel_TechIntro_12_Style",
+			# 13: "Panel_TechIntro_13_Style",
+		}.get(era, "Panel_TechIntro_0_Style")
