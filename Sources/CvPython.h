@@ -24,6 +24,20 @@ namespace Cy											\
 	};													\
 }
 
+#define DECLARE_PY_WRAPPED(_class)						\
+namespace Cy											\
+{														\
+	template <>											\
+	struct ArgTraits< typename Cy::base_type<_class>::type > \
+	{													\
+		template < class Ty_ >							\
+		static void add(Args& args, Ty_ arg)			\
+		{												\
+			args.add_wrapped(arg);						\
+		}												\
+	};													\
+}
+
 namespace Cy
 {
 	template < class Ty_ >

@@ -1921,9 +1921,11 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 	return false;
 }
 
-void* CvGameObjectGame::createPythonWrapper()
+void* CvGameObjectGame::createPythonWrapper(PyObject*& pyObj)
 {
-	return new CyGame();
+	CyGame* wrapper = new CyGame();
+	pyObj = gDLL->getPythonIFace()->makePythonObject(wrapper);
+	return wrapper;
 }
 
 void CvGameObjectGame::disposePythonWrapper(void *pArgument)
@@ -1931,9 +1933,11 @@ void CvGameObjectGame::disposePythonWrapper(void *pArgument)
 	delete (CyGame*)pArgument;
 }
 
-void* CvGameObjectTeam::createPythonWrapper()
+void* CvGameObjectTeam::createPythonWrapper(PyObject*& pyObj)
 {
-	return new CyTeam(m_pTeam);
+	CyTeam* wrapper = new CyTeam(m_pTeam);
+	pyObj = gDLL->getPythonIFace()->makePythonObject(wrapper);
+	return wrapper;
 }
 
 void CvGameObjectTeam::disposePythonWrapper(void *pArgument)
@@ -1941,9 +1945,11 @@ void CvGameObjectTeam::disposePythonWrapper(void *pArgument)
 	delete (CyTeam*)pArgument;
 }
 
-void* CvGameObjectPlayer::createPythonWrapper()
+void* CvGameObjectPlayer::createPythonWrapper(PyObject*& pyObj)
 {
-	return new CyPlayer(m_pPlayer);
+	CyPlayer* wrapper = new CyPlayer(m_pPlayer);
+	pyObj = gDLL->getPythonIFace()->makePythonObject(wrapper);
+	return wrapper;
 }
 
 void CvGameObjectPlayer::disposePythonWrapper(void *pArgument)
@@ -1951,9 +1957,11 @@ void CvGameObjectPlayer::disposePythonWrapper(void *pArgument)
 	delete (CyPlayer*)pArgument;
 }
 
-void* CvGameObjectCity::createPythonWrapper()
+void* CvGameObjectCity::createPythonWrapper(PyObject*& pyObj)
 {
-	return new CyCity(m_pCity);
+	CyCity* wrapper = new CyCity(m_pCity);
+	pyObj = gDLL->getPythonIFace()->makePythonObject(wrapper);
+	return wrapper;
 }
 
 void CvGameObjectCity::disposePythonWrapper(void *pArgument)
@@ -1961,9 +1969,11 @@ void CvGameObjectCity::disposePythonWrapper(void *pArgument)
 	delete (CyCity*)pArgument;
 }
 
-void* CvGameObjectUnit::createPythonWrapper()
+void* CvGameObjectUnit::createPythonWrapper(PyObject*& pyObj)
 {
-	return new CyUnit(m_pUnit);
+	CyUnit* wrapper = new CyUnit(m_pUnit);
+	pyObj = gDLL->getPythonIFace()->makePythonObject(wrapper);
+	return wrapper;
 }
 
 void CvGameObjectUnit::disposePythonWrapper(void *pArgument)
@@ -1971,9 +1981,11 @@ void CvGameObjectUnit::disposePythonWrapper(void *pArgument)
 	delete (CyUnit*)pArgument;
 }
 
-void* CvGameObjectPlot::createPythonWrapper()
+void* CvGameObjectPlot::createPythonWrapper(PyObject*& pyObj)
 {
-	return new CyPlot(m_pPlot);
+	CyPlot* wrapper = new CyPlot(m_pPlot);
+	pyObj = gDLL->getPythonIFace()->makePythonObject(wrapper);
+	return wrapper;
 }
 
 void CvGameObjectPlot::disposePythonWrapper(void *pArgument)
