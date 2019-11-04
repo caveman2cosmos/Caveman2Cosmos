@@ -1,8 +1,6 @@
 Version=11
 BeginGame
-	Era=ERA_ANCIENT
 	Speed=GAMESPEED_EPIC
-	Calendar=CALENDAR_DEFAULT
 	Option=GAMEOPTION_NO_TECH_TRADING
 	Option=GAMEOPTION_NO_TECH_BROKERING
 	Option=GAMEOPTION_NO_VASSAL_STATES
@@ -37,10 +35,6 @@ BeginGame
 	Option=GAMEOPTION_BEELINE_STINGS
 	Option=GAMEOPTION_UPSCALED_RESEARCH_COSTS
 	Victory=VICTORY_TIME
-	GameTurn=0
-	MaxCityElimination=0
-	NumAdvancedStartPoints=4000
-	TargetScore=0
 	StartYear=-200000
 	Description=Never use more than 7 civs or some civs will start in weird places!! This is a combination of KaTiON_PT's Tiny Space map with a random map (Duel size (60x40); Waterworld; +4 rivers; low sealevel; 7 random nations). Have fun!
 	ModPath=
@@ -249,12 +243,6 @@ BeginPlayer
     Team=0
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=52, StartingY=25
 	RandomStartLocation=false
 EndPlayer
@@ -262,12 +250,6 @@ BeginPlayer
     Team=1
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=19, StartingY=29
 	RandomStartLocation=false
 EndPlayer
@@ -275,12 +257,6 @@ BeginPlayer
     Team=2
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=0, StartingY=42
 	RandomStartLocation=false
 EndPlayer
@@ -288,12 +264,6 @@ BeginPlayer
     Team=3
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=52, StartingY=51
 	RandomStartLocation=false
 EndPlayer
@@ -301,12 +271,6 @@ BeginPlayer
     Team=4
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=58, StartingY=33
 	RandomStartLocation=false
 EndPlayer
@@ -314,12 +278,6 @@ BeginPlayer
     Team=5
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=17, Startingy=39
 	RandomStartLocation=false
 EndPlayer
@@ -327,12 +285,6 @@ BeginPlayer
     Team=6
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=41, Startingy=52
 	RandomStartLocation=false
 EndPlayer
@@ -565,7 +517,6 @@ BeginMap
 	num signs written=0
 	Randomize Resources=false
 EndMap
-
 ### Plot Info ###
 BeginPlot
 	x=0,y=0
@@ -47382,5 +47333,4 @@ BeginPlot
 	TerrainType=TERRAIN_DISTANT_PAST
 	PlotType=2
 EndPlot
-
 ### Sign Info ###

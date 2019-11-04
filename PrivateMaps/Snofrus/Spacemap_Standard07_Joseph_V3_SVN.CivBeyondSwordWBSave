@@ -1,8 +1,6 @@
 Version=11
 BeginGame
-	Era=ERA_ANCIENT
 	Speed=GAMESPEED_MARATHON
-	Calendar=CALENDAR_DEFAULT
 	Option=GAMEOPTION_NO_TECH_TRADING
 	Option=GAMEOPTION_NO_TECH_BROKERING
 	Option=GAMEOPTION_NO_VASSAL_STATES
@@ -36,10 +34,6 @@ BeginGame
 	Option=GAMEOPTION_BEELINE_STINGS
 	Option=GAMEOPTION_UPSCALED_RESEARCH_COSTS
 	Victory=VICTORY_TIME
-	GameTurn=0
-	MaxCityElimination=0
-	NumAdvancedStartPoints=2000
-	TargetScore=0
 	StartYear=-200000
 	Description=Never use more than 9 civs or some civs will start in weird places!! Standard size starting map (124x56); Archipelago; Sealevel low; 50% Mountains; 9 random nations. Have fun!
 	ModPath=
@@ -248,12 +242,6 @@ BeginPlayer
     Team=0
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=17, StartingY=42
 	RandomStartLocation=false
 EndPlayer
@@ -261,12 +249,6 @@ BeginPlayer
     Team=1
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=74, StartingY=47
 	RandomStartLocation=false
 EndPlayer
@@ -274,12 +256,6 @@ BeginPlayer
     Team=2
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=25, StartingY=42
 	RandomStartLocation=false
 EndPlayer
@@ -287,12 +263,6 @@ BeginPlayer
     Team=3
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=24, StartingY=12
 	RandomStartLocation=false
 EndPlayer
@@ -300,12 +270,6 @@ BeginPlayer
     Team=4
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=71, StartingY=16
 	RandomStartLocation=false
 EndPlayer
@@ -313,12 +277,6 @@ BeginPlayer
     Team=5
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=39, StartingY=39
 	RandomStartLocation=false
 EndPlayer
@@ -326,12 +284,6 @@ BeginPlayer
     Team=6
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=57, StartingY=41
 	RandomStartLocation=false
 EndPlayer
@@ -339,12 +291,6 @@ BeginPlayer
     Team=7
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=86, StartingY=32
 	RandomStartLocation=false
 EndPlayer
@@ -352,12 +298,6 @@ BeginPlayer
     Team=8
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=24, StartingY=32
 	RandomStartLocation=false
 EndPlayer
@@ -580,7 +520,6 @@ BeginMap
 	num signs written=0
 	Randomize Resources=false
 EndMap
-
 ### Plot Info ###
 BeginPlot
 	x=0,y=0
@@ -129853,5 +129792,4 @@ BeginPlot
 	TerrainType=TERRAIN_HYPERSPACE
 	PlotType=2
 EndPlot
-
 ### Sign Info ###

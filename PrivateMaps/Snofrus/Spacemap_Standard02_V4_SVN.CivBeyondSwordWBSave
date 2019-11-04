@@ -1,8 +1,6 @@
 Version=11
 BeginGame
-	Era=ERA_ANCIENT
 	Speed=GAMESPEED_MARATHON
-	Calendar=CALENDAR_DEFAULT
 	Option=GAMEOPTION_NO_TECH_TRADING
 	Option=GAMEOPTION_NO_TECH_BROKERING
 	Option=GAMEOPTION_NO_VASSAL_STATES
@@ -36,10 +34,6 @@ BeginGame
 	Option=GAMEOPTION_BEELINE_STINGS
 	Option=GAMEOPTION_UPSCALED_RESEARCH_COSTS
 	Victory=VICTORY_TIME
-	GameTurn=0
-	MaxCityElimination=0
-	NumAdvancedStartPoints=2000
-	TargetScore=0
 	StartYear=-200000
 	Description=Never use more than 8 civs or some civs will start in weird places!! This is a combination of KaTiON_PT's Large Solar System Space map with a random map (Standard size (124x56); Archipelago; +3 rivers; 8 random nations). Have fun!
 	ModPath=
@@ -248,12 +242,6 @@ BeginPlayer
     Team=0
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=15, StartingY=29
 	RandomStartLocation=false
 EndPlayer
@@ -261,12 +249,6 @@ BeginPlayer
     Team=1
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=1, StartingY=44
 	RandomStartLocation=false
 EndPlayer
@@ -274,12 +256,6 @@ BeginPlayer
     Team=2
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=0, StartingY=12
 RandomStartLocation=false
 EndPlayer
@@ -287,12 +263,6 @@ BeginPlayer
     Team=3
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=22, StartingY=43
 	RandomStartLocation=false
 EndPlayer
@@ -300,12 +270,6 @@ BeginPlayer
     Team=4
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=50, StartingY=21
 	RandomStartLocation=false
 EndPlayer
@@ -313,12 +277,6 @@ BeginPlayer
     Team=5
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=32, StartingY=44
 	RandomStartLocation=false
 EndPlayer
@@ -326,12 +284,6 @@ BeginPlayer
     Team=6
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=91, StartingY=35
 	RandomStartLocation=false
 EndPlayer
@@ -339,12 +291,6 @@ BeginPlayer
     Team=7
     LeaderType=NONE
     CivType=NONE
-    Color=NONE
-    ArtStyle=NONE
-    Handicap=HANDICAP_NOBLE
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=0
 	StartingX=61, StartingY=21
 	RandomStartLocation=false
 EndPlayer
@@ -572,7 +518,6 @@ BeginMap
 	num signs written=0
 	Randomize Resources=false
 EndMap
-
 ### Plot Info ###
 BeginPlot
 	x=0,y=0
@@ -129759,5 +129704,4 @@ BeginPlot
 	TerrainType=TERRAIN_HYPERSPACE
 	PlotType=2
 EndPlot
-
 ### Sign Info ###
