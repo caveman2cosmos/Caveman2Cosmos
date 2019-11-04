@@ -167,7 +167,7 @@ skin SF_CtrlTheme_Civ4_Control_MultiList_ItemBorder_Skin
 		FactorCombine	= GColorCombine(Modulate,Modulate);
 		FactorColor		= SF_CtrlTheme_Civ4_Control_Color_HUDBorder;
 		Image			= GBitmap("../../../../Resource/Civ4/Custom/MultiListItem.tga", HVGrid, 8, 1, 0, 0);
-		Margin			= GRectMargin(10,12,10,12);
+		Margin			= GRectMargin(11,11,11,11);
 	}
 }
 
@@ -179,7 +179,7 @@ skin SF_CtrlTheme_Civ4_Control_MultiList_ItemBorderGlow_Skin
 		FactorCombine	= GColorCombine(Modulate,Source);
 		FactorColor		= GColor(255,255,255,255);
 		Image			= GBitmap("../../../../Resource/Civ4/Custom/MultiListItem.tga", HVGrid, 8, 1, 1, 0);
-		Margin			= GRectMargin(10,12,10,12);
+		Margin			= GRectMargin(11,11,11,11);
 	}
 }
 
@@ -191,7 +191,7 @@ skin SF_CtrlTheme_Civ4_Control_MultiList_ItemFill_Skin
 		FactorCombine	= GColorCombine(Modulate,Modulate);
 		FactorColor		= GColor(255,255,255,255);
 		Image			= GBitmap("../../../../Resource/Civ4/Custom/MultiListItem.tga", HVGrid, 8, 1, 2, 0);
-		Margin			= GRectMargin(10,12,10,12);
+		Margin			= GRectMargin(11,11,11,11);
 	}
 }
 
@@ -203,7 +203,7 @@ skin SF_CtrlTheme_Civ4_Control_MultiList_ItemFillGlow_Skin
 		FactorCombine	= GColorCombine(Modulate,Source);
 		FactorColor		= GColor(255,255,255,255);
 		Image			= GBitmap("../../../../Resource/Civ4/Custom/MultiListItem.tga", HVGrid, 8, 1, 3, 0);
-		Margin			= GRectMargin(10,12,10,12);
+		Margin			= GRectMargin(11,11,11,11);
 	}
 }
 
@@ -215,7 +215,7 @@ skin SF_CtrlTheme_Civ4_Control_MultiList_ItemDisable_Skin
 		FactorCombine	= GColorCombine(Modulate,Modulate);
 		FactorColor		= GColor(255,255,255,255);
 		Image			= GBitmap("../../../../Resource/Civ4/Custom/MultiListItem.tga", HVGrid, 8, 1, 4, 0);
-		Margin			= GRectMargin(10,12,10,12);
+		Margin			= GRectMargin(11,11,11,11);
 	}
 }
 
@@ -227,7 +227,7 @@ skin SF_CtrlTheme_Civ4_Control_MultiList_ItemThinBorder_Skin
 		FactorCombine	= GColorCombine(Modulate,Modulate);
 		FactorColor		= SF_CtrlTheme_Civ4_Control_Color_HUDBorder;
 		Image			= GBitmap("../../../../Resource/Civ4/Custom/MultiListItem.tga", HVGrid, 8, 1, 5, 0);
-		Margin			= GRectMargin(10,12,10,12);
+		Margin			= GRectMargin(11,11,11,11);
 	}
 }
 
@@ -239,7 +239,7 @@ skin SF_CtrlTheme_Civ4_Control_MultiList_ItemThinBorderGlow_Skin
 		FactorCombine	= GColorCombine(Modulate,Source);
 		FactorColor		= GColor(255,255,255,255);
 		Image			= GBitmap("../../../../Resource/Civ4/Custom/MultiListItem.tga", HVGrid, 8, 1, 6, 0);
-		Margin			= GRectMargin(10,12,10,12);
+		Margin			= GRectMargin(11,11,11,11);
 	}
 }
 
@@ -251,7 +251,7 @@ skin SF_CtrlTheme_Civ4_Control_MultiList_ItemThinDisable_Skin
 		FactorCombine	= GColorCombine(Modulate,Modulate);
 		FactorColor		= GColor(255,255,255,255);
 		Image			= GBitmap("../../../../Resource/Civ4/Custom/MultiListItem.tga", HVGrid, 8, 1, 7, 0);
-		Margin			= GRectMargin(10,12,10,12);
+		Margin			= GRectMargin(11,11,11,11);
 	}
 }
 
