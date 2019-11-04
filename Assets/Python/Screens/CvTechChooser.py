@@ -34,7 +34,7 @@ CELL_BORDER_H = 0
 ADVISORS = [unichr(8855), unichr(8857), unichr(8500), unichr(8501), unichr(8502), unichr(8483)]
 
 # Top panel height
-SCREEN_PANEL_BAR_H = 42
+SCREEN_PANEL_TOP_BAR_H = 42
 # Bottom panel height
 SCREEN_PANEL_BOTTOM_BAR_H = 80
 # Left/right border for the slider
@@ -183,7 +183,7 @@ class CvTechChooser:
 		screen = self.screen()
 		screen.addDDSGFC("ScreenBackground", AFM.getInterfaceArtInfo("SCREEN_BG_OPAQUE").getPath(), 0, 0, self.xRes, self.yRes, eWidGen, 1, 2)
 
-		screen.addPanel("TC_BarTop", "", "", True, False, 0, 0, self.xRes, SCREEN_PANEL_BAR_H, PanelStyles.PANEL_STYLE_TOPBAR)
+		screen.addPanel("TC_BarTop", "", "", True, False, 0, 0, self.xRes, SCREEN_PANEL_TOP_BAR_H, PanelStyles.PANEL_STYLE_TOPBAR)
 		screen.setLabel("TC_Header", "", "<font=4b>" + TRNSLTR.getText("TXT_KEY_TECH_CHOOSER_TITLE", ()), 1<<2, self.xRes/2, 4, 0, eFontTitle, eWidGen, 1, 2)
 
 		screen.setText("TC_Exit", "", "<font=4b>" + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()), 1<<1, self.xRes - 8, 2, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
@@ -224,7 +224,7 @@ class CvTechChooser:
 		screen.setHitTest(BOTTOM_BAR_ID, HitTestTypes.HITTEST_NOHIT)
 
 		# Main scrolling panel
-		screen.addPanel(SCREEN_PANEL, "", "", False, False, 0, SCREEN_PANEL_BAR_H, self.maxX + self.xCellDist, self.yRes, PanelStyles.PANEL_STYLE_EMPTY)
+		screen.addScrollPanel(SCREEN_PANEL, "", 0, SCREEN_PANEL_TOP_BAR_H, self.maxX + self.xCellDist, self.yRes, PanelStyles.PANEL_STYLE_EMPTY)
 
 		#setButtonGFC(BOTTOM_BAR_ID, "", "", 0, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H, self.xRes, SCREEN_PANEL_BOTTOM_BAR_H, eWidGen, 1, 2, ButtonStyles.BUTTON_STYLE_STANDARD)
 		# screen.addPanel(BOTTOM_BAR_ID, "", "", True, False, 0, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H, self.xRes, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_BOTTOMBAR)
@@ -232,7 +232,7 @@ class CvTechChooser:
 		#screen.setPanelColor(BOTTOM_BAR_ID, 64, 64, 64)
 		#screen.setHitTest(BOTTOM_BAR_ID, HitTestTypes.HITTEST_ON)
 
-		# Era buttons that can jump directly to an era
+		# Era backgrounds and buttons that can jump directly to an era
 		lastPosX = 0
 		
 		for i in xrange(self.iNumEras - 1):
@@ -243,6 +243,10 @@ class CvTechChooser:
 			if img: # and i < self.iNumEras - 1: # exclude future icon
 				screen.setText("WID|ERAIM|" + str(i), "", "<img=%s>" % (img), 0, posX - 4, posY, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, 0, 0)
 			if i > 0:
+				screen.addPanel("WID|ERAPANEL|" + str(i-1), "", "", False, False, lastPosX, posY, posX - lastPosX, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_DEFAULT)
+				bgPanelName = "WID|ERABGPANEL|" + str(i-1)
+				screen.attachPanelAt(SCREEN_PANEL, bgPanelName, "", "", False, False, PanelStyles.PANEL_STYLE_STANDARD, self.minEraX[i-1] - self.minX, 0, self.minEraX[i] - self.minEraX[i-1], self.yRes - SCREEN_PANEL_BOTTOM_BAR_H - SCREEN_PANEL_TOP_BAR_H, WidgetTypes.WIDGET_GENERAL, 0, 0)
+				screen.setStyle(bgPanelName, self.getBackgroundStyleForEra(i-1))
 				screen.addPanel("WID|ERAPANEL|" + str(i-1), "", "", False, False, lastPosX, posY, posX - lastPosX, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_DEFAULT)
 			lastPosX = posX
 				# screen.setHitTest("WID|ERAIM|" + str(i), HitTestTypes.HITTEST_NOHIT)
@@ -277,7 +281,7 @@ class CvTechChooser:
 
 		eWidGen = WidgetTypes.WIDGET_GENERAL
 
-		dy = self.yRes - SCREEN_PANEL_BAR_H - SCREEN_PANEL_BOTTOM_BAR_H
+		dy = self.yRes - SCREEN_PANEL_TOP_BAR_H - SCREEN_PANEL_BOTTOM_BAR_H
 
 		yEmptySpace = (dy - 10 * self.hCell) / 10
 		if yEmptySpace < 0:
@@ -1153,3 +1157,21 @@ class CvTechChooser:
 				CIV_IS_QUEUED: "Button_TechQueue_Style",
 				CIV_IS_TARGET: "Button_TechTarget_Style"
 			}.get(state, "Button_TechNo_Style")
+	
+	def getBackgroundStyleForEra(self, era):
+		return {
+			0: "Panel_TechBackground_0_Style",
+			1: "Panel_TechBackground_1_Style",
+			# 2: "Panel_TechBackground_2_Style",
+			# 3: "Panel_TechBackground_3_Style",
+			# 4: "Panel_TechBackground_4_Style",
+			# 5: "Panel_TechBackground_5_Style",
+			# 6: "Panel_TechBackground_6_Style",
+			# 7: "Panel_TechBackground_7_Style",
+			# 8: "Panel_TechBackground_8_Style",
+			# 9: "Panel_TechBackground_9_Style",
+			# 10: "Panel_TechBackground_10_Style",
+			# 11: "Panel_TechBackground_11_Style",
+			# 12: "Panel_TechBackground_12_Style",
+			# 13: "Panel_TechBackground_13_Style",
+		}.get(era, "Panel_TechBackground_0_Style")
