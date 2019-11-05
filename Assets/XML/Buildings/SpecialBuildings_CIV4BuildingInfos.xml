@@ -19700,27 +19700,21 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_WV_CANNIBALISM</BuildingClass>
 			<Type>BUILDING_WV_CANNIBALISM</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_WV_CANNIBALISM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WV_CANNIBALISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WV_CANNIBALISM_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_WV_CANNIBALISM_HELP</Help>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WV_CANNIBALISM</ArtDefineTag>
-			<FreeBuilding>BUILDINGCLASS_CANNIBALISM</FreeBuilding>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>-1</iCost>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
+			<iCost>-1</iCost>
+			<iAsset>3</iAsset>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -19731,125 +19725,107 @@
 					<iFlavor>2</iFlavor>
 				</Flavor>
 			</Flavors>
+			<bNeverCapture>1</bNeverCapture>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
+			<ArtDefineTag>ART_DEF_BUILDING_WV_CANNIBALISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_CANNIBALISM</BuildingClass>
 			<Type>BUILDING_CANNIBALISM</Type>
-			<Description>TXT_KEY_BUILDING_CANNIBALISM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WV_CANNIBALISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WV_CANNIBALISM_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_CANNIBALISM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WV_CANNIBALISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_WV_CANNIBALISM_STRATEGY</Strategy>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_WV_CANNIBALISM</BuildingClassType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<iCost>-1</iCost>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
+			<bAutoBuild>1</bAutoBuild>
+			<bNeverCapture>1</bNeverCapture>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
+			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_CANNIBALISM_BAD_I</BuildingClass>
 			<Type>BUILDING_CANNIBALISM_BAD_I</Type>
-			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_I</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM_BAD_I</ArtDefineTag>
-			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<iHappiness>-1</iHappiness>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_I</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Civilopedia>
+			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_WV_CANNIBALISM</BuildingClassType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<iCost>-1</iCost>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CANNIBALISM</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<iHappiness>-1</iHappiness>
 			<bAutoBuild>1</bAutoBuild>
+			<bNeverCapture>1</bNeverCapture>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
+			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM_BAD_I</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_CANNIBALISM_BAD_II</BuildingClass>
 			<Type>BUILDING_CANNIBALISM_BAD_II</Type>
-			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_II</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM_BAD_II</ArtDefineTag>
-			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<iHappiness>-2</iHappiness>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_II</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Civilopedia>
+			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_WV_CANNIBALISM</BuildingClassType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<iCost>-1</iCost>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CANNIBALISM</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<iHappiness>-2</iHappiness>
 			<bAutoBuild>1</bAutoBuild>
+			<bNeverCapture>1</bNeverCapture>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
+			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM_BAD_II</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_CANNIBALISM_BAD_III</BuildingClass>
 			<Type>BUILDING_CANNIBALISM_BAD_III</Type>
-			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_III</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM_BAD_III</ArtDefineTag>
-			<PrereqTech>TECH_HUMANISM</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<iHappiness>-1</iHappiness>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_III</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Civilopedia>
+			<PrereqTech>TECH_HUMANISM</PrereqTech>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_WV_CANNIBALISM</BuildingClassType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<iCost>-1</iCost>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CANNIBALISM</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<iHappiness>-1</iHappiness>
 			<bAutoBuild>1</bAutoBuild>
+			<bNeverCapture>1</bNeverCapture>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
+			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM_BAD_III</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DISEASE_KURU</BuildingClass>
 			<Type>BUILDING_DISEASE_KURU</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_DISEASE_KURU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DISEASE_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_KURU</ArtDefineTag>
-			<bNukeImmune>1</bNukeImmune>
-			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_WV_CANNIBALISM</BuildingClassType>
@@ -19858,14 +19834,13 @@
 			</PrereqBuildingClasses>
 			<iCost>-1</iCost>
 			<iHealth>-1</iHealth>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<YieldModifiers>
 				<iYield>0</iYield>
 				<iYield>-5</iYield>
-				<iYield>0</iYield>
 			</YieldModifiers>
+			<bNukeImmune>1</bNukeImmune>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
+			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_KURU</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_WV_HUMAN_SACRIFICE</BuildingClass>
