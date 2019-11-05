@@ -159,24 +159,28 @@ class CvTechChooser:
 		self.sIcon1 = self.sIcon0 / 2
 
 		# Cache minimum X coordinate per era for era partitioning.
-		self.minEraX = [maxint] * self.iNumEras
+		self.minEraXPos = [maxint] * self.iNumEras
+		self.firstEraTech = [(maxint, maxint)] * self.iNumEras
 		self.minX = maxint
 		self.maxX = 0
 		for iTech in xrange(self.iNumTechs):
 			info = GC.getTechInfo(iTech)
-			iX = info.getGridX() * self.xCellDist
-			iX1 = (info.getGridX() + 1) * self.xCellDist
-			if iX > 0:
+			gridX = info.getGridX()
+			if gridX > 0:
+				iX = gridX * self.xCellDist
+				iX1 = (gridX + 1) * self.xCellDist
 				iEra = info.getEra()
-				if iX < self.minEraX[iEra]:
-					self.minEraX[iEra] = iX
+				if iX < self.minEraXPos[iEra]:
+					self.minEraXPos[iEra] = iX
+				if gridX < self.firstEraTech[iEra][0]:
+					self.firstEraTech[iEra] = (gridX, iTech)
 				if iX1 > self.maxX:
 					self.maxX = iX1
 				if iX < self.minX:
 					self.minX = iX
 
 		self.minimapScaleX = (self.xRes - (SLIDER_BORDER * 2)) / float(self.maxX - self.minX)
-		
+
 		eWidGen = WidgetTypes.WIDGET_GENERAL
 		eFontTitle = FontTypes.TITLE_FONT
 
@@ -241,7 +245,7 @@ class CvTechChooser:
 		lastPosX = 0
 		
 		for i in xrange(self.iNumEras - 1):
-			posX = self.treeToMinimapX(self.minEraX[i] - self.minX) # SLIDER_BORDER + self.minEraX[i] * (self.xRes - SLIDER_BORDER * 2) / self.maxX
+			posX = self.treeToMinimapX(self.minEraXPos[i] - self.minX) # SLIDER_BORDER + self.minEraXPos[i] * (self.xRes - SLIDER_BORDER * 2) / self.maxX
 			posY = self.yRes - SCREEN_PANEL_BOTTOM_BAR_H + 5
 			eraInfo = GC.getEraInfo(i)
 			img = eraInfo.getButton()
@@ -254,13 +258,13 @@ class CvTechChooser:
 			backDropPanelName = "ERA_BG_PANEL_" + str(i)
 			bgName = "ERA_BG_" + str(i)
 			fgName = "ERA_FG_" + str(i)
-			bgPanelWid = self.minEraX[i+1] - self.minEraX[i] + self.xCellDist
+			bgPanelWid = self.minEraXPos[i+1] - self.minEraXPos[i] + self.xCellDist
 			bgPanelHgt = self.yRes - SCREEN_PANEL_BOTTOM_BAR_H - SCREEN_PANEL_TOP_BAR_H
-			screen.attachPanelAt(SCREEN_PANEL, backDropPanelName, "", "", False, False, PanelStyles.PANEL_STYLE_STANDARD, self.minEraX[i] - self.minX - self.xCellDist / 2, 0, bgPanelWid, bgPanelHgt, WidgetTypes.WIDGET_GENERAL, 0, 0)
+			screen.attachPanelAt(SCREEN_PANEL, backDropPanelName, "", "", False, False, PanelStyles.PANEL_STYLE_STANDARD, self.minEraXPos[i] - self.minX - self.xCellDist / 2, 0, bgPanelWid, bgPanelHgt, WidgetTypes.WIDGET_GENERAL, 0, 0)
 			screen.setImageButtonAt(bgName, backDropPanelName, "", 0, 0, self.xRes + BACKGROUND_PARA_AMOUNT * 2, bgPanelHgt, WidgetTypes.WIDGET_GENERAL, 1, 2)
 			screen.setStyle(bgName, self.getBackgroundStyleForEra(i))
 			screen.setHitTest(bgName, HitTestTypes.HITTEST_NOHIT)
-			#screen.attachPanelAt(SCREEN_PANEL, bgPanelName, "", "", False, False, PanelStyles.PANEL_STYLE_STANDARD, self.minEraX[i] - self.minX - self.xCellDist / 2, 0, bgPanelWid, bgPanelHgt, WidgetTypes.WIDGET_GENERAL, 0, 0)
+			#screen.attachPanelAt(SCREEN_PANEL, bgPanelName, "", "", False, False, PanelStyles.PANEL_STYLE_STANDARD, self.minEraXPos[i] - self.minX - self.xCellDist / 2, 0, bgPanelWid, bgPanelHgt, WidgetTypes.WIDGET_GENERAL, 0, 0)
 			#screen.attachPanelAt(bgPanelName, fgPanelName, "", "", False, False, PanelStyles.PANEL_STYLE_STANDARD, 0, bgPanelHgt - FOREGROUND_PARA_H, bgPanelWid, FOREGROUND_PARA_H, WidgetTypes.WIDGET_GENERAL, 0, 0)
 			screen.setImageButtonAt(fgName, backDropPanelName, "", 0, 0, self.xRes + FOREGROUND_PARA_AMOUNT * 2, FOREGROUND_PARA_H, WidgetTypes.WIDGET_GENERAL, 1, 2)
 			screen.setStyle(fgName, self.getForegroundStyleForEra(i))
@@ -356,9 +360,16 @@ class CvTechChooser:
 			else:
 				if not self.cellDetails[iTech]:
 					self.cellDetails[iTech] = True
+					
+					iEra = CvTechInfo.getEra()
+					bY = iY
+					bH = self.hCell + CELL_BORDER_H * 2
+					if self.firstEraTech[iEra][1] == iTech:
+						bY = 0
+						bH = self.yRes
 
 					# Tech cell
-					screen.setImageButtonAt(techCellId, SCREEN_PANEL, "", iX, iY, self.wCell + CELL_BORDER_W * 2, self.hCell + CELL_BORDER_H * 2, eWidGen, 1, 2)
+					screen.setImageButtonAt(techCellId, SCREEN_PANEL, "", iX, bY, self.wCell + CELL_BORDER_W * 2, bH, eWidGen, 1, 2)
 					screen.setHitTest(techCellId, HitTestTypes.HITTEST_CHILDREN)
 					screen.addDDSGFCAt(ICON + iTechStr, techCellId, CvTechInfo.getButton(), 3 + CELL_BORDER_W, 5 + CELL_BORDER_H, self.sIcon0, self.sIcon0, eWidGen, 1, 2, False)
 					screen.setHitTest(ICON + iTechStr, HitTestTypes.HITTEST_NOHIT)
@@ -1059,7 +1070,7 @@ class CvTechChooser:
 								CyMessageControl().sendResearch(iType, bShift)
 								self.updateTechRecords(False)
 					elif TYPE == "ERAIM" or TYPE == "ERATEXT":
-						self.scrollTo(self.minEraX[ID] - self.minX)
+						self.scrollTo(self.minEraXPos[ID] - self.minX)
 			elif NAME == "AddTechButton":
 				CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_TECH, self.iPlayer, -1, -1, self.iSelectedTech, True)	#Action, Player, X, Y, Data, bAdd
 				self.updateSelectedTech(screen, -1)
@@ -1128,19 +1139,19 @@ class CvTechChooser:
 		screen.moveItem(MINIMAP_LENS_ID, SLIDER_BORDER + (self.minimapScaleX * self.scrollOffs) - MINIMAP_LENS_BORDER_H, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H, 0)
 
 		# Parallax Scroll the backdrops
-		for i in xrange(1): #self.iNumEras - 1):
+		for i in xrange(self.iNumEras - 1):
 			bgName = "ERA_BG_" + str(i)
 			fgName = "ERA_FG_" + str(i)
 
-			eraStart = self.minEraX[i] - self.minX - self.xCellDist / 2
-			eraEnd = self.minEraX[i + 1] - self.minX - self.xCellDist / 2
+			eraStart = self.minEraXPos[i] - self.minX - self.xRes
+			eraEnd = self.minEraXPos[i + 1] - self.minX + self.xRes
 			eraWidth = eraEnd - eraStart
 			eraOffs = self.scrollOffs - eraStart
 			eraFrac = 1 - max(0, min(1, eraOffs / float(eraWidth)))
 			screen.setText("FRRAC", "", str((self.scrollOffs, eraStart, eraEnd, eraWidth, eraFrac)), 0, 70, 35, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-			screen.moveItem(bgName, eraOffs - BACKGROUND_PARA_AMOUNT + int(BACKGROUND_PARA_AMOUNT * 2 * eraFrac), 0, 0)
+			screen.moveItem(bgName, eraOffs - self.xRes - BACKGROUND_PARA_AMOUNT + int(BACKGROUND_PARA_AMOUNT * 2 * eraFrac), 0, 0)
 			bgPanelHgt = self.yRes - SCREEN_PANEL_BOTTOM_BAR_H - SCREEN_PANEL_TOP_BAR_H
-			screen.moveItem(fgName, eraOffs - FOREGROUND_PARA_AMOUNT + int(FOREGROUND_PARA_AMOUNT * 2 * eraFrac), bgPanelHgt - FOREGROUND_PARA_H, 0)
+			screen.moveItem(fgName, eraOffs - self.xRes - FOREGROUND_PARA_AMOUNT + int(FOREGROUND_PARA_AMOUNT * 2 * eraFrac), bgPanelHgt - FOREGROUND_PARA_H, 0)
 
 	def scrollToTech(self, idx):
 		self.scrollTo(self.getTechPos(idx) - self.xRes / 2 + self.xCellDist / 2)
@@ -1195,7 +1206,7 @@ class CvTechChooser:
 				CIV_IS_QUEUED: "Button_TechQueue_Style",
 				CIV_IS_TARGET: "Button_TechTarget_Style"
 			}.get(state, "Button_TechNo_Style")
-	
+
 	def getBackgroundStyleForEra(self, era):
 		return {
 			0: "Button_TechBackground_0_Style",

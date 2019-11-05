@@ -1624,6 +1624,7 @@ with GFC_Control_Button
 				}				
 			}
 			.Press					= .Default;
+			.Toggle					= .Default;
 		}
 		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_StandardButton_Style;
 		map GFC_Control							= GFC_Control_StandardButton_Style;
@@ -1644,6 +1645,55 @@ with GFC_Control_Button
 				}
 			}
 			.Press					= .Default;
+			.Toggle					= .Default;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_StandardButton_Style;
+		map GFC_Control							= GFC_Control_StandardButton_Style;
+	}
+
+	// Tech background 1
+	style SF_CtrlTheme_Civ4_Control_Button_TechBackground_1_Style
+	{
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				//layer {
+				//	LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE);
+				//	DestCombine		=	GColorCombine(BlendSource,Disable);
+				//	Image			=	GBitmap("GUI/TechTree/1_AncientBack.tga", HVGrid, 1, 1, 0, 0);
+				//	Margin			=	GRectMargin(0,0,0,0);
+				//}
+				layer {
+					LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_SCALE);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/1_AncientBackOverlay.tga", HVGrid, 1, 1, 0, 0);
+					Margin			=	GRectMargin(0,0,0,0);
+				}				
+			}
+			.Press					= .Default;
+			.Toggle					= .Default;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_StandardButton_Style;
+		map GFC_Control							= GFC_Control_StandardButton_Style;
+	}
+
+	// Tech foreground 1
+	style SF_CtrlTheme_Civ4_Control_Button_TechForeground_1_Style
+	{
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/1_AncientFore.tga", HVGrid, 1, 1, 0, 0);
+					Margin			=	GRectMargin(0,0,0,0);
+				}
+			}
+			.Press					= .Default;
+			.Toggle					= .Default;
 		}
 		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_StandardButton_Style;
 		map GFC_Control							= GFC_Control_StandardButton_Style;
