@@ -1544,7 +1544,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_APHOTOSYNTHESIS</Tag>
-		<English>Photosynthetic Materials</English>
+		<English>Plantoids</English>
 		<French>Photosynthèse Artificielle</French>
 		<German>Künstliche Photosynthese</German>
 		<Italian>Fotosintesi artificiale</Italian>
@@ -1557,7 +1557,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_APHOTOSYNTHESIS_PEDIA</Tag>
-		<English>Artificial photosynthesis is a chemical process that replicates the natural process of photosynthesis, a process that converts sunlight, water, and carbon dioxide into carbohydrates and oxygen. The term is commonly used to refer to any scheme for capturing and storing the energy from sunlight in the chemical bonds of a fuel (a solar fuel). Photocatalytic water splitting converts water into protons (and eventually hydrogen) and oxygen, and is a main research area in artificial photosynthesis. Light-driven carbon dioxide reduction is another studied process, replicating natural carbon fixation.[PARAGRAPH:2]Research developed in this field encompasses design and assembly of devices (and their components) for the direct production of solar fuels, photoelectrochemistry and its application in fuel cells, and engineering of enzymes and photoautotrophic microorganisms for microbial biofuel and biohydrogen production from sunlight. Many, if not most, of the artificial approaches are bio-inspired, i.e., they rely on biomimetics.[PARAGRAPH:2] The photosynthetic reaction can be divided into two half-reactions (oxidation and reduction), both of which are essential to producing fuel. In plant photosynthesis, water molecules are photo-oxidized to release oxygen and protons. The second stage of plant photosynthesis (also known as the Calvin-Benson cycle) is a light-independent reaction that converts carbon dioxide into glucose. Researchers of artificial photosynthesis are developing photocatalysts to perform both of these reactions separately. Furthermore, the protons resulting from water splitting can be used for hydrogen production. These catalysts must be able to react quickly and absorb a large percentage of solar photons.[PARAGRAPH:2]Whereas photovoltaics can provide direct electrical current from sunlight, the inefficiency of fuel production from photovoltaic electricity (indirect process) and the fact sunshine is not constant throughout time sets a limit to its use. A way of using natural photosynthesis is via the production of biofuel through biomass, also an indirect process that suffers from low energy conversion efficiency (due to photosynthesis' own low efficiency in converting sunlight to biomass), and clashes with the increasing need of land mass for human food production. Artificial photosynthesis aims then to produce a fuel from sunlight that can be stored and used when sunlight is not available, by using direct processes, that is, to produce a solar fuel. With the development of catalysts able to reproduce the key steps of photosynthesis, water and sunlight would ultimately be the only needed sources for clean energy production. The only by-product would be oxygen, and production of a solar fuel has the potential to be cheaper than gasoline.[PARAGRAPH:2]One process for the creation of a clean and affordable energy supply is the development of photocatalytic water splitting under solar light. This method of sustainable hydrogen production is a key objective in the development of alternative energy systems of the future. It is also predicted to be one of the more, if not the most, efficient ways of obtaining hydrogen from water. The conversion of solar energy into hydrogen via a water-splitting process assisted by photosemiconductor catalysts is one of the most promising technologies in development. This process has the potential for large quantities of hydrogen to be generated in an ecologically sound method.</English>
+		<English>A plantoid is a robot or synthetic organism designed to look, act and grow like a plant. The concept was first scientifically published in 2010 (although models of comparable systems controlled by neural networks date back to 2003) and has so far remained largely theoretical. A prototype for the European Space Agency is now in development. A plantoid incorporates an inherently distributed architecture consisting of autonomous and specialized modules. Modules can be modeled on plant parts such as the root cap and communicate to form a simple swarm intelligence. This kind of system may display great robustness and resilience. It is conjectured to be capable of energy harvesting and management, collective environmental awareness and many other functions.</English>
 		<Polish>Dawniej wszystkie organizmy wyposażone w chlorofil zaliczano do jednego królestwa - roślin. Badania ewolucjonistów wykazały, że zdolność do fotosyntezy nie jest dobrym kryterium oceny związków filogenetycznych. Fotosynteza tlenowa (z uwolnieniem tlenu) wykształciła się pierwotnie jedynie u sinic, natomiast aparat fotosyntetyczny organizmów eukariotycznych (chloroplast) jest wynikiem endosymbiozy.</Polish>
 	</TEXT>
 	<TEXT>
@@ -10369,7 +10369,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GENEENHANCEMENT</Tag>
-		<English>Genetic Enhancement</English>
+		<English>Gene Therapy</English>
 		<French>Amélioration Génétique</French>
 		<German>Humangenmanipulation</German>
 		<Italian>Miglioramento genetico</Italian>
@@ -10382,7 +10382,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GENEENHANCEMENT_PEDIA</Tag>
-		<English>Gene enhancement is unlocking the best human genetics has to offer, and engineering those genes to a human being, but it doesn't grant superpowers. Gene therapy is the use of DNA as a pharmaceutical agent to treat disease. It derives its name from the idea that DNA can be used to supplement or alter genes within an individual's cells as a therapy to treat disease. The most common form of gene therapy involves using DNA that encodes a functional, therapeutic gene in order to replace a mutated gene.[PARAGRAPH:2] The military has funded the research of gene enhancement since the first model of DNA was created by James D. Watson and Francis Crick, and with advances in the study of replacement organs, machines can sequence DNA and inject it to soldiers to give them specific "superhuman" powers that do not alter their anatomy, just enhance certain sections of it. Because the brain and central nervous system only has a finite neuron capacity,(like a computer graphics card can only render so much graphic power), only a limited amount of gene enhancements can be engineered towards one human being.</English>
+		<English>GIn the medicine field gene therapy (also called human gene transfer) is the therapeutic delivery of nucleic acid into a patient's cells as a drug to treat disease. The first attempt at modifying human DNA was performed in 1980 by Martin Cline, but the first successful nuclear gene transfer in humans, approved by the National Institutes of Health, was performed in May 1989. The first therapeutic use of gene transfer as well as the first direct insertion of human DNA into the nuclear genome was performed by French Anderson in a trial starting in September 1990. It is thought to be able to cure many genetic disorders or treat them over time.</English>
 		<Polish>Organizmy modyfikowane genetycznie (GMO, z ang. genetically modified organisms) - organizmy, których genom został zmieniony metodami inżynierii genetycznej w celu uzyskania nowych cech fizjologicznych (lub zmiany istniejących). Pierwsze GMO zostało stworzone w 1973 roku, a pierwsze próby polowe miały miejsce w 1986 roku i dotyczyły tytoniu. Pierwsze komercyjne GMO zaczęto sprzedawać w USA - w pomidorach FlavrSavr zmniejszono aktywność genu odpowiadającego za proces dojrzewania i mięknięcia pomidora.</Polish>
 	</TEXT>
 	<TEXT>
@@ -10454,7 +10454,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GENESIS_BIOLOGY</Tag>
-		<English>Hypergenetics</English>
+		<English>Synthetic Genomics</English>
 		<French>Biologie de la Genèse</French>
 		<German>Phylogenetik</German>
 		<Italian>Biologia delle origini</Italian>
@@ -10467,7 +10467,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GENESIS_BIOLOGY_PEDIA</Tag>
-		<English>In biology, phylogenetics,(also known as Genesis Biology), is the study of evolutionary relation among groups of organisms (e.g. species, populations), which is discovered through molecular sequencing data and morphological data matrices. [PARAGRAPH:2] Taxonomy, the classification, identification, and naming of organisms, is richly informed by phylogenetics, but remains methodologically and logically distinct. The fields of phylogenetics and taxonomy overlap in the science of phylogenetic systematics - one methodology, cladism (also cladistics) shared derived characters (synapomorphies) used to create ancestor-descendant trees (cladograms) and delimit taxa (clades). In biological systematics as a whole, phylogenetic analyses have become essential in researching the evolutionary tree of life. [PARAGRAPH:2] Evolution is regarded as a branching process, whereby populations are altered over time and may speciate into separate branches, hybridize together, or terminate by extinction. This may be visualized in a phylogenetic tree. The evolutionary connections between organisms are represented graphically through phylogenetic trees. [PARAGRAPH:2] Due to the fact that evolution takes place over long periods of time that cannot be observed directly, biologists must reconstruct phylogenies by inferring the evolutionary relationships among present-day organisms. Fossils can aid with the reconstruction of phylogenies; however, fossil records are often too poor to be of good help. Therefore, biologists tend to be restricted with analysing present-day organisms to identify their evolutionary relationships. Phylogenetic relationships in the past were reconstructed by looking at phenotypes, often anatomical characteristics. Today, molecular data, which includes protein and DNA sequences, are used to construct phylogenetic trees.</English>
+		<English>Synthetic genomics is a nascent field of synthetic biology that uses aspects of genetic modification on pre-existing life forms, or artificial gene synthesis to create new DNA or entire lifeforms. Synthetic genomics is unlike genetic modification in the sense that it does not use naturally occurring genes in its life forms. It may make use of custom designed base pair series, though in a more expanded and presently unrealized sense synthetic genomics could utilize genetic codes that are not composed of the two base pairs of DNA that are currently used by life.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GENESIS_BIOLOGY_QUOTE</Tag>
@@ -14873,11 +14873,11 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_METAVERSE</Tag>
-		<English>Metaverse</English>
+		<English>Metaverse Travel</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_METAVERSE_PEDIA</Tag>
-		<English>The Metaverse is a collective virtual shared space, created by the convergence of virtually enhanced physical reality and physically persistent virtual space, including the sum of all virtual worlds, augmented reality, and the internet.</English>
+		<English>The Metaverse is a collective virtual shared space, created by the convergence of virtually enhanced physical reality and physically persistent virtual space, including the sum of all virtual worlds, augmented reality, and the internet. The word metaverse is a portmanteau of the prefix "meta" (meaning "beyond") and "universe" and is typically used to describe the concept of a future iteration of the internet, made up of persistent, shared, 3D virtual spaces linked into a perceived virtual universe.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_METAVERSE_QUOTE</Tag>
@@ -16816,7 +16816,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NEUROTECHNOLOGY</Tag>
-		<English>Neuroscience</English>
+		<English>Stem-Cell Therapy</English>
 		<French>Biologie moléculaire avancée</French>
 		<German>Neurotechnologie</German>
 		<Italian>Biologia molecolare avanzata</Italian>
@@ -16829,7 +16829,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NEUROTECHNOLOGY_PEDIA</Tag>
-		<English>Neuroscience (or neurobiology) is the scientific study of the nervous system.</English>
+		<English>Stem-cell therapy is the use of stem cells to treat or prevent a disease or condition. Bone marrow transplant is the most widely used stem-cell therapy, but some therapies derived from umbilical cord blood are also in use. Research is underway to develop various sources for stem cells, as well as to apply stem-cell treatments for neurodegenerative diseases and conditions such as diabetes and heart disease, among others.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NEUROTECHNOLOGY_QUOTE</Tag>
@@ -16901,11 +16901,11 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NOCTURNALISM</Tag>
-		<English>Nocturnalism</English>
+		<English>Ambush Tactics</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NOCTURNALISM_PEDIA</Tag>
-		<English>[TAB]Nocturnality is a behavior characterized by being active during the night and sleeping during the day.[PARAGRAPH:2]Being active at night is a form of niche differentiation, where a species' niche is partitioned not by the amount of resources but by the amount of time (i.e. temporal division of the ecological niche). Hawks and owls can hunt the same field or meadow for the same rodents without conflict because hawks are diurnal and owls are nocturnal. This means they are not in competition for each other's prey.[PARAGRAPH:2]Nocturnality is a form of crypsis, an adaptation to avoid or enhance predation. One of the reasons that (cathemeral) lions prefer to hunt at night is that many of their prey species (zebra, antelope, impala, wildebeest, etc.) have poor night vision.</English>
+		<English>An ambush is a long-established military tactic in which combatants take advantage of concealment and the element of surprise to attack unsuspecting enemy combatants from concealed positions, such as among dense underbrush or behind hilltops. Ambushes have been used consistently throughout history, from ancient to modern warfare. In the 20th century, an ambush might involve thousands of soldiers on a large scale, such as over a choke point such as a mountain pass, or a small irregular band or insurgent group attacking a regular armed force patrol. Theoretically, a single well-armed and concealed soldier could ambush other troops in a surprise attack.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NOCTURNALISM_QUOTE</Tag>
@@ -20168,7 +20168,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_REGENERATIVE_MEDICINE_PEDIA</Tag>
-		<English>Medical researchers believe that stem cell treatments have the potential to change the face of human disease and alleviate suffering. A number of stem cell treatments already exist, although most are still experimental and/or costly, with the notable exception of bone marrow transplantation. In the future, medical researchers anticipate being able to use technologies derived from adult and embryonic stem cell research to treat cancer, Type 1 diabetes mellitus, spinal cord injuries, and muscle damage, amongst a number of other diseases and impairments.</English>
+		<English>Regenerative medicine is a branch of translational research in tissue engineering and molecular biology which deals with the "process of replacing, engineering or regenerating human cells, tissues or organs to restore or establish normal function". This field holds the promise of engineering damaged tissues and organs by stimulating the body's own repair mechanisms to functionally heal previously irreparable tissues or organs.</English>
 		<Polish>Medycyna Regeneracyjna to jedna z najbardziej obiecujących kierunków nauk medycznych w historii. Zajmuje się ona odbudową zniszczonych narządów i tworzeniem w laboratorium nowych. Już w obecnych czasach w laboratorium powstały zamienniki skóry, kości i chrząstki. W kolejce czekają następne tkanki i narządy. Jeśli projekt się powiedzie, cukrzyca, niewydolność serca, urazy rdzenia kręgowego - staną się wyleczalne. Naukowcy próbują na różne sposoby osiągnąć cele. Jeden kierunek to pobudzenie organizmu, by sam reperował uszkodzone tkanki. Drugi sposób to wszczepienie w narząd implantu, który pobudzi regenerację. Trzecia droga to transplantacja wyhodowanych w laboratorium tkanek do uszkodzonego organu.</Polish>
 	</TEXT>
 	<TEXT>
@@ -23269,7 +23269,7 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SYNTHETIC_SYNESTHESIA_PEDIA</Tag>
-		<English>A sense is a physiological capacity of organisms that provides data for perception. The senses and their operation, classification, and theory are overlapping topics studied by a variety of fields, most notably neuroscience, cognitive psychology (or cognitive science), and philosophy of perception. The nervous system has a specific sensory nervous system, and a sense organ, or sensor, dedicated to each sense. Synesthesia is a perceptual phenomenon in which stimulation of one sensory or cognitive pathway leads to automatic, involuntary experiences in a second sensory or cognitive pathway. deasthesia (alternative spelling ideaesthesia) is defined as a phenomenon in which activations of concepts (inducers) evoke perception-like experiences (concurrents).</English>
+		<English>A sense is a physiological capacity of organisms that provides data for perception. The senses and their operation, classification, and theory are overlapping topics studied by a variety of fields, most notably neuroscience, cognitive psychology (or cognitive science), and philosophy of perception. The nervous system has a specific sensory nervous system, and a sense organ, or sensor, dedicated to each sense. Synesthesia is a perceptual phenomenon in which stimulation of one sensory or cognitive pathway leads to automatic, involuntary experiences in a second sensory or cognitive pathway. deasthesia (alternative spelling ideaesthesia) is defined as a phenomenon in which activations of concepts (inducers) evoke perception-like experiences (concurrents). Hyperesthesia is a condition that involves an abnormal increase in sensitivity to stimuli of the sense. "When a non-noxious stimulus causes the sensation of pain the area will be termed hyperaesthetic". Stimuli of the senses can include sound that one hears, foods that one tastes, textures that one feels, and so forth. Increased touch sensitivity is referred to as "tactile hyperesthesia", and increased sound sensitivity is called "auditory hyperesthesia". Tactile hyperesthesia may be a common symptom of many neurologic disorders such as herpes zoster, peripheral neuropathy and radiculopathies. In 1979, and then in 1994, Merskey, Bogduk, Noordenbos, Devor and others (a subcommittee of International Association for the Study of Pain) proposed, instead of hyperaesthesia, the concept of allodynia, meaning "other pain", defined as a pain resulting from a stimulus that does not normally provoke pain.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SYNTHETIC_SYNESTHESIA_QUOTE</Tag>
