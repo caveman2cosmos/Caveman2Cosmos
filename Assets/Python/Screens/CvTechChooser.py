@@ -83,7 +83,7 @@ class CvTechChooser:
 		return CyGInterfaceScreen("TechChooser", self.screenId)
 
 	def getTechState(self, iTech):
-		if self.CyTeam.isHasTech(iTech):
+		if self.CyTeam.isHasTech(iTech) or True:
 			return CIV_HAS_TECH
 		if not self.CyPlayer.canEverResearch(iTech):
 			return CIV_NO_RESEARCH
