@@ -40042,6 +40042,10 @@
 					<BuildingClassType>BUILDINGCLASS_LUMBER_CAMP</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
+				<PrereqOrBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_DRIFTWOOD_GATHERER</BuildingClassType>
+					<bPrereqBuildingClass>1</bPrereqBuildingClass>
+				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_FIRE_BRIGADES</ObsoleteTech>
