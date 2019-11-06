@@ -231,7 +231,7 @@ class CvTechChooser:
 		# Main scrolling panel
 		screen.addScrollPanel(SCREEN_PANEL, "", 0, 0, self.maxX + self.xCellDist, self.yRes, PanelStyles.PANEL_STYLE_EMPTY)
 		screen.setStyle(SCREEN_PANEL, "Panel_TechMinimapCell_Style")
-		screen.setHitTest(SCREEN_PANEL, HitTestTypes.HITTEST_NOHIT)
+		# screen.setHitTest(SCREEN_PANEL, HitTestTypes.HITTEST_NOHIT)
 
 		# Minimap background
 		screen.addPanel(BOTTOM_BAR_ID, "", "", True, False, -20, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H - 80, self.xRes + 40, SCREEN_PANEL_BOTTOM_BAR_H + 100, PanelStyles.PANEL_STYLE_MAIN_TANB)
@@ -266,18 +266,12 @@ class CvTechChooser:
 			screen.setImageButtonAt(bgName, backDropPanelName, "", 0, 0, self.xRes + BACKGROUND_PARA_AMOUNT * 2, bgPanelHgt, WidgetTypes.WIDGET_GENERAL, 1, 2)
 			screen.setStyle(bgName, self.getBackgroundStyleForEra(i))
 			screen.setHitTest(bgName, HitTestTypes.HITTEST_NOHIT)
-			#screen.attachPanelAt(SCREEN_PANEL, bgPanelName, "", "", False, False, PanelStyles.PANEL_STYLE_STANDARD, self.minEraXPos[i] - self.minX - self.xCellDist / 2, 0, bgPanelWid, bgPanelHgt, WidgetTypes.WIDGET_GENERAL, 0, 0)
-			#screen.attachPanelAt(bgPanelName, fgPanelName, "", "", False, False, PanelStyles.PANEL_STYLE_STANDARD, 0, bgPanelHgt - FOREGROUND_PARA_H, bgPanelWid, FOREGROUND_PARA_H, WidgetTypes.WIDGET_GENERAL, 0, 0)
 			fgName = "ERA_FG_" + str(i)
 			screen.setImageButtonAt(fgName, backDropPanelName, "", 0, 0, self.xRes + FOREGROUND_PARA_AMOUNT * 2, FOREGROUND_PARA_H, WidgetTypes.WIDGET_GENERAL, 1, 2)
 			screen.setStyle(fgName, self.getForegroundStyleForEra(i))
 			screen.setHitTest(fgName, HitTestTypes.HITTEST_NOHIT)
 
-			# screen.addPanel("WID|ERAPANEL|" + str(i-1), "", "", False, False, lastPosX, posY, posX - lastPosX, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_DEFAULT)
 			lastPosX = posX
-				# screen.setHitTest("WID|ERAIM|" + str(i), HitTestTypes.HITTEST_NOHIT)
-			# yOffs = 0 + 48 * (i % 2)
-			# screen.setText("WID|ERATEXT|" + str(i), "", "<font=1>%s" % (eraInfo.getDescription()), 0, posX, posY + yOffs, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, iEra, 0)
 
 		# Create the tech button backgrounds
 		self.refresh(xrange(self.iNumTechs), False)
@@ -370,9 +364,10 @@ class CvTechChooser:
 
 					# Tech cell
 					screen.setImageButtonAt(techCellId, SCREEN_PANEL, "", iX, iY, self.wCell + CELL_BORDER_W * 2, self.hCell + CELL_BORDER_H * 2, eWidGen, 1, 2)
-					screen.setHitTest(techCellId, HitTestTypes.HITTEST_CHILDREN)
+					# screen.setHitTest(techCellId, HitTestTypes.HITTEST_CHILDREN)
 					screen.addDDSGFCAt(ICON + iTechStr, techCellId, CvTechInfo.getButton(), 3 + CELL_BORDER_W, 5 + CELL_BORDER_H, self.sIcon0, self.sIcon0, eWidGen, 1, 2, False)
 					screen.setHitTest(ICON + iTechStr, HitTestTypes.HITTEST_NOHIT)
+					screen.moveToFront(techCellId)
 
 					# Progress bar
 					barId = techCellId + "BAR"

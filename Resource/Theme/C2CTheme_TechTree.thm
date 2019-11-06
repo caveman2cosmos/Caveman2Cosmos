@@ -1798,6 +1798,102 @@ with GFC_Control_Button
 		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_StandardButton_Style;
 		map GFC_Control							= GFC_Control_StandardButton_Style;
 	}
+
+	// Tech background 4
+	style SF_CtrlTheme_Civ4_Control_Button_TechBackground_4_Style
+	{
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				//layer {
+				//	LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE);
+				//	DestCombine		=	GColorCombine(BlendSource,Disable);
+				//	Image			=	GBitmap("GUI/TechTree/4_RenaissanceBack.tga", HVGrid, 1, 1, 0, 0);
+				//	Margin			=	GRectMargin(0,0,0,0);
+				//}
+				layer {
+					LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/4_RenaissanceBackOverlay.tga", HVGrid, 1, 1, 0, 0);
+					Margin			=	GRectMargin(0,0,0,0);
+				}				
+			}
+			.Press					= .Default;
+			.Toggle					= .Default;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_StandardButton_Style;
+		map GFC_Control							= GFC_Control_StandardButton_Style;
+	}
+
+	// Tech foreground 4
+	style SF_CtrlTheme_Civ4_Control_Button_TechForeground_4_Style
+	{
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/4_RenaissanceFore.tga", HVGrid, 1, 1, 0, 0);
+					Margin			=	GRectMargin(0,0,0,0);
+				}
+			}
+			.Press					= .Default;
+			.Toggle					= .Default;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_StandardButton_Style;
+		map GFC_Control							= GFC_Control_StandardButton_Style;
+	}
+	
+	// Tech background 5
+	style SF_CtrlTheme_Civ4_Control_Button_TechBackground_5_Style
+	{
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				//layer {
+				//	LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE);
+				//	DestCombine		=	GColorCombine(BlendSource,Disable);
+				//	Image			=	GBitmap("GUI/TechTree/5_IndustrialBack.tga", HVGrid, 1, 1, 0, 0);
+				//	Margin			=	GRectMargin(0,0,0,0);
+				//}
+				layer {
+					LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/5_IndustrialBackOverlay.tga", HVGrid, 1, 1, 0, 0);
+					Margin			=	GRectMargin(0,0,0,0);
+				}				
+			}
+			.Press					= .Default;
+			.Toggle					= .Default;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_StandardButton_Style;
+		map GFC_Control							= GFC_Control_StandardButton_Style;
+	}
+
+	// Tech foreground 5
+	style SF_CtrlTheme_Civ4_Control_Button_TechForeground_5_Style
+	{
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/5_IndustrialFore.tga", HVGrid, 1, 1, 0, 0);
+					Margin			=	GRectMargin(0,0,0,0);
+				}
+			}
+			.Press					= .Default;
+			.Toggle					= .Default;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_StandardButton_Style;
+		map GFC_Control							= GFC_Control_StandardButton_Style;
+	}
 }
 
 with GFC_Control_Panel
