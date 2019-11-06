@@ -133,7 +133,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
 #define STATIC_ASSERT(expression, message)\
   struct CONCATENATE(__static_assertion_at_line_, __LINE__)\
   {\
-    implementation::StaticAssertion<static_cast<bool>((expression))> CONCATENATE(CONCATENATE(CONCATENATE(STATIC_ASSERTION_FAILED_AT_LINE_, __LINE__), _), message);\
+	implementation::StaticAssertion<static_cast<bool>((expression))> CONCATENATE(CONCATENATE(CONCATENATE(STATIC_ASSERTION_FAILED_AT_LINE_, __LINE__), _), message);\
   };\
   typedef implementation::StaticAssertionTest<sizeof(CONCATENATE(__static_assertion_at_line_, __LINE__))> CONCATENATE(__static_assertion_test_at_line_, __LINE__)
 

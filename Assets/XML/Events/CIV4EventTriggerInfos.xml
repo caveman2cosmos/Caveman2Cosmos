@@ -1,12 +1,12 @@
-<?xml version="1.0"?>
-	<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Soren Johnson (Firaxis Games) -->
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-	<!-- edited with UEStudio '05 Development Environment Version 05.004b+4 (http://www.ultraedit.com) by Robert Thomas (Consultant) -->
-	<!-- Sid Meier's Civilization 4: Beyond the Sword -->
-	<!-- Copyright Firaxis Games 2006 -->
-	<!-- ReModified by StrategyOnly -->
-	<!-- -->
-	<!-- Event Trigger Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Soren Johnson (Firaxis Games) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
+<!-- edited with UEStudio '05 Development Environment Version 05.004b+4 (http://www.ultraedit.com) by Robert Thomas (Consultant) -->
+<!-- Sid Meier's Civilization 4: Beyond the Sword -->
+<!-- Copyright Firaxis Games 2006 -->
+<!-- ReModified by StrategyOnly -->
+<!-- -->
+<!-- Event Trigger Infos -->
 <Civ4EventTriggerInfos xmlns="x-schema:../Schema/C2C_CIV4EventSchema.xml">
 	<EventTriggerInfos>
 		<EventTriggerInfo>
@@ -1905,7 +1905,6 @@
 			</OrPreReqs>
 			<bGlobal>1</bGlobal>
 			<bOwnPlot>1</bOwnPlot>
-			<PythonCanDo>canDoGameMigration</PythonCanDo>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_SEA_TURTLES</Type>
@@ -9603,7 +9602,7 @@
 			</AndPreReqs>
 			<bGlobal>1</bGlobal>
 			<bShowPlot>0</bShowPlot>
-			<PythonCanDo>canTriggerNewEvent</PythonCanDo>
+			<PythonCanDo/>
 			<EventArt>Art/Event_Images/Harry_Potter.dds</EventArt>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
@@ -9649,7 +9648,7 @@
 			</AndPreReqs>
 			<bPickCity>1</bPickCity>
 			<bShowPlot>0</bShowPlot>
-			<PythonCanDo>canTriggerNewEvent</PythonCanDo>
+			<PythonCanDo/>
 			<EventArt>Art/Event_Images/Geothermal.dds</EventArt>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
@@ -9682,7 +9681,7 @@
 			</AndPreReqs>
 			<bPickCity>1</bPickCity>
 			<bShowPlot>0</bShowPlot>
-			<PythonCanDo>canTriggerNewEvent</PythonCanDo>
+			<PythonCanDo/>
 			<EventArt>Art/Event_Images/Super_Virus.dds</EventArt>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
@@ -9750,7 +9749,7 @@
 			</ObsoleteTechs>
 			<bPickCity>1</bPickCity>
 			<bShowPlot>0</bShowPlot>
-			<PythonCanDo></PythonCanDo>
+			<PythonCanDo/>
 			<EventArt>Art/Event_Images/Strike.dds</EventArt>
 		</EventTriggerInfo>
 		<!-- Other -->

@@ -77,7 +77,8 @@ def onPreSave(argsList):
 	callEachLayer(callWrite)
 
 def onSwitchHotSeatPlayer(args):
-	g_DotMap.onSwitchHotSeatPlayer()
+	ePlayer = args[0]
+	g_DotMap.onSwitchHotSeatPlayer(ePlayer)
 
 MSG_ADD_CITY = 500
 MSG_REMOVE_CITY = 501

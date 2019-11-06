@@ -168,15 +168,7 @@ bool CvUnitAI::AI_update()
 /************************************************************************************************/
 	if(GC.getUSE_AI_UPDATE_UNIT_CALLBACK())
 	{
-
-		// allow python to handle it
-		CyUnit* pyUnit = new CyUnit(this);
-		CyArgsList argsList;
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyUnit));	// pass in unit class
-		long lResult=0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "AI_unitUpdate", argsList.makeFunctionArgs(), &lResult);
-		delete pyUnit;	// python fxn must not hold on to this pointer
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "AI_unitUpdate", Cy::Args() << this))
 		{
 			return false;
 		}
@@ -815,14 +807,7 @@ void CvUnitAI::AI_upgrade()
 	CvPlayerAI& kPlayer = GET_PLAYER(getOwnerINLINE());
 	UnitAITypes eUnitAI = AI_getUnitAIType();
 	CvArea* pArea = area();
-/************************************************************************************************/
-/* RevDCM	                  Start		 05/11/09                                               */
-/*                                                                                              */
-/* Upgrade Correction                                                                           */
-/************************************************************************************************/
 	CvCivilizationInfo& kCivilization = GC.getCivilizationInfo(kPlayer.getCivilizationType());
-	UnitTypes eLoopUnit;
-	UnitTypes eBestUnit;
 
 	int iCurrentValue = kPlayer.AI_unitValue(getUnitType(), eUnitAI, pArea);
 
@@ -834,12 +819,12 @@ void CvUnitAI::AI_upgrade()
 	//Watch for odd problems this might introduce elsewhere though.
 	//for (int iPass = 0; iPass < 2; iPass++)
 	//{
-		eBestUnit = NO_UNIT;
+		UnitTypes eBestUnit = NO_UNIT;
 		int iBestValue = 0;
 
 		for (int iI = 0; iI < (int)aPotentialUnitClassTypes.size(); iI++)
 		{
-			eLoopUnit = (UnitTypes)kCivilization.getCivilizationUnits((UnitClassTypes)aPotentialUnitClassTypes[iI]);
+			UnitTypes eLoopUnit = (UnitTypes)kCivilization.getCivilizationUnits((UnitClassTypes)aPotentialUnitClassTypes[iI]);
 			if (eLoopUnit != NO_UNIT && ((/*iPass > 0 &&*/ !GC.getUnitInfo(eLoopUnit).getNotUnitAIType(eUnitAI)) /*||*/&& GC.getUnitInfo(eLoopUnit).getUnitAIType(eUnitAI)))
 			{
 				int iNewValue = kPlayer.AI_unitValue(eLoopUnit, /*(iPass == 0 ?*/ eUnitAI /*: (UnitAITypes)GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType())*/, pArea);
@@ -853,9 +838,6 @@ void CvUnitAI::AI_upgrade()
 						{
 							iBestValue = iValue;
 							eBestUnit = eLoopUnit;
-/************************************************************************************************/
-/* RevDCM	                     END                                                            */
-/************************************************************************************************/
 						}
 					}
 				}
@@ -869,7 +851,7 @@ void CvUnitAI::AI_upgrade()
 				logBBAI("    %S at (%d,%d) upgrading to %S", getName(0).GetCString(), plot()->getX_INLINE(), plot()->getY_INLINE(), GC.getUnitInfo(eBestUnit).getDescription());
 			}
 			upgrade(eBestUnit);
-			doDelayedDeath();
+			// doDelayedDeath();
 			return;
 		}
 	/*}*/

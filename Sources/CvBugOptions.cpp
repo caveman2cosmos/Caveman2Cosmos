@@ -96,17 +96,7 @@ bool getBugOptionBOOL(const char* id, bool bDefault, const char* xmlKey)
 
 	if (isBug())
 	{
-		CyArgsList argsList;
-		long lResult = 0;
-
-		argsList.add(id);
-		argsList.add(bDefault);
-
-		//logMsg("debug - getOptionBOOL(%s)", id);
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYBugOptionsModule, "getOptionBOOL", argsList.makeFunctionArgs(), &lResult);
-		//logMsg("debug - got value %ld", lResult);
-
-		return lResult != 0;
+		return Cy::call<bool>(PYBugOptionsModule, "getOptionBOOL", Cy::Args(id, bDefault));
 	}
 	else
 	{
@@ -128,17 +118,7 @@ int getBugOptionINT(const char* id, int iDefault, const char* xmlKey)
 
 	if (isBug())
 	{
-		CyArgsList argsList;
-		long lResult = 0;
-
-		argsList.add(id);
-		argsList.add(iDefault);
-
-		//logMsg("debug - getOptionBOOL(%s)", id);
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYBugOptionsModule, "getOptionINT", argsList.makeFunctionArgs(), &lResult);
-		//logMsg("debug - got value %ld", lResult);
-
-		return lResult;
+		return Cy::call<int>(PYBugOptionsModule, "getOptionINT", Cy::Args(id, iDefault));
 	}
 	else
 	{

@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Soren Johnson (Firaxis Games) -->
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4: Beyond the Sword -->
@@ -10,27 +10,27 @@
 		<EventInfo>
 			<Type>EVENT_BARBARIAN_SPREAD_RELIGION</Type>
 			<Description>TXT_KEY_EVENT_BARBARIAN_SPREAD_RELIGION</Description>
-			<PythonCallback>ApplyBarbarianSpreadReligion</PythonCallback>
+			<PythonCallback/>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BARBARIAN_JOIN</Type>
 			<Description>TXT_KEY_EVENT_BARBARIAN_JOIN</Description>
-			<PythonCallback>ApplyBarbarianJoin</PythonCallback>
+			<PythonCallback/>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BARBARIAN_PAY_TRIBUTE</Type>
 			<Description>TXT_KEY_EVENT_BARBARIAN_PAY_TRIBUTE</Description>
-			<PythonCallback>ApplyBarbarianPayTribute</PythonCallback>
+			<PythonCallback/>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BARBARIAN_ENVOY_KILL</Type>
 			<Description>TXT_KEY_EVENT_BARBARIAN_ENVOY_KILL</Description>
-			<PythonCallback>ApplyBarbarianEnvoyKill</PythonCallback>
+			<PythonCallback/>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BARBARIAN_ENVOY_SUSPICIOUS</Type>
 			<Description>TXT_KEY_EVENT_BARBARIAN_ENVOY_SUSPICIOUS</Description>
-			<PythonCallback>ApplyBarbarianSuspicious</PythonCallback>
+			<PythonCallback/>
 		</EventInfo>
 	</EventInfos>
 </Civ4EventInfos>

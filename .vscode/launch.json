@@ -48,6 +48,14 @@
             "console": "integratedTerminal",
             "args": ["${file}", "--automatic"],
             "cwd": "${workspaceFolder}\\Tools\\Autocorrect"
+        },
+        {
+            "name": "Python: Verify Python Callbacks",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\Tools\\XMLTools\\verify-python-callbacks.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
         }
     ]
 }

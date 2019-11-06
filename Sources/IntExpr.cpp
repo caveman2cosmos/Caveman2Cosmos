@@ -805,29 +805,12 @@ void IntExprAdapt::getCheckSum(unsigned int &iSum)
 
 int IntExprPython::evaluate(CvGameObject *pObject)
 {
-
-	long lResult;
-
-	CyArgsList argsList;
-	void* pArgument = pObject->addPythonArgument(&argsList);
-
-	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYRandomEventModule, m_szPythonCallback, argsList.makeFunctionArgs(), &lResult);
-
-	pObject->disposePythonArgument(pArgument);
-
-	return lResult;
+	return Cy::call<int>(PYRandomEventModule, m_szPythonCallback, Cy::Args() << pObject);
 }
 
 void IntExprPython::buildDisplayString(CvWStringBuffer &szBuffer) const
 {
-
-	CvWString szResult;
-
-	CyArgsList argsList;
-	argsList.add(false);
-
-	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYRandomEventModule, m_szPythonCallback, argsList.makeFunctionArgs(), &szResult);
-
+	CvWString szResult = Cy::call<CvWString>(PYRandomEventModule, m_szPythonCallback, Cy::Args() << false);
 	szBuffer.append(szResult);
 }
 

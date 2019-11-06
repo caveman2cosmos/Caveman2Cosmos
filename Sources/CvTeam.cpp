@@ -1640,14 +1640,7 @@ bool CvTeam::canDeclareWar(TeamTypes eTeam) const
 
 	if(GC.getUSE_CAN_DECLARE_WAR_CALLBACK())
 	{
-
-		CyArgsList argsList;
-		argsList.add(getID());	// Team ID
-		argsList.add(eTeam);	// pass in city class
-		long lResult=0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "canDeclareWar", argsList.makeFunctionArgs(), &lResult);
-
-		if (lResult == 0)
+		if (!Cy::call<bool>(PYGameModule, "canDeclareWar", Cy::Args() << getID() << eTeam))
 		{
 			return false;
 		}
@@ -1699,14 +1692,7 @@ bool CvTeam::canEventuallyDeclareWar(TeamTypes eTeam) const
 
 	if(GC.getUSE_CAN_DECLARE_WAR_CALLBACK())
 	{
-
-		CyArgsList argsList;
-		argsList.add(getID());	// Team ID
-		argsList.add(eTeam);	// pass in city class
-		long lResult=0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "canDeclareWar", argsList.makeFunctionArgs(), &lResult);
-
-		if (lResult == 0)
+		if (!Cy::call<bool>(PYGameModule, "canDeclareWar", Cy::Args() << getID() << eTeam))
 		{
 			return false;
 		}
@@ -2713,10 +2699,10 @@ bool CvTeam::canSignDefensivePact(TeamTypes eTeam)
 /************************************************************************************************/
 	if (GC.getGameINLINE().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
 	{
-	    if (!isHasEmbassy(eTeam))
-	    {
-	        return false;
-	    }
+		if (!isHasEmbassy(eTeam))
+		{
+			return false;
+		}
 	}
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -6804,15 +6790,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 
 				if(GC.getGameINLINE().countKnownTechNumTeams(eIndex) == 1)
 				{
-
-					CyArgsList argsList;
-					argsList.add(getID());
-					argsList.add(ePlayer);
-					argsList.add(eIndex);
-					argsList.add(bFirst);
-					long lResult=0;
-					PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doHolyCityTech", argsList.makeFunctionArgs(), &lResult);
-					if (lResult != 1)
+					if (!Cy::call<bool>(PYGameModule, "doHolyCityTech", Cy::Args() << getID() << ePlayer << eIndex << bFirst))
 					{
 						if(!GC.getGameINLINE().isOption(GAMEOPTION_LIMITED_RELIGIONS))
 						{
@@ -6968,20 +6946,12 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 			}
 			if(GC.getGameINLINE().isTechCanFoundReligion(eIndex) && GC.getGameINLINE().isOption(GAMEOPTION_LIMITED_RELIGIONS)
 #ifdef C2C_BUILD
-			&& !GC.getGameINLINE().isOption(GAMEOPTION_DIVINE_PROPHETS))
+				&& !GC.getGameINLINE().isOption(GAMEOPTION_DIVINE_PROPHETS))
 #else
-			)			
+				)
 #endif
 			{
-
-				CyArgsList argsList;
-				argsList.add(getID());
-				argsList.add(ePlayer);
-				argsList.add(eIndex);
-				argsList.add(bFirst);
-				long lResult=0;
-				PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doHolyCityTech", argsList.makeFunctionArgs(), &lResult);
-				if (lResult != 1)
+				if (!Cy::call<bool>(PYGameModule, "doHolyCityTech", Cy::Args() << getID() << ePlayer << eIndex << bFirst))
 				{
 					for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
 					{
@@ -7004,19 +6974,17 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 										{
 											iValue += (kPlayer.getHasReligionCount((ReligionTypes)iK) * 10);
 										}
-											if (kPlayer.getCurrentResearch() != eIndex)
-											{
-												iValue *= 10;
-											}
+										if (kPlayer.getCurrentResearch() != eIndex)
+										{
+											iValue *= 10;
+										}
 	
-											if (iValue < iBestValue)
-											{
-												iBestValue = iValue;
-												eBestPlayer = ((PlayerTypes)iJ);
-												eReligion = ReligionTypes(iI);
-											}
-									
-								
+										if (iValue < iBestValue)
+										{
+											iBestValue = iValue;
+											eBestPlayer = ((PlayerTypes)iJ);
+											eReligion = ReligionTypes(iI);
+										}
 
 										if (eBestPlayer != NO_PLAYER)
 										{
@@ -7069,6 +7037,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 					}
 				}
 			}
+
 /************************************************************************************************/
 /* REVDCM                                  END                                                  */
 /************************************************************************************************/
@@ -8413,7 +8382,7 @@ void CvTeam::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvTeam", &m_iCorporationRevenueModifier);
 	WRAPPER_READ(wrapper, "CvTeam", &m_iCorporationMaintenanceModifier);
 
-    WRAPPER_READ_ARRAY(wrapper, "CvTeam", MAX_TEAMS, m_abEmbassy);
+	WRAPPER_READ_ARRAY(wrapper, "CvTeam", MAX_TEAMS, m_abEmbassy);
 	WRAPPER_READ_ARRAY(wrapper, "CvTeam", MAX_TEAMS, m_abLimitedBorders);
 	WRAPPER_READ_ARRAY(wrapper, "CvTeam", MAX_TEAMS, m_abFreeTrade);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiTechExtraBuildingHappiness);
@@ -8572,7 +8541,7 @@ void CvTeam::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvTeam", m_iCorporationRevenueModifier);
 	WRAPPER_WRITE(wrapper, "CvTeam", m_iCorporationMaintenanceModifier);
 	
-    WRAPPER_WRITE_ARRAY(wrapper, "CvTeam", MAX_TEAMS, m_abEmbassy);
+	WRAPPER_WRITE_ARRAY(wrapper, "CvTeam", MAX_TEAMS, m_abEmbassy);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvTeam", MAX_TEAMS, m_abLimitedBorders);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvTeam", MAX_TEAMS, m_abFreeTrade);
 
@@ -8980,38 +8949,38 @@ bool CvTeam::canSignOpenBorders(TeamTypes eTeam)
 {
 	if (GC.getGameINLINE().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
 	{
-	    if (!isHasEmbassy(eTeam))
-	    {
-	        return false;
+		if (!isHasEmbassy(eTeam))
+		{
+			return false;
 		}
-    }
-    return true;
+	}
+	return true;
 }
 
 void CvTeam::sendAmbassador(TeamTypes eTeam)
 {
-    CLinkList<TradeData> ourList;
-    CLinkList<TradeData> theirList;
-    TradeData item;
+	CLinkList<TradeData> ourList;
+	CLinkList<TradeData> theirList;
+	TradeData item;
 
-    FAssert(eTeam != NO_TEAM);
-    FAssert(eTeam != getID());
+	FAssert(eTeam != NO_TEAM);
+	FAssert(eTeam != getID());
 
-    if (!isAtWar(eTeam) && (getID() != eTeam))
-    {
-        setTradeItem(&item, TRADE_EMBASSY);
+	if (!isAtWar(eTeam) && (getID() != eTeam))
+	{
+		setTradeItem(&item, TRADE_EMBASSY);
 
-        if (GET_PLAYER(getLeaderID()).canTradeItem(GET_TEAM(eTeam).getLeaderID(), item) && GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).canTradeItem(getLeaderID(), item))
-        {
-            ourList.clear();
-            theirList.clear();
+		if (GET_PLAYER(getLeaderID()).canTradeItem(GET_TEAM(eTeam).getLeaderID(), item) && GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).canTradeItem(getLeaderID(), item))
+		{
+			ourList.clear();
+			theirList.clear();
 
-            ourList.insertAtEnd(item);
-            theirList.insertAtEnd(item);
+			ourList.insertAtEnd(item);
+			theirList.insertAtEnd(item);
 
-            GC.getGameINLINE().implementDeal(getLeaderID(), (GET_TEAM(eTeam).getLeaderID()), &ourList, &theirList);
-        }
-    }
+			GC.getGameINLINE().implementDeal(getLeaderID(), (GET_TEAM(eTeam).getLeaderID()), &ourList, &theirList);
+		}
+	}
 }
 
 
@@ -9028,15 +8997,15 @@ bool CvTeam::isHasEmbassy(TeamTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
-    return m_abEmbassy[eIndex];
+	return m_abEmbassy[eIndex];
 }
 
 void CvTeam::setHasEmbassy(TeamTypes eIndex, bool bNewValue)
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
-    if (isHasEmbassy(eIndex) != bNewValue)
-    {
+	if (isHasEmbassy(eIndex) != bNewValue)
+	{
 	//Removed due to bugs
 	//Fixed by damgo and reinstated by ls612
 		CvCity* pCapital;
@@ -9065,25 +9034,25 @@ void CvTeam::setHasEmbassy(TeamTypes eIndex, bool bNewValue)
 		}
 		//m_abEmbassy[eIndex] = bNewValue;
 		//End Embassy Visibility Fix
-    }
+	}
 }
 
 int CvTeam::getEmbassyTradingCount() const
 {
-    return m_iEmbassyTradingCount;
+	return m_iEmbassyTradingCount;
 }
 
 bool CvTeam::isEmbassyTrading() const
 {
-    return (getEmbassyTradingCount() > 0);
+	return (getEmbassyTradingCount() > 0);
 }
 
 void CvTeam::changeEmbassyTradingCount(int iChange)
 {
-    if (iChange != 0)
-    {
-        m_iEmbassyTradingCount = (m_iEmbassyTradingCount + iChange);
-    }
+	if (iChange != 0)
+	{
+		m_iEmbassyTradingCount = (m_iEmbassyTradingCount + iChange);
+	}
 }
 
 /************************************************************************************************/

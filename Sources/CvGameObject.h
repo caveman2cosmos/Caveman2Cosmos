@@ -15,7 +15,7 @@
 #include "CvProperties.h"
 #include "CvPropertyManipulators.h"
 #include "BoolExpr.h"
-#include "CyArgsList.h"
+#include "CvPython.h"
 
 class CvGameObjectGame;
 class CvGameObjectTeam;
@@ -60,11 +60,36 @@ public:
 	virtual CvGameObjectPlot* getPlot() = 0;
 	virtual CvGameObjectTeam* getTeam() = 0;
 
-	virtual void* addPythonArgument(CyArgsList* argsList) = 0;
-	virtual void disposePythonArgument(void* pArgument) = 0;
+	virtual void* createPythonWrapper(PyObject*& pyObj) = 0;
+	virtual void disposePythonWrapper(void* pArgument) = 0;
 
 	virtual int adaptValueToGame(int iID, int iValue) const;
 };
+
+// Python wrapper specialization
+namespace Cy
+{
+	template <>
+	struct PyWrap<CvGameObject*> : PyWrapBase
+	{
+		typedef CvGameObject* value_type;
+
+		PyWrap(const value_type& obj) : obj(obj)
+		{
+			wrapper = obj->createPythonWrapper(pyobj);
+		}
+
+		virtual ~PyWrap()
+		{
+			obj->disposePythonWrapper(wrapper);
+		}
+
+		void* wrapper;
+		value_type obj;
+	};
+}
+
+DECLARE_PY_WRAPPED(CvGameObject*);
 
 class CvGameObjectGame : public CvGameObject
 {
@@ -84,8 +109,8 @@ public:
 	virtual CvGameObjectPlot* getPlot();
 	virtual CvGameObjectTeam* getTeam();
 
-	virtual void* addPythonArgument(CyArgsList* argsList);
-	virtual void disposePythonArgument(void* pArgument);
+	virtual void* createPythonWrapper(PyObject*& pyObj);
+	virtual void disposePythonWrapper(void* pArgument);
 };
 
 class CvGameObjectTeam : public CvGameObject
@@ -105,8 +130,8 @@ public:
 	virtual CvGameObjectPlot* getPlot();
 	virtual CvGameObjectTeam* getTeam();
 
-	virtual void* addPythonArgument(CyArgsList* argsList);
-	virtual void disposePythonArgument(void* pArgument);
+	virtual void* createPythonWrapper(PyObject*& pyObj);
+	virtual void disposePythonWrapper(void* pArgument);
 
 protected:
 	CvTeam* m_pTeam;
@@ -130,8 +155,8 @@ public:
 	virtual CvGameObjectPlot* getPlot();
 	virtual CvGameObjectTeam* getTeam();
 
-	virtual void* addPythonArgument(CyArgsList* argsList);
-	virtual void disposePythonArgument(void* pArgument);
+	virtual void* createPythonWrapper(PyObject*& pyObj);
+	virtual void disposePythonWrapper(void* pArgument);
 
 	virtual int adaptValueToGame(int iID, int iValue) const;
 
@@ -161,8 +186,8 @@ public:
 	virtual CvGameObjectPlot* getPlot();
 	virtual CvGameObjectTeam* getTeam();
 
-	virtual void* addPythonArgument(CyArgsList* argsList);
-	virtual void disposePythonArgument(void* pArgument);
+	virtual void* createPythonWrapper(PyObject*& pyObj);
+	virtual void disposePythonWrapper(void* pArgument);
 
 	virtual int adaptValueToGame(int iID, int iValue) const;
 
@@ -190,8 +215,8 @@ public:
 	virtual CvGameObjectPlot* getPlot();
 	virtual CvGameObjectTeam* getTeam();
 
-	virtual void* addPythonArgument(CyArgsList* argsList);
-	virtual void disposePythonArgument(void* pArgument);
+	virtual void* createPythonWrapper(PyObject*& pyObj);
+	virtual void disposePythonWrapper(void* pArgument);
 
 	virtual int adaptValueToGame(int iID, int iValue) const;
 
@@ -220,8 +245,8 @@ public:
 	virtual CvGameObjectPlot* getPlot();
 	virtual CvGameObjectTeam* getTeam();
 
-	virtual void* addPythonArgument(CyArgsList* argsList);
-	virtual void disposePythonArgument(void* pArgument);
+	virtual void* createPythonWrapper(PyObject*& pyObj);
+	virtual void disposePythonWrapper(void* pArgument);
 
 protected:
 	CvPlot* m_pPlot;
