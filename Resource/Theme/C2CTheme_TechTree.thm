@@ -2019,8 +2019,19 @@ with GFC_Control_Button
 				layer {
 					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HTILE, GFC_BITMAPSKIN_SECTION_VFIXED_BOTTOM);
 					DestCombine		=	GColorCombine(BlendSource,Disable);
-					Image			=	GBitmap("GUI/TechTree/7_InformationFore.tga", HVGrid, 1, 1, 0, 0);
-					Margin			=	GRectMargin(0,0,0,0);
+					Image			=	GBitmap("GUI/TechTree/7_InformationForeTerrain.tga", HVGrid, 1, 1, 0, 0);
+				}
+				layer {
+					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HFIXED_CENTER, GFC_BITMAPSKIN_SECTION_VFIXED_BOTTOM);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/7_InformationForeCity.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= 	GRectMargin(0,0,0,50);
+				}
+				layer {
+					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HFIXED_CENTER, GFC_BITMAPSKIN_SECTION_VFIXED);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/7_InformationForeISS.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= 	GRectMargin(0,50,0,0);
 				}
 			}
 			.Rollover				= .Default;
