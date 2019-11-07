@@ -2042,6 +2042,75 @@ with GFC_Control_Button
 		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_StandardButton_Style;
 		map GFC_Control							= GFC_Control_StandardButton_Style;
 	}
+
+	// Tech background 8
+	style SF_CtrlTheme_Civ4_Control_Button_TechBackground_8_Style
+	{
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				//layer {
+				//	CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HTILE, GFC_BITMAPSKIN_SECTION_VFIXED_BOTTOM);
+				//	DestCombine		=	GColorCombine(BlendSource,Disable);
+				//	Image			=	GBitmap("GUI/TechTree/8_NanotechBack.tga", HVGrid, 1, 1, 0, 0);
+				//	Margin			=	GRectMargin(0,0,0,0);
+				//}
+				layer {
+					LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/8_NanotechBackOverlay.tga", HVGrid, 1, 1, 0, 0);
+					Margin			=	GRectMargin(0,0,0,0);
+				}				
+			}
+			.Rollover				= .Default;
+			.Press					= .Default;
+			.Disable				= .Default;
+			.Focus					= .Default;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_StandardButton_Style;
+		map GFC_Control							= GFC_Control_StandardButton_Style;
+	}
+
+	// Tech foreground 8
+	style SF_CtrlTheme_Civ4_Control_Button_TechForeground_8_Style
+	{
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HTILE, GFC_BITMAPSKIN_SECTION_VFIXED_BOTTOM);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/8_NanotechForeTerrain.tga", HVGrid, 1, 1, 0, 0);
+				}
+				layer {
+					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HFIXED_CENTER, GFC_BITMAPSKIN_SECTION_VFIXED_BOTTOM);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/8_NanotechForeCity.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= 	GRectMargin(0,0,0,20);
+				}
+				layer {
+					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HFIXED_CENTER, GFC_BITMAPSKIN_SECTION_VFIXED);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/8_NanotechForeMoon.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= 	GRectMargin(0,0,0,0);
+				}
+				layer {
+					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HFIXED_CENTER, GFC_BITMAPSKIN_SECTION_VFIXED);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/8_NanotechForeISS.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= 	GRectMargin(0,200,0,0);
+				}
+			}
+			.Rollover				= .Default;
+			.Press					= .Default;
+			.Disable				= .Default;
+			.Focus					= .Default;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button	= GFC_Control_StandardButton_Style;
+		map GFC_Control							= GFC_Control_StandardButton_Style;
+	}
 }
 
 with GFC_Control_Panel
