@@ -9757,7 +9757,7 @@
 			<Type>EVENTTRIGGER_AGRICULTURAL_ACHIEVEMENT</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_AGRICULTURAL_ACHIEVEMENT</Text>
+					<Text>TXT_KEY_EVENT_ACHIEVEMENT_AGRICULTURAL</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -9776,7 +9776,7 @@
 			<Type>EVENTTRIGGER_COMMERCIAL_ACHIEVEMENT</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_COMMERCIAL_ACHIEVEMENT</Text>
+					<Text>TXT_KEY_EVENT_ACHIEVEMENT_COMMERCIAL</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -9795,7 +9795,7 @@
 			<Type>EVENTTRIGGER_INDUSTRIAL_ACHIEVEMENT</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_INDUSTRIAL_ACHIEVEMENT</Text>
+					<Text>TXT_KEY_EVENT_ACHIEVEMENT_INDUSTRIAL</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -9814,7 +9814,7 @@
 			<Type>EVENTTRIGGER_CULTURAL_ACHIEVEMENT</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_CULTURAL_ACHIEVEMENT</Text>
+					<Text>TXT_KEY_EVENT_ACHIEVEMENT_CULTURAL</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -9833,7 +9833,7 @@
 			<Type>EVENTTRIGGER_MILITARY_ACHIEVEMENT</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_MILITARY_ACHIEVEMENT</Text>
+					<Text>TXT_KEY_EVENT_ACHIEVEMENT_MILITARY</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -9852,7 +9852,7 @@
 			<Type>EVENTTRIGGER_POLITICAL_ACHIEVEMENT</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_POLITICAL_ACHIEVEMENT</Text>
+					<Text>TXT_KEY_EVENT_ACHIEVEMENT_POLITICAL</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -9871,7 +9871,7 @@
 			<Type>EVENTTRIGGER_SCIENTIFIC_ACHIEVEMENT</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_SCIENTIFIC_ACHIEVEMENT</Text>
+					<Text>TXT_KEY_EVENT_ACHIEVEMENT_SCIENTIFIC</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -9890,7 +9890,7 @@
 			<Type>EVENTTRIGGER_SEAFARING_ACHIEVEMENT</Type>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_SEAFARING_ACHIEVEMENT</Text>
+					<Text>TXT_KEY_EVENT_ACHIEVEMENT_SEAFARING</Text>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
