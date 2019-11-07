@@ -267,11 +267,15 @@ class CvTechChooser:
 			screen.setStyle(bgName, self.getBackgroundStyleForEra(i))
 			screen.setHitTest(bgName, HitTestTypes.HITTEST_NOHIT)
 			fgName = "ERA_FG_" + str(i)
-			screen.setImageButtonAt(fgName, backDropPanelName, "", 0, 0, self.xRes + FOREGROUND_PARA_AMOUNT * 2, FOREGROUND_PARA_H, WidgetTypes.WIDGET_GENERAL, 1, 2)
+			screen.setImageButtonAt(fgName, backDropPanelName, "", 0, 0, self.xRes + FOREGROUND_PARA_AMOUNT * 2, bgPanelHgt, WidgetTypes.WIDGET_GENERAL, 1, 2)
 			screen.setStyle(fgName, self.getForegroundStyleForEra(i))
 			screen.setHitTest(fgName, HitTestTypes.HITTEST_NOHIT)
-
 			lastPosX = posX
+			# fgName = "ERA_FG_" + str(i)
+			# screen.setImageButtonAt(fgName, backDropPanelName, "", 50, 50, self.xRes - 150, bgPanelHgt - 100, WidgetTypes.WIDGET_GENERAL, 1, 2)
+			# screen.setStyle(fgName, self.getForegroundStyleForEra(i))
+			# screen.setHitTest(fgName, HitTestTypes.HITTEST_NOHIT)
+			# lastPosX = posX
 
 		# Create the tech button backgrounds
 		self.refresh(xrange(self.iNumTechs), False)
@@ -1149,7 +1153,7 @@ class CvTechChooser:
 			screen.setText("FRRAC", "", str((self.scrollOffs, eraStart, eraEnd, eraWidth, eraOffs, eraFrac, offs, bgOffs, fgOffs)), 0, 70, 5, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 			screen.moveItem(bgName, bgOffs, 0, 0)
 			bgPanelHgt = self.yRes - SCREEN_PANEL_BOTTOM_BAR_H - SCREEN_PANEL_TOP_BAR_H
-			screen.moveItem(fgName, fgOffs, bgPanelHgt - FOREGROUND_PARA_H, 0)
+			screen.moveItem(fgName, fgOffs, 0, 0)
 
 	def scrollToTech(self, idx):
 		self.scrollTo(self.getTechPos(idx) - self.xRes / 2 + self.xCellDist / 2)
