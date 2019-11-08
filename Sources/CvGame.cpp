@@ -587,7 +587,7 @@ void CvGame::setInitialItems()
 #define PYCultureLinkModule		"CvCultureLinkInterface"
 	if (isOption(GAMEOPTION_CULTURALLY_LINKED_STARTS))
 	{
-		PYTHON_CALL_FUNCTION2(__FUNCTION__, PYCultureLinkModule, "assignCulturallyLinkedStarts"); 
+		Cy::call(PYCultureLinkModule, "assignCulturallyLinkedStarts"); 
 	}
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -735,7 +735,7 @@ void CvGame::regenerateMap()
 	gDLL->getEngineIFace()->AutoSave(true);
 
 // BUG - AutoSave - start
-	PYTHON_CALL_FUNCTION2(__FUNCTION__, PYBugModule, "gameStartSave");
+	Cy::call(PYBugModule, "gameStartSave");
 // BUG - AutoSave - end
 
 	// EF - This doesn't work until after the game has had time to update.
@@ -1397,11 +1397,12 @@ void CvGame::assignStartingPlots()
 		}
 	}
 
-	if (PYTHON_CALL_FUNCTION2(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "assignStartingPlots"))
-	{ 
-		if (!gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+	{
+		// Python override
+		bool bAssignStartingPlots = false;
+		if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "assignStartingPlots", bAssignStartingPlots)
+			&& bAssignStartingPlots)
 		{
-			// Python override
 			return;
 		}
 	}
@@ -2518,20 +2519,12 @@ void CvGame::normalizeStartingPlots()
 
 	if (!(GC.getInitCore().getWBMapScript()) || GC.getInitCore().getWBMapNoPlayers())
 	{
-		if (!PYTHON_CALL_FUNCTION(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "normalizeStartingPlotLocations", NULL)  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+		if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeStartingPlotLocations"))
 		{
-/************************************************************************************************/
-/* Afforess	                  Start		 03/10/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 			if (!isOption(GAMEOPTION_CULTURALLY_LINKED_STARTS))
 			{
 				normalizeStartingPlotLocations();
 			}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 		}
 	}
 
@@ -2540,42 +2533,42 @@ void CvGame::normalizeStartingPlots()
 		return;
 	}
 
-	if (!PYTHON_CALL_FUNCTION(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddRiver", NULL)  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddRiver")  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
 	{
 		normalizeAddRiver();
 	}
 
-	if (!PYTHON_CALL_FUNCTION(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "normalizeRemovePeaks", NULL)  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeRemovePeaks"))
 	{
 		normalizeRemovePeaks();
 	}
 
-	if (!PYTHON_CALL_FUNCTION(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddLakes", NULL)  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddLakes"))
 	{
 		normalizeAddLakes();
 	}
 
-	if (!PYTHON_CALL_FUNCTION(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "normalizeRemoveBadFeatures", NULL)  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeRemoveBadFeatures"))
 	{
 		normalizeRemoveBadFeatures();
 	}
 
-	if (!PYTHON_CALL_FUNCTION(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "normalizeRemoveBadTerrain", NULL)  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeRemoveBadTerrain"))
 	{
 		normalizeRemoveBadTerrain();
 	}
 
-	if (!PYTHON_CALL_FUNCTION(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddFoodBonuses", NULL)  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddFoodBonuses"))
 	{
 		normalizeAddFoodBonuses();
 	}
 
-	if (!PYTHON_CALL_FUNCTION(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddGoodTerrain", NULL)  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddGoodTerrain"))
 	{
 		normalizeAddGoodTerrain();
 	}
 
-	if (!PYTHON_CALL_FUNCTION(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddExtras", NULL)  || gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+	if (!Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "normalizeAddExtras"))
 	{
 		normalizeAddExtras();
 	}
@@ -4128,17 +4121,9 @@ void CvGame::reviveActivePlayer()
 		GC.getInitCore().setSlotStatus(getActivePlayer(), SS_TAKEN);
 		
 		// Let Python handle it
+		if (Cy::call<bool>(PYGameModule, "doReviveActivePlayer", Cy::Args() << getActivePlayer()))
 		{
-
-			long lResult=0;
-			CyArgsList argsList;
-			argsList.add(getActivePlayer());
-
-			PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doReviveActivePlayer", argsList.makeFunctionArgs(), &lResult);
-			if (lResult == 1)
-			{
-				return;
-			}
+			return;
 		}
 
 		GET_PLAYER(getActivePlayer()).initUnit(((UnitTypes)0), 0, 0, NO_UNITAI, NO_DIRECTION, 0);
@@ -4160,17 +4145,9 @@ void CvGame::reviveActivePlayer(PlayerTypes iPlayer)
 		GC.getInitCore().setSlotStatus(iPlayer, SS_TAKEN);
 		
 		// Let Python handle it
+		if (Cy::call<bool>(PYGameModule, "doReviveActivePlayer", Cy::Args() << iPlayer))
 		{
-
-			long lResult=0;
-			CyArgsList argsList;
-			argsList.add(iPlayer);
-
-			PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doReviveActivePlayer", argsList.makeFunctionArgs(), &lResult);
-			if (lResult == 1)
-			{
-				return;
-			}
+			return;
 		}
 
 		GET_PLAYER(iPlayer).initUnit(((UnitTypes)0), 0, 0, NO_UNITAI, NO_DIRECTION, 0);
@@ -5837,7 +5814,7 @@ void CvGame::setGameState(GameStateTypes eNewValue)
 			CvEventReporter::getInstance().gameEnd();
 
 // BUG - AutoSave - start
-			PYTHON_CALL_FUNCTION2(__FUNCTION__, PYBugModule, "gameEndSave");
+			Cy::call(PYBugModule, "gameEndSave");
 // BUG - AutoSave - end
 
 			showEndGameSequence();
@@ -8103,14 +8080,11 @@ void CvGame::doHolyCity()
 {
 	PlayerTypes eBestPlayer;
 	TeamTypes eBestTeam;
-	long lResult;
 	int iValue;
 	int iBestValue;
 	int iI, iJ, iK;
 
-	lResult = 0;
-	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doHolyCity", NULL, &lResult);
-	if (lResult == 1)
+	if (Cy::call<bool>(PYGameModule, "doHolyCity"))
 	{
 		return;
 	}
@@ -8480,9 +8454,7 @@ void CvGame::doHeadquarters()
 {
 	MEMORY_TRACE_FUNCTION();
 
-	long lResult = 0;
-	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doHeadquarters", NULL, &lResult);
-	if (lResult == 1)
+	if (Cy::call_optional(PYGameModule, "doHeadquarters"))
 	{
 		return;
 	}
@@ -8624,7 +8596,6 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 
 	CvPlot* pLoopPlot;
 	CvPlot* pBestPlot;
-	long lResult;
 	int iTargetCities;
 	int iValue;
 	int iBestValue;
@@ -8640,9 +8611,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 		return;
 	}
 
-	lResult = 0;
-	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "createBarbarianCities", NULL, &lResult);
-	if (lResult == 1)
+	if (Cy::call<bool>(PYGameModule, "createBarbarianCities"))
 	{
 		return;
 	}
@@ -8885,7 +8854,6 @@ void CvGame::createBarbarianUnits()
 	UnitAITypes eBarbUnitAI;
 	UnitTypes eBestUnit;
 	UnitTypes eLoopUnit;
-	long lResult;
 	int iNeededBarbs;
 	int iDivisor;
 	int iValue;
@@ -8893,9 +8861,7 @@ void CvGame::createBarbarianUnits()
 	int iLoop;
 	int iI, iJ;
 
-	lResult = 0;
-	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "createBarbarianUnits", NULL, &lResult);
-	if (lResult == 1)
+	if (Cy::call<bool>(PYGameModule, "createBarbarianUnits"))
 	{
 		return;
 	}
@@ -9741,12 +9707,7 @@ bool CvGame::testVictory(VictoryTypes eVictory, TeamTypes eTeam, bool* pbEndScor
 /************************************************************************************************/
 		if(GC.getUSE_IS_VICTORY_CALLBACK())
 		{
-
-			long lResult = 1;
-			CyArgsList argsList;
-			argsList.add(eVictory);
-			PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "isVictory", argsList.makeFunctionArgs(), &lResult);
-			if (0 == lResult)
+			if (!Cy::call<bool>(PYGameModule, "isVictory", Cy::Args() << eVictory))
 			{
 				bValid = false;
 			}
@@ -9763,9 +9724,9 @@ bool CvGame::testVictory(VictoryTypes eVictory, TeamTypes eTeam, bool* pbEndScor
 #if defined QC_MASTERY_VICTORY
 //Sevo Begin--VCM
 		else
-	  {
+		{
 			starshipLaunched[eTeam] = true;	  	
-	  }
+		}
 //Sevo End VCM
 #endif
 /************************************************************************************************/
@@ -9797,9 +9758,7 @@ void CvGame::testVictory()
 
 	updateScore();
 
-	long lResult = 1;
-	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "isVictoryTest", NULL, &lResult);
-	if (lResult == 0)
+	if (!Cy::call<bool>(PYGameModule, "isVictoryTest"))
 	{
 		return;
 	}
@@ -12605,15 +12564,11 @@ void CvGame::processBuilding(BuildingTypes eBuilding, int iChange)
 
 bool CvGame::pythonIsBonusIgnoreLatitudes() const
 {
-	long lResult = -1;
-	if (PYTHON_CALL_FUNCTION4(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "isBonusIgnoreLatitude", NULL, &lResult))
+	bool lResult = false;
+	if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "isBonusIgnoreLatitude", lResult))
 	{
-		if (!gDLL->getPythonIFace()->pythonUsingDefaultImpl() && lResult != -1)
-		{
-			return (lResult != 0);
-		}
+		return lResult;
 	}
-
 	return false;
 }
 

@@ -997,38 +997,23 @@ void CvInitCore::refreshCustomMapOptions()
 	{
 		if ( gDLL->pythonMapExists(CvString(getMapScriptName()).GetCString()) )
 		{
-			bool bOK;
-			long iNumOptions = 0;
-
-			PYTHON_CALL_FUNCTION4(__FUNCTION__, CvString(getMapScriptName()).GetCString(), "getNumHiddenCustomMapOptions", NULL, &iNumOptions);
-			m_iNumHiddenCustomMapOptions = iNumOptions;
-
-			bOK = PYTHON_CALL_FUNCTION4(__FUNCTION__, CvString(getMapScriptName()).GetCString(), "getNumCustomMapOptions", NULL, &iNumOptions);
-			if (bOK)
+			Cy::call_optional<int>(CvString(getMapScriptName()).GetCString(), "getNumHiddenCustomMapOptions", m_iNumHiddenCustomMapOptions);
+			int iNumOptions = 0;
+			if (Cy::call_optional<int>(CvString(getMapScriptName()).GetCString(), "getNumCustomMapOptions", iNumOptions) 
+				&& iNumOptions > 0)
 			{
-
 				// Got number of custom map options - now get the option defaults
-				CustomMapOptionTypes *aeMapOptions = new CustomMapOptionTypes[iNumOptions];
+				std::vector<CustomMapOptionTypes> aeMapOptions(iNumOptions, NO_CUSTOM_MAPOPTION);
 				for (int i = 0; i < iNumOptions; ++i)
 				{	
-					long iOptionDefault = 0;
-					CyArgsList argsList;
-					argsList.add(i);
-
-					bOK = PYTHON_CALL_FUNCTION4(__FUNCTION__, CvString(getMapScriptName()).GetCString(), "getCustomMapOptionDefault", argsList.makeFunctionArgs(), &iOptionDefault);
-					FAssertMsg(bOK, "Call to python fn \"getCustomMapOptionDefault\" failed in CvInitCore::refreshCustomMapOptions");
-					if (bOK)
+					if (!Cy::call_optional(CvString(getMapScriptName()).GetCString(), "getCustomMapOptionDefault", Cy::Args() << i, aeMapOptions[i]))
 					{
-						aeMapOptions[i] = (CustomMapOptionTypes)iOptionDefault;
-					}
-					else
-					{
-						aeMapOptions[i] = NO_CUSTOM_MAPOPTION;
+						FErrorMsg(CvString::format("Python function getCustomMapOptionDefault in mapscript %s failed to return correctly for option index %d", getMapScriptName(), i).c_str());
 					}
 				}
 
-				setCustomMapOptions(iNumOptions, aeMapOptions);
-				SAFE_DELETE_ARRAY(aeMapOptions);
+				setCustomMapOptions(aeMapOptions.size(), &aeMapOptions[0]);
+				// SAFE_DELETE_ARRAY(aeMapOptions);
 			}
 		}
 	}

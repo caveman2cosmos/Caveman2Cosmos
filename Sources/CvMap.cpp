@@ -73,7 +73,7 @@ void CvMap::init(CvMapInitData* pInitInfo/*=NULL*/)
 		GC.getSeaLevelInfo(GC.getInitCore().getSeaLevel()).getDescription(),
 		GC.getInitCore().getNumCustomMapOptions()).c_str() );
 
-	PYTHON_CALL_FUNCTION2(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "beforeInit");
+	Cy::call_optional(gDLL->getPythonIFace()->getMapScriptModule(), "beforeInit");
 
 	//--------------------------------
 	// Init saved data
@@ -152,17 +152,13 @@ void CvMap::reset(CvMapInitData* pInitInfo)
 		// check map script for grid size override
 		if (GC.getInitCore().getWorldSize() != NO_WORLDSIZE)
 		{
-
 			std::vector<int> out;
-			CyArgsList argsList;
-			argsList.add(GC.getInitCore().getWorldSize());
-			bool ok = PYTHON_CALL_FUNCTION4(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "getGridSize", argsList.makeFunctionArgs(), &out);
-
-			if (ok && !gDLL->getPythonIFace()->pythonUsingDefaultImpl() && out.size() == 2)
+			if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "getGridSize", Cy::Args() << GC.getInitCore().getWorldSize(), out)
+				&& out.size() == 2)
 			{
 				m_iGridWidth = out[0];
 				m_iGridHeight = out[1];
-				FAssertMsg(m_iGridWidth > 0 && m_iGridHeight > 0, "the width and height returned by python getGridSize() must be positive");
+				FAssertMsg(m_iGridWidth > 0 && m_iGridHeight > 0, "The width and height returned by python getGridSize() must be positive");
 			}
 		}
 
@@ -184,15 +180,10 @@ void CvMap::reset(CvMapInitData* pInitInfo)
 	}
 	else
 	{
-		// Check map script for latitude override (map script beats ini file)
-
-		long resultTop = -1, resultBottom = -1;
-		bool okX = PYTHON_CALL_FUNCTION4(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "getTopLatitude", NULL, &resultTop);
-		bool overrideX = !gDLL->getPythonIFace()->pythonUsingDefaultImpl();
-		bool okY = PYTHON_CALL_FUNCTION4(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "getBottomLatitude", NULL, &resultBottom);
-		bool overrideY = !gDLL->getPythonIFace()->pythonUsingDefaultImpl();
-
-		if (okX && okY && overrideX && overrideY && resultTop != -1 && resultBottom != -1)
+		// Check map script for latitude override (map script beats ini file)	
+		long resultTop = 0, resultBottom = 0;
+		if(Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "getTopLatitude", resultTop)
+			&& Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "getBottomLatitude", resultBottom))
 		{
 			m_iTopLatitude = resultTop;
 			m_iBottomLatitude = resultBottom;
@@ -219,14 +210,9 @@ void CvMap::reset(CvMapInitData* pInitInfo)
 	else
 	{
 		// Check map script for wrap override (map script beats ini file)
-
-		long resultX = -1, resultY = -1;
-		bool okX = PYTHON_CALL_FUNCTION4(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "getWrapX", NULL, &resultX);
-		bool overrideX = !gDLL->getPythonIFace()->pythonUsingDefaultImpl();
-		bool okY = PYTHON_CALL_FUNCTION4(__FUNCTION__, gDLL->getPythonIFace()->getMapScriptModule(), "getWrapY", NULL, &resultY);
-		bool overrideY = !gDLL->getPythonIFace()->pythonUsingDefaultImpl();
-
-		if (okX && okY && overrideX && overrideY && resultX != -1 && resultY != -1)
+		long resultX = 0, resultY = 0;
+		if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "getWrapX", resultX)
+			&& Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "getWrapY", resultY))
 		{
 			m_bWrapX = (resultX != 0);
 			m_bWrapY = (resultY != 0);

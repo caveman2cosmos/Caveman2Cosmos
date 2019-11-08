@@ -1,13 +1,5 @@
 #pragma once
 
-#ifndef CyUnit_h
-#define CyUnit_h
-//
-// Python wrapper class for CvUnit
-// 
-
-//#include "CvEnums.h"
-
 class CyArea;
 class CyPlot;
 class CyCity;
@@ -15,6 +7,10 @@ class CvUnit;
 class CySelectionGroup;
 class CvArtInfoUnit;
 //class CyUnitEntity;
+
+//
+// Python wrapper class for CvUnit
+// 
 class CyUnit
 {
 public:
@@ -587,4 +583,4 @@ protected:
 	CvUnit* m_pUnit;
 };
 
-#endif	// #ifndef CyUnit
+DECLARE_PY_WRAPPER(CyUnit, CvUnit*);

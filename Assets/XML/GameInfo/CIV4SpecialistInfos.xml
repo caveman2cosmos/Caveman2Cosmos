@@ -318,7 +318,7 @@
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_SPY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_SPECIALIST_SPY_STRATEGY</Strategy>
 			<Help/>
-			<Texture>,Art/Interface/Buttons/TechTree/Corporation.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,5,14</Texture>
+			<Texture>Art/Interface/MainScreen/CityScreen/spy.dds</Texture>
 			<bVisible>1</bVisible>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>

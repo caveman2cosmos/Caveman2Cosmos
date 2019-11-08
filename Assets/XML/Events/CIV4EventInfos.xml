@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Soren Johnson (Firaxis Games) -->
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4: Beyond the Sword -->
@@ -527,7 +527,7 @@
 					<iEventChance>100</iEventChance>
 				</EventChance>
 			</ClearEvents>
-			<PythonHelp>getHelpFarmBandit2</PythonHelp>
+			<PythonHelp/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -1788,7 +1788,7 @@
 					<UnitPromotion>PROMOTION_PINCH</UnitPromotion>
 				</UnitClassPromotion>
 			</UnitClassPromotions>
-			<PythonCallback>applySmokelessPowder</PythonCallback>
+			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -1809,7 +1809,7 @@
 					<UnitPromotion>PROMOTION_COMBAT1</UnitPromotion>
 				</UnitClassPromotion>
 			</UnitClassPromotions>
-			<PythonCallback>applyStrongerFittings</PythonCallback>
+			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -1826,7 +1826,7 @@
 					<UnitPromotion>PROMOTION_PINCH</UnitPromotion>
 				</UnitClassPromotion>
 			</UnitClassPromotions>
-			<PythonCallback>applyFiringPins</PythonCallback>
+			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -1847,7 +1847,7 @@
 					<UnitPromotion>PROMOTION_COMBAT1</UnitPromotion>
 				</UnitClassPromotion>
 			</UnitClassPromotions>
-			<PythonCallback>applyRifledCannon</PythonCallback>
+			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -1860,7 +1860,7 @@
 					<UnitPromotion>PROMOTION_DRILL3</UnitPromotion>
 				</UnitClassPromotion>
 			</UnitClassPromotions>
-			<PythonCallback>applyMetalDecks</PythonCallback>
+			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -1873,7 +1873,7 @@
 					<UnitPromotion>PROMOTION_RANGE1</UnitPromotion>
 				</UnitClassPromotion>
 			</UnitClassPromotions>
-			<PythonCallback>applyLongRangeFighters</PythonCallback>
+			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -1890,7 +1890,7 @@
 					<UnitPromotion>PROMOTION_SHOCK</UnitPromotion>
 				</UnitClassPromotion>
 			</UnitClassPromotions>
-			<PythonCallback>applyHalberd</PythonCallback>
+			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -1903,7 +1903,7 @@
 					<UnitPromotion>PROMOTION_COMBAT1</UnitPromotion>
 				</UnitClassPromotion>
 			</UnitClassPromotions>
-			<PythonCallback>applyReinforcedHull</PythonCallback>
+			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -2059,7 +2059,7 @@
 			<Type>EVENT_THE_GOTHS_1</Type>
 			<Description>TXT_KEY_EVENT_BARBARIAN_UPRISING</Description>
 			<PythonCallback>applyTheGoths1</PythonCallback>
-			<PythonHelp>getHelpTheGoths1</PythonHelp>
+			<PythonHelp/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -3012,7 +3012,7 @@
 			</TechFlavors>
 			<iTechPercent>15</iTechPercent>
 			<iTechMinTurnsLeft>4</iTechMinTurnsLeft>
-			<PythonCallback>applyHeresy2</PythonCallback>
+			<PythonCallback/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -3518,9 +3518,9 @@
 					<iEventChance>100</iEventChance>
 				</EventChance>
 			</ClearEvents>
-			<PythonCallback>applyOverwhelmDone1</PythonCallback>
-			<PythonCanDo>canApplyOverwhelmDone1</PythonCanDo>
-			<PythonHelp>getHelpOverwhelmDone1</PythonHelp>
+			<PythonCallback/>
+			<PythonCanDo/>
+			<PythonHelp/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -4417,7 +4417,7 @@
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</BuildingExtraCommerces>
-			<PythonCanDo>canapplyBillionsandBillions2</PythonCanDo>
+			<PythonCanDo/>
 			<PythonHelp>getHelpBillionsandBillions2</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -6560,8 +6560,8 @@
 			<Description>TXT_KEY_EVENT_DOCK_WORKERS_STRIKE_1</Description>
 			<bPickCity>1</bPickCity>
 			<iHappyTurns>15</iHappyTurns>
-			<PythonCallback>triggerDockWorkersStrike1</PythonCallback>
-			<PythonHelp>getHelpDockWorkersStrike1</PythonHelp>
+			<PythonCallback/>
+			<PythonHelp/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2000</iAIValue>
 		</EventInfo>
@@ -6607,8 +6607,8 @@
 					<iExtraYield>3</iExtraYield>
 				</BuildingExtraYield>
 			</BuildingExtraYields>
-			<PythonCanDo></PythonCanDo>
-			<PythonHelp>getHelpDockWorkersStrike3</PythonHelp>
+			<PythonCanDo/>
+			<PythonHelp/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>4000</iAIValue>
 		</EventInfo>

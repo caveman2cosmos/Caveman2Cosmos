@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- ReModified by StrategyOnly -->
-	<!-- -->
-	<!-- Unit Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- ReModified by StrategyOnly -->
+<!-- -->
+<!-- Unit Infos -->
 <Civ4UnitInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
@@ -68738,7 +68738,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 						<Outcome>
 							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY</OutcomeType>
 							<iChance>100</iChance>
-							<PythonCallback>doDiseaseKuru</PythonCallback>
+							<PythonCallback/>
 							<PlotCondition>
 								<Is>TAG_OWNED</Is>
 							</PlotCondition>
@@ -68761,7 +68761,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 						<Outcome>
 							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST</OutcomeType>
 							<iChance>100</iChance>
-							<PythonCallback>doDiseaseKuru</PythonCallback>
+							<PythonCallback/>
 							<PlotCondition>
 								<Is>TAG_OWNED</Is>
 							</PlotCondition>

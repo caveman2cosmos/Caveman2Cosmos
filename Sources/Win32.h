@@ -11,6 +11,9 @@ struct Win32
 	static bool isFocused();
 	static HWND getToplevelWindow();
 	static POINT getCursorPos();
+	static bool isLMB();
+	static bool isRMB();
+	static bool isMMB();
 	static POINT screenToClient(POINT screenPos);
 
 	static int registerMouseWheelListener();

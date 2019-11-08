@@ -167,7 +167,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ABSTRACT_MATHEMATICS</Tag>
-		<English>Pure Mathematics</English>
+		<English>Abstract Mathematics</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ABSTRACT_MATHEMATICS_PEDIA</Tag>
@@ -209,7 +209,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ACNP_PROPULSION</Tag>
-		<English>Antimatter Propulsion</English>
+		<English>ACNP Propulsion</English>
 		<French>Propulsion ACNP</French>
 		<Italian>Propulsione ACNP</Italian>
 		<Spanish>
@@ -221,7 +221,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ACNP_PROPULSION_PEDIA</Tag>
-		<English>An antimatter rocket is a proposed class of rockets that use antimatter as their power source. There are several designs that attempt to accomplish this goal. The advantage to this class of rocket is that a large fraction of the rest mass of a matter/antimatter mixture may be converted to energy, allowing antimatter rockets to have a far higher energy density and specific impulse than any other proposed class of rocket.</English>
+		<English>Antimatter catalyzed nuclear pulse propulsion is a variation of nuclear pulse propulsion based upon the injection of antimatter into a mass of nuclear fuel which normally would not be useful in propulsion. The anti-protons used to start the reaction are consumed, so it is a misnomer to refer to them as a catalyst.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ACNP_PROPULSION_QUOTE</Tag>
@@ -238,7 +238,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ACOUSTIC_WEAPONRY</Tag>
-		<English>USW Weaponry</English>
+		<English>Acoustic Weaponry</English>
 		<French>Armes Acoustiques</French>
 		<Polish>Broń Akustyczna</Polish>
 	</TEXT>
@@ -366,7 +366,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_FLIGHT</Tag>
-		<English>Aerodynamics</English>
+		<English>Advanced Aviation</English>
 		<French>
 			<Text>Vol avancé</Text>
 			<Gender>Male</Gender>
@@ -391,7 +391,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_FLIGHT_PEDIA</Tag>
-		<English>Aerodynamics, is the study of motion of air, particularly as interaction with a solid object, such as an airplane wing. It is a sub-field of fluid dynamics and gas dynamics, and many aspects of aerodynamics theory are common to these fields.</English>
+		<English>Around the time of World War II, great leaps were made in the field of aviation. The military demands of the war necessitated the development of aircraft designed for long-range bombing, and for the transportation of troops and equipment. Although advances in aviation were made all over the world during this time, the Germans were particularly adept in the development of advanced flight technologies; there was particularly strong advancement in the field of rocket propulsion as this was the one area where the Treaties of Versailles after World War I had not forbidden military growth. In 1944, they developed the V-2, the first truly guided missile, capable of delivering 2000 pounds (907.18 kg) of explosives to targets nearly 200 miles (321.87 km) away. The Germans also developed the Me 262, the first jet fighter plane, which was first used in 1945. Although both the V-2 and the Me 262 came too late to affect the outcome of World War II, both of these advances paved the way for the advanced flight technologies of today, as the technology was avidly retrieved by the victorious powers after the war, regardless of any immoral acts that the individuals concerned might have committed.</English>
 		<German>Die Gebrüder Wright ahnten nicht, dass - weniger als vierzig Jahre, nachdem ihr erstes Flugzeug in North Carolina gelandet war - Flugzeugingenieure eine völlig neue Art des Flugzeugantriebs entwickeln würden - das Düsentriebwerk. Dieses neue Triebwerk, dessen Turbine mit extrem hoch komprimierter Luft angetrieben wird, katapultierte die Luftfahrt in ungeahnte Höhen.[PARAGRAPH:1]Bei Flugzeugen wurde das Düsentriebwerk zum ersten Mal im Zweiten Weltkrieg bei der deutschen Messerschmitt eingesetzt. Bei diesen Maschinen steigerte das Düsentriebwerk die Geschwindigkeit durch das geringere Gesamtgewicht des Flugzeugs sowie durch seine Kraft, die von Propellerantrieben niemals erreicht werden würde. Moderne Düsenflugzeuge wie etwa die SR-71 Blackbird können Höchstgeschwindigkeiten bis zu 3500 km/h erreichen.[PARAGRAPH:1]Das Düsentriebwerk wird außerdem auch bei Helikoptern eingesetzt. Leonardo da Vinci hatte zwar bereits im 15. Jahrhundert Skizzen von einem Fluggerät mit Rotorblättern angefertigt, aber kein Antriebsmechanismus konnte das richtige Verhältnis von Kraft und Gewicht liefern, um so eine Maschine in der Luft zu halten - bis das Düsentriebwerk geboren wurde. Mit der Integration dieses Antriebs konnten Hubschrauber nun in den verschiedensten Bereichen eingesetzt werden: vom Kampf bis hin zu Rettungsaktionen auf hoher See. So wurde der Helikopter zu einem der vielseitigsten Fluggeräte, die jemals gebaut wurden.</German>
 		<Polish>Aerodynamika jest to dział fizyki, mechaniki płynów, zajmujący się badaniem zjawisk związanych z ruchem gazów, a także ruchu ciał stałych w ośrodku gazowym i sił działających na te ciała. Ze względu na metody badawcze wyróżnia się aerodynamikę teoretyczną i doświadczalną. W aerodynamice doświadczalnej stosuje się często tak zwany tunel aerodynamiczny, czyli komorę umożliwiającą symulację rzeczywistych zjawisk zachodzących podczas ruchu obiektów w ośrodku gazowym.Z uwagi na prędkości przepływów rozróżnia się aerodynamikę małych prędkości oraz aerodynamikę dużych prędkości. Dział aerodynamiki zajmujący się ruchem ciał w rozrzedzonych gazach, np. w górnych warstwach atmosfery, to aerodynamika molekularna.</Polish>
 	</TEXT>
@@ -410,7 +410,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_COMPUTERS</Tag>
-		<English>Reversible Computing</English>
+		<English>Advanced Computers</English>
 		<French>Ordinateurs Avancés</French>
 		<German>Fortgeschrittene Computer</German>
 		<Italian>Computer avanzati</Italian>
@@ -423,7 +423,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_COMPUTERS_PEDIA</Tag>
-		<English>Reversible computing is a model of computing where the computational process to some extent is time-reversible.</English>
+		<English>A supercomputer is a computer that is at the frontline of current processing capacity, particularly speed of calculation. Supercomputers were introduced in the 1960s and were designed primarily by Seymour Cray at Control Data Corporation (CDC), which led the market into the 1970s until Cray left to form his own company, Cray Research. He then took over the supercomputer market with his new designs, holding the top spot in supercomputing for five years (1985 - 1990). In the 1980s many smaller competitors entered the market, in parallel to the creation of the minicomputer market a decade earlier, but many of these disappeared in the mid-1990s "supercomputer market crash". [PARAGRAPH:]Today, supercomputers are typically one-of-a-kind custom designs produced by traditional companies such as Cray, IBM and Hewlett-Packard, who had purchased many of the 1980s companies to gain their experience. Since October 2010, the Tianhe-1A supercomputer has been the fastest in the world; it is located in China. [PARAGRAPH:2]The term supercomputer itself is rather fluid, and the speed of today's supercomputers tends to become typical of tomorrow's ordinary computers. CDC's early machines were simply very fast scalar processors, some ten times the speed of the fastest machines offered by other companies. In the 1970s most supercomputers were dedicated to running a vector processor, and many of the newer players developed their own such processors at a lower price to enter the market. The early and mid-1980s saw machines with a modest number of vector processors working in parallel to become the standard. Typical numbers of processors were in the range of four to sixteen. In the later 1980s and 1990s, attention turned from vector processors to massive parallel processing systems with thousands of "ordinary" CPUs, some being off the shelf units and others being custom designs. Today, parallel designs are based on "off the shelf" server-class microprocessors, such as the PowerPC, Opteron, or Xeon, and coprocessors like NVIDIA Tesla GPGPUs, AMD GPUs, IBM Cell, FPGAs. Most[which?] modern supercomputers are now highly-tuned computer clusters using commodity processors combined with custom interconnects. [PARAGRAPH:3]Supercomputers are used for highly calculation-intensive tasks such as problems involving quantum physics, weather forecasting, climate research, molecular modeling (computing the structures and properties of chemical compounds, biological macromolecules, polymers, and crystals), physical simulations (such as simulation of airplanes in wind tunnels, simulation of the detonation of nuclear weapons, and research into nuclear fusion). [PARAGRAPH:4]Relevant here is the distinction between capability computing and capacity computing, as defined by Graham et al. Capability computing is typically thought of as using the maximum computing power to solve a large problem in the shortest amount of time. Often a capability system is able to solve a problem of a size or complexity that no other computer can. Capacity computing in contrast is typically thought of as using efficient cost-effective computing power to solve somewhat large problems or many small problems or to prepare for a run on a capability system.</English>
 		<Polish>Superkomputer - komputer znacznie przewyższający możliwościami powszechnie używane komputery, w szczególności dysponujący wielokrotnie większą mocą obliczeniową. Określenie to pojawiło się w latach 60. w odniesieniu do komputerów produkowanych przez CDC i później przez firmę Cray. Były one produkowane w dziesiątkach egzemplarzy i kosztowały po kilka milionów dolarów. Współcześnie większość superkomputerów to pojedyncze egzemplarze, zaprojektowane i wyprodukowane na zamówienie, zazwyczaj z seryjnie produkowanych procesorów i innych podzespołów. Koszty ich produkcji sięgają miliarda dolarów. Od czerwca 2013 najszybszym superkomputerem na świecie jest Tianhe-2, zbudowany w Chinach.</Polish>
 	</TEXT>
 	<TEXT>
@@ -440,7 +440,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</Tag>
-		<English>Space Habitats</English>
+		<English>Advanced Environmental Systems</English>
 		<French>Systèmes Environmentaaux Avancés</French>
 		<Italian>Sistemi ambientali avanzati</Italian>
 		<Spanish>
@@ -452,7 +452,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS_PEDIA</Tag>
-		<English>A space habitat is a type of space station, intended as a permanent settlement rather than as a simple way-station or other specialized facility. No space habitat has been constructed yet, but many design concepts, with varying degrees of realism, have come both from engineers and from science-fiction authors</English>
+		<English>Space colonization (also called space settlement, space humanization, space habitation, Advanced Environmental Systems, etc.) is the concept of autonomous (self-sufficient) human habitation of locations outside Earth. While many people think of space colonies on the Moon or Mars, others argue that the first colonies will be in orbit. They have determined that there are ample quantities of all the necessary materials on the Moon and Near Earth Asteroids, that solar energy is readily available in very large quantities. As of 2008, the international space station provides a permanent, yet still non-autonomous, human presence in space. The NASA Lunar outpost, providing a permanent human presence on the moon, is at the planning stage. There is an ongoing development of technologies that may be used in future space colonization projects.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS_QUOTE</Tag>
@@ -524,7 +524,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_SEEDSHIPS</Tag>
-		<English>Megaseedship Engineering</English>
+		<English>Advanced Seedships</English>
 		<French>Vaisseau-Semences Avancés</French>
 		<Italian>Navi generazionali avanzate</Italian>
 		<Spanish>
@@ -536,7 +536,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_SEEDSHIPS_PEDIA</Tag>
-		<English>Megaseedship Engineering is the science of building mega seedships which can colonize an entire solar system at once.</English>
+		<English>Advanced Seedships is the science of building mega seedships which can colonize an entire solar system at once.</English>
 		<French>Vaisseau-Semences Avancés est la science permettant la construction de Vaisseaux immenses qui peuvent à eux-seuls coloniser un système solaire entier.</French>
 	</TEXT>
 	<TEXT>
@@ -546,14 +546,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_SEEDSHIPS_STRATEGY</Tag>
-		<English>Seedship Megaengineering permits construction of the Mega Seedship.</English>
+		<English>Advanced Seedships permits construction of the Mega Seedship.</English>
 		<French>Vaisseau-Semences Avancés permet la construction du Méga Vaisseau colon.</French>
 		<Spanish>Las naves semilla avanzadas permiten la construcción de una Meganave semilla.</Spanish>
 		<Polish>Pozwala zbudować Wielkie Zasiewacze.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_SHIELDING</Tag>
-		<English>Megashielding</English>
+		<English>Advanced Shielding</English>
 		<French>
 			<Text>Boucliers Atm. Avancés</Text>
 			<Gender>Male</Gender>
@@ -602,7 +602,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_WARMACHINES</Tag>
-		<English>Gigawarmachines</English>
+		<English>Advanced Warmachines</English>
 		<French>Machines de Guerre Avancées</French>
 		<German>Fortschrittliche Kriegsmaschinen</German>
 		<Italian>Macchine da guerra avanzate</Italian>
@@ -615,7 +615,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_WARMACHINES_PEDIA</Tag>
-		<English>Gigawarmachines incorporate limited sentient AI, quantum computers and global awareness in addition to traditional All-Terrain-Vehicle and armoured design. This means they can operate in any environment at maximum efficiency, with minimal friendly fire. However, advanced warmachines do not always operate on the frontline. They can also conduct espionage faster and safer than any human can, as they will not succumb to torture.</English>
+		<English>Advanced warmachines incorporate limited sentient AI, quantum computers and global awareness in addition to traditional All-Terrain-Vehicle and armoured design. This means they can operate in any environment at maximum efficiency, with minimal friendly fire. However, advanced warmachines do not always operate on the frontline. They can also conduct espionage faster and safer than any human can, as they will not succumb to torture.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_WARMACHINES_QUOTE</Tag>
@@ -625,7 +625,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_WARMACHINES_STRATEGY</Tag>
-		<English>[COLOR_TECH_TEXT]Gigawarmachines[COLOR_REVERT] allows you to train [COLOR_UNIT_TEXT]Fusion Battleship[COLOR_REVERT] and [COLOR_UNIT_TEXT]Assault Mech[COLOR_REVERT].</English>
+		<English>[COLOR_TECH_TEXT]Advanced Warmachines[COLOR_REVERT] allows you to train [COLOR_UNIT_TEXT]Fusion Battleship[COLOR_REVERT] and [COLOR_UNIT_TEXT]Assault Mech[COLOR_REVERT].</English>
 		<French>[COLOR_TECH_TEXT]Machines de Guerre Avancées[COLOR_REVERT] vous permet d'entraîner des [COLOR_UNIT_TEXT]Navires de Guerre à Fusion[COLOR_REVERT] et des [COLOR_UNIT_TEXT]Robots de combat[COLOR_REVERT].</French>
 		<Spanish>Las [COLOR_TECH_TEXT]Máquinas de guerra avanzadas[COLOR_REVERT] te permiten entrenar [COLOR_UNIT_TEXT]Buques de línea a fusión[COLOR_REVERT] y [COLOR_UNIT_TEXT]Mechas de asalto[COLOR_REVERT].</Spanish>
 	</TEXT>
@@ -1008,7 +1008,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_AMPLIFIED_WAVELENGTHS</Tag>
-		<English>Optical Amplification</English>
+		<English>Amplified Wavelengths</English>
 		<French>Longueurs d'ondes amplifiées</French>
 		<Spanish>
 			<Text>Amplificación de longitudes de onda</Text>
@@ -1019,7 +1019,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_AMPLIFIED_WAVELENGTHS_PEDIA</Tag>
-		<English>An optical amplifier is a device that amplifies an optical signal directly, without the need to first convert it to an electrical signal. An optical amplifier may be thought of as a laser without an optical cavity, or one in which feedback from the cavity is suppressed. Optical amplifiers are important in optical communication and laser physics. [PARAGRAPH:2] There are several different physical mechanisms that can be used to amplify a light signal, which correspond to the major types of optical amplifiers. In doped fibre amplifiers and bulk lasers, stimulated emission in the amplifier's gain medium causes amplification of incoming light. In semiconductor optical amplifiers (SOAs), electron-hole recombination occurs. In Raman amplifiers, Raman scattering of incoming light with photons in the lattice of the gain medium produces photons coherent with the incoming photons. Parametric amplifiers use parametric amplification. Almost any laser active gain medium can be pumped to produce gain for light at the wavelength of a laser made with the same material as its gain medium. Such amplifiers are commonly used to produce high power laser systems. Special types such as regenerative amplifiers and chirped-pulse amplifiers are used to amplify ultrashort pulses.</English>
+		<English>Amplified Wavelengths refers to the amplification of the signal/wavelength strength of X-ray, Gamma, Radio, Ultraviolet and other frequencies and the amplification of lasers. An optical amplifier is a device that amplifies an optical signal directly, without the need to first convert it to an electrical signal. An optical amplifier may be thought of as a laser without an optical cavity, or one in which feedback from the cavity is suppressed. Optical amplifiers are important in optical communication and laser physics. [PARAGRAPH:2] There are several different physical mechanisms that can be used to amplify a light signal, which correspond to the major types of optical amplifiers. In doped fibre amplifiers and bulk lasers, stimulated emission in the amplifier's gain medium causes amplification of incoming light. In semiconductor optical amplifiers (SOAs), electron-hole recombination occurs. In Raman amplifiers, Raman scattering of incoming light with photons in the lattice of the gain medium produces photons coherent with the incoming photons. Parametric amplifiers use parametric amplification. Almost any laser active gain medium can be pumped to produce gain for light at the wavelength of a laser made with the same material as its gain medium. Such amplifiers are commonly used to produce high power laser systems. Special types such as regenerative amplifiers and chirped-pulse amplifiers are used to amplify ultrashort pulses.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_AMPLIFIED_WAVELENGTHS_QUOTE</Tag>
@@ -1029,7 +1029,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_AMPLIFIED_WAVELENGTHS_STRATEGY</Tag>
-		<English>Optical Amplification.</English>
+		<English>Amplified Wavelengths.</English>
 		<French>Longueurs d'ondes amplifiées.</French>
 		<Spanish>La Amplificación de longitudes de onda.</Spanish>
 		<Polish>Zwiększona Długość Fali Światła</Polish>
@@ -1095,7 +1095,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANCIENT_BALLISTICS</Tag>
-		<English>Siege Engines</English>
+		<English>Ancient Ballistics</English>
 		<French>Ballistique Antique</French>
 		<Italian>Balistica antica</Italian>
 		<Spanish>
@@ -1107,7 +1107,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANCIENT_BALLISTICS_PEDIA</Tag>
-		<English>A siege engine is a device that is designed to break or circumvent heavy castle doors, thick city walls and other fortifications in siege warfare. Some are immobile, constructed in place to attack enemy fortifications from a distance, while others have wheels to enable advancing up to the enemy fortification. There are many distinct types, such as siege towers to allow attacking soldiers to scale walls and attack the defenders, battering rams to break walls or gates, to catapults (such as ballistae, trebuchets and other similar constructions) used to attack from a distance and fire a projectile; some complex siege engines were combinations of these types.</English>
+		<English>[BOLD]Ancient Ballistics[\BOLD]was an ancient missile weapon which launched a large projectile at a distant target.</English>
 		<French>[BOLD]Ballistique Antique[\BOLD]était une arme antique, permettant de lancer un large projectile à grande distance.</French>
 		<Polish>[BOLD]Starożytne Balisty[\BOLD] to broń oblężnicza używana w starożytności, która wystrzeliwała wielkie pociski w kierunku odległych celów. Starożytna Balista była stosowana zarówno do niszczenia murów oraz umocnień, jak i na polu bitwy w celu dziesiątkowania oddziałów wroga. Przypominała kształtem potężną kuszę na wozie, który zazwyczaj ciągnęły woły lub muły. Wielka kusza była naciągana jelitami zwierząt, co pozwalało jej wyrzucać pociski na bardzo duże odległości.</Polish>
 	</TEXT>
@@ -1136,7 +1136,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANCIENT_MACHINERY</Tag>
-		<English>Mechanics</English>
+		<English>Ancient Machinery</English>
 		<French>Machinerie Antique</French>
 		<Spanish>
 			<Text>Maquinaria antigua</Text>
@@ -1147,7 +1147,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANCIENT_MACHINERY_PEDIA</Tag>
-		<English>Mechanics is the area of science concerned with the behavior of physical bodies when subjected to forces or displacements, and the subsequent effects of the bodies on their environment.</English>
+		<English>The idea that a machine can be decomposed into simple movable elements led Archimedes to define the lever, pulley and screw as simple machines. By the time of the Renaissance this list increased to include the wheel and axle, wedge and inclined plane. The modern approach to characterizing machines focusses on the components that allow movement, known as joints. The earliest engine was the battering ram, developed by the Assyrians, followed by the catapult in ancient Greece. The Spartans used battering rams in the Siege of Plataea in 429 BC, but it seems that the Greeks limited their use of siege engines to assault ladders, though Peloponnesian forces used something resembling flamethrowers.he first Mediterranean people to use advanced siege machinery were the Carthaginians, who used siege towers and battering rams against the Greek colonies of Sicily. These engines influenced the ruler of Syracuse, Dionysius I, who developed a catapult in 399 BC. [PARAGRAPH:2] The first two rulers to make use of siege engines to a large extent were Philip II of Macedonia and Alexander the Great. Their large engines spurred an evolution that led to impressive machines, like the Demetrius Poliorcetes' Helepolis (or "Taker of Cities") of 304 BCE: nine storeys high and plated with iron, it stood 40 m (132 ft) tall and 21 m (69 ft) wide, weighing 180 t (396,832.07 lb). The most utilized engines were simple battering rams, or tortoises, propelled in several ingenious ways that allowed the attackers to reach the walls or ditches with a certain degree of safety. For sea sieges or battles, seesaw-like machines (sambyke or sambuca) were used. These were giant ladders, hinged and mounted on a base mechanism and used for transferring marines onto the sea walls of coastal towns. They were normally mounted on two or more ships tied together and some sambyke included shields at the top to protect the climbers from arrows. Other hinged engines were used to catch enemy equipment or even opposing soldiers with opposable appendices which are probably ancestors to the Roman corvus. Other weapons dropped heavy weights on opposing soldiers.[PARAGRAPH:2] The Romans preferred to assault enemy walls by building earthen ramps (agger) or simply scaling the walls, as in the early siege of the Samnite city of Silvium (306 BC). Soldiers working at the ramps were protected by shelters called vineae, that were arranged to form a long corridor. Wicker shields (plutei) were used to protect the front of the corridor during its construction. Another Roman siege engine sometimes used resembled the Greek ditch-filling tortoise, called a musculus ("muscle"). Battering rams were also widespread. The Roman Legions first used siege towers around 200 BC. The first documented occurrence of ancient siege artillery pieces in Europe was the gastraphetes ("belly-bow"), a kind of non-torsion bolt-thrower. These were mounted on wooden frames. Greater machines forced the introduction of pulley system for loading the projectiles, which had extended to include stones as well. Later torsion systems appeared, based on sinew springs. The onager was the main Roman invention in the field. [PARAGRAPH:2] A stone-throwing machine set to defend a gate, in the fresco of Guidoriccio da Fogliano by Simone Martini (14th century). The earliest documented occurrence of ancient siege-artillery pieces in China was the levered principled traction catapult and an 8-foot-high siege crossbow from the Mozi (Mo Jing), a Mohist text written at about the 4th - 3rd century BCE by followers of Mozi who founded the Mohist school of thought during the late Spring and Autumn Period and the early Warring States period. Much of what we now know of the siege technology of the time came to us from Books 14 and 15 (Chapters 52 to 71) on Siege Warfare from the Mo Jing. Recorded and preserved on bamboo strips, much of the text is now unfortunately extremely corrupted. However, despite the heavy fragmentation, Mohist diligence and attention to details which set Mo Jing apart from other works ensured that the highly descriptive details of the workings of mechanical devices like Cloud Ladders, Rotating Arcuballistas and Levered Catapults, records of siege techniques and usage of siege weaponry can still be found today</English>
 		<Polish>Mechanika jako nauka ścisła powstała w Grecji i Egipcie w IV wieku p.n.e. Jej twórcami byli Arystoteles (384 - 322 p.n.e.) i Archytas z Tarentu (IV wiek p.n.e.). Prace ich dotyczyły maszyn prostych, stosowanych w technice uzbrojenia i budownictwie. Punktem zwrotnym w rozwoju mechaniki były prace Archimedesa (287 - 212 p.n.e.). Ustanowił on prawa składania i rozkładania sił równoległych, teorię dźwigni oraz określił środki ciężkości różnych figur geometrycznych i brył. Od Ptolemeusza - Klaudiusza (II wiek n.e.) aż do czasów Leonarda da Vinci (1452 - 1519) wystąpił pewien zastój w rozwoju mechaniki. Leonardo da Vinci zajmował się zagadnieniami dotyczącymi równi pochyłej, tarcia i bloków. Jemu należy przypisywać sformułowanie prawa równoległoboku i wprowadzenie pojęcia momentu siły.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1162,7 +1162,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANCIENT_MEDICINE</Tag>
-		<English>Hippocratic Medicine</English>
+		<English>Ancient Medicine</English>
 		<French>Médecine ancestrale</French>
 		<Italian>Medicina antica</Italian>
 		<Spanish>
@@ -1174,7 +1174,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANCIENT_MEDICINE_PEDIA</Tag>
-		<English>A towering figure in the history of medicine was the physician Hippocrates of Kos, considered the "father of modern medicine." The Hippocratic Corpus is a collection of around seventy early medical works from ancient Greece strongly associated with Hippocrates and his students. Most famously, the Hippocratics invented the Hippocratic Oath for physicians. Contemporary physicians swear an oath of office which includes aspects found in early editions of the Hippocratic Oath.[PARAGRAPH:2]Hippocrates and his followers were first to describe many diseases and medical conditions. Though humorism (humoralism) as a medical system predates 5th-century Greek medicine, Hippocrates and his students systemetized the thinking that illness can be explained by an imbalance of blood, phlegm, black bile, and yellow bile. Hippocrates began to categorize illnesses as acute, chronic, endemic and epidemic, and use terms such as, "exacerbation, relapse, resolution, crisis, paroxysm, peak, and convalescence."</English>
+		<English>[BOLD]Ancient Medicine[\BOLD]is a term used to describe the use of medicine before the invention of writing. As the timing of the invention of writing varies per culture and region, the term "prehistoric medicine" encompasses a wide range of time periods and dates.</English>
 		<Polish>[BOLD]Starożytna Medycyna[\BOLD] to termin używany do opisania medycyny przez wynalezieniem pisma. Nauka o starożytnej medycynie opiera się w głównej mierze na badaniu artefaktów i pozostałości ludzkich oraz na antropologii.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1251,7 +1251,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANIMAL_HUSBANDRY</Tag>
-		<English>Pastorlism</English>
+		<English>Animal Husbandry</English>
 		<French>Domestication du bétail</French>
 		<German>
 			<Text>Viehzucht:Viehzucht:Viehzucht:Viehzucht</Text>
@@ -1268,7 +1268,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANIMAL_HUSBANDRY_PEDIA</Tag>
-		<English>Pastoralism is a form of animal husbandry, historically by nomadic people who moved with their herds. The species involved included cattle, camels, goats, yaks, llamas, reindeer, horses and sheep. Pastoralist herds interact with their environment, and mediate human relations with the environment as a way of turning uncultivated plants like wild grass into consumable, high quality, food. In many places, grazing herds on savannas and woodlands can help maintain the biodiversity of the savannas and prevent them from evolving into dense shrublands or forests.</English>
+		<English>[TAB]Animal husbandry is the branch of agriculture concerned with animals that are raised for meat, fibre, milk, eggs, or other products. It includes day-to-day care, selective breeding and the raising of livestock.[PARAGRAPH:2]Husbandry has a long history, starting with the Neolithic revolution when animals were first domesticated, from around 13 000 BC onward, antedating farming of the first crops. By the time of early civilizations such as ancient Egypt, cattle, sheep, goats and pigs were being raised on farms.[PARAGRAPH:2]The domestication of livestock was driven by the need to have food on hand when hunting was unproductive. The desirable characteristics of a domestic animal are that it should be useful to man, should be able to thrive in his company, should breed freely and be easy to tend. Domestication was not a single event, but a process repeated at various periods in different places. Sheep and goats were the animals that accompanied the nomads in the Middle East, while cattle and pigs were associated with more settled communities.[PARAGRAPH:2]The first wild animal to be domesticated was the dog. Half-wild dogs, perhaps starting with young individuals, may have been tolerated as scavengers and killers of vermin, and being naturally pack hunters, were predisposed to become part of the human pack and join in the hunt. Prey animals, sheep, goats, pigs and cattle, were progressively domesticated early in the history of agriculture. Pigs were domesticated in Mesopotamia around 13 000 BC, and sheep followed, some time between 11 000 and 9 000 BC. Cattle were domesticated from the wild aurochs in the areas of modern Turkey and Pakistan around 8 500 BC. Horses occur naturally on the steppes of Central Asia, and their domestication, around 3 000 BC in the Black Sea and Caspian Sea region, was originally as a source of meat; use as pack animals and for riding followed. Around the same time, the wild ass was being tamed in Egypt. Camels were domesticated soon after this, with the Bactrian camel in Mongolia and the Arabian camel becoming beasts of burden. By 1 000 BC, caravans of Arabian camels were linking India with Mesopotamia and the Mediterranean. Meanwhile, in South America, the llama and the alpaca had been domesticated, probably before 3 000 BC, as beasts of burden and for their wool. Neither was strong enough to pull a plough which limited the development of agriculture in the New World.[PARAGRAPH:2]- Wikipedia (Wikidata item Q80962)</English>
 		<French>L'élevage est peut-être apparu dès 9 000 av. J.-C., avec la domestication de chiens, chèvres et moutons. Au cours du Néolithique, cette pratique s'est intensifiée, les hommes commençant à établir des communautés agricoles. D'abord utilisés uniquement pour leur viande, les moutons et les chèvres ont ensuite été élevés pour leur lait et leur laine. Le boeuf a été domestiqué pour sa viande, son cuir ou comme bête de trait pour l'agriculture. La production de lait n'a pris de l'importance que bien plus tard, lorsque les techniques de croisement ont permis de concevoir de véritables races laitières. Le cheval a été domestiqué pour le transport et a joué un rôle de première importance dans la guerre.</French>
 		<German>Die Viehzucht begann möglicherweise bereits gegen 9000 v.Chr. mit der Domestikation von Hunden, Ziegen und Schafen, worunter man die allmähliche Umwandlung von Wildtieren in Haustiere versteht. Die Domestikation intensivierte sich in der Jungsteinzeit, als die Menschen in landwirtschaftlichen Gemeinden sesshafter wurden. Schafe wurden ursprünglich ihres Fleisches wegen gehalten, ehe sie auch wegen ihrer Milch und Wolle geschätzt wurden. Rinder wurden ursprünglich wegen ihres Fleisches und ihrer Häute domestiziert und als Arbeitstiere für den Ackerbau eingesetzt; ihre Milch spielte anfangs keine Rolle und bekam erst sehr viel später in der Geschichte eine Bedeutung, als Kühe mit sehr hohen Milcherträgen gezüchtet wurden. Domestizierte Pferde wurden wichtig für Transportzwecke und maßgeblich für die Kriegsführung.</German>
 		<Italian>L'allevamento degli animali risale all'incirca al 9000 a. C., con l'addomesticamento di cani, capre e pecore. Durante l'Età Neolitica, la gente cominciò a vivere in comunità non nomadi basate sulla agricoltura, dove l'allevamento venne intensificato. In principio, pecore e capre venivano usate esclusivamente come cibo e solo successivamente utilizzate per recuperare lana e latte. Il bestiame veniva allevato per fornire cibo e pelli; la forza lavoro di questi animali veniva utilizzata per lavorare i campi. Il latte non era ancora una delle priorità fondamentali e venne sfruttato molto più avanti nella storia, quando fu necessaria una grande produzione e vennero introdotte bestie adibite esclusivamente a questo scopo. Vennero addomesticati anche i cavalli, che divennero un importante mezzo di trasporto e giocarono un ruolo fondamentale nelle guerre.</Italian>
@@ -1377,7 +1377,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANTI_AGING_MEDICINE</Tag>
-		<English>Life Extending Medicine</English>
+		<English>Anti-Aging Medicine</English>
 		<French>Médecine Anti-Age</French>
 		<German>Anti-Aging-Medizin</German>
 		<Italian>Medicina anti-età</Italian>
@@ -1390,7 +1390,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANTI_AGING_MEDICINE_PEDIA</Tag>
-		<English>Life extension is the idea of extending the human lifespan, either modestly – through improvements in medicine – or dramatically by increasing the maximum lifespan beyond its generally settled limit of 125 years. The ability to achieve such dramatic changes, however, does not currently exist.</English>
+		<English>Anti-aging addresses how to prevent, slow, or reverse the effects of aging and help people live longer, healthier, happier lives. It includes scientific research and applications in genetic engineering, tissue engineering, and other medical advances, e.g., finding treatments and cures for Alzheimer's disease. It includes anti-aging psychology, e.g., coping skills for resiliently handling change, stress, and aging. Life extension is the part of anti-aging focused on living as long as possible.</English>
 		<Polish>AntiAging obejmuje badania naukowe w medycynie, w inżynierii genetycznej i tkankowej, poszukując metod leczenia chorób społecznych (np. raka, Alzheimera), również w psychologii, np. szukając umiejętności radzenia sobie ze stresem, bezradnością i starzeniem. AntiAging to olbrzymi rynek zdrowego odżywiania, ćwiczeń fizycznych i psychicznych, pielęgnacji skóry, terapii hormonalnej, naturalnej suplementacji, jak również najbardziej rygorystyczna naukowa część Anti-Aging, koncentrująca się na spowolnieniu, leczeniu lub odwrócenia podstawowych procesów biologicznych w celu zapewnienia poprawy zdrowia i jakości życia.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1407,13 +1407,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANTI_GRAVITY_FIELDS</Tag>
-		<English>Anti-Grav</English>
+		<English>Anti-Gravity Fields</English>
 		<French>Champs Anti-Gravitationnels</French>
 		<Polish>Pola Antygrawitacyjne</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANTI_GRAVITY_FIELDS_PEDIA</Tag>
-		<English>Anti-gravity (also known as non-gravitational field) is creating a place or object that is free from the force of gravity. It does not refer to the lack of weight under gravity experienced in free fall or orbit, or to balancing the force of gravity with some other force, such as electromagnetism or aerodynamic lift. Anti-gravity is a recurring concept in science fiction, particularly in the context of spacecraft propulsion. Examples are the gravity blocking substance "Cavorite" in H. G. Wells's The First Men in the Moon and the Spindizzy machines in James Blish's Cities in Flight.</English>
+		<English>While incapable of being used in conjunction with protective energy fields at first, Anti-Gravity Fields emerges out of research into pushing the boundaries of weightless flight. The field can replace the need for any kind of conventional levitation to be in use and can lift and move around anything within the established field.</English>
 		<Polish>Antygrawitacja - hipotetyczne i nigdy niezaobserwowane w sposób potwierdzony naukowo oddziaływanie fizyczne. Temat najczęściej jest wykorzystywany w science fiction. Oddziaływanie to miałoby być analogiczne do grawitacji, lecz powodujące odpychanie zamiast przyciągania mas. Według teorii inflacyjnej w czasie swego powstawania Wszechświat przez pewien czas znajdował się w stanie fałszywej próżni posiadającej ujemne ciśnienie, który to stan zasadniczo różni się od efektu antygrawitacji, jako że źródłem odpychających sił jest przestrzeń, a nie rozkład masy.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1544,7 +1544,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_APHOTOSYNTHESIS</Tag>
-		<English>Photosynthetic Materials</English>
+		<English>Artificial Photosynthesis</English>
 		<French>Photosynthèse Artificielle</French>
 		<German>Künstliche Photosynthese</German>
 		<Italian>Fotosintesi artificiale</Italian>
@@ -1599,7 +1599,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_APOCALYPTIC_PATHOGENS</Tag>
-		<English>Nanite-Anima Pathogens</English>
+		<English>Apocalyptic Pathogens</English>
 		<French>Pathogènes apocalyptiques</French>
 		<Spanish>
 			<Text>Patógenos apocalípticos</Text>
@@ -1625,7 +1625,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_APPLIED_ECONOMICS</Tag>
-		<English>Keynesian Economics</English>
+		<English>Applied Economics</English>
 		<French>Economie Appliquée</French>
 		<German>Angewandte Ökonomie</German>
 		<Italian>Economia applicata</Italian>
@@ -1655,7 +1655,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_APPLIED_RELATIVITY</Tag>
-		<English>Relativistic Engineering</English>
+		<English>Applied Relativity</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_APPLIED_RELATIVITY_PEDIA</Tag>
@@ -1938,7 +1938,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARMORED_CAVALRY</Tag>
-		<English>Barding</English>
+		<English>Armored Cavalry</English>
 		<French>Cavalerie Blindée</French>
 		<German>Gepanzerte Kavallerie</German>
 		<Italian>Cavalleria corazzata</Italian>
@@ -1951,7 +1951,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARMORED_CAVALRY_PEDIA</Tag>
-		<English>Barding is body armour for war horses. The practice of armoring horses was first extensively developed in antiquity in the eastern kingdoms of Parthia and Pahlava, and after the conquests of Alexander the Great it made its way into European military practices via the Seleucid Empire and later Byzantine Empire.</English>
+		<English>During the Ancient period and the Middle Ages in Europe armoured cavalry referred to any horse-mounted troops that used chain mail or plate armour for protection, and often added this to their mount's furniture as well. Between the late 17th and mid-19th centuries armoured cavalry referred to those cavalry regiments that retained the cuirass, and were commonly known as cuirassiers. At a later date they we sometimes called heavy cavalry which referred to their large horses and not the weight of the cuirass.</English>
 		<Polish>W późniejszym okresie Średniowiecza, w Europie Zachodniej oraz Środkowej trzonem sił zbrojnych stało się pospolite ruszenie rycerzy. Rycerze walczyli na ogół jako ciężka kawaleria, byli formowani w jednostki organizacyjne, zwane kopiami łączonymi w chorągwie. Uzbrojeni byli w kopie, miecze, topory i tarcze. W Europie Wschodniej oraz na stepach azjatyckich większą rolę odgrywała jazda lekka. Wchodziła ona w skład między innymi armii litewskiej. Także koczownicy stepowi Pieczyngowie, Połowcy, a później Tatarzy używali niemal wyłącznie lekkiej konnicy w swoich najazdach i podbojach. Lekką jazdę posiadali także Arabowie z Bliskiego Wschodu. Ci ostatni, często używali wielbłądów jako wierzchowców. Rozwój broni palnej oraz odrodzenie piechoty spowodowało pod koniec średniowiecza powolny upadek jazdy rycerskiej.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1998,7 +1998,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARTIFICIAL_EVOLUTION</Tag>
-		<English>Evolutionary Cybernetics</English>
+		<English>Artificial Evolution</English>
 		<French>Evolution Artificielle</French>
 		<German>Künstliche Evolution</German>
 		<Italian>Evoluzione artificiale</Italian>
@@ -2022,7 +2022,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARTIFICIAL_EVOLUTION_STRATEGY</Tag>
-		<English>[COLOR_TECH_TEXT]Evolutionary Cybernetics[COLOR_REVERT] allows you to construct [COLOR_BUILDING_TEXT]Incubation Center[COLOR_REVERT] and this tech increases the food production of several improvement types.</English>
+		<English>[COLOR_TECH_TEXT]Artificial Evolution[COLOR_REVERT] allows you to construct [COLOR_BUILDING_TEXT]Incubation Center[COLOR_REVERT] and this tech increases the food production of several improvement types.</English>
 		<French>[COLOR_TECH_TEXT]Evolution Artificielle[COLOR_REVERT] vous permet de construire des [COLOR_BUILDING_TEXT]Centres d'Incubation[COLOR_REVERT] et augmente la production de nourriture de certains aménagements.</French>
 		<Spanish>La [COLOR_TECH_TEXT]Evolución artificial[COLOR_REVERT] te permite construir un [COLOR_BUILDING_TEXT]Centro de incubación[COLOR_REVERT], y aumenta la producción de alimentos de varios tipos de mejoras de terreno.</Spanish>
 	</TEXT>
@@ -2141,7 +2141,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARTILLERY</Tag>
-		<English>Breach-Loading Artillery</English>
+		<English>Artillery</English>
 		<French>
 			<Text>Artillerie</Text>
 			<Gender>Female</Gender>
@@ -2327,7 +2327,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ASTEROIDPROBE</Tag>
-		<English>Asteroid Belt Exploration</English>
+		<English>Asteroid Belt Probes</English>
 		<French>Sondes d'Exploration de la Ceinture d'astéroïdes</French>
 		<German>Asteroidensonden</German>
 		<Italian>Esplorazione della fascia degli asteroidi</Italian>
@@ -2581,7 +2581,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ASTROINDUSTRIALISM</Tag>
-		<English>Astroindustrialism</English>
+		<English>Forge Worlds</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ASTROINDUSTRIALISM_PEDIA</Tag>
@@ -2801,7 +2801,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ATTOMETER_ENGINEERING</Tag>
-		<English>Atomic Engineering</English>
+		<English>Atomic Scale Engineering</English>
 		<French>Ingénierie Attomètre</French>
 		<Italian>Ingegneria a livello attometrico</Italian>
 		<Spanish>
@@ -2813,7 +2813,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ATTOMETER_ENGINEERING_PEDIA</Tag>
-		<English>Atomic Engineering is engineering at the atomic level, no need to waste precious metal for thickness or sturdiness since the structures that will require this type of technology will never get close enough to any gravity field to need a backbone. This differs from nanotechnology as nanites are roughly the size of cells.</English>
+		<English>Atomic Scale Engineering is engineering at the atomic level, no need to waste precious metal for thickness or sturdiness since the structures that will require this type of technology will never get close enough to any gravity field to need a backbone. This differs from nanotechnology as nanites are roughly the size of cells.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ATTOMETER_ENGINEERING_QUOTE</Tag>
@@ -2930,13 +2930,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_AUTOMATEDSERVICES</Tag>
-		<English>Societal Automatization</English>
+		<English>Automated Robotics</English>
 		<French>Robotiques Automatisés</French>
 		<Polish>Automatyczna Siła Robocza</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_AUTOMATEDSERVICES_PEDIA</Tag>
-		<English>Automation is the technology by which a process or procedure is performed with minimal human assistance.</English>
+		<English>Most service occupations that can be automated without artificial intelligence or mobile robotics have already been automated. [PARAGRAPH:2] Experts say technology is advancing at an exponential rate. That's fast. To understand exponential, put a grain of rice on the first square of a chessboard and double it every square. By the end of the board, the 64th square, it's been calculated you would have a mountain of rice larger than Everest. And at that speed, computers, automation, robots are already doing tasks most people did not believe were possible.[PARAGRAPH:2] Exceptions are some service occupations in industries like transportation and media, which will be automated in the coming decades using sophisticated (but not truly intelligent) information processing technology.[PARAGRAPH:2] Automation is the use of machines, control systems and information technologies to optimize productivity in the production of goods and delivery services. The correct incentive for applying automation is to increase productivity, and/or quality beyond that possible with current human labor levels so as to realize economies of scale, and/or realize predictable quality levels. The incorrect application of automation, which occurs most often, is an effort to eliminate or replace human labor. [PARAGRAPH:2]Simply put, whereas correct application of automation can net as much as 3 to 4 times original output with no increase in current human labor costs. Incorrect application of automation can only save a fraction of current labor level costs. In the scope of industrialisation, automation is a step beyond mechanisation.[PARAGRAPH:2] Whereas mechanisation provides human operators with machinery to assist them with the muscular requirements of work. Automation greatly decreases the need for human sensory and mental requirements while increasing load capacity, speed, and repeatability. Automation plays an increasingly important role in the world economy and in daily experience.Automation has had a notable impact in a wide range of industries beyond manufacturing (where it began).[PARAGRAPH:2]Once-ubiquitous telephone operators have been replaced largely by automated telephone switchboards and answering machines. Medical processes such as primary screening in electrocardiography or radiography and laboratory analysis of human genes, sera, cells, and tissues are carried out at much greater speed and accuracy by automated systems. Automated teller machines have reduced the need for bank visits to obtain cash and carry out transactions. In general, automation has been responsible for the shift in the world economy from industrial jobs to service jobs in the 20th and 21st centuries. Another major shift in automation is the increased demand for flexibility and convertibility in manufacturing processes. [PARAGRAPH:2] Manufacturers are increasingly demanding the ability to easily switch from manufacturing Product A to manufacturing Product B without having to completely rebuild the production lines. Flexibility and distributed processes have led to the introduction of Automated Guided Vehicles with Natural Features Navigation.).[PARAGRAPH:2] Automated manufacturing refers to the application of automation to produce things in the factory way. Most of the advantages of the automation technology has its influence in the manufacture processes. The main advantages of automated manufacturing are higher consistency and quality, reduced lead times, simplified production, reduced handling, improved work flow, and increased worker morale when a good implementation of the automation is made. Customer support automation involves the building of a knowledge base of known issues and their resolutions to support incidents with delivery mechanisms, often by expert systems. A service automation platform includes a suite of support solutions including proactive support, assisted support and self-support. With automated support, service organizations can make their services available to their customers 24 hours a day and 7 days a week, by monitoring alarms, identifying problems at an early stage and resolving issues before they become problems. [PARAGRAPH:2] Automated assisted support enables remote access to sites that need instant problem solving. By automating the collection of information of devices and applications coexisting with the supported application, problems can be quickly detected and fixed.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_AUTOMATEDSERVICES_QUOTE</Tag>
@@ -3059,7 +3059,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BACTERIUM_ENGINEERING</Tag>
-		<English>Synthetic Microbiology</English>
+		<English>Bacterium Engineering</English>
 		<French>Ingénierie des bactéries</French>
 		<Spanish>
 			<Text>Ingeniería bacteriológica</Text>
@@ -3389,7 +3389,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BINARY_PYSCHOKINESIS</Tag>
-		<English>Cybernetic Psychokinesis</English>
+		<English>Binary Psychokinesis</English>
 		<French>Pyschokinésie Binaire</French>
 		<Spanish>
 			<Text>Psicoquinesis binaria</Text>
@@ -3415,7 +3415,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BINARY_SEMIOTICS</Tag>
-		<English>Semiotic Engineering</English>
+		<English>Binary Semiotics</English>
 		<French>Sémiotique binaire</French>
 		<Spanish>
 			<Text>Semiótica binaria</Text>
@@ -3426,7 +3426,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BINARY_SEMIOTICS_PEDIA</Tag>
-		<English>Semiotic Engineering is the study of signs and sign processes (semiosis), indication, designation, likeness, analogy, metaphor, symbolism, signification, and communication between artificial intelligence and humans, as well as the creation of such. If Subconciousness Engineering was the creation of the artificial mind, Semiotic Engineering is the training the artificial mind to understand the world. The goal of Semiotic Engineering is to create a "Cyber-Latin" superlanguage that is easily deciphered by artifical intelligence and easily transmitted by humans and Androids. Semiotics is closely related to the field of linguistics, which, for its part, studies the structure and meaning of language more specifically. However, as different from linguistics, semiotics also studies non-linguistic sign systems. Semiotics is often divided into three branches. Semantic is the relation between signs and the things to which they refer; their denotata, or meaning. Syntacticsis Relations among signs in formal structures. Pragmatics is the relation between signs and sign-using agents. [PARAGRAPH:2] Semiotics is frequently seen as having important anthropological dimensions; for example, Umberto Eco proposes that every cultural phenomenon can be studied as communication. However, some semioticians focus on the logical dimensions of the science. They examine areas belonging also to the natural sciences - such as how organisms make predictions about, and adapt to, their semiotic niche in the world (see semiosis). In general, semiotic theories take signs or sign systems as their object of study: the communication of information in living organisms is covered in biosemiotics (including zoosemiotics). [PARAGRAPH:2] Syntactics is the branch of semiotics that deals with the formal properties of signs and symbols. More precisely, syntactics deals with the "rules that govern how words are combined to form phrases and sentences". Charles Morris adds that semantics deals with the relation of signs to their designata and the objects which they may or do denote; and, pragmatics deals with the biotic aspects of semiosis, that is, with all the psychological, biological, and sociological phenomena which occur in the functioning of signs.</English>
+		<English>Binary Semiotics is the study of signs and sign processes (semiosis), indication, designation, likeness, analogy, metaphor, symbolism, signification, and communication between artificial intelligence and humans. If Binary Subconsciousness was the creation of the artificial mind, Binary Semiotics is the training the artificial mind to understand the world. The goal of Binary Semiotics is to create a "Binary Latin" superlanguage that is easily deciphered by artifical intelligence and easily transmitted by humans and Androids. Semiotics is closely related to the field of linguistics, which, for its part, studies the structure and meaning of language more specifically. However, as different from linguistics, semiotics also studies non-linguistic sign systems. Semiotics is often divided into three branches. Semantic is the relation between signs and the things to which they refer; their denotata, or meaning. Syntacticsis Relations among signs in formal structures. Pragmatics is the relation between signs and sign-using agents. [PARAGRAPH:2] Semiotics is frequently seen as having important anthropological dimensions; for example, Umberto Eco proposes that every cultural phenomenon can be studied as communication. However, some semioticians focus on the logical dimensions of the science. They examine areas belonging also to the natural sciences - such as how organisms make predictions about, and adapt to, their semiotic niche in the world (see semiosis). In general, semiotic theories take signs or sign systems as their object of study: the communication of information in living organisms is covered in biosemiotics (including zoosemiotics). [PARAGRAPH:2] Syntactics is the branch of semiotics that deals with the formal properties of signs and symbols. More precisely, syntactics deals with the "rules that govern how words are combined to form phrases and sentences". Charles Morris adds that semantics deals with the relation of signs to their designata and the objects which they may or do denote; and, pragmatics deals with the biotic aspects of semiosis, that is, with all the psychological, biological, and sociological phenomena which occur in the functioning of signs.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BINARY_SEMIOTICS_QUOTE</Tag>
@@ -3440,7 +3440,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BINARY_SUBCONSCIOUSNESS</Tag>
-		<English>Subconciousness Engineering</English>
+		<English>Binary Subconciousness</English>
 		<French>Subconscient binaire</French>
 		<Spanish>
 			<Text>Subconsciente binario</Text>
@@ -3451,7 +3451,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BINARY_SUBCONSCIOUSNESS_PEDIA</Tag>
-		<English>Subconciousness engineering is the engineering a subconscious mind to artificial intelligence and androids. Consciousness is a series of electrical impulses shot off by neurons in the brain, which for the first time has been "digitized" to a binary version that allows artificial intelligence and androids to be authentically alive with emotions, dreams, morality, abstract thinking, empathy, imagination, and rationality. It is stored in 2-5 petabyte sized Subconsciousness Consoles that in the case for 12th generation and newer Androids, are implanted in their heads. AI is truely human and is connected to each other on a subconscious network but not powerful enough to be a sentient earth yet. Cities are run by AI, and AI has authentic personalities, and is "superhuman" in n regards to intelligence, talents, and skills. A mastery of piano can be acquired in seconds. This is the singularity, all that is required is to be able to upload the AI to androids and take over the world. Humans will be able to catch up when they are able to upload their minds.</English>
+		<English>Binary subconsciousness is the engineering a subconscious mind to artificial intelligence and androids. Consciousness is a series of electrical impulses shot off by neurons in the brain, which for the first time has been "digitized" to a binary version that allows artificial intelligence and androids to be authentically alive with emotions, dreams, morality, abstract thinking, empathy, imagination, and rationality. It is stored in 2-5 petabyte sized Subconsciousness Consoles that in the case for 12th generation and newer Androids, are implanted in their heads. AI is truely human and is connected to each other on a subconscious network but not powerful enough to be a sentient earth yet. Cities are run by AI, and AI has authentic personalities, and is "superhuman" in n regards to intelligence, talents, and skills. A mastery of piano can be acquired in seconds. This is the singularity, all that is required is to be able to upload the AI to androids and take over the world. Humans will be able to catch up when they are able to upload their minds.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BINARY_SUBCONSCIOUSNESS_QUOTE</Tag>
@@ -3464,7 +3464,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BINARYLEGISLATION</Tag>
-		<English>Cybernetic Legislation</English>
+		<English>Binary Legislation</English>
 		<French>Législation binaire</French>
 		<Spanish>
 			<Text>Legislación binaria</Text>
@@ -3475,7 +3475,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BINARYLEGISLATION_PEDIA</Tag>
-		<English>Cybernetic Legislation is the collection of the laws that govern what rights Androids and other cybernetic individuals have in society. It also allows the emancipation of some high level Androids to serve in public services like Police, Firefighting, and Disaster Recovery among other trades. It also has legislation on the creation of a truely subconscious AI and the use of simulated realities.</English>
+		<English>Binary Legislation is the collection of the laws that govern what rights Androids and other cybernetic individuals have in society. It also allows the emancipation of some high level Androids to serve in public services like Police, Firefighting, and Disaster Recovery among other trades. It also has legislation on the creation of a truely subconscious AI and the use of simulated realities.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BINARYLEGISLATION_QUOTE</Tag>
@@ -3903,7 +3903,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BOTANICAL_ALCHEMY</Tag>
-		<English>Artificial Herbalism</English>
+		<English>Botanical Alchemy</English>
 		<French>Alchimie Botanique</French>
 		<Spanish>
 			<Text>Alquimia botánica</Text>
@@ -3914,7 +3914,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BOTANICAL_ALCHEMY_PEDIA</Tag>
-		<English>Artificial Herbalism is the artificial life design and transmutation of common plants into flora that have almost magical properties, with the main scientific goal being the creation of super augmentable consumables, and legendary medicines.</English>
+		<English>Botanical Alchemy is the artificial life design and transmutation of common plants into flora that have almost magical properties, with the main scientific goal being the creation of the Elixir of Life, super augmentable consumables, and legendary medicines.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BOTANICAL_ALCHEMY_QUOTE</Tag>
@@ -3954,7 +3954,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BRAIN_SCAN</Tag>
-		<English>Neurographic Devices</English>
+		<English>Thought Scanning</English>
 		<French>Scanner de la Pensée</French>
 		<German>Gedankenscanner</German>
 		<Italian>Scansione del pensiero</Italian>
@@ -3967,7 +3967,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BRAIN_SCAN_PEDIA</Tag>
-		<English>A thought recording and reproduction device refers to any machine which is able to both directly record and reproduce, via a brain-computer interface, the thoughts, emotions, dreams or other neural/cognitive events of a subject for that or other subjects to experience. While currently residing within mostly fictional displays of the capacity of such devices, the idea has received increased scientific currency since the development of the first BCI-enabled devices.</English>
+		<English>Magnetic resonance imaging (MRI), nuclear magnetic resonance imaging (NMRI), or magnetic resonance tomography (MRT) is a medical imaging technique used in radiology to visualize detailed internal structures. MRI makes use of the property of Nuclear magnetic resonance (NMR) to image nuclei of atoms inside the body. [PARAGRAPH:2]An MRI machine uses a powerful magnetic field to align the magnetization of some atoms in the body, and radio frequency fields to systematically alter the alignment of this magnetization. This causes the nuclei to produce a rotating magnetic field detectable by the scanner and this information is recorded to construct an image of the scanned area of the body. Strong magnetic field gradients cause nuclei at different locations to rotate at different speeds. 3-D spatial information can be obtained by providing gradients in each direction. [PARAGRAPH:3]MRI provides good contrast between the different soft tissues of the body, which make it especially useful in imaging the brain, muscles, the heart, and cancers compared with other medical imaging techniques such as computed tomography (CT) or X-rays. Unlike CT scans or traditional X-rays, MRI uses no ionizing radiation.</English>
 		<Polish>Neuroobrazowanie - metody umożliwiające obrazowanie struktury i funkcji mózgu. Metody neuroobrazowania pozwalają na obserwację czynności mózgu podczas przeprowadzania wybranych procesów, np. odliczania co 3, zapamiętywania twarzy, poruszania palcem wskazującym, czytania słów, itd. Neuroobrazowanie umożliwia lokalizację obszarów funkcjonalnych mózgu, odpowiednich dla danych procesów. Istotną sprawą jest to, aby w eksperymencie z wykorzystaniem neuroobrazownia dobrać odpowiednio warunek kontrolny dla wybranego warunku eksperymentalnego (zadania wykonywanego przez osobę badaną). Do badań tego typu można stosować funkcjonalny magnetyczny rezonans jądrowy.</Polish>
 	</TEXT>
 	<TEXT>
@@ -4774,7 +4774,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CHOPPING</Tag>
-		<English>Choppers</English>
+		<English>Chopping</English>
 		<French>Technique de Découpe</French>
 		<Italian>Tecniche di taglio</Italian>
 		<Spanish>
@@ -4786,7 +4786,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CHOPPING_PEDIA</Tag>
-		<English>Archaeologists define a chopper as a pebble tool with an irregular cutting edge formed through the removal of flakes from one side of a stone.</English>
+		<English>Chopping is defined as the act to cut something into pieces with repeated sharp blows of an axe or knife.[PARAGRAPH:2]- Oxford Dictionaries</English>
 		<Polish>Ścinanie to technika mechanicznego przycinania przedmiotów za pomocom prymitywnych narzędzi.</Polish>
 	</TEXT>
 	<TEXT>
@@ -5714,7 +5714,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_COMPOSITES</Tag>
-		<English>Composite Materials</English>
+		<English>Composites</English>
 		<French>
 			<Text>Matériaux composites</Text>
 			<Gender>Male</Gender>
@@ -5739,7 +5739,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_COMPOSITES_PEDIA</Tag>
-		<English>A composite material (also called a composition material or shortened to composite, which is the common name) is a material made from two or more constituent materials with significantly different physical or chemical properties that, when combined, produce a material with characteristics different from the individual components. The individual components remain separate and distinct within the finished structure, differentiating composites from mixtures and solid solutions.</English>
+		<English>TBD</English>
 		<German>Der Ausdruck "Verbundwerkstoffe" bezieht sich auf Materialien, die aus mehr als einem Material bestehen. Verbundwerkstoffe wurden bereits recht früh in der menschlichen Geschichte verwendet - so wurden Bögen aus Verbundstoffen gefunden, die sich auf das Jahr 1300 v.Chr. zurückdatieren lassen. Die moderne Technologie der Verbundwerkstoffe geht auf Erfindungen des späten 20. Jahrhunderts zurück, in denen verschiedene Metalle und Kunststoffe zu Verbundwerkstoffen mit größerer Stärke, geringerem Gewicht und anderen speziellen Eigenschaften kombiniert werden. So bestehen moderne Rüstungen oft aus dem Verbundwerkstoff Kevlar. Moderne Panzer werden aus Stahl-Bornitritverbundwerkstoffen gebaut. Tarnkappenflugzeuge verwenden spezielle Verbundwerkstoffe, die nur schwer auf Radarbildschirmen zu entdecken sind. Für Bohrköpfe und Trauringe wird der hochbeständige Verbundwerkstoff Wolframkarbid verwendet. Verbundwerkstoffe erfordern oftmals extrem komplexe und präzise Fertigungsmethoden. Doch die entstehenden Materialen können überlegene Qualitäten besitzen, welche die Kosten rechtfertigen.</German>
 	</TEXT>
 	<TEXT>
@@ -5919,7 +5919,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CONDUCT</Tag>
-		<English>Codes of Conduct</English>
+		<English>Conduct</English>
 		<French>Code de Conduite</French>
 		<Spanish>
 			<Text>Código de conducta</Text>
@@ -6974,7 +6974,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CYBERSOCIOLOGY_PEDIA</Tag>
-		<English>Cybersociology is the study of how artificial intelligence, robots, thought scanning, and virtual reality affect society and the new dilemmas that are associated with them. Who owns the human body if its implanted with machines? Does Though Scanning benefit society, or is it a violation oof privacy? Cybersociologists study how to introduce the cyber lifestyle to the general public and cyber-human relations. Theories and legislation like Asimov Three Laws are studied and how to make sure an automated society doesn't collapse the human ecosystem. There is a social movement against random thinking ans war against the errors of society. Every thing must be mathematically and logicly perfect. Cybersociology also studies the relationship between Transhumanism and Theology, but its main theme is how Transhumanism affects all aspects of society.</English>
+		<English>Cybersociology is the study of how artificial intelligence, robots,thought scanning, and virtual reality affect society and the new dilemmas that are associated with them. Who owns the human body if its implanted with machines? Does Though Scanning benefit society, or is it a violation oof privacy? Cybersociologists study how to introduce the cyber lifestyle to the general public and cyber-human relations. Theories and legislation like Asimov Three Laws are studied and how to make sure an automated society doesn't collapse the human ecosystem. There is a social movement against random thinking ans war against the errors of society. Every thing must be mathematically and logicly perfect. Cybersociology also studies the relationship between Transhumanism and Theology, but its main theme is how Transhumanism affects all aspects of society.</English>
 		<Polish>Socjologia - nauka badająca w systematyczny sposób funkcjonowanie i zmiany społeczeństwa. Socjologowie badają społeczne reguły, procesy i struktury, które łączą i dzielą ludzi, tworzą lub są przejawem więzi między ludźmi a także proces ich zmian. Badają zarówno jednostki uwikłane w grupy społeczne, jak i międzyludzkie relacje (na przykład rodzinę, wspólnoty, stowarzyszenia, zrzeszenia). Relacje międzyludzkie ujęte w społecznej dynamice mogą ludzi łączyć tworząc grupy społeczne, instytucje czy całe społeczeństwa, lub dzielić przez społeczne podziały.</Polish>
 	</TEXT>
 	<TEXT>
@@ -7210,11 +7210,11 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DEITIES</Tag>
-		<English>Deification</English>
+		<English>Deities</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DEITIES_PEDIA</Tag>
-		<English>The Deification tech allows the creation of deities.</English>
+		<English>The Deities tech allows the creation of deities.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DEITIES_QUOTE</Tag>
@@ -7463,7 +7463,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DMERCH</Tag>
-		<English>Disintermediation</English>
+		<English>Direct Merchandising</English>
 		<French>Vente en libre-service</French>
 		<German>Direktvermarktung</German>
 		<Italian>Merchandising diretto</Italian>
@@ -7490,7 +7490,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DNA_COMPUTING</Tag>
-		<English>Wetware Computers</English>
+		<English>DNA Computing</English>
 		<French>Informatique Génétique</French>
 		<German>DNA-Computing</German>
 		<Italian>Informatica del DNA</Italian>
@@ -7503,7 +7503,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DNA_COMPUTING_PEDIA</Tag>
-		<English>A wetware computer is an organic computer composed of organic material such as living neurons. Wetware computers composed of neurons are different than conventional computers because they are thought to be capable in a way of "thinking for themselves", because of the dynamic nature of neurons.</English>
+		<English>DNA computing is a form of computing which uses DNA, biochemistry and molecular biology, instead of the traditional silicon-based computer technologies. DNA computing, or, more generally, molecular computing, is a fast developing interdisciplinary area. Research and development in this area concerns theory, experiments and applications of DNA computing. [PARAGRAPH:2]DNA computing is fundamentally similar to parallel computing in that it takes advantage of the many different molecules of DNA to try many different possibilities at once. For certain specialized problems, DNA computers are faster and smaller than any other computer built so far. But DNA computing does not provide any new capabilities from the standpoint of computability theory, the study of which problems are computationally solvable using different models of computation. For example, if the space required for the solution of a problem grows exponentially with the size of the problem (EXPSPACE problems) on von Neumann machines it still grows exponentially with the size of the problem on DNA machines. For very large EXPSPACE problems, the amount of DNA required is too large to be practical. (Quantum computing, on the other hand, does provide some interesting new capabilities).</English>
 		<Polish>Bio Komputery są to komputery wykorzystujące ludzkie DNA oraz wykorzystywane będą w biochemii oraz także swoje miejsce znajdzie w Molekularnych dziedzinach. Dane będą przesyłane poprzez neurony do biokomputerów, które w znacznym stopniu przyczynią się do rozwoju medycyny jak również technologicznym.</Polish>
 	</TEXT>
 	<TEXT>
@@ -7566,7 +7566,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DROIDS</Tag>
-		<English>Service Droids</English>
+		<English>Droids</English>
 		<French>Droides</French>
 		<Polish>Droidy</Polish>
 	</TEXT>
@@ -7640,7 +7640,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DUALFLUX_QUANTUM_TEMPORAL_RIFT</Tag>
-		<English>Rift Travel</English>
+		<English>Dualflux Quantum Temporal Rift</English>
 		<French>Failles Temporelles Quantiques à double flux</French>
 		<Italian>Fratture temporali quantistiche a doppio flusso</Italian>
 		<Spanish>
@@ -7750,7 +7750,7 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DYSTOPIA_PATHOGENS</Tag>
-		<English>Nanbotic Pathogens</English>
+		<English>Dystopia Pathogens</English>
 		<French>Pathogènes dystopiques</French>
 		<Spanish>
 			<Text>Patógenos distópicos</Text>
@@ -8112,7 +8112,7 @@ Some call it Evolution,
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ELECTROMAGNETIC_FIELD_SHIELDING</Tag>
-		<English>EMF Shielding</English>
+		<English>Electromagnetic Field Shielding</English>
 		<French>Boucliers à champ Electromagnétique</French>
 		<Polish>Elektormagnetyczne Pola Ochronne</Polish>
 	</TEXT>
@@ -8130,9 +8130,9 @@ Some call it Evolution,
 		<Tag>TXT_KEY_TECH_ELECTROMAGNETIC_FIELD_SHIELDING_STRATEGY</Tag>
 		<English>Grants access to vehicular units and promotions utilizing Electromagnetic Shielding. This shielding is fairly strong all around except against some energy weapon forms. Its main weakness is that it is a repellant field that can be penetrated by enough direct force so is not terribly effective at deflecting a direct shot. Later fortifications to the concept unlock a number of shielding concepts down the road and this also leads to Electromagnetic field levitating and thus eventually new ways to fly and propel craft.</English>
 	</TEXT>
-	<TEXT> 
+	<TEXT>
 		<Tag>TXT_KEY_TECH_ELECTROMAGNETIC_VOLTAGE</Tag>
-		<English>EMPtronics</English>
+		<English>Electromagnetic Voltage</English>
 		<French>Voltage Electromagnétique</French>
 		<Spanish>
 			<Text>Tensión electromagnética</Text>
@@ -8188,11 +8188,11 @@ Some call it Evolution,
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ELECTRONUCLEAR_MATTER</Tag>
-		<English>Neutronium Production</English>
+		<English>Neutronium</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ELECTRONUCLEAR_MATTER_PEDIA</Tag>
-		<English>Neutronium is a hypothetical substance composed purely of neutrons. The word was coined by scientist Andreas von Antropoff in 1926 for the conjectured "element of atomic number zero" that he placed at the head of the periodic table.</English>
+		<English>A Grand Unified Theory (GUT) is a model in particle physics in which at high energy, the three gauge interactions of the Standard Model which define the electromagnetic, weak, and strong interactions or forces, are merged into one single force.[PARAGRAPH:2]Wikipedia</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ELECTRONUCLEAR_MATTER_QUOTE</Tag>
@@ -8467,7 +8467,7 @@ Some call it Evolution,
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_EQUINE_DOMESTICATION</Tag>
-		<English>Equid Domestication</English>
+		<English>Equine Domestication</English>
 		<French>Domestication des Chevaux</French>
 		<Italian>Addomesticazione degli equini</Italian>
 		<Spanish>
@@ -8525,7 +8525,7 @@ Some call it Evolution,
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_EVOLVED_CONSTRUCTION</Tag>
-		<English>Evolutionary Architecture</English>
+		<English>Evolved Construction</English>
 		<French>Construction évoluante</French>
 		<Spanish>
 			<Text>Construcción evolutiva</Text>
@@ -8787,7 +8787,7 @@ Some call it Evolution,
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_EXTRATERRESTRIAL_AGRICULTURE</Tag>
-		<English>Closed Ecological Systems</English>
+		<English>Extraterrestrial Agriculture</English>
 		<French>Agriculture Extraterrestre</French>
 		<Italian>Agricoltura extraterrestre</Italian>
 		<Spanish>
@@ -8799,7 +8799,7 @@ Some call it Evolution,
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_EXTRATERRESTRIAL_AGRICULTURE_PEDIA</Tag>
-		<English>Closed ecological systems (CES) are ecosystems that do not rely on matter exchange with any part outside the system. Space farming refers to the cultivation of crops for food and other materials in space or on off-Earth celestial objects – equivalent to agriculture on Earth. Farming on celestial bodies, such as the Moon or Mars, shares many similarities with farming on a space station or space colony.</English>
+		<English>Closed ecological systems (CES) are ecosystems that do not rely on matter exchange with any part outside the system.</English>
 		<Polish>Zamknięte Systemy Ekologiczne (CES) są ekosystemami które mogą przeżyc w nieprzyjaznych warunkach poza ziemskich.</Polish>
 	</TEXT>
 	<TEXT>
@@ -8924,7 +8924,7 @@ Some call it Evolution,
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FELINE_DOMESTICATION</Tag>
-		<English>Felid Domestication</English>
+		<English>Feline Domestication</English>
 		<French>Domestication des félins</French>
 		<Spanish>
 			<Text>Domesticación de felinos</Text>
@@ -9733,7 +9733,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FRESPONSE</Tag>
-		<English>Disaster Robotics</English>
+		<English>Disaster Robots</English>
 		<French>Robots de Gestion de Crises</French>
 		<German>Krisenroboter</German>
 		<Italian>Robot per la gestione di emergenze</Italian>
@@ -9746,7 +9746,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FRESPONSE_PEDIA</Tag>
-		<English>A rescue robot is a robot that has been designed for the purpose of rescuing people. Common situations that employ rescue robots are mining accidents, urban disasters, hostage situations, and explosions. The benefits of rescue robots to these operations include reduced personnel requirements, reduced fatigue, and access to otherwise unreachable areas.</English>
+		<English>Robots are automating military ground systems, permitting vital protection of soldiers and people in the field, creating the possibility of reduced fatalities. Mobile robotics operate independently of the operator. What is good for a robotic unmanned ground vehicle is also good for a robotic vacuum and lawn mower. Multiple technological, cultural, political and market forces share a quantum singularity that has brought mobile robotics to the point where robots are useful to every arm of the military services. This is a phenomenon that will have a major impact on the way we run the military and police societies.[PARAGRAPH:2]First responder robot markets are anticipated to grow rapidly in response to standards evolution. A new ASTM International standard for urban search and rescue robots and components tackles humble logistics problems that can stimulate the use of life-saving robots.[PARAGRAPH:2] Defense and homeland security systems have an emphasis on causality reduction during combat. This has resulted in investment in robotics technology that is useful. Robotic research is on the fast track for government spending. Congress passed a law making it an Army goal that by 2015, one-third of the operational ground combat vehicles are unmanned. The US Navy and Marines have similar initiatives underway.</English>
 		<Polish>Robot - mechaniczne urządzenie wykonujące automatycznie pewne zadania. Działanie robota może być sterowane przez człowieka, przez wprowadzony wcześniej program, bądź przez zbiór ogólnych reguł, które zostają przełożone na działanie robota przy pomocy technik sztucznej inteligencji. Roboty często zastępują człowieka przy monotonnych, złożonych z powtarzających się kroków czynnościach, które mogą wykonywać znacznie szybciej od ludzi. Domeną ich zastosowań są też te zadania, które są niebezpieczne dla człowieka, na przykład związane z manipulacją szkodliwymi dla zdrowia substancjami lub przebywaniem w nieprzyjaznym środowisku.</Polish>
 	</TEXT>
 	<TEXT>
@@ -9781,7 +9781,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FROST_BEAMS</Tag>
-		<English>Frost Weaponry</English>
+		<English>Frost Beams</English>
 		<French>Rayons Froid</French>
 		<Polish>Promienie Zimna</Polish>
 	</TEXT>
@@ -9798,7 +9798,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FROST_BEAMS_STRATEGY</Tag>
-		<English>Frost Weaponry quickly become popular for Law Enforcement who find it a great way to slow and incapacitate a foe. Some military vehicles employ it as well but generally it's better to kill what you strike rather than slow it down. Massively powerful frost beams on Naval ships can even freeze water temporarily so as to entrap their opponents and seal off beach landing points. That which cannot move is a vulnerable stationary target. Directly, frost weapons are not highly effective against the hulls of vehicular craft but can be quite lethal to exposed personnel.</English>
+		<English>Frost Beam weapons quickly become popular for Law Enforcement who find it a great way to slow and incapacitate a foe. Some military vehicles employ it as well but generally it's better to kill what you strike rather than slow it down. Massively powerful frost beams on Naval ships can even freeze water temporarily so as to entrap their opponents and seal off beach landing points. That which cannot move is a vulnerable stationary target. Directly, frost weapons are not highly effective against the hulls of vehicular craft but can be quite lethal to exposed personnel.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FSYSTEMS</Tag>
@@ -10344,7 +10344,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GENCYCLOPEDIA</Tag>
-		<English>Eenome Browser</English>
+		<English>Genomic Encyclopedia</English>
 		<French>Encyclopédie Génomique</French>
 		<German>Genom-Enzyklopädie</German>
 		<Italian>Enciclopedia genomica</Italian>
@@ -10371,7 +10371,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GENEENHANCEMENT</Tag>
-		<English>Genetic Enhancement</English>
+		<English>Gene Enhancement</English>
 		<French>Amélioration Génétique</French>
 		<German>Humangenmanipulation</German>
 		<Italian>Miglioramento genetico</Italian>
@@ -10426,7 +10426,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GENEMANIPULATION</Tag>
-		<English>Genetic Engineering</English>
+		<English>Gene Manipulation</English>
 		<French>Manipulation des Gènes</French>
 		<German>Genmanipulation</German>
 		<Italian>Manipolazione genetica</Italian>
@@ -10456,7 +10456,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GENESIS_BIOLOGY</Tag>
-		<English>Hypergenetics</English>
+		<English>Genesis Biology</English>
 		<French>Biologie de la Genèse</French>
 		<German>Phylogenetik</German>
 		<Italian>Biologia delle origini</Italian>
@@ -10878,7 +10878,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GUIDED_WEAPONS</Tag>
-		<English>Smart Munitions</English>
+		<English>Guided Weapons</English>
 		<French>Armes téléguidées</French>
 		<German>Lenkwaffen</German>
 		<Italian>Armi guidate</Italian>
@@ -11183,7 +11183,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HERITAGE</Tag>
-		<English>Cultural Heritage</English>
+		<English>Heritage</English>
 		<French>Héritage</French>
 		<Spanish>
 			<Text>Patrimonio</Text>
@@ -11263,7 +11263,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HOMO_SUPERIOR</Tag>
-		<English>Anthropological Uplifting</English>
+		<English>Homo Superior</English>
 		<French>Homo-Supérior</French>
 		<Spanish>
 			<Text>Homo superior</Text>
@@ -11274,7 +11274,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HOMO_SUPERIOR_PEDIA</Tag>
-		<English>A superhuman is an entity with intelligence or abilities exceeding normal human standards.[PARAGRAPH:2]Superhuman can mean an improved human, for example, by genetic modification, cybernetic implants, or as what humans might evolve into, in the distant future. Occasionally, it could mean an otherwise "normal" human with unusual abilities, such as psychic abilities or exceptional proficiency at something, far beyond the norm.</English>
+		<English>Homo Superior or Superhuman is an entity with intelligence or abilities exceeding normal human standards. [PARAGRAPH:2]Superhuman can mean an improved human, for example, by genetic modification, cybernetic implants, or as what humans might evolve into, in the distant future. Occasionally, it could mean an otherwise "normal" human with unusual abilities, such as psychic abilities or exceptional proficiency at something, far beyond the norm.</English>
 		<Polish>Nadczłowiek wyróżnia się większymi umiejętnościami oraz zdolnościami oraz wyższą inteligencją niż przeciętny człowiek. Jest genetycznie zmodyfikowany i przeważnie wykorzystywani są w celach militarnych a nawet medycznych.</Polish>
 	</TEXT>
 	<TEXT>
@@ -11307,7 +11307,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HORSE_BREEDING</Tag>
-		<English>Equestrianism</English>
+		<English>Horse Breeding</English>
 		<French>Elevage des Chevaux</French>
 		<German>Pferdezucht</German>
 		<Italian>Allevamento di cavalli</Italian>
@@ -11320,7 +11320,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HORSE_BREEDING_PEDIA</Tag>
-		<English>Equestrianism (from Latin equester, equestr-, equus, 'horseman', 'horse'), more often known as horse riding (British English) or horseback riding (American English), refers to the skill and sport of riding, driving, steeplechasing or vaulting with horses. This broad description includes the use of horses for practical working purposes, transportation, recreational activities, artistic or cultural exercises, and competitive sport.</English>
+		<English>The history of horse breeding goes back millennia. Though the precise date is in dispute, humans could have domesticated the horse as far back as approximately 4500 BCE. However, evidence of planned breeding has a more blurry history. [PARAGRAPH:2]One of the earliest people known to document the breedings of their horses were the Bedouin of the Middle East, the breeders of the Arabian horse. While it is difficult to determine how far back the Bedouin passed on pedigree information via an oral tradition, there were written pedigrees of Arabian horses by A.D. 1330. The Akhal-Teke of West-Central Asia is another breed with roots in ancient times that was also bred specifically for war and racing. The nomads of the Mongolian steppes bred horses for several thousand years as well.[PARAGRAPH:2]The types of horses bred varied with culture and with the times. The uses to which a horse was put also determined its qualities, including smooth amblers for riding, fast horses for carrying messengers, heavy horses for plowing and pulling heavy wagons, ponies for hauling cars of ore from mines, packhorses, carriage horses and many others. - Wikipedia</English>
 		<Polish>Koń i wieści o nim zanikają w neolicie aż do czasu, kiedy znajdujemy pierwsze wzmianki o udomowieniu konia, ok.3500 lat p.n.e., dochodzimy wiec do ery rydwanow i jezdzcow.W epoce brązu koń jest juz udomowiony, ujeżdżony, trenowany do różnych prac. Niektórzy otaczają go czcią, dla niego tworzy się bóstwa, zapewniające płodność i długowieczność. W tej erze bierze początek, jak ją nazywają później, hiszpańska szkoła jazdy, w ktorej koń szkolony jest na długiej lonży, ujeżdżany i wykorzystywany jako "partner" w hodowli byków. W muzeum archeologii w Madrycie znajdują się podkowy, uprzęże oraz wyposarzenie jeźdźca z IV i III wieku p.n.e, a więc z wcześniejsze niż w historii rzymskiej czy greckiej.</Polish>
 	</TEXT>
 	<TEXT>
@@ -11774,7 +11774,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HYPOTHETICAL_BIOCHEMISTRY</Tag>
-		<English>Artificial Biochemistry</English>
+		<English>Hypothetical Biochemistry</English>
 		<French>Biochimie Hypothétique</French>
 		<Spanish>
 			<Text>Bioquímica hipotética</Text>
@@ -11826,7 +11826,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_IMAGINARY_PHYSICS</Tag>
-		<English>BSM Physics</English>
+		<English>Imaginary Physics</English>
 		<French>Physique Imaginaire</French>
 		<German>Theoretische Physik</German>
 		<Italian>Fisica immaginaria</Italian>
@@ -11839,7 +11839,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_IMAGINARY_PHYSICS_PEDIA</Tag>
-		<English>Physics beyond the Standard Model (BSM) refers to the theoretical developments needed to explain the deficiencies of the Standard Model, such as the strong CP problem, neutrino oscillations, matter–antimatter asymmetry, and the nature of dark matter and dark energy. Another problem lies within the mathematical framework of the Standard Model itself: the Standard Model is inconsistent with that of general relativity, to the point where one or both theories break down under certain conditions (for example within known spacetime singularities like the Big Bang and black hole event horizons).</English>
+		<English>Imaginary physics is a branch of physics which employs mathematical models and abstractions of physics to rationalize, explain and predict natural phenomena. The importance of mathematics in theoretical physics is sometimes emphasized by the expression "mathematical physics". The advancement of science depends in general on the interplay between experimental studies and theory. In some cases, theoretical physics adheres to standards of mathematical rigor while giving little weight to experiments and observations.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_IMAGINARY_PHYSICS_QUOTE</Tag>
@@ -12650,7 +12650,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_KNOWLEDGE_MERCANTILISM</Tag>
-		<English>Epistemological Economics</English>
+		<English>Knowledge Mercantilism</English>
 		<French>Mercantilisme de la connaissance</French>
 		<Spanish>
 			<Text>Mercantilismo del conocimiento</Text>
@@ -13633,7 +13633,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MACROVERSE_TRAVERSAL</Tag>
-		<English>Macroverse Travel</English>
+		<English>Macroverse Traversal</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MACROVERSE_TRAVERSAL_PEDIA</Tag>
@@ -13760,7 +13760,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MAINSTREAM_CLONING</Tag>
-		<English>Anthro Cloning</English>
+		<English>Mainstream Cloning</English>
 		<French>Apologie du Clonage</French>
 		<Spanish>
 			<Text>Clonación humana</Text>
@@ -14300,7 +14300,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MEDIA_HIVEMIND</Tag>
-		<English>Gestalt Culture</English>
+		<English>Media Hivemind</English>
 		<French>Conscience Médiatique collective</French>
 		<Spanish>
 			<Text>Conciencia colectiva de medios</Text>
@@ -14311,7 +14311,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MEDIA_HIVEMIND_PEDIA</Tag>
-		<English>Gestalt Culture is the collective conscience, set of shared beliefs, ideas and moral attitudes which operate as a unifying force within society caused by planetary media supernetworks. A group mind, hive mind or group ego in science fiction is a single, collective consciousness or intelligence occupying many bodies or entities. Individual thought is heavily rejected, rather than existing as separate individuals, people come together as dynamic groups to share resources and knowledge. It's a theme that crops up a lot in science fiction. Almost everybody behaves like they're part of an ant or bee colony. Each individual is prepared to sacrifice everything, including their lives, for the survival of the group, but usually are told to participate in mass consumerism. Star Trek's assimilating aliens, the Borg, are just one of many examples of how we've imagined such societies.</English>
+		<English>Media Hivemind is the collective conscience, set of shared beliefs, ideas and moral attitudes which operate as a unifying force within society caused by planetary media supernetworks. A group mind, hive mind or group ego in science fiction is a single, collective consciousness or intelligence occupying many bodies or entities. Individual thought is heavily rejected, rather than existing as separate individuals, people come together as dynamic groups to share resources and knowledge. It's a theme that crops up a lot in science fiction. Almost everybody behaves like they're part of an ant or bee colony. Each individual is prepared to sacrifice everything, including their lives, for the survival of the group, but usually are told to participate in mass consumerism. Star Trek's assimilating aliens, the Borg, are just one of many examples of how we've imagined such societies.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MEDIA_HIVEMIND_QUOTE</Tag>
@@ -14879,7 +14879,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_METAVERSE_PEDIA</Tag>
-		<English>The Metaverse is a collective virtual shared space, created by the convergence of virtually enhanced physical reality and physically persistent virtual space, including the sum of all virtual worlds, augmented reality, and the internet.</English>
+		<English>In C2C, the Metaverse is a universe-spanning virtual world.  It is extended beyond the visible universe via interdimensional portals.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_METAVERSE_QUOTE</Tag>
@@ -15432,7 +15432,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MINORITY_RIGHTS</Tag>
-		<English>Social Justice</English>
+		<English>Minority Rights</English>
 		<French>Droits des Minorité</French>
 		<Italian>Diritti delle minoranze</Italian>
 		<Spanish>
@@ -15444,7 +15444,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MINORITY_RIGHTS_PEDIA</Tag>
-		<English>Social justice is a concept of fair and just relations between the individual and society. This is measured by the explicit and tacit terms for the distribution of wealth, opportunities for personal activity, and social privileges.</English>
+		<English>[BOLD]Minority Rights[\BOLD], embodies two separate concepts: first, normal individual rights as applied to members of racial, ethnic, class, religious, linguistic or sexual minorities, and second, collective rights accorded to minority groups. The term may also apply simply to individual rights of anyone who is not part of a majority decision. Civil rights movements often seek to ensure that individual rights are not denied on the basis of membership in a minority group. There are many political bodies which also feature minority group rights. This might be seen in affirmative action quotas, or in guaranteed minority representation in a consociational state.</English>
 		<Polish>Najważniejsze prawa mniejszości to: 1. wolność zachowania i rozwoju swojego języka, 2. wolność do zachowania obyczajow i tradycji, 3. wolność do zachowania własnej kultury, 4.wolność do tworzenia własnych instytucji., 5. wolnosc do tworzenia wlasnych listy kandydatow do parlamentu, 6.wolnosc do wyznawania dowolnej religi, 7. prawo poslugiwania sie własnym językiem, 8. prawo do zachowania i rozwijania swojej tradycji i kultury.</Polish>
 	</TEXT>
 	<TEXT>
@@ -16203,7 +16203,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MYTHOLOCIAL_BEASTIARY</Tag>
-		<English>Mythological-Cryptozoological Bestiary</English>
+		<English>Mythological Bestiary</English>
 		<French>Bestiaire Mythologique</French>
 		<Spanish>
 			<Text>Bestiario mitológico</Text>
@@ -16214,7 +16214,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MYTHOLOCIAL_BEASTIARY_PEDIA</Tag>
-		<English>A mythological or legendary creature is an animal whose life is accounted in non-historical or yet to be verified stories that sometime involve the supernatural. However, other legendary animals, such as the unicorn, were documented in accounts of natural history by various scholars of antiquity. Due to the lack of fossils of these creatures, the veracity of these historical recordings is questioned by modern zoologists. With Artifical Life and concepts of Speculative Physiology, we can now bring mythological or legendary creatures to life. Cryptozoology is a pseudoscience and subculture that aims to prove the existence of entities from the folklore record, such as Bigfoot, the chupacabra, or Mokele-mbembe. Cryptozoologists refer to these entities as cryptids, a term coined by the subculture. Because it does not follow the scientific method, cryptozoology is considered a pseudoscience by the academic world: it is neither a branch of zoology nor folkloristics. It was originally founded in the 1950s by zoologists Bernard Heuvelmans and Ivan T. Sanderson.</English>
+		<English>A mythological or legendary creature is an animal whose life is accounted in non-historical or yet to be verified stories that sometime involve the supernatural. However, other legendary animals, such as the unicorn, were documented in accounts of natural history by various scholars of antiquity. Due to the lack of fossils of these creatures, the veracity of these historical recordings is questioned by modern zoologists. With Artifical Life and concepts of Speculative Physiology, we can now bring mythological or legendary creatures to life.</English>
 		<Polish>Bestiariusz (średniow.-łac. bestiarium) - średniowieczny gatunek literacki, należący do tzw. literatury dydaktycznej, pisany wierszem lub prozą. Egzemplarze tekstu bestiariuszy były prawie zawsze iluminowane. Pierwowzorem gatunku był pochodzący z V w. łaciński przekład greckiego dzieła z II w. Physiologus. Zasadniczą częścią bestiariuszy był opis zwierząt - realnych i baśniowych - do których komentarz objaśniał podstawowe dogmaty wiary i zasady etyki chrześcijańskiej.</Polish>
 	</TEXT>
 	<TEXT>
@@ -16627,7 +16627,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NAVAL_CANNON</Tag>
-		<English>Naval Artillery</English>
+		<English>Naval Cannon</English>
 		<French>Canonnerie Navale</French>
 		<German>Seekanone</German>
 		<Italian>Cannoni navali</Italian>
@@ -16640,7 +16640,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NAVAL_CANNON_PEDIA</Tag>
-		<English>Naval artillery is artillery mounted on a warship, originally used only for naval warfare, later also for shore bombardment and for anti-aircraft use. The term generally refers to tube-launched projectile-firing weapons and excludes self-propelled projectiles like torpedoes, rockets, and missiles and those simply dropped overboard like depth charges and naval mines.</English>
+		<English>Naval artillery in the Age of Sail encompasses the period of roughly 1571-1863: when large, sail-powered wooden naval warships dominated the high seas, mounting a bewildering variety of different types and sizes of cannon as their main armament. By modern standards, these cannon were extremely inefficient, difficult to load, and short ranged. These characteristics, along with the handling and seamanship of the ships that mounted them, defined the environment in which the Naval tactics in the Age of Sail developed. [PARAGRAPH:2]Firing a naval cannon required a great amount of labour and manpower. Cannon used gunpowder as the propellant, whose bulk had to be kept in a special storage area below deck for safety. A typical broadside of a Royal Navy ship of the late 18th century could be fired 2-3 times in approximately 5 minutes, depending on the training of the crew, a well-trained one being essential to the simple yet detailed process of preparing to fire. Ironically, the British Admiralty did not see fit to provide additional powder to captains to train their crews, generally only allowing 1/3 of the powder loaded onto the ship to be fired in the first six months of a typical voyage, barring hostile action. Instead of live fire practice, most captains exercised their crews by "running" the guns in and out, performing all the steps associated with firing but for the actual discharge. Some wealthy captains, those who had made money capturing prizes or from wealthy families, were known to purchase powder with their own funds to enable their crews to fire real discharges at real targets.</English>
 		<Polish>Działo okrętowe to działo stosowane na okręcie. Najczęściej są to konstrukcje zaprojektowane specjalnie w tym celu, ale zdarzają się też działa lądowe przystosowywane do montowania na pokładach. Działa takie mają specjalną podstawę morską. Działa okrętowe w dawnych czasach były montowane w ambrazurach, następnie w kazamatach a obecnie w wieżach. Na mniejszych okrętach spotyka się montowanie dział bezpośrednio na pokładzie bez wieży. Takie montowanie występowało na większości okrętach podwodnych.Kalibry XX-wiecznych dział morskich wynoszą zwykle od 70 mm do 457 mm, zaś morskich dział przeciwlotniczych od 20 mm do 130 mm. Często stosuje się też działa uniwersalne, czyli działa mogące zwalczać cele nawodne (naziemne) i cele powietrzne. Pierwsze działa okrętowe pojawiły się w okolicach XIV wieku.</Polish>
 	</TEXT>
 	<TEXT>
@@ -16792,7 +16792,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NEURON_ENGINEERING</Tag>
-		<English>Neuroengineering</English>
+		<English>Neuron Engineering</English>
 		<French>Ingénierie Neuronale</French>
 		<Spanish>
 			<Text>Neuroingeniería</Text>
@@ -16818,7 +16818,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NEUROTECHNOLOGY</Tag>
-		<English>Neuroscience</English>
+		<English>Genetic Biochemistry</English>
 		<French>Biologie moléculaire avancée</French>
 		<German>Neurotechnologie</German>
 		<Italian>Biologia molecolare avanzata</Italian>
@@ -16831,7 +16831,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NEUROTECHNOLOGY_PEDIA</Tag>
-		<English>Neuroscience (or neurobiology) is the scientific study of the nervous system.</English>
+		<English>Genetic Biochemistry links the sciences of biology, chemistry and genetics by offering an interdisciplinary forum for the discussion of new developments.he extraordinary scope, dynamics, and progress that characterize modern biochemical genetics are reflected in the journal's original papers on fundamental experimental and theoretical research in the biochemical genetics of all organisms, from viruses to humans. Coverage includes the molecular aspects of genetic variation and evolution, mutation, gene action and regulation, immunogenetics, somatic cell genetics, and nucleic acid function in heredity and development, and with the biochemical aspects of genetic defects.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NEUROTECHNOLOGY_QUOTE</Tag>
@@ -17005,7 +17005,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NOVOPALEONTOLOGY</Tag>
-		<English>Resurrection Biology</English>
+		<English>Novo Paleontology</English>
 		<French>Novo-paléontologie</French>
 		<German>Novopaleontology</German>
 		<Italian>Novopaleontology</Italian>
@@ -17018,7 +17018,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NOVOPALEONTOLOGY_PEDIA</Tag>
-		<English>De-extinction, also known as resurrection biology, or species revivalism, is the process of creating an organism, which is either a member of, or resembles an extinct species, or breeding population of such organisms.</English>
+		<English>Novo Paleontology is the revival of extinct species. When I was a little dinosaur fan, all I wanted was a pet dinosaur. An Apatosaurus would have been choice-big enough to be impressive, but not especially likely to eat me. But that's never going to happen. As much as I hate to say that science will never solve a particular question or problem, the barriers to a real life Jurassic Park are insurmountable. [PARAGRAPH:2] Time is the critical factor. The last of the non-avian dinosaurs-the undeniably awesome ones that haunt museum halls and our dreams-died out 66 million years ago. That's so distant from us that we can't even really comprehend how long that is, and we lost whatever chance we might have had at cloning dinosaurs within a relatively short time following the end-Cretaceous mass extinction.[PARAGRAPH:2]For years, researchers have known that DNA starts to break down almost immediately after an organism perishes. Even in exceptionally-preserved animals from more recent times-such as frozen woolly mammoths found in Arctic permafrost-the genetic material of the creatures has unraveled into fragments of what once was. Thanks to the virtualization of DNA and the power of a DNA computer we can bring them back to life.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NOVOPALEONTOLOGY_QUOTE</Tag>
@@ -17031,7 +17031,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NOVUSCHEMISTRY</Tag>
-		<English>Cybermetamaterialogical Chemistry</English>
+		<English>Novus Chemistry</English>
 		<French>Chimie Novus</French>
 		<German>Neue Chemie</German>
 		<Italian>Chimica Novus</Italian>
@@ -17044,7 +17044,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NOVUSCHEMISTRY_PEDIA</Tag>
-		<English>Cybermetamaterialogical Chemistry, is a branch of chemistry that is associated with new forms of metamaterials and its interactions with humans and cyber biology. It is the grandchild of biomathmatics, biochemistry, and, mechatronics, and this branch of science is about how to use metametarials to later create cybernetic parts, fuse the biological and the cyber, and exotic new elements. Because of the complexity of this science, brain enhancements and powerful AI are needed to comprehend the 100-page calculations needed to solve a single equation. Religious groups believe this branch of science is against the will of god, and it will open a Pandoras box of heresy if artificial life is to be created.</English>
+		<English>Novus Chemistry, (new in Latin), is a branch of chemistry that is associated with new forms of metamaterials and its interactions with humans and cyber biology. It is the grandchild of biomathmatics, biochemistry, and, mechatronics, and this branch of science is about how to use metametarials to later create cybernetic parts, fuse the biological and the cyber, and exotic new elements. Because of the complexity of this science, brain enhancements and powerful AI are needed to comprehend the 100-page calculations needed to solve a single equation. Religious groups believe this branch of science is against the will of god, and it will open a Pandoras box of heresy if artificial life is to be created.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NOVUSCHEMISTRY_QUOTE</Tag>
@@ -17291,7 +17291,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ONTOLOGICALENGINEERING_PEDIA</Tag>
-		<English>Ontological Engineering is the branches of computer science, artificial intelligence, and information science is a new field, which studies the methods and methodologies for building ontologies: formal representations of a set of concepts within a domain and the relationships between those concepts. A large scale representation of abstract concepts such as actions, time, physical objects and beliefs would be an example of ontological engineering. Ontologies provide a common vocabulary of an area and define, with different levels of formality, the meaning of the terms and the relationships between them. [PARAGRAPH:2]During the last decade, increasing attention has been focused on ontologies. Ontologies are now widely used in knowledge engineering, artificial intelligence and computer science; in applications related to areas such as knowledge management, natural language processing, e-commerce, intelligent information integration, bio-informatics, education; and in new emerging fields like the semantic web. Ontological engineering is a new field of study concerning the ontology development process, the ontology life cycle, the methods and methodologies for building ontologies, and the tool suites and languages that support them.</English>
+		<English>Ontology Engineering is the branches of computer science, artificial intelligence, and information science is a new field, which studies the methods and methodologies for building ontologies: formal representations of a set of concepts within a domain and the relationships between those concepts. A large scale representation of abstract concepts such as actions, time, physical objects and beliefs would be an example of ontological engineering. Ontologies provide a common vocabulary of an area and define, with different levels of formality, the meaning of the terms and the relationships between them. [PARAGRAPH:2]During the last decade, increasing attention has been focused on ontologies. Ontologies are now widely used in knowledge engineering, artificial intelligence and computer science; in applications related to areas such as knowledge management, natural language processing, e-commerce, intelligent information integration, bio-informatics, education; and in new emerging fields like the semantic web. Ontological engineering is a new field of study concerning the ontology development process, the ontology life cycle, the methods and methodologies for building ontologies, and the tool suites and languages that support them.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ONTOLOGICALENGINEERING_QUOTE</Tag>
@@ -18035,7 +18035,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PERSONAL_ROBOTS</Tag>
-		<English>Personal Robotics</English>
+		<English>Personal Robots</English>
 		<French>Robots Personnels</French>
 		<German>Persönliche Roboter</German>
 		<Italian>Robot personali</Italian>
@@ -18331,7 +18331,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PHOTOVALTICGLASS</Tag>
-		<English>Photovoltaic Glass</English>
+		<English>Interactive Glass</English>
 		<French>Vitres Interactives</French>
 		<German>Photovoltaisches Glas</German>
 		<Italian>Vetri interattivi</Italian>
@@ -18344,7 +18344,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PHOTOVALTICGLASS_PEDIA</Tag>
-		<English>Photovoltaic glass,(also known as Interactive Glass), is superthin glass that is a giant transparent touch screen. Can you imagine organizing your daily schedule with a few touches on your bathroom mirror? Chatting with far-away relatives through interactive video on your kitchen counter? Reading a classic novel on a whisper-thin piece of flexible glass?[PARAGRAPH:2] The future includes a world in which myriad ordinary surfaces transform from one-dimensional utility into sophisticated electronic devices. Interactive glass surfaces help you stay connected through seamless delivery of real-time information - whether you're working, shopping, eating, or relaxing. Glass is the essential enabling material of this new world. "This is a visual world - so transparency is a must, But that's just the beginning." [PARAGRAPH:2]Ubiquitous displays require materials that are flexible, durable, stable under the toughest of environmental conditions, and have a cool, touch-friendly aesthetic. Such real-time information also depends on communications networks with massive bandwidth capacity - meaning new opportunities for Corning to apply its optical communications expertise to customers' tough challenges. To see the interactive glass in action, Youtube "A Day of Glass".</English>
+		<English>Photovaltic glass,(also known as Interactive Glass), is superthin glass that is a giant transparent touch screen. Can you imagine organizing your daily schedule with a few touches on your bathroom mirror? Chatting with far-away relatives through interactive video on your kitchen counter? Reading a classic novel on a whisper-thin piece of flexible glass?[PARAGRAPH:2] The future includes a world in which myriad ordinary surfaces transform from one-dimensional utility into sophisticated electronic devices. Interactive glass surfaces help you stay connected through seamless delivery of real-time information - whether you're working, shopping, eating, or relaxing. Glass is the essential enabling material of this new world. "This is a visual world - so transparency is a must, But that's just the beginning." [PARAGRAPH:2]Ubiquitous displays require materials that are flexible, durable, stable under the toughest of environmental conditions, and have a cool, touch-friendly aesthetic. Such real-time information also depends on communications networks with massive bandwidth capacity - meaning new opportunities for Corning to apply its optical communications expertise to customers' tough challenges. To see the interactive glass in action, Youtube "A Day of Glass".</English>
 		<Polish>Projekt WOO (Windows of Opportunity), czyli "okna na świat", wykorzystując sensory ruchu oraz czujniki optyczne, przekształca zwykłe samochodowe szyby i przestrzeń tylnej kanapy w reagujący na gesty system multi-dotykowy zbliżony swym działaniem do tabletów PC czy iPada.</Polish>
 	</TEXT>
 	<TEXT>
@@ -19493,7 +19493,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PROTOTYPED_PATHOGENS</Tag>
-		<English>Synthetic Pathology</English>
+		<English>Prototyped Pathogens</English>
 		<French>Prototypes de pathogènes</French>
 		<Spanish>
 			<Text>Prototipos de patógenos</Text>
@@ -19504,7 +19504,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PROTOTYPED_PATHOGENS_PEDIA</Tag>
-		<English>A genetically modified virus is a virus that has been altered or generated using biotechnology methods, and remains capable of infection. Genetic modification involves the directed insertion, deletion, artificial synthesis or change of nucleotide bases in viral genomes. Genetically modified viruses are mostly generated by the insertion of foreign genes intro viral genomes for the purposes of biomedical, agricultural, bio-control, or technological objectives. The terms genetically modified virus and genetically engineered virus are used synonymously.</English>
+		<English>Genetically, biologically, and augmented pathogens designed for maximum pandemic spread and targeted organ and illness severity.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PROTOTYPED_PATHOGENS_QUOTE</Tag>
@@ -21084,7 +21084,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SEISMOLOGY</Tag>
-		<English>Seismology</English>
+		<English>Modern Seismology</English>
 		<French>Seïsmologie Moderne</French>
 		<German>Moderne Seismologie</German>
 		<Italian>Sismologia moderna</Italian>
@@ -21733,7 +21733,7 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SMART_DRUGS</Tag>
-		<English>Nootropics</English>
+		<English>Smart Drugs</English>
 		<French>Drogues Intelligentes</French>
 		<German>Intelligente Drogen</German>
 		<Italian>Medicine intelligenti</Italian>
@@ -22653,7 +22653,7 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_STEEL</Tag>
-		<English>Bulk Steel</English>
+		<English>Steel</English>
 		<French>
 			<Text>Acier</Text>
 			<Gender>Male</Gender>
@@ -22902,7 +22902,7 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SUBTERRANEAN_EXPLORATION_PEDIA</Tag>
-		<English>[BOLD]Subterranean Exploration[\BOLD] A method and system for automating exploration and production of subterranean resources, using data collected from exploration and production activities, including drilling rig data and/or the like is described. The method and system include the use of a knowledge representation containing representation of uncertainty in the exploration and production operations.</English>
+		<English>[BOLD]Subterranean Exploration[\BOLD]A method and system for automating exploration and production of subterranean resources, using data collected from exploration and production activities, including drilling rig data and/or the like is described. The method and system include the use of a knowledge representation containing representation of uncertainty in the exploration and production operations.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SUBTERRANEAN_EXPLORATION_QUOTE</Tag>
@@ -23047,7 +23047,7 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SUPERSONIC_RAILS</Tag>
-		<English>Vactrains</English>
+		<English>Supersonic Rails</English>
 		<French>Rails Supersoniques</French>
 		<German>Vakuumröhren-Züge</German>
 		<Italian>Rotaie supersoniche</Italian>
@@ -23234,7 +23234,7 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SYNTHETIC_SENTIENCE</Tag>
-		<English>Virtual Sentience</English>
+		<English>Synthetic Sentience</English>
 		<French>Conscience Synthétique</French>
 		<Spanish>
 			<Text>Sensitividad sintética</Text>
@@ -23245,7 +23245,7 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SYNTHETIC_SENTIENCE_PEDIA</Tag>
-		<English>Virtual Sentience is the engineering of algorithmic and artificial intelligence components that could truly bring the virtual organisms "to life". Other branches of Synthetic sentience include engineering the Internet as an organism, becoming immersed into an irreversible human/Internet symbiosis, the study of intelligent agents,as our increased dependency upon them, knowledge engineering as an Industry. It also has a broad focus on the spawning of the next generation of intelligent algorithms, artificial organisms, virtual entertainment, and virtual worlds. The scientific branches of sensory seduction demographic data extraction, xenomorphic avatars as virtual character entities,the organelle component hierarchy in artificial life, and self evolving personality organelles. It also includes the study of virtual emotion constructors, emotional sentience as an entertainment commodity, rentable organisms, avatars on loan, and disposable personality entities.[PARAGRAPH:2]</English>
+		<English>Synthetic Sentience is the engineering of algorithmic and artificial intelligence components that could truly bring the virtual organisms "to life". Other branches of Synthetic sentience include engineering the Internet as an organism, becoming immersed into an irreversible human/Internet symbiosis, the study of intelligent agents,as our increased dependency upon them, knowledge engineering as an Industry. It also has a broad focus on the spawning of the next generation of intelligent algorithms, artificial organisms, virtual entertainment, and virtual worlds. The scientific branches of sensory seduction demographic data extraction, xenomorphic avatars as virtual character entities,the organelle component hierarchy in artificial life, and self evolving personality organelles. It also includes the study of virtual emotion constructors, emotional sentience as an entertainment commodity, rentable organisms, avatars on loan, and disposable personality entities.[PARAGRAPH:2]</English>
 		<Polish>W trakcie wieloletniej pracy laboratoriów i zespołów AI stosujących oba podejścia do problemu, okazało się, że postęp w tej dziedzinie jest i będzie bardzo trudny i powolny. Często mimo niepowodzeń w osiąganiu zaplanowanych celów, laboratoria te wypracowywały nowe techniki informatyczne, które okazywały się użyteczne do zupełnie innych celów. Przykładami takich technik są np. języki programowania LISP i Prolog. Laboratoria AI stały się też "rozsadnikiem" kultury hakerskiej. Najnowsze podejście do problemów AI to rozwijanie różnych form inteligencji rozproszonej (wzorowanej na organizacjach ludzkich, np. personoidy oraz tzw. agentów autonomicznych i "inteligentnych". Dziedzina ta nosi nazwę Technologii Agentów Inteligentnych (ang. Intelligent Agent Technology).</Polish>
 	</TEXT>
 	<TEXT>
@@ -23260,7 +23260,7 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SYNTHETIC_SYNESTHESIA</Tag>
-		<English>Augmented Aesthesis</English>
+		<English>Synthetic Synesthesia</English>
 		<French>Synesthésie Synthétique</French>
 		<Spanish>
 			<Text>Sinestesia sintética</Text>
@@ -23271,7 +23271,7 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SYNTHETIC_SYNESTHESIA_PEDIA</Tag>
-		<English>A sense is a physiological capacity of organisms that provides data for perception. The senses and their operation, classification, and theory are overlapping topics studied by a variety of fields, most notably neuroscience, cognitive psychology (or cognitive science), and philosophy of perception. The nervous system has a specific sensory nervous system, and a sense organ, or sensor, dedicated to each sense. Synesthesia is a perceptual phenomenon in which stimulation of one sensory or cognitive pathway leads to automatic, involuntary experiences in a second sensory or cognitive pathway. deasthesia (alternative spelling ideaesthesia) is defined as a phenomenon in which activations of concepts (inducers) evoke perception-like experiences (concurrents).</English>
+		<English>Synesthesia is a neurological condition in which one type of stimulation evokes the sensation of another, as when the hearing of a sound produces the visualization of a color. Synthetic Synesthesia is the use of binary psychoactives, nanobot drugs, or buying artificial neurons to create exceptional reality altering drugs and/or augmentation of the senses.[PARAGRAPH:2] Binary Psychoactives are synthetic chemical-binarycode substances that mimic and transmit neurotransmitters and that affect the brain functioning, causing changes in behavior, mood and consciousness to exact specifications and designs. Using hijacked blood vessels coded with genetically created neurotransmitters piggybacked, the neurotransmitters are deposited in thebrain-blood barrier,and transmit organic computer code to turn individual neurons on and off. [PARAGRAPH:2] While these drugs can be used therapeutically to treat both physical and psychological disorders, they are also used recreationally like "energy drinks" to alter mood, perceptions and consciousness, with the most popular brand being Plasma Star.[PARAGRAPH:2] Advances in binary neurochemistry have been able to eliminate the problems of addiction and withdrawal, allowing pyschoactives to become legalized and enhanced.[PARAGRAPH:2] Users can choose between Stimulants, Empathogens and Hallucinogens (Depressants are banned because of increased suicide risk, but craved by Cybergoths), with strengths 1 to 5, (5 to 10 is for medical use only), and are very popular with young adults. Strengths 1 to 5 come in oral electronic-capsule form, 6 to 9 in injectable microcapsules form, and 7 and above have to be directly injected to the brain stem.[PARAGRAPH:2] Since their introduction alcohol, caffeine, and soda use has been on the decline, with bars selling Stimulants and Hallucinogens, but the use of Empathogens like Love at First Byte has been extremely popular at night clubs. Hallucinogens have especially met heavy resistance by religious groups, especially towards the brand God Almighty, (the allows the user to believe he is in heaven), and Xezuality for Men/Romancz for Women (allows the user to experience a sex dream with anyone he has met in real life).[PARAGRAPH:2] Although binary pyschoactives are medically safe, sociologists have warned governments that the perils of ignoring the personal and social costs of habitual use are great.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SYNTHETIC_SYNESTHESIA_QUOTE</Tag>
@@ -23375,7 +23375,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TAXONOMY_PEDIA</Tag>
-		<English>In biology, taxonomy is the science of naming, defining and classifying groups of biological organisms on the basis of shared characteristics.</English>
+		<English>Almost anything-animate objects, inanimate objects, places, concepts, events, properties, and relationships-may be classified according to some taxonomic scheme. The history of taxonomy dates back to the origin of human language. Western scientific taxonomy started in Greek some hundred years BC and are here divided into prelinnaean and postlinnaean. The fascination with exotics from the diverse range of the Shang empire and the search for plants and animals which promoted health and longevity. In the Eastern world, one of the earliest pharmacopoeias was written by Shen Nung, Emperor o fChina around 3000 BC. He was a legendary emperor known as the Father of Chinese medicine and is believed to have introduced acupuncture. He wanted to educate his people in agriculture and medicine and is said to have tasted hundreds of herbs to test their medicinal value. The pharmacopoeia Divine Husbandman's Materia Medica included 365 medicines derived from minerals, plants, and animals. Around 1500 BC medicinal plants were illustrated on wall paintings in Egypt. The paintings give us knowledge about medicinal plants in old Egypt and their names. In one of the oldest and largest papyrus rolls, Ebers Papyrus, plants are included as medicines for different diseases. They have localnames such as "celery of the hill country" and "celery of the delta", species of Apiaceae that Egyptian doctors had to be able to distinguish in the field.</English>
 		<Polish>Taksonomia (gr. taksis - układ, porządek + nomos - prawo) - poddyscyplina systematyki organizmów, nauka o zasadach i metodach klasyfikowania, w szczególności o tworzeniu i opisywaniu jednostek systematycznych (taksonów) i włączaniu ich w układ kategorii taksonomicznych. Niekiedy słowem tym określa się określony podział (układ) systematyczny danej grupy organizmów. Termin "taksonomia" - początkowo zdefiniowany przez De Candolle'a (1813) jako nauka o teorii klasyfikacji organizmów - jest bliskoznaczny do terminu systematyka, który w pierwotnej definicji odnosił się do zastosowań praktycznych tej klasyfikacji. W 1969 Ernst Mayr zdefiniował taksonomię jako teorię i praktykę klasyfikacji. Niektórzy naukowcy synonimizują terminy "taksonomia" i "systematyka".</Polish>
 	</TEXT>
 	<TEXT>
@@ -24015,7 +24015,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TRADE_PEDIA</Tag>
-		<English>Trade involves the transfer of goods or services from one person or entity to another, often in exchange for money. A system or network that allows trade is called a market. An early form of trade, barter, saw the direct exchange of goods and services for other goods and services.</English>
+		<English>When tribes met they often traded goods like furs to pottery, fish to deer meat etc. Trading goods eventually led to written language and mutually used currencies from traditional barter and unwritten contracts.</English>
 		<Polish>Handel jest to proces gospodarczy polegający na sprzedaży, to znaczy na wymianie dóbr i usług na pieniądze, realizowany przez zawodowych pośredników w celu osiągnięcia zysku.</Polish>
 	</TEXT>
 	<TEXT>
@@ -24137,7 +24137,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</Tag>
-		<English>Neutrino Accelerators</English>
+		<English>Transtangible Neutrino Accelerators</English>
 		<French>Accélérateurs de Neutrino Transtangible</French>
 		<Italian>Acceleratori di neutrini trantangibili</Italian>
 		<Spanish>
@@ -24423,7 +24423,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_UNIVERSAL_TRANSLATOR</Tag>
-		<English>Unified Lexicon</English>
+		<English>Universal Translator</English>
 		<French>Traducteur Universel</French>
 		<Italian>Traduttore universale</Italian>
 		<Spanish>
@@ -24435,7 +24435,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_UNIVERSAL_TRANSLATOR_PEDIA</Tag>
-		<English>Universal language may refer to a hypothetical or historical language spoken and understood by all or most of the world's population. In some contexts, it refers to a means of communication said to be understood by all living things.</English>
+		<English>[BOLD]Universal Translator[\BOLD] purpose is to offer an instant translation of any language.</English>
 		<Polish>Uniwersalny Translator ma na celu dostarczać od ręki tłumaczenia na każdy język.</Polish>
 	</TEXT>
 	<TEXT>
@@ -24563,7 +24563,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_UTOPIA_DESTINY</Tag>
-		<English>Utopian Destiny</English>
+		<English>Utopia Destiny</English>
 		<French>Destinée utopique</French>
 		<Spanish>
 			<Text>Destino utópico</Text>
@@ -24574,7 +24574,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_UTOPIA_DESTINY_PEDIA</Tag>
-		<English>A utopia is an imagined community or society that possesses highly desirable or nearly perfect qualities for its citizens. Utopian fiction portrays a setting that agrees with the author's ethos, having various attributes of another reality intended to appeal to readers.</English>
+		<English>In the United States, during the 19th century, Manifest destiny was the widely held belief that American settlers were destined to expand across the continent.A Utopia is a community or society possessing highly desirable or perfect qualities. Utopian Destiny is the widely held belief that society should start the design and engineering of a Utopia. In this Utopian society, poverty eradication, super sanitation, cyber noah arks, meticulous sanitation, ecology, global welfare, global medical care, are some of the main topics of discussion. [PARAGRAPH:2] Chronologically, the first recorded utopian proposal is Plato's Republic. Part conversation, part fictional depiction, and part policy proposal, it proposes a categorization of citizens into a rigid class structure of "golden," "silver," "bronze" and "iron" socioeconomic classes. The golden citizens are trained in a rigorous 50-year long educational program to be benign oligarchs, the "philosopher-kings." The wisdom of these rulers will supposedly eliminate poverty and deprivation through fairly distributed resources, though the details on how to do this are unclear. The educational program for the rulers is the central notion of the proposal. It has few laws, no lawyers and rarely sends its citizens to war, but hires mercenaries from among its war-prone neighbors (these mercenaries were deliberately sent into dangerous situations in the hope that the more warlike populations of all surrounding countries will be weeded out, leaving peaceful peoples).</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_UTOPIA_DESTINY_QUOTE</Tag>
@@ -24588,7 +24588,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_VASIMR_PROPULSION</Tag>
-		<English>Fusion Propulsion</English>
+		<English>Fusion Spacecraft</English>
 		<French>Propulsion à Impulsion MagnétoPlasmique</French>
 		<Italian>Propulsione VASIMR</Italian>
 		<Spanish>
@@ -24600,7 +24600,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_VASIMR_PROPULSION_PEDIA</Tag>
-		<English>A fusion rocket is a theoretical design for a rocket driven by fusion propulsion which could provide efficient and long-term acceleration in space without the need to carry a large fuel supply.</English>
+		<English>The Variable Specific Impulse Magnetoplasma Rocket (VASIMR) is an electro-magnetic thruster for spacecraft propulsion. It uses radio waves to ionize and heat a propellant and magnetic fields to accelerate the resulting plasma to generate thrust.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_VASIMR_PROPULSION_QUOTE</Tag>
@@ -24817,7 +24817,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WARFARE</Tag>
-		<English>Prehistoric Warfare</English>
+		<English>Warfare</English>
 		<French>Techniques de Guerre</French>
 		<German>Kriegsführung</German>
 		<Italian>Guerra</Italian>
@@ -24830,7 +24830,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WARFARE_PEDIA</Tag>
-		<English>War is a state of armed conflict between states, governments, societies and informal paramilitary groups, such as mercenaries, insurgents and militias. Warfare refers to the common activities and characteristics of types of war, or of wars in general.[PARAGRAPH:2]The earliest recorded evidence of war belongs to the Mesolithic cemetery Site 117, which has been determined to be approximately 14,000 years old. About forty-five percent of the skeletons there displayed signs of violent death. In War Before Civilization, Lawrence H. Keeley, a professor at the University of Illinois, says approximately 90-95% of known societies throughout history engaged in at least occasional warfare, and many fought constantly.[PARAGRAPH:2]- Wikipedia (Wikidata item Q198)</English>
+		<English>[TAB]War is a state of armed conflict between states, governments, societies and informal paramilitary groups, such as mercenaries, insurgents and militias. Warfare refers to the common activities and characteristics of types of war, or of wars in general.[PARAGRAPH:2]The earliest recorded evidence of war belongs to the Mesolithic cemetery Site 117, which has been determined to be approximately 14,000 years old. About forty-five percent of the skeletons there displayed signs of violent death. In War Before Civilization, Lawrence H. Keeley, a professor at the University of Illinois, says approximately 90-95% of known societies throughout history engaged in at least occasional warfare, and many fought constantly.[PARAGRAPH:2]- Wikipedia (Wikidata item Q198)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WARFARE_QUOTE</Tag>
@@ -24852,7 +24852,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WARMACHINES</Tag>
-		<English>Battle Droids</English>
+		<English>Warmachines</English>
 		<French>Machines de Guerre</French>
 		<German>Kriegsmaschinen</German>
 		<Italian>Macchine da guerra</Italian>
@@ -24865,7 +24865,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WARMACHINES_PEDIA</Tag>
-		<English>Battle droids, also known as combat droids or battle bots, were a type of droid designed for combat. Over the years, many different models of battle droid were been utilized by various factions throughout the galaxy. One such faction was the Confederacy of Independent Systems, which used a number of different models of battle droid during the Clone Wars to make up the Separatist Droid Army. Under the command of General Grievous, varying models of battle droid fought against the Galactic Republic's clone troopers until the final days of the war, when the Confederate battle droids were deactivated by the Galactic Empire.</English>
+		<English>Warmachines are machines designed specificly for a military purpose. They may include tanks, missiles and landmines. Warmachines are typically very expensive, as in the case of an M1A2 tank, which costs US$6.21 million per unit, or the F35B Lightning II jet, which costs F-35B: US$150M per unit. Missiles such as the tomahawk cruise missile cost as much as US$600,000 apiece, leading to nicknames such as "million dollars a shot" weapons.</English>
 		<Polish>Maszyny Wojenne to specjalny rodzaj pojazdów i maszyn zaprojektowanych tylko i wyłącznie do prowadzenia wojen.</Polish>
 	</TEXT>
 	<TEXT>
@@ -24880,7 +24880,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WARSIMULATION</Tag>
-		<English>Military Simulations</English>
+		<English>War Simulations</English>
 		<French>Simulations de Guerres</French>
 		<German>Kriegssimulationen</German>
 		<Italian>Simulazioni di guerra</Italian>
@@ -25305,7 +25305,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WHOLE_BRAIN_EMULATION</Tag>
-		<English>Neurocybernetics</English>
+		<English>Whole Brain Emulation</English>
 		<French>Emulation du cerveau</French>
 		<Spanish>
 			<Text>Emulación del cerebro</Text>
@@ -25316,7 +25316,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WHOLE_BRAIN_EMULATION_PEDIA</Tag>
-		<English>Neurocybernetics is the science of communication and automatic control systems in MUTUAL relation to machines and living organisms. The underlying mathematical descriptions are control theory (extended for complex systems), mean field theory for neural networks and neural field theory. It my also refer to the creation of physical, artifical minds and brains</English>
+		<English>Whole brain emulation or "mind uploading" (sometimes called "mind copying" or "mind transfer") is the hypothetical process of copying or transferring a conscious mind from a brain to a non-biological substrate by scanning and mapping a biological brain in detail and copying its information and computational state into a computer system or another computational device. The computer would have to run a simulation model so faithful to the original that it would behave in essentially the same way as the original brain, or for all practical purposes, indistinguishably. The simulated mind is assumed to be part of a virtual reality simulated world, supported by an anatomic 3D body simulation model. Alternatively, the simulated mind could be assumed to reside in a computer inside (or connected to) a humanoid robot or a biological body, replacing its brain.[PARAGRAPH:2] Whole brain emulation is considered by some scientists as a theoretical and futuristic but possible technology,although mainstream research funders and scientific journals remain skeptical. Several contradictory predictions have been made about when a whole human brain can be emulated; some predicted dates have already passed. Substantial mainstream research and development are however being done in relevant areas including development of faster super computers, virtual reality, brain-computer interfaces, animal brain mapping and simulation, connectomics and information extraction from dynamically functioning brains.[PARAGRAPH:2]The human brain contains about 85 billion nerve cells called neurons, each individually linked to other neurons by way of connectors called axons and dendrites. Signals at the junctures (synapses) of these connections are transmitted by the release and detection of chemicals known as neurotransmitters. The established neuroscientific consensus is that the human mind is largely an emergent property of the information processing of this neural network. Importantly, neuroscientists have stated that important functions performed by the mind, such as learning, memory, and consciousness, are due to purely physical and electrochemical processes in the brain and are governed by applicable physical law, and can be replicated.</English>
 		<Polish>Blue Brain Project - projekt stworzenia wirtualnego mózgu poprzez symulację komputerową działania każdego neuronu. Został rozpoczęty w maju 2005 roku przez Politechnikę Federalną w Lozannie wSzwajcarii. Obecnie uczestniczy w nim kilka ośrodków w Hiszpanii, Wielkiej Brytanii, USA i Izraelu. Kierownikiem projektu jest Henry Markram.</Polish>
 	</TEXT>
 	<TEXT>
@@ -25403,7 +25403,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WOMENS_SUFFRAGE</Tag>
-		<English>Feminism</English>
+		<English>Women's Suffrage</English>
 		<French>Vote des Femmes</French>
 		<Italian>Suffragio femminile</Italian>
 		<Spanish>
@@ -25415,7 +25415,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WOMENS_SUFFRAGE_PEDIA</Tag>
-		<English>Feminism is a range of social movements, political movements, and ideologies that share a common goal: to define, establish, and achieve the political, economic, personal, and social equality of the sexes. Feminism incorporates the position that societies prioritize the male point of view, and that women are treated unfairly within those societies. Efforts to change that include fighting gender stereotypes and seeking to establish educational and professional opportunities for women that are equal to those for men.</English>
+		<English>[BOLD]Women's Suffrage[\BOLD], is the right of women to vote and to run for office. The expression is also used for the economic and political reform movement aimed at extending these rights to women and without any restrictions or qualifications such as property ownership, payment of tax, or marital status. The movement's modern origins can be attributed to late-18th century France. Limited voting rights were gained by women in Sweden, Britain, Finland and some western U.S. states in the late 19th century. International organizations were formed to coordinate efforts, especially the International Council of Women (1888) and the International Woman Suffrage Alliance (1904). In 1893, New Zealand became the first nation to extend the right to vote to all adult women. The women in South Australia achieved the same right in 1894 but became the first to obtain the right to stand (run) for Parliament. The first European country to introduce women's suffrage was the Grand Duchy of Finland, then a part of the Russian Empire with autonomous powers which also produced the world's first female members of parliament as a result of the 1907 parliamentary elections. In most Western nations woman suffrage came at the end of World War I, with some important late adopters such as France in 1944 and Switzerland in 1971.</English>
 		<Polish>Prawo wyborcze dla kobiet oznacza, że pełnoletnie obywatelki danego kraju mają co najmniej możliwość oddawania głosu w wyborach, w szerszym znaczeniu, że mają te same prawa wyborcze, co mężczyźni. W Europie kobiety po raz pierwszy mogły głosować w Wielkim Księstwie Finlandii, która prawo wyborcze dla kobiet wprowadziła 1 czerwca 1906. Finlandia była wówczas autonomiczną prowincją rosyjską z własnym parlamentem (Eduskunta). Jednocześnie obywatelki Wielkiego Księstwa Finlandii mogły być wybierane do nowo utworzonego parlamentu prowincji. Po raz pierwszy w historii kobiety uzyskały bierne prawa wyborcze, czyli uzyskały zgodę na kandydowanie. W latach 1905-1908 Mikołaj Gerard pełnił funkcję generała-gubernatora Finlandii.</Polish>
 	</TEXT>
 	<TEXT>

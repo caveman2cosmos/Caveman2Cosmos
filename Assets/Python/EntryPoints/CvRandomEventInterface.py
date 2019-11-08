@@ -8970,31 +8970,40 @@ def doRemoveWVSlavery(argsList):
 
 
 def doRemoveWVCannibalism(argsList):
-	pUnit = argsList[0]
+	CyUnit = argsList[0]
 
-	if pUnit == None:
+	if CyUnit == None:
+		print "[INFO] doRemoveWVCannibalism(CyUnit) where CyUnit is None"
 		return # False call
 
-	pPlayer = GC.getPlayer( pUnit.getOwner( ) )
-	iPlayer = pPlayer.getID( )
-	civ = GC.getCivilizationInfo(pPlayer.getCivilizationType())
+	iType = GC.getInfoTypeForString("BUILDING_WV_CANNIBALISM")
+	if iType > -1:
+		iPlayer = CyUnit.getOwner()
+		CyPlayer = GC.getPlayer(iPlayer)
+		CyCity = CyPlayer.getCapitalCity()
+		if CyCity.isNone():
+			print "[INFO] doRemoveWVCannibalism(args) happened for a player with no cities"
+		else:
+			iType0 = GC.getInfoTypeForString("BUILDING_CANNIBALISM")
+			iType1 = GC.getInfoTypeForString("BUILDING_CANNIBALISM_BAD_I")
+			iType2 = GC.getInfoTypeForString("BUILDING_CANNIBALISM_BAD_II")
+			iType3 = GC.getInfoTypeForString("BUILDING_CANNIBALISM_BAD_III")
+			CyCity, i = CyPlayer.firstCity(False)
+			while CyCity:
+				CyCity.setNumRealBuilding(iType, 0)
+				if iType0 > -1:
+					CyCity.setNumRealBuilding(iType0, 0)
+				if iType1 > -1:
+					CyCity.setNumRealBuilding(iType1, 0)
+				if iType2 > -1:
+					CyCity.setNumRealBuilding(iType2, 0)
+				if iType3 > -1:
+					CyCity.setNumRealBuilding(iType3, 0)
+				CyCity, i = CyPlayer.nextCity(i, False)
 
-	if not pPlayer.isAlive():
-		return
-
-	iWVCannibalism = GC.getInfoTypeForString("BUILDING_WV_CANNIBALISM")
-	if iWVCannibalism > -1:
-		(loopCity, iter) = pPlayer.firstCity(False)
-		while(loopCity):
-			if loopCity.getNumActiveBuilding(iWVCannibalism) > 0:
-
-				iType = civ.getCivilizationBuildings(GC.getBuildingInfo(iWVCannibalism).getBuildingClassType())
-				loopCity.setNumRealBuilding(iType, 0)
+			if iPlayer == GC.getGame().getActivePlayer():
+				CvUtil.sendImmediateMessage(TRNSLTR.getText("TXT_KEY_MESSAGE_NO_CANNIBALISM", ()))
 				CyAudioGame().Play2DSound("AS2D_DISCOVERBONUS")
-
-				CyInterface().addMessage(iPlayer,False,25,TRNSLTR.getText("TXT_KEY_MESSAGE_NO_CANNIBALISM",(loopCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(8),loopCity.getX(),loopCity.getY(),True,True)
-				break
-		(loopCity, iter) = pPlayer.nextCity(iter, False)
 
 def doRemoveWVHumanSacrifice(argsList):
 	pUnit = argsList[0]

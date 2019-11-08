@@ -59,12 +59,8 @@ void	CvViewport::resizeForMap()
 {
 	if (m_pMap->getGridWidthINLINE() > 0 && !GC.bugInitCalled())
 	{
-
 		//	Force-load the main interface BUG module so we can get at the viewport BUG settings
-		CyArgsList argsList;
-		argsList.add("BUG Main Interface");
-
-		PYTHON_CALL_FUNCTION(__FUNCTION__, PYCivModule, "forceBUGModuleInit", argsList.makeFunctionArgs());
+		Cy::call(PYCivModule, "forceBUGModuleInit", Cy::Args() << "BUG Main Interface");
 	}
 
 	m_iXSize = GC.viewportsEnabled() ? GC.getViewportSizeX() : m_pMap->getGridWidthINLINE();

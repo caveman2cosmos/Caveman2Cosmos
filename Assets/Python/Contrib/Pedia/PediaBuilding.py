@@ -103,7 +103,7 @@ class PediaBuilding:
 				szCost = TRNSLTR.getText("TXT_KEY_PEDIA_COST", ((iProductionCost * GC.getDefineINT("BUILDING_PRODUCTION_PERCENT"))/100,))
 			screen.appendListBoxStringNoUpdate(panelName, szfont3b + szCost + u'%c' %GC.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar(), eWidGen, 0, 0, 1<<0)
 		elif CvTheBuildingInfo.isAutoBuild():
-			screen.appendListBoxStringNoUpdate(panelName, szfont3 + "Auto-Build", eWidGen, 0, 0, 1<<0)
+			screen.appendListBoxStringNoUpdate(panelName, szfont3 + TRNSLTR.getText("TXT_KEY_PEDIA_AUTOBUILD",()) , eWidGen, 0, 0, 1<<0)
 		if CvTheBuildingInfo.isGoldenAge():
 			szText1 = unichr(8866) + "<color=255,200,0,255> Golden Age"
 			screen.appendListBoxStringNoUpdate(panelName, szfont3 + szText1, eWidGen, 0, 0, 1<<0)

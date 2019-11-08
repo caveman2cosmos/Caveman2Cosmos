@@ -9,12 +9,13 @@
 		<Tag>TXT_KEY_CIVILOPEDIA_BACKGROUND</Tag>
 		<English>Background:[PARAGRAPH:1]</English>
 		<French>Contexte:[PARAGRAPH:1]</French>
-		<German>Hintergrund:[PARAGRAPH:1]</German>
+		<German>Hintergrund:[NEWLINE]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILOPEDIA_STRATEGY</Tag>
 		<English>Strategy:[PARAGRAPH:1]</English>
 		<French>Stratégie:[PARAGRAPH:1]</French>
+		<German>Strategie:[NEWLINE]</German>
 		<Italian>Strategia:[PARAGRAPH:1]</Italian>
 		<Spanish>Estrategia:[PARAGRAPH:1]</Spanish>
 	</TEXT>
@@ -24,6 +25,11 @@
 		<German>Attitüde: [BOLD]%d1%[\BOLD] (Basis) + [BOLD]%d2%[\BOLD] (gegenüber Kriegstreibern)[NEWLINE]</German>
 		<Spanish>Actitud: [BOLD]%d1%[\BOLD] (base) + [BOLD]%d2%[\BOLD] (estima bélica)[NEWLINE]</Spanish>
 		<Polish>Podstawa: [BOLD]%d1%%[\BOLD] (Baza) + [BOLD]%d2%[\BOLD] (Podżegacz Wojenny)[NEWLINE]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_AUTOBUILD</Tag>
+		<English>Auto-Build</English>
+		<German>automatisch</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_APPEARANCE_AND_TRADE</Tag>
@@ -603,7 +609,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SUBCOMBAT_TYPE</Tag>
 		<English>Sub Combat Types</English>
 		<French>Type de Spé-Combat</French>
-		<German>(E) Unterkategorien</German>
+		<German>Unterkategorien</German>
 		<Spanish>Subtipos de combate</Spanish>
 		<Polish>Typy Walki</Polish>
 	</TEXT>
@@ -736,12 +742,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_HISTORY</Tag>
-		<English>History:[PARAGRAPH:1]</English>
-		<French>Historique:[PARAGRAPH:1]</French>
-		<German>Geschichte:[PARAGRAPH:1]</German>
-		<Italian>Storia:[PARAGRAPH:1]</Italian>
-		<Spanish>Historia:[PARAGRAPH:1]</Spanish>
-		<Polish>Historia:[PARAGRAPH:1]</Polish>
+		<English>History</English>
+		<French>Historique</French>
+		<German>Geschichte</German>
+		<Italian>Storia</Italian>
+		<Spanish>Historia</Spanish>
+		<Polish>Historia</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_IMPROVEMENT_AIR_DEFENSE</Tag>
@@ -760,6 +766,11 @@
 		<Italian>Può essere costruito all'esterno dei confini culturali</Italian>
 		<Spanish>Se puede construir fuera de las fronteras de la civilización</Spanish>
 		<Polish>Może zostać zbudowany wewnątrz granic kulturowych</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_LATITUDE</Tag>
+		<English>Exist in latitude:</English>
+		<German>Geografische Breite:</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_LIMITED_WAR</Tag>
@@ -809,6 +820,7 @@
 		<Tag>TXT_KEY_PEDIA_QUOTE</Tag>
 		<English>Quote</English>
 		<French>Citations</French>
+		<German>Zitat</German>
 		<Spanish>Cita</Spanish>
 		<Polish>Wpis</Polish>
 	</TEXT>

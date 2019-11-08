@@ -1293,15 +1293,7 @@ void CvNetAddReminder::Execute()
 {
 	if (m_ePlayer != NO_PLAYER)
 	{
-
-		CyArgsList argsList;
-		long lResult = 0;
-
-		argsList.add(m_ePlayer);
-		argsList.add(m_iGameTurn);
-		argsList.add(m_szMessage.c_str());
-
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYCivModule, "netAddReminder", argsList.makeFunctionArgs(), &lResult);
+		Cy::call(PYCivModule, "netAddReminder", Cy::Args() << m_ePlayer << m_iGameTurn << m_szMessage.c_str());
 	}
 }
 
@@ -1471,7 +1463,7 @@ void CvNetBuildListPushOrder::Execute()
 	}
 	if (m_ePlayer == GC.getGameINLINE().getActivePlayer())
 	{
-		PYTHON_CALL_FUNCTION2(__FUNCTION__, "CvScreensInterface", "showBuildListScreen");
+		Cy::call("CvScreensInterface", "showBuildListScreen");
 	}
 }
 
@@ -1518,7 +1510,7 @@ void CvNetBuildListPopOrder::Execute()
 	}
 	if (m_ePlayer == GC.getGameINLINE().getActivePlayer())
 	{
-		PYTHON_CALL_FUNCTION2(__FUNCTION__, "CvScreensInterface", "showBuildListScreen");
+		Cy::call("CvScreensInterface", "showBuildListScreen");
 	}
 }
 
@@ -1569,7 +1561,7 @@ void CvNetBuildListEdit::Execute()
 	}
 	if (m_ePlayer == GC.getGameINLINE().getActivePlayer())
 	{
-		PYTHON_CALL_FUNCTION2(__FUNCTION__, "CvScreensInterface", "showBuildListScreen");
+		Cy::call("CvScreensInterface", "showBuildListScreen");
 	}
 }
 
