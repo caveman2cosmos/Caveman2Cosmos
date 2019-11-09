@@ -727,6 +727,12 @@ with GFC_Control_Button
 					Image			=	GBitmap("GUI/TechTree/0_PrehistoricBackOverlay.tga", HVGrid, 1, 1, 0, 0);
 					Margin			=	GRectMargin(0,0,0,0);
 				}				
+				layer {
+					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HFIXED_CENTER, GFC_BITMAPSKIN_SECTION_VFIXED_CENTER);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/HuntersMoon2.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= 	GRectMargin(0,0,0,0);
+				}
 			}
 			.Rollover				= .Default;
 			.Press					= .Default;
@@ -743,24 +749,41 @@ with GFC_Control_Button
 		{
 			.Default
 			{
-				//layer {
-				//	// LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FIXED, GFC_BITMAPSKIN_SIDES_TILE);
-				//	CenterFlags		= GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HFIXED_CENTER, GFC_BITMAPSKIN_SECTION_VFIXED_CENTER);
-				//	LeftFlags		= GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HFIXED, GFC_BITMAPSKIN_SECTION_VFIXED_BOTTOM);
-				//	RightFlags		= GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HFIXED, GFC_BITMAPSKIN_SECTION_VFIXED_BOTTOM);
-				//	BottomFlags		= GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HTILE, GFC_BITMAPSKIN_SECTION_VFIXED_BOTTOM);
-				//	TopFlags		= GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HFIXED_CENTER, GFC_BITMAPSKIN_SECTION_VFIXED);
-				//	DestCombine		=	GColorCombine(BlendSource,Disable);
-				//	Image			=	GBitmap("GUI/TechTree/6_AtomicBackOverlay.tga", HVGrid, 1, 1, 0, 0);
-				//	Margin			=	GRectMargin(50,50,50,50);
-				//}
-
 				layer {
-					//CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HTILE, GFC_BITMAPSKIN_SECTION_VFIXED_BOTTOM);
 					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HTILE, GFC_BITMAPSKIN_SECTION_VFIXED_BOTTOM);
 					DestCombine		=	GColorCombine(BlendSource,Disable);
-					Image			=	GBitmap("GUI/TechTree/0_PrehistoricFore.tga", HVGrid, 1, 1, 0, 0);
-					Margin			=	GRectMargin(0,0,0,0);
+					Image			=	GBitmap("GUI/TechTree/GrassFore.tga", HVGrid, 1, 1, 0, 0);
+				}
+				layer {
+					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HTILE, GFC_BITMAPSKIN_SECTION_VFIXED_BOTTOM);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/SavannaGrass1.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= 	GRectMargin(0,0,0,55);
+				}
+				layer {
+					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HFIXED, GFC_BITMAPSKIN_SECTION_VFIXED_BOTTOM);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/SavannaTree1.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= 	GRectMargin(200,0,0,55);
+				}
+				layer {
+					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HFIXED_CENTER, GFC_BITMAPSKIN_SECTION_VFIXED_BOTTOM);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/Elephants.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= 	GRectMargin(0,0,0,40);
+				}
+				layer {
+					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HFIXED_RIGHT, GFC_BITMAPSKIN_SECTION_VFIXED_BOTTOM);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/Hunters.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= 	GRectMargin(0,0,400,50);
+				}
+
+				layer {
+					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HFIXED_CENTER, GFC_BITMAPSKIN_SECTION_VFIXED_CENTER);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/Birds.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= 	GRectMargin(300,200,0,0);
 				}
 			}
 			.Rollover				= .Default;
@@ -813,18 +836,12 @@ with GFC_Control_Button
 		{
 			.Default
 			{
-				//layer {
-				//	CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HTILE, GFC_BITMAPSKIN_SECTION_VFIXED_BOTTOM);
-				//	DestCombine		=	GColorCombine(BlendSource,Disable);
-				//	Image			=	GBitmap("GUI/TechTree/1_AncientBack.tga", HVGrid, 1, 1, 0, 0);
-				//	Margin			=	GRectMargin(0,0,0,0);
-				//}
 				layer {
 					LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR);
 					DestCombine		=	GColorCombine(BlendSource,Disable);
-					Image			=	GBitmap("GUI/TechTree/1_AncientBackOverlay.tga", HVGrid, 1, 1, 0, 0);
+					Image			=	GBitmap("GUI/TechTree/1_AncientBack.tga", HVGrid, 1, 1, 0, 0);
 					Margin			=	GRectMargin(0,0,0,0);
-				}				
+				}
 			}
 			.Rollover				= .Default;
 			.Press					= .Default;
@@ -842,10 +859,63 @@ with GFC_Control_Button
 			.Default
 			{
 				layer {
+					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HTILE, GFC_BITMAPSKIN_SECTION_VTILE);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/RainOverlay.tga", HVGrid, 1, 1, 0, 0);
+					Margin			=	GRectMargin(0,0,0,0);
+				}
+				layer {
 					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HTILE, GFC_BITMAPSKIN_SECTION_VFIXED_BOTTOM);
 					DestCombine		=	GColorCombine(BlendSource,Disable);
-					Image			=	GBitmap("GUI/TechTree/1_AncientFore.tga", HVGrid, 1, 1, 0, 0);
-					Margin			=	GRectMargin(0,0,0,0);
+					Image			=	GBitmap("GUI/TechTree/GrassFore.tga", HVGrid, 1, 1, 0, 0);
+				}
+				layer {
+					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HTILE, GFC_BITMAPSKIN_SECTION_VFIXED_BOTTOM);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/Hills.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= 	GRectMargin(0,0,0,55);
+				}
+				layer {
+					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HFIXED, GFC_BITMAPSKIN_SECTION_VFIXED_BOTTOM);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/Megalith1.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= 	GRectMargin(100,0,0,65);
+				}
+				layer {
+					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HFIXED, GFC_BITMAPSKIN_SECTION_VFIXED_BOTTOM);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/TreeOak.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= 	GRectMargin(350,0,0,65);
+				}
+				layer {
+					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HFIXED_CENTER, GFC_BITMAPSKIN_SECTION_VFIXED_BOTTOM);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/Stonehenge.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= 	GRectMargin(0,0,0,65);
+				}
+				layer {
+					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HFIXED_CENTER, GFC_BITMAPSKIN_SECTION_VFIXED_CENTER);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/Birds.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= 	GRectMargin(300,200,0,0);
+				}
+				layer {
+					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HFIXED_RIGHT, GFC_BITMAPSKIN_SECTION_VFIXED_BOTTOM);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/Roundhouse.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= 	GRectMargin(0,0,500,65);
+				}
+				layer {
+					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HFIXED_RIGHT, GFC_BITMAPSKIN_SECTION_VFIXED_BOTTOM);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/AncientFarmers.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= 	GRectMargin(0,0,450,65);
+				}
+				layer {
+					CenterFlags		= 	GFlags(GCtrlBitmapSkinSection, GFC_BITMAPSKIN_SECTION_HFIXED_RIGHT, GFC_BITMAPSKIN_SECTION_VFIXED_BOTTOM);
+					DestCombine		=	GColorCombine(BlendSource,Disable);
+					Image			=	GBitmap("GUI/TechTree/TreeOak.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= 	GRectMargin(0,0,300,65);
 				}
 			}
 			.Rollover				= .Default;
