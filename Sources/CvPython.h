@@ -114,7 +114,7 @@ namespace Cy
 		STATIC_ASSERT(boost::is_class<Ty_>::value, Wrong_type_for_PyWrap);
 
 		typedef Ty_ value_type;
-		PyWrap(const value_type& obj) : obj(obj)
+		explicit PyWrap(const value_type& obj) : obj(obj)
 		{
 			pyobj = gDLL->getPythonIFace()->makePythonObject(&(this->obj));
 		}
@@ -130,11 +130,11 @@ namespace Cy
 	public:
 		Args() {}
 		template < class Arg0_ >
-		Args(const Arg0_& arg0) { add(arg0); }
+		explicit Args(const Arg0_& arg0) { add(arg0); }
 		template < class Arg0_, class Arg1_ >
-		Args(const Arg0_& arg0, const Arg1_& arg1) { add(arg0); add(arg1); }
+		explicit Args(const Arg0_& arg0, const Arg1_& arg1) { add(arg0); add(arg1); }
 		template < class Arg0_, class Arg1_, class Arg2_ >
-		Args(const Arg0_& arg0, const Arg1_& arg1, const Arg2_& arg2) { add(arg0); add(arg1); add(arg2); }
+		explicit Args(const Arg0_& arg0, const Arg1_& arg1, const Arg2_& arg2) { add(arg0); add(arg1); add(arg2); }
 
 		template < class Ty_ >
 		Args& add(const Ty_& arg)
