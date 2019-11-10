@@ -2149,15 +2149,13 @@ int pathDestValid(int iToX, int iToY, const void* pointer, FAStar* finder)
 	CvPlot* pFromPlot;
 
 	pToPlot = GC.getMapExternal().plot(iToX, iToY);
-	FAssert(pToPlot != NULL);
-
 	pFromPlot = GC.getMapExternal().plot(gDLL->getFAStarIFace()->GetStartX(finder), gDLL->getFAStarIFace()->GetStartY(finder));
-	FAssert(pFromPlot != NULL);
 
 	//	Safety valve since minidumps have shown that this (unknown how) can still occassionally
 	//	happen (attempt to generate a path that starts or ends off the viewport)
 	if ( pToPlot == NULL || pFromPlot == NULL )
 	{
+		FErrorMsg("Both plots must be valid");
 		return FALSE;
 	}
 
@@ -4572,7 +4570,7 @@ int getTurnYearForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, G
 		}
 		return CvDate::getDate(iGameTurn, eSpeed).getYear();
 	}
-	return (getTurnMonthForGame(iGameTurn, iStartYear, eCalendar, eSpeed) / GC.getNumMonthInfos());
+	return getTurnMonthForGame(iGameTurn, iStartYear, eCalendar, eSpeed) / std::max(1, GC.getNumMonthInfos());
 }
 
 
@@ -4632,7 +4630,7 @@ int getTurnMonthForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, 
 		break;
 
 	case CALENDAR_SEASONS:
-		iTurnMonth += (iGameTurn * GC.getNumMonthInfos()) / GC.getNumSeasonInfos();
+		iTurnMonth += (iGameTurn * GC.getNumMonthInfos()) / std::max(1, GC.getNumSeasonInfos());
 		break;
 
 	case CALENDAR_MONTHS:
@@ -4640,7 +4638,7 @@ int getTurnMonthForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, 
 		break;
 
 	case CALENDAR_WEEKS:
-		iTurnMonth += iGameTurn / GC.getDefineINT("WEEKS_PER_MONTHS");
+		iTurnMonth += iGameTurn / std::max(1, GC.getDefineINT("WEEKS_PER_MONTHS"));
 		break;
 
 	default:
