@@ -35,7 +35,7 @@ git push --tags
 
 :: COMPILE -----------------------------------------------------
 echo Building FinalRelease DLL...
-call Tools\MakeDLLFinalRelease.bat
+call "Tools\_MakeDLL.bat" build FinalRelease
 if not errorlevel 0 (
     echo Building FinalRelease DLL failed, aborting deployment!
     exit /B 2
