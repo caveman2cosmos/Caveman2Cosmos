@@ -3938,6 +3938,10 @@
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
 			</PrereqOrFeature>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
