@@ -5022,18 +5022,9 @@ int calculateExperience(int iLevel, PlayerTypes ePlayer)
 	std::map<int,int>::const_iterator itr = g_expNeededCache[ePlayer]->find(iLevel);
 	if ( itr == g_expNeededCache[ePlayer]->end() )
 	{
-
-		long lExperienceNeeded = 0;
-
-		CyArgsList argsList;
-		argsList.add(iLevel);
-		argsList.add(ePlayer);
-
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "getExperienceNeeded", argsList.makeFunctionArgs(), &lExperienceNeeded);
-
-		g_expNeededCache[ePlayer]->insert(std::make_pair(iLevel,(int)lExperienceNeeded));
-
-		return (int)lExperienceNeeded;
+		int iExperienceNeeded = Cy::call<int>(PYGameModule, "getExperienceNeeded", Cy::Args() << iLevel << ePlayer);
+		g_expNeededCache[ePlayer]->insert(std::make_pair(iLevel, iExperienceNeeded));
+		return lExperienceNeeded;
 	}
 	else
 	{
@@ -5173,18 +5164,18 @@ void AddDLLMessage(PlayerTypes ePlayer, bool bForce, int iLength, CvWString szSt
 		pszSound = "";
 	}
 
-	CyArgsList argsList;
-	argsList.add(szString);
-	argsList.add(ePlayer);
-	argsList.add(iLength);
-	argsList.add(pszIcon);
-	argsList.add(eFlashColor);
-	argsList.add(iFlashX);
-	argsList.add(iFlashY);
-	argsList.add(bShowOffScreenArrows);
-	argsList.add(bShowOnScreenArrows);
-	argsList.add(eType);
-	argsList.add(pszSound);
-	argsList.add(bForce);
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "sendMessage", argsList.makeFunctionArgs());
+	Cy::call(PYScreensModule, "sendMessage", Cy::Args()
+		<< szString
+		<< ePlayer
+		<< iLength
+		<< pszIcon
+		<< eFlashColor
+		<< iFlashX
+		<< iFlashY
+		<< bShowOffScreenArrows
+		<< bShowOnScreenArrows
+		<< eType
+		<< pszSound
+		<< bForce	
+	);
 }

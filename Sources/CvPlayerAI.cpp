@@ -1490,24 +1490,19 @@ void CvPlayerAI::AI_updateFoundValues(bool bClear, CvArea* area) const
 
 				if ( bNeedsCalculating )
 				{
-					long lResult=-1;
+					int iResult = -1;
 					if(GC.getUSE_GET_CITY_FOUND_VALUE_CALLBACK())
 					{
-
-						CyArgsList argsList;
-						argsList.add((int)getID());
-						argsList.add(pLoopPlot->getX());
-						argsList.add(pLoopPlot->getY());
-						PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "getCityFoundValue", argsList.makeFunctionArgs(), &lResult);
+						iResult = Cy::call<int>(PYGameModule, "getCityFoundValue", Cy::Args() << getID() << pLoopPlot->getX() << pLoopPlot->getY());
 					}
 
-					if (lResult == -1)
+					if (iResult == -1)
 					{
 						iValue = AI_foundValue(pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE());
 					}
 					else
 					{
-						iValue = lResult;
+						iValue = iResult;
 					}
 
 					pLoopPlot->setFoundValue(getID(), iValue);
@@ -8126,14 +8121,7 @@ void CvPlayerAI::AI_chooseFreeTech()
 /************************************************************************************************/
 	if (GC.getUSE_AI_BESTTECH_CALLBACK())
 	{
-
-		CyArgsList argsList;
-		long lResult;
-		argsList.add(getID());
-		argsList.add(true);
-		lResult = -1;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "AI_chooseTech", argsList.makeFunctionArgs(), &lResult);
-		eBestTech = ((TechTypes)lResult);
+		eBestTech = Cy::call<TechTypes>(PYGameModule, "AI_chooseTech", Cy::Args() << getID() << true);
 	}
 	else
 	{
@@ -8196,14 +8184,7 @@ void CvPlayerAI::AI_chooseResearch()
 /************************************************************************************************/
 		if (GC.getUSE_AI_BESTTECH_CALLBACK())
 		{
-
-			CyArgsList argsList;
-			long lResult;
-			argsList.add(getID());
-			argsList.add(false);
-			lResult = -1;
-			PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "AI_chooseTech", argsList.makeFunctionArgs(), &lResult);
-			eBestTech = ((TechTypes)lResult);
+			eBestTech = Cy::call<TechTypes>(PYGameModule, "AI_chooseTech", Cy::Args() << getID() << false);
 		}
 		else
 		{
@@ -21912,14 +21893,8 @@ void CvPlayerAI::AI_doDiplo()
 /************************************************************************************************/
 	if (GC.getUSE_AI_DO_DIPLO_CALLBACK())
 	{
-
 		PROFILE("CvPlayerAI::AI_doDiplo.Python");
-
-		CyArgsList argsList;
-		argsList.add(getID());
-		long lResult=0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "AI_doDiplo", argsList.makeFunctionArgs(), &lResult);
-		if (lResult == 1)
+		if (Cy::call<bool>(PYGameModule, "AI_doDiplo", Cy::Args() << getID()))
 		{
 			return;
 		}
@@ -29989,24 +29964,19 @@ void CvPlayerAI::AI_recalculateFoundValues(int iX, int iY, int iInnerRadius, int
 				{
 					if ((pLoopPlot != NULL) && (pLoopPlot->isRevealed(getTeam(), false)))
 					{
-						long lResult=-1;
+						int iResult=-1;
 						if(GC.getUSE_GET_CITY_FOUND_VALUE_CALLBACK())
 						{
-
-							CyArgsList argsList;
-							argsList.add((int)getID());
-							argsList.add(pLoopPlot->getX());
-							argsList.add(pLoopPlot->getY());
-							PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "getCityFoundValue", argsList.makeFunctionArgs(), &lResult);
+							iResult = Cy::call<int>(PYGameModule, "getCityFoundValue", Cy::Args() << getID() << pLoopPlot->getX() << pLoopPlot->getY());
 						}
 
-						if (lResult == -1)
+						if (iResult == -1)
 						{
 							iValue = AI_foundValue(pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE());
 						}
 						else
 						{
-							iValue = lResult;
+							iValue = iResult;
 						}
 
 						pLoopPlot->setFoundValue(getID(), iValue);

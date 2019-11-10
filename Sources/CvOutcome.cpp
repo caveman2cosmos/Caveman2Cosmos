@@ -1327,17 +1327,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 
 	if (!m_szPythonCallback.empty())
 	{
-
-		long lResult;
-
-		CyUnit* pyUnit = new CyUnit(&kUnit);
-		CyArgsList argsList;
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyUnit));
-		argsList.add((int)eDefeatedUnitPlayer);
-		argsList.add((int)eDefeatedUnitType);
-
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYRandomEventModule, m_szPythonCallback, argsList.makeFunctionArgs(), &lResult);
-		delete pyUnit;
+		Cy::call(PYRandomEventModule, m_szPythonCallback, Cy::Args() << &kUnit << eDefeatedUnitPlayer << eDefeatedUnitType);
 	}
 
 	if (m_pPythonExecFunc)

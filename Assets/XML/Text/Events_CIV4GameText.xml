@@ -65,19 +65,56 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ACHIEVEMENT</Tag>
-		<English>This is certainly a good day for the glorious %s1_civ_adjective nation.</English>
+		<English>This is certainly a good day for our glorious nation.</English>
 		<French>C'est sûrement un des plus beaux jours de notre glorieuse nation, Félicitations!!</French>
-		<Italian>Questo è certamente un grande giorno per la gloriosa nazione %s1_civ_adjective.</Italian>
-		<Spanish>Ciertamente es un buen día para la gloriosa nación %s1:2_civ_adjective.</Spanish>
-		<Polish>To wspaniały dzień dla sławnego narodu %s1_civ_adjective</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENT_AGRICULTURAL_ACHIEVEMENT</Tag>
-		<English>This is a historic era for the %s1_civ_adjective peoples, as their [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great agricultural achievement! Their realm is blessed with a massive increase in agrarian output.</English>
+		<Tag>TXT_KEY_EVENT_ACHIEVEMENT_AGRICULTURAL</Tag>
+		<English>This is a historic era, our [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great agricultural achievement! The realm is blessed with a massive increase in agrarian output.</English>
 		<French>C'est une période historique pour votre peuple, un de vos [COLOR_UNIT_TEXT]Héros[COLOR_REVERT] a mené à son terme un grand accomplissement agricole! Le royaume bénéficie d'une augmentation massive de la production de nourriture.</French>
-		<Italian>Questo è un momento storico per il popolo %s1_civ_adjective, dato che il loro [COLOR_UNIT_TEXT]Eroe nazionale[COLOR_REVERT] ha completato un grande obiettivo agricolo! Il popolo sta beneficiando di un grande aumento nella produzione di cibo.</Italian>
-		<Spanish>¡Este es un momento histórico para el pueblo %s1_civ_adjective, ya que su [COLOR_UNIT_TEXT]Héroe nacional[COLOR_REVERT] ha consumado un gran Logro agrícola! Su imperio se beneficia de un aumento masivo de la producción agraria.</Spanish>
 		<Polish>To historyczna era dla naszych ludzi, ich [COLOR_UNIT_TEXT]Bohater Narodowy[COLOR_REVERT] stworzył wspaniałe Osiągnięcie Rolnicze!</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_ACHIEVEMENT_COMMERCIAL</Tag>
+		<English>This is a historic era, our [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great commercial achievement! Gold and wealth pours into the coffers like never before.</English>
+		<French>C'est une période historique pour votre peuple, un de vos [COLOR_UNIT_TEXT]Héros[COLOR_REVERT] a mené à son terme un grand accomplissement commercial! Or et richesse débordent de leurs coffres forts comme jamais.</French>
+		<Polish>To historyczna era dla naszych ludzi, ich [COLOR_UNIT_TEXT]Bohater Narodowy[COLOR_REVERT] stworzył wspaniałe Osiągnięcie Handlowe!</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_ACHIEVEMENT_CULTURAL</Tag>
+		<English>This is a historic era, our [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great cultural achievement! The sophistication of our civilization is the envy of the world.</English>
+		<French>C'est une période historique pour votre peuple, un de vos [COLOR_UNIT_TEXT]Héros[COLOR_REVERT] a mené à son terme un grand accomplissement culturel! La sophistication de leur civilisation est enviée dans le monde entier.</French>
+		<Polish>To historyczna era dla naszych ludzi, ich [COLOR_UNIT_TEXT]Bohater Narodowy[COLOR_REVERT] stworzył wspaniałe Osiągnięcie Kulturowe!</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_ACHIEVEMENT_INDUSTRIAL</Tag>
+		<English>This is a historic era, our [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great industrial achievement! Industrial production has boomed to an unprecedented level.</English>
+		<French>C'est une période historique pour votre peuple, un de vos [COLOR_UNIT_TEXT]Héros[COLOR_REVERT] a mené à son terme un grand accomplissement industriel! Leur production atteint à présent un niveau inégalé.</French>
+		<Polish>To historyczna era dla naszych ludzi, ich [COLOR_UNIT_TEXT]Bohater Narodowy[COLOR_REVERT] stworzył wspaniałe Osiągnięcie Przemysłowe!</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_ACHIEVEMENT_MILITARY</Tag>
+		<English>This is a historic era, our [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great military achievement! Our armies now are amongst the most feared in the world.</English>
+		<French>C'est une période historique pour votre peuple, un de vos [COLOR_UNIT_TEXT]Héros[COLOR_REVERT] a mené à son terme un grand accomplissement militaire! Votre armée fait partie des plus craintes de ce monde.</French>
+		<Polish>To historyczna era dla naszych ludzi, ich [COLOR_UNIT_TEXT]Bohater Narodowy[COLOR_REVERT] stworzył wspaniałe Osiągnięcie Wojskowe!</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_ACHIEVEMENT_POLITICAL</Tag>
+		<English>This is a historic era, our [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great political achievement! The world watches in awe as our leaders manage one of the most organized and efficient governments in history.</English>
+		<French>C'est une période historique pour votre peuple, un de vos [COLOR_UNIT_TEXT]Héros[COLOR_REVERT] a mené à son terme un grand accomplissement politique! Le monde reste bouche bée devant le plus efficient et organisé des gouvernements de toute l'histoire.</French>
+		<Polish>To historyczna era dla naszych ludzi, ich [COLOR_UNIT_TEXT]Bohater Narodowy[COLOR_REVERT] stworzył wspaniałe Osiągnięcie Polityczne!</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_ACHIEVEMENT_SCIENTIFIC</Tag>
+		<English>This is a historic era, our [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great scientific achievement! Our technological advancement is now something to behold.</English>
+		<French>C'est une période historique pour votre peuple, un de vos [COLOR_UNIT_TEXT]Héros[COLOR_REVERT] a mené à son terme un grand accomplissement scientifique! Nos percées technologique sont à suivre avec attention.</French>
+		<Polish>To historyczna era dla naszych ludzi, ich [COLOR_UNIT_TEXT]Bohater Narodowy[COLOR_REVERT] stworzył wspaniałe Osiągnięcie Naukowe!</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_ACHIEVEMENT_SEAFARING</Tag>
+		<English>This is a historic era, our [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great seafaring achievement! No other nation possess ships that are stronger and faster. They sail across the seven seas and bring back exotic riches from the far corners of the world.</English>
+		<French>C'est une période historique pour votre peuple, un de vos [COLOR_UNIT_TEXT]Héros[COLOR_REVERT] a mené à son terme un grand accomplissement maritime! Aucune autre nation ne possède de navires aussi résistants ni aussi rapides. Ils ont vogués à travers les sept océans pour ramener des richesse exotiques des quatre coins du globe.</French>
+		<Polish>To historyczna era dla naszych ludzi, ich [COLOR_UNIT_TEXT]Bohater Narodowy[COLOR_REVERT] stworzył wspaniałe Osiągnięcie Morskie!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ALTERNATIVE_ENERGY_1</Tag>
@@ -1505,14 +1542,6 @@
 		<Polish>Promujmy walki kogutów i zarabiajmy na tym!</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENT_COMMERCIAL_ACHIEVEMENT</Tag>
-		<English>This is a historic era for the %s1_civ_adjective peoples, as their [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great commercial achievement! Gold and wealth pours into their coffers like never before.</English>
-		<French>C'est une période historique pour votre peuple, un de vos [COLOR_UNIT_TEXT]Héros[COLOR_REVERT] a mené à son terme un grand accomplissement commercial! Or et richesse débordent de leurs coffres forts comme jamais.</French>
-		<Italian>Questo è un momento storico per il popolo %s1_civ_adjective, dato che il loro [COLOR_UNIT_TEXT]Eroe nazionale[COLOR_REVERT] ha completato un grande obiettivo commerciale! Oro e ricchezza entrano nelle loro tasche come mai prima d'ora.</Italian>
-		<Spanish>¡Este es un momento histórico para el pueblo %s1_civ_adjective, ya que su [COLOR_UNIT_TEXT]Héroe nacional[COLOR_REVERT] ha consumado un gran Logro comercial! Oro y riqueza son vertidos en sus cofres como nunca antes.</Spanish>
-		<Polish>To historyczna era dla naszych ludzi, ich [COLOR_UNIT_TEXT]Bohater Narodowy[COLOR_REVERT] stworzył wspaniałe Osiągnięcie Handlowe!</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_EVENT_COMPULSORY_DEM_1</Tag>
 		<English>"Compulsory voting makes about as much as sense as having the death penalty for attempted suicide," says civil rights activists. "You can't force people to be free! You can only give them the choice. Besides, if all those derelicts who can't be bothered to get off their butts once every few years voted, who would they elect? I shudder to think."</English>
 		<French>"Le vote obligatoire est tout aussi sensé que de recourir à la peine de mort pour ceux qui réalisent une tentative de suicide," prétendent les militants des droits civils. "Vous ne pouvez pas forcer les gens à être libre! Vous pouvez seulement leur donner le choix. D'ailleurs, si tous ces oubliés qui ne peuvent être dérangés de leur pied d'estale votaient, qui éliraient-ils ? Je frémis rien qu'en y pensant."</French>
@@ -1716,14 +1745,6 @@
 		<Italian>Equipaggia tutte le unità da combattimento ravvicinato e quelle montate con armi e armature in acciaio "wootz".</Italian>
 		<Spanish>Equipad a todas nuestras unidades cuerpo a cuerpo y montadas con armas y armaduras de acero wootz.</Spanish>
 		<Polish>Wyposaż wszystkie jednostki walczące wręcz nowym pancerzem i bronią z hartowanej stali.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_CULTURAL_ACHIEVEMENT</Tag>
-		<English>This is a historic era for the %s1_civ_adjective peoples, as their [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great cultural achievement! The sophistication of their civilization is the envy of the world.</English>
-		<French>C'est une période historique pour votre peuple, un de vos [COLOR_UNIT_TEXT]Héros[COLOR_REVERT] a mené à son terme un grand accomplissement culturel! La sophistication de leur civilisation est enviée dans le monde entier.</French>
-		<Italian>Questo è un momento storico per il popolo %s1_civ_adjective, dato che il loro [COLOR_UNIT_TEXT]Eroe nazionale[COLOR_REVERT] ha completato un grande obiettivo culturale! La sofisticazione della loro civiltà è l'invidia di tutto il mondo.</Italian>
-		<Spanish>¡Este es un momento histórico para el pueblo %s1_civ_adjective, ya que su [COLOR_UNIT_TEXT]Héroe nacional[COLOR_REVERT] ha consumado un gran Logro cultural! La sotisficación de su civilización es envidiada en todo el mundo.</Spanish>
-		<Polish>To historyczna era dla naszych ludzi, ich [COLOR_UNIT_TEXT]Bohater Narodowy[COLOR_REVERT] stworzył wspaniałe Osiągnięcie Kulturowe!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CURE_FOR_CANCER_1</Tag>
@@ -3103,14 +3124,6 @@
 		<Polish>Świetnie. Nie musimy tego robić osobiście.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENT_INDUSTRIAL_ACHIEVEMENT</Tag>
-		<English>This is a historic era for the %s1_civ_adjective peoples, as their [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great industrial achievement! Their industrial production has boomed to an unprecedented level.</English>
-		<French>C'est une période historique pour votre peuple, un de vos [COLOR_UNIT_TEXT]Héros[COLOR_REVERT] a mené à son terme un grand accomplissement industriel! Leur production atteint à présent un niveau inégalé.</French>
-		<Italian>Questo è un momento storico per il popolo %s1_civ_adjective, dato che il loro [COLOR_UNIT_TEXT]Eroe nazionale[COLOR_REVERT] ha completato un grande obiettivo industriale! La loro produzione industriale è cresciuta fino a un livello mai raggiunto prima d'ora.</Italian>
-		<Spanish>¡Este es un momento histórico para el pueblo %s1_civ_adjective, ya que su [COLOR_UNIT_TEXT]Héroe nacional[COLOR_REVERT] ha consumado un gran Logro industrial! Su producción industrial ha crecido hasta un nivel sin precedentes.</Spanish>
-		<Polish>To historyczna era dla naszych ludzi, ich [COLOR_UNIT_TEXT]Bohater Narodowy[COLOR_REVERT] stworzył wspaniałe Osiągnięcie Przemysłowe!</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_EVENT_INDUSTRIAL_ACTION_1</Tag>
 		<English>Arrest the labor agitators and order the workers to return to their jobs.  Use force if necessary.</English>
 		<French>Arrêtez les agitateurs des syndicats et ordonnez aux ouvriers de retourner à leur travail. Employez la force au besoin.</French>
@@ -3564,14 +3577,6 @@
 		<Polish>Głupcy. Kto ich potrzebuje?</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENT_MILITARY_ACHIEVEMENT</Tag>
-		<English>This is a historic era for the %s1_civ_adjective peoples, as their [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great military achievement! Their armies now are amongst the most feared in the world.</English>
-		<French>C'est une période historique pour votre peuple, un de vos [COLOR_UNIT_TEXT]Héros[COLOR_REVERT] a mené à son terme un grand accomplissement militaire! Votre armée fait partie des plus craintes de ce monde.</French>
-		<Italian>Questo è un momento storico per il popolo %s1_civ_adjective, dato che il loro [COLOR_UNIT_TEXT]Eroe nazionale[COLOR_REVERT] ha completato un grande obiettivo militare! Le loro armate sono ora temute in tutto il mondo.</Italian>
-		<Spanish>¡Este es un momento histórico para el pueblo %s1_civ_adjective, ya que su [COLOR_UNIT_TEXT]Héroe nacional[COLOR_REVERT] ha consumado un gran Logro militar! Ahora sus ejércitos están entre los más temidos del mundo.</Spanish>
-		<Polish>To historyczna era dla naszych ludzi, ich [COLOR_UNIT_TEXT]Bohater Narodowy[COLOR_REVERT] stworzył wspaniałe Osiągnięcie Wojskowe!</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_EVENT_MORE_FIAT_MONEY_1</Tag>
 		<English>We need to keep the economy growing and our coffers full.  Lower interest rates and increase the money supply again, and hope that the increase in inflation is not too damaging.</English>
 		<French>Nous devons continuer d'accroître notre économie et remplir nos coffres. Abaissez les taux d'intérêt d'intérêt et augmentez la masse monétaire, et espérez que l'augmentation de l'inflation ne nous soit pas trop préjudiciable.</French>
@@ -3955,14 +3960,6 @@
 		<Italian>Equipaggia tutti gli arcieri con le frecce avvelenate.</Italian>
 		<Spanish>Equipad a todos los arqueros con flechas emponzoñadas.</Spanish>
 		<Polish>Wyposaż wszystkich łuczników w zatrute strzały.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_POLITICAL_ACHIEVEMENT</Tag>
-		<English>This is a historic era for the %s1_civ_adjective peoples, as their [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great political achievement! The world watches in awe as their leaders manage one of the most organized and efficient governments in history.</English>
-		<French>C'est une période historique pour votre peuple, un de vos [COLOR_UNIT_TEXT]Héros[COLOR_REVERT] a mené à son terme un grand accomplissement politique! Le monde reste bouche bée devant le plus efficient et organisé des gouvernements de toute l'histoire.</French>
-		<Italian>Questo è un momento storico per il popolo %s1_civ_adjective, dato che il loro [COLOR_UNIT_TEXT]Eroe nazionale[COLOR_REVERT] ha completato un grande obiettivo politico! Il mondo ammira affascinato, mentre i loro leader guidano uno dei governi più organizzati ed efficienti della storia.</Italian>
-		<Spanish>¡Este es un momento histórico para el pueblo %s1_civ_adjective, ya que su [COLOR_UNIT_TEXT]Héroe nacional[COLOR_REVERT] ha consumado un gran Logro político! El mundo observa asombrado cómo sus líderes gestionan uno de los gobiernos más eficientes y organizados de la historia.</Spanish>
-		<Polish>To historyczna era dla naszych ludzi, ich [COLOR_UNIT_TEXT]Bohater Narodowy[COLOR_REVERT] stworzył wspaniałe Osiągnięcie Polityczne!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_POTATO_REVEALED_1</Tag>
@@ -4402,22 +4399,6 @@
 		<Italian>Invia squadre di emergenza per riparare i danni, senza badare ai costi.</Italian>
 		<Spanish>Que partan equipos de emergencia a arreglar los daños, sin reparar en gastos.</Spanish>
 		<Polish>Wyślemy ekipę robotników w celu naprawienia poniesionych szkód, bez względu na koszty.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_SCIENTIFIC_ACHIEVEMENT</Tag>
-		<English>This is a historic era for the %s1_civ_adjective peoples, as their [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great scientific achievement! Their technological advancement is now something to behold.</English>
-		<French>C'est une période historique pour votre peuple, un de vos [COLOR_UNIT_TEXT]Héros[COLOR_REVERT] a mené à son terme un grand accomplissement scientifique! Nos percées technologique sont à suivre avec attention.</French>
-		<Italian>Questo è un momento storico per il popolo %s1_civ_adjective, dato che il loro [COLOR_UNIT_TEXT]Eroe nazionale[COLOR_REVERT] ha completato un grande obiettivo scientifico! Il loro progresso tecnologico è ora qualcosa da ammirare.</Italian>
-		<Spanish>¡Este es un momento histórico para el pueblo %s1_civ_adjective, ya que su [COLOR_UNIT_TEXT]Héroe nacional[COLOR_REVERT] ha consumado un gran Logro científico! Su progreso tecnológico es ahora digno de admirar.</Spanish>
-		<Polish>To historyczna era dla naszych ludzi, ich [COLOR_UNIT_TEXT]Bohater Narodowy[COLOR_REVERT] stworzył wspaniałe Osiągnięcie Naukowe!</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_SEAFARING_ACHIEVEMENT</Tag>
-		<English>This is a historic era for the %s1_civ_adjective peoples, as their [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great seafaring achievement! No other nation can any ships that are stronger and faster. Their ships that sailed across the seven seas to bring back exotic riches from the far corners of the world.</English>
-		<French>C'est une période historique pour votre peuple, un de vos [COLOR_UNIT_TEXT]Héros[COLOR_REVERT] a mené à son terme un grand accomplissement maritime! Aucune autre nation ne possède de navires aussi résistants ni aussi rapides. Ils ont vogués à travers les sept océans pour ramener des richesse exotiques des quatre coins du globe.</French>
-		<Italian>Questo è un momento storico per il popolo %s1_civ_adjective, dato che il loro [COLOR_UNIT_TEXT]Eroe nazionale[COLOR_REVERT] ha completato un grande obiettivo marinaresco! No other nation can any ships that are stronger and faster. Le loro navi solcano i sette mari per portare in patria ricchzze esotiche dagli angoli più remoti del globo.</Italian>
-		<Spanish>¡Este es un momento histórico para el pueblo %s1_civ_adjective, ya que su [COLOR_UNIT_TEXT]Héroe nacional[COLOR_REVERT] ha consumado un gran Logro marítimo! Ninguna otra nación posee unos barcos tan fuertes y rápidos. Sus barcos navegaron a través de los siete mares para volver con exóticas riquezas provenientes de los rincones más lejanos del mundo</Spanish>
-		<Polish>To historyczna era dla naszych ludzi, ich [COLOR_UNIT_TEXT]Bohater Narodowy[COLOR_REVERT] stworzył wspaniałe Osiągnięcie Morskie!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SEED_CAMP_LOST_1</Tag>

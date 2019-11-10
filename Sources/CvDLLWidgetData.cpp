@@ -1848,7 +1848,7 @@ void CvDLLWidgetData::doBuildingFilter(CvWidgetDataStruct &widgetDataStruct)
 	{
 		bool bActive = GET_PLAYER(GC.getGameINLINE().getActivePlayer()).getBuildingListFilterActive(eFilter);
 		GET_PLAYER(GC.getGameINLINE().getActivePlayer()).setBuildingListFilterActive(eFilter, !bActive);
-		PYTHON_CALL_FUNCTION2(__FUNCTION__, "CvScreensInterface", "showBuildListScreen");
+		Cy::call("CvScreensInterface", "showBuildListScreen");
 	}
 }
 
@@ -1905,7 +1905,7 @@ void CvDLLWidgetData::doUnitFilter(CvWidgetDataStruct &widgetDataStruct)
 	{
 		bool bActive = GET_PLAYER(GC.getGameINLINE().getActivePlayer()).getUnitListFilterActive(eFilter);
 		GET_PLAYER(GC.getGameINLINE().getActivePlayer()).setUnitListFilterActive(eFilter, !bActive);
-		PYTHON_CALL_FUNCTION2(__FUNCTION__, "CvScreensInterface", "showBuildListScreen");
+		Cy::call("CvScreensInterface", "showBuildListScreen");
 	}
 }
 
@@ -1969,195 +1969,130 @@ void CvDLLWidgetData::doBuildListQueue(CvWidgetDataStruct &widgetDataStruct)
 	CvMessageControl::getInstance().sendBuildListPopOrder(widgetDataStruct.m_iData1, widgetDataStruct.m_iData2);
 }
 
-
 void CvDLLWidgetData::doPediaTechJump(CvWidgetDataStruct &widgetDataStruct)
 {
-	CyArgsList argsList;
-	argsList.add(widgetDataStruct.m_iData1);
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "pediaJumpToTech", argsList.makeFunctionArgs());
+	Cy::call(PYScreensModule, "pediaJumpToTech", Cy::Args(widgetDataStruct.m_iData1));
 }
 
 void CvDLLWidgetData::doPediaUnitJump(CvWidgetDataStruct &widgetDataStruct)
 {
-	CyArgsList argsList;
-
-	argsList.add(widgetDataStruct.m_iData1);
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "pediaJumpToUnit", argsList.makeFunctionArgs());
+	Cy::call(PYScreensModule, "pediaJumpToUnit", Cy::Args(widgetDataStruct.m_iData1));
 }
 
 void CvDLLWidgetData::doPediaBuildingJump(CvWidgetDataStruct &widgetDataStruct)
 {
-	CyArgsList argsList;
-	argsList.add(widgetDataStruct.m_iData1);
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "pediaJumpToBuilding", argsList.makeFunctionArgs());
+	Cy::call(PYScreensModule, "pediaJumpToBuilding", Cy::Args(widgetDataStruct.m_iData1));
 }
 
 void CvDLLWidgetData::doPediaProjectJump(CvWidgetDataStruct &widgetDataStruct)
 {
-	CyArgsList argsList;
-	argsList.add(widgetDataStruct.m_iData1);
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "pediaJumpToProject", argsList.makeFunctionArgs());
+	Cy::call(PYScreensModule, "pediaJumpToProject", Cy::Args(widgetDataStruct.m_iData1));
 }
 
 void CvDLLWidgetData::doPediaReligionJump(CvWidgetDataStruct &widgetDataStruct)
 {
-	CyArgsList argsList;
-	argsList.add(widgetDataStruct.m_iData1);
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "pediaJumpToReligion", argsList.makeFunctionArgs());
+	Cy::call(PYScreensModule, "pediaJumpToReligion", Cy::Args(widgetDataStruct.m_iData1));
 }
 
 void CvDLLWidgetData::doPediaCorporationJump(CvWidgetDataStruct &widgetDataStruct)
 {
-	CyArgsList argsList;
-	argsList.add(widgetDataStruct.m_iData1);
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "pediaJumpToCorporation", argsList.makeFunctionArgs());
+	Cy::call(PYScreensModule, "pediaJumpToCorporation", Cy::Args(widgetDataStruct.m_iData1));
 }
 
 void CvDLLWidgetData::doPediaTerrainJump(CvWidgetDataStruct &widgetDataStruct)
 {
-	CyArgsList argsList;
-	argsList.add(widgetDataStruct.m_iData1);
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "pediaJumpToTerrain", argsList.makeFunctionArgs());
+	Cy::call(PYScreensModule, "pediaJumpToTerrain", Cy::Args(widgetDataStruct.m_iData1));
 }
 
 void CvDLLWidgetData::doPediaFeatureJump(CvWidgetDataStruct &widgetDataStruct)
 {
-	CyArgsList argsList;
-	argsList.add(widgetDataStruct.m_iData1);
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "pediaJumpToFeature", argsList.makeFunctionArgs());
+	Cy::call(PYScreensModule, "pediaJumpToFeature", Cy::Args(widgetDataStruct.m_iData1));
 }
 
 void CvDLLWidgetData::doPediaTraitJump(CvWidgetDataStruct &widgetDataStruct)
 {
-	CyArgsList argsList;
-	argsList.add(widgetDataStruct.m_iData1);
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "pediaJumpToTrait", argsList.makeFunctionArgs());
+	Cy::call(PYScreensModule, "pediaJumpToTrait", Cy::Args(widgetDataStruct.m_iData1));
 }
 
 void CvDLLWidgetData::doPediaTrainJump(CvWidgetDataStruct &widgetDataStruct)
 {
-	CyArgsList argsList;
-	argsList.add(GC.getCivilizationInfo(GC.getGameINLINE().getActiveCivilizationType()).getCivilizationUnits(widgetDataStruct.m_iData1));
-	
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "pediaJumpToUnit", argsList.makeFunctionArgs());
+	Cy::call(PYScreensModule, "pediaJumpToUnit", Cy::Args(GC.getCivilizationInfo(GC.getGameINLINE().getActiveCivilizationType()).getCivilizationUnits(widgetDataStruct.m_iData1)));
 }
 
 
 void CvDLLWidgetData::doPediaConstructJump(CvWidgetDataStruct &widgetDataStruct)
 {
-	CyArgsList argsList;
-	argsList.add(GC.getCivilizationInfo(GC.getGameINLINE().getActiveCivilizationType()).getCivilizationBuildings(widgetDataStruct.m_iData1));
-
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "pediaJumpToBuilding", argsList.makeFunctionArgs());
+	Cy::call(PYScreensModule, "pediaJumpToBuilding", Cy::Args(GC.getCivilizationInfo(GC.getGameINLINE().getActiveCivilizationType()).getCivilizationBuildings(widgetDataStruct.m_iData1)));
 }
 
 
 void CvDLLWidgetData::doPediaBack()
 {
-	PYTHON_CALL_FUNCTION2(__FUNCTION__, PYScreensModule, "pediaBack");	
+	Cy::call(PYScreensModule, "pediaBack");	
 }
 
 void CvDLLWidgetData::doPediaForward()
 {
-	PYTHON_CALL_FUNCTION2(__FUNCTION__, PYScreensModule, "pediaForward");	
+	Cy::call(PYScreensModule, "pediaForward");	
 }
 
 void CvDLLWidgetData::doPediaBonusJump(CvWidgetDataStruct &widgetDataStruct, bool bData2)
 {
-	CyArgsList argsList;
-	if (bData2)
-	{
-		argsList.add(widgetDataStruct.m_iData2);
-	}
-	else
-	{
-		argsList.add(widgetDataStruct.m_iData1);
-	}
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "pediaJumpToBonus", argsList.makeFunctionArgs());	
+	Cy::call(PYScreensModule, "pediaJumpToBonus", Cy::Args(bData2? widgetDataStruct.m_iData2 : widgetDataStruct.m_iData1));	
 }
 
 void CvDLLWidgetData::doPediaSpecialistJump(CvWidgetDataStruct &widgetDataStruct)
 {
-	CyArgsList argsList;
-	argsList.add(widgetDataStruct.m_iData1);
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "pediaJumpToSpecialist", argsList.makeFunctionArgs());	
+	Cy::call(PYScreensModule, "pediaJumpToSpecialist", Cy::Args(widgetDataStruct.m_iData1));	
 }
 
 void CvDLLWidgetData::doPediaMain(CvWidgetDataStruct &widgetDataStruct)
 {
-	CyArgsList argsList;
-	argsList.add(widgetDataStruct.m_iData1 < 0 ? 0 : widgetDataStruct.m_iData1);
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "pediaMain", argsList.makeFunctionArgs());	
+	Cy::call(PYScreensModule, "pediaMain", Cy::Args(widgetDataStruct.m_iData1 < 0 ? 0 : widgetDataStruct.m_iData1));	
 }
 
 void CvDLLWidgetData::doPediaPromotionJump(CvWidgetDataStruct &widgetDataStruct)
 {
-	CyArgsList argsList;
-	argsList.add(widgetDataStruct.m_iData1);
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "pediaJumpToPromotion", argsList.makeFunctionArgs());
+	Cy::call(PYScreensModule, "pediaJumpToPromotion", Cy::Args(widgetDataStruct.m_iData1));
 }
 
 void CvDLLWidgetData::doPediaUnitCombatJump(CvWidgetDataStruct &widgetDataStruct)
 {
-	CyArgsList argsList;
-	argsList.add(widgetDataStruct.m_iData1);
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "pediaJumpToUnitChart", argsList.makeFunctionArgs());
+	Cy::call(PYScreensModule, "pediaJumpToUnitChart", Cy::Args(widgetDataStruct.m_iData1));
 }
 
 void CvDLLWidgetData::doPediaImprovementJump(CvWidgetDataStruct &widgetDataStruct, bool bData2)
 {
-	CyArgsList argsList;
-	if (bData2)
-	{
-		argsList.add(widgetDataStruct.m_iData2);
-	}
-	else
-	{
-		argsList.add(widgetDataStruct.m_iData1);
-	}
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "pediaJumpToImprovement", argsList.makeFunctionArgs());
+	Cy::call(PYScreensModule, "pediaJumpToImprovement", Cy::Args(bData2? widgetDataStruct.m_iData2 : widgetDataStruct.m_iData1));
 }
 
 void CvDLLWidgetData::doPediaRouteJump(CvWidgetDataStruct &widgetDataStruct)
 {
-	CyArgsList argsList;
-	argsList.add(widgetDataStruct.m_iData1);
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "pediaJumpToRoute", argsList.makeFunctionArgs());
+	Cy::call(PYScreensModule, "pediaJumpToRoute", Cy::Args(widgetDataStruct.m_iData1));
 }
 
 void CvDLLWidgetData::doPediaCivicJump(CvWidgetDataStruct &widgetDataStruct)
 {
-	CyArgsList argsList;
-	argsList.add(widgetDataStruct.m_iData1);
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "pediaJumpToCivic", argsList.makeFunctionArgs());
+	Cy::call(PYScreensModule, "pediaJumpToCivic", Cy::Args(widgetDataStruct.m_iData1));
 }
 
 void CvDLLWidgetData::doPediaCivilizationJump(CvWidgetDataStruct &widgetDataStruct)
 {
-	CyArgsList argsList;
-	argsList.add(widgetDataStruct.m_iData1);
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "pediaJumpToCiv", argsList.makeFunctionArgs());
+	Cy::call(PYScreensModule, "pediaJumpToCiv", Cy::Args(widgetDataStruct.m_iData1));
 }
 
 void CvDLLWidgetData::doPediaLeaderJump(CvWidgetDataStruct &widgetDataStruct)
 {
-	CyArgsList argsList;
-	argsList.add(widgetDataStruct.m_iData1);
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "pediaJumpToLeader", argsList.makeFunctionArgs());
+	Cy::call(PYScreensModule, "pediaJumpToLeader", Cy::Args(widgetDataStruct.m_iData1));
 }
 
 void CvDLLWidgetData::doPediaDescription(CvWidgetDataStruct &widgetDataStruct)
 {
-	CyArgsList argsList;
-	argsList.add(widgetDataStruct.m_iData1);
-	argsList.add(widgetDataStruct.m_iData2);
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "pediaShowHistorical", argsList.makeFunctionArgs());
+	Cy::call(PYScreensModule, "pediaShowHistorical", Cy::Args(widgetDataStruct.m_iData1, widgetDataStruct.m_iData2));
 }
 
 void CvDLLWidgetData::doPediaBuildJump(CvWidgetDataStruct &widgetDataStruct)
 {
-	CyArgsList argsList;
-
 	ImprovementTypes eImprovement = NO_IMPROVEMENT;
 	BuildTypes eBuild = (BuildTypes)widgetDataStruct.m_iData2;
 	if (NO_BUILD != eBuild)
@@ -2167,8 +2102,7 @@ void CvDLLWidgetData::doPediaBuildJump(CvWidgetDataStruct &widgetDataStruct)
 
 	if (NO_IMPROVEMENT != eImprovement)
 	{
-		argsList.add(eImprovement);
-		PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "pediaJumpToImprovement", argsList.makeFunctionArgs());
+		Cy::call(PYScreensModule, "pediaJumpToImprovement", Cy::Args(eImprovement));
 	}
 }
 
@@ -2211,15 +2145,13 @@ void CvDLLWidgetData::doLaunch(CvWidgetDataStruct &widgetDataStruct)
 
 void CvDLLWidgetData::doForeignAdvisor(CvWidgetDataStruct &widgetDataStruct)
 {
-	CyArgsList argsList;
-	argsList.add(widgetDataStruct.m_iData1);
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "showForeignAdvisorScreen", argsList.makeFunctionArgs());
+	Cy::call(PYScreensModule, "showForeignAdvisorScreen", Cy::Args(widgetDataStruct.m_iData1));
 }
 
 void CvDLLWidgetData::doBuildList(CvWidgetDataStruct &widgetDataStruct)
 {
 	GET_PLAYER(GC.getGameINLINE().getActivePlayer()).m_pBuildLists->setCurrentList(widgetDataStruct.m_iData1);
-	PYTHON_CALL_FUNCTION2(__FUNCTION__, "CvScreensInterface", "showBuildListScreen");
+	Cy::call("CvScreensInterface", "showBuildListScreen");
 }
 
 //
@@ -7071,10 +7003,7 @@ void CvDLLWidgetData::doDealKill(CvWidgetDataStruct &widgetDataStruct)
 
 void CvDLLWidgetData::doRefreshMilitaryAdvisor(CvWidgetDataStruct &widgetDataStruct)
 {
-	CyArgsList argsList;
-	argsList.add(widgetDataStruct.m_iData1);
-	argsList.add(widgetDataStruct.m_iData2);
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYScreensModule, "refreshMilitaryAdvisor", argsList.makeFunctionArgs());
+	Cy::call(PYScreensModule, "refreshMilitaryAdvisor", Cy::Args(widgetDataStruct.m_iData1, widgetDataStruct.m_iData2));
 }
 
 // BUG - Food Rate Hover - start

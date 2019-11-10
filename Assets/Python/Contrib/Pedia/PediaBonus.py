@@ -144,9 +144,9 @@ class PediaBonus:
 		szTxt = ""
 		if iMinLatitude or iMaxLatitude < 90:
 			if not iMinLatitude:
-				szTxt = szfont4b + "<color=200,240,120,255>Exist in latitude: 0&#176  &#187  &#177 " + str(iMaxLatitude) + "&#176"
+				szTxt = szfont4b + "<color=200,240,120,255>" + TRNSLTR.getText("TXT_KEY_PEDIA_LATITUDE", ()) + " 0&#176  &#187  &#177 " + str(iMaxLatitude) + "&#176"
 			else:
-				szTxt = szfont4b + "<color=200,240,120,255>Exist in latitude: &#177 " + str(iMinLatitude) + "&#176  &#187  &#177 " + str(iMaxLatitude) + "&#176"
+				szTxt = szfont4b + "<color=200,240,120,255>" + TRNSLTR.getText("TXT_KEY_PEDIA_LATITUDE", ()) + " &#177 " + str(iMinLatitude) + "&#176  &#187  &#177 " + str(iMaxLatitude) + "&#176"
 		szChange = ""
 		for k in range(eNumYieldTypes):
 			iYieldChange = CvTheBonusInfo.getYieldChange(k)

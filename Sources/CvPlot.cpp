@@ -3347,15 +3347,12 @@ long CvPlot::canBuildFromPythonInternal(BuildTypes eBuild, PlayerTypes ePlayer) 
 {
 	PROFILE_FUNC();
 
-	CyArgsList argsList;
-	argsList.add(getX_INLINE());
-	argsList.add(getY_INLINE());
-	argsList.add((int)eBuild);
-	argsList.add((int)ePlayer);
-	long lResult=0;
-	PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "canBuild", argsList.makeFunctionArgs(), &lResult);
-
-	return lResult;
+	return Cy::call<long>(PYGameModule, "canBuild", Cy::Args()
+		<< getX_INLINE()
+		<< getY_INLINE()
+		<< eBuild
+		<< ePlayer
+	);
 }
 
 bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible, bool bIncludePythonOverrides) const
@@ -10332,12 +10329,11 @@ int CvPlot::getFoundValue(PlayerTypes eIndex)
 		long lResult=-1;
 		if(GC.getUSE_GET_CITY_FOUND_VALUE_CALLBACK())
 		{
-
-			CyArgsList argsList;
-			argsList.add((int)eIndex);
-			argsList.add(getX());
-			argsList.add(getY());
-			PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "getCityFoundValue", argsList.makeFunctionArgs(), &lResult);
+			Cy::call<long>(PYGameModule, "getCityFoundValue", Cy::Args()
+				<< eIndex
+				<< getX()
+				<< getY()
+			);
 		}
 
 		if (lResult == -1)
@@ -10346,7 +10342,7 @@ int CvPlot::getFoundValue(PlayerTypes eIndex)
 		}
 		else
 		{
-			setFoundValue(eIndex,lResult);
+			setFoundValue(eIndex, lResult);
 		}
 
 		if ( area()->hasBestFoundValue(eIndex) && (int) m_aiFoundValue[eIndex] > area()->getBestFoundValue(eIndex))
@@ -16404,25 +16400,12 @@ int CvPlot::getNumVisibleAdjacentEnemyDefenders(const CvUnit* pUnit) const
 
 void CvPlot::addSign(PlayerTypes ePlayer, CvWString szMessage)
 {
-
-	CyArgsList argsList;
-	CyPlot* pyPlot = new CyPlot(this);
-	argsList.add(gDLL->getPythonIFace()->makePythonObject(pyPlot));
-	argsList.add(ePlayer);
-	argsList.add(szMessage.GetCString());
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYCivModule, "AddSign", argsList.makeFunctionArgs());
-	delete pyPlot;
+	Cy::call(PYCivModule, "AddSign", Cy::Args() << this << ePlayer << szMessage.GetCString());
 }
 
 void CvPlot::removeSign(PlayerTypes ePlayer)
 {
-
-	CyArgsList argsList;
-	CyPlot* pyPlot = new CyPlot(this);
-	argsList.add(gDLL->getPythonIFace()->makePythonObject(pyPlot));
-	argsList.add(ePlayer);
-	PYTHON_CALL_FUNCTION(__FUNCTION__, PYCivModule, "RemoveSign", argsList.makeFunctionArgs());
-	delete pyPlot;
+	Cy::call(PYCivModule, "RemoveSign", Cy::Args() << this << ePlayer);
 }
 
 void CvPlot::removeSignForAllPlayers()

@@ -12,3 +12,5 @@ It is the spiritual successor the The Civilization 4 mod Rise of Mankind and its
 past and present modders to create a mod to "rule them all". 
 
 It is currently being developed by StrategyOnly Productions with a modding team made up of prominent members of [CivFanatics.com](https://www.civfanatics.com).
+
+### Players: please use either the latest [stable release on moddb](https://www.moddb.com/mods/caveman2cosmos/downloads), or the [SVN alpha release](https://github.com/caveman2cosmos/Caveman2Cosmos/wiki/Using-SVN) if you want to help test cutting edge functionality.

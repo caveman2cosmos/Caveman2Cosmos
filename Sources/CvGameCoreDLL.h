@@ -207,7 +207,6 @@ namespace python = boost::python;
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLXMLIFaceBase.h"
 
-//jason tests
 #include "CvGameCoreUtils.h"
 #include "CvXMLLoadUtility.h"
 #include "CvInitCore.h"
@@ -234,6 +233,7 @@ namespace python = boost::python;
 #include "FProfiler.h"
 #include "CvPathGenerator.h"
 #include "CvBugOptions.h"
+#include "CvPython.h"
 
 #include "CyGlobalContext.h"
 #include "CyArtFileMgr.h"

@@ -5601,15 +5601,7 @@ void cvInternalGlobals::reprocessSigns()
 {
 	if ( m_bSignsCleared )
 	{
-
-		CyArgsList argsList;
-		CyPlot* pyPlot = new CyPlot(NULL);
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyPlot));
-		argsList.add(NO_PLAYER);
-		argsList.add("");
-		PYTHON_CALL_FUNCTION(__FUNCTION__, PYCivModule, "AddSign", argsList.makeFunctionArgs());
-		delete pyPlot;
-
+		Cy::call(PYCivModule, "AddSign", Cy::Args() << (CvPlot*)NULL << NO_PLAYER << "");
 		m_bSignsCleared = false;
 	}
 }

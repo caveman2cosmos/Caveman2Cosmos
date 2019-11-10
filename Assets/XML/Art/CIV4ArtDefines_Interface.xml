@@ -6740,5 +6740,28 @@
 			<Type>ART_DEF_GREAT_PERSON_MARK_ANTONY</Type>
 			<Path>Art/interface/great_people/MARK_ANTONY.dds</Path>
 		</InterfaceArtInfo>
+		<!-- Unit filters -->
+		<!-- Building filters -->
+		<InterfaceArtInfo>
+			<Type>ART_DEF_FILTER_SHOW_HAPPY</Type>
+			<Path>Art/Interface/buttons/filters/show_happy.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>ART_DEF_FILTER_HIDE_UNHAPPY</Type>
+			<Path>Art/Interface/buttons/filters/hide_unhappy.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>ART_DEF_FILTER_SHOW_HEALTH</Type>
+			<Path>Art/Interface/buttons/filters/show_health.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>ART_DEF_FILTER_HIDE_UNHEALTH</Type>
+			<Path>Art/Interface/buttons/filters/hide_unhealth.dds</Path>
+		</InterfaceArtInfo>
+		<!-- Filters -->
+		<InterfaceArtInfo>
+			<Type>ART_DEF_FILTER_SHOW_MILITARY</Type>
+			<Path>Art/Interface/buttons/filters/show_military.dds</Path>
+		</InterfaceArtInfo>
 	</InterfaceArtInfos>
 </Civ4ArtDefines>

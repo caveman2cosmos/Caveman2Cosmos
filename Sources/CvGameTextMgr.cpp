@@ -39082,14 +39082,7 @@ void CvGameTextMgr::setEventHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, i
 
 	if (!CvWString(kEvent.getPythonHelp()).empty())
 	{
-
-		CvWString szHelp;
-		CyArgsList argsList;
-		argsList.add(eEvent);
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pTriggeredData));
-
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYRandomEventModule, kEvent.getPythonHelp(), argsList.makeFunctionArgs(), &szHelp);
-
+		CvWString szHelp = Cy::call<CvWString>(PYRandomEventModule, kEvent.getPythonHelp(), Cy::Args() << eEvent << pTriggeredData);
 		szBuffer.append(NEWLINE);
 		szBuffer.append(szHelp);
 	}

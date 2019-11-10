@@ -444,6 +444,15 @@
     <ClCompile Include="CvPlotPaging.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Win32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CvPython.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StackWalker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BetterBTSAI.h">
@@ -864,6 +873,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvPlotPaging.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Win32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CvPython.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StackWalker.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

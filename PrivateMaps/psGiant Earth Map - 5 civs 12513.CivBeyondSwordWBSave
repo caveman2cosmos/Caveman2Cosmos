@@ -28,252 +28,202 @@ EndGame
 BeginTeam
 	TeamID=0
 	ContactWithTeam=0
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=1
 	ContactWithTeam=1
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=2
 	ContactWithTeam=2
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=3
 	ContactWithTeam=3
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=4
 	ContactWithTeam=4
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=5
 	ContactWithTeam=5
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=6
 	ContactWithTeam=6
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=7
 	ContactWithTeam=7
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=8
 	ContactWithTeam=8
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=9
 	ContactWithTeam=9
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=10
 	ContactWithTeam=10
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=11
 	ContactWithTeam=11
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=12
 	ContactWithTeam=12
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=13
 	ContactWithTeam=13
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=14
 	ContactWithTeam=14
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=15
 	ContactWithTeam=15
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=16
 	ContactWithTeam=16
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=17
 	ContactWithTeam=17
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=18
 	ContactWithTeam=18
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=19
 	ContactWithTeam=19
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=20
 	ContactWithTeam=20
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=21
 	ContactWithTeam=21
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=22
 	ContactWithTeam=22
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=23
 	ContactWithTeam=23
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=24
 	ContactWithTeam=24
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=25
 	ContactWithTeam=25
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=26
 	ContactWithTeam=26
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=27
 	ContactWithTeam=27
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=28
 	ContactWithTeam=28
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=29
 	ContactWithTeam=29
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=30
 	ContactWithTeam=30
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=31
 	ContactWithTeam=31
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=32
 	ContactWithTeam=32
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=33
 	ContactWithTeam=33
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=34
 	ContactWithTeam=34
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=35
 	ContactWithTeam=35
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=36
 	ContactWithTeam=36
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=37
 	ContactWithTeam=37
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=38
 	ContactWithTeam=38
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=39
 	ContactWithTeam=39
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=40
 	ContactWithTeam=40
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=41
 	ContactWithTeam=41
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=42
 	ContactWithTeam=42
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=43
 	ContactWithTeam=43
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=44
 	ContactWithTeam=44
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=45
 	ContactWithTeam=45
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=46
 	ContactWithTeam=46
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=47
 	ContactWithTeam=47
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=48
 	ContactWithTeam=48
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=49
 	ContactWithTeam=49
-	RevealMap=0
 EndTeam
 BeginPlayer
 	Team=0

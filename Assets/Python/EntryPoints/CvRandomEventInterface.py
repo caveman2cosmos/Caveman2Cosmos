@@ -5136,144 +5136,74 @@ def applyBlackbeard1(argsList):
 ######## PIRATES_OF_THE_NEUTRAL_ZONES ###########
 
 def canTriggerPiratesoftheNeutralZones(argsList):
+	# If Barbarians are disabled in this game, this event will not occur.
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+		return False
 
-  kTriggeredData = argsList[0]
-  pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
-  map = GC.getMap()
+	# At least one civ on the board must know Stealth
+	iTech = GC.getInfoTypeForString("TECH_STEALTH")
+	for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
+		CyPlayerX = GC.getPlayer(iPlayerX)
+		if CyPlayerX.isAlive():
+			if GC.getTeam(CyPlayerX.getTeam()).isHasTech(iTech):
+				break
+	else: return False
 
-#   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
-    return False
+	# Compare player vs pirate strength
+	iPlayer = argsList[0].ePlayer
+	CyPlayer = GC.getPlayer(iPlayer)
+	iNavy = 0
+	CyUnit, i = CyPlayer.firstUnit(False)
+	while CyUnit:
+		if CyUnit.getDomainType() == DomainTypes.DOMAIN_SEA:
+			iNavy += CyUnit.baseCombatStr()
+		CyUnit, i = CyPlayer.nextUnit(i, False)
 
-###     kTriggeredData.ePlayer must have less than a variable number of combat ships based on map size
-###     Galleys & Triremes & Galleons/East Indiamen & Caravels/Carracks & Transports & privateers
-###     & frigates & ships of the line & Ironclads don't count.
+	iPirate = GC.CvUnitInfo(GC.getInfoTypeForString("UNIT_STEALTH_DESTROYER")).getCombat()
 
-  iDestroyer = GC.getInfoTypeForString("UNITCLASS_DESTROYER")
-  iBattleship = GC.getInfoTypeForString("UNITCLASS_BATTLESHIP")
-  iCarrier = GC.getInfoTypeForString("UNITCLASS_CARRIER")
-  iStealth = GC.getInfoTypeForString("UNITCLASS_STEALTH_DESTROYER")
-  iMissile = GC.getInfoTypeForString("UNITCLASS_MISSILE_CRUISER")
-  iBoomer = GC.getInfoTypeForString("UNITCLASS_SUBMARINE")
-  iSeawolf = GC.getInfoTypeForString("UNITCLASS_ATTACK_SUBMARINE")
+	MAP = GC.getMap()
+	iPirate = (MAP.getWorldSize() + 1 + 2*(GC.getPlayer(iPlayer).getHandicapType() + 1)) * iPirate - iPirate
+	if iNavy > iPirate:
+		return False
 
+	# Find an eligible plot
+	for i in xrange(MAP.numPlots()):
+		plot = MAP.plotByIndex(i)
+		if plot.getOwner() == -1 and plot.isWater() and not plot.isImpassable() and not plot.isLake() and plot.isAdjacentPlayer(iPlayer, True) and not plot.getNumUnits():
+			break
+	else: return False
 
-  pPlayerDD = pPlayer.getUnitClassCount(iDestroyer)
-  pPlayerBB = pPlayer.getUnitClassCount(iBattleship)
-  pPlayerCV = pPlayer.getUnitClassCount(iCarrier)
-  pPlayerSDD = pPlayer.getUnitClassCount(iStealth)
-  pPlayerMC = pPlayer.getUnitClassCount(iMissile)
-  pPlayerSSN = pPlayer.getUnitClassCount(iSeawolf)
-  pPlayerSSBN = pPlayer.getUnitClassCount(iBoomer)
-  pAggregate =  pPlayerDD + pPlayerBB + pPlayerCV + pPlayerSDD + pPlayerMC + pPlayerSSN + pPlayerSSBN
-
-  if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
-    if pAggregate > 5:
-      return False
-  elif map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_TINY"):
-    if pAggregate > 6:
-      return False
-  elif map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_SMALL"):
-    if pAggregate > 7:
-      return False
-  elif map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_STANDARD"):
-    if pAggregate > 8:
-      return False
-  elif map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_LARGE"):
-    if pAggregate > 9:
-      return False
-  else:
-    if pAggregate > 10:
-      return False
-
-#   At least one civ on the board must know Stealth
-  bFoundValid = False
-  iTech = GC.getInfoTypeForString("TECH_STEALTH")
-  for iPlayer in xrange(GC.getMAX_PC_PLAYERS()):
-    loopPlayer = GC.getPlayer(iPlayer)
-    if loopPlayer.isAlive():
-      if GC.getTeam(loopPlayer.getTeam()).isHasTech(iTech):
-        bFoundValid = True
-        break
-
-  if not bFoundValid:
-    return False
-
-
-#   At least one civ on the board must know Robotics
-  bFoundValid = False
-  iTech = GC.getInfoTypeForString("TECH_ROBOTICS")
-  for iPlayer in xrange(GC.getMAX_PC_PLAYERS()):
-    loopPlayer = GC.getPlayer(iPlayer)
-    if loopPlayer.isAlive():
-      if GC.getTeam(loopPlayer.getTeam()).isHasTech(iTech):
-        bFoundValid = True
-        break
-
-  if not bFoundValid:
-    return False
-
-# Find an eligible plot
-  map = GC.getMap()
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
-    if (plot.getOwner() == -1 and plot.isWater() and not plot.isImpassable() and not plot.getNumUnits() > 0 and not plot.isLake() and plot.isAdjacentPlayer(kTriggeredData.ePlayer, True)):
-      return True
-
-  return False
-
+	return True
 
 def getHelpPiratesoftheNeutralZones1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_PIRATES_OF_THE_NEUTRAL_ZONES_HELP_1", ())
-
-  return szHelp
+	return TRNSLTR.getText("TXT_KEY_EVENT_PIRATES_OF_THE_NEUTRAL_ZONES_HELP_1", ())
 
 def applyPiratesoftheNeutralZones1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
+	iPlayer = argsList[1].ePlayer
 
-  listPlots = []
-  map = GC.getMap()
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
-    if (plot.getOwner() == -1 and plot.isWater() and not plot.isImpassable() and not plot.getNumUnits() > 0 and not plot.isLake() and plot.isAdjacentPlayer(kTriggeredData.ePlayer, True)):
-      listPlots.append(i)
+	plots = []
+	MAP = GC.getMap()
+	for i in xrange(MAP.numPlots()):
+		plot = MAP.plotByIndex(i)
+		if plot.getOwner() == -1 and plot.isWater() and not plot.isImpassable() and not plot.isLake() and plot.isAdjacentPlayer(iPlayer, True) and not plot.getNumUnits():
+			plots.append(plot)
 
-  if 0 == len(listPlots):
-    return
+	if not plots:
+		return
 
-  plot = map.plotByIndex(listPlots[GAME.getSorenRandNum(len(listPlots), "PiratesoftheNeutralZones event location")])
+	plot = plots[GAME.getSorenRandNum(len(plots), "PiratesoftheNeutralZones event location")]
 
-  if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
-    iNumUnit1  = 4
-  elif map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_TINY"):
-    iNumUnit1  = 5
-  elif map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_SMALL"):
-    iNumUnit1  = 6
-  elif map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_STANDARD"):
-    iNumUnit1  = 7
-  elif map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_LARGE"):
-    iNumUnit1  = 8
-  else:
-    iNumUnit1  = 9
+	iNumUnits = MAP.getWorldSize() + 1 + 2*(GC.getPlayer(iPlayer).getHandicapType() + 1)
 
-  iUnitType1 = GC.getInfoTypeForString("UNIT_STEALTH_DESTROYER")
-  barbPlayer = GC.getPlayer(GC.getBARBARIAN_PLAYER())
-  iNav1 = GC.getInfoTypeForString("PROMOTION_NAVIGATION1")
-  unit = i in xrange(iNumUnit1)
-  for i in xrange(iNumUnit1):
-    barbPlayer.initUnit(iUnitType1, plot.getX(), plot.getY(), UnitAITypes.UNITAI_ATTACK_SEA, DirectionTypes.DIRECTION_SOUTH)
-
-  (loopUnit, iter) = barbPlayer.firstUnit(False)
-  while (loopUnit):
-    if loopUnit.getUnitType() == iUnitType1:
-      loopUnit.setHasPromotion(iNav1, True)
-      loopUnit.setName("Pirate Corvette")
-    (loopUnit, iter) = barbPlayer.nextUnit(iter, False)
+	iUnit = GC.getInfoTypeForString("UNIT_STEALTH_DESTROYER")
+	iNav = GC.getInfoTypeForString("PROMOTION_NAVIGATION1")
+	barbarian = GC.getPlayer(GC.getBARBARIAN_PLAYER())
+	x = plot.getX()
+	y = plot.getY()
+	for i in xrange(iNumUnits):
+		CyUnit = barbarian.initUnit(iUnit, x, y, UnitAITypes.UNITAI_ATTACK_SEA, DirectionTypes.DIRECTION_SOUTH)
+		CyUnit.setHasPromotion(iNav, True)
+		CyUnit.setName("Pirate Corvette")
 
 
 ######## MALACCAN_PIRATES ###########
@@ -8970,31 +8900,40 @@ def doRemoveWVSlavery(argsList):
 
 
 def doRemoveWVCannibalism(argsList):
-	pUnit = argsList[0]
+	CyUnit = argsList[0]
 
-	if pUnit == None:
+	if CyUnit == None:
+		print "[INFO] doRemoveWVCannibalism(CyUnit) where CyUnit is None"
 		return # False call
 
-	pPlayer = GC.getPlayer( pUnit.getOwner( ) )
-	iPlayer = pPlayer.getID( )
-	civ = GC.getCivilizationInfo(pPlayer.getCivilizationType())
+	iType = GC.getInfoTypeForString("BUILDING_WV_CANNIBALISM")
+	if iType > -1:
+		iPlayer = CyUnit.getOwner()
+		CyPlayer = GC.getPlayer(iPlayer)
+		CyCity = CyPlayer.getCapitalCity()
+		if CyCity.isNone():
+			print "[INFO] doRemoveWVCannibalism(args) happened for a player with no cities"
+		else:
+			iType0 = GC.getInfoTypeForString("BUILDING_CANNIBALISM")
+			iType1 = GC.getInfoTypeForString("BUILDING_CANNIBALISM_BAD_I")
+			iType2 = GC.getInfoTypeForString("BUILDING_CANNIBALISM_BAD_II")
+			iType3 = GC.getInfoTypeForString("BUILDING_CANNIBALISM_BAD_III")
+			CyCity, i = CyPlayer.firstCity(False)
+			while CyCity:
+				CyCity.setNumRealBuilding(iType, 0)
+				if iType0 > -1:
+					CyCity.setNumRealBuilding(iType0, 0)
+				if iType1 > -1:
+					CyCity.setNumRealBuilding(iType1, 0)
+				if iType2 > -1:
+					CyCity.setNumRealBuilding(iType2, 0)
+				if iType3 > -1:
+					CyCity.setNumRealBuilding(iType3, 0)
+				CyCity, i = CyPlayer.nextCity(i, False)
 
-	if not pPlayer.isAlive():
-		return
-
-	iWVCannibalism = GC.getInfoTypeForString("BUILDING_WV_CANNIBALISM")
-	if iWVCannibalism > -1:
-		(loopCity, iter) = pPlayer.firstCity(False)
-		while(loopCity):
-			if loopCity.getNumActiveBuilding(iWVCannibalism) > 0:
-
-				iType = civ.getCivilizationBuildings(GC.getBuildingInfo(iWVCannibalism).getBuildingClassType())
-				loopCity.setNumRealBuilding(iType, 0)
+			if iPlayer == GC.getGame().getActivePlayer():
+				CvUtil.sendImmediateMessage(TRNSLTR.getText("TXT_KEY_MESSAGE_NO_CANNIBALISM", ()))
 				CyAudioGame().Play2DSound("AS2D_DISCOVERBONUS")
-
-				CyInterface().addMessage(iPlayer,False,25,TRNSLTR.getText("TXT_KEY_MESSAGE_NO_CANNIBALISM",(loopCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(8),loopCity.getX(),loopCity.getY(),True,True)
-				break
-		(loopCity, iter) = pPlayer.nextCity(iter, False)
 
 def doRemoveWVHumanSacrifice(argsList):
 	pUnit = argsList[0]

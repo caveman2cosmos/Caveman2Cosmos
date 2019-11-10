@@ -1640,14 +1640,7 @@ bool CvTeam::canDeclareWar(TeamTypes eTeam) const
 
 	if(GC.getUSE_CAN_DECLARE_WAR_CALLBACK())
 	{
-
-		CyArgsList argsList;
-		argsList.add(getID());	// Team ID
-		argsList.add(eTeam);	// pass in city class
-		long lResult=0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "canDeclareWar", argsList.makeFunctionArgs(), &lResult);
-
-		if (lResult == 0)
+		if (!Cy::call<bool>(PYGameModule, "canDeclareWar", Cy::Args() << getID() << eTeam))
 		{
 			return false;
 		}
@@ -1699,14 +1692,7 @@ bool CvTeam::canEventuallyDeclareWar(TeamTypes eTeam) const
 
 	if(GC.getUSE_CAN_DECLARE_WAR_CALLBACK())
 	{
-
-		CyArgsList argsList;
-		argsList.add(getID());	// Team ID
-		argsList.add(eTeam);	// pass in city class
-		long lResult=0;
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "canDeclareWar", argsList.makeFunctionArgs(), &lResult);
-
-		if (lResult == 0)
+		if (!Cy::call<bool>(PYGameModule, "canDeclareWar", Cy::Args() << getID() << eTeam))
 		{
 			return false;
 		}
@@ -6806,15 +6792,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 
 				if(GC.getGameINLINE().countKnownTechNumTeams(eIndex) == 1)
 				{
-
-					CyArgsList argsList;
-					argsList.add(getID());
-					argsList.add(ePlayer);
-					argsList.add(eIndex);
-					argsList.add(bFirst);
-					long lResult=0;
-					PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doHolyCityTech", argsList.makeFunctionArgs(), &lResult);
-					if (lResult != 1)
+					if (!Cy::call<bool>(PYGameModule, "doHolyCityTech", Cy::Args() << getID() << ePlayer << eIndex << bFirst))
 					{
 						if(!GC.getGameINLINE().isOption(GAMEOPTION_LIMITED_RELIGIONS))
 						{
@@ -6970,20 +6948,12 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 			}
 			if(GC.getGameINLINE().isTechCanFoundReligion(eIndex) && GC.getGameINLINE().isOption(GAMEOPTION_LIMITED_RELIGIONS)
 #ifdef C2C_BUILD
-			&& !GC.getGameINLINE().isOption(GAMEOPTION_DIVINE_PROPHETS))
+				&& !GC.getGameINLINE().isOption(GAMEOPTION_DIVINE_PROPHETS))
 #else
-			)			
+				)
 #endif
 			{
-
-				CyArgsList argsList;
-				argsList.add(getID());
-				argsList.add(ePlayer);
-				argsList.add(eIndex);
-				argsList.add(bFirst);
-				long lResult=0;
-				PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doHolyCityTech", argsList.makeFunctionArgs(), &lResult);
-				if (lResult != 1)
+				if (!Cy::call<bool>(PYGameModule, "doHolyCityTech", Cy::Args() << getID() << ePlayer << eIndex << bFirst))
 				{
 					for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
 					{
@@ -7006,19 +6976,17 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 										{
 											iValue += (kPlayer.getHasReligionCount((ReligionTypes)iK) * 10);
 										}
-											if (kPlayer.getCurrentResearch() != eIndex)
-											{
-												iValue *= 10;
-											}
+										if (kPlayer.getCurrentResearch() != eIndex)
+										{
+											iValue *= 10;
+										}
 	
-											if (iValue < iBestValue)
-											{
-												iBestValue = iValue;
-												eBestPlayer = ((PlayerTypes)iJ);
-												eReligion = ReligionTypes(iI);
-											}
-									
-								
+										if (iValue < iBestValue)
+										{
+											iBestValue = iValue;
+											eBestPlayer = ((PlayerTypes)iJ);
+											eReligion = ReligionTypes(iI);
+										}
 
 										if (eBestPlayer != NO_PLAYER)
 										{
@@ -7071,6 +7039,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 					}
 				}
 			}
+
 /************************************************************************************************/
 /* REVDCM                                  END                                                  */
 /************************************************************************************************/

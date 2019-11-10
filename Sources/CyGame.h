@@ -396,7 +396,7 @@ public:
 /*                                                                                              */
 /************************************************************************************************/
 	int getCutLosersCounter() const;
-    int getHighToLowCounter() const;
+	int getHighToLowCounter() const;
 	bool cheatCodesEnabled();
 	void setVictoryValid(int iVictory, bool bNewVal);
 	bool isModderGameOption(int /*ModderGameOptionTypes*/ eIndex);	

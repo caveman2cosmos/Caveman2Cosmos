@@ -1,12 +1,5 @@
 #pragma once
 
-#ifndef CyCity_h
-#define CyCity_h
-//
-// Python wrapper class for CvCity 
-// 
-
-//#include "CvEnums.h"
 #include <string>
 #ifndef __INTELLISENSE__
 #include <boost/python/tuple.hpp>
@@ -19,6 +12,10 @@ class CvProperties;
 class CyPlot;
 class CyArea;
 class CyUnit;
+
+//
+// Python wrapper class for CvCity 
+// 
 class CyCity
 {
 public:
@@ -742,4 +739,4 @@ private:
 	CvCity* m_pCity;
 };
 
-#endif	// CyCity_h
+DECLARE_PY_WRAPPER(CyCity, CvCity*);

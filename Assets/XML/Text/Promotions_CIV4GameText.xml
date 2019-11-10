@@ -8802,6 +8802,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INVISIBILE_PLOT_CHANGE_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Mod %F2_Icon Veil on %s3_Type.</English>
+		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Unsichtbarkeit %s3_Type.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INVISIBILITY_INTENSITY_CHANGE_TEXT</Tag>
