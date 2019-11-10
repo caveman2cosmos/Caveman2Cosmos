@@ -2841,6 +2841,32 @@ int CvTeam::getNumNukeUnits() const
 	return iCount;
 }
 
+bool CvTeam::isUnitPrereqOrBonusesMet(const CvUnitInfo& unit) const
+{
+	bool bFound = false;
+	bool bRequires = false;
+	for (int i = 0; i < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); ++i)
+	{
+		if (NO_BONUS != unit.getPrereqOrBonuses(i))
+		{
+			TechTypes eTech = (TechTypes)GC.getBonusInfo((BonusTypes)unit.getPrereqOrBonuses(i)).getTechCityTrade();
+			if (NO_TECH != eTech)
+			{
+				bRequires = true;
+
+				if (isHasTech(eTech))
+				{
+					bFound = true;
+					break;
+				}
+			}
+		}
+	}
+
+	return !bRequires || bFound;
+}
+
+
 int CvTeam::getVotes(VoteTypes eVote, VoteSourceTypes eVoteSource) const
 {
 	int iCount = 0;

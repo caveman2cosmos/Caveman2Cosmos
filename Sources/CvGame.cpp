@@ -8078,107 +8078,85 @@ void CvGame::doGlobalWarming()
 
 void CvGame::doHolyCity()
 {
-	PlayerTypes eBestPlayer;
-	TeamTypes eBestTeam;
-	int iValue;
-	int iBestValue;
-	int iI, iJ, iK;
-
 	if (Cy::call<bool>(PYGameModule, "doHolyCity"))
 	{
 		return;
 	}
 
-/************************************************************************************************/
-/* RevDCM	                  Start		09/08/10                                                */
-/*                                                                                              */
-/* OC_LIMITED_RELIGIONS                                                                         */
-/************************************************************************************************/
 	if (isGameStart())
 	{
 		doHolyCityGameStart();
 		return;
 	}
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
 
 	int iRandOffset = getSorenRandNum(GC.getNumReligionInfos(), "Holy City religion offset");
-	for (int iLoop = 0; iLoop < GC.getNumReligionInfos(); ++iLoop)
+	int numReligions = GC.getNumReligionInfos();
+	for (int iLoop = 0; iLoop < numReligions; ++iLoop)
 	{
-		iI = ((iLoop + iRandOffset) % GC.getNumReligionInfos());
+		int iI = (iLoop + iRandOffset) % numReligions;
 
 		if (!isReligionSlotTaken((ReligionTypes)iI))
 		{
-			iBestValue = MAX_INT;
-			eBestTeam = NO_TEAM;
-
-			for (iJ = 0; iJ < MAX_TEAMS; iJ++)
+			TeamTypes eBestTeam = NO_TEAM;
+			int bestTeamValue = MAX_INT;
+			for (int iJ = 0; iJ < MAX_TEAMS; iJ++)
 			{
-				if (GET_TEAM((TeamTypes)iJ).isAlive())
+				if (GET_TEAM((TeamTypes)iJ).isAlive()
+					&& GET_TEAM((TeamTypes)iJ).isHasTech((TechTypes)(GC.getReligionInfo((ReligionTypes)iI).getTechPrereq()))
+					&& GET_TEAM((TeamTypes)iJ).getNumCities() > 0)
 				{
-					if (GET_TEAM((TeamTypes)iJ).isHasTech((TechTypes)(GC.getReligionInfo((ReligionTypes)iI).getTechPrereq())))
+					int iValue = getSorenRandNum(10, "Found Religion (Team)");
+
+					for (int iK = 0; iK < GC.getNumReligionInfos(); iK++)
 					{
-						if (GET_TEAM((TeamTypes)iJ).getNumCities() > 0)
+						int iReligionCount = GET_TEAM((TeamTypes)iJ).getHasReligionCount((ReligionTypes)iK);
+
+						if (iReligionCount > 0)
 						{
-							iValue = getSorenRandNum(10, "Found Religion (Team)");
-
-							for (iK = 0; iK < GC.getNumReligionInfos(); iK++)
-							{
-								int iReligionCount = GET_TEAM((TeamTypes)iJ).getHasReligionCount((ReligionTypes)iK);
-
-								if (iReligionCount > 0)
-								{
-									iValue += iReligionCount * 20;
-								}
-							}
-
-							if (iValue < iBestValue)
-							{
-								iBestValue = iValue;
-								eBestTeam = ((TeamTypes)iJ);
-							}
+							iValue += iReligionCount * 20;
 						}
+					}
+
+					if (iValue < bestTeamValue)
+					{
+						bestTeamValue = iValue;
+						eBestTeam = ((TeamTypes)iJ);
 					}
 				}
 			}
 
 			if (eBestTeam != NO_TEAM)
 			{
-				iBestValue = MAX_INT;
-				eBestPlayer = NO_PLAYER;
+				int bestPlayerValue = MAX_INT;
+				PlayerTypes eBestPlayer = NO_PLAYER;
 
-				for (iJ = 0; iJ < MAX_PLAYERS; iJ++)
+				for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
 				{
-					if (GET_PLAYER((PlayerTypes)iJ).isAlive())
+					if (GET_PLAYER((PlayerTypes)iJ).isAlive()
+						&& GET_PLAYER((PlayerTypes)iJ).getTeam() == eBestTeam
+						&& GET_PLAYER((PlayerTypes)iJ).getNumCities() > 0)
 					{
-						if (GET_PLAYER((PlayerTypes)iJ).getTeam() == eBestTeam)
+						int iValue = getSorenRandNum(10, "Found Religion (Player)");
+
+						if (!(GET_PLAYER((PlayerTypes)iJ).isHuman()))
 						{
-							if (GET_PLAYER((PlayerTypes)iJ).getNumCities() > 0)
+							iValue += 10;
+						}
+
+						for (int iK = 0; iK < numReligions; iK++)
+						{
+							int iReligionCount = GET_PLAYER((PlayerTypes)iJ).getHasReligionCount((ReligionTypes)iK);
+
+							if (iReligionCount > 0)
 							{
-								iValue = getSorenRandNum(10, "Found Religion (Player)");
-
-								if (!(GET_PLAYER((PlayerTypes)iJ).isHuman()))
-								{
-									iValue += 10;
-								}
-
-								for (iK = 0; iK < GC.getNumReligionInfos(); iK++)
-								{
-									int iReligionCount = GET_PLAYER((PlayerTypes)iJ).getHasReligionCount((ReligionTypes)iK);
-
-									if (iReligionCount > 0)
-									{
-										iValue += iReligionCount * 20;
-									}
-								}
-
-								if (iValue < iBestValue)
-								{
-									iBestValue = iValue;
-									eBestPlayer = ((PlayerTypes)iJ);
-								}
+								iValue += iReligionCount * 20;
 							}
+						}
+
+						if (iValue < bestPlayerValue)
+						{
+							bestPlayerValue = iValue;
+							eBestPlayer = ((PlayerTypes)iJ);
 						}
 					}
 				}
@@ -8192,20 +8170,10 @@ void CvGame::doHolyCity()
 						eReligion = GET_PLAYER(eBestPlayer).AI_chooseReligion();
 					}
 
-					if (NO_RELIGION != eReligion)
+					if (NO_RELIGION != eReligion 
+						&& GET_PLAYER(eBestPlayer).canFoundReligion())
 					{
-/************************************************************************************************/
-/* RevDCM	                  Start		 4/29/10                                                */
-/*                                                                                              */
-/* OC_LIMITED_RELIGIONS                                                                         */
-/************************************************************************************************/
-						if(GET_PLAYER(eBestPlayer).canFoundReligion())
-						{
-							GET_PLAYER(eBestPlayer).foundReligion(eReligion, (ReligionTypes)iI, false);
-						}
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
+						GET_PLAYER(eBestPlayer).foundReligion(eReligion, (ReligionTypes)iI, false);
 					}
 				}
 			}
@@ -8843,23 +8811,111 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 	}
 }
 
+namespace {
+	bool isHeroUnit(const CvUnitInfo& unitInfo, const UnitClassTypes& unitClassType)
+	{
+		const UnitCombatTypes eHero = (UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_HERO");
+		return unitInfo.hasUnitCombat(eHero)
+			|| GC.getUnitClassInfo(unitClassType).getMaxGlobalInstances() > 0
+			|| GC.getUnitClassInfo(unitClassType).getMaxPlayerInstances() > 0
+			|| GC.getUnitClassInfo(unitClassType).getMaxTeamInstances() > 0;
+	}
+
+	bool isValidBarbarianSpawnUnit(const CvArea* area, const CvUnitInfo& unitInfo, const UnitTypes unitType, const UnitClassTypes unitClass)
+	{
+		return unitInfo.getCombat() > 0
+			&& !unitInfo.isOnlyDefensive()
+			// Make sure its the correct unit type for the area type (land or water)
+			&& ((area->isWater() && unitInfo.getDomainType() == DOMAIN_SEA) || (!area->isWater() && unitInfo.getDomainType() == DOMAIN_LAND))
+			&& GET_PLAYER(BARBARIAN_PLAYER).canTrain(unitType)
+			// Either has no pre-requisites, or they are met
+			&& (unitInfo.getPrereqAndBonus() == NO_BONUS || GET_TEAM(BARBARIAN_TEAM).isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)unitInfo.getPrereqAndBonus()).getTechCityTrade()))
+			// Need to ignore pre-requisite buildings or no ships can be built
+			// && unitInfo.getPrereqBuilding() == NO_BUILDING
+			// Another attempt to deny the spawning of barb heroes.
+			&& !isHeroUnit(unitInfo, unitClass)
+			&& GET_TEAM(BARBARIAN_TEAM).isUnitPrereqOrBonusesMet(unitInfo)
+			;
+	}
+
+	bool barbarianCityShouldSpawnWorker(CvGame* game, CvCity* city)
+	{
+		return ((city->getPopulation() > 1) || (game->getGameTurn() - city->getGameTurnAcquired()) > (10 * GC.getGameSpeedInfo(game->getGameSpeedType()).getTrainPercent()) / 100)
+			&& city->AI_getWorkersHave() == 0
+			&& city->AI_getWorkersNeeded() > 0
+			&& (7 * city->getPopulation()) > game->getSorenRandNum(100, "Barb - workers");
+	}
+
+
+	int countPlayerShipsInArea(CvArea* area)
+	{
+		int iPlayerSeaUnits = 0;
+		for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
+		{
+			if (GET_PLAYER((PlayerTypes)iI).isAlive())
+			{
+				iPlayerSeaUnits += GET_PLAYER((PlayerTypes)iI).AI_totalWaterAreaUnitAIs(area, UNITAI_ATTACK_SEA);
+				iPlayerSeaUnits += GET_PLAYER((PlayerTypes)iI).AI_totalWaterAreaUnitAIs(area, UNITAI_EXPLORE_SEA);
+				iPlayerSeaUnits += GET_PLAYER((PlayerTypes)iI).AI_totalWaterAreaUnitAIs(area, UNITAI_ASSAULT_SEA);
+				iPlayerSeaUnits += GET_PLAYER((PlayerTypes)iI).AI_totalWaterAreaUnitAIs(area, UNITAI_SETTLER_SEA);
+			}
+		}
+		return iPlayerSeaUnits;
+	}
+
+	int getNeededBarbsInArea(CvGame* game, CvArea* area)
+	{
+		// Spawn barbarian ships only
+		if (!area->isWater())
+			return 0;
+
+		int iDivisor = GC.getHandicapInfo(game->getHandicapType()).getUnownedWaterTilesPerBarbarianUnit();
+
+		if (game->isOption(GAMEOPTION_RAGING_BARBARIANS))
+		{
+			iDivisor = std::max(1, (iDivisor / 2));
+		}
+
+		if (iDivisor <= 0)
+			return 0;
+
+		// XXX eventually need to measure how many barbs of eBarbUnitAI we have in this area...
+		int iNeededBarbs = ((area->getNumUnownedTiles() / iDivisor) - area->getUnitsPerPlayer(BARBARIAN_PLAYER));
+
+		if (iNeededBarbs <= 0)
+			return 0;
+
+		iNeededBarbs = ((iNeededBarbs / 4) + 1);
+
+		// Limit construction of barb ships based on player navies
+		// Keeps barb ship count in check in early game since generation is greatly increased for BTS 3.17
+		int iPlayerSeaUnits = countPlayerShipsInArea(area);
+
+		if (area->getUnitsPerPlayer(BARBARIAN_PLAYER) > (iPlayerSeaUnits / 3 + 1))
+		{
+			iNeededBarbs = 0;
+		}
+
+		return iNeededBarbs;
+	}
+}
 
 void CvGame::createBarbarianUnits()
 {
 	MEMORY_TRACE_FUNCTION();
 
 	/*CvUnit* pLoopUnit;*/
-	CvArea* pLoopArea;
-	CvPlot* pPlot;
-	UnitAITypes eBarbUnitAI;
-	UnitTypes eBestUnit;
-	UnitTypes eLoopUnit;
-	int iNeededBarbs;
-	int iDivisor;
-	int iValue;
-	int iBestValue;
-	int iLoop;
-	int iI, iJ;
+	//CvArea* pLoopArea;
+	//CvPlot* pPlot;
+	//UnitAITypes eBarbUnitAI;
+	//UnitTypes eBestUnit;
+	//UnitTypes eLoopUnit;
+	//int iNeededBarbs;
+	//int iDivisor;
+	//int iValue;
+	//int iBestValue;
+	//int iLoop;
+	//int iI, iJ;
 
 	if (Cy::call<bool>(PYGameModule, "createBarbarianUnits"))
 	{
@@ -8907,245 +8963,89 @@ void CvGame::createBarbarianUnits()
 	}
 	else
 	{
-		for(pLoopArea = GC.getMapINLINE().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMapINLINE().nextArea(&iLoop))
+		int iLoop = 0;
+		for(CvArea* pLoopArea = GC.getMapINLINE().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMapINLINE().nextArea(&iLoop))
 		{
-			if (pLoopArea->isWater())
-			{
-				eBarbUnitAI = UNITAI_ATTACK_SEA;
-				iDivisor = GC.getHandicapInfo(getHandicapType()).getUnownedWaterTilesPerBarbarianUnit();
-			}
-			else
-			{
-				eBarbUnitAI = UNITAI_ATTACK;
-				iDivisor = GC.getHandicapInfo(getHandicapType()).getUnownedTilesPerBarbarianUnit();
-			}
+			UnitAITypes eBarbUnitAI = pLoopArea->isWater()? UNITAI_ATTACK_SEA : UNITAI_ATTACK;
 
-			if (isOption(GAMEOPTION_RAGING_BARBARIANS))
-			{
-				iDivisor = std::max(1, (iDivisor / 2));
-			}
+			int iNeededBarbs = getNeededBarbsInArea(this, pLoopArea);
 
-			if (iDivisor > 0)
+			// Spawn barbarians
+			for (int iI = 0; iI < iNeededBarbs; iI++)
 			{
-				iNeededBarbs = ((pLoopArea->getNumUnownedTiles() / iDivisor) - pLoopArea->getUnitsPerPlayer(BARBARIAN_PLAYER)); // XXX eventually need to measure how many barbs of eBarbUnitAI we have in this area...
+				const CvPlot* pPlot = GC.getMapINLINE().syncRandPlot((RANDPLOT_NOT_VISIBLE_TO_CIV | RANDPLOT_ADJACENT_LAND | RANDPLOT_PASSIBLE), pLoopArea->getID(), GC.getDefineINT("MIN_BARBARIAN_STARTING_DISTANCE"));
 
-				if (iNeededBarbs > 0)
+				if (pPlot == NULL)
+					continue;
+
+				UnitTypes eBestUnit = NO_UNIT;
+				int iBestValue = 0;
+
+				for (int iJ = 0; iJ < GC.getNumUnitClassInfos(); iJ++)
 				{
-					iNeededBarbs = ((iNeededBarbs / 4) + 1);
+					bool bValid = false;
+					const UnitTypes eLoopUnit = ((UnitTypes)(GC.getCivilizationInfo(GET_PLAYER(BARBARIAN_PLAYER).getCivilizationType()).getCivilizationUnits(iJ)));
 
-					/********************************************************************************/
-					/* 	BETTER_BTS_AI_MOD						9/25/08				jdog5000	*/
-					/* 																			*/
-					/* 	Barbarian AI															*/
-					/********************************************************************************/
-					// Limit construction of barb ships based on player navies
-					// Keeps barb ship count in check in early game since generation is greatly increased for BTS 3.17
-					if( pLoopArea->isWater() )
+					if (eLoopUnit == NO_UNIT)
+						continue;
+
+					const CvUnitInfo& kUnit = GC.getUnitInfo(eLoopUnit);
+					if (isValidBarbarianSpawnUnit(pLoopArea, kUnit, eLoopUnit, static_cast<UnitClassTypes>(iJ)))
 					{
-						int iPlayerSeaUnits = 0;
-						for( int iI = 0; iI < MAX_PC_PLAYERS; iI++ )
-						{
-							if( GET_PLAYER((PlayerTypes)iI).isAlive() )
-							{
-								iPlayerSeaUnits += GET_PLAYER((PlayerTypes)iI).AI_totalWaterAreaUnitAIs(pLoopArea,UNITAI_ATTACK_SEA);
-								iPlayerSeaUnits += GET_PLAYER((PlayerTypes)iI).AI_totalWaterAreaUnitAIs(pLoopArea,UNITAI_EXPLORE_SEA);
-								iPlayerSeaUnits += GET_PLAYER((PlayerTypes)iI).AI_totalWaterAreaUnitAIs(pLoopArea,UNITAI_ASSAULT_SEA);
-								iPlayerSeaUnits += GET_PLAYER((PlayerTypes)iI).AI_totalWaterAreaUnitAIs(pLoopArea,UNITAI_SETTLER_SEA);
-							}
-						}
+						int iValue = 500 + getSorenRandNum(500, "Barb Unit Selection");
 
-						if( pLoopArea->getUnitsPerPlayer(BARBARIAN_PLAYER) > (iPlayerSeaUnits/3 + 1) )
+						if (kUnit.getUnitAIType(eBarbUnitAI))
 						{
-							iNeededBarbs = 0;
+							iValue += 200;
+						}
+						iValue += kUnit.getCargoSpace() * (25 + getSorenRandNum(25, "Cargo Space Value"));
+
+						if (iValue > iBestValue)
+						{
+							eBestUnit = eLoopUnit;
+							iBestValue = iValue;
 						}
 					}
-					/********************************************************************************/
-					/* 	BETTER_BTS_AI_MOD						END								*/
-					/********************************************************************************/
+				}
 
-					for (iI = 0; iI < iNeededBarbs; iI++)
+				if (eBestUnit != NO_UNIT)
+				{
+					CvUnit* pUnit = GET_PLAYER(BARBARIAN_PLAYER).initUnit(eBestUnit, pPlot->getX_INLINE(), pPlot->getY_INLINE(), eBarbUnitAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+					if (GC.getUnitInfo(eBestUnit).getDomainType() == DOMAIN_SEA)
 					{
-						pPlot = GC.getMapINLINE().syncRandPlot((RANDPLOT_NOT_VISIBLE_TO_CIV | RANDPLOT_ADJACENT_LAND | RANDPLOT_PASSIBLE), pLoopArea->getID(), GC.getDefineINT("MIN_BARBARIAN_STARTING_DISTANCE"));
+						loadPirateShip(pUnit);
+					}
+				}
+			}
 
-						if (pPlot != NULL)
+			// Give barb cities in occupied areas free workers so that if the city settles
+			// it has some infrastructure
+			if (!isOption(GAMEOPTION_NO_BARBARIAN_CIV))
+			{
+				int iBarbCities = pLoopArea->getCitiesPerPlayer(BARBARIAN_PLAYER);
+
+				// There are barbarian AND non-barbarian cities in the area
+				if(iBarbCities > 0 && pLoopArea->getNumCities() - iBarbCities > 0)
+				{
+					int iCityLoop = 0;
+					for (CvCity* pLoopCity = GET_PLAYER(BARBARIAN_PLAYER).firstCity(&iCityLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(BARBARIAN_PLAYER).nextCity(&iCityLoop))
+					{
+						FAssertMsg(pLoopCity->area() == pLoopArea, "City in an area thinks it is in another area");
+
+						if(pLoopCity->getOriginalOwner() == BARBARIAN_PLAYER
+							&& barbarianCityShouldSpawnWorker(this, pLoopCity))
 						{
-							eBestUnit = NO_UNIT;
-							iBestValue = 0;
+							int iUnitValue;
 
-							for (iJ = 0; iJ < GC.getNumUnitClassInfos(); iJ++)
-							{
-								bool bValid = false;
-								eLoopUnit = ((UnitTypes)(GC.getCivilizationInfo(GET_PLAYER(BARBARIAN_PLAYER).getCivilizationType()).getCivilizationUnits(iJ)));
-
-								if (eLoopUnit != NO_UNIT)
-								{
-									CvUnitInfo& kUnit = GC.getUnitInfo(eLoopUnit);
-
-									bValid = (kUnit.getCombat() > 0 && !kUnit.isOnlyDefensive());
-
-									if (bValid)
-									{
-										if (pLoopArea->isWater() && kUnit.getDomainType() != DOMAIN_SEA)
-										{
-											bValid = false;
-										}
-										else/* if (!pLoopArea->isWater() && kUnit.getDomainType() != DOMAIN_LAND)*/
-										{
-											bValid = false;
-										}
-									}
-
-									if (bValid)
-									{
-										if (!GET_PLAYER(BARBARIAN_PLAYER).canTrain(eLoopUnit))
-										{
-											bValid = false;
-										}
-									}
-
-									if (bValid)
-									{
-										if (NO_BONUS != kUnit.getPrereqAndBonus())
-										{
-											if (!GET_TEAM(BARBARIAN_TEAM).isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)kUnit.getPrereqAndBonus()).getTechCityTrade()))
-											{
-												bValid = false;
-											}
-										}
-									}
-									//Another attempt to deny the spawning of barb heroes.
-									if (bValid)
-									{
-										UnitCombatTypes eHero = (UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_HERO");
-										if (kUnit.hasUnitCombat(eHero) || GC.getUnitClassInfo((UnitClassTypes)iJ).getMaxGlobalInstances() > 0 || GC.getUnitClassInfo((UnitClassTypes)iJ).getMaxPlayerInstances() > 0 || GC.getUnitClassInfo((UnitClassTypes)iJ).getMaxTeamInstances() > 0)
-										{
-											bValid = false;
-										}
-									}
-
-									//	Koshling - don't allow direct spawning of barbarian units that have building pre-reqs
-									if (bValid)
-									{
-										if (NO_BUILDING != kUnit.getPrereqBuilding())
-										{
-											bValid = false;
-										}
-									}
-
-									if (bValid)
-									{
-										bool bFound = false;
-										bool bRequires = false;
-										for (int i = 0; i < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); ++i)
-										{
-											if (NO_BONUS != kUnit.getPrereqOrBonuses(i))
-											{
-												TechTypes eTech = (TechTypes)GC.getBonusInfo((BonusTypes)kUnit.getPrereqOrBonuses(i)).getTechCityTrade();
-												if (NO_TECH != eTech)
-												{
-													bRequires = true;
-													
-													if (GET_TEAM(BARBARIAN_TEAM).isHasTech(eTech))
-													{
-														bFound = true;
-														break;
-													}
-												}
-											}
-										}
-
-										if (bRequires && !bFound)
-										{
-											bValid = false;
-										}
-									}
-
-									if (bValid)
-									{
-										iValue = (1 + getSorenRandNum(1000, "Barb Unit Selection"));
-
-										if (kUnit.getUnitAIType(eBarbUnitAI))
-										{
-											iValue += 200;
-										}
-/************************************************************************************************/
-/* Afforess	                  Start		 09/01/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-										iValue += kUnit.getCargoSpace() * (getSorenRandNum(30, "Cargo Space Value") + 1);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
-										if (iValue > iBestValue)
-										{
-											eBestUnit = eLoopUnit;
-											iBestValue = iValue;
-										}
-									}
-								}
-							}
-
+							UnitTypes eBestUnit = pLoopCity->AI_bestUnitAI(UNITAI_WORKER, iUnitValue);
 							if (eBestUnit != NO_UNIT)
 							{
-								
-/************************************************************************************************/
-/* Afforess	                  Start		 08/29/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-								CvUnit* pUnit = GET_PLAYER(BARBARIAN_PLAYER).initUnit(eBestUnit, pPlot->getX_INLINE(), pPlot->getY_INLINE(), eBarbUnitAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
-								loadPirateShip(pUnit);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+								GET_PLAYER(BARBARIAN_PLAYER).initUnit(eBestUnit, pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE(), UNITAI_WORKER, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+								pLoopCity->AI_setChooseProductionDirty(true);
 							}
 						}
 					}
 				}
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/31/09                                jdog5000      */
-/*                                                                                              */
-/* For BarbarianCiv                                                                             */
-/************************************************************************************************/
-				// Give barb cities in occupied areas free workers so that if the city settles
-				// it has some infrastructure
-				if (!isOption(GAMEOPTION_NO_BARBARIAN_CIV))
-				{
-					int iBarbCities = pLoopArea->getCitiesPerPlayer(BARBARIAN_PLAYER);
-					if( (iBarbCities > 0) && (pLoopArea->getNumCities() - iBarbCities > 0) )
-					{
-						CvCity* pLoopCity;
-						int iCityLoop;
-						for (pLoopCity = GET_PLAYER(BARBARIAN_PLAYER).firstCity(&iCityLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(BARBARIAN_PLAYER).nextCity(&iCityLoop))
-						{
-							if( pLoopCity->area() == pLoopArea && pLoopCity->getOriginalOwner() == BARBARIAN_PLAYER )
-							{
-								if( (pLoopCity->getPopulation() > 1) || (getGameTurn() - pLoopCity->getGameTurnAcquired()) > (10 * GC.getGameSpeedInfo(getGameSpeedType()).getTrainPercent())/100 )
-								{
-									if( pLoopCity->AI_getWorkersHave() == 0 && pLoopCity->AI_getWorkersNeeded() > 0)
-									{
-										if( (7*pLoopCity->getPopulation()) > getSorenRandNum(100, "Barb - workers") )
-										{
-											int iUnitValue;
-
-											eBestUnit = pLoopCity->AI_bestUnitAI(UNITAI_WORKER, iUnitValue);
-											if (eBestUnit != NO_UNIT)
-											{
-												GET_PLAYER(BARBARIAN_PLAYER).initUnit(eBestUnit, pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE(), UNITAI_WORKER, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
-												pLoopCity->AI_setChooseProductionDirty(true);
-											}
-										}
-									}
-								}
-							}
-						}							
-					}
-				}
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 			}
 		}
 /************************************************************************************************/
@@ -14537,12 +14437,24 @@ bool CvGame::canEverSpread(CorporationTypes eCorporation) const
 	return true;
 }
 
+namespace {
+	bool validBarbarianShipUnit(const CvUnitInfo& unitInfo, const UnitTypes unitType)
+	{
+		return unitInfo.getCombat() > 0
+			&& !unitInfo.isOnlyDefensive()
+			&& unitInfo.getDomainType() == DOMAIN_LAND
+			&& GET_PLAYER(BARBARIAN_PLAYER).canTrain(unitType)
+			&& (
+				unitInfo.getPrereqAndBonus() == NO_BONUS
+				|| GET_TEAM(BARBARIAN_TEAM).isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)unitInfo.getPrereqAndBonus()).getTechCityTrade())
+				)
+			&& GET_TEAM(BARBARIAN_TEAM).isUnitPrereqOrBonusesMet(unitInfo);
+	}
+}
+
 void CvGame::loadPirateShip(CvUnit* pUnit)
 {
-	if (pUnit->getDomainType() != DOMAIN_SEA)
-	{
-		return;
-	}
+	FAssertMsg(pUnit->getDomainType() == DOMAIN_SEA, "loadPirateShip expects to be passed a water unit");
 
 	for (int iI = 0; iI < pUnit->cargoSpace(); iI++)
 	{
@@ -14556,66 +14468,9 @@ void CvGame::loadPirateShip(CvUnit* pUnit)
 
 			if (eLoopUnit != NO_UNIT)
 			{
-				CvUnitInfo& kUnit = GC.getUnitInfo(eLoopUnit);
+				const CvUnitInfo& kUnit = GC.getUnitInfo(eLoopUnit);
 
-				bValid = (kUnit.getCombat() > 0 && !kUnit.isOnlyDefensive());
-
-				if (bValid)
-				{
-					if (kUnit.getDomainType() != DOMAIN_LAND)
-					{
-						bValid = false;
-					}
-				}
-
-				if (bValid)
-				{
-					if (!GET_PLAYER(BARBARIAN_PLAYER).canTrain(eLoopUnit))
-					{
-						bValid = false;
-					}
-				}
-
-				if (bValid)
-				{
-					if (NO_BONUS != kUnit.getPrereqAndBonus())
-					{
-						if (!GET_TEAM(BARBARIAN_TEAM).isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)kUnit.getPrereqAndBonus()).getTechCityTrade()))
-						{
-							bValid = false;
-						}
-					}
-				}
-
-				if (bValid)
-				{
-					bool bFound = false;
-					bool bRequires = false;
-					for (int i = 0; i < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); ++i)
-					{
-						if (NO_BONUS != kUnit.getPrereqOrBonuses(i))
-						{
-							TechTypes eTech = (TechTypes)GC.getBonusInfo((BonusTypes)kUnit.getPrereqOrBonuses(i)).getTechCityTrade();
-							if (NO_TECH != eTech)
-							{
-								bRequires = true;
-								
-								if (GET_TEAM(BARBARIAN_TEAM).isHasTech(eTech))
-								{
-									bFound = true;
-									break;
-								}
-							}
-						}
-					}
-
-					if (bRequires && !bFound)
-					{
-						bValid = false;
-					}
-				}
-
-				if (bValid)
+				if (validBarbarianShipUnit(kUnit, eLoopUnit))
 				{
 					int iValue = (1 + getSorenRandNum(1000, "Barb Unit Selection"));
 
@@ -14641,6 +14496,7 @@ void CvGame::loadPirateShip(CvUnit* pUnit)
 		}
 	}
 }
+
 /************************************************************************************************/
 /* Afforess	                         END                                                        */
 /************************************************************************************************/
@@ -14894,16 +14750,16 @@ void CvGame::ensureChokePointsEvaluated()
 }
 
 int CvGame::getBaseAirUnitIncrementsbyCargoVolume() const
-{				
-	int iBase = 10000 / GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER");
+{
+	const int multiplier = std::max(1, GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER", 1));
+	int iBase = 10000 / multiplier;
 	return iBase;
 }
 
 int CvGame::getBaseMissileUnitIncrementsbyCargoVolume() const
-{				
-	int iBase = 10000 / GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER");
-	iBase /= GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER");
-	iBase /= GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER");
+{
+	const int multiplier = std::max(1, GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER", 1));
+	int iBase = 10000 / (multiplier * multiplier * multiplier);
 	return std::max(1, iBase);
 }
 

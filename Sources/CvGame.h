@@ -306,7 +306,7 @@ public:
 /*                                                                                              */
 /************************************************************************************************/
 	int getAIAutoPlay(PlayerTypes iPlayer);							// Exposed to Python
-        void setAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForced = false);
+		void setAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForced = false);
 	DllExport void setAIAutoPlayExternal(int iNewValue);					// Exposed to Python
 	void changeAIAutoPlay(PlayerTypes iPlayer, int iChange);
 	
@@ -332,7 +332,7 @@ public:
 	bool getDiplomaticVictoryAchieved(int ID);
 #endif
 	int getCurrentVoteID() const;
-    void setCurrentVoteID(int iNewValue);
+	void setCurrentVoteID(int iNewValue);
 	
 	int getXResolution() const;							// Exposed to Python
 	void setXResolution(int iNewValue);					// Exposed to Python
@@ -343,16 +343,16 @@ public:
 	void changeYResolution(int iChange);					// Exposed to Python
 	
 	int getCutLosersCounter();
-    void changeCutLosersCounter(int iChange);
+	void changeCutLosersCounter(int iChange);
 	int getHighToLowCounter();
-    void changeHighToLowCounter(int iChange);
-    int getIncreasingDifficultyCounter();
-    void changeIncreasingDifficultyCounter(int iChange);
+	void changeHighToLowCounter(int iChange);
+	int getIncreasingDifficultyCounter();
+	void changeIncreasingDifficultyCounter(int iChange);
 
 	void averageHandicaps();
 	
 	int getMercyRuleCounter();
-    void changeMercyRuleCounter(int iChange);
+	void changeMercyRuleCounter(int iChange);
 	void setMercyRuleCounter(int iNewVal);
 	
 	int countPeaks(CvPlot* pPlot, bool bCountHill = false);
@@ -738,7 +738,7 @@ public:
 	void processBuilding(BuildingTypes eBuilding, int iChange);
 	
 	// RevolutionDCM - BarbarianWorld - thanks Kael
-    void foundBarbarianCity();
+	void foundBarbarianCity();
 	// RevolutionDCM End
 
 	bool pythonIsBonusIgnoreLatitudes() const;

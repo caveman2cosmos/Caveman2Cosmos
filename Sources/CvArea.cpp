@@ -349,7 +349,6 @@ int CvArea::countHasCorporation(CorporationTypes eCorporation, PlayerTypes eOwne
 	return iCount;
 }
 
-
 int CvArea::getNumTiles() const
 {
 	return m_iNumTiles;
