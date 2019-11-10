@@ -94,7 +94,6 @@ Panel_Black50_Style
 Panel_StagingRoom_Style
 Panel_Modal_Style
 Panel_HudHelp_Style
-Panel_TechMinimapCell_Style
 
 GButtonCtrl
 -------
@@ -111,16 +110,6 @@ Button_MainMenuSelection_Style
 Button_CityArrowL_Style
 Button_CityArrowR_Style
 Button_CityTitle_Style
-
-Button_TechCan_Style
-Button_TechHas_Style
-Button_TechQueue_Style
-Button_TechTarget_Style
-Button_TechResearching_Style
-Button_TechNeo_Style
-Button_TechCoeval_Style
-Button_TechArchaic_Style
-Button_TechNo_Style
 
 GTableCtrl
 -------
@@ -2761,34 +2750,6 @@ with GFC_Control_Panel
 		}
 		map GFC_CtrlTheme_Bitmap_Control_Panel		= GFC_Control_DefaultPanel_Style;
 		map GFC_Control								= GFC_Control_DefaultPanel_Style;
-	}
-
-	//Tech minimap cell
-	style SF_CtrlTheme_Civ4_Control_Panel_TechMinimapCell_Style
-	{
-		.StyleId_Border			= GPropertyId(GFC_Control_EmptyBorder_Style);
-		.Flag_NoInnerFill		= 0;
-		.Color_Inner			= SF_CtrlTheme_Civ4_Control_Color_BG;
-
-		with GFC_CtrlTheme_Bitmap_Control_Panel_Skin_Inner
-		{
-			.Default
-			{
-				layer {
-					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_BILINEAR, GFC_BITMAPSKIN_SIDES_BILINEAR);
-					DestCombine		= GColorCombine(BlendSource,Disable);
-					FactorCombine	= GColorCombine(Modulate,Source);
-					FactorColor		= GFC_Control_Panel_Color_Inner;
-					Image			= GBitmap("../../../../Resource/Civ4/selection.tga", HVGrid, 1, 1, 0, 0);
-					Margin			= GRectMargin(0,0,0,0);
-				}
-			}
-			.Disable				= .Default;
-			.Winoff					= .Default;
-			.WinoffDisable			= .Winoff;
-		}
-		map GFC_CtrlTheme_Bitmap_Control_Panel	= GFC_Control_DefaultPanel_Style;
-		map GFC_Control							= GFC_Control_DefaultPanel_Style;
 	}
 } //End Panel Control
 
