@@ -34,7 +34,7 @@ CELL_BORDER_H = 0
 ADVISORS = [unichr(8855), unichr(8857), unichr(8500), unichr(8501), unichr(8502), unichr(8483)]
 
 # Top panel height
-SCREEN_PANEL_BAR_H = 42
+SCREEN_PANEL_TOP_BAR_H = 42
 # Bottom panel height
 SCREEN_PANEL_BOTTOM_BAR_H = 80
 # Left/right border for the slider
@@ -63,6 +63,11 @@ QUEUE_LABEL = "QUEUE_LABEL"
 QUEUE_LABEL_W = 54
 QUEUE_LABEL_H = 32
 
+FOREGROUND_PARA_H = 256
+BACKGROUND_PARA_AMOUNT = 100
+FOREGROUND_PARA_AMOUNT = 200
+
+
 class CvTechChooser:
 
 	def __init__(self):
@@ -72,13 +77,14 @@ class CvTechChooser:
 		self.iNumTechs = GC.getNumTechInfos()
 		self.created = False
 		self.skipNextExitKey = True
+		self.demoMode = False
 		self.cacheBenefits()
 
 	def screen(self):
 		return CyGInterfaceScreen("TechChooser", self.screenId)
 
 	def getTechState(self, iTech):
-		if self.CyTeam.isHasTech(iTech):
+		if self.CyTeam.isHasTech(iTech) or True:
 			return CIV_HAS_TECH
 		if not self.CyPlayer.canEverResearch(iTech):
 			return CIV_NO_RESEARCH
@@ -92,13 +98,101 @@ class CvTechChooser:
 		else:
 			return CIV_IS_QUEUED
 
-	def cachePlayer(self, iPlayer):
+	def initForPlayer(self, iPlayer):
+		screen = self.screen()
+
 		self.iPlayer = iPlayer
 		self.CyPlayer = GC.getPlayer(iPlayer)
 		self.CyTeam = GC.getTeam(self.CyPlayer.getTeam())
 		self.iCurrentEra = self.CyPlayer.getCurrentEra()
-
 		self.currentTechState = [self.getTechState(iTech) for iTech in xrange(self.iNumTechs)]
+
+		# Tool Tip
+		self.szTxtTT = ""
+		self.iOffsetTT = []
+		self.bLockedTT = False
+		self.iUnitTT = None
+		self.bUnitTT = False
+
+		self.scrolling = False
+		self.updates = []
+		self.cellDetails = [False] * self.iNumTechs
+
+		self.iCurrentResearch = -1
+		self.iSelectedTech = -1
+		if self.CyPlayer.getAdvancedStartPoints() > -1:
+			screen.setButtonGFC("AddTechButton", TRNSLTR.getText("TXT_KEY_WB_AS_ADD_TECH", ()), "", self.xRes/2 - 158, 4, 150, 30, WidgetTypes.WIDGET_GENERAL, 1, 2, ButtonStyles.BUTTON_STYLE_STANDARD)
+			screen.hide("AddTechButton")
+
+				# Main scrolling panel
+		screen.addScrollPanel(SCREEN_PANEL, "", 0, 0, self.maxX + self.xCellDist, self.yRes, PanelStyles.PANEL_STYLE_EMPTY)
+		screen.setStyle(SCREEN_PANEL, "Panel_TechMinimapCell_Style")
+		# screen.setHitTest(SCREEN_PANEL, HitTestTypes.HITTEST_NOHIT)
+
+		# Minimap background
+		screen.addPanel(BOTTOM_BAR_ID, "", "", True, False, -20, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H - 80, self.xRes + 40, SCREEN_PANEL_BOTTOM_BAR_H + 100, PanelStyles.PANEL_STYLE_MAIN_TANB)
+		screen.setStyle(BOTTOM_BAR_ID, "Panel_TechMinimap_Style")
+		screen.setHitTest(BOTTOM_BAR_ID, HitTestTypes.HITTEST_NOHIT)
+
+		# Era backgrounds and buttons that can jump directly to an era
+		lastPosX = 0
+		
+		self.backdropPanelPos = []
+		for i in xrange(self.iNumEras - 1):
+			posX = self.treeToMinimapX(self.minEraXPos[i] - self.minX) # SLIDER_BORDER + self.minEraXPos[i] * (self.xRes - SLIDER_BORDER * 2) / self.maxX
+			posY = self.yRes - SCREEN_PANEL_BOTTOM_BAR_H + 5
+			eraInfo = GC.getEraInfo(i)
+			img = eraInfo.getButton()
+			if img: # and i < self.iNumEras - 1: # exclude future icon
+				screen.setText("WID|ERAIM|" + str(i), "", "<img=%s>" % (img), 0, posX - 4, posY, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, 0, 0)
+			if i > 0:
+				screen.addPanel("WID|ERAPANEL|" + str(i-1), "", "", False, False, lastPosX, posY, posX - lastPosX, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_DEFAULT)
+			
+			# Backdrop
+			panelStartX = self.minEraXPos[i] - self.minX + self.xCellDist / 2
+			panelEndX = self.minEraXPos[i+1] - self.minX + self.xCellDist / 2 + 4
+			if i == 0:
+				panelStartX = panelStartX - self.xCellDist / 2
+			if i == self.iNumEras - 2:
+				panelEndX = panelEndX + self.xCellDist / 2
+
+			# Save the panel x coords for later
+			self.backdropPanelPos.append((panelStartX, panelEndX))
+
+			# Parallax Container
+			bgPanelWid = panelEndX - panelStartX
+			bgPanelHgt = self.yRes - SCREEN_PANEL_BOTTOM_BAR_H - SCREEN_PANEL_TOP_BAR_H
+			backDropPanelName = "ERA_BG_PANEL_" + str(i)
+			screen.attachPanelAt(SCREEN_PANEL, backDropPanelName, "", "", False, False, PanelStyles.PANEL_STYLE_STANDARD, panelStartX, 0, bgPanelWid, bgPanelHgt, WidgetTypes.WIDGET_GENERAL, 0, 0)
+			# Background parallax layer
+			bgName = "ERA_BG_" + str(i)
+			screen.setImageButtonAt(bgName, backDropPanelName, "", 0, 0, self.xRes + BACKGROUND_PARA_AMOUNT * 2, bgPanelHgt, WidgetTypes.WIDGET_GENERAL, 1, 2)
+			screen.setStyle(bgName, self.getBackgroundStyleForEra(i))
+			screen.setHitTest(bgName, HitTestTypes.HITTEST_NOHIT)
+			# Foreground parallax layer
+			fgName = "ERA_FG_" + str(i)
+			screen.setImageButtonAt(fgName, backDropPanelName, "", 0, 0, self.xRes + FOREGROUND_PARA_AMOUNT * 2, bgPanelHgt, WidgetTypes.WIDGET_GENERAL, 1, 2)
+			screen.setStyle(fgName, self.getForegroundStyleForEra(i))
+			screen.setHitTest(fgName, HitTestTypes.HITTEST_NOHIT)
+
+			# Label for eras, but it looks crap in tiny fonts, need a massive font
+			# screen.setLabelAt("ERA_LABEL_" + str(i), backDropPanelName, "<font=4b>" + eraInfo.getDescription(), 1 << 0, 30, 30, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 2)
+			# screen.setHitTest("ERA_LABEL_" + str(i), HitTestTypes.HITTEST_NOHIT)
+
+			lastPosX = posX
+
+		# A panel to put the horizontal slider in so we can position it correctly
+		#screen.addPanel(BOTTOM_BAR_SLIDER_PANEL_ID, "", "", False, False, SLIDER_BORDER, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H - 12, self.xRes, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_EMPTY)
+		minimapWidth = self.xRes - SLIDER_BORDER * 2
+		fullWidth = self.maxX - self.minX
+		self.minimapLensWidth = self.xRes * minimapWidth / fullWidth + MINIMAP_LENS_BORDER_H * 2
+		screen.addPanel(MINIMAP_LENS_ID, "", "", False, False, 0, 0, self.minimapLensWidth, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_MAIN_WHITE)
+
+		# Create the tech button backgrounds
+		self.refresh(xrange(self.iNumTechs), False)
+
+		# Delay first scroll position update so UI can initialize first
+		self.delayedScroll = 2
 
 	def interfaceScreen(self, screenId):
 		print "CvTechChooser.interfaceScreen"
@@ -121,18 +215,6 @@ class CvTechChooser:
 		import InputData
 		self.InputData = InputData.instance
 
-		# Tool Tip
-		self.szTxtTT = ""
-		self.iOffsetTT = []
-		self.bLockedTT = False
-		self.iUnitTT = None
-		self.bUnitTT = False
-
-		self.scrolling = False
-		self.updates = []
-		#self.changed = []
-		self.cellDetails = [False] * self.iNumTechs
-
 		# Set up widget sizes
 		import ScreenResolution as SR
 		self.xRes = SR.x
@@ -154,36 +236,36 @@ class CvTechChooser:
 		self.sIcon1 = self.sIcon0 / 2
 
 		# Cache minimum X coordinate per era for era partitioning.
-		self.minEraX = [maxint] * self.iNumEras
+		self.minEraXPos = [maxint] * self.iNumEras
+		self.firstEraTech = [(maxint, maxint)] * self.iNumEras
 		self.minX = maxint
 		self.maxX = 0
 		for iTech in xrange(self.iNumTechs):
 			info = GC.getTechInfo(iTech)
-			iX = info.getGridX() * self.xCellDist
-			iX1 = (info.getGridX() + 1) * self.xCellDist
-			if iX > 0:
+			gridX = info.getGridX()
+			if gridX > 0:
+				iX = gridX * self.xCellDist
+				iX1 = (gridX + 1) * self.xCellDist
 				iEra = info.getEra()
-				if iX < self.minEraX[iEra]:
-					self.minEraX[iEra] = iX
+				if iX < self.minEraXPos[iEra]:
+					self.minEraXPos[iEra] = iX
+				if gridX < self.firstEraTech[iEra][0]:
+					self.firstEraTech[iEra] = (gridX, iTech)
 				if iX1 > self.maxX:
 					self.maxX = iX1
 				if iX < self.minX:
 					self.minX = iX
 
 		self.minimapScaleX = (self.xRes - (SLIDER_BORDER * 2)) / float(self.maxX - self.minX)
-		
+
 		eWidGen = WidgetTypes.WIDGET_GENERAL
 		eFontTitle = FontTypes.TITLE_FONT
-
-		self.currentTechState = [-1] * self.iNumTechs
-		iPlayer = GC.getGame().getActivePlayer()
-		self.cachePlayer(iPlayer)
 
 		# Base Screen
 		screen = self.screen()
 		screen.addDDSGFC("ScreenBackground", AFM.getInterfaceArtInfo("SCREEN_BG_OPAQUE").getPath(), 0, 0, self.xRes, self.yRes, eWidGen, 1, 2)
 
-		screen.addPanel("TC_BarTop", "", "", True, False, 0, 0, self.xRes, SCREEN_PANEL_BAR_H, PanelStyles.PANEL_STYLE_TOPBAR)
+		screen.addPanel("TC_BarTop", "", "", True, False, 0, 0, self.xRes, SCREEN_PANEL_TOP_BAR_H, PanelStyles.PANEL_STYLE_TOPBAR)
 		screen.setLabel("TC_Header", "", "<font=4b>" + TRNSLTR.getText("TXT_KEY_TECH_CHOOSER_TITLE", ()), 1<<2, self.xRes/2, 4, 0, eFontTitle, eWidGen, 1, 2)
 
 		screen.setText("TC_Exit", "", "<font=4b>" + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()), 1<<1, self.xRes - 8, 2, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
@@ -197,7 +279,9 @@ class CvTechChooser:
 		screen.setImageButton("WID|TECH|CURRENT0", "", 256, 3, self.xRes - 512, 30, eWidGen, 1, 2)
 		screen.hide("WID|TECH|CURRENT0")
 
-		self.iCurrentResearch = -1
+		screen.setRenderInterfaceOnly(True)
+		screen.showWindowBackground(False)
+		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
 		# Debug
 		import DebugUtils
@@ -209,67 +293,8 @@ class CvTechChooser:
 				if CyPlayerX.isAlive():
 					screen.addPullDownString(DDB, CyPlayerX.getName(), iPlayerX, iPlayerX, iPlayer == iPlayerX)
 
-		self.iSelectedTech = -1
-		if self.CyPlayer.getAdvancedStartPoints() > -1:
-			screen.setButtonGFC("AddTechButton", TRNSLTR.getText("TXT_KEY_WB_AS_ADD_TECH", ()), "", self.xRes/2 - 158, 4, 150, 30, eWidGen, 1, 2, ButtonStyles.BUTTON_STYLE_STANDARD)
-			screen.hide("AddTechButton")
+		self.initForPlayer(GC.getGame().getActivePlayer())
 
-		screen.setRenderInterfaceOnly(True)
-		screen.showWindowBackground(False)
-		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
-
-		# Minimap background
-		screen.addPanel(BOTTOM_BAR_ID, "", "", True, False, -20, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H - 80, self.xRes + 40, SCREEN_PANEL_BOTTOM_BAR_H + 100, PanelStyles.PANEL_STYLE_MAIN_TANB)
-		screen.setStyle(BOTTOM_BAR_ID, "Panel_TechMinimap_Style")
-		screen.setHitTest(BOTTOM_BAR_ID, HitTestTypes.HITTEST_NOHIT)
-
-		# Main scrolling panel
-		screen.addPanel(SCREEN_PANEL, "", "", False, False, 0, SCREEN_PANEL_BAR_H, self.maxX + self.xCellDist, self.yRes, PanelStyles.PANEL_STYLE_EMPTY)
-
-		#setButtonGFC(BOTTOM_BAR_ID, "", "", 0, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H, self.xRes, SCREEN_PANEL_BOTTOM_BAR_H, eWidGen, 1, 2, ButtonStyles.BUTTON_STYLE_STANDARD)
-		# screen.addPanel(BOTTOM_BAR_ID, "", "", True, False, 0, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H, self.xRes, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_BOTTOMBAR)
-		#screen.setStyle(BOTTOM_BAR_ID, "Panel_TechMinimapCell_Style")
-		#screen.setPanelColor(BOTTOM_BAR_ID, 64, 64, 64)
-		#screen.setHitTest(BOTTOM_BAR_ID, HitTestTypes.HITTEST_ON)
-
-		# Era buttons that can jump directly to an era
-		lastPosX = 0
-		
-		for i in xrange(self.iNumEras - 1):
-			posX = self.treeToMinimapX(self.minEraX[i] - self.minX) # SLIDER_BORDER + self.minEraX[i] * (self.xRes - SLIDER_BORDER * 2) / self.maxX
-			posY = self.yRes - SCREEN_PANEL_BOTTOM_BAR_H + 5
-			eraInfo = GC.getEraInfo(i)
-			img = eraInfo.getButton()
-			if img: # and i < self.iNumEras - 1: # exclude future icon
-				screen.setText("WID|ERAIM|" + str(i), "", "<img=%s>" % (img), 0, posX - 4, posY, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, 0, 0)
-			if i > 0:
-				screen.addPanel("WID|ERAPANEL|" + str(i-1), "", "", False, False, lastPosX, posY, posX - lastPosX, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_DEFAULT)
-			lastPosX = posX
-				# screen.setHitTest("WID|ERAIM|" + str(i), HitTestTypes.HITTEST_NOHIT)
-			# yOffs = 0 + 48 * (i % 2)
-			# screen.setText("WID|ERATEXT|" + str(i), "", "<font=1>%s" % (eraInfo.getDescription()), 0, posX, posY + yOffs, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, iEra, 0)
-
-		# Create the tech button backgrounds
-		self.refresh(xrange(self.iNumTechs), False)
-
-		# A panel to put the horizontal slider in so we can position it correctly
-		#screen.addPanel(BOTTOM_BAR_SLIDER_PANEL_ID, "", "", False, False, SLIDER_BORDER, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H - 12, self.xRes, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_EMPTY)
-		minimapWidth = self.xRes - SLIDER_BORDER * 2
-		fullWidth = self.maxX - self.minX
-		self.minimapLensWidth = self.xRes * minimapWidth / fullWidth + MINIMAP_LENS_BORDER_H * 2
-		screen.addPanel(MINIMAP_LENS_ID, "", "", False, False, 0, 0, self.minimapLensWidth, SCREEN_PANEL_BOTTOM_BAR_H, PanelStyles.PANEL_STYLE_MAIN_WHITE)
-
-
-		# Finally scroll to our current offset (this is maintained when the screen is created and destroyed)
-		techToScrollTo = self.getLastResearchingIdx()
-		if techToScrollTo < 0:
-			techToScrollTo = self.getLastResearchedIdx()
-
-		if techToScrollTo != -1:
-			self.scrollToTech(techToScrollTo)
-		else:
-			self.scrollTo(self.scrollOffs)
-		
 		print "CvTechChooser.interfaceScreen - DONE"
 
 	def refresh(self, techs, bFull):
@@ -277,7 +302,7 @@ class CvTechChooser:
 
 		eWidGen = WidgetTypes.WIDGET_GENERAL
 
-		dy = self.yRes - SCREEN_PANEL_BAR_H - SCREEN_PANEL_BOTTOM_BAR_H
+		dy = self.yRes - SCREEN_PANEL_TOP_BAR_H - SCREEN_PANEL_BOTTOM_BAR_H
 
 		yEmptySpace = (dy - 10 * self.hCell) / 10
 		if yEmptySpace < 0:
@@ -333,12 +358,17 @@ class CvTechChooser:
 			else:
 				if not self.cellDetails[iTech]:
 					self.cellDetails[iTech] = True
+					
+					iEra = CvTechInfo.getEra()
+					bY = iY
+					bH = self.hCell + CELL_BORDER_H * 2
 
 					# Tech cell
 					screen.setImageButtonAt(techCellId, SCREEN_PANEL, "", iX, iY, self.wCell + CELL_BORDER_W * 2, self.hCell + CELL_BORDER_H * 2, eWidGen, 1, 2)
-					screen.setHitTest(techCellId, HitTestTypes.HITTEST_CHILDREN)
+					# screen.setHitTest(techCellId, HitTestTypes.HITTEST_CHILDREN)
 					screen.addDDSGFCAt(ICON + iTechStr, techCellId, CvTechInfo.getButton(), 3 + CELL_BORDER_W, 5 + CELL_BORDER_H, self.sIcon0, self.sIcon0, eWidGen, 1, 2, False)
 					screen.setHitTest(ICON + iTechStr, HitTestTypes.HITTEST_NOHIT)
+					screen.moveToFront(techCellId)
 
 					# Progress bar
 					barId = techCellId + "BAR"
@@ -896,6 +926,23 @@ class CvTechChooser:
 			self.bLockedTT = True
 
 	def update(self, fDelta):
+		# Only on the 2nd call to update can we update the scroll position correctly
+		if self.delayedScroll:
+			self.delayedScroll = self.delayedScroll - 1
+			if not self.delayedScroll:
+				techToScrollTo = self.getLastResearchingIdx()
+				if techToScrollTo < 0:
+					techToScrollTo = self.getLastResearchedIdx()
+				if techToScrollTo != -1:
+					self.scrollToTech(techToScrollTo)
+				else:
+					self.scrollTo(self.scrollOffs)
+
+
+		if self.demoMode:
+			self.scrollTo(self.demoOffs)
+			self.demoOffs = self.demoOffs + 50
+
 		if self.bLockedTT:
 			POINT = Win32.getCursorPos()
 			iX = POINT.x + self.iOffsetTT[0]
@@ -919,12 +966,15 @@ class CvTechChooser:
 		if self.updates:
 			# Sort them by distance to the current scroll offset so we can make sure to update what the player is looking at first
 			self.updates = sorted(self.updates, key=lambda el: abs(el[0] - self.scrollOffs - self.xRes / 2))
-			remaining_updates = [] # self.updates[:TECH_PAGING_RATE]
-			for el in self.updates:
-				dist = abs(el[0] - self.scrollOffs - self.xRes / 2)
-				if len(remaining_updates) > TECH_PAGING_RATE and dist > self.xRes:
-					break
-				remaining_updates.append(el)
+			
+			remaining_updates = self.updates[:TECH_PAGING_RATE]
+
+			# remaining_updates = [] 
+			# for el in self.updates:
+			# 	dist = abs(el[0] - self.scrollOffs - self.xRes / 2)
+			# 	if len(remaining_updates) > TECH_PAGING_RATE and dist > self.xRes:
+			# 		break
+			# 	remaining_updates.append(el)
 			self.updates = self.updates[len(remaining_updates):]
 			self.refresh((f[1] for f in remaining_updates), True)
 
@@ -972,6 +1022,9 @@ class CvTechChooser:
 				self.scrollTo(self.scrollOffs - self.xCellDist)
 			elif iData == InputTypes.KB_D:
 				self.scrollTo(self.scrollOffs + self.xCellDist)
+			if iData == InputTypes.KB_Q:
+				self.demoMode = not self.demoMode
+				self.demoOffs = 0
 			elif iData in (InputTypes.KB_ESCAPE, InputTypes.KB_F6):
 				# Stop F6 and ESC handlers from triggering on load
 				if self.skipNextExitKey:
@@ -1036,7 +1089,7 @@ class CvTechChooser:
 								CyMessageControl().sendResearch(iType, bShift)
 								self.updateTechRecords(False)
 					elif TYPE == "ERAIM" or TYPE == "ERATEXT":
-						self.scrollTo(self.minEraX[ID] - self.minX)
+						self.scrollTo(self.minEraXPos[ID] - self.minX)
 			elif NAME == "AddTechButton":
 				CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_TECH, self.iPlayer, -1, -1, self.iSelectedTech, True)	#Action, Player, X, Y, Data, bAdd
 				self.updateSelectedTech(screen, -1)
@@ -1046,8 +1099,7 @@ class CvTechChooser:
 			self.scroll()
 		elif iCode == 11: # List Select
 			if NAME == "TC_DebugDD":
-				self.cachePlayer(screen.getPullDownData(NAME, screen.getSelectedPullDownID(NAME)))
-				self.fullRefresh(screen)
+				self.initForPlayer(screen.getPullDownData(NAME, screen.getSelectedPullDownID(NAME)))
 
 	def onClose(self):
 		print "CvTechChooser.onClose"
@@ -1097,8 +1149,35 @@ class CvTechChooser:
 
 	def scroll(self):
 		screen = self.screen()
+
+		# Move the main tech panel
 		screen.moveItem(SCREEN_PANEL, -self.scrollOffs, 29, 0)
+
+		# Move the minimap lens
 		screen.moveItem(MINIMAP_LENS_ID, SLIDER_BORDER + (self.minimapScaleX * self.scrollOffs) - MINIMAP_LENS_BORDER_H, self.yRes - SCREEN_PANEL_BOTTOM_BAR_H, 0)
+
+		# Parallax Scroll the backdrops
+		for i in xrange(self.iNumEras - 1):
+			bgName = "ERA_BG_" + str(i)
+			fgName = "ERA_FG_" + str(i)
+
+			panelStartX, panelEndX = self.backdropPanelPos[i]
+
+			eraStart = panelStartX - self.xRes
+			eraEnd = panelEndX
+
+			eraWidth = eraEnd - eraStart
+			eraOffs = self.scrollOffs - eraStart
+			eraFrac = max(0, min(1, eraOffs / float(eraWidth)))
+			offs = self.scrollOffs - (panelStartX)
+			bgOffs = offs - int(BACKGROUND_PARA_AMOUNT * 2 * eraFrac)
+			fgOffs = offs - int(FOREGROUND_PARA_AMOUNT * 2 * eraFrac)
+
+			# Debug text
+			# screen.setText("FRRAC", "", str((self.scrollOffs, eraStart, eraEnd, eraWidth, eraOffs, eraFrac, offs, bgOffs, fgOffs)), 0, 70, 5, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+			screen.moveItem(bgName, bgOffs, 0, 0)
+			bgPanelHgt = self.yRes - SCREEN_PANEL_BOTTOM_BAR_H - SCREEN_PANEL_TOP_BAR_H
+			screen.moveItem(fgName, fgOffs, 0, 0)
 
 	def scrollToTech(self, idx):
 		self.scrollTo(self.getTechPos(idx) - self.xRes / 2 + self.xCellDist / 2)
@@ -1153,3 +1232,57 @@ class CvTechChooser:
 				CIV_IS_QUEUED: "Button_TechQueue_Style",
 				CIV_IS_TARGET: "Button_TechTarget_Style"
 			}.get(state, "Button_TechNo_Style")
+
+	def getBackgroundStyleForEra(self, era):
+		return {
+			0: "Button_TechBackground_0_Style",
+			1: "Button_TechBackground_1_Style",
+			2: "Button_TechBackground_2_Style",
+			3: "Button_TechBackground_3_Style",
+			4: "Button_TechBackground_4_Style",
+			5: "Button_TechBackground_5_Style",
+			6: "Button_TechBackground_6_Style",
+			7: "Button_TechBackground_7_Style",
+			8: "Button_TechBackground_8_Style",
+			9: "Button_TechBackground_9_Style",
+			10: "Button_TechBackground_10_Style",
+			11: "Button_TechBackground_11_Style",
+			12: "Button_TechBackground_12_Style",
+			13: "Button_TechBackground_13_Style",
+		}.get(era, "Button_TechBackground_0_Style")
+
+	def getForegroundStyleForEra(self, era):
+		return {
+			0: "Button_TechForeground_0_Style",
+			1: "Button_TechForeground_1_Style",
+			2: "Button_TechForeground_2_Style",
+			3: "Button_TechForeground_3_Style",
+			4: "Button_TechForeground_4_Style",
+			5: "Button_TechForeground_5_Style",
+			6: "Button_TechForeground_6_Style",
+			7: "Button_TechForeground_7_Style",
+			8: "Button_TechForeground_8_Style",
+			9: "Button_TechForeground_9_Style",
+			10: "Button_TechForeground_10_Style",
+			11: "Button_TechForeground_11_Style",
+			12: "Button_TechForeground_12_Style",
+			13: "Button_TechForeground_13_Style",
+		}.get(era, "Button_TechForeground_0_Style")
+	
+	def getIntroStyleForEra(self, era):
+		return {
+			0: "Panel_TechIntro_0_Style",
+			1: "Panel_TechIntro_1_Style",
+			2: "Panel_TechIntro_2_Style",
+			3: "Panel_TechIntro_3_Style",
+			4: "Panel_TechIntro_4_Style",
+			5: "Panel_TechIntro_5_Style",
+			6: "Panel_TechIntro_6_Style",
+			7: "Panel_TechIntro_7_Style",
+			8: "Panel_TechIntro_8_Style",
+			9: "Panel_TechIntro_9_Style",
+			10: "Panel_TechIntro_10_Style",
+			11: "Panel_TechIntro_11_Style",
+			12: "Panel_TechIntro_12_Style",
+			13: "Panel_TechIntro_13_Style",
+		}.get(era, "Panel_TechIntro_0_Style")
