@@ -5310,9 +5310,9 @@ bool CvGame::isValidVoteSelection(VoteSourceTypes eVoteSource, const VoteSelecti
 		}
 
 		CvCity* pCity = kPlayer.getCity(kData.iCityId);
-		FAssert(NULL != pCity);
 		if (NULL == pCity)
 		{
+			FErrorMsg("Referenced city not found");
 			return false;
 		}
 
@@ -7638,9 +7638,9 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 					CvUnitInfo& kUnit = GC.getUnitInfo(spawnInfo.getUnitType());
 
 					CvUnit* pUnit = GET_PLAYER(ePlayer).initUnit(spawnInfo.getUnitType(), pPlot->getX_INLINE(), pPlot->getY_INLINE(), (UnitAITypes)kUnit.getDefaultUnitAIType(), NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
-					FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
 					if (pUnit == NULL)
 					{
+						FErrorMsg("pUnit is expected to be assigned a valid unit object");
 						return;
 					}
 
@@ -7677,44 +7677,39 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 										if (pUnit->isHasUnitCombat(eUnitCombat) && eUnitCombat != eGroupVolume)
 										{
 											int iDifference = GC.getUnitCombatInfo(eGroupVolume).getGroupBase() - GC.getUnitCombatInfo(eUnitCombat).getGroupBase();
-											bool bSet = false;
 											while (iDifference > 0)
 											{
-												bSet = false;
-												for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+												int promotionIdx = 0;
+												for (; promotionIdx < GC.getNumPromotionInfos(); promotionIdx++)
 												{
-													if ((GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() > 0 && pUnit->canAcquirePromotion((PromotionTypes)iI, false, false, false, false, false, true)))
+													if ((GC.getPromotionInfo((PromotionTypes)promotionIdx).getGroupChange() > 0 && pUnit->canAcquirePromotion((PromotionTypes)promotionIdx, false, false, false, false, false, true)))
 													{
-														pUnit->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-														iDifference--;
-														bSet = true;
 														break;
 													}
 												}
-												if (!bSet)
+												FAssertMsg(promotionIdx < GC.getNumPromotionInfos(), "Unit cannot find a valid Group Upgrade Promotion");
+												if (promotionIdx < GC.getNumPromotionInfos())
 												{
-													iDifference--;
-													FAssertMsg(bSet, "Unit cannot find a valid Group Upgrade Promotion");
+													pUnit->setHasPromotion((PromotionTypes)iI, true, true, false, false);
 												}
+												iDifference--;
 											}
 											while (iDifference < 0)
 											{
-												bSet = false;
-												for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+												int promotionIdx = 0;
+												for (int promotionIdx = 0; promotionIdx < GC.getNumPromotionInfos(); promotionIdx++)
 												{
-													if ((GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() < 0 && pUnit->canAcquirePromotion((PromotionTypes)iI, false, false, false, false, false, true)))
+													if ((GC.getPromotionInfo((PromotionTypes)promotionIdx).getGroupChange() < 0 && pUnit->canAcquirePromotion((PromotionTypes)promotionIdx, false, false, false, false, false, true)))
 													{
-														pUnit->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-														iDifference++;
-														bSet = true;
 														break;
 													}
 												}
-												if (!bSet)
+												FAssertMsg(promotionIdx < GC.getNumPromotionInfos(), "Unit cannot find a valid Group Downgrade Promotion");
+												if (promotionIdx < GC.getNumPromotionInfos())
 												{
-													iDifference++;
-													FAssertMsg(bSet, "Unit cannot find a valid Group Downgrade Promotion");
+													pUnit->setHasPromotion((PromotionTypes)promotionIdx, true, true, false, false);
 												}
+												iDifference++;
 											}
 										}
 									}
@@ -9489,17 +9484,10 @@ bool CvGame::testVictory(VictoryTypes eVictory, TeamTypes eTeam, bool* pbEndScor
 			{
 				for (int iK = 0; iK < GC.getNumReligionInfos(); iK++)
 				{
-					if (GET_TEAM(eTeam).hasHolyCity((ReligionTypes)iK))
+					if (GET_TEAM(eTeam).hasHolyCity((ReligionTypes)iK)
+						&& calculateReligionPercent((ReligionTypes)iK) >= GC.getVictoryInfo(eVictory).getReligionPercent())
 					{
-						if (calculateReligionPercent((ReligionTypes)iK) >= GC.getVictoryInfo(eVictory).getReligionPercent())
-						{
-							bFound = true;
-							break;
-						}
-					}
-
-					if (bFound)
-					{
+						bFound = true;
 						break;
 					}
 				}
