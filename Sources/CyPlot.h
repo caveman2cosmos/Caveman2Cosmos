@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef CyPlot_h__
+#define CyPlot_h__
+
 class CyArea;
 class CvPlot;
 class CyUnit;
@@ -285,3 +288,5 @@ private:
 };
 
 DECLARE_PY_WRAPPER(CyPlot, CvPlot*);
+
+#endif // CyPlot_h__

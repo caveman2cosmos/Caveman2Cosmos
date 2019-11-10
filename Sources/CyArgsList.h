@@ -1,4 +1,6 @@
 #pragma once
+#ifndef CyArgsList_h__
+#define CyArgsList_h__
 
 #include "CvGameCoreDLL.h"
 
@@ -53,3 +55,4 @@ public:
 protected:
 	int m_iCnt;
 };
+#endif // CyArgsList_h__

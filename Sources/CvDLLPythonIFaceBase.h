@@ -1,5 +1,8 @@
 #pragma once
-#pragma optimize("", off)
+
+#ifndef CvDLLPythonIFaceBase_h__
+#define CvDLLPythonIFaceBase_h__
+
 //
 // abstract interface for Python functions used by DLL
 // Creator - Mustafa Thamer
@@ -181,6 +184,4 @@ int CvDLLPythonIFaceBase::putStringSeqInArray(PyObject* src, T** aDst)
 	}
 	return size;
 }
-
-
-#pragma optimize("", on)
+#endif // CvDLLPythonIFaceBase_h__

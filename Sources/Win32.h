@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef Win32_h__
+#define Win32_h__
+
 #include "CvGameCoreDLL.h"
 
 struct Win32
@@ -20,3 +23,5 @@ struct Win32
 	static void unregisterMouseWheelListener(int handle);
 	static float getMouseWheelDiff(int handle);
 };
+
+#endif // Win32_h__

@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef CyCity_h__
+#define CyCity_h__
+
 #include <string>
 #ifndef __INTELLISENSE__
 #include <boost/python/tuple.hpp>
@@ -740,3 +743,5 @@ private:
 };
 
 DECLARE_PY_WRAPPER(CyCity, CvCity*);
+
+#endif // CyCity_h__
