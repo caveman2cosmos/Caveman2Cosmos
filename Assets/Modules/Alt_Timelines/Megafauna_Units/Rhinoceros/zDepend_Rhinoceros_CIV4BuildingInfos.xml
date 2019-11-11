@@ -13,52 +13,27 @@
 					<BuildingClassType>BUILDINGCLASS_RHINO_TAXONOMY_MYTH</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_RHINO_TRAINER</Type>
-			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_BLACK_RHINO_MYTH</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_RHINO_TRAINER</Type>
-			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_INDIAN_RHINO_MYTH</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_RHINO_TRAINER</Type>
-			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_JAVA_RHINO_MYTH</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_RHINO_TRAINER</Type>
-			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_WHITE_RHINO_MYTH</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
-		</BuildingInfo>
-	</BuildingInfos>
-    <BuildingInfo>
-        <Type>BUILDING_RHINO_TRAINER</Type>
-        <PrereqOrBuildingClasses>
-            <PrereqOrBuildingClass>
-                <BuildingClassType>BUILDINGCLASS_ELASMOTHERIUM_MYTH</BuildingClassType>
-                <bPrereqBuildingClass>1</bPrereqBuildingClass>
-            </PrereqOrBuildingClass>
-        </PrereqOrBuildingClasses>
-    </BuildingInfo>
+                <PrereqOrBuildingClass>
+                    <BuildingClassType>BUILDINGCLASS_ELASMOTHERIUM_MYTH</BuildingClassType>
+                    <bPrereqBuildingClass>1</bPrereqBuildingClass>
+                </PrereqOrBuildingClass>
+            </PrereqOrBuildingClasses>
+        </BuildingInfo>
+    </BuildingInfos>
 </Civ4BuildingInfos>

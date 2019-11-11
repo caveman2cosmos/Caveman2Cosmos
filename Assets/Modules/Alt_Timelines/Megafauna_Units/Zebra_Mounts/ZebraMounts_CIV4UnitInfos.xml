@@ -92,7 +92,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_ZEBRA_TRAINER</PrereqBuilding>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_ZEBRA_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
@@ -253,7 +256,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_ZEBRA_TRAINER</PrereqBuilding>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_ZEBRA_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
@@ -440,7 +446,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_ZEBRA_TRAINER</PrereqBuilding>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_ZEBRA_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_CHARIOTRY</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
@@ -569,7 +578,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_ZEBRA_TRAINER</PrereqBuilding>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_ZEBRA_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_CAVALRY_TACTICS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
@@ -753,7 +765,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_ZEBRA_TRAINER</PrereqBuilding>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_ZEBRA_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>

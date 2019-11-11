@@ -131,6 +131,10 @@
 					<BuildingClassType>BUILDINGCLASS_MAMMOTH_HERD</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
+				<PrereqOrBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_PALEOLITHIC_MAMMOTH_MYTH</BuildingClassType>
+					<bPrereqBuildingClass>1</bPrereqBuildingClass>
+				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 		</BuildingInfo>
 		<BuildingInfo>
