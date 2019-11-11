@@ -1,17 +1,8 @@
 // selectionGroupAI.cpp
 
 #include "CvGameCoreDLL.h"
-
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      10/02/09                                jdog5000      */
-/*                                                                                              */
-/* AI logging                                                                                   */
-/************************************************************************************************/
 #include "BetterBTSAI.h"
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-
+#include <boost/bind.hpp>
 // Public Functions...
 
 CvSelectionGroupAI::CvSelectionGroupAI()
@@ -58,131 +49,74 @@ void CvSelectionGroupAI::AI_reset()
 	m_iGroupAttackY = -1;
 }
 
+namespace {
+	bool matchAll(CvUnit*)
+	{
+		return true;
+	}
+	bool matchNonAI(CvUnit* unit, UnitAITypes unitAI)
+	{
+		return unit->AI_getUnitAIType() != unitAI;
+	}
+	bool matchAI(CvUnit* unit, UnitAITypes unitAI)
+	{
+		return unit->AI_getUnitAIType() == unitAI;
+	}
+	bool matchImpassable(CvUnit* unit, const CvPlayerAI& player)
+	{
+		return player.AI_unitImpassableCount(unit->getUnitType()) > 0;
+	}
+	bool matchEmptyTransport(CvUnit* unit)
+	{
+		return unit->AI_getUnitAIType() == UNITAI_ASSAULT_SEA && !unit->hasCargo();
+	}
+
+	bool matchUnitPtr(const CvUnit& lhs, const CvUnit* rhs)
+	{
+		return &lhs == rhs;
+	}
+}
+
+void CvSelectionGroupAI::AI_separateIf(boost::function<bool(CvUnit*)> predicateFn)
+{
+	std::vector<CvUnit*> toRemove = get_if(predicateFn);
+
+	for (std::vector<CvUnit*>::iterator itr = toRemove.begin(); itr != toRemove.end(); ++itr)
+	{
+		CvUnit* unit = *itr;
+		unit->joinGroup(NULL);
+		FAssertMsg(std::find_if(beginValidUnits(), endValidUnits(), boost::bind(matchUnitPtr, _1, unit)) == endValidUnits(), "Failed to remove unit from group");
+		if (unit->plot()->getTeam() == getTeam())
+		{
+			unit->getGroup()->pushMission(MISSION_SKIP);
+		}
+	}
+}
 
 void CvSelectionGroupAI::AI_separate()
 {
-	CLLNode<IDInfo>* pEntityNode;
-	CvUnit* pLoopUnit;
-
-	pEntityNode = headUnitNode();
-
-	while (pEntityNode != NULL)
-	{
-		pLoopUnit = ::getUnit(pEntityNode->m_data);
-		pEntityNode = nextUnitNode(pEntityNode);
-
-		if ( pLoopUnit != NULL )
-		{
-			pLoopUnit->joinGroup(NULL);
-			if (pLoopUnit->plot()->getTeam() == getTeam())
-			{
-				pLoopUnit->getGroup()->pushMission(MISSION_SKIP);
-			}
-		}
-	}
-
-	FAssert(m_units.getLength() == 0);
-	m_units.clear();
+	AI_separateIf(matchAll);
 }
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      06/02/09                                jdog5000      */
-/*                                                                                              */
-/* General AI, Bugfix                                                                           */
-/************************************************************************************************/
 void CvSelectionGroupAI::AI_separateNonAI(UnitAITypes eUnitAI)
 {
-	CLLNode<IDInfo>* pEntityNode;
-	CvUnit* pLoopUnit;
-
-	pEntityNode = headUnitNode();
-
-	while (pEntityNode != NULL)
-	{
-		pLoopUnit = ::getUnit(pEntityNode->m_data);
-		pEntityNode = nextUnitNode(pEntityNode);
-		if (pLoopUnit->AI_getUnitAIType() != eUnitAI)
-		{
-			pLoopUnit->joinGroup(NULL);
-			if (pLoopUnit->plot()->getTeam() == getTeam())
-			{
-				pLoopUnit->getGroup()->pushMission(MISSION_SKIP);
-			}
-		}
-	}
+	AI_separateIf(boost::bind(matchNonAI, _1, eUnitAI));
 }
 
 void CvSelectionGroupAI::AI_separateAI(UnitAITypes eUnitAI)
 {
-	CLLNode<IDInfo>* pEntityNode;
-	CvUnit* pLoopUnit;
-
-	pEntityNode = headUnitNode();
-
-	while (pEntityNode != NULL)
-	{
-		pLoopUnit = ::getUnit(pEntityNode->m_data);
-		pEntityNode = nextUnitNode(pEntityNode);
-		if (pLoopUnit->AI_getUnitAIType() == eUnitAI)
-		{
-			pLoopUnit->joinGroup(NULL);
-			// Was potential crash in use of plot() if group emptied
-			if (pLoopUnit->plot()->getTeam() == getTeam())
-			{
-				pLoopUnit->getGroup()->pushMission(MISSION_SKIP);
-			}
-		}
-	}
+	AI_separateIf(boost::bind(matchAI, _1, eUnitAI));
 }
 
 void CvSelectionGroupAI::AI_separateImpassable()
 {
-	CLLNode<IDInfo>* pEntityNode;
-	CvUnit* pLoopUnit;
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
-
-	pEntityNode = headUnitNode();
-
-	while (pEntityNode != NULL)
-	{
-		pLoopUnit = ::getUnit(pEntityNode->m_data);
-		pEntityNode = nextUnitNode(pEntityNode);
-		if( (kPlayer.AI_unitImpassableCount(pLoopUnit->getUnitType()) > 0) )
-		{
-			pLoopUnit->joinGroup(NULL);
-			if (pLoopUnit->plot()->getTeam() == getTeam())
-			{
-				pLoopUnit->getGroup()->pushMission(MISSION_SKIP);
-			}
-		}
-	}
+	AI_separateIf(boost::bind(matchImpassable, _1, boost::ref(GET_PLAYER(getOwner()))));
 }
 
 void CvSelectionGroupAI::AI_separateEmptyTransports()
 {
-	CLLNode<IDInfo>* pEntityNode;
-	CvUnit* pLoopUnit;
-
-	pEntityNode = headUnitNode();
-
-	while (pEntityNode != NULL)
-	{
-		pLoopUnit = ::getUnit(pEntityNode->m_data);
-		pEntityNode = nextUnitNode(pEntityNode);
-		if ((pLoopUnit->AI_getUnitAIType() == UNITAI_ASSAULT_SEA) && (!pLoopUnit->hasCargo()))
-		{
-			pLoopUnit->joinGroup(NULL);
-			if (pLoopUnit->plot()->getTeam() == getTeam())
-			{
-				pLoopUnit->getGroup()->pushMission(MISSION_SKIP);
-			}
-		}
-	}
+	AI_separateIf(matchEmptyTransport);
 }
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-
 
 // Returns true if the group has become busy...
 bool CvSelectionGroupAI::AI_update()
