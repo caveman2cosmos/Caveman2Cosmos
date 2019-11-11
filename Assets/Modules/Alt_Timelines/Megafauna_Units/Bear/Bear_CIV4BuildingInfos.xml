@@ -61,47 +61,47 @@
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ASIANBEAR_MYTH_EFFECT</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_ASIANBEAR_MYTH</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BLACK_BEAR_MYTH_EFFECT</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_BLACK_BEAR_MYTH</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BROWN_BEAR_MYTH_EFFECT</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_BROWN_BEAR_MYTH</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CAVE_BEAR_MYTH_EFFECT</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CAVE_BEAR_MYTH</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GRIZZLY_MYTH_EFFECT</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_GRIZZLY_MYTH</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PANDA_BEAR_MYTH_EFFECT</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_PANDA_BEAR_MYTH</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_POLAR_BEAR_MYTH_EFFECT</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_POLAR_BEAR_MYTH</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_REDPANDA_MYTH_EFFECT</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_REDPANDA_MYTH</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SLOTH_BEAR_MYTH_EFFECT</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_SLOTH_BEAR_MYTH</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SPECTACLED_BEAR_MYTH_EFFECT</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_SPECTACLED_BEAR_MYTH</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SUN_BEAR_MYTH_EFFECT</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_SUN_BEAR_MYTH</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>

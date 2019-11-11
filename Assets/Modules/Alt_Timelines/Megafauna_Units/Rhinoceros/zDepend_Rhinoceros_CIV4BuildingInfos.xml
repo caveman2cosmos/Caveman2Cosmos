@@ -52,4 +52,13 @@
 			</PrereqOrBuildingClasses>
 		</BuildingInfo>
 	</BuildingInfos>
+    <BuildingInfo>
+        <Type>BUILDING_RHINO_TRAINER</Type>
+        <PrereqOrBuildingClasses>
+            <PrereqOrBuildingClass>
+                <BuildingClassType>BUILDINGCLASS_ELASMOTHERIUM_MYTH</BuildingClassType>
+                <bPrereqBuildingClass>1</bPrereqBuildingClass>
+            </PrereqOrBuildingClass>
+        </PrereqOrBuildingClasses>
+    </BuildingInfo>
 </Civ4BuildingInfos>
