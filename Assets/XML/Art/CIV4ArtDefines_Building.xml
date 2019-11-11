@@ -28952,16 +28952,6 @@
 			<Button>Art/Interface/Buttons/National_Wonders/Tradition_SStar_Button.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TRADITION_HUNTINGINSTRUCTION</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>Art/Interface/Buttons/National_Wonders/tradition_hunting.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TRADITION_HUNTER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>

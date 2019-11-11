@@ -252,11 +252,6 @@
 		<Italian>L'[COLOR_BUILDING_TEXT]allevamento costiero di pesce[COLOR_REVERT] fornisce cibo extra. Richiede il [LINK=BUILDING_FISH_MYTH]Mito - Storie di pesce[\LINK].</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TRADITION_HUNTING_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Tradition - Hunting[COLOR_REVERT] provides a free [LINK=BUILDING_HUNTING_INSTRUCTION]Hunting Instruction[\LINK] building in every city.</English>
-		<Italian>Le [COLOR_BUILDING_TEXT]Tradizioni - Caccia[COLOR_REVERT] forniscono gratuitamente l'edificio [LINK=BUILDING_HUNTING_INSTRUCTION]Istruzioni di caccia[\LINK] nelle tue città.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRADITION_SEA_HUNTING_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Tradition - Sea Hunting[COLOR_REVERT] provides a free [LINK=BUILDING_MASTER_SEA_HUNTER]Master Sea Hunter[\LINK] building in every city.</English>
 		<Italian>Le [COLOR_BUILDING_TEXT]Tradizioni - Pesca[COLOR_REVERT] forniscono gratuitamente l'edificio [LINK=BUILDING_MASTER_SEA_HUNTER]Mastro pescatore[\LINK] nelle tue città.</Italian>
