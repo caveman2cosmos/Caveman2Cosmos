@@ -1,16 +1,15 @@
 #pragma once
 
-// selectionGroup.h
-
 #ifndef CIV4_GROUP_H
 #define CIV4_GROUP_H
 
-//#include "CvStructs.h"
 #include "LinkedList.h"
 #include "CvPathGenerator.h"
 #include "CvUnit.h"
 #include "CvCity.h"
 #include "idinfo_iterator.h"
+
+#include <boost/function.hpp>
 
 class CvPlot;
 class CvArea;
@@ -256,6 +255,9 @@ public:
 
 	unit_iterator beginUnits() const { return unit_iterator(&m_units); }
 	unit_iterator endUnits() const { return unit_iterator(); }
+
+	std::vector<const CvUnit*> get_if(boost::function<bool(const CvUnit*)> predicateFn) const;
+	std::vector<CvUnit*> get_if(boost::function<bool(CvUnit*)> predicateFn);
 
 	void clearMissionQueue();
 	void setMissionPaneDirty();																																	// Exposed to Python
