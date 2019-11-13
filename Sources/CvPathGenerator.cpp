@@ -327,7 +327,7 @@ static void UnlinkNode(CvPathNode* node)
 		else
 		{
 			FAssertMsg(node->m_prevSibling != node->m_nextSibling, "Node links are a loop");
-			FAssertMsg(node->m_prevSibling == NULL, "Node is not first, but prev link is not valid");
+			FAssertMsg(node->m_prevSibling != NULL, "Node is not first, but prev link is not valid");
 
 			node->m_prevSibling->m_nextSibling = node->m_nextSibling;
 

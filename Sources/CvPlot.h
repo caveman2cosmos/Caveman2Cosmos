@@ -33,6 +33,21 @@ class CvPathPlotInfoStore;
 typedef bool (*ConstPlotUnitFunc)( const CvUnit* pUnit, int iData1, int iData2, const CvUnit* eUnit);
 typedef bool (*PlotUnitFunc)(CvUnit* pUnit, int iData1, int iData2, const CvUnit* eUnit);
 
+// Flags to control defender scoring (getBestDefender etc)
+struct EDefenderScore
+{
+	enum flags
+	{
+		None = 0,
+		TestAtWar = 1 << 0,
+		TestPotentialEnemy = 1 << 1,
+		TestCanMove = 1 << 2,
+		Assassinate = 1 << 3,
+		ClearCache = 1 << 4
+	};
+};
+DEFINE_ENUM_FLAG_OPERATORS(EDefenderScore::flags);
+
 //	Koshling - add caching to canBuild calculations
 #define CAN_BUILD_VALUE_CACHING
 #ifdef CAN_BUILD_VALUE_CACHING
@@ -267,9 +282,16 @@ public:
 // BUG - Partial Builds - end
 	int getFeatureProduction(BuildTypes eBuild, TeamTypes eTeam, CvCity** ppCity) const; // Exposed to Python
 
+	// Don't call this at all
 	DllExport CvUnit* getBestDefenderExternal(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, const CvUnit* pAttacker = NULL, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false) const;
+	CvUnit* getBestDefender(EDefenderScore::flags flags, PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, const CvUnit* pAttacker = NULL) const;
+	CvUnit* getFirstDefender(EDefenderScore::flags flags, PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker) const;
+
 	CvUnit* getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, const CvUnit* pAttacker = NULL, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false, bool bAssassinate = false, bool bClearCache = false) const; // Exposed to Python
+	// Deprecated, use the function above
 	CvUnit* getFirstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false) const;
+	// Deprecated, use the function above
+
 	int AI_sumStrength(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, DomainTypes eDomainType = NO_DOMAIN, bool bDefensiveBonuses = true, bool bTestAtWar = false, bool bTestPotentialEnemy = false, int iRange = 0) const;
 	CvUnit* getSelectedUnit() const; // Exposed to Python				
 	int getUnitPower(PlayerTypes eOwner = NO_PLAYER) const; // Exposed to Python	
@@ -331,7 +353,6 @@ public:
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
-	int getDistancePlottoPlot(const CvPlot* pTargetPlot) const;
 
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */

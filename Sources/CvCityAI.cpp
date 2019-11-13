@@ -4469,7 +4469,7 @@ void CvCityAI::AI_chooseProduction()
 	{
 		if (!AI_finalProcessSelection())
 		{
-			FErrorMsg(CvString::format("AI could not choose production for city %s", m_szName.c_str()).c_str());
+			FErrorMsg(CvString::format("AI could not choose production for city %S", m_szName.c_str()).c_str());
 		}
 	}
 }

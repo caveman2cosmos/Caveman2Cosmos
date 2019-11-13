@@ -4,6 +4,11 @@ import HandleInputUtil
 import PythonToolTip as pyTT
 from sys import maxint
 
+wdawdd
+awdaw
+dappidjaw;od231e4ep
+
+
 GC = CyGlobalContext()
 TRNSLTR = CyTranslator()
 AFM = CyArtFileMgr()

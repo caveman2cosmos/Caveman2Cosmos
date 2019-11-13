@@ -6,6 +6,7 @@
 #include "CvPython.h"
 #include "StackWalker.h"
 #include <sstream>
+#include "picojson.h"
 
 // Some Resource IDs for our dialog template
 #define IDC_IGNORE_ALWAYS               1001
@@ -31,11 +32,11 @@ namespace
 	// and is used by the dialog proc to display appropriate debug info
 	struct AssertInfo
 	{
-		const char* szExpression;
-		const char* szMessage;
-		const char* szPythonCallstack;
-		const char* szDLLCallstack;
-		const char* szFileName;
+		std::string szExpression;
+		std::string szMessage;
+		std::string szPythonCallstack;
+		std::string szDLLCallstack;
+		std::string szFileName;
 		unsigned int line;
 
 		// EIP / EBP / ESP
@@ -47,6 +48,18 @@ namespace
 	// be such a hot idea
 	const unsigned int MAX_ASSERT_TEXT = 65536;
 	char g_AssertText[MAX_ASSERT_TEXT];
+
+	std::string section(const char* title, const std::string& details)
+	{
+		if (details.empty())
+		{
+			return std::string();
+		}
+		return std::string(LINE_SEP2) +
+			std::string(title) + "\r\n" +
+			std::string(LINE_SEP) +
+			details + "\r\n";
+	}
 
 	INT_PTR CALLBACK AssertDlgProc(HWND hDlg, UINT msg, WPARAM wParam, LPARAM lParam)
 	{
@@ -66,29 +79,17 @@ namespace
 
 			sprintf(g_AssertText, 
 				"ASSERT FAILED\r\n"
-				LINE_SEP
+				LINE_SEP2
 				"File:        %s\r\n"
 				"Line:        %u\r\n"
 				"Expression:  %s\r\n"
-				LINE_SEP2
-				"MESSAGE:\r\n"
-				LINE_SEP
-				"%s\r\n"
-				LINE_SEP2
-				"PYTHON CALLSTACK:\r\n"
-				LINE_SEP
-				"%s\r\n"
-				LINE_SEP2
-				"DLL CALLSTACK:\r\n"
-				LINE_SEP
-				"%s\r\n"
-				,
-				g_AssertInfo.szFileName,
+				"%s%s%s",
+				g_AssertInfo.szFileName.c_str(),
 				g_AssertInfo.line,
-				g_AssertInfo.szExpression,
-				g_AssertInfo.szMessage ? g_AssertInfo.szMessage : "(empty)",
-				g_AssertInfo.szPythonCallstack ? g_AssertInfo.szPythonCallstack : "(empty)",
-				g_AssertInfo.szDLLCallstack ? g_AssertInfo.szDLLCallstack : "(empty)"
+				g_AssertInfo.szExpression.c_str(),
+				section("MESSAGE:", g_AssertInfo.szMessage).c_str(),
+				section("PYTHON CALLSTACK:", g_AssertInfo.szPythonCallstack).c_str(),
+				section("DLL CALLSTACK:", g_AssertInfo.szDLLCallstack).c_str()
 			);
 
 			::SetWindowText(::GetDlgItem(hDlg, IDC_ASSERTION_TEXT), g_AssertText);
@@ -248,13 +249,21 @@ bool FAssertDlg( const char* szExpr, const char* szMsg, const char* szFile, unsi
 
 #ifdef FASSERT_LOGGING
 	gDLL->logMsg("Asserts.log", CvString::format("%s (%d): %s,  %s\n%s\n%s", szFile, line, szExpr, szMsg, pyTrace.c_str(), dllTrace.c_str()).c_str());
+	picojson::value::object obj;
+	if(szFile) obj["file"] = picojson::value(szFile);
+	obj["line"] = picojson::value(static_cast<double>(line));
+	if(szExpr) obj["expr"] = picojson::value(szExpr);
+	if(szMsg) obj["msg"] = picojson::value(szMsg);
+	if(!pyTrace.empty()) obj["py_trace"] = picojson::value(pyTrace);
+	if(!dllTrace.empty()) obj["dll_trace"] = picojson::value(dllTrace);
+	gDLL->logMsg("AssertsJson.log", picojson::value(obj).serialize().c_str());
 	return false;
 #else
-	g_AssertInfo.szExpression = szExpr;
-	g_AssertInfo.szMessage = szMsg;
-	g_AssertInfo.szPythonCallstack = pyTrace.c_str();
-	g_AssertInfo.szDLLCallstack = dllTrace.c_str();
-	g_AssertInfo.szFileName = szFile;
+	g_AssertInfo.szExpression = szExpr ? szExpr : "";
+	g_AssertInfo.szMessage = szMsg ? szMsg : "";
+	g_AssertInfo.szPythonCallstack = pyTrace;
+	g_AssertInfo.szDLLCallstack = dllTrace;
+	g_AssertInfo.szFileName = szFile ? szFile : "";
 	g_AssertInfo.line = line;
 
 	DWORD dwResult = DisplayAssertDialog();

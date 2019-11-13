@@ -1188,10 +1188,10 @@ BOOL StackWalker::ShowCallstack(HANDLE                    hThread,
         this->m_sw->pUDSN(pSym->Name, csEntry.undName, STACKWALK_MAX_NAMELEN, UNDNAME_NAME_ONLY);
         this->m_sw->pUDSN(pSym->Name, csEntry.undFullName, STACKWALK_MAX_NAMELEN, UNDNAME_COMPLETE);
       }
-      else
-      {
-        this->OnDbgHelpErr("SymGetSymFromAddr64", GetLastError(), s.AddrPC.Offset);
-      }
+      //else
+      //{
+      //  this->OnDbgHelpErr("SymGetSymFromAddr64", GetLastError(), s.AddrPC.Offset);
+      //}
 
       // show line number info, NT5.0-method (SymGetLineFromAddr64())
       if (this->m_sw->pSGLFA != NULL)
@@ -1202,10 +1202,10 @@ BOOL StackWalker::ShowCallstack(HANDLE                    hThread,
           csEntry.lineNumber = Line.LineNumber;
           MyStrCpy(csEntry.lineFileName, STACKWALK_MAX_NAMELEN, Line.FileName);
         }
-        else
-        {
-          this->OnDbgHelpErr("SymGetLineFromAddr64", GetLastError(), s.AddrPC.Offset);
-        }
+        //else
+        //{
+        //  this->OnDbgHelpErr("SymGetLineFromAddr64", GetLastError(), s.AddrPC.Offset);
+        //}
       } // yes, we have SymGetLineFromAddr64()
 
       // show module info (SymGetModuleInfo64())
@@ -1252,10 +1252,10 @@ BOOL StackWalker::ShowCallstack(HANDLE                    hThread,
         csEntry.baseOfImage = Module.BaseOfImage;
         MyStrCpy(csEntry.loadedImageName, STACKWALK_MAX_NAMELEN, Module.LoadedImageName);
       } // got module info OK
-      else
-      {
-        this->OnDbgHelpErr("SymGetModuleInfo64", GetLastError(), s.AddrPC.Offset);
-      }
+      //else
+      //{
+      //  this->OnDbgHelpErr("SymGetModuleInfo64", GetLastError(), s.AddrPC.Offset);
+      //}
     } // we seem to have a valid PC
 
     CallstackEntryType et = nextEntry;

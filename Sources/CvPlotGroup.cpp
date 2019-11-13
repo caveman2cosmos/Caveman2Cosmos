@@ -9,10 +9,17 @@ int CvPlotGroup::m_allocationSeqForSession = 0;
 // Public Functions...
 
 CvPlotGroup::CvPlotGroup()
+	: m_sessionAllocSeq(0)
+	, m_sessionRecalcSeq(0)
+	, m_iID(0)
+	, m_eOwner(NO_PLAYER)
+	, m_paiNumBonuses(NULL)
+	, m_seedPlotX(0)
+	, m_seedPlotY(0)
+	, m_zobristHashes()
+	, m_numPlots(0)
+	, m_numCities(-1)
 {
-	m_paiNumBonuses = NULL;
-	m_numCities = -1;
-
 	reset(0, NO_PLAYER, true);
 }
 
@@ -234,9 +241,6 @@ void CvPlotGroup::recalculatePlots()
 {
 	PROFILE_FUNC();
 
-	CvPlot* pPlot;
-	PlayerTypes eOwner;
-
 	if ( m_bulkRecalcStartSeq != -1 && m_bulkRecalcStartSeq < m_sessionRecalcSeq )
 	{
 		//	This one has already been done
@@ -249,215 +253,205 @@ void CvPlotGroup::recalculatePlots()
 	Validate();
 #endif
 
-	eOwner = getOwnerINLINE();
-
-	pPlot = getRepresentativePlot();
-
-	if (pPlot != NULL)
+	PlayerTypes eOwner = getOwnerINLINE();
+	CvPlot* pPlot = getRepresentativePlot();
+	if (pPlot == NULL)
 	{
-		static int groupGenNumber = 0;
-		CLLNode<XYCoords>* pPlotNode;
+		return;
+	}
 
-		plotGroupCheckInfo	checkInfo;
+	static int groupGenNumber = 0;
 
-		checkInfo.hashInfo.allNodesHash = 0;
-		checkInfo.hashInfo.resourceNodesHash = 0;
-		checkInfo.groupGenerationNumber = ++groupGenNumber;
+	plotGroupCheckInfo	checkInfo;
 
-		//	Check whether the same set of cities and bonuses are still in the connected region
-		//	If they are then there is no material change and we don't need to recalculate
-		gDLL->getFAStarIFace()->SetData(&GC.getPlotGroupFinder(), &checkInfo);
-		gDLL->getFAStarIFace()->GeneratePath(&GC.getPlotGroupFinder(), pPlot->getX_INLINE(), pPlot->getY_INLINE(), -1, -1, false, eOwner);
+	checkInfo.hashInfo.allNodesHash = 0;
+	checkInfo.hashInfo.resourceNodesHash = 0;
+	checkInfo.groupGenerationNumber = ++groupGenNumber;
 
-		if (checkInfo.hashInfo.allNodesHash == m_zobristHashes.allNodesHash)
+	//	Check whether the same set of cities and bonuses are still in the connected region
+	//	If they are then there is no material change and we don't need to recalculate
+	gDLL->getFAStarIFace()->SetData(&GC.getPlotGroupFinder(), &checkInfo);
+	gDLL->getFAStarIFace()->GeneratePath(&GC.getPlotGroupFinder(), pPlot->getX_INLINE(), pPlot->getY_INLINE(), -1, -1, false, eOwner);
+
+	if (checkInfo.hashInfo.allNodesHash == m_zobristHashes.allNodesHash)
+	{
+		return;
+	}
+
+	//	If the city+resource network has not changed then bonuses dont need to be
+	//	recalculated and we can just use the pathing to update the plot groups on
+	//	nodes that have been removed
+	if (checkInfo.hashInfo.resourceNodesHash == m_zobristHashes.resourceNodesHash)
+	{
+		PROFILE_BEGIN("CvPlotGroup::recalculatePlots (unchanged bonuses)");
+
+		buildRemovedPlotListParams removedPlotParams;
+
+		removedPlotParams.removedPlots.clear();
+		removedPlotParams.groupGenNumber = groupGenNumber;
+
+		plotEnumerator(buildRemovedPlotList, &removedPlotParams);
+
+		PROFILE_END();
+
+		//	Just update the plot group for the removed plots
+		for (CLLNode<XYCoords>* pPlotNode = removedPlotParams.removedPlots.head();
+			pPlotNode != NULL;
+			pPlotNode = removedPlotParams.removedPlots.next(pPlotNode))
 		{
-			return;
+			pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
+
+			FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
+
+			removePlot(pPlot, false);
+			pPlot->updatePlotGroup(eOwner);
 		}
 
-		//	If the city+resource network has not changed then bonuses dont need to be
-		//	recalculated and we can just use the pathing to update the plot groups on
-		//	nodes that have been removed
-		if (checkInfo.hashInfo.resourceNodesHash == m_zobristHashes.resourceNodesHash)
+		for (CLLNode<XYCoords>* pPlotNode = removedPlotParams.removedPlots.head();
+			pPlotNode != NULL;
+			pPlotNode = removedPlotParams.removedPlots.next(pPlotNode))
 		{
-			PROFILE_BEGIN("CvPlotGroup::recalculatePlots (unchanged bonuses)");
+			pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
 
-			buildRemovedPlotListParams removedPlotParams;
+			FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
 
-			removedPlotParams.removedPlots.clear();
-			removedPlotParams.groupGenNumber = groupGenNumber;
-
-			plotEnumerator(buildRemovedPlotList, &removedPlotParams);
-
-			PROFILE_END();
-
-			//	Just update the plot group for the removed plots
-			pPlotNode = removedPlotParams.removedPlots.head();
-
-			while (pPlotNode != NULL)
+			if ( pPlot->getPlotGroup(m_eOwner) == NULL )
 			{
-				pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
-
-				FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
-
-				removePlot(pPlot, false);
-				pPlot->updatePlotGroup(eOwner);
-
-				pPlotNode = removedPlotParams.removedPlots.next(pPlotNode);
+				colorRegion(pPlot, m_eOwner, false);
 			}
+			//pPlot->updatePlotGroup(eOwner, false, false);
+		}
+	}
+	else
+	{
+		PROFILE("CvPlotGroup::recalculatePlots update");
 
-			while (pPlotNode != NULL)
+		m_numCities = -1;
+
+		buildAllPlotListParams allPlotParams;
+
+		allPlotParams.allPlots.clear();
+
+		plotEnumerator(buildAllPlotList, &allPlotParams);
+
+		//	Set them all to no plot group but without any update of bonuses for now
+		for (CLLNode<XYCoords>* pPlotNode = allPlotParams.allPlots.head();
+			pPlotNode != NULL;
+			pPlotNode = allPlotParams.allPlots.next(pPlotNode))
+		{
+			PROFILE("CvPlotGroup::recalculatePlots update 1");
+
+			pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
+
+			FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
+
+			pPlot->setPlotGroup(eOwner, NULL, false);
+			//OutputDebugString(CvString::format("Nulled plot group for: (%d,%d)\n", pPlot->getX_INLINE(), pPlot->getY_INLINE()).c_str());
+		}
+
+		int	iStartingAllocSeq = m_allocationSeqForSession;
+
+		//	Construct new plot groups (still without bonus adjustment)
+		for (CLLNode<XYCoords>* pPlotNode = allPlotParams.allPlots.head();
+			pPlotNode != NULL;
+			pPlotNode = allPlotParams.allPlots.next(pPlotNode))
+		{
+			PROFILE("CvPlotGroup::recalculatePlots update 2");
+
+			pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
+
+			FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
+
+			if ( pPlot->getPlotGroup(m_eOwner) == NULL )
 			{
-				pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
+				colorRegion(pPlot, m_eOwner, false);
+			}
+			//pPlot->updatePlotGroup(eOwner, true, false);
+		}
 
-				FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
+		//	Find the largest resulting new plot group
+		int iLargest = 0;
+		CvPlotGroup* pLargestGroup = NULL;
 
-				if ( pPlot->getPlotGroup(m_eOwner) == NULL )
-				{
-					colorRegion(pPlot, m_eOwner, false);
-				}
-				//pPlot->updatePlotGroup(eOwner, false, false);
+		for (CLLNode<XYCoords>* pPlotNode = allPlotParams.allPlots.head();
+			pPlotNode != NULL;
+			pPlotNode = allPlotParams.allPlots.next(pPlotNode))
+		{
+			PROFILE("CvPlotGroup::recalculatePlots update 2");
 
-				pPlotNode = removedPlotParams.removedPlots.deleteNode(pPlotNode);
+			pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
+
+			FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
+
+			CvPlotGroup* pPlotGroup = pPlot->getPlotGroup(eOwner);
+
+			if ( pPlotGroup != NULL && pPlotGroup->m_sessionAllocSeq >= iStartingAllocSeq && pPlotGroup->m_numPlots > iLargest )
+			{
+				pLargestGroup = pPlotGroup;
+				iLargest = pLargestGroup->m_numPlots;
 			}
 		}
-		else
+
+		//	Go through the new set picking one of the new plot groups to
+		//	be replaced by a shrunken version of the original - its members will
+		//	end up just staying with the original and necessitating no bonus recalculation
+		//	Others will get bonus adjustment to their new plot groups
+		CvPlotGroup* newTransitionGroup = pLargestGroup;
+		int iPlotsTransferred = 0;
+
+		m_numCities = 0;
+
+		for (CLLNode<XYCoords>* pPlotNode = allPlotParams.allPlots.head();
+			pPlotNode != NULL;
+			pPlotNode = allPlotParams.allPlots.next(pPlotNode))
 		{
-			PROFILE("CvPlotGroup::recalculatePlots update");
+			PROFILE("CvPlotGroup::recalculatePlots update 3");
 
-			m_numCities = -1;
+			pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
 
-			buildAllPlotListParams allPlotParams;
+			FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
 
-			allPlotParams.allPlots.clear();
+			CvPlotGroup* plotGroup = pPlot->getPlotGroup(eOwner);
 
-			plotEnumerator(buildAllPlotList, &allPlotParams);
-
-			pPlotNode = allPlotParams.allPlots.head();
-
-			//	Set them all to no plot group but without any update of bonuses for now
-			while (pPlotNode != NULL)
+			if ( NULL == newTransitionGroup )
 			{
-				PROFILE("CvPlotGroup::recalculatePlots update 1");
-
-				pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
-
-				FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
-
-				pPlot->setPlotGroup(eOwner, NULL, false);
-
-				//OutputDebugString(CvString::format("Nulled plot group for: (%d,%d)\n", pPlot->getX_INLINE(), pPlot->getY_INLINE()).c_str());
-
-				pPlotNode = allPlotParams.allPlots.next(pPlotNode);
+				newTransitionGroup = plotGroup;
 			}
 
-			pPlotNode = allPlotParams.allPlots.head();
-			int	iStartingAllocSeq = m_allocationSeqForSession;
-
-			//	Construct new plot groups (still without bonus adjustment)
-			while (pPlotNode != NULL)
+			if ( plotGroup != NULL && newTransitionGroup == plotGroup )
 			{
-				PROFILE("CvPlotGroup::recalculatePlots update 2");
+				//	Put this one back where it came from with no recalculation
+				pPlot->setPlotGroup(eOwner, this, false);
 
-				pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
+				iPlotsTransferred++;
+				newTransitionGroup->m_numPlots--;
 
-				FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
-
-				if ( pPlot->getPlotGroup(m_eOwner) == NULL )
+				if ( pPlot->getPlotCity() != NULL && pPlot->getPlotCity()->getOwnerINLINE() == m_eOwner )
 				{
-					colorRegion(pPlot, m_eOwner, false);
+					m_numCities++;
 				}
-				//pPlot->updatePlotGroup(eOwner, true, false);
-
-				pPlotNode = allPlotParams.allPlots.next(pPlotNode);
 			}
-
-			pPlotNode = allPlotParams.allPlots.head();
-
-			//	Find the largest resulting new plot group
-			int iLargest = 0;
-			CvPlotGroup* pLargestGroup = NULL;
-
-			while (pPlotNode != NULL)
+			else
 			{
-				PROFILE("CvPlotGroup::recalculatePlots update 2");
-
-				pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
-
-				FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
-
-				CvPlotGroup* pPlotGroup = pPlot->getPlotGroup(eOwner);
-
-				if ( pPlotGroup != NULL && pPlotGroup->m_sessionAllocSeq >= iStartingAllocSeq && pPlotGroup->m_numPlots > iLargest )
-				{
-					pLargestGroup = pPlotGroup;
-					iLargest = pLargestGroup->m_numPlots;
-				}
-
-				pPlotNode = allPlotParams.allPlots.next(pPlotNode);
-			}
-
-			pPlotNode = allPlotParams.allPlots.head();
-
-			//	Go through the new set picking one of the new plot groups to
-			//	be replaced by a shrunken version of the original - its members will
-			//	end up just staying with the original and necessitating no bonus recalculation
-			//	Others will get bonus adjustment to their new plot groups
-			CvPlotGroup* newTransitionGroup = pLargestGroup;
-			int iPlotsTransferred = 0;
-
-			m_numCities = 0;
-
-			while (pPlotNode != NULL)
-			{
-				PROFILE("CvPlotGroup::recalculatePlots update 3");
-
-				pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
-
-				FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
-
-				CvPlotGroup* plotGroup = pPlot->getPlotGroup(eOwner);
-
-				if ( NULL == newTransitionGroup )
-				{
-					newTransitionGroup = plotGroup;
-				}
-
-				if ( plotGroup != NULL && newTransitionGroup == plotGroup )
-				{
-					//	Put this one back where it came from with no recalculation
-					pPlot->setPlotGroup(eOwner, this, false);
-
-					iPlotsTransferred++;
-					newTransitionGroup->m_numPlots--;
-
-					if ( pPlot->getPlotCity() != NULL && pPlot->getPlotCity()->getOwnerINLINE() == m_eOwner )
-					{
-						m_numCities++;
-					}
-				}
-				else
-				{
-					//	Transiently put it back so we can take it out again WITH bonus
-					//	recalculation
-					pPlot->setPlotGroup(eOwner, this, false);
-					pPlot->setPlotGroup(eOwner, plotGroup);
-				}
-
-				pPlotNode = allPlotParams.allPlots.deleteNode(pPlotNode);
-			}
-
-			if ( newTransitionGroup != NULL )
-			{
-				if ( newTransitionGroup->m_numPlots > 0 )
-				{
-					mergeIn(newTransitionGroup,true);
-				}
-				else
-				{
-					GET_PLAYER(eOwner).deletePlotGroup(newTransitionGroup->getID());
-				}
+				//	Transiently put it back so we can take it out again WITH bonus
+				//	recalculation
+				pPlot->setPlotGroup(eOwner, this, false);
+				pPlot->setPlotGroup(eOwner, plotGroup);
 			}
 		}
+
+		if ( newTransitionGroup != NULL )
+		{
+			if ( newTransitionGroup->m_numPlots > 0 )
+			{
+				mergeIn(newTransitionGroup,true);
+			}
+			else
+			{
+				GET_PLAYER(eOwner).deletePlotGroup(newTransitionGroup->getID());
+			}
+		}
+	}
 
 #ifdef VALIDATION_FOR_PLOT_GROUPS
 	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
@@ -470,7 +464,6 @@ void CvPlotGroup::recalculatePlots()
 		}
 	}
 #endif
-	}
 }
 
 int CvPlotGroup::getID() const

@@ -13938,6 +13938,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 		case UNITAI_HEALER:
 		case UNITAI_HEALER_SEA:
 			iValue += iHealerValue;
+			//	Drop through
 		case UNITAI_PROPERTY_CONTROL:
 		case UNITAI_PROPERTY_CONTROL_SEA:
 		case UNITAI_CITY_SPECIAL:

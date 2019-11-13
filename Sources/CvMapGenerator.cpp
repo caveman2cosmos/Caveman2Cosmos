@@ -290,32 +290,18 @@ void CvMapGenerator::addRivers()
 	}
 
 	gDLL->NiTextOut("Adding Rivers...");
-	CvPlot* pLoopPlot;
-	CvPlot* pStartPlot;
-	int iPass;
-	int iRiverSourceRange;
-	int iSeaWaterRange;
-	int iI;
 
-	for (iPass = 0; iPass < 4; iPass++)
+	for (int iPass = 0; iPass < 4; iPass++)
 	{
-		if (iPass <= 1 || !GC.getGame().isOption(GAMEOPTION_MORE_RIVERS))
-		{
-			iRiverSourceRange = GC.getDefineINT("RIVER_SOURCE_MIN_RIVER_RANGE");
-		}
-		else
-		{
-			iRiverSourceRange = (GC.getDefineINT("RIVER_SOURCE_MIN_RIVER_RANGE") / 2);
-		}
+		int iRiverSourceRange = 
+			(iPass <= 1 || !GC.getGame().isOption(GAMEOPTION_MORE_RIVERS)) 
+			? GC.getDefineINT("RIVER_SOURCE_MIN_RIVER_RANGE")
+			: (GC.getDefineINT("RIVER_SOURCE_MIN_RIVER_RANGE") / 2);
 
-		if (iPass <= 1 || !GC.getGame().isOption(GAMEOPTION_MORE_RIVERS))
-		{
-			iSeaWaterRange = GC.getDefineINT("RIVER_SOURCE_MIN_SEAWATER_RANGE");
-		}
-		else
-		{
-			iSeaWaterRange = (GC.getDefineINT("RIVER_SOURCE_MIN_SEAWATER_RANGE") / 2);
-		}
+		int iSeaWaterRange = 
+			(iPass <= 1 || !GC.getGame().isOption(GAMEOPTION_MORE_RIVERS))
+			? GC.getDefineINT("RIVER_SOURCE_MIN_SEAWATER_RANGE")
+			: (GC.getDefineINT("RIVER_SOURCE_MIN_SEAWATER_RANGE") / 2);
 
 		int iRand = 8;
 		int iPPRE = GC.getDefineINT("PLOTS_PER_RIVER_EDGE");
@@ -324,31 +310,29 @@ void CvMapGenerator::addRivers()
 			iRand = GC.getDefineINT("RIVER_RAND_ON_MORE_RIVERS");
 			iPPRE /= std::max(1, GC.getDefineINT("PLOTS_PER_RIVER_EDGE_DIVISOR"));
 		}
-
-		for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+		iPPRE = std::max(1, iPPRE);
+		for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
 		{
 			gDLL->callUpdater();
-			pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+			CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
 			FAssertMsg(pLoopPlot != NULL, "LoopPlot is not assigned a valid value");
 
-			if (!(pLoopPlot->isWater()))
-			{
-				if (((iPass == 0) && (pLoopPlot->isHills() || pLoopPlot->isPeak())) ||
-					  ((iPass == 1) && !(pLoopPlot->isCoastalLand()) && (GC.getGameINLINE().getMapRandNum(iRand, "addRivers") == 0)) ||
-					  ((iPass == 2) && (pLoopPlot->isHills() || pLoopPlot->isPeak()) && (pLoopPlot->area()->getNumRiverEdges() < ((pLoopPlot->area()->getNumTiles() / iPPRE) + 1))) ||
-					  ((iPass == 3) && (pLoopPlot->area()->getNumRiverEdges() < ((pLoopPlot->area()->getNumTiles() / iPPRE) + 1))))
-				{
-					if (!(GC.getMapINLINE().findWater(pLoopPlot, iRiverSourceRange, true)))
-					{
-						if (!(GC.getMapINLINE().findWater(pLoopPlot, iSeaWaterRange, false)))
-						{
-							pStartPlot = pLoopPlot->getInlandCorner();
+			if (pLoopPlot->isWater())
+				continue;
 
-							if (pStartPlot != NULL)
-							{
-								doRiver(pStartPlot);
-							}
-						}
+			if (((iPass == 0) && (pLoopPlot->isHills() || pLoopPlot->isPeak())) ||
+				((iPass == 1) && !(pLoopPlot->isCoastalLand()) && (GC.getGameINLINE().getMapRandNum(iRand, "addRivers") == 0)) ||
+				((iPass == 2) && (pLoopPlot->isHills() || pLoopPlot->isPeak()) && (pLoopPlot->area()->getNumRiverEdges() < ((pLoopPlot->area()->getNumTiles() / iPPRE) + 1))) ||
+				((iPass == 3) && (pLoopPlot->area()->getNumRiverEdges() < ((pLoopPlot->area()->getNumTiles() / iPPRE) + 1))))
+			{
+				if (!(GC.getMapINLINE().findWater(pLoopPlot, iRiverSourceRange, true)) 
+					&& !(GC.getMapINLINE().findWater(pLoopPlot, iSeaWaterRange, false)))
+				{
+					CvPlot* pStartPlot = pLoopPlot->getInlandCorner();
+
+					if (pStartPlot != NULL)
+					{
+						doRiver(pStartPlot);
 					}
 				}
 			}

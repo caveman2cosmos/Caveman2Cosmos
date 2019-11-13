@@ -25,7 +25,8 @@ static bool g_riverDirectionZobristHashesSet = false;
 int CvPlot::m_iGlobalCachePathEpoch = 0;
 stdext::hash_map<int,int>* CvPlot::m_resultHashMap = NULL;
 static const CvPlot* g_bestDefenderCachePlot = NULL;
-static stdext::hash_map<int, unitDefenderInfo>*	g_bestDefenderCache = NULL;
+typedef stdext::hash_map<int, unitDefenderInfo> DefenderScoreCache;
+static DefenderScoreCache* g_bestDefenderCache = NULL;
 
 // Public Functions...
 
@@ -44,7 +45,7 @@ CvPlot::CvPlot()
 
 	if ( g_bestDefenderCache == NULL )
 	{
-		g_bestDefenderCache = new stdext::hash_map<int, unitDefenderInfo>();
+		g_bestDefenderCache = new DefenderScoreCache();
 	}
 
 	m_aiYield = new short[NUM_YIELD_TYPES];
@@ -2531,73 +2532,70 @@ bool CvPlot::canSeePlot(CvPlot *pPlot, TeamTypes eTeam, int iRange, DirectionTyp
 bool CvPlot::canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int originalDX, int originalDY, bool firstPlot, bool outerRing) const
 {
 	CvPlot *pPlot = plotXY(getX_INLINE(), getY_INLINE(), dx, dy);
-	if (pPlot != NULL)
+	if (pPlot == NULL)
+		return false;
+
+	// Base case is current plot
+	if (dx == 0 && dy == 0)
 	{
-		//base case is current plot
-		if((dx == 0) && (dy == 0))
+		return true;
+	}
+
+	// Find closest of three points (1, 2, 3) to original line from Start (S) to End (E)
+	// The diagonal is computed first as that guarantees a change in position
+	// -------------
+	// |   | 2 | S |
+	// -------------
+	// | E | 1 | 3 |
+	// -------------
+	int displacements[3][2] = { {dx - getSign(dx), dy - getSign(dy)}, {dx - getSign(dx), dy}, {dx, dy - getSign(dy)} };
+	int allClosest[3];
+	int closest = -1;
+	for (int i = 0; i < 3; i++)
+	{
+		// int tempClosest = abs(displacements[i][0] * originalDX - displacements[i][1] * originalDY); //more accurate, but less structured on a grid
+		allClosest[i] = abs(displacements[i][0] * dy - displacements[i][1] * dx); // cross product
+		if((closest == -1) || (allClosest[i] < closest))
 		{
-			return true;
+			closest = allClosest[i];
 		}
+	}
 
-		//find closest of three points (1, 2, 3) to original line from Start (S) to End (E)
-		//The diagonal is computed first as that guarantees a change in position
-		// -------------
-		// |   | 2 | S |
-		// -------------
-		// | E | 1 | 3 |
-		// -------------
+	// iterate through all minimum plots to see if any of them are passable
+	for (int i = 0; i < 3; i++)
+	{
+		int nextDX = displacements[i][0];
+		int nextDY = displacements[i][1];
 
-		int displacements[3][2] = {{dx - getSign(dx), dy - getSign(dy)}, {dx - getSign(dx), dy}, {dx, dy - getSign(dy)}};
-		int allClosest[3];
-		int closest = -1;
-		for (int i=0;i<3;i++)
+		// Make sure we change plots
+		if((nextDX != dx || nextDY != dy)
+			&& allClosest[i] == closest
+			&& canSeeDisplacementPlot(eTeam, nextDX, nextDY, originalDX, originalDY, false, false)
+			)
 		{
-			//int tempClosest = abs(displacements[i][0] * originalDX - displacements[i][1] * originalDY); //more accurate, but less structured on a grid
-			allClosest[i] = abs(displacements[i][0] * dy - displacements[i][1] * dx); //cross product
-			if((closest == -1) || (allClosest[i] < closest))
-			{
-				closest = allClosest[i];
-			}
-		}
+			int fromLevel = seeFromLevel(eTeam);
+			int throughLevel = pPlot->seeThroughLevel();
 
-		//iterate through all minimum plots to see if any of them are passable
-		for(int i=0;i<3;i++)
-		{
-			int nextDX = displacements[i][0];
-			int nextDY = displacements[i][1];
-			if((nextDX != dx) || (nextDY != dy)) //make sure we change plots
+			// Check strictly higher level
+			if(outerRing)
 			{
-				if(allClosest[i] == closest)
+				CvPlot *passThroughPlot = plotXY(getX_INLINE(), getY_INLINE(), nextDX, nextDY);
+				if(passThroughPlot)
 				{
-					if(canSeeDisplacementPlot(eTeam, nextDX, nextDY, originalDX, originalDY, false, false))
+					int passThroughLevel = passThroughPlot->seeThroughLevel();
+					if (fromLevel >= passThroughLevel
+						// Either we can see through to it or it is high enough to see from far
+						&& (fromLevel > passThroughLevel || pPlot->seeFromLevel(eTeam) > fromLevel))
 					{
-						int fromLevel = seeFromLevel(eTeam);
-						int throughLevel = pPlot->seeThroughLevel();
-						if(outerRing) //check strictly higher level
-						{
-							CvPlot *passThroughPlot = plotXY(getX_INLINE(), getY_INLINE(), nextDX, nextDY);
-							int passThroughLevel = passThroughPlot->seeThroughLevel();
-							if (fromLevel >= passThroughLevel)
-							{
-								if((fromLevel > passThroughLevel) || (pPlot->seeFromLevel(eTeam) > fromLevel)) //either we can see through to it or it is high enough to see from far
-								{
-									return true;
-								}
-							}
-						}
-						else
-						{
-							if(fromLevel >= throughLevel) //we can clearly see this level
-							{
-								return true;
-							}
-							else if(firstPlot) //we can also see it if it is the first plot that is too tall
-							{
-								return true;
-							}
-						}
+						return true;
 					}
 				}
+			}
+			// we can clearly see this level or
+			// we can also see it if it is the first plot that is too tall
+			else if (fromLevel >= throughLevel || firstPlot)
+			{
+				return true;
 			}
 		}
 	}
@@ -3981,9 +3979,115 @@ CvUnit* CvPlot::getBestDefenderExternal(PlayerTypes eOwner, PlayerTypes eAttacki
 	return bestDefender;
 }
 
+namespace {
+	int getDefenderScore(const CvPlot* plot, const CvUnit* pLoopUnit, PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar, bool bTestPotentialEnemy, bool bTestCanMove, bool bAssassinate, ECacheAccess::flags cacheAccess)
+	{
+		// Check the unit is valid
+		if (
+			// In delayed death cycle
+			pLoopUnit->plot() == NULL
+			// Going to be dead
+			|| pLoopUnit->AI_getPredictedHitPoints() == 0
+			// Already dead
+			|| pLoopUnit->isDead()
+			// Doesn't belong to the player we are interested in
+			|| (eOwner != NO_PLAYER && pLoopUnit->getOwnerINLINE() != eOwner)
+			)
+		{
+			return 0;
+		}
+
+		CvChecksum checksum;
+		if (cacheAccess != ECacheAccess::None)
+		{
+			// Work out our cache key (todo: change this to just be a proper hash key)
+			if (pAttacker != NULL)
+			{
+				checksum.add(pAttacker->getID());
+			}
+			checksum.add((int)pLoopUnit->getOwnerINLINE());
+			checksum.add(pLoopUnit->getID());
+			checksum.add((int)bTestAtWar);
+			checksum.add((int)bTestPotentialEnemy * 10);
+			checksum.add((int)bTestCanMove * 100);
+			checksum.add((int)eAttackingPlayer);
+			checksum.add((int)eOwner);
+			checksum.add((int)bAssassinate * 100);
+
+			if(cacheAccess & ECacheAccess::Read)
+			{
+				// look in the cache
+				DefenderScoreCache::const_iterator itr = g_bestDefenderCache->find(checksum.get());
+				if (itr != g_bestDefenderCache->end() 
+					&& itr->second.iHealth == pLoopUnit->currHitPoints())
+				{
+					return itr->second.iValue;
+				}
+			}
+		}
+
+		int iValue = 0;
+
+		if (
+			// Assassination target, if we have one
+				(!bAssassinate || (pAttacker && pLoopUnit->isTargetOf(*pAttacker)))
+			// Not invisible to the player, if any
+			&& (eAttackingPlayer == NO_PLAYER || !pLoopUnit->isInvisible(GET_PLAYER(eAttackingPlayer).getTeam(), false))
+			// War enemy (todo: we should just assert that attacking player is valid if we are testing for enemy)
+			&& (!bTestAtWar
+				|| eAttackingPlayer == NO_PLAYER
+				|| pLoopUnit->isEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), plot)
+				|| (pAttacker != NULL && pAttacker->isEnemy(GET_PLAYER(pLoopUnit->getOwnerINLINE()).getTeam(), plot, pLoopUnit)))
+			// Units cannot coexist together
+			&& (pAttacker == NULL || !pLoopUnit->canUnitCoexistWithEnemyUnit(pAttacker, plot, true))
+			// Potential enemy (todo: we should just assert that attacking player is valid if we are testing for potential enemy)
+			&& (!bTestPotentialEnemy
+				|| eAttackingPlayer == NO_PLAYER
+				|| pLoopUnit->isPotentialEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), plot)
+				|| (pAttacker != NULL && pAttacker->isPotentialEnemy(GET_PLAYER(pLoopUnit->getOwnerINLINE()).getTeam(), plot, pLoopUnit))
+				)
+			// If we are testing movement, can the unit move?
+			&& (!bTestCanMove || (pLoopUnit->canMove() && !pLoopUnit->isCargo()))
+			// If the attacker is an air unit then is the units current damage less than the attackers damage limit?
+			&& (pAttacker == NULL
+				|| pAttacker->getDomainType() != DOMAIN_AIR
+				|| pLoopUnit->getDamage() < pAttacker->airCombatLimit(pLoopUnit)
+				)
+			)
+		{
+			iValue = pAttacker ? pLoopUnit->defenderValue(pAttacker) : 0;
+			iValue += (pLoopUnit->tauntTotal() * iValue) / 100;
+			// It should be greater than 0 as this target is at least valid as per the checks above
+			iValue = std::max(1, iValue);
+		}
+
+		if (cacheAccess & ECacheAccess::Write)
+		{
+			MEMORY_TRACK_EXEMPT();
+
+			unitDefenderInfo info;
+			info.iHealth = pLoopUnit->currHitPoints();
+			info.iValue = iValue;
+			(*g_bestDefenderCache)[checksum.get()] = info;
+		}
+
+		return iValue;
+	}
+}
+
+CvUnit* CvPlot::getBestDefender(EDefenderScore::flags flags, PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker) const
+{
+	return getBestDefender(eOwner, eAttackingPlayer, pAttacker,
+		flags & EDefenderScore::TestAtWar,
+		flags & EDefenderScore::TestPotentialEnemy,
+		flags & EDefenderScore::TestCanMove,
+		flags & EDefenderScore::Assassinate,
+		flags & EDefenderScore::ClearCache
+	);
+}
+
 CvUnit* CvPlot::getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar, bool bTestPotentialEnemy, bool bTestCanMove, bool bAssassinate, bool bClearCache) const
 {
-	CvUnit* pBestUnit;
 
 	PROFILE_FUNC();
 
@@ -4007,197 +4111,56 @@ CvUnit* CvPlot::getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer
 	if ( g_bestDefenderCachePlot != this )
 	{
 		g_bestDefenderCachePlot = this;
-
 		g_bestDefenderCache->clear();
 	}
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	int iBestValue = 0;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
-/*                                                                                              */
-/* Lead From Behind                                                                             */
-/************************************************************************************************/
-// From Lead From Behind by UncutDragon
-	int iBestUnitRank = -1;
-	pBestUnit = NULL;
+	CvUnit* pBestUnit = NULL;
 
-	pUnitNode = headUnitNode();
-
-	while (pUnitNode != NULL)
+	for (unit_iterator unit = beginValidUnits(); unit != endValidUnits(); ++unit)
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = nextUnitNode(pUnitNode);
+		CvUnit* pLoopUnit = &(*unit);
 
-		if ( pLoopUnit == NULL || pLoopUnit->plot() == NULL )
+		int iValue = getDefenderScore(this, pLoopUnit, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, bAssassinate, bClearCache ? ECacheAccess::Write : ECacheAccess::ReadWrite);
+
+		if (iValue > iBestValue)
 		{
-			//	It's not really here - it's in delayed death cycle
-			continue;
-		}
-		if (pLoopUnit->AI_getPredictedHitPoints() != 0)
-		{
-			if ((eOwner == NO_PLAYER) || (pLoopUnit->getOwnerINLINE() == eOwner))
-			{
-				int iValue = 0;
-
-				CvChecksum	checksum;
-				if (pAttacker != NULL)
-				{
-					checksum.add(pAttacker->getID());
-				}
-				checksum.add((int)pLoopUnit->getOwnerINLINE());
-				checksum.add(pLoopUnit->getID());
-				checksum.add((int)bTestAtWar);
-				checksum.add((int)bTestPotentialEnemy*10);
-				checksum.add((int)bTestCanMove*100);
-				checksum.add((int)eAttackingPlayer);
-				checksum.add((int)eOwner);
-				checksum.add((int)bAssassinate*100);
-
-				stdext::hash_map<int, unitDefenderInfo>::const_iterator itr = g_bestDefenderCache->find(checksum.get());
-				if (itr != g_bestDefenderCache->end() && itr->second.iHealth == pLoopUnit->currHitPoints() && !bClearCache)
-				{
-					iValue = itr->second.iValue;
-				}
-				else
-				{
-					if (!pLoopUnit->isDead())
-					{
-						if ((eAttackingPlayer == NO_PLAYER) || !(pLoopUnit->isInvisible(GET_PLAYER(eAttackingPlayer).getTeam(), false)))
-						{
-							if (!bTestAtWar || eAttackingPlayer == NO_PLAYER || pLoopUnit->isEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this) || (NULL != pAttacker && pAttacker->isEnemy(GET_PLAYER(pLoopUnit->getOwnerINLINE()).getTeam(), this, pLoopUnit)))
-							{
-								if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithEnemyUnit(pAttacker, this, true))
-								{
-									if (!bTestPotentialEnemy || (eAttackingPlayer == NO_PLAYER) || pLoopUnit->isPotentialEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this) || (NULL != pAttacker && pAttacker->isPotentialEnemy(GET_PLAYER(pLoopUnit->getOwnerINLINE()).getTeam(), this, pLoopUnit)))
-									{
-										if (!bTestCanMove || (pLoopUnit->canMove() && !(pLoopUnit->isCargo())))
-										{
-											if ((pAttacker == NULL) || (pAttacker->getDomainType() != DOMAIN_AIR) || (pLoopUnit->getDamage() < pAttacker->airCombatLimit(pLoopUnit)))
-											{
-#if 0
-												// UncutDragon
-												/* original code
-																				if (pLoopUnit->isBetterDefenderThan(pBestUnit, pAttacker))
-																				*/								// modified (added extra parameter)
-												if (pLoopUnit->AI_getPredictedHitPoints() != 0 && pLoopUnit->isBetterDefenderThan(pBestUnit, pAttacker, &iBestUnitRank))
-													// /UncutDragon
-												{
-													pBestUnit = pLoopUnit;
-												}
-#else
-												if (bAssassinate)
-												{
-													if (!pLoopUnit->isTargetOf(*pAttacker))
-													{
-														continue;
-													}
-												}
-												iValue = pLoopUnit->defenderValue(pAttacker);
-
-												iValue += (pLoopUnit->tauntTotal() * iValue) / 100;
-
-												if (pBestUnit == NULL)
-												{
-													pBestUnit = pLoopUnit;
-													iValue = std::max(10, iValue);
-												}
-#endif
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-
-					unitDefenderInfo info;
-
-					info.iHealth = pLoopUnit->currHitPoints();
-					info.iValue = iValue;
-
-
-					{
-						MEMORY_TRACK_EXEMPT();
-
-						(*g_bestDefenderCache)[checksum.get()] = info;
-					}
-				}
-
-				if (iValue > iBestValue)
-				{
-					pBestUnit = pLoopUnit;
-					iBestValue = iValue;
-				}
-			}
+			pBestUnit = pLoopUnit;
+			iBestValue = iValue;
 		}
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 
 	return pBestUnit;
+}
+
+
+CvUnit* CvPlot::getFirstDefender(EDefenderScore::flags flags, PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker) const
+{
+	return getFirstDefender(eOwner, eAttackingPlayer, pAttacker,
+		flags & EDefenderScore::TestAtWar,
+		flags & EDefenderScore::TestPotentialEnemy,
+		flags & EDefenderScore::TestCanMove
+	);
 }
 
 CvUnit* CvPlot::getFirstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar, bool bTestPotentialEnemy, bool bTestCanMove) const
 {
 	bool bFound = false;
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	CvUnit* pFirstUnit = NULL;
-	pUnitNode = headUnitNode();
-
 	int iValue = 0;
-	while (pUnitNode != NULL && !bFound)
+
+	for (unit_iterator unit = beginValidUnits(); unit != endValidUnits(); ++unit)
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = nextUnitNode(pUnitNode);
+		CvUnit* pLoopUnit = &(*unit);
 
-		if ( pLoopUnit->plot() == NULL )
+		int iValue = getDefenderScore(this, pLoopUnit, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, false, ECacheAccess::Write);
+
+		if (iValue > 0)
 		{
-			//	It's not really here - it's in delayed death cycle
-			continue;
-		}
-		if (pLoopUnit->AI_getPredictedHitPoints() != 0)
-		{
-			iValue = 0;
-			{
-				if ((eOwner == NO_PLAYER) || (pLoopUnit->getOwnerINLINE() == eOwner))
-				{
-					if (!pLoopUnit->isDead())
-					{
-						if ((eAttackingPlayer == NO_PLAYER) || !(pLoopUnit->isInvisible(GET_PLAYER(eAttackingPlayer).getTeam(), false)))
-						{
-							if (!bTestAtWar || eAttackingPlayer == NO_PLAYER || pLoopUnit->isEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this) || (NULL != pAttacker && pAttacker->isEnemy(GET_PLAYER(pLoopUnit->getOwnerINLINE()).getTeam(), this, pLoopUnit)))
-							{
-								if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithEnemyUnit(pAttacker, this, true))
-								{
-									if (!bTestPotentialEnemy || (eAttackingPlayer == NO_PLAYER) || pLoopUnit->isPotentialEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this) || (NULL != pAttacker && pAttacker->isPotentialEnemy(GET_PLAYER(pLoopUnit->getOwnerINLINE()).getTeam(), this, pLoopUnit)))
-									{
-										if (!bTestCanMove || (pLoopUnit->canMove() && !(pLoopUnit->isCargo())))
-										{
-											if ((pAttacker == NULL) || (pAttacker->getDomainType() != DOMAIN_AIR) || (pLoopUnit->getDamage() < pAttacker->airCombatLimit(pLoopUnit)))
-											{
-												iValue = pLoopUnit->defenderValue(pAttacker);
-
-												iValue += (pLoopUnit->tauntTotal() * iValue) / 100;
-
-												if (iValue > 0)
-												{
-													pFirstUnit = pLoopUnit;
-													break;
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
+			pFirstUnit = pLoopUnit;
+			break;
 		}
 	}
 
@@ -5430,62 +5393,13 @@ int CvPlot::calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot )
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
-int CvPlot::getDistancePlottoPlot(const CvPlot* pTargetPlot)const
-{
-	FAssert(pTargetPlot != NULL);
-	if (pTargetPlot = NULL)
-	{
-		return 0;
-	}
-	int iX = getX();
-	int iY = getY();
-	int iDestX = pTargetPlot->getX();
-	int iDestY = pTargetPlot->getY();
-	int iMaxX = GC.getMap().getGridWidth();
-	int iMaxY = GC.getMap().getGridHeight();
-	bool bWrapX = GC.getMap().isWrapX();
-	bool bWrapY = GC.getMap().isWrapY();
-	bool iLeastX = std::min(iX,iDestX);
-	bool iLeastY = std::min(iY,iDestY);
-	bool iMostX = std::max(iX,iDestX);
-	bool iMostY = std::max(iY,iDestY);
-	int iXDist1 = (iMostX - iLeastX);
-	int iYDist1 = (iMostY - iLeastY);
-	int iXDist2 = (iLeastX + (iMaxX - iMostX));
-	int iYDist2 = (iLeastY + (iMaxY - iMostY));
-	int iXDistFinal = 0;
-	int iYDistFinal = 0;
-
-	if (bWrapX)
-	{
-		iXDistFinal = std::min(iXDist1, iXDist2);
-	}
-	else
-	{
-		iXDistFinal = iXDist1;
-	}
-
-	if (bWrapY)
-	{
-		iYDistFinal = std::min(iYDist1, iYDist2);
-	}
-	else
-	{
-		iYDistFinal = iYDist1;
-	}
-
-	int iDistFinal = std::max(iXDistFinal,iYDistFinal);
-
-	return iDistFinal;
-
-}
 
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
 /*                                                                                              */
 /* Efficiency                                                                                   */
 /************************************************************************************************/
-	// Plot danger cache
+// Plot danger cache
 bool CvPlot::isActivePlayerNoDangerCache() const
 {
 	return m_bIsActivePlayerNoDangerCache;
@@ -6741,46 +6655,24 @@ bool CvPlot::isRiverNetwork(TeamTypes eTeam) const
 
 bool CvPlot::isNetworkTerrain(TeamTypes eTeam) const
 {
-	FAssertMsg(eTeam != NO_TEAM, "eTeam is not assigned a valid value");
 	FAssertMsg(getTerrainType() != NO_TERRAIN, "TerrainType is not assigned a valid value");
 	
 	if (eTeam == NO_TEAM)
+	{
+		FErrorMsg("eTeam is not assigned a valid value");
 		return false;
-	if (GET_TEAM(eTeam).isTerrainTrade(getTerrainType()))
-	{
-		return true;
 	}
 
-	if (isWater())
-	{
-		if (getTeam() == eTeam)
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return GET_TEAM(eTeam).isTerrainTrade(getTerrainType())
+		|| (isWater() && getTeam() == eTeam);
 }
 
 
 bool CvPlot::isBonusNetwork(TeamTypes eTeam) const
 {
-	if (isRoute())
-	{
-		return true;
-	}
-
-	if (isRiverNetwork(eTeam))
-	{
-		return true;
-	}
-
-	if (isNetworkTerrain(eTeam))
-	{
-		return true;
-	}
-
-	return false;
+	return isRoute()
+		|| isRiverNetwork(eTeam)
+		|| isNetworkTerrain(eTeam);
 }
 
 
@@ -10326,10 +10218,10 @@ int CvPlot::getFoundValue(PlayerTypes eIndex)
 	//	only a short (extra policing is present on the set)
 	if (m_aiFoundValue[eIndex] == INVALID_FOUND_VALUE)
 	{
-		long lResult=-1;
+		long lResult = -1;
 		if(GC.getUSE_GET_CITY_FOUND_VALUE_CALLBACK())
 		{
-			Cy::call<long>(PYGameModule, "getCityFoundValue", Cy::Args()
+			lResult = Cy::call<long>(PYGameModule, "getCityFoundValue", Cy::Args()
 				<< eIndex
 				<< getX()
 				<< getY()
@@ -15576,11 +15468,12 @@ EffectTypes CvPlot::getBattleEffect()
 
 void CvPlot::setBattleEffect()
 {
-	int iRandOffset = GC.getASyncRand().get(GC.getNumEffectInfos());	
-	for (int iI = 0; iI < GC.getNumEffectInfos(); iI++)
+	const int effectsCount = GC.getNumEffectInfos();
+	int iRandOffset = GC.getASyncRand().get(effectsCount);
+	for (int iI = 0; iI < effectsCount; iI++)
 	{
 		//Randomly loop over the effect types, so that the chosen effect is different each time
-		EffectTypes eLoopEffect = (EffectTypes)((iI + iRandOffset) % GC.getNumEffectInfos());
+		EffectTypes eLoopEffect = (EffectTypes)((iI + iRandOffset) % effectsCount);
 		if (GC.getEffectInfo(eLoopEffect).isBattleEffect())
 		{
 			m_eBattleEffect = eLoopEffect;

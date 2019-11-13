@@ -78,7 +78,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
 	static bool bIgnoreAlways = false; \
 	if( !bIgnoreAlways ) \
 	{ \
-		if( FAssertDlg( "Error", 0, __FILE__, __LINE__, bIgnoreAlways ) ) { _asm int 3 } \
+		if( FAssertDlg( "ERROR", msg, __FILE__, __LINE__, bIgnoreAlways ) ) { _asm int 3 } \
 	} \
 }
 
@@ -110,7 +110,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
 #define FAssertRecalcMsg( expr, msg ) FAssert( expr )
 #define FAssertOptionMsg( option, expr, msg ) FAssert( GC.getGameINLINE().isOption(option) && expr )
 #define FAssertOptionRecalcMsg( option, expr, msg) FAssert( GC.getGameINLINE().isOption(option) && expr )
-#define FErrorMsg( msg ) FAssert( false )
+#define FErrorMsg( msg ) FAssertMsg( false, msg )
 #define FEnsure( expr ) { if( !(expr) ) throw std::exception(#expr); }
 #define FEnsureMsg( expr, msg ) { if( !(expr) ) throw std::exception(#expr); }
 
@@ -131,7 +131,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
 #if defined(FASSERT_ENABLE) || !defined(_DEBUG)
 #ifdef WIN32
 
-//This AssertMsg is also shown in non debug builds
+// This AssertMsg is also shown in non debug builds
 #define FAssertMsg2( expr, msg ) \
 { \
 	static bool bIgnoreAlways = false; \

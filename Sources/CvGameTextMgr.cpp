@@ -34566,7 +34566,7 @@ void CvGameTextMgr::getAttitudeString(CvWStringBuffer& szBuffer, PlayerTypes ePl
 	TeamTypes eTeam = (TeamTypes) kPlayer.getTeam();
 	CvTeamAI& kTeam = GET_TEAM(eTeam);
 	
-	if (eTargetPlayer != NO_PLAYER)
+	if (eTargetPlayer == NO_PLAYER)
 	{
 		FErrorMsg("TargetPlayer must be valid when requesting attitude string")
 		return;

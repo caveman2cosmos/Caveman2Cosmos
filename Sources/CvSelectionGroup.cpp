@@ -4643,7 +4643,7 @@ bool CvSelectionGroup::isHasPathToAreaPlayerCity( PlayerTypes ePlayer, int iFlag
 			}
 			else
 			{
-				FErrorMsg(CvString::format("Pathing of units from plot <%d, %d> to failed to supposedly reachable city %S at <%d, %d>",
+				FErrorMsg(CvString::format("Pathing of units from plot <%d, %d> failed to supposedly reachable city %S at <%d, %d>",
 					plot()->getX_INLINE(), plot()->getY_INLINE(),
 					pLoopCity->getName().c_str(),
 					pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE()).c_str()

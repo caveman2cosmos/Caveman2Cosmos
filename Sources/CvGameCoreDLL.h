@@ -94,6 +94,19 @@ __forceinline DWORD FtoDW( float f ) { return *(DWORD*)&f; }
 __forceinline float DWtoF( dword n ) { return *(float*)&n; }
 __forceinline float MaxFloat() { return DWtoF(0x7f7fffff); }
 
+// General flags that declare cache access
+struct ECacheAccess
+{
+	enum flags
+	{
+		None = 0,
+		Read = 1 << 0,
+		Write = 1 << 1,
+		ReadWrite = Read | Write
+	};
+};
+DEFINE_ENUM_FLAG_OPERATORS(ECacheAccess::flags);
+
 //
 // Feature macros
 //

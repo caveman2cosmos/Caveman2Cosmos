@@ -18292,7 +18292,14 @@ bool CvPlayer::isBuildingClassMaxedOut(BuildingClassTypes eIndex, int iExtra) co
 		return false;
 	}
 
-	FAssertMsg(getBuildingClassCount(eIndex) <= (GC.getBuildingClassInfo(eIndex).getMaxPlayerInstances() + GC.getBuildingClassInfo(eIndex).getExtraPlayerInstances()), "BuildingClassCount is expected to be less than or match the number of max player instances plus extra player instances");
+	FAssertMsg(getBuildingClassCount(eIndex) <= (GC.getBuildingClassInfo(eIndex).getMaxPlayerInstances() + GC.getBuildingClassInfo(eIndex).getExtraPlayerInstances()), 
+		CvString::format("BuildingClassCount for %s is expected to be less than or match the number of max player instances plus extra player instances (%d <= %d + %d)",
+			GC.getBuildingClassInfo(eIndex).getType(), 
+			getBuildingClassCount(eIndex), 
+			GC.getBuildingClassInfo(eIndex).getMaxPlayerInstances(), 
+			GC.getBuildingClassInfo(eIndex).getExtraPlayerInstances()
+		).c_str()
+	);
 
 	return ((getBuildingClassCount(eIndex) + iExtra) >= (GC.getBuildingClassInfo(eIndex).getMaxPlayerInstances() + GC.getBuildingClassInfo(eIndex).getExtraPlayerInstances()));
 }
