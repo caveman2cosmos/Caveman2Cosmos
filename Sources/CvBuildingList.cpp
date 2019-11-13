@@ -142,11 +142,13 @@ void CvBuildingList::doGroup()
 
 	m_aaiGroupedBuildingList.clear();
 
-	int iSize = m_aiBuildingList.size();
+	int iSize = static_cast<int>(m_aiBuildingList.size());
 	std::multimap<int, BuildingTypes> mmap_Buildings;
 
-	for (int i=0; i < iSize; i++)
+	for (int i = 0; i < iSize; i++)
+	{
 		mmap_Buildings.insert(std::pair<int, BuildingTypes>(m_BuildingGrouping.getGroup(m_aiBuildingList[i]), m_aiBuildingList[i]));
+	}
 	
 	int iLastKey = MIN_INT;
 	for (std::multimap<int, BuildingTypes>::iterator it = mmap_Buildings.begin(); it != mmap_Buildings.end(); ++it)
@@ -179,7 +181,7 @@ int CvBuildingList::getBuildingSelectionRow()
 {
 	if (m_eSelectedBuilding != NO_BUILDING)
 	{
-		for (int i = 0; i < m_aaiGroupedBuildingList.size(); i++)
+		for (int i = 0; i < static_cast<int>(m_aaiGroupedBuildingList.size()); i++)
 		{
 			if (std::find(m_aaiGroupedBuildingList[i].begin(), m_aaiGroupedBuildingList[i].end(), m_eSelectedBuilding) != m_aaiGroupedBuildingList[i].end())
 				return i;
@@ -187,9 +189,9 @@ int CvBuildingList::getBuildingSelectionRow()
 		m_eSelectedBuilding = NO_BUILDING;
 	}
 	// Find first normal building
-	for (unsigned int i=0; i<m_aaiGroupedBuildingList.size(); i++)
+	for (int i = 0; i < static_cast<int>(m_aaiGroupedBuildingList.size()); i++)
 	{
-		for (unsigned int j=0; j<m_aaiGroupedBuildingList[i].size(); j++)
+		for (int j = 0; j < static_cast<int>(m_aaiGroupedBuildingList[i].size()); j++)
 		{
 			BuildingTypes eBuilding = m_aaiGroupedBuildingList[i][j];
 			if (!isLimitedWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()))
@@ -203,7 +205,7 @@ int CvBuildingList::getWonderSelectionRow()
 {
 	if (m_eSelectedWonder != NO_BUILDING)
 	{
-		for (unsigned int i=0; i<m_aaiGroupedBuildingList.size(); i++)
+		for (int i = 0; i < static_cast<int>(m_aaiGroupedBuildingList.size()); i++)
 		{
 			if (std::find(m_aaiGroupedBuildingList[i].begin(), m_aaiGroupedBuildingList[i].end(), m_eSelectedWonder) != m_aaiGroupedBuildingList[i].end())
 				return i;
@@ -211,9 +213,9 @@ int CvBuildingList::getWonderSelectionRow()
 		m_eSelectedWonder = NO_BUILDING;
 	}
 	// Find first wonder
-	for (unsigned int i=0; i<m_aaiGroupedBuildingList.size(); i++)
+	for (int i = 0; i < static_cast<int>(m_aaiGroupedBuildingList.size()); i++)
 	{
-		for (unsigned int j=0; j<m_aaiGroupedBuildingList[i].size(); j++)
+		for (int j = 0; j < static_cast<int>(m_aaiGroupedBuildingList[i].size()); j++)
 		{
 			BuildingTypes eBuilding = m_aaiGroupedBuildingList[i][j];
 			if (isLimitedWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()))

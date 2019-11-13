@@ -5186,7 +5186,9 @@ void CvPlayer::doTurn()
 /* City AI                                                                                      */
 /************************************************************************************************/
     // New function to handle wonder construction in a centralized manner
+#if 0 // AI_doCentralizedProduction is unfinished, no point calling it. [11/12/2019 billw]
 	GET_PLAYER(getID()).AI_doCentralizedProduction();
+#endif
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
@@ -5594,6 +5596,7 @@ void CvPlayer::doTurnUnits()
 					break;
 				case NO_DOMAIN:
 					FAssertMsg(NULL == pLoopSelectionGroup->getHeadUnit(), "Unit with no Domain");
+					break;
 				default:
 					if (iPass == 3)
 					{
@@ -6460,10 +6463,9 @@ int CvPlayer::countOwnedBonuses(BonusTypes eBonus) const
 	int iI, iJ;
     int iLoop;
     
-	FAssert(eBonus >= 0 && eBonus < GC.getNumBonusInfos());
-
 	if ( eBonus < 0 && eBonus >= GC.getNumBonusInfos() )
 	{
+		FErrorMsg("Bonus value must be valid for countOwnedBonuses");
 		return 0;
 	}
 
@@ -13036,15 +13038,16 @@ void CvPlayer::changeTotalPopulation(int iChange)
 	iPopTest += iChange;
 	if (iPopTest > MAX_INT)
 	{
-		FAssert(iPopTest <= MAX_INT);
+		FErrorMsg("Population overflow will occur, capped at MAX_INT!");
 		iPopTest = MAX_INT;
 	}
 	m_iTotalPopulation = (int)iPopTest;
-	FAssert(getTotalPopulation() >= 0);
+	FAssertMsg(getTotalPopulation() >= 0, "Total population overflowed to negative!");
 
 	iPopTest *= 100;
 	if (iPopTest >= MAX_INT)
 	{
+		FErrorMsg("Population overflow may occur during x100 calculations");
 		m_bPopBad = true;
 	}
 
@@ -13071,6 +13074,7 @@ long CvPlayer::getRealPopulation() const
 
 	if (iTotalPopulation > MAX_INT)
 	{
+		FErrorMsg("Real population overflows, capped at MAX_INT!");
 		iTotalPopulation = MAX_INT;
 	}
 
@@ -29342,7 +29346,7 @@ bool CvPlayer::splitEmpire(int iAreaId)
 	}
 
 	bool bPlayerExists = GET_TEAM(GET_PLAYER(eNewPlayer).getTeam()).isAlive();
-	FAssert(!bPlayerExists);
+	FAssertMsg(!bPlayerExists, "New player already exists");
 	if (!bPlayerExists)
 	{
 		int iBestValue = -1;

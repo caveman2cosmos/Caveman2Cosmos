@@ -1286,7 +1286,7 @@ CvNetAddReminder::CvNetAddReminder(PlayerTypes ePlayer, int iGameTurn, CvWString
 
 void CvNetAddReminder::Debug(char* szAddendum) 
 {
-	sprintf(szAddendum, "Add Reminder, player %d on turn %d: %s", m_ePlayer, m_iGameTurn, m_szMessage.c_str());
+	sprintf(szAddendum, "Add Reminder, player %d on turn %d: %S", m_ePlayer, m_iGameTurn, m_szMessage.c_str());
 }
 
 void CvNetAddReminder::Execute()
@@ -1323,7 +1323,7 @@ CvGlobalDefineUpdate::CvGlobalDefineUpdate(CvWString szName, int iValue, float f
 
 void CvGlobalDefineUpdate::Debug(char* szAddendum)
 {
-	sprintf(szAddendum, "Updating Global Define %s, New Values are Int %d, Float %f, String %s", m_szDefine.c_str(), m_iValue, m_fValue, m_szValue.c_str());
+	sprintf(szAddendum, "Updating Global Define %S, New Values are Int %d, Float %f, String %S", m_szDefine.c_str(), m_iValue, m_fValue, m_szValue.c_str());
 }
 
 void CvGlobalDefineUpdate::Execute()
@@ -1674,6 +1674,33 @@ void CvNetChooseMergeUnit::Debug(char* szAddendum)
 	sprintf(szAddendum, "Selecting Merge Unit: %d", m_iUnitID); 
 }
 
+// Helpers
+namespace {
+	bool isGroupUpgradePromotion(const CvUnit* unit, PromotionTypes promotion)
+	{
+		return GC.getPromotionInfo(promotion).getGroupChange() > 0 &&
+			(unit->canAcquirePromotion(promotion, PromotionRequirements::Promote | PromotionRequirements::ForOffset) || unit->canAcquirePromotion(promotion));
+	}
+
+	bool isGroupDowngradePromotion(const CvUnit* unit, PromotionTypes promotion)
+	{
+		return GC.getPromotionInfo(promotion).getGroupChange() < 0 &&
+			(unit->canAcquirePromotion(promotion, PromotionRequirements::Promote | PromotionRequirements::ForOffset) || unit->canAcquirePromotion(promotion));
+	}
+
+	bool isQualityUpgradePromotion(const CvUnit* unit, PromotionTypes promotion)
+	{
+		return GC.getPromotionInfo(promotion).getQualityChange() > 0 &&
+			(unit->canAcquirePromotion(promotion, PromotionRequirements::Promote | PromotionRequirements::ForOffset) || unit->canAcquirePromotion(promotion));
+	}
+
+	bool isQualityDowngradePromotion(const CvUnit* unit, PromotionTypes promotion)
+	{
+		return GC.getPromotionInfo(promotion).getQualityChange() < 0 &&
+			(unit->canAcquirePromotion(promotion, PromotionRequirements::Promote | PromotionRequirements::ForOffset) || unit->canAcquirePromotion(promotion));
+	}
+}
+
 void CvNetChooseMergeUnit::Execute()
 {
 	if (m_ePlayer != NO_PLAYER)
@@ -1764,92 +1791,16 @@ void CvNetChooseMergeUnit::Execute()
 					}
 				}
 			}
-			if (iTotalGroupOffset != 0)
-			{
-				while (iTotalGroupOffset > 0)
-				{
-					bSet = false;
-					for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-					{
-						if ((GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() > 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-							(GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() > 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI)))
-						{
-							pkMergedUnit->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-							iTotalGroupOffset--;
-							bSet = true;
-							break;
-						}
-					}
-					if (!bSet)
-					{
-						iTotalGroupOffset--;
-						FAssertMsg(bSet, "Unit cannot find a valid Group Upgrade Promotion");
-					}
-				}
-				while (iTotalGroupOffset < 0)
-				{
-					bSet = false;
-					for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-					{
-						if ((GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() < 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-							(GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() < 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI)))
-						{
-							pkMergedUnit->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-							iTotalGroupOffset++;
-							bSet = true;
-							break;
-						}
-					}
-					if (!bSet)
-					{
-						iTotalGroupOffset++;
-						FAssertMsg(bSet, "Unit cannot find a valid Group Downgrade Promotion");
-					}
-				}
-			}
-			if (iTotalQualityOffset != 0)
-			{
-				while (iTotalQualityOffset > 0)
-				{
-					bSet = false;
-					for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-					{
-						if ((GC.getPromotionInfo((PromotionTypes)iI).getQualityChange() > 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-							(GC.getPromotionInfo((PromotionTypes)iI).getQualityChange() > 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI)))
-						{
-							pkMergedUnit->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-							iTotalQualityOffset--;
-							bSet = true;
-							break;
-						}
-					}
-					if (!bSet)
-					{
-						iTotalQualityOffset--;
-						FAssertMsg(bSet, "Unit cannot find a valid Quality Upgrade Promotion");
-					}
-				}
-				while (iTotalQualityOffset < 0)
-				{
-					bSet = false;
-					for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-					{
-						if ((GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() < 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-							(GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() < 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI)))
-						{
-							pkMergedUnit->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-							iTotalQualityOffset++;
-							bSet = true;
-							break;
-						}
-					}
-					if (!bSet)
-					{
-						iTotalQualityOffset++;
-						FAssertMsg(bSet, "Unit cannot find a valid Quality Downgrade Promotion");
-					}
-				}
-			}
+			CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalGroupOffset, 
+				boost::bind(isGroupUpgradePromotion, pkMergedUnit, _2),
+				boost::bind(isGroupDowngradePromotion, pkMergedUnit, _2)
+			);
+
+			CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalQualityOffset,
+				boost::bind(isQualityUpgradePromotion, pkMergedUnit, _2),
+				boost::bind(isQualityDowngradePromotion, pkMergedUnit, _2)
+			);
+			
 			//Set New Experience
 			int iXP1 = pUnit1->getExperience100();
 			int iXP2 = pUnit2->getExperience100();
@@ -1993,100 +1944,21 @@ void CvNetConfirmSplitUnit::Execute()
 					}
 				}
 			}
-			if (iTotalGroupOffset != 0)
-			{
-				while (iTotalGroupOffset > 0)
-				{
-					bSet = false;
-					for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-					{
-						if ((GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() > 0 && pUnit1->canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-							(GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() > 0 && pUnit1->canAcquirePromotion((PromotionTypes)iI)))
-						{
-							pUnit1->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-							pUnit2->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-							pUnit3->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-							iTotalGroupOffset--;
-							bSet = true;
-							break;
-						}
-					}
-					if (!bSet)
-					{
-						iTotalGroupOffset--;
-						FAssertMsg(bSet, "Unit cannot find a valid Group Upgrade Promotion");
-					}
-				}
-				while (iTotalGroupOffset < 0)
-				{
-					bSet = false;
-					for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-					{
-						if ((GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() < 0 && pUnit1->canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-							(GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() < 0 && pUnit1->canAcquirePromotion((PromotionTypes)iI)))
-						{
-							pUnit1->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-							pUnit2->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-							pUnit3->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-							iTotalGroupOffset++;
-							bSet = true;
-							break;
-						}
-					}
-					if (!bSet)
-					{
-						iTotalGroupOffset++;
-						FAssertMsg(bSet, "Unit cannot find a valid Group Downgrade Promotion");
-					}
-				}
-			}
-			if (iTotalQualityOffset != 0)
-			{
-				while (iTotalQualityOffset > 0)
-				{
-					bSet = false;
-					for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-					{
-						if ((GC.getPromotionInfo((PromotionTypes)iI).getQualityChange() > 0 && pUnit1->canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-							(GC.getPromotionInfo((PromotionTypes)iI).getQualityChange() > 0 && pUnit1->canAcquirePromotion((PromotionTypes)iI)))
-						{
-							pUnit1->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-							pUnit2->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-							pUnit3->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-							iTotalQualityOffset--;
-							bSet = true;
-							break;
-						}
-					}
-					if (!bSet)
-					{
-						iTotalQualityOffset--;
-						FAssertMsg(bSet, "Unit cannot find a valid Quality Upgrade Promotion");
-					}
-				}
-				while (iTotalQualityOffset < 0)
-				{
-					bSet = false;
-					for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-					{
-						if ((GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() < 0 && pUnit1->canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-							(GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() < 0 && pUnit1->canAcquirePromotion((PromotionTypes)iI)))
-						{
-							pUnit1->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-							pUnit2->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-							pUnit3->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-							iTotalQualityOffset++;
-							bSet = true;
-							break;
-						}
-					}
-					if (!bSet)
-					{
-						iTotalQualityOffset++;
-						FAssertMsg(bSet, "Unit cannot find a valid Quality Downgrade Promotion");
-					}
-				}
-			}
+			std::vector<CvUnit*> newUnits;
+			newUnits.push_back(pUnit1);
+			newUnits.push_back(pUnit2);
+			newUnits.push_back(pUnit3);
+
+			CvUnit::normalizeUnitPromotions(newUnits, iTotalGroupOffset,
+				boost::bind(isGroupUpgradePromotion, pUnit1, _2),
+				boost::bind(isGroupDowngradePromotion, pUnit1, _2)
+			);
+
+			CvUnit::normalizeUnitPromotions(newUnits, iTotalQualityOffset,
+				boost::bind(isQualityUpgradePromotion, pUnit1, _2),
+				boost::bind(isQualityDowngradePromotion, pUnit1, _2)
+			);
+
 			//Set New Experience
 			pUnit1->setExperience100(pUnit0->getExperience100());
 			pUnit2->setExperience100(pUnit0->getExperience100());

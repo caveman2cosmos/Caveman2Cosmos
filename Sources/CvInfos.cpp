@@ -2649,7 +2649,7 @@ void CvTechInfo::copyNonDefaults(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML)
 		{
 			if ( NULL == m_piPrereqAndTechs )
 			{
-				CvXMLLoadUtility::InitList(&m_piPrereqAndTechs,GC.getNUM_OR_TECH_PREREQS(),-1);
+				CvXMLLoadUtility::InitList(&m_piPrereqAndTechs,GC.getNUM_AND_TECH_PREREQS(),-1);
 			}
 			m_piPrereqAndTechs[j] = pClassInfo->getPrereqAndTechs(j);
 		}
@@ -12396,22 +12396,33 @@ bool CvDiplomacyInfo::read(CvXMLLoadUtility* pXML)
 	{
 		int iNewResponses = pXML->GetXmlChildrenNumber(L"Response");
 
-		pXML->TryMoveToXmlFirstChild();
-
-		for (i = 0; i < iNewResponses; i++)
+		if(pXML->TryMoveToXmlFirstChild())
 		{
-			CvDiplomacyResponse* pNewResponse = new CvDiplomacyResponse;
-			pNewResponse->read(pXML);
-			m_pResponses.push_back(pNewResponse);
-
-			if (!pXML->TryMoveToXmlNextSibling())
+			for (i = 0; i < iNewResponses; i++)
 			{
-				break;
+				CvDiplomacyResponse* pNewResponse = new CvDiplomacyResponse;
+				pNewResponse->read(pXML);
+				m_pResponses.push_back(pNewResponse);
+
+				if (!pXML->TryMoveToXmlNextSibling())
+				{
+					break;
+				}
 			}
+			pXML->MoveToXmlParent();
+		}
+		else
+		{
+			FErrorMsg("Diplomacy XML invalid");
+			return false;
 		}
 		pXML->MoveToXmlParent();
 	}
-	pXML->MoveToXmlParent();
+	else
+	{
+		FErrorMsg("Diplomacy XML invalid");
+		return false;
+	}
 
 	return true;
 }
@@ -12432,107 +12443,116 @@ void CvDiplomacyInfo::copyNonDefaults(CvXMLLoadUtility* pXML)
 	{
 		int iNewResponses = pXML->GetXmlChildrenNumber(L"Response");
 
-		pXML->TryMoveToXmlFirstChild();
-
-		for (int i = 0; i < iNewResponses; i++)
+		if(pXML->TryMoveToXmlFirstChild())
 		{
-			CvDiplomacyResponse* pNewResponse = new CvDiplomacyResponse;
-			pNewResponse->read(pXML);
-			int iResponses = m_pResponses.size();
-
-			// Check if the new
-			bool bLeaderHeadTypes = false;
-//			bool bLeaderHeadTypesExist = false;
-			for ( int j = 0; j < GC.getNumLeaderHeadInfos(); j++ )
+			for (int i = 0; i < iNewResponses; i++)
 			{
-				if (pNewResponse->getLeaderHeadTypes(j))
+				CvDiplomacyResponse* pNewResponse = new CvDiplomacyResponse;
+				pNewResponse->read(pXML);
+				int iResponses = m_pResponses.size();
+
+				// Check if the new
+				bool bLeaderHeadTypes = false;
+				//			bool bLeaderHeadTypesExist = false;
+				for (int j = 0; j < GC.getNumLeaderHeadInfos(); j++)
 				{
-					bLeaderHeadTypes = true;
-/*					for ( int jj = 0; jj < iResponses; ++jj)
+					if (pNewResponse->getLeaderHeadTypes(j))
 					{
-						if ( getLeaderHeadTypes(jj, j) )
-						{
-							bLeaderHeadTypesExist = true;
-							break;
-						}
-					}*/
+						bLeaderHeadTypes = true;
+						/*					for ( int jj = 0; jj < iResponses; ++jj)
+											{
+												if ( getLeaderHeadTypes(jj, j) )
+												{
+													bLeaderHeadTypesExist = true;
+													break;
+												}
+											}*/
+						break;
+					}
+				}
+				bool bAttitudeTypes = false;
+				//			bool bAttitudeTypesExist = false;
+				for (int j = 0; j < NUM_ATTITUDE_TYPES; j++)
+				{
+					if (pNewResponse->getAttitudeTypes(j))
+					{
+						bAttitudeTypes = true;
+						/*					for ( int jj = 0; jj < iResponses; ++jj)
+											{
+												if ( getAttitudeTypes(jj, j) )
+												{
+													bAttitudeTypesExist = true;
+													break;
+												}
+											}*/
+						break;
+					}
+				}
+				bool bPowerTypes = false;
+				//			bool bPowerTypesExist = false;
+				for (int j = 0; j < NUM_DIPLOMACYPOWER_TYPES; j++)
+				{
+					if (pNewResponse->getDiplomacyPowerTypes(j))
+					{
+						bPowerTypes = true;
+						/*					for ( int jj = 0; jj < iResponses; ++jj)
+											{
+												if ( getDiplomacyPowerTypes(jj, j) )
+												{
+													bPowerTypesExist = true;
+													break;
+												}
+											}*/
+						break;
+					}
+				}
+
+				// Check which case we have
+				//			if ( bLeaderHeadTypes && !bLeaderHeadTypesExist) FAssertMsg(false, L"Wrong XML format!");
+				//			if ( bAttitudeTypes && !bAttitudeTypesExist) FAssertMsg(false, L"Wrong XML format!");
+				//			if ( bPowerTypes && !bPowerTypesExist) FAssertMsg(false, L"Wrong XML format!");
+				if (!(bLeaderHeadTypes || bAttitudeTypes || bPowerTypes)) iCase = 1;
+				else if (bLeaderHeadTypes && !(bAttitudeTypes || bPowerTypes)) iCase = 2;
+				else if (bAttitudeTypes && !(bLeaderHeadTypes || bPowerTypes)) iCase = 3;
+				else if (bPowerTypes && !(bLeaderHeadTypes || bAttitudeTypes)) iCase = 4;
+				else if (bLeaderHeadTypes && bAttitudeTypes && !bPowerTypes) iCase = 5;
+				else if (bLeaderHeadTypes && bPowerTypes && !bAttitudeTypes) iCase = 6;
+				else FAssertMsg(false, "A new case with an added Diplomacy XML but already exists?");
+
+				// Find ResponseIndex(if already exists)
+				int iIndex = 0;
+				bool bIsIndex = FindResponseIndex(pNewResponse, iCase, &iIndex);
+
+				if (bIsIndex)
+				{
+					// Check the Previous Values of this class and copy them to the Diplomacies Response
+					pNewResponse->UpdateDiplomacies(this, iIndex);
+
+					//Delete old vector info(only for this response)
+					//DeleteResponseOnly(m_pResponses, getResponse(iIndex));
+					m_pResponses.erase(m_pResponses.begin() + iIndex);
+				}
+
+				//apply new vector info
+				m_pResponses.push_back(pNewResponse);
+
+				if (!pXML->TryMoveToXmlNextSibling())
+				{
 					break;
 				}
 			}
-			bool bAttitudeTypes = false;
-//			bool bAttitudeTypesExist = false;
-			for ( int j = 0; j < NUM_ATTITUDE_TYPES; j++ )
-			{
-				if (pNewResponse->getAttitudeTypes(j))
-				{
-					bAttitudeTypes = true;
-/*					for ( int jj = 0; jj < iResponses; ++jj)
-					{
-						if ( getAttitudeTypes(jj, j) )
-						{
-							bAttitudeTypesExist = true;
-							break;
-						}
-					}*/
-					break;
-				}
-			}
-			bool bPowerTypes = false;
-//			bool bPowerTypesExist = false;
-			for ( int j = 0; j < NUM_DIPLOMACYPOWER_TYPES; j++ )
-			{
-				if (pNewResponse->getDiplomacyPowerTypes(j))
-				{
-					bPowerTypes = true;
-/*					for ( int jj = 0; jj < iResponses; ++jj)
-					{
-						if ( getDiplomacyPowerTypes(jj, j) )
-						{
-							bPowerTypesExist = true;
-							break;
-						}
-					}*/
-					break;
-				}
-			}
-
-			// Check which case we have
-//			if ( bLeaderHeadTypes && !bLeaderHeadTypesExist) FAssertMsg(false, L"Wrong XML format!");
-//			if ( bAttitudeTypes && !bAttitudeTypesExist) FAssertMsg(false, L"Wrong XML format!");
-//			if ( bPowerTypes && !bPowerTypesExist) FAssertMsg(false, L"Wrong XML format!");
-			if ( !(bLeaderHeadTypes || bAttitudeTypes || bPowerTypes) ) iCase = 1;
-			else if ( bLeaderHeadTypes && !( bAttitudeTypes || bPowerTypes) ) iCase = 2;
-			else if ( bAttitudeTypes && !( bLeaderHeadTypes || bPowerTypes) ) iCase = 3;
-			else if ( bPowerTypes && !( bLeaderHeadTypes || bAttitudeTypes) ) iCase = 4;
-			else if ( bLeaderHeadTypes && bAttitudeTypes && !bPowerTypes ) iCase = 5;
-			else if ( bLeaderHeadTypes && bPowerTypes && !bAttitudeTypes ) iCase = 6;
-			else FAssertMsg(false, "A new case with an added Diplomacy XML but already exists?" );
-
-			// Find ResponseIndex(if already exists)
-			int iIndex = 0;
-			bool bIsIndex = FindResponseIndex(pNewResponse, iCase, &iIndex);
-
-			if (bIsIndex)
-			{
-				// Check the Previous Values of this class and copy them to the Diplomacies Response
-				pNewResponse->UpdateDiplomacies(this, iIndex);
-
-				//Delete old vector info(only for this response)
-				//DeleteResponseOnly(m_pResponses, getResponse(iIndex));
-				m_pResponses.erase(m_pResponses.begin() + iIndex);
-			}
-
-			//apply new vector info
-			m_pResponses.push_back(pNewResponse);
-
-			if (!pXML->TryMoveToXmlNextSibling())
-			{
-				break;
-			}
+			pXML->MoveToXmlParent();
+		}
+		else
+		{
+			FErrorMsg("Diplomacy XML invalid");
 		}
 		pXML->MoveToXmlParent();
 	}
-	pXML->MoveToXmlParent();
+	else
+	{
+		FErrorMsg("Diplomacy XML invalid");
+	}
 }
 bool CvDiplomacyInfo::FindResponseIndex(CvDiplomacyResponse* pNewResponse, int iCase, int* iIndex)
 {
@@ -21162,15 +21182,17 @@ bool CvAdvisorInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Texture", "");
 	setTexture( szTextVal );
 
-	pXML->TryMoveToXmlFirstChild();
-	while(pXML->TryMoveToXmlNextSibling(L"EventCodes"))
+	if(pXML->TryMoveToXmlFirstChild())
 	{
-		int iEnableCode, iDisableCode;
-		pXML->GetChildXmlValByName(&iEnableCode, L"iEnableCode");
-		pXML->GetChildXmlValByName(&iDisableCode, L"iDisableCode");
-		m_vctEnableDisableCodes.push_back( std::make_pair( iEnableCode, iDisableCode ));
+		while (pXML->TryMoveToXmlNextSibling(L"EventCodes"))
+		{
+			int iEnableCode, iDisableCode;
+			pXML->GetChildXmlValByName(&iEnableCode, L"iEnableCode");
+			pXML->GetChildXmlValByName(&iDisableCode, L"iDisableCode");
+			m_vctEnableDisableCodes.push_back(std::make_pair(iEnableCode, iDisableCode));
+		}
+		pXML->MoveToXmlParent();
 	}
-	pXML->MoveToXmlParent();
 
 	return true;
 }
@@ -25604,186 +25626,187 @@ CvPropertyManipulators* CvCorporationInfo::getPropertyManipulators()
 //  PURPOSE :   Default constructor
 //
 //------------------------------------------------------------------------------------------------------
-CvTraitInfo::CvTraitInfo() :
-m_iHealth(0),
-m_iHappiness(0),
-m_iMaxAnarchy(-1),
-m_iUpkeepModifier(0),
-m_iLevelExperienceModifier(0),
-m_iGreatPeopleRateModifier(0),
-m_iGreatGeneralRateModifier(0),
-m_iDomesticGreatGeneralRateModifier(0),
-m_iMaxGlobalBuildingProductionModifier(0),
-m_iMaxTeamBuildingProductionModifier(0),
-m_iMaxPlayerBuildingProductionModifier(0),
+CvTraitInfo::CvTraitInfo() 
+	: m_iHealth(0)
+	, m_iHappiness(0)
+	, m_iMaxAnarchy(-1)
+	, m_iUpkeepModifier(0)
+	, m_iLevelExperienceModifier(0)
+	, m_iGreatPeopleRateModifier(0)
+	, m_iGreatGeneralRateModifier(0)
+	, m_iDomesticGreatGeneralRateModifier(0)
+	, m_iMaxGlobalBuildingProductionModifier(0)
+	, m_iMaxTeamBuildingProductionModifier(0)
+	, m_iMaxPlayerBuildingProductionModifier(0)
 
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		RevTrait Effects														*/
-/********************************************************************************/
-m_iRevIdxLocal(0),
-m_iRevIdxNational(0),
-m_iRevIdxDistanceModifier(0),
-m_iRevIdxHolyCityGood(0),
-m_iRevIdxHolyCityBad(0),
-m_fRevIdxNationalityMod(0),
-m_fRevIdxGoodReligionMod(0),
-m_fRevIdxBadReligionMod(0),
-m_bNonStateReligionCommerce(false),
-m_bUpgradeAnywhere(false),
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
+	/********************************************************************************/
+	/**		REVDCM									2/16/10				phungus420	*/
+	/**																				*/
+	/**		RevTrait Effects														*/
+	/********************************************************************************/
+	, m_iRevIdxLocal(0)
+	, m_iRevIdxNational(0)
+	, m_iRevIdxDistanceModifier(0)
+	, m_iRevIdxHolyCityGood(0)
+	, m_iRevIdxHolyCityBad(0)
+	, m_fRevIdxNationalityMod(0)
+	, m_fRevIdxGoodReligionMod(0)
+	, m_fRevIdxBadReligionMod(0)
+	, m_bNonStateReligionCommerce(false)
+	, m_bUpgradeAnywhere(false)
+	/********************************************************************************/
+	/**		REVDCM									END								*/
+	/********************************************************************************/
 
-m_paiExtraYieldThreshold(NULL),
-m_paiTradeYieldModifier(NULL),
-m_paiCommerceChange(NULL),
-m_paiCommerceModifier(NULL)
-/************************************************************************************************/
-/* Afforess					  Start		 08/26/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-/*
-m_pabFreePromotionUnitCombat(NULL),
-m_pabFreePromotion(NULL)
-*/
-,m_ppbFreePromotionUnitCombats(NULL)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-,m_PropertyManipulators()
-//TB Traits Mods begin
-,m_PropertyManipulatorsNull()
-//Textual References
-,m_iPrereqTrait(NO_TRAIT)
-,m_iPrereqOrTrait1(NO_TRAIT)
-,m_iPrereqOrTrait2(NO_TRAIT)
-,m_ePromotionLine(NO_PROMOTIONLINE)
-,m_iGreatPeopleUnitClass(NO_UNITCLASS)
-,m_ePrereqTech(NO_TECH)
-//Team Project (6)
-,m_eEraAdvanceFreeSpecialistType(NO_SPECIALIST)
-,m_iGoldenAgeonBirthofGreatPeopleType(NO_UNITCLASS)
-//integers
-,m_iWarWearinessAccumulationModifier(0)
-,m_iCivicAnarchyTimeModifier(0)
-,m_iReligiousAnarchyTimeModifier(0)
-,m_iImprovementUpgradeRateModifier(0)
-,m_iWorkerSpeedModifier(0)
-,m_iMaxConscript(0)
-,m_iDistanceMaintenanceModifier(0)
-,m_iNumCitiesMaintenanceModifier(0)
-,m_iCorporationMaintenanceModifier(0)
-,m_iStateReligionGreatPeopleRateModifier(0)
-,m_iFreeExperience(0)
-,m_iBaseFreeUnits(0)
-,m_iBaseFreeMilitaryUnits(0)
-,m_iFreeUnitsPopulationPercent(0)
-,m_iFreeMilitaryUnitsPopulationPercent(0)
-,m_iGoldPerUnit(0)
-,m_iGoldPerMilitaryUnit(0)
-,m_iHappyPerMilitaryUnit(0)
-,m_iLargestCityHappiness(0)
-,m_iFreeSpecialist(0)
-,m_iTradeRoutes(0)
-,m_iStateReligionHappiness(0)
-,m_iNonStateReligionHappiness(0)
-,m_iStateReligionUnitProductionModifier(0)
-,m_iStateReligionBuildingProductionModifier(0)
-,m_iStateReligionFreeExperience(0)
-,m_iExpInBorderModifier(0)
-,m_iCityDefenseBonus(0)
-,m_iMilitaryProductionModifier(0)
-,m_iAttitudeModifier(0)
-,m_iLinePriority(0)
-,m_iEspionageDefense(0)
-,m_iMinAnarchy(0)
-,m_iMaxTradeRoutesChange(0)
-,m_iGoldenAgeDurationModifier(0)
-,m_iGreatPeopleRateChange(0)
-,m_iHurryAngerModifier(0)
-,m_iHurryCostModifier(0)
-,m_iEnemyWarWearinessModifier(0)
-,m_iForeignTradeRouteModifier(0)
-,m_iBombardDefense(0)
-,m_iUnitUpgradePriceModifier(0)
-,m_iCoastalTradeRoutes(0)
-//Team Project (6)
-,m_iGlobalPopulationgrowthratepercentage(0)
-,m_iCityStartCulture(0)
-,m_iGlobalAirUnitCapacity(0)
-,m_iCapitalXPModifier(0)
-,m_iHolyCityofStateReligionXPModifier(0)
-,m_iHolyCityofNonStateReligionXPModifier(0)
-,m_iBonusPopulationinNewCities(0)
-,m_iMissileRange(0)
-,m_iFlightOperationRange(0)
-,m_iNavalCargoSpace(0)
-,m_iMissileCargoSpace(0)
-,m_iNationalCaptureProbabilityModifier(0)
-,m_iNationalCaptureResistanceModifier(0)
-,m_iStateReligionSpreadProbabilityModifier(0)
-,m_iNonStateReligionSpreadProbabilityModifier(0)
-,m_iFreedomFighterChange(0)
-//booleans
-,m_bMilitaryFoodProduction(false)
-,m_bNegativeTrait(false)
-,m_bImpurePropertyManipulators(false)
-,m_bImpurePromotions(false)
-,m_bCivilizationTrait(false)
-,m_bAllowsInquisitions(false)
-,m_bCoastalAIInfluence(false)
-,m_bBarbarianSelectionOnly(false)
-,m_bCitiesStartwithStateReligion(false)
-,m_bDraftsOnCityCapture(false)
-,m_bFreeSpecialistperWorldWonder(false)
-,m_bFreeSpecialistperNationalWonder(false)
-,m_bFreeSpecialistperTeamProject(false)
-,m_bExtraGoody(false)
-,m_bAllReligionsActive(false)
-,m_bBansNonStateReligions(false)
-,m_bFreedomFighter(false)
-//arrays
-,m_ppaiSpecialistYieldChange(NULL)
-,m_bAnySpecialistYieldChanges(false)
-,m_piYieldModifier(NULL)
-,m_piCapitalYieldModifier(NULL)
-,m_piCapitalCommerceModifier(NULL)
-,m_piSpecialistExtraCommerce(NULL)
-,m_piSpecialistExtraYield(NULL)
-,m_piYieldChange(NULL)
-,m_ppaiSpecialistCommerceChange(NULL)
-,m_bAnySpecialistCommerceChanges(false)
-,m_piFlavorValue(NULL)
-,m_paiLessYieldThreshold(NULL)
-,m_piSeaPlotYieldChanges(NULL)
-,m_ppaiImprovementYieldChange(NULL)
-,m_bAnyImprovementYieldChanges(false)
-//Team Project (7)
-,m_piGoldenAgeYieldChanges(NULL)
-,m_piGoldenAgeCommerceChanges(NULL)
-//For Pure Traits
-,m_paiExtraYieldThresholdFiltered(NULL)
-,m_paiTradeYieldModifierFiltered(NULL)
-,m_paiCommerceChangeFiltered(NULL)
-,m_paiCommerceModifierFiltered(NULL)
-,m_ppaiSpecialistYieldChangeFiltered(NULL)
-,m_piYieldModifierFiltered(NULL)
-,m_piCapitalYieldModifierFiltered(NULL)
-,m_piCapitalCommerceModifierFiltered(NULL)
-,m_piSpecialistExtraCommerceFiltered(NULL)
-,m_piSpecialistExtraYieldFiltered(NULL)
-,m_piYieldChangeFiltered(NULL)
-,m_ppaiSpecialistCommerceChangeFiltered(NULL)
-,m_paiLessYieldThresholdFiltered(NULL)
-,m_piSeaPlotYieldChangesFiltered(NULL)
-,m_ppaiImprovementYieldChangeFiltered(NULL)
-//Team Project (7)
-,m_piGoldenAgeYieldChangesFiltered(NULL)
-,m_piGoldenAgeCommerceChangesFiltered(NULL)
-//TB Traits Mods end
+	, m_paiExtraYieldThreshold(NULL)
+	, m_paiTradeYieldModifier(NULL)
+	, m_paiCommerceChange(NULL)
+	, m_paiCommerceModifier(NULL)
+	/************************************************************************************************/
+	/* Afforess					  Start		 08/26/10											   */
+	/*																							  */
+	/*																							  */
+	/************************************************************************************************/
+	/*
+	,m_pabFreePromotionUnitCombat(NULL)
+	m_pabFreePromotion(NULL)
+	*/
+	, m_ppbFreePromotionUnitCombats(NULL)
+	/************************************************************************************************/
+	/* Afforess						 END															*/
+	/************************************************************************************************/
+	, m_PropertyManipulators()
+	//TB Traits Mods begin
+	, m_PropertyManipulatorsNull()
+	//Textual References
+	, m_iPrereqTrait(NO_TRAIT)
+	, m_iPrereqOrTrait1(NO_TRAIT)
+	, m_iPrereqOrTrait2(NO_TRAIT)
+	, m_ePromotionLine(NO_PROMOTIONLINE)
+	, m_iGreatPeopleUnitClass(NO_UNITCLASS)
+	, m_ePrereqTech(NO_TECH)
+	//Team Project (6)
+	, m_eEraAdvanceFreeSpecialistType(NO_SPECIALIST)
+	, m_iGoldenAgeonBirthofGreatPeopleType(NO_UNITCLASS)
+	//integers
+	, m_iWarWearinessAccumulationModifier(0)
+	, m_iCivicAnarchyTimeModifier(0)
+	, m_iReligiousAnarchyTimeModifier(0)
+	, m_iImprovementUpgradeRateModifier(0)
+	, m_iWorkerSpeedModifier(0)
+	, m_iMaxConscript(0)
+	, m_iDistanceMaintenanceModifier(0)
+	, m_iNumCitiesMaintenanceModifier(0)
+	, m_iCorporationMaintenanceModifier(0)
+	, m_iStateReligionGreatPeopleRateModifier(0)
+	, m_iFreeExperience(0)
+	, m_iBaseFreeUnits(0)
+	, m_iBaseFreeMilitaryUnits(0)
+	, m_iFreeUnitsPopulationPercent(0)
+	, m_iFreeMilitaryUnitsPopulationPercent(0)
+	, m_iGoldPerUnit(0)
+	, m_iGoldPerMilitaryUnit(0)
+	, m_iHappyPerMilitaryUnit(0)
+	, m_iLargestCityHappiness(0)
+	, m_iFreeSpecialist(0)
+	, m_iTradeRoutes(0)
+	, m_iStateReligionHappiness(0)
+	, m_iNonStateReligionHappiness(0)
+	, m_iStateReligionUnitProductionModifier(0)
+	, m_iStateReligionBuildingProductionModifier(0)
+	, m_iStateReligionFreeExperience(0)
+	, m_iExpInBorderModifier(0)
+	, m_iCityDefenseBonus(0)
+	, m_iMilitaryProductionModifier(0)
+	, m_iAttitudeModifier(0)
+	, m_iLinePriority(0)
+	, m_iEspionageDefense(0)
+	, m_iMinAnarchy(0)
+	, m_iMaxTradeRoutesChange(0)
+	, m_iGoldenAgeDurationModifier(0)
+	, m_iGreatPeopleRateChange(0)
+	, m_iHurryAngerModifier(0)
+	, m_iHurryCostModifier(0)
+	, m_iEnemyWarWearinessModifier(0)
+	, m_iForeignTradeRouteModifier(0)
+	, m_iBombardDefense(0)
+	, m_iUnitUpgradePriceModifier(0)
+	, m_iCoastalTradeRoutes(0)
+	//Team Project (6)
+	, m_iGlobalPopulationgrowthratepercentage(0)
+	, m_iCityStartCulture(0)
+	, m_iGlobalAirUnitCapacity(0)
+	, m_iCapitalXPModifier(0)
+	, m_iHolyCityofStateReligionXPModifier(0)
+	, m_iHolyCityofNonStateReligionXPModifier(0)
+	, m_iBonusPopulationinNewCities(0)
+	, m_iMissileRange(0)
+	, m_iFlightOperationRange(0)
+	, m_iNavalCargoSpace(0)
+	, m_iMissileCargoSpace(0)
+	, m_iNationalCaptureProbabilityModifier(0)
+	, m_iNationalCaptureResistanceModifier(0)
+	, m_iStateReligionSpreadProbabilityModifier(0)
+	, m_iNonStateReligionSpreadProbabilityModifier(0)
+	, m_iFreedomFighterChange(0)
+	//booleans
+	, m_bMilitaryFoodProduction(false)
+	, m_bNegativeTrait(false)
+	, m_bImpurePropertyManipulators(false)
+	, m_bImpurePromotions(false)
+	, m_bCivilizationTrait(false)
+	, m_bAllowsInquisitions(false)
+	, m_bCoastalAIInfluence(false)
+	, m_bBarbarianSelectionOnly(false)
+	, m_bCitiesStartwithStateReligion(false)
+	, m_bDraftsOnCityCapture(false)
+	, m_bFreeSpecialistperWorldWonder(false)
+	, m_bFreeSpecialistperNationalWonder(false)
+	, m_bFreeSpecialistperTeamProject(false)
+	, m_bExtraGoody(false)
+	, m_bAllReligionsActive(false)
+	, m_bBansNonStateReligions(false)
+	, m_bFreedomFighter(false)
+	//arrays
+	, m_ppaiSpecialistYieldChange(NULL)
+	, m_bAnySpecialistYieldChanges(false)
+	, m_piYieldModifier(NULL)
+	, m_piCapitalYieldModifier(NULL)
+	, m_piCapitalCommerceModifier(NULL)
+	, m_piSpecialistExtraCommerce(NULL)
+	, m_piSpecialistExtraYield(NULL)
+	, m_piYieldChange(NULL)
+	, m_ppaiSpecialistCommerceChange(NULL)
+	, m_bAnySpecialistCommerceChanges(false)
+	, m_piFlavorValue(NULL)
+	, m_paiLessYieldThreshold(NULL)
+	, m_piSeaPlotYieldChanges(NULL)
+	, m_ppaiImprovementYieldChange(NULL)
+	, m_bAnyImprovementYieldChanges(false)
+	//Team Project (7)
+	, m_piGoldenAgeYieldChanges(NULL)
+	, m_piGoldenAgeCommerceChanges(NULL)
+	//For Pure Traits
+	, m_paiExtraYieldThresholdFiltered(NULL)
+	, m_paiTradeYieldModifierFiltered(NULL)
+	, m_paiCommerceChangeFiltered(NULL)
+	, m_paiCommerceModifierFiltered(NULL)
+	, m_ppaiSpecialistYieldChangeFiltered(NULL)
+	, m_piYieldModifierFiltered(NULL)
+	, m_piCapitalYieldModifierFiltered(NULL)
+	, m_piCapitalCommerceModifierFiltered(NULL)
+	, m_piSpecialistExtraCommerceFiltered(NULL)
+	, m_piSpecialistExtraYieldFiltered(NULL)
+	, m_piYieldChangeFiltered(NULL)
+	, m_ppaiSpecialistCommerceChangeFiltered(NULL)
+	, m_paiLessYieldThresholdFiltered(NULL)
+	, m_piSeaPlotYieldChangesFiltered(NULL)
+	, m_ppaiImprovementYieldChangeFiltered(NULL)
+	//Team Project (7)
+	, m_piGoldenAgeYieldChangesFiltered(NULL)
+	, m_piGoldenAgeCommerceChangesFiltered(NULL)
+	//TB Traits Mods end
+	, m_piBonusHappinessChangesFiltered(NULL)
 {
 }
 
@@ -26295,23 +26318,25 @@ void CvTraitInfo::setShortDescription(const TCHAR* szVal)
 
 int CvTraitInfo::getExtraYieldThreshold(int i) const
 {
-	if (m_paiExtraYieldThreshold)
+	if (!m_paiExtraYieldThreshold)
+		return -1;
+
+	if (m_paiExtraYieldThresholdFiltered && GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
 	{
-		if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS) && m_paiExtraYieldThresholdFiltered)
+		if (isNegativeTrait() && m_paiExtraYieldThreshold[i] > -1)
 		{
-			if (isNegativeTrait() && m_paiExtraYieldThreshold[i] > 0)
-			{
-					m_paiExtraYieldThresholdFiltered[i] = -1;
-			}
-			else
-			{
-				m_paiExtraYieldThresholdFiltered[i] = -1;
-				m_paiExtraYieldThresholdFiltered[i] = m_paiExtraYieldThreshold[i];
-			}
-			return m_paiExtraYieldThresholdFiltered ? m_paiExtraYieldThresholdFiltered[i] : 0;
+			m_paiExtraYieldThresholdFiltered[i] = -1;
 		}
+		else
+		{
+			m_paiExtraYieldThresholdFiltered[i] = m_paiExtraYieldThreshold[i];
+		}
+		return m_paiExtraYieldThresholdFiltered[i];
 	}
-	return m_paiExtraYieldThreshold ? m_paiExtraYieldThreshold[i] : 0;
+	else
+	{
+		return m_paiExtraYieldThreshold[i];
+	}
 }
 
 int CvTraitInfo::getTradeYieldModifier(int i) const
@@ -26322,7 +26347,7 @@ int CvTraitInfo::getTradeYieldModifier(int i) const
 		{
 			if (isNegativeTrait() && m_paiTradeYieldModifier[i] > 0)
 			{
-					m_paiTradeYieldModifierFiltered[i] = 0;
+				m_paiTradeYieldModifierFiltered[i] = 0;
 			}
 			else if (!isNegativeTrait() && m_paiTradeYieldModifier[i] < 0)
 			{
@@ -26346,7 +26371,7 @@ int CvTraitInfo::getCommerceChange(int i) const
 		{
 			if (isNegativeTrait() && m_paiCommerceChange[i] > 0)
 			{
-					m_paiCommerceChangeFiltered[i] = 0;
+				m_paiCommerceChangeFiltered[i] = 0;
 			}
 			else if (!isNegativeTrait() && m_paiCommerceChange[i] < 0)
 			{
@@ -26370,7 +26395,7 @@ int CvTraitInfo::getCommerceModifier(int i) const
 		{
 			if (isNegativeTrait() && m_paiCommerceModifier[i] > 0)
 			{
-					m_paiCommerceModifierFiltered[i] = 0;
+				m_paiCommerceModifierFiltered[i] = 0;
 			}
 			else if (!isNegativeTrait() && m_paiCommerceModifier[i] < 0)
 			{
@@ -31808,38 +31833,59 @@ bool CvAnimationPathInfo::read(CvXMLLoadUtility* pXML)
 		return false;
 	}
 
-	TCHAR	szTempString[1024];				// Extracting text
-	int		iCurrentCategory;				// The current category information we are building
-	float	fParameter;						// Temporary
-	bool	moved;
-
 	pXML->GetChildXmlValByName( &m_bMissionPath, L"bMissionPath" );
-	moved = pXML->TryMoveToXmlFirstChild();  FAssert(moved);
-	mbstate_t mbs;  mbrlen(NULL, 0 ,&mbs);
-	const wchar_t* tmp = pXML->GetXmlFirstText();
-	wcsrtombs(szTempString, &tmp, 1023, &mbs); FAssert(tmp == 0);
-	moved = pXML->TryMoveToXmlNextSibling();   FAssert(moved);
-	moved = pXML->TryMoveToXmlNextSibling();   FAssert(moved);
-	do
+	if (!pXML->TryMoveToXmlFirstChild())
 	{
-		if ( pXML->GetOptionalChildXmlValByName( szTempString, L"Category") )
+		FErrorMsg("MissionPath invalid");
+		return false;
+	}
+
+	const wchar_t* tmp = pXML->GetXmlFirstText();
+	TCHAR animPathName[1024];
+	if (tmp)
+	{
+		mbstate_t mbs; 
+		mbrlen(NULL, 0, &mbs);
+		wcsrtombs(animPathName, &tmp, 1023, &mbs);
+		FAssertMsg(tmp == 0, "Failed to convert animation path name");
+	}
+	else
+	{
+		FErrorMsg("No animation path name found");
+	}
+
+	if(pXML->TryMoveToXmlNextSibling() && pXML->TryMoveToXmlNextSibling())
+	{
+		do
 		{
-			iCurrentCategory = pXML->GetInfoClass(szTempString);
-			fParameter = 0.0f;
-		}
-		else
-		{
-			pXML->GetChildXmlValByName( szTempString, L"Operator" );
-			iCurrentCategory = GC.getTypesEnum(szTempString);
-			iCurrentCategory = ((int)ANIMOP_FIRST) + iCurrentCategory;
-			if ( !pXML->GetChildXmlValByName( &fParameter, L"Parameter" ) )
+			int		iCurrentCategory;	// The current category information we are building
+			float	fParameter;			// Temporary
+			TCHAR	szTempString[1024];
+
+			if (pXML->GetOptionalChildXmlValByName(szTempString, L"Category"))
 			{
+				iCurrentCategory = pXML->GetInfoClass(szTempString);
 				fParameter = 0.0f;
 			}
-		}
-			m_vctPathDefinition.push_back( std::make_pair(iCurrentCategory, fParameter ));
+			else
+			{
+				pXML->GetChildXmlValByName(szTempString, L"Operator");
+				iCurrentCategory = GC.getTypesEnum(szTempString);
+				iCurrentCategory = ((int)ANIMOP_FIRST) + iCurrentCategory;
+				if (!pXML->GetChildXmlValByName(&fParameter, L"Parameter"))
+				{
+					fParameter = 0.0f;
+				}
+			}
+			m_vctPathDefinition.push_back(std::make_pair(iCurrentCategory, fParameter));
+		} while (pXML->TryMoveToXmlNextSibling());
 	}
-	while (pXML->TryMoveToXmlNextSibling());
+	else
+	{
+		FErrorMsg(CvString::format("Animation path %s XML structure is invalid", animPathName).c_str());
+		return false;
+	}
+
 	pXML->MoveToXmlParent();
 
 	return true;
@@ -34741,34 +34787,33 @@ bool CvDiplomacyTextInfo::read(CvXMLLoadUtility* pXML)
 		int iIndexVal = pXML->GetXmlChildrenNumber(L"Response");
 		init(iIndexVal);
 
-		for (j = 0; j < iIndexVal; j++)
+		if (iIndexVal > 0 && pXML->TryMoveToXmlFirstChild())
 		{
-			if (j == 0)
+			for (j = 0; j < iIndexVal; j++)
 			{
-				pXML->TryMoveToXmlFirstChild();
-			}
-			// Civilizations
-			pXML->SetVariableListTagPair(&m_pResponses[j].m_pbCivilizationTypes, L"Civilizations", GC.getNumCivilizationInfos());
-			// Leaders
-			pXML->SetVariableListTagPair(&m_pResponses[j].m_pbLeaderHeadTypes, L"Leaders", GC.getNumLeaderHeadInfos());
-			// AttitudeTypes
-			pXML->SetVariableListTagPair(&m_pResponses[j].m_pbAttitudeTypes, L"Attitudes", NUM_ATTITUDE_TYPES);
-			// PowerTypes
-			pXML->SetVariableListTagPair(&m_pResponses[j].m_pbDiplomacyPowerTypes, L"DiplomacyPowers", GC.getDiplomacyPowerTypes(), NUM_DIPLOMACYPOWER_TYPES);
-			// DiplomacyText
-			if (pXML->TryMoveToXmlFirstChild(L"DiplomacyText"))
-			{
-				pXML->SetStringList(&m_pResponses[j].m_paszDiplomacyText, &m_pResponses[j].m_iNumDiplomacyText);
-				pXML->MoveToXmlParent();
+				// Civilizations
+				pXML->SetVariableListTagPair(&m_pResponses[j].m_pbCivilizationTypes, L"Civilizations", GC.getNumCivilizationInfos());
+				// Leaders
+				pXML->SetVariableListTagPair(&m_pResponses[j].m_pbLeaderHeadTypes, L"Leaders", GC.getNumLeaderHeadInfos());
+				// AttitudeTypes
+				pXML->SetVariableListTagPair(&m_pResponses[j].m_pbAttitudeTypes, L"Attitudes", NUM_ATTITUDE_TYPES);
+				// PowerTypes
+				pXML->SetVariableListTagPair(&m_pResponses[j].m_pbDiplomacyPowerTypes, L"DiplomacyPowers", GC.getDiplomacyPowerTypes(), NUM_DIPLOMACYPOWER_TYPES);
+				// DiplomacyText
+				if (pXML->TryMoveToXmlFirstChild(L"DiplomacyText"))
+				{
+					pXML->SetStringList(&m_pResponses[j].m_paszDiplomacyText, &m_pResponses[j].m_iNumDiplomacyText);
+					pXML->MoveToXmlParent();
+				}
+
+				if (!pXML->TryMoveToXmlNextSibling())
+				{
+					break;
+				}
 			}
 
-			if (!pXML->TryMoveToXmlNextSibling())
-			{
-				break;
-			}
+			pXML->MoveToXmlParent();
 		}
-
-		pXML->MoveToXmlParent();
 	}
 	pXML->MoveToXmlParent();
 
@@ -35416,25 +35461,27 @@ bool CvTutorialInfo::read(CvXMLLoadUtility* pXML)
 
 	if (pXML->TryMoveToXmlFirstChild(L"TutorialMessages"))
 	{
-		int iNum;
-		iNum = pXML->GetXmlChildrenNumber(L"TutorialMessage");
+		int iNum = pXML->GetXmlChildrenNumber(L"TutorialMessage");
 		if ( iNum > 0 )
 		{
-			pXML->TryMoveToXmlFirstChild(L"TutorialMessage");
-			initTutorialMessages(iNum);
-			for (int i = 0; i<m_iNumTutorialMessages; i++)
+			if(pXML->TryMoveToXmlFirstChild(L"TutorialMessage"))
 			{
-				if (!m_paTutorialMessages[i].read(pXML))
+				initTutorialMessages(iNum);
+				for (int i = 0; i < m_iNumTutorialMessages; i++)
 				{
-					return false;
-				}
+					if (!m_paTutorialMessages[i].read(pXML))
+					{
+						FErrorMsg("");
+						return false;
+					}
 
-				if (!pXML->TryMoveToXmlNextSibling())
-				{
-					break;
+					if (!pXML->TryMoveToXmlNextSibling())
+					{
+						break;
+					}
 				}
+				pXML->MoveToXmlParent();
 			}
-			pXML->MoveToXmlParent();
 		}
 		pXML->MoveToXmlParent();
 	}
@@ -38407,7 +38454,7 @@ void CvEventInfo::copyNonDefaults(CvEventInfo* pClassInfo, CvXMLLoadUtility* pXM
 		{
 			for ( int iCommerce = 0; iCommerce < NUM_COMMERCE_TYPES; iCommerce++)
 			{
-				if ( pClassInfo->getBuildingYieldChange(iBuildingClass, iCommerce) != 0)
+				if ( pClassInfo->getBuildingCommerceChange(iBuildingClass, iCommerce) != 0)
 				{
 					BuildingCommerceChange kChange;
 					kChange.eBuildingClass = (BuildingClassTypes)iBuildingClass;
@@ -41389,189 +41436,190 @@ void CvPromotionLineInfo::setBuildings()
 UnitCombatTypes CvUnitCombatInfo::m_UnitCombatAnimal = NO_UNITCOMBAT;
 UnitCombatTypes CvUnitCombatInfo::m_UnitCombatWildAnimal = NO_UNITCOMBAT;
 
-CvUnitCombatInfo::CvUnitCombatInfo() :
-//Textual References
-m_eReligion(NO_RELIGION)
-,m_eCulture(NO_BONUS)
-,m_eEra(NO_ERA)
-//Integers
-,m_iAssetMultiplier(0)
-,m_iPowerMultiplier(0)
-,m_iVisibilityChange(0)
-,m_iMovesChange(0)
-,m_iMoveDiscountChange(0)
-,m_iAirRangeChange(0)
-,m_iInterceptChange(0)
-,m_iEvasionChange(0)
-,m_iWithdrawalChange(0)
-,m_iCargoChange(0)
-,m_iSMCargoChange(0)
-,m_iSMCargoVolumeChange(0)
-,m_iSMCargoVolumeModifierChange(0)
-,m_iCollateralDamageChange(0)
-,m_iBombardRateChange(0)
-,m_iFirstStrikesChange(0)
-,m_iChanceFirstStrikesChange(0)
-,m_iEnemyHealChange(0)
-,m_iNeutralHealChange(0)
-,m_iFriendlyHealChange(0)
-,m_iSameTileHealChange(0)
-,m_iAdjacentTileHealChange(0)
-,m_iCombatPercent(0)
-,m_iCityAttackPercent(0)
-,m_iCityDefensePercent(0)
-,m_iHillsAttackPercent(0)
-,m_iHillsDefensePercent(0)
-,m_iHillsWorkPercent(0)
-,m_iWorkRatePercent(0)
-,m_iRevoltProtection(0)
-,m_iCollateralDamageProtection(0)
-,m_iPillageChange(0)
-,m_iUpgradeDiscount(0)
-,m_iExperiencePercent(0)
-,m_iKamikazePercent(0)
-,m_iAirCombatLimitChange(0)
-,m_iCelebrityHappy(0)
-,m_iCollateralDamageLimitChange(0)
-,m_iCollateralDamageMaxUnitsChange(0)
-,m_iCombatLimitChange(0)
-,m_iExtraDropRange(0)
-,m_iSurvivorChance(0)
-,m_iVictoryAdjacentHeal(0)
-,m_iVictoryHeal(0)
-,m_iVictoryStackHeal(0)
-,m_iAttackCombatModifierChange(0)
-,m_iDefenseCombatModifierChange(0)
-,m_iPursuitChange(0)
-,m_iEarlyWithdrawChange(0)
-,m_iVSBarbsChange(0)
-,m_iArmorChange(0)
-,m_iPunctureChange(0)
-,m_iOverrunChange(0)
-,m_iRepelChange(0)
-,m_iFortRepelChange(0)
-,m_iRepelRetriesChange(0)
-,m_iUnyieldingChange(0)
-,m_iKnockbackChange(0)
-,m_iKnockbackRetriesChange(0)
-,m_iStrAdjperAttChange(0)
-,m_iStrAdjperDefChange(0)
-,m_iWithdrawAdjperAttChange(0)
-,m_iUnnerveChange(0)
-,m_iEncloseChange(0)
-,m_iLungeChange(0)
-,m_iDynamicDefenseChange(0)
-,m_iStrengthChange(0)
-,m_iFortitudeChange(0)
-,m_iFrontSupportPercentChange(0)
-,m_iShortRangeSupportPercentChange(0)
-,m_iMediumRangeSupportPercentChange(0)
-,m_iLongRangeSupportPercentChange(0)
-,m_iFlankSupportPercentChange(0)
-,m_iDodgeModifierChange(0)
-,m_iPrecisionModifierChange(0)
-,m_iPowerShotsChange(0)
-,m_iPowerShotCombatModifierChange(0)
-,m_iPowerShotPunctureModifierChange(0)
-,m_iPowerShotPrecisionModifierChange(0)
-,m_iPowerShotCriticalModifierChange(0)
-,m_iCriticalModifierChange(0)
-,m_iEnduranceChange(0)
-,m_iRoundStunProbChange(0)
-,m_iPoisonProbabilityModifierChange(0)
-,m_iCaptureProbabilityModifierChange(0)
-,m_iCaptureResistanceModifierChange(0)
-,m_iHillsWorkModifierChange(0)
-,m_iPeaksWorkModifierChange(0)
-,m_iBreakdownChanceChange(0)
-,m_iBreakdownDamageChange(0)
-,m_iTauntChange(0)
-,m_iMaxHPChange(0)
-,m_iStrengthModifier(0)
-,m_iQualityBase(-10)
-,m_iGroupBase(-10)
-,m_iSizeBase(-10)
-,m_iDamageModifierChange(0)
-,m_iCostModifierChange(0)
-,m_iRBombardDamageBase(0)
-,m_iRBombardDamageLimitBase(0)
-,m_iRBombardDamageMaxUnitsBase(0)
-,m_iDCMBombRangeBase(0)
-,m_iDCMBombAccuracyBase(0)
-,m_iCombatModifierPerSizeMoreChange(0)
-,m_iCombatModifierPerSizeLessChange(0)
-,m_iCombatModifierPerVolumeMoreChange(0)
-,m_iCombatModifierPerVolumeLessChange(0)
-,m_iSelfHealModifier(0)
-,m_iNumHealSupport(0)
-,m_iExcileChange(0)
-,m_iPassageChange(0)
-,m_iNoNonOwnedCityEntryChange(0)
-,m_iBarbCoExistChange(0)
-,m_iBlendIntoCityChange(0)
-,m_iInsidiousnessChange(0)
-,m_iInvestigationChange(0)
-,m_iStealthStrikesChange(0)
-,m_iStealthCombatModifierChange(0)
-,m_iStealthDefenseChange(0)
-,m_iDefenseOnlyChange(0)
-,m_iNoInvisibilityChange(0)
-,m_iNoCaptureChange(0)
-,m_iAnimalIgnoresBordersChange(0)
-,m_iNoDefensiveBonusChange(0)
-,m_iGatherHerdChange(0)
-,m_iReligiousCombatModifierChange(0)
-//Booleans
-,m_bDefensiveVictoryMove(false)
-,m_bFreeDrop(false)
-,m_bOffensiveVictoryMove(false)
-,m_bOneUp(false)
-,m_bPillageCulture(false)
-,m_bPillageEspionage(false)
-,m_bPillageMarauder(false)
-,m_bPillageOnMove(false)
-,m_bPillageOnVictory(false)
-,m_bPillageResearch(false)
-,m_bBlitz(false)
-,m_bAmphib(false)
-,m_bRiver(false)
-,m_bEnemyRoute(false)
-,m_bAlwaysHeal(false)
-,m_bHillsDoubleMove(false)
-,m_bImmuneToFirstStrikes(false)
-,m_bStampedeChange(false)
-,m_bRemoveStampede(false)
-,m_bOnslaughtChange(false)
-,m_bMakesDamageCold(false)
-,m_bMakesDamageNotCold(false)
-,m_bAddsColdImmunity(false)
-,m_bRemovesColdImmunity(false)
-,m_bAttackOnlyCitiesAdd(false)
-,m_bAttackOnlyCitiesSubtract(false)
-,m_bIgnoreNoEntryLevelAdd(false)
-,m_bIgnoreNoEntryLevelSubtract(false)
-,m_bIgnoreZoneofControlAdd(false)
-,m_bIgnoreZoneofControlSubtract(false)
-,m_bFliesToMoveAdd(false)
-,m_bFliesToMoveSubtract(false)
-,m_bCanMovePeaks(false)
-,m_bCanLeadThroughPeaks(false)
-,m_bZoneOfControl(false)
-,m_bSpy(false)
-,m_bCannotMergeSplit(false)
-,m_bRBombardDirect(false)
-,m_bRBombardForceAbility(false)
-,m_bInvisible(false)
-,m_bForMilitary(false)
-,m_bForNavalMilitary(false)
-,m_bHealsAs(false)
-,m_bNoSelfHeal(false)
-//Array Derived
-,m_bAnyDomainModifierPercent(false)
-//Arrays
-,m_piDomainModifierPercent(NULL)
-//PropertyManipulators
-,m_PropertyManipulators()
+CvUnitCombatInfo::CvUnitCombatInfo() 
+	//Textual References
+	: m_eReligion(NO_RELIGION)
+	, m_eCulture(NO_BONUS)
+	, m_eEra(NO_ERA)
+	//Integers
+	, m_iAssetMultiplier(0)
+	, m_iPowerMultiplier(0)
+	, m_iIgnoreTerrainDamage(0)
+	, m_iVisibilityChange(0)
+	, m_iMovesChange(0)
+	, m_iMoveDiscountChange(0)
+	, m_iAirRangeChange(0)
+	, m_iInterceptChange(0)
+	, m_iEvasionChange(0)
+	, m_iWithdrawalChange(0)
+	, m_iCargoChange(0)
+	, m_iSMCargoChange(0)
+	, m_iSMCargoVolumeChange(0)
+	, m_iSMCargoVolumeModifierChange(0)
+	, m_iCollateralDamageChange(0)
+	, m_iBombardRateChange(0)
+	, m_iFirstStrikesChange(0)
+	, m_iChanceFirstStrikesChange(0)
+	, m_iEnemyHealChange(0)
+	, m_iNeutralHealChange(0)
+	, m_iFriendlyHealChange(0)
+	, m_iSameTileHealChange(0)
+	, m_iAdjacentTileHealChange(0)
+	, m_iCombatPercent(0)
+	, m_iCityAttackPercent(0)
+	, m_iCityDefensePercent(0)
+	, m_iHillsAttackPercent(0)
+	, m_iHillsDefensePercent(0)
+	, m_iHillsWorkPercent(0)
+	, m_iWorkRatePercent(0)
+	, m_iRevoltProtection(0)
+	, m_iCollateralDamageProtection(0)
+	, m_iPillageChange(0)
+	, m_iUpgradeDiscount(0)
+	, m_iExperiencePercent(0)
+	, m_iKamikazePercent(0)
+	, m_iAirCombatLimitChange(0)
+	, m_iCelebrityHappy(0)
+	, m_iCollateralDamageLimitChange(0)
+	, m_iCollateralDamageMaxUnitsChange(0)
+	, m_iCombatLimitChange(0)
+	, m_iExtraDropRange(0)
+	, m_iSurvivorChance(0)
+	, m_iVictoryAdjacentHeal(0)
+	, m_iVictoryHeal(0)
+	, m_iVictoryStackHeal(0)
+	, m_iAttackCombatModifierChange(0)
+	, m_iDefenseCombatModifierChange(0)
+	, m_iPursuitChange(0)
+	, m_iEarlyWithdrawChange(0)
+	, m_iVSBarbsChange(0)
+	, m_iArmorChange(0)
+	, m_iPunctureChange(0)
+	, m_iOverrunChange(0)
+	, m_iRepelChange(0)
+	, m_iFortRepelChange(0)
+	, m_iRepelRetriesChange(0)
+	, m_iUnyieldingChange(0)
+	, m_iKnockbackChange(0)
+	, m_iKnockbackRetriesChange(0)
+	, m_iStrAdjperAttChange(0)
+	, m_iStrAdjperDefChange(0)
+	, m_iWithdrawAdjperAttChange(0)
+	, m_iUnnerveChange(0)
+	, m_iEncloseChange(0)
+	, m_iLungeChange(0)
+	, m_iDynamicDefenseChange(0)
+	, m_iStrengthChange(0)
+	, m_iFortitudeChange(0)
+	, m_iFrontSupportPercentChange(0)
+	, m_iShortRangeSupportPercentChange(0)
+	, m_iMediumRangeSupportPercentChange(0)
+	, m_iLongRangeSupportPercentChange(0)
+	, m_iFlankSupportPercentChange(0)
+	, m_iDodgeModifierChange(0)
+	, m_iPrecisionModifierChange(0)
+	, m_iPowerShotsChange(0)
+	, m_iPowerShotCombatModifierChange(0)
+	, m_iPowerShotPunctureModifierChange(0)
+	, m_iPowerShotPrecisionModifierChange(0)
+	, m_iPowerShotCriticalModifierChange(0)
+	, m_iCriticalModifierChange(0)
+	, m_iEnduranceChange(0)
+	, m_iRoundStunProbChange(0)
+	, m_iPoisonProbabilityModifierChange(0)
+	, m_iCaptureProbabilityModifierChange(0)
+	, m_iCaptureResistanceModifierChange(0)
+	, m_iHillsWorkModifierChange(0)
+	, m_iPeaksWorkModifierChange(0)
+	, m_iBreakdownChanceChange(0)
+	, m_iBreakdownDamageChange(0)
+	, m_iTauntChange(0)
+	, m_iMaxHPChange(0)
+	, m_iStrengthModifier(0)
+	, m_iQualityBase(-10)
+	, m_iGroupBase(-10)
+	, m_iSizeBase(-10)
+	, m_iDamageModifierChange(0)
+	, m_iCostModifierChange(0)
+	, m_iRBombardDamageBase(0)
+	, m_iRBombardDamageLimitBase(0)
+	, m_iRBombardDamageMaxUnitsBase(0)
+	, m_iDCMBombRangeBase(0)
+	, m_iDCMBombAccuracyBase(0)
+	, m_iCombatModifierPerSizeMoreChange(0)
+	, m_iCombatModifierPerSizeLessChange(0)
+	, m_iCombatModifierPerVolumeMoreChange(0)
+	, m_iCombatModifierPerVolumeLessChange(0)
+	, m_iSelfHealModifier(0)
+	, m_iNumHealSupport(0)
+	, m_iExcileChange(0)
+	, m_iPassageChange(0)
+	, m_iNoNonOwnedCityEntryChange(0)
+	, m_iBarbCoExistChange(0)
+	, m_iBlendIntoCityChange(0)
+	, m_iInsidiousnessChange(0)
+	, m_iInvestigationChange(0)
+	, m_iStealthStrikesChange(0)
+	, m_iStealthCombatModifierChange(0)
+	, m_iStealthDefenseChange(0)
+	, m_iDefenseOnlyChange(0)
+	, m_iNoInvisibilityChange(0)
+	, m_iNoCaptureChange(0)
+	, m_iAnimalIgnoresBordersChange(0)
+	, m_iNoDefensiveBonusChange(0)
+	, m_iGatherHerdChange(0)
+	, m_iReligiousCombatModifierChange(0)
+	//Booleans
+	, m_bDefensiveVictoryMove(false)
+	, m_bFreeDrop(false)
+	, m_bOffensiveVictoryMove(false)
+	, m_bOneUp(false)
+	, m_bPillageCulture(false)
+	, m_bPillageEspionage(false)
+	, m_bPillageMarauder(false)
+	, m_bPillageOnMove(false)
+	, m_bPillageOnVictory(false)
+	, m_bPillageResearch(false)
+	, m_bBlitz(false)
+	, m_bAmphib(false)
+	, m_bRiver(false)
+	, m_bEnemyRoute(false)
+	, m_bAlwaysHeal(false)
+	, m_bHillsDoubleMove(false)
+	, m_bImmuneToFirstStrikes(false)
+	, m_bStampedeChange(false)
+	, m_bRemoveStampede(false)
+	, m_bOnslaughtChange(false)
+	, m_bMakesDamageCold(false)
+	, m_bMakesDamageNotCold(false)
+	, m_bAddsColdImmunity(false)
+	, m_bRemovesColdImmunity(false)
+	, m_bAttackOnlyCitiesAdd(false)
+	, m_bAttackOnlyCitiesSubtract(false)
+	, m_bIgnoreNoEntryLevelAdd(false)
+	, m_bIgnoreNoEntryLevelSubtract(false)
+	, m_bIgnoreZoneofControlAdd(false)
+	, m_bIgnoreZoneofControlSubtract(false)
+	, m_bFliesToMoveAdd(false)
+	, m_bFliesToMoveSubtract(false)
+	, m_bCanMovePeaks(false)
+	, m_bCanLeadThroughPeaks(false)
+	, m_bZoneOfControl(false)
+	, m_bSpy(false)
+	, m_bCannotMergeSplit(false)
+	, m_bRBombardDirect(false)
+	, m_bRBombardForceAbility(false)
+	, m_bInvisible(false)
+	, m_bForMilitary(false)
+	, m_bForNavalMilitary(false)
+	, m_bHealsAs(false)
+	, m_bNoSelfHeal(false)
+	//Array Derived
+	, m_bAnyDomainModifierPercent(false)
+	//Arrays
+	, m_piDomainModifierPercent(NULL)
+	//PropertyManipulators
+	, m_PropertyManipulators()
 {
 	m_zobristValue = GC.getGameINLINE().getSorenRand().getInt();
 }

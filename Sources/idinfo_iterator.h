@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef idinfo_iterator_h__
+#define idinfo_iterator_h__
+
 #include "LinkedList.h"
 
 struct IDInfo;
@@ -84,3 +87,4 @@ private:
 	Value* m_ptr;
 };
 
+#endif // idinfo_iterator_h__

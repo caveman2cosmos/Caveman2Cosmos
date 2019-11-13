@@ -5,7 +5,7 @@
 #include "CvMapExternal.h"
 #include <time.h> 
 
-static char gVersionString[64] = { 0 };
+static char gVersionString[1024] = { 0 };
 
 // Use macro override when available. Version string might not be loaded in time for
 // applying it to the mini-dump so we will use macro version string for releases
@@ -122,351 +122,367 @@ void CvGlobals::CheckProxy(const char* fnName) const
 //
 // CONSTRUCTOR
 //
-cvInternalGlobals::cvInternalGlobals() :
+cvInternalGlobals::cvInternalGlobals() 
 /************************************************************************************************/
 /* Mod Globals    Start                          09/13/10                           phungus420  */
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-m_paszEntityEventTypes2(NULL),
-m_paszEntityEventTypes(NULL),
-m_paszAnimationOperatorTypes(NULL),
-m_paszFunctionTypes(NULL),
-m_paszFlavorTypes(NULL),
-m_paszArtStyleTypes(NULL),
-m_paszCitySizeTypes(NULL),
-m_paszContactTypes(NULL),
-m_paszDiplomacyPowerTypes(NULL),
-m_paszAutomateTypes(NULL),
-m_paszDirectionTypes(NULL),
-m_paszFootstepAudioTypes(NULL),
-m_paszFootstepAudioTags(NULL),
-m_bDCM_BATTLE_EFFECTS(false),
-m_iBATTLE_EFFECT_LESS_FOOD(0),
-m_iBATTLE_EFFECT_LESS_PRODUCTION(0),
-m_iBATTLE_EFFECT_LESS_COMMERCE(0),
-m_iBATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS(0),
-m_iMAX_BATTLE_TURNS(0),
+	: m_paszEntityEventTypes2(NULL)
+	, m_paszEntityEventTypes(NULL)
+	, m_paszAnimationOperatorTypes(NULL)
+	, m_paszFunctionTypes(NULL)
+	, m_paszFlavorTypes(NULL)
+	, m_paszArtStyleTypes(NULL)
+	, m_paszCitySizeTypes(NULL)
+	, m_paszContactTypes(NULL)
+	, m_paszDiplomacyPowerTypes(NULL)
+	, m_paszAutomateTypes(NULL)
+	, m_paszDirectionTypes(NULL)
+	, m_paszFootstepAudioTypes(NULL)
+	, m_paszFootstepAudioTags(NULL)
+	, m_bDCM_BATTLE_EFFECTS(false)
+	, m_iBATTLE_EFFECT_LESS_FOOD(0)
+	, m_iBATTLE_EFFECT_LESS_PRODUCTION(0)
+	, m_iBATTLE_EFFECT_LESS_COMMERCE(0)
+	, m_iBATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS(0)
+	, m_iMAX_BATTLE_TURNS(0)
 
-m_bDCM_AIR_BOMBING(false),
-m_bDCM_RANGE_BOMBARD(false),
-m_iDCM_RB_CITY_INACCURACY(0),
-m_iDCM_RB_CITYBOMBARD_CHANCE(0),
-m_bDCM_ATTACK_SUPPORT(false),
-m_bDCM_STACK_ATTACK(false),
-m_bDCM_OPP_FIRE(false),
-m_bDCM_ACTIVE_DEFENSE(false),
-m_bDCM_ARCHER_BOMBARD(false),
-m_bDCM_FIGHTER_ENGAGE(false),
+	, m_bDCM_AIR_BOMBING(false)
+	, m_bDCM_RANGE_BOMBARD(false)
+	, m_iDCM_RB_CITY_INACCURACY(0)
+	, m_iDCM_RB_CITYBOMBARD_CHANCE(0)
+	, m_bDCM_ATTACK_SUPPORT(false)
+	, m_bDCM_STACK_ATTACK(false)
+	, m_bDCM_OPP_FIRE(false)
+	, m_bDCM_ACTIVE_DEFENSE(false)
+	, m_bDCM_ARCHER_BOMBARD(false)
+	, m_bDCM_FIGHTER_ENGAGE(false)
 
-m_bDYNAMIC_CIV_NAMES(false),
+	, m_bDYNAMIC_CIV_NAMES(false)
 
-m_bLIMITED_RELIGIONS_EXCEPTIONS(false),
-m_bOC_RESPAWN_HOLY_CITIES(false),
+	, m_bLIMITED_RELIGIONS_EXCEPTIONS(false)
+	, m_bOC_RESPAWN_HOLY_CITIES(false)
 
-m_bIDW_ENABLED(false),
-m_fIDW_BASE_COMBAT_INFLUENCE(0),
-m_fIDW_NO_CITY_DEFENDER_MULTIPLIER(1.0f),
-m_fIDW_FORT_CAPTURE_MULTIPLIER(1.0f),
-m_fIDW_EXPERIENCE_FACTOR(0),
-m_fIDW_WARLORD_MULTIPLIER(1.0f),
-m_iIDW_INFLUENCE_RADIUS(0),
-m_fIDW_PLOT_DISTANCE_FACTOR(0),
-m_fIDW_WINNER_PLOT_MULTIPLIER(1.0f),
-m_fIDW_LOSER_PLOT_MULTIPLIER(1.0f),
-m_bIDW_EMERGENCY_DRAFT_ENABLED(false),
-m_iIDW_EMERGENCY_DRAFT_MIN_POPULATION(2),
-m_fIDW_EMERGENCY_DRAFT_STRENGTH(1.0f),
-m_fIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER(0),
-m_bIDW_NO_BARBARIAN_INFLUENCE(false),
-m_bIDW_NO_NAVAL_INFLUENCE(false),
-m_bIDW_PILLAGE_INFLUENCE_ENABLED(false),
-m_fIDW_BASE_PILLAGE_INFLUENCE(0),
-m_fIDW_CITY_TILE_MULTIPLIER(0),
+	, m_bIDW_ENABLED(false)
+	, m_fIDW_BASE_COMBAT_INFLUENCE(0)
+	, m_fIDW_NO_CITY_DEFENDER_MULTIPLIER(1.0f)
+	, m_fIDW_FORT_CAPTURE_MULTIPLIER(1.0f)
+	, m_fIDW_EXPERIENCE_FACTOR(0)
+	, m_fIDW_WARLORD_MULTIPLIER(1.0f)
+	, m_iIDW_INFLUENCE_RADIUS(0)
+	, m_fIDW_PLOT_DISTANCE_FACTOR(0)
+	, m_fIDW_WINNER_PLOT_MULTIPLIER(1.0f)
+	, m_fIDW_LOSER_PLOT_MULTIPLIER(1.0f)
+	, m_bIDW_EMERGENCY_DRAFT_ENABLED(false)
+	, m_iIDW_EMERGENCY_DRAFT_MIN_POPULATION(2)
+	, m_fIDW_EMERGENCY_DRAFT_STRENGTH(1.0f)
+	, m_fIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER(0)
+	, m_bIDW_NO_BARBARIAN_INFLUENCE(false)
+	, m_bIDW_NO_NAVAL_INFLUENCE(false)
+	, m_bIDW_PILLAGE_INFLUENCE_ENABLED(false)
+	, m_fIDW_BASE_PILLAGE_INFLUENCE(0)
+	, m_fIDW_CITY_TILE_MULTIPLIER(0)
 
-m_bSS_ENABLED(false),
-m_bSS_BRIBE(false),
-m_bSS_ASSASSINATE(false),
-/************************************************************************************************/
-/* Mod Globals                        END                                           phungus420  */
-/************************************************************************************************/
-m_bGraphicsInitialized(false),
-m_bLogging(false),
-m_bRandLogging(false),
-m_bOverwriteLogs(false),
-m_bSynchLogging(false),
-m_bDLLProfiler(false),
-m_pkMainMenu(NULL),
-m_iNewPlayers(0),
-m_bZoomOut(false),
-m_bZoomIn(false),
-m_bLoadGameFromFile(false),
-m_pFMPMgr(NULL),
-m_asyncRand(NULL),
-m_interface(NULL),
-m_game(NULL),
-m_messageQueue(NULL),
-m_hotJoinMsgQueue(NULL),
-m_messageControl(NULL),
-m_messageCodes(NULL),
-m_dropMgr(NULL),
-m_portal(NULL),
-m_setupData(NULL),
-m_initCore(NULL),
-m_statsReporter(NULL),
-m_diplomacyScreen(NULL),
-m_mpDiplomacyScreen(NULL),
-m_pathFinder(NULL),
-m_interfacePathFinder(NULL),
-m_stepFinder(NULL),
-m_routeFinder(NULL),
-m_borderFinder(NULL),
-m_areaFinder(NULL),
-m_plotGroupFinder(NULL),
-m_aiPlotDirectionX(NULL),
-m_aiPlotDirectionY(NULL),
-m_aiPlotCardinalDirectionX(NULL),
-m_aiPlotCardinalDirectionY(NULL),
-m_aiCityPlotX(NULL),
-m_aiCityPlotY(NULL),
-m_aiCityPlotPriority(NULL),
-m_aeTurnLeftDirection(NULL),
-m_aeTurnRightDirection(NULL),
-//m_aGameOptionsInfo(NULL),
-//m_aPlayerOptionsInfo(NULL),
-m_Profiler(NULL),
-m_VarSystem(NULL),
-m_iMOVE_DENOMINATOR(0),
-m_iNUM_UNIT_PREREQ_OR_BONUSES(0),
-m_iNUM_BUILDING_PREREQ_OR_BONUSES(0),
-m_iFOOD_CONSUMPTION_PER_POPULATION(0),
-m_iMAX_HIT_POINTS(0),
-m_iPATH_DAMAGE_WEIGHT(0),
-m_iHILLS_EXTRA_DEFENSE(0),
-m_iRIVER_ATTACK_MODIFIER(0),
-m_iAMPHIB_ATTACK_MODIFIER(0),
-m_iHILLS_EXTRA_MOVEMENT(0),
-m_iRIVER_EXTRA_MOVEMENT(0),
-m_iMAX_PLOT_LIST_ROWS(0),
-m_iUNIT_MULTISELECT_MAX(0),
-m_iPERCENT_ANGER_DIVISOR(0),
-m_iEVENT_MESSAGE_TIME(0),
-m_iROUTE_FEATURE_GROWTH_MODIFIER(0),
-m_iFEATURE_GROWTH_MODIFIER(0),
-m_iMIN_CITY_RANGE(0),
-m_iCITY_MAX_NUM_BUILDINGS(0),
-m_iNUM_UNIT_AND_TECH_PREREQS(0),
-m_iNUM_AND_TECH_PREREQS(0),
-m_iNUM_OR_TECH_PREREQS(0),
-m_iLAKE_MAX_AREA_SIZE(0),
-m_iNUM_ROUTE_PREREQ_OR_BONUSES(0),
-m_iNUM_BUILDING_AND_TECH_PREREQS(0),
-m_iMIN_WATER_SIZE_FOR_OCEAN(0),
-m_iFORTIFY_MODIFIER_PER_TURN(0),
-m_iESTABLISH_MODIFIER_PER_TURN(0),
-m_iESCAPE_MODIFIER_PER_TURN(0),
-m_iMAX_CITY_DEFENSE_DAMAGE(0),
-m_iNUM_CORPORATION_PREREQ_BONUSES(0),
-m_iPEAK_SEE_THROUGH_CHANGE(0),
-m_iHILLS_SEE_THROUGH_CHANGE(0),
-m_iSEAWATER_SEE_FROM_CHANGE(0),
-m_iPEAK_SEE_FROM_CHANGE(0),
-m_iHILLS_SEE_FROM_CHANGE(0),
-m_iUSE_SPIES_NO_ENTER_BORDERS(0),
-m_fCAMERA_MIN_YAW(0),
-m_fCAMERA_MAX_YAW(0),
-m_fCAMERA_FAR_CLIP_Z_HEIGHT(0),
-m_fCAMERA_MAX_TRAVEL_DISTANCE(0),
-m_fCAMERA_START_DISTANCE(0),
-m_fAIR_BOMB_HEIGHT(0),
-m_fPLOT_SIZE(0),
-m_fCAMERA_SPECIAL_PITCH(0),
-m_fCAMERA_MAX_TURN_OFFSET(0),
-m_fCAMERA_MIN_DISTANCE(0),
-m_fCAMERA_UPPER_PITCH(0),
-m_fCAMERA_LOWER_PITCH(0),
-m_fFIELD_OF_VIEW(0),
-m_fSHADOW_SCALE(0),
-m_fUNIT_MULTISELECT_DISTANCE(0),
-m_fSAD_FACTOR_1(0),
-m_fSAD_FACTOR_2(0),
-m_fSAD_FACTOR_3(0),
-m_fSAD_FACTOR_4(0),
-m_iUSE_CANNOT_FOUND_CITY_CALLBACK(0),
-m_iUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK(0),
-m_iUSE_IS_PLAYER_RESEARCH_CALLBACK(0),
-m_iUSE_CAN_RESEARCH_CALLBACK(0),
-m_iUSE_CANNOT_DO_CIVIC_CALLBACK(0),
-m_iUSE_CAN_DO_CIVIC_CALLBACK(0),
-m_iUSE_CANNOT_CONSTRUCT_CALLBACK(0),
-m_iUSE_CAN_CONSTRUCT_CALLBACK(0),
-m_iUSE_CAN_DECLARE_WAR_CALLBACK(0),
-m_iUSE_CANNOT_RESEARCH_CALLBACK(0),
-m_iUSE_GET_UNIT_COST_MOD_CALLBACK(0),
-m_iUSE_GET_CITY_FOUND_VALUE_CALLBACK(0),
-m_iUSE_CANNOT_HANDLE_ACTION_CALLBACK(0),
-m_iUSE_CAN_BUILD_CALLBACK(0),
-m_iUSE_CANNOT_TRAIN_CALLBACK(0),
-m_iUSE_CAN_TRAIN_CALLBACK(0),
-m_iUSE_UNIT_CANNOT_MOVE_INTO_CALLBACK(0),
-m_iUSE_USE_CANNOT_SPREAD_RELIGION_CALLBACK(0),
-m_iUSE_FINISH_TEXT_CALLBACK(0),
-m_iUSE_ON_UNIT_SET_XY_CALLBACK(0),
-m_iUSE_ON_UNIT_SELECTED_CALLBACK(0),
-m_iUSE_ON_UPDATE_CALLBACK(0),
-m_iUSE_ON_UNIT_CREATED_CALLBACK(0),
-m_iUSE_ON_UNIT_LOST_CALLBACK(0),
-m_iLAND_UNITS_CAN_ATTACK_WATER_CITIES(0),
-m_iBASE_UNIT_UPGRADE_COST(0),
-m_iUPGRADE_ROUND_LIMIT(0),
-m_iCITY_BARBARIAN_DEFENSE_MODIFIER(0),
-m_iUNIT_VISIBILITY_RANGE(0),
-m_iMAX_UNIT_VISIBILITY_RANGE(0),
-m_iGREATER_COMMERCE_SWITCH_POINT(0),
-m_iWORKER_TRADE_VALUE_PERCENT_ADJUSTMENT(0),
-m_iTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT(0),
-m_iINFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT(0),
-m_iESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT(0),
-m_iWATER_POTENTIAL_CITY_WORK_FOR_AREA(0),
-m_iSAD_MAX_MODIFIER(0),
-m_iUPSCALED_RESEARCH_COST_MODIFIER(0),
-m_iENABLE_DYNAMIC_UNIT_ENTITIES(0),
-/************************************************************************************************/
-/* MODULES                                 11/13/07                            MRGENIE          */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-m_iTGA_RELIGIONS(0),                            // GAMEFONT_TGA_RELIGIONS
-m_iTGA_CORPORATIONS(0),                         // GAMEFONT_TGA_CORPORATIONS
-/************************************************************************************************/
-/* MODULES                                 END                                                  */
-/************************************************************************************************/
-m_bMultimapsEnabled(false),
-m_bViewportsEnabled(false),
-m_iViewportFocusBorder(0),
-m_iViewportCenterOnSelectionCenterBorder(5),
-m_szAlternateProfilSampleName(""),
-m_bGraphicalDetailPagingEnabled(false),
+	, m_bSS_ENABLED(false)
+	, m_bSS_BRIBE(false)
+	, m_bSS_ASSASSINATE(false)
+	/************************************************************************************************/
+	/* Mod Globals                        END                                           phungus420  */
+	/************************************************************************************************/
+	, m_bGraphicsInitialized(false)
+	, m_bLogging(false)
+	, m_bRandLogging(false)
+	, m_bOverwriteLogs(false)
+	, m_bSynchLogging(false)
+	, m_bDLLProfiler(false)
+	, m_pkMainMenu(NULL)
+	, m_iNewPlayers(0)
+	, m_bZoomOut(false)
+	, m_bZoomIn(false)
+	, m_bLoadGameFromFile(false)
+	, m_pFMPMgr(NULL)
+	, m_asyncRand(NULL)
+	, m_interface(NULL)
+	, m_game(NULL)
+	, m_messageQueue(NULL)
+	, m_hotJoinMsgQueue(NULL)
+	, m_messageControl(NULL)
+	, m_messageCodes(NULL)
+	, m_dropMgr(NULL)
+	, m_portal(NULL)
+	, m_setupData(NULL)
+	, m_initCore(NULL)
+	, m_statsReporter(NULL)
+	, m_diplomacyScreen(NULL)
+	, m_mpDiplomacyScreen(NULL)
+	, m_pathFinder(NULL)
+	, m_interfacePathFinder(NULL)
+	, m_stepFinder(NULL)
+	, m_routeFinder(NULL)
+	, m_borderFinder(NULL)
+	, m_areaFinder(NULL)
+	, m_plotGroupFinder(NULL)
+	, m_aiPlotDirectionX(NULL)
+	, m_aiPlotDirectionY(NULL)
+	, m_aiPlotCardinalDirectionX(NULL)
+	, m_aiPlotCardinalDirectionY(NULL)
+	, m_aiCityPlotX(NULL)
+	, m_aiCityPlotY(NULL)
+	, m_aiCityPlotPriority(NULL)
+	, m_aeTurnLeftDirection(NULL)
+	, m_aeTurnRightDirection(NULL)
+	//, m_aGameOptionsInfo(NULL)
+	//, m_aPlayerOptionsInfo(NULL)
+	, m_Profiler(NULL)
+	, m_VarSystem(NULL)
+	, m_iMOVE_DENOMINATOR(0)
+	, m_iNUM_UNIT_PREREQ_OR_BONUSES(0)
+	, m_iNUM_BUILDING_PREREQ_OR_BONUSES(0)
+	, m_iFOOD_CONSUMPTION_PER_POPULATION(0)
+	, m_iMAX_HIT_POINTS(0)
+	, m_iPATH_DAMAGE_WEIGHT(0)
+	, m_iHILLS_EXTRA_DEFENSE(0)
+	, m_iRIVER_ATTACK_MODIFIER(0)
+	, m_iAMPHIB_ATTACK_MODIFIER(0)
+	, m_iHILLS_EXTRA_MOVEMENT(0)
+	, m_iRIVER_EXTRA_MOVEMENT(0)
+	, m_iMAX_PLOT_LIST_ROWS(0)
+	, m_iUNIT_MULTISELECT_MAX(0)
+	, m_iPERCENT_ANGER_DIVISOR(0)
+	, m_iEVENT_MESSAGE_TIME(0)
+	, m_iROUTE_FEATURE_GROWTH_MODIFIER(0)
+	, m_iFEATURE_GROWTH_MODIFIER(0)
+	, m_iMIN_CITY_RANGE(0)
+	, m_iCITY_MAX_NUM_BUILDINGS(0)
+	, m_iNUM_UNIT_AND_TECH_PREREQS(0)
+	, m_iNUM_AND_TECH_PREREQS(0)
+	, m_iNUM_OR_TECH_PREREQS(0)
+	, m_iLAKE_MAX_AREA_SIZE(0)
+	, m_iNUM_ROUTE_PREREQ_OR_BONUSES(0)
+	, m_iNUM_BUILDING_AND_TECH_PREREQS(0)
+	, m_iMIN_WATER_SIZE_FOR_OCEAN(0)
+	, m_iFORTIFY_MODIFIER_PER_TURN(0)
+	, m_iESTABLISH_MODIFIER_PER_TURN(0)
+	, m_iESCAPE_MODIFIER_PER_TURN(0)
+	, m_iMAX_CITY_DEFENSE_DAMAGE(0)
+	, m_iNUM_CORPORATION_PREREQ_BONUSES(0)
+	, m_iPEAK_SEE_THROUGH_CHANGE(0)
+	, m_iHILLS_SEE_THROUGH_CHANGE(0)
+	, m_iSEAWATER_SEE_FROM_CHANGE(0)
+	, m_iPEAK_SEE_FROM_CHANGE(0)
+	, m_iHILLS_SEE_FROM_CHANGE(0)
+	, m_iUSE_SPIES_NO_ENTER_BORDERS(0)
+	, m_fCAMERA_MIN_YAW(0)
+	, m_fCAMERA_MAX_YAW(0)
+	, m_fCAMERA_FAR_CLIP_Z_HEIGHT(0)
+	, m_fCAMERA_MAX_TRAVEL_DISTANCE(0)
+	, m_fCAMERA_START_DISTANCE(0)
+	, m_fAIR_BOMB_HEIGHT(0)
+	, m_fPLOT_SIZE(0)
+	, m_fCAMERA_SPECIAL_PITCH(0)
+	, m_fCAMERA_MAX_TURN_OFFSET(0)
+	, m_fCAMERA_MIN_DISTANCE(0)
+	, m_fCAMERA_UPPER_PITCH(0)
+	, m_fCAMERA_LOWER_PITCH(0)
+	, m_fFIELD_OF_VIEW(0)
+	, m_fSHADOW_SCALE(0)
+	, m_fUNIT_MULTISELECT_DISTANCE(0)
+	, m_fSAD_FACTOR_1(0)
+	, m_fSAD_FACTOR_2(0)
+	, m_fSAD_FACTOR_3(0)
+	, m_fSAD_FACTOR_4(0)
+	, m_iUSE_CANNOT_FOUND_CITY_CALLBACK(0)
+	, m_iUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK(0)
+	, m_iUSE_IS_PLAYER_RESEARCH_CALLBACK(0)
+	, m_iUSE_CAN_RESEARCH_CALLBACK(0)
+	, m_iUSE_CANNOT_DO_CIVIC_CALLBACK(0)
+	, m_iUSE_CAN_DO_CIVIC_CALLBACK(0)
+	, m_iUSE_CANNOT_CONSTRUCT_CALLBACK(0)
+	, m_iUSE_CAN_CONSTRUCT_CALLBACK(0)
+	, m_iUSE_CAN_DECLARE_WAR_CALLBACK(0)
+	, m_iUSE_CANNOT_RESEARCH_CALLBACK(0)
+	, m_iUSE_GET_UNIT_COST_MOD_CALLBACK(0)
+	, m_iUSE_GET_CITY_FOUND_VALUE_CALLBACK(0)
+	, m_iUSE_CANNOT_HANDLE_ACTION_CALLBACK(0)
+	, m_iUSE_CAN_BUILD_CALLBACK(0)
+	, m_iUSE_CANNOT_TRAIN_CALLBACK(0)
+	, m_iUSE_CAN_TRAIN_CALLBACK(0)
+	, m_iUSE_UNIT_CANNOT_MOVE_INTO_CALLBACK(0)
+	, m_iUSE_USE_CANNOT_SPREAD_RELIGION_CALLBACK(0)
+	, m_iUSE_FINISH_TEXT_CALLBACK(0)
+	, m_iUSE_ON_UNIT_SET_XY_CALLBACK(0)
+	, m_iUSE_ON_UNIT_SELECTED_CALLBACK(0)
+	, m_iUSE_ON_UPDATE_CALLBACK(0)
+	, m_iUSE_ON_UNIT_CREATED_CALLBACK(0)
+	, m_iUSE_ON_UNIT_LOST_CALLBACK(0)
+	, m_iLAND_UNITS_CAN_ATTACK_WATER_CITIES(0)
+	, m_iBASE_UNIT_UPGRADE_COST(0)
+	, m_iUPGRADE_ROUND_LIMIT(0)
+	, m_iCITY_BARBARIAN_DEFENSE_MODIFIER(0)
+	, m_iUNIT_VISIBILITY_RANGE(0)
+	, m_iMAX_UNIT_VISIBILITY_RANGE(0)
+	, m_iGREATER_COMMERCE_SWITCH_POINT(0)
+	, m_iWORKER_TRADE_VALUE_PERCENT_ADJUSTMENT(0)
+	, m_iTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT(0)
+	, m_iINFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT(0)
+	, m_iESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT(0)
+	, m_iWATER_POTENTIAL_CITY_WORK_FOR_AREA(0)
+	, m_iSAD_MAX_MODIFIER(0)
+	, m_iUPSCALED_RESEARCH_COST_MODIFIER(0)
+	, m_iENABLE_DYNAMIC_UNIT_ENTITIES(0)
+	/************************************************************************************************/
+	/* MODULES                                 11/13/07                            MRGENIE          */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
+	, m_iTGA_RELIGIONS(0)                            // GAMEFONT_TGA_RELIGIONS
+	, m_iTGA_CORPORATIONS(0)                         // GAMEFONT_TGA_CORPORATIONS
+	/************************************************************************************************/
+	/* MODULES                                 END                                                  */
+	/************************************************************************************************/
+	, m_bMultimapsEnabled(false)
+	, m_bViewportsEnabled(false)
+	, m_iViewportFocusBorder(0)
+	, m_iViewportCenterOnSelectionCenterBorder(5)
+	, m_szAlternateProfilSampleName("")
+	, m_bGraphicalDetailPagingEnabled(false)
+	, m_paHints()
+	/************************************************************************************************/
+	/* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
+	// MLF loading
+	, m_paModLoadControlVector(NULL)
+	, m_paModLoadControls(NULL)
+	/************************************************************************************************/
+	/* MODULAR_LOADING_CONTROL                 END                                                  */
+	/************************************************************************************************/
+	/************************************************************************************************/
+	/* XML_MODULAR_ART_LOADING                 03/28/08                                MRGENIE      */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
+	/*
+	m_paMainMenus(NULL)
+	*/
+	, m_paMainMenus(NULL)
+	, m_cszModDir("NONE")
+	/************************************************************************************************/
+	/* XML_MODULAR_ART_LOADING                 END                                                  */
+	/************************************************************************************************/
+	/************************************************************************************************/
+	/* Afforess	                  Start		 12/8/09                                                */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
+	, m_iPEAK_EXTRA_MOVEMENT(0)
+	, m_iPEAK_EXTRA_DEFENSE(0)
+	, m_bFormationsMod(false)
+	, m_bLoadedPlayerOptions(false)
+	, m_bXMLLogging(false)
+	, m_iSCORE_FREE_PERCENT(0)
+	, m_iSCORE_POPULATION_FACTOR(0)
+	, m_iSCORE_LAND_FACTOR(0)
+	, m_iSCORE_TECH_FACTOR(0)
+	, m_iSCORE_WONDER_FACTOR(0)
+	//New Python Callbacks
+	, m_iUSE_CAN_CREATE_PROJECT_CALLBACK(0)
+	, m_iUSE_CANNOT_CREATE_PROJECT_CALLBACK(0)
+	, m_iUSE_CAN_DO_MELTDOWN_CALLBACK(0)
+	, m_iUSE_CAN_MAINTAIN_PROCESS_CALLBACK(0)
+	, m_iUSE_CANNOT_MAINTAIN_PROCESS_CALLBACK(0)
+	, m_iUSE_CAN_DO_GROWTH_CALLBACK(0)
+	, m_iUSE_CAN_DO_CULTURE_CALLBACK(0)
+	, m_iUSE_CAN_DO_PLOT_CULTURE_CALLBACK(0)
+	, m_iUSE_CAN_DO_PRODUCTION_CALLBACK(0)
+	, m_iUSE_CAN_DO_RELIGION_CALLBACK(0)
+	, m_iUSE_CAN_DO_GREATPEOPLE_CALLBACK(0)
+	, m_iUSE_CAN_RAZE_CITY_CALLBACK(0)
+	, m_iUSE_CAN_DO_GOLD_CALLBACK(0)
+	, m_iUSE_CAN_DO_RESEARCH_CALLBACK(0)
+	, m_iUSE_UPGRADE_UNIT_PRICE_CALLBACK(0)
+	, m_iUSE_IS_VICTORY_CALLBACK(0)
+	, m_iUSE_AI_UPDATE_UNIT_CALLBACK(0)
+	, m_iUSE_AI_CHOOSE_PRODUCTION_CALLBACK(0)
+	, m_iUSE_EXTRA_PLAYER_COSTS_CALLBACK(0)
+	, m_iUSE_AI_DO_DIPLO_CALLBACK(0)
+	, m_iUSE_AI_BESTTECH_CALLBACK(0)
+	, m_iUSE_CAN_DO_COMBAT_CALLBACK(0)
+	, m_iUSE_AI_CAN_DO_WARPLANS_CALLBACK(0)
 
-m_paHints(),
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-// MLF loading
-m_paModLoadControlVector(NULL),
-m_paModLoadControls(NULL),
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 03/28/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
-m_paMainMenus(NULL)
-*/
-m_paMainMenus(NULL),
-m_cszModDir("NONE")
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* Afforess	                  Start		 12/8/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-,m_iPEAK_EXTRA_MOVEMENT(0)
-,m_iPEAK_EXTRA_DEFENSE(0)
-,m_bFormationsMod(false)
-,m_bLoadedPlayerOptions(false)
-,m_bXMLLogging(false)
-,m_iSCORE_FREE_PERCENT(0)
-,m_iSCORE_POPULATION_FACTOR(0)
-,m_iSCORE_LAND_FACTOR(0)
-,m_iSCORE_TECH_FACTOR(0)
-,m_iSCORE_WONDER_FACTOR(0)
+	/************************************************************************************************/
+	/* Afforess	                     END                                                            */
+	/************************************************************************************************/
+	/************************************************************************************************/
+	/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
+	/*                                                                                              */
+	/* Efficiency, Options                                                                          */
+	/************************************************************************************************/
+	// BBAI Options
+	, m_bBBAI_AIR_COMBAT(false)
+	, m_bBBAI_HUMAN_VASSAL_WAR_BUILD(false)
+	, m_iBBAI_DEFENSIVE_PACT_BEHAVIOR(0)
+	, m_bBBAI_HUMAN_AS_VASSAL_OPTION(false)
 
-//New Python Callbacks
-,m_iUSE_CAN_CREATE_PROJECT_CALLBACK(0)
-,m_iUSE_CANNOT_CREATE_PROJECT_CALLBACK(0)
-,m_iUSE_CAN_DO_MELTDOWN_CALLBACK(0)
-,m_iUSE_CAN_MAINTAIN_PROCESS_CALLBACK(0)
-,m_iUSE_CANNOT_MAINTAIN_PROCESS_CALLBACK(0)
-,m_iUSE_CAN_DO_GROWTH_CALLBACK(0)
-,m_iUSE_CAN_DO_CULTURE_CALLBACK(0)
-,m_iUSE_CAN_DO_PLOT_CULTURE_CALLBACK(0)
-,m_iUSE_CAN_DO_PRODUCTION_CALLBACK(0)
-,m_iUSE_CAN_DO_RELIGION_CALLBACK(0)
-,m_iUSE_CAN_DO_GREATPEOPLE_CALLBACK(0)
-,m_iUSE_CAN_RAZE_CITY_CALLBACK(0)
-,m_iUSE_CAN_DO_GOLD_CALLBACK(0)
-,m_iUSE_CAN_DO_RESEARCH_CALLBACK(0)
-,m_iUSE_UPGRADE_UNIT_PRICE_CALLBACK(0)
-,m_iUSE_IS_VICTORY_CALLBACK(0)
-,m_iUSE_AI_UPDATE_UNIT_CALLBACK(0)
-,m_iUSE_AI_CHOOSE_PRODUCTION_CALLBACK(0)
-,m_iUSE_EXTRA_PLAYER_COSTS_CALLBACK(0)
-,m_iUSE_AI_DO_DIPLO_CALLBACK(0)
-,m_iUSE_AI_BESTTECH_CALLBACK(0)
-,m_iUSE_CAN_DO_COMBAT_CALLBACK(0)
-,m_iUSE_AI_CAN_DO_WARPLANS_CALLBACK(0)
+	// BBAI AI Variables
+	, m_iWAR_SUCCESS_CITY_CAPTURING(25)
+	, m_iBBAI_ATTACK_CITY_STACK_RATIO(110)
+	, m_iBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS(12)
+	, m_iBBAI_SKIP_BOMBARD_BASE_STACK_RATIO(300)
+	, m_iBBAI_SKIP_BOMBARD_MIN_STACK_RATIO(140)
 
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
-/*                                                                                              */
-/* Efficiency, Options                                                                          */
-/************************************************************************************************/
-// BBAI Options
-,m_bBBAI_AIR_COMBAT(false)
-,m_bBBAI_HUMAN_VASSAL_WAR_BUILD(false)
-,m_iBBAI_DEFENSIVE_PACT_BEHAVIOR(0)
-,m_bBBAI_HUMAN_AS_VASSAL_OPTION(false)
+	// Tech Diffusion
+	, m_bTECH_DIFFUSION_ENABLE(false)
+	, m_iTECH_DIFFUSION_KNOWN_TEAM_MODIFIER(30)
+	, m_iTECH_DIFFUSION_WELFARE_THRESHOLD(88)
+	, m_iTECH_DIFFUSION_WELFARE_MODIFIER(30)
+	, m_iTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER(20)
+	, m_iTECH_COST_KNOWN_PREREQ_MODIFIER(20)
+	, m_iTECH_COST_MODIFIER(100)
+	, m_iUNIT_PRODUCTION_PERCENT_SM(100)
+	, m_iUNIT_PRODUCTION_PERCENT(100)
+	, m_iBUILDING_PRODUCTION_PERCENT(100)
 
-// BBAI AI Variables
-,m_iWAR_SUCCESS_CITY_CAPTURING(25)
-,m_iBBAI_ATTACK_CITY_STACK_RATIO(110)
-,m_iBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS(12)
-,m_iBBAI_SKIP_BOMBARD_BASE_STACK_RATIO(300)
-,m_iBBAI_SKIP_BOMBARD_MIN_STACK_RATIO(140)
-
-// Tech Diffusion
-,m_bTECH_DIFFUSION_ENABLE(false)
-,m_iTECH_DIFFUSION_KNOWN_TEAM_MODIFIER(30)
-,m_iTECH_DIFFUSION_WELFARE_THRESHOLD(88)
-,m_iTECH_DIFFUSION_WELFARE_MODIFIER(30)
-,m_iTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER(20)
-,m_iTECH_COST_KNOWN_PREREQ_MODIFIER(20)
-,m_iTECH_COST_MODIFIER(100)
-,m_iUNIT_PRODUCTION_PERCENT_SM(100)
-,m_iUNIT_PRODUCTION_PERCENT(100)
-,m_iBUILDING_PRODUCTION_PERCENT(100)
-
-,m_iCOMBAT_DIE_SIDES(-1)
-,m_iCOMBAT_DAMAGE(-1)
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-,m_bIsInPedia(false)
-,m_iLastTypeID(-1)
-,m_iActiveLandscapeID(0),
-// uninitialized variables bugfix
-m_iNumPlayableCivilizationInfos(0),
-m_iNumAIPlayableCivilizationInfos(0),
-m_iTotalNumModules(0), // Modular loading control
-m_iNumEntityEventTypes(0)
+	, m_iCOMBAT_DIE_SIDES(-1)
+	, m_iCOMBAT_DAMAGE(-1)
+	/************************************************************************************************/
+	/* BETTER_BTS_AI_MOD                       END                                                  */
+	/************************************************************************************************/
+	, m_bIsInPedia(false)
+	, m_iLastTypeID(-1)
+	, m_iActiveLandscapeID(0)
+	// uninitialized variables bugfix
+	, m_iNumPlayableCivilizationInfos(0)
+	, m_iNumAIPlayableCivilizationInfos(0)
+	, m_iTotalNumModules(0) // Modular loading control
+	, m_iNumEntityEventTypes(0)
+	, iStuckUnitID(0)
+	, iStuckUnitCount(0)
+	, m_iniInitCore(NULL)
+	, m_loadedInitCore (NULL)
+	, m_bResourceLayerOn(false)
+	, m_iNumAnimationOperatorTypes(0)
+	, m_iNumFlavorTypes(0)
+	, m_iNumArtStyleTypes(0)
+	, m_iNumCitySizeTypes(0)
+	, m_iNumFootstepAudioTypes(0)
+	, m_iUSE_GET_BUILDING_COST_MOD_CALLBACK(0)
+	, m_iViewportSizeX(0)
+	, m_iViewportSizeY(0)
+	, m_iStoreExeSettingsCommerceInfo(0)
+	, m_iStoreExeSettingsYieldInfo(0)
+	, m_iStoreExeSettingsReligionInfo(0)
+	, m_iStoreExeSettingsCorporationInfo(0)
+	, m_iStoreExeSettingsBonusInfo(0)
+	, m_bSignsCleared(false)
 {
 }
 
 cvInternalGlobals::~cvInternalGlobals()
 {
 }
-
 
 /************************************************************************************************/
 /* MINIDUMP_MOD                           04/10/11                                terkhen       */
@@ -499,10 +515,11 @@ void CreateMiniDump(EXCEPTION_POINTERS *pep)
 							  FILE_ATTRIBUTE_NORMAL,
 							  NULL);
 
-	if((hFile == NULL) || (hFile == INVALID_HANDLE_VALUE)) {
-		_tprintf(_T("CreateFile failed. Error: %u \n"), GetLastError());
+	if((hFile == NULL) || (hFile == INVALID_HANDLE_VALUE)) 
+	{
 		return;
 	}
+
 	/* Create the minidump. */
 	MINIDUMP_EXCEPTION_INFORMATION mdei;
 
@@ -3153,6 +3170,18 @@ CvInfoReplacements<CvPromotionInfo>* cvInternalGlobals::getPromotionInfoReplacem
 	return &m_PromotionInfoReplacements;
 }
 
+PromotionTypes cvInternalGlobals::findPromotion(PromotionPredicateFn predicateFn) const
+{
+	for (int idx = 0; idx < static_cast<int>(m_paPromotionInfo.size()); ++idx)
+	{
+		if (predicateFn(m_paPromotionInfo[idx], static_cast<PromotionTypes>(idx)))
+		{
+			return static_cast<PromotionTypes>(idx);
+		}
+	}
+	return static_cast<PromotionTypes>(-1);
+}
+
 int cvInternalGlobals::getNumTechInfos()
 {
 	return (int)m_paTechInfo.size();
@@ -3777,11 +3806,11 @@ void cvInternalGlobals::cacheGlobals()
 
 	strcpy(gVersionString, getDefineSTRING("C2C_VERSION"));
 
-/************************************************************************************************/
-/* Mod Globals    Start                          09/13/10                           phungus420  */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* Mod Globals    Start                          09/13/10                           phungus420  */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
 	m_bDCM_BATTLE_EFFECTS = (getDefineINT("DCM_BATTLE_EFFECTS") > 0) ? true : false;
 	m_iBATTLE_EFFECT_LESS_FOOD = getDefineINT("BATTLE_EFFECT_LESS_FOOD");
 	m_iBATTLE_EFFECT_LESS_PRODUCTION = getDefineINT("BATTLE_EFFECT_LESS_PRODUCTION");

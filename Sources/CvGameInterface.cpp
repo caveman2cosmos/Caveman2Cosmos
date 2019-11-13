@@ -3135,9 +3135,9 @@ bool CvGame::isSoundtrackOverride(CvString& strSoundtrack) const
 void CvGame::initSelection() const
 {
 	bool bSelected = false;
-	int iLoop;
 	CvUnit* pSelectionUnit = NULL;
 
+	int iLoop;
 	for (CvUnit* pLoopUnit = GET_PLAYER(getActivePlayer()).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(getActivePlayer()).nextUnit(&iLoop))
 	{
 		if (pLoopUnit->getGroup()->readyToSelect())
@@ -3168,12 +3168,8 @@ void CvGame::initSelection() const
 
 	if (!bSelected)
 	{
-		for (CvUnit* pLoopUnit = GET_PLAYER(getActivePlayer()).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(getActivePlayer()).nextUnit(&iLoop))
-		{
-			pSelectionUnit = pLoopUnit;
-			//gDLL->getInterfaceIFace()->centerCamera(pLoopUnit);
-			break;
-		}
+		// Last resort
+		pSelectionUnit = GET_PLAYER(getActivePlayer()).firstUnit(&iLoop);
 	}
 
 	if ( pSelectionUnit != NULL )

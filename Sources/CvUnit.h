@@ -23,17 +23,45 @@ class CvArtInfoUnit;
 
 enum UnitValueFlags
 {
-	UNITVALUE_FLAGS_DEFENSIVE = 1,
-	UNITVALUE_FLAGS_OFFENSIVE = 2,
-	UNITVALUE_FLAGS_UTILITY = 4
+	UNITVALUE_FLAGS_DEFENSIVE = 1 << 0,
+	UNITVALUE_FLAGS_OFFENSIVE = 1 << 1,
+	UNITVALUE_FLAGS_UTILITY = 1 << 2,
+	UNITVALUE_FLAGS_ALL = UNITVALUE_FLAGS_DEFENSIVE | UNITVALUE_FLAGS_OFFENSIVE | UNITVALUE_FLAGS_UTILITY
 };
-#define	UNITVALUE_FLAGS_ALL (UNITVALUE_FLAGS_DEFENSIVE | UNITVALUE_FLAGS_OFFENSIVE | UNITVALUE_FLAGS_UTILITY)
+DEFINE_ENUM_FLAG_OPERATORS(UnitValueFlags);
 
-inline UnitValueFlags operator|(UnitValueFlags a, UnitValueFlags b) 
-{return static_cast<UnitValueFlags>(static_cast<int>(a) | static_cast<int>(b));} 
+struct PromotionRequirements
+{
+	enum flags
+	{
+		None = 0,
+		IgnoreHas = 1 << 0,
+		Equip = 1 << 1,
+		Afflict = 1 << 2,
+		Promote = 1 << 3,
+		ForLeader = 1 << 4,
+		ForOffset = 1 << 5,
+		ForFree = 1 << 6,
+		ForBuildUp = 1 << 7,
+		ForStatus = 1 << 8
+	};
+};
+DEFINE_ENUM_FLAG_OPERATORS(PromotionRequirements::flags);
 
-inline UnitValueFlags& operator|=(UnitValueFlags& a, const UnitValueFlags b) 
-{ a = a | b; return a;} 
+struct PromotionApply
+{
+	enum flags
+	{
+		None = 0,
+		NewValue = 1 << 0,
+		Free = 1 << 1,
+		Dying = 1 << 2,
+		Initial = 1 << 3,
+		FromTrait = 1 << 4
+	};
+};
+DEFINE_ENUM_FLAG_OPERATORS(PromotionApply::flags);
+
 
 /************************************************************************************************/
 /* Afforess	                  Start		 02/22/10                                               */
@@ -1634,6 +1662,8 @@ public:
 	int getExtraUnitCombatModifier(UnitCombatTypes eIndex) const;														// Exposed to Python
 	void changeExtraUnitCombatModifier(UnitCombatTypes eIndex, int iChange);
 	//TB Combat Mods (adjusted the following line to include ", bool bEquip = false, bool bAfflict = false, bool bPromote = false"
+	bool canAcquirePromotion(PromotionTypes ePromotion, PromotionRequirements::flags requirements) const;
+	// Deprecated, use the one above that takes enum flags instead for increased readability.
 	bool canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas = false, bool bEquip = false, bool bAfflict = false, bool bPromote = true, bool bForLeader = false, bool bForOffset = false, bool bForFree = false, bool bForBuildUp = false, bool bForStatus = false) const; // Exposed to Python 
 	//TB Combat Mods end
 	bool canAcquirePromotionAny() const;																										// Exposed to Python
@@ -1643,7 +1673,23 @@ public:
 	void processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPromo = false);
 	void setHasUnitCombat(UnitCombatTypes eIndex, bool bNewValue, bool bByPromo = false);
 	bool isHasPromotion(PromotionTypes eIndex) const;															// Exposed to Python
+	
+	void setHasPromotion(PromotionTypes eIndex, PromotionApply::flags flags);
+	// Deprecated, use the one above that takes enum flags instead for increased readability.
 	void setHasPromotion(PromotionTypes eIndex, bool bNewValue, bool bFree = true, bool bDying = false, bool bInitial = false, bool bFromTrait = false);									// Exposed to Python
+
+	typedef cvInternalGlobals::PromotionPredicateFn PromotionPredicateFn;
+
+	// Consecutively apply a number of promotions to a set of units. 
+	// promotionPredicateFn defines what promotions are valid to be applied.
+	// Number defines how many to apply
+	static bool applyUnitPromotions(const std::vector<CvUnit*>& units, int number, PromotionPredicateFn promotionPredicateFn);
+	static bool applyUnitPromotions(CvUnit* unit, int number, PromotionPredicateFn promotionPredicateFn);
+	// Apply a number of either upgrade or downgrade promotions to a set of units.
+	// The valid promotions for upgrade and downgrade are defined by the predicate functions.
+	// Offset defines which type and how many to apply. offset < 0 means that downgrades are required, offset > 0 means upgrades are required.
+	static bool normalizeUnitPromotions(const std::vector<CvUnit*>& units, int offset, PromotionPredicateFn upgradePredicateFn, PromotionPredicateFn downgradePredicateFn);
+	static bool normalizeUnitPromotions(CvUnit* unit, int offset, PromotionPredicateFn upgradePredicateFn, PromotionPredicateFn downgradePredicateFn);
 
 	UnitCombatTypes getBestHealingType();
 	UnitCombatTypes getBestHealingTypeConst() const;

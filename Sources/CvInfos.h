@@ -3029,14 +3029,18 @@ class CvUnitEntry
 {
 public:
 	CvUnitEntry()
+		: m_position()
+		, m_fRadius(0)
+		, m_fFacingDirection(0)
+		, m_fFacingVariance(0)
 	{
 	}
 
-	CvUnitEntry(const NiPoint2 &position, float radius, float facingDirection, float facingVariance) :
-	m_position(position),
-	m_fRadius(radius),
-	m_fFacingDirection(facingDirection),
-	m_fFacingVariance(facingVariance)
+	CvUnitEntry(const NiPoint2 &position, float radius, float facingDirection, float facingVariance) 
+		: m_position(position)
+		, m_fRadius(radius)
+		, m_fFacingDirection(facingDirection)
+		, m_fFacingVariance(facingVariance)
 	{
 	}
 

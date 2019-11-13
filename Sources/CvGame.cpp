@@ -7378,6 +7378,18 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 	}
 }
 
+// Helpers
+namespace {
+	bool isGroupUpgradePromotion(const CvUnit* unit, PromotionTypes promotion)
+	{
+		return GC.getPromotionInfo(promotion).getGroupChange() > 0 && unit->canAcquirePromotion(promotion, PromotionRequirements::ForStatus);
+	}
+	bool isGroupDowngradePromotion(const CvUnit* unit, PromotionTypes promotion)
+	{
+		return GC.getPromotionInfo(promotion).getGroupChange() < 0 && unit->canAcquirePromotion(promotion, PromotionRequirements::ForStatus);
+	}
+}
+
 void CvGame::doSpawns(PlayerTypes ePlayer)
 {
 	MEMORY_TRACE_FUNCTION();
@@ -7677,40 +7689,10 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 										if (pUnit->isHasUnitCombat(eUnitCombat) && eUnitCombat != eGroupVolume)
 										{
 											int iDifference = GC.getUnitCombatInfo(eGroupVolume).getGroupBase() - GC.getUnitCombatInfo(eUnitCombat).getGroupBase();
-											while (iDifference > 0)
-											{
-												int promotionIdx = 0;
-												for (; promotionIdx < GC.getNumPromotionInfos(); promotionIdx++)
-												{
-													if ((GC.getPromotionInfo((PromotionTypes)promotionIdx).getGroupChange() > 0 && pUnit->canAcquirePromotion((PromotionTypes)promotionIdx, false, false, false, false, false, true)))
-													{
-														break;
-													}
-												}
-												FAssertMsg(promotionIdx < GC.getNumPromotionInfos(), "Unit cannot find a valid Group Upgrade Promotion");
-												if (promotionIdx < GC.getNumPromotionInfos())
-												{
-													pUnit->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-												}
-												iDifference--;
-											}
-											while (iDifference < 0)
-											{
-												int promotionIdx = 0;
-												for (int promotionIdx = 0; promotionIdx < GC.getNumPromotionInfos(); promotionIdx++)
-												{
-													if ((GC.getPromotionInfo((PromotionTypes)promotionIdx).getGroupChange() < 0 && pUnit->canAcquirePromotion((PromotionTypes)promotionIdx, false, false, false, false, false, true)))
-													{
-														break;
-													}
-												}
-												FAssertMsg(promotionIdx < GC.getNumPromotionInfos(), "Unit cannot find a valid Group Downgrade Promotion");
-												if (promotionIdx < GC.getNumPromotionInfos())
-												{
-													pUnit->setHasPromotion((PromotionTypes)promotionIdx, true, true, false, false);
-												}
-												iDifference++;
-											}
+											CvUnit::normalizeUnitPromotions(pUnit, iDifference,
+												boost::bind(isGroupUpgradePromotion, pUnit, _2),
+												boost::bind(isGroupDowngradePromotion, pUnit, _2)
+											);
 										}
 									}
 								}

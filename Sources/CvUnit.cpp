@@ -23551,6 +23551,20 @@ void CvUnit::changeExtraUnitCombatModifier(UnitCombatTypes eIndex, int iChange)
 	}
 }
 
+bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, PromotionRequirements::flags requirements) const
+{
+	return canAcquirePromotion(ePromotion, 
+		requirements & PromotionRequirements::IgnoreHas,
+		requirements & PromotionRequirements::Equip, 
+		requirements & PromotionRequirements::Afflict, 
+		requirements & PromotionRequirements::Promote, 
+		requirements & PromotionRequirements::ForLeader, 
+		requirements & PromotionRequirements::ForOffset, 
+		requirements & PromotionRequirements::ForFree, 
+		requirements & PromotionRequirements::ForBuildUp, 
+		requirements & PromotionRequirements::ForStatus
+	);
+}
 
 bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, bool bEquip, bool bAfflict, bool bPromote, bool bForLeader, bool bForOffset, bool bForFree, bool bForBuildUp, bool bForStatus) const
 {
@@ -25925,6 +25939,17 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	establishBuildups();
 }
 
+void CvUnit::setHasPromotion(PromotionTypes eIndex, PromotionApply::flags flags)
+{
+	setHasPromotion(eIndex, 
+		flags & PromotionApply::NewValue, 
+		flags & PromotionApply::Free, 
+		flags & PromotionApply::Dying, 
+		flags & PromotionApply::Initial, 
+		flags & PromotionApply::FromTrait
+	);
+}
+
 void CvUnit::setHasPromotion(PromotionTypes eIndex, bool bNewValue, bool bFree, bool bDying, bool bInitial, bool bFromTrait)
 {
 	PROFILE_FUNC();
@@ -26099,6 +26124,49 @@ void CvUnit::setHasPromotion(PromotionTypes eIndex, bool bNewValue, bool bFree, 
 	}
 }//TB Combat Mods end
 
+
+bool CvUnit::applyUnitPromotions(const std::vector<CvUnit*>& units, int number, PromotionPredicateFn promotionPredicateFn)
+{
+	FAssertMsg(number >= 0, "Number of promotions to apply cannot be negative");
+
+	if (units.size() == 0)
+		return true;
+
+	while (number > 0)
+	{
+		PromotionTypes foundPromo = GC.findPromotion(promotionPredicateFn);
+		if (foundPromo == NO_PROMOTION)
+			break;
+		for (std::vector<CvUnit*>::const_iterator itr = units.begin(); itr != units.end(); ++itr)
+		{
+			(*itr)->setHasPromotion(foundPromo, PromotionApply::NewValue | PromotionApply::Free);
+		}
+		number--;
+	}
+	FAssertMsg(number == 0, "Could not apply required number of promotions on units");
+	return number == 0;
+}
+
+bool CvUnit::applyUnitPromotions(CvUnit* unit, int number, PromotionPredicateFn promotionPredicateFn)
+{
+	std::vector<CvUnit*> units;
+	units.push_back(unit);
+	return applyUnitPromotions(units, number, promotionPredicateFn);
+}
+
+bool CvUnit::normalizeUnitPromotions(const std::vector<CvUnit*>& units, int offset, PromotionPredicateFn upgradePredicateFn, PromotionPredicateFn downgradePredicateFn)
+{
+	if (offset == 0)
+		return true;
+	return applyUnitPromotions(units, std::abs(offset), offset > 0 ? upgradePredicateFn : downgradePredicateFn);
+}
+
+bool CvUnit::normalizeUnitPromotions(CvUnit* unit, int offset, PromotionPredicateFn upgradePredicateFn, PromotionPredicateFn downgradePredicateFn)
+{
+	if (offset == 0)
+		return true;
+	return applyUnitPromotions(unit, std::abs(offset), offset > 0 ? upgradePredicateFn : downgradePredicateFn);
+}
 
 UnitCombatTypes CvUnit::getBestHealingType()
 {

@@ -13,6 +13,9 @@
 #include "CvGameCoreDLL.h"
 #include "CvDLLSymbolIFaceBase.h"
 
+#include <boost/function.hpp>
+#include <boost/bind.hpp>
+
 int shortenID(int iId)
 {
 	return iId;
@@ -26,9 +29,12 @@ static char* szErrorMsg;
 class PlayerUnitInfo
 {
 public:
-	PlayerUnitInfo() : m_iTotalStrength(0),
-					   m_iTotalMaxStrength(0),
-					   m_iCount(0)
+	PlayerUnitInfo()
+		: m_eOwner(NO_PLAYER)
+		, m_eUnitType(NO_UNIT)
+		, m_iTotalStrength(0)
+		, m_iTotalMaxStrength(0)
+		, m_iCount(0)
 	{
 	}
 
@@ -165,6 +171,10 @@ void CvGameTextMgr::setDateStr(CvWString& szString, int iGameTurn, bool bSave, C
 
 	setYearStr(szYearBuffer, iGameTurn, bSave, eCalendar, iStartYear, eSpeed);
 
+	const int numMonths = std::max(1, GC.getNumMonthInfos());
+	const int numSeasons = std::max(1, GC.getNumSeasonInfos());
+	const int weeksPerMonth = std::max(1, GC.getDefineINT("WEEKS_PER_MONTHS"));
+
 	switch (eCalendar)
 	{
 	case CALENDAR_DEFAULT:
@@ -177,7 +187,7 @@ void CvGameTextMgr::setDateStr(CvWString& szString, int iGameTurn, bool bSave, C
 			date = CvDate::getDate(iGameTurn, eSpeed);
 		}
 		inc = date.getIncrement(eSpeed);
-		if (((0 == inc.m_iIncrementMonth % GC.getNumMonthInfos()) && (inc.m_iIncrementMonth > 0)) || inc.m_iIncrementMonth >= 2*GC.getNumMonthInfos())
+		if (((0 == inc.m_iIncrementMonth % numMonths) && (inc.m_iIncrementMonth > 0)) || inc.m_iIncrementMonth >= 2 * numMonths)
 		{
 			// Years
 			szString = szYearBuffer;
@@ -222,7 +232,7 @@ void CvGameTextMgr::setDateStr(CvWString& szString, int iGameTurn, bool bSave, C
 			date = CvDate::getDate(iGameTurn, eSpeed);
 		}
 		inc = date.getIncrement(eSpeed);
-		if (((0 == inc.m_iIncrementMonth % GC.getNumMonthInfos()) && (inc.m_iIncrementMonth > 0)) || inc.m_iIncrementMonth >= 2 * GC.getNumMonthInfos())
+		if (((0 == inc.m_iIncrementMonth % numMonths) && (inc.m_iIncrementMonth > 0)) || inc.m_iIncrementMonth >= 2 * numMonths)
 		{
 			// Years
 			szString = szYearBuffer;
@@ -257,35 +267,34 @@ void CvGameTextMgr::setDateStr(CvWString& szString, int iGameTurn, bool bSave, C
 	case CALENDAR_SEASONS:
 		if (bSave)
 		{
-			szString = (szYearBuffer + "-" + GC.getSeasonInfo((SeasonTypes)(iGameTurn % GC.getNumSeasonInfos())).getDescription());
+			szString = (szYearBuffer + "-" + GC.getSeasonInfo((SeasonTypes)(iGameTurn % numSeasons)).getDescription());
 		}
 		else
 		{
-			szString = (GC.getSeasonInfo((SeasonTypes)(iGameTurn % GC.getNumSeasonInfos())).getDescription() + CvString(", ") + szYearBuffer);
+			szString = (GC.getSeasonInfo((SeasonTypes)(iGameTurn % numSeasons)).getDescription() + CvString(", ") + szYearBuffer);
 		}
 		break;
 
 	case CALENDAR_MONTHS:
 		if (bSave)
 		{
-			szString = (szYearBuffer + "-" + GC.getMonthInfo((MonthTypes)(iGameTurn % GC.getNumMonthInfos())).getDescription());
+			szString = (szYearBuffer + "-" + GC.getMonthInfo((MonthTypes)(iGameTurn % numMonths)).getDescription());
 		}
 		else
 		{
-			szString = (GC.getMonthInfo((MonthTypes)(iGameTurn % GC.getNumMonthInfos())).getDescription() + CvString(", ") + szYearBuffer);
+			szString = (GC.getMonthInfo((MonthTypes)(iGameTurn % numMonths)).getDescription() + CvString(", ") + szYearBuffer);
 		}
 		break;
 
 	case CALENDAR_WEEKS:
-		szWeekBuffer = gDLL->getText("TXT_KEY_TIME_WEEK", ((iGameTurn % GC.getDefineINT("WEEKS_PER_MONTHS")) + 1));
-
+		szWeekBuffer = gDLL->getText("TXT_KEY_TIME_WEEK", ((iGameTurn % weeksPerMonth) + 1));
 		if (bSave)
 		{
-			szString = (szYearBuffer + "-" + GC.getMonthInfo((MonthTypes)((iGameTurn / GC.getDefineINT("WEEKS_PER_MONTHS")) % GC.getNumMonthInfos())).getDescription() + "-" + szWeekBuffer);
+			szString = (szYearBuffer + "-" + GC.getMonthInfo((MonthTypes)((iGameTurn / weeksPerMonth) % numMonths)).getDescription() + "-" + szWeekBuffer);
 		}
 		else
 		{
-			szString = (szWeekBuffer + ", " + GC.getMonthInfo((MonthTypes)((iGameTurn / GC.getDefineINT("WEEKS_PER_MONTHS")) % GC.getNumMonthInfos())).getDescription() + ", " + szYearBuffer);
+			szString = (szWeekBuffer + ", " + GC.getMonthInfo((MonthTypes)((iGameTurn / weeksPerMonth) % numMonths)).getDescription() + ", " + szYearBuffer);
 		}
 		break;
 
@@ -4430,28 +4439,75 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 	}
 }
 
+namespace {
+	void addModifierIfValid(CvWStringBuffer& szString, int modifier, const char* const txt)
+	{
+		if (modifier != 0)
+		{
+			szString.append(NEWLINE);
+			szString.append(gDLL->getText(txt, modifier));
+		}
+	}
+
+	void addModifierWithInfoIfValid(CvWStringBuffer& szString, int modifier, const char* const txt, const CvInfoBase& info)
+	{
+		if (modifier != 0)
+		{
+			szString.append(NEWLINE);
+			szString.append(gDLL->getText(txt, modifier, info.getTextKeyWide()));
+		}
+	}
+
+	void addCombatModifierHint(CvWStringBuffer& szString, int base, int coeff, const char* const txt)
+	{
+		if (base != 0 && coeff > 0)
+		{
+			addModifierIfValid(szString, base * coeff, txt);
+		}
+	}
+
+	typedef  int (CvUnit::* GetCombatModifierFn)(UnitCombatTypes combatType) const;
+
+	void addCombatTypeModifierHints(CvWStringBuffer& szString, const CvUnit* defender, const CvUnit* attacker, GetCombatModifierFn modifierFn, const char* const txt)
+	{
+		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+		{
+			UnitCombatTypes eUnitCombatType = static_cast<UnitCombatTypes>(iI);
+			if (defender->isHasUnitCombat(eUnitCombatType))
+			{
+				int modifier = (attacker->*(modifierFn))(eUnitCombatType);
+				if (modifier != 0)
+				{
+					szString.append(NEWLINE);
+					szString.append(gDLL->getText(txt, modifier, GC.getUnitCombatInfo(eUnitCombatType).getTextKeyWide()));
+				}
+			}
+		}
+	}
+
+}
 
 // Returns true if help was given...
-bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, bool bAssassinate)
+bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, bool bAssassinate)
 {
 	PROFILE_FUNC();
 
 	if (gDLL->altKey() && (gDLL->getChtLvl() > 0))
 	{
-		setPlotHelp( szString, pPlot );
+		setPlotHelp(szString, pPlot);
 		return true;
 	}
 
 	//Note that due to the large amount of extra content added to this function (setCombatPlotHelp), this should never be used in any function that needs to be called repeatedly (e.g. hundreds of times) quickly.
 	//It is fine for a human player mouse-over (which is what it is used for).
 
-    bool ACO_enabled = getBugOptionBOOL("ACO__Enabled", true, "ACO_ENABLED");
-    bool bShift = gDLL->shiftKey();
+	bool ACO_enabled = getBugOptionBOOL("ACO__Enabled", true, "ACO_ENABLED");
+	bool bShift = gDLL->shiftKey();
 	int iView = bShift ? 2 : 1;
-    if (getBugOptionBOOL("ACO__SwapViews", false, "ACO_SWAP_VIEWS"))
-    {
-        iView = 3 - iView; //swaps 1 and 2.
-    }
+	if (getBugOptionBOOL("ACO__SwapViews", false, "ACO_SWAP_VIEWS"))
+	{
+		iView = 3 - iView; //swaps 1 and 2.
+	}
 
 	bool bTBView = gDLL->ctrlKey();
 	bool bSINView = gDLL->altKey();
@@ -4502,7 +4558,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 	{
 		return false;
 	}
-	
+
 	int iOdds;
 	PlayerTypes eAmbushingPlayer = GC.getGameINLINE().getActivePlayer();
 	CvPlayerAI& kAmbushingPlayer = GET_PLAYER(eAmbushingPlayer);
@@ -4586,12 +4642,12 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						int iChance = pAttacker->breakdownChanceTotal();
 						int iTrueChance = std::max(5, (iChance - AdjustedRepel));
 
-						int iBombardDefMod = std::max(0,(100 - tCity->getBuildingBombardDefense()));
+						int iBombardDefMod = std::max(0, (100 - tCity->getBuildingBombardDefense()));
 						int iNormalDamage = pAttacker->breakdownDamageTotal();
-						int iTrueDamage = (iNormalDamage * iBombardDefMod)/100;
+						int iTrueDamage = (iNormalDamage * iBombardDefMod) / 100;
 
 						szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-										TEXT_COLOR("COLOR_RED"),gDLL->getText("TXT_KEY_COMBAT_BREAKDOWN_EFFECTS").c_str(), iTrueChance, iTrueDamage);
+							TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_BREAKDOWN_EFFECTS").c_str(), iTrueChance, iTrueDamage);
 						szString.append(szTempBuffer.GetCString());
 						szString.append(NEWLINE);
 					}
@@ -4599,7 +4655,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 
 				if (!bSINView || !(GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS)))
 				{
-				//TB Combat Mod end
+					//TB Combat Mod end
 					int iCombatOdds = getCombatOdds(pAttacker, pDefender);
 
 					if (pAttacker->combatLimit(pDefender) >= pDefender->maxHPTotal())
@@ -4616,27 +4672,25 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						{
 							szTempBuffer.Format(L"%.1f", ((float)iCombatOdds) / 10.0f);
 						}
-	/*************************************************************************************************/
-	/** ADVANCED COMBAT ODDS                      3/11/09                           PieceOfMind      */
-	/** BEGIN                                                                       v2.0             */
-	/*************************************************************************************************/
-	/* Old Code */
-	/*
+						/*************************************************************************************************/
+						/** ADVANCED COMBAT ODDS                      3/11/09                           PieceOfMind      */
+						/** BEGIN                                                                       v2.0             */
+						/*************************************************************************************************/
+						/* Old Code */
+						/*
 						szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_ODDS", szTempBuffer.GetCString()));
-	*/
-	/* New Code */
+						*/
+						/* New Code */
 						if ((!ACO_enabled) || (getBugOptionBOOL("ACO__ForceOriginalOdds", false, "ACO_FORCE_ORIGINAL_ODDS")))
 						{
 							szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_ODDS", szTempBuffer.GetCString()));
 						}
-	/*************************************************************************************************/
-	/** ADVANCED COMBAT ODDS                      3/11/09                           PieceOfMind      */
-	/** END                                                                         v2.0             */
-	/*************************************************************************************************/
+						/*************************************************************************************************/
+						/** ADVANCED COMBAT ODDS                      3/11/09                           PieceOfMind      */
+						/** END                                                                         v2.0             */
+						/*************************************************************************************************/
 					}
 
-
-					
 					//TB Combat Mods Begin
 					int iDefenderDodge = pDefender->dodgeVSOpponentProbTotal(pAttacker);
 					int iDefenderPrecision = pDefender->precisionVSOpponentProbTotal(pAttacker);
@@ -4660,36 +4714,36 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 					int iDefenderArmor = (100 - iModifiedDefenderArmor);
 					int iAttackerArmor = (100 - iModifiedAttackerArmor);
 
-					int iAttackerStrength  = pAttacker->currCombatStr(NULL, NULL);
+					int iAttackerStrength = pAttacker->currCombatStr(NULL, NULL);
 					int iAttackerFirepower = pAttacker->currFirepower(NULL, NULL);
-					int iDefenderStrength  = std::max(1, pDefender->currCombatStr(pPlot, pAttacker));
+					int iDefenderStrength = std::max(1, pDefender->currCombatStr(pPlot, pAttacker));
 					int iDefenderFirepower = std::max(1, pDefender->currFirepower(pPlot, pAttacker));
 
-					FAssert((iAttackerStrength + iDefenderStrength)*(iAttackerFirepower + iDefenderFirepower) > 0);
+					FAssert((iAttackerStrength + iDefenderStrength) * (iAttackerFirepower + iDefenderFirepower) > 0);
 
-					int iStrengthFactor    = ((iAttackerFirepower + iDefenderFirepower + 1) / 2);
-					
+					int iStrengthFactor = ((iAttackerFirepower + iDefenderFirepower + 1) / 2);
+
 					int iDefendDamageModifierTotal = pDefender->damageModifierTotal();
 					int iAttackDamageModifierTotal = pAttacker->damageModifierTotal();
 
-					int iDamageToAttackerBase = ((GC.getDefineINT("COMBAT_DAMAGE") * (iDefenderFirepower + iStrengthFactor)) / std::max(1,(iAttackerFirepower + iStrengthFactor)));
-					int iDamageToDefenderBase = ((GC.getDefineINT("COMBAT_DAMAGE") * (iAttackerFirepower + iStrengthFactor)) / std::max(1,(iDefenderFirepower + iStrengthFactor)));
-					int iDamageToAttackerModified = iDamageToAttackerBase + ((iDamageToAttackerBase * iDefendDamageModifierTotal)/100);
-					int iDamageToDefenderModified = iDamageToDefenderBase + ((iDamageToDefenderBase * iAttackDamageModifierTotal)/100);
-					int iDamageToAttackerArmor = (iDamageToAttackerModified * iAttackerArmor)/100;
-					int iDamageToDefenderArmor = (iDamageToDefenderModified * iDefenderArmor)/100;
-					int iDamageToAttacker  = std::max(1, iDamageToAttackerArmor);
-					int iDamageToDefender  = std::max(1, iDamageToDefenderArmor);
-					int iNeededRoundsAttacker = (pDefender->currHitPoints() - pDefender->maxHitPoints() + pAttacker->combatLimit(pDefender) - (((pAttacker->combatLimit(pDefender))>=pDefender->maxHitPoints())?1:0))/iDamageToDefender + 1;
+					int iDamageToAttackerBase = ((GC.getDefineINT("COMBAT_DAMAGE") * (iDefenderFirepower + iStrengthFactor)) / std::max(1, (iAttackerFirepower + iStrengthFactor)));
+					int iDamageToDefenderBase = ((GC.getDefineINT("COMBAT_DAMAGE") * (iAttackerFirepower + iStrengthFactor)) / std::max(1, (iDefenderFirepower + iStrengthFactor)));
+					int iDamageToAttackerModified = iDamageToAttackerBase + ((iDamageToAttackerBase * iDefendDamageModifierTotal) / 100);
+					int iDamageToDefenderModified = iDamageToDefenderBase + ((iDamageToDefenderBase * iAttackDamageModifierTotal) / 100);
+					int iDamageToAttackerArmor = (iDamageToAttackerModified * iAttackerArmor) / 100;
+					int iDamageToDefenderArmor = (iDamageToDefenderModified * iDefenderArmor) / 100;
+					int iDamageToAttacker = std::max(1, iDamageToAttackerArmor);
+					int iDamageToDefender = std::max(1, iDamageToDefenderArmor);
+					int iNeededRoundsAttacker = (pDefender->currHitPoints() - pDefender->maxHitPoints() + pAttacker->combatLimit(pDefender) - (((pAttacker->combatLimit(pDefender)) >= pDefender->maxHitPoints()) ? 1 : 0)) / iDamageToDefender + 1;
 
 					int iAttackerBaseCriticalChance = pAttacker->criticalVSOpponentProbTotal(pDefender);
 					int iDefenderBaseCriticalChance = pDefender->criticalVSOpponentProbTotal(pAttacker);
-					int iAttackerCriticalChance = (((iDamageToDefender * 100) * iAttackerBaseCriticalChance)/100);
-					int iDefenderCriticalChance = (((iDamageToDefender * 100) * iAttackerBaseCriticalChance)/100);
+					int iAttackerCriticalChance = (((iDamageToDefender * 100) * iAttackerBaseCriticalChance) / 100);
+					int iDefenderCriticalChance = (((iDamageToDefender * 100) * iAttackerBaseCriticalChance) / 100);
 					int iAttackerEndurance = pAttacker->enduranceTotal();
 					int iDefenderEndurance = pDefender->enduranceTotal();
 
-					int iNeededRoundsDefender = (pAttacker->currHitPoints() + iDamageToAttacker - 1 ) / iDamageToAttacker;
+					int iNeededRoundsDefender = (pAttacker->currHitPoints() + iDamageToAttacker - 1) / iDamageToAttacker;
 
 					//  Determine Attack Withdraw odds
 					int iAttackerWithdraw = pAttacker->withdrawVSOpponentProbTotal(pDefender, pPlot);
@@ -4698,19 +4752,19 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 					int AdjustedAttWithdrawalstep1 = iAttackerWithdraw - iDefenderPursuit;
 					int AdjustedAttWithdrawalstep2 = ((AdjustedAttWithdrawalstep1 > 100) ? 100 : AdjustedAttWithdrawalstep1);
 					int AdjustedAttWithdrawal = ((AdjustedAttWithdrawalstep2 < 0) ? 0 : AdjustedAttWithdrawalstep2);
-					
+
 					int expectedrndcnt = iNeededRoundsDefender;
-					int expectedrnds = ((expectedrndcnt * iAttackerEarly)/100);
+					int expectedrnds = ((expectedrndcnt * iAttackerEarly) / 100);
 
 					int y = AdjustedAttWithdrawal;
 					int z = AdjustedAttWithdrawal;
 					int Time;
 					for (Time = 0; Time < expectedrnds; ++Time)
-						{
-							z += ((AdjustedAttWithdrawal * y)/100);
-							y = ((AdjustedAttWithdrawal * y)/100);
-						}
-						
+					{
+						z += ((AdjustedAttWithdrawal * y) / 100);
+						y = ((AdjustedAttWithdrawal * y) / 100);
+					}
+
 					int EvaluatedAttWithdrawOdds = z;
 
 					//  Determine Attack Knockback odds
@@ -4724,13 +4778,13 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 
 					y = AdjustedKnockback;
 					z = AdjustedKnockback;
-					
+
 					for (Time = 0; Time < iAttackerKnockbackTries; ++Time)
-						{
-							z += ((AdjustedKnockback * y)/100);
-							y = ((AdjustedKnockback * y)/100);
-						}
-						
+					{
+						z += ((AdjustedKnockback * y) / 100);
+						y = ((AdjustedKnockback * y) / 100);
+					}
+
 					int EvaluatedKnockbackOdds = z;
 
 					//  Determine Defensive Withdrawal odds
@@ -4740,19 +4794,19 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 					int AdjustedDefWithdrawalstep1 = iDefenderWithdraw - iAttackerPursuit;
 					int AdjustedDefWithdrawalstep2 = ((AdjustedDefWithdrawalstep1 > 100) ? 100 : AdjustedDefWithdrawalstep1);
 					int AdjustedDefWithdrawal = ((AdjustedDefWithdrawalstep2 < 0) ? 0 : AdjustedDefWithdrawalstep2);
-					
+
 					expectedrndcnt = iNeededRoundsAttacker;
-					expectedrnds = ((expectedrndcnt * iDefenderEarly)/100);
+					expectedrnds = ((expectedrndcnt * iDefenderEarly) / 100);
 
 					y = AdjustedDefWithdrawal;
 					z = AdjustedDefWithdrawal;
-					
+
 					for (Time = 0; Time < expectedrnds; ++Time)
-						{
-							z += ((AdjustedDefWithdrawal * y)/100);
-							y = ((AdjustedDefWithdrawal * y)/100);
-						}
-						
+					{
+						z += ((AdjustedDefWithdrawal * y) / 100);
+						y = ((AdjustedDefWithdrawal * y) / 100);
+					}
+
 					int EvaluatedDefWithdrawalOdds = z;
 
 					// Fortify, Repel Odds
@@ -4774,13 +4828,13 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 
 					y = iRepelTotal;
 					z = iRepelTotal;
-					
+
 					for (Time = 0; Time < iRepelAttempts; ++Time)
-						{
-							z += ((iRepelTotal * y)/100);
-							y = ((iRepelTotal * y)/100);
-						}
-						
+					{
+						z += ((iRepelTotal * y) / 100);
+						y = ((iRepelTotal * y) / 100);
+					}
+
 					int EvaluatedRepelOdds = z;
 
 					int iWithdrawal = 0;
@@ -4808,31 +4862,31 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							szTempBuffer.Format(L"%.1f", iWithdrawal / 1000.0f);
 						}
 
-	/*************************************************************************************************/
-	/** ADVANCED COMBAT ODDS                      3/11/09                           PieceOfMind      */
-	/** BEGIN                                                                       v2.0             */
-	/*************************************************************************************************/
-	/* Old Code */
-	/*
+						/*************************************************************************************************/
+						/** ADVANCED COMBAT ODDS                      3/11/09                           PieceOfMind      */
+						/** BEGIN                                                                       v2.0             */
+						/*************************************************************************************************/
+						/* Old Code */
+						/*
+											szString.append(NEWLINE);
+											szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_ODDS_RETREAT", szTempBuffer.GetCString()));
+						*/
+						/* New Code */
 						szString.append(NEWLINE);
 						szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_ODDS_RETREAT", szTempBuffer.GetCString()));
-	*/
-	/* New Code */
-						szString.append(NEWLINE);
-						szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_ODDS_RETREAT", szTempBuffer.GetCString()));
-							//if (ACO_enabled)
-							//{
-							//szString.append(NEWLINE);
-							//}
-	/*************************************************************************************************/
-	/** ADVANCED COMBAT ODDS                      3/11/09                           PieceOfMind      */
-	/** END                                                                         v2.0             */
-	/*************************************************************************************************/
+						//if (ACO_enabled)
+						//{
+						//szString.append(NEWLINE);
+						//}
+/*************************************************************************************************/
+/** ADVANCED COMBAT ODDS                      3/11/09                           PieceOfMind      */
+/** END                                                                         v2.0             */
+/*************************************************************************************************/
 					}
 
 					int iDefWithdrawal = 0;
 					iDefWithdrawal += std::min(100, EvaluatedDefWithdrawalOdds) * (1000 - iCombatOdds);
-					
+
 					if (iDefWithdrawal > 0 && GC.getGameINLINE().isModderGameOption(MODDERGAMEOPTION_DEFENDER_WITHDRAW))
 					{
 						if (iDefWithdrawal > 99900)
@@ -4853,7 +4907,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 
 					int iRepelOdds = 0;
 					iRepelOdds += std::min(100, EvaluatedRepelOdds) * (1000 - iCombatOdds);
-					
+
 					if (iRepelOdds > 0)
 					{
 						if (iRepelOdds > 99900)
@@ -4874,7 +4928,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 
 					int iKnockbackOdds = 0;
 					iKnockbackOdds += std::min(100, EvaluatedKnockbackOdds) * (1000 - iCombatOdds);
-					
+
 					if (iKnockbackOdds > 0)
 					{
 						if (iKnockbackOdds > 99900)
@@ -4891,7 +4945,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						}
 						szString.append(NEWLINE);
 						szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_ODDS_KNOCKBACK", szTempBuffer.GetCString()));
-						
+
 					}
 					szString.append(NEWLINE);
 
@@ -4905,19 +4959,19 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							if (iAttackerPrecision != 0)
 							{
 								szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-												TEXT_COLOR("COLOR_RED"),gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_ATTACKER_PRECISION").c_str(), iAttackerPrecision);
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_ATTACKER_PRECISION").c_str(), iAttackerPrecision);
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 							}
 							if (iDefenderDodge != 0)
 							{
 								szTempBuffer.Format(SETCOLR L"- %s %d%%" ENDCOLR,
-												TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_DEFENDER_DODGE").c_str(), iDefenderDodge);
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_DEFENDER_DODGE").c_str(), iDefenderDodge);
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 							}
 							szTempBuffer.Format(SETCOLR L"= %s %d%%" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_ATTACKER_HIT_MODIFIER").c_str(), iAttackerHitModifier);
+								TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_ATTACKER_HIT_MODIFIER").c_str(), iAttackerHitModifier);
 							szString.append(NEWLINE);
 							szString.append(szTempBuffer.GetCString());
 						}
@@ -4927,19 +4981,19 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							if (iAttackerPrecision != 0)
 							{
 								szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-												TEXT_COLOR("COLOR_GREEN"),gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_ATTACKER_PRECISION").c_str(), iAttackerPrecision);
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_ATTACKER_PRECISION").c_str(), iAttackerPrecision);
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 							}
 							if (iDefenderDodge != 0)
 							{
 								szTempBuffer.Format(SETCOLR L"- %s %d%%" ENDCOLR,
-												TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_DEFENDER_DODGE").c_str(), iDefenderDodge);
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_DEFENDER_DODGE").c_str(), iDefenderDodge);
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 							}
 							szTempBuffer.Format(SETCOLR L"= +%s %d%%" ENDCOLR,
-											TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_ATTACKER_HIT_MODIFIER").c_str(), iAttackerHitModifier);
+								TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_ATTACKER_HIT_MODIFIER").c_str(), iAttackerHitModifier);
 							szString.append(NEWLINE);
 							szString.append(szTempBuffer.GetCString());
 						}
@@ -4949,19 +5003,19 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							if (iDefenderPrecision != 0)
 							{
 								szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-												TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_DEFENDER_PRECISION").c_str(), iDefenderPrecision);
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_DEFENDER_PRECISION").c_str(), iDefenderPrecision);
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 							}
 							if (iAttackerDodge != 0)
 							{
 								szTempBuffer.Format(SETCOLR L"- %s %d%%" ENDCOLR,
-												TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_ATTACKER_DODGE").c_str(), iAttackerDodge);
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_ATTACKER_DODGE").c_str(), iAttackerDodge);
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 							}
 							szTempBuffer.Format(SETCOLR L"= +%s %d%%" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_DEFENDER_HIT_MODIFIER").c_str(), iDefenderHitModifier);
+								TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_DEFENDER_HIT_MODIFIER").c_str(), iDefenderHitModifier);
 							szString.append(NEWLINE);
 							szString.append(szTempBuffer.GetCString());
 						}
@@ -4971,19 +5025,19 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							if (iDefenderPrecision != 0)
 							{
 								szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-												TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_DEFENDER_PRECISION").c_str(), iDefenderPrecision);
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_DEFENDER_PRECISION").c_str(), iDefenderPrecision);
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 							}
 							if (iAttackerDodge != 0)
 							{
 								szTempBuffer.Format(SETCOLR L"- %s %d%%" ENDCOLR,
-												TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_ATTACKER_DODGE").c_str(), iAttackerDodge);
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_ATTACKER_DODGE").c_str(), iAttackerDodge);
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 							}
 							szTempBuffer.Format(SETCOLR L"= -%s %d%%" ENDCOLR,
-											TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_DEFENDER_HIT_MODIFIER").c_str(), iDefenderHitModifier);
+								TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_DEFENDER_HIT_MODIFIER").c_str(), iDefenderHitModifier);
 							szString.append(NEWLINE);
 							szString.append(szTempBuffer.GetCString());
 						}
@@ -4991,45 +5045,45 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						if (iModifiedAttackerArmor > 0)
 						{
 							szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-											TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_ATTACKER_ARMOR").c_str(), iAttackArmorTotal);
+								TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_ATTACKER_ARMOR").c_str(), iAttackArmorTotal);
 							szString.append(NEWLINE);
 							szString.append(szTempBuffer.GetCString());
 							if (iDefendPunctureTotal > 0)
 							{
-							szTempBuffer.Format(SETCOLR L"%s %d" ENDCOLR,
-											TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_DEFENDER_PUNCTURE").c_str(), iDefendPunctureTotal);
-							szString.append(NEWLINE);
-							szString.append(szTempBuffer.GetCString());
-							szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-											TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_TOTAL_ATTACKER_ARMOR").c_str(), iModifiedAttackerArmor);
-							szString.append(NEWLINE);
-							szString.append(szTempBuffer.GetCString());
+								szTempBuffer.Format(SETCOLR L"%s %d" ENDCOLR,
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_DEFENDER_PUNCTURE").c_str(), iDefendPunctureTotal);
+								szString.append(NEWLINE);
+								szString.append(szTempBuffer.GetCString());
+								szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_TOTAL_ATTACKER_ARMOR").c_str(), iModifiedAttackerArmor);
+								szString.append(NEWLINE);
+								szString.append(szTempBuffer.GetCString());
 							}
 						}
 
 						if (iModifiedDefenderArmor > 0)
 						{
 							szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_DEFENDER_ARMOR").c_str(), iDefendArmorTotal);
+								TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_DEFENDER_ARMOR").c_str(), iDefendArmorTotal);
 							szString.append(NEWLINE);
 							szString.append(szTempBuffer.GetCString());
 							if (iAttackPunctureTotal > 0)
 							{
-							szTempBuffer.Format(SETCOLR L"%s %d" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_ATTACKER_PUNCTURE").c_str(), iAttackPunctureTotal);
-							szString.append(NEWLINE);
-							szString.append(szTempBuffer.GetCString());
-							szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_TOTAL_DEFENDER_ARMOR").c_str(), iModifiedDefenderArmor);
-							szString.append(NEWLINE);
-							szString.append(szTempBuffer.GetCString());
+								szTempBuffer.Format(SETCOLR L"%s %d" ENDCOLR,
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_ATTACKER_PUNCTURE").c_str(), iAttackPunctureTotal);
+								szString.append(NEWLINE);
+								szString.append(szTempBuffer.GetCString());
+								szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ARMOR_COMPARE_TOTAL_DEFENDER_ARMOR").c_str(), iModifiedDefenderArmor);
+								szString.append(NEWLINE);
+								szString.append(szTempBuffer.GetCString());
 							}
 						}
 
 						if (iAttackDamageModifierTotal > 0)
 						{
 							szTempBuffer.Format(SETCOLR L"%s" ENDCOLR,
-											TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ATTACKER_DAMAGE_MODIFIER").c_str(), iAttackDamageModifierTotal);
+								TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ATTACKER_DAMAGE_MODIFIER").c_str(), iAttackDamageModifierTotal);
 							szString.append(NEWLINE);
 							szString.append(szTempBuffer.GetCString());
 						}
@@ -5045,7 +5099,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						if (iDefendDamageModifierTotal > 0)
 						{
 							szTempBuffer.Format(SETCOLR L"%s" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_DAMAGE_MODIFIER").c_str(), iDefendDamageModifierTotal);
+								TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_DAMAGE_MODIFIER").c_str(), iDefendDamageModifierTotal);
 							szString.append(NEWLINE);
 							szString.append(szTempBuffer.GetCString());
 						}
@@ -5053,7 +5107,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						if (iDefendDamageModifierTotal < 0)
 						{
 							szTempBuffer.Format(SETCOLR L"%s" ENDCOLR,
-											TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_DAMAGE_MODIFIER").c_str(), iDefendDamageModifierTotal);
+								TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_DAMAGE_MODIFIER").c_str(), iDefendDamageModifierTotal);
 							szString.append(NEWLINE);
 							szString.append(szTempBuffer.GetCString());
 						}
@@ -5062,14 +5116,14 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						if (EvaluatedAttWithdrawOdds > 0)
 						{
 							szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-											TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_WITHDRAW_ODDS_ATTACKER_WITHDRAWAL").c_str(), iAttackerWithdraw);
+								TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_WITHDRAW_ODDS_ATTACKER_WITHDRAWAL").c_str(), iAttackerWithdraw);
 							szString.append(NEWLINE);
 							szString.append(szTempBuffer.GetCString());
 
 							if (pAttacker->currentWithdrawAdjperAttTotal() > 0)
 							{
 								szTempBuffer.Format(SETCOLR L"(%s +%d%%)" ENDCOLR,
-												TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_WITHDRAW_ODDS_ATTACKER_REFLEXES").c_str(), pAttacker->currentWithdrawAdjperAttTotal());
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_WITHDRAW_ODDS_ATTACKER_REFLEXES").c_str(), pAttacker->currentWithdrawAdjperAttTotal());
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 							}
@@ -5077,54 +5131,54 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							if (pAttacker->currentWithdrawAdjperAttTotal() < 0)
 							{
 								szTempBuffer.Format(SETCOLR L"(%s -%d%%)" ENDCOLR,
-												TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_WITHDRAW_ODDS_ATTACKER_FRAYED").c_str(), pAttacker->currentWithdrawAdjperAttTotal());
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_WITHDRAW_ODDS_ATTACKER_FRAYED").c_str(), pAttacker->currentWithdrawAdjperAttTotal());
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 							}
 
 							if (iDefenderPursuit > 0)
 							{
-							szTempBuffer.Format(SETCOLR L"%s -%d%%" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_WITHDRAW_ODDS_DEFENDER_PURSUIT").c_str(), iDefenderPursuit);
-							szString.append(NEWLINE);
-							szString.append(szTempBuffer.GetCString());
-							szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-											TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_WITHDRAW_ODDS_PER_ROUND_ATTEMPTED").c_str(), AdjustedAttWithdrawal);
-							szString.append(NEWLINE);
-							szString.append(szTempBuffer.GetCString());
+								szTempBuffer.Format(SETCOLR L"%s -%d%%" ENDCOLR,
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_WITHDRAW_ODDS_DEFENDER_PURSUIT").c_str(), iDefenderPursuit);
+								szString.append(NEWLINE);
+								szString.append(szTempBuffer.GetCString());
+								szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_WITHDRAW_ODDS_PER_ROUND_ATTEMPTED").c_str(), AdjustedAttWithdrawal);
+								szString.append(NEWLINE);
+								szString.append(szTempBuffer.GetCString());
 							}
 							if (iAttackerEarly > 0)
 							{
-							szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-											TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_WITHDRAW_ODDS_ATTACKER_EARLY_WITHDRAW").c_str(), iAttackerEarly);
-							szString.append(NEWLINE);
-							szString.append(szTempBuffer.GetCString());
+								szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_WITHDRAW_ODDS_ATTACKER_EARLY_WITHDRAW").c_str(), iAttackerEarly);
+								szString.append(NEWLINE);
+								szString.append(szTempBuffer.GetCString());
 							}
 						}
 
 						if (EvaluatedDefWithdrawalOdds > 0 && (GC.getGameINLINE().isModderGameOption(MODDERGAMEOPTION_DEFENDER_WITHDRAW)))
 						{
 							szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_WITHDRAW_ODDS_DEFENDER_WITHDRAWAL").c_str(), iDefenderWithdraw);
+								TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_WITHDRAW_ODDS_DEFENDER_WITHDRAWAL").c_str(), iDefenderWithdraw);
 							szString.append(NEWLINE);
 							szString.append(szTempBuffer.GetCString());
 							if (iAttackerPursuit > 0)
 							{
-							szTempBuffer.Format(SETCOLR L"%s %d" ENDCOLR,
-											TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_WITHDRAW_ODDS_ATTACKER_PURSUIT").c_str(), iAttackerPursuit);
-							szString.append(NEWLINE);
-							szString.append(szTempBuffer.GetCString());
-							szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_WITHDRAW_ODDS_WITHDRAW_PER_ROUND").c_str(), AdjustedDefWithdrawal);
-							szString.append(NEWLINE);
-							szString.append(szTempBuffer.GetCString());
+								szTempBuffer.Format(SETCOLR L"%s %d" ENDCOLR,
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_WITHDRAW_ODDS_ATTACKER_PURSUIT").c_str(), iAttackerPursuit);
+								szString.append(NEWLINE);
+								szString.append(szTempBuffer.GetCString());
+								szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_WITHDRAW_ODDS_WITHDRAW_PER_ROUND").c_str(), AdjustedDefWithdrawal);
+								szString.append(NEWLINE);
+								szString.append(szTempBuffer.GetCString());
 							}
 							if (iDefenderEarly > 0)
 							{
-							szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_WITHDRAW_ODDS_DEFENDER_EARLY_WITHDRAW").c_str(), iDefenderEarly);
-							szString.append(NEWLINE);
-							szString.append(szTempBuffer.GetCString());
+								szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_WITHDRAW_ODDS_DEFENDER_EARLY_WITHDRAW").c_str(), iDefenderEarly);
+								szString.append(NEWLINE);
+								szString.append(szTempBuffer.GetCString());
 							}
 						}
 						//TB Combat Mods (Fortification Compare)
@@ -5132,69 +5186,69 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						if (iDefenderFortifyTotal > 0)
 						{
 							szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"),gDLL->getText("TXT_KEY_COMBAT_FORTIFICATION_COMPARE_DEFENDER_FORTIFICATION").c_str(), iDefenderFortifyTotal);
+								TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_FORTIFICATION_COMPARE_DEFENDER_FORTIFICATION").c_str(), iDefenderFortifyTotal);
 							szString.append(NEWLINE);
 							szString.append(szTempBuffer.GetCString());
-							
+
 							if (iDefenderFortRepel > 0)
 							{
-							szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_FORTIFICATION_COMPARE_FORTIFIED_REPEL").c_str(), iDefenderFortRepel);
-							szString.append(NEWLINE);
-							szString.append(szTempBuffer.GetCString());
+								szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_FORTIFICATION_COMPARE_FORTIFIED_REPEL").c_str(), iDefenderFortRepel);
+								szString.append(NEWLINE);
+								szString.append(szTempBuffer.GetCString());
 							}
-							
-							if (iAttackerOverrun >0)
+
+							if (iAttackerOverrun > 0)
 							{
-							szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
-											TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_FORTIFICATION_COMPARE_ATTACKER_OVERRUN").c_str(), iAttackerOverrun);
-							szString.append(NEWLINE);
-							szString.append(szTempBuffer.GetCString());
+								szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_FORTIFICATION_COMPARE_ATTACKER_OVERRUN").c_str(), iAttackerOverrun);
+								szString.append(NEWLINE);
+								szString.append(szTempBuffer.GetCString());
 							}
 						}
 						if (iDefenderRepel > 0)
 						{
-						szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
-										TEXT_COLOR("COLOR_RED"),  gDLL->getText("TXT_KEY_COMBAT_FORTIFICATION_COMPARE_DEFENDER_REPEL").c_str(), iDefenderRepel);
-						szString.append(NEWLINE);
-						szString.append(szTempBuffer.GetCString());
+							szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
+								TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_FORTIFICATION_COMPARE_DEFENDER_REPEL").c_str(), iDefenderRepel);
+							szString.append(NEWLINE);
+							szString.append(szTempBuffer.GetCString());
 							if (iAttackerUnyielding > 0)
 							{
-							szTempBuffer.Format(SETCOLR L"%s %d" ENDCOLR,
-										TEXT_COLOR("COLOR_GREEN"),  gDLL->getText("TXT_KEY_COMBAT_FORTIFICATION_COMPARE_ATTACKER_UNYIELDING").c_str(), iAttackerUnyielding);
-							szString.append(NEWLINE);
-							szString.append(szTempBuffer.GetCString());
-							szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
-										TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_FORTIFICATION_COMPARE_TOTAL_REPEL").c_str(), iRepelTotal);
-							szString.append(NEWLINE);
-							szString.append(szTempBuffer.GetCString());
+								szTempBuffer.Format(SETCOLR L"%s %d" ENDCOLR,
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_FORTIFICATION_COMPARE_ATTACKER_UNYIELDING").c_str(), iAttackerUnyielding);
+								szString.append(NEWLINE);
+								szString.append(szTempBuffer.GetCString());
+								szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_FORTIFICATION_COMPARE_TOTAL_REPEL").c_str(), iRepelTotal);
+								szString.append(NEWLINE);
+								szString.append(szTempBuffer.GetCString());
 							}
 						}
-						if ((iFortifyTotal) > 0 && (iAttackerOverrun >0))
+						if ((iFortifyTotal) > 0 && (iAttackerOverrun > 0))
 						{
-						szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
-										TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_FORTIFICATION_COMPARE_TOTAL_FORTIFICATION").c_str(), iFortifyTotal);
-						szString.append(NEWLINE);
-						szString.append(szTempBuffer.GetCString());
+							szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
+								TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_FORTIFICATION_COMPARE_TOTAL_FORTIFICATION").c_str(), iFortifyTotal);
+							szString.append(NEWLINE);
+							szString.append(szTempBuffer.GetCString());
 						}
 
 						//TB Combat Odds Knockback	
 						if (iAttackerKnockback > 0)
 						{
 							szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
-											TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_KNOCKBACK_ATTACKER_KNOCKBACK").c_str(), iAttackerKnockback);
+								TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_KNOCKBACK_ATTACKER_KNOCKBACK").c_str(), iAttackerKnockback);
 							szString.append(NEWLINE);
-  						    szString.append(szTempBuffer.GetCString());
+							szString.append(szTempBuffer.GetCString());
 							if (iDefenderUnyielding > 0)
 							{
-							szTempBuffer.Format(SETCOLR L"%s %d" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_KNOCKBACK_DEFENDER_UNYIELDING").c_str(), iDefenderUnyielding);
-							szString.append(NEWLINE);
-   						    szString.append(szTempBuffer.GetCString());
-							szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
-											TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_KNOCKBACK_TOTAL_KNOCKBACK").c_str(), AdjustedKnockback);
-							szString.append(NEWLINE);
- 						    szString.append(szTempBuffer.GetCString());
+								szTempBuffer.Format(SETCOLR L"%s %d" ENDCOLR,
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_KNOCKBACK_DEFENDER_UNYIELDING").c_str(), iDefenderUnyielding);
+								szString.append(NEWLINE);
+								szString.append(szTempBuffer.GetCString());
+								szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_KNOCKBACK_TOTAL_KNOCKBACK").c_str(), AdjustedKnockback);
+								szString.append(NEWLINE);
+								szString.append(szTempBuffer.GetCString());
 							}
 						}
 
@@ -5206,26 +5260,26 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						if (iAttackerRoundStunProb > 0 /*|| bAttackerDealsElectricalDamage*/)
 						{
 							szTempBuffer.Format(SETCOLR L"%s" ENDCOLR,
-											TEXT_COLOR("COLOR_BLUE"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_START").c_str());
+								TEXT_COLOR("COLOR_BLUE"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_START").c_str());
 							szString.append(NEWLINE);
-  						    szString.append(szTempBuffer.GetCString());
+							szString.append(szTempBuffer.GetCString());
 							szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
-											TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_TOTAL_ATTACKER_ROUND_STUN").c_str(), iAttackerRoundStunProb);
+								TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_TOTAL_ATTACKER_ROUND_STUN").c_str(), iAttackerRoundStunProb);
 							szString.append(NEWLINE);
-  						    szString.append(szTempBuffer.GetCString());
+							szString.append(szTempBuffer.GetCString());
 							if (iAttackerVSCombatClass != 0)
 							{
-							szTempBuffer.Format(SETCOLR L"%s %d" ENDCOLR,
-											TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_VS_DEFENDER_COMBAT_CLASS").c_str(), iAttackerVSCombatClass);
-							szString.append(NEWLINE);
-   						    szString.append(szTempBuffer.GetCString());
+								szTempBuffer.Format(SETCOLR L"%s %d" ENDCOLR,
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_VS_DEFENDER_COMBAT_CLASS").c_str(), iAttackerVSCombatClass);
+								szString.append(NEWLINE);
+								szString.append(szTempBuffer.GetCString());
 							}
 							if (iAttackerCriticalChance != 0)
 							{
-							szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
-											TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_PLUS_CRITICAL").c_str(), iAttackerCriticalChance);
-							szString.append(NEWLINE);
- 						    szString.append(szTempBuffer.GetCString());
+								szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_PLUS_CRITICAL").c_str(), iAttackerCriticalChance);
+								szString.append(NEWLINE);
+								szString.append(szTempBuffer.GetCString());
 							}
 							//if (bAttackerDealsElectricalDamage)
 							//{
@@ -5233,21 +5287,21 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							//szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
 							//				TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_PLUS_ELECTRICAL").c_str(), iElectricalMod);
 							//szString.append(NEWLINE);
- 						//    szString.append(szTempBuffer.GetCString());
+						//    szString.append(szTempBuffer.GetCString());
 							//}
 							int iDefenderEnduranceModifier = iDefenderEndurance * 10;
 							if (iDefenderEndurance != 0)
 							{
-							szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_ATTACKER_MINUS_DEFENDER_ENDURANCE").c_str(), iDefenderEnduranceModifier);
-							szString.append(NEWLINE);
- 						    szString.append(szTempBuffer.GetCString());
+								szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_ATTACKER_MINUS_DEFENDER_ENDURANCE").c_str(), iDefenderEnduranceModifier);
+								szString.append(NEWLINE);
+								szString.append(szTempBuffer.GetCString());
 							}
 							int iAttackerRoundStunTotal = iAttackerTotalAfterVS + iAttackerCriticalChance + iElectricalMod - iDefenderEnduranceModifier;
 							szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_ATTACKER_GRAND_TOTAL").c_str(), iAttackerRoundStunTotal);
+								TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_ATTACKER_GRAND_TOTAL").c_str(), iAttackerRoundStunTotal);
 							szString.append(NEWLINE);
- 						    szString.append(szTempBuffer.GetCString());
+							szString.append(szTempBuffer.GetCString());
 						}
 
 						int iDefenderRoundStunProb = pDefender->roundStunProbTotal();
@@ -5257,26 +5311,26 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						if (iDefenderRoundStunProb > 0 /*|| bAttackerDealsElectricalDamage*/)
 						{
 							szTempBuffer.Format(SETCOLR L"%s" ENDCOLR,
-											TEXT_COLOR("COLOR_BLUE"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_START").c_str());
+								TEXT_COLOR("COLOR_BLUE"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_START").c_str());
 							szString.append(NEWLINE);
-  						    szString.append(szTempBuffer.GetCString());
+							szString.append(szTempBuffer.GetCString());
 							szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_TOTAL_DEFENDER_ROUND_STUN").c_str(), iDefenderRoundStunProb);
+								TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_TOTAL_DEFENDER_ROUND_STUN").c_str(), iDefenderRoundStunProb);
 							szString.append(NEWLINE);
-  						    szString.append(szTempBuffer.GetCString());
+							szString.append(szTempBuffer.GetCString());
 							if (iDefenderVSCombatClass != 0)
 							{
-							szTempBuffer.Format(SETCOLR L"%s %d" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_VS_ATTACKER_COMBAT_CLASS").c_str(), iDefenderVSCombatClass);
-							szString.append(NEWLINE);
-   						    szString.append(szTempBuffer.GetCString());
+								szTempBuffer.Format(SETCOLR L"%s %d" ENDCOLR,
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_VS_ATTACKER_COMBAT_CLASS").c_str(), iDefenderVSCombatClass);
+								szString.append(NEWLINE);
+								szString.append(szTempBuffer.GetCString());
 							}
 							if (iDefenderCriticalChance != 0)
 							{
-							szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_PLUS_CRITICAL").c_str(), iDefenderCriticalChance);
-							szString.append(NEWLINE);
- 						    szString.append(szTempBuffer.GetCString());
+								szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_PLUS_CRITICAL").c_str(), iDefenderCriticalChance);
+								szString.append(NEWLINE);
+								szString.append(szTempBuffer.GetCString());
 							}
 							//if (bDefenderDealsElectricalDamage)
 							//{
@@ -5284,28 +5338,28 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							//szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
 							//				TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_PLUS_ELECTRICAL").c_str(), iElectricalMod);
 							//szString.append(NEWLINE);
- 						//    szString.append(szTempBuffer.GetCString());
+						//    szString.append(szTempBuffer.GetCString());
 							//}
 							int iAttackerEnduranceModifier = iAttackerEndurance * 10;
 							if (iAttackerEndurance != 0)
 							{
-							szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
-											TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_DEFENDER_MINUS_ATTACKER_ENDURANCE").c_str(), iAttackerEnduranceModifier);
-							szString.append(NEWLINE);
- 						    szString.append(szTempBuffer.GetCString());
+								szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_DEFENDER_MINUS_ATTACKER_ENDURANCE").c_str(), iAttackerEnduranceModifier);
+								szString.append(NEWLINE);
+								szString.append(szTempBuffer.GetCString());
 							}
 							int iDefenderRoundStunTotal = iDefenderTotalAfterVS + iDefenderCriticalChance + iElectricalMod - iAttackerEnduranceModifier;
 							szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_DEFENDER_GRAND_TOTAL").c_str(), iDefenderRoundStunTotal);
+								TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ROUND_STUN_DEFENDER_GRAND_TOTAL").c_str(), iDefenderRoundStunTotal);
 							szString.append(NEWLINE);
- 						    szString.append(szTempBuffer.GetCString());
+							szString.append(szTempBuffer.GetCString());
 						}
 
 
 						if (pAttacker->strAdjperRndTotal() > 0)
 						{
 							szTempBuffer.Format(SETCOLR L"%s +%d%%" ENDCOLR,
-											TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ADJUST_RAGE_PER_ROUND").c_str(), pAttacker->strAdjperRndTotal());
+								TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ADJUST_RAGE_PER_ROUND").c_str(), pAttacker->strAdjperRndTotal());
 							szString.append(NEWLINE);
 							szString.append(szTempBuffer.GetCString());
 						}
@@ -5313,7 +5367,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						if (pAttacker->strAdjperRndTotal() < 0)
 						{
 							szTempBuffer.Format(SETCOLR L"%s -%d%%" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ADJUST_FATIGUE_PER_ROUND").c_str(), pAttacker->strAdjperRndTotal());
+								TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_ADJUST_FATIGUE_PER_ROUND").c_str(), pAttacker->strAdjperRndTotal());
 							szString.append(NEWLINE);
 							szString.append(szTempBuffer.GetCString());
 						}
@@ -5321,7 +5375,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						if (pAttacker->canStampede())
 						{
 							szTempBuffer.Format(SETCOLR L"%s" ENDCOLR,
-											TEXT_COLOR("COLOR_BLUE"), gDLL->getText("TXT_KEY_COMBAT_FIGHT_TO_DEATH").c_str());
+								TEXT_COLOR("COLOR_BLUE"), gDLL->getText("TXT_KEY_COMBAT_FIGHT_TO_DEATH").c_str());
 							szString.append(NEWLINE);
 							szString.append(szTempBuffer.GetCString());
 						}
@@ -5329,7 +5383,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						if (pAttacker->canOnslaught())
 						{
 							szTempBuffer.Format(SETCOLR L"%s" ENDCOLR,
-											TEXT_COLOR("COLOR_BLUE"), gDLL->getText("TXT_KEY_COMBAT_ATTACK_UNTIL_DAMAGED").c_str());
+								TEXT_COLOR("COLOR_BLUE"), gDLL->getText("TXT_KEY_COMBAT_ATTACK_UNTIL_DAMAGED").c_str());
 							szString.append(NEWLINE);
 							szString.append(szTempBuffer.GetCString());
 						}
@@ -5337,7 +5391,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						if (pAttacker->dealsColdDamage())
 						{
 							szTempBuffer.Format(SETCOLR L"%s" ENDCOLR,
-											TEXT_COLOR("COLOR_GREEN"),gDLL->getText("TXT_KEY_COMBAT_ATTACKER_COLD_DAMAGE").c_str());
+								TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ATTACKER_COLD_DAMAGE").c_str());
 							szString.append(NEWLINE);
 							szString.append(szTempBuffer.GetCString());
 						}
@@ -5345,7 +5399,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						if (pDefender->dealsColdDamage())
 						{
 							szTempBuffer.Format(SETCOLR L"%s" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_COLD_DAMAGE").c_str());
+								TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_COLD_DAMAGE").c_str());
 							szString.append(NEWLINE);
 							szString.append(szTempBuffer.GetCString());
 						}
@@ -5354,77 +5408,77 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						{
 							PromotionLineTypes ePoisonLine = (PromotionLineTypes)iI;
 							if (pAttacker->hasAfflictOnAttackType(ePoisonLine))
-							{ 
+							{
 								int iAttackerPoisonProb = pAttacker->getAfflictOnAttackTypeProbability(ePoisonLine);
 								bool iAttackerImmediate = pAttacker->isAfflictOnAttackTypeImmediate(ePoisonLine);
 								int iDefenderFortitude = pDefender->fortitudeTotal();
 								int iAttackerTotalPoisonProb = std::max(0, (iAttackerPoisonProb - iDefenderFortitude - pDefender->getUnitAfflictionTolerance(ePoisonLine)));
 								szTempBuffer.Format(SETCOLR L"%s %s" ENDCOLR,
-												TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ATTACKER_MAY_AFFLICT").c_str(), GC.getPromotionInfo((PromotionTypes) iI).getDescription());
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ATTACKER_MAY_AFFLICT").c_str(), GC.getPromotionInfo((PromotionTypes)iI).getDescription());
 								szTempBuffer.Format(SETCOLR L"%d% %s" ENDCOLR,
-												TEXT_COLOR("COLOR_GREEN"), iAttackerPoisonProb, gDLL->getText("TXT_KEY_COMBAT_MAY_AFFLICT2").c_str());
+									TEXT_COLOR("COLOR_GREEN"), iAttackerPoisonProb, gDLL->getText("TXT_KEY_COMBAT_MAY_AFFLICT2").c_str());
 								if (pDefender->getUnitAfflictionTolerance(ePoisonLine) > 0)
 								{
 									szTempBuffer.Format(SETCOLR L"- %s %d%" ENDCOLR,
-													TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_TOLERANCE").c_str(), pDefender->getUnitAfflictionTolerance(ePoisonLine));
+										TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_TOLERANCE").c_str(), pDefender->getUnitAfflictionTolerance(ePoisonLine));
 									szString.append(szTempBuffer.GetCString());
 								}
 								if (iDefenderFortitude > 0)
 								{
 									szTempBuffer.Format(SETCOLR L"%d% %s" ENDCOLR,
-													TEXT_COLOR("COLOR_GREEN"), iDefenderFortitude, gDLL->getText("TXT_KEY_COMBAT_MAY_AFFLICT3").c_str());
+										TEXT_COLOR("COLOR_GREEN"), iDefenderFortitude, gDLL->getText("TXT_KEY_COMBAT_MAY_AFFLICT3").c_str());
 									szTempBuffer.Format(SETCOLR L"%d%" ENDCOLR,
-													TEXT_COLOR("COLOR_GREEN"), iAttackerTotalPoisonProb);
+										TEXT_COLOR("COLOR_GREEN"), iAttackerTotalPoisonProb);
 								}
 								szString.append(NEWLINE);
 								if (iAttackerImmediate)
 								{
 									szTempBuffer.Format(SETCOLR L"%s" ENDCOLR,
-														TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_MAY_AFFLICT_IMMEDIATE").c_str());
+										TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_MAY_AFFLICT_IMMEDIATE").c_str());
 								}
 								else
 								{
 									szTempBuffer.Format(SETCOLR L"%s" ENDCOLR,
-														TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_MAY_AFFLICT_DELAYED").c_str());
+										TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_MAY_AFFLICT_DELAYED").c_str());
 								}
 
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 							}
-							
+
 							if (pDefender->hasAfflictOnAttackType(ePoisonLine))
-							{ 
+							{
 								int iDefenderPoisonProb = pDefender->getAfflictOnAttackTypeProbability(ePoisonLine);
 								bool iDefenderImmediate = pDefender->isAfflictOnAttackTypeImmediate(ePoisonLine);
 								int iAttackerFortitude = pAttacker->fortitudeTotal();
 								int iDefenderTotalPoisonProb = std::max(0, (iDefenderPoisonProb - iAttackerFortitude - pAttacker->getUnitAfflictionTolerance(ePoisonLine)));
 								szTempBuffer.Format(SETCOLR L"%s %s" ENDCOLR,
-												TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_MAY_AFFLICT").c_str(), GC.getPromotionInfo((PromotionTypes) iI).getDescription());
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_MAY_AFFLICT").c_str(), GC.getPromotionInfo((PromotionTypes)iI).getDescription());
 								szTempBuffer.Format(SETCOLR L"%d% %s" ENDCOLR,
-												TEXT_COLOR("COLOR_RED"), iDefenderPoisonProb, gDLL->getText("TXT_KEY_COMBAT_MAY_AFFLICT2").c_str());
+									TEXT_COLOR("COLOR_RED"), iDefenderPoisonProb, gDLL->getText("TXT_KEY_COMBAT_MAY_AFFLICT2").c_str());
 								if (pAttacker->getUnitAfflictionTolerance(ePoisonLine) > 0)
 								{
 									szTempBuffer.Format(SETCOLR L"- %s %d%" ENDCOLR,
-													TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_TOLERANCE").c_str(), pAttacker->getUnitAfflictionTolerance(ePoisonLine));
+										TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_TOLERANCE").c_str(), pAttacker->getUnitAfflictionTolerance(ePoisonLine));
 									szString.append(szTempBuffer.GetCString());
 								}
 								if (iAttackerFortitude > 0)
 								{
 									szTempBuffer.Format(SETCOLR L"%d% %s" ENDCOLR,
-													TEXT_COLOR("COLOR_RED"), iAttackerFortitude, gDLL->getText("TXT_KEY_COMBAT_MAY_AFFLICT3").c_str());
+										TEXT_COLOR("COLOR_RED"), iAttackerFortitude, gDLL->getText("TXT_KEY_COMBAT_MAY_AFFLICT3").c_str());
 									szTempBuffer.Format(SETCOLR L"%d%" ENDCOLR,
-													TEXT_COLOR("COLOR_RED"), iDefenderTotalPoisonProb);
+										TEXT_COLOR("COLOR_RED"), iDefenderTotalPoisonProb);
 								}
 								szString.append(NEWLINE);
 								if (iDefenderImmediate)
 								{
 									szTempBuffer.Format(SETCOLR L"%s" ENDCOLR,
-														TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_MAY_AFFLICT_IMMEDIATE").c_str());
+										TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_MAY_AFFLICT_IMMEDIATE").c_str());
 								}
 								else
 								{
 									szTempBuffer.Format(SETCOLR L"%s" ENDCOLR,
-														TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_MAY_AFFLICT_DELAYED").c_str());
+										TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_MAY_AFFLICT_DELAYED").c_str());
 								}
 
 								szString.append(NEWLINE);
@@ -5434,16 +5488,16 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							if (pAttacker->hasAfflictionLine(ePoisonLine) && GC.getPromotionLineInfo(ePoisonLine).getCommunicability() > 0 && !GC.getPromotionLineInfo(ePoisonLine).isNoSpreadonBattle())
 							{
 								szTempBuffer.Format(SETCOLR L"%s %s" ENDCOLR,
-												TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ATTACKER_MAY_AFFLICT").c_str(), GC.getPromotionLineInfo(ePoisonLine).getDescription());
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ATTACKER_MAY_AFFLICT").c_str(), GC.getPromotionLineInfo(ePoisonLine).getDescription());
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 								szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
-												TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_BASE_CHANCE").c_str(), GC.getPromotionLineInfo(ePoisonLine).getCommunicability());
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_BASE_CHANCE").c_str(), GC.getPromotionLineInfo(ePoisonLine).getCommunicability());
 								szString.append(szTempBuffer.GetCString());
 								if (pDefender->fortitudeTotal() > 0)
 								{
 									szTempBuffer.Format(SETCOLR L"- %s %d%" ENDCOLR,
-													TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_FORTITUDE").c_str(), pDefender->fortitudeTotal());
+										TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_FORTITUDE").c_str(), pDefender->fortitudeTotal());
 									szString.append(szTempBuffer.GetCString());
 								}
 								//if (pDefender->aidVolume(pDefender->plot()) > 0)
@@ -5455,39 +5509,39 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 								if (pDefender->getUnitAfflictionTolerance(ePoisonLine) > 0)
 								{
 									szTempBuffer.Format(SETCOLR L"- %s %d%" ENDCOLR,
-													TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_TOLERANCE").c_str(), pDefender->getUnitAfflictionTolerance(ePoisonLine));
+										TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_TOLERANCE").c_str(), pDefender->getUnitAfflictionTolerance(ePoisonLine));
 									szString.append(szTempBuffer.GetCString());
 								}
 								if (pDefender->getContractChanceChange(ePoisonLine) > 0)
 								{
 									int iDefenderMiscMods = pDefender->getFortitudeModifierTypeAmount(ePoisonLine) + pDefender->getContractChanceChange(ePoisonLine);
 									szTempBuffer.Format(SETCOLR L"- %s %d%" ENDCOLR,
-													TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_MISC_MODS").c_str(), iDefenderMiscMods);
+										TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_MISC_MODS").c_str(), iDefenderMiscMods);
 									szString.append(szTempBuffer.GetCString());
 								}
 								if (pDefender->fortitudeTotal() > 0/* || pDefender->aidVolume(pDefender->plot()) > 0*/)
 								{
 									int iTotalCommunicabilityChance = GC.getPromotionLineInfo(ePoisonLine).getCommunicability() - pDefender->fortitudeTotal() /*- pDefender->aidVolume(pDefender->plot())*/;
 									szTempBuffer.Format(SETCOLR L"= %d%" ENDCOLR,
-													TEXT_COLOR("COLOR_GREEN"), iTotalCommunicabilityChance);
+										TEXT_COLOR("COLOR_GREEN"), iTotalCommunicabilityChance);
 									szString.append(szTempBuffer.GetCString());
 								}
-							szString.append(NEWLINE);
+								szString.append(NEWLINE);
 							}
 
 							if (pDefender->hasAfflictionLine(ePoisonLine) && GC.getPromotionLineInfo(ePoisonLine).getCommunicability() > 0 && !GC.getPromotionLineInfo(ePoisonLine).isNoSpreadonBattle())
 							{
 								szTempBuffer.Format(SETCOLR L"%s %s" ENDCOLR,
-												TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_MAY_AFFLICT").c_str(), GC.getPromotionLineInfo(ePoisonLine).getDescription());
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_MAY_AFFLICT").c_str(), GC.getPromotionLineInfo(ePoisonLine).getDescription());
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 								szTempBuffer.Format(SETCOLR L"%s %d%" ENDCOLR,
-												TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_BASE_CHANCE").c_str(), GC.getPromotionLineInfo(ePoisonLine).getCommunicability());
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_BASE_CHANCE").c_str(), GC.getPromotionLineInfo(ePoisonLine).getCommunicability());
 								szString.append(szTempBuffer.GetCString());
 								if (pAttacker->fortitudeTotal() > 0)
 								{
 									szTempBuffer.Format(SETCOLR L"- %s %d%" ENDCOLR,
-													TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_FORTITUDE").c_str(), pAttacker->fortitudeTotal());
+										TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_FORTITUDE").c_str(), pAttacker->fortitudeTotal());
 									szString.append(szTempBuffer.GetCString());
 								}
 								//if (pAttacker->aidVolume(pDefender->plot()) > 0)
@@ -5499,24 +5553,24 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 								if (pAttacker->getUnitAfflictionTolerance(ePoisonLine) > 0)
 								{
 									szTempBuffer.Format(SETCOLR L"- %s %d%" ENDCOLR,
-													TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_TOLERANCE").c_str(), pAttacker->getUnitAfflictionTolerance(ePoisonLine));
+										TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_TOLERANCE").c_str(), pAttacker->getUnitAfflictionTolerance(ePoisonLine));
 									szString.append(szTempBuffer.GetCString());
 								}
 								if (pAttacker->getContractChanceChange(ePoisonLine) > 0)
 								{
 									int iAttackerMiscMods = pAttacker->getFortitudeModifierTypeAmount(ePoisonLine) + pAttacker->getContractChanceChange(ePoisonLine);
 									szTempBuffer.Format(SETCOLR L"- %s %d%" ENDCOLR,
-													TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_MISC_MODS").c_str(), iAttackerMiscMods);
+										TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_MISC_MODS").c_str(), iAttackerMiscMods);
 									szString.append(szTempBuffer.GetCString());
 								}
 								if (pAttacker->fortitudeTotal() > 0 /*|| pAttacker->aidVolume(pAttacker->plot()) > 0*/)
 								{
 									int iTotalCommunicabilityChance = GC.getPromotionLineInfo(ePoisonLine).getCommunicability() - pAttacker->fortitudeTotal()/* - pAttacker->aidVolume(pAttacker->plot())*/;
 									szTempBuffer.Format(SETCOLR L"= %d%" ENDCOLR,
-													TEXT_COLOR("COLOR_RED"), iTotalCommunicabilityChance);
+										TEXT_COLOR("COLOR_RED"), iTotalCommunicabilityChance);
 									szString.append(szTempBuffer.GetCString());
 								}
-							szString.append(NEWLINE);
+								szString.append(NEWLINE);
 							}
 						}
 
@@ -5525,16 +5579,15 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							if (iAttackerBaseCriticalChance != 0)
 							{
 								szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-												TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ATTACKER_CRITICAL_MODIFIER").c_str(), iAttackerBaseCriticalChance);
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ATTACKER_CRITICAL_MODIFIER").c_str(), iAttackerBaseCriticalChance);
 								szString.append(NEWLINE);
-  		    					szString.append(szTempBuffer.GetCString());
+								szString.append(szTempBuffer.GetCString());
 
 							}
 							szTempBuffer.Format(SETCOLR L"%s %.1f%%" ENDCOLR,
-											TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ATTACKER_CHANCE_CRITICAL").c_str(), iAttackerCriticalChance/10000.00f);
+								TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ATTACKER_CHANCE_CRITICAL").c_str(), iAttackerCriticalChance / 10000.00f);
 							szString.append(NEWLINE);
-   						    szString.append(szTempBuffer.GetCString());
-
+							szString.append(szTempBuffer.GetCString());
 						}
 
 						if (iDefenderCriticalChance > 0)
@@ -5542,15 +5595,14 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							if (iDefenderBaseCriticalChance != 0)
 							{
 								szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-												TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_CRITICAL_MODIFIER").c_str(), iDefenderBaseCriticalChance);
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_CRITICAL_MODIFIER").c_str(), iDefenderBaseCriticalChance);
 								szString.append(NEWLINE);
-     							szString.append(szTempBuffer.GetCString());
+								szString.append(szTempBuffer.GetCString());
 							}
 							szTempBuffer.Format(SETCOLR L"%s %.1f%%" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_CHANCE_CRITICAL").c_str(), iDefenderCriticalChance/10000.00f);
+								TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_CHANCE_CRITICAL").c_str(), iDefenderCriticalChance / 10000.00f);
 							szString.append(NEWLINE);
-     						szString.append(szTempBuffer.GetCString());
-
+							szString.append(szTempBuffer.GetCString());
 						}
 
 						if (pAttacker->powerShotsTotal() > 0)
@@ -5561,14 +5613,14 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							int iAttackerPowerShotPrecision = pAttacker->powerShotPrecisionModifierTotal();
 							int iAttackerPowerShotCritical = pAttacker->powerShotCriticalModifierTotal();
 							szTempBuffer.Format(SETCOLR L"%s %d" ENDCOLR,
-											TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ATTACKER_POWER_SHOTS").c_str(), iAttackerPowerShots);
+								TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ATTACKER_POWER_SHOTS").c_str(), iAttackerPowerShots);
 							szString.append(NEWLINE);
 							szString.append(szTempBuffer.GetCString());
 
 							if (iAttackerPowerShotCombat != 0)
 							{
 								szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-												TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ATTACKER_POWER_SHOTS_COMBAT_MODIFIER").c_str(), iAttackerPowerShotCombat);
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ATTACKER_POWER_SHOTS_COMBAT_MODIFIER").c_str(), iAttackerPowerShotCombat);
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 
@@ -5576,21 +5628,21 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							if (iAttackerPowerShotPuncture != 0)
 							{
 								szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-												TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ATTACKER_POWER_SHOTS_PUNCTURE_MODIFIER").c_str(), iAttackerPowerShotPuncture);
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ATTACKER_POWER_SHOTS_PUNCTURE_MODIFIER").c_str(), iAttackerPowerShotPuncture);
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 							}
 							if (iAttackerPowerShotPrecision != 0)
 							{
 								szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-												TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ATTACKER_POWER_SHOTS_PRECISION_MODIFIER").c_str(), iAttackerPowerShotPrecision);
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ATTACKER_POWER_SHOTS_PRECISION_MODIFIER").c_str(), iAttackerPowerShotPrecision);
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 							}
 							if (iAttackerPowerShotCritical != 0)
 							{
 								szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-												TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ATTACKER_POWER_SHOTS_CRITICAL_MODIFIER").c_str(), iAttackerPowerShotCritical);
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_ATTACKER_POWER_SHOTS_CRITICAL_MODIFIER").c_str(), iAttackerPowerShotCritical);
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 
@@ -5604,14 +5656,14 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							int iDefenderPowerShotPrecision = pDefender->powerShotPrecisionModifierTotal();
 							int iDefenderPowerShotCritical = pDefender->powerShotCriticalModifierTotal();
 							szTempBuffer.Format(SETCOLR L"%s %d" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_POWER_SHOTS").c_str(), iDefenderPowerShots);
+								TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_POWER_SHOTS").c_str(), iDefenderPowerShots);
 							szString.append(NEWLINE);
 							szString.append(szTempBuffer.GetCString());
 
 							if (iDefenderPowerShotCombat != 0)
 							{
 								szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-												TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_POWER_SHOTS_COMBAT_MODIFIER").c_str(), iDefenderPowerShotCombat);
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_POWER_SHOTS_COMBAT_MODIFIER").c_str(), iDefenderPowerShotCombat);
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 
@@ -5619,7 +5671,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							if (iDefenderPowerShotPuncture != 0)
 							{
 								szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-												TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_POWER_SHOTS_PUNCTURE_MODIFIER").c_str(), iDefenderPowerShotPuncture);
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_POWER_SHOTS_PUNCTURE_MODIFIER").c_str(), iDefenderPowerShotPuncture);
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 
@@ -5627,7 +5679,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							if (iDefenderPowerShotPrecision != 0)
 							{
 								szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-												TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_POWER_SHOTS_PRECISION_MODIFIER").c_str(),iDefenderPowerShotPrecision);
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_POWER_SHOTS_PRECISION_MODIFIER").c_str(), iDefenderPowerShotPrecision);
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 
@@ -5635,7 +5687,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							if (iDefenderPowerShotCritical != 0)
 							{
 								szTempBuffer.Format(SETCOLR L"%s %d%%" ENDCOLR,
-												TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_POWER_SHOTS_CRITICAL_MODIFIER").c_str(),iDefenderPowerShotCritical);
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_DEFENDER_POWER_SHOTS_CRITICAL_MODIFIER").c_str(), iDefenderPowerShotCritical);
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 							}
@@ -5648,7 +5700,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							{
 								int iAttackerSupport = pAttacker->getAttackerSupportValue();
 								szTempBuffer.Format(SETCOLR L"%s +%d" ENDCOLR,
-												TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_TOTAL_ATTACKER_SUPPORT").c_str(), iAttackerSupport);
+									TEXT_COLOR("COLOR_GREEN"), gDLL->getText("TXT_KEY_COMBAT_TOTAL_ATTACKER_SUPPORT").c_str(), iAttackerSupport);
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 							}
@@ -5656,7 +5708,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							{
 								int iDefenderSupport = pDefender->getDefenderSupportValue(pAttacker);
 								szTempBuffer.Format(SETCOLR L"%s +%d" ENDCOLR,
-												TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_TOTAL_DEFENDER_SUPPORT").c_str(), iDefenderSupport);
+									TEXT_COLOR("COLOR_RED"), gDLL->getText("TXT_KEY_COMBAT_TOTAL_DEFENDER_SUPPORT").c_str(), iDefenderSupport);
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 							}
@@ -5666,47 +5718,47 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						if (pAttacker->currentStrAdjperAttTotal() > 0)
 						{
 							iModifier = pAttacker->currentStrAdjperAttTotal();
-							if (iModifier >0)
+							if (iModifier > 0)
 							{
-							szString.append(gDLL->getText("TXT_KEY_COLOR_POSITIVE"));
-							szString.append(L' ');
-							szString.append(NEWLINE);
-							szString.append(gDLL->getText("TXT_KEY_COMBAT_RAMPAGE", iModifier));
+								szString.append(gDLL->getText("TXT_KEY_COLOR_POSITIVE"));
+								szString.append(L' ');
+								szString.append(NEWLINE);
+								szString.append(gDLL->getText("TXT_KEY_COMBAT_RAMPAGE", iModifier));
 							}
 						}
 						if (pAttacker->currentStrAdjperAttTotal() < 0)
 						{
 							iModifier = pAttacker->currentStrAdjperAttTotal();
-							if (iModifier <0)
+							if (iModifier < 0)
 							{
-							szString.append(gDLL->getText("TXT_KEY_COLOR_NEGATIVE"));
-							szString.append(L' ');
-							szString.append(NEWLINE);
-							szString.append(gDLL->getText("TXT_KEY_COMBAT_TIRES", iModifier));
+								szString.append(gDLL->getText("TXT_KEY_COLOR_NEGATIVE"));
+								szString.append(L' ');
+								szString.append(NEWLINE);
+								szString.append(gDLL->getText("TXT_KEY_COMBAT_TIRES", iModifier));
 							}
 						}
 
 						if (pAttacker->currentStrAdjperDefTotal() > 0)
 						{
 							iModifier = pAttacker->currentStrAdjperDefTotal();
-							if (iModifier >0)
+							if (iModifier > 0)
 							{
-							szString.append(gDLL->getText("TXT_KEY_COLOR_POSITIVE"));
-							szString.append(L' ');
-							szString.append(NEWLINE);
-							szString.append(gDLL->getText("TXT_KEY_COMBAT_DETERMINATION", iModifier));
+								szString.append(gDLL->getText("TXT_KEY_COLOR_POSITIVE"));
+								szString.append(L' ');
+								szString.append(NEWLINE);
+								szString.append(gDLL->getText("TXT_KEY_COMBAT_DETERMINATION", iModifier));
 							}
 						}
 
 						if (pAttacker->currentStrAdjperDefTotal() < 0)
 						{
 							iModifier = pAttacker->currentStrAdjperDefTotal();
-							if (iModifier <0)
+							if (iModifier < 0)
 							{
-							szString.append(gDLL->getText("TXT_KEY_COLOR_NEGATIVE"));
-							szString.append(L' ');
-							szString.append(NEWLINE);
-							szString.append(gDLL->getText("TXT_KEY_COMBAT_DEMORALIZATION", iModifier));
+								szString.append(gDLL->getText("TXT_KEY_COLOR_NEGATIVE"));
+								szString.append(L' ');
+								szString.append(NEWLINE);
+								szString.append(gDLL->getText("TXT_KEY_COMBAT_DEMORALIZATION", iModifier));
 							}
 						}
 					}
@@ -5721,7 +5773,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 					else if (ACO_enabled && !bTBView)
 					{
 						szString.append(NEWLINE);
-							
+
 						//Change this to true when you need to spot errors, particular in the expected hit points calculations
 						bool ACO_debug = getBugOptionBOOL("ACO__Debug", false, "ACO_DEBUG");
 
@@ -5773,20 +5825,20 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						//int iDamageToDefender  = std::max(1, ((((GC.getDefineINT("COMBAT_DAMAGE") * (iAttackerFirepower + iStrengthFactor)) / (iDefenderFirepower + iStrengthFactor)) * iDefenderArmor)/100));
 
 						int iDefenderInitialOdds = ((GC.getCOMBAT_DIE_SIDES() * iDefenderStrength) / (iAttackerStrength + iDefenderStrength));
-						int iDefenderHitOdds = std::max(5, iDefenderInitialOdds - ((iDefenderHitModifier * iDefenderInitialOdds)/100));
+						int iDefenderHitOdds = std::max(5, iDefenderInitialOdds - ((iDefenderHitModifier * iDefenderInitialOdds) / 100));
 
 						int iAttackerInitialOdds = GC.getCOMBAT_DIE_SIDES() - iDefenderInitialOdds;
-						int iAttackerHitOdds = std::max(5, iAttackerInitialOdds - ((iAttackerHitModifier * iAttackerInitialOdds)/100));
+						int iAttackerHitOdds = std::max(5, iAttackerInitialOdds - ((iAttackerHitModifier * iAttackerInitialOdds) / 100));
 
-						int iDefenderOdds = ((iDefenderHitOdds - iAttackerHitOdds)+ 1000)/2;
-						int iAttackerOdds = ((iAttackerHitOdds - iDefenderHitOdds)+ 1000)/2;
+						int iDefenderOdds = ((iDefenderHitOdds - iAttackerHitOdds) + 1000) / 2;
+						int iAttackerOdds = ((iAttackerHitOdds - iDefenderHitOdds) + 1000) / 2;
 						//int iDefenderOdds = ((GC.getDefineINT("COMBAT_DIE_SIDES") * iDefenderStrength) / (iAttackerStrength + iDefenderStrength));
 						//int iAttackerOdds = GC.getDefineINT("COMBAT_DIE_SIDES") - iDefenderOdds;
 						//TB Combat Mods end
 
 						// Barbarian related code.
 						if (getBugOptionBOOL("ACO__IgnoreBarbFreeWins", false, "ACO_IGNORE_BARB_FREE_WINS"))//Are we not going to ignore barb free wins?  If not, skip this section...
-						{    
+						{
 							if (pDefender->isHominid())
 							{
 								//defender is barbarian
@@ -5797,7 +5849,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 									iDefenderOdds = std::min((10 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iDefenderOdds);
 									iAttackerOdds = std::max((90 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iAttackerOdds);
 									szTempBuffer.Format(SETCOLR L"%d\n" ENDCOLR,
-														TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"),GC.getHandicapInfo(GET_PLAYER(pAttacker->getOwnerINLINE()).getHandicapType()).getFreeWinsVsBarbs()-GET_PLAYER(pAttacker->getOwnerINLINE()).getWinsVsBarbs());
+										TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), GC.getHandicapInfo(GET_PLAYER(pAttacker->getOwnerINLINE()).getHandicapType()).getFreeWinsVsBarbs() - GET_PLAYER(pAttacker->getOwnerINLINE()).getWinsVsBarbs());
 									szString.append(gDLL->getText("TXT_ACO_BarbFreeWinsLeft"));
 									szString.append(szTempBuffer.GetCString());
 								}
@@ -5814,7 +5866,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 										iAttackerOdds = std::min((10 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iAttackerOdds);
 										iDefenderOdds = std::max((90 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iDefenderOdds);
 										szTempBuffer.Format(SETCOLR L"%d\n" ENDCOLR,
-															TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"),GC.getHandicapInfo(GET_PLAYER(pDefender->getOwnerINLINE()).getHandicapType()).getFreeWinsVsBarbs()-GET_PLAYER(pDefender->getOwnerINLINE()).getWinsVsBarbs());
+											TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), GC.getHandicapInfo(GET_PLAYER(pDefender->getOwnerINLINE()).getHandicapType()).getFreeWinsVsBarbs() - GET_PLAYER(pDefender->getOwnerINLINE()).getWinsVsBarbs());
 										szString.append(gDLL->getText("TXT_ACO_BarbFreeWinsLeft"));
 										szString.append(szTempBuffer.GetCString());
 									}
@@ -5833,12 +5885,12 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 
 						if (pAttacker->combatLimit() < 100)
 						{
-							iExperience        = pAttacker->getExperiencefromWithdrawal(iCombatLimitWithdrawalProbability);
+							iExperience = pAttacker->getExperiencefromWithdrawal(iCombatLimitWithdrawalProbability);
 						}
 						else
 						{
-							iExperience        = (pDefender->attackXPValue() * iDefenderStrength) / iAttackerStrength;
-							iExperience        = range(iExperience, GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
+							iExperience = (pDefender->attackXPValue() * iDefenderStrength) / iAttackerStrength;
+							iExperience = range(iExperience, GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
 						}
 
 						int iDefExperienceKill;
@@ -5851,26 +5903,26 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 
 						//The following code adjusts the XP for barbarian encounters.  In standard game, barb and animal xp cap is 10,5 respectively.
 						/**Thanks to phungus420 for the following block of code! **/
-						if(pDefender->isAnimal())
+						if (pDefender->isAnimal())
 						{
 							//animal
-							iExperience = range(iExperience,0,GC.getDefineINT("ANIMAL_MAX_XP_VALUE")-(pAttacker->getExperience()));
-							if (iExperience < 0 )
+							iExperience = range(iExperience, 0, GC.getDefineINT("ANIMAL_MAX_XP_VALUE") - (pAttacker->getExperience()));
+							if (iExperience < 0)
 							{
 								iExperience = 0;
 							}
-							iWithdrawXP = range(iWithdrawXP,0,GC.getDefineINT("ANIMAL_MAX_XP_VALUE")-(pAttacker->getExperience()));
-							if (iWithdrawXP < 0 )
+							iWithdrawXP = range(iWithdrawXP, 0, GC.getDefineINT("ANIMAL_MAX_XP_VALUE") - (pAttacker->getExperience()));
+							if (iWithdrawXP < 0)
 							{
 								iWithdrawXP = 0;
 							}
-							iBonusAttackerXP = range(iBonusAttackerXP,0,GC.getDefineINT("ANIMAL_MAX_XP_VALUE")-(pAttacker->getExperience() + iExperience));
-							if (iBonusAttackerXP < 0 )
+							iBonusAttackerXP = range(iBonusAttackerXP, 0, GC.getDefineINT("ANIMAL_MAX_XP_VALUE") - (pAttacker->getExperience() + iExperience));
+							if (iBonusAttackerXP < 0)
 							{
 								iBonusAttackerXP = 0;
 							}
-							iBonusWithdrawXP = range(iBonusWithdrawXP,0,GC.getDefineINT("ANIMAL_MAX_XP_VALUE")-(pAttacker->getExperience() + iWithdrawXP));
-							if (iBonusWithdrawXP < 0 )
+							iBonusWithdrawXP = range(iBonusWithdrawXP, 0, GC.getDefineINT("ANIMAL_MAX_XP_VALUE") - (pAttacker->getExperience() + iWithdrawXP));
+							if (iBonusWithdrawXP < 0)
 							{
 								iBonusWithdrawXP = 0;
 							}
@@ -5878,23 +5930,23 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						if (pDefender->isHominid())
 						{
 							//normal barbarian
-							iExperience = range(iExperience,0,GC.getDefineINT("BARBARIAN_MAX_XP_VALUE")-pAttacker->getExperience());
-							if (iExperience < 0 )
+							iExperience = range(iExperience, 0, GC.getDefineINT("BARBARIAN_MAX_XP_VALUE") - pAttacker->getExperience());
+							if (iExperience < 0)
 							{
 								iExperience = 0;
 							}
-							iWithdrawXP = range(iWithdrawXP,0,GC.getDefineINT("BARBARIAN_MAX_XP_VALUE")-(pAttacker->getExperience()));
-							if (iWithdrawXP < 0 )
+							iWithdrawXP = range(iWithdrawXP, 0, GC.getDefineINT("BARBARIAN_MAX_XP_VALUE") - (pAttacker->getExperience()));
+							if (iWithdrawXP < 0)
 							{
 								iWithdrawXP = 0;
 							}
-							iBonusAttackerXP = range(iBonusAttackerXP,0,GC.getDefineINT("BARBARIAN_MAX_XP_VALUE")-(pAttacker->getExperience() + iExperience));
-							if (iBonusAttackerXP < 0 )
+							iBonusAttackerXP = range(iBonusAttackerXP, 0, GC.getDefineINT("BARBARIAN_MAX_XP_VALUE") - (pAttacker->getExperience() + iExperience));
+							if (iBonusAttackerXP < 0)
 							{
 								iBonusAttackerXP = 0;
 							}
-							iBonusWithdrawXP = range(iBonusWithdrawXP,0,GC.getDefineINT("BARBARIAN_MAX_XP_VALUE")-(pAttacker->getExperience() + iWithdrawXP));
-							if (iBonusWithdrawXP < 0 )
+							iBonusWithdrawXP = range(iBonusWithdrawXP, 0, GC.getDefineINT("BARBARIAN_MAX_XP_VALUE") - (pAttacker->getExperience() + iWithdrawXP));
+							if (iBonusWithdrawXP < 0)
 							{
 								iBonusWithdrawXP = 0;
 							}
@@ -5921,7 +5973,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						float E_HP_Def = 0.0f;
 						float E_HP_Att_Withdraw; //Expected hitpoints for attacker if attacker withdraws (not the same as retreat)
 						float E_HP_Att_Victory; //Expected hitpoints for attacker if attacker kills defender
-						int E_HP_Att_Retreat = (pAttacker->currHitPoints()) - (iNeededRoundsDefender-1)*iDamageToAttacker;//this one is predetermined easily
+						int E_HP_Att_Retreat = (pAttacker->currHitPoints()) - (iNeededRoundsDefender - 1) * iDamageToAttacker;//this one is predetermined easily
 						float E_HP_Def_Withdraw;
 						float E_HP_Def_Defeat; // if attacker dies
 						//Note E_HP_Def is the same for if the attacker withdraws or dies
@@ -5929,9 +5981,9 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						float AttackerUnharmed;
 						float DefenderUnharmed;
 
-						AttackerUnharmed = getCombatOddsSpecific(pAttacker,pDefender,0,iNeededRoundsAttacker);
-						DefenderUnharmed = getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender,0);
-						DefenderUnharmed += getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender-1,0);//attacker withdraws or retreats
+						AttackerUnharmed = getCombatOddsSpecific(pAttacker, pDefender, 0, iNeededRoundsAttacker);
+						DefenderUnharmed = getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender, 0);
+						DefenderUnharmed += getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender - 1, 0);//attacker withdraws or retreats
 
 						float prob_bottom_Att_HP; // The probability the attacker exits combat with min HP
 						float prob_bottom_Def_HP; // The probability the defender exits combat with min HP
@@ -5946,20 +5998,20 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						for (int n_A = 0; n_A < iNeededRoundsDefender; n_A++)
 						{
 							//prob_attack[n_A] = getCombatOddsSpecific(pAttacker,pDefender,n_A,iNeededRoundsAttacker);
-							E_HP_Att += ( (pAttacker->currHitPoints()) - n_A*iDamageToAttacker) * getCombatOddsSpecific(pAttacker,pDefender,n_A,iNeededRoundsAttacker);
+							E_HP_Att += ((pAttacker->currHitPoints()) - n_A * iDamageToAttacker) * getCombatOddsSpecific(pAttacker, pDefender, n_A, iNeededRoundsAttacker);
 
 							if (ACO_debug)
 							{
 								szTempBuffer.Format(L"+%d * %.2f%%  (Def %d) (%d:%d)",
-													((pAttacker->currHitPoints()) - n_A*iDamageToAttacker),100.0f*getCombatOddsSpecific(pAttacker,pDefender,n_A,iNeededRoundsAttacker),iDefenderHitLimit,n_A,iNeededRoundsAttacker);
+									((pAttacker->currHitPoints()) - n_A * iDamageToAttacker), 100.0f * getCombatOddsSpecific(pAttacker, pDefender, n_A, iNeededRoundsAttacker), iDefenderHitLimit, n_A, iNeededRoundsAttacker);
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 							}
 						}
 						E_HP_Att_Victory = E_HP_Att;//NOT YET NORMALISED
 						E_HP_Att_Withdraw = E_HP_Att;//NOT YET NORMALIZED
-						prob_bottom_Att_HP = getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender-1,iNeededRoundsAttacker);
-						if((pAttacker->withdrawVSOpponentProbTotal(pDefender, pPlot) - pDefender->pursuitVSOpponentProbTotal(pAttacker)) > 0)
+						prob_bottom_Att_HP = getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender - 1, iNeededRoundsAttacker);
+						if ((pAttacker->withdrawVSOpponentProbTotal(pDefender, pPlot) - pDefender->pursuitVSOpponentProbTotal(pAttacker)) > 0)
 						{
 							// if withdraw odds involved
 							if (ACO_debug)
@@ -5970,12 +6022,12 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							}
 							for (int n_D = 0; n_D < iNeededRoundsAttacker; n_D++)
 							{
-								E_HP_Att += ( (pAttacker->currHitPoints()) - (iNeededRoundsDefender-1)*iDamageToAttacker) * getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender-1,n_D);
-								prob_bottom_Att_HP += getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender-1,n_D);
+								E_HP_Att += ((pAttacker->currHitPoints()) - (iNeededRoundsDefender - 1) * iDamageToAttacker) * getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender - 1, n_D);
+								prob_bottom_Att_HP += getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender - 1, n_D);
 								if (ACO_debug)
 								{
 									szTempBuffer.Format(L"+%d * %.2f%%  (Def %d) (%d:%d)",
-														( (pAttacker->currHitPoints()) - (iNeededRoundsDefender-1)*iDamageToAttacker),100.0f*getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender-1,n_D),(pDefender->currHitPoints())-n_D*iDamageToDefender,iNeededRoundsDefender-1,n_D);
+										((pAttacker->currHitPoints()) - (iNeededRoundsDefender - 1) * iDamageToAttacker), 100.0f * getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender - 1, n_D), (pDefender->currHitPoints()) - n_D * iDamageToDefender, iNeededRoundsDefender - 1, n_D);
 									szString.append(NEWLINE);
 									szString.append(szTempBuffer.GetCString());
 								}
@@ -5993,23 +6045,23 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						{
 							//prob_defend[n_D] = getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender,n_D);//attacker dies
 							//prob_defend[n_D] += getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender-1,n_D);//attacker retreats
-							E_HP_Def += ( (pDefender->currHitPoints()) - n_D*iDamageToDefender) * (getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender,n_D)+getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender-1,n_D));
+							E_HP_Def += ((pDefender->currHitPoints()) - n_D * iDamageToDefender) * (getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender, n_D) + getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender - 1, n_D));
 							if (ACO_debug)
 							{
 								szTempBuffer.Format(L"+%d * %.2f%%  (Att 0 or %d) (%d:%d)",
-													( (pDefender->currHitPoints()) - n_D*iDamageToDefender),100.0f*(getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender,n_D)+getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender-1,n_D)),(pAttacker->currHitPoints())-(iNeededRoundsDefender-1)*iDamageToAttacker,iNeededRoundsDefender,n_D);
+									((pDefender->currHitPoints()) - n_D * iDamageToDefender), 100.0f * (getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender, n_D) + getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender - 1, n_D)), (pAttacker->currHitPoints()) - (iNeededRoundsDefender - 1) * iDamageToAttacker, iNeededRoundsDefender, n_D);
 								szString.append(NEWLINE);
 								szString.append(szTempBuffer.GetCString());
 							}
 						}
-						prob_bottom_Def_HP = getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender,iNeededRoundsAttacker-1);
+						prob_bottom_Def_HP = getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender, iNeededRoundsAttacker - 1);
 						//prob_bottom_Def_HP += getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender-1,iNeededRoundsAttacker-1);
 						E_HP_Def_Defeat = E_HP_Def;
 						E_HP_Def_Withdraw = 0.0f;
 
-						if (pAttacker->combatLimit(pDefender) < (pDefender->maxHitPoints() ))//if attacker has a combatLimit (eg. catapult)
+						if (pAttacker->combatLimit(pDefender) < (pDefender->maxHitPoints()))//if attacker has a combatLimit (eg. catapult)
 						{
-							if (pAttacker->combatLimit(pDefender) == iDamageToDefender*(iNeededRoundsAttacker-1) )
+							if (pAttacker->combatLimit(pDefender) == iDamageToDefender * (iNeededRoundsAttacker - 1))
 							{
 								//Then we have an odd situation because the last successful hit by an attacker will do 0 damage, and doing either iNeededRoundsAttacker or iNeededRoundsAttacker-1 will cause the same damage
 								if (ACO_debug)
@@ -6021,15 +6073,15 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 								for (int n_A = 0; n_A < iNeededRoundsDefender; n_A++)
 								{
 									//prob_defend[iNeededRoundsAttacker-1] += getCombatOddsSpecific(pAttacker,pDefender,n_A,iNeededRoundsAttacker);//this is the defender at the combatLimit
-									E_HP_Def += (float)iDefenderHitLimit * getCombatOddsSpecific(pAttacker,pDefender,n_A,iNeededRoundsAttacker);
+									E_HP_Def += (float)iDefenderHitLimit * getCombatOddsSpecific(pAttacker, pDefender, n_A, iNeededRoundsAttacker);
 									//should be the same as
 									//E_HP_Def += ( (pDefender->currHitPoints()) - (iNeededRoundsAttacker-1)*iDamageToDefender) * getCombatOddsSpecific(pAttacker,pDefender,n_A,iNeededRoundsAttacker);
-									E_HP_Def_Withdraw += (float)iDefenderHitLimit * getCombatOddsSpecific(pAttacker,pDefender,n_A,iNeededRoundsAttacker);
-									prob_bottom_Def_HP += getCombatOddsSpecific(pAttacker,pDefender,n_A,iNeededRoundsAttacker);
+									E_HP_Def_Withdraw += (float)iDefenderHitLimit * getCombatOddsSpecific(pAttacker, pDefender, n_A, iNeededRoundsAttacker);
+									prob_bottom_Def_HP += getCombatOddsSpecific(pAttacker, pDefender, n_A, iNeededRoundsAttacker);
 									if (ACO_debug)
 									{
 										szTempBuffer.Format(L"+%d * %.2f%%  (Att %d) (%d:%d)",
-															iDefenderHitLimit,100.0f*getCombatOddsSpecific(pAttacker,pDefender,n_A,iNeededRoundsAttacker),100-n_A*iDamageToAttacker,n_A,iNeededRoundsAttacker);
+											iDefenderHitLimit, 100.0f * getCombatOddsSpecific(pAttacker, pDefender, n_A, iNeededRoundsAttacker), 100 - n_A * iDamageToAttacker, n_A, iNeededRoundsAttacker);
 										szString.append(NEWLINE);
 										szString.append(szTempBuffer.GetCString());
 									}
@@ -6039,7 +6091,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							{
 								if (ACO_debug)
 								{
-									szTempBuffer.Format(L"Odds that attacker withdraws at combatLimit (normal)",pAttacker->combatLimit(pDefender));
+									szTempBuffer.Format(L"Odds that attacker withdraws at combatLimit (normal)", pAttacker->combatLimit(pDefender));
 									szString.append(NEWLINE);
 									szString.append(szTempBuffer.GetCString());
 								}
@@ -6047,13 +6099,13 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 								for (int n_A = 0; n_A < iNeededRoundsDefender; n_A++)
 								{
 
-									E_HP_Def += (float)iDefenderHitLimit * getCombatOddsSpecific(pAttacker,pDefender,n_A,iNeededRoundsAttacker);
-									E_HP_Def_Withdraw += (float)iDefenderHitLimit * getCombatOddsSpecific(pAttacker,pDefender,n_A,iNeededRoundsAttacker);
-									prob_bottom_Def_HP += getCombatOddsSpecific(pAttacker,pDefender,n_A,iNeededRoundsAttacker);
+									E_HP_Def += (float)iDefenderHitLimit * getCombatOddsSpecific(pAttacker, pDefender, n_A, iNeededRoundsAttacker);
+									E_HP_Def_Withdraw += (float)iDefenderHitLimit * getCombatOddsSpecific(pAttacker, pDefender, n_A, iNeededRoundsAttacker);
+									prob_bottom_Def_HP += getCombatOddsSpecific(pAttacker, pDefender, n_A, iNeededRoundsAttacker);
 									if (ACO_debug)
 									{
 										szTempBuffer.Format(L"+%d * %.2f%%  (Att %d) (%d:%d)",
-															iDefenderHitLimit,100.0f*getCombatOddsSpecific(pAttacker,pDefender,n_A,iNeededRoundsAttacker),GC.getMAX_HIT_POINTS()-n_A*iDamageToAttacker,n_A,iNeededRoundsAttacker);
+											iDefenderHitLimit, 100.0f * getCombatOddsSpecific(pAttacker, pDefender, n_A, iNeededRoundsAttacker), GC.getMAX_HIT_POINTS() - n_A * iDamageToAttacker, n_A, iNeededRoundsAttacker);
 										szString.append(NEWLINE);
 										szString.append(szTempBuffer.GetCString());
 									}
@@ -6075,16 +6127,16 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						float CombatRatio = ((float)(pAttacker->currCombatStr(NULL, NULL))) / ((float)(pDefender->currCombatStr(pPlot, pAttacker)));
 						// THE ALL-IMPORTANT COMBATRATIO
 
-						float AttXP = (pDefender->attackXPValue())/CombatRatio;
-						float DefXP = (pAttacker->defenseXPValue())*CombatRatio;// These two values are simply for the Unrounded XP display
+						float AttXP = (pDefender->attackXPValue()) / CombatRatio;
+						float DefXP = (pAttacker->defenseXPValue()) * CombatRatio;// These two values are simply for the Unrounded XP display
 
 						// General odds
-						if (pAttacker->combatLimit(pDefender) >= (pDefender->maxHitPoints() )) //ie. we can kill the defender... I hope this is the most general form
+						if (pAttacker->combatLimit(pDefender) >= (pDefender->maxHitPoints())) //ie. we can kill the defender... I hope this is the most general form
 						{
 							//float AttackerKillOdds = 0.0f;
 							for (int n_A = 0; n_A < iNeededRoundsDefender; n_A++)
 							{
-								AttackerKillOdds += getCombatOddsSpecific(pAttacker,pDefender,n_A,iNeededRoundsAttacker);
+								AttackerKillOdds += getCombatOddsSpecific(pAttacker, pDefender, n_A, iNeededRoundsAttacker);
 							}//for
 						}
 						else
@@ -6092,7 +6144,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							// else we cannot kill the defender (eg. catapults attacking)
 							for (int n_A = 0; n_A < iNeededRoundsDefender; n_A++)
 							{
-								PullOutOdds += getCombatOddsSpecific(pAttacker,pDefender,n_A,iNeededRoundsAttacker);
+								PullOutOdds += getCombatOddsSpecific(pAttacker, pDefender, n_A, iNeededRoundsAttacker);
 							}//for
 						}
 						//TB Combat Mods - next line adjusted for pursuit
@@ -6100,12 +6152,12 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						{
 							for (int n_D = 0; n_D < iNeededRoundsAttacker; n_D++)
 							{
-								RetreatOdds += getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender-1,n_D);
+								RetreatOdds += getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender - 1, n_D);
 							}//for
 						}
 						for (int n_D = 0; n_D < iNeededRoundsAttacker; n_D++)
 						{
-							DefenderKillOdds += getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender,n_D);
+							DefenderKillOdds += getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender, n_D);
 						}//for
 						//DefenderKillOdds = 1.0f - (AttackerKillOdds + RetreatOdds + PullOutOdds);//this gives slight negative numbers sometimes, I think
 
@@ -6113,14 +6165,14 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 
 						if (iView & getBugOptionINT("ACO__ShowSurvivalOdds", 3, "ACO_SHOW_SURVIVAL_ODDS"))
 						{
-							szTempBuffer.Format(L"%.2f%%",100.0f*(AttackerKillOdds+RetreatOdds+PullOutOdds));
-							szTempBuffer2.Format(L"%.2f%%", 100.0f*(RetreatOdds+PullOutOdds+DefenderKillOdds));
+							szTempBuffer.Format(L"%.2f%%", 100.0f * (AttackerKillOdds + RetreatOdds + PullOutOdds));
+							szTempBuffer2.Format(L"%.2f%%", 100.0f * (RetreatOdds + PullOutOdds + DefenderKillOdds));
 							szString.append(gDLL->getText("TXT_ACO_SurvivalOdds"));
 							szString.append(gDLL->getText("TXT_ACO_VS", szTempBuffer.GetCString(), szTempBuffer2.GetCString()));
 							szString.append(NEWLINE);
 						}
 						//TB Combat Mods - next line adjusted for pursuit
-						if ((pAttacker->withdrawVSOpponentProbTotal(pDefender, pPlot) - pDefender->pursuitVSOpponentProbTotal(pAttacker)) >=100)
+						if ((pAttacker->withdrawVSOpponentProbTotal(pDefender, pPlot) - pDefender->pursuitVSOpponentProbTotal(pAttacker)) >= 100)
 						{
 							// a rare situation indeed (TB - not so unlikely now that withdrawal has become unlimited, held in check by pursuit
 
@@ -6131,16 +6183,16 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						//CvWString szTempBuffer2; // moved to elsewhere in the code (earlier)
 						//CvWString szBuffer; // duplicate
 
-						float prob1 = 100.0f*(AttackerKillOdds + PullOutOdds);//up to win odds
-						float prob2 = prob1 + 100.0f*RetreatOdds;//up to retreat odds
+						float prob1 = 100.0f * (AttackerKillOdds + PullOutOdds);//up to win odds
+						float prob2 = prob1 + 100.0f * RetreatOdds;//up to retreat odds
 
-						float prob = 100.0f*(AttackerKillOdds+RetreatOdds+PullOutOdds);
+						float prob = 100.0f * (AttackerKillOdds + RetreatOdds + PullOutOdds);
 						int pixels_left = 199;// 1 less than 200 to account for right end bar
 						int pixels;
 						int fullBlocks;
 						int lastBlock;
 
-						pixels = (2 * ((int)(prob1 + 0.5)))-1;  // 1% per pixel // subtracting one to account for left end bar
+						pixels = (2 * ((int)(prob1 + 0.5))) - 1;  // 1% per pixel // subtracting one to account for left end bar
 						fullBlocks = pixels / 10;
 						lastBlock = pixels % 10;
 
@@ -6154,11 +6206,11 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						{
 							szTempBuffer2.Format(L"<img=Art/ACO/green_bar_%d.dds>", lastBlock);
 							szString.append(szTempBuffer2);
-							pixels_left-= lastBlock;
+							pixels_left -= lastBlock;
 						}
 
 
-						pixels = 2 * ((int)(prob2 + 0.5)) - (pixels+1);//the number up to the next one...
+						pixels = 2 * ((int)(prob2 + 0.5)) - (pixels + 1);//the number up to the next one...
 						fullBlocks = pixels / 10;
 						lastBlock = pixels % 10;
 						for (int i = 0; i < fullBlocks; ++i)
@@ -6170,7 +6222,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						{
 							szTempBuffer2.Format(L"<img=Art/ACO/yellow_bar_%d.dds>", lastBlock);
 							szString.append(szTempBuffer2);
-							pixels_left-= lastBlock;
+							pixels_left -= lastBlock;
 						}
 
 						fullBlocks = pixels_left / 10;
@@ -6189,16 +6241,16 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 
 
 						szString.append(NEWLINE);
-						if (pAttacker->combatLimit(pDefender) >= (pDefender->maxHitPoints() ))
+						if (pAttacker->combatLimit(pDefender) >= (pDefender->maxHitPoints()))
 						{
 							int iWithdrawOdds = 100 - pDefender->pursuitVSOpponentProbTotal(pAttacker);
 							szTempBuffer.Format(L": " SETCOLR L"%.2f%% " L"%d" ENDCOLR,
-												TEXT_COLOR("COLOR_POSITIVE_TEXT"),100.0f*AttackerKillOdds,iExperience);
+								TEXT_COLOR("COLOR_POSITIVE_TEXT"), 100.0f * AttackerKillOdds, iExperience);
 							szString.append(gDLL->getText("TXT_ACO_Victory"));
 							szString.append(szTempBuffer.GetCString());
 							if (iAttackerExperienceModifier > 0)
 							{
-								szTempBuffer.Format(SETCOLR L"+%d" ENDCOLR,TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"),iBonusAttackerXP);
+								szTempBuffer.Format(SETCOLR L"+%d" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), iBonusAttackerXP);
 								szString.append(szTempBuffer.GetCString());
 							}
 
@@ -6208,7 +6260,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							szString.append("  (");
 							szString.append(gDLL->getText("TXT_KEY_COLOR_POSITIVE"));
 							szTempBuffer.Format(L"%.1f",
-												E_HP_Att_Victory/AttackerKillOdds);
+								E_HP_Att_Victory / AttackerKillOdds);
 							szString.append(szTempBuffer.GetCString());
 							szString.append(gDLL->getText("TXT_ACO_HP"));
 							szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
@@ -6217,13 +6269,13 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						{
 							int iWithdr = pAttacker->withdrawVSOpponentProbTotal(pDefender, pPlot) - pDefender->pursuitVSOpponentProbTotal(pAttacker);
 							szTempBuffer.Format(L": " SETCOLR L"%.2f%% " L"%d" ENDCOLR,
-												TEXT_COLOR("COLOR_POSITIVE_TEXT"),100.0f*PullOutOdds,pAttacker->getExperiencefromWithdrawal(iWithdr));
+								TEXT_COLOR("COLOR_POSITIVE_TEXT"), 100.0f * PullOutOdds, pAttacker->getExperiencefromWithdrawal(iWithdr));
 							//iExperience,TEXT_COLOR("COLOR_POSITIVE_TEXT"), E_HP_Att_Victory/AttackerKillOdds);
 							szString.append(gDLL->getText("TXT_ACO_Withdraw"));
 							szString.append(szTempBuffer.GetCString());
 							if (iAttackerExperienceModifier > 0)
 							{
-								szTempBuffer.Format(SETCOLR L"+%d" ENDCOLR,TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"),iBonusWithdrawXP);
+								szTempBuffer.Format(SETCOLR L"+%d" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), iBonusWithdrawXP);
 								szString.append(szTempBuffer.GetCString());
 							}
 
@@ -6232,13 +6284,13 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
 							szString.append("  (");
 							szString.append(gDLL->getText("TXT_KEY_COLOR_POSITIVE"));
-							szTempBuffer.Format(L"%.1f",E_HP_Att_Withdraw/PullOutOdds);
+							szTempBuffer.Format(L"%.1f", E_HP_Att_Withdraw / PullOutOdds);
 							szString.append(szTempBuffer.GetCString());
 							szString.append(gDLL->getText("TXT_ACO_HP"));
 							szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
 							szString.append(",");
 							szString.append(gDLL->getText("TXT_KEY_COLOR_NEGATIVE"));
-							szTempBuffer.Format(L"%d",iDefenderHitLimit);
+							szTempBuffer.Format(L"%d", iDefenderHitLimit);
 							szString.append(szTempBuffer.GetCString());
 							szString.append(gDLL->getText("TXT_ACO_HP"));
 							szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
@@ -6256,20 +6308,20 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							int iWithdr = pAttacker->withdrawVSOpponentProbTotal(pDefender, pPlot) - pDefender->pursuitVSOpponentProbTotal(pAttacker);
 							szString.append(NEWLINE);
 							szTempBuffer.Format(L": " SETCOLR L"%.2f%% " ENDCOLR SETCOLR L"%d" ENDCOLR,
-												TEXT_COLOR("COLOR_UNIT_TEXT"),100.0f*RetreatOdds,TEXT_COLOR("COLOR_POSITIVE_TEXT"),pAttacker->getExperiencefromWithdrawal(iWithdr));
+								TEXT_COLOR("COLOR_UNIT_TEXT"), 100.0f * RetreatOdds, TEXT_COLOR("COLOR_POSITIVE_TEXT"), pAttacker->getExperiencefromWithdrawal(iWithdr));
 							szString.append(gDLL->getText("TXT_ACO_Retreat"));
 							szString.append(szTempBuffer.GetCString());
 							if (iAttackerExperienceModifier > 0)
 							{
-								szTempBuffer.Format(SETCOLR L"+%d" ENDCOLR,TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"),iBonusWithdrawXP);
+								szTempBuffer.Format(SETCOLR L"+%d" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), iBonusWithdrawXP);
 								szString.append(szTempBuffer.GetCString());
 							}
 							szString.append(gDLL->getText("TXT_KEY_COLOR_POSITIVE"));
 							szString.append(gDLL->getText("TXT_ACO_XP"));
 							szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
 							szString.append("  (");
-							szTempBuffer.Format(SETCOLR L"%d" ENDCOLR ,
-												TEXT_COLOR("COLOR_UNIT_TEXT"),E_HP_Att_Retreat);
+							szTempBuffer.Format(SETCOLR L"%d" ENDCOLR,
+								TEXT_COLOR("COLOR_UNIT_TEXT"), E_HP_Att_Retreat);
 							szString.append(szTempBuffer.GetCString());
 							szString.append(gDLL->getText("TXT_ACO_HP_NEUTRAL"));
 							szString.append(")");
@@ -6278,12 +6330,12 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 
 						szString.append(NEWLINE);
 						szTempBuffer.Format(L": " SETCOLR L"%.2f%% " L"%d" ENDCOLR,
-											TEXT_COLOR("COLOR_NEGATIVE_TEXT"),100.0f*DefenderKillOdds,iDefExperienceKill);
+							TEXT_COLOR("COLOR_NEGATIVE_TEXT"), 100.0f * DefenderKillOdds, iDefExperienceKill);
 						szString.append(gDLL->getText("TXT_ACO_Defeat"));
 						szString.append(szTempBuffer.GetCString());
 						if (iDefenderExperienceModifier > 0)
 						{
-							szTempBuffer.Format(SETCOLR L"+%d" ENDCOLR,TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"),iBonusDefenderXP);
+							szTempBuffer.Format(SETCOLR L"+%d" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), iBonusDefenderXP);
 							szString.append(szTempBuffer.GetCString());
 						}
 						szString.append(gDLL->getText("TXT_KEY_COLOR_NEGATIVE"));
@@ -6292,7 +6344,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						szString.append("  (");
 						szString.append(gDLL->getText("TXT_KEY_COLOR_NEGATIVE"));
 						szTempBuffer.Format(L"%.1f",
-											(iDefenderOdds != 0 ? E_HP_Def_Defeat/(RetreatOdds+DefenderKillOdds):0.0));
+							(iDefenderOdds != 0 ? E_HP_Def_Defeat / (RetreatOdds + DefenderKillOdds) : 0.0));
 						szString.append(szTempBuffer.GetCString());
 						szString.append(gDLL->getText("TXT_ACO_HP"));
 						szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
@@ -6316,14 +6368,14 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						// Individual bars for each attacker HP outcome.
 						if (iView & getBugOptionINT("ACO__ShowAttackerHealthBars", 2, "ACO_SHOW_ATTACKER_HEALTH_BARS"))
 						{
-							for (int n_A = 0; n_A < iNeededRoundsDefender-1; n_A++)
+							for (int n_A = 0; n_A < iNeededRoundsDefender - 1; n_A++)
 							{
-								float prob = 100.0f*getCombatOddsSpecific(pAttacker,pDefender,n_A,iNeededRoundsAttacker);
-								if (prob > HP_percent_cutoff || n_A==0)
+								float prob = 100.0f * getCombatOddsSpecific(pAttacker, pDefender, n_A, iNeededRoundsAttacker);
+								if (prob > HP_percent_cutoff || n_A == 0)
 								{
 									if (bIsCondensed) // then we need to print the prev ones
 									{
-										int pixels = (int)(Scaling_Factor*combined_HP_sum + 0.5);  // 1% per pixel
+										int pixels = (int)(Scaling_Factor * combined_HP_sum + 0.5);  // 1% per pixel
 										int fullBlocks = (pixels) / 10;
 										int lastBlock = (pixels) % 10;
 										//if(pixels>=2) {szString.append(L"<img=Art/ACO/green_bar_left_end.dds>");}
@@ -6342,19 +6394,19 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 										szString.append(L" ");
 
 										szString.append(gDLL->getText("TXT_KEY_COLOR_POSITIVE"));
-										if (last_combined_HP!=first_combined_HP_Att)
+										if (last_combined_HP != first_combined_HP_Att)
 										{
-											szTempBuffer.Format(L"%d",last_combined_HP);
+											szTempBuffer.Format(L"%d", last_combined_HP);
 											szString.append(szTempBuffer.GetCString());
 											szString.append(gDLL->getText("TXT_ACO_HP"));
 											szString.append(gDLL->getText("-"));
 										}
 
-										szTempBuffer.Format(L"%d",first_combined_HP_Att);
+										szTempBuffer.Format(L"%d", first_combined_HP_Att);
 										szString.append(szTempBuffer.GetCString());
 										szString.append(gDLL->getText("TXT_ACO_HP"));
 										szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
-										szTempBuffer.Format(L" %.2f%%",combined_HP_sum);
+										szTempBuffer.Format(L" %.2f%%", combined_HP_sum);
 										szString.append(szTempBuffer.GetCString());
 
 										bIsCondensed = false;//resetting
@@ -6363,7 +6415,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 									}
 
 									szString.append(NEWLINE);
-									int pixels = (int)(Scaling_Factor*prob + 0.5);  // 1% per pixel
+									int pixels = (int)(Scaling_Factor * prob + 0.5);  // 1% per pixel
 									int fullBlocks = (pixels) / 10;
 									int lastBlock = (pixels) % 10;
 									szString.append(L"<img=Art/ACO/green_bar_left_end.dds>");
@@ -6381,19 +6433,19 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 
 									szString.append(gDLL->getText("TXT_KEY_COLOR_POSITIVE"));
 									szTempBuffer.Format(L"%d",
-														((pAttacker->currHitPoints()) - n_A*iDamageToAttacker));
+										((pAttacker->currHitPoints()) - n_A * iDamageToAttacker));
 									szString.append(szTempBuffer.GetCString());
 									szString.append(gDLL->getText("TXT_ACO_HP"));
 									szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
 									szTempBuffer.Format(L" %.2f%%",
-														prob);
+										prob);
 									szString.append(szTempBuffer.GetCString());
 								}
 								else // we add to the condensed list
 								{
 									bIsCondensed = true;
-									first_combined_HP_Att = std::max(first_combined_HP_Att,((pAttacker->currHitPoints()) - n_A*iDamageToAttacker));
-									last_combined_HP = ((pAttacker->currHitPoints()) - n_A*iDamageToAttacker);
+									first_combined_HP_Att = std::max(first_combined_HP_Att, ((pAttacker->currHitPoints()) - n_A * iDamageToAttacker));
+									last_combined_HP = ((pAttacker->currHitPoints()) - n_A * iDamageToAttacker);
 									combined_HP_sum += prob;
 								}
 							}
@@ -6401,7 +6453,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							if (bIsCondensed) // then we need to print the prev ones
 							{
 								szString.append(NEWLINE);
-								int pixels = (int)(Scaling_Factor*combined_HP_sum + 0.5);  // 1% per pixel
+								int pixels = (int)(Scaling_Factor * combined_HP_sum + 0.5);  // 1% per pixel
 								int fullBlocks = (pixels) / 10;
 								int lastBlock = (pixels) % 10;
 
@@ -6420,18 +6472,18 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 								szString.append(L" ");
 
 								szString.append(gDLL->getText("TXT_KEY_COLOR_POSITIVE"));
-								if (last_combined_HP!=first_combined_HP_Att)
+								if (last_combined_HP != first_combined_HP_Att)
 								{
-									szTempBuffer.Format(L"%d",last_combined_HP);
+									szTempBuffer.Format(L"%d", last_combined_HP);
 									szString.append(szTempBuffer.GetCString());
 									szString.append(gDLL->getText("TXT_ACO_HP"));
 									szString.append(gDLL->getText("-"));
 								}
-								szTempBuffer.Format(L"%d",first_combined_HP_Att);
+								szTempBuffer.Format(L"%d", first_combined_HP_Att);
 								szString.append(szTempBuffer.GetCString());
 								szString.append(gDLL->getText("TXT_ACO_HP"));
 								szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
-								szTempBuffer.Format(L" %.2f%%",combined_HP_sum);
+								szTempBuffer.Format(L" %.2f%%", combined_HP_sum);
 								szString.append(szTempBuffer.GetCString());
 
 								bIsCondensed = false;//resetting
@@ -6441,20 +6493,20 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							// At the moment I am not allowing the lowest Attacker HP value to be condensed, as it would be confusing if it includes retreat odds
 							// I may include this in the future though, but probably only if retreat odds are zero.
 
-							float prob_victory = 100.0f*getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender-1,iNeededRoundsAttacker);
-							float prob_retreat = 100.0f*RetreatOdds;
+							float prob_victory = 100.0f * getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender - 1, iNeededRoundsAttacker);
+							float prob_retreat = 100.0f * RetreatOdds;
 
 							szString.append(NEWLINE);
-							int green_pixels = (int)(Scaling_Factor*prob_victory + 0.5);
-							int yellow_pixels = (int)(Scaling_Factor*(prob_retreat+prob_victory) + 0.5) - green_pixels;//makes the total length of the bar more accurate - more important than the length of the pieces
-							green_pixels+=1;//we put an extra 2 on every one of the bar pixel counts
-							if (yellow_pixels>=1)
+							int green_pixels = (int)(Scaling_Factor * prob_victory + 0.5);
+							int yellow_pixels = (int)(Scaling_Factor * (prob_retreat + prob_victory) + 0.5) - green_pixels;//makes the total length of the bar more accurate - more important than the length of the pieces
+							green_pixels += 1;//we put an extra 2 on every one of the bar pixel counts
+							if (yellow_pixels >= 1)
 							{
-								yellow_pixels+=1;
+								yellow_pixels += 1;
 							}
 							else
 							{
-								green_pixels+=1;
+								green_pixels += 1;
 							}
 							szString.append(L"<img=Art/ACO/green_bar_left_end.dds>");
 							green_pixels--;
@@ -6471,7 +6523,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 								szTempBuffer2.Format(L"<img=Art/ACO/green_bar_%d.dds>", lastBlock);
 								szString.append(szTempBuffer2);
 							}//if
-							if (yellow_pixels>=1)// then there will at least be a right end yellow pixel
+							if (yellow_pixels >= 1)// then there will at least be a right end yellow pixel
 							{
 								yellow_pixels--;//subtracting off right end
 								fullBlocks = yellow_pixels / 10;
@@ -6496,11 +6548,11 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 
 							szString.append(L" ");
 							szString.append(gDLL->getText("TXT_KEY_COLOR_POSITIVE"));
-							szTempBuffer.Format(L"%d",((pAttacker->currHitPoints()) - (iNeededRoundsDefender-1)*iDamageToAttacker));
+							szTempBuffer.Format(L"%d", ((pAttacker->currHitPoints()) - (iNeededRoundsDefender - 1) * iDamageToAttacker));
 							szString.append(szTempBuffer.GetCString());
 							szString.append(gDLL->getText("TXT_ACO_HP"));
 							szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
-							szTempBuffer.Format(L" %.2f%%",prob_victory+prob_retreat);
+							szTempBuffer.Format(L" %.2f%%", prob_victory + prob_retreat);
 							szString.append(szTempBuffer.GetCString());
 						}
 						//END ATTACKER DETAIL HP HERE
@@ -6523,17 +6575,17 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 									}
 								}
 
-								def_HP = std::max((pDefender->currHitPoints()) - n_D*iDamageToDefender,(pDefender->maxHitPoints()  - pAttacker->combatLimit(pDefender)));
+								def_HP = std::max((pDefender->currHitPoints()) - n_D * iDamageToDefender, (pDefender->maxHitPoints() - pAttacker->combatLimit(pDefender)));
 
-								if ( (pDefender->maxHitPoints() - pAttacker->combatLimit(pDefender) ) == pDefender->currHitPoints() - (n_D-1)*iDamageToDefender)
+								if ((pDefender->maxHitPoints() - pAttacker->combatLimit(pDefender)) == pDefender->currHitPoints() - (n_D - 1) * iDamageToDefender)
 								{
 									// if abnormal
 									if (n_D == iNeededRoundsAttacker)
 									{
 										n_D--;
-										def_HP = (pDefender->maxHitPoints()  - pAttacker->combatLimit(pDefender));
-										prob += 100.0f*PullOutOdds;
-										prob += 100.0f*(getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender,n_D)+(getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender-1,n_D)));
+										def_HP = (pDefender->maxHitPoints() - pAttacker->combatLimit(pDefender));
+										prob += 100.0f * PullOutOdds;
+										prob += 100.0f * (getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender, n_D) + (getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender - 1, n_D)));
 									}
 								}
 								else
@@ -6541,21 +6593,21 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 									//not abnormal
 									if (n_D == iNeededRoundsAttacker)
 									{
-										prob += 100.0f*PullOutOdds;
+										prob += 100.0f * PullOutOdds;
 									}
 									else
 									{
-										prob += 100.0f*(getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender,n_D)+(getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender-1,n_D)));
+										prob += 100.0f * (getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender, n_D) + (getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender - 1, n_D)));
 									}
 								}
 
-								if (prob > HP_percent_cutoff || (pAttacker->combatLimit(pDefender)<pDefender->maxHitPoints() && (n_D==iNeededRoundsAttacker)))
+								if (prob > HP_percent_cutoff || (pAttacker->combatLimit(pDefender) < pDefender->maxHitPoints() && (n_D == iNeededRoundsAttacker)))
 								{
 									if (bIsCondensed) // then we need to print the prev ones
 									{
 										szString.append(NEWLINE);
 
-										int pixels = (int)(Scaling_Factor*combined_HP_sum + 0.5);  // 1% per pixel
+										int pixels = (int)(Scaling_Factor * combined_HP_sum + 0.5);  // 1% per pixel
 										int fullBlocks = (pixels) / 10;
 										int lastBlock = (pixels) % 10;
 										szString.append(L"<img=Art/ACO/red_bar_left_end.dds>");
@@ -6571,19 +6623,19 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 										szString.append(L"<img=Art/ACO/red_bar_right_end.dds>");
 										szString.append(L" ");
 										szString.append(gDLL->getText("TXT_KEY_COLOR_NEGATIVE"));
-										szTempBuffer.Format(L"%dHP",first_combined_HP_Def);
+										szTempBuffer.Format(L"%dHP", first_combined_HP_Def);
 										szString.append(szTempBuffer.GetCString());
 										szString.append(gDLL->getText("TXT_ACO_HP"));
-										if (first_combined_HP_Def!=last_combined_HP)
+										if (first_combined_HP_Def != last_combined_HP)
 										{
 											szString.append("-");
-											szTempBuffer.Format(L"%d",last_combined_HP);
+											szTempBuffer.Format(L"%d", last_combined_HP);
 											szString.append(szTempBuffer.GetCString());
 											szString.append(gDLL->getText("TXT_ACO_HP"));
 										}
 										szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
 										szTempBuffer.Format(L" %.2f%%",
-															combined_HP_sum);
+											combined_HP_sum);
 										szString.append(szTempBuffer.GetCString());
 
 										bIsCondensed = false;//resetting
@@ -6591,50 +6643,50 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 									}
 
 									szString.append(NEWLINE);
-									int pixels = (int)(Scaling_Factor*prob + 0.5);  // 1% per pixel
+									int pixels = (int)(Scaling_Factor * prob + 0.5);  // 1% per pixel
 									int fullBlocks = (pixels) / 10;
 									int lastBlock = (pixels) % 10;
 									//if(pixels>=2) // this is now guaranteed by the way we define number of pixels
 									//{
-										szString.append(L"<img=Art/ACO/red_bar_left_end.dds>");
-										for (int iI = 0; iI < fullBlocks; ++iI)
-										{
-											szString.append(L"<img=Art/ACO/red_bar_10.dds>");
-										}
-										if (lastBlock > 0)
-										{
-											szTempBuffer2.Format(L"<img=Art/ACO/red_bar_%d.dds>", lastBlock);
-											szString.append(szTempBuffer2);
-										}
-										szString.append(L"<img=Art/ACO/red_bar_right_end.dds>");
+									szString.append(L"<img=Art/ACO/red_bar_left_end.dds>");
+									for (int iI = 0; iI < fullBlocks; ++iI)
+									{
+										szString.append(L"<img=Art/ACO/red_bar_10.dds>");
+									}
+									if (lastBlock > 0)
+									{
+										szTempBuffer2.Format(L"<img=Art/ACO/red_bar_%d.dds>", lastBlock);
+										szString.append(szTempBuffer2);
+									}
+									szString.append(L"<img=Art/ACO/red_bar_right_end.dds>");
 									//}
 									szString.append(L" ");
 
 									szTempBuffer.Format(SETCOLR L"%d" ENDCOLR,
-														TEXT_COLOR("COLOR_NEGATIVE_TEXT"),def_HP);
+										TEXT_COLOR("COLOR_NEGATIVE_TEXT"), def_HP);
 									szString.append(szTempBuffer.GetCString());
 									szString.append(gDLL->getText("TXT_KEY_COLOR_NEGATIVE"));
 									szString.append(gDLL->getText("TXT_ACO_HP"));
 									szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
-									szTempBuffer.Format(L" %.2f%%",prob);
+									szTempBuffer.Format(L" %.2f%%", prob);
 									szString.append(szTempBuffer.GetCString());
 								}
 								else
 								{
 									bIsCondensed = true;
-									first_combined_HP_Def = (std::min(first_combined_HP_Def,def_HP));
-									last_combined_HP = std::max(((pDefender->currHitPoints()) - n_D*iDamageToDefender),pDefender->maxHitPoints()-pAttacker->combatLimit(pDefender));
+									first_combined_HP_Def = (std::min(first_combined_HP_Def, def_HP));
+									last_combined_HP = std::max(((pDefender->currHitPoints()) - n_D * iDamageToDefender), pDefender->maxHitPoints() - pAttacker->combatLimit(pDefender));
 									combined_HP_sum += prob;
 								}
 								prob = 0.0f;
 							}//for n_D
 
 
-							if (bIsCondensed && iNeededRoundsAttacker>1) // then we need to print the prev ones
+							if (bIsCondensed && iNeededRoundsAttacker > 1) // then we need to print the prev ones
 								// the reason we need iNeededRoundsAttacker to be greater than 1 is that if it's equal to 1 then we end up with the defender detailed HP bar show up twice, because it will also get printed below
 							{
 								szString.append(NEWLINE);
-								int pixels = (int)(Scaling_Factor*combined_HP_sum + 0.5);  // 1% per pixel
+								int pixels = (int)(Scaling_Factor * combined_HP_sum + 0.5);  // 1% per pixel
 								int fullBlocks = (pixels) / 10;
 								int lastBlock = (pixels) % 10;
 								//if(pixels>=2) {szString.append(L"<img=Art/ACO/green_bar_left_end.dds>");}
@@ -6651,17 +6703,17 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 								szString.append(L"<img=Art/ACO/red_bar_right_end.dds>");
 								szString.append(L" ");
 								szString.append(gDLL->getText("TXT_KEY_COLOR_NEGATIVE"));
-								szTempBuffer.Format(L"%d",first_combined_HP_Def);
+								szTempBuffer.Format(L"%d", first_combined_HP_Def);
 								szString.append(szTempBuffer.GetCString());
 								szString.append(gDLL->getText("TXT_ACO_HP"));
 								if (first_combined_HP_Def != last_combined_HP)
 								{
-									szTempBuffer.Format(L"-%d",last_combined_HP);
+									szTempBuffer.Format(L"-%d", last_combined_HP);
 									szString.append(szTempBuffer.GetCString());
 									szString.append(gDLL->getText("TXT_ACO_HP"));
 								}
 								szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
-								szTempBuffer.Format(L" %.2f%%",combined_HP_sum);
+								szTempBuffer.Format(L" %.2f%%", combined_HP_sum);
 								szString.append(szTempBuffer.GetCString());
 
 								bIsCondensed = false;//resetting
@@ -6670,8 +6722,8 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 
 							//print the unhurt value...always
 
-							prob = 100.0f*(getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender,0)+(getCombatOddsSpecific(pAttacker,pDefender,iNeededRoundsDefender-1,0)));
-							int pixels = (int)(Scaling_Factor*prob + 0.5);  // 1% per pixel
+							prob = 100.0f * (getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender, 0) + (getCombatOddsSpecific(pAttacker, pDefender, iNeededRoundsDefender - 1, 0)));
+							int pixels = (int)(Scaling_Factor * prob + 0.5);  // 1% per pixel
 							int fullBlocks = (pixels) / 10;
 							int lastBlock = (pixels) % 10;
 
@@ -6689,11 +6741,11 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							szString.append(L"<img=Art/ACO/red_bar_right_end.dds>");
 							szString.append(L" ");
 							szString.append(gDLL->getText("TXT_KEY_COLOR_NEGATIVE"));
-							szTempBuffer.Format(L"%d",pDefender->currHitPoints());
+							szTempBuffer.Format(L"%d", pDefender->currHitPoints());
 							szString.append(szTempBuffer.GetCString());
 							szString.append(gDLL->getText("TXT_ACO_HP"));
 							szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
-							szTempBuffer.Format(L" %.2f%%",prob);
+							szTempBuffer.Format(L" %.2f%%", prob);
 							szString.append(szTempBuffer.GetCString());
 						}
 						//END DEFENDER DETAIL HP HERE
@@ -6703,27 +6755,27 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						if (iView & getBugOptionINT("ACO__ShowBasicInfo", 3, "ACO_SHOW_BASIC_INFO"))
 						{
 							szTempBuffer.Format(SETCOLR L"%d" ENDCOLR L", " SETCOLR L"%d " ENDCOLR,
-												TEXT_COLOR("COLOR_POSITIVE_TEXT"), iDamageToDefender, TEXT_COLOR("COLOR_NEGATIVE_TEXT"), iDamageToAttacker);
+								TEXT_COLOR("COLOR_POSITIVE_TEXT"), iDamageToDefender, TEXT_COLOR("COLOR_NEGATIVE_TEXT"), iDamageToAttacker);
 							szString.append(NEWLINE);
 							szString.append(szTempBuffer.GetCString());
 							szString.append(gDLL->getText("TXT_ACO_HP"));
 							szString.append(" ");
 							szString.append(gDLL->getText("TXT_ACO_MULTIPLY"));
 							szTempBuffer.Format(L" " SETCOLR L"%d" ENDCOLR L", " SETCOLR L"%d " ENDCOLR,
-												TEXT_COLOR("COLOR_POSITIVE_TEXT"),iNeededRoundsAttacker,TEXT_COLOR("COLOR_NEGATIVE_TEXT"),
-												iNeededRoundsDefender);
+								TEXT_COLOR("COLOR_POSITIVE_TEXT"), iNeededRoundsAttacker, TEXT_COLOR("COLOR_NEGATIVE_TEXT"),
+								iNeededRoundsDefender);
 							szString.append(szTempBuffer.GetCString());
 							szString.append(gDLL->getText("TXT_ACO_HitsAt"));
 							szTempBuffer.Format(SETCOLR L" %.1f%%" ENDCOLR,
-												TEXT_COLOR("COLOR_POSITIVE_TEXT"),float(iAttackerOdds)*100.0f / float(GC.getDefineINT("COMBAT_DIE_SIDES")));
+								TEXT_COLOR("COLOR_POSITIVE_TEXT"), float(iAttackerOdds) * 100.0f / float(GC.getDefineINT("COMBAT_DIE_SIDES")));
 							szString.append(szTempBuffer.GetCString());
 						}
-						if (!(iView & getBugOptionINT("ACO__ShowExperienceRange", 2, "ACO_SHOW_EXPERIENCE_RANGE")) || (pAttacker->combatLimit(pDefender) < (pDefender->maxHitPoints() ))) //medium and high only
+						if (!(iView & getBugOptionINT("ACO__ShowExperienceRange", 2, "ACO_SHOW_EXPERIENCE_RANGE")) || (pAttacker->combatLimit(pDefender) < (pDefender->maxHitPoints()))) //medium and high only
 						{
 							if (iView & getBugOptionINT("ACO__ShowBasicInfo", 3, "ACO_SHOW_BASIC_INFO"))
 							{
 								szTempBuffer.Format(L". R=" SETCOLR L"%.2f" ENDCOLR,
-													TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"),CombatRatio);
+									TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), CombatRatio);
 								szString.append(szTempBuffer.GetCString());
 							}
 						}
@@ -6732,7 +6784,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							//we do an XP range display
 							//This should hopefully now work for any max and min XP values.
 
-							if (pAttacker->combatLimit(pDefender) == (pDefender->maxHitPoints() ))
+							if (pAttacker->combatLimit(pDefender) == (pDefender->maxHitPoints()))
 							{
 								FAssert(GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT") > GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT")); //ensuring the differences is at least 1
 								int size = GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT") - GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT");
@@ -6740,27 +6792,27 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 
 								for (int i = 0; i < size; i++) //setup the array
 								{
-									CombatRatioThresholds[i] = ((float)(pDefender->attackXPValue()))/((float)(GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT")-i));
+									CombatRatioThresholds[i] = ((float)(pDefender->attackXPValue())) / ((float)(GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT") - i));
 									//For standard game, this is the list created:
 									//  {4/10, 4/9, 4/8,
 									//   4/7, 4/6, 4/5,
 									//   4/4, 4/3, 4/2}
 								}
-								for (int i = size-1; i >= 0; i--) // find which range we are in
+								for (int i = size - 1; i >= 0; i--) // find which range we are in
 								{
 									//starting at i = 8, going through to i = 0
-									if (CombatRatio>CombatRatioThresholds[i])
+									if (CombatRatio > CombatRatioThresholds[i])
 									{
 
-										if (i== (size-1) )//highest XP value already
+										if (i == (size - 1))//highest XP value already
 										{
 											szString.append(NEWLINE);
 											szTempBuffer.Format(L"(%.2f:%d",
-																CombatRatioThresholds[i],GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT")+1);
+												CombatRatioThresholds[i], GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT") + 1);
 											szString.append(szTempBuffer.GetCString());
 											szString.append(gDLL->getText("TXT_ACO_XP"));
 											szTempBuffer.Format(L"), (R=" SETCOLR L"%.2f" ENDCOLR L":%d",
-																TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"),CombatRatio,iExperience);
+												TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), CombatRatio, iExperience);
 											szString.append(szTempBuffer.GetCString());
 											szString.append(gDLL->getText("TXT_ACO_XP"));
 											szString.append(")");
@@ -6769,15 +6821,15 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 										{
 											szString.append(NEWLINE);
 											szTempBuffer.Format(L"(%.2f:%d",
-																CombatRatioThresholds[i],GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT")-i);
+												CombatRatioThresholds[i], GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT") - i);
 											szString.append(szTempBuffer.GetCString());
 											szString.append(gDLL->getText("TXT_ACO_XP"));
 											szTempBuffer.Format(L"), (R=" SETCOLR L"%.2f" ENDCOLR L":%d",
-																TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"),CombatRatio,GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT")-(i+1));
+												TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), CombatRatio, GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT") - (i + 1));
 											szString.append(szTempBuffer.GetCString());
 											szString.append(gDLL->getText("TXT_ACO_XP"));
 											szTempBuffer.Format(L"), (>%.2f:%d",
-																CombatRatioThresholds[i+1],GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT")-(i+2));
+												CombatRatioThresholds[i + 1], GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT") - (i + 2));
 											szString.append(szTempBuffer.GetCString());
 											szString.append(gDLL->getText("TXT_ACO_XP"));
 											szString.append(")");
@@ -6787,15 +6839,15 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 									}
 									else//very rare (ratio less than or equal to 0.4)
 									{
-										if (i==0)//maximum XP
+										if (i == 0)//maximum XP
 										{
 											szString.append(NEWLINE);
 											szTempBuffer.Format(L"(R=" SETCOLR L"%.2f" ENDCOLR L":%d",
-																TEXT_COLOR("COLOR_POSITIVE_TEXT"),CombatRatio,GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
+												TEXT_COLOR("COLOR_POSITIVE_TEXT"), CombatRatio, GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
 											szString.append(szTempBuffer.GetCString());
 
 											szTempBuffer.Format(L"), (>%.2f:%d",
-																CombatRatioThresholds[i],GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT")-1);
+												CombatRatioThresholds[i], GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT") - 1);
 											szString.append(szTempBuffer.GetCString());
 											szString.append(gDLL->getText("TXT_ACO_XP"));
 											szString.append(")");
@@ -6812,16 +6864,16 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 
 						if (iView & getBugOptionINT("ACO__ShowAverageHealth", 2, "ACO_SHOW_AVERAGE_HEALTH"))
 						{
-							szTempBuffer.Format(L"%.1f",E_HP_Att);
-							szTempBuffer2.Format(L"%.1f",E_HP_Def);
+							szTempBuffer.Format(L"%.1f", E_HP_Att);
+							szTempBuffer2.Format(L"%.1f", E_HP_Def);
 							szString.append(gDLL->getText("TXT_ACO_AverageHP"));
 							szString.append(gDLL->getText("TXT_ACO_VS", szTempBuffer.GetCString(), szTempBuffer2.GetCString()));
 						}
 
 						if (iView & getBugOptionINT("ACO__ShowUnharmedOdds", 2, "ACO_SHOW_UNHARMED_ODDS"))
 						{
-							szTempBuffer.Format(L"%.2f%%",100.0f*AttackerUnharmed);
-							szTempBuffer2.Format(L"%.2f%%",100.0f*DefenderUnharmed);
+							szTempBuffer.Format(L"%.2f%%", 100.0f * AttackerUnharmed);
+							szTempBuffer2.Format(L"%.2f%%", 100.0f * DefenderUnharmed);
 							szString.append(gDLL->getText("TXT_ACO_Unharmed"));
 							szString.append(gDLL->getText("TXT_ACO_VS", szTempBuffer.GetCString(), szTempBuffer2.GetCString()));
 						}
@@ -6848,39 +6900,39 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							szString.append(gDLL->getText("TXT_TB_PRESSALT_STR"));
 							szString.append(NEWLINE);
 						}
-							//TB Display Mod end
+						//TB Display Mod end
 
 						szString.append(NEWLINE);
 
 						szTempBuffer.Format(L"%.2f",
-											((pAttacker->getDomainType() == DOMAIN_AIR) ? pAttacker->airCurrCombatStrFloat(pDefender) : pAttacker->currCombatStrFloat(NULL, NULL)));
+							((pAttacker->getDomainType() == DOMAIN_AIR) ? pAttacker->airCurrCombatStrFloat(pDefender) : pAttacker->currCombatStrFloat(NULL, NULL)));
 
 						if (pAttacker->isHurt())
 						{
 							szTempBuffer.append(L" (");
 							szTempBuffer.append(gDLL->getText("TXT_ACO_INJURED_HP",
-															pAttacker->currHitPoints(),
-															pAttacker->maxHitPoints()));
+								pAttacker->currHitPoints(),
+								pAttacker->maxHitPoints()));
 							szTempBuffer.append(L")");
 						}
 
 
 						szTempBuffer2.Format(L"%.2f",
-											pDefender->currCombatStrFloat(pPlot, pAttacker)
-											);
+							pDefender->currCombatStrFloat(pPlot, pAttacker)
+						);
 
 						if (pDefender->isHurt())
 						{
 							szTempBuffer2.append(L" (");
 							szTempBuffer2.append(gDLL->getText("TXT_ACO_INJURED_HP",
-															pDefender->currHitPoints(),
-															pDefender->maxHitPoints()));
+								pDefender->currHitPoints(),
+								pDefender->maxHitPoints()));
 							szTempBuffer2.append(L")");
 						}
 
 						szString.append(gDLL->getText("TXT_ACO_VS", szTempBuffer.GetCString(), szTempBuffer2.GetCString()));
 
-						if (((!(pDefender->immuneToFirstStrikes())) && (pAttacker->maxFirstStrikes() > 0)) || (pAttacker->maxCombatStr(NULL,NULL)!=pAttacker->baseCombatStr()*100))
+						if (((!(pDefender->immuneToFirstStrikes())) && (pAttacker->maxFirstStrikes() > 0)) || (pAttacker->maxCombatStr(NULL, NULL) != pAttacker->baseCombatStr() * 100))
 						{
 							//if attacker uninjured strength is not the same as base strength (i.e. modifiers are in effect) or first strikes exist, then
 							if (getBugOptionBOOL("ACO__ShowModifierLabels", false, "ACO_SHOW_MODIFIER_LABELS"))
@@ -6896,10 +6948,10 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						}
 
 
-		  
+
 						szString.append(gDLL->getText("TXT_KEY_COLOR_POSITIVE"));
 						szString.append(L' ');//XXX
-						
+
 						if (!bStealthAttack && !bStealthDefense)
 						{
 							if (!(pDefender->immuneToFirstStrikes()))
@@ -6953,7 +7005,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
 						szString.append(L' ');//XXX
 
-						if (((!(pAttacker->immuneToFirstStrikes())) && (pDefender->maxFirstStrikes() > 0)) || (pDefender->maxCombatStr(pPlot,pAttacker)!=pDefender->baseCombatStr()*100) || bStealthDefense)
+						if (((!(pAttacker->immuneToFirstStrikes())) && (pDefender->maxFirstStrikes() > 0)) || (pDefender->maxCombatStr(pPlot, pAttacker) != pDefender->baseCombatStr() * 100) || bStealthDefense)
 						{
 							//if attacker uninjured strength is not the same as base strength (i.e. modifiers are in effect) or first strikes exist, then
 							if (getBugOptionBOOL("ACO__ShowModifierLabels", false, "ACO_SHOW_MODIFIER_LABELS"))
@@ -7056,10 +7108,10 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							{
 								iModifier = pDefender->defenseCombatModifierTotal();
 
-							  if (iModifier != 0)
+								if (iModifier != 0)
 								{
-								 szString.append(NEWLINE);
-								 szString.append(gDLL->getText("TXT_KEY_COMBAT_DEFENSE_MODIFIER", iModifier));
+									szString.append(NEWLINE);
+									szString.append(gDLL->getText("TXT_KEY_COMBAT_DEFENSE_MODIFIER", iModifier));
 								}
 							}
 
@@ -7067,10 +7119,10 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							{
 								iModifier = pAttacker->vsBarbsModifier();
 
-							  if (iModifier != 0)
+								if (iModifier != 0)
 								{
-								 szString.append(NEWLINE);
-								 szString.append(gDLL->getText("TXT_KEY_COMBAT_VSBARBS", iModifier));
+									szString.append(NEWLINE);
+									szString.append(gDLL->getText("TXT_KEY_COMBAT_VSBARBS", iModifier));
 								}
 							}
 
@@ -7235,7 +7287,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 									}
 								}
 							}
-							
+
 							//TB SubCombat Mod End
 							iModifier = pDefender->domainModifier(pAttacker->getDomainType());
 
@@ -7260,31 +7312,31 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							int iOverrun = pAttacker->overrunTotal();
 							int iOverrunHundred = (iOverrun > 100 ? 100 : iOverrun);
 							int iOverrunTotal = 100 - (iOverrunHundred < 0 ? 0 : iOverrunHundred);
-							int iFortModTotal = (iFort * iOverrunTotal)/100;
+							int iFortModTotal = (iFort * iOverrunTotal) / 100;
 							iModifier = iFortModTotal;
 							//TB Display Mod Begin
 							if (!bTBView && iModifier != 0)
 							{
 								szString.append(NEWLINE);
 								szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_FORTIFY_MOD", iModifier));
-							}	
+							}
 
 							if (bTBView && iFort > 0)
 							{
 								szString.append(NEWLINE);
 								szTempBuffer.Format(SETCOLR L"Fortification Mod: %d%" ENDCOLR,
-												TEXT_COLOR("COLOR_RED"), iFort);
+									TEXT_COLOR("COLOR_RED"), iFort);
 								szString.append(szTempBuffer.GetCString());
 								if (iOverrun > 0)
 								{
-								szString.append(NEWLINE);
-								szTempBuffer.Format(SETCOLR L"Attacker Overrun: %d" ENDCOLR,
-												TEXT_COLOR("COLOR_RED"), iOverrun);
-								szString.append(NEWLINE);
-								szString.append(szTempBuffer.GetCString());
-								szTempBuffer.Format(SETCOLR L"Total Fortification: %d%" ENDCOLR,
-												TEXT_COLOR("COLOR_RED"), iModifier);
-								szString.append(szTempBuffer.GetCString());
+									szString.append(NEWLINE);
+									szTempBuffer.Format(SETCOLR L"Attacker Overrun: %d" ENDCOLR,
+										TEXT_COLOR("COLOR_RED"), iOverrun);
+									szString.append(NEWLINE);
+									szString.append(szTempBuffer.GetCString());
+									szTempBuffer.Format(SETCOLR L"Total Fortification: %d%" ENDCOLR,
+										TEXT_COLOR("COLOR_RED"), iModifier);
+									szString.append(szTempBuffer.GetCString());
 								}
 							}
 							//TB Display Mod end
@@ -7351,10 +7403,10 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							{
 								iModifier = pAttacker->attackCombatModifierTotal();
 
-							  if (iModifier != 0)
+								if (iModifier != 0)
 								{
-								 szString.append(NEWLINE);
-								 szString.append(gDLL->getText("TXT_KEY_COMBAT_ATTACK_MODIFIER", iModifier));
+									szString.append(NEWLINE);
+									szString.append(gDLL->getText("TXT_KEY_COMBAT_ATTACK_MODIFIER", iModifier));
 								}
 							}
 
@@ -7366,10 +7418,10 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 								iPerTotal = pAttacker->combatModifierPerSizeMoreTotal() * iOffset;
 								iModifier = -iPerTotal;
 
-							  if (iModifier != 0)
+								if (iModifier != 0)
 								{
-								 szString.append(NEWLINE);
-								 szString.append(gDLL->getText("TXT_KEY_COMBAT_ATTACK_FROM_SIZE_MODIFIER", iModifier));
+									szString.append(NEWLINE);
+									szString.append(gDLL->getText("TXT_KEY_COMBAT_ATTACK_FROM_SIZE_MODIFIER", iModifier));
 								}
 							}
 
@@ -7381,10 +7433,10 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 								iPerTotal = pAttacker->combatModifierPerVolumeMoreTotal() * iOffset;
 								iModifier = -iPerTotal;
 
-							  if (iModifier != 0)
+								if (iModifier != 0)
 								{
-								 szString.append(NEWLINE);
-								 szString.append(gDLL->getText("TXT_KEY_COMBAT_ATTACK_FROM_VOLUME_MODIFIER", iModifier));
+									szString.append(NEWLINE);
+									szString.append(gDLL->getText("TXT_KEY_COMBAT_ATTACK_FROM_VOLUME_MODIFIER", iModifier));
 								}
 							}
 
@@ -7396,10 +7448,10 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 								iPerTotal = pAttacker->combatModifierPerSizeLessTotal() * -iOffset;
 								iModifier = -iPerTotal;
 
-							  if (iModifier != 0)
+								if (iModifier != 0)
 								{
-								 szString.append(NEWLINE);
-								 szString.append(gDLL->getText("TXT_KEY_COMBAT_ATTACK_FROM_SIZE_MODIFIER", iModifier));
+									szString.append(NEWLINE);
+									szString.append(gDLL->getText("TXT_KEY_COMBAT_ATTACK_FROM_SIZE_MODIFIER", iModifier));
 								}
 							}
 
@@ -7411,10 +7463,10 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 								iPerTotal = pAttacker->combatModifierPerVolumeLessTotal() * -iOffset;
 								iModifier = -iPerTotal;
 
-							  if (iModifier != 0)
+								if (iModifier != 0)
 								{
-								 szString.append(NEWLINE);
-								 szString.append(gDLL->getText("TXT_KEY_COMBAT_ATTACK_FROM_VOLUME_MODIFIER", iModifier));
+									szString.append(NEWLINE);
+									szString.append(gDLL->getText("TXT_KEY_COMBAT_ATTACK_FROM_VOLUME_MODIFIER", iModifier));
 								}
 							}
 
@@ -7424,11 +7476,11 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 
 								if (iModifier != 0)
 								{
-								 szString.append(NEWLINE);
-								 szString.append(gDLL->getText("TXT_KEY_COMBAT_VSBARBS", iModifier));
+									szString.append(NEWLINE);
+									szString.append(gDLL->getText("TXT_KEY_COMBAT_VSBARBS", iModifier));
 								}
 							}
-							
+
 							for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 							{
 								if (pDefender->isHasUnitCombat((UnitCombatTypes)iI))
@@ -7442,7 +7494,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 									}
 								}
 							}
-							
+
 							for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 							{
 								if (pDefender->isHasUnitCombat((UnitCombatTypes)iI))
@@ -7456,7 +7508,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 									}
 								}
 							}
-							
+
 							for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 							{
 								if (pDefender->isHasUnitCombat((UnitCombatTypes)iI))
@@ -7470,7 +7522,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 									}
 								}
 							}
-							
+
 							for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 							{
 								if (pDefender->isHasUnitCombat((UnitCombatTypes)iI))
@@ -7484,7 +7536,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 									}
 								}
 							}
-							
+
 							for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 							{
 								if (pDefender->isHasUnitCombat((UnitCombatTypes)iI))
@@ -7498,7 +7550,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 									}
 								}
 							}
-							
+
 							for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 							{
 								if (pDefender->isHasUnitCombat((UnitCombatTypes)iI))
@@ -7512,7 +7564,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 									}
 								}
 							}
-							
+
 							for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 							{
 								if (pDefender->isHasUnitCombat((UnitCombatTypes)iI))
@@ -7526,7 +7578,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 									}
 								}
 							}
-							
+
 							for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 							{
 								if (pDefender->isHasUnitCombat((UnitCombatTypes)iI))
@@ -7540,7 +7592,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 									}
 								}
 							}
-							
+
 							for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 							{
 								if (pDefender->isHasUnitCombat((UnitCombatTypes)iI))
@@ -7554,7 +7606,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 									}
 								}
 							}
-							
+
 							for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 							{
 								if (pDefender->isHasUnitCombat((UnitCombatTypes)iI))
@@ -7568,7 +7620,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 									}
 								}
 							}
-							
+
 							for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 							{
 								if (pDefender->isHasUnitCombat((UnitCombatTypes)iI))
@@ -7640,11 +7692,11 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 								szString.append(NEWLINE);
 								szString.append(gDLL->getText("TXT_KEY_COMBAT_KAMIKAZE_MOD", -iModifier));
 							}
-		/************************************************************************************************/
-		/* Afforess                         12/7/09                                                     */
-		/*                                                                                              */
-		/*                                                                                              */
-		/************************************************************************************************/
+							/************************************************************************************************/
+							/* Afforess                         12/7/09                                                     */
+							/*                                                                                              */
+							/*                                                                                              */
+							/************************************************************************************************/
 							if (GC.getGameINLINE().isOption(GAMEOPTION_SAD))
 							{
 								//TB Combat Mods (S&D promos)
@@ -7653,7 +7705,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 								int iDynamicDefenseModifier = ((iSurround * iDynamicDefense) / 100);
 								int iSurroundTotalstepone = iSurround - iDynamicDefenseModifier;
 								int iSurroundTotal = (iSurroundTotalstepone < 0 ? 0 : iSurroundTotalstepone);
-								
+
 								iModifier = iSurroundTotal;
 								if (iModifier != 0)
 								{
@@ -7661,9 +7713,9 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 									szString.append(gDLL->getText("TXT_KEY_COMBAT_SURROUNDED_DEFENSE_MOD", -iModifier));
 								}
 							}
-		/************************************************************************************************/
-		/* Afforess	                         END                                                        */
-		/************************************************************************************************/	
+							/************************************************************************************************/
+							/* Afforess	                         END                                                        */
+							/************************************************************************************************/
 							if (pDefender->isAnimal())
 							{
 								iModifier = -GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAnimalCombatModifier();
@@ -7696,25 +7748,25 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						if (iView & getBugOptionINT("ACO__ShowTotalDefenseModifier", 2, "ACO_SHOW_TOTAL_DEFENSE_MODIFIER"))
 						{
 							//szString.append(L' ');//XXX
-							if (pDefender->maxCombatStr(pPlot,pAttacker)>pDefender->baseCombatStr()*100) // modifier is positive
+							if (pDefender->maxCombatStr(pPlot, pAttacker) > pDefender->baseCombatStr() * 100) // modifier is positive
 							{
 								szTempBuffer.Format(SETCOLR L"%d%%" ENDCOLR,
-													TEXT_COLOR("COLOR_NEGATIVE_TEXT"),(((pDefender->maxCombatStr(pPlot,pAttacker)))/pDefender->baseCombatStr())-100);
+									TEXT_COLOR("COLOR_NEGATIVE_TEXT"), (((pDefender->maxCombatStr(pPlot, pAttacker))) / pDefender->baseCombatStr()) - 100);
 							}
 							else   // modifier is negative
 							{
 								szTempBuffer.Format(SETCOLR L"%d%%" ENDCOLR,
-													TEXT_COLOR("COLOR_POSITIVE_TEXT"),(100-((pDefender->baseCombatStr()*100)/(pDefender->maxCombatStr(pPlot,pAttacker)))));
+									TEXT_COLOR("COLOR_POSITIVE_TEXT"), (100 - ((pDefender->baseCombatStr() * 100) / (pDefender->maxCombatStr(pPlot, pAttacker)))));
 							}
 
 							szString.append(gDLL->getText("TXT_ACO_TotalDefenseModifier"));
 							szString.append(szTempBuffer.GetCString());
 						}
 					}
-				/** What follows in the "else" block, is the original code **/
+					/** What follows in the "else" block, is the original code **/
 					else
 					{
-							//ACO is not enabled
+						//ACO is not enabled
 						szOffenseOdds.Format(L"%.2f", ((pAttacker->getDomainType() == DOMAIN_AIR) ? pAttacker->airCurrCombatStrFloat(pDefender) : pAttacker->currCombatStrFloat(NULL, NULL)));
 						szDefenseOdds.Format(L"%.2f", pDefender->currCombatStrFloat(pPlot, pAttacker));
 						szString.append(NEWLINE);
@@ -7726,321 +7778,58 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 
 						szString.append(L' ');//XXX
 
-						iModifier = pAttacker->getExtraCombatPercent();
+						addModifierIfValid(szString, pAttacker->getExtraCombatPercent(), "TXT_KEY_COMBAT_PLOT_EXTRA_STRENGTH");
+						addModifierWithInfoIfValid(szString, pAttacker->unitClassAttackModifier(pDefender->getUnitClassType()), "TXT_KEY_COMBAT_PLOT_MOD_VS_TYPE", GC.getUnitClassInfo(pDefender->getUnitClassType()));
 
-						if (iModifier != 0)
-						{
-							szString.append(NEWLINE);
-							szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_EXTRA_STRENGTH", iModifier));
-						}
-
-						iModifier = pAttacker->unitClassAttackModifier(pDefender->getUnitClassType());
-
-						if (iModifier != 0)
-						{
-							szString.append(NEWLINE);
-							szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_MOD_VS_TYPE", iModifier, GC.getUnitClassInfo(pDefender->getUnitClassType()).getTextKeyWide()));
-						}
-						
 						//TB Combat Mods Begin
-
-						if (pDefender->defenseCombatModifierTotal() != 0)
-						{
-							iModifier = pDefender->defenseCombatModifierTotal();
-
-						  if (iModifier != 0)
-							{
-							 szString.append(NEWLINE);
-							 szString.append(gDLL->getText("TXT_KEY_COMBAT_DEFENSE_MODIFIER", iModifier));
-							}
-						}
-
-						int iOffset = 0;
-						int iPerTotal = 0;
-						iOffset = pAttacker->sizeRank() - pDefender->sizeRank();
-						if (pDefender->combatModifierPerSizeMoreTotal() != 0 && iOffset > 0)
-						{
-							iPerTotal = pDefender->combatModifierPerSizeMoreTotal() * iOffset;
-							iModifier = iPerTotal;
-
-						  if (iModifier != 0)
-							{
-							 szString.append(NEWLINE);
-							 szString.append(gDLL->getText("TXT_KEY_COMBAT_ATTACK_FROM_SIZE_MODIFIER", iModifier));
-							}
-						}
-
-						iOffset = 0;
-						iPerTotal = 0;
-						iOffset = pAttacker->groupRank() - pDefender->groupRank();
-						if (pDefender->combatModifierPerVolumeMoreTotal() != 0 && iOffset > 0)
-						{
-							iPerTotal = pAttacker->combatModifierPerVolumeMoreTotal() * iOffset;
-							iModifier = iPerTotal;
-
-						  if (iModifier != 0)
-							{
-							 szString.append(NEWLINE);
-							 szString.append(gDLL->getText("TXT_KEY_COMBAT_ATTACK_FROM_VOLUME_MODIFIER", iModifier));
-							}
-						}
-
-						iOffset = 0;
-						iPerTotal = 0;
-						iOffset = pAttacker->sizeRank() - pDefender->sizeRank();
-						if (pDefender->combatModifierPerSizeLessTotal() != 0 && iOffset < 0)
-						{
-							iPerTotal = pAttacker->combatModifierPerSizeLessTotal() * -iOffset;
-							iModifier = iPerTotal;
-
-						  if (iModifier != 0)
-							{
-							 szString.append(NEWLINE);
-							 szString.append(gDLL->getText("TXT_KEY_COMBAT_ATTACK_FROM_SIZE_MODIFIER", iModifier));
-							}
-						}
-
-						iOffset = 0;
-						iPerTotal = 0;
-						iOffset = pAttacker->groupRank() - pDefender->groupRank();
-						if (pDefender->combatModifierPerVolumeLessTotal() != 0 && iOffset < 0)
-						{
-							iPerTotal = pAttacker->combatModifierPerVolumeLessTotal() * -iOffset;
-							iModifier = iPerTotal;
-
-						  if (iModifier != 0)
-							{
-							 szString.append(NEWLINE);
-							 szString.append(gDLL->getText("TXT_KEY_COMBAT_ATTACK_FROM_VOLUME_MODIFIER", iModifier));
-							}
-						}
-
+						addModifierIfValid(szString, pDefender->defenseCombatModifierTotal(), "TXT_KEY_COMBAT_DEFENSE_MODIFIER");
+						addCombatModifierHint(szString, pDefender->combatModifierPerSizeMoreTotal(), pAttacker->sizeRank() - pDefender->sizeRank(), "TXT_KEY_COMBAT_ATTACK_FROM_SIZE_MODIFIER");
+						addCombatModifierHint(szString, pDefender->combatModifierPerVolumeMoreTotal(), pAttacker->groupRank() - pDefender->groupRank(), "TXT_KEY_COMBAT_ATTACK_FROM_VOLUME_MODIFIER");
+						addCombatModifierHint(szString, pDefender->combatModifierPerSizeLessTotal(), pDefender->sizeRank() - pAttacker->sizeRank(), "TXT_KEY_COMBAT_ATTACK_FROM_SIZE_MODIFIER");
+						addCombatModifierHint(szString, pDefender->combatModifierPerVolumeLessTotal(), pDefender->groupRank() - pAttacker->groupRank(), "TXT_KEY_COMBAT_ATTACK_FROM_VOLUME_MODIFIER");
 						if (pDefender->isHominid())
 						{
-							iModifier = pAttacker->vsBarbsModifier();
-							if (iModifier != 0)
-							{
-								szString.append(NEWLINE);
-								szString.append(gDLL->getText("TXT_KEY_COMBAT_VSBARBS", iModifier));
-							}
+							addModifierIfValid(szString, pAttacker->vsBarbsModifier(), "TXT_KEY_COMBAT_VSBARBS");
 						}
-
-						for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-						{
-							if (pDefender->isHasUnitCombat((UnitCombatTypes)iI))
-							{
-								eUnitCombatType = ((UnitCombatTypes)iI);
-								iModifier = pAttacker->unitCombatModifier(eUnitCombatType);
-								if (iModifier != 0)
-								{
-									szString.append(NEWLINE);
-									szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_MOD_VS_TYPE", iModifier, GC.getUnitCombatInfo(eUnitCombatType).getTextKeyWide()));
-								}
-							}
-						}
-
-						for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-						{
-							if (pDefender->isHasUnitCombat((UnitCombatTypes)iI))
-							{
-								eUnitCombatType = ((UnitCombatTypes)iI);
-								iModifier = pAttacker->withdrawVSUnitCombatTotal(eUnitCombatType);
-								if (iModifier != 0)
-								{
-									szString.append(NEWLINE);
-									szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_WITHDRAW_VS_TYPE", iModifier, GC.getUnitCombatInfo(eUnitCombatType).getTextKeyWide()));
-								}
-							}
-						}
-
-						for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-						{
-							if (pDefender->isHasUnitCombat((UnitCombatTypes)iI))
-							{
-								eUnitCombatType = ((UnitCombatTypes)iI);
-								iModifier = pAttacker->pursuitVSUnitCombatTotal(eUnitCombatType);
-								if (iModifier != 0)
-								{
-									szString.append(NEWLINE);
-									szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_PURSUIT_VS_TYPE", iModifier, GC.getUnitCombatInfo(eUnitCombatType).getTextKeyWide()));
-								}
-							}
-						}
-
-						for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-						{
-							if (pDefender->isHasUnitCombat((UnitCombatTypes)iI))
-							{
-								eUnitCombatType = ((UnitCombatTypes)iI);
-								iModifier = pAttacker->repelVSUnitCombatTotal(eUnitCombatType);
-								if (iModifier != 0)
-								{
-									szString.append(NEWLINE);
-									szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_REPEL_VS_TYPE", iModifier, GC.getUnitCombatInfo(eUnitCombatType).getTextKeyWide()));
-								}
-							}
-						}
-
-						for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-						{
-							if (pDefender->isHasUnitCombat((UnitCombatTypes)iI))
-							{
-								eUnitCombatType = ((UnitCombatTypes)iI);
-								iModifier = pAttacker->knockbackVSUnitCombatTotal(eUnitCombatType);
-								if (iModifier != 0)
-								{
-									szString.append(NEWLINE);
-									szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_KNOCKBACK_VS_TYPE", iModifier, GC.getUnitCombatInfo(eUnitCombatType).getTextKeyWide()));
-								}
-							}
-						}
-
-						for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-						{
-							if (pDefender->isHasUnitCombat((UnitCombatTypes)iI))
-							{
-								eUnitCombatType = ((UnitCombatTypes)iI);
-								iModifier = pAttacker->punctureVSUnitCombatTotal(eUnitCombatType);
-								if (iModifier != 0)
-								{
-									szString.append(NEWLINE);
-									szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_PUNCTURE_VS_TYPE", iModifier, GC.getUnitCombatInfo(eUnitCombatType).getTextKeyWide()));
-								}
-							}
-						}
-
-						for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-						{
-							if (pDefender->isHasUnitCombat((UnitCombatTypes)iI))
-							{
-								eUnitCombatType = ((UnitCombatTypes)iI);
-								iModifier = pAttacker->armorVSUnitCombatTotal(eUnitCombatType);
-								if (iModifier != 0)
-								{
-									szString.append(NEWLINE);
-									szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_ARMOR_VS_TYPE", iModifier, GC.getUnitCombatInfo(eUnitCombatType).getTextKeyWide()));
-								}
-							}
-						}
-
-						for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-						{
-							if (pDefender->isHasUnitCombat((UnitCombatTypes)iI))
-							{
-								eUnitCombatType = ((UnitCombatTypes)iI);
-								iModifier = pAttacker->dodgeVSUnitCombatTotal(eUnitCombatType);
-								if (iModifier != 0)
-								{
-									szString.append(NEWLINE);
-									szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_DODGE_VS_TYPE", iModifier, GC.getUnitCombatInfo(eUnitCombatType).getTextKeyWide()));
-								}
-							}
-						}
-
-						for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-						{
-							if (pDefender->isHasUnitCombat((UnitCombatTypes)iI))
-							{
-								eUnitCombatType = ((UnitCombatTypes)iI);
-								iModifier = pAttacker->precisionVSUnitCombatTotal(eUnitCombatType);
-								if (iModifier != 0)
-								{
-									szString.append(NEWLINE);
-									szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_PRECISION_VS_TYPE", iModifier, GC.getUnitCombatInfo(eUnitCombatType).getTextKeyWide()));
-								}
-							}
-						}
-
-						for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-						{
-							if (pDefender->isHasUnitCombat((UnitCombatTypes)iI))
-							{
-								eUnitCombatType = ((UnitCombatTypes)iI);
-								iModifier = pAttacker->criticalVSUnitCombatTotal(eUnitCombatType);
-								if (iModifier != 0)
-								{
-									szString.append(NEWLINE);
-									szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_CRITICAL_VS_TYPE", iModifier, GC.getUnitCombatInfo(eUnitCombatType).getTextKeyWide()));
-								}
-							}
-						}
-
-						for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-						{
-							if (pDefender->isHasUnitCombat((UnitCombatTypes)iI))
-							{
-								eUnitCombatType = ((UnitCombatTypes)iI);
-								iModifier = pAttacker->roundStunVSUnitCombatTotal(eUnitCombatType);
-								if (iModifier != 0)
-								{
-									szString.append(NEWLINE);
-									szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_ROUND_STUN_VS_TYPE", iModifier, GC.getUnitCombatInfo(eUnitCombatType).getTextKeyWide()));
-								}
-							}
-						}
+						addCombatTypeModifierHints(szString, pDefender, pAttacker, &CvUnit::unitCombatModifier, "TXT_KEY_COMBAT_PLOT_MOD_VS_TYPE");
+						addCombatTypeModifierHints(szString, pDefender, pAttacker, &CvUnit::withdrawVSUnitCombatTotal, "TXT_KEY_COMBAT_PLOT_WITHDRAW_VS_TYPE");
+						addCombatTypeModifierHints(szString, pDefender, pAttacker, &CvUnit::pursuitVSUnitCombatTotal, "TXT_KEY_COMBAT_PLOT_PURSUIT_VS_TYPE");
+						addCombatTypeModifierHints(szString, pDefender, pAttacker, &CvUnit::repelVSUnitCombatTotal, "TXT_KEY_COMBAT_PLOT_REPEL_VS_TYPE");
+						addCombatTypeModifierHints(szString, pDefender, pAttacker, &CvUnit::knockbackVSUnitCombatTotal, "TXT_KEY_COMBAT_PLOT_KNOCKBACK_VS_TYPE");
+						addCombatTypeModifierHints(szString, pDefender, pAttacker, &CvUnit::punctureVSUnitCombatTotal, "TXT_KEY_COMBAT_PLOT_PUNCTURE_VS_TYPE");
+						addCombatTypeModifierHints(szString, pDefender, pAttacker, &CvUnit::armorVSUnitCombatTotal, "TXT_KEY_COMBAT_PLOT_ARMOR_VS_TYPE");
+						addCombatTypeModifierHints(szString, pDefender, pAttacker, &CvUnit::dodgeVSUnitCombatTotal, "TXT_KEY_COMBAT_PLOT_DODGE_VS_TYPE");
+						addCombatTypeModifierHints(szString, pDefender, pAttacker, &CvUnit::precisionVSUnitCombatTotal, "TXT_KEY_COMBAT_PLOT_PRECISION_VS_TYPE");
+						addCombatTypeModifierHints(szString, pDefender, pAttacker, &CvUnit::criticalVSUnitCombatTotal, "TXT_KEY_COMBAT_PLOT_CRITICAL_VS_TYPE");
+						addCombatTypeModifierHints(szString, pDefender, pAttacker, &CvUnit::roundStunVSUnitCombatTotal, "TXT_KEY_COMBAT_PLOT_ROUND_STUN_VS_TYPE");
 						//TB SubCombat Mod End
-						iModifier = pAttacker->domainModifier(pDefender->getDomainType());
 
-						if (iModifier != 0)
-						{
-							szString.append(NEWLINE);
-							szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_MOD_VS_TYPE", iModifier, GC.getDomainInfo(pDefender->getDomainType()).getTextKeyWide()));
-						}
+						addModifierWithInfoIfValid(szString, pAttacker->domainModifier(pDefender->getDomainType()), "TXT_KEY_COMBAT_PLOT_MOD_VS_TYPE", GC.getDomainInfo(pDefender->getDomainType()));
 
 						if (pPlot->isCity(true, pDefender->getTeam()))
 						{
-							iModifier = pAttacker->cityAttackModifier();
-
-							if (iModifier != 0)
-							{
-								szString.append(NEWLINE);
-								szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_CITY_MOD", iModifier));
-							}
+							addModifierIfValid(szString, pAttacker->cityAttackModifier(), "TXT_KEY_COMBAT_PLOT_CITY_MOD");
 						}
-
 						if (pPlot->isHills())
 						{
-							iModifier = pAttacker->hillsAttackModifier();
-
-							if (iModifier != 0)
-							{
-								szString.append(NEWLINE);
-								szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_HILLS_MOD", iModifier));
-							}
+							addModifierIfValid(szString, pAttacker->hillsAttackModifier(), "TXT_KEY_COMBAT_PLOT_HILLS_MOD");
 						}
-
 						if (pPlot->getFeatureType() != NO_FEATURE)
 						{
-							iModifier = pAttacker->featureAttackModifier(pPlot->getFeatureType());
-
-							if (iModifier != 0)
-							{
-								szString.append(NEWLINE);
-								szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_UNIT_MOD", iModifier, GC.getFeatureInfo(pPlot->getFeatureType()).getTextKeyWide()));
-							}
+							addModifierWithInfoIfValid(szString, pAttacker->featureAttackModifier(pPlot->getFeatureType()), "TXT_KEY_COMBAT_PLOT_UNIT_MOD", GC.getFeatureInfo(pPlot->getFeatureType()));
 						}
 						else
 						{
-							iModifier = pAttacker->terrainAttackModifier(pPlot->getTerrainType());
-
-							if (iModifier != 0)
-							{
-								szString.append(NEWLINE);
-								szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_UNIT_MOD", iModifier, GC.getTerrainInfo(pPlot->getTerrainType()).getTextKeyWide()));
-							}
+							addModifierWithInfoIfValid(szString, pAttacker->terrainAttackModifier(pPlot->getTerrainType()), "TXT_KEY_COMBAT_PLOT_UNIT_MOD", GC.getTerrainInfo(pPlot->getTerrainType()));
 						}
 
-						iModifier = pAttacker->getKamikazePercent();
-						if (iModifier != 0)
-						{
-							szString.append(NEWLINE);
-							szString.append(gDLL->getText("TXT_KEY_COMBAT_KAMIKAZE_MOD", iModifier));
-						}
-			/************************************************************************************************/
-			/* Afforess                         12/7/09                                                     */
-			/*                                                                                              */
-			/*                                                                                              */
-			/************************************************************************************************/
+						addModifierIfValid(szString, pAttacker->getKamikazePercent(), "TXT_KEY_COMBAT_KAMIKAZE_MOD");
+
+						/************************************************************************************************/
+						/* Afforess                         12/7/09                                                     */
+						/*                                                                                              */
+						/*                                                                                              */
+						/************************************************************************************************/
 						if (GC.getGameINLINE().isOption(GAMEOPTION_SAD))
 						{
 							//TB Combat Mods (S&D promos)
@@ -8049,7 +7838,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 							int iDynamicDefenseModifier = ((iSurround * iDynamicDefense) / 100);
 							int iSurroundTotalstepone = iSurround - iDynamicDefenseModifier;
 							int iSurroundTotal = (iSurroundTotalstepone < 0 ? 0 : iSurroundTotalstepone);
-							
+
 							iModifier = iSurroundTotal;
 							if (iModifier != 0)
 							{
@@ -8057,9 +7846,9 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 								szString.append(gDLL->getText("TXT_KEY_COMBAT_SURROUNDED_DEFENSE_MOD", iModifier));
 							}
 						}
-			/************************************************************************************************/
-			/* Afforess	                         END                                                        */
-			/************************************************************************************************/	
+						/************************************************************************************************/
+						/* Afforess	                         END                                                        */
+						/************************************************************************************************/
 						if (pDefender->isAnimal())
 						{
 							iModifier = -GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAnimalCombatModifier();
@@ -8172,10 +7961,10 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						{
 							iModifier = pAttacker->attackCombatModifierTotal();
 
-						  if (iModifier != 0)
+							if (iModifier != 0)
 							{
-							 szString.append(NEWLINE);
-							 szString.append(gDLL->getText("TXT_KEY_COMBAT_DEFENSE_MODIFIER", iModifier));
+								szString.append(NEWLINE);
+								szString.append(gDLL->getText("TXT_KEY_COMBAT_DEFENSE_MODIFIER", iModifier));
 							}
 						}
 
@@ -8366,7 +8155,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						int iOverrun = pAttacker->overrunTotal();
 						int iOverrunHundred = (iOverrun > 100 ? 100 : iOverrun);
 						int iOverrunTotal = 100 - (iOverrunHundred < 0 ? 0 : iOverrunHundred);
-						int iFortModTotal = (iFort * iOverrunTotal)/100;
+						int iFortModTotal = (iFort * iOverrunTotal) / 100;
 						iModifier = iFortModTotal;
 						//TB Display Mod begin
 						if (!bTBView && iModifier != 0)
@@ -8379,18 +8168,18 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						{
 							szString.append(NEWLINE);
 							szTempBuffer.Format(SETCOLR L"Fortification Mod: %d%" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), iFort);
+								TEXT_COLOR("COLOR_RED"), iFort);
 							szString.append(szTempBuffer.GetCString());
 							if (iOverrun > 0)
 							{
-							szString.append(NEWLINE);
-							szTempBuffer.Format(SETCOLR L"Attacker Overrun: %d" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), iOverrun);
-							szString.append(NEWLINE);
-							szString.append(szTempBuffer.GetCString());
-							szTempBuffer.Format(SETCOLR L"Total Fortification: %d%" ENDCOLR,
-											TEXT_COLOR("COLOR_RED"), iModifier);
-							szString.append(szTempBuffer.GetCString());
+								szString.append(NEWLINE);
+								szTempBuffer.Format(SETCOLR L"Attacker Overrun: %d" ENDCOLR,
+									TEXT_COLOR("COLOR_RED"), iOverrun);
+								szString.append(NEWLINE);
+								szString.append(szTempBuffer.GetCString());
+								szTempBuffer.Format(SETCOLR L"Total Fortification: %d%" ENDCOLR,
+									TEXT_COLOR("COLOR_RED"), iModifier);
+								szString.append(szTempBuffer.GetCString());
 							}
 						}
 						//TB Display Mod end
@@ -8472,19 +8261,19 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 					}
 					szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
 
-					if( GC.getGameINLINE().isDebugMode() )
+					if (GC.getGameINLINE().isDebugMode())
 					{
 						szTempBuffer.Format(L"\nStack Compare Value = %d",
 							gDLL->getInterfaceIFace()->getSelectionList()->AI_compareStacks(pPlot, false));
 						szString.append(szTempBuffer);
 
-						if( pPlot->getPlotCity() != NULL )
+						if (pPlot->getPlotCity() != NULL)
 						{
 							szTempBuffer.Format(L"\nBombard turns = %d",
 								gDLL->getInterfaceIFace()->getSelectionList()->getBombardTurns(pPlot->getPlotCity()));
 							szString.append(szTempBuffer);
 						}
-						
+
 						int iOurStrengthDefense = GET_PLAYER(GC.getGameINLINE().getActivePlayer()).AI_getOurPlotStrength(pPlot, 1, true, false);
 						int iOurStrengthOffense = GET_PLAYER(GC.getGameINLINE().getActivePlayer()).AI_getOurPlotStrength(pPlot, 1, false, false);
 						szTempBuffer.Format(L"\nPlot Strength(Ours)= d%d, o%d", iOurStrengthDefense, iOurStrengthOffense);
@@ -8495,7 +8284,6 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						szString.append(szTempBuffer);
 					}
 				}
-
 #ifdef STRENGTH_IN_NUMBERS
 				//Strength in Numbers extended alternative display
 				else if (bSINView && GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
@@ -8577,7 +8365,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						int iAttackerSupport = pAttacker->getAttackerSupportValue();
 						szString.append(NEWLINE);
 						szTempBuffer.Format(SETCOLR L"Total Attacker Support: +%d Strength" ENDCOLR,
-										TEXT_COLOR("COLOR_GREEN"), iAttackerSupport);
+							TEXT_COLOR("COLOR_GREEN"), iAttackerSupport);
 						szString.append(NEWLINE);
 						szString.append(szTempBuffer.GetCString());
 					}
@@ -8637,7 +8425,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot, 
 						int iDefenderSupport = pDefender->getDefenderSupportValue(pAttacker);
 						szString.append(NEWLINE);
 						szTempBuffer.Format(SETCOLR L"Total Defender Support: +%d Strength" ENDCOLR,
-										TEXT_COLOR("COLOR_RED"), iDefenderSupport);
+							TEXT_COLOR("COLOR_RED"), iDefenderSupport);
 						szString.append(NEWLINE);
 						szString.append(szTempBuffer.GetCString());
 					}
@@ -13862,7 +13650,7 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 				{
 					if (GC.getSpecialistInfo(eSpecialist).getTechHealthType(iJ).eTech == eTech)
 					{
-						iSpecialistHealth += GC.getSpecialistInfo(eSpecialist).getTechHealthType(iJ).iModifier;
+						iSpecialistHappiness += GC.getSpecialistInfo(eSpecialist).getTechHealthType(iJ).iModifier;
 					}
 				}
 				if (GC.getGameINLINE().getActivePlayer() == NO_PLAYER && GET_PLAYER(kCity.getOwner()).getID() != NO_PLAYER)
@@ -34777,7 +34565,13 @@ void CvGameTextMgr::getAttitudeString(CvWStringBuffer& szBuffer, PlayerTypes ePl
 	CvPlayerAI& kPlayer = GET_PLAYER(ePlayer);
 	TeamTypes eTeam = (TeamTypes) kPlayer.getTeam();
 	CvTeamAI& kTeam = GET_TEAM(eTeam);
-		
+	
+	if (eTargetPlayer != NO_PLAYER)
+	{
+		FErrorMsg("TargetPlayer must be valid when requesting attitude string")
+		return;
+	}
+
 	szBuffer.append(gDLL->getText("TXT_KEY_ATTITUDE_TOWARDS", GC.getAttitudeInfo(GET_PLAYER(ePlayer).AI_getAttitude(eTargetPlayer)).getTextKeyWide(), GET_PLAYER(eTargetPlayer).getNameKey()));
 
 	for (int iTeam = 0; iTeam < MAX_TEAMS; iTeam++)
@@ -34785,23 +34579,20 @@ void CvGameTextMgr::getAttitudeString(CvWStringBuffer& szBuffer, PlayerTypes ePl
 		CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iTeam);
 		if (kLoopTeam.isAlive())
 		{
-			if (NO_PLAYER != eTargetPlayer)
+			CvTeam& kTargetTeam = GET_TEAM(GET_PLAYER(eTargetPlayer).getTeam());
+			if (kTargetTeam.isHasMet((TeamTypes)iTeam))
 			{
-				CvTeam& kTargetTeam = GET_TEAM(GET_PLAYER(eTargetPlayer).getTeam());
-				if (kTargetTeam.isHasMet((TeamTypes)iTeam))
+				if (kTeam.isVassal((TeamTypes)iTeam))
 				{
-					if (kTeam.isVassal((TeamTypes)iTeam))
-					{
-						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_ATTITUDE_VASSAL_OF", kLoopTeam.getName().GetCString()));
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_ATTITUDE_VASSAL_OF", kLoopTeam.getName().GetCString()));
 
-						setVassalRevoltHelp(szBuffer, (TeamTypes)iTeam, kTeam.getID());
-					}
-					else if (kLoopTeam.isVassal(kTeam.getID()))
-					{
-						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_ATTITUDE_MASTER_OF", kLoopTeam.getName().GetCString()));
-					}
+					setVassalRevoltHelp(szBuffer, (TeamTypes)iTeam, kTeam.getID());
+				}
+				else if (kLoopTeam.isVassal(kTeam.getID()))
+				{
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_ATTITUDE_MASTER_OF", kLoopTeam.getName().GetCString()));
 				}
 			}
 		}
@@ -35047,10 +34838,9 @@ void CvGameTextMgr::getAttitudeString(CvWStringBuffer& szBuffer, PlayerTypes ePl
 /*                                                                                              */
 /* Hidden Attitude                                                                              */
 /************************************************************************************************/
-		if (GC.getDefineINT("SHOW_HIDDEN_ATTITUDE"))
-		{
-	    // BEGIN: Show Hidden Attitude Mod 01/22/2010
-		if (getBugOptionBOOL("MiscHover__LeaderheadHiddenAttitude", true, "BUG_LEADERHEAD_HOVER_HIDDEN_ATTITUDE"))
+		// BEGIN: Show Hidden Attitude Mod 01/22/2010
+		if (GC.getDefineINT("SHOW_HIDDEN_ATTITUDE")
+			&& getBugOptionBOOL("MiscHover__LeaderheadHiddenAttitude", true, "BUG_LEADERHEAD_HOVER_HIDDEN_ATTITUDE"))
 		{
 			iAttitudeChange = kPlayer.AI_getBetterRankDifferenceAttitude(eTargetPlayer);
 			if ((iPass == 0) ? (iAttitudeChange > 0) : (iAttitudeChange < 0))
@@ -35100,7 +34890,6 @@ void CvGameTextMgr::getAttitudeString(CvWStringBuffer& szBuffer, PlayerTypes ePl
 				szBuffer.append(szTempBuffer);
 			}
 		}
-		}
 /************************************************************************************************/
 /* REVDCM                                  END                                                  */
 /************************************************************************************************/
@@ -35117,16 +34906,12 @@ void CvGameTextMgr::getAttitudeString(CvWStringBuffer& szBuffer, PlayerTypes ePl
 		}
 	}
 
-	if (NO_PLAYER != eTargetPlayer)
+	int iWarWeariness = GET_PLAYER(eTargetPlayer).getModifiedWarWearinessPercentAnger(GET_TEAM(GET_PLAYER(eTargetPlayer).getTeam()).getWarWeariness(eTeam) * std::max(0, 100 + kTeam.getEnemyWarWearinessModifier()));
+	if (iWarWeariness / 10000 > 0)
 	{
-		int iWarWeariness = GET_PLAYER(eTargetPlayer).getModifiedWarWearinessPercentAnger(GET_TEAM(GET_PLAYER(eTargetPlayer).getTeam()).getWarWeariness(eTeam) * std::max(0, 100 + kTeam.getEnemyWarWearinessModifier()));
-		if (iWarWeariness / 10000 > 0)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_WAR_WEAR_HELP", iWarWeariness / 10000));
-		}
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_WAR_WEAR_HELP", iWarWeariness / 10000));
 	}
-
 }
 
 void CvGameTextMgr::getEspionageString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer, PlayerTypes eTargetPlayer)
@@ -35464,14 +35249,6 @@ void CvGameTextMgr::buildFinanceSpecialistGoldString(CvWStringBuffer& szBuffer, 
 			}
 
 			iTotalSpecialists += pCity->getSpecialistPopulation() + pCity->getNumGreatPeople();
-
-			//if ( iCityGold != pCity->getSpecialistCommerce(COMMERCE_GOLD))
-			{
-				char buffer[200];
-
-				sprintf(buffer,"City %S, calculated %d vs getSpecialistCommerce of %d\r\n",pCity->getName().c_str(),iCityGold,pCity->getSpecialistCommerce(COMMERCE_GOLD));
-				OutputDebugString(buffer);
-			}
 		}
 	}
 	
@@ -40460,8 +40237,6 @@ void CvGameTextMgr::getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* p
 									bool bFirst = true;
 									if (pShadowUnit->baseMoves() > pHeadSelectedUnit->baseMoves())
 									{
-										if (!bFirst)
-											strHelp.append(L"\n");
 										strHelp.append(gDLL->getText("TXT_KEY_CAN_NOT_AUTOMATE_PROTECT_NOT_FAST_ENOUGH", pShadowUnit->getNameKey(), pHeadSelectedUnit->getNameKey(), pShadowUnit->baseMoves(), pShadowUnit->getNameKey()));
 										bFirst = false;
 									}
@@ -41312,12 +41087,9 @@ void CvGameTextMgr::setDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	bool bFirst = false;
 	if (iBuildingDefense != 0)
 	{
-		if (bFirst)
-			szBuffer.append(NEWLINE);
-		else
-			bFirst = true;
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_BUILDING_DEFENSE_HOVER", iBuildingDefense));
 		iBaseRate += iBuildingDefense;
+		bFirst = true;
 	}
 	
 	int iCivicDefense = 0;

@@ -25,27 +25,49 @@
 // Public Functions...
 
 CvMap::CvMap()
+	: m_iGridWidth(0)
+	, m_iGridHeight(0)
+	, m_iLandPlots(0)
+	, m_iOwnedPlots(0)
+	, m_iTopLatitude(0)
+	, m_iBottomLatitude(0)
+	, m_iNextRiverID(0)
+	, m_eType(NO_MAP)
+	, m_iCurrentViewportIndex(0)
+	, m_bWrapX(false)
+	, m_bWrapY(false)
+	, m_paiNumBonus(NULL)
+	, m_paiNumBonusOnLand(NULL)
+	, m_bCitiesDisplayed(true)
+	, m_bUnitsDisplayed(true)
+	, m_pMapPlots(NULL)
 {
 }
 
-CvMap::CvMap(MapTypes eType) /* Parallel Maps */ : m_eType(eType)
+CvMap::CvMap(MapTypes eType) /* Parallel Maps */
+	: m_iGridWidth(0)
+	, m_iGridHeight(0)
+	, m_iLandPlots(0)
+	, m_iOwnedPlots(0)
+	, m_iTopLatitude(0)
+	, m_iBottomLatitude(0)
+	, m_iNextRiverID(0)
+	, m_eType(eType)
+	, m_iCurrentViewportIndex(0)
+	, m_bWrapX(false)
+	, m_bWrapY(false)
+	, m_paiNumBonus(NULL)
+	, m_paiNumBonusOnLand(NULL)
+	, m_bCitiesDisplayed(true)
+	, m_bUnitsDisplayed(true)
+	, m_pMapPlots(NULL)
 {
 	OutputDebugString("Calling constructor for Map: Start");
 
 	CvMapInitData defaultMapData;
-
-	m_paiNumBonus = NULL;
-	m_paiNumBonusOnLand = NULL;
-
-	m_pMapPlots = NULL;
-
-	m_bCitiesDisplayed = true;
-	m_bUnitsDisplayed = true;
-
 	reset(&defaultMapData);
 
 	OutputDebugString("Calling constructor for Map: End");
-
 }
 
 
@@ -1597,8 +1619,8 @@ void CvMap::afterSwitch()
 			CyArgsList argsList;
 			long lResult;
 
-			char mapPath[MAX_PATH];
-			getcwd(mapPath, MAX_PATH);
+			char mapPath[1024];
+			getcwd(mapPath, 1024);
 			strcat(mapPath, GC.getMapInfo(getType()).getInitialWBMap().GetCString());
 
 			argsList.add(mapPath);

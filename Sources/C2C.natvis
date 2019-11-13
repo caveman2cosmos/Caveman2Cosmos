@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?> 
+<?xml version="1.0" encoding="utf-8"?>
 <AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
   <Type Name="CvUnitInfo" Priority="Low">
     <DisplayString>{gGlobals->m_paUnitClassInfo[m_iUnitClassType]->m_szType}</DisplayString>
@@ -18,7 +18,8 @@
     <Expand>
       <Item Name="[units]" ExcludeView="simple">m_units</Item>
       <Item Name="[cities]" ExcludeView="simple">m_cities</Item>
-     </Expand>
+      <Item Name="[selection groups]" ExcludeView="simple">m_selectionGroups</Item>
+    </Expand>
   </Type>
   <Type Name="CvInfoBase">
     <DisplayString>{{ {m_szType} }}</DisplayString>
@@ -27,6 +28,7 @@
     </Expand>
   </Type>
   <Type Name="CvUnit">
+    <DisplayString Condition="m_bDeathDelay">[DELAYED DEATH! owner = {CvPlayerAI::m_aPlayers[m_eOwner]}, class = {gGlobals->m_paUnitClassInfo[m_pUnitInfo->m_iUnitClassType]->m_szType} ({m_pUnitInfo->m_iUnitClassType}), type = {gGlobals->m_paUnitInfo[m_eUnitType]->m_szType} ({m_eUnitType})]</DisplayString>
     <DisplayString>[owner = {CvPlayerAI::m_aPlayers[m_eOwner]}, class = {gGlobals->m_paUnitClassInfo[m_pUnitInfo->m_iUnitClassType]->m_szType} ({m_pUnitInfo->m_iUnitClassType}), type = {gGlobals->m_paUnitInfo[m_eUnitType]->m_szType} ({m_eUnitType})]</DisplayString>
     <Expand>
       <Item Name="[owner]" ExcludeView="simple">CvPlayerAI::m_aPlayers[m_eOwner]</Item>
@@ -37,7 +39,7 @@
       <Item Name="[y]" ExcludeView="simple">m_iY</Item>
       <Item Name="[plot]" ExcludeView="simple">gGlobals->m_maps[gGlobals->m_game->m_eCurrentMap]->m_pMapPlots[m_iY*gGlobals->m_maps[gGlobals->m_game->m_eCurrentMap]->m_iGridWidth+m_iX]</Item>
       <Item Name="[is dummy]">m_pEntity != nullptr &amp;&amp; g_dummyEntity == m_pEntity</Item>
-    
+
     </Expand>
   </Type>
   <Type Name="CvPlot">
@@ -90,7 +92,7 @@
       <Item Name="[plot]" ExcludeView="simple">gGlobals->m_maps[gGlobals->m_game->m_eCurrentMap]->m_pMapPlots[m_iY*gGlobals->m_maps[gGlobals->m_game->m_eCurrentMap]->m_iGridWidth+m_iX]</Item>
     </Expand>
   </Type>
-  
+
   <Type Name="PropertySpawns">
     <DisplayString>[property = {gGlobals->m_paPropertyInfo[eProperty]->m_szType} ({eProperty}), unit class = {gGlobals->m_paUnitClassInfo[eUnitClass]->m_szType} ({eUnitClass})]</DisplayString>
     <Expand>
@@ -98,7 +100,7 @@
       <Item Name="[unit class]" ExcludeView="simple">gGlobals->m_paUnitClassInfo[eUnitClass]->m_szType</Item>
     </Expand>
   </Type>
-  
+
   <Type Name="CLinkList&lt;*&gt;" Priority="MediumLow">
     <DisplayString>{{ {m_iLength} }}</DisplayString>
     <Expand>
@@ -110,7 +112,7 @@
       </LinkedListItems>
     </Expand>
   </Type>
-  
+
   <Type Name="CvSelectionGroup">
     <DisplayString>{{ id = {m_iID}, units = {m_units} }}</DisplayString>
     <Expand>
@@ -143,7 +145,7 @@
       </CustomListItems>
     </Expand>
   </Type>
-  
+
   <Type Name="FFreeListTrashArray&lt;*&gt;" Priority="MediumLow">
     <DisplayString>{{ {m_iLastIndex - m_iFreeListCount + 1 - m_iCorruptedAdjustment} }}</DisplayString>
     <Expand>

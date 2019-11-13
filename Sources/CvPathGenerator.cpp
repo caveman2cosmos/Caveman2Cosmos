@@ -36,11 +36,29 @@ class CvPathNode
 {
 public:
 	CvPathNode()
+		: m_iPathTurns(0)
+		, m_iMovementRemaining(0)
+		, m_parent(NULL)
+		, m_firstChild(NULL)
+		, m_prevSibling(NULL)
+		, m_nextSibling(NULL)
+		, m_plot(NULL)
+		, m_iBestToEdgeCost(0)
+		, m_iCostTo(0)
+		, m_iCostFrom(0)
+		, m_iLowestPossibleCostFrom(0)
+		, m_iPathSeq(0)	//	Data updated for path generation that matches this seq
+		, m_iEdgesIncluded(0)	//	Bitmap by direction out
+		, m_bProcessedAsTerminus(false)
+		, m_iModificationSeq(0)	//	Incremented each time this node's info is modified
+		, m_iLowestDequeueCost(0)
+		, m_iRecalcThreshold(0)
+		, m_bIsKnownRoute(false)
+#ifdef DYNAMIC_PATH_STRUCTURE_VALIDATION
+		, m_iValidationSeq(0)
+		, m_bIsQueued(false)
+#endif
 	{
-		m_firstChild	= NULL;
-		m_prevSibling	= NULL;
-		m_nextSibling	= NULL;
-		m_plot			= NULL;
 	}
 
 	~CvPathNode()
@@ -114,9 +132,9 @@ int	CvPath::const_iterator::turn()
 }
 
 CvPath::CvPath()
-{
-	m_startNode = NULL;
-}
+	: m_startNode(NULL)
+	, m_endNode(NULL)
+{}
 
 void CvPath::Set(CvPathNode* startNode)
 {
@@ -231,7 +249,11 @@ int		CvPath::movementRemaining() const
 class CvPathGeneratorPlotInfo
 {
 public:
-	CvPathGeneratorPlotInfo() {}
+	CvPathGeneratorPlotInfo() 
+		: pNode(NULL)
+		, m_iEdgesValidated(0)
+		, bKnownInvalidNode(false)
+	{}
 
 	CvPathNode* pNode;
 	int			m_iEdgesValidated;	//	Bitmap by direction out
@@ -304,12 +326,9 @@ static void UnlinkNode(CvPathNode* node)
 		}
 		else
 		{
-			FAssert(node->m_prevSibling != node->m_nextSibling);
+			FAssertMsg(node->m_prevSibling != node->m_nextSibling, "Node links are a loop");
+			FAssertMsg(node->m_prevSibling == NULL, "Node is not first, but prev link is not valid");
 
-			if ( node->m_prevSibling == NULL )
-			{
-				OutputDebugString("Non-first node has no prev sibling!\n");
-			}
 			node->m_prevSibling->m_nextSibling = node->m_nextSibling;
 
 			FAssert(node->m_prevSibling->m_prevSibling == NULL || node->m_prevSibling->m_prevSibling != node->m_prevSibling->m_nextSibling);
@@ -337,15 +356,27 @@ void CvPathGenerator::ValidatePlotInfo(CvPathGeneratorPlotInfo* pPlotInfo)
 }
 
 CvPathGenerator::CvPathGenerator(CvMap* pMap)
+	: m_map(pMap)
+	, m_plotInfo(new CvPathPlotInfoStore(pMap, 0))
+	, m_nodeAllocationPool(new CvAllocationPool<CvPathNode>())
+	, m_bFoundRoute(false)
+	, m_iTerminalNodeCost(0)
+	, m_pBestTerminalNode(NULL)
+	, m_pReplacedNonTerminalNode(NULL)
+	, m_pTerminalPlot(NULL)
+	, m_currentGroupMembershipChecksum(0)
+	, m_pFrom(NULL)
+	, m_iFlags(0)
+	, m_iTurn(0)
+	, m_iSeq(0)
+	, m_HeuristicFunc(NULL)
+	, m_CostFunc(NULL)
+	, m_ValidFunc(NULL)
+	, m_TerminusValidFunc(NULL)
+	, m_TurnEndValidCheckNeeded(NULL)
+	, m_nodesProcessed(0)
+	, m_nodesCosted(0)
 {
-	m_map = pMap;
-	//m_priorityQueue = new std::multimap<int, CvPathNode*>();
-	m_plotInfo = new CvPathPlotInfoStore(pMap, 0);
-	m_nodeAllocationPool = new CvAllocationPool<CvPathNode>();
-
-	m_nodesProcessed = 0;
-	m_nodesCosted = 0;
-
 	reset();
 }
 

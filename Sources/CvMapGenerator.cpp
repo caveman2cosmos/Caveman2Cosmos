@@ -20,7 +20,7 @@ CvMapGenerator& CvMapGenerator::GetInstance()
 }
 
 
-CvMapGenerator::CvMapGenerator()
+CvMapGenerator::CvMapGenerator() : m_bUseDefaultMapScript(true)
 {
 }
 
@@ -322,7 +322,7 @@ void CvMapGenerator::addRivers()
 		if (GC.getGame().isOption(GAMEOPTION_MORE_RIVERS))
 		{
 			iRand = GC.getDefineINT("RIVER_RAND_ON_MORE_RIVERS");
-			iPPRE /= GC.getDefineINT("PLOTS_PER_RIVER_EDGE_DIVISOR");
+			iPPRE /= std::max(1, GC.getDefineINT("PLOTS_PER_RIVER_EDGE_DIVISOR"));
 		}
 
 		for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
@@ -965,17 +965,14 @@ void CvMapGenerator::generateRandomMap()
 {
 	PROFILE("generateRandomMap()");
 
-	Cy::call_optional (gDLL->getPythonIFace()->getMapScriptModule(), "beforeGeneration");
+	Cy::call_optional(gDLL->getPythonIFace()->getMapScriptModule(), "beforeGeneration");
 
 	if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "generateRandomMap"))
 	{
 		return; // Python override
 	}
 
-	char buf[256];
-
-	sprintf(buf, "Generating Random Map %S, %S...", gDLL->getMapScriptName().GetCString(), GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getDescription());
-	gDLL->NiTextOut(buf);
+	gDLL->NiTextOut(CvString::format("Generating Random Map %S, %S...", gDLL->getMapScriptName().GetCString(), GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getDescription()).c_str());
 
 	generatePlotTypes();
 	generateTerrain();

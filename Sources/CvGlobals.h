@@ -900,6 +900,8 @@ public:
 	std::vector<CvPromotionInfo*>& getPromotionInfos();
 	CvPromotionInfo& getPromotionInfo(PromotionTypes ePromotionNum);
 	CvInfoReplacements<CvPromotionInfo>* getPromotionInfoReplacements();
+	typedef boost::function<bool(const CvPromotionInfo*, PromotionTypes)> PromotionPredicateFn;
+	PromotionTypes findPromotion(PromotionPredicateFn predicateFn) const;
 
 	int getNumTechInfos();
 	std::vector<CvTechInfo*>& getTechInfos();
