@@ -75,9 +75,11 @@ class CvTechChooser:
 		self.scrollOffs = 0
 		self.iNumEras = GC.getNumEraInfos()
 		self.iNumTechs = GC.getNumTechInfos()
+		self.shown = False
 		self.created = False
 		self.skipNextExitKey = True
 		self.demoMode = False
+		self.mwlHandle = None
 		self.cacheBenefits()
 
 	def screen(self):
@@ -99,6 +101,8 @@ class CvTechChooser:
 			return CIV_IS_QUEUED
 
 	def initForPlayer(self, iPlayer):
+		print "CvTechChooser.initForPlayer - iPlayer = " + str(iPlayer)
+
 		screen = self.screen()
 
 		self.iPlayer = iPlayer
@@ -191,9 +195,6 @@ class CvTechChooser:
 		# Create the tech button backgrounds
 		self.refresh(xrange(self.iNumTechs), False)
 
-		# Delay first scroll position update so UI can initialize first
-		self.delayedScroll = 2
-
 	def interfaceScreen(self, screenId):
 		print "CvTechChooser.interfaceScreen"
 
@@ -202,98 +203,107 @@ class CvTechChooser:
 			return
 
 		# Make sure we don't initialize twice
-		if self.created:
-			print "CvTechChooser.interfaceScreen - skipping, already created"
+		if self.shown:
+			print "CvTechChooser.interfaceScreen - skipping, already shown"
 			return
 
-		self.mwlHandle = Win32.registerMouseWheelListener()
-
-		self.created = True
 		self.skipNextExitKey = True
+
 		self.screenId = screenId
-
-		import InputData
-		self.InputData = InputData.instance
-
-		# Set up widget sizes
-		import ScreenResolution as SR
-		self.xRes = SR.x
-		self.yRes = SR.y
-		self.aFontList = SR.aFontList
-
-		self.wCell = 128 + self.xRes / 6
-
-		self.xCellDist = CELL_GAP + self.wCell
-
-		if self.yRes > 1000:
-			self.sIcon0 = 64
-		elif self.yRes > 800:
-			self.sIcon0 = 56
-		else:
-			self.sIcon0 = 48
-
-		self.hCell = self.sIcon0 + 8
-		self.sIcon1 = self.sIcon0 / 2
-
-		# Cache minimum X coordinate per era for era partitioning.
-		self.minEraXPos = [maxint] * self.iNumEras
-		self.firstEraTech = [(maxint, maxint)] * self.iNumEras
-		self.minX = maxint
-		self.maxX = 0
-		for iTech in xrange(self.iNumTechs):
-			info = GC.getTechInfo(iTech)
-			gridX = info.getGridX()
-			if gridX > 0:
-				iX = gridX * self.xCellDist
-				iX1 = (gridX + 1) * self.xCellDist
-				iEra = info.getEra()
-				if iX < self.minEraXPos[iEra]:
-					self.minEraXPos[iEra] = iX
-				if gridX < self.firstEraTech[iEra][0]:
-					self.firstEraTech[iEra] = (gridX, iTech)
-				if iX1 > self.maxX:
-					self.maxX = iX1
-				if iX < self.minX:
-					self.minX = iX
-
-		self.minimapScaleX = (self.xRes - (SLIDER_BORDER * 2)) / float(self.maxX - self.minX)
-
-		eWidGen = WidgetTypes.WIDGET_GENERAL
-		eFontTitle = FontTypes.TITLE_FONT
-
-		# Base Screen
 		screen = self.screen()
-		screen.addDDSGFC("ScreenBackground", AFM.getInterfaceArtInfo("SCREEN_BG_OPAQUE").getPath(), 0, 0, self.xRes, self.yRes, eWidGen, 1, 2)
 
-		screen.addPanel("TC_BarTop", "", "", True, False, 0, 0, self.xRes, SCREEN_PANEL_TOP_BAR_H, PanelStyles.PANEL_STYLE_TOPBAR)
-		screen.setLabel("TC_Header", "", "<font=4b>" + TRNSLTR.getText("TXT_KEY_TECH_CHOOSER_TITLE", ()), 1<<2, self.xRes/2, 4, 0, eFontTitle, eWidGen, 1, 2)
+		if not self.created:
+			print "CvTechChooser.interfaceScreen - creating for the first time"
+			import InputData
+			self.InputData = InputData.instance
 
-		screen.setText("TC_Exit", "", "<font=4b>" + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()), 1<<1, self.xRes - 8, 2, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
+			# Set up widget sizes
+			import ScreenResolution as SR
+			self.xRes = SR.x
+			self.yRes = SR.y
+			self.aFontList = SR.aFontList
 
-		stackBar = "progressBar"
-		screen.addStackedBarGFC(stackBar, 256, 2, self.xRes - 512, 32, InfoBarTypes.NUM_INFOBAR_TYPES, eWidGen, 1, 2)
-		screen.setStackedBarColors(stackBar, InfoBarTypes.INFOBAR_STORED, GC.getInfoTypeForString("COLOR_RESEARCH_STORED"))
-		screen.setStackedBarColors(stackBar, InfoBarTypes.INFOBAR_RATE, GC.getInfoTypeForString("COLOR_RESEARCH_RATE"))
-		screen.setStackedBarColors(stackBar, InfoBarTypes.INFOBAR_EMPTY, GC.getInfoTypeForString("COLOR_EMPTY"))
-		screen.hide(stackBar)
-		screen.setImageButton("WID|TECH|CURRENT0", "", 256, 3, self.xRes - 512, 30, eWidGen, 1, 2)
-		screen.hide("WID|TECH|CURRENT0")
+			self.wCell = 128 + self.xRes / 6
 
-		screen.setRenderInterfaceOnly(True)
-		screen.showWindowBackground(False)
+			self.xCellDist = CELL_GAP + self.wCell
+
+			if self.yRes > 1000:
+				self.sIcon0 = 64
+			elif self.yRes > 800:
+				self.sIcon0 = 56
+			else:
+				self.sIcon0 = 48
+
+			self.hCell = self.sIcon0 + 8
+			self.sIcon1 = self.sIcon0 / 2
+
+			# Cache minimum X coordinate per era for era partitioning.
+			self.minEraXPos = [maxint] * self.iNumEras
+			self.firstEraTech = [(maxint, maxint)] * self.iNumEras
+			self.minX = maxint
+			self.maxX = 0
+			for iTech in xrange(self.iNumTechs):
+				info = GC.getTechInfo(iTech)
+				gridX = info.getGridX()
+				if gridX > 0:
+					iX = gridX * self.xCellDist
+					iX1 = (gridX + 1) * self.xCellDist
+					iEra = info.getEra()
+					if iX < self.minEraXPos[iEra]:
+						self.minEraXPos[iEra] = iX
+					if gridX < self.firstEraTech[iEra][0]:
+						self.firstEraTech[iEra] = (gridX, iTech)
+					if iX1 > self.maxX:
+						self.maxX = iX1
+					if iX < self.minX:
+						self.minX = iX
+
+			self.minimapScaleX = (self.xRes - (SLIDER_BORDER * 2)) / float(self.maxX - self.minX)
+
+			eWidGen = WidgetTypes.WIDGET_GENERAL
+			eFontTitle = FontTypes.TITLE_FONT
+
+			# Base Screen
+			screen.addDDSGFC("ScreenBackground", AFM.getInterfaceArtInfo("SCREEN_BG_OPAQUE").getPath(), 0, 0, self.xRes, self.yRes, eWidGen, 1, 2)
+
+			screen.addPanel("TC_BarTop", "", "", True, False, 0, 0, self.xRes, SCREEN_PANEL_TOP_BAR_H, PanelStyles.PANEL_STYLE_TOPBAR)
+			screen.setLabel("TC_Header", "", "<font=4b>" + TRNSLTR.getText("TXT_KEY_TECH_CHOOSER_TITLE", ()), 1<<2, self.xRes/2, 4, 0, eFontTitle, eWidGen, 1, 2)
+
+			screen.setText("TC_Exit", "", "<font=4b>" + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()), 1<<1, self.xRes - 8, 2, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
+
+			stackBar = "progressBar"
+			screen.addStackedBarGFC(stackBar, 256, 2, self.xRes - 512, 32, InfoBarTypes.NUM_INFOBAR_TYPES, eWidGen, 1, 2)
+			screen.setStackedBarColors(stackBar, InfoBarTypes.INFOBAR_STORED, GC.getInfoTypeForString("COLOR_RESEARCH_STORED"))
+			screen.setStackedBarColors(stackBar, InfoBarTypes.INFOBAR_RATE, GC.getInfoTypeForString("COLOR_RESEARCH_RATE"))
+			screen.setStackedBarColors(stackBar, InfoBarTypes.INFOBAR_EMPTY, GC.getInfoTypeForString("COLOR_EMPTY"))
+			screen.hide(stackBar)
+			screen.setImageButton("WID|TECH|CURRENT0", "", 256, 3, self.xRes - 512, 30, eWidGen, 1, 2)
+			screen.hide("WID|TECH|CURRENT0")
+
+			screen.setPersistent(True)
+			screen.setRenderInterfaceOnly(True)
+			screen.showWindowBackground(False)
+
+			# Debug
+			import DebugUtils
+			if DebugUtils.bDebugMode:
+				DDB = "TC_DebugDD"
+				screen.addDropDownBoxGFC(DDB, 4, 2, 200, eWidGen, 1, 2, eFontTitle)
+				for iPlayerX in range(GC.getMAX_PLAYERS()):
+					CyPlayerX = GC.getPlayer(iPlayerX)
+					if CyPlayerX.isAlive():
+						screen.addPullDownString(DDB, CyPlayerX.getName(), iPlayerX, iPlayerX, iPlayer == iPlayerX)
+
+			self.initForPlayer(GC.getGame().getActivePlayer())
+
+			self.created = True
+
+		print "CvTechChooser.interfaceScreen - showing"
+		self.mwlHandle = Win32.registerMouseWheelListener()
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
-
-		# Debug
-		import DebugUtils
-		if DebugUtils.bDebugMode:
-			DDB = "TC_DebugDD"
-			screen.addDropDownBoxGFC(DDB, 4, 2, 200, eWidGen, 1, 2, eFontTitle)
-			for iPlayerX in range(GC.getMAX_PLAYERS()):
-				CyPlayerX = GC.getPlayer(iPlayerX)
-				if CyPlayerX.isAlive():
-					screen.addPullDownString(DDB, CyPlayerX.getName(), iPlayerX, iPlayerX, iPlayer == iPlayerX)
-
-		self.initForPlayer(GC.getGame().getActivePlayer())
+		# Delay first scroll position update so UI can initialize first
+		self.delayedScroll = 2
+		self.shown = True
 
 		print "CvTechChooser.interfaceScreen - DONE"
 
@@ -574,6 +584,8 @@ class CvTechChooser:
 			self.updateTechRecords(True)
 
 	def updateTechRecords(self, bForce):
+		print "CvTechChooser.updateTechRecords - bForce = " + str(bForce)
+
 		screen = self.screen()
 
 		# Progress Bar
@@ -905,7 +917,6 @@ class CvTechChooser:
 			iType += 1
 		self.techBenefits = techBenefits
 
-	# Tooltip
 	def updateTooltip(self, screen, szText, xPos = -1, yPos = -1, uFont = ""):
 		if not szText:
 			return
@@ -938,7 +949,6 @@ class CvTechChooser:
 				else:
 					self.scrollTo(self.scrollOffs)
 
-
 		if self.demoMode:
 			self.scrollTo(self.demoOffs)
 			self.demoOffs = self.demoOffs + 50
@@ -958,23 +968,10 @@ class CvTechChooser:
 		elif mousePos.y > self.yRes - SCREEN_PANEL_BOTTOM_BAR_H and Win32.isLMB():
 			self.scrolling = True
 
-		# if self.changed:
-		# 	self.changed = sorted(self.changed, key=lambda el: abs(el[0] - self.scrollOffs - self.xRes / 2))
-		# 	remaining_updates = self.changed[:TECH_PAGING_RATE]
-		# 	self.changed = self.changed[TECH_PAGING_RATE:]
-		# 	self.updateTechStates((f[1] for f in remaining_updates))
 		if self.updates:
 			# Sort them by distance to the current scroll offset so we can make sure to update what the player is looking at first
-			self.updates = sorted(self.updates, key=lambda el: abs(el[0] - self.scrollOffs - self.xRes / 2))
-			
+			self.updates = sorted(self.updates, key=lambda el: abs(el[0] - self.scrollOffs - self.xRes / 2))		
 			remaining_updates = self.updates[:TECH_PAGING_RATE]
-
-			# remaining_updates = [] 
-			# for el in self.updates:
-			# 	dist = abs(el[0] - self.scrollOffs - self.xRes / 2)
-			# 	if len(remaining_updates) > TECH_PAGING_RATE and dist > self.xRes:
-			# 		break
-			# 	remaining_updates.append(el)
 			self.updates = self.updates[len(remaining_updates):]
 			self.refresh((f[1] for f in remaining_updates), True)
 
@@ -986,8 +983,6 @@ class CvTechChooser:
 		if not self.created:
 			print "CvTechChooser.handleInput - aborted due to screen not being created"
 			return 0
-
-		print "CvTechChooser.handleInput"
 
 		screen = self.screen()
 		bAlt, bCtrl, bShift = self.InputData.getModifierKeys()
@@ -1085,7 +1080,7 @@ class CvTechChooser:
 							if CASE[0] == "CURRENT":
 								CyMessageControl().sendResearch(-1, bShift)
 								self.updateTechRecords(False)
-							elif CASE[0] == "CHOICE" and (self.currentTechState[iType] == CIV_TECH_AVAILABLE or not bShift and (self.currentTechState[iType] == CIV_IS_RESEARCHING or self.currentTechState[iType] == CIV_IS_QUEUED)):
+							elif CASE[0] == "CHOICE" and (self.currentTechState[iType] == CIV_TECH_AVAILABLE or (not bShift and (self.currentTechState[iType] == CIV_IS_RESEARCHING or self.currentTechState[iType] == CIV_IS_QUEUED))):
 								CyMessageControl().sendResearch(iType, bShift)
 								self.updateTechRecords(False)
 					elif TYPE == "ERAIM" or TYPE == "ERATEXT":
@@ -1108,16 +1103,26 @@ class CvTechChooser:
 			CyInterface().setDirty(InterfaceDirtyBits.Advanced_Start_DIRTY_BIT, True)
 
 		# Only delete if actually created
-		if self.created:
-			print "CvTechChooser.onClose - deleting"
-			self.created = False
+		if self.shown:
+			print "CvTechChooser.onClose - hiding"
 			Win32.unregisterMouseWheelListener(self.mwlHandle)
-			del (
-				self.screenId, self.InputData, self.szTxtTT, self.iOffsetTT, self.bLockedTT, self.iUnitTT, self.bUnitTT,
-				self.xRes, self.yRes, self.aFontList, self.wCell, self.hCell, self.sIcon0, self.sIcon1, self.iSelectedTech,
-				self.iPlayer, self.CyPlayer, self.CyTeam, self.iCurrentResearch, self.currentTechState, self.iCurrentEra, self.updates
-			)
+			self.shown = False
+
+		# if self.created:
+		# 	print "CvTechChooser.onClose - deleting"
+		# 	self.created = False
+		# 	del (
+		# 		self.screenId, self.InputData, self.szTxtTT, self.iOffsetTT, self.bLockedTT, self.iUnitTT, self.bUnitTT,
+		# 		self.xRes, self.yRes, self.aFontList, self.wCell, self.hCell, self.sIcon0, self.sIcon1, self.iSelectedTech,
+		# 		self.iPlayer, self.CyPlayer, self.CyTeam, self.iCurrentResearch, self.currentTechState, self.iCurrentEra, self.updates
+		# 	)
 		print "CvTechChooser.onClose - DONE"
+
+	def hideScreen (self):
+		print "CvTechChooser.hideScreen"
+		screen = self.screen()
+		screen.hideScreen()
+		print "CvTechChooser.hideScreen - DONE"
 
 	def getTechPos(self, idx):
 		info = GC.getTechInfo(idx)
