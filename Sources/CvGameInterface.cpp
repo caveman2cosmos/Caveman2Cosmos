@@ -527,12 +527,9 @@ void CvGame::updateColoredPlots()
 				pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
 				pSelectedUnitNode = gDLL->getInterfaceIFace()->nextSelectionListNode(pSelectedUnitNode);
 
-				if (pSelectedUnit != NULL)
+				if (pSelectedUnit != NULL && pSelectedUnit->canArcherBombard())
 				{
-					if (pSelectedUnit->canArcherBombard(pSelectedUnit->plot()))
-					{
-						iMaxAirRange = 1;
-					}
+					iMaxAirRange = 1;
 				}
 			}
 

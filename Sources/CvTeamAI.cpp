@@ -5631,18 +5631,18 @@ void CvTeamAI::AI_doWar()
 		int iDogpileWarThreshold;
 		AI_getWarThresholds( iTotalWarThreshold, iLimitedWarThreshold, iDogpileWarThreshold );
 				
-		// we oppose war if half the non-dagger teammates in financial trouble
-		bool bFinancesOpposeWar = false;
-		if ((iFinancialTroubleCount - iDaggerCount) >= std::max(1, getNumMembers() / 2 ))
-		{
-			// this can be overridden by by the pro-war booleans
-			bFinancesOpposeWar = true;
-		}
+		//// we oppose war if half the non-dagger teammates in financial trouble
+		//bool bFinancesOpposeWar = false;
+		//if ((iFinancialTroubleCount - iDaggerCount) >= std::max(1, getNumMembers() / 2 ))
+		//{
+		//	// this can be overridden by by the pro-war booleans
+		//	bFinancesOpposeWar = true;
+		//}
 
-		// if aggressive, we may start a war to get money
-		bool bFinancesProTotalWar = false;
-		bool bFinancesProLimitedWar = false;
-		bool bFinancesProDogpileWar = false;
+		//// if aggressive, we may start a war to get money
+		//bool bFinancesProTotalWar = false;
+		//bool bFinancesProLimitedWar = false;
+		//bool bFinancesProDogpileWar = false;
 
 		// Afforess: There are very rarely cases where wars result in net income, especially initially.
 		// While wars, if successful, may yield long-term windfalls, it is rather myopic to plan on the basis of success
@@ -5685,10 +5685,10 @@ void CvTeamAI::AI_doWar()
 		bool bFinancialProWar = iFundedPercent > iSafePercent;
 
 		// Set some sane default values
-		bFinancesProTotalWar = bFinancialProWar;
-		bFinancesProLimitedWar = bFinancialProWar;
-		bFinancesProDogpileWar = bFinancialProWar;
-		bFinancesOpposeWar = !bFinancialProWar;
+		bool bFinancesProTotalWar = bFinancialProWar;
+		bool bFinancesProLimitedWar = bFinancialProWar;
+		bool bFinancesProDogpileWar = bFinancialProWar;
+		bool bFinancesOpposeWar = !bFinancialProWar;
 
 		// Only check limited and dogpile finances if we can not afford a total war. If we can afford a total war, we can afford any war.
 		if (bFinancesOpposeWar)
@@ -6470,6 +6470,8 @@ int CvTeamAI::AI_contactTradeVal(TeamTypes eContactTeam, TeamTypes eTeam) const
 			}
 		}
 	}
+
+	iMetCount = std::max(1, iMetCount);
 
 	switch (iAttitude/iMetCount)
 	{

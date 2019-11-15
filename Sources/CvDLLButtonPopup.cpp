@@ -2085,7 +2085,7 @@ bool CvDLLButtonPopup::launchLoadUnitPopup(CvPopup* pPopup, CvPopupInfo &info)
 	CvUnit* pFirstUnit = NULL;
 	for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 	{
-		CvUnit* pLoopUnit = unitItr.ptr();
+		CvUnit* pLoopUnit = *unitItr;
 
 		if (pSelectionGroup->canDoCommand(COMMAND_LOAD_UNIT, pLoopUnit->getOwnerINLINE(), pLoopUnit->getID()))
 		{
@@ -2146,7 +2146,7 @@ bool CvDLLButtonPopup::launchLeadUnitPopup(CvPopup* pPopup, CvPopupInfo &info)
 	CvUnit* pFirstUnit = NULL;
 	for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr) 
 	{
-		CvUnit* pLoopUnit = unitItr.ptr();
+		CvUnit* pLoopUnit = *unitItr;
 
 		if (pLoopUnit->canPromote((PromotionTypes) info.getData1(), info.getData2()))
 		{
@@ -3142,7 +3142,7 @@ bool CvDLLButtonPopup::launchSelectShadowUnitPopup(CvPopup* pPopup, CvPopupInfo 
 
 	for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 	{
-		CvUnit* pLoopUnit = unitItr.ptr();
+		CvUnit* pLoopUnit = *unitItr;
 
 		if (pUnit->canShadowAt(pPlot, pLoopUnit) && pLoopUnit->getID() != 0)
 		{
@@ -3402,7 +3402,7 @@ bool CvDLLButtonPopup::launchSelectMergeUnitPopup(CvPopup* pPopup, CvPopupInfo &
 
 	for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 	{
-		CvUnit* pLoopUnit = unitItr.ptr();
+		CvUnit* pLoopUnit = *unitItr;
 
 		if (pLoopUnit->getOwnerINLINE() == pUnit->getOwnerINLINE())
 		{
@@ -3547,7 +3547,7 @@ bool CvDLLButtonPopup::launchSelectArrestUnitPopup(CvPopup* pPopup, CvPopupInfo 
 
 	for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 	{
-		CvUnit* pLoopUnit = unitItr.ptr();
+		CvUnit* pLoopUnit = *unitItr;
 
 		if (pLoopUnit->isWanted())
 		{

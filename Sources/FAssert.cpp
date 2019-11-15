@@ -248,15 +248,26 @@ bool FAssertDlg( const char* szExpr, const char* szMsg, const char* szFile, unsi
 	std::string dllTrace = getDLLTrace();
 
 #ifdef FASSERT_LOGGING
-	gDLL->logMsg("Asserts.log", CvString::format("%s (%d): %s,  %s\n%s\n%s", szFile, line, szExpr, szMsg, pyTrace.c_str(), dllTrace.c_str()).c_str());
+	gDLL->logMsg("Asserts.log", CvString::format("%s (%d): %s,  %s\n%s\n%s", 
+		szFile ? szFile : "", 
+		line, 
+		szExpr ? szExpr : "", 
+		szMsg ? szMsg : "", 
+		pyTrace.c_str(), 
+		dllTrace.c_str()).c_str()
+	);
+
 	picojson::value::object obj;
+
 	if(szFile) obj["file"] = picojson::value(szFile);
 	obj["line"] = picojson::value(static_cast<double>(line));
 	if(szExpr) obj["expr"] = picojson::value(szExpr);
 	if(szMsg) obj["msg"] = picojson::value(szMsg);
 	if(!pyTrace.empty()) obj["py_trace"] = picojson::value(pyTrace);
 	if(!dllTrace.empty()) obj["dll_trace"] = picojson::value(dllTrace);
+	
 	gDLL->logMsg("AssertsJson.log", picojson::value(obj).serialize().c_str());
+
 	return false;
 #else
 	g_AssertInfo.szExpression = szExpr ? szExpr : "";

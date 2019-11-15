@@ -13646,11 +13646,11 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 			{
 				iSpecialistHappiness = 0;
 				TechTypes eTech = ((TechTypes)iI);
-				for (int iJ = 0; iJ < GC.getSpecialistInfo(eSpecialist).getNumTechHealthTypes(); iJ++)
+				for (int iJ = 0; iJ < GC.getSpecialistInfo(eSpecialist).getNumTechHappinessTypes(); iJ++)
 				{
-					if (GC.getSpecialistInfo(eSpecialist).getTechHealthType(iJ).eTech == eTech)
+					if (GC.getSpecialistInfo(eSpecialist).getTechHappinessType(iJ).eTech == eTech)
 					{
-						iSpecialistHappiness += GC.getSpecialistInfo(eSpecialist).getTechHealthType(iJ).iModifier;
+						iSpecialistHappiness += GC.getSpecialistInfo(eSpecialist).getTechHappinessType(iJ).iModifier;
 					}
 				}
 				if (GC.getGameINLINE().getActivePlayer() == NO_PLAYER && GET_PLAYER(kCity.getOwner()).getID() != NO_PLAYER)

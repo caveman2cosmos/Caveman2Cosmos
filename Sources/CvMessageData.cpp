@@ -1792,13 +1792,13 @@ void CvNetChooseMergeUnit::Execute()
 				}
 			}
 			CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalGroupOffset, 
-				boost::bind(isGroupUpgradePromotion, pkMergedUnit, _2),
-				boost::bind(isGroupDowngradePromotion, pkMergedUnit, _2)
+				boost::bind(&CvUnit::isGroupUpgradePromotion, pkMergedUnit, _2),
+				boost::bind(&CvUnit::isGroupDowngradePromotion, pkMergedUnit, _2)
 			);
 
 			CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalQualityOffset,
-				boost::bind(isQualityUpgradePromotion, pkMergedUnit, _2),
-				boost::bind(isQualityDowngradePromotion, pkMergedUnit, _2)
+				boost::bind(&CvUnit::isQualityUpgradePromotion, pkMergedUnit, _2),
+				boost::bind(&CvUnit::isQualityDowngradePromotion, pkMergedUnit, _2)
 			);
 			
 			//Set New Experience

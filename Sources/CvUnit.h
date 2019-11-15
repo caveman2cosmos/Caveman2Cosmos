@@ -1787,8 +1787,9 @@ private:
 public:
 // Dale - RB: Field Bombard END
 // Dale - ARB: Archer Bombard START
-	bool canArcherBombard(const CvPlot* pPlot) const;
-	bool canArcherBombardAt(const CvPlot* pPlot, int iX, int iY) const;
+	bool canArcherBombard() const;
+	// fromPlot - units own plot() isn't valid in some cases (when its out of viewport or using dummy entities)
+	bool canArcherBombardAt(const CvPlot* fromPlot, int iX, int iY) const;
 	bool archerBombard(int iX, int iY, bool supportAttack = false);
 // Dale - ARB: Archer Bombard END
 // Dale - SA: Stack Attack START
@@ -1801,7 +1802,7 @@ public:
 	void doActiveDefense();
 // Dale - SA: Active Defense END
 // Dale - FE: Fighters START
-	bool canFEngage(const CvPlot* pPlot) const;
+	bool canFEngage() const;
 	bool canFEngageAt(const CvPlot* pPlot, int iX, int iY) const;
 	bool fighterEngage(int iX, int iY);
 // Dale - FE: Fighters END
@@ -2756,8 +2757,14 @@ public:
 	int groupRank() const;
 	int sizeRank() const;
 
-	bool canMerge(bool bAutocheck = false);
-	bool canSplit();
+	// Functions for evaluating upgrades when splitting and merging
+	bool isGroupUpgradePromotion(PromotionTypes promotion) const;
+	bool isGroupDowngradePromotion(PromotionTypes promotion) const;
+	bool isQualityUpgradePromotion(PromotionTypes promotion) const;
+	bool isQualityDowngradePromotion(PromotionTypes promotion) const;
+
+	bool canMerge(bool bAutocheck = false) const;
+	bool canSplit() const;
 
 	void doMerge();
 	void doSplit();

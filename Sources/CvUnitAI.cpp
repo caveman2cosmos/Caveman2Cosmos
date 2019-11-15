@@ -32923,7 +32923,7 @@ bool CvUnitAI::AI_Abombard()
 	int iBestValue;
 	int iDX, iDY;
 
-	if(!canArcherBombard(plot()))
+	if(!canArcherBombard())
 	{
 		return false;
 	}
@@ -32995,7 +32995,7 @@ bool CvUnitAI::AI_FEngage()
 	CLLNode<IDInfo>* pUnitNode;
 	int iCount;
 
-	if (!canFEngage(plot()))
+	if (!canFEngage())
 	{
 		return false;
 	}

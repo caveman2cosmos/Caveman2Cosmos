@@ -8087,7 +8087,7 @@ bool CvCityAI::AI_isAirDefended(bool bCountLand, int iExtra)
 	CvPlot* pPlot = plot();
 	for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 	{
-		CvUnit* pLoopUnit = unitItr.ptr();
+		CvUnit* pLoopUnit = *unitItr;
 
 		if (pLoopUnit->getOwnerINLINE() == getOwnerINLINE() &&
 			pLoopUnit->canAirDefend())
@@ -9030,7 +9030,7 @@ int CvCityAI::AI_getGoodTileCount()
 						// when best build changes food situation for city, changing the best build.
 						for (CvPlot::unit_iterator unitItr = pLoopPlot->beginUnits(); unitItr != pLoopPlot->endUnits(); ++unitItr)
 						{
-							CvUnit* pLoopUnit = unitItr.ptr();
+							CvUnit* pLoopUnit = *unitItr;
 							if (unitItr->getBuildType() != NO_BUILD)
 							{
 								if( eBuild == NO_BUILD || pLoopPlot->getBuildTurnsLeft(eBuild,0,0) > pLoopPlot->getBuildTurnsLeft(unitItr->getBuildType(),0,0) )
@@ -15919,7 +15919,7 @@ int CvCityAI::AI_workingCityPlotTargetMissionAIs(PlayerTypes ePlayer, MissionAIT
 						if (pHeadUnit != NULL)
 						{
 							int iCorrectUnitAICount = 0;
-							for (CvSelectionGroup::unit_iterator unitItr = pLoopSelectionGroup->beginValidUnits(); unitItr != pLoopSelectionGroup->endValidUnits(); ++unitItr)
+							for (CvSelectionGroup::unit_iterator unitItr = pLoopSelectionGroup->beginUnits(); unitItr != pLoopSelectionGroup->endUnits(); ++unitItr)
 							{
 								if (bCanMoveAllTerrain && !(unitItr->canMoveAllTerrain()))
 								{
@@ -17728,7 +17728,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 										CvPlot* pPlot = plot();
 										for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 										{
-											CvUnit* pLoopUnit = unitItr.ptr();
+											CvUnit* pLoopUnit = *unitItr;
 											if (pLoopUnit->getTeam() == getTeam())
 											{
 												if (pLoopUnit->getUnitCombatType() == iI)

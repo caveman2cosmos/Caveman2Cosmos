@@ -6485,9 +6485,10 @@ int CvTeam::getVictoryDelay(VictoryTypes eVictory) const
 			return -1;
 		}
 		
-		if (iCount < kProject.getVictoryThreshold(eVictory))
+		int victoryThreshold = kProject.getVictoryThreshold(eVictory);
+		if (iCount < victoryThreshold && victoryThreshold > 0)
 		{
-			iExtraDelayPercent += ((kProject.getVictoryThreshold(eVictory)  - iCount) * kProject.getVictoryDelayPercent()) / kProject.getVictoryThreshold(eVictory);
+			iExtraDelayPercent += ((victoryThreshold - iCount) * kProject.getVictoryDelayPercent()) / victoryThreshold;
 		}
 	}
 

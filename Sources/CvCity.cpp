@@ -24465,7 +24465,7 @@ void CvCity::doPromotion()
 					CvPlot* pPlot = plot();
 					for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 					{
-						CvUnit* pLoopUnit = unitItr.ptr();
+						CvUnit* pLoopUnit = *unitItr;
 						if (GET_TEAM(pLoopUnit->getTeam()).getID() == GET_TEAM(GET_PLAYER(getOwner()).getTeam()).getID())
 						{
 							assignPromotionChecked(ePromotion1, pLoopUnit);
@@ -25843,7 +25843,7 @@ void CvCity::doAttack()
 				{
 					for (CvPlot::unit_iterator unitItr = pAdjacentPlot->beginUnits(); unitItr != pAdjacentPlot->endUnits(); ++unitItr)
 					{
-						CvUnit* pLoopUnit = unitItr.ptr();
+						CvUnit* pLoopUnit = *unitItr;
 
 						if (pLoopUnit->getTeam() != getTeam())
 						{
@@ -28029,7 +28029,7 @@ void CvCity::assignOngoingTraining(UnitCombatTypes eCombat, CvPlot* pPlot)
 	CvUnit* pBestUnit = NULL;
 	for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 	{
-		CvUnit* pLoopUnit = unitItr.ptr();
+		CvUnit* pLoopUnit = *unitItr;
 		if (pLoopUnit->getTeam() == getTeam())
 		{
 			if (pLoopUnit->isHasUnitCombat(eCombat))
@@ -28828,7 +28828,7 @@ int CvCity::getInvestigationTotal(bool bActual) const
 		CvPlot* pPlot = plot();
 		for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 		{
-			CvUnit* pLoopUnit = unitItr.ptr();
+			CvUnit* pLoopUnit = *unitItr;
 
 			int iUnitInvestigation = 0;
 			if (pLoopUnit->getOwner() == getOwner())

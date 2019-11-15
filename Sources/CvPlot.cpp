@@ -1294,7 +1294,7 @@ bool CvPlot::unitHere(const CvUnit* pUnit) const
 {
 	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
 	{
-		if (unitItr.ptr() == pUnit)
+		if (*unitItr == pUnit)
 		{
 			return true;
 		}
@@ -1403,9 +1403,9 @@ void CvPlot::verifyUnitValidPlot()
 	bool bAnyMoved = false;
 	std::vector<CvUnit*> aUnits;
 
-	for (unit_iterator unitItr = beginValidUnits(); unitItr != endValidUnits(); ++unitItr)
+	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
 	{
-		aUnits.push_back(unitItr.ptr());
+		aUnits.push_back(*unitItr);
 	}
 	
 	for (std::vector<CvUnit*>::iterator it = aUnits.begin(); it != aUnits.end(); )
@@ -4117,9 +4117,9 @@ CvUnit* CvPlot::getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer
 	int iBestValue = 0;
 	CvUnit* pBestUnit = NULL;
 
-	for (unit_iterator unit = beginValidUnits(); unit != endValidUnits(); ++unit)
+	for (unit_iterator unit = beginUnits(); unit != endUnits(); ++unit)
 	{
-		CvUnit* pLoopUnit = &(*unit);
+		CvUnit* pLoopUnit = *unit;
 
 		int iValue = getDefenderScore(this, pLoopUnit, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, bAssassinate, bClearCache ? ECacheAccess::Write : ECacheAccess::ReadWrite);
 
@@ -4151,9 +4151,9 @@ CvUnit* CvPlot::getFirstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlaye
 	CvUnit* pFirstUnit = NULL;
 	int iValue = 0;
 
-	for (unit_iterator unit = beginValidUnits(); unit != endValidUnits(); ++unit)
+	for (unit_iterator unit = beginUnits(); unit != endUnits(); ++unit)
 	{
-		CvUnit* pLoopUnit = &(*unit);
+		CvUnit* pLoopUnit = *unit;
 
 		int iValue = getDefenderScore(this, pLoopUnit, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, false, ECacheAccess::Write);
 

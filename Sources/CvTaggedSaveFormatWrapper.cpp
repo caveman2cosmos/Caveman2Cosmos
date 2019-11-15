@@ -431,6 +431,8 @@ class DictionaryEntry
 {
 public:
 	DictionaryEntry()
+		: m_id(0)
+		, m_type(SAVE_VALUE_ANY)
 	{
 	}
 	virtual ~DictionaryEntry()
@@ -446,10 +448,18 @@ public:
 static int lastIdMatch = -1;
 
 CvTaggedSaveFormatWrapper::CvTaggedSaveFormatWrapper()
+	: m_stream(NULL)
+	, m_useTaggedFormat(false)
+	, m_writtenMappingTables(false)
+	, m_bReadNextElementHeader(false)
+	, m_delimiterIsStart(false)
+	, m_nestingDepth(0)
+	, m_iNextElementType(0)
+	, m_iNextElementNameId(0)
+	, m_streamNestingDepth(0)
+	, m_inUse(false)
 {
 	reset(false);
-
-	m_inUse = false;
 }
 
 CvTaggedSaveFormatWrapper::~CvTaggedSaveFormatWrapper()
@@ -2191,7 +2201,9 @@ CvTaggedSaveFormatWrapper::getId(const char* name, int& idHint, int& idSeq, Save
 {
 	PROFILE_FUNC();
 
-	if ( name != NULL && idSeq == usageSeq )
+	FAssertMsg(name, "name cannot be null");
+
+	if ( idSeq == usageSeq )
 	{
 		FAssert((int)m_idDictionary.size() > idHint);
 
@@ -2240,11 +2252,8 @@ CvTaggedSaveFormatWrapper::getId(const char* name, int& idHint, int& idSeq, Save
 		id = itr->second.m_id;
 	}
 
-	if ( name != NULL )
-	{
-		idHint = id;
-		idSeq = usageSeq;
-	}
+	idHint = id;
+	idSeq = usageSeq;
 
 	return id;
 }
@@ -3847,7 +3856,7 @@ CvTaggedSaveFormatWrapper::NormalizeName(const char* name)
 	//	Single threaded so use a static buffer to provide the canonicalized form.
 	//	Doing this to avoid construiction of CvStrings since this routine is called
 	//	millions of times per load/save
-	static char	normalizationBuffer[200];
+	static char	normalizationBuffer[1024];
 	char* result = (char*)name;
 
 	PROFILE_FUNC();
@@ -3867,9 +3876,9 @@ CvTaggedSaveFormatWrapper::NormalizeName(const char* name)
 	}
 
 	//	Strip address-of operators (e.g. - m_thingy on save should match &m_thingy on load)
-	if ( (ptr = strstr(result, "::&")) != NULL )
+	if ((ptr = strstr(result, "::&")) != NULL)
 	{
-		if ( result == name )
+		if (result == name)
 		{
 			memcpy(normalizationBuffer, name, ptr-name+2);
 			strcpy(normalizationBuffer + (ptr-name+2), ptr+3);
@@ -3878,7 +3887,7 @@ CvTaggedSaveFormatWrapper::NormalizeName(const char* name)
 		}
 		else
 		{
-			strcpy(ptr+2, ptr+3);
+			memmove(ptr + 2, ptr + 3, strlen(ptr + 3) + 1);
 		}
 	}
 	

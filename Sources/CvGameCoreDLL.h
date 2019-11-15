@@ -56,7 +56,9 @@
 #include "EnumFlags.h"
 #include "NiPoint.h"
 
+//
 // Basic types
+//
 typedef unsigned char    byte;
 typedef unsigned short   word;
 typedef unsigned int     uint;
@@ -64,7 +66,9 @@ typedef unsigned long    dword;
 typedef unsigned __int64 qword;
 typedef wchar_t          wchar;
 
+//
 // Type traits
+//
 #define MAX_CHAR                            (0x7f)
 #define MIN_CHAR                            (0x80)
 #define MAX_SHORT                           (0x7fff)
@@ -112,7 +116,9 @@ DEFINE_ENUM_FLAG_OPERATORS(ECacheAccess::flags);
 //
 // #define STRENGTH_IN_NUMBERS
 
+//
 // Profiler
+//
 #ifdef USE_INTERNAL_PROFILER
 #define MEMTRACK
 #endif
@@ -141,7 +147,9 @@ void IFPSetCount(ProfileSample* sample, int count);
 #define MEMORY_TRACE_FUNCTION()
 #define MEMORY_TRACK_NAME(x)
 
+//
 // Python
+//
 #ifdef _DEBUG
   #undef _DEBUG
   #include "Python.h"
@@ -198,7 +206,9 @@ namespace python = boost::python;
 #include <xercesc/framework/Wrapper4InputSource.hpp>
 #include <xercesc/validators/common/Grammar.hpp>
 
-
+//
+// Our code
+//
 #include "CvAllocator.h"
 
 #include "FAssert.h"

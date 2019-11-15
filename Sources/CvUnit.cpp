@@ -32933,7 +32933,7 @@ void CvUnit::doActiveDefense()
 // Dale - SA: Active Defense END
 
 // Dale - ARB: Archer Bombard START
-bool CvUnit::canArcherBombard(const CvPlot* pPlot) const
+bool CvUnit::canArcherBombard() const
 {
 	if(!GC.isDCM_ARCHER_BOMBARD())
 	{
@@ -32962,28 +32962,30 @@ bool CvUnit::canArcherBombard(const CvPlot* pPlot) const
 	return true;
 }
 
-bool CvUnit::canArcherBombardAt(const CvPlot* pPlot, int iX, int iY) const
+bool CvUnit::canArcherBombardAt(const CvPlot* fromPlot, int iX, int iY) const
 {
-	CvPlot* pTargetPlot;
-	if (!canArcherBombard(pPlot))
+	if (!canArcherBombard())
 	{
 		return false;
 	}
 
-	if(iX < 0 || iY < 0)
-	{
-		return false;
-	}
-	pTargetPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	CvPlot* pTargetPlot = GC.getMapINLINE().plotINLINE(iX, iY);
 
-	if (plotDistance(pPlot->getX_INLINE(), pPlot->getY_INLINE(), pTargetPlot->getX_INLINE(), pTargetPlot->getY_INLINE()) > 1)
+	if (!pTargetPlot)
 	{
 		return false;
 	}
+
+	if (plotDistance(fromPlot->getX_INLINE(), fromPlot->getY_INLINE(), pTargetPlot->getX_INLINE(), pTargetPlot->getY_INLINE()) > 1)
+	{
+		return false;
+	}
+
 	if(pTargetPlot->getNumVisiblePotentialEnemyDefenders(this) == 0)
 	{
 		return false;
 	}
+
 	if (pTargetPlot->isOwned())
 	{
 		if(pTargetPlot->getTeam() != getTeam())
@@ -32994,6 +32996,7 @@ bool CvUnit::canArcherBombardAt(const CvPlot* pPlot, int iX, int iY) const
 			}
 		}
 	}
+
 	return true;
 }
 
@@ -33143,7 +33146,7 @@ bool CvUnit::archerBombard(int iX, int iY, bool supportAttack)
 // Dale - ARB: Archer Bombard END
 
 // Dale - FE: Fighters START
-bool CvUnit::canFEngage(const CvPlot* pPlot) const
+bool CvUnit::canFEngage() const
 {
 	if(!GC.isDCM_FIGHTER_ENGAGE())
 	{
@@ -33173,7 +33176,7 @@ bool CvUnit::canFEngageAt(const CvPlot* pPlot, int iX, int iY) const
 	CvPlot* pTargetPlot;
 	int iI, iLoop;
 	CvUnit* pLoopUnit;
-	if (!canFEngage(pPlot))
+	if (!canFEngage())
 	{
 		return false;
 	}
@@ -42243,7 +42246,20 @@ int CvUnit::sizeRank() const
 	return (getSizeBaseTotal() + getExtraSize());
 }
 
-bool CvUnit::canMerge(bool bAutocheck)
+// (bAutocheck = true) check will be ordering a 4th potentially mergable unit to 
+// split instead during it's check processing.
+// The thinking behind this method is that when we merge 3 units we want a 4th one that 
+// was capable of it to be present and to split so that the unit count remains the same
+// and for the alternative strategy of splitting to be equally expressed.
+// For defense this means you create fodder flak to hold off minimalist unit count 
+// armies, buying time, and a strong lead defender to make a tough stand
+// For attack you have a strong lead attacker to bust through stiff opposition and some 
+// smaller units to wipe up defenders weakened by collateral (or splitting strategies 
+// to delay the capture of the city or position.)
+// After a few round of such merging among particular types in the same location will 
+// create a nice gradient of unit group sizes.  Should be interesting to see its effect in play.
+// TBSPLIT
+bool CvUnit::canMerge(bool bAutocheck) const
 {
 	CvPlot* pPlot = plot();
 	CLLNode<IDInfo>* pUnitNode;
@@ -42330,7 +42346,7 @@ bool CvUnit::canMerge(bool bAutocheck)
 }
 
 
-bool CvUnit::canSplit()
+bool CvUnit::canSplit() const
 {
 	
 	if (!GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
@@ -42359,6 +42375,32 @@ bool CvUnit::canSplit()
 	}
 	return true;
 }
+
+// Helpers
+bool CvUnit::isGroupUpgradePromotion(PromotionTypes promotion) const
+{
+	return GC.getPromotionInfo(promotion).getGroupChange() > 0 &&
+		(canAcquirePromotion(promotion, PromotionRequirements::Promote | PromotionRequirements::ForOffset) || canAcquirePromotion(promotion));
+}
+
+bool CvUnit::isGroupDowngradePromotion(PromotionTypes promotion) const
+{
+	return GC.getPromotionInfo(promotion).getGroupChange() < 0 &&
+		(canAcquirePromotion(promotion, PromotionRequirements::Promote | PromotionRequirements::ForOffset) || canAcquirePromotion(promotion));
+}
+
+bool CvUnit::isQualityUpgradePromotion(PromotionTypes promotion) const
+{
+	return GC.getPromotionInfo(promotion).getQualityChange() > 0 &&
+		(canAcquirePromotion(promotion, PromotionRequirements::Promote | PromotionRequirements::ForOffset) || canAcquirePromotion(promotion));
+}
+
+bool CvUnit::isQualityDowngradePromotion(PromotionTypes promotion) const
+{
+	return GC.getPromotionInfo(promotion).getQualityChange() < 0 &&
+		(canAcquirePromotion(promotion, PromotionRequirements::Promote | PromotionRequirements::ForOffset) || canAcquirePromotion(promotion));
+}
+
 
 void CvUnit::doMerge()
 {
@@ -42473,92 +42515,17 @@ void CvUnit::doMerge()
 				}
 			}
 		}
-		if (iTotalGroupOffset != 0)
-		{
-			while (iTotalGroupOffset > 0)
-			{
-				bSet = false;
-				for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-				{
-					if ((GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() > 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-						(GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() > 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI)))
-					{
-						pkMergedUnit->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						iTotalGroupOffset--;
-						bSet = true;
-						break;
-					}
-				}
-				if (!bSet)
-				{
-					iTotalGroupOffset--;
-					FAssertMsg(bSet, "Unit cannot find a valid Group Upgrade Promotion");
-				}
-			}
-			while (iTotalGroupOffset < 0)
-			{
-				bSet = false;
-				for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-				{
-					if ((GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() < 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-						(GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() < 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI)))
-					{
-						pkMergedUnit->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						iTotalGroupOffset++;
-						bSet = true;
-						break;
-					}
-				}
-				if (!bSet)
-				{
-					iTotalGroupOffset++;
-					FAssertMsg(bSet, "Unit cannot find a valid Group Downgrade Promotion");
-				}
-			}
-		}
-		if (iTotalQualityOffset != 0)
-		{
-			while (iTotalQualityOffset > 0)
-			{
-				bSet = false;
-				for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-				{
-					if ((GC.getPromotionInfo((PromotionTypes)iI).getQualityChange() > 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-						(GC.getPromotionInfo((PromotionTypes)iI).getQualityChange() > 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI)))
-					{
-						pkMergedUnit->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						iTotalQualityOffset--;
-						bSet = true;
-						break;
-					}
-				}
-				if (!bSet)
-				{
-					iTotalQualityOffset--;
-					FAssertMsg(bSet, "Unit cannot find a valid Quality Upgrade Promotion");
-				}
-			}
-			while (iTotalQualityOffset < 0)
-			{
-				bSet = false;
-				for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-				{
-					if ((GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() < 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-						(GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() < 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI)))
-					{
-						pkMergedUnit->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						iTotalQualityOffset++;
-						bSet = true;
-						break;
-					}
-				}
-				if (!bSet)
-				{
-					iTotalQualityOffset++;
-					FAssertMsg(bSet, "Unit cannot find a valid Quality Downgrade Promotion");
-				}
-			}
-		}
+
+		CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalGroupOffset,
+			boost::bind(&CvUnit::isGroupUpgradePromotion, pkMergedUnit, _2),
+			boost::bind(&CvUnit::isGroupDowngradePromotion, pkMergedUnit, _2)
+		);
+
+		CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalQualityOffset,
+			boost::bind(&CvUnit::isQualityUpgradePromotion, pkMergedUnit, _2),
+			boost::bind(&CvUnit::isQualityDowngradePromotion, pkMergedUnit, _2)
+		);
+
 		//Set New Experience
 		int iXP1 = pUnit1->getExperience100();
 		int iXP2 = pUnit2->getExperience100();
