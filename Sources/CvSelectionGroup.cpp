@@ -5627,7 +5627,7 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 	{
 		for (unit_iterator itr = beginUnits(); itr != endUnits(); ++itr)
 		{
-			FAssertDeclareNoUnitDeleteScope();
+			FAssertDeclareScope(CvSelectionGroup_CvUnit_LOOP);
 			CvUnit* pLoopUnit = *itr;
 			pLoopUnit->ExecuteMove(((float)(GC.getMissionInfo(MISSION_MOVE_TO).getTime() * gDLL->getMillisecsPerTurn())) / 1000.0f, false);
 		}
@@ -7288,8 +7288,7 @@ void CvSelectionGroup::removeUnit(CvUnit* pUnit)
 
 CLLNode<IDInfo>* CvSelectionGroup::deleteUnitNode(CLLNode<IDInfo>* pNode)
 {
-	CLLNode<IDInfo>* pNextUnitNode;
-
+	FAssertNotInScope(CvSelectionGroup_CvUnit_LOOP);
 	if (getOwnerINLINE() != NO_PLAYER)
 	{
 /************************************************************************************************/
@@ -7321,7 +7320,7 @@ CLLNode<IDInfo>* CvSelectionGroup::deleteUnitNode(CLLNode<IDInfo>* pNode)
 	CvUnit* pLoopUnit = ::getUnit(pNode->m_data);
 	int iVolume = pLoopUnit->getCargoVolume();
 
-	pNextUnitNode = m_units.deleteNode(pNode);
+	CLLNode<IDInfo>* pNextUnitNode = m_units.deleteNode(pNode);
 
 	AI_noteSizeChange(-1, iVolume);
 

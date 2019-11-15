@@ -226,8 +226,6 @@ m_Properties(this)
 
 CvUnit::~CvUnit()
 {
-	FAssertUnitDeleteAllowed();
-
 	if ( !isUsingDummyEntities() )
 	{
 		if (!gDLL->GetDone() && GC.IsGraphicsInitialized())						// don't need to remove entity when the app is shutting down, or crash can occur

@@ -121,21 +121,34 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
 
 #endif
 
-// An instance of this class will mark a scope as disallowing unit deletion.
-struct AssertNoUnitDeleteScope
+// An instance of this class will mark a scope so that other functions can check that they are or are not called from within it.
+template < int ID >
+struct AssertScope
 {
-	AssertNoUnitDeleteScope() { ++m_scopedepth; }
-	~AssertNoUnitDeleteScope()
+	AssertScope() { ++m_scopedepth; }
+	~AssertScope()
 	{
 		--m_scopedepth;
-		FAssertMsg(m_scopedepth >= 0, "Mismatched NO_DELETES scope");
+		FAssertMsg(m_scopedepth >= 0, "Mismatched scopes");
 	}
 
 	static int m_scopedepth;
 };
 
-#define FAssertDeclareNoUnitDeleteScope() AssertNoUnitDeleteScope CONCATENATE(__assert_no_unit_delete_scope_, __LINE__)
-#define FAssertUnitDeleteAllowed() FAssertMsg(AssertNoUnitDeleteScope::m_scopedepth == 0, "Unit delete is not allowed in this scope! Check the callstack!")
+template < int ID >
+int AssertScope<ID>::m_scopedepth = 0;
+
+// Scores for use with AssertScope
+enum AssertScopeTypes
+{
+	CvSelectionGroup_CvUnit_LOOP,
+	CvPlot_CvUnit_LOOP,
+	CvSelectionGroup_LOOP
+};
+
+#define FAssertDeclareScope(_id_) AssertScope<_id_> CONCATENATE(__AssertScope_##_id_##_, __LINE__)
+#define FAssertInScope(_id_) FAssertMsg(AssertScope<_id_>::m_scopedepth != 0, "Expected to be in a " #_id_ " scope!")
+#define FAssertNotInScope(_id_) FAssertMsg(AssertScope<_id_>::m_scopedepth == 0, "Expected to not be in a " #_id_ " scope!")
 
 #else
 // FASSERT_ENABLE not defined
@@ -147,8 +160,10 @@ struct AssertNoUnitDeleteScope
 #define FErrorMsg( msg )
 #define FEnsure( expr )
 #define FEnsureMsg( expr, msg )
-#define FAssertDeclareNoUnitDeleteScope()
-#define FAssertUnitDeleteAllowed()
+
+#define FAssertDeclareScope(_id_)
+#define FAssertInScope(_id_)
+#define FAssertNotInScope(_id_)
 
 #endif
 
