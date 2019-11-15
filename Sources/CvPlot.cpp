@@ -844,7 +844,7 @@ void CvPlot::doImprovementSpawn()
 			FAssertMsg(unitItr->atPlot(this), "pLoopUnit is expected to be at the current plot instance");
 			if (!unitItr->atPlot(this))
 			{
-				removeUnit(unitItr.ptr());
+				removeUnit(*unitItr);
 			}
 		}
 	}

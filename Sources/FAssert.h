@@ -3,6 +3,11 @@
 #ifndef FASSERT_H
 #define FASSERT_H
 
+// Macro helpers
+#define CONCATENATE(arg1, arg2)   CONCATENATE1(arg1, arg2)
+#define CONCATENATE1(arg1, arg2)  CONCATENATE2(arg1, arg2)
+#define CONCATENATE2(arg1, arg2)  arg1##arg2
+
 // Only compile in FAssert's if FASSERT_ENABLE is defined.  By default, however, let's key off of
 // _DEBUG.  Sometimes, however, it's useful to enable asserts in release builds, and you can do that
 // simply by changing the following lines to define FASSERT_ENABLE or using project settings to override
@@ -116,6 +121,22 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
 
 #endif
 
+// An instance of this class will mark a scope as disallowing unit deletion.
+struct AssertNoUnitDeleteScope
+{
+	AssertNoUnitDeleteScope() { ++m_scopedepth; }
+	~AssertNoUnitDeleteScope()
+	{
+		--m_scopedepth;
+		FAssertMsg(m_scopedepth >= 0, "Mismatched NO_DELETES scope");
+	}
+
+	static int m_scopedepth;
+};
+
+#define FAssertDeclareNoUnitDeleteScope() AssertNoUnitDeleteScope CONCATENATE(__assert_no_unit_delete_scope_, __LINE__)
+#define FAssertUnitDeleteAllowed() FAssertMsg(AssertNoUnitDeleteScope::m_scopedepth == 0, "Unit delete is not allowed in this scope! Check the callstack!")
+
 #else
 // FASSERT_ENABLE not defined
 #define FAssert( expr )
@@ -126,6 +147,9 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
 #define FErrorMsg( msg )
 #define FEnsure( expr )
 #define FEnsureMsg( expr, msg )
+#define FAssertDeclareNoUnitDeleteScope()
+#define FAssertUnitDeleteAllowed()
+
 #endif
 
 #if defined(FASSERT_ENABLE) || !defined(_DEBUG)
@@ -143,10 +167,6 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
 }
 #endif
 #endif
-
-#define CONCATENATE(arg1, arg2)   CONCATENATE1(arg1, arg2)
-#define CONCATENATE1(arg1, arg2)  CONCATENATE2(arg1, arg2)
-#define CONCATENATE2(arg1, arg2)  arg1##arg2
 
 // Static assert implementation for C++03, from https://stackoverflow.com/a/1980156/6402065
 /**

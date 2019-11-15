@@ -5542,29 +5542,15 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 
 	m_bIsMidMove = true;
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
-
-	pUnitNode = headUnitNode();
-	
 // BUG - Sentry Actions - start
 #ifdef _MOD_SENTRY
 	bool bSentryAlert = isHuman() && NULL != headMissionQueueNode() && headMissionQueueNode()->m_data.eMissionType == MISSION_MOVE_TO_SENTRY && sentryAlertSameDomainType();
 #endif
 // BUG - Sentry Actions - end
-
-	while (pUnitNode != NULL)
+	
+	for(safe_unit_iterator itr = beginUnitsSafe(); itr != endUnitsSafe(); ++itr)
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = nextUnitNode(pUnitNode);
-
-		if ( pLoopUnit == NULL)
-		{
-			//	Koshling  - this really isn't a valid condition I think but it's been seen
-			//	and until we can understand the underlying cause, mitigate by ignoring the
-			//	invalid unit
-			continue;
-		}
+		CvUnit* pLoopUnit = *itr;
 		if (pLoopUnit->at(iX,iY))
 		{
 			continue;
@@ -5576,11 +5562,16 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 #else
 		//TBNote: Need to make this an option perhaps.  Groups probably shouldn't be automatically splitting up to continue the planned move, particularly for human players.
 		//Would check if the whole group can move into the plot first.  This warrants more study before acting on this.
-		if ((pLoopUnit->canMove() && ((bCombat && (!(pLoopUnit->isNoCapture()) || !(pPlot->isEnemyCity(*pLoopUnit)))) ? pLoopUnit->canMoveOrAttackInto(pPlot) : pLoopUnit->canMoveInto(pPlot))) || (pLoopUnit == pCombatUnit))
+		if ((pLoopUnit->canMove() 
+			&& ((bCombat 
+				&& (!pLoopUnit->isNoCapture() || !pPlot->isEnemyCity(*pLoopUnit))) 
+				? pLoopUnit->canMoveOrAttackInto(pPlot) 
+				: pLoopUnit->canMoveInto(pPlot))) 
+			|| pLoopUnit == pCombatUnit)
 #endif
 // BUG - Sentry Actions - end
 		{
-			pLoopUnit->move(pPlot, true);//next statementperhaps should be an if is dead kind of protection against reporting the move elsewhere//TBFIXHERE
+			pLoopUnit->move(pPlot, true);//next statement perhaps should be an if is dead kind of protection against reporting the move elsewhere//TBFIXHERE
 			if (pLoopUnit->isDead())
 			{
 				pLoopUnit->joinGroup(NULL,true);
@@ -5634,12 +5625,10 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 	//execute move
 	if(bEndMove || !canAllMove())
 	{
-		pUnitNode = headUnitNode();
-		while(pUnitNode != NULL)
+		for (unit_iterator itr = beginUnits(); itr != endUnits(); ++itr)
 		{
-			pLoopUnit = ::getUnit(pUnitNode->m_data);
-			pUnitNode = nextUnitNode(pUnitNode);
-
+			FAssertDeclareNoUnitDeleteScope();
+			CvUnit* pLoopUnit = *itr;
 			pLoopUnit->ExecuteMove(((float)(GC.getMissionInfo(MISSION_MOVE_TO).getTime() * gDLL->getMillisecsPerTurn())) / 1000.0f, false);
 		}
 	}

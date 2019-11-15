@@ -1,6 +1,10 @@
 #include "CvGameCoreDll.h"
 
-#if (defined(FASSERT_ENABLE)|| !defined(_DEBUG)) && defined(WIN32)
+#ifdef FASSERT_ENABLE
+int AssertNoUnitDeleteScope::m_scopedepth = 0;
+#endif
+
+#if (defined(FASSERT_ENABLE) || !defined(_DEBUG)) && defined(WIN32)
 
 #include "FDialogTemplate.h"
 #include "CvPython.h"
