@@ -761,8 +761,6 @@ bool CvXMLLoadUtility::SetGlobalArtDefines()
 //------------------------------------------------------------------------------------------------------
 bool CvXMLLoadUtility::LoadGlobalText()
 {
-	bool bLoaded = false;
-
 	OutputDebugString("Begin load global text\n");
 
 	// set language tag
@@ -823,8 +821,6 @@ bool CvXMLLoadUtility::LoadGlobalText()
 	CvGameText::setLanguage(szLanguage);
 	logMsg("\nXML language set to %s\n", szLanguage.c_str());
 
-	if (!bLoaded)
-	{
 /************************************************************************************************/
 /* XML_CHECK_DOUBLE_TYPE                   03/14/08                                MRGENIE      */
 /*                                                                                              */
@@ -837,18 +833,18 @@ bool CvXMLLoadUtility::LoadGlobalText()
 /* XML_CHECK_DOUBLE_TYPE                   END                                                  */
 /************************************************************************************************/
 
-		if (!CreateFXml())
-		{
-			return false;
-		}
+	if (!CreateFXml())
+	{
+		return false;
+	}
 
-		//
-		// load all files in the xml text directory
-		//
-		std::vector<CvString> aszFiles;
-		std::vector<CvString> aszModfiles;
+	//
+	// load all files in the xml text directory
+	//
+	std::vector<CvString> aszFiles;
+	std::vector<CvString> aszModfiles;
 
-		gDLL->enumerateFiles(aszFiles, "xml\\text\\*.xml");
+	gDLL->enumerateFiles(aszFiles, "xml\\text\\*.xml");
 
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 05/23/08                                MRGENIE      */
@@ -856,42 +852,36 @@ bool CvXMLLoadUtility::LoadGlobalText()
 /*                                                                                              */
 /************************************************************************************************/
 /* original firaxis
-		if (gDLL->isModularXMLLoading())
-		{
-			gDLL->enumerateFiles(aszModfiles, L"modules\\*_CIV4GameText.xml");
-			aszFiles.insert(aszFiles.end(), aszModfiles.begin(), aszModfiles.end());
-		}
-*/
-		gDLL->enumerateFiles(aszModfiles, "modules\\*_CIV4GameText*.xml");
+	if (gDLL->isModularXMLLoading())
+	{
+		gDLL->enumerateFiles(aszModfiles, L"modules\\*_CIV4GameText.xml");
 		aszFiles.insert(aszFiles.end(), aszModfiles.begin(), aszModfiles.end());
+	}
+*/
+	gDLL->enumerateFiles(aszModfiles, "modules\\*_CIV4GameText*.xml");
+	aszFiles.insert(aszFiles.end(), aszModfiles.begin(), aszModfiles.end());
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
-		std::vector<CvGameText> texts;
+	std::vector<CvGameText> texts;
 
-		for(std::vector<CvString>::iterator it = aszFiles.begin(); it != aszFiles.end(); ++it)
-		{
-			bLoaded = LoadCivXml(NULL, *it); // Load the XML
-			if (!bLoaded)
-			{
-				char	szMessage[1024];
-				sprintf( szMessage, "LoadXML call failed for %s. \n Current XML file is: %s", (*it).c_str(), GC.getCurrentXMLFile().GetCString());
-				gDLL->MessageBox(szMessage, "XML Load Error");
-			}
-			if (bLoaded)
-			{
-				// if the xml is successfully validated
-				SetGameText(L"/Civ4GameText", L"/Civ4GameText/TEXT", texts);
-			}
-		}
-
-		DestroyFXml();
-
-	}	// didn't read from cache
-	else
+	for(std::vector<CvString>::iterator it = aszFiles.begin(); it != aszFiles.end(); ++it)
 	{
-		logMsg("Read GlobalText from cache");
+		bool bLoaded = LoadCivXml(NULL, *it); // Load the XML
+		if (!bLoaded)
+		{
+			char	szMessage[1024];
+			sprintf( szMessage, "LoadXML call failed for %s. \n Current XML file is: %s", (*it).c_str(), GC.getCurrentXMLFile().GetCString());
+			gDLL->MessageBox(szMessage, "XML Load Error");
+		}
+		if (bLoaded)
+		{
+			// if the xml is successfully validated
+			SetGameText(L"/Civ4GameText", L"/Civ4GameText/TEXT", texts);
+		}
 	}
+
+	DestroyFXml();
 
 	OutputDebugString("End load global text\n");
 
@@ -1978,6 +1968,7 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 					{
 						// (5-2) Found at uiExistPosition
 						uint uiExistPosition = GC.getInfoTypeForString(szTypeName);
+						FAssertMsg(uiExistPosition != -1, "Couldn't find info type");
 						if (szTypeReplace.empty())
 						{
 							if (!bForceOverwrite)
@@ -2467,8 +2458,11 @@ void CvXMLLoadUtility::SetGlobalClassInfoTwoPassReplacement(std::vector<T*>& aIn
 			if (pClassInfo.readPass2(this))
 			{
 				uint uiExistPosition = GC.getInfoTypeForString(szTypeName);
+				FAssertMsg(uiExistPosition != -1, "Couldn't find info type");
 				if (szTypeReplace.empty())
+				{
 					aInfos[uiExistPosition]->copyNonDefaultsReadPass2(&pClassInfo, this, bForceOverwrite);
+				}
 				else
 				{
 					CvInfoReplacement<T>* pExisting = pReplacements->getReplacement(uiExistPosition, uiReplacementID);
@@ -4572,9 +4566,9 @@ bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<T*>& aInfos, const wcha
 				std::auto_ptr<T> pClassInfo(new T);
 
 				bool bSuccess = pClassInfo->read(this, szDirDepth, iDirDepth);
-				FAssertMsg(bSuccess, CvString::format("Couldn't read %s dir %s", szConfigString.c_str(), szDirDepth.c_str()));
 				if (!bSuccess)
 				{
+					FErrorMsg(CvString::format("Couldn't read %s dir %s", szConfigString.c_str(), szDirDepth.c_str()));
 					break;
 				}
 
@@ -4586,7 +4580,7 @@ bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<T*>& aInfos, const wcha
 					{
 						logMLF("Type \"%s\" is specified more than once", pClassInfo->getType());
 						//Catch dupes here, we don't want the overwrite or copy method for the MLF
-						FAssertMsg(iIndex == -1, CvString::format("The <type>%s</type> of the \"MLF_CIV4ModularLoadingControls.xml\" in directory: \"%s\" is already in use, please use an alternative <type> -name", pClassInfo->getType(), szDirDepth.c_str()));
+						FErrorMsg(CvString::format("The <type>%s</type> of the \"MLF_CIV4ModularLoadingControls.xml\" in directory: \"%s\" is already in use, please use an alternative <type> -name", pClassInfo->getType(), szDirDepth.c_str()));
 
 						return false;
 					}

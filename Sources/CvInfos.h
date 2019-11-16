@@ -10585,12 +10585,12 @@ public:
 	CvModLoadControlInfo();
 	virtual ~CvModLoadControlInfo();
 
-	bool isLoad(int i);
+	bool isLoad(int i) const;
 	void setLoad(int i, bool bLoad = true);
-	std::string getModuleFolder(int i);
-	std::string getParentFolder();
-	int getNumModules();
-	int getDirDepth();
+	std::string getModuleFolder(int i) const;
+	std::string getParentFolder() const;
+	int getNumModules() const;
+	int getDirDepth() const;
 	bool read(CvXMLLoadUtility* pXML, CvString szDirDepth, int iDirDepth);
 
 protected:

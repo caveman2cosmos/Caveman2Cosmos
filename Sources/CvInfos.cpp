@@ -39922,7 +39922,7 @@ CvModLoadControlInfo::~CvModLoadControlInfo()
 	SAFE_DELETE_ARRAY(m_paszModuleFolder);
 }
 
-bool CvModLoadControlInfo::isLoad(int i)
+bool CvModLoadControlInfo::isLoad(int i) const
 {
 	FAssertMsg(i < getNumModules(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
@@ -39936,24 +39936,24 @@ void CvModLoadControlInfo::setLoad(int i, bool bLoad)
 	m_bLoad[i] = bLoad;
 }
 
-int CvModLoadControlInfo::getNumModules()
+int CvModLoadControlInfo::getNumModules() const
 {
 	return m_iNumModules;
 }
 
-int CvModLoadControlInfo::getDirDepth()
+int CvModLoadControlInfo::getDirDepth() const
 {
 	return m_iDirDepth;
 }
 
-std::string CvModLoadControlInfo::getModuleFolder(int i)
+std::string CvModLoadControlInfo::getModuleFolder(int i) const
 {
 	FAssertMsg(i < getNumModules(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_paszModuleFolder[i];
 }
 
-std::string CvModLoadControlInfo::getParentFolder()
+std::string CvModLoadControlInfo::getParentFolder() const
 {
 	return m_paszParentFolder;
 }

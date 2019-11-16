@@ -51,7 +51,7 @@ class FDataStreamBase;
 class FVariable
 {
 	public:
-		FVariable() : m_dValue(0) {}
+		FVariable() : m_dValue(0), m_eType(FVARTYPE_INT) {}
 		FVariable(const FVariable& src) { CopyFrom(src); }
 		virtual ~FVariable();
 

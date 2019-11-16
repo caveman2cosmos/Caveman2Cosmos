@@ -80,7 +80,10 @@ IntExpr* IntExpr::read(CvXMLLoadUtility *pXML)
 				CvString szTextVal;
 				pXML->GetXmlVal(szTextVal);
 
-				pXML->TryMoveToXmlNextSibling();
+				if (!pXML->TryMoveToXmlNextSibling())
+				{
+					FErrorMsg("Adapt usb expression is not correctly constructed");
+				}
 				// read the subnode
 				IntExpr* pExpr = read(pXML);
 				

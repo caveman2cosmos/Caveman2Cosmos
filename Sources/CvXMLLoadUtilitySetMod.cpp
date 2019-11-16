@@ -23,62 +23,54 @@ void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)
 		GC.setModLoadControlVector("Modules");
 		return;
 	}
-	bool bContinue = true;
-	int iDirDepthTemp = 0;		//we don't want to change the global value	
 
-	// To check when bLoad = 1 if the module is valid
-	CvXMLLoadUtilityModTools* p_szDirName = new CvXMLLoadUtilityModTools;
-/************************************************************************************************/
-/* Afforess	                  Start		 06/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	CvString szModDirectory;
-	szModDirectory = GC.getInitCore().getDLLPath() + "\\";
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+	//// To check when bLoad = 1 if the module is valid
+	//CvXMLLoadUtilityModTools p_szDirName;
+	/************************************************************************************************/
+	/* Afforess	                  Start		 06/15/10                                               */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
+	CvString szModDirectory = GC.getInitCore().getDLLPath() + "\\";
+	/************************************************************************************************/
+	/* Afforess	                     END                                                            */
+	/************************************************************************************************/
 
 	bool bModuleExist = false;	// Valid Module?
 
 	// logging to file
-	CvXMLLoadUtility* pXMLLoadUtility = new CvXMLLoadUtility;
-	pXMLLoadUtility->logMLF("\n\nThe game will now load the modules into the load vector in the order set by the MLF files:");
+	CvXMLLoadUtility pXMLLoadUtility;
+	pXMLLoadUtility.logMLF("\n\nThe game will now load the modules into the load vector in the order set by the MLF files:");
 
 	// Initialization of a temp LoadArray 
-	bool** aabLoaded = NULL;	// pointer to a pointer	
-	aabLoaded = new bool*[GC.getNumModLoadControlInfos()];	//allocate the rows	
-   	for ( int iInfosSet = 0; iInfosSet < GC.getNumModLoadControlInfos(); iInfosSet++)
+	std::vector< std::vector<bool> > aabLoaded(GC.getNumModLoadControlInfos()); //allocate the rows
+
+	for (int iInfosSet = 0; iInfosSet < GC.getNumModLoadControlInfos(); iInfosSet++)
 	{
-		aabLoaded[iInfosSet] = new bool[GC.getModLoadControlInfos(iInfosSet).getNumModules()];	// allocate the colums
+		const CvModLoadControlInfo& infoSets = GC.getModLoadControlInfos(iInfosSet);
+		aabLoaded[iInfosSet].resize(infoSets.getNumModules(), false); // allocate the columns
+
 		//loop through the modules of each MLF
-		for ( int iSet = 0; iSet < GC.getModLoadControlInfos(iInfosSet).getNumModules(); iSet++ )
+		for (int iSet = 0; iSet < infoSets.getNumModules(); iSet++)
 		{
 			// set the values according to the InfoClass( CvInfos.cpp )
-			if ( GC.getModLoadControlInfos(iInfosSet).isLoad(iSet))
+			if (infoSets.isLoad(iSet))
 			{
 				aabLoaded[iInfosSet][iSet] = true;
-			}
-			else
-			{
-				aabLoaded[iInfosSet][iSet] = false;
 			}
 		}
 	}
 
 	// more basic variables
-	int iInfosLoad;
-	int iLoad;
-	bool bParentDisable;
-
-	while(bContinue)	//we start with iDirDepth at the highest value(set during the MLF loading)
-	{		
-		iDirDepthTemp = 0;
-		iInfosLoad = 0;
-		iLoad = 0;
+	bool bContinue = true;
+	while (bContinue)	//we start with iDirDepth at the highest value(set during the MLF loading)
+	{
+		int iDirDepthTemp = 0;		//we don't want to change the global value	
+		int iInfosLoad = 0;
+		int iLoad = 0;
 
 		//Set the top level MLF to have a start to loop through
-		for ( iLoad = 0; iLoad < GC.getModLoadControlInfos(0).getNumModules(); iLoad++ )
+		for (; iLoad < GC.getModLoadControlInfos(0).getNumModules(); iLoad++)
 		{
 			if (aabLoaded[0][iLoad])
 			{
@@ -86,28 +78,28 @@ void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)
 			}
 		}
 
-		while(bContinue)
+		while (bContinue)
 		{
 			bContinue = false;
 			bool bHitDeepestDepthLoop = false;
 			//loop through all the MLF's
-			for ( int iiInfos = 0; iiInfos < GC.getNumModLoadControlInfos(); iiInfos++)
+			for (int iiInfos = 0; iiInfos < GC.getNumModLoadControlInfos() && !bHitDeepestDepthLoop; iiInfos++)
 			{
 				// only loop through files that are actually 1 dir deeper
 				if (GC.getModLoadControlInfos(iiInfos).getDirDepth() == iDirDepthTemp + 1)
 				{
 					// Check if the Loop Module is a Child of the actual Module which we will load if no Children will be found.
-					if ( CvString::format("%s\\", GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str()) == GC.getModLoadControlInfos(iiInfos).getParentFolder().c_str())
+					if (CvString::format("%s\\", GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str()) == GC.getModLoadControlInfos(iiInfos).getParentFolder().c_str())
 					{
 						//loop through the modules of each MLF
-						for ( int ii = 0; ii < GC.getModLoadControlInfos(iiInfos).getNumModules(); ii++ )
+						for (int ii = 0; ii < GC.getModLoadControlInfos(iiInfos).getNumModules() && !bHitDeepestDepthLoop; ii++)
 						{
 							//Loaded already? Don't need an endless loop
 							if (aabLoaded[iiInfos][ii])
 							{
 								//set the loading module to the current module
 								iInfosLoad = iiInfos;
-								iLoad = ii;										
+								iLoad = ii;
 
 								//The first valid we find on this level will be the first to load, 
 								//so we abord further search inside this class, and Continue the loop to the next level
@@ -115,18 +107,16 @@ void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)
 								bHitDeepestDepthLoop = true;
 								iDirDepthTemp++;
 
-								bContinue = true;                                      
+								bContinue = true;
 							}
-							if (bHitDeepestDepthLoop) break;
-						}								
-					}							
+						}
+					}
 				}
-				if (bHitDeepestDepthLoop) break;
 			}
 		}
 
 		// means we are loading something which is not the deepest in directory structure that has been found valid to load...
-		if ( GC.getModLoadControlInfos(iInfosLoad).getDirDepth() != iDirDepthTemp )
+		if (GC.getModLoadControlInfos(iInfosLoad).getDirDepth() != iDirDepthTemp)
 		{
 			FAssertMsg(false, "Something ain't right with the parental MLF disabling function, put a bug report on http://www.worldofcivilization.net/bugtracker/bugtracker.htm, please supply your MLF configuration. All of them!");
 			break;
@@ -136,23 +126,23 @@ void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)
 		if (aabLoaded[iInfosLoad][iLoad])
 		{
 			// check for valid xml files			
-			if ( isValidModule(bModuleExist, (szModDirectory + GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str()).c_str(), GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str(), CvString::format(".xml").c_str())/*(int)aszValidFilesVerification.size() > 0*/ )	// does ANY valid xml file exist?
+			if (isValidModule(bModuleExist, (szModDirectory + GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str()).c_str(), GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str(), CvString::format(".xml").c_str())/*(int)aszValidFilesVerification.size() > 0*/)	// does ANY valid xml file exist?
 			{
 				// if valid, module XML file(s) exist
 				// note: if dir isn't valid, of course xml's for that dir aren't valid either
-				pXMLLoadUtility->logMLF("Load Priority: %d, \"%s\"", GC.getModLoadControlVectorSize(), GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str());
+				pXMLLoadUtility.logMLF("Load Priority: %d, \"%s\"", GC.getModLoadControlVectorSize(), GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str());
 				GC.setModLoadControlVector(GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str());
 			}
 			else
 			{
 				// if not valid, module XML file(s) doesn't exist
-				pXMLLoadUtility->logMLF("No valid module: \"%s\"", GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str());
+				pXMLLoadUtility.logMLF("No valid module: \"%s\"", GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str());
 			}
 			aabLoaded[iInfosLoad][iLoad] = false;
 		}
 		else
 		{
-			pXMLLoadUtility->logMLF("ERROR Vector element: %d, \"%s\", GC.getModLoadControlVectorSize(), You shouldn't have come here!", GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str());
+			pXMLLoadUtility.logMLF("ERROR Vector element: %d, \"%s\", GC.getModLoadControlVectorSize(), You shouldn't have come here!", GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str());
 			FAssertMsg(aabLoaded[iInfosLoad][iLoad], "Something is wrong with the MLF Array");
 		}
 
@@ -161,36 +151,37 @@ void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)
 		int iBreakEndless = 0;	// this is not needed for the code, just a security fix
 
 		// If iDirDepth is 0 we only have 1 MLF anyway..no need to loop and spoil CPU power
-		while( iDirDepthTemp > 0 )
+		while (iDirDepthTemp > 0)
 		{
 			// this code is just a security thing, not important for the actual code..
 			iBreakEndless++;
-			if ( iBreakEndless >= 20 )	//I assume noone will go 20 depths in dir structure anyway
+			if (iBreakEndless >= 20)	//I assume noone will go 20 depths in dir structure anyway
 			{
-				FAssertMsg(false, "Something ain't right with the parental MLF disabling function, put a bug report on http://www.worldofcivilization.net/bugtracker/bugtracker.htm, please supply your MLF configuration. All of them!"); 
+				FErrorMsg("Something ain't right with the parental MLF disabling function, put a bug report on http://www.worldofcivilization.net/bugtracker/bugtracker.htm, please supply your MLF configuration. All of them!");
 				break;
 			}
 
 			// actual code below
 			iDirDepthTemp--;
 			// loop through ALL MLF infos...
-			for ( int IloopInfosDirDepth = 0; IloopInfosDirDepth < GC.getNumModLoadControlInfos(); IloopInfosDirDepth++)
+			for (int IloopInfosDirDepth = 0; IloopInfosDirDepth < GC.getNumModLoadControlInfos(); IloopInfosDirDepth++)
 			{
 				// verify all MLF for their dir depth, only 1 higher(dir Depth lower) then the last loaded MLF needs to be checked
-				if ( GC.getModLoadControlInfos(IloopInfosDirDepth).getDirDepth() == iDirDepthTemp) 
+				if (GC.getModLoadControlInfos(IloopInfosDirDepth).getDirDepth() == iDirDepthTemp)
 				{
-					bParentDisable = true;  // by default we assume any parent we find must be disabled
+					// by default we assume any parent we find must be disabled
+					bool bParentDisable = true;
 
 					// loop throuhg the modules of every MLF to see if we can find the parent inside this one..
-					for ( int IloopInfosModDirectory = 0; IloopInfosModDirectory < GC.getModLoadControlInfos(IloopInfosDirDepth).getNumModules(); IloopInfosModDirectory++)
+					for (int IloopInfosModDirectory = 0; IloopInfosModDirectory < GC.getModLoadControlInfos(IloopInfosDirDepth).getNumModules(); IloopInfosModDirectory++)
 					{
 						// parent module of our latest loaded module?
-						if ( CvString::format("%s\\", GC.getModLoadControlInfos(IloopInfosDirDepth).getModuleFolder(IloopInfosModDirectory).c_str()) == GC.getModLoadControlInfos(iInfosLoad).getParentFolder().c_str())
-						{							
+						if (CvString::format("%s\\", GC.getModLoadControlInfos(IloopInfosDirDepth).getModuleFolder(IloopInfosModDirectory).c_str()) == GC.getModLoadControlInfos(iInfosLoad).getParentFolder().c_str())
+						{
 							//only disable if this is the actual parent
 
 							// Loop through the loaded MLF if everything is now set to false?
-							for ( iLoad = 0; iLoad < GC.getModLoadControlInfos(iInfosLoad).getNumModules(); iLoad++)
+							for (iLoad = 0; iLoad < GC.getModLoadControlInfos(iInfosLoad).getNumModules(); iLoad++)
 							{
 								// if just ANY dir is still active, don't disable the parent
 								if (aabLoaded[iInfosLoad][iLoad])
@@ -198,15 +189,14 @@ void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)
 									bParentDisable = false;
 								}
 							}
-							
+
 							// both conditions are met, we have a Parent, and it has no children left needed to be loaded
-							if ( bParentDisable  )	
+							if (bParentDisable)
 							{
 								aabLoaded[IloopInfosDirDepth][IloopInfosModDirectory] = false;
 
 								// we updated 1 entry, so we have to continue the loop with the new IInfosLoad and iLoad
 								iInfosLoad = IloopInfosDirDepth;
-								iLoad = IloopInfosModDirectory;
 							}
 						}
 					}
@@ -214,7 +204,7 @@ void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)
 			}
 
 			//break when we just finished checking the top level
-			if ( iDirDepthTemp == 0 )
+			if (iDirDepthTemp == 0)
 			{
 				FAssert(iDirDepthTemp >= 0); //should never reach negative values!!
 				break;
@@ -222,36 +212,32 @@ void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)
 		}
 
 		// Check if we must continue
-		bContinue = false;		
+		bContinue = false;
 		//loop through all the MLF's
-		for ( int iInfos = 0; iInfos < GC.getNumModLoadControlInfos(); iInfos++)
+		for (int iInfos = 0; iInfos < GC.getNumModLoadControlInfos(); iInfos++)
 		{
 			//loop through the modules of each MLF
-			for ( int iIJ = 0; iIJ < GC.getModLoadControlInfos(iInfos).getNumModules(); iIJ++ )
+			for (int iIJ = 0; iIJ < GC.getModLoadControlInfos(iInfos).getNumModules(); iIJ++)
 			{
 				// As long as Modules need to be loaded, we continue
-				if ( aabLoaded[iInfos][iIJ])
+				if (aabLoaded[iInfos][iIJ])
 				{
 					bContinue = true;
 					break;
-				}				
+				}
 			}
-			if ( bContinue ) break;
+			if (bContinue) break;
 		}
 	}
-	pXMLLoadUtility->logMLF("Finished the MLF, you will now continue loading regular XML files");		//logging
-
-	SAFE_DELETE_ARRAY(aabLoaded);
-	SAFE_DELETE(p_szDirName);
-	SAFE_DELETE(pXMLLoadUtility);
+	pXMLLoadUtility.logMLF("Finished the MLF, you will now continue loading regular XML files"); //logging
 }
 
 void CvXMLLoadUtilitySetMod::MLFEnumerateFiles(
-					std::vector<CvString>&			aszFiles,
-                    const CvString&					refcstrRootDirectory,
-					const CvString&					refcstrModularDirectory,
-                    const CvString&					refcstrExtension,
-                    bool							bSearchSubdirectories)
+	std::vector<CvString>& aszFiles,
+	const CvString& refcstrRootDirectory,
+	const CvString& refcstrModularDirectory,
+	const CvString& refcstrExtension,
+	bool							bSearchSubdirectories)
 {
 	CvString		strFilePath;		// Filepath
 	CvString		strModPath;			// Modules path
@@ -273,19 +259,19 @@ void CvXMLLoadUtilitySetMod::MLFEnumerateFiles(
 #endif
 
 	hFile = ::FindFirstFile(strPattern.c_str(), &FileInformation);
-	if(hFile != INVALID_HANDLE_VALUE)
+	if (hFile != INVALID_HANDLE_VALUE)
 	{
 		do
 		{
-			if(FileInformation.cFileName[0] != '.')
+			if (FileInformation.cFileName[0] != '.')
 			{
 				//strFilePath.erase();
 				strFilePath = refcstrRootDirectory + "\\" + FileInformation.cFileName;
 				strModPath = refcstrModularDirectory + "\\" + FileInformation.cFileName;
-				
-				if(FileInformation.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
+
+				if (FileInformation.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
 				{
-					if(bSearchSubdirectories)
+					if (bSearchSubdirectories)
 					{
 #ifdef _DEBUG
 						{
@@ -308,21 +294,21 @@ void CvXMLLoadUtilitySetMod::MLFEnumerateFiles(
 					{
 						strExtension[i] = tolower(strExtension[i]);
 					}
-					if ( strExtension.rfind("_civ4") != std::string::npos )
+					if (strExtension.rfind("_civ4") != std::string::npos)
 					{
 						strExtension = strExtension.substr(strExtension.rfind("_civ4") + 1);
 					}
-/*	 - old buggy rules, just left here for history reminder
-					if ( strExtension.rfind("civ4") != std::string::npos )
-					{
-						strExtension = strExtension.substr(strExtension.rfind("civ4") + 4);
-					}
-*/
-					else if ( strExtension.rfind("globaldefines") != std::string::npos )
+					/*	 - old buggy rules, just left here for history reminder
+										if ( strExtension.rfind("civ4") != std::string::npos )
+										{
+											strExtension = strExtension.substr(strExtension.rfind("civ4") + 4);
+										}
+					*/
+					else if (strExtension.rfind("globaldefines") != std::string::npos)
 					{
 						strExtension = strExtension.substr(strExtension.rfind("globaldefines"));
 					}
-					else if ( strExtension.rfind("pythoncallbackdefines") != std::string::npos )
+					else if (strExtension.rfind("pythoncallbackdefines") != std::string::npos)
 					{
 						strExtension = strExtension.substr(strExtension.rfind("pythoncallbackdefines"));
 					}
@@ -334,24 +320,24 @@ void CvXMLLoadUtilitySetMod::MLFEnumerateFiles(
 					{
 						compareCStrExtension[i] = tolower(compareCStrExtension[i]);
 					}
-					if ( compareCStrExtension.rfind("_civ4") != std::string::npos )
+					if (compareCStrExtension.rfind("_civ4") != std::string::npos)
 					{
 						compareCStrExtension = compareCStrExtension.substr(compareCStrExtension.rfind("_civ4") + 1);
 					}
-/*	 - old buggy rules, just left here for history reminder
-					if ( compareCStrExtension.rfind("civ4") != std::string::npos )
-					{
-						compareCStrExtension = compareCStrExtension.substr(compareCStrExtension.rfind("civ4") + 4);
-					}
-*/
-					
-					if (!strcmp(strExtension.c_str(),compareCStrExtension.c_str()))
+					/*	 - old buggy rules, just left here for history reminder
+										if ( compareCStrExtension.rfind("civ4") != std::string::npos )
+										{
+											compareCStrExtension = compareCStrExtension.substr(compareCStrExtension.rfind("civ4") + 4);
+										}
+					*/
+
+					if (!strcmp(strExtension.c_str(), compareCStrExtension.c_str()))
 					{
 						aszFiles.push_back(strModPath.c_str());
 					}
 				}
 			}
-		} while(::FindNextFile(hFile, &FileInformation) == TRUE);
+		} while (::FindNextFile(hFile, &FileInformation) == TRUE);
 
 		// Close handle
 		::FindClose(hFile);
@@ -368,11 +354,11 @@ void CvXMLLoadUtilitySetMod::MLFEnumerateFiles(
 }
 
 bool CvXMLLoadUtilitySetMod::isValidModule(
-					bool&							bValid,
-                    const CvString&					refcstrRootDirectory,
-					const CvString&					refcstrModularDirectory,
-                    const CvString&					refcstrExtension,					
-                    bool							bSearchSubdirectories)
+	bool& bValid,
+	const CvString& refcstrRootDirectory,
+	const CvString& refcstrModularDirectory,
+	const CvString& refcstrExtension,
+	bool							bSearchSubdirectories)
 {
 	CvString		strFilePath;		// Filepath
 	CvString		strModPath;			// Modules path
@@ -385,13 +371,13 @@ bool CvXMLLoadUtilitySetMod::isValidModule(
 	strPattern = refcstrRootDirectory + "\\*.*";
 
 	//Afforess Addition : Check that we want to load this module first
-	for ( int iInfosSet = 0; iInfosSet < GC.getNumModLoadControlInfos(); iInfosSet++)
+	for (int iInfosSet = 0; iInfosSet < GC.getNumModLoadControlInfos(); iInfosSet++)
 	{
 		CvString szType = GC.getModLoadControlInfos(iInfosSet).getParentFolder();
 		if (CvString::format("%s\\", refcstrModularDirectory.c_str()) == szType)
 		{
 			bool bLoadAny = false;
-			for ( int iSet = 0; iSet < GC.getModLoadControlInfos(iInfosSet).getNumModules(); iSet++ )
+			for (int iSet = 0; iSet < GC.getModLoadControlInfos(iInfosSet).getNumModules(); iSet++)
 			{
 				if (GC.getModLoadControlInfos(iInfosSet).isLoad(iSet))
 				{
@@ -407,19 +393,19 @@ bool CvXMLLoadUtilitySetMod::isValidModule(
 	}
 
 	hFile = ::FindFirstFile(strPattern.c_str(), &FileInformation);
-	if(hFile != INVALID_HANDLE_VALUE)
+	if (hFile != INVALID_HANDLE_VALUE)
 	{
 		do
 		{
-			if(FileInformation.cFileName[0] != '.')
+			if (FileInformation.cFileName[0] != '.')
 			{
 				strFilePath.erase();
 				strFilePath = refcstrRootDirectory + "\\" + FileInformation.cFileName;
 				strModPath = refcstrModularDirectory + "\\" + FileInformation.cFileName;
-				
-				if(FileInformation.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
+
+				if (FileInformation.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
 				{
-					if(bSearchSubdirectories)
+					if (bSearchSubdirectories)
 					{
 						// Search subdirectory
 						bValid = isValidModule(bValid, strFilePath, strModPath, refcstrExtension);
@@ -437,26 +423,26 @@ bool CvXMLLoadUtilitySetMod::isValidModule(
 						strExtension[i] = tolower(strExtension[i]);
 					}
 					//is xml file?
-					if ( strExtension.rfind(".xml") != std::string::npos )
+					if (strExtension.rfind(".xml") != std::string::npos)
 					{
 						bValid = true;
 						break;
-					}					
+					}
 				}
 			}
-		} while(::FindNextFile(hFile, &FileInformation) == TRUE);
+		} while (::FindNextFile(hFile, &FileInformation) == TRUE);
 
 		// Close handle
 		::FindClose(hFile);
 
 		DWORD dwError = ::GetLastError();
-		if(!bValid && dwError != ERROR_NO_MORE_FILES)
+		if (!bValid && dwError != ERROR_NO_MORE_FILES)
 		{
 			FAssertMsg(false, "something wrong");
 			return false;
 		}
 
-		if ( bValid )
+		if (bValid)
 		{
 			return true;
 		}
@@ -465,28 +451,28 @@ bool CvXMLLoadUtilitySetMod::isValidModule(
 }
 
 void CvXMLLoadUtilitySetMod::loadModControlArray(std::vector<CvString>& aszFiles, const char* szFileRoot)
-{	
+{
 	CvString szModDirectory;
 
 
-/************************************************************************************************/
-/* Afforess	                  Start		 06/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	/*
-	CvXMLLoadUtilityModTools* p_szDirName = new CvXMLLoadUtilityModTools;
-	szModDirectory = p_szDirName->GetProgramDir();		// Dir where the Civ4BeyondSword.exe is started from
-	SAFE_DELETE(p_szDirName);
-	szModDirectory += gDLL->getModName();		// "Mods\Modname\"
-	szModDirectory += "Assets\\";		//Assets in the Moddirectory
-	 */
+	/************************************************************************************************/
+	/* Afforess	                  Start		 06/15/10                                               */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
+		/*
+		CvXMLLoadUtilityModTools* p_szDirName = new CvXMLLoadUtilityModTools;
+		szModDirectory = p_szDirName->GetProgramDir();		// Dir where the Civ4BeyondSword.exe is started from
+		SAFE_DELETE(p_szDirName);
+		szModDirectory += gDLL->getModName();		// "Mods\Modname\"
+		szModDirectory += "Assets\\";		//Assets in the Moddirectory
+		 */
 
 	szModDirectory = GC.getInitCore().getDLLPath() + "\\";
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-	
+	/************************************************************************************************/
+	/* Afforess	                     END                                                            */
+	/************************************************************************************************/
+
 
 
 	for (int iI = 0; iI < GC.getModLoadControlVectorSize(); iI++)
@@ -497,9 +483,9 @@ void CvXMLLoadUtilitySetMod::loadModControlArray(std::vector<CvString>& aszFiles
 
 
 void CvXMLLoadUtilitySetMod::checkCacheStateDir(
-                    const CvString&					refcstrRootDirectory,
-					CvChecksum&						ulCheckSum,
-                    bool							bSearchSubdirectories)
+	const CvString& refcstrRootDirectory,
+	CvChecksum& ulCheckSum,
+	bool							bSearchSubdirectories)
 {
 	CvString		strFilePath;		// Filepath
 	CvString		strPattern;			// Pattern
@@ -510,18 +496,18 @@ void CvXMLLoadUtilitySetMod::checkCacheStateDir(
 	strPattern = refcstrRootDirectory + "\\*.*";
 
 	hFile = ::FindFirstFile(strPattern.c_str(), &FileInformation);
-	if(hFile != INVALID_HANDLE_VALUE)
+	if (hFile != INVALID_HANDLE_VALUE)
 	{
 		do
 		{
-			if(FileInformation.cFileName[0] != '.')
+			if (FileInformation.cFileName[0] != '.')
 			{
 				//strFilePath.erase();
 				strFilePath = refcstrRootDirectory + "\\" + FileInformation.cFileName;
-				
-				if(FileInformation.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
+
+				if (FileInformation.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
 				{
-					if(bSearchSubdirectories)
+					if (bSearchSubdirectories)
 					{
 						// Search subdirectory
 						checkCacheStateDir(strFilePath, ulCheckSum);
@@ -542,15 +528,15 @@ void CvXMLLoadUtilitySetMod::checkCacheStateDir(
 					//	as it influences the allocated sizes of various arrays into which parsed data from other
 					//	assets is placed
 					//  AIAndy: This change also included the audio XML which is written regularly. That one needs to be excluded if the cache is supposed to have any value.
-					if ( strExtension.rfind("civ4") != std::string::npos ||
-						 (strExtension.length() > 4 && strExtension.rfind(".xml") == strExtension.length()-4 && strExtension.rfind("audio") == std::string::npos) )
+					if (strExtension.rfind("civ4") != std::string::npos ||
+						(strExtension.length() > 4 && strExtension.rfind(".xml") == strExtension.length() - 4 && strExtension.rfind("audio") == std::string::npos))
 					{
 						ulCheckSum.add((int)FileInformation.ftLastWriteTime.dwHighDateTime);
 						ulCheckSum.add((int)FileInformation.ftLastWriteTime.dwLowDateTime);
 					}
 				}
 			}
-		} while(::FindNextFile(hFile, &FileInformation) == TRUE);
+		} while (::FindNextFile(hFile, &FileInformation) == TRUE);
 
 		// Close handle
 		::FindClose(hFile);

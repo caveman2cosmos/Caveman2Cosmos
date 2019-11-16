@@ -423,17 +423,17 @@ public:
 	
 
 private:
-	CvMap*			m_pMap;
-	int				m_iXOffset;
-	int				m_iYOffset;
-	int				m_iXSize;
-	int				m_iYSize;
+	CvMap*	m_pMap;
+	int		m_iXOffset;
+	int		m_iYOffset;
+	int		m_iXSize;
+	int		m_iYSize;
 
 	ViewportMode					m_mode;
 	ViewportTransformType			m_transformType;
 	ViewportDeferredActionState		m_state;
 	IDInfo							m_preservedHeadSelectedUnitId;
-	CvPlot*							m_pLookatPlot;
+	CvPlot* m_pLookatPlot;
 	bool							m_inhibitSelection;
 	bool							m_bDisplayCityScreen;
 	bool							m_bSelectCity;
