@@ -877,6 +877,8 @@ public:
 	int getNumUnitClassInfos();
 	std::vector<CvUnitClassInfo*>& getUnitClassInfos();
 	CvUnitClassInfo& getUnitClassInfo(UnitClassTypes eUnitClassNum);
+	const CvUnitClassInfo& getUnitClassInfo(UnitClassTypes eUnitClassNum) const;
+
 	CvInfoReplacements<CvUnitClassInfo>* getUnitClassInfoReplacements();
 
 	int getNumActionInfos();

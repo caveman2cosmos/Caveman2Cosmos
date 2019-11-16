@@ -3072,6 +3072,13 @@ CvUnitClassInfo& cvInternalGlobals::getUnitClassInfo(UnitClassTypes eUnitClassNu
 	return *(m_paUnitClassInfo[eUnitClassNum]);
 }
 
+const CvUnitClassInfo& cvInternalGlobals::getUnitClassInfo(UnitClassTypes eUnitClassNum) const
+{
+	FAssert(eUnitClassNum > -1);
+	FAssert(eUnitClassNum < GC.getNumUnitClassInfos());
+	return *(m_paUnitClassInfo[eUnitClassNum]);
+}
+
 CvInfoReplacements<CvUnitClassInfo>* cvInternalGlobals::getUnitClassInfoReplacements()
 {
 	return &m_UnitClassInfoReplacements;
