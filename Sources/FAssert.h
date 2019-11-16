@@ -17,7 +17,7 @@
 
 #if defined(FASSERT_ENABLE) || !defined(_DEBUG)
 #ifdef WIN32
-bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
+bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char*, bool& );
 #endif
 #endif
 
@@ -38,7 +38,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
 	static bool bIgnoreAlways = false; \
 	if( !bIgnoreAlways && !(expr) ) \
 	{ \
-		if( FAssertDlg( #expr, 0, __FILE__, __LINE__, bIgnoreAlways ) ) { _asm int 3 } \
+		if( FAssertDlg( #expr, 0, __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
 	} \
 }
 
@@ -47,7 +47,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
 	static bool bIgnoreAlways = false; \
 	if( !bIgnoreAlways && !(expr) ) \
 	{ \
-		if( FAssertDlg( #expr, msg, __FILE__, __LINE__, bIgnoreAlways ) ) { _asm int 3 } \
+		if( FAssertDlg( #expr, msg, __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
 	} \
 }
 
@@ -56,7 +56,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
 	static bool bIgnoreAlways = false; \
 	if( !bIgnoreAlways && !(expr) ) \
 	{ \
-		if( FAssertDlg( #expr, CvString::format("%s\r\n\r\nPlease recalculate modifiers!", msg).c_str(), __FILE__, __LINE__, bIgnoreAlways ) ) { _asm int 3 } \
+		if( FAssertDlg( #expr, CvString::format("%s\r\n\r\nPlease recalculate modifiers!", msg).c_str(), __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
 	} \
 }
 
@@ -65,7 +65,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
 	static bool bIgnoreAlways = false; \
 	if( !bIgnoreAlways && GC.getGameINLINE().isOption(option) && !(expr) ) \
 	{ \
-		if( FAssertDlg( #expr, CvString::format("Option: %s\r\n%s", #option, msg).c_str(), __FILE__, __LINE__, bIgnoreAlways ) ) { _asm int 3 } \
+		if( FAssertDlg( #expr, CvString::format("Option: %s\r\n%s", #option, msg).c_str(), __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
 	} \
 }
 
@@ -74,7 +74,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
 	static bool bIgnoreAlways = false; \
 	if( !bIgnoreAlways && GC.getGameINLINE().isOption(option) && !(expr) ) \
 	{ \
-		if( FAssertDlg( #expr, CvString::format("Option: %s\r\n%s\r\n\r\nPlease recalculate modifiers!",  #option, msg).c_str(), __FILE__, __LINE__, bIgnoreAlways ) ) { _asm int 3 } \
+		if( FAssertDlg( #expr, CvString::format("Option: %s\r\n%s\r\n\r\nPlease recalculate modifiers!",  #option, msg).c_str(), __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
 	} \
 }
 
@@ -83,7 +83,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
 	static bool bIgnoreAlways = false; \
 	if( !bIgnoreAlways ) \
 	{ \
-		if( FAssertDlg( "ERROR", msg, __FILE__, __LINE__, bIgnoreAlways ) ) { _asm int 3 } \
+		if( FAssertDlg( "ERROR", msg, __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
 	} \
 }
 
@@ -93,7 +93,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
 	static bool bIgnoreAlways = false; \
 	if( !(expr) ) \
 	{ \
-		if( FAssertDlg( #expr, 0, __FILE__, __LINE__, bIgnoreAlways ) ) { _asm int 3 } \
+		if( FAssertDlg( #expr, 0, __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
 		throw std::exception(#expr); \
 	} \
 }
@@ -103,7 +103,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, bool& );
 	static bool bIgnoreAlways = false; \
 	if( !(expr) ) \
 	{ \
-		if( FAssertDlg( #expr, msg, __FILE__, __LINE__, bIgnoreAlways ) ) { _asm int 3 } \
+		if( FAssertDlg( #expr, msg, __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
 		throw std::exception(#expr); \
 	} \
 }
@@ -176,7 +176,7 @@ enum AssertScopeTypes
 	static bool bIgnoreAlways = false; \
 	if( !bIgnoreAlways && !(expr) ) \
 { \
-	if( FAssertDlg( #expr, msg, __FILE__, __LINE__, bIgnoreAlways ) ) \
+	if( FAssertDlg( #expr, msg, __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) \
 { _asm int 3 } \
 } \
 }

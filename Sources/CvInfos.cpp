@@ -5968,6 +5968,28 @@ void CvPromotionInfo::setQualifiedUnitCombatTypes()
 }
 //TB Combat Mods End  TB SubCombat Mod end
 
+bool CvPromotionInfo::hasNegativeEffects() const
+{
+	return getPursuitChange() < 0 ||
+		getOverrunChange() < 0 ||
+		getUnyieldingChange() < 0 ||
+		getKnockbackChange() < 0 ||
+		getLungeChange() < 0 ||
+		getDodgeModifierChange() < 0 ||
+		getPrecisionModifierChange() < 0 ||
+		getCriticalModifierChange() < 0 ||
+		getEnduranceChange() < 0 ||
+		getFirstStrikesChange() < 0 ||
+		getChanceFirstStrikesChange() < 0 ||
+		getVSBarbsChange() < 0 ||
+		getStrengthChange() < 0 ||
+		getAttackCombatModifierChange() < 0 ||
+		getCombatPercent() < 0 ||
+		getDefenseOnlyChange() > 0 ||
+		getNoInvisibilityChange() > 0 ||
+		getHiddenNationalityChange() != 0;
+}
+
 bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 {
 	MEMORY_TRACE_FUNCTION();

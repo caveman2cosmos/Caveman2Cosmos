@@ -240,7 +240,7 @@ namespace
 	}
 } // end anonymous namespace
 
-bool FAssertDlg( const char* szExpr, const char* szMsg, const char* szFile, unsigned int line, bool& bIgnoreAlways )
+bool FAssertDlg( const char* szExpr, const char* szMsg, const char* szFile, unsigned int line, const char* szFunction, bool& bIgnoreAlways )
 {
 //	FILL_CONTEXT( g_AssertInfo.context );
 
@@ -248,8 +248,9 @@ bool FAssertDlg( const char* szExpr, const char* szMsg, const char* szFile, unsi
 	std::string dllTrace = getDLLTrace();
 
 #ifdef FASSERT_LOGGING
-	gDLL->logMsg("Asserts.log", CvString::format("%s (%d): %s,  %s\n%s\n%s", 
+	gDLL->logMsg("Asserts.log", CvString::format("%s %s (%d): %s,  %s\n%s\n%s", 
 		szFile ? szFile : "", 
+		szFunction ? szFunction : "",
 		line, 
 		szExpr ? szExpr : "", 
 		szMsg ? szMsg : "", 
@@ -259,13 +260,21 @@ bool FAssertDlg( const char* szExpr, const char* szMsg, const char* szFile, unsi
 
 	picojson::value::object obj;
 
-	if(szFile) obj["file"] = picojson::value(szFile);
+	if (szFile) obj["file"] = picojson::value(szFile);
+	if (szFunction) obj["function"] = picojson::value(szFunction);
 	obj["line"] = picojson::value(static_cast<double>(line));
-	if(szExpr) obj["expr"] = picojson::value(szExpr);
-	if(szMsg) obj["msg"] = picojson::value(szMsg);
-	if(!pyTrace.empty()) obj["py_trace"] = picojson::value(pyTrace);
-	if(!dllTrace.empty()) obj["dll_trace"] = picojson::value(dllTrace);
-	
+	if (szExpr) obj["expr"] = picojson::value(szExpr);
+	if (szMsg) obj["msg"] = picojson::value(szMsg);
+	if (!pyTrace.empty()) obj["py_trace"] = picojson::value(pyTrace);
+	if (!dllTrace.empty()) obj["dll_trace"] = picojson::value(dllTrace);
+	obj["assert_key"] = picojson::value(CvString::format(
+		"%s %s (%s): %s",
+		szFile ? szFile : "nofile",
+		szFunction ? szFunction : "nofunc",
+		line,
+		szExpr ? szExpr : "noexpr"
+	).c_str());
+	obj["callstack_key"] = picojson::value(CvString::format("%u", stdext::hash_value(pyTrace + dllTrace)).c_str());
 	gDLL->logMsg("AssertsJson.log", picojson::value(obj).serialize().c_str());
 
 	return false;

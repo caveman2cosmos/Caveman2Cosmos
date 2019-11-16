@@ -1215,6 +1215,8 @@ public:
 	bool isQualifiedUnitCombatType(int i);
 	void setQualifiedUnitCombatTypes();
 
+	bool hasNegativeEffects() const;
+
 protected:
 	bool m_bCanMovePeaks;
 	//	Koshling - enhanced mountaineering mode to differentiate between ability to move through
@@ -2327,6 +2329,7 @@ public:
 	void setBaseSizeMattersZeroPoints();
 	int getSMRankTotal() const;
 	int getSMVolumetricRankTotal() const;
+
 	void setSM();
 	int getQualifiedPromotionType(int i) const;
 	int getNumQualifiedPromotionTypes() const;
