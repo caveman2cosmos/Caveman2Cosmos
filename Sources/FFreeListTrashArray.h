@@ -255,6 +255,7 @@ T* FFreeListTrashArray<T>::add()
 	{
 		init();
 	}
+	FAssertMsg(m_pArray != NULL, "Array is null after initialization");
 
 	if ((m_iLastIndex == m_iNumSlots - 1) &&
 		(m_iFreeListCount == 0))

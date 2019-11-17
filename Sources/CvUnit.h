@@ -23,17 +23,46 @@ class CvArtInfoUnit;
 
 enum UnitValueFlags
 {
-	UNITVALUE_FLAGS_DEFENSIVE = 1,
-	UNITVALUE_FLAGS_OFFENSIVE = 2,
-	UNITVALUE_FLAGS_UTILITY = 4
+	UNITVALUE_FLAGS_DEFENSIVE = 1 << 0,
+	UNITVALUE_FLAGS_OFFENSIVE = 1 << 1,
+	UNITVALUE_FLAGS_UTILITY = 1 << 2,
+	UNITVALUE_FLAGS_ALL = UNITVALUE_FLAGS_DEFENSIVE | UNITVALUE_FLAGS_OFFENSIVE | UNITVALUE_FLAGS_UTILITY
 };
-#define	UNITVALUE_FLAGS_ALL (UNITVALUE_FLAGS_DEFENSIVE | UNITVALUE_FLAGS_OFFENSIVE | UNITVALUE_FLAGS_UTILITY)
+DEFINE_ENUM_FLAG_OPERATORS(UnitValueFlags);
 
-inline UnitValueFlags operator|(UnitValueFlags a, UnitValueFlags b) 
-{return static_cast<UnitValueFlags>(static_cast<int>(a) | static_cast<int>(b));} 
+struct PromotionRequirements
+{
+	enum flags
+	{
+		None = 0,
+		IgnoreHas = 1 << 0,
+		Equip = 1 << 1,
+		Afflict = 1 << 2,
+		// TODO: this doesn't appear to actually do anything in the promote functions, so remove it (check the function ofcourse)
+		Promote = 1 << 3,
+		ForLeader = 1 << 4,
+		ForOffset = 1 << 5,
+		ForFree = 1 << 6,
+		ForBuildUp = 1 << 7,
+		ForStatus = 1 << 8
+	};
+};
+DEFINE_ENUM_FLAG_OPERATORS(PromotionRequirements::flags);
 
-inline UnitValueFlags& operator|=(UnitValueFlags& a, const UnitValueFlags b) 
-{ a = a | b; return a;} 
+struct PromotionApply
+{
+	enum flags
+	{
+		None = 0,
+		NewValue = 1 << 0,
+		Free = 1 << 1,
+		Dying = 1 << 2,
+		Initial = 1 << 3,
+		FromTrait = 1 << 4
+	};
+};
+DEFINE_ENUM_FLAG_OPERATORS(PromotionApply::flags);
+
 
 /************************************************************************************************/
 /* Afforess	                  Start		 02/22/10                                               */
@@ -536,7 +565,7 @@ public:
 	
 	DllExport PlayerTypes getNationality() const;
 	void setNationality(PlayerTypes eNewNationality);
- 	void combatWon(CvUnit* pLoser, bool bAttacking);
+	void combatWon(CvUnit* pLoser, bool bAttacking);
 
 	int interceptionChance(const CvPlot* pPlot) const;
 	
@@ -575,7 +604,7 @@ public:
 	void setExperience100(int iNewValue, int iMax = -1);												// Exposed to Python
 	void changeExperience100(int iChange, int iMax = -1, bool bFromCombat = false, bool bInBorders = false, bool bUpdateGlobal = false);												// Exposed to Python
 	
-	void doBattleFieldPromotions(CvUnit* pDefender, CombatDetails cdDefenderDetails, const CvPlot* pPlot, bool bAttackerHasLostNoHP, bool bAttackerWithdrawn, int iAttackerInitialDamage, int iWinningOdds, int iInitialAttXP, int iInitialAttGGXP, int iDefenderInitialDamage, int iInitialDefXP, int iInitialDefGGXP, bool &bAttackerPromoted, bool &bDefenderPromoted, int iNonLethalAttackWinChance, int iNonLethalDefenseWinChance, int iDefenderFirstStrikes, int iAttackerFirstStrikes);
+	void doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdDefenderDetails, const CvPlot* pPlot, bool bAttackerHasLostNoHP, bool bAttackerWithdrawn, int iAttackerInitialDamage, int iWinningOdds, int iInitialAttXP, int iInitialAttGGXP, int iDefenderInitialDamage, int iInitialDefXP, int iInitialDefGGXP, bool &bAttackerPromoted, bool &bDefenderPromoted, int iNonLethalAttackWinChance, int iNonLethalDefenseWinChance, int iDefenderFirstStrikes, int iAttackerFirstStrikes);
 	void doDynamicXP(CvUnit* pDefender, const CvPlot* pPlot, int iAttackerInitialDamage, int iWinningOdds, int iDefenderInitialDamage, int iInitialAttXP, int iInitialDefXP, int iInitialAttGGXP, int iInitialDefGGXP, bool bPromotion, bool bDefPromotion);
 	
 	void changeTerrainProtected(TerrainTypes eIndex, int iNewValue);
@@ -763,7 +792,7 @@ public:
 	bool build(BuildTypes eBuild);
 
 	bool canPromote(PromotionTypes ePromotion, int iLeaderUnitId) const;																												// Exposed to Python 
-	void promote(PromotionTypes ePromotion, int iLeaderUnitId);																																// Exposed to Python 
+	bool promote(PromotionTypes ePromotion, int iLeaderUnitId);																																// Exposed to Python 
 
 	int canLead(const CvPlot* pPlot, int iUnitId) const;
 	bool lead(int iUnitId);
@@ -1634,7 +1663,9 @@ public:
 	int getExtraUnitCombatModifier(UnitCombatTypes eIndex) const;														// Exposed to Python
 	void changeExtraUnitCombatModifier(UnitCombatTypes eIndex, int iChange);
 	//TB Combat Mods (adjusted the following line to include ", bool bEquip = false, bool bAfflict = false, bool bPromote = false"
-	bool canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas = false, bool bEquip = false, bool bAfflict = false, bool bPromote = true, bool bForLeader = false, bool bForOffset = false, bool bForFree = false, bool bForBuildUp = false, bool bForStatus = false) const; // Exposed to Python 
+	bool canAcquirePromotion(PromotionTypes ePromotion, PromotionRequirements::flags requirements) const;
+	// Deprecated, use the one above that takes enum flags instead for increased readability.
+	bool canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas = false, bool bEquip = false, bool bAfflict = false, bool bPromote = false, bool bForLeader = false, bool bForOffset = false, bool bForFree = false, bool bForBuildUp = false, bool bForStatus = false) const; // Exposed to Python 
 	//TB Combat Mods end
 	bool canAcquirePromotionAny() const;																										// Exposed to Python
 	bool isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck = false) const;
@@ -1643,7 +1674,23 @@ public:
 	void processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPromo = false);
 	void setHasUnitCombat(UnitCombatTypes eIndex, bool bNewValue, bool bByPromo = false);
 	bool isHasPromotion(PromotionTypes eIndex) const;															// Exposed to Python
+	
+	void setHasPromotion(PromotionTypes eIndex, PromotionApply::flags flags);
+	// Deprecated, use the one above that takes enum flags instead for increased readability.
 	void setHasPromotion(PromotionTypes eIndex, bool bNewValue, bool bFree = true, bool bDying = false, bool bInitial = false, bool bFromTrait = false);									// Exposed to Python
+
+	typedef cvInternalGlobals::PromotionPredicateFn PromotionPredicateFn;
+
+	// Consecutively apply a number of promotions to a set of units. 
+	// promotionPredicateFn defines what promotions are valid to be applied.
+	// Number defines how many to apply
+	static bool applyUnitPromotions(const std::vector<CvUnit*>& units, int number, PromotionPredicateFn promotionPredicateFn);
+	static bool applyUnitPromotions(CvUnit* unit, int number, PromotionPredicateFn promotionPredicateFn);
+	// Apply a number of either upgrade or downgrade promotions to a set of units.
+	// The valid promotions for upgrade and downgrade are defined by the predicate functions.
+	// Offset defines which type and how many to apply. offset < 0 means that downgrades are required, offset > 0 means upgrades are required.
+	static bool normalizeUnitPromotions(const std::vector<CvUnit*>& units, int offset, PromotionPredicateFn upgradePredicateFn, PromotionPredicateFn downgradePredicateFn);
+	static bool normalizeUnitPromotions(CvUnit* unit, int offset, PromotionPredicateFn upgradePredicateFn, PromotionPredicateFn downgradePredicateFn);
 
 	UnitCombatTypes getBestHealingType();
 	UnitCombatTypes getBestHealingTypeConst() const;
@@ -1741,8 +1788,9 @@ private:
 public:
 // Dale - RB: Field Bombard END
 // Dale - ARB: Archer Bombard START
-	bool canArcherBombard(const CvPlot* pPlot) const;
-	bool canArcherBombardAt(const CvPlot* pPlot, int iX, int iY) const;
+	bool canArcherBombard() const;
+	// fromPlot - units own plot() isn't valid in some cases (when its out of viewport or using dummy entities)
+	bool canArcherBombardAt(const CvPlot* fromPlot, int iX, int iY) const;
 	bool archerBombard(int iX, int iY, bool supportAttack = false);
 // Dale - ARB: Archer Bombard END
 // Dale - SA: Stack Attack START
@@ -1755,7 +1803,7 @@ public:
 	void doActiveDefense();
 // Dale - SA: Active Defense END
 // Dale - FE: Fighters START
-	bool canFEngage(const CvPlot* pPlot) const;
+	bool canFEngage() const;
 	bool canFEngageAt(const CvPlot* pPlot, int iX, int iY) const;
 	bool fighterEngage(int iX, int iY);
 // Dale - FE: Fighters END
@@ -1781,7 +1829,7 @@ public:
 	virtual bool AI_update() = 0;
 	virtual bool AI_follow() = 0;
 	virtual void AI_upgrade() = 0;
-	virtual void AI_promote() = 0;
+	virtual bool AI_promote() = 0;
 	virtual int AI_groupFirstVal() = 0;
 	virtual int AI_groupSecondVal() = 0;
 	virtual int AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy, CvUnit** ppDefender = NULL, bool bAssassinate = false) = 0;
@@ -1791,7 +1839,7 @@ public:
 	virtual bool AI_isCityAIType() const = 0;
 	virtual UnitAITypes AI_getUnitAIType() const = 0;																				// Exposed to Python
 	virtual void AI_setUnitAIType(UnitAITypes eNewValue) = 0;
-    virtual int AI_sacrificeValue(const CvPlot* pPlot) const = 0;
+	virtual int AI_sacrificeValue(const CvPlot* pPlot) const = 0;
 	virtual bool AI_isAwaitingContract() const = 0;
 	virtual bool AI_isCityGarrison(const CvCity* pCity) const = 0;
 	virtual void AI_setAsGarrison(const CvCity* pCity) = 0;
@@ -2328,7 +2376,10 @@ public:
 	int getFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLineType) const;
 	void changeFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLineType, int iChange);
 	void setFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLineType, int iChange);
+
 	int getCityRepel() const;
+
+#ifdef STRENGTH_IN_NUMBERS
 	int getCityFrontSupportPercentModifier() const;
 	int getCityShortRangeSupportPercentModifier() const;
 	int getCityMediumRangeSupportPercentModifier() const;
@@ -2431,6 +2482,7 @@ public:
 	bool isSupporting();
 	void setSupportCount(int iChange);
 	void ClearSupports();
+#endif
 
 	int getOngoingTrainingCount(UnitCombatTypes eUnitCombatType) const;
 	void changeOngoingTrainingCount(UnitCombatTypes eUnitCombatType, int iChange);
@@ -2706,8 +2758,14 @@ public:
 	int groupRank() const;
 	int sizeRank() const;
 
-	bool canMerge(bool bAutocheck = false);
-	bool canSplit();
+	// Functions for evaluating upgrades when splitting and merging
+	bool isGroupUpgradePromotion(PromotionTypes promotion) const;
+	bool isGroupDowngradePromotion(PromotionTypes promotion) const;
+	bool isQualityUpgradePromotion(PromotionTypes promotion) const;
+	bool isQualityDowngradePromotion(PromotionTypes promotion) const;
+
+	bool canMerge(bool bAutocheck = false) const;
+	bool canSplit() const;
 
 	void doMerge();
 	void doSplit();
@@ -2850,7 +2908,7 @@ public:
 	bool isRBombardDirect() const;
 	void changeBombardDirectCount(int iChange);
 
-	int processIntegerbySizeMatters(int iValue) const;
+	static int applySMRank(int value, int rankChange, int rankMultiplier);
 
 	int getNoSelfHealCount() const;																											
 	bool hasNoSelfHeal() const;																									// Exposed to Python					

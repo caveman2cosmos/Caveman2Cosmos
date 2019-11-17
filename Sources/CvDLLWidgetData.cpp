@@ -99,6 +99,7 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 
 	case WIDGET_MENU_ICON:
 		szBuffer.append(gDLL->getText("TXT_KEY_MAIN_MENU"));
+		break;
 
 	case WIDGET_CONSCRIPT:
 		parseConscriptHelp(widgetDataStruct, szBuffer);
@@ -864,6 +865,7 @@ bool CvDLLWidgetData::executeAction( CvWidgetDataStruct &widgetDataStruct )
 
 	case WIDGET_MENU_ICON:
 		doMenu();
+		break;
 
 	case WIDGET_CONSCRIPT:
 		doConscript();

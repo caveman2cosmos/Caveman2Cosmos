@@ -7,11 +7,7 @@
 
 #include "CvUnit.h"
 
-#define	USE_REACHABLE_ENUMERATION
-
-#ifdef USE_REACHABLE_ENUMERATION
 class CvReachablePlotSet;
-#endif
 class CvCity;
 class ConstructionNeeds;
 
@@ -48,9 +44,9 @@ public:
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-	void AI_upgrade();
+	void AI_upgrade(); // override
 
-	void AI_promote();
+	bool AI_promote(); // override
 
 #define	LEADER_PRIORITY_MIN 0
 #define	LEADER_PRIORITY_MAX	100
@@ -465,11 +461,7 @@ public:
 /*                                                                                              */
 /************************************************************************************************/
 	bool AI_hurryFood();
-#ifdef USE_REACHABLE_ENUMERATION
 	bool AI_claimForts(CvReachablePlotSet* pReachablePlots, int iMinValue = 0, int iMaxPath = -1);
-#else
-	bool AI_claimForts(int iMinValue = 0, int iMaxPath = -1);
-#endif
 	BuildTypes AI_findBestFort(CvPlot* pPlot) const;
 	bool AI_StrategicForts();
 	bool AI_caravan(bool bAnyCity = false);

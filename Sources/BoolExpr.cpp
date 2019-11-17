@@ -8,7 +8,6 @@
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
 #include "BoolExpr.h"
-#include <boost/bind.hpp>
 #include "wchar_utils.h"
 
 BoolExpr::~BoolExpr()
@@ -184,13 +183,13 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// read the first node
-				IntExpr* pExpr = IntExpr::read(pXML);
+				std::auto_ptr<IntExpr> pExpr(IntExpr::read(pXML));
 				BoolExpr* pBExpr = NULL;
 				
 				// read the second node
 				if (pXML->TryMoveToXmlNextSibling())
 				{
-					pBExpr = new BoolExprGreater(pExpr, IntExpr::read(pXML));
+					pBExpr = new BoolExprGreater(pExpr.release(), IntExpr::read(pXML));
 				}
 
 				pXML->MoveToXmlParent();
@@ -213,13 +212,13 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// read the first node
-				IntExpr* pExpr = IntExpr::read(pXML);
+				std::auto_ptr<IntExpr> pExpr(IntExpr::read(pXML));
 				BoolExpr* pBExpr = NULL;
 				
 				// read the second node
 				if (pXML->TryMoveToXmlNextSibling())
 				{
-					pBExpr = new BoolExprGreaterEqual(pExpr, IntExpr::read(pXML));
+					pBExpr = new BoolExprGreaterEqual(pExpr.release(), IntExpr::read(pXML));
 				}
 
 				pXML->MoveToXmlParent();
@@ -242,13 +241,13 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			if (pXML->TryMoveToXmlFirstChild())
 			{
 				// read the first node
-				IntExpr*  pExpr  = IntExpr::read(pXML);
+				std::auto_ptr<IntExpr> pExpr(IntExpr::read(pXML));
 				BoolExpr* pBExpr = NULL;
 				
 				// read the second node
 				if (pXML->TryMoveToXmlNextSibling())
 				{
-					pBExpr = new BoolExprEqual(pExpr, IntExpr::read(pXML));
+					pBExpr = new BoolExprEqual(pExpr.release(), IntExpr::read(pXML));
 				}
 
 				pXML->MoveToXmlParent();

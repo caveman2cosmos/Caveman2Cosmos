@@ -11,7 +11,6 @@
 #ifndef CV_GAME_OBJECT_H
 #define CV_GAME_OBJECT_H
 
-#include <boost/function.hpp>
 #include "CvProperties.h"
 #include "CvPropertyManipulators.h"
 #include "BoolExpr.h"

@@ -162,13 +162,10 @@ CyUnit* CyPlayer::initUnit(int /*UnitTypes*/ iIndex, int iX, int iY, UnitAITypes
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	if( m_pPlayer )
+	if( m_pPlayer && iIndex == -1)
 	{
-		FAssertMsg(iIndex != -1, "Initiating NO_UNIT Type!");
-		if (iIndex == -1)
-		{
-			return NULL;
-		}
+		FErrorMsg("Initiating NO_UNIT Type!");
+		return NULL;
 	}
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -1976,10 +1973,14 @@ int CyPlayer::getGoldPerTurnByPlayer(int /*PlayerTypes*/ eIndex)
 bool CyPlayer::isFeatAccomplished(int /*FeatTypes*/ eIndex)	
 {
 	//TB Something's wrong in the python and this allows me to protect against it.
-	if (eIndex < 0 || eIndex > NUM_FEAT_TYPES)
+	if (eIndex < 0)
 	{
-		FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Feat Called by Python and Caught Early)");
-		FAssertMsg(eIndex < NUM_FEAT_TYPES, "eIndex is expected to be within maximum bounds (invalid Feat Called by Python and Caught Early)");
+		FErrorMsg("eIndex is expected to be non-negative (invalid Feat Called by Python and Caught Early)");
+		return false;
+	}
+	if (eIndex >= NUM_FEAT_TYPES)
+	{
+		FErrorMsg("eIndex is expected to be within maximum bounds (invalid Feat Called by Python and Caught Early)");
 		return false;
 	}
 	return m_pPlayer ? m_pPlayer->isFeatAccomplished((FeatTypes)eIndex) : false;
@@ -1988,10 +1989,14 @@ bool CyPlayer::isFeatAccomplished(int /*FeatTypes*/ eIndex)
 void CyPlayer::setFeatAccomplished(int /*FeatTypes*/ eIndex, bool bNewValue)
 {
 	//TB Something's wrong in the python and this allows me to protect against it.
-	if (eIndex < 0 || eIndex > NUM_FEAT_TYPES)
+	if (eIndex < 0)
 	{
-		FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Feat Called by Python and Caught Early)");
-		FAssertMsg(eIndex < NUM_FEAT_TYPES, "eIndex is expected to be within maximum bounds (invalid Feat Called by Python and Caught Early)");
+		FErrorMsg("eIndex is expected to be non-negative (invalid Feat Called by Python and Caught Early)");
+		return;
+	}
+	if(eIndex >= NUM_FEAT_TYPES)
+	{
+		FErrorMsg("eIndex is expected to be within maximum bounds (invalid Feat Called by Python and Caught Early)");
 		return;
 	}
 	else if (m_pPlayer)

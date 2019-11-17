@@ -94,6 +94,9 @@ public:
 	int getDefensivePower(TeamTypes eExcludeTeam = NO_TEAM) const;																											// Exposed to Python
 	int getEnemyPower() const;
 	int getNumNukeUnits() const;																												// Exposed to Python
+
+	bool isUnitPrereqOrBonusesMet(const CvUnitInfo& unit) const;
+
 #if defined QC_MASTERY_VICTORY
 //Sevo Begin--VCM
 	int getTotalVictoryScore();																												// Exposed to Python
@@ -269,8 +272,8 @@ public:
 	bool isEmbassyTrading() const;
 	void changeEmbassyTradingCount(int iChange);
 	
-    bool isHasEmbassy(TeamTypes eIndex) const;
-    void setHasEmbassy(TeamTypes eIndex, bool bNewValue);
+	bool isHasEmbassy(TeamTypes eIndex) const;
+	void setHasEmbassy(TeamTypes eIndex, bool bNewValue);
 	int getBuildingCommerceChange(BuildingTypes eIndex1, CommerceTypes eIndex2) const;							
 	void changeBuildingCommerceChange(BuildingTypes eIndex1, CommerceTypes eIndex2, int iChange); 
 

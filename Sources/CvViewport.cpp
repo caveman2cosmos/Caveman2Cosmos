@@ -1,18 +1,22 @@
 #include "CvGameCoreDLL.h"
 
-CvViewport::CvViewport(
-	CvMap*	pMap,
-	bool bIsFullMapContext) : m_pMap(pMap),
-							  m_transformType(VIEWPORT_TRANSFORM_TYPE_WINDOW),
-							  m_inhibitSelection(false),
-							  m_bDisplayCityScreen(false),
-							  m_bSelectCity(false),
-							  m_bAddSelectedCity(false),
-							  m_state(VIEWPORT_ACTION_STATE_NONE),
-							  m_countdown(0),
-							  m_bSwitchInProgress(false),
-							  m_eSpoofHiddenGraphics(VIEWPORT_SPOOF_NONE),
-							  m_spoofTransitionStartTickCount(-1)
+CvViewport::CvViewport(CvMap* pMap, bool bIsFullMapContext) 
+	: m_pMap(pMap)
+	, m_iXOffset(0)
+	, m_iYOffset(0)
+	, m_iXSize(0)
+	, m_iYSize(0)
+	, m_transformType(VIEWPORT_TRANSFORM_TYPE_WINDOW)
+	, m_pLookatPlot(NULL)
+	, m_inhibitSelection(false)
+	, m_bDisplayCityScreen(false)
+	, m_bSelectCity(false)
+	, m_bAddSelectedCity(false)
+	, m_state(VIEWPORT_ACTION_STATE_NONE)
+	, m_countdown(0)
+	, m_bSwitchInProgress(false)
+	, m_eSpoofHiddenGraphics(VIEWPORT_SPOOF_NONE)
+	, m_spoofTransitionStartTickCount(-1)
 {
 	resizeForMap();
 

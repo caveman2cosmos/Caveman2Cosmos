@@ -3,9 +3,11 @@
 #ifndef _CYMESSAGECONTROL_H
 #define _CYMESSAGECONTROL_H
 
+#ifndef __INTELLISENSE__
 #include <boost/python/list.hpp>
 #include <boost/python/tuple.hpp>
 namespace python = boost::python;
+#endif
 
 class CyMessageControl
 {

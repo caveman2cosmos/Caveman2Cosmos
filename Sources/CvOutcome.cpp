@@ -7,7 +7,6 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-#include <boost/algorithm/string.hpp>
 
 
 CvOutcome::CvOutcome(): m_eUnitType(NO_UNIT),
@@ -1034,14 +1033,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 	if (m_ePromotionType > NO_PROMOTION)
 	{
 		kUnit.setHasPromotion(m_ePromotionType, true);
-		if (!bFirst)
-		{
-			szBuffer.append(L", ");
-		}
-		else
-		{
-			bFirst = false;
-		}
+		bFirst = false;
 		szBuffer.append(GC.getPromotionInfo(m_ePromotionType).getDescription());
 	}
 
@@ -1735,15 +1727,8 @@ void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUni
 
 	if (m_ePromotionType > NO_PROMOTION)
 	{
-		if (!bFirst)
-		{
-			szBuffer.append(L", ");
-		}
-		else
-		{
-			bFirst = false;
-		}
 		szBuffer.append(GC.getPromotionInfo(m_ePromotionType).getDescription());
+		bFirst = false;
 	}
 
 	bool bUnitToCity = getUnitToCity(kUnit);

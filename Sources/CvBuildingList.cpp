@@ -8,18 +8,18 @@
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
 
-CvBuildingList::CvBuildingList(CvPlayer* pPlayer, CvCity* pCity) :
-m_bFilteringValid(false),
-m_bGroupingValid(false),
-m_bSortingValid(false),
-m_pCity(pCity),
-m_pPlayer(pPlayer),
-m_aaiGroupedBuildingList(NULL),
-m_BuildingFilters(pPlayer, pCity),
-m_BuildingGrouping(pPlayer, pCity),
-m_BuildingSort(pPlayer, pCity),
-m_eSelectedBuilding(NO_BUILDING),
-m_eSelectedWonder(NO_BUILDING)
+CvBuildingList::CvBuildingList(CvPlayer* pPlayer, CvCity* pCity) 
+	: m_bFilteringValid(false)
+	, m_bGroupingValid(false)
+	, m_bSortingValid(false)
+	, m_pCity(pCity)
+	, m_pPlayer(pPlayer)
+	, m_aaiGroupedBuildingList(NULL)
+	, m_BuildingFilters(pPlayer, pCity)
+	, m_BuildingGrouping(pPlayer, pCity)
+	, m_BuildingSort(pPlayer, pCity)
+	, m_eSelectedBuilding(NO_BUILDING)
+	, m_eSelectedWonder(NO_BUILDING)
 {
 }
 
@@ -107,7 +107,7 @@ int CvBuildingList::getNumInGroup(int iGroup)
 	}
 	FAssertMsg(iGroup < (int) m_aaiGroupedBuildingList.size(), "Index out of bounds");
 	FAssertMsg(iGroup > -1, "Index out of bounds");
-	return m_aaiGroupedBuildingList[iGroup]->size();
+	return m_aaiGroupedBuildingList[iGroup].size();
 }
 
 BuildingTypes CvBuildingList::getBuildingType(int iGroup, int iPos)
@@ -120,7 +120,7 @@ BuildingTypes CvBuildingList::getBuildingType(int iGroup, int iPos)
 	FAssertMsg(iGroup > -1, "Index out of bounds");
 	FAssertMsg(iPos < getNumInGroup(iGroup), "Index out of bounds");
 	FAssertMsg(iPos > -1, "Index out of bounds");
-	return (*m_aaiGroupedBuildingList[iGroup])[iPos];
+	return m_aaiGroupedBuildingList[iGroup][iPos];
 }
 
 void CvBuildingList::doFilter()
@@ -140,29 +140,25 @@ void CvBuildingList::doGroup()
 	if (!m_bFilteringValid)
 		doFilter();
 
-	for(unsigned int i=0; i<m_aaiGroupedBuildingList.size(); i++)
-	{
-		delete m_aaiGroupedBuildingList[i];
-	}
 	m_aaiGroupedBuildingList.clear();
 
-	int iSize = m_aiBuildingList.size();
+	int iSize = static_cast<int>(m_aiBuildingList.size());
 	std::multimap<int, BuildingTypes> mmap_Buildings;
 
-	for (int i=0; i < iSize; i++)
-		mmap_Buildings.insert(std::pair<int,BuildingTypes>(m_BuildingGrouping.getGroup(m_aiBuildingList[i]), m_aiBuildingList[i]));
+	for (int i = 0; i < iSize; i++)
+	{
+		mmap_Buildings.insert(std::pair<int, BuildingTypes>(m_BuildingGrouping.getGroup(m_aiBuildingList[i]), m_aiBuildingList[i]));
+	}
 	
-	int index = -1;
 	int iLastKey = MIN_INT;
 	for (std::multimap<int, BuildingTypes>::iterator it = mmap_Buildings.begin(); it != mmap_Buildings.end(); ++it)
 	{
-		if (it->first != iLastKey)
+		if (it->first != iLastKey || iLastKey == MIN_INT)
 		{
 			iLastKey = it->first;
-			index++;
-			m_aaiGroupedBuildingList.push_back(new std::vector<BuildingTypes>);
+			m_aaiGroupedBuildingList.push_back(std::vector<BuildingTypes>());
 		}
-		m_aaiGroupedBuildingList[index]->push_back(it->second);
+		m_aaiGroupedBuildingList.back().push_back(it->second);
 	}
 	m_bGroupingValid = true;
 }
@@ -172,13 +168,12 @@ void CvBuildingList::doSort()
 	if (!m_bGroupingValid)
 		doGroup();
 
-	BuildingSortListWrapper* pWrapper = new BuildingSortListWrapper(&m_BuildingSort);
-	for (unsigned int i=0; i<m_aaiGroupedBuildingList.size(); i++)
+	std::auto_ptr<BuildingSortListWrapper> pWrapper(new BuildingSortListWrapper(&m_BuildingSort));
+	for (GroupedBuildingVector::iterator itr = m_aaiGroupedBuildingList.begin(); itr != m_aaiGroupedBuildingList.end(); ++itr)
 	{
-		std::stable_sort(m_aaiGroupedBuildingList[i]->begin(), m_aaiGroupedBuildingList[i]->end(), *pWrapper);
+		std::stable_sort(itr->begin(), itr->end(), *pWrapper);
 		pWrapper->deleteCache();
 	}
-	delete pWrapper;
 	m_bSortingValid = true;
 }
 
@@ -186,19 +181,19 @@ int CvBuildingList::getBuildingSelectionRow()
 {
 	if (m_eSelectedBuilding != NO_BUILDING)
 	{
-		for (unsigned int i=0; i<m_aaiGroupedBuildingList.size(); i++)
+		for (int i = 0; i < static_cast<int>(m_aaiGroupedBuildingList.size()); i++)
 		{
-			if (std::find(m_aaiGroupedBuildingList[i]->begin(), m_aaiGroupedBuildingList[i]->end(), m_eSelectedBuilding) != m_aaiGroupedBuildingList[i]->end())
+			if (std::find(m_aaiGroupedBuildingList[i].begin(), m_aaiGroupedBuildingList[i].end(), m_eSelectedBuilding) != m_aaiGroupedBuildingList[i].end())
 				return i;
 		}
 		m_eSelectedBuilding = NO_BUILDING;
 	}
 	// Find first normal building
-	for (unsigned int i=0; i<m_aaiGroupedBuildingList.size(); i++)
+	for (int i = 0; i < static_cast<int>(m_aaiGroupedBuildingList.size()); i++)
 	{
-		for (unsigned int j=0; j<m_aaiGroupedBuildingList[i]->size(); j++)
+		for (int j = 0; j < static_cast<int>(m_aaiGroupedBuildingList[i].size()); j++)
 		{
-			BuildingTypes eBuilding = (*m_aaiGroupedBuildingList[i])[j];
+			BuildingTypes eBuilding = m_aaiGroupedBuildingList[i][j];
 			if (!isLimitedWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()))
 				return i;
 		}
@@ -210,19 +205,19 @@ int CvBuildingList::getWonderSelectionRow()
 {
 	if (m_eSelectedWonder != NO_BUILDING)
 	{
-		for (unsigned int i=0; i<m_aaiGroupedBuildingList.size(); i++)
+		for (int i = 0; i < static_cast<int>(m_aaiGroupedBuildingList.size()); i++)
 		{
-			if (std::find(m_aaiGroupedBuildingList[i]->begin(), m_aaiGroupedBuildingList[i]->end(), m_eSelectedWonder) != m_aaiGroupedBuildingList[i]->end())
+			if (std::find(m_aaiGroupedBuildingList[i].begin(), m_aaiGroupedBuildingList[i].end(), m_eSelectedWonder) != m_aaiGroupedBuildingList[i].end())
 				return i;
 		}
 		m_eSelectedWonder = NO_BUILDING;
 	}
 	// Find first wonder
-	for (unsigned int i=0; i<m_aaiGroupedBuildingList.size(); i++)
+	for (int i = 0; i < static_cast<int>(m_aaiGroupedBuildingList.size()); i++)
 	{
-		for (unsigned int j=0; j<m_aaiGroupedBuildingList[i]->size(); j++)
+		for (int j = 0; j < static_cast<int>(m_aaiGroupedBuildingList[i].size()); j++)
 		{
-			BuildingTypes eBuilding = (*m_aaiGroupedBuildingList[i])[j];
+			BuildingTypes eBuilding = m_aaiGroupedBuildingList[i][j];
 			if (isLimitedWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()))
 				return i;
 		}

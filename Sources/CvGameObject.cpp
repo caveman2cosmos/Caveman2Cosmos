@@ -8,7 +8,6 @@
 //------------------------------------------------------------------------------------------------
 
 #include "CvGameCoreDLL.h"
-#include <boost/bind.hpp>
 
 CvGameObjectGame::CvGameObjectGame()
 {
@@ -845,14 +844,18 @@ void CvGameObjectUnit::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 		else
 		{
 			//TB Combat Mods begin
-			bool bEquip = GC.getPromotionInfo(kPromotion.ePromotion).isEquipment();
-			bool bAfflict = GC.getPromotionInfo(kPromotion.ePromotion).isAffliction();
-			bool bPromote = false;
-			if (!bEquip && !bAfflict)
+			PromotionRequirements::flags promoFlags = PromotionRequirements::IgnoreHas;
+			if (GC.getPromotionInfo(kPromotion.ePromotion).isEquipment())
+				promoFlags |= PromotionRequirements::Equip;
+			if(GC.getPromotionInfo(kPromotion.ePromotion).isAffliction())
+				promoFlags |= PromotionRequirements::Afflict;
+
+			if (!GC.getPromotionInfo(kPromotion.ePromotion).isEquipment() &&
+				!GC.getPromotionInfo(kPromotion.ePromotion).isAffliction())
 			{
-				bPromote = true;
+				promoFlags |= PromotionRequirements::Promote;
 			}
-			if (m_pUnit->canAcquirePromotion(kPromotion.ePromotion, true, bEquip, bAfflict, bPromote))
+			if (m_pUnit->canAcquirePromotion(kPromotion.ePromotion, promoFlags))
 			//TB Combat Mods end
 			{
 				if (!bHasPromotion)

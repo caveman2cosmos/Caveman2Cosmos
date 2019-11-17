@@ -25,11 +25,14 @@
 //  PURPOSE :   Default constructor
 //
 //------------------------------------------------------------------------------------------------------
-CvWaterPlaneInfo::CvWaterPlaneInfo() :
-	m_fMaterialAlpha(0.0f),
-	m_BaseTextureScale(0.0f),
-	m_fURate(0.0f),
-	m_fVRate(0.0f)
+CvWaterPlaneInfo::CvWaterPlaneInfo() 
+	: m_fMaterialAlpha(0.0f)
+	, m_BaseTextureScale(0.0f)
+	, m_fURate(0.0f)
+	, m_fVRate(0.0f)
+	, m_kMaterialDiffuse()
+	, m_kMaterialSpecular()
+	, m_kMaterialEmmisive()
 {
 
 }

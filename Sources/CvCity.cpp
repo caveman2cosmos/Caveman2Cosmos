@@ -259,6 +259,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 		for (int iI = 0; iI < NUM_CITY_PLOTS_2; iI++)
 		{
 			CvPlot* pLoopPlot = getCityIndexPlot(iI);
+			FAssertMsg(pLoopPlot != NULL, CvString::format("pLoopPlot was null for iIndex %d", iI).c_str());
 			if (!pLoopPlot->getLandmarkName().empty() && pLoopPlot->getLandmarkType() != NO_LANDMARK)
 			{
 				setName(pLoopPlot->getLandmarkName());
@@ -7492,7 +7493,8 @@ int CvCity::getReligionPercentAnger() const
 		return 0;
 	}
 
-	if (getReligionCount() == 0)
+	int religionCount = getReligionCount();
+	if (religionCount == 0)
 	{
 		return 0;
 	}
@@ -7523,7 +7525,7 @@ int CvCity::getReligionPercentAnger() const
 	iAnger *= iCount;
 	iAnger /= GC.getGameINLINE().getNumCities();
 
-	iAnger /= getReligionCount();
+	iAnger /= religionCount;
 
 	return iAnger;
 }
@@ -8408,12 +8410,13 @@ int CvCity::hurryPopulation(HurryTypes eHurry) const
 
 int CvCity::getHurryPopulation(HurryTypes eHurry, int iHurryCost) const
 {
-	if (GC.getHurryInfo(eHurry).getProductionPerPopulation() == 0)
+	int prodPerPop = GC.getGameINLINE().getProductionPerPopulation(eHurry);
+	if (prodPerPop == 0)
 	{
 		return 0;
 	}
 
-	int iPopulation = (iHurryCost - 1) / GC.getGameINLINE().getProductionPerPopulation(eHurry);
+	int iPopulation = (iHurryCost - 1) / prodPerPop;
 
 	return std::max(1, (iPopulation + 1));
 }
@@ -8422,9 +8425,10 @@ int CvCity::hurryProduction(HurryTypes eHurry) const
 {
 	int iProduction;
 
-	if (GC.getHurryInfo(eHurry).getProductionPerPopulation() > 0)
+	int prodPerPop = GC.getGameINLINE().getProductionPerPopulation(eHurry);
+	if (prodPerPop > 0)
 	{
-		iProduction = (100 * getExtraProductionDifference(hurryPopulation(eHurry) * GC.getGameINLINE().getProductionPerPopulation(eHurry))) / std::max(1, getHurryCostModifier());
+		iProduction = (100 * getExtraProductionDifference(hurryPopulation(eHurry) * prodPerPop)) / std::max(1, getHurryCostModifier());
 		FAssert(iProduction >= productionLeft());
 	}
 	else
@@ -9477,7 +9481,7 @@ void CvCity::changeNumGreatPeople(int iChange)
 
 int CvCity::getBaseGreatPeopleRate() const
 {
-	return m_iBaseGreatPeopleRate + GET_PLAYER(getOwnerINLINE()).getNationalGreatPeopleRate();
+	return std::max(0, m_iBaseGreatPeopleRate) + GET_PLAYER(getOwnerINLINE()).getNationalGreatPeopleRate();
 }
 
 
@@ -9517,7 +9521,6 @@ int CvCity::getTotalGreatPeopleRateModifier() const
 void CvCity::changeBaseGreatPeopleRate(int iChange)
 {
 	m_iBaseGreatPeopleRate = (m_iBaseGreatPeopleRate + iChange);
-	FAssertMsg(getBaseGreatPeopleRate() >= 0, CvString::format("City %S m_iBaseGreatPeopleRate is %d", m_szName.c_str(), m_iBaseGreatPeopleRate).c_str());
 }
 
 
@@ -10964,8 +10967,6 @@ void CvCity::changeBonusGoodHealth(int iChange)
 	if (iChange != 0)
 	{
 		m_iBonusGoodHealth += iChange;
-		FAssert(getBonusGoodHealth() >= 0);
-
 		FAssertMsg(getBonusGoodHealth() >= 0, "getBonusGoodHealth is expected to be >= 0");
 
 		AI_setAssignWorkDirty(true);
@@ -10983,8 +10984,6 @@ void CvCity::changeBonusBadHealth(int iChange)
 	if (iChange != 0)
 	{
 		m_iBonusBadHealth += iChange;
-		FAssert(getBonusBadHealth() <= 0);
-
 		FAssertMsg(getBonusBadHealth() <= 0, "getBonusBadHealth is expected to be <= 0");
 
 		AI_setAssignWorkDirty(true);
@@ -17482,7 +17481,11 @@ void CvCity::setWorkingPlot(int iIndex, bool bNewValue)
 		if (bNewValue)
 		{
 			CvPlot* pPlot = getCityIndexPlot(iIndex);
-			pPlot->setPlotIgnoringImprovementUpgrade(false);
+			FAssertMsg(pPlot != NULL, CvString::format("pPlot was null for iIndex %d", iIndex).c_str());
+			if (pPlot)
+			{
+				pPlot->setPlotIgnoringImprovementUpgrade(false);
+			}
 		}
 	}
 }
@@ -17505,7 +17508,7 @@ void CvCity::alterWorkingPlot(int iIndex)
 	else
 	{
 		CvPlot* pPlot = getCityIndexPlot(iIndex);
-
+		FAssertMsg(pPlot != NULL, CvString::format("pPlot was null for iIndex %d", iIndex).c_str());
 		if (pPlot != NULL)
 		{
 			if (canWork(pPlot))
@@ -17798,6 +17801,7 @@ void CvCity::setNumRealBuildingTimed(BuildingTypes eIndex, int iNewValue, bool b
 bool CvCity::processGreatWall(bool bIn, bool bForce, bool bSeeded)
 {
 	return false;
+
 	/*
 	> TBNote: I've found both a crash scenario in PBEM and an infinite hang scenario in single player.
 	> A player complained about exceedingly strange graphic artifice when they encircle the globe with a singular culture that possesses the GW and the hang looked to have a similar basis.
@@ -18592,9 +18596,9 @@ int CvCity::getTradeRoutes() const
 
 void CvCity::clearTradeRoutes()
 {
-	for (size_t iI = 0; iI < m_paTradeCities.size(); iI++)
+	for (int cityIdx = 0; cityIdx < static_cast<int>(m_paTradeCities.size()); cityIdx++)
 	{
-		CvCity* pLoopCity = getTradeCity(static_cast<int>(iI));
+		CvCity* pLoopCity = getTradeCity(cityIdx);
 
 		if (pLoopCity != NULL)
 		{
@@ -23480,9 +23484,10 @@ void CvCity::getBuildQueue(std::vector<std::string>& astrQueue) const
 
 		case ORDER_LIST:
 			astrQueue.push_back("List");
+			break;
 
 		default:
-			FAssert(false);
+			FErrorMsg(CvString::format("Unexpected eOrderType %d", pNode->m_data.eOrderType).c_str());
 			break;
 		}
 
@@ -24455,7 +24460,7 @@ void CvCity::doPromotion()
 					CvPlot* pPlot = plot();
 					for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 					{
-						CvUnit* pLoopUnit = unitItr.ptr();
+						CvUnit* pLoopUnit = *unitItr;
 						if (GET_TEAM(pLoopUnit->getTeam()).getID() == GET_TEAM(GET_PLAYER(getOwner()).getTeam()).getID())
 						{
 							assignPromotionChecked(ePromotion1, pLoopUnit);
@@ -25833,7 +25838,7 @@ void CvCity::doAttack()
 				{
 					for (CvPlot::unit_iterator unitItr = pAdjacentPlot->beginUnits(); unitItr != pAdjacentPlot->endUnits(); ++unitItr)
 					{
-						CvUnit* pLoopUnit = unitItr.ptr();
+						CvUnit* pLoopUnit = *unitItr;
 
 						if (pLoopUnit->getTeam() != getTeam())
 						{
@@ -26476,13 +26481,13 @@ void CvCity::removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeople
 		}
 
 		// check all the plots we working
-		for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
+		for (int plotIdx = 0; plotIdx < NUM_CITY_PLOTS; plotIdx++)
 		{
-			if (iI != CITY_HOME_PLOT)
+			if (plotIdx != CITY_HOME_PLOT)
 			{
-				if (isWorkingPlot(iI) && !abRemovedPlots[iI])
+				if (isWorkingPlot(plotIdx) && !abRemovedPlots[plotIdx])
 				{
-					CvPlot* pLoopPlot = getCityIndexPlot(iI);
+					const CvPlot* pLoopPlot = getCityIndexPlot(plotIdx);
 
 					if (pLoopPlot != NULL)
 					{
@@ -26492,7 +26497,7 @@ void CvCity::removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeople
 						{
 							iWorstValue = iValue;
 							eWorstSpecialist = NO_SPECIALIST;
-							iWorstPlot = iI;
+							iWorstPlot = plotIdx;
 						}
 					}
 				}
@@ -26520,7 +26525,7 @@ void CvCity::removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeople
 	{
 		if (paeRemovedSpecailists[iI] != NO_SPECIALIST)
 		{
-			CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(paeRemovedSpecailists[iI]);
+			const CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(paeRemovedSpecailists[iI]);
 			iHappiness -= kSpecialist.getHappinessPercent();
 			iHealthiness -= kSpecialist.getHealthPercent();
 			iGreatPeopleRate -= kSpecialist.getGreatPeopleRateChange();
@@ -26537,14 +26542,18 @@ void CvCity::removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeople
 	}
 	iHealthiness /= 100;
 	iHappiness /= 100;
-	for (int iJ = 0; iJ < NUM_CITY_PLOTS; iJ++)
+	for (int plotIdx = 0; plotIdx < NUM_CITY_PLOTS; plotIdx++)
 	{
-		if (abRemovedPlots[iJ])
+		if (abRemovedPlots[plotIdx])
 		{
-			CvPlot* pLoopPlot = getCityIndexPlot(iJ);
-			for (int iK = 0; iK < NUM_YIELD_TYPES; iK++)
+			const CvPlot* pLoopPlot = getCityIndexPlot(plotIdx);
+			FAssertMsg(pLoopPlot != NULL, CvString::format("pLoopPlot was null for iIndex %d", plotIdx).c_str());
+			if (pLoopPlot != NULL)
 			{
-				aiYields[iK] -= pLoopPlot->getYield((YieldTypes)iK);
+				for (int yieldIdx = 0; yieldIdx < NUM_YIELD_TYPES; yieldIdx++)
+				{
+					aiYields[yieldIdx] -= pLoopPlot->getYield((YieldTypes)yieldIdx);
+				}
 			}
 		}
 	}
@@ -28015,7 +28024,7 @@ void CvCity::assignOngoingTraining(UnitCombatTypes eCombat, CvPlot* pPlot)
 	CvUnit* pBestUnit = NULL;
 	for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 	{
-		CvUnit* pLoopUnit = unitItr.ptr();
+		CvUnit* pLoopUnit = *unitItr;
 		if (pLoopUnit->getTeam() == getTeam())
 		{
 			if (pLoopUnit->isHasUnitCombat(eCombat))
@@ -28040,7 +28049,7 @@ bool CvCity::assignPromotionChecked(PromotionTypes promotion, CvUnit* unit) cons
 {
 	if (promotion != NO_PROMOTION &&
 		((GC.getPromotionInfo(promotion).isEquipment() && canEquip(unit, promotion)) ||
-			unit->canAcquirePromotion(promotion, false, false, false, true, false, false, true)))
+			unit->canAcquirePromotion(promotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)))
 	{
 		unit->setHasPromotion(promotion, true);
 		return true;
@@ -28055,7 +28064,7 @@ void CvCity::assignPromotionsFromBuildingChecked(const CvBuildingInfo& building,
 		const FreePromoTypes& freePromoType = building.getFreePromoType(promoTypeIdx);
 		if (freePromoType.ePromotion != NO_PROMOTION &&
 			((GC.getPromotionInfo(freePromoType.ePromotion).isEquipment() && canEquip(unit, freePromoType.ePromotion)) ||
-				unit->canAcquirePromotion(freePromoType.ePromotion, false, false, false, true, false, false, true)))
+				unit->canAcquirePromotion(freePromoType.ePromotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)))
 		{
 			if (!freePromoType.m_pExprFreePromotionCondition ||
 				freePromoType.m_pExprFreePromotionCondition->evaluate(const_cast<CvGameObjectUnit*>(unit->getGameObjectConst())))
@@ -28814,7 +28823,7 @@ int CvCity::getInvestigationTotal(bool bActual) const
 		CvPlot* pPlot = plot();
 		for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 		{
-			CvUnit* pLoopUnit = unitItr.ptr();
+			CvUnit* pLoopUnit = *unitItr;
 
 			int iUnitInvestigation = 0;
 			if (pLoopUnit->getOwner() == getOwner())

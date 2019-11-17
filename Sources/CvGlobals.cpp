@@ -5,7 +5,7 @@
 #include "CvMapExternal.h"
 #include <time.h> 
 
-static char gVersionString[64] = { 0 };
+static char gVersionString[1024] = { 0 };
 
 // Use macro override when available. Version string might not be loaded in time for
 // applying it to the mini-dump so we will use macro version string for releases
@@ -122,351 +122,367 @@ void CvGlobals::CheckProxy(const char* fnName) const
 //
 // CONSTRUCTOR
 //
-cvInternalGlobals::cvInternalGlobals() :
+cvInternalGlobals::cvInternalGlobals() 
 /************************************************************************************************/
 /* Mod Globals    Start                          09/13/10                           phungus420  */
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-m_paszEntityEventTypes2(NULL),
-m_paszEntityEventTypes(NULL),
-m_paszAnimationOperatorTypes(NULL),
-m_paszFunctionTypes(NULL),
-m_paszFlavorTypes(NULL),
-m_paszArtStyleTypes(NULL),
-m_paszCitySizeTypes(NULL),
-m_paszContactTypes(NULL),
-m_paszDiplomacyPowerTypes(NULL),
-m_paszAutomateTypes(NULL),
-m_paszDirectionTypes(NULL),
-m_paszFootstepAudioTypes(NULL),
-m_paszFootstepAudioTags(NULL),
-m_bDCM_BATTLE_EFFECTS(false),
-m_iBATTLE_EFFECT_LESS_FOOD(0),
-m_iBATTLE_EFFECT_LESS_PRODUCTION(0),
-m_iBATTLE_EFFECT_LESS_COMMERCE(0),
-m_iBATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS(0),
-m_iMAX_BATTLE_TURNS(0),
+	: m_paszEntityEventTypes2(NULL)
+	, m_paszEntityEventTypes(NULL)
+	, m_paszAnimationOperatorTypes(NULL)
+	, m_paszFunctionTypes(NULL)
+	, m_paszFlavorTypes(NULL)
+	, m_paszArtStyleTypes(NULL)
+	, m_paszCitySizeTypes(NULL)
+	, m_paszContactTypes(NULL)
+	, m_paszDiplomacyPowerTypes(NULL)
+	, m_paszAutomateTypes(NULL)
+	, m_paszDirectionTypes(NULL)
+	, m_paszFootstepAudioTypes(NULL)
+	, m_paszFootstepAudioTags(NULL)
+	, m_bDCM_BATTLE_EFFECTS(false)
+	, m_iBATTLE_EFFECT_LESS_FOOD(0)
+	, m_iBATTLE_EFFECT_LESS_PRODUCTION(0)
+	, m_iBATTLE_EFFECT_LESS_COMMERCE(0)
+	, m_iBATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS(0)
+	, m_iMAX_BATTLE_TURNS(0)
 
-m_bDCM_AIR_BOMBING(false),
-m_bDCM_RANGE_BOMBARD(false),
-m_iDCM_RB_CITY_INACCURACY(0),
-m_iDCM_RB_CITYBOMBARD_CHANCE(0),
-m_bDCM_ATTACK_SUPPORT(false),
-m_bDCM_STACK_ATTACK(false),
-m_bDCM_OPP_FIRE(false),
-m_bDCM_ACTIVE_DEFENSE(false),
-m_bDCM_ARCHER_BOMBARD(false),
-m_bDCM_FIGHTER_ENGAGE(false),
+	, m_bDCM_AIR_BOMBING(false)
+	, m_bDCM_RANGE_BOMBARD(false)
+	, m_iDCM_RB_CITY_INACCURACY(0)
+	, m_iDCM_RB_CITYBOMBARD_CHANCE(0)
+	, m_bDCM_ATTACK_SUPPORT(false)
+	, m_bDCM_STACK_ATTACK(false)
+	, m_bDCM_OPP_FIRE(false)
+	, m_bDCM_ACTIVE_DEFENSE(false)
+	, m_bDCM_ARCHER_BOMBARD(false)
+	, m_bDCM_FIGHTER_ENGAGE(false)
 
-m_bDYNAMIC_CIV_NAMES(false),
+	, m_bDYNAMIC_CIV_NAMES(false)
 
-m_bLIMITED_RELIGIONS_EXCEPTIONS(false),
-m_bOC_RESPAWN_HOLY_CITIES(false),
+	, m_bLIMITED_RELIGIONS_EXCEPTIONS(false)
+	, m_bOC_RESPAWN_HOLY_CITIES(false)
 
-m_bIDW_ENABLED(false),
-m_fIDW_BASE_COMBAT_INFLUENCE(0),
-m_fIDW_NO_CITY_DEFENDER_MULTIPLIER(1.0f),
-m_fIDW_FORT_CAPTURE_MULTIPLIER(1.0f),
-m_fIDW_EXPERIENCE_FACTOR(0),
-m_fIDW_WARLORD_MULTIPLIER(1.0f),
-m_iIDW_INFLUENCE_RADIUS(0),
-m_fIDW_PLOT_DISTANCE_FACTOR(0),
-m_fIDW_WINNER_PLOT_MULTIPLIER(1.0f),
-m_fIDW_LOSER_PLOT_MULTIPLIER(1.0f),
-m_bIDW_EMERGENCY_DRAFT_ENABLED(false),
-m_iIDW_EMERGENCY_DRAFT_MIN_POPULATION(2),
-m_fIDW_EMERGENCY_DRAFT_STRENGTH(1.0f),
-m_fIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER(0),
-m_bIDW_NO_BARBARIAN_INFLUENCE(false),
-m_bIDW_NO_NAVAL_INFLUENCE(false),
-m_bIDW_PILLAGE_INFLUENCE_ENABLED(false),
-m_fIDW_BASE_PILLAGE_INFLUENCE(0),
-m_fIDW_CITY_TILE_MULTIPLIER(0),
+	, m_bIDW_ENABLED(false)
+	, m_fIDW_BASE_COMBAT_INFLUENCE(0)
+	, m_fIDW_NO_CITY_DEFENDER_MULTIPLIER(1.0f)
+	, m_fIDW_FORT_CAPTURE_MULTIPLIER(1.0f)
+	, m_fIDW_EXPERIENCE_FACTOR(0)
+	, m_fIDW_WARLORD_MULTIPLIER(1.0f)
+	, m_iIDW_INFLUENCE_RADIUS(0)
+	, m_fIDW_PLOT_DISTANCE_FACTOR(0)
+	, m_fIDW_WINNER_PLOT_MULTIPLIER(1.0f)
+	, m_fIDW_LOSER_PLOT_MULTIPLIER(1.0f)
+	, m_bIDW_EMERGENCY_DRAFT_ENABLED(false)
+	, m_iIDW_EMERGENCY_DRAFT_MIN_POPULATION(2)
+	, m_fIDW_EMERGENCY_DRAFT_STRENGTH(1.0f)
+	, m_fIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER(0)
+	, m_bIDW_NO_BARBARIAN_INFLUENCE(false)
+	, m_bIDW_NO_NAVAL_INFLUENCE(false)
+	, m_bIDW_PILLAGE_INFLUENCE_ENABLED(false)
+	, m_fIDW_BASE_PILLAGE_INFLUENCE(0)
+	, m_fIDW_CITY_TILE_MULTIPLIER(0)
 
-m_bSS_ENABLED(false),
-m_bSS_BRIBE(false),
-m_bSS_ASSASSINATE(false),
-/************************************************************************************************/
-/* Mod Globals                        END                                           phungus420  */
-/************************************************************************************************/
-m_bGraphicsInitialized(false),
-m_bLogging(false),
-m_bRandLogging(false),
-m_bOverwriteLogs(false),
-m_bSynchLogging(false),
-m_bDLLProfiler(false),
-m_pkMainMenu(NULL),
-m_iNewPlayers(0),
-m_bZoomOut(false),
-m_bZoomIn(false),
-m_bLoadGameFromFile(false),
-m_pFMPMgr(NULL),
-m_asyncRand(NULL),
-m_interface(NULL),
-m_game(NULL),
-m_messageQueue(NULL),
-m_hotJoinMsgQueue(NULL),
-m_messageControl(NULL),
-m_messageCodes(NULL),
-m_dropMgr(NULL),
-m_portal(NULL),
-m_setupData(NULL),
-m_initCore(NULL),
-m_statsReporter(NULL),
-m_diplomacyScreen(NULL),
-m_mpDiplomacyScreen(NULL),
-m_pathFinder(NULL),
-m_interfacePathFinder(NULL),
-m_stepFinder(NULL),
-m_routeFinder(NULL),
-m_borderFinder(NULL),
-m_areaFinder(NULL),
-m_plotGroupFinder(NULL),
-m_aiPlotDirectionX(NULL),
-m_aiPlotDirectionY(NULL),
-m_aiPlotCardinalDirectionX(NULL),
-m_aiPlotCardinalDirectionY(NULL),
-m_aiCityPlotX(NULL),
-m_aiCityPlotY(NULL),
-m_aiCityPlotPriority(NULL),
-m_aeTurnLeftDirection(NULL),
-m_aeTurnRightDirection(NULL),
-//m_aGameOptionsInfo(NULL),
-//m_aPlayerOptionsInfo(NULL),
-m_Profiler(NULL),
-m_VarSystem(NULL),
-m_iMOVE_DENOMINATOR(0),
-m_iNUM_UNIT_PREREQ_OR_BONUSES(0),
-m_iNUM_BUILDING_PREREQ_OR_BONUSES(0),
-m_iFOOD_CONSUMPTION_PER_POPULATION(0),
-m_iMAX_HIT_POINTS(0),
-m_iPATH_DAMAGE_WEIGHT(0),
-m_iHILLS_EXTRA_DEFENSE(0),
-m_iRIVER_ATTACK_MODIFIER(0),
-m_iAMPHIB_ATTACK_MODIFIER(0),
-m_iHILLS_EXTRA_MOVEMENT(0),
-m_iRIVER_EXTRA_MOVEMENT(0),
-m_iMAX_PLOT_LIST_ROWS(0),
-m_iUNIT_MULTISELECT_MAX(0),
-m_iPERCENT_ANGER_DIVISOR(0),
-m_iEVENT_MESSAGE_TIME(0),
-m_iROUTE_FEATURE_GROWTH_MODIFIER(0),
-m_iFEATURE_GROWTH_MODIFIER(0),
-m_iMIN_CITY_RANGE(0),
-m_iCITY_MAX_NUM_BUILDINGS(0),
-m_iNUM_UNIT_AND_TECH_PREREQS(0),
-m_iNUM_AND_TECH_PREREQS(0),
-m_iNUM_OR_TECH_PREREQS(0),
-m_iLAKE_MAX_AREA_SIZE(0),
-m_iNUM_ROUTE_PREREQ_OR_BONUSES(0),
-m_iNUM_BUILDING_AND_TECH_PREREQS(0),
-m_iMIN_WATER_SIZE_FOR_OCEAN(0),
-m_iFORTIFY_MODIFIER_PER_TURN(0),
-m_iESTABLISH_MODIFIER_PER_TURN(0),
-m_iESCAPE_MODIFIER_PER_TURN(0),
-m_iMAX_CITY_DEFENSE_DAMAGE(0),
-m_iNUM_CORPORATION_PREREQ_BONUSES(0),
-m_iPEAK_SEE_THROUGH_CHANGE(0),
-m_iHILLS_SEE_THROUGH_CHANGE(0),
-m_iSEAWATER_SEE_FROM_CHANGE(0),
-m_iPEAK_SEE_FROM_CHANGE(0),
-m_iHILLS_SEE_FROM_CHANGE(0),
-m_iUSE_SPIES_NO_ENTER_BORDERS(0),
-m_fCAMERA_MIN_YAW(0),
-m_fCAMERA_MAX_YAW(0),
-m_fCAMERA_FAR_CLIP_Z_HEIGHT(0),
-m_fCAMERA_MAX_TRAVEL_DISTANCE(0),
-m_fCAMERA_START_DISTANCE(0),
-m_fAIR_BOMB_HEIGHT(0),
-m_fPLOT_SIZE(0),
-m_fCAMERA_SPECIAL_PITCH(0),
-m_fCAMERA_MAX_TURN_OFFSET(0),
-m_fCAMERA_MIN_DISTANCE(0),
-m_fCAMERA_UPPER_PITCH(0),
-m_fCAMERA_LOWER_PITCH(0),
-m_fFIELD_OF_VIEW(0),
-m_fSHADOW_SCALE(0),
-m_fUNIT_MULTISELECT_DISTANCE(0),
-m_fSAD_FACTOR_1(0),
-m_fSAD_FACTOR_2(0),
-m_fSAD_FACTOR_3(0),
-m_fSAD_FACTOR_4(0),
-m_iUSE_CANNOT_FOUND_CITY_CALLBACK(0),
-m_iUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK(0),
-m_iUSE_IS_PLAYER_RESEARCH_CALLBACK(0),
-m_iUSE_CAN_RESEARCH_CALLBACK(0),
-m_iUSE_CANNOT_DO_CIVIC_CALLBACK(0),
-m_iUSE_CAN_DO_CIVIC_CALLBACK(0),
-m_iUSE_CANNOT_CONSTRUCT_CALLBACK(0),
-m_iUSE_CAN_CONSTRUCT_CALLBACK(0),
-m_iUSE_CAN_DECLARE_WAR_CALLBACK(0),
-m_iUSE_CANNOT_RESEARCH_CALLBACK(0),
-m_iUSE_GET_UNIT_COST_MOD_CALLBACK(0),
-m_iUSE_GET_CITY_FOUND_VALUE_CALLBACK(0),
-m_iUSE_CANNOT_HANDLE_ACTION_CALLBACK(0),
-m_iUSE_CAN_BUILD_CALLBACK(0),
-m_iUSE_CANNOT_TRAIN_CALLBACK(0),
-m_iUSE_CAN_TRAIN_CALLBACK(0),
-m_iUSE_UNIT_CANNOT_MOVE_INTO_CALLBACK(0),
-m_iUSE_USE_CANNOT_SPREAD_RELIGION_CALLBACK(0),
-m_iUSE_FINISH_TEXT_CALLBACK(0),
-m_iUSE_ON_UNIT_SET_XY_CALLBACK(0),
-m_iUSE_ON_UNIT_SELECTED_CALLBACK(0),
-m_iUSE_ON_UPDATE_CALLBACK(0),
-m_iUSE_ON_UNIT_CREATED_CALLBACK(0),
-m_iUSE_ON_UNIT_LOST_CALLBACK(0),
-m_iLAND_UNITS_CAN_ATTACK_WATER_CITIES(0),
-m_iBASE_UNIT_UPGRADE_COST(0),
-m_iUPGRADE_ROUND_LIMIT(0),
-m_iCITY_BARBARIAN_DEFENSE_MODIFIER(0),
-m_iUNIT_VISIBILITY_RANGE(0),
-m_iMAX_UNIT_VISIBILITY_RANGE(0),
-m_iGREATER_COMMERCE_SWITCH_POINT(0),
-m_iWORKER_TRADE_VALUE_PERCENT_ADJUSTMENT(0),
-m_iTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT(0),
-m_iINFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT(0),
-m_iESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT(0),
-m_iWATER_POTENTIAL_CITY_WORK_FOR_AREA(0),
-m_iSAD_MAX_MODIFIER(0),
-m_iUPSCALED_RESEARCH_COST_MODIFIER(0),
-m_iENABLE_DYNAMIC_UNIT_ENTITIES(0),
-/************************************************************************************************/
-/* MODULES                                 11/13/07                            MRGENIE          */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-m_iTGA_RELIGIONS(0),                            // GAMEFONT_TGA_RELIGIONS
-m_iTGA_CORPORATIONS(0),                         // GAMEFONT_TGA_CORPORATIONS
-/************************************************************************************************/
-/* MODULES                                 END                                                  */
-/************************************************************************************************/
-m_bMultimapsEnabled(false),
-m_bViewportsEnabled(false),
-m_iViewportFocusBorder(0),
-m_iViewportCenterOnSelectionCenterBorder(5),
-m_szAlternateProfilSampleName(""),
-m_bGraphicalDetailPagingEnabled(false),
+	, m_bSS_ENABLED(false)
+	, m_bSS_BRIBE(false)
+	, m_bSS_ASSASSINATE(false)
+	/************************************************************************************************/
+	/* Mod Globals                        END                                           phungus420  */
+	/************************************************************************************************/
+	, m_bGraphicsInitialized(false)
+	, m_bLogging(false)
+	, m_bRandLogging(false)
+	, m_bOverwriteLogs(false)
+	, m_bSynchLogging(false)
+	, m_bDLLProfiler(false)
+	, m_pkMainMenu(NULL)
+	, m_iNewPlayers(0)
+	, m_bZoomOut(false)
+	, m_bZoomIn(false)
+	, m_bLoadGameFromFile(false)
+	, m_pFMPMgr(NULL)
+	, m_asyncRand(NULL)
+	, m_interface(NULL)
+	, m_game(NULL)
+	, m_messageQueue(NULL)
+	, m_hotJoinMsgQueue(NULL)
+	, m_messageControl(NULL)
+	, m_messageCodes(NULL)
+	, m_dropMgr(NULL)
+	, m_portal(NULL)
+	, m_setupData(NULL)
+	, m_initCore(NULL)
+	, m_statsReporter(NULL)
+	, m_diplomacyScreen(NULL)
+	, m_mpDiplomacyScreen(NULL)
+	, m_pathFinder(NULL)
+	, m_interfacePathFinder(NULL)
+	, m_stepFinder(NULL)
+	, m_routeFinder(NULL)
+	, m_borderFinder(NULL)
+	, m_areaFinder(NULL)
+	, m_plotGroupFinder(NULL)
+	, m_aiPlotDirectionX(NULL)
+	, m_aiPlotDirectionY(NULL)
+	, m_aiPlotCardinalDirectionX(NULL)
+	, m_aiPlotCardinalDirectionY(NULL)
+	, m_aiCityPlotX(NULL)
+	, m_aiCityPlotY(NULL)
+	, m_aiCityPlotPriority(NULL)
+	, m_aeTurnLeftDirection(NULL)
+	, m_aeTurnRightDirection(NULL)
+	//, m_aGameOptionsInfo(NULL)
+	//, m_aPlayerOptionsInfo(NULL)
+	, m_Profiler(NULL)
+	, m_VarSystem(NULL)
+	, m_iMOVE_DENOMINATOR(0)
+	, m_iNUM_UNIT_PREREQ_OR_BONUSES(0)
+	, m_iNUM_BUILDING_PREREQ_OR_BONUSES(0)
+	, m_iFOOD_CONSUMPTION_PER_POPULATION(0)
+	, m_iMAX_HIT_POINTS(0)
+	, m_iPATH_DAMAGE_WEIGHT(0)
+	, m_iHILLS_EXTRA_DEFENSE(0)
+	, m_iRIVER_ATTACK_MODIFIER(0)
+	, m_iAMPHIB_ATTACK_MODIFIER(0)
+	, m_iHILLS_EXTRA_MOVEMENT(0)
+	, m_iRIVER_EXTRA_MOVEMENT(0)
+	, m_iMAX_PLOT_LIST_ROWS(0)
+	, m_iUNIT_MULTISELECT_MAX(0)
+	, m_iPERCENT_ANGER_DIVISOR(0)
+	, m_iEVENT_MESSAGE_TIME(0)
+	, m_iROUTE_FEATURE_GROWTH_MODIFIER(0)
+	, m_iFEATURE_GROWTH_MODIFIER(0)
+	, m_iMIN_CITY_RANGE(0)
+	, m_iCITY_MAX_NUM_BUILDINGS(0)
+	, m_iNUM_UNIT_AND_TECH_PREREQS(0)
+	, m_iNUM_AND_TECH_PREREQS(0)
+	, m_iNUM_OR_TECH_PREREQS(0)
+	, m_iLAKE_MAX_AREA_SIZE(0)
+	, m_iNUM_ROUTE_PREREQ_OR_BONUSES(0)
+	, m_iNUM_BUILDING_AND_TECH_PREREQS(0)
+	, m_iMIN_WATER_SIZE_FOR_OCEAN(0)
+	, m_iFORTIFY_MODIFIER_PER_TURN(0)
+	, m_iESTABLISH_MODIFIER_PER_TURN(0)
+	, m_iESCAPE_MODIFIER_PER_TURN(0)
+	, m_iMAX_CITY_DEFENSE_DAMAGE(0)
+	, m_iNUM_CORPORATION_PREREQ_BONUSES(0)
+	, m_iPEAK_SEE_THROUGH_CHANGE(0)
+	, m_iHILLS_SEE_THROUGH_CHANGE(0)
+	, m_iSEAWATER_SEE_FROM_CHANGE(0)
+	, m_iPEAK_SEE_FROM_CHANGE(0)
+	, m_iHILLS_SEE_FROM_CHANGE(0)
+	, m_iUSE_SPIES_NO_ENTER_BORDERS(0)
+	, m_fCAMERA_MIN_YAW(0)
+	, m_fCAMERA_MAX_YAW(0)
+	, m_fCAMERA_FAR_CLIP_Z_HEIGHT(0)
+	, m_fCAMERA_MAX_TRAVEL_DISTANCE(0)
+	, m_fCAMERA_START_DISTANCE(0)
+	, m_fAIR_BOMB_HEIGHT(0)
+	, m_fPLOT_SIZE(0)
+	, m_fCAMERA_SPECIAL_PITCH(0)
+	, m_fCAMERA_MAX_TURN_OFFSET(0)
+	, m_fCAMERA_MIN_DISTANCE(0)
+	, m_fCAMERA_UPPER_PITCH(0)
+	, m_fCAMERA_LOWER_PITCH(0)
+	, m_fFIELD_OF_VIEW(0)
+	, m_fSHADOW_SCALE(0)
+	, m_fUNIT_MULTISELECT_DISTANCE(0)
+	, m_fSAD_FACTOR_1(0)
+	, m_fSAD_FACTOR_2(0)
+	, m_fSAD_FACTOR_3(0)
+	, m_fSAD_FACTOR_4(0)
+	, m_iUSE_CANNOT_FOUND_CITY_CALLBACK(0)
+	, m_iUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK(0)
+	, m_iUSE_IS_PLAYER_RESEARCH_CALLBACK(0)
+	, m_iUSE_CAN_RESEARCH_CALLBACK(0)
+	, m_iUSE_CANNOT_DO_CIVIC_CALLBACK(0)
+	, m_iUSE_CAN_DO_CIVIC_CALLBACK(0)
+	, m_iUSE_CANNOT_CONSTRUCT_CALLBACK(0)
+	, m_iUSE_CAN_CONSTRUCT_CALLBACK(0)
+	, m_iUSE_CAN_DECLARE_WAR_CALLBACK(0)
+	, m_iUSE_CANNOT_RESEARCH_CALLBACK(0)
+	, m_iUSE_GET_UNIT_COST_MOD_CALLBACK(0)
+	, m_iUSE_GET_CITY_FOUND_VALUE_CALLBACK(0)
+	, m_iUSE_CANNOT_HANDLE_ACTION_CALLBACK(0)
+	, m_iUSE_CAN_BUILD_CALLBACK(0)
+	, m_iUSE_CANNOT_TRAIN_CALLBACK(0)
+	, m_iUSE_CAN_TRAIN_CALLBACK(0)
+	, m_iUSE_UNIT_CANNOT_MOVE_INTO_CALLBACK(0)
+	, m_iUSE_USE_CANNOT_SPREAD_RELIGION_CALLBACK(0)
+	, m_iUSE_FINISH_TEXT_CALLBACK(0)
+	, m_iUSE_ON_UNIT_SET_XY_CALLBACK(0)
+	, m_iUSE_ON_UNIT_SELECTED_CALLBACK(0)
+	, m_iUSE_ON_UPDATE_CALLBACK(0)
+	, m_iUSE_ON_UNIT_CREATED_CALLBACK(0)
+	, m_iUSE_ON_UNIT_LOST_CALLBACK(0)
+	, m_iLAND_UNITS_CAN_ATTACK_WATER_CITIES(0)
+	, m_iBASE_UNIT_UPGRADE_COST(0)
+	, m_iUPGRADE_ROUND_LIMIT(0)
+	, m_iCITY_BARBARIAN_DEFENSE_MODIFIER(0)
+	, m_iUNIT_VISIBILITY_RANGE(0)
+	, m_iMAX_UNIT_VISIBILITY_RANGE(0)
+	, m_iGREATER_COMMERCE_SWITCH_POINT(0)
+	, m_iWORKER_TRADE_VALUE_PERCENT_ADJUSTMENT(0)
+	, m_iTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT(0)
+	, m_iINFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT(0)
+	, m_iESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT(0)
+	, m_iWATER_POTENTIAL_CITY_WORK_FOR_AREA(0)
+	, m_iSAD_MAX_MODIFIER(0)
+	, m_iUPSCALED_RESEARCH_COST_MODIFIER(0)
+	, m_iENABLE_DYNAMIC_UNIT_ENTITIES(0)
+	/************************************************************************************************/
+	/* MODULES                                 11/13/07                            MRGENIE          */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
+	, m_iTGA_RELIGIONS(0)                            // GAMEFONT_TGA_RELIGIONS
+	, m_iTGA_CORPORATIONS(0)                         // GAMEFONT_TGA_CORPORATIONS
+	/************************************************************************************************/
+	/* MODULES                                 END                                                  */
+	/************************************************************************************************/
+	, m_bMultimapsEnabled(false)
+	, m_bViewportsEnabled(false)
+	, m_iViewportFocusBorder(0)
+	, m_iViewportCenterOnSelectionCenterBorder(5)
+	, m_szAlternateProfilSampleName("")
+	, m_bGraphicalDetailPagingEnabled(false)
+	, m_paHints()
+	/************************************************************************************************/
+	/* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
+	// MLF loading
+	, m_paModLoadControlVector(NULL)
+	, m_paModLoadControls(NULL)
+	/************************************************************************************************/
+	/* MODULAR_LOADING_CONTROL                 END                                                  */
+	/************************************************************************************************/
+	/************************************************************************************************/
+	/* XML_MODULAR_ART_LOADING                 03/28/08                                MRGENIE      */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
+	/*
+	m_paMainMenus(NULL)
+	*/
+	, m_paMainMenus(NULL)
+	, m_cszModDir("NONE")
+	/************************************************************************************************/
+	/* XML_MODULAR_ART_LOADING                 END                                                  */
+	/************************************************************************************************/
+	/************************************************************************************************/
+	/* Afforess	                  Start		 12/8/09                                                */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
+	, m_iPEAK_EXTRA_MOVEMENT(0)
+	, m_iPEAK_EXTRA_DEFENSE(0)
+	, m_bFormationsMod(false)
+	, m_bLoadedPlayerOptions(false)
+	, m_bXMLLogging(false)
+	, m_iSCORE_FREE_PERCENT(0)
+	, m_iSCORE_POPULATION_FACTOR(0)
+	, m_iSCORE_LAND_FACTOR(0)
+	, m_iSCORE_TECH_FACTOR(0)
+	, m_iSCORE_WONDER_FACTOR(0)
+	//New Python Callbacks
+	, m_iUSE_CAN_CREATE_PROJECT_CALLBACK(0)
+	, m_iUSE_CANNOT_CREATE_PROJECT_CALLBACK(0)
+	, m_iUSE_CAN_DO_MELTDOWN_CALLBACK(0)
+	, m_iUSE_CAN_MAINTAIN_PROCESS_CALLBACK(0)
+	, m_iUSE_CANNOT_MAINTAIN_PROCESS_CALLBACK(0)
+	, m_iUSE_CAN_DO_GROWTH_CALLBACK(0)
+	, m_iUSE_CAN_DO_CULTURE_CALLBACK(0)
+	, m_iUSE_CAN_DO_PLOT_CULTURE_CALLBACK(0)
+	, m_iUSE_CAN_DO_PRODUCTION_CALLBACK(0)
+	, m_iUSE_CAN_DO_RELIGION_CALLBACK(0)
+	, m_iUSE_CAN_DO_GREATPEOPLE_CALLBACK(0)
+	, m_iUSE_CAN_RAZE_CITY_CALLBACK(0)
+	, m_iUSE_CAN_DO_GOLD_CALLBACK(0)
+	, m_iUSE_CAN_DO_RESEARCH_CALLBACK(0)
+	, m_iUSE_UPGRADE_UNIT_PRICE_CALLBACK(0)
+	, m_iUSE_IS_VICTORY_CALLBACK(0)
+	, m_iUSE_AI_UPDATE_UNIT_CALLBACK(0)
+	, m_iUSE_AI_CHOOSE_PRODUCTION_CALLBACK(0)
+	, m_iUSE_EXTRA_PLAYER_COSTS_CALLBACK(0)
+	, m_iUSE_AI_DO_DIPLO_CALLBACK(0)
+	, m_iUSE_AI_BESTTECH_CALLBACK(0)
+	, m_iUSE_CAN_DO_COMBAT_CALLBACK(0)
+	, m_iUSE_AI_CAN_DO_WARPLANS_CALLBACK(0)
 
-m_paHints(),
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-// MLF loading
-m_paModLoadControlVector(NULL),
-m_paModLoadControls(NULL),
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 03/28/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
-m_paMainMenus(NULL)
-*/
-m_paMainMenus(NULL),
-m_cszModDir("NONE")
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* Afforess	                  Start		 12/8/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-,m_iPEAK_EXTRA_MOVEMENT(0)
-,m_iPEAK_EXTRA_DEFENSE(0)
-,m_bFormationsMod(false)
-,m_bLoadedPlayerOptions(false)
-,m_bXMLLogging(false)
-,m_iSCORE_FREE_PERCENT(0)
-,m_iSCORE_POPULATION_FACTOR(0)
-,m_iSCORE_LAND_FACTOR(0)
-,m_iSCORE_TECH_FACTOR(0)
-,m_iSCORE_WONDER_FACTOR(0)
+	/************************************************************************************************/
+	/* Afforess	                     END                                                            */
+	/************************************************************************************************/
+	/************************************************************************************************/
+	/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
+	/*                                                                                              */
+	/* Efficiency, Options                                                                          */
+	/************************************************************************************************/
+	// BBAI Options
+	, m_bBBAI_AIR_COMBAT(false)
+	, m_bBBAI_HUMAN_VASSAL_WAR_BUILD(false)
+	, m_iBBAI_DEFENSIVE_PACT_BEHAVIOR(0)
+	, m_bBBAI_HUMAN_AS_VASSAL_OPTION(false)
 
-//New Python Callbacks
-,m_iUSE_CAN_CREATE_PROJECT_CALLBACK(0)
-,m_iUSE_CANNOT_CREATE_PROJECT_CALLBACK(0)
-,m_iUSE_CAN_DO_MELTDOWN_CALLBACK(0)
-,m_iUSE_CAN_MAINTAIN_PROCESS_CALLBACK(0)
-,m_iUSE_CANNOT_MAINTAIN_PROCESS_CALLBACK(0)
-,m_iUSE_CAN_DO_GROWTH_CALLBACK(0)
-,m_iUSE_CAN_DO_CULTURE_CALLBACK(0)
-,m_iUSE_CAN_DO_PLOT_CULTURE_CALLBACK(0)
-,m_iUSE_CAN_DO_PRODUCTION_CALLBACK(0)
-,m_iUSE_CAN_DO_RELIGION_CALLBACK(0)
-,m_iUSE_CAN_DO_GREATPEOPLE_CALLBACK(0)
-,m_iUSE_CAN_RAZE_CITY_CALLBACK(0)
-,m_iUSE_CAN_DO_GOLD_CALLBACK(0)
-,m_iUSE_CAN_DO_RESEARCH_CALLBACK(0)
-,m_iUSE_UPGRADE_UNIT_PRICE_CALLBACK(0)
-,m_iUSE_IS_VICTORY_CALLBACK(0)
-,m_iUSE_AI_UPDATE_UNIT_CALLBACK(0)
-,m_iUSE_AI_CHOOSE_PRODUCTION_CALLBACK(0)
-,m_iUSE_EXTRA_PLAYER_COSTS_CALLBACK(0)
-,m_iUSE_AI_DO_DIPLO_CALLBACK(0)
-,m_iUSE_AI_BESTTECH_CALLBACK(0)
-,m_iUSE_CAN_DO_COMBAT_CALLBACK(0)
-,m_iUSE_AI_CAN_DO_WARPLANS_CALLBACK(0)
+	// BBAI AI Variables
+	, m_iWAR_SUCCESS_CITY_CAPTURING(25)
+	, m_iBBAI_ATTACK_CITY_STACK_RATIO(110)
+	, m_iBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS(12)
+	, m_iBBAI_SKIP_BOMBARD_BASE_STACK_RATIO(300)
+	, m_iBBAI_SKIP_BOMBARD_MIN_STACK_RATIO(140)
 
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
-/*                                                                                              */
-/* Efficiency, Options                                                                          */
-/************************************************************************************************/
-// BBAI Options
-,m_bBBAI_AIR_COMBAT(false)
-,m_bBBAI_HUMAN_VASSAL_WAR_BUILD(false)
-,m_iBBAI_DEFENSIVE_PACT_BEHAVIOR(0)
-,m_bBBAI_HUMAN_AS_VASSAL_OPTION(false)
+	// Tech Diffusion
+	, m_bTECH_DIFFUSION_ENABLE(false)
+	, m_iTECH_DIFFUSION_KNOWN_TEAM_MODIFIER(30)
+	, m_iTECH_DIFFUSION_WELFARE_THRESHOLD(88)
+	, m_iTECH_DIFFUSION_WELFARE_MODIFIER(30)
+	, m_iTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER(20)
+	, m_iTECH_COST_KNOWN_PREREQ_MODIFIER(20)
+	, m_iTECH_COST_MODIFIER(100)
+	, m_iUNIT_PRODUCTION_PERCENT_SM(100)
+	, m_iUNIT_PRODUCTION_PERCENT(100)
+	, m_iBUILDING_PRODUCTION_PERCENT(100)
 
-// BBAI AI Variables
-,m_iWAR_SUCCESS_CITY_CAPTURING(25)
-,m_iBBAI_ATTACK_CITY_STACK_RATIO(110)
-,m_iBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS(12)
-,m_iBBAI_SKIP_BOMBARD_BASE_STACK_RATIO(300)
-,m_iBBAI_SKIP_BOMBARD_MIN_STACK_RATIO(140)
-
-// Tech Diffusion
-,m_bTECH_DIFFUSION_ENABLE(false)
-,m_iTECH_DIFFUSION_KNOWN_TEAM_MODIFIER(30)
-,m_iTECH_DIFFUSION_WELFARE_THRESHOLD(88)
-,m_iTECH_DIFFUSION_WELFARE_MODIFIER(30)
-,m_iTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER(20)
-,m_iTECH_COST_KNOWN_PREREQ_MODIFIER(20)
-,m_iTECH_COST_MODIFIER(100)
-,m_iUNIT_PRODUCTION_PERCENT_SM(100)
-,m_iUNIT_PRODUCTION_PERCENT(100)
-,m_iBUILDING_PRODUCTION_PERCENT(100)
-
-,m_iCOMBAT_DIE_SIDES(-1)
-,m_iCOMBAT_DAMAGE(-1)
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-,m_bIsInPedia(false)
-,m_iLastTypeID(-1)
-,m_iActiveLandscapeID(0),
-// uninitialized variables bugfix
-m_iNumPlayableCivilizationInfos(0),
-m_iNumAIPlayableCivilizationInfos(0),
-m_iTotalNumModules(0), // Modular loading control
-m_iNumEntityEventTypes(0)
+	, m_iCOMBAT_DIE_SIDES(-1)
+	, m_iCOMBAT_DAMAGE(-1)
+	/************************************************************************************************/
+	/* BETTER_BTS_AI_MOD                       END                                                  */
+	/************************************************************************************************/
+	, m_bIsInPedia(false)
+	, m_iLastTypeID(-1)
+	, m_iActiveLandscapeID(0)
+	// uninitialized variables bugfix
+	, m_iNumPlayableCivilizationInfos(0)
+	, m_iNumAIPlayableCivilizationInfos(0)
+	, m_iTotalNumModules(0) // Modular loading control
+	, m_iNumEntityEventTypes(0)
+	, iStuckUnitID(0)
+	, iStuckUnitCount(0)
+	, m_iniInitCore(NULL)
+	, m_loadedInitCore (NULL)
+	, m_bResourceLayerOn(false)
+	, m_iNumAnimationOperatorTypes(0)
+	, m_iNumFlavorTypes(0)
+	, m_iNumArtStyleTypes(0)
+	, m_iNumCitySizeTypes(0)
+	, m_iNumFootstepAudioTypes(0)
+	, m_iUSE_GET_BUILDING_COST_MOD_CALLBACK(0)
+	, m_iViewportSizeX(0)
+	, m_iViewportSizeY(0)
+	, m_iStoreExeSettingsCommerceInfo(0)
+	, m_iStoreExeSettingsYieldInfo(0)
+	, m_iStoreExeSettingsReligionInfo(0)
+	, m_iStoreExeSettingsCorporationInfo(0)
+	, m_iStoreExeSettingsBonusInfo(0)
+	, m_bSignsCleared(false)
 {
 }
 
 cvInternalGlobals::~cvInternalGlobals()
 {
 }
-
 
 /************************************************************************************************/
 /* MINIDUMP_MOD                           04/10/11                                terkhen       */
@@ -499,10 +515,11 @@ void CreateMiniDump(EXCEPTION_POINTERS *pep)
 							  FILE_ATTRIBUTE_NORMAL,
 							  NULL);
 
-	if((hFile == NULL) || (hFile == INVALID_HANDLE_VALUE)) {
-		_tprintf(_T("CreateFile failed. Error: %u \n"), GetLastError());
+	if((hFile == NULL) || (hFile == INVALID_HANDLE_VALUE)) 
+	{
 		return;
 	}
+
 	/* Create the minidump. */
 	MINIDUMP_EXCEPTION_INFORMATION mdei;
 
@@ -951,8 +968,7 @@ std::vector<CvInterfaceModeInfo*>& cvInternalGlobals::getInterfaceModeInfos()		/
 
 CvInterfaceModeInfo& cvInternalGlobals::getInterfaceModeInfo(InterfaceModeTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < NUM_INTERFACEMODE_TYPES);
+	FAssertMsg(e >= 0 && e < NUM_INTERFACEMODE_TYPES, "InterfaceModeInfo index out of bounds");
 	return *(m_paInterfaceModeInfo[e]);
 }
 
@@ -1018,10 +1034,8 @@ int* cvInternalGlobals::getCityPlotPriority()
 
 int cvInternalGlobals::getXYCityPlot(int i, int j)
 {
-	FAssertMsg(i < CITY_PLOTS_DIAMETER, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
-	FAssertMsg(j < CITY_PLOTS_DIAMETER, "Index out of bounds");
-	FAssertMsg(j > -1, "Index out of bounds");
+	FAssertMsg(i >= 0 && i < CITY_PLOTS_DIAMETER, "XYCityPlot i index out of bounds");
+	FAssertMsg(j >= 0 && j < CITY_PLOTS_DIAMETER, "XYCityPlot j index out of bounds");
 	return m_aaiXYCityPlot[i][j];
 }
 
@@ -1032,8 +1046,7 @@ DirectionTypes* cvInternalGlobals::getTurnLeftDirection()
 
 DirectionTypes cvInternalGlobals::getTurnLeftDirection(int i)
 {
-	FAssertMsg(i < NUM_DIRECTION_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FAssertMsg(i >= 0 && i < DIRECTION_DIAMETER, "TurnLeftDirection index out of bounds");
 	return m_aeTurnLeftDirection[i];
 }
 
@@ -1044,17 +1057,14 @@ DirectionTypes* cvInternalGlobals::getTurnRightDirection()
 
 DirectionTypes cvInternalGlobals::getTurnRightDirection(int i)
 {
-	FAssertMsg(i < NUM_DIRECTION_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FAssertMsg(i >= 0 && i < DIRECTION_DIAMETER, "TurnRightDirection index out of bounds");
 	return m_aeTurnRightDirection[i];
 }
 
 DirectionTypes cvInternalGlobals::getXYDirection(int i, int j)
 {
-	FAssertMsg(i < DIRECTION_DIAMETER, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
-	FAssertMsg(j < DIRECTION_DIAMETER, "Index out of bounds");
-	FAssertMsg(j > -1, "Index out of bounds");
+	FAssertMsg(i >= 0 && i < DIRECTION_DIAMETER, "XYDirection i index out of bounds");
+	FAssertMsg(j >= 0 && j < DIRECTION_DIAMETER, "XYDirection j index out of bounds");
 	return m_aaeXYDirection[i][j];
 }
 
@@ -1099,15 +1109,13 @@ std::vector<CvMapSwitchInfo*>& cvInternalGlobals::getMapSwitchInfos()
 
 CvMapInfo& cvInternalGlobals::getMapInfo(MapTypes eMap)
 {
-	FAssert(eMap > NO_MAP);
-	FAssert(eMap < GC.getNumMapInfos());
+	FAssertMsg(eMap > NO_MAP && eMap < GC.getNumMapInfos(), "MapInfo index out of bounds");
 	return *(m_paMapInfo[eMap]);
 }
 
 CvMapSwitchInfo& cvInternalGlobals::getMapSwitchInfo(MapSwitchTypes eMapSwitch)
 {
-	FAssert(eMapSwitch > NO_MAPSWITCH);
-	FAssert(eMapSwitch < GC.getNumMapSwitchInfos());
+	FAssertMsg(eMapSwitch > NO_MAPSWITCH && eMapSwitch < GC.getNumMapSwitchInfos(), "MapSwitchInfo index out of bounds");
 	return *(m_paMapSwitchInfo[eMapSwitch]);
 }
 
@@ -1156,8 +1164,7 @@ std::vector<CvWorldInfo*>& cvInternalGlobals::getWorldInfos()
 
 CvWorldInfo& cvInternalGlobals::getWorldInfo(WorldSizeTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumWorldInfos());
+	FAssertMsg(e >= 0 && e < GC.getNumWorldInfos(), "WorldInfo index out of bounds");
 	return *(m_paWorldInfo[e]);
 }
 
@@ -1182,8 +1189,7 @@ std::vector<CvClimateInfo*>& cvInternalGlobals::getClimateInfos()
 
 CvClimateInfo& cvInternalGlobals::getClimateInfo(ClimateTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumClimateInfos());
+	FAssertMsg(e >= 0 && e < GC.getNumClimateInfos(), "ClimateInfo index out of bounds");
 	return *(m_paClimateInfo[e]);
 }
 
@@ -1203,8 +1209,7 @@ std::vector<CvSeaLevelInfo*>& cvInternalGlobals::getSeaLevelInfos()
 
 CvSeaLevelInfo& cvInternalGlobals::getSeaLevelInfo(SeaLevelTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumSeaLevelInfos());
+	FAssertMsg(e >= 0 && e < GC.getNumSeaLevelInfos(), "SeaLevelInfo index out of bounds");
 	return *(m_paSeaLevelInfo[e]);
 }
 
@@ -1260,8 +1265,7 @@ std::vector<CvPythonModulesInfo*>& cvInternalGlobals::getPythonModulesInfos()
 
 CvPythonModulesInfo& cvInternalGlobals::getPythonModulesInfo(int iIndex)
 {
-	FAssertMsg(iIndex < GC.getNumPythonModulesInfos(), "Index out of bounds");
-	FAssertMsg(iIndex > -1, "Index out of bounds");
+	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumPythonModulesInfos(), "PythonModulesInfo index out of bounds");
 	return *(m_paPythonModulesInfo[iIndex]);
 }
 
@@ -1308,8 +1312,7 @@ std::vector<CvModLoadControlInfo*>& cvInternalGlobals::getModLoadControlInfos()
 
 CvModLoadControlInfo& cvInternalGlobals::getModLoadControlInfos(int iIndex)
 {
-	FAssertMsg(iIndex < getNumModLoadControlInfos(), "Index out of bounds");
-	FAssertMsg(iIndex > -1, "Index out of bounds");
+	FAssertMsg(iIndex >= 0 && iIndex < getNumModLoadControlInfos(), "ModLoadControlInfo index out of bounds");
 	return *(m_paModLoadControls[iIndex]);
 }
 
@@ -1397,8 +1400,7 @@ std::vector<CvColorInfo*>& cvInternalGlobals::getColorInfos()
 
 CvColorInfo& cvInternalGlobals::getColorInfo(ColorTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumColorInfos());
+	FAssertMsg(e >= 0 && e < GC.getNumColorInfos(), "ColorInfo index out of bounds");
 	return *(m_paColorInfo[e]);
 }
 
@@ -1415,8 +1417,7 @@ std::vector<CvPlayerColorInfo*>& cvInternalGlobals::getPlayerColorInfos()
 
 CvPlayerColorInfo& cvInternalGlobals::getPlayerColorInfo(PlayerColorTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumPlayerColorInfos());
+	FAssertMsg(e >= 0 && e < GC.getNumPlayerColorInfos(), "PlayerColorInfo index out of bounds");
 	return *(m_paPlayerColorInfo[e]);
 }
 
@@ -1432,8 +1433,7 @@ std::vector<CvAdvisorInfo*>& cvInternalGlobals::getAdvisorInfos()
 
 CvAdvisorInfo& cvInternalGlobals::getAdvisorInfo(AdvisorTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumAdvisorInfos());
+	FAssertMsg(e >= 0 && e < GC.getNumAdvisorInfos(), "AdvisorInfo index out of bounds");
 	return *(m_paAdvisorInfo[e]);
 }
 
@@ -1449,8 +1449,7 @@ std::vector<CvRouteModelInfo*>& cvInternalGlobals::getRouteModelInfos()
 
 CvRouteModelInfo& cvInternalGlobals::getRouteModelInfo(int i)
 {
-	FAssert(i > -1);
-	FAssert(i < GC.getNumRouteModelInfos());
+	FAssertMsg(i >= 0 && i < GC.getNumRouteModelInfos(), "RouteModelInfo index out of bounds");
 	return *(m_paRouteModelInfo[i]);
 }
 
@@ -1466,8 +1465,7 @@ std::vector<CvRiverInfo*>& cvInternalGlobals::getRiverInfos()
 
 CvRiverInfo& cvInternalGlobals::getRiverInfo(RiverTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumRiverInfos());
+	FAssertMsg(e >= 0 && e < GC.getNumRiverInfos(), "RiverInfo index out of bounds");
 	return *(m_paRiverInfo[e]);
 }
 
@@ -1483,8 +1481,7 @@ std::vector<CvRiverModelInfo*>& cvInternalGlobals::getRiverModelInfos()
 
 CvRiverModelInfo& cvInternalGlobals::getRiverModelInfo(int i)
 {
-	FAssert(i > -1);
-	FAssert(i < GC.getNumRiverModelInfos());
+	FAssertMsg(i >= 0 && i < GC.getNumRiverModelInfos(), "RiverModelInfo index out of bounds");
 	return *(m_paRiverModelInfo[i]);
 }
 
@@ -1500,8 +1497,7 @@ std::vector<CvWaterPlaneInfo*>& cvInternalGlobals::getWaterPlaneInfos()		// For 
 
 CvWaterPlaneInfo& cvInternalGlobals::getWaterPlaneInfo(int i)
 {
-	FAssert(i > -1);
-	FAssert(i < GC.getNumWaterPlaneInfos());
+	FAssertMsg(i >= 0 && i < GC.getNumWaterPlaneInfos(), "WaterPlaneInfo index out of bounds");
 	return *(m_paWaterPlaneInfo[i]);
 }
 
@@ -1517,8 +1513,7 @@ std::vector<CvTerrainPlaneInfo*>& cvInternalGlobals::getTerrainPlaneInfos()
 
 CvTerrainPlaneInfo& cvInternalGlobals::getTerrainPlaneInfo(int i)
 {
-	FAssert(i > -1);
-	FAssert(i < GC.getNumTerrainPlaneInfos());
+	FAssertMsg(i >= 0 && i < GC.getNumTerrainPlaneInfos(), "TerrainPlaneInfo index out of bounds");
 	return *(m_paTerrainPlaneInfo[i]);
 }
 
@@ -1534,8 +1529,7 @@ std::vector<CvCameraOverlayInfo*>& cvInternalGlobals::getCameraOverlayInfos()
 
 CvCameraOverlayInfo& cvInternalGlobals::getCameraOverlayInfo(int i)
 {
-	FAssert(i > -1);
-	FAssert(i < GC.getNumCameraOverlayInfos());
+	FAssertMsg(i >= 0 && i < GC.getNumCameraOverlayInfos(), "CameraOverlayInfo index out of bounds");
 	return *(m_paCameraOverlayInfo[i]);
 }
 
@@ -1551,8 +1545,7 @@ std::vector<CvAnimationPathInfo*>& cvInternalGlobals::getAnimationPathInfos()
 
 CvAnimationPathInfo& cvInternalGlobals::getAnimationPathInfo(AnimationPathTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumAnimationPathInfos());
+	FAssertMsg(e >= 0 && e < GC.getNumAnimationPathInfos(), "AnimationPathInfo index out of bounds");
 	return *(m_paAnimationPathInfo[e]);
 }
 
@@ -1568,8 +1561,7 @@ std::vector<CvAnimationCategoryInfo*>& cvInternalGlobals::getAnimationCategoryIn
 
 CvAnimationCategoryInfo& cvInternalGlobals::getAnimationCategoryInfo(AnimationCategoryTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumAnimationCategoryInfos());
+	FAssertMsg(e >= 0 && e < GC.getNumAnimationCategoryInfos(), "AnimationCategoryInfo index out of bounds");
 	return *(m_paAnimationCategoryInfo[e]);
 }
 
@@ -1585,8 +1577,7 @@ std::vector<CvEntityEventInfo*>& cvInternalGlobals::getEntityEventInfos()
 
 CvEntityEventInfo& cvInternalGlobals::getEntityEventInfo(EntityEventTypes e)
 {
-	FAssert( e > -1 );
-	FAssert( e < GC.getNumEntityEventInfos() );
+	FAssertMsg(e >= 0 && e < GC.getNumEntityEventInfos(), "EntityEventInfo index out of bounds");
 	return *(m_paEntityEventInfo[e]);
 }
 
@@ -1602,8 +1593,7 @@ std::vector<CvEffectInfo*>& cvInternalGlobals::getEffectInfos()
 
 CvEffectInfo& cvInternalGlobals::getEffectInfo(int i)
 {
-	FAssert(i > -1);
-	FAssert(i < GC.getNumEffectInfos());
+	FAssertMsg(i >= 0 && i < GC.getNumEffectInfos(), "EffectInfo index out of bounds");
 	return *(m_paEffectInfo[i]);
 }
 
@@ -1620,8 +1610,7 @@ std::vector<CvAttachableInfo*>& cvInternalGlobals::getAttachableInfos()
 
 CvAttachableInfo& cvInternalGlobals::getAttachableInfo(int i)
 {
-	FAssert(i > -1);
-	FAssert(i < GC.getNumAttachableInfos());
+	FAssertMsg(i >= 0 && i < GC.getNumAttachableInfos(), "AttachableInfo index out of bounds");
 	return *(m_paAttachableInfo[i]);
 }
 
@@ -1652,8 +1641,7 @@ std::vector<CvUnitFormationInfo*>& cvInternalGlobals::getUnitFormationInfos()		/
 
 CvUnitFormationInfo& cvInternalGlobals::getUnitFormationInfo(int i)
 {
-	FAssert(i > -1);
-	FAssert(i < GC.getNumUnitFormationInfos());
+	FAssertMsg(i >= 0 && i < GC.getNumUnitFormationInfos(), "UnitFormationInfo index out of bounds");
 	return *(m_paUnitFormationInfo[i]);
 }
 
@@ -1681,8 +1669,7 @@ std::vector<CvLandscapeInfo*>& cvInternalGlobals::getLandscapeInfos()
 
 CvLandscapeInfo& cvInternalGlobals::getLandscapeInfo(int iIndex)
 {
-	FAssert(iIndex > -1);
-	FAssert(iIndex < GC.getNumLandscapeInfos());
+	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumLandscapeInfos(), "LandscapeInfo index out of bounds");
 	return *(m_paLandscapeInfo[iIndex]);
 }
 
@@ -1709,8 +1696,7 @@ std::vector<CvTerrainInfo*>& cvInternalGlobals::getTerrainInfos()		// For Moose 
 
 CvTerrainInfo& cvInternalGlobals::getTerrainInfo(TerrainTypes eTerrainNum)
 {
-	FAssert(eTerrainNum > -1);
-	FAssert(eTerrainNum < GC.getNumTerrainInfos());
+	FAssertMsg(eTerrainNum >= 0 && eTerrainNum < GC.getNumTerrainInfos(), "TerrainInfo index out of bounds");
 	return *(m_paTerrainInfo[eTerrainNum]);
 }
 
@@ -1731,8 +1717,7 @@ std::vector<CvBonusClassInfo*>& cvInternalGlobals::getBonusClassInfos()	// For M
 
 CvBonusClassInfo& cvInternalGlobals::getBonusClassInfo(BonusClassTypes eBonusNum)
 {
-	FAssert(eBonusNum > -1);
-	FAssert(eBonusNum < GC.getNumBonusClassInfos());
+	FAssertMsg(eBonusNum >= 0 && eBonusNum < GC.getNumBonusClassInfos(), "BonusClassInfo index out of bounds");
 	return *(m_paBonusClassInfo[eBonusNum]);
 }
 
@@ -1754,8 +1739,7 @@ std::vector<CvBonusInfo*>& cvInternalGlobals::getBonusInfos()	// For Moose - XML
 
 CvBonusInfo& cvInternalGlobals::getBonusInfo(BonusTypes eBonusNum)
 {
-	FAssert(eBonusNum > -1);
-	FAssert(eBonusNum < GC.getNumBonusInfos());
+	FAssertMsg(eBonusNum >= 0 && eBonusNum < GC.getNumBonusInfos(), "BonusInfo index out of bounds");
 	return *(m_paBonusInfo[eBonusNum]);
 }
 
@@ -1776,8 +1760,7 @@ std::vector<CvFeatureInfo*>& cvInternalGlobals::getFeatureInfos()	// For Moose -
 
 CvFeatureInfo& cvInternalGlobals::getFeatureInfo(FeatureTypes eFeatureNum)
 {
-	FAssert(eFeatureNum > -1);
-	FAssert(eFeatureNum < GC.getNumFeatureInfos());
+	FAssertMsg(eFeatureNum >= 0 && eFeatureNum < GC.getNumFeatureInfos(), "FeatureInfo index out of bounds");
 	return *(m_paFeatureInfo[eFeatureNum]);
 }
 
@@ -1808,8 +1791,7 @@ std::vector<CvCivilizationInfo*>& cvInternalGlobals::getCivilizationInfos()	// F
 
 CvCivilizationInfo& cvInternalGlobals::getCivilizationInfo(CivilizationTypes eCivilizationNum)
 {
-	FAssert(eCivilizationNum > -1);
-	FAssert(eCivilizationNum < GC.getNumCivilizationInfos());
+	FAssertMsg(eCivilizationNum >= 0 && eCivilizationNum < GC.getNumCivilizationInfos(), "CivilizationInfo index out of bounds");
 	return *(m_paCivilizationInfo[eCivilizationNum]);
 }
 
@@ -1831,8 +1813,7 @@ std::vector<CvLeaderHeadInfo*>& cvInternalGlobals::getLeaderHeadInfos()	// For M
 
 CvLeaderHeadInfo& cvInternalGlobals::getLeaderHeadInfo(LeaderHeadTypes eLeaderHeadNum)
 {
-	FAssert(eLeaderHeadNum > -1);
-	FAssert(eLeaderHeadNum < GC.getNumLeaderHeadInfos());
+	FAssertMsg(eLeaderHeadNum >= 0 && eLeaderHeadNum < GC.getNumLeaderHeadInfos(), "LeaderHeadInfo index out of bounds");
 	return *(m_paLeaderHeadInfo[eLeaderHeadNum]);
 }
 
@@ -1854,8 +1835,7 @@ std::vector<CvTraitInfo*>& cvInternalGlobals::getTraitInfos()	// For Moose - XML
 
 CvTraitInfo& cvInternalGlobals::getTraitInfo(TraitTypes eTraitNum)
 {
-	FAssert(eTraitNum > -1);
-	FAssert(eTraitNum < GC.getNumTraitInfos());
+	FAssertMsg(eTraitNum >= 0 && eTraitNum < GC.getNumTraitInfos(), "TraitInfo index out of bounds");
 	return *(m_paTraitInfo[eTraitNum]);
 }
 
@@ -1877,8 +1857,7 @@ std::vector<CvCursorInfo*>& cvInternalGlobals::getCursorInfos()	// For Moose - X
 
 CvCursorInfo& cvInternalGlobals::getCursorInfo(CursorTypes eCursorNum)
 {
-	FAssert(eCursorNum > -1);
-	FAssert(eCursorNum < GC.getNumCursorInfos());
+	FAssertMsg(eCursorNum >= 0 && eCursorNum < GC.getNumCursorInfos(), "CursorInfo index out of bounds");
 	return *(m_paCursorInfo[eCursorNum]);
 }
 
@@ -1894,8 +1873,7 @@ std::vector<CvThroneRoomCamera*>& cvInternalGlobals::getThroneRoomCameras()	// F
 
 CvThroneRoomCamera& cvInternalGlobals::getThroneRoomCamera(int iIndex)
 {
-	FAssert(iIndex > -1);
-	FAssert(iIndex < GC.getNumThroneRoomCameras());
+	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumThroneRoomCameras(), "ThroneRoomCamera index out of bounds");
 	return *(m_paThroneRoomCamera[iIndex]);
 }
 
@@ -1911,8 +1889,7 @@ std::vector<CvThroneRoomInfo*>& cvInternalGlobals::getThroneRoomInfos()	// For M
 
 CvThroneRoomInfo& cvInternalGlobals::getThroneRoomInfo(int iIndex)
 {
-	FAssert(iIndex > -1);
-	FAssert(iIndex < GC.getNumThroneRoomInfos());
+	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumThroneRoomInfos(), "ThroneRoomInfo index out of bounds");
 	return *(m_paThroneRoomInfo[iIndex]);
 }
 
@@ -1928,8 +1905,7 @@ std::vector<CvThroneRoomStyleInfo*>& cvInternalGlobals::getThroneRoomStyleInfos(
 
 CvThroneRoomStyleInfo& cvInternalGlobals::getThroneRoomStyleInfo(int iIndex)
 {
-	FAssert(iIndex > -1);
-	FAssert(iIndex < GC.getNumThroneRoomStyleInfos());
+	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumThroneRoomStyleInfos(), "ThroneRoomStyleInfo index out of bounds");
 	return *(m_paThroneRoomStyleInfo[iIndex]);
 }
 
@@ -1945,8 +1921,7 @@ std::vector<CvSlideShowInfo*>& cvInternalGlobals::getSlideShowInfos()	// For Moo
 
 CvSlideShowInfo& cvInternalGlobals::getSlideShowInfo(int iIndex)
 {
-	FAssert(iIndex > -1);
-	FAssert(iIndex < GC.getNumSlideShowInfos());
+	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumSlideShowInfos(), "SlideShowInfo index out of bounds");
 	return *(m_paSlideShowInfo[iIndex]);
 }
 
@@ -1962,8 +1937,7 @@ std::vector<CvSlideShowRandomInfo*>& cvInternalGlobals::getSlideShowRandomInfos(
 
 CvSlideShowRandomInfo& cvInternalGlobals::getSlideShowRandomInfo(int iIndex)
 {
-	FAssert(iIndex > -1);
-	FAssert(iIndex < GC.getNumSlideShowRandomInfos());
+	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumSlideShowRandomInfos(), "SlideShowRandomInfo index out of bounds");
 	return *(m_paSlideShowRandomInfo[iIndex]);
 }
 
@@ -1979,8 +1953,7 @@ std::vector<CvWorldPickerInfo*>& cvInternalGlobals::getWorldPickerInfos()	// For
 
 CvWorldPickerInfo& cvInternalGlobals::getWorldPickerInfo(int iIndex)
 {
-	FAssert(iIndex > -1);
-	FAssert(iIndex < GC.getNumWorldPickerInfos());
+	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumWorldPickerInfos(), "WorldPickerInfo index out of bounds");
 	return *(m_paWorldPickerInfo[iIndex]);
 }
 
@@ -1996,8 +1969,7 @@ std::vector<CvSpaceShipInfo*>& cvInternalGlobals::getSpaceShipInfos()	// For Moo
 
 CvSpaceShipInfo& cvInternalGlobals::getSpaceShipInfo(int iIndex)
 {
-	FAssert(iIndex > -1);
-	FAssert(iIndex < GC.getNumSpaceShipInfos());
+	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumSpaceShipInfos(), "SpaceShipInfo index out of bounds");
 	return *(m_paSpaceShipInfo[iIndex]);
 }
 
@@ -2013,8 +1985,7 @@ std::vector<CvUnitInfo*>& cvInternalGlobals::getUnitInfos()	// For Moose - XML L
 
 CvUnitInfo& cvInternalGlobals::getUnitInfo(UnitTypes eUnitNum)
 {
-	FAssert(eUnitNum > -1);
-	FAssert(eUnitNum < GC.getNumUnitInfos());
+	FAssertMsg(eUnitNum >= 0 && eUnitNum < GC.getNumUnitInfos(), "UnitInfo index out of bounds");
 	return *(m_paUnitInfo[eUnitNum]);
 }
 
@@ -2035,8 +2006,7 @@ std::vector<CvSpawnInfo*>& cvInternalGlobals::getSpawnInfos()	// For Moose - XML
 
 CvSpawnInfo& cvInternalGlobals::getSpawnInfo(SpawnTypes eSpawnNum)
 {
-	FAssert(eSpawnNum > -1);
-	FAssert(eSpawnNum < GC.getNumSpawnInfos());
+	FAssertMsg(eSpawnNum >= 0 && eSpawnNum < GC.getNumSpawnInfos(), "SpawnInfo index out of bounds");
 	return *(m_paSpawnInfo[eSpawnNum]);
 }
 
@@ -2057,8 +2027,7 @@ std::vector<CvSpecialUnitInfo*>& cvInternalGlobals::getSpecialUnitInfos()	// For
 
 CvSpecialUnitInfo& cvInternalGlobals::getSpecialUnitInfo(SpecialUnitTypes eSpecialUnitNum)
 {
-	FAssert(eSpecialUnitNum > -1);
-	FAssert(eSpecialUnitNum < GC.getNumSpecialUnitInfos());
+	FAssertMsg(eSpecialUnitNum >= 0 && eSpecialUnitNum < GC.getNumSpecialUnitInfos(), "SpecialUnitInfo index out of bounds");
 	return *(m_paSpecialUnitInfo[eSpecialUnitNum]);
 }
 
@@ -2075,8 +2044,7 @@ std::vector<CvInfoBase*>& cvInternalGlobals::getConceptInfos()	// For Moose - XM
 
 CvInfoBase& cvInternalGlobals::getConceptInfo(ConceptTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumConceptInfos());
+	FAssertMsg(e >= 0 && e < GC.getNumConceptInfos(), "ConceptInfo index out of bounds");
 	return *(m_paConceptInfo[e]);
 }
 
@@ -2093,8 +2061,7 @@ std::vector<CvInfoBase*>& cvInternalGlobals::getNewConceptInfos()	// For Moose -
 
 CvInfoBase& cvInternalGlobals::getNewConceptInfo(NewConceptTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumNewConceptInfos());
+	FAssertMsg(e >= 0 && e < GC.getNumNewConceptInfos(), "NewConceptInfo index out of bounds");
 	return *(m_paNewConceptInfo[e]);
 }
 
@@ -2111,8 +2078,7 @@ std::vector<CvInfoBase*>& cvInternalGlobals::getCityTabInfos()	// For Moose - XM
 
 CvInfoBase& cvInternalGlobals::getCityTabInfo(CityTabTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumCityTabInfos());
+	FAssertMsg(e >= 0 && e < GC.getNumCityTabInfos(), "CityTabInfo index out of bounds");
 	return *(m_paCityTabInfo[e]);
 }
 
@@ -2129,8 +2095,7 @@ std::vector<CvInfoBase*>& cvInternalGlobals::getCalendarInfos()
 
 CvInfoBase& cvInternalGlobals::getCalendarInfo(CalendarTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumCalendarInfos());
+	FAssertMsg(e >= 0 && e < GC.getNumCalendarInfos(), "CalendarInfo index out of bounds");
 	return *(m_paCalendarInfo[e]);
 }
 
@@ -2147,8 +2112,7 @@ std::vector<CvInfoBase*>& cvInternalGlobals::getSeasonInfos()	// For Moose - XML
 
 CvInfoBase& cvInternalGlobals::getSeasonInfo(SeasonTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumSeasonInfos());
+	FAssertMsg(e >= 0 && e < GC.getNumSeasonInfos(), "SeasonInfo index out of bounds");
 	return *(m_paSeasonInfo[e]);
 }
 
@@ -2165,8 +2129,7 @@ std::vector<CvInfoBase*>& cvInternalGlobals::getMonthInfos()	// For Moose - XML 
 
 CvInfoBase& cvInternalGlobals::getMonthInfo(MonthTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumMonthInfos());
+	FAssertMsg(e >= 0 && e < GC.getNumMonthInfos(), "MonthInfo index out of bounds");
 	return *(m_paMonthInfo[e]);
 }
 
@@ -2183,8 +2146,7 @@ std::vector<CvInfoBase*>& cvInternalGlobals::getDenialInfos()	// For Moose - XML
 
 CvInfoBase& cvInternalGlobals::getDenialInfo(DenialTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumDenialInfos());
+	FAssertMsg(e >= 0 && e < GC.getNumDenialInfos(), "DenialInfo index out of bounds");
 	return *(m_paDenialInfo[e]);
 }
 
@@ -2201,8 +2163,7 @@ std::vector<CvInvisibleInfo*>& cvInternalGlobals::getInvisibleInfos()	// For Moo
 
 CvInvisibleInfo& cvInternalGlobals::getInvisibleInfo(InvisibleTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumInvisibleInfos());
+	FAssertMsg(e >= 0 && e < GC.getNumInvisibleInfos(), "InvisibleInfo index out of bounds");
 	return *(m_paInvisibleInfo[e]);
 }
 
@@ -2219,8 +2180,7 @@ std::vector<CvVoteSourceInfo*>& cvInternalGlobals::getVoteSourceInfos()	// For M
 
 CvVoteSourceInfo& cvInternalGlobals::getVoteSourceInfo(VoteSourceTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumVoteSourceInfos());
+	FAssertMsg(e >= 0 && e < GC.getNumVoteSourceInfos(), "VoteSourceInfo index out of bounds");
 	return *(m_paVoteSourceInfo[e]);
 }
 
@@ -2237,8 +2197,7 @@ std::vector<CvUnitCombatInfo*>& cvInternalGlobals::getUnitCombatInfos()
 
 CvUnitCombatInfo& cvInternalGlobals::getUnitCombatInfo(UnitCombatTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumUnitCombatInfos());
+	FAssertMsg(e >= 0 && e < GC.getNumUnitCombatInfos(), "UnitCombatInfo index out of bounds");
 	return *(m_paUnitCombatInfo[e]);
 }
 
@@ -2250,8 +2209,7 @@ std::vector<CvInfoBase*>& cvInternalGlobals::getDomainInfos()
 
 CvInfoBase& cvInternalGlobals::getDomainInfo(DomainTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < NUM_DOMAIN_TYPES);
+	FAssertMsg(e >= 0 && e < NUM_DOMAIN_TYPES, "DomainInfo index out of bounds");
 	return *(m_paDomainInfo[e]);
 }
 
@@ -2268,8 +2226,7 @@ std::vector<CvPromotionLineInfo*>& cvInternalGlobals::getPromotionLineInfos()
 
 CvPromotionLineInfo& cvInternalGlobals::getPromotionLineInfo(PromotionLineTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumPromotionLineInfos());
+	FAssertMsg(e >= 0 && e < GC.getNumPromotionLineInfos(), "PromotionLineInfo index out of bounds");
 	return *(m_paPromotionLineInfo[e]);
 }
 //TB Promotion Line Mod end
@@ -2286,8 +2243,7 @@ std::vector<CvMapCategoryInfo*>& cvInternalGlobals::getMapCategoryInfos()
 
 CvMapCategoryInfo& cvInternalGlobals::getMapCategoryInfo(MapCategoryTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumMapCategoryInfos());
+	FAssertMsg(e >= 0 && e < GC.getNumMapCategoryInfos(), "MapCategoryInfo index out of bounds");
 	return *(m_paMapCategoryInfo[e]);
 }
 
@@ -2303,8 +2259,7 @@ std::vector<CvIdeaClassInfo*>& cvInternalGlobals::getIdeaClassInfos()
 
 CvIdeaClassInfo& cvInternalGlobals::getIdeaClassInfo(IdeaClassTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumIdeaClassInfos());
+	FAssertMsg(e >= 0 && e < GC.getNumIdeaClassInfos(), "IdeaClassInfo index out of bounds");
 	return *(m_paIdeaClassInfo[e]);
 }
 
@@ -2320,8 +2275,7 @@ std::vector<CvIdeaInfo*>& cvInternalGlobals::getIdeaInfos()
 
 CvIdeaInfo& cvInternalGlobals::getIdeaInfo(IdeaTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumIdeaInfos());
+	FAssertMsg(e >= 0 && e < GC.getNumIdeaInfos(), "IdeaInfo index out of bounds");
 	return *(m_paIdeaInfo[e]);
 }
 //int cvInternalGlobals::getNumTraitOptionEditsInfos()
@@ -2348,8 +2302,7 @@ std::vector<CvInfoBase*>& cvInternalGlobals::getUnitAIInfos()
 
 CvInfoBase& cvInternalGlobals::getUnitAIInfo(UnitAITypes eUnitAINum)
 {
-	FAssert(eUnitAINum >= 0);
-	FAssert(eUnitAINum < NUM_UNITAI_TYPES);
+	FAssertMsg(eUnitAINum >= 0 && eUnitAINum < NUM_UNITAI_TYPES, "UnitAIInfo index out of bounds");
 	return *(m_paUnitAIInfos[eUnitAINum]);
 }
 
@@ -2357,7 +2310,7 @@ CvInfoBase& cvInternalGlobals::getUnitAIInfo(UnitAITypes eUnitAINum)
 //	on external definition in XML
 void cvInternalGlobals::registerUnitAI(const char* szType, int enumVal)
 {
-	FAssert(m_paUnitAIInfos.size() == enumVal);
+	FAssertMsg(m_paUnitAIInfos.size() == enumVal, "enumVal not expected value");
 
 	CvInfoBase* entry = new	CvInfoBase(szType);
 
@@ -3119,6 +3072,13 @@ CvUnitClassInfo& cvInternalGlobals::getUnitClassInfo(UnitClassTypes eUnitClassNu
 	return *(m_paUnitClassInfo[eUnitClassNum]);
 }
 
+const CvUnitClassInfo& cvInternalGlobals::getUnitClassInfo(UnitClassTypes eUnitClassNum) const
+{
+	FAssert(eUnitClassNum > -1);
+	FAssert(eUnitClassNum < GC.getNumUnitClassInfos());
+	return *(m_paUnitClassInfo[eUnitClassNum]);
+}
+
 CvInfoReplacements<CvUnitClassInfo>* cvInternalGlobals::getUnitClassInfoReplacements()
 {
 	return &m_UnitClassInfoReplacements;
@@ -3215,6 +3175,18 @@ CvPromotionInfo& cvInternalGlobals::getPromotionInfo(PromotionTypes ePromotionNu
 CvInfoReplacements<CvPromotionInfo>* cvInternalGlobals::getPromotionInfoReplacements()
 {
 	return &m_PromotionInfoReplacements;
+}
+
+PromotionTypes cvInternalGlobals::findPromotion(PromotionPredicateFn predicateFn) const
+{
+	for (int idx = 0; idx < static_cast<int>(m_paPromotionInfo.size()); ++idx)
+	{
+		if (predicateFn(m_paPromotionInfo[idx], static_cast<PromotionTypes>(idx)))
+		{
+			return static_cast<PromotionTypes>(idx);
+		}
+	}
+	return static_cast<PromotionTypes>(-1);
 }
 
 int cvInternalGlobals::getNumTechInfos()
@@ -3841,11 +3813,11 @@ void cvInternalGlobals::cacheGlobals()
 
 	strcpy(gVersionString, getDefineSTRING("C2C_VERSION"));
 
-/************************************************************************************************/
-/* Mod Globals    Start                          09/13/10                           phungus420  */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* Mod Globals    Start                          09/13/10                           phungus420  */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
 	m_bDCM_BATTLE_EFFECTS = (getDefineINT("DCM_BATTLE_EFFECTS") > 0) ? true : false;
 	m_iBATTLE_EFFECT_LESS_FOOD = getDefineINT("BATTLE_EFFECT_LESS_FOOD");
 	m_iBATTLE_EFFECT_LESS_PRODUCTION = getDefineINT("BATTLE_EFFECT_LESS_PRODUCTION");

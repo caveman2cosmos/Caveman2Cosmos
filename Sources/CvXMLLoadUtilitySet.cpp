@@ -761,8 +761,6 @@ bool CvXMLLoadUtility::SetGlobalArtDefines()
 //------------------------------------------------------------------------------------------------------
 bool CvXMLLoadUtility::LoadGlobalText()
 {
-	bool bLoaded = false;
-
 	OutputDebugString("Begin load global text\n");
 
 	// set language tag
@@ -823,8 +821,6 @@ bool CvXMLLoadUtility::LoadGlobalText()
 	CvGameText::setLanguage(szLanguage);
 	logMsg("\nXML language set to %s\n", szLanguage.c_str());
 
-	if (!bLoaded)
-	{
 /************************************************************************************************/
 /* XML_CHECK_DOUBLE_TYPE                   03/14/08                                MRGENIE      */
 /*                                                                                              */
@@ -837,18 +833,18 @@ bool CvXMLLoadUtility::LoadGlobalText()
 /* XML_CHECK_DOUBLE_TYPE                   END                                                  */
 /************************************************************************************************/
 
-		if (!CreateFXml())
-		{
-			return false;
-		}
+	if (!CreateFXml())
+	{
+		return false;
+	}
 
-		//
-		// load all files in the xml text directory
-		//
-		std::vector<CvString> aszFiles;
-		std::vector<CvString> aszModfiles;
+	//
+	// load all files in the xml text directory
+	//
+	std::vector<CvString> aszFiles;
+	std::vector<CvString> aszModfiles;
 
-		gDLL->enumerateFiles(aszFiles, "xml\\text\\*.xml");
+	gDLL->enumerateFiles(aszFiles, "xml\\text\\*.xml");
 
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 05/23/08                                MRGENIE      */
@@ -856,42 +852,36 @@ bool CvXMLLoadUtility::LoadGlobalText()
 /*                                                                                              */
 /************************************************************************************************/
 /* original firaxis
-		if (gDLL->isModularXMLLoading())
-		{
-			gDLL->enumerateFiles(aszModfiles, L"modules\\*_CIV4GameText.xml");
-			aszFiles.insert(aszFiles.end(), aszModfiles.begin(), aszModfiles.end());
-		}
-*/
-		gDLL->enumerateFiles(aszModfiles, "modules\\*_CIV4GameText*.xml");
+	if (gDLL->isModularXMLLoading())
+	{
+		gDLL->enumerateFiles(aszModfiles, L"modules\\*_CIV4GameText.xml");
 		aszFiles.insert(aszFiles.end(), aszModfiles.begin(), aszModfiles.end());
+	}
+*/
+	gDLL->enumerateFiles(aszModfiles, "modules\\*_CIV4GameText*.xml");
+	aszFiles.insert(aszFiles.end(), aszModfiles.begin(), aszModfiles.end());
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
-		std::vector<CvGameText> texts;
+	std::vector<CvGameText> texts;
 
-		for(std::vector<CvString>::iterator it = aszFiles.begin(); it != aszFiles.end(); ++it)
-		{
-			bLoaded = LoadCivXml(NULL, *it); // Load the XML
-			if (!bLoaded)
-			{
-				char	szMessage[1024];
-				sprintf( szMessage, "LoadXML call failed for %s. \n Current XML file is: %s", (*it).c_str(), GC.getCurrentXMLFile().GetCString());
-				gDLL->MessageBox(szMessage, "XML Load Error");
-			}
-			if (bLoaded)
-			{
-				// if the xml is successfully validated
-				SetGameText(L"/Civ4GameText", L"/Civ4GameText/TEXT", texts);
-			}
-		}
-
-		DestroyFXml();
-
-	}	// didn't read from cache
-	else
+	for(std::vector<CvString>::iterator it = aszFiles.begin(); it != aszFiles.end(); ++it)
 	{
-		logMsg("Read GlobalText from cache");
+		bool bLoaded = LoadCivXml(NULL, *it); // Load the XML
+		if (!bLoaded)
+		{
+			char	szMessage[1024];
+			sprintf( szMessage, "LoadXML call failed for %s. \n Current XML file is: %s", (*it).c_str(), GC.getCurrentXMLFile().GetCString());
+			gDLL->MessageBox(szMessage, "XML Load Error");
+		}
+		if (bLoaded)
+		{
+			// if the xml is successfully validated
+			SetGameText(L"/Civ4GameText", L"/Civ4GameText/TEXT", texts);
+		}
 	}
+
+	DestroyFXml();
 
 	OutputDebugString("End load global text\n");
 
@@ -1888,6 +1878,7 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 	xercesc::XMLString::release(&tmp);
 	PROFILE(szLog);
 	logMsg(szLog);
+
 	// if we successfully locate the tag name in the xml file
 	if (TryMoveToXmlFirstMatchingElement(szTagName))
 	{
@@ -1910,82 +1901,105 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 				}
 			}
 			if (!bHasType)
-			{	// (1) Let's deal with type-ignorant classes first, they are easier
-				T* pClassInfo = new T();
-				if (!pClassInfo->read(this))
-					SAFE_DELETE(pClassInfo)
-				else
-					aInfos.push_back(pClassInfo);
+			{
+				// (1) Let's deal with type-ignorant classes first, they are easier
+				std::auto_ptr<T> pClassInfo(new T());
+				if (pClassInfo->read(this))
+				{
+					aInfos.push_back(pClassInfo.release());
+				}
 			}
 			else
-			{	// (2) Check dependencies. If not satisfied, skip altogether
+			{
+				// (2) Check dependencies. If not satisfied, skip altogether
 				if (!CheckDependency())
 					continue;
+
 				// (3) Read off if a modder wants his work to completely replace the core definition
 				bool bForceOverwrite = false;
 				GetOptionalChildXmlValByName(&bForceOverwrite, L"bForceOverwrite");
+
 				// (4) Read off the Replacement condition
 				uint uiReplacementID = 0;
-				BoolExpr* pReplacementCondition = NULL;
-				if (GetOptionalChildXmlValByName(szTypeReplace, L"ReplacementID") && szTypeReplace.size()) {
+				std::auto_ptr<BoolExpr> pReplacementCondition;
+				if (GetOptionalChildXmlValByName(szTypeReplace, L"ReplacementID") && szTypeReplace.size())
+				{
 					uiReplacementID = CvInfoReplacements<T>::getReplacementIDForString(szTypeReplace);
-					if (TryMoveToXmlFirstChild(L"ReplacementCondition")) {
+					if (TryMoveToXmlFirstChild(L"ReplacementCondition")) 
+					{
 						// Replacement condition must be defined by the base object that
 						// names the particular Replacement ID; otherwise it won't work!
-						if (TryMoveToXmlFirstChild()) {
-							pReplacementCondition = BoolExpr::read(this);
+						if (TryMoveToXmlFirstChild())
+						{
+							pReplacementCondition.reset(BoolExpr::read(this));
 							MoveToXmlParent();
 						}
 						MoveToXmlParent();
 					}
 				}
+
 				// (5) Now we can parse the object
-				T* pClassInfo = new T();
-				if (!pClassInfo->read(this))
-					SAFE_DELETE(pClassInfo)
-				else
-				{	// See if the type name is associated with any loaded object
+				std::auto_ptr<T> pClassInfo(new T());
+				if (pClassInfo->read(this))
+				{
+					// See if the type name is associated with any loaded object
 					if (GC.getInfoTypeForString(szTypeName, true) == -1)
-					{	// (5-1) Does not exist
+					{
+						// (5-1) Does not exist
 						uint uiAppendPosition = aInfos.size();
 						if (szTypeReplace.empty())
-							aInfos.push_back(pClassInfo);
-						else if (pReplacementCondition)	// has szTypeReplace
-						{	// AIAndy: If the class is a replacement, add it to the replacements
+						{
+							aInfos.push_back(pClassInfo.release());
+						}
+						else if (pReplacementCondition.get())	// has szTypeReplace
+						{	
+							// AIAndy: If the class is a replacement, add it to the replacements
 							// but also add a dummy to the normal array to reserve an ID
 							aInfos.push_back(new T());
-							pReplacements->addReplacement(uiAppendPosition, uiReplacementID, pReplacementCondition, pClassInfo);
+							pReplacements->addReplacement(uiAppendPosition, uiReplacementID, pReplacementCondition.release(), pClassInfo.release());
 						}
 						else
-							FAssertMsg(pReplacementCondition != NULL, CvString::format("No replacement condition for this Replacement ID %s.\r\n\tMake sure it's defined for the first replacement object in the load order.", szTypeReplace.c_str()));
+						{
+							FAssertMsg(pReplacementCondition.get(), CvString::format("No replacement condition for this Replacement ID %s.\r\n\tMake sure it's defined for the first replacement object in the load order.", szTypeReplace.c_str()));
+						}
 						GC.setInfoTypeFromString(szTypeName, uiAppendPosition);
 					}
 					else
-					{	// (5-2) Found at uiExistPosition
+					{
+						// (5-2) Found at uiExistPosition
 						uint uiExistPosition = GC.getInfoTypeForString(szTypeName);
+						FAssertMsg(uiExistPosition != -1, "Couldn't find info type");
 						if (szTypeReplace.empty())
 						{
-							if (!bForceOverwrite)	pClassInfo->copyNonDefaults(aInfos[uiExistPosition], this);
+							if (!bForceOverwrite)
+							{
+								pClassInfo->copyNonDefaults(aInfos[uiExistPosition], this);
+							}
 							SAFE_DELETE(aInfos[uiExistPosition])
-							aInfos[uiExistPosition] = pClassInfo;
+							aInfos[uiExistPosition] = pClassInfo.release();
 						}
 						else
 						{
 							CvInfoReplacement<T>* pExisting = pReplacements->getReplacement(uiExistPosition, uiReplacementID);
-							if (pExisting) {
-								SAFE_DELETE(pReplacementCondition)
+							if (pExisting) 
+							{
 								pClassInfo->copyNonDefaults(pExisting->getInfo(), this);
-								pExisting->setInfo(pClassInfo);
+								pExisting->setInfo(pClassInfo.release());
 							}
-							else if (pReplacementCondition)
-								pReplacements->addReplacement(uiExistPosition, uiReplacementID, pReplacementCondition, pClassInfo);
+							else if (pReplacementCondition.get())
+							{
+								pReplacements->addReplacement(uiExistPosition, uiReplacementID, pReplacementCondition.release(), pClassInfo.release());
+							}
 							else
-								FAssertMsg(pReplacementCondition != NULL, CvString::format("No replacement condition for this Replacement ID %s.\r\n\tMake sure it's defined for the first replacement object in the load order.", szTypeReplace.c_str()));
+							{
+								FAssertMsg(pReplacementCondition.get(), CvString::format("No replacement condition for this Replacement ID %s.\r\n\tMake sure it's defined for the first replacement object in the load order.", szTypeReplace.c_str()));
+							}
 						}
 					}
 				}
 			}
 		} while (TryMoveToXmlNextSibling());
+
 //				T* pClassInfo = new T();
 //
 //				FAssert(NULL != pClassInfo);
@@ -2429,31 +2443,33 @@ void CvXMLLoadUtility::SetGlobalClassInfoTwoPassReplacement(std::vector<T*>& aIn
 			GetOptionalChildXmlValByName(&bForceOverwrite, L"bForceOverwrite");
 			// (4) Read off the Replacement condition
 			uint uiReplacementID = 0;
-			BoolExpr* pReplacementCondition = NULL;
+			boost::shared_ptr<BoolExpr> pReplacementCondition;
 			if (GetOptionalChildXmlValByName(szTypeReplace, L"ReplacementID") && szTypeReplace.size()) {
 				uiReplacementID = CvInfoReplacements<T>::getReplacementIDForString(szTypeReplace);
 				if (TryMoveToXmlFirstChild(L"ReplacementCondition")) {
 					if (TryMoveToXmlFirstChild()) {
-						pReplacementCondition = BoolExpr::read(this);
+						pReplacementCondition.reset(BoolExpr::read(this));
 						MoveToXmlParent();
 					}
 					MoveToXmlParent();
 				}
 			}
-			T* pClassInfo = new T();
-			if (pClassInfo->readPass2(this))
+			T pClassInfo;
+			if (pClassInfo.readPass2(this))
 			{
 				uint uiExistPosition = GC.getInfoTypeForString(szTypeName);
+				FAssertMsg(uiExistPosition != -1, "Couldn't find info type");
 				if (szTypeReplace.empty())
-					aInfos[uiExistPosition]->copyNonDefaultsReadPass2(pClassInfo, this, bForceOverwrite);
+				{
+					aInfos[uiExistPosition]->copyNonDefaultsReadPass2(&pClassInfo, this, bForceOverwrite);
+				}
 				else
 				{
 					CvInfoReplacement<T>* pExisting = pReplacements->getReplacement(uiExistPosition, uiReplacementID);
 					FAssertMsg(pExisting != NULL, CvString::format("Must have an existing replacement object of ID %s on the list!", szTypeReplace.c_str()))
-					pExisting->getInfo()->copyNonDefaultsReadPass2(pClassInfo, this, bForceOverwrite);
+					pExisting->getInfo()->copyNonDefaultsReadPass2(&pClassInfo, this, bForceOverwrite);
 				}
 			}
-			SAFE_DELETE(pClassInfo)
 		} while (TryMoveToXmlNextSibling());
 //			T* pClassInfo = new T();
 //
@@ -4539,7 +4555,7 @@ bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<T*>& aInfos, const wcha
 	std::string szCandidateConfig;
 
 	if ( TryMoveToXmlFirstMatchingElement(L"/Civ4ModularLoadControls/ConfigurationInfos/ConfigurationInfo"))
-	{		
+	{
 		// loop through each tag
 		do
 		{
@@ -4547,19 +4563,12 @@ bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<T*>& aInfos, const wcha
 			GetChildXmlValByName(szCandidateConfig, szTagName);
 			if (szCandidateConfig == szConfigString)
 			{
-				T* pClassInfo = new T;
-
-				FAssert(NULL != pClassInfo);
-				if (NULL == pClassInfo)
-				{
-					break;
-				}
+				std::auto_ptr<T> pClassInfo(new T);
 
 				bool bSuccess = pClassInfo->read(this, szDirDepth, iDirDepth);
-				FAssert(bSuccess);
 				if (!bSuccess)
 				{
-					delete pClassInfo;
+					FErrorMsg(CvString::format("Couldn't read %s dir %s", szConfigString.c_str(), szDirDepth.c_str()));
 					break;
 				}
 
@@ -4569,21 +4578,23 @@ bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<T*>& aInfos, const wcha
 					iIndex = GC.getInfoTypeForString(pClassInfo->getType(), true);
 					if ( iIndex != -1 )
 					{
-						logMLF("This type \"%s\" is double", pClassInfo->getType());
+						logMLF("Type \"%s\" is specified more than once", pClassInfo->getType());
 						//Catch dupes here, we don't want the overwrite or copy method for the MLF
-						CvString szFAssertMsg = CvString::format("The <type>%s</type> of the \"MLF_CIV4ModularLoadingControls.xml\" in directory: \"%s\" is already in use, please use an alternative <type> -name",pClassInfo->getType(), szDirDepth.c_str());
-						FAssertMsg(iIndex == -1, szFAssertMsg);
+						FErrorMsg(CvString::format("The <type>%s</type> of the \"MLF_CIV4ModularLoadingControls.xml\" in directory: \"%s\" is already in use, please use an alternative <type> -name", pClassInfo->getType(), szDirDepth.c_str()));
+
 						return false;
 					}
-				}
+					else
+					{
+						GC.setInfoTypeFromString(pClassInfo->getType(), (int)aInfos.size());	// add type to global info type hash map
 
-				aInfos.push_back(pClassInfo);
-				if (NULL != pClassInfo->getType())
-				{
-					GC.setInfoTypeFromString(pClassInfo->getType(), (int)aInfos.size() - 1);	// add type to global info type hash map
-					return true;
-				}				
-			}				
+						aInfos.push_back(pClassInfo.release());
+
+						return true;
+					}
+				}
+				aInfos.push_back(pClassInfo.release());
+			}
 		} while (TryMoveToXmlNextSibling());
 	}
 	return false;
@@ -4682,16 +4693,16 @@ bool CvXMLLoadUtility::doResetInfoClasses()
 //------------------------------------------------------------------------------------------------------
 void CvXMLLoadUtility::SetStringWithChildList(int* iNumEntries, std::vector<CvString>* aszXMLLoad)
 {
-    std::vector<CvString> paszXMLLoad;
+	std::vector<CvString> paszXMLLoad;
 	CvString szTextVal;
 
-    int iNumSibs = GetXmlChildrenNumber();
-    if (0 < iNumSibs)
-    {
-        if (GetChildXmlVal(szTextVal))
-        {
-            for (int iI = 0; iI < iNumSibs; iI++)
-            {
+	int iNumSibs = GetXmlChildrenNumber();
+	if (0 < iNumSibs)
+	{
+		if (GetChildXmlVal(szTextVal))
+		{
+			for (int iI = 0; iI < iNumSibs; iI++)
+			{
 				bool bLoad = true;
 				int iSize = paszXMLLoad.size();
 				for (int iJ = 0; iJ < iSize; ++iJ)
@@ -4703,18 +4714,18 @@ void CvXMLLoadUtility::SetStringWithChildList(int* iNumEntries, std::vector<CvSt
 				}
 				if (bLoad)
 				{
-	                paszXMLLoad.push_back(szTextVal);
+					paszXMLLoad.push_back(szTextVal);
 				}
-                if (!GetNextXmlVal(szTextVal))
-                {
-                    break;
-                }
-            }
+				if (!GetNextXmlVal(szTextVal))
+				{
+					break;
+				}
+			}
 
-            MoveToXmlParent();
-        }
-    }
-    MoveToXmlParent();
+			MoveToXmlParent();
+		}
+	}
+	MoveToXmlParent();
 
 	*iNumEntries = paszXMLLoad.size();
 	*aszXMLLoad = paszXMLLoad;
@@ -4733,14 +4744,14 @@ void CvXMLLoadUtility::SetIntWithChildList(int* iNumEntries, int** piXMLLoad)
 	CvString szTextVal;
 	std::vector<int> szTemp;
 
-    int iNumSibs = GetXmlChildrenNumber();
-    if (iNumSibs > 0)
-    {
-        if (GetChildXmlVal(szTextVal))
-        {
-            for (int iI = 0; iI < iNumSibs; iI++)
-            {
-                int iNew = GetInfoClass(szTextVal);
+	int iNumSibs = GetXmlChildrenNumber();
+	if (iNumSibs > 0)
+	{
+		if (GetChildXmlVal(szTextVal))
+		{
+			for (int iI = 0; iI < iNumSibs; iI++)
+			{
+				int iNew = GetInfoClass(szTextVal);
 				if(iNew == -1)
 				{
 					char szMessage[1024];
@@ -4763,15 +4774,15 @@ void CvXMLLoadUtility::SetIntWithChildList(int* iNumEntries, int** piXMLLoad)
 						szTemp.push_back(iNew);
 					}
 				}
-                if (!GetNextXmlVal(szTextVal))
-                {
-                    break;
-                }
-            }
+				if (!GetNextXmlVal(szTextVal))
+				{
+					break;
+				}
+			}
 
-            MoveToXmlParent();
-        }
-    }
+			MoveToXmlParent();
+		}
+	}
 	MoveToXmlParent();
 
 	int iSize = szTemp.size();
@@ -4795,42 +4806,42 @@ void CvXMLLoadUtility::SetIntWithChildList(int* iNumEntries, int** piXMLLoad)
 //------------------------------------------------------------------------------------------------------
 void CvXMLLoadUtility::SetBoolFromChildList(int iNumEntries, bool** pbXMLLoad)
 {
-    bool* ppbXMLLoad = NULL;
+	bool* ppbXMLLoad = NULL;
 	ppbXMLLoad = *pbXMLLoad;
 	CvString szTextVal;
 
-    int iNumSibs = GetXmlChildrenNumber();
-    if (iNumEntries < iNumSibs)
+	int iNumSibs = GetXmlChildrenNumber();
+	if (iNumEntries < iNumSibs)
 	{
 		char	szMessage[1024];
-        sprintf(szMessage, "Too many Children values \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
-        gDLL->MessageBox(szMessage, "XML Error");
+		sprintf(szMessage, "Too many Children values \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
+		gDLL->MessageBox(szMessage, "XML Error");
 	}
-    if (iNumSibs > 0)
-    {
+	if (iNumSibs > 0)
+	{
 		if (GetChildXmlVal(szTextVal))
-        {
-            for (int iI = 0; iI < iNumSibs; iI++)
-            {
-                int eLoad = GetInfoClass(szTextVal);
+		{
+			for (int iI = 0; iI < iNumSibs; iI++)
+			{
+				int eLoad = GetInfoClass(szTextVal);
 				if(eLoad == -1)
 				{
 					char szMessage[1024];
 					sprintf(szMessage, "Index is -1 inside function \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 					gDLL->MessageBox(szMessage, "XML Error");
 				}
-                ppbXMLLoad[eLoad] = true;
-                if (!GetNextXmlVal(szTextVal))
-                {
-                    break;
-                }
-            }
+				ppbXMLLoad[eLoad] = true;
+				if (!GetNextXmlVal(szTextVal))
+				{
+					break;
+				}
+			}
 
-            MoveToXmlParent();
-        }
-    }
+			MoveToXmlParent();
+		}
+	}
 
-    MoveToXmlParent();
+	MoveToXmlParent();
 }
 /*************************************************************************************************/
 /**	New Tag Defs							END													**/

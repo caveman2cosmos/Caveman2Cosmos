@@ -104,9 +104,13 @@ CyPlayer* CyGlobalContext::getCyPlayer(int idx)
 		bInit=true;
 	}
 
-	FAssertMsg(idx >= 0 && idx < MAX_PLAYERS, "Player index requested isn't valid");
+	if (idx >= 0 && idx < MAX_PLAYERS)
+	{
+		return &cyPlayers[idx];
+	}
 
-	return idx >= 0 && idx < MAX_PLAYERS ? &cyPlayers[idx] : NULL;
+	FErrorMsg("Player index requested isn't valid");
+	return NULL;
 }
 
 

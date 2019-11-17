@@ -85,7 +85,7 @@ void CvSelectionGroupAI::AI_separateIf(boost::function<bool(CvUnit*)> predicateF
 	{
 		CvUnit* unit = *itr;
 		unit->joinGroup(NULL);
-		FAssertMsg(std::find_if(beginValidUnits(), endValidUnits(), boost::bind(matchUnitPtr, _1, unit)) == endValidUnits(), "Failed to remove unit from group");
+		FAssertMsg(std::find_if(beginUnits(), endUnits(), boost::bind(matchUnitPtr, _1, unit)) == endUnits(), "Failed to remove unit from group");
 		if (unit->plot()->getTeam() == getTeam())
 		{
 			unit->getGroup()->pushMission(MISSION_SKIP);
@@ -843,7 +843,7 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupSacrifice(const CvPlot* pPlot, bool b
 				{
 					if (bForce || pLoopUnit->canMoveInto(pPlot, true))
 					{
-                        int iValue = pLoopUnit->AI_sacrificeValue(pPlot);
+						int iValue = pLoopUnit->AI_sacrificeValue(pPlot);
 						FAssertMsg(iValue >= 0, "iValue is expected to be greater than 0");
 
 						// we want to pick the last unit of highest value, so pick the last unit with a good value

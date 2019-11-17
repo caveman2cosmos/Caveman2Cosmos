@@ -45,7 +45,8 @@ protected:
 	BuildingGroupingList m_BuildingGrouping;
 	BuildingSortList m_BuildingSort;
 	std::vector<BuildingTypes> m_aiBuildingList;
-	std::vector<std::vector<BuildingTypes>*> m_aaiGroupedBuildingList;
+	typedef std::vector< std::vector<BuildingTypes> > GroupedBuildingVector;
+	GroupedBuildingVector m_aaiGroupedBuildingList;
 	bool m_bFilteringValid;
 	bool m_bGroupingValid;
 	bool m_bSortingValid;

@@ -1,13 +1,19 @@
 #pragma once
-#pragma optimize("", off)
+
+#ifndef CvDLLPythonIFaceBase_h__
+#define CvDLLPythonIFaceBase_h__
+
 //
 // abstract interface for Python functions used by DLL
 // Creator - Mustafa Thamer
 // Copyright 2005 Firaxis Games
 //
 
-# include <boost/python/object.hpp>
+//#include "CvEnums.h"
+#ifndef __INTELLISENSE__
+#include <boost/python/object.hpp>
 namespace python = boost::python;
+#endif
 
 class CvUnit;
 class CvPlot;
@@ -178,6 +184,4 @@ int CvDLLPythonIFaceBase::putStringSeqInArray(PyObject* src, T** aDst)
 	}
 	return size;
 }
-
-
-#pragma optimize("", on)
+#endif // CvDLLPythonIFaceBase_h__

@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef CySelectionGroup_h__
+#define CySelectionGroup_h__
+
 struct MissionData;
 
 class CyPlot;
@@ -96,3 +99,5 @@ protected:
 };
 
 DECLARE_PY_WRAPPER(CySelectionGroup, CvSelectionGroup*);
+
+#endif // CySelectionGroup_h__

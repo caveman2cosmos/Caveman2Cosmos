@@ -158,7 +158,7 @@ void CvUnitList::doGroup()
 	int iLastKey = MIN_INT;
 	for (std::multimap<int, UnitTypes>::iterator it = mmap_Units.begin(); it != mmap_Units.end(); ++it)
 	{
-		if (it->first != iLastKey)
+		if (it->first != iLastKey || index == -1)
 		{
 			iLastKey = it->first;
 			index++;

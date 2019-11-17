@@ -224,16 +224,16 @@ public:
 	void AI_updateBestBuild();
 
 	virtual int AI_cityValue() const;
-    
-    int AI_calculateWaterWorldPercent();
-    
-    int AI_getCityImportance(bool bEconomy, bool bMilitary);
-    
-    int AI_yieldMultiplier(YieldTypes eYield);
-    void AI_updateSpecialYieldMultiplier();
-    int AI_specialYieldMultiplier(YieldTypes eYield);
-    
-    int AI_countNumBonuses(BonusTypes eBonus, bool bIncludeOurs, bool bIncludeNeutral, int iOtherCultureThreshold, bool bLand = true, bool bWater = true);
+	
+	int AI_calculateWaterWorldPercent();
+	
+	int AI_getCityImportance(bool bEconomy, bool bMilitary);
+	
+	int AI_yieldMultiplier(YieldTypes eYield);
+	void AI_updateSpecialYieldMultiplier();
+	int AI_specialYieldMultiplier(YieldTypes eYield);
+	
+	int AI_countNumBonuses(BonusTypes eBonus, bool bIncludeOurs, bool bIncludeNeutral, int iOtherCultureThreshold, bool bLand = true, bool bWater = true);
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      11/14/09                                jdog5000      */
 /*                                                                                              */
@@ -402,7 +402,7 @@ protected:
 	int AI_yieldValueWithCache(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood, bool bIgnoreGrowth, bool bIgnoreStarvation, bool bWorkerOptimization, bool bSpecialist);
 #endif
 	int AI_yieldValueInternal(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false, bool bWorkerOptimization = false);
-	int AI_plotValue(CvPlot* pPlot, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false);
+	int AI_plotValue(const CvPlot* pPlot, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false);
 
 	int AI_experienceWeight();
 	int AI_buildUnitProb();

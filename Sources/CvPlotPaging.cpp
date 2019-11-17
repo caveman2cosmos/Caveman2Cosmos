@@ -178,6 +178,7 @@ struct PlotDist
 CvPlotPaging::paging_handle CvPlotPaging::AddPlot(CvPlot* plot)
 {
 	int newHandle = allocateNewPagingEntry();
+	FAssertMsg(newHandle >= 0, "Couldn't allocate plot paging entry!");
 
 	GraphicsPagingInfo* pPagingInfo = &g_pagingTable[newHandle];
 

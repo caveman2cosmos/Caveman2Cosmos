@@ -3656,5 +3656,4 @@ enum PropertyPropagatorTypes
 	NUM_PROPERTYPROPAGATORS
 };
 
-
 #endif	// CVENUMS_h

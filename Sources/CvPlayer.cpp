@@ -1,24 +1,8 @@
 // player.cpp
 
 #include "CvGameCoreDLL.h"
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      05/09/09                                jdog5000      */
-/*                                                                                              */
-/* General AI                                                                                   */
-/************************************************************************************************/
 #include "CvDLLFlagEntityIFaceBase.h"
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      10/02/09                                jdog5000      */
-/*                                                                                              */
-/* AI logging                                                                                   */
-/************************************************************************************************/
 #include "BetterBTSAI.h"
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 //	Koshling - save flag indicating this player has no data in the save as they have never
 //	been alive
@@ -29,112 +13,81 @@
 //	Helper class used to efficiently cache unit upgrade paths for this player
 class CvUpgradeCache
 {
-	typedef struct upgradePair
+	struct UpgradePair
 	{
-		UnitTypes		eFrom;
-		UnitClassTypes	eTo;
-	} upgradePair;
+		UnitTypes eFrom;
+		UnitClassTypes eTo;
+
+		UpgradePair(UnitTypes eFrom = NO_UNIT, UnitClassTypes eTo = NO_UNITCLASS) : eFrom(eFrom), eTo(eTo) {}
+
+		// hash function
+		operator size_t() const
+		{
+			return stdext::hash_value(eFrom) ^ stdext::hash_value(eTo);
+		}
+
+		bool operator<(const UpgradePair& other) const
+		{
+			if (eFrom == other.eFrom) return eTo < other.eTo;
+			return eFrom < other.eFrom;
+		}
+	};
 
 public:
-	CvUpgradeCache(PlayerTypes eOwner)
-	{
-		m_validUpgrades = NULL;
-		m_numUpgrades = 0;
-		m_eOwner = eOwner;
-	}
-	virtual ~CvUpgradeCache()
-	{
-		SAFE_DELETE_ARRAY(m_validUpgrades);
-	}
-
+	CvUpgradeCache(PlayerTypes eOwner) : m_init(false), m_eOwner(eOwner) {}
+	
 	bool upgradeAvailable(UnitTypes eFromUnit, UnitClassTypes eToUnitClass)
 	{
 		PROFILE_FUNC();
 
-		upgradePair	key;
-
-		key.eFrom = eFromUnit;
-		key.eTo = eToUnitClass;
-
-		if ( m_validUpgrades == NULL )
+		if (!m_init)
 		{
 			init();
 		}
 
-		return (bsearch((const void*)&key, (const void*)m_validUpgrades, m_numUpgrades, sizeof(upgradePair), upgradePairComparison) != NULL);
+		return m_validUpgrades.find(UpgradePair(eFromUnit, eToUnitClass)) != m_validUpgrades.end();
 	}
 
 private:
-	void	init()
+	void init()
 	{
 		PROFILE_FUNC();
 
-		std::list<upgradePair> directUpgrades;
-		int iI, iJ;
+		std::vector<UpgradePair> directUpgrades;
 
-		//	First populate the direct upgrades
-		for(iI = 0; iI < GC.getNumUnitInfos(); iI++)
+		// First populate the direct upgrades
+		for(int unitTypeIdx = 0; unitTypeIdx < GC.getNumUnitInfos(); unitTypeIdx++)
 		{
-			for(iJ = 0; iJ < GC.getNumUnitClassInfos(); iJ++)
+			const UnitTypes unitType = static_cast<UnitTypes>(unitTypeIdx);
+			const CvUnitInfo& unitInfo = GC.getUnitInfo(unitType);
+			for(int unitClassTypeIdx = 0; unitClassTypeIdx < GC.getNumUnitClassInfos(); unitClassTypeIdx++)
 			{
-				if (GC.getUnitInfo((UnitTypes)iI).getUpgradeUnitClass((UnitClassTypes)iJ))
+				const UnitClassTypes unitClassType = static_cast<UnitClassTypes>(unitClassTypeIdx);
+				if (unitInfo.getUpgradeUnitClass(unitClassType))
 				{
-					upgradePair newPair;
-
-					newPair.eFrom = (UnitTypes)iI;
-					newPair.eTo = (UnitClassTypes)iJ;
-
-					directUpgrades.push_back(newPair);
+					directUpgrades.push_back(UpgradePair(unitType, unitClassType));
 				}
 			}
 		}
-
-		std::list<upgradePair> upgrades;
-
-		//	Now walk the direct upgrade links to fully populate the chains
-		bool* bUnitUpgrades = new bool[GC.getNumUnitClassInfos()];
-
-		for(iI = 0; iI < GC.getNumUnitInfos(); iI++)
+		
+		for(int unitTypeIdx = 0; unitTypeIdx < GC.getNumUnitInfos(); unitTypeIdx++)
 		{
-			memset(bUnitUpgrades,0,sizeof(bool)*GC.getNumUnitClassInfos());
-
-			populateUpgradeChain((UnitTypes)iI, bUnitUpgrades, directUpgrades);
-
-			for(iJ = 0; iJ < GC.getNumUnitClassInfos(); iJ++)
-			{
-				if ( bUnitUpgrades[iJ] )
-				{
-					upgradePair newPair;
-
-					newPair.eFrom = (UnitTypes)iI;
-					newPair.eTo = (UnitClassTypes)iJ;
-
-					upgrades.push_back(newPair);
-				}
-			}
+			const UnitTypes unitType = static_cast<UnitTypes>(unitTypeIdx);
+			populateUpgradeChain(unitType, unitType, directUpgrades, m_validUpgrades);
 		}
-
-		//	Now store them all and sort the array for easy searching
-		m_numUpgrades = upgrades.size();
-		m_validUpgrades = new upgradePair[m_numUpgrades];
-
-		iI = 0;
-		for(std::list<upgradePair>::const_iterator itr = upgrades.begin(); itr != upgrades.end(); ++itr)
-		{
-			m_validUpgrades[iI++] = (*itr);
-		}
-
-		qsort(m_validUpgrades, m_numUpgrades, sizeof(upgradePair), upgradePairComparison);
+		
+		m_init = true;
 	}
 
-	void populateUpgradeChain(UnitTypes eType, bool* abValid, const std::list<upgradePair>& directUpgrades)
+	template < class DirectUpgradeCont_, class ValidUpgradeCont_ >
+	void populateUpgradeChain(UnitTypes eBaseType, UnitTypes eType, const DirectUpgradeCont_& directUpgrades, ValidUpgradeCont_& validUpgrades)
 	{
-		for(std::list<upgradePair>::const_iterator itr = directUpgrades.begin(); itr != directUpgrades.end(); ++itr)
+		for(DirectUpgradeCont_::const_iterator itr = directUpgrades.begin(); itr != directUpgrades.end(); ++itr)
 		{
-			if ( (*itr).eFrom == eType )
+			if ( itr->eFrom == eType )
 			{
-				abValid[(*itr).eTo] = true;
-				populateUpgradeChain((UnitTypes)(GC.getCivilizationInfo(GET_PLAYER(m_eOwner).getCivilizationType()).getCivilizationUnits((*itr).eTo)), abValid, directUpgrades);
+				validUpgrades.insert(UpgradePair(eBaseType, itr->eTo));
+				populateUpgradeChain(eBaseType, (UnitTypes)(GC.getCivilizationInfo(GET_PLAYER(m_eOwner).getCivilizationType()).getCivilizationUnits(itr->eTo)), directUpgrades, validUpgrades);
 			}
 		}
 	}
@@ -179,22 +132,10 @@ private:
 	}
 #endif
 
-	static int upgradePairComparison(const void* first, const void* second)
-	{
-		if ( ((upgradePair*)first)->eFrom == ((upgradePair*)second)->eFrom )
-		{
-			return (((upgradePair*)first)->eTo - ((upgradePair*)second)->eTo);
-		}
-		else
-		{
-			return (((upgradePair*)first)->eFrom - ((upgradePair*)second)->eFrom);
-		}
-	}
-
 private:
-	int					m_numUpgrades;
-	upgradePair*		m_validUpgrades;
-	PlayerTypes			m_eOwner;
+	bool m_init;
+	stdext::hash_set<UpgradePair> m_validUpgrades;
+	PlayerTypes m_eOwner;
 };
 
 // Public Functions...
@@ -262,7 +203,6 @@ m_cachedBonusCount(NULL)
 	m_bCanConstructCached = NULL;
 	m_bCanConstructDefaultParam = NULL;
 	m_bCanConstructCachedDefaultParam = NULL;
-	m_upgradeCache = NULL;
 
 	m_pabResearchingTech = NULL;
 	m_pabLoyalMember = NULL;
@@ -937,7 +877,7 @@ void CvPlayer::uninit()
 	SAFE_DELETE_ARRAY(m_bCanConstructCachedDefaultParam);
 	SAFE_DELETE_ARRAY(m_paiPlayerWideAfflictionCount);
 
-	SAFE_DELETE(m_upgradeCache);
+	m_upgradeCache.reset();
 
 	SAFE_DELETE(m_pBuildLists);
 
@@ -2029,7 +1969,7 @@ void CvPlayer::addTraitBonuses( )
 {
 	int iI;
 
-	FAssertMsg((GC.getNumTraitInfos() > 0), "GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvPlayer::init");
+	FAssertMsg(GC.getNumTraitInfos() > 0, "GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvPlayer::init");
 	for (iI = 0; iI < GC.getNumTraitInfos(); iI++)
 	{
 		if (hasTrait((TraitTypes)iI))
@@ -5246,7 +5186,9 @@ void CvPlayer::doTurn()
 /* City AI                                                                                      */
 /************************************************************************************************/
     // New function to handle wonder construction in a centralized manner
+#if 0 // AI_doCentralizedProduction is unfinished, no point calling it. [11/12/2019 billw]
 	GET_PLAYER(getID()).AI_doCentralizedProduction();
+#endif
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
@@ -5654,6 +5596,7 @@ void CvPlayer::doTurnUnits()
 					break;
 				case NO_DOMAIN:
 					FAssertMsg(NULL == pLoopSelectionGroup->getHeadUnit(), "Unit with no Domain");
+					break;
 				default:
 					if (iPass == 3)
 					{
@@ -6520,10 +6463,9 @@ int CvPlayer::countOwnedBonuses(BonusTypes eBonus) const
 	int iI, iJ;
     int iLoop;
     
-	FAssert(eBonus >= 0 && eBonus < GC.getNumBonusInfos());
-
 	if ( eBonus < 0 && eBonus >= GC.getNumBonusInfos() )
 	{
+		FErrorMsg("Bonus value must be valid for countOwnedBonuses");
 		return 0;
 	}
 
@@ -13096,15 +13038,16 @@ void CvPlayer::changeTotalPopulation(int iChange)
 	iPopTest += iChange;
 	if (iPopTest > MAX_INT)
 	{
-		FAssert(iPopTest <= MAX_INT);
+		FErrorMsg("Population overflow will occur, capped at MAX_INT!");
 		iPopTest = MAX_INT;
 	}
 	m_iTotalPopulation = (int)iPopTest;
-	FAssert(getTotalPopulation() >= 0);
+	FAssertMsg(getTotalPopulation() >= 0, "Total population overflowed to negative!");
 
 	iPopTest *= 100;
 	if (iPopTest >= MAX_INT)
 	{
+		FErrorMsg("Population overflow may occur during x100 calculations");
 		m_bPopBad = true;
 	}
 
@@ -13131,6 +13074,7 @@ long CvPlayer::getRealPopulation() const
 
 	if (iTotalPopulation > MAX_INT)
 	{
+		FErrorMsg("Real population overflows, capped at MAX_INT!");
 		iTotalPopulation = MAX_INT;
 	}
 
@@ -18348,7 +18292,14 @@ bool CvPlayer::isBuildingClassMaxedOut(BuildingClassTypes eIndex, int iExtra) co
 		return false;
 	}
 
-	FAssertMsg(getBuildingClassCount(eIndex) <= (GC.getBuildingClassInfo(eIndex).getMaxPlayerInstances() + GC.getBuildingClassInfo(eIndex).getExtraPlayerInstances()), "BuildingClassCount is expected to be less than or match the number of max player instances plus extra player instances");
+	FAssertMsg(getBuildingClassCount(eIndex) <= (GC.getBuildingClassInfo(eIndex).getMaxPlayerInstances() + GC.getBuildingClassInfo(eIndex).getExtraPlayerInstances()), 
+		CvString::format("BuildingClassCount for %s is expected to be less than or match the number of max player instances plus extra player instances (%d <= %d + %d)",
+			GC.getBuildingClassInfo(eIndex).getType(), 
+			getBuildingClassCount(eIndex), 
+			GC.getBuildingClassInfo(eIndex).getMaxPlayerInstances(), 
+			GC.getBuildingClassInfo(eIndex).getExtraPlayerInstances()
+		).c_str()
+	);
 
 	return ((getBuildingClassCount(eIndex) + iExtra) >= (GC.getBuildingClassInfo(eIndex).getMaxPlayerInstances() + GC.getBuildingClassInfo(eIndex).getExtraPlayerInstances()));
 }
@@ -29402,7 +29353,7 @@ bool CvPlayer::splitEmpire(int iAreaId)
 	}
 
 	bool bPlayerExists = GET_TEAM(GET_PLAYER(eNewPlayer).getTeam()).isAlive();
-	FAssert(!bPlayerExists);
+	FAssertMsg(!bPlayerExists, "New player already exists");
 	if (!bPlayerExists)
 	{
 		int iBestValue = -1;
@@ -35626,9 +35577,9 @@ void CvPlayer::recalculateModifiers()
 
 bool CvPlayer::upgradeAvailable(UnitTypes eFromUnit, UnitClassTypes eToUnitClass) const
 {
-	if ( NULL == m_upgradeCache )
+	if ( !m_upgradeCache )
 	{
-		m_upgradeCache = new CvUpgradeCache(getID());
+		m_upgradeCache.reset(new CvUpgradeCache(getID()));
 	}
 	return m_upgradeCache->upgradeAvailable(eFromUnit, eToUnitClass);
 }
@@ -37103,7 +37054,7 @@ void CvPlayer::changeNationalGreatPeopleUnitRate(UnitTypes eIndex, int iChange)
 
 int CvPlayer::getNationalGreatPeopleRate() const
 {
-	return m_iNationalGreatPeopleRate;
+	return std::max(0, m_iNationalGreatPeopleRate);
 }
 
 void CvPlayer::setNationalGreatPeopleRate(int iValue)
