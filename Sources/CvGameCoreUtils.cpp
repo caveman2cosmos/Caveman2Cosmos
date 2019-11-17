@@ -738,20 +738,25 @@ int getCombatOdds(CvUnit* pAttacker, CvUnit* pDefender)
 	//////
 	//TB Combat Mod begin
 
-	int iDefenderSupportStrength = 0;
-	int iAttackerSupportStrength = 0;
+	//Added ST
+	iAttackerStrength = pAttacker->currCombatStr(NULL, NULL);
+	iAttackerFirepower = pAttacker->currFirepower(NULL, NULL);
+
+	iDefenderStrength = pDefender->currCombatStr(pDefender->plot(), pAttacker);
+	iDefenderFirepower = pDefender->currFirepower(pDefender->plot(), pAttacker);
+
+#ifdef STRENGTH_IN_NUMBERS
 	if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
-		iDefenderSupportStrength = pDefender->getDefenderSupportValue(pAttacker);
-		iAttackerSupportStrength = pAttacker->getAttackerSupportValue();
+		int iAttackerSupportStrength = pAttacker->getAttackerSupportValue();
+		iAttackerStrength += iAttackerSupportStrength;
+		iAttackerFirepower += iAttackerSupportStrength;
+		int iDefenderSupportStrength = pDefender->getDefenderSupportValue(pAttacker);
+		iDefenderStrength += iDefenderSupportStrength;
+		iDefenderFirepower += iDefenderSupportStrength;
 	}
+#endif // STRENGTH_IN_NUMBERS
 	
-	//Added ST
-	iAttackerStrength = pAttacker->currCombatStr(NULL, NULL) + iAttackerSupportStrength;
-	iAttackerFirepower = pAttacker->currFirepower(NULL, NULL) + iAttackerSupportStrength;
-
-	iDefenderStrength = pDefender->currCombatStr(pDefender->plot(), pAttacker) + iDefenderSupportStrength;
-	iDefenderFirepower = pDefender->currFirepower(pDefender->plot(), pAttacker) + iDefenderSupportStrength;
 	//TB Combat Mod end
 	FAssert((iAttackerStrength + iDefenderStrength) > 0);
 	FAssert((iAttackerFirepower + iDefenderFirepower) > 0);
@@ -1075,19 +1080,24 @@ float getCombatOddsSpecific(CvUnit* pAttacker, CvUnit* pDefender, int n_A, int n
 	int iDefenderArmor = (100 - iModifiedDefenderArmor);
 	int iAttackerArmor = (100 - iModifiedAttackerArmor);
 
-	int iDefenderSupportStrength = 0;
-	int iAttackerSupportStrength = 0;
+	iAttackerStrength = pAttacker->currCombatStr(NULL, NULL);
+	iAttackerFirepower = pAttacker->currFirepower(NULL, NULL);
+	iDefenderStrength = pDefender->currCombatStr(pDefender->plot(), pAttacker);
+	iDefenderFirepower = pDefender->currFirepower(pDefender->plot(), pAttacker);
+
+#ifdef STRENGTH_IN_NUMBERS
 	if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
-		iDefenderSupportStrength = pDefender->getDefenderSupportValue(pAttacker);
-		iAttackerSupportStrength = pAttacker->getAttackerSupportValue();
+		int iDefenderSupportStrength = pDefender->getDefenderSupportValue(pAttacker);
+		int iAttackerSupportStrength = pAttacker->getAttackerSupportValue();
+		iAttackerStrength += iAttackerSupportStrength;
+		iAttackerFirepower += iAttackerSupportStrength;
+		iDefenderStrength += iDefenderSupportStrength;
+		iDefenderFirepower += iDefenderSupportStrength;
 	}
-	//TB Combat Mods End
+#endif // STRENGTH_IN_NUMBERS
 
-	iAttackerStrength = pAttacker->currCombatStr(NULL, NULL) + iAttackerSupportStrength;
-	iAttackerFirepower = pAttacker->currFirepower(NULL, NULL) + iAttackerSupportStrength;
-	iDefenderStrength = pDefender->currCombatStr(pDefender->plot(), pAttacker) + iDefenderSupportStrength;
-	iDefenderFirepower = pDefender->currFirepower(pDefender->plot(), pAttacker) + iDefenderSupportStrength;
+	//TB Combat Mods End
 
 	iStrengthFactor = ((iAttackerFirepower + iDefenderFirepower + 1) / 2);
 
@@ -1500,56 +1510,40 @@ bool isPlotEventTrigger(EventTriggerTypes eTrigger)
 	return false;
 }
 
+namespace {
+	//	Small cache
+	std::vector<stdext::hash_map<UnitTypes, TechTypes> > g_discoveryTechCache;
+	int g_cachedTurn = -1;
+}
+
 TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer)
 {
 	PROFILE_FUNC();
-
-	//	Small cache
-	static	std::map<UnitTypes,TechTypes>* g_discoveryTechCache[MAX_PLAYERS];
-	static	int	g_cachedTurn = -1;
-
-	FAssert(ePlayer != NO_PLAYER);
-
-	TechTypes eBestTech = NO_TECH;
-	int iBestValue = 0;
-	CvPlayerAI&	kPlayer = GET_PLAYER(ePlayer);
-	CvTeam&	kTeam = GET_TEAM(kPlayer.getTeam());
-	int iI;
-
-	if ( g_cachedTurn == -1 )
-	{
-		for(iI = 0; iI < MAX_PLAYERS; iI++)
-		{
-			g_discoveryTechCache[iI] = NULL;
-		}
-	}
-	
-	if ( g_discoveryTechCache[ePlayer] == NULL )
-	{
-		g_discoveryTechCache[ePlayer] = new std::map<UnitTypes,TechTypes>();
-	}
+	FEnsureMsg(ePlayer != NO_PLAYER, "Player must be valid for this function");
 
 	if ( g_cachedTurn != GC.getGame().getGameTurn() )
 	{
-		for(iI = 0; iI < MAX_PLAYERS; iI++)
-		{
-			if ( g_discoveryTechCache[iI] != NULL )
-			{
-				g_discoveryTechCache[iI]->clear();
-			}
-		}
-
+		g_discoveryTechCache.clear();
 		g_cachedTurn = GC.getGame().getGameTurn();
 	}
 
-	std::map<UnitTypes,TechTypes>::const_iterator itr = g_discoveryTechCache[ePlayer]->find(eUnit);
-	if ( itr == g_discoveryTechCache[ePlayer]->end() )
+	// After the first turn this should not cause any allocation to occur as the max size required will have been reserved
+	g_discoveryTechCache.resize(std::max(g_discoveryTechCache.size(), static_cast<size_t>(ePlayer) + 1));
+
+	TechTypes eBestTech = NO_TECH;
+	stdext::hash_map<UnitTypes,TechTypes>::const_iterator itr = g_discoveryTechCache[ePlayer].find(eUnit);
+	if ( itr == g_discoveryTechCache[ePlayer].end() )
 	{
-		int* paiBonusClassRevealed = new int[GC.getNumBonusClassInfos()];
-		int* paiBonusClassUnrevealed = new int[GC.getNumBonusClassInfos()];
-		int* paiBonusClassHave = new int[GC.getNumBonusClassInfos()];
+		CvPlayerAI& kPlayer = GET_PLAYER(ePlayer);
+		CvTeam& kTeam = GET_TEAM(kPlayer.getTeam());
+
+		int iBestValue = 0;
+
+		std::vector<int> paiBonusClassRevealed(GC.getNumBonusClassInfos());
+		std::vector<int> paiBonusClassUnrevealed(GC.getNumBonusClassInfos());
+		std::vector<int> paiBonusClassHave(GC.getNumBonusClassInfos());
+
 		bool bBonusArrayCalculated = false;
-		int iJ;
 
 		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 		{
@@ -1557,7 +1551,7 @@ TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer)
 			{
 				int iValue = 0;
 
-				for (iJ = 0; iJ < GC.getNumFlavorTypes(); iJ++)
+				for (int iJ = 0; iJ < GC.getNumFlavorTypes(); iJ++)
 				{
 					iValue += (GC.getTechInfo((TechTypes) iI).getFlavorValue(iJ) * GC.getUnitInfo(eUnit).getFlavorValue(iJ));
 				}
@@ -1570,14 +1564,11 @@ TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer)
 					{
 						bBonusArrayCalculated = true;
 
-						for (iJ = 0; iJ < GC.getNumBonusClassInfos(); iJ++)
-						{
-							paiBonusClassRevealed[iJ] = 0;
-							paiBonusClassUnrevealed[iJ] = 0;
-							paiBonusClassHave[iJ] = 0;	    
-						}
-						
-						for (iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
+						std::fill(paiBonusClassRevealed.begin(), paiBonusClassRevealed.end(), 0);
+						std::fill(paiBonusClassUnrevealed.begin(), paiBonusClassUnrevealed.end(), 0);
+						std::fill(paiBonusClassHave.begin(), paiBonusClassHave.end(), 0);
+
+						for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
 						{
 							TechTypes eRevealTech = (TechTypes)GC.getBonusInfo((BonusTypes)iJ).getTechReveal();
 							BonusClassTypes eBonusClass = (BonusClassTypes)GC.getBonusInfo((BonusTypes)iJ).getBonusClassType();
@@ -1604,7 +1595,7 @@ TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer)
 						}
 					}
 
-					if (kPlayer.AI_techValue((TechTypes)iI, 1, true, kPlayer.isHuman(), paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave) > 1)
+					if (kPlayer.AI_techValue((TechTypes)iI, 1, true, kPlayer.isHuman(), &paiBonusClassRevealed[0], &paiBonusClassUnrevealed[0], &paiBonusClassHave[0]) > 1)
 					{
 						iBestValue = iValue;
 						eBestTech = ((TechTypes)iI);
@@ -1613,11 +1604,7 @@ TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer)
 			}
 		}
 
-		SAFE_DELETE_ARRAY(paiBonusClassRevealed);
-		SAFE_DELETE_ARRAY(paiBonusClassUnrevealed);
-		SAFE_DELETE_ARRAY(paiBonusClassHave);
-
-		g_discoveryTechCache[ePlayer]->insert(std::make_pair(eUnit,eBestTech));
+		g_discoveryTechCache[ePlayer].insert(std::make_pair(eUnit,eBestTech));
 	}
 	else
 	{
@@ -2162,15 +2149,13 @@ int pathDestValid(int iToX, int iToY, const void* pointer, FAStar* finder)
 	CvPlot* pFromPlot;
 
 	pToPlot = GC.getMapExternal().plot(iToX, iToY);
-	FAssert(pToPlot != NULL);
-
 	pFromPlot = GC.getMapExternal().plot(gDLL->getFAStarIFace()->GetStartX(finder), gDLL->getFAStarIFace()->GetStartY(finder));
-	FAssert(pFromPlot != NULL);
 
 	//	Safety valve since minidumps have shown that this (unknown how) can still occassionally
 	//	happen (attempt to generate a path that starts or ends off the viewport)
 	if ( pToPlot == NULL || pFromPlot == NULL )
 	{
+		FErrorMsg("Both plots must be valid");
 		return FALSE;
 	}
 
@@ -4585,7 +4570,7 @@ int getTurnYearForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, G
 		}
 		return CvDate::getDate(iGameTurn, eSpeed).getYear();
 	}
-	return (getTurnMonthForGame(iGameTurn, iStartYear, eCalendar, eSpeed) / GC.getNumMonthInfos());
+	return getTurnMonthForGame(iGameTurn, iStartYear, eCalendar, eSpeed) / std::max(1, GC.getNumMonthInfos());
 }
 
 
@@ -4645,7 +4630,7 @@ int getTurnMonthForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, 
 		break;
 
 	case CALENDAR_SEASONS:
-		iTurnMonth += (iGameTurn * GC.getNumMonthInfos()) / GC.getNumSeasonInfos();
+		iTurnMonth += (iGameTurn * GC.getNumMonthInfos()) / std::max(1, GC.getNumSeasonInfos());
 		break;
 
 	case CALENDAR_MONTHS:
@@ -4653,7 +4638,7 @@ int getTurnMonthForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, 
 		break;
 
 	case CALENDAR_WEEKS:
-		iTurnMonth += iGameTurn / GC.getDefineINT("WEEKS_PER_MONTHS");
+		iTurnMonth += iGameTurn / std::max(1, GC.getDefineINT("WEEKS_PER_MONTHS"));
 		break;
 
 	default:

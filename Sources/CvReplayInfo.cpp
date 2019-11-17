@@ -4,23 +4,24 @@
 
 int CvReplayInfo::REPLAY_VERSION = 4;
 
-CvReplayInfo::CvReplayInfo() :
-	m_iActivePlayer(0),
-	m_eDifficulty(NO_HANDICAP),
-	m_eWorldSize(NO_WORLDSIZE),
-	m_eClimate(NO_CLIMATE),
-	m_eSeaLevel(NO_SEALEVEL),
-	m_eEra(NO_ERA),
-	m_eGameSpeed(NO_GAMESPEED),
-	m_iInitialTurn(0),
-	m_iFinalTurn(0),
-	m_eVictoryType(NO_VICTORY),
-	m_iMapHeight(0),
-	m_iMapWidth(0),
-	m_pcMinimapPixels(NULL),
-	m_iNormalizedScore(0),
-	m_bMultiplayer(false),
-	m_iStartYear(0)
+CvReplayInfo::CvReplayInfo()
+	: m_iActivePlayer(0)
+	, m_eDifficulty(NO_HANDICAP)
+	, m_eWorldSize(NO_WORLDSIZE)
+	, m_eClimate(NO_CLIMATE)
+	, m_eSeaLevel(NO_SEALEVEL)
+	, m_eEra(NO_ERA)
+	, m_eGameSpeed(NO_GAMESPEED)
+	, m_iInitialTurn(0)
+	, m_iFinalTurn(0)
+	, m_eVictoryType(NO_VICTORY)
+	, m_iMapHeight(0)
+	, m_iMapWidth(0)
+	, m_pcMinimapPixels(NULL)
+	, m_iNormalizedScore(0)
+	, m_bMultiplayer(false)
+	, m_iStartYear(0)
+	, m_eCalendar(NO_CALENDAR)
 {
 	m_nMinimapSize = ((GC.getDefineINT("MINIMAP_RENDER_SIZE") * GC.getDefineINT("MINIMAP_RENDER_SIZE")) / 2); 
 }

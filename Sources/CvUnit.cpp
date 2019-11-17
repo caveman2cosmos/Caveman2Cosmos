@@ -1065,92 +1065,19 @@ void CvUnit::convert(CvUnit* pUnit)
 		}
 		checkPromotionObsoletion();
 		checkFreetoCombatClass();
-		if (iTotalGroupOffset != 0)
-		{
-			while (iTotalGroupOffset > 0)
-			{
-				bSet = false;
-				for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-				{
-					if ((GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() > 0 && canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-						(GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() > 0 && canAcquirePromotion((PromotionTypes)iI)))
-					{
-						setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						iTotalGroupOffset--;
-						bSet = true;
-						break;
-					}
-				}
-				if (!bSet)
-				{
-					iTotalGroupOffset--;
-					FAssertMsg(bSet, "Unit cannot find a valid Group Upgrade Promotion");
-				}
-			}
-			while (iTotalGroupOffset < 0)
-			{
-				bSet = false;
-				for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-				{
-					if ((GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() < 0 && canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-						(GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() < 0 && canAcquirePromotion((PromotionTypes)iI)))
-					{
-						setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						iTotalGroupOffset++;
-						bSet = true;
-						break;
-					}
-				}
-				if (!bSet)
-				{
-					iTotalGroupOffset++;
-					FAssertMsg(bSet, "Unit cannot find a valid Group Downgrade Promotion");
-				}
-			}
-		}
-		if (iTotalQualityOffset != 0)
-		{
-			while (iTotalQualityOffset > 0)
-			{
-				bSet = false;
-				for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-				{
-					if ((GC.getPromotionInfo((PromotionTypes)iI).getQualityChange() > 0 && canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-						(GC.getPromotionInfo((PromotionTypes)iI).getQualityChange() > 0 && canAcquirePromotion((PromotionTypes)iI)))
-					{
-						setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						iTotalQualityOffset--;
-						bSet = true;
-						break;
-					}
-				}
-				if (!bSet)
-				{
-					iTotalQualityOffset--;
-					FAssertMsg(bSet, "Unit cannot find a valid Quality Upgrade Promotion");
-				}
-			}
-			while (iTotalQualityOffset < 0)
-			{
-				bSet = false;
-				for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-				{
-					if ((GC.getPromotionInfo((PromotionTypes)iI).getQualityChange() < 0 && canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-						(GC.getPromotionInfo((PromotionTypes)iI).getQualityChange() < 0 && canAcquirePromotion((PromotionTypes)iI)))
-					{
-						setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						iTotalQualityOffset++;
-						bSet = true;
-						break;
-					}
-				}
-				if (!bSet)
-				{
-					iTotalQualityOffset++;
-					FAssertMsg(bSet, "Unit cannot find a valid Quality Downgrade Promotion");
-				}
-			}
-		}
+
+		bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(this, iTotalGroupOffset,
+			boost::bind(&CvUnit::isGroupUpgradePromotion, this, _2),
+			boost::bind(&CvUnit::isGroupDowngradePromotion, this, _2)
+		);
+		FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on converted unit");
+
+		bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(this, iTotalQualityOffset,
+			boost::bind(&CvUnit::isQualityUpgradePromotion, this, _2),
+			boost::bind(&CvUnit::isQualityDowngradePromotion, this, _2)
+		);
+		FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on converted unit");
+
 		checkFreetoCombatClass();
 	}
 
@@ -3562,11 +3489,13 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 		PROFILE("CvUnit::updateCombat.Finish");
 		
 		bStealthDefense =	m_combatResult.bStealthDefense;
+#ifdef STRENGTH_IN_NUMBERS
 		//TB Combat Mod begin
 		if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 		{
 			ClearSupports();
 		}
+#endif // STRENGTH_IN_NUMBERS
 		if (bVisible)
 		{
 			if (isCombatFocus() && gDLL->getInterfaceIFace()->isCombatFocus())
@@ -6006,7 +5935,7 @@ bool CvUnit::canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bT
 		if ((PromotionTypes)iData1 != NO_PROMOTION)
 		{//TBHERE
 			bool bIsQuick = GC.getPromotionInfo((PromotionTypes)iData1).isQuick();
-			if ((!hasMoved() || (canMove() && bIsQuick)) && canAcquirePromotion((PromotionTypes)iData1, false, false, false, false, false, false, false, false, true))
+			if ((!hasMoved() || (canMove() && bIsQuick)) && canAcquirePromotion((PromotionTypes)iData1, PromotionRequirements::ForStatus))
 			{
 				return true;
 			}
@@ -7197,10 +7126,12 @@ void CvUnit::attack(CvPlot* pPlot, bool bQuick, bool bStealth, bool bNoCache)
 			}
 		}
 		CvPlot* aPlot = plot();
+#ifdef STRENGTH_IN_NUMBERS
 		if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 		{
 			setAttackFromPlot(aPlot);
 		}
+#endif // STRENGTH_IN_NUMBERS
 		//TB Combat Mods end
 		setAttackPlot(pPlot, false);
 
@@ -7221,11 +7152,11 @@ void CvUnit::fightInterceptor(const CvPlot* pPlot, bool bQuick)
 void CvUnit::attackForDamage(CvUnit *pDefender, int attackerDamageChange, int defenderDamageChange)
 {
 	FAssert(getCombatTimer() == 0);
-	FAssert(pDefender != NULL);
 	FAssert(!isFighting());
 
 	if(pDefender == NULL)
 	{
+		FErrorMsg("Defender cannot be NULL");
 		return;
 	}
 
@@ -7234,6 +7165,7 @@ void CvUnit::attackForDamage(CvUnit *pDefender, int attackerDamageChange, int de
 	CvPlot* pPlot = getAttackPlot();
 	if (pPlot == NULL)
 	{
+		FErrorMsg("Plot was NULL");
 		return;
 	}
 
@@ -7918,7 +7850,7 @@ void CvUnit::scrap()
 		iCost += (iCost * getUpgradeDiscount())/100;
 		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
-			iCost = processIntegerbySizeMatters(iCost);
+			iCost = applySMRank(iCost, getSizeMattersOffsetValue(), GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
 		}
 		iCost = std::max(1, iCost);
 		GET_PLAYER(getOwnerINLINE()).changeGold(iCost);
@@ -12682,7 +12614,7 @@ int CvUnit::getTradeGold(const CvPlot* pPlot) const
  
 	CvPlot* cPlot = GC.getMapINLINE().plotINLINE(m_iXOrigin, m_iYOrigin);
 	int iMaxDistance = GC.getMapINLINE().maxPlotDistance();
-	if (cPlot != NULL && pPlot != NULL)
+	if (cPlot != NULL)
 	{
 		iGold *= iMaxDistance + plotDistance(m_iXOrigin, m_iYOrigin, pPlot->getX_INLINE(), pPlot->getY_INLINE());
 		iGold /= iMaxDistance;
@@ -13516,7 +13448,7 @@ int CvUnit::getSpyInterceptPercent(TeamTypes eTargetTeam) const
 		if(plot()->plotCheck(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, eTargetTeam))
 		{
 			CvUnit* pCounterUnit = plot()->plotCheck(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, eTargetTeam);
-			if(pCounterUnit->getExtraIntercept())
+			if(pCounterUnit != NULL && pCounterUnit->getExtraIntercept())
 				iSuccess += pCounterUnit->getExtraIntercept();
 		}
 		//TSHEEP end
@@ -13773,8 +13705,14 @@ bool CvUnit::canPromote(PromotionTypes ePromotion, int iLeaderUnitId) const
 	//thus find there was an existing promotion possible by only checking against canAcquirePromotion and not including the rest of these checks.
 	//By making bForLeader a default false, this will only make it possible to pass true on that check on a leader promotion in canAcquirePromotion if the
 	//check is specfically to see if the unit can in all other ways qualify for the leader promo.
-	bool bForLeader = (iLeaderUnitId >= 0);
-	if (!canAcquirePromotion(ePromotion, false, false, false, true, bForLeader))
+	PromotionRequirements::flags promoFlags = PromotionRequirements::Promote;
+
+	if (iLeaderUnitId >= 0)
+	{
+		promoFlags |= PromotionRequirements::ForLeader;
+	}
+
+	if (!canAcquirePromotion(ePromotion, promoFlags))
 	{
 		return false;
 	}
@@ -13802,11 +13740,11 @@ bool CvUnit::canPromote(PromotionTypes ePromotion, int iLeaderUnitId) const
 	return true;
 }
 
-void CvUnit::promote(PromotionTypes ePromotion, int iLeaderUnitId)
+bool CvUnit::promote(PromotionTypes ePromotion, int iLeaderUnitId)
 {
 	if (!canPromote(ePromotion, iLeaderUnitId))
 	{
-		return;
+		return false;
 	}
 
 	if (iLeaderUnitId >= 0)
@@ -13871,6 +13809,8 @@ void CvUnit::promote(PromotionTypes ePromotion, int iLeaderUnitId)
 	}
 
 	CvEventReporter::getInstance().unitPromoted(this, ePromotion);
+
+	return true;
 }
 
 bool CvUnit::lead(int iUnitId)
@@ -14123,7 +14063,7 @@ int CvUnit::upgradePrice(UnitTypes eUnit) const
 
 	if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		iPrice = processIntegerbySizeMatters(iPrice);
+		iPrice = applySMRank(iPrice, getSizeMattersOffsetValue(), GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
 	}
 	return iPrice;
 }
@@ -15409,8 +15349,8 @@ int CvUnit::getExtraStrength() const
 
 void CvUnit::changeExtraStrength(int iChange)
 {
-	m_iExtraStrength +=iChange;
-	FAssert(getExtraStrength() >= 0);
+	m_iExtraStrength += iChange;
+	FAssert(m_iExtraStrength >= 0);
 }
 
 int CvUnit::getSMStrength() const
@@ -15420,36 +15360,9 @@ int CvUnit::getSMStrength() const
 
 void CvUnit::setSMStrength()
 {
-	int iStrength = baseCombatStrPreCheck();
-	if (getDomainType() == DOMAIN_AIR)
-	{
-		iStrength = baseAirCombatStrPreCheck();
-	}
-
-	int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER");
-	int iIterator = getSizeMattersOffsetValue();
-	bool bPositive = ((getSizeMattersOffsetValue() > 0) ? true : false);
-	iStrength *= 100;
-	if (bPositive)
-	{
-		for (int iI = 0; iI < iIterator; iI++)
-		{
-			iStrength *= iSMMultiplier;
-			iStrength /= 100;
-		}
-	}
-	else if (!bPositive)
-	{
-		for (int iI = 0; iI < -iIterator; iI++)
-		{
-			iStrength *= 100;
-			iStrength /= iSMMultiplier;
-		}
-	}
-	iStrength /= 100;
-
-	m_iSMStrength = iStrength;
-	FAssert(getSMStrength() >= 0);
+	int iStrength = getDomainType() == DOMAIN_AIR? baseAirCombatStrPreCheck() : baseCombatStrPreCheck();
+	m_iSMStrength = applySMRank(iStrength, getSizeMattersOffsetValue(), GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
+	FAssert(m_iSMStrength >= 0);
 }
 
 float CvUnit::fbaseCombatStr() const
@@ -15464,7 +15377,7 @@ float CvUnit::fairBaseCombatStr() const
 	return fTotal;
 }
 
-typedef struct CombatStrCacheEntry
+struct CombatStrCacheEntry
 {
 	int	iLRUIndex;
 	int iResult;
@@ -15472,10 +15385,10 @@ typedef struct CombatStrCacheEntry
 	const CvPlot* pAttackedPlot;
 	const CvUnit* pAttacker;
 	const CvUnit* pForUnit;
-} CombatStrCacheEntry;
+};
 
 #define	COMBATSTR_CACHE_SIZE	100
-static CombatStrCacheEntry	CombatStrCache[COMBATSTR_CACHE_SIZE];
+static CombatStrCacheEntry CombatStrCache[COMBATSTR_CACHE_SIZE];
 static int CombatStrCacheInitializedTurn = -1;
 static int iNextCombatCacheLRU = 1;
 
@@ -19911,11 +19824,10 @@ void CvUnit::validateCargoUnits()
 
 	if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		bool bIsLoadVolumeCorrect = (SMgetCargo() == iCheck);
-		FAssert(bIsLoadVolumeCorrect);
 		//TB: Backend cleanup - Assert is coming up and we have ghost loads so this is a quickfix only - still evaluating to see how this takes place
-		if (!bIsLoadVolumeCorrect)
+		if (SMgetCargo() != iCheck)
 		{
+			FErrorMsg("Load Volume is incorrect");
 			m_iSMCargo = 0;
 			CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
 			while (pUnitNode != NULL)
@@ -19949,10 +19861,9 @@ void CvUnit::validateCargoUnits()
 					}
 				}
 			}
-			bIsLoadVolumeCorrect = (SMgetCargo() == iCheck);
-			FAssert(bIsLoadVolumeCorrect);//If this persists, then the problem is due to having a unit that's not sharing the same plot being loaded onto the transport.
-			if (!bIsLoadVolumeCorrect)
+			if (SMgetCargo() != iCheck)
 			{
+				FErrorMsg("Load Volume is incorrect");//If this persists, then the problem is due to having a unit that's not sharing the same plot being loaded onto the transport.
 				std::vector<CvUnit*> aCargoUnits;
 				getCargoUnits(aCargoUnits);
 				for (uint i = 0; i < aCargoUnits.size(); i++)
@@ -20069,7 +19980,7 @@ void CvUnit::setFortifyTurns(int iNewValue)
 			for (int iI = 0; iI < GC.getPromotionLineInfo(ePromotionLine).getNumPromotions(); iI++)
 			{
 				PromotionTypes ePromotion = (PromotionTypes)GC.getPromotionLineInfo(ePromotionLine).getPromotion(iI);
-				if (!isHasPromotion(ePromotion) && canAcquirePromotion(ePromotion,false,false,false,false,false,false,true,true) && GC.getPromotionInfo(ePromotion).getLinePriority() <= iNewValue)
+				if (!isHasPromotion(ePromotion) && canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp) && GC.getPromotionInfo(ePromotion).getLinePriority() <= iNewValue)
 				{
 					setHasPromotion(ePromotion, true, true, false, false);
 					m_iFortifyTurns = iNewValue;
@@ -20131,7 +20042,9 @@ void CvUnit::setFortifyTurns(int iNewValue)
 					for (int iI = 0; iI < GC.getPromotionLineInfo(ePromotionLine).getNumPromotions(); iI++)
 					{
 						PromotionTypes ePromotion = (PromotionTypes)GC.getPromotionLineInfo(ePromotionLine).getPromotion(iI);
-						if (!isHasPromotion(ePromotion) && canAcquirePromotion(ePromotion,false,false,false,false,false,false,true,true) && GC.getPromotionInfo(ePromotion).getLinePriority() <= iNewValue)
+						if (!isHasPromotion(ePromotion) 
+							&& canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp) 
+							&& GC.getPromotionInfo(ePromotion).getLinePriority() <= iNewValue)
 						{
 							setHasPromotion(ePromotion, true, true, false, false);
 						}
@@ -22433,9 +22346,16 @@ void CvUnit::setPromotionReady(bool bNewValue)
 		{
 			if (isAutoPromoting())
 			{
-				AI_promote();
-				setPromotionReady(false);
-				testPromotionReady();
+				if(AI_promote())
+				{
+					setPromotionReady(false);
+					testPromotionReady();
+				}
+				else
+				{
+					setPromotionReady(false);
+					FErrorMsg("Couldn't apply promotion");
+				}
 			}
 			else 
 			{
@@ -23547,6 +23467,20 @@ void CvUnit::changeExtraUnitCombatModifier(UnitCombatTypes eIndex, int iChange)
 	}
 }
 
+bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, PromotionRequirements::flags requirements) const
+{
+	return canAcquirePromotion(ePromotion, 
+		requirements & PromotionRequirements::IgnoreHas,
+		requirements & PromotionRequirements::Equip, 
+		requirements & PromotionRequirements::Afflict, 
+		requirements & PromotionRequirements::Promote, 
+		requirements & PromotionRequirements::ForLeader, 
+		requirements & PromotionRequirements::ForOffset, 
+		requirements & PromotionRequirements::ForFree, 
+		requirements & PromotionRequirements::ForBuildUp, 
+		requirements & PromotionRequirements::ForStatus
+	);
+}
 
 bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, bool bEquip, bool bAfflict, bool bPromote, bool bForLeader, bool bForOffset, bool bForFree, bool bForBuildUp, bool bForStatus) const
 {
@@ -24539,8 +24473,12 @@ bool CvUnit::canAcquirePromotionAny() const
 		//{
 		//	bPromote = true;
 		//}
-		bool bForLeader = GC.getPromotionInfo(ePromotion).isLeader();
-		if (canAcquirePromotion(ePromotion, false, false, true, bForLeader))
+		PromotionRequirements::flags promoFlags = PromotionRequirements::Promote;
+		if (GC.getPromotionInfo(ePromotion).isLeader())
+		{
+			promoFlags |= PromotionRequirements::ForLeader;
+		}
+		if (canAcquirePromotion(ePromotion, promoFlags))
 		{
 			return true;
 		}
@@ -24898,11 +24836,15 @@ void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPro
 	{
 		changeExtraAidChange((PropertyTypes)iI, kUnitCombat.getAidChange(iI) * iChange);//no merge/split
 	}
+
+#ifdef STRENGTH_IN_NUMBERS
 	changeExtraFrontSupportPercent(kUnitCombat.getFrontSupportPercentChange() * iChange);//no merge/split
 	changeExtraShortRangeSupportPercent(kUnitCombat.getShortRangeSupportPercentChange() * iChange);//no merge/split
 	changeExtraMediumRangeSupportPercent(kUnitCombat.getMediumRangeSupportPercentChange() * iChange);//no merge/split
 	changeExtraLongRangeSupportPercent(kUnitCombat.getLongRangeSupportPercentChange() * iChange);//no merge/split
 	changeExtraFlankSupportPercent(kUnitCombat.getFlankSupportPercentChange() * iChange);//no merge/split
+#endif // STRENGTH_IN_NUMBERS
+
 	changeExtraDodgeModifier(kUnitCombat.getDodgeModifierChange() * iChange);//no merge/split
 	changeExtraPrecisionModifier(kUnitCombat.getPrecisionModifierChange() * iChange);//no merge/split
 	changeExtraPowerShots(kUnitCombat.getPowerShotsChange() * iChange);//no merge/split
@@ -25535,11 +25477,15 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	{
 		changeExtraAidChange((PropertyTypes)iI, kPromotion.getAidChange(iI) * iChange);
 	}
+
+#ifdef STRENGTH_IN_NUMBERS
 	changeExtraFrontSupportPercent(kPromotion.getFrontSupportPercentChange() * iChange);
 	changeExtraShortRangeSupportPercent(kPromotion.getShortRangeSupportPercentChange() * iChange);
 	changeExtraMediumRangeSupportPercent(kPromotion.getMediumRangeSupportPercentChange() * iChange);
 	changeExtraLongRangeSupportPercent(kPromotion.getLongRangeSupportPercentChange() * iChange);
 	changeExtraFlankSupportPercent(kPromotion.getFlankSupportPercentChange() * iChange);
+#endif // STRENGTH_IN_NUMBERS
+
 	changeExtraDodgeModifier(kPromotion.getDodgeModifierChange() * iChange);
 	changeExtraPrecisionModifier(kPromotion.getPrecisionModifierChange() * iChange);
 	changeExtraPowerShots(kPromotion.getPowerShotsChange() * iChange);
@@ -25913,6 +25859,17 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	establishBuildups();
 }
 
+void CvUnit::setHasPromotion(PromotionTypes eIndex, PromotionApply::flags flags)
+{
+	setHasPromotion(eIndex, 
+		flags & PromotionApply::NewValue, 
+		flags & PromotionApply::Free, 
+		flags & PromotionApply::Dying, 
+		flags & PromotionApply::Initial, 
+		flags & PromotionApply::FromTrait
+	);
+}
+
 void CvUnit::setHasPromotion(PromotionTypes eIndex, bool bNewValue, bool bFree, bool bDying, bool bInitial, bool bFromTrait)
 {
 	PROFILE_FUNC();
@@ -25923,10 +25880,12 @@ void CvUnit::setHasPromotion(PromotionTypes eIndex, bool bNewValue, bool bFree, 
 	//PromotionTypes eEvalPromotion;
 	//TB Combat Mods End
 
-	FAssert(eIndex > -1);
-	FAssert(eIndex < GC.getNumPromotionInfos());
+	FAssertMsg(eIndex < GC.getNumPromotionInfos(), "Invalid promotion");
 	if(eIndex == NO_PROMOTION)
+	{
+		FErrorMsg("Invalid promotion");
 		return;
+	}
 
 /************************************************************************************************/
 /* SUPER_SPIES                             05/24/08                                TSheep       */
@@ -25990,7 +25949,10 @@ void CvUnit::setHasPromotion(PromotionTypes eIndex, bool bNewValue, bool bFree, 
 			//	When trying to add a promotion check we are allowd to have it.
 			//	Note - this check filters out attempts to set lower priority equipment
 			//	or afflication promotions from the same line as an existing one that has a higher priority
-			canPromote = canAcquirePromotion(eIndex, false, GC.getPromotionInfo(eIndex).isEquipment(), GC.getPromotionInfo(eIndex).isAffliction(), false);
+			PromotionRequirements::flags promoFlags = PromotionRequirements::None;
+			if (GC.getPromotionInfo(eIndex).isEquipment()) promoFlags |= PromotionRequirements::Equip;
+			if (GC.getPromotionInfo(eIndex).isAffliction()) promoFlags |= PromotionRequirements::Afflict;
+			canPromote = canAcquirePromotion(eIndex, promoFlags);
 		}
 
 
@@ -26087,6 +26049,47 @@ void CvUnit::setHasPromotion(PromotionTypes eIndex, bool bNewValue, bool bFree, 
 	}
 }//TB Combat Mods end
 
+bool CvUnit::applyUnitPromotions(const std::vector<CvUnit*>& units, int number, PromotionPredicateFn promotionPredicateFn)
+{
+	FAssertMsg(number >= 0, "Number of promotions to apply cannot be negative");
+
+	if (units.size() == 0)
+		return true;
+
+	while (number > 0)
+	{
+		PromotionTypes foundPromo = GC.findPromotion(promotionPredicateFn);
+		if (foundPromo == NO_PROMOTION)
+			break;
+		for (std::vector<CvUnit*>::const_iterator itr = units.begin(); itr != units.end(); ++itr)
+		{
+			(*itr)->setHasPromotion(foundPromo, PromotionApply::NewValue | PromotionApply::Free);
+		}
+		number--;
+	}
+	return number == 0;
+}
+
+bool CvUnit::applyUnitPromotions(CvUnit* unit, int number, PromotionPredicateFn promotionPredicateFn)
+{
+	std::vector<CvUnit*> units;
+	units.push_back(unit);
+	return applyUnitPromotions(units, number, promotionPredicateFn);
+}
+
+bool CvUnit::normalizeUnitPromotions(const std::vector<CvUnit*>& units, int offset, PromotionPredicateFn upgradePredicateFn, PromotionPredicateFn downgradePredicateFn)
+{
+	if (offset == 0)
+		return true;
+	return applyUnitPromotions(units, std::abs(offset), offset > 0 ? upgradePredicateFn : downgradePredicateFn);
+}
+
+bool CvUnit::normalizeUnitPromotions(CvUnit* unit, int offset, PromotionPredicateFn upgradePredicateFn, PromotionPredicateFn downgradePredicateFn)
+{
+	if (offset == 0)
+		return true;
+	return applyUnitPromotions(unit, std::abs(offset), offset > 0 ? upgradePredicateFn : downgradePredicateFn);
+}
 
 UnitCombatTypes CvUnit::getBestHealingType()
 {
@@ -29334,11 +29337,12 @@ void CvUnit::rBombardCombat(const CvPlot* pPlot, CvUnit* pFirstUnit)
 				//int iOverrunMod = overrunTotal();
 				//int iFortDef = pBestUnit->fortifyCollateralDefenseModifier() - iOverrunMod;
 				//int iFortDefzero = iFortDef < 0 ? 0 : iFortDef;
-				int iStdDef = pBestUnit->getCollateralDamageProtection();
-				int iUncheckedDef = /*iFortDefzero +*/ iStdDef;
-				int iUncheckedDefzero = iUncheckedDef < 0 ? 0 : iUncheckedDef;
-				int iCollatDef = iUncheckedDefzero > 100 ? 100 : iUncheckedDefzero;
-				iRBombardDamage += -((iRBombardDamage *= (100 - iCollatDef))/100);
+				//int iStdDef = pBestUnit->getCollateralDamageProtection();
+				//int iUncheckedDef = /*iFortDefzero +*/ iStdDef;
+				//int iUncheckedDefzero = std::max(0, iStdDef);
+				int iCollatDef = std::max(0, std::min(pBestUnit->getCollateralDamageProtection(), 100));
+				// Reduce bombard damage based on collatoral damage protection factor
+				iRBombardDamage -= (iRBombardDamage * iCollatDef) / 100;
 				//TB Combat Mods end
 				iRBombardDamage /= 100;
 
@@ -30383,13 +30387,6 @@ int CvUnit::getDropRange() const
 void CvUnit::getDefenderCombatValues(CvUnit& kDefender, const CvPlot* pPlot, int iOurStrength, int iOurFirepower, int& iTheirOdds, int& iTheirStrength, int& iOurDamage, int& iTheirDamage, CombatDetails* pTheirDetails, CvUnit* pDefender) const
 {
 	//TB Combat Mod begin
-	int iTheirSupportStrength = 0;
-	int iOurSupportStrength = 0;
-	if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
-	{
-		iTheirSupportStrength = kDefender.getDefenderSupportValue(this);
-		iOurSupportStrength = getAttackerSupportValue();
-	}
 	iTheirStrength = std::max(1,kDefender.currCombatStr(pPlot, this, pTheirDetails));
 	int iTheirFirepower = std::max(1,kDefender.currFirepower(pPlot, this));
 
@@ -30404,10 +30401,17 @@ void CvUnit::getDefenderCombatValues(CvUnit& kDefender, const CvPlot* pPlot, int
 		iOurFirepower += ((iOurFirepower * powerShotCombatModifierTotal())/100);
 	}
 
-	iOurStrength += iOurSupportStrength;
-	iOurFirepower += iOurSupportStrength;	
-	iTheirStrength += iTheirSupportStrength;
-	iTheirFirepower += iTheirSupportStrength;
+#ifdef STRENGTH_IN_NUMBERS
+	if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	{
+		int iTheirSupportStrength = kDefender.getDefenderSupportValue(this);
+		int iOurSupportStrength = getAttackerSupportValue();
+		iOurStrength += iOurSupportStrength;
+		iOurFirepower += iOurSupportStrength;	
+		iTheirStrength += iTheirSupportStrength;
+		iTheirFirepower += iTheirSupportStrength;
+	}
+#endif // STRENGTH_IN_NUMBERS
 	
 	//TB Combat Mod end
 
@@ -30589,16 +30593,19 @@ bool CvUnit::canApplyEvent(EventTypes eEvent) const
 
 	if (NO_PROMOTION != kEvent.getUnitPromotion())
 	{
-	//TB Combat Mods begin
-		bool bEquip = GC.getPromotionInfo((PromotionTypes)kEvent.getUnitPromotion()).isEquipment();
-		bool bAfflict = GC.getPromotionInfo((PromotionTypes)kEvent.getUnitPromotion()).isAffliction();
-		bool bPromote = true;
-		if (bEquip || bAfflict)
-		{
-			bPromote = false;
-		}
-		bool bForLeader = GC.getPromotionInfo((PromotionTypes)kEvent.getUnitPromotion()).isLeader();
-		if (!canAcquirePromotion((PromotionTypes)kEvent.getUnitPromotion(), false, bEquip, bAfflict, bPromote, bForLeader))
+		//TB Combat Mods begin
+		const CvPromotionInfo& promo = GC.getPromotionInfo((PromotionTypes)kEvent.getUnitPromotion());
+
+		// Todo: surely canAcquirePromotion can work out these flags if it knows what promotion you are 
+		// asking about? Smells fishy that we have to set them here.
+		PromotionRequirements::flags promoFlags = PromotionRequirements::None;
+		if (promo.isEquipment()) promoFlags |= PromotionRequirements::Equip;
+		if (promo.isAffliction()) promoFlags |= PromotionRequirements::Afflict;
+
+		if (promoFlags == PromotionRequirements::None) promoFlags = PromotionRequirements::Promote;
+		if (promo.isLeader()) promoFlags |= PromotionRequirements::ForLeader;
+
+		if (!canAcquirePromotion((PromotionTypes)kEvent.getUnitPromotion(), promoFlags))
 		//TB Combat Mods end
 		{
 			return false;
@@ -32853,7 +32860,7 @@ void CvUnit::doActiveDefense()
 // Dale - SA: Active Defense END
 
 // Dale - ARB: Archer Bombard START
-bool CvUnit::canArcherBombard(const CvPlot* pPlot) const
+bool CvUnit::canArcherBombard() const
 {
 	if(!GC.isDCM_ARCHER_BOMBARD())
 	{
@@ -32882,28 +32889,30 @@ bool CvUnit::canArcherBombard(const CvPlot* pPlot) const
 	return true;
 }
 
-bool CvUnit::canArcherBombardAt(const CvPlot* pPlot, int iX, int iY) const
+bool CvUnit::canArcherBombardAt(const CvPlot* fromPlot, int iX, int iY) const
 {
-	CvPlot* pTargetPlot;
-	if (!canArcherBombard(pPlot))
+	if (!canArcherBombard())
 	{
 		return false;
 	}
 
-	if(iX < 0 || iY < 0)
-	{
-		return false;
-	}
-	pTargetPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	CvPlot* pTargetPlot = GC.getMapINLINE().plotINLINE(iX, iY);
 
-	if (plotDistance(pPlot->getX_INLINE(), pPlot->getY_INLINE(), pTargetPlot->getX_INLINE(), pTargetPlot->getY_INLINE()) > 1)
+	if (!pTargetPlot)
 	{
 		return false;
 	}
+
+	if (plotDistance(fromPlot->getX_INLINE(), fromPlot->getY_INLINE(), pTargetPlot->getX_INLINE(), pTargetPlot->getY_INLINE()) > 1)
+	{
+		return false;
+	}
+
 	if(pTargetPlot->getNumVisiblePotentialEnemyDefenders(this) == 0)
 	{
 		return false;
 	}
+
 	if (pTargetPlot->isOwned())
 	{
 		if(pTargetPlot->getTeam() != getTeam())
@@ -32914,6 +32923,7 @@ bool CvUnit::canArcherBombardAt(const CvPlot* pPlot, int iX, int iY) const
 			}
 		}
 	}
+
 	return true;
 }
 
@@ -33063,7 +33073,7 @@ bool CvUnit::archerBombard(int iX, int iY, bool supportAttack)
 // Dale - ARB: Archer Bombard END
 
 // Dale - FE: Fighters START
-bool CvUnit::canFEngage(const CvPlot* pPlot) const
+bool CvUnit::canFEngage() const
 {
 	if(!GC.isDCM_FIGHTER_ENGAGE())
 	{
@@ -33093,7 +33103,7 @@ bool CvUnit::canFEngageAt(const CvPlot* pPlot, int iX, int iY) const
 	CvPlot* pTargetPlot;
 	int iI, iLoop;
 	CvUnit* pLoopUnit;
-	if (!canFEngage(pPlot))
+	if (!canFEngage())
 	{
 		return false;
 	}
@@ -34711,9 +34721,9 @@ CvUnit* CvUnit::getCommander() const
 		{
 			CvUnit* pCommander = kPlayer.Commanders[i];
 			CvPlot* pCommPlot = pCommander->plot();
-			FAssertMsg(pCommPlot != NULL, "Commander Should Exist!");
 			if (pCommPlot == NULL)
 			{
+				FErrorMsg("Commander Should Exist!");
 				continue;
 			}
 			int iDistance = plotDistance(pCommPlot->getX_INLINE(), pCommPlot->getY_INLINE(), plot()->getX_INLINE(), plot()->getY_INLINE());
@@ -34904,444 +34914,400 @@ PlayerTypes CvUnit::getOriginalOwner() const
 	return m_eOriginalOwner;
 }
 
-void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, CombatDetails cdDefenderDetails, const CvPlot* pPlot, bool bAttackerHasLostNoHP, bool bAttackerWithdrawn, int iAttackerInitialDamage, int iWinningOdds, int iInitialAttXP, int iInitialAttGGXP, int iDefenderInitialDamage, int iInitialDefXP, int iInitialDefGGXP, bool &bAttackerPromoted, bool &bDefenderPromoted, int iNonLethalAttackWinChance, int iNonLethalDefenseWinChance, int iDefenderFirstStrikes, int iAttackerFirstStrikes)
+void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdDefenderDetails, const CvPlot* pPlot, bool bAttackerHasLostNoHP, bool bAttackerWithdrawn, int iAttackerInitialDamage, int iWinningOdds, int iInitialAttXP, int iInitialAttGGXP, int iDefenderInitialDamage, int iInitialDefXP, int iInitialDefGGXP, bool& bAttackerPromoted, bool& bDefenderPromoted, int iNonLethalAttackWinChance, int iNonLethalDefenseWinChance, int iDefenderFirstStrikes, int iAttackerFirstStrikes)
 {
-	if (GC.getGameINLINE().getModderGameOption(MODDERGAMEOPTION_BATTLEFIELD_PROMOTIONS))
+	if (!GC.getGameINLINE().getModderGameOption(MODDERGAMEOPTION_BATTLEFIELD_PROMOTIONS) ||
+		getUnitCombatType() == NO_UNITCOMBAT || pDefender->getUnitCombatType() == NO_UNITCOMBAT)
 	{
-		if (getUnitCombatType() != NO_UNITCOMBAT && pDefender->getUnitCombatType() != NO_UNITCOMBAT)
+		return;
+	}
+
+	std::vector<PromotionTypes> aAttackerAvailablePromotions;
+	std::vector<PromotionTypes> aDefenderAvailablePromotions;
+	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+	{
+		const PromotionTypes promotionType = static_cast<PromotionTypes>(iI);
+		const CvPromotionInfo& kPromotion = GC.getPromotionInfo(promotionType);
+		/* Block These Promotions */
+		if (kPromotion.getKamikazePercent() > 0 ||
+			kPromotion.isLeader() ||
+			kPromotion.hasNegativeEffects())
 		{
-			std::vector<PromotionTypes> aAttackerAvailablePromotions;
-			std::vector<PromotionTypes> aDefenderAvailablePromotions;
-			int iI;
-			for (iI = 0; iI < GC.getNumPromotionInfos(); iI++)	//loop through promotions
+			continue;
+		}
+		//TB Combat Mods Begin
+		if (pDefender->isDead() || m_combatResult.bDefenderKnockedBack)
+		{
+			if (!canAcquirePromotion(promotionType)) //attacker can not acquire this promotion
 			{
-				CvPromotionInfo &kPromotion = GC.getPromotionInfo((PromotionTypes)iI);
-				/* Block These Promotions */	
-				if (kPromotion.getKamikazePercent() > 0)
-					continue;
-				if (kPromotion.getStateReligionPrereq() != NO_RELIGION)
-				{
-					if (GET_PLAYER(getOwnerINLINE()).getStateReligion() != kPromotion.getStateReligionPrereq())
-						continue;
-				}
-				if (kPromotion.isLeader())
-					continue;
-				/* Block These Promotions */
-				//TB Combat Mods Begin
-				if (pDefender->isDead() || m_combatResult.bDefenderKnockedBack)
-				{					
-					if (!canAcquirePromotion((PromotionTypes)iI, false, false, false, true)) //attacker can not acquire this promotion
-					{
-						continue;
-					}
-					if (kPromotion.getPursuitChange() < 0 ||
-						kPromotion.getOverrunChange() < 0 ||
-						kPromotion.getUnyieldingChange() < 0 ||
-						kPromotion.getKnockbackChange() < 0 ||
-						kPromotion.getLungeChange() < 0 ||
-						kPromotion.getDodgeModifierChange() < 0 ||
-						kPromotion.getPrecisionModifierChange() < 0 ||
-						kPromotion.getCriticalModifierChange() < 0 ||
-						kPromotion.getEnduranceChange() < 0 ||
-						kPromotion.getFirstStrikesChange() < 0 ||
-						kPromotion.getChanceFirstStrikesChange() < 0 ||
-						kPromotion.getVSBarbsChange() < 0 ||
-						kPromotion.getStrengthChange() < 0 ||
-						kPromotion.getAttackCombatModifierChange() < 0 ||
-						kPromotion.getCombatPercent() < 0 ||
-						kPromotion.getDefenseOnlyChange() > 0 ||
-						kPromotion.getNoInvisibilityChange() > 0 ||
-						kPromotion.getHiddenNationalityChange() != 0)
-					{
-						continue;
-					}
-					//* attacker may recieve pursuit
-					if (m_combatResult.bDefenderWithdrawn && kPromotion.getPursuitChange() > 0)
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					
-					if (m_combatResult.bDefenderPursued && kPromotion.getPursuitChange() > 0)
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* attacker was attacking a fortified defender and may recieve Overrun
-					if (cdDefenderDetails.iFortifyModifier > 0 && kPromotion.getOverrunChange() > 0)
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* attacker was unyielding against a Repel
-					if (m_combatResult.bAttackerRefusedtoYield && kPromotion.getUnyieldingChange() > 0)
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* attacker Knocked back defender
-					if (m_combatResult.bDefenderKnockedBack && kPromotion.getKnockbackChange() > 0)
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* attacker was attacking with S&D bonus
-					if (kPromotion.getLungeChange() > 0 && surroundedDefenseModifier(pPlot, pDefender) != 0)
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* attacker had less dodge than defender's precision
-					if (kPromotion.getDodgeModifierChange() > 0 && (dodgeVSOpponentProbTotal(pDefender) < pDefender->precisionVSOpponentProbTotal(this)))
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* defender had more dodge than attacker's precision
-					if (kPromotion.getPrecisionModifierChange() > 0 && (pDefender->dodgeVSOpponentProbTotal(this) > precisionVSOpponentProbTotal(pDefender)))
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* attacker is developing critical chance
-					if (kPromotion.getCriticalModifierChange() > 0 && (criticalVSOpponentProbTotal(pDefender) > 0))
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* attacker is developing endurance
-					if (kPromotion.getEnduranceChange() > 0 && (enduranceTotal() > 0))
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//TB Combat Mods End
-					//* attacker was crossing river
-					if (kPromotion.isRiver() && cdDefenderDetails.iRiverAttackModifier != 0)	//this bonus is being applied to defender
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* attack from water
-					if (kPromotion.isAmphib() && cdDefenderDetails.iAmphibAttackModifier != 0)
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* attack terrain
-					if (kPromotion.getTerrainAttackPercent((int)pPlot->getTerrainType()) > 0)
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* attack feature
-					if (pPlot->getFeatureType() != NO_FEATURE && 
-						kPromotion.getFeatureAttackPercent((int)pPlot->getFeatureType()) > 0)
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* attack hills
-					if (kPromotion.getHillsAttackPercent() > 0 && pPlot->isHills())
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* attack city
-					if (kPromotion.getCityAttackPercent() > 0 && pPlot->isCity(true))	//count forts too
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* first strikes/chanses promotions
-					if ((kPromotion.getFirstStrikesChange() > 0 || 
-						kPromotion.getChanceFirstStrikesChange() > 0) && (firstStrikes() > 0 || chanceFirstStrikes() > 0)	)
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* unit combat mod
-					if (kPromotion.getUnitCombatModifierPercent((int)pDefender->getUnitCombatType()) > 0)
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//TB Combat Mods Begin * anti-barbarian combat mod
-					if (kPromotion.getVSBarbsChange()>0 &&(pDefender->isHominid()))
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					if (kPromotion.getStrengthChange() > 0)
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					if (kPromotion.getAttackCombatModifierChange() > 0)
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//TB Combat Mods End
-					//* combat strength promotions
-					if (kPromotion.getCombatPercent() > 0 && !kPromotion.isAmphib())
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* domain mod
-					if (kPromotion.getDomainModifierPercent((int)pDefender->getDomainType()))
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* blitz
-					if (kPromotion.isBlitz() && bAttackerHasLostNoHP)
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-				}	//if defender is dead or withdrawn
-				
-				//* defender withdrawn, give him withdrawal promo
-				else if (m_combatResult.bDefenderWithdrawn)
-				{
-					if (kPromotion.getWithdrawalChange() > 0 &&
-						pDefender->canAcquirePromotion((PromotionTypes)iI, false, false, false, true))
-					{
-						aDefenderAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-				}
-				//* attacker withdrawn
-				else if (bAttackerWithdrawn)
-				{
-					if (kPromotion.getWithdrawalChange() > 0 && canAcquirePromotion((PromotionTypes)iI, false, false, false, true))
-					{
-						aAttackerAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-				}
-				else	//attacker is presumably dead
-				{					
-					if (!pDefender->canAcquirePromotion((PromotionTypes)iI, false, false, false, true)) 
-					{
-						continue;
-					}
-					if (kPromotion.getPursuitChange() < 0 ||
-						kPromotion.getRepelChange() < 0 ||
-						kPromotion.getUnyieldingChange() < 0 ||
-						kPromotion.getKnockbackChange() < 0 ||
-						kPromotion.getLungeChange() < 0 ||
-						kPromotion.getDodgeModifierChange() < 0 ||
-						kPromotion.getPrecisionModifierChange() < 0 ||
-						kPromotion.getCriticalModifierChange() < 0 ||
-						kPromotion.getEnduranceChange() < 0 ||
-						kPromotion.getFirstStrikesChange() < 0 ||
-						kPromotion.getChanceFirstStrikesChange() < 0 ||
-						kPromotion.getVSBarbsChange() < 0 ||
-						kPromotion.getStrengthChange() < 0 ||
-						kPromotion.getDefenseCombatModifierChange() < 0 ||
-						kPromotion.getCombatPercent() < 0 ||
-						kPromotion.getDefenseOnlyChange() > 0 ||
-						kPromotion.getNoInvisibilityChange() > 0 ||
-						kPromotion.getHiddenNationalityChange() != 0)
-					{
-						continue;
-					}
-					//TB Combat Mods Begin
-					//* Defender may recieve pursuit
-					if (bAttackerWithdrawn && kPromotion.getPursuitChange() > 0)
-					{
-						aDefenderAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-
-					if (m_combatResult.bAttackerPursued && kPromotion.getPursuitChange() > 0)
-					{
-						aDefenderAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* Defender Repelled Attacker
-					if (m_combatResult.bAttackerRepelled && kPromotion.getRepelChange() > 0)
-					{
-						aDefenderAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* Defender Repelled Attacker while Fortified
-					if (m_combatResult.bAttackerRepelled && cdDefenderDetails.iFortifyModifier > 0 && kPromotion.getFortRepelChange() > 0)
-					{
-						aDefenderAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* Defender Refused to be Knocked Back
-					if (m_combatResult.bDefenderRefusedtoYield && kPromotion.getUnyieldingChange() > 0)
-					{
-						aDefenderAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* Defender Suffered Surround and Destroy Modifier
-					if (kPromotion.getDynamicDefenseChange() > 0 && surroundedDefenseModifier(pPlot, pDefender) != 0)
-					{
-						aDefenderAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					if (kPromotion.getStrengthChange() > 0)
-					{
-						aDefenderAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					if (kPromotion.getAnimalIgnoresBordersChange() > 0 && pDefender->isAnimal() && !GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT))
-					{
-						aDefenderAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//TB Combat Mods End
-					//* defend terrain
-					if (kPromotion.getTerrainDefensePercent((int)pPlot->getTerrainType()) > 0)
-					{
-						aDefenderAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* defend feature
-					if (pPlot->getFeatureType() != NO_FEATURE && 
-						kPromotion.getFeatureDefensePercent((int)pPlot->getFeatureType()) > 0)
-					{
-						aDefenderAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* defend hills
-					if (kPromotion.getHillsDefensePercent() > 0 && pPlot->isHills())
-					{
-						aDefenderAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* defend city
-					if (kPromotion.getCityDefensePercent() > 0 && pPlot->isCity(true))	//count forts too
-					{
-						aDefenderAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* first strikes/chanses promotions
-					if ((kPromotion.getFirstStrikesChange() > 0 || 
-						kPromotion.getChanceFirstStrikesChange() > 0) && 
-						(pDefender->firstStrikes() > 0 || pDefender->chanceFirstStrikes() > 0))
-					{
-						aDefenderAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* unit combat mod vs attacker unit type
-					if (kPromotion.getUnitCombatModifierPercent((int)getUnitCombatType()) > 0)
-					{
-						aDefenderAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//TB Combat Mods Begin * anti-barbarian combat mod
-					if (kPromotion.getVSBarbsChange()>0 && isHominid())
-					{
-						aDefenderAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-
-					if (kPromotion.getDefenseCombatModifierChange() > 0)
-					{
-						aDefenderAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* defemder had less dodge than attacker's precision
-					if (kPromotion.getDodgeModifierChange() > 0 && (pDefender->dodgeVSOpponentProbTotal(this) < precisionVSOpponentProbTotal(pDefender)))
-					{
-						aDefenderAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* attacker had more dodge than defender's precision
-					if (kPromotion.getPrecisionModifierChange() > 0 && (dodgeVSOpponentProbTotal(pDefender) > pDefender->precisionVSOpponentProbTotal(this)))
-					{
-						aDefenderAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* defender is developing critical chance
-					if (kPromotion.getCriticalModifierChange() > 0 && (pDefender->criticalVSOpponentProbTotal(this) > 0))
-					{
-						aDefenderAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* defender is developing endurance
-					if (kPromotion.getEnduranceChange() > 0 && (pDefender->enduranceTotal() > 0))
-					{
-						aDefenderAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//TB Combat Mods End
-					//* combat strength promotions
-					if (kPromotion.getCombatPercent() > 0)
-					{
-						aDefenderAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-					//* domain mod
-					if (kPromotion.getDomainModifierPercent((int)getDomainType()))
-					{
-						aDefenderAvailablePromotions.push_back((PromotionTypes)iI);
-					}
-				}	//if attacker withdrawn
-			}	//end promotion types cycle
-
-			//promote attacker:
-			if (!isDead() && aAttackerAvailablePromotions.size() > 0)
-			{
-				FAssertMsg(maxHitPoints() - iAttackerInitialDamage > 0, "Attacker is Dead!");
-				int iHealthPercent = (maxHitPoints() - getDamage()) * 100 / std::max(1,(maxHitPoints() - iAttackerInitialDamage));
-				int iPromotionChanceModifier = iHealthPercent * iHealthPercent / maxHitPoints();
-				iNonLethalAttackWinChance *= 10;
-				int iOdds = std::max(iWinningOdds, iNonLethalAttackWinChance);
-				int iPromotionChance = (GC.getCOMBAT_DIE_SIDES() - iOdds)/* * (100 + iPromotionChanceModifier) / 100*/;
-				
-				int iFirstStrikes = 1 + iAttackerFirstStrikes;
-				iFirstStrikes = std::max(1, iFirstStrikes);
-
-				iPromotionChance /= iFirstStrikes;
-				if (GC.getGameINLINE().getSorenRandNum(GC.getCOMBAT_DIE_SIDES(), "Occasional Promotion") < iPromotionChance)
-				{
-					//select random promotion from available
-					PromotionTypes ptPromotion = aAttackerAvailablePromotions[
-						GC.getGameINLINE().getSorenRandNum(aAttackerAvailablePromotions.size(), "Select Promotion Type")];
-					//promote
-					//TB Combat Mod next line
-					setHasPromotion(ptPromotion, true, false);
-					bAttackerPromoted = true;
-					//Reset XP
-					//TB GG Types mod
-					if (getGGExperienceEarnedTowardsType() == NO_UNIT)
-					{
-						setGGExperienceEarnedTowardsType();
-					}
-
-					UnitTypes eGGType = getGGExperienceEarnedTowardsType();
-					setExperience100(iInitialAttXP);
-					GET_PLAYER(getOwnerINLINE()).setCombatExperience(iInitialAttGGXP, eGGType);
-					
-					// Great Commander XP
-					if (getUsedCommander() != NULL)
-					{
-						getUsedCommander()->setExperience100(getUsedCommander()->getExperience100() + 100);	
-					}
-					//show message
-					{
-						MEMORY_TRACK_EXEMPT();
-
-						CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_UNIT_PROMOTED_IN_BATTLE", getNameKey(), GC.getPromotionInfo(ptPromotion).getText());
-						AddDLLMessage(
-							getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, 
-							GC.getPromotionInfo((PromotionTypes)0).getSound(), MESSAGE_TYPE_INFO, NULL, 
-							(ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), this->plot()->getX_INLINE(), this->plot()->getY_INLINE());
-					}
-				}
+				continue;
 			}
-			//promote defender:
-			if (!pDefender->isDead() && aDefenderAvailablePromotions.size() > 0)
+			//* attacker may receive pursuit
+			if (m_combatResult.bDefenderWithdrawn && kPromotion.getPursuitChange() > 0)
 			{
-				FAssertMsg(pDefender->maxHitPoints() - iDefenderInitialDamage > 0, "Defender is Dead!");
-				int iHealthPercent = (pDefender->maxHitPoints() - pDefender->getDamage()) * 100 / std::max(1,(pDefender->maxHitPoints() - iDefenderInitialDamage));
-				int iPromotionChanceModifier = iHealthPercent * iHealthPercent / pDefender->maxHitPoints();
-				iNonLethalDefenseWinChance *= 10;
-				iNonLethalDefenseWinChance = std::max(0,(GC.getCOMBAT_DIE_SIDES()-iNonLethalDefenseWinChance));
-				int iOdds = std::min(iWinningOdds, iNonLethalDefenseWinChance);
-				int iPromotionChance = iOdds/* * (100 + iPromotionChanceModifier) / 100*/;
-				int iFirstStrikes = 1 + iDefenderFirstStrikes;
-				//change to stealth strikes if stealth combat
-				iFirstStrikes = std::max(1, iFirstStrikes);
-				iPromotionChance /= iFirstStrikes;
-				if (GC.getGameINLINE().getSorenRandNum(GC.getCOMBAT_DIE_SIDES(), "Occasional Promotion") < iPromotionChance)
-				{
-					//select random promotion from available
-					PromotionTypes ptPromotion = aDefenderAvailablePromotions[
-						GC.getGameINLINE().getSorenRandNum(aDefenderAvailablePromotions.size(), "Select Promotion Type")];
-					//promote
-					//TB Combat Mod next line
-					pDefender->setHasPromotion(ptPromotion, true, false);
-					//Reset XP
-					//TB GG Types mod
-					if (pDefender->getGGExperienceEarnedTowardsType() == NO_UNIT)
-					{
-						pDefender->setGGExperienceEarnedTowardsType();
-					}
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			if (m_combatResult.bDefenderPursued && kPromotion.getPursuitChange() > 0)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* attacker was attacking a fortified defender and may receive Overrun
+			if (cdDefenderDetails.iFortifyModifier > 0 && kPromotion.getOverrunChange() > 0)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* attacker was unyielding against a Repel
+			if (m_combatResult.bAttackerRefusedtoYield && kPromotion.getUnyieldingChange() > 0)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* attacker Knocked back defender
+			if (m_combatResult.bDefenderKnockedBack && kPromotion.getKnockbackChange() > 0)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* attacker was attacking with S&D bonus
+			if (kPromotion.getLungeChange() > 0 && surroundedDefenseModifier(pPlot, pDefender) != 0)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* attacker had less dodge than defender's precision
+			if (kPromotion.getDodgeModifierChange() > 0 && (dodgeVSOpponentProbTotal(pDefender) < pDefender->precisionVSOpponentProbTotal(this)))
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* defender had more dodge than attacker's precision
+			if (kPromotion.getPrecisionModifierChange() > 0 && (pDefender->dodgeVSOpponentProbTotal(this) > precisionVSOpponentProbTotal(pDefender)))
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* attacker is developing critical chance
+			if (kPromotion.getCriticalModifierChange() > 0 && (criticalVSOpponentProbTotal(pDefender) > 0))
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* attacker is developing endurance
+			if (kPromotion.getEnduranceChange() > 0 && (enduranceTotal() > 0))
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//TB Combat Mods End
+			//* attacker was crossing river
+			if (kPromotion.isRiver() && cdDefenderDetails.iRiverAttackModifier != 0)	//this bonus is being applied to defender
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* attack from water
+			if (kPromotion.isAmphib() && cdDefenderDetails.iAmphibAttackModifier != 0)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* attack terrain
+			if (kPromotion.getTerrainAttackPercent((int)pPlot->getTerrainType()) > 0)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* attack feature
+			if (pPlot->getFeatureType() != NO_FEATURE &&
+				kPromotion.getFeatureAttackPercent((int)pPlot->getFeatureType()) > 0)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* attack hills
+			if (kPromotion.getHillsAttackPercent() > 0 && pPlot->isHills())
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* attack city
+			if (kPromotion.getCityAttackPercent() > 0 && pPlot->isCity(true))	//count forts too
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* first strikes/chanses promotions
+			if ((kPromotion.getFirstStrikesChange() > 0 ||
+				kPromotion.getChanceFirstStrikesChange() > 0) && (firstStrikes() > 0 || chanceFirstStrikes() > 0))
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* unit combat mod
+			if (kPromotion.getUnitCombatModifierPercent((int)pDefender->getUnitCombatType()) > 0)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//TB Combat Mods Begin * anti-barbarian combat mod
+			if (kPromotion.getVSBarbsChange() > 0 && (pDefender->isHominid()))
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			if (kPromotion.getStrengthChange() > 0)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			if (kPromotion.getAttackCombatModifierChange() > 0)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//TB Combat Mods End
+			//* combat strength promotions
+			if (kPromotion.getCombatPercent() > 0 && !kPromotion.isAmphib())
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* domain mod
+			if (kPromotion.getDomainModifierPercent((int)pDefender->getDomainType()))
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* blitz
+			if (kPromotion.isBlitz() && bAttackerHasLostNoHP)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+		}	//if defender is dead or withdrawn
+		//* defender withdrawn, give him withdrawal promo
+		else if (m_combatResult.bDefenderWithdrawn)
+		{
+			if (kPromotion.getWithdrawalChange() > 0 &&
+				pDefender->canAcquirePromotion(promotionType))
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+		}
+		//* attacker withdrawn
+		else if (bAttackerWithdrawn)
+		{
+			if (kPromotion.getWithdrawalChange() > 0 &&
+				canAcquirePromotion(promotionType))
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			if (kPromotion.getPursuitChange() > 0 &&
+				pDefender->canAcquirePromotion(promotionType))
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+		}
+		//* attacker is presumably dead
+		else
+		{
+			FAssertMsg(isDead(), "Attacker is expected to be dead");
+			if (!pDefender->canAcquirePromotion(promotionType))
+			{
+				continue;
+			}
+			//TB Combat Mods Begin
+				//* Defender may recieve pursuit
+			if (m_combatResult.bAttackerPursued && kPromotion.getPursuitChange() > 0)
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//* Defender Repelled Attacker
+			if (m_combatResult.bAttackerRepelled && kPromotion.getRepelChange() > 0)
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//* Defender Repelled Attacker while Fortified
+			if (m_combatResult.bAttackerRepelled && cdDefenderDetails.iFortifyModifier > 0 && kPromotion.getFortRepelChange() > 0)
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//* Defender Refused to be Knocked Back
+			if (m_combatResult.bDefenderRefusedtoYield && kPromotion.getUnyieldingChange() > 0)
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//* Defender Suffered Surround and Destroy Modifier
+			if (kPromotion.getDynamicDefenseChange() > 0 && surroundedDefenseModifier(pPlot, pDefender) != 0)
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			if (kPromotion.getStrengthChange() > 0)
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			if (kPromotion.getAnimalIgnoresBordersChange() > 0 && pDefender->isAnimal() && !GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT))
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//TB Combat Mods End
+			//* defend terrain
+			if (kPromotion.getTerrainDefensePercent((int)pPlot->getTerrainType()) > 0)
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//* defend feature
+			if (pPlot->getFeatureType() != NO_FEATURE &&
+				kPromotion.getFeatureDefensePercent((int)pPlot->getFeatureType()) > 0)
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//* defend hills
+			if (kPromotion.getHillsDefensePercent() > 0 && pPlot->isHills())
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//* defend city
+			if (kPromotion.getCityDefensePercent() > 0 && pPlot->isCity(true))	//count forts too
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//* first strikes/chanses promotions
+			if ((kPromotion.getFirstStrikesChange() > 0 ||
+				kPromotion.getChanceFirstStrikesChange() > 0) &&
+				(pDefender->firstStrikes() > 0 || pDefender->chanceFirstStrikes() > 0))
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//* unit combat mod vs attacker unit type
+			if (kPromotion.getUnitCombatModifierPercent((int)getUnitCombatType()) > 0)
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//TB Combat Mods Begin * anti-barbarian combat mod
+			if (kPromotion.getVSBarbsChange() > 0 && isHominid())
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
 
-					UnitTypes eGGType = pDefender->getGGExperienceEarnedTowardsType();
-					pDefender->setExperience100(iInitialDefXP);
-					GET_PLAYER(pDefender->getOwnerINLINE()).setCombatExperience(iInitialDefGGXP, eGGType);
-					bDefenderPromoted = true;
-					
-					// Great Commander XP
-					if (pDefender->getUsedCommander() != NULL)
-					{
-						pDefender->getUsedCommander()->setExperience100(pDefender->getUsedCommander()->getExperience100() + 100);	
-					}
-					//show message
-					{
-						MEMORY_TRACK_EXEMPT();
+			if (kPromotion.getDefenseCombatModifierChange() > 0)
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//* defemder had less dodge than attacker's precision
+			if (kPromotion.getDodgeModifierChange() > 0 && (pDefender->dodgeVSOpponentProbTotal(this) < precisionVSOpponentProbTotal(pDefender)))
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//* attacker had more dodge than defender's precision
+			if (kPromotion.getPrecisionModifierChange() > 0 && (dodgeVSOpponentProbTotal(pDefender) > pDefender->precisionVSOpponentProbTotal(this)))
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//* defender is developing critical chance
+			if (kPromotion.getCriticalModifierChange() > 0 && (pDefender->criticalVSOpponentProbTotal(this) > 0))
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//* defender is developing endurance
+			if (kPromotion.getEnduranceChange() > 0 && (pDefender->enduranceTotal() > 0))
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//TB Combat Mods End
+			//* combat strength promotions
+			if (kPromotion.getCombatPercent() > 0)
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//* domain mod
+			if (kPromotion.getDomainModifierPercent((int)getDomainType()))
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+		}	//if attacker withdrawn
+	}	//end promotion types cycle
 
-						CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_UNIT_PROMOTED_IN_BATTLE", pDefender->getNameKey(), 
-							GC.getPromotionInfo(ptPromotion).getText());
-						AddDLLMessage(
-							pDefender->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, 
-							GC.getPromotionInfo((PromotionTypes)0).getSound(), MESSAGE_TYPE_INFO, NULL, 
-							(ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
-					}
-				}
+	//promote attacker:
+	if (!isDead() && aAttackerAvailablePromotions.size() > 0)
+	{
+		FAssertMsg(maxHitPoints() - iAttackerInitialDamage > 0, "Attacker is Dead!");
+		int iHealthPercent = (maxHitPoints() - getDamage()) * 100 / std::max(1, (maxHitPoints() - iAttackerInitialDamage));
+		int iPromotionChanceModifier = iHealthPercent * iHealthPercent / maxHitPoints();
+		iNonLethalAttackWinChance *= 10;
+		int iOdds = std::max(iWinningOdds, iNonLethalAttackWinChance);
+		int iPromotionChance = (GC.getCOMBAT_DIE_SIDES() - iOdds)/* * (100 + iPromotionChanceModifier) / 100*/;
+
+		int iFirstStrikes = 1 + iAttackerFirstStrikes;
+		iFirstStrikes = std::max(1, iFirstStrikes);
+
+		iPromotionChance /= iFirstStrikes;
+		if (GC.getGameINLINE().getSorenRandNum(GC.getCOMBAT_DIE_SIDES(), "Occasional Promotion") < iPromotionChance)
+		{
+			//select random promotion from available
+			PromotionTypes ptPromotion = aAttackerAvailablePromotions[
+				GC.getGameINLINE().getSorenRandNum(aAttackerAvailablePromotions.size(), "Select Promotion Type")];
+			//promote
+			//TB Combat Mod next line
+			setHasPromotion(ptPromotion, true, false);
+			bAttackerPromoted = true;
+			//Reset XP
+			//TB GG Types mod
+			if (getGGExperienceEarnedTowardsType() == NO_UNIT)
+			{
+				setGGExperienceEarnedTowardsType();
+			}
+
+			UnitTypes eGGType = getGGExperienceEarnedTowardsType();
+			setExperience100(iInitialAttXP);
+			GET_PLAYER(getOwnerINLINE()).setCombatExperience(iInitialAttGGXP, eGGType);
+
+			// Great Commander XP
+			if (getUsedCommander() != NULL)
+			{
+				getUsedCommander()->setExperience100(getUsedCommander()->getExperience100() + 100);
+			}
+			//show message
+			{
+				MEMORY_TRACK_EXEMPT();
+
+				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_UNIT_PROMOTED_IN_BATTLE", getNameKey(), GC.getPromotionInfo(ptPromotion).getText());
+				AddDLLMessage(
+					getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,
+					GC.getPromotionInfo((PromotionTypes)0).getSound(), MESSAGE_TYPE_INFO, NULL,
+					(ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), this->plot()->getX_INLINE(), this->plot()->getY_INLINE());
+			}
+		}
+	}
+
+	//promote defender:
+	if (!pDefender->isDead() && aDefenderAvailablePromotions.size() > 0)
+	{
+		FAssertMsg(pDefender->maxHitPoints() - iDefenderInitialDamage > 0, "Defender is Dead!");
+		int iHealthPercent = (pDefender->maxHitPoints() - pDefender->getDamage()) * 100 / std::max(1, (pDefender->maxHitPoints() - iDefenderInitialDamage));
+		int iPromotionChanceModifier = iHealthPercent * iHealthPercent / pDefender->maxHitPoints();
+		iNonLethalDefenseWinChance *= 10;
+		iNonLethalDefenseWinChance = std::max(0, (GC.getCOMBAT_DIE_SIDES() - iNonLethalDefenseWinChance));
+		int iOdds = std::min(iWinningOdds, iNonLethalDefenseWinChance);
+		int iPromotionChance = iOdds/* * (100 + iPromotionChanceModifier) / 100*/;
+		int iFirstStrikes = 1 + iDefenderFirstStrikes;
+		//change to stealth strikes if stealth combat
+		iFirstStrikes = std::max(1, iFirstStrikes);
+		iPromotionChance /= iFirstStrikes;
+		if (GC.getGameINLINE().getSorenRandNum(GC.getCOMBAT_DIE_SIDES(), "Occasional Promotion") < iPromotionChance)
+		{
+			//select random promotion from available
+			PromotionTypes ptPromotion = aDefenderAvailablePromotions[
+				GC.getGameINLINE().getSorenRandNum(aDefenderAvailablePromotions.size(), "Select Promotion Type")];
+			//promote
+			//TB Combat Mod next line
+			pDefender->setHasPromotion(ptPromotion, true, false);
+			//Reset XP
+			//TB GG Types mod
+			if (pDefender->getGGExperienceEarnedTowardsType() == NO_UNIT)
+			{
+				pDefender->setGGExperienceEarnedTowardsType();
+			}
+
+			UnitTypes eGGType = pDefender->getGGExperienceEarnedTowardsType();
+			pDefender->setExperience100(iInitialDefXP);
+			GET_PLAYER(pDefender->getOwnerINLINE()).setCombatExperience(iInitialDefGGXP, eGGType);
+			bDefenderPromoted = true;
+
+			// Great Commander XP
+			if (pDefender->getUsedCommander() != NULL)
+			{
+				pDefender->getUsedCommander()->setExperience100(pDefender->getUsedCommander()->getExperience100() + 100);
+			}
+			//show message
+			{
+				MEMORY_TRACK_EXEMPT();
+
+				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_UNIT_PROMOTED_IN_BATTLE", pDefender->getNameKey(),
+					GC.getPromotionInfo(ptPromotion).getText());
+				AddDLLMessage(
+					pDefender->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,
+					GC.getPromotionInfo((PromotionTypes)0).getSound(), MESSAGE_TYPE_INFO, NULL,
+					(ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
 			}
 		}
 	}
@@ -36210,7 +36176,7 @@ bool CvUnit::checkContractDisease(PromotionLineTypes eAfflictionLine, int iCommu
 		PromotionTypes eAffliction = (PromotionTypes)GC.getPromotionLineInfo(eAfflictionLine).getPromotion(iI);
 		if (GC.getPromotionInfo(eAffliction).getLinePriority() == (getAfflictionLineCount(eAfflictionLine)+1))
 		{
-			if (canAcquirePromotion(eAffliction, false, false, true, false, false, false, true, false, false))
+			if (canAcquirePromotion(eAffliction, PromotionRequirements::Afflict | PromotionRequirements::ForFree))
 			{
 				bCheck = true;
 				break;
@@ -36426,6 +36392,8 @@ int CvUnit::getCityRepel() const
 	}
 	return iCityRepel;
 }
+
+#ifdef STRENGTH_IN_NUMBERS
 
 int CvUnit::getCityFrontSupportPercentModifier() const
 {
@@ -38203,6 +38171,8 @@ void CvUnit::ClearSupports()
 	}
 }
 
+#endif // #ifdef STRENGTH_IN_NUMBERS
+
 int CvUnit::getOngoingTrainingCount(UnitCombatTypes eUnitCombatType) const
 {
 	FAssertMsg(eUnitCombatType >= 0, "eIndex is expected to be non-negative (invalid Index)");
@@ -38454,7 +38424,7 @@ void CvUnit::assignCritical(CvUnit* pOpponent)
 				PromotionTypes eCritical = (eCurrentAffliction);
 				if (kCritical.isAffliction() && kCritical.isCritical())
 				{
-					if (canAcquirePromotion(eCritical, false, false, true, false) && pOpponent->canInflictCritical(eCritical))
+					if (canAcquirePromotion(eCritical, PromotionRequirements::Afflict) && pOpponent->canInflictCritical(eCritical))
 					{
 						aAvailableCriticals.push_back(eCritical);
 					}
@@ -39299,16 +39269,17 @@ void CvUnit::checkFreetoCombatClass()
 			for (int iK = 0; iK < GC.getNumPromotionInfos(); iK++)
 			{
 				PromotionTypes ePromotion = ((PromotionTypes)iK);
-				if (GC.getPromotionInfo(ePromotion).isFreetoUnitCombat(iI))
+				const CvPromotionInfo& promoInfo = GC.getPromotionInfo(ePromotion);
+				if (promoInfo.isFreetoUnitCombat(iI))
 				{
-					bool bEquip = GC.getPromotionInfo(ePromotion).isEquipment();
-					bool bAfflict = GC.getPromotionInfo(ePromotion).isAffliction();
-					bool bPromote = true;
-					if (bEquip || bAfflict)
-					{
-						bPromote = false;
-					}
-					if (canAcquirePromotion(ePromotion, false, bEquip, bAfflict, bPromote))
+					// Todo: surely canAcquirePromotion can work out these flags if it knows what promotion you are 
+					// asking about? Smells fishy that we have to set them here.
+					PromotionRequirements::flags promoFlags = PromotionRequirements::None;
+					if (promoInfo.isEquipment()) promoFlags |= PromotionRequirements::Equip;
+					if (promoInfo.isAffliction()) promoFlags |= PromotionRequirements::Afflict;
+					if (promoFlags == PromotionRequirements::None) promoFlags = PromotionRequirements::Promote;
+
+					if (canAcquirePromotion(ePromotion, promoFlags))
 					{
 						setHasPromotion(ePromotion, true, true);
 					}
@@ -40884,8 +40855,8 @@ void CvUnit::recover(PromotionLineTypes eAfflictionLine)
 {
 	int iI;
 	CvWString szBuffer;
-	PromotionTypes eAfflictionHad;
-	PromotionTypes eAfflictionGained;
+	PromotionTypes eAfflictionHad = NO_PROMOTION;
+	PromotionTypes eAfflictionGained = NO_PROMOTION;
 	for (iI = 0; iI < GC.getPromotionLineInfo(eAfflictionLine).getNumPromotions(); iI++)
 	{
 		PromotionTypes eAffliction = (PromotionTypes)GC.getPromotionLineInfo(eAfflictionLine).getPromotion(iI);
@@ -42159,14 +42130,23 @@ int CvUnit::sizeRank() const
 	return (getSizeBaseTotal() + getExtraSize());
 }
 
-bool CvUnit::canMerge(bool bAutocheck)
+// (bAutocheck = true) check will be ordering a 4th potentially mergable unit to 
+// split instead during it's check processing.
+// The thinking behind this method is that when we merge 3 units we want a 4th one that 
+// was capable of it to be present and to split so that the unit count remains the same
+// and for the alternative strategy of splitting to be equally expressed.
+// For defense this means you create fodder flak to hold off minimalist unit count 
+// armies, buying time, and a strong lead defender to make a tough stand
+// For attack you have a strong lead attacker to bust through stiff opposition and some 
+// smaller units to wipe up defenders weakened by collateral (or splitting strategies 
+// to delay the capture of the city or position.)
+// After a few round of such merging among particular types in the same location will 
+// create a nice gradient of unit group sizes.  Should be interesting to see its effect in play.
+// TBSPLIT
+bool CvUnit::canMerge(bool bAutocheck) const
 {
-	CvPlot* pPlot = plot();
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
-	int iValidUnitCount = 0;
+	FAssertMsg(plot(), "canMerge expects unit plot to be valid");
 
-	pUnitNode = pPlot->headUnitNode();
 
 	if (!GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
@@ -42178,7 +42158,16 @@ bool CvUnit::canMerge(bool bAutocheck)
 		return false;
 	}
 
-	if (isHurt() || isDead() || isFighting() || isCargo() || hasCargo() || isDelayedDeath() || isSpy() || hasMoved() || (groupRank() >= eraGroupMergeLimit()) || isInhibitMerge())
+	if (isHurt() 
+		|| isDead() 
+		|| isFighting() 
+		|| isCargo() 
+		|| hasCargo() 
+		|| isDelayedDeath() 
+		|| isSpy() 
+		|| hasMoved() 
+		|| groupRank() >= eraGroupMergeLimit()
+		|| isInhibitMerge())
 	{
 		return false;
 	}
@@ -42193,46 +42182,53 @@ bool CvUnit::canMerge(bool bAutocheck)
 		return false;
 	}
 
-	if (pPlot != NULL)
+	CvPlot* pPlot = plot();
+	int iValidUnitCount = 0;
+	for(CvPlot::unit_iterator itr = pPlot->beginUnits(); itr != pPlot->endUnits(); ++itr)
 	{
-		while (pUnitNode != NULL)
-		{
-			pLoopUnit = ::getUnit(pUnitNode->m_data);
-			pUnitNode = pPlot->nextUnitNode(pUnitNode);
+		CvUnit* pLoopUnit = *itr;
 
-			if (pLoopUnit->getOwnerINLINE() == getOwnerINLINE() && pLoopUnit->getID() != getID())
+		if (pLoopUnit->getOwnerINLINE() == getOwnerINLINE() && pLoopUnit->getID() != getID()
+
+			&& pLoopUnit->getUnitType() == getUnitType() 
+			&& pLoopUnit->groupRank() == groupRank() 
+			&& pLoopUnit->qualityRank() == qualityRank()
+
+			&& !pLoopUnit->isHurt() 
+			&& !pLoopUnit->isDead() 
+			&& !pLoopUnit->isFighting() 
+			&& !pLoopUnit->isCargo() 
+			&& !pLoopUnit->hasCargo() 
+			&& !pLoopUnit->isDelayedDeath() 
+			&& !pLoopUnit->isSpy() 
+			&& !pLoopUnit->hasMoved() 
+			&& pLoopUnit->baseWorkRate() < 1
+			&& pLoopUnit->groupRank() < pLoopUnit->eraGroupMergeLimit()
+
+			&& !pLoopUnit->hasCannotMergeSplit()
+			)
+		{
+			if (!bAutocheck)
 			{
-				if (pLoopUnit->getUnitType() == getUnitType() && pLoopUnit->groupRank() == groupRank() && pLoopUnit->qualityRank() == qualityRank())
+				iValidUnitCount++;
+			}
+			else if (pLoopUnit->AI_getUnitAIType() == AI_getUnitAIType())
+			{
+				iValidUnitCount++;
+			}
+			if (bAutocheck)
+			{
+				if (iValidUnitCount == 3)
 				{
-					if (!pLoopUnit->isHurt() && !pLoopUnit->isDead() && !pLoopUnit->isFighting() && !pLoopUnit->isCargo() && !pLoopUnit->hasCargo() && !pLoopUnit->isDelayedDeath() && !pLoopUnit->isSpy() && !pLoopUnit->hasMoved() && (pLoopUnit->baseWorkRate() < 1) && (pLoopUnit->groupRank() < pLoopUnit->eraGroupMergeLimit()))
-					{
-						if (!pLoopUnit->hasCannotMergeSplit())
-						{
-							if (!bAutocheck)
-							{
-								iValidUnitCount++;
-							}
-							else if (pLoopUnit->AI_getUnitAIType() == AI_getUnitAIType())
-							{
-								iValidUnitCount++;
-							}
-							if (bAutocheck)
-							{
-								if (iValidUnitCount == 3)
-								{
-									//if (pLoopUnit->canSplit())
-									//{
-									//	GET_PLAYER(getOwner()).setSplittingUnit(pLoopUnit->getID());
-									//}
-									//else
-									//{
-									//	GET_PLAYER(getOwner()).setSplittingUnit(NO_UNIT);
-									//}
-									return true;
-								}
-							}
-						}
-					}
+					//if (pLoopUnit->canSplit())
+					//{
+					//	GET_PLAYER(getOwner()).setSplittingUnit(pLoopUnit->getID());
+					//}
+					//else
+					//{
+					//	GET_PLAYER(getOwner()).setSplittingUnit(NO_UNIT);
+					//}
+					return true;
 				}
 			}
 		}
@@ -42246,7 +42242,7 @@ bool CvUnit::canMerge(bool bAutocheck)
 }
 
 
-bool CvUnit::canSplit()
+bool CvUnit::canSplit() const
 {
 	
 	if (!GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
@@ -42276,9 +42272,35 @@ bool CvUnit::canSplit()
 	return true;
 }
 
+// Helpers
+bool CvUnit::isGroupUpgradePromotion(PromotionTypes promotion) const
+{
+	return GC.getPromotionInfo(promotion).getGroupChange() > 0 &&
+		(canAcquirePromotion(promotion, PromotionRequirements::Promote | PromotionRequirements::ForOffset) || canAcquirePromotion(promotion));
+}
+
+bool CvUnit::isGroupDowngradePromotion(PromotionTypes promotion) const
+{
+	return GC.getPromotionInfo(promotion).getGroupChange() < 0 &&
+		(canAcquirePromotion(promotion, PromotionRequirements::Promote | PromotionRequirements::ForOffset) || canAcquirePromotion(promotion));
+}
+
+bool CvUnit::isQualityUpgradePromotion(PromotionTypes promotion) const
+{
+	return GC.getPromotionInfo(promotion).getQualityChange() > 0 &&
+		(canAcquirePromotion(promotion, PromotionRequirements::Promote | PromotionRequirements::ForOffset) || canAcquirePromotion(promotion));
+}
+
+bool CvUnit::isQualityDowngradePromotion(PromotionTypes promotion) const
+{
+	return GC.getPromotionInfo(promotion).getQualityChange() < 0 &&
+		(canAcquirePromotion(promotion, PromotionRequirements::Promote | PromotionRequirements::ForOffset) || canAcquirePromotion(promotion));
+}
+
+
 void CvUnit::doMerge()
 {
-
+	FAssertMsg(plot() != NULL, "doMerge requires CvUnit plot to be valid");
 	GET_PLAYER(getOwner()).setBaseMergeSelectionUnit(getID());
 	if (isHuman())
 	{
@@ -42291,39 +42313,43 @@ void CvUnit::doMerge()
 	else
 	{
 		CvPlot* pPlot = plot();
-		CLLNode<IDInfo>* pUnitNode;
-		CvUnit* pLoopUnit;
 		CvUnit* pUnit1 = GET_PLAYER(getOwner()).getUnit(GET_PLAYER(getOwner()).getBaseMergeSelectionUnit());
 		CvSelectionGroup* pMergingGroup = pUnit1->getGroup();
 
-		if (pPlot != NULL)
+		for(CvPlot::unit_iterator itr = pPlot->beginUnits(); itr != pPlot->endUnits(); ++itr)
 		{
-			pUnitNode = pPlot->headUnitNode();
-			while (pUnitNode != NULL)
-			{
-				pLoopUnit = ::getUnit(pUnitNode->m_data);
-				pUnitNode = pPlot->nextUnitNode(pUnitNode);
+			CvUnit* pLoopUnit = *itr;
 
-				if (pLoopUnit->getOwnerINLINE() == getOwnerINLINE() && pLoopUnit->getID() != pUnit1->getID())
+			if (pLoopUnit->getOwnerINLINE() == getOwnerINLINE() 
+				&& pLoopUnit->getID() != pUnit1->getID()
+					
+				&& pLoopUnit->getUnitType() == pUnit1->getUnitType()
+				&& pLoopUnit->groupRank() == pUnit1->groupRank()
+				&& pLoopUnit->qualityRank() == pUnit1->qualityRank()
+				&& pLoopUnit->AI_getUnitAIType() == pUnit1->AI_getUnitAIType()
+
+				&& !pLoopUnit->isHurt()
+				&& !pLoopUnit->isDead()
+				&& !pLoopUnit->isFighting()
+				&& !pLoopUnit->isCargo()
+				&& !pLoopUnit->hasCargo()
+				&& !pLoopUnit->isDelayedDeath()
+				&& !pLoopUnit->isSpy()
+				&& !pLoopUnit->hasMoved()
+				)
+			{
+				if (GET_PLAYER(getOwner()).getFirstMergeSelectionUnit() == FFreeList::INVALID_INDEX)
 				{
-					if (pLoopUnit->getUnitType() == pUnit1->getUnitType() && pLoopUnit->groupRank() == pUnit1->groupRank() && pLoopUnit->qualityRank() == pUnit1->qualityRank() && pLoopUnit->AI_getUnitAIType() == pUnit1->AI_getUnitAIType())
-					{
-						if (!pLoopUnit->isHurt() && !pLoopUnit->isDead() && !pLoopUnit->isFighting() && !pLoopUnit->isCargo() && !pLoopUnit->hasCargo() && !pLoopUnit->isDelayedDeath() && !pLoopUnit->isSpy() && !pLoopUnit->hasMoved())
-						{
-							if (GET_PLAYER(getOwner()).getFirstMergeSelectionUnit() == FFreeList::INVALID_INDEX)
-							{
-								GET_PLAYER(getOwner()).setFirstMergeSelectionUnit(pLoopUnit->getID());
-							}
-							else if (GET_PLAYER(getOwner()).getSecondMergeSelectionUnit() == FFreeList::INVALID_INDEX)
-							{
-								GET_PLAYER(getOwner()).setSecondMergeSelectionUnit(pLoopUnit->getID());
-								break;
-							}
-						}
-					}
+					GET_PLAYER(getOwner()).setFirstMergeSelectionUnit(pLoopUnit->getID());
+				}
+				else if (GET_PLAYER(getOwner()).getSecondMergeSelectionUnit() == FFreeList::INVALID_INDEX)
+				{
+					GET_PLAYER(getOwner()).setSecondMergeSelectionUnit(pLoopUnit->getID());
+					break;
 				}
 			}
 		}
+
 		CvUnit* pUnit2 = GET_PLAYER(getOwner()).getUnit(GET_PLAYER(getOwner()).getFirstMergeSelectionUnit());
 		CvUnit* pUnit3 = GET_PLAYER(getOwner()).getUnit(GET_PLAYER(getOwner()).getSecondMergeSelectionUnit());
 		UnitTypes eUnitType = pUnit1->getUnitType();
@@ -42389,92 +42415,19 @@ void CvUnit::doMerge()
 				}
 			}
 		}
-		if (iTotalGroupOffset != 0)
-		{
-			while (iTotalGroupOffset > 0)
-			{
-				bSet = false;
-				for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-				{
-					if ((GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() > 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-						(GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() > 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI)))
-					{
-						pkMergedUnit->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						iTotalGroupOffset--;
-						bSet = true;
-						break;
-					}
-				}
-				if (!bSet)
-				{
-					iTotalGroupOffset--;
-					FAssertMsg(bSet, "Unit cannot find a valid Group Upgrade Promotion");
-				}
-			}
-			while (iTotalGroupOffset < 0)
-			{
-				bSet = false;
-				for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-				{
-					if ((GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() < 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-						(GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() < 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI)))
-					{
-						pkMergedUnit->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						iTotalGroupOffset++;
-						bSet = true;
-						break;
-					}
-				}
-				if (!bSet)
-				{
-					iTotalGroupOffset++;
-					FAssertMsg(bSet, "Unit cannot find a valid Group Downgrade Promotion");
-				}
-			}
-		}
-		if (iTotalQualityOffset != 0)
-		{
-			while (iTotalQualityOffset > 0)
-			{
-				bSet = false;
-				for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-				{
-					if ((GC.getPromotionInfo((PromotionTypes)iI).getQualityChange() > 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-						(GC.getPromotionInfo((PromotionTypes)iI).getQualityChange() > 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI)))
-					{
-						pkMergedUnit->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						iTotalQualityOffset--;
-						bSet = true;
-						break;
-					}
-				}
-				if (!bSet)
-				{
-					iTotalQualityOffset--;
-					FAssertMsg(bSet, "Unit cannot find a valid Quality Upgrade Promotion");
-				}
-			}
-			while (iTotalQualityOffset < 0)
-			{
-				bSet = false;
-				for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-				{
-					if ((GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() < 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-						(GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() < 0 && pkMergedUnit->canAcquirePromotion((PromotionTypes)iI)))
-					{
-						pkMergedUnit->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						iTotalQualityOffset++;
-						bSet = true;
-						break;
-					}
-				}
-				if (!bSet)
-				{
-					iTotalQualityOffset++;
-					FAssertMsg(bSet, "Unit cannot find a valid Quality Downgrade Promotion");
-				}
-			}
-		}
+
+		bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalGroupOffset,
+			boost::bind(&CvUnit::isGroupUpgradePromotion, pkMergedUnit, _2),
+			boost::bind(&CvUnit::isGroupDowngradePromotion, pkMergedUnit, _2)
+		);
+		FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on merged units");
+
+		bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalQualityOffset,
+			boost::bind(&CvUnit::isQualityUpgradePromotion, pkMergedUnit, _2),
+			boost::bind(&CvUnit::isQualityDowngradePromotion, pkMergedUnit, _2)
+		);
+		FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on merged units");
+
 		//Set New Experience
 		int iXP1 = pUnit1->getExperience100();
 		int iXP2 = pUnit2->getExperience100();
@@ -42611,134 +42564,43 @@ void CvUnit::doSplit()
 				}
 			}
 		}
-		if (iTotalGroupOffset != 0)
-		{
-			while (iTotalGroupOffset > 0)
-			{
-				for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-				{
-					if ((GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() > 0 && pUnit1->canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-						(GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() > 0 && pUnit1->canAcquirePromotion((PromotionTypes)iI)))
-					{
-						pUnit1->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						pUnit2->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						pUnit3->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						iTotalGroupOffset--;
-						bSet = true;
-						break;
-					}
-				}
-				if (!bSet)
-				{
-					iTotalGroupOffset--;
-					FAssertMsg(bSet, "Unit cannot find a valid Group Upgrade Promotion");
-				}
-			}
-			while (iTotalGroupOffset < 0)
-			{
-				bSet = false;
-				for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-				{
-					if ((GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() < 0 && pUnit1->canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-						(GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() < 0 && pUnit1->canAcquirePromotion((PromotionTypes)iI)))
-					{
-						pUnit1->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						pUnit2->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						pUnit3->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						iTotalGroupOffset++;
-						bSet = true;
-						break;
-					}
-				}
-				if (!bSet)
-				{
-					iTotalGroupOffset++;
-					FAssertMsg(bSet, "Unit cannot find a valid Group Downgrade Promotion");
-				}
-			}
-		}
-		if (iTotalQualityOffset != 0)
-		{
-			while (iTotalQualityOffset > 0)
-			{
-				for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-				{
-					if ((GC.getPromotionInfo((PromotionTypes)iI).getQualityChange() > 0 && pUnit1->canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-						(GC.getPromotionInfo((PromotionTypes)iI).getQualityChange() > 0 && pUnit1->canAcquirePromotion((PromotionTypes)iI)))
-					{
-						pUnit1->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						pUnit2->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						pUnit3->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						iTotalQualityOffset--;
-						bSet = true;
-						break;
-					}
-				}
-				if (!bSet)
-				{
-					iTotalQualityOffset--;
-					FAssertMsg(bSet, "Unit cannot find a valid Quality Upgrade Promotion");
-				}
-			}
-			while (iTotalQualityOffset < 0)
-			{
-				bSet = false;
-				for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-				{
-					if ((GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() < 0 && pUnit1->canAcquirePromotion((PromotionTypes)iI, false, false, false, true, false, true)) ||
-						(GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() < 0 && pUnit1->canAcquirePromotion((PromotionTypes)iI)))
-					{
-						pUnit1->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						pUnit2->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						pUnit3->setHasPromotion((PromotionTypes)iI, true, true, false, false);
-						iTotalQualityOffset++;
-						bSet = true;
-						break;
-					}
-				}
-				if (!bSet)
-				{
-					iTotalQualityOffset++;
-					FAssertMsg(bSet, "Unit cannot find a valid Quality Downgrade Promotion");
-				}
-			}
-		}
-		pUnit1->setInhibitMerge(true);
-		pUnit2->setInhibitMerge(true);
-		pUnit3->setInhibitMerge(true);
-		//Set New Experience
-		pUnit1->setExperience100(pUnit0->getExperience100());
-		pUnit2->setExperience100(pUnit0->getExperience100());
-		pUnit3->setExperience100(pUnit0->getExperience100());
-		pUnit1->setLevel(pUnit0->getLevel());
-		pUnit2->setLevel(pUnit0->getLevel());
-		pUnit3->setLevel(pUnit0->getLevel());
 
-		pUnit1->setGameTurnCreated(pUnit0->getGameTurnCreated());
-		pUnit2->setGameTurnCreated(pUnit0->getGameTurnCreated());
-		pUnit3->setGameTurnCreated(pUnit0->getGameTurnCreated());
+		std::vector<CvUnit*> newUnits;
+		newUnits.push_back(pUnit1);
+		newUnits.push_back(pUnit2);
+		newUnits.push_back(pUnit3);
 
-		pUnit1->m_eOriginalOwner = pUnit0->getOriginalOwner();
-		pUnit2->m_eOriginalOwner = pUnit0->getOriginalOwner();
-		pUnit3->m_eOriginalOwner = pUnit0->getOriginalOwner();
-		
-		pUnit1->setAutoPromoting(pUnit0->isAutoPromoting());
-		pUnit2->setAutoPromoting(pUnit0->isAutoPromoting());
-		pUnit3->setAutoPromoting(pUnit0->isAutoPromoting());
-		pUnit1->setName(pUnit0->getNameNoDesc());
-		pUnit2->setName(pUnit0->getNameNoDesc());
-		pUnit3->setName(pUnit0->getNameNoDesc());
+		bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(newUnits, iTotalGroupOffset,
+			boost::bind(isGroupUpgradePromotion, pUnit1, _2),
+			boost::bind(isGroupDowngradePromotion, pUnit1, _2)
+		);
+		FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on split units");
 
+		bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(newUnits, iTotalQualityOffset,
+			boost::bind(isQualityUpgradePromotion, pUnit1, _2),
+			boost::bind(isQualityDowngradePromotion, pUnit1, _2)
+		);
+		FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on split units");
 
 		if (pUnit0->getLeaderUnitType() != NO_UNIT)
 		{
 			pUnit1->setLeaderUnitType(pUnit0->getLeaderUnitType());
 		}
 
-		pUnit1->joinGroup(pSplittingGroup);
-		pUnit2->joinGroup(pSplittingGroup);
-		pUnit3->joinGroup(pSplittingGroup);
+		for (std::vector<CvUnit*>::iterator itr = newUnits.begin(); itr != newUnits.end(); ++itr)
+		{
+			CvUnit* unit = *itr;
 
+			unit->setInhibitMerge(true);
+			//Set New Experience
+			unit->setExperience100(pUnit0->getExperience100());
+			unit->setLevel(pUnit0->getLevel());
+			unit->setGameTurnCreated(pUnit0->getGameTurnCreated());
+			unit->m_eOriginalOwner = pUnit0->getOriginalOwner();
+			unit->setAutoPromoting(pUnit0->isAutoPromoting());
+			unit->setName(pUnit0->getNameNoDesc());
+			unit->joinGroup(pSplittingGroup);
+		}
 
 		GET_PLAYER(getOwner()).setSplittingUnit(FFreeList::INVALID_INDEX);
 		//GET_PLAYER(getOwner()).setFirstMergeSelectionUnit(NO_UNIT);
@@ -42883,56 +42745,16 @@ int CvUnit::SMcargoSpace() const
 	{
 		if (getDomainType() == DOMAIN_SEA)
 		{
-			int iNaval = (GET_PLAYER(getOwnerINLINE()).getNationalNavalCargoSpaceChange());
-			int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER");
-			int iIterator = getSizeMattersSpacialOffsetValue();
-			bool bPositive = ((getSizeMattersOffsetValue() > 0) ? true : false);
-			iNaval *= 100;
-			if (bPositive)
-			{
-				for (int iI = 0; iI < iIterator; iI++)
-				{
-					iNaval *= iSMMultiplier;
-					iNaval /= 100;
-				}
-			}
-			else if (!bPositive)
-			{
-				for (int iI = 0; iI < -iIterator; iI++)
-				{
-					iNaval *= 100;
-					iNaval /= iSMMultiplier;
-				}
-			}
-			iNaval /= 100;
-			iCargoCapacity += iNaval;
+			iCargoCapacity += applySMRank(GET_PLAYER(getOwnerINLINE()).getNationalNavalCargoSpaceChange(),
+				getSizeMattersSpacialOffsetValue(),
+				GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER"));
 		}
 		SpecialUnitTypes eMissile = (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_MISSILE");
 		if (SMspecialCargo() == eMissile)
 		{
-			int iMissile = (GET_PLAYER(getOwnerINLINE()).getNationalMissileCargoSpaceChange());
-			int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER");
-			int iIterator = getSizeMattersSpacialOffsetValue();
-			bool bPositive = ((getSizeMattersOffsetValue() > 0) ? true : false);
-			iMissile *= 100;
-			if (bPositive)
-			{
-				for (int iI = 0; iI < iIterator; iI++)
-				{
-					iMissile *= iSMMultiplier;
-					iMissile /= 100;
-				}
-			}
-			else if (!bPositive)
-			{
-				for (int iI = 0; iI < -iIterator; iI++)
-				{
-					iMissile *= 100;
-					iMissile /= iSMMultiplier;
-				}
-			}
-			iMissile /= 100;
-			iCargoCapacity += iMissile;
+			iCargoCapacity += applySMRank(GET_PLAYER(getOwnerINLINE()).getNationalMissileCargoSpaceChange(),
+				getSizeMattersSpacialOffsetValue(),
+				GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER"));
 		}
 	}
 	else
@@ -42987,32 +42809,10 @@ int CvUnit::getSMCargoCapacity() const
 
 void CvUnit::setSMCargoCapacity()
 {
-	int iBase = 0;
-	iBase = SMcargoCapacityPreCheck();
-	int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER");
-	int iIterator = getSizeMattersSpacialOffsetValue();
-	bool bPositive = ((getSizeMattersSpacialOffsetValue() > 0) ? true : false);
-	iBase *= 100;
-	if (bPositive)
-	{
-		for (int iI = 0; iI < iIterator; iI++)
-		{
-			iBase *= iSMMultiplier;
-			iBase /= 100;
-		}
-	}
-	else if (!bPositive)
-	{
-		for (int iI = 0; iI < -iIterator; iI++)
-		{
-			iBase *= 100;
-			iBase /= iSMMultiplier;
-		}
-	}
-	iBase /= 100;
-
-	m_iSMCargoCapacity = iBase;
-	FAssert(getSMAssetValue() >= 0);
+	m_iSMCargoCapacity = applySMRank(SMcargoCapacityPreCheck(),
+		getSizeMattersSpacialOffsetValue(),
+		GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER"));
+	FAssert(m_iSMCargoCapacity >= 0);
 }
 
 int CvUnit::getExtraMaxHP() const
@@ -43069,32 +42869,10 @@ int CvUnit::getSMHPValue() const
 
 void CvUnit::setSMHPValue()
 {
-	int iBase = 0;
-	iBase = HPValueTotalPreCheck();
-	int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER");
-	int iIterator = getSizeMattersOffsetValue();
-	bool bPositive = ((getSizeMattersOffsetValue() > 0) ? true : false);
-	iBase *= 100;
-	if (bPositive)
-	{
-		for (int iI = 0; iI < iIterator; iI++)
-		{
-			iBase *= iSMMultiplier;
-			iBase /= 100;
-		}
-	}
-	else if (!bPositive)
-	{
-		for (int iI = 0; iI < -iIterator; iI++)
-		{
-			iBase *= 100;
-			iBase /= iSMMultiplier;
-		}
-	}
-	iBase /= 100;
-	iBase = std::max(1, iBase);
-
-	m_iSMHPValue = std::max(1, iBase);
+	int newSMHPValue = applySMRank(HPValueTotalPreCheck(),
+		getSizeMattersOffsetValue(),
+		GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
+	m_iSMHPValue = std::max(1, newSMHPValue);
 	FAssert(getSMHPValue() >= 0);
 }
 
@@ -43148,57 +42926,16 @@ int CvUnit::getSMPowerValue() const
 
 void CvUnit::setSMPowerValue(bool bForLoad)
 {
-	int iOldSMPowerValue = powerValueTotal();
-	int iBase = 0;
-
-	iBase = powerValueTotalPreCheck();
-	FAssert(iBase >= 0);
-	int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER");
-	int iIterator = getSizeMattersOffsetValue();
-	bool bPositive = ((getSizeMattersOffsetValue() > 0) ? true : false);
-	long long iBase2 = iBase * 100;
-	bool bOverload = false;
-	if (iBase2 > MAX_INT)
-	{
-		iBase /= 100;
-		bOverload = true;
-	}
-	iBase *= 100;
-	if (bPositive)
-	{
-		for (int iI = 0; iI < iIterator; iI++)
-		{
-			iBase2 = iBase * iSMMultiplier;
-			if (iBase2 > MAX_INT)
-			{
-				bOverload = true;
-			}
-			if (!bOverload)
-			{
-				iBase *= iSMMultiplier;
-				iBase /= 100;
-			}
-		}
-	}
-	else if (!bPositive)
-	{
-		for (int iI = 0; iI < -iIterator; iI++)
-		{
-			iBase *= 100;
-			iBase /= iSMMultiplier;
-		}
-	}
-	if (!bOverload)
-	{
-		iBase /= 100;
-	}
-	
-	FAssert(iBase >= 0);
-	
-	m_iSMPowerValue = std::max(1, iBase);
+	FAssert(powerValueTotalPreCheck() >= 0);
+	int oldSMPowerValue = powerValueTotal();
+	int newSMPowerValue = applySMRank(powerValueTotalPreCheck(),
+		getSizeMattersOffsetValue(),
+		GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
+	FAssert(newSMPowerValue >= 0);
+	m_iSMPowerValue = std::max(1, newSMPowerValue);
 	if (!bForLoad)
 	{
-		int iChange = m_iSMPowerValue - iOldSMPowerValue;
+		int iChange = m_iSMPowerValue - oldSMPowerValue;
 		iChange = std::max(1, iChange);
 		GET_PLAYER(getOwnerINLINE()).changePower(iChange);
 	}
@@ -43255,42 +42992,20 @@ int CvUnit::getSMAssetValue() const
 
 void CvUnit::setSMAssetValue(bool bForLoad)
 {
-	int iOldSMAssetValue = assetValueTotal();
-	int iBase = 0;
-	iBase = assetValueTotalPreCheck();
-	int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER");
-	int iIterator = getSizeMattersOffsetValue();
-	if (iIterator == -15)//Special Case for size cat undefined units
+	const int offsetValue = getSizeMattersOffsetValue();
+	if (offsetValue != -15) // Special Case for size cat undefined units
 	{
-		m_iSMAssetValue = iOldSMAssetValue;
-	}
-	bool bPositive = ((getSizeMattersOffsetValue() > 0) ? true : false);
-	iBase *= 100;
-	if (bPositive)
-	{
-		for (int iI = 0; iI < iIterator; iI++)
+		int oldSMAssetValue = assetValueTotal();
+		m_iSMAssetValue = applySMRank(assetValueTotalPreCheck(),
+			offsetValue,
+			GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
+		if (!bForLoad)
 		{
-			iBase *= iSMMultiplier;
-			iBase /= 100;
+			int iChange = m_iSMAssetValue - oldSMAssetValue;
+			GET_PLAYER(getOwnerINLINE()).changeAssets(iChange);
 		}
+		FAssertOptionRecalcMsg(GAMEOPTION_SIZE_MATTERS, getSMAssetValue() >= 0, "Asset value fell below 0");
 	}
-	else if (!bPositive)
-	{
-		for (int iI = 0; iI < -iIterator; iI++)
-		{
-			iBase *= 100;
-			iBase /= iSMMultiplier;
-		}
-	}
-	iBase /= 100;
-
-	m_iSMAssetValue = iBase;
-	if (!bForLoad)
-	{
-		int iChange = m_iSMAssetValue - iOldSMAssetValue;
-		GET_PLAYER(getOwnerINLINE()).changeAssets(iChange);
-	}
-	FAssertOptionRecalcMsg(GAMEOPTION_SIZE_MATTERS, getSMAssetValue() >= 0, "Asset value fell below 0");
 }
 
 int CvUnit::getCargoVolumeModifier() const
@@ -43382,40 +43097,18 @@ int CvUnit::SMCargoVolume() const
 
 void CvUnit::setSMCargoVolume()
 {
-	int iBase = 0;
-	iBase = SMCargoVolumePreCheck();
-	int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER");
-	int iIterator = getSizeMattersSpacialOffsetValue();
-	bool bPositive = ((getSizeMattersSpacialOffsetValue() > 0) ? true : false);
-	iBase *= 100;
-	if (bPositive)
-	{
-		for (int iI = 0; iI < iIterator; iI++)
-		{
-			iBase *= iSMMultiplier;
-			iBase /= 100;
-		}
-	}
-	else if (!bPositive)
-	{
-		for (int iI = 0; iI < -iIterator; iI++)
-		{
-			iBase *= 100;
-			iBase /= iSMMultiplier;
-		}
-	}
-	iBase /= 100;
+	m_iSMCargoVolume = applySMRank(SMCargoVolumePreCheck(),
+		getSizeMattersSpacialOffsetValue(),
+		GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER"));
 
 	//if (!isCarrier())//Carriers can be carried so they need Cargo Volume as well.
 	//{
-		iBase = std::max(1, iBase);
+	m_iSMCargoVolume = std::max(1, m_iSMCargoVolume);
 	//}
 	//else
 	//{
 	//	iBase = 0;
 	//}
-	m_iSMCargoVolume = iBase;
-	FAssert(getSMPowerValue() >= 0);
 }
 
 int CvUnit::getSizeMattersOffsetValue() const
@@ -43451,45 +43144,22 @@ int CvUnit::getSizeMattersSpacialOffsetValue() const
 
 int CvUnit::getCargoCapacitybyType(int iValue) const
 {
-	SpecialUnitTypes eSpecialUnitDefined = (getSMSpecialCargo());
-	SpecialUnitTypes eSpecialUnitDefinedNot = (getSMNotSpecialCargo());
-	SpecialUnitTypes ePeople = (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_PEOPLE");
-	SpecialUnitTypes eMissile = (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_MISSILE");
-	SpecialUnitTypes eFighter = (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_FIGHTER");
-	SpecialUnitTypes eSeaplane = (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_SEAPLANE");
-	int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER");
-	int iIterator = 0;
+	SpecialUnitTypes eSpecialUnitDefined = getSMSpecialCargo();
+	SpecialUnitTypes eSpecialUnitDefinedNot = getSMNotSpecialCargo();
 
-	if (eSpecialUnitDefined == ePeople || eSpecialUnitDefined == eMissile)
+	int rankChange = 0;
+	if (eSpecialUnitDefined == (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_PEOPLE")
+		|| eSpecialUnitDefined == (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_MISSILE"))
 	{
-		iIterator = -3;
+		rankChange = -3;
 	}
-	if (eSpecialUnitDefined == eFighter || eSpecialUnitDefined == eSeaplane || eSpecialUnitDefinedNot == eMissile)
+	else if (eSpecialUnitDefined == (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_FIGHTER")
+		|| eSpecialUnitDefined == (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_SEAPLANE")
+		|| eSpecialUnitDefinedNot == (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_MISSILE"))
 	{
-		iIterator = -1;
+		rankChange = -1;
 	}
-
-	bool bPositive = ((iIterator > 0) ? true : false);
-	iValue *= 100;
-	if (bPositive)
-	{
-		for (int iI = 0; iI < iIterator; iI++)
-		{
-			iValue *= iSMMultiplier;
-			iValue /= 100;
-		}
-	}
-	else if (!bPositive)
-	{
-		for (int iI = 0; iI < -iIterator; iI++)
-		{
-			iValue *= 100;
-			iValue /= iSMMultiplier;
-		}
-	}
-	iValue /= 100;
-	iValue *= cargoSpace();
-	return iValue;
+	return applySMRank(iValue, rankChange, GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER"));
 }
 
 bool CvUnit::isCarrier() const
@@ -43741,35 +43411,13 @@ int CvUnit::getSMBombardRate() const//The final result of the Multiplicative adj
 ////This is the core multiplicative method being utilized.
 void CvUnit::setSMBombardRate()
 {
-	int iBase = 0;
+	m_iSMBombardRate = applySMRank(bombardRateTotalPreCheck(),
+		getSizeMattersOffsetValue(),
+		GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
 
-	iBase = bombardRateTotalPreCheck();// grab the total before multiplicative method so as to run it through the machine
-	int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER");//This may alternatively be "SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER" for x3
-	int iIterator = getSizeMattersOffsetValue();//Calls for the current off zero status of the unit regarding the tally of all three SM categories
-	bool bPositive = ((iIterator > 0) ? true : false);
-	iBase *= 100;
-	if (bPositive)
-	{
-		for (int iI = 0; iI < iIterator; iI++)
-		{
-			iBase *= iSMMultiplier;
-			iBase /= 100;
-		}
-	}
-	else if (!bPositive)
-	{
-		for (int iI = 0; iI < -iIterator; iI++)
-		{
-			iBase *= 100;
-			iBase /= iSMMultiplier;
-		}
-	}
-	iBase /= 100;
-	iBase = std::max(0, iBase);
-
-	m_iSMBombardRate = iBase;
-	//optional but most of these should be above or equal to 0.
-	FAssert(getSMBombardRate() >= 0);
+	// optional but most of these should be above or equal to 0.
+	FAssert(m_iSMBombardRate >= 0);
+	m_iSMBombardRate = std::max(0, m_iSMBombardRate);
 }
 
 //Old bombard rate
@@ -43833,35 +43481,13 @@ int CvUnit::getSMAirBombBaseRate() const//The final result of the Multiplicative
 //This is the core multiplicative method being utilized.
 void CvUnit::setSMAirBombBaseRate()
 {
-	int iBase = 0;
+	m_iSMAirBombBaseRate = applySMRank(airBombBaseRateTotalPreCheck(),
+		getSizeMattersOffsetValue(),
+		GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
 
-	iBase = airBombBaseRateTotalPreCheck();// grab the total before multiplicative method so as to run it through the machine
-	int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER");//This may alternatively be "SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER" for x3
-	int iIterator = getSizeMattersOffsetValue();//Calls for the current off zero status of the unit regarding the tally of all three SM categories
-	bool bPositive = ((iIterator > 0) ? true : false);
-	iBase *= 100;
-	if (bPositive)
-	{
-		for (int iI = 0; iI < iIterator; iI++)
-		{
-			iBase *= iSMMultiplier;
-			iBase /= 100;
-		}
-	}
-	else if (!bPositive)
-	{
-		for (int iI = 0; iI < -iIterator; iI++)
-		{
-			iBase *= 100;
-			iBase /= iSMMultiplier;
-		}
-	}
-	iBase /= 100;
-	iBase = std::max(0, iBase);
-
-	m_iSMAirBombBaseRate = iBase;
 	//optional but most of these should be above or equal to 0.
-	FAssert(getSMAirBombBaseRate() >= 0);
+	FAssert(m_iSMAirBombBaseRate >= 0);
+	m_iSMAirBombBaseRate = std::max(0, m_iSMAirBombBaseRate);
 }
 
 int CvUnit::workRate(bool bMax) const
@@ -43983,36 +43609,12 @@ int CvUnit::getSMBaseWorkRate() const//The final result of the Multiplicative ad
 //This is the core multiplicative method being utilized.
 void CvUnit::setSMBaseWorkRate()
 {
-	int iBase = 0;
-
-	iBase = baseWorkRatePreCheck();// grab the total before multiplicative method so as to run it through the machine
-	int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER");//This may alternatively be "SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER" for x3
-	int iIterator = getSizeMattersSpacialOffsetValue();//Calls for the current off zero status of the unit regarding the tally of all three SM categories
-	iIterator++; //Workers have a base of Medium Size and Company Group Volume (0, -1)
-	bool bPositive = ((iIterator > 0) ? true : false);
-	iBase *= 100;
-	if (bPositive)
-	{
-		for (int iI = 0; iI < iIterator; iI++)
-		{
-			iBase *= iSMMultiplier;
-			iBase /= 100;
-		}
-	}
-	else if (!bPositive)
-	{
-		for (int iI = 0; iI < -iIterator; iI++)
-		{
-			iBase *= 100;
-			iBase /= iSMMultiplier;
-		}
-	}
-	iBase /= 100;
-	iBase = std::max(0, iBase);
-
-	m_iSMBaseWorkRate = iBase;
+	m_iSMBaseWorkRate = applySMRank(baseWorkRatePreCheck(),
+		getSizeMattersSpacialOffsetValue(),
+		GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER"));
 	//optional but most of these should be above or equal to 0.
-	FAssert(getSMBaseWorkRate() >= 0);
+	FAssert(m_iSMBaseWorkRate >= 0);
+	m_iSMBaseWorkRate = std::max(0, m_iSMBaseWorkRate);
 }
 
 int CvUnit::getRevoltProtection() const
@@ -44075,35 +43677,12 @@ int CvUnit::getSMRevoltProtection() const//The final result of the Multiplicativ
 //This is the core multiplicative method being utilized.
 void CvUnit::setSMRevoltProtection()
 {
-	int iBase = 0;
-
-	iBase = revoltProtectionTotalPreCheck();// grab the total before multiplicative method so as to run it through the machine
-	int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER");//This may alternatively be "SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER" for x3
-	int iIterator = getSizeMattersOffsetValue();//Calls for the current off zero status of the unit regarding the tally of all three SM categories
-	bool bPositive = ((iIterator > 0) ? true : false);
-	iBase *= 100;
-	if (bPositive)
-	{
-		for (int iI = 0; iI < iIterator; iI++)
-		{
-			iBase *= iSMMultiplier;
-			iBase /= 100;
-		}
-	}
-	else if (!bPositive)
-	{
-		for (int iI = 0; iI < -iIterator; iI++)
-		{
-			iBase *= 100;
-			iBase /= iSMMultiplier;
-		}
-	}
-	iBase /= 100;
-	iBase = std::max(0, iBase);
-
-	m_iSMRevoltProtection = iBase;
-	//optional but most of these should be above or equal to 0.
-	FAssert(getSMRevoltProtection() >= 0);
+	m_iSMRevoltProtection = applySMRank(revoltProtectionTotalPreCheck(),
+		getSizeMattersOffsetValue(),
+		GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
+	// optional but most of these should be above or equal to 0.
+	FAssert(m_iSMRevoltProtection >= 0);
+	m_iSMRevoltProtection = std::max(0, m_iSMRevoltProtection);
 }
 
 bool CvUnit::canPerformActionSM() const
@@ -44415,38 +43994,36 @@ bool CvUnit::isRBombardDirect() const
 	return (m_iBombardDirectCount > 0);
 }
 
-void CvUnit::changeBombardDirectCount(int iChange)													
+void CvUnit::changeBombardDirectCount(int iChange)
 {
 	m_iBombardDirectCount += iChange;
 }
 
-int CvUnit::processIntegerbySizeMatters(int iValue) const
+// Applies rank scaling to a value, with overflow protection.
+// rankMultiplier should be scaled up by 100 (e.g. 300 instead of 3).
+// rankChange can be positive or negative.
+// Equation demonstrated here: https://www.desmos.com/calculator/wivft5kfcc
+int CvUnit::applySMRank(int value, int rankChange, int rankMultiplier)
 {
-	int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER");//This may alternatively be "SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER" for x3
-	int iIterator = getSizeMattersOffsetValue();//Calls for the current off zero status of the unit regarding the tally of all three SM categories
-	bool bPositive = ((iIterator > 0) ? true : false);
-
-	iValue *= 100;
-	if (bPositive)
+	FAssertMsg(rankMultiplier > 0, "rankMultiplier must be greater than 0");
+	long long lvalue = 100LL * value;
+	if (rankChange > 0)
 	{
-		for (int iI = 0; iI < iIterator; iI++)
+		for (int iI = 0; iI < rankChange; iI++)
 		{
-			iValue *= iSMMultiplier;
-			iValue /= 100;
+			lvalue *= static_cast<long long>(rankMultiplier);
+			lvalue /= 100LL;
 		}
 	}
-	else if (!bPositive)
+	else
 	{
-		for (int iI = 0; iI < -iIterator; iI++)
+		for (int iI = 0; iI < -rankChange; iI++)
 		{
-			iValue *= 100;
-			iValue /= iSMMultiplier;
+			lvalue *= 100LL;
+			lvalue /= static_cast<long long>(rankMultiplier);
 		}
 	}
-	iValue /= 100;
-	iValue = std::max(0, iValue);
-
-	return iValue;
+	return static_cast<int>(std::min<long long>(MAX_INT, lvalue / 100LL));
 }
 
 int CvUnit::getNoSelfHealCount() const
@@ -44554,7 +44131,8 @@ void CvUnit::establishBuildups()
 			for (int iJ = 0; iJ < kPromotionLine.getNumPromotions(); iJ++)
 			{
 				PromotionTypes ePromotion = (PromotionTypes)kPromotionLine.getPromotion(iJ);
-				if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1 && canAcquirePromotion(ePromotion, false, false, false, false, false, false, true, true))
+				if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1 
+					&& canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp))
 				{
 					PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(ePromotionLine);
 
@@ -44604,7 +44182,8 @@ void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, bool bRemove, Mis
 					{
 						PromotionTypes ePromotion = (PromotionTypes)kPotentialPromotionLine.getPromotion(iI);
 						CvPromotionInfo& kPromotion = GC.getPromotionInfo(ePromotion);
-						if (kPromotion.getLinePriority() == 1 && canAcquirePromotion(ePromotion, false, false, false, false, false, false, true, true))
+						if (kPromotion.getLinePriority() == 1 
+							&& canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp))
 						{
 							iValue = 0;
 							if (bCanHeal)
@@ -44671,7 +44250,8 @@ void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, bool bRemove, Mis
 					for (int iI = 0; iI < kPotentialPromotionLine.getNumPromotions(); iI++)
 					{
 						PromotionTypes ePromotion = (PromotionTypes)kPotentialPromotionLine.getPromotion(iI);
-						if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1 && canAcquirePromotion(ePromotion, false, false, false, false, false, false, true, true))
+						if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1 
+							&& canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp))
 						{
 							iValue = std::max(1, GET_PLAYER(getOwnerINLINE()).AI_promotionValue(ePromotion, getUnitType(), this, AI_getUnitAIType(), true));
 							if (iValue > iBestValue)
@@ -44802,7 +44382,7 @@ void CvUnit::doHNCapture()
 		if (GC.getPromotionInfo((PromotionTypes)iI).isSetOnHNCapture())
 		{
 			PromotionTypes ePromotion = ((PromotionTypes)iI);
-			if (canAcquirePromotion(ePromotion, false, false, false, false,false, false, true, false))
+			if (canAcquirePromotion(ePromotion, PromotionRequirements::ForFree))
 			{
 				setHasPromotion(ePromotion, true, true, false, false);
 				m_bHasHNCapturePromotion = true;
@@ -46492,7 +46072,7 @@ void CvUnit::doSetDefaultStatuses()
 	for (int iI = 0; iI < (int)m_iDefaultStatusTypes.size(); iI++)
 	{
 		PromotionTypes ePromotion = (PromotionTypes)m_iDefaultStatusTypes[iI];
-		if (canAcquirePromotion(ePromotion, false, false, false, false, false, false, false, false, true))
+		if (canAcquirePromotion(ePromotion, PromotionRequirements::ForStatus))
 		{
 			statusUpdate(ePromotion);
 		}
@@ -46832,7 +46412,7 @@ void CvUnit::setTrap(CvUnit* pUnit)
 	{
 		if (pUnit->hasTrapSetWithPromotion((PromotionTypes)iI))
 		{
-			if (canAcquirePromotion((PromotionTypes)iI, false, false, false, false, false, false, true, false, false))
+			if (canAcquirePromotion((PromotionTypes)iI, PromotionRequirements::ForFree))
 			{
 				setHasPromotion((PromotionTypes)iI, true, true, false, false);
 			}
@@ -47035,7 +46615,7 @@ void CvUnit::makeWanted(CvCity* pCity)
 		if (GC.getPromotionInfo((PromotionTypes)iI).isSetOnInvestigated())
 		{
 			PromotionTypes ePromotion = ((PromotionTypes)iI);
-			if (canAcquirePromotion(ePromotion, false, false, false, false, false, false, true, false))
+			if (canAcquirePromotion(ePromotion, PromotionRequirements::ForFree))
 			{
 				setHasPromotion(ePromotion, true, true, false, false);
 				PlayerTypes ePlayer = pCity->getOwner();

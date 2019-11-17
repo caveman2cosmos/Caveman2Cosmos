@@ -7,7 +7,6 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-#include <boost/bind.hpp>
 
 CvProperties::CvProperties()
 {

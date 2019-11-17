@@ -1,8 +1,5 @@
 #pragma once
 
-#ifndef CvGameCoreDLL_h
-#define CvGameCoreDLL_h
-
 //
 // includes (pch) for gamecore dll files
 // Author - Mustafa Thamer
@@ -12,6 +9,15 @@
 // WINDOWS
 //
 #pragma warning( disable: 4530 )	// C++ exception handler used, but unwind semantics are not enabled
+
+#ifdef __INTELLISENSE__
+#define BOOST_MSVC 1310
+// #undef _MSC_VER
+#define _MSC_VER 1310
+#define BOOST_FUNCTION_PARMS
+#define BOOST_FUNCTION_PARM
+#define BOOST_PP_VARIADICS 0
+#endif
 
 #define NOMINMAX
 #define _WIN32_WINNT 0x0600
@@ -26,6 +32,10 @@
 //#if !defined USE_MEMMANAGER
 //#define USE_MEMMANAGER
 //#endif
+
+//
+// Standard headers
+//
 #include <vector>
 #include <list>
 #include <tchar.h>
@@ -34,6 +44,7 @@
 #include <map>
 #define _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS
 #include <hash_map>
+#include <hash_set>
 #include <stdio.h>
 #include <utility>
 #include <algorithm>
@@ -45,6 +56,9 @@
 #include "EnumFlags.h"
 #include "NiPoint.h"
 
+//
+// Basic types
+//
 typedef unsigned char    byte;
 typedef unsigned short   word;
 typedef unsigned int     uint;
@@ -52,6 +66,9 @@ typedef unsigned long    dword;
 typedef unsigned __int64 qword;
 typedef wchar_t          wchar;
 
+//
+// Type traits
+//
 #define MAX_CHAR                            (0x7f)
 #define MIN_CHAR                            (0x80)
 #define MAX_SHORT                           (0x7fff)
@@ -81,7 +98,27 @@ __forceinline DWORD FtoDW( float f ) { return *(DWORD*)&f; }
 __forceinline float DWtoF( dword n ) { return *(float*)&n; }
 __forceinline float MaxFloat() { return DWtoF(0x7f7fffff); }
 
+// General flags that declare cache access
+struct ECacheAccess
+{
+	enum flags
+	{
+		None = 0,
+		Read = 1 << 0,
+		Write = 1 << 1,
+		ReadWrite = Read | Write
+	};
+};
+DEFINE_ENUM_FLAG_OPERATORS(ECacheAccess::flags);
 
+//
+// Feature macros
+//
+// #define STRENGTH_IN_NUMBERS
+
+//
+// Profiler
+//
 #ifdef USE_INTERNAL_PROFILER
 #define MEMTRACK
 #endif
@@ -110,7 +147,9 @@ void IFPSetCount(ProfileSample* sample, int count);
 #define MEMORY_TRACE_FUNCTION()
 #define MEMORY_TRACK_NAME(x)
 
+//
 // Python
+//
 #ifdef _DEBUG
   #undef _DEBUG
   #include "Python.h"
@@ -120,8 +159,25 @@ void IFPSetCount(ProfileSample* sample, int count);
 #endif
 
 //
+// Boost
+//
+#include <boost/scoped_ptr.hpp>
+#include <boost/scoped_array.hpp>
+#include <boost/shared_ptr.hpp>
+#include <boost/shared_array.hpp>
+#include <boost/lambda/lambda.hpp>
+#include <boost/bind.hpp>
+#include <boost/optional.hpp>
+#include <boost/algorithm/string.hpp>
+#include <boost/format.hpp>
+#include <boost/function.hpp>
+#include <boost/array.hpp>
+
+
+//
 // Boost Python
 //
+#ifndef __INTELLISENSE__
 #include <boost/python/list.hpp>
 #include <boost/python/tuple.hpp>
 #include <boost/python/class.hpp>
@@ -129,6 +185,10 @@ void IFPSetCount(ProfileSample* sample, int count);
 #include <boost/python/return_value_policy.hpp>
 #include <boost/python/object.hpp>
 #include <boost/python/def.hpp>
+#include <boost/python/enum.hpp>
+namespace python = boost::python;
+#endif
+
 
 //
 // xercesc for XML loading
@@ -146,8 +206,9 @@ void IFPSetCount(ProfileSample* sample, int count);
 #include <xercesc/framework/Wrapper4InputSource.hpp>
 #include <xercesc/validators/common/Grammar.hpp>
 
-namespace python = boost::python;
-
+//
+// Our code
+//
 #include "CvAllocator.h"
 
 #include "FAssert.h"
@@ -216,5 +277,3 @@ namespace python = boost::python;
 #undef OutputDebugString
 #define OutputDebugString(x)
 #endif //FINAL_RELEASE
-
-#endif	// CvGameCoreDLL_h

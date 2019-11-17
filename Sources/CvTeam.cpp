@@ -2841,6 +2841,32 @@ int CvTeam::getNumNukeUnits() const
 	return iCount;
 }
 
+bool CvTeam::isUnitPrereqOrBonusesMet(const CvUnitInfo& unit) const
+{
+	bool bFound = false;
+	bool bRequires = false;
+	for (int i = 0; i < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); ++i)
+	{
+		if (NO_BONUS != unit.getPrereqOrBonuses(i))
+		{
+			TechTypes eTech = (TechTypes)GC.getBonusInfo((BonusTypes)unit.getPrereqOrBonuses(i)).getTechCityTrade();
+			if (NO_TECH != eTech)
+			{
+				bRequires = true;
+
+				if (isHasTech(eTech))
+				{
+					bFound = true;
+					break;
+				}
+			}
+		}
+	}
+
+	return !bRequires || bFound;
+}
+
+
 int CvTeam::getVotes(VoteTypes eVote, VoteSourceTypes eVoteSource) const
 {
 	int iCount = 0;
@@ -3671,7 +3697,7 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 	if (GC.getGame().isOption(GAMEOPTION_BEELINE_STINGS))
 	{
 		int iTechEra = GC.getTechInfo(eTech).getEra();
-		int iPlayerEra;
+		int iPlayerEra = MAXINT;
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
@@ -3680,6 +3706,8 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 				break;
 			}
 		}
+		FAssertMsg(iPlayerEra != MAXINT, "No player found on team!");
+
 		if (iTechEra < iPlayerEra)
 		{
 			for (int iI = 0; iI < GC.getNumEraInfos(); iI++)
@@ -6457,9 +6485,10 @@ int CvTeam::getVictoryDelay(VictoryTypes eVictory) const
 			return -1;
 		}
 		
-		if (iCount < kProject.getVictoryThreshold(eVictory))
+		int victoryThreshold = kProject.getVictoryThreshold(eVictory);
+		if (iCount < victoryThreshold && victoryThreshold > 0)
 		{
-			iExtraDelayPercent += ((kProject.getVictoryThreshold(eVictory)  - iCount) * kProject.getVictoryDelayPercent()) / kProject.getVictoryThreshold(eVictory);
+			iExtraDelayPercent += ((victoryThreshold - iCount) * kProject.getVictoryDelayPercent()) / victoryThreshold;
 		}
 	}
 

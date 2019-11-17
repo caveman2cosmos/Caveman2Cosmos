@@ -444,10 +444,7 @@ bool CvDeal::isVassalTrade(const CLinkList<TradeData>* pList)
 
 bool CvDeal::isUncancelableVassalDeal(PlayerTypes eByPlayer, CvWString* pszReason) const
 {
-	CLLNode<TradeData>* pNode;
-	CvWStringBuffer szBuffer;
-
-	for (pNode = headFirstTradesNode(); (pNode != NULL); pNode = nextFirstTradesNode(pNode))
+	for (CLLNode<TradeData>* pNode = headFirstTradesNode(); pNode != NULL; pNode = nextFirstTradesNode(pNode))
 	{
 		if (isVassal(pNode->m_data.m_eItemType))
 		{
@@ -464,14 +461,14 @@ bool CvDeal::isUncancelableVassalDeal(PlayerTypes eByPlayer, CvWString* pszReaso
 
 		if (pNode->m_data.m_eItemType == TRADE_SURRENDER)
 		{
-			CvTeam& kVassal = GET_TEAM(GET_PLAYER(getFirstPlayer()).getTeam());
+			const CvTeam& kVassal = GET_TEAM(GET_PLAYER(getFirstPlayer()).getTeam());
 			TeamTypes eMaster = GET_PLAYER(getSecondPlayer()).getTeam();
 			
 			if (!kVassal.canVassalRevolt(eMaster))
 			{
 				if (pszReason)
 				{
-					szBuffer.clear();
+					CvWStringBuffer szBuffer;
 					GAMETEXT.setVassalRevoltHelp(szBuffer, eMaster, GET_PLAYER(getFirstPlayer()).getTeam());
 					*pszReason = szBuffer.getCString();
 				}
@@ -481,7 +478,7 @@ bool CvDeal::isUncancelableVassalDeal(PlayerTypes eByPlayer, CvWString* pszReaso
 		}
 	}
 
-	for (pNode = headSecondTradesNode(); (pNode != NULL); pNode = nextSecondTradesNode(pNode))
+	for (CLLNode<TradeData>* pNode = headSecondTradesNode(); (pNode != NULL); pNode = nextSecondTradesNode(pNode))
 	{
 		if (isVassal(pNode->m_data.m_eItemType))
 		{
@@ -505,7 +502,7 @@ bool CvDeal::isUncancelableVassalDeal(PlayerTypes eByPlayer, CvWString* pszReaso
 			{
 				if (pszReason)
 				{
-					szBuffer.clear();
+					CvWStringBuffer szBuffer;
 					GAMETEXT.setVassalRevoltHelp(szBuffer, eMaster, GET_PLAYER(getFirstPlayer()).getTeam());
 					*pszReason = szBuffer.getCString();
 				}				
@@ -1463,14 +1460,14 @@ void CvDeal::endTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eToP
 /* Advanced Diplomacy                                                                           */
 /************************************************************************************************/
    case TRADE_EMBASSY:
-        GET_TEAM(GET_PLAYER(eFromPlayer).getTeam()).setHasEmbassy(((TeamTypes)(GET_PLAYER(eToPlayer).getTeam())), false);
-        if (bTeam)
-        {
-            endTeamTrade(TRADE_EMBASSY, GET_PLAYER(eFromPlayer).getTeam(), GET_PLAYER(eToPlayer).getTeam());
+		GET_TEAM(GET_PLAYER(eFromPlayer).getTeam()).setHasEmbassy(((TeamTypes)(GET_PLAYER(eToPlayer).getTeam())), false);
+		if (bTeam)
+		{
+			endTeamTrade(TRADE_EMBASSY, GET_PLAYER(eFromPlayer).getTeam(), GET_PLAYER(eToPlayer).getTeam());
 			endTeamTrade(TRADE_OPEN_BORDERS, GET_PLAYER(eFromPlayer).getTeam(), GET_PLAYER(eToPlayer).getTeam());
 			endTeamTrade(TRADE_DEFENSIVE_PACT, GET_PLAYER(eFromPlayer).getTeam(), GET_PLAYER(eToPlayer).getTeam());
 			endTeamTrade(TRADE_FREE_TRADE_ZONE, GET_PLAYER(eFromPlayer).getTeam(), GET_PLAYER(eToPlayer).getTeam());
-        }
+		}
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
@@ -1850,7 +1847,7 @@ TradeableItems CvDeal::getGoldPerTurnItem()
 /************************************************************************************************/
 bool CvDeal::isSingleOption(TradeableItems eItem)
 {
-    return (eItem == TRADE_PLEDGE_VOTE);
+	return (eItem == TRADE_PLEDGE_VOTE);
 }
 
 bool CvDeal::isEmbassy()

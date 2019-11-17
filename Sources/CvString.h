@@ -130,7 +130,7 @@ public:
 		memcpy(m_pBuffer + m_iLength, szCharacters, sizeof(wchar) * (inputLength + 1)); //null character
 		m_iLength = newLength;
 	}
-    
+	
 	void append(const CvWString &szString)
 	{
 		append(szString.GetCString());

@@ -5,8 +5,6 @@
 #ifndef CIV4_PLAYER_AI_H
 #define CIV4_PLAYER_AI_H
 
-#include <boost/shared_ptr.hpp>
-
 #include "CvPlayer.h"
 #include "AI_defines.h"
 

@@ -1,4 +1,6 @@
 #pragma once
+#ifndef CyArgsList_h__
+#define CyArgsList_h__
 
 #include "CvGameCoreDLL.h"
 
@@ -22,6 +24,21 @@ public:
 	void add(const byte* s, int iLength);		// makes a list
 	void add(const int* s, int iLength);		// makes a list
 	void add(const float* s, int iLength);		// makes a list
+
+	template < class Ty >
+	void add(const std::vector<Ty>& s)
+	{
+		if(!s.empty())
+		{
+			add(&s[0], s.size());
+		}
+		else
+		{
+			Ty s0[1];
+			add(s0, 0);
+		}
+	}
+
 	DllExport void add(void* p);
 	DllExport void* makeFunctionArgs();
 
@@ -38,3 +55,4 @@ public:
 protected:
 	int m_iCnt;
 };
+#endif // CyArgsList_h__

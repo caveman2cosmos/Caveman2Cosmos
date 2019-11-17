@@ -1,7 +1,6 @@
 #include "CvGameCoreDLL.h"
 
 #include "CvGameCoreDLLUnDefNew.h"
-# include <boost/python/enum.hpp>
 #include "CvGameCoreDLLDefNew.h"
 
 // Dale - AB: Bombing PLEASE NOTE!

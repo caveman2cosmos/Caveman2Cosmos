@@ -50,8 +50,8 @@ public:
 	CvPlayer();
 	virtual ~CvPlayer();
 
-	CvGameObjectPlayer* getGameObject() {return &m_GameObject;};
-	const CvGameObjectPlayer* getGameObjectConst() const {return &m_GameObject;};
+	CvGameObjectPlayer* getGameObject() { return &m_GameObject; };
+	const CvGameObjectPlayer* getGameObjectConst() const { return &m_GameObject; };
 
 protected:
 	CvGameObjectPlayer m_GameObject;
@@ -87,52 +87,52 @@ public:
 	DllExport void setupGraphical();
 	DllExport void reset(PlayerTypes eID = NO_PLAYER, bool bConstructorCall = false);
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      12/30/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	// REVOLUTION_MOD:  Customized version of initInGame below
-	void resetPlotAndCityData( );
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* BETTER_BTS_AI_MOD                      12/30/08                                jdog5000      */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
+		// REVOLUTION_MOD:  Customized version of initInGame below
+	void resetPlotAndCityData();
+	/************************************************************************************************/
+	/* BETTER_BTS_AI_MOD                       END                                                  */
+	/************************************************************************************************/
 
-/************************************************************************************************/
-/* CHANGE_PLAYER                          12/30/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	void logMsg(char* format, ... );
+	/************************************************************************************************/
+	/* CHANGE_PLAYER                          12/30/08                                jdog5000      */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
+	void logMsg(char* format, ...);
 	void clearTraitBonuses();
 	void addTraitBonuses();
 	void changePersonalityType();
 	void resetCivTypeEffects();
-	void changeLeader( LeaderHeadTypes eNewLeader );
-	void changeCiv( CivilizationTypes eNewCiv );
-	void setIsHuman( bool bNewValue );
-/************************************************************************************************/
-/* CHANGE_PLAYER                           END                                                  */
-/************************************************************************************************/
+	void changeLeader(LeaderHeadTypes eNewLeader);
+	void changeCiv(CivilizationTypes eNewCiv);
+	void setIsHuman(bool bNewValue);
+	/************************************************************************************************/
+	/* CHANGE_PLAYER                           END                                                  */
+	/************************************************************************************************/
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/04/09                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* REVOLUTION_MOD                         01/04/09                                jdog5000      */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
 	void initInGame(PlayerTypes eID, bool bSetAlive);
-	void setIsRebel( bool bNewValue );
-	bool isRebel( ) const;
-	int getStabilityIndex( ) const;
-	void setStabilityIndex( int iNewValue );
-	void changeStabilityIndex( int iChange );
-	int getStabilityIndexAverage( ) const;
-	void setStabilityIndexAverage( int iNewValue );
-	void updateStabilityIndexAverage( );
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
-//protected:
+	void setIsRebel(bool bNewValue);
+	bool isRebel() const;
+	int getStabilityIndex() const;
+	void setStabilityIndex(int iNewValue);
+	void changeStabilityIndex(int iChange);
+	int getStabilityIndexAverage() const;
+	void setStabilityIndexAverage(int iNewValue);
+	void updateStabilityIndexAverage();
+	/************************************************************************************************/
+	/* REVOLUTION_MOD                          END                                                  */
+	/************************************************************************************************/
+	//protected:
 
 	void uninit();
 
@@ -140,11 +140,11 @@ public:
 
 	void initFreeState();
 	void initFreeUnits();
-/************************************************************************************************/
-/* LoR                                        11/03/10                          phungus420      */
-/*                                                                                              */
-/* Colonists                                                                                    */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* LoR                                        11/03/10                          phungus420      */
+	/*                                                                                              */
+	/* Colonists                                                                                    */
+	/************************************************************************************************/
 	UnitTypes getBestUnitType(UnitAITypes eUnitAI) const;									// Exposed to Python
 /************************************************************************************************/
 /* LoR                            END                                                           */
@@ -159,7 +159,7 @@ public:
 	int findStartingArea() const;
 	CvPlot* findStartingPlot(bool bRandomize = false);																																									// Exposed to Python
 
-	CvPlotGroup* initPlotGroup(CvPlot* pPlot, bool bRecalculateBonuses);													
+	CvPlotGroup* initPlotGroup(CvPlot* pPlot, bool bRecalculateBonuses);
 
 	CvCity* initCity(int iX, int iY, bool bBumpUnits, bool bUpdatePlotGroups);																																// Exposed to Python
 	void acquireCity(CvCity* pCity, bool bConquest, bool bTrade, bool bUpdatePlotGroups);																							// Exposed to Python
@@ -182,11 +182,11 @@ public:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	void setHumanDisabled( bool newVal );
-	bool isHumanDisabled( ) const;
-/************************************************************************************************/
-/* AI_AUTO_PLAY_MOD                        END                                                  */
-/************************************************************************************************/
+	void setHumanDisabled(bool newVal);
+	bool isHumanDisabled() const;
+	/************************************************************************************************/
+	/* AI_AUTO_PLAY_MOD                        END                                                  */
+	/************************************************************************************************/
 	DllExport bool isHuman() const;																																							// Exposed to Python						
 	DllExport void updateHuman();
 	DllExport bool isBarbarian() const;	// Exposed to Python
@@ -245,18 +245,18 @@ public:
 	void updateMaintenance() const;
 	inline void setMaintenanceDirty(bool bDirty) const { m_bMaintenanceDirty = bDirty; }
 	void updatePowerHealth();
-/********************************************************************************/
-/* 	New Civic AI						02.08.2010				Fuyu			*/
-/********************************************************************************/
-//Fuyu bLimited START
+	/********************************************************************************/
+	/* 	New Civic AI						02.08.2010				Fuyu			*/
+	/********************************************************************************/
+	//Fuyu bLimited START
 	void updateExtraBuildingHappiness(bool bLimited = false);
 	void updateExtraBuildingHealth(bool bLimited = false);
 	void updateFeatureHappiness(bool bLimited = false);
 	void updateReligionHappiness(bool bLimited = false);
-//Fuyu bLimited END
-/********************************************************************************/
-/* 	New Civic AI												END 			*/
-/********************************************************************************/
+	//Fuyu bLimited END
+	/********************************************************************************/
+	/* 	New Civic AI												END 			*/
+	/********************************************************************************/
 	void updateExtraSpecialistYield();
 	void setCommerceDirty(CommerceTypes eIndex = NO_COMMERCE, bool bPlayerOnly = false);
 	void updateCommerce(CommerceTypes eCommerce = NO_COMMERCE, bool bForce = true) const;
@@ -269,24 +269,24 @@ public:
 	void updatePlunder(int iChange, bool bUpdatePlotGroups);
 	void validateCommerce() const;
 	void updateTimers();
-	CvCity*	findClosestCity(CvPlot* pPlot) const;
+	CvCity* findClosestCity(CvPlot* pPlot) const;
 
 	bool hasReadyUnautomatedUnit(bool bAny = false) const;
 	bool hasReadyUnit(bool bAny = false) const;
 	bool hasAutoUnit() const;
 	DllExport bool hasBusyUnit() const;
 
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       12/07/09                             EmperorFool      */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
-	// Free Tech Popup Fix
+	/************************************************************************************************/
+	/* UNOFFICIAL_PATCH                       12/07/09                             EmperorFool      */
+	/*                                                                                              */
+	/* Bugfix                                                                                       */
+	/************************************************************************************************/
+		// Free Tech Popup Fix
 	bool isChoosingFreeTech() const;
 	void setChoosingFreeTech(bool bValue);
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* UNOFFICIAL_PATCH                        END                                                  */
+	/************************************************************************************************/
 
 	void chooseTech(int iDiscover = 0, CvWString szText = CvWString(), bool bFront = false);				// Exposed to Python
 
@@ -296,11 +296,11 @@ public:
 
 	int upgradeAllPrice(UnitTypes eUpgradeUnit, UnitTypes eFromUnit);
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      11/14/09                                jdog5000      */
-/*                                                                                              */
-/* General AI                                                                                   */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* BETTER_BTS_AI_MOD                      11/14/09                                jdog5000      */
+	/*                                                                                              */
+	/* General AI                                                                                   */
+	/************************************************************************************************/
 	int countReligionSpreadUnits(CvArea* pArea, ReligionTypes eReligion, bool bIncludeTraining = false) const;														// Exposed to Python
 	int countCorporationSpreadUnits(CvArea* pArea, CorporationTypes eCorporation, bool bIncludeTraining = false) const;														// Exposed to Python
 /************************************************************************************************/
@@ -369,7 +369,7 @@ public:
 
 	int getBuildingClassPrereqBuilding(BuildingTypes eBuilding, BuildingClassTypes ePrereqBuildingClass, int iExtra = 0) const;	// Exposed to Python
 	void removeBuildingClass(BuildingClassTypes eBuildingClass);
-//Team Project (5)
+	//Team Project (5)
 	void processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pArea, bool bReligiouslyDisabling = false);
 
 	int getBuildCost(const CvPlot* pPlot, BuildTypes eBuild) const;
@@ -403,16 +403,16 @@ public:
 	int calculateInflationRate() const;																																		// Exposed to Python
 	int calculateInflatedCosts() const;																																		// Exposed to Python
 	int getCurrentInflationPerTurnTimes10000() const;
-/************************************************************************************************/
-/* REVOLUTION_MOD                         02/04/09                                jdog5000      */
-/*                                                                                              */
-/* For rebels and BarbarianCiv                                                                  */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* REVOLUTION_MOD                         02/04/09                                jdog5000      */
+	/*                                                                                              */
+	/* For rebels and BarbarianCiv                                                                  */
+	/************************************************************************************************/
 	int getFreeUnitCountdown() const;
-	void setFreeUnitCountdown( int iValue );
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+	void setFreeUnitCountdown(int iValue);
+	/************************************************************************************************/
+	/* REVOLUTION_MOD                          END                                                  */
+	/************************************************************************************************/
 
 	int calculateBaseNetGold() const;
 	int calculateBaseNetResearch(TechTypes eTech = NO_TECH) const;   // Exposed to Python
@@ -491,7 +491,7 @@ public:
 
 	int getGold() const;																																				// Exposed to Python
 	DllExport void setGold(int iNewValue);																													// Exposed to Python
-	DllExport void changeGold(int iChange);	
+	DllExport void changeGold(int iChange);
 
 	int getGreaterGold() const;																																				// Exposed to Python
 	void setGreaterGold(int iNewValue);																													// Exposed to Python
@@ -509,15 +509,15 @@ public:
 	int getEspionageMissionBaseCost(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot, int iExtraData, const CvUnit* pSpyUnit) const;
 	int getEspionageMissionCost(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot = NULL, int iExtraData = -1, const CvUnit* pSpyUnit = NULL) const;		// Exposed to Python
 	int getEspionageMissionCostModifier(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, const CvPlot* pPlot = NULL, int iExtraData = -1, const CvUnit* pSpyUnit = NULL) const;
-/************************************************************************************************/
-/* Afforess	                  Start		 02/01/10                                               */
-/*                                                                                              */
-/*    New Parameter                                                                             */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* Afforess	                  Start		 02/01/10                                               */
+	/*                                                                                              */
+	/*    New Parameter                                                                             */
+	/************************************************************************************************/
 	bool doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, CvPlot* pPlot, int iExtraData, CvUnit* pUnit, bool bCaught = false);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* Afforess	                     END                                                            */
+	/************************************************************************************************/
 
 	int getEspionageSpendingWeightAgainstTeam(TeamTypes eIndex) const;																							// Exposed to Python
 	void setEspionageSpendingWeightAgainstTeam(TeamTypes eIndex, int iValue);																		// Exposed to Python
@@ -582,10 +582,10 @@ public:
 	void incrementGreatGeneralsCreated();
 
 	int getGreatPeopleThresholdModifier() const;																													// Exposed to Python
-	void changeGreatPeopleThresholdModifier(int iChange);										
+	void changeGreatPeopleThresholdModifier(int iChange);
 
 	int getGreatGeneralsThresholdModifier() const;																													// Exposed to Python
-	void changeGreatGeneralsThresholdModifier(int iChange);										
+	void changeGreatGeneralsThresholdModifier(int iChange);
 
 	int getGreatPeopleRateModifier() const;																																// Exposed to Python
 	void changeGreatPeopleRateModifier(int iChange);
@@ -616,10 +616,10 @@ public:
 
 	int getWorkerSpeedModifier() const;																																		// Exposed to Python
 	void changeWorkerSpeedModifier(int iChange);
-	
-// BUG - Partial Builds - start
+
+	// BUG - Partial Builds - start
 	int getWorkRate(BuildTypes eBuild) const;
-// BUG - Partial Builds - end
+	// BUG - Partial Builds - end
 
 	int getImprovementUpgradeRateModifier() const;																									// Exposed to Python
 	void changeImprovementUpgradeRateModifier(int iChange);
@@ -633,15 +633,15 @@ public:
 	int getCityDefenseModifier() const;																																		// Exposed to Python
 	void changeCityDefenseModifier(int iChange);
 
-/************************************************************************************************/
-/* REVDCM                                 09/02/10                                phungus420    */
-/*                                                                                              */
-/* Player Functions                                                                             */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* REVDCM                                 09/02/10                                phungus420    */
+	/*                                                                                              */
+	/* Player Functions                                                                             */
+	/************************************************************************************************/
 	bool isNonStateReligionCommerce() const;
 	void changeNonStateReligionCommerce(int iNewValue);
 
-	bool isUpgradeAnywhere() const;	
+	bool isUpgradeAnywhere() const;
 	void changeUpgradeAnywhere(int iNewValue);
 
 	int getRevIdxLocal() const;																																		// Exposed to Python
@@ -703,7 +703,7 @@ public:
 	int getTypicalUnitValue(UnitAITypes eUnitAI) const;
 
 	int getGoldPerUnit() const;																																								// Exposed to Python
-	void changeGoldPerUnit(int iChange);															
+	void changeGoldPerUnit(int iChange);
 
 	int getGoldPerMilitaryUnit() const;																																				// Exposed to Python
 	void changeGoldPerMilitaryUnit(int iChange);
@@ -712,11 +712,11 @@ public:
 	void changeExtraUnitCost(int iChange);
 
 	int getNumMilitaryUnits() const;																																					// Exposed to Python
-	void changeNumMilitaryUnits(int iChange);	
+	void changeNumMilitaryUnits(int iChange);
 
 	int getUnitPercentCountForCostAdjustment() const;																																					// Exposed to Python
-	void changeUnitPercentCountForCostAdjustment(int iChange);	
-	int getUnitCountForCostAdjustmentTotal() const;												
+	void changeUnitPercentCountForCostAdjustment(int iChange);
+	int getUnitCountForCostAdjustmentTotal() const;
 
 	int getHappyPerMilitaryUnit() const;																																			// Exposed to Python
 /********************************************************************************/
@@ -725,13 +725,13 @@ public:
 //Fuyu bLimited
 	void changeHappyPerMilitaryUnit(int iChange, bool bLimited = false);
 
-	int getMilitaryFoodProductionCount() const;														
+	int getMilitaryFoodProductionCount() const;
 	bool isMilitaryFoodProduction() const;																																		// Exposed to Python
 //Fuyu bLimited
 	void changeMilitaryFoodProductionCount(int iChange, bool bLimited = false);
-/********************************************************************************/
-/* 	New Civic AI												END 			*/
-/********************************************************************************/
+	/********************************************************************************/
+	/* 	New Civic AI												END 			*/
+	/********************************************************************************/
 
 	int getHighestUnitLevel() const;																																					// Exposed to Python
 	void setHighestUnitLevel(int iNewValue);
@@ -741,7 +741,7 @@ public:
 	void changeConscriptCount(int iChange);																															// Exposed to Python
 
 	int getMaxConscript() const;																																		// Exposed to Python
-	void changeMaxConscript(int iChange);														
+	void changeMaxConscript(int iChange);
 
 	int getOverflowResearch() const;																																// Exposed to Python
 	void setOverflowResearch(int iNewValue);																														// Exposed to Python
@@ -754,16 +754,16 @@ public:
 /********************************************************************************/
 //Fuyu bLimited
 	void changeNoUnhealthyPopulationCount(int iChange, bool bLimited = false);
-/********************************************************************************/
-/* 	New Civic AI												END 			*/
-/********************************************************************************/
+	/********************************************************************************/
+	/* 	New Civic AI												END 			*/
+	/********************************************************************************/
 
 	int getExpInBorderModifier() const;
 	void changeExpInBorderModifier(int iChange);
 
 	int getBuildingOnlyHealthyCount() const;
 	bool isBuildingOnlyHealthy() const;																																				// Exposed to Python
-	
+
 	//DPII < Maintenance Modifiers >
 	int getMaintenanceModifier();
 	void changeMaintenanceModifier(int iChange);
@@ -774,15 +774,15 @@ public:
 	int getConnectedCityMaintenanceModifier();
 	void changeConnectedCityMaintenanceModifier(int iChange);
 	//DPII < Maintenance Modifiers >
-	
+
 /********************************************************************************/
 /* 	New Civic AI						02.08.2010				Fuyu			*/
 /********************************************************************************/
 //Fuyu bLimited
 	void changeBuildingOnlyHealthyCount(int iChange, bool bLimited = false);
-/********************************************************************************/
-/* 	New Civic AI												END 			*/
-/********************************************************************************/
+	/********************************************************************************/
+	/* 	New Civic AI												END 			*/
+	/********************************************************************************/
 
 
 	int getDistanceMaintenanceModifier() const;																																// Exposed to Python
@@ -797,9 +797,9 @@ public:
 /********************************************************************************/
 //Fuyu bLimited
 	void changeCorporationMaintenanceModifier(int iChange, bool bLimited = false);
-/********************************************************************************/
-/* 	New Civic AI												END 			*/
-/********************************************************************************/
+	/********************************************************************************/
+	/* 	New Civic AI												END 			*/
+	/********************************************************************************/
 
 	int getTotalMaintenance() const;																																					// Exposed to Python
 	// Koshling - maintenance is now calculated entirely internally
@@ -817,9 +817,9 @@ public:
 /********************************************************************************/
 //Fuyu bLimited
 	void changeExtraHealth(int iChange, bool bLimited = false);
-/********************************************************************************/
-/* 	New Civic AI												END 			*/
-/********************************************************************************/
+	/********************************************************************************/
+	/* 	New Civic AI												END 			*/
+	/********************************************************************************/
 	int getCivicHealth() const;	//	Included in getExtraHealth() but split off to aid hover text displays
 
 	int getBuildingGoodHealth() const;																																				// Exposed to Python
@@ -840,9 +840,9 @@ public:
 /********************************************************************************/
 //Fuyu bLimited
 	void changeLargestCityHappiness(int iChange, bool bLimited = false);
-/********************************************************************************/
-/* 	New Civic AI												END 			*/
-/********************************************************************************/
+	/********************************************************************************/
+	/* 	New Civic AI												END 			*/
+	/********************************************************************************/
 
 	int getWarWearinessPercentAnger() const;																																	// Exposed to Python 
 	void updateWarWearinessPercentAnger();
@@ -872,9 +872,9 @@ public:
 	bool isNoForeignCorporations() const;																																						// Exposed to Python
 //Fuyu bLimited
 	void changeNoForeignCorporationsCount(int iChange, bool bLimited = false);
-/********************************************************************************/
-/* 	New Civic AI												END 			*/
-/********************************************************************************/
+	/********************************************************************************/
+	/* 	New Civic AI												END 			*/
+	/********************************************************************************/
 
 	int getCoastalTradeRoutes() const;																																				// Exposed to Python
 	void changeCoastalTradeRoutes(int iChange);																													// Exposed to Python
@@ -909,9 +909,9 @@ public:
 	int getNonStateReligionHappiness() const;																																	// Exposed to Python
 //Fuyu bLimited
 	void changeNonStateReligionHappiness(int iChange, bool bLimited = false);
-/********************************************************************************/
-/* 	New Civic AI												END 			*/
-/********************************************************************************/
+	/********************************************************************************/
+	/* 	New Civic AI												END 			*/
+	/********************************************************************************/
 
 	int getStateReligionUnitProductionModifier() const;																												// Exposed to Python 
 	void changeStateReligionUnitProductionModifier(int iChange);
@@ -963,24 +963,24 @@ public:
 	uint getStartTime() const;
 	DllExport void setStartTime(uint uiStartTime);
 	uint getTotalTimePlayed() const;																																// Exposed to Python			  
-																																																			
+
 	bool isMinorCiv() const;																																									// Exposed to Python			
-																																																			
+
 	DllExport bool isAlive() const;																																						// Exposed to Python			
 	bool isEverAlive() const;																																				// Exposed to Python			
 	void setAlive(bool bNewValue);
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/15/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* REVOLUTION_MOD                         01/15/08                                jdog5000      */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
 	void setNewPlayerAlive(bool bNewValue);
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* REVOLUTION_MOD                          END                                                  */
+	/************************************************************************************************/
 	void verifyAlive();
 
-	DllExport bool isTurnActive() const;																			
+	DllExport bool isTurnActive() const;
 	DllExport void setTurnActive(bool bNewValue, bool bDoTurn = true);
 
 	bool isAutoMoves() const;
@@ -996,27 +996,27 @@ public:
 	DllExport bool isTurnDone() const;
 
 	bool isExtendedGame() const;																																			// Exposed to Python					
-	void makeExtendedGame();																													
-																																															
+	void makeExtendedGame();
+
 	bool isFoundedFirstCity() const;																																	// Exposed to Python					
-	void setFoundedFirstCity(bool bNewValue);																										
-																																															
+	void setFoundedFirstCity(bool bNewValue);
+
 	bool isStrike() const;																																	// Exposed to Python					
-	void setStrike(bool bNewValue);																															
+	void setStrike(bool bNewValue);
 
 	DllExport PlayerTypes getID() const;																												// Exposed to Python					
-																																															
+
 	DllExport HandicapTypes getHandicapType() const;																									// Exposed to Python					
-																																															
+
 	DllExport CivilizationTypes getCivilizationType() const;																					// Exposed to Python					
-																																															
+
 	DllExport LeaderHeadTypes getLeaderType() const;																									// Exposed to Python					
-																																															
+
 	LeaderHeadTypes getPersonalityType() const;																												// Exposed to Python									
 	void setPersonalityType(LeaderHeadTypes eNewValue);																					// Exposed to Python									
-																																																				
+
 	DllExport EraTypes getCurrentEra() const;																										// Exposed to Python									
-	void setCurrentEra(EraTypes eNewValue);																											
+	void setCurrentEra(EraTypes eNewValue);
 
 	int getCulture() const;
 	void setCulture(int iNewValue);
@@ -1026,45 +1026,45 @@ public:
 	int getGreaterCulture() const;
 	void setGreaterCulture(int iNewValue);
 	void changeGreaterCulture(int iAddValue);
-																																															
-	ReligionTypes getLastStateReligion() const;																												
+
+	ReligionTypes getLastStateReligion() const;
 	ReligionTypes getStateReligion() const;																									// Exposed to Python					
 	void setLastStateReligion(ReligionTypes eNewValue);																					// Exposed to Python					
-																																															
+
 	PlayerTypes getParent() const;
 	void setParent(PlayerTypes eParent);
 
 	DllExport TeamTypes getTeam() const;																												// Exposed to Python					
-	void setTeam(TeamTypes eTeam);		
+	void setTeam(TeamTypes eTeam);
 	void updateTeamType();
 
 
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD                         02/04/08                            Glider1        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	// RevolutionDCM start - new diplomacy option
+	/************************************************************************************************/
+	/* REVOLUTIONDCM_MOD                         02/04/08                            Glider1        */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
+		// RevolutionDCM start - new diplomacy option
 	void setDoNotBotherStatus(PlayerTypes playerID);
 	bool isDoNotBotherStatus(PlayerTypes playerID) const;
 	// RevolutionDCM end
 /************************************************************************************************/
 /* REVOLUTIONDCM_MOD                         END                                 Glider1        */
 /************************************************************************************************/
-																																																							
+
 	DllExport PlayerColorTypes getPlayerColor() const;																								// Exposed to Python									
 	DllExport int getPlayerTextColorR() const;																												// Exposed to Python								
 	DllExport int getPlayerTextColorG() const;																												// Exposed to Python									
 	DllExport int getPlayerTextColorB() const;																												// Exposed to Python									
 	int getPlayerTextColorA() const;
-	
+
 	int getSeaPlotYield(YieldTypes eIndex) const;
 	void changeSeaPlotYield(YieldTypes eIndex, int iChange);
-	
-//Team Project (7)
+
+	//Team Project (7)
 	int getGoldenAgeYield(YieldTypes eIndex) const;
 	void changeGoldenAgeYield(YieldTypes eIndex, int iChange);
-	
+
 	int getGoldenAgeCommerce(CommerceTypes eIndex) const;
 	void changeGoldenAgeCommerce(CommerceTypes eIndex, int iChange);
 
@@ -1152,18 +1152,18 @@ public:
 /********************************************************************************/
 //Fuyu bLimited
 	void changeExtraBuildingHappiness(BuildingTypes eIndex, int iChange, bool bLimited = false);
-/********************************************************************************/
-/* 	New Civic AI												END 			*/
-/********************************************************************************/
+	/********************************************************************************/
+	/* 	New Civic AI												END 			*/
+	/********************************************************************************/
 	int getExtraBuildingHealth(BuildingTypes eIndex) const;																				// Exposed to Python
 /********************************************************************************/
 /* 	New Civic AI						02.08.2010				Fuyu			*/
 /********************************************************************************/
 //Fuyu bLimited
 	void changeExtraBuildingHealth(BuildingTypes eIndex, int iChange, bool bLimited = false);
-/********************************************************************************/
-/* 	New Civic AI												END 			*/
-/********************************************************************************/
+	/********************************************************************************/
+	/* 	New Civic AI												END 			*/
+	/********************************************************************************/
 
 	int getFeatureHappiness(FeatureTypes eIndex) const;																								// Exposed to Python
 /********************************************************************************/
@@ -1171,9 +1171,9 @@ public:
 /********************************************************************************/
 //Fuyu bLimited
 	void changeFeatureHappiness(FeatureTypes eIndex, int iChange, bool bLimited = false);
-/********************************************************************************/
-/* 	New Civic AI												END 			*/
-/********************************************************************************/
+	/********************************************************************************/
+	/* 	New Civic AI												END 			*/
+	/********************************************************************************/
 
 	int getUnitClassCount(UnitClassTypes eIndex) const;																								// Exposed to Python
 	bool isUnitClassMaxedOut(UnitClassTypes eIndex, int iExtra = 0) const;														// Exposed to Python
@@ -1182,7 +1182,7 @@ public:
 	void changeUnitClassMaking(UnitClassTypes eIndex, int iChange);
 	int getUnitClassCountPlusMaking(UnitClassTypes eIndex) const;																			// Exposed to Python
 
-	int getBuildingClassCount(BuildingClassTypes eIndex) const;	
+	int getBuildingClassCount(BuildingClassTypes eIndex) const;
 	int getBuildingGroupCount(SpecialBuildingTypes eIndex) const;																			// Exposed to Python
 	bool isBuildingClassMaxedOut(BuildingClassTypes eIndex, int iExtra = 0) const;														// Exposed to Python
 	bool isBuildingGroupMaxedOut(SpecialBuildingTypes eIndex, int iExtra = 0) const;										// Exposed to Python
@@ -1230,18 +1230,18 @@ public:
 
 	CvProperties* getProperties();
 	const CvProperties* getPropertiesConst() const;
-/********************************************************************************/
-/* 	New Civic AI						19.08.2010				Fuyu			*/
-/********************************************************************************/
-//Fuyu bLimited
-	void changeSpecialistValidCount(SpecialistTypes eIndex, int iChange, bool bLimited = false);												
-/********************************************************************************/
-/* 	New Civic AI												END 			*/
-/********************************************************************************/
-																																															
+	/********************************************************************************/
+	/* 	New Civic AI						19.08.2010				Fuyu			*/
+	/********************************************************************************/
+	//Fuyu bLimited
+	void changeSpecialistValidCount(SpecialistTypes eIndex, int iChange, bool bLimited = false);
+	/********************************************************************************/
+	/* 	New Civic AI												END 			*/
+	/********************************************************************************/
+
 	bool isResearchingTech(TechTypes eIndex) const;																					// Exposed to Python					
-	void setResearchingTech(TechTypes eIndex, bool bNewValue);																	
-																																															
+	void setResearchingTech(TechTypes eIndex, bool bNewValue);
+
 	CivicTypes getCivics(CivicOptionTypes eIndex) const;																		// Exposed to Python					
 	int getSingleCivicUpkeep(CivicTypes eCivic, bool bIgnoreAnarchy = false) const;										// Exposed to Python					
 	int getCivicUpkeep(CivicTypes* paeCivics = NULL, bool bIgnoreAnarchy = false) const;							// Exposed to Python					
@@ -1278,44 +1278,78 @@ public:
 	CLLNode<CvWString>* headCityNameNode() const;
 
 	// plot groups iteration
-	CvPlotGroup* firstPlotGroup(int *pIterIdx, bool bRev=false) const;
-	CvPlotGroup* nextPlotGroup(int *pIterIdx, bool bRev=false) const;
+	CvPlotGroup* firstPlotGroup(int* pIterIdx, bool bRev = false) const;
+	CvPlotGroup* nextPlotGroup(int* pIterIdx, bool bRev = false) const;
 	int getNumPlotGroups() const;
 	CvPlotGroup* getPlotGroup(int iID) const;
 	CvPlotGroup* addPlotGroup();
 	void deletePlotGroup(int iID);
 
 	// city iteration
-	CvCity* firstCity(int *pIterIdx, bool bRev=false) const;																// Exposed to Python					
-	CvCity* nextCity(int *pIterIdx, bool bRev=false) const;																	// Exposed to Python					
-	DllExport CvCity* firstCityExternal(int *pIterIdx, bool bRev=false) const;																// Exposed to Python					
-	DllExport CvCity* nextCityExternal(int *pIterIdx, bool bRev=false) const;																	// Exposed to Python					
+	CvCity* firstCity(int* pIterIdx, bool bRev = false) const;																// Exposed to Python					
+	CvCity* nextCity(int* pIterIdx, bool bRev = false) const;																	// Exposed to Python					
+	DllExport CvCity* firstCityExternal(int* pIterIdx, bool bRev = false) const;																// Exposed to Python					
+	DllExport CvCity* nextCityExternal(int* pIterIdx, bool bRev = false) const;																	// Exposed to Python					
 	DllExport int getNumCities() const;																																// Exposed to Python					
 	DllExport CvCity* getCity(int iID) const;																													// Exposed to Python					
-	CvCity* addCity();																																					
-	void deleteCity(int iID);																																		
-																																															
-	// unit iteration																																						
-	CvUnit* firstUnit(int *pIterIdx, bool bRev=false) const;																// Exposed to Python					
-	CvUnit* nextUnit(int *pIterIdx, bool bRev=false) const;																	// Exposed to Python					
-	DllExport CvUnit* firstUnitExternal(int *pIterIdx, bool bRev=false) const;																// Exposed to Python					
-	DllExport CvUnit* nextUnitExternal(int *pIterIdx, bool bRev=false) const;																	// Exposed to Python					
+	CvCity* addCity();
+	void deleteCity(int iID);
+
+	// unit iteration
+	class unit_iterator : public boost::iterator_facade<unit_iterator, CvUnit*, boost::forward_traversal_tag, CvUnit*>
+	{
+	public:
+		unit_iterator() : m_player(NULL), m_reverse(false), m_curr(NULL), m_idx(0) {}
+		explicit unit_iterator(const CvPlayer* player) : m_player(player), m_reverse(false), m_idx(0)
+		{
+			m_curr = m_player->firstUnit(&m_idx, m_reverse);
+		}
+		struct reverse_tag {};
+		explicit unit_iterator(const CvPlayer* player, reverse_tag) : m_player(player), m_reverse(true), m_idx(0)
+		{
+			m_curr = m_player->firstUnit(&m_idx, m_reverse);
+		}
+
+	private:
+		friend class boost::iterator_core_access;
+		void increment() { m_curr = m_player->nextUnit(&m_idx, m_reverse); }
+		bool equal(unit_iterator const& other) const 
+		{
+			return (this->m_player == other.m_player && this->m_curr == other.m_curr) || (this->m_curr == NULL && other.m_curr == NULL);
+		}
+		CvUnit* dereference() const { return m_curr; }
+
+		const CvPlayer* m_player;
+		CvUnit* m_curr;
+		bool m_reverse;
+		int m_idx;
+	};
+
+	unit_iterator beginUnits() const { return unit_iterator(this); }
+	unit_iterator endUnits() const { return unit_iterator(); }
+	unit_iterator rbeginUnits() const { return unit_iterator(this, unit_iterator::reverse_tag()); }
+	unit_iterator rendUnits() const { return unit_iterator(); }
+
+	CvUnit* firstUnit(int* pIterIdx, bool bRev = false) const;																// Exposed to Python					
+	CvUnit* nextUnit(int* pIterIdx, bool bRev = false) const;																	// Exposed to Python					
+	DllExport CvUnit* firstUnitExternal(int* pIterIdx, bool bRev = false) const;																// Exposed to Python
+	DllExport CvUnit* nextUnitExternal(int* pIterIdx, bool bRev = false) const;																	// Exposed to Python					
 	DllExport int getNumUnits() const;																																// Exposed to Python					
 	CvUnit* getUnit(int iID) const;																													// Exposed to Python					
-	CvUnit* addUnit();																																					
+	CvUnit* addUnit();
 	void deleteUnit(int iID);
-																																															
+
 	// selection groups iteration																																
-	CvSelectionGroup* firstSelectionGroup(int *pIterIdx, bool bRev=false) const;						// Exposed to Python					
-	CvSelectionGroup* nextSelectionGroup(int *pIterIdx, bool bRev=false) const;							// Exposed to Python					
+	CvSelectionGroup* firstSelectionGroup(int* pIterIdx, bool bRev = false) const;						// Exposed to Python					
+	CvSelectionGroup* nextSelectionGroup(int* pIterIdx, bool bRev = false) const;							// Exposed to Python					
 	int getNumSelectionGroups() const;																																// Exposed to Python
 	CvSelectionGroup* getSelectionGroup(int iID) const;																								// Exposed to Python
 	CvSelectionGroup* addSelectionGroup();
 	void deleteSelectionGroup(int iID);
 
 	// pending triggers iteration																																
-	EventTriggeredData* firstEventTriggered(int *pIterIdx, bool bRev=false) const;
-	EventTriggeredData* nextEventTriggered(int *pIterIdx, bool bRev=false) const;
+	EventTriggeredData* firstEventTriggered(int* pIterIdx, bool bRev = false) const;
+	EventTriggeredData* nextEventTriggered(int* pIterIdx, bool bRev = false) const;
 	int getNumEventsTriggered() const;
 	EventTriggeredData* getEventTriggered(int iID) const;   // Exposed to Python
 	EventTriggeredData* addEventTriggered();
@@ -1356,12 +1390,12 @@ public:
 	int getEspionageHistory(int iTurn) const;																							// Exposed to Python
 	void updateEspionageHistory(int iTurn, int iBestEspionage);
 
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD                         02/04/08                            Glider1        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	// RevolutionDCM - revolution stability history
+	/************************************************************************************************/
+	/* REVOLUTIONDCM_MOD                         02/04/08                            Glider1        */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
+		// RevolutionDCM - revolution stability history
 	int getRevolutionStabilityHistory(int iTurn) const;																							// Exposed to Python
 	void updateRevolutionStabilityHistory(int iTurn, int m_iStabilityIndexAverage);
 	// RevolutionDCM - end
@@ -1382,7 +1416,7 @@ public:
 	bool isTriggerFired(EventTriggerTypes eEventTrigger) const;
 	void setEventOccured(EventTypes eEvent, const EventTriggeredData& kEventTriggered, bool bOthers = true);
 	void resetEventOccured(EventTypes eEvent, bool bAnnounce = true);													// Exposed to Python
-	void setTriggerFired(const EventTriggeredData& kTriggeredData, bool bOthers = true, bool bAnnounce = true);	
+	void setTriggerFired(const EventTriggeredData& kTriggeredData, bool bOthers = true, bool bAnnounce = true);
 	void resetTriggerFired(EventTriggerTypes eEventTrigger);
 	void trigger(EventTriggerTypes eEventTrigger);													// Exposed to Python
 	void trigger(const EventTriggeredData& kData);
@@ -1411,12 +1445,12 @@ public:
 	bool canSplitArea(int iAreaId) const;
 	PlayerTypes getSplitEmpirePlayer(int iAreaId) const;
 	bool getSplitEmpireLeaders(CivLeaderArray& aLeaders) const;
-/************************************************************************************************/
-/* REVOLUTION_MOD                         11/15/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	bool assimilatePlayer( PlayerTypes ePlayer );																																							// Exposed to Python			
+	/************************************************************************************************/
+	/* REVOLUTION_MOD                         11/15/08                                jdog5000      */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
+	bool assimilatePlayer(PlayerTypes ePlayer);																																							// Exposed to Python			
 /************************************************************************************************/
 /* REVOLUTION_MOD                          END                                                  */
 /************************************************************************************************/
@@ -1446,84 +1480,84 @@ public:
 	int getNewCityProductionValue() const;
 
 	int getGrowthThreshold(int iPopulation) const;
-	
-/************************************************************************************************/
-/* Afforess	                  Start		 1/15/10                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	
+
+	/************************************************************************************************/
+	/* Afforess	                  Start		 1/15/10                                                */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
+
 	int getPopulationgrowthratepercentage() const;
 	void setPopulationgrowthratepercentage(int iNewValue);
 	void changePopulationgrowthratepercentage(int iChange, bool bAdd);
-	
+
 	int getWorldHappiness() const;
 	void changeWorldHappiness(int iChange);
-	
+
 	int getWorldHealth() const;
 	void changeWorldHealth(int iChange);
-	
+
 	int getProjectHappiness() const;
 	void changeProjectHappiness(int iChange);
-	
+
 	int getForceAllTradeRoutes() const;
 	void changeForceAllTradeRoutes(int iChange);
-	
+
 	int getWorldTradeRoutes() const;
 	void changeWorldTradeRoutes(int iChange);
-	
+
 	int getProjectHealth() const;
 	void changeProjectHealth(int iChange);
-	
+
 	int getNoCapitalUnhappiness() const;
 	void changeNoCapitalUnhappiness(int iChange);
-	
+
 	int getTaxationAnger() const;
 	void changeTaxationAnger(int iChange);
-	
+
 	int getLastTurnTaxRate() const;
 	void changeLastTurnTaxRate(int iChange);
 
 	int getCivilizationHealth() const;
 	void changeCivilizationHealth(int iChange);
-	
+
 	int getTaxRateUnhappiness() const;
 	void changeTaxRateUnhappiness(int iChange);
 	int calculateTaxRateUnhappiness() const;
-	
+
 	int getReligionSpreadRate() const;
 	void setReligionSpreadRate(int iNewValue);
 	void changeReligionSpreadRate(int iChange);
-	
+
 	int getDistantUnitSupportCostModifier() const;
 	void setDistantUnitSupportCostModifier(int iNewValue);
 	void changeDistantUnitSupportCostModifier(int iChange);
-	
+
 	int getExtraCityDefense() const;
 	void setExtraCityDefense(int iNewValue);
 	void changeExtraCityDefense(int iChange);
-	
+
 	int getBuildingInflation() const;
 	void changeBuildingInflation(int iChange);
-	
+
 	int getProjectInflation() const;
 	void changeProjectInflation(int iChange);
-	
+
 	int getTechInflation() const;
 	void changeTechInflation(int iChange);
-	
+
 	int getCivicInflation() const;
 	void changeCivicInflation(int iChange);
-	
+
 	int getHurryCostModifier() const;
 	void changeHurryCostModifier(int iChange);
-	
+
 	int getHurryInflationModifier() const;
 	void changeHurryInflationModifier(int iChange);
-	
+
 	int getCityLimit() const;
 	void changeCityLimit(int iChange);
-	
+
 	int getCityOverLimitUnhappy() const;
 	void changeCityOverLimitUnhappy(int iChange);
 
@@ -1532,10 +1566,10 @@ public:
 
 	bool isShowLandmarks() const;			//Exposed to Python
 	void setShowLandmarks(bool bNewVal);			//Exposed to Python
-	
+
 	int getTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2) const;
 	void changeTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2, int iChange);
-	
+
 	bool hasValidCivics(BuildingTypes eBuilding) const;
 
 	int getSevoWondersScore(int mode);
@@ -1557,19 +1591,19 @@ public:
 	int getUnitCombatProductionModifier(UnitCombatTypes eIndex) const;
 	void changeUnitCombatProductionModifier(UnitCombatTypes eIndex, int iChange);
 
-//Team Project (8)
+	//Team Project (8)
 	int getUnitCombatFreeExperience(UnitCombatTypes eIndex) const;
 	void changeUnitCombatFreeExperience(UnitCombatTypes eIndex, int iChange);
-	
+
 	int getBuildingClassProductionModifier(BuildingClassTypes eIndex) const;
 	void changeBuildingClassProductionModifier(BuildingClassTypes eIndex, int iChange);
-	
+
 	int getUnitClassProductionModifier(UnitClassTypes eIndex) const;
 	void changeUnitClassProductionModifier(UnitClassTypes eIndex, int iChange);
 
 	bool isAutomatedCanBuild(BuildTypes eBuild) const; //Exposed to Python
 	void setAutomatedCanBuild(BuildTypes eBuild, bool bNewValue); //Exposed to Python
-	
+
 	int getNumTradeImportsByBonus(PlayerTypes ePlayer, BonusTypes eBonus) const;
 	bool isTradingMilitaryBonus(PlayerTypes ePlayer) const;
 
@@ -1581,99 +1615,99 @@ public:
 	DenialTypes AI_secretaryGeneralTrade(VoteSourceTypes eVoteSource, PlayerTypes ePlayer) const;
 	int getEnslavementChance() const;
 	void changeEnslavementChance(int iChange);
-	
+
 	int doMultipleResearch(int iOverflow);
-	
+
 	int processedNationalCulture() const;
 
 	void acquireFort(CvPlot* pPlot);
-	
+
 	int getResourceConsumption(BonusTypes eBonus) const;
 	void recalculateResourceConsumption(BonusTypes eBonus);
 	void recalculateAllResourceConsumption();
-	
-	std::vector<CvUnit*> Commanders;	
-	
+
+	std::vector<CvUnit*> Commanders;
+
 	int getFreeSpecialistCount(SpecialistTypes eIndex) const;
 	void setFreeSpecialistCount(SpecialistTypes eIndex, int iNewValue);
 	void changeFreeSpecialistCount(SpecialistTypes eIndex, int iChange);
-	
+
 	bool hasValidBuildings(TechTypes eTech) const;				//Exposed to Python
-	
+
 	void checkAIStrategy();
 
 	void setCityCommerceModifierDirty(CommerceTypes eCommerce);
-	
+
 	int getBuildingCommerceModifier(BuildingTypes eIndex1, CommerceTypes eIndex2) const;
-	void changeBuildingCommerceModifier(BuildingTypes eIndex1, CommerceTypes eIndex2, int iChange); 
-	
+	void changeBuildingCommerceModifier(BuildingTypes eIndex1, CommerceTypes eIndex2, int iChange);
+
 	int getBuildingClassCommerceChange(BuildingClassTypes eIndex1, CommerceTypes eIndex2) const;
 	void changeBuildingClassCommerceChange(BuildingClassTypes eIndex1, CommerceTypes eIndex2, int iChange);
 
 	int getBonusCommerceModifier(BonusTypes eIndex1, CommerceTypes eIndex2) const;						//Exposed to Python	
-	void changeBonusCommerceModifier(BonusTypes eIndex1, CommerceTypes eIndex2, int iChange); 
-	
+	void changeBonusCommerceModifier(BonusTypes eIndex1, CommerceTypes eIndex2, int iChange);
+
 	int getLandmarkYield(YieldTypes eIndex) const;
 	void changeLandmarkYield(YieldTypes eIndex, int iChange);
-	
+
 	int getNoLandmarkAngerCount() const;
 	bool isNoLandmarkAnger() const;
 	void changeNoLandmarkAngerCount(int iChange);
-	
+
 	int getLandmarkHappiness() const;
 	void changeLandmarkHappiness(int iChange);
-	
+
 	int getBuildingClassCountWithUpgrades(BuildingClassTypes eBuildingClass) const;
-	
+
 	void setColor(PlayerColorTypes eColor);
-	
+
 	void setHandicap(int iNewVal);
-	
+
 	bool canBuild(const CvPlot* pPlot, ImprovementTypes eImprovement, bool bTestEra, bool bTestVisible) const;
-	
+
 	int getModderOption(ModderOptionTypes eIndex) const;										// Exposed to Python
 	bool isModderOption(ModderOptionTypes eIndex) const;										// Exposed to Python
 	void setModderOption(ModderOptionTypes eIndex, bool bNewValue);										// Exposed to Python
 	void setModderOption(ModderOptionTypes eIndex, int iNewValue);										// Exposed to Python
-	
+
 	int getCorporationSpreadModifier() const;
 	void changeCorporationSpreadModifier(int iChange);
-	
+
 	int getCorporateTaxIncome() const;
 	void changeCorporateTaxIncome(int iChange);
-	
+
 	int getCorporationInfluence(CorporationTypes eIndex) const;
 	int getEnvironmentalProtection() const;
 	int getLaborFreedom() const;
-	
+
 	void doTaxes();
-	
+
 	bool m_bChoosingReligion;
-	
+
 	int getBuildingClassCount(BuildingClassTypes eBuildingClass, bool bUpgrades) const;
-	
+
 	int getScoreComponent(int iRawScore, int iInitial, int iMax, int iFactor, bool bExponential, bool bFinal, bool bVictory) const;
-	
+
 	int getHurriedCount() const;
 	void changeHurriedCount(int iChange);
 	void doAdvancedEconomy();
-	
+
 	int getWonderConstructRand() const;
-	
-	int getSpecialistCommercePercentChanges(SpecialistTypes eIndex1, CommerceTypes eIndex2) const;							
-	void changeSpecialistCommercePercentChanges(SpecialistTypes eIndex1, CommerceTypes eIndex2, int iChange); 
-	
-	int getSpecialistYieldPercentChanges(SpecialistTypes eIndex1, YieldTypes eIndex2) const;							
-	void changeSpecialistYieldPercentChanges(SpecialistTypes eIndex1, YieldTypes eIndex2, int iChange); 
-	
+
+	int getSpecialistCommercePercentChanges(SpecialistTypes eIndex1, CommerceTypes eIndex2) const;
+	void changeSpecialistCommercePercentChanges(SpecialistTypes eIndex1, CommerceTypes eIndex2, int iChange);
+
+	int getSpecialistYieldPercentChanges(SpecialistTypes eIndex1, YieldTypes eIndex2) const;
+	void changeSpecialistYieldPercentChanges(SpecialistTypes eIndex1, YieldTypes eIndex2, int iChange);
+
 	int getFractionalCombatExperience() const;
 	void changeFractionalCombatExperience(int iChange, UnitTypes eGGType = NO_UNIT);
-	
+
 	void updateCache();
-	
+
 	void clearTileCulture();
 	void clearCityCulture();
-	
+
 	int getBonusMintedPercent(BonusTypes eIndex) const;
 	void changeBonusMintedPercent(BonusTypes eIndex, int iChange);
 
@@ -1786,7 +1820,7 @@ protected:
 	int m_iFixedBordersCount;
 	int m_iFreedomFighterCount;
 	int m_iExtraFreedomFighters;
-//Team Project (6)
+	//Team Project (6)
 	int* m_paiEraAdvanceFreeSpecialistCount;
 	int* m_paiGoldenAgeOnBirthOfGreatPersonCount;
 	int* m_paiGreatGeneralPointsForType;
@@ -1806,14 +1840,14 @@ protected:
 	int m_iFreeSpecialistperNationalWonderCount;
 	int m_iFreeSpecialistperTeamProjectCount;
 	int m_iExtraGoodyCount;
-//Team Project (5)
+	//Team Project (5)
 	int m_iAllReligionsActiveCount;
-//Team Project (8)
+	//Team Project (8)
 	int* m_paiUnitCombatFreeExperience;
-//Team Project (3)
+	//Team Project (3)
 	int m_iExtraNationalCaptureProbabilityModifier;
 	int m_iExtraNationalCaptureResistanceModifier;
-//Team Project (6)
+	//Team Project (6)
 	int m_iExtraStateReligionSpreadModifier;
 	int m_iExtraNonStateReligionSpreadModifier;
 	//TB Traits
@@ -1825,7 +1859,7 @@ protected:
 	int m_iArrestedUnit;
 	int m_iAmbushingUnit;
 	bool m_bAssassinate;
-	
+
 	int m_iBuildingInflation;
 	int m_iProjectInflation;
 	int m_iTechInflation;
@@ -1834,9 +1868,9 @@ protected:
 	int m_iHurryInflationModifier;
 	int m_iHurryCount;
 	mutable int m_accruedCostRatioTimes10000;	//	Inflation effects accrue to this ratio to start-of-game cost
-	
+
 	int m_iFractionalCombatExperience;
-	
+
 	TeamTypes m_eDemandWarAgainstTeam;
 
 	CvProperties m_Properties;
@@ -1846,11 +1880,11 @@ protected:
 	int	m_zobristValue;
 
 	bool m_turnHadUIInteraction;
-	
+
 public:
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* Afforess	                     END                                                            */
+	/************************************************************************************************/
 
 	void verifyUnitStacksValid();
 	UnitTypes getTechFreeUnit(TechTypes eTech) const;
@@ -1858,10 +1892,10 @@ public:
 	UnitTypes getTechFreeProphet(TechTypes eTech) const;
 #endif
 
-// BUG - Trade Totals - start
+	// BUG - Trade Totals - start
 	void calculateTradeTotals(YieldTypes eIndex, int& iDomesticYield, int& iDomesticRoutes, int& iForeignYield, int& iForeignRoutes, PlayerTypes eWithPlayer = NO_PLAYER, bool bRound = false, bool bBase = false) const;
 	int calculateTotalTradeYield(YieldTypes eIndex, PlayerTypes eWithPlayer = NO_PLAYER, bool bRound = false, bool bBase = false) const;
-// BUG - Trade Totals - end
+	// BUG - Trade Totals - end
 
 	DllExport void buildTradeTable(PlayerTypes eOtherPlayer, CLinkList<TradeData>& ourList) const;
 	DllExport bool getHeadingTradeString(PlayerTypes eOtherPlayer, TradeableItems eItem, CvWString& szString, CvString& szIcon) const;
@@ -1875,9 +1909,9 @@ public:
 	DllExport const CvArtInfoUnit* getUnitArtInfo(UnitTypes eUnit, int iMeshGroup = 0) const;
 	DllExport bool hasSpaceshipArrived() const;
 
-// BUG - Reminder Mod - start
+	// BUG - Reminder Mod - start
 	void addReminder(int iGameTurn, CvWString szMessage) const;
-// BUG - Reminder Mod - end
+	// BUG - Reminder Mod - end
 
 	virtual void AI_init() = 0;
 	virtual void AI_reset(bool bConstructor) = 0;
@@ -1891,15 +1925,15 @@ public:
 	virtual void AI_assignWorkingPlots() = 0;
 	virtual void AI_updateAssignWork() = 0;
 	virtual void AI_makeProductionDirty() = 0;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      05/08/09                                jdog5000      */
-/*                                                                                              */
-/* City AI                                                                                      */
-/************************************************************************************************/
-	//virtual void AI_doCentralizedProduction() = 0;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* BETTER_BTS_AI_MOD                      05/08/09                                jdog5000      */
+	/*                                                                                              */
+	/* City AI                                                                                      */
+	/************************************************************************************************/
+		//virtual void AI_doCentralizedProduction() = 0;
+	/************************************************************************************************/
+	/* BETTER_BTS_AI_MOD                       END                                                  */
+	/************************************************************************************************/
 	virtual void AI_conquerCity(CvCity* pCity) = 0;
 	virtual int AI_foundValue(int iX, int iY, int iMinUnitRange = -1, bool bStartingLoc = false) const = 0; // Exposed to Python
 	virtual bool AI_isCommercePlot(CvPlot* pPlot) const = 0;
@@ -1924,10 +1958,10 @@ public:
 	virtual DenialTypes AI_stopTradingTrade(TeamTypes eTradeTeam, PlayerTypes ePlayer) const = 0;
 	virtual DenialTypes AI_civicTrade(CivicTypes eCivic, PlayerTypes ePlayer) const = 0;
 	virtual DenialTypes AI_religionTrade(ReligionTypes eReligion, PlayerTypes ePlayer) const = 0;
-/********************************************************************************/
-/* 	City Defenders						24.07.2010				Fuyu			*/
-/********************************************************************************/
-//Fuyu bIgnoreNotUnitAIs
+	/********************************************************************************/
+	/* 	City Defenders						24.07.2010				Fuyu			*/
+	/********************************************************************************/
+	//Fuyu bIgnoreNotUnitAIs
 	virtual int AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea, CvUnitSelectionCriteria* criteria = NULL) const = 0;						// Exposed to Python
 /********************************************************************************/
 /* 	City Defenders												END 			*/
@@ -1937,9 +1971,9 @@ public:
 	virtual int AI_totalWaterAreaUnitAIs(CvArea* pArea, UnitAITypes eUnitAI) const = 0;									// Exposed to Python
 	virtual int AI_plotTargetMissionAIs(CvPlot* pPlot, MissionAITypes eMissionAI, CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0, int* piClosest = NULL) const = 0;
 	virtual int AI_unitTargetMissionAIs(CvUnit* pUnit, MissionAITypes eMissionAI, CvSelectionGroup* pSkipSelectionGroup = NULL) const = 0;
-/********************************************************************************/
-/* 	New Civic AI						19.08.2010				Fuyu			*/
-/********************************************************************************/												
+	/********************************************************************************/
+	/* 	New Civic AI						19.08.2010				Fuyu			*/
+	/********************************************************************************/
 	virtual int AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum = false, CivicTypes* paeSelectedCivics = NULL) const = 0;   // Exposed to Python
 /********************************************************************************/
 /* 	New Civic AI												END 			*/
@@ -2002,11 +2036,11 @@ protected:
 	int m_iMilitaryProductionModifier;
 	int m_iSpaceProductionModifier;
 	int m_iCityDefenseModifier;
-/************************************************************************************************/
-/* REVDCM                                 09/02/10                                phungus420    */
-/*                                                                                              */
-/* Player Functions                                                                             */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* REVDCM                                 09/02/10                                phungus420    */
+	/*                                                                                              */
+	/* Player Functions                                                                             */
+	/************************************************************************************************/
 	int m_iNonStateReligionCommerceCount;
 	int m_iUpgradeAnywhereCount;
 	int m_iRevIdxLocal;
@@ -2021,9 +2055,9 @@ protected:
 	bool m_bPopBad;
 	int m_iUnitUpgradePriceModifier;
 	int m_iNationalGreatPeopleRate;
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* REVDCM                                  END                                                  */
+	/************************************************************************************************/
 	int m_iNumNukeUnits;
 	int m_iNumOutsideUnits;
 	int m_iBaseFreeUnits;
@@ -2109,11 +2143,11 @@ protected:
 	bool m_bNukesValid;
 	bool m_bHuman;
 
-/************************************************************************************************/
-/* AI_AUTO_PLAY_MOD                        09/01/07                            MRGENIE          */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* AI_AUTO_PLAY_MOD                        09/01/07                            MRGENIE          */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
 	bool m_bDisableHuman;				// Set to true to disable isHuman() check
 /************************************************************************************************/
 /* AI_AUTO_PLAY_MOD                        END                                                  */
@@ -2127,7 +2161,7 @@ protected:
 
 	int m_iStabilityIndex;
 	int m_iStabilityIndexAverage;
-	
+
 	bool m_bRebel;
 	int m_iMotherPlayer;
 
@@ -2139,7 +2173,7 @@ protected:
 	int m_iFocusPlotY;
 	int* m_aiFreeCityYield;
 	int* m_aiLessYieldThreshold;
-//Team Project (7)
+	//Team Project (7)
 	int* m_aiGoldenAgeYield;
 	int* m_aiGoldenAgeCommerce;
 	//TB Traits end
@@ -2149,25 +2183,25 @@ protected:
 	CvWString m_szCivDesc;
 	CvWString m_szCivShort;
 	CvWString m_szCivAdj;
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* REVOLUTION_MOD                          END                                                  */
+	/************************************************************************************************/
 
 
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD                         02/04/08                            Glider1        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-// RevolutionDCM - new diplomacy option
+	/************************************************************************************************/
+	/* REVOLUTIONDCM_MOD                         02/04/08                            Glider1        */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
+	// RevolutionDCM - new diplomacy option
 	int m_bDoNotBotherStatus;
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD                         END                                 Glider1        */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* REVOLUTIONDCM_MOD                         END                                 Glider1        */
+	/************************************************************************************************/
 
-// BUG - Free Tech Popup Fix - start
+	// BUG - Free Tech Popup Fix - start
 	bool m_bChoosingFreeTech;
-// BUG - Free Tech Popup Fix - end
+	// BUG - Free Tech Popup Fix - end
 
 	PlayerTypes m_eID;
 	LeaderHeadTypes m_ePersonalityType;
@@ -2267,9 +2301,9 @@ protected:
 	std::vector< std::pair<int, PlayerVoteTypes> > m_aVote;
 	std::vector< std::pair<UnitClassTypes, int> > m_aUnitExtraCosts;
 
-	CvMessageQueue m_listGameMessages; 
+	CvMessageQueue m_listGameMessages;
 	CvPopupQueue m_listPopups;
-	CvDiploQueue m_listDiplomacy; 
+	CvDiploQueue m_listDiplomacy;
 
 	CvTurnScoreMap m_mapScoreHistory;
 	CvTurnScoreMap m_mapEconomyHistory;
@@ -2279,20 +2313,20 @@ protected:
 	CvTurnScoreMap m_mapCultureHistory;
 	CvTurnScoreMap m_mapEspionageHistory;
 
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD                         02/04/08                            Glider1        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	// RevolutionDCM - revolution stability history
+	/************************************************************************************************/
+	/* REVOLUTIONDCM_MOD                         02/04/08                            Glider1        */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
+		// RevolutionDCM - revolution stability history
 	CvTurnScoreMap m_mapRevolutionStabilityHistory;
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD                         END                                 Glider1        */
-/************************************************************************************************/
-	
-	//	KOSHLING - add pre-calculated lists of plots meeting criteria that otherwise
-	//	get re-calculated many times during unit mission setting
-	std::map<int,BonusTypes>	m_guardableResourcePlots;
+	/************************************************************************************************/
+	/* REVOLUTIONDCM_MOD                         END                                 Glider1        */
+	/************************************************************************************************/
+
+		//	KOSHLING - add pre-calculated lists of plots meeting criteria that otherwise
+		//	get re-calculated many times during unit mission setting
+	std::map<int, BonusTypes>	m_guardableResourcePlots;
 
 	//	Temp unit which is used to generate paths for hypothetical units.  Kept around
 	//	rather than created each usage to avoid chewing through the ID space
@@ -2302,7 +2336,7 @@ public:
 	{
 		return (pUnit == m_pTempUnit || pUnit->AI_getBirthmark() == UNIT_BIRTHMARK_TEMP_UNIT);
 	}
-	inline const std::map<int,BonusTypes>&	getGuardableResourcePlots() const
+	inline const std::map<int, BonusTypes>& getGuardableResourcePlots() const
 	{
 		return m_guardableResourcePlots;
 	}
@@ -2333,8 +2367,8 @@ protected:
 	// for serialization
 	virtual void read(FDataStreamBase* pStream);
 	virtual void write(FDataStreamBase* pStream);
-	
-	void doUpdateCacheOnTurn();	
+
+	void doUpdateCacheOnTurn();
 	int getResearchTurnsLeftTimes100(TechTypes eTech, bool bOverflow) const;
 
 	void getTradeLayerColors(std::vector<NiColorA>& aColors, std::vector<CvPlotIndicatorData>& aIndicators) const;  // used by Globeview trade layer
@@ -2349,13 +2383,13 @@ protected:
 
 	//TB Traits begin
 public:
-	int getCivicAnarchyModifier( ) const;
-	void setCivicAnarchyModifier( int iNewValue );
-	void changeCivicAnarchyModifier( int iChange );
-	
-	int getReligiousAnarchyModifier( ) const;
-	void setReligiousAnarchyModifier( int iNewValue );
-	void changeReligiousAnarchyModifier( int iChange );
+	int getCivicAnarchyModifier() const;
+	void setCivicAnarchyModifier(int iNewValue);
+	void changeCivicAnarchyModifier(int iChange);
+
+	int getReligiousAnarchyModifier() const;
+	void setReligiousAnarchyModifier(int iNewValue);
+	void changeReligiousAnarchyModifier(int iChange);
 
 	int getImprovementUpgradeRateModifierSpecific(ImprovementTypes eImprovement) const;
 	void changeImprovementUpgradeRateModifierSpecific(ImprovementTypes eImprovement, int iChange);
@@ -2363,20 +2397,20 @@ public:
 	int getBuildWorkerSpeedModifierSpecific(BuildTypes eBuild) const;
 	void changeBuildWorkerSpeedModifierSpecific(BuildTypes eBuild, int iChange);
 
-	int getAIAttitudeModifier( ) const;
-	void setAIAttitudeModifier( int iNewValue );
-	void changeAIAttitudeModifier( int iChange );
+	int getAIAttitudeModifier() const;
+	void setAIAttitudeModifier(int iNewValue);
+	void changeAIAttitudeModifier(int iChange);
 
 	int getExtraSpecialistCommerce(SpecialistTypes eIndex1, CommerceTypes eIndex2) const;
 	void changeExtraSpecialistCommerce(SpecialistTypes eIndex1, CommerceTypes eIndex2, int iChange);
 	void updateExtraSpecialistCommerce();
-	
+
 	int getSpecialistExtraYield(YieldTypes eIndex) const;																				// Exposed to Python
 	void changeSpecialistExtraYield(YieldTypes eIndex, int iChange);
 
 	int getFreeCityYield(YieldTypes eIndex) const;
 	void changeFreeCityYield(YieldTypes eIndex, int iChange);
-	
+
 	int getTraitExtraCityDefense() const;
 	void setTraitExtraCityDefense(int iNewValue);
 	void changeTraitExtraCityDefense(int iChange);
@@ -2450,7 +2484,7 @@ public:
 
 	int getCoastalAIInfluence();
 
-//Team Project (6)
+	//Team Project (6)
 	int getEraAdvanceFreeSpecialistCount(SpecialistTypes eIndex) const;
 	void setEraAdvanceFreeSpecialistCount(SpecialistTypes eIndex, int iValue);
 	void changeEraAdvanceFreeSpecialistCount(SpecialistTypes eIndex, int iChange);
@@ -2523,14 +2557,14 @@ public:
 	void setExtraGoodyCount(int iValue);
 	void changeExtraGoodyCount(int iChange);
 
-//Team Project (5)
+	//Team Project (5)
 	bool hasBannedNonStateReligions() const;
 	bool hasAllReligionsActive() const;
 	int getAllReligionsActiveCount() const;
 	void setAllReligionsActiveCount(int iValue);
 	void changeAllReligionsActiveCount(int iChange);
 
-//Team Project (3)
+	//Team Project (3)
 	int getExtraNationalCaptureProbabilityModifier() const;
 	void setExtraNationalCaptureProbabilityModifier(int iValue);
 	void changeExtraNationalCaptureProbabilityModifier(int iChange);
@@ -2539,7 +2573,7 @@ public:
 	void setExtraNationalCaptureResistanceModifier(int iValue);
 	void changeExtraNationalCaptureResistanceModifier(int iChange);
 
-//Team Project (6)
+	//Team Project (6)
 	int getExtraStateReligionSpreadModifier() const;
 	void setExtraStateReligionSpreadModifier(int iValue);
 	void changeExtraStateReligionSpreadModifier(int iChange);
@@ -2548,7 +2582,7 @@ public:
 	void setExtraNonStateReligionSpreadModifier(int iValue);
 	void changeExtraNonStateReligionSpreadModifier(int iChange);
 
-//Team Project (1)
+	//Team Project (1)
 	void updateTechHappinessandHealth();
 	void checkReligiousDisablingAllBuildings();
 	bool isBuildingtoDisplayReligiouslyDisabled(BuildingTypes eBuilding);
@@ -2601,18 +2635,18 @@ public:
 
 public:
 	void RecalculatePlotGroupHashes();
-	CvContractBroker&	getContractBroker();
+	CvContractBroker& getContractBroker();
 
 	void addPlotDangerSource(CvPlot* pPlot, int iStrength);
 
 	void clearModifierTotals();
 	void recalculateModifiers();
 
-	void addPropertiesAllCities(CvProperties *pProp);
-	void subtractPropertiesAllCities(CvProperties *pProp);
+	void addPropertiesAllCities(CvProperties* pProp);
+	void subtractPropertiesAllCities(CvProperties* pProp);
 
 	bool canHaveBuilder(BuildTypes eBuild) const;
-//TB Nukefix
+	//TB Nukefix
 	bool isNukesValid() const;														// Exposed to Python  
 	void makeNukesValid(bool bValid = true);										// Exposed to Python
 
@@ -2636,23 +2670,23 @@ public:
 
 private:
 	int				m_iNumAnimalsSubdued;
-	std::map<BuildingTypes,int> m_unitConstructionCounts;
+	std::map<BuildingTypes, int> m_unitConstructionCounts;
 	int				m_iNumAnarchyTurns;
 	int				m_iNumCivicSwitches;
 	int				m_iNumCivicsSwitched;
-	mutable int*	m_aiPathLengthCache;
-	mutable int*	m_aiCostPathLengthCache;
-	mutable bool*	m_bCanConstruct;
-	mutable bool*	m_bCanConstructCached;
-	mutable bool*	m_bCanConstructDefaultParam;
-	mutable bool*	m_bCanConstructCachedDefaultParam;
+	mutable int* m_aiPathLengthCache;
+	mutable int* m_aiCostPathLengthCache;
+	mutable bool* m_bCanConstruct;
+	mutable bool* m_bCanConstructCached;
+	mutable bool* m_bCanConstructDefaultParam;
+	mutable bool* m_bCanConstructCachedDefaultParam;
 	mutable RouteTypes m_eBestRoute;
 	mutable BuildTypes m_eBestRouteBuild;
-	mutable std::map<int,bool>	m_canHaveBuilder;
+	mutable std::map<int, bool>	m_canHaveBuilder;
 
 	CvContractBroker	m_contractBroker;
 
-	mutable CvUpgradeCache*	m_upgradeCache;
+	mutable boost::scoped_ptr<CvUpgradeCache> m_upgradeCache;
 
 	bool m_bInhibitPlotGroupRecalc;
 	mutable bool m_bMaintenanceDirty;

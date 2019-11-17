@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef CvPython_h__
+#define CvPython_h__
+
 #include <boost/type_traits.hpp>
 #include <boost/utility/enable_if.hpp>
 
@@ -367,3 +370,4 @@ namespace Cy
 
 	std::vector<StackFrame> get_stack_trace();
 }
+#endif // CvPython_h__

@@ -7,9 +7,8 @@
 #include "CvPathGenerator.h"
 #include "CvUnit.h"
 #include "CvCity.h"
+#include "CvUnit.h"
 #include "idinfo_iterator.h"
-
-#include <boost/function.hpp>
 
 class CvPlot;
 class CvArea;
@@ -144,7 +143,7 @@ public:
 	bool canIgnoreZoneofControl();
 
 	bool groupDeclareWar(CvPlot* pPlot, bool bForce = false);
-	bool groupAttack(int iX, int iY, int iFlags, bool& bFailedAlreadyFighting, bool bStealth = false, CvPlot* pOrigPlot = NULL);
+	bool groupAttack(int iX, int iY, int iFlags, bool& bFailedAlreadyFighting, bool bStealth = false);
 	void groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUnit = NULL, bool bEndMove = false);
 	bool groupPathTo(int iX, int iY, int iFlags);
 	bool groupRoadTo(int iX, int iY, int iFlags);
@@ -243,18 +242,52 @@ public:
 	public:
 		typedef idinfo_iterator<unit_iterator, CvUnit> base_type;
 		unit_iterator() {}
-		explicit unit_iterator(const CLinkList<IDInfo>* list, bool skip_invalid = false) : base_type(list, skip_invalid) {}
+		explicit unit_iterator(const CLinkList<IDInfo>* list) : base_type(list) {}
 
 	private:
 		friend class core_access;
 		CvUnit* resolve(const IDInfo& info) const;
 	};
 
-	unit_iterator beginValidUnits() const { return unit_iterator(&m_units, true); }
-	unit_iterator endValidUnits() const { return unit_iterator(); } // Same as endUnits() currently
-
 	unit_iterator beginUnits() const { return unit_iterator(&m_units); }
 	unit_iterator endUnits() const { return unit_iterator(); }
+
+	class safe_unit_iterator : public boost::iterator_facade<safe_unit_iterator, CvUnit*, boost::forward_traversal_tag, CvUnit*>
+	{
+	public:
+		safe_unit_iterator() : m_idx(-1) {}
+		template < class UnitIterator >
+		explicit safe_unit_iterator(UnitIterator begin, UnitIterator end)
+			: m_units(begin, end)
+			, m_idx(-1)
+		{
+			if (m_units.size() > 0)
+				m_idx = 0;
+		}
+	private:
+		friend class boost::iterator_core_access;
+
+		void increment() 
+		{
+			m_idx = m_idx + 1; 
+			if (m_idx >= static_cast<int>(m_units.size()))
+				m_idx = -1;
+		}
+
+		bool equal(safe_unit_iterator const& other) const
+		{
+			return this->m_idx == other.m_idx;
+		}
+
+		CvUnit* dereference() const { return m_units[m_idx]; }
+
+		typedef std::vector<CvUnit*> UnitVector;
+		UnitVector m_units;
+		int m_idx;
+	};
+
+	safe_unit_iterator beginUnitsSafe() const { return safe_unit_iterator(beginUnits(), endUnits()); }
+	safe_unit_iterator endUnitsSafe() const { return safe_unit_iterator(); }
 
 	std::vector<const CvUnit*> get_if(boost::function<bool(const CvUnit*)> predicateFn) const;
 	std::vector<CvUnit*> get_if(boost::function<bool(CvUnit*)> predicateFn);

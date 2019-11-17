@@ -102,27 +102,7 @@ int CvGameAI::AI_combatValue(UnitTypes eUnit)
 	}
 	if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		int iOffset = GC.getUnitInfo(eUnit).getSMRankTotal() - 15;
-		int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER");
-		bool bPositive = ((iOffset > 0) ? true : false);
-		iValue *= 100;
-		if (bPositive)
-		{
-			for (int iI = 0; iI < iOffset; iI++)
-			{
-				iValue *= iSMMultiplier;
-				iValue /= 100;
-			}
-		}
-		else if (!bPositive)
-		{
-			for (int iI = 0; iI < -iOffset; iI++)
-			{
-				iValue *= 100;
-				iValue /= iSMMultiplier;
-			}
-		}
-		iValue /= 100;
+		iValue = CvUnit::applySMRank(iValue, GC.getUnitInfo(eUnit).getSMRankTotal() - 15, GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
 	}
 
 

@@ -1,9 +1,13 @@
 #pragma once
 
-#include <string>
-#include <boost/python/tuple.hpp>
+#ifndef CyCity_h__
+#define CyCity_h__
 
+#include <string>
+#ifndef __INTELLISENSE__
+#include <boost/python/tuple.hpp>
 namespace python = boost::python;
+#endif
 
 struct OrderData;
 class CvCity;
@@ -739,3 +743,5 @@ private:
 };
 
 DECLARE_PY_WRAPPER(CyCity, CvCity*);
+
+#endif // CyCity_h__

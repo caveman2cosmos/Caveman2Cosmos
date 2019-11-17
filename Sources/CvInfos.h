@@ -1004,7 +1004,7 @@ public:
 
 	int getFreetoUnitCombat(int i) const;
 	int getNumFreetoUnitCombats() const;
-	bool isFreetoUnitCombat(int i);
+	bool isFreetoUnitCombat(int i) const;
 
 	int getNotOnUnitCombatType(int i) const;
 	int getNumNotOnUnitCombatTypes() const;
@@ -1214,6 +1214,8 @@ public:
 	int getNumQualifiedUnitCombatTypes() const;
 	bool isQualifiedUnitCombatType(int i);
 	void setQualifiedUnitCombatTypes();
+
+	bool hasNegativeEffects() const;
 
 protected:
 	bool m_bCanMovePeaks;
@@ -2327,6 +2329,7 @@ public:
 	void setBaseSizeMattersZeroPoints();
 	int getSMRankTotal() const;
 	int getSMVolumetricRankTotal() const;
+
 	void setSM();
 	int getQualifiedPromotionType(int i) const;
 	int getNumQualifiedPromotionTypes() const;
@@ -3029,14 +3032,18 @@ class CvUnitEntry
 {
 public:
 	CvUnitEntry()
+		: m_position()
+		, m_fRadius(0)
+		, m_fFacingDirection(0)
+		, m_fFacingVariance(0)
 	{
 	}
 
-	CvUnitEntry(const NiPoint2 &position, float radius, float facingDirection, float facingVariance) :
-	m_position(position),
-	m_fRadius(radius),
-	m_fFacingDirection(facingDirection),
-	m_fFacingVariance(facingVariance)
+	CvUnitEntry(const NiPoint2 &position, float radius, float facingDirection, float facingVariance) 
+		: m_position(position)
+		, m_fRadius(radius)
+		, m_fFacingDirection(facingDirection)
+		, m_fFacingVariance(facingVariance)
 	{
 	}
 
@@ -8710,19 +8717,20 @@ typedef std::vector<std::pair<int, int> > CvTextureBlendSlotList;
 class CvArtInfoTerrain : public CvArtInfoAsset
 {
 public:
+	//!< number to blend textures.
+	static const int NUM_TEXTURE_BLENDS = 16;
 
 	CvArtInfoTerrain();
-	virtual ~CvArtInfoTerrain();
 
 	DllExport const TCHAR* getBaseTexture();
-	void setBaseTexture(const TCHAR* szTmp );
+	void setBaseTexture(const TCHAR* szTmp);
 	DllExport const TCHAR* getGridTexture();
-	void setGridTexture(const TCHAR* szTmp );
+	void setGridTexture(const TCHAR* szTmp);
 	DllExport const TCHAR* getDetailTexture();
 	void setDetailTexture(const TCHAR* szTmp);
 	DllExport int getLayerOrder();
 	DllExport bool useAlphaShader();
-	DllExport CvTextureBlendSlotList &getBlendList(int blendMask);
+	DllExport CvTextureBlendSlotList& getBlendList(int blendMask);
 
 	bool read(CvXMLLoadUtility* pXML);
 
@@ -8734,14 +8742,17 @@ public:
 
 protected:
 
-	CvString m_szDetailTexture;				//!< Detail texture associated with the Terrain base texture
+	//!< Detail texture associated with the Terrain base texture
+	CvString m_szDetailTexture; 
 	CvString m_szGridTexture;
 
-	int m_iLayerOrder;						//!< Layering order of texture
+	//!< Layering order of texture
+	int m_iLayerOrder; 
 	bool m_bAlphaShader;
-	int m_numTextureBlends;						//!< number to blend textures.
-	CvTextureBlendSlotList  **m_pTextureSlots;	//!< Array of Textureslots per blend tile
-	CvString**	m_pSlotNames;
+
+	//!< Array of Textureslots per blend tile
+	CvTextureBlendSlotList m_pTextureSlots[NUM_TEXTURE_BLENDS];
+	CvString m_pSlotNames[NUM_TEXTURE_BLENDS];
 };
 
 class CvArtInfoFeature : public CvArtInfoScalableAsset
@@ -10574,12 +10585,12 @@ public:
 	CvModLoadControlInfo();
 	virtual ~CvModLoadControlInfo();
 
-	bool isLoad(int i);
+	bool isLoad(int i) const;
 	void setLoad(int i, bool bLoad = true);
-	std::string getModuleFolder(int i);
-	std::string getParentFolder();
-	int getNumModules();
-	int getDirDepth();
+	std::string getModuleFolder(int i) const;
+	std::string getParentFolder() const;
+	int getNumModules() const;
+	int getDirDepth() const;
 	bool read(CvXMLLoadUtility* pXML, CvString szDirDepth, int iDirDepth);
 
 protected:
@@ -11008,11 +11019,13 @@ public:
 	int getDynamicDefenseChange(bool bForLoad = false) const;
 	int getStrengthChange() const;
 	int getFortitudeChange() const;
+
 	int getFrontSupportPercentChange(bool bForLoad = false) const;
 	int getShortRangeSupportPercentChange(bool bForLoad = false) const;
 	int getMediumRangeSupportPercentChange(bool bForLoad = false) const;
 	int getLongRangeSupportPercentChange(bool bForLoad = false) const;
 	int getFlankSupportPercentChange(bool bForLoad = false) const;
+
 	int getDodgeModifierChange() const;
 	int getPrecisionModifierChange() const;
 	int getPowerShotsChange() const;
