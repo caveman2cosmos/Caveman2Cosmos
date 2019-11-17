@@ -7675,11 +7675,11 @@ TeamTypes CvSelectionGroup::getHeadTeam() const
 std::vector<const CvUnit*> CvSelectionGroup::get_if(boost::function<bool(const CvUnit*)> predicateFn) const
 {
 	std::vector<const CvUnit*> units;
-	for (unit_iterator itr = beginValidUnits(); itr != endValidUnits(); ++itr)
+	for (unit_iterator itr = beginUnits(); itr != endUnits(); ++itr)
 	{
-		if (predicateFn(itr.ptr()))
+		if (predicateFn(*itr))
 		{
-			units.push_back(itr.ptr());
+			units.push_back(*itr);
 		}
 	}
 	return units;
@@ -7688,11 +7688,11 @@ std::vector<const CvUnit*> CvSelectionGroup::get_if(boost::function<bool(const C
 std::vector<CvUnit*> CvSelectionGroup::get_if(boost::function<bool(CvUnit*)> predicateFn)
 {
 	std::vector<CvUnit*> units;
-	for (unit_iterator itr = beginValidUnits(); itr != endValidUnits(); ++itr)
+	for (unit_iterator itr = beginUnits(); itr != endUnits(); ++itr)
 	{
-		if (predicateFn(itr.ptr()))
+		if (predicateFn(*itr))
 		{
-			units.push_back(itr.ptr());
+			units.push_back(*itr);
 		}
 	}
 	return units;

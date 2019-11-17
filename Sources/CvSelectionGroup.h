@@ -10,8 +10,6 @@
 #include "CvUnit.h"
 #include "idinfo_iterator.h"
 
-#include <boost/function.hpp>
-
 class CvPlot;
 class CvArea;
 class FAStarNode;

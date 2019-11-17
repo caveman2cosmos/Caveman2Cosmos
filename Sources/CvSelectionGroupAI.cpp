@@ -85,7 +85,7 @@ void CvSelectionGroupAI::AI_separateIf(boost::function<bool(CvUnit*)> predicateF
 	{
 		CvUnit* unit = *itr;
 		unit->joinGroup(NULL);
-		FAssertMsg(std::find_if(beginValidUnits(), endValidUnits(), boost::bind(matchUnitPtr, _1, unit)) == endValidUnits(), "Failed to remove unit from group");
+		FAssertMsg(std::find_if(beginUnits(), endUnits(), boost::bind(matchUnitPtr, _1, unit)) == endUnits(), "Failed to remove unit from group");
 		if (unit->plot()->getTeam() == getTeam())
 		{
 			unit->getGroup()->pushMission(MISSION_SKIP);
