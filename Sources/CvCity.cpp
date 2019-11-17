@@ -9481,7 +9481,7 @@ void CvCity::changeNumGreatPeople(int iChange)
 
 int CvCity::getBaseGreatPeopleRate() const
 {
-	return m_iBaseGreatPeopleRate + GET_PLAYER(getOwnerINLINE()).getNationalGreatPeopleRate();
+	return std::max(0, m_iBaseGreatPeopleRate) + GET_PLAYER(getOwnerINLINE()).getNationalGreatPeopleRate();
 }
 
 
@@ -9521,7 +9521,6 @@ int CvCity::getTotalGreatPeopleRateModifier() const
 void CvCity::changeBaseGreatPeopleRate(int iChange)
 {
 	m_iBaseGreatPeopleRate = (m_iBaseGreatPeopleRate + iChange);
-	FAssertMsg(getBaseGreatPeopleRate() >= 0, CvString::format("City %S m_iBaseGreatPeopleRate is %d", m_szName.c_str(), m_iBaseGreatPeopleRate).c_str());
 }
 
 
@@ -10968,8 +10967,6 @@ void CvCity::changeBonusGoodHealth(int iChange)
 	if (iChange != 0)
 	{
 		m_iBonusGoodHealth += iChange;
-		FAssert(getBonusGoodHealth() >= 0);
-
 		FAssertMsg(getBonusGoodHealth() >= 0, "getBonusGoodHealth is expected to be >= 0");
 
 		AI_setAssignWorkDirty(true);
@@ -10987,8 +10984,6 @@ void CvCity::changeBonusBadHealth(int iChange)
 	if (iChange != 0)
 	{
 		m_iBonusBadHealth += iChange;
-		FAssert(getBonusBadHealth() <= 0);
-
 		FAssertMsg(getBonusBadHealth() <= 0, "getBonusBadHealth is expected to be <= 0");
 
 		AI_setAssignWorkDirty(true);
