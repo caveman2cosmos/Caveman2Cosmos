@@ -37054,7 +37054,7 @@ void CvPlayer::changeNationalGreatPeopleUnitRate(UnitTypes eIndex, int iChange)
 
 int CvPlayer::getNationalGreatPeopleRate() const
 {
-	return m_iNationalGreatPeopleRate;
+	return std::max(0, m_iNationalGreatPeopleRate);
 }
 
 void CvPlayer::setNationalGreatPeopleRate(int iValue)
