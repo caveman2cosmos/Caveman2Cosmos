@@ -268,7 +268,7 @@ bool FAssertDlg( const char* szExpr, const char* szMsg, const char* szFile, unsi
 	if (!pyTrace.empty()) obj["py_trace"] = picojson::value(pyTrace);
 	if (!dllTrace.empty()) obj["dll_trace"] = picojson::value(dllTrace);
 	obj["assert_key"] = picojson::value(CvString::format(
-		"%s %s (%s): %s",
+		"%s %s (%d): %s",
 		szFile ? szFile : "nofile",
 		szFunction ? szFunction : "nofunc",
 		line,

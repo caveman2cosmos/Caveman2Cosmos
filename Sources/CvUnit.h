@@ -2908,7 +2908,6 @@ public:
 	void changeBombardDirectCount(int iChange);
 
 	static int applySMRank(int value, int rankChange, int rankMultiplier);
-	int processIntegerbySizeMatters(int iValue) const;
 
 	int getNoSelfHealCount() const;																											
 	bool hasNoSelfHeal() const;																									// Exposed to Python					

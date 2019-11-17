@@ -1976,12 +1976,12 @@ bool CyPlayer::isFeatAccomplished(int /*FeatTypes*/ eIndex)
 	if (eIndex < 0)
 	{
 		FErrorMsg("eIndex is expected to be non-negative (invalid Feat Called by Python and Caught Early)");
-		return;
+		return false;
 	}
 	if (eIndex >= NUM_FEAT_TYPES)
 	{
 		FErrorMsg("eIndex is expected to be within maximum bounds (invalid Feat Called by Python and Caught Early)");
-		return;
+		return false;
 	}
 	return m_pPlayer ? m_pPlayer->isFeatAccomplished((FeatTypes)eIndex) : false;
 }

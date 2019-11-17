@@ -17523,11 +17523,8 @@ bool CvUnitAI::AI_leadLegend()
 	int iBestStrength = 0;
 
 	int iLoop;
-	for (CvUnit* pLoopUnit = kOwner.firstUnit(&iLoop); pLoopUnit; pLoopUnit = kOwner.nextUnit(&iLoop))
+	for (CvUnit* pLoopUnit = kOwner.firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = kOwner.nextUnit(&iLoop))
 	{
-		if (pLoopUnit == NULL)
-			continue;
-
 		if (isLegendary(pLoopUnit)
 
 			&& canLead(pLoopUnit->plot(), pLoopUnit->getID()) > 0
@@ -31338,7 +31335,8 @@ bool CvUnitAI::AI_moveIntoCity(int iRange, bool bOpponentOnly)
 				continue;
 
 			int iPathTurns = 0;
-			if (AI_plotValid(pLoopPlot) && (!bOpponentOnly && !isEnemy(pLoopPlot->getTeam(), pLoopPlot))
+			if (AI_plotValid(pLoopPlot)
+				&& (!bOpponentOnly || isEnemy(pLoopPlot->getTeam(), pLoopPlot))
 				&& (pLoopPlot->isCity() || (pLoopPlot->isCity(true)))
 				&& canMoveInto(pLoopPlot, false) 
 				&& generatePath(pLoopPlot, 0, true, &iPathTurns, 0)

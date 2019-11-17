@@ -7848,7 +7848,7 @@ void CvUnit::scrap()
 		iCost += (iCost * getUpgradeDiscount())/100;
 		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
-			iCost = processIntegerbySizeMatters(iCost);
+			iCost = applySMRank(iCost, getSizeMattersOffsetValue(), GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
 		}
 		iCost = std::max(1, iCost);
 		GET_PLAYER(getOwnerINLINE()).changeGold(iCost);
@@ -14053,7 +14053,7 @@ int CvUnit::upgradePrice(UnitTypes eUnit) const
 
 	if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		iPrice = processIntegerbySizeMatters(iPrice);
+		iPrice = applySMRank(iPrice, getSizeMattersOffsetValue(), GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
 	}
 	return iPrice;
 }
@@ -43962,15 +43962,18 @@ bool CvUnit::isRBombardDirect() const
 	return (m_iBombardDirectCount > 0);
 }
 
-void CvUnit::changeBombardDirectCount(int iChange)													
+void CvUnit::changeBombardDirectCount(int iChange)
 {
 	m_iBombardDirectCount += iChange;
 }
 
-
-// https://www.desmos.com/calculator/wivft5kfcc
+// Applies rank scaling to a value, with overflow protection.
+// rankMultiplier should be scaled up by 100 (e.g. 300 instead of 3).
+// rankChange can be positive or negative.
+// Equation demonstrated here: https://www.desmos.com/calculator/wivft5kfcc
 int CvUnit::applySMRank(int value, int rankChange, int rankMultiplier)
 {
+	FAssertMsg(rankMultiplier > 0, "rankMultiplier must be greater than 0");
 	long long lvalue = 100LL * value;
 	if (rankChange > 0)
 	{
@@ -43988,14 +43991,7 @@ int CvUnit::applySMRank(int value, int rankChange, int rankMultiplier)
 			lvalue /= static_cast<long long>(rankMultiplier);
 		}
 	}
-	return static_cast<int>(std::max<long long>(MAX_INT, lvalue / 100LL));
-}
-
-int CvUnit::processIntegerbySizeMatters(int iValue) const
-{
-	// Calls for the current off zero status of the unit regarding the tally of all three SM categories
-	// This may alternatively be "SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER" for x3
-	return applySMRank(iValue, getSizeMattersOffsetValue(), GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
+	return static_cast<int>(std::min<long long>(MAX_INT, lvalue / 100LL));
 }
 
 int CvUnit::getNoSelfHealCount() const

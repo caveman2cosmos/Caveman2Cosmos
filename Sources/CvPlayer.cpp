@@ -1969,7 +1969,7 @@ void CvPlayer::addTraitBonuses( )
 {
 	int iI;
 
-	FAssertMsg((GC.getNumTraitInfos() > 0), "GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvPlayer::init");
+	FAssertMsg(GC.getNumTraitInfos() > 0, "GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvPlayer::init");
 	for (iI = 0; iI < GC.getNumTraitInfos(); iI++)
 	{
 		if (hasTrait((TraitTypes)iI))
