@@ -1,17 +1,16 @@
 #pragma once
 
-// selectionGroup.h
-
 #ifndef CIV4_GROUP_H
 #define CIV4_GROUP_H
 
-//#include "CvStructs.h"
 #include "LinkedList.h"
 #include "CvPathGenerator.h"
 #include "CvUnit.h"
 #include "CvCity.h"
 #include "CvUnit.h"
 #include "idinfo_iterator.h"
+
+#include <boost/function.hpp>
 
 class CvPlot;
 class CvArea;

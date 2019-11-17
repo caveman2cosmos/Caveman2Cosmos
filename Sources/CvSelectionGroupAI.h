@@ -20,18 +20,11 @@ public:
 	void AI_reset();
 
 	void AI_separate();
+	void AI_separateIf(boost::function<bool(CvUnit*)> predicateFn);
 	void AI_separateNonAI(UnitAITypes eUnitAI);
 	void AI_separateAI(UnitAITypes eUnitAI);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      06/02/09                                jdog5000      */
-/*                                                                                              */
-/* General AI                                                                                   */
-/************************************************************************************************/
 	void AI_separateImpassable();
 	void AI_separateEmptyTransports();
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 
 	bool AI_update();

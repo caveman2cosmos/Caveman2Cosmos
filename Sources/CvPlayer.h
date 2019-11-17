@@ -2332,7 +2332,7 @@ protected:
 	//	rather than created each usage to avoid chewing through the ID space
 	CvUnit* m_pTempUnit;
 public:
-	inline bool isTempUnit(const CvUnit* pUnit)
+	inline bool isTempUnit(const CvUnit* pUnit) const 
 	{
 		return (pUnit == m_pTempUnit || pUnit->AI_getBirthmark() == UNIT_BIRTHMARK_TEMP_UNIT);
 	}

@@ -3,15 +3,8 @@
 #include "CvGameCoreDLL.h"
 #include "CvReachablePlotSet.h"
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      03/30/10                                jdog5000      */
-/*                                                                                              */
-/* AI Logging                                                                                   */
-/************************************************************************************************/
+#include <boost/bind.hpp>
 #include "BetterBTSAI.h"
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 CvSelectionGroup* CvSelectionGroup::m_pCachedMovementGroup = NULL;
 std::map<int,edgeCosts>* CvSelectionGroup::m_pCachedNonEndTurnEdgeCosts = NULL;
@@ -530,6 +523,12 @@ void CvSelectionGroup::updateTimers()
 	doDelayedDeath();
 }
 
+namespace {
+	bool canDelete(const CvPlayer& player, CvUnit* unit)
+	{
+		return !player.isTempUnit(unit) && unit->isDelayedDeath();
+	}
+}
 
 // Returns true if group was killed...
 bool CvSelectionGroup::doDelayedDeath()
@@ -541,24 +540,13 @@ bool CvSelectionGroup::doDelayedDeath()
 		return false;
 	}
 
-	// Keep looping the unit list until no more units have delayed death.
-	// We need to restart loop each time a unit is actually killed because it can invalidate the 
-	// unit iterators by deleting other units.
-	bool wasDeath = true;
-	while (wasDeath)
+	// Get list of the units to delete *first* then delete them. Iterators would be invalidated
+	// if we tried to delete while iterating over the group itself
+	std::vector<CvUnit*> toDelete = get_if(boost::bind(canDelete, boost::ref(GET_PLAYER(getOwnerINLINE())), _1));
+	for (std::vector<CvUnit*>::iterator itr = toDelete.begin(); itr != toDelete.end(); ++itr)
 	{
-		wasDeath = false;
-		for (unit_iterator itr = beginUnits(); itr != endUnits(); ++itr)
-		{
-			if(!GET_PLAYER(getOwnerINLINE()).isTempUnit(*itr)
-				&& itr->doDelayedDeath())
-			{
-				wasDeath = true;
-				break;
-			}
-		}
+		(*itr)->doDelayedDeath();
 	}
-
 	if (getNumUnits() == 0)
 	{
 		kill();
@@ -7684,6 +7672,31 @@ TeamTypes CvSelectionGroup::getHeadTeam() const
 	return NO_TEAM;
 }
 
+std::vector<const CvUnit*> CvSelectionGroup::get_if(boost::function<bool(const CvUnit*)> predicateFn) const
+{
+	std::vector<const CvUnit*> units;
+	for (unit_iterator itr = beginValidUnits(); itr != endValidUnits(); ++itr)
+	{
+		if (predicateFn(itr.ptr()))
+		{
+			units.push_back(itr.ptr());
+		}
+	}
+	return units;
+}
+
+std::vector<CvUnit*> CvSelectionGroup::get_if(boost::function<bool(CvUnit*)> predicateFn)
+{
+	std::vector<CvUnit*> units;
+	for (unit_iterator itr = beginValidUnits(); itr != endValidUnits(); ++itr)
+	{
+		if (predicateFn(itr.ptr()))
+		{
+			units.push_back(itr.ptr());
+		}
+	}
+	return units;
+}
 
 void CvSelectionGroup::clearMissionQueue()
 {

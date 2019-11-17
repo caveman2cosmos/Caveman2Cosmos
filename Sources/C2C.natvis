@@ -39,7 +39,8 @@
       <Item Name="[y]" ExcludeView="simple">m_iY</Item>
       <Item Name="[plot]" ExcludeView="simple">gGlobals->m_maps[gGlobals->m_game->m_eCurrentMap]->m_pMapPlots[m_iY*gGlobals->m_maps[gGlobals->m_game->m_eCurrentMap]->m_iGridWidth+m_iX]</Item>
       <Item Name="[is dummy]">m_pEntity != nullptr &amp;&amp; g_dummyEntity == m_pEntity</Item>
-
+      <Item Name="[group id]">m_iGroupID</Item>
+    
     </Expand>
   </Type>
   <Type Name="CvPlot">
