@@ -5935,7 +5935,7 @@ bool CvUnit::canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bT
 		if ((PromotionTypes)iData1 != NO_PROMOTION)
 		{//TBHERE
 			bool bIsQuick = GC.getPromotionInfo((PromotionTypes)iData1).isQuick();
-			if ((!hasMoved() || (canMove() && bIsQuick)) && canAcquirePromotion((PromotionTypes)iData1, false, false, false, false, false, false, false, false, true))
+			if ((!hasMoved() || (canMove() && bIsQuick)) && canAcquirePromotion((PromotionTypes)iData1, PromotionRequirements::ForStatus))
 			{
 				return true;
 			}
@@ -13705,8 +13705,14 @@ bool CvUnit::canPromote(PromotionTypes ePromotion, int iLeaderUnitId) const
 	//thus find there was an existing promotion possible by only checking against canAcquirePromotion and not including the rest of these checks.
 	//By making bForLeader a default false, this will only make it possible to pass true on that check on a leader promotion in canAcquirePromotion if the
 	//check is specfically to see if the unit can in all other ways qualify for the leader promo.
-	bool bForLeader = (iLeaderUnitId >= 0);
-	if (!canAcquirePromotion(ePromotion, false, false, false, true, bForLeader))
+	PromotionRequirements::flags promoFlags = PromotionRequirements::Promote;
+
+	if (iLeaderUnitId >= 0)
+	{
+		promoFlags |= PromotionRequirements::ForLeader;
+	}
+
+	if (!canAcquirePromotion(ePromotion, promoFlags))
 	{
 		return false;
 	}
@@ -13734,11 +13740,11 @@ bool CvUnit::canPromote(PromotionTypes ePromotion, int iLeaderUnitId) const
 	return true;
 }
 
-void CvUnit::promote(PromotionTypes ePromotion, int iLeaderUnitId)
+bool CvUnit::promote(PromotionTypes ePromotion, int iLeaderUnitId)
 {
 	if (!canPromote(ePromotion, iLeaderUnitId))
 	{
-		return;
+		return false;
 	}
 
 	if (iLeaderUnitId >= 0)
@@ -13803,6 +13809,8 @@ void CvUnit::promote(PromotionTypes ePromotion, int iLeaderUnitId)
 	}
 
 	CvEventReporter::getInstance().unitPromoted(this, ePromotion);
+
+	return true;
 }
 
 bool CvUnit::lead(int iUnitId)
@@ -19972,7 +19980,7 @@ void CvUnit::setFortifyTurns(int iNewValue)
 			for (int iI = 0; iI < GC.getPromotionLineInfo(ePromotionLine).getNumPromotions(); iI++)
 			{
 				PromotionTypes ePromotion = (PromotionTypes)GC.getPromotionLineInfo(ePromotionLine).getPromotion(iI);
-				if (!isHasPromotion(ePromotion) && canAcquirePromotion(ePromotion,false,false,false,false,false,false,true,true) && GC.getPromotionInfo(ePromotion).getLinePriority() <= iNewValue)
+				if (!isHasPromotion(ePromotion) && canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp) && GC.getPromotionInfo(ePromotion).getLinePriority() <= iNewValue)
 				{
 					setHasPromotion(ePromotion, true, true, false, false);
 					m_iFortifyTurns = iNewValue;
@@ -20034,7 +20042,9 @@ void CvUnit::setFortifyTurns(int iNewValue)
 					for (int iI = 0; iI < GC.getPromotionLineInfo(ePromotionLine).getNumPromotions(); iI++)
 					{
 						PromotionTypes ePromotion = (PromotionTypes)GC.getPromotionLineInfo(ePromotionLine).getPromotion(iI);
-						if (!isHasPromotion(ePromotion) && canAcquirePromotion(ePromotion,false,false,false,false,false,false,true,true) && GC.getPromotionInfo(ePromotion).getLinePriority() <= iNewValue)
+						if (!isHasPromotion(ePromotion) 
+							&& canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp) 
+							&& GC.getPromotionInfo(ePromotion).getLinePriority() <= iNewValue)
 						{
 							setHasPromotion(ePromotion, true, true, false, false);
 						}
@@ -22336,9 +22346,16 @@ void CvUnit::setPromotionReady(bool bNewValue)
 		{
 			if (isAutoPromoting())
 			{
-				AI_promote();
-				setPromotionReady(false);
-				testPromotionReady();
+				if(AI_promote())
+				{
+					setPromotionReady(false);
+					testPromotionReady();
+				}
+				else
+				{
+					setPromotionReady(false);
+					FErrorMsg("Couldn't apply promotion");
+				}
 			}
 			else 
 			{
@@ -24456,8 +24473,12 @@ bool CvUnit::canAcquirePromotionAny() const
 		//{
 		//	bPromote = true;
 		//}
-		bool bForLeader = GC.getPromotionInfo(ePromotion).isLeader();
-		if (canAcquirePromotion(ePromotion, false, false, true, bForLeader))
+		PromotionRequirements::flags promoFlags = PromotionRequirements::Promote;
+		if (GC.getPromotionInfo(ePromotion).isLeader())
+		{
+			promoFlags |= PromotionRequirements::ForLeader;
+		}
+		if (canAcquirePromotion(ePromotion, promoFlags))
 		{
 			return true;
 		}
@@ -25928,7 +25949,10 @@ void CvUnit::setHasPromotion(PromotionTypes eIndex, bool bNewValue, bool bFree, 
 			//	When trying to add a promotion check we are allowd to have it.
 			//	Note - this check filters out attempts to set lower priority equipment
 			//	or afflication promotions from the same line as an existing one that has a higher priority
-			canPromote = canAcquirePromotion(eIndex, false, GC.getPromotionInfo(eIndex).isEquipment(), GC.getPromotionInfo(eIndex).isAffliction(), false);
+			PromotionRequirements::flags promoFlags = PromotionRequirements::None;
+			if (GC.getPromotionInfo(eIndex).isEquipment()) promoFlags |= PromotionRequirements::Equip;
+			if (GC.getPromotionInfo(eIndex).isAffliction()) promoFlags |= PromotionRequirements::Afflict;
+			canPromote = canAcquirePromotion(eIndex, promoFlags);
 		}
 
 
@@ -30569,16 +30593,19 @@ bool CvUnit::canApplyEvent(EventTypes eEvent) const
 
 	if (NO_PROMOTION != kEvent.getUnitPromotion())
 	{
-	//TB Combat Mods begin
-		bool bEquip = GC.getPromotionInfo((PromotionTypes)kEvent.getUnitPromotion()).isEquipment();
-		bool bAfflict = GC.getPromotionInfo((PromotionTypes)kEvent.getUnitPromotion()).isAffliction();
-		bool bPromote = true;
-		if (bEquip || bAfflict)
-		{
-			bPromote = false;
-		}
-		bool bForLeader = GC.getPromotionInfo((PromotionTypes)kEvent.getUnitPromotion()).isLeader();
-		if (!canAcquirePromotion((PromotionTypes)kEvent.getUnitPromotion(), false, bEquip, bAfflict, bPromote, bForLeader))
+		//TB Combat Mods begin
+		const CvPromotionInfo& promo = GC.getPromotionInfo((PromotionTypes)kEvent.getUnitPromotion());
+
+		// Todo: surely canAcquirePromotion can work out these flags if it knows what promotion you are 
+		// asking about? Smells fishy that we have to set them here.
+		PromotionRequirements::flags promoFlags = PromotionRequirements::None;
+		if (promo.isEquipment()) promoFlags |= PromotionRequirements::Equip;
+		if (promo.isAffliction()) promoFlags |= PromotionRequirements::Afflict;
+
+		if (promoFlags == PromotionRequirements::None) promoFlags = PromotionRequirements::Promote;
+		if (promo.isLeader()) promoFlags |= PromotionRequirements::ForLeader;
+
+		if (!canAcquirePromotion((PromotionTypes)kEvent.getUnitPromotion(), promoFlags))
 		//TB Combat Mods end
 		{
 			return false;
@@ -36149,7 +36176,7 @@ bool CvUnit::checkContractDisease(PromotionLineTypes eAfflictionLine, int iCommu
 		PromotionTypes eAffliction = (PromotionTypes)GC.getPromotionLineInfo(eAfflictionLine).getPromotion(iI);
 		if (GC.getPromotionInfo(eAffliction).getLinePriority() == (getAfflictionLineCount(eAfflictionLine)+1))
 		{
-			if (canAcquirePromotion(eAffliction, false, false, true, false, false, false, true, false, false))
+			if (canAcquirePromotion(eAffliction, PromotionRequirements::Afflict | PromotionRequirements::ForFree))
 			{
 				bCheck = true;
 				break;
@@ -38397,7 +38424,7 @@ void CvUnit::assignCritical(CvUnit* pOpponent)
 				PromotionTypes eCritical = (eCurrentAffliction);
 				if (kCritical.isAffliction() && kCritical.isCritical())
 				{
-					if (canAcquirePromotion(eCritical, false, false, true, false) && pOpponent->canInflictCritical(eCritical))
+					if (canAcquirePromotion(eCritical, PromotionRequirements::Afflict) && pOpponent->canInflictCritical(eCritical))
 					{
 						aAvailableCriticals.push_back(eCritical);
 					}
@@ -39242,16 +39269,17 @@ void CvUnit::checkFreetoCombatClass()
 			for (int iK = 0; iK < GC.getNumPromotionInfos(); iK++)
 			{
 				PromotionTypes ePromotion = ((PromotionTypes)iK);
-				if (GC.getPromotionInfo(ePromotion).isFreetoUnitCombat(iI))
+				const CvPromotionInfo& promoInfo = GC.getPromotionInfo(ePromotion);
+				if (promoInfo.isFreetoUnitCombat(iI))
 				{
-					bool bEquip = GC.getPromotionInfo(ePromotion).isEquipment();
-					bool bAfflict = GC.getPromotionInfo(ePromotion).isAffliction();
-					bool bPromote = true;
-					if (bEquip || bAfflict)
-					{
-						bPromote = false;
-					}
-					if (canAcquirePromotion(ePromotion, false, bEquip, bAfflict, bPromote))
+					// Todo: surely canAcquirePromotion can work out these flags if it knows what promotion you are 
+					// asking about? Smells fishy that we have to set them here.
+					PromotionRequirements::flags promoFlags = PromotionRequirements::None;
+					if (promoInfo.isEquipment()) promoFlags |= PromotionRequirements::Equip;
+					if (promoInfo.isAffliction()) promoFlags |= PromotionRequirements::Afflict;
+					if (promoFlags == PromotionRequirements::None) promoFlags = PromotionRequirements::Promote;
+
+					if (canAcquirePromotion(ePromotion, promoFlags))
 					{
 						setHasPromotion(ePromotion, true, true);
 					}
@@ -44103,7 +44131,8 @@ void CvUnit::establishBuildups()
 			for (int iJ = 0; iJ < kPromotionLine.getNumPromotions(); iJ++)
 			{
 				PromotionTypes ePromotion = (PromotionTypes)kPromotionLine.getPromotion(iJ);
-				if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1 && canAcquirePromotion(ePromotion, false, false, false, false, false, false, true, true))
+				if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1 
+					&& canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp))
 				{
 					PromotionLineKeyedInfo* info = findOrCreatePromotionLineKeyedInfo(ePromotionLine);
 
@@ -44153,7 +44182,8 @@ void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, bool bRemove, Mis
 					{
 						PromotionTypes ePromotion = (PromotionTypes)kPotentialPromotionLine.getPromotion(iI);
 						CvPromotionInfo& kPromotion = GC.getPromotionInfo(ePromotion);
-						if (kPromotion.getLinePriority() == 1 && canAcquirePromotion(ePromotion, false, false, false, false, false, false, true, true))
+						if (kPromotion.getLinePriority() == 1 
+							&& canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp))
 						{
 							iValue = 0;
 							if (bCanHeal)
@@ -44220,7 +44250,8 @@ void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, bool bRemove, Mis
 					for (int iI = 0; iI < kPotentialPromotionLine.getNumPromotions(); iI++)
 					{
 						PromotionTypes ePromotion = (PromotionTypes)kPotentialPromotionLine.getPromotion(iI);
-						if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1 && canAcquirePromotion(ePromotion, false, false, false, false, false, false, true, true))
+						if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1 
+							&& canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp))
 						{
 							iValue = std::max(1, GET_PLAYER(getOwnerINLINE()).AI_promotionValue(ePromotion, getUnitType(), this, AI_getUnitAIType(), true));
 							if (iValue > iBestValue)
@@ -44351,7 +44382,7 @@ void CvUnit::doHNCapture()
 		if (GC.getPromotionInfo((PromotionTypes)iI).isSetOnHNCapture())
 		{
 			PromotionTypes ePromotion = ((PromotionTypes)iI);
-			if (canAcquirePromotion(ePromotion, false, false, false, false,false, false, true, false))
+			if (canAcquirePromotion(ePromotion, PromotionRequirements::ForFree))
 			{
 				setHasPromotion(ePromotion, true, true, false, false);
 				m_bHasHNCapturePromotion = true;
@@ -46041,7 +46072,7 @@ void CvUnit::doSetDefaultStatuses()
 	for (int iI = 0; iI < (int)m_iDefaultStatusTypes.size(); iI++)
 	{
 		PromotionTypes ePromotion = (PromotionTypes)m_iDefaultStatusTypes[iI];
-		if (canAcquirePromotion(ePromotion, false, false, false, false, false, false, false, false, true))
+		if (canAcquirePromotion(ePromotion, PromotionRequirements::ForStatus))
 		{
 			statusUpdate(ePromotion);
 		}
@@ -46381,7 +46412,7 @@ void CvUnit::setTrap(CvUnit* pUnit)
 	{
 		if (pUnit->hasTrapSetWithPromotion((PromotionTypes)iI))
 		{
-			if (canAcquirePromotion((PromotionTypes)iI, false, false, false, false, false, false, true, false, false))
+			if (canAcquirePromotion((PromotionTypes)iI, PromotionRequirements::ForFree))
 			{
 				setHasPromotion((PromotionTypes)iI, true, true, false, false);
 			}
@@ -46584,7 +46615,7 @@ void CvUnit::makeWanted(CvCity* pCity)
 		if (GC.getPromotionInfo((PromotionTypes)iI).isSetOnInvestigated())
 		{
 			PromotionTypes ePromotion = ((PromotionTypes)iI);
-			if (canAcquirePromotion(ePromotion, false, false, false, false, false, false, true, false))
+			if (canAcquirePromotion(ePromotion, PromotionRequirements::ForFree))
 			{
 				setHasPromotion(ePromotion, true, true, false, false);
 				PlayerTypes ePlayer = pCity->getOwner();

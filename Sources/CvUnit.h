@@ -38,6 +38,7 @@ struct PromotionRequirements
 		IgnoreHas = 1 << 0,
 		Equip = 1 << 1,
 		Afflict = 1 << 2,
+		// TODO: this doesn't appear to actually do anything in the promote functions, so remove it (check the function ofcourse)
 		Promote = 1 << 3,
 		ForLeader = 1 << 4,
 		ForOffset = 1 << 5,
@@ -791,7 +792,7 @@ public:
 	bool build(BuildTypes eBuild);
 
 	bool canPromote(PromotionTypes ePromotion, int iLeaderUnitId) const;																												// Exposed to Python 
-	void promote(PromotionTypes ePromotion, int iLeaderUnitId);																																// Exposed to Python 
+	bool promote(PromotionTypes ePromotion, int iLeaderUnitId);																																// Exposed to Python 
 
 	int canLead(const CvPlot* pPlot, int iUnitId) const;
 	bool lead(int iUnitId);
@@ -1828,7 +1829,7 @@ public:
 	virtual bool AI_update() = 0;
 	virtual bool AI_follow() = 0;
 	virtual void AI_upgrade() = 0;
-	virtual void AI_promote() = 0;
+	virtual bool AI_promote() = 0;
 	virtual int AI_groupFirstVal() = 0;
 	virtual int AI_groupSecondVal() = 0;
 	virtual int AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy, CvUnit** ppDefender = NULL, bool bAssassinate = false) = 0;

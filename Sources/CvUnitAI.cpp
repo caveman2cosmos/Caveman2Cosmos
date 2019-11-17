@@ -857,28 +857,23 @@ void CvUnitAI::AI_upgrade()
 }
 
 
-void CvUnitAI::AI_promote()
+bool CvUnitAI::AI_promote()
 {
 	PROFILE_FUNC();
 
-	PromotionTypes eBestPromotion;
-	int iValue;
-	int iBestValue;
-	int iI;
-
 	if ( !isPromotionReady() )
 	{
-		return;
+		return false;
 	}
 
-	iBestValue = 0;
-	eBestPromotion = NO_PROMOTION;
+	int iBestValue = 0;
+	PromotionTypes eBestPromotion = NO_PROMOTION;
 
-	for (iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
 		if (canPromote((PromotionTypes)iI, -1))
 		{
-			iValue = AI_promotionValue((PromotionTypes)iI);
+			int iValue = AI_promotionValue((PromotionTypes)iI);
 
 			if (iValue > iBestValue)
 			{
@@ -897,9 +892,14 @@ void CvUnitAI::AI_promote()
 			logBBAI("    %S's %S chooses promotion %S", GET_PLAYER(getOwnerINLINE()).getCivilizationDescription(0), getName(0).GetCString(), GC.getPromotionInfo(eBestPromotion).getDescription());
 		}
 
-		promote(eBestPromotion, -1);
-		AI_promote();
+		if(promote(eBestPromotion, -1))
+		{
+			AI_promote();
+			return true;
+		}
+		FErrorMsg(CvString::format("Couldn't apply promotion %S to %S", getName(0).GetCString(), GC.getPromotionInfo(eBestPromotion).getDescription()).c_str());
 	}
+	return false;
 }
 
 int CvUnitAI::AI_groupFirstVal()

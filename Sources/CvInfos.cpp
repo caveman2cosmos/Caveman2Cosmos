@@ -4768,7 +4768,7 @@ int CvPromotionInfo::getNumFreetoUnitCombats() const
 	return (int)m_aiFreetoUnitCombats.size();
 }
 
-bool CvPromotionInfo::isFreetoUnitCombat(int i)
+bool CvPromotionInfo::isFreetoUnitCombat(int i) const
 {
 	FAssert (i > -1 && i < GC.getNumUnitCombatInfos());
 	if (find(m_aiFreetoUnitCombats.begin(), m_aiFreetoUnitCombats.end(), i) == m_aiFreetoUnitCombats.end())

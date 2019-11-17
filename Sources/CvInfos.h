@@ -1004,7 +1004,7 @@ public:
 
 	int getFreetoUnitCombat(int i) const;
 	int getNumFreetoUnitCombats() const;
-	bool isFreetoUnitCombat(int i);
+	bool isFreetoUnitCombat(int i) const;
 
 	int getNotOnUnitCombatType(int i) const;
 	int getNumNotOnUnitCombatTypes() const;

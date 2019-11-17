@@ -28054,7 +28054,7 @@ bool CvCity::assignPromotionChecked(PromotionTypes promotion, CvUnit* unit) cons
 {
 	if (promotion != NO_PROMOTION &&
 		((GC.getPromotionInfo(promotion).isEquipment() && canEquip(unit, promotion)) ||
-			unit->canAcquirePromotion(promotion, false, false, false, true, false, false, true)))
+			unit->canAcquirePromotion(promotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)))
 	{
 		unit->setHasPromotion(promotion, true);
 		return true;
@@ -28069,7 +28069,7 @@ void CvCity::assignPromotionsFromBuildingChecked(const CvBuildingInfo& building,
 		const FreePromoTypes& freePromoType = building.getFreePromoType(promoTypeIdx);
 		if (freePromoType.ePromotion != NO_PROMOTION &&
 			((GC.getPromotionInfo(freePromoType.ePromotion).isEquipment() && canEquip(unit, freePromoType.ePromotion)) ||
-				unit->canAcquirePromotion(freePromoType.ePromotion, false, false, false, true, false, false, true)))
+				unit->canAcquirePromotion(freePromoType.ePromotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)))
 		{
 			if (!freePromoType.m_pExprFreePromotionCondition ||
 				freePromoType.m_pExprFreePromotionCondition->evaluate(const_cast<CvGameObjectUnit*>(unit->getGameObjectConst())))

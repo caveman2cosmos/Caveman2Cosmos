@@ -44,9 +44,9 @@ public:
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-	void AI_upgrade();
+	void AI_upgrade(); // override
 
-	void AI_promote();
+	bool AI_promote(); // override
 
 #define	LEADER_PRIORITY_MIN 0
 #define	LEADER_PRIORITY_MAX	100
