@@ -41182,10 +41182,8 @@ void CvGameTextMgr::setDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		szBuffer.append(DOUBLE_SEPARATOR);
 	if (iBaseRate != 0)
 	{
-		if (bFirst)
-			szBuffer.append(NEWLINE);
-		else
-			bFirst = true;
+		// If iBaseRate isn't zero we definitely already added stuff above
+		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_TOTAL_DEFENSE_HOVER", iBaseRate));
 	}
 	int iTerrainDefense = std::max(0, city.plot()->defenseModifier(GET_PLAYER(city.getOwnerINLINE()).getTeam(), false, true));
@@ -41199,8 +41197,10 @@ void CvGameTextMgr::setDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		iBaseRate += iTerrainDefense;
 	}
 	if (iBaseRate > 0)
-	// ==========================
+	{
+		// ==========================
 		szBuffer.append(DOUBLE_SEPARATOR);
+	}
 	int iDefenseDamagePercent = city.getDefenseDamage();
 	if (iDefenseDamagePercent != 0)
 	{
@@ -41221,10 +41221,8 @@ void CvGameTextMgr::setDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	}
 	if (iBaseRate != 0)
 	{
-		if (bFirst)
-			szBuffer.append(NEWLINE);
-		else
-			bFirst = true;
+		// If iBaseRate isn't zero we definitely already added stuff above
+		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_CURRENT_DEFENSE_HOVER", (iBaseRate - iDefenseDamage)));
 	}
 

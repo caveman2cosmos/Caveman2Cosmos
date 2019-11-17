@@ -8500,12 +8500,11 @@ int CvCityAI::evaluateDanger()
 
 	noGrowthCriteria.m_bIgnoreGrowth = true;
 
-	UnitTypes				eDummyUnit = GET_PLAYER(getOwnerINLINE()).bestBuildableUnitForAIType(DOMAIN_LAND, UNITAI_ATTACK, &noGrowthCriteria);
+	UnitTypes eDummyUnit = GET_PLAYER(getOwnerINLINE()).bestBuildableUnitForAIType(DOMAIN_LAND, UNITAI_ATTACK, &noGrowthCriteria);
 
 	if ( eDummyUnit == NO_UNIT )
 	{
 		eDummyUnit = GET_PLAYER(getOwnerINLINE()).bestBuildableUnitForAIType(DOMAIN_LAND, UNITAI_CITY_DEFENSE, &noGrowthCriteria);
-		FAssertMsg(eDummyUnit != NO_UNIT, "Cannot find defender to use for strength test");
 	}
 
 	if ( eDummyUnit != NO_UNIT )
@@ -8566,6 +8565,7 @@ int CvCityAI::evaluateDanger()
 	else
 	{
 		//	Should never happen but empirically it does (very rarely) - needs future investigation
+		FErrorMsg("Cannot find defender to use for strength test");
 		return 100;	
 	}
 }
