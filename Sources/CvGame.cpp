@@ -9007,9 +9007,8 @@ void CvGame::createBarbarianUnits()
 					int iCityLoop = 0;
 					for (CvCity* pLoopCity = GET_PLAYER(BARBARIAN_PLAYER).firstCity(&iCityLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(BARBARIAN_PLAYER).nextCity(&iCityLoop))
 					{
-						FAssertMsg(pLoopCity->area() == pLoopArea, "City in an area thinks it is in another area");
-
-						if(pLoopCity->getOriginalOwner() == BARBARIAN_PLAYER
+						if(pLoopCity->area() == pLoopArea
+							&& pLoopCity->getOriginalOwner() == BARBARIAN_PLAYER
 							&& barbarianCityShouldSpawnWorker(this, pLoopCity))
 						{
 							int iUnitValue;

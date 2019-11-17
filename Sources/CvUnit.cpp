@@ -1066,15 +1066,17 @@ void CvUnit::convert(CvUnit* pUnit)
 		checkPromotionObsoletion();
 		checkFreetoCombatClass();
 
-		CvUnit::normalizeUnitPromotions(this, iTotalGroupOffset,
+		bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(this, iTotalGroupOffset,
 			boost::bind(&CvUnit::isGroupUpgradePromotion, this, _2),
 			boost::bind(&CvUnit::isGroupDowngradePromotion, this, _2)
 		);
+		FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on converted unit");
 
-		CvUnit::normalizeUnitPromotions(this, iTotalQualityOffset,
+		bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(this, iTotalQualityOffset,
 			boost::bind(&CvUnit::isQualityUpgradePromotion, this, _2),
 			boost::bind(&CvUnit::isQualityDowngradePromotion, this, _2)
 		);
+		FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on converted unit");
 
 		checkFreetoCombatClass();
 	}
@@ -26023,7 +26025,6 @@ void CvUnit::setHasPromotion(PromotionTypes eIndex, bool bNewValue, bool bFree, 
 	}
 }//TB Combat Mods end
 
-
 bool CvUnit::applyUnitPromotions(const std::vector<CvUnit*>& units, int number, PromotionPredicateFn promotionPredicateFn)
 {
 	FAssertMsg(number >= 0, "Number of promotions to apply cannot be negative");
@@ -26042,7 +26043,6 @@ bool CvUnit::applyUnitPromotions(const std::vector<CvUnit*>& units, int number, 
 		}
 		number--;
 	}
-	FAssertMsg(number == 0, "Could not apply required number of promotions on units");
 	return number == 0;
 }
 
@@ -42388,15 +42388,17 @@ void CvUnit::doMerge()
 			}
 		}
 
-		CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalGroupOffset,
+		bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalGroupOffset,
 			boost::bind(&CvUnit::isGroupUpgradePromotion, pkMergedUnit, _2),
 			boost::bind(&CvUnit::isGroupDowngradePromotion, pkMergedUnit, _2)
 		);
+		FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on merged units");
 
-		CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalQualityOffset,
+		bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalQualityOffset,
 			boost::bind(&CvUnit::isQualityUpgradePromotion, pkMergedUnit, _2),
 			boost::bind(&CvUnit::isQualityDowngradePromotion, pkMergedUnit, _2)
 		);
+		FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on merged units");
 
 		//Set New Experience
 		int iXP1 = pUnit1->getExperience100();
@@ -42540,15 +42542,17 @@ void CvUnit::doSplit()
 		newUnits.push_back(pUnit2);
 		newUnits.push_back(pUnit3);
 
-		CvUnit::normalizeUnitPromotions(newUnits, iTotalGroupOffset,
+		bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(newUnits, iTotalGroupOffset,
 			boost::bind(isGroupUpgradePromotion, pUnit1, _2),
 			boost::bind(isGroupDowngradePromotion, pUnit1, _2)
 		);
+		FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on split units");
 
-		CvUnit::normalizeUnitPromotions(newUnits, iTotalQualityOffset,
+		bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(newUnits, iTotalQualityOffset,
 			boost::bind(isQualityUpgradePromotion, pUnit1, _2),
 			boost::bind(isQualityDowngradePromotion, pUnit1, _2)
 		);
+		FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on split units");
 
 		if (pUnit0->getLeaderUnitType() != NO_UNIT)
 		{
@@ -42558,6 +42562,7 @@ void CvUnit::doSplit()
 		for (std::vector<CvUnit*>::iterator itr = newUnits.begin(); itr != newUnits.end(); ++itr)
 		{
 			CvUnit* unit = *itr;
+
 			unit->setInhibitMerge(true);
 			//Set New Experience
 			unit->setExperience100(pUnit0->getExperience100());
@@ -42566,7 +42571,6 @@ void CvUnit::doSplit()
 			unit->m_eOriginalOwner = pUnit0->getOriginalOwner();
 			unit->setAutoPromoting(pUnit0->isAutoPromoting());
 			unit->setName(pUnit0->getNameNoDesc());
-
 			unit->joinGroup(pSplittingGroup);
 		}
 

@@ -1791,15 +1791,17 @@ void CvNetChooseMergeUnit::Execute()
 					}
 				}
 			}
-			CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalGroupOffset, 
+			bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalGroupOffset, 
 				boost::bind(&CvUnit::isGroupUpgradePromotion, pkMergedUnit, _2),
 				boost::bind(&CvUnit::isGroupDowngradePromotion, pkMergedUnit, _2)
 			);
+			FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on merged units");
 
-			CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalQualityOffset,
+			bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalQualityOffset,
 				boost::bind(&CvUnit::isQualityUpgradePromotion, pkMergedUnit, _2),
 				boost::bind(&CvUnit::isQualityDowngradePromotion, pkMergedUnit, _2)
 			);
+			FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on merged units");
 			
 			//Set New Experience
 			int iXP1 = pUnit1->getExperience100();
@@ -1949,39 +1951,28 @@ void CvNetConfirmSplitUnit::Execute()
 			newUnits.push_back(pUnit2);
 			newUnits.push_back(pUnit3);
 
-			CvUnit::normalizeUnitPromotions(newUnits, iTotalGroupOffset,
+			bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(newUnits, iTotalGroupOffset,
 				boost::bind(isGroupUpgradePromotion, pUnit1, _2),
 				boost::bind(isGroupDowngradePromotion, pUnit1, _2)
 			);
+			FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on split units");
 
-			CvUnit::normalizeUnitPromotions(newUnits, iTotalQualityOffset,
+			bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(newUnits, iTotalQualityOffset,
 				boost::bind(isQualityUpgradePromotion, pUnit1, _2),
 				boost::bind(isQualityDowngradePromotion, pUnit1, _2)
 			);
+			FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on split units");
 
-			//Set New Experience
-			pUnit1->setExperience100(pUnit0->getExperience100());
-			pUnit2->setExperience100(pUnit0->getExperience100());
-			pUnit3->setExperience100(pUnit0->getExperience100());
-			pUnit1->setLevel(pUnit0->getLevel());
-			pUnit2->setLevel(pUnit0->getLevel());
-			pUnit3->setLevel(pUnit0->getLevel());
-
-			pUnit1->setGameTurnCreated(pUnit0->getGameTurnCreated());
-			pUnit2->setGameTurnCreated(pUnit0->getGameTurnCreated());
-			pUnit3->setGameTurnCreated(pUnit0->getGameTurnCreated());
-
-			pUnit1->m_eOriginalOwner = pUnit0->getOriginalOwner();
-			pUnit2->m_eOriginalOwner = pUnit0->getOriginalOwner();
-			pUnit3->m_eOriginalOwner = pUnit0->getOriginalOwner();
-			
-			pUnit1->setAutoPromoting(pUnit0->isAutoPromoting());
-			pUnit2->setAutoPromoting(pUnit0->isAutoPromoting());
-			pUnit3->setAutoPromoting(pUnit0->isAutoPromoting());
-			pUnit1->setName(pUnit0->getNameNoDesc());
-			pUnit2->setName(pUnit0->getNameNoDesc());
-			pUnit3->setName(pUnit0->getNameNoDesc());
-
+			// Copy appropriate values from the original unit to the new ones
+			for (std::vector<CvUnit*>::const_iterator itr = newUnits.begin(); itr != newUnits.end(); ++itr)
+			{
+				(*itr)->setExperience100(pUnit0->getExperience100());
+				(*itr)->setLevel(pUnit0->getLevel());
+				(*itr)->setGameTurnCreated(pUnit0->getGameTurnCreated());
+				(*itr)->m_eOriginalOwner = pUnit0->getOriginalOwner();
+				(*itr)->setAutoPromoting(pUnit0->isAutoPromoting());
+				(*itr)->setName(pUnit0->getNameNoDesc());
+			}
 
 			if (pUnit0->getLeaderUnitType() != NO_UNIT)
 			{
