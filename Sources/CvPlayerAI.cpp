@@ -653,26 +653,18 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 {
 	PROFILE_FUNC();
 
-	CvUnit* pLoopUnit;
-	CvPlot* pUnitPlot;
-	bool bValid;
-	int iPass;
-	int iLoop;
-
 	if (!isHuman() || isOption(PLAYEROPTION_AUTO_PROMOTION))
 	{
-		for(pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
+		// Copy units as we will be removing and adding some now.
+		for (safe_unit_iterator itr = beginUnitsSafe(); itr != endUnitsSafe(); ++itr)
 		{
-/************************************************************************************************/
-/* Afforess	                  Start		 06/24/10                                               */
-/*                                                                                              */
-/* Afforess Speed Tweak                                                                         */
-/************************************************************************************************/
+			CvUnit* pLoopUnit = *itr;
 			if (pLoopUnit->isPromotionReady())
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+			{
 				pLoopUnit->AI_promote();
+				// Upgrade replaces the original unit with a new one, so old unit must be killed
+				pLoopUnit->doDelayedDeath();
+			}
 		}
 	}
 
@@ -685,100 +677,109 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 	{
 		CvCivilizationInfo& kCivilization = GC.getCivilizationInfo(getCivilizationType());
 		int iMinGoldToUpgrade = getModderOption(MODDEROPTION_UPGRADE_MIN_GOLD);
-		CvUnit* pLoopUnit;
-		int iLoop;
 		
-		if (isModderOption(MODDEROPTION_UPGRADE_MOST_EXPENSIVE) && getEffectiveGold() > iMinGoldToUpgrade)
+		if (isModderOption(MODDEROPTION_UPGRADE_MOST_EXPENSIVE))
 		{
-			for (int iUnitCount = 0; iUnitCount < getNumUnits(); iUnitCount++)
+			bool bUpgraded = true;
+			int i = 0;
+			// Keep looping while we have enough gold to upgrade, and we keep finding units to upgrade (cap at 2x num units to be safe)
+			for (; i < getNumUnits() * 2 && getEffectiveGold() > iMinGoldToUpgrade && bUpgraded; ++i)
 			{
+				// Find unit with the highest cost upgrade available
 				CvUnit* pBestUnit = NULL;
-				int iCost = 0;
-				UnitTypes eLoopUnit = NO_UNIT;
+				int iHighestCost = 0;
 				UnitTypes eBestUnit = NO_UNIT;
-				for (pLoopUnit = firstUnit(&iLoop); getEffectiveGold() > iMinGoldToUpgrade && pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
+				for (unit_iterator itr = beginUnits(); itr != endUnits(); ++itr)
 				{
-					if (pLoopUnit->isAutoUpgrading() && pLoopUnit->isReadyForUpgrade())
+					CvUnit* pLoopUnit = *itr;
+					if (!pLoopUnit->isAutoUpgrading() || !pLoopUnit->isReadyForUpgrade())
+						continue;
+
+					std::vector<int> aPotentialUnitClassTypes = GC.getUnitInfo(pLoopUnit->getUnitType()).getUpgradeUnitClassTypes();
+					for (int iI = 0; iI < (int)aPotentialUnitClassTypes.size(); iI++)
 					{
-						std::vector<int> aPotentialUnitClassTypes = GC.getUnitInfo(pLoopUnit->getUnitType()).getUpgradeUnitClassTypes();
-						for (int iI = 0; iI < (int)aPotentialUnitClassTypes.size(); iI++)
+						UnitTypes eLoopUnit = (UnitTypes)kCivilization.getCivilizationUnits((UnitClassTypes)aPotentialUnitClassTypes[iI]);
+
+						if (eLoopUnit != NO_UNIT && pLoopUnit->canUpgrade(eLoopUnit, false))
 						{
-							eLoopUnit = (UnitTypes)kCivilization.getCivilizationUnits((UnitClassTypes)aPotentialUnitClassTypes[iI]);
-							if (eLoopUnit != NO_UNIT)
+							int iUpgradeCost = pLoopUnit->upgradePrice(eLoopUnit);
+							if (iHighestCost < iUpgradeCost)
 							{
-								if (pLoopUnit->canUpgrade(eLoopUnit, false))
-								{
-									int iUpgradeCost = pLoopUnit->upgradePrice(eLoopUnit);
-									if (iCost < iUpgradeCost)
-									{
-										iCost = iUpgradeCost;
-										eBestUnit = eLoopUnit;
-										pBestUnit = pLoopUnit;
-									}
-								}
+								iHighestCost = iUpgradeCost;
+								eBestUnit = eLoopUnit;
+								pBestUnit = pLoopUnit;
 							}
 						}
 					}
 				}
-				if (pBestUnit == NULL)
+
+				if (pBestUnit != NULL)
 				{
-					break;
-				}
-				else
-				{
-					pBestUnit->upgrade(eBestUnit);
+					bUpgraded = pBestUnit->upgrade(eBestUnit);
+					// Upgrade replaces the original unit with a new one, so old unit must be killed
 					pBestUnit->doDelayedDeath();
 				}
+				else
+				{
+					bUpgraded = false;
+				}
 			}
+			FAssertMsg(i < getNumUnits() * 2, "Unit auto upgrade appears to have hit an infinite loop");
+			
 		}
-		else if (isModderOption(MODDEROPTION_UPGRADE_MOST_EXPERIENCED) && getEffectiveGold() > iMinGoldToUpgrade)
+		else if (isModderOption(MODDEROPTION_UPGRADE_MOST_EXPERIENCED))
 		{
-			for (int iUnitCount = 0; iUnitCount < getNumUnits(); iUnitCount++)
+			bool bUpgraded = true;
+			int i = 0;
+			// Keep looping while we have enough gold to upgrade, and we keep finding units to upgrade (cap at 2x num units to be safe)
+			for (; i < getNumUnits() * 2 && getEffectiveGold() > iMinGoldToUpgrade && bUpgraded; ++i)
 			{
+				// Find unit with the highest available experience that has an upgrade available
 				CvUnit* pBestUnit = NULL;
 				int iExperience = -1;
-				UnitTypes eLoopUnit = NO_UNIT;
-				for (pLoopUnit = firstUnit(&iLoop); getEffectiveGold() > iMinGoldToUpgrade && pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
+				for (unit_iterator itr = beginUnits(); itr != endUnits(); ++itr)
 				{
-					if (pLoopUnit->isAutoUpgrading() && pLoopUnit->isReadyForUpgrade())
+					CvUnit* pLoopUnit = *itr;
+					if (!pLoopUnit->isAutoUpgrading() || !pLoopUnit->isReadyForUpgrade() || iExperience > pLoopUnit->getExperience100())
+						continue;
+
+					std::vector<int> aPotentialUnitClassTypes = GC.getUnitInfo(pLoopUnit->getUnitType()).getUpgradeUnitClassTypes();
+					for (int iI = 0; iI < (int)aPotentialUnitClassTypes.size(); iI++)
 					{
-						std::vector<int> aPotentialUnitClassTypes = GC.getUnitInfo(pLoopUnit->getUnitType()).getUpgradeUnitClassTypes();
-						for (int iI = 0; iI < (int)aPotentialUnitClassTypes.size(); iI++)
+						UnitTypes eLoopUnit = (UnitTypes)kCivilization.getCivilizationUnits((UnitClassTypes)aPotentialUnitClassTypes[iI]);
+						if (eLoopUnit != NO_UNIT && pLoopUnit->canUpgrade(eLoopUnit, false))
 						{
-							eLoopUnit = (UnitTypes)kCivilization.getCivilizationUnits((UnitClassTypes)aPotentialUnitClassTypes[iI]);
-							if (eLoopUnit != NO_UNIT)
-							{
-								if (pLoopUnit->canUpgrade(eLoopUnit, false))
-								{
-									int iCurExperience = pLoopUnit->getExperience100();
-									if (iExperience < iCurExperience)
-									{
-										iExperience = iCurExperience;
-										pBestUnit = pLoopUnit;
-										break;
-									}
-								}
-							}
+							pBestUnit = pLoopUnit;
+							break;
 						}
 					}
 				}
-				if (pBestUnit == NULL)
+
+				if (pBestUnit != NULL)
 				{
-					break;
+					// Use AI upgrade to choose the best upgrade
+					bUpgraded = pBestUnit->AI_upgrade();
+					// Upgrade replaces the original unit with a new one, so old unit must be killed
+					pBestUnit->doDelayedDeath();
 				}
 				else
 				{
-					pBestUnit->AI_upgrade();
+					bUpgraded = false;
 				}
 			}
+			FAssertMsg(i < getNumUnits() * 2, "Unit auto upgrade appears to have hit an infinite loop");
 		}
-		else if (getEffectiveGold() > iMinGoldToUpgrade)
+		else
 		{
-			for (pLoopUnit = firstUnit(&iLoop); getEffectiveGold() > iMinGoldToUpgrade && pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
+			// Copy units as we will be removing and adding some now.
+			for (safe_unit_iterator itr = beginUnitsSafe(); itr != endUnitsSafe(); ++itr)
 			{
+				CvUnit* pLoopUnit = *itr;
 				if (pLoopUnit->isAutoUpgrading() && pLoopUnit->isReadyForUpgrade())
 				{
 					pLoopUnit->AI_upgrade();
+					// Upgrade replaces the original unit with a new one, so old unit must be killed
+					pLoopUnit->doDelayedDeath();
 				}
 			}
 		}
@@ -827,17 +828,18 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 /************************************************************************************************/
 
 	CvPlot* pLastUpgradePlot = NULL;
-	for (iPass = 0; iPass < 4; iPass++)
+	for (int iPass = 0; iPass < 4; iPass++)
 	{
-		for(pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
+		for (unit_iterator itr = beginUnits(); itr != endUnits(); ++itr)
 		{
-			bool bNoDisband = false;
-			bValid = false;
-
+			CvUnit* pLoopUnit = *itr;
 			if ( pLoopUnit->isDead() || pLoopUnit->isDelayedDeath() )
 			{
 				continue;
 			}
+
+			bool bNoDisband = false;
+			bool bValid = false;
 
 			//	Koshling - never upgrade workers or subdued animals here as they typically have outcome
 			//	missions and construction capabilities that must be evaluated comparatively.  The UnitAI
@@ -861,8 +863,9 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 					bValid = true;
 				}
 				break;
-			case 1:
-				pUnitPlot = pLoopUnit->plot();
+			case 1: 
+			{
+				CvPlot* pUnitPlot = pLoopUnit->plot();
 
 				FAssert(pUnitPlot != NULL);
 				if (pUnitPlot->isCity())
@@ -882,9 +885,9 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 /************************************************************************************************/
 					//if (!bValid && (pLastUpgradePlot != pUnitPlot) && ((AI_getPlotDanger(pUnitPlot, 1, false)) > 0))
 					if (!bValid && (pLastUpgradePlot != pUnitPlot) && ((AI_getAnyPlotDanger(pUnitPlot, 1, false))))
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/	
+						/************************************************************************************************/
+						/* BETTER_BTS_AI_MOD                       END                                                  */
+						/************************************************************************************************/
 					{
 						bNoDisband = true;
 						bValid = true;
@@ -892,6 +895,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 					}
 				}
 				break;
+			}
 			case 2:
 				/********************************************************************************/
 				/* 	BETTER_BTS_AI_MOD						9/15/08			jdog5000		*/

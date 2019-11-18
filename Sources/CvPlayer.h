@@ -1330,6 +1330,10 @@ public:
 	unit_iterator rbeginUnits() const { return unit_iterator(this, unit_iterator::reverse_tag()); }
 	unit_iterator rendUnits() const { return unit_iterator(); }
 
+	safe_unit_iterator beginUnitsSafe() const { return safe_unit_iterator(beginUnits(), endUnits()); }
+	safe_unit_iterator endUnitsSafe() const { return safe_unit_iterator(); }
+
+
 	CvUnit* firstUnit(int* pIterIdx, bool bRev = false) const;																// Exposed to Python					
 	CvUnit* nextUnit(int* pIterIdx, bool bRev = false) const;																	// Exposed to Python					
 	DllExport CvUnit* firstUnitExternal(int* pIterIdx, bool bRev = false) const;																// Exposed to Python

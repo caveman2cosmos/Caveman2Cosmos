@@ -298,6 +298,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BetterBTSAI.h" />
+    <ClInclude Include="copy_iterator.h" />
     <ClInclude Include="CvPlotPaging.h" />
     <ClInclude Include="CvPython.h" />
     <ClInclude Include="EnumFlags.h" />

@@ -44,7 +44,7 @@ public:
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-	void AI_upgrade(); // override
+	bool AI_upgrade(); // override
 
 	bool AI_promote(); // override
 

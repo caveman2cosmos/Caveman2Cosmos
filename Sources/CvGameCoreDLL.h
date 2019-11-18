@@ -209,6 +209,8 @@ namespace python = boost::python;
 //
 // Our code
 //
+#include "copy_iterator.h"
+
 #include "CvAllocator.h"
 
 #include "FAssert.h"

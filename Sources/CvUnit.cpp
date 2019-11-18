@@ -14395,13 +14395,13 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 	return pBestCity;
 }
 
-void CvUnit::upgrade(UnitTypes eUnit)
+bool CvUnit::upgrade(UnitTypes eUnit)
 {
 	CvUnit* pUpgradeUnit;
 
 	if (!canUpgrade(eUnit))
 	{
-		return;
+		return false;
 	}
 
 // BUG - Upgrade Unit Event - start
@@ -14472,6 +14472,7 @@ void CvUnit::upgrade(UnitTypes eUnit)
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
+	return true;
 }
 
 
@@ -38213,14 +38214,6 @@ void CvUnit::checkPromotionObsoletion()
 {
 	PROFILE_FUNC();
 
-	//TB Combat Mod begin
-	int iI;
-	PromotionTypes ePromotion;
-	CvWString szBuffer;
-	bool bEquip = false;
-	bool bAfflict = false;
-	bool bPromo = false;
-	//TB Combat Mod end
 	if (isCommander())
 	{
 		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
@@ -38234,25 +38227,15 @@ void CvUnit::checkPromotionObsoletion()
 		}
 	}
 	bool bContinue = true;
-	bool bRemovalMade = false;
 	while (bContinue)
 	{
-		bRemovalMade = false;
-		for (iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+		bool bRemovalMade = false;
+		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 		{
-			ePromotion = ((PromotionTypes)iI);
-			bEquip = GC.getPromotionInfo(ePromotion).isEquipment();
-			bAfflict = GC.getPromotionInfo(ePromotion).isAffliction();
-			if (bEquip || bAfflict)
-			{
-				bPromo = false;
-			}
-			else
-			{
-				bPromo = true;
-			}
+			PromotionTypes ePromotion = static_cast<PromotionTypes>(iI);
+			const CvPromotionInfo& promotionInfo = GC.getPromotionInfo(ePromotion);
+			bool bPromo = !promotionInfo.isEquipment() && !promotionInfo.isAffliction();
 			bool bPromotionFree = isPromotionFree(ePromotion);
-
 			if (isHasPromotion(ePromotion))
 			{
 				if (!canKeepPromotion(ePromotion, bPromotionFree, true))

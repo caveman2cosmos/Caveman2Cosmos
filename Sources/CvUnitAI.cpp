@@ -796,7 +796,7 @@ bool CvUnitAI::AI_follow()
 
 // XXX what if a unit gets stuck b/c of it's UnitAIType???
 // XXX is this function costing us a lot? (it's recursive...)
-void CvUnitAI::AI_upgrade()
+bool CvUnitAI::AI_upgrade()
 {
 	PROFILE_FUNC();
 
@@ -818,42 +818,41 @@ void CvUnitAI::AI_upgrade()
 	//Watch for odd problems this might introduce elsewhere though.
 	//for (int iPass = 0; iPass < 2; iPass++)
 	//{
-		UnitTypes eBestUnit = NO_UNIT;
-		int iBestValue = 0;
+	UnitTypes eBestUnit = NO_UNIT;
+	int iBestValue = 0;
 
-		for (int iI = 0; iI < (int)aPotentialUnitClassTypes.size(); iI++)
+	for (int iI = 0; iI < (int)aPotentialUnitClassTypes.size(); iI++)
+	{
+		UnitTypes eLoopUnit = (UnitTypes)kCivilization.getCivilizationUnits((UnitClassTypes)aPotentialUnitClassTypes[iI]);
+		if (eLoopUnit != NO_UNIT && ((/*iPass > 0 &&*/ !GC.getUnitInfo(eLoopUnit).getNotUnitAIType(eUnitAI)) /*||*/&& GC.getUnitInfo(eLoopUnit).getUnitAIType(eUnitAI)))
 		{
-			UnitTypes eLoopUnit = (UnitTypes)kCivilization.getCivilizationUnits((UnitClassTypes)aPotentialUnitClassTypes[iI]);
-			if (eLoopUnit != NO_UNIT && ((/*iPass > 0 &&*/ !GC.getUnitInfo(eLoopUnit).getNotUnitAIType(eUnitAI)) /*||*/&& GC.getUnitInfo(eLoopUnit).getUnitAIType(eUnitAI)))
+			int iNewValue = kPlayer.AI_unitValue(eLoopUnit, /*(iPass == 0 ?*/ eUnitAI /*: (UnitAITypes)GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType())*/, pArea);
+			if ((/*iPass == 0 || */iNewValue > 0) && iNewValue > iCurrentValue)
 			{
-				int iNewValue = kPlayer.AI_unitValue(eLoopUnit, /*(iPass == 0 ?*/ eUnitAI /*: (UnitAITypes)GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType())*/, pArea);
-				if ((/*iPass == 0 || */iNewValue > 0) && iNewValue > iCurrentValue)
+				if (canUpgrade(eLoopUnit))
 				{
-					if (canUpgrade(eLoopUnit))
-					{
-						int iValue = (1 + GC.getGameINLINE().getSorenRandNum(10000, "AI Upgrade"));
+					int iValue = (1 + GC.getGameINLINE().getSorenRandNum(10000, "AI Upgrade"));
 
-						if (iValue > iBestValue)
-						{
-							iBestValue = iValue;
-							eBestUnit = eLoopUnit;
-						}
+					if (iValue > iBestValue)
+					{
+						iBestValue = iValue;
+						eBestUnit = eLoopUnit;
 					}
 				}
 			}
 		}
+	}
 
-		if (eBestUnit != NO_UNIT)
+	if (eBestUnit != NO_UNIT)
+	{
+		if( gUnitLogLevel >= 2 )
 		{
-			if( gUnitLogLevel >= 2 )
-			{
-				logBBAI("    %S at (%d,%d) upgrading to %S", getName(0).GetCString(), plot()->getX_INLINE(), plot()->getY_INLINE(), GC.getUnitInfo(eBestUnit).getDescription());
-			}
-			upgrade(eBestUnit);
-			// doDelayedDeath();
-			return;
+			logBBAI("    %S at (%d,%d) upgrading to %S", getName(0).GetCString(), plot()->getX_INLINE(), plot()->getY_INLINE(), GC.getUnitInfo(eBestUnit).getDescription());
 		}
-	/*}*/
+		return upgrade(eBestUnit);
+	}
+	//}
+	return false;
 }
 
 

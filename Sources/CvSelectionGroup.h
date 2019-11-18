@@ -252,41 +252,9 @@ public:
 	unit_iterator beginUnits() const { return unit_iterator(&m_units); }
 	unit_iterator endUnits() const { return unit_iterator(); }
 
-	class safe_unit_iterator : public boost::iterator_facade<safe_unit_iterator, CvUnit*, boost::forward_traversal_tag, CvUnit*>
-	{
-	public:
-		safe_unit_iterator() : m_idx(-1) {}
-		template < class UnitIterator >
-		explicit safe_unit_iterator(UnitIterator begin, UnitIterator end)
-			: m_units(begin, end)
-			, m_idx(-1)
-		{
-			if (m_units.size() > 0)
-				m_idx = 0;
-		}
-	private:
-		friend class boost::iterator_core_access;
-
-		void increment() 
-		{
-			m_idx = m_idx + 1; 
-			if (m_idx >= static_cast<int>(m_units.size()))
-				m_idx = -1;
-		}
-
-		bool equal(safe_unit_iterator const& other) const
-		{
-			return this->m_idx == other.m_idx;
-		}
-
-		CvUnit* dereference() const { return m_units[m_idx]; }
-
-		typedef std::vector<CvUnit*> UnitVector;
-		UnitVector m_units;
-		int m_idx;
-	};
-
+	// This iterates a copy of the unit list, as such it is somewhat slower, but can be used when units may be added or deleted
 	safe_unit_iterator beginUnitsSafe() const { return safe_unit_iterator(beginUnits(), endUnits()); }
+	// This iterates a copy of the unit list, as such it is somewhat slower, but can be used when units may be added or deleted
 	safe_unit_iterator endUnitsSafe() const { return safe_unit_iterator(); }
 
 	std::vector<const CvUnit*> get_if(boost::function<bool(const CvUnit*)> predicateFn) const;
