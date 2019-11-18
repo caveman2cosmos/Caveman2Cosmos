@@ -809,7 +809,7 @@ public:
 	bool hasUpgrade(UnitTypes eUnit, bool bSearch = false) const;
 	CvCity* getUpgradeCity(bool bSearch = false) const;
 	CvCity* getUpgradeCity(UnitTypes eUnit, bool bSearch = false, int* iSearchValue = NULL) const;
-	void upgrade(UnitTypes eUnit);
+	bool upgrade(UnitTypes eUnit);
 
 	HandicapTypes getHandicapType() const;																// Exposed to Python		
 	CivilizationTypes getCivilizationType() const;							// Exposed to Python								
@@ -1828,7 +1828,7 @@ public:
 	virtual void AI_reset(UnitAITypes eUnitAI = NO_UNITAI, bool bConstructor = false) = 0;
 	virtual bool AI_update() = 0;
 	virtual bool AI_follow() = 0;
-	virtual void AI_upgrade() = 0;
+	virtual bool AI_upgrade() = 0;
 	virtual bool AI_promote() = 0;
 	virtual int AI_groupFirstVal() = 0;
 	virtual int AI_groupSecondVal() = 0;
@@ -3271,5 +3271,9 @@ private:
 
 	PlayerTypes m_pPlayerInvestigated;
 };
+
+typedef std::vector<CvUnit*> UnitVector;
+typedef std::vector<const CvUnit*> ConstUnitVector;
+typedef copy_iterator<CvUnit*, CvUnit*> safe_unit_iterator;
 
 #endif
