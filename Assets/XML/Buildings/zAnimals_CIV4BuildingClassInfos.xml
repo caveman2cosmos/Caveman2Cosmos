@@ -3942,14 +3942,6 @@
 			<DefaultBuilding>BUILDING_WALRUS_CAGE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_TRADITION_HUNTING</Type>
-			<Description>TXT_KEY_BUILDING_TRADITION_HUNTING</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<DefaultBuilding>BUILDING_TRADITION_HUNTING</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MASTER_HUNTER_TRADITION</Type>
 			<Description>TXT_KEY_BUILDING_MASTER_HUNTER_TRADITION</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
