@@ -55,11 +55,11 @@
 			</Flavors>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BULL_MYTH</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_BULL_MYTH_EFFECT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BISON_MYTH</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_BISON_MYTH_EFFECT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>

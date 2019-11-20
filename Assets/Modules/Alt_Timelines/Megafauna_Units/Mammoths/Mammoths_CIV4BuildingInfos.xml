@@ -132,7 +132,7 @@
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALEOLITHIC_MAMMOTH_MYTH</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>

@@ -10,23 +10,23 @@
 			<Type>BUILDING_RHINO_TRAINER</Type>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_RHINO_TAXONOMY_MYTH</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_RHINO_TAXONOMY_MYTH_EFFECT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BLACK_RHINO_MYTH</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_BLACK_RHINO_MYTH_EFFECT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_INDIAN_RHINO_MYTH</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_INDIAN_RHINO_MYTH_EFFECT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_JAVA_RHINO_MYTH</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_JAVA_RHINO_MYTH_EFFECT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_WHITE_RHINO_MYTH</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_WHITE_RHINO_MYTH_EFFECT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
                 <PrereqOrBuildingClass>

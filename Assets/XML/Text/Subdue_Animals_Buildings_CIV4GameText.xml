@@ -601,6 +601,10 @@
 		<Polish>Mit Tygrysa</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TIGER_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Tiger</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAWKING</Tag>
 		<English>Hawking Hut</English>
 		<French>

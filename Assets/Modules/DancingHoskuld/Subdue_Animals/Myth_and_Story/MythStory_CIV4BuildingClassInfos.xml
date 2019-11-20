@@ -301,6 +301,14 @@
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_TIGER_MYTH</DefaultBuilding>
 		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_TIGER_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_TIGER_MYTH_EFFECT</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_TIGER_MYTH_EFFECT</DefaultBuilding>
+		</BuildingClassInfo>
 		<!--BuildingClassInfo>
 			<Type>BUILDINGCLASS_TIGER_STORY</Type>
 			<Description>TXT_KEY_BUILDING_TIGER_STORY</Description>
