@@ -7,125 +7,133 @@
 
 namespace logging {
 	template <>
-	static picojson::value make_json_value(const CvWString& value)
+	static picojson::value make_json_value(CvWString value)
 	{
 		return picojson::value(CvString(value));
 	}
 
-	template < class Ty_ >
-	static picojson::object info_base(Ty_ id, const CvInfoBase& info)
+	template < class Fn_, class Ty_ >
+	static picojson::object info_base(Ty_ id, Fn_ infoFn)
 	{
 		picojson::object obj;
 		obj["id"] = make_json_value(static_cast<int>(id));
-		obj["desc"] = make_json_value(CvWString(info.getDescription()));
+		if (id != -1)
+		{
+			const CvInfoBase& info = (GC.*infoFn)(id);
+			obj["desc"] = make_json_value(CvWString(info.getDescription()));
+		}
 		return obj;
 	}
 	template <>
 	static picojson::value make_json_value(UnitTypes value)
 	{
-		return picojson::value(info_base(value, GC.getUnitInfo(value)));
+		return picojson::value(info_base(value, &cvInternalGlobals::getUnitInfo));
 	}
 	template <>
 	static picojson::value make_json_value(FeatureTypes value)
 	{
-		return picojson::value(info_base(value, GC.getFeatureInfo(value)));
+		return picojson::value(info_base(value, &cvInternalGlobals::getFeatureInfo));
 	}
 	template <>
 	static picojson::value make_json_value(BuildingTypes value)
 	{
-		return picojson::value(info_base(value, GC.getBuildingInfo(value)));
+		return picojson::value(info_base(value, &cvInternalGlobals::getBuildingInfo));
 	}
 	template <>
 	static picojson::value make_json_value(ProjectTypes value)
 	{
-		return picojson::value(info_base(value, GC.getProjectInfo(value)));
+		return picojson::value(info_base(value, &cvInternalGlobals::getProjectInfo));
 	}
 	template <>
 	static picojson::value make_json_value(ProcessTypes value)
 	{
-		return picojson::value(info_base(value, GC.getProcessInfo(value)));
+		return picojson::value(info_base(value, &cvInternalGlobals::getProcessInfo));
 	}
 	template <>
 	static picojson::value make_json_value(HurryTypes value)
 	{
-		return picojson::value(info_base(value, GC.getHurryInfo(value)));
+		return picojson::value(info_base(value, &cvInternalGlobals::getHurryInfo));
 	}
 	template <>
 	static picojson::value make_json_value(MissionTypes value)
 	{
-		return picojson::value(info_base(value, GC.getMissionInfo(value)));
+		return picojson::value(info_base(value, &cvInternalGlobals::getMissionInfo));
 	}
 	template <>
 	static picojson::value make_json_value(PromotionTypes value)
 	{
-		return picojson::value(info_base(value, GC.getPromotionInfo(value)));
+		return picojson::value(info_base(value, &cvInternalGlobals::getPromotionInfo));
 	}
 
 	template <>
 	static picojson::value make_json_value(ImprovementTypes value)
 	{
-		return picojson::value(info_base(value, GC.getImprovementInfo(value)));
+		return picojson::value(info_base(value, &cvInternalGlobals::getImprovementInfo));
 	}
 	template <>
 	static picojson::value make_json_value(RouteTypes value)
 	{
-		return picojson::value(info_base(value, GC.getRouteInfo(value)));
+		return picojson::value(info_base(value, &cvInternalGlobals::getRouteInfo));
 	}
 	template <>
 	static picojson::value make_json_value(ReligionTypes value)
 	{
-		return picojson::value(info_base(value, GC.getReligionInfo(value)));
+		return picojson::value(info_base(value, &cvInternalGlobals::getReligionInfo));
 	}
 	template <>
 	static picojson::value make_json_value(BuildTypes value)
 	{
-		return picojson::value(info_base(value, GC.getBuildInfo(value)));
+		return picojson::value(info_base(value, &cvInternalGlobals::getBuildInfo));
 	}
 	template <>
 	static picojson::value make_json_value(GoodyTypes value)
 	{
-		return picojson::value(info_base(value, GC.getGoodyInfo(value)));
+		return picojson::value(info_base(value, &cvInternalGlobals::getGoodyInfo));
 	}
 	template <>
 	static picojson::value make_json_value(CivicTypes value)
 	{
-		return picojson::value(info_base(value, GC.getCivicInfo(value)));
+		return picojson::value(info_base(value, &cvInternalGlobals::getCivicInfo));
 	}
 	template <>
 	static picojson::value make_json_value(TechTypes value)
 	{
-		return picojson::value(info_base(value, GC.getTechInfo(value)));
+		return picojson::value(info_base(value, &cvInternalGlobals::getTechInfo));
 	}
 	template <>
 	static picojson::value make_json_value(CorporationTypes value)
 	{
-		return picojson::value(info_base(value, GC.getCorporationInfo(value)));
+		return picojson::value(info_base(value, &cvInternalGlobals::getCorporationInfo));
 	}
 	template <>
 	static picojson::value make_json_value(VictoryTypes value)
 	{
-		return picojson::value(info_base(value, GC.getVictoryInfo(value)));
+		return picojson::value(info_base(value, &cvInternalGlobals::getVictoryInfo));
 	}
 
 	template <>
 	static picojson::value make_json_value(PlayerTypes value)
 	{
-		const CvPlayerAI& player = CvPlayerAI::getPlayer(value);
-
 		picojson::object obj;
 		obj["id"] = make_json_value((int)value);
-		obj["name"] = make_json_value(CvString(player.getName()));
+		if(value != NO_PLAYER)
+		{
+			const CvPlayerAI& player = CvPlayerAI::getPlayer(value);
+			obj["name"] = make_json_value(CvString(player.getName()));
+		}
 		return picojson::value(obj);
 	}
 
 	template <>
 	static picojson::value make_json_value(TeamTypes value)
 	{
-		const CvTeamAI& team = CvTeamAI::getTeam(value);
-
 		picojson::object obj;
 		obj["id"] = make_json_value((int)value);
-		obj["name"] = make_json_value(CvString(team.getName()));
+		if(value != NO_TEAM)
+		{
+			const CvTeamAI& team = CvTeamAI::getTeam(value);
+			obj["name"] = make_json_value(CvString(team.getName()));
+		}
 		return picojson::value(obj);
 	}
 
@@ -133,9 +141,16 @@ namespace logging {
 	static picojson::value make_json_value(CvUnit* value)
 	{
 		picojson::object obj;
-		obj["id"] = make_json_value(value->getID());
-		obj["name"] = make_json_value(value->getName());
-		obj["owner"] = make_json_value(value->getOwner());
+		if(value != NULL)
+		{
+			obj["id"] = make_json_value(value->getID());
+			obj["name"] = make_json_value(value->getName());
+			obj["owner"] = make_json_value(value->getOwner());
+		}
+		else
+		{
+			obj["id"] = make_json_value(-1);
+		}
 		return picojson::value(obj);
 	}
 
@@ -143,9 +158,16 @@ namespace logging {
 	static picojson::value make_json_value(CvCity* value)
 	{
 		picojson::object obj;
-		obj["id"] = make_json_value(value->getID());
-		obj["name"] = make_json_value(value->getName());
-		obj["owner"] = make_json_value(value->getOwner());
+		if(value != NULL)
+		{
+			obj["id"] = make_json_value(value->getID());
+			obj["name"] = make_json_value(value->getName());
+			obj["owner"] = make_json_value(value->getOwner());
+		}
+		else
+		{
+			obj["id"] = make_json_value(-1);
+		}
 		return picojson::value(obj);
 	}
 
@@ -153,9 +175,16 @@ namespace logging {
 	static picojson::value make_json_value(CvPlot* value)
 	{
 		picojson::object obj;
-		obj["x"] = make_json_value(value->getX());
-		obj["y"] = make_json_value(value->getY());
-		obj["owner"] = make_json_value(value->getOwner());
+		if (value != NULL)
+		{
+			obj["x"] = make_json_value(value->getX());
+			obj["y"] = make_json_value(value->getY());
+			obj["owner"] = make_json_value(value->getOwner());
+		}
+		else
+		{
+			obj["id"] = make_json_value(-1);
+		}
 		return picojson::value(obj);
 	}
 };
