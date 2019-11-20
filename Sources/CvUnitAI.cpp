@@ -4448,6 +4448,8 @@ void CvUnitAI::AI_attackCityMove()
 		}
 	}
 
+	// Disabling city attack specialists from doing general attacks and pillaging [11/19/2019 billw]
+#if 0
 	//	If we're still in our own territory attack infiltrators
 	if (plot()->getOwnerINLINE() == getOwnerINLINE() && AI_anyAttack(2, 50) )
 	{
@@ -4470,6 +4472,7 @@ void CvUnitAI::AI_attackCityMove()
 			return;
 		}
 	}
+#endif
 
 	if (plot()->getOwnerINLINE() == getOwnerINLINE())
 	{
