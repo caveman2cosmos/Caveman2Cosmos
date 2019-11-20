@@ -211,6 +211,9 @@ public:
 	int getGameTurnYear();																				// Exposed to Python
 	CvDate getCurrentDate();
 
+	// A unique ID for this game that is persistent across sessions
+	const CvString getGameId() const { return m_gameId; }
+
 	int getElapsedGameTurns() const;																		// Exposed to Python
 	void incrementElapsedGameTurns();
 
@@ -797,6 +800,7 @@ protected:
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
+	CvString m_gameId;
 	int m_iElapsedGameTurns;
 	int m_iStartTurn;
 	int m_iStartYear;
