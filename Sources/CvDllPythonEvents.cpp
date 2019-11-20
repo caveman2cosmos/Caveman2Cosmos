@@ -193,6 +193,15 @@ struct EventArgs
 {
 	Cy::Args pyArgs;
 	logging::JsonValues jsonArgs;
+	bool toJson;
+
+	EventArgs() : toJson(true) {}
+
+	EventArgs& no_json()
+	{
+		toJson = false;
+		return *this;
+	}
 
 	template < class Ty_ >
 	EventArgs& arg(const std::string& name, const Ty_& value)
@@ -236,9 +245,32 @@ bool preEvent()
 	return gDLL->getPythonIFace()->isInitialized();
 }
 
+CvString create_session_id()
+{
+	time_t rawtime;
+	struct tm* timeinfo;
+	char buffer[80];
+
+	time (&rawtime);
+	timeinfo = localtime(&rawtime);
+
+	strftime(buffer, sizeof(buffer), "%d-%m-%Y %H:%M:%S", timeinfo);
+	return CvString(buffer);
+}
+
+static const CvString gSessionID = create_session_id();
+
 bool postEvent(EventArgs eventData, const char* eventName)
 {
-	logging::log_json_event("pyevent", eventData.jsonArgs);
+	if (eventData.toJson)
+	{
+		eventData.jsonArgs << logging::JsonValue("game_name", GC.getInitCore().getGameName());
+		eventData.jsonArgs << logging::JsonValue("game_id", GC.getGameINLINE().getGameId());
+		eventData.jsonArgs << logging::JsonValue("session_id", gSessionID);
+
+		logging::log_json_event("pyevent", eventData.jsonArgs);
+	}
+
 	eventData.pyArgs << GC.getGameINLINE().isDebugMode();
 	eventData.pyArgs << false;
 	eventData.pyArgs << gDLL->altKey();
@@ -295,6 +327,7 @@ bool CvDllPythonEvents::reportKbdEvent(int evt, int key, int iCursorX, int iCurs
 		CvPlot* pPlot = gDLL->getEngineIFace()->pickPlot(iCursorX, iCursorY, pt3Location);
 		EventArgs eventData;
 		eventData
+			.no_json()
 			.arg("event", "kbdEvent")
 			.arg("evt", evt)
 			.arg("key", key)
@@ -318,7 +351,9 @@ bool CvDllPythonEvents::reportMouseEvent(int evt, int iCursorX, int iCursorY, bo
 		std::vector<int> screens;
 		gDLL->getInterfaceIFace()->getInterfaceScreenIdsForInput(screens);
 		EventArgs eventData;
-		eventData .arg("event", "mouseEvent")
+		eventData
+			.no_json()
+			.arg("event", "mouseEvent")
 			.arg("evt", evt)
 			.arg("iCursorX", iCursorX) .arg("iCursorY", iCursorY)
 			.arg("plotx", (pPlot ? pPlot->getX() : -1))
@@ -336,6 +371,7 @@ void CvDllPythonEvents::reportModNetMessage(int iData1, int iData2, int iData3, 
 	{
 		EventArgs eventData;
 		eventData
+			.no_json()
 			.arg("event", "ModNetMessage")
 			.arg("iData1", iData1)
 			.arg("iData2", iData2)
@@ -365,6 +401,7 @@ void CvDllPythonEvents::reportUpdate(float fDeltaTime)
 		{
 			EventArgs eventData;
 			eventData
+				.no_json()
 				.arg("event", "Update")
 				.arg("fDeltaTime", fDeltaTime);
 			postEvent(eventData, "Update");
@@ -627,6 +664,7 @@ void CvDllPythonEvents::reportPlotRevealed(CvPlot *pPlot, TeamTypes eTeam)
 	{
 		EventArgs eventData;
 		eventData
+			.no_json()
 			.arg("event", "plotRevealed")
 			.arg("pPlot", pPlot)
 			.arg("eTeam", eTeam);
@@ -781,6 +819,7 @@ void CvDllPythonEvents::reportCityProduction( CvCity *pCity, PlayerTypes ePlayer
 	{
 		EventArgs eventData;
 		eventData
+			.no_json()
 			.arg("event", "cityDoTurn")
 			.arg("pCity", pCity)
 			.arg("ePlayer", ePlayer);
@@ -794,6 +833,7 @@ void CvDllPythonEvents::reportCityBuildingUnit( CvCity *pCity, UnitTypes eUnitTy
 	{
 		EventArgs eventData;
 		eventData
+			.no_json()
 			.arg("event", "cityBuildingUnit")
 			.arg("pCity", pCity)
 			.arg("eUnitType", eUnitType);
@@ -807,6 +847,7 @@ void CvDllPythonEvents::reportCityBuildingBuilding( CvCity *pCity, BuildingTypes
 	{
 		EventArgs eventData;
 		eventData
+			.no_json()
 			.arg("event", "cityBuildingBuilding")
 			.arg("pCity", pCity)
 			.arg("eBuildingType", eBuildingType);
@@ -901,6 +942,7 @@ void CvDllPythonEvents::reportUnitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOl
 	{
 		EventArgs eventData;
 		eventData
+			.no_json()
 			.arg("event", "unitMove")
 			.arg("pPlot", pPlot)
 			.arg("pUnit", pUnit)
@@ -1422,6 +1464,7 @@ void CvDllPythonEvents::reportGenericEvent(const char* szEventName, void *pyArgs
 	{
 		EventArgs eventData;
 		eventData
+			.no_json()
 			.arg("szEventName", szEventName)
 			// generic args tuple
 			.argPy(pyArgs);
