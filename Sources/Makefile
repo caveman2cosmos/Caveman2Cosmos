@@ -56,7 +56,7 @@ FD="..\Build\deps\fastdep\fastdep.exe"
 ## However you will only be able to tell a difference if you do something with asserts other than FAssert() or FAssertMsg()
 
 Debug_DEFINES=/DWIN32 /D_WINDOWS /D_USRDLL /D_DEBUG /DBUILD_TARGET=$(TARGET)
-Release_DEFINES=/DWIN32 /D_WINDOWS /D_USRDLL /DNDEBUG /DFINAL_RELEASE /DBUILD_TARGET=$(TARGET)
+Release_DEFINES=/DWIN32 /D_WINDOWS /D_USRDLL /DNDEBUG /DBUILD_TARGET=$(TARGET)
 
 #### You shouldn't need to modify anything beyond this point ####
 #################################################################
@@ -202,7 +202,7 @@ CFLAGS  = $(Release_CFLAGS)
 LDFLAGS = $(Release_LDFLAGS)
 !ENDIF
 !IF "$(TARGET)" == "FinalRelease"
-CFLAGS  = $(FinalRelease_CFLAGS)
+CFLAGS  = $(FinalRelease_CFLAGS) /DFINAL_RELEASE
 LDFLAGS = $(FinalRelease_LDFLAGS)
 !ENDIF
 !IF "$(TARGET)" == "Assert"

@@ -831,6 +831,20 @@ void CvGame::uninit()
 }
 
 
+CvString create_game_id()
+{
+	time_t rawtime;
+	struct tm* timeinfo;
+	char buffer[80];
+
+	time (&rawtime);
+	timeinfo = localtime(&rawtime);
+
+	strftime(buffer, sizeof(buffer), "%d-%m-%Y %H:%M:%S", timeinfo);
+	return CvString(buffer);
+}
+
+
 // FUNCTION: reset()
 // Initializes data members that are serialized.
 void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
@@ -843,6 +857,7 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	// Uninit class
 	uninit();
 
+	m_gameId = create_game_id();
 	m_iElapsedGameTurns = 0;
 	m_iStartTurn = 0;
 	m_iStartYear = 0;
@@ -10524,6 +10539,8 @@ void CvGame::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
+	WRAPPER_READ_STRING(wrapper, "CvGame", m_gameId);	// flags for expansion
+	
 	uint uiFlag=0;
 	WRAPPER_READ(wrapper,"CvGame",&uiFlag);	// flags for expansion
 
@@ -10909,6 +10926,8 @@ void CvGame::write(FDataStreamBase* pStream)
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
+
+	WRAPPER_WRITE_STRING(wrapper, "CvGame", m_gameId);	// flags for expansion
 
 	WRAPPER_WRITE(wrapper, "CvGame", uiFlag);		// flag for expansion
 

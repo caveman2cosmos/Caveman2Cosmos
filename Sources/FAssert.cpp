@@ -1,12 +1,10 @@
-#include "CvGameCoreDll.h"
+#include "CvGameCoreDLL.h"
 
 #if (defined(FASSERT_ENABLE) || !defined(_DEBUG)) && defined(WIN32)
 
 #include "FDialogTemplate.h"
-#include "CvPython.h"
 #include "StackWalker.h"
 #include <sstream>
-#include "picojson.h"
 
 // Some Resource IDs for our dialog template
 #define IDC_IGNORE_ALWAYS               1001

@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef CvGameCoreDLL_h__
+#define CvGameCoreDLL_h__
+
 //
 // includes (pch) for gamecore dll files
 // Author - Mustafa Thamer
@@ -158,6 +161,7 @@ void IFPSetCount(ProfileSample* sample, int count);
   #include "Python.h"
 #endif
 
+
 //
 // Boost
 //
@@ -206,10 +210,18 @@ namespace python = boost::python;
 #include <xercesc/framework/Wrapper4InputSource.hpp>
 #include <xercesc/validators/common/Grammar.hpp>
 
+
+//
+// Json
+//
+#include "picojson.h"
+
+
 //
 // Our code
 //
 #include "copy_iterator.h"
+#include "logging.h"
 
 #include "CvAllocator.h"
 
@@ -279,3 +291,5 @@ namespace python = boost::python;
 #undef OutputDebugString
 #define OutputDebugString(x)
 #endif //FINAL_RELEASE
+
+#endif // CvGameCoreDLL_h__
