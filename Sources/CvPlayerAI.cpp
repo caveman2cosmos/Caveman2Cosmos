@@ -724,7 +724,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 					bUpgraded = false;
 				}
 			}
-			FAssertMsg(i < getNumUnits() * 2, "Unit auto upgrade appears to have hit an infinite loop");
+			FAssertMsg(getNumUnits() == 0 || i < getNumUnits() * 2, "Unit auto upgrade appears to have hit an infinite loop");
 			
 		}
 		else if (isModderOption(MODDEROPTION_UPGRADE_MOST_EXPERIENCED))
@@ -767,7 +767,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 					bUpgraded = false;
 				}
 			}
-			FAssertMsg(i < getNumUnits() * 2, "Unit auto upgrade appears to have hit an infinite loop");
+			FAssertMsg(getNumUnits() == 0 || i < getNumUnits() * 2, "Unit auto upgrade appears to have hit an infinite loop");
 		}
 		else
 		{
