@@ -33,22 +33,32 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_APPEARANCE_AND_TRADE</Tag>
-		<English>Revealed and Enabled</English>
+		<English>Reveal/Enable</English>
 		<German>enthüllt/verfügbar</German>
 		<Spanish>Revelado y activado</Spanish>
 		<Polish>Odkryte i Włączone</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_APPEARANCE</Tag>
-		<English>Reveals</English>
+		<English>Reveal</English>
 		<French>Révèle</French>
 		<German>enthüllt</German>
 		<Italian>Rivela</Italian>
 		<Spanish>Revela</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_BONUS_LOCALLY</Tag>
+		<English>Locally</English>
+		<German>örtlich</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_BONUS_NATIONWIDE</Tag>
+		<English>Nationwide</English>
+		<German>landesweit</German>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_TRADE</Tag>
-		<English>Enables</English>
+		<English>Enable</English>
 		<French>Active</French>
 		<German>verfügbar</German>
 		<Italian>Abilita</Italian>
@@ -56,7 +66,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_OBSOLETE</Tag>
-		<English>Obsoleted</English>
+		<English>Obsolete</English>
 		<German>veraltet</German>
 		<Polish>Przestarzałe</Polish>
 	</TEXT>
@@ -80,6 +90,11 @@
 		<German>mögliche Gebäude</German>
 		<Spanish>Edificios que lo requieren en el radio</Spanish>
 		<Polish>Okoliczne budynki</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_BUILD</Tag>
+		<English>Build:</English>
+		<German>gebaut durch</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BUILDING_BONUS_PROD1</Tag>
@@ -921,6 +936,11 @@
 		<German>Strategie</German>
 		<Spanish>Estrategia</Spanish>
 		<Polish>Strategia</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_SYNERGY</Tag>
+		<English>Synergy</English>
+		<German>beeinflusst von</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_TECH_CHANGES</Tag>

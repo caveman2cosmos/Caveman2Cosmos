@@ -2303,12 +2303,18 @@
 		<Tag>TXT_KEY_BONUS_FLINT</Tag>
 		<English>Flint</English>
 		<French>Silex</French>
+		<German>
+			<Text>Feuerstein:Feuersteins:Feuerstein:Feuerstein</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
 		<Italian>Selce</Italian>
 		<Polish>Krzemień</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FLINT_PEDIA</Tag>
 		<English>Flint is a hard, sedimentary cryptocrystalline form of the mineral quartz, categorized as a variety of chert. It occurs chiefly as nodules and masses in sedimentary rocks, such as chalks and limestones.</English>
+		<German>[COLOR_HIGHLIGHT_TEXT]Feuerstein[COLOR_REVERT] (auch als Flint oder Silex bekannt) ist ein dichtes, mikrokristallines Gestein, das nahezu ausschließlich aus Siliziumdioxid besteht. Es tritt sehr häufig als Knollen oder in mehr oder minder ausgedehnten Platten auf.[NEWLINE]Wie der Name schon vermuten lässt, war Feuerstein schon für die vorgeschichtlichen Menschen ein unerlässliches Hilfsmittel zum Feuermachen, aber er ließ sich auch gut zu anderen Werkzeugen weiterverarbeiten. So genannte Hühnergötter mit Löchern in der Mitte fanden als Schmucksteine Verwendung. Später nutzte man ihn als Baumaterial und als Zündhilfe in Steinschlosswaffen. Noch heute wird Feuerstein in gemahlener Form dem Asphalt beigemengt.</German>
 		<Italian>La selce è una forma sedimentaria criptocristallina del quarzo. Si trova principalmente in noduli e masse all'interno delle rocce sedimentarie, come gesso e calcare.</Italian>
 		<Polish>Krzemień - skała osadowa, skrytokrystaliczna, krzemionkowa (biochemiczna lub chemiczna), występująca w formie kulistych, bulwiastych, bochenkowatych lub soczewkowatych konkrecji w obrębie skał niekrzemionkowych takich jak wapienie, margle, dolomity. Konkrecje krzemienne mają ostre granice ze skałą otaczającą, co odróżnia je od czertu. Zwykle jest pokryty jasną korą krzemionkową, bardziej miękką od samego krzemienia.</Polish>
 	</TEXT>
@@ -2663,12 +2669,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GRASS</Tag>
 		<English>Grass</English>
+		<German>
+			<Text>Gras:Grases:Gras:Gras</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
 		<French>Herbes hautes</French>
 		<Polish>Trawa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GRASS_PEDIA</Tag>
 		<English>Plants of this type have always been important to humans. They have been grown as food for domesticated animals for up to 6,000 years.</English>
+		<German>[COLOR_HIGHLIGHT_TEXT]Gras[COLOR_REVERT] bezeichnet die geschlossene Pflanzendecke in Form von Wiese oder Rasen, die die Hauptnahrungsquelle für viele Tiere (u.a. alle Wiederkäuer) darstellt. Der Mensch nutzt Gras seit Urzeiten für viele unterschiedliche Zwecke, so z.B. als Dachabdeckung oder für die Papierherstellung, hauptsächlich jedoch als Futtermittel für die Viehzucht.</German>
 		<Polish>Instalacje tego typu są zawsze ważne dla ludzi. Zostały one hodowane jako pokarm dla zwierząt domowych na okres do 6000 roku.</Polish>
 	</TEXT>
 	<TEXT>
@@ -7575,12 +7587,18 @@ Türkis zählt zu den ältesten Schmucksteinen und hat mit seinen zarten Pastell
 		<Tag>TXT_KEY_BONUS_WOOD</Tag>
 		<English>Wood</English>
 		<French>Bois</French>
+		<German>
+			<Text>Holz:Holzes:Holz:Holz</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0</Plural>
+		</German>
 		<Italian>Legno</Italian>
 		<Polish>Drewno</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WOOD_PEDIA</Tag>
 		<English>Wood is a hard, fibrous tissue found in many plants. It has been used for centuries for both fuel and as a construction material for several types of living areas such as houses.</English>
+		<German>Holz ist das harte Material, aus dem Stamm, Äste und Zweige von Bäumen und Sträuchern bestehen. Die verschiedenen Holzarten unterscheiden sich in ihrem anatomischen Aufbau und haben neben Farbe, Dichte und Festigkeit auch noch andere spezifische Eigenschaften. Sehr seltene und wertvolle Hölzer werden als Edelhölzer bezeichnet.[NEWLINE]Gehölze zählen zu den ältesten genutzten Pflanzen. Holz ist ein vielseitiger, insbesondere aber nachwachsender Rohstoff und deshalb auch heute noch eines der wichtigsten Pflanzenprodukte. Es muss aber mit Bedacht gewonnen werden, denn großflächige Abholzung ohne entsprechende Aufforstung führt zum Verlust der Artenvielfalt, zu CO2-Anstieg und Desertifikation (Wüstenbildung), je nach Landschaft auch zu häufigeren Überschwemmungen und Erdrutschen.</German>
 		<Italian>Il legno è un tessuto duro e fibroso presente in molte piante; è stato usato per secoli sia come carburante sia come materiale da costruzione, specialmente nelle case.</Italian>
 		<Polish>Drewno - surowiec drzewny otrzymywany ze ściętych drzew i formowany przez obróbkę w różnego rodzaju sortymenty. Zajmuje przestrzeń pomiędzy rdzeniem a warstwą łyka i kory. Pod względem technicznym drewno jest naturalnym materiałem kompozytowym o osnowie polimerowej wzmacniany ciągłymi włóknami polimerowymi, którymi są podłużne komórki zorientowane jednoosiowo.</Polish>
 	</TEXT>

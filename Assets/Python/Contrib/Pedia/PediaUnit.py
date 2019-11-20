@@ -401,9 +401,9 @@ class PediaUnit:
 		if CvTheUnitInfo.isIgnoreBuildingDefense():
 			szSpecial += TRNSLTR.getText("TXT_KEY_PEDIA_UNIT_IGNORES_BUILDING_DEFENSE", ())
 		if CvTheUnitInfo.getConscriptionValue() > 0:
-			szSpecial += TRNSLTR.getText("TXT_KEY_PEDIA_UNIT_DRAFTABLE", ())
+			szSpecial += TRNSLTR.getText("TXT_KEY_PEDIA_UNIT_DRAFTABLE", ()) + "\n"
 		if CvTheUnitInfo.getUnitCaptureClassType() > 0:
-			szSpecial += TRNSLTR.getText("TXT_KEY_PEDIA_UNIT_CAN_BE_CAPTURED", ())
+			szSpecial += TRNSLTR.getText("TXT_KEY_PEDIA_UNIT_CAN_BE_CAPTURED", ()) + "\n"
 		szSpecial += CyGameTextMgr().getUnitHelp(iTheUnit, True, False, False, None)[1:]
 		# History
 		szText = ""
