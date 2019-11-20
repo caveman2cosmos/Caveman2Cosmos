@@ -223,120 +223,60 @@
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_BEARS</BuildingType>
 			</Buildings>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_BEARRIDER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_POLARBEAR</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_BEARS</BuildingType>
 			</Buildings>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_BEARRIDER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_CAVEBEAR</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_BEARS</BuildingType>
 			</Buildings>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_BEARRIDER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_PANDA_BEAR</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_BEARS</BuildingType>
 			</Buildings>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_BEARRIDER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_ASIANBEAR</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_BEARS</BuildingType>
 			</Buildings>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_BEARRIDER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_BLACKBEAR</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_BEARS</BuildingType>
 			</Buildings>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_BEARRIDER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_SLOTHBEAR</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_BEARS</BuildingType>
 			</Buildings>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_BEARRIDER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_SPECTACLEDBEAR</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_BEARS</BuildingType>
 			</Buildings>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_BEARRIDER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_SUNBEAR</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_BEARS</BuildingType>
 			</Buildings>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_BEARRIDER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_GRIZZLY</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_BEARS</BuildingType>
 			</Buildings>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_BEARRIDER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_GREAT_HUNTER</Class>

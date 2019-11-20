@@ -428,12 +428,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_DEER</BuildingType>
 			</Buildings>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_DEERRIDER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_SUBDUED_MOOSE</Class>
@@ -441,12 +435,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_DEER</BuildingType>
 			</Buildings>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_DEERRIDER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_SUBDUED_CARIBOU</Class>
@@ -454,12 +442,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_DEER</BuildingType>
 			</Buildings>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_DEERRIDER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 		</UnitInfo>
 	</UnitInfos>
 </Civ4UnitInfos>

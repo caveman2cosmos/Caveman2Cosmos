@@ -9,16 +9,6 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM_ZEBRA</BuildingType>
 				<BuildingType>BUILDING_ZEBRA_HERD</BuildingType>
 			</Buildings>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_ZEBRA_CHARIOT</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_ZEBRA_ARCHER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_ZEBRA_ARCHER</Class>
