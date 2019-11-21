@@ -120,7 +120,7 @@
     <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" rebuild $(Configuration)</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" clean $(Configuration)</NMakeCleanCommandLine>
     <IncludePath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
-    <NMakePreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;NDEBUG;FINAL_RELEASE;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;QC_MASTERY_VICTORY;LOG_AI;_MOD_GWARM;_MOD_SHAM_SPOILER;C2C_BUILD;MULTI_FEATURE_MOD</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;NDEBUG;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;QC_MASTERY_VICTORY;LOG_AI;_MOD_GWARM;_MOD_SHAM_SPOILER;C2C_BUILD;MULTI_FEATURE_MOD</NMakePreprocessorDefinitions>
     <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
     <AdditionalOptions>/std:c++14 /DBOOST_FUNCTION_PARMS=0 /DBOOST_FUNCTION_PARM=0</AdditionalOptions>
   </PropertyGroup>
@@ -154,6 +154,7 @@
     <ClCompile Include="CvPlotPaging.cpp" />
     <ClCompile Include="CvPython.cpp" />
     <ClCompile Include="CyPlayerInterface3.cpp" />
+    <ClCompile Include="logging.cpp" />
     <ClCompile Include="Win32.cpp" />
     <ClCompile Include="StackWalker.cpp" />
     <ClCompile Include="_precompile.cpp" />
@@ -345,6 +346,7 @@
     <ClInclude Include="CvDLLUtilityIFaceBase.h" />
     <ClInclude Include="CvDLLWidgetData.h" />
     <ClInclude Include="CvDLLXMLIFaceBase.h" />
+    <ClInclude Include="logging.h" />
     <ClInclude Include="NiPoint.h" />
     <ClInclude Include="StackWalker.h" />
     <ClInclude Include="Stopwatch.h" />

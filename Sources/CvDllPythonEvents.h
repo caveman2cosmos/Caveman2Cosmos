@@ -139,10 +139,6 @@ public:
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 	void preSave();
-
-private:
-	bool preEvent();
-	bool postEvent(Cy::Args eventData, const char* eventName);
 };
 
 #endif

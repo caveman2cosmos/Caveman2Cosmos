@@ -27,7 +27,7 @@
 	<!-- Start paging out if memory exceeds this amount (in KB) -->
 	<Define>
 		<DefineName>MAX_DESIRED_MEMORY_USED</DefineName>
-		<iDefineIntVal>2490368</iDefineIntVal>
+		<iDefineIntVal>2000000</iDefineIntVal>
 	</Define>
 
 	<!-- If specified, instead of MAX_DESIRED_MEMORY_USED, a set of test 

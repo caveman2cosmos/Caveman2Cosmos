@@ -55,7 +55,7 @@
 			</Flavors>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GIRAFFE_MYTH</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_GIRAFFE_MYTH_EFFECT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>

@@ -1373,12 +1373,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_GIRAFFE</BuildingType>
 			</Buildings>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_GIRAFFE_ARCHER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 		</UnitInfo>
 	</UnitInfos>
 </Civ4UnitInfos>

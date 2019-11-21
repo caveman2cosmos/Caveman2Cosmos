@@ -601,6 +601,10 @@
 		<Polish>Mit Tygrysa</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TIGER_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Tiger</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAWKING</Tag>
 		<English>Hawking Hut</English>
 		<French>
@@ -1685,17 +1689,6 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Polish>Sieci na kraby</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TRADITION_HUNTING</Tag>
-		<English>Tradition - Hunting</English>
-		<French>Tradition - Chasse</French>
-		<Italian>
-			<Text>Tradizioni - Caccia</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Polish>Tradycja - Polowania</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRADITION_SEA_HUNTING</Tag>

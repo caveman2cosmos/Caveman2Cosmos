@@ -72,7 +72,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_RHINO_TRAINER</PrereqBuilding>
+			<PrereqOrBuildings>
+                <BuildingType>BUILDING_RHINO_TRAINER_EFFECT</BuildingType>
+                <BuildingType>BUILDING_RHINO_TRAINER</BuildingType>
+            </PrereqOrBuildings>
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
@@ -151,7 +154,10 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_RHINO_TRAINER</PrereqBuilding>
+			<PrereqOrBuildings>
+                <BuildingType>BUILDING_RHINO_TRAINER</BuildingType>
+                <BuildingType>BUILDING_RHINO_TRAINER_EFFECT</BuildingType>
+            </PrereqOrBuildings>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<iCost>94</iCost>
 			<iMoves>1</iMoves>

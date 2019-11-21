@@ -9,12 +9,6 @@
 	<UnitInfos>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_MAMMOTH</Type>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_TRAINED_MAMMOTH</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 			<Buildings>
 				<BuildingType>BUILDING_MAMMOTH_HERD</BuildingType>
 			</Buildings>

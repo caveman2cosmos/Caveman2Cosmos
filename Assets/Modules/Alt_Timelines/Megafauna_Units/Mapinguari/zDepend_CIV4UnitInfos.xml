@@ -7,12 +7,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
 			</Buildings>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_MAPINGUARI_WOODEN</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 		</UnitInfo>
 	</UnitInfos>
 </Civ4UnitInfos>

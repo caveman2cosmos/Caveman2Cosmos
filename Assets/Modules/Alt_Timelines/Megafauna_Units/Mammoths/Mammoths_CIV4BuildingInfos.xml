@@ -76,6 +76,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
+            <Bonus>BONUS_MAMMOTH</Bonus>
 			<iCost>624</iCost>
 			<iMinLatitude>40</iMinLatitude>
 			<iHealth>-1</iHealth>
@@ -128,6 +129,10 @@
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_MAMMOTH_HERD</BuildingClassType>
+					<bPrereqBuildingClass>1</bPrereqBuildingClass>
+				</PrereqOrBuildingClass>
+				<PrereqOrBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>

@@ -24,6 +24,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<FreeBuilding>BUILDINGCLASS_BIG_CAT_TRAINER_EFFECT</FreeBuilding>
+            <Bonus>BONUS_CAT</Bonus>
 			<iCost>624</iCost>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
@@ -53,43 +54,55 @@
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LION_MYTH</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_LION_MYTH_EFFECT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SPOTTED_CAT_MYTH</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_SPOTTED_CAT_MYTH_EFFECT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_TIGER_MYTH</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_BENGALTIGER_MYTH_EFFECT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALEOLITHIC_CAT_MYTH</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_SIBERIAN_TIGER_MYTH_EFFECT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SABRETOOTH_MYTH</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_TIGER_MYTH_EFFECT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_JAGUAR_MYTH</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_PALEOLITHIC_CAT_MYTH_EFFECT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LYNX_MYTH</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_SABRETOOTH_MYTH_EFFECT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PANTHER_MYTH</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CAVE_LION_MYTH_EFFECT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SNOW_LEOPARD_MYTH</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_JAGUAR_MYTH_EFFECT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CHEETAH_MYTH</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_LYNX_MYTH_EFFECT</BuildingClassType>
+					<bPrereqBuildingClass>1</bPrereqBuildingClass>
+				</PrereqOrBuildingClass>
+				<PrereqOrBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_PANTHER_MYTH_EFFECT</BuildingClassType>
+					<bPrereqBuildingClass>1</bPrereqBuildingClass>
+				</PrereqOrBuildingClass>
+				<PrereqOrBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_SNOW_LEOPARD_MYTH_EFFECT</BuildingClassType>
+					<bPrereqBuildingClass>1</bPrereqBuildingClass>
+				</PrereqOrBuildingClass>
+				<PrereqOrBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CHEETAH_MYTH_EFFECT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>

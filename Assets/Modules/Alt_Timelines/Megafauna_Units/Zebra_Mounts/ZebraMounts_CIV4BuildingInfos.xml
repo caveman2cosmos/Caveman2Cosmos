@@ -83,6 +83,10 @@
 					<BuildingClassType>BUILDINGCLASS_ZEBRA_CAMP</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
+				<PrereqOrBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_ZEBRA_MYTH_EFFECT</BuildingClassType>
+					<bPrereqBuildingClass>1</bPrereqBuildingClass>
+				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 		</BuildingInfo>
 		<BuildingInfo>

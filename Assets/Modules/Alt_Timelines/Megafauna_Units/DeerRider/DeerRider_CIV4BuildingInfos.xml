@@ -20,6 +20,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+            <Bonus>BONUS_DEER</Bonus>
 			<iCost>624</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iMinLatitude>45</iMinLatitude>
@@ -55,7 +56,7 @@
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_DEER_MYTH</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_DEER_MYTH_EFFECT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>

@@ -142,12 +142,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_BISON</BuildingType>
 			</Buildings>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_BISON_RIDER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 		</UnitInfo>
 	</UnitInfos>
 </Civ4UnitInfos>

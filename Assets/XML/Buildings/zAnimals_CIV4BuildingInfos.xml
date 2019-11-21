@@ -21229,30 +21229,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_TRADITION_HUNTING</BuildingClass>
-			<Type>BUILDING_TRADITION_HUNTING</Type>
-			<EnabledCivilizationTypes>
-				<EnabledCivilizationType>
-					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
-				</EnabledCivilizationType>
-			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_TRADITION_HUNTING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HUNTING_INSTRUCTION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TRADITION_HUNTING_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_HUNTINGINSTRUCTION</ArtDefineTag>
-			<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
-			<ObsoleteTech>TECH_SEMI_AUTOMATIC_WEAPONS</ObsoleteTech>
-			<iCost>-1</iCost>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<FreeBuilding>BUILDINGCLASS_HUNTING_INSTRUCTION</FreeBuilding>
-		</BuildingInfo>
-		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_TRADITION_SEA_HUNTING</BuildingClass>
 			<Type>BUILDING_TRADITION_SEA_HUNTING</Type>
 			<EnabledCivilizationTypes>

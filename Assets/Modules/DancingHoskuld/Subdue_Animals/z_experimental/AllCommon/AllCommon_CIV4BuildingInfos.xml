@@ -2344,11 +2344,11 @@
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_REDFOX_MYTH</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_REDFOX_MYTH_EFFECT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_THYLACINE_MYTH</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_THYLACINE_MYTH_EFFECT</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>

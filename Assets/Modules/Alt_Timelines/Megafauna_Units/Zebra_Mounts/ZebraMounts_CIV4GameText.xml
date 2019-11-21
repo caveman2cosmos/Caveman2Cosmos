@@ -137,13 +137,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_TRAINER_EFFECT</Tag>
-		<English>Effect - heritage - Zebra</English>
+		<English>Effect - Heritage - Zebras</English>
 		<French>Effet - Patrimoine (Zèbres)</French>
 		<Polish>Efekt - Dziedzictwo - Zebra</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_TRAINER_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Allows the training of Zebra units,.</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Allows the training of Zebra units.</English>
 		<French>Permet l'entraînement d'unités avec des zèbres.</French>
 	</TEXT>
 </Civ4GameText>
