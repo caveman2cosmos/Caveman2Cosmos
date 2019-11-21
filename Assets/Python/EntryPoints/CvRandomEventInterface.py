@@ -5159,10 +5159,10 @@ def canTriggerPiratesoftheNeutralZones(argsList):
 			iNavy += CyUnit.baseCombatStr()
 		CyUnit, i = CyPlayer.nextUnit(i, False)
 
-	iPirate = GC.CvUnitInfo(GC.getInfoTypeForString("UNIT_STEALTH_DESTROYER")).getCombat()
+	iPirate = GC.getUnitInfo(GC.getInfoTypeForString("UNIT_STEALTH_DESTROYER")).getCombat()
 
 	MAP = GC.getMap()
-	iPirate = (MAP.getWorldSize() + 1 + 2*(GC.getPlayer(iPlayer).getHandicapType() + 1)) * iPirate - iPirate
+	iPirate = (MAP.getWorldSize() + 1 + 2*(CyPlayer.getHandicapType() + 1)) * iPirate - iPirate
 	if iNavy > iPirate:
 		return False
 
