@@ -28646,6 +28646,7 @@ bool CvPlayer::checkExpireEvent(EventTypes eEvent, const EventTriggeredData& kTr
 
 		if (!CvString(kEvent.getPythonExpireCheck()).empty())
 		{
+			FAssertMsg(kTriggeredData.m_ePlayer != NO_PLAYER, "Event player is expected to be valid on call to python exire check");
 			if (Cy::call<bool>(PYRandomEventModule, kEvent.getPythonExpireCheck(), Cy::Args() << eEvent << &kTriggeredData))
 			{
 				return true;
