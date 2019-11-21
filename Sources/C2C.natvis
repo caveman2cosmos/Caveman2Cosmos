@@ -147,6 +147,59 @@
     </Expand>
   </Type>
 
+  <Type Name="EventTriggeredData">
+    <DisplayString Condition="m_bExpired &amp;&amp; m_eTrigger != -1 &amp;&amp; m_ePlayer != -1">[EXPIRED {gGlobals->m_paEventTriggerInfo[m_eTrigger]->m_szType} {CvPlayerAI::m_aPlayers[m_ePlayer]} ({m_iId})]</DisplayString>
+    <DisplayString Condition="m_bExpired &amp;&amp; m_eTrigger != -1 &amp;&amp; m_ePlayer == -1">[EXPIRED {gGlobals->m_paEventTriggerInfo[m_eTrigger]->m_szType} {m_ePlayer} ({m_iId})]</DisplayString>
+    <DisplayString Condition="m_bExpired &amp;&amp; m_eTrigger == -1 &amp;&amp; m_ePlayer != -1">[EXPIRED {m_eTrigger} {CvPlayerAI::m_aPlayers[m_ePlayer]} ({m_iId})]</DisplayString>
+    <DisplayString Condition="m_bExpired">[EXPIRED {m_eTrigger} {m_ePlayer} ({m_iId})]</DisplayString>
+    <DisplayString Condition="m_eTrigger != -1 &amp;&amp; m_ePlayer != -1">[{gGlobals->m_paEventTriggerInfo[m_eTrigger]->m_szType} {CvPlayerAI::m_aPlayers[m_ePlayer]} ({m_iId})]</DisplayString>
+    <DisplayString Condition="m_eTrigger != -1 &amp;&amp; m_ePlayer == -1">[{gGlobals->m_paEventTriggerInfo[m_eTrigger]->m_szType} {m_ePlayer} ({m_iId})]</DisplayString>
+    <DisplayString Condition="m_eTrigger == -1 &amp;&amp; m_ePlayer != -1">[{m_eTrigger} {CvPlayerAI::m_aPlayers[m_ePlayer]} ({m_iId})]</DisplayString>
+    <DisplayString>[{m_eTrigger} {m_ePlayer} ({m_iId})]</DisplayString>
+    <Expand>
+      <Item Name="[name]" ExcludeView="simple" Condition="m_eTrigger != -1">gGlobals->m_paEventTriggerInfo[m_eTrigger]->m_szType</Item>
+      <Item Name="[name]" ExcludeView="simple" Condition="m_eTrigger == -1">m_eTrigger</Item>
+      <Item Name="[id]" ExcludeView="simple">m_iId</Item>
+      <Item Name="[player]" ExcludeView="simple" Condition="m_ePlayer != -1">CvPlayerAI::m_aPlayers[m_ePlayer]</Item>
+      <Item Name="[player]" ExcludeView="simple" Condition="m_ePlayer == -1">m_ePlayer</Item>
+    </Expand>
+  </Type>
+  
+  <Type Name="FFreeListTrashArray&lt;EventTriggeredData&gt;" Priority="MediumLow">
+    <DisplayString>{{ {m_iLastIndex - m_iFreeListCount + 1 - m_iCorruptedAdjustment} }}</DisplayString>
+    <Expand>
+      <!--Recreating the FFreeListTrashArray<EventTriggeredData> iteration logic-->
+      <CustomListItems MaxItemsPerView="5000" ExcludeView="Test">
+        <Variable Name="idx" InitialValue="0" />
+        <Variable Name="FLTA_INDEX_MASK" InitialValue="(1 &lt;&lt; 13) - 1"/>
+        <Variable Name="FLTA_ID_MASK" InitialValue="~((1 &lt;&lt; 13) - 1)"/>
+        <Variable Name="iIndex" InitialValue="0" />
+        <Variable Name="pData" InitialValue="(EventTriggeredData*)0" />
+        <Size>m_iLastIndex - m_iFreeListCount + 1 - m_iCorruptedAdjustment</Size>
+        <Loop>
+          <!--FFreeListTrashArray<EventTriggeredData>::nextIter(int* pIterIdx)-->
+          <Loop>
+            <Exec>pData = nullptr</Exec>
+            <If Condition="idx &lt; m_iLastIndex + 1">
+              <!--FFreeListTrashArray<EventTriggeredData>::getAt(int iID)-->
+              <Exec>iIndex = idx &amp; FLTA_INDEX_MASK</Exec>
+              <If Condition="(iIndex &lt;= m_iLastIndex) &amp;&amp; (m_pArray[iIndex].pData != nullptr)">
+                <If Condition="((idx &amp; FLTA_ID_MASK) == 0) || (m_pArray[iIndex].pData->m_iId == idx)">
+                  <Exec>pData = m_pArray[iIndex].pData</Exec>
+                  <Exec>idx++</Exec>
+                </If>
+              </If>
+              <Break Condition="pData != 0" />
+              <Exec>idx++</Exec>
+            </If>
+          </Loop>
+          <Break Condition="idx &gt; m_iLastIndex" />
+          <Item>pData</Item>
+        </Loop>
+      </CustomListItems>
+    </Expand>
+  </Type>
+  
   <Type Name="FFreeListTrashArray&lt;*&gt;" Priority="MediumLow">
     <DisplayString>{{ {m_iLastIndex - m_iFreeListCount + 1 - m_iCorruptedAdjustment} }}</DisplayString>
     <Expand>
@@ -181,4 +234,5 @@
       </CustomListItems>
     </Expand>
   </Type>
+ 
 </AutoVisualizer>

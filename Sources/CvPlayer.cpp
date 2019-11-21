@@ -24989,6 +24989,31 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		ReadStreamableFFreeListTrashArray(m_selectionGroups, pStream);
 		ReadStreamableFFreeListTrashArray(m_eventsTriggered, pStream);
 
+		// @SAVEBREAK DELETE 21/11/2019
+		// Delete this code at the next save break.
+		// Events were broken, this cleans up broken ones
+		{
+			// Collect the ones we want to keep
+			std::vector<EventTriggeredData*> keepers;
+			for (FFreeListTrashArray<EventTriggeredData>::iterator itr = m_eventsTriggered.begin();
+				itr != m_eventsTriggered.end();
+				++itr)
+			{
+				if (itr->m_eTrigger != NO_EVENTTRIGGER)
+				{
+					keepers.push_back(&(*itr));
+				}
+			}
+			// Remove them all from the list
+			for (std::vector<EventTriggeredData*>::iterator itr = keepers.begin();
+				itr != keepers.end();
+				++itr)
+			{
+				m_eventsTriggered.remove(*itr);
+			}
+		}
+		// SAVEBREAK@
+
 		std::map<CvUnit*,bool> unitsPresent;
 
 		std::vector<CvUnit*>	plotlessUnits;
@@ -25244,8 +25269,16 @@ void CvPlayer::read(FDataStreamBase* pStream)
 					//	Old format so go for a raw read as the best we can do
 					WRAPPER_READ(wrapper, "CvPlayer", (int*)&eEvent);
 				}
+
 				kData.read(pStream);
-				if ( eEvent != NO_EVENT )
+				if (
+					// @SAVEBREAK DELETE 21/11/2019
+					// Delete this code at the next save break.
+					// Events were broken, this cleans up broken ones
+					kData.m_eTrigger != NO_EVENTTRIGGER &&
+					// SAVEBREAK@
+					eEvent != NO_EVENT 
+					)
 				{
 					m_mapEventsOccured[eEvent] = kData;
 				}
@@ -25262,7 +25295,16 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				EventTypes eEvent;
 				WRAPPER_READ(wrapper, "CvPlayer", (int*)&eEvent);
 				kData.read(pStream);
-				m_mapEventCountdown[eEvent] = kData;
+				// @SAVEBREAK REPLACE 21/11/2019
+				// Delete this code at the next save break.
+				// Events were broken, this cleans up broken ones
+				if (kData.m_eTrigger != NO_EVENTTRIGGER)
+				{
+					m_mapEventCountdown[eEvent] = kData;
+				}
+				// REPLACE WITH
+				// m_mapEventCountdown[eEvent] = kData;
+				// SAVEBREAK@
 			}
 		}
 
@@ -28646,6 +28688,7 @@ bool CvPlayer::checkExpireEvent(EventTypes eEvent, const EventTriggeredData& kTr
 
 		if (!CvString(kEvent.getPythonExpireCheck()).empty())
 		{
+			FAssertMsg(kTriggeredData.m_ePlayer != NO_PLAYER, "Event player is expected to be valid on call to python exire check");
 			if (Cy::call<bool>(PYRandomEventModule, kEvent.getPythonExpireCheck(), Cy::Args() << eEvent << &kTriggeredData))
 			{
 				return true;
