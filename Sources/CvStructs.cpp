@@ -32,8 +32,7 @@ void EventTriggeredData::read(FDataStreamBase* pStream)
 	WRAPPER_READ_OBJECT_START(wrapper);
 
 	WRAPPER_READ(wrapper, "EventTriggeredData",&m_iId);
-	WRAPPER_READ(wrapper, "EventTriggeredData",(int*)&m_eTrigger);
-	m_eTrigger = (EventTriggerTypes)wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_EVENT_TRIGGERS, m_eTrigger, true);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "EventTriggeredData", REMAPPED_CLASS_TYPE_EVENT_TRIGGERS, (int*)&m_eTrigger);
 	WRAPPER_READ(wrapper, "EventTriggeredData",&m_iTurn);
 	WRAPPER_READ(wrapper, "EventTriggeredData",(int*)&m_ePlayer);
 	WRAPPER_READ(wrapper, "EventTriggeredData",&m_iCityId);
