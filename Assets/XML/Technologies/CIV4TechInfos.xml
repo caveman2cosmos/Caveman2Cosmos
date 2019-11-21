@@ -8900,7 +8900,7 @@ Current techs which are not in this file:-
 			</PrereqBuildingClasses>
 			<Quote>TXT_KEY_TECH_WATERPROOF_CEMENT_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP/>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Concrete.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -12614,7 +12614,7 @@ Current techs which are not in this file:-
 			</PrereqBuildingClasses>
 			<Quote>TXT_KEY_TECH_LEAD_GLASS_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP/>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/GlassBlowing.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,7,7</Button>
 		</TechInfo>
 		<TechInfo>
@@ -14441,7 +14441,7 @@ Current techs which are not in this file:-
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_STATISTICS_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP/>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Buttons/Techs/statistics.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -15807,7 +15807,7 @@ Current techs which are not in this file:-
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_INCANDESCENT_LIGHTING_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP/>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Buttons/Techs/incandescent_lighting.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -16288,7 +16288,7 @@ Current techs which are not in this file:-
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_TELEPHONE_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP/>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Buttons/Techs/telephone.dds</Button>
 		</TechInfo>
         <TechInfo>
@@ -16322,7 +16322,7 @@ Current techs which are not in this file:-
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MANAGEMENT_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP/>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Buttons/Techs/management.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -16805,7 +16805,7 @@ Current techs which are not in this file:-
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_ABSTRACT_MATHEMATICS_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP/>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Buttons/Techs/abstract_mathematics.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -18721,7 +18721,7 @@ Current techs which are not in this file:-
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_COMPUTER_SCIENCE_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP/>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Buttons/Techs/computer_science.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -18966,7 +18966,7 @@ Current techs which are not in this file:-
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_POSTMODERNISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP/>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Buttons/Techs/postmodernism.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -21093,7 +21093,7 @@ Current techs which are not in this file:-
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_CHAOS_THEORY_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP/>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Buttons/Techs/chaos_theory.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -21884,6 +21884,7 @@ Current techs which are not in this file:-
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_DERIVATIVES_QUOTE</Quote>
 			<Sound>AS2D_TECH_DERIVATIVES</Sound>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/derivatives.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -22918,7 +22919,7 @@ Current techs which are not in this file:-
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_INDUSTRIAL_ECOLOGY_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP/>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Buttons/Techs/industrial_ecology.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -22996,7 +22997,7 @@ Current techs which are not in this file:-
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_AUTONOMOUS_VEHICLES_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP/>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Buttons/Techs/autonomous_vehicles.dds</Button>
 		</TechInfo>
         <TechInfo>
@@ -23034,7 +23035,7 @@ Current techs which are not in this file:-
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_COMPUTATIONAL_SOCIOLOGY_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP/>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Buttons/Techs/computational_sociology.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -32588,7 +32589,7 @@ Current techs which are not in this file:-
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_JOVIAN_TERRAFORMING_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP/>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Buttons/Techs/jovian_terraforming.dds</Button>
 		</TechInfo>
 		<TechInfo>
