@@ -4181,6 +4181,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Grassammler:Grassammlers:Grassammler:Grassammler</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
 		<Italian>Raccoglitore di erba</Italian>
 		<Polish>Zbieracz Trawy</Polish>
 	</TEXT>
@@ -4188,12 +4193,14 @@
 		<Tag>TXT_KEY_BUILDING_GRASS_GATHERER_STRATEGY</Tag>
 		<English>Build a Grass Gatherer to increase your cities production.</English>
 		<French>Construire un [COLOR_BUILDING_TEXT]Récolteur d'Herbes hautes[COLOR_REVERT] pour augmenter la production de la ville.</French>
+		<German>[COLOR_BUILDING_TEXT]Grassammler[COLOR_REVERT] steigern die Produktion früher Städte in Gelände mit hohem Gras und stellen außerdem den Rohstoff [COLOR_CYAN]Gras[COLOR_REVERT] zur Verfügung.</German>
 		<Italian>Costruisci un raccoglitore di erba per incrementare la produzione della tua città.</Italian>
 		<Polish>Zbuduj Grass Gatherer by zwiększyć produkcję w Twoich miastach.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRASS_GATHERER_PEDIA</Tag>
 		<English>Plants of this type have always been important to humans. They have been grown as food for domesticated animals for up to 6,000 years.</English>
+		<German>Grassammeln war eine recht einfache, aber trotzdem wichtige Tätigkeit für die steinzeitliche Gesellschaft. Gras war zunächst ein einfacher Baustoff und wurde später auch für die Viehzucht als Futtermittel wichtig.</German>
 		<Italian>Piante di questo tipo sono sempre state importanti per gli esseri umani; vengono coltivate come cibo per gli animali domestici da 6.000 anni.</Italian>
 		<Polish>W różnych miejscach kuli ziemskiej znajdują się rozległe tereny porośnięte głównie trawami, a pozbawione drzew i krzewów.</Polish>
 	</TEXT>
@@ -4229,6 +4236,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Treibholzsammler:Treibholzsammlers:Treibholzsammler:Treibholzsammler</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
 		<Italian>Raccoglitore di legno galleggiante</Italian>
 		<Polish>Zbieracz Dryfującego Drewna</Polish>
 	</TEXT>
@@ -4236,12 +4248,14 @@
 		<Tag>TXT_KEY_BUILDING_DRIFTWOOD_GATHERER_STRATEGY</Tag>
 		<English>Build a Driftwood Gatherer to increase your cities production.</English>
 		<French>Construire un [COLOR_BUILDING_TEXT]Récolteur de bois flotté[COLOR_REVERT] pour augmenter la production de la ville.</French>
+		<German>[COLOR_BUILDING_TEXT]Treibholzsammler[COLOR_REVERT] steigern die Produktion früher Städte in Küstennähe und stellen außerdem den Rohstoff [COLOR_CYAN]Holz[COLOR_REVERT] zur Verfügung.</German>		
 		<Italian>Costruisci un raccoglitore di legno galleggiante per incrementare la produzione della tua città.</Italian>
 		<Polish>Zbuduj Driftwood Gatherer by zwiększyć produkcję w Twoich miastach.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DRIFTWOOD_GATHERER_PEDIA</Tag>
 		<English>Driftwood is wood that has been washed onto a shore or beach of a sea, lake, or river by the action of winds, tides, waves, or man. It is a form of marine debris or tidewrack.</English>
+		<German>Unter Treibholz versteht man von der Strömung oder durch die Gezeiten ans Ufer gespültes Holz. In der Vorgeschichte handelte es sich hierbei um Bäume oder Baumteile, die durch Wind, Erdrutsche oder ähnliche Natureinflüsse ihren Weg ins Wasser gefunden haben, heutzutage können es auch Teile von Gebäuden oder Schiffen sein. Treibholz war für die frühen Menschen ein einfach zu gewinnender Rohstoff, in der Arktis blieb es noch über lange Zeit die einzige Holzquelle für Völker, die jenseits der Baumgrenze lebten.</German>
 		<Italian>Questo legno che è stato lasciato su una riva o spiaggia di un mare, lago o fiume dall'azione del vento, delle maree, delle onde o dell'uomo. Si tratta di una forma di detriti marini.</Italian>
 		<Polish>Dryfującego drewno to drewno, które zostało wyrzucone na plaże podczas sztormu bądź przypływu.</Polish>
 	</TEXT>
@@ -25111,6 +25125,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Feuersteinsammler:Feuersteinsammlers:Feuersteinsammler:Feuersteinsammler</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
 		<Italian>Cava di selce</Italian>
 		<Polish>Wyrobisko Krzemienia</Polish>
 	</TEXT>
@@ -25118,12 +25137,14 @@
 		<Tag>TXT_KEY_BUILDING_FLINT_QUARRY_STRATEGY</Tag>
 		<English>Build a Flint Quarry to increase your cities wealth and production.</English>
 		<French>Augmente la richesse et la production de votre ville.</French>
+		<German>[COLOR_BUILDING_TEXT]Feuersteinsammler[COLOR_REVERT] steigern die Produktion und den Reichtum früher Städte in felsigem Gelände und stellen außerdem den Rohstoff [COLOR_CYAN]Feuerstein[COLOR_REVERT] zur Verfügung.</German>
 		<Italian>Costruisci una cava di selce per incrementare la produzione e la ricchezza della tua città.</Italian>
 		<Polish>Zbuduj Flint Quarry by zwiększyć produkcję i bogactwo w Twoich miastach.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLINT_QUARRY_PEDIA</Tag>
 		<English>Flint was used for the manufacture of flint tools during the Stone Age as it splits into thin, sharp splinters called flakes or blades (depending on the shape) when struck by another hard object (such as a hammerstone made of another material). This process is referred to as knapping.</English>
+		<German>In der Steinzeit war Feuerstein ein immens wichtiger Rohstoff. Schon zeitig erkannte der frühe Mensch die vielseitige Verwendbarkeit dieses gut zu bearbeitenden Steins. Neben dem Feuermachen ließen sich aus Feuerstein auch allerhand Werkzeuge und Waffen herstellen: Pfeilspitzen, Beile, Kratzer, Messer, usw. Zunächst wurden einfach herumliegende Feuersteinknollen eingesammelt und für die Verarbeitung gehortet, später wurden dann Steinbrüche oder gar Bergwerke mit Stollen und Schächten angelegt, um der Erde den begehrten Rohstoff zu entreißen.</German>
 		<Italian>La selce veniva usata per produrre utensili nell'età della pietra dato che si divide in schegge sottili e taglienti chiamate fiocchi o lame (a seconda della forma) quando colpita da un altro oggetto duro (come un percussore di altro materiale). Questo processo è chiamato scheggiatura.</Italian>
 		<Polish>Krzemień używany był od prehistorii przez człowieka jako materiał do wyrobu narzędzi, broni i do krzesania ognia. Był jednym z pierwszych surowców wydobywanych na skalę przemysłową, np. w Krzemionkach koło Ostrowca Świętokrzyskiego,</Polish>
 	</TEXT>
