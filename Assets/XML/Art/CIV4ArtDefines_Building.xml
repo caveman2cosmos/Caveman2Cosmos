@@ -22677,7 +22677,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>art/Minerals/Art/nicklemine.dds</Button>
+			<Button>art/Minerals/Art/nickelmine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MAGNETITE_MINE</Type>

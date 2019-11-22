@@ -70,11 +70,6 @@ namespace {
 	{
 		return unit->AI_getUnitAIType() == UNITAI_ASSAULT_SEA && !unit->hasCargo();
 	}
-
-	bool matchUnitPtr(const CvUnit& lhs, const CvUnit* rhs)
-	{
-		return &lhs == rhs;
-	}
 }
 
 void CvSelectionGroupAI::AI_separateIf(boost::function<bool(CvUnit*)> predicateFn)
@@ -85,7 +80,7 @@ void CvSelectionGroupAI::AI_separateIf(boost::function<bool(CvUnit*)> predicateF
 	{
 		CvUnit* unit = *itr;
 		unit->joinGroup(NULL);
-		FAssertMsg(std::find_if(beginUnits(), endUnits(), boost::bind(matchUnitPtr, _1, unit)) == endUnits(), "Failed to remove unit from group");
+		FAssertMsg(std::find(beginUnits(), endUnits(), unit) == endUnits(), "Failed to remove unit from group");
 		if (unit->plot()->getTeam() == getTeam())
 		{
 			unit->getGroup()->pushMission(MISSION_SKIP);

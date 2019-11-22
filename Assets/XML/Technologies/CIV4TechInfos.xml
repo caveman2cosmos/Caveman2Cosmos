@@ -27542,7 +27542,6 @@ Current techs which are not in this file:-
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-                <PrereqTech>TECH_JUPITERE</PrereqTech>
 				<PrereqTech>TECH_SUPERFLUOUS_MANUFACTURING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_DEEP_SPACE_COLONIES_QUOTE</Quote>
