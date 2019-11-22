@@ -7,7 +7,7 @@
 
 import lxml.etree as ET
 
-path_tech_infos = '../../Assets/XML/Technologies/CIV4TechInfos.xml'
+path_tech_infos = 'CIV4TechInfos.xml'
 
 b_tech_infos_reformatted = 0
 
