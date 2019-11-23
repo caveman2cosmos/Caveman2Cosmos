@@ -9369,8 +9369,8 @@
 					<Text>TXT_KEY_EVENT_CAKE_FLOUR</Text>
 				</TriggerText>
 			</TriggerTexts>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>120</iWeight>
+			<iPercentGamesActive>0</iPercentGamesActive>
+			<iWeight>0</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
 				<BuildingClass>BUILDINGCLASS_MODERN_MILL</BuildingClass>
