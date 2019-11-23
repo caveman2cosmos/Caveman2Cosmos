@@ -12833,7 +12833,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_Woodworking</SoundID>
-			<Filename>Sounds/Tech/WOODWORKING</Filename>
+			<Filename>Sounds/Tech/01_woodworking</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -14919,7 +14919,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_SIMPLE_WOOD_WORKING</SoundID>
-			<Filename>Sounds/Tech/SimpleWoodWorking</Filename>
+			<Filename>Sounds/Tech/01_SimpleWoodWorking</Filename>
 			<LoadType>STREAMED</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -15164,7 +15164,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_TRIBALISM</SoundID>
-			<Filename>Sounds/Tech/Tribalism</Filename>
+			<Filename>Sounds/Tech/01_tribalism</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
