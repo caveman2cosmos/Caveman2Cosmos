@@ -11,7 +11,7 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<Quote>TXT_KEY_RELIGION_VOODOO_QUOTE</Quote>
 			<Sound>AS2D_TECH_VOODOO</Sound>
-			<SoundMP>AS2D_TECH_VOODOO</SoundMP>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Voodoo.dds</Button>
 			<!-- Main properties -->
 			<iCost>1334</iCost>

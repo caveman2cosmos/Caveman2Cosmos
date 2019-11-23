@@ -34,7 +34,7 @@
 			</OrPreReqs>
 			<Quote>TXT_KEY_RELIGION_CANAANISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_CANAANISM</Sound>
-			<SoundMP>AS2D_TECH_CANAANISM</SoundMP>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/Canaanism.dds</Button>
 		</TechInfo>

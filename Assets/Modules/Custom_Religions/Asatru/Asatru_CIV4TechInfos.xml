@@ -42,7 +42,7 @@
 			</Flavors>
 			<Quote>TXT_KEY_RELIGION_ASATRU_QUOTE</Quote>
 			<Sound>AS2D_TECH_ASATRU</Sound>
-			<SoundMP>AS2D_TECH_ASATRU</SoundMP>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/asatru.dds</Button>
 		</TechInfo>
 	</TechInfos>
