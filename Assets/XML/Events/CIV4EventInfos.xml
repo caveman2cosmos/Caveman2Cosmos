@@ -6260,13 +6260,6 @@
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
 		<EventInfo>
-			<Type>EVENT_CAKE_FLOUR_1</Type>
-			<Description>TXT_KEY_EVENT_CAKE_FLOUR_1</Description>
-			<iGold>42</iGold>
-			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
-		</EventInfo>
-		<EventInfo>
 			<Type>EVENT_SILKWORM_GOING_EXTINCT_1</Type>
 			<Description>TXT_KEY_EVENT_SILKWORM_GOING_EXTINCT_1</Description>
 			<iGold>-75</iGold>

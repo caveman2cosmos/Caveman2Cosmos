@@ -1089,23 +1089,6 @@
 		<Polish>Nasz brak finansowania armii i zaniedbania doprowadziły ten bunkier do ruiny.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENT_CAKE_FLOUR</Tag>
-		<English>Cake Flour</English>
-		<French>Farine à gâteau</French>
-		<Italian>Farina per torte.</Italian>
-		<Spanish>Harina para pasteles</Spanish>
-		<Polish>Mąka na ciastka</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_CAKE_FLOUR_1</Tag>
-		<English>My favorite is on page 42.</English>
-		<French>Ma préférée est page 42.</French>
-		<German>Mein Favorit steht auf Seite 42.</German>
-		<Italian>La mia preferita è a pagina 42.</Italian>
-		<Spanish>Mi preferida está en la página 42.</Spanish>
-		<Polish>Mój ulubiony jest na stronie 42.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_EVENT_CARNATION_REVOLUTION_1</Tag>
 		<English>Make an example of these hotheads who threaten the safety of the Empire!  Have them arrested for treason, and round up any of their supporters among the civilian population, too.</English>
 		<French>Faites un exemple de ces têtes brulées qui menacent la sûreté de l'Empire! Arrêtez-les pour la trahison, et nettoyez également leurs supporters parmi la population civile.</French>
@@ -7198,15 +7181,6 @@
 		<French>En raison d'investissements militaires insuffisants et de négligeance, un bunker est tombé en ruines dans l'Empire %s1_civ_adjective</French>
 		<Spanish>La deficiente financiación y el estado de abandono han causado el derrumbe de un Refugio de mando en el imperio %s1_civ_adjective.</Spanish>
 		<Polish>Z powodów zaniedbań w finansowaniu instalacji wojskowych w Imperium %s1_civ_adjective ich bunkier uległ zniszczeniu.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_CAKE_FLOUR</Tag>
-		<English>Cookbooks published in the %s1_civ_adjective Empire feature tasty cake recipes.</English>
-		<French>Les livres de recettes de cuisine %s1:3_civ_adjective sont réputés et donnent des plats fabuleux.</French>
-		<German>Neu veröffentlichte Kochbücher im %s1_civ_adjective Imperium beinhalten leckere Kuchenrezepte.</German>
-		<Italian>I libri di ricette pubblicati nell'impero %s1_civ_adjective mostrano deliziose ricette di torte.</Italian>
-		<Spanish>Los libros de cocina publicados en el imperio %s1_civ_adjective presentan deliciosas recetas de pasteles.</Spanish>
-		<Polish>Książki kucharskie opublikowane w Imperium %s1_civ_adjective zawierają przepisy na smaczne ciasteczka!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_CARELESS_APPRENTICE</Tag>
