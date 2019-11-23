@@ -141,7 +141,7 @@ public:
 
 	int /*TechTypes*/ getDiscoveryTech();
 	int getDiscoverResearch(int /*TechTypes*/ eTech);
-	bool canDiscover(CyPlot* pPlot);
+	bool canDiscover();
 	int getMaxHurryProduction(CyCity* pCity);
 	int getHurryProduction(CyPlot* pPlot);
 	bool canHurry(CyPlot* pPlot, bool bTestVisible);

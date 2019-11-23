@@ -1775,7 +1775,7 @@ void CvUnit::doTurn()
 		}
 	}
 	
-	if (getDesiredDiscoveryTech() != NO_TECH && canDiscover(NULL))
+	if (getDesiredDiscoveryTech() != NO_TECH && canDiscover())
 	{
 		if (getDesiredDiscoveryTech() == getDiscoveryTech())
 		{
@@ -12421,7 +12421,7 @@ int CvUnit::getDiscoverResearch(TechTypes eTech) const
 }
 
 
-bool CvUnit::canDiscover(const CvPlot* pPlot) const
+bool CvUnit::canDiscover() const
 {
 	TechTypes eTech;
 
@@ -12448,14 +12448,12 @@ bool CvUnit::canDiscover(const CvPlot* pPlot) const
 
 bool CvUnit::discover()
 {
-	TechTypes eDiscoveryTech;
-
-	if (!canDiscover(plot()))
+	if (!canDiscover())
 	{
 		return false;
 	}
 
-	eDiscoveryTech = getDiscoveryTech();
+	TechTypes eDiscoveryTech = getDiscoveryTech();
 	FAssertMsg(eDiscoveryTech != NO_TECH, "DiscoveryTech is not assigned a valid value");
 
 	GET_TEAM(getTeam()).changeResearchProgress(eDiscoveryTech, getDiscoverResearch(eDiscoveryTech), getOwnerINLINE());

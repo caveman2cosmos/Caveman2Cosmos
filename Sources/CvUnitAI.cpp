@@ -17445,21 +17445,17 @@ bool CvUnitAI::AI_spreadCorporationAirlift()
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_discover(bool bThisTurnOnly, bool bFirstResearchOnly)
 {
-	TechTypes eDiscoverTech;
-	bool bIsFirstTech;
-	int iPercentWasted = 0;
-
-	if (canDiscover(plot()))
+	if (canDiscover())
 	{
-		eDiscoverTech = getDiscoveryTech();
-		bIsFirstTech = (GET_PLAYER(getOwnerINLINE()).AI_isFirstTech(eDiscoverTech));
+		TechTypes eDiscoverTech = getDiscoveryTech();
+		bool bIsFirstTech = (GET_PLAYER(getOwnerINLINE()).AI_isFirstTech(eDiscoverTech));
 
         if (bFirstResearchOnly && !bIsFirstTech)
         {
             return false;
         }
 
-		iPercentWasted = (100 - ((getDiscoverResearch(eDiscoverTech) * 100) / getDiscoverResearch(NO_TECH)));
+		int iPercentWasted = (100 - ((getDiscoverResearch(eDiscoverTech) * 100) / getDiscoverResearch(NO_TECH)));
 		FAssert(((iPercentWasted >= 0) && (iPercentWasted <= 100)));
 
 

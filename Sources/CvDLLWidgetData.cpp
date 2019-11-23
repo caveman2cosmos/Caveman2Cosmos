@@ -2932,7 +2932,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 				{
 					CvUnit* pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
 
-					if (pSelectedUnit->canDiscover(pMissionPlot))
+					if (pSelectedUnit->canDiscover())
 					{
 						TechTypes eTech = pSelectedUnit->getDiscoveryTech();
 	

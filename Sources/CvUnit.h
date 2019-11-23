@@ -757,7 +757,7 @@ public:
 
 	TechTypes getDiscoveryTech() const;																														// Exposed to Python
 	int getDiscoverResearch(TechTypes eTech) const;																								// Exposed to Python
-	bool canDiscover(const CvPlot* pPlot) const;																									// Exposed to Python
+	bool canDiscover() const;																									// Exposed to Python
 	bool discover();
 
 	int getMaxHurryProduction(CvCity* pCity) const;																													// Exposed to Python

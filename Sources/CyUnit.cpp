@@ -384,9 +384,9 @@ int CyUnit::getDiscoverResearch(int /*TechTypes*/ eTech)
 	return m_pUnit ? m_pUnit->getDiscoverResearch((TechTypes) eTech) : -1;
 }
 
-bool CyUnit::canDiscover(CyPlot* pPlot)
+bool CyUnit::canDiscover()
 {
-	return m_pUnit ? m_pUnit->canDiscover(pPlot->getPlot()) : false;
+	return m_pUnit ? m_pUnit->canDiscover() : false;
 }
 
 int CyUnit::getMaxHurryProduction(CyCity* pCity)
