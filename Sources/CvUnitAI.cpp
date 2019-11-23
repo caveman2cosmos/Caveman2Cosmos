@@ -17516,17 +17516,16 @@ bool CvUnitAI::AI_leadLegend()
 {
 	PROFILE_FUNC();
 
-	FAssertMsg(!isHuman(), "isHuman did not return false as expected");
+	FAssertMsg(!isHuman(), "AI_leadLegend shouldn't be called for human players");
 	FAssert(NO_PLAYER != getOwnerINLINE());
 
 	CvPlayer& kOwner = GET_PLAYER(getOwnerINLINE());
-
 	CvUnit* pBestUnit = NULL;
+	CvPlot* pBestPlot = NULL;
 	int iBestStrength = 0;
-
-	int iLoop;
-	for (CvUnit* pLoopUnit = kOwner.firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = kOwner.nextUnit(&iLoop))
+	for (CvPlayer::unit_iterator itr = kOwner.beginUnits(); itr != kOwner.endUnits(); ++itr)
 	{
+		CvUnit* pLoopUnit = *itr;
 		if (isLegendary(pLoopUnit)
 
 			&& canLead(pLoopUnit->plot(), pLoopUnit->getID()) > 0
@@ -17551,16 +17550,18 @@ bool CvUnitAI::AI_leadLegend()
 			{
 				iBestStrength = iCombatStrength;
 				pBestUnit = pLoopUnit;
+				// generatePath called just above actually updates our own current path, so here we save the end turn plot of that path so we can use it
+				// as a move target
+				pBestPlot = getPathEndTurnPlot();
 			}
 		}
 	}
 
-	if (pBestUnit)
+	if (pBestUnit && pBestPlot)
 	{
-		CvPlot* targetPlot = getPathEndTurnPlot();
-		if (atPlot(targetPlot))
+		if(atPlot(pBestPlot))
 		{
-			if( gUnitLogLevel > 2 )
+			if (gUnitLogLevel > 2)
 			{
 				CvWString szString;
 				getUnitAIString(szString, pBestUnit->AI_getUnitAIType());
@@ -17574,7 +17575,7 @@ bool CvUnitAI::AI_leadLegend()
 		}
 		else
 		{
-			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, targetPlot->getX_INLINE(), targetPlot->getY_INLINE(), MOVE_AVOID_ENEMY_WEIGHT_3);
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), MOVE_AVOID_ENEMY_WEIGHT_3);
 		}
 	}
 
