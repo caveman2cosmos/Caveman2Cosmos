@@ -1035,27 +1035,6 @@ void CyEnumsPythonInterface()
 		.value("NO_NEW_CONCEPT", NO_NEW_CONCEPT)
 		;
 
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-// Dale - DCM: Pedia Concepts START
-	python::enum_<DCMConceptTypes>("DCMConceptTypes")
-		.value("NO_DCM_CONCEPT", NO_DCM_CONCEPT)
-		;
-// Dale - DCM: Pedia Concepts END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-
-/************************************************************************************************/
-/* Afforess                                     11/13/09                                        */
-/************************************************************************************************/
-	python::enum_<ANDConceptTypes>("ANDConceptTypes")
-		.value("NO_AND_CONCEPT", NO_AND_CONCEPT)
-		;
-/************************************************************************************************/
-/* Afforess                                END                                                  */
-/************************************************************************************************/
 	python::enum_<CalendarTypes>("CalendarTypes")
 		.value("CALENDAR_DEFAULT", CALENDAR_DEFAULT)
 		.value("CALENDAR_BI_YEARLY", CALENDAR_BI_YEARLY)
@@ -2161,22 +2140,6 @@ void CyEnumsPythonInterface()
 		.value("CIVILOPEDIA_PAGE_PROJECT", CIVILOPEDIA_PAGE_PROJECT)
 		.value("CIVILOPEDIA_PAGE_CONCEPT", CIVILOPEDIA_PAGE_CONCEPT)
 		.value("CIVILOPEDIA_PAGE_CONCEPT_NEW", CIVILOPEDIA_PAGE_CONCEPT_NEW)
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-// Dale - DCM: Pedia Concepts START
-		.value("CIVILOPEDIA_PAGE_CONCEPT_DCM", CIVILOPEDIA_PAGE_CONCEPT_DCM)
-// Dale - DCM: Pedia Concepts END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* Afforess                                     11/13/09                                        */
-/************************************************************************************************/
-		.value("CIVILOPEDIA_PAGE_CONCEPT_AND", CIVILOPEDIA_PAGE_CONCEPT_AND)
-/************************************************************************************************/
-/* Afforess                                END                                                  */
-/************************************************************************************************/
 		.value("CIVILOPEDIA_PAGE_SPECIALIST", CIVILOPEDIA_PAGE_SPECIALIST)
 		.value("CIVILOPEDIA_PAGE_TERRAIN", CIVILOPEDIA_PAGE_TERRAIN)
 		.value("CIVILOPEDIA_PAGE_FEATURE", CIVILOPEDIA_PAGE_FEATURE)

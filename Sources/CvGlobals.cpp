@@ -5211,22 +5211,6 @@ void cvInternalGlobals::deleteInfoArrays()
 
 	deleteInfoArray(m_paConceptInfo);
 	deleteInfoArray(m_paNewConceptInfo);
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-	// Dale - DCM: Pedia Concepts START
-	deleteInfoArray(m_paDCMConceptInfo);
-	// Dale - DCM: Pedia Concepts END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/*Afforess                                     11/13/09                                         */
-/************************************************************************************************/
-	deleteInfoArray(m_paANDConceptInfo);
-/************************************************************************************************/
-/* Afforess                                END                                                  */
-/************************************************************************************************/
 	deleteInfoArray(m_paCityTabInfo);
 	deleteInfoArray(m_paCalendarInfo);
 	deleteInfoArray(m_paSeasonInfo);
@@ -5773,21 +5757,6 @@ void cvInternalGlobals::setBorderFinder(FAStar* pVal) { m_borderFinder = pVal; }
 void cvInternalGlobals::setAreaFinder(FAStar* pVal) { m_areaFinder = pVal; }
 void cvInternalGlobals::setPlotGroupFinder(FAStar* pVal) { m_plotGroupFinder = pVal; }
 CvDLLUtilityIFaceBase* cvInternalGlobals::getDLLIFaceNonInl() { return g_DLL; }
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-// Dale - DCM: Pedia Concepts START
-int cvInternalGlobals::getNumDCMConceptInfos()
-{
-	return (int)m_paDCMConceptInfo.size();
-}
-
-// BUG - DLL Info - start
-bool cvInternalGlobals::isBull() const { return true; }
-int cvInternalGlobals::getBullApiVersion() const { return BUG_DLL_API_VERSION; }
-const wchar* cvInternalGlobals::getBullName() const { return BUG_DLL_NAME; }
-const wchar* cvInternalGlobals::getBullVersion() const { return BUG_DLL_VERSION; }
-// BUG - DLL Info - end
 
 // BUG - BUG Info - start
 static bool bBugInitCalled = false;
@@ -5833,15 +5802,6 @@ void cvInternalGlobals::setIsBug(bool bIsBug)
 	}
 }
 // BUG - BUG Info - end
-
-// BUFFY - DLL Info - start
-#ifdef _BUFFY
-bool cvInternalGlobals::isBuffy() const { return true; }
-int cvInternalGlobals::getBuffyApiVersion() const { return BUFFY_DLL_API_VERSION; }
-const wchar* cvInternalGlobals::getBuffyName() const { return BUFFY_DLL_NAME; }
-const wchar* cvInternalGlobals::getBuffyVersion() const { return BUFFY_DLL_VERSION; }
-#endif
-// BUFFY - DLL Info - end
 
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
@@ -5965,22 +5925,6 @@ int cvInternalGlobals::getCOMBAT_DAMAGE()
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-int cvInternalGlobals::getNumANDConceptInfos()
-{
-	return (int)m_paANDConceptInfo.size();
-}
-std::vector<CvInfoBase*>& cvInternalGlobals::getANDConceptInfos()
-{
-	return m_paANDConceptInfo;
-}
-
-CvInfoBase& cvInternalGlobals::getANDConceptInfo(ANDConceptTypes e)
-{
-	FAssert(e > -1);
-	FAssert(e < GC.getNumANDConceptInfos());
-	return *(m_paANDConceptInfo[e]);
-}
-
 int cvInternalGlobals::getPEAK_EXTRA_MOVEMENT()
 {
 	return m_iPEAK_EXTRA_MOVEMENT;
@@ -6160,18 +6104,6 @@ int cvInternalGlobals::getUSE_AI_CAN_DO_WARPLANS_CALLBACK()
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-std::vector<CvInfoBase*>& cvInternalGlobals::getDCMConceptInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paDCMConceptInfo;
-}
-
-CvInfoBase& cvInternalGlobals::getDCMConceptInfo(DCMConceptTypes e)
-{
-	FAssert(e > -1);
-	FAssert(e < GC.getNumDCMConceptInfos());
-	return *(m_paDCMConceptInfo[e]);
-}
-// Dale - DCM: Pedia Concepts END
 
 /************************************************************************************************/
 /* Mod Globals    Start                          09/13/10                           phungus420  */
@@ -6401,15 +6333,6 @@ int cvInternalGlobals::getGraphicalDetailPageInRange()
 /************************************************************************************************/
 /* Mod Globals                        END                                           phungus420  */
 /************************************************************************************************/
-// BUFFY - DLL Info - start
-#ifdef _BUFFY
-bool cvInternalGlobals::isBuffy() const { return true; }
-int cvInternalGlobals::getBuffyApiVersion() const { return BUFFY_DLL_API_VERSION; }
-const wchar* cvInternalGlobals::getBuffyName() const { return BUFFY_DLL_NAME; }
-const wchar* cvInternalGlobals::getBuffyVersion() const { return BUFFY_DLL_VERSION; }
-#endif
-// BUFFY - DLL Info - end
-
 
 /**** Dexy - Dark Ages START ****/
 const wchar* cvInternalGlobals::getRankingTextKeyWide(RankingTypes eRanking) const

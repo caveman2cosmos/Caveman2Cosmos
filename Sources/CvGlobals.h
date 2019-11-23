@@ -621,23 +621,8 @@ public:
 	CvOutcomeInfo& getOutcomeInfo(OutcomeTypes eOutcomeNum);
 
 /************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-	// Dale - DCM: Pedia Concepts START
-	int getNumDCMConceptInfos();
-	std::vector<CvInfoBase*>& getDCMConceptInfos();
-	CvInfoBase& getDCMConceptInfo(DCMConceptTypes e);
-	// Dale - DCM: Pedia Concepts END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
 /*Afforess                                     12/21/09                                         */
 /************************************************************************************************/
-	int getNumANDConceptInfos();
-	std::vector<CvInfoBase*>& getANDConceptInfos();
-	CvInfoBase& getANDConceptInfo(ANDConceptTypes e);
-	
 	int getPEAK_EXTRA_DEFENSE();
 	int getPEAK_EXTRA_MOVEMENT();
 
@@ -764,7 +749,7 @@ public:
 	std::vector<CvInfoBase*>& getUnitAIInfos();
 	CvInfoBase& getUnitAIInfo(UnitAITypes eUnitAINum);
 
-	//	Koshling - added internal registration odf supported UnitAI types, not reliant
+	//	Koshling - added internal registration of supported UnitAI types, not reliant
 	//	on external definition in XML
 private:
 	void registerUnitAI(const char* szType, int enumVal);
@@ -1369,27 +1354,9 @@ public:
 	 int getNumGraphicLevels() const;
 	 int getNumGlobeLayers() const;
 
-// BUG - DLL Info - start
-	bool isBull() const;
-	int getBullApiVersion() const;
-
-	const wchar* getBullName() const;
-	const wchar* getBullVersion() const;
-// BUG - DLL Info - end
-
 // BUG - BUG Info - start
 	void setIsBug(bool bIsBug);
 // BUG - BUG Info - end
-
-// BUFFY - DLL Info - start
-#ifdef _BUFFY
-	bool isBuffy() const;
-	int getBuffyApiVersion() const;
-
-	const wchar* getBuffyName() const;
-	const wchar* getBuffyVersion() const;
-#endif
-// BUFFY - DLL Info - end
 
 	unsigned int getAssetCheckSum();
 
@@ -1625,22 +1592,6 @@ protected:
 	std::vector<CvSpecialUnitInfo*> m_paSpecialUnitInfo;
 	std::vector<CvInfoBase*> m_paConceptInfo;
 	std::vector<CvInfoBase*> m_paNewConceptInfo;
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-	// Dale - DCM: Pedia Concepts START
-	std::vector<CvInfoBase*> m_paDCMConceptInfo;
-	// Dale - DCM: Pedia Concepts END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/*Afforess                                     11/13/09                                         */
-/************************************************************************************************/
-	std::vector<CvInfoBase*> m_paANDConceptInfo;
-/************************************************************************************************/
-/* Afforess                                END                                                  */
-/************************************************************************************************/
 	std::vector<CvInfoBase*> m_paCityTabInfo;
 	std::vector<CvInfoBase*> m_paCalendarInfo;
 	std::vector<CvInfoBase*> m_paSeasonInfo;
@@ -2863,23 +2814,6 @@ public:
 		PROXY_TRACK("getSpaceShipInfo");	
 		return gGlobals->getSpaceShipInfo(iIndex);	
 	}
-
-/************************************************************************************************/
-/*Afforess                                     12/21/09                                         */
-/************************************************************************************************/
-	int getNumANDConceptInfos()
-	{
-		PROXY_TRACK("getNumANDConceptInfos");	
-		return gGlobals->getNumANDConceptInfos();	
-	}
-	CvInfoBase& getANDConceptInfo(ANDConceptTypes e)
-	{
-		PROXY_TRACK("getANDConceptInfo");	
-		return gGlobals->getANDConceptInfo(e);	
-	}
-/************************************************************************************************/
-/* Afforess                                END                                                  */
-/************************************************************************************************/
 
 	int getNumGameOptionInfos()
 	{

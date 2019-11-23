@@ -899,12 +899,6 @@ bool CvXMLLoadUtility::LoadBasicInfos()
 
 	LoadGlobalClassInfo(GC.getConceptInfos(), "CIV4BasicInfos", "BasicInfos", L"/Civ4BasicInfos/ConceptInfos/ConceptInfo", false);
 	LoadGlobalClassInfo(GC.getNewConceptInfos(), "CIV4NewConceptInfos", "BasicInfos", L"/Civ4NewConceptInfos/NewConceptInfos/NewConceptInfo", false);
-	// Dale - DCM: Pedia Concepts START
-	LoadGlobalClassInfo(GC.getDCMConceptInfos(), "CIV4DCMConceptInfos", "BasicInfos", L"/Civ4DCMConceptInfos/DCMConceptInfos/DCMConceptInfo", false);
-	// Dale - DCM: Pedia Concepts END
-	// Afforess - A New Dawn Concepts
-	LoadGlobalClassInfo(GC.getANDConceptInfos(), "CIV4ANDConceptInfos", "BasicInfos", L"/Civ4ANDConceptInfos/ANDConceptInfos/ANDConceptInfo", false);
-	// Afforess
 	LoadGlobalClassInfo(GC.getCityTabInfos(), "CIV4CityTabInfos", "BasicInfos", L"/Civ4CityTabInfos/CityTabInfos/CityTabInfo", false);
 	LoadGlobalClassInfo(GC.getCalendarInfos(), "CIV4CalendarInfos", "BasicInfos", L"/Civ4CalendarInfos/CalendarInfos/CalendarInfo", false);
 	LoadGlobalClassInfo(GC.getSeasonInfos(), "CIV4SeasonInfos", "BasicInfos", L"/Civ4SeasonInfos/SeasonInfos/SeasonInfo", false);
