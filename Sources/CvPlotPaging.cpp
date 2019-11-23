@@ -134,7 +134,7 @@ namespace {
 
 			if (pmc.WorkingSetSize > uiMaxMem)
 			{
-				OutputDebugString(CvString::format("Found need to free memory: %d used vs %d target\n", pmc.WorkingSetSize, uiMaxMem).c_str());
+				OutputDebugString(CvString::format("Found need to free memory: %u used vs %u target\n", pmc.WorkingSetSize, uiMaxMem).c_str());
 				return true;
 			}
 			else
