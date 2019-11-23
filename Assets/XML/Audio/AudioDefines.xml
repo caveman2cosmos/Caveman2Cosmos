@@ -13722,7 +13722,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_TATTOOS</SoundID>
-			<Filename>Sounds/Tech/Tattoos</Filename>
+			<Filename>Sounds/Tech/01_tattoos</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -13820,7 +13820,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_TRACKING</SoundID>
-			<Filename>Sounds/Tech/Tracking</Filename>
+			<Filename>Sounds/Tech/01_trails</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -13855,7 +13855,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_SOFT_HAMMER_PERCUSSION</SoundID>
-			<Filename>Sounds/Tech/SoftHammerPercussion</Filename>
+			<Filename>Sounds/Tech/01_soft_hammer_percussion</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -15094,14 +15094,14 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_STONE_BUILDING</SoundID>
-			<Filename>Sounds/Tech/StoneBuilding</Filename>
+			<Filename>Sounds/Tech/01_stone_building</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_TENGRIISM2</SoundID>
-			<Filename>Sounds/Tech/Tengriism2</Filename>
+			<Filename>Sounds/Tech/01_tengriism</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -15150,14 +15150,14 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_SPEARFISHING</SoundID>
-			<Filename>Sounds/Tech/Spearfishing</Filename>
+			<Filename>Sounds/Tech/01_spearfishing</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_SPEAR_MAKING</SoundID>
-			<Filename>Sounds/Tech/SpearMaking2</Filename>
+			<Filename>Sounds/Tech/01_spear_making</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -15598,7 +15598,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_SLAVERY</SoundID>
-			<Filename>Sounds/Tech/Slavery</Filename>
+			<Filename>Sounds/Tech/01_slavery</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
