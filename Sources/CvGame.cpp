@@ -7641,25 +7641,29 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 
 				//	Check local max density not already exceeded
 				//	Use range 3 to define local
+				const int LocalRange = 3;
+				const int TotalLocalArea = (LocalRange * 2 + 1) * (LocalRange * 2 + 1);
 				int localLandArea = 0;
 				int localCount = 0;
-				int iRange = 3;
+				int localTotalCount = 0;
 
-				for( int iX = -iRange; iX < iRange; iX++)
+				for( int iX = -LocalRange; iX <= LocalRange; iX++)
 				{
-					for(int iY = -iRange; iY < iRange; iY++)
+					for(int iY = -LocalRange; iY <= LocalRange; iY++)
 					{
 						CvPlot* pLoopPlot = plotXY(pPlot->getX_INLINE(), pPlot->getY_INLINE(), iX, iY);
 						if ( pLoopPlot != NULL && pLoopPlot->area() == pPlot->area() )
 						{
 							localLandArea++;
 							localCount += pLoopPlot->plotCount(PUF_isUnitType, spawnInfo.getUnitType());
+							localTotalCount += pLoopPlot->getNumUnits();
 						}
 					}
 				}
-
-				//	49 plots in range 3
-				if ( localCount < std::max(1,localLandArea/std::max(1,spawnInfo.getMaxLocalDensity())) )
+				const int GlobalDensity = 8;
+				if (localLandArea > 0
+					&& (localCount * 100 / localLandArea) < (spawnInfo.getMaxLocalDensity() * 100 / TotalLocalArea)
+					&& (localTotalCount * 100 / localLandArea) < (GlobalDensity * 100 / TotalLocalArea))
 				{
 					//	Spawn a new unit
 					CvUnitInfo& kUnit = GC.getUnitInfo(spawnInfo.getUnitType());
