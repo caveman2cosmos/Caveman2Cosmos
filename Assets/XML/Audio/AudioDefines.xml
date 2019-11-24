@@ -8864,7 +8864,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_PREHISTORIC_MUSIC</SoundID>
-			<Filename>Sounds/Tech/Tech_Prehistoric_Music</Filename>
+			<Filename>Sounds/Tech/01_prehistoric_music</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -13715,7 +13715,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_HERBALISM</SoundID>
-			<Filename>Sounds/Tech/Herbalism</Filename>
+			<Filename>Sounds/Tech/01_herbalism</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -13729,7 +13729,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_LANGUAGE</SoundID>
-			<Filename>Sounds/Tech/Language</Filename>
+			<Filename>Sounds/Tech/01_language</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -13771,7 +13771,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_SCAVENGING</SoundID>
-			<Filename>Sounds/Tech/Scavenging</Filename>
+			<Filename>Sounds/Tech/01_scavenging</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -14205,7 +14205,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_BONE_WORKING</SoundID>
-			<Filename>Sounds/Tech/Bone_Working</Filename>
+			<Filename>Sounds/Tech/01_bone_working</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -14583,7 +14583,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_SHAMANISM</SoundID>
-			<Filename>Sounds/Tech/Shamanism</Filename>
+			<Filename>Sounds/Tech/01_shamanism</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -14786,7 +14786,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_ATLATL_MAKING</SoundID>
-			<Filename>Sounds/Tech/AtlatlMaking</Filename>
+			<Filename>Sounds/Tech/01_atlatl_making</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -14919,7 +14919,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_SIMPLE_WOOD_WORKING</SoundID>
-			<Filename>Sounds/Tech/01_SimpleWoodWorking</Filename>
+			<Filename>Sounds/Tech/01_simple_wood_working</Filename>
 			<LoadType>STREAMED</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -14982,14 +14982,14 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_DRUIDISM</SoundID>
-			<Filename>Sounds/Tech/Druidism2</Filename>
+			<Filename>Sounds/Tech/01_druidic_traditions</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_FELINE_DOMESTICATION</SoundID>
-			<Filename>Sounds/Tech/FelineDomestication</Filename>
+			<Filename>Sounds/Tech/01_feline_domestication</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -15052,42 +15052,42 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_ARITHMETIC</SoundID>
-			<Filename>Sounds/Tech/Arithmetic</Filename>
+			<Filename>Sounds/Tech/01_arithmetic</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_CELEBRATION</SoundID>
-			<Filename>Sounds/Tech/Celebration</Filename>
+			<Filename>Sounds/Tech/01_celebration</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_CHIEFDOM</SoundID>
-			<Filename>Sounds/Tech/Chiefdom</Filename>
+			<Filename>Sounds/Tech/01_chiefdom</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_MEGAFAUNA_DOMESTICATION</SoundID>
-			<Filename>Sounds/Tech/MegafaunaDomestication</Filename>
+			<Filename>Sounds/Tech/01_megafauna_domestication</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_OBSIDIAN_WEAPONS</SoundID>
-			<Filename>Sounds/Tech/ObsidianWeapons</Filename>
+			<Filename>Sounds/Tech/01_obsidian_weapons</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_PORTABLE_SHELTERS</SoundID>
-			<Filename>Sounds/Tech/PortableShelters</Filename>
+			<Filename>Sounds/Tech/01_portable_shelters</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -15108,21 +15108,21 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_ANIMISM</SoundID>
-			<Filename>Sounds/Tech/Animism</Filename>
+			<Filename>Sounds/Tech/01_animism</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_BOAT_BUILDING</SoundID>
-			<Filename>Sounds/Tech/BoatBuilding</Filename>
+			<Filename>Sounds/Tech/01_boat_building</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_CAMELID_DOMESTICATION</SoundID>
-			<Filename>Sounds/Tech/CamelDomestication</Filename>
+			<Filename>Sounds/Tech/01_camelid_domestication</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -15136,14 +15136,14 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_HUNTING_TACTICS</SoundID>
-			<Filename>Sounds/Tech/HuntingTactics</Filename>
+			<Filename>Sounds/Tech/01_hunting</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_POULTRY_DOMESTICATION</SoundID>
-			<Filename>Sounds/Tech/PoultryDomestication</Filename>
+			<Filename>Sounds/Tech/01_poultry_domestication</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -15612,7 +15612,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_CONDUCT</SoundID>
-			<Filename>Sounds/Tech/Conduct</Filename>
+			<Filename>Sounds/Tech/01_conduct</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -15626,14 +15626,14 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_BINDING</SoundID>
-			<Filename>Sounds/Tech/Binding</Filename>
+			<Filename>Sounds/Tech/01_binding</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_AXE_MAKING</SoundID>
-			<Filename>Sounds/Tech/AxeMaking</Filename>
+			<Filename>Sounds/Tech/01_axe_making_v1</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -18636,7 +18636,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_NOCTURNALISM</SoundID>
-			<Filename>Sounds/Tech/NOCTURNALISM</Filename>
+			<Filename>Sounds/Tech/01_nocturnalism</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
