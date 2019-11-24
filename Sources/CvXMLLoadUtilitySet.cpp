@@ -568,8 +568,8 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	gDLL->ChangeINIKeyValue("CONFIG", "HideMinSpecWarning ", "1");
-	gDLL->ChangeINIKeyValue("GAME", "ModularLoading  ", "0");
+		gDLL->ChangeINIKeyValue("CONFIG", "HideMinSpecWarning ", "1");
+		gDLL->ChangeINIKeyValue("GAME", "ModularLoading  ", "0");
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
@@ -1245,9 +1245,9 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 
 	// Add TGA space fillers
 	CvReligionInfo* pReligionBogus = new CvReligionInfo();
-	aReligionInfos.insert(aReligionInfos.end(), TGA_RELIGIONS - aReligionInfos.size(), pReligionBogus);
+	aReligionInfos.insert(aReligionInfos.end(), GC.getTGA_RELIGIONS() - aReligionInfos.size(), pReligionBogus);
 	CvCorporationInfo* pCorporationBogus = new CvCorporationInfo();
-	aCorporationInfos.insert(aCorporationInfos.end(), TGA_CORPORATIONS - aCorporationInfos.size(), pCorporationBogus);
+	aCorporationInfos.insert(aCorporationInfos.end(), GC.getTGA_CORPORATIONS() - aCorporationInfos.size(), pCorporationBogus);
 
 	OutputDebugString("Load globals complete\n");
 	UpdateProgressCB("GlobalOther");
@@ -4845,7 +4845,7 @@ void CvXMLLoadUtility::RemoveTGAFiller()
 {
 	std::vector<CvReligionInfo*>& aInfos1 = GC.getReligionInfos();
 	std::vector<CvCorporationInfo*>& aInfos2 = GC.getCorporationInfos();
-	if (aInfos1.size() && aInfos1.size() == TGA_RELIGIONS)
+	if (aInfos1.size() && aInfos1.size() == GC.getTGA_RELIGIONS())
 	{
 		std::sort(aInfos1.begin(), aInfos1.end(), cmpReligionTGA);
 		if (aInfos1.front()->getTGAIndex() == -1)
@@ -4856,7 +4856,7 @@ void CvXMLLoadUtility::RemoveTGAFiller()
 			aInfos1.erase(aInfos1.begin(), it);
 		}
 	}
-	if (aInfos2.size() && aInfos2.size() == TGA_CORPORATIONS)
+	if (aInfos2.size() && aInfos2.size() == GC.getTGA_CORPORATIONS())
 	{
 		std::sort(aInfos2.begin(), aInfos2.end(), cmpCorporationTGA);
 		if (aInfos2.front()->getTGAIndex() == -1)

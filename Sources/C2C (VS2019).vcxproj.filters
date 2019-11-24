@@ -527,9 +527,6 @@
     <ClInclude Include="CvDefines.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CvDefinesModTools.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CvDiploParameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
