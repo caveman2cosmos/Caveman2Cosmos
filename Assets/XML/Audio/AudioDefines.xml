@@ -8954,8 +8954,8 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_TECH_HORSERIDING</SoundID>
-			<Filename>Sounds/Tech/Tech_HorsebackRiding</Filename>
+			<SoundID>SND_TECH_ANIMAL_RIDING</SoundID>
+			<Filename>Sounds/Tech/01_animal_riding</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -14590,7 +14590,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_TECH_STIRRUP</SoundID>
-			<Filename>Sounds/Tech/Stirrup</Filename>
+			<Filename>Sounds/Tech/Tech_HorsebackRiding</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
