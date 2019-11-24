@@ -12354,8 +12354,8 @@ void CvUnitAI::AI_InfiltratorMove()
 		return;
 	}
 
-	//if the unit is solo, it may be good for joining with a group
-	if (getGroup()->getNumUnits() == 1)
+	// if the unit is solo, and not wanted, it may be good for joining with a group
+	if (getGroup()->getNumUnits() == 1 && !isWanted())
 	{
 		if ( processContracts() )
 		{
@@ -12386,18 +12386,15 @@ void CvUnitAI::AI_InfiltratorMove()
 	}
 
 	bool bIsAtHome = false;
-	if (plot() != NULL)
+	if (plot() != NULL && plot()->isCity(false))
 	{
-		if (plot()->isCity(false))
+		if (plot()->getOwner() == getOwner())
 		{
-			if (plot()->getOwner() == getOwner())
-			{
-				iTargetGroupSize = 1;
-			}
-			else
-			{
-				bIsAtHome = true;
-			}
+			iTargetGroupSize = 1;
+		}
+		else
+		{
+			bIsAtHome = true;
 		}
 	}
 	
@@ -12426,22 +12423,20 @@ void CvUnitAI::AI_InfiltratorMove()
 	//	return;
 	//}
 
-	//units within group should respond appropriately to becoming wanted by separating themselves from the group
-	CLLNode<IDInfo>* pUnitNode = getGroup()->headUnitNode();
-	CvUnit* pLoopUnit = NULL;
-
-	while( pUnitNode != NULL )
+	// Units within group should respond appropriately to becoming wanted by separating themselves from the group
+	// (Use safe iterator as we are modifying the group)
+	for(safe_unit_iterator itr = getGroup()->beginUnitsSafe(); 
+		itr != getGroup()->endUnitsSafe() && getGroup()->getNumUnits() > 1;
+		++itr)
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
+		CvUnit* pLoopUnit = *itr;
 		if (pLoopUnit->isWanted())
 		{
 			pLoopUnit->joinGroup(NULL);
-			break;
 		}
-		pUnitNode = getGroup()->nextUnitNode(pUnitNode);
 	}
 
-	//then one by one they would end up hitting this point, theoretically, and possibly even the head unit immediately
+	// Then one by one they would end up hitting this point, theoretically, and possibly even the head unit immediately
 	if (isWanted() && getGroup()->getNumUnits() == 1)
 	{
 		if (bFinancialTrouble && canTrade(plot()))
@@ -12465,24 +12460,17 @@ void CvUnitAI::AI_InfiltratorMove()
 		bAdversaryPlot = GET_TEAM(getTeam()).AI_getAttitudeWeight(ePlotTeam) < 0;
 	}
 
-	if (ePlotTeam != NO_TEAM && getGroup()->isInvisible(ePlotTeam) && ePlotTeam != getTeam())
+	if (ePlotTeam != NO_TEAM 
+		&& getGroup()->isInvisible(ePlotTeam) 
+		&& ePlotTeam != getTeam()
+		&& bAdversaryPlot)
 	{
-		if (bAdversaryPlot)
+		if ((!plot()->isCity(false) 
+			&& plot()->getImprovementType() != NO_IMPROVEMENT
+			&& AI_pillage())
+			|| AI_pillageRange(1, 20))
 		{
-			if (!plot()->isCity(false))
-			{
-				if (plot()->getImprovementType() != NO_IMPROVEMENT)
-				{
-					if (AI_pillage())
-					{
-						return;
-					}
-				}
-			}
-			else if (AI_pillageRange(1, 20))
-			{
-				return;
-			}
+			return;
 		}
 	}
 
