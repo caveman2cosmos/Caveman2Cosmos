@@ -9981,7 +9981,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
+			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
 			<PrereqBuilding>BUILDING_LUNAR_ASSEMBLY_PLANT</PrereqBuilding>
 			<ProductionTraits>
 				<ProductionTrait>

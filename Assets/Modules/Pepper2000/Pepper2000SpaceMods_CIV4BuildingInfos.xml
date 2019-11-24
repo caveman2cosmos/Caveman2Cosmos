@@ -1317,8 +1317,8 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AMMONIA_LIFE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_HYPOTHETICAL_BIOCHEMISTRY</PrereqTech>
-			<iCost>1744</iCost>
+			<PrereqTech>TECH_ABYSS_COLONIZATION</PrereqTech>
+			<iCost>2904</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
@@ -1367,8 +1367,8 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_METHANE_LIFE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_HYPOTHETICAL_BIOCHEMISTRY</PrereqTech>
-			<iCost>1744</iCost>
+			<PrereqTech>TECH_ABYSS_COLONIZATION</PrereqTech>
+			<iCost>2904</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
