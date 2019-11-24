@@ -300,7 +300,7 @@ class PediaBuilding:
 		panelName = aName()
 		screen.addPanel(panelName, TRNSLTR.getText("TXT_KEY_PEDIA_REQUIRES", ()), "", False, True, X_COL_1, Y_BOT_ROW_2, W_PEDIA_PAGE, H_BOT_ROW, ePanelBlue50)
 		szAnd	= szfont3 + "&#38"
-		szOr	= szfont2b + "OR"
+		szOr	= szfont2b + "||"
 		szBracketL = szfont4b + " {"
 		szBracketR = szfont4b + "} "
 		bPlus = False

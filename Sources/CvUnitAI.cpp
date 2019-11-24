@@ -12354,8 +12354,8 @@ void CvUnitAI::AI_InfiltratorMove()
 		return;
 	}
 
-	//if the unit is solo, it may be good for joining with a group
-	if (getGroup()->getNumUnits() == 1)
+	// if the unit is solo, and not wanted, it may be good for joining with a group
+	if (getGroup()->getNumUnits() == 1 && !isWanted())
 	{
 		if ( processContracts() )
 		{
@@ -12386,18 +12386,15 @@ void CvUnitAI::AI_InfiltratorMove()
 	}
 
 	bool bIsAtHome = false;
-	if (plot() != NULL)
+	if (plot() != NULL && plot()->isCity(false))
 	{
-		if (plot()->isCity(false))
+		if (plot()->getOwner() == getOwner())
 		{
-			if (plot()->getOwner() == getOwner())
-			{
-				iTargetGroupSize = 1;
-			}
-			else
-			{
-				bIsAtHome = true;
-			}
+			iTargetGroupSize = 1;
+		}
+		else
+		{
+			bIsAtHome = true;
 		}
 	}
 	
@@ -12426,22 +12423,20 @@ void CvUnitAI::AI_InfiltratorMove()
 	//	return;
 	//}
 
-	//units within group should respond appropriately to becoming wanted by separating themselves from the group
-	CLLNode<IDInfo>* pUnitNode = getGroup()->headUnitNode();
-	CvUnit* pLoopUnit = NULL;
-
-	while( pUnitNode != NULL )
+	// Units within group should respond appropriately to becoming wanted by separating themselves from the group
+	// (Use safe iterator as we are modifying the group)
+	for(safe_unit_iterator itr = getGroup()->beginUnitsSafe(); 
+		itr != getGroup()->endUnitsSafe() && getGroup()->getNumUnits() > 1;
+		++itr)
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
+		CvUnit* pLoopUnit = *itr;
 		if (pLoopUnit->isWanted())
 		{
 			pLoopUnit->joinGroup(NULL);
-			break;
 		}
-		pUnitNode = getGroup()->nextUnitNode(pUnitNode);
 	}
 
-	//then one by one they would end up hitting this point, theoretically, and possibly even the head unit immediately
+	// Then one by one they would end up hitting this point, theoretically, and possibly even the head unit immediately
 	if (isWanted() && getGroup()->getNumUnits() == 1)
 	{
 		if (bFinancialTrouble && canTrade(plot()))
@@ -12465,24 +12460,17 @@ void CvUnitAI::AI_InfiltratorMove()
 		bAdversaryPlot = GET_TEAM(getTeam()).AI_getAttitudeWeight(ePlotTeam) < 0;
 	}
 
-	if (ePlotTeam != NO_TEAM && getGroup()->isInvisible(ePlotTeam) && ePlotTeam != getTeam())
+	if (ePlotTeam != NO_TEAM 
+		&& getGroup()->isInvisible(ePlotTeam) 
+		&& ePlotTeam != getTeam()
+		&& bAdversaryPlot)
 	{
-		if (bAdversaryPlot)
+		if ((!plot()->isCity(false) 
+			&& plot()->getImprovementType() != NO_IMPROVEMENT
+			&& AI_pillage())
+			|| AI_pillageRange(1, 20))
 		{
-			if (!plot()->isCity(false))
-			{
-				if (plot()->getImprovementType() != NO_IMPROVEMENT)
-				{
-					if (AI_pillage())
-					{
-						return;
-					}
-				}
-			}
-			else if (AI_pillageRange(1, 20))
-			{
-				return;
-			}
+			return;
 		}
 	}
 
@@ -17516,17 +17504,16 @@ bool CvUnitAI::AI_leadLegend()
 {
 	PROFILE_FUNC();
 
-	FAssertMsg(!isHuman(), "isHuman did not return false as expected");
+	FAssertMsg(!isHuman(), "AI_leadLegend shouldn't be called for human players");
 	FAssert(NO_PLAYER != getOwnerINLINE());
 
 	CvPlayer& kOwner = GET_PLAYER(getOwnerINLINE());
-
 	CvUnit* pBestUnit = NULL;
+	CvPlot* pBestPlot = NULL;
 	int iBestStrength = 0;
-
-	int iLoop;
-	for (CvUnit* pLoopUnit = kOwner.firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = kOwner.nextUnit(&iLoop))
+	for (CvPlayer::unit_iterator itr = kOwner.beginUnits(); itr != kOwner.endUnits(); ++itr)
 	{
+		CvUnit* pLoopUnit = *itr;
 		if (isLegendary(pLoopUnit)
 
 			&& canLead(pLoopUnit->plot(), pLoopUnit->getID()) > 0
@@ -17551,16 +17538,18 @@ bool CvUnitAI::AI_leadLegend()
 			{
 				iBestStrength = iCombatStrength;
 				pBestUnit = pLoopUnit;
+				// generatePath called just above actually updates our own current path, so here we save the end turn plot of that path so we can use it
+				// as a move target
+				pBestPlot = getPathEndTurnPlot();
 			}
 		}
 	}
 
-	if (pBestUnit)
+	if (pBestUnit && pBestPlot)
 	{
-		CvPlot* targetPlot = getPathEndTurnPlot();
-		if (atPlot(targetPlot))
+		if(atPlot(pBestPlot))
 		{
-			if( gUnitLogLevel > 2 )
+			if (gUnitLogLevel > 2)
 			{
 				CvWString szString;
 				getUnitAIString(szString, pBestUnit->AI_getUnitAIType());
@@ -17574,7 +17563,7 @@ bool CvUnitAI::AI_leadLegend()
 		}
 		else
 		{
-			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, targetPlot->getX_INLINE(), targetPlot->getY_INLINE(), MOVE_AVOID_ENEMY_WEIGHT_3);
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), MOVE_AVOID_ENEMY_WEIGHT_3);
 		}
 	}
 

@@ -11,7 +11,7 @@ if "%APPVEYOR_PULL_REQUEST_TITLE%" neq "" (
 )
 
 PUSHD "%~dp0..\.."
-SET C2C_VERSION=v%APPVEYOR_BUILD_VERSION%-alpha
+SET C2C_VERSION=v%APPVEYOR_BUILD_VERSION%
 SET "root_dir=%cd%"
 set SVN=svn.exe
 if not exist "%build_dir%" goto :skip_delete
@@ -30,12 +30,12 @@ powershell -ExecutionPolicy Bypass -File "%~dp0\InitGit.ps1"
 
 :: SET GIT RELEASE TAG -----------------------------------------
 echo Setting release version build tag on git ...
-git tag -a %C2C_VERSION% %APPVEYOR_REPO_COMMIT% -m "%C2C_VERSION%"
+git tag -a %C2C_VERSION% %APPVEYOR_REPO_COMMIT% -m "%C2C_VERSION%" -f
 git push --tags
 
 :: COMPILE -----------------------------------------------------
 echo Building FinalRelease DLL...
-call "Tools\_MakeDLL.bat" build FinalRelease
+call "Tools\_MakeDLL.bat" autobuild FinalRelease
 if not errorlevel 0 (
     echo Building FinalRelease DLL failed, aborting deployment!
     exit /B 2
@@ -143,13 +143,13 @@ if %ERRORLEVEL% neq 0 (
     )
 )
 
-:: SET SVN RELEASE TAG -----------------------------------------
+:: SET RELEASE TAG -----------------------------------------
 echo Setting SVN commit tag on git ...
 for /f "delims=" %%a in ('svnversion') do @set svn_rev=%%a
 
 POPD
 
-call git tag -a SVN-%svn_rev% %APPVEYOR_REPO_COMMIT% -m "SVN-%svn_rev%"
+call git tag -a %C2C_VERSION% %APPVEYOR_REPO_COMMIT% -m "SVN-%svn_rev%" -f
 call git push --tags
 
 REM 7z a -r -x!.svn "%release_prefix%-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\*.*"

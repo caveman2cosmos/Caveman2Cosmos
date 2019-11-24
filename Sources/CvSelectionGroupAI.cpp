@@ -70,11 +70,6 @@ namespace {
 	{
 		return unit->AI_getUnitAIType() == UNITAI_ASSAULT_SEA && !unit->hasCargo();
 	}
-
-	bool matchUnitPtr(const CvUnit& lhs, const CvUnit* rhs)
-	{
-		return &lhs == rhs;
-	}
 }
 
 void CvSelectionGroupAI::AI_separateIf(boost::function<bool(CvUnit*)> predicateFn)
@@ -85,7 +80,7 @@ void CvSelectionGroupAI::AI_separateIf(boost::function<bool(CvUnit*)> predicateF
 	{
 		CvUnit* unit = *itr;
 		unit->joinGroup(NULL);
-		FAssertMsg(std::find_if(beginUnits(), endUnits(), boost::bind(matchUnitPtr, _1, unit)) == endUnits(), "Failed to remove unit from group");
+		FAssertMsg(std::find(beginUnits(), endUnits(), unit) == endUnits(), "Failed to remove unit from group");
 		if (unit->plot()->getTeam() == getTeam())
 		{
 			unit->getGroup()->pushMission(MISSION_SKIP);
@@ -121,25 +116,14 @@ void CvSelectionGroupAI::AI_separateEmptyTransports()
 // Returns true if the group has become busy...
 bool CvSelectionGroupAI::AI_update()
 {
-	CLLNode<IDInfo>* pEntityNode;
-	CvUnit* pLoopUnit;
-	bool bDead;
-	bool bFollow;
-
 	PROFILE("CvSelectionGroupAI::AI_update");
 
 	FAssert(getOwnerINLINE() != NO_PLAYER);
 
-	if (!AI_isControlled())
+	if (!AI_isControlled() || getNumUnits() == 0)
 	{
 		return false;
 	}
-
-	if (getNumUnits() == 0)
-	{
-		return false;
-	}
-
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      04/28/10                                jdog5000      */
 /*                                                                                              */
@@ -169,7 +153,7 @@ bool CvSelectionGroupAI::AI_update()
 
 	int iTempHack = 0; // XXX
 
-	bDead = false;
+	bool bDead = false;
 	
 	bool bFailedAlreadyFighting = false;
 	while ((m_bGroupAttack && !bFailedAlreadyFighting) || readyToMove())
@@ -260,66 +244,51 @@ bool CvSelectionGroupAI::AI_update()
 		}
 	}
 
-	if (!bDead)
+	if (!bDead && !isHuman() && !AI_isAwaitingContract())
 	{
-		if (!isHuman() && !AI_isAwaitingContract())
+		bool bFollow = false;
+
+		// if we not group attacking, then check for follow action
+		if (!m_bGroupAttack)
 		{
-			bFollow = false;
-
-			// if we not group attacking, then check for follow action
-			if (!m_bGroupAttack)
+			for (unit_iterator itr = beginUnits(); 
+				itr != endUnits() && readyToMove(true); 
+				++itr)
 			{
-				pEntityNode = headUnitNode();
-
-				while ((pEntityNode != NULL) && readyToMove(true))
+				CvUnit* pLoopUnit = *itr;
+				if (pLoopUnit->canMove())
 				{
-					pLoopUnit = ::getUnit(pEntityNode->m_data);
-					pEntityNode = nextUnitNode(pEntityNode);
-
-					if (pLoopUnit->canMove())
+					resetPath();
+					if (pLoopUnit->AI_follow())
 					{
-						resetPath();
-
-						if (pLoopUnit->AI_follow())
-						{
-							bFollow = true;
-							break;
-						}
+						bFollow = true;
+						break;
 					}
 				}
 			}
+		}
 
-			if (doDelayedDeath())
-			{
-				bDead = true;
-			}
-
-			if (!bDead)
-			{
-				if (!bFollow && readyToMove(true))
-				{
-					pushMission(MISSION_SKIP);
-				}
-			}
+		if (doDelayedDeath())
+		{
+			bDead = true;
+		}
+		else if (!bFollow && readyToMove(true))
+		{
+			pushMission(MISSION_SKIP);
+		}
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      04/28/10                                jdog5000      */
 /*                                                                                              */
 /* Unit AI                                                                                      */
 /************************************************************************************************/
-			// AI should never put units to sleep, how does this ever happen?
-			//FAssert( getHeadUnit()->isCargo() || getActivityType() != ACTIVITY_SLEEP );
+		// AI should never put units to sleep, how does this ever happen?
+		//FAssert( getHeadUnit()->isCargo() || getActivityType() != ACTIVITY_SLEEP );
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
-		}
 	}
 
-	if (bDead)
-	{
-		return false;
-	}
-
-	return (isBusy() || isCargoBusy());
+	return !bDead && (isBusy() || isCargoBusy());
 }
 
 
