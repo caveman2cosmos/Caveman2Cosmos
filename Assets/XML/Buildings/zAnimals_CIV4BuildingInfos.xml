@@ -19659,7 +19659,7 @@
 			<Strategy>TXT_KEY_BUILDING_GOVENORS_MENAGERIE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GOVENORS_MENAGERIE</ArtDefineTag>
-			<PrereqTech>TECH_CHIEFDOM</PrereqTech>
+			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<FreeStartEra>ERA_CLASSICAL</FreeStartEra>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<iCost>-1</iCost>

@@ -4,6 +4,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvMapExternal.h"
 #include <time.h> 
+#include <sstream>
 
 static char gVersionString[1024] = { 0 };
 
@@ -495,6 +496,22 @@ cvInternalGlobals::~cvInternalGlobals()
 #include <dbghelp.h>
 #pragma comment (lib, "dbghelp.lib")
 
+
+std::string getPyTrace()
+{
+	std::vector<Cy::StackFrame> trace = Cy::get_stack_trace();
+
+	std::stringstream buffer;
+
+	for (std::vector<Cy::StackFrame>::const_iterator itr = trace.begin(); itr != trace.end(); ++itr)
+	{
+		if (itr != trace.begin()) buffer << "\r\n";
+		buffer << CvString::format("%s.py (%d): %s", itr->filename.c_str(), itr->line, itr->code.c_str());
+	}
+
+	return buffer.str();
+}
+
 void CreateMiniDump(EXCEPTION_POINTERS *pep)
 {
 	_TCHAR filename[256];
@@ -538,6 +555,11 @@ void CreateMiniDump(EXCEPTION_POINTERS *pep)
 
 	/* Close the file. */
 	CloseHandle(hFile);
+	std::string pyTrace = getPyTrace();
+	if(!pyTrace.empty())
+	{
+		gDLL->logMsg("PythonCallstack.log", pyTrace.c_str(), true, false);
+	}
 }
 
 LONG WINAPI CustomFilter(EXCEPTION_POINTERS *ExceptionInfo)

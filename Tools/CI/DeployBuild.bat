@@ -28,10 +28,10 @@ powershell -ExecutionPolicy Bypass -File "%~dp0\update-c2c-version.ps1"
 :: INIT GIT WRITE ---------------------------------------------
 powershell -ExecutionPolicy Bypass -File "%~dp0\InitGit.ps1"
 
-REM :: SET GIT RELEASE TAG -----------------------------------------
-REM echo Setting release version build tag on git ...
-REM git tag -a %C2C_VERSION% %APPVEYOR_REPO_COMMIT% -m "%C2C_VERSION%"
-REM git push --tags
+:: SET GIT RELEASE TAG -----------------------------------------
+echo Setting release version build tag on git ...
+git tag -a %C2C_VERSION% %APPVEYOR_REPO_COMMIT% -m "%C2C_VERSION%" -f
+git push --tags
 
 :: COMPILE -----------------------------------------------------
 echo Building FinalRelease DLL...
@@ -149,7 +149,7 @@ for /f "delims=" %%a in ('svnversion') do @set svn_rev=%%a
 
 POPD
 
-call git tag -a %C2C_VERSION% %APPVEYOR_REPO_COMMIT% -m "SVN-%svn_rev%"
+call git tag -a %C2C_VERSION% %APPVEYOR_REPO_COMMIT% -m "SVN-%svn_rev%" -f
 call git push --tags
 
 REM 7z a -r -x!.svn "%release_prefix%-%APPVEYOR_BUILD_VERSION%.zip" "%build_dir%\*.*"

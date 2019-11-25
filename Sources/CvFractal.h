@@ -36,9 +36,10 @@ public:
 	DllExport int getHeight(int x, int y);																					// Exposed to Python
 	DllExport int getHeightFromPercent(int iPercent);																			// Exposed to Python
 
-	DllExport CvFractal();
-	virtual ~CvFractal() {}
 	void reset();
+	DllExport CvFractal();
+	virtual ~CvFractal();
+	void uninit();
 	
 protected:
 
@@ -54,11 +55,7 @@ protected:
 	int m_iXInc;
 	int m_iYInc;
 
-	inline void setFrac(int x, int y, int val) { m_aaiFrac[x][y] = val; }
-	inline int& getFrac(int x, int y) { return m_aaiFrac[x][y]; }
-	inline int getFrac(int x, int y) const { return m_aaiFrac[x][y]; }
-	std::vector < std::vector<int> > m_aaiFrac;
-
+	int **m_aaiFrac; //[FRAC_X + 1][FRAC_Y + 1];
 	void fracInitInternal(int iNewXs, int iNewYs, int iGrain, CvRandom& random, byte* pbyHints, int iHintsLength, int iFlags, CvFractal* pRifts, int iFracXExp, int iFracYExp);
 	void tectonicAction(CvFractal* pRifts);
 	int yieldX(int iBadX);
