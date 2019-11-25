@@ -1238,7 +1238,7 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			break;
 
 		case MISSION_DISCOVER:
-			if (pLoopUnit->canDiscover(pPlot))
+			if (pLoopUnit->canDiscover())
 			{
 				return true;
 			}
@@ -1458,7 +1458,7 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			}
 			break;
 		case MISSION_WAIT_FOR_TECH:
-			if (pLoopUnit->canDiscover(NULL))
+			if (pLoopUnit->canDiscover())
 			{
 				return true;
 			}

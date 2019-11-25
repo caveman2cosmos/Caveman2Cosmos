@@ -728,28 +728,6 @@ CvTurnTimerInfo* CyGlobalContext::getTurnTimerInfo(int i) const
 {
 	return &(GC.getTurnTimerInfo((TurnTimerTypes) i));
 }
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-// Dale - DCM: Pedia Concepts START
-CvInfoBase* CyGlobalContext::getDCMConceptInfo(int i) const
-{
-	return (i>=0 && i<GC.getNumDCMConceptInfos()) ? &GC.getDCMConceptInfo((DCMConceptTypes)i) : NULL;
-}
-// Dale - DCM: Pedia Concepts END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/*Afforess                                     11/13/09                                         */
-/************************************************************************************************/
-CvInfoBase* CyGlobalContext::getANDConceptInfo(int i) const
-{
-	return (i>=0 && i<GC.getNumANDConceptInfos()) ? &GC.getANDConceptInfo((ANDConceptTypes)i) : NULL;
-}
-/************************************************************************************************/
-/* Afforess                                END                                                  */
-/************************************************************************************************/
 
 bool CyGlobalContext::isShiftDown() const {
 	return gDLL->shiftKey();

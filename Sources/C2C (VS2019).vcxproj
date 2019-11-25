@@ -326,7 +326,6 @@
     <ClInclude Include="CvDate.h" />
     <ClInclude Include="CvDeal.h" />
     <ClInclude Include="CvDefines.h" />
-    <ClInclude Include="CvDefinesModTools.h" />
     <ClInclude Include="CvDiploParameters.h" />
     <ClInclude Include="CvDLLButtonPopup.h" />
     <ClInclude Include="CvDLLDataStreamIFaceBase.h" />
