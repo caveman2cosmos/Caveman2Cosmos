@@ -158,7 +158,7 @@ bool BuildingSortName::isLesserBuilding(CvPlayer *pPlayer, CvCity *pCity, Buildi
 int BuildingSortProperty::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
 {
 	CvBuildingInfo& kInfo = GC.getBuildingInfo(eBuilding);
-	int iSum = kInfo.getProperties()->getValueByProperty((int)m_eProperty) + kInfo.getPropertiesAllCities()->getValueByProperty((int)m_eProperty);
+	int iSum = kInfo.getProperties()->getValueByProperty(m_eProperty) + kInfo.getPropertiesAllCities()->getValueByProperty(m_eProperty);
 
 	CvPropertyManipulators* pMani = kInfo.getPropertyManipulators();
 	int iNum = pMani->getNumSources();
@@ -167,7 +167,7 @@ int BuildingSortProperty::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, Bui
 		CvPropertySource* pSource = pMani->getSource(i);
 		if (pSource->getProperty() == m_eProperty)
 		{
-			iSum += pSource->getSourcePredict(pCity->getGameObjectConst(), pCity->getProperties()->getValueByProperty((int)m_eProperty));
+			iSum += pSource->getSourcePredict(pCity->getGameObjectConst(), pCity->getProperties()->getValueByProperty(m_eProperty));
 		}
 	}
 	return iSum;

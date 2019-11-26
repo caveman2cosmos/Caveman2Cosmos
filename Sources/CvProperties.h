@@ -50,22 +50,23 @@ public:
 	explicit CvProperties(CvUnit* pUnit);
 	explicit CvProperties(CvPlot* pPlot);
 
-	int getProperty(int index) const;
+	PropertyTypes getProperty(int index) const;
+
 	int getValue(int index) const;
-	int getChangeProperty(int index) const;
+	PropertyTypes getChangeProperty(int index) const;
 	int getChange(int index) const;
 	int getNumProperties() const;
-	int getPositionByProperty(int eProp) const;
-	int getValueByProperty(int eProp) const;
-	int getChangeByProperty(int eProp) const;
+	int getPositionByProperty(PropertyTypes eProp) const;
+	int getValueByProperty(PropertyTypes eProp) const;
+	int getChangeByProperty(PropertyTypes eProp) const;
 	void setValue(int index, int iVal);
 	void setChange(int index, int iVal);
-	void setValueByProperty(int eProp, int iVal);
-	void setChangeByProperty(int eProp, int iVal);
+	void setValueByProperty(PropertyTypes eProp, int iVal);
+	void setChangeByProperty(PropertyTypes eProp, int iVal);
 	void changeValue(int index, int iChange);
-	void changeValueByProperty(int eProp, int iChange);
-	void changeChangeByProperty(int eProp, int iChange);
-	void propagateChange(int eProp, int iChange);
+	void changeValueByProperty(PropertyTypes eProp, int iChange);
+	void changeChangeByProperty(PropertyTypes eProp, int iChange);
+	void propagateChange(PropertyTypes eProp, int iChange);
 	
 	void addProperties(const CvProperties* pProp);
 	void subtractProperties(const CvProperties* pProp);
@@ -101,10 +102,42 @@ public:
 	bool read(CvXMLLoadUtility* pXML, const wchar_t* szTagName = L"Properties");
 	void copyNonDefaults(CvProperties* pProp, CvXMLLoadUtility* pXML );
 
-	void getCheckSum(unsigned int& iSum);
-protected:
-	std::vector<std::pair<int,int> > m_aiProperty;
-	std::vector<std::pair<int,int> > m_aiPropertyChange;
+	void getCheckSum(unsigned int& iSum) const;
+
+private:
+	friend void CyPropertiesPythonInterface();
+
+	// Python variants with non-strict enum typing (don't use these in C++ code)
+	int _getProperty(int index) const { return static_cast<int>(getProperty(index)); }
+	int _getValueByProperty(int eProp) const { return getValueByProperty(static_cast<PropertyTypes>(eProp)); }
+	int _getChangeByProperty(int eProp) const { return getChangeByProperty(static_cast<PropertyTypes>(eProp)); }
+	void _setValueByProperty(int eProp, int iVal) { setValueByProperty(static_cast<PropertyTypes>(eProp), iVal); }
+	void _changeValueByProperty(int eProp, int iChange) { changeValueByProperty(static_cast<PropertyTypes>(eProp), iChange); }
+
+private:
+	struct PropertyValue
+	{
+		PropertyValue(PropertyTypes prop = NO_PROPERTY, int value = 0) : prop(prop), value(value) {}
+		PropertyTypes prop;
+		int value;
+		friend inline void CheckSum(unsigned int& iSum, const PropertyValue& propValue)
+		{
+			CheckSum(iSum, propValue.prop);
+			CheckSum(iSum, propValue.value);
+		}
+	};
+
+
+
+
+	static bool isNotSourceDrainProperty(const CvProperties::PropertyValue& p);
+
+	typedef std::vector<PropertyValue> PropertyValueVector;
+	typedef PropertyValueVector::const_iterator prop_value_const_iterator;
+	typedef PropertyValueVector::iterator prop_value_iterator;
+
+	PropertyValueVector m_aiProperty;
+	PropertyValueVector m_aiPropertyChange;
 	
 	// Pointer to the object to which the properties belong
 	CvGameObject* m_pGameObject;
