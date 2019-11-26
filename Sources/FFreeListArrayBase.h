@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef FFreeListArrayBase_h__
+#define FFreeListArrayBase_h__
+
 namespace FFreeList
 {
 	enum
@@ -8,3 +11,5 @@ namespace FFreeList
 		FREE_LIST_INDEX	= -2
 	};
 };
+
+#endif // FFreeListArrayBase_h__

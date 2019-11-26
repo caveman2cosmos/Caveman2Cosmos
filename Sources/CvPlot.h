@@ -1,5 +1,9 @@
 #pragma once
 
+#ifndef CvPlot_h__
+#define CvPlot_h__
+
+
 // CvPlot.h
 
 //#include "CvStructs.h"
@@ -1174,3 +1178,5 @@ protected:
 	ECvPlotGraphics::type m_visibleGraphics;
 	CvPlotPaging::paging_handle m_pagingHandle;
 };
+
+#endif // CvPlot_h__

@@ -533,9 +533,6 @@
     <ClInclude Include="CvDLLButtonPopup.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CvDLLDataStreamIFaceBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CvDLLEngineIFaceBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>

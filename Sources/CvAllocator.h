@@ -1,7 +1,9 @@
+#pragma once
+
+#ifndef CvAllocator_h__
+#define CvAllocator_h__
 
 #include <new>
-
-
 #include <typeinfo>
 
 namespace MemTrack
@@ -114,3 +116,5 @@ namespace MemTrack
 //
 //	return result;
 //}
+
+#endif // CvAllocator_h__

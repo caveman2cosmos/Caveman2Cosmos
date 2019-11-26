@@ -1,4 +1,8 @@
 #pragma once
+
+#ifndef CvReachablePlotSet_h__
+#define CvReachablePlotSet_h__
+
 #include <queue>
 #include "FProfiler.h"
 
@@ -78,3 +82,5 @@ protected:
 	CvReachablePlotSet*	m_proxyTo;
 	bool				m_bCachable;
 };
+
+#endif // CvReachablePlotSet_h__

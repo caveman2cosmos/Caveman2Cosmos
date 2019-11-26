@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef CvArea_h__
+#define CvArea_h__
+
 #include "CvGameCoreDLL.h"
 
 class CvCity;
@@ -227,3 +230,5 @@ private:
 	TurnCombatResults	m_combatRecord[COMBAT_RECORD_LENGTH];
 
 };
+
+#endif // CvArea_h__

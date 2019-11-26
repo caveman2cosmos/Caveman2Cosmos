@@ -328,7 +328,6 @@
     <ClInclude Include="CvDefines.h" />
     <ClInclude Include="CvDiploParameters.h" />
     <ClInclude Include="CvDLLButtonPopup.h" />
-    <ClInclude Include="CvDLLDataStreamIFaceBase.h" />
     <ClInclude Include="CvDLLEngineIFaceBase.h" />
     <ClInclude Include="CvDLLEntity.h" />
     <ClInclude Include="CvDLLEntityIFaceBase.h" />

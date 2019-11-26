@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef CV_MESSAGE_CONTROL
 #define CV_MESSAGE_CONTROL
 
@@ -57,6 +59,5 @@ public:
 	void sendArrestUnit(int iUnitID, PlayerTypes ePlayerT);
 	void sendAmbushConfirmation(bool bConfirm);
 };
-
 
 #endif
