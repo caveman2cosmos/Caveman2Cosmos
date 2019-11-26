@@ -35518,91 +35518,105 @@ bool CvUnitAI::AI_fulfillCityHealerNeed(CvPlot* pPlot)
 
 bool CvUnitAI::AI_fulfillPropertyControlNeed()
 {
-	CvCity* pLoopCity;
-	CvCity* pBestCity = NULL;
-	CvPlot* pLoopPlot;
-	CvPlot* pBestPlot = NULL;
-	CvPlot* endTurnPlot = NULL;
-	int iBestValue = 0;
-	int iPathTurns = 0;
-	PlayerTypes ePlayer = getOwner();
-	int iLoop = 0;
-	int iValue = 0;
-	int iNeed = 0;
-	int iProvides = 0;
-	int iResponders = 0;
-	int iExisting = 0;
-	int iMin = GC.getDefineINT("C2C_MIN_PROP_CONTROL");
-	bool bAtPlot = false;
-	CvPropertyManipulators* propertyManipulators = GC.getUnitInfo(getUnitType()).getPropertyManipulators();
+	const CvPropertyManipulators* propertyManipulators = GC.getUnitInfo(getUnitType()).getPropertyManipulators();
+	// If it doesn't change properties then it can't fullfil control needs
+	if (propertyManipulators == NULL)
+	{
+		return false;
+	}
+
+	struct PropertyAmount
+	{
+		PropertyAmount(PropertyTypes prop = NO_PROPERTY, int score = 0) : prop(prop), score(score) { }
+
+		PropertyTypes prop;
+		int score;
+	};
+	std::vector<PropertyAmount> propertyScores;
 
 	// loop through property types and get the difference between the target the AI wants the city to be at vs where it currently is
 	for (int iI = 0; iI < GC.getNumPropertyInfos(); iI++)
 	{
 		PropertyTypes eProperty = (PropertyTypes)iI;
-		iProvides = 0;
+		int score = 0;
 
 		//TBNote: in figuring out how much the unit provides, it's not as important as determining that it simply does provide.  Therefore, promotions and unitcombat values on the unit aren't checked (unless this already by nature does but I think it's only asking for base unit info)
-		if ( propertyManipulators != NULL )
+		for (int iJ = 0; iJ < propertyManipulators->getNumSources(); iJ++)
 		{
-			for(int iJ = 0; iJ < propertyManipulators->getNumSources(); iJ++)
-			{
-				CvPropertySource* pSource = propertyManipulators->getSource(iJ);
+			const CvPropertySource* pSource = propertyManipulators->getSource(iJ);
 
-				if ( pSource->getType() == PROPERTYSOURCE_CONSTANT && pSource->getObjectType() == GAMEOBJECT_CITY && pSource->getProperty() == eProperty )
-				{
-					iProvides += ((CvPropertySourceConstant*)pSource)->getAmountPerTurn(getGameObjectConst());
-				}
+			if (pSource->getType() == PROPERTYSOURCE_CONSTANT && pSource->getObjectType() == GAMEOBJECT_CITY && pSource->getProperty() == eProperty)
+			{
+				score += ((CvPropertySourceConstant*)pSource)->getAmountPerTurn(getGameObjectConst());
 			}
 		}
-		iProvides *= (GC.getPropertyInfo(eProperty).getAIWeight()/50);
-		if (iProvides < 1)
+		score *= GC.getPropertyInfo(eProperty).getAIWeight() / 50;
+		if (score >= 1)
 		{
-			continue;
+			propertyScores.push_back(PropertyAmount(eProperty, score));
 		}
+	}
 
-		for (pLoopCity = GET_PLAYER(ePlayer).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(ePlayer).nextCity(&iLoop))
+	int iMin = GC.getDefineINT("C2C_MIN_PROP_CONTROL");
+	const CvPlayer& player = GET_PLAYER(getOwner());
+	struct CityPropertyControlNeedScore
+	{
+		CvCity* city;
+		int score;
+		bool operator<(const CityPropertyControlNeedScore& other) const { return score < other.score; }
+	};
+	std::vector<CityPropertyControlNeedScore> scores;
+
+	// Score cities with straight line distance
+	// Select first that is navigable
+	for (CvPlayer::city_iterator citrItr = player.beginCities(); citrItr != player.endCities(); ++citrItr)
+	{
+		CvCity* pLoopCity = *citrItr;
+		CvPlot* pLoopPlot = pLoopCity->plot();
+		bool bAtPlot = atPlot(pLoopPlot);
+
+		// loop through property types and get the difference between the target the AI wants the city to be at vs where it currently is
+		for (std::vector<PropertyAmount>::const_iterator propItr = propertyScores.begin(); propItr != propertyScores.end(); ++propItr)
 		{
-			pLoopPlot = pLoopCity->plot();
-			bAtPlot = atPlot(pLoopPlot);
+			const PropertyAmount& propertyAmount = *propItr;
 
 			//int iCurrentValue = pLoopCity->getPropertiesConst()->getValueByProperty(eProperty);
-			iNeed = pLoopCity->getPropertyNeed(eProperty); 
-			iValue = 0;
-			if ( iI==0 )
-			{
-				iMin += ( pLoopCity->plot()->getNumCriminals() * 2 );//local criminals demand more attention even if crime is under full control
-			}
-			if (iNeed < 0 && !bAtPlot)
+			int iValue = pLoopCity->getPropertyNeed(propertyAmount.prop);
+
+			//if ( iI==0 )
+			//{
+			//	iMin += ( pLoopCity->plot()->getNumCriminals() * 2 ); //local criminals demand more attention even if crime is under full control
+			//}
+
+			if (iValue < 0 && !bAtPlot)
 			{
 				continue;
 			}
 
-			iValue = iNeed;
-		
-			iResponders = GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_PROPERTY_CONTROL_RESPONSE, NULL, 0);
-			iExisting = GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_PROPERTY_CONTROL_MAINTAIN, NULL, 0);
+			// This gets ALL property control missions, not just for this property...
+			int iResponders = player.AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_PROPERTY_CONTROL_RESPONSE, NULL, 0);
+			int iExisting = player.AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_PROPERTY_CONTROL_MAINTAIN, NULL, 0);
 			
 			if (iResponders > 0 && iValue > 0)
 			{
 				iValue /= iResponders;
 			}
-			//generate path seems horribly bugged if an enemy exists inside the city. Cannot assume a false to that means they can't move in!
-			iPathTurns = 0;
-			
+
+			// generate path seems horribly bugged if an enemy exists inside the city. Cannot assume a false to that means they can't move in!
 			if (bAtPlot)
 			{
 				if (iExisting <= iMin)
 				{
 					iValue += 1000;
 				}
-				iValue = std::max(100,iValue);//Ensure that SOME value is established to staying put.
+				iValue = std::max(100, iValue);//Ensure that SOME value is established to staying put.
 			}
 
 			if (iValue > 0)
 			{
 				if (!bAtPlot)
 				{
+					int iPathTurns = 0;
 					if (generateSafePathforVulnerable(pLoopPlot, &iPathTurns, MAX_INT, -1, false))
 					{
 						if (iPathTurns > 0)
@@ -35639,6 +35653,7 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 	{
 		if (!atPlot(pBestPlot))
 		{
+			int iPathTurns = 0;
 			if (generateSafePathforVulnerable(pBestPlot, &iPathTurns, MAX_INT, -1, true))
 			{
 				endTurnPlot = getPathEndTurnPlot();
