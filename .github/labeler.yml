@@ -5,3 +5,8 @@ tool: Tools/**/*
 xml: Assets/**/*.xml
 
 python: Assets/Python/**/*
+
+art:
+  - UnpackedArt/**/*
+  - ArtSource/**/*
+  - Assets/art/**/*
