@@ -9,6 +9,7 @@ xml:
 
 text:
   - Assets/XML/Text/**/*
+  - Assets/Modules/**/*text*.xml
 
 python:
   - Assets/Python/**/*
