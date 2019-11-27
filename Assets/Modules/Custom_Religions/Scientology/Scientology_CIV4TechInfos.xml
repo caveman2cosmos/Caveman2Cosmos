@@ -36,7 +36,7 @@
 			</OrPreReqs>
 			<Quote>TXT_KEY_RELIGION_SCIENTOLOGY_QUOTE</Quote>
 			<Sound>AS2D_TECH_SCIENTOLOGY2</Sound>
-			<SoundMP>AS2D_TECH_SCIENTOLOGY2</SoundMP>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Scientology.dds</Button>
 		</TechInfo>
 	</TechInfos>

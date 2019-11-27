@@ -11,7 +11,7 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<Quote>TXT_KEY_RELIGION_ANDEAN_QUOTE</Quote>
 			<Sound>AS2D_TECH_ANDEANISM</Sound>
-			<SoundMP>AS2D_TECH_ANDEANISM</SoundMP>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/techtree/andeanism.dds</Button>
 			<!-- Main properties -->
 			<iCost>242</iCost>

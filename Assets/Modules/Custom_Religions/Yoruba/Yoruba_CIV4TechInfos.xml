@@ -11,7 +11,7 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<Quote>TXT_KEY_RELIGION_YORUBA_QUOTE</Quote>
 			<Sound>AS2D_TECH_YORUBA2</Sound>
-			<SoundMP>AS2D_TECH_YORUBA2</SoundMP>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Yoruba.dds</Button>
 			<!-- Main properties -->
 			<iCost>187</iCost>

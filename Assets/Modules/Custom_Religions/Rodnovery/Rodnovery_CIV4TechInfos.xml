@@ -42,7 +42,7 @@
 			</AndPreReqs>
 			<Quote>TXT_KEY_RELIGION_RODNOVERY_QUOTE</Quote>
 			<Sound>AS2D_TECH_RODNOVERY</Sound>
-			<SoundMP>AS2D_TECH_RODNOVERY</SoundMP>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/techtree/Rodnovery.dds</Button>
 		</TechInfo>

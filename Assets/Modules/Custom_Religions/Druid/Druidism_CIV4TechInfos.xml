@@ -39,7 +39,7 @@
 			</OrPreReqs>
 			<Quote>TXT_KEY_RELIGION_DRUID_QUOTE</Quote>
 			<Sound>AS2D_TECH_DRUIDISM</Sound>
-			<SoundMP>AS2D_TECH_DRUIDISM</SoundMP>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>art/interface/buttons/techtree/Druidism.dds</Button>
 		</TechInfo>
 	</TechInfos>
