@@ -3649,7 +3649,7 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_PACHYDERM_DOMESTICATION</PrereqTech>
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_ANIMAL_RIDING_QUOTE</Quote>
-			<Sound>AS2D_TECH_GENERIC</Sound>
+			<Sound>AS2D_TECH_ANIMAL_RIDING</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Horseback_Riding.dds,Art/Interface/Buttons/TechTree_Atlas.dds,6,4</Button>
 		</TechInfo>

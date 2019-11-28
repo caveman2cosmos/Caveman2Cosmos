@@ -2932,7 +2932,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 				{
 					CvUnit* pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
 
-					if (pSelectedUnit->canDiscover(pMissionPlot))
+					if (pSelectedUnit->canDiscover())
 					{
 						TechTypes eTech = pSelectedUnit->getDiscoveryTech();
 	
@@ -6866,36 +6866,6 @@ void CvDLLWidgetData::parseDescriptionHelp(CvWidgetDataStruct &widgetDataStruct,
 			}
 		}
 		break;
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-	case CIVILOPEDIA_PAGE_CONCEPT_DCM:
-		{
-			DCMConceptTypes eConcept = (DCMConceptTypes)widgetDataStruct.m_iData2;
-			if (NO_DCM_CONCEPT != eConcept)
-			{
-				szBuffer.assign(GC.getDCMConceptInfo(eConcept).getDescription());
-			}
-		}
-		break;
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* Afforess                                     11/13/09                                        */
-/************************************************************************************************/
-	case CIVILOPEDIA_PAGE_CONCEPT_AND:
-		{
-			ANDConceptTypes eConcept = (ANDConceptTypes)widgetDataStruct.m_iData2;
-			if (NO_AND_CONCEPT != eConcept)
-			{
-				szBuffer.assign(GC.getANDConceptInfo(eConcept).getDescription());
-			}
-		}
-		break;
-/************************************************************************************************/
-/* Afforess                                    END                                              */
-/************************************************************************************************/
 	case CIVILOPEDIA_PAGE_SPECIALIST:
 		{
 			SpecialistTypes eSpecialist = (SpecialistTypes)widgetDataStruct.m_iData2;

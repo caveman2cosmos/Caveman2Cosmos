@@ -10,6 +10,10 @@
 //------------------------------------------------------------------------------------------------
 //  Copyright (c) 2002-2004 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
+#pragma once
+
+#ifndef FVariableSystem_h__
+#define FVariableSystem_h__
 
 typedef stdext::hash_map< std::string, FVariable *>::const_iterator VSIteratorC;
 typedef stdext::hash_map< std::string, FVariable *>::iterator VSIterator;
@@ -764,3 +768,5 @@ inline std::string FVariableSystem::GetNextVariableName( )
 	else
 		return "";
 }
+
+#endif // FVariableSystem_h__

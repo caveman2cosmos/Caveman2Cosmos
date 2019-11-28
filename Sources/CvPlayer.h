@@ -1278,16 +1278,58 @@ public:
 	CLLNode<CvWString>* headCityNameNode() const;
 
 	// plot groups iteration
+	class plot_group_iterator : public index_iterator_base<plot_group_iterator, CvPlayer, CvPlotGroup>
+	{
+	public:
+		typedef index_iterator_base<plot_group_iterator, CvPlayer, CvPlotGroup> base_type;
+		plot_group_iterator() {}
+		explicit plot_group_iterator(const CvPlayer* player) : base_type(player) {}
+		explicit plot_group_iterator(const CvPlayer* player, reverse_tag) : base_type(player, reverse_tag()) {}
+
+	private:
+		friend class index_iterator_core_access;
+		CvPlotGroup* first(const CvPlayer* player, int* pIterIdx, bool bRev = false) const { return player->firstPlotGroup(pIterIdx, bRev); }
+		CvPlotGroup* next(const CvPlayer* player, int* pIterIdx, bool bRev = false) const { return player->nextPlotGroup(pIterIdx, bRev); }
+	};
+	plot_group_iterator beginPlotGroups() const { return plot_group_iterator(this); }
+	plot_group_iterator endPlotGroups() const { return plot_group_iterator(); }
+	plot_group_iterator rbeginPlotGroups() const { return plot_group_iterator(this, plot_group_iterator::reverse_tag()); }
+	plot_group_iterator rendPlotGroups() const { return plot_group_iterator(); }
+
+	// deprecated, use plot_group_iterator
 	CvPlotGroup* firstPlotGroup(int* pIterIdx, bool bRev = false) const;
+	// deprecated, use plot_group_iterator
 	CvPlotGroup* nextPlotGroup(int* pIterIdx, bool bRev = false) const;
+
 	int getNumPlotGroups() const;
 	CvPlotGroup* getPlotGroup(int iID) const;
 	CvPlotGroup* addPlotGroup();
 	void deletePlotGroup(int iID);
 
 	// city iteration
+	class city_iterator : public index_iterator_base<city_iterator, CvPlayer, CvCity>
+	{
+	public:
+		typedef index_iterator_base<city_iterator, CvPlayer, CvCity> base_type;
+		city_iterator() {}
+		explicit city_iterator(const CvPlayer* player) : base_type(player) {}
+		explicit city_iterator(const CvPlayer* player, reverse_tag) : base_type(player, reverse_tag()) {}
+
+	private:
+		friend class index_iterator_core_access;
+		CvCity* first(const CvPlayer* player, int* pIterIdx, bool bRev = false) const { return player->firstCity(pIterIdx, bRev); }
+		CvCity* next(const CvPlayer* player, int* pIterIdx, bool bRev = false) const { return player->nextCity(pIterIdx, bRev); }
+	};
+	city_iterator beginCities() const { return city_iterator(this); }
+	city_iterator endCities() const { return city_iterator(); }
+	city_iterator rbeginCities() const { return city_iterator(this, city_iterator::reverse_tag()); }
+	city_iterator rendCities() const { return city_iterator(); }
+
+	// deprecated, use city_iterator
 	CvCity* firstCity(int* pIterIdx, bool bRev = false) const;																// Exposed to Python					
+	// deprecated, use city_iterator
 	CvCity* nextCity(int* pIterIdx, bool bRev = false) const;																	// Exposed to Python					
+
 	DllExport CvCity* firstCityExternal(int* pIterIdx, bool bRev = false) const;																// Exposed to Python					
 	DllExport CvCity* nextCityExternal(int* pIterIdx, bool bRev = false) const;																	// Exposed to Python					
 	DllExport int getNumCities() const;																																// Exposed to Python					
@@ -1296,35 +1338,19 @@ public:
 	void deleteCity(int iID);
 
 	// unit iteration
-	class unit_iterator : public boost::iterator_facade<unit_iterator, CvUnit*, boost::forward_traversal_tag, CvUnit*>
+	class unit_iterator : public index_iterator_base<unit_iterator, CvPlayer, CvUnit>
 	{
 	public:
-		unit_iterator() : m_player(NULL), m_reverse(false), m_curr(NULL), m_idx(0) {}
-		explicit unit_iterator(const CvPlayer* player) : m_player(player), m_reverse(false), m_idx(0)
-		{
-			m_curr = m_player->firstUnit(&m_idx, m_reverse);
-		}
-		struct reverse_tag {};
-		explicit unit_iterator(const CvPlayer* player, reverse_tag) : m_player(player), m_reverse(true), m_idx(0)
-		{
-			m_curr = m_player->firstUnit(&m_idx, m_reverse);
-		}
+		typedef index_iterator_base<unit_iterator, CvPlayer, CvUnit> base_type;
+		unit_iterator() {}
+		explicit unit_iterator(const CvPlayer* player) : base_type(player) {}
+		explicit unit_iterator(const CvPlayer* player, reverse_tag) : base_type(player, reverse_tag()) {}
 
 	private:
-		friend class boost::iterator_core_access;
-		void increment() { m_curr = m_player->nextUnit(&m_idx, m_reverse); }
-		bool equal(unit_iterator const& other) const 
-		{
-			return (this->m_player == other.m_player && this->m_curr == other.m_curr) || (this->m_curr == NULL && other.m_curr == NULL);
-		}
-		CvUnit* dereference() const { return m_curr; }
-
-		const CvPlayer* m_player;
-		CvUnit* m_curr;
-		bool m_reverse;
-		int m_idx;
+		friend class index_iterator_core_access;
+		CvUnit* first(const CvPlayer* player, int* pIterIdx, bool bRev = false) const { return player->firstUnit(pIterIdx, bRev); }
+		CvUnit* next(const CvPlayer* player, int* pIterIdx, bool bRev = false) const { return player->nextUnit(pIterIdx, bRev); }
 	};
-
 	unit_iterator beginUnits() const { return unit_iterator(this); }
 	unit_iterator endUnits() const { return unit_iterator(); }
 	unit_iterator rbeginUnits() const { return unit_iterator(this, unit_iterator::reverse_tag()); }
@@ -1333,8 +1359,9 @@ public:
 	safe_unit_iterator beginUnitsSafe() const { return safe_unit_iterator(beginUnits(), endUnits()); }
 	safe_unit_iterator endUnitsSafe() const { return safe_unit_iterator(); }
 
-
+	// deprecated, use unit_iterator
 	CvUnit* firstUnit(int* pIterIdx, bool bRev = false) const;																// Exposed to Python					
+	// deprecated, use unit_iterator
 	CvUnit* nextUnit(int* pIterIdx, bool bRev = false) const;																	// Exposed to Python					
 	DllExport CvUnit* firstUnitExternal(int* pIterIdx, bool bRev = false) const;																// Exposed to Python
 	DllExport CvUnit* nextUnitExternal(int* pIterIdx, bool bRev = false) const;																	// Exposed to Python					
@@ -1343,17 +1370,59 @@ public:
 	CvUnit* addUnit();
 	void deleteUnit(int iID);
 
-	// selection groups iteration																																
+	// selection groups iteration
+	class group_iterator : public index_iterator_base<group_iterator, CvPlayer, CvSelectionGroup>
+	{
+	public:
+		typedef index_iterator_base<group_iterator, CvPlayer, CvSelectionGroup> base_type;
+		group_iterator() {}
+		explicit group_iterator(const CvPlayer* player) : base_type(player) {}
+		explicit group_iterator(const CvPlayer* player, reverse_tag) : base_type(player, reverse_tag()) {}
+
+	private:
+		friend class index_iterator_core_access;
+		CvSelectionGroup* first(const CvPlayer* player, int* pIterIdx, bool bRev = false) const { return player->firstSelectionGroup(pIterIdx, bRev); }
+		CvSelectionGroup* next(const CvPlayer* player, int* pIterIdx, bool bRev = false) const { return player->nextSelectionGroup(pIterIdx, bRev); }
+	};
+	group_iterator beginGroups() const { return group_iterator(this); }
+	group_iterator endGroups() const { return group_iterator(); }
+	group_iterator rbeginGroups() const { return group_iterator(this, group_iterator::reverse_tag()); }
+	group_iterator rendGroups() const { return group_iterator(); }
+
+	// deprecated, use group_iterator
 	CvSelectionGroup* firstSelectionGroup(int* pIterIdx, bool bRev = false) const;						// Exposed to Python					
+	// deprecated, use group_iterator
 	CvSelectionGroup* nextSelectionGroup(int* pIterIdx, bool bRev = false) const;							// Exposed to Python					
 	int getNumSelectionGroups() const;																																// Exposed to Python
+
 	CvSelectionGroup* getSelectionGroup(int iID) const;																								// Exposed to Python
 	CvSelectionGroup* addSelectionGroup();
 	void deleteSelectionGroup(int iID);
 
-	// pending triggers iteration																																
+	// triggered events iteration
+	class event_iterator : public index_iterator_base<event_iterator, CvPlayer, EventTriggeredData>
+	{
+	public:
+		typedef index_iterator_base<event_iterator, CvPlayer, EventTriggeredData> base_type;
+		event_iterator() {}
+		explicit event_iterator(const CvPlayer* player) : base_type(player) {}
+		explicit event_iterator(const CvPlayer* player, reverse_tag) : base_type(player, reverse_tag()) {}
+
+	private:
+		friend class index_iterator_core_access;
+		EventTriggeredData* first(const CvPlayer* player, int* pIterIdx, bool bRev = false) const { return player->firstEventTriggered(pIterIdx, bRev); }
+		EventTriggeredData* next(const CvPlayer* player, int* pIterIdx, bool bRev = false) const { return player->nextEventTriggered(pIterIdx, bRev); }
+	};
+	event_iterator beginEvents() const { return event_iterator(this); }
+	event_iterator endEvents() const { return event_iterator(); }
+	event_iterator rbeginEvents() const { return event_iterator(this, event_iterator::reverse_tag()); }
+	event_iterator rendEvents() const { return event_iterator(); }
+
+	// deprecated, use event_iterator
 	EventTriggeredData* firstEventTriggered(int* pIterIdx, bool bRev = false) const;
+	// deprecated, use event_iterator
 	EventTriggeredData* nextEventTriggered(int* pIterIdx, bool bRev = false) const;
+
 	int getNumEventsTriggered() const;
 	EventTriggeredData* getEventTriggered(int iID) const;   // Exposed to Python
 	EventTriggeredData* addEventTriggered();

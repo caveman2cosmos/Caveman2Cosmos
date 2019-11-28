@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef CvContractBroker_h__
+#define CvContractBroker_h__
+
 #include "CvUnit.h"
 
 //	Define this to have cities advertise units needs and tender for the business of building them
@@ -133,3 +136,5 @@ private:
 	int								m_iNextWorkRequestId;
 	PlayerTypes						m_eOwner;
 };
+
+#endif // CvContractBroker_h__

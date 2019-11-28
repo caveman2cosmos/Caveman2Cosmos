@@ -5,6 +5,8 @@
 //  PURPOSE: A mission that has a cost and a result depending on an outcome list
 //
 //------------------------------------------------------------------------------------------------
+#pragma once
+
 #ifndef CV_OUTCOME_MISSION_H
 #define CV_OUTCOME_MISSION_H
 

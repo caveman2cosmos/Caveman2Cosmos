@@ -36,7 +36,7 @@
 			</Flavors>
 			<Quote>TXT_KEY_RELIGION_SIKHISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_SIKHISM</Sound>
-			<SoundMP>AS2D_TECH_SIKHISM</SoundMP>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/sikhism.dds</Button>
 		</TechInfo>
 	</TechInfos>

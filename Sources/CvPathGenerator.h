@@ -1,4 +1,8 @@
 #pragma once
+
+#ifndef CvPathGenerator_h__
+#define CvPathGenerator_h__
+
 #include <queue>
 #include "FProfiler.h"
 
@@ -293,3 +297,5 @@ public:
 	int									m_nodesCosted;
 };
 //#endif
+
+#endif // CvPathGenerator_h__

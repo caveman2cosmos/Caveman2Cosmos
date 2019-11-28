@@ -5696,7 +5696,7 @@ int  CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, int* paiBonusC
 
 	MEMORY_TRACK()
 
-	std::map<TechTypes,int>::const_iterator techValueItr = m_cachedTechValues.find(eTech);
+	TechTypesValueMap::const_iterator techValueItr = m_cachedTechValues.find(eTech);
 	if ( techValueItr == m_cachedTechValues.end() )
 	{
 		PROFILE("CvPlayerAI::AI_TechValueCached.CacheMiss");
@@ -5729,12 +5729,8 @@ int  CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, int* paiBonusC
 		//	What does it (immediately) lead to?
 		for(int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
 		{
-			bool	bIsORPreReq = false;
-			bool	bIsANDPreReq = false;
-			int		iANDPrereqs = 0;
-			int		iK;
-
-			for (iK = 0; iK < GC.getNUM_OR_TECH_PREREQS(); iK++)
+			bool bIsORPreReq = false;
+			for (int iK = 0; iK < GC.getNUM_OR_TECH_PREREQS(); iK++)
 			{
 				TechTypes ePrereq = (TechTypes)GC.getTechInfo((TechTypes)iJ).getPrereqOrTechs(iK);
 				if (ePrereq != NO_TECH)
@@ -5752,7 +5748,9 @@ int  CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, int* paiBonusC
 				}
 			}
 
-			for (iK = 0; iK < GC.getNUM_AND_TECH_PREREQS(); iK++)
+			bool bIsANDPreReq = false;
+			int iANDPrereqs = 0;
+			for (int iK = 0; iK < GC.getNUM_AND_TECH_PREREQS(); iK++)
 			{
 				TechTypes ePrereq = (TechTypes)GC.getTechInfo((TechTypes)iJ).getPrereqAndTechs(iK);
 				if (ePrereq != NO_TECH && !GET_TEAM(getTeam()).isHasTech(ePrereq))
@@ -15440,70 +15438,46 @@ int CvPlayerAI::AI_plotTargetMissionAIsinCargoVolume(CvPlot* pPlot, MissionAITyp
 	}
 
 	//	Only cache 0-range, specific mission AI results
-	std::map<MissionAITypes,boost::shared_ptr<std::map<CvPlot*,MissionTargetInfo> > >::const_iterator itr = ((iRange == 0 && eMissionAI != NO_MISSIONAI) ? m_missionTargetCache.find(eMissionAI) : m_missionTargetCache.end());
+	MissionPlotTargetMap::const_iterator foundMissionPlotMapItr = ((iRange == 0 && eMissionAI != NO_MISSIONAI) ? m_missionTargetCache.find(eMissionAI) : m_missionTargetCache.end());
 
-	if ( itr == m_missionTargetCache.end() )
+	if ( foundMissionPlotMapItr == m_missionTargetCache.end() )
 	{
 		if ( iRange == 0 && eMissionAI != NO_MISSIONAI )
 		{
-			std::map<CvPlot*,MissionTargetInfo>* pMap = new std::map<CvPlot*,MissionTargetInfo>();
+			PlotMissionTargetMap& plotMissionMap = m_missionTargetCache[eMissionAI];
 
-			if ( eMissionAI == MISSIONAI_SPREAD )
-			{
-				OutputDebugString(CvString::format("Build missionAI target cache for player %d\n", getID()).c_str());
-			}
 			//	Since we have to walk all the groups now anyway populate the full cache map for this missionAI
-			int iLoop;
-			for(CvSelectionGroup* pLoopSelectionGroup = firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = nextSelectionGroup(&iLoop))
+			for(group_iterator groupItr = beginGroups(); groupItr != endGroups(); ++groupItr)
 			{
+				CvSelectionGroup* pLoopSelectionGroup = *groupItr;
+
 				MissionAITypes eGroupMissionAI = pLoopSelectionGroup->AI_getMissionAIType();
+				if (eGroupMissionAI != eMissionAI)
+					continue;
 
-				if ( eGroupMissionAI == eMissionAI )
+				CvPlot* pMissionPlot = pLoopSelectionGroup->AI_getMissionAIPlot();
+				if (pMissionPlot == NULL)
+					continue;
+
+				int iDistance = stepDistance(pLoopSelectionGroup->getX(), pLoopSelectionGroup->getY(), pMissionPlot->getX_INLINE(), pMissionPlot->getY_INLINE());
+			
 				{
-					CvPlot* pMissionPlot = pLoopSelectionGroup->AI_getMissionAIPlot();
+					// Update cache
+					MissionTargetInfo& info = plotMissionMap[pMissionPlot];
+					info.iVolume += pLoopSelectionGroup->getNumUnitCargoVolumeTotal();
+					info.iClosest = std::min(info.iClosest, iDistance);
+				}
 
-					if (pMissionPlot != NULL)
+				if (pMissionPlot == pPlot)
+				{
+					iCount += pLoopSelectionGroup->getNumUnitCargoVolumeTotal();
+
+					if (piClosest != NULL)
 					{
-						int iDistance = stepDistance(pLoopSelectionGroup->getX(), pLoopSelectionGroup->getY(), pMissionPlot->getX_INLINE(), pMissionPlot->getY_INLINE());
-						std::map<CvPlot*,MissionTargetInfo>::iterator itr2 = pMap->find(pMissionPlot);
-
-						if ( eMissionAI == MISSIONAI_SPREAD )
-						{
-							OutputDebugString(CvString::format("(%d,%d), group %d (%d)\n", pMissionPlot->getX_INLINE(), pMissionPlot->getY_INLINE(), pLoopSelectionGroup->getID(), pLoopSelectionGroup->getNumUnits()).c_str());
-						}
-						if ( itr2 != pMap->end() )
-						{
-							itr2->second.iVolume += pLoopSelectionGroup->getNumUnitCargoVolumeTotal();
-							if ( iDistance < itr2->second.iClosest )
-							{
-								itr2->second.iClosest = iDistance;
-							}
-						}
-						else
-						{
-							MissionTargetInfo info;
-
-							info.iCount = 0;
-							info.iClosest = iDistance;
-							info.iVolume = pLoopSelectionGroup->getNumUnitCargoVolumeTotal();
-
-							pMap->insert(std::make_pair(pMissionPlot, info));
-						}
-
-						if ( pMissionPlot == pPlot )
-						{
-							iCount += pLoopSelectionGroup->getNumUnitCargoVolumeTotal();
-
-							if ( piClosest != NULL && iDistance < *piClosest )
-							{
-								*piClosest = iDistance;
-							}
-						}
+						*piClosest = std::min(*piClosest, iDistance);
 					}
 				}
 			}
-
-			m_missionTargetCache.insert(std::make_pair(eMissionAI, boost::shared_ptr<std::map<CvPlot*,MissionTargetInfo> >(pMap)));
 		}
 		else
 		{
@@ -15512,31 +15486,22 @@ int CvPlayerAI::AI_plotTargetMissionAIsinCargoVolume(CvPlot* pPlot, MissionAITyp
 	}
 	else
 	{
-		if ( eMissionAI == MISSIONAI_SPREAD )
-		{
-			OutputDebugString(CvString::format("Query missionAI target cache for player %d (%d,%d)\n", getID(),pPlot->getX_INLINE(), pPlot->getY_INLINE()).c_str());
-		}
-		std::map<CvPlot*,MissionTargetInfo>::const_iterator itr2 = itr->second.get()->find(pPlot);
+		const PlotMissionTargetMap& plotMissionTargetMap = foundMissionPlotMapItr->second;
+		PlotMissionTargetMap::const_iterator foundPlotInfoItr = plotMissionTargetMap.find(pPlot);
 
-		if ( itr2 != itr->second.get()->end() )
+		if (foundPlotInfoItr != plotMissionTargetMap.end())
 		{
-			iCount = itr2->second.iVolume;
+			const MissionTargetInfo& info = foundPlotInfoItr->second;
+
+			iCount = info.iVolume;
 			if ( piClosest != NULL )
 			{
-				*piClosest = itr2->second.iClosest;
-			}
-			if ( eMissionAI == MISSIONAI_SPREAD )
-			{
-				OutputDebugString(CvString::format("Found count of %d\n", iCount).c_str());
+				*piClosest = info.iClosest;
 			}
 		}
 		else
 		{
 			iCount = 0;
-			if ( eMissionAI == MISSIONAI_SPREAD )
-			{
-				OutputDebugString(CvString::format("No entry so return 0\n").c_str());
-			}
 		}
 	}
 
@@ -15545,10 +15510,6 @@ int CvPlayerAI::AI_plotTargetMissionAIsinCargoVolume(CvPlot* pPlot, MissionAITyp
 		 pPlot == pSkipSelectionGroup->AI_getMissionAIPlot())
 	{
 		iCount -= pSkipSelectionGroup->getNumUnitCargoVolumeTotal();
-		if ( eMissionAI == MISSIONAI_SPREAD )
-		{
-			OutputDebugString(CvString::format("Skip group matches plot - final count (in volume) %d\n", iCount).c_str());
-		}
 	}
 
 	return std::max(0, iCount);
@@ -15565,70 +15526,56 @@ int CvPlayerAI::AI_plotTargetMissionAIs(CvPlot* pPlot, MissionAITypes eMissionAI
 	}
 
 	//	Only cache 0-range, specific mission AI results
-	std::map<MissionAITypes,boost::shared_ptr<std::map<CvPlot*,MissionTargetInfo> > >::const_iterator itr = ((iRange == 0 && eMissionAI != NO_MISSIONAI) ? m_missionTargetCache.find(eMissionAI) : m_missionTargetCache.end());
+	MissionPlotTargetMap::const_iterator itr = ((iRange == 0 && eMissionAI != NO_MISSIONAI) ? m_missionTargetCache.find(eMissionAI) : m_missionTargetCache.end());
 
 	if ( itr == m_missionTargetCache.end() )
 	{
 		if ( iRange == 0 && eMissionAI != NO_MISSIONAI )
 		{
-			std::map<CvPlot*,MissionTargetInfo>* pMap = new std::map<CvPlot*,MissionTargetInfo>();
+			PlotMissionTargetMap& plotMissionTargetMap = m_missionTargetCache[eMissionAI];
 
-			if ( eMissionAI == MISSIONAI_SPREAD )
-			{
-				OutputDebugString(CvString::format("Build missionAI target cache for player %d\n", getID()).c_str());
-			}
 			//	Since we have to walk all the groups now anyway populate the full cache map for this missionAI
-			int iLoop;
-			for(CvSelectionGroup* pLoopSelectionGroup = firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = nextSelectionGroup(&iLoop))
+			for(group_iterator groupItr = beginGroups(); groupItr != endGroups(); ++groupItr)
 			{
+				CvSelectionGroup* pLoopSelectionGroup = *groupItr;
 				MissionAITypes eGroupMissionAI = pLoopSelectionGroup->AI_getMissionAIType();
 
-				if ( eGroupMissionAI == eMissionAI )
+				if (eGroupMissionAI != eMissionAI)
+					continue;
+				CvPlot* pMissionPlot = pLoopSelectionGroup->AI_getMissionAIPlot();
+				if(pMissionPlot == NULL)
+					continue;
+
+				int iDistance = stepDistance(pLoopSelectionGroup->getX(), pLoopSelectionGroup->getY(), pMissionPlot->getX_INLINE(), pMissionPlot->getY_INLINE());
+				PlotMissionTargetMap::iterator plotMissionTargetItr = plotMissionTargetMap.find(pMissionPlot);
+
+				if ( plotMissionTargetItr != plotMissionTargetMap.end() )
 				{
-					CvPlot* pMissionPlot = pLoopSelectionGroup->AI_getMissionAIPlot();
+					MissionTargetInfo& info = plotMissionTargetItr->second;
+					info.iCount += pLoopSelectionGroup->getNumUnits();
+					info.iClosest = std::min(info.iClosest, iDistance);
+				}
+				else
+				{
+					MissionTargetInfo info;
 
-					if (pMissionPlot != NULL)
+					info.iCount = 0;
+					info.iClosest = iDistance;
+					info.iCount = pLoopSelectionGroup->getNumUnits();
+
+					plotMissionTargetMap.insert(std::make_pair(pMissionPlot, info));
+				}
+
+				if ( pMissionPlot == pPlot )
+				{
+					iCount += pLoopSelectionGroup->getNumUnits();
+
+					if (piClosest != NULL)
 					{
-						int iDistance = stepDistance(pLoopSelectionGroup->getX(), pLoopSelectionGroup->getY(), pMissionPlot->getX_INLINE(), pMissionPlot->getY_INLINE());
-						std::map<CvPlot*,MissionTargetInfo>::iterator itr2 = pMap->find(pMissionPlot);
-
-						if ( eMissionAI == MISSIONAI_SPREAD )
-						{
-							OutputDebugString(CvString::format("(%d,%d), group %d (%d)\n", pMissionPlot->getX_INLINE(), pMissionPlot->getY_INLINE(), pLoopSelectionGroup->getID(), pLoopSelectionGroup->getNumUnits()).c_str());
-						}
-						if ( itr2 != pMap->end() )
-						{
-							itr2->second.iCount += pLoopSelectionGroup->getNumUnits();
-							if ( iDistance < itr2->second.iClosest )
-							{
-								itr2->second.iClosest = iDistance;
-							}
-						}
-						else
-						{
-							MissionTargetInfo info;
-
-							info.iCount = 0;
-							info.iClosest = iDistance;
-							info.iCount = pLoopSelectionGroup->getNumUnits();
-
-							pMap->insert(std::make_pair(pMissionPlot, info));
-						}
-
-						if ( pMissionPlot == pPlot )
-						{
-							iCount += pLoopSelectionGroup->getNumUnits();
-
-							if ( piClosest != NULL && iDistance < *piClosest )
-							{
-								*piClosest = iDistance;
-							}
-						}
+						*piClosest = std::min(*piClosest, iDistance);
 					}
 				}
 			}
-
-			m_missionTargetCache.insert(std::make_pair(eMissionAI, boost::shared_ptr<std::map<CvPlot*,MissionTargetInfo> >(pMap)));
 		}
 		else
 		{
@@ -15637,31 +15584,19 @@ int CvPlayerAI::AI_plotTargetMissionAIs(CvPlot* pPlot, MissionAITypes eMissionAI
 	}
 	else
 	{
-		if ( eMissionAI == MISSIONAI_SPREAD )
-		{
-			OutputDebugString(CvString::format("Query missionAI target cache for player %d (%d,%d)\n", getID(),pPlot->getX_INLINE(), pPlot->getY_INLINE()).c_str());
-		}
-		std::map<CvPlot*,MissionTargetInfo>::const_iterator itr2 = itr->second.get()->find(pPlot);
+		PlotMissionTargetMap::const_iterator plotMissionTargetItr = itr->second.find(pPlot);
 
-		if ( itr2 != itr->second.get()->end() )
+		if ( plotMissionTargetItr != itr->second.end() )
 		{
-			iCount = itr2->second.iCount;
+			iCount = plotMissionTargetItr->second.iCount;
 			if ( piClosest != NULL )
 			{
-				*piClosest = itr2->second.iClosest;
-			}
-			if ( eMissionAI == MISSIONAI_SPREAD )
-			{
-				OutputDebugString(CvString::format("Found count of %d\n", iCount).c_str());
+				*piClosest = plotMissionTargetItr->second.iClosest;
 			}
 		}
 		else
 		{
 			iCount = 0;
-			if ( eMissionAI == MISSIONAI_SPREAD )
-			{
-				OutputDebugString(CvString::format("No entry so return 0\n").c_str());
-			}
 		}
 	}
 
@@ -15670,10 +15605,6 @@ int CvPlayerAI::AI_plotTargetMissionAIs(CvPlot* pPlot, MissionAITypes eMissionAI
 		 pPlot == pSkipSelectionGroup->AI_getMissionAIPlot())
 	{
 		iCount -= pSkipSelectionGroup->getNumUnits();
-		if ( eMissionAI == MISSIONAI_SPREAD )
-		{
-			OutputDebugString(CvString::format("Skip group matches plot - final count %d\n", iCount).c_str());
-		}
 	}
 
 	FAssert(iCount >= 0);
@@ -15682,44 +15613,25 @@ int CvPlayerAI::AI_plotTargetMissionAIs(CvPlot* pPlot, MissionAITypes eMissionAI
 
 void CvPlayerAI::AI_noteMissionAITargetCountChange(MissionAITypes eMissionAI, CvPlot* pPlot, int iChange, CvPlot* pUnitPlot, int iVolume)
 {
-	std::map<MissionAITypes,boost::shared_ptr<std::map<CvPlot*,MissionTargetInfo> > >::const_iterator itr = m_missionTargetCache.find(eMissionAI);
+	MissionPlotTargetMap::iterator foundPlotMissionMapItr = m_missionTargetCache.find(eMissionAI);
 
-	if ( eMissionAI == MISSIONAI_SPREAD )
+	if ( foundPlotMissionMapItr != m_missionTargetCache.end() )
 	{
-		OutputDebugString(CvString::format("Chnage plot target count (%d,%d), change=%d\n", pPlot->getX_INLINE(), pPlot->getY_INLINE(),iChange).c_str());
-	}
-
-	if ( itr != m_missionTargetCache.end() )
-	{
-		std::map<CvPlot*,MissionTargetInfo>::iterator itr2 = itr->second.get()->find(pPlot);
+		PlotMissionTargetMap& plotMissionTargetMap = foundPlotMissionMapItr->second;
+		MissionTargetInfo& info = plotMissionTargetMap[pPlot];
 
 		int iDistance = (pUnitPlot == NULL ? MAX_INT : stepDistance(pPlot->getX_INLINE(), pPlot->getY_INLINE(), pUnitPlot->getX_INLINE(), pUnitPlot->getY_INLINE()));
 
-		if ( itr2 != itr->second.get()->end() )
-		{
-			itr2->second.iCount += iChange;
-			itr2->second.iVolume += iVolume;
+		info.iCount += iChange;
+		info.iVolume += iVolume;
 
-			if ( itr2->second.iCount == 0 )
-			{
-				itr2->second.iClosest = MAX_INT;
-			}
-			else if ( iDistance < itr2->second.iClosest )
-			{
-				itr2->second.iClosest = iDistance;
-			}
+		if (info.iCount == 0 )
+		{
+			info.iClosest = MAX_INT;
 		}
-		else
+		else if ( iDistance < info.iClosest )
 		{
-			FAssert(iChange > 0);
-
-			MissionTargetInfo info;
-
-			info.iCount = iChange;
 			info.iClosest = iDistance;
-			info.iVolume = iVolume;
-
-			itr->second.get()->insert(std::make_pair(pPlot, info));
 		}
 	}
 }
@@ -42599,7 +42511,7 @@ int CvPlayerAI::AI_getNavalMilitaryProductionCityCount() const
 int	CvPlayerAI::AI_getNumBuildingsNeeded(BuildingTypes eBuilding, bool bCoastal) const
 {
 	//	Total needed to have one in every city
-	std::map<BuildingTypes,int>::const_iterator itr = m_numBuildingsNeeded.find(eBuilding);
+	BuildingCountMap::const_iterator itr = m_numBuildingsNeeded.find(eBuilding);
 
 	if ( itr == m_numBuildingsNeeded.end() )
 	{
@@ -42629,7 +42541,7 @@ int	CvPlayerAI::AI_getNumBuildingsNeeded(BuildingTypes eBuilding, bool bCoastal)
 	}
 }
 
-void	CvPlayerAI::AI_changeNumBuildingsNeeded(BuildingTypes eBuilding, int iChange)
+void CvPlayerAI::AI_changeNumBuildingsNeeded(BuildingTypes eBuilding, int iChange)
 {
 	m_numBuildingsNeeded[eBuilding] += iChange;
 }

@@ -10,7 +10,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Build this building to disable Human Sacrifice, Cannibalism and Slavery worldviews. Slavery disables very important buildings including Factory.</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Build this building to disable Human Sacrifice, Cannibalism and Slavery worldviews. Slavery used to disable factory, now it just has big maluses, that accumulate over time from techs</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION_PEDIA</Tag>

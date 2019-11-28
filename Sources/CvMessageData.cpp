@@ -1757,7 +1757,7 @@ void CvNetChooseMergeUnit::Execute()
 								pkMergedUnit->afflict(GC.getPromotionInfo(ePromotion).getPromotionLine());
 							}
 						}
-						else if (pUnit1->isPromotionFree(ePromotion) || pUnit2->isPromotionFree((PromotionTypes)iI) || pUnit3->isPromotionFree((PromotionTypes)iI))
+						else if (pUnit1->isPromotionFree(ePromotion) || pUnit2->isPromotionFree(ePromotion) || pUnit3->isPromotionFree(ePromotion))
 						{
 							pkMergedUnit->setHasPromotion(ePromotion, true, true);
 						}
@@ -1780,14 +1780,14 @@ void CvNetChooseMergeUnit::Execute()
 				{
 					if (pUnit1->isHasPromotion(ePromotion) || pUnit2->isHasPromotion(ePromotion) || pUnit3->isHasPromotion(ePromotion))
 					{
-						iTotalQualityOffset += GC.getPromotionInfo((PromotionTypes)iI).getQualityChange();
+						iTotalQualityOffset += GC.getPromotionInfo(ePromotion).getQualityChange();
 					}
 				}
 				else if (GC.getPromotionInfo(ePromotion).getGroupChange() != 0)
 				{
 					if (pUnit1->isHasPromotion(ePromotion) || pUnit2->isHasPromotion(ePromotion) || pUnit3->isHasPromotion(ePromotion))
 					{
-						iTotalGroupOffset += GC.getPromotionInfo((PromotionTypes)iI).getGroupChange();
+						iTotalGroupOffset += GC.getPromotionInfo(ePromotion).getGroupChange();
 					}
 				}
 			}

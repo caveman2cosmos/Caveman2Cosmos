@@ -39,7 +39,7 @@
 			</Flavors>
 			<Quote>TXT_KEY_RELIGION_SHINTOISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_SHINTOISM</Sound>
-			<SoundMP>AS2D_TECH_SHINTOISM</SoundMP>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Shintoism.dds</Button>
 		</TechInfo>
 	</TechInfos>

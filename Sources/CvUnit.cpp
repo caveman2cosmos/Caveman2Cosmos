@@ -1775,7 +1775,7 @@ void CvUnit::doTurn()
 		}
 	}
 	
-	if (getDesiredDiscoveryTech() != NO_TECH && canDiscover(NULL))
+	if (getDesiredDiscoveryTech() != NO_TECH && canDiscover())
 	{
 		if (getDesiredDiscoveryTech() == getDiscoveryTech())
 		{
@@ -9395,10 +9395,10 @@ bool CvUnit::setMADTargetPlot(int iX, int iY)
 			MEMORY_TRACK_EXEMPT();
 
 			szBuffer = gDLL->getText("TXT_KEY_NUKE_TARGET_SET_ON", getNameKey(), pCity->getNameKey());
-			AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
 
 			szBuffer = gDLL->getText("Someone has targetted %s1 with a nuke!", pCity->getNameKey());
-			AddDLLMessage(pCity->getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+			AddDLLMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
 		}
 
 		finishMoves();
@@ -10369,9 +10369,9 @@ bool CvUnit::airBomb(int iX, int iY)
 							MEMORY_TRACK_EXEMPT();
 
 							szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB_POP");
-							AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+							AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
 							szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB_POP");
-							AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+							AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
 						}
 					}
 				}
@@ -12421,7 +12421,7 @@ int CvUnit::getDiscoverResearch(TechTypes eTech) const
 }
 
 
-bool CvUnit::canDiscover(const CvPlot* pPlot) const
+bool CvUnit::canDiscover() const
 {
 	TechTypes eTech;
 
@@ -12448,14 +12448,12 @@ bool CvUnit::canDiscover(const CvPlot* pPlot) const
 
 bool CvUnit::discover()
 {
-	TechTypes eDiscoveryTech;
-
-	if (!canDiscover(plot()))
+	if (!canDiscover())
 	{
 		return false;
 	}
 
-	eDiscoveryTech = getDiscoveryTech();
+	TechTypes eDiscoveryTech = getDiscoveryTech();
 	FAssertMsg(eDiscoveryTech != NO_TECH, "DiscoveryTech is not assigned a valid value");
 
 	GET_TEAM(getTeam()).changeResearchProgress(eDiscoveryTech, getDiscoverResearch(eDiscoveryTech), getOwnerINLINE());
@@ -31022,16 +31020,13 @@ bool CvUnit::canAirBomb1At(const CvPlot* pPlot, int iX, int iY) const
 
 bool CvUnit::airBomb1(int iX, int iY)
 {
-	CvCity* pCity;
-	CvPlot* pPlot;
 	CvWString szBuffer;
-	bool bBitter = true;
 
 	if (!canAirBomb1At(plot(), iX, iY))
 	{
 		return false;
 	}
-	pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	CvPlot* pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
 	if (interceptTest(pPlot))
 	{
 		return true;
@@ -31046,104 +31041,101 @@ bool CvUnit::airBomb1(int iX, int iY)
 /************************************************************************************************/
 /* RevolutionDCM	             Battle Effects END                                             */
 /************************************************************************************************/
-	pCity = pPlot->getPlotCity();
-	if (bBitter)
+	CvCity* pCity = pPlot->getPlotCity();
+	if (pCity != NULL)
 	{
-		if (pCity != NULL)
+		pCity->changeDefenseDamage(airBombCurrRate());
+		bool bBarb = pCity->isHominid();
+		//TB Combat Mods begin
+		int iMax = MAX_INT;
+		if (!GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
 		{
-			pCity->changeDefenseDamage(airBombCurrRate());
-			bool bBarb = pCity->isHominid();
-			//TB Combat Mods begin
-			int iMax = MAX_INT;
-			if (!GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
-			{
-				iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
-			}
-			changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwnerINLINE() == getOwnerINLINE());
-			//TB Combat Mods end
-
-			MEMORY_TRACK_EXEMPT();
-
-			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_DEFENSES_REDUCED_TO", pCity->getNameKey(), pCity->getDefenseModifier(false), getNameKey());
-			AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
-
-			szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_DEFENSES_REDUCED_TO", getNameKey(), pCity->getNameKey(), pCity->getDefenseModifier(false));
-			AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE());
+			iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
 		}
-		else
+		changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwnerINLINE() == getOwnerINLINE());
+		//TB Combat Mods end
+
+		MEMORY_TRACK_EXEMPT();
+
+		szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_DEFENSES_REDUCED_TO", pCity->getNameKey(), pCity->getDefenseModifier(false), getNameKey());
+		AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+
+		szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_DEFENSES_REDUCED_TO", getNameKey(), pCity->getNameKey(), pCity->getDefenseModifier(false));
+		AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE());
+	}
+	else
+	{
+		if (pPlot->getImprovementType() != NO_IMPROVEMENT)
 		{
-			if (pPlot->getImprovementType() != NO_IMPROVEMENT)
+			if (GC.getGameINLINE().getSorenRandNum(airBombCurrRate(), "Air Bomb - Offense") >=
+					GC.getGameINLINE().getSorenRandNum(GC.getImprovementInfo(pPlot->getImprovementType()).getAirBombDefense(), "Air Bomb - Defense"))
 			{
-				if (GC.getGameINLINE().getSorenRandNum(airBombCurrRate(), "Air Bomb - Offense") >=
-						GC.getGameINLINE().getSorenRandNum(GC.getImprovementInfo(pPlot->getImprovementType()).getAirBombDefense(), "Air Bomb - Defense"))
+				{
+					MEMORY_TRACK_EXEMPT();
+
+					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DESTROYED_IMP", getNameKey(), GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
+					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
+				}
+
+				if (pPlot->isOwned())
 				{
 					{
 						MEMORY_TRACK_EXEMPT();
 
-						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DESTROYED_IMP", getNameKey(), GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
+						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_IMP_WAS_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide(), getNameKey(), GET_PLAYER(getOwnerINLINE()).getCivilizationAdjectiveKey());
+						AddDLLMessage(pPlot->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
 					}
-
-					if (pPlot->isOwned())
+					bool bBarb = GET_PLAYER(pPlot->getOwnerINLINE()).isHominid();
+					//TB Combat Mods begin
+					int iMax = MAX_INT;
+					if (!GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
 					{
-						{
-							MEMORY_TRACK_EXEMPT();
-
-							szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_IMP_WAS_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide(), getNameKey(), GET_PLAYER(getOwnerINLINE()).getCivilizationAdjectiveKey());
-							AddDLLMessage(pPlot->getOwnerINLINE(), false, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
-						}
-						bool bBarb = GET_PLAYER(pPlot->getOwnerINLINE()).isHominid();
-						//TB Combat Mods begin
-						int iMax = MAX_INT;
-						if (!GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
-						{
-							iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
-						}
-						changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pPlot->getOwnerINLINE() == getOwnerINLINE());
-						//TB Combat Mods end
+						iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
 					}
+					changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pPlot->getOwnerINLINE() == getOwnerINLINE());
+					//TB Combat Mods end
+				}
 
-					pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
-					
-					CvUnit* pLoopUnit;
-					CLLNode<IDInfo>* pUnitNode;
-					//Afflict
-					int iDistanceAttackCommunicability = 0;
-					bool bAffliction = false;
-					if (GC.getGameINLINE().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
-					{
-						for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
-						{ 
-							if (GC.getPromotionLineInfo((PromotionLineTypes)iI).isAffliction() && !GC.getPromotionLineInfo((PromotionLineTypes)iI).isCritical())
+				pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
+				
+				CvUnit* pLoopUnit;
+				CLLNode<IDInfo>* pUnitNode;
+				//Afflict
+				int iDistanceAttackCommunicability = 0;
+				bool bAffliction = false;
+				if (GC.getGameINLINE().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
+				{
+					for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
+					{ 
+						if (GC.getPromotionLineInfo((PromotionLineTypes)iI).isAffliction() && !GC.getPromotionLineInfo((PromotionLineTypes)iI).isCritical())
+						{
+							//Distance Communicability 
+							iDistanceAttackCommunicability = getDistanceAttackCommunicability((PromotionLineTypes)iI);
+							bool bDistAttComm = iDistanceAttackCommunicability > 0;
+							PromotionLineTypes eAfflictionLine = ((PromotionLineTypes)iI);
+							bool bAffonAtt = (hasAfflictOnAttackType(eAfflictionLine) && isAfflictOnAttackTypeDistance(eAfflictionLine));
+							if (bDistAttComm || bAffonAtt)
 							{
-								//Distance Communicability 
-								iDistanceAttackCommunicability = getDistanceAttackCommunicability((PromotionLineTypes)iI);
-								bool bDistAttComm = iDistanceAttackCommunicability > 0;
-								PromotionLineTypes eAfflictionLine = ((PromotionLineTypes)iI);
-								bool bAffonAtt = (hasAfflictOnAttackType(eAfflictionLine) && isAfflictOnAttackTypeDistance(eAfflictionLine));
-								if (bDistAttComm || bAffonAtt)
+								bAffliction = true;
+								pUnitNode = pPlot->headUnitNode();
+								while (pUnitNode != NULL)
 								{
-									bAffliction = true;
-									pUnitNode = pPlot->headUnitNode();
-									while (pUnitNode != NULL)
+									pLoopUnit = ::getUnit(pUnitNode->m_data);
+									pUnitNode = pPlot->nextUnitNode(pUnitNode);
+									if (bDistAttComm)
 									{
-										pLoopUnit = ::getUnit(pUnitNode->m_data);
-										pUnitNode = pPlot->nextUnitNode(pUnitNode);
-										if (bDistAttComm)
+										if (pLoopUnit->checkContractDisease(eAfflictionLine, iDistanceAttackCommunicability))
 										{
-											if (pLoopUnit->checkContractDisease(eAfflictionLine, iDistanceAttackCommunicability))
-											{
-												pLoopUnit->afflict(eAfflictionLine);
-											}
+											pLoopUnit->afflict(eAfflictionLine);
 										}
-										if (bAffonAtt)
+									}
+									if (bAffonAtt)
+									{
+										int iAttackersPoisonChance = getAfflictOnAttackTypeProbability(eAfflictionLine) - pLoopUnit->fortitudeTotal() - pLoopUnit->getUnitAfflictionTolerance(eAfflictionLine);
+										int iAttackersPoisonRollResult = GC.getGameINLINE().getSorenRandNum(100, "AttackersPoisonRoll");
+										if (iAttackersPoisonRollResult < iAttackersPoisonChance)
 										{
-											int iAttackersPoisonChance = getAfflictOnAttackTypeProbability(eAfflictionLine) - pLoopUnit->fortitudeTotal() - pLoopUnit->getUnitAfflictionTolerance(eAfflictionLine);
-											int iAttackersPoisonRollResult = GC.getGameINLINE().getSorenRandNum(100, "AttackersPoisonRoll");
-											if (iAttackersPoisonRollResult < iAttackersPoisonChance)
-											{
-												pLoopUnit->afflict(eAfflictionLine, true, this);
-											}
+											pLoopUnit->afflict(eAfflictionLine, true, this);
 										}
 									}
 								}
@@ -31151,13 +31143,13 @@ bool CvUnit::airBomb1(int iX, int iY)
 						}
 					}
 				}
-				else
-				{
-					MEMORY_TRACK_EXEMPT();
+			}
+			else
+			{
+				MEMORY_TRACK_EXEMPT();
 
-					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_FAIL_DESTROY_IMP", getNameKey(), GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMB_FAILS", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
-				}
+				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_FAIL_DESTROY_IMP", getNameKey(), GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
+				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMB_FAILS", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
 			}
 		}
 	}
@@ -31237,7 +31229,6 @@ bool CvUnit::airBomb2(int iX, int iY)
 	CvPlot* pPlot;
 	CvWString szBuffer;
 	int build, iI, iAttempts, iMaxAttempts;
-	bool bBitter = true;
 	bool bNoTarget = true;
 	bool abTech1 = false;
 	bool abTech2 = false;
@@ -31281,114 +31272,111 @@ bool CvUnit::airBomb2(int iX, int iY)
 			}
 		}
 	}
-	if (bBitter)
+	if (pCity != NULL)
 	{
-		if (pCity != NULL)
+		buildingList.clear();
+		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
-			buildingList.clear();
-			for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+			if (GC.getBuildingInfo((BuildingTypes)iI).getDCMAirbombMission() == 2)
 			{
-				if (GC.getBuildingInfo((BuildingTypes)iI).getDCMAirbombMission() == 2)
+				buildingList.insertAtEnd(iI);
+			}
+		}
+		if (buildingList.getLength() > 0)
+		{
+			iI = GC.getGameINLINE().getSorenRandNum(buildingList.getLength(), "Airbomb building");
+			build = buildingList.nodeNum(iI)->m_data;
+			if (pCity->getNumRealBuilding((BuildingTypes)build) > 0)
+			{
+				bNoTarget = false;
+			}
+			if (abTech1)
+			{
+				iAttempts = 0;
+				if (abTech2)
 				{
-					buildingList.insertAtEnd(iI);
+					iMaxAttempts = 8;
+				}
+				else
+				{
+					iMaxAttempts = 4;
+				}
+				while (bNoTarget)
+				{
+					iAttempts++;
+					iI = GC.getGameINLINE().getSorenRandNum(buildingList.getLength(), "Airbomb building");
+					build = buildingList.nodeNum(iI)->m_data;
+					if (pCity->getNumRealBuilding((BuildingTypes)build) > 0 || iAttempts > iMaxAttempts)
+					{
+						bNoTarget = false;
+					}
 				}
 			}
-			if (buildingList.getLength() > 0)
+			if (pCity->getNumRealBuilding((BuildingTypes)build) > 0)
 			{
-				iI = GC.getGameINLINE().getSorenRandNum(buildingList.getLength(), "Airbomb building");
-				build = buildingList.nodeNum(iI)->m_data;
-				if (pCity->getNumRealBuilding((BuildingTypes)build) > 0)
+				bNoTarget = false;
+				bool bBarb = pCity->isHominid();
+				//TB Combat Mod begin
+				int iMax = MAX_INT;
+				if (!GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
 				{
-					bNoTarget = false;
+					iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
 				}
-				if (abTech1)
+				changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwnerINLINE() == getOwnerINLINE());
+				//TB Combat Mod end
+				pCity->setNumRealBuilding((BuildingTypes)build, 0);
+
 				{
-					iAttempts = 0;
-					if (abTech2)
-					{
-						iMaxAttempts = 8;
-					}
-					else
-					{
-						iMaxAttempts = 4;
-					}
-					while (bNoTarget)
-					{
-						iAttempts++;
-						iI = GC.getGameINLINE().getSorenRandNum(buildingList.getLength(), "Airbomb building");
-						build = buildingList.nodeNum(iI)->m_data;
-						if (pCity->getNumRealBuilding((BuildingTypes)build) > 0 || iAttempts > iMaxAttempts)
+					MEMORY_TRACK_EXEMPT();
+
+					szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB2SUCCESS", GC.getBuildingInfo((BuildingTypes)build).getTextKeyWide(), pCity->getNameKey());
+					AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB2SUCCESS", GC.getBuildingInfo((BuildingTypes)build).getTextKeyWide(), pCity->getNameKey());
+					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+				}
+
+				CvUnit* pLoopUnit;
+				CLLNode<IDInfo>* pUnitNode;
+				//Afflict
+				int iDistanceAttackCommunicability = 0;
+				bool bAffliction = false;
+				if (GC.getGameINLINE().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
+				{
+					for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
+					{ 
+						if (GC.getPromotionLineInfo((PromotionLineTypes)iI).isAffliction() && !GC.getPromotionLineInfo((PromotionLineTypes)iI).isCritical())
 						{
-							bNoTarget = false;
-						}
-					}
-				}
-				if (pCity->getNumRealBuilding((BuildingTypes)build) > 0)
-				{
-					bNoTarget = false;
-					bool bBarb = pCity->isHominid();
-					//TB Combat Mod begin
-					int iMax = MAX_INT;
-					if (!GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
-					{
-						iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
-					}
-					changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwnerINLINE() == getOwnerINLINE());
-					//TB Combat Mod end
-					pCity->setNumRealBuilding((BuildingTypes)build, 0);
-
-					{
-						MEMORY_TRACK_EXEMPT();
-
-						szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB2SUCCESS", GC.getBuildingInfo((BuildingTypes)build).getTextKeyWide(), pCity->getNameKey());
-						AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
-						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB2SUCCESS", GC.getBuildingInfo((BuildingTypes)build).getTextKeyWide(), pCity->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
-					}
-
-					CvUnit* pLoopUnit;
-					CLLNode<IDInfo>* pUnitNode;
-					//Afflict
-					int iDistanceAttackCommunicability = 0;
-					bool bAffliction = false;
-					if (GC.getGameINLINE().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
-					{
-						for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
-						{ 
-							if (GC.getPromotionLineInfo((PromotionLineTypes)iI).isAffliction() && !GC.getPromotionLineInfo((PromotionLineTypes)iI).isCritical())
+							//Distance Communicability 
+							iDistanceAttackCommunicability = getDistanceAttackCommunicability((PromotionLineTypes)iI);
+							bool bDistAttComm = iDistanceAttackCommunicability > 0;
+							PromotionLineTypes eAfflictionLine = ((PromotionLineTypes)iI);
+							bool bAffonAtt = (hasAfflictOnAttackType(eAfflictionLine) && isAfflictOnAttackTypeDistance(eAfflictionLine));
+							if (bDistAttComm || bAffonAtt)
 							{
-								//Distance Communicability 
-								iDistanceAttackCommunicability = getDistanceAttackCommunicability((PromotionLineTypes)iI);
-								bool bDistAttComm = iDistanceAttackCommunicability > 0;
-								PromotionLineTypes eAfflictionLine = ((PromotionLineTypes)iI);
-								bool bAffonAtt = (hasAfflictOnAttackType(eAfflictionLine) && isAfflictOnAttackTypeDistance(eAfflictionLine));
-								if (bDistAttComm || bAffonAtt)
+								bAffliction = true;
+								pUnitNode = pPlot->headUnitNode();
+								while (pUnitNode != NULL)
 								{
-									bAffliction = true;
-									pUnitNode = pPlot->headUnitNode();
-									while (pUnitNode != NULL)
+									pLoopUnit = ::getUnit(pUnitNode->m_data);
+									pUnitNode = pPlot->nextUnitNode(pUnitNode);
+									if (bDistAttComm)
 									{
-										pLoopUnit = ::getUnit(pUnitNode->m_data);
-										pUnitNode = pPlot->nextUnitNode(pUnitNode);
-										if (bDistAttComm)
+										if (pLoopUnit->checkContractDisease(eAfflictionLine, iDistanceAttackCommunicability))
 										{
-											if (pLoopUnit->checkContractDisease(eAfflictionLine, iDistanceAttackCommunicability))
-											{
-												pLoopUnit->afflict(eAfflictionLine);
-											}
-											if (pCity != NULL)
-											{
-												pCity->changePromotionLineAfflictionAttackCommunicability(eAfflictionLine, iDistanceAttackCommunicability);
-											}
+											pLoopUnit->afflict(eAfflictionLine);
 										}
-										if (bAffonAtt)
+										if (pCity != NULL)
 										{
-											int iAttackersPoisonChance = getAfflictOnAttackTypeProbability(eAfflictionLine) - pLoopUnit->fortitudeTotal() - pLoopUnit->getUnitAfflictionTolerance(eAfflictionLine);
-											int iAttackersPoisonRollResult = GC.getGameINLINE().getSorenRandNum(100, "AttackersPoisonRoll");
-											if (iAttackersPoisonRollResult < iAttackersPoisonChance)
-											{
-												pLoopUnit->afflict(eAfflictionLine, true, this);
-											}
+											pCity->changePromotionLineAfflictionAttackCommunicability(eAfflictionLine, iDistanceAttackCommunicability);
+										}
+									}
+									if (bAffonAtt)
+									{
+										int iAttackersPoisonChance = getAfflictOnAttackTypeProbability(eAfflictionLine) - pLoopUnit->fortitudeTotal() - pLoopUnit->getUnitAfflictionTolerance(eAfflictionLine);
+										int iAttackersPoisonRollResult = GC.getGameINLINE().getSorenRandNum(100, "AttackersPoisonRoll");
+										if (iAttackersPoisonRollResult < iAttackersPoisonChance)
+										{
+											pLoopUnit->afflict(eAfflictionLine, true, this);
 										}
 									}
 								}
@@ -31396,32 +31384,32 @@ bool CvUnit::airBomb2(int iX, int iY)
 						}
 					}
 				}
-				else
-				{
-					MEMORY_TRACK_EXEMPT();
-
-					szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB2FAIL", pCity->getNameKey());
-					AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
-					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB2FAIL", pCity->getNameKey());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
-				}
 			}
-			if(bNoTarget)
+			else
 			{
-				if(pCity->getPopulation() > 1)
+				MEMORY_TRACK_EXEMPT();
+
+				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB2FAIL", pCity->getNameKey());
+				AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB2FAIL", pCity->getNameKey());
+				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+			}
+		}
+		if(bNoTarget)
+		{
+			if(pCity->getPopulation() > 1)
+			{
+				if(GC.getGameINLINE().getSorenRandNum(5, "Airbomb population") < 2)
 				{
-					if(GC.getGameINLINE().getSorenRandNum(5, "Airbomb population") < 2)
+					pCity->changePopulation(-1);
+
 					{
-						pCity->changePopulation(-1);
+						MEMORY_TRACK_EXEMPT();
 
-						{
-							MEMORY_TRACK_EXEMPT();
-
-							szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB_POP");
-							AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
-							szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB_POP");
-							AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
-						}
+						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB_POP");
+						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+						szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB_POP");
+						AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
 					}
 				}
 			}
@@ -31502,7 +31490,6 @@ bool CvUnit::airBomb3(int iX, int iY)
 	CvWString szBuffer;
 	int build, iI, iAttempts, iMaxAttempts;
 	bool bNoTarget = true;
-	bool bBitter = true;
 	bool abTech1 = false;
 	bool abTech2 = false;
 	CLinkList<int> buildingList;
@@ -31546,99 +31533,96 @@ bool CvUnit::airBomb3(int iX, int iY)
 			}
 		}
 	}
-	if (bBitter)
+	if (pCity != NULL)
 	{
-		if (pCity != NULL)
+		buildingList.clear();
+		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
-			buildingList.clear();
-			for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+			if (GC.getBuildingInfo((BuildingTypes)iI).getDCMAirbombMission() == 3)
 			{
-				if (GC.getBuildingInfo((BuildingTypes)iI).getDCMAirbombMission() == 3)
+				buildingList.insertAtEnd(iI);
+			}
+		}
+		if (buildingList.getLength() > 0)
+		{
+			iI = GC.getGameINLINE().getSorenRandNum(buildingList.getLength(), "Airbomb building");
+			build = buildingList.nodeNum(iI)->m_data;
+			if (pCity->getNumRealBuilding((BuildingTypes)build) > 0)
+			{
+				bNoTarget = false;
+			}
+			if (abTech1)
+			{
+				iAttempts = 0;
+				if (abTech2)
 				{
-					buildingList.insertAtEnd(iI);
+					iMaxAttempts = 8;
+				}
+				else
+				{
+					iMaxAttempts = 4;
+				}
+				while (bNoTarget)
+				{
+					iAttempts++;
+					iI = GC.getGameINLINE().getSorenRandNum(buildingList.getLength(), "Airbomb building");
+					build = buildingList.nodeNum(iI)->m_data;
+					if (pCity->getNumRealBuilding((BuildingTypes)build) > 0 || iAttempts > iMaxAttempts)
+					{
+						bNoTarget = false;
+					}
 				}
 			}
-			if (buildingList.getLength() > 0)
+			if (pCity->getNumRealBuilding((BuildingTypes)build) > 0)
 			{
-				iI = GC.getGameINLINE().getSorenRandNum(buildingList.getLength(), "Airbomb building");
-				build = buildingList.nodeNum(iI)->m_data;
-				if (pCity->getNumRealBuilding((BuildingTypes)build) > 0)
+				pCity->setNumRealBuilding((BuildingTypes)build, 0);
+				bool bBarb = pCity->isHominid();
+				//TB Combat Mods begin
+				int iMax = MAX_INT;
+				if (!GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
 				{
-					bNoTarget = false;
+					iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
 				}
-				if (abTech1)
+				changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwnerINLINE() == getOwnerINLINE());
+				//TB Combat Mods end
+
 				{
-					iAttempts = 0;
-					if (abTech2)
-					{
-						iMaxAttempts = 8;
-					}
-					else
-					{
-						iMaxAttempts = 4;
-					}
-					while (bNoTarget)
-					{
-						iAttempts++;
-						iI = GC.getGameINLINE().getSorenRandNum(buildingList.getLength(), "Airbomb building");
-						build = buildingList.nodeNum(iI)->m_data;
-						if (pCity->getNumRealBuilding((BuildingTypes)build) > 0 || iAttempts > iMaxAttempts)
-						{
-							bNoTarget = false;
-						}
-					}
+					MEMORY_TRACK_EXEMPT();
+
+					szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB3SUCCESS", GC.getBuildingInfo((BuildingTypes)build).getTextKeyWide(), pCity->getNameKey());
+					AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB3SUCCESS", GC.getBuildingInfo((BuildingTypes)build).getTextKeyWide(), pCity->getNameKey());
+					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
 				}
-				if (pCity->getNumRealBuilding((BuildingTypes)build) > 0)
+				bSuccess = true;
+			}
+			else
+			{
+				MEMORY_TRACK_EXEMPT();
+
+				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB3FAIL", pCity->getNameKey());
+				AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB3FAIL", pCity->getNameKey());
+				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+			}
+		}
+		if(bNoTarget)
+		{
+			if(pCity->getPopulation() > 1)
+			{
+				if(GC.getGameINLINE().getSorenRandNum(5, "Airbomb population") < 1)
 				{
-					pCity->setNumRealBuilding((BuildingTypes)build, 0);
-					bool bBarb = pCity->isHominid();
-					//TB Combat Mods begin
-					int iMax = MAX_INT;
-					if (!GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
-					{
-						iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
-					}
-					changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwnerINLINE() == getOwnerINLINE());
-					//TB Combat Mods end
+					pCity->changePopulation(-1);
 
 					{
 						MEMORY_TRACK_EXEMPT();
 
-						szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB3SUCCESS", GC.getBuildingInfo((BuildingTypes)build).getTextKeyWide(), pCity->getNameKey());
-						AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
-						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB3SUCCESS", GC.getBuildingInfo((BuildingTypes)build).getTextKeyWide(), pCity->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB_POP");
+						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+						szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB_POP");
+						AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
 					}
 					bSuccess = true;
-				}
-				else
-				{
-					MEMORY_TRACK_EXEMPT();
-
-					szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB3FAIL", pCity->getNameKey());
-					AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
-					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB3FAIL", pCity->getNameKey());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
-				}
-			}
-			if(bNoTarget)
-			{
-				if(pCity->getPopulation() > 1)
-				{
-					if(GC.getGameINLINE().getSorenRandNum(5, "Airbomb population") < 1)
-					{
-						pCity->changePopulation(-1);
-
-						{
-							MEMORY_TRACK_EXEMPT();
-
-							szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB_POP");
-							AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
-							szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB_POP");
-							AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
-						}
-						bSuccess = true;
-					}
 				}
 			}
 		}
@@ -31814,7 +31798,6 @@ bool CvUnit::airBomb4(int iX, int iY)
 	bool bSuccess = false;
 	int iDamage, iCount;
 	int iUnitDamage;
-	bool bBitter = true;
 	bool bNoTarget = true;
 
 	if (!canAirBomb4At(plot(), iX, iY))
@@ -31861,86 +31844,83 @@ bool CvUnit::airBomb4(int iX, int iY)
 			pUnit = pLoopUnit;
 		}
 	}
-	if (bBitter)
-	{
 //		if (pCity != NULL)
+	{
+		if (pUnit != NULL)
 		{
-			if (pUnit != NULL)
+			bNoTarget = false;
+			if (pCity != NULL)
 			{
-				bNoTarget = false;
-				if (pCity != NULL)
+				bool bBarb = pCity->isHominid();
+				//TB Combat Mods begin
+				int iMax = MAX_INT;
+				if (!GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
 				{
-					bool bBarb = pCity->isHominid();
-					//TB Combat Mods begin
-					int iMax = MAX_INT;
-					if (!GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
-					{
-						iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
-					}
-					changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwnerINLINE() == getOwnerINLINE());
-					//TB Combat Mods end
+					iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
 				}
-				iDamage = (airCombatDamage(pUnit) * 2);
-				iUnitDamage = std::max(pUnit->getDamage(), std::min((pUnit->getDamage() + iDamage), airCombatLimit(pUnit)));
+				changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwnerINLINE() == getOwnerINLINE());
+				//TB Combat Mods end
+			}
+			iDamage = (airCombatDamage(pUnit) * 2);
+			iUnitDamage = std::max(pUnit->getDamage(), std::min((pUnit->getDamage() + iDamage), airCombatLimit(pUnit)));
+
+			{
+				MEMORY_TRACK_EXEMPT();
+
+				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ARE_ATTACKED_BY_AIR", pUnit->getNameKey(), getNameKey(), -(((iUnitDamage - pUnit->getDamage()) * 100) / pUnit->maxHitPoints()));
+				AddDLLMessage(pUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
+				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ATTACK_BY_AIR", getNameKey(), pUnit->getNameKey(), -(((iUnitDamage - pUnit->getDamage()) * 100) / pUnit->maxHitPoints()));
+				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACKED", MESSAGE_TYPE_INFO, pUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
+			}
+			bSuccess = true;
+			pUnit->setDamage(iUnitDamage, getOwnerINLINE());
+			//TB Combat Mod begin
+			if (dealsColdDamage())
+			{
+				pUnit->setColdDamage(iUnitDamage);
+			}
+			//TB Combat mod end
+			if (GC.getGameINLINE().getSorenRandNum(100, "Spin the dice") < 50)
+			{
+				pUnit->setDamage(pUnit->maxHitPoints());
 
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ARE_ATTACKED_BY_AIR", pUnit->getNameKey(), getNameKey(), -(((iUnitDamage - pUnit->getDamage()) * 100) / pUnit->maxHitPoints()));
-					AddDLLMessage(pUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
-					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ATTACK_BY_AIR", getNameKey(), pUnit->getNameKey(), -(((iUnitDamage - pUnit->getDamage()) * 100) / pUnit->maxHitPoints()));
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACKED", MESSAGE_TYPE_INFO, pUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
-				}
-				bSuccess = true;
-				pUnit->setDamage(iUnitDamage, getOwnerINLINE());
-				//TB Combat Mod begin
-				if (dealsColdDamage())
-				{
-					pUnit->setColdDamage(iUnitDamage);
-				}
-				//TB Combat mod end
-				if (GC.getGameINLINE().getSorenRandNum(100, "Spin the dice") < 50)
-				{
-					pUnit->setDamage(pUnit->maxHitPoints());
-
-					{
-						MEMORY_TRACK_EXEMPT();
-
-						szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMYSINK_AIRBOMB4SUCCESS", pUnit->getNameKey());
-						AddDLLMessage(pUnit->getOwnerINLINE(), false, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
-						szBuffer = gDLL->getText("TXT_KEY_MISC_YOUSINK_AIRBOMB4SUCCESS", pUnit->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
-					}
+					szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMYSINK_AIRBOMB4SUCCESS", pUnit->getNameKey());
+					AddDLLMessage(pUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
+					szBuffer = gDLL->getText("TXT_KEY_MISC_YOUSINK_AIRBOMB4SUCCESS", pUnit->getNameKey());
+					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
 				}
 			}
-			else
-			{
-				MEMORY_TRACK_EXEMPT();
+		}
+		else
+		{
+			MEMORY_TRACK_EXEMPT();
 
-				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB4FAIL", pCity->getNameKey());
-				AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
-				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB4FAIL", pCity->getNameKey());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
-			}
-			if(bNoTarget)
+			szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB4FAIL", pCity->getNameKey());
+			AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
+			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB4FAIL", pCity->getNameKey());
+			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
+		}
+		if(bNoTarget)
+		{
+			if (pCity != NULL)
 			{
-				if (pCity != NULL)
+				if(pCity->getPopulation() > 1)
 				{
-					if(pCity->getPopulation() > 1)
+					if(GC.getGameINLINE().getSorenRandNum(5, "Airbomb population") < 1)
 					{
-						if(GC.getGameINLINE().getSorenRandNum(5, "Airbomb population") < 1)
+						pCity->changePopulation(-1);
+						bSuccess = true;
+
 						{
-							pCity->changePopulation(-1);
-							bSuccess = true;
+							MEMORY_TRACK_EXEMPT();
 
-							{
-								MEMORY_TRACK_EXEMPT();
-
-								szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB_POP");
-								AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
-								szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB_POP");
-								AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
-							}
+							szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB_POP");
+							AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
+							szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB_POP");
+							AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
 						}
 					}
 				}
@@ -32073,7 +32053,6 @@ bool CvUnit::airBomb5(int iX, int iY)
 	CvPlot* pPlot;
 	CvWString szBuffer;
 	bool bNoTarget = true;
-	bool bBitter = true;
 	bool bSuccess = false;
 
 	if (!canAirBomb5At(plot(), iX, iY))
@@ -32097,60 +32076,57 @@ bool CvUnit::airBomb5(int iX, int iY)
 /************************************************************************************************/
 	pCity = pPlot->getPlotCity();
 
-	if (bBitter)
+	if (pCity != NULL)
 	{
-		if (pCity != NULL)
+		if (GC.getGameINLINE().getSorenRandNum(100, "Airbomb") < 50)
 		{
-			if (GC.getGameINLINE().getSorenRandNum(100, "Airbomb") < 50)
-			{
-				bNoTarget = false;
-				pCity->setProduction(pCity->getProduction() / 2);
-				bSuccess = true;
+			bNoTarget = false;
+			pCity->setProduction(pCity->getProduction() / 2);
+			bSuccess = true;
 
-				{
-					MEMORY_TRACK_EXEMPT();
-
-					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB5SUCCESS", pCity->getNameKey());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
-					szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB5SUCCESS", pCity->getNameKey());
-					AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
-				}
-				bool bBarb = pCity->isHominid();
-				//TB Combat Mods begin
-				int iMax = MAX_INT;
-				if (!GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
-				{
-					iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
-				}
-				changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwnerINLINE() == getOwnerINLINE());
-				//TB Combat Mods end
-			}
-			else
 			{
 				MEMORY_TRACK_EXEMPT();
 
-				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB5FAIL", pCity->getNameKey());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
-				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB5FAIL", pCity->getNameKey());
-				AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB5SUCCESS", pCity->getNameKey());
+				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB5SUCCESS", pCity->getNameKey());
+				AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
 			}
-			if(bNoTarget)
+			bool bBarb = pCity->isHominid();
+			//TB Combat Mods begin
+			int iMax = MAX_INT;
+			if (!GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
 			{
-				if(pCity->getPopulation() > 1)
+				iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
+			}
+			changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwnerINLINE() == getOwnerINLINE());
+			//TB Combat Mods end
+		}
+		else
+		{
+			MEMORY_TRACK_EXEMPT();
+
+			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB5FAIL", pCity->getNameKey());
+			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+			szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB5FAIL", pCity->getNameKey());
+			AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+		}
+		if(bNoTarget)
+		{
+			if(pCity->getPopulation() > 1)
+			{
+				if(GC.getGameINLINE().getSorenRandNum(5, "Airbomb population") < 1)
 				{
-					if(GC.getGameINLINE().getSorenRandNum(5, "Airbomb population") < 1)
+					pCity->changePopulation(-1);
+					bSuccess = true;
+
 					{
-						pCity->changePopulation(-1);
-						bSuccess = true;
+						MEMORY_TRACK_EXEMPT();
 
-						{
-							MEMORY_TRACK_EXEMPT();
-
-							szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB_POP");
-							AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
-							szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB_POP");
-							AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
-						}
+						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB_POP");
+						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+						szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB_POP");
+						AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
 					}
 				}
 			}
@@ -32441,9 +32417,9 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 						MEMORY_TRACK_EXEMPT();
 
 						szBuffer = gDLL->getText("TXT_KEY_HAS_RANGED_BOMBARD_ATTACKED", getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX_INLINE(), getY_INLINE());
+						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX_INLINE(), getY_INLINE());
 						szBuffer = gDLL->getText("TXT_KEY_HAS_BEEN_RANGED_BOMBARD_ATTACKED", getNameKey());
-						AddDLLMessage(pLoopUnit->getOwnerINLINE(), false, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX_INLINE(), getY_INLINE(), true, true);
+						AddDLLMessage(pLoopUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX_INLINE(), getY_INLINE(), true, true);
 					}
 					rBombardCombat(pPlot, pLoopUnit);
 					changeExperience100(100, maxXPValue(), true, pLoopUnit->getOwnerINLINE() == getOwnerINLINE(), false/*this was too corruptable with SM - split to bombatd and get tons of GG pts(!pPlot->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS))*/);
@@ -32453,9 +32429,9 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_BOMB_MISSED", getNameKey());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX_INLINE(), getY_INLINE());
+					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX_INLINE(), getY_INLINE());
 					szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_BOMB_MISSED", getNameKey());
-					AddDLLMessage(pLoopUnit->getOwnerINLINE(), false, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX_INLINE(), getY_INLINE(), true, true);
+					AddDLLMessage(pLoopUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX_INLINE(), getY_INLINE(), true, true);
 				}
 			}
 /************************************************************************************************/
@@ -32492,9 +32468,9 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_HAS_RANGED_BOMBARD_ATTACKED", getNameKey());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX_INLINE(), getY_INLINE());
+					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX_INLINE(), getY_INLINE());
 					szBuffer = gDLL->getText("TXT_KEY_HAS_BEEN_RANGED_BOMBARD_ATTACKED", getNameKey());
-					AddDLLMessage(pLoopUnit->getOwnerINLINE(), false, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX_INLINE(), getY_INLINE(), true, true);
+					AddDLLMessage(pLoopUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX_INLINE(), getY_INLINE(), true, true);
 				}
 				rBombardCombat(pPlot, pLoopUnit);
 				changeExperience100(100, maxXPValue(), true, pLoopUnit->getOwnerINLINE() == getOwnerINLINE(), false/*this was too corruptable with SM - split to bombatd and get tons of GG pts(!pPlot->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS))*/);
@@ -32504,9 +32480,9 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_BOMB_MISSED", getNameKey());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX_INLINE(), getY_INLINE());
+				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX_INLINE(), getY_INLINE());
 				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_BOMB_MISSED", getNameKey());
-				AddDLLMessage(pLoopUnit->getOwnerINLINE(), false, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX_INLINE(), getY_INLINE(), true, true);
+				AddDLLMessage(pLoopUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX_INLINE(), getY_INLINE(), true, true);
 			}
 /************************************************************************************************/
 /* RevolutionDCM	                  Start		 05/31/10                        Afforess       */
@@ -32529,11 +32505,11 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 						MEMORY_TRACK_EXEMPT();
 
 						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DESTROYED_IMP", getNameKey(), GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
+						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
 						if (pPlot->isOwned())
 						{
 							szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_IMP_WAS_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide(), getNameKey(), GET_PLAYER(getOwnerINLINE()).getCivilizationAdjectiveKey());
-							AddDLLMessage(pPlot->getOwnerINLINE(), false, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
+							AddDLLMessage(pPlot->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
 						}
 					}
 					pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
@@ -32544,7 +32520,7 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_FAIL_DESTROY_IMP", getNameKey(), GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMB_FAILS", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
+					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMB_FAILS", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
 				}
 			}
 /************************************************************************************************/
@@ -32960,10 +32936,10 @@ bool CvUnit::archerBombard(int iX, int iY, bool supportAttack)
 		MEMORY_TRACK_EXEMPT();
 
 		szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_BOMB_MISSED", getNameKey());
-		AddDLLMessage(getOwnerINLINE(), false, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX_INLINE(), getY_INLINE(), true, true);
+		AddDLLMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX_INLINE(), getY_INLINE(), true, true);
 		szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_BOMB_MISSED", getNameKey());
 		// RevolutionDCM - Archer Bombard fix - text display
-		AddDLLMessage(pLoopUnit->getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX_INLINE(), getY_INLINE());
+		AddDLLMessage(pLoopUnit->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX_INLINE(), getY_INLINE());
 	}
 	if (bTarget)
 	{
@@ -33381,8 +33357,8 @@ float CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWith
 
 						CvWString szBuffer;
 						szBuffer.Format(L"City militia has emerged! Resistance: %.1f%%", fResistence);	
-						AddDLLMessage(pLoserUnit->getOwnerINLINE(), false, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pLoserPlot->getX_INLINE(), pLoserPlot->getY_INLINE(), true, true);
-						AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pLoserPlot->getX_INLINE(), pLoserPlot->getY_INLINE());
+						AddDLLMessage(pLoserUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pLoserPlot->getX_INLINE(), pLoserPlot->getY_INLINE(), true, true);
+						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pLoserPlot->getX_INLINE(), pLoserPlot->getY_INLINE());
 					}
 				}
 			}
@@ -33465,7 +33441,7 @@ void CvUnit::influencePlots(CvPlot* pCentralPlot, PlayerTypes eTargetPlayer, flo
 
 //	CvWString szBuffer;
 //	szBuffer.Format(L"Factors: %.1f, %.1f, %.1f, %.1f, %.1f, %.1f, %.3f, %d", fBaseCombatInfluence, fLocationMultiplier, fGameSpeedMultiplier, fPlotDistanceFactor, fExperienceMultiplier, fWarlordMultiplier, fBaseMultiplier, iInfluenceRadius);	
-//	AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCentralPlot->getX_INLINE(), pCentralPlot->getY_INLINE());
+//	AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCentralPlot->getX_INLINE(), pCentralPlot->getY_INLINE());
 
 	for (int iDX = -iInfluenceRadius; iDX <= iInfluenceRadius; iDX++)
 	{
@@ -33628,7 +33604,7 @@ float CvUnit::doPillageInfluence()
  
 //	CvWString szBuffer;
 //	szBuffer.Format(L"Factors: %.1f, %.1f, %d, Result: %.3f, ", fGameSpeedMultiplier, fBasePillageInfluence, iTargetCulture, fInfluenceRatio);	
-//	AddDLLMessage(getOwnerINLINE(), true, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX_INLINE(), plot()->getY_INLINE());
+//	AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX_INLINE(), plot()->getY_INLINE());
 
 	return fInfluenceRatio;
 }

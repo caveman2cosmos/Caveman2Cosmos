@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef FFreeListArray_h__
+#define FFreeListArray_h__
+
 #include "FDataStreamBase.h"
 #include "FFreeListArrayBase.h"
 
@@ -516,3 +519,5 @@ inline void WriteStreamableFFreeListArray( FFreeListArray< T >& flist, FDataStre
 		}
 	}
 }
+
+#endif // FFreeListArray_h__

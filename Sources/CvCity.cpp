@@ -27319,7 +27319,7 @@ void sumCitySources(CvGameObject* pObject, CvPropertyManipulators* pMani, const 
 		{
 			if (pSource->isActive(const_cast<CvGameObjectCity*>(pCity->getGameObjectConst())))
 			{
-				*iSum += pSource->getSourcePredict(pCity->getGameObjectConst(), pCity->getPropertiesConst()->getValueByProperty((int)eProperty));
+				*iSum += pSource->getSourcePredict(pCity->getGameObjectConst(), pCity->getPropertiesConst()->getValueByProperty(eProperty));
 			}
 		}
 	}
@@ -27335,7 +27335,7 @@ int CvCity::getGlobalSourcedProperty(PropertyTypes eProperty) const
 		CvPropertySource* pSource = pMani->getSource(i);
 		if (pSource->isActive(const_cast<CvGameObjectCity*>(getGameObjectConst())))
 		{
-			iSum += pSource->getSourcePredict(getGameObjectConst(), getPropertiesConst()->getValueByProperty((int)eProperty));
+			iSum += pSource->getSourcePredict(getGameObjectConst(), getPropertiesConst()->getValueByProperty(eProperty));
 		}
 	}
 	// Add sources from the player object that have an effect on cities

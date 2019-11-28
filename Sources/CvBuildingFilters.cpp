@@ -254,7 +254,7 @@ bool BuildingFilterIsCityDefense::isFilteredBuilding(CvPlayer *pPlayer, CvCity *
 bool BuildingFilterIsProperty::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
 {
 	CvBuildingInfo& kInfo = GC.getBuildingInfo(eBuilding);
-	if ((kInfo.getProperties()->getValueByProperty((int)m_eProperty) != 0) || (kInfo.getPropertiesAllCities()->getValueByProperty((int)m_eProperty)))
+	if ((kInfo.getProperties()->getValueByProperty(m_eProperty) != 0) || (kInfo.getPropertiesAllCities()->getValueByProperty(m_eProperty)))
 		return true;
 
 	CvPropertyManipulators* pMani = kInfo.getPropertyManipulators();

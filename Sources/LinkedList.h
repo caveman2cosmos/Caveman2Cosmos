@@ -1,13 +1,13 @@
 #pragma once
 
-#include "CvTaggedSaveFormatWrapper.h"
-
 // LinkedList.h
 
 // A doubly-linked list
 
 #ifndef		LINKEDLIST_H
 #define		LINKEDLIST_H
+
+#include "CvTaggedSaveFormatWrapper.h"
 
 template <class tVARTYPE> class CLinkList;
 

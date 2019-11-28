@@ -433,7 +433,7 @@ void IntExprAttribute::getCheckSum(unsigned int &iSum)
 
 int IntExprProperty::evaluate(CvGameObject *pObject)
 {
-	return pObject->getProperties()->getValueByProperty((int)m_eProperty);
+	return pObject->getProperties()->getValueByProperty(m_eProperty);
 }
 
 void IntExprProperty::buildDisplayString(CvWStringBuffer &szBuffer) const

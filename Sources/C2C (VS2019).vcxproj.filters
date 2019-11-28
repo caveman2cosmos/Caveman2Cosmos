@@ -527,16 +527,10 @@
     <ClInclude Include="CvDefines.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CvDefinesModTools.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CvDiploParameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvDLLButtonPopup.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvDLLDataStreamIFaceBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvDLLEngineIFaceBase.h">
@@ -891,6 +885,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="logging.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="index_iterator_base.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

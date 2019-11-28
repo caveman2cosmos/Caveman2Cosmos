@@ -326,10 +326,8 @@
     <ClInclude Include="CvDate.h" />
     <ClInclude Include="CvDeal.h" />
     <ClInclude Include="CvDefines.h" />
-    <ClInclude Include="CvDefinesModTools.h" />
     <ClInclude Include="CvDiploParameters.h" />
     <ClInclude Include="CvDLLButtonPopup.h" />
-    <ClInclude Include="CvDLLDataStreamIFaceBase.h" />
     <ClInclude Include="CvDLLEngineIFaceBase.h" />
     <ClInclude Include="CvDLLEntity.h" />
     <ClInclude Include="CvDLLEntityIFaceBase.h" />
@@ -346,6 +344,7 @@
     <ClInclude Include="CvDLLUtilityIFaceBase.h" />
     <ClInclude Include="CvDLLWidgetData.h" />
     <ClInclude Include="CvDLLXMLIFaceBase.h" />
+    <ClInclude Include="index_iterator_base.h" />
     <ClInclude Include="logging.h" />
     <ClInclude Include="NiPoint.h" />
     <ClInclude Include="StackWalker.h" />

@@ -31,18 +31,22 @@ inline void CheckSum(unsigned int& iSum, float fData)
 	CheckSum(iSum, *(unsigned int *)&fData);
 }
 
-inline void CheckSum(unsigned int& iSum, int* aiData, int iNum)
+inline void CheckSum(unsigned int& iSum, const int* aiData, int iNum)
 {
 	if (aiData)
-		for (int i=0; i<iNum; i++)
+	{
+		for (int i = 0; i < iNum; i++)
 			CheckSum(iSum, (unsigned int)aiData[i]);
+	}
 }
 
-inline void CheckSum(unsigned int& iSum, bool* abData, int iNum)
+inline void CheckSum(unsigned int& iSum, const bool* abData, int iNum)
 {
 	if (abData)
-		for (int i=0; i<iNum; i++)
+	{
+		for (int i = 0; i < iNum; i++)
 			CheckSum(iSum, (unsigned int)abData[i]);
+	}
 }
 
 inline void CheckSum(unsigned int& iSum, char cData)
@@ -51,17 +55,19 @@ inline void CheckSum(unsigned int& iSum, char cData)
 }
 
 template<typename T1, typename T2>
-inline void CheckSum(unsigned int& iSum, std::pair<T1, T2>& p)
+inline void CheckSum(unsigned int& iSum, const std::pair<T1, T2>& p)
 {
 	CheckSum(iSum, p.first);
 	CheckSum(iSum, p.second);
 }
 
 template<typename Cont>
-inline void CheckSumC(unsigned int& iSum, Cont& kCont)
+inline void CheckSumC(unsigned int& iSum, const Cont& kCont)
 {
-	for (Cont::iterator it = kCont.begin(); it!= kCont.end(); ++it)
+	for (Cont::const_iterator it = kCont.begin(); it != kCont.end(); ++it)
+	{
 		CheckSum(iSum, *it);
+	}
 }
 
 #define CheckSumI(A, B, C) CheckSum(A, C, B)

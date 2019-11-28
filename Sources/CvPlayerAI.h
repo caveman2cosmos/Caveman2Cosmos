@@ -10,12 +10,14 @@
 
 class CvEventTriggerInfo;
 
-typedef struct
+struct MissionTargetInfo
 {
+	MissionTargetInfo() : iCount(0), iClosest(0), iVolume(0) {}
+
 	int	iCount;		//	Num units targeting the mission target
 	int iClosest;	//	How close is the closest
 	int iVolume;    //  How much volume among the units counted
-} MissionTargetInfo;
+};
 
 //	Koshling - add caching to plot danger calculations
 #define PLOT_DANGER_CACHING
@@ -755,19 +757,23 @@ private:
 	static int plotDangerCacheReads;
 #endif
 
-	techPath*	findBestPath(TechTypes eTech, int& valuePerUnitCost, bool bIgnoreCost, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const;
+	techPath* findBestPath(TechTypes eTech, int& valuePerUnitCost, bool bIgnoreCost, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const;
 	int	 techPathValuePerUnitCost(techPath* path, TechTypes eTech, bool bIgnoreCost, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const;
 	TechTypes findStartTech(techPath* path) const;
 
-	mutable std::map<TechTypes,int>	m_cachedTechValues;
-	mutable std::map<BuildingTypes, int>	m_numBuildingsNeeded;
+	typedef stdext::hash_map<TechTypes, int> TechTypesValueMap;
+	mutable TechTypesValueMap m_cachedTechValues;
+	typedef stdext::hash_map<BuildingTypes, int> BuildingCountMap;
+	mutable BuildingCountMap m_numBuildingsNeeded;
 
 	int m_iCityGrowthValueBase;
 	int m_turnsSinceLastRevolution;
 	int m_iCivicSwitchMinDeltaThreshold;
 	bool bUnitRecalcNeeded;
 
-	mutable std::map<MissionAITypes,boost::shared_ptr<std::map<CvPlot*,MissionTargetInfo> > > m_missionTargetCache;
+	typedef stdext::hash_map<CvPlot*, MissionTargetInfo> PlotMissionTargetMap;
+	typedef stdext::hash_map<MissionAITypes, PlotMissionTargetMap> MissionPlotTargetMap;
+	mutable MissionPlotTargetMap m_missionTargetCache;
 };
 
 // helper for accessing static functions

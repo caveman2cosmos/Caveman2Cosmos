@@ -43,32 +43,32 @@ CvProperties::CvProperties(CvPlot* pPlot)
 	m_pGameObject = pPlot->getGameObject();
 }
 
-int CvProperties::getProperty(int index) const
+PropertyTypes CvProperties::getProperty(int index) const
 {
 	FAssert(0 <= index);
 	FAssert(index < (int)m_aiProperty.size());
-	return m_aiProperty[index].first;
+	return m_aiProperty[index].prop;
 }
 
 int CvProperties::getValue(int index) const
 {
 	FAssert(0 <= index);
 	FAssert(index < (int)m_aiProperty.size());
-	return m_aiProperty[index].second;
+	return m_aiProperty[index].value;
 }
 
-int CvProperties::getChangeProperty(int index) const
+PropertyTypes CvProperties::getChangeProperty(int index) const
 {
 	FAssert(0 <= index);
 	FAssert(index < (int)m_aiPropertyChange.size());
-	return m_aiPropertyChange[index].first;
+	return m_aiPropertyChange[index].prop;
 }
 
 int CvProperties::getChange(int index) const
 {
 	FAssert(0 <= index);
 	FAssert(index < (int)m_aiPropertyChange.size());
-	return m_aiPropertyChange[index].second;
+	return m_aiPropertyChange[index].value;
 }
 
 int CvProperties::getNumProperties() const
@@ -76,15 +76,17 @@ int CvProperties::getNumProperties() const
 	return m_aiProperty.size();
 }
 
-int CvProperties::getPositionByProperty(int eProp) const
+int CvProperties::getPositionByProperty(PropertyTypes eProp) const
 {
-	for (std::vector<std::pair<int,int> >::const_iterator it = m_aiProperty.begin();it!=m_aiProperty.end(); ++it)
-		if ( it->first==eProp )
+	for (prop_value_const_iterator it = m_aiProperty.begin();it!=m_aiProperty.end(); ++it)
+	{
+		if (it->prop == eProp)
 			return it - m_aiProperty.begin();
+	}
 	return -1;
 }
 
-int CvProperties::getValueByProperty(int eProp) const
+int CvProperties::getValueByProperty(PropertyTypes eProp) const
 {
 	int index = getPositionByProperty(eProp);
 	if (index < 0)
@@ -93,31 +95,40 @@ int CvProperties::getValueByProperty(int eProp) const
 		return getValue(index);
 }
 
-int CvProperties::getChangeByProperty(int eProp) const
+int CvProperties::getChangeByProperty(PropertyTypes eProp) const
 {
-	for (std::vector<std::pair<int,int> >::const_iterator it = m_aiPropertyChange.begin();it!=m_aiPropertyChange.end(); ++it)
-		if ( it->first==eProp )
-			return it->second;
+	for (prop_value_const_iterator it = m_aiPropertyChange.begin();it!=m_aiPropertyChange.end(); ++it)
+	{
+		if (it->prop == eProp)
+			return it->value;
+	}
 	return 0;
 }
 
-void CvProperties::setChangeByProperty(int eProp, int iVal)
+void CvProperties::setChangeByProperty(PropertyTypes eProp, int iVal)
 {
-	for (std::vector<std::pair<int,int> >::iterator it = m_aiPropertyChange.begin();it!=m_aiPropertyChange.end(); ++it)
-		if ( it->first==eProp )
+	for (std::vector<PropertyValue >::iterator it = m_aiPropertyChange.begin(); it != m_aiPropertyChange.end(); ++it)
+	{
+		if (it->prop == eProp)
 		{
-			it->second = iVal;
+			it->value = iVal;
 			return;
 		}
-	m_aiPropertyChange.push_back(std::pair<int, int>(eProp,iVal));;
+	}
+	m_aiPropertyChange.push_back(PropertyValue(eProp,iVal));;
 }
 
-void CvProperties::changeChangeByProperty(int eProp, int iChange)
+void CvProperties::changeChangeByProperty(PropertyTypes eProp, int iChange)
 {
-	for (std::vector<std::pair<int,int> >::iterator it = m_aiPropertyChange.begin();it!=m_aiPropertyChange.end(); ++it)
-		if ( it->first==eProp )
-			it->second += iChange;
-	m_aiPropertyChange.push_back(std::pair<int, int>(eProp,iChange));;
+	for (std::vector<PropertyValue >::iterator it = m_aiPropertyChange.begin();it!=m_aiPropertyChange.end(); ++it)
+	{
+		if (it->prop == eProp)
+		{
+			it->value += iChange;
+			return;
+		}
+	}
+	m_aiPropertyChange.push_back(PropertyValue(eProp,iChange));;
 }
 
 void CvProperties::setValue(int index, int iVal)
@@ -128,12 +139,12 @@ void CvProperties::setValue(int index, int iVal)
 	//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
 	FAssert(0 <= index);
 	FAssert(index < (int)m_aiProperty.size());
-	int iOldVal = m_aiProperty[index].second;
+	int iOldVal = m_aiProperty[index].value;
 	if (iOldVal != iVal)
 	{
-		m_aiProperty[index].second = iVal;
+		m_aiProperty[index].value = iVal;
 		if (m_pGameObject)
-			m_pGameObject->eventPropertyChanged((PropertyTypes)m_aiProperty[index].first, iVal);
+			m_pGameObject->eventPropertyChanged(m_aiProperty[index].prop, iVal);
 		// If this sets the value to 0, remove the property
 		//if (iVal == 0)
 		//	m_aiProperty.erase(m_aiProperty.begin()+index);
@@ -144,10 +155,10 @@ void CvProperties::setChange(int index, int iVal)
 {
 	FAssert(0 <= index);
 	FAssert(index < (int)m_aiPropertyChange.size());
-	m_aiPropertyChange[index].second = iVal;
+	m_aiPropertyChange[index].value = iVal;
 }
 
-void CvProperties::setValueByProperty(int eProp, int iVal)
+void CvProperties::setValueByProperty(PropertyTypes eProp, int iVal)
 {
 	//TBOOSHUNTHERE
 	//CvString szBuffer;
@@ -158,9 +169,9 @@ void CvProperties::setValueByProperty(int eProp, int iVal)
 	{
 		if (iVal != 0)
 		{
-			m_aiProperty.push_back(std::pair<int, int>(eProp,iVal));
+			m_aiProperty.push_back(PropertyValue(eProp,iVal));
 			if (m_pGameObject)
-				m_pGameObject->eventPropertyChanged((PropertyTypes)eProp, iVal);
+				m_pGameObject->eventPropertyChanged(eProp, iVal);
 		}
 	}
 	else
@@ -172,7 +183,7 @@ void CvProperties::changeValue(int index, int iChange)
 	if (iChange == 0)
 		return;
 
-	int eProperty = getProperty(index);
+	PropertyTypes eProperty = getProperty(index);
 
 	setValue(index, getValue(index) + iChange);
 	changeChangeByProperty(eProperty, iChange);
@@ -182,7 +193,7 @@ void CvProperties::changeValue(int index, int iChange)
 	}
 }
 
-void CvProperties::changeValueByProperty(int eProp, int iChange)
+void CvProperties::changeValueByProperty(PropertyTypes eProp, int iChange)
 {
 	//TBOOSHUNTHERE
 	//CvString szBuffer;
@@ -194,12 +205,12 @@ void CvProperties::changeValueByProperty(int eProp, int iChange)
 	int index = getPositionByProperty(eProp);
 	if (index < 0)
 	{
-		m_aiProperty.push_back(std::pair<int, int>(eProp,iChange));
+		m_aiProperty.push_back(PropertyValue(eProp,iChange));
 		changeChangeByProperty(eProp, iChange);
 		if (m_pGameObject)
 		{
 			propagateChange(eProp, iChange);
-			m_pGameObject->eventPropertyChanged((PropertyTypes)eProp, iChange);
+			m_pGameObject->eventPropertyChanged(eProp, iChange);
 		}
 	}
 	else
@@ -207,14 +218,14 @@ void CvProperties::changeValueByProperty(int eProp, int iChange)
 }
 
 // helper function for propagating change
-void callChangeValueByProperty(CvGameObject* pObject, int eProp, int iChange)
+void callChangeValueByProperty(CvGameObject* pObject, PropertyTypes eProp, int iChange)
 {
 	pObject->getProperties()->changeValueByProperty(eProp, iChange);
 }
 
-void CvProperties::propagateChange(int eProp, int iChange)
+void CvProperties::propagateChange(PropertyTypes eProp, int iChange)
 {
-	CvPropertyInfo& kInfo = GC.getPropertyInfo((PropertyTypes)eProp);
+	CvPropertyInfo& kInfo = GC.getPropertyInfo(eProp);
 	for (int iI = 0; iI < NUM_GAMEOBJECTS; iI++)
 	{
 		int iChangePercent = kInfo.getChangePropagator(m_pGameObject->getGameObjectType(), (GameObjectTypes)iI);
@@ -259,9 +270,9 @@ void CvProperties::clearChange()
 	m_aiPropertyChange.clear();
 }
 
-bool isNotSourceDrainProperty(const std::pair<int,int>& p)
+bool CvProperties::isNotSourceDrainProperty(const CvProperties::PropertyValue& p)
 {
-	return !GC.getPropertyInfo((PropertyTypes)p.first).isSourceDrain();
+	return !GC.getPropertyInfo(p.prop).isSourceDrain();
 }
 
 void CvProperties::clearForRecalculate()
@@ -287,7 +298,7 @@ void CvProperties::read(FDataStreamBase *pStream)
 		// AIAndy: Changed to avoid usage of the methods that trigger property change events
 		//setValueByProperty(eProp, iVal);
 		if (eProp > -1)
-			m_aiProperty.push_back(std::make_pair(eProp, iVal));
+			m_aiProperty.push_back(PropertyValue(static_cast<PropertyTypes>(eProp), iVal));
 	}
 }
 
@@ -314,7 +325,7 @@ void CvProperties::readWrapper(FDataStreamBase *pStream)
 		if (eProp == -1)
 		{
 			// Handle old save game before property remapping
-			WRAPPER_READ(wrapper, "CvProperties",&eProp);
+			WRAPPER_READ(wrapper, "CvProperties", &eProp);
 			if (eProp == 0) // crime
 				eProp = GC.getInfoTypeForString("PROPERTY_CRIME");
 			else if (eProp == 1) // flammability
@@ -329,7 +340,7 @@ void CvProperties::readWrapper(FDataStreamBase *pStream)
 		// AIAndy: Changed to avoid usage of the methods that trigger property change events
 		//setValueByProperty(eProp, iVal);
 		if (eProp > -1)
-			m_aiProperty.push_back(std::make_pair(eProp, iVal));
+			m_aiProperty.push_back(PropertyValue(static_cast<PropertyTypes>(eProp), iVal));
 	}
 
 	int iPropertyChangeNum = 0;
@@ -340,7 +351,7 @@ void CvProperties::readWrapper(FDataStreamBase *pStream)
 		WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper, "CvProperties", REMAPPED_CLASS_TYPE_PROPERTIES, &eProp);
 		WRAPPER_READ(wrapper, "CvProperties",&iVal);
 		if (eProp > -1)
-			m_aiPropertyChange.push_back(std::make_pair(eProp, iVal));
+			m_aiPropertyChange.push_back(PropertyValue(static_cast<PropertyTypes>(eProp), iVal));
 	}
 
 	//WRAPPER_READ_OBJECT_END(wrapper);
@@ -373,11 +384,11 @@ void CvProperties::writeWrapper(FDataStreamBase *pStream)
 		int iVal = getValue(i);
 
 		WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvProperties", REMAPPED_CLASS_TYPE_PROPERTIES, eProp);
-		WRAPPER_WRITE(wrapper, "CvProperties",iVal);
+		WRAPPER_WRITE(wrapper, "CvProperties", iVal);
 	}
 
 	int iPropertyChangeNum = (int)m_aiPropertyChange.size();
-	WRAPPER_WRITE(wrapper, "CvProperties",iPropertyChangeNum);
+	WRAPPER_WRITE(wrapper, "CvProperties", iPropertyChangeNum);
 	for (int i = 0; i < iPropertyChangeNum; i++)
 	{
 		int eProp = getChangeProperty(i);
@@ -406,7 +417,7 @@ bool CvProperties::read(CvXMLLoadUtility* pXML, const wchar_t* szTagName)
 					pXML->GetChildXmlValByName(szTextVal, L"PropertyType");
 					int eProp = pXML->GetInfoClass(szTextVal);
 					pXML->GetOptionalChildXmlValByName(&iVal, L"iPropertyValue");
-					setValueByProperty(eProp, iVal);
+					setValueByProperty(static_cast<PropertyTypes>(eProp), iVal);
 				} while(pXML->TryMoveToXmlNextSibling());
 			}
 			pXML->MoveToXmlParent();
@@ -582,7 +593,7 @@ std::wstring CvProperties::getPropertyDisplay(int index) const
 	return szTemp.GetCString();
 }
 
-void CvProperties::getCheckSum(unsigned int &iSum)
+void CvProperties::getCheckSum(unsigned int &iSum) const
 {
 	CheckSumC(iSum, m_aiProperty);
 }

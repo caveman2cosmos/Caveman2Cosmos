@@ -111,7 +111,7 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 
 		.def("getDiscoveryTech", &CyUnit::getDiscoveryTech, "int /*TechTypes*/ ()")
 		.def("getDiscoverResearch", &CyUnit::getDiscoverResearch, "int (int /*TechTypes*/ eTech)")
-		.def("canDiscover", &CyUnit::canDiscover, "bool (CyPlot* pPlot)")
+		.def("canDiscover", &CyUnit::canDiscover, "bool ()")
 		.def("getMaxHurryProduction", &CyUnit::getMaxHurryProduction, "int (CyCity* pCity)")
 		.def("getHurryProduction", &CyUnit::getHurryProduction, "int (CyPlot* pPlot)")
 		.def("canHurry", &CyUnit::canHurry, "bool (CyPlot* pPlot, bool bTestVisible)")

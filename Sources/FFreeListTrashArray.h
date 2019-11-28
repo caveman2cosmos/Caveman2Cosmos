@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef FFreeListTrashArray_h__
+#define FFreeListTrashArray_h__
+
 #include "FDataStreamBase.h"
 #include "CvTaggedSaveFormatWrapper.h"
 #include "FFreeListArrayBase.h"
@@ -700,3 +703,5 @@ inline void WriteStreamableFFreeListTrashArray( FFreeListTrashArray< T >& flist,
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
+
+#endif // FFreeListTrashArray_h__

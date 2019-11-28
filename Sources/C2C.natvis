@@ -28,8 +28,8 @@
     </Expand>
   </Type>
   <Type Name="CvUnit">
-    <DisplayString Condition="m_bDeathDelay">[DELAYED DEATH! owner = {CvPlayerAI::m_aPlayers[m_eOwner]}, class = {gGlobals->m_paUnitClassInfo[m_pUnitInfo->m_iUnitClassType]->m_szType} ({m_pUnitInfo->m_iUnitClassType}), type = {gGlobals->m_paUnitInfo[m_eUnitType]->m_szType} ({m_eUnitType})]</DisplayString>
-    <DisplayString>[owner = {CvPlayerAI::m_aPlayers[m_eOwner]}, class = {gGlobals->m_paUnitClassInfo[m_pUnitInfo->m_iUnitClassType]->m_szType} ({m_pUnitInfo->m_iUnitClassType}), type = {gGlobals->m_paUnitInfo[m_eUnitType]->m_szType} ({m_eUnitType})]</DisplayString>
+    <DisplayString Condition="m_bDeathDelay">[DELAYED DEATH! {gGlobals->m_paUnitClassInfo[m_pUnitInfo->m_iUnitClassType]->m_szType} {gGlobals->m_paUnitInfo[m_eUnitType]->m_szType} {CvPlayerAI::m_aPlayers[m_eOwner]}]</DisplayString>
+    <DisplayString>[{gGlobals->m_paUnitClassInfo[m_pUnitInfo->m_iUnitClassType]->m_szType} {gGlobals->m_paUnitInfo[m_eUnitType]->m_szType} {CvPlayerAI::m_aPlayers[m_eOwner]}]</DisplayString>
     <Expand>
       <Item Name="[owner]" ExcludeView="simple">CvPlayerAI::m_aPlayers[m_eOwner]</Item>
       <Item Name="[id]" ExcludeView="simple">m_iID</Item>
