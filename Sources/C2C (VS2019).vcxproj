@@ -347,6 +347,7 @@
     <ClInclude Include="index_iterator_base.h" />
     <ClInclude Include="logging.h" />
     <ClInclude Include="NiPoint.h" />
+    <ClInclude Include="nullptr_t.h" />
     <ClInclude Include="StackWalker.h" />
     <ClInclude Include="Stopwatch.h" />
     <ClInclude Include="wchar_utils.h" />

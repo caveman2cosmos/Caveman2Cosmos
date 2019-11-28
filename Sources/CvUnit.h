@@ -28,7 +28,7 @@ enum UnitValueFlags
 	UNITVALUE_FLAGS_UTILITY = 1 << 2,
 	UNITVALUE_FLAGS_ALL = UNITVALUE_FLAGS_DEFENSIVE | UNITVALUE_FLAGS_OFFENSIVE | UNITVALUE_FLAGS_UTILITY
 };
-DEFINE_ENUM_FLAG_OPERATORS(UnitValueFlags);
+DECLARE_FLAGS(UnitValueFlags);
 
 struct PromotionRequirements
 {
@@ -47,7 +47,7 @@ struct PromotionRequirements
 		ForStatus = 1 << 8
 	};
 };
-DEFINE_ENUM_FLAG_OPERATORS(PromotionRequirements::flags);
+DECLARE_FLAGS(PromotionRequirements::flags);
 
 struct PromotionApply
 {
@@ -61,7 +61,7 @@ struct PromotionApply
 		FromTrait = 1 << 4
 	};
 };
-DEFINE_ENUM_FLAG_OPERATORS(PromotionApply::flags);
+DECLARE_FLAGS(PromotionApply::flags);
 
 
 /************************************************************************************************/

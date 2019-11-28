@@ -27971,7 +27971,7 @@ int CvPlayerAI::AI_countDeadlockedBonuses(CvPlot* pPlot) const
     return iCount;
 }
 
-int CvPlayerAI::AI_getOurPlotStrength(CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const
+int CvPlayerAI::AI_getOurPlotStrength(const CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const
 {
 	PROFILE_FUNC();
 
@@ -28035,7 +28035,7 @@ int CvPlayerAI::AI_getOurPlotStrength(CvPlot* pPlot, int iRange, bool bDefensive
 	return iValue;
 }
 
-int CvPlayerAI::AI_getEnemyPlotStrength(CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const
+int CvPlayerAI::AI_getEnemyPlotStrength(const CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const
 {
 	PROFILE_FUNC();
 

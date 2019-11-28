@@ -58,6 +58,8 @@
 
 #include "EnumFlags.h"
 #include "NiPoint.h"
+#include "nullptr_t.h"
+
 
 //
 // Basic types
@@ -112,7 +114,7 @@ struct ECacheAccess
 		ReadWrite = Read | Write
 	};
 };
-DEFINE_ENUM_FLAG_OPERATORS(ECacheAccess::flags);
+DECLARE_FLAGS(ECacheAccess::flags);
 
 //
 // Feature macros

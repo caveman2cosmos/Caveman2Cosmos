@@ -26,6 +26,19 @@ typedef struct
 #endif
 } edgeCosts;
 
+struct StackCompare
+{
+	enum flags
+	{
+		None = 0,
+		PotentialEnemy = 1 << 0,
+		CheckCanAttack = 1 << 1,
+		CheckCanMove = 1 << 2,
+		Fast = 1 << 3
+	};
+};
+DECLARE_FLAGS(StackCompare::flags);
+
 class CvSelectionGroup
 {
 
@@ -290,8 +303,10 @@ public:
 	virtual int AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy, bool bForce = false, bool* bWin = NULL, int iTheshold = -1) const = 0;
 	virtual CvUnit* AI_getBestGroupAttacker(const CvPlot* pPlot, bool bPotentialEnemy, int& iUnitOdds, bool bForce = false, bool bNoBlitz = false, CvUnit** pDefender = NULL, bool bAssassinate = false, bool bSurprise = false) const = 0;
 	virtual CvUnit* AI_getBestGroupSacrifice(const CvPlot* pPlot, bool bPotentialEnemy, bool bForce = false, bool bNoBlitz = false, bool bSuprise = false) const = 0;
-	virtual int AI_compareStacks(const CvPlot* pPlot, bool bPotentialEnemy, bool bCheckCanAttack = false, bool bCheckCanMove = false, int iRange = 0) const = 0;
-	virtual int AI_sumStrength(const CvPlot* pAttackedPlot = NULL, DomainTypes eDomainType = NO_DOMAIN, bool bCheckCanAttack = false, bool bCheckCanMove = false) const = 0;
+
+	virtual int AI_compareStacks(const CvPlot* pPlot, StackCompare::flags flags = StackCompare::None, int iRange = 0) const = 0;
+	//virtual int AI_compareStacks(const CvPlot* pPlot, bool bPotentialEnemy, bool bCheckCanAttack = false, bool bCheckCanMove = false, int iRange = 0) const = 0;
+	virtual int AI_sumStrength(const CvPlot* pAttackedPlot = NULL, DomainTypes eDomainType = NO_DOMAIN, StackCompare::flags flags = StackCompare::None) const = 0;
 	virtual void AI_queueGroupAttack(int iX, int iY) = 0;
 	virtual void AI_cancelGroupAttack() = 0;
 	virtual bool AI_isGroupAttack() = 0;

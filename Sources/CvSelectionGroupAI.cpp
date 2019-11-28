@@ -832,7 +832,7 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupSacrifice(const CvPlot* pPlot, bool b
 
 // Returns ratio of strengths of stacks times 100
 // (so 100 is even ratio, numbers over 100 mean this group is more powerful than the stack on a plot)
-int CvSelectionGroupAI::AI_compareStacks(const CvPlot* pPlot, bool bPotentialEnemy, bool bCheckCanAttack, bool bCheckCanMove, int iRange) const
+int CvSelectionGroupAI::AI_compareStacks(const CvPlot* pPlot, StackCompare::flags flags /*= StackCompare::None*/, int iRange /*= 0*/) const
 {
 	PROFILE_FUNC();
 
@@ -852,7 +852,7 @@ int CvSelectionGroupAI::AI_compareStacks(const CvPlot* pPlot, bool bPotentialEne
 	}
 
 	bool bDivideFirst = false;
-	compareRatio = AI_sumStrength(pPlot, eDomainType, bCheckCanAttack, bCheckCanMove);
+	compareRatio = AI_sumStrength(pPlot, eDomainType, flags);
 	if (compareRatio >= (MAX_INT/100))
 	{
 		compareRatio /= 100;
@@ -867,11 +867,6 @@ int CvSelectionGroupAI::AI_compareStacks(const CvPlot* pPlot, bool bPotentialEne
 	}
 	FAssert(eOwner != NO_PLAYER);
 	
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       03/04/10                                jdog5000      */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
 /* original bts code
 	int defenderSum = pPlot->AI_sumStrength(NO_PLAYER, getOwnerINLINE(), eDomainType, true, !bPotentialEnemy, bPotentialEnemy);
 */
@@ -879,10 +874,16 @@ int CvSelectionGroupAI::AI_compareStacks(const CvPlot* pPlot, bool bPotentialEne
 	//	Koshling - changed final param from 'bPotentialEnemy' to '!bPotentialEnemy' since the param is whether
 	//	to test, and the value we have here is an assertion.  This bug was causing the AI to send inadequate stacks
 	//	against cities of players it was not YET at war with and causing a premature war
-	int defenderSum = pPlot->AI_sumStrength(NO_PLAYER, eOwner, eDomainType, true, !bPotentialEnemy, !bPotentialEnemy, iRange);
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
+	const bool bPotentialEnemy = flags & StackCompare::PotentialEnemy;
+	const bool bFast = flags & StackCompare::Fast;
+	StrengthFlags::flags strengthFlags = bFast? StrengthFlags::None : StrengthFlags::DefensiveBonuses;
+	if (!bFast && !bPotentialEnemy)
+	{
+		strengthFlags |= StrengthFlags::TestAtWar;
+		strengthFlags |= StrengthFlags::TestPotentialEnemy;
+	}
+	int defenderSum = pPlot->AI_sumStrength(NO_PLAYER, eOwner, eDomainType, strengthFlags, iRange);
+
 	if (bDivideFirst)
 	{
 		defenderSum /= 100;
@@ -892,71 +893,53 @@ int CvSelectionGroupAI::AI_compareStacks(const CvPlot* pPlot, bool bPotentialEne
 	return compareRatio;
 }
 
-int CvSelectionGroupAI::AI_sumStrength(const CvPlot* pAttackedPlot, DomainTypes eDomainType, bool bCheckCanAttack, bool bCheckCanMove) const
+int CvSelectionGroupAI::AI_sumStrength(const CvPlot* pAttackedPlot, DomainTypes eDomainType, StackCompare::flags flags /*= StackCompare::None*/) const
 {
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
 	unsigned long long strSum = 0;
-	int iBaseCollateral = GC.getDefineINT("COLLATERAL_COMBAT_DAMAGE"); // K-Mod. (currently this number is "10")
+	static const int COLLATERAL_COMBAT_DAMAGE = GC.getDefineINT("COLLATERAL_COMBAT_DAMAGE"); // K-Mod. (currently this number is "10")
 
-	pUnitNode = headUnitNode();
+	const bool bCheckCanAttack = flags & StackCompare::CheckCanAttack;
+	const bool bCheckCanMove = flags & StackCompare::CheckCanMove;
+	const bool bFastMode = flags & StackCompare::Fast;
 
-	CvUnit* pInitialUnit = ::getUnit(pUnitNode->m_data);
-	int iNumPotentialDefenders = pAttackedPlot->getNumVisiblePotentialEnemyDefenders(pInitialUnit) - 1;
-	while (pUnitNode != NULL && strSum <= MAX_INT)
+	unit_iterator unitItr = beginUnits();
+	int iNumPotentialDefenders = pAttackedPlot->getNumVisiblePotentialEnemyDefenders(*unitItr) - 1;
+	for (; unitItr != endUnits() && strSum <= MAX_INT; ++unitItr)
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = nextUnitNode(pUnitNode);
+		CvUnit* pLoopUnit = *unitItr;
 
-		if (!pLoopUnit->isDead())
+		if (pLoopUnit->isDead())
+			continue;
+
+		if ((
+				!bCheckCanAttack
+				|| (pLoopUnit->getDomainType() == DOMAIN_AIR && pLoopUnit->canAirAttack())
+				|| (pLoopUnit->getDomainType() != DOMAIN_AIR && pLoopUnit->canAttack())
+			)
+			&& (!bCheckCanMove || pLoopUnit->canMove())
+			//TB: canMoveInto may need simplified here somehow.
+			&& (!bCheckCanMove || pAttackedPlot == NULL || pLoopUnit->canMoveInto(pAttackedPlot, /*bAttack*/ true, /*bDeclareWar*/ true, false, false, true /*bIgnoreLocation*/))
+			&& (eDomainType == NO_DOMAIN || pLoopUnit->getDomainType() == eDomainType)
+			)
 		{
-			bool bCanAttack = false;
-			if (pLoopUnit->getDomainType() == DOMAIN_AIR)
-				bCanAttack = pLoopUnit->canAirAttack();
-			else
-				bCanAttack = pLoopUnit->canAttack();
+			//strSum += (unsigned long long)pLoopUnit->currEffectiveStr(pAttackedPlot, pLoopUnit);
+			//TB Simplify for speed:
+			strSum += (unsigned long long)pLoopUnit->currCombatStr(NULL,NULL);
+			// K-Mod estimate the attack power of collateral units
+			if (!bFastMode && pLoopUnit->collateralDamage() > 0 && pAttackedPlot != plot())
+			{ 
+				int iPossibleTargets = std::min(iNumPotentialDefenders, pLoopUnit->collateralDamageMaxUnits()); 
 
-			if (!bCheckCanAttack || bCanAttack)
-			{
-				if (!bCheckCanMove || pLoopUnit->canMove())
-				{
-					//TB: canMoveInto may need simplified here somehow.
-					if (!bCheckCanMove || pAttackedPlot == NULL || pLoopUnit->canMoveInto(pAttackedPlot, /*bAttack*/ true, /*bDeclareWar*/ true, false, false, true /*bIgnoreLocation*/))
-					{
-						if (eDomainType == NO_DOMAIN || pLoopUnit->getDomainType() == eDomainType)
-						{
-							//strSum += (unsigned long long)pLoopUnit->currEffectiveStr(pAttackedPlot, pLoopUnit);
-							//TB Simplify for speed:
-							strSum += (unsigned long long)pLoopUnit->currCombatStr(NULL,NULL);
-							// K-Mod estimate the attack power of collateral units 
-							if (pLoopUnit->collateralDamage() > 0 && pAttackedPlot != plot()) 
-							{ 
-								int iPossibleTargets = std::min(iNumPotentialDefenders, pLoopUnit->collateralDamageMaxUnits()); 
-
-								if (iPossibleTargets > 0) 
-								{ 
-									// collateral damage is not trivial to calculate. This estimate is pretty rough. 
-									strSum += (unsigned long long)pLoopUnit->baseCombatStrNonGranular() * iBaseCollateral * pLoopUnit->collateralDamage() * iPossibleTargets / 100;
-								} 
-							} 
-							// K-Mod end 
-						}
-					}
-				}
-			}
+				if (iPossibleTargets > 0) 
+				{ 
+					// collateral damage is not trivial to calculate. This estimate is pretty rough. 
+					strSum += (unsigned long long)pLoopUnit->baseCombatStrNonGranular() * COLLATERAL_COMBAT_DAMAGE * pLoopUnit->collateralDamage() * iPossibleTargets / 100;
+				} 
+			} 
+			// K-Mod end 
 		}
 	}
-	int iTotal = 0;
-	if (strSum > MAX_INT)
-	{
-		iTotal = MAX_INT;
-	}
-	else
-	{
-		iTotal = (int)strSum;
-	}
-
-	return iTotal;
+	return static_cast<int>(std::min<unsigned long long>(MAX_INT, strSum));
 }
 
 void CvSelectionGroupAI::AI_queueGroupAttack(int iX, int iY)

@@ -3629,7 +3629,12 @@ int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelection
 							pAdjacentPlot->isVisible(eTeam, false) &&
 							pAdjacentPlot->getVisibleEnemyDefender(pSelectionGroup->getHeadOwner()))
 						{
-							int iRatioToUnitStack = pSelectionGroup->AI_compareStacks(pAdjacentPlot, false);
+							int iRatioToUnitStack = pSelectionGroup->AI_compareStacks(pAdjacentPlot, 
+								//CvPathGenerator::IsMaxPerformance()? 
+								StackCompare::Fast 
+								//: 
+								//StackCompare::None
+							);
 
 							if ( iRatioToUnitStack < 120 )
 							{

@@ -890,6 +890,9 @@
     <ClInclude Include="index_iterator_base.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="nullptr_t.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CvGameCoreDLL.rc">
