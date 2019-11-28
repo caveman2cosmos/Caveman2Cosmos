@@ -1307,7 +1307,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANIMAL_RIDING_QUOTE</Tag>
-		<English>Life is like riding a bicycle. To keep your balance, you must keep moving.[PARAGRAPH:2]- Albert Einstein, [PARAGRAPH:1][SPACE][SPACE]"Letter to Eduard Einstein"</English>
+		<English>"The wind of heaven is that which blows between a horse's ears."[PARAGRAPH:2]- Arabian Proverb</English>
+		<French>"Le vent du ciel est celui qui souffle entre les oreilles d'un cheval." - Proverbe Arabe</French>
+		<Polish>"Niebiański wiatr jest tym czym podmuch między uszami konia." - Arabskie Przysłowie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANIMAL_RIDING_STRATEGY</Tag>
@@ -22750,9 +22752,7 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_STIRRUP_QUOTE</Tag>
-		<English>"The wind of heaven is that which blows between a horse's ears." - Arabian Proverb</English>
-		<French>"Le vent du ciel est celui qui souffle entre les oreilles d'un cheval." - Proverbe Arabe</French>
-		<Polish>"Niebiański wiatr jest tym czym podmuch między uszami konia." - Arabskie Przysłowie</Polish>
+		<English>"If you speak the truth, have a foot in the stirrup."[PARAGRAPH:2]- Turkish Proverb</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_STIRRUP_STRATEGY</Tag>

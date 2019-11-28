@@ -10,7 +10,7 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<Quote>TXT_KEY_CULTURE_NANOPUNK_QUOTE</Quote>
 			<Sound>AS2D_TECH_NANOPUNK</Sound>
-			<SoundMP>AS2D_TECH_NANOPUNK</SoundMP>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/nanopunk.dds</Button>
 			<!-- Main properties -->
 			<iCost>38858</iCost>

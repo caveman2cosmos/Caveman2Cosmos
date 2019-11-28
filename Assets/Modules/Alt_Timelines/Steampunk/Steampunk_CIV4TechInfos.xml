@@ -44,7 +44,7 @@
 			</AndPreReqs>
 			<Quote>TXT_KEY_CULTURE_STEAMPUNK_QUOTE</Quote>
 			<Sound>AS2D_TECH_STEAMPUNK</Sound>
-			<SoundMP>AS2D_TECH_STEAMPUNK</SoundMP>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/steampunk.dds</Button>
 		</TechInfo>
 	</TechInfos>

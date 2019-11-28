@@ -10,7 +10,7 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<Quote>TXT_KEY_CULTURE_BIOPUNK_QUOTE</Quote>
 			<Sound>AS2D_TECH_BIOPUNK</Sound>
-			<SoundMP>AS2D_TECH_BIOPUNK</SoundMP>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/biopunk.dds</Button>
 			<!-- Main properties -->
 			<iCost>40165</iCost>

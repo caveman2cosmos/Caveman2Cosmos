@@ -1,7 +1,24 @@
-dll: Sources/**/*
+dll:
+  - Sources/**/*
 
-tool: Tools/**/*
+tool:
+  - Tools/**/*
 
-xml: Assets/**/*.xml
+xml:
+  - Assets/**/*.xml
 
-python: Assets/Python/**/*
+text:
+  - Assets/XML/Text/**/*
+  - Assets/Modules/**/*Text*.xml
+
+python:
+  - Assets/Python/**/*
+
+art:
+  - UnpackedArt/**/*
+  - ArtSource/**/*
+  - Assets/art/**/*
+
+audio:
+  - Assets/Sounds/**/*
+

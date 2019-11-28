@@ -123,7 +123,7 @@ public:
 
 	int getSymbolID(int iSymbol);																	// Exposed to Python
 
-	int getProductionPerPopulation(HurryTypes eHurry);											// Exposed to Python
+	int getProductionPerPopulation(HurryTypes eHurry) const;											// Exposed to Python
 
 	int getAdjustedPopulationPercent(VictoryTypes eVictory) const;								// Exposed to Python
 	int getAdjustedLandPercent(VictoryTypes eVictory) const;											// Exposed to Python
@@ -146,14 +146,14 @@ public:
 	int countCivTeamsEverAlive() const;																	// Exposed to Python
 	int countHumanPlayersAlive() const;																	// Exposed to Python
 
-	int countTotalCivPower();																								// Exposed to Python
-	int countTotalNukeUnits();																							// Exposed to Python
-	int countKnownTechNumTeams(TechTypes eTech);														// Exposed to Python
-	int getNumFreeBonuses(BuildingTypes eBuilding);													// Exposed to Python
+	int countTotalCivPower() const;																								// Exposed to Python
+	int countTotalNukeUnits()const;																							// Exposed to Python
+	int countKnownTechNumTeams(TechTypes eTech) const;														// Exposed to Python
+	int getNumFreeBonuses(BuildingTypes eBuilding) const;													// Exposed to Python
 
-	int countReligionLevels(ReligionTypes eReligion);							// Exposed to Python 
+	int countReligionLevels(ReligionTypes eReligion) const;							// Exposed to Python 
 	int calculateReligionPercent(ReligionTypes eReligion) const;				// Exposed to Python
-	int countCorporationLevels(CorporationTypes eCorporation);							// Exposed to Python 
+	int countCorporationLevels(CorporationTypes eCorporation) const;							// Exposed to Python 
 	void replaceCorporation(CorporationTypes eCorporation1, CorporationTypes eCorporation2);
 
 	int goldenAgeLength() const;																					// Exposed to Python
@@ -248,12 +248,12 @@ public:
 	DllExport int getTurnSlicesRemaining();
 	void resetTurnTimer();
 	void incrementTurnTimer(int iNumTurnSlices);
-	int getMaxTurnLen();
+	int getMaxTurnLen() const;
 
 	int getTargetScore() const;																		// Exposed to Python
 	void setTargetScore(int iNewValue);														// Exposed to Python
 
-	int getNumGameTurnActive();																		// Exposed to Python
+	int getNumGameTurnActive() const;																		// Exposed to Python
 	DllExport int countNumHumanGameTurnActive() const;														// Exposed to Python
 	void changeNumGameTurnActive(int iChange);
 
@@ -308,13 +308,13 @@ public:
 /*                                                                                 jdog5000     */
 /*                                                                                              */
 /************************************************************************************************/
-	int getAIAutoPlay(PlayerTypes iPlayer);							// Exposed to Python
+	int getAIAutoPlay(PlayerTypes iPlayer) const;							// Exposed to Python
 		void setAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForced = false);
 	DllExport void setAIAutoPlayExternal(int iNewValue);					// Exposed to Python
 	void changeAIAutoPlay(PlayerTypes iPlayer, int iChange);
 	
-	bool isForcedAIAutoPlay(PlayerTypes iPlayer);																// Exposed to Python
-	int getForcedAIAutoPlay(PlayerTypes iPlayer);																// Exposed to Python
+	bool isForcedAIAutoPlay(PlayerTypes iPlayer) const;																// Exposed to Python
+	int getForcedAIAutoPlay(PlayerTypes iPlayer) const;																// Exposed to Python
 	void setForcedAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForced = false);																// Exposed to Python
 	void changeForcedAIAutoPlay(PlayerTypes iPlayer, int iNewValue);	
 /************************************************************************************************/
@@ -331,8 +331,8 @@ public:
 	void setWaterAnimalSpawnChance(int iNewValue);					// Exposed to Python
 	void changeWaterAnimalSpawnChance(int iChange);					// Exposed to Python
 #if defined QC_MASTERY_VICTORY
-	bool getStarshipLaunched(int ID);
-	bool getDiplomaticVictoryAchieved(int ID);
+	bool getStarshipLaunched(int ID) const;
+	bool getDiplomaticVictoryAchieved(int ID) const;
 #endif
 	int getCurrentVoteID() const;
 	void setCurrentVoteID(int iNewValue);
@@ -345,19 +345,19 @@ public:
 	void setYResolution(int iNewValue);					// Exposed to Python
 	void changeYResolution(int iChange);					// Exposed to Python
 	
-	int getCutLosersCounter();
+	int getCutLosersCounter() const;
 	void changeCutLosersCounter(int iChange);
-	int getHighToLowCounter();
+	int getHighToLowCounter() const;
 	void changeHighToLowCounter(int iChange);
-	int getIncreasingDifficultyCounter();
+	int getIncreasingDifficultyCounter() const;
 	void changeIncreasingDifficultyCounter(int iChange);
 
 	void averageHandicaps();
-	
-	int getMercyRuleCounter();
+
+	int getMercyRuleCounter() const;
 	void changeMercyRuleCounter(int iChange);
 	void setMercyRuleCounter(int iNewVal);
-	
+
 	int countPeaks(CvPlot* pPlot, bool bCountHill = false);
 	void markBayPlots(CvPlot* pPlot);
 	int countForest(CvPlot* pPlot, int iForest);
@@ -367,7 +367,7 @@ public:
 	int countJungle(CvPlot* pPlot, int iJungle);
 	char getRandomVowel();
 	char getRandomConsonant();
-	bool isValidName(CvWString szName);
+	bool isValidName(CvWString szName) const;
 	CvWString generateRandomWord(int iMaxLength);
 	CvWString getRandomName(int iMaxLength);
 	
@@ -418,8 +418,8 @@ public:
 	void toggleAnyoneHasUnitZoneOfControl();
 	//TB OOSSPECIAL
 	void logOOSSpecial(int iLocID, int iVar, int iVar2 = 0, int iVar3 = 0);
-	int getTopCityCount();
-	int getTopPopCount();
+	int getTopCityCount() const;
+	int getTopPopCount() const;
 	int getImprovementCount(ImprovementTypes eIndex) const;
 	void changeImprovementCount(ImprovementTypes eIndex, int iChange);
 protected:
@@ -440,7 +440,7 @@ public:
 /************************************************************************************************/
 /* Afforess	                         END                                                        */
 /************************************************************************************************/	
-	unsigned int getInitialTime();
+	unsigned int getInitialTime() const;
 	DllExport void setInitialTime(unsigned int uiNewValue);
 
 	bool isScoreDirty() const;																							// Exposed to Python
@@ -535,19 +535,19 @@ public:
 	bool isForcedControl(ForceControlTypes eIndex) const;												// Exposed to Python
 	void setForceControl(ForceControlTypes eIndex, bool bEnabled);
 
-	int getUnitCreatedCount(UnitTypes eIndex);																	// Exposed to Python
+	int getUnitCreatedCount(UnitTypes eIndex) const;																	// Exposed to Python
 	void incrementUnitCreatedCount(UnitTypes eIndex);
 
-	int getUnitClassCreatedCount(UnitClassTypes eIndex);												// Exposed to Python
-	bool isUnitClassMaxedOut(UnitClassTypes eIndex, int iExtra = 0);						// Exposed to Python
+	int getUnitClassCreatedCount(UnitClassTypes eIndex) const;												// Exposed to Python
+	bool isUnitClassMaxedOut(UnitClassTypes eIndex, int iExtra = 0) const;						// Exposed to Python
 	void incrementUnitClassCreatedCount(UnitClassTypes eIndex);
 
-	int getBuildingClassCreatedCount(BuildingClassTypes eIndex);								// Exposed to Python
-	bool isBuildingClassMaxedOut(BuildingClassTypes eIndex, int iExtra = 0);		// Exposed to Python
+	int getBuildingClassCreatedCount(BuildingClassTypes eIndex) const;								// Exposed to Python
+	bool isBuildingClassMaxedOut(BuildingClassTypes eIndex, int iExtra = 0) const;		// Exposed to Python
 	void incrementBuildingClassCreatedCount(BuildingClassTypes eIndex);
 
-	int getProjectCreatedCount(ProjectTypes eIndex);														// Exposed to Python
-	bool isProjectMaxedOut(ProjectTypes eIndex, int iExtra = 0);								// Exposed to Python
+	int getProjectCreatedCount(ProjectTypes eIndex) const;														// Exposed to Python
+	bool isProjectMaxedOut(ProjectTypes eIndex, int iExtra = 0) const;								// Exposed to Python
 	void incrementProjectCreatedCount(ProjectTypes eIndex, int iExtra = 1);
 
 	int getForceCivicCount(CivicTypes eIndex) const;														// Exposed to Python
@@ -562,10 +562,10 @@ public:
 	bool isVictoryValid(VictoryTypes eIndex) const;															// Exposed to Python
 	void setVictoryValid(VictoryTypes eIndex, bool bValid);
 
-	bool isSpecialUnitValid(SpecialUnitTypes eIndex);														// Exposed to Python  
+	bool isSpecialUnitValid(SpecialUnitTypes eIndex) const;														// Exposed to Python  
 	void makeSpecialUnitValid(SpecialUnitTypes eIndex);													// Exposed to Python
 
-	bool isSpecialBuildingValid(SpecialBuildingTypes eIndex);										// Exposed to Python
+	bool isSpecialBuildingValid(SpecialBuildingTypes eIndex) const;										// Exposed to Python
 	void makeSpecialBuildingValid(SpecialBuildingTypes eIndex, bool bAnnounce = false);									// Exposed to Python
 
 	//TB Nukefix (Reversal) Comment out the next two lines
@@ -576,8 +576,8 @@ public:
 
 	void setVoteChosen(int iSelection, int iVoteId);
 
-	int getReligionGameTurnFounded(ReligionTypes eIndex);												// Exposed to Python
-	bool isReligionFounded(ReligionTypes eIndex);																// Exposed to Python
+	int getReligionGameTurnFounded(ReligionTypes eIndex) const;												// Exposed to Python
+	bool isReligionFounded(ReligionTypes eIndex) const;																// Exposed to Python
 	void makeReligionFounded(ReligionTypes eIndex, PlayerTypes ePlayer);
 
 	int getTechGameTurnDiscovered(TechTypes eTech) const;												// Exposed to Python
@@ -594,8 +594,8 @@ public:
 /************************************************************************************************/
 	bool isGameStart();											// Exposed to Python
 
-	int countNumReligionsFounded();											// Exposed to Python
-	int countNumReligionTechsDiscovered();											// Exposed to Python
+	int countNumReligionsFounded() const;											// Exposed to Python
+	int countNumReligionTechsDiscovered() const;											// Exposed to Python
 
 	bool isTechCanFoundReligion(TechTypes eIndex) const;											// Exposed to Python
 	void setTechCanFoundReligion(TechTypes eIndex, bool bUsed);
@@ -603,14 +603,14 @@ public:
 /* LIMITED_RELIGIONS               END                                                          */
 /************************************************************************************************/
 
-	CvCity* getHolyCity(ReligionTypes eIndex);																	// Exposed to Python
+	CvCity* getHolyCity(ReligionTypes eIndex) const;																	// Exposed to Python
 	void setHolyCity(ReligionTypes eIndex, CvCity* pNewValue, bool bAnnounce);	// Exposed to Python
 
-	int getCorporationGameTurnFounded(CorporationTypes eIndex);												// Exposed to Python
-	bool isCorporationFounded(CorporationTypes eIndex);																// Exposed to Python
+	int getCorporationGameTurnFounded(CorporationTypes eIndex) const;												// Exposed to Python
+	bool isCorporationFounded(CorporationTypes eIndex) const;																// Exposed to Python
 	void makeCorporationFounded(CorporationTypes eIndex, PlayerTypes ePlayer);
 
-	CvCity* getHeadquarters(CorporationTypes eIndex);																	// Exposed to Python
+	CvCity* getHeadquarters(CorporationTypes eIndex) const;																	// Exposed to Python
 	void setHeadquarters(CorporationTypes eIndex, CvCity* pNewValue, bool bAnnounce);	// Exposed to Python
 
 	PlayerVoteTypes getPlayerVote(PlayerTypes eOwnerIndex, int iVoteId) const;			// Exposed to Python
@@ -631,13 +631,13 @@ public:
 	void addGreatPersonBornName(const CvWString& szName);													
 
 	DllExport int getIndexAfterLastDeal();																								// Exposed to Python	
-	int getNumDeals();																													// Exposed to Python	
+	int getNumDeals() const;																													// Exposed to Python	
 	DllExport CvDeal* getDeal(int iID);																										// Exposed to Python	
 	CvDeal* addDeal();																													
 	void deleteDeal(int iID);																										
 	// iteration																																					
-	CvDeal* firstDeal(int *pIterIdx, bool bRev=false);													// Exposed to Python									
-	CvDeal* nextDeal(int *pIterIdx, bool bRev=false);														// Exposed to Python									
+	CvDeal* firstDeal(int *pIterIdx, bool bRev=false) const;													// Exposed to Python									
+	CvDeal* nextDeal(int *pIterIdx, bool bRev=false) const;														// Exposed to Python									
 
 	VoteSelectionData* getVoteSelection(int iID) const;
 	VoteSelectionData* addVoteSelection(VoteSourceTypes eVoteSource);
@@ -714,9 +714,9 @@ public:
 	BuildingTypes getShrineBuilding(int eIndex, ReligionTypes eReligion = NO_RELIGION);
 	void changeShrineBuilding(BuildingTypes eBuilding, ReligionTypes eReligion, bool bRemove = false);
 
-	bool culturalVictoryValid();
-	int culturalVictoryNumCultureCities();
-	CultureLevelTypes culturalVictoryCultureLevel();
+	bool culturalVictoryValid() const;
+	int culturalVictoryNumCultureCities() const;
+	CultureLevelTypes culturalVictoryCultureLevel() const;
 	int getCultureThreshold(CultureLevelTypes eLevel) const;
 
 	int getPlotExtraYield(int iX, int iY, YieldTypes eYield) const;
