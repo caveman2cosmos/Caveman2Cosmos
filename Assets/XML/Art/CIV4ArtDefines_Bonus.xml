@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <!-- These entries should be ordered alphabetically. -->
+<!-- Use <FontButtonIndex>-364</FontButtonIndex> when a bonus doesn't have a unmique font icon -->
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<BonusArtInfos>
 		<BonusArtInfo>
@@ -120,7 +121,7 @@
 			<KFM>Art/Terrain/Resources/DatePalm/Banana.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/DatePalm/Dates.nif</SHADERNIF>
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,3,6</Button>
-			<FontButtonIndex>38</FontButtonIndex>
+			<FontButtonIndex>-364</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_FIG</Type>
@@ -185,7 +186,7 @@
 			<NIF>Art/Terrain/Resources/Pomegranate/Pomegranate.nif</NIF>
 			<KFM></KFM>
 			<Button>Art/Interface/Buttons/Bonus/Pomegranate.dds</Button>
-			<FontButtonIndex>47</FontButtonIndex>
+			<FontButtonIndex>-364</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_OLIVES</Type>
@@ -249,7 +250,7 @@
 			<NIF>Art/Terrain/Resources/Cocoa/spices.nif</NIF>
 			<KFM>Art/Terrain/Resources/Cocoa/spices.kfm</KFM>
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,4,5</Button>
-			<FontButtonIndex>44</FontButtonIndex>
+			<FontButtonIndex>-364</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_COFFEE</Type>
@@ -736,7 +737,7 @@
 			<NIF>Art/Terrain/Resources/geode/stach1.nif</NIF>
 			<KFM></KFM>
 			<Button>Art/Interface/Buttons/Bonus/Geode.dds</Button>
-			<FontButtonIndex>38</FontButtonIndex>
+			<FontButtonIndex>-364</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_GOLD</Type>
