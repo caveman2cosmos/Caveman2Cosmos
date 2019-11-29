@@ -241,7 +241,7 @@
 			<NIF>Art/Terrain/Resources/Coca/sugar.nif</NIF>
 			<KFM>Art/Terrain/Resources/Coca/sugar.kfm</KFM>
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,6,5</Button>
-			<FontButtonIndex>36</FontButtonIndex>
+			<FontButtonIndex>-364</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_COCOA</Type>
@@ -340,7 +340,7 @@
 			<NIF>Art/Terrain/resources/PricklyPear/baradye.nif</NIF>
 			<KFM></KFM>
 			<Button>Art/Interface/Buttons/Bonus/PricklyPear.dds</Button>
-			<FontButtonIndex>48</FontButtonIndex>
+			<FontButtonIndex>-364</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_OPIUM</Type>
@@ -783,7 +783,7 @@
 			<NIF>Art/Terrain/resources/Platinum/Aluminum.nif</NIF>
 			<KFM>Art/Terrain/resources/Platinum/Aluminum.kfm</KFM>
 			<Button>Art/Interface/Buttons/Bonus/Platinum.dds</Button>
-			<FontButtonIndex>57</FontButtonIndex>
+			<FontButtonIndex>-364</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_RUBY</Type>

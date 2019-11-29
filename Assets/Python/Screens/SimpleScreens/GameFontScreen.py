@@ -12,12 +12,12 @@ def GameFontScreen():
 	screen.addPanel("", "", "", True, False, -10, -10, xRes + 20, yRes + 20, PanelStyles.PANEL_STYLE_MAIN)
 
 	TABLE = "GameFontTable"
-	screen.addTableControlGFC(TABLE, 5, (xRes-768)/2, 0, 768, yRes, True, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
+	screen.addTableControlGFC(TABLE, 5, (xRes-772)/2, 0, 772, yRes, True, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 	screen.setTableColumnHeader(TABLE, 0, "ID", 64)
 	screen.setTableColumnHeader(TABLE, 1, "Small", 64)
 	screen.setTableColumnHeader(TABLE, 2, "Big", 64)
 	screen.setTableColumnHeader(TABLE, 3, "Button", 64)
-	screen.setTableColumnHeader(TABLE, 4, "Type", 512)
+	screen.setTableColumnHeader(TABLE, 4, "Type", 500)
 
 	eWidGen = WidgetTypes.WIDGET_GENERAL
 	iRandom = GAME.getSymbolID(FontSymbols.RANDOM_CHAR)
@@ -66,9 +66,17 @@ def GameFontScreen():
 		info = GC.getCorporationInfo(i)
 		aList1.append((info.getChar(), info))
 
+	szBonusClass = "BONUSCLASS_CULTURE"
+	BONUSCLASS_CULTURE = GC.getInfoTypeForString(szBonusClass)
+	bOnce = True
 	for i in range(GC.getNumBonusInfos()):
 		info = GC.getBonusInfo(i)
-		aList1.append((info.getChar(), info))
+		if info.getBonusClassType() == BONUSCLASS_CULTURE:
+			if bOnce:
+				aList1.append((info.getChar(), szBonusClass))
+				bOnce = False
+		else:
+			aList1.append((info.getChar(), info))
 	iMax = len(aList1)
 
 	iRow = -1
@@ -93,8 +101,11 @@ def GameFontScreen():
 					screen.appendTableRow(TABLE)
 					iRow += 1
 				bFound = True
-				screen.setTableText(TABLE, 3, iRow, "", info.getButton(), eWidGen, 1, 2, 1<<0)
-				screen.setTableText(TABLE, 4, iRow, info.getType(), "", eWidGen, 1, 2, 1<<0)
+				if info == szBonusClass:
+					screen.setTableText(TABLE, 4, iRow, szBonusClass, "", eWidGen, 1, 2, 1<<0)
+				else:
+					screen.setTableText(TABLE, 3, iRow, "", info.getButton(), eWidGen, 1, 2, 1<<0)
+					screen.setTableText(TABLE, 4, iRow, info.getType(), "", eWidGen, 1, 2, 1<<0)
 				iMax -= 1
 			i += 1
 		else: continue
