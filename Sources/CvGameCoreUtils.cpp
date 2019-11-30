@@ -1510,29 +1510,35 @@ bool isPlotEventTrigger(EventTriggerTypes eTrigger)
 	return false;
 }
 
+#ifdef DISCOVERY_TECH_CACHE
 namespace {
 	//	Small cache
 	std::vector<stdext::hash_map<UnitTypes, TechTypes> > g_discoveryTechCache;
 	int g_cachedTurn = -1;
 }
+#endif // DISCOVERY_TECH_CACHE
 
 TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer)
 {
 	PROFILE_FUNC();
 	FEnsureMsg(ePlayer != NO_PLAYER, "Player must be valid for this function");
 
+#ifdef DISCOVERY_TECH_CACHE
 	if ( g_cachedTurn != GC.getGame().getGameTurn() )
 	{
 		g_discoveryTechCache.clear();
 		g_cachedTurn = GC.getGame().getGameTurn();
 	}
+#endif // DISCOVERY_TECH_CACHE
 
 	// After the first turn this should not cause any allocation to occur as the max size required will have been reserved
 	g_discoveryTechCache.resize(std::max(g_discoveryTechCache.size(), static_cast<size_t>(ePlayer) + 1));
 
 	TechTypes eBestTech = NO_TECH;
+#ifdef DISCOVERY_TECH_CACHE
 	stdext::hash_map<UnitTypes,TechTypes>::const_iterator itr = g_discoveryTechCache[ePlayer].find(eUnit);
 	if ( itr == g_discoveryTechCache[ePlayer].end() )
+#endif // DISCOVERY_TECH_CACHE
 	{
 		CvPlayerAI& kPlayer = GET_PLAYER(ePlayer);
 		CvTeam& kTeam = GET_TEAM(kPlayer.getTeam());
@@ -1604,12 +1610,16 @@ TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer)
 			}
 		}
 
+#ifdef DISCOVERY_TECH_CACHE
 		g_discoveryTechCache[ePlayer].insert(std::make_pair(eUnit,eBestTech));
+#endif // DISCOVERY_TECH_CACHE
 	}
+#ifdef DISCOVERY_TECH_CACHE
 	else
 	{
 		eBestTech = itr->second;
 	}
+#endif // DISCOVERY_TECH_CACHE
 
 	return eBestTech;
 }
@@ -2176,7 +2186,9 @@ int pathDestValid(int iToX, int iToY, const void* pointer, FAStar* finder)
 	if (!pSelectionGroup->AI_isControlled() || GET_PLAYER(pSelectionGroup->getHeadOwner()).isHuman())
 	{
 		gDLL->getFAStarIFace()->ForceReset(finder);
+#ifdef PATHFINDING_CACHE
 		CvSelectionGroup::setGroupToCacheFor(pSelectionGroup);
+#endif // PATHFINDING_CACHE
 		return pSelectionGroup->generatePath(pFromPlot, pToPlot, gDLL->getFAStarIFace()->GetInfo(finder), false, NULL, MAX_INT);
 	}
 	else
@@ -3161,6 +3173,7 @@ int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelection
 	bool bEndsTurn = false;
 	int iInitialMovementRemaining = -1;
 	
+#ifdef PATHFINDING_CACHE
 	if ( iMovementRemaining == 0 || iMovementRemaining > 2*GC.getMOVE_DENOMINATOR() )
 	{
 		bHaveNonEndTurnCachedEdgeValue = pSelectionGroup->HaveCachedPathEdgeCosts(pFromPlot, pToPlot, false, iCachedNonEndTurnEdgeCost, iSmallestBaseCost, iLargestBaseCost, iCachedNonEndTurnNodeCost );
@@ -3182,6 +3195,7 @@ int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelection
 		bHaveNonEndTurnCachedEdgeValue = pSelectionGroup->HaveCachedPathEdgeCosts(pFromPlot, pToPlot, false, iCachedNonEndTurnEdgeCost, iSmallestBaseCost, iLargestBaseCost, iCachedNonEndTurnNodeCost );
 		bCheckedNonEndTurnEdgeCache = true;
 	}
+#endif // PATHFINDING_CACHE
 
 	{
 		bool bDoesntEndTurn = true;
@@ -3271,6 +3285,7 @@ int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelection
 			bDoesntEndTurn = false;
 		}
 
+#ifdef PATHFINDING_CACHE
 		if ( bEndsTurn && !bCheckedEndTurnEdgeCache )
 		{
 			bHaveEndTurnCachedEdgeValue = pSelectionGroup->HaveCachedPathEdgeCosts(pFromPlot, pToPlot, true, iCachedEndTurnEdgeCost, iSmallestBaseCost, iLargestBaseCost, iCachedEndTurnNodeCost );
@@ -3279,6 +3294,7 @@ int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelection
 		{
 			bHaveNonEndTurnCachedEdgeValue = pSelectionGroup->HaveCachedPathEdgeCosts(pFromPlot, pToPlot, false, iCachedNonEndTurnEdgeCost, iSmallestBaseCost, iLargestBaseCost, iCachedNonEndTurnNodeCost );
 		}
+#endif // PATHFINDING_CACHE
 
 		//	Do we need to calculate the base characteristics or do we have everything we neeed cached?
 		if ( (!(bEndsTurn || bIsTerminalNode) || !bHaveEndTurnCachedEdgeValue) && (!(bDoesntEndTurn && !bIsTerminalNode) || !bHaveNonEndTurnCachedEdgeValue) )
@@ -3607,7 +3623,7 @@ int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelection
 				//	edge traversal cost, and mis-use it in another context, so we accoutn the cost for all visible
 				//	enemy units wherever they occur in the path
 				//if ( parent->m_iData2 == 1 && parent->m_iData1 != 0 )//&& !gDLL->getFAStarIFace()->IsPathDest(finder, pToPlot->getX_INLINE(), pToPlot->getY_INLINE()) )
-#define	UNIT_ADJUST_HORIZON 2
+				static const int UNIT_ADJUST_HORIZON = 2;
 				if ( iPathTurns <= UNIT_ADJUST_HORIZON )
 				{
 					if ( bTrace )
@@ -3710,16 +3726,19 @@ int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelection
 
 			iEdgeCost += iExtraEdgeCost*GC.getMOVE_DENOMINATOR();
 
+#ifdef PATHFINDING_CACHE
 			if ( iInitialMovementRemaining - iLargestBaseCost == iMovementRemaining )
 			{
 				pSelectionGroup->CachePathEdgeCosts(pFromPlot, pToPlot, true, iEdgeCost, iSmallestBaseCost, iLargestBaseCost, iNodeCost);
 			}
+#endif // PATHFINDING_CACHE
 		}
 		else
 		{
 			iEdgeCost = iCachedEndTurnEdgeCost;
 		}
 	}
+#ifdef PATHFINDING_CACHE
 	else
 	{
 		//	Cache the movement costs
@@ -3728,6 +3747,7 @@ int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelection
 			pSelectionGroup->CachePathEdgeCosts(pFromPlot, pToPlot, false, iEdgeCost, iSmallestBaseCost, iLargestBaseCost, iNodeCost);
 		}
 	}
+#endif // PATHFINDING_CACHE
 
 	//	Cost is the edge cost (cached) + the node cost (cached) + the used movement cost (calculated)
 	iWorstCost = iEdgeCost + iNodeCost + (iMovementUsedUp*PATH_MOVEMENT_WEIGHT);
@@ -4043,11 +4063,15 @@ bool ContextFreeNewPathValidFunc(CvSelectionGroup* pSelectionGroup, int iFromX, 
 		CheckSum(iEntityId, (int)eOwner);
 		CheckSum(iEntityId, iFlags);
 
+#ifdef PATHFINDING_VALIDITY_CACHE
 		if (!pToPlot->HaveCachedPathValidityResult((void*)iEntityId, bCheckNonInvisibleDanger, bResult))
+#endif // PATHFINDING_VALIDITY_CACHE
 		{
 			bResult = pathValidInternal(pToPlot, bCheckNonInvisibleDanger, pSelectionGroup, iFlags);
 
+#ifdef PATHFINDING_VALIDITY_CACHE
 			pToPlot->CachePathValidityResult((void*)iEntityId, bCheckNonInvisibleDanger, bResult);
+#endif // PATHFINDING_VALIDITY_CACHE
 		}
 	}
 

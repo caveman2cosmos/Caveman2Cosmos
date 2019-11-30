@@ -7,9 +7,12 @@
 #include "BetterBTSAI.h"
 
 CvSelectionGroup* CvSelectionGroup::m_pCachedMovementGroup = NULL;
-std::map<int,edgeCosts>* CvSelectionGroup::m_pCachedNonEndTurnEdgeCosts = NULL;
-std::map<int,edgeCosts>* CvSelectionGroup::m_pCachedEndTurnEdgeCosts = NULL;
-CvPathGenerator*	CvSelectionGroup::m_generator = NULL;
+boost::scoped_ptr<CvSelectionGroup::CachedPathGenerator> CvSelectionGroup::m_cachedPathGenerator;
+
+
+//std::map<int,CachedEdgeCosts>* CvSelectionGroup::m_pCachedNonEndTurnEdgeCosts = NULL;
+//std::map<int,CachedEdgeCosts>* CvSelectionGroup::m_pCachedEndTurnEdgeCosts = NULL;
+//CvPathGenerator*	CvSelectionGroup::m_generator = NULL;
 
 // Public Functions...
 
@@ -6851,7 +6854,7 @@ bool CvSelectionGroup::generatePath( const CvPlot* pFromPlot, const CvPlot* pToP
 
 		if (bSuccess)
 		{
-			*piPathTurns = m_generator->getLastPath().length();
+			*piPathTurns = getPathGenerator()->getLastPath().length();
 		}
 	}
 
@@ -6860,57 +6863,54 @@ bool CvSelectionGroup::generatePath( const CvPlot* pFromPlot, const CvPlot* pToP
 	return bSuccess;
 }
 
-CvPathGenerator*	CvSelectionGroup::getPathGenerator()
+CvPathGenerator* CvSelectionGroup::getPathGenerator()
 {
-	if ( m_generator == NULL )
-	{
-		m_generator = new	CvPathGenerator(&GC.getMapINLINE());
-
-		m_generator->Initialize(NewPathHeuristicFunc, NewPathCostFunc, NewPathValidFunc, NewPathDestValid, NewPathTurnEndValidityCheckRequired);
-	}
-
-	return m_generator;
+	return getCachedPathGenerator().get();
 }
 
-
-
-void CvSelectionGroup::setGroupToCacheFor(CvSelectionGroup* group)
+CvSelectionGroup::CachedPathGenerator::CachedPathGenerator(CvMap* map)
+	: m_pCachedNonEndTurnEdgeCosts(256)
+	, m_pCachedEndTurnEdgeCosts(32)
+	, m_pathGenerator(map)
 {
-	MEMORY_TRACK_EXEMPT();
-	PROFILE_FUNC();
-
-	m_pCachedMovementGroup = group;
-
-	if ( m_pCachedNonEndTurnEdgeCosts == NULL )
-	{
-		m_pCachedNonEndTurnEdgeCosts = new std::map<int,edgeCosts>();
-	}
-	if ( m_pCachedEndTurnEdgeCosts == NULL )
-	{
-		m_pCachedEndTurnEdgeCosts = new std::map<int,edgeCosts>();
-	}
-
-	m_pCachedNonEndTurnEdgeCosts->clear();
-	m_pCachedEndTurnEdgeCosts->clear();
+	m_pCachedNonEndTurnEdgeCosts.set_empty_key(-1);
+	m_pCachedEndTurnEdgeCosts.set_empty_key(-1);
+	m_pathGenerator.Initialize(NewPathHeuristicFunc, NewPathCostFunc, NewPathValidFunc, NewPathDestValid, NewPathTurnEndValidityCheckRequired);
 }
 
-bool CvSelectionGroup::HaveCachedPathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int& iResult, int& iBestMoveCost, int& iWorstMoveCost, int& iToPlotNodeCost)
+void CvSelectionGroup::CachedPathGenerator::clear()
+{
+	m_pCachedNonEndTurnEdgeCosts.clear();
+	m_pCachedEndTurnEdgeCosts.clear();
+}
+
+CvSelectionGroup::CachedPathGenerator& CvSelectionGroup::getCachedPathGenerator()
+{
+	if (!m_cachedPathGenerator)
+	{
+		m_cachedPathGenerator.reset(new CachedPathGenerator(&GC.getMapINLINE()));
+	}
+	return *m_cachedPathGenerator;
+}
+
+namespace {
+	int get_path_cache_key(const CvPlot* pFromPlot, const CvPlot* pToPlot)
+	{
+		return GC.getMapINLINE().plotNumINLINE(pFromPlot->getX_INLINE(), pFromPlot->getY_INLINE()) + (GC.getMapINLINE().plotNumINLINE(pToPlot->getX_INLINE(), pToPlot->getY_INLINE()) << 16);
+	}
+}
+bool CvSelectionGroup::CachedPathGenerator::HaveCachedPathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int& iResult, int& iBestMoveCost, int& iWorstMoveCost, int& iToPlotNodeCost)
 {
 	//	Could use Zobrist hashes of the plots, but actually since we're only combining two sets of coordinates we can
 	//	fit it all in an int for any reasonable map
-	int cacheKey = GC.getMapINLINE().plotNumINLINE(pFromPlot->getX_INLINE(),pFromPlot->getY_INLINE()) + (GC.getMapINLINE().plotNumINLINE(pToPlot->getX_INLINE(),pToPlot->getY_INLINE()) << 16);
-
-	if ( this != m_pCachedMovementGroup )
-	{
-		return false;
-	}
+	const int cacheKey = get_path_cache_key(pFromPlot, pToPlot);
 	bool result;
 
 	if ( bIsEndTurnElement )
 	{
-		std::map<int,edgeCosts>::const_iterator itr = m_pCachedEndTurnEdgeCosts->find(cacheKey);
+		CacheMapType::const_iterator itr = m_pCachedEndTurnEdgeCosts.find(cacheKey);
 
-		if ( itr == m_pCachedEndTurnEdgeCosts->end() )
+		if ( itr == m_pCachedEndTurnEdgeCosts.end() )
 		{
 			result = false;
 		}
@@ -6929,9 +6929,9 @@ bool CvSelectionGroup::HaveCachedPathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlo
 	}
 	else
 	{
-		std::map<int,edgeCosts>::const_iterator itr = m_pCachedNonEndTurnEdgeCosts->find(cacheKey);
+		CacheMapType::const_iterator itr = m_pCachedNonEndTurnEdgeCosts.find(cacheKey);
 
-		if ( itr == m_pCachedNonEndTurnEdgeCosts->end() )
+		if ( itr == m_pCachedNonEndTurnEdgeCosts.end() )
 		{
 			result = false;
 		}
@@ -6952,37 +6952,55 @@ bool CvSelectionGroup::HaveCachedPathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlo
 	return result;
 }
 
+void CvSelectionGroup::CachedPathGenerator::CachePathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int iCost, int iBestMoveCost, int iWorstMoveCost, int iToPlotNodeCost)
+{
+	//	Could use Zobrist hashes of the plots, but actually since we're only combining two sets of coordinates we can
+	//	fit it all in an int for any reasonable map
+	FAssert(GC.getMapINLINE().getGridHeightINLINE()*GC.getMapINLINE().getGridHeightINLINE()*GC.getMapINLINE().getGridWidthINLINE()*(GC.getMapINLINE().getGridWidthINLINE()/2) < MAX_INT);
+
+	const int cacheKey = get_path_cache_key(pFromPlot, pToPlot);
+
+	CachedEdgeCosts costs(iCost, iBestMoveCost, iWorstMoveCost, iToPlotNodeCost);
+#ifdef _DEBUG
+	costs.pFromPlot = pFromPlot;
+	costs.pToPlot = pToPlot;
+#endif
+
+	if ( bIsEndTurnElement )
+	{
+		m_pCachedEndTurnEdgeCosts[cacheKey] = costs;
+	}
+	else
+	{
+		m_pCachedNonEndTurnEdgeCosts[cacheKey] = costs;
+	}
+}
+
+void CvSelectionGroup::setGroupToCacheFor(CvSelectionGroup* group)
+{
+	if (m_pCachedMovementGroup != group)
+	{
+		m_pCachedMovementGroup = group;
+		getCachedPathGenerator().clear();
+	}
+}
+
+bool CvSelectionGroup::HaveCachedPathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int& iResult, int& iBestMoveCost, int& iWorstMoveCost, int& iToPlotNodeCost)
+{
+	if (m_pCachedMovementGroup != this)
+	{
+		return false;
+	}
+	return getCachedPathGenerator().HaveCachedPathEdgeCosts(pFromPlot, pToPlot, bIsEndTurnElement, iResult, iBestMoveCost, iWorstMoveCost, iToPlotNodeCost);
+}
+
 void CvSelectionGroup::CachePathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int iCost, int iBestMoveCost, int iWorstMoveCost, int iToPlotNodeCost)
 {
 	MEMORY_TRACK_EXEMPT();
 
-	if ( this == m_pCachedMovementGroup )
+	if (this == m_pCachedMovementGroup)
 	{
-		//	Could use Zobrist hashes of the plots, but actually since we're only combining two sets of coordinates we can
-		//	fit it all in an int for any reasonable map
-		FAssert(GC.getMapINLINE().getGridHeightINLINE()*GC.getMapINLINE().getGridHeightINLINE()*GC.getMapINLINE().getGridWidthINLINE()*(GC.getMapINLINE().getGridWidthINLINE()/2) < MAX_INT);
-		int cacheKey = GC.getMapINLINE().plotNumINLINE(pFromPlot->getX_INLINE(),pFromPlot->getY_INLINE()) + (GC.getMapINLINE().plotNumINLINE(pToPlot->getX_INLINE(),pToPlot->getY_INLINE()) << 16);
-
-		edgeCosts costs;
-
-		costs.iCost = iCost;
-		costs.iBestMoveCost = iBestMoveCost;
-		costs.iWorstMoveCost = iWorstMoveCost;
-		costs.iToPlotNodeCost = iToPlotNodeCost;
-#ifdef _DEBUG
-		costs.pFromPlot = pFromPlot;
-		costs.pToPlot = pToPlot;
-#endif
-
-		if ( bIsEndTurnElement )
-		{
-			(*m_pCachedEndTurnEdgeCosts)[cacheKey] = costs;
-		}
-		else
-		{
-			(*m_pCachedNonEndTurnEdgeCosts)[cacheKey] = costs;
-		}
-
+		getCachedPathGenerator().CachePathEdgeCosts(pFromPlot, pToPlot, bIsEndTurnElement, iCost, iBestMoveCost, iWorstMoveCost, iToPlotNodeCost);
 	}
 }
 

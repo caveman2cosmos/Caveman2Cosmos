@@ -14,17 +14,24 @@ class CvPlot;
 class CvArea;
 class FAStarNode;
 
-typedef struct
+struct CachedEdgeCosts
 {
-	int		iCost;
-	int		iBestMoveCost;
-	int		iWorstMoveCost;
-	int		iToPlotNodeCost;
+	CachedEdgeCosts(int iCost = 0, int iBestMoveCost = 0, int iWorstMoveCost = 0, int iToPlotNodeCost = 0)
+		: iCost(iCost)
+		, iBestMoveCost(iBestMoveCost)
+		, iWorstMoveCost(iWorstMoveCost)
+		, iToPlotNodeCost(iToPlotNodeCost)
+	{}
+
+	int iCost;
+	int iBestMoveCost;
+	int iWorstMoveCost;
+	int iToPlotNodeCost;
 #ifdef _DEBUG
 	CvPlot*	pFromPlot;
 	CvPlot*	pToPlot;
 #endif
-} edgeCosts;
+};
 
 struct StackCompare
 {
@@ -417,22 +424,40 @@ protected:
 // BUG - Sentry Actions - end
 
 //	KOSHLING Mod - add path validity results cache
-public:
-	//	These have to be static due to some assumptions the game engine seems to make about
-	//	this class which prsumably relates to the comment earlier that adding to this class causes
-	//	a crash in the main engine.  This is a bit untidy, but essentially fine due to the
-	//	single threaded nature of the application and the fact that cache validity is only
-	//	required across a single path generation call, which cannot interleave
-	static CvSelectionGroup* m_pCachedMovementGroup;
-	static std::map<int,edgeCosts>* m_pCachedNonEndTurnEdgeCosts;
-	static std::map<int,edgeCosts>* m_pCachedEndTurnEdgeCosts;
-	static CvPathGenerator*	m_generator;
+private:
+	struct CachedPathGenerator
+	{
+		CachedPathGenerator(CvMap* map);
 
+		void clear();
+
+		bool HaveCachedPathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int& iResult, int& iBestMoveCost, int& iWorstMoveCost, int& iToPlotNodeCost);
+		void CachePathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int iCost, int iBestMoveCost, int iWorstMoveCost, int iToPlotNodeCost);
+
+		CvPathGenerator* get() { return &m_pathGenerator; }
+		const CvPathGenerator* get() const { return &m_pathGenerator; }
+
+	private:
+		typedef google::dense_hash_map<int, CachedEdgeCosts> CacheMapType;
+		CacheMapType m_pCachedNonEndTurnEdgeCosts;
+		CacheMapType m_pCachedEndTurnEdgeCosts;
+		CvPathGenerator m_pathGenerator;
+	};
+
+	// These have to be static due to some assumptions the game engine seems to make about
+	// this class which presumably relates to the comment earlier that adding to this class causes
+	// a crash in the main engine.  This is a bit untidy, but essentially fine due to the
+	// single threaded nature of the application and the fact that cache validity is only
+	// required across a single path generation call, which cannot interleave
+	static CvSelectionGroup* m_pCachedMovementGroup;
+	static boost::scoped_ptr<CachedPathGenerator> m_cachedPathGenerator;
+	static CachedPathGenerator& getCachedPathGenerator();
+
+public:
 	static void setGroupToCacheFor(CvSelectionGroup* group);
+
 	bool HaveCachedPathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int& iResult, int& iBestMoveCost, int& iWorstMoveCost, int &iToPlotNodeCost);
 	void CachePathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int iCost, int iBestMoveCost, int iWorstMoveCost, int iToPlotNodeCost);
-
-	
 };
 
 #endif
