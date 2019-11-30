@@ -52,6 +52,7 @@ Settings
 .PROJECT_INCS       = ' /I"$BOOST_PATH$/Boost-1.32.0/include"' 
                     + ' /I"$BOOST_PATH$/Python24/include"' 
                     + ' /I"$SOURCE_DIR$/include"'
+                    + ' /I"$SOURCE_DIR$"'
 
 .INCS               = '$PROJECT_INCS$ $GLOBAL_INCS$'
 

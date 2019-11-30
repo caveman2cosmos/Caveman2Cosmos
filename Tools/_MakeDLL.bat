@@ -14,30 +14,33 @@ REM Switch to the source directory
 PUSHD "%~dp0..\Sources
 
 set TARGET=%1-build
-set FBUILD_ARGS=-summary -wait -wrapper -cache -cacheverbose
+set FBUILD_ARGS=-summary -wait -wrapper -cache
 set DEPLOY_DIR="%~dp0..\Assets"
 set FBUILD="%~dp0fbuild.exe"
 
 if "%2" NEQ "" (
     call :do_action %1 %2
+    set ERRORCODE=%ERRORLEVEL%
 )
-if errorlevel 1 (
+if "%ERRORCODE%" NEQ "0" (
     echo Action %2 on %1 failed with error code %errorlevel%
     goto :exit_failed
 )
 
 if "%3" NEQ "" (
     call :do_action %1 %3
+    set ERRORCODE=%ERRORLEVEL%
 )
-if errorlevel 1 (
+if "%ERRORCODE%" NEQ "0" (
     echo Action %3 on %1 failed with error code %errorlevel%
     goto :exit_failed
 )
 
 if "%4" NEQ "" (
     call :do_action %1 %4
+    set ERRORCODE=%ERRORLEVEL%
 )
-if errorlevel 1 (
+if "%ERRORCODE%" NEQ "0" (
     echo Action %4 on %1 failed with error code %errorlevel%
     goto :exit_failed
 )
@@ -79,20 +82,24 @@ set ACTION=%2
 if "%ACTION%"=="build" (
     echo Building DLL in %TARGET% configuration ...
     call :run_cmd_checked %FBUILD% %FBUILD_ARGS% %TARGET%
+    set ERRORCODE=%ERRORLEVEL%
 )
 if "%ACTION%"=="rebuild" (
     echo Rebuilding DLL in %TARGET% configuration ...
     call :run_cmd_checked %FBUILD% %FBUILD_ARGS% -clean %TARGET%
+    set ERRORCODE=%ERRORLEVEL%
 )
 if "%ACTION%"=="deploy" (
     echo Deploying DLL in %TARGET% configuration ...
     call :deploy %TARGET_DIR% %DEPLOY_DIR%
+    set ERRORCODE=%ERRORLEVEL%
 )
 if "%ACTION%"=="clean" (
     echo Cleaning target %TARGET% configuration ...
     call :clean %TARGET_DIR%
+    set ERRORCODE=%ERRORLEVEL%
 )
-if errorlevel 1 (
+if "%ERRORCODE%" NEQ "0" (
     exit /B 1
 )
 exit /B 0
