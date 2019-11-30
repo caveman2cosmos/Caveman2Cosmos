@@ -13,6 +13,13 @@
 .Linker             = '$TOOLKIT$\bin\link.exe'
 .ResourceCompiler   = '$PSDK$\bin\rc.exe'
 
+// ### FastBuild Settings ####
+Settings
+{
+  // Caching
+  .CachePath        = '$BUILD_DIR$\cache'
+}
+
 // ### General defines ###
 .CommonDefines      = ' /DWIN32' 
                     + ' /D_WINDOWS' 
@@ -70,7 +77,7 @@
     .CLOptions      = ' /GR'
                     + ' /MD'
                     + ' /Gy'
-                    + ' /W3' // Most warnings
+                    + ' /W3' // Most warnings are enabled
                     + ' /EHsc'
                     + ' /Gd'
                     + ' /Gm-'
@@ -121,8 +128,8 @@
                     + ' /Oi' 
                     + ' /G7' 
                     + ' /DNDEBUG'
-    //.LDOptions    + ' /OPT:REF'
-    //              + ' /OPT:ICF'
+    .LDOptions      + ' /OPT:REF'
+                    + ' /OPT:ICF'
 ]
 
 // ### Configs ###
@@ -242,7 +249,7 @@ Unity( 'Sources-Unity' )
 
     .UnityOutputPath        = '$BUILD_DIR$\unity'
     .UnityInputPathRecurse  = false
-    .UnityNumFiles          = 16
+    .UnityNumFiles          = 12
     .UnityPCH               = 'CvGameCoreDLL.h'
 }
 

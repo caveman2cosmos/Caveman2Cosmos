@@ -14,6 +14,9 @@ REM Switch to the source directory
 PUSHD "%~dp0..\Sources
 
 set TARGET=%1-build
+set FBUILD_ARGS=-summary -wait -wrapper -cache -cacheverbose
+set DEPLOY_DIR="%~dp0..\Assets"
+set FBUILD="%~dp0fbuild.exe"
 
 if "%2" NEQ "" (
     call :do_action %1 %2
@@ -47,16 +50,13 @@ goto :exit_okay
 :do_action
 set TARGET_DIR="%~dp0..\Build\%1"
 set ACTION=%2
-set DEPLOY_DIR="%~dp0..\Assets"
-set FBUILD="%~dp0fbuild.exe"
-
 if "%ACTION%"=="build" (
     echo Building DLL in %TARGET% configuration ...
-    call :run_cmd_checked %FBUILD% %TARGET%
+    call :run_cmd_checked %FBUILD% %FBUILD_ARGS% %TARGET%
 )
 if "%ACTION%"=="rebuild" (
     echo Rebuilding DLL in %TARGET% configuration ...
-    call :run_cmd_checked %FBUILD% -clean %TARGET%
+    call :run_cmd_checked %FBUILD% %FBUILD_ARGS% -clean %TARGET%
 )
 if "%ACTION%"=="deploy" (
     echo Deploying DLL in %TARGET% configuration ...
