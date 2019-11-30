@@ -7215,7 +7215,7 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 }
 
 // Helpers
-namespace {
+namespace Game {
 	bool isGroupUpgradePromotion(const CvUnit* unit, PromotionTypes promotion)
 	{
 		return GC.getPromotionInfo(promotion).getGroupChange() > 0 && unit->canAcquirePromotion(promotion, PromotionRequirements::ForStatus);
@@ -7530,8 +7530,8 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 										{
 											int iDifference = GC.getUnitCombatInfo(eGroupVolume).getGroupBase() - GC.getUnitCombatInfo(eUnitCombat).getGroupBase();
 											CvUnit::normalizeUnitPromotions(pUnit, iDifference,
-												boost::bind(isGroupUpgradePromotion, pUnit, _2),
-												boost::bind(isGroupDowngradePromotion, pUnit, _2)
+												boost::bind(Game::isGroupUpgradePromotion, pUnit, _2),
+												boost::bind(Game::isGroupDowngradePromotion, pUnit, _2)
 											);
 										}
 									}

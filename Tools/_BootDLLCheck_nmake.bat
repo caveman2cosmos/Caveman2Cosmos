@@ -2,7 +2,7 @@
 PUSHD "%~dp0"
 
 :: Call iterative build without staging the DLL (we couldn't anyway as Civ will have locked it)
-call _MakeDLL.bat %1 build
+call _MakeDLL.bat autobuild %1
 if errorlevel 1 goto :build_failed
 :: Compare the built DLL with the staged one
 fc ..\Build\%1\CvGameCoreDLL.dll ..\Assets\CvGameCoreDLL.dll > nul
@@ -26,7 +26,7 @@ echo.
 timeout 5
 
 taskkill /F /IM Civ4BeyondSword.exe
-call _MakeDLL.bat %1 deploy
+call _MakeDLL.bat build %1 stage
 
 ..\LaunchC2C.bat
 goto :done

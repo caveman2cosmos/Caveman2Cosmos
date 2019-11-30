@@ -29,7 +29,7 @@
 
 //	Koshling - save flag indicating this player has no data in the save as they have never
 //	been alive
-#define	PLAYER_UI_FLAG_OMITTED 4
+#define	PLAYERAI_UI_FLAG_OMITTED 4
 
 //	Koshling - to try to normalize the new tech building evaluation to the same magnitude as the old
 //	(so that it doesn't change it's value as a component relative to other factors) a multiplier is needed
@@ -24538,7 +24538,7 @@ void CvPlayerAI::read(FDataStreamBase* pStream)
 	uint uiFlag=0;
 	WRAPPER_READ(wrapper, "CvPlayerAI", &uiFlag);	// flags for expansion
 
-	if ( (uiFlag & PLAYER_UI_FLAG_OMITTED) == 0 )
+	if ( (uiFlag & PLAYERAI_UI_FLAG_OMITTED) == 0 )
 	{
 		WRAPPER_READ(wrapper, "CvPlayerAI", &m_iPeaceWeight);
 		WRAPPER_READ(wrapper, "CvPlayerAI", &m_iEspionageWeight);
@@ -24745,7 +24745,7 @@ void CvPlayerAI::write(FDataStreamBase* pStream)
 /************************************************************************************************/		
 	if ( !m_bEverAlive )
 	{
-		uiFlag |= PLAYER_UI_FLAG_OMITTED;
+		uiFlag |= PLAYERAI_UI_FLAG_OMITTED;
 	}
 
 	WRAPPER_WRITE(wrapper, "CvPlayerAI", uiFlag);		// flag for expansion

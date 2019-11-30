@@ -1675,7 +1675,7 @@ void CvNetChooseMergeUnit::Debug(char* szAddendum)
 }
 
 // Helpers
-namespace {
+namespace NetChooseMergeUnit {
 	bool isGroupUpgradePromotion(const CvUnit* unit, PromotionTypes promotion)
 	{
 		return GC.getPromotionInfo(promotion).getGroupChange() > 0 &&
@@ -1952,14 +1952,14 @@ void CvNetConfirmSplitUnit::Execute()
 			newUnits.push_back(pUnit3);
 
 			bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(newUnits, iTotalGroupOffset,
-				boost::bind(isGroupUpgradePromotion, pUnit1, _2),
-				boost::bind(isGroupDowngradePromotion, pUnit1, _2)
+				boost::bind(NetChooseMergeUnit::isGroupUpgradePromotion, pUnit1, _2),
+				boost::bind(NetChooseMergeUnit::isGroupDowngradePromotion, pUnit1, _2)
 			);
 			FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on split units");
 
 			bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(newUnits, iTotalQualityOffset,
-				boost::bind(isQualityUpgradePromotion, pUnit1, _2),
-				boost::bind(isQualityDowngradePromotion, pUnit1, _2)
+				boost::bind(NetChooseMergeUnit::isQualityUpgradePromotion, pUnit1, _2),
+				boost::bind(NetChooseMergeUnit::isQualityDowngradePromotion, pUnit1, _2)
 			);
 			FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on split units");
 

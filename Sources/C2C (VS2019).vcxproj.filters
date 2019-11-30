@@ -906,7 +906,7 @@
     <None Include="interfaceDirtyBits.inl">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="Makefile" />
+    <None Include="fbuild.bff" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Notes for the next breaking of save game compatability cycle.txt" />
