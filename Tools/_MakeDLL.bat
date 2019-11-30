@@ -47,6 +47,32 @@ POPD
 
 goto :exit_okay
 
+:run_cmd_checked
+%*
+if errorlevel 1 (
+    echo Command %1 failed with error code %errorlevel%
+    exit /B 1
+)
+exit /B 0
+
+:deploy
+call :run_cmd_checked xcopy "%~1\CvGameCoreDLL.dll" "%~2" /R /Y
+if errorlevel 1 (
+    exit /B 1
+)
+call :run_cmd_checked xcopy "%~1\CvGameCoreDLL.pdb" "%~2" /R /Y
+if errorlevel 1 (
+    exit /B 1
+)
+exit /B 0
+
+:clean
+call :run_cmd_checked rmdir /S /Q "%~1"
+if errorlevel 1 (
+    exit /B 1
+)
+exit /B 0
+
 :do_action
 set TARGET_DIR="%~dp0..\Build\%1"
 set ACTION=%2
@@ -78,29 +104,3 @@ exit /B 0
 :exit_failed
 echo ...Failed
 exit /B 1
-
-:run_cmd_checked
-%*
-if errorlevel 1 (
-    echo Command %1 failed with error code %errorlevel%
-    exit /B 1
-)
-exit /B 0
-
-:deploy
-call :run_cmd_checked xcopy "%~1\CvGameCoreDLL.dll" "%~2" /R /Y
-if errorlevel 1 (
-    exit /B 1
-)
-call :run_cmd_checked xcopy "%~1\CvGameCoreDLL.pdb" "%~2" /R /Y
-if errorlevel 1 (
-    exit /B 1
-)
-exit /B 0
-
-:clean
-call :run_cmd_checked rmdir /S /Q "%~1"
-if errorlevel 1 (
-    exit /B 1
-)
-exit /B 0
