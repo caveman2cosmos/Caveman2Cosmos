@@ -58,6 +58,8 @@ deploy_script:
 - cmd: >-
     call "%APPVEYOR_BUILD_FOLDER%\Tools\CI\DeployBuild.bat"
 
+    call "%APPVEYOR_BUILD_FOLDER%\Tools\_TrimFBuildCache.bat"
+
 # DISABLED: this doesn't work, unauthorized
 # deploy:
 # - provider: GitHub

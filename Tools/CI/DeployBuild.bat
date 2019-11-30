@@ -30,8 +30,8 @@ powershell -ExecutionPolicy Bypass -File "%~dp0\InitGit.ps1"
 
 :: SET GIT RELEASE TAG -----------------------------------------
 echo Setting release version build tag on git ...
-git tag -a %C2C_VERSION% %APPVEYOR_REPO_COMMIT% -m "%C2C_VERSION%" -f
-git push --tags
+call git tag -a %C2C_VERSION% %APPVEYOR_REPO_COMMIT% -m "%C2C_VERSION%" -f
+call git push --tags
 
 :: COMPILE -----------------------------------------------------
 echo Building FinalRelease DLL...
@@ -69,8 +69,8 @@ echo Copying FPKs from SVN...
 if not "%APPVEYOR_REPO_COMMIT_MESSAGE:FPKCLEAN=%"=="%APPVEYOR_REPO_COMMIT_MESSAGE%" (
     goto :fpk_live
 )
-xcopy "%build_dir%\Assets\*.FPK" "Assets" /Y
-xcopy "%build_dir%\Assets\fpklive_token.txt" "Assets" /Y
+call xcopy "%build_dir%\Assets\*.FPK" "Assets" /Y
+call xcopy "%build_dir%\Assets\fpklive_token.txt" "Assets" /Y
 
 :fpk_live
 echo Packing FPKs...
