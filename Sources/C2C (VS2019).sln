@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.421
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "C2C", "C2C (VS2019).vcxproj", "{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}"
 EndProject
@@ -9,6 +9,7 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Assert|x86 = Assert|x86
 		Debug|x86 = Debug|x86
+		Debug-old|x86 = Debug-old|x86
 		FinalRelease|x86 = FinalRelease|x86
 		Profile|x86 = Profile|x86
 		Release|x86 = Release|x86
@@ -19,6 +20,8 @@ Global
 		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Assert|x86.Build.0 = Assert|Win32
 		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Debug|x86.ActiveCfg = Debug|Win32
 		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Debug|x86.Build.0 = Debug|Win32
+		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Debug-old|x86.ActiveCfg = Debug-old|Win32
+		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Debug-old|x86.Build.0 = Debug-old|Win32
 		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.FinalRelease|x86.ActiveCfg = FinalRelease|Win32
 		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.FinalRelease|x86.Build.0 = FinalRelease|Win32
 		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Profile|x86.ActiveCfg = Profile|Win32

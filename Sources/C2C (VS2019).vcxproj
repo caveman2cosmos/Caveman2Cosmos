@@ -5,6 +5,10 @@
       <Configuration>Assert</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug-old|Win32">
+      <Configuration>Debug-old</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
@@ -56,6 +60,10 @@
     <ConfigurationType>Makefile</ConfigurationType>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-old|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -77,76 +85,98 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug-old|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
     <ReferencePath>..\Sources;$(ReferencePath)</ReferencePath>
     <OutDir>..\Build\$(Configuration)\</OutDir>
     <IntDir>..\Build\$(Configuration)\</IntDir>
-    <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" build $(Configuration)</NMakeBuildCommandLine>
-    <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" rebuild $(Configuration)</NMakeReBuildCommandLine>
-    <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" clean $(Configuration)</NMakeCleanCommandLine>
+    <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) build deploy</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) rebuild deploy</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) clean</NMakeCleanCommandLine>
     <IncludePath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;QC_MASTERY_VICTORY;LOG_AI;_MOD_GWARM;_MOD_SHAM_SPOILER;C2C_BUILD;MULTI_FEATURE_MOD;FP_PROFILE_ENABLE;USE_INTERNAL_PROFILER</NMakePreprocessorDefinitions>
     <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
     <AdditionalOptions>/std:c++14 /DBOOST_FUNCTION_PARMS=0 /DBOOST_FUNCTION_PARM=0</AdditionalOptions>
+    <NMakeOutput>$(SolutionDir)..\Build\$(Configuration)\CvGameCoreDLL.dll</NMakeOutput>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Assert|Win32'">
     <ReferencePath>..\Sources;$(ReferencePath)</ReferencePath>
     <OutDir>..\Build\$(Configuration)\</OutDir>
     <IntDir>..\Build\$(Configuration)\</IntDir>
-    <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" build $(Configuration)</NMakeBuildCommandLine>
-    <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" rebuild $(Configuration)</NMakeReBuildCommandLine>
-    <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" clean $(Configuration)</NMakeCleanCommandLine>
+    <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) build deploy</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) rebuild deploy</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) clean</NMakeCleanCommandLine>
     <IncludePath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;NDEBUG;FINAL_RELEASE;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;QC_MASTERY_VICTORY;LOG_AI;_MOD_GWARM;_MOD_SHAM_SPOILER;C2C_BUILD;MULTI_FEATURE_MOD;FASSERT_ENABLE</NMakePreprocessorDefinitions>
     <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
     <AdditionalOptions>/std:c++14 /DBOOST_FUNCTION_PARMS=0 /DBOOST_FUNCTION_PARM=0</AdditionalOptions>
+    <NMakeOutput>$(SolutionDir)..\Build\$(Configuration)\CvGameCoreDLL.dll</NMakeOutput>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Testing|Win32'">
     <ReferencePath>..\Sources;$(ReferencePath)</ReferencePath>
     <OutDir>..\Build\$(Configuration)\</OutDir>
     <IntDir>..\Build\$(Configuration)\</IntDir>
-    <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" build $(Configuration)</NMakeBuildCommandLine>
-    <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" rebuild $(Configuration)</NMakeReBuildCommandLine>
-    <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" clean $(Configuration)</NMakeCleanCommandLine>
+    <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) build deploy</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) rebuild deploy</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) clean</NMakeCleanCommandLine>
     <IncludePath>.;include;deps\Microsoft Visual C++ Toolkit 2003\include;deps\Microsoft SDKs\Windows\v6.0\Include;deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(IncludePath)</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;NDEBUG;FINAL_RELEASE;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;QC_MASTERY_VICTORY;LOG_AI;_MOD_GWARM;_MOD_SHAM_SPOILER;C2C_BUILD;MULTI_FEATURE_MOD;FASSERT_ENABLE;FASSERT_LOGGING</NMakePreprocessorDefinitions>
+    <NMakeOutput>$(SolutionDir)..\Build\$(Configuration)\CvGameCoreDLL.dll</NMakeOutput>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ReferencePath>..\Sources;$(ReferencePath)</ReferencePath>
     <OutDir>..\Build\$(Configuration)\</OutDir>
     <IntDir>..\Build\$(Configuration)\</IntDir>
-    <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" build $(Configuration)</NMakeBuildCommandLine>
-    <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" rebuild $(Configuration)</NMakeReBuildCommandLine>
-    <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" clean $(Configuration)</NMakeCleanCommandLine>
+    <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) build deploy</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) rebuild deploy</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) clean</NMakeCleanCommandLine>
     <IncludePath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;NDEBUG;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;QC_MASTERY_VICTORY;LOG_AI;_MOD_GWARM;_MOD_SHAM_SPOILER;C2C_BUILD;MULTI_FEATURE_MOD</NMakePreprocessorDefinitions>
     <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
     <AdditionalOptions>/std:c++14 /DBOOST_FUNCTION_PARMS=0 /DBOOST_FUNCTION_PARM=0</AdditionalOptions>
+    <NMakeOutput>$(SolutionDir)..\Build\$(Configuration)\CvGameCoreDLL.dll</NMakeOutput>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='FinalRelease|Win32'">
     <ReferencePath>..\Sources;$(ReferencePath)</ReferencePath>
     <OutDir>..\Build\$(Configuration)\</OutDir>
     <IntDir>..\Build\$(Configuration)\</IntDir>
-    <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" build $(Configuration)</NMakeBuildCommandLine>
-    <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" rebuild $(Configuration)</NMakeReBuildCommandLine>
-    <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" clean $(Configuration)</NMakeCleanCommandLine>
+    <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) build deploy</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) rebuild deploy</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) clean</NMakeCleanCommandLine>
     <IncludePath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;NDEBUG;FINAL_RELEASE;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;QC_MASTERY_VICTORY;LOG_AI;_MOD_GWARM;_MOD_SHAM_SPOILER;C2C_BUILD;MULTI_FEATURE_MOD</NMakePreprocessorDefinitions>
     <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
     <AdditionalOptions>/std:c++14 /DBOOST_FUNCTION_PARMS=0 /DBOOST_FUNCTION_PARM=0</AdditionalOptions>
+    <NMakeOutput>$(SolutionDir)..\Build\$(Configuration)\CvGameCoreDLL.dll</NMakeOutput>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ReferencePath>..\Sources;$(ReferencePath)</ReferencePath>
     <OutDir>..\Build\$(Configuration)\</OutDir>
     <IntDir>..\Build\$(Configuration)\</IntDir>
-    <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" build $(Configuration)</NMakeBuildCommandLine>
-    <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" rebuild $(Configuration)</NMakeReBuildCommandLine>
-    <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" clean $(Configuration)</NMakeCleanCommandLine>
+    <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) build deploy</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) rebuild deploy</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) clean</NMakeCleanCommandLine>
     <IncludePath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;_DEBUG;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;QC_MASTERY_VICTORY;LOG_AI;_MOD_GWARM;_MOD_SHAM_SPOILER;C2C_BUILD;MULTI_FEATURE_MOD;FASSERT_ENABLE</NMakePreprocessorDefinitions>
     <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
     <AdditionalOptions>/std:c++14 /DBOOST_FUNCTION_PARMS=0 /DBOOST_FUNCTION_PARM=0</AdditionalOptions>
+    <NMakeOutput>$(SolutionDir)..\Build\$(Configuration)\CvGameCoreDLL.dll</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-old|Win32'">
+    <ReferencePath>..\Sources;$(ReferencePath)</ReferencePath>
+    <OutDir>..\Build\$(Configuration)\</OutDir>
+    <IntDir>..\Build\$(Configuration)\</IntDir>
+    <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL_nmake.bat" build Debug</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL_nmake.bat" rebuild Debug</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL_nmake.bat" clean Debug</NMakeCleanCommandLine>
+    <IncludePath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
+    <NMakePreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;_DEBUG;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;QC_MASTERY_VICTORY;LOG_AI;_MOD_GWARM;_MOD_SHAM_SPOILER;C2C_BUILD;MULTI_FEATURE_MOD;FASSERT_ENABLE</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
+    <AdditionalOptions>/std:c++14 /DBOOST_FUNCTION_PARMS=0 /DBOOST_FUNCTION_PARM=0</AdditionalOptions>
+    <NMakeOutput>$(SolutionDir)..\Build\$(Configuration)\CvGameCoreDLL.dll</NMakeOutput>
   </PropertyGroup>
   <ItemGroup>
     <ClCompile Include="CvAllocator.cpp" />
@@ -444,9 +474,9 @@
     <ClInclude Include="Win32.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="fbuild.bff" />
     <None Include="FVariableSystem.inl" />
     <None Include="interfaceDirtyBits.inl" />
-    <None Include="Makefile" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CvGameCoreDLL.rc" />

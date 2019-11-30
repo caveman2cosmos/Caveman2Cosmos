@@ -13,53 +13,63 @@ POPD
 REM Switch to the source directory
 PUSHD "%~dp0..\Sources
 
-set ACTION=%1
-set TARGET=%2
+set TARGET=%1-build
 
-:retry
-if "%ACTION%"=="build" (
-    echo Building DLL in %TARGET% configuration ...
-    call :run_cmd_checked nmake source_list
-    if errorlevel 1 goto :exit_failed
-    call :run_cmd_checked nmake fastdep
-    if errorlevel 1 goto :exit_failed
-    call :run_cmd_checked nmake precompile
-    if errorlevel 1 goto :exit_failed
-    call :run_cmd_checked ..\Build\deps\jom\jom build
-    if errorlevel 1 goto :exit_failed
-    call :run_cmd_checked nmake stage
-    if errorlevel 1 goto :exit_failed
+if "%2" NEQ "" (
+    call :do_action %1 %2
 )
-if "%ACTION%"=="rebuild" (
-    echo Rebuilding DLL in %TARGET% configuration ...
-    call :run_cmd_checked nmake clean
-    if errorlevel 1 goto :exit_failed
-    call :run_cmd_checked nmake source_list
-    if errorlevel 1 goto :exit_failed
-    call :run_cmd_checked nmake fastdep
-    if errorlevel 1 goto :exit_failed
-    call :run_cmd_checked nmake precompile
-    if errorlevel 1 goto :exit_failed
-    call :run_cmd_checked ..\Build\deps\jom\jom build
-    if errorlevel 1 goto :exit_failed
-    call :run_cmd_checked nmake stage
-    if errorlevel 1 goto :exit_failed
+if errorlevel 1 (
+    echo Action %2 on %1 failed with error code %errorlevel%
+    goto :exit_failed
 )
-if "%ACTION%"=="autobuild" (
-    call :autobuild
-    if errorlevel 1 (
-        set ACTION=rebuild
-        goto :retry
-    )
+
+if "%3" NEQ "" (
+    call :do_action %1 %3
 )
-if "%ACTION%"=="clean" (
-    echo Cleaning DLL in %TARGET% configuration ...
-    call :run_cmd_checked nmake clean
-    if errorlevel 1 goto :exit_failed
+if errorlevel 1 (
+    echo Action %3 on %1 failed with error code %errorlevel%
+    goto :exit_failed
+)
+
+if "%4" NEQ "" (
+    call :do_action %1 %4
+)
+if errorlevel 1 (
+    echo Action %4 on %1 failed with error code %errorlevel%
+    goto :exit_failed
 )
 
 REM Restore original directory
 POPD
+
+goto :exit_okay
+
+:do_action
+set TARGET_DIR="%~dp0..\Build\%1"
+set ACTION=%2
+set DEPLOY_DIR="%~dp0..\Assets"
+set FBUILD="%~dp0fbuild.exe"
+
+if "%ACTION%"=="build" (
+    echo Building DLL in %TARGET% configuration ...
+    call :run_cmd_checked %FBUILD% %TARGET%
+)
+if "%ACTION%"=="rebuild" (
+    echo Rebuilding DLL in %TARGET% configuration ...
+    call :run_cmd_checked %FBUILD% -clean %TARGET%
+)
+if "%ACTION%"=="deploy" (
+    echo Deploying DLL in %TARGET% configuration ...
+    call :deploy %TARGET_DIR% %DEPLOY_DIR%
+)
+if "%ACTION%"=="clean" (
+    echo Cleaning target %TARGET% configuration ...
+    call :clean %TARGET_DIR%
+)
+if errorlevel 1 (
+    exit /B 1
+)
+exit /B 0
 
 :exit_okay
 echo ...Finished
@@ -69,34 +79,28 @@ exit /B 0
 echo ...Failed
 exit /B 1
 
-:autobuild
-echo Autobuilding DLL in %TARGET% configuration ...
-nmake source_list
-if errorlevel 1 (
-    echo Failed to build source list, falling back to full rebuild...
-    exit /B 1
-)
-nmake fastdep
-if errorlevel 1 (
-    echo Failed to run fastdep, falling back to full rebuild...
-    exit /B 1
-)
-nmake precompile
-if errorlevel 1 (
-    echo Failed to do precompile, falling back to full rebuild...
-    exit /B 1
-)
-..\Build\deps\jom\jom build
-if errorlevel 1 (
-    echo Failed to do autobuild, falling back to full rebuild...
-    exit /B 1
-)
-exit /B 0
-
 :run_cmd_checked
 %*
 if errorlevel 1 (
     echo Command %1 failed with error code %errorlevel%
+    exit /B 1
+)
+exit /B 0
+
+:deploy
+call :run_cmd_checked xcopy "%~1\CvGameCoreDLL.dll" "%~2" /R /Y
+if errorlevel 1 (
+    exit /B 1
+)
+call :run_cmd_checked xcopy "%~1\CvGameCoreDLL.pdb" "%~2" /R /Y
+if errorlevel 1 (
+    exit /B 1
+)
+exit /B 0
+
+:clean
+call :run_cmd_checked rmdir /S /Q "%~1"
+if errorlevel 1 (
     exit /B 1
 )
 exit /B 0
