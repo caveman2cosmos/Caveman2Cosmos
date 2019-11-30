@@ -35,11 +35,12 @@ git push --tags
 
 :: COMPILE -----------------------------------------------------
 echo Building FinalRelease DLL...
-call "Tools\_MakeDLL.bat" autobuild FinalRelease
+call "Tools\_MakeDLL.bat" FinalRelease build
 if not errorlevel 0 (
     echo Building FinalRelease DLL failed, aborting deployment!
     exit /B 2
 )
+call "Tools\_TrimFBuildCache.bat"
 
 :: SOURCE INDEXING ---------------------------------------------
 :source_indexing

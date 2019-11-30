@@ -52,3 +52,5 @@ lights-found.txt
 Tools/Autocorrect/google_cache.pkl
 
 Sources/C2C.args.json
+
+*.fdb
