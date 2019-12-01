@@ -1,5 +1,16 @@
 @echo off
 
+:: What is going on in this script?
+:: 1. Immediately abort this script if we aren't in the designated release branch (it should only run there).
+:: 2. Update the version number in the mod XML
+:: 3. Compile FinalRelease DLL (and add source indexing)
+:: 4. Fetch the latest SVN to a temp dir
+:: 4. Build FPK patch against the last SVN FPKs
+:: 5. Update the files in the SVN dir with our new ones
+:: 6. Generate change logs
+:: 7. Commit changed files to SVN
+:: 8. Set tag on git containing version number and SVN commit
+
 if "%APPVEYOR_REPO_BRANCH%" neq "%release_branch%" (
     echo Skipping deployment due to not being on release branch
     exit /b 0
@@ -92,7 +103,10 @@ xcopy "C2C3.ico" "%build_dir%" /R /Y
 xcopy "C2C4.ico" "%build_dir%" /R /Y
 xcopy "Tools\CI\C2C.bat" "%build_dir%" /R /Y
 
-:: SET GIT RELEASE TAG -----------------------------------------
+:: SET TEMP GIT RELEASE TAG -----------------------------------
+:: This is temporary so that the change log gets created
+:: correctly (it uses origin tags I guess).
+:: TODO: update chlog to not require this...
 echo Setting release version build tag on git ...
 call git tag -a %C2C_VERSION% %APPVEYOR_REPO_COMMIT% -m "%C2C_VERSION%" -f
 call git push --tags
@@ -108,6 +122,11 @@ call Tools\CI\git-chglog_windows_amd64.exe --output "%root_dir%\commit_desc.txt"
 echo Update full SVN changelog ...
 call Tools\CI\git-chglog_windows_amd64.exe --output "%build_dir%\CHANGELOG.md" --config Tools\CI\.chglog\config.yml
 REM call github_changelog_generator --cache-file "github-changelog-http-cache" --cache-log "github-changelog-logger.log" -u caveman2cosmos --token %git_access_token% --future-release %C2C_VERSION% --release-branch %release_branch% --output "%build_dir%\CHANGELOG.md"
+
+:: DELETE TEMP RELEASE TAG -------------------------------------
+:: We delete it ASAP so it isn't left up if the build fails
+:: below.
+call git push origin --delete %C2C_VERSION%
 
 :: DETECT SVN CHANGES ------------------------------------------
 echo Detecting working copy changes...
@@ -149,6 +168,7 @@ for /f "delims=" %%a in ('svnversion') do @set svn_rev=%%a
 
 POPD
 
+:: Add the tag, this time annotated with our SVN ID
 call git tag -a %C2C_VERSION% %APPVEYOR_REPO_COMMIT% -m "SVN-%svn_rev%" -f
 call git push --tags
 
