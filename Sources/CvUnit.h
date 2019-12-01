@@ -54,11 +54,10 @@ struct PromotionApply
 	enum flags
 	{
 		None = 0,
-		NewValue = 1 << 0,
-		Free = 1 << 1,
-		Dying = 1 << 2,
-		Initial = 1 << 3,
-		FromTrait = 1 << 4
+		Free = 1 << 0,
+		Dying = 1 << 1,
+		Initial = 1 << 2,
+		FromTrait = 1 << 3
 	};
 };
 DECLARE_FLAGS(PromotionApply::flags);
@@ -1675,7 +1674,7 @@ public:
 	void setHasUnitCombat(UnitCombatTypes eIndex, bool bNewValue, bool bByPromo = false);
 	bool isHasPromotion(PromotionTypes eIndex) const;															// Exposed to Python
 	
-	void setHasPromotion(PromotionTypes eIndex, PromotionApply::flags flags);
+	void setHasPromotion(PromotionTypes eIndex, bool bNewValue, PromotionApply::flags flags);
 	// Deprecated, use the one above that takes enum flags instead for increased readability.
 	void setHasPromotion(PromotionTypes eIndex, bool bNewValue, bool bFree = true, bool bDying = false, bool bInitial = false, bool bFromTrait = false);									// Exposed to Python
 

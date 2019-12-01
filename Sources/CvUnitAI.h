@@ -75,6 +75,8 @@ public:
 	bool AI_isCityGarrison(const CvCity* pCity) const;
 	void AI_setAsGarrison(const CvCity* pCity = NULL);
 
+	BuildingTypes getIntendedConstructBuilding() const { return m_eIntendedConstructBuilding; };
+
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
 

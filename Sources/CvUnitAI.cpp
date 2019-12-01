@@ -18058,41 +18058,76 @@ bool CvUnitAI::enactConstruct(CvPlot* pBestConstructPlot, CvPlot* pBestPlot, CvU
 	return false;
 }
 
+namespace {
+	struct CityConstruct
+	{
+		CityConstruct(CvPlot* plot, BuildingTypes building) : plot(plot), building(building) {}
+
+		CvPlot* plot;
+		BuildingTypes building;
+
+		operator size_t() const
+		{
+			return Cv::hash_combine(reinterpret_cast<size_t>(plot), static_cast<size_t>(building));
+		}
+
+		bool operator==(const CityConstruct& other) const
+		{
+			return plot == other.plot && building == other.building;
+		}
+	};
+	typedef stdext::hash_map<CityConstruct, CvUnitAI*> CityConstructMap;
+
+	CityConstructMap getConstructBuildings(const CvPlayer& player, const CvSelectionGroup* ignoreGroup)
+	{
+		CityConstructMap constructions;
+		for (CvPlayer::group_iterator groupItr = player.beginGroups(); groupItr != player.endGroups(); ++groupItr)
+		{
+			CvSelectionGroup* pLoopSelectionGroup = *groupItr;
+
+			if (pLoopSelectionGroup != ignoreGroup 
+				&& pLoopSelectionGroup->AI_getMissionAIType() == MISSIONAI_CONSTRUCT)
+			{
+				CvUnitAI* targetingUnit = (CvUnitAI*)pLoopSelectionGroup->getHeadUnit();
+
+				//	Have to handle the case of a group with no units.  This can occur after a force group
+				//	split due to things like revocation of open borders that forces units to be unceremoniously
+				//	moved to another plot (and ungroups them in doing so since it is possible that only a subset
+				//	of a group has to move)
+				if (targetingUnit != NULL)
+				{
+					constructions[CityConstruct(pLoopSelectionGroup->AI_getMissionAIPlot(), targetingUnit->getIntendedConstructBuilding())] = targetingUnit;
+				}
+			}
+		}
+		return constructions;
+	}
+}
+
 int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, int iDecayProbabilityRate, int iThreshold, bool assumeSameValueEverywhere, CvPlot*& pBestConstructPlot, CvPlot*& pBestPlot, CvUnitAI*& eBestTargetingUnit, BuildingTypes& eBestBuilding)
 {
 	PROFILE_FUNC();
 
-	CvCity* pLoopCity;
-	int iValue;
-	int iBestValue;
-	int iBestWeightedValue;
-	int iLoop;
-	int iI;
-	int iCount;
-	int iContructRand = 100;
-	int iConstructBelow = 100;
+	const int iContructRand = iDecayProbabilityRate == 0? 100 : GC.getGame().getSorenRandNum(100, "AI construction probability");;
+	const int iConstructBelow = 100;
 
-	if ( iDecayProbabilityRate != 0 )
-	{
-		iContructRand = GC.getGame().getSorenRandNum(100, "AI construction probability");
-	}
-
-	iBestValue = 0;
-	iBestWeightedValue = 0;
+	// Set outputs to default values
+	pBestConstructPlot = nullptr;
+	pBestPlot = nullptr;
+	eBestTargetingUnit = nullptr;
 	eBestBuilding = NO_BUILDING;
-	pBestConstructPlot = NULL;
-	pBestPlot = NULL;
-	eBestTargetingUnit = NULL;
 	
-	//	If we already has a chosen construction targeted then start with a presumption
+	int iBestValue = 0;
+	//	If we already have a chosen construction targeted then start with a presumption
 	//	we'll stick to it unless something significantly better is found
-	if ( m_eIntendedConstructBuilding != NO_BUILDING && getGroup()->AI_getMissionAIType() == MISSIONAI_CONSTRUCT )
+	if (m_eIntendedConstructBuilding != NO_BUILDING && getGroup()->AI_getMissionAIType() == MISSIONAI_CONSTRUCT)
 	{
-		pLoopCity = getGroup()->AI_getMissionAIPlot()->getPlotCity();
+		CvCity* pLoopCity = getGroup()->AI_getMissionAIPlot()->getPlotCity();
 
-		if ( pLoopCity != NULL &&
-			 canConstruct(pLoopCity->plot(), m_eIntendedConstructBuilding) &&
-			 generatePath(pLoopCity->plot(), MOVE_NO_ENEMY_TERRITORY, true) )
+		if (pLoopCity != nullptr
+			&& canConstruct(pLoopCity->plot(), m_eIntendedConstructBuilding)
+			&& generatePath(pLoopCity->plot(), MOVE_NO_ENEMY_TERRITORY, true)
+			)
 		{
 			iBestValue = (pLoopCity->AI_buildingValue(m_eIntendedConstructBuilding)*110)/100;
 			pBestPlot = getPathEndTurnPlot();
@@ -18101,45 +18136,44 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 		}
 	}
 
-	std::map<BuildingTypes,int>	possibleBuildings;
+	typedef stdext::hash_map<BuildingTypes, int> PossibleBuildingsMap;
+	PossibleBuildingsMap possibleBuildings;
 
-	for (iI = 0; iI < m_pUnitInfo->getNumBuildings(); iI++)
+	CvPlayerAI& player = GET_PLAYER(getOwnerINLINE());
+	// Determine the list of building types we could make, based on what already exists
+	for (int iI = 0; iI < m_pUnitInfo->getNumBuildings(); iI++)
 	{
-		const BuildingTypes eBuilding = (BuildingTypes)m_pUnitInfo->getBuildings(iI);
-
-		if (NO_BUILDING != eBuilding)
+		const BuildingTypes eBuilding = static_cast<BuildingTypes>(m_pUnitInfo->getBuildings(iI));
+		if (eBuilding != NO_BUILDING
+			&& player.canConstruct(eBuilding, false, false, true)
+			&& player.AI_getNumBuildingsNeeded(eBuilding, (getDomainType() == DOMAIN_SEA)) > 0)
 		{
-			if (GET_PLAYER(getOwnerINLINE()).canConstruct(eBuilding, false, false, true))
+			int iThisConstructBelow = iConstructBelow;
+			int iCount = 0;
+			CvCity* pLoopCity = nullptr;
+			for (CvPlayer::city_iterator cityItr = player.beginCities(); cityItr != player.endCities(); ++cityItr)
 			{
-				if (GET_PLAYER(getOwnerINLINE()).AI_getNumBuildingsNeeded(eBuilding, (getDomainType() == DOMAIN_SEA)) > 0)
+				pLoopCity = *cityItr;
+				if (pLoopCity->getNumBuilding(eBuilding) > 0)
 				{
-					int iThisConstructBelow = iConstructBelow;
-					iCount = 0;
+					iCount++;
 
-					for (pLoopCity = GET_PLAYER(getOwnerINLINE()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwnerINLINE()).nextCity(&iLoop))
+					if (iCount >= iMaxCount || iThisConstructBelow < iContructRand)
 					{
-						if (pLoopCity->getNumBuilding(eBuilding) > 0)
-						{
-							iCount++;
-
-							if (iCount >= iMaxCount || iThisConstructBelow < iContructRand)
-							{
-								break;
-							}
-
-							//	If we are deacying the construct probability based on existing building count...
-							if (iDecayProbabilityRate != 0)
-							{
-								iThisConstructBelow = (iThisConstructBelow * iDecayProbabilityRate) / 100;
-							}
-						}
+						break;
 					}
 
-					if (pLoopCity == NULL)
+					//	If we are decaying the construct probability based on existing building count...
+					if (iDecayProbabilityRate != 0)
 					{
-						possibleBuildings[eBuilding] = 0;
+						iThisConstructBelow = (iThisConstructBelow * iDecayProbabilityRate) / 100;
 					}
 				}
+			}
+
+			if (pLoopCity == nullptr)
+			{
+				possibleBuildings[eBuilding] = 0;
 			}
 		}
 	}
@@ -18149,95 +18183,93 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 		return 0;
 	}
 
-	CvReachablePlotSet	plotSet(getGroup(), MOVE_NO_ENEMY_TERRITORY, MAX_INT);
+	CityConstructMap constructions = getConstructBuildings(player, getGroup());
+	CvReachablePlotSet plotSet(getGroup(), MOVE_NO_ENEMY_TERRITORY, MAX_INT);
 
-	for (pLoopCity = GET_PLAYER(getOwnerINLINE()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwnerINLINE()).nextCity(&iLoop))
+	int iBestWeightedValue = 0;
+
+	for(CvPlayer::city_iterator cityItr = player.beginCities(); cityItr != player.endCities(); ++cityItr)
 	{
+		CvCity* pLoopCity = *cityItr;
 		//if (AI_plotValid(pLoopCity->plot()) && pLoopCity->area() == area())
-		if (plotSet.find(pLoopCity->plot()) != plotSet.end())
-		{
-			for(std::map<BuildingTypes,int>::iterator itr = possibleBuildings.begin(); itr != possibleBuildings.end(); ++itr)
-			{
-				if (!(pLoopCity->plot()->isVisibleEnemyUnit(this)))	//	Koshling - this line is questionable
-				{
-					//	Check some other unit hasn't already got this city targeted to construct this building
-					CvUnitAI*	targetingUnit = AI_cityConstructionTargeted(pLoopCity, itr->first, getGroup());
-					bool bValid;
+		if (plotSet.find(pLoopCity->plot()) == plotSet.end())
+			continue;
+		if (pLoopCity->plot()->isVisibleEnemyUnit(this)) // Koshling - this line is questionable
+			continue;
 
-					//	If we're a better choice due to being already inside our own territory
-					if ( targetingUnit != NULL &&
-						 targetingUnit->plot()->getOwnerINLINE() != getOwnerINLINE() &&
-						 plot()->getOwnerINLINE() == getOwnerINLINE() &&
-						 generatePath(pLoopCity->plot(), MOVE_OUR_TERRITORY, true))
+		for (PossibleBuildingsMap::iterator itr = possibleBuildings.begin(); itr != possibleBuildings.end(); ++itr)
+		{
+			const BuildingTypes buildingType = itr->first;
+
+			if (player.getBuildingClassCount((BuildingClassTypes)GC.getBuildingInfo(buildingType).getBuildingClassType()) >= iMaxSingleBuildingCount)
+				continue;
+
+			// Check some other unit hasn't already got this city targeted to construct this building
+			CityConstructMap::const_iterator foundUnit = constructions.find(CityConstruct(pLoopCity->plot(), buildingType));
+			CvUnitAI* targetingUnit = foundUnit == constructions.end() ? NULL : foundUnit->second;
+				// AI_cityConstructionTargeted(pLoopCity, buildingType, getGroup());
+
+			const bool betterThanCurrentUnit = 
+				targetingUnit == nullptr ||
+				(
+					targetingUnit->plot()->getOwnerINLINE() != getOwnerINLINE()
+					&& plot()->getOwnerINLINE() == getOwnerINLINE()
+					&& generatePath(pLoopCity->plot(), MOVE_OUR_TERRITORY, true)
+				);
+				
+			// If we're a better choice due to being already inside our own territory
+			// TODO:	How about we just use straight line distance instead? 
+			//			Although it would probably be rare for targetingUnit to not be null so this check we be
+			//			done infrequently.
+			if (betterThanCurrentUnit
+				&& canConstruct(pLoopCity->plot(), buildingType)
+				)
+			{
+				PROFILE("CvUnitAI::getBestConstructValue.Pathing");
+
+				int iPathTurns;
+				if (generatePath(pLoopCity->plot(), MOVE_NO_ENEMY_TERRITORY, true, &iPathTurns))
+				{
+					//	When evaluating whether a hero unit should instead go and produce a building
+					//	we want to avoid expensive calculations for every city, when in practise the kinds
+					//	of things heroes can build have global effects and thus basically the same value
+					//	everywhere that they have any value (note that this is a heuristic assumption that is true CURRENTLY,
+					//	but may need to be revisited)
+					//	Koshling - also extended this to subdued animals for performance reasons - generally for all cities
+					//	and animal buiding CAN be built in this will be a good approximation
+					int iValue = 0;
+					if (assumeSameValueEverywhere && itr->second > 0)
 					{
-						bValid = true;
+						iValue = itr->second;
 					}
 					else
 					{
-						bValid = (targetingUnit == NULL);
+						iValue = pLoopCity->AI_buildingValue(buildingType);
+
+						itr->second = iValue;
 					}
 
-					if ( bValid )
+					//	Weight by ease of reaching and population slightly in the case of same-everywhere asserted
+					//	builds
+					int iWeightedValue = (iValue * 5) / (4 + iPathTurns);
+
+					if (assumeSameValueEverywhere)
 					{
-						PROFILE("CvUnitAI::getBestConstructValue.Valuation");
+						iWeightedValue = (iWeightedValue*(5+pLoopCity->getPopulation()))/10;
+					}
+					else
+					{
+						iWeightedValue = iValue;
+					}
 
-						if (GET_PLAYER(getOwnerINLINE()).getBuildingClassCount((BuildingClassTypes)GC.getBuildingInfo(itr->first).getBuildingClassType()) < iMaxSingleBuildingCount)
-						{
-							if (canConstruct(pLoopCity->plot(), itr->first))
-							{
-								PROFILE("CvUnitAI::getBestConstructValue.Pathing");
-
-								int iPathTurns;
-
-								if (generatePath(pLoopCity->plot(), MOVE_NO_ENEMY_TERRITORY, true, &iPathTurns))
-								{
-									//	When evaluating whether a hero unit should instead go and produce a building
-									//	we want to avoid expensive calculations for every city, when in practise the kinds
-									//	of things heroes can build have global effects and thus basically the same value
-									//	everywhere that they have any value (note that this is a heuristic assumption that is true CURRENTLY,
-									//	but may need to be revisited)
-									//	Koshling - also extended this to subdued animals for performance reasons - generally for all cities
-									//	and animal buiding CAN be built in this will be a good approximation
-									if ( assumeSameValueEverywhere && itr->second > 0 )
-									{
-										iValue = itr->second;
-									}
-									else
-									{
-										iValue = pLoopCity->AI_buildingValue(itr->first);
-
-										itr->second = iValue;
-									}
-
-									//	Weight by ease of reaching and population slightly in the case of same-everywhere asserted
-									//	builds
-									int iWeightedValue = (iValue*5)/(4 + iPathTurns);
-									
-									if ( assumeSameValueEverywhere )
-									{
-										iWeightedValue = (iWeightedValue*(5+pLoopCity->getPopulation()))/10;
-									}
-									else
-									{
-										iWeightedValue = iValue;
-									}
-
-									if ((iValue > iThreshold) && (iWeightedValue > iBestWeightedValue))
-									{
-										iBestValue = iValue;
-										iBestWeightedValue = iWeightedValue;
-										pBestPlot = getPathEndTurnPlot();
-										pBestConstructPlot = pLoopCity->plot();
-										eBestBuilding = itr->first;
-										eBestTargetingUnit = targetingUnit;
-									}
-								}
-							}
-						}
-						else
-						{
-							break;
-						}
+					if ((iValue > iThreshold) && (iWeightedValue > iBestWeightedValue))
+					{
+						iBestValue = iValue;
+						iBestWeightedValue = iWeightedValue;
+						pBestPlot = getPathEndTurnPlot();
+						pBestConstructPlot = pLoopCity->plot();
+						eBestBuilding = buildingType;
+						eBestTargetingUnit = targetingUnit;
 					}
 				}
 			}

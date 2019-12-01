@@ -70,6 +70,7 @@
 #include "EnumFlags.h"
 #include "NiPoint.h"
 #include "nullptr_t.h"
+#include "hash.h"
 
 
 //

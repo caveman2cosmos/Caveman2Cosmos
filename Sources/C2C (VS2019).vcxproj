@@ -373,6 +373,7 @@
     <ClInclude Include="CvPlotPaging.h" />
     <ClInclude Include="CvPython.h" />
     <ClInclude Include="EnumFlags.h" />
+    <ClInclude Include="hash.h" />
     <ClInclude Include="idinfo_iterator.h" />
     <ClInclude Include="CvMapExternal.h" />
     <ClInclude Include="CvMapInterfaceBase.h" />
