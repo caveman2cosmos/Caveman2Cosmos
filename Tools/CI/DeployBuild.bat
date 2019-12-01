@@ -40,11 +40,11 @@ call "%root_dir%\Tools\_TrimFBuildCache.bat"
 
 :: SOURCE INDEXING ---------------------------------------------
 :source_indexing
-call Tools\CI\DoSourceIndexing.bat
+call "%root_dir%\Tools\CI\DoSourceIndexing.bat"
 
 :: CHECK OUT SVN -----------------------------------------------
 echo Checking out SVN working copy for deployment...
-call %SVN% checkout %svn_url% "%build_dir%"
+call %SVN% --quiet checkout %svn_url% "%build_dir%"
 if %ERRORLEVEL% neq 0 (
     call %SVN% cleanup --non-interactive
     call %SVN% checkout %svn_url% "%build_dir%"
@@ -70,7 +70,7 @@ call xcopy "%build_dir%\Assets\fpklive_token.txt" "Assets" /Y
 
 :fpk_live
 echo Packing FPKs...
-call Tools\FPKLive.exe
+call "%root_dir%\Tools\FPKLive.exe"
 if %ERRORLEVEL% neq 0 (
     echo Packing FPKs failed, aborting deployment
     exit /B 1
@@ -119,8 +119,7 @@ call %SVN% add * --force
 
 :: COMMIT TO SVN -----------------------------------------------
 echo Commiting new build to SVN...
-REM %SVN% commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
-REM call %SVN% commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
+call %SVN% commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
 if %ERRORLEVEL% neq 0 (
     call %SVN% cleanup --non-interactive
     call %SVN% commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
@@ -134,8 +133,7 @@ if %ERRORLEVEL% neq 0 (
 :: Ensuring that the svnversion call below will give a clean 
 :: revision number
 echo Refreshing SVN working copy...
-REM %SVN% update
-call %SVN% update
+call %SVN% --quiet update
 if %ERRORLEVEL% neq 0 (
     call %SVN% cleanup --non-interactive
     call %SVN% update
