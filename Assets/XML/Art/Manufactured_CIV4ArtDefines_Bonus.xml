@@ -184,7 +184,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodberries.dds</Button>
-			<FontButtonIndex>115</FontButtonIndex>
+			<FontButtonIndex>114</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Bicycles -->
 		<BonusArtInfo>
@@ -264,7 +264,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodborax.dds</Button>
-			<FontButtonIndex>104</FontButtonIndex>
+			<FontButtonIndex>36</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Brass Instruments -->
 		<BonusArtInfo>
@@ -875,7 +875,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodfruit.dds</Button>
-			<FontButtonIndex>128</FontButtonIndex>
+			<FontButtonIndex>35</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Furniture -->
 		<BonusArtInfo>
@@ -1575,7 +1575,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodnylon.dds</Button>
-			<FontButtonIndex>184</FontButtonIndex>
+			<FontButtonIndex>64</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Olive Oil -->
 		<BonusArtInfo>
@@ -2025,7 +2025,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodshellfish.dds</Button>
-			<FontButtonIndex>15</FontButtonIndex>
+			<FontButtonIndex>10</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Shockwave Engines -->
 		<BonusArtInfo>
