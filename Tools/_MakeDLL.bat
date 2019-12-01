@@ -8,7 +8,7 @@ POPD
 REM Switch to the source directory
 PUSHD "%~dp0..\Sources"
 
-call Powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0_Build.ps1" %*
+call Powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0..\Tools\_Build.ps1" %*
 if %ERRORLEVEL% NEQ 0 (
     goto :exit_failed
 )

@@ -12,13 +12,13 @@ if "%APPVEYOR_PULL_REQUEST_TITLE%" neq "" (
 
 PUSHD "%~dp0..\.."
 
-if "%1" NEQ "DEPLOYED" (
-    mkdir DeployTools
-    xcopy Tools\*.* DeployTools /E /Y /F
-    call DeployTools\CI\DeployBuild.bat DEPLOYED
-    POPD
-    exit /B %ERRORLEVEL%
-)
+REM if "%1" NEQ "DEPLOYED" (
+REM     mkdir DeployTools
+REM     xcopy Tools\*.* DeployTools /E /Y /F
+REM     call DeployTools\CI\DeployBuild.bat DEPLOYED
+REM     POPD
+REM     exit /B %ERRORLEVEL%
+REM )
 
 SET C2C_VERSION=v%APPVEYOR_BUILD_VERSION%
 SET "root_dir=%cd%"

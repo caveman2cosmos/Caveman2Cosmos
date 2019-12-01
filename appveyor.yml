@@ -13,8 +13,8 @@ cache:
 # setup remote desktop access
 #on_finish:
 #  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
-init:
-  - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+#init:
+#  - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
 environment:
   svn_url: https://svn.code.sf.net/p/caveman2cosmos/code/trunk
@@ -35,9 +35,9 @@ build_script:
 - cmd: >-
     call Powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%APPVEYOR_BUILD_FOLDER%\Tools\CI\fix_sources_timestamps.ps1"
 
-    rem call "%APPVEYOR_BUILD_FOLDER%\Tools\_MakeDLL.bat" Debug build
+    call "%APPVEYOR_BUILD_FOLDER%\Tools\_MakeDLL.bat" Debug build
 
-    rem call "%APPVEYOR_BUILD_FOLDER%\Tools\_MakeDLL.bat" Release build
+    call "%APPVEYOR_BUILD_FOLDER%\Tools\_MakeDLL.bat" Release build
 
     call "%APPVEYOR_BUILD_FOLDER%\Tools\_TrimFBuildCache.bat"
 
@@ -45,7 +45,7 @@ test_script:
 - cmd: >-
     cd Tools
 
-    rem XmlValidator.exe -a
+    XmlValidator.exe -a
 
 # DISABLED: before_deploy can't access secure variables it seems, we just do everything in the deploy_script
 # before_deploy:
