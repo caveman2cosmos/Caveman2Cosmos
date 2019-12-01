@@ -38,7 +38,7 @@ Settings
 
 #if exists(C2C_VERSION)
     #import C2C_VERSION
-    .C2CDefines     + ' /DC2C_VERSION="$C2C_VERSION$"'
+    .C2CDefines     + ' /DC2C_VERSION=\"$C2C_VERSION$\"'
 #endif
 
 // ### Boost root dir ###
