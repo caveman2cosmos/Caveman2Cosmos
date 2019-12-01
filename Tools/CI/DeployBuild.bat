@@ -1,5 +1,16 @@
 @echo off
 
+:: What is going on in this script?
+:: 1. Immediately abort this script if we aren't in the designated release branch (it should only run there).
+:: 2. Update the version number in the mod XML
+:: 3. Compile FinalRelease DLL (and add source indexing)
+:: 4. Fetch the latest SVN to a temp dir
+:: 4. Build FPK patch against the last SVN FPKs
+:: 5. Update the files in the SVN dir with our new ones
+:: 6. Generate change logs
+:: 7. Commit changed files to SVN
+:: 8. Set tag on git containing version number and SVN commit
+
 if "%APPVEYOR_REPO_BRANCH%" neq "%release_branch%" (
     echo Skipping deployment due to not being on release branch
     exit /b 0
@@ -11,6 +22,7 @@ if "%APPVEYOR_PULL_REQUEST_TITLE%" neq "" (
 )
 
 PUSHD "%~dp0..\.."
+
 SET C2C_VERSION=v%APPVEYOR_BUILD_VERSION%
 SET "root_dir=%cd%"
 set SVN=svn.exe
@@ -23,32 +35,27 @@ echo C2C %C2C_VERSION% DEPLOYMENT
 echo.
 
 :: WRITE VERSION TO XML ---------------------------------------
-powershell -ExecutionPolicy Bypass -File "%~dp0\update-c2c-version.ps1"
+powershell -ExecutionPolicy Bypass -File "%root_dir%\Tools\CI\update-c2c-version.ps1"
 
 :: INIT GIT WRITE ---------------------------------------------
-powershell -ExecutionPolicy Bypass -File "%~dp0\InitGit.ps1"
-
-:: SET GIT RELEASE TAG -----------------------------------------
-echo Setting release version build tag on git ...
-git tag -a %C2C_VERSION% %APPVEYOR_REPO_COMMIT% -m "%C2C_VERSION%" -f
-git push --tags
+powershell -ExecutionPolicy Bypass -File "%root_dir%\Tools\CI\InitGit.ps1"
 
 :: COMPILE -----------------------------------------------------
 echo Building FinalRelease DLL...
-call "Tools\_MakeDLL.bat" FinalRelease build
+call "%root_dir%\Tools\_MakeDLL.bat" FinalRelease build deploy
 if not errorlevel 0 (
     echo Building FinalRelease DLL failed, aborting deployment!
     exit /B 2
 )
-call "Tools\_TrimFBuildCache.bat"
+call "%root_dir%\Tools\_TrimFBuildCache.bat"
 
 :: SOURCE INDEXING ---------------------------------------------
 :source_indexing
-call Tools\CI\DoSourceIndexing.bat
+call "%root_dir%\Tools\CI\DoSourceIndexing.bat"
 
 :: CHECK OUT SVN -----------------------------------------------
 echo Checking out SVN working copy for deployment...
-call %SVN% checkout %svn_url% "%build_dir%"
+call %SVN% --quiet checkout %svn_url% "%build_dir%"
 if %ERRORLEVEL% neq 0 (
     call %SVN% cleanup --non-interactive
     call %SVN% checkout %svn_url% "%build_dir%"
@@ -69,12 +76,12 @@ echo Copying FPKs from SVN...
 if not "%APPVEYOR_REPO_COMMIT_MESSAGE:FPKCLEAN=%"=="%APPVEYOR_REPO_COMMIT_MESSAGE%" (
     goto :fpk_live
 )
-xcopy "%build_dir%\Assets\*.FPK" "Assets" /Y
-xcopy "%build_dir%\Assets\fpklive_token.txt" "Assets" /Y
+call xcopy "%build_dir%\Assets\*.FPK" "Assets" /Y
+call xcopy "%build_dir%\Assets\fpklive_token.txt" "Assets" /Y
 
 :fpk_live
 echo Packing FPKs...
-call Tools\FPKLive.exe
+call "%root_dir%\Tools\FPKLive.exe"
 if %ERRORLEVEL% neq 0 (
     echo Packing FPKs failed, aborting deployment
     exit /B 1
@@ -96,6 +103,14 @@ xcopy "C2C3.ico" "%build_dir%" /R /Y
 xcopy "C2C4.ico" "%build_dir%" /R /Y
 xcopy "Tools\CI\C2C.bat" "%build_dir%" /R /Y
 
+:: SET TEMP GIT RELEASE TAG -----------------------------------
+:: This is temporary so that the change log gets created
+:: correctly (it uses origin tags I guess).
+:: TODO: update chlog to not require this...
+echo Setting release version build tag on git ...
+call git tag -a %C2C_VERSION% %APPVEYOR_REPO_COMMIT% -m "%C2C_VERSION%" -f
+call git push --tags
+
 :: GENERATE NEW CHANGES LOG ------------------------------------
 echo Generate SVN commit description...
 call Tools\CI\git-chglog_windows_amd64.exe --output "%root_dir%\commit_desc.md" --config Tools\CI\.chglog\config.yml %C2C_VERSION%
@@ -108,6 +123,11 @@ echo Update full SVN changelog ...
 call Tools\CI\git-chglog_windows_amd64.exe --output "%build_dir%\CHANGELOG.md" --config Tools\CI\.chglog\config.yml
 REM call github_changelog_generator --cache-file "github-changelog-http-cache" --cache-log "github-changelog-logger.log" -u caveman2cosmos --token %git_access_token% --future-release %C2C_VERSION% --release-branch %release_branch% --output "%build_dir%\CHANGELOG.md"
 
+:: DELETE TEMP RELEASE TAG -------------------------------------
+:: We delete it ASAP so it isn't left up if the build fails
+:: below.
+call git push origin --delete %C2C_VERSION%
+
 :: DETECT SVN CHANGES ------------------------------------------
 echo Detecting working copy changes...
 PUSHD "%build_dir%"
@@ -118,7 +138,6 @@ call %SVN% add * --force
 
 :: COMMIT TO SVN -----------------------------------------------
 echo Commiting new build to SVN...
-REM %SVN% commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
 call %SVN% commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
 if %ERRORLEVEL% neq 0 (
     call %SVN% cleanup --non-interactive
@@ -133,8 +152,7 @@ if %ERRORLEVEL% neq 0 (
 :: Ensuring that the svnversion call below will give a clean 
 :: revision number
 echo Refreshing SVN working copy...
-REM %SVN% update
-call %SVN% update
+call %SVN% --quiet update
 if %ERRORLEVEL% neq 0 (
     call %SVN% cleanup --non-interactive
     call %SVN% update
@@ -150,6 +168,7 @@ for /f "delims=" %%a in ('svnversion') do @set svn_rev=%%a
 
 POPD
 
+:: Add the tag, this time annotated with our SVN ID
 call git tag -a %C2C_VERSION% %APPVEYOR_REPO_COMMIT% -m "SVN-%svn_rev%" -f
 call git push --tags
 

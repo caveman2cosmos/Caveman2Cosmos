@@ -83,7 +83,7 @@
 			<KFM>Art/Terrain/Resources/Almond/Banana.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Almond/Banana.nif</SHADERNIF>
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,1,1</Button>
-			<FontButtonIndex>135</FontButtonIndex>
+			<FontButtonIndex>230</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_APPLE</Type>
@@ -121,7 +121,7 @@
 			<KFM>Art/Terrain/Resources/DatePalm/Banana.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/DatePalm/Dates.nif</SHADERNIF>
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,3,6</Button>
-			<FontButtonIndex>-364</FontButtonIndex>
+			<FontButtonIndex>225</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_FIG</Type>
@@ -158,7 +158,7 @@
 			<KFM></KFM>
 			<SHADERNIF>Art/Terrain/Resources/Mango/Mango.nif</SHADERNIF>
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,7,5</Button>
-			<FontButtonIndex>114</FontButtonIndex>
+			<FontButtonIndex>135</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PAPAYA</Type>
@@ -186,7 +186,7 @@
 			<NIF>Art/Terrain/Resources/Pomegranate/Pomegranate.nif</NIF>
 			<KFM></KFM>
 			<Button>Art/Interface/Buttons/Bonus/Pomegranate.dds</Button>
-			<FontButtonIndex>-364</FontButtonIndex>
+			<FontButtonIndex>226</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_OLIVES</Type>
@@ -232,7 +232,7 @@
 			<NIF>Art/Terrain/Resources/Cannabis/Cnq.nif</NIF>
 			<KFM>Art/Terrain/Resources/Cannabis/Cnq.kfm</KFM>
 			<Button>Art/Interface/Buttons/Bonus/hemp.dds</Button>
-			<FontButtonIndex>35</FontButtonIndex>
+			<FontButtonIndex>176</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_COCA</Type>
@@ -241,7 +241,7 @@
 			<NIF>Art/Terrain/Resources/Coca/sugar.nif</NIF>
 			<KFM>Art/Terrain/Resources/Coca/sugar.kfm</KFM>
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,6,5</Button>
-			<FontButtonIndex>-364</FontButtonIndex>
+			<FontButtonIndex>140</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_COCOA</Type>
@@ -250,7 +250,7 @@
 			<NIF>Art/Terrain/Resources/Cocoa/spices.nif</NIF>
 			<KFM>Art/Terrain/Resources/Cocoa/spices.kfm</KFM>
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,4,5</Button>
-			<FontButtonIndex>-364</FontButtonIndex>
+			<FontButtonIndex>223</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_COFFEE</Type>
@@ -322,7 +322,7 @@
 			<NIF>Art/Terrain/Resources/papyrus/corn.nif</NIF>
 			<KFM>Art/Terrain/Resources/papyrus/corn.kfm</KFM>
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,5,7</Button>
-			<FontButtonIndex>104</FontButtonIndex>
+			<FontButtonIndex>43</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PEYOTE</Type>
@@ -331,7 +331,7 @@
 			<NIF>Art/Terrain/resources/Peyote/Peyote.nif</NIF>
 			<KFM></KFM>
 			<Button>Art/Interface/Buttons/Bonus/Peyote.dds</Button>
-			<FontButtonIndex>131</FontButtonIndex>
+			<FontButtonIndex>130</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PRICKLY_PEAR</Type>
@@ -340,7 +340,7 @@
 			<NIF>Art/Terrain/resources/PricklyPear/baradye.nif</NIF>
 			<KFM></KFM>
 			<Button>Art/Interface/Buttons/Bonus/PricklyPear.dds</Button>
-			<FontButtonIndex>-364</FontButtonIndex>
+			<FontButtonIndex>227</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_OPIUM</Type>
@@ -737,7 +737,7 @@
 			<NIF>Art/Terrain/Resources/geode/stach1.nif</NIF>
 			<KFM></KFM>
 			<Button>Art/Interface/Buttons/Bonus/Geode.dds</Button>
-			<FontButtonIndex>-364</FontButtonIndex>
+			<FontButtonIndex>228</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_GOLD</Type>
@@ -783,7 +783,7 @@
 			<NIF>Art/Terrain/resources/Platinum/Aluminum.nif</NIF>
 			<KFM>Art/Terrain/resources/Platinum/Aluminum.kfm</KFM>
 			<Button>Art/Interface/Buttons/Bonus/Platinum.dds</Button>
-			<FontButtonIndex>-364</FontButtonIndex>
+			<FontButtonIndex>229</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_RUBY</Type>

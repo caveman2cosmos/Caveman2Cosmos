@@ -38,7 +38,7 @@ Settings
 
 #if exists(C2C_VERSION)
     #import C2C_VERSION
-    .C2CDefines     + ' /DC2C_VERSION="$C2C_VERSION$"'
+    .C2CDefines     + ' /DC2C_VERSION=\"$C2C_VERSION$\"'
 #endif
 
 // ### Boost root dir ###
@@ -52,6 +52,7 @@ Settings
 .PROJECT_INCS       = ' /I"$BOOST_PATH$/Boost-1.32.0/include"' 
                     + ' /I"$BOOST_PATH$/Python24/include"' 
                     + ' /I"$SOURCE_DIR$/include"'
+                    + ' /I"$SOURCE_DIR$"'
 
 .INCS               = '$PROJECT_INCS$ $GLOBAL_INCS$'
 
@@ -151,7 +152,7 @@ Settings
 .ConfigAssert = 
 [
     Using(.ConfigNonDebugCommon)
-    .ConfigName     = 'Profile'
+    .ConfigName     = 'Assert'
 
     .CLOptions      + ' /DFASSERT_ENABLE'
 ]
@@ -183,7 +184,7 @@ Settings
                     + ' /DFINAL_RELEASE'
 ]
 
-.Configs = { .ConfigDebug, .ConfigRelease, .ConfigProfile, .ConfigTesting, .ConfigFinalRelease }
+.Configs = { .ConfigDebug, .ConfigRelease, .ConfigAssert, .ConfigProfile, .ConfigTesting, .ConfigFinalRelease }
 
 .AllTargets = {}
 
