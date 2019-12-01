@@ -42,7 +42,7 @@ powershell -ExecutionPolicy Bypass -File "%root_dir%\Tools\CI\InitGit.ps1"
 
 :: COMPILE -----------------------------------------------------
 echo Building FinalRelease DLL...
-call "%root_dir%\Tools\_MakeDLL.bat" FinalRelease build
+call "%root_dir%\Tools\_MakeDLL.bat" FinalRelease build deploy
 if not errorlevel 0 (
     echo Building FinalRelease DLL failed, aborting deployment!
     exit /B 2

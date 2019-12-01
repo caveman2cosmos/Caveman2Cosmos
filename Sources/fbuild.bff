@@ -152,7 +152,7 @@ Settings
 .ConfigAssert = 
 [
     Using(.ConfigNonDebugCommon)
-    .ConfigName     = 'Profile'
+    .ConfigName     = 'Assert'
 
     .CLOptions      + ' /DFASSERT_ENABLE'
 ]
@@ -184,7 +184,7 @@ Settings
                     + ' /DFINAL_RELEASE'
 ]
 
-.Configs = { .ConfigDebug, .ConfigRelease, .ConfigProfile, .ConfigTesting, .ConfigFinalRelease }
+.Configs = { .ConfigDebug, .ConfigRelease, .ConfigAssert, .ConfigProfile, .ConfigTesting, .ConfigFinalRelease }
 
 .AllTargets = {}
 
