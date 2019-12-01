@@ -12,14 +12,6 @@ if "%APPVEYOR_PULL_REQUEST_TITLE%" neq "" (
 
 PUSHD "%~dp0..\.."
 
-REM if "%1" NEQ "DEPLOYED" (
-REM     mkdir DeployTools
-REM     xcopy Tools\*.* DeployTools /E /Y /F
-REM     call DeployTools\CI\DeployBuild.bat DEPLOYED
-REM     POPD
-REM     exit /B %ERRORLEVEL%
-REM )
-
 SET C2C_VERSION=v%APPVEYOR_BUILD_VERSION%
 SET "root_dir=%cd%"
 set SVN=svn.exe
@@ -39,16 +31,16 @@ powershell -ExecutionPolicy Bypass -File "%~dp0\InitGit.ps1"
 
 :: COMPILE -----------------------------------------------------
 echo Building FinalRelease DLL...
-call "DeployTools\_MakeDLL.bat" FinalRelease build
+call "Tools\_MakeDLL.bat" FinalRelease build
 if not errorlevel 0 (
     echo Building FinalRelease DLL failed, aborting deployment!
     exit /B 2
 )
-call "DeployTools\_TrimFBuildCache.bat"
+call "Tools\_TrimFBuildCache.bat"
 
 :: SOURCE INDEXING ---------------------------------------------
 :source_indexing
-call DeployTools\CI\DoSourceIndexing.bat
+call Tools\CI\DoSourceIndexing.bat
 
 :: CHECK OUT SVN -----------------------------------------------
 echo Checking out SVN working copy for deployment...
@@ -78,7 +70,7 @@ call xcopy "%build_dir%\Assets\fpklive_token.txt" "Assets" /Y
 
 :fpk_live
 echo Packing FPKs...
-call DeployTools\FPKLive.exe
+call Tools\FPKLive.exe
 if %ERRORLEVEL% neq 0 (
     echo Packing FPKs failed, aborting deployment
     exit /B 1
@@ -98,7 +90,7 @@ xcopy "C2C1.ico" "%build_dir%" /R /Y
 xcopy "C2C2.ico" "%build_dir%" /R /Y
 xcopy "C2C3.ico" "%build_dir%" /R /Y
 xcopy "C2C4.ico" "%build_dir%" /R /Y
-xcopy "DeployTools\CI\C2C.bat" "%build_dir%" /R /Y
+xcopy "Tools\CI\C2C.bat" "%build_dir%" /R /Y
 
 :: SET GIT RELEASE TAG -----------------------------------------
 echo Setting release version build tag on git ...
@@ -107,14 +99,14 @@ call git push --tags
 
 :: GENERATE NEW CHANGES LOG ------------------------------------
 echo Generate SVN commit description...
-call DeployTools\CI\git-chglog_windows_amd64.exe --output "%root_dir%\commit_desc.md" --config DeployTools\CI\.chglog\config.yml %C2C_VERSION%
+call Tools\CI\git-chglog_windows_amd64.exe --output "%root_dir%\commit_desc.md" --config Tools\CI\.chglog\config.yml %C2C_VERSION%
 
 echo Generate forum commit description...
-call DeployTools\CI\git-chglog_windows_amd64.exe --output "%root_dir%\commit_desc.txt" --config DeployTools\CI\.chglog\config-bbcode.yml %C2C_VERSION%
+call Tools\CI\git-chglog_windows_amd64.exe --output "%root_dir%\commit_desc.txt" --config Tools\CI\.chglog\config-bbcode.yml %C2C_VERSION%
 
 :: GENERATE FULL CHANGELOG -------------------------------------
 echo Update full SVN changelog ...
-call DeployTools\CI\git-chglog_windows_amd64.exe --output "%build_dir%\CHANGELOG.md" --config DeployTools\CI\.chglog\config.yml
+call Tools\CI\git-chglog_windows_amd64.exe --output "%build_dir%\CHANGELOG.md" --config Tools\CI\.chglog\config.yml
 REM call github_changelog_generator --cache-file "github-changelog-http-cache" --cache-log "github-changelog-logger.log" -u caveman2cosmos --token %git_access_token% --future-release %C2C_VERSION% --release-branch %release_branch% --output "%build_dir%\CHANGELOG.md"
 
 :: DETECT SVN CHANGES ------------------------------------------
