@@ -7125,7 +7125,7 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 				{
 					bValid = true;
 				}
-				else if (pPlot->isPeak2(true))
+				else if (pPlot->isPeak2())
 				{
 					bValid = spawnInfo.getPeaks();
 				}
@@ -7745,7 +7745,7 @@ void CvGame::doGlobalWarming()
 						{
 							if (pPlot->isCoastalLand())
 							{
-								if (!pPlot->isHills() && !pPlot->isPeak2(true))
+								if (!pPlot->isHills() && !pPlot->isPeak2())
 								{
 									pPlot->setTerrainType(eShallowsTerrain);
 									bChanged = true;
@@ -13780,26 +13780,13 @@ int CvGame::getAverageCorporationInfluence(CvCity* pCity, CorporationTypes eCorp
 
 bool CvGame::canEverResearch(TechTypes eTech) const
 {
-	if (!isOption(GAMEOPTION_MOUNTAINS) && GC.getTechInfo(eTech).isCanPassPeaks())
+	if (isOption(GAMEOPTION_NO_FUTURE) && GC.getTechInfo(eTech).getEra() > GC.getInfoTypeForString("ERA_MODERN") && !GC.getTechInfo(eTech).isRepeat())
 	{
 		return false;
 	}
-	if (isOption(GAMEOPTION_NO_FUTURE))
+	if (GC.getTechInfo(eTech).getPrereqGameOption() != NO_GAMEOPTION && !isOption((GameOptionTypes)GC.getTechInfo(eTech).getPrereqGameOption()))
 	{
-		if (GC.getTechInfo(eTech).getEra() > GC.getInfoTypeForString("ERA_MODERN"))
-		{
-			if (!GC.getTechInfo(eTech).isRepeat())
-			{
-				return false;
-			}
-		}
-	}
-	if (GC.getTechInfo(eTech).getPrereqGameOption() != NO_GAMEOPTION)
-	{
-		if (!isOption((GameOptionTypes)GC.getTechInfo(eTech).getPrereqGameOption()))
-		{
-			return false;
-		}
+		return false;
 	}
 	return true;
 }

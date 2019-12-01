@@ -25468,7 +25468,7 @@ bool CvUnitAI::AI_improveCity(CvCity* pCity)
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-				if (plot()->isPeak2(true))
+				if (plot()->isPeak2())
 				{
 					if (!GET_TEAM(getTeam()).isMoveFastPeaks())
 					{
@@ -25642,7 +25642,7 @@ bool CvUnitAI::AI_improveLocalPlot(int iRange, CvCity* pIgnoreCity)
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-			if (plot()->isPeak2(true))
+			if (plot()->isPeak2())
 			{
 				if (!GET_TEAM(getTeam()).isMoveFastPeaks())
 				{
@@ -27040,7 +27040,7 @@ BuildTypes CvUnitAI::AI_betterPlotBuild(CvPlot* pPlot, BuildTypes eBuild)
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	else if (pPlot->isPeak2(true))
+	else if (pPlot->isPeak2())
 	{
 		if ((GC.getPEAK_EXTRA_MOVEMENT() > 0) && (iWorkersNeeded > 1))
 		{

@@ -6428,7 +6428,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 		{
 			bPeak = true;
 		}
-		if ((pPlot->isPeak2(true) && bPeak) || (pPlot->isHills() && bHill))
+		if ((pPlot->isPeak2() && bPeak) || (pPlot->isHills() && bHill))
 		{
 			TechTypes eTech = (TechTypes)m_pUnitInfo->getTerrainPassableTech(pPlot->getTerrainType());
 			if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
@@ -6928,7 +6928,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 	if (pPlot->isImpassable(getTeam()))
 	{
 		//Check our current tile
-		if (plot()->isPeak2(true))
+		if (plot()->isPeak2())
 		{
 			//	Can this unit move through peaks regardless?
 			if ( isCanMovePeaks() )
@@ -6941,7 +6941,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 				bValid = plot()->getHasMountainLeader(getTeam());
 			}
 		}
-		if (pPlot->isPeak2(true))
+		if (pPlot->isPeak2())
 		{
 			//Check the impassible tile	
 			if (!bValid)
@@ -23972,7 +23972,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 				bNeedForBypass = true;
 				if (ePrereqTerrain == CvTerrainInfo::getTerrainPeak())
 				{
-					if (plot()->isPeak2(true))
+					if (plot()->isPeak2())
 					{
 						bBypass = true;
 					}
@@ -38975,7 +38975,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				bNeedForBypass = true;
 				if (ePrereqTerrain == CvTerrainInfo::getTerrainPeak())
 				{
-					if (plot()->isPeak2(true))
+					if (plot()->isPeak2())
 					{
 						bBypass = true;
 					}
@@ -40456,7 +40456,7 @@ int CvUnit::withdrawVSOpponentProbTotal(const CvUnit* pOpponent, const CvPlot* p
 	TerrainTypes eTerrain = pPlot->getTerrainType();
 	FeatureTypes eFeature = pPlot->getFeatureType();
 	bool bHill = pPlot->isHills();
-	bool bPeak = pPlot->isPeak2(true);
+	bool bPeak = pPlot->isPeak2();
 
 	int iBase = withdrawalProbability();
 	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pOpponent->m_unitCombatKeyedInfo.begin(), end = pOpponent->m_unitCombatKeyedInfo.end(); it != end; ++it)
@@ -43512,7 +43512,7 @@ int CvUnit::workRate(bool bMax) const
 			iRate /= 100;
 		}
 		
-		if (plot()->isPeak2(true))
+		if (plot()->isPeak2())
 		{
 			iRate *= (peaksWorkModifier() + 100);
 			iRate /= 100;
@@ -44574,7 +44574,7 @@ int CvUnit::visibilityIntensityTotal(InvisibleTypes eInvisibleType) const
 			iAmount += extraVisibleTerrain(eInvisibleType, eTerrain);
 		}
 		eTerrain = NO_TERRAIN;
-		if (plot()->isPeak2(true))
+		if (plot()->isPeak2())
 		{
 			eTerrain = CvTerrainInfo::getTerrainPeak();
 		}
@@ -44684,7 +44684,7 @@ int CvUnit::invisibilityIntensityTotal(InvisibleTypes eInvisibleType, bool bAbil
 			iAmount += extraInvisibleTerrain(eInvisibleType, eTerrain);
 		}
 		eTerrain = NO_TERRAIN;
-		if (plot()->isPeak2(true))
+		if (plot()->isPeak2())
 		{
 			eTerrain = CvTerrainInfo::getTerrainPeak();
 		}
@@ -44781,7 +44781,7 @@ int CvUnit::visibilityIntensityRangeTotal(InvisibleTypes eInvisibleType) const
 			iAmount += extraVisibleTerrainRange(eInvisibleType, eTerrain);
 		}
 		eTerrain = NO_TERRAIN;
-		if (plot()->isPeak2(true))
+		if (plot()->isPeak2())
 		{
 			eTerrain = CvTerrainInfo::getTerrainPeak();
 		}
