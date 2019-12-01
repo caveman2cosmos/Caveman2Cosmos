@@ -24,19 +24,19 @@ echo C2C %C2C_VERSION% DEPLOYMENT
 echo.
 
 :: WRITE VERSION TO XML ---------------------------------------
-powershell -ExecutionPolicy Bypass -File "%~dp0\update-c2c-version.ps1"
+powershell -ExecutionPolicy Bypass -File "%root_dir%\Tools\CI\update-c2c-version.ps1"
 
 :: INIT GIT WRITE ---------------------------------------------
-powershell -ExecutionPolicy Bypass -File "%~dp0\InitGit.ps1"
+powershell -ExecutionPolicy Bypass -File "%root_dir%\Tools\CI\InitGit.ps1"
 
 :: COMPILE -----------------------------------------------------
 echo Building FinalRelease DLL...
-call "Tools\_MakeDLL.bat" FinalRelease build
+call "%root_dir%\Tools\_MakeDLL.bat" FinalRelease build
 if not errorlevel 0 (
     echo Building FinalRelease DLL failed, aborting deployment!
     exit /B 2
 )
-call "Tools\_TrimFBuildCache.bat"
+call "%root_dir%\Tools\_TrimFBuildCache.bat"
 
 :: SOURCE INDEXING ---------------------------------------------
 :source_indexing

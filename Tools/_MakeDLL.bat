@@ -2,13 +2,14 @@
 
 REM Make sure the dependencies are extracted
 PUSHD "%~dp0"
+set "tools_dir=%cd%"
 call InstallDeps.bat
 POPD
 
 REM Switch to the source directory
-PUSHD "%~dp0..\Sources"
+PUSHD "%tools_dir%\..\Sources"
 
-call Powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0_Build.ps1" %*
+call Powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%tools_dir%\_Build.ps1" %*
 if %ERRORLEVEL% NEQ 0 (
     goto :exit_failed
 )
