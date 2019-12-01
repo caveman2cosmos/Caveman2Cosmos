@@ -13,7 +13,8 @@ if "%APPVEYOR_PULL_REQUEST_TITLE%" neq "" (
 PUSHD "%~dp0..\.."
 
 if "%1" NEQ "DEPLOYED" (
-    xcopy Tools DeployTools /E /Y /F
+    mkdir DeployTools
+    xcopy Tools\*.* DeployTools /E /Y /F
     call DeployTools\CI\DeployBuild.bat DEPLOYED
     POPD
     exit /B %ERRORLEVEL%
@@ -127,7 +128,7 @@ call %SVN% add * --force
 :: COMMIT TO SVN -----------------------------------------------
 echo Commiting new build to SVN...
 REM %SVN% commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
-call %SVN% commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
+REM call %SVN% commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
 if %ERRORLEVEL% neq 0 (
     call %SVN% cleanup --non-interactive
     call %SVN% commit -F "%root_dir%\commit_desc.md" --non-interactive --no-auth-cache --username %svn_user% --password %svn_pass%
