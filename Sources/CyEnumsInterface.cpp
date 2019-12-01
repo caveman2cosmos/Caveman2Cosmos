@@ -636,7 +636,6 @@ void CyEnumsPythonInterface()
 /*                              New Gameoptions                                                 */
 /*                                                                                              */
 /************************************************************************************************/
-		.value("GAMEOPTION_MOUNTAINS", GAMEOPTION_MOUNTAINS)
 		.value("GAMEOPTION_SAD", GAMEOPTION_SAD)
 		.value("GAMEOPTION_ADVANCED_DIPLOMACY", GAMEOPTION_ADVANCED_DIPLOMACY)
 		.value("GAMEOPTION_UNLIMITED_WONDERS", GAMEOPTION_UNLIMITED_WONDERS)

@@ -683,7 +683,7 @@ public:
 	bool isFlatlands() const; // Exposed to Python
 	DllExport bool isHills() const; // Exposed to Python
 	DllExport bool isPeak() const; // Exposed to Python
-	bool isPeak2(bool bCountsAs = false) const; // Exposed to Python
+	bool isPeak2() const; // Exposed to Python
 	void setPlotType(PlotTypes eNewValue, bool bRecalculate = true, bool bRebuildGraphics = true); // Exposed to Python
 
 	DllExport TerrainTypes getTerrainTypeExternal() const; // Exposed to Python

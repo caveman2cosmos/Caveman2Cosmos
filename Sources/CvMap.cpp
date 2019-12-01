@@ -1856,7 +1856,7 @@ int CvMap::percentUnoccupiedLand(bool bExcludeWater, bool bIncludeBarbarian, boo
 		{
 			if (pArea == NULL || pLoopPlot->area() == pArea)
 			{
-				if (!pLoopPlot->isPeak2(true) || !bExcludePeaks)
+				if (!pLoopPlot->isPeak2() || !bExcludePeaks)
 				{
 					if ((iRange == -1 || pRangeFromPlot == NULL) || (plotDistance(pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE(), pRangeFromPlot->getX_INLINE(), pRangeFromPlot->getY_INLINE()) <= iRange))
 					{

@@ -3464,16 +3464,9 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-			if (pLoopPlot->isPeak2(true))
+			if (pLoopPlot->isPeak2())
 			{
-				if (GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
-				{
-					iTempValue += 10;
-				}
-				else
-				{
-					iTempValue -= 10;
-				}
+				iTempValue += 10;
 			}
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -6064,22 +6057,12 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 	iTempValue = 0;
 	if (kTech.isCanPassPeaks())
 	{
-		if (!GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
+		for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
 		{
-			CvPlot* pPlot;
-			for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+			CvPlot* pPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+			if (pPlot->isPeak2() && pPlot->getOwnerINLINE() == getID())
 			{
-				pPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
-				if (pPlot->isPeak2(true))
-				{
-					if (pPlot->getOwnerINLINE() != NO_PLAYER)
-					{
-						if (GET_PLAYER(pPlot->getOwnerINLINE()).getID() == getID())
-						{
-							iTempValue += 35;
-						}
-					}
-				}
+				iTempValue += 35;
 			}
 		}
 		iValue += iTempValue;
@@ -34168,21 +34151,18 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 /************************************************************************************************/
 	if (kPromotion.isCanMovePeaks())
 	{
-		if (GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
+		for (iI = 0; iI < GC.getNumTechInfos(); iI++)
 		{
-			for (iI = 0; iI < GC.getNumTechInfos(); iI++)
+			if (!(GET_TEAM(getTeam()).isHasTech((TechTypes)iI)))
 			{
-				if (!(GET_TEAM(getTeam()).isHasTech((TechTypes)iI)))
+				if (GC.getTechInfo((TechTypes)iI).isCanPassPeaks())
 				{
-					if (GC.getTechInfo((TechTypes)iI).isCanPassPeaks())
-					{
-						//	Koshling - changed the semantics of this somewhat.  Wheer before
-						//	it allowed a unit to lead a stack through mountains (very valuable)
-						//	it now only allows this unit to pass through mountains
-						//	The new promotion PROMOTION_MOUNTAIN_LEADER has the old semantics and
-						//	retains the old AI value (next clause)
-						iValue += 50;
-					}
+					//	Koshling - changed the semantics of this somewhat.  Where before
+					//	it allowed a unit to lead a stack through mountains (very valuable)
+					//	it now only allows this unit to pass through mountains.
+					//	The new promotion PROMOTION_MOUNTAIN_LEADER has the old semantics and
+					//	retains the old AI value (next clause)
+					iValue += 50;
 				}
 			}
 		}
@@ -34191,16 +34171,13 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	//	mountains, and ability to lead a stack through mountains
 	if (kPromotion.isCanLeadThroughPeaks())
 	{
-		if (GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
+		for (iI = 0; iI < GC.getNumTechInfos(); iI++)
 		{
-			for (iI = 0; iI < GC.getNumTechInfos(); iI++)
+			if (!(GET_TEAM(getTeam()).isHasTech((TechTypes)iI)))
 			{
-				if (!(GET_TEAM(getTeam()).isHasTech((TechTypes)iI)))
+				if (GC.getTechInfo((TechTypes)iI).isCanPassPeaks())
 				{
-					if (GC.getTechInfo((TechTypes)iI).isCanPassPeaks())
-					{
-						iValue += 75;
-					}
+					iValue += 75;
 				}
 			}
 		}
@@ -38036,12 +38013,11 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 {
 	MEMORY_TRACK()
 
-	int iValue;
 	int iTemp;
 	int iExtra;
 	int iI;
 
-	iValue = 0;
+	int iValue = 0;
 	
 	CvUnitCombatInfo &kUnitCombat = GC.getUnitCombatInfo(eUnitCombat);
 	CvUnitInfo &kUnit = GC.getUnitInfo(eUnit);
@@ -38150,8 +38126,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 		}
 	}
 
-	bool bTemp = false;
-	bTemp = kUnitCombat.isOneUp();
+	bool bTemp = kUnitCombat.isOneUp();
 	if (bTemp)
 	{
 		if ((eUnitAI == UNITAI_RESERVE) ||
@@ -39155,16 +39130,13 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 
 	if (kUnitCombat.isCanMovePeaks())
 	{
-		if (GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
+		for (iI = 0; iI < GC.getNumTechInfos(); iI++)
 		{
-			for (iI = 0; iI < GC.getNumTechInfos(); iI++)
+			if (!(GET_TEAM(getTeam()).isHasTech((TechTypes)iI)))
 			{
-				if (!(GET_TEAM(getTeam()).isHasTech((TechTypes)iI)))
+				if (GC.getTechInfo((TechTypes)iI).isCanPassPeaks())
 				{
-					if (GC.getTechInfo((TechTypes)iI).isCanPassPeaks())
-					{
-						iValue += 35;
-					}
+					iValue += 35;
 				}
 			}
 		}
@@ -39172,16 +39144,13 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 
 	if (kUnitCombat.isCanLeadThroughPeaks())
 	{
-		if (GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
+		for (iI = 0; iI < GC.getNumTechInfos(); iI++)
 		{
-			for (iI = 0; iI < GC.getNumTechInfos(); iI++)
+			if (!(GET_TEAM(getTeam()).isHasTech((TechTypes)iI)))
 			{
-				if (!(GET_TEAM(getTeam()).isHasTech((TechTypes)iI)))
+				if (GC.getTechInfo((TechTypes)iI).isCanPassPeaks())
 				{
-					if (GC.getTechInfo((TechTypes)iI).isCanPassPeaks())
-					{
-						iValue += 75;
-					}
+					iValue += 75;
 				}
 			}
 		}

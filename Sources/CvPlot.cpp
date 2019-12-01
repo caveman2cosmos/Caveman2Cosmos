@@ -2040,7 +2040,7 @@ bool CvPlot::isFreshWater(bool bIgnoreJungle) const
 bool CvPlot::isPotentialIrrigation() const
 {
 //===NM=====Mountain Mod===0X=====
-	if ((isCity() && !(isHills() || isPeak2(true))) || ((getImprovementType() != NO_IMPROVEMENT) && (GC.getImprovementInfo(getImprovementType()).isCarriesIrrigation())))
+	if ((isCity() && !(isHills() || isPeak2())) || ((getImprovementType() != NO_IMPROVEMENT) && (GC.getImprovementInfo(getImprovementType()).isCarriesIrrigation())))
 	{
 		if ((getTeam() != NO_TEAM) && GET_TEAM(getTeam()).isIrrigation())
 		{
@@ -2057,7 +2057,7 @@ bool CvPlot::canHavePotentialIrrigation() const
 	int iI;
 
 //===NM=====Mountain Mod===0X=====
-	if (isCity() && !(isHills() || isPeak2(true)))
+	if (isCity() && !(isHills() || isPeak2()))
 	{
 		return true;
 	}
@@ -2294,11 +2294,9 @@ CvPlot* CvPlot::getNearestLandPlot() const
 
 int CvPlot::seeFromLevel(TeamTypes eTeam) const
 {
-	int iLevel;
-
 	FAssertMsg(getTerrainType() != NO_TERRAIN, "TerrainType is not assigned a valid value");
 
-	iLevel = GC.getTerrainInfo(getTerrainType()).getSeeFromLevel();
+	int iLevel = GC.getTerrainInfo(getTerrainType()).getSeeFromLevel();
 
 	// Super Forts begin *vision*
 	if (getImprovementType() != NO_IMPROVEMENT)
@@ -2307,17 +2305,17 @@ int CvPlot::seeFromLevel(TeamTypes eTeam) const
 	}
 	// Super Forts end
 
-	if (isPeak2(true))
+	if (isPeak2())
 	{
 		iLevel += GC.getPEAK_SEE_FROM_CHANGE();
 	}
 
-	if (isHills())
+	else if (isHills())
 	{
 		iLevel += GC.getHILLS_SEE_FROM_CHANGE();
 	}
 
-	if (isWater())
+	else if (isWater())
 	{
 		iLevel += GC.getSEAWATER_SEE_FROM_CHANGE();
 
@@ -2333,35 +2331,32 @@ int CvPlot::seeFromLevel(TeamTypes eTeam) const
 
 int CvPlot::seeThroughLevel() const
 {
-	int iLevel;
-
 	FAssertMsg(getTerrainType() != NO_TERRAIN, "TerrainType is not assigned a valid value");
 
-	iLevel = GC.getTerrainInfo(getTerrainType()).getSeeThroughLevel();
+	int iLevel = GC.getTerrainInfo(getTerrainType()).getSeeThroughLevel();
 
 	if (getFeatureType() != NO_FEATURE)
 	{
 		iLevel += GC.getFeatureInfo(getFeatureType()).getSeeThroughChange();
 	}
 
-	if (isPeak2(true))
+	if (isPeak2())
 	{
 		iLevel += GC.getPEAK_SEE_THROUGH_CHANGE();
 	}
 
-	if (isHills())
+	else if (isHills())
 	{
 		iLevel += GC.getHILLS_SEE_THROUGH_CHANGE();
 	}
 
-	if (isWater())
+	else if (isWater())
 	{
 		iLevel += GC.getSEAWATER_SEE_FROM_CHANGE();
 	}
 
 	return iLevel;
 }
-
 
 
 void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, CvUnit* pUnit, bool bUpdatePlotGroups)
@@ -2827,26 +2822,6 @@ bool CvPlot::canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude) const
 		return false;
 	}
 
-/************************************************************************************************/
-/* Afforess	Mountains Start		 08/03/09                                           		 */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-//	if (isPeak())
-//	{
-//		return false;
-//	}
-
-	if (!GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
-	{
-		if (isPeak2(true))
-		{
-			return false;
-		}
-	}
-/************************************************************************************************/
-/* Afforess	Mountains End       END        		                                             */
-/************************************************************************************************/
 	if (getFeatureType() != NO_FEATURE)
 	{
 		if (!(GC.getBonusInfo(eBonus).isFeature(getFeatureType())))
@@ -2879,14 +2854,11 @@ bool CvPlot::canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude) const
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	else if (isPeak2(true))
+	else if (isPeak2())
 	{
-		if (GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
+		if (!(GC.getBonusInfo(eBonus).isPeaks()))
 		{
-			if (!(GC.getBonusInfo(eBonus).isPeaks()))
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 /************************************************************************************************/
@@ -3053,7 +3025,7 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 		}
 	}
 
-	if (isPeak2(true))
+	if (isPeak2())
 	{
 		if (GC.getImprovementInfo(eImprovement).isPeakMakesValid())
 		{
@@ -3094,7 +3066,7 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 /************************************************************************************************/
 	if ((getBonusType(eTeam) != NO_BONUS) && GC.getImprovementInfo(eImprovement).isImprovementBonusMakesValid(getBonusType(eTeam)))
 	{
-		if (!isPeak2(true) && !GC.getImprovementInfo(eImprovement).isRequiresPeak())
+		if (!isPeak2() && !GC.getImprovementInfo(eImprovement).isRequiresPeak())
 		{
 			return true;
 		}
@@ -3792,7 +3764,7 @@ int CvPlot::getBuildTime(BuildTypes eBuild) const
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	if (isPeak2(true))
+	if (isPeak2())
 	{
 		iTime *= std::max(0, (GC.getDefineINT("PEAK_BUILD_TIME_MODIFIER") + 100));
 		iTime /= 100;
@@ -4855,19 +4827,14 @@ int CvPlot::defenseModifier(TeamTypes eDefender, bool bIgnoreBuilding, bool bHel
 	{
 		iModifier += GC.getHILLS_EXTRA_DEFENSE();
 	}
-
 /************************************************************************************************/
 /* Afforess	Mountains Start		 08/03/09                                           		 */
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-
-	if (GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
+	else if (isPeak2())
 	{
-		if (isPeak2(true))
-		{
-			iModifier += GC.getPEAK_EXTRA_DEFENSE();
-		}
+		iModifier += GC.getPEAK_EXTRA_DEFENSE();
 	}
 /************************************************************************************************/
 /* Afforess	Mountains End       END        		                                             */
@@ -5039,7 +5006,7 @@ int CvPlot::movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const
 				/*                                                                                              */
 				/*                                                                                              */
 				/************************************************************************************************/
-				if (isPeak2(true))
+				if (isPeak2())
 				{
 					if (!GET_TEAM(pUnit->getTeam()).isMoveFastPeaks())
 					{
@@ -6861,19 +6828,9 @@ bool CvPlot::isImpassable(TeamTypes eTeam) const
 //		return true;
 //	}
 
-	if (!GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
+	if (isPeak2() && (eTeam == NO_TEAM || !GET_TEAM(eTeam).isCanPassPeaks()))
 	{
-		if (isPeak2(true))
-		{
-			return true;
-		}
-	}
-	else if (isPeak2(true))
-	{
-		if (eTeam == NO_TEAM || !GET_TEAM(eTeam).isCanPassPeaks())
-		{
-			return true;
-		}
+		return true;
 	}
 	
 /************************************************************************************************/
@@ -8085,16 +8042,12 @@ bool CvPlot::isHills() const
 
 bool CvPlot::isPeak() const
 {
-	return (isPeak2(false));
+	return (getPlotType() == PLOT_PEAK);
 }
 
-bool CvPlot::isPeak2(bool bCountsAs) const
+bool CvPlot::isPeak2() const
 {
-	if (bCountsAs && getFeatureType() != NO_FEATURE)
-	{
-		return (getPlotType() == PLOT_PEAK || GC.getFeatureInfo(getFeatureType()).isCountsAsPeak());
-	}
-	return (getPlotType() == PLOT_PEAK);
+	return (getPlotType() == PLOT_PEAK || (getFeatureType() != NO_FEATURE && GC.getFeatureInfo(getFeatureType()).isCountsAsPeak()));
 }
 
 
@@ -9518,64 +9471,37 @@ int CvPlot::calculateNatureYield(YieldTypes eYield, TeamTypes eTeam, bool bIgnor
 {
 	PROFILE_FUNC();
 
-	BonusTypes eBonus;
-	int iYield;
-
 /************************************************************************************************/
 /* Afforess	Mountains Start		 08/03/09                                           		 */
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-
 	if (isImpassable(getTeam()))
 	{
-		if (GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
+		if (!isPeak2())
 		{
-			if (!isPeak2(true))
-			{
-				return 0;
-			}
-			else
-			{
-				//	Koshling - prevent mountains being worked until workers can
-				//	move into peak tiles
-				if ( eTeam != NO_TEAM && !GET_TEAM(eTeam).isCanPassPeaks()  )
-				{
-					if ( !isRoute() )
-					{
-						return 0;
-					}
-				}
-			}
+			return 0;
 		}
-		else
+		//	Koshling - prevent mountains being worked until workers can move into peak tiles
+		if ( eTeam != NO_TEAM && !GET_TEAM(eTeam).isCanPassPeaks() && !isRoute() )
 		{
 			return 0;
 		}
 	}
+
+	FAssertMsg(getTerrainType() != NO_TERRAIN, "TerrainType is not assigned a valid value");
+
+	int iYield = isPeak2() ? 0 : GC.getTerrainInfo(getTerrainType()).getYield(eYield);
 /************************************************************************************************/
 /* Afforess	Mountains End       END        		                                             */
 /************************************************************************************************/
-
-
-	FAssertMsg(getTerrainType() != NO_TERRAIN, "TerrainType is not assigned a valid value");
-/************************************************************************************************/
-/* Afforess	                  Start		 08/29/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	if (isPeak2(true)) iYield = 0; else
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-	iYield = GC.getTerrainInfo(getTerrainType()).getYield(eYield);
 
 	if (isHills())
 	{
 		iYield += GC.getYieldInfo(eYield).getHillsChange();
 	}
 
-	if (isPeak2(true))
+	if (isPeak2())
 	{
 		iYield += GC.getYieldInfo(eYield).getPeakChange();
 	}
@@ -9587,7 +9513,7 @@ int CvPlot::calculateNatureYield(YieldTypes eYield, TeamTypes eTeam, bool bIgnor
 
 	if (eTeam != NO_TEAM)
 	{
-		eBonus = getBonusType(eTeam);
+		BonusTypes eBonus = getBonusType(eTeam);
 
 		if (eBonus != NO_BONUS)
 		{
@@ -9605,12 +9531,9 @@ int CvPlot::calculateNatureYield(YieldTypes eYield, TeamTypes eTeam, bool bIgnor
 		iYield += ((bIgnoreFeature || (getFeatureType() == NO_FEATURE)) ? GC.getTerrainInfo(getTerrainType()).getHillsYieldChange(eYield) : GC.getFeatureInfo(getFeatureType()).getHillsYieldChange(eYield));
 	}
 
-	if (!bIgnoreFeature)
+	if (!bIgnoreFeature && getFeatureType() != NO_FEATURE)
 	{
-		if (getFeatureType() != NO_FEATURE)
-		{
-			iYield += GC.getFeatureInfo(getFeatureType()).getYieldChange(eYield);
-		}
+		iYield += GC.getFeatureInfo(getFeatureType()).getYieldChange(eYield);
 	}
 
 	return std::max(0, iYield);
@@ -15332,7 +15255,7 @@ float CvPlot::getAqueductSourceWeight() const
 {
 	float fWeight = 0.0f;
 
-	if (isLake() || isPeak2(true) || (getFeatureType() != NO_FEATURE && GC.getFeatureInfo(getFeatureType()).isAddsFreshWater()))
+	if (isLake() || isPeak2() || (getFeatureType() != NO_FEATURE && GC.getFeatureInfo(getFeatureType()).isAddsFreshWater()))
 	{
 		fWeight = 1.0f;
 	}

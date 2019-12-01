@@ -8838,13 +8838,7 @@ void CvPlayer::doGoody(CvPlot* pPlot, CvUnit* pUnit)
 
 bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 {
-	CvPlot* pPlot;
-	CvPlot* pLoopPlot;
-	bool bValid;
-	int iRange;
-	int iDX, iDY;
-
-	pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	CvPlot* pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
 
 	if(GC.getUSE_CANNOT_FOUND_CITY_CALLBACK())
 	{
@@ -8874,7 +8868,6 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 /************************************************************************************************/
 /* Afforess	Mountains End       END        		                                             */
 /************************************************************************************************/
-
 	{
 		return false;
 	}
@@ -8884,44 +8877,28 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	if (!isNPC() && !bTestVisible && getCityLimit() > 0 && getCityOverLimitUnhappy() == 0)
+	if (!isNPC() && !bTestVisible && getCityLimit() > 0 && getCityOverLimitUnhappy() == 0 && getNumCities() >= getCityLimit())
 	{
-		if (getNumCities() >= getCityLimit())
-		{
-			return false;
-		}
+		return false;
 	}
-	if (pPlot->isPeak())
+
+	if (pPlot->isPeak() && !GET_TEAM(getTeam()).isCanFoundOnPeaks())
 	{
-		if (GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
-		{
-			if (!GET_TEAM(getTeam()).isCanFoundOnPeaks())
-			{
-				return false;
-			}
-		}
-		else
-		{
-			return false;
-		}
+		return false;
 	}
-	if (pPlot->getClaimingOwner() != NO_PLAYER)
+
+	if (pPlot->getClaimingOwner() != NO_PLAYER && pPlot->getClaimingOwner() != getID())
 	{
-		if (pPlot->getClaimingOwner() != getID())
-		{
-			return false;
-		}
+		return false;
 	}
+
 /************************************************************************************************/
 /* Afforess	                    END        		                                                */
 /************************************************************************************************/
 
-	if (pPlot->getFeatureType() != NO_FEATURE)
+	if (pPlot->getFeatureType() != NO_FEATURE && GC.getFeatureInfo(pPlot->getFeatureType()).isNoCity())
 	{
-		if (GC.getFeatureInfo(pPlot->getFeatureType()).isNoCity())
-		{
-			return false;
-		}
+		return false;
 	}
 
 	if (pPlot->isOwned() && (pPlot->getOwnerINLINE() != getID()))
@@ -8929,15 +8906,7 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 		return false;
 	}
 
-	bValid = false;
-
-	if (!bValid)
-	{
-		if (GC.getTerrainInfo(pPlot->getTerrainType()).isFound())
-		{
-			bValid = true;
-		}
-	}
+	bool bValid = GC.getTerrainInfo(pPlot->getTerrainType()).isFound();
 
 	if (!bValid)
 	{
@@ -8985,13 +8954,13 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 
 	if (!bTestVisible)
 	{
-		iRange = GC.getMIN_CITY_RANGE();
+		int iRange = GC.getMIN_CITY_RANGE();
 
-		for (iDX = -(iRange); iDX <= iRange; iDX++)
+		for (int iDX = -(iRange); iDX <= iRange; iDX++)
 		{
-			for (iDY = -(iRange); iDY <= iRange; iDY++)
+			for (int iDY = -(iRange); iDY <= iRange; iDY++)
 			{
-				pLoopPlot	= plotXY(pPlot->getX_INLINE(), pPlot->getY_INLINE(), iDX, iDY);
+				CvPlot* pLoopPlot = plotXY(pPlot->getX_INLINE(), pPlot->getY_INLINE(), iDX, iDY);
 
 				if (pLoopPlot != NULL)
 				{

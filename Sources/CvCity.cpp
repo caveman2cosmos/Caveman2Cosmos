@@ -3989,7 +3989,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 		if (kBuilding.isBuildOnlyOnPeaks())
 		{
-			if (!(plot()->isPeak2(true)))
+			if (!(plot()->isPeak2()))
 			{
 				return false;
 			}
@@ -8616,7 +8616,7 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 	{
 		eTerrain = CvTerrainInfo::getTerrainHill();
 	}
-	else if (pPlot->isPeak2(true))
+	else if (pPlot->isPeak2())
 	{
 		eTerrain = CvTerrainInfo::getTerrainPeak();
 	}
@@ -24518,7 +24518,7 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 						bValidTerrain = true;
 						break;
 					}
-					if (pLoopPlot->isPeak2(true) && bPeak)
+					if (pLoopPlot->isPeak2() && bPeak)
 					{
 						bValidTerrain = true;
 						break;
@@ -24552,7 +24552,7 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 						bHasAndTerrain = true;
 						break;
 					}
-					if (pLoopPlot->isPeak2(true) && bPeak2)
+					if (pLoopPlot->isPeak2() && bPeak2)
 					{
 						bHasAndTerrain = true;
 						break;

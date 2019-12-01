@@ -891,7 +891,6 @@ enum GameOptionTypes				// Exposed to Python
 /*                              New Gameoptions                                                 */
 /*                                                                                              */
 /************************************************************************************************/
-	GAMEOPTION_MOUNTAINS,
 	GAMEOPTION_SAD,
 	GAMEOPTION_ADVANCED_DIPLOMACY,
 	GAMEOPTION_UNLIMITED_WONDERS,
