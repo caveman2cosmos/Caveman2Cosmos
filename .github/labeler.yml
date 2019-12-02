@@ -1,5 +1,6 @@
 dll:
   - Sources/**/*
+  - Sources/*
 
 tool:
   - Tools/**/*
