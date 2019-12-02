@@ -5245,13 +5245,15 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 	CvPlot* pDestPlot = GC.getMapINLINE().plotINLINE(iX, iY);
 	// RevolutionDCM - end
 
-	if (iFlags & MOVE_THROUGH_ENEMY)
+	// Can attack on the same plot
+	if (plot() != pDestPlot && (iFlags & MOVE_THROUGH_ENEMY))
 	{
 		if (generatePath(plot(), pDestPlot, iFlags))
 		{
 			pDestPlot = getPathFirstPlot();
 		}
 	}
+
 	FAssertMsg(pDestPlot != NULL, "DestPlot is not assigned a valid value");
 
 	// CvSelectionGroup has a valid plot, but units don't always
@@ -6699,9 +6701,10 @@ CvPlot* CvSelectionGroup::getPathFirstPlot() const
 
 	//	CvPath stores the node the unit started on first, but the 'first plot' required is the
 	//	first one moved to
-	if ( itr != getPath().end() )
+	FAssertMsg(itr != getPath().end(), "getPathFirstPlot called without path being calculated (a valid path always contains the first plot at least)");
+	if (itr != getPath().end() && ++itr != getPath().end() )
 	{
-		return (++itr).plot();
+		return itr.plot();
 	}
 	else
 	{
@@ -8078,7 +8081,7 @@ bool CvSelectionGroup::groupStackAttack(int iX, int iY, int iFlags, bool& bFaile
 	CvPlot* pDestPlot = GC.getMapINLINE().plotINLINE(iX, iY);
 	CvPlot* pOrigPlot = plot();
 
-	if (iFlags & MOVE_THROUGH_ENEMY)
+	if (pDestPlot != pOrigPlot && iFlags & MOVE_THROUGH_ENEMY)
 	{
 		if (generatePath(plot(), pDestPlot, iFlags))
 		{
