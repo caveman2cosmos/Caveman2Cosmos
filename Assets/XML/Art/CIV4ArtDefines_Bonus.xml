@@ -111,7 +111,7 @@
 			<NIF>Art/Terrain/Resources/Coconut/coconut.nif</NIF>
 			<KFM></KFM>
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,6,4</Button>
-			<FontButtonIndex>123</FontButtonIndex>
+			<FontButtonIndex>223</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_DATES</Type>
@@ -139,7 +139,7 @@
 			<NIF>Art/Terrain/Resources/guava/guava.nif</NIF>
 			<KFM>Art/Terrain/Resources/Banana/Banana.kfm</KFM>
 			<Button>Art/Interface/Buttons/Bonus/guava.dds</Button>
-			<FontButtonIndex>144</FontButtonIndex>
+			<FontButtonIndex>211</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_LEMON</Type>
@@ -250,7 +250,7 @@
 			<NIF>Art/Terrain/Resources/Cocoa/spices.nif</NIF>
 			<KFM>Art/Terrain/Resources/Cocoa/spices.kfm</KFM>
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,4,5</Button>
-			<FontButtonIndex>223</FontButtonIndex>
+			<FontButtonIndex>231</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_COFFEE</Type>
@@ -549,7 +549,7 @@
 			<KFM>Art/Terrain/Resources/Elephant/Elephant.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Mammoth/Elephant_FX.nif</SHADERNIF>
 			<Button>Art/Interface/Buttons/Bonus/Mammoth.dds</Button>
-			<FontButtonIndex>25</FontButtonIndex>
+			<FontButtonIndex>147</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PARROTS</Type>
@@ -951,7 +951,7 @@
 			<NIF>Art/Terrain/Resources/131)Swampgas/oil.nif</NIF>
 			<KFM>Art/Terrain/Resources/131)Swampgas/oil.kfm</KFM>
 			<Button>Art/Interface/Buttons/Bonus/NaturalGas.dds</Button>
-			<FontButtonIndex>30</FontButtonIndex>
+			<FontButtonIndex>224</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_OIL</Type>
@@ -969,7 +969,7 @@
 			<NIF>Art/Terrain/Resources/ThermalVent/Uranium.nif</NIF>
 			<KFM>Art/Terrain/Resources/ThermalVent/Uranium.kfm</KFM>
 			<Button>Art/Interface/Buttons/Bonus/Methane.dds</Button>
-			<FontButtonIndex>69</FontButtonIndex>
+			<FontButtonIndex>46</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CO2_ICE</Type>
