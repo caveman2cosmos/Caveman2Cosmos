@@ -4,22 +4,31 @@ dll:
 
 tool:
   - Tools/**/*
+  - Tools/*
 
 xml:
   - Assets/**/*.xml
+  - Assets/*.xml
 
 text:
   - Assets/XML/Text/**/*
+  - Assets/XML/Text/*
   - Assets/Modules/**/*Text*.xml
+  - Assets/Modules/*Text*.xml
 
 python:
   - Assets/Python/**/*
+  - Assets/Python/*
 
 art:
   - UnpackedArt/**/*
+  - UnpackedArt/*
   - ArtSource/**/*
+  - ArtSource/*
   - Assets/art/**/*
+  - Assets/art/*
 
 audio:
   - Assets/Sounds/**/*
+  - Assets/Sounds/*
 
