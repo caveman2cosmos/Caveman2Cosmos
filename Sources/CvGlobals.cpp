@@ -4776,11 +4776,6 @@ int cvInternalGlobals::getMAX_TEAMS()
 	return MAX_TEAMS;
 }
 
-int cvInternalGlobals::getLAST_PLAYER()
-{
-	return LAST_PLAYER;
-}
-
 int cvInternalGlobals::getBARBARIAN_PLAYER()
 {
 	return BARBARIAN_PLAYER;

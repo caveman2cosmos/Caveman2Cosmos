@@ -437,7 +437,6 @@ public:
 	int getMAX_CIV_TEAMS() const { return GC.getMAX_CIV_TEAMS(); }
 	int getMAX_PC_TEAMS() const { return GC.getMAX_PC_TEAMS(); }
 	int getMAX_TEAMS() const { return GC.getMAX_TEAMS(); }
-	int getLAST_PLAYER() const { return GC.getLAST_PLAYER(); }
 	int getBARBARIAN_PLAYER() const { return GC.getBARBARIAN_PLAYER(); }
 	int getBARBARIAN_TEAM() const { return GC.getBARBARIAN_TEAM(); }
 	int getAGGRESSIVE_ANIMAL_PLAYER() const { return GC.getAGGRESSIVE_ANIMAL_PLAYER(); }

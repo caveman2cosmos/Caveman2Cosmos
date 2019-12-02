@@ -564,17 +564,17 @@ class Revolution:
 			iPrevPlayer -= 1
 
 		if( iPrevPlayer < 0 ) :
-			iPrevPlayer = GC.getLAST_PLAYER()
+			iPrevPlayer = GC.getMAX_CIV_PLAYERS()
 
-		if( iPrevPlayer >= 0 and iPrevPlayer < GC.getLAST_PLAYER() ) :
+		if( iPrevPlayer >= 0 and iPrevPlayer < GC.getMAX_CIV_PLAYERS() ) :
 			self.checkForRevReinforcement( iPrevPlayer )
 			self.checkCivics( iPrevPlayer )
 
 		iNextPlayer = iPlayer + 1
-		while( iNextPlayer <= GC.getLAST_PLAYER() and not GC.getPlayer(iNextPlayer).isAlive() ) :
+		while( iNextPlayer <= GC.getMAX_CIV_PLAYERS() and not GC.getPlayer(iNextPlayer).isAlive() ) :
 			iNextPlayer += 1
 
-		if( iNextPlayer > GC.getLAST_PLAYER() ) :
+		if( iNextPlayer > GC.getMAX_CIV_PLAYERS() ) :
 			iNextPlayer = 0
 			while( iNextPlayer < iPlayer and not GC.getPlayer(iNextPlayer).isAlive() ) :
 				iNextPlayer += 1
@@ -590,7 +590,7 @@ class Revolution:
 		bDoLaunchRev = False
 
 		iNextPlayer = iPlayer + 1
-		while( iNextPlayer <= GC.getLAST_PLAYER() ) :
+		while( iNextPlayer <= GC.getMAX_CIV_PLAYERS() ) :
 			if( RevData.revObjectExists(GC.getPlayer(iNextPlayer)) ) :
 				# RevolutionMP start - general fix thanks Init
 				spawnList = RevData.revObjectGetVal(GC.getPlayer(iNextPlayer), 'SpawnList' )
@@ -604,7 +604,7 @@ class Revolution:
 			else :
 				break
 
-		if( iNextPlayer > GC.getLAST_PLAYER() ) :
+		if( iNextPlayer > GC.getMAX_CIV_PLAYERS() ) :
 			iGameTurn += 1
 			iNextPlayer = 0
 			while( iNextPlayer < iPlayer ) :

@@ -1230,7 +1230,6 @@ public:
 	int getMAX_CIV_TEAMS();
 	int getMAX_PC_TEAMS();
 	int getMAX_TEAMS();
-	int getLAST_PLAYER();
 	int getBARBARIAN_PLAYER();
 	int getBARBARIAN_TEAM();
 	int getAGGRESSIVE_ANIMAL_PLAYER();
@@ -3327,11 +3326,6 @@ public:
 	{
 		PROXY_TRACK("getMAX_TEAMS");	
 		return gGlobals->getMAX_TEAMS();	
-	}
-	int getLAST_PLAYER()
-	{
-		PROXY_TRACK("getLAST_PLAYER");	
-		return gGlobals->getLAST_PLAYER();	
 	}
 	int getBARBARIAN_PLAYER()
 	{

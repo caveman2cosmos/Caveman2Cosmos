@@ -704,7 +704,7 @@ def giveCityCulture(CyCity, iPlayer, newCityVal, newPlotVal):
 	# Places this culture value in city and city plot
 	# Places half this value in neighboring plots
 
-	if iPlayer < 0 or iPlayer > GC.getLAST_PLAYER():
+	if iPlayer < 0 or iPlayer > GC.getMAX_CIV_PLAYERS():
 		return
 	CyPlot = CyCity.plot()
 
