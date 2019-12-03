@@ -44,7 +44,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodingotaluminum.dds</Button>
-			<FontButtonIndex>0</FontButtonIndex>
+			<FontButtonIndex>27</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Ammunition -->
 		<BonusArtInfo>

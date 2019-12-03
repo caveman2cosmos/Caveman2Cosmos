@@ -840,7 +840,7 @@
 			<NIF>Art/Terrain/resources/Titanium/Aluminum.nif</NIF>
 			<KFM>Art/Terrain/resources/Titanium/Aluminum.kfm</KFM>
 			<Button>Art/Interface/Buttons/Bonus/Titanium.dds</Button>
-			<FontButtonIndex>58</FontButtonIndex>
+			<FontButtonIndex>184</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_URANIUM</Type>
