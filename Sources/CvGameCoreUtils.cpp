@@ -3647,9 +3647,9 @@ int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelection
 						{
 							int iRatioToUnitStack = pSelectionGroup->AI_compareStacks(pAdjacentPlot, 
 								//CvPathGenerator::IsMaxPerformance()? 
-								StackCompare::Fast 
+								//StackCompare::Fast 
 								//: 
-								//StackCompare::None
+								StackCompare::None
 							);
 
 							if ( iRatioToUnitStack < 120 )
