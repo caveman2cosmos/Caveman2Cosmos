@@ -10992,6 +10992,10 @@
 		<Polish>[COLOR_HIGHLIGHT_TEXT]%s1_CorpName[COLOR_REVERT] zakończył biznes w %s2_CityName.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISC_UNIT_UPGRADE_READY</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]%s1_UnitName[COLOR_REVERT] has arrived in [COLOR_HIGHLIGHT_TEXT]%s2_CityName[COLOR_REVERT] for upgrades.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_CORPORATION_HOSTILE_TAKEOVER</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]%s1_CorpName[COLOR_REVERT] has been shut down in a hostile take over by the [COLOR_HIGHLIGHT_TEXT]%s2_CorpName[COLOR_REVERT] in %s3_CityName.</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]%s1_CorpName[COLOR_REVERT] a été fermé dans une action hostile de [COLOR_HIGHLIGHT_TEXT]%s2_CorpName[COLOR_REVERT] à %s3_CityName.</French>

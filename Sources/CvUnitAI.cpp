@@ -27428,15 +27428,28 @@ bool CvUnitAI::AI_travelToUpgradeCity()
 		// if we at the upgrade city, stop, wait to get upgraded
 		if (pUpgradeCity->plot() == pPlot)
 		{
-			if (!bShouldSkipToUpgrade)
+			if (isHuman())
 			{
-				return false;
-			}
-			
-			bSuccess = getGroup()->pushMissionInternal(MISSION_SKIP);
-			if (bSuccess)
-			{
+				// Wake up and notify player!
+				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_UNIT_UPGRADE_READY", getNameKey(), pUpgradeCity->getNameKey());
+				AddDLLMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREY"), getX_INLINE(), getY_INLINE(), true, true);
+
+				getGroup()->clearMissionQueue();
+				getGroup()->setActivityType(ACTIVITY_AWAKE);
 				return true;
+			}
+			else
+			{
+				if (!bShouldSkipToUpgrade)
+				{
+					return false;
+				}
+
+				bSuccess = getGroup()->pushMissionInternal(MISSION_SKIP);
+				if (bSuccess)
+				{
+					return true;
+				}
 			}
 		}
 
@@ -33320,7 +33333,8 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		}
 	}
 
-	if (AI_travelToUpgradeCity())
+	if ((!isHuman() || GET_PLAYER(getOwnerINLINE()).isModderOption(MODDEROPTION_AUTO_HUNT_RETURN_FOR_UPGRADES)) 
+		&& AI_travelToUpgradeCity())
 	{
 		return;
 	}

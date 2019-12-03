@@ -1599,6 +1599,20 @@
 		<Spanish>Permitir suicidio de unidades</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__AUTOHUNTRETURNFORUPGRADES_TEXT</Tag>
+		<English>Goto City for Upgrades</English>
+		<French>Aller à la ville pour les mises à niveau</French>
+		<German>Zum Upgraden in die Stadt gehen</German>
+		<Spanish>Ir a la ciudad para actualizaciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__AUTOHUNTRETURNFORUPGRADES_HOVER</Tag>
+		<English>The unit will return to a city when they have upgrades available, and then wait.</English>
+		<French>L'unité retournera dans une ville lorsqu'elle disposera de mises à niveau, puis attendra.</French>
+		<German>Die Einheit kehrt in eine Stadt zurück, wenn Upgrades verfügbar sind, und wartet dann.</German>
+		<Spanish>La unidad volverá a una ciudad cuando tenga actualizaciones disponibles y luego esperará.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__AUTODEFENSEMINIMUMATTACKODDS_HOVER</Tag>
 		<English>The minimum odds that a unit will engage an enemy with. Lower odds increases fighting, but also the chances of death.</English>
 		<French>La Prob. de combat minimum à laquelle une unité va engager l'ennemie. Les Probabilité plus faible augmente le combat et l'expérience, mais également les chances de périr.</French>
