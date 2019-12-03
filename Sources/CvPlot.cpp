@@ -1855,19 +1855,13 @@ bool CvPlot::isAdjacentToLand() const
 {
 	PROFILE_FUNC();
 
-	CvPlot* pAdjacentPlot;
-	int iI;
-
-	for (iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
 	{
-		pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)iI));
+		CvPlot* pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)iI));
 
-		if (pAdjacentPlot != NULL)
+		if (pAdjacentPlot != NULL && !pAdjacentPlot->isWater())
 		{
-			if (!(pAdjacentPlot->isWater()))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
 
@@ -1879,17 +1873,14 @@ bool CvPlot::isCoastalLand(int iMinWaterSize) const
 {
 	PROFILE_FUNC();
 
-	CvPlot* pAdjacentPlot;
-	int iI;
-
 	if (isWater())
 	{
 		return false;
 	}
 
-	for (iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
 	{
-		pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)iI));
+		CvPlot* pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)iI));
 
 		if (pAdjacentPlot != NULL)
 		{
@@ -1909,15 +1900,7 @@ bool CvPlot::isCoastalLand(int iMinWaterSize) const
 
 bool CvPlot::isVisibleWorked() const
 {
-	if (isBeingWorked())
-	{
-		if ((getTeam() == GC.getGameINLINE().getActiveTeam()) || GC.getGameINLINE().isDebugMode())
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return isBeingWorked() && (getTeam() == GC.getGameINLINE().getActiveTeam() || GC.getGameINLINE().isDebugMode());
 }
 
 
@@ -1925,9 +1908,7 @@ bool CvPlot::isWithinTeamCityRadius(TeamTypes eTeam, PlayerTypes eIgnorePlayer) 
 {
 	PROFILE_FUNC();
 
-	int iI;
-
-	for (iI = 0; iI < MAX_PLAYERS; ++iI)
+	for (int iI = 0; iI < MAX_PLAYERS; ++iI)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -1950,13 +1931,8 @@ bool CvPlot::isWithinTeamCityRadius(TeamTypes eTeam, PlayerTypes eIgnorePlayer) 
 
 bool CvPlot::isLake() const
 {
-	CvArea* pArea = area();
-	if (pArea != NULL)
-	{
-		return pArea->isLake();
-	}
-
-	return false;
+	const CvArea* pArea = area();
+	return pArea ? pArea->isLake() : false;
 }
 
 
@@ -1975,15 +1951,12 @@ bool CvPlot::isFreshWater(bool bIgnoreJungle) const
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 {
-	CvPlot* pLoopPlot;
-	int iDX, iDY;
-
-	if (isWater())
+	if (isLake())
 	{
-		return false;
+		return true;
 	}
 
-	if (isImpassable())
+	if (isWater() || isImpassable())
 	{
 		return false;
 	}
@@ -1993,11 +1966,11 @@ bool CvPlot::isFreshWater(bool bIgnoreJungle) const
 		return true;
 	}
 
-	for (iDX = -1; iDX <= 1; iDX++)
+	for (int iDX = -1; iDX <= 1; iDX++)
 	{
-		for (iDY = -1; iDY <= 1; iDY++)
+		for (int iDY = -1; iDY <= 1; iDY++)
 		{
-			pLoopPlot	= plotXY(getX_INLINE(), getY_INLINE(), iDX, iDY);
+			CvPlot* pLoopPlot = plotXY(getX_INLINE(), getY_INLINE(), iDX, iDY);
 
 			if (pLoopPlot != NULL)
 			{
@@ -2018,13 +1991,10 @@ bool CvPlot::isFreshWater(bool bIgnoreJungle) const
 				/*                                                                                              */
 				/*                                                                                              */
 				/************************************************************************************************/
-				if (pLoopPlot->isCity())
+				CvCity* pCity = pLoopPlot->getPlotCity();
+				if (pCity != NULL && pCity->hasFreshWater())
 				{
-					CvCity* pCity = pLoopPlot->getPlotCity();
-					if (pCity->hasFreshWater())
-					{
-						return true;
-					}
+					return true;
 				}
 				/************************************************************************************************/
 				/* Afforess	                     END                                                            */
