@@ -4138,76 +4138,55 @@ CvUnit* CvPlot::getFirstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlaye
 }
 
 // returns a sum of the strength (adjusted by firepower) of all the units on a plot
-int CvPlot::AI_sumStrength(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, DomainTypes eDomainType, bool bDefensiveBonuses, bool bTestAtWar, bool bTestPotentialEnemy, int iRange) const
+int CvPlot::AI_sumStrength(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, DomainTypes eDomainType, StrengthFlags::flags flags /*= StrengthFlags::DefensiveBonuses*/, int iRange) const
 {
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
+	const int COLLATERAL_COMBAT_DAMAGE = GC.getDefineINT("COLLATERAL_COMBAT_DAMAGE"); // K-Mod. (currently this number is "10")
+
+	const bool bTestAtWar = flags & StrengthFlags::TestAtWar;
+	const bool bTestPotentialEnemy = flags & StrengthFlags::TestPotentialEnemy;
+	const bool bDefensiveBonuses = flags & StrengthFlags::DefensiveBonuses;
+	const bool bCollatoral = flags & StrengthFlags::CollatoralDamage;
+	FAssertMsg(!bTestPotentialEnemy || eAttackingPlayer != NO_PLAYER, "Need to specify the attacking player to filter by enemies");
+
 	int	strSum = 0;
-	int iBaseCollateral = GC.getDefineINT("COLLATERAL_COMBAT_DAMAGE"); // K-Mod. (currently this number is "10")
-	CvPlot* pLoopPlot;
 
-	for (int iDX = -(iRange); iDX <= iRange; iDX++)
+	for (int iDX = -iRange; iDX <= iRange; iDX++)
 	{
-		for (int iDY = -(iRange); iDY <= iRange; iDY++)
+		for (int iDY = -iRange; iDY <= iRange; iDY++)
 		{
-			pLoopPlot	= plotXY(getX_INLINE(), getY_INLINE(), iDX, iDY);
+			const CvPlot* pLoopPlot = plotXY(getX_INLINE(), getY_INLINE(), iDX, iDY);
 
-			if (pLoopPlot != NULL)
+			if (pLoopPlot == NULL)
+				continue;
+
+			for(unit_iterator unitItr = pLoopPlot->beginUnits(); unitItr != pLoopPlot->endUnits(); ++unitItr)
 			{
-				pUnitNode = pLoopPlot->headUnitNode();
+				CvUnit* pLoopUnit = *unitItr;
 
-				while (pUnitNode != NULL)
+				if ((eOwner == NO_PLAYER || pLoopUnit->getOwnerINLINE() == eOwner) 
+					&& (eAttackingPlayer == NO_PLAYER || !pLoopUnit->isInvisible(GET_PLAYER(eAttackingPlayer).getTeam(), false))
+					&& (!bTestAtWar || eAttackingPlayer == NO_PLAYER || atWar(GET_PLAYER(eAttackingPlayer).getTeam(), pLoopUnit->getTeam()))
+					&& (!bTestPotentialEnemy || eAttackingPlayer == NO_PLAYER || pLoopUnit->isPotentialEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this))
+					&& (eDomainType == NO_DOMAIN || pLoopUnit->getDomainType() == eDomainType)
+					)
 				{
-					pLoopUnit = ::getUnit(pUnitNode->m_data);
-					if (pLoopUnit == NULL)
-					{
-						pLoopPlot->unitGameStateCorrections();
-						pUnitNode = nextUnitNode(pUnitNode);
-						continue;
-					}
-					else
-					{
-						pUnitNode = nextUnitNode(pUnitNode);
-					}
+					// we may want to be more sophisticated about domains
+					// somewhere we need to check to see if this is a city, if so, only land units can defend here, etc
+					strSum += pLoopUnit->currEffectiveStr(bDefensiveBonuses? this : nullptr, nullptr);
 
-					if ((eOwner == NO_PLAYER) || (pLoopUnit->getOwnerINLINE() == eOwner))
-					{
-						if ((eAttackingPlayer == NO_PLAYER) || !(pLoopUnit->isInvisible(GET_PLAYER(eAttackingPlayer).getTeam(), false)))
-						{
-							if (!bTestAtWar || (eAttackingPlayer == NO_PLAYER) || atWar(GET_PLAYER(eAttackingPlayer).getTeam(), pLoopUnit->getTeam()))
-							{
-								if (!bTestPotentialEnemy || (eAttackingPlayer == NO_PLAYER) || pLoopUnit->isPotentialEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this))
-								{
-									// we may want to be more sophisticated about domains
-									// somewhere we need to check to see if this is a city, if so, only land units can defend here, etc
-									if (eDomainType == NO_DOMAIN || (pLoopUnit->getDomainType() == eDomainType))
-									{
-										const CvPlot* pPlot = NULL;
-										
-										if (bDefensiveBonuses)
-											pPlot = this;
-
-										strSum += pLoopUnit->currEffectiveStr(pPlot, NULL);
-
-										// K-Mod assume that if we aren't counting defensive bonuses, then we should be counting collateral 
-										if (pLoopUnit->collateralDamage() > 0 && !bDefensiveBonuses) 
-										{ 
-											//int iPossibleTargets = std::min((pAttackedPlot->getNumVisibleEnemyDefenders(pLoopUnit) - 1), pLoopUnit->collateralDamageMaxUnits()); 
-											// unfortunately, we can't count how many targets there are... 
-											int iPossibleTargets = pLoopUnit->collateralDamageMaxUnits(); 
-											if (iPossibleTargets > 0) 
-											{ 
-												// collateral damage is not trivial to calculate. This estimate is pretty rough. 
-												strSum += pLoopUnit->baseCombatStr() * iBaseCollateral * pLoopUnit->collateralDamage() * iPossibleTargets / 100; 
-											} 
-										} 
-										// K-Mod end 
-									}
-								}
-							}
-						}
-					}
-					
+					// K-Mod assume that if we aren't counting defensive bonuses, then we should be counting collateral 
+					if (pLoopUnit->collateralDamage() > 0 && bCollatoral)
+					{ 
+						//int iPossibleTargets = std::min((pAttackedPlot->getNumVisibleEnemyDefenders(pLoopUnit) - 1), pLoopUnit->collateralDamageMaxUnits()); 
+						// unfortunately, we can't count how many targets there are... 
+						int iPossibleTargets = pLoopUnit->collateralDamageMaxUnits(); 
+						if (iPossibleTargets > 0) 
+						{ 
+							// collateral damage is not trivial to calculate. This estimate is pretty rough. 
+							strSum += pLoopUnit->baseCombatStr() * COLLATERAL_COMBAT_DAMAGE * pLoopUnit->collateralDamage() * iPossibleTargets / 100;
+						} 
+					} 
+					// K-Mod end
 				}
 			}
 		}

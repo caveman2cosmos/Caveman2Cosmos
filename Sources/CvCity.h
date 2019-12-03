@@ -1903,7 +1903,7 @@ protected:
 	int* m_paiUnitClassProductionModifier;
 	int* m_paiBuildingClassProductionModifier;
 	int* m_paiBonusDefenseChanges;
-	int* m_cachedPropertyNeeds;
+	mutable int* m_cachedPropertyNeeds;
 	bool* m_pabHadVicinityBonus;
 	bool* m_pabHadRawVicinityBonus;
 	mutable bool* m_pabHasVicinityBonusCached;
@@ -1952,7 +1952,8 @@ protected:
 	int m_iEspionageDefenseModifier;
 	int m_iSpecialistInsidiousness;
 	int m_iSpecialistInvestigation;
-	int m_icachedPropertyNeedsTurn;
+	// Mutable as its used in caching
+	mutable int m_icachedPropertyNeedsTurn;
 	// < M.A.D. Nukes Start >
 	int m_iMADIncoming;
 	// < M.A.D. Nukes Start >
@@ -2342,7 +2343,7 @@ public:
 	int getSpecialistInvestigation() const;
 	void changeSpecialistInvestigation(int iChange);
 
-	int getPropertyNeed(PropertyTypes eProperty);
+	int getPropertyNeed(PropertyTypes eProperty) const;
 	int getNumPropertySpawns() const;
 	PropertySpawns& getPropertySpawn(int iIndex);
 	void changePropertySpawn(int iChange, PropertyTypes eProperty, UnitClassTypes eUnitClass);
