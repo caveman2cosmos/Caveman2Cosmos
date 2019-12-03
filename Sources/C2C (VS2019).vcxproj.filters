@@ -917,5 +917,6 @@
   <ItemGroup>
     <Natvis Include="C2C.natvis" />
     <Natvis Include="std.natvis" />
+    <Natvis Include="include\sparsepp\spp.natvis" />
   </ItemGroup>
 </Project>

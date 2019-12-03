@@ -438,7 +438,7 @@ private:
 		const CvPathGenerator* get() const { return &m_pathGenerator; }
 
 	private:
-		typedef google::dense_hash_map<int, CachedEdgeCosts> CacheMapType;
+		typedef spp::sparse_hash_map<int, CachedEdgeCosts> CacheMapType;
 		CacheMapType m_pCachedNonEndTurnEdgeCosts;
 		CacheMapType m_pCachedEndTurnEdgeCosts;
 		CvPathGenerator m_pathGenerator;

@@ -6876,8 +6876,8 @@ CvSelectionGroup::CachedPathGenerator::CachedPathGenerator(CvMap* map)
 	, m_pCachedEndTurnEdgeCosts(32)
 	, m_pathGenerator(map)
 {
-	m_pCachedNonEndTurnEdgeCosts.set_empty_key(-1);
-	m_pCachedEndTurnEdgeCosts.set_empty_key(-1);
+	//m_pCachedNonEndTurnEdgeCosts.set_empty_key(-1);
+	//m_pCachedEndTurnEdgeCosts.set_empty_key(-1);
 	m_pathGenerator.Initialize(NewPathHeuristicFunc, NewPathCostFunc, NewPathValidFunc, NewPathDestValid, NewPathTurnEndValidityCheckRequired);
 }
 

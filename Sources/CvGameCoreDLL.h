@@ -57,12 +57,12 @@
 //
 // Google sparsehash
 //
-#include <sparsehash/sparse_hash_set>
-#include <sparsehash/sparse_hash_map>
-#include <sparsehash/dense_hash_set>
-#include <sparsehash/dense_hash_map>
-#include <sparsehash/template_util.h>
-#include <sparsehash/type_traits.h>
+#include <sparsepp/spp.h>
+//#include <sparsehash/sparse_hash_map>
+//#include <sparsehash/dense_hash_set>
+//#include <sparsehash/dense_hash_map>
+//#include <sparsehash/template_util.h>
+//#include <sparsehash/type_traits.h>
 
 
 #define DllExport   __declspec( dllexport ) 
