@@ -118,6 +118,7 @@ DEFINE_ENUM_FLAG_OPERATORS(ECacheAccess::flags);
 // Feature macros
 //
 // #define STRENGTH_IN_NUMBERS
+// #define TEST_BARBARIAN_CITY_SPAWN_MAPCATEGORY_CHECK
 
 //
 // Profiler

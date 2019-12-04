@@ -6021,12 +6021,9 @@ bool CvGame::isForceCivicOption(CivicOptionTypes eCivicOption) const
 {
 	for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
 	{
-		if (GC.getCivicInfo((CivicTypes)iI).getCivicOptionType() == eCivicOption)
+		if (GC.getCivicInfo((CivicTypes)iI).getCivicOptionType() == eCivicOption && isForceCivic((CivicTypes)iI))
 		{
-			if (isForceCivic((CivicTypes)iI))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
 
@@ -6036,14 +6033,12 @@ bool CvGame::isForceCivicOption(CivicOptionTypes eCivicOption) const
 
 void CvGame::changeForceCivicCount(CivicTypes eIndex, int iChange)
 {
-	bool bOldForceCivic;
-
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumCivicInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
 	if (iChange != 0)
 	{
-		bOldForceCivic = isForceCivic(eIndex);
+		bool bOldForceCivic = isForceCivic(eIndex);
 
 		m_paiForceCivicCount[eIndex] += iChange;
 		FAssert(getForceCivicCount(eIndex) >= 0);
@@ -6153,7 +6148,6 @@ void CvGame::makeReligionFounded(ReligionTypes eIndex, PlayerTypes ePlayer)
 /************************************************************************************************/	
 	}
 }
-
 
 
 int CvGame::getTechGameTurnDiscovered(TechTypes eTech) const
@@ -6411,14 +6405,13 @@ CvCity* CvGame::getHolyCity(ReligionTypes eIndex) const
 void CvGame::setHolyCity(ReligionTypes eIndex, CvCity* pNewValue, bool bAnnounce)
 {
 	CvWString szBuffer;
-	CvCity* pOldValue;
 	CvCity* pHolyCity;
 	int iI;
 
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumReligionInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
-	pOldValue = getHolyCity(eIndex);
+	CvCity* pOldValue = getHolyCity(eIndex);
 
 	if (pOldValue != pNewValue)
 	{
@@ -6989,12 +6982,10 @@ void CvGame::doDeals()
 {
 	MEMORY_TRACE_FUNCTION();
 
-	CvDeal* pLoopDeal;
-	int iLoop;
-
 	verifyDeals();
 
-	for(pLoopDeal = firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = nextDeal(&iLoop))
+	int iLoop;
+	for(CvDeal* pLoopDeal = firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = nextDeal(&iLoop))
 	{
 		pLoopDeal->doTurn();
 	}
@@ -7241,16 +7232,14 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 	for (int i = 0; i < GC.getMapINLINE().numPlotsINLINE(); ++i)
 	{
 		CvPlot* pPlot = GC.getMapINLINE().plotByIndexINLINE(i);
-		CLLNode<IDInfo>* pUnitNode;
-		CvUnit* pLoopUnit;
 
-		pUnitNode = pPlot->headUnitNode();
+		CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
 
 		while (pUnitNode != NULL)
 		{
-			pLoopUnit = ::getUnit(pUnitNode->m_data);
+			CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 
-			if (pLoopUnit!=NULL)
+			if (pLoopUnit != NULL)
 			{
 				//	Only care about evaluated NPC
 				if ( pLoopUnit->getOwnerINLINE() == ePlayer )
@@ -7729,13 +7718,13 @@ void CvGame::doGlobalWarming()
 /* Afforess	                         END                                                        */
 /************************************************************************************************/	
 							else
-					{
-						pPlot->setFeatureType(NO_FEATURE);
-						bChanged = true;
-					}
-				}
+							{
+								pPlot->setFeatureType(NO_FEATURE);
+								bChanged = true;
+							}
+						}
 						else
-				{
+						{
 							pPlot->setFeatureType(NO_FEATURE);
 							bChanged = true;
 						}
@@ -8379,19 +8368,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 {
 	MEMORY_TRACE_FUNCTION();
 
-	CvPlot* pLoopPlot;
-	CvPlot* pBestPlot;
-	int iTargetCities;
-	int iValue;
-	int iBestValue;
-	int iI;
-
-	if (getMaxCityElimination() > 0)
-	{
-		return;
-	}
-
-	if (isOption(GAMEOPTION_NO_BARBARIANS))
+	if (getMaxCityElimination() > 0 || isOption(GAMEOPTION_NO_BARBARIANS))
 	{
 		return;
 	}
@@ -8401,22 +8378,11 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 		return;
 	}
 
-	if (!bNeanderthal)
+	if (bNeanderthal ? ((int)getCurrentEra() > 0) : GC.getEraInfo(getCurrentEra()).isNoBarbCities())
 	{
-		if (GC.getEraInfo(getCurrentEra()).isNoBarbCities())
-		{
-			return;
-		}
-	}
-	else
-	{
-		if ((int)getCurrentEra() > 0)
-		{
-			return;
-		}
+		return;
 	}
 		
-
 	if (GC.getHandicapInfo(getHandicapType()).getUnownedTilesPerBarbarianCity() <= 0)
 	{
 		return;
@@ -8463,11 +8429,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 		return;
 	}
 
-	PlayerTypes ePlayer = BARBARIAN_PLAYER;
-	if (bNeanderthal)
-	{
-		ePlayer = NPC7_PLAYER;
-	}
+	PlayerTypes ePlayer = bNeanderthal ? NPC7_PLAYER : BARBARIAN_PLAYER;
 	
 	int iRand = getSorenRandNum(100, "Barb City Creation");
 	if (!isOption(GAMEOPTION_NO_BARBARIAN_CIV))
@@ -8487,8 +8449,8 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 /* REVOLUTION_MOD                          END                                                  */
 /************************************************************************************************/
 
-	iBestValue = 0;
-	pBestPlot = NULL;
+	int iBestValue = 0;
+	CvPlot* pBestPlot = NULL;
 	
 	int iTargetCitiesMultiplier = 100;
 	{
@@ -8518,7 +8480,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 
 	if(!isOption(GAMEOPTION_NO_BARBARIAN_CIV))
 	{
-		for( iI = 0; iI < GC.getMAX_PLAYERS(); iI++ )
+		for (int iI = 0; iI < GC.getMAX_PLAYERS(); iI++)
 		{
 			iOwnedPlots += GET_PLAYER((PlayerTypes)iI).getTotalLand();
 		}
@@ -8537,86 +8499,90 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 /* REVOLUTION_MOD                          END                                                  */
 /************************************************************************************************/
 
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+#ifdef TEST_BARBARIAN_CITY_SPAWN_MAPCATEGORY_CHECK
+	const MapCategoryTypes eEarth = (MapCategoryTypes)GC.getInfoTypeForString("MAPCATEGORY_EARTH");
+#endif
+	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
 
-		if (!(pLoopPlot->isWater()))
+#ifdef TEST_BARBARIAN_CITY_SPAWN_MAPCATEGORY_CHECK
+		if (!pLoopPlot->isMapCategoryType(eEarth))
+			continue;
+#endif
+		if (!pLoopPlot->isWater() && !pLoopPlot->isVisibleToCivTeam())
 		{
-			if (!(pLoopPlot->isVisibleToCivTeam()))
+			int iTargetCities = pLoopPlot->area()->getNumUnownedTiles();
+
+			if (pLoopPlot->area()->getNumCities() == pLoopPlot->area()->getCitiesPerPlayer(ePlayer))
 			{
-				iTargetCities = pLoopPlot->area()->getNumUnownedTiles();
+				iTargetCities *= 3;
+			}
+							
+			int iUnownedTilesThreshold = GC.getHandicapInfo(getHandicapType()).getUnownedTilesPerBarbarianCity();
+			
+			if (pLoopPlot->area()->getNumTiles() < (iUnownedTilesThreshold / 3))
+			{
+				iTargetCities *= iTargetCitiesMultiplier;
+				iTargetCities /= 100;
+			}				
 
-				if (pLoopPlot->area()->getNumCities() == pLoopPlot->area()->getCitiesPerPlayer(ePlayer))
-				{
-					iTargetCities *= 3;
-				}
-								
-				int iUnownedTilesThreshold = GC.getHandicapInfo(getHandicapType()).getUnownedTilesPerBarbarianCity();
-				
-				if (pLoopPlot->area()->getNumTiles() < (iUnownedTilesThreshold / 3))
-				{
-					iTargetCities *= iTargetCitiesMultiplier;
-					iTargetCities /= 100;
-				}				
+			iTargetCities /= std::max(1, iUnownedTilesThreshold);
 
-				iTargetCities /= std::max(1, iUnownedTilesThreshold);
-
-				if (pLoopPlot->area()->getCitiesPerPlayer(ePlayer) < iTargetCities)
-				{
-					iValue = GET_PLAYER(ePlayer).AI_foundValue(pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE(), GC.getDefineINT("MIN_BARBARIAN_CITY_STARTING_DISTANCE"));
-				
+			if (pLoopPlot->area()->getCitiesPerPlayer(ePlayer) < iTargetCities)
+			{
+				int iValue = GET_PLAYER(ePlayer).AI_foundValue(pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE(), GC.getDefineINT("MIN_BARBARIAN_CITY_STARTING_DISTANCE"));
+			
 /************************************************************************************************/
 /* REVOLUTION_MOD                         02/01/09                                jdog5000      */
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
 /* original code
+				if (iTargetCitiesMultiplier > 100)
+				{
+					iValue *= pLoopPlot->area()->getNumOwnedTiles();
+				}
+
+				iValue += (100 + getSorenRandNum(50, "Barb City Found"));
+				iValue /= 100;
+*/
+				if (!isOption(GAMEOPTION_NO_BARBARIAN_CIV))
+				{
+					if( pLoopPlot->area()->getNumCities() == pLoopPlot->area()->getCitiesPerPlayer(ePlayer) )
+					{
+						// Counteracts the AI_foundValue emphasis on empty areas
+						iValue *= 2;
+						iValue /= 3;
+					}
+
+					if( iTargetCitiesMultiplier > 100 )		// Either raging barbs is set or fewer barb cities than desired
+					{
+						// Emphasis on placing barb cities in populated areas
+						iValue += (iOccupiedAreaMultiplier*(pLoopPlot->area()->getNumCities() - pLoopPlot->area()->getCitiesPerPlayer(ePlayer)))/getNumCivCities();
+					}
+				}
+				else
+				{
 					if (iTargetCitiesMultiplier > 100)
 					{
 						iValue *= pLoopPlot->area()->getNumOwnedTiles();
 					}
+				}
 
-					iValue += (100 + getSorenRandNum(50, "Barb City Found"));
+				if( pLoopPlot->isBestAdjacentFound(ePlayer) ) 
+				{
+					iValue *= 120 + getSorenRandNum(30, "Barb City Found");
 					iValue /= 100;
-*/
-					if (!isOption(GAMEOPTION_NO_BARBARIAN_CIV))
-					{
-						if( pLoopPlot->area()->getNumCities() == pLoopPlot->area()->getCitiesPerPlayer(ePlayer) )
-						{
-							// Counteracts the AI_foundValue emphasis on empty areas
-							iValue *= 2;
-							iValue /= 3;
-						}
-	
-						if( iTargetCitiesMultiplier > 100 )		// Either raging barbs is set or fewer barb cities than desired
-						{
-							// Emphasis on placing barb cities in populated areas
-							iValue += (iOccupiedAreaMultiplier*(pLoopPlot->area()->getNumCities() - pLoopPlot->area()->getCitiesPerPlayer(ePlayer)))/getNumCivCities();
-						}
-					}
-					else
-					{
-						if (iTargetCitiesMultiplier > 100)
-						{
-							iValue *= pLoopPlot->area()->getNumOwnedTiles();
-						}
-					}
-
-					if( pLoopPlot->isBestAdjacentFound(ePlayer) ) 
-					{
-						iValue *= 120 + getSorenRandNum(30, "Barb City Found");
-						iValue /= 100;
-					}
+				}
 /************************************************************************************************/
 /* REVOLUTION_MOD                          END                                                  */
 /************************************************************************************************/
 
-					if (iValue > iBestValue)
-					{
-						iBestValue = iValue;
-						pBestPlot = pLoopPlot;
-					}
+				if (iValue > iBestValue)
+				{
+					iBestValue = iValue;
+					pBestPlot = pLoopPlot;
 				}
 			}
 		}

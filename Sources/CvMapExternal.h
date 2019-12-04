@@ -54,28 +54,28 @@ public:
 	DllExport bool isPlot(int iX, int iY) const;																		// Exposed to Python
 	DllExport int numPlots() const; 																								// Exposed to Python
 	int plotNum(int iX, int iY) const;																		// Exposed to Python
-	int pointXToPlotX(float fX);
+	int pointXToPlotX(float fX) const;
 	DllExport float plotXToPointX(int iX);
-	int pointYToPlotY(float fY);
+	int pointYToPlotY(float fY) const;
 	DllExport float plotYToPointY(int iY);
 	DllExport int getGridWidth() const;																		// Exposed to Python
 	DllExport int getGridHeight() const;																	// Exposed to Python
-	int getLandPlots();																					// Exposed to Python
-	int getOwnedPlots();																				// Exposed to Python
+	int getLandPlots() const;																					// Exposed to Python
+	int getOwnedPlots() const;																				// Exposed to Python
 	DllExport bool isWrapX();																							// Exposed to Python
 	DllExport bool isWrapY();																							// Exposed to Python
 	DllExport bool isWrap();
 	DllExport WorldSizeTypes getWorldSize();															// Exposed to Python
-	ClimateTypes getClimate();																	// Exposed to Python
-	SeaLevelTypes getSeaLevel();																// Exposed to Python
+	ClimateTypes getClimate() const;																	// Exposed to Python
+	SeaLevelTypes getSeaLevel() const;																// Exposed to Python
 
-	int getNumCustomMapOptions();
-	CustomMapOptionTypes getCustomMapOption(int iOption);				// Exposed to Python
+	int getNumCustomMapOptions() const;
+	CustomMapOptionTypes getCustomMapOption(int iOption) const;				// Exposed to Python
 	DllExport CvPlot* plotByIndex(int iIndex) const;											// Exposed to Python
 	DllExport CvPlot* plot(int iX, int iY) const;													// Exposed to Python
 	DllExport CvPlot* pointToPlot(float fX, float fY);
-	int getNumAreas();														// Exposed to Python
-	int getNumLandAreas();
+	int getNumAreas() const;														// Exposed to Python
+	int getNumLandAreas()const;
 	// Serialization:
 	virtual void read(FDataStreamBase* pStream);
 	virtual void write(FDataStreamBase* pStream);

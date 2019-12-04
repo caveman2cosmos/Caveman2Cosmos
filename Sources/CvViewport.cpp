@@ -589,7 +589,7 @@ int CvViewport::getMapFractalFlags()
 	return m_pMap->getMapFractalFlags();
 }
 
-bool CvViewport::findWater(CvPlot* pPlot, int iRange, bool bFreshWater)
+bool CvViewport::findWater(CvPlot* pPlot, int iRange, bool bFreshWater) const
 {
 	return m_pMap->findWater(pPlot, iRange, bFreshWater);
 }
@@ -619,7 +619,7 @@ int CvViewport::plotY(int iIndex) const
 	return iIndex/m_iXSize;
 }
 
-int CvViewport::pointXToPlotX(float fX)
+int CvViewport::pointXToPlotX(float fX) const
 {
 	float fWidth, fHeight;
 	gDLL->getEngineIFace()->GetLandscapeGameDimensions(fWidth, fHeight);
@@ -637,7 +637,7 @@ float CvViewport::plotXToPointX(int iX)
 	return ((iX * fWidth) / ((float)getGridWidth())) - (fWidth / 2.0f) + (GC.getPLOT_SIZE() / 2.0f);
 }
 
-int CvViewport::pointYToPlotY(float fY)
+int CvViewport::pointYToPlotY(float fY) const
 {
 	float fWidth, fHeight;
 	gDLL->getEngineIFace()->GetLandscapeGameDimensions(fWidth, fHeight);
@@ -685,22 +685,22 @@ int CvViewport::getGridHeight() const
 	return m_iYSize;
 }
 
-int CvViewport::getLandPlots()
+int CvViewport::getLandPlots() const
 {
 	return m_pMap->getLandPlots();
 }
 
-int CvViewport::getOwnedPlots()
+int CvViewport::getOwnedPlots() const
 {
 	return m_pMap->getOwnedPlots();
 }
 
-int CvViewport::getTopLatitude()
+int CvViewport::getTopLatitude() const
 {
 	return m_pMap->getTopLatitude();
 }
 
-int CvViewport::getBottomLatitude()
+int CvViewport::getBottomLatitude() const
 {
 	return m_pMap->getBottomLatitude();
 }
@@ -727,22 +727,22 @@ WorldSizeTypes CvViewport::getWorldSize()
 	return m_pMap->getWorldSize();
 }
 
-ClimateTypes CvViewport::getClimate()
+ClimateTypes CvViewport::getClimate() const
 {
 	return m_pMap->getClimate();
 }
 
-SeaLevelTypes CvViewport::getSeaLevel()
+SeaLevelTypes CvViewport::getSeaLevel() const
 {
 	return m_pMap->getSeaLevel();
 }
 
-int CvViewport::getNumCustomMapOptions()
+int CvViewport::getNumCustomMapOptions() const
 {
 	return m_pMap->getNumCustomMapOptions();
 }
 
-CustomMapOptionTypes CvViewport::getCustomMapOption(int iOption)
+CustomMapOptionTypes CvViewport::getCustomMapOption(int iOption) const
 {
 	return m_pMap->getCustomMapOption(iOption);
 }
@@ -762,12 +762,12 @@ CvPlot* CvViewport::pointToPlot(float fX, float fY)
 	return plot(pointXToPlotX(fX), pointYToPlotY(fY));
 }
 
-int CvViewport::getNumAreas()
+int CvViewport::getNumAreas() const
 {
 	return m_pMap->getNumAreas();
 }
 
-int CvViewport::getNumLandAreas()
+int CvViewport::getNumLandAreas() const
 {
 	return m_pMap->getNumLandAreas();
 }
