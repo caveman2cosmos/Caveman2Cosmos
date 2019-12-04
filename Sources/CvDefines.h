@@ -104,7 +104,6 @@
 #define PASSIVE_ANIMAL_TEAM										((TeamTypes)49)
 #define BARBARIAN_PLAYER									((PlayerTypes)50)
 #define BARBARIAN_TEAM										((TeamTypes)50)
-#define LAST_PLAYER									((PlayerTypes)50) // a relic that would require unnecessary reprogramming effort here and python to remove.
 #define FIRST_NPC_PLAYER									((PlayerTypes)45)
 
 // Char Count limit for edit boxes

@@ -155,10 +155,10 @@ def onBeginPlayerTurn( argsList ) :
 	#if( iPlayer == GAME.getActivePlayer() ) :
 	#	CvUtil.pyPrint("Rev - Recording civics for active player")
 	iNextPlayer = iPlayer + 1
-	while( iNextPlayer <= GC.getLAST_PLAYER() and not GC.getPlayer(iNextPlayer).isAlive() ) :
+	while( iNextPlayer <= GC.getMAX_CIV_PLAYERS() and not GC.getPlayer(iNextPlayer).isAlive() ) :
 		iNextPlayer += 1
 
-	if( iNextPlayer > GC.getLAST_PLAYER() ) :
+	if( iNextPlayer > GC.getMAX_CIV_PLAYERS() ) :
 		iNextPlayer = 0
 		while( iNextPlayer < iPlayer and not GC.getPlayer(iNextPlayer).isAlive() ) :
 			iNextPlayer += 1
@@ -169,12 +169,12 @@ def onEndPlayerTurn(argsList):
 	iGameTurn, iPlayer = argsList
 
 	iNextPlayer = iPlayer + 1
-	while iNextPlayer <= GC.getLAST_PLAYER():
+	while iNextPlayer <= GC.getMAX_CIV_PLAYERS():
 		if not GC.getPlayer(iNextPlayer).isAlive():
 			iNextPlayer += 1
 		else: break
 
-	if iNextPlayer > GC.getLAST_PLAYER():
+	if iNextPlayer > GC.getMAX_CIV_PLAYERS():
 		iGameTurn += 1
 		iNextPlayer = 0
 		while iNextPlayer < iPlayer:

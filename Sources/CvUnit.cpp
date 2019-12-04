@@ -25858,10 +25858,10 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	establishBuildups();
 }
 
-void CvUnit::setHasPromotion(PromotionTypes eIndex, PromotionApply::flags flags)
+void CvUnit::setHasPromotion(PromotionTypes eIndex, bool bNewValue, PromotionApply::flags flags)
 {
 	setHasPromotion(eIndex, 
-		flags & PromotionApply::NewValue, 
+		bNewValue, 
 		flags & PromotionApply::Free, 
 		flags & PromotionApply::Dying, 
 		flags & PromotionApply::Initial, 
@@ -26062,7 +26062,7 @@ bool CvUnit::applyUnitPromotions(const std::vector<CvUnit*>& units, int number, 
 			break;
 		for (std::vector<CvUnit*>::const_iterator itr = units.begin(); itr != units.end(); ++itr)
 		{
-			(*itr)->setHasPromotion(foundPromo, PromotionApply::NewValue | PromotionApply::Free);
+			(*itr)->setHasPromotion(foundPromo, true, PromotionApply::Free);
 		}
 		number--;
 	}

@@ -75,6 +75,8 @@ public:
 	bool AI_isCityGarrison(const CvCity* pCity) const;
 	void AI_setAsGarrison(const CvCity* pCity = NULL);
 
+	BuildingTypes getIntendedConstructBuilding() const { return m_eIntendedConstructBuilding; };
+
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
 
@@ -488,6 +490,8 @@ public:
 	int	AI_genericUnitValueTimes100(UnitValueFlags eFlags) const;
 	void AI_flushValueCache();
 
+	int scoreCityHealerNeed(const UnitCombatTypes eUnitCombat, const DomainTypes eDomain, CvCity* city) const;
+
 public:
 	virtual int AI_getPredictedHitPoints() const;
 	virtual void AI_setPredictedHitPoints(int iPredictedHitPoints);
@@ -518,7 +522,7 @@ public:
 	bool AI_InvestigatorFulfillment();
 	bool AI_establishStackSeeInvisibleCoverage();
 
-	bool generateSafePathforVulnerable(const CvPlot* pToPlot, int* piPathTurns = NULL, int iMaxTurns = MAX_INT, int iOptimizationLimit = -1, bool bDedicated = false);
+	bool generateSafePathforVulnerable(const CvPlot* pToPlot, int* piPathTurns = NULL, int iMaxTurns = MAX_INT, int iOptimizationLimit = -1, bool bDedicated = false) const;
 
 	void setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd);
 	bool isWaitingOnUnitAI(int iIndex);

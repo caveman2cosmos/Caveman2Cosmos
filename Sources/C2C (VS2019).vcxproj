@@ -373,6 +373,7 @@
     <ClInclude Include="CvPlotPaging.h" />
     <ClInclude Include="CvPython.h" />
     <ClInclude Include="EnumFlags.h" />
+    <ClInclude Include="hash.h" />
     <ClInclude Include="idinfo_iterator.h" />
     <ClInclude Include="CvMapExternal.h" />
     <ClInclude Include="CvMapInterfaceBase.h" />
@@ -417,6 +418,7 @@
     <ClInclude Include="index_iterator_base.h" />
     <ClInclude Include="logging.h" />
     <ClInclude Include="NiPoint.h" />
+    <ClInclude Include="nullptr_t.h" />
     <ClInclude Include="StackWalker.h" />
     <ClInclude Include="Stopwatch.h" />
     <ClInclude Include="wchar_utils.h" />

@@ -4091,7 +4091,7 @@ void CvUnitAI::AI_attackCityMove()
 		// AI gets a 1-tile sneak peak to compensate for lack of memory
 		if( iStepDistToTarget <= 2 || pTargetCity->isVisible(getTeam(),false) )
 		{
-			iComparePostBombard = getGroup()->AI_compareStacks(pTargetCity->plot(), true, true, true, std::min(2, iStepDistToTarget-1));
+			iComparePostBombard = getGroup()->AI_compareStacks(pTargetCity->plot(), StackCompare::CheckCanAttack | StackCompare::CheckCanMove | StackCompare::PotentialEnemy, std::min(2, iStepDistToTarget-1));
 
 			/* original BBAI code
 			int iDefenseModifier = pTargetCity->getDefenseModifier(true);
@@ -18058,41 +18058,76 @@ bool CvUnitAI::enactConstruct(CvPlot* pBestConstructPlot, CvPlot* pBestPlot, CvU
 	return false;
 }
 
+namespace {
+	struct CityConstruct
+	{
+		CityConstruct(CvPlot* plot, BuildingTypes building) : plot(plot), building(building) {}
+
+		CvPlot* plot;
+		BuildingTypes building;
+
+		operator size_t() const
+		{
+			return Cv::hash_combine(reinterpret_cast<size_t>(plot), static_cast<size_t>(building));
+		}
+
+		bool operator==(const CityConstruct& other) const
+		{
+			return plot == other.plot && building == other.building;
+		}
+	};
+	typedef stdext::hash_map<CityConstruct, CvUnitAI*> CityConstructMap;
+
+	CityConstructMap getConstructBuildings(const CvPlayer& player, const CvSelectionGroup* ignoreGroup)
+	{
+		CityConstructMap constructions;
+		for (CvPlayer::group_iterator groupItr = player.beginGroups(); groupItr != player.endGroups(); ++groupItr)
+		{
+			CvSelectionGroup* pLoopSelectionGroup = *groupItr;
+
+			if (pLoopSelectionGroup != ignoreGroup 
+				&& pLoopSelectionGroup->AI_getMissionAIType() == MISSIONAI_CONSTRUCT)
+			{
+				CvUnitAI* targetingUnit = (CvUnitAI*)pLoopSelectionGroup->getHeadUnit();
+
+				//	Have to handle the case of a group with no units.  This can occur after a force group
+				//	split due to things like revocation of open borders that forces units to be unceremoniously
+				//	moved to another plot (and ungroups them in doing so since it is possible that only a subset
+				//	of a group has to move)
+				if (targetingUnit != NULL)
+				{
+					constructions[CityConstruct(pLoopSelectionGroup->AI_getMissionAIPlot(), targetingUnit->getIntendedConstructBuilding())] = targetingUnit;
+				}
+			}
+		}
+		return constructions;
+	}
+}
+
 int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, int iDecayProbabilityRate, int iThreshold, bool assumeSameValueEverywhere, CvPlot*& pBestConstructPlot, CvPlot*& pBestPlot, CvUnitAI*& eBestTargetingUnit, BuildingTypes& eBestBuilding)
 {
 	PROFILE_FUNC();
 
-	CvCity* pLoopCity;
-	int iValue;
-	int iBestValue;
-	int iBestWeightedValue;
-	int iLoop;
-	int iI;
-	int iCount;
-	int iContructRand = 100;
-	int iConstructBelow = 100;
+	const int iContructRand = iDecayProbabilityRate == 0? 100 : GC.getGame().getSorenRandNum(100, "AI construction probability");;
+	const int iConstructBelow = 100;
 
-	if ( iDecayProbabilityRate != 0 )
-	{
-		iContructRand = GC.getGame().getSorenRandNum(100, "AI construction probability");
-	}
-
-	iBestValue = 0;
-	iBestWeightedValue = 0;
+	// Set outputs to default values
+	pBestConstructPlot = nullptr;
+	pBestPlot = nullptr;
+	eBestTargetingUnit = nullptr;
 	eBestBuilding = NO_BUILDING;
-	pBestConstructPlot = NULL;
-	pBestPlot = NULL;
-	eBestTargetingUnit = NULL;
 	
-	//	If we already has a chosen construction targeted then start with a presumption
+	int iBestValue = 0;
+	//	If we already have a chosen construction targeted then start with a presumption
 	//	we'll stick to it unless something significantly better is found
-	if ( m_eIntendedConstructBuilding != NO_BUILDING && getGroup()->AI_getMissionAIType() == MISSIONAI_CONSTRUCT )
+	if (m_eIntendedConstructBuilding != NO_BUILDING && getGroup()->AI_getMissionAIType() == MISSIONAI_CONSTRUCT)
 	{
-		pLoopCity = getGroup()->AI_getMissionAIPlot()->getPlotCity();
+		CvCity* pLoopCity = getGroup()->AI_getMissionAIPlot()->getPlotCity();
 
-		if ( pLoopCity != NULL &&
-			 canConstruct(pLoopCity->plot(), m_eIntendedConstructBuilding) &&
-			 generatePath(pLoopCity->plot(), MOVE_NO_ENEMY_TERRITORY, true) )
+		if (pLoopCity != nullptr
+			&& canConstruct(pLoopCity->plot(), m_eIntendedConstructBuilding)
+			&& generatePath(pLoopCity->plot(), MOVE_NO_ENEMY_TERRITORY, true)
+			)
 		{
 			iBestValue = (pLoopCity->AI_buildingValue(m_eIntendedConstructBuilding)*110)/100;
 			pBestPlot = getPathEndTurnPlot();
@@ -18101,45 +18136,44 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 		}
 	}
 
-	std::map<BuildingTypes,int>	possibleBuildings;
+	typedef stdext::hash_map<BuildingTypes, int> PossibleBuildingsMap;
+	PossibleBuildingsMap possibleBuildings;
 
-	for (iI = 0; iI < m_pUnitInfo->getNumBuildings(); iI++)
+	CvPlayerAI& player = GET_PLAYER(getOwnerINLINE());
+	// Determine the list of building types we could make, based on what already exists
+	for (int iI = 0; iI < m_pUnitInfo->getNumBuildings(); iI++)
 	{
-		const BuildingTypes eBuilding = (BuildingTypes)m_pUnitInfo->getBuildings(iI);
-
-		if (NO_BUILDING != eBuilding)
+		const BuildingTypes eBuilding = static_cast<BuildingTypes>(m_pUnitInfo->getBuildings(iI));
+		if (eBuilding != NO_BUILDING
+			&& player.canConstruct(eBuilding, false, false, true)
+			&& player.AI_getNumBuildingsNeeded(eBuilding, (getDomainType() == DOMAIN_SEA)) > 0)
 		{
-			if (GET_PLAYER(getOwnerINLINE()).canConstruct(eBuilding, false, false, true))
+			int iThisConstructBelow = iConstructBelow;
+			int iCount = 0;
+			CvCity* pLoopCity = nullptr;
+			for (CvPlayer::city_iterator cityItr = player.beginCities(); cityItr != player.endCities(); ++cityItr)
 			{
-				if (GET_PLAYER(getOwnerINLINE()).AI_getNumBuildingsNeeded(eBuilding, (getDomainType() == DOMAIN_SEA)) > 0)
+				pLoopCity = *cityItr;
+				if (pLoopCity->getNumBuilding(eBuilding) > 0)
 				{
-					int iThisConstructBelow = iConstructBelow;
-					iCount = 0;
+					iCount++;
 
-					for (pLoopCity = GET_PLAYER(getOwnerINLINE()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwnerINLINE()).nextCity(&iLoop))
+					if (iCount >= iMaxCount || iThisConstructBelow < iContructRand)
 					{
-						if (pLoopCity->getNumBuilding(eBuilding) > 0)
-						{
-							iCount++;
-
-							if (iCount >= iMaxCount || iThisConstructBelow < iContructRand)
-							{
-								break;
-							}
-
-							//	If we are deacying the construct probability based on existing building count...
-							if (iDecayProbabilityRate != 0)
-							{
-								iThisConstructBelow = (iThisConstructBelow * iDecayProbabilityRate) / 100;
-							}
-						}
+						break;
 					}
 
-					if (pLoopCity == NULL)
+					//	If we are decaying the construct probability based on existing building count...
+					if (iDecayProbabilityRate != 0)
 					{
-						possibleBuildings[eBuilding] = 0;
+						iThisConstructBelow = (iThisConstructBelow * iDecayProbabilityRate) / 100;
 					}
 				}
+			}
+
+			if (pLoopCity == nullptr)
+			{
+				possibleBuildings[eBuilding] = 0;
 			}
 		}
 	}
@@ -18149,95 +18183,93 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 		return 0;
 	}
 
-	CvReachablePlotSet	plotSet(getGroup(), MOVE_NO_ENEMY_TERRITORY, MAX_INT);
+	CityConstructMap constructions = getConstructBuildings(player, getGroup());
+	CvReachablePlotSet plotSet(getGroup(), MOVE_NO_ENEMY_TERRITORY, MAX_INT);
 
-	for (pLoopCity = GET_PLAYER(getOwnerINLINE()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwnerINLINE()).nextCity(&iLoop))
+	int iBestWeightedValue = 0;
+
+	for(CvPlayer::city_iterator cityItr = player.beginCities(); cityItr != player.endCities(); ++cityItr)
 	{
+		CvCity* pLoopCity = *cityItr;
 		//if (AI_plotValid(pLoopCity->plot()) && pLoopCity->area() == area())
-		if (plotSet.find(pLoopCity->plot()) != plotSet.end())
-		{
-			for(std::map<BuildingTypes,int>::iterator itr = possibleBuildings.begin(); itr != possibleBuildings.end(); ++itr)
-			{
-				if (!(pLoopCity->plot()->isVisibleEnemyUnit(this)))	//	Koshling - this line is questionable
-				{
-					//	Check some other unit hasn't already got this city targeted to construct this building
-					CvUnitAI*	targetingUnit = AI_cityConstructionTargeted(pLoopCity, itr->first, getGroup());
-					bool bValid;
+		if (plotSet.find(pLoopCity->plot()) == plotSet.end())
+			continue;
+		if (pLoopCity->plot()->isVisibleEnemyUnit(this)) // Koshling - this line is questionable
+			continue;
 
-					//	If we're a better choice due to being already inside our own territory
-					if ( targetingUnit != NULL &&
-						 targetingUnit->plot()->getOwnerINLINE() != getOwnerINLINE() &&
-						 plot()->getOwnerINLINE() == getOwnerINLINE() &&
-						 generatePath(pLoopCity->plot(), MOVE_OUR_TERRITORY, true))
+		for (PossibleBuildingsMap::iterator itr = possibleBuildings.begin(); itr != possibleBuildings.end(); ++itr)
+		{
+			const BuildingTypes buildingType = itr->first;
+
+			if (player.getBuildingClassCount((BuildingClassTypes)GC.getBuildingInfo(buildingType).getBuildingClassType()) >= iMaxSingleBuildingCount)
+				continue;
+
+			// Check some other unit hasn't already got this city targeted to construct this building
+			CityConstructMap::const_iterator foundUnit = constructions.find(CityConstruct(pLoopCity->plot(), buildingType));
+			CvUnitAI* targetingUnit = foundUnit == constructions.end() ? NULL : foundUnit->second;
+				// AI_cityConstructionTargeted(pLoopCity, buildingType, getGroup());
+
+			const bool betterThanCurrentUnit = 
+				targetingUnit == nullptr ||
+				(
+					targetingUnit->plot()->getOwnerINLINE() != getOwnerINLINE()
+					&& plot()->getOwnerINLINE() == getOwnerINLINE()
+					&& generatePath(pLoopCity->plot(), MOVE_OUR_TERRITORY, true)
+				);
+				
+			// If we're a better choice due to being already inside our own territory
+			// TODO:	How about we just use straight line distance instead? 
+			//			Although it would probably be rare for targetingUnit to not be null so this check we be
+			//			done infrequently.
+			if (betterThanCurrentUnit
+				&& canConstruct(pLoopCity->plot(), buildingType)
+				)
+			{
+				PROFILE("CvUnitAI::getBestConstructValue.Pathing");
+
+				int iPathTurns;
+				if (generatePath(pLoopCity->plot(), MOVE_NO_ENEMY_TERRITORY, true, &iPathTurns))
+				{
+					//	When evaluating whether a hero unit should instead go and produce a building
+					//	we want to avoid expensive calculations for every city, when in practise the kinds
+					//	of things heroes can build have global effects and thus basically the same value
+					//	everywhere that they have any value (note that this is a heuristic assumption that is true CURRENTLY,
+					//	but may need to be revisited)
+					//	Koshling - also extended this to subdued animals for performance reasons - generally for all cities
+					//	and animal buiding CAN be built in this will be a good approximation
+					int iValue = 0;
+					if (assumeSameValueEverywhere && itr->second > 0)
 					{
-						bValid = true;
+						iValue = itr->second;
 					}
 					else
 					{
-						bValid = (targetingUnit == NULL);
+						iValue = pLoopCity->AI_buildingValue(buildingType);
+
+						itr->second = iValue;
 					}
 
-					if ( bValid )
+					//	Weight by ease of reaching and population slightly in the case of same-everywhere asserted
+					//	builds
+					int iWeightedValue = (iValue * 5) / (4 + iPathTurns);
+
+					if (assumeSameValueEverywhere)
 					{
-						PROFILE("CvUnitAI::getBestConstructValue.Valuation");
+						iWeightedValue = (iWeightedValue*(5+pLoopCity->getPopulation()))/10;
+					}
+					else
+					{
+						iWeightedValue = iValue;
+					}
 
-						if (GET_PLAYER(getOwnerINLINE()).getBuildingClassCount((BuildingClassTypes)GC.getBuildingInfo(itr->first).getBuildingClassType()) < iMaxSingleBuildingCount)
-						{
-							if (canConstruct(pLoopCity->plot(), itr->first))
-							{
-								PROFILE("CvUnitAI::getBestConstructValue.Pathing");
-
-								int iPathTurns;
-
-								if (generatePath(pLoopCity->plot(), MOVE_NO_ENEMY_TERRITORY, true, &iPathTurns))
-								{
-									//	When evaluating whether a hero unit should instead go and produce a building
-									//	we want to avoid expensive calculations for every city, when in practise the kinds
-									//	of things heroes can build have global effects and thus basically the same value
-									//	everywhere that they have any value (note that this is a heuristic assumption that is true CURRENTLY,
-									//	but may need to be revisited)
-									//	Koshling - also extended this to subdued animals for performance reasons - generally for all cities
-									//	and animal buiding CAN be built in this will be a good approximation
-									if ( assumeSameValueEverywhere && itr->second > 0 )
-									{
-										iValue = itr->second;
-									}
-									else
-									{
-										iValue = pLoopCity->AI_buildingValue(itr->first);
-
-										itr->second = iValue;
-									}
-
-									//	Weight by ease of reaching and population slightly in the case of same-everywhere asserted
-									//	builds
-									int iWeightedValue = (iValue*5)/(4 + iPathTurns);
-									
-									if ( assumeSameValueEverywhere )
-									{
-										iWeightedValue = (iWeightedValue*(5+pLoopCity->getPopulation()))/10;
-									}
-									else
-									{
-										iWeightedValue = iValue;
-									}
-
-									if ((iValue > iThreshold) && (iWeightedValue > iBestWeightedValue))
-									{
-										iBestValue = iValue;
-										iBestWeightedValue = iWeightedValue;
-										pBestPlot = getPathEndTurnPlot();
-										pBestConstructPlot = pLoopCity->plot();
-										eBestBuilding = itr->first;
-										eBestTargetingUnit = targetingUnit;
-									}
-								}
-							}
-						}
-						else
-						{
-							break;
-						}
+					if ((iValue > iThreshold) && (iWeightedValue > iBestWeightedValue))
+					{
+						iBestValue = iValue;
+						iBestWeightedValue = iWeightedValue;
+						pBestPlot = getPathEndTurnPlot();
+						pBestConstructPlot = pLoopCity->plot();
+						eBestBuilding = buildingType;
+						eBestTargetingUnit = targetingUnit;
 					}
 				}
 			}
@@ -21118,7 +21150,7 @@ bool CvUnitAI::AI_goToTargetCity(int iFlags, int iMaxPathTurns, CvCity* pTargetC
 							}
 							else
 							{
-								int iStackRatio = getGroup()->AI_compareStacks(pPathPlot, true);
+								int iStackRatio = getGroup()->AI_compareStacks(pPathPlot, StackCompare::PotentialEnemy);
 
 								//	If we won, but with low expected gain odds it might still be worthwhile
 								//	to break the bottleneck - renormalize by the ratio of starting stack
@@ -21389,7 +21421,7 @@ bool CvUnitAI::AI_bombardCity()
 			int iMin = GC.getBBAI_SKIP_BOMBARD_MIN_STACK_RATIO(); 
 			int iBombardTurns = getGroup()->getBombardTurns(pBombardCity); 
 			int iThreshold = (iBase * (100 - iAttackOdds) + (1 + iBombardTurns/2) * iMin * iAttackOdds) / (100 + (iBombardTurns/2) * iAttackOdds); 
-			int iComparison = getGroup()->AI_compareStacks(pBombardCity->plot(), true, true, true);
+			int iComparison = getGroup()->AI_compareStacks(pBombardCity->plot(), StackCompare::CheckCanAttack | StackCompare::CheckCanMove | StackCompare::PotentialEnemy);
 
 			if (iComparison > iThreshold && (pBombardCity->isDirectAttackable() || canIgnoreNoEntryLevel())) 
 			{ 
@@ -21418,7 +21450,7 @@ bool CvUnitAI::AI_bombardCity()
 			if ( pTargetPlot != NULL )
 			{
 				// do not bombard forts with no defenders
-				int iDefenderStrength = pTargetPlot->AI_sumStrength(NO_PLAYER, getOwnerINLINE(), DOMAIN_LAND, /*bDefensiveBonuses*/ true, /*bTestAtWar*/ true, false);
+				int iDefenderStrength = pTargetPlot->AI_sumStrength(NO_PLAYER, getOwnerINLINE(), DOMAIN_LAND, StrengthFlags::DefensiveBonuses | StrengthFlags::TestAtWar);
 				if (iDefenderStrength == 0)
 				{
 					return false;
@@ -31255,7 +31287,7 @@ bool CvUnitAI::AI_stackAttackCity(int iRange, int iPowerThreshold, bool bFollow)
 					)
 				)
 			{
-				int iValue = getGroup()->AI_compareStacks(pLoopPlot, /*bPotentialEnemy*/ true, /*bCheckCanAttack*/ true, /*bCheckCanMove*/ true);
+				int iValue = getGroup()->AI_compareStacks(pLoopPlot, StackCompare::CheckCanAttack | StackCompare::CheckCanMove | StackCompare::PotentialEnemy);
 
 				if (iValue >= iPowerThreshold 
 					&& iValue > iBestValue)
@@ -35434,24 +35466,126 @@ bool CvUnitAI::AI_fulfillImmediateHealerNeed(CvPlot* pPlot)
 	return false;
 }
 
+namespace {
+	struct CityNeedScore
+	{
+		CityNeedScore(CvCity* city = nullptr, int score = 0) : city(city), score(score) {}
+		CvCity* city;
+		int score;
+		bool operator<(const CityNeedScore& other) const { return score < other.score; }
+	};
+
+	bool canSafePathTo(const CvUnitAI* unit, const CityNeedScore& cityScore)
+	{
+		int iPathTurns = 0;
+		return unit->generateSafePathforVulnerable(cityScore.city->plot(), &iPathTurns, MAX_INT, -1, false);
+	}
+
+	template < class ScoringFn_ >
+	CityNeedScore calculateCityScore(ScoringFn_ scoreFn, const int currentPlotBoost, const CvUnit* unit, CvCity* const& city)
+	{
+		int score = scoreFn(unit, city);
+		if (score > 0)
+		{
+			if (!unit->atPlot(city->plot()))
+			{
+				// Has to be > 0 because we aren't on the same plot...
+				const int dist = stepDistance(unit->plot()->getX_INLINE(), unit->plot()->getY_INLINE(), city->plot()->getX_INLINE(), city->plot()->getY_INLINE());
+				score /= dist * dist;
+			}
+			else
+			{
+				score *= currentPlotBoost;
+			}
+		}
+		return CityNeedScore(city, score);
+	}
+
+	template < class ScoringFn_ >
+	CvCity* findBestCity(const CvUnitAI* unit, ScoringFn_ scoreFn, const int currentPlotBoost = 2)
+	{
+		const CvPlayer& player = GET_PLAYER(unit->getOwner());
+		std::vector<CityNeedScore> scores;
+		scores.reserve(player.getNumCities());
+
+		// Calculate scores
+		for (CvPlayer::city_iterator itr = player.beginCities(); itr != player.endCities(); ++itr)
+		{
+			scores.push_back(calculateCityScore<ScoringFn_>(scoreFn, currentPlotBoost, unit, *itr));
+		}
+		// The std::transform doesn't work because of the forwarding problem (https://www.boost.org/doc/libs/1_66_0/libs/bind/doc/html/bind.html#bind.limitations).
+		//std::transform(player.beginCities(), player.endCities(), std::back_inserter(scores), boost::bind(calculateCityScore<ScoringFn_>, scoreFn, currentPlotBoost, unit, _1));
+
+		// Sort biggest to smallest scores
+		std::sort(scores.rbegin(), scores.rend());
+
+		// Find the first city we can path to safely
+		std::vector<CityNeedScore>::iterator foundItr = std::find_if(scores.begin(), scores.end(), boost::bind(canSafePathTo, unit, _1));
+
+		if (foundItr != scores.end())
+		{
+			return foundItr->city;
+		}
+		return nullptr;
+	}
+};
+
+int CvUnitAI::scoreCityHealerNeed(const UnitCombatTypes eUnitCombat, const DomainTypes eDomain, CvCity* city) const
+{
+	const CvPlayer& player = GET_PLAYER(getOwner());
+	if (city->area() != area() || !AI_plotValid(city->plot()))
+		return 0;
+
+	CvPlot* pLoopPlot = city->plot();
+	int score = 0;
+	if (pLoopPlot != NULL && pLoopPlot->getArea() == getArea())
+	{
+		int unsupportedUnits = pLoopPlot->getUnitCombatsUnsupportedByHealer(getOwner(), eUnitCombat, eDomain);
+
+		//if (!atPlot(pLoopPlot) && unsupportedUnits > 0)
+		//{
+		//	const int dist = stepDistance(plot()->getX_INLINE(), plot()->getY_INLINE(), city->plot()->getX_INLINE(), city->plot()->getY_INLINE());
+		//	iValue = unsupportedUnits - dist / 10;
+		//}
+		//else
+		if (!atPlot(pLoopPlot))
+		{
+			score = unsupportedUnits;
+		}
+		else if (unsupportedUnits > 0)
+		{
+			score = unsupportedUnits + getNumHealSupportTotal();
+		}
+		else
+		{
+			int healersOnPlot = pLoopPlot->plotCount(PUF_isHealUnitCombatType, eUnitCombat, eDomain, NULL, getOwner());
+			score = std::min(healersOnPlot, getNumHealSupportTotal());
+		}
+	}
+	// Scale up (fairly arbitrarily) so that the distance factor that is applied will have the 
+	// appropriate effect (not overwhelming the base score, nor having no effect)
+	return score * 10;
+}
+
 bool CvUnitAI::AI_fulfillCityHealerNeed(CvPlot* pPlot)
 {
+	const UnitCombatTypes eUnitCombat = getBestHealingType();
+	if (eUnitCombat == NO_UNITCOMBAT)
+	{
+		return false;
+	}
+	const DomainTypes eDomain = getDomainType();
+
+#if 0
+	const PlayerTypes ePlayer = getOwner();
 	CvPlot* pLoopPlot;
 	CvPlot* pBestPlot = NULL;
 	CvPlot* endTurnPlot = NULL;
 	int iBestValue = 0;
 	int iPathTurns = 0;
-	PlayerTypes ePlayer = getOwner();
-	UnitCombatTypes eUnitCombat = getBestHealingType();
 	int iValue = 0;
-	DomainTypes eDomain = getDomainType();
 	CvCity* pLoopCity;
 	int iLoop = 0;
-
-	if (eUnitCombat == NO_UNITCOMBAT)
-	{
-		return false;
-	}
 
 	for (pLoopCity = GET_PLAYER(getOwnerINLINE()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwnerINLINE()).nextCity(&iLoop))
 	{
@@ -35496,10 +35630,17 @@ bool CvUnitAI::AI_fulfillCityHealerNeed(CvPlot* pPlot)
 	{
 		if (!atPlot(pBestPlot))
 		{
-			if (generateSafePathforVulnerable(pBestPlot, &iPathTurns, MAX_INT, -1, true))
+#endif
+	CvCity* bestCity = findBestCity(this, boost::bind(&CvUnitAI::scoreCityHealerNeed, this, eUnitCombat, eDomain, _2));
+	if (bestCity != nullptr)
+	{
+		if (!atPlot(bestCity->plot()))
+		{
+			int iPathTurns = 0;			
+			if (generateSafePathforVulnerable(bestCity->plot(), &iPathTurns, MAX_INT, -1, true))
 			{
-				endTurnPlot = getPathEndTurnPlot();
-				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX_INLINE(), endTurnPlot->getY_INLINE(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_HEAL_SUPPORT, pBestPlot);
+				const CvPlot* endTurnPlot = getPathEndTurnPlot();
+				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX_INLINE(), endTurnPlot->getY_INLINE(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_HEAL_SUPPORT, bestCity->plot());
 			}
 			else
 			{
@@ -35509,140 +35650,213 @@ bool CvUnitAI::AI_fulfillCityHealerNeed(CvPlot* pPlot)
 		}
 		else
 		{
-			return getGroup()->pushMissionInternal(MISSION_SKIP, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), 0, false, false, MISSIONAI_HEAL_SUPPORT, pBestPlot);
+			return getGroup()->pushMissionInternal(MISSION_SKIP, bestCity->plot()->getX_INLINE(), bestCity->plot()->getY_INLINE(), 0, false, false, MISSIONAI_HEAL_SUPPORT, bestCity->plot());
 		}
 	}
 
 	return false;
 }
 
-bool CvUnitAI::AI_fulfillPropertyControlNeed()
-{
-	CvCity* pLoopCity;
-	CvCity* pBestCity = NULL;
-	CvPlot* pLoopPlot;
-	CvPlot* pBestPlot = NULL;
-	CvPlot* endTurnPlot = NULL;
-	int iBestValue = 0;
-	int iPathTurns = 0;
-	PlayerTypes ePlayer = getOwner();
-	int iLoop = 0;
-	int iValue = 0;
-	int iNeed = 0;
-	int iProvides = 0;
-	int iResponders = 0;
-	int iExisting = 0;
-	int iMin = GC.getDefineINT("C2C_MIN_PROP_CONTROL");
-	bool bAtPlot = false;
-	CvPropertyManipulators* propertyManipulators = GC.getUnitInfo(getUnitType()).getPropertyManipulators();
-
-	// loop through property types and get the difference between the target the AI wants the city to be at vs where it currently is
-	for (int iI = 0; iI < GC.getNumPropertyInfos(); iI++)
+namespace {
+	struct PropertyAmount
 	{
-		PropertyTypes eProperty = (PropertyTypes)iI;
-		iProvides = 0;
+		PropertyAmount(PropertyTypes prop = NO_PROPERTY, int score = 0) : prop(prop), score(score) { }
 
-		//TBNote: in figuring out how much the unit provides, it's not as important as determining that it simply does provide.  Therefore, promotions and unitcombat values on the unit aren't checked (unless this already by nature does but I think it's only asking for base unit info)
-		if ( propertyManipulators != NULL )
-		{
-			for(int iJ = 0; iJ < propertyManipulators->getNumSources(); iJ++)
-			{
-				CvPropertySource* pSource = propertyManipulators->getSource(iJ);
+		PropertyTypes prop;
+		int score;
+	};
 
-				if ( pSource->getType() == PROPERTYSOURCE_CONSTANT && pSource->getObjectType() == GAMEOBJECT_CITY && pSource->getProperty() == eProperty )
-				{
-					iProvides += ((CvPropertySourceConstant*)pSource)->getAmountPerTurn(getGameObjectConst());
-				}
-			}
-		}
-		iProvides *= (GC.getPropertyInfo(eProperty).getAIWeight()/50);
-		if (iProvides < 1)
-		{
-			continue;
-		}
+	int scorePropertyControlNeed(const std::vector<PropertyAmount>& propertyScores, const CvUnit* unit, CvCity* city)
+	{
+		const CvPlayer& player = GET_PLAYER(unit->getOwner());
+		static const int C2C_MIN_PROP_CONTROL = GC.getDefineINT("C2C_MIN_PROP_CONTROL");
 
-		for (pLoopCity = GET_PLAYER(ePlayer).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(ePlayer).nextCity(&iLoop))
+		int maxScore = 0;
+
+		// loop through property types and get the difference between the target the AI wants the city to be at vs where it currently is
+		for (std::vector<PropertyAmount>::const_iterator propItr = propertyScores.begin(); propItr != propertyScores.end(); ++propItr)
 		{
-			pLoopPlot = pLoopCity->plot();
-			bAtPlot = atPlot(pLoopPlot);
+			const PropertyAmount& propertyAmount = *propItr;
 
 			//int iCurrentValue = pLoopCity->getPropertiesConst()->getValueByProperty(eProperty);
-			iNeed = pLoopCity->getPropertyNeed(eProperty); 
-			iValue = 0;
-			if ( iI==0 )
-			{
-				iMin += ( pLoopCity->plot()->getNumCriminals() * 2 );//local criminals demand more attention even if crime is under full control
-			}
-			if (iNeed < 0 && !bAtPlot)
+			int iValue = city->getPropertyNeed(propertyAmount.prop);
+			if (iValue < 0 && !unit->atPlot(city->plot()))
 			{
 				continue;
 			}
 
-			iValue = iNeed;
-		
-			iResponders = GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_PROPERTY_CONTROL_RESPONSE, NULL, 0);
-			iExisting = GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_PROPERTY_CONTROL_MAINTAIN, NULL, 0);
-			
-			if (iResponders > 0 && iValue > 0)
+			int minRequired = C2C_MIN_PROP_CONTROL;
+			// prop 0 == crime
+			// TODO: better way to drive this behavior that doesn't hard code property index. 
+			// First question is why this extra calculation is needed at all? The property value and delta should always be enough to work out what is needed, by definition.
+			if (propertyAmount.prop == 0)
+			{
+				minRequired += city->plot()->getNumCriminals() * 2; //local criminals demand more attention even if crime is under full control
+			}
+
+			// This gets ALL property control missions, not just for this property...
+			// TODO: filter by property somehow...
+			int iResponders = player.AI_plotTargetMissionAIs(city->plot(), MISSIONAI_PROPERTY_CONTROL_RESPONSE, NULL, 0);
+			int iExisting = player.AI_plotTargetMissionAIs(city->plot(), MISSIONAI_PROPERTY_CONTROL_MAINTAIN, NULL, 0);
+
+			if (iResponders > 0)
 			{
 				iValue /= iResponders;
 			}
-			//generate path seems horribly bugged if an enemy exists inside the city. Cannot assume a false to that means they can't move in!
-			iPathTurns = 0;
-			
-			if (bAtPlot)
+
+			// generate path seems horribly bugged if an enemy exists inside the city. Cannot assume a false to that means they can't move in!
+			if (unit->atPlot(city->plot()))
 			{
-				if (iExisting <= iMin)
+				if (iExisting <= minRequired)
 				{
 					iValue += 1000;
 				}
-				iValue = std::max(100,iValue);//Ensure that SOME value is established to staying put.
+				iValue = std::max(100, iValue); //Ensure that SOME value is established to staying put.
 			}
 
-			if (iValue > 0)
-			{
-				if (!bAtPlot)
-				{
-					if (generateSafePathforVulnerable(pLoopPlot, &iPathTurns, MAX_INT, -1, false))
-					{
-						if (iPathTurns > 0)
-						{
-							iValue /= iPathTurns;
-						}
-					}
-					else
-					{
-						iValue = 0;
-					}
-				}
-				else
-				{
-					iValue *= 2;
-				}
-			}
+			maxScore = std::max(maxScore, iValue);
+		}
+		return maxScore;
+	}
+};
 
-			if (iValue < 0)
-			{
-				iValue = 0;
-			}
+bool CvUnitAI::AI_fulfillPropertyControlNeed()
+{
+	const CvPropertyManipulators* propertyManipulators = GC.getUnitInfo(getUnitType()).getPropertyManipulators();
+	// If it doesn't change properties then it can't fulfill control needs
+	if (propertyManipulators == nullptr)
+	{
+		return false;
+	}
 
-			if (iValue > iBestValue)
+	std::vector<PropertyAmount> propertyScores;
+	propertyScores.reserve(GC.getNumPropertyInfos());
+
+	// loop through property types and get the difference between the target the AI wants the city to be at vs where it currently is
+	for (int propIdx = 0; propIdx < GC.getNumPropertyInfos(); propIdx++)
+	{
+		const PropertyTypes eProperty = static_cast<PropertyTypes>(propIdx);
+
+		int score = 0;
+		//TBNote: in figuring out how much the unit provides, it's not as important as determining that it simply does provide.  Therefore, promotions and unitcombat values on the unit aren't checked (unless this already by nature does but I think it's only asking for base unit info)
+		for (int sourceIdx = 0; sourceIdx < propertyManipulators->getNumSources(); sourceIdx++)
+		{
+			const CvPropertySource* pSource = propertyManipulators->getSource(sourceIdx);
+
+			if (pSource->getType() == PROPERTYSOURCE_CONSTANT && pSource->getObjectType() == GAMEOBJECT_CITY && pSource->getProperty() == eProperty)
 			{
-				iBestValue = iValue;
-				pBestPlot = pLoopPlot;
-				pBestCity = pLoopCity;
+				score += ((CvPropertySourceConstant*)pSource)->getAmountPerTurn(getGameObjectConst());
 			}
+		}
+
+		score *= GC.getPropertyInfo(eProperty).getAIWeight() / 50;
+		if (score >= 1)
+		{
+			propertyScores.push_back(PropertyAmount(eProperty, score));
 		}
 	}
 
-	if (pBestPlot != NULL)
+
+#if 0
+	const int C2C_MIN_PROP_CONTROL = GC.getDefineINT("C2C_MIN_PROP_CONTROL");
+	const CvPlayer& player = GET_PLAYER(getOwner());
+
+	std::vector<CityNeedScore> scores;
+	scores.reserve(player.getNumCities());
+
+	const CvPlot* ourPlot = plot();
+
+	// Score cities with straight line distance
+	// Select first that is navigable
+	for (CvPlayer::city_iterator citrItr = player.beginCities(); citrItr != player.endCities(); ++citrItr)
 	{
-		if (!atPlot(pBestPlot))
+		CvCity* pLoopCity = *citrItr;
+		CvPlot* pLoopPlot = pLoopCity->plot();
+		bool bAtPlot = atPlot(pLoopPlot);
+
+		int maxScore = 0;
+		// loop through property types and get the difference between the target the AI wants the city to be at vs where it currently is
+		for (std::vector<PropertyAmount>::const_iterator propItr = propertyScores.begin(); propItr != propertyScores.end(); ++propItr)
 		{
-			if (generateSafePathforVulnerable(pBestPlot, &iPathTurns, MAX_INT, -1, true))
+			const PropertyAmount& propertyAmount = *propItr;
+
+			//int iCurrentValue = pLoopCity->getPropertiesConst()->getValueByProperty(eProperty);
+			int iValue = pLoopCity->getPropertyNeed(propertyAmount.prop);
+			if (iValue < 0 && !bAtPlot)
 			{
-				endTurnPlot = getPathEndTurnPlot();
-				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX_INLINE(), endTurnPlot->getY_INLINE(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_PROPERTY_CONTROL_RESPONSE, pBestPlot);
+				continue;
+			}
+
+			int minRequired = C2C_MIN_PROP_CONTROL;
+			// prop 0 == crime
+			// TODO: better way to drive this behavior that doesn't hard code property index. 
+			// First question is why this extra calculation is needed at all? The property value and delta should always be enough to work out what is needed, by definition.
+			if (propertyAmount.prop == 0) 
+			{
+				minRequired += ( pLoopCity->plot()->getNumCriminals() * 2 ); //local criminals demand more attention even if crime is under full control
+			}
+
+			// This gets ALL property control missions, not just for this property...
+			// TODO: filter by property somehow...
+			int iResponders = player.AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_PROPERTY_CONTROL_RESPONSE, NULL, 0);
+			int iExisting = player.AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_PROPERTY_CONTROL_MAINTAIN, NULL, 0);
+			
+			if (iResponders > 0)
+			{
+				iValue /= iResponders;
+			}
+
+			// generate path seems horribly bugged if an enemy exists inside the city. Cannot assume a false to that means they can't move in!
+			if (bAtPlot)
+			{
+				if (iExisting <= minRequired)
+				{
+					iValue += 1000;
+				}
+				iValue = std::max(100, iValue); //Ensure that SOME value is established to staying put.
+			}
+
+			maxScore = std::max(maxScore, iValue);
+		}
+
+		if(maxScore > 0)
+		{
+			if (!bAtPlot)
+			{
+				// Has to be > 0 because we aren't on the same plot...
+				const int dist = stepDistance(pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE(), ourPlot->getX_INLINE(), ourPlot->getY_INLINE());
+				maxScore /= dist * dist;
+			}
+			else
+			{
+				maxScore *= 2;
+			}
+			scores.push_back(CityNeedScore(pLoopCity, maxScore));
+		}
+	}
+
+	// Sort biggest to smallest scores
+	std::sort(scores.rbegin(), scores.rend());
+
+	// Find the first city we can path to safely
+	std::vector<CityNeedScore>::iterator foundItr = std::find_if(scores.begin(), scores.end(), boost::bind(canSafePathTo, this, _1));
+
+	if (foundItr != scores.end())
+	{
+		CityNeedScore& cityScore = *foundItr;
+		CvPlot* pBestPlot = cityScore.city->plot();
+#endif
+
+	CvCity* bestCity = findBestCity(this, boost::bind(scorePropertyControlNeed, propertyScores, _1, _2));
+	if(bestCity != nullptr)
+	{
+		if (!atPlot(bestCity->plot()))
+		{
+			int iPathTurns = 0;
+			if (generateSafePathforVulnerable(bestCity->plot(), &iPathTurns, MAX_INT, -1, true))
+			{
+				const CvPlot* endTurnPlot = getPathEndTurnPlot();
+				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX_INLINE(), endTurnPlot->getY_INLINE(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_PROPERTY_CONTROL_RESPONSE, bestCity->plot());
 			}
 			else
 			{
@@ -35652,7 +35866,7 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 		}
 		else
 		{
-			return getGroup()->pushMissionInternal(MISSION_SKIP, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), 0, false, false, MISSIONAI_PROPERTY_CONTROL_MAINTAIN, pBestPlot);
+			return getGroup()->pushMissionInternal(MISSION_SKIP, bestCity->plot()->getX_INLINE(), bestCity->plot()->getY_INLINE(), 0, false, false, MISSIONAI_PROPERTY_CONTROL_MAINTAIN, bestCity->plot());
 		}
 	}
 
@@ -36416,7 +36630,7 @@ bool CvUnitAI::AI_establishStackSeeInvisibleCoverage()
 }
 //figure out how to ensure that they don't order more than needed!  I think that's built in to the contract broker system but keep an eye out for trouble.
 
-bool CvUnitAI::generateSafePathforVulnerable(const CvPlot* pToPlot, int* piPathTurns, int iMaxTurns, int iOptimizationLimit, bool bDedicated)
+bool CvUnitAI::generateSafePathforVulnerable(const CvPlot* pToPlot, int* piPathTurns, int iMaxTurns, int iOptimizationLimit, bool bDedicated) const
 {
 	CvUnitSelectionCriteria criteria;
 

@@ -14,17 +14,37 @@ class CvPlot;
 class CvArea;
 class FAStarNode;
 
-typedef struct
+struct CachedEdgeCosts
 {
-	int		iCost;
-	int		iBestMoveCost;
-	int		iWorstMoveCost;
-	int		iToPlotNodeCost;
+	CachedEdgeCosts(int iCost = 0, int iBestMoveCost = 0, int iWorstMoveCost = 0, int iToPlotNodeCost = 0)
+		: iCost(iCost)
+		, iBestMoveCost(iBestMoveCost)
+		, iWorstMoveCost(iWorstMoveCost)
+		, iToPlotNodeCost(iToPlotNodeCost)
+	{}
+
+	int iCost;
+	int iBestMoveCost;
+	int iWorstMoveCost;
+	int iToPlotNodeCost;
 #ifdef _DEBUG
 	CvPlot*	pFromPlot;
 	CvPlot*	pToPlot;
 #endif
-} edgeCosts;
+};
+
+struct StackCompare
+{
+	enum flags
+	{
+		None = 0,
+		PotentialEnemy = 1 << 0,
+		CheckCanAttack = 1 << 1,
+		CheckCanMove = 1 << 2,
+		Fast = 1 << 3
+	};
+};
+DECLARE_FLAGS(StackCompare::flags);
 
 class CvSelectionGroup
 {
@@ -290,8 +310,10 @@ public:
 	virtual int AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy, bool bForce = false, bool* bWin = NULL, int iTheshold = -1) const = 0;
 	virtual CvUnit* AI_getBestGroupAttacker(const CvPlot* pPlot, bool bPotentialEnemy, int& iUnitOdds, bool bForce = false, bool bNoBlitz = false, CvUnit** pDefender = NULL, bool bAssassinate = false, bool bSurprise = false) const = 0;
 	virtual CvUnit* AI_getBestGroupSacrifice(const CvPlot* pPlot, bool bPotentialEnemy, bool bForce = false, bool bNoBlitz = false, bool bSuprise = false) const = 0;
-	virtual int AI_compareStacks(const CvPlot* pPlot, bool bPotentialEnemy, bool bCheckCanAttack = false, bool bCheckCanMove = false, int iRange = 0) const = 0;
-	virtual int AI_sumStrength(const CvPlot* pAttackedPlot = NULL, DomainTypes eDomainType = NO_DOMAIN, bool bCheckCanAttack = false, bool bCheckCanMove = false) const = 0;
+
+	virtual int AI_compareStacks(const CvPlot* pPlot, StackCompare::flags flags = StackCompare::None, int iRange = 0) const = 0;
+	//virtual int AI_compareStacks(const CvPlot* pPlot, bool bPotentialEnemy, bool bCheckCanAttack = false, bool bCheckCanMove = false, int iRange = 0) const = 0;
+	virtual int AI_sumStrength(const CvPlot* pAttackedPlot = NULL, DomainTypes eDomainType = NO_DOMAIN, StackCompare::flags flags = StackCompare::None) const = 0;
 	virtual void AI_queueGroupAttack(int iX, int iY) = 0;
 	virtual void AI_cancelGroupAttack() = 0;
 	virtual bool AI_isGroupAttack() = 0;
@@ -402,22 +424,40 @@ protected:
 // BUG - Sentry Actions - end
 
 //	KOSHLING Mod - add path validity results cache
-public:
-	//	These have to be static due to some assumptions the game engine seems to make about
-	//	this class which prsumably relates to the comment earlier that adding to this class causes
-	//	a crash in the main engine.  This is a bit untidy, but essentially fine due to the
-	//	single threaded nature of the application and the fact that cache validity is only
-	//	required across a single path generation call, which cannot interleave
-	static CvSelectionGroup* m_pCachedMovementGroup;
-	static std::map<int,edgeCosts>* m_pCachedNonEndTurnEdgeCosts;
-	static std::map<int,edgeCosts>* m_pCachedEndTurnEdgeCosts;
-	static CvPathGenerator*	m_generator;
+private:
+	struct CachedPathGenerator
+	{
+		CachedPathGenerator(CvMap* map);
 
+		void clear();
+
+		bool HaveCachedPathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int& iResult, int& iBestMoveCost, int& iWorstMoveCost, int& iToPlotNodeCost);
+		void CachePathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int iCost, int iBestMoveCost, int iWorstMoveCost, int iToPlotNodeCost);
+
+		CvPathGenerator* get() { return &m_pathGenerator; }
+		const CvPathGenerator* get() const { return &m_pathGenerator; }
+
+	private:
+		typedef google::dense_hash_map<int, CachedEdgeCosts> CacheMapType;
+		CacheMapType m_pCachedNonEndTurnEdgeCosts;
+		CacheMapType m_pCachedEndTurnEdgeCosts;
+		CvPathGenerator m_pathGenerator;
+	};
+
+	// These have to be static due to some assumptions the game engine seems to make about
+	// this class which presumably relates to the comment earlier that adding to this class causes
+	// a crash in the main engine.  This is a bit untidy, but essentially fine due to the
+	// single threaded nature of the application and the fact that cache validity is only
+	// required across a single path generation call, which cannot interleave
+	static CvSelectionGroup* m_pCachedMovementGroup;
+	static boost::scoped_ptr<CachedPathGenerator> m_cachedPathGenerator;
+	static CachedPathGenerator& getCachedPathGenerator();
+
+public:
 	static void setGroupToCacheFor(CvSelectionGroup* group);
+
 	bool HaveCachedPathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int& iResult, int& iBestMoveCost, int& iWorstMoveCost, int &iToPlotNodeCost);
 	void CachePathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int iCost, int iBestMoveCost, int iWorstMoveCost, int iToPlotNodeCost);
-
-	
 };
 
 #endif

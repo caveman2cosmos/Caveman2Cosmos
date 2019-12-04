@@ -28,7 +28,7 @@ enum UnitValueFlags
 	UNITVALUE_FLAGS_UTILITY = 1 << 2,
 	UNITVALUE_FLAGS_ALL = UNITVALUE_FLAGS_DEFENSIVE | UNITVALUE_FLAGS_OFFENSIVE | UNITVALUE_FLAGS_UTILITY
 };
-DEFINE_ENUM_FLAG_OPERATORS(UnitValueFlags);
+DECLARE_FLAGS(UnitValueFlags);
 
 struct PromotionRequirements
 {
@@ -47,21 +47,20 @@ struct PromotionRequirements
 		ForStatus = 1 << 8
 	};
 };
-DEFINE_ENUM_FLAG_OPERATORS(PromotionRequirements::flags);
+DECLARE_FLAGS(PromotionRequirements::flags);
 
 struct PromotionApply
 {
 	enum flags
 	{
 		None = 0,
-		NewValue = 1 << 0,
-		Free = 1 << 1,
-		Dying = 1 << 2,
-		Initial = 1 << 3,
-		FromTrait = 1 << 4
+		Free = 1 << 0,
+		Dying = 1 << 1,
+		Initial = 1 << 2,
+		FromTrait = 1 << 3
 	};
 };
-DEFINE_ENUM_FLAG_OPERATORS(PromotionApply::flags);
+DECLARE_FLAGS(PromotionApply::flags);
 
 
 /************************************************************************************************/
@@ -1675,7 +1674,7 @@ public:
 	void setHasUnitCombat(UnitCombatTypes eIndex, bool bNewValue, bool bByPromo = false);
 	bool isHasPromotion(PromotionTypes eIndex) const;															// Exposed to Python
 	
-	void setHasPromotion(PromotionTypes eIndex, PromotionApply::flags flags);
+	void setHasPromotion(PromotionTypes eIndex, bool bNewValue, PromotionApply::flags flags);
 	// Deprecated, use the one above that takes enum flags instead for increased readability.
 	void setHasPromotion(PromotionTypes eIndex, bool bNewValue, bool bFree = true, bool bDying = false, bool bInitial = false, bool bFromTrait = false);									// Exposed to Python
 
