@@ -28904,11 +28904,11 @@ void CvCity::changeSpecialistInvestigation(int iChange)
 	FAssert(m_iSpecialistInvestigation >= 0);
 }
 
-int CvCity::getPropertyNeed(PropertyTypes eProperty)
+int CvCity::getPropertyNeed(PropertyTypes eProperty) const
 {
 	if (m_icachedPropertyNeedsTurn != GC.getGameINLINE().getGameTurn() || NULL == m_cachedPropertyNeeds)
 	{
-		EraTypes eEra = GET_PLAYER(getOwner()).getCurrentEra();
+		const EraTypes eEra = GET_PLAYER(getOwner()).getCurrentEra();
 
 		if (NULL == m_cachedPropertyNeeds)
 		{
@@ -28920,7 +28920,7 @@ int CvCity::getPropertyNeed(PropertyTypes eProperty)
 		}
 		for (int iI = 0; iI < GC.getNumPropertyInfos(); iI++)
 		{
-			PropertyTypes pProperty = (PropertyTypes)iI;
+			const PropertyTypes pProperty = (PropertyTypes)iI;
 			if (GC.getPropertyInfo(pProperty).getAIWeight() != 0)
 			{
 				int iCurrentValue = getPropertiesConst()->getValueByProperty(pProperty);
