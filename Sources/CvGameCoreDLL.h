@@ -294,6 +294,9 @@ namespace python = boost::python;
 #include "CvBugOptions.h"
 #include "CvPython.h"
 
+#include "SCvDebug.h"
+#include "SCvInternalGlobals.h"
+
 #include "CyGlobalContext.h"
 #include "CyArtFileMgr.h"
 #include "CyDeal.h"

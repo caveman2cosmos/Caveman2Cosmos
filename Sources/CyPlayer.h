@@ -602,6 +602,7 @@ public:
 	std::wstring getCityName(int iIndex);
 	python::tuple firstCity(bool bRev);	// returns tuple of (CyCity, iterOut)
 	python::tuple nextCity(int iterIn, bool bRev);		// returns tuple of (CyCity, iterOut)
+	CyCity* nthCity(int n, bool bRev); // shortcut for firstCity + nextCity + nextCity ...
 	int getNumCities();
 	CyCity* getCity(int iID);
 	python::tuple firstUnit(bool bRev);	// returns tuple of (CyUnit, iterOut)

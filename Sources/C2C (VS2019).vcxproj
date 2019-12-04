@@ -362,6 +362,9 @@
     <ClCompile Include="CyTeamInterface.cpp" />
     <ClCompile Include="CyUnit.cpp" />
     <ClCompile Include="CyUnitInterface1.cpp" />
+    <ClCompile Include="SCvDebug.cpp" />
+    <ClCompile Include="SCvInternalGlobals.cpp" />
+    <ClCompile Include="SCyDebug.cpp" />
     <ClCompile Include="FAssert.cpp" />
     <ClCompile Include="FDataIOStream.cpp" />
     <ClCompile Include="FDialogTemplate.cpp" />
@@ -498,6 +501,9 @@
     <ClInclude Include="CySelectionGroup.h" />
     <ClInclude Include="CyTeam.h" />
     <ClInclude Include="CyUnit.h" />
+    <ClInclude Include="SCvDebug.h" />
+    <ClInclude Include="SCvInternalGlobals.h" />
+    <ClInclude Include="SCyDebug.h" />
     <ClInclude Include="FAssert.h" />
     <ClInclude Include="FAStarNode.h" />
     <ClInclude Include="FDataIOStream.h" />

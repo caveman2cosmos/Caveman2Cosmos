@@ -581,6 +581,7 @@ public:
 	void changeFreeBonus(int /*BonusTypes*/ eIndex, int iChange);
 	int getNumBonuses(int /*BonusTypes*/ iBonus);
 	bool hasBonus(int /*BonusTypes */ iBonus);
+	bool hasVicinityBonus(int /*BonusTypes */ iBonus);
 	int getBuildingProduction(int /*BuildingTypes*/ iIndex);
 	void setBuildingProduction(int /*BuildingTypes*/ iIndex, int iNewValue);
 	void changeBuildingProduction(int /*BuildingTypes*/ iIndex, int iChange);
