@@ -6980,7 +6980,8 @@ void CvGame::doTurn()
 	gDLL->getEngineIFace()->AutoSave();
 
 #ifdef MEMTRACK
-	MemTrack::TrackListMemoryUsage();
+	//MemTrack::TrackListMemoryUsage(); // total
+	MemTrack::TrackListMemoryUsageTurnDiff(); // leaks
 #endif
 }
 

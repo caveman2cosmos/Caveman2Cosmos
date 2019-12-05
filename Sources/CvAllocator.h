@@ -6,6 +6,8 @@
 #include <new>
 #include <typeinfo>
 
+#define MEMTRACK_EXEMPT MemTrack::UntrackedScope CONCATENATE(__untracked_memory_marker_, __LINE__)
+
 namespace MemTrack
 {
 	/* ---------------------------------------- class MemStamp */
@@ -28,6 +30,8 @@ namespace MemTrack
 	void TrackStamp(void* p, const MemStamp& stamp, char const* typeName);
 	void TrackDumpBlocks();
 	void TrackListMemoryUsage();
+	void TrackListMemoryUsageTurnDiff();
+
 
 	/* ---------------------------------------- operator * (MemStamp, ptr) */
 
@@ -36,6 +40,21 @@ namespace MemTrack
 		TrackStamp(p, stamp, typeid(T).name());
 		return p;
 	}
+
+	struct UntrackedScope
+	{
+		UntrackedScope() { ++m_ref; }
+		~UntrackedScope() { --m_ref; }
+
+		static bool is_tracking_disabled() { return m_ref != 0; }
+	private:
+
+		UntrackedScope(const UntrackedScope&) {}
+		UntrackedScope& operator=(const UntrackedScope&) {}
+
+		static int m_ref;
+	};
+
 
 }    // namespace MemTrack
 
