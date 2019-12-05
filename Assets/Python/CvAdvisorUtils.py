@@ -359,32 +359,24 @@ def cityAdvise(CyCity, iPlayer):
 								g_iAdvisorNags += 1
 
 				if (iTurn + 15) % 40 == iTurnFounded % 40:
-
 					if CyCity.getPopulation() > 1 and not CyCity.countNumImprovedPlots():
-
 						CyArea = CyCity.area()
+						eBestUnit = -1
+
 						if CyCity.AI_countBestBuilds(CyArea) > 3:
-
 							iBestValue = 0
-							eBestUnit = -1
-
 							for iI in xrange(GC.getNumUnitClassInfos()):
-
 								if isLimitedUnitClass(iI): continue
 
 								eLoopUnit = GC.getCivilizationInfo(CyPlayer.getCivilizationType()).getCivilizationUnits(iI)
 								if eLoopUnit == -1: continue
 
 								if GC.getUnitInfo(eLoopUnit).getDomainType() == DomainTypes.DOMAIN_LAND:
-
 									if CyCity.canTrain(eLoopUnit, False, False, False, False):
-
 										if CyCity.getFirstUnitOrder(eLoopUnit) == -1:
-
 											iValue = CyPlayer.AI_unitValue(eLoopUnit, UnitAITypes.UNITAI_WORKER, CyArea)
 
 											if iValue > iBestValue:
-
 												iBestValue = iValue
 												eBestUnit = eLoopUnit
 
