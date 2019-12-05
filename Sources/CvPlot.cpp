@@ -10964,7 +10964,7 @@ int CvPlot::getBlockadedCount(TeamTypes eTeam) const
 		return 0;
 	}
 
-	return m_aiBlockadedCount[eTeam];
+	return std::max<int>(0, m_aiBlockadedCount[eTeam]);
 }
 
 void CvPlot::resetBlockadedCounts()
@@ -10995,8 +10995,8 @@ void CvPlot::changeBlockadedCount(TeamTypes eTeam, int iChange)
 /*                                                                                              */
 /* Bugfix                                                                                       */
 /************************************************************************************************/
-		FAssertMsg(getBlockadedCount(eTeam) >= 0, CvString::format("Blockaded count on a plot should not go lower than 0, it is now %d", getBlockadedCount(eTeam)).c_str());
-		FAssertMsg(getBlockadedCount(eTeam) == 0 || isWater(), "Non water tiles cannot have a non-zero Blockaded count");
+		FAssertMsg(m_aiBlockadedCount[eTeam] >= 0, CvString::format("Blockaded count on a plot should not go lower than 0, it is now %d", getBlockadedCount(eTeam)).c_str());
+		FAssertMsg(m_aiBlockadedCount[eTeam] == 0 || isWater(), "Non water tiles cannot have a non-zero Blockaded count");
 
 		// Hack so that never get negative blockade counts as a result of fixing issue causing
 		// rare permanent blockades.
@@ -13599,6 +13599,11 @@ void CvPlot::read(FDataStreamBase* pStream)
 	{
 		m_aiBlockadedCount = new short[cCount];
 		WRAPPER_READ_ARRAY(wrapper, "CvPlot", cCount, m_aiBlockadedCount);
+		// Hack to cleanup negative blockades
+		for (int i = 0; i < cCount; ++i)
+		{
+			m_aiBlockadedCount[i] = std::max<short>(0, m_aiBlockadedCount[i]);
+		}
 	}
 
 	SAFE_DELETE_ARRAY(m_aiRevealedOwner);
