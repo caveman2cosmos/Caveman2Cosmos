@@ -54,10 +54,24 @@
 #include <set>
 #include <fstream>
 
+//
+// Google sparsehash
+//
+#include <sparsehash/sparse_hash_set>
+#include <sparsehash/sparse_hash_map>
+#include <sparsehash/dense_hash_set>
+#include <sparsehash/dense_hash_map>
+#include <sparsehash/template_util.h>
+#include <sparsehash/type_traits.h>
+
+
 #define DllExport   __declspec( dllexport ) 
 
 #include "EnumFlags.h"
 #include "NiPoint.h"
+#include "nullptr_t.h"
+#include "hash.h"
+
 
 //
 // Basic types
@@ -112,13 +126,20 @@ struct ECacheAccess
 		ReadWrite = Read | Write
 	};
 };
-DEFINE_ENUM_FLAG_OPERATORS(ECacheAccess::flags);
+DECLARE_FLAGS(ECacheAccess::flags);
 
 //
 // Feature macros
 //
 // #define STRENGTH_IN_NUMBERS
 // #define TEST_BARBARIAN_CITY_SPAWN_MAPCATEGORY_CHECK
+
+//
+// Cache feature macros
+//
+#define PATHFINDING_CACHE
+#define PATHFINDING_VALIDITY_CACHE
+#define DISCOVERY_TECH_CACHE
 
 //
 // Profiler

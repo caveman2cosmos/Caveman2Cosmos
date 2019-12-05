@@ -355,6 +355,8 @@ void CvPathGenerator::ValidatePlotInfo(CvPathGeneratorPlotInfo* pPlotInfo)
 	}
 }
 
+bool CvPathGenerator::m_bFastMode = false;
+
 CvPathGenerator::CvPathGenerator(CvMap* pMap)
 	: m_map(pMap)
 	, m_plotInfo(new CvPathPlotInfoStore(pMap, 0))

@@ -14,7 +14,7 @@
 		<NIF>Art/Empty.nif</NIF>
 		<KFM></KFM>
 		<Button>art/Goods/goodwinechampagne.dds</Button>
-		<FontButtonIndex>96</FontButtonIndex>
+		<FontButtonIndex>71</FontButtonIndex>
 	</BonusArtInfo>
 <!-- Hit Musicals -->
 	<BonusArtInfo>
@@ -124,7 +124,7 @@
 		<NIF>Art/Empty.nif</NIF>
 		<KFM></KFM>
 		<Button>art/Goods/goodvintageredwine.dds</Button>
-		<FontButtonIndex>30</FontButtonIndex>
+		<FontButtonIndex>71</FontButtonIndex>
 	</BonusArtInfo>
 <!-- Wine - Vintage White -->
 	<BonusArtInfo>
@@ -134,7 +134,7 @@
 		<NIF>Art/Empty.nif</NIF>
 		<KFM></KFM>
 		<Button>art/Goods/goodvintagewhitewine.dds</Button>
-		<FontButtonIndex>30</FontButtonIndex>
+		<FontButtonIndex>71</FontButtonIndex>
 	</BonusArtInfo>
 <!-- Olmec Jade Figurines -->
 	<BonusArtInfo>

@@ -441,8 +441,8 @@ public:
 	
 	int AI_countDeadlockedBonuses(CvPlot* pPlot) const;
 	
-	int AI_getOurPlotStrength(CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const;
-	int AI_getEnemyPlotStrength(CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const;
+	int AI_getOurPlotStrength(const CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const;
+	int AI_getEnemyPlotStrength(const CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const;
 
 	int AI_goldToUpgradeAllUnits(int iExpThreshold = 0) const;
 

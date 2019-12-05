@@ -50,7 +50,21 @@ struct EDefenderScore
 		ClearCache = 1 << 4
 	};
 };
-DEFINE_ENUM_FLAG_OPERATORS(EDefenderScore::flags);
+DECLARE_FLAGS(EDefenderScore::flags);
+
+// Flags for evaluating plot defender strength
+struct StrengthFlags
+{
+	enum flags
+	{
+		None = 0,
+		DefensiveBonuses = 1 << 0,
+		TestAtWar = 1 << 1,
+		TestPotentialEnemy = 1 << 2,
+		CollatoralDamage = 1 << 3
+	};
+};
+DECLARE_FLAGS(StrengthFlags::flags);
 
 //	Koshling - add caching to canBuild calculations
 #define CAN_BUILD_VALUE_CACHING
@@ -119,7 +133,7 @@ struct ECvPlotGraphics
 		return static_cast<type>(1 << idx); 
 	}
 };
-DEFINE_ENUM_FLAG_OPERATORS(ECvPlotGraphics::type);
+DECLARE_FLAGS(ECvPlotGraphics::type);
 
 class CvPlot
 {
@@ -294,9 +308,8 @@ public:
 	CvUnit* getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, const CvUnit* pAttacker = NULL, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false, bool bAssassinate = false, bool bClearCache = false) const; // Exposed to Python
 	// Deprecated, use the function above
 	CvUnit* getFirstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false) const;
-	// Deprecated, use the function above
-
-	int AI_sumStrength(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, DomainTypes eDomainType = NO_DOMAIN, bool bDefensiveBonuses = true, bool bTestAtWar = false, bool bTestPotentialEnemy = false, int iRange = 0) const;
+	int AI_sumStrength(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, DomainTypes eDomainType = NO_DOMAIN, 
+		StrengthFlags::flags flags = StrengthFlags::DefensiveBonuses, int iRange = 0) const;
 	CvUnit* getSelectedUnit() const; // Exposed to Python				
 	int getUnitPower(PlayerTypes eOwner = NO_PLAYER) const; // Exposed to Python	
 	/*int getUnitNukeIntercept(PlayerTypes eOwner) const;*/

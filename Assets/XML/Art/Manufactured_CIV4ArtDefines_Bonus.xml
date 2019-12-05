@@ -34,7 +34,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodalgae.dds</Button>
-			<FontButtonIndex>199</FontButtonIndex>
+			<FontButtonIndex>188</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Aluminum Ingots -->
 		<BonusArtInfo>
@@ -44,7 +44,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodingotaluminum.dds</Button>
-			<FontButtonIndex>0</FontButtonIndex>
+			<FontButtonIndex>27</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Ammunition -->
 		<BonusArtInfo>
@@ -64,7 +64,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodandroids.dds</Button>
-			<FontButtonIndex>222</FontButtonIndex>
+			<FontButtonIndex>201</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Antigrav Generators -->
 		<BonusArtInfo>
@@ -174,7 +174,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodberlinite.dds</Button>
-			<FontButtonIndex>188</FontButtonIndex>
+			<FontButtonIndex>58</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Berries -->
 		<BonusArtInfo>
@@ -304,7 +304,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodbugs.dds</Button>
-			<FontButtonIndex>94</FontButtonIndex>
+			<FontButtonIndex>212</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Caesium Ore -->
 		<BonusArtInfo>
@@ -314,7 +314,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodcaesium.dds</Button>
-			<FontButtonIndex>130</FontButtonIndex>
+			<FontButtonIndex>58</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Calculators -->
 		<BonusArtInfo>
@@ -635,7 +635,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/gooddriedfruit.dds</Button>
-			<FontButtonIndex>38</FontButtonIndex>
+			<FontButtonIndex>158</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Dried Meat -->
 		<BonusArtInfo>
@@ -735,7 +735,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodexoskeletons.dds</Button>
-			<FontButtonIndex>81</FontButtonIndex>
+			<FontButtonIndex>139</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Feathers -->
 		<BonusArtInfo>
@@ -875,7 +875,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodfruit.dds</Button>
-			<FontButtonIndex>35</FontButtonIndex>
+			<FontButtonIndex>144</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Furniture -->
 		<BonusArtInfo>
@@ -955,7 +955,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodgraphite.dds</Button>
-			<FontButtonIndex>1</FontButtonIndex>
+			<FontButtonIndex>150</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Grass -->
 		<BonusArtInfo>
@@ -965,7 +965,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodgrass.dds</Button>
-			<FontButtonIndex>112</FontButtonIndex>
+			<FontButtonIndex>188</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Gravity Generators -->
 		<BonusArtInfo>
@@ -1105,7 +1105,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodimmunitydrugs.dds</Button>
-			<FontButtonIndex>173</FontButtonIndex>
+			<FontButtonIndex>179</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Brass Ingots -->
 		<BonusArtInfo>
@@ -1425,7 +1425,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodmicrogenerators.dds</Button>
-			<FontButtonIndex>81</FontButtonIndex>
+			<FontButtonIndex>175</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Microwave Ovens -->
 		<BonusArtInfo>
@@ -1485,7 +1485,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodnanogenerators.dds</Button>
-			<FontButtonIndex>81</FontButtonIndex>
+			<FontButtonIndex>54</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Nanotubes -->
 		<BonusArtInfo>
@@ -1635,7 +1635,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodparts.dds</Button>
-			<FontButtonIndex>82</FontButtonIndex>
+			<FontButtonIndex>222</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Pasta -->
 		<BonusArtInfo>
@@ -2035,7 +2035,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodshockwaveengines.dds</Button>
-			<FontButtonIndex>81</FontButtonIndex>
+			<FontButtonIndex>182</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Shoes -->
 		<BonusArtInfo>
@@ -2206,7 +2206,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodstannin.dds</Button>
-			<FontButtonIndex>63</FontButtonIndex>
+			<FontButtonIndex>113</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Tapestries -->
 		<BonusArtInfo>
@@ -2276,7 +2276,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodtoys.dds</Button>
-			<FontButtonIndex>199</FontButtonIndex>
+			<FontButtonIndex>215</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Transistors -->
 		<BonusArtInfo>
@@ -2346,7 +2346,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodvideogames.dds</Button>
-			<FontButtonIndex>81</FontButtonIndex>
+			<FontButtonIndex>126</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Vines -->
 		<BonusArtInfo>
@@ -2457,7 +2457,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodwareplatinum.dds</Button>
-			<FontButtonIndex>63</FontButtonIndex>
+			<FontButtonIndex>221</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Silver Wares -->
 		<BonusArtInfo>
@@ -2567,7 +2567,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodultrafuel.dds</Button>
-			<FontButtonIndex>87</FontButtonIndex>
+			<FontButtonIndex>173</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Washer Dryer -->
 		<BonusArtInfo>
@@ -2648,7 +2648,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodzinc.dds</Button>
-			<FontButtonIndex>199</FontButtonIndex>
+			<FontButtonIndex>193</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Unsorted -->
 	<!-- Hieracosphinx -->
@@ -2989,7 +2989,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Interface/Buttons/Bonus/punch_cards.dds</Button>
-			<FontButtonIndex>104</FontButtonIndex>
+			<FontButtonIndex>213</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_RARE_EARTH_MINERALS</Type>
@@ -3007,7 +3007,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Interface/Buttons/Bonus/carbon_fiber.dds</Button>
-			<FontButtonIndex>104</FontButtonIndex>
+			<FontButtonIndex>214</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CERMET</Type>
@@ -3043,7 +3043,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Interface/Buttons/Bonus/metallic_hydrogen.dds</Button>
-			<FontButtonIndex>104</FontButtonIndex>
+			<FontButtonIndex>125</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BULK_DIAMOND</Type>
@@ -3052,7 +3052,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Interface/Buttons/Bonus/bulk_diamond.dds</Button>
-			<FontButtonIndex>104</FontButtonIndex>
+			<FontButtonIndex>56</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_FULLERENE</Type>
@@ -3061,7 +3061,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Interface/Buttons/Bonus/fullerene.dds</Button>
-			<FontButtonIndex>104</FontButtonIndex>
+			<FontButtonIndex>105</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_METAL_FOAM</Type>
@@ -3151,7 +3151,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Interface/Buttons/Bonus/plasteel.dds</Button>
-			<FontButtonIndex>104</FontButtonIndex>
+			<FontButtonIndex>221</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_MARS_FRUIT</Type>
@@ -3196,7 +3196,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Interface/Buttons/Bonus/bose_einstein_condensate.dds</Button>
-			<FontButtonIndex>104</FontButtonIndex>
+			<FontButtonIndex>170</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_DEEP_SPACE_LIFEFORMS</Type>
@@ -3295,7 +3295,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Interface/Buttons/Bonus/ab_matter.dds</Button>
-			<FontButtonIndex>104</FontButtonIndex>
+			<FontButtonIndex>152</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_FEMTOBOTS</Type>
@@ -3331,7 +3331,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Interface/Buttons/Bonus/vibranium.dds</Button>
-			<FontButtonIndex>104</FontButtonIndex>
+			<FontButtonIndex>125</FontButtonIndex>
 		</BonusArtInfo>
         <BonusArtInfo>
 			<Type>ART_DEF_BONUS_DARK_MATTER</Type>
@@ -3421,7 +3421,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Interface/Buttons/Bonus/artisan_planets.dds</Button>
-			<FontButtonIndex>104</FontButtonIndex>
+			<FontButtonIndex>170</FontButtonIndex>
 		</BonusArtInfo>
         <BonusArtInfo>
 			<Type>ART_DEF_BONUS_PERSONAL_HYPERCRAFT</Type>
@@ -3484,7 +3484,7 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>art/Goods/goodglass.dds</Button>
-			<FontButtonIndex>71</FontButtonIndex>
+			<FontButtonIndex>192</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_FAKE_GEMS</Type>

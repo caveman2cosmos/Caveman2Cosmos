@@ -21,7 +21,7 @@ public:
 
 // Base class for iteration using indexed iteration functions (CvPlayer::firstCity/nextCity etc.)
 template < class Derived, class Owner, class Value >
-class index_iterator_base : public boost::iterator_facade<Derived, Value*, boost::forward_traversal_tag, Value*>
+class index_iterator_base : public boost::iterator_facade<Derived, Value*, boost::forward_traversal_tag, Value* const&>
 {
 public:
 	typedef Owner owner_type;
@@ -48,7 +48,7 @@ private:
 	{
 		return (this->m_owner == other.m_owner && this->m_curr == other.m_curr) || (this->m_curr == NULL && other.m_curr == NULL);
 	}
-	Value* dereference() const { return m_curr; }
+	Value* const& dereference() const { return m_curr; }
 
 	Derived& derived()
 	{
