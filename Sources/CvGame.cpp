@@ -8378,11 +8378,18 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 		return;
 	}
 
-	if (bNeanderthal ? ((int)getCurrentEra() > 0) : GC.getEraInfo(getCurrentEra()).isNoBarbCities())
+	if (!bNeanderthal)
+	{
+		if (GC.getEraInfo(getCurrentEra()).isNoBarbCities())
+		{
+			return;
+		}
+	}
+	else if ((int)getCurrentEra() > 0)
 	{
 		return;
 	}
-		
+
 	if (GC.getHandicapInfo(getHandicapType()).getUnownedTilesPerBarbarianCity() <= 0)
 	{
 		return;
@@ -8429,7 +8436,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 		return;
 	}
 
-	PlayerTypes ePlayer = bNeanderthal ? NPC7_PLAYER : BARBARIAN_PLAYER;
+	const PlayerTypes ePlayer = bNeanderthal ? NPC7_PLAYER : BARBARIAN_PLAYER;
 	
 	int iRand = getSorenRandNum(100, "Barb City Creation");
 	if (!isOption(GAMEOPTION_NO_BARBARIAN_CIV))
@@ -8455,7 +8462,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 	int iTargetCitiesMultiplier = 100;
 	{
 		int iTargetBarbCities = (getNumCivCities() * 5 * GC.getHandicapInfo(getHandicapType()).getBarbarianCityCreationProb()) / 100;
-		int iBarbCities = GET_PLAYER(ePlayer).getNumCities();
+		const int iBarbCities = GET_PLAYER(ePlayer).getNumCities();
 		if (iBarbCities < iTargetBarbCities)
 		{
 			iTargetCitiesMultiplier += (300 * (iTargetBarbCities - iBarbCities)) / iTargetBarbCities;

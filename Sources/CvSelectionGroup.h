@@ -34,7 +34,6 @@ public:
 	CvSelectionGroup();
 	virtual ~CvSelectionGroup();
 
-
 	DllExport void init(int iID, PlayerTypes eOwner);
 	DllExport void uninit();			
 	DllExport void reset(int iID = 0, PlayerTypes eOwner = NO_PLAYER, bool bConstructorCall = false);
@@ -174,7 +173,7 @@ public:
 	void changeMissionTimer(int iChange);
 	void updateMissionTimer(int iSteps = 0);
 
-	bool isForceUpdate();
+	bool isForceUpdate() const;
 	void setForceUpdate(bool bNewValue);
 
 	bool isMidMove() const { return m_bIsMidMove; }
@@ -194,7 +193,7 @@ public:
 	void setActivityType(ActivityTypes eNewValue, MissionTypes eSleepType = NO_MISSION);																											// Exposed to Python
 
 	AutomateTypes getAutomateType() const;																																		// Exposed to Python
-	bool isAutomated();																																									// Exposed to Python
+	bool isAutomated() const;																																									// Exposed to Python
 	void setAutomateType(AutomateTypes eNewValue);																											// Exposed to Python
 
 #ifdef USE_OLD_PATH_GENERATOR
