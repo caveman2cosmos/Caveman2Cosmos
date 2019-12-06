@@ -517,6 +517,8 @@ class CvEventManager:
 		self.GO_1_CITY_TILE_FOUNDING	= GAME.isOption(GameOptionTypes.GAMEOPTION_1_CITY_TILE_FOUNDING)
 		self.GO_START_AS_MINORS			= GAME.isOption(GameOptionTypes.GAMEOPTION_START_AS_MINORS)
 		self.GO_INFINITE_XP				= GAME.isOption(GameOptionTypes.GAMEOPTION_INFINITE_XP)
+		self.GO_NO_CITY_RAZING			= GAME.isOption(GameOptionTypes.GAMEOPTION_NO_CITY_RAZING)
+		self.GO_ONE_CITY_CHALLENGE		= GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
 
 		if bNewGame and self.GO_START_AS_MINORS:
 			for iTeam in xrange(GC.getMAX_PC_TEAMS()):
@@ -1073,31 +1075,21 @@ class CvEventManager:
 				CyCity = CyPlotW.getPlotCity()
 				iReligion = CyPlayerW.getStateReligion()
 				if iReligion != -1 and not CyCity.isHasReligion(iReligion):
-					CyCity.setHasReligion(iReligion, True, True, False)
+					CyCity.setHasReligion(iReligion, True, True, True)
 		# Warriors Of God - Fanatic
 		elif iUnitW == mapUnitType["FANATIC"]:
-			iReligion = CyPlayerW.getStateReligion()
-			if iReligion != -1:
-				CyPlotL = CyUnitL.plot()
-				if CyPlotL.isCity():
-					CyCity = CyPlotL.getPlotCity()
-					if not CyCity.isHasReligion(iReligion):
-						if not CyTeamW:
-							iTeamW = CyPlayerW.getTeam()
-							CyTeamW = GC.getTeam(iTeamW)
-						if CyTeamW.isAtWar(GC.getPlayer(CyCity.getOwner()).getTeam()):
-							NumDef = 0
-							for i in range(self.MAX_PLAYERS):
-								if i == iWinner: continue
-								CyPlayer = GC.getPlayer(i)
-								iTeam = CyPlayer.getTeam()
-								if iTeam == iTeamW: continue
-								if CyTeamW.isAtWar(iTeam):
-									NumDef += CyPlotL.getNumDefenders(i)
-									if NumDef > 1:
-										break
-							if NumDef <= 1:
-								CyCity.setHasReligion(i, False, False, False)
+			if not self.GO_ONE_CITY_CHALLENGE:
+				iReligion = CyPlayerW.getStateReligion()
+				if iReligion != -1:
+					CyPlotL = CyUnitL.plot()
+					if CyPlotL.isCity():
+						CyCity = CyPlotL.getPlotCity()
+						if not CyCity.isHasReligion(iReligion) and (self.GO_NO_CITY_RAZING or CyCity.getPopulation() > 1):
+							if not CyTeamW:
+								iTeamW = CyPlayerW.getTeam()
+								CyTeamW = GC.getTeam(iTeamW)
+							if CyTeamW.isAtWar(GC.getPlayer(CyCity.getOwner()).getTeam()) and not CyPlotL.getNumVisibleEnemyDefenders(CyUnitW):
+								CyCity.setHasReligion(iReligion, True, True, True)
 
 		aWonderTuple = self.aWonderTuple
 		if iPlayerW in aWonderTuple[4]:
