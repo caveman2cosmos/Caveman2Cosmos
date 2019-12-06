@@ -767,7 +767,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_OKAPI_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Okapi and Myth - Giraffe[NEWLINE][ICON_BULLET]Carnival and Exotic Herbavore Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Okapi and Myth - Giraffe[NEWLINE][ICON_BULLET]Carnival and Exotic Herbivore Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OKAPI_MYTH</Tag>
@@ -1191,7 +1191,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BUFFALO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Buffalo and Bull[NEWLINE][ICON_BULLET]Buffalo Herd, Exotic Herbavore Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Buffalo and Bull[NEWLINE][ICON_BULLET]Buffalo Herd, Exotic Herbivore Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUFFALO_MYTH</Tag>
@@ -1215,7 +1215,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WILDEBEEST_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Wildebeest and Antelopes[NEWLINE][ICON_BULLET]Exotic Herbavore Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Wildebeest and Antelopes[NEWLINE][ICON_BULLET]Exotic Herbivore Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WILDEBEEST_MYTH</Tag>
