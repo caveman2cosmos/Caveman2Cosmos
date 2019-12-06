@@ -754,9 +754,9 @@ CvCity* CvMap::findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eTeam, boo
 			{
 				if ((eTeam == NO_TEAM) || (GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam))
 				{
-					int iLoop;
-					for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+					for (CvPlayer::city_iterator cityItr = GET_PLAYER((PlayerTypes)iI).beginCities(); cityItr != GET_PLAYER((PlayerTypes)iI).endCities(); ++cityItr)
 					{
+						CvCity* pLoopCity = *cityItr;
 						if (!bSameArea || (pLoopCity->area() == plotINLINE(iX, iY)->area()) || (bCoastalOnly && (pLoopCity->waterArea() == plotINLINE(iX, iY)->area())))
 						{
 							if (!bCoastalOnly || pLoopCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
@@ -1437,9 +1437,9 @@ void CvMap::beforeSwitch()
 	{
 		if (GET_PLAYER((PlayerTypes)i).isAlive())
 		{
-			int iLoop;
-			for (CvUnit* pLoopUnit = GET_PLAYER((PlayerTypes)i).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER((PlayerTypes)i).nextUnit(&iLoop))
+			for (CvPlayer::unit_iterator unitItr = GET_PLAYER((PlayerTypes)i).beginUnits(); unitItr != GET_PLAYER((PlayerTypes)i).endUnits(); ++unitItr)
 			{
+				CvUnit* pLoopUnit = *unitItr;
 				if ( !pLoopUnit->isUsingDummyEntities() )
 				{
 					if (gDLL->getEntityIFace()->IsSelected(pLoopUnit->getEntity()))
@@ -1455,8 +1455,9 @@ void CvMap::beforeSwitch()
 				}
 			}
 
-			for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)i).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)i).nextCity(&iLoop))
+			for (CvPlayer::city_iterator cityItr = GET_PLAYER((PlayerTypes)i).beginCities(); cityItr != GET_PLAYER((PlayerTypes)i).endCities(); ++cityItr)
 			{
+				CvCity* pLoopCity = *cityItr;
 				if ( pLoopCity->getEntity() != NULL )
 				{
 					FAssert(pLoopCity->isInViewport());
@@ -1555,15 +1556,16 @@ void CvMap::afterSwitch()
 	{
 		if (GET_PLAYER((PlayerTypes)i).isAlive())
 		{
-			int iLoop;
-			for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)i).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)i).nextCity(&iLoop))
+			for (CvPlayer::city_iterator cityItr = GET_PLAYER((PlayerTypes)i).beginCities(); cityItr != GET_PLAYER((PlayerTypes)i).endCities(); ++cityItr)
 			{
+				CvCity* pLoopCity = *cityItr;
 				//gDLL->getEntityIFace()->createCityEntity(pLoopCity);
 				pLoopCity->setupGraphical();
 			}
 			
-			for (CvUnit* pLoopUnit = GET_PLAYER((PlayerTypes)i).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER((PlayerTypes)i).nextUnit(&iLoop))
+			for (CvPlayer::unit_iterator unitItr = GET_PLAYER((PlayerTypes)i).beginUnits(); unitItr != GET_PLAYER((PlayerTypes)i).endUnits(); ++unitItr)
 			{
+				CvUnit* pLoopUnit = *unitItr;
 				if ( !pLoopUnit->isUsingDummyEntities() )
 				{
 					gDLL->getEntityIFace()->createUnitEntity(pLoopUnit);
