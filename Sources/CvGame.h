@@ -960,7 +960,9 @@ protected:
 	void doTurn();
 	void doDeals();
 	void doSpawns(PlayerTypes ePlayer);
+#ifdef FF_GLOBAL_WARMING
 	void doGlobalWarming();
+#endif
 	void doHolyCity();
 /************************************************************************************************/
 /* RevDCM	                  Start		09/08/10                                                */

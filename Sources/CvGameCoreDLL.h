@@ -133,6 +133,7 @@ DECLARE_FLAGS(ECacheAccess::flags);
 //
 // #define STRENGTH_IN_NUMBERS
 // #define TEST_BARBARIAN_CITY_SPAWN_MAPCATEGORY_CHECK
+// #define FF_GLOBAL_WARMING
 
 //
 // Cache feature macros

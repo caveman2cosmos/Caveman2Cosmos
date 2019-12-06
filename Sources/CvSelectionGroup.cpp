@@ -2481,26 +2481,29 @@ bool CvSelectionGroup::continueMission(int iSteps)
 					{
 						pPickupPlot = pTargetUnit->plot();
 					}
-					else for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+					else
 					{
-						CvPlot* pAdjacentPlot = plotDirection(pTargetUnit->plot()->getX_INLINE(), pTargetUnit->plot()->getY_INLINE(), ((DirectionTypes)iI));
-
-						if (pAdjacentPlot != NULL)
+						for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 						{
-							if( atPlot(pAdjacentPlot) )
-							{
-								pPickupPlot = pAdjacentPlot;
-								break;
-							}
+							CvPlot* pAdjacentPlot = plotDirection(pTargetUnit->plot()->getX_INLINE(), pTargetUnit->plot()->getY_INLINE(), ((DirectionTypes)iI));
 
-							if( pAdjacentPlot->isWater() || pAdjacentPlot->isFriendlyCity(*getHeadUnit(), true) )
+							if (pAdjacentPlot != NULL)
 							{
-								if( generatePath(plot(), pAdjacentPlot, 0, true, &iPathTurns) )
+								if( atPlot(pAdjacentPlot) )
 								{
-									if( iPathTurns < iBestPathTurns )
+									pPickupPlot = pAdjacentPlot;
+									break;
+								}
+
+								if( pAdjacentPlot->isWater() || pAdjacentPlot->isFriendlyCity(*getHeadUnit(), true) )
+								{
+									if( generatePath(plot(), pAdjacentPlot, 0, true, &iPathTurns) )
 									{
-										pPickupPlot = pAdjacentPlot;
-										iBestPathTurns = iPathTurns;
+										if( iPathTurns < iBestPathTurns )
+										{
+											pPickupPlot = pAdjacentPlot;
+											iBestPathTurns = iPathTurns;
+										}
 									}
 								}
 							}

@@ -3330,12 +3330,9 @@ bool CvGame::isTeamVoteEligible(TeamTypes eTeam, VoteSourceTypes eVoteSource) co
 	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
 		CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iI);
-		if (kLoopTeam.isAlive())
+		if (kLoopTeam.isAlive() && kLoopTeam.isForceTeamVoteEligible(eVoteSource))
 		{
-			if (kLoopTeam.isForceTeamVoteEligible(eVoteSource))
-			{
-				++iCount;
-			}
+			++iCount;
 		}
 	}
 
@@ -3350,19 +3347,13 @@ bool CvGame::isTeamVoteEligible(TeamTypes eTeam, VoteSourceTypes eVoteSource) co
 		if (iI != eTeam)
 		{
 			CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iI);
-			if (kLoopTeam.isAlive())
+			if (kLoopTeam.isAlive() && !kLoopTeam.isForceTeamVoteEligible(eVoteSource) && kLoopTeam.isFullMember(eVoteSource))
 			{
-				if (!kLoopTeam.isForceTeamVoteEligible(eVoteSource))
+				const int iLoopVotes = kLoopTeam.getVotes(NO_VOTE, eVoteSource);
+				const int iVotes = kTeam.getVotes(NO_VOTE, eVoteSource);
+				if (iLoopVotes > iVotes || (iLoopVotes == iVotes && iI < eTeam))
 				{
-					if (kLoopTeam.isFullMember(eVoteSource))
-					{
-						int iLoopVotes = kLoopTeam.getVotes(NO_VOTE, eVoteSource);
-						int iVotes = kTeam.getVotes(NO_VOTE, eVoteSource);
-						if (iLoopVotes > iVotes || (iLoopVotes == iVotes && iI < eTeam))
-						{
-							iExtraEligible--;
-						}
-					}
+					iExtraEligible--;
 				}
 			}
 		}
@@ -3378,12 +3369,9 @@ int CvGame::countVote(const VoteTriggeredData& kData, PlayerVoteTypes eChoice) c
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; ++iI)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (GET_PLAYER((PlayerTypes)iI).isAlive() && getPlayerVote(((PlayerTypes)iI), kData.getID()) == eChoice)
 		{
-			if (getPlayerVote(((PlayerTypes)iI), kData.getID()) == eChoice)
-			{
-				iCount += GET_PLAYER((PlayerTypes)iI).getVotes(kData.kVoteOption.eVote, kData.eVoteSource);
-			}
+			iCount += GET_PLAYER((PlayerTypes)iI).getVotes(kData.kVoteOption.eVote, kData.eVoteSource);
 		}
 	}
 
@@ -3442,15 +3430,13 @@ int CvGame::getVoteRequired(VoteTypes eVote, VoteSourceTypes eVoteSource) const
 
 TeamTypes CvGame::getSecretaryGeneral(VoteSourceTypes eVoteSource) const
 {
-	int iI;
-
 	if (!canHaveSecretaryGeneral(eVoteSource))
 	{
 		for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
 		{
 			if (GC.getBuildingInfo((BuildingTypes)iBuilding).getVoteSourceType() == eVoteSource)
 			{
-				for (iI = 0; iI < MAX_PC_PLAYERS; ++iI)
+				for (int iI = 0; iI < MAX_PC_PLAYERS; ++iI)
 				{
 					CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
 					if (kLoopPlayer.isAlive())
@@ -3470,7 +3456,7 @@ TeamTypes CvGame::getSecretaryGeneral(VoteSourceTypes eVoteSource) const
 	}
 	else
 	{
-		for (iI = 0; iI < GC.getNumVoteInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumVoteInfos(); iI++)
 		{
 			if (GC.getVoteInfo((VoteTypes)iI).isVoteSourceType(eVoteSource))
 			{
@@ -3726,7 +3712,7 @@ int CvGame::countCorporationLevels(CorporationTypes eCorporation) const
 		CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
 		if (kLoopPlayer.isAlive())
 		{
-			iCount += GET_PLAYER((PlayerTypes)iI).getHasCorporationCount(eCorporation);
+			iCount += kLoopPlayer.getHasCorporationCount(eCorporation);
 		}
 	}
 
@@ -3740,21 +3726,22 @@ void CvGame::replaceCorporation(CorporationTypes eCorporation1, CorporationTypes
 		CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
 		if (kLoopPlayer.isAlive())
 		{
-			int iIter;
-			for (CvCity* pCity = kLoopPlayer.firstCity(&iIter); NULL != pCity; pCity = kLoopPlayer.nextCity(&iIter))
+			for (CvPlayer::city_iterator cityItr = kLoopPlayer.beginCities(); cityItr != kLoopPlayer.endCities(); ++cityItr)
 			{
-				if (pCity->isHasCorporation(eCorporation1))
+				CvCity* pLoopCity = *cityItr;
+				if (pLoopCity->isHasCorporation(eCorporation1))
 				{
-					pCity->setHasCorporation(eCorporation1, false, false, false);
-					pCity->setHasCorporation(eCorporation2, true, true);
+					pLoopCity->setHasCorporation(eCorporation1, false, false, false);
+					pLoopCity->setHasCorporation(eCorporation2, true, true);
 				}
 			}
 
-			for (CvUnit* pUnit = kLoopPlayer.firstUnit(&iIter); NULL != pUnit; pUnit = kLoopPlayer.nextUnit(&iIter))
+			for (CvPlayer::unit_iterator unitItr = kLoopPlayer.beginUnits(); unitItr != kLoopPlayer.endUnits(); ++unitItr)
 			{
-				if (pUnit->getUnitInfo().getCorporationSpreads(eCorporation1) > 0)
+				CvUnit* pLoopUnit = *unitItr;
+				if (pLoopUnit->getUnitInfo().getCorporationSpreads(eCorporation1) > 0)
 				{
-					pUnit->kill(false);
+					pLoopUnit->kill(false);
 				}
 			}
 		}
@@ -3773,11 +3760,12 @@ int CvGame::calculateReligionPercent(ReligionTypes eReligion) const
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
+		if (kLoopPlayer.isAlive())
 		{
-			int iLoop;
-			for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+			for (CvPlayer::city_iterator cityItr = kLoopPlayer.beginCities(); cityItr != kLoopPlayer.endCities(); ++cityItr)
 			{
+				CvCity* pLoopCity = *cityItr;
 				if (pLoopCity->isHasReligion(eReligion))
 				{
 					iCount += ((pLoopCity->getPopulation() + (pLoopCity->getReligionCount() / 2)) / pLoopCity->getReligionCount());
@@ -3832,7 +3820,7 @@ bool CvGame::canTrainNukes() const
 {
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iI);
+		const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iI);
 		if (kPlayer.isAlive())
 		{
 			for (int iJ = 0; iJ < GC.getNumUnitInfos(); iJ++)
@@ -3863,7 +3851,7 @@ EraTypes CvGame::getHighestEra() const
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
-			int iLoopEra = GET_PLAYER((PlayerTypes)iI).getCurrentEra();
+			const int iLoopEra = GET_PLAYER((PlayerTypes)iI).getCurrentEra();
 
 			if(iLoopEra > iHighestEra)
 			{
@@ -4671,7 +4659,7 @@ void CvGame::setAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForced)
 		gDLL->messageControlLog(szOut);
 	}
 
-	int iOldValue = getAIAutoPlay(iPlayer);
+	const int iOldValue = getAIAutoPlay(iPlayer);
 
 	if (iOldValue != iNewValue)
 	{
@@ -4703,11 +4691,7 @@ bool CvGame::isForcedAIAutoPlay(PlayerTypes iPlayer) const
 {
 	FAssert(getForcedAIAutoPlay(iPlayer) >= 0)
 
-	if(getForcedAIAutoPlay(iPlayer) > 0)
-	{
-		return true;
-	}
-	return false;
+	return (getForcedAIAutoPlay(iPlayer) > 0);
 }
 
 int CvGame::getForcedAIAutoPlay(PlayerTypes iPlayer) const
@@ -4719,10 +4703,9 @@ void CvGame::setForcedAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForce
 {
 	FAssert(iNewValue >= 0);
 
-	int iOldValue;
 	if(bForced == true)
 	{
-		iOldValue = getForcedAIAutoPlay(iPlayer);
+		const int iOldValue = getForcedAIAutoPlay(iPlayer);
 
 		if (iOldValue != iNewValue)
 		{
@@ -4736,7 +4719,7 @@ void CvGame::setForcedAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForce
 	{
 		m_iForcedAIAutoPlay[iPlayer] = 0;
 
-		iOldValue = m_iAIAutoPlay[iPlayer];
+		const int iOldValue = m_iAIAutoPlay[iPlayer];
 		
 		if(iOldValue != iNewValue)
 		{
@@ -4943,7 +4926,7 @@ bool CvGame::isValidVoteSelection(VoteSourceTypes eVoteSource, const VoteSelecti
 {
 	if (NO_PLAYER != kData.ePlayer)
 	{
-		CvPlayer& kPlayer = GET_PLAYER(kData.ePlayer);
+		const CvPlayer& kPlayer = GET_PLAYER(kData.ePlayer);
 		if (!kPlayer.isAlive() || kPlayer.isNPC() || kPlayer.isMinorCiv())
 		{
 			return false;
@@ -4952,7 +4935,7 @@ bool CvGame::isValidVoteSelection(VoteSourceTypes eVoteSource, const VoteSelecti
 
 	if (NO_PLAYER != kData.eOtherPlayer)
 	{
-		CvPlayer& kPlayer = GET_PLAYER(kData.eOtherPlayer);
+		const CvPlayer& kPlayer = GET_PLAYER(kData.eOtherPlayer);
 		if (!kPlayer.isAlive() || kPlayer.isNPC() || kPlayer.isMinorCiv())
 		{
 			return false;
@@ -6787,7 +6770,6 @@ void CvGame::doTurn()
 
 	GC.getMapINLINE().doTurn();
 
-
 	createBarbarianCities(false);
 	if (GC.getGameINLINE().isOption(GAMEOPTION_NEANDERTHAL_CITIES))
 	{
@@ -6798,18 +6780,17 @@ void CvGame::doTurn()
 
 	if (getElapsedGameTurns() > GC.getGameSpeedInfo(getGameSpeedType()).getGameTurnInfo(getStartEra()).iNumGameTurnsPerIncrement/80)
 	{
-		for (iI = MAX_PC_PLAYERS; iI < MAX_PLAYERS; iI++)
+		for (iI = FIRST_NPC_PLAYER; iI < MAX_PLAYERS; iI++)
 		{
-			PlayerTypes ePlayer = (PlayerTypes)iI;
-			if (ePlayer != NO_PLAYER && GET_PLAYER(ePlayer).isAlive() && GET_PLAYER(ePlayer).isNPC())
+			if (GET_PLAYER((PlayerTypes)iI).isAlive())
 			{
-				doSpawns(ePlayer);
+				doSpawns((PlayerTypes)iI);
 			}
 		}
 	}
-
+#ifdef FF_GLOBAL_WARMING
 	doGlobalWarming();
-
+#endif
 /************************************************************************************************/
 /* RevDCM	                  Start		09/08/10                                                */
 /*                                                                                              */
@@ -6998,12 +6979,12 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 	//GC.getGameINLINE().logMsg("Spawn thread start for %s", spawnInfo.getType());
 	plots->clear();
 	
-	TechTypes ePrereqTech = spawnInfo.getPrereqTechType();
-	TechTypes eObsoleteTech = spawnInfo.getObsoleteTechType();
-	bool bUseTechGuides = ePrereqTech != NO_TECH || eObsoleteTech != NO_TECH;
+	const TechTypes ePrereqTech = spawnInfo.getPrereqTechType();
+	const TechTypes eObsoleteTech = spawnInfo.getObsoleteTechType();
+	const bool bUseTechGuides = ePrereqTech != NO_TECH || eObsoleteTech != NO_TECH;
 	bool bAnyTeamHasPrereqTech = false;
 	//	Enables in this turn year?
-	int iTurnYear = GC.getGameINLINE().getTurnYear(GC.getGameINLINE().getGameTurn());
+	const int iTurnYear = GC.getGameINLINE().getTurnYear(GC.getGameINLINE().getGameTurn());
 	if (!bUseTechGuides)
 	{
 		if(iTurnYear < spawnInfo.getStartDate() || iTurnYear > spawnInfo.getEndDate())
@@ -7095,9 +7076,9 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 					lat = pPlot->getLatitudeRaw();
 				bValid = (lat >= spawnInfo.getMinLatitude()) && (lat <= spawnInfo.getMaxLatitude());
 				
-				int iLongitude = pPlot->getLongitudeMinutes() / 60;
-				int iMinLongitude = spawnInfo.getMinLongitude();
-				int iMaxLongitude = spawnInfo.getMaxLongitude();
+				const int iLongitude = pPlot->getLongitudeMinutes() / 60;
+				const int iMinLongitude = spawnInfo.getMinLongitude();
+				const int iMaxLongitude = spawnInfo.getMaxLongitude();
 				if (iMinLongitude <= iMaxLongitude)
 				{
 					bValid = bValid && (iLongitude >= iMinLongitude) && (iLongitude <= iMaxLongitude);
@@ -7561,6 +7542,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 	}
 }
 
+#ifdef FF_GLOBAL_WARMING
 void CvGame::doGlobalWarming()
 {//GWMod Start M.A.
 	MEMORY_TRACE_FUNCTION();
@@ -7880,7 +7862,7 @@ void CvGame::doGlobalWarming()
 		}
 	}
 }//GWMod end M.A.
-
+#endif
 
 void CvGame::doHolyCity()
 {
@@ -8155,7 +8137,6 @@ void CvGame::doHolyCityGameStart()
 			}
 		}
 	}
-
 
 	if(pb_religionCanFound)
 	{
@@ -8679,7 +8660,7 @@ namespace {
 
 		// Limit construction of barb ships based on player navies
 		// Keeps barb ship count in check in early game since generation is greatly increased for BTS 3.17
-		int iPlayerSeaUnits = countPlayerShipsInArea(area);
+		const int iPlayerSeaUnits = countPlayerShipsInArea(area);
 
 		if (area->getUnitsPerPlayer(BARBARIAN_PLAYER) > (iPlayerSeaUnits / 3 + 1))
 		{
@@ -8812,14 +8793,14 @@ void CvGame::createBarbarianUnits()
 			// it has some infrastructure
 			if (!isOption(GAMEOPTION_NO_BARBARIAN_CIV))
 			{
-				int iBarbCities = pLoopArea->getCitiesPerPlayer(BARBARIAN_PLAYER);
+				const int iBarbCities = pLoopArea->getCitiesPerPlayer(BARBARIAN_PLAYER);
 
 				// There are barbarian AND non-barbarian cities in the area
 				if(iBarbCities > 0 && pLoopArea->getNumCities() - iBarbCities > 0)
 				{
-					int iCityLoop = 0;
-					for (CvCity* pLoopCity = GET_PLAYER(BARBARIAN_PLAYER).firstCity(&iCityLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(BARBARIAN_PLAYER).nextCity(&iCityLoop))
+					for (CvPlayer::city_iterator cityItr = GET_PLAYER(BARBARIAN_PLAYER).beginCities(); cityItr != GET_PLAYER(BARBARIAN_PLAYER).endCities(); ++cityItr)
 					{
+						CvCity* pLoopCity = *cityItr;
 						if(pLoopCity->area() == pLoopArea
 							&& pLoopCity->getOriginalOwner() == BARBARIAN_PLAYER
 							&& barbarianCityShouldSpawnWorker(this, pLoopCity))
