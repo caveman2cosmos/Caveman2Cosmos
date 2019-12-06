@@ -8,7 +8,6 @@
 		<Tag>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Tag>
 		<English>Auto built building.</English>
 	</TEXT>
-
 	<TEXT>
 		<Tag>TXT_KEY_AUTOBUILD_ALUMINUM_NEAR</Tag>
 		<English>Vicinity Autobuild - Bauxite</English>
@@ -45,7 +44,6 @@
 		<Tag>TXT_KEY_AUTOBUILD_TITANIUM_NEAR</Tag>
 		<English>Vicinity Autobuild - Titanum</English>
 	</TEXT>
-
 	<TEXT>
 		<Tag>TXT_KEY_AUTOBUILD_ANIMAL_NEAR_PEDIA</Tag>
 		<English>[TAB]Auto built building. Part of the set of buildings needed to make it possible to build a domesticated animal breeder for when you have a resource but it is not in the vicinity of any of your cities.</English>
@@ -54,7 +52,6 @@
 		<Tag>TXT_KEY_AUTOBUILD_ANIMAL_NEAR_STRATEGY</Tag>
 		<English>Auto built building.</English>
 	</TEXT>
-
 	<TEXT>
 		<Tag>TXT_KEY_AUTOBUILD_CAMEL_NEAR</Tag>
 		<English>Vicinity Autobuild - Camel</English>

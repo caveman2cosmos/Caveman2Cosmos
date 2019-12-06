@@ -74,7 +74,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPERSHIP_HOVER</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Can build cities in extragalactic space, Distant Cosmos and Hyperspace[NEWLINE][ICON_BULLET]Upon settling, transforms terrain into Hyperspace</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Can build cities in extragalactic space, Distant Cosmos and Hyperspace. Upon settling transforms terrain into Hyperspace</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ATTACKSHIP</Tag>

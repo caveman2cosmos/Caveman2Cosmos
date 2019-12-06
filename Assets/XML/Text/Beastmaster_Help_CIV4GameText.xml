@@ -21,12 +21,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_HORSE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Horse Herd, Carnival, Herbivore Enclosure, Zoo and Taxidermist[NEWLINE][ICON_BULLET]May place [COLOR_HIGHLIGHT_TEXT]horse[COLOR_REVERT] resource on map</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Horse Herd, Carnival, Herbivore Enclosure, Zoo and Taxidermist, May place [COLOR_HIGHLIGHT_TEXT]Horse[COLOR_REVERT] resource on map</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Troupeau de chevaux, Carnaval, Enclos pour Herbivores, Zoo et Taxidermiste</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_DONKEY_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Donkey Herd, Carnival, Herbivore Enclosure, Zoo and Taxidermist[NEWLINE][ICON_BULLET]May place [COLOR_HIGHLIGHT_TEXT]donkey[COLOR_REVERT] resource on map</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Donkey Herd, Carnival, Herbivore Enclosure, Zoo and Taxidermist, May place [COLOR_HIGHLIGHT_TEXT]Donkey[COLOR_REVERT] resource on map</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Troupeau d'ânes, Carnaval, Enclos pour Herbivores, Zoo et Taxidermiste</French>
 	</TEXT>
 	<TEXT>

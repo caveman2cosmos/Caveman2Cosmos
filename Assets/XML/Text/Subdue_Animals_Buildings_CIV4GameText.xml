@@ -206,7 +206,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS</Tag>
-		<English>Enclosure - Exotic Herbavours</English>
+		<English>Enclosure - Exotic Herbivore</English>
 		<French>
 			<Text>Enclos - Herbivores exotiques</Text>
 			<Gender>Male</Gender>
@@ -1775,7 +1775,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_COD_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Cod[NEWLINE][ICON_BULLET]Sea and Fish Myth[NEWLINE][ICON_BULLET]Fish Pens, Coastal Fish Pens[NEWLINE][ICON_BULLET]Marine Institute</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Cod, Sea and Fish Myth, Fish Pens, Coastal Fish Pens, Marine Institute</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COD_MYTH</Tag>
@@ -1803,7 +1803,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CRAB_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Crab and Fish[NEWLINE][ICON_BULLET]Myth - Sea[NEWLINE][ICON_BULLET]Crab Nets</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Crab and Fish, Myth - Sea, Crab Nets</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_MYTH_EFFECT</Tag>
@@ -1827,7 +1827,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RAY_EAGLE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Eagle Ray[NEWLINE][ICON_BULLET]Sea and Fish Myth[NEWLINE][ICON_BULLET]Fish Pens, Coastal Fish Pens[NEWLINE][ICON_BULLET]Marine Institute</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Eagle Ray, Sea and Fish Myth, Fish Pens, Coastal Fish Pens, Marine Institute</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_EAGLE_MYTH</Tag>
@@ -1855,7 +1855,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MACKEREL_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Mackerel[NEWLINE][ICON_BULLET]Sea and Fish Myth[NEWLINE][ICON_BULLET]Fish Pens, Coastal Fish Pens[NEWLINE][ICON_BULLET]Marine Institute</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Mackerel, Sea and Fish Myth, Fish Pens, Coastal Fish Pens, Marine Institute</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MACKEREL_MYTH</Tag>
@@ -1879,7 +1879,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RAY_MANTA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Manta Ray[NEWLINE][ICON_BULLET]Sea and Fish Myth[NEWLINE][ICON_BULLET]Fish Pens, Coastal Fish Pens[NEWLINE][ICON_BULLET]Marine Institute</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Manta Ray, Sea and Fish Myth, Fish Pens, Coastal Fish Pens, Marine Institute</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_MANTA_MYTH</Tag>
@@ -1907,7 +1907,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MARLIN_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Marlin[NEWLINE][ICON_BULLET]Sea and Fish Myth[NEWLINE][ICON_BULLET]Fish Pens, Coastal Fish Pens[NEWLINE][ICON_BULLET]Marine Institute</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Marlin, Sea and Fish Myth, Fish Pens, Coastal Fish Pens, Marine Institute</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARLIN_MYTH</Tag>
@@ -1947,7 +1947,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TUNA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tuna[NEWLINE][ICON_BULLET]Sea and Fish Myth[NEWLINE][ICON_BULLET]Fish Pens, Coastal Fish Pens[NEWLINE][ICON_BULLET]Marine Institute</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tuna, Sea and Fish Myth, Fish Pens, Coastal Fish Pens, Marine Institute</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TUNA_MYTH_EFFECT</Tag>
