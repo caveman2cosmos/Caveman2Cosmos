@@ -58,8 +58,6 @@ public:
 // RevolutionDCM end
 
 	int startingPlotRange();
-	bool startingPlotWithinRange(CyPlot *pPlot, int /*PlayerTypes*/ ePlayer, int iRange, int iPass);
-
 	CyPlot* findStartingPlot(bool bRandomize);
 
 	CyCity* initCity(int x, int y);

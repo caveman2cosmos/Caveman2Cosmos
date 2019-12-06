@@ -154,7 +154,6 @@ public:
 	void addFreeUnit(UnitTypes eUnit, UnitAITypes eUnitAI = NO_UNITAI);
 
 	int startingPlotRange() const;																																									// Exposed to Python
-	bool startingPlotWithinRange(CvPlot* pPlot, PlayerTypes ePlayer, int iRange, int iPass) const;									// Exposed to Python
 	int startingPlotDistanceFactor(CvPlot* pPlot, PlayerTypes ePlayer, int iRange) const;
 	int findStartingArea() const;
 	CvPlot* findStartingPlot(bool bRandomize = false);																																									// Exposed to Python

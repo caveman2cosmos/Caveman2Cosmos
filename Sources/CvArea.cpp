@@ -50,7 +50,6 @@ CvArea::CvArea()
 	m_paiNumImprovements = NULL;
 	m_aiSpawnValidPlotCount = NULL;
 
-
 	reset(0, false, true);
 }
 
@@ -95,7 +94,6 @@ CvArea::~CvArea()
 		SAFE_DELETE_ARRAY(m_aaiNumAIUnits[i]);
 	}
 	SAFE_DELETE_ARRAY(m_aaiNumAIUnits);
-
 }
 
 
@@ -261,12 +259,9 @@ int CvArea::countCoastalLand() const
 	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
 	{
 		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
-		if (pLoopPlot->getArea() == getID())
+		if (pLoopPlot->getArea() == getID() && pLoopPlot->isCoastalLand())
 		{
-			if (pLoopPlot->isCoastalLand())
-			{
-				iCount++;
-			}
+			iCount++;
 		}
 	}
 
@@ -280,12 +275,9 @@ int CvArea::countNumUniqueBonusTypes() const
 
 	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 	{
-		if (getNumBonuses((BonusTypes)iI) > 0)
+		if (getNumBonuses((BonusTypes)iI) > 0 && GC.getBonusInfo((BonusTypes)iI).isOneArea())
 		{
-			if (GC.getBonusInfo((BonusTypes)iI).isOneArea())
-			{
-				iCount++;
-			}
+			iCount++;
 		}
 	}
 
@@ -299,20 +291,14 @@ int CvArea::countHasReligion(ReligionTypes eReligion, PlayerTypes eOwner) const
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (GET_PLAYER((PlayerTypes)iI).isAlive() && (eOwner == NO_PLAYER || iI == eOwner))
 		{
-			if ((eOwner == NO_PLAYER) || (iI == eOwner))
+			for (CvPlayer::city_iterator cityItr = GET_PLAYER((PlayerTypes)iI).beginCities(); cityItr != GET_PLAYER((PlayerTypes)iI).endCities(); ++cityItr)
 			{
-				int iLoop;
-				for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+				CvCity* pLoopCity = *cityItr;
+				if (pLoopCity->area()->getID() == getID() && pLoopCity->isHasReligion(eReligion))
 				{
-					if (pLoopCity->area()->getID() == getID())
-					{
-						if (pLoopCity->isHasReligion(eReligion))
-						{
-							iCount++;
-						}
-					}
+					iCount++;
 				}
 			}
 		}
@@ -327,20 +313,14 @@ int CvArea::countHasCorporation(CorporationTypes eCorporation, PlayerTypes eOwne
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (GET_PLAYER((PlayerTypes)iI).isAlive() && (eOwner == NO_PLAYER || iI == eOwner))
 		{
-			if ((eOwner == NO_PLAYER) || (iI == eOwner))
+			for (CvPlayer::city_iterator cityItr = GET_PLAYER((PlayerTypes)iI).beginCities(); cityItr != GET_PLAYER((PlayerTypes)iI).endCities(); ++cityItr)
 			{
-				int iLoop;
-				for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); NULL != pLoopCity; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+				CvCity* pLoopCity = *cityItr;
+				if (pLoopCity->area()->getID() == getID() && pLoopCity->isHasCorporation(eCorporation))
 				{
-					if (pLoopCity->area()->getID() == getID())
-					{
-						if (pLoopCity->isHasCorporation(eCorporation))
-						{
-							++iCount;
-						}
-					}
+					++iCount;
 				}
 			}
 		}
@@ -654,11 +634,9 @@ bool CvArea::hasBestFoundValue(PlayerTypes eIndex) const
 
 int CvArea::getBestFoundValue(PlayerTypes eIndex) const
 {
-	int iResult;
-
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
 	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
-	iResult = m_aiBestFoundValue[eIndex];
+	int iResult = m_aiBestFoundValue[eIndex];
 
 	//	Calculate on demand
 	if ( iResult == -1 )
@@ -773,11 +751,7 @@ void CvArea::setHomeArea(PlayerTypes ePlayer, CvArea* pOldHomeArea)
 
 int CvArea::getTotalAreaMaintenanceModifier(PlayerTypes ePlayer) const
 {
-	int iModifier;
-
-	iModifier = (getHomeAreaMaintenanceModifier(ePlayer) + getOtherAreaMaintenanceModifier(ePlayer) + getMaintenanceModifier(ePlayer));
-
-	return iModifier;
+	return (getHomeAreaMaintenanceModifier(ePlayer) + getOtherAreaMaintenanceModifier(ePlayer) + getMaintenanceModifier(ePlayer));
 }
 //DPII < Maintenance Modifiers >
 
@@ -797,7 +771,6 @@ int CvArea::getNumUnrevealedTiles(TeamTypes eIndex) const
 
 int CvArea::getNumRevealedFeatureTiles(TeamTypes eTeam, FeatureTypes eFeature) const
 {
-
 	if (m_iCachedTurnPlotTypeCounts != GC.getGameINLINE().getGameTurn() ||
 		m_eCachedTeamPlotTypeCounts != eTeam)
 	{
@@ -1416,9 +1389,5 @@ void CvArea::setNumValidPlotsbySpawn(SpawnTypes eSpawn, int iAmount)
 
 int CvArea::getNumValidPlotsbySpawn(SpawnTypes eSpawn) const
 {
-	if (NULL == m_aiSpawnValidPlotCount)
-	{
-		return -1;
-	}
-	return m_aiSpawnValidPlotCount[eSpawn];
+	return m_aiSpawnValidPlotCount != NULL ? m_aiSpawnValidPlotCount[eSpawn] : -1;
 }

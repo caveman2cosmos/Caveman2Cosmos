@@ -118,16 +118,6 @@ int CyPlayer::startingPlotRange()
 	return m_pPlayer ? m_pPlayer->startingPlotRange() : -1;
 }
 
-bool CyPlayer::startingPlotWithinRange(CyPlot *pPlot, int /*PlayerTypes*/ ePlayer, int iRange, int iPass)
-{
-	if (m_pPlayer && pPlot != NULL && !pPlot->isNone())
-	{
-		CvPlot *pcvPlot = pPlot->getPlot();
-		return m_pPlayer->startingPlotWithinRange(pcvPlot, (PlayerTypes)ePlayer, iRange, iPass);
-	}
-	return NULL;
-}
-
 CyPlot* CyPlayer::findStartingPlot(bool bRandomize) 
 {
 	return m_pPlayer ? new CyPlot(m_pPlayer->findStartingPlot(bRandomize)) : NULL;

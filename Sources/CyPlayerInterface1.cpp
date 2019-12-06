@@ -39,8 +39,6 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 // RevolutionDCM end
 
 		.def("startingPlotRange", &CyPlayer::startingPlotRange, "int ()")
-		.def("startingPlotWithinRange", &CyPlayer::startingPlotWithinRange, "bool (CyPlot *pPlot, int /*PlayerTypes*/ ePlayer, int iRange, int iPass)")
-
 		.def("findStartingPlot", &CyPlayer::findStartingPlot, python::return_value_policy<python::manage_new_object>(), "findStartingPlot(bool bRandomize) - Finds a starting plot for player")
 
 		.def("initCity", &CyPlayer::initCity, python::return_value_policy<python::manage_new_object>(), "initCity( plotX, plotY ) - spawns a city at x,y")
