@@ -489,7 +489,7 @@ public:
 	int	AI_genericUnitValueTimes100(UnitValueFlags eFlags) const;
 	void AI_flushValueCache();
 
-	int scoreCityHealerNeed(const UnitCombatTypes eUnitCombat, const DomainTypes eDomain, CvCity* city) const;
+	int scoreCityHealerNeed(const UnitCombatTypes eUnitCombat, const DomainTypes eDomain, const CvCity* city) const;
 
 public:
 	virtual int AI_getPredictedHitPoints() const;
