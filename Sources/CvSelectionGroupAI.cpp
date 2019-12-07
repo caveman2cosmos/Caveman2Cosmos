@@ -674,26 +674,20 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
-	CvUnit* pBestUnit;
-	int iPossibleTargets;
 	int iValue;
-	int iBestValue;
 	int iOdds;
-	int iBestOdds;
 
-	iBestValue = 0;
-	iBestOdds = 0;
-	pBestUnit = NULL;
+	int iBestValue = 0;
+	int iBestOdds = 0;
+	CvUnit* pBestUnit = NULL;
 
-	pUnitNode = headUnitNode();
+	CLLNode<IDInfo>* pUnitNode = headUnitNode();
 
 	bool bIsHuman = (pUnitNode != NULL) ? GET_PLAYER(::getUnit(pUnitNode->m_data)->getOwnerINLINE()).isHuman() : true;
 			
 	while (pUnitNode != NULL)
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
+		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 		pUnitNode = nextUnitNode(pUnitNode);
 
 		if (!pLoopUnit->isDead())
@@ -703,47 +697,23 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 				continue;
 			}
 
-			bool bCanAttack = false;
-			if (pLoopUnit->getDomainType() == DOMAIN_AIR)
+			if ((pLoopUnit->getDomainType() == DOMAIN_AIR && pLoopUnit->canAirAttack())
+				|| (pLoopUnit->canAttack() && !(bNoBlitz && pLoopUnit->isBlitz() && pLoopUnit->isMadeAttack())))
 			{
-				bCanAttack = pLoopUnit->canAirAttack();
-			}
-			else
-			{
-				bCanAttack = pLoopUnit->canAttack();
-
-				if (bCanAttack && bNoBlitz && pLoopUnit->isBlitz() && pLoopUnit->isMadeAttack())
-				{
-					bCanAttack = false;
-				}
-			}
-
-			if (bCanAttack && (!pLoopUnit->AI_getHasAttacked()|| bSuprise))
-			{
-				if (bForce || pLoopUnit->canMove())
+				if ((!pLoopUnit->AI_getHasAttacked() || bSuprise) && (bForce || pLoopUnit->canMove()))
 				{
 					CvUnit* pBestDefender = NULL;
 					if ( bForce || pLoopUnit->canMoveInto(pPlot, /*bAttack*/ true, /*bDeclareWar*/ bPotentialEnemy, false, false, false, false, &pBestDefender, true, bAssassinate, bSuprise))
 					{
 						PROFILE("AI_getBestGroupAttacker.RegularAttackOdds");
 
-						if (pBestDefender)
-						{
-							iOdds = pLoopUnit->AI_attackOddsAtPlot(pPlot, (CvUnitAI*)pBestDefender);
-						}
-						else
-						{
-							iOdds = pLoopUnit->AI_attackOdds(pPlot, bPotentialEnemy, 0, bAssassinate);
-						}
-						
-							
-						iValue = iOdds;
+						int iValue = pBestDefender ? pLoopUnit->AI_attackOddsAtPlot(pPlot, (CvUnitAI*)pBestDefender) : pLoopUnit->AI_attackOdds(pPlot, bPotentialEnemy, 0, bAssassinate);
 						FAssertMsg(iValue > 0, "iValue is expected to be greater than 0");
 	
 						if (pLoopUnit->collateralDamage() > 0)
 						{
-							iPossibleTargets = std::min((pPlot->getNumVisiblePotentialEnemyDefenders(pLoopUnit) - 1), pLoopUnit->collateralDamageMaxUnits());
-	
+							const int iPossibleTargets = std::min((pPlot->getNumVisiblePotentialEnemyDefenders(pLoopUnit) - 1), pLoopUnit->collateralDamageMaxUnits());
+
 							if (iPossibleTargets > 0)
 							{
 								iValue *= (100 + ((pLoopUnit->collateralDamage() * iPossibleTargets) / 5));
@@ -791,36 +761,19 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupSacrifice(const CvPlot* pPlot, bool b
 
 		if (!pLoopUnit->isDead())
 		{
-			bool bCanAttack = false;
-			if (pLoopUnit->getDomainType() == DOMAIN_AIR)
+			if ((pLoopUnit->getDomainType() == DOMAIN_AIR && pLoopUnit->canAirAttack())
+				|| (pLoopUnit->canAttack() && !(bNoBlitz && pLoopUnit->isBlitz() && pLoopUnit->isMadeAttack())))
 			{
-				bCanAttack = pLoopUnit->canAirAttack();
-			}
-			else
-			{
-				bCanAttack = pLoopUnit->canAttack();
-
-				if (bCanAttack && bNoBlitz && pLoopUnit->isBlitz() && pLoopUnit->isMadeAttack())
+				if (bForce || (pLoopUnit->canMove() && pLoopUnit->canMoveInto(pPlot, true)))
 				{
-					bCanAttack = false;
-				}
-			}
+					const int iValue = pLoopUnit->AI_sacrificeValue(pPlot);
+					FAssertMsg(iValue >= 0, "iValue is expected to be greater than 0");
 
-			if (bCanAttack)
-			{
-				if (bForce || pLoopUnit->canMove())
-				{
-					if (bForce || pLoopUnit->canMoveInto(pPlot, true))
+					// we want to pick the last unit of highest value, so pick the last unit with a good value
+					if (iValue > 0 && iValue >= iBestValue)
 					{
-						int iValue = pLoopUnit->AI_sacrificeValue(pPlot);
-						FAssertMsg(iValue >= 0, "iValue is expected to be greater than 0");
-
-						// we want to pick the last unit of highest value, so pick the last unit with a good value
-						if (iValue > 0 && iValue >= iBestValue)
-						{
-							iBestValue = iValue;
-							pBestUnit = pLoopUnit;
-						}
+						iBestValue = iValue;
+						pBestUnit = pLoopUnit;
 					}
 				}
 			}

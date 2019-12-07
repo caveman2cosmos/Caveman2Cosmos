@@ -293,7 +293,7 @@ public:
 
 	int findBestFoundValue() const;																																				// Exposed to Python
 
-	int upgradeAllPrice(UnitTypes eUpgradeUnit, UnitTypes eFromUnit);
+	int upgradeAllPrice(UnitTypes eUpgradeUnit, UnitTypes eFromUnit) const;
 
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD                      11/14/09                                jdog5000      */
@@ -1021,7 +1021,6 @@ public:
 	void setCulture(int iNewValue);
 	void changeCulture(int iAddValue);
 
-
 	int getGreaterCulture() const;
 	void setGreaterCulture(int iNewValue);
 	void changeGreaterCulture(int iAddValue);
@@ -1036,7 +1035,6 @@ public:
 	DllExport TeamTypes getTeam() const;																												// Exposed to Python					
 	void setTeam(TeamTypes eTeam);
 	void updateTeamType();
-
 
 	/************************************************************************************************/
 	/* REVOLUTIONDCM_MOD                         02/04/08                            Glider1        */
