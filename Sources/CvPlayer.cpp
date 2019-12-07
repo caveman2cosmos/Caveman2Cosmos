@@ -1946,12 +1946,10 @@ void CvPlayer::logMsg(char* format, ... )
 // for stripping obsolete trait bonuses
 // for complete reset, use in conjunction with addTraitBonuses
 //
-void CvPlayer::clearTraitBonuses( )
+void CvPlayer::clearTraitBonuses()
 {
-	int iI;
-
 	FAssertMsg((GC.getNumTraitInfos() > 0), "GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvPlayer::init");
-	for (iI = 0; iI < GC.getNumTraitInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 	{
 		if (hasTrait((TraitTypes)iI))
 		{
@@ -1963,12 +1961,10 @@ void CvPlayer::clearTraitBonuses( )
 //
 // for adding new trait bonuses
 //
-void CvPlayer::addTraitBonuses( )
+void CvPlayer::addTraitBonuses()
 {
-	int iI;
-
 	FAssertMsg(GC.getNumTraitInfos() > 0, "GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvPlayer::init");
-	for (iI = 0; iI < GC.getNumTraitInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 	{
 		if (hasTrait((TraitTypes)iI))
 		{
@@ -1988,7 +1984,7 @@ void CvPlayer::addTraitBonuses( )
 //
 // for changing the personality of the player
 //
-void CvPlayer::changePersonalityType( )
+void CvPlayer::changePersonalityType()
 {
 	LeaderHeadTypes eBestPersonality;
 	int iValue;
@@ -2012,7 +2008,7 @@ void CvPlayer::changePersonalityType( )
 					{
 						if (GET_PLAYER((PlayerTypes)iJ).isAlive())
 						{
-							if (GET_PLAYER((PlayerTypes)iJ).getPersonalityType() == ((LeaderHeadTypes)iI))
+							if (GET_PLAYER((PlayerTypes)iJ).getPersonalityType() == (LeaderHeadTypes)iI)
 							{
 								iValue /= 2;
 							}
@@ -5961,7 +5957,7 @@ void CvPlayer::updateTimers()
 	// if a unit was busy, perhaps it was not quite deleted yet, give it one more try
 	if (getNumSelectionGroups() > getNumUnits())
 	{
-		for (CvPlayer::plot_group_iterator plotGroupItr = beginPlotGroups(); plotGroupItr != endPlotGroups(); ++plotGroupItr)
+		for (CvPlayer::group_iterator groupItr = beginGroups(); groupItr != endGroups(); ++groupItr)
 		{
 			(*groupItr)->doDelayedDeath(); // could destroy the selection group...
 		}
@@ -8686,23 +8682,17 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 
 	if (!bValid)
 	{
-		if (GC.getTerrainInfo(pPlot->getTerrainType()).isFoundCoast())
+		if (GC.getTerrainInfo(pPlot->getTerrainType()).isFoundCoast() && pPlot->isCoastalLand())
 		{
-			if (pPlot->isCoastalLand())
-			{
-				bValid = true;
-			}
+			bValid = true;
 		}
 	}
 
 	if (!bValid)
 	{
-		if (GC.getTerrainInfo(pPlot->getTerrainType()).isFoundFreshWater())
+		if (GC.getTerrainInfo(pPlot->getTerrainType()).isFoundFreshWater() && pPlot->isFreshWater())
 		{
-			if (pPlot->isFreshWater())
-			{
-				bValid = true;
-			}
+			bValid = true;
 		}
 	}
 
@@ -8738,15 +8728,9 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 			{
 				pLoopPlot	= plotXY(pPlot->getX_INLINE(), pPlot->getY_INLINE(), iDX, iDY);
 
-				if (pLoopPlot != NULL)
+				if (pLoopPlot != NULL && pLoopPlot->isCity() && pLoopPlot->area() == pPlot->area())
 				{
-					if (pLoopPlot->isCity())
-					{
-						if (pLoopPlot->area() == pPlot->area())
-						{
-							return false;
-						}
-					}
+					return false;
 				}
 			}
 		}
@@ -9365,38 +9349,29 @@ bool CvPlayer::canConstructInternal(BuildingTypes eBuilding, bool bContinue, boo
 		return false;
 	}
 
-	if (!bIgnoreCost)
+	if (!bIgnoreCost && kBuilding.getProductionCost() == -1)
 	{
-		if (kBuilding.getProductionCost() == -1)
-		{
-			return false;
-		}
+		return false;
 	}
 
-	if (kBuilding.getStateReligion() != NO_RELIGION && !bExposed)
+	if (kBuilding.getStateReligion() != NO_RELIGION && !bExposed && getStateReligion() != kBuilding.getStateReligion())
 	{
-		if (getStateReligion() != kBuilding.getStateReligion())
+		if ( probabilityEverConstructable != NULL )
 		{
-			if ( probabilityEverConstructable != NULL )
+			//	Is this religion one we have in our civ?
+			bool hasReligionSomewhere = false;
+			for (CvPlayer::city_iterator cityItr = beginCities(); cityItr != endCities(); ++cityItr)
 			{
-				//	Is this religion one we have in our civ?
-				bool hasReligionSomewhere = false;
-				int iLoop;
-				CvCity* pLoopCity;
-
-				for (pLoopCity = firstCity(&iLoop, true); pLoopCity != NULL; pLoopCity = nextCity(&iLoop, true))
+				if ((*cityItr)->isHasReligion((ReligionTypes)kBuilding.getStateReligion()))
 				{
-					if ( pLoopCity->isHasReligion((ReligionTypes)kBuilding.getStateReligion()) )
-					{
-						hasReligionSomewhere = true;
-						break;
-					}
+					hasReligionSomewhere = true;
+					break;
 				}
-
-				*probabilityEverConstructable = (hasReligionSomewhere ? 20 : 5);
 			}
-			return false;
+
+			*probabilityEverConstructable = (hasReligionSomewhere ? 20 : 5);
 		}
+		return false;
 	}
 
 	if (GC.getGameINLINE().countCivTeamsEverAlive() < kBuilding.getNumTeamsPrereq())
@@ -10569,7 +10544,7 @@ int CvPlayer::getBuildCost(const CvPlot* pPlot, BuildTypes eBuild) const
 
 bool CvPlayer::isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, CvPlot* pPlot, CvUnit* pBuilder) const
 {
-	bool	bResult = false;
+	bool bResult = false;
 
 	//	Only check whether the build is obsolete if we need it!  The route is anyway valid if it already exists
 	if ((pPlot != NULL) ?
@@ -10614,19 +10589,14 @@ RouteTypes CvPlayer::getBestRoute(CvPlot* pPlot, bool bConnect, CvUnit* pBuilder
 
 RouteTypes CvPlayer::getBestRouteInternal(CvPlot* pPlot, bool bConnect, CvUnit* pBuilder, BuildTypes* eBestRouteBuild) const
 {
-	RouteTypes eBestRoute;
-	int iValue;
-	int iBestValue;
-	int iI;
-
-	iBestValue = 0;
-	eBestRoute = NO_ROUTE;
+	RouteTypes eBestRoute = NO_ROUTE;
+	int iBestValue = 0;
 
 	const int numBuildInfos = GC.getNumBuildInfos();
 
 	const int baseMoves = GC.getMOVE_DENOMINATOR();
 
-	for (iI = 0; iI < numBuildInfos; iI++)
+	for (int iI = 0; iI < numBuildInfos; iI++)
 	{
 		const RouteTypes eRoute = ((RouteTypes)(GC.getBuildInfo((BuildTypes)iI).getRoute()));
 
@@ -10634,7 +10604,7 @@ RouteTypes CvPlayer::getBestRouteInternal(CvPlot* pPlot, bool bConnect, CvUnit* 
 		{
 			if (isRouteValid(eRoute, (BuildTypes)iI, pPlot, pBuilder))
 			{
-				iValue = GC.getRouteInfo(eRoute).getValue();
+				int iValue = GC.getRouteInfo(eRoute).getValue();
 				//Assuming roads never hinder movement
 				int iExtraMoves = std::max(0, baseMoves / std::min(baseMoves, GC.getRouteInfo(eRoute).getMovementCost()) - 1); //subtract 1 because we care about extra moves, all movement is 1 move by default
 				if (!bConnect) {
@@ -10679,13 +10649,10 @@ int CvPlayer::getImprovementUpgradeRateTimes100(ImprovementTypes eImprovement) c
 
 int CvPlayer::calculateTotalYield(YieldTypes eYield) const
 {
-	CvCity* pLoopCity;
 	int iTotalCommerce = 0;
-	int iLoop = 0;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	for (CvPlayer::city_iterator cityItr = beginCities(); cityItr != endCities(); ++cityItr)
 	{
-		iTotalCommerce += pLoopCity->getYieldRate(eYield);
+		iTotalCommerce += (*cityItr)->getYieldRate(eYield);
 	}
 
 	return iTotalCommerce;
@@ -10694,13 +10661,10 @@ int CvPlayer::calculateTotalYield(YieldTypes eYield) const
 
 int CvPlayer::calculateTotalCityHappiness() const
 {
-	CvCity* pLoopCity;
 	int iTotalHappiness = 0;
-	int iLoop = 0;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	for (CvPlayer::city_iterator cityItr = beginCities(); cityItr != endCities(); ++cityItr)
 	{
-		iTotalHappiness += pLoopCity->happyLevel();
+		iTotalHappiness += (*cityItr)->happyLevel();
 	}
 
 	return iTotalHappiness;
@@ -10709,31 +10673,25 @@ int CvPlayer::calculateTotalCityHappiness() const
 
 int CvPlayer::calculateTotalExports(YieldTypes eYield) const
 {
-	CvCity* pLoopCity;
-	CvCity* pTradeCity;
 	int iTotalExports = 0;
-	int iLoop = 0, iTradeLoop = 0;
 
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	for (CvPlayer::city_iterator cityItr = beginCities(); cityItr != endCities(); ++cityItr)
 	{
+		const CvCity* pLoopCity = *cityItr;
 // BUG - Fractional Trade Routes - start
 #ifdef _MOD_FRACTRADE
 		int iCityExports = 0;
 #endif
-
-		for (iTradeLoop = 0; iTradeLoop < pLoopCity->getTradeRoutes(); iTradeLoop++)
+		for (int iTradeLoop = 0; iTradeLoop < pLoopCity->getTradeRoutes(); iTradeLoop++)
 		{
-			pTradeCity = pLoopCity->getTradeCity(iTradeLoop);
-			if (pTradeCity != NULL)
+			CvCity* pTradeCity = pLoopCity->getTradeCity(iTradeLoop);
+			if (pTradeCity != NULL && pTradeCity->getOwnerINLINE() != getID())
 			{
-				if (pTradeCity->getOwnerINLINE() != getID())
-				{
 #ifdef _MOD_FRACTRADE
-					iCityExports += pLoopCity->calculateTradeYield(eYield, pLoopCity->calculateTradeProfitTimes100(pTradeCity));
+				iCityExports += pLoopCity->calculateTradeYield(eYield, pLoopCity->calculateTradeProfitTimes100(pTradeCity));
 #else
-					iTotalExports += pLoopCity->calculateTradeYield(eYield, pLoopCity->calculateTradeProfit(pTradeCity));
+				iTotalExports += pLoopCity->calculateTradeYield(eYield, pLoopCity->calculateTradeProfit(pTradeCity));
 #endif
-				}
 			}
 		}
 
@@ -10749,36 +10707,29 @@ int CvPlayer::calculateTotalExports(YieldTypes eYield) const
 
 int CvPlayer::calculateTotalImports(YieldTypes eYield) const
 {
-	CvCity* pLoopCity;
-	CvCity* pTradeCity;
 	int iTotalImports = 0;
-	int iPlayerLoop = 0, iLoop = 0, iTradeLoop = 0;
 	
-	// Loop through players
-	for (iPlayerLoop = 0; iPlayerLoop < MAX_PC_PLAYERS; iPlayerLoop++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (iPlayerLoop != getID())
+		if (iI != getID())
 		{
 // BUG - Fractional Trade Routes - start
 #ifdef _MOD_FRACTRADE
 			int iCityImports = 0;
 #endif
-
-			for (pLoopCity = GET_PLAYER((PlayerTypes) iPlayerLoop).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes) iPlayerLoop).nextCity(&iLoop))
+			for (CvPlayer::city_iterator cityItr = GET_PLAYER((PlayerTypes)iI).beginCities(); cityItr != GET_PLAYER((PlayerTypes)iI).endCities(); ++cityItr)
 			{
-				for (iTradeLoop = 0; iTradeLoop < pLoopCity->getTradeRoutes(); iTradeLoop++)
+				const CvCity* pLoopCity = *cityItr;
+				for (int iTradeLoop = 0; iTradeLoop < pLoopCity->getTradeRoutes(); iTradeLoop++)
 				{
-					pTradeCity = pLoopCity->getTradeCity(iTradeLoop);
-					if (pTradeCity != NULL)
+					CvCity* pTradeCity = pLoopCity->getTradeCity(iTradeLoop);
+					if (pTradeCity != NULL && pTradeCity->getOwnerINLINE() == getID())
 					{
-						if (pTradeCity->getOwnerINLINE() == getID())
-						{
 #ifdef _MOD_FRACTRADE
-							iCityImports += pLoopCity->calculateTradeYield(eYield, pLoopCity->calculateTradeProfitTimes100(pTradeCity));
+						iCityImports += pLoopCity->calculateTradeYield(eYield, pLoopCity->calculateTradeProfitTimes100(pTradeCity));
 #else
-							iTotalImports += pLoopCity->calculateTradeYield(eYield, pLoopCity->calculateTradeProfit(pTradeCity));
+						iTotalImports += pLoopCity->calculateTradeYield(eYield, pLoopCity->calculateTradeProfit(pTradeCity));
 #endif
-						}
 					}
 				}
 			}
@@ -10795,13 +10746,10 @@ int CvPlayer::calculateTotalImports(YieldTypes eYield) const
 
 int CvPlayer::calculateTotalCityUnhappiness() const
 {
-	CvCity* pLoopCity;
 	int iTotalUnhappiness = 0;
-	int iLoop = 0;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	for (CvPlayer::city_iterator cityItr = beginCities(); cityItr != endCities(); ++cityItr)
 	{
-		iTotalUnhappiness += pLoopCity->unhappyLevel();
+		iTotalUnhappiness += (*cityItr)->unhappyLevel();
 	}
 
 	return iTotalUnhappiness;
@@ -10810,13 +10758,10 @@ int CvPlayer::calculateTotalCityUnhappiness() const
 
 int CvPlayer::calculateTotalCityHealthiness() const
 {
-	CvCity* pLoopCity;
 	int iTotalHealthiness = 0;
-	int iLoop = 0;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	for (CvPlayer::city_iterator cityItr = beginCities(); cityItr != endCities(); ++cityItr)
 	{
-		iTotalHealthiness += pLoopCity->goodHealth();
+		iTotalHealthiness += (*cityItr)->goodHealth();
 	}
 
 	return iTotalHealthiness;
@@ -10824,13 +10769,10 @@ int CvPlayer::calculateTotalCityHealthiness() const
 
 int CvPlayer::calculateTotalCityUnhealthiness() const
 {
-	CvCity* pLoopCity;
 	int iTotalUnhealthiness = 0;
-	int iLoop = 0;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	for (CvPlayer::city_iterator cityItr = beginCities(); cityItr != endCities(); ++cityItr)
 	{
-		iTotalUnhealthiness += pLoopCity->badHealth();
+		iTotalUnhealthiness += (*cityItr)->badHealth();
 	}
 
 	return iTotalUnhealthiness;
@@ -11148,9 +11090,7 @@ int CvPlayer::getCurrentInflationPerTurnTimes10000() const
 
 int CvPlayer::calculateInflationRate() const
 {
-	int iRatePercent = (m_accruedCostRatioTimes10000 == -1 ? 0 : (m_accruedCostRatioTimes10000-10000)/100);
-
-	return iRatePercent;
+	return (m_accruedCostRatioTimes10000 == -1 ? 0 : (m_accruedCostRatioTimes10000-10000)/100);
 }
 
 
@@ -11187,13 +11127,7 @@ void CvPlayer::setFreeUnitCountdown( int iValue )
 
 int CvPlayer::calculateBaseNetGold() const
 {
-	int iNetGold;
-
-	iNetGold = (getCommerceRate(COMMERCE_GOLD) + getGoldPerTurn());
-
-	iNetGold -= calculateInflatedCosts();
-	
-	return iNetGold;
+	return getCommerceRate(COMMERCE_GOLD) + getGoldPerTurn() - calculateInflatedCosts();
 }
 
 int CvPlayer::calculateResearchModifier(TechTypes eTech) const
@@ -11298,14 +11232,13 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 				{
 					if (GET_PLAYER((PlayerTypes)iI).isAlive() && iI != getID())
 					{
-						int iScore = GET_PLAYER((PlayerTypes)iI).calculateScore(false);
+						const int iScore = GET_PLAYER((PlayerTypes)iI).calculateScore(false);
 						if (iScore > iBestScore)
 						{
 							iBestScore = iScore;
 						}
 					}
 				}
-				//If iOurScore > iBestScore we are the best team in the game
 				if (iOurScore < iBestScore)
 				{
 					float fRatio = iBestScore / ((float)iOurScore);
@@ -11350,20 +11283,14 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 
 int CvPlayer::calculateBaseNetResearch(TechTypes eTech) const
 {
-	TechTypes eResearchTech = NO_TECH;
-
-	if (eTech != NO_TECH)
+	if (eTech == NO_TECH)
 	{
-		eResearchTech = eTech;
-	}
-	else
-	{
-		eResearchTech = getCurrentResearch();
+		eTech = getCurrentResearch();
 	}
 	int iMult = 100;
-	if (eResearchTech != NO_TECH)
+	if (eTech != NO_TECH)
 	{
-		iMult = getNationalTechResearchModifier(eResearchTech) + calculateResearchModifier(eResearchTech);
+		iMult = getNationalTechResearchModifier(eTech) + calculateResearchModifier(eTech);
 	}
 	return (((GC.getDefineINT("BASE_RESEARCH_RATE") + getCommerceRate(COMMERCE_RESEARCH)) * iMult / 100));
 }
@@ -11371,35 +11298,13 @@ int CvPlayer::calculateBaseNetResearch(TechTypes eTech) const
 
 int CvPlayer::calculateGoldRate() const
 {
-	int iRate = 0;
-
-	if (isCommerceFlexible(COMMERCE_RESEARCH))
-	{
-		iRate = calculateBaseNetGold();
-	}
-	else
-	{
-		iRate = std::min(0, (calculateBaseNetResearch() + calculateBaseNetGold()));
-	}
-
-	return iRate;
+	return isCommerceFlexible(COMMERCE_RESEARCH) ? calculateBaseNetGold() : std::min(0, (calculateBaseNetResearch() + calculateBaseNetGold()));
 }
 
 
 int CvPlayer::calculateResearchRate(TechTypes eTech) const
 {
-	int iRate = 0;
-
-	if (isCommerceFlexible(COMMERCE_RESEARCH))
-	{
-		iRate = calculateBaseNetResearch(eTech);
-	}
-	else
-	{
-		iRate = std::max(1, (calculateBaseNetResearch(eTech) + calculateBaseNetGold()));
-	}
-
-	return iRate;
+	return isCommerceFlexible(COMMERCE_RESEARCH) ? calculateBaseNetResearch(eTech) : std::max(1, (calculateBaseNetResearch(eTech) + calculateBaseNetGold()));
 }
 
 int CvPlayer::calculateTotalCommerce() const
@@ -11577,9 +11482,7 @@ bool CvPlayer::canResearch(TechTypes eTech, bool bTrade) const
 
 TechTypes CvPlayer::getCurrentResearch() const
 {
-	CLLNode<TechTypes>* pResearchNode;
-
-	pResearchNode = headResearchQueueNode();
+	CLLNode<TechTypes>* pResearchNode = headResearchQueueNode();
 
 	if (pResearchNode != NULL)
 	{
@@ -11594,9 +11497,7 @@ TechTypes CvPlayer::getCurrentResearch() const
 
 bool CvPlayer::isCurrentResearchRepeat() const
 {
-	TechTypes eCurrentResearch;
-
-	eCurrentResearch = getCurrentResearch();
+	TechTypes eCurrentResearch = getCurrentResearch();
 
 	if (eCurrentResearch == NO_TECH)
 	{
@@ -11609,14 +11510,12 @@ bool CvPlayer::isCurrentResearchRepeat() const
 
 bool CvPlayer::isNoResearchAvailable() const
 {
-	int iI;
-
 	if (getCurrentResearch() != NO_TECH)
 	{
 		return false;
 	}
 
-	for (iI = 0; iI < GC.getNumTechInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
 		if (canResearch((TechTypes)iI))
 		{
@@ -17050,8 +16949,6 @@ int CvPlayer::getCapitalYieldRateModifier(YieldTypes eIndex) const
 
 void CvPlayer::changeCapitalYieldRateModifier(YieldTypes eIndex, int iChange)
 {
-	CvCity* pCapitalCity;
-
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
 
@@ -17061,7 +16958,7 @@ void CvPlayer::changeCapitalYieldRateModifier(YieldTypes eIndex, int iChange)
 
 		invalidateYieldRankCache(eIndex);
 
-		pCapitalCity = getCapitalCity();
+		CvCity* pCapitalCity = getCapitalCity();
 
 		if (pCapitalCity != NULL)
 		{
@@ -17091,25 +16988,19 @@ int CvPlayer::getExtraYieldThreshold(YieldTypes eIndex) const
 
 void CvPlayer::updateExtraYieldThreshold(YieldTypes eIndex)
 {
-	int iBestValue;
-	int iI;
-
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
 
-	iBestValue = 0;
+	int iBestValue = 0;
 
 	FAssertMsg((GC.getNumTraitInfos() > 0), "GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvPlayer::updateExtraYieldThreshold");
-	for (iI = 0; iI < GC.getNumTraitInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 	{
-		if (hasTrait((TraitTypes)iI))
+		if (hasTrait((TraitTypes)iI) && GC.getTraitInfo((TraitTypes) iI).getExtraYieldThreshold(eIndex) > 0)
 		{
-			if (GC.getTraitInfo((TraitTypes) iI).getExtraYieldThreshold(eIndex) > 0)
+			if ((iBestValue == 0) || (GC.getTraitInfo((TraitTypes) iI).getExtraYieldThreshold(eIndex) < iBestValue))
 			{
-				if ((iBestValue == 0) || (GC.getTraitInfo((TraitTypes) iI).getExtraYieldThreshold(eIndex) < iBestValue))
-				{
-					iBestValue = GC.getTraitInfo((TraitTypes) iI).getExtraYieldThreshold(eIndex);
-				}
+				iBestValue = GC.getTraitInfo((TraitTypes) iI).getExtraYieldThreshold(eIndex);
 			}
 		}
 	}
@@ -17134,25 +17025,19 @@ int CvPlayer::getLessYieldThreshold(YieldTypes eIndex) const
 
 void CvPlayer::updateLessYieldThreshold(YieldTypes eIndex)
 {
-	int iWorstValue;
-	int iI;
-
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
 
-	iWorstValue = 0;
+	int iWorstValue = 0;
 
 	FAssertMsg((GC.getNumTraitInfos() > 0), "GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvPlayer::updateExtraYieldThreshold");
-	for (iI = 0; iI < GC.getNumTraitInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 	{
-		if (hasTrait((TraitTypes)iI))
+		if (hasTrait((TraitTypes)iI) && GC.getTraitInfo((TraitTypes) iI).getLessYieldThreshold(eIndex) > 0)
 		{
-			if (GC.getTraitInfo((TraitTypes) iI).getLessYieldThreshold(eIndex) > 0)
+			if ((iWorstValue == 0) || (GC.getTraitInfo((TraitTypes) iI).getLessYieldThreshold(eIndex) < iWorstValue))
 			{
-				if ((iWorstValue == 0) || (GC.getTraitInfo((TraitTypes) iI).getLessYieldThreshold(eIndex) < iWorstValue))
-				{
-					iWorstValue = GC.getTraitInfo((TraitTypes) iI).getLessYieldThreshold(eIndex);
-				}
+				iWorstValue = GC.getTraitInfo((TraitTypes) iI).getLessYieldThreshold(eIndex);
 			}
 		}
 	}
@@ -17223,22 +17108,18 @@ int CvPlayer::getCommercePercent(CommerceTypes eIndex) const
 
 void CvPlayer::setCommercePercent(CommerceTypes eIndex, int iNewValue)
 {
-	int iTotalCommercePercent;
-	int iOldValue;
-	int iI;
-
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
 
-	iOldValue = getCommercePercent(eIndex);
+	const int iOldValue = getCommercePercent(eIndex);
 
 	m_aiCommercePercent[eIndex] = range(iNewValue, 0, 100);
 
 	if (iOldValue != getCommercePercent(eIndex))
 	{
-		iTotalCommercePercent = 0;
+		int iTotalCommercePercent = 0;
 
-		for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 		{
 			iTotalCommercePercent += getCommercePercent((CommerceTypes)iI);
 		}
@@ -17314,16 +17195,14 @@ int CvPlayer::getTotalCityBaseCommerceRate(CommerceTypes eIndex) const
 
 	if (m_cachedTotalCityBaseCommerceRate[eIndex] == MAX_INT)
 	{
-		int iLoop;
 		int	iResult = 0;
-		for (CvCity* pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+		for (CvPlayer::city_iterator cityItr = beginCities(); cityItr != endCities(); ++cityItr)
 		{
-			iResult += pLoopCity->getBaseCommerceRateTimes100(eIndex);
+			iResult += (*cityItr)->getBaseCommerceRateTimes100(eIndex);
 		}
 		m_cachedTotalCityBaseCommerceRate[eIndex] = iResult / 100;
 	}
 	return m_cachedTotalCityBaseCommerceRate[eIndex];
-	// return iResult/100;
 }
 
 void CvPlayer::changeCommerceRate(CommerceTypes eIndex, int iChange)
@@ -17429,8 +17308,6 @@ int CvPlayer::getCapitalCommerceRateModifier(CommerceTypes eIndex) const
 
 void CvPlayer::changeCapitalCommerceRateModifier(CommerceTypes eIndex, int iChange)
 {
-	CvCity* pCapitalCity;
-
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
 
@@ -17438,7 +17315,7 @@ void CvPlayer::changeCapitalCommerceRateModifier(CommerceTypes eIndex, int iChan
 	{
 		m_aiCapitalCommerceRateModifier[eIndex] = (m_aiCapitalCommerceRateModifier[eIndex] + iChange);
 
-		pCapitalCity = getCapitalCity();
+		CvCity* pCapitalCity = getCapitalCity();
 
 		if (pCapitalCity != NULL)
 		{
@@ -17635,14 +17512,12 @@ int CvPlayer::getBonusExport(BonusTypes eIndex) const
 
 void CvPlayer::changeBonusExport(BonusTypes eIndex, int iChange)
 {
-	CvCity* pCapitalCity;
-
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
 	if (iChange != 0)
 	{
-		pCapitalCity = getCapitalCity();
+		CvCity* pCapitalCity = getCapitalCity();
 		// Koshling - optimised - no need to recalculate the entire plot group's
 		// full set of bonuses - jyust adjust the one that is changing
 		//if (pCapitalCity != NULL)
@@ -17653,7 +17528,7 @@ void CvPlayer::changeBonusExport(BonusTypes eIndex, int iChange)
 		FAssert(getBonusExport(eIndex) >= 0);
 		if (pCapitalCity != NULL)
 		{
-			CvPlotGroup*	ownerPlotGroup = pCapitalCity->plotGroup(getID());
+			CvPlotGroup* ownerPlotGroup = pCapitalCity->plotGroup(getID());
 
 			if ( ownerPlotGroup != NULL )
 			{
@@ -17675,14 +17550,12 @@ int CvPlayer::getBonusImport(BonusTypes eIndex) const
 
 void CvPlayer::changeBonusImport(BonusTypes eIndex, int iChange)
 {
-	CvCity* pCapitalCity;
-
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
 	if (iChange != 0)
 	{
-		pCapitalCity = getCapitalCity();
+		CvCity* pCapitalCity = getCapitalCity();
 		// Koshling - optimised - no need to recalculate the entire plot group's
 		// full set of bonuses - jyust adjust the one that is changing
 		//if (pCapitalCity != NULL)
@@ -17693,7 +17566,7 @@ void CvPlayer::changeBonusImport(BonusTypes eIndex, int iChange)
 		FAssert(getBonusImport(eIndex) >= 0);
 		if (pCapitalCity != NULL)
 		{
-			CvPlotGroup*	ownerPlotGroup = pCapitalCity->plotGroup(getID());
+			CvPlotGroup* ownerPlotGroup = pCapitalCity->plotGroup(getID());
 
 			if ( ownerPlotGroup != NULL )
 			{
@@ -17731,13 +17604,12 @@ int CvPlayer::getFreeBuildingCount(BuildingTypes eIndex) const
 
 int CvPlayer::getFreeAreaBuildingCount(BuildingTypes eIndex, CvArea* area) const
 {
-	int iLoop;
-
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
-	for (CvCity* pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	for (CvPlayer::city_iterator cityItr = beginCities(); cityItr != endCities(); ++cityItr)
 	{
+		CvCity* pLoopCity = *cityItr;
 		if ( pLoopCity->area() == area )
 		{
 			//	During city initialisation this can be self-referential so the first city
@@ -17761,14 +17633,10 @@ bool CvPlayer::isBuildingFree(BuildingTypes eIndex, CvArea* area)	const
 
 void CvPlayer::changeFreeBuildingCount(BuildingTypes eIndex, int iChange)
 {
-	CvCity* pLoopCity;
-	int iOldFreeBuildingCount;
-	int iLoop;
-
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
-	iOldFreeBuildingCount = getFreeBuildingCount(eIndex);
+	const int iOldFreeBuildingCount = getFreeBuildingCount(eIndex);
 	//	Don't allow things to go negative - this has been observed when buildings get disabled across asset chnages
 	if ( (iChange > 0 || iOldFreeBuildingCount != 0) && iChange != 0)
 	{
@@ -17779,18 +17647,18 @@ void CvPlayer::changeFreeBuildingCount(BuildingTypes eIndex, int iChange)
 		{
 			FAssertMsg(getFreeBuildingCount(eIndex) > 0, "getFreeBuildingCount(eIndex) is expected to be greater than 0");
 
-			for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+			for (CvPlayer::city_iterator cityItr = beginCities(); cityItr != endCities(); ++cityItr)
 			{
-				pLoopCity->setNumFreeBuilding(eIndex, 1);
+				(*cityItr)->setNumFreeBuilding(eIndex, 1);
 			}
 		}
 		else if (getFreeBuildingCount(eIndex) == 0)
 		{
 			FAssertMsg(iOldFreeBuildingCount > 0, "iOldFreeBuildingCount is expected to be greater than 0");
 
-			for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+			for (CvPlayer::city_iterator cityItr = beginCities(); cityItr != endCities(); ++cityItr)
 			{
-				pLoopCity->setNumFreeBuilding(eIndex, 0);
+				(*cityItr)->setNumFreeBuilding(eIndex, 0);
 			}
 		}
 	}
@@ -17798,14 +17666,10 @@ void CvPlayer::changeFreeBuildingCount(BuildingTypes eIndex, int iChange)
 
 void CvPlayer::changeFreeAreaBuildingCount(BuildingTypes eIndex, CvArea* area, int iChange)
 {
-	CvCity* pLoopCity;
-	int iOldFreeAreaBuildingCount;
-	int iLoop;
-
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
-	iOldFreeAreaBuildingCount = getFreeAreaBuildingCount(eIndex, area);
+	const int iOldFreeAreaBuildingCount = getFreeAreaBuildingCount(eIndex, area);
 	//	Don't allow things to go negative - this has been observed when buildings get disabled across asset changes
 	if ( (iChange > 0 || iOldFreeAreaBuildingCount != 0) && iChange != 0)
 	{
@@ -17814,8 +17678,9 @@ void CvPlayer::changeFreeAreaBuildingCount(BuildingTypes eIndex, CvArea* area, i
 
 		if (iOldFreeAreaBuildingCount == 0)
 		{
-			for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+			for (CvPlayer::city_iterator cityItr = beginCities(); cityItr != endCities(); ++cityItr)
 			{
+				CvCity* pLoopCity = *cityItr;
 				if ( pLoopCity->area() == area )
 				{
 					pLoopCity->setNumFreeAreaBuilding(eIndex, 1);
@@ -17826,8 +17691,9 @@ void CvPlayer::changeFreeAreaBuildingCount(BuildingTypes eIndex, CvArea* area, i
 		{
 			FAssertMsg(iOldFreeAreaBuildingCount > 0, "iOldFreeAreaBuildingCount is expected to be greater than 0");
 
-			for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+			for (CvPlayer::city_iterator cityItr = beginCities(); cityItr != endCities(); ++cityItr)
 			{
+				CvCity* pLoopCity = *cityItr;
 				if ( pLoopCity->area() == area )
 				{
 					pLoopCity->setNumFreeAreaBuilding(eIndex, 0);
@@ -23842,8 +23708,6 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange, bool bLimited)
 	//Team Project (5)
 		changeAllReligionsActiveCount((kCivic.isAllReligionsActive())? iChange : 0);
 		changeAllReligionsActiveCount((kCivic.isBansNonStateReligions())? -iChange : 0);
-
-
 	}
 	else
 	{
@@ -25322,7 +25186,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		uninit();
 	}
 
-
 	WRAPPER_READ_OBJECT_END(wrapper);
 /************************************************************************************************/
 /* Afforess	                  Start		 08/18/10                                               */
@@ -26078,7 +25941,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		//TB Traits end
 	}
 	//	Use condensed format now - only save non-default array elements
-
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
