@@ -31362,72 +31362,60 @@ CvCity* CvPlayerAI::getTeamInquisitionRevoltCity(CvUnit *pUnit, bool bNoUnit, in
 CvCity* CvPlayerAI::getReligiousVictoryTarget(CvUnit *pUnit, bool bNoUnit)
 {
 	FAssert(pUnit != NULL);
-	if(!(hasInquisitionTarget()))
-	{
-		return NULL;
-	}
-	if( !(isPushReligiousVictory()) && !(isConsiderReligiousVictory()) )
+
+	if(!hasInquisitionTarget() || (!isPushReligiousVictory() && !isConsiderReligiousVictory()))
 	{
 		return NULL;
 	}
 
-	CvCity* pLoopCity;
+	const CvPlot* pUnitPlot = pUnit->plot();
+	const CvTeam& pTeam = GET_TEAM(getTeam());
+	const ReligionTypes eStateReligion = getStateReligion();
+
 	CvCity* pBestCity = NULL;
-	int iI, iJ, iLoop;
 	int iBestCityValue = MAX_INT;
-	int tempCityValue;
-	CvPlot* pUnitPlot = pUnit->plot();
-	CvPlot* pLoopPlot = NULL;
-	CvTeam& pTeam = GET_TEAM(getTeam());
-	ReligionTypes eStateReligion = getStateReligion();
-
-	for(iI = 0; iI < MAX_PLAYERS; iI++)
+	for(int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		CvPlayer& kLoopPlayer = GET_PLAYER(PlayerTypes(iI));
-		CvTeam& kLoopTeam = GET_TEAM(kLoopPlayer.getTeam());
-		if(kLoopPlayer.isAlive())
+		const CvPlayer& kLoopPlayer = GET_PLAYER(PlayerTypes(iI));
+		const CvTeam& kLoopTeam = GET_TEAM(kLoopPlayer.getTeam());
+
+		if(kLoopPlayer.isAlive()
+			&& (TeamTypes(kLoopPlayer.getTeam()) == getTeam() || kLoopTeam.isVassal((TeamTypes)kLoopPlayer.getTeam()))
+			&& pUnitPlot->isHasPathToPlayerCity(getTeam(), PlayerTypes(iI))
+			)
 		{
-			if( (TeamTypes(kLoopPlayer.getTeam()) == getTeam()) || kLoopTeam.isVassal((TeamTypes)kLoopPlayer.getTeam()) )
+			for (CvPlayer::city_iterator cityItr = kLoopPlayer.beginCities(); cityItr != kLoopPlayer.endCities(); ++cityItr)
 			{
-				if(pUnitPlot->isHasPathToPlayerCity(getTeam(), PlayerTypes(iI)))
+				CvCity* pLoopCity = *cityItr;
+				CvPlot* pLoopPlot = pLoopCity->plot();
+				if (pLoopCity->isInquisitionConditions()
+					&& (bNoUnit || pUnit->generatePath(pLoopPlot, 0, false))
+					)
 				{
-					for(pLoopCity = kLoopPlayer.firstCity(&iLoop); pLoopCity != NULL; pLoopCity = kLoopPlayer.nextCity(&iLoop))
+					int tempCityValue = pUnitPlot->calculatePathDistanceToPlot(getTeam(), pLoopPlot);
+					if (isNonStateReligionCommerce()
+						&& kLoopPlayer.getID() == getID())
 					{
-						if(pLoopCity->isInquisitionConditions())
+						tempCityValue *= 2;
+					}
+					if (kLoopTeam.isVassal((TeamTypes)kLoopPlayer.getTeam()))
+					{
+						tempCityValue -= 12;
+					}
+					for (int iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
+					{
+						const ReligionTypes religionType = static_cast<ReligionTypes>(iJ);
+						if (religionType != eStateReligion
+							&& hasHolyCity(religionType)
+							&& pLoopCity->isHasReligion(religionType))
 						{
-							pLoopPlot = pLoopCity->plot();
-							if ((bNoUnit) || (pUnit->generatePath(pLoopPlot, 0, false)))
-							{	
-								tempCityValue = pUnitPlot->calculatePathDistanceToPlot(getTeam(), pLoopPlot);
-								if( isNonStateReligionCommerce()
-								&& (kLoopPlayer.getID() == getID()) )
-								{
-									tempCityValue *= 2;
-								}
-								if(kLoopTeam.isVassal((TeamTypes)kLoopPlayer.getTeam()))
-								{
-									tempCityValue -= 12;
-								}
-								for(iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
-								{
-									if(ReligionTypes(iJ) != eStateReligion)
-									{
-										if(hasHolyCity(ReligionTypes(iJ)))
-										{
-											if(pLoopCity->isHasReligion(ReligionTypes(iJ)))
-											{
-												tempCityValue += 13;
-											}
-										}
-									}
-								}
-								if(tempCityValue < iBestCityValue)
-								{
-									pBestCity = pLoopCity;
-									iBestCityValue = tempCityValue;
-								}
-							}
+							tempCityValue += 13;
 						}
+					}
+					if (tempCityValue < iBestCityValue)
+					{
+						pBestCity = pLoopCity;
+						iBestCityValue = tempCityValue;
 					}
 				}
 			}

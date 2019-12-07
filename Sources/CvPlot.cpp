@@ -5182,7 +5182,7 @@ int CvPlot::getNumCultureRangeCities(PlayerTypes ePlayer) const
 /*                                                                                              */
 /* General AI                                                                                   */
 /************************************************************************************************/
-bool CvPlot::isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb )
+bool CvPlot::isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb ) const
 {
 	PROFILE_FUNC();
 
@@ -5261,7 +5261,7 @@ bool CvPlot::isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb )
 	return bFound;
 }
 
-bool CvPlot::isHasPathToPlayerCity( TeamTypes eMoveTeam, PlayerTypes eOtherPlayer )
+bool CvPlot::isHasPathToPlayerCity( TeamTypes eMoveTeam, PlayerTypes eOtherPlayer ) const
 {
 	PROFILE_FUNC();
 
@@ -5304,7 +5304,7 @@ bool CvPlot::isHasPathToPlayerCity( TeamTypes eMoveTeam, PlayerTypes eOtherPlaye
 	return bFound;
 }
 
-int CvPlot::calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot )
+int CvPlot::calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot ) const
 {
 	PROFILE_FUNC();
 

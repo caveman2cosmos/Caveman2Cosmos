@@ -364,9 +364,9 @@ public:
 /*                                                                                              */
 /* General AI                                                                                   */
 /************************************************************************************************/
-	bool isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb = true );
-	bool isHasPathToPlayerCity( TeamTypes eMoveTeam, PlayerTypes eOtherPlayer = NO_PLAYER );
-	int calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot );
+	bool isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb = true ) const;
+	bool isHasPathToPlayerCity( TeamTypes eMoveTeam, PlayerTypes eOtherPlayer = NO_PLAYER ) const;
+	int calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot ) const;
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/

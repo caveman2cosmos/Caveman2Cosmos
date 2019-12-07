@@ -3615,14 +3615,10 @@ int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelection
 
 				iExtraNodeCost += iCityAdjacencyCost;
 
-				//	If this is the end of the first turn (only) also evaluate whether we end
-				//	up next to enemy stack that look dangerous and cost that in
-				//
-				//	Sadly the current game pathing engine can't cope with eavluating costs in a way
-				//	dependent on the turn count into a path because once calculated it wil cache the
-				//	edge traversal cost, and mis-use it in another context, so we accoutn the cost for all visible
-				//	enemy units wherever they occur in the path
-				//if ( parent->m_iData2 == 1 && parent->m_iData1 != 0 )//&& !gDLL->getFAStarIFace()->IsPathDest(finder, pToPlot->getX_INLINE(), pToPlot->getY_INLINE()) )
+				// We only consider enemies within 2 turns of our current location, as we
+				// can't predict where they will go anyway.
+				// TODO: We should be considering fortified enemies, those holding forts, and those
+				// in cities though regardless of how far away they are. We shouldn't expect them to move.
 				static const int UNIT_ADJUST_HORIZON = 2;
 				if ( iPathTurns <= UNIT_ADJUST_HORIZON )
 				{
@@ -3640,7 +3636,7 @@ int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelection
 						pAdjacentPlot = plotDirection(pToPlot->getX_INLINE(), pToPlot->getY_INLINE(), ((DirectionTypes)iI));
 
 						if( pAdjacentPlot != NULL &&
-							(bIsAIControlled || pAdjacentPlot != generator->getTerminalPlot()) &&	//	For the human player don't count ending turn next to whjat we intend to attack as bad
+							(bIsAIControlled || pAdjacentPlot != generator->getTerminalPlot()) &&	//	For the human player don't count ending turn next to what we intend to attack as bad
 							pSelectionGroup->getArea() == pAdjacentPlot->getArea() &&
 							pAdjacentPlot->isVisible(eTeam, false) &&
 							pAdjacentPlot->getVisibleEnemyDefender(pSelectionGroup->getHeadOwner()))
