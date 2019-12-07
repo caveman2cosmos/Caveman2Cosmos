@@ -5112,14 +5112,19 @@ class CvMainInterface:
 					self.bBuildWorkQueue = True
 
 			elif iData in (13, 16, 31): # A D S
-				if self.InCity and True not in (bAlt, bCtrl, bShift):
-					iTab = {13:0, 16:2, 31:1}[iData]
+				if self.InCity:
+					if bCtrl and iData == 16 and self.InCity.iPlayer == self.iPlayer:
+						GAME.selectedCitiesGameNetMessage(GameMessageTypes.GAMEMESSAGE_DO_TASK, TaskTypes.TASK_CONSCRIPT, -1, -1, False, False, False, False)
+						return 1
 
-					if iTab == self.iCityTab:
-						self.exitCityTab(screen, iTab)
-					else:
-						self.openCityTab(screen, iTab)
-					return 1
+					elif not (bAlt or bCtrl or bShift):
+						iTab = {13:0, 16:2, 31:1}[iData]
+
+						if iTab == self.iCityTab:
+							self.exitCityTab(screen, iTab)
+						else:
+							self.openCityTab(screen, iTab)
+						return 1
 
 			elif iData in (45, 49, 56): # Ctrl, Shift, Alt
 				dataTT = self.dataTT
