@@ -2,8 +2,8 @@
 // Quickstart guide here: http://www.fastbuild.org/docs/quickstartguide.html
 
 // ### Paths ####
-.BUILD_DIR          = '$_CURRENT_BFF_DIR_$.\..\Build'
-.SOURCE_DIR         = '$_CURRENT_BFF_DIR_$.'
+.BUILD_DIR          = '$_WORKING_DIR_$.\..\Build'
+.SOURCE_DIR         = '$_WORKING_DIR_$'
 .TOOLKIT            = '$BUILD_DIR$\deps\Microsoft Visual C++ Toolkit 2003'
 .PSDK               = '$BUILD_DIR$\deps\Microsoft SDKs\Windows\v6.0'
 .YOURMOD            = '$BUILD_DIR$\..'
@@ -192,6 +192,7 @@ Unity( 'Sources-Unity' )
 {
     .UnityInputPath = '$SOURCE_DIR$'
     .UnityInputExcludePattern = '*/Cy*'
+    .UnityInputExcludedFiles = { "CvGameCoreDLL.cpp" }
     // // Couldn't get exclude pattern matching to work so we will just explicitly list all Cy files for now.
     // // These are excluded from the unity files as boost::python generates a LOT of code, which causes 
     // // obj file to exceed max allowed size for COFF format. /bigobj isn't implemented in our compiler so we
@@ -275,14 +276,14 @@ ForEach( .Config in .Configs )
         .CompilerInputPathRecurse = false
         .CompilerInputPattern = 'Cy*.cpp'
         
-        .CompilerInputFilesRoot = '$SOURCE_DIR$'
-        .CompilerInputFiles = 'CvGameCoreDLL.cpp'
+        //.CompilerInputFilesRoot = '$SOURCE_DIR$'
+        //.CompilerInputFiles = 'CvGameCoreDLL.cpp'
 
         .CompilerInputUnity = 'Sources-Unity'
 
         .CompilerOutputPath = '$TARGET_DIR$'
 
-        .PCHInputFile       = '$SOURCE_DIR$/_precompile.cpp'
+        .PCHInputFile       = '$SOURCE_DIR$/CvGameCoreDLL.cpp'
         .PCHOutputFile      = '$TARGET_DIR$/C2C.pch'
         .PCHOptions         = ' "%1"' // PCH .CPP Input
                             + ' /Fo"%3"' // .OBJ Output
