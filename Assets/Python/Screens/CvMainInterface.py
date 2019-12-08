@@ -3050,6 +3050,7 @@ class CvMainInterface:
 		screen.setTableColumnHeader(ID, 0, "", a8thX)
 		screen.setTableColumnHeader(ID, 1, "", a8thX - 24)
 		screen.setTableColumnRightJustify(ID, 1)
+		uFont3	= self.aFontList[3]
 
 		iRow = -1
 		if not TAB: # Properties display
@@ -3058,8 +3059,9 @@ class CvMainInterface:
 			pProperties = CyCity.getProperties()
 			iPropertyNum = pProperties.getNumProperties()
 			for i in xrange(iPropertyNum):
-				szLeftBuffer = uFont2 + pProperties.getPropertyDisplay(i)
 				eProperty = pProperties.getProperty(i)
+				info = GC.getPropertyInfo(eProperty)
+				szLeftBuffer = uFont3 + u"%c " % info.getChar() + uFont2 + info.getText()
 				iChange = pProperties.getChangeByProperty(eProperty)
 				szRightBuffer = uFont2 + str(pProperties.getValue(i)) + " ( "
 				if iChange >= 0:
@@ -3079,7 +3081,7 @@ class CvMainInterface:
 		# Bonus List
 		for szName, iBonus, szChar, iTotalResourceCount, iTotalExport in aList1:
 			iRow += 1
-			szLeftBuffer = uFont1b + szChar + szName + " ("
+			szLeftBuffer = uFont3 + szChar + uFont1b + szName + " ("
 			szTemp = ""
 			iTotalImport = CyPlayer.getBonusImport(iBonus)
 			iHomemade = iTotalResourceCount - iTotalImport
