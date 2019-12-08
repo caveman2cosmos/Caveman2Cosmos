@@ -117,6 +117,7 @@
   <Type Name="CvSelectionGroup">
     <DisplayString>{{ id = {m_iID}, units = {m_units} }}</DisplayString>
     <Expand>
+      <Item Name="[id]" ExcludeView="simple">m_iID</Item>
       <Item Name="[units]" ExcludeView="simple">m_units</Item>
       <!--Recreating the CLinkList<IDinfo> iteration with lookup into FFreeListTrashArray<CvUnitAI> by ID-->
       <CustomListItems MaxItemsPerView="50" ExcludeView="Test">

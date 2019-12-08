@@ -920,6 +920,9 @@
     <ClInclude Include="SCyDebug.h">
       <Filter>Header Files\Smart</Filter>
     </ClInclude>
+    <ClInclude Include="algorithm2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CvGameCoreDLL.rc">

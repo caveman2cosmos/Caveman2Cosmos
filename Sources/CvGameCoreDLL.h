@@ -69,9 +69,13 @@
 
 #include "EnumFlags.h"
 #include "NiPoint.h"
-#include "nullptr_t.h"
 #include "hash.h"
 
+//
+// Polyfills
+//
+#include "nullptr_t.h"
+#include "algorithm2.h"
 
 //
 // Basic types
