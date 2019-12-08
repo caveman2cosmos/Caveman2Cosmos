@@ -135,15 +135,19 @@ struct ECvPlotGraphics
 };
 DECLARE_FLAGS(ECvPlotGraphics::type);
 
-class CvPlot
+class CvPlot : boost::noncopyable
 {
 friend CvPathPlotInfoStore;
 public:
 	CvPlot();
 	virtual ~CvPlot();
 
-
 	CvGameObjectPlot* getGameObject() {return &m_GameObject;};
+
+	// Comparison operators
+	// Use address identity for now (more than one map means x/y compare wouldn't work)
+	friend bool operator==(const CvPlot& lhs, const CvPlot& rhs) { return &lhs == &rhs; }
+	friend bool operator!=(const CvPlot& lhs, const CvPlot& rhs) { return &lhs != &rhs; }
 
 protected:
 	CvGameObjectPlot m_GameObject;
@@ -557,24 +561,56 @@ public:
 /************************************************************************************************/
 
 	DllExport int getViewportX() const;
-	inline int getX() const
-	{
-		return m_iX;
-	}
-	inline int getX_INLINE() const
-	{
-		return m_iX;
-	}
+	inline int getX() const { return m_iX; }
+	inline int getX_INLINE() const { return m_iX; }
 	DllExport int getViewportY() const; // Exposed to Python
-	inline int getY() const
-	{
-		return m_iY;
-	}
-	inline int getY_INLINE() const
-	{
-		return m_iY;
-	}
+	inline int getY() const { return m_iY; }
+	inline int getY_INLINE() const { return m_iY; }
 	bool isInViewport(int comfortBorderSize = 0) const;
+
+	// Base iterator type for iterating over adjacent valid plots
+	template < class Value_ >
+	struct adjacent_iterator_base : 
+		public boost::iterator_facade<adjacent_iterator_base<Value_>, Value_, boost::forward_traversal_tag>
+	{
+		adjacent_iterator_base() : m_centerX(-1), m_centerY(-1), m_curr(nullptr), m_idx(0) {}
+		explicit adjacent_iterator_base(int centerX, int centerY) : m_centerX(centerX), m_centerY(centerY), m_curr(nullptr), m_idx(-1)
+		{
+			increment();
+		}
+
+	private:
+		friend class boost::iterator_core_access;
+		void increment()
+		{
+			do
+			{
+				++m_idx;
+				m_curr = plotDirection(m_centerX, m_centerY, ((DirectionTypes)m_idx));
+			} while (m_curr == nullptr && m_idx < NUM_DIRECTION_TYPES);
+		}
+		bool equal(adjacent_iterator_base const& other) const
+		{
+			return (this->m_centerX == other.m_centerX 
+				&& this->m_centerY == other.m_centerY 
+				&& this->m_idx == other.m_idx) 
+				|| (this->m_curr == NULL && other.m_curr == NULL);
+		}
+
+		Value_& dereference() const { return *m_curr; }
+
+		int m_centerX;
+		int m_centerY;
+		Value_* m_curr;
+		int m_idx;
+	};
+	typedef adjacent_iterator_base<CvPlot> adjacent_iterator;
+	typedef adjacent_iterator_base<CvPlot> adjacent_const_iterator;
+
+	adjacent_iterator beginAdjacent() { return adjacent_iterator(getX(), getY()); }
+	adjacent_iterator endAdjacent() { return adjacent_iterator(); }
+	adjacent_const_iterator beginAdjacent() const { return adjacent_const_iterator(getX(), getY()); }
+	adjacent_const_iterator endAdjacent() const { return adjacent_const_iterator(); }
 
 	// ==========================================================================================
 	// PAGING SYSTEM
