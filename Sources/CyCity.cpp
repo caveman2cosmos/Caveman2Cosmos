@@ -2379,6 +2379,11 @@ bool CyCity::hasBonus(int /*BonusTypes */iBonus)
 	return m_pCity ? m_pCity->hasBonus((BonusTypes) iBonus) : false;
 }
 
+bool CyCity::hasVicinityBonus(int iBonus)
+{
+	return m_pCity ? m_pCity->hasVicinityBonus(static_cast<BonusTypes>(iBonus)) : false;
+}
+
 int CyCity::getBuildingProduction(int /*BuildingTypes*/ iIndex)
 {
 	return m_pCity ? m_pCity->getBuildingProduction((BuildingTypes) iIndex) : -1;

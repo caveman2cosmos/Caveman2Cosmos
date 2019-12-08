@@ -3050,6 +3050,7 @@ class CvMainInterface:
 		screen.setTableColumnHeader(ID, 0, "", a8thX)
 		screen.setTableColumnHeader(ID, 1, "", a8thX - 24)
 		screen.setTableColumnRightJustify(ID, 1)
+		uFont3	= self.aFontList[3]
 
 		iRow = -1
 		if not TAB: # Properties display
@@ -3058,8 +3059,9 @@ class CvMainInterface:
 			pProperties = CyCity.getProperties()
 			iPropertyNum = pProperties.getNumProperties()
 			for i in xrange(iPropertyNum):
-				szLeftBuffer = uFont2 + pProperties.getPropertyDisplay(i)
 				eProperty = pProperties.getProperty(i)
+				info = GC.getPropertyInfo(eProperty)
+				szLeftBuffer = uFont3 + u"%c " % info.getChar() + uFont2 + info.getText()
 				iChange = pProperties.getChangeByProperty(eProperty)
 				szRightBuffer = uFont2 + str(pProperties.getValue(i)) + " ( "
 				if iChange >= 0:
@@ -3079,7 +3081,7 @@ class CvMainInterface:
 		# Bonus List
 		for szName, iBonus, szChar, iTotalResourceCount, iTotalExport in aList1:
 			iRow += 1
-			szLeftBuffer = uFont1b + szChar + szName + " ("
+			szLeftBuffer = uFont3 + szChar + uFont1b + szName + " ("
 			szTemp = ""
 			iTotalImport = CyPlayer.getBonusImport(iBonus)
 			iHomemade = iTotalResourceCount - iTotalImport
@@ -5112,14 +5114,19 @@ class CvMainInterface:
 					self.bBuildWorkQueue = True
 
 			elif iData in (13, 16, 31): # A D S
-				if self.InCity and True not in (bAlt, bCtrl, bShift):
-					iTab = {13:0, 16:2, 31:1}[iData]
+				if self.InCity:
+					if bCtrl and iData == 16 and self.InCity.iPlayer == self.iPlayer:
+						GAME.selectedCitiesGameNetMessage(GameMessageTypes.GAMEMESSAGE_DO_TASK, TaskTypes.TASK_CONSCRIPT, -1, -1, False, False, False, False)
+						return 1
 
-					if iTab == self.iCityTab:
-						self.exitCityTab(screen, iTab)
-					else:
-						self.openCityTab(screen, iTab)
-					return 1
+					elif not (bAlt or bCtrl or bShift):
+						iTab = {13:0, 16:2, 31:1}[iData]
+
+						if iTab == self.iCityTab:
+							self.exitCityTab(screen, iTab)
+						else:
+							self.openCityTab(screen, iTab)
+						return 1
 
 			elif iData in (45, 49, 56): # Ctrl, Shift, Alt
 				dataTT = self.dataTT

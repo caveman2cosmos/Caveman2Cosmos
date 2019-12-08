@@ -42,7 +42,7 @@ Settings
 #endif
 
 // ### Boost root dir ###
-.BOOST_PATH     = '$BUILD_DIR$/deps'
+.BOOST_PATH         = '$BUILD_DIR$/deps'
 
 // ### Include paths ###
 .GLOBAL_INCS        = ' /I"$TOOLKIT$/include"' 
@@ -78,7 +78,7 @@ Settings
     .CLOptions      = ' /GR'
                     + ' /MD'
                     + ' /Gy'
-                    + ' /W3' // Most warnings are enabled
+                    + ' /W3'                        // Most warnings are enabled
                     + ' /EHsc'
                     + ' /Gd'
                     + ' /Gm-'
@@ -89,11 +89,11 @@ Settings
                     + ' $INCS$'
                     + ' /nologo'
                     + ' /Fd"CvGameCoreDLL.pdb"'
-                    + ' /Z7' // Old style PDB
+                    + ' /Z7'                        // Old style PDB so that parallel compilation will work
 
-    .LDOptions      = ' /OUT:"%2"' // Output
-                    + ' "%1"' // Input
-                    + ' /LTCG'
+    .LDOptions      = ' /OUT:"%2"'                  // Output
+                    + ' "%1"'                       // Input
+                    + ' /LTCG'                      // Link time code generation enabled, only operative on FinalRelease
                     + ' /DLL'
                     + ' /NOLOGO'
                     + ' /SUBSYSTEM:WINDOWS'
@@ -103,7 +103,7 @@ Settings
                     + ' /NODEFAULTLIB:msvcprtd.lib'
                     + ' /DEF:CvGameCoreDLL.def'
                     + ' /PDBALTPATH:%_PDB%'
-                    // + ' /INCREMENTAL:NO'
+                    + ' /INCREMENTAL:NO'
                     + ' /DEBUG'
                     + ' $LIBS$'
 ]
@@ -113,10 +113,10 @@ Settings
 [
     Using(.ConfigCommon)
 
-    .CLOptions      + ' /Od' // Debug
+    .CLOptions      + ' /Od' // No optimizations
                     + ' /RTC1' 
                     + ' /D_DEBUG'
-                    //+ ' /ZI' // Edit and continue PDB, it won't work with multiprocess compilation
+                    //+ ' /ZI' // Edit and continue PDB, it won't work with parallel compilation
 ]
 
 // Base for release like configs (with optimization in general)
@@ -191,62 +191,63 @@ Settings
 Unity( 'Sources-Unity' )
 {
     .UnityInputPath = '$SOURCE_DIR$'
-    // Couldn't get exclude pattern matching to work so we will just explicitly list all Cy files for now.
-    // These are excluded from the unity files as boost::python generates a LOT of code, which causes 
-    // obj file to exceed max allowed size for COFF format. /bigobj isn't implemented in our compiler so we
-    // can't do much about this. On the up side we don't care about inlining for Python calls, they are 
-    // not going to get inlined by the optimizer anyway probably.
-    .UnityInputIsolatedFiles = {
-        'CyArea.cpp',
-        'CyAreaInterface.cpp',
-        'CyArgsList.cpp',
-        'CyArtFileMgr.cpp',
-        'CyArtFileMgrInterface.cpp',
-        'CyCity.cpp',
-        'CyCityInterface1.cpp',
-        'CyCityInterface2.cpp',
-        'CyDeal.cpp',
-        'CyEnumsInterface.cpp',
-        'CyGame.cpp',
-        'CyGameCoreUtils.cpp',
-        'CyGameCoreUtilsInterface.cpp',
-        'CyGameInterface.cpp',
-        'CyGameTextMgr.cpp',
-        'CyGameTextMgrInterface.cpp',
-        'CyGlobalContext.cpp',
-        'CyGlobalContextInterface1.cpp',
-        'CyGlobalContextInterface2.cpp',
-        'CyGlobalContextInterface3.cpp',
-        'CyGlobalContextInterface4.cpp',
-        'CyHallOfFameInfo.cpp',
-        'CyHallOfFameInterface.cpp',
-        'CyInfoInterface1.cpp',
-        'CyInfoInterface2.cpp',
-        'CyInfoInterface3.cpp',
-        'CyInfoInterface4.cpp',
-        'CyMap.cpp',
-        'CyMapGenerator.cpp',
-        'CyMapGeneratorInterface.cpp',
-        'CyMapInterface.cpp',
-        'CyMessageControl.cpp',
-        'CyMessageControlInterface.cpp',
-        'CyPlayer.cpp',
-        'CyPlayerInterface1.cpp',
-        'CyPlayerInterface2.cpp',
-        'CyPlayerInterface3.cpp',
-        'CyPlot.cpp',
-        'CyPlotInterface1.cpp',
-        'CyPropertiesInterface.cpp',
-        'CyRandomInterface.cpp',
-        'CyReplayInfo.cpp',
-        'CySelectionGroup.cpp',
-        'CySelectionGroupInterface.cpp',
-        'CyStructsInterface1.cpp',
-        'CyTeam.cpp',
-        'CyTeamInterface.cpp',
-        'CyUnit.cpp',
-        'CyUnitInterface1.cpp'
-    }
+    .UnityInputExcludePattern = '*/Cy*'
+    // // Couldn't get exclude pattern matching to work so we will just explicitly list all Cy files for now.
+    // // These are excluded from the unity files as boost::python generates a LOT of code, which causes 
+    // // obj file to exceed max allowed size for COFF format. /bigobj isn't implemented in our compiler so we
+    // // can't do much about this. On the up side we don't care about inlining for Python calls, they are 
+    // // not going to get inlined by the optimizer anyway probably.
+    // .UnityInputIsolatedFiles = {
+    //     'CyArea.cpp',
+    //     'CyAreaInterface.cpp',
+    //     'CyArgsList.cpp',
+    //     'CyArtFileMgr.cpp',
+    //     'CyArtFileMgrInterface.cpp',
+    //     'CyCity.cpp',
+    //     'CyCityInterface1.cpp',
+    //     'CyCityInterface2.cpp',
+    //     'CyDeal.cpp',
+    //     'CyEnumsInterface.cpp',
+    //     'CyGame.cpp',
+    //     'CyGameCoreUtils.cpp',
+    //     'CyGameCoreUtilsInterface.cpp',
+    //     'CyGameInterface.cpp',
+    //     'CyGameTextMgr.cpp',
+    //     'CyGameTextMgrInterface.cpp',
+    //     'CyGlobalContext.cpp',
+    //     'CyGlobalContextInterface1.cpp',
+    //     'CyGlobalContextInterface2.cpp',
+    //     'CyGlobalContextInterface3.cpp',
+    //     'CyGlobalContextInterface4.cpp',
+    //     'CyHallOfFameInfo.cpp',
+    //     'CyHallOfFameInterface.cpp',
+    //     'CyInfoInterface1.cpp',
+    //     'CyInfoInterface2.cpp',
+    //     'CyInfoInterface3.cpp',
+    //     'CyInfoInterface4.cpp',
+    //     'CyMap.cpp',
+    //     'CyMapGenerator.cpp',
+    //     'CyMapGeneratorInterface.cpp',
+    //     'CyMapInterface.cpp',
+    //     'CyMessageControl.cpp',
+    //     'CyMessageControlInterface.cpp',
+    //     'CyPlayer.cpp',
+    //     'CyPlayerInterface1.cpp',
+    //     'CyPlayerInterface2.cpp',
+    //     'CyPlayerInterface3.cpp',
+    //     'CyPlot.cpp',
+    //     'CyPlotInterface1.cpp',
+    //     'CyPropertiesInterface.cpp',
+    //     'CyRandomInterface.cpp',
+    //     'CyReplayInfo.cpp',
+    //     'CySelectionGroup.cpp',
+    //     'CySelectionGroupInterface.cpp',
+    //     'CyStructsInterface1.cpp',
+    //     'CyTeam.cpp',
+    //     'CyTeamInterface.cpp',
+    //     'CyUnit.cpp',
+    //     'CyUnitInterface1.cpp'
+    // }
 
     .UnityOutputPath        = '$BUILD_DIR$\unity'
     .UnityInputPathRecurse  = false
@@ -270,15 +271,22 @@ ForEach( .Config in .Configs )
     // Building objs
     ObjectList( '$ConfigName$-Objs' )
     {
-        .CompilerInputUnity = 'Sources-Unity'
+        .CompilerInputPath = '$SOURCE_DIR$'
         .CompilerInputPathRecurse = false
+        .CompilerInputPattern = 'Cy*.cpp'
+        
+        .CompilerInputFilesRoot = '$SOURCE_DIR$'
+        .CompilerInputFiles = 'CvGameCoreDLL.cpp'
+
+        .CompilerInputUnity = 'Sources-Unity'
+
         .CompilerOutputPath = '$TARGET_DIR$'
 
-        .PCHInputFile       = '$SOURCE_DIR$/CvGameCoreDLL.cpp'
-        .PCHOutputFile      = '$TARGET_DIR$/CvGameCoreDLL.pch'
+        .PCHInputFile       = '$SOURCE_DIR$/_precompile.cpp'
+        .PCHOutputFile      = '$TARGET_DIR$/C2C.pch'
         .PCHOptions         = ' "%1"' // PCH .CPP Input
                             + ' /Fo"%3"' // .OBJ Output
-                            + ' /YcCvGameCoreDLL.h' // PCH Header
+                            + ' /Yc"CvGameCoreDLL.h"' // PCH Header
                             + ' /Fp"%2"' // .PCH File
                             + ' $CLOptions$'
                             + ' /DBUILD_TARGET=$ConfigName$'
@@ -286,7 +294,7 @@ ForEach( .Config in .Configs )
 
         .CompilerOptions    = ' "%1"' // .CPP Input
                             + ' /Fo"%2"' // .OBJ Output
-                            + ' /YuCvGameCoreDLL.h' // PCH Header
+                            + ' /Yu"CvGameCoreDLL.h"' // PCH Header
                             + ' /Fp"$PCHOutputFile$"' // .PCH File
                             + ' $CLOptions$'
                             + ' /DBUILD_TARGET=$ConfigName$'

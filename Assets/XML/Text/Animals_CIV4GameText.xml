@@ -229,7 +229,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ARCTICFOX_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth/Story/Stories - Arctic Fox[NEWLINE][ICON_BULLET]Myth - Dogs[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure[NEWLINE][ICON_BULLET]Fox Traps and Fur Farm</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth/Story/Stories - Arctic Fox, Myth - Dogs, Wolf Cage and Enclosure, Fox Traps and Fur Farm</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Renard arctique[NEWLINE][ICON_BULLET]Myth of Dogs[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure[NEWLINE][ICON_BULLET]Fox Traps and Fur Farm</French>
 	</TEXT>
 	<TEXT>
@@ -273,7 +273,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DHOLE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Dhole[NEWLINE][ICON_BULLET]Myth of Canines[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Dhole, Myth of Canines, Wolf Cage and Enclosure</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Cuon d'Asie[NEWLINE][ICON_BULLET]Myth of Canines[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure</French>
 	</TEXT>
 	<TEXT>
@@ -316,7 +316,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DINGO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Dingo[NEWLINE][ICON_BULLET]Dog Breeder and Kennels[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Dingo, Dog Breeder, Kennels, Wolf Cage and Enclosure</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Dingo[NEWLINE][ICON_BULLET]Dog Breeder and Kennels[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure</French>
 	</TEXT>
 	<TEXT>
@@ -360,7 +360,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_EWOLF_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Ethiopian Wolf and  Wolves[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Ethiopian Wolf and  Wolves, Wolf Cage and Enclosure</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Loup Ethiopien[NEWLINE][ICON_BULLET]Myths of Wolves[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure</French>
 	</TEXT>
 	<TEXT>
@@ -404,7 +404,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_FENNECFOX_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Fennec Fox and Wolves[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure[NEWLINE][ICON_BULLET]Fox Traps and Fur Farm</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Fennec Fox and Wolves, Wolf Cage,  Enclosure, Fox Traps and Fur Farm</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Fennec[NEWLINE][ICON_BULLET]Myths of Sky and Birds[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure</French>
 	</TEXT>
 	<TEXT>
@@ -448,7 +448,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MANEDWOLF_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Maned Wolf and Wolves[NEWLINE][ICON_BULLET] Kennels, Wolf Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Maned Wolf and Wolves, Kennels, Wolf Cage and Enclosure</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Loup à crinière[NEWLINE][ICON_BULLET]Myths of Sky and Birds[NEWLINE][ICON_BULLET]Bird Cage and Enclosure[NEWLINE][ICON_BULLET]Feather Worker and Parrots</French>
 	</TEXT>
 	<TEXT>
@@ -478,7 +478,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_REDFOX_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Redfox[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure[NEWLINE][ICON_BULLET]Canine Totem</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Redfox, Wolf Cage and Enclosure, Canine Totem</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Redfox[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure[NEWLINE][ICON_BULLET]Canine Totem</French>
 	</TEXT>
 	<TEXT>
@@ -521,7 +521,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_THYLACINE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Thylacine[NEWLINE][ICON_BULLET]Remains - Thylacine[NEWLINE][ICON_BULLET]Myth - Marsupial and Paleolithic Marsupial</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Thylacine, Remains - Thylacine, Myth - Marsupial and Paleolithic Marsupial</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires - Thylacine[NEWLINE][ICON_BULLET]Restes - Thylacine[NEWLINE][ICON_BULLET]Myth - Marsupial and Paleolithic Marsupial</French>
 	</TEXT>
 	<TEXT>
@@ -561,7 +561,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICANELEPHANT_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - African Elephant[NEWLINE][ICON_BULLET]Myth - Elephant[NEWLINE][ICON_BULLET]Master Hnter[NEWLINE][ICON_BULLET]Carnival; Exotic Herbavours Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - African Elephant, Myth - Elephant, Master Hunter, Carnival, Exotic Herbivore Cage and Enclosure</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires - un Eléphant d'Afrique[NEWLINE][ICON_BULLET]Myth - Elephant[NEWLINE][ICON_BULLET]Master Hnter[NEWLINE][ICON_BULLET]Carnival; Exotic Herbavours Cage and Enclosure</French>
 	</TEXT>
 	<TEXT>
@@ -591,7 +591,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ELEPHANT_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Asian Elephant[NEWLINE][ICON_BULLET]Myth - Elephant[NEWLINE][ICON_BULLET]Master Hnter[NEWLINE][ICON_BULLET]Carnival; Exotic Herbavours Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Asian Elephant, Myth - Elephant, Master Hunter, Carnival; Exotic Herbivore Cage and Enclosure</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires - Asian Elephant[NEWLINE][ICON_BULLET]Myth - Elephant[NEWLINE][ICON_BULLET]Master Hnter[NEWLINE][ICON_BULLET]Carnival; Exotic Herbavours Cage and Enclosure</French>
 	</TEXT>
 	<TEXT>
@@ -698,7 +698,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DART_FROG_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Dart Frog[NEWLINE][ICON_BULLET]Myth - Amphibians[NEWLINE][ICON_BULLET]Amphibian Pond and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Dart Frog, Myth - Amphibians, Amphibian Pond and Enclosure</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou plusieurs Histoires des  Grenouilles venimeuses[NEWLINE][ICON_BULLET]Mythe - Amphibiens[NEWLINE][ICON_BULLET]Mare à amphibiens et enclos</French>
 	</TEXT>
 	<TEXT>
@@ -803,7 +803,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TARANTULA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tarantula[NEWLINE][ICON_BULLET]Myth of Bugs[NEWLINE][ICON_BULLET]Bug Cage and Enclosure[NEWLINE][ICON_BULLET]Bug Catcher</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tarantula, Myth of Bugs, Bug Cage and Enclosure, Bug Catcher</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Tarentule[NEWLINE][ICON_BULLET]Myth of Bugs[NEWLINE][ICON_BULLET]Bug Cage and Enclosure[NEWLINE][ICON_BULLET]Bug Catcher</French>
 	</TEXT>
 	<TEXT>
@@ -898,7 +898,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PYGMYHIPPO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Pygmy Hippopotamus[NEWLINE][ICON_BULLET]Exotic Herbavour Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Pygmy Hippopotamus, Exotic Herbivore Cage and Enclosure</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des  Hippopotames nains[NEWLINE][ICON_BULLET]Cage et Enclos pour herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
@@ -943,7 +943,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CUSCUS_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Cuscus[NEWLINE][ICON_BULLET]Myth - Marsupial[NEWLINE][ICON_BULLET]Marsupial Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Cuscus, Myth - Marsupial, Marsupial Cage and Enclosure</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des  couscous[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
@@ -1012,7 +1012,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_NUMBAT_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Numbat[NEWLINE][ICON_BULLET]Myth - Marsupial[NEWLINE][ICON_BULLET]Marsupial Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Numbat, Myth - Marsupial, Marsupial Cage and Enclosure</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des  numbats[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
@@ -1056,7 +1056,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_OPOSSUM_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Opossum[NEWLINE][ICON_BULLET]Myth - Marsupial[NEWLINE][ICON_BULLET]Marsupial Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Opossum, Myth - Marsupial, Marsupial Cage and Enclosure</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des  opossums[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
@@ -1169,7 +1169,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WOMBAT_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Wombat[NEWLINE][ICON_BULLET]Myths of Earth and Marsupials[NEWLINE][ICON_BULLET]Marsupial Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Wombat, Myths of Earth and Marsupials, Marsupial Cage and Enclosure</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des  Wombats[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
@@ -1203,7 +1203,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_AARDVARK_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Aardvark[NEWLINE][ICON_BULLET]Myth of Earth[NEWLINE][ICON_BULLET] Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Aardvark, Myth of Earth,  Cage and Enclosure</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des  Oryctéropes du Cap[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
@@ -1247,7 +1247,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ARMADILLO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Armadillo[NEWLINE][ICON_BULLET]Myths of Earth[NEWLINE][ICON_BULLET]Worker Totem</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Armadillo, Myths of Earth, Worker Totem</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des  tatous[NEWLINE][ICON_BULLET]Mythe de la Terre[NEWLINE][ICON_BULLET]Totem du travail</French>
 	</TEXT>
 	<TEXT>
@@ -1338,7 +1338,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BABIRUSA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Babirusa[NEWLINE][ICON_BULLET]Myth of Boar, Pig Herd[NEWLINE][ICON_BULLET]Exotic Herbavours Cage and Enclosure[NEWLINE][ICON_BULLET]Master Hunter and Boar Camp</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Babirusa, Myth of Boar, Pig Herd, Exotic Herbivore Cage and Enclosure, Master Hunter and Boar Camp</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Babiroussa[NEWLINE][ICON_BULLET]Myth of Boar, Pig Herd[NEWLINE][ICON_BULLET]Exotic Herbavours Cage and Enclosure[NEWLINE][ICON_BULLET]Master Hunter and Boar Camp</French>
 	</TEXT>
 	<TEXT>
@@ -1498,7 +1498,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GLYPTO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Glyptodon[NEWLINE][ICON_BULLET]Remains - Glyptodon[NEWLINE][ICON_BULLET]Earth Myth</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Glyptodon, Remains - Glyptodon, Earth Myth</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Constuit[COLOR_REVERT] un Mythe, une ou des Histoires - Glyptodon[NEWLINE][ICON_BULLET]Restes - Glyptodon[NEWLINE][ICON_BULLET]Mythe la Terre</French>
 	</TEXT>
 	<TEXT>
@@ -1546,7 +1546,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GROUNDSLOTH_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Ground Sloth[NEWLINE][ICON_BULLET]Remains - Ground Sloth</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Ground Sloth, Remains - Ground Sloth</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires - Xénarthre[NEWLINE][ICON_BULLET]Remains - Xénarthre</French>
 	</TEXT>
 	<TEXT>
@@ -1687,7 +1687,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PLATYPUS_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Platypus[NEWLINE][ICON_BULLET]Myths of Monotremes, Sea and Birds</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Platypus, Myths of Monotremes, Sea and Birds</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Ornithorynque[NEWLINE][ICON_BULLET]Myths of Monotremes, Sea and Birds</French>
 	</TEXT>
 	<TEXT>
@@ -1732,7 +1732,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TREESLOTH_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tree Sloth[NEWLINE][ICON_BULLET]Exoctic Herbavours Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tree Sloth, Exotic Herbivore Cage and Enclosure</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Paresseux[NEWLINE][ICON_BULLET]Exoctic Herbavours Cage and Enclosure</French>
 	</TEXT>
 	<TEXT>
@@ -2287,7 +2287,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ELASMOTHERIUM_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story, Stories and Remains -  Elasmotherium[NEWLINE][ICON_BULLET]Myths - Rhino and Unicorn[NEWLINE][ICON_BULLET]Exotic Herbavour Cage and Enclosure[NEWLINE][ICON_BULLET]Master Hunter, Rhino Camp</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story, Stories and Remains -  Elasmotherium, Myths - Rhino and Unicorn, Exotic Herbivore Cage and Enclosure, Master Hunter, Rhino Camp</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou des Histoires du Rhinocéros indien [NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Nosorożce</Polish>
 	</TEXT>
@@ -2329,19 +2329,19 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_INDIAN_RHINO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Rhinoceros, Indian[NEWLINE][ICON_BULLET]Myth - Rhinoceros and Unicorn[NEWLINE][ICON_BULLET]Exotic Herbavour Cage and Enclosure[NEWLINE][ICON_BULLET]Rhino camp and master Hunter</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Rhinoceros, Indian, Myth - Rhinoceros and Unicorn, Exotic Herbivore Cage and Enclosure, Rhino camp and master Hunter</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou des Histoires du Rhinocéros indien [NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Nosorożce</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_JAVA_RHINO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Rhinoceros, Java[NEWLINE][ICON_BULLET]Myth - Rhinoceros and Unicorn[NEWLINE][ICON_BULLET]Exotic Herbavour Cage and Enclosure[NEWLINE][ICON_BULLET]Rhino camp and master Hunter</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Rhinoceros, Java, Myth - Rhinoceros and Unicorn, Exotic Herbivore Cage and Enclosure, Rhino camp and master Hunter</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou des Histoires du Rhinocéros de Java[NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Nosorożce</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WHITE_RHINO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Rhinoceros, White[NEWLINE][ICON_BULLET]Myth - Rhinoceros and Unicorn[NEWLINE][ICON_BULLET]Exotic Herbavour Cage and Enclosure[NEWLINE][ICON_BULLET]Rhino camp and master Hunter</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Rhinoceros, White, Myth - Rhinoceros and Unicorn, Exotic Herbivore Cage and Enclosure, Rhino camp and master Hunter</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou des Histoires du Rhinocéros blanc[NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Nosorożce</Polish>
 	</TEXT>
@@ -2438,7 +2438,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BAIRDS_TAPIR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tapir and Tapir, Bairds[NEWLINE][ICON_BULLET]Exotic Herbavours Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tapir and Tapir, Bairds, Exotic Herbivores Cage and Enclosure</English>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Tapira</Polish>
 	</TEXT>
 	<TEXT>
@@ -2491,7 +2491,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MALAYAN_TAPIR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tapir and Tapir, Malayan[NEWLINE][ICON_BULLET]Exotic Herbavours Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tapir and Tapir, Malayan, Exotic Herbivores Cage and Enclosure</English>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Tapira</Polish>
 	</TEXT>
 	<TEXT>
@@ -2526,7 +2526,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MOUNTAIN_TAPIR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tapir and Tapir, Mountain[NEWLINE][ICON_BULLET]Exotic Herbavours Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tapir and Tapir, Mountain, Exotic Herbivores Cage and Enclosure</English>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Tapira</Polish>
 	</TEXT>
 	<TEXT>
@@ -2952,7 +2952,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAIMAN_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Caiman[NEWLINE][ICON_BULLET]Myth - Crocodiles[NEWLINE][ICON_BULLET]Bird Cage and Enclosure[NEWLINE][ICON_BULLET]Feather Worker and Parrots</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Caiman, Myth - Crocodiles, Bird Cage and Enclosure, Feather Worker and Parrots</English>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Kajman</Polish>
 	</TEXT>
 	<TEXT>
@@ -3023,7 +3023,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GATOR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Americian Alligator[NEWLINE][ICON_BULLET]Master Hunter, Myth - Reptile, Crocodile and Dragon[NEWLINE][ICON_BULLET]Reptile and Bad Boy Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Americian Alligator, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Aligator Amerykański</Polish>
 	</TEXT>
 	<TEXT>
@@ -3078,7 +3078,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GHARIAL_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gharial[NEWLINE][ICON_BULLET]Master Hunter, Myth - Reptile, Crocodile and Dragon[NEWLINE][ICON_BULLET]Reptile and Bad Boy Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gharial, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Gawial</Polish>
 	</TEXT>
 	<TEXT>
@@ -3133,7 +3133,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_NILECROC_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Nile Crocodile[NEWLINE][ICON_BULLET]Master Hunter, Myth - Reptile, Crocodile and Dragon[NEWLINE][ICON_BULLET]Reptile and Bad Boy Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Nile Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Krokodyl Nilowy</Polish>
 	</TEXT>
 	<TEXT>
@@ -3394,23 +3394,23 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BRAZILIAN_TAPIR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tapir and Tapir, Brazilian[NEWLINE][ICON_BULLET]Exotic Herbavours Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tapir and Tapir, Brazilian, Exotic Herbivores Cage and Enclosure</English>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Tapira</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BLACK_RHINO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Rhinocerous, Black; Rhino and Unicorn Myth, Master Hunter and Exotic Herbavours Cage</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Rhinocerous, Black; Rhino and Unicorn Myth, Master Hunter and Exotic Herbivores Cage</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou des Histoires du Rhinocéros noir [NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Nosorożce</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CROCODILE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Crocodile[NEWLINE][ICON_BULLET]Master Hunter, Myth - Reptile, Crocodile and Dragon[NEWLINE][ICON_BULLET]Reptile and Bad Boy Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Krokodyl</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DIREWOLF_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Dire Wolf[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure[NEWLINE][ICON_BULLET]Kennels and various Dog Breeds</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Dire Wolf, Wolf Cage and Enclosure, Kennels and various Dog Breeds</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires - Loup sinistre[NEWLINE][ICON_BULLET]Cage à Loup et enclos[NEWLINE][ICON_BULLET]Chennils et élevage des chiens variés</French>
 	</TEXT>
 	<TEXT>
@@ -3425,7 +3425,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GATOR_ASIAN_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Chinese Alligator[NEWLINE][ICON_BULLET]Master Hunter, Myth - Reptile, Crocodile and Dragon[NEWLINE][ICON_BULLET]Reptile and Bad Boy Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Chinese Alligator, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Aligator Chiński</Polish>
 	</TEXT>
 	<TEXT>
@@ -3436,7 +3436,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_LIZARD_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Lizard[NEWLINE][ICON_BULLET]Myths of Earth and Reptiles[NEWLINE][ICON_BULLET]Reptile Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Lizard, Myths of Earth and Reptiles, Reptile Cage and Enclosure</English>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Jaszczurki</Polish>
 	</TEXT>
 	<TEXT>
@@ -3446,17 +3446,17 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_POSSUM_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Possum[NEWLINE][ICON_BULLET]Myth of Marsupial[NEWLINE][ICON_BULLET]Marsupial Cage and Enclosure[NEWLINE][ICON_BULLET]Feather Worker and Parrots</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Possum, Myth of Marsupial, Marsupial Cage and Enclosure, Feather Worker and Parrots</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des  Phalangers communs[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RIVER_CROC_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  River Crocodile[NEWLINE][ICON_BULLET]Master Hunter, Myth - Reptile, Crocodile and Dragon[NEWLINE][ICON_BULLET]Reptile and Bad Boy Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  River Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Krokodyl Błotny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SALTWATER_CROC_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Saltwater Crocodile[NEWLINE][ICON_BULLET]Master Hunter, Myth - Reptile, Crocodile and Dragon[NEWLINE][ICON_BULLET]Reptile and Bad Boy Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Saltwater Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Krokodyl Różańcowy</Polish>
 	</TEXT>
 	<TEXT>
@@ -4521,7 +4521,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ROCKHOPPER_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Rockhopper Penguin[NEWLINE][ICON_BULLET]Myths of Sea, Flightless Birds and Sea Birds[NEWLINE][ICON_BULLET]Bird Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Rockhopper Penguin, Myths of Sea, Flightless Birds and Sea Birds, Bird Cage and Enclosure</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construisez[COLOR_REVERT] les Mythes et Histoires des Gorfous[NEWLINE][ICON_BULLET]Permet les Mythes de la mer, Oiseaux terrestres et Oiseaux marins[NEWLINE][ICON_BULLET]Cages et enclos à Oiseaux</French>
 	</TEXT>
 	<TEXT>
@@ -4555,7 +4555,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SEALION_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Sea Lion and Pinnipeds[NEWLINE][ICON_BULLET]Pinniped Cage and Enclosure[NEWLINE][ICON_BULLET]Trained Seal</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Sea Lion and Pinnipeds, Pinniped Cage and Enclosure, Trained Seal</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SEALION_LAND_HELP</Tag>
@@ -4587,7 +4587,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WALRUS_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Walrus and Pinnipeds[NEWLINE][ICON_BULLET]Pinniped Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Walrus and Pinnipeds, Pinniped Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALRUS_MYTH</Tag>
@@ -4663,7 +4663,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_REEF_SHARK_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Reef shark[NEWLINE][ICON_BULLET]Myths of Sea and Sharks[NEWLINE][ICON_BULLET]Master Sea Hunter and Wonders of the Deep[NEWLINE][ICON_BULLET]Marine and Shark Institute</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Reef shark, Myths of Sea and Sharks, Master Sea Hunter and Wonders of the Deep, Marine and Shark Institute</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REEF_SHARK_MYTH</Tag>
@@ -4707,7 +4707,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WHALESHARK_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Whaleshark[NEWLINE][ICON_BULLET]Myths of Sea and Sharks[NEWLINE][ICON_BULLET]Master Sea Hunter and Wonders of the Deep[NEWLINE][ICON_BULLET]Marine and Shark Institute</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Whaleshark, Myths of Sea and Sharks, Master Sea Hunter and Wonders of the Deep, Marine and Shark Institute</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_MYTH</Tag>
@@ -4833,7 +4833,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ZEBRA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Zebra and Horse[NEWLINE][ICON_BULLET]Zebra Herd and Hunter's Camp[NEWLINE][ICON_BULLET]Carnival and Exotic Herbavour Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Zebra and Horse, Zebra Herd and Hunter's Camp, Carnival and Exotic Herbivore Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_MYTH</Tag>

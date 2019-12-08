@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Smart">
+      <UniqueIdentifier>{d8bd2b4f-bde8-4920-8bcd-8b00a65d1d47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Smart">
+      <UniqueIdentifier>{786fdd94-8455-45ee-8b56-cbcd36fcc5e8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="_precompile.cpp">
@@ -456,6 +462,15 @@
     <ClCompile Include="logging.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SCvDebug.cpp">
+      <Filter>Source Files\Smart</Filter>
+    </ClCompile>
+    <ClCompile Include="SCvInternalGlobals.cpp">
+      <Filter>Source Files\Smart</Filter>
+    </ClCompile>
+    <ClCompile Include="SCyDebug.cpp">
+      <Filter>Source Files\Smart</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BetterBTSAI.h">
@@ -895,6 +910,15 @@
     </ClInclude>
     <ClInclude Include="hash.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SCvInternalGlobals.h">
+      <Filter>Header Files\Smart</Filter>
+    </ClInclude>
+    <ClInclude Include="SCvDebug.h">
+      <Filter>Header Files\Smart</Filter>
+    </ClInclude>
+    <ClInclude Include="SCyDebug.h">
+      <Filter>Header Files\Smart</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

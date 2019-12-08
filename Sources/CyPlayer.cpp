@@ -2338,6 +2338,16 @@ python::tuple CyPlayer::nextCity(int iterIn, bool bRev)
 	return tup;
 }
 
+CyCity* CyPlayer::nthCity(int n, bool bRev)
+{
+	FAssert(n >= 0);
+	int it;
+	CvCity* c = m_pPlayer->firstCity(&it, bRev);
+	for (; n > 0; --n)
+		c = m_pPlayer->nextCity(&it, bRev);
+	return new CyCity(c);
+}
+
 int CyPlayer::getNumCities()
 {
 	return m_pPlayer ? m_pPlayer->getNumCities() : -1;

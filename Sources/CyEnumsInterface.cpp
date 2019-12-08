@@ -479,7 +479,7 @@ void CyEnumsPythonInterface()
 		.value("WIDGET_CITY_GOTO", WIDGET_CITY_GOTO)
 		.value("WIDGET_PEDIA_JUMP_TO_ROUTE", WIDGET_PEDIA_JUMP_TO_ROUTE)
 		.value("WIDGET_HELP_IMPROVEMENT_ACTUAL", WIDGET_HELP_IMPROVEMENT_ACTUAL)
-		.value("WIDGET_HELP_BUILDUP", WIDGET_HELP_BUILDUP)	
+		.value("WIDGET_HELP_BUILDUP", WIDGET_HELP_BUILDUP)
 
 		.value("NUM_WIDGET_TYPES", NUM_WIDGET_TYPES)
 		;
@@ -630,7 +630,7 @@ void CyEnumsPythonInterface()
 		/********************************************************************************/
 		/**		REVOLUTION_MOD							END								*/
 		/********************************************************************************/
-		
+
 /************************************************************************************************/
 /* Afforess			 		Last Update: 7/21/10                                                */
 /*                              New Gameoptions                                                 */
@@ -720,7 +720,7 @@ void CyEnumsPythonInterface()
 #endif
 /************************************************************************************************/
 /*C2C                                     End                                                */
-/************************************************************************************************/		
+/************************************************************************************************/
 
 		//.value("NUM_GAMEOPTION_TYPES", NUM_GAMEOPTION_TYPES)
 		;
@@ -969,7 +969,7 @@ void CyEnumsPythonInterface()
 		.value("TASK_CHANGE_WORKING_PLOT", TASK_CHANGE_WORKING_PLOT)
 		.value("TASK_CLEAR_WORKING_OVERRIDE", TASK_CLEAR_WORKING_OVERRIDE)
 		.value("TASK_HURRY", TASK_HURRY)
-		.value("TASK_CONSCRIPT", TASK_HURRY)
+		.value("TASK_CONSCRIPT", TASK_CONSCRIPT)
 		.value("TASK_CLEAR_ORDERS", TASK_CLEAR_ORDERS)
 		.value("TASK_RALLY_PLOT", TASK_RALLY_PLOT)
 		.value("TASK_CLEAR_RALLY_PLOT", TASK_CLEAR_RALLY_PLOT)
@@ -1995,7 +1995,7 @@ void CyEnumsPythonInterface()
 		.value("PANEL_STYLE_BLUELARGE",PANEL_STYLE_BLUELARGE)
 		.value("PANEL_STYLE_UNITSTAT",PANEL_STYLE_UNITSTAT)
 		.value("PANEL_STYLE_BLUE50",PANEL_STYLE_BLUE50)
-		
+
 		.value("PANEL_STYLE_TOPBAR",PANEL_STYLE_TOPBAR)
 		.value("PANEL_STYLE_BOTTOMBAR",PANEL_STYLE_BOTTOMBAR)
 		.value("PANEL_STYLE_TECH",PANEL_STYLE_TECH)
@@ -2019,7 +2019,7 @@ void CyEnumsPythonInterface()
 		.value("PANEL_STYLE_CITY_COLUMNC",PANEL_STYLE_CITY_COLUMNC)
 		.value("PANEL_STYLE_CITY_COLUMNR",PANEL_STYLE_CITY_COLUMNR)
 		.value("PANEL_STYLE_CITY_TITLE",PANEL_STYLE_CITY_TITLE)
-	
+
 		.value("PANEL_STYLE_DAWN",PANEL_STYLE_DAWN)
 		.value("PANEL_STYLE_DAWNTOP",PANEL_STYLE_DAWNTOP)
 		.value("PANEL_STYLE_DAWNBOTTOM",PANEL_STYLE_DAWNBOTTOM)
@@ -2049,7 +2049,7 @@ void CyEnumsPythonInterface()
 		.value("BUTTON_STYLE_SQUARE", BUTTON_STYLE_SQUARE)
 		.value("BUTTON_STYLE_TOOL", BUTTON_STYLE_TOOL)
 		.value("BUTTON_STYLE_DEFAULT", BUTTON_STYLE_DEFAULT)
-		
+
 		.value("BUTTON_STYLE_CIRCLE", BUTTON_STYLE_CIRCLE)
 		.value("BUTTON_STYLE_CITY_B01", BUTTON_STYLE_CITY_B01)
 		.value("BUTTON_STYLE_CITY_B02TL", BUTTON_STYLE_CITY_B02TL)
@@ -2178,7 +2178,7 @@ void CyEnumsPythonInterface()
 		.value("GAMEMESSAGE_FILE_INFO", GAMEMESSAGE_FILE_INFO)
 		.value("GAMEMESSAGE_PICK_YOUR_CIV", GAMEMESSAGE_PICK_YOUR_CIV)
 		.value("GAMEMESSAGE_CIV_CHOICE", GAMEMESSAGE_CIV_CHOICE)
-		.value("GAMEMESSAGE_CONFIRM_CIV_CLAIM", GAMEMESSAGE_CONFIRM_CIV_CLAIM) 
+		.value("GAMEMESSAGE_CONFIRM_CIV_CLAIM", GAMEMESSAGE_CONFIRM_CIV_CLAIM)
 		.value("GAMEMESSAGE_CLAIM_INFO", GAMEMESSAGE_CLAIM_INFO)
 		.value("GAMEMESSAGE_CIV_CHOICE_ACK", GAMEMESSAGE_CIV_CHOICE_ACK)
 		.value("GAMEMESSAGE_CIV_CHOICE_NACK", GAMEMESSAGE_CIV_CHOICE_NACK)
@@ -2360,7 +2360,7 @@ void CyEnumsPythonInterface()
 		.value("ADVANCEDSTARTACTION_VISIBILITY", ADVANCEDSTARTACTION_VISIBILITY)
 		.value("ADVANCEDSTARTACTION_AUTOMATE", ADVANCEDSTARTACTION_AUTOMATE)
 		;
-		
+
 /************************************************************************************************/
 /* Afforess	                  Start		 06/01/10                                               */
 /*                                                                                              */
@@ -2368,7 +2368,7 @@ void CyEnumsPythonInterface()
 /************************************************************************************************/
 	python::enum_<ModderOptionTypes>("ModderOptionTypes")
 		.value("NO_MODDEROPTION", NO_MODDEROPTION)
-		
+
 		.value("MODDEROPTION_FLEXIBLE_DIFFICULTY", MODDEROPTION_FLEXIBLE_DIFFICULTY)
 		.value("MODDEROPTION_SHOW_COASTAL_BUILDINGS", MODDEROPTION_SHOW_COASTAL_BUILDINGS)
 		.value("MODDEROPTION_HIDE_OBSOLETE_BUILDINGS", MODDEROPTION_HIDE_OBSOLETE_BUILDINGS)
@@ -2417,14 +2417,14 @@ void CyEnumsPythonInterface()
 		.value("MODDEROPTION_UPGRADE_MIN_GOLD", MODDEROPTION_UPGRADE_MIN_GOLD)
 		.value("MODDEROPTION_HIDE_AUTO_PROMOTE", MODDEROPTION_HIDE_AUTO_PROMOTE)
 		.value("MODDEROPTION_INFRASTRUCTURE_IGNORES_IMPROVEMENTS", MODDEROPTION_INFRASTRUCTURE_IGNORES_IMPROVEMENTS)
-		
+
 		.value("NUM_MODDEROPTION_TYPES", NUM_MODDEROPTION_TYPES)
 
 		;
 
 	python::enum_<ModderGameOptionTypes>("ModderGameOptionTypes")
 		.value("NO_MODDERGAMEOPTION", NO_MODDERGAMEOPTION)
-		
+
 		.value("MODDERGAMEOPTION_DEFENDER_WITHDRAW", MODDERGAMEOPTION_DEFENDER_WITHDRAW)
 		.value("MODDERGAMEOPTION_MAX_UNITS_PER_TILES", MODDERGAMEOPTION_MAX_UNITS_PER_TILES)
 		.value("MODDERGAMEOPTION_MAX_BOMBARD_DEFENSE", MODDERGAMEOPTION_MAX_BOMBARD_DEFENSE)
@@ -2442,7 +2442,7 @@ void CyEnumsPythonInterface()
 		.value("MODDERGAMEOPTION_STRATEGIC_EVENTS", MODDERGAMEOPTION_STRATEGIC_EVENTS)
 		.value("MODDERGAMEOPTION_NO_AUTO_CORPORATION_FOUNDING", MODDERGAMEOPTION_NO_AUTO_CORPORATION_FOUNDING)
 		.value("MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY", MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY)
-		
+
 		.value("NUM_MODDERGAMEOPTION_TYPES", NUM_MODDERGAMEOPTION_TYPES)
 	;
 /************************************************************************************************/
@@ -2493,14 +2493,14 @@ void CyEnumsPythonInterface()
 		.value("BUILDING_FILTER_SHOW_WATER_POLLUTION", BUILDING_FILTER_SHOW_WATER_POLLUTION)
 		.value("BUILDING_FILTER_SHOW_TOURISM", BUILDING_FILTER_SHOW_TOURISM)
 		;
-	
+
 	python::enum_<BuildingGroupingTypes>("BuildingGroupingTypes")
 		.value("NO_BUILDING_GROUPING", NO_BUILDING_GROUPING)
 		.value("BUILDING_GROUPING_SINGLE", BUILDING_GROUPING_SINGLE)
 		.value("BUILDING_GROUPING_WONDER_TYPE", BUILDING_GROUPING_WONDER_TYPE)
 		.value("BUILDING_GROUPING_DOMAIN", BUILDING_GROUPING_DOMAIN)
 		;
-	
+
 	python::enum_<BuildingSortTypes>("BuildingSortTypes")
 		.value("NO_BUILDING_SORT", NO_BUILDING_SORT)
 		.value("BUILDING_SORT_NAME", BUILDING_SORT_NAME)
@@ -2516,7 +2516,7 @@ void CyEnumsPythonInterface()
 		.value("BUILDING_SORT_CRIME", BUILDING_SORT_CRIME)
 		.value("BUILDING_SORT_FLAMMABILITY", BUILDING_SORT_FLAMMABILITY)
 		;
-	
+
 	python::enum_<UnitFilterTypes>("UnitFilterTypes")
 		.value("NO_UNIT_FILTER", NO_UNIT_FILTER)
 		.value("UNIT_FILTER_HIDE_BASIC_INVISIBLE", UNIT_FILTER_HIDE_BASIC_INVISIBLE)
@@ -2535,7 +2535,7 @@ void CyEnumsPythonInterface()
 		.value("UNIT_FILTER_SHOW_DEFENSE", UNIT_FILTER_SHOW_DEFENSE)
 		.value("UNIT_FILTER_SHOW_MISSIONARY", UNIT_FILTER_SHOW_MISSIONARY)
 		;
-	
+
 	python::enum_<UnitGroupingTypes>("UnitGroupingTypes")
 		.value("NO_UNIT_GROUPING", NO_UNIT_GROUPING)
 		.value("UNIT_GROUPING_SINGLE", UNIT_GROUPING_SINGLE)
@@ -2543,7 +2543,7 @@ void CyEnumsPythonInterface()
 		.value("UNIT_GROUPING_DOMAIN", UNIT_GROUPING_DOMAIN)
 		.value("UNIT_GROUPING_HERO", UNIT_GROUPING_HERO)
 		;
-	
+
 	python::enum_<UnitSortTypes>("UnitSortTypes")
 		.value("NO_UNIT_SORT", NO_UNIT_SORT)
 		.value("UNIT_SORT_NAME", UNIT_SORT_NAME)
