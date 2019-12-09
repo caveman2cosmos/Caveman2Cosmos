@@ -8328,7 +8328,7 @@ void CvGame::doHeadquarters()
 
 								if (bHasBonus)
 								{
-									int iValue = getSorenRandNum(10, "Found Religion (Player)");
+									int iValue = getSorenRandNum(10, "Found Corporation (Player)");
 
 									if (!kLoopPlayer.isHuman())
 									{
