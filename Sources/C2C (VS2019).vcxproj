@@ -371,6 +371,7 @@
     <ClCompile Include="IntExpr.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="algorithm2.h" />
     <ClInclude Include="BetterBTSAI.h" />
     <ClInclude Include="copy_iterator.h" />
     <ClInclude Include="CvPlotPaging.h" />

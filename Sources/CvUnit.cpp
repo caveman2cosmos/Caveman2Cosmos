@@ -2238,6 +2238,30 @@ void CvUnit::updateAirCombat(bool bQuick)
 	}
 }
 
+namespace {
+	bool unitsAtWar(const TeamTypes ourTeam, const CvUnit* theirUnit)
+	{
+		return GET_TEAM(theirUnit->getTeam()).isAtWar(ourTeam);
+	}
+
+	bool plotHasEnemy(const TeamTypes ourTeam, const CvPlot& ignorePlot, const CvPlot& plot)
+	{
+		return plot != ignorePlot && std::any_of(plot.beginUnits(), plot.endUnits(), boost::bind(unitsAtWar, ourTeam, _1));
+	}
+
+	bool plotHasAdjacentEnemy(const TeamTypes ourTeam, const CvPlot& ignorePlot, const CvPlot& plot)
+	{
+		return std::any_of(plot.beginAdjacent(), plot.endAdjacent(), boost::bind(plotHasEnemy, ourTeam, boost::cref(ignorePlot), _1));
+	}
+
+	bool canWithdrawToPlot(const CvUnit* withdrawingUnit, const CvPlot& toPlot)
+	{
+		return withdrawingUnit->canMoveInto(&toPlot)
+			&& !plotHasEnemy(withdrawingUnit->getTeam(), *withdrawingUnit->plot(), toPlot)
+			&& !plotHasAdjacentEnemy(withdrawingUnit->getTeam(), *withdrawingUnit->plot(), toPlot);
+	}
+}
+
 void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition& kBattle, bool bSamePlot)
 {
 	PROFILE_FUNC();
@@ -2759,65 +2783,19 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 				{
 					if (DefenderWithdrawalRollResult < AdjustedDefWithdraw)
 					{
-						bool bEnemy = true;
-						for (int iPlot = 0; iPlot < NUM_DIRECTION_TYPES; iPlot++)
+						CvPlot::adjacent_iterator itr = std::find_if(plot()->beginAdjacent(), plot()->endAdjacent(), boost::bind(canWithdrawToPlot, pDefender, _1));
+						if (itr != plot()->endAdjacent())
 						{
-							CvPlot* pAdjacentPlot = plotDirection(pDefender->plot()->getX_INLINE(), pDefender->plot()->getY_INLINE(), ((DirectionTypes)iPlot));
-							if (pAdjacentPlot != NULL)
-							{
-								if (pDefender->canMoveInto(pAdjacentPlot) || bSamePlot)
-								{
-									//Check that this tile is safe (ie, no attackers next to it)
-									if (!bSamePlot)
-									{
-										for (int iPlot2 = 0; iPlot2 < NUM_DIRECTION_TYPES; iPlot2++)
-										{
-											CvPlot* pAdjacentPlot2 = plotDirection(pAdjacentPlot->getX_INLINE(), pAdjacentPlot->getY_INLINE(), ((DirectionTypes)iPlot2));
-											if (pAdjacentPlot2 != NULL)
-											{
-												CLLNode<IDInfo>* pUnitNode;
-												pUnitNode = pAdjacentPlot2->headUnitNode();
-												CvUnit* pLoopUnit;
-												bEnemy = false;
-												while (pUnitNode != NULL)
-												{
-													pLoopUnit = ::getUnit(pUnitNode->m_data);
-													pUnitNode = pAdjacentPlot2->nextUnitNode(pUnitNode);	
-													if (GET_TEAM(pLoopUnit->getTeam()).isAtWar(pDefender->getTeam()))
-													{
-														bEnemy = true;
-														break;
-													}
-												}
-												if (bEnemy)
-												{
-													break;
-												}
-											}
-										}
-									}
-									if (!bEnemy || bSamePlot)
-									{
-										if (!bSamePlot)
-										{
-											m_combatResult.pPlot = pAdjacentPlot;
-										}
-										else
-										{
-											m_combatResult.pPlot = plot();
-										}
-										m_combatResult.bDefenderWithdrawn = true;
-										m_combatResult.bDeathMessaged = false;
+							m_combatResult.pPlot = &(*itr);
+							m_combatResult.bDefenderWithdrawn = true;
+							m_combatResult.bDeathMessaged = false;
 
-										pDefender->changeExperience100(getExperiencefromWithdrawal(AdjustedDefWithdraw) * 10, pDefender->maxXPValue(), true, pPlot->getOwnerINLINE() == pDefender->getOwnerINLINE(), (!isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
-										changeExperience100(10, maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+							pDefender->changeExperience100(getExperiencefromWithdrawal(AdjustedDefWithdraw) * 10, pDefender->maxXPValue(), true, pPlot->getOwnerINLINE() == pDefender->getOwnerINLINE(), (!isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+							changeExperience100(10, maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
 
-										bDoDynamic = false;
-										//doDynamicXP(pDefender, pPlot, iAttackerInitialDamage, iWinningOdds, iDefenderInitialDamage, iInitialAttXP, iInitialDefXP, iInitialAttGGXP, iInitialDefGGXP, false, false);
-										return;
-									}
-								}
-							}
+							bDoDynamic = false;
+							//doDynamicXP(pDefender, pPlot, iAttackerInitialDamage, iWinningOdds, iDefenderInitialDamage, iInitialAttXP, iInitialDefXP, iInitialAttGGXP, iInitialDefGGXP, false, false);
+							return;
 						}
 					}
 					else if (DefenderWithdrawalRollResult < iDefenderWithdraw && DefenderWithdrawalRollResult > AdjustedDefWithdraw)
@@ -2891,49 +2869,12 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 								m_combatResult.bDefenderKnockedBack = true;
 								m_combatResult.bDeathMessaged = false;
 
-								bool bEnemy = true;
-								for (int iPlot = 0; iPlot < NUM_DIRECTION_TYPES; iPlot++)
+								CvPlot::adjacent_iterator itr = std::find_if(plot()->beginAdjacent(), plot()->endAdjacent(), boost::bind(canWithdrawToPlot, pDefender, _1));
+								if (itr != plot()->endAdjacent())
 								{
-									CvPlot* pAdjacentPlot = plotDirection(pDefender->plot()->getX_INLINE(), pDefender->plot()->getY_INLINE(), ((DirectionTypes)iPlot));
-									if (pAdjacentPlot != NULL)
-									{
-										if (pDefender->canMoveInto(pAdjacentPlot))
-										{
-											//Check that this tile is safe (ie, no attackers next to it)
-											for (int iPlot2 = 0; iPlot2 < NUM_DIRECTION_TYPES; iPlot2++)
-											{
-												CvPlot* pAdjacentPlot2 = plotDirection(pAdjacentPlot->getX_INLINE(), pAdjacentPlot->getY_INLINE(), ((DirectionTypes)iPlot2));
-												if (pAdjacentPlot2 != NULL)
-												{
-													CLLNode<IDInfo>* pUnitNode;
-													pUnitNode = pAdjacentPlot2->headUnitNode();
-													CvUnit* pLoopUnit;
-													bEnemy = false;
-													while (pUnitNode != NULL)
-													{
-														pLoopUnit = ::getUnit(pUnitNode->m_data);
-														pUnitNode = pAdjacentPlot2->nextUnitNode(pUnitNode);	
-														if (GET_TEAM(pLoopUnit->getTeam()).isAtWar(pDefender->getTeam()))
-														{
-															bEnemy = true;
-															break;
-														}
-													}
-													if (bEnemy)
-													{
-														break;
-													}
-												}
-											}
-											if (!bEnemy)
-											{
-												m_combatResult.pPlot = pAdjacentPlot;
-						
-												changeExperience100(getExperiencefromWithdrawal(AdjustedKnockback) * 15, maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
-												return;
-											}
-										}
-									}
+									m_combatResult.pPlot = &(*itr);
+									changeExperience100(getExperiencefromWithdrawal(AdjustedKnockback) * 15, maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+									return;
 								}
 							}
 							else if ((KnockbackRollResult < iAttackerKnockback) && (KnockbackRollResult > AdjustedKnockback))
@@ -4759,6 +4700,9 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 
 			if (m_combatResult.pPlot != NULL && !bSamePlot)
 			{
+				FAssertMsg(m_combatResult.pPlot != plot(), "Can't escape back to attacker plot");
+				FAssertMsg(m_combatResult.pPlot != pDefender->plot(), "Can't escape back to own plot");
+
 				//defender escapes to a safe plot
 				pDefender->move(m_combatResult.pPlot, true, true);
 				bAdvance = canAdvance(pPlot, ((pDefender->canDefend() && !pDefender->isDead() && pDefender->plot() == pPlot) ? 1 : 0));
@@ -4774,17 +4718,13 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				{
 					if( getGroup() != NULL )
 					{
-						if (bAdvance)
+						if (bAdvance 
+							&& getGroup() != NULL
+							&& pPlot->getNumVisiblePotentialEnemyDefenders(this) == 0)
 						{
-							if( getGroup() != NULL)
-							{
-								if (pPlot->getNumVisiblePotentialEnemyDefenders(this) == 0)
-								{
-									PROFILE("CvUnit::updateCombat.Advance");
+							PROFILE("CvUnit::updateCombat.Advance");
 		
-									getGroup()->groupMove(pPlot, true, ((bAdvance) ? this : NULL));
-								}
-							}
+							getGroup()->groupMove(pPlot, true, ((bAdvance) ? this : NULL));
 						}
 						else if (!bStealthDefense && !m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
 						{
@@ -4795,12 +4735,9 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					else
 					{
 						//TB Combat Mod (Stampede) end
-						if (plot() != NULL)
+						if (!bStealthDefense)
 						{
-							if (!bStealthDefense)
-							{
-								changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
-							}
+							changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 						}
 						checkRemoveSelectionAfterAttack();
 					}
@@ -4843,7 +4780,8 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 		else if (m_combatResult.bAttackerRepelled)
 		{
 			if (!m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
-			{	if (isHuman())
+			{
+				if (isHuman())
 				{
 					MEMORY_TRACK_EXEMPT();
 					if (BARBARIAN_PLAYER != eDefender)
@@ -4857,7 +4795,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
 					}
 				}
-		
 				else
 				{
 
@@ -4891,11 +4828,9 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_STAMPEDE_HIDDEN", getNameKey(), pDefender->getNameKey());
 						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
 					}
-				}
-		
+				}	
 				else
 				{
-
 					MEMORY_TRACK_EXEMPT();
 
 					if (BARBARIAN_PLAYER != eAttacker)
@@ -4927,10 +4862,8 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
 					}
 				}
-		
 				else
 				{
-
 					MEMORY_TRACK_EXEMPT();
 
 					if (BARBARIAN_PLAYER != eAttacker)
@@ -4951,7 +4884,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
 			{
 				bFinish = false;
-				attack(pPlot,true);
+				attack(pPlot, true);
 			}
 			else
 			{
@@ -5092,6 +5025,9 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 
 			if (m_combatResult.pPlot != NULL)
 			{
+				FAssertMsg(m_combatResult.pPlot != plot(), "Can't get knocked back to attacker plot");
+				FAssertMsg(m_combatResult.pPlot != pDefender->plot(), "Can't get knocked back to own plot");
+
 				//defender escapes to a safe plot
 				pDefender->setFortifyTurns(0);
 				pDefender->move(m_combatResult.pPlot, true);
@@ -5177,7 +5113,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					}
 				}
 			}
-			//TB Combat Mod (Stampede) begin							
+			//TB Combat Mod (Stampede) begin
 			else if (m_combatResult.bAttackerStampedes)
 			{
 				MEMORY_TRACK_EXEMPT();
@@ -7095,11 +7031,7 @@ bool CvUnit::canMoveThrough(const CvPlot* pPlot, bool bDeclareWar) const
 void CvUnit::attack(CvPlot* pPlot, bool bQuick, bool bStealth, bool bNoCache)
 {
 	PROFILE_FUNC();
-
-	if (plot() != pPlot && !bStealth && !bNoCache)
-	{
-		FAssert(canMoveInto(pPlot, true));
-	}
+	FAssert(plot() == pPlot || bStealth || bNoCache || canMoveInto(pPlot, true));
 	FAssert(getCombatTimer() == 0);
 /************************************************************************************************/
 /* Afforess	                  Start		 02/22/10                    Coded by: KillMePlease     */
@@ -7125,8 +7057,8 @@ void CvUnit::attack(CvPlot* pPlot, bool bQuick, bool bStealth, bool bNoCache)
 				attack(pPlot, bStealthDefense, bStealthDefense);
 			}
 		}
-		CvPlot* aPlot = plot();
 #ifdef STRENGTH_IN_NUMBERS
+		CvPlot* aPlot = plot();
 		if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 		{
 			setAttackFromPlot(aPlot);
@@ -7135,7 +7067,7 @@ void CvUnit::attack(CvPlot* pPlot, bool bQuick, bool bStealth, bool bNoCache)
 		//TB Combat Mods end
 		setAttackPlot(pPlot, false);
 
-
+		FAssertMsg(pPlot != plot(), "We are passing in false for bSamePlot so why are we on the same plot? (This is here to confirm if the bSamePlot parameter actually means what it says or not, we might remove the parameter or rename it if the assert is hit)");
 		updateCombat(bQuick, 0, false, false, bStealth, bNoCache);
 	}
 }
@@ -19303,6 +19235,8 @@ bool CvUnit::atPlot(const CvPlot* pPlot) const
 
 CvPlot* CvUnit::plot() const
 {
+	//FAssertMsg(isInViewport(), "Can't get plot of unit that is not in the viewport");
+	//FAssertMsg(!isUsingDummyEntities(), "Can't get plot of unit that is using dummy entities");
 	return GC.getMapINLINE().plotSorenINLINE(getX_INLINE(), getY_INLINE());
 }
 
