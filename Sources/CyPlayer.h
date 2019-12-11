@@ -570,7 +570,6 @@ public:
 	bool isNoCivicUpkeep(int /*CivicOptionTypes*/ iIndex);
 	int getHasReligionCount(int /*ReligionTypes*/ eIndex);
 	int countTotalHasReligion();
-	int findHighestHasReligionCount();
 	int getHasCorporationCount(int /*CorporationTypes*/ eIndex);
 	int countTotalHasCorporation();
 

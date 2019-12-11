@@ -315,17 +315,17 @@ public:
 	virtual int AI_sumStrength(const CvPlot* pAttackedPlot = NULL, DomainTypes eDomainType = NO_DOMAIN, StackCompare::flags flags = StackCompare::None) const = 0;
 	virtual void AI_queueGroupAttack(int iX, int iY) = 0;
 	virtual void AI_cancelGroupAttack() = 0;
-	virtual bool AI_isGroupAttack() = 0;
+	virtual bool AI_isGroupAttack() const = 0;
 
-	virtual bool AI_isControlled() = 0;
+	virtual bool AI_isControlled() const = 0;
 	virtual bool AI_isDeclareWar(const CvPlot* pPlot = NULL) = 0;
-	virtual CvPlot* AI_getMissionAIPlot() = 0;
-	virtual bool AI_isForceSeparate() = 0;
+	virtual CvPlot* AI_getMissionAIPlot() const = 0;
+	virtual bool AI_isForceSeparate() const = 0;
 	virtual void AI_makeForceSeparate() = 0;
-	virtual MissionAITypes AI_getMissionAIType() = 0;
+	virtual MissionAITypes AI_getMissionAIType() const = 0;
 	virtual void AI_setMissionAI(MissionAITypes eNewMissionAI, CvPlot* pNewPlot, CvUnit* pNewUnit) = 0;
 	virtual void AI_noteSizeChange(int iChange, int iVolume) = 0;
-	virtual CvUnit* AI_getMissionAIUnit() = 0;
+	virtual CvUnit* AI_getMissionAIUnit() const = 0;
 	virtual CvUnit* AI_ejectBestDefender(CvPlot* pTargetPlot, bool allowAllDefenders = false) = 0;
 	virtual bool AI_hasBeneficialPropertyEffectForCity(CvCity* pCity) const = 0;
 	virtual CvUnit* AI_ejectBestPropertyManipulator(CvCity* pTargetCity) = 0;

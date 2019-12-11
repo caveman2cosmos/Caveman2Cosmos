@@ -2178,11 +2178,6 @@ int CyPlayer::countTotalHasCorporation()
 	return m_pPlayer ? m_pPlayer->countTotalHasCorporation() : -1;
 }
 
-int CyPlayer::findHighestHasReligionCount()
-{
-	return m_pPlayer ? m_pPlayer->findHighestHasReligionCount() : -1;
-}
-
 int CyPlayer::getUpkeepCount(int /*UpkeepTypes*/ eIndex)
 {
 	return m_pPlayer ? m_pPlayer->getUpkeepCount((UpkeepTypes) eIndex) : -1;

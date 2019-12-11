@@ -31,7 +31,6 @@ public:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	void logMsg(char* format, ... );
 	bool isRebel() const;
 	bool isSingleCityTeam() const;
 	bool isRebelAgainst( TeamTypes eTeam ) const;
@@ -87,7 +86,7 @@ public:
 	void meet(TeamTypes eTeam, bool bNewDiplo);																		// Exposed to Python
 	void signOpenBorders(TeamTypes eTeam);																				// Exposed to Python
 	void signDefensivePact(TeamTypes eTeam);																			// Exposed to Python
-	bool canSignDefensivePact(TeamTypes eTeam);
+	bool canSignDefensivePact(TeamTypes eTeam) const;
 
 	int getAssets() const;																															// Exposed to Python
 	int getPower(bool bIncludeVassals) const;																																// Exposed to Python
@@ -99,7 +98,7 @@ public:
 
 #if defined QC_MASTERY_VICTORY
 //Sevo Begin--VCM
-	int getTotalVictoryScore();																												// Exposed to Python
+	int getTotalVictoryScore() const;																												// Exposed to Python
 //Sevo End VCM
 #endif
 	int getVotes(VoteTypes eVote, VoteSourceTypes eVoteSource) const;
@@ -112,8 +111,8 @@ public:
 /*                                                                                              */
 /************************************************************************************************/
 	int getCurrentMasterPower( bool bIncludeVassals ) const;
-	bool isMasterPlanningLandWar(CvArea* pArea);
-	bool isMasterPlanningSeaWar(CvArea* pArea);
+	bool isMasterPlanningLandWar(CvArea* pArea) const;
+	bool isMasterPlanningSeaWar(CvArea* pArea)const;
 	int getAtWarCount(bool bIgnoreMinors, bool bIgnoreVassals = false) const;																				// Exposed to Python
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
@@ -135,8 +134,8 @@ public:
 	int getHasReligionCount(ReligionTypes eReligion) const;															// Exposed to Python
 	int getHasCorporationCount(CorporationTypes eCorporation) const;															// Exposed to Python
 
-	int processedTeamCulture();
-	unsigned long long countTotalCulture();																											// Exposed to Python
+	int processedTeamCulture() const;
+	unsigned long long countTotalCulture() const;																											// Exposed to Python
 
 	int countNumUnitsByArea(CvArea* pArea) const;																				// Exposed to Python
 	int countNumCitiesByArea(CvArea* pArea) const;																			// Exposed to Python
@@ -297,8 +296,8 @@ public:
 	bool isCanFarmDesert() const;
 	void changeCanFarmDesertCount(int iChange);
 	
-	void signLimitedBorders(TeamTypes eTeam);	
-	bool canSignOpenBorders(TeamTypes eTeam);
+	void signLimitedBorders(TeamTypes eTeam);
+	bool canSignOpenBorders(TeamTypes eTeam) const;
 	void sendAmbassador(TeamTypes eTeam);
 	
 	int getFreeSpecialistCount(SpecialistTypes eIndex) const;
@@ -542,7 +541,7 @@ public:
 	void setTurnActive(bool bNewValue, bool bTurn = true);
 	bool isTurnActive() const;
 
-	bool hasShrine(ReligionTypes eReligion);
+	bool hasShrine(ReligionTypes eReligion) const;
 
 	DllExport void getCompletedSpaceshipProjects(std::map<ProjectTypes, int>& mapProjects) const;
 	DllExport int getProjectPartNumber(ProjectTypes projectType, bool bAssert) const;

@@ -1,28 +1,17 @@
-## Code for Caveman2Cosmos
-##
-## Gives a player a free gatherer when they discover the correct tech.
-##
-## When a city is conquered there is a chance that the conquerer's state religion will spread to the city.
-##
-## When a wooden ship is lost at sea there is the chance that a wreck improvement will be placed there.
-##
-
+##=========================##
+## MILITIA PROMOTIONS CODE ##
+## Code for Caveman2Cosmos ##
+##=========================##
 from CvPythonExtensions import *
-import BugUtil
-import CvUtil
 
 # globals
 gc = CyGlobalContext()
-#~ localText = CyTranslator()
 
 #~ gaiSettlerWorkerList = None
 gaiSettlerWorkerCombatList = None
 giMilInstCivic = -1
 
 def init():
-	BugUtil.debug("Caveman2Cosmos INIT.")
-
-	## MILITIA PROMOTIONS CODE ##
 	#~ global gaiSettlerWorkerList, giMilInstCivic, giVolArmyCivic
 	global giMilInstCivic, giVolArmyCivic, gaiSettlerWorkerCombatList
 	#~ gaiSettlerWorkerList = [gc.getInfoTypeForString("UNITCLASS_GATHERER"), gc.getInfoTypeForString("UNITCLASS_TRIBE"),
@@ -36,12 +25,12 @@ def init():
 					#~ gc.getInfoTypeForString("UNIT_CONSTRUCT_SHIP")
 					#~ ]
 
-	gaiSettlerWorkerCombatList =  [gc.getInfoTypeForString("UNITCOMBAT_SETTLER"), gc.getInfoTypeForString("UNITCOMBAT_WORKER"),
-							gc.getInfoTypeForString("UNITCOMBAT_SEA_WORKER")
-							]
+	gaiSettlerWorkerCombatList =  [	gc.getInfoTypeForString("UNITCOMBAT_SETTLER"),
+									gc.getInfoTypeForString("UNITCOMBAT_WORKER"),
+									gc.getInfoTypeForString("UNITCOMBAT_SEA_WORKER")]
 
-	giMilInstCivic = CvUtil.findInfoTypeNum(gc.getCivicInfo,gc.getNumCivicInfos(),'CIVIC_MILITARY_TRADITION')
-	giVolArmyCivic = CvUtil.findInfoTypeNum(gc.getCivicInfo,gc.getNumCivicInfos(),'CIVIC_VOLUNTEER_ARMY')
+	giMilInstCivic = gc.getInfoTypeForString("CIVIC_MILITARY_TRADITION")
+	giVolArmyCivic = gc.getInfoTypeForString("CIVIC_VOLUNTEER_ARMY")
 
 def onUnitBuilt( argsList):
 	'Unit Completed'
@@ -57,15 +46,15 @@ def onUnitBuilt( argsList):
 	iMilitaryCivic = 0
 	if pPlayer.isCivic(giMilInstCivic):
 		iMilitaryCivic = iMilitaryCivic + 1
-	if pPlayer.isCivic(giVolArmyCivic) :
+	if pPlayer.isCivic(giVolArmyCivic):
 		iMilitaryCivic = iMilitaryCivic + 1
-	if iMilitaryCivic > 0 :
+	if iMilitaryCivic > 0:
 		#~ if not (unit.getUnitType() in gaiSettlerWorkerList) and isWorldUnitClass(unit.getUnitClassType()) == False:
 		if not (unit.getUnitCombatType() in gaiSettlerWorkerCombatList) and isWorldUnitClass(unit.getUnitClassType()) == False:
 			iX = city.getX()
 			iY = city.getY()
 
-			if unit.getDomainType() == gc.getInfoTypeForString('DOMAIN_LAND'):
+			if unit.getDomainType() == DomainTypes.DOMAIN_LAND:
 				iNumCold = 0
 				iNumHot = 0
 				iNumBush = 0
@@ -83,6 +72,10 @@ def onUnitBuilt( argsList):
 				iScrub = gc.getInfoTypeForString('TERRAIN_SCRUB')
 				iSaltFlats = gc.getInfoTypeForString('TERRAIN_SALT_FLATS')
 				iMarsh = gc.getInfoTypeForString('TERRAIN_MARSH')
+				iCoast = gc.getInfoTypeForString('TERRAIN_COAST')
+				iForest = gc.getInfoTypeForString('FEATURE_FOREST')
+				iJungle = gc.getInfoTypeForString('FEATURE_JUNGLE')
+				iBamboo = gc.getInfoTypeForString('FEATURE_BAMBOO')
 
 				for iiX in range(iX-1, iX+2, 1):
 					for iiY in range(iY-1, iY+2, 1):
@@ -90,82 +83,50 @@ def onUnitBuilt( argsList):
 						iTerrain = pPlot.getTerrainType()
 						iFeature = pPlot.getFeatureType()
 						iPlot = pPlot.getPlotType()
-						if iTerrain == gc.getInfoTypeForString('TERRAIN_COAST'):
+						if iTerrain == iCoast:
 							iNumCoast = iNumCoast +1
-						if iTerrain == iDesert or iTerrain == iDunes:
-							iNumHot = iNumHot +1
+							continue
 						if (iPlot == iHills or pPlot.isPeak()):
 							iNumHill = iNumHill +1
-						if (iTerrain == iTundra or iTerrain == iSnow or iTerrain == iPermafrost):
-							iNumCold = iNumCold +1
-						if (iTerrain == iBarren or iTerrain == iRocky or iTerrain == iScrub or iTerrain == iSaltFlats or iTerrain == iMarsh):
-							iNumBush = iNumBush +1
-						if ((iFeature == gc.getInfoTypeForString('FEATURE_FOREST') or iFeature == gc.getInfoTypeForString('FEATURE_JUNGLE')) or iFeature == gc.getInfoTypeForString('FEATURE_BAMBOO')):
+						if iFeature == iForest or iFeature == iJungle or iFeature == iBamboo:
 							iNumTree = iNumTree + 1
+						if iTerrain == iDesert or iTerrain == iDunes:
+							iNumHot = iNumHot +1
+						elif iTerrain == iTundra or iTerrain == iSnow or iTerrain == iPermafrost:
+							iNumCold = iNumCold +1
+						elif iTerrain == iBarren or iTerrain == iRocky or iTerrain == iScrub or iTerrain == iSaltFlats or iTerrain == iMarsh:
+							iNumBush = iNumBush +1
 
-				iRnd = CyGame().getSorenRandNum(100, "")
-				if iRnd < (iNumTree * 1.25 * iMilitaryCivic):
-					iProposedPromotion = gc.getInfoTypeForString('PROMOTION_GREEN_WARDEN')
-					if unit.canAcquirePromotion(iProposedPromotion):
-						unit.setHasPromotion(iProposedPromotion, True)
-				iRnd = CyGame().getSorenRandNum(100, "")
-				if iRnd < (iNumCold * 1.25 * iMilitaryCivic):
-					iProposedPromotion = gc.getInfoTypeForString('PROMOTION_WINTERBORN')
-					if unit.canAcquirePromotion(iProposedPromotion):
-						unit.setHasPromotion(iProposedPromotion, True)
-				iRnd = CyGame().getSorenRandNum(100, "")
-				if iRnd < (iNumHot * 1.5 * iMilitaryCivic):
-					iProposedPromotion = gc.getInfoTypeForString('PROMOTION_SAND_DEVIL')
-					if unit.canAcquirePromotion(iProposedPromotion):
-						unit.setHasPromotion(iProposedPromotion, True)
-				iRnd = CyGame().getSorenRandNum(100, "")
-				if iRnd < iNumBush * 2 * iMilitaryCivic:
-					iProposedPromotion = gc.getInfoTypeForString('PROMOTION_BUSHMAN')
-					if unit.canAcquirePromotion(iProposedPromotion):
-						unit.setHasPromotion(iProposedPromotion, True)
-				iRnd = CyGame().getSorenRandNum(100, "")
-				if iRnd < (iNumHill * 1.5 * iMilitaryCivic):
-					iProposedPromotion = gc.getInfoTypeForString('PROMOTION_CLIFF_WALKER')
-					if unit.canAcquirePromotion(iProposedPromotion):
-						unit.setHasPromotion(iProposedPromotion, True)
-				iRnd = CyGame().getSorenRandNum(100, "")
-				if iRnd < (iNumCoast * 1.5 * iMilitaryCivic):
-					iProposedPromotion = gc.getInfoTypeForString('PROMOTION_AMPHIBIOUS')
-					if unit.canAcquirePromotion(iProposedPromotion):
-						unit.setHasPromotion(iProposedPromotion, True)
+				attemptPromotion(unit, (iNumTree  * 1.25 * iMilitaryCivic), "PROMOTION_GREEN_WARDEN")
+				attemptPromotion(unit, (iNumCold  * 1.25 * iMilitaryCivic), "PROMOTION_WINTERBORN")
+				attemptPromotion(unit, (iNumHot   * 1.5  * iMilitaryCivic), "PROMOTION_SAND_DEVIL")
+				attemptPromotion(unit, (iNumBush  * 2    * iMilitaryCivic), "PROMOTION_BUSHMAN")
+				attemptPromotion(unit, (iNumHill  * 1.5  * iMilitaryCivic), "PROMOTION_CLIFF_WALKER")
+				attemptPromotion(unit, (iNumCoast * 1.5  * iMilitaryCivic), "PROMOTION_AMPHIBIOUS")
 
-			if unit.getDomainType() == gc.getInfoTypeForString('DOMAIN_SEA'):
+			elif unit.getDomainType() == DomainTypes.DOMAIN_SEA:
 				iNumReef = 0
 				iNumIce = 0
-				iNumCoral = 0
-				iNumFresh = 0
-				iNumCoast = 0
-				iNumOcean = 0
 				iReef = gc.getInfoTypeForString('FEAURE_REEF')
 				iIce = gc.getInfoTypeForString('FEATURE_ICE')
 				iCoral = gc.getInfoTypeForString('FEAURE_CORAL')
 
 				for iiX in range(iX-1, iX+2, 1):
 					for iiY in range(iY-1, iY+2, 1):
-						pPlot = CyMap().plot(iiX,iiY)
-						iTerrain = pPlot.getTerrainType()
-						iFeature = pPlot.getFeatureType()
-						iPlot = pPlot.getPlotType()
+						iFeature = CyMap().plot(iiX,iiY).getFeatureType()
 						if iFeature == iReef or iFeature == iCoral:
 							iNumReef = iNumReef +1
-						if iFeature == iIce:
+						elif iFeature == iIce:
 							iNumIce = iNumIce +1
 
-				iRnd = CyGame().getSorenRandNum(100, "")
-				if iRnd < (iNumReef * 1.25 * iMilitaryCivic):
-					iProposedPromotion = gc.getInfoTypeForString('PROMOTION_COASTAL_ASSAULT1')
-					if unit.canAcquirePromotion(iProposedPromotion):
-						unit.setHasPromotion(iProposedPromotion, True)
-				iRnd = CyGame().getSorenRandNum(100, "")
-				if iRnd < (iNumIce * 1.25 * iMilitaryCivic):
-					iProposedPromotion = gc.getInfoTypeForString('PROMOTION_COASTAL_GUARD1')
-					if unit.canAcquirePromotion(iProposedPromotion):
-						unit.setHasPromotion(iProposedPromotion, True)
+				attemptPromotion(unit, (iNumReef * 1.25 * iMilitaryCivic), "PROMOTION_COASTAL_ASSAULT1")
+				attemptPromotion(unit, (iNumIce  * 1.25 * iMilitaryCivic), "PROMOTION_COASTAL_GUARD1")
+
+def attemptPromotion(pUnit, iChance, szProposedPromotion):
+	if CyRandom().get(100, "") < iChance:
+		ePromotion = gc.getInfoTypeForString(szProposedPromotion)
+		if pUnit.canAcquirePromotion(ePromotion):
+			pUnit.setHasPromotion(ePromotion, True)
 
 
 #END MILITIA PROMOTIONS CODE

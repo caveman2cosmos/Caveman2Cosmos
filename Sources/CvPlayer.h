@@ -1211,7 +1211,6 @@ public:
 
 	int getHasReligionCount(ReligionTypes eIndex) const;																							// Exposed to Python
 	int countTotalHasReligion() const;																																// Exposed to Python
-	int findHighestHasReligionCount() const;																													// Exposed to Python
 	void changeHasReligionCount(ReligionTypes eIndex, int iChange);
 
 	int getHasCorporationCount(CorporationTypes eIndex) const;																							// Exposed to Python

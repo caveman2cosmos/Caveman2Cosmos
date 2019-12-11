@@ -260,7 +260,6 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("countTotalHasReligion", &CyPlayer::countTotalHasReligion, "int () - ")
 		.def("getHasCorporationCount", &CyPlayer::getHasCorporationCount)
 		.def("countTotalHasCorporation", &CyPlayer::countTotalHasCorporation, "int () - ")
-		.def("findHighestHasReligionCount", &CyPlayer::findHighestHasReligionCount, "int () - ")
 		.def("getUpkeepCount", &CyPlayer::getUpkeepCount, "int (int (UpkeepTypes) eIndex)")
 
 		.def("isSpecialistValid", &CyPlayer::isSpecialistValid, "bool (int /*SpecialistTypes*/ iIndex)")
