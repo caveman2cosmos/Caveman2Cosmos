@@ -62,6 +62,27 @@ struct PromotionApply
 };
 DECLARE_FLAGS(PromotionApply::flags);
 
+struct MoveCheck
+{
+	enum flags 
+	{
+		None = 0,
+		// Checking for a potential attack
+		Attack = 1 << 0,
+		// Allow declaration of war (human only check)
+		DeclareWar = 1 << 1,
+		// Don't allow loading into transports
+		IgnoreLoad = 1 << 2,
+		IgnoreTileLimit = 1 << 3,
+		IgnoreLocation = 1 << 4,
+		IgnoreAttack = 1 << 5,
+		CheckForBest = 1 << 6,
+		Assassinate = 1 << 7,
+		Suprise = 1 << 8
+	};
+};
+DECLARE_FLAGS(MoveCheck::flags);
+
 
 /************************************************************************************************/
 /* Afforess	                  Start		 02/22/10                                               */
@@ -501,15 +522,22 @@ public:
 	bool canEnterTerritory(TeamTypes eTeam, bool bIgnoreRightOfPassage = false) const;						// Exposed to Python
 	bool canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage = false) const;						// Exposed to Python
 	TeamTypes getDeclareWarMove(const CvPlot* pPlot) const;															// Exposed to Python
-/************************************************************************************************/
-/* Afforess	                  Start		 06/17/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	bool canMoveInto(const CvPlot* pPlot, bool bAttack = false, bool bDeclareWar = false, bool bIgnoreLoad = false, bool bIgnoreTileLimit = false, bool bIgnoreLocation = false, bool bIgnoreAttack = false, CvUnit** pDefender = NULL, bool bCheckForBest = false, bool bAssassinate = false, bool bSuprise = false) const;	// Exposed to Python
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
+
+	bool canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags = MoveCheck::None, CvUnit** ppDefender = nullptr) const;
+	// Deprecated - use method above
+	//bool canMoveInto(const CvPlot* pPlot, 
+	//	bool bAttack = false, 
+	//	bool bDeclareWar = false, 
+	//	bool bIgnoreLoad = false, 
+	//	bool bIgnoreTileLimit = false,
+	//	bool bIgnoreLocation = false,
+	//	bool bIgnoreAttack = false,
+	//	CvUnit** pDefender = NULL,
+	//	bool bCheckForBest = false,
+	//	bool bAssassinate = false,
+	//	bool bSuprise = false) const;	// Exposed to Python
+
 	bool canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar = false) const;								// Exposed to Python
 	bool canMoveThrough(const CvPlot* pPlot, bool bDeclareWar = false) const;																								// Exposed to Python
 	void attack(CvPlot* pPlot, bool bQuick, bool bStealth = false, bool bNoCache = false);

@@ -85,7 +85,11 @@ int /*TeamTypes*/ CyUnit::getDeclareWarMove(CyPlot* pPlot)
 
 bool CyUnit::canMoveInto(CyPlot* pPlot, bool bAttack, bool bDeclareWar, bool bIgnoreLoad)
 {
-	return m_pUnit ? m_pUnit->canMoveInto(pPlot->getPlot(), bAttack, bDeclareWar, bIgnoreLoad) : false;
+	return m_pUnit ? m_pUnit->canMoveInto(pPlot->getPlot(), 
+		(bAttack ? MoveCheck::Attack : MoveCheck::None) |
+		(bDeclareWar ? MoveCheck::DeclareWar : MoveCheck::None) |
+		(bIgnoreLoad ? MoveCheck::IgnoreLoad : MoveCheck::None)
+	) : false;
 }
 
 bool CyUnit::canMoveOrAttackInto(CyPlot* pPlot, bool bDeclareWar)

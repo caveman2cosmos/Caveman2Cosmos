@@ -3603,7 +3603,7 @@ bool CvSelectionGroup::canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, C
 		case INTERFACEMODE_AIRSTRIKE:
 			if (pLoopUnit != NULL)
 			{
-				if (pLoopUnit->canMoveInto(pPlot, true))
+				if (pLoopUnit->canMoveInto(pPlot, MoveCheck::Attack))
 				{
 					return true;
 				}
@@ -4191,7 +4191,7 @@ bool CvSelectionGroup::canMoveIntoWithWar(CvPlot* pPlot, bool bAttack, bool bDec
 			pLoopUnit = ::getUnit(pUnitNode->m_data);
 			pUnitNode = nextUnitNode(pUnitNode);
 
-			if (pLoopUnit->canMoveInto(pPlot, bAttack, false, false, false))
+			if (pLoopUnit->canMoveInto(pPlot, bAttack? MoveCheck::Attack : MoveCheck::None))
 			{
 				return true;
 			}
@@ -5403,7 +5403,8 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 							if (bBombardExhausted)
 							{
 								CvUnit * pBestSacrifice = AI_getBestGroupSacrifice(pDestPlot, false, false, bNoBlitz, bStealth);
-								if (pBestSacrifice != NULL && pBestSacrifice->canMoveInto(pDestPlot, true, false, false, false, false, false, 0, false, false, bStealthDefense))
+								if (pBestSacrifice != NULL 
+									&& pBestSacrifice->canMoveInto(pDestPlot, MoveCheck::Attack | (bStealthDefense? MoveCheck::Suprise : MoveCheck::None)))
 								{
 									pBestAttackUnit = pBestSacrifice;
 								}
@@ -5654,7 +5655,7 @@ bool CvSelectionGroup::groupPathTo(int iX, int iY, int iFlags)
 
 	if (getDomainType() == DOMAIN_AIR)
 	{
-		if (!canMoveInto(pDestPlot) && !canMoveInto(pDestPlot, true))
+		if (!canMoveInto(pDestPlot) && !canMoveInto(pDestPlot, MoveCheck::Attack))
 		{
 			return false;
 		}
@@ -6176,10 +6177,6 @@ bool CvSelectionGroup::isAmphibPlot(const CvPlot* pPlot) const
 // Returns true if attempted an amphib landing...
 bool CvSelectionGroup::groupAmphibMove(CvPlot* pPlot, int iFlags)
 {
-	CLLNode<IDInfo>* pUnitNode1;
-	CvUnit* pLoopUnit1;
-	bool bLanding = false;
-
 	FAssert(getOwnerINLINE() != NO_PLAYER);
 
 	if (groupDeclareWar(pPlot))
@@ -6187,54 +6184,56 @@ bool CvSelectionGroup::groupAmphibMove(CvPlot* pPlot, int iFlags)
 		return true;
 	}
 
-	if (isAmphibPlot(pPlot))
+	if (!isAmphibPlot(pPlot))
 	{
+		return false;
+	}
+
 // BUG - Safe Move - start
-		// don't perform amphibious landing on plot that was unrevealed when goto order was issued
-		if (isHuman())
-		{
-			if (!isLastPathPlotRevealed())
-			{
-				return false;
-			}
-		}
+	// don't perform amphibious landing on plot that was unrevealed when goto order was issued
+	if (isHuman() && !isLastPathPlotRevealed())
+	{
+		return false;
+	}
 // BUG - Safe Move - end
 
-		if (stepDistance(getX(), getY(), pPlot->getX_INLINE(), pPlot->getY_INLINE()) == 1)
+	if (stepDistance(getX(), getY(), pPlot->getX_INLINE(), pPlot->getY_INLINE()) != 1)
+	{
+		return false;
+	}
+
+	bool bLanding = false;
+
+	// BBAI TODO: Bombard with warships if invading
+	for(unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
+	{
+		CvUnit* unit = *unitItr;
+
+		if (!unit->hasCargo() || unit->domainCargo() != DOMAIN_LAND)
 		{
-			pUnitNode1 = headUnitNode();
+			continue;
+		}
 
-			// BBAI TODO: Bombard with warships if invading
+		std::vector<CvUnit*> aCargoUnits;
+		unit->getCargoUnits(aCargoUnits);
 
-			while (pUnitNode1 != NULL)
+		std::vector<CvSelectionGroup*> aCargoGroups;
+		for (uint i = 0; i < aCargoUnits.size(); ++i)
+		{
+			CvSelectionGroup* pGroup = aCargoUnits[i]->getGroup();
+			if (std::find(aCargoGroups.begin(), aCargoGroups.end(), pGroup) == aCargoGroups.end())
 			{
-				pLoopUnit1 = ::getUnit(pUnitNode1->m_data);
-				pUnitNode1 = nextUnitNode(pUnitNode1);
+				aCargoGroups.push_back(aCargoUnits[i]->getGroup());
+			}
+		}
 
-				if ((pLoopUnit1->hasCargo()) && (pLoopUnit1->domainCargo() == DOMAIN_LAND))
-				{
-					std::vector<CvUnit*> aCargoUnits;
-					pLoopUnit1->getCargoUnits(aCargoUnits);
-					std::vector<CvSelectionGroup*> aCargoGroups;
-					for (uint i = 0; i < aCargoUnits.size(); ++i)
-					{
-						CvSelectionGroup* pGroup = aCargoUnits[i]->getGroup();
-						if (std::find(aCargoGroups.begin(), aCargoGroups.end(), pGroup) == aCargoGroups.end())
-						{
-							aCargoGroups.push_back(aCargoUnits[i]->getGroup());
-						}
-					}
-
-					for (uint i = 0; i < aCargoGroups.size(); ++i)
-					{
-						CvSelectionGroup* pGroup = aCargoGroups[i];
-						if (pGroup->canAllMove())
-						{
-							FAssert(!pGroup->at(pPlot->getX_INLINE(), pPlot->getY_INLINE()));
-							bLanding = pGroup->pushMissionInternal(MISSION_MOVE_TO, pPlot->getX_INLINE(), pPlot->getY_INLINE(), (MOVE_IGNORE_DANGER | iFlags));
-						}
-					}
-				}
+		for (uint i = 0; i < aCargoGroups.size(); ++i)
+		{
+			CvSelectionGroup* pGroup = aCargoGroups[i];
+			if (pGroup->canAllMove())
+			{
+				FAssert(!pGroup->at(pPlot->getX_INLINE(), pPlot->getY_INLINE()));
+				bLanding = pGroup->pushMissionInternal(MISSION_MOVE_TO, pPlot->getX_INLINE(), pPlot->getY_INLINE(), (MOVE_IGNORE_DANGER | iFlags));
 			}
 		}
 	}
@@ -7035,7 +7034,7 @@ bool CvSelectionGroup::canPathDirectlyToInternal(CvPlot* pFromPlot, CvPlot* pToP
 			if ( stepDistance(pAdjacentPlot->getX_INLINE(), pAdjacentPlot->getY_INLINE(), pToPlot->getX_INLINE(), pToPlot->getY_INLINE()) <
 				 stepDistance(pFromPlot->getX_INLINE(), pFromPlot->getY_INLINE(), pToPlot->getX_INLINE(), pToPlot->getY_INLINE()) )
 			{
-				if ( canMoveInto(pAdjacentPlot, (pAdjacentPlot == pToPlot)) )
+				if ( canMoveInto(pAdjacentPlot, (pAdjacentPlot == pToPlot)? MoveCheck::Attack : MoveCheck::None) )
 				{
 					if ( pAdjacentPlot == pToPlot )
 					{

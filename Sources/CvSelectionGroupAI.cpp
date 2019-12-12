@@ -687,10 +687,16 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 	iBestOdds = 0;
 	pBestUnit = NULL;
 
-	pUnitNode = headUnitNode();
 
-	bool bIsHuman = (pUnitNode != NULL) ? GET_PLAYER(::getUnit(pUnitNode->m_data)->getOwnerINLINE()).isHuman() : true;
+	const bool bIsHuman = (pUnitNode != NULL) ? GET_PLAYER(::getUnit(pUnitNode->m_data)->getOwnerINLINE()).isHuman() : true;
+
+	const MoveCheck::flags moveCheckFlags = MoveCheck::Attack |
+		(bPotentialEnemy ? MoveCheck::DeclareWar : MoveCheck::None) |
+		MoveCheck::CheckForBest |
+		(bAssassinate ? MoveCheck::Assassinate : MoveCheck::None) |
+		(bSuprise ? MoveCheck::Suprise : MoveCheck::None);
 			
+	pUnitNode = headUnitNode();
 	while (pUnitNode != NULL)
 	{
 		pLoopUnit = ::getUnit(pUnitNode->m_data);
@@ -723,7 +729,7 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 				if (bForce || pLoopUnit->canMove())
 				{
 					CvUnit* pBestDefender = NULL;
-					if ( bForce || pLoopUnit->canMoveInto(pPlot, /*bAttack*/ true, /*bDeclareWar*/ bPotentialEnemy, false, false, false, false, &pBestDefender, true, bAssassinate, bSuprise))
+					if (bForce || pLoopUnit->canMoveInto(pPlot, moveCheckFlags, &pBestDefender))
 					{
 						PROFILE("AI_getBestGroupAttacker.RegularAttackOdds");
 
@@ -810,7 +816,7 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupSacrifice(const CvPlot* pPlot, bool b
 			{
 				if (bForce || pLoopUnit->canMove())
 				{
-					if (bForce || pLoopUnit->canMoveInto(pPlot, true))
+					if (bForce || pLoopUnit->canMoveInto(pPlot, MoveCheck::Attack))
 					{
 						int iValue = pLoopUnit->AI_sacrificeValue(pPlot);
 						FAssertMsg(iValue >= 0, "iValue is expected to be greater than 0");
@@ -918,7 +924,7 @@ int CvSelectionGroupAI::AI_sumStrength(const CvPlot* pAttackedPlot, DomainTypes 
 			)
 			&& (!bCheckCanMove || pLoopUnit->canMove())
 			//TB: canMoveInto may need simplified here somehow.
-			&& (!bCheckCanMove || pAttackedPlot == NULL || pLoopUnit->canMoveInto(pAttackedPlot, /*bAttack*/ true, /*bDeclareWar*/ true, false, false, true /*bIgnoreLocation*/))
+			&& (!bCheckCanMove || pAttackedPlot == NULL || pLoopUnit->canMoveInto(pAttackedPlot, MoveCheck::Attack | MoveCheck::DeclareWar | MoveCheck::IgnoreLocation))
 			&& (eDomainType == NO_DOMAIN || pLoopUnit->getDomainType() == eDomainType)
 			)
 		{

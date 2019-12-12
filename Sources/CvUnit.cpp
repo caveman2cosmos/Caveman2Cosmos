@@ -2254,11 +2254,22 @@ namespace {
 		return std::any_of(plot.beginAdjacent(), plot.endAdjacent(), boost::bind(plotHasEnemy, ourTeam, boost::cref(ignorePlot), _1));
 	}
 
-	bool canWithdrawToPlot(const CvUnit* withdrawingUnit, const CvPlot& toPlot)
+	bool canWithdrawToPlot(const CvUnit& withdrawingUnit, const CvPlot& toPlot)
 	{
-		return withdrawingUnit->canMoveInto(&toPlot)
-			&& !plotHasEnemy(withdrawingUnit->getTeam(), *withdrawingUnit->plot(), toPlot)
-			&& !plotHasAdjacentEnemy(withdrawingUnit->getTeam(), *withdrawingUnit->plot(), toPlot);
+		return withdrawingUnit.canMoveInto(&toPlot)
+			&& !plotHasEnemy(withdrawingUnit.getTeam(), *withdrawingUnit.plot(), toPlot)
+			// && !plotHasAdjacentEnemy(withdrawingUnit.getTeam(), *withdrawingUnit.plot(), toPlot)
+			;
+	}
+
+	CvPlot* selectWithdrawPlot(bool bSamePlotCombat, CvPlot& fromPlot, const CvUnit& withdrawingUnit)
+	{
+		if (bSamePlotCombat)
+		{
+			return &fromPlot;
+		}
+		CvPlot::adjacent_iterator itr = std::find_if(fromPlot.beginAdjacent(), fromPlot.endAdjacent(), boost::bind(canWithdrawToPlot, boost::cref(withdrawingUnit), _1));
+		return itr != fromPlot.endAdjacent() ? &(*itr) : nullptr;
 	}
 }
 
@@ -2783,10 +2794,10 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 				{
 					if (DefenderWithdrawalRollResult < AdjustedDefWithdraw)
 					{
-						CvPlot::adjacent_iterator itr = std::find_if(plot()->beginAdjacent(), plot()->endAdjacent(), boost::bind(canWithdrawToPlot, pDefender, _1));
-						if (itr != plot()->endAdjacent())
+						CvPlot* withdrawPlot = selectWithdrawPlot(bSamePlot, *plot(), *pDefender);
+						if (withdrawPlot != nullptr)
 						{
-							m_combatResult.pPlot = &(*itr);
+							m_combatResult.pPlot = withdrawPlot;
 							m_combatResult.bDefenderWithdrawn = true;
 							m_combatResult.bDeathMessaged = false;
 
@@ -2868,14 +2879,9 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 							{
 								m_combatResult.bDefenderKnockedBack = true;
 								m_combatResult.bDeathMessaged = false;
-
-								CvPlot::adjacent_iterator itr = std::find_if(plot()->beginAdjacent(), plot()->endAdjacent(), boost::bind(canWithdrawToPlot, pDefender, _1));
-								if (itr != plot()->endAdjacent())
-								{
-									m_combatResult.pPlot = &(*itr);
-									changeExperience100(getExperiencefromWithdrawal(AdjustedKnockback) * 15, maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
-									return;
-								}
+								m_combatResult.pPlot = selectWithdrawPlot(bSamePlot, *plot(), *pDefender);
+								changeExperience100(getExperiencefromWithdrawal(AdjustedKnockback) * 15, maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+								return;
 							}
 							else if ((KnockbackRollResult < iAttackerKnockback) && (KnockbackRollResult > AdjustedKnockback))
 							{
@@ -6175,7 +6181,7 @@ TeamTypes CvUnit::getDeclareWarMove(const CvPlot* pPlot) const
 		{
 			if (pPlot->isActiveVisible(false))
 			{
-				if (canMoveInto(pPlot, true, true, true))
+				if (canMoveInto(pPlot, MoveCheck::Attack | MoveCheck::DeclareWar | MoveCheck::IgnoreLoad))
 				{
 					pUnit = pPlot->plotCheck(PUF_canDeclareWar, getOwnerINLINE(), isAlwaysHostile(pPlot), NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, getOwnerINLINE());
 
@@ -6211,18 +6217,23 @@ bool CvUnit::willRevealByMove(const CvPlot* pPlot) const
 
 	return false;
 }
-/************************************************************************************************/
-/* Afforess	                  Start		 06/17/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bool bIgnoreLoad, bool bIgnoreTileLimit, bool bIgnoreLocation, bool bIgnoreAttack, CvUnit** ppDefender, bool bCheckForBest, bool bAssassinate, bool bSuprise) const
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
+bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCheck::None*/, CvUnit** ppDefender /*= NULL*/) const
 {
-	bool	bFailWithAttack = false;
-	bool	bFailWithoutAttack = false;
+	const bool bAttack = flags & MoveCheck::Attack;
+	const bool bDeclareWar = flags & MoveCheck::DeclareWar;
+	const bool bIgnoreLoad = flags & MoveCheck::IgnoreLoad;
+	const bool bIgnoreTileLimit = flags & MoveCheck::IgnoreTileLimit;
+	const bool bIgnoreLocation = flags & MoveCheck::IgnoreLocation;
+	const bool bIgnoreAttack = flags & MoveCheck::IgnoreAttack;
+	const bool bCheckForBest = flags & MoveCheck::CheckForBest;
+	FAssertMsg((!bCheckForBest && ppDefender == nullptr) || (bCheckForBest && ppDefender), "MoveCheck::CheckForBest implies ppDefender is valid and vice-versa");
+
+	const bool bAssassinate = flags & MoveCheck::Assassinate;
+	const bool bSuprise = flags & MoveCheck::Suprise;
+
+	bool bFailWithAttack = false;
+	bool bFailWithoutAttack = false;
 
 	PROFILE_FUNC();
 
@@ -6237,22 +6248,9 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 	{
 		bIsVisibleEnemyDefender = false;
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 06/22/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	static int iHill = -1;
-	static int iPeak = -1;
 	
-	if ( iHill == -1 )
-	{
-		iHill = CvTerrainInfo::getTerrainHill();
-	}
-	if ( iPeak == -1 )
-	{
-		iPeak = CvTerrainInfo::getTerrainPeak();
-	}
+	static const int iHill = CvTerrainInfo::getTerrainHill();
+	static const int iPeak = CvTerrainInfo::getTerrainPeak();
 	
 	if (!bIgnoreLocation)
 	{
@@ -7018,20 +7016,23 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 
 bool CvUnit::canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar) const
 {
-	return canMoveInto(pPlot, false, bDeclareWar, false, false, stepDistance(pPlot->getX_INLINE(), pPlot->getY_INLINE(), getX_INLINE(), getY_INLINE()) != 1, true);
+	const bool ignoreLocation = stepDistance(pPlot->getX_INLINE(), pPlot->getY_INLINE(), getX_INLINE(), getY_INLINE()) != 1;
+	return canMoveInto(pPlot,
+		(bDeclareWar ? MoveCheck::DeclareWar : MoveCheck::None) |
+		(ignoreLocation ? MoveCheck::IgnoreLocation : MoveCheck::None) |
+		MoveCheck::IgnoreAttack
+	);
 }
-
 
 bool CvUnit::canMoveThrough(const CvPlot* pPlot, bool bDeclareWar) const
 {
-	return canMoveInto(pPlot, false, bDeclareWar, true);
+	return canMoveInto(pPlot, (bDeclareWar ? MoveCheck::DeclareWar : MoveCheck::None) | MoveCheck::IgnoreLoad);
 }
-
 
 void CvUnit::attack(CvPlot* pPlot, bool bQuick, bool bStealth, bool bNoCache)
 {
 	PROFILE_FUNC();
-	FAssert(plot() == pPlot || bStealth || bNoCache || canMoveInto(pPlot, true));
+	FAssert(plot() == pPlot || bStealth || bNoCache || canMoveInto(pPlot, MoveCheck::Attack));
 	FAssert(getCombatTimer() == 0);
 /************************************************************************************************/
 /* Afforess	                  Start		 02/22/10                    Coded by: KillMePlease     */
@@ -9757,15 +9758,17 @@ bool CvUnit::canParadrop(const CvPlot* pPlot) const
 
 
 
-bool CvUnit::canParadropAt(const CvPlot* pPlot, int iX, int iY) const
+
+// original: bool CvUnit::canParadropAt(const CvPlot* pPlot, int iX, int iY) const
+bool CvUnit::canParadropAt(const CvPlot* fromPlot, int toX, int toY) const
 {
-	if (!canParadrop(pPlot))
+	if (!canParadrop(fromPlot))
 	{
 		return false;
 	}
 
-	CvPlot* pTargetPlot = GC.getMapINLINE().plotINLINE(iX, iY);
-	if (NULL == pTargetPlot || pTargetPlot == pPlot)
+	CvPlot* pTargetPlot = GC.getMapINLINE().plotINLINE(toX, toY);
+	if (NULL == pTargetPlot || pTargetPlot == fromPlot)
 	{
 		return false;
 	}
@@ -9775,12 +9778,12 @@ bool CvUnit::canParadropAt(const CvPlot* pPlot, int iX, int iY) const
 		return false;
 	}
 
-	if (!canMoveInto(pTargetPlot, false, false, true))
+	if (!canMoveInto(pTargetPlot, MoveCheck::IgnoreLoad))
 	{
 		return false;
 	}
 
-	if (plotDistance(pPlot->getX_INLINE(), pPlot->getY_INLINE(), iX, iY) > getDropRange())
+	if (plotDistance(fromPlot->getX_INLINE(), fromPlot->getY_INLINE(), toX, toY) > getDropRange())
 	{
 		return false;
 	}
