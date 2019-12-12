@@ -30689,10 +30689,9 @@ bool CvUnit::isAlwaysHostile(const CvPlot* pPlot) const
 
 	if (NULL != pPlot && pPlot->isCity(true, getTeam()))
 	{
-		if (isNoNonOwnedCityEntry())
+		if (!isBlendIntoCity())
 		{
-			if (pPlot->getOwner() == getOwner() || 
-				(isBarbCoExist() && pPlot->isHominid()))
+			if (pPlot->getOwner() == getOwner() || (isBarbCoExist() && pPlot->isHominid()))
 			{
 				return false;//TBBARBCOEXIST
 			}
