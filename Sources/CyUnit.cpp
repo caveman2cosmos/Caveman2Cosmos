@@ -711,7 +711,7 @@ bool CyUnit::isGoldenAge()
 
 bool CyUnit::canCoexistWithEnemyUnit(int /*TeamTypes*/ eTeam)
 {
-	return m_pUnit ? m_pUnit->canCoexistWithEnemyUnit((TeamTypes)eTeam, m_pUnit->plot()) : false;
+	return m_pUnit ? m_pUnit->canCoexistWithTeamOnPlot((TeamTypes)eTeam, *m_pUnit->plot()) : false;
 }
 
 bool CyUnit::isFighting()

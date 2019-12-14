@@ -28070,7 +28070,7 @@ int CvPlayerAI::AI_getEnemyPlotStrength(const CvPlot* pPlot, int iRange, bool bD
 						{
 							if ((bDefensiveBonuses && pLoopUnit->canDefend()) || pLoopUnit->canAttack())
 							{
-								if (!(pLoopUnit->canCoexistWithEnemyUnit(getTeam(), pPlot)))
+								if (!(pLoopUnit->canCoexistWithTeamOnPlot(getTeam(), *pPlot)))
 								{
 								    if (pPlot->isValidDomainForAction(*pLoopUnit))
 								    {

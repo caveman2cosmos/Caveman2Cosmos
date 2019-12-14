@@ -4009,7 +4009,7 @@ namespace {
 				|| pLoopUnit->isEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), plot)
 				|| (pAttacker != NULL && pAttacker->isEnemy(GET_PLAYER(pLoopUnit->getOwnerINLINE()).getTeam(), plot, pLoopUnit)))
 			// Units cannot coexist together
-			&& (pAttacker == NULL || !pLoopUnit->canUnitCoexistWithEnemyUnit(pAttacker, plot, true))
+			&& (pAttacker == NULL || !pLoopUnit->canUnitCoexistWithArrivingUnit(*pAttacker))
 			// Potential enemy (todo: we should just assert that attacking player is valid if we are testing for potential enemy)
 			&& (!bTestPotentialEnemy
 				|| eAttackingPlayer == NO_PLAYER
@@ -15461,7 +15461,7 @@ bool CvPlot::hasDefender(bool bCheckCanAttack, PlayerTypes eOwner, PlayerTypes e
 					{
 						if (!bTestAtWar || eAttackingPlayer == NO_PLAYER || pLoopUnit->isEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this) || (NULL != pAttacker && pAttacker->isEnemy(GET_PLAYER(pLoopUnit->getOwnerINLINE()).getTeam(), this, pLoopUnit)))
 						{
-							if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithEnemyUnit(pAttacker, this, true))
+							if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithArrivingUnit(*pAttacker))
 							{
 								if (!bTestPotentialEnemy || (eAttackingPlayer == NO_PLAYER) || pLoopUnit->isPotentialEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this) || (NULL != pAttacker && pAttacker->isPotentialEnemy(GET_PLAYER(pLoopUnit->getOwnerINLINE()).getTeam(), this, pLoopUnit)))
 								{
@@ -15512,7 +15512,7 @@ bool CvPlot::hasStealthDefender(const CvUnit* pAttacker) const
 			{
 				if (pLoopUnit->isEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this) || (NULL != pAttacker && pAttacker->isEnemy(GET_PLAYER(pLoopUnit->getOwnerINLINE()).getTeam(), this, pLoopUnit)))
 				{
-					if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithEnemyUnit(pAttacker, this, true))
+					if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithArrivingUnit(*pAttacker))
 					{
 						if (pLoopUnit->getImmobileTimer() < 1)
 						{
@@ -15557,7 +15557,7 @@ void CvPlot::revealBestStealthDefender(const CvUnit* pAttacker)
 		{
 			if (pLoopUnit->isEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this) || (NULL != pAttacker && pAttacker->isEnemy(GET_PLAYER(pLoopUnit->getOwnerINLINE()).getTeam(), this, pLoopUnit)))
 			{
-				if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithEnemyUnit(pAttacker, this, true))
+				if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithArrivingUnit(*pAttacker))
 				{
 					if (pLoopUnit->getImmobileTimer() < 1)
 					{
@@ -15612,7 +15612,7 @@ void CvPlot::doPreAttackTraps(CvUnit* pAttacker)
 		pUnitNode = nextUnitNode(pUnitNode);
 		if (!pLoopUnit->isDead() && pLoopUnit->isArmedTrap() && pLoopUnit->isEnemy(pAttacker->getTeam(), this, pAttacker) && pLoopUnit->isTriggerBeforeAttack())
 		{
-			if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithEnemyUnit(pAttacker, this, true))
+			if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithArrivingUnit(*pAttacker))
 			{
 				pLoopUnit->doTrap(pAttacker);
 			}
@@ -16157,7 +16157,7 @@ CvUnit* CvPlot::getWorstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlaye
 			{
 				if (!bTestAtWar || eAttackingPlayer == NO_PLAYER || pLoopUnit->isEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this) || (NULL != pAttacker && pAttacker->isEnemy(GET_PLAYER(pLoopUnit->getOwnerINLINE()).getTeam(), this, pLoopUnit)))
 				{
-					if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithEnemyUnit(pAttacker, this, true))
+					if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithArrivingUnit(*pAttacker))
 					{
 						if (!bTestPotentialEnemy || (eAttackingPlayer == NO_PLAYER) || pLoopUnit->isPotentialEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this) || (NULL != pAttacker && pAttacker->isPotentialEnemy(GET_PLAYER(pLoopUnit->getOwnerINLINE()).getTeam(), this, pLoopUnit)))
 						{

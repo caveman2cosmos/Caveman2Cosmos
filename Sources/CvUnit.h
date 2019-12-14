@@ -899,8 +899,19 @@ public:
 /**		REVOLUTION_MOD							END								*/
 /********************************************************************************/
 	bool isGoldenAge() const;																							// Exposed to Python
-	bool canCoexistWithEnemyUnit(TeamTypes eTeam, const CvPlot* pPlot = NULL, bool bAlways = true, const CvUnit* pThis = NULL, bool bAssassinate = false) const;
-	bool canUnitCoexistWithEnemyUnit(const CvUnit* pUnit, const CvPlot* pPlot = NULL, bool bTrapCheck = false) const;
+
+	// Can this unit always coexist with other units (all other things being equal)?
+	bool canCoexistAlways() const;
+	// Can this unit coexist with the specified team (all other things being equal)?
+	bool canCoexistWithTeam(const TeamTypes withTeam) const;
+	// Can this unit coexist with the specified team, on the specified plot?
+	bool canCoexistWithTeamOnPlot(const TeamTypes withTeam, const CvPlot& onPlot) const;
+	// Can this unit coexist with an attacking unit (possibly performing an assassination)?
+	bool canCoexistWithAttacker(const CvUnit& attacker, bool bAssassinate = false) const;
+
+	// Checks for differing domains, transport status, amnesty game setting
+	// TODO: roll this into the other Coexist functions
+	bool canUnitCoexistWithArrivingUnit(const CvUnit& pUnit) const;
 
 	DllExport bool isFighting() const;																		// Exposed to Python						
 	DllExport bool isAttacking() const;																		// Exposed to Python						
@@ -988,7 +999,7 @@ public:
 	bool isNeverInvisible() const;
 	int getNoInvisibilityCount() const;
 	void changeNoInvisibilityCount(int iChange);	
-	DllExport bool isInvisible(TeamTypes eTeam, bool bDebug, bool bCheckCargo = true) const;										// Exposed to Python
+	DllExport bool isInvisible(TeamTypes eTeam, bool bDebug = false, bool bCheckCargo = true) const;										// Exposed to Python
 	bool isNukeImmune() const;																												// Exposed to Python
 /************************************************************************************************/
 /* REVDCM_OC                              02/16/10                                phungus420    */
@@ -2323,7 +2334,7 @@ protected:
 /************************************************************************************************/
 // From Lead From Behind by UncutDragon
 public:
-	int defenderValue(const CvUnit* pAttacker, bool bAssassinate = false) const;
+	int defenderValue(const CvUnit* pAttacker) const;
 	bool isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttacker, int* pBestDefenderRank) const;
 protected:
 /************************************************************************************************/

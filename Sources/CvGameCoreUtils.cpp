@@ -1702,7 +1702,7 @@ bool PUF_isOtherTeam(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* 
 {
 	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
 	TeamTypes eTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
-	if (pUnit->canCoexistWithEnemyUnit(eTeam, pUnit->plot()))
+	if (pUnit->canCoexistWithTeamOnPlot(eTeam, *pUnit->plot()))
 	{
 		return false;
 	}
@@ -1718,7 +1718,7 @@ bool PUF_isEnemy(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThi
 	TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
 	TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
 
-	if (pUnit->canCoexistWithEnemyUnit(eOtherTeam))
+	if (pUnit->canCoexistWithTeam(eOtherTeam))
 	{
 		return false;
 	}
@@ -1734,7 +1734,7 @@ bool PUF_isEnemyTarget(const CvUnit* pUnit, int iData1, int iData2, const CvUnit
 	TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
 	TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
 
-	if (pUnit->canCoexistWithEnemyUnit(eOtherTeam))
+	if (pUnit->canCoexistWithTeam(eOtherTeam))
 	{
 		return false;
 	}
@@ -1759,7 +1759,7 @@ bool PUF_isNonAlly(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pT
 	TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
 	TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
 
-	if (pUnit->canCoexistWithEnemyUnit(eOtherTeam, pUnit->plot()))
+	if (pUnit->canCoexistWithTeamOnPlot(eOtherTeam, *pUnit->plot()))
 	{
 		return false;
 	}
@@ -1785,21 +1785,21 @@ bool PUF_canSiege(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pTh
 	return (pUnit->canSiege(GET_PLAYER((PlayerTypes)iData1).getTeam()));
 }
 
-bool PUF_isPotentialEnemy(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
+bool PUF_isPotentialEnemy(const CvUnit* pDefender, int pAttackerTeam, int pAttackerAlwaysHostile, const CvUnit* pAttacker)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
-	FAssertMsg(iData2 != -1, "Invalid data argument, should be >= 0");
+	FAssertMsg(pAttackerTeam != -1, "Invalid data argument, should be >= 0");
+	FAssertMsg(pAttackerAlwaysHostile != -1, "Invalid data argument, should be >= 0");
 
-	TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
-	TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
+	TeamTypes eAttackerTeam = GET_PLAYER((PlayerTypes)pAttackerTeam).getTeam();
+	TeamTypes eOurTeam = GET_PLAYER(pDefender->getCombatOwner(eAttackerTeam, pDefender->plot())).getTeam();
 
-	bool bAssassinate = ((pUnit->isAssassin() || pThis->isAssassin()) && (pUnit->plot() == pThis->plot()));
+	bool bAssassinate = ((pDefender->isAssassin() || pAttacker->isAssassin()) && (pDefender->plot() == pAttacker->plot()));
 
-	if (pUnit->canCoexistWithEnemyUnit(eOtherTeam, pUnit->plot(), false, pThis, bAssassinate))
+	if (pDefender->canCoexistWithAttacker(*pAttacker, bAssassinate))
 	{
 		return false;
 	}
-	return (iData2 ? eOtherTeam != eOurTeam : isPotentialEnemy(eOtherTeam, eOurTeam));
+	return (pAttackerAlwaysHostile ? eAttackerTeam != eOurTeam : isPotentialEnemy(eAttackerTeam, eOurTeam));
 }
 
 bool PUF_canDeclareWar( const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
@@ -1810,7 +1810,7 @@ bool PUF_canDeclareWar( const CvUnit* pUnit, int iData1, int iData2, const CvUni
 	TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
 	TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
 
-	if (pUnit->canCoexistWithEnemyUnit(eOtherTeam, pUnit->plot()))
+	if (pUnit->canCoexistWithTeamOnPlot(eOtherTeam, *pUnit->plot()))
 	{
 		return false;
 	}
@@ -1883,16 +1883,10 @@ bool PUF_canDefendEnemy(const CvUnit* pUnit, int iData1, int iData2, const CvUni
 	return (PUF_canDefend(pUnit, iData1, iData2) && PUF_isEnemy(pUnit, iData1, iData2));
 }
 
-bool PUF_canDefendPotentialEnemy(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
+bool PUF_canDefendPotentialEnemyAgainst(const CvUnit* pUnit, int pThisTeam, int pThisAlwaysHostile, const CvUnit* pThis)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
-	return (PUF_canDefend(pUnit, iData1, iData2) && PUF_isPotentialEnemy(pUnit, iData1, iData2));
-}
-
-bool PUF_canDefendPotentialEnemyAgainst(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
-{
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
-	return (PUF_canDefend(pUnit, iData1, iData2) && PUF_isPotentialEnemy(pUnit, iData1, iData2, pThis));
+	FAssertMsg(pThisTeam != -1, "Invalid data argument, should be >= 0");
+	return (PUF_canDefend(pUnit) && PUF_isPotentialEnemy(pUnit, pThisTeam, pThisAlwaysHostile, pThis));
 }
 
 bool PUF_canDefenselessPotentialEnemyAgainst(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
