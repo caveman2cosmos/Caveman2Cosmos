@@ -28008,7 +28008,7 @@ int CvPlayerAI::AI_getOurPlotStrength(const CvPlot* pPlot, int iRange, bool bDef
 							{
 								if (!(pLoopUnit->isInvisible(getTeam(), false)))
 								{
-								    if (pLoopUnit->atPlot(pPlot) || pLoopUnit->canMoveInto(pPlot) || pLoopUnit->canMoveInto(pPlot, /*bAttack*/ true))
+								    if (pLoopUnit->atPlot(pPlot) || pLoopUnit->canMoveInto(pPlot) || pLoopUnit->canMoveInto(pPlot, MoveCheck::Attack))
 								    {
                                         if (!bTestMoves)
                                         {
@@ -28070,7 +28070,7 @@ int CvPlayerAI::AI_getEnemyPlotStrength(const CvPlot* pPlot, int iRange, bool bD
 						{
 							if ((bDefensiveBonuses && pLoopUnit->canDefend()) || pLoopUnit->canAttack())
 							{
-								if (!(pLoopUnit->canCoexistWithEnemyUnit(getTeam(), pPlot)))
+								if (!(pLoopUnit->canCoexistWithTeamOnPlot(getTeam(), *pPlot)))
 								{
 								    if (pPlot->isValidDomainForAction(*pLoopUnit))
 								    {

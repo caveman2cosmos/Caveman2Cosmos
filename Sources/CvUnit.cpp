@@ -2254,11 +2254,22 @@ namespace {
 		return std::any_of(plot.beginAdjacent(), plot.endAdjacent(), boost::bind(plotHasEnemy, ourTeam, boost::cref(ignorePlot), _1));
 	}
 
-	bool canWithdrawToPlot(const CvUnit* withdrawingUnit, const CvPlot& toPlot)
+	bool canWithdrawToPlot(const CvUnit& withdrawingUnit, const CvPlot& toPlot)
 	{
-		return withdrawingUnit->canMoveInto(&toPlot)
-			&& !plotHasEnemy(withdrawingUnit->getTeam(), *withdrawingUnit->plot(), toPlot)
-			&& !plotHasAdjacentEnemy(withdrawingUnit->getTeam(), *withdrawingUnit->plot(), toPlot);
+		return withdrawingUnit.canMoveInto(&toPlot)
+			&& !plotHasEnemy(withdrawingUnit.getTeam(), *withdrawingUnit.plot(), toPlot)
+			// && !plotHasAdjacentEnemy(withdrawingUnit.getTeam(), *withdrawingUnit.plot(), toPlot)
+			;
+	}
+
+	CvPlot* selectWithdrawPlot(bool bSamePlotCombat, CvPlot& fromPlot, const CvUnit& withdrawingUnit)
+	{
+		if (bSamePlotCombat)
+		{
+			return &fromPlot;
+		}
+		CvPlot::adjacent_iterator itr = std::find_if(fromPlot.beginAdjacent(), fromPlot.endAdjacent(), boost::bind(canWithdrawToPlot, boost::cref(withdrawingUnit), _1));
+		return itr != fromPlot.endAdjacent() ? &(*itr) : nullptr;
 	}
 }
 
@@ -2783,10 +2794,10 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 				{
 					if (DefenderWithdrawalRollResult < AdjustedDefWithdraw)
 					{
-						CvPlot::adjacent_iterator itr = std::find_if(plot()->beginAdjacent(), plot()->endAdjacent(), boost::bind(canWithdrawToPlot, pDefender, _1));
-						if (itr != plot()->endAdjacent())
+						CvPlot* withdrawPlot = selectWithdrawPlot(bSamePlot, *plot(), *pDefender);
+						if (withdrawPlot != nullptr)
 						{
-							m_combatResult.pPlot = &(*itr);
+							m_combatResult.pPlot = withdrawPlot;
 							m_combatResult.bDefenderWithdrawn = true;
 							m_combatResult.bDeathMessaged = false;
 
@@ -2868,14 +2879,9 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 							{
 								m_combatResult.bDefenderKnockedBack = true;
 								m_combatResult.bDeathMessaged = false;
-
-								CvPlot::adjacent_iterator itr = std::find_if(plot()->beginAdjacent(), plot()->endAdjacent(), boost::bind(canWithdrawToPlot, pDefender, _1));
-								if (itr != plot()->endAdjacent())
-								{
-									m_combatResult.pPlot = &(*itr);
-									changeExperience100(getExperiencefromWithdrawal(AdjustedKnockback) * 15, maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
-									return;
-								}
+								m_combatResult.pPlot = selectWithdrawPlot(bSamePlot, *plot(), *pDefender);
+								changeExperience100(getExperiencefromWithdrawal(AdjustedKnockback) * 15, maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+								return;
 							}
 							else if ((KnockbackRollResult < iAttackerKnockback) && (KnockbackRollResult > AdjustedKnockback))
 							{
@@ -5414,7 +5420,7 @@ bool CvUnit::isActionRecommended(int iAction)
 	return false;
 }
 
-int CvUnit::defenderValue(const CvUnit* pAttacker, bool bAssassinate) const
+int CvUnit::defenderValue(const CvUnit* pAttacker) const
 {
 	int iValue = 0;
 
@@ -5427,14 +5433,14 @@ int CvUnit::defenderValue(const CvUnit* pAttacker, bool bAssassinate) const
 	CvPlot* pPlot = plot();
 	if (pPlot != NULL)
 	{
-		if (!bAssassinate && canCoexistWithEnemyUnit(eAttackerTeam, pPlot, true, pAttacker))
+		if (canCoexistWithAttacker(*pAttacker))
 		{
 			return 0;
 		}
 	}
 	else
 	{
-		if (!bAssassinate && canCoexistWithEnemyUnit(eAttackerTeam, NULL))
+		if (canCoexistWithTeam(eAttackerTeam))
 		{
 			return 0;
 		}
@@ -5452,7 +5458,7 @@ int CvUnit::defenderValue(const CvUnit* pAttacker, bool bAssassinate) const
 			iValue += 10000;
 		}
 
-		if (!bAssassinate && !pAttacker->canAttack(*this))
+		if (!pAttacker->canAttack(*this))
 		{
 			return 2;
 		}
@@ -5546,7 +5552,7 @@ bool CvUnit::isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttack
 		eAttackerTeam = pAttacker->getTeam();
 	}
 
-	if (canCoexistWithEnemyUnit(eAttackerTeam, NULL))
+	if (canCoexistWithTeam(eAttackerTeam))
 	{
 		return false;
 	}
@@ -6175,7 +6181,7 @@ TeamTypes CvUnit::getDeclareWarMove(const CvPlot* pPlot) const
 		{
 			if (pPlot->isActiveVisible(false))
 			{
-				if (canMoveInto(pPlot, true, true, true))
+				if (canMoveInto(pPlot, MoveCheck::Attack | MoveCheck::DeclareWar | MoveCheck::IgnoreLoad))
 				{
 					pUnit = pPlot->plotCheck(PUF_canDeclareWar, getOwnerINLINE(), isAlwaysHostile(pPlot), NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, getOwnerINLINE());
 
@@ -6211,18 +6217,23 @@ bool CvUnit::willRevealByMove(const CvPlot* pPlot) const
 
 	return false;
 }
-/************************************************************************************************/
-/* Afforess	                  Start		 06/17/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bool bIgnoreLoad, bool bIgnoreTileLimit, bool bIgnoreLocation, bool bIgnoreAttack, CvUnit** ppDefender, bool bCheckForBest, bool bAssassinate, bool bSuprise) const
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
+bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCheck::None*/, CvUnit** ppDefender /*= NULL*/) const
 {
-	bool	bFailWithAttack = false;
-	bool	bFailWithoutAttack = false;
+	const bool bAttack = flags & MoveCheck::Attack;
+	const bool bDeclareWar = flags & MoveCheck::DeclareWar;
+	const bool bIgnoreLoad = flags & MoveCheck::IgnoreLoad;
+	const bool bIgnoreTileLimit = flags & MoveCheck::IgnoreTileLimit;
+	const bool bIgnoreLocation = flags & MoveCheck::IgnoreLocation;
+	const bool bIgnoreAttack = flags & MoveCheck::IgnoreAttack;
+	const bool bCheckForBest = flags & MoveCheck::CheckForBest;
+	FAssertMsg((!bCheckForBest && ppDefender == nullptr) || (bCheckForBest && ppDefender), "MoveCheck::CheckForBest implies ppDefender is valid and vice-versa");
+
+	const bool bAssassinate = flags & MoveCheck::Assassinate;
+	const bool bSuprise = flags & MoveCheck::Suprise;
+
+	bool bFailWithAttack = false;
+	bool bFailWithoutAttack = false;
 
 	PROFILE_FUNC();
 
@@ -6232,27 +6243,15 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 		return false;
 	}
 	bool bIsVisibleEnemyDefender = (pPlot->isVisiblePotentialEnemyDefender(this) || pPlot->isVisiblePotentialEnemyDefenderless(this));
-	bool bCanCoexist = canCoexistWithEnemyUnit(NO_TEAM, pPlot, false, this, bAssassinate);
+
+	const bool bCanCoexist = canCoexistAlways();
 	if (bCanCoexist && bIsVisibleEnemyDefender)
 	{
 		bIsVisibleEnemyDefender = false;
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 06/22/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	static int iHill = -1;
-	static int iPeak = -1;
 	
-	if ( iHill == -1 )
-	{
-		iHill = CvTerrainInfo::getTerrainHill();
-	}
-	if ( iPeak == -1 )
-	{
-		iPeak = CvTerrainInfo::getTerrainPeak();
-	}
+	static const int iHill = CvTerrainInfo::getTerrainHill();
+	static const int iPeak = CvTerrainInfo::getTerrainPeak();
 	
 	if (!bIgnoreLocation)
 	{
@@ -6644,7 +6643,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 	// The following change makes capturing an undefended city like a attack action, it
 	// cannot be done after another attack or a paradrop
 	/*
-	if (bAttack || (pPlot->isEnemyCity(*this) && !canCoexistWithEnemyUnit(NO_TEAM)) )
+	if (bAttack || (pPlot->isEnemyCity(*this) && !canCoexistAlways()) )
 	{
 		if (isMadeAttack() && !isBlitz())
 		{
@@ -7018,20 +7017,23 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 
 bool CvUnit::canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar) const
 {
-	return canMoveInto(pPlot, false, bDeclareWar, false, false, stepDistance(pPlot->getX_INLINE(), pPlot->getY_INLINE(), getX_INLINE(), getY_INLINE()) != 1, true);
+	const bool ignoreLocation = stepDistance(pPlot->getX_INLINE(), pPlot->getY_INLINE(), getX_INLINE(), getY_INLINE()) != 1;
+	return canMoveInto(pPlot,
+		(bDeclareWar ? MoveCheck::DeclareWar : MoveCheck::None) |
+		(ignoreLocation ? MoveCheck::IgnoreLocation : MoveCheck::None) |
+		MoveCheck::IgnoreAttack
+	);
 }
-
 
 bool CvUnit::canMoveThrough(const CvPlot* pPlot, bool bDeclareWar) const
 {
-	return canMoveInto(pPlot, false, bDeclareWar, true);
+	return canMoveInto(pPlot, (bDeclareWar ? MoveCheck::DeclareWar : MoveCheck::None) | MoveCheck::IgnoreLoad);
 }
-
 
 void CvUnit::attack(CvPlot* pPlot, bool bQuick, bool bStealth, bool bNoCache)
 {
 	PROFILE_FUNC();
-	FAssert(plot() == pPlot || bStealth || bNoCache || canMoveInto(pPlot, true));
+	FAssert(plot() == pPlot || bStealth || bNoCache || canMoveInto(pPlot, MoveCheck::Attack));
 	FAssert(getCombatTimer() == 0);
 /************************************************************************************************/
 /* Afforess	                  Start		 02/22/10                    Coded by: KillMePlease     */
@@ -9757,15 +9759,17 @@ bool CvUnit::canParadrop(const CvPlot* pPlot) const
 
 
 
-bool CvUnit::canParadropAt(const CvPlot* pPlot, int iX, int iY) const
+
+// original: bool CvUnit::canParadropAt(const CvPlot* pPlot, int iX, int iY) const
+bool CvUnit::canParadropAt(const CvPlot* fromPlot, int toX, int toY) const
 {
-	if (!canParadrop(pPlot))
+	if (!canParadrop(fromPlot))
 	{
 		return false;
 	}
 
-	CvPlot* pTargetPlot = GC.getMapINLINE().plotINLINE(iX, iY);
-	if (NULL == pTargetPlot || pTargetPlot == pPlot)
+	CvPlot* pTargetPlot = GC.getMapINLINE().plotINLINE(toX, toY);
+	if (NULL == pTargetPlot || pTargetPlot == fromPlot)
 	{
 		return false;
 	}
@@ -9775,17 +9779,17 @@ bool CvUnit::canParadropAt(const CvPlot* pPlot, int iX, int iY) const
 		return false;
 	}
 
-	if (!canMoveInto(pTargetPlot, false, false, true))
+	if (!canMoveInto(pTargetPlot, MoveCheck::IgnoreLoad))
 	{
 		return false;
 	}
 
-	if (plotDistance(pPlot->getX_INLINE(), pPlot->getY_INLINE(), iX, iY) > getDropRange())
+	if (plotDistance(fromPlot->getX_INLINE(), fromPlot->getY_INLINE(), toX, toY) > getDropRange())
 	{
 		return false;
 	}
 
-	if (!canCoexistWithEnemyUnit(NO_TEAM, pTargetPlot, false, this))
+	if (!canCoexistAlways())
 	{
 		if (pTargetPlot->isEnemyCity(*this))
 		{
@@ -14899,230 +14903,167 @@ bool CvUnit::isGoldenAge() const
 	return m_pUnitInfo->isGoldenAge();
 }
 
-bool CvUnit::canCoexistWithEnemyUnit(TeamTypes eTeam, const CvPlot* pPlot, bool bAlways, const CvUnit* pThis, bool bAssassinate) const
-{//Might want to try to cache this - gets LOTS of repetitive calls and it continues to grow in complexity.//Could use the system utilized in getBestDefender.
+bool CvUnit::canCoexistAlways() const
+{
+	return alwaysInvisible();
+}
 
-	bool bAlwaysInvisible = alwaysInvisible();
-	
-	if (pThis != NULL)
+bool CvUnit::canCoexistWithTeam(const TeamTypes withTeam) const
+{
+	return canCoexistAlways() || getTeam() == withTeam;
+}
+
+bool CvUnit::canCoexistWithTeamOnPlot(const TeamTypes withTeam, const CvPlot& onPlot) const
+{
+	return canCoexistWithTeam(withTeam)
+		// City or fort allows blend in
+		|| onPlot.isCity(true) && isBlendIntoCity()
+		// Invisible to team and on the same plot
+		|| isInvisible(withTeam) && *plot() == onPlot
+		;
+}
+
+namespace {
+	// Will an attacker be always hostile to a defender on the defenders plot?
+	bool alwaysHostile(const CvUnit& defender, const CvUnit& attacker)
 	{
-		if(pThis->alwaysInvisible())
-		{
-			bAlwaysInvisible = true;
-		}
+		return 
+			(defender.isAlwaysHostile(defender.plot()) || attacker.isAlwaysHostile(defender.plot()))
+			&&
+			!(GC.getGame().isOption(GAMEOPTION_PEACE_AMONG_NPCS) && defender.isNPC() && attacker.isNPC());
+	}
+}
+bool CvUnit::canCoexistWithAttacker(const CvUnit& attacker, bool bAssassinate) const
+{
+	const TeamTypes attackerTeam = GET_PLAYER(attacker.getOwnerINLINE()).getTeam();
 
-		if ((pThis->isBarbCoExist() && isHominid()) || (pThis->isHominid() && isBarbCoExist()))
-		{
-			return true;
-		}
-	}
-
-	if (NO_TEAM == eTeam)
-	{	// apparently the NO_TEAM == eTeam is just to enforce this rule only on a particular call configuration.
-		if(alwaysInvisible())
-		{
-			return true;
-		}
-		
-		return false;
-	}
-	else if (bAlwaysInvisible)
-	{
-		return true;// While the above is for a particular call configuration and returns false when the unit is not always invisible, this covers the rest of the call configurations.  A unit that is always invisible should ALWAYS be able to coexist with all other units.
-	}
-
-	if (pPlot != NULL)
-	{
-		if (pPlot->isCity(true))
-		{
-			if (isBlendIntoCity() || (pThis && pThis->isBlendIntoCity()))
-			{
-				if (bAssassinate)
-				{
-					if (pPlot != plot())
-					{
-						if (pThis)
-						{
-							if (pThis->plot() != pPlot)
-							{
-								return true;
-							}
-						}
-						else
-						{
-							return true;
-						}
-					}
-				}
-				else
-				{
-					return true;
-				}
-			}
-		}
-	}
-
-	bool bAttackCheck = (pPlot != plot());
-	if(isInvisible(eTeam, false) && !bAttackCheck)
-	{
-		return true;
-	}
-
-	if (getTeam() == eTeam)
-	{
-		return true;
-	}
-
-	if (pPlot != NULL && !bAlways)
-	{
-		if (pThis && pThis != this)
-		{
-			if (GET_PLAYER(pThis->getOwnerINLINE()).getTeam() != getTeam())
-			{
-				bool bAlwaysHostile = isAlwaysHostile(pPlot) || pThis->isAlwaysHostile(pPlot);
-				if (bAlwaysHostile)
-				{
-					if (GC.getGame().isOption(GAMEOPTION_PEACE_AMONG_NPCS))
-					{
-						if (isNPC() || pThis->isNPC())
-						{
-							bAlwaysHostile = false;
-						}
-					}
-				}
-				if (isEnemy(GET_PLAYER(pThis->getOwnerINLINE()).getTeam()) || bAlwaysHostile)
-				{
-					return (canUnitCoexistWithEnemyUnit(pThis, pPlot));
-				}
-				else if (!bAlwaysHostile)
-				{
-					return true;
-				}
-			}
-			else
-			{
-				return true;
-			}
-		}
-		else
-		{
-			return true;
-		}
-	}
-
-	if (bAlways && isBlendIntoCity() && plot() != NULL && plot()->getPlotCity() != NULL)
-	{
-		return true;
-	}
+	return
+		// Always coexists
+		canCoexistAlways() || attacker.canCoexistAlways()
+		// Coexists due to barb coexist flag
+		|| attacker.isBarbCoExist() && isHominid() || attacker.isHominid() && isBarbCoExist()
+		// Coexists due to blending into a city (nullified by assassination)
+		|| !bAssassinate && plot()->isCity(true) && (isBlendIntoCity() || attacker.isBlendIntoCity())
+		// Invisibility to the attacking team, or being on the attacking team
+		|| isInvisible(attackerTeam, false) || getTeam() == attackerTeam
+		// War enemy, or just always hostile
+		|| !isEnemy(attackerTeam) && !alwaysHostile(*this, attacker)
+		// Checks for differing domains, transport status, amnesty game setting
+		|| canUnitCoexistWithArrivingUnit(attacker)
+		;
 
 	return false;
 }
 
-bool CvUnit::canUnitCoexistWithEnemyUnit(const CvUnit* pUnit, const CvPlot* pPlot, bool bTrapCheck) const
+bool CvUnit::canUnitCoexistWithArrivingUnit(const CvUnit& enemyUnit) const
 {
-	bool bTrap = (bTrapCheck && (isArmedTrap() || pUnit->isArmedTrap()));
-	if(pPlot != NULL)
+	if (enemyUnit.isDead())
 	{
-		if (pUnit->isDead())
+		return true;
+	}
+
+	if (plot()->isWater())
+	{
+		if (enemyUnit.canLoad(plot()))
 		{
 			return true;
 		}
-		if (pPlot->isWater())
+
+		if (plot()->isCanMoveLandUnits())
 		{
-			bool bIsLoading = (pUnit->canLoad(pPlot));
-			bool bIsAboveWater = ((getDomainType() != DOMAIN_LAND) || (getDomainType() == DOMAIN_LAND && canMoveAllTerrain()));
-			bool bOtherIsAboveWater = ((pUnit->getDomainType() != DOMAIN_LAND) || (pUnit->getDomainType() == DOMAIN_LAND && pUnit->canMoveAllTerrain()));
-			if (bIsLoading)
+			const bool bIsAboveWater = 
+				getDomainType() != DOMAIN_LAND 
+				|| 
+				canMoveAllTerrain();
+			const bool bOtherIsAboveWater =
+				enemyUnit.getDomainType() != DOMAIN_LAND
+				|| 
+				enemyUnit.canMoveAllTerrain();
+
+			if (bIsAboveWater && !bOtherIsAboveWater)
 			{
 				return true;
 			}
-			if (pPlot->isCanMoveLandUnits())
+			if (!bIsAboveWater && bOtherIsAboveWater)
 			{
-				if (bIsAboveWater && !bOtherIsAboveWater)
-				{
-					return true;
-				}
-				if (!bIsAboveWater && bOtherIsAboveWater)
-				{
-					return true;
-				}
+				return true;
 			}
 		}
-		if (!bTrap)
-		{
-			if (!canAttack() && !pUnit->canAttack())
-			{
-				return true;
-			}
-			if ((pUnit->isBarbCoExist() && isHominid()) || (pUnit->isHominid() && isBarbCoExist()))
-			{
-				return true;
-			}
+	}
 
-			if ((pUnit->isInvisible(getTeam(), false, false) && pUnit->isOnlyDefensive()) || (isInvisible(pUnit->getTeam(), false, false) && isOnlyDefensive()))
-			{
-				return true;
-			}
+	if (!isArmedTrap() && !enemyUnit.isArmedTrap())
+	{
+		if (!canAttack() && !enemyUnit.canAttack())
+		{
+			return true;
+		}
+		if ((enemyUnit.isBarbCoExist() && isHominid()) || (enemyUnit.isHominid() && isBarbCoExist()))
+		{
+			return true;
+		}
+
+		if ((enemyUnit.isInvisible(getTeam(), false, false) && enemyUnit.isOnlyDefensive()) || (isInvisible(enemyUnit.getTeam(), false, false) && isOnlyDefensive()))
+		{
+			return true;
+		}
 		
-			if (GC.getGame().isOption(GAMEOPTION_AMNESTY))
-			{
-				bool bBorderValid = (GET_TEAM(getTeam()).isOpenBorders(pUnit->getTeam()) || GET_TEAM(getTeam()).isLimitedBorders(pUnit->getTeam()));
+		if (GC.getGame().isOption(GAMEOPTION_AMNESTY))
+		{
+			const bool bBorderValid = 
+				GET_TEAM(getTeam()).isOpenBorders(enemyUnit.getTeam()) 
+				|| 
+				GET_TEAM(getTeam()).isLimitedBorders(enemyUnit.getTeam());
 				
-				if (bBorderValid)
+			if (bBorderValid)
+			{
+				if (plot()->getOwner() == getOwner() && isHiddenNationality())
 				{
-					if (pPlot->getOwner() == getOwner() && isHiddenNationality())
+					if (!enemyUnit.canAttack() || enemyUnit.isPassage())
 					{
-						if (!pUnit->canAttack() || pUnit->isPassage())
-						{
-							return true;
-						}
-					}
-					else if (pPlot->getOwner() == pUnit->getOwner() && pUnit->isHiddenNationality())
-					{
-						if (!canAttack() || isPassage())
-						{
-							return true;
-						}
+						return true;
 					}
 				}
-			}
-
-			if (pPlot->isCity(true))
-			{
-				if (isBlendIntoCity() || pUnit->isBlendIntoCity())
+				else if (plot()->getOwner() == enemyUnit.getOwner() && enemyUnit.isHiddenNationality())
 				{
-					if (pPlot == plot())
-					{
-						if ((isAssassin() && pUnit->isTargetOf(*this)) || (pUnit->isAssassin() && isTargetOf(*pUnit)))
-						{
-							return false;
-						}
-					}
-					else
+					if (!canAttack() || isPassage())
 					{
 						return true;
 					}
 				}
 			}
 		}
-		// if is loaded and is not attacking
-		if ((isCargo() && !getGroup()->IsSelected() && (plot()->isWater() == pUnit->plot()->isWater())) ||
-			(pUnit->isCargo() && !pUnit->getGroup()->IsSelected() && (plot()->isWater() == pUnit->plot()->isWater())))
+
+		if (plot()->isCity(true))
 		{
-			//may be oversimplified still - if I move a transport and drop off units on land, the units aren't selected when they are checked to see if they can make this move without an attack.  So this makes for a free overlapping beachhead maneuver.
-			//somehow, if disembarking, it must still consider the unit incapable of automatically being able to share the space being moved to with enemies
-			//check the autodisembarking code for the right filter checks perhaps...
-			return true;
+			if (isBlendIntoCity() || enemyUnit.isBlendIntoCity())
+			{
+				if ((isAssassin() && enemyUnit.isTargetOf(*this)) || (enemyUnit.isAssassin() && isTargetOf(enemyUnit)))
+				{
+					return false;
+				}
+			}
 		}
-		//if (isCargo())
-		//{
-		//	return (getTransportUnit()->canUnitCoexistWithEnemyUnit(pUnit, pPlot, bTrapCheck));
-		//}
-		//if (pUnit->isCargo())
-		//{
-		//	return (pUnit->getTransportUnit()->canUnitCoexistWithEnemyUnit(this, pPlot, bTrapCheck));
-		//}
 	}
+
+	// if is loaded and is not attacking
+	if ((isCargo() && !getGroup()->IsSelected() && plot()->isWater() == enemyUnit.plot()->isWater()) 
+		||
+		(enemyUnit.isCargo() && !enemyUnit.getGroup()->IsSelected() && plot()->isWater() == enemyUnit.plot()->isWater())
+		)
+	{
+		//may be oversimplified still - if I move a transport and drop off units on land, the units aren't selected when they are checked to see if they can make this move without an attack.  So this makes for a free overlapping beachhead maneuver.
+		//somehow, if disembarking, it must still consider the unit incapable of automatically being able to share the space being moved to with enemies
+		//check the autodisembarking code for the right filter checks perhaps...
+		return true;
+	}
+	//if (isCargo())
+	//{
+	//	return (getTransportUnit()->canUnitCoexistWithEnemyUnit(pUnit, pPlot, bTrapCheck));
+	//}
+	//if (pUnit->isCargo())
+	//{
+	//	return (pUnit->getTransportUnit()->canUnitCoexistWithEnemyUnit(this, pPlot, bTrapCheck));
+	//}
 	return false;
 }
 
@@ -18594,7 +18535,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 					{
 						if (isEnemy(pLoopUnit->getTeam(), pNewPlot) || pLoopUnit->isEnemy(getTeam()))
 						{
-							if (!pLoopUnit->canCoexistWithEnemyUnit(getTeam(), pNewPlot, false, this))//originally this line then changed to the next - note: bAlways must be false here to get a correct check.
+							if (!pLoopUnit->canCoexistWithAttacker(*this))//originally this line then changed to the next - note: bAlways must be false here to get a correct check.
 							//if (!pLoopUnit->canUnitCoexistWithEnemyUnit(this, pNewPlot, true))//I'm not sure what the intended benefit of using this line was but it's eliminating some important checks in the first function so look for new bugs from this swap back.
 							{
 								if (pLoopUnit->isArmedTrap())
@@ -18770,7 +18711,16 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		{
 			PROFILE("CvUnit::setXY.NewPlot2.NewCity");
 
-			if (GET_PLAYER(getOwner()).isInvasionCapablePlayer() && !isBlendIntoCity() && isEnemy(pNewCity->getTeam()) && (!canCoexistWithEnemyUnit(pNewCity->getTeam(), pNewPlot) || !pNewPlot->isVisibleEnemyDefender(this)) && canFight() && !(isHiddenNationality() && pNewCity->isNPC()) && !isCargo())
+			if (GET_PLAYER(getOwner()).isInvasionCapablePlayer() 
+				&& !isBlendIntoCity() 
+				&& isEnemy(pNewCity->getTeam()) 
+				&& (
+					!canCoexistWithTeamOnPlot(pNewCity->getTeam(), *pNewPlot)
+					|| !pNewPlot->isVisibleEnemyDefender(this)
+					)
+				&& canFight() 
+				&& !(isHiddenNationality() && pNewCity->isNPC()) 
+				&& !isCargo())
 			{
 				GET_TEAM(getTeam()).changeWarWeariness(pNewCity->getTeam(), *pNewPlot, GC.getDefineINT("WW_CAPTURED_CITY"));
 /************************************************************************************************/
@@ -18826,13 +18776,16 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 			else
 			{
 				CvPlayer& pNewPlotOwner = GET_PLAYER(pNewPlot->getOwnerINLINE());
-				if ((isEnemy(pNewPlotOwner.getTeam()) || !pNewPlotOwner.isAlive()) && !canCoexistWithEnemyUnit(pNewPlotOwner.getTeam(), pNewPlot) && canFight())
+				if ((isEnemy(pNewPlotOwner.getTeam()) || !pNewPlotOwner.isAlive()) 
+					&& !canCoexistWithTeamOnPlot(pNewPlotOwner.getTeam(), *pNewPlot)
+					&& canFight()
+					)
 				{
 					bDoAcquireFort = true;
 
 					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_CAPTURED_BY", GC.getImprovementInfo(eImprovement).getText(), GET_PLAYER(getOwnerINLINE()).getCivilizationDescriptionKey());
 					AddDLLMessage(pNewPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYCAPTURED", MESSAGE_TYPE_MAJOR_EVENT, GC.getImprovementInfo(eImprovement).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pNewPlot->getX_INLINE(), pNewPlot->getY_INLINE(), true, true);
-				}				
+				}
 			}
 			
 			if (bDoAcquireFort)
@@ -29277,7 +29230,6 @@ void CvUnit::rBombardCombat(const CvPlot* pPlot, CvUnit* pFirstUnit)
 				// Reduce bombard damage based on collatoral damage protection factor
 				iRBombardDamage -= (iRBombardDamage * iCollatDef) / 100;
 				//TB Combat Mods end
-				iRBombardDamage /= 100;
 
 				if (pCity != NULL)
 				{
@@ -30687,10 +30639,9 @@ bool CvUnit::isAlwaysHostile(const CvPlot* pPlot) const
 
 	if (NULL != pPlot && pPlot->isCity(true, getTeam()))
 	{
-		if (isNoNonOwnedCityEntry())
+		if (!isBlendIntoCity())
 		{
-			if (pPlot->getOwner() == getOwner() || 
-				(isBarbCoExist() && pPlot->isHominid()))
+			if (pPlot->getOwner() == getOwner() || (isBarbCoExist() && pPlot->isHominid()))
 			{
 				return false;//TBBARBCOEXIST
 			}
@@ -30729,7 +30680,7 @@ bool CvUnit::verifyStackValid()
 
 		if ( pLoopUnit != this )
 		{
-			if (isEnemy(pLoopUnit->getTeam(), NULL, pLoopUnit) && !pLoopUnit->isInvisible(getTeam(),false) && !canCoexistWithEnemyUnit(pLoopUnit->getTeam(), pPlot, false, this))
+			if (isEnemy(pLoopUnit->getTeam(), NULL, pLoopUnit) && !pLoopUnit->isInvisible(getTeam(),false) && !canCoexistWithTeamOnPlot(pLoopUnit->getTeam(), *pPlot))
 			{
 				return jumpToNearestValidPlot();
 			}

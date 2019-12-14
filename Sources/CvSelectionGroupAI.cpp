@@ -674,26 +674,22 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
-	CvUnit* pBestUnit;
-	int iPossibleTargets;
-	int iValue;
-	int iBestValue;
-	int iOdds;
-	int iBestOdds;
+	CLLNode<IDInfo>* pUnitNode = headUnitNode();
+	const bool bIsHuman = (pUnitNode != NULL) ? GET_PLAYER(::getUnit(pUnitNode->m_data)->getOwnerINLINE()).isHuman() : true;
 
-	iBestValue = 0;
-	iBestOdds = 0;
-	pBestUnit = NULL;
-
-	pUnitNode = headUnitNode();
-
-	bool bIsHuman = (pUnitNode != NULL) ? GET_PLAYER(::getUnit(pUnitNode->m_data)->getOwnerINLINE()).isHuman() : true;
+	const MoveCheck::flags moveCheckFlags = MoveCheck::Attack |
+		(bPotentialEnemy ? MoveCheck::DeclareWar : MoveCheck::None) |
+		MoveCheck::CheckForBest |
+		(bAssassinate ? MoveCheck::Assassinate : MoveCheck::None) |
+		(bSuprise ? MoveCheck::Suprise : MoveCheck::None);
 			
+	int iBestValue = 0;
+	int iBestOdds = 0;
+	CvUnit* pBestUnit = NULL;
+
 	while (pUnitNode != NULL)
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
+		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 		pUnitNode = nextUnitNode(pUnitNode);
 
 		if (!pLoopUnit->isDead())
@@ -723,26 +719,21 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 				if (bForce || pLoopUnit->canMove())
 				{
 					CvUnit* pBestDefender = NULL;
-					if ( bForce || pLoopUnit->canMoveInto(pPlot, /*bAttack*/ true, /*bDeclareWar*/ bPotentialEnemy, false, false, false, false, &pBestDefender, true, bAssassinate, bSuprise))
+					if (bForce || pLoopUnit->canMoveInto(pPlot, moveCheckFlags, &pBestDefender))
 					{
 						PROFILE("AI_getBestGroupAttacker.RegularAttackOdds");
 
-						if (pBestDefender)
-						{
-							iOdds = pLoopUnit->AI_attackOddsAtPlot(pPlot, (CvUnitAI*)pBestDefender);
-						}
-						else
-						{
-							iOdds = pLoopUnit->AI_attackOdds(pPlot, bPotentialEnemy, 0, bAssassinate);
-						}
-						
-							
-						iValue = iOdds;
+						const int iOdds = pBestDefender? 
+							pLoopUnit->AI_attackOddsAtPlot(pPlot, (CvUnitAI*)pBestDefender)
+							:
+							pLoopUnit->AI_attackOdds(pPlot, bPotentialEnemy, 0, bAssassinate);
+
+						int iValue = iOdds;
 						FAssertMsg(iValue > 0, "iValue is expected to be greater than 0");
 	
 						if (pLoopUnit->collateralDamage() > 0)
 						{
-							iPossibleTargets = std::min((pPlot->getNumVisiblePotentialEnemyDefenders(pLoopUnit) - 1), pLoopUnit->collateralDamageMaxUnits());
+							const int iPossibleTargets = std::min((pPlot->getNumVisiblePotentialEnemyDefenders(pLoopUnit) - 1), pLoopUnit->collateralDamageMaxUnits());
 	
 							if (iPossibleTargets > 0)
 							{
@@ -810,7 +801,7 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupSacrifice(const CvPlot* pPlot, bool b
 			{
 				if (bForce || pLoopUnit->canMove())
 				{
-					if (bForce || pLoopUnit->canMoveInto(pPlot, true))
+					if (bForce || pLoopUnit->canMoveInto(pPlot, MoveCheck::Attack))
 					{
 						int iValue = pLoopUnit->AI_sacrificeValue(pPlot);
 						FAssertMsg(iValue >= 0, "iValue is expected to be greater than 0");
@@ -918,7 +909,7 @@ int CvSelectionGroupAI::AI_sumStrength(const CvPlot* pAttackedPlot, DomainTypes 
 			)
 			&& (!bCheckCanMove || pLoopUnit->canMove())
 			//TB: canMoveInto may need simplified here somehow.
-			&& (!bCheckCanMove || pAttackedPlot == NULL || pLoopUnit->canMoveInto(pAttackedPlot, /*bAttack*/ true, /*bDeclareWar*/ true, false, false, true /*bIgnoreLocation*/))
+			&& (!bCheckCanMove || pAttackedPlot == NULL || pLoopUnit->canMoveInto(pAttackedPlot, MoveCheck::Attack | MoveCheck::DeclareWar | MoveCheck::IgnoreLocation))
 			&& (eDomainType == NO_DOMAIN || pLoopUnit->getDomainType() == eDomainType)
 			)
 		{

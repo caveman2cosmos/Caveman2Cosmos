@@ -29180,7 +29180,7 @@ bool CvUnitAI::AI_airStrike()
 
 			if (pLoopPlot != NULL)
 			{
-				if (canMoveInto(pLoopPlot, true))
+				if (canMoveInto(pLoopPlot, MoveCheck::Attack))
 				{
 					iValue = 0;
 					iPotentialAttackers = GET_PLAYER(getOwnerINLINE()).AI_adjacentPotentialAttackers(pLoopPlot);
@@ -29301,7 +29301,7 @@ bool CvUnitAI::AI_defensiveAirStrike()
 
 			if (pLoopPlot != NULL)
 			{
-				if (canMoveInto(pLoopPlot, true)) // Only true of plots this unit can airstrike
+				if (canMoveInto(pLoopPlot, MoveCheck::Attack)) // Only true of plots this unit can airstrike
 				{
 					// Only attack enemy land units near our cities
 					if( pLoopPlot->isPlayerCityRadius(getOwnerINLINE()) && !pLoopPlot->isWater() )
@@ -29407,7 +29407,7 @@ bool CvUnitAI::AI_defendBaseAirStrike()
 
 			if (pLoopPlot != NULL)
 			{
-				if (canMoveInto(pLoopPlot, true) && !pLoopPlot->isWater()) // Only true of plots this unit can airstrike
+				if (canMoveInto(pLoopPlot, MoveCheck::Attack) && !pLoopPlot->isWater()) // Only true of plots this unit can airstrike
 				{
 					if( plot()->area() == pLoopPlot->area() )
 					{
@@ -31596,7 +31596,7 @@ bool CvUnitAI::AI_moveIntoCity(int iRange, bool bOpponentOnly)
 			if (AI_plotValid(pLoopPlot)
 				&& (!bOpponentOnly || isEnemy(pLoopPlot->getTeam(), pLoopPlot))
 				&& (pLoopPlot->isCity() || (pLoopPlot->isCity(true)))
-				&& canMoveInto(pLoopPlot, false) 
+				&& canMoveInto(pLoopPlot) 
 				&& generatePath(pLoopPlot, 0, true, &iPathTurns, 0)
 				&& (!bOpponentOnly || pLoopPlot->getTeam() != getTeam())
 				)
@@ -31669,7 +31669,7 @@ bool CvUnitAI::AI_moveIntoNearestOwnedCity()
 			{
 				if (pLoopPlot->isCity() || (pLoopPlot->isCity(true)))
 				{
-                    if (canMoveInto(pLoopPlot, false) && (generatePath(pLoopPlot, 0, true, &iPathTurns, 0)))
+                    if (canMoveInto(pLoopPlot) && (generatePath(pLoopPlot, 0, true, &iPathTurns, 0)))
                     {
 						FAssert(getPathEndTurnPlot() == pLoopPlot);
 
@@ -34123,7 +34123,7 @@ bool CvUnitAI::AI_patrolBorders()
 
 			if (pLoopPlot != NULL)
 			{
-				if (canMoveInto(pLoopPlot, false, false, true, false, false))
+				if (canMoveInto(pLoopPlot, MoveCheck::IgnoreLoad))
 				{
 					DirectionTypes eNewDirection = estimateDirection(plot(), pLoopPlot);
 					iValue = GC.getGameINLINE().getSorenRandNum(10000, "AI Border Patrol");
@@ -34451,7 +34451,7 @@ bool CvUnitAI::AI_airBombCities()
 
 			if (pLoopPlot != NULL)
 			{
-				if (canMoveInto(pLoopPlot, true))
+				if (canMoveInto(pLoopPlot, MoveCheck::Attack))
 				{
 					iValue = 0;
 					iPotentialAttackers = pLoopPlot->getNumVisiblePotentialEnemyDefenders(this);
@@ -34617,7 +34617,7 @@ bool CvUnitAI::AI_protectTarget(CvUnit* pTarget)
 					{
 						if (pLoopPlot->isVisible(getTeam(),false) && pLoopPlot->isVisibleEnemyUnit(this))
 						{
-							if (!atPlot(pLoopPlot) && canMoveInto(pLoopPlot, true) && generatePath(pLoopPlot, 0, true, &iPathTurns, 1))
+							if (!atPlot(pLoopPlot) && canMoveInto(pLoopPlot, MoveCheck::Attack) && generatePath(pLoopPlot, 0, true, &iPathTurns, 1))
 							{
 								if (pLoopPlot->getNumVisiblePotentialEnemyDefenders(this) <= getGroup()->getNumUnits())
 								{

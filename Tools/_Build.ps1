@@ -1,5 +1,5 @@
 $TARGET = $args[0] + "-build"
-$FBUILD_ARGS = ("-summary", "-wait", "-wrapper")
+$FBUILD_ARGS = ("-summary", "-wait", "-wrapper", "-cache")
 # $FBUILD_ARGS = ("-summary", "-wait", "-wrapper", "-cache", "-verbose", "-showdeps")
 $CWD = Get-Location
 $BUILD_DIR = Join-Path -Path $CWD -ChildPath "..\Build" -Resolve

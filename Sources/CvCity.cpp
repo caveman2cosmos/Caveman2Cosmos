@@ -19114,7 +19114,7 @@ void CvCity::popOrder(int iNum, bool bFinish, bool bChoose, bool bResolveList)
 				/************************************************************************************************/
 				if (GC.getGameINLINE().isModderGameOption(MODDERGAMEOPTION_MAX_UNITS_PER_TILES))
 				{
-					if (!pUnit->canMoveInto(plot(), false, false, false, false, true))
+					if (!pUnit->canMoveInto(plot(), MoveCheck::IgnoreLocation))
 					{
 						pUnit->jumpToNearestValidPlot(false);
 					}

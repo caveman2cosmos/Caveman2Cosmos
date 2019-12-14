@@ -204,14 +204,9 @@ ForEach( .Config in .Configs )
 {
     Using( .Config )
 
-    .TARGET_DIR             = '$BUILD_DIR$\$ConfigName$'
-    .Target_BIN             = '$TARGET_DIR$\CvGameCoreDLL.dll'
-    .Target_RESOURCE        = '$TARGET_DIR$\CvGameCoreDLL.res'
-    .Target_STATICLIB       = '$TARGET_DIR$\CvGameCoreDLL.lib'
-    .Target_LIBDEF          = '$TARGET_DIR$\CvGameCoreDLL.def'
-    .Target_PCH             = '$TARGET_DIR$\CvGameCoreDLL.pch'
-    .Target_PDB             = '$TARGET_DIR$\CvGameCoreDLL.pdb'
-    .Target_OTHER           = '$TARGET_DIR$\CvGameCoreDLL.exp'
+    .OUT_DIR                = '$BUILD_DIR$\$ConfigName$'
+    .Target_DLL             = '$OUT_DIR$\CvGameCoreDLL.dll'
+    .Target_RES             = '$OUT_DIR$\CvGameCoreDLL.res'
 
     // Building objs
     ObjectList( '$ConfigName$-Objs' )
@@ -222,10 +217,10 @@ ForEach( .Config in .Configs )
         
         .CompilerInputUnity = 'Sources-Unity'
 
-        .CompilerOutputPath = '$TARGET_DIR$'
+        .CompilerOutputPath = '$OUT_DIR$'
 
         .PCHInputFile       = '$SOURCE_DIR$/CvGameCoreDLL.cpp'
-        .PCHOutputFile      = '$TARGET_DIR$/C2C.pch'
+        .PCHOutputFile      = '$OUT_DIR$/CvGameCoreDLL.pch'
         .PCHOptions         = ' "%1"' // PCH .CPP Input
                             + ' /Fo"%3"' // .OBJ Output
                             + ' /Yc"CvGameCoreDLL.h"' // PCH Header
@@ -248,7 +243,7 @@ ForEach( .Config in .Configs )
     {
         .ExecExecutable     = '$ResourceCompiler$'
         .ExecInput          = '$SOURCE_DIR$/CvGameCoreDLL.rc'
-        .ExecOutput         = '$Target_RESOURCE$'
+        .ExecOutput         = '$Target_RES$'
         .ExecArguments      = '/Fo"%2" $INCS$ "%1"'
     }
 
@@ -257,9 +252,9 @@ ForEach( .Config in .Configs )
     {
         .PreBuildDependencies = '$ConfigName$-res'
         .Libraries          = { '$ConfigName$-Objs' }
-        .LinkerOutput       = '$Target_BIN$'
+        .LinkerOutput       = '$Target_DLL$'
         .LinkerOptions      = ' $LDOptions$'
-                            + ' $Target_RESOURCE$'
+                            + ' $Target_RES$'
     }
 
     // This was an attempt at a copy deploy step.
@@ -268,7 +263,7 @@ ForEach( .Config in .Configs )
     // Copy( '$ConfigName$-deploy' )
     // {
     //     //.PreBuildDependencies = '$ConfigName$-build'
-    //     .Source   = {'$Target_BIN$', '$Target_PDB$'}
+    //     .Source   = {'$Target_DLL$', '$Target_PDB$'}
     //     .Dest     = '$YOURMOD$/Assets/'
     // }
 

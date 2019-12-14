@@ -62,6 +62,27 @@ struct PromotionApply
 };
 DECLARE_FLAGS(PromotionApply::flags);
 
+struct MoveCheck
+{
+	enum flags 
+	{
+		None = 0,
+		// Checking for a potential attack
+		Attack = 1 << 0,
+		// Allow declaration of war (human only check)
+		DeclareWar = 1 << 1,
+		// Don't allow loading into transports
+		IgnoreLoad = 1 << 2,
+		IgnoreTileLimit = 1 << 3,
+		IgnoreLocation = 1 << 4,
+		IgnoreAttack = 1 << 5,
+		CheckForBest = 1 << 6,
+		Assassinate = 1 << 7,
+		Suprise = 1 << 8
+	};
+};
+DECLARE_FLAGS(MoveCheck::flags);
+
 
 /************************************************************************************************/
 /* Afforess	                  Start		 02/22/10                                               */
@@ -501,15 +522,22 @@ public:
 	bool canEnterTerritory(TeamTypes eTeam, bool bIgnoreRightOfPassage = false) const;						// Exposed to Python
 	bool canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage = false) const;						// Exposed to Python
 	TeamTypes getDeclareWarMove(const CvPlot* pPlot) const;															// Exposed to Python
-/************************************************************************************************/
-/* Afforess	                  Start		 06/17/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	bool canMoveInto(const CvPlot* pPlot, bool bAttack = false, bool bDeclareWar = false, bool bIgnoreLoad = false, bool bIgnoreTileLimit = false, bool bIgnoreLocation = false, bool bIgnoreAttack = false, CvUnit** pDefender = NULL, bool bCheckForBest = false, bool bAssassinate = false, bool bSuprise = false) const;	// Exposed to Python
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
+
+	bool canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags = MoveCheck::None, CvUnit** ppDefender = nullptr) const;
+	// Deprecated - use method above
+	//bool canMoveInto(const CvPlot* pPlot, 
+	//	bool bAttack = false, 
+	//	bool bDeclareWar = false, 
+	//	bool bIgnoreLoad = false, 
+	//	bool bIgnoreTileLimit = false,
+	//	bool bIgnoreLocation = false,
+	//	bool bIgnoreAttack = false,
+	//	CvUnit** pDefender = NULL,
+	//	bool bCheckForBest = false,
+	//	bool bAssassinate = false,
+	//	bool bSuprise = false) const;	// Exposed to Python
+
 	bool canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar = false) const;								// Exposed to Python
 	bool canMoveThrough(const CvPlot* pPlot, bool bDeclareWar = false) const;																								// Exposed to Python
 	void attack(CvPlot* pPlot, bool bQuick, bool bStealth = false, bool bNoCache = false);
@@ -871,8 +899,19 @@ public:
 /**		REVOLUTION_MOD							END								*/
 /********************************************************************************/
 	bool isGoldenAge() const;																							// Exposed to Python
-	bool canCoexistWithEnemyUnit(TeamTypes eTeam, const CvPlot* pPlot = NULL, bool bAlways = true, const CvUnit* pThis = NULL, bool bAssassinate = false) const;
-	bool canUnitCoexistWithEnemyUnit(const CvUnit* pUnit, const CvPlot* pPlot = NULL, bool bTrapCheck = false) const;
+
+	// Can this unit always coexist with other units (all other things being equal)?
+	bool canCoexistAlways() const;
+	// Can this unit coexist with the specified team (all other things being equal)?
+	bool canCoexistWithTeam(const TeamTypes withTeam) const;
+	// Can this unit coexist with the specified team, on the specified plot?
+	bool canCoexistWithTeamOnPlot(const TeamTypes withTeam, const CvPlot& onPlot) const;
+	// Can this unit coexist with an attacking unit (possibly performing an assassination)?
+	bool canCoexistWithAttacker(const CvUnit& attacker, bool bAssassinate = false) const;
+
+	// Checks for differing domains, transport status, amnesty game setting
+	// TODO: roll this into the other Coexist functions
+	bool canUnitCoexistWithArrivingUnit(const CvUnit& pUnit) const;
 
 	DllExport bool isFighting() const;																		// Exposed to Python						
 	DllExport bool isAttacking() const;																		// Exposed to Python						
@@ -960,7 +999,7 @@ public:
 	bool isNeverInvisible() const;
 	int getNoInvisibilityCount() const;
 	void changeNoInvisibilityCount(int iChange);	
-	DllExport bool isInvisible(TeamTypes eTeam, bool bDebug, bool bCheckCargo = true) const;										// Exposed to Python
+	DllExport bool isInvisible(TeamTypes eTeam, bool bDebug = false, bool bCheckCargo = true) const;										// Exposed to Python
 	bool isNukeImmune() const;																												// Exposed to Python
 /************************************************************************************************/
 /* REVDCM_OC                              02/16/10                                phungus420    */
@@ -2295,7 +2334,7 @@ protected:
 /************************************************************************************************/
 // From Lead From Behind by UncutDragon
 public:
-	int defenderValue(const CvUnit* pAttacker, bool bAssassinate = false) const;
+	int defenderValue(const CvUnit* pAttacker) const;
 	bool isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttacker, int* pBestDefenderRank) const;
 protected:
 /************************************************************************************************/
