@@ -29277,7 +29277,6 @@ void CvUnit::rBombardCombat(const CvPlot* pPlot, CvUnit* pFirstUnit)
 				// Reduce bombard damage based on collatoral damage protection factor
 				iRBombardDamage -= (iRBombardDamage * iCollatDef) / 100;
 				//TB Combat Mods end
-				iRBombardDamage /= 100;
 
 				if (pCity != NULL)
 				{
