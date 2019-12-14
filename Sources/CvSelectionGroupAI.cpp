@@ -674,20 +674,7 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
-	CvUnit* pBestUnit;
-	int iPossibleTargets;
-	int iValue;
-	int iBestValue;
-	int iOdds;
-	int iBestOdds;
-
-	iBestValue = 0;
-	iBestOdds = 0;
-	pBestUnit = NULL;
-
-
+	CLLNode<IDInfo>* pUnitNode = headUnitNode();
 	const bool bIsHuman = (pUnitNode != NULL) ? GET_PLAYER(::getUnit(pUnitNode->m_data)->getOwnerINLINE()).isHuman() : true;
 
 	const MoveCheck::flags moveCheckFlags = MoveCheck::Attack |
@@ -696,10 +683,13 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 		(bAssassinate ? MoveCheck::Assassinate : MoveCheck::None) |
 		(bSuprise ? MoveCheck::Suprise : MoveCheck::None);
 			
-	pUnitNode = headUnitNode();
+	int iBestValue = 0;
+	int iBestOdds = 0;
+	CvUnit* pBestUnit = NULL;
+
 	while (pUnitNode != NULL)
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
+		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 		pUnitNode = nextUnitNode(pUnitNode);
 
 		if (!pLoopUnit->isDead())
@@ -733,22 +723,17 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 					{
 						PROFILE("AI_getBestGroupAttacker.RegularAttackOdds");
 
-						if (pBestDefender)
-						{
-							iOdds = pLoopUnit->AI_attackOddsAtPlot(pPlot, (CvUnitAI*)pBestDefender);
-						}
-						else
-						{
-							iOdds = pLoopUnit->AI_attackOdds(pPlot, bPotentialEnemy, 0, bAssassinate);
-						}
-						
-							
-						iValue = iOdds;
+						const int iOdds = pBestDefender? 
+							pLoopUnit->AI_attackOddsAtPlot(pPlot, (CvUnitAI*)pBestDefender)
+							:
+							pLoopUnit->AI_attackOdds(pPlot, bPotentialEnemy, 0, bAssassinate);
+
+						int iValue = iOdds;
 						FAssertMsg(iValue > 0, "iValue is expected to be greater than 0");
 	
 						if (pLoopUnit->collateralDamage() > 0)
 						{
-							iPossibleTargets = std::min((pPlot->getNumVisiblePotentialEnemyDefenders(pLoopUnit) - 1), pLoopUnit->collateralDamageMaxUnits());
+							const int iPossibleTargets = std::min((pPlot->getNumVisiblePotentialEnemyDefenders(pLoopUnit) - 1), pLoopUnit->collateralDamageMaxUnits());
 	
 							if (iPossibleTargets > 0)
 							{
