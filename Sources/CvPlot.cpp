@@ -16841,7 +16841,12 @@ int CvPlot::getCommunicability(PromotionLineTypes ePromotionLine, bool bWorkedTi
 	return iCommunicability;
 }
 
-CvUnit* CvPlot::unit_iterator::resolve(const IDInfo& info) const
+CvPlot::unit_iterator::value_type* CvPlot::unit_iterator::resolve(const IDInfo& info) const
+{
+	return ::getUnit(info);
+}
+
+CvPlot::const_unit_iterator::value_type* CvPlot::const_unit_iterator::resolve(const IDInfo& info) const
 {
 	return ::getUnit(info);
 }

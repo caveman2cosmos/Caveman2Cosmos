@@ -202,7 +202,14 @@ void IFPSetCount(ProfileSample* sample, int count);
 #include <boost155/function.hpp>
 #include <boost155/array.hpp>
 #include <boost155/utility.hpp>
+#include <boost155/foreach.hpp>
+
+// Make boost foreach look nice enough to actually use
+#define foreach_ BOOST_155_FOREACH
+// Alias our latest boost version
 namespace bst = boost155;
+// Bring range adaptors straight into global namespace, as we use them a lot
+//using namespace bst::adaptors;
 
 //
 // Boost Python
@@ -221,6 +228,8 @@ namespace bst = boost155;
 namespace python = boost::python;
 #endif
 
+//#include <boost155/range/adaptor/filtered.hpp>
+//#include <boost155/range/adaptor/transformed.hpp>
 
 //
 // xercesc for XML loading

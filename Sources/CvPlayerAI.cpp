@@ -658,12 +658,11 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 		// Copy units as we will be removing and adding some now.
 		for (safe_unit_iterator itr = beginUnitsSafe(); itr != endUnitsSafe(); ++itr)
 		{
-			CvUnit* pLoopUnit = *itr;
-			if (pLoopUnit->isPromotionReady())
+			if (itr->isPromotionReady())
 			{
-				pLoopUnit->AI_promote();
+				itr->AI_promote();
 				// Upgrade replaces the original unit with a new one, so old unit must be killed
-				pLoopUnit->doDelayedDeath();
+				itr->doDelayedDeath();
 			}
 		}
 	}

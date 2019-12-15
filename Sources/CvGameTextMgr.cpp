@@ -13,8 +13,8 @@
 #include "CvGameCoreDLL.h"
 #include "CvDLLSymbolIFaceBase.h"
 
-#include <boost/function.hpp>
-#include <boost/bind.hpp>
+#include <boost155/function.hpp>
+#include <boost155/bind.hpp>
 
 int shortenID(int iId)
 {

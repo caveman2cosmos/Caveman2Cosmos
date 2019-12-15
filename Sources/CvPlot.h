@@ -948,21 +948,50 @@ public:
 	DllExport CLLNode<IDInfo>* headUnitNode() const;
 	CLLNode<IDInfo>* tailUnitNode() const;
 
-	// For iterating over units on a plot, optionally skipping invalid (NULL) ones
-	class unit_iterator : public idinfo_iterator<unit_iterator, CvUnit>
+	// For iterating over units on a plot
+	class unit_iterator : public idinfo_iterator_base<unit_iterator, CvUnit>
 	{
 	public:
-		typedef idinfo_iterator<unit_iterator, CvUnit> base_type;
 		unit_iterator() {}
 		explicit unit_iterator(const CLinkList<IDInfo>* list) : base_type(list) {}
-
 	private:
 		friend class core_access;
-		CvUnit* resolve(const IDInfo& info) const;
+		value_type* resolve(const IDInfo& info) const;
 	};
+	unit_iterator beginUnits() { return unit_iterator(&m_units); }
+	unit_iterator endUnits() { return unit_iterator(); }
+	typedef bst::iterator_range<unit_iterator> unit_range;
+	unit_range units() { return unit_range(beginUnits(), endUnits()); }
 
-	unit_iterator beginUnits() const { return unit_iterator(&m_units); }
-	unit_iterator endUnits() const { return unit_iterator(); }
+	class const_unit_iterator : public idinfo_iterator_base<const_unit_iterator, const CvUnit>
+	{
+	public:
+		const_unit_iterator() {}
+		explicit const_unit_iterator(const CLinkList<IDInfo>* list) : base_type(list) {}
+	private:
+		friend class core_access;
+		value_type* resolve(const IDInfo& info) const;
+	};
+	const_unit_iterator beginUnits() const { return const_unit_iterator(&m_units); }
+	const_unit_iterator endUnits() const { return const_unit_iterator(); }
+	typedef bst::iterator_range<const_unit_iterator> const_unit_range;
+	const_unit_range units() const { return const_unit_range(beginUnits(), endUnits()); }
+
+
+	//class unit_iterator : public idinfo_iterator<unit_iterator, CvUnit>
+	//{
+	//public:
+	//	typedef idinfo_iterator<unit_iterator, CvUnit> base_type;
+	//	unit_iterator() {}
+	//	explicit unit_iterator(const CLinkList<IDInfo>* list) : base_type(list) {}
+
+	//private:
+	//	friend class core_access;
+	//	CvUnit* resolve(const IDInfo& info) const;
+	//};
+
+	//unit_iterator beginUnits() const { return unit_iterator(&m_units); }
+	//unit_iterator endUnits() const { return unit_iterator(); }
 
 	int getNumSymbols() const;
 	CvSymbol* getSymbol(int iID) const;

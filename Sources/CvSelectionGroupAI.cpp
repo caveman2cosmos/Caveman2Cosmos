@@ -2,7 +2,7 @@
 
 #include "CvGameCoreDLL.h"
 #include "BetterBTSAI.h"
-#include <boost/bind.hpp>
+
 // Public Functions...
 
 CvSelectionGroupAI::CvSelectionGroupAI()
@@ -74,16 +74,13 @@ namespace {
 
 void CvSelectionGroupAI::AI_separateIf(bst::function<bool(CvUnit*)> predicateFn)
 {
-	std::vector<CvUnit*> toRemove = get_if(predicateFn);
-
-	for (std::vector<CvUnit*>::iterator itr = toRemove.begin(); itr != toRemove.end(); ++itr)
+	foreach_(CvUnit& unit, units() | filtered(predicateFn))
 	{
-		CvUnit* unit = *itr;
-		unit->joinGroup(NULL);
-		FAssertMsg(std::find(beginUnits(), endUnits(), unit) == endUnits(), "Failed to remove unit from group");
-		if (unit->plot()->getTeam() == getTeam())
+		unit.joinGroup(NULL);
+		FAssertMsg(bst::contains(units(), unit), "Failed to remove unit from group");
+		if (unit.plot()->getTeam() == getTeam())
 		{
-			unit->getGroup()->pushMission(MISSION_SKIP);
+			unit.getGroup()->pushMission(MISSION_SKIP);
 		}
 	}
 }
@@ -255,11 +252,10 @@ bool CvSelectionGroupAI::AI_update()
 				itr != endUnits() && readyToMove(true); 
 				++itr)
 			{
-				CvUnit* pLoopUnit = *itr;
-				if (pLoopUnit->canMove())
+				if (itr->canMove())
 				{
 					resetPath();
-					if (pLoopUnit->AI_follow())
+					if (itr->AI_follow())
 					{
 						bFollow = true;
 						break;
@@ -886,6 +882,9 @@ int CvSelectionGroupAI::AI_compareStacks(const CvPlot* pPlot, StackCompare::flag
 
 int CvSelectionGroupAI::AI_sumStrength(const CvPlot* pAttackedPlot, DomainTypes eDomainType, StackCompare::flags flags /*= StackCompare::None*/) const
 {
+	if (getNumUnits() == 0)
+		return 0;
+
 	unsigned long long strSum = 0;
 	static const int COLLATERAL_COMBAT_DAMAGE = GC.getDefineINT("COLLATERAL_COMBAT_DAMAGE"); // K-Mod. (currently this number is "10")
 
@@ -893,40 +892,38 @@ int CvSelectionGroupAI::AI_sumStrength(const CvPlot* pAttackedPlot, DomainTypes 
 	const bool bCheckCanMove = flags & StackCompare::CheckCanMove;
 	const bool bFastMode = flags & StackCompare::Fast;
 
-	unit_iterator unitItr = beginUnits();
-	int iNumPotentialDefenders = pAttackedPlot->getNumVisiblePotentialEnemyDefenders(*unitItr) - 1;
-	for (; unitItr != endUnits() && strSum <= MAX_INT; ++unitItr)
+	const int iNumPotentialDefenders = pAttackedPlot->getNumVisiblePotentialEnemyDefenders(getHeadUnit()) - 1;
+
+	foreach_ (const CvUnit& unit, units() | filtered(pred::unit_is_alive))
 	{
-		CvUnit* pLoopUnit = *unitItr;
-
-		if (pLoopUnit->isDead())
-			continue;
-
 		if ((
 				!bCheckCanAttack
-				|| (pLoopUnit->getDomainType() == DOMAIN_AIR && pLoopUnit->canAirAttack())
-				|| (pLoopUnit->getDomainType() != DOMAIN_AIR && pLoopUnit->canAttack())
+				|| (unit.getDomainType() == DOMAIN_AIR && unit.canAirAttack())
+				|| (unit.getDomainType() != DOMAIN_AIR && unit.canAttack())
 			)
-			&& (!bCheckCanMove || pLoopUnit->canMove())
+			&& (!bCheckCanMove || unit.canMove())
 			//TB: canMoveInto may need simplified here somehow.
-			&& (!bCheckCanMove || pAttackedPlot == NULL || pLoopUnit->canMoveInto(pAttackedPlot, MoveCheck::Attack | MoveCheck::DeclareWar | MoveCheck::IgnoreLocation))
-			&& (eDomainType == NO_DOMAIN || pLoopUnit->getDomainType() == eDomainType)
+			&& (!bCheckCanMove || pAttackedPlot == NULL || unit.canMoveInto(pAttackedPlot, MoveCheck::Attack | MoveCheck::DeclareWar | MoveCheck::IgnoreLocation))
+			&& (eDomainType == NO_DOMAIN || unit.getDomainType() == eDomainType)
 			)
 		{
-			//strSum += (unsigned long long)pLoopUnit->currEffectiveStr(pAttackedPlot, pLoopUnit);
+			//strSum += (unsigned long long)unit.currEffectiveStr(pAttackedPlot, pLoopUnit);
 			//TB Simplify for speed:
-			strSum += (unsigned long long)pLoopUnit->currCombatStr(NULL,NULL);
+			strSum += (unsigned long long)unit.currCombatStr(NULL,NULL);
 			// K-Mod estimate the attack power of collateral units
-			if (!bFastMode && pLoopUnit->collateralDamage() > 0 && pAttackedPlot != plot())
+			if (!bFastMode && unit.collateralDamage() > 0 && pAttackedPlot != plot())
 			{ 
-				int iPossibleTargets = std::min(iNumPotentialDefenders, pLoopUnit->collateralDamageMaxUnits()); 
+				int iPossibleTargets = std::min(iNumPotentialDefenders, unit.collateralDamageMaxUnits());
 
 				if (iPossibleTargets > 0) 
 				{ 
 					// collateral damage is not trivial to calculate. This estimate is pretty rough. 
-					strSum += (unsigned long long)pLoopUnit->baseCombatStrNonGranular() * COLLATERAL_COMBAT_DAMAGE * pLoopUnit->collateralDamage() * iPossibleTargets / 100;
+					strSum += (unsigned long long)unit.baseCombatStrNonGranular() * COLLATERAL_COMBAT_DAMAGE * unit.collateralDamage() * iPossibleTargets / 100;
 				} 
 			} 
+
+			if (strSum >= MAX_INT)
+				break;
 			// K-Mod end 
 		}
 	}

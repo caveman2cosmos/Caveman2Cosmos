@@ -7,64 +7,31 @@
 
 struct IDInfo;
 
-// Copying some of boost iterator facade instead of using it directly as intellisense isn't working with boost.
-
-// This class gets access to the derived iterators internals via friendship.
-template < class Derived, class Value >
+template < class Facade, class Value >
 class idinfo_iterator_core_access
 {
 public:
-	static Value* resolve(const Derived& derived, const IDInfo& info) { return derived.resolve(info); }
+	static typename Facade::value_type* resolve(const Facade facade, const IDInfo& info) { return facade.resolve(info); }
 };
 
-// A simple forward iterator that moves to the next node preemptively to avoid the current node being invalidated by
-// changes done to the referenced unit.
-// This might not be necessary, however it is done to safely emulate the code it is replacing which had this 
-// characteristic
-
+// Base class for iteration using indexed iteration functions (CvPlayer::firstCity/nextCity etc.)
 template < class Derived, class Value >
-class idinfo_iterator // : public bst::iterator_facade<unit_iterator, Value, bst::forward_traversal_tag>
+class idinfo_iterator_base : public bst::iterator_facade<Derived, Value, bst::forward_traversal_tag, Value&>
 {
-	// Curiously Recurring Template interface.
-	Derived& derived()
-	{
-		return *static_cast<Derived*>(this);
-	}
-
-	Derived const& derived() const
-	{
-		return *static_cast<Derived const*>(this);
-	}
-
 public:
-	typedef idinfo_iterator_core_access<Derived, Value> core_access;
-	typedef idinfo_iterator<Derived, Value> this_type;
-	typedef Value* value_type;
-	typedef std::forward_iterator_tag iterator_category;
-	typedef ptrdiff_t difference_type;
-	typedef Value* pointer;
-	typedef Value* reference;
+	typedef Value value_type;
+	typedef idinfo_iterator_base<Derived, Value> base_type;
 
-public:
-	idinfo_iterator() : m_list(NULL), m_node(NULL), m_ptr(NULL) {}
-	explicit idinfo_iterator(const CLinkList<IDInfo>* list) : m_list(list), m_node(list->head())
+	idinfo_iterator_base() : m_list(NULL), m_node(NULL), m_ptr(NULL) {}
+	explicit idinfo_iterator_base(const CLinkList<IDInfo>* list) : m_list(list), m_node(list->head())
 	{
 		// We start by incrementing
 		increment();
 	}
-	bool operator==(idinfo_iterator const& other) const { return equal(other); }
-	bool operator!=(idinfo_iterator const& other) const { return !equal(other); }
-	idinfo_iterator& operator++() { increment(); return *this; }
-	idinfo_iterator  operator++(int) { idinfo_iterator prev(*this); increment(); return prev; }
-	Value*& operator*() { return dereference(); };
-	const Value* operator*() const { return dereference(); };
-	Value* operator->() { return dereference(); };
-
-	bool valid() const { return m_ptr != NULL; }
 
 private:
-	// friend class idinfo_iterator_core_access;
-	// Value* resolve(const IDInfo& info) const;
+	typedef idinfo_iterator_core_access<Derived, Value> core_access;
+	friend class bst::iterator_core_access;
 
 	void increment()
 	{
@@ -82,29 +49,46 @@ private:
 			} while (m_ptr == NULL && m_node != NULL);
 		}
 	}
+	
+	bool equal(idinfo_iterator_base const& other) const
+	{
+		return this->m_ptr == other.m_ptr;
+	}
+	
+	Value& dereference() const { return *m_ptr; }
 
-	bool equal(idinfo_iterator const& other) const { return this->m_ptr == other.m_ptr; }
-	Value*& dereference() { return m_ptr; }
-	Value* dereference() const { return m_ptr; }
+	Derived& derived()
+	{
+		return *static_cast<Derived*>(this);
+	}
+
+	Derived const& derived() const
+	{
+		return *static_cast<Derived const*>(this);
+	}
 
 	const CLinkList<IDInfo>* m_list;
 	CLLNode<IDInfo>* m_node;
 	Value* m_ptr;
 };
 
-namespace std {
+#define DECLARE_IDINFO_ITERATORS(item_type, base_name, itr_name, const_itr_name, first_fn, next_fn) \
+	template < class ItemTy_ > \
+	class base_name : public idinfo_iterator_base<base_name<ItemTy_>, ItemTy_> \
+	{ \
+	public: \
+		typedef index_iterator_base<base_name<ItemTy_>, ItemTy_> base_type; \
+		base_name() {} \
+		explicit base_name(OwnerTy_* owner) : base_type(owner) {} \
+		explicit base_name(OwnerTy_* owner, reverse_tag) : base_type(owner, reverse_tag()) {} \
+		\
+	private: \
+		friend class index_iterator_core_access; \
+		ItemTy_* first(OwnerTy_* owner, int* pIterIdx, bool bRev = false) const { return owner->first_fn(pIterIdx, bRev); } \
+		ItemTy_* next(OwnerTy_* owner, int* pIterIdx, bool bRev = false) const { return owner->next_fn(pIterIdx, bRev); } \
+	}; \
+	typedef base_name<item_type> itr_name; \
+	typedef base_name<const item_type> const_itr_name;
 
-	template < class Derived, class Value >
-	struct iterator_traits < idinfo_iterator < Derived, Value > >
-	{	// get traits from iterator _Iter
-		typedef forward_iterator_tag iterator_category;
-		// typedef Value value_type;
-		// typedef ptrdiff_t difference_type;
-		// typedef difference_type distance_type;	// retained
-		// typedef Value* pointer;
-		// typedef Value& reference;
-	};
-
-}
 
 #endif // idinfo_iterator_h__

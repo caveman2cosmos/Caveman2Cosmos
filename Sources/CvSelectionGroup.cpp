@@ -3,7 +3,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvReachablePlotSet.h"
 
-#include <boost/bind.hpp>
+#include <boost155/bind.hpp>
 #include "BetterBTSAI.h"
 
 CvSelectionGroup* CvSelectionGroup::m_pCachedMovementGroup = NULL;
@@ -7692,31 +7692,31 @@ TeamTypes CvSelectionGroup::getHeadTeam() const
 	return NO_TEAM;
 }
 
-std::vector<const CvUnit*> CvSelectionGroup::get_if(bst::function<bool(const CvUnit*)> predicateFn) const
-{
-	std::vector<const CvUnit*> units;
-	for (unit_iterator itr = beginUnits(); itr != endUnits(); ++itr)
-	{
-		if (predicateFn(*itr))
-		{
-			units.push_back(*itr);
-		}
-	}
-	return units;
-}
-
-std::vector<CvUnit*> CvSelectionGroup::get_if(bst::function<bool(CvUnit*)> predicateFn)
-{
-	std::vector<CvUnit*> units;
-	for (unit_iterator itr = beginUnits(); itr != endUnits(); ++itr)
-	{
-		if (predicateFn(*itr))
-		{
-			units.push_back(*itr);
-		}
-	}
-	return units;
-}
+//std::vector<const CvUnit*> CvSelectionGroup::get_if(bst::function<bool(const CvUnit*)> predicateFn) const
+//{
+//	std::vector<const CvUnit*> units;
+//	for (unit_iterator itr = beginUnits(); itr != endUnits(); ++itr)
+//	{
+//		if (predicateFn(*itr))
+//		{
+//			units.push_back(*itr);
+//		}
+//	}
+//	return units;
+//}
+//
+//std::vector<CvUnit*> CvSelectionGroup::get_if(bst::function<bool(CvUnit*)> predicateFn)
+//{
+//	std::vector<CvUnit*> units;
+//	for (unit_iterator itr = beginUnits(); itr != endUnits(); ++itr)
+//	{
+//		if (predicateFn(*itr))
+//		{
+//			units.push_back(*itr);
+//		}
+//	}
+//	return units;
+//}
 
 void CvSelectionGroup::clearMissionQueue()
 {
@@ -8688,7 +8688,12 @@ void CvSelectionGroup::releaseUnitAIs(UnitAITypes eUnitAI)
 	return;
 }
 
-CvUnit* CvSelectionGroup::unit_iterator::resolve(const IDInfo& info) const
+CvSelectionGroup::unit_iterator::value_type* CvSelectionGroup::unit_iterator::resolve(const IDInfo& info) const
+{
+	return ::getUnit(info);
+}
+
+CvSelectionGroup::const_unit_iterator::value_type* CvSelectionGroup::const_unit_iterator::resolve(const IDInfo& info) const
 {
 	return ::getUnit(info);
 }

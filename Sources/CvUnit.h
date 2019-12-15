@@ -457,9 +457,13 @@ public:
 	CvUnit(bool bIsDummy = false);
 	virtual ~CvUnit();
 
-
 	CvGameObjectUnit* getGameObject() {return &m_GameObject;};
 	const CvGameObjectUnit* getGameObjectConst() const {return (const CvGameObjectUnit*)&m_GameObject;};
+
+	// Comparison operators
+	// Use address identity for now (more than one map means x/y compare wouldn't work)
+	friend bool operator==(const CvUnit& lhs, const CvUnit& rhs) { return &lhs == &rhs; }
+	friend bool operator!=(const CvUnit& lhs, const CvUnit& rhs) { return &lhs != &rhs; }
 
 protected:
 	CvGameObjectUnit m_GameObject;
@@ -3312,6 +3316,31 @@ private:
 
 typedef std::vector<CvUnit*> UnitVector;
 typedef std::vector<const CvUnit*> ConstUnitVector;
-typedef copy_iterator<CvUnit*, CvUnit*> safe_unit_iterator;
+
+// Safe unit iterators (they copy the whole range before iterating, but this is just copying pointers so not a big deal in most cases
+// However it shouldn't be used in inner loops
+typedef copy_iterator<CvUnit> safe_unit_iterator;
+typedef copy_iterator<const CvUnit> const_safe_unit_iterator;
+
+//// Boost range filter predicates
+//namespace pred
+//{
+//	inline bool unit_is_dead(const CvUnit& unit) { return unit.isDead(); }
+//	inline bool unit_is_alive(const CvUnit& unit) { return !unit.isDead(); }
+//}
+//
+//namespace filters
+//{
+//	//unit_is_deadinline bool unit_is_dead(const CvUnit& unit) { return unit.isDead(); }
+//	inline bool unit_is_alive(const CvUnit& unit) { return !unit.isDead(); }
+//}
+//
+//
+//// Boost range filter predicates
+//namespace trans
+//{
+//	inline const CvPlot& unit_plot(const CvUnit& unit) { return *unit.plot(); }
+//	inline CvPlot& unit_plot(CvUnit& unit) { return *unit.plot(); }
+//}
 
 #endif
