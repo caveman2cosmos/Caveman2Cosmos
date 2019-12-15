@@ -544,7 +544,7 @@ BeginMap
 	bottom latitude=-17
 	wrap X=1
 	wrap Y=0
-	world size=WORLDSIZE_LARGE
+	world size=WORLDSIZE_DUEL
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_LOW
 	num plots written=8580
