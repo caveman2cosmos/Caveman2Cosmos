@@ -100,7 +100,7 @@ bool CvOutcomeMission::isPossible(CvUnit* pUnit, bool bTestVisible)
 			}
 			else
 			{
-				pUnit->getGameObject()->foreach(m_ePayerType, boost::bind(callSetPayer, _1, &pPayer));
+				pUnit->getGameObject()->foreach(m_ePayerType, bst::bind(callSetPayer, _1, &pPayer));
 			}
 
 			if (!pPayer)
@@ -187,7 +187,7 @@ void CvOutcomeMission::execute(CvUnit* pUnit)
 		}
 		else
 		{
-			pUnit->getGameObject()->foreach(m_ePayerType, boost::bind(callSetPayer, _1, &pPayer));
+			pUnit->getGameObject()->foreach(m_ePayerType, bst::bind(callSetPayer, _1, &pPayer));
 		}
 
 		if (pPayer)

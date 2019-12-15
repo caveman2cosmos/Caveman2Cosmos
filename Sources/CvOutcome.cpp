@@ -178,9 +178,9 @@ bool CvOutcome::isKill() const
 
 void preparePython(CvString& szCode)
 {
-	//boost::replace_all(szCode, "\r\n", "\n");
-	//boost::replace_all(szCode, "\n", "\r\n");
-	//boost::replace_all(szCode, "\t", "  ");
+	//bst::replace_all(szCode, "\r\n", "\n");
+	//bst::replace_all(szCode, "\n", "\r\n");
+	//bst::replace_all(szCode, "\t", "  ");
 	/*size_t firstNL = szCode.find_first_of('\n');
 	if (firstNL != CvString::npos)
 	{
@@ -250,7 +250,11 @@ void preparePython(CvString& szCode)
 	}
 
 	// now remove this amount of white space from every line
-	boost::replace_all(szCode, "\n"+szXMLSpace, "\n");
+	
+	std::string code = szCode;
+	std::vector<int> vec, search, format;
+	bst::replace_all(vec, search, format);
+	//bst::replace_all(code, std::string("\n"+szXMLSpace), std::string("\n"));
 	
 }
 

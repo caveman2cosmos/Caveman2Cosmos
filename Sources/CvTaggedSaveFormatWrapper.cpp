@@ -3135,7 +3135,7 @@ CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& id
 			m_stream->Read(sizeof(RemappedClassType), (byte*)&entry.classType);
 			m_stream->Read(&entry.numInts);
 
-			boost::scoped_array<int> arrayBuffer(new int[entry.numInts]);
+			bst::scoped_array<int> arrayBuffer(new int[entry.numInts]);
 
 			FAssert (classType == entry.classType);
 
@@ -3215,7 +3215,7 @@ CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& id
 
 			FAssert (classType == entry.classType);
 
-			boost::scoped_array<bool> arrayBuffer(new bool[entry.numBools]);
+			bst::scoped_array<bool> arrayBuffer(new bool[entry.numBools]);
 
 			m_stream->Read(entry.numBools, arrayBuffer.get());
 
@@ -3294,7 +3294,7 @@ CvTaggedSaveFormatWrapper::ReadClassArrayOfClassEnum(const char* name, int& idHi
 
 			FAssert ( indexClassType == entry.classType && valueClassType == entry.valueClassType );
 
-			boost::scoped_array<int> arrayBuffer(new int[entry.numValues]);
+			bst::scoped_array<int> arrayBuffer(new int[entry.numValues]);
 
 			m_stream->Read(entry.numValues, arrayBuffer.get());
 

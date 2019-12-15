@@ -135,7 +135,7 @@ struct ECvPlotGraphics
 };
 DECLARE_FLAGS(ECvPlotGraphics::type);
 
-class CvPlot : boost::noncopyable
+class CvPlot : bst::noncopyable
 {
 friend CvPathPlotInfoStore;
 public:
@@ -571,7 +571,7 @@ public:
 	// Base iterator type for iterating over adjacent valid plots
 	template < class Value_ >
 	struct adjacent_iterator_base : 
-		public boost::iterator_facade<adjacent_iterator_base<Value_>, Value_, boost::forward_traversal_tag>
+		public bst::iterator_facade<adjacent_iterator_base<Value_>, Value_, bst::forward_traversal_tag>
 	{
 		adjacent_iterator_base() : m_centerX(-1), m_centerY(-1), m_curr(nullptr), m_idx(0) {}
 		explicit adjacent_iterator_base(int centerX, int centerY) : m_centerX(centerX), m_centerY(centerY), m_curr(nullptr), m_idx(-1)
@@ -580,7 +580,7 @@ public:
 		}
 
 	private:
-		friend class boost::iterator_core_access;
+		friend class bst::iterator_core_access;
 		void increment()
 		{
 			do

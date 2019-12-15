@@ -7531,8 +7531,8 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 										{
 											int iDifference = GC.getUnitCombatInfo(eGroupVolume).getGroupBase() - GC.getUnitCombatInfo(eUnitCombat).getGroupBase();
 											CvUnit::normalizeUnitPromotions(pUnit, iDifference,
-												boost::bind(Game::isGroupUpgradePromotion, pUnit, _2),
-												boost::bind(Game::isGroupDowngradePromotion, pUnit, _2)
+												bst::bind(Game::isGroupUpgradePromotion, pUnit, _2),
+												bst::bind(Game::isGroupDowngradePromotion, pUnit, _2)
 											);
 										}
 									}

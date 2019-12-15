@@ -277,8 +277,8 @@ public:
 	// This iterates a copy of the unit list, as such it is somewhat slower, but can be used when units may be added or deleted
 	safe_unit_iterator endUnitsSafe() const { return safe_unit_iterator(); }
 
-	std::vector<const CvUnit*> get_if(boost::function<bool(const CvUnit*)> predicateFn) const;
-	std::vector<CvUnit*> get_if(boost::function<bool(CvUnit*)> predicateFn);
+	std::vector<const CvUnit*> get_if(bst::function<bool(const CvUnit*)> predicateFn) const;
+	std::vector<CvUnit*> get_if(bst::function<bool(CvUnit*)> predicateFn);
 
 	void clearMissionQueue();
 	void setMissionPaneDirty();																																	// Exposed to Python
@@ -450,7 +450,7 @@ private:
 	// single threaded nature of the application and the fact that cache validity is only
 	// required across a single path generation call, which cannot interleave
 	static CvSelectionGroup* m_pCachedMovementGroup;
-	static boost::scoped_ptr<CachedPathGenerator> m_cachedPathGenerator;
+	static bst::scoped_ptr<CachedPathGenerator> m_cachedPathGenerator;
 	static CachedPathGenerator& getCachedPathGenerator();
 
 public:

@@ -7,7 +7,7 @@
 #include "BetterBTSAI.h"
 
 CvSelectionGroup* CvSelectionGroup::m_pCachedMovementGroup = NULL;
-boost::scoped_ptr<CvSelectionGroup::CachedPathGenerator> CvSelectionGroup::m_cachedPathGenerator;
+bst::scoped_ptr<CvSelectionGroup::CachedPathGenerator> CvSelectionGroup::m_cachedPathGenerator;
 
 
 //std::map<int,CachedEdgeCosts>* CvSelectionGroup::m_pCachedNonEndTurnEdgeCosts = NULL;
@@ -545,7 +545,7 @@ bool CvSelectionGroup::doDelayedDeath()
 
 	// Get list of the units to delete *first* then delete them. Iterators would be invalidated
 	// if we tried to delete while iterating over the group itself
-	std::vector<CvUnit*> toDelete = get_if(boost::bind(canDelete, boost::ref(GET_PLAYER(getOwnerINLINE())), _1));
+	std::vector<CvUnit*> toDelete = get_if(bst::bind(canDelete, bst::ref(GET_PLAYER(getOwnerINLINE())), _1));
 	for (std::vector<CvUnit*>::iterator itr = toDelete.begin(); itr != toDelete.end(); ++itr)
 	{
 		(*itr)->doDelayedDeath();
@@ -1445,7 +1445,7 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 				if (pShadowPlot != NULL)
 				{
 					int iValidShadowUnits = std::count_if(pShadowPlot->beginUnits(), pShadowPlot->endUnits(),
-						boost::bind(&CvUnit::canShadowAt, pLoopUnit, pShadowPlot, _1));
+						bst::bind(&CvUnit::canShadowAt, pLoopUnit, pShadowPlot, _1));
 
 					if (iValidShadowUnits > 0)
 					{
@@ -7506,7 +7506,7 @@ CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadU
 	{
 		// try to find remainder head with same AI as head, if we cannot find one, we will split the rest of the group up
 		// loop over all the units
-		unit_iterator fitr = std::find_if(beginUnits(), endUnits(), boost::bind(isValidHeadUnit, pNewHeadUnit, eOldHeadAI, _1));
+		unit_iterator fitr = std::find_if(beginUnits(), endUnits(), bst::bind(isValidHeadUnit, pNewHeadUnit, eOldHeadAI, _1));
 		if (fitr != endUnits())
 		{
 			pRemainderHeadUnit = *fitr;
@@ -7692,7 +7692,7 @@ TeamTypes CvSelectionGroup::getHeadTeam() const
 	return NO_TEAM;
 }
 
-std::vector<const CvUnit*> CvSelectionGroup::get_if(boost::function<bool(const CvUnit*)> predicateFn) const
+std::vector<const CvUnit*> CvSelectionGroup::get_if(bst::function<bool(const CvUnit*)> predicateFn) const
 {
 	std::vector<const CvUnit*> units;
 	for (unit_iterator itr = beginUnits(); itr != endUnits(); ++itr)
@@ -7705,7 +7705,7 @@ std::vector<const CvUnit*> CvSelectionGroup::get_if(boost::function<bool(const C
 	return units;
 }
 
-std::vector<CvUnit*> CvSelectionGroup::get_if(boost::function<bool(CvUnit*)> predicateFn)
+std::vector<CvUnit*> CvSelectionGroup::get_if(bst::function<bool(CvUnit*)> predicateFn)
 {
 	std::vector<CvUnit*> units;
 	for (unit_iterator itr = beginUnits(); itr != endUnits(); ++itr)

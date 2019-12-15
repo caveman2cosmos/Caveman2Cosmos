@@ -21,7 +21,7 @@ public:
 
 // Base class for iteration using indexed iteration functions (CvPlayer::firstCity/nextCity etc.)
 template < class Derived, class Owner, class Value >
-class index_iterator_base : public boost::iterator_facade<Derived, Value*, boost::forward_traversal_tag, Value* const&>
+class index_iterator_base : public bst::iterator_facade<Derived, Value*, bst::forward_traversal_tag, Value* const&>
 {
 public:
 	typedef Owner owner_type;
@@ -39,7 +39,7 @@ public:
 	}
 
 private:
-	friend class boost::iterator_core_access;
+	friend class bst::iterator_core_access;
 	void increment() 
 	{
 		m_curr = index_iterator_core_access::next(derived(), m_owner, &m_idx, m_reverse);

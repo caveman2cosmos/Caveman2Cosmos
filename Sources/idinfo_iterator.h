@@ -23,7 +23,7 @@ public:
 // characteristic
 
 template < class Derived, class Value >
-class idinfo_iterator // : public boost::iterator_facade<unit_iterator, Value, boost::forward_traversal_tag>
+class idinfo_iterator // : public bst::iterator_facade<unit_iterator, Value, bst::forward_traversal_tag>
 {
 	// Curiously Recurring Template interface.
 	Derived& derived()

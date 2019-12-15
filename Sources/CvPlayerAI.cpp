@@ -32130,7 +32130,7 @@ int CvPlayerAI::AI_corporationTradeVal(CorporationTypes eCorporation, PlayerType
 
 int CvPlayerAI::AI_secretaryGeneralTradeVal(VoteSourceTypes eVoteSource, PlayerTypes ePlayer) const
 {
-	typedef boost::array<int, MAX_TEAMS> VotesArray;
+	typedef bst::array<int, MAX_TEAMS> VotesArray;
 	VotesArray aiVotes;
 	aiVotes.assign(0);
 
