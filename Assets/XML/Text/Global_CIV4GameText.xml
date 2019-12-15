@@ -8073,6 +8073,14 @@
 		<Polish>Szlachcic</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_NIGHTMARE</Tag>
+		<English>Nightmare</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_NIGHTMARE_HELP</Tag>
+		<English>MUUUUAHAHAHAHA! Survive this!</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_PRINCE</Tag>
 		<English>Prince</English>
 		<French>
