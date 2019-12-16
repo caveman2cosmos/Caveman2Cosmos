@@ -36,7 +36,7 @@
 // any changes here, make sure that you're not breaking any platforms.
 //
 //
-// The names choosen here reflect those used in tr1 and the boost::mpl
+// The names choosen here reflect those used in tr1 and the bst::mpl
 // library, there are similar operations used in the Loki library as
 // well.  I prefer the boost names for 2 reasons:
 // 1.  I think that portions of the Boost libraries are more likely to
@@ -82,7 +82,7 @@ template <class T, T v> const T integral_constant<T, v>::value;
 
 
 // Abbreviations: true_type and false_type are structs that represent boolean
-// true and false values. Also define the boost::mpl versions of those names,
+// true and false values. Also define the bst::mpl versions of those names,
 // true_ and false_.
 typedef integral_constant<bool, true>  true_type;
 typedef integral_constant<bool, false> false_type;

@@ -27263,7 +27263,7 @@ int CvCity::getTotalUnitSourcedProperty(PropertyTypes eProperty) const
 		CvPlot* pPlot = plot();
 		for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
 		{
-			unitItr->getGameObject()->foreachManipulator(boost::bind(unitSources, _1, _2, eProperty, this, &iValue));
+			unitItr->getGameObject()->foreachManipulator(bst::bind(unitSources, _1, _2, eProperty, this, &iValue));
 		}
 
 		m_unitSourcedPropertyCache[(int)eProperty] = iValue;
@@ -27296,7 +27296,7 @@ static bool unitHasCityOrPlotPropertySources(CvUnit* pUnit)
 {
 	bool bHasSources;
 
-	pUnit->getGameObject()->foreachManipulator(boost::bind(unitHasSources, _1, _2, &bHasSources));
+	pUnit->getGameObject()->foreachManipulator(bst::bind(unitHasSources, _1, _2, &bHasSources));
 
 	return bHasSources;
 }
@@ -27339,7 +27339,7 @@ int CvCity::getGlobalSourcedProperty(PropertyTypes eProperty) const
 		}
 	}
 	// Add sources from the player object that have an effect on cities
-	GET_PLAYER(getOwner()).getGameObject()->foreachManipulator(boost::bind(sumCitySources, _1, _2, this, &iSum, eProperty));
+	GET_PLAYER(getOwner()).getGameObject()->foreachManipulator(bst::bind(sumCitySources, _1, _2, this, &iSum, eProperty));
 
 	return iSum;
 }

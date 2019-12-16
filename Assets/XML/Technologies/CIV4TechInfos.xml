@@ -2987,6 +2987,7 @@ Current techs which are not in this file:-
 			<AndPreReqs>
 				<PrereqTech>TECH_PICTOGRAPHS</PrereqTech>
 				<PrereqTech>TECH_TANNING</PrereqTech>
+				<PrereqTech>TECH_HUNTING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_HUNTING_TACTICS_QUOTE</Quote>
 			<Sound>AS2D_TECH_HUNTING_TACTICS</Sound>

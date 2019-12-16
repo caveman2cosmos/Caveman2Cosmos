@@ -599,8 +599,8 @@ namespace MemTrack
 			size_t size = pBlockHeader->GetRequestedSize();
 			char const* fileName = pBlockHeader->GetFilename();
 			int lineNum = pBlockHeader->GetLineNum();
-			mem_log << boost::format("*** #%-6d %13d %-50s\n") % i % convertSize(size).c_str() % typeName;
-			mem_log << boost::format("... %s:%d\n") % fileName % lineNum;
+			mem_log << bst::format("*** #%-6d %13d %-50s\n") % i % convertSize(size).c_str() % typeName;
+			mem_log << bst::format("... %s:%d\n") % fileName % lineNum;
 		}
 
 		mem_log.flush();
@@ -722,8 +722,8 @@ namespace MemTrack
 		mem_log << "Memory Usage Statistics\n";
 		mem_log << "-----------------------\n";
 		mem_log << "\n";
-		mem_log << boost::format("%-50s %12s %5s %15s %s \n") % "allocated type" % "blocks" % "" % "bytes" % "";
-		mem_log << boost::format("%-50s %12s %5s %15s %s \n") % "--------------" % "------" % "" % "-----" % "";
+		mem_log << bst::format("%-50s %12s %5s %15s %s \n") % "allocated type" % "blocks" % "" % "bytes" % "";
+		mem_log << bst::format("%-50s %12s %5s %15s %s \n") % "--------------" % "------" % "" % "-----" % "";
 
 		for (size_t i = 0; i < numUniqueTypes; i++)
 		{
@@ -733,7 +733,7 @@ namespace MemTrack
 			size_t totalSize = pMD->totalSize;
 			double totalSizePct = 100.0 * totalSize / grandTotalSize;
 
-			mem_log << boost::format("%-50s %12d %5.1f%% %15d %5.1f%%\n")
+			mem_log << bst::format("%-50s %12d %5.1f%% %15d %5.1f%%\n")
 				% pMD->typeName
 				% blockCount
 				% blockCountPct
@@ -741,8 +741,8 @@ namespace MemTrack
 				% totalSizePct
 			;
 		}
-		mem_log << boost::format("%-50s %12s %5s  %15s %s \n") % "--------" % "-----" % "" % "-------" % "";
-		mem_log << boost::format("%-50s %12d %5s  %15s %s \n") % "[totals]" % grandTotalNumBlocks % "" % convertSize(grandTotalSize).c_str() % "";
+		mem_log << bst::format("%-50s %12s %5s  %15s %s \n") % "--------" % "-----" % "" % "-------" % "";
+		mem_log << bst::format("%-50s %12d %5s  %15s %s \n") % "[totals]" % grandTotalNumBlocks % "" % convertSize(grandTotalSize).c_str() % "";
 
 		mem_log.flush();
 
@@ -782,15 +782,15 @@ namespace MemTrack
 			{
 				if (id.length() >= 80)
 				{
-					mem_log << boost::format("%s\n") % id;
-					mem_log << boost::format("%-80s   TOTAL %8d %12s   DELTA %8d %12s\n")
+					mem_log << bst::format("%s\n") % id;
+					mem_log << bst::format("%-80s   TOTAL %8d %12s   DELTA %8d %12s\n")
 						% ""
 						% total.count % convertSize(total.size).c_str()
 						% diff.count % convertSize(diff.size).c_str();
 				}
 				else
 				{
-					mem_log << boost::format("%-80s   TOTAL %8d %12s   DELTA %8d %12s\n")
+					mem_log << bst::format("%-80s   TOTAL %8d %12s   DELTA %8d %12s\n")
 						% id
 						% total.count % convertSize(total.size).c_str()
 						% diff.count % convertSize(diff.size).c_str();
@@ -805,7 +805,7 @@ namespace MemTrack
 			size_t p = fname.find_last_of('\\');
 			if (p != std::string::npos)
 				fname = fname.substr(p);
-			return (boost::format("%s(%d): %s") % fname % block->GetLineNum() % block->GetTypeName()).str();
+			return (bst::format("%s(%d): %s") % fname % block->GetLineNum() % block->GetTypeName()).str();
 		}
 	};
 
@@ -842,7 +842,7 @@ namespace MemTrack
 		free(ppBlockHeader);
 		// Dump the memory usage statistics.
 		mem_log << "\n=============================\n";
-		mem_log << boost::format("TURN %d") % (turnIndex + 1); // "-----------------------\n";
+		mem_log << bst::format("TURN %d") % (turnIndex + 1); // "-----------------------\n";
 		mem_log << "\n";
 
 		std::vector<MemInfoDiff> diffs;
@@ -875,7 +875,7 @@ namespace MemTrack
 			itr->write(mem_log);
 		}
 
-		mem_log << boost::format("%-80s   TOTAL %8d %12s   DELTA %8d %12s\n") 
+		mem_log << bst::format("%-80s   TOTAL %8d %12s   DELTA %8d %12s\n") 
 			% "" 
 			% grandTotalNumBlocks % convertSize(grandTotalSize).c_str() 
 			% (static_cast<int>(grandTotalNumBlocks) - static_cast<int>(totalLastTurnBlocks)) 

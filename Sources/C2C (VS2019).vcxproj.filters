@@ -471,6 +471,9 @@
     <ClCompile Include="SCyDebug.cpp">
       <Filter>Source Files\Smart</Filter>
     </ClCompile>
+    <ClCompile Include="..\boost_test\test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BetterBTSAI.h">

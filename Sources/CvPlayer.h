@@ -2759,7 +2759,7 @@ private:
 
 	CvContractBroker	m_contractBroker;
 
-	mutable boost::scoped_ptr<CvUpgradeCache> m_upgradeCache;
+	mutable bst::scoped_ptr<CvUpgradeCache> m_upgradeCache;
 
 	bool m_bInhibitPlotGroupRecalc;
 	mutable bool m_bMaintenanceDirty;

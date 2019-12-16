@@ -18664,7 +18664,7 @@ namespace scoring {
 
 	namespace detail {
 		template < class ItemTy_ >
-		bool validationFnUnwrap(boost::function<bool(const ItemTy_*)> validationFn, const ItemScore<ItemTy_>& itemScore)
+		bool validationFnUnwrap(bst::function<bool(const ItemTy_*)> validationFn, const ItemScore<ItemTy_>& itemScore)
 		{
 			return validationFn(itemScore.item);
 		}
@@ -18704,7 +18704,7 @@ namespace scoring {
 	//   scoreFn: Function for scoring items. Signature: int score(const ItemTy_*)
 	//   validationFn: Function for final item validation. After scoring the best scoring item that passes validation is returned. Signature: bool validate(const ItemTy_*)
 	template < class ItemTy_, class Compare_, class Itr_>
-	ScoreResult<ItemTy_> findBestScore(Itr_ begin, Itr_ end, boost::function<int(const ItemTy_*)> scoreFn, boost::function<bool(const ItemTy_*)> validationFn)
+	ScoreResult<ItemTy_> findBestScore(Itr_ begin, Itr_ end, bst::function<int(const ItemTy_*)> scoreFn, bst::function<bool(const ItemTy_*)> validationFn)
 	{
 		using namespace detail;
 
@@ -18720,7 +18720,7 @@ namespace scoring {
 		std::sort(scores.begin(), scores.end(), ScoringTraits<ItemScore<ItemTy_>, Compare_>::compare());
 
 		// Find the first city we can path to safely
-		std::vector< ItemScore<ItemTy_> >::iterator foundItr = std::find_if(scores.begin(), scores.end(), boost::bind(validationFnUnwrap<ItemTy_>, validationFn, _1));
+		std::vector< ItemScore<ItemTy_> >::iterator foundItr = std::find_if(scores.begin(), scores.end(), bst::bind(validationFnUnwrap<ItemTy_>, validationFn, _1));
 
 		if (foundItr != scores.end())
 		{
@@ -18855,8 +18855,8 @@ namespace {
 		using namespace scoring;
 		ScoreResult<CvCity> bestCityScore = findBestScore<CvCity, LeastScore>(
 			player.beginCities(), player.endCities(),
-			boost::bind(scoreInquisitionTarget, unit, _1), // scoring the city for inquisition attractiveness
-			boost::bind(canSafePathToCity, unit, _1) // final validation is that we can actually path to the city
+			bst::bind(scoreInquisitionTarget, unit, _1), // scoring the city for inquisition attractiveness
+			bst::bind(canSafePathToCity, unit, _1) // final validation is that we can actually path to the city
 		);
 
 		return bestCityScore.found? bestCityScore.result.item : nullptr;
@@ -35527,7 +35527,7 @@ int CvUnitAI::AI_beneficialPropertyValueToCity(CvCity* pCity, PropertyTypes ePro
 {
 	int iValue = 0;
 
-	((CvUnitAI*)this)->getGameObject()->foreachManipulator(boost::bind(unitSourcesValueToCity, _1, _2, this, static_cast<const CvCityAI*>(pCity), &iValue, eProperty));
+	((CvUnitAI*)this)->getGameObject()->foreachManipulator(bst::bind(unitSourcesValueToCity, _1, _2, this, static_cast<const CvCityAI*>(pCity), &iValue, eProperty));
 
 	return iValue;
 }
@@ -35748,8 +35748,8 @@ bool CvUnitAI::AI_fulfillCityHealerNeed(CvPlot* pPlot)
 	using namespace scoring;
 	ScoreResult<CvCity> bestCityScore = findBestScore<CvCity, GreatestScore>(
 		player.beginCities(), player.endCities(), 
-		boost::bind(&CvUnitAI::scoreCityHealerNeed, this, eUnitCombat, eDomain, _1), // scoring the city for healing need
-		boost::bind(canSafePathToCity, this, _1) // final validation is that we can actually path to the city
+		bst::bind(&CvUnitAI::scoreCityHealerNeed, this, eUnitCombat, eDomain, _1), // scoring the city for healing need
+		bst::bind(canSafePathToCity, this, _1) // final validation is that we can actually path to the city
 	);
 
 	if (bestCityScore.found)
@@ -35883,8 +35883,8 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 	using namespace scoring;
 	ScoreResult<CvCity> bestCityScore = findBestScore<CvCity, GreatestScore>(
 		player.beginCities(), player.endCities(),
-		boost::bind(scorePropertyControlNeed, propertyScores, this, _1), 
-		boost::bind(canSafePathToCity, this, _1)
+		bst::bind(scorePropertyControlNeed, propertyScores, this, _1), 
+		bst::bind(canSafePathToCity, this, _1)
 	);
 
 	if(bestCityScore.found)

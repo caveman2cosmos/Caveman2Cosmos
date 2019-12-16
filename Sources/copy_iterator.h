@@ -4,7 +4,7 @@
 #define copy_iterator_h__
 
 template <class Value, class Ref>
-class copy_iterator : public boost::iterator_facade<copy_iterator<Value, Ref>, Value, boost::forward_traversal_tag, Ref>
+class copy_iterator : public bst::iterator_facade<copy_iterator<Value, Ref>, Value, bst::forward_traversal_tag, Ref>
 {
 public:
 	copy_iterator() : m_idx(-1) {}
@@ -18,7 +18,7 @@ public:
 	}
 
 private:
-	friend class boost::iterator_core_access;
+	friend class bst::iterator_core_access;
 
 	void increment()
 	{

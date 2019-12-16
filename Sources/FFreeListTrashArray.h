@@ -19,7 +19,7 @@ template <class T>
 class FFreeListTrashArray
 {
 public:
-	class iterator : public boost::iterator_facade<iterator, T, boost::forward_traversal_tag>
+	class iterator : public bst::iterator_facade<iterator, T, bst::forward_traversal_tag>
 	{
 	public:
 		iterator() : m_array(NULL), m_idx(0), m_value(NULL){}
@@ -31,7 +31,7 @@ public:
 		}
 
 	private:
-		friend class boost::iterator_core_access;
+		friend class bst::iterator_core_access;
 
 		void increment()
 		{

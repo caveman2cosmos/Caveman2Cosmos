@@ -273,12 +273,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY_HELP</Tag>
-		<English>Every 50 turns (on Normal Speed) the games difficulty is increased by 1 until it reaches Deity.</English>
-		<French>Chaque 50 tours (vitesse normale) la difficulté du jeu est augmentées d'un niveau jusqu'à atteindre 'Divin'.</French>
-		<German>Alle 50 Runden (bei normaler Spielgeschwindigkeit) wird der Schwierigkeitsgrad um eine Stufe erhöht, bis "Gottheit" erreicht ist. Es gibt eine BUG-Option, die hierfür eine feinere Einstellung ermöglicht.</German>
-		<Italian>Ogni 50 turni (a velocità normale) la difficoltà del gioco è aumentata di 1 finchè raggiunge Divinità.</Italian>
-		<Spanish>Cada 50 turnos (a velocidad Normal) la dificultad de la partida subirá un nivel hasta alcanzar "Deidad".</Spanish>
-		<Polish>Na każde 50 tur ( normalna prędkość gry ) gra podnosi poziom o jeden poziom do momentu osiągnięcia poziomu Bóstwo.</Polish>
+		<English>Every 100 turns (on Normal Speed) the games difficulty is increased by 1 until it reaches Deity.</English>
+		<French>Chaque 100 tours (vitesse normale) la difficulté du jeu est augmentées d'un niveau jusqu'à atteindre 'Divin'.</French>
+		<German>Alle 100 Runden (bei normaler Spielgeschwindigkeit) wird der Schwierigkeitsgrad um eine Stufe erhöht, bis "Gottheit" erreicht ist. Es gibt eine BUG-Option, die hierfür eine feinere Einstellung ermöglicht.</German>
+		<Italian>Ogni 100 turni (a velocità normale) la difficoltà del gioco è aumentata di 1 finchè raggiunge Divinità.</Italian>
+		<Spanish>Cada 100 turnos (a velocidad Normal) la dificultad de la partida subirá un nivel hasta alcanzar "Deidad".</Spanish>
+		<Polish>Na każde 100 tur ( normalna prędkość gry ) gra podnosi poziom o jeden poziom do momentu osiągnięcia poziomu Bóstwo.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMPLETE_KILLS</Tag>

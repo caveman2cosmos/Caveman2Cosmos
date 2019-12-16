@@ -20,7 +20,7 @@ public:
 	void AI_reset();
 
 	void AI_separate();
-	void AI_separateIf(boost::function<bool(CvUnit*)> predicateFn);
+	void AI_separateIf(bst::function<bool(CvUnit*)> predicateFn);
 	void AI_separateNonAI(UnitAITypes eUnitAI);
 	void AI_separateAI(UnitAITypes eUnitAI);
 	void AI_separateImpassable();

@@ -72,7 +72,7 @@ namespace {
 	}
 }
 
-void CvSelectionGroupAI::AI_separateIf(boost::function<bool(CvUnit*)> predicateFn)
+void CvSelectionGroupAI::AI_separateIf(bst::function<bool(CvUnit*)> predicateFn)
 {
 	std::vector<CvUnit*> toRemove = get_if(predicateFn);
 
@@ -95,17 +95,17 @@ void CvSelectionGroupAI::AI_separate()
 
 void CvSelectionGroupAI::AI_separateNonAI(UnitAITypes eUnitAI)
 {
-	AI_separateIf(boost::bind(matchNonAI, _1, eUnitAI));
+	AI_separateIf(bst::bind(matchNonAI, _1, eUnitAI));
 }
 
 void CvSelectionGroupAI::AI_separateAI(UnitAITypes eUnitAI)
 {
-	AI_separateIf(boost::bind(matchAI, _1, eUnitAI));
+	AI_separateIf(bst::bind(matchAI, _1, eUnitAI));
 }
 
 void CvSelectionGroupAI::AI_separateImpassable()
 {
-	AI_separateIf(boost::bind(matchImpassable, _1, boost::ref(GET_PLAYER(getOwner()))));
+	AI_separateIf(bst::bind(matchImpassable, _1, bst::ref(GET_PLAYER(getOwner()))));
 }
 
 void CvSelectionGroupAI::AI_separateEmptyTransports()

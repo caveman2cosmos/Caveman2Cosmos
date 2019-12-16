@@ -1067,14 +1067,14 @@ void CvUnit::convert(CvUnit* pUnit)
 		checkFreetoCombatClass();
 
 		bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(this, iTotalGroupOffset,
-			boost::bind(&CvUnit::isGroupUpgradePromotion, this, _2),
-			boost::bind(&CvUnit::isGroupDowngradePromotion, this, _2)
+			bst::bind(&CvUnit::isGroupUpgradePromotion, this, _2),
+			bst::bind(&CvUnit::isGroupDowngradePromotion, this, _2)
 		);
 		FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on converted unit");
 
 		bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(this, iTotalQualityOffset,
-			boost::bind(&CvUnit::isQualityUpgradePromotion, this, _2),
-			boost::bind(&CvUnit::isQualityDowngradePromotion, this, _2)
+			bst::bind(&CvUnit::isQualityUpgradePromotion, this, _2),
+			bst::bind(&CvUnit::isQualityDowngradePromotion, this, _2)
 		);
 		FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on converted unit");
 
@@ -2246,12 +2246,12 @@ namespace {
 
 	bool plotHasEnemy(const TeamTypes ourTeam, const CvPlot& ignorePlot, const CvPlot& plot)
 	{
-		return plot != ignorePlot && std::any_of(plot.beginUnits(), plot.endUnits(), boost::bind(unitsAtWar, ourTeam, _1));
+		return plot != ignorePlot && std::any_of(plot.beginUnits(), plot.endUnits(), bst::bind(unitsAtWar, ourTeam, _1));
 	}
 
 	bool plotHasAdjacentEnemy(const TeamTypes ourTeam, const CvPlot& ignorePlot, const CvPlot& plot)
 	{
-		return std::any_of(plot.beginAdjacent(), plot.endAdjacent(), boost::bind(plotHasEnemy, ourTeam, boost::cref(ignorePlot), _1));
+		return std::any_of(plot.beginAdjacent(), plot.endAdjacent(), bst::bind(plotHasEnemy, ourTeam, bst::cref(ignorePlot), _1));
 	}
 
 	bool canWithdrawToPlot(const CvUnit& withdrawingUnit, const CvPlot& toPlot)
@@ -2268,7 +2268,7 @@ namespace {
 		{
 			return &fromPlot;
 		}
-		CvPlot::adjacent_iterator itr = std::find_if(fromPlot.beginAdjacent(), fromPlot.endAdjacent(), boost::bind(canWithdrawToPlot, boost::cref(withdrawingUnit), _1));
+		CvPlot::adjacent_iterator itr = std::find_if(fromPlot.beginAdjacent(), fromPlot.endAdjacent(), bst::bind(canWithdrawToPlot, bst::cref(withdrawingUnit), _1));
 		return itr != fromPlot.endAdjacent() ? &(*itr) : nullptr;
 	}
 }
@@ -42261,14 +42261,14 @@ void CvUnit::doMerge()
 		}
 
 		bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalGroupOffset,
-			boost::bind(&CvUnit::isGroupUpgradePromotion, pkMergedUnit, _2),
-			boost::bind(&CvUnit::isGroupDowngradePromotion, pkMergedUnit, _2)
+			bst::bind(&CvUnit::isGroupUpgradePromotion, pkMergedUnit, _2),
+			bst::bind(&CvUnit::isGroupDowngradePromotion, pkMergedUnit, _2)
 		);
 		FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on merged units");
 
 		bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalQualityOffset,
-			boost::bind(&CvUnit::isQualityUpgradePromotion, pkMergedUnit, _2),
-			boost::bind(&CvUnit::isQualityDowngradePromotion, pkMergedUnit, _2)
+			bst::bind(&CvUnit::isQualityUpgradePromotion, pkMergedUnit, _2),
+			bst::bind(&CvUnit::isQualityDowngradePromotion, pkMergedUnit, _2)
 		);
 		FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on merged units");
 
@@ -42415,14 +42415,14 @@ void CvUnit::doSplit()
 		newUnits.push_back(pUnit3);
 
 		bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(newUnits, iTotalGroupOffset,
-			boost::bind(isGroupUpgradePromotion, pUnit1, _2),
-			boost::bind(isGroupDowngradePromotion, pUnit1, _2)
+			bst::bind(isGroupUpgradePromotion, pUnit1, _2),
+			bst::bind(isGroupDowngradePromotion, pUnit1, _2)
 		);
 		FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on split units");
 
 		bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(newUnits, iTotalQualityOffset,
-			boost::bind(isQualityUpgradePromotion, pUnit1, _2),
-			boost::bind(isQualityDowngradePromotion, pUnit1, _2)
+			bst::bind(isQualityUpgradePromotion, pUnit1, _2),
+			bst::bind(isQualityDowngradePromotion, pUnit1, _2)
 		);
 		FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on split units");
 
