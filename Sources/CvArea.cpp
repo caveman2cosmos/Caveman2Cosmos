@@ -236,7 +236,7 @@ int CvArea::calculateTotalBestNatureYield() const
 
 	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
 	{
-		CvPlot*  pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		const CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
 		if (pLoopPlot->getArea() == getID())
 		{
 			iCount += pLoopPlot->calculateTotalBestNatureYield(NO_TEAM);
@@ -258,7 +258,7 @@ int CvArea::countCoastalLand() const
 
 	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		const CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
 		if (pLoopPlot->getArea() == getID() && pLoopPlot->isCoastalLand())
 		{
 			iCount++;
@@ -295,7 +295,7 @@ int CvArea::countHasReligion(ReligionTypes eReligion, PlayerTypes eOwner) const
 		{
 			for (CvPlayer::city_iterator cityItr = GET_PLAYER((PlayerTypes)iI).beginCities(); cityItr != GET_PLAYER((PlayerTypes)iI).endCities(); ++cityItr)
 			{
-				CvCity* pLoopCity = *cityItr;
+				const CvCity* pLoopCity = *cityItr;
 				if (pLoopCity->area()->getID() == getID() && pLoopCity->isHasReligion(eReligion))
 				{
 					iCount++;
@@ -317,7 +317,7 @@ int CvArea::countHasCorporation(CorporationTypes eCorporation, PlayerTypes eOwne
 		{
 			for (CvPlayer::city_iterator cityItr = GET_PLAYER((PlayerTypes)iI).beginCities(); cityItr != GET_PLAYER((PlayerTypes)iI).endCities(); ++cityItr)
 			{
-				CvCity* pLoopCity = *cityItr;
+				const CvCity* pLoopCity = *cityItr;
 				if (pLoopCity->area()->getID() == getID() && pLoopCity->isHasCorporation(eCorporation))
 				{
 					++iCount;
@@ -337,7 +337,7 @@ int CvArea::getNumTiles() const
 
 bool CvArea::isLake() const							
 {
-	return (isWater() && (getNumTiles() <= GC.getLAKE_MAX_AREA_SIZE()));
+	return (isWater() && getNumTiles() <= GC.getLAKE_MAX_AREA_SIZE());
 }
 
 
@@ -345,7 +345,7 @@ void CvArea::changeNumTiles(int iChange)
 {
 	if (iChange != 0)
 	{
-		bool bWasLake = isLake();
+		const bool bWasLake = isLake();
 
 		m_iNumTiles = (m_iNumTiles + iChange);
 		FAssert(getNumTiles() >= 0);
@@ -602,17 +602,7 @@ int CvArea::getPower(PlayerTypes eIndex) const
 	//TB Debug
 	//Somehow we are getting under 0 values here and that could cause problems down the road
 	//This method enforces minimum of 0 without changing the actual value of m_aiPower[eIndex] as the integrity of that value should be maintained.
-	int iValue = 0;
-	if (m_aiPower[eIndex] < 0)
-	{
-		iValue = 0;
-	}
-	else
-	{
-		iValue = m_aiPower[eIndex];
-	}
-	return iValue;
-	//return m_aiPower[eIndex];
+	return (m_aiPower[eIndex] >= 0) ? m_aiPower[eIndex] : 0;
 }
 
 
@@ -788,7 +778,7 @@ int CvArea::getNumRevealedFeatureTiles(TeamTypes eTeam, FeatureTypes eFeature) c
 
 		for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
 		{
-			CvPlot*	pPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+			const CvPlot* pPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
 			if (pPlot != NULL &&
 				pPlot->area() == this &&
 				pPlot->isRevealed(eTeam, false) &&
@@ -825,7 +815,7 @@ int CvArea::getNumRevealedTerrainTiles(TeamTypes eTeam, TerrainTypes eTerrain) c
 
 		for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
 		{
-			CvPlot*	pPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+			const CvPlot* pPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
 			if (pPlot != NULL &&
 				pPlot->area() == this &&
 				pPlot->isRevealed(eTeam, false) &&
@@ -873,7 +863,7 @@ void CvArea::changeCleanPowerCount(TeamTypes eIndex, int iChange)
 
 	if (iChange != 0)
 	{
-		bool bWasCleanPower = isCleanPower(eIndex);
+		const bool bWasCleanPower = isCleanPower(eIndex);
 
 		m_aiCleanPowerCount[eIndex] = (m_aiCleanPowerCount[eIndex] + iChange);
 		
@@ -901,11 +891,7 @@ int CvArea::getBorderObstacleCount(TeamTypes eIndex) const
 
 bool CvArea::isBorderObstacle(TeamTypes eIndex) const
 {
-	if (eIndex == NO_TEAM)
-	{
-		return false;
-	}
-	return (getBorderObstacleCount(eIndex) > 0);
+	return (eIndex != NO_TEAM) ? (getBorderObstacleCount(eIndex) > 0) : false;
 }
 
 
@@ -921,7 +907,6 @@ void CvArea::changeBorderObstacleCount(TeamTypes eIndex, int iChange)
 		GC.getMapINLINE().verifyUnitValidPlot();
 	}
 }
-
 
 
 AreaAITypes CvArea::getAreaAIType(TeamTypes eIndex) const

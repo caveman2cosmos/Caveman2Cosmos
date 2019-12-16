@@ -250,8 +250,8 @@ void CvMap::reset(CvMapInitData* pInitInfo)
 		}
 		if (GC.getMapInfo(getType()).getWrapX() > 0 && GC.getMapInfo(getType()).getWrapY() > 0)
 		{
-			m_bWrapX = (GC.getMapInfo(getType()).getWrapX()) ? true : false;
-			m_bWrapY = (GC.getMapInfo(getType()).getWrapY()) ? true : false;
+			m_bWrapX = GC.getMapInfo(getType()).getWrapX();
+			m_bWrapY = GC.getMapInfo(getType()).getWrapY();
 		}
 	}
 /*******************************/
@@ -452,8 +452,7 @@ void CvMap::updateSymbols()
 {
 	PROFILE_FUNC();
 
-	//	Ignore this while we are demand-creating symbols
-	//	to minimize memory usage - REMOVED FOR NOW FOR VIEWPORTS
+	//	Ignore this while we are demand-creating symbols to minimize memory usage - REMOVED FOR NOW FOR VIEWPORTS
 	
 	for (int iI = 0; iI < numPlotsINLINE(); iI++)
 	{
@@ -530,7 +529,7 @@ void CvMap::updateMinOriginalStartDist(CvArea* pArea)
 
 	for (iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		CvPlot* pStartingPlot = GET_PLAYER((PlayerTypes)iI).getStartingPlot();
+		const CvPlot* pStartingPlot = GET_PLAYER((PlayerTypes)iI).getStartingPlot();
 
 		if (pStartingPlot != NULL && pStartingPlot->area() == pArea)
 		{
@@ -636,7 +635,7 @@ CvPlot* CvMap::syncRandPlot(int iFlags, int iArea, int iMinUnitDistance, int iTi
 				{
 					for (int iDY = -(iMinUnitDistance); iDY <= iMinUnitDistance; iDY++)
 					{
-						CvPlot* pLoopPlot = plotXY(pTestPlot->getX_INLINE(), pTestPlot->getY_INLINE(), iDX, iDY);
+						const CvPlot* pLoopPlot = plotXY(pTestPlot->getX_INLINE(), pTestPlot->getY_INLINE(), iDX, iDY);
 
 						if (pLoopPlot != NULL && pLoopPlot->isUnit())
 						{
@@ -748,32 +747,29 @@ CvCity* CvMap::findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eTeam, boo
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (eOwner == NO_PLAYER || iI == eOwner)
 		{
-			if ((eOwner == NO_PLAYER) || (iI == eOwner))
+			const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
+			if (kLoopPlayer.isAlive() && (eTeam == NO_TEAM || kLoopPlayer.getTeam() == eTeam))
 			{
-				if ((eTeam == NO_TEAM) || (GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam))
+				for (CvPlayer::city_iterator cityItr = kLoopPlayer.beginCities(); cityItr != kLoopPlayer.endCities(); ++cityItr)
 				{
-					for (CvPlayer::city_iterator cityItr = GET_PLAYER((PlayerTypes)iI).beginCities(); cityItr != GET_PLAYER((PlayerTypes)iI).endCities(); ++cityItr)
+					CvCity* pLoopCity = *cityItr;
+					if (!bSameArea || pLoopCity->area() == plotINLINE(iX, iY)->area() || (bCoastalOnly && pLoopCity->waterArea() == plotINLINE(iX, iY)->area()))
 					{
-						CvCity* pLoopCity = *cityItr;
-						if (!bSameArea || (pLoopCity->area() == plotINLINE(iX, iY)->area()) || (bCoastalOnly && (pLoopCity->waterArea() == plotINLINE(iX, iY)->area())))
+						if (!bCoastalOnly || pLoopCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
 						{
-							if (!bCoastalOnly || pLoopCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
+							if (eTeamAtWarWith == NO_TEAM || atWar(kLoopPlayer.getTeam(), eTeamAtWarWith))
 							{
-								if ((eTeamAtWarWith == NO_TEAM) || atWar(GET_PLAYER((PlayerTypes)iI).getTeam(), eTeamAtWarWith))
+								if (eDirection == NO_DIRECTION || estimateDirection(dxWrap(pLoopCity->getX_INLINE() - iX), dyWrap(pLoopCity->getY_INLINE() - iY)) == eDirection)
 								{
-									if ((eDirection == NO_DIRECTION) || (estimateDirection(dxWrap(pLoopCity->getX_INLINE() - iX), dyWrap(pLoopCity->getY_INLINE() - iY)) == eDirection))
+									if (pSkipCity == NULL || pLoopCity != pSkipCity)
 									{
-										if ((pSkipCity == NULL) || (pLoopCity != pSkipCity))
+										const int iValue = plotDistance(iX, iY, pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE());
+										if (iValue < iBestValue)
 										{
-											int iValue = plotDistance(iX, iY, pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE());
-
-											if (iValue < iBestValue)
-											{
-												iBestValue = iValue;
-												pBestCity = pLoopCity;
-											}
+											iBestValue = iValue;
+											pBestCity = pLoopCity;
 										}
 									}
 								}
@@ -807,26 +803,26 @@ CvSelectionGroup* CvMap::findSelectionGroupInternal(int iX, int iY, PlayerTypes 
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive() && (eOwner == NO_PLAYER || iI == eOwner))
 		{
-			int iLoop;
-			for (CvSelectionGroup* pLoopSelectionGroup = GET_PLAYER((PlayerTypes)iI).firstSelectionGroup(&iLoop); pLoopSelectionGroup != NULL; pLoopSelectionGroup = GET_PLAYER((PlayerTypes)iI).nextSelectionGroup(&iLoop))
+			for (CvPlayer::group_iterator groupItr = GET_PLAYER((PlayerTypes)iI).beginGroups(); groupItr != GET_PLAYER((PlayerTypes)iI).endGroups(); ++groupItr)
 			{
-				if ((!bReadyToSelect || pLoopSelectionGroup->readyToSelect()) && (!bWorkers || pLoopSelectionGroup->hasWorker()))
+				CvSelectionGroup* pLoopGroup = *groupItr;
+				if ((!bReadyToSelect || pLoopGroup->readyToSelect()) && (!bWorkers || pLoopGroup->hasWorker()))
 				{
-					int iValue = plotDistance(iX, iY, pLoopSelectionGroup->getX(), pLoopSelectionGroup->getY());
+					const int iValue = plotDistance(iX, iY, pLoopGroup->getX(), pLoopGroup->getY());
 
-					if ( getCurrentViewport()->isInViewport(pLoopSelectionGroup->getX(), pLoopSelectionGroup->getY()) )
+					if (getCurrentViewport()->isInViewport(pLoopGroup->getX(), pLoopGroup->getY()))
 					{
 						if (iValue < iBestValueInViewport)
 						{
 							iBestValueInViewport = iValue;
-							pBestSelectionGroupInViewport = pLoopSelectionGroup;
+							pBestSelectionGroupInViewport = pLoopGroup;
 						}
 					}
 
 					if (iValue < iBestValue)
 					{
 						iBestValue = iValue;
-						pBestSelectionGroup = pLoopSelectionGroup;
+						pBestSelectionGroup = pLoopGroup;
 					}
 				}
 			}
@@ -846,8 +842,7 @@ CvArea* CvMap::findBiggestArea(bool bWater)
 	{
 		if (pLoopArea->isWater() == bWater)
 		{
-			int iValue = pLoopArea->getNumTiles();
-
+			const int iValue = pLoopArea->getNumTiles();
 			if (iValue > iBestValue)
 			{
 				iBestValue = iValue;
@@ -862,18 +857,8 @@ CvArea* CvMap::findBiggestArea(bool bWater)
 
 int CvMap::getMapFractalFlags()
 {
-	int wrapX = 0;
-	if (isWrapXINLINE())
-	{
-		wrapX = (int)CvFractal::FRAC_WRAP_X;
-	}
-
-	int wrapY = 0;
-	if (isWrapYINLINE())
-	{
-		wrapY = (int)CvFractal::FRAC_WRAP_Y;
-	}
-
+	const int wrapX = isWrapXINLINE() ? (int)CvFractal::FRAC_WRAP_X : 0;
+	const int wrapY = isWrapYINLINE() ? (int)CvFractal::FRAC_WRAP_Y : 0;
 	return (wrapX | wrapY);
 }
 
@@ -887,7 +872,7 @@ bool CvMap::findWater(CvPlot* pPlot, int iRange, bool bFreshWater) const
 	{
 		for (int iDY = -(iRange); iDY <= iRange; iDY++)
 		{
-			CvPlot* pLoopPlot = plotXY(pPlot->getX_INLINE(), pPlot->getY_INLINE(), iDX, iDY);
+			const CvPlot* pLoopPlot = plotXY(pPlot->getX_INLINE(), pPlot->getY_INLINE(), iDX, iDY);
 
 			if (pLoopPlot != NULL && (bFreshWater ? pLoopPlot->isFreshWater() : pLoopPlot->isWater()))
 			{
@@ -1426,11 +1411,12 @@ void CvMap::beforeSwitch()
 {
 	PROFILE_FUNC();
 
+#ifdef THE_GREAT_WALL
 	if ( GC.getCurrentViewport()->getTransformType() == VIEWPORT_TRANSFORM_TYPE_WINDOW )
 	{
 		GC.getGame().processGreatWall(false);
 	}
-
+#endif
 	gDLL->getEngineIFace()->setResourceLayer(false);
 
 	for (int i = 0; i < MAX_PLAYERS; i++)
@@ -1583,11 +1569,13 @@ void CvMap::afterSwitch()
 
 	// Reprocess landmarks and signs
 	GC.reprocessSigns();
+
+#ifdef THE_GREAT_WALL
 	if ( GC.getCurrentViewport()->getTransformType() == VIEWPORT_TRANSFORM_TYPE_WINDOW )
 	{
 		GC.getGame().processGreatWall(true);
 	}
-
+#endif
 	gDLL->getEngineIFace()->setResourceLayer(GC.getResourceLayer());
 	gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
 }
@@ -1724,7 +1712,7 @@ int CvMap::percentUnoccupiedLand(bool bExcludeWater, bool bIncludeBarbarian, boo
 	int iNumTilesValid = 0;
 	for (int iI = 0; iI < numPlotsINLINE(); iI++)
 	{
-		CvPlot* pLoopPlot = plotByIndexINLINE(iI);
+		const CvPlot* pLoopPlot = plotByIndexINLINE(iI);
 		if (!pLoopPlot->isWater() || !bExcludeWater)
 		{
 			if (pArea == NULL || pLoopPlot->area() == pArea)
@@ -1985,7 +1973,7 @@ int CvMap::getLastPathStepNum()
 {
 	// length of the path is not the number of steps so we have to count
 	CvPath::const_iterator it = getLastPath().begin();
-	int i=0;
+	int i = 0;
 	while (it.plot())
 	{
 		i++;
@@ -1998,7 +1986,7 @@ CvPlot* CvMap::getLastPathPlotByIndex(int index)
 {
 	// we can only start from the beginning if we don't want to expose the iterator to Python
 	CvPath::const_iterator it = getLastPath().begin();
-	for (int i=0; i<index; i++)
+	for (int i = 0; i<index; i++)
 		++it;
 	return it.plot();
 }

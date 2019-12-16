@@ -43,10 +43,10 @@ def onSave():
 	return cPickle.dumps(CvEventInterface.onEvent(('OnSave', 0, 0, 0, 0, 0)))
 
 def onLoad(argsList):
-	import cPickle
 	import CvEventInterface
-	loadDataStr=argsList[0]
+	loadDataStr = argsList[0]
 	if loadDataStr:
+		import cPickle
 		CvEventInterface.onEvent(('OnLoad', cPickle.loads(loadDataStr), 0, 0, 0, 0, 0))
 
 def preGameStart():
@@ -54,6 +54,12 @@ def preGameStart():
 	CvEventInterface.getEventManager().fireEvent("PreGameStart")
 	import CvScreensInterface
 	CvScreensInterface.showMainInterface()
+
+def recalculateModifiers():
+	import BugGameUtils
+	BugGameUtils.getDispatcher().getBasicUtils().reset()
+	#import CvEventInterface
+	#CvEventInterface.getEventManager().reset()
 
 def onPbemSend(argsList):
 	import smtplib, MimeWriter, base64, StringIO

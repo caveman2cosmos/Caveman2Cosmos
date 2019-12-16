@@ -6555,7 +6555,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-		if (pPlot->isWater() && !canMoveAllTerrain() && !pPlot->isCanMoveLandUnits())
+		if (pPlot->isWater() && !canMoveAllTerrain() && !pPlot->isSeaTunnel())
 /************************************************************************************************/
 /* JOOYO_ADDON                          END                                                     */
 /************************************************************************************************/
@@ -8134,7 +8134,7 @@ bool CvUnit::shouldLoadOnMove(const CvPlot* pPlot) const
 /*
 		if (pPlot->isWater() && !canMoveAllTerrain())
 */
-		if ((pPlot->isWater() && !canMoveAllTerrain()) && !pPlot->isCanMoveLandUnits())
+		if (pPlot->isWater() && !canMoveAllTerrain() && !pPlot->isSeaTunnel())
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
@@ -10725,26 +10725,6 @@ bool CvUnit::pillage()
 			}
 		}
 	}
-
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 07/07/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*	
-	if (getDomainType() == DOMAIN_LAND && pPlot->isCanUseRouteLandUnits() && pPlot->isWater())
-	{
-		return false;
-	}
-
-	if (getDomainType() == DOMAIN_SEA && pPlot->isCanUseRouteSeaUnits() && !pPlot->isWater())
-	{
-		return false;
-	}
-*/
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
 	
 	if (pPlot->isWater())
 	{
@@ -14694,9 +14674,7 @@ int CvUnit::nukeRange() const
 // XXX should this test for coal?
 bool CvUnit::canBuildRoute() const
 {
-	int iI;
-
-	for (iI = 0; iI < GC.getNumBuildInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
 	{
 		if (GC.getBuildInfo((BuildTypes)iI).getRoute() != NO_ROUTE)
 		{
@@ -15097,20 +15075,16 @@ bool CvUnit::canUnitCoexistWithEnemyUnit(const CvUnit* pUnit, const CvPlot* pPlo
 		}
 		if (pPlot->isWater())
 		{
-			bool bIsLoading = (pUnit->canLoad(pPlot));
-			bool bIsAboveWater = ((getDomainType() != DOMAIN_LAND) || (getDomainType() == DOMAIN_LAND && canMoveAllTerrain()));
-			bool bOtherIsAboveWater = ((pUnit->getDomainType() != DOMAIN_LAND) || (pUnit->getDomainType() == DOMAIN_LAND && pUnit->canMoveAllTerrain()));
-			if (bIsLoading)
+			if (pUnit->canLoad(pPlot))
 			{
 				return true;
 			}
-			if (pPlot->isCanMoveLandUnits())
+			if (pPlot->isSeaTunnel())
 			{
-				if (bIsAboveWater && !bOtherIsAboveWater)
-				{
-					return true;
-				}
-				if (!bIsAboveWater && bOtherIsAboveWater)
+				const bool bIsAboveWater = (getDomainType() != DOMAIN_LAND || (getDomainType() == DOMAIN_LAND && canMoveAllTerrain()));
+				const bool bOtherIsAboveWater = (pUnit->getDomainType() != DOMAIN_LAND || (pUnit->getDomainType() == DOMAIN_LAND && pUnit->canMoveAllTerrain()));
+
+				if (bIsAboveWater != bOtherIsAboveWater)
 				{
 					return true;
 				}
@@ -15155,21 +15129,15 @@ bool CvUnit::canUnitCoexistWithEnemyUnit(const CvUnit* pUnit, const CvPlot* pPlo
 				}
 			}
 
-			if (pPlot->isCity(true))
+			if (pPlot->isCity(true) && (isBlendIntoCity() || pUnit->isBlendIntoCity()))
 			{
-				if (isBlendIntoCity() || pUnit->isBlendIntoCity())
+				if (pPlot != plot())
 				{
-					if (pPlot == plot())
-					{
-						if ((isAssassin() && pUnit->isTargetOf(*this)) || (pUnit->isAssassin() && isTargetOf(*pUnit)))
-						{
-							return false;
-						}
-					}
-					else
-					{
-						return true;
-					}
+					return true;
+				}
+				if ((isAssassin() && pUnit->isTargetOf(*this)) || (pUnit->isAssassin() && isTargetOf(*pUnit)))
+				{
+					return false;
 				}
 			}
 		}
@@ -16372,7 +16340,7 @@ bool CvUnit::canAttack(const CvUnit& defender) const
 	}
 
 	//tunnel fixes
-	if (defender.plot()->isWater() && defender.plot()->isCanMoveLandUnits())
+	if (defender.plot()->isWater() && defender.plot()->isSeaTunnel())
 	{
 		//Sea units and air units and hovering units can't be attacked by land units in tunnels (Unless the land unit is hovering)
 		if ((defender.getDomainType() != DOMAIN_LAND || defender.canMoveAllTerrain()) && getDomainType() == DOMAIN_LAND && !canMoveAllTerrain())

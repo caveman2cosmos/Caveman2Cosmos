@@ -5,7 +5,7 @@
 from CvPythonExtensions import *
 
 # globals
-gc = CyGlobalContext()
+GC = CyGlobalContext()
 
 #~ gaiSettlerWorkerList = None
 gaiSettlerWorkerCombatList = None
@@ -25,18 +25,18 @@ def init():
 					#~ gc.getInfoTypeForString("UNIT_CONSTRUCT_SHIP")
 					#~ ]
 
-	gaiSettlerWorkerCombatList =  [	gc.getInfoTypeForString("UNITCOMBAT_SETTLER"),
-									gc.getInfoTypeForString("UNITCOMBAT_WORKER"),
-									gc.getInfoTypeForString("UNITCOMBAT_SEA_WORKER")]
+	gaiSettlerWorkerCombatList =  [	GC.getInfoTypeForString("UNITCOMBAT_SETTLER"),
+									GC.getInfoTypeForString("UNITCOMBAT_WORKER"),
+									GC.getInfoTypeForString("UNITCOMBAT_SEA_WORKER")]
 
-	giMilInstCivic = gc.getInfoTypeForString("CIVIC_MILITARY_TRADITION")
-	giVolArmyCivic = gc.getInfoTypeForString("CIVIC_VOLUNTEER_ARMY")
+	giMilInstCivic = GC.getInfoTypeForString("CIVIC_MILITARY_TRADITION")
+	giVolArmyCivic = GC.getInfoTypeForString("CIVIC_VOLUNTEER_ARMY")
 
 def onUnitBuilt( argsList):
 	'Unit Completed'
 	city = argsList[0]
 	unit = argsList[1]
-	pPlayer = gc.getPlayer(unit.getOwner())
+	pPlayer = GC.getPlayer(unit.getOwner())
 
 # BEGIN MILITIA PROMOTIONS CODE - based on a prototype from FfH mod
 # If the civic is a military one and if the unit being built is not a settler, worker or hero, then begin the function
@@ -61,21 +61,21 @@ def onUnitBuilt( argsList):
 				iNumHill = 0
 				iNumTree = 0
 				iNumCoast = 0
-				iTundra = gc.getInfoTypeForString('TERRAIN_TAIGA')
-				iPermafrost = gc.getInfoTypeForString('TERRAIN_TUNDRA')
-				iSnow = gc.getInfoTypeForString('TERRAIN_ICE')
-				iDesert = gc.getInfoTypeForString('TERRAIN_DESERT')
-				iDunes = gc.getInfoTypeForString('TERRAIN_DUNES')
-				iHills = gc.getInfoTypeForString('TERRAIN_HILL')
-				iBarren = gc.getInfoTypeForString('TERRAIN_BARREN')
-				iRocky = gc.getInfoTypeForString('TERRAIN_ROCKY')
-				iScrub = gc.getInfoTypeForString('TERRAIN_SCRUB')
-				iSaltFlats = gc.getInfoTypeForString('TERRAIN_SALT_FLATS')
-				iMarsh = gc.getInfoTypeForString('TERRAIN_MARSH')
-				iCoast = gc.getInfoTypeForString('TERRAIN_COAST')
-				iForest = gc.getInfoTypeForString('FEATURE_FOREST')
-				iJungle = gc.getInfoTypeForString('FEATURE_JUNGLE')
-				iBamboo = gc.getInfoTypeForString('FEATURE_BAMBOO')
+				iTundra = GC.getInfoTypeForString('TERRAIN_TAIGA')
+				iPermafrost = GC.getInfoTypeForString('TERRAIN_TUNDRA')
+				iSnow = GC.getInfoTypeForString('TERRAIN_ICE')
+				iDesert = GC.getInfoTypeForString('TERRAIN_DESERT')
+				iDunes = GC.getInfoTypeForString('TERRAIN_DUNES')
+				iHills = GC.getInfoTypeForString('TERRAIN_HILL')
+				iBarren = GC.getInfoTypeForString('TERRAIN_BARREN')
+				iRocky = GC.getInfoTypeForString('TERRAIN_ROCKY')
+				iScrub = GC.getInfoTypeForString('TERRAIN_SCRUB')
+				iSaltFlats = GC.getInfoTypeForString('TERRAIN_SALT_FLATS')
+				iMarsh = GC.getInfoTypeForString('TERRAIN_MARSH')
+				iCoast = GC.getInfoTypeForString('TERRAIN_COAST')
+				iForest = GC.getInfoTypeForString('FEATURE_FOREST')
+				iJungle = GC.getInfoTypeForString('FEATURE_JUNGLE')
+				iBamboo = GC.getInfoTypeForString('FEATURE_BAMBOO')
 
 				for iiX in range(iX-1, iX+2, 1):
 					for iiY in range(iY-1, iY+2, 1):
@@ -89,7 +89,7 @@ def onUnitBuilt( argsList):
 						if (iPlot == iHills or pPlot.isPeak()):
 							iNumHill = iNumHill +1
 						if iFeature == iForest or iFeature == iJungle or iFeature == iBamboo:
-							iNumTree = iNumTree + 1
+							iNumTree = iNumTree +1
 						if iTerrain == iDesert or iTerrain == iDunes:
 							iNumHot = iNumHot +1
 						elif iTerrain == iTundra or iTerrain == iSnow or iTerrain == iPermafrost:
@@ -107,9 +107,9 @@ def onUnitBuilt( argsList):
 			elif unit.getDomainType() == DomainTypes.DOMAIN_SEA:
 				iNumReef = 0
 				iNumIce = 0
-				iReef = gc.getInfoTypeForString('FEAURE_REEF')
-				iIce = gc.getInfoTypeForString('FEATURE_ICE')
-				iCoral = gc.getInfoTypeForString('FEAURE_CORAL')
+				iReef = GC.getInfoTypeForString('FEAURE_REEF')
+				iIce = GC.getInfoTypeForString('FEATURE_ICE')
+				iCoral = GC.getInfoTypeForString('FEAURE_CORAL')
 
 				for iiX in range(iX-1, iX+2, 1):
 					for iiY in range(iY-1, iY+2, 1):
@@ -123,8 +123,8 @@ def onUnitBuilt( argsList):
 				attemptPromotion(unit, (iNumIce  * 1.25 * iMilitaryCivic), "PROMOTION_COASTAL_GUARD1")
 
 def attemptPromotion(pUnit, iChance, szProposedPromotion):
-	if CyRandom().get(100, "") < iChance:
-		ePromotion = gc.getInfoTypeForString(szProposedPromotion)
+	if CyGame().getSorenRandNum(100, "") < iChance:
+		ePromotion = GC.getInfoTypeForString(szProposedPromotion)
 		if pUnit.canAcquirePromotion(ePromotion):
 			pUnit.setHasPromotion(ePromotion, True)
 

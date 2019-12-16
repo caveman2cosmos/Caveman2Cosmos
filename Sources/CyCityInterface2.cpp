@@ -185,15 +185,6 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("setReinforcementCounter", &CyCity::setReinforcementCounter, "void ( int iNewValue )")
 		.def("changeReinforcementCounter", &CyCity::changeReinforcementCounter, "void ( int iChange )" )
 
-		.def("getRevIndexHappinessVal", &CyCity::getRevIndexHappinessVal, "int ()")
-		.def("getRevIndexDistanceVal", &CyCity::getRevIndexDistanceVal, "int ()")
-		.def("getRevIndexColonyVal", &CyCity::getRevIndexColonyVal, "int ()")
-		.def("getRevIndexReligionVal", &CyCity::getRevIndexReligionVal, "int ()")
-		.def("getRevIndexNationalityVal", &CyCity::getRevIndexNationalityVal, "int ()")
-		.def("getRevIndexHealthVal", &CyCity::getRevIndexHealthVal, "int ()")
-		.def("getRevIndexGarrisonVal", &CyCity::getRevIndexGarrisonVal, "int ()")
-		.def("getRevIndexDisorderVal", &CyCity::getRevIndexDisorderVal, "int ()")
-
 		.def("isRecentlyAcquired", &CyCity::isRecentlyAcquired, "bool ()")
 		/********************************************************************************/
 		/**		REVOLUTION_MOD							END								*/

@@ -93,30 +93,30 @@ public:
 
 	bool isHuman() const;																																											// Exposed to Python
 	DllExport bool isBusy();
-	bool isCargoBusy();
-	int baseMoves();																																										// Exposed to Python 
+	bool isCargoBusy() const;
+	int baseMoves() const;																																										// Exposed to Python 
 	bool isWaiting() const;																																							// Exposed to Python
-	bool isFull();																																											// Exposed to Python
-	bool hasCargo();																																										// Exposed to Python
+	bool isFull() const;																																											// Exposed to Python
+	bool hasCargo() const;																																										// Exposed to Python
 	int getCargo(bool bVolume = false) const;
 	DllExport bool canAllMove();																																				// Exposed to Python
 	bool canAnyMove(bool bValidate = false);																																									// Exposed to Python
-	bool hasMoved();																																										// Exposed to Python
+	bool hasMoved() const;																																										// Exposed to Python
 	bool canEnterTerritory(TeamTypes eTeam, bool bIgnoreRightOfPassage = false) const;									// Exposed to Python
-	bool canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage = false) const;									// Exposed to Python
+	bool canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage = false);									// Exposed to Python
 
 	DllExport bool canMoveInto(CvPlot* pPlot, bool bAttack = false);																		// Exposed to Python
 	bool canMoveIntoWithWar(CvPlot* pPlot, bool bAttack = false, bool bDeclareWar = false);
 
 	DllExport bool canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar = false);												// Exposed to Python
-	bool canMoveThrough(CvPlot* pPlot, bool bDeclareWar = false);																																	// Exposed to Python
-	bool canFight();																																										// Exposed to Python 
-	bool canDefend();																																										// Exposed to Python
-	bool canBombard(const CvPlot* pPlot, bool bCheckCanReduceOnly = false);
+	bool canMoveThrough(CvPlot* pPlot, bool bDeclareWar = false) const;																																	// Exposed to Python
+	bool canFight() const;																																										// Exposed to Python 
+	bool canDefend() const;																																										// Exposed to Python
+	bool canBombard(const CvPlot* pPlot, bool bCheckCanReduceOnly = false) const;
 	bool hasBombardCapability() const;
 	bool hasCollateralDamage() const;
-	bool canPillage(const CvPlot* pPlot);
-	bool canBombardAtRanged(const CvPlot* pPlot, int iX, int iY);
+	bool canPillage(const CvPlot* pPlot) const;
+	bool canBombardAtRanged(const CvPlot* pPlot, int iX, int iY) const;
 	int getMinimumRBombardDamageLimit() const;
 	int getMinimumRBombardRange() const;
 	int getRBombardDamageMaxUnits() const;

@@ -963,15 +963,12 @@ protected:
 #ifdef FF_GLOBAL_WARMING
 	void doGlobalWarming();
 #endif
-	void doHolyCity();
 /************************************************************************************************/
 /* RevDCM	                  Start		09/08/10                                                */
 /*                                                                                              */
 /* OC_LIMITED_RELIGIONS                                                                         */
 /************************************************************************************************/
 	void checkGameStart();
-	void doHolyCityGameStart();
-	void doHolyCityPlayer(TeamTypes eTeam, ReligionTypes eReligion);
 /************************************************************************************************/
 /* REVDCM                                  END                                                  */
 /************************************************************************************************/

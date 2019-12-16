@@ -5,12 +5,10 @@
 
 CyCity::CyCity() : m_pCity(NULL)
 {
-
 }
 
 CyCity::CyCity(CvCity* pCity) : m_pCity(pCity)
 {
-
 }
 
 void CyCity::kill()
@@ -26,10 +24,7 @@ void CyCity::kill()
 /************************************************************************************************/
 int CyCity::getRevolutionIndex()
 {
-	if( m_pCity )
-		return m_pCity->getRevolutionIndex();
-	else
-		return 0;
+	return m_pCity ? m_pCity->getRevolutionIndex() : 0;
 }
 
 void CyCity::setRevolutionIndex( int iNewValue )
@@ -46,10 +41,7 @@ void CyCity::changeRevolutionIndex( int iChange )
 
 int CyCity::getLocalRevIndex()
 {
-	if( m_pCity )
-		return m_pCity->getLocalRevIndex();
-	else
-		return 0;
+	return m_pCity ? m_pCity->getLocalRevIndex() : 0;
 }
 
 void CyCity::setLocalRevIndex( int iNewValue )
@@ -66,10 +58,7 @@ void CyCity::changeLocalRevIndex( int iChange )
 
 int CyCity::getRevIndexAverage() const
 {
-	if( m_pCity )
-		return m_pCity->getRevIndexAverage();
-	else
-		return 0;
+	return m_pCity ? m_pCity->getRevIndexAverage() : 0;
 }
 
 void CyCity::setRevIndexAverage( int iNewValue )
@@ -86,10 +75,7 @@ void CyCity::updateRevIndexAverage( )
 
 int CyCity::getReinforcementCounter()
 {
-	if( m_pCity )
-		return m_pCity->getReinforcementCounter();
-	else
-		return 0;
+	return m_pCity ? m_pCity->getReinforcementCounter() : 0;
 }
 
 void CyCity::setReinforcementCounter( int iNewValue )
@@ -106,10 +92,7 @@ void CyCity::changeReinforcementCounter( int iChange )
 
 int CyCity::getRevolutionCounter()
 {
-	if( m_pCity )
-		return m_pCity->getRevolutionCounter();
-	else
-		return 0;
+	return m_pCity ? m_pCity->getRevolutionCounter() : 0;
 }
 
 void CyCity::setRevolutionCounter( int iNewValue )
@@ -124,76 +107,9 @@ void CyCity::changeRevolutionCounter( int iChange )
 		m_pCity->changeRevolutionCounter( iChange );
 }
 
-int CyCity::getRevIndexHappinessVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexHappinessVal();
-	else
-		return 0;
-}
-
-int CyCity::getRevIndexDistanceVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexDistanceVal();
-	else
-		return 0;
-}
-
-int CyCity::getRevIndexColonyVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexColonyVal();
-	else
-		return 0;
-}
-
-int CyCity::getRevIndexReligionVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexReligionVal();
-	else
-		return 0;
-}
-
-int CyCity::getRevIndexNationalityVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexNationalityVal();
-	else
-		return 0;
-}
-
-int CyCity::getRevIndexHealthVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexHealthVal();
-	else
-		return 0;
-}
-
-int CyCity::getRevIndexGarrisonVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexGarrisonVal();
-	else
-		return 0;
-}
-
-int CyCity::getRevIndexDisorderVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexDisorderVal();
-	else
-		return 0;
-}
-
 bool CyCity::isRecentlyAcquired()
 {
-	if( m_pCity )
-		return m_pCity->isRecentlyAcquired();
-	else
-		return false;
+	return m_pCity ? m_pCity->isRecentlyAcquired() : false;
 }
 /************************************************************************************************/
 /* REVOLUTION_MOD                          END                                                  */

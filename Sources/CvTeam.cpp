@@ -510,7 +510,6 @@ void CvTeam::reset(TeamTypes eID, bool bConstructorCall)
 			m_paiTechExtraBuildingHealth[iI] = 0;
 		}
 		
-
 		FAssertMsg(m_pabHasTech==NULL, "about to leak memory, CvTeam::m_pabHasTech");
 		m_pabHasTech = new bool[GC.getNumTechInfos()];
 		FAssertMsg(m_pabNoTradeTech==NULL, "about to leak memory, CvTeam::m_pabNoTradeTech");
@@ -631,22 +630,19 @@ void CvTeam::reset(TeamTypes eID, bool bConstructorCall)
 //
 // for clearing data stored in plots and cities for this team
 //
-void CvTeam::resetPlotAndCityData( )
+void CvTeam::resetPlotAndCityData()
 {
-	int iI;
-	CvPlot* pLoopPlot;
-	CvCity* pLoopCity;
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
 		
 		pLoopPlot->setRevealedOwner(getID(), NO_PLAYER);
 		pLoopPlot->setRevealedImprovementType(getID(), NO_IMPROVEMENT);
 		pLoopPlot->setRevealedRouteType(getID(), NO_ROUTE);
 		pLoopPlot->setRevealed(getID(), false, false, getID(), true);
 
-		pLoopCity = pLoopPlot->getPlotCity();
-		if( pLoopCity != NULL )
+		CvCity* pLoopCity = pLoopPlot->getPlotCity();
+		if (pLoopCity != NULL)
 		{
 			pLoopCity->setRevealed(getID(), false);
 			pLoopCity->setEspionageVisibility(getID(), false, true);
@@ -656,12 +652,9 @@ void CvTeam::resetPlotAndCityData( )
 
 bool CvTeam::isRebel() const
 {
-	bool bValid;
-	int iI;
+	bool bValid = false;
 
-	bValid = false;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID() && GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -682,12 +675,11 @@ bool CvTeam::isRebel() const
 bool CvTeam::isSingleCityTeam() const
 {
 	int iCities = 0;
-	int iI;
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iI);
-		if( (kPlayer.getTeam() == getID()) && kPlayer.isAlive() )
+		const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iI);
+		if (kPlayer.getTeam() == getID() && kPlayer.isAlive())
 		{
 			iCities += GET_PLAYER((PlayerTypes)iI).getNumCities();
 		}
@@ -1381,19 +1373,7 @@ void CvTeam::doTurn()
 
 				for (iJ = 0; iJ < MAX_PC_TEAMS; iJ++)
 				{
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       03/01/10                     Mongoose & jdog5000      */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
-/* original bts code
 					if (GET_TEAM((TeamTypes)iJ).isAlive())
-*/
-					// From Mongoose SDK, BarbarianPassiveTechFix
-					if (GET_TEAM((TeamTypes)iJ).isAlive() && !GET_TEAM((TeamTypes)iJ).isNPC())
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
 					{
 						if (GET_TEAM((TeamTypes)iJ).isHasTech((TechTypes)iI))
 						{
@@ -1461,7 +1441,6 @@ void CvTeam::doTurn()
 	testCircumnavigated();
 
 	AI_doTurnPost();
-
 }
 
 
@@ -1717,7 +1696,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 		return;
 	}
 
-	bool bInFull = ((!GET_TEAM(eTeam).isNPC() || GET_TEAM(eTeam).isBarbarian())&&(!isNPC() || isBarbarian()));
+	bool bInFull = ((!GET_TEAM(eTeam).isNPC() || GET_TEAM(eTeam).isBarbarian()) && (!isNPC() || isBarbarian()));
 	if (!isAtWar(eTeam))
 	{
 		//FAssertMsg((isHuman() || isMinorCiv() || GET_TEAM(eTeam).isMinorCiv() || isBarbarian() || GET_TEAM(eTeam).isBarbarian() || AI_isSneakAttackReady(eTeam) || (GET_TEAM(eTeam).getAtWarCount(true) > 0) || !(GC.getGameINLINE().isFinalInitialized()) || gDLL->GetWorldBuilderMode() || getVassalCount() > 0  || isAVassal() || GET_TEAM(eTeam).getVassalCount() > 0  || GET_TEAM(eTeam).isAVassal() || getDefensivePactCount() > 0), "Possibly accidental AI war!!!");
@@ -2833,7 +2812,7 @@ int CvTeam::getVotes(VoteTypes eVote, VoteSourceTypes eVoteSource) const
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
+		const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
 		if (kLoopPlayer.getTeam() == getID() && kLoopPlayer.isAlive())
 		{
 			iCount += kLoopPlayer.getVotes(eVote, eVoteSource);
@@ -2986,25 +2965,15 @@ int CvTeam::getChosenWarCount(bool bIgnoreMinors) const
 
 int CvTeam::getHasMetCivCount(bool bIgnoreMinors) const
 {
-	int iCount;
-	int iI;
+	int iCount = 0;
 
-	iCount = 0;
-
-	for (iI = 0; iI < MAX_PC_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		if (GET_TEAM((TeamTypes)iI).isAlive())
+		if (GET_TEAM((TeamTypes)iI).isAlive() && iI != getID() && isHasMet((TeamTypes)iI))
 		{
-			if (iI != getID())
+			if (!bIgnoreMinors || !GET_TEAM((TeamTypes)iI).isMinorCiv())
 			{
-				if (!bIgnoreMinors || !(GET_TEAM((TeamTypes)iI).isMinorCiv()))
-				{
-					if (isHasMet((TeamTypes)iI))
-					{
-						FAssert(iI != getID());
-						iCount++;
-					}
-				}
+				iCount++;
 			}
 		}
 	}
@@ -3019,7 +2988,6 @@ bool CvTeam::hasMetHuman() const
 	{
 		if (GET_TEAM((TeamTypes)iI).isAlive() && iI != getID() && GET_TEAM((TeamTypes)iI).isHuman() && isHasMet((TeamTypes)iI))
 		{
-			FAssert(iI != getID());
 			return true;
 		}
 	}
@@ -3052,7 +3020,7 @@ int CvTeam::getVassalCount(TeamTypes eTeam) const
 
 	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iI);
+		const CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iI);
 		if (kLoopTeam.isAlive() && iI != getID() && kLoopTeam.isVassal(getID()))
 		{
 			if (NO_TEAM == eTeam || GET_TEAM(eTeam).isHasMet((TeamTypes)iI))
@@ -3083,7 +3051,7 @@ bool CvTeam::canVassalRevolt(TeamTypes eMaster) const
 {
 	FAssert(NO_TEAM != eMaster);
 
-	CvTeam& kMaster = GET_TEAM(eMaster);
+	const CvTeam& kMaster = GET_TEAM(eMaster);
 
 	if (isVassal(eMaster))
 	{
@@ -3829,7 +3797,7 @@ void CvTeam::setIsMinorCiv( bool bNewValue, bool bDoBarbCivCheck )
 			// Keep war againt those this team has met
 			for (iI = 0; iI < MAX_PC_TEAMS; iI++)
 			{
-				if( iI != getID() && GET_TEAM((TeamTypes)iI).isAlive() && !(GET_TEAM((TeamTypes)iI).isNPC()) && !(GET_TEAM((TeamTypes)iI).isMinorCiv()) )
+				if (iI != getID() && GET_TEAM((TeamTypes)iI).isAlive() && !GET_TEAM((TeamTypes)iI).isMinorCiv())
 				{
 					if( abHasMet[iI] )
 					{
@@ -3908,7 +3876,7 @@ void CvTeam::setIsMinorCiv( bool bNewValue, bool bDoBarbCivCheck )
 					}
 					else
 					{
-						if( isAtWar((TeamTypes)iI) && !GET_TEAM((TeamTypes)iI).isNPC() && !GET_TEAM((TeamTypes)iI).isMinorCiv() )
+						if( isAtWar((TeamTypes)iI) && !GET_TEAM((TeamTypes)iI).isMinorCiv() )
 						{
 							makePeace((TeamTypes)iI, false);
 						

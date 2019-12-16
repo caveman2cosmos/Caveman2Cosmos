@@ -25,18 +25,15 @@ class CvPlotGroup;
 
 inline int coordRange(int iCoord, int iRange, bool bWrap)
 {
-	if (bWrap)
+	if (bWrap && iRange != 0)
 	{
-		if (iRange != 0)
+		if (iCoord < 0 )
 		{
-			if (iCoord < 0 )
-			{
-				return (iRange + (iCoord % iRange));
-			}
-			else if (iCoord >= iRange)
-			{
-				return (iCoord % iRange);
-			}
+			return (iRange + (iCoord % iRange));
+		}
+		else if (iCoord >= iRange)
+		{
+			return (iCoord % iRange);
 		}
 	}
 
@@ -353,7 +350,6 @@ public:
 	CvPath&	getLastPath();
 	int getLastPathStepNum();
 	CvPlot* getLastPathPlotByIndex(int index);
-
 };
 
 #endif

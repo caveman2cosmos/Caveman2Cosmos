@@ -402,7 +402,7 @@ public:
 	bool isHasValidBonus() const;
 	int getOccupationCultureRangeCities(PlayerTypes eOwnerIndex) const;
 	bool isWithinOccupationRange(PlayerTypes eOwnerIndex) const;
-	void changeOccupationCultureRangeCities(PlayerTypes eOwnerIndex,int iChange);
+	void changeOccupationCultureRangeCities(PlayerTypes eOwnerIndex, int iChange);
 	PlayerTypes getClaimingOwner() const;
 	void setClaimingOwner(PlayerTypes eNewValue);
 #ifdef OLD_VERSION_PRE_SUPER_FORTS
@@ -410,15 +410,11 @@ public:
 #endif
 	bool isActsAsCity() const;
 	void doResourceDepletion();
-	bool isCanMoveLandUnits() const;
 	bool isCanMoveSeaUnits() const;
-	bool isCanMoveAllUnits() const;
-	bool isCanUseRouteLandUnits() const;
-	bool isCanUseRouteSeaUnits() const;
 	bool isSeaTunnel() const;
-	int getRevoltProtection();
-	int getAverageEnemyStrength(TeamTypes eTeam);
-	int getAverageEnemyDamage(TeamTypes eTeam);
+	int getRevoltProtection()const;
+	int getAverageEnemyStrength(TeamTypes eTeam) const;
+	int getAverageEnemyDamage(TeamTypes eTeam) const;
 	LandmarkTypes getLandmarkType() const;
 	void setLandmarkType(LandmarkTypes eLandmark);
 	CvWString getLandmarkName() const;

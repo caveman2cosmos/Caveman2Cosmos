@@ -6516,7 +6516,6 @@ int CvPlayer::countPotentialForeignTradeCitiesConnected() const
 }
 
 
-
 bool CvPlayer::canContact(PlayerTypes ePlayer) const
 {
 	if (ePlayer == getID() || !isAlive() || isNPC() || isMinorCiv())
@@ -6538,12 +6537,9 @@ bool CvPlayer::canContact(PlayerTypes ePlayer) const
 			return false;
 		}
 
-		if (atWar(getTeam(), eOtherTeam))
+		if (atWar(getTeam(), eOtherTeam) && !GET_TEAM(getTeam()).canChangeWarPeace(eOtherTeam))
 		{
-			if (!GET_TEAM(getTeam()).canChangeWarPeace(eOtherTeam))
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 
@@ -7189,8 +7185,8 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 		{
-			CvTeam& kVassalTeam = GET_TEAM(getTeam());
-			CvTeam& kMasterTeam = GET_TEAM(GET_PLAYER(eWhoTo).getTeam());
+			const CvTeam& kVassalTeam = GET_TEAM(getTeam());
+			const CvTeam& kMasterTeam = GET_TEAM(GET_PLAYER(eWhoTo).getTeam());
 			if (kMasterTeam.isVassalStateTrading()) // the master must possess the tech
 			{
 				if (!kVassalTeam.isAVassal() && !kMasterTeam.isAVassal() && getTeam() != GET_PLAYER(eWhoTo).getTeam())
@@ -7728,34 +7724,16 @@ DenialTypes CvPlayer::getTradeDenial(PlayerTypes eWhoTo, TradeData item) const
 
 bool CvPlayer::canTradeNetworkWith(PlayerTypes ePlayer) const
 {
-	CvCity* pOurCapitalCity;
-
-	pOurCapitalCity = getCapitalCity();
-
-	if (pOurCapitalCity != NULL)
-	{
-		if (pOurCapitalCity->isConnectedToCapital(ePlayer))
-		{
-			return true;
-		}
-	}
-
-	return false;
+	const CvCity* pCapital = getCapitalCity();
+	return pCapital ? pCapital->isConnectedToCapital(ePlayer) : false;
 }
 
 
 int CvPlayer::getNumAvailableBonuses(BonusTypes eBonus) const
 {
-	CvPlotGroup* pPlotGroup;
-
-	pPlotGroup = ((getCapitalCity() != NULL) ? getCapitalCity()->plot()->getOwnerPlotGroup() : NULL);
-
-	if (pPlotGroup != NULL)
-	{
-		return std::max(0,pPlotGroup->getNumBonuses(eBonus));
-	}
-
-	return 0;
+	const CvCity* pCapital = getCapitalCity();
+	const CvPlotGroup* pPlotGroup = (pCapital ? pCapital->plot()->getOwnerPlotGroup() : NULL);
+	return pPlotGroup ? std::max(0, pPlotGroup->getNumBonuses(eBonus)) : 0;
 }
 
 
@@ -8579,14 +8557,6 @@ void CvPlayer::doGoody(CvPlot* pPlot, CvUnit* pUnit)
 
 bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 {
-	CvPlot* pPlot;
-	CvPlot* pLoopPlot;
-	bool bValid;
-	int iRange;
-	int iDX, iDY;
-
-	pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
-
 	if(GC.getUSE_CANNOT_FOUND_CITY_CALLBACK())
 	{
 		if (Cy::call<bool>(PYGameModule, "cannotFoundCity", Cy::Args() << getID() << iX << iY))
@@ -8595,16 +8565,12 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 		}
 	}
 
-	if (GC.getGameINLINE().isFinalInitialized())
+	if (GC.getGameINLINE().isFinalInitialized() && GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && isHuman() && getNumCities() > 0)
 	{
-		if (GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && isHuman())
-		{
-			if (getNumCities() > 0)
-			{
-				return false;
-			}
-		}
+		return false;
 	}
+
+	const CvPlot* pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
 
 /************************************************************************************************/
 /* Afforess	Mountains Start		 09/18/09                                           		 */
@@ -8612,26 +8578,15 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 /*                                                                                              */
 /************************************************************************************************/
 	if (pPlot->isImpassable(getTeam())) //added getTeam()
-/************************************************************************************************/
-/* Afforess	Mountains End       END        		                                             */
-/************************************************************************************************/
-
 	{
 		return false;
 	}
 
-/************************************************************************************************/
-/* Afforess	                          5/28/11                                                   */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	if (!isNPC() && !bTestVisible && getCityLimit() > 0 && getCityOverLimitUnhappy() == 0)
+	if (!isNPC() && !bTestVisible && getCityLimit() > 0 && getCityOverLimitUnhappy() == 0 && getNumCities() >= getCityLimit())
 	{
-		if (getNumCities() >= getCityLimit())
-		{
-			return false;
-		}
+		return false;
 	}
+
 	if (pPlot->isPeak())
 	{
 		if (GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
@@ -8646,87 +8601,55 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 			return false;
 		}
 	}
-	if (pPlot->getClaimingOwner() != NO_PLAYER)
+	if (pPlot->getClaimingOwner() != NO_PLAYER && pPlot->getClaimingOwner() != getID())
 	{
-		if (pPlot->getClaimingOwner() != getID())
-		{
-			return false;
-		}
+		return false;
 	}
 /************************************************************************************************/
 /* Afforess	                    END        		                                                */
 /************************************************************************************************/
 
-	if (pPlot->getFeatureType() != NO_FEATURE)
-	{
-		if (GC.getFeatureInfo(pPlot->getFeatureType()).isNoCity())
-		{
-			return false;
-		}
-	}
-
-	if (pPlot->isOwned() && (pPlot->getOwnerINLINE() != getID()))
+	if (pPlot->getFeatureType() != NO_FEATURE && GC.getFeatureInfo(pPlot->getFeatureType()).isNoCity())
 	{
 		return false;
 	}
 
-	bValid = false;
-
-	if (!bValid)
+	if (pPlot->isOwned() && pPlot->getOwnerINLINE() != getID())
 	{
-		if (GC.getTerrainInfo(pPlot->getTerrainType()).isFound())
-		{
-			bValid = true;
-		}
+		return false;
 	}
 
-	if (!bValid)
+	const CvTerrainInfo& kTerrain = GC.getTerrainInfo(pPlot->getTerrainType());
+	if (!(kTerrain.isFound() || (kTerrain.isFoundCoast() && pPlot->isCoastalLand()) || (kTerrain.isFoundFreshWater() && pPlot->isFreshWater())))
 	{
-		if (GC.getTerrainInfo(pPlot->getTerrainType()).isFoundCoast() && pPlot->isCoastalLand())
-		{
-			bValid = true;
-		}
+		return false;
 	}
-
-	if (!bValid)
-	{
-		if (GC.getTerrainInfo(pPlot->getTerrainType()).isFoundFreshWater() && pPlot->isFreshWater())
-		{
-			bValid = true;
-		}
-	}
-
 /************************************************************************************************/
 /* UNOFFICIAL_PATCH                       02/16/10                    EmperorFool & jdog5000    */
 /*                                                                                              */
 /* Bugfix                                                                                       */
 /************************************************************************************************/
 	// EF: canFoundCitiesOnWater callback handling was incorrect and ignored isWater() if it returned true
-	if (pPlot->isWater())
+	if (GC.getUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK() && pPlot->isWater())
 	{
-		if(GC.getUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK())
+		if (!(Cy::call<bool>(PYGameModule, "canFoundCitiesOnWater", Cy::Args() << iX << iY)))
 		{
-			bValid = Cy::call<bool>(PYGameModule, "canFoundCitiesOnWater", Cy::Args() << iX << iY);
+			return false;
 		}
 	}
 /************************************************************************************************/
 /* UNOFFICIAL_PATCH                        END                                                  */
 /************************************************************************************************/
 
-	if (!bValid)
-	{
-		return false;
-	}
-
 	if (!bTestVisible)
 	{
-		iRange = GC.getMIN_CITY_RANGE();
+		const int iRange = GC.getMIN_CITY_RANGE();
 
-		for (iDX = -(iRange); iDX <= iRange; iDX++)
+		for (int iDX = -(iRange); iDX <= iRange; iDX++)
 		{
-			for (iDY = -(iRange); iDY <= iRange; iDY++)
+			for (int iDY = -(iRange); iDY <= iRange; iDY++)
 			{
-				pLoopPlot	= plotXY(pPlot->getX_INLINE(), pPlot->getY_INLINE(), iDX, iDY);
+				const CvPlot* pLoopPlot = plotXY(pPlot->getX_INLINE(), pPlot->getY_INLINE(), iDX, iDY);
 
 				if (pLoopPlot != NULL && pLoopPlot->isCity() && pLoopPlot->area() == pPlot->area())
 				{
@@ -8742,21 +8665,16 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 
 void CvPlayer::found(int iX, int iY, CvUnit *pUnit)
 {
-	CvCity* pCity;
-	BuildingTypes eLoopBuilding;
-	UnitTypes eDefenderUnit;
-	int iI;
-
 	//	This is checked by the caller on the main AI call path, but it is also usable (and used) form a few other paths, so best to leave it in
 	if (!canFound(iX, iY))
 	{
 		return;
 	}
 
-	pCity = initCity(iX, iY, true, true);
+	CvCity* pCity = initCity(iX, iY, true, true);
 	FAssertMsg(pCity != NULL, "City is not assigned a valid value");
 
-	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
 		if (GC.getBuildingInfo((BuildingTypes)iI).isNewCityFree(pCity->getGameObject()))
 		{
@@ -8766,12 +8684,11 @@ void CvPlayer::found(int iX, int iY, CvUnit *pUnit)
 			}
 		}
 	}
-		
 
 	if (isNPC())
 	{
 		int iDummyValue;
-		eDefenderUnit = pCity->AI_bestUnitAI(UNITAI_CITY_DEFENSE, iDummyValue);
+		UnitTypes eDefenderUnit = pCity->AI_bestUnitAI(UNITAI_CITY_DEFENSE, iDummyValue);
 
 		if (eDefenderUnit == NO_UNIT)
 		{
@@ -8810,20 +8727,15 @@ void CvPlayer::found(int iX, int iY, CvUnit *pUnit)
 
 	CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
 
-	for (iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		eLoopBuilding = ((BuildingTypes)kCivilizationInfo.getCivilizationBuildings(iI));
-
-		if (eLoopBuilding != NO_BUILDING)
+		if (GC.getBuildingInfo((BuildingTypes)iI).getFreeStartEra() != NO_ERA)
 		{
-			if (GC.getBuildingInfo(eLoopBuilding).getFreeStartEra() != NO_ERA)
+			if (GC.getGameINLINE().getStartEra() >= GC.getBuildingInfo((BuildingTypes)iI).getFreeStartEra())
 			{
-				if (GC.getGameINLINE().getStartEra() >= GC.getBuildingInfo(eLoopBuilding).getFreeStartEra())
+				if (pCity->canConstruct((BuildingTypes)iI))
 				{
-					if (pCity->canConstruct(eLoopBuilding))
-					{
-						pCity->setNumRealBuilding(eLoopBuilding, 1);
-					}
+					pCity->setNumRealBuilding((BuildingTypes)iI, 1);
 				}
 			}
 		}
@@ -8846,14 +8758,10 @@ void CvPlayer::found(int iX, int iY, CvUnit *pUnit)
 		bool bCreative = false;
 		for (iI = 0; iI < GC.getNumTraitInfos(); ++iI)
 		{
-			if (hasTrait((TraitTypes)iI))
+			if (hasTrait((TraitTypes)iI) && GC.getTraitInfo((TraitTypes)iI).getCommerceChange(COMMERCE_CULTURE) > 0)
 			{
-				if (GC.getTraitInfo((TraitTypes)iI).getCommerceChange(COMMERCE_CULTURE) > 0)
-				{
-					bCreative = true;
-					break;
-				}
-
+				bCreative = true;
+				break;
 			}
 		}
 
@@ -8874,14 +8782,12 @@ void CvPlayer::found(int iX, int iY, CvUnit *pUnit)
 	//Team Project (6)
 	if (getNationalCityStartCulture() > 0)
 	{
-		int iCulture = getNationalCityStartCulture();
-		pCity->changeCulture(getID(), iCulture, true, true);
+		pCity->changeCulture(getID(), getNationalCityStartCulture(), true, true);
 	}
 
 	if (getNationalCityStartBonusPopulation() > 0)
 	{
-		int iBonusPop = getNationalCityStartBonusPopulation();
-		pCity->changePopulation(iBonusPop);
+		pCity->changePopulation(getNationalCityStartBonusPopulation());
 	}
 
 	if (hasCitiesStartwithStateReligion())
