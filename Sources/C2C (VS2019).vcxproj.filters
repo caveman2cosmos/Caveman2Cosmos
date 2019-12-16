@@ -940,6 +940,7 @@
       <Filter>Header Files</Filter>
     </None>
     <None Include="fbuild.bff" />
+    <None Include="cpp.hint" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Notes for the next breaking of save game compatability cycle.txt" />

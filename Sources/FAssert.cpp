@@ -15,8 +15,8 @@
 #define IDC_COPY_TO_CLIPBOARD           1006
 #define LINE_SEP "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\r\n"
 #define LINE_SEP2 "==============================================================================================================================================================================\r\n"
-namespace
-{
+//namespace
+//{
 	// These are the return values from the modal Assert Dialog
 	enum
 	{
@@ -236,7 +236,7 @@ namespace
 	{
 		return C2CStackWalker::get().get_callstack(4);
 	}
-} // end anonymous namespace
+//} // end anonymous namespace
 
 bool FAssertDlg( const char* szExpr, const char* szMsg, const char* szFile, unsigned int line, const char* szFunction, bool& bIgnoreAlways )
 {

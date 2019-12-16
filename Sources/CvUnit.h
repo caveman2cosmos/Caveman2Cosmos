@@ -1822,6 +1822,25 @@ public:
 	int getRbombardSeigeCount(CvPlot* pPlot);
 	// RevolutionDCM - end
 
+	// Boost range helpers start
+
+	// filters
+	// pass these to the filtered range adaptor like:
+	// foreach_(const CvUnit&, units() | filtered(CvUnit::is_alive)) {}
+
+	static inline bool is_dead(const CvUnit& unit) { return unit.isDead(); }
+	static inline bool is_alive(const CvUnit& unit) { return !unit.isDead(); }
+	static inline bool is_ready_to_auto_upgrade(const CvUnit& unit) { return unit.isAutoUpgrading() && unit.isReadyForUpgrade(); }
+
+	// transforms
+	// pass these to the filtered range adaptor like:
+	// foreach_(const CvPlot&, units() | transformed(plot)) {}
+	
+	static inline const CvPlot& plot(const CvUnit& unit) { return *unit.plot(); }
+	static inline CvPlot& plot(CvUnit& unit) { return *unit.plot(); }
+	
+	// Boost range helpers end
+
 private:
 	int m_iDCMBombRange;
 	int m_iDCMBombAccuracy;
@@ -3321,26 +3340,5 @@ typedef std::vector<const CvUnit*> ConstUnitVector;
 // However it shouldn't be used in inner loops
 typedef copy_iterator<CvUnit> safe_unit_iterator;
 typedef copy_iterator<const CvUnit> const_safe_unit_iterator;
-
-//// Boost range filter predicates
-//namespace pred
-//{
-//	inline bool unit_is_dead(const CvUnit& unit) { return unit.isDead(); }
-//	inline bool unit_is_alive(const CvUnit& unit) { return !unit.isDead(); }
-//}
-//
-//namespace filters
-//{
-//	//unit_is_deadinline bool unit_is_dead(const CvUnit& unit) { return unit.isDead(); }
-//	inline bool unit_is_alive(const CvUnit& unit) { return !unit.isDead(); }
-//}
-//
-//
-//// Boost range filter predicates
-//namespace trans
-//{
-//	inline const CvPlot& unit_plot(const CvUnit& unit) { return *unit.plot(); }
-//	inline CvPlot& unit_plot(CvUnit& unit) { return *unit.plot(); }
-//}
 
 #endif

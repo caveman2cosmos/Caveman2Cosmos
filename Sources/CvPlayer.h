@@ -1385,12 +1385,12 @@ public:
 	safe_unit_iterator beginUnitsSafe() { return safe_unit_iterator(beginUnits(), endUnits()); }
 	safe_unit_iterator endUnitsSafe() { return safe_unit_iterator(); }
 	typedef bst::iterator_range<safe_unit_iterator> safe_unit_range;
-	safe_unit_range delete_safe_units() { return safe_unit_range(beginUnitsSafe(), endUnitsSafe()); }
+	safe_unit_range units_safe() { return safe_unit_range(beginUnitsSafe(), endUnitsSafe()); }
 
 	const_safe_unit_iterator beginUnitsSafe() const { return const_safe_unit_iterator(beginUnits(), endUnits()); }
 	const_safe_unit_iterator endUnitsSafe() const { return const_safe_unit_iterator(); }
 	typedef bst::iterator_range<const_safe_unit_iterator> const_safe_unit_range;
-	const_safe_unit_range delete_safe_units() const { return const_safe_unit_range(beginUnitsSafe(), endUnitsSafe()); }
+	const_safe_unit_range units_safe() const { return const_safe_unit_range(beginUnitsSafe(), endUnitsSafe()); }
 
 	// deprecated, use unit_iterator
 	CvUnit* firstUnit(int* pIterIdx, bool bRev = false) const;																// Exposed to Python					

@@ -524,6 +524,7 @@
     <ClInclude Include="Win32.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="cpp.hint" />
     <None Include="fbuild.bff" />
     <None Include="FVariableSystem.inl" />
     <None Include="interfaceDirtyBits.inl" />

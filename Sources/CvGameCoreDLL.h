@@ -203,6 +203,13 @@ void IFPSetCount(ProfileSample* sample, int count);
 #include <boost155/array.hpp>
 #include <boost155/utility.hpp>
 #include <boost155/foreach.hpp>
+#include <boost155/range.hpp>
+#include <boost155/range/adaptor/filtered.hpp>
+#include <boost155/range/adaptor/transformed.hpp>
+using namespace boost155::adaptors;
+#include <boost155/range/any_range.hpp>
+#include <boost155/range/algorithm.hpp>
+ 
 
 // Make boost foreach look nice enough to actually use
 #define foreach_ BOOST_155_FOREACH
