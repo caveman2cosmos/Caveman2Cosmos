@@ -2981,8 +2981,10 @@ Current techs which are not in this file:-
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<AndPreReqs>
+			<OrPreReqs>
 				<PrereqTech>TECH_ATLATL_MAKING</PrereqTech>
+			</OrPreReqs>
+			<AndPreReqs>
 				<PrereqTech>TECH_PICTOGRAPHS</PrereqTech>
 				<PrereqTech>TECH_TANNING</PrereqTech>
 				<PrereqTech>TECH_HUNTING</PrereqTech>
