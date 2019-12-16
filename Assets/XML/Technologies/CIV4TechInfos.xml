@@ -2981,12 +2981,11 @@ Current techs which are not in this file:-
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<OrPreReqs>
-				<PrereqTech>TECH_ATLATL_MAKING</PrereqTech>
-			</OrPreReqs>
 			<AndPreReqs>
+				<PrereqTech>TECH_ATLATL_MAKING</PrereqTech>
 				<PrereqTech>TECH_PICTOGRAPHS</PrereqTech>
 				<PrereqTech>TECH_TANNING</PrereqTech>
+				<PrereqTech>TECH_HUNTING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_HUNTING_TACTICS_QUOTE</Quote>
 			<Sound>AS2D_TECH_HUNTING_TACTICS</Sound>
