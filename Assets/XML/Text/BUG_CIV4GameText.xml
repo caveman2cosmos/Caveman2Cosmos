@@ -5879,11 +5879,11 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__CURRENTDIFFICULTY_LIST</Tag>
-		<English>Current Difficulty|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity</English>
-		<French>Difficulté actuelle|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité</French>
-		<German>Aktueller Schwierigkeitsgrad|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit</German>
-		<Italian>Difficoltà corrente|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità</Italian>
-		<Spanish>Dificultad actual|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad</Spanish>
+		<English>Current Difficulty|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare</English>
+		<French>Difficulté actuelle|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Nightmare</French>
+		<German>Aktueller Schwierigkeitsgrad|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare</German>
+		<Italian>Difficoltà corrente|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Nightmare</Italian>
+		<Spanish>Dificultad actual|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad|Nightmare</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__CURRENTDIFFICULTY_TEXT</Tag>
@@ -5975,11 +5975,11 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYMAXIMUMDIFF_LIST</Tag>
-		<English>No Maximum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity</English>
-		<French>Pas de Maximum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité</French>
-		<German>Kein Maximum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit</German>
-		<Italian>No Massimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità</Italian>
-		<Spanish>Sin mínimo|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad</Spanish>
+		<English>No Maximum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare</English>
+		<French>Pas de Maximum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Nightmare</French>
+		<German>Kein Maximum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare</German>
+		<Italian>No Massimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Nightmare</Italian>
+		<Spanish>Sin mínimo|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad|Nightmare</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYMAXIMUMDIFF_TEXT</Tag>
@@ -6015,11 +6015,11 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYMINIMUMDIFF_LIST</Tag>
-		<English>No Minimum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity</English>
-		<French>Pas de Minimum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité</French>
-		<German>Kein Minimum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit</German>
-		<Italian>No Minimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità</Italian>
-		<Spanish>Sin mínimo|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad</Spanish>
+		<English>No Minimum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare</English>
+		<French>Pas de Minimum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Nightmare</French>
+		<German>Kein Minimum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare</German>
+		<Italian>No Minimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Nightmare</Italian>
+		<Spanish>Sin mínimo|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad|Nightmare</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYMINIMUMDIFF_TEXT</Tag>

@@ -490,6 +490,7 @@ class MapConstants :
 				self.EmperorBonus = 1
 				self.ImmortalBonus = 1
 				self.DeityBonus = 2
+				self.NightmareBonus = 2
 				
 				#Decides whether to use the Python random generator or the one that is
 				#intended for use with civ maps. The Python random has much higher precision
@@ -4818,6 +4819,10 @@ class StartingPlotFinder:
 										if mc.DeityBonus > 0:
 												print "Human player at Deity Difficulty, adding %d resources" % mc.DeityBonus
 												self.boostCityPlotValue(startPlot.getX(),startPlot.getY(),mc.DeityBonus,sPlot.isCoast())
+								elif eHandicap ==	 gc.getInfoTypeForString("HANDICAP_NIGHTMARE"):				
+										if mc.NightmareBonus > 0:
+												print "Human player at Nightmare Difficulty, adding %d resources" % mc.NightmareBonus
+												self.boostCityPlotValue(startPlot.getX(),startPlot.getY(),mc.NightmareBonus,sPlot.isCoast())
 										
  
 #Global access
