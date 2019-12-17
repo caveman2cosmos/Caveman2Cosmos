@@ -516,9 +516,17 @@ class CvEventManager:
 
 		self.GO_1_CITY_TILE_FOUNDING	= GAME.isOption(GameOptionTypes.GAMEOPTION_1_CITY_TILE_FOUNDING)
 		self.GO_START_AS_MINORS			= GAME.isOption(GameOptionTypes.GAMEOPTION_START_AS_MINORS)
-		self.GO_INFINITE_XP				= GAME.isOption(GameOptionTypes.GAMEOPTION_INFINITE_XP)
 		self.GO_NO_CITY_RAZING			= GAME.isOption(GameOptionTypes.GAMEOPTION_NO_CITY_RAZING)
 		self.GO_ONE_CITY_CHALLENGE		= GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
+		self.GO_INFINITE_XP				= GAME.isOption(GameOptionTypes.GAMEOPTION_INFINITE_XP)
+		# Extended caching
+		if not self.GO_INFINITE_XP:
+			self.ANIMAL_MAX_XP = GC.getDefineINT("ANIMAL_MAX_XP_VALUE")
+			self.BARBARIAN_MAX_XP = GC.getDefineINT("BARBARIAN_MAX_XP_VALUE")
+
+			self.GO_MORE_XP_TO_LEVEL = GAME.isOption(GameOptionTypes.GAMEOPTION_MORE_XP_TO_LEVEL)
+			if self.GO_MORE_XP_TO_LEVEL:
+				self.MORE_XP_TO_LEVEL_MOD = GC.getDefineINT("MORE_XP_TO_LEVEL_MODIFIER")
 
 		if bNewGame and self.GO_START_AS_MINORS:
 			for iTeam in xrange(GC.getMAX_PC_TEAMS()):
@@ -924,14 +932,18 @@ class CvEventManager:
 				iExpLimit = -1
 				if CyUnitL.isAnimal():
 					if CyUnitW.isHasPromotion(GC.getInfoTypeForString("PROMOTION_ANIMAL_HUNTER")):
-						iExpLimit = GC.getDefineINT("ANIMAL_MAX_XP_VALUE")
+						iExpLimit = self.ANIMAL_MAX_XP
 
 				elif CyUnitW.isHasPromotion(GC.getInfoTypeForString("PROMOTION_BARBARIAN_HUNTER")):
-					iExpLimit = GC.getDefineINT("BARBARIAN_MAX_XP_VALUE")
+					iExpLimit = self.BARBARIAN_MAX_XP
 
-				if iExpLimit != -1 and CyUnitW.getExperience() >= iExpLimit:
-					bInBorders = iPlayerW == GC.getMap().plot(CyUnitW.getX(), CyUnitW.getY()).getOwner()
-					CyUnitW.changeExperience(1, 9999, True, bInBorders, True)
+				if iExpLimit != -1:
+					if self.GO_MORE_XP_TO_LEVEL:
+						iExpLimit = iExpLimit * self.MORE_XP_TO_LEVEL_MOD / 100
+					
+					if CyUnitW.getExperience() >= iExpLimit:
+						bInBorders = iPlayerW == GC.getMap().plot(CyUnitW.getX(), CyUnitW.getY()).getOwner()
+						CyUnitW.changeExperience(1, 9999, True, bInBorders, True)
 		else:
 			bSneak = CyUnitW.isHasPromotion(mapPromoType['PROMOTION_SNEAK'])
 			bMarauder = CyUnitW.isHasPromotion(mapPromoType['PROMOTION_MARAUDER'])
