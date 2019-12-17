@@ -8513,7 +8513,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/gatherer_genericfruit.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/gatherer_grape.dds</Button>
 		</BuildInfo>
 		<!-- Plant Gatherer (Kill) -->
 		<BuildInfo>
@@ -8544,7 +8544,7 @@
 			<FeatureStructs/>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/gatherer_genericfruit.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/picker_genericfruit.dds</Button>
 		</BuildInfo>
 		<!-- Grape Picker -->
 		<BuildInfo>
@@ -8559,7 +8559,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/gatherer_genericfruit.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/picker_grape.dds</Button>
 		</BuildInfo>
 		<!-- Plant Picker -->
 		<BuildInfo>
@@ -8574,7 +8574,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/gatherer_genericplant.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/picker_genericplant.dds</Button>
 		</BuildInfo>
 		<!-- Beacon -->
 		<BuildInfo>
@@ -8741,7 +8741,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/Button_GrainGather.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/gatherer_mushroom.dds</Button>
 		</BuildInfo>
 		<!-- Mushroom Gatherer (No Kill) -->
 		<BuildInfo>
@@ -8755,7 +8755,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/Button_GrainGather.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/gatherer_mushroom.dds</Button>
 		</BuildInfo>
 		<!-- Colony Habitat (Small) -->
 		<BuildInfo>
