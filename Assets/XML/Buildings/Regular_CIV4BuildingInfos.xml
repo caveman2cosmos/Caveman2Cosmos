@@ -19744,13 +19744,20 @@
 			<iCost>15</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<!-- Main effects -->
-			<iHealth>-2</iHealth>
+			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Farm - Crop (Carrots) -->

@@ -8766,6 +8766,9 @@ def doRemoveWVSlavery(argsList):
 		if bMessage:
 			msg = "Slavery worldview eradicated"
 			CvUtil.sendMessage(msg, iPlayer, 16, CyUnit.getButton(), ColorTypes(8), CyUnit.getX(), CyUnit.getY(), True, True, 0, "AS2D_DISCOVERBONUS")
+
+		iCost = CyPlayer.getBuildingProductionNeeded(iSlaveMarket)
+		iSum = 0
 		CyCity, i = CyPlayer.firstCity(False)
 		while CyCity:
 			sCityName = CyCity.getName()
@@ -8780,9 +8783,7 @@ def doRemoveWVSlavery(argsList):
 
 				CyCity.setNumRealBuilding(iSlaveMarket, 0)
 
-				iCost = CyPlayer.getBuildingProductionNeeded(iSlaveMarket)
-				if iCost > 0:
-					CyPlayer.changeGold(iCost * 0.2)
+				iSum += iCost
 
 				if bMessage:
 					msg = TRNSLTR.getText("TXT_KEY_MESSAGE_SLAVE_MARKET_SOLD", (sCityName,))
@@ -8881,6 +8882,8 @@ def doRemoveWVSlavery(argsList):
 
 			CyCity, i = CyPlayer.nextCity(i, False)
 
+		if iSum > 0:
+			CyPlayer.changeGold(int(iSum * 0.2))
 
 
 def doRemoveWVCannibalism(argsList):

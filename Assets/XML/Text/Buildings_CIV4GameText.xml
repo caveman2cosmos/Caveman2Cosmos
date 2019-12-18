@@ -30863,12 +30863,19 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZIZKOV_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Zizkov Television Tower[COLOR_REVERT] disrupts trade and conceals the world map of rivals. Additionally, it increases espionage in all cities and reveals the world map.</English>
+		<English>[COLOR_BUILDING_TEXT]Zizkov Television Tower[COLOR_REVERT] increases espionage in all cities. It also conceals the world map for rivals whom have not invented [LINK=TECH_SATELLITES]Satellites[\LINK] when built, and with a small chance may do so again each turn threafter. The per turn concealment chance depend on both world size and game speed.
+e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790 turns with "biggest/slowest".
+	Chance Formula: 1 / (SIZE^2 + SPEED)
+[ICON_BULLET]Where SIZE range is 3-9 (small-big) and SPEED is, from fast to slow, [66,82,114,178,242,306,434,562,690].</English>
+ 
 		<French>La [COLOR_BUILDING_TEXT]Tour de Télévision de Zizkov[COLOR_REVERT] disrupts trade and conceals the world map of rivals. Additionally, it increases espionage in all cities and reveals the world map.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZIZKOV_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Reveals World Map, Conceals World Map of Rivals, 10% Conceals World Map of Rivals Every Turn, Rivals with Satellite Technology are Immune</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Conceals World Map of Rivals when built.
+[ICON_BULLET]May conceal world map for rivals each turn.
+[ICON_BULLET]Rivals with [LINK=TECH_SATELLITES]Satellite[\LINK] Technology are Immune.</English>
+
 		<French>[ICON_BULLET]Révèle complètement la carte[NEWLINE][ICON_BULLET]Dissimule la carte aux rivaux[NEWLINE][ICON_BULLET]10% de probabilité de dissimuler la carte chaque tour[NEWLINE][ICON_BULLET]Les Rivaux possédant la Technologie des Satellites sont immunisés</French>
 		<Polish>[ICON_BULLET]Odkrywa Mape Swiata[NEWLINE][ICON_BULLET]Ukrywa Mape Swiata dla rywali.[NEWLINE][ICON_BULLET]10% Mapy Swiata jest odkrywane rywalom co ture[NEWLINE][ICON_BULLET]Rywale z odkryta technoligia Satelity sa odporni na ukrycie mapy.</Polish>
 	</TEXT>

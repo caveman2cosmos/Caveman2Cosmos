@@ -4842,7 +4842,7 @@
 			<FeatureStructs/>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/gatherer_genericfruit.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/picker_genericfruit.dds</Button>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
@@ -4858,7 +4858,7 @@
 			<FeatureStructs/>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/gatherer_grape.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/picker_grape.dds</Button>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
@@ -4874,7 +4874,7 @@
 			<FeatureStructs/>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/gatherer_genericplant.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/picker_genericplant.dds</Button>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
@@ -4970,7 +4970,7 @@
 			<FeatureStructs/>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/Button_GrainGather.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/gatherer_mushroom.dds</Button>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 	</BuildInfos>
