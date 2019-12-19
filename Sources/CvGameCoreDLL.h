@@ -68,15 +68,7 @@
 
 #define DllExport   __declspec( dllexport ) 
 
-#include "EnumFlags.h"
 #include "NiPoint.h"
-#include "hash.h"
-
-//
-// Polyfills
-//
-#include "nullptr_t.h"
-#include "algorithm2.h"
 
 //
 // Basic types
@@ -190,6 +182,7 @@ void IFPSetCount(ProfileSample* sample, int count);
 // Boost
 //
 #define BOOST_155_USE_WINDOWS_H
+#define BOOST_155_ALL_NO_LIB
 #include <boost155/scoped_ptr.hpp>
 #include <boost155/scoped_array.hpp>
 #include <boost155/shared_ptr.hpp>
@@ -202,7 +195,28 @@ void IFPSetCount(ProfileSample* sample, int count);
 #include <boost155/function.hpp>
 #include <boost155/array.hpp>
 #include <boost155/utility.hpp>
+#include <boost155/foreach.hpp>
+#include <boost155/functional.hpp>
+
+
+// #include <boost155/phoenix.hpp> Doesn't work, see https://github.com/boostorg/phoenix/issues/91
+
+// Ranges
+#include <boost155/range.hpp>
+#include <boost155/range/adaptor/filtered.hpp>
+#include <boost155/range/adaptor/transformed.hpp>
+#include <boost155/range/any_range.hpp>
+#include <boost155/range/algorithm.hpp>
+#include <boost155/range/algorithm_ext/push_back.hpp>
+#include <boost155/range/numeric.hpp>
+
+// Make boost foreach look nice enough to actually use
+#define foreach_ BOOST_155_FOREACH
+
+// Alias our latest boost version
 namespace bst = boost155;
+// Bring range adaptors straight into global namespace, as we use them a lot
+using namespace bst::adaptors;
 
 //
 // Boost Python
@@ -221,6 +235,8 @@ namespace bst = boost155;
 namespace python = boost::python;
 #endif
 
+//#include <boost155/range/adaptor/filtered.hpp>
+//#include <boost155/range/adaptor/transformed.hpp>
 
 //
 // xercesc for XML loading
@@ -238,12 +254,17 @@ namespace python = boost::python;
 #include <xercesc/framework/Wrapper4InputSource.hpp>
 #include <xercesc/validators/common/Grammar.hpp>
 
-
 //
 // Json
 //
 #include "picojson.h"
 
+//
+// Polyfills
+//
+#include "nullptr_t.h"
+#include "EnumFlags.h"
+#include "hash.h"
 
 //
 // Our code
@@ -251,6 +272,10 @@ namespace python = boost::python;
 #include "copy_iterator.h"
 #include "index_iterator_base.h"
 #include "logging.h"
+
+#include "algorithm2.h"
+
+#include "scoring.h"
 
 #include "CvAllocator.h"
 

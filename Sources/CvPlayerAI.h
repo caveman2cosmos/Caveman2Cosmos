@@ -151,7 +151,7 @@ public:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	bool AI_getAnyPlotDanger(CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const;
+	bool AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const;
 	bool AI_getVisiblePlotDanger(CvPlot* pPlot, int iRange, bool bAnimalOnly, CvSelectionGroup* group = NULL, int acceptableOdds = -1) const;
 	int AI_getPlotDanger(CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const;
 	//	Koshling - internal bypasses cache

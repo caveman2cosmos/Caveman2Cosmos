@@ -3,16 +3,16 @@
 #include "CvGameCoreDLL.h"
 #include "CvReachablePlotSet.h"
 
-#include <boost/bind.hpp>
+#include <boost155/bind.hpp>
 #include "BetterBTSAI.h"
 
-CvSelectionGroup* CvSelectionGroup::m_pCachedMovementGroup = NULL;
+const CvSelectionGroup* CvSelectionGroup::m_pCachedMovementGroup = nullptr;
 bst::scoped_ptr<CvSelectionGroup::CachedPathGenerator> CvSelectionGroup::m_cachedPathGenerator;
 
 
-//std::map<int,CachedEdgeCosts>* CvSelectionGroup::m_pCachedNonEndTurnEdgeCosts = NULL;
-//std::map<int,CachedEdgeCosts>* CvSelectionGroup::m_pCachedEndTurnEdgeCosts = NULL;
-//CvPathGenerator*	CvSelectionGroup::m_generator = NULL;
+//std::map<int,CachedEdgeCosts>* CvSelectionGroup::m_pCachedNonEndTurnEdgeCosts = nullptr;
+//std::map<int,CachedEdgeCosts>* CvSelectionGroup::m_pCachedEndTurnEdgeCosts = nullptr;
+//CvPathGenerator*	CvSelectionGroup::m_generator = nullptr;
 
 // Public Functions...
 
@@ -545,10 +545,11 @@ bool CvSelectionGroup::doDelayedDeath()
 
 	// Get list of the units to delete *first* then delete them. Iterators would be invalidated
 	// if we tried to delete while iterating over the group itself
-	std::vector<CvUnit*> toDelete = get_if(bst::bind(canDelete, bst::ref(GET_PLAYER(getOwnerINLINE())), _1));
-	for (std::vector<CvUnit*>::iterator itr = toDelete.begin(); itr != toDelete.end(); ++itr)
+	//std::vector<CvUnit*> toDelete = get_if(bst::bind(canDelete, bst::ref(GET_PLAYER(getOwnerINLINE())), _1));
+	foreach_ (CvUnit* unit, units_safe() | filtered(bst::bind(canDelete, bst::ref(GET_PLAYER(getOwnerINLINE())), _1)))
+		//std::vector<CvUnit*>::iterator itr = toDelete.begin(); itr != toDelete.end(); ++itr)
 	{
-		(*itr)->doDelayedDeath();
+		unit->doDelayedDeath();
 	}
 	if (getNumUnits() == 0)
 	{
@@ -765,8 +766,12 @@ void CvSelectionGroup::updateMission()
 	}
 }
 
+CvPlot* CvSelectionGroup::_lastMissionPlot()
+{
+	return lastMissionPlot();
+}
 
-CvPlot* CvSelectionGroup::lastMissionPlot()
+CvPlot* CvSelectionGroup::lastMissionPlot() const
 {
 	CLLNode<MissionData>* pMissionNode;
 	CvUnit* pTargetUnit;
@@ -901,7 +906,7 @@ CvPlot* CvSelectionGroup::lastMissionPlot()
 }
 
 
-bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvPlot* pPlot, bool bTestVisible, bool bUseCache)
+bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvPlot* pPlot, bool bTestVisible, bool bUseCache) const
 {
 	PROFILE_FUNC();
 
@@ -3789,8 +3794,12 @@ bool CvSelectionGroup::isHuman() const
 	return true;
 }
 
+bool CvSelectionGroup::_isBusy()
+{
+	return isBusy();
+}
 
-bool CvSelectionGroup::isBusy()
+bool CvSelectionGroup::isBusy() const
 {
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit;
@@ -3828,7 +3837,7 @@ bool CvSelectionGroup::isBusy()
 }
 
 
-bool CvSelectionGroup::isCargoBusy()
+bool CvSelectionGroup::isCargoBusy() const
 {
 	CLLNode<IDInfo>* pUnitNode1;
 	CLLNode<IDInfo>* pUnitNode2;
@@ -3877,7 +3886,7 @@ bool CvSelectionGroup::isCargoBusy()
 }
 
 
-int CvSelectionGroup::baseMoves()
+int CvSelectionGroup::baseMoves() const
 {
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit;
@@ -3924,7 +3933,7 @@ bool CvSelectionGroup::isWaiting() const
 }
 
 
-bool CvSelectionGroup::isFull()
+bool CvSelectionGroup::isFull() const
 {
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit;
@@ -3981,7 +3990,7 @@ bool CvSelectionGroup::isFull()
 }
 
 
-bool CvSelectionGroup::hasCargo()
+bool CvSelectionGroup::hasCargo() const
 {
 	CLLNode<IDInfo>* pUnitNode = headUnitNode();
 
@@ -4023,7 +4032,12 @@ int CvSelectionGroup::getCargo(bool bVolume) const
 	return iCargoCount;
 }
 
-bool CvSelectionGroup::canAllMove()
+bool CvSelectionGroup::_canAllMove()
+{
+	return canAllMove();
+}
+
+bool CvSelectionGroup::canAllMove() const
 {
 	PROFILE_FUNC();
 
@@ -4097,7 +4111,7 @@ bool CvSelectionGroup::canAnyMove(bool bValidate)
 	return bResult;
 }
 
-bool CvSelectionGroup::hasMoved()
+bool CvSelectionGroup::hasMoved() const
 {
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit;
@@ -4171,13 +4185,17 @@ bool CvSelectionGroup::canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool b
 	return false;
 }
 
+bool CvSelectionGroup::_canMoveInto(CvPlot* pPlot, bool bAttack)
+{
+	return canMoveInto(pPlot, bAttack);
+}
 
-bool CvSelectionGroup::canMoveInto(CvPlot* pPlot, bool bAttack)
+bool CvSelectionGroup::canMoveInto(const CvPlot* pPlot, bool bAttack) const
 {
 	return canMoveIntoWithWar(pPlot, bAttack, false);
 }
 
-bool CvSelectionGroup::canMoveIntoWithWar(CvPlot* pPlot, bool bAttack, bool bDeclareWar)
+bool CvSelectionGroup::canMoveIntoWithWar(const CvPlot* pPlot, bool bAttack, bool bDeclareWar) const
 {
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit;
@@ -4201,8 +4219,12 @@ bool CvSelectionGroup::canMoveIntoWithWar(CvPlot* pPlot, bool bAttack, bool bDec
 	return false;
 }
 
+bool CvSelectionGroup::_canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar)
+{
+	return canMoveOrAttackInto(pPlot, bDeclareWar);
+}
 
-bool CvSelectionGroup::canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar)
+bool CvSelectionGroup::canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar) const
 {
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit;
@@ -4234,7 +4256,7 @@ bool CvSelectionGroup::canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar)
 }
 
 
-bool CvSelectionGroup::canMoveThrough(CvPlot* pPlot, bool bDeclareWar)
+bool CvSelectionGroup::canMoveThrough(const CvPlot* pPlot, bool bDeclareWar) const
 {
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit;
@@ -4254,7 +4276,7 @@ bool CvSelectionGroup::canMoveThrough(CvPlot* pPlot, bool bDeclareWar)
 			int unitMovementCharacteristics = pLoopUnit->getMovementCharacteristicsHash();
 			int iI;
 
-			//	If we've already considred a unit with these characteristics no need to
+			//	If we've already considered a unit with these characteristics no need to
 			//	check this one too
 			for(iI = 0; iI < numUniqueUnitCategories; iI++)
 			{
@@ -4292,7 +4314,7 @@ bool CvSelectionGroup::canMoveThrough(CvPlot* pPlot, bool bDeclareWar)
 }
 
 
-bool CvSelectionGroup::canFight()
+bool CvSelectionGroup::canFight() const
 {
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit;
@@ -4314,7 +4336,7 @@ bool CvSelectionGroup::canFight()
 }
 
 
-bool CvSelectionGroup::canDefend()
+bool CvSelectionGroup::canDefend() const
 {
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit;
@@ -4369,7 +4391,7 @@ bool CvSelectionGroup::hasCollateralDamage() const
 	return false;
 }
 
-bool CvSelectionGroup::canBombard(const CvPlot* pPlot, bool bCheckCanReduceOnly)
+bool CvSelectionGroup::canBombard(const CvPlot* pPlot, bool bCheckCanReduceOnly) const
 {
 	CLLNode<IDInfo>* pUnitNode = headUnitNode();
 	while (pUnitNode != NULL)
@@ -4404,7 +4426,7 @@ bool CvSelectionGroup::canBombard(const CvPlot* pPlot, bool bCheckCanReduceOnly)
 	return false;
 }
 
-bool CvSelectionGroup::canPillage(const CvPlot* pPlot)
+bool CvSelectionGroup::canPillage(const CvPlot* pPlot) const
 {
 	CLLNode<IDInfo>* pUnitNode = headUnitNode();
 	while (pUnitNode != NULL)
@@ -4421,7 +4443,7 @@ bool CvSelectionGroup::canPillage(const CvPlot* pPlot)
 	return false;
 }
 
-bool CvSelectionGroup::canBombardAtRanged(const CvPlot* pPlot, int iX, int iY)
+bool CvSelectionGroup::canBombardAtRanged(const CvPlot* pPlot, int iX, int iY) const
 {
 	CLLNode<IDInfo>* pUnitNode = headUnitNode();
 	while (pUnitNode != NULL)
@@ -4504,7 +4526,7 @@ int CvSelectionGroup::getRBombardDamageMaxUnits() const
 	return iHighest;
 }
 
-bool CvSelectionGroup::visibilityRange()
+bool CvSelectionGroup::visibilityRange() const
 {
 	int iMaxRange = 0;
 	
@@ -4532,7 +4554,7 @@ bool CvSelectionGroup::visibilityRange()
 //
 // Approximate how many turns this group would take to reduce pCity's defense modifier to zero
 //
-int CvSelectionGroup::getBombardTurns(CvCity* pCity)
+int CvSelectionGroup::getBombardTurns(const CvCity* pCity) const
 {
 	PROFILE_FUNC();
 
@@ -4586,7 +4608,7 @@ int CvSelectionGroup::getBombardTurns(CvCity* pCity)
 	return iBombardTurns;
 }
 
-bool CvSelectionGroup::isHasPathToAreaPlayerCity( PlayerTypes ePlayer, int iFlags, bool bGo)
+bool CvSelectionGroup::isHasPathToAreaPlayerCity(PlayerTypes ePlayer, int iFlags, bool bGo)
 {
 	PROFILE_FUNC();
 
@@ -5144,7 +5166,7 @@ RouteTypes CvSelectionGroup::getBestBuildRoute(CvPlot* pPlot, BuildTypes* peBest
 	return eBestRoute;
 }
 
-bool CvSelectionGroup::canIgnoreZoneofControl()
+bool CvSelectionGroup::canIgnoreZoneofControl() const
 {
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit;
@@ -6254,7 +6276,7 @@ bool CvSelectionGroup::readyToMove(bool bAny, bool bValidate)
 }
 
 
-bool CvSelectionGroup::readyToAuto()
+bool CvSelectionGroup::readyToAuto() const
 {
 	return (canAllMove() && (headMissionQueueNode() != NULL));
 }
@@ -6376,7 +6398,7 @@ void CvSelectionGroup::updateMissionTimer(int iSteps)
 }
 
 
-bool CvSelectionGroup::isForceUpdate()
+bool CvSelectionGroup::isForceUpdate() const
 {
 	return m_bForceUpdate;
 }
@@ -6624,7 +6646,7 @@ AutomateTypes CvSelectionGroup::getAutomateType() const
 }
 
 
-bool CvSelectionGroup::isAutomated()
+bool CvSelectionGroup::isAutomated() const
 {
 	return (getAutomateType() != NO_AUTOMATE);
 }
@@ -6987,7 +7009,7 @@ void CvSelectionGroup::setGroupToCacheFor(CvSelectionGroup* group)
 	}
 }
 
-bool CvSelectionGroup::HaveCachedPathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int& iResult, int& iBestMoveCost, int& iWorstMoveCost, int& iToPlotNodeCost)
+bool CvSelectionGroup::HaveCachedPathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int& iResult, int& iBestMoveCost, int& iWorstMoveCost, int& iToPlotNodeCost) const
 {
 	if (m_pCachedMovementGroup != this)
 	{
@@ -6996,7 +7018,7 @@ bool CvSelectionGroup::HaveCachedPathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlo
 	return getCachedPathGenerator().HaveCachedPathEdgeCosts(pFromPlot, pToPlot, bIsEndTurnElement, iResult, iBestMoveCost, iWorstMoveCost, iToPlotNodeCost);
 }
 
-void CvSelectionGroup::CachePathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int iCost, int iBestMoveCost, int iWorstMoveCost, int iToPlotNodeCost)
+void CvSelectionGroup::CachePathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int iCost, int iBestMoveCost, int iWorstMoveCost, int iToPlotNodeCost) const
 {
 	MEMORY_TRACK_EXEMPT();
 
@@ -7379,7 +7401,7 @@ int CvSelectionGroup::getLeastCargoVolume() const
 }
 
 
-bool CvSelectionGroup::meetsUnitSelectionCriteria(CvUnitSelectionCriteria* criteria) const
+bool CvSelectionGroup::meetsUnitSelectionCriteria(const CvUnitSelectionCriteria* criteria) const
 {
 	CLLNode<IDInfo>* pUnitNode = headUnitNode();
 	while (pUnitNode != NULL)
@@ -7532,18 +7554,18 @@ CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadU
 
 	// split units by AI type
 	typedef stdext::hash_map< UnitAITypes, std::vector<CvUnit*> > UnitGrouping;
-	UnitGrouping units;
-	for (unit_iterator unit = beginUnits(); unit != endUnits(); ++unit)
+	UnitGrouping unitGroups;
+	foreach_ (CvUnit* unit, units())
 	{
-		units[unit->AI_getUnitAIType()].push_back(*unit);
+		unitGroups[unit->AI_getUnitAIType()].push_back(unit);
 	}
 	
 	int sourceGroupSize = getNumUnits();
 
 	// interleave units into a new list
-	for (UnitGrouping::const_iterator itr = units.begin(); itr != units.end(); ++itr)
+	foreach_ (const std::vector<CvUnit*>& unitsOfType, unitGroups | map_values)
 	{
-		const std::vector<CvUnit*>& unitsOfType = itr->second;
+		//const std::vector<CvUnit*>& unitsOfType = itr->second;
 		// We want to take a proportion of the units equal to the proportional size of iSplitSize relative to the original group.
 		// i.e. we going to take our fair share (+1 so we don't suffer rounding errors)
 		int countForThisAIType = std::min(1 + iSplitSize * unitsOfType.size() / sourceGroupSize, unitsOfType.size());
@@ -7692,31 +7714,31 @@ TeamTypes CvSelectionGroup::getHeadTeam() const
 	return NO_TEAM;
 }
 
-std::vector<const CvUnit*> CvSelectionGroup::get_if(bst::function<bool(const CvUnit*)> predicateFn) const
-{
-	std::vector<const CvUnit*> units;
-	for (unit_iterator itr = beginUnits(); itr != endUnits(); ++itr)
-	{
-		if (predicateFn(*itr))
-		{
-			units.push_back(*itr);
-		}
-	}
-	return units;
-}
-
-std::vector<CvUnit*> CvSelectionGroup::get_if(bst::function<bool(CvUnit*)> predicateFn)
-{
-	std::vector<CvUnit*> units;
-	for (unit_iterator itr = beginUnits(); itr != endUnits(); ++itr)
-	{
-		if (predicateFn(*itr))
-		{
-			units.push_back(*itr);
-		}
-	}
-	return units;
-}
+//std::vector<const CvUnit*> CvSelectionGroup::get_if(bst::function<bool(const CvUnit*)> predicateFn) const
+//{
+//	std::vector<const CvUnit*> units;
+//	for (unit_iterator itr = beginUnits(); itr != endUnits(); ++itr)
+//	{
+//		if (predicateFn(*itr))
+//		{
+//			units.push_back(*itr);
+//		}
+//	}
+//	return units;
+//}
+//
+//std::vector<CvUnit*> CvSelectionGroup::get_if(bst::function<bool(CvUnit*)> predicateFn)
+//{
+//	std::vector<CvUnit*> units;
+//	for (unit_iterator itr = beginUnits(); itr != endUnits(); ++itr)
+//	{
+//		if (predicateFn(*itr))
+//		{
+//			units.push_back(*itr);
+//		}
+//	}
+//	return units;
+//}
 
 void CvSelectionGroup::clearMissionQueue()
 {
@@ -8311,7 +8333,7 @@ bool CvSelectionGroup::allMatch(UnitTypes eUnit) const
 // BUG - All Units Actions - end
 
 // BUG - Safe Move - start
-void CvSelectionGroup::checkLastPathPlot(CvPlot* pPlot)
+void CvSelectionGroup::checkLastPathPlot(const CvPlot* pPlot)
 {
 	m_bLastPathPlotChecked = true;
 	if (pPlot != NULL)
@@ -8347,7 +8369,7 @@ bool CvSelectionGroup::isLastPathPlotRevealed() const
 }
 // BUG - Safe Move - end
 
-int CvSelectionGroup::defensiveModifierAtPlot(CvPlot* pPlot) const
+int CvSelectionGroup::defensiveModifierAtPlot(const CvPlot* pPlot) const
 {
 	int	iModifier = pPlot->defenseModifier(getTeam(), false);
 
@@ -8556,17 +8578,17 @@ bool CvSelectionGroup::doMergeCheck()
 	do
 	{
 		merged = false;
-		unit_iterator mergable = std::find_if(beginUnits(), endUnits(), isMergable);
-		if (mergable != endUnits())
+		bst::optional<CvUnit*> mergable = algo::find_if(units(), isMergable);
+		if (mergable)
 		{
 			anyMerged = merged = true;
-			mergable->doMerge();
+			(*mergable)->doMerge();
 		}
 	} while (merged);
 	return anyMerged;
 }
 
-int CvSelectionGroup::getCargoSpace()
+int CvSelectionGroup::getCargoSpace() const
 {
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit;
@@ -8603,7 +8625,7 @@ int CvSelectionGroup::getCargoSpace()
 	return iCargoCount;	
 }
 
-int CvSelectionGroup::getCargoSpaceAvailable(SpecialUnitTypes eSpecialCargo, DomainTypes eDomainCargo)
+int CvSelectionGroup::getCargoSpaceAvailable(SpecialUnitTypes eSpecialCargo, DomainTypes eDomainCargo) const
 {
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit;
@@ -8692,3 +8714,8 @@ CvUnit* CvSelectionGroup::unit_iterator::resolve(const IDInfo& info) const
 {
 	return ::getUnit(info);
 }
+
+//const CvUnit* CvSelectionGroup::const_unit_iterator::resolve(const IDInfo& info) const
+//{
+//	return ::getUnit(info);
+//}

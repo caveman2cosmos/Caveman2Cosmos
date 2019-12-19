@@ -648,6 +648,47 @@ void CvPlayerAI::AI_doTurnUnitsPre()
 	}
 }
 
+// WIP scoring refactor
+namespace {
+	struct UnitAndUpgrade
+	{
+		UnitAndUpgrade() {}
+		UnitAndUpgrade(const UnitAndUpgrade& other) : unit(other.unit), upgrade(other.upgrade) {}
+		UnitAndUpgrade(CvUnit* unit, UnitTypes upgrade) : unit(unit), upgrade(upgrade) {}
+		CvUnit* unit;
+		UnitTypes upgrade;
+	};
+	typedef scoring::item_score< bst::optional< UnitAndUpgrade > > UnitUpgradeScore;
+
+	UnitUpgradeScore scoreUpgradePrice(const CvCivilizationInfo& kCivilization, CvUnit* unit, int upgradeUnitClass)
+	{
+		UnitTypes upgradeType = (UnitTypes)kCivilization.getCivilizationUnits((UnitClassTypes)upgradeUnitClass);
+
+		if (upgradeType != NO_UNIT && unit->canUpgrade(upgradeType))
+		{
+			return UnitUpgradeScore(UnitAndUpgrade(unit, upgradeType), unit->upgradePrice(upgradeType));
+		}
+
+		return UnitUpgradeScore();
+	}
+
+	struct MostExpensiveUpgrade : std::unary_function<CvUnit *, UnitUpgradeScore>
+	{
+		MostExpensiveUpgrade() {}
+		MostExpensiveUpgrade(const CvCivilizationInfo& kCivilization) : kCivilization(kCivilization) {}
+
+		UnitUpgradeScore operator()(CvUnit* unit) const
+		{
+			const std::vector<int>& upgradeUnitClassTypes = GC.getUnitInfo(unit->getUnitType()).getUpgradeUnitClassTypes();
+			bst::function<UnitUpgradeScore(int upgradeUnitClass)> sdsd = bst::bind(scoreUpgradePrice, bst::ref(*kCivilization), unit, _1);
+			return algo::max_element(
+				upgradeUnitClassTypes | transformed(sdsd)
+			).get_value_or(UnitUpgradeScore());
+		}
+
+		bst::optional<const CvCivilizationInfo&> kCivilization;
+	};
+}
 
 void CvPlayerAI::AI_doTurnUnitsPost()
 {
@@ -656,15 +697,11 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 	if (!isHuman() || isOption(PLAYEROPTION_AUTO_PROMOTION))
 	{
 		// Copy units as we will be removing and adding some now.
-		for (safe_unit_iterator itr = beginUnitsSafe(); itr != endUnitsSafe(); ++itr)
+		foreach_(CvUnit* unit, units_safe() | filtered(CvUnit::is_promotion_ready))
 		{
-			CvUnit* pLoopUnit = *itr;
-			if (pLoopUnit->isPromotionReady())
-			{
-				pLoopUnit->AI_promote();
-				// Upgrade replaces the original unit with a new one, so old unit must be killed
-				pLoopUnit->doDelayedDeath();
-			}
+			unit->AI_promote();
+			// Upgrade replaces the original unit with a new one, so old unit must be killed
+			unit->doDelayedDeath();
 		}
 	}
 
@@ -681,81 +718,61 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 		if (isModderOption(MODDEROPTION_UPGRADE_MOST_EXPENSIVE))
 		{
 			bool bUpgraded = true;
-			int i = 0;
+			
 			// Keep looping while we have enough gold to upgrade, and we keep finding units to upgrade (cap at 2x num units to be safe)
-			for (; i < getNumUnits() * 2 && getEffectiveGold() > iMinGoldToUpgrade && bUpgraded; ++i)
+			for (int i = 0; i < getNumUnits() * 2 && getEffectiveGold() > iMinGoldToUpgrade && bUpgraded; ++i)
 			{
 				// Find unit with the highest cost upgrade available
-				CvUnit* pBestUnit = NULL;
-				int iHighestCost = 0;
-				UnitTypes eBestUnit = NO_UNIT;
-				for (unit_iterator itr = beginUnits(); itr != endUnits(); ++itr)
+				bst::optional<UnitUpgradeScore> bestUpgrade = algo::max_element(
+					units() | filtered(CvUnit::is_ready_to_auto_upgrade)
+							| transformed(MostExpensiveUpgrade(kCivilization))
+				);
+
+				if (bestUpgrade && bestUpgrade->item)
 				{
-					CvUnit* pLoopUnit = *itr;
-					if (!pLoopUnit->isAutoUpgrading() || !pLoopUnit->isReadyForUpgrade())
-						continue;
-
-					std::vector<int> aPotentialUnitClassTypes = GC.getUnitInfo(pLoopUnit->getUnitType()).getUpgradeUnitClassTypes();
-					for (int iI = 0; iI < (int)aPotentialUnitClassTypes.size(); iI++)
-					{
-						UnitTypes eLoopUnit = (UnitTypes)kCivilization.getCivilizationUnits((UnitClassTypes)aPotentialUnitClassTypes[iI]);
-
-						if (eLoopUnit != NO_UNIT && pLoopUnit->canUpgrade(eLoopUnit, false))
-						{
-							int iUpgradeCost = pLoopUnit->upgradePrice(eLoopUnit);
-							if (iHighestCost < iUpgradeCost)
-							{
-								iHighestCost = iUpgradeCost;
-								eBestUnit = eLoopUnit;
-								pBestUnit = pLoopUnit;
-							}
-						}
-					}
-				}
-
-				if (pBestUnit != NULL)
-				{
-					bUpgraded = pBestUnit->upgrade(eBestUnit);
+					CvUnit* unitToUpgrade = bestUpgrade->item->unit;
+					const UnitTypes upgradeToApply = bestUpgrade->item->upgrade;
+					bUpgraded = unitToUpgrade->upgrade(upgradeToApply);
 					// Upgrade replaces the original unit with a new one, so old unit must be killed
-					pBestUnit->doDelayedDeath();
+					unitToUpgrade->doDelayedDeath();
 				}
 				else
 				{
 					bUpgraded = false;
 				}
+
+				FAssertMsg(i != getNumUnits() * 2 - 1, "Unit auto upgrade appears to have hit an infinite loop");
 			}
-			FAssertMsg(getNumUnits() == 0 || i < getNumUnits() * 2, "Unit auto upgrade appears to have hit an infinite loop");
 			
 		}
 		else if (isModderOption(MODDEROPTION_UPGRADE_MOST_EXPERIENCED))
 		{
 			bool bUpgraded = true;
-			int i = 0;
+			
 			// Keep looping while we have enough gold to upgrade, and we keep finding units to upgrade (cap at 2x num units to be safe)
-			for (; i < getNumUnits() * 2 && getEffectiveGold() > iMinGoldToUpgrade && bUpgraded; ++i)
+			for (int i = 0; i < getNumUnits() * 2 && getEffectiveGold() > iMinGoldToUpgrade && bUpgraded; ++i)
 			{
 				// Find unit with the highest available experience that has an upgrade available
-				CvUnit* pBestUnit = NULL;
+				CvUnit* pBestUnit = nullptr;
 				int iExperience = -1;
-				for (unit_iterator itr = beginUnits(); itr != endUnits(); ++itr)
+				foreach_ (CvUnit* unit, units() | filtered(CvUnit::is_ready_to_auto_upgrade))
 				{
-					CvUnit* pLoopUnit = *itr;
-					if (!pLoopUnit->isAutoUpgrading() || !pLoopUnit->isReadyForUpgrade() || iExperience > pLoopUnit->getExperience100())
+					if (iExperience > unit->getExperience100())
 						continue;
 
-					std::vector<int> aPotentialUnitClassTypes = GC.getUnitInfo(pLoopUnit->getUnitType()).getUpgradeUnitClassTypes();
-					for (int iI = 0; iI < (int)aPotentialUnitClassTypes.size(); iI++)
+					foreach_ (int upgradeUnitClass, GC.getUnitInfo(unit->getUnitType()).getUpgradeUnitClassTypes())
 					{
-						UnitTypes eLoopUnit = (UnitTypes)kCivilization.getCivilizationUnits((UnitClassTypes)aPotentialUnitClassTypes[iI]);
-						if (eLoopUnit != NO_UNIT && pLoopUnit->canUpgrade(eLoopUnit, false))
+						UnitTypes upgradeClass = (UnitTypes)kCivilization.getCivilizationUnits((UnitClassTypes)upgradeUnitClass);
+						if (upgradeClass != NO_UNIT && unit->canUpgrade(upgradeClass))
 						{
-							pBestUnit = pLoopUnit;
+							iExperience = unit->getExperience100();
+							pBestUnit = unit;
 							break;
 						}
 					}
 				}
 
-				if (pBestUnit != NULL)
+				if (pBestUnit != nullptr)
 				{
 					// Use AI upgrade to choose the best upgrade
 					bUpgraded = pBestUnit->AI_upgrade();
@@ -766,21 +783,17 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 				{
 					bUpgraded = false;
 				}
+				FAssertMsg(i != getNumUnits() * 2 - 1, "Unit auto upgrade appears to have hit an infinite loop");
 			}
-			FAssertMsg(getNumUnits() == 0 || i < getNumUnits() * 2, "Unit auto upgrade appears to have hit an infinite loop");
 		}
 		else
 		{
 			// Copy units as we will be removing and adding some now.
-			for (safe_unit_iterator itr = beginUnitsSafe(); itr != endUnitsSafe(); ++itr)
+			foreach_ (CvUnit* unit, units_safe() | filtered(CvUnit::is_ready_to_auto_upgrade))
 			{
-				CvUnit* pLoopUnit = *itr;
-				if (pLoopUnit->isAutoUpgrading() && pLoopUnit->isReadyForUpgrade())
-				{
-					pLoopUnit->AI_upgrade();
-					// Upgrade replaces the original unit with a new one, so old unit must be killed
-					pLoopUnit->doDelayedDeath();
-				}
+				unit->AI_upgrade();
+				// Upgrade replaces the original unit with a new one, so old unit must be killed
+				unit->doDelayedDeath();
 			}
 		}
 	}
@@ -4482,7 +4495,7 @@ bool CvPlayerAI::AI_getVisiblePlotDanger(CvPlot* pPlot, int iRange, bool bAnimal
 // The border cache is done by team and works for all game types.  The border cache is reset for all
 // plots when war or peace are declared, and reset over a limited range whenever a ownership over a plot
 // changes.
-bool CvPlayerAI::AI_getAnyPlotDanger(CvPlot* pPlot, int iRange, bool bTestMoves) const
+bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMoves) const
 {
 	bool bResult = false;
 
@@ -12819,7 +12832,7 @@ int CvPlayerAI::AI_unitPropertyValue(UnitTypes eUnit, PropertyTypes eProperty) c
 				//	We have a source for a property - value is crudely just the AIweight of that property times the source size (which is expected to only depend on the player)
 				PropertyTypes eProperty = pSource->getProperty();
 
-				iValue += GC.getPropertyInfo(eProperty).getAIWeight()*((CvPropertySourceConstant*)pSource)->getAmountPerTurn(getGameObjectConst());
+				iValue += GC.getPropertyInfo(eProperty).getAIWeight()*((CvPropertySourceConstant*)pSource)->getAmountPerTurn(getGameObject());
 			}
 		}
 	}
@@ -15447,30 +15460,28 @@ int CvPlayerAI::AI_plotTargetMissionAIsinCargoVolume(CvPlot* pPlot, MissionAITyp
 			PlotMissionTargetMap& plotMissionMap = m_missionTargetCache[eMissionAI];
 
 			//	Since we have to walk all the groups now anyway populate the full cache map for this missionAI
-			for(group_iterator groupItr = beginGroups(); groupItr != endGroups(); ++groupItr)
+			foreach_(const CvSelectionGroup* group, groups())
 			{
-				CvSelectionGroup* pLoopSelectionGroup = *groupItr;
-
-				MissionAITypes eGroupMissionAI = pLoopSelectionGroup->AI_getMissionAIType();
+				const MissionAITypes eGroupMissionAI = group->AI_getMissionAIType();
 				if (eGroupMissionAI != eMissionAI)
 					continue;
 
-				CvPlot* pMissionPlot = pLoopSelectionGroup->AI_getMissionAIPlot();
+				CvPlot* pMissionPlot = group->AI_getMissionAIPlot();
 				if (pMissionPlot == NULL)
 					continue;
 
-				int iDistance = stepDistance(pLoopSelectionGroup->getX(), pLoopSelectionGroup->getY(), pMissionPlot->getX_INLINE(), pMissionPlot->getY_INLINE());
+				int iDistance = stepDistance(group->getX(), group->getY(), pMissionPlot->getX_INLINE(), pMissionPlot->getY_INLINE());
 			
 				{
 					// Update cache
 					MissionTargetInfo& info = plotMissionMap[pMissionPlot];
-					info.iVolume += pLoopSelectionGroup->getNumUnitCargoVolumeTotal();
+					info.iVolume += group->getNumUnitCargoVolumeTotal();
 					info.iClosest = std::min(info.iClosest, iDistance);
 				}
 
 				if (pMissionPlot == pPlot)
 				{
-					iCount += pLoopSelectionGroup->getNumUnitCargoVolumeTotal();
+					iCount += group->getNumUnitCargoVolumeTotal();
 
 					if (piClosest != NULL)
 					{
@@ -33298,7 +33309,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 
 			if ( pSource->getType() == PROPERTYSOURCE_CONSTANT)
 			{
-				iTemp2 = ((CvPropertySourceConstant*)pSource)->getAmountPerTurn(getGameObjectConst());
+				iTemp2 = ((CvPropertySourceConstant*)pSource)->getAmountPerTurn(getGameObject());
 				if (pUnit != NULL)
 				{
 					UnitTypes eUnit = pUnit->getUnitType();
@@ -33309,7 +33320,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 						PropertyTypes uProperty = uSource->getProperty();
 						if (uSource->getType() == PROPERTYSOURCE_CONSTANT && pProperty == uProperty && iTemp2 != 0)
 						{
-							iTemp2 += ((CvPropertySourceConstant*)uSource)->getAmountPerTurn(getGameObjectConst());
+							iTemp2 += ((CvPropertySourceConstant*)uSource)->getAmountPerTurn(getGameObject());
 						}
 					}
 				}

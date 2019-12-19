@@ -13,8 +13,8 @@
 #include "CvGameCoreDLL.h"
 #include "CvDLLSymbolIFaceBase.h"
 
-#include <boost/function.hpp>
-#include <boost/bind.hpp>
+#include <boost155/function.hpp>
+#include <boost155/bind.hpp>
 
 int shortenID(int iId)
 {
@@ -22021,7 +22021,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 			bool bEval = false;
 			if (pCity)
 			{
-				bEval = pExpr->evaluate(const_cast<CvGameObjectCity*>(pCity->getGameObjectConst())); // Const wegcasten ist hier ok da evaluate nicht wirklich etwas ändert
+				bEval = pExpr->evaluate(const_cast<CvGameObjectCity*>(pCity->getGameObject())); // Const wegcasten ist hier ok da evaluate nicht wirklich etwas ändert
 			}
 			if (!bEval)
 			{
@@ -26567,7 +26567,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			bool bEval = false;
 			if (pCity)
 			{
-				bEval = pExpr->evaluate(const_cast<CvGameObjectCity*>(pCity->getGameObjectConst())); // Const wegcasten ist hier ok da evaluate nicht wirklich etwas ändert
+				bEval = pExpr->evaluate(const_cast<CvGameObjectCity*>(pCity->getGameObject())); // Const wegcasten ist hier ok da evaluate nicht wirklich etwas ändert
 			}
 			if (!bEval)
 			{

@@ -18084,10 +18084,8 @@ namespace {
 	CityConstructMap getConstructBuildings(const CvPlayer& player, const CvSelectionGroup* ignoreGroup)
 	{
 		CityConstructMap constructions;
-		for (CvPlayer::group_iterator groupItr = player.beginGroups(); groupItr != player.endGroups(); ++groupItr)
+		foreach_ (const CvSelectionGroup* pLoopSelectionGroup, player.groups())
 		{
-			CvSelectionGroup* pLoopSelectionGroup = *groupItr;
-
 			if (pLoopSelectionGroup != ignoreGroup 
 				&& pLoopSelectionGroup->AI_getMissionAIType() == MISSIONAI_CONSTRUCT)
 			{
@@ -18841,9 +18839,8 @@ namespace {
 				&& pUnitPlot->isHasPathToPlayerCity(player.getTeam(), playerType)
 				)
 			{
-				for (CvPlayer::city_iterator cityItr = otherPlayer.beginCities(); cityItr != otherPlayer.endCities(); ++cityItr)
+				foreach_ (CvCity * pLoopCity, otherPlayer.cities())
 				{
-					CvCity* pLoopCity = *cityItr;
 					if (pLoopCity->isInquisitionConditions())
 					{
 						viableCities.push_back(pLoopCity);
@@ -35481,7 +35478,7 @@ bool CvUnitAI::AI_cureAffliction(PromotionLineTypes eAfflictionLine)
 #endif
 /*TB Prophet Mod end*/
 
-void unitSourcesValueToCity(CvGameObject* pObject, CvPropertyManipulators* pMani, const CvUnit* pUnit, const CvCityAI* pCity, int* iValue, PropertyTypes eProperty)
+void unitSourcesValueToCity(const CvGameObject* pObject, const CvPropertyManipulators* pMani, const CvUnit* pUnit, const CvCityAI* pCity, int* iValue, PropertyTypes eProperty)
 {
 	if ( pCity == NULL )
 	{
@@ -35494,7 +35491,7 @@ void unitSourcesValueToCity(CvGameObject* pObject, CvPropertyManipulators* pMani
 
 		for (int i=0; i<iNum; i++)
 		{
-			CvPropertySource* pSource = pMani->getSource(i);
+			const CvPropertySource* pSource = pMani->getSource(i);
 
 			if (eProperty == NO_PROPERTY || pSource->getProperty() == eProperty)
 			{
@@ -35505,7 +35502,7 @@ void unitSourcesValueToCity(CvGameObject* pObject, CvPropertyManipulators* pMani
 				{
 					PropertyTypes eProperty = pSource->getProperty();
 					int iCurrentSourceSize = pCity->getTotalBuildingSourcedProperty(eProperty) + pCity->getTotalUnitSourcedProperty(eProperty) + pCity->getPropertyNonBuildingSource(eProperty);
-					int iNewSourceSize = iCurrentSourceSize + ((CvPropertySourceConstant*)pSource)->getAmountPerTurn(pCity->getGameObjectConst());
+					int iNewSourceSize = iCurrentSourceSize + ((CvPropertySourceConstant*)pSource)->getAmountPerTurn(pCity->getGameObject());
 					int iDecayPercent = pCity->getPropertyDecay(eProperty);
 
 					//	Steady state occurs at a level where the decay removes as much per turn as the sources add
@@ -35526,8 +35523,11 @@ void unitSourcesValueToCity(CvGameObject* pObject, CvPropertyManipulators* pMani
 int CvUnitAI::AI_beneficialPropertyValueToCity(CvCity* pCity, PropertyTypes eProperty) const
 {
 	int iValue = 0;
+	//void unitSourcesValueToCity(CvGameObject * pObject, CvPropertyManipulators * pMani, const CvUnit * pUnit, const CvCityAI * pCity, int* iValue, PropertyTypes eProperty)
 
-	((CvUnitAI*)this)->getGameObject()->foreachManipulator(bst::bind(unitSourcesValueToCity, _1, _2, this, static_cast<const CvCityAI*>(pCity), &iValue, eProperty));
+	this->getGameObject()->foreachManipulator(
+		bst::bind(unitSourcesValueToCity, this->getGameObject(), _1, this, static_cast<const CvCityAI*>(pCity), &iValue, eProperty)
+	);
 
 	return iValue;
 }
@@ -35867,7 +35867,7 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 
 			if (pSource->getType() == PROPERTYSOURCE_CONSTANT && pSource->getObjectType() == GAMEOBJECT_CITY && pSource->getProperty() == eProperty)
 			{
-				score += ((CvPropertySourceConstant*)pSource)->getAmountPerTurn(getGameObjectConst());
+				score += ((CvPropertySourceConstant*)pSource)->getAmountPerTurn(getGameObject());
 			}
 		}
 
@@ -36764,7 +36764,7 @@ bool CvUnitAI::AI_isNegativePropertyUnit()
 				bPropertyNegative = (GC.getPropertyInfo(eProperty).getAIWeight() < 0);
 				if (bPropertyNegative)
 				{
-					int iAmount = ((CvPropertySourceConstant*)pSource)->getAmountPerTurn(getGameObjectConst());
+					int iAmount = ((CvPropertySourceConstant*)pSource)->getAmountPerTurn(getGameObject());
 					if ( iAmount > 0 )
 					{
 						bAnswer = true;

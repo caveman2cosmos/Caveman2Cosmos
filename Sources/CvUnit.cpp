@@ -2244,32 +2244,36 @@ namespace {
 		return GET_TEAM(theirUnit->getTeam()).isAtWar(ourTeam);
 	}
 
-	bool plotHasEnemy(const TeamTypes ourTeam, const CvPlot& ignorePlot, const CvPlot& plot)
+	bool plotHasEnemy(const TeamTypes ourTeam, const CvPlot* ignorePlot, const CvPlot* plot)
 	{
-		return plot != ignorePlot && std::any_of(plot.beginUnits(), plot.endUnits(), bst::bind(unitsAtWar, ourTeam, _1));
+		return plot != ignorePlot && algo::any_of(plot->units() | filtered(bst::bind(unitsAtWar, ourTeam, _1)));
 	}
 
-	bool plotHasAdjacentEnemy(const TeamTypes ourTeam, const CvPlot& ignorePlot, const CvPlot& plot)
+	bool plotHasAdjacentEnemy(const TeamTypes ourTeam, const CvPlot* ignorePlot, const CvPlot* plot)
 	{
-		return std::any_of(plot.beginAdjacent(), plot.endAdjacent(), bst::bind(plotHasEnemy, ourTeam, bst::cref(ignorePlot), _1));
+		return algo::any_of(plot->adjacent() | filtered(bst::bind(plotHasEnemy, ourTeam, ignorePlot, _1)));
 	}
 
-	bool canWithdrawToPlot(const CvUnit& withdrawingUnit, const CvPlot& toPlot)
+	bool canWithdrawToPlot(const CvUnit* withdrawingUnit, const CvPlot* toPlot)
 	{
-		return withdrawingUnit.canMoveInto(&toPlot)
-			&& !plotHasEnemy(withdrawingUnit.getTeam(), *withdrawingUnit.plot(), toPlot)
+		return withdrawingUnit->canMoveInto(toPlot)
+			&& !plotHasEnemy(withdrawingUnit->getTeam(), withdrawingUnit->plot(), toPlot)
 			// && !plotHasAdjacentEnemy(withdrawingUnit.getTeam(), *withdrawingUnit.plot(), toPlot)
 			;
 	}
 
-	CvPlot* selectWithdrawPlot(bool bSamePlotCombat, CvPlot& fromPlot, const CvUnit& withdrawingUnit)
+	template < class Plot_ >
+	bst::optional<Plot_*> selectWithdrawPlot(bool bSamePlotCombat, Plot_* fromPlot, const CvUnit* withdrawingUnit)
 	{
 		if (bSamePlotCombat)
 		{
-			return &fromPlot;
+			return fromPlot;
 		}
-		CvPlot::adjacent_iterator itr = std::find_if(fromPlot.beginAdjacent(), fromPlot.endAdjacent(), bst::bind(canWithdrawToPlot, bst::cref(withdrawingUnit), _1));
-		return itr != fromPlot.endAdjacent() ? &(*itr) : nullptr;
+
+		/*bst::optional<const CvPlot&> withdrawPlot =*/
+		return algo::find_if(fromPlot->adjacent(), bst::bind(canWithdrawToPlot, withdrawingUnit, _1));
+		//CvPlot::adjacent_iterator itr = std::find_if(fromPlot.beginAdjacent(), fromPlot.endAdjacent(), bst::bind(canWithdrawToPlot, bst::cref(withdrawingUnit), _1));
+		// return itr != fromPlot.endAdjacent() ? &(*itr) : nullptr;
 	}
 }
 
@@ -2794,10 +2798,10 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 				{
 					if (DefenderWithdrawalRollResult < AdjustedDefWithdraw)
 					{
-						CvPlot* withdrawPlot = selectWithdrawPlot(bSamePlot, *plot(), *pDefender);
-						if (withdrawPlot != nullptr)
+						bst::optional<CvPlot*> withdrawPlot = selectWithdrawPlot(bSamePlot, plot(), pDefender);
+						if (withdrawPlot)
 						{
-							m_combatResult.pPlot = withdrawPlot;
+							m_combatResult.pPlot = *withdrawPlot;
 							m_combatResult.bDefenderWithdrawn = true;
 							m_combatResult.bDeathMessaged = false;
 
@@ -2879,7 +2883,7 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 							{
 								m_combatResult.bDefenderKnockedBack = true;
 								m_combatResult.bDeathMessaged = false;
-								m_combatResult.pPlot = selectWithdrawPlot(bSamePlot, *plot(), *pDefender);
+								m_combatResult.pPlot = selectWithdrawPlot(bSamePlot, plot(), pDefender).get_value_or(nullptr);
 								changeExperience100(getExperiencefromWithdrawal(AdjustedKnockback) * 15, maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
 								return;
 							}
@@ -39134,7 +39138,7 @@ void CvUnit::checkFreetoCombatClass()
 }
 //TB Combat Mods end
 
-bool CvUnit::meetsUnitSelectionCriteria(CvUnitSelectionCriteria* criteria) const
+bool CvUnit::meetsUnitSelectionCriteria(const CvUnitSelectionCriteria* criteria) const
 {
 	if ( criteria != NULL )
 	{
@@ -41070,7 +41074,7 @@ void CvUnit::setAfflictOnAttackTypeAttemptedCount(PromotionLineTypes ePromotionL
 	}
 }
 
-int CvUnit::worsenedProbabilitytoAfflict(PromotionLineTypes eAfflictionLine)
+int CvUnit::worsenedProbabilitytoAfflict(PromotionLineTypes eAfflictionLine) const
 {
 	int iLinePriority = getAfflictionLineCount(eAfflictionLine) - 1;
 	int iProbabilityMultiplier = GC.getPromotionLineInfo(eAfflictionLine).getWorsenedCommunicabilityIncrementModifier();

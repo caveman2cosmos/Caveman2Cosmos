@@ -875,9 +875,6 @@
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="idinfo_iterator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Stopwatch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -926,6 +923,15 @@
     <ClInclude Include="algorithm2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="scoring.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="flatten_range.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="idinfo_iterator_base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CvGameCoreDLL.rc">
@@ -940,6 +946,8 @@
       <Filter>Header Files</Filter>
     </None>
     <None Include="fbuild.bff" />
+    <None Include="cpp.hint" />
+    <None Include="CvGameCoreDLL.def" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Notes for the next breaking of save game compatability cycle.txt" />
