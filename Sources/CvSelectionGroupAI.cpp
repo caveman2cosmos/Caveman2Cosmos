@@ -50,64 +50,65 @@ void CvSelectionGroupAI::AI_reset()
 }
 
 namespace {
-	bool matchAll(CvUnit*)
+	bool matchAll(const CvUnit*)
 	{
 		return true;
 	}
-	bool matchNonAI(CvUnit* unit, UnitAITypes unitAI)
+	bool matchNonAI(const CvUnit* unit, const UnitAITypes unitAI)
 	{
 		return unit->AI_getUnitAIType() != unitAI;
 	}
-	bool matchAI(CvUnit* unit, UnitAITypes unitAI)
+	bool matchAI(const CvUnit* unit, const UnitAITypes unitAI)
 	{
 		return unit->AI_getUnitAIType() == unitAI;
 	}
-	bool matchImpassable(CvUnit* unit, const CvPlayerAI& player)
+	bool matchImpassable(const CvUnit* unit, const CvPlayerAI& player)
 	{
 		return player.AI_unitImpassableCount(unit->getUnitType()) > 0;
 	}
-	bool matchEmptyTransport(CvUnit* unit)
+	bool matchEmptyTransport(const CvUnit* unit)
 	{
 		return unit->AI_getUnitAIType() == UNITAI_ASSAULT_SEA && !unit->hasCargo();
 	}
-}
 
-void CvSelectionGroupAI::AI_separateIf(bst::function<bool(CvUnit*)> predicateFn)
-{
-	foreach_(CvUnit& unit, units() | filtered(predicateFn))
+	void separateIf(CvSelectionGroup* group, bst::function<bool(const CvUnit*)> predicateFn)
 	{
-		unit.joinGroup(NULL);
-		FAssertMsg(bst::contains(units(), unit), "Failed to remove unit from group");
-		if (unit.plot()->getTeam() == getTeam())
+		foreach_(CvUnit* unit, group->units() | filtered(predicateFn))
 		{
-			unit.getGroup()->pushMission(MISSION_SKIP);
+			unit->joinGroup(NULL);
+			FAssertMsg(bst::count(group->units(), unit) != 0, "Failed to remove unit from group");
+			if (unit->plot()->getTeam() == group->getTeam())
+			{
+				unit->getGroup()->pushMission(MISSION_SKIP);
+			}
 		}
 	}
 }
 
+
 void CvSelectionGroupAI::AI_separate()
 {
-	AI_separateIf(matchAll);
+	separateIf(this, matchAll);
 }
 
 void CvSelectionGroupAI::AI_separateNonAI(UnitAITypes eUnitAI)
 {
-	AI_separateIf(bst::bind(matchNonAI, _1, eUnitAI));
+	separateIf(this, bst::bind(matchNonAI, _1, eUnitAI));
 }
 
 void CvSelectionGroupAI::AI_separateAI(UnitAITypes eUnitAI)
 {
-	AI_separateIf(bst::bind(matchAI, _1, eUnitAI));
+	separateIf(this, bst::bind(matchAI, _1, eUnitAI));
 }
 
 void CvSelectionGroupAI::AI_separateImpassable()
 {
-	AI_separateIf(bst::bind(matchImpassable, _1, bst::ref(GET_PLAYER(getOwner()))));
+	separateIf(this, bst::bind(matchImpassable, _1, bst::ref(GET_PLAYER(getOwner()))));
 }
 
 void CvSelectionGroupAI::AI_separateEmptyTransports()
 {
-	AI_separateIf(matchEmptyTransport);
+	separateIf(this, matchEmptyTransport);
 }
 
 // Returns true if the group has become busy...
@@ -248,18 +249,16 @@ bool CvSelectionGroupAI::AI_update()
 		// if we not group attacking, then check for follow action
 		if (!m_bGroupAttack)
 		{
-			for (unit_iterator itr = beginUnits(); 
-				itr != endUnits() && readyToMove(true); 
-				++itr)
+			foreach_ (CvUnit* unit, units() | filtered(CvUnit::can_move))
 			{
-				if (itr->canMove())
+				if (!readyToMove(true))
+					break;
+
+				resetPath();
+				if (unit->AI_follow())
 				{
-					resetPath();
-					if (itr->AI_follow())
-					{
-						bFollow = true;
-						break;
-					}
+					bFollow = true;
+					break;
 				}
 			}
 		}
@@ -894,31 +893,31 @@ int CvSelectionGroupAI::AI_sumStrength(const CvPlot* pAttackedPlot, DomainTypes 
 
 	const int iNumPotentialDefenders = pAttackedPlot->getNumVisiblePotentialEnemyDefenders(getHeadUnit()) - 1;
 
-	foreach_ (const CvUnit& unit, units() | filtered(pred::unit_is_alive))
+	foreach_ (const CvUnit* unit, units() | filtered(CvUnit::is_alive))
 	{
 		if ((
 				!bCheckCanAttack
-				|| (unit.getDomainType() == DOMAIN_AIR && unit.canAirAttack())
-				|| (unit.getDomainType() != DOMAIN_AIR && unit.canAttack())
+				|| (unit->getDomainType() == DOMAIN_AIR && unit->canAirAttack())
+				|| (unit->getDomainType() != DOMAIN_AIR && unit->canAttack())
 			)
-			&& (!bCheckCanMove || unit.canMove())
+			&& (!bCheckCanMove || unit->canMove())
 			//TB: canMoveInto may need simplified here somehow.
-			&& (!bCheckCanMove || pAttackedPlot == NULL || unit.canMoveInto(pAttackedPlot, MoveCheck::Attack | MoveCheck::DeclareWar | MoveCheck::IgnoreLocation))
-			&& (eDomainType == NO_DOMAIN || unit.getDomainType() == eDomainType)
+			&& (!bCheckCanMove || pAttackedPlot == NULL || unit->canMoveInto(pAttackedPlot, MoveCheck::Attack | MoveCheck::DeclareWar | MoveCheck::IgnoreLocation))
+			&& (eDomainType == NO_DOMAIN || unit->getDomainType() == eDomainType)
 			)
 		{
-			//strSum += (unsigned long long)unit.currEffectiveStr(pAttackedPlot, pLoopUnit);
+			//strSum += (unsigned long long)unit->currEffectiveStr(pAttackedPlot, pLoopUnit);
 			//TB Simplify for speed:
-			strSum += (unsigned long long)unit.currCombatStr(NULL,NULL);
+			strSum += (unsigned long long)unit->currCombatStr(NULL,NULL);
 			// K-Mod estimate the attack power of collateral units
-			if (!bFastMode && unit.collateralDamage() > 0 && pAttackedPlot != plot())
+			if (!bFastMode && unit->collateralDamage() > 0 && pAttackedPlot != plot())
 			{ 
-				int iPossibleTargets = std::min(iNumPotentialDefenders, unit.collateralDamageMaxUnits());
+				int iPossibleTargets = std::min(iNumPotentialDefenders, unit->collateralDamageMaxUnits());
 
 				if (iPossibleTargets > 0) 
 				{ 
 					// collateral damage is not trivial to calculate. This estimate is pretty rough. 
-					strSum += (unsigned long long)unit.baseCombatStrNonGranular() * COLLATERAL_COMBAT_DAMAGE * unit.collateralDamage() * iPossibleTargets / 100;
+					strSum += (unsigned long long)unit->baseCombatStrNonGranular() * COLLATERAL_COMBAT_DAMAGE * unit->collateralDamage() * iPossibleTargets / 100;
 				} 
 			} 
 
@@ -943,18 +942,18 @@ inline void CvSelectionGroupAI::AI_cancelGroupAttack()
 	m_bGroupAttack = false;
 }
 
-inline bool CvSelectionGroupAI::AI_isGroupAttack()
+inline bool CvSelectionGroupAI::AI_isGroupAttack() const
 {
 	return m_bGroupAttack;
 }
 
-bool CvSelectionGroupAI::AI_isControlled()
+bool CvSelectionGroupAI::AI_isControlled() const
 {
 	return (!isHuman() || isAutomated());
 }
 
 
-bool CvSelectionGroupAI::AI_isDeclareWar(const CvPlot* pPlot)
+bool CvSelectionGroupAI::AI_isDeclareWar(const CvPlot* pPlot) const
 {
 	FAssert(getHeadUnit() != NULL);
 
@@ -1079,13 +1078,13 @@ bool CvSelectionGroupAI::AI_isDeclareWar(const CvPlot* pPlot)
 }
 
 
-CvPlot* CvSelectionGroupAI::AI_getMissionAIPlot()
+CvPlot* CvSelectionGroupAI::AI_getMissionAIPlot() const
 {
 	return GC.getMapINLINE().plotSorenINLINE(m_iMissionAIX, m_iMissionAIY);
 }
 
 
-bool CvSelectionGroupAI::AI_isForceSeparate()
+bool CvSelectionGroupAI::AI_isForceSeparate() const
 {
 	return m_bForceSeparate;
 }
@@ -1097,7 +1096,7 @@ void CvSelectionGroupAI::AI_makeForceSeparate()
 }
 
 
-MissionAITypes CvSelectionGroupAI::AI_getMissionAIType()
+MissionAITypes CvSelectionGroupAI::AI_getMissionAIType() const
 {
 	return m_eMissionAIType;
 }
@@ -1163,12 +1162,12 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, CvPlot* p
 }
 
 
-CvUnit* CvSelectionGroupAI::AI_getMissionAIUnit()
-{
+CvUnit* CvSelectionGroupAI::AI_getMissionAIUnit() const
+{ 
 	return getUnit(m_missionAIUnit);
 }
 
-bool CvSelectionGroupAI::AI_isFull()
+bool CvSelectionGroupAI::AI_isFull() const
 {
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit;

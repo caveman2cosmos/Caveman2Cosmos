@@ -199,14 +199,14 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 				int iCount = pPopupReturn->getButtonClicked();
 
 				CvPlot* pPlot = pSelectionGroup->plot();
-				for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
+				foreach_ (CvUnit* unit, pPlot->units())
 				{
-					if (pSelectionGroup->canDoCommand(COMMAND_LOAD_UNIT, unitItr->getOwnerINLINE(), unitItr->getID()))
+					if (pSelectionGroup->canDoCommand(COMMAND_LOAD_UNIT, unit->getOwnerINLINE(), unit->getID()))
 					{
 						iCount--;
 						if (iCount == 0)
 						{
-							GC.getGameINLINE().selectionListGameNetMessage(GAMEMESSAGE_DO_COMMAND, COMMAND_LOAD_UNIT, unitItr->getOwnerINLINE(), unitItr->getID());
+							GC.getGameINLINE().selectionListGameNetMessage(GAMEMESSAGE_DO_COMMAND, COMMAND_LOAD_UNIT, unit->getOwnerINLINE(), unit->getID());
 							break;
 						}
 					}
@@ -225,16 +225,12 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 				int iCount = pPopupReturn->getButtonClicked();
 
 				CvPlot* pPlot = pSelectionGroup->plot();
-				for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
+				foreach_ (CvUnit* unit, pPlot->units() | filtered(bst::bind(&CvUnit::canPromote, _1, (PromotionTypes)info.getData1(), info.getData2())))
 				{
-					if (unitItr->canPromote((PromotionTypes) info.getData1(), info.getData2()))
+					if (--iCount == 0)
 					{
-						iCount--;
-						if (iCount == 0)
-						{
-							GC.getGameINLINE().selectionListGameNetMessage(GAMEMESSAGE_PUSH_MISSION, MISSION_LEAD, unitItr->getID());
-							break;
-						}
+						GC.getGameINLINE().selectionListGameNetMessage(GAMEMESSAGE_PUSH_MISSION, MISSION_LEAD, unit->getID());
+						break;
 					}
 				}
 			}
@@ -847,13 +843,10 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 		{
 			int iUnitID = pPopupReturn->getButtonClicked();
 			CvPlot* pPlot = GC.getMapINLINE().plotINLINE(info.getData2(), info.getData3());
-			for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
+			bst::optional<CvUnit*> clickedUnit = algo::find_if(pPlot->units(), CvUnit::has_id(iUnitID));
+			if (clickedUnit)
 			{
-				if (unitItr->getID() == iUnitID)
-				{
-					CvMessageControl::getInstance().sendArrestUnit(iUnitID, unitItr->getOwner());
-					break;
-				}
+				CvMessageControl::getInstance().sendArrestUnit(iUnitID, (*clickedUnit)->getOwner());
 			}
 		}
 		else

@@ -2881,7 +2881,7 @@ bool CvCity::isPlotTrainable(UnitTypes eUnit, bool bContinue, bool bTestVisible)
 
 		if (kUnit.getTrainCondition())
 		{
-			if (!kUnit.getTrainCondition()->evaluate(const_cast<CvGameObjectCity*>(getGameObjectConst())))
+			if (!kUnit.getTrainCondition()->evaluate(const_cast<CvGameObjectCity*>(getGameObject())))
 			{
 				return false;
 			}
@@ -4274,7 +4274,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 	if (!bTestVisible && kBuilding.getConstructCondition() && !bExposed)
 	{
-		if (!kBuilding.getConstructCondition()->evaluate(const_cast<CvGameObjectCity*>(getGameObjectConst()))) // Const wegcasten ist hier ok da evaluate nicht wirklich etwas �ndert
+		if (!kBuilding.getConstructCondition()->evaluate(const_cast<CvGameObjectCity*>(getGameObject()))) // Const wegcasten ist hier ok da evaluate nicht wirklich etwas �ndert
 		{
 			return false;
 		}
@@ -7691,15 +7691,16 @@ int CvCity::getVassalUnhappiness() const
 /**  Reason Added: Implement iCelebrityHappy                                                        **/
 /**  Notes:                                                                                         **/
 /*****************************************************************************************************/
+
+namespace {
+	int getCelebrityHappyClamped(const CvUnit* unit)
+	{
+		return std::max(0, unit->getCelebrityHappy());
+	}
+}
 int CvCity::getCelebrityHappiness() const
 {
-	int iHappy = 0;
-	CvPlot* pPlot = plot();
-	for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
-	{
-		iHappy += std::max(0, unitItr->getCelebrityHappy());
-	}
-	return iHappy;
+	return bst::accumulate(plot()->units() | transformed(getCelebrityHappyClamped), 0);
 }
 
 /*****************************************************************************************************/
@@ -8761,10 +8762,9 @@ int CvCity::cultureGarrison(PlayerTypes ePlayer) const
 {
 	int iGarrison = 1;
 
-	CvPlot* pPlot = plot();
-	for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
+	foreach_ (const CvUnit * unit, plot()->units())
 	{
-		iGarrison += unitItr->revoltProtectionTotal();
+		iGarrison += unit->revoltProtectionTotal();
 	}
 
 	if (atWar(GET_PLAYER(ePlayer).getTeam(), getTeam()))
@@ -10617,6 +10617,13 @@ void CvCity::calculateFeatureHealthPercent(int& iGood, int& iBad) const
 	}
 }
 
+namespace {
+	bool isBuildingFeatureRemove(const CvUnit* unit, const FeatureTypes eFeature) {
+		const BuildTypes eBuild = unit->getBuildType();
+		return eBuild != NO_BUILD && GC.getBuildInfo(eBuild).isFeatureRemove(eFeature);
+	}
+
+}
 /*
  * Subtracts the total percentage health effects of features currently being removed to iGood and iBad.
  * If pIgnorePlot is not NULL, it is not checked for feature removal.
@@ -10626,46 +10633,28 @@ void CvCity::calculateFeatureHealthPercent(int& iGood, int& iBad) const
  */
 void CvCity::calculateFeatureHealthPercentChange(int& iGood, int& iBad, CvPlot* pIgnorePlot) const
 {
-	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
+	foreach_ (const CvPlot* loopPlot, plots())
 	{
-		CvPlot* pLoopPlot = getCityIndexPlot(iI);
+		if (loopPlot == pIgnorePlot || !loopPlot->isVisible(getTeam(), true))
+			continue;
 
-		if (pLoopPlot != NULL && pLoopPlot != pIgnorePlot && pLoopPlot->isVisible(getTeam(), true))
+		const FeatureTypes eFeature = loopPlot->getFeatureType();
+
+		if (eFeature != NO_FEATURE)
 		{
-			FeatureTypes eFeature = pLoopPlot->getFeatureType();
+			const int iHealth = GC.getFeatureInfo(eFeature).getHealthPercent();
 
-			if (eFeature != NO_FEATURE)
+			if (iHealth != 0)
 			{
-				int iHealth = GC.getFeatureInfo(eFeature).getHealthPercent();
-
-				if (iHealth != 0)
+				if (algo::any_of(loopPlot->units(), bst::bind(isBuildingFeatureRemove, _1, eFeature)))
 				{
-					int iNumUnits = pLoopPlot->getNumUnits();
-
-					if (iNumUnits > 0)
+					if (iHealth > 0)
 					{
-						for (CvPlot::unit_iterator unitItr = pLoopPlot->beginUnits(); unitItr != pLoopPlot->endUnits(); ++unitItr)
-						{
-							BuildTypes eBuild = unitItr->getBuildType();
-
-							if (eBuild != NO_BUILD)
-							{
-								CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);
-
-								if (kBuild.isFeatureRemove(eFeature))
-								{
-									if (iHealth > 0)
-									{
-										iGood += iHealth;
-									}
-									else
-									{
-										iBad -= iHealth;
-									}
-									break;
-								}
-							}
-						}
+						iGood += iHealth;
+					}
+					else
+					{
+						iBad -= iHealth;
 					}
 				}
 			}
@@ -23582,7 +23571,7 @@ int CvCity::getRevTrend()
 	return iDeltaTrend;
 }
 
-bool CvCity::isInquisitionConditions()
+bool CvCity::isInquisitionConditions() const
 {
 	ReligionTypes eStateReligion = GET_PLAYER(getOwnerINLINE()).getStateReligion();
 
@@ -25695,6 +25684,13 @@ void CvCity::changeUnitCombatExtraStrength(UnitCombatTypes eIndex, int iChange)
 	m_paiUnitCombatExtraStrength[eIndex] = (m_paiUnitCombatExtraStrength[eIndex] + iChange);
 }
 
+namespace {
+	bool unitCouldInvade(const CvUnit* unit, const TeamTypes& testTeam)
+	{
+		return GET_TEAM(unit->getTeam()).isAtWar(testTeam) && !unit->isAnimal() && !unit->isOnlyDefensive() && !unit->canAttackOnlyCities();
+	}
+}
+
 void CvCity::doInvasion()
 {
 	PROFILE_FUNC();
@@ -25705,20 +25701,14 @@ void CvCity::doInvasion()
 		bool bTestInvasion = false;
 		if (getInvasionChance() > 0)
 		{
-			for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+			foreach_(const CvPlot* adjacentPlot, plot()->adjacent())
 			{
-				CvPlot* pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), (DirectionTypes)iI);
-				if (pAdjacentPlot != NULL && !bTestInvasion)
+				bst::optional<CvUnit*> unit = algo::find_if(adjacentPlot->units(), bst::bind(unitCouldInvade, _1, getTeam()));
+				if (unit)
 				{
-					for (CvPlot::unit_iterator unitItr = pAdjacentPlot->beginUnits(); unitItr != pAdjacentPlot->endUnits(); ++unitItr)
-					{
-						if (GET_TEAM(unitItr->getTeam()).isAtWar(getTeam()) && !unitItr->isAnimal() && !unitItr->isOnlyDefensive() && !unitItr->canAttackOnlyCities())
-						{
-							bTestInvasion = true;
-							ePlayer = unitItr->getOwnerINLINE();
-							break;
-						}
-					}
+					bTestInvasion = true;
+					ePlayer = (*unit)->getOwnerINLINE();
+					break;
 				}
 			}
 		}
@@ -25876,40 +25866,19 @@ void CvCity::doHeal()
 
 	if (getNumUnitFullHeal() > 0)
 	{
-		int iNumHeals = getNumUnitFullHeal();
-		int iNumDamagedUnits = 0;
-
-		CvPlot* pPlot = plot();
-		for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
+		UnitVector damagedUnits;
+		// Get the damaged units on our team
+		bst::push_back(
+			damagedUnits, 
+			plot()->units() | filtered(CvUnit::on_team(getTeam())) | filtered(CvUnit::is_damaged)
+		);
+		// Randomize them
+		bst::random_shuffle(damagedUnits, CvGame::SorenRand("Unit Full Heals"));
+		// Heal as many as we are able
+		const int maxHeals = std::min<int>(getNumUnitFullHeal(), damagedUnits.size());
+		foreach_(CvUnit * unit, damagedUnits | sliced(0, maxHeals))
 		{
-			if (unitItr->getTeam() == getTeam())
-			{
-				if (unitItr->getDamage() > 0)
-				{
-					iNumDamagedUnits++;
-				}
-			}
-		}
-
-		iNumHeals = std::min(iNumHeals, iNumDamagedUnits);
-		while (iNumHeals > 0)
-		{
-			for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
-			{
-				if (unitItr->getTeam() == getTeam())
-				{
-					if (unitItr->getDamage() > 0)
-					{
-						if (GC.getGameINLINE().getSorenRandNum(100, "Unit Full Heals") > 50)
-						{
-							unitItr->setDamage(0, getOwnerINLINE(), false);
-							iNumHeals--;
-							//Recheck condition after each heal
-							break;
-						}
-					}
-				}
-			}
+			unit->setDamage(0, getOwnerINLINE(), false);
 		}
 	}
 }
@@ -27215,7 +27184,7 @@ int CvCity::getTotalBuildingSourcedProperty(PropertyTypes eProperty) const
 						//	TODO - expand this as buildings add other types
 						if (pSource->getType() == PROPERTYSOURCE_CONSTANT && pSource->getProperty() == eProperty)
 						{
-							iValue += static_cast<CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObjectConst());
+							iValue += static_cast<CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
 						}
 					}
 				}
@@ -27228,7 +27197,7 @@ int CvCity::getTotalBuildingSourcedProperty(PropertyTypes eProperty) const
 	}
 }
 
-void unitSources(CvGameObject* pObject, CvPropertyManipulators* pMani, PropertyTypes eProperty, const CvCity* pCity, int* iValue)
+void unitSources(CvPropertyManipulators* pMani, PropertyTypes eProperty, const CvCity* pCity, int* iValue)
 {
 	int iNum = pMani->getNumSources();
 
@@ -27242,7 +27211,7 @@ void unitSources(CvGameObject* pObject, CvPropertyManipulators* pMani, PropertyT
 			(pSource->getObjectType() == GAMEOBJECT_CITY || pSource->getObjectType() == GAMEOBJECT_PLOT) &&
 			pSource->getType() == PROPERTYSOURCE_CONSTANT)
 		{
-			*iValue += static_cast<CvPropertySourceConstant*>(pSource)->getAmountPerTurn(pCity->getGameObjectConst());
+			*iValue += static_cast<CvPropertySourceConstant*>(pSource)->getAmountPerTurn(pCity->getGameObject());
 		}
 	}
 }
@@ -27261,9 +27230,9 @@ int CvCity::getTotalUnitSourcedProperty(PropertyTypes eProperty) const
 		int	iValue = 0;
 
 		CvPlot* pPlot = plot();
-		for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
+		foreach_ (const CvUnit* unit, pPlot->units())
 		{
-			unitItr->getGameObject()->foreachManipulator(bst::bind(unitSources, _1, _2, eProperty, this, &iValue));
+			unit->getGameObject()->foreachManipulator(bst::bind(unitSources, _1, eProperty, this, &iValue));
 		}
 
 		m_unitSourcedPropertyCache[(int)eProperty] = iValue;
@@ -27272,7 +27241,7 @@ int CvCity::getTotalUnitSourcedProperty(PropertyTypes eProperty) const
 	}
 }
 
-void unitHasSources(CvGameObject* pObject, CvPropertyManipulators* pMani, bool* bHasSources)
+void unitHasSources(CvPropertyManipulators* pMani, bool* bHasSources)
 {
 	int iNum = pMani->getNumSources();
 
@@ -27296,7 +27265,7 @@ static bool unitHasCityOrPlotPropertySources(CvUnit* pUnit)
 {
 	bool bHasSources;
 
-	pUnit->getGameObject()->foreachManipulator(bst::bind(unitHasSources, _1, _2, &bHasSources));
+	pUnit->getGameObject()->foreachManipulator(bst::bind(unitHasSources, _1, &bHasSources));
 
 	return bHasSources;
 }
@@ -27309,7 +27278,7 @@ void CvCity::noteUnitMoved(CvUnit* pUnit) const
 	}
 }
 
-void sumCitySources(CvGameObject* pObject, CvPropertyManipulators* pMani, const CvCity* pCity, int* iSum, PropertyTypes eProperty)
+void sumCitySources(CvPropertyManipulators* pMani, const CvCity* pCity, int* iSum, PropertyTypes eProperty)
 {
 	int iNum = pMani->getNumSources();
 	for (int i = 0; i < iNum; i++)
@@ -27317,9 +27286,9 @@ void sumCitySources(CvGameObject* pObject, CvPropertyManipulators* pMani, const 
 		CvPropertySource* pSource = pMani->getSource(i);
 		if (pSource->getProperty() == eProperty)
 		{
-			if (pSource->isActive(const_cast<CvGameObjectCity*>(pCity->getGameObjectConst())))
+			if (pSource->isActive(const_cast<CvGameObjectCity*>(pCity->getGameObject())))
 			{
-				*iSum += pSource->getSourcePredict(pCity->getGameObjectConst(), pCity->getPropertiesConst()->getValueByProperty(eProperty));
+				*iSum += pSource->getSourcePredict(pCity->getGameObject(), pCity->getPropertiesConst()->getValueByProperty(eProperty));
 			}
 		}
 	}
@@ -27333,37 +27302,28 @@ int CvCity::getGlobalSourcedProperty(PropertyTypes eProperty) const
 	for (int i = 0; i < iNum; i++)
 	{
 		CvPropertySource* pSource = pMani->getSource(i);
-		if (pSource->isActive(const_cast<CvGameObjectCity*>(getGameObjectConst())))
+		if (pSource->isActive(const_cast<CvGameObjectCity*>(getGameObject())))
 		{
-			iSum += pSource->getSourcePredict(getGameObjectConst(), getPropertiesConst()->getValueByProperty(eProperty));
+			iSum += pSource->getSourcePredict(getGameObject(), getPropertiesConst()->getValueByProperty(eProperty));
 		}
 	}
 	// Add sources from the player object that have an effect on cities
-	GET_PLAYER(getOwner()).getGameObject()->foreachManipulator(bst::bind(sumCitySources, _1, _2, this, &iSum, eProperty));
+	GET_PLAYER(getOwner()).getGameObject()->foreachManipulator(bst::bind(sumCitySources, _1, this, &iSum, eProperty));
 
 	return iSum;
 }
+
 //TB Combat Mods (Buildings) begin
 int CvCity::getUnitAidPresent(PropertyTypes eProperty) const
 {
 	PROFILE_FUNC();
 
-	int iBestAid = 0;
-
-	CvPlot* pPlot = plot();
-	for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
-	{
-		if (unitItr->getTeam() == getTeam())
-		{
-			int  iAid = unitItr->aidTotal(eProperty);
-
-			if (iAid > iBestAid)
-			{
-				iBestAid = iAid;
-			}
-		}
-	}
-	return iBestAid;
+	return algo::max_element(
+		plot()->units() | filtered(CvUnit::on_team(getTeam()))
+						| transformed(
+							CvUnit::aid_total(eProperty)
+						)
+	).get_value_or(0);
 }
 
 int CvCity::getCityAidTotal(PromotionLineTypes ePromotionLineType) const
@@ -27564,28 +27524,20 @@ int CvCity::getUnitCommunicability(PromotionLineTypes eAfflictionLine) const
 	PROFILE_FUNC();
 
 
-	int iCommunicability = 0;
+	if (GC.getPromotionLineInfo(eAfflictionLine).isNoSpreadUnittoCity())
+		return 0;
 
-	if (!GC.getPromotionLineInfo(eAfflictionLine).isNoSpreadUnittoCity())
+	// Find unit with the highest probability to afflict
+	bst::optional<int> worstAffliction = algo::max_element(
+		plot()->units() | filtered(CvUnit::has_affliction_line(eAfflictionLine))
+						| transformed(CvUnit::prob_inflict(eAfflictionLine))
+	);
+
+	if (worstAffliction)
 	{
-		bool bCheck = false;
-		int iWorstContractModifier = 0;
-		CvPlot* pPlot = plot();
-		for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
-		{
-			if (unitItr->hasAfflictionLine(eAfflictionLine))
-			{
-				bCheck = true;
-				iWorstContractModifier = std::max<int>(unitItr->worsenedProbabilitytoAfflict(eAfflictionLine), iWorstContractModifier);
-			}
-		}
-		if (bCheck)
-		{
-			iCommunicability = GC.getPromotionLineInfo(eAfflictionLine).getCommunicability();
-			iCommunicability += iWorstContractModifier;
-		}
+		return *worstAffliction + GC.getPromotionLineInfo(eAfflictionLine).getCommunicability();
 	}
-	return iCommunicability;
+	return 0;
 }
 
 int CvCity::getTradeCommunicabilityTotal(BuildingTypes eAfflictionBuilding, PromotionLineTypes eAfflictionLine) const
@@ -28067,7 +28019,7 @@ void CvCity::assignPromotionsFromBuildingChecked(const CvBuildingInfo& building,
 				unit->canAcquirePromotion(freePromoType.ePromotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)))
 		{
 			if (!freePromoType.m_pExprFreePromotionCondition ||
-				freePromoType.m_pExprFreePromotionCondition->evaluate(const_cast<CvGameObjectUnit*>(unit->getGameObjectConst())))
+				freePromoType.m_pExprFreePromotionCondition->evaluate(const_cast<CvGameObjectUnit*>(unit->getGameObject())))
 			{
 				unit->setHasPromotion(freePromoType.ePromotion, true);
 			}

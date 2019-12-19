@@ -47,7 +47,8 @@ public:
 	virtual void enumerateRelated(std::vector<CvGameObject*>& kEnum, GameObjectTypes eType, RelationTypes eRelation, int iData = 0);
 	virtual void enumerateRelatedCond(std::vector<CvGameObject*>& kEnum, GameObjectTypes eType, RelationTypes eRelation, BoolExpr* pExpr = NULL, int iData = 0);
 
-	virtual void foreachManipulator(bst::function<void (CvGameObject*, CvPropertyManipulators*)> func) = 0;
+	typedef bst::function<void (CvPropertyManipulators*)> ManipCallbackFn;
+	virtual void foreachManipulator(ManipCallbackFn func) const = 0;
 
 	virtual void eventPropertyChanged(PropertyTypes eProperty, int iNewValue);
 
@@ -99,7 +100,8 @@ public:
 	virtual const CvProperties* getPropertiesConst() const;
 	virtual void foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func);
 
-	virtual void foreachManipulator(bst::function<void (CvGameObject*, CvPropertyManipulators*)> func);
+	// No specific manipulators apply to game, only global ones
+	virtual void foreachManipulator(ManipCallbackFn func) const {}
 
 	virtual int getAttribute(AttributeTypes eAttribute) const;
 	virtual bool hasGOM(GOMTypes eType, int iID);
@@ -121,7 +123,8 @@ public:
 	virtual const CvProperties* getPropertiesConst() const;
 	virtual void foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func);
 
-	virtual void foreachManipulator(bst::function<void (CvGameObject*, CvPropertyManipulators*)> func);
+	// No specific manipulators apply to teams, only global ones
+	virtual void foreachManipulator(ManipCallbackFn func) const {}
 
 	virtual bool hasGOM(GOMTypes eType, int iID);
 	
@@ -145,7 +148,7 @@ public:
 	virtual const CvProperties* getPropertiesConst() const;
 	virtual void foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func);
 
-	virtual void foreachManipulator(bst::function<void (CvGameObject*, CvPropertyManipulators*)> func);
+	virtual void foreachManipulator(ManipCallbackFn func) const;
 
 	virtual bool hasGOM(GOMTypes eType, int iID);
 	virtual bool isTag(TagTypes eTag) const;
@@ -173,7 +176,7 @@ public:
 	virtual void foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func);
 	virtual void foreachRelated(GameObjectTypes eType, RelationTypes eRelation, bst::function<void (CvGameObject*)> func, int iData = 0);
 
-	virtual void foreachManipulator(bst::function<void (CvGameObject*, CvPropertyManipulators*)> func);
+	virtual void foreachManipulator(ManipCallbackFn func) const;
 
 	virtual void eventPropertyChanged(PropertyTypes eProperty, int iNewValue);
 
@@ -203,7 +206,7 @@ public:
 	virtual const CvProperties* getPropertiesConst() const;
 	virtual void foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func);
 
-	virtual void foreachManipulator(bst::function<void (CvGameObject*, CvPropertyManipulators*)> func);
+	virtual void foreachManipulator(ManipCallbackFn func) const;
 
 	virtual void eventPropertyChanged(PropertyTypes eProperty, int iNewValue);
 
@@ -235,7 +238,7 @@ public:
 	virtual void foreachNear(GameObjectTypes eType, bst::function<void (CvGameObject*)> func, int iDistance);
 	virtual void foreachRelated(GameObjectTypes eType, RelationTypes eRelation, bst::function<void (CvGameObject*)> func, int iData = 0);
 
-	virtual void foreachManipulator(bst::function<void (CvGameObject*, CvPropertyManipulators*)> func);
+	virtual void foreachManipulator(ManipCallbackFn func) const;
 
 	virtual bool isTag(TagTypes eTag) const;
 	virtual bool hasGOM(GOMTypes eType, int iID);

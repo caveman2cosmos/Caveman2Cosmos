@@ -8,7 +8,7 @@
 #include "CvUnit.h"
 #include "CvCity.h"
 #include "CvUnit.h"
-#include "idinfo_iterator.h"
+#include "idinfo_iterator_base.h"
 
 class CvPlot;
 class CvArea;
@@ -77,9 +77,11 @@ public:
 	void popMission();																																										// Exposed to Python
 	void autoMission();
 	void updateMission();
-	DllExport CvPlot* lastMissionPlot();																																					// Exposed to Python
 
-	bool canStartMission(int iMission, int iData1, int iData2, CvPlot* pPlot = NULL, bool bTestVisible = false, bool bUseCache = false);		// Exposed to Python
+	DllExport CvPlot* _lastMissionPlot();
+	CvPlot* lastMissionPlot() const; // Exposed to Python
+
+	bool canStartMission(int iMission, int iData1, int iData2, CvPlot* pPlot = NULL, bool bTestVisible = false, bool bUseCache = false) const;		// Exposed to Python
 	bool startMission();
 	bool continueMission(int iSteps = 0);
 	bool checkMoveSafety(int iX, int iY, int iFlags);
@@ -92,44 +94,54 @@ public:
 	bool canEverDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible, bool bUseCache);
 	void setupActionCache();
 
-	bool isHuman() const;																																											// Exposed to Python
-	DllExport bool isBusy();
-	bool isCargoBusy();
-	int baseMoves();																																										// Exposed to Python 
+	bool isHuman() const; // Exposed to Python
+
+	DllExport bool _isBusy();
+	bool isBusy() const;
+
+	bool isCargoBusy() const;
+	int baseMoves() const;																																										// Exposed to Python 
 	bool isWaiting() const;																																							// Exposed to Python
-	bool isFull();																																											// Exposed to Python
-	bool hasCargo();																																										// Exposed to Python
+	bool isFull() const;																																											// Exposed to Python
+	bool hasCargo() const;																																										// Exposed to Python
 	int getCargo(bool bVolume = false) const;
-	DllExport bool canAllMove();																																				// Exposed to Python
-	bool canAnyMove(bool bValidate = false);																																									// Exposed to Python
-	bool hasMoved();																																										// Exposed to Python
+
+	DllExport bool _canAllMove();
+	bool canAllMove() const; // Exposed to Python
+
+	bool canAnyMove(bool bValidate = false) /* not const - Can set ACTIVITY_SLEEP if bValidate is true */;																																									// Exposed to Python
+	bool hasMoved() const;																																										// Exposed to Python
 	bool canEnterTerritory(TeamTypes eTeam, bool bIgnoreRightOfPassage = false) const;									// Exposed to Python
 	bool canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage = false) const;									// Exposed to Python
 
-	DllExport bool canMoveInto(CvPlot* pPlot, bool bAttack = false);																		// Exposed to Python
-	bool canMoveIntoWithWar(CvPlot* pPlot, bool bAttack = false, bool bDeclareWar = false);
+	DllExport bool _canMoveInto(CvPlot* pPlot, bool bAttack = false);
+	bool canMoveInto(const CvPlot* pPlot, bool bAttack = false) const; // Exposed to Python
+	
+	DllExport bool _canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar = false);
+	bool canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar = false) const; // Exposed to Python
 
-	DllExport bool canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar = false);												// Exposed to Python
-	bool canMoveThrough(CvPlot* pPlot, bool bDeclareWar = false);																																	// Exposed to Python
-	bool canFight();																																										// Exposed to Python 
-	bool canDefend();																																										// Exposed to Python
-	bool canBombard(const CvPlot* pPlot, bool bCheckCanReduceOnly = false);
+	bool canMoveIntoWithWar(const CvPlot* pPlot, bool bAttack = false, bool bDeclareWar = false) const;
+
+	bool canMoveThrough(const CvPlot* pPlot, bool bDeclareWar = false) const;																																	// Exposed to Python
+	bool canFight() const;																																										// Exposed to Python 
+	bool canDefend() const;																																										// Exposed to Python
+	bool canBombard(const CvPlot* pPlot, bool bCheckCanReduceOnly = false) const;
 	bool hasBombardCapability() const;
 	bool hasCollateralDamage() const;
-	bool canPillage(const CvPlot* pPlot);
-	bool canBombardAtRanged(const CvPlot* pPlot, int iX, int iY);
+	bool canPillage(const CvPlot* pPlot) const;
+	bool canBombardAtRanged(const CvPlot* pPlot, int iX, int iY) const;
 	int getMinimumRBombardDamageLimit() const;
 	int getMinimumRBombardRange() const;
 	int getRBombardDamageMaxUnits() const;
-	bool visibilityRange();
+	bool visibilityRange() const;
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      08/19/09                                jdog5000      */
 /*                                                                                              */
 /* General AI                                                                                   */
 /************************************************************************************************/
-	int getBombardTurns( CvCity* pCity );
-	bool isHasPathToAreaPlayerCity( PlayerTypes ePlayer, int iFlags = 0, bool bGo = false );
-	bool isHasPathToAreaEnemyCity( bool bIgnoreMinors = true, int iFlags = 0, bool bGo = false );
+	int getBombardTurns(const CvCity* pCity ) const;
+	bool isHasPathToAreaPlayerCity( PlayerTypes ePlayer, int iFlags = 0, bool bGo = false ) /* not const - Can generate a mvoe to mission if bGo is true*/;
+	bool isHasPathToAreaEnemyCity( bool bIgnoreMinors = true, int iFlags = 0, bool bGo = false ) /* not const - Can generate a mvoe to mission if bGo is true*/;
 	bool isStranded();
 	void invalidateIsStrandedCache();
 	bool calculateIsStranded();
@@ -160,7 +172,7 @@ public:
 
 	RouteTypes getBestBuildRoute(CvPlot* pPlot, BuildTypes* peBestBuild = NULL) const;	// Exposed to Python
 
-	bool canIgnoreZoneofControl();
+	bool canIgnoreZoneofControl() const;
 
 	bool groupDeclareWar(CvPlot* pPlot, bool bForce = false);
 	bool groupAttack(int iX, int iY, int iFlags, bool& bFailedAlreadyFighting, bool bStealth = false);
@@ -182,9 +194,9 @@ public:
 	bool isAmphibPlot(const CvPlot* pPlot) const;																																		// Exposed to Python
 	bool groupAmphibMove(CvPlot* pPlot, int iFlags);
 
-	DllExport bool readyToSelect(bool bAny = false);																										// Exposed to Python
-	bool readyToMove(bool bAny = false, bool bValidate = false);																																// Exposed to Python
-	bool readyToAuto();																																									// Exposed to Python 
+	DllExport bool readyToSelect(bool bAny = false) /* not const - calls readyToMove */;																										// Exposed to Python
+	bool readyToMove(bool bAny = false, bool bValidate = false) /* not const - calls canAnyMove */;																																// Exposed to Python
+	bool readyToAuto() const;																																									// Exposed to Python 
 
 	int getID() const;																																												// Exposed to Python
 	void setID(int iID);																			
@@ -194,7 +206,7 @@ public:
 	void changeMissionTimer(int iChange);
 	void updateMissionTimer(int iSteps = 0);
 
-	bool isForceUpdate();
+	bool isForceUpdate() const;
 	void setForceUpdate(bool bNewValue);
 
 	bool isMidMove() const { return m_bIsMidMove; }
@@ -214,7 +226,7 @@ public:
 	void setActivityType(ActivityTypes eNewValue, MissionTypes eSleepType = NO_MISSION);																											// Exposed to Python
 
 	AutomateTypes getAutomateType() const;																																		// Exposed to Python
-	bool isAutomated();																																									// Exposed to Python
+	bool isAutomated() const;																																									// Exposed to Python
 	void setAutomateType(AutomateTypes eNewValue);																											// Exposed to Python
 
 #ifdef USE_OLD_PATH_GENERATOR
@@ -257,46 +269,17 @@ public:
 	TeamTypes getHeadTeam() const;
 
 	// For iterating over units in a selection group
-	class unit_iterator : public idinfo_iterator_base<unit_iterator, CvUnit>
-	{
-	public:
-		unit_iterator() {}
-		explicit unit_iterator(const CLinkList<IDInfo>* list) : base_type(list) {}
-	private:
-		friend class core_access;
-		value_type* resolve(const IDInfo& info) const;
-	};
-	unit_iterator beginUnits() { return unit_iterator(&m_units); }
-	unit_iterator endUnits() { return unit_iterator(); }
+	DECLARE_IDINFO_ITERATOR(CvUnit, unit_iterator)
+
+	unit_iterator beginUnits() const { return unit_iterator(&m_units); }
+	unit_iterator endUnits() const { return unit_iterator(); }
 	typedef bst::iterator_range<unit_iterator> unit_range;
-	unit_range units() { return unit_range(beginUnits(), endUnits()); }
+	unit_range units() const { return unit_range(beginUnits(), endUnits()); }
 
-	class const_unit_iterator : public idinfo_iterator_base<const_unit_iterator, const CvUnit>
-	{
-	public:
-		const_unit_iterator() {}
-		explicit const_unit_iterator(const CLinkList<IDInfo>* list) : base_type(list) {}
-	private:
-		friend class core_access;
-		value_type* resolve(const IDInfo& info) const;
-	};
-	const_unit_iterator beginUnits() const { return const_unit_iterator(&m_units); }
-	const_unit_iterator endUnits() const { return const_unit_iterator(); }
-	typedef bst::iterator_range<const_unit_iterator> const_unit_range;
-	const_unit_range units() const { return const_unit_range(beginUnits(), endUnits()); }
-
-	safe_unit_iterator beginUnitsSafe() { return safe_unit_iterator(beginUnits(), endUnits()); }
-	safe_unit_iterator endUnitsSafe() { return safe_unit_iterator(); }
+	safe_unit_iterator beginUnitsSafe() const { return safe_unit_iterator(beginUnits(), endUnits()); }
+	safe_unit_iterator endUnitsSafe() const { return safe_unit_iterator(); }
 	typedef bst::iterator_range<safe_unit_iterator> safe_unit_range;
-	safe_unit_range delete_safe_units() { return safe_unit_range(beginUnitsSafe(), endUnitsSafe()); }
-
-	const_safe_unit_iterator beginUnitsSafe() const { return const_safe_unit_iterator(beginUnits(), endUnits()); }
-	const_safe_unit_iterator endUnitsSafe() const { return const_safe_unit_iterator(); }
-	typedef bst::iterator_range<const_safe_unit_iterator> const_safe_unit_range;
-	const_safe_unit_range delete_safe_units() const { return const_safe_unit_range(beginUnitsSafe(), endUnitsSafe()); }
-
-	//std::vector<const CvUnit*> get_if(bst::function<bool(const CvUnit*)> predicateFn) const;
-	//std::vector<CvUnit*> get_if(bst::function<bool(CvUnit*)> predicateFn);
+	safe_unit_range units_safe() const { return safe_unit_range(beginUnitsSafe(), endUnitsSafe()); }
 
 	void clearMissionQueue();
 	void setMissionPaneDirty();																																	// Exposed to Python
@@ -334,17 +317,17 @@ public:
 	virtual int AI_sumStrength(const CvPlot* pAttackedPlot = NULL, DomainTypes eDomainType = NO_DOMAIN, StackCompare::flags flags = StackCompare::None) const = 0;
 	virtual void AI_queueGroupAttack(int iX, int iY) = 0;
 	virtual void AI_cancelGroupAttack() = 0;
-	virtual bool AI_isGroupAttack() = 0;
+	virtual bool AI_isGroupAttack() const = 0;
 
-	virtual bool AI_isControlled() = 0;
-	virtual bool AI_isDeclareWar(const CvPlot* pPlot = NULL) = 0;
-	virtual CvPlot* AI_getMissionAIPlot() = 0;
-	virtual bool AI_isForceSeparate() = 0;
+	virtual bool AI_isControlled() const = 0;
+	virtual bool AI_isDeclareWar(const CvPlot* pPlot = NULL) const = 0;
+	virtual CvPlot* AI_getMissionAIPlot() const = 0;
+	virtual bool AI_isForceSeparate() const = 0;
 	virtual void AI_makeForceSeparate() = 0;
-	virtual MissionAITypes AI_getMissionAIType() = 0;
+	virtual MissionAITypes AI_getMissionAIType() const = 0;
 	virtual void AI_setMissionAI(MissionAITypes eNewMissionAI, CvPlot* pNewPlot, CvUnit* pNewUnit) = 0;
 	virtual void AI_noteSizeChange(int iChange, int iVolume) = 0;
-	virtual CvUnit* AI_getMissionAIUnit() = 0;
+	virtual CvUnit* AI_getMissionAIUnit() const = 0;
 	virtual CvUnit* AI_ejectBestDefender(CvPlot* pTargetPlot, bool allowAllDefenders = false) = 0;
 	virtual bool AI_hasBeneficialPropertyEffectForCity(CvCity* pCity) const = 0;
 	virtual CvUnit* AI_ejectBestPropertyManipulator(CvCity* pTargetCity) = 0;
@@ -362,7 +345,7 @@ public:
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
-	virtual bool AI_isFull() = 0;
+	virtual bool AI_isFull() const = 0;
 	virtual int AI_getGenericValueTimes100(UnitValueFlags eFlags) const = 0;
 /************************************************************************************************/
 /* DCM                                     04/19/09                                Johny Smith  */
@@ -373,17 +356,17 @@ public:
 /************************************************************************************************/
 /* DCM                                     END                                                  */
 /************************************************************************************************/
-	int defensiveModifierAtPlot(CvPlot* pPlot) const;
-	bool meetsUnitSelectionCriteria(CvUnitSelectionCriteria* criteria) const;
+	int defensiveModifierAtPlot(const CvPlot* pPlot) const;
+	bool meetsUnitSelectionCriteria(const CvUnitSelectionCriteria* criteria) const;
 	int getStrength() const;
 	bool hasCommander() const;
 	bool hasUnitOfAI(UnitAITypes eUnitAI) const;
 	int	getWorstDamagePercent(UnitCombatTypes eIgnoreUnitCombat = NO_UNITCOMBAT) const;
 	void validateLocations(bool bFixup = false) const;
 	bool findNewLeader(UnitAITypes eAIType);
-	bool doMergeCheck();
-	int getCargoSpace();
-	int getCargoSpaceAvailable(SpecialUnitTypes eSpecialCargo, DomainTypes eDomainCargo);
+	bool doMergeCheck() /* not const - does merge */;
+	int getCargoSpace() const;
+	int getCargoSpaceAvailable(SpecialUnitTypes eSpecialCargo, DomainTypes eDomainCargo) const;
 	int countSeeInvisibleActive(UnitAITypes eUnitAI, InvisibleTypes eInvisibleType) const;
 	void releaseUnitAIs(UnitAITypes eUnitAI);
 
@@ -422,7 +405,7 @@ protected:
 
 	bool m_bIsChoosingNewLeader;
 
-	void checkLastPathPlot(CvPlot* pPlot);
+	void checkLastPathPlot(const CvPlot* pPlot);
 	void clearLastPathPlot();
 	bool isLastPathPlotChecked() const;
 	bool isLastPathPlotVisible() const;
@@ -467,15 +450,15 @@ private:
 	// a crash in the main engine.  This is a bit untidy, but essentially fine due to the
 	// single threaded nature of the application and the fact that cache validity is only
 	// required across a single path generation call, which cannot interleave
-	static CvSelectionGroup* m_pCachedMovementGroup;
+	static const CvSelectionGroup* m_pCachedMovementGroup;
 	static bst::scoped_ptr<CachedPathGenerator> m_cachedPathGenerator;
 	static CachedPathGenerator& getCachedPathGenerator();
 
 public:
 	static void setGroupToCacheFor(CvSelectionGroup* group);
 
-	bool HaveCachedPathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int& iResult, int& iBestMoveCost, int& iWorstMoveCost, int &iToPlotNodeCost);
-	void CachePathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int iCost, int iBestMoveCost, int iWorstMoveCost, int iToPlotNodeCost);
+	bool HaveCachedPathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int& iResult, int& iBestMoveCost, int& iWorstMoveCost, int &iToPlotNodeCost) const;
+	void CachePathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int iCost, int iBestMoveCost, int iWorstMoveCost, int iToPlotNodeCost) const;
 };
 
 #endif

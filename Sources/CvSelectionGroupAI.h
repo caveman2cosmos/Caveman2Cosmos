@@ -20,7 +20,7 @@ public:
 	void AI_reset();
 
 	void AI_separate();
-	void AI_separateIf(bst::function<bool(CvUnit*)> predicateFn);
+	// void AI_separateIf(bst::function<bool(CvUnit*)> predicateFn);
 	void AI_separateNonAI(UnitAITypes eUnitAI);
 	void AI_separateAI(UnitAITypes eUnitAI);
 	void AI_separateImpassable();
@@ -37,20 +37,20 @@ public:
 	int AI_sumStrength(const CvPlot* pAttackedPlot = NULL, DomainTypes eDomainType = NO_DOMAIN, StackCompare::flags flags = StackCompare::None) const;
 	void AI_queueGroupAttack(int iX, int iY);
 	void AI_cancelGroupAttack();
-	bool AI_isGroupAttack();
+	bool AI_isGroupAttack() const;
 
-	bool AI_isControlled();
-	bool AI_isDeclareWar(const CvPlot* pPlot = NULL);
+	bool AI_isControlled() const;
+	bool AI_isDeclareWar(const CvPlot* pPlot = NULL) const;
 
-	CvPlot* AI_getMissionAIPlot();
+	CvPlot* AI_getMissionAIPlot() const;
 
-	bool AI_isForceSeparate();
+	bool AI_isForceSeparate() const;
 	void AI_makeForceSeparate();
 	
 	bool AI_isCityGarrison(const CvCity* pCity) const;
 	void AI_setAsGarrison(const CvCity* pCity);
 
-	MissionAITypes AI_getMissionAIType();
+	MissionAITypes AI_getMissionAIType() const;
 	void AI_setMissionAI(MissionAITypes eNewMissionAI, CvPlot* pNewPlot, CvUnit* pNewUnit);
 	void AI_noteSizeChange(int iChange, int iVolume);
 	CvUnit* AI_findBestDefender(CvPlot* pTargetPlot, bool allowAllDefenders, bool bConsiderPropertyValues = false);
@@ -59,9 +59,9 @@ public:
 	virtual CvUnit* AI_ejectBestPropertyManipulator(CvCity* pTargetCity);
 	virtual int AI_getGenericValueTimes100(UnitValueFlags eFlags) const;
 
-	CvUnit* AI_getMissionAIUnit();
+	CvUnit* AI_getMissionAIUnit() const;
 	
-	bool AI_isFull();
+	bool AI_isFull() const;
 
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);

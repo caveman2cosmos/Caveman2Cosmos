@@ -12,7 +12,7 @@
 #include <vector>
 #include "CvGameObject.h"
 #include "CvUnit.h"
-#include "idinfo_iterator.h"
+#include "idinfo_iterator_base.h"
 
 #include "CvPlotPaging.h"
 
@@ -384,10 +384,10 @@ public:
 	bool isActivePlayerNoDangerCache() const;
 	bool isActivePlayerHasDangerCache() const;
 	bool isTeamBorderCache( TeamTypes eTeam ) const;
-	void setIsActivePlayerNoDangerCache( bool bNewValue );
-	void setIsActivePlayerHasDangerCache( bool bNewValue );
-	void setIsTeamBorderCache( TeamTypes eTeam, bool bNewValue );
-	void invalidateIsTeamBorderCache();
+	void setIsActivePlayerNoDangerCache( bool bNewValue ) const;
+	void setIsActivePlayerHasDangerCache( bool bNewValue ) const;
+	void setIsTeamBorderCache( TeamTypes eTeam, bool bNewValue ) const;
+	void invalidateIsTeamBorderCache() const;
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
@@ -457,18 +457,18 @@ public:
 	int getVisibleEnemyStrength(PlayerTypes ePlayer, int iRange = 0) const;
 	int getVisibleNonAllyStrength(PlayerTypes ePlayer) const;
 
-	protected:
-		bool m_bDepletedMine;
-		char /*PlayerTypes*/ m_eClaimingOwner;
-		char* m_aiOccupationCultureRangeCities;
-		void doTerritoryClaiming();
-		CvWString m_szLandmarkMessage;
-		CvWString m_szLandmarkName;
-		LandmarkTypes m_eLandmarkType;
-		bool m_bCounted;
-		static stdext::hash_map<int,int>* m_resultHashMap;
+protected:
+	bool m_bDepletedMine;
+	char /*PlayerTypes*/ m_eClaimingOwner;
+	char* m_aiOccupationCultureRangeCities;
+	void doTerritoryClaiming();
+	CvWString m_szLandmarkMessage;
+	CvWString m_szLandmarkName;
+	LandmarkTypes m_eLandmarkType;
+	bool m_bCounted;
+	static stdext::hash_map<int,int>* m_resultHashMap;
 #ifdef SUPPORT_MULTITHREADED_PATHING
-		static CRITICAL_SECTION m_resultHashAccessSection;
+	static CRITICAL_SECTION m_resultHashAccessSection;
 #endif
 
 	public:
@@ -571,7 +571,7 @@ public:
 	// Base iterator type for iterating over adjacent valid plots
 	template < class Value_ >
 	struct adjacent_iterator_base : 
-		public bst::iterator_facade<adjacent_iterator_base<Value_>, Value_, bst::forward_traversal_tag>
+		public bst::iterator_facade<adjacent_iterator_base<Value_>, Value_*, bst::forward_traversal_tag, Value_*>
 	{
 		adjacent_iterator_base() : m_centerX(-1), m_centerY(-1), m_curr(nullptr), m_idx(0) {}
 		explicit adjacent_iterator_base(int centerX, int centerY) : m_centerX(centerX), m_centerY(centerY), m_curr(nullptr), m_idx(-1)
@@ -597,7 +597,7 @@ public:
 				|| (this->m_curr == NULL && other.m_curr == NULL);
 		}
 
-		Value_& dereference() const { return *m_curr; }
+		Value_* dereference() const { return m_curr; }
 
 		int m_centerX;
 		int m_centerY;
@@ -605,12 +605,12 @@ public:
 		int m_idx;
 	};
 	typedef adjacent_iterator_base<CvPlot> adjacent_iterator;
-	typedef adjacent_iterator_base<CvPlot> adjacent_const_iterator;
 
-	adjacent_iterator beginAdjacent() { return adjacent_iterator(getX(), getY()); }
-	adjacent_iterator endAdjacent() { return adjacent_iterator(); }
-	adjacent_const_iterator beginAdjacent() const { return adjacent_const_iterator(getX(), getY()); }
-	adjacent_const_iterator endAdjacent() const { return adjacent_const_iterator(); }
+	adjacent_iterator beginAdjacent() const { return adjacent_iterator(getX(), getY()); }
+	adjacent_iterator endAdjacent() const { return adjacent_iterator(); }
+
+	typedef bst::iterator_range<adjacent_iterator> adjacent_range;
+	adjacent_range adjacent() const { return adjacent_range(beginAdjacent(), endAdjacent()); }
 
 	// ==========================================================================================
 	// PAGING SYSTEM
@@ -849,7 +849,7 @@ public:
 	int getVisibilityCount(TeamTypes eTeam) const; // Exposed to Python
 	void changeVisibilityCount(TeamTypes eTeam, int iChange, InvisibleTypes eSeeInvisible, bool bUpdatePlotGroups, int iIntensity = 0, int iUnitID = 0); // Exposed to Python
 
-	int getDangerCount(int /*PlayerTypes*/ ePlayer);
+	int getDangerCount(int /*PlayerTypes*/ ePlayer) const;
 	void setDangerCount(int /*PlayerTypes*/ ePlayer, int iNewCount);
 
 	int getStolenVisibilityCount(TeamTypes eTeam) const; // Exposed to Python
@@ -956,42 +956,28 @@ public:
 		explicit unit_iterator(const CLinkList<IDInfo>* list) : base_type(list) {}
 	private:
 		friend class core_access;
-		value_type* resolve(const IDInfo& info) const;
+		reference resolve(const IDInfo& info) const;
 	};
-	unit_iterator beginUnits() { return unit_iterator(&m_units); }
-	unit_iterator endUnits() { return unit_iterator(); }
+	unit_iterator beginUnits() const { return unit_iterator(&m_units); }
+	unit_iterator endUnits() const { return unit_iterator(); }
 	typedef bst::iterator_range<unit_iterator> unit_range;
-	unit_range units() { return unit_range(beginUnits(), endUnits()); }
+	unit_range units() const { return unit_range(beginUnits(), endUnits()); }
 
-	class const_unit_iterator : public idinfo_iterator_base<const_unit_iterator, const CvUnit>
-	{
-	public:
-		const_unit_iterator() {}
-		explicit const_unit_iterator(const CLinkList<IDInfo>* list) : base_type(list) {}
-	private:
-		friend class core_access;
-		value_type* resolve(const IDInfo& info) const;
-	};
-	const_unit_iterator beginUnits() const { return const_unit_iterator(&m_units); }
-	const_unit_iterator endUnits() const { return const_unit_iterator(); }
-	typedef bst::iterator_range<const_unit_iterator> const_unit_range;
-	const_unit_range units() const { return const_unit_range(beginUnits(), endUnits()); }
-
-
-	//class unit_iterator : public idinfo_iterator<unit_iterator, CvUnit>
+	// As the plot doesn't own the units they aren't const even if the plot it, so not 
+	// point in a const unit iterator
+	//class const_unit_iterator : public idinfo_iterator_base<const_unit_iterator, const CvUnit>
 	//{
 	//public:
-	//	typedef idinfo_iterator<unit_iterator, CvUnit> base_type;
-	//	unit_iterator() {}
-	//	explicit unit_iterator(const CLinkList<IDInfo>* list) : base_type(list) {}
-
+	//	const_unit_iterator() {}
+	//	explicit const_unit_iterator(const CLinkList<IDInfo>* list) : base_type(list) {}
 	//private:
 	//	friend class core_access;
-	//	CvUnit* resolve(const IDInfo& info) const;
+	//	reference resolve(const IDInfo& info) const;
 	//};
-
-	//unit_iterator beginUnits() const { return unit_iterator(&m_units); }
-	//unit_iterator endUnits() const { return unit_iterator(); }
+	//const_unit_iterator beginUnits() const { return const_unit_iterator(&m_units); }
+	//const_unit_iterator endUnits() const { return const_unit_iterator(); }
+	//typedef bst::iterator_range<const_unit_iterator> const_unit_range;
+	//const_unit_range units() const { return const_unit_range(beginUnits(), endUnits()); }
 
 	int getNumSymbols() const;
 	CvSymbol* getSymbol(int iID) const;
@@ -1088,19 +1074,19 @@ protected:
 /* Efficiency                                                                                   */
 /************************************************************************************************/
 	// Plot danger cache
-	bool m_bIsActivePlayerHasDangerCache;
-	bool m_bIsActivePlayerNoDangerCache;
-	bool* m_abIsTeamBorderCache;
+	mutable bool m_bIsActivePlayerHasDangerCache;
+	mutable bool m_bIsActivePlayerNoDangerCache;
+	mutable bool* m_abIsTeamBorderCache;
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
 	static	int m_iGlobalCachePathEpoch;
-	int		m_iCachePathEpoch;
-	void*	m_cachedPathValidityEntity;
-	void*	m_cachedPathAlternateValidityEntity;
-	bool	m_cachedPathAlternateValidity;
-	bool	m_cachedPathValidity;
+	mutable int		m_iCachePathEpoch;
+	mutable void*	m_cachedPathValidityEntity;
+	mutable void*	m_cachedPathAlternateValidityEntity;
+	mutable bool	m_cachedPathAlternateValidity;
+	mutable bool	m_cachedPathValidity;
 
 	// Super Forts begin *culture*
 	//	Koshling - not needed in the C2C implemenattion due to AND's existing

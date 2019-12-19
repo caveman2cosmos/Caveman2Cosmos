@@ -2199,7 +2199,7 @@ int pathHeuristic(int iFromX, int iFromY, int iToX, int iToY)
 	return (plotDistance(iFromX, iFromY, iToX, iToY) * PATH_MOVEMENT_WEIGHT);
 }
 
-bool pathValidInternal(CvPlot* pPlot, bool bCheckVisibleDanger, CvSelectionGroup* pSelectionGroup, int iFlags)
+bool pathValidInternal(const CvPlot* pPlot, bool bCheckVisibleDanger, const CvSelectionGroup* pSelectionGroup, int iFlags)
 {
 	//PROFILE_FUNC();
 
@@ -3022,7 +3022,7 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 
 	return iWorstCost;
 #else
-	int iResult = ((CvSelectionGroup *)pointer)->getPath().containsEdge(pFromPlot,pToPlot) ? 1 : 10000;
+	int iResult = ((const CvSelectionGroup *)pointer)->getPath().containsEdge(pFromPlot,pToPlot) ? 1 : 10000;
 	//OutputDebugString(CvString::format("PathCost (%d,%d)->(%d,%d): [%d]\n", pFromPlot->getX_INLINE(), pFromPlot->getY_INLINE(), pToPlot->getX_INLINE(), pToPlot->getY_INLINE(),iResult).c_str());
 
 	return iResult;
@@ -3032,7 +3032,7 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 //	Calback functions for the new path generator
 
 //	Heuristic cost
-int	NewPathHeuristicFunc(CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int& iLimitCost)
+int	NewPathHeuristicFunc(const CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int& iLimitCost)
 {
 	//PROFILE_FUNC();
 
@@ -3106,7 +3106,7 @@ int	NewPathHeuristicFunc(CvSelectionGroup* pGroup, int iFromX, int iFromY, int i
 }
 
 //	Actual edge cost
-int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelectionGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, int& iMovementRemaining, int iPathTurns, int& iToNodeCost, bool bIsTerminalNode)
+int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup* pSelectionGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, int& iMovementRemaining, int iPathTurns, int& iToNodeCost, bool bIsTerminalNode)
 {
 	PROFILE_FUNC();
 
@@ -3121,7 +3121,7 @@ int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelection
 	int iWorstMax;
 	int iMax;
 
-	static CvSelectionGroup* gLastSelectionGroup = NULL;
+	static const CvSelectionGroup* gLastSelectionGroup = NULL;
 
 	pFromPlot = GC.getMapINLINE().plotSorenINLINE(iFromX, iFromY);
 	FAssert(pFromPlot != NULL);
@@ -3774,7 +3774,7 @@ int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelection
 	return iWorstCost;
 }
 
-bool NewPathDestValid(CvSelectionGroup* pSelectionGroup, int iToX, int iToY, int iFlags, bool& bRequiresWar)
+bool NewPathDestValid(const CvSelectionGroup* pSelectionGroup, int iToX, int iToY, int iFlags, bool& bRequiresWar)
 {
 	PROFILE_FUNC();
 
@@ -3904,7 +3904,7 @@ bool NewPathDestValid(CvSelectionGroup* pSelectionGroup, int iToX, int iToY, int
 	return true;
 }
 
-bool NewPathTurnEndValidityCheckRequired(CvSelectionGroup* pSelectionGroup, int iFlags)
+bool NewPathTurnEndValidityCheckRequired(const CvSelectionGroup* pSelectionGroup, int iFlags)
 {
 	return !(iFlags & MOVE_IGNORE_DANGER) &&
 			pSelectionGroup->AI_isControlled() &&
@@ -3913,7 +3913,7 @@ bool NewPathTurnEndValidityCheckRequired(CvSelectionGroup* pSelectionGroup, int 
 }
 
 //	Edge validity
-bool ContextFreeNewPathValidFunc(CvSelectionGroup* pSelectionGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, bool isTerminus, bool bMoveTerminationChecksOnly, int iPathTurns, bool* pbToNodeInvalidity, bool* pbValidAsTerminus)
+bool ContextFreeNewPathValidFunc(const CvSelectionGroup* pSelectionGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, bool isTerminus, bool bMoveTerminationChecksOnly, int iPathTurns, bool* pbToNodeInvalidity, bool* pbValidAsTerminus)
 {
 	PROFILE_FUNC();
 
@@ -4073,14 +4073,14 @@ bool ContextFreeNewPathValidFunc(CvSelectionGroup* pSelectionGroup, int iFromX, 
 	return bResult;
 }
 
-bool NewPathValidFunc(CvSelectionGroup* pSelectionGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, bool isTerminus, bool bMoveTerminationChecksOnly, int iPathTurns, bool& bToNodeInvalidity)
+bool NewPathValidFunc(const CvSelectionGroup* pSelectionGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, bool isTerminus, bool bMoveTerminationChecksOnly, int iPathTurns, bool& bToNodeInvalidity)
 {
 	bool bDummy;
 
 	return ContextFreeNewPathValidFunc(pSelectionGroup, iFromX, iFromY, iToX, iToY, iFlags, isTerminus, bMoveTerminationChecksOnly, iPathTurns, &bToNodeInvalidity, &bDummy);
 }
 
-bool moveToValid(CvSelectionGroup* pSelectionGroup, CvPlot* pPlot, int iFlags)
+bool moveToValid(const CvSelectionGroup* pSelectionGroup, const CvPlot* pPlot, int iFlags)
 {
 	if (iFlags & MOVE_SAFE_TERRITORY)
 	{

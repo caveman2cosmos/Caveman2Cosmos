@@ -167,7 +167,7 @@ int BuildingSortProperty::getBuildingValue(CvPlayer *pPlayer, CvCity *pCity, Bui
 		CvPropertySource* pSource = pMani->getSource(i);
 		if (pSource->getProperty() == m_eProperty)
 		{
-			iSum += pSource->getSourcePredict(pCity->getGameObjectConst(), pCity->getProperties()->getValueByProperty(m_eProperty));
+			iSum += pSource->getSourcePredict(pCity->getGameObject(), pCity->getProperties()->getValueByProperty(m_eProperty));
 		}
 	}
 	return iSum;

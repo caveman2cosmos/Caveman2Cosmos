@@ -4,7 +4,7 @@
 #define copy_iterator_h__
 
 template <class Value>
-class copy_iterator : public bst::iterator_facade<copy_iterator<Value>, Value, bst::forward_traversal_tag, Value&>
+class copy_iterator : public bst::iterator_facade<copy_iterator<Value>, Value*, bst::forward_traversal_tag, Value*>
 {
 public:
 	copy_iterator() : m_idx(-1) {}
@@ -14,7 +14,7 @@ public:
 	{
 		for (; begin != end; ++begin)
 		{
-			m_copy.push_back(&(*begin));
+			m_copy.push_back(*begin);
 		}
 
 		if (m_copy.size() > 0)
@@ -41,7 +41,7 @@ private:
 		return this->m_idx == other.m_idx;
 	}
 
-	Value& dereference() const { return *m_copy[m_idx]; }
+	Value* dereference() const { return m_copy[m_idx]; }
 
 	std::vector<Value*> m_copy;
 	int m_idx;

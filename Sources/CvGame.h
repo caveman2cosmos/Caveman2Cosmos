@@ -652,7 +652,14 @@ public:
 	int getMapRandNum(int iNum, const char* pszLog);														
 																																												
 	CvRandom& getSorenRand();																										// Exposed to Python	
-	int getSorenRandNum(int iNum, const char* pszLog);													
+	int getSorenRandNum(int iNum, const char* pszLog);
+	struct SorenRand
+	{
+		SorenRand(const char* logMsg) : logMsg(logMsg) {}
+		int operator()(const int maxVal) const;
+		CvString logMsg;
+	};
+
 	void logRandomResult(const wchar* szStreamName, const char* pszLog, int iMax, int iNum);
 																																											
 	DllExport int calculateSyncChecksum();																								// Exposed to Python	

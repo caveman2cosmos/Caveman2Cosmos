@@ -23,11 +23,11 @@ protected:
 };
 
 // Function prototype for Cost and Validity functions
-typedef int(*HeuristicCost)(CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int& iLimitCost);
-typedef int(*EdgeCost)(CvPathGeneratorBase* generator, CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, int& iMovementRemaining, int iPathTurns, int& iToNodeCost, bool bIsTerminalNode);
-typedef bool(*EdgeValidity)(CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, bool isTerminus, bool bAssertTerminatesMove, int iPathTurns, bool& bToNodeInvalidity);
-typedef bool(*TerminusValidity)(CvSelectionGroup* pGroup, int iToX, int iToY, int iFlags, bool& bRequiresWar);
-typedef bool(*TurnEndValidityCheckRequired)(CvSelectionGroup* pGroup, int iFlags);
+typedef int(*HeuristicCost)(const CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int& iLimitCost);
+typedef int(*EdgeCost)(const CvPathGeneratorBase* generator, const CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, int& iMovementRemaining, int iPathTurns, int& iToNodeCost, bool bIsTerminalNode);
+typedef bool(*EdgeValidity)(const CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, bool isTerminus, bool bAssertTerminatesMove, int iPathTurns, bool& bToNodeInvalidity);
+typedef bool(*TerminusValidity)(const CvSelectionGroup* pGroup, int iToX, int iToY, int iFlags, bool& bRequiresWar);
+typedef bool(*TurnEndValidityCheckRequired)(const CvSelectionGroup* pGroup, int iFlags);
 
 class CvPath
 {

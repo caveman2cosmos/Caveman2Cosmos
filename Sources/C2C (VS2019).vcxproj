@@ -378,8 +378,9 @@
     <ClInclude Include="CvPlotPaging.h" />
     <ClInclude Include="CvPython.h" />
     <ClInclude Include="EnumFlags.h" />
+    <ClInclude Include="flatten_range.h" />
     <ClInclude Include="hash.h" />
-    <ClInclude Include="idinfo_iterator.h" />
+    <ClInclude Include="idinfo_iterator_base.h" />
     <ClInclude Include="CvMapExternal.h" />
     <ClInclude Include="CvMapInterfaceBase.h" />
     <ClInclude Include="CvReachablePlotSet.h" />
@@ -424,6 +425,7 @@
     <ClInclude Include="logging.h" />
     <ClInclude Include="NiPoint.h" />
     <ClInclude Include="nullptr_t.h" />
+    <ClInclude Include="scoring.h" />
     <ClInclude Include="StackWalker.h" />
     <ClInclude Include="Stopwatch.h" />
     <ClInclude Include="wchar_utils.h" />
@@ -525,6 +527,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
+    <None Include="CvGameCoreDLL.def" />
     <None Include="fbuild.bff" />
     <None Include="FVariableSystem.inl" />
     <None Include="interfaceDirtyBits.inl" />

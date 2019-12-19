@@ -15,8 +15,8 @@
 #define IDC_COPY_TO_CLIPBOARD           1006
 #define LINE_SEP "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\r\n"
 #define LINE_SEP2 "==============================================================================================================================================================================\r\n"
-//namespace
-//{
+namespace detail
+{
 	// These are the return values from the modal Assert Dialog
 	enum
 	{
@@ -236,14 +236,14 @@
 	{
 		return C2CStackWalker::get().get_callstack(4);
 	}
-//} // end anonymous namespace
+} // end anonymous namespace
 
 bool FAssertDlg( const char* szExpr, const char* szMsg, const char* szFile, unsigned int line, const char* szFunction, bool& bIgnoreAlways )
 {
 //	FILL_CONTEXT( g_AssertInfo.context );
 
-	std::string pyTrace = getPyTrace();
-	std::string dllTrace = getDLLTrace();
+	std::string pyTrace = detail::getPyTrace();
+	std::string dllTrace = detail::getDLLTrace();
 
 #ifdef FASSERT_LOGGING
 	gDLL->logMsg("Asserts.log", CvString::format("%s %s (%d): %s,  %s\n%s\n%s", 
@@ -277,28 +277,28 @@ bool FAssertDlg( const char* szExpr, const char* szMsg, const char* szFile, unsi
 
 	return false;
 #else
-	g_AssertInfo.szExpression = szExpr ? szExpr : "";
-	g_AssertInfo.szMessage = szMsg ? szMsg : "";
-	g_AssertInfo.szPythonCallstack = pyTrace;
-	g_AssertInfo.szDLLCallstack = dllTrace;
-	g_AssertInfo.szFileName = szFile ? szFile : "";
-	g_AssertInfo.line = line;
+	detail::g_AssertInfo.szExpression = szExpr ? szExpr : "";
+	detail::g_AssertInfo.szMessage = szMsg ? szMsg : "";
+	detail::g_AssertInfo.szPythonCallstack = pyTrace;
+	detail::g_AssertInfo.szDLLCallstack = dllTrace;
+	detail::g_AssertInfo.szFileName = szFile ? szFile : "";
+	detail::g_AssertInfo.line = line;
 
-	DWORD dwResult = DisplayAssertDialog();
+	DWORD dwResult = detail::DisplayAssertDialog();
 
 	switch( dwResult )
 	{
-	case ASSERT_DLG_DEBUG:
+	case detail::ASSERT_DLG_DEBUG:
 		return true;
 
-	case ASSERT_DLG_IGNORE:
+	case detail::ASSERT_DLG_IGNORE:
 		return false;
 
-	case ASSERT_DLG_IGNOREALWAYS:
+	case detail::ASSERT_DLG_IGNOREALWAYS:
 		bIgnoreAlways = true;
 		return false;
 
-	case ASSERT_DLG_EXIT:
+	case detail::ASSERT_DLG_EXIT:
 		exit(0);
 		break;
 	}

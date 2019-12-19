@@ -627,28 +627,18 @@ void CvGameObjectPlot::foreachRelated(GameObjectTypes eType, RelationTypes eRela
 	}
 }
 
-void CvGameObjectGame::foreachManipulator(bst::function<void(CvGameObject *,CvPropertyManipulators *)> func)
-{
-	// No specific manipulators apply to game, only global ones
-}
-
-void CvGameObjectTeam::foreachManipulator(bst::function<void(CvGameObject *,CvPropertyManipulators *)> func)
-{
-	// No specific manipulators apply to teams, only global ones
-}
-
-void CvGameObjectPlayer::foreachManipulator(bst::function<void(CvGameObject *,CvPropertyManipulators *)> func)
+void CvGameObjectPlayer::foreachManipulator(ManipCallbackFn func) const
 {
 	// Civics
 	for (int i=0; i<GC.getNumCivicOptionInfos(); i++)
 	{
-		func(this, GC.getCivicInfo(m_pPlayer->getCivics((CivicOptionTypes)i)).getPropertyManipulators());
+		func(GC.getCivicInfo(m_pPlayer->getCivics((CivicOptionTypes)i)).getPropertyManipulators());
 	}
 
 	// State religion
 	if (m_pPlayer->getStateReligion() != NO_RELIGION)
 	{
-		func(this, GC.getReligionInfo(m_pPlayer->getStateReligion()).getPropertyManipulators());
+		func(GC.getReligionInfo(m_pPlayer->getStateReligion()).getPropertyManipulators());
 	}
 
 	// Leader traits
@@ -658,15 +648,15 @@ void CvGameObjectPlayer::foreachManipulator(bst::function<void(CvGameObject *,Cv
 		if (m_pPlayer->hasTrait((TraitTypes)i))
 		//TB Traits end
 		{
-			func(this, GC.getTraitInfo((TraitTypes)i).getPropertyManipulators());
+			func(GC.getTraitInfo((TraitTypes)i).getPropertyManipulators());
 		}
 	}
 
 	// Handicap
-	func(this, GC.getHandicapInfo(m_pPlayer->getHandicapType()).getPropertyManipulators());
+	func(GC.getHandicapInfo(m_pPlayer->getHandicapType()).getPropertyManipulators());
 }
 
-void CvGameObjectCity::foreachManipulator(bst::function<void(CvGameObject *,CvPropertyManipulators *)> func)
+void CvGameObjectCity::foreachManipulator(ManipCallbackFn func) const
 {
 	// Building manipulators apply to cities
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
@@ -676,7 +666,7 @@ void CvGameObjectCity::foreachManipulator(bst::function<void(CvGameObject *,CvPr
 			//Team Project (5)
 			if (!m_pCity->isReligiouslyDisabledBuilding((BuildingTypes)iI))
 			{
-				func(this, GC.getBuildingInfo((BuildingTypes)iI).getPropertyManipulators());
+				func(GC.getBuildingInfo((BuildingTypes)iI).getPropertyManipulators());
 			}
 		}
 	}
@@ -686,7 +676,7 @@ void CvGameObjectCity::foreachManipulator(bst::function<void(CvGameObject *,CvPr
 	{
 		if (m_pCity->isHasReligion((ReligionTypes)i))
 		{
-			func(this, GC.getReligionInfo((ReligionTypes)i).getPropertyManipulators());
+			func(GC.getReligionInfo((ReligionTypes)i).getPropertyManipulators());
 		}
 	}
 
@@ -695,7 +685,7 @@ void CvGameObjectCity::foreachManipulator(bst::function<void(CvGameObject *,CvPr
 	{
 		if (m_pCity->isHasCorporation((CorporationTypes)i))
 		{
-			func(this, GC.getCorporationInfo((CorporationTypes)i).getPropertyManipulators());
+			func(GC.getCorporationInfo((CorporationTypes)i).getPropertyManipulators());
 		}
 	}
 
@@ -705,60 +695,60 @@ void CvGameObjectCity::foreachManipulator(bst::function<void(CvGameObject *,CvPr
 		int iCount = m_pCity->getSpecialistCount((SpecialistTypes)i) + m_pCity->getFreeSpecialistCount((SpecialistTypes)i);
 		for (int j=0; j<iCount; j++)
 		{
-			func(this, GC.getSpecialistInfo((SpecialistTypes)i).getPropertyManipulators());
+			func(GC.getSpecialistInfo((SpecialistTypes)i).getPropertyManipulators());
 		}
 	}
 }
 
-void CvGameObjectUnit::foreachManipulator(bst::function<void(CvGameObject *,CvPropertyManipulators *)> func)
+void CvGameObjectUnit::foreachManipulator(ManipCallbackFn func) const
 {
 	// Unit Type
-	func(this, m_pUnit->getUnitInfo().getPropertyManipulators());
+	func(m_pUnit->getUnitInfo().getPropertyManipulators());
 
 	// Promotions
 	for (int i=0; i<GC.getNumPromotionInfos(); i++)
 	{
 		if (m_pUnit->isHasPromotion((PromotionTypes)i))
 		{
-			func(this, GC.getPromotionInfo((PromotionTypes)i).getPropertyManipulators());
+			func(GC.getPromotionInfo((PromotionTypes)i).getPropertyManipulators());
 		}
 	}
 }
 
-void CvGameObjectPlot::foreachManipulator(bst::function<void(CvGameObject *,CvPropertyManipulators *)> func)
+void CvGameObjectPlot::foreachManipulator(ManipCallbackFn func) const
 {
 	// Terrain Type
-	func(this, GC.getTerrainInfo(m_pPlot->getTerrainType()).getPropertyManipulators());
+	func(GC.getTerrainInfo(m_pPlot->getTerrainType()).getPropertyManipulators());
 
 	// Feature Type
 //#ifdef MULTI_FEATURE_MOD
 //	for (int i=0; i<m_pPlot->getNumFeatures(); i++)
 //	{
-//		func(this, GC.getFeatureInfo(m_pPlot->getFeatureByIndex(i)).getPropertyManipulators());
+//		func(GC.getFeatureInfo(m_pPlot->getFeatureByIndex(i)).getPropertyManipulators());
 //	}
 //#else
 	if (m_pPlot->getFeatureType() != NO_FEATURE)
 	{
-		func(this, GC.getFeatureInfo(m_pPlot->getFeatureType()).getPropertyManipulators());
+		func(GC.getFeatureInfo(m_pPlot->getFeatureType()).getPropertyManipulators());
 	}
 //#endif
 
 	// Improvement Type
 	if (m_pPlot->getImprovementType() != NO_IMPROVEMENT)
 	{
-		func(this, GC.getImprovementInfo(m_pPlot->getImprovementType()).getPropertyManipulators());
+		func(GC.getImprovementInfo(m_pPlot->getImprovementType()).getPropertyManipulators());
 	}
 
 	// Route Type
 	if (m_pPlot->getRouteType() != NO_ROUTE)
 	{
-		func(this, GC.getRouteInfo(m_pPlot->getRouteType()).getPropertyManipulators());
+		func(GC.getRouteInfo(m_pPlot->getRouteType()).getPropertyManipulators());
 	}
 
 	// Bonus Type
 	if (m_pPlot->getBonusType() != NO_BONUS)
 	{
-		func(this, GC.getBonusInfo(m_pPlot->getBonusType()).getPropertyManipulators());
+		func(GC.getBonusInfo(m_pPlot->getBonusType()).getPropertyManipulators());
 	}
 }
 
