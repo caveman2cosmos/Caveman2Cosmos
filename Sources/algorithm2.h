@@ -106,6 +106,21 @@ namespace algo {
 	DECLARE_OPT_RANGE_ALGO_ARG(bst::range::find, find);
 	DECLARE_OPT_RANGE_ALGO_ARG(bst::range::find_if, find_if);
 
+	// FUNCTION TEMPLATE contains
+	// test if an element exists in a range
+	template< class _Range, class Item_ >
+	bool contains(const _Range& rng, const Item_& item) {
+		typedef typename bst::range_iterator<_Range>::type itr;
+		itr _First = bst::begin(rng),
+			_Last = bst::end(rng);
+		for (; _First != _Last; ++_First) {
+			if (*_First == item) {
+				return true;
+			}
+		}
+		return false;
+	}
+
 	//template< class Range_ >
 	//bst::optional<typename Range_::value_type> max_element(Range_ rng)
 	//{	
