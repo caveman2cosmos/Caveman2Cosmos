@@ -697,7 +697,8 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 	if (!isHuman() || isOption(PLAYEROPTION_AUTO_PROMOTION))
 	{
 		// Copy units as we will be removing and adding some now.
-		foreach_(CvUnit* unit, units_safe() | filtered(CvUnit::is_promotion_ready))
+		foreach_(CvUnit* unit, units_safe() 
+			| filtered(CvUnit::algo::isAutoUpgrading() && CvUnit::algo::isReadyForUpgrade()))
 		{
 			unit->AI_promote();
 			// Upgrade replaces the original unit with a new one, so old unit must be killed
@@ -724,7 +725,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 			{
 				// Find unit with the highest cost upgrade available
 				bst::optional<UnitUpgradeScore> bestUpgrade = algo::max_element(
-					units() | filtered(CvUnit::is_ready_to_auto_upgrade)
+					units() | filtered(CvUnit::algo::isAutoUpgrading() && CvUnit::algo::isReadyForUpgrade())
 							| transformed(MostExpensiveUpgrade(kCivilization))
 				);
 
@@ -755,7 +756,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 				// Find unit with the highest available experience that has an upgrade available
 				CvUnit* pBestUnit = nullptr;
 				int iExperience = -1;
-				foreach_ (CvUnit* unit, units() | filtered(CvUnit::is_ready_to_auto_upgrade))
+				foreach_ (CvUnit* unit, units() | filtered(CvUnit::algo::isAutoUpgrading() && CvUnit::algo::isReadyForUpgrade()))
 				{
 					if (iExperience > unit->getExperience100())
 						continue;
@@ -789,7 +790,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 		else
 		{
 			// Copy units as we will be removing and adding some now.
-			foreach_ (CvUnit* unit, units_safe() | filtered(CvUnit::is_ready_to_auto_upgrade))
+			foreach_ (CvUnit* unit, units_safe() | filtered(CvUnit::algo::isAutoUpgrading() && CvUnit::algo::isReadyForUpgrade()))
 			{
 				unit->AI_upgrade();
 				// Upgrade replaces the original unit with a new one, so old unit must be killed
@@ -15712,13 +15713,16 @@ int CvPlayerAI::AI_unitTargetMissionAIs(CvUnit* pUnit, MissionAITypes* aeMission
 
 	iCount = 0;
 
+	//looks like we're looping through all selection groups of the player
 	for(pLoopSelectionGroup = firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = nextSelectionGroup(&iLoop))
-	{//looks like we're looping through all selection groups of the player
+	{
+		//if the current selection group under evaluation is NOT the one we specified in the parameters then continue
+		//So the group indicated in the parameters is the only one to ignore
 		if (pLoopSelectionGroup != pSkipSelectionGroup)
-		{//if the current selection group under evaluation is NOT the one we specified in the parameters then continue
-			//So the group indicated in the parameters is the only one to ignore 
+		{
+			//if the current selection group under evaluation shares the same target unit as the group indicated in the parameters
 			if (pLoopSelectionGroup->AI_getMissionAIUnit() == pUnit)
-			{//if the current selection group under evaluation shares the same target unit as the group indicated in the parameters
+			{
 				MissionAITypes eGroupMissionAI = pLoopSelectionGroup->AI_getMissionAIType();
 				//eGroupMissionAI is now equal to the current missionAI type of the selection group under evaluation
 				int iPathTurns = MAX_INT;

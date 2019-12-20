@@ -873,6 +873,7 @@ public:
 
 	bool canBuildRoute() const;																						// Exposed to Python
 	DllExport BuildTypes getBuildType() const;														// Exposed to Python
+	ImprovementTypes getBuildTypeImprovement() const;
 
 	bool isAnimal() const;																								// Exposed to Python
 	bool isNoBadGoodies() const;																					// Exposed to Python
@@ -3314,43 +3315,38 @@ private:
 	PlayerTypes m_pPlayerInvestigated;
 
 public:
-	// Boost range helpers
-	// Perhaps these could go somewhere else, but this makes the code quite clear (i.e. what you are filtering or transforming)
+	//
+	// Algorithm/range helpers
+	// Pass these to the filtered/transformed range adapters like:
+	// foreach_(BuildTypes buildType, units() | filtered(!CvUnit::algo::isDead())
+	//										  | transformed(CvUnit::algo::getBuildType())) {}
+	// or algorithms like:
+	// algo::find_if(units(), CvUnit::algo::isAutoUpgrading() && CvUnit::algo::isReadyForUpgrade())
+	//
+	struct algo {
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isDead);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, hasCargo);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, canMove);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, hasMoved);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isAutoUpgrading);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isReadyForUpgrade);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isPromotionReady);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, hasAfflictionLine, PromotionLineTypes);
 
-	// Filters
-	// pass these to the filtered range adaptor like:
-	// foreach_(const CvUnit&, units() | filtered(CvUnit::is_alive)) {}
+		DECLARE_MAP_FUNCTOR(CvUnit, int, getDamage);
+		DECLARE_MAP_FUNCTOR(CvUnit, int, getID);
+		DECLARE_MAP_FUNCTOR(CvUnit, TeamTypes, getTeam);
+		DECLARE_MAP_FUNCTOR(CvUnit, UnitCombatTypes, getUnitCombatType);
 
-	static bool is_dead(const CvUnit* unit) { return unit->isDead(); }
-	static bool is_alive(const CvUnit* unit) { return !unit->isDead(); }
-	static bool can_move(const CvUnit* unit) { return unit->canMove(); }
-	static bool is_ready_to_auto_upgrade(const CvUnit* unit) { return unit->isAutoUpgrading() && unit->isReadyForUpgrade(); }
-	static bool is_promotion_ready(const CvUnit* unit) { return unit->isPromotionReady(); }
-	static bool is_damaged(const CvUnit* unit) { return unit->getDamage() > 0; }
-	static bool has_build_type(const CvUnit* unit) { return unit->getBuildType() != NO_BUILD; }
+		DECLARE_MAP_FUNCTOR(CvUnit, const CvPlot*, plot);
+		DECLARE_MAP_FUNCTOR(CvUnit, BuildTypes, getBuildType);
+		DECLARE_MAP_FUNCTOR(CvUnit, ImprovementTypes, getBuildTypeImprovement);
+		DECLARE_MAP_FUNCTOR(CvUnit, int, getCargo);
+		DECLARE_MAP_FUNCTOR(CvUnit, int, SMgetCargo);
 
-	// These allow filtering by particular values
-	DECLARE_FILTER_FUNCTOR(CvUnit, has_id, getID, int);
-	DECLARE_FILTER_FUNCTOR(CvUnit, on_team, getTeam, TeamTypes);
-	DECLARE_FILTER_FUNCTOR(CvUnit, is_unit_combat_type, getUnitCombatType, UnitCombatTypes);
-	DECLARE_FILTER_FUNCTOR_P(CvUnit, has_affliction_line, hasAfflictionLine, PromotionLineTypes);
-
-	// Transforms
-	// pass these to the transformed range adaptor like:
-	// foreach_(const CvPlot&, units() | transformed(plot)) {}
-
-	static const CvPlot* plot(const CvUnit* unit) { return unit->plot(); }
-	static CvPlot* plot(CvUnit* unit) { return unit->plot(); }
-	static BuildTypes build_type(const CvUnit* unit) { return unit->getBuildType(); }
-
-	static ImprovementTypes improvement_type(const CvUnit* unit) {
-		const BuildTypes buildType = unit->getBuildType();
-		if (buildType == NO_BUILD) return NO_IMPROVEMENT;
-		return static_cast<ImprovementTypes>(GC.getBuildInfo(buildType).getImprovement());
-	}
-
-	DECLARE_TRANSFORM_FUNCTOR_1(CvUnit, prob_inflict, int, worsenedProbabilitytoAfflict, PromotionLineTypes);
-	DECLARE_TRANSFORM_FUNCTOR_1(CvUnit, aid_total, int, aidTotal, PropertyTypes);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, int, worsenedProbabilitytoAfflict, PromotionLineTypes);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, int, aidTotal, PropertyTypes);
+	};
 };
 
 typedef std::vector<CvUnit*> UnitVector;

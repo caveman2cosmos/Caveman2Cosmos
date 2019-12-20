@@ -108,10 +108,9 @@ public:
 
 	DllExport bool _canAllMove();
 	bool canAllMove() const; // Exposed to Python
-
-	bool canAnyMove(bool bValidate = false) /* not const - Can set ACTIVITY_SLEEP if bValidate is true */;																																									// Exposed to Python
+	bool canAnyMove(bool bValidate = false) /* not const - Can set ACTIVITY_SLEEP if bValidate is true */; // Exposed to Python
 	bool hasMoved() const;																																										// Exposed to Python
-	bool canEnterTerritory(TeamTypes eTeam, bool bIgnoreRightOfPassage = false) const;									// Exposed to Python
+	bool canEnterTerritory(TeamTypes eTeam, bool bIgnoreRightOfPassage = false) const; // Exposed to Python
 	bool canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage = false) const;									// Exposed to Python
 
 	DllExport bool _canMoveInto(CvPlot* pPlot, bool bAttack = false);
