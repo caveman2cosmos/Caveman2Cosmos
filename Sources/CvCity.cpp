@@ -25870,7 +25870,7 @@ void CvCity::doHeal()
 		// Get the damaged units on our team
 		algo::push_back(
 			damagedUnits, 
-			plot()->units() | filtered(CvUnit::algo::getTeam() == getTeam() && CvUnit::algo::getDamage() > 0)
+			plot()->units() | filtered(CvUnit::fn::getTeam() == getTeam() && CvUnit::fn::getDamage() > 0)
 		);
 		// Randomize them
 		algo::random_shuffle(damagedUnits, CvGame::SorenRand("Unit Full Heals"));
@@ -27319,8 +27319,8 @@ int CvCity::getUnitAidPresent(PropertyTypes eProperty) const
 	PROFILE_FUNC();
 
 	return algo::max_element(
-		plot()->units() | filtered(CvUnit::algo::getTeam() == getTeam())
-						| transformed(CvUnit::algo::aidTotal(eProperty))
+		plot()->units() | filtered(CvUnit::fn::getTeam() == getTeam())
+						| transformed(CvUnit::fn::aidTotal(eProperty))
 	).get_value_or(0);
 }
 
@@ -27527,8 +27527,8 @@ int CvCity::getUnitCommunicability(PromotionLineTypes eAfflictionLine) const
 
 	// Find unit with the highest probability to afflict
 	bst::optional<int> worstAffliction = algo::max_element(
-		plot()->units() | filtered(CvUnit::algo::hasAfflictionLine(eAfflictionLine))
-						| transformed(CvUnit::algo::worsenedProbabilitytoAfflict(eAfflictionLine))
+		plot()->units() | filtered(CvUnit::fn::hasAfflictionLine(eAfflictionLine))
+						| transformed(CvUnit::fn::worsenedProbabilitytoAfflict(eAfflictionLine))
 	);
 
 	if (worstAffliction)

@@ -149,13 +149,13 @@ namespace detail {
 // };
 // 
 // Results in usage like: 
-//   CvUnit::algo::getID()
+//   CvUnit::fn::getID()
 //
 // The functors generated can be combined using comparison and boolean operators
 // defined above like so:
-//   CvUnit::algo::getID() == 1 && CvUnit::algo::getTeam() != NO_TEAM
+//   CvUnit::fn::getID() == 1 && CvUnit::fn::getTeam() != NO_TEAM
 // or
-//   CvUnit::algo::getDamage() < CvUnit::algo::getHealth()
+//   CvUnit::fn::getDamage() < CvUnit::fn::getHealth()
 // 
 #define DECLARE_MAP_FUNCTOR(obj_type_, result_type_, mem_fn_) \
 	struct mem_fn_ : detail::algo_functor<const obj_type_*, result_type_, mem_fn_> { \

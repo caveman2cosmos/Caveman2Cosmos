@@ -698,7 +698,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 	{
 		// Copy units as we will be removing and adding some now.
 		foreach_(CvUnit* unit, units_safe() 
-			| filtered(CvUnit::algo::isAutoUpgrading() && CvUnit::algo::isReadyForUpgrade()))
+			| filtered(CvUnit::fn::isAutoUpgrading() && CvUnit::fn::isReadyForUpgrade()))
 		{
 			unit->AI_promote();
 			// Upgrade replaces the original unit with a new one, so old unit must be killed
@@ -725,7 +725,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 			{
 				// Find unit with the highest cost upgrade available
 				bst::optional<UnitUpgradeScore> bestUpgrade = algo::max_element(
-					units() | filtered(CvUnit::algo::isAutoUpgrading() && CvUnit::algo::isReadyForUpgrade())
+					units() | filtered(CvUnit::fn::isAutoUpgrading() && CvUnit::fn::isReadyForUpgrade())
 							| transformed(MostExpensiveUpgrade(kCivilization))
 				);
 
@@ -756,7 +756,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 				// Find unit with the highest available experience that has an upgrade available
 				CvUnit* pBestUnit = nullptr;
 				int iExperience = -1;
-				foreach_ (CvUnit* unit, units() | filtered(CvUnit::algo::isAutoUpgrading() && CvUnit::algo::isReadyForUpgrade()))
+				foreach_ (CvUnit* unit, units() | filtered(CvUnit::fn::isAutoUpgrading() && CvUnit::fn::isReadyForUpgrade()))
 				{
 					if (iExperience > unit->getExperience100())
 						continue;
@@ -790,7 +790,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 		else
 		{
 			// Copy units as we will be removing and adding some now.
-			foreach_ (CvUnit* unit, units_safe() | filtered(CvUnit::algo::isAutoUpgrading() && CvUnit::algo::isReadyForUpgrade()))
+			foreach_ (CvUnit* unit, units_safe() | filtered(CvUnit::fn::isAutoUpgrading() && CvUnit::fn::isReadyForUpgrade()))
 			{
 				unit->AI_upgrade();
 				// Upgrade replaces the original unit with a new one, so old unit must be killed
@@ -15707,52 +15707,48 @@ int CvPlayerAI::AI_unitTargetMissionAIs(CvUnit* pUnit, MissionAITypes* aeMission
 {
 	PROFILE_FUNC();
 
-	CvSelectionGroup* pLoopSelectionGroup;
-	int iCount;
-	int iLoop;
+	int iCount = 0;
 
-	iCount = 0;
-
-	//looks like we're looping through all selection groups of the player
-	for(pLoopSelectionGroup = firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = nextSelectionGroup(&iLoop))
+	foreach_(CvSelectionGroup* group, groups())
 	{
-		//if the current selection group under evaluation is NOT the one we specified in the parameters then continue
-		//So the group indicated in the parameters is the only one to ignore
-		if (pLoopSelectionGroup != pSkipSelectionGroup)
+		if (group == pSkipSelectionGroup 
+			|| group->AI_getMissionAIUnit() != pUnit)
 		{
-			//if the current selection group under evaluation shares the same target unit as the group indicated in the parameters
-			if (pLoopSelectionGroup->AI_getMissionAIUnit() == pUnit)
-			{
-				MissionAITypes eGroupMissionAI = pLoopSelectionGroup->AI_getMissionAIType();
-				//eGroupMissionAI is now equal to the current missionAI type of the selection group under evaluation
-				int iPathTurns = MAX_INT;
+			continue;
+		}
 
-				if( iMaxPathTurns >= 0 && (pUnit->plot() != NULL) && (pLoopSelectionGroup->plot() != NULL))
+		
+		int iPathTurns = MAX_INT;
+
+		if( iMaxPathTurns >= 0 && pUnit->plot() != NULL && group->plot() != NULL)
+		{
+			// Determined the number of turns to reach the target unit
+			group->generatePath(group->plot(), pUnit->plot(), 0, false, &iPathTurns);
+
+			if(!group->canAllMove())
+			{
+				iPathTurns++;
+			}
+		}
+
+		// If the mission parameters state any amount of movement is ok or the amount of movement allowed is valid
+		if (iMaxPathTurns == -1 || iPathTurns <= iMaxPathTurns)
+		{
+			const MissionAITypes eGroupMissionAI = group->AI_getMissionAIType();
+
+			for (int iMissionAIIndex = 0; iMissionAIIndex < iMissionAICount; iMissionAIIndex++)
+			{
+				//it looks like we're cycling through a predefined array (in one case we're matching to any one of
+				//4 possible missions: MISSIONAI_LOAD_ASSAULT, MISSIONAI_LOAD_SETTLER, MISSIONAI_LOAD_SPECIAL, MISSIONAI_ATTACK_SPY
+				if (eGroupMissionAI == aeMissionAI[iMissionAIIndex] || NO_MISSIONAI == aeMissionAI[iMissionAIIndex])
 				{
-					pLoopSelectionGroup->generatePath(pLoopSelectionGroup->plot(), pUnit->plot(), 0, false, &iPathTurns);
-					if( !(pLoopSelectionGroup->canAllMove()) )
+					if (!bCargo)
 					{
-						iPathTurns++;
+						iCount += group->getNumUnits();
 					}
-				}
-				//Looks like we've determined the number of turns to reach the target unit
-				if ((iMaxPathTurns == -1) || (iPathTurns <= iMaxPathTurns))
-				{//if the mission parameters state any amount of movement is ok or the amount of movement allowed is valid
-					for (int iMissionAIIndex = 0; iMissionAIIndex < iMissionAICount; iMissionAIIndex++)
-					{//looping through all iMissionAIs in the Index
-						//it looks like we're cycling through a predefined array (in one case we're matching to any one of
-						//4 possible missions: MISSIONAI_LOAD_ASSAULT, MISSIONAI_LOAD_SETTLER, MISSIONAI_LOAD_SPECIAL, MISSIONAI_ATTACK_SPY
-						if (eGroupMissionAI == aeMissionAI[iMissionAIIndex] || NO_MISSIONAI == aeMissionAI[iMissionAIIndex])
-						{
-							if (!bCargo)
-							{
-								iCount += pLoopSelectionGroup->getNumUnits();
-							}
-							else
-							{
-								iCount += pLoopSelectionGroup->getNumUnitCargoVolumeTotal();
-							}
-						}
+					else
+					{
+						iCount += group->getNumUnitCargoVolumeTotal();
 					}
 				}
 			}

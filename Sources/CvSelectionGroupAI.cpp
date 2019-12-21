@@ -249,7 +249,7 @@ bool CvSelectionGroupAI::AI_update()
 		// if we not group attacking, then check for follow action
 		if (!m_bGroupAttack)
 		{
-			foreach_ (CvUnit* unit, units() | filtered(CvUnit::algo::canMove()))
+			foreach_ (CvUnit* unit, units() | filtered(CvUnit::fn::canMove()))
 			{
 				if (!readyToMove(true))
 					break;
@@ -893,7 +893,7 @@ int CvSelectionGroupAI::AI_sumStrength(const CvPlot* pAttackedPlot, DomainTypes 
 
 	const int iNumPotentialDefenders = pAttackedPlot->getNumVisiblePotentialEnemyDefenders(getHeadUnit()) - 1;
 
-	foreach_ (const CvUnit* unit, units() | filtered(!CvUnit::algo::isDead()))
+	foreach_ (const CvUnit* unit, units() | filtered(!CvUnit::fn::isDead()))
 	{
 		if ((
 				!bCheckCanAttack

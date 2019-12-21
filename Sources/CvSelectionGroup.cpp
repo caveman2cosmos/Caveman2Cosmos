@@ -3992,7 +3992,7 @@ bool CvSelectionGroup::isFull() const
 
 bool CvSelectionGroup::hasCargo() const
 {
-	return algo::any_of(units(), CvUnit::algo::hasCargo());
+	return algo::any_of(units(), CvUnit::fn::hasCargo());
 }
 
 //Call for volume when you want the total cargo volume held by the group
@@ -4000,11 +4000,11 @@ int CvSelectionGroup::getCargo(bool bVolume) const
 {
 	if (bVolume && GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		return algo::accumulate(units() | transformed(CvUnit::algo::SMgetCargo()), 0);
+		return algo::accumulate(units() | transformed(CvUnit::fn::SMgetCargo()), 0);
 	}
 	else
 	{
-		return algo::accumulate(units() | transformed(CvUnit::algo::getCargo()), 0);
+		return algo::accumulate(units() | transformed(CvUnit::fn::getCargo()), 0);
 	}
 }
 
@@ -4016,7 +4016,7 @@ bool CvSelectionGroup::_canAllMove()
 bool CvSelectionGroup::canAllMove() const
 {
 	return getNumUnits() > 0 
-		&& algo::all_of(units(), CvUnit::algo::canMove());
+		&& algo::all_of(units(), CvUnit::fn::canMove());
 }
 
 
@@ -4024,11 +4024,11 @@ bool CvSelectionGroup::canAnyMove(bool bValidate)
 {
 	if (!bValidate)
 	{
-		return algo::any_of(units(), CvUnit::algo::canMove());
+		return algo::any_of(units(), CvUnit::fn::canMove());
 	}
 	else
 	{
-		const int canMoveCount = algo::count_if(units(), CvUnit::algo::canMove());
+		const int canMoveCount = algo::count_if(units(), CvUnit::fn::canMove());
 		if (canMoveCount > 0 
 			&& canMoveCount < getNumUnits() 
 			&& !isBusy()
@@ -4046,7 +4046,7 @@ bool CvSelectionGroup::canAnyMove(bool bValidate)
 
 bool CvSelectionGroup::hasMoved() const
 {
-	return algo::any_of(units(), CvUnit::algo::hasMoved());
+	return algo::any_of(units(), CvUnit::fn::hasMoved());
 }
 
 

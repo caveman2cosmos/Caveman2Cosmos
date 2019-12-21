@@ -5787,8 +5787,8 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 							if (kBuilding.getUnitCombatExtraStrength(iI) != 0)
 							{
 								const int iValidUnitCount = algo::count_all(
-									plot()->units() | filtered(CvUnit::algo::getTeam() == getTeam())
-													| filtered(CvUnit::algo::getUnitCombatType() == combatType)
+									plot()->units() | filtered(CvUnit::fn::getTeam() == getTeam())
+													| filtered(CvUnit::fn::getUnitCombatType() == combatType)
 								);
 								iValue += iValidUnitCount * kBuilding.getUnitCombatExtraStrength(iI) / 6;
 							}
@@ -9033,8 +9033,8 @@ int CvCityAI::AI_getGoodTileCount()
 						// This check is necessary to stop oscillation which can result
 						// when best build changes food situation for city, changing the best build.
 						eBuild = scoring::min_score(
-							pLoopPlot->units() | filtered(CvUnit::algo::getBuildType() != NO_BUILD)
-											   | transformed(CvUnit::algo::getBuildType()),
+							pLoopPlot->units() | filtered(CvUnit::fn::getBuildType() != NO_BUILD)
+											   | transformed(CvUnit::fn::getBuildType()),
 							bind(score_build_type, _1, pLoopPlot)
 						).get_value_or(NO_BUILD);
 					}
@@ -9270,8 +9270,8 @@ void CvCityAI::AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMul
 						// This check is necessary to stop oscillation which can result
 						// when best build changes food situation for city.
 						eBuild = scoring::min_score(pLoopPlot->units()
-							| filtered(CvUnit::algo::getBuildType() != NO_BUILD)
-							| transformed(CvUnit::algo::getBuildType()),
+							| filtered(CvUnit::fn::getBuildType() != NO_BUILD)
+							| transformed(CvUnit::fn::getBuildType()),
 							bst::bind(score_build_type, _1, pLoopPlot)
 						).get_value_or(NO_BUILD);
 					}
@@ -9547,7 +9547,7 @@ int CvCityAI::AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImproveme
 	else
 	{
 		eBestTempBuild = algo::find_if(
-			pPlot->units() | transformed(CvUnit::algo::getBuildType()),
+			pPlot->units() | transformed(CvUnit::fn::getBuildType()),
 			BuildsImprovement(eImprovement)
 		).get_value_or(NO_BUILD);
 		
@@ -10054,8 +10054,8 @@ void CvCityAI::AI_updateBestBuild()
 						// This check is necessary to stop oscillation which can result
 						// when best build changes food situation for city, changing the best build.
 						eBuild = scoring::min_score(pLoopPlot->units()
-							| filtered(CvUnit::algo::getBuildType() != NO_BUILD)
-							| transformed(CvUnit::algo::getBuildType()),
+							| filtered(CvUnit::fn::getBuildType() != NO_BUILD)
+							| transformed(CvUnit::fn::getBuildType()),
 							bst::bind(score_build_type, _1, pLoopPlot)
 						).get_value_or(NO_BUILD);
 					}
@@ -13445,7 +13445,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 
 	//If a worker is already building a build, force that Build.
 	BuildTypes eForcedBuild = algo::find_if(
-		pPlot->units() | transformed(CvUnit::algo::getBuildType()),
+		pPlot->units() | transformed(CvUnit::fn::getBuildType()),
 		BuildsAnyImprovement()
 	).get_value_or(NO_BUILD);
 

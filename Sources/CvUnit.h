@@ -3318,12 +3318,12 @@ public:
 	//
 	// Algorithm/range helpers
 	// Pass these to the filtered/transformed range adapters like:
-	// foreach_(BuildTypes buildType, units() | filtered(!CvUnit::algo::isDead())
-	//										  | transformed(CvUnit::algo::getBuildType())) {}
+	// foreach_(BuildTypes buildType, units() | filtered(!CvUnit::fn::isDead())
+	//										  | transformed(CvUnit::fn::getBuildType())) {}
 	// or algorithms like:
-	// algo::find_if(units(), CvUnit::algo::isAutoUpgrading() && CvUnit::algo::isReadyForUpgrade())
+	// fn::find_if(units(), CvUnit::fn::isAutoUpgrading() && CvUnit::fn::isReadyForUpgrade())
 	//
-	struct algo {
+	struct fn {
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isDead);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, hasCargo);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, canMove);

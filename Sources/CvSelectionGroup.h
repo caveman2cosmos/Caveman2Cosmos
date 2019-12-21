@@ -458,6 +458,22 @@ public:
 
 	bool HaveCachedPathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int& iResult, int& iBestMoveCost, int& iWorstMoveCost, int &iToPlotNodeCost) const;
 	void CachePathEdgeCosts(CvPlot* pFromPlot, CvPlot* pToPlot, bool bIsEndTurnElement, int iCost, int iBestMoveCost, int iWorstMoveCost, int iToPlotNodeCost) const;
+
+public:
+	//
+	// Algorithm/range helpers
+	// Pass these to the filtered/transformed range adapters like:
+	// foreach_(CvUnit* headUnit, groups() | transformed(CvSelectionGroup::fn::getHeadUnit())
+	//									   | filtered(_1 != nullptr)) {}
+	// or algorithms like:
+	// fn::find_if(groups(), CvSelectionGroup::fn::getHeadUnitAI() != UNITAI_SETTLER)
+	//
+	struct fn {
+		DECLARE_MAP_FUNCTOR(CvSelectionGroup, CvUnit*, getHeadUnit);
+		DECLARE_MAP_FUNCTOR(CvSelectionGroup, UnitAITypes, getHeadUnitAI);
+		DECLARE_MAP_FUNCTOR(CvSelectionGroup, PlayerTypes, getHeadOwner);
+		DECLARE_MAP_FUNCTOR(CvSelectionGroup, TeamTypes, getHeadTeam);
+	};
 };
 
 #endif
