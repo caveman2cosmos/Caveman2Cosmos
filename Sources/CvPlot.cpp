@@ -839,12 +839,12 @@ void CvPlot::doImprovementSpawn()
 	// XXX
 #ifdef _DEBUG
 	{
-		for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
+		foreach_ (CvUnit* unit, units())
 		{
-			FAssertMsg(unitItr->atPlot(this), "pLoopUnit is expected to be at the current plot instance");
-			if (!unitItr->atPlot(this))
+			FAssertMsg(unit->atPlot(this), "pLoopUnit is expected to be at the current plot instance");
+			if (!unit->atPlot(this))
 			{
-				removeUnit(*unitItr);
+				removeUnit(unit);
 			}
 		}
 	}
@@ -1292,15 +1292,7 @@ void CvPlot::updateMinimapColor()
 
 bool CvPlot::unitHere(const CvUnit* pUnit) const
 {
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		if (*unitItr == pUnit)
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return algo::contains(units(), pUnit);
 }
 
 CvUnit* CvPlot::getPreferredCenterUnit() const
@@ -4085,21 +4077,23 @@ CvUnit* CvPlot::getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer
 	}
 
 	int iBestValue = 0;
-	CvUnit* pBestUnit = NULL;
+	CvUnit* pBestUnit = nullptr;
 
-	for (unit_iterator unit = beginUnits(); unit != endUnits(); ++unit)
+	// Can't use this as it requires more than 9 args, and bind only supports 9
+	//CvUnit* pBestUnit = scoring::max_score(units(), 
+	//	bst::bind(&CvSelectionGroup::getDefenderScore, this, _1, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, bAssassinate, bClearCache ? ECacheAccess::Write : ECacheAccess::ReadWrite)
+	//).get_value_or(nullptr);
+
+	foreach_ (CvUnit* unit, units())
 	{
-		CvUnit* pLoopUnit = *unit;
-
-		int iValue = getDefenderScore(this, pLoopUnit, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, bAssassinate, bClearCache ? ECacheAccess::Write : ECacheAccess::ReadWrite);
+		int iValue = getDefenderScore(this, unit, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, bAssassinate, bClearCache ? ECacheAccess::Write : ECacheAccess::ReadWrite);
 
 		if (iValue > iBestValue)
 		{
-			pBestUnit = pLoopUnit;
+			pBestUnit = unit;
 			iBestValue = iValue;
 		}
 	}
-
 
 	return pBestUnit;
 }
@@ -5364,23 +5358,23 @@ bool CvPlot::isTeamBorderCache( TeamTypes eTeam ) const
 	return m_abIsTeamBorderCache[eTeam];
 }
 
-void CvPlot::setIsActivePlayerNoDangerCache( bool bNewValue )
+void CvPlot::setIsActivePlayerNoDangerCache( bool bNewValue ) const
 {
 	m_bIsActivePlayerNoDangerCache = bNewValue;
 }
 
-void CvPlot::setIsActivePlayerHasDangerCache( bool bNewValue )
+void CvPlot::setIsActivePlayerHasDangerCache( bool bNewValue ) const
 {
 	m_bIsActivePlayerHasDangerCache = bNewValue;
 }
 
-void CvPlot::setIsTeamBorderCache( TeamTypes eTeam, bool bNewValue )
+void CvPlot::setIsTeamBorderCache( TeamTypes eTeam, bool bNewValue ) const
 {
 	PROFILE_FUNC();
 	m_abIsTeamBorderCache[eTeam] = bNewValue;
 }
 
-void CvPlot::invalidateIsTeamBorderCache()
+void CvPlot::invalidateIsTeamBorderCache() const
 {
 	PROFILE_FUNC();
 
@@ -10679,7 +10673,7 @@ int CvPlot::getVisibilityCount(TeamTypes eTeam) const
 	return m_aiVisibilityCount[eTeam];
 }
 
-int CvPlot::getDangerCount(int /*PlayerTypes*/ ePlayer)
+int CvPlot::getDangerCount(int /*PlayerTypes*/ ePlayer) const
 {
 	FAssertMsg(ePlayer >= 0, "ePlayer is expected to be non-negative (invalid Index)");
 	FAssertMsg(ePlayer < MAX_PLAYERS, "ePlayer is expected to be within maximum bounds (invalid Index)");
@@ -16845,3 +16839,8 @@ CvUnit* CvPlot::unit_iterator::resolve(const IDInfo& info) const
 {
 	return ::getUnit(info);
 }
+
+//CvPlot::const_unit_iterator::value_type* CvPlot::const_unit_iterator::resolve(const IDInfo& info) const
+//{
+//	return ::getUnit(info);
+//}

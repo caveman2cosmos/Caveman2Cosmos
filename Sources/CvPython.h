@@ -3,8 +3,8 @@
 #ifndef CvPython_h__
 #define CvPython_h__
 
-#include <boost/type_traits.hpp>
-#include <boost/utility/enable_if.hpp>
+#include <boost155/type_traits.hpp>
+#include <boost155/utility/enable_if.hpp>
 
 #include "FAssert.h"
 #include "CvGlobals.h"

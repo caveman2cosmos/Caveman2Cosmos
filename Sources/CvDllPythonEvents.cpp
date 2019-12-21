@@ -1,7 +1,7 @@
 #include "CvGameCoreDLL.h"
 
-#include <boost/functional.hpp>
-#include <boost/bind.hpp>
+#include <boost155/functional.hpp>
+#include <boost155/bind.hpp>
 
 
 namespace logging {

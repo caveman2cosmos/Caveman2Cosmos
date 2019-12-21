@@ -6,8 +6,8 @@ PUSHD "%~dp0"
 echo Checking dependencies...
 :: We use a text file in the deps folder with the version in the name to decide if deps are up to date
 if exist "..\Build\deps" (
-    if not exist "..\Build\deps\deps.v3.txt" (
-        echo Dependencies outdated, updating to v3!
+    if not exist "..\Build\deps\deps.v4.txt" (
+        echo Dependencies outdated, updating to v4!
         echo Deleting Caveman2Cosmos DLL dependencies, please wait for the process to complete...
         rmdir /Q /S "..\Build\deps"
 

@@ -296,7 +296,7 @@ void callInstantiateManipulators(CvGameObject* pObject, CvPropertyManipulators* 
 void callInstantiateGlobalManipulators(CvGameObject* pObject, CvPropertySolver* pSolver)
 {
 	pSolver->instantiateGlobalManipulators(pObject);
-	pObject->foreachManipulator(bst::bind(callInstantiateManipulators, _1, _2, pSolver));
+	pObject->foreachManipulator(bst::bind(callInstantiateManipulators, pObject, _1, pSolver));
 }
 
 void CvPropertySolver::gatherActiveManipulators()

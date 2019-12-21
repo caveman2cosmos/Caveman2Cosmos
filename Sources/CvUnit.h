@@ -457,9 +457,13 @@ public:
 	CvUnit(bool bIsDummy = false);
 	virtual ~CvUnit();
 
+	CvGameObjectUnit* getGameObject() { return &m_GameObject; }
+	const CvGameObjectUnit* getGameObject() const { return &m_GameObject; }
 
-	CvGameObjectUnit* getGameObject() {return &m_GameObject;};
-	const CvGameObjectUnit* getGameObjectConst() const {return (const CvGameObjectUnit*)&m_GameObject;};
+	// Comparison operators
+	// Use address identity for now (more than one map means x/y compare wouldn't work)
+	friend bool operator==(const CvUnit& lhs, const CvUnit& rhs) { return &lhs == &rhs; }
+	friend bool operator!=(const CvUnit& lhs, const CvUnit& rhs) { return &lhs != &rhs; }
 
 protected:
 	CvGameObjectUnit m_GameObject;
@@ -2555,7 +2559,7 @@ public:
 	void setPromotionFreeCount(PromotionTypes ePromotion, int iChange);
 	void checkFreetoCombatClass();
 	//TB Combat Mods end
-	bool meetsUnitSelectionCriteria(CvUnitSelectionCriteria* criteria) const;
+	bool meetsUnitSelectionCriteria(const CvUnitSelectionCriteria* criteria) const;
 	bool shouldUseWithdrawalOddsCap() const;
 	bool isPursuitinUse() const;
 	bool canSwitchEquipment(PromotionTypes eEquipment) const;
@@ -2686,7 +2690,7 @@ public:
 	void changeAfflictOnAttackTypeAttemptedCount(PromotionLineTypes ePromotionLineType, int iChange);
 	void setAfflictOnAttackTypeAttemptedCount(PromotionLineTypes ePromotionLineType, int iChange);
 
-	int worsenedProbabilitytoAfflict(PromotionLineTypes eAfflictionLine);
+	int worsenedProbabilitytoAfflict(PromotionLineTypes eAfflictionLine) const;
 
 	bool hasHealUnitCombat() const;
 	int getHealUnitCombatCount() const;
@@ -3308,10 +3312,52 @@ private:
 	std::vector<AidStruct> m_aExtraAidChanges;
 
 	PlayerTypes m_pPlayerInvestigated;
+
+public:
+	// Boost range helpers
+	// Perhaps these could go somewhere else, but this makes the code quite clear (i.e. what you are filtering or transforming)
+
+	// Filters
+	// pass these to the filtered range adaptor like:
+	// foreach_(const CvUnit&, units() | filtered(CvUnit::is_alive)) {}
+
+	static bool is_dead(const CvUnit* unit) { return unit->isDead(); }
+	static bool is_alive(const CvUnit* unit) { return !unit->isDead(); }
+	static bool can_move(const CvUnit* unit) { return unit->canMove(); }
+	static bool is_ready_to_auto_upgrade(const CvUnit* unit) { return unit->isAutoUpgrading() && unit->isReadyForUpgrade(); }
+	static bool is_promotion_ready(const CvUnit* unit) { return unit->isPromotionReady(); }
+	static bool is_damaged(const CvUnit* unit) { return unit->getDamage() > 0; }
+	static bool has_build_type(const CvUnit* unit) { return unit->getBuildType() != NO_BUILD; }
+
+	// These allow filtering by particular values
+	DECLARE_FILTER_FUNCTOR(CvUnit, has_id, getID, int);
+	DECLARE_FILTER_FUNCTOR(CvUnit, on_team, getTeam, TeamTypes);
+	DECLARE_FILTER_FUNCTOR(CvUnit, is_unit_combat_type, getUnitCombatType, UnitCombatTypes);
+	DECLARE_FILTER_FUNCTOR_P(CvUnit, has_affliction_line, hasAfflictionLine, PromotionLineTypes);
+
+	// Transforms
+	// pass these to the transformed range adaptor like:
+	// foreach_(const CvPlot&, units() | transformed(plot)) {}
+
+	static const CvPlot* plot(const CvUnit* unit) { return unit->plot(); }
+	static CvPlot* plot(CvUnit* unit) { return unit->plot(); }
+	static BuildTypes build_type(const CvUnit* unit) { return unit->getBuildType(); }
+
+	static ImprovementTypes improvement_type(const CvUnit* unit) {
+		const BuildTypes buildType = unit->getBuildType();
+		if (buildType == NO_BUILD) return NO_IMPROVEMENT;
+		return static_cast<ImprovementTypes>(GC.getBuildInfo(buildType).getImprovement());
+	}
+
+	DECLARE_TRANSFORM_FUNCTOR_1(CvUnit, prob_inflict, int, worsenedProbabilitytoAfflict, PromotionLineTypes);
+	DECLARE_TRANSFORM_FUNCTOR_1(CvUnit, aid_total, int, aidTotal, PropertyTypes);
 };
 
 typedef std::vector<CvUnit*> UnitVector;
 typedef std::vector<const CvUnit*> ConstUnitVector;
-typedef copy_iterator<CvUnit*, CvUnit*> safe_unit_iterator;
+
+// Safe unit iterators (they copy the whole range before iterating, but this is just copying pointers so not a big deal in most cases
+// However it shouldn't be used in inner loops
+typedef copy_iterator<CvUnit> safe_unit_iterator;
 
 #endif

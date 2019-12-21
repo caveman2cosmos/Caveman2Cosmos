@@ -14549,3 +14549,8 @@ void CvGame::changeImprovementCount(ImprovementTypes eIndex, int iChange)
 	m_paiImprovementCount[eIndex] = (m_paiImprovementCount[eIndex] + iChange);
 	FAssert(getImprovementCount(eIndex) >= 0);
 }
+
+int CvGame::SorenRand::operator()(const int maxVal) const
+{
+	return GC.getGameINLINE().getSorenRandNum(maxVal, logMsg);
+}
