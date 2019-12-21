@@ -625,8 +625,6 @@ public:
 /************************************************************************************************/
 	int getPEAK_EXTRA_DEFENSE();
 	int getPEAK_EXTRA_MOVEMENT();
-
-	bool isFormationsMod() const;
 	
 	int iStuckUnitID;
 	int iStuckUnitCount;
@@ -638,8 +636,6 @@ public:
 	void setXMLLogging(bool bNewVal);
 	
 	void updateReplacements();
-	
-	const wchar* parseDenialHover(DenialTypes eDenial);
 	
 	int getSCORE_FREE_PERCENT();
 	int getSCORE_POPULATION_FACTOR();
@@ -1372,10 +1368,6 @@ public:
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
 
-	/**** Dexy - Dark Ages START ****/
-	const wchar* getRankingTextKeyWide(RankingTypes eRanking) const;
-	/**** Dexy - Dark Ages  END  ****/
-
 protected:
 
 	bool m_bGraphicsInitialized;
@@ -1795,7 +1787,6 @@ protected:
 /************************************************************************************************/
 	int m_iPEAK_EXTRA_DEFENSE;
 	int m_iPEAK_EXTRA_MOVEMENT;
-	bool m_bFormationsMod;
 	bool m_bXMLLogging;
 	bool m_bLoadedPlayerOptions;
 	
@@ -3869,23 +3860,6 @@ inline CvGlobals& CvGlobals::getInstance()
 
 #ifndef FIXED_MISSION_NUMBER
 #define NUM_MISSION_TYPES (GC.getNumMissionInfos())
-#endif
-
-
-
-/************************************************************************************************/
-/* ADVANCED COMBAT ODDS                      17/02/09                          PieceOfMind      */
-/*                                                                                              */
-/************************************************************************************************/
-
-#ifndef ADVANCED_COMBAT_ODDS_H
-#define ADVANCED_COMBAT_ODDS_H
-
-#define ACO_DETAIL_LOW          0
-#define ACO_DETAIL_MEDIUM       1
-#define ACO_DETAIL_HIGH         2
-#define ACO_DETAIL_EVERYTHING   3
-
 #endif
 
 #endif

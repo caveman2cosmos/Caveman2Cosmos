@@ -5,12 +5,10 @@
 
 CyCity::CyCity() : m_pCity(NULL)
 {
-
 }
 
 CyCity::CyCity(CvCity* pCity) : m_pCity(pCity)
 {
-
 }
 
 void CyCity::kill()
@@ -26,10 +24,7 @@ void CyCity::kill()
 /************************************************************************************************/
 int CyCity::getRevolutionIndex()
 {
-	if( m_pCity )
-		return m_pCity->getRevolutionIndex();
-	else
-		return 0;
+	return m_pCity ? m_pCity->getRevolutionIndex() : 0;
 }
 
 void CyCity::setRevolutionIndex( int iNewValue )
@@ -122,70 +117,6 @@ void CyCity::changeRevolutionCounter( int iChange )
 {
 	if( m_pCity )
 		m_pCity->changeRevolutionCounter( iChange );
-}
-
-int CyCity::getRevIndexHappinessVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexHappinessVal();
-	else
-		return 0;
-}
-
-int CyCity::getRevIndexDistanceVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexDistanceVal();
-	else
-		return 0;
-}
-
-int CyCity::getRevIndexColonyVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexColonyVal();
-	else
-		return 0;
-}
-
-int CyCity::getRevIndexReligionVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexReligionVal();
-	else
-		return 0;
-}
-
-int CyCity::getRevIndexNationalityVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexNationalityVal();
-	else
-		return 0;
-}
-
-int CyCity::getRevIndexHealthVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexHealthVal();
-	else
-		return 0;
-}
-
-int CyCity::getRevIndexGarrisonVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexGarrisonVal();
-	else
-		return 0;
-}
-
-int CyCity::getRevIndexDisorderVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexDisorderVal();
-	else
-		return 0;
 }
 
 bool CyCity::isRecentlyAcquired()

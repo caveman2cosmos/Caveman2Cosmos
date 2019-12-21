@@ -967,16 +967,15 @@ protected:
 	void doTurn();
 	void doDeals();
 	void doSpawns(PlayerTypes ePlayer);
+#ifdef GLOBAL_WARMING
 	void doGlobalWarming();
-	void doHolyCity();
+#endif
 /************************************************************************************************/
 /* RevDCM	                  Start		09/08/10                                                */
 /*                                                                                              */
 /* OC_LIMITED_RELIGIONS                                                                         */
 /************************************************************************************************/
 	void checkGameStart();
-	void doHolyCityGameStart();
-	void doHolyCityPlayer(TeamTypes eTeam, ReligionTypes eReligion);
 /************************************************************************************************/
 /* REVDCM                                  END                                                  */
 /************************************************************************************************/

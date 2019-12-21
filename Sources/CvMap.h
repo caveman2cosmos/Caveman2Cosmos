@@ -25,18 +25,15 @@ class CvPlotGroup;
 
 inline int coordRange(int iCoord, int iRange, bool bWrap)
 {
-	if (bWrap)
+	if (bWrap && iRange != 0)
 	{
-		if (iRange != 0)
+		if (iCoord < 0 )
 		{
-			if (iCoord < 0 )
-			{
-				return (iRange + (iCoord % iRange));
-			}
-			else if (iCoord >= iRange)
-			{
-				return (iCoord % iRange);
-			}
+			return (iRange + (iCoord % iRange));
+		}
+		else if (iCoord >= iRange)
+		{
+			return (iCoord % iRange);
 		}
 	}
 
@@ -135,7 +132,7 @@ public:
 	CvArea* findBiggestArea(bool bWater);																						// Exposed to Python
 
 	int getMapFractalFlags();																												// Exposed to Python
-	bool findWater(CvPlot* pPlot, int iRange, bool bFreshWater);										// Exposed to Python
+	bool findWater(CvPlot* pPlot, int iRange, bool bFreshWater) const;										// Exposed to Python
 
 	bool isPlot(int iX, int iY) const;																		// Exposed to Python
 #ifdef _USRDLL
@@ -171,11 +168,11 @@ public:
 	int plotX(int iIndex) const;																										// Exposed to Python
 	int plotY(int iIndex) const;																										// Exposed to Python
 
-	 int pointXToPlotX(float fX);
-	 float plotXToPointX(int iX);
+	int pointXToPlotX(float fX) const;
+	float plotXToPointX(int iX);
 
-	 int pointYToPlotY(float fY);
-	 float plotYToPointY(int iY);
+	int pointYToPlotY(float fY) const;
+	float plotYToPointY(int iY);
 
 	float getWidthCoords();
 	float getHeightCoords();
@@ -183,59 +180,59 @@ public:
 	int maxPlotDistance();																								// Exposed to Python
 	int maxStepDistance();																								// Exposed to Python
 
-	 int getGridWidth() const;																		// Exposed to Python
+	int getGridWidth() const;																		// Exposed to Python
 #ifdef _USRDLL
 	inline int getGridWidthINLINE() const
 	{
 		return m_iGridWidth;
 	}
 #endif
-	 int getGridHeight() const;																	// Exposed to Python
+	int getGridHeight() const;																	// Exposed to Python
 #ifdef _USRDLL
 	inline int getGridHeightINLINE() const
 	{
 		return m_iGridHeight;
 	}
 #endif
-	 int getLandPlots();																					// Exposed to Python
+	int getLandPlots() const;																					// Exposed to Python
 	void changeLandPlots(int iChange);
 
-	 int getOwnedPlots();																				// Exposed to Python
+	int getOwnedPlots() const;																				// Exposed to Python
 	void changeOwnedPlots(int iChange);
 
-	int getTopLatitude();																									// Exposed to Python
-	int getBottomLatitude();																							// Exposed to Python
+	int getTopLatitude() const;																									// Exposed to Python
+	int getBottomLatitude() const;																							// Exposed to Python
 
 	int getNextRiverID();																									// Exposed to Python
 	void incrementNextRiverID();																					// Exposed to Python
 
-	 bool isWrapX() const;																							// Exposed to Python
+	bool isWrapX() const;																							// Exposed to Python
 #ifdef _USRDLL
 	inline bool isWrapXINLINE() const
 	{
 		return m_bWrapX;
 	}
 #endif
-	 bool isWrapY() const;																							// Exposed to Python
+	bool isWrapY() const;																							// Exposed to Python
 #ifdef _USRDLL
 	inline bool isWrapYINLINE() const
 	{
 		return m_bWrapY;
 	}
 #endif
-	 bool isWrap() const;
+	bool isWrap() const;
 #ifdef _USRDLL
 	inline bool isWrapINLINE() const
 	{
 		return m_bWrapX || m_bWrapY;
 	}
 #endif
-	 WorldSizeTypes getWorldSize();															// Exposed to Python
-	 ClimateTypes getClimate();																	// Exposed to Python
-	 SeaLevelTypes getSeaLevel();																// Exposed to Python
+	WorldSizeTypes getWorldSize();															// Exposed to Python
+	ClimateTypes getClimate() const;																	// Exposed to Python
+	SeaLevelTypes getSeaLevel() const;																// Exposed to Python
 
-	 int getNumCustomMapOptions();
-	 CustomMapOptionTypes getCustomMapOption(int iOption);				// Exposed to Python
+	int getNumCustomMapOptions() const;
+	CustomMapOptionTypes getCustomMapOption(int iOption) const;				// Exposed to Python
 
 	int getNumBonuses(BonusTypes eIndex);																	// Exposed to Python
 	void changeNumBonuses(BonusTypes eIndex, int iChange);
@@ -243,14 +240,14 @@ public:
 	int getNumBonusesOnLand(BonusTypes eIndex);														// Exposed to Python
 	void changeNumBonusesOnLand(BonusTypes eIndex, int iChange);
 
-	 CvPlot* plotByIndex(int iIndex) const;											// Exposed to Python
+	CvPlot* plotByIndex(int iIndex) const;											// Exposed to Python
 #ifdef _USRDLL
 	inline CvPlot* plotByIndexINLINE(int iIndex) const
 	{
 		return (((iIndex >= 0) && (iIndex < (getGridWidthINLINE() * getGridHeightINLINE()))) ? &(m_pMapPlots[iIndex]) : NULL);
 	}
 #endif
-	 CvPlot* plot(int iX, int iY) const;													// Exposed to Python
+	CvPlot* plot(int iX, int iY) const;													// Exposed to Python
 #ifdef _USRDLL
 	__forceinline CvPlot* plotINLINE(int iX, int iY) const
 	{
@@ -271,11 +268,11 @@ public:
 		return &(m_pMapPlots[plotNumINLINE(iX, iY)]);
 	}
 #endif
-	 CvPlot* pointToPlot(float fX, float fY);
+	CvPlot* pointToPlot(float fX, float fY);
 
 	int getIndexAfterLastArea();														// Exposed to Python
-	int getNumAreas();														// Exposed to Python
-	int getNumLandAreas();
+	int getNumAreas() const;														// Exposed to Python
+	int getNumLandAreas() const;
 	CvArea* getArea(int iID);																// Exposed to Python
 	CvArea* addArea();
 	void deleteArea(int iID);
@@ -353,7 +350,6 @@ public:
 	CvPath&	getLastPath();
 	int getLastPathStepNum();
 	CvPlot* getLastPathPlotByIndex(int index);
-
 };
 
 #endif

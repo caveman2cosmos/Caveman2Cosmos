@@ -54,15 +54,6 @@ public:
 	void setReinforcementCounter( int iNewValue );
 	void changeReinforcementCounter( int iChange );
 
-	int getRevIndexHappinessVal();
-	int getRevIndexDistanceVal();
-	int getRevIndexColonyVal();
-	int getRevIndexReligionVal();
-	int getRevIndexNationalityVal();
-	int getRevIndexHealthVal();
-	int getRevIndexGarrisonVal();
-	int getRevIndexDisorderVal();
-
 	bool isRecentlyAcquired();
 /************************************************************************************************/
 /* REVOLUTION_MOD                          END                                                  */
