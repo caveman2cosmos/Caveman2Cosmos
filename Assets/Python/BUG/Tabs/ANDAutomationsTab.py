@@ -43,10 +43,11 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 		#Automate Hunt Options
 
 		self.addLabel(screen, left, "AutomatedSettings__HuntSettings")
-		col1, col2 = self.addMultiColumnLayout(screen, right, 2, "Automate_Hunt")
+		col1, col2, col3 = self.addMultiColumnLayout(screen, right, 3, "Automate_Hunt")
 
 		self.addCheckbox(screen, col1, "AutomatedSettings__NoCapturingCities")
 		self.addCheckbox(screen, col2, "AutomatedSettings__AllowUnitSuiciding")
+		self.addCheckbox(screen, col3, "AutomatedSettings__AutoHuntReturnForUpgrades")
 		self.addCheckbox(screen, col1, "AutomatedSettings__HideAutomateHunt")
 		self.addIntDropdown(screen, col2, col2, "AutomatedSettings__AutoHuntMinimumAttackOdds", True, "RIGHT")
 
