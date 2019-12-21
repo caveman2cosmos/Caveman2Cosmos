@@ -1,6 +1,8 @@
 Version=11
 BeginGame
 	Option=GAMEOPTION_MOUNTAINS
+	Option=GAMEOPTION_ASSIMILATION
+	Option=GAMEOPTION_ECOLOGICAL_ANIMALS
 	Victory=VICTORY_SPACE_RACE
 	StartYear=-200000
 	Description= C2C Large Earth Map with no preset Civs. By Harrier.
