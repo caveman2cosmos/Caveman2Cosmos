@@ -101,7 +101,7 @@ public:
 	virtual CvArea* findBiggestArea(bool bWater) = 0;																						// Exposed to Python
 
 	virtual int getMapFractalFlags() = 0;																												// Exposed to Python
-	virtual bool findWater(CvPlot* pPlot, int iRange, bool bFreshWater) = 0;										// Exposed to Python
+	virtual bool findWater(CvPlot* pPlot, int iRange, bool bFreshWater) const = 0;										// Exposed to Python
 
 	virtual bool isPlot(int iX, int iY) const = 0;																		// Exposed to Python
 	virtual int numPlots() const = 0; 																								// Exposed to Python
@@ -110,10 +110,10 @@ public:
 	virtual int plotX(int iIndex) const = 0;																										// Exposed to Python
 	virtual int plotY(int iIndex) const = 0;																										// Exposed to Python
 
-	virtual int pointXToPlotX(float fX) = 0;
+	virtual int pointXToPlotX(float fX) const = 0;
 	virtual float plotXToPointX(int iX) = 0;
 
-	virtual int pointYToPlotY(float fY) = 0;
+	virtual int pointYToPlotY(float fY) const = 0;
 	virtual float plotYToPointY(int iY) = 0;
 
 	virtual float getWidthCoords() = 0;
@@ -124,29 +124,29 @@ public:
 
 	virtual int getGridWidth() const = 0;																		// Exposed to Python
 	virtual int getGridHeight() const = 0;																	// Exposed to Python
-	virtual int getLandPlots() = 0;																					// Exposed to Python
+	virtual int getLandPlots() const = 0;																					// Exposed to Python
 
-	virtual int getOwnedPlots() = 0;																				// Exposed to Python
+	virtual int getOwnedPlots() const = 0;																				// Exposed to Python
 
-	virtual int getTopLatitude() = 0;																									// Exposed to Python
-	virtual int getBottomLatitude() = 0;																							// Exposed to Python
+	virtual int getTopLatitude() const = 0;																									// Exposed to Python
+	virtual int getBottomLatitude() const = 0;																							// Exposed to Python
 
 	virtual bool isWrapX() const = 0;																							// Exposed to Python
 	virtual bool isWrapY() const = 0;																							// Exposed to Python
 	virtual bool isWrap() const = 0;
 	virtual WorldSizeTypes getWorldSize() = 0;															// Exposed to Python
-	virtual ClimateTypes getClimate() = 0;																	// Exposed to Python
-	virtual SeaLevelTypes getSeaLevel() = 0;																// Exposed to Python
+	virtual ClimateTypes getClimate() const = 0;																	// Exposed to Python
+	virtual SeaLevelTypes getSeaLevel() const = 0;																// Exposed to Python
 
-	virtual int getNumCustomMapOptions() = 0;
-	virtual CustomMapOptionTypes getCustomMapOption(int iOption) = 0;				// Exposed to Python
+	virtual int getNumCustomMapOptions() const = 0;
+	virtual CustomMapOptionTypes getCustomMapOption(int iOption) const = 0;				// Exposed to Python
 
 	virtual CvPlot* plotByIndex(int iIndex) const = 0;											// Exposed to Python
 	virtual CvPlot* plot(int iX, int iY) const = 0;													// Exposed to Python
 	virtual CvPlot* pointToPlot(float fX, float fY) = 0;
 
-	virtual int getNumAreas() = 0;														// Exposed to Python
-	virtual int getNumLandAreas() = 0;
+	virtual int getNumAreas() const = 0;														// Exposed to Python
+	virtual int getNumLandAreas() const = 0;
 
 	// Serialization:
 	virtual void read(FDataStreamBase* pStream) = 0;
