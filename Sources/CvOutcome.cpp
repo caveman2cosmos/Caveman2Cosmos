@@ -250,12 +250,7 @@ void preparePython(CvString& szCode)
 	}
 
 	// now remove this amount of white space from every line
-	
-	std::string code = szCode;
-	std::vector<int> vec, search, format;
-	bst::replace_all(vec, search, format);
-	//bst::replace_all(code, std::string("\n"+szXMLSpace), std::string("\n"));
-	
+	bst::replace_all(szCode, CvString("\n"+szXMLSpace), CvString("\n"));
 }
 
 void CvOutcome::compilePython()

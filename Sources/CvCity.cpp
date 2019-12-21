@@ -7551,7 +7551,7 @@ namespace {
 }
 int CvCity::getCelebrityHappiness() const
 {
-	return bst::accumulate(plot()->units() | transformed(getCelebrityHappyClamped), 0);
+	return algo::accumulate(plot()->units() | transformed(getCelebrityHappyClamped), 0);
 }
 
 /*****************************************************************************************************/
@@ -25706,12 +25706,12 @@ void CvCity::doHeal()
 	{
 		UnitVector damagedUnits;
 		// Get the damaged units on our team
-		bst::push_back(
+		algo::push_back(
 			damagedUnits, 
-			plot()->units() | filtered(CvUnit::on_team(getTeam())) | filtered(CvUnit::is_damaged)
+			plot()->units() | filtered(CvUnit::fn::getTeam() == getTeam() && CvUnit::fn::getDamage() > 0)
 		);
 		// Randomize them
-		bst::random_shuffle(damagedUnits, CvGame::SorenRand("Unit Full Heals"));
+		algo::random_shuffle(damagedUnits, CvGame::SorenRand("Unit Full Heals"));
 		// Heal as many as we are able
 		const int maxHeals = std::min<int>(getNumUnitFullHeal(), damagedUnits.size());
 		foreach_(CvUnit * unit, damagedUnits | sliced(0, maxHeals))
@@ -27157,10 +27157,8 @@ int CvCity::getUnitAidPresent(PropertyTypes eProperty) const
 	PROFILE_FUNC();
 
 	return algo::max_element(
-		plot()->units() | filtered(CvUnit::on_team(getTeam()))
-						| transformed(
-							CvUnit::aid_total(eProperty)
-						)
+		plot()->units() | filtered(CvUnit::fn::getTeam() == getTeam())
+						| transformed(CvUnit::fn::aidTotal(eProperty))
 	).get_value_or(0);
 }
 
@@ -27367,8 +27365,8 @@ int CvCity::getUnitCommunicability(PromotionLineTypes eAfflictionLine) const
 
 	// Find unit with the highest probability to afflict
 	bst::optional<int> worstAffliction = algo::max_element(
-		plot()->units() | filtered(CvUnit::has_affliction_line(eAfflictionLine))
-						| transformed(CvUnit::prob_inflict(eAfflictionLine))
+		plot()->units() | filtered(CvUnit::fn::hasAfflictionLine(eAfflictionLine))
+						| transformed(CvUnit::fn::worsenedProbabilitytoAfflict(eAfflictionLine))
 	);
 
 	if (worstAffliction)

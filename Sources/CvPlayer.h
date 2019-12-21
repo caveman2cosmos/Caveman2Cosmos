@@ -1325,14 +1325,14 @@ public:
 	typedef bst::iterator_range<safe_unit_iterator> safe_unit_range;
 	safe_unit_range units_safe() const { return safe_unit_range(beginUnitsSafe(), endUnitsSafe()); }
 
-	// deprecated, use unit_iterator
-	CvUnit* firstUnit(int* pIterIdx, bool bRev = false) const;																// Exposed to Python
-	// deprecated, use unit_iterator
-	CvUnit* nextUnit(int* pIterIdx, bool bRev = false) const;																	// Exposed to Python
-	DllExport CvUnit* firstUnitExternal(int* pIterIdx, bool bRev = false) const;																// Exposed to Python
-	DllExport CvUnit* nextUnitExternal(int* pIterIdx, bool bRev = false) const;																	// Exposed to Python					
-	DllExport int getNumUnits() const;																																// Exposed to Python					
-	CvUnit* getUnit(int iID) const;																													// Exposed to Python					
+	// deprecated, use unit_range
+	CvUnit* firstUnit(int* pIterIdx, bool bRev = false) const; // Exposed to Python
+	// deprecated, use unit_range
+	CvUnit* nextUnit(int* pIterIdx, bool bRev = false) const; // Exposed to Python
+	DllExport CvUnit* firstUnitExternal(int* pIterIdx, bool bRev = false) const; // Exposed to Python
+	DllExport CvUnit* nextUnitExternal(int* pIterIdx, bool bRev = false) const; // Exposed to Python
+	DllExport int getNumUnits() const; // Exposed to Python
+	CvUnit* getUnit(int iID) const; // Exposed to Python
 	CvUnit* addUnit();
 	void deleteUnit(int iID);
 
@@ -1343,13 +1343,23 @@ public:
 	typedef bst::iterator_range<group_iterator> group_range;
 	group_range groups() const { return group_range(beginGroups(), endGroups()); }
 
-	// deprecated, use group_iterator
-	CvSelectionGroup* firstSelectionGroup(int* pIterIdx, bool bRev = false) const;						// Exposed to Python					
-	// deprecated, use group_iterator
-	CvSelectionGroup* nextSelectionGroup(int* pIterIdx, bool bRev = false) const;							// Exposed to Python					
-	int getNumSelectionGroups() const;																																// Exposed to Python
+	// non-empty selection groups iteration
+	DECLARE_INDEX_ITERATOR(const CvPlayer, CvSelectionGroup, group_non_empty_iterator, firstSelectionGroupNonEmpty, nextSelectionGroupNonEmpty);
+	group_non_empty_iterator beginGroupsNonEmpty() const { return group_non_empty_iterator(this); }
+	group_non_empty_iterator endGroupsNonEmpty() const { return group_non_empty_iterator(); }
+	typedef bst::iterator_range<group_non_empty_iterator> group_non_empty_range;
+	group_non_empty_range groups_non_empty() const { return group_non_empty_range(beginGroupsNonEmpty(), endGroupsNonEmpty()); }
 
-	CvSelectionGroup* getSelectionGroup(int iID) const;																								// Exposed to Python
+	// deprecated, use group_range
+	CvSelectionGroup* firstSelectionGroup(int* pIterIdx, bool bRev = false) const; // Exposed to Python
+	// deprecated, use group_range
+	CvSelectionGroup* nextSelectionGroup(int* pIterIdx, bool bRev = false) const; // Exposed to Python
+	CvSelectionGroup* firstSelectionGroupNonEmpty(int* pIterIdx, bool bRev = false) const; // Exposed to Python
+	CvSelectionGroup* nextSelectionGroupNonEmpty(int* pIterIdx, bool bRev = false) const; // Exposed to Python
+
+	int getNumSelectionGroups() const; // Exposed to Python
+
+	CvSelectionGroup* getSelectionGroup(int iID) const; // Exposed to Python
 	CvSelectionGroup* addSelectionGroup();
 	void deleteSelectionGroup(int iID);
 

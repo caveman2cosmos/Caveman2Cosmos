@@ -843,7 +843,7 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 		{
 			int iUnitID = pPopupReturn->getButtonClicked();
 			CvPlot* pPlot = GC.getMapINLINE().plotINLINE(info.getData2(), info.getData3());
-			bst::optional<CvUnit*> clickedUnit = algo::find_if(pPlot->units(), CvUnit::has_id(iUnitID));
+			bst::optional<CvUnit*> clickedUnit = algo::find_if(pPlot->units(), CvUnit::fn::getID() == iUnitID);
 			if (clickedUnit)
 			{
 				CvMessageControl::getInstance().sendArrestUnit(iUnitID, (*clickedUnit)->getOwner());

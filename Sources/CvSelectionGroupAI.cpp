@@ -76,7 +76,7 @@ namespace {
 		foreach_(CvUnit* unit, group->units() | filtered(predicateFn))
 		{
 			unit->joinGroup(NULL);
-			FAssertMsg(bst::count(group->units(), unit) != 0, "Failed to remove unit from group");
+			FAssertMsg(!algo::contains(group->units(), unit), "Failed to remove unit from group");
 			if (unit->plot()->getTeam() == group->getTeam())
 			{
 				unit->getGroup()->pushMission(MISSION_SKIP);
@@ -249,7 +249,7 @@ bool CvSelectionGroupAI::AI_update()
 		// if we not group attacking, then check for follow action
 		if (!m_bGroupAttack)
 		{
-			foreach_ (CvUnit* unit, units() | filtered(CvUnit::can_move))
+			foreach_ (CvUnit* unit, units() | filtered(CvUnit::fn::canMove()))
 			{
 				if (!readyToMove(true))
 					break;
@@ -825,7 +825,7 @@ int CvSelectionGroupAI::AI_sumStrength(const CvPlot* pAttackedPlot, DomainTypes 
 
 	const int iNumPotentialDefenders = pAttackedPlot->getNumVisiblePotentialEnemyDefenders(getHeadUnit()) - 1;
 
-	foreach_ (const CvUnit* unit, units() | filtered(CvUnit::is_alive))
+	foreach_ (const CvUnit* unit, units() | filtered(!CvUnit::fn::isDead()))
 	{
 		if ((
 				!bCheckCanAttack
