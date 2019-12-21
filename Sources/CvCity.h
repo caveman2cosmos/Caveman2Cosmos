@@ -1260,6 +1260,7 @@ public:
 	bool isCorporationBonus(BonusTypes eBonus) const;
 	bool isActiveCorporation(CorporationTypes eCorporation) const;
 
+	// How many hammers already put into production of the building
 	int getBuildingProduction(BuildingTypes eIndex) const;							// Exposed to Python
 	void setBuildingProduction(BuildingTypes eIndex, int iNewValue);				// Exposed to Python
 	void changeBuildingProduction(BuildingTypes eIndex, int iChange);				// Exposed to Python
@@ -1664,7 +1665,6 @@ public:
 	virtual UnitTypes AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAsync = false, bool bNoRand = false, CvUnitSelectionCriteria* criteria = NULL) = 0;
 
 	virtual void AI_FlushBuildingValueCache(bool bRetainValues = false) = 0;
-	virtual BuildingTypes AI_bestBuilding(int iFocusFlags = 0, int iMaxTurns = MAX_INT, bool bAsync = false, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR, bool bMaximizeFlaggedValue = false) = 0;
 
 	// Represents a building with associated score as measured by the AI
 	struct ScoredBuilding

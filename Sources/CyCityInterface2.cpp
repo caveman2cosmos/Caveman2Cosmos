@@ -238,7 +238,6 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		/************************************************************************************************/
 		.def("AI_bestUnit", &CyCity::AI_bestUnit, "int /*UnitTypes*/ ()")
 		.def("AI_bestUnitAI", &CyCity::AI_bestUnitAI, "int /*UnitTypes*/ (int iUnitAIType)")
-		.def("AI_bestBuilding", &CyCity::AI_bestBuilding, "int /*BuildingTypes*/ (int iFocusFlags)")
 		/************************************************************************************************/
 		/* REVOLUTION_MOD                          END                                                  */
 		/************************************************************************************************/

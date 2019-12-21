@@ -2922,10 +2922,6 @@ int /*UnitTypes*/ CyCity::AI_bestUnitAI(int iUnitAIType)
 	return (m_pCity ? m_pCity->AI_bestUnitAI((UnitAITypes)iUnitAIType, iDummyValue) : -1);
 }
 
-int /*BuildingTypes*/ CyCity::AI_bestBuilding(int iFocusFlags)
-{
-	return (m_pCity ? m_pCity->AI_bestBuilding(iFocusFlags) : -1);
-}
 /************************************************************************************************/
 /* REVOLUTION_MOD                          END                                                  */
 /************************************************************************************************/
