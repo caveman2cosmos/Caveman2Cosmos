@@ -698,7 +698,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 	{
 		// Copy units as we will be removing and adding some now.
 		foreach_(CvUnit* unit, units_safe() 
-			| filtered(CvUnit::fn::isAutoUpgrading() && CvUnit::fn::isReadyForUpgrade()))
+			| filtered(CvUnit::fn::isPromotionReady()))
 		{
 			unit->AI_promote();
 			// Upgrade replaces the original unit with a new one, so old unit must be killed
@@ -706,11 +706,6 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 		}
 	}
 
-/************************************************************************************************/
-/* Afforess/RevDCM	                  Start		 07/12/10                                       */
-/*                                                                                              */
-/* Advanced Automations                                                                         */
-/************************************************************************************************/
 	if (isHuman())
 	{
 		CvCivilizationInfo& kCivilization = GC.getCivilizationInfo(getCivilizationType());
@@ -798,20 +793,12 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 			}
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	if (isHuman())
 	{
 		return;
 	}
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      02/24/10                                jdog5000      */
-/*                                                                                              */
-/* Gold AI                                                                                      */
-/************************************************************************************************/
 	bool bAnyWar = (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0);
 	int iStartingGold = getEffectiveGold();
 	int iTargetGold = AI_goldTarget();
@@ -837,9 +824,6 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 	iUpgradeBudget = std::max(iUpgradeBudget,1);
 
 	bool bUnderBudget = true;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 	CvPlot* pLastUpgradePlot = NULL;
 	for (int iPass = 0; iPass < 4; iPass++)
