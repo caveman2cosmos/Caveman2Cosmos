@@ -12156,6 +12156,9 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_ASTROLABE</PrereqTech>
 			</OrPreReqs>
+			<AndPreReqs>
+				<PrereqTech>TECH_MOUNTAINEERING</PrereqTech>
+			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ASTRONOMY_QUOTE</Quote>
 			<Sound>AS2D_TECH_ASTRONOMY</Sound>
 			<SoundMP>AS2D_TECH_MP_ASTRONOMY</SoundMP>
