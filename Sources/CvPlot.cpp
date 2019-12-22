@@ -9406,10 +9406,10 @@ int CvPlot::calculateNatureYield(YieldTypes eYield, TeamTypes eTeam, bool bIgnor
 	{
 		if (isPeak2(true))
 		{
-			//	Koshling - prevent mountains being worked until workers can
-			//	move into peak tiles
-			if (eTeam != NO_TEAM && (!GET_TEAM(eTeam).isCanPassPeaks() || !isRoute()))
-			{
+			if (eTeam != NO_TEAM && !isRoute())
+			{// It makes sense to only require a route for a city to work the peak even if the player doesn't have the mounteneering tech.
+			// Perhaps add a landslide event that destroys route and improvement on peaks, so that players without the mountaneering tech
+			// can't rebuild easily mountain improvements conquered from a more advanced civilization.
 				return 0;
 			}
 		}
