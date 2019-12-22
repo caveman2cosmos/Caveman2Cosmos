@@ -5023,7 +5023,6 @@ bool CvCity::isFoodProduction(UnitTypes eUnit) const
 	return false;
 }
 
-
 int CvCity::getFirstUnitOrder(UnitTypes eUnit) const
 {
 	int iCount = 0;
@@ -5261,27 +5260,6 @@ int CvCity::getQueueNodeProductionTurnsLeft(CLLNode<OrderData>* pOrderNode, int 
 	return MAX_INT;
 }
 
-int CvCity::getProductionTurnsLeft(UnitTypes eUnit, int iNum) const
-{
-	int iProduction;
-	int iFirstUnitOrder;
-	int iProductionNeeded;
-	int iProductionModifier;
-
-	iProduction = 0;
-
-	iFirstUnitOrder = getFirstUnitOrder(eUnit);
-
-	if ((iFirstUnitOrder == -1) || (iFirstUnitOrder == iNum))
-	{
-		iProduction += getUnitProduction(eUnit);
-	}
-
-	iProductionNeeded = getProductionNeeded(eUnit);
-	iProductionModifier = getProductionModifier(eUnit);
-
-	return getProductionTurnsLeft(iProductionNeeded, iProduction, getProductionDifference(iProductionNeeded, iProduction, iProductionModifier, isFoodProduction(eUnit), (iNum == 0)), getProductionDifference(iProductionNeeded, iProduction, iProductionModifier, isFoodProduction(eUnit), false));
-}
 
 int CvCity::getTotalProductionQueueTurnsLeft() const
 {
@@ -5319,75 +5297,84 @@ int CvCity::numQueuedUnits(UnitAITypes eUnitAI, CvPlot* pDestPlot)
 	return iResult;
 }
 
-int CvCity::getProductionTurnsLeft(BuildingTypes eBuilding, int iNum) const
+int CvCity::getProductionTurnsLeft(UnitTypes eUnit, int orderIndex) const
 {
-	int iProduction;
-	int iFirstBuildingOrder;
-	int iProductionNeeded;
-	int iProductionModifier;
+	const int firstOrderIndex = getFirstUnitOrder(eUnit);
+	// We can count production already put towards this if we are looking
+	// at the first one enqueued, or it isn't enqueued at all (and therefore would
+	// be the first one were it to be)
+	const int alreadyDone = (firstOrderIndex == -1 || firstOrderIndex == orderIndex) ? getUnitProduction(eUnit) : 0;
+	const int totalRequired = getProductionNeeded(eUnit);
+	const int modifier = getProductionModifier(eUnit);
 
-	iProduction = 0;
+	const ProductionCalc::flags foodProd = isFoodProduction(eUnit) ? ProductionCalc::FoodProduction : ProductionCalc::None;
 
-	iFirstBuildingOrder = getFirstBuildingOrder(eBuilding);
+	// If we are looking at the first order then overflow would be applied
+	const ProductionCalc::flags overflowProd = (orderIndex == 0) ? ProductionCalc::Overflow : ProductionCalc::None;
 
-	if ((iFirstBuildingOrder == -1) || (iFirstBuildingOrder == iNum))
-	{
-		iProduction += getBuildingProduction(eBuilding);
-	}
+	return getProductionTurnsLeft(totalRequired, alreadyDone,
+		getProductionPerTurn(modifier, foodProd | overflowProd | ProductionCalc::Yield),
+		getProductionPerTurn(modifier, foodProd | ProductionCalc::Yield)
+	);
+}
 
-	iProductionNeeded = getProductionNeeded(eBuilding);
+int CvCity::getProductionTurnsLeft(BuildingTypes eBuilding, int orderIndex) const
+{
+	const int firstOrderIndex = getFirstBuildingOrder(eBuilding);
+	// We can count production already put towards this if we are looking
+	// at the first one enqueued, or it isn't enqueued at all (and therefore would
+	// be the first one were it to be)
+	const int alreadyDone = (firstOrderIndex == -1 || firstOrderIndex == orderIndex) ? getBuildingProduction(eBuilding) : 0;
+	const int totalRequired = getProductionNeeded(eBuilding);
+	const int modifier = getProductionModifier(eBuilding);
 
-	iProductionModifier = getProductionModifier(eBuilding);
+	// If we are looking at the first order then overflow would be applied
+	const ProductionCalc::flags overflowProd = (orderIndex == 0) ? ProductionCalc::Overflow : ProductionCalc::None;
 
-	return getProductionTurnsLeft(iProductionNeeded, iProduction, getProductionDifference(iProductionNeeded, iProduction, iProductionModifier, false, (iNum == 0)), getProductionDifference(iProductionNeeded, iProduction, iProductionModifier, false, false));
+	return getProductionTurnsLeft(totalRequired, alreadyDone,
+		getProductionPerTurn(modifier, overflowProd | ProductionCalc::Yield),
+		getProductionPerTurn(modifier, ProductionCalc::Yield)
+	);
 }
 
 
-int CvCity::getProductionTurnsLeft(ProjectTypes eProject, int iNum) const
+int CvCity::getProductionTurnsLeft(ProjectTypes eProject, int orderIndex) const
 {
-	int iProduction;
-	int iFirstProjectOrder;
-	int iProductionNeeded;
-	int iProductionModifier;
+	const int firstOrderIndex = getFirstProjectOrder(eProject);
+	// We can count production already put towards this if we are looking
+	// at the first one enqueued, or it isn't enqueued at all (and therefore would
+	// be the first one were it to be)
+	const int alreadyDone = (firstOrderIndex == -1 || firstOrderIndex == orderIndex) ? getProjectProduction(eProject) : 0;
+	const int totalRequired = getProductionNeeded(eProject);
+	const int modifier = getProductionModifier(eProject);
 
-	iProduction = 0;
+	// If we are looking at the first order then overflow would be applied
+	const ProductionCalc::flags overflowProd = (orderIndex == 0) ? ProductionCalc::Overflow : ProductionCalc::None;
 
-	iFirstProjectOrder = getFirstProjectOrder(eProject);
-
-	if ((iFirstProjectOrder == -1) || (iFirstProjectOrder == iNum))
-	{
-		iProduction += getProjectProduction(eProject);
-	}
-
-	iProductionNeeded = getProductionNeeded(eProject);
-	iProductionModifier = getProductionModifier(eProject);
-
-	return getProductionTurnsLeft(iProductionNeeded, iProduction, getProductionDifference(iProductionNeeded, iProduction, iProductionModifier, false, (iNum == 0)), getProductionDifference(iProductionNeeded, iProduction, iProductionModifier, false, false));
+	return getProductionTurnsLeft(totalRequired, alreadyDone,
+		getProductionPerTurn(modifier, overflowProd | ProductionCalc::Yield),
+		getProductionPerTurn(modifier, ProductionCalc::Yield)
+	);
 }
 
-
-int CvCity::getProductionTurnsLeft(int iProductionNeeded, int iProduction, int iFirstProductionDifference, int iProductionDifference) const
+int CvCity::getProductionTurnsLeft(int totalRequiredProduction, int currentProduction, int nextTurnProduction, int futureTurnProduction) const
 {
-	int iProductionLeft;
-	int iTurnsLeft;
-
-	iProductionLeft = std::max(0, (iProductionNeeded - iProduction - iFirstProductionDifference));
-
-	if (iProductionDifference == 0)
+	int remainingProduction = std::max(0, totalRequiredProduction - currentProduction - nextTurnProduction);
+	// This doesn't look right...
+	if (futureTurnProduction == 0)
 	{
-		return iProductionLeft + 1;
+		return remainingProduction + 1;
 	}
 
-	iTurnsLeft = (iProductionLeft / iProductionDifference);
-
-	if ((iTurnsLeft * iProductionDifference) < iProductionLeft)
+	int turnsLeft = remainingProduction / futureTurnProduction;
+	if (turnsLeft * futureTurnProduction < remainingProduction)
 	{
-		iTurnsLeft++;
+		turnsLeft++;
 	}
 
-	iTurnsLeft++;
+	turnsLeft++;
 
-	return std::max(1, iTurnsLeft);
+	return std::max(1, turnsLeft);
 }
 
 
@@ -5593,50 +5580,38 @@ int CvCity::getProductionModifier(ProjectTypes eProject) const
 /************************************************************************************************/
 int CvCity::getOverflowProductionDifference() const
 {
-	return getProductionDifference(getProductionNeeded(), getProduction(), getProductionModifier(), false, true, false);
+	return getProductionPerTurn(getProductionModifier(), ProductionCalc::Overflow);
 }
 /*
 int CvCity::getProductionDifference(int iProductionNeeded, int iProduction, int iProductionModifier, bool bFoodProduction, bool bOverflow) const
 */
-int CvCity::getProductionDifference(int iProductionNeeded, int iProduction, int iProductionModifier, bool bFoodProduction, bool bOverflow, bool bYield) const
-/************************************************************************************************/
-/* Afforess	Multiple Production Mod       END                                                */
-/************************************************************************************************/
-
+int CvCity::getProductionPerTurn(int modifier, ProductionCalc::flags flags = ProductionCalc::Yield) const
 {
 	if (isDisorder())
 	{
 		return 0;
 	}
 
-	int iFoodProduction = ((bFoodProduction) ? std::max(0, (getYieldRate(YIELD_FOOD) - foodConsumption(true))) : 0);
+	const int iFoodProduction = (flags & ProductionCalc::FoodProduction) ? std::max(0, getYieldRate(YIELD_FOOD) - foodConsumption(true)) : 0;
+	const int iOverflow = (flags & ProductionCalc::Overflow) ? getOverflowProduction() + getFeatureProduction() : 0;
 
-	int iOverflow = ((bOverflow) ? (getOverflowProduction() + getFeatureProduction()) : 0);
-
-	/************************************************************************************************/
-	/* Afforess	Multiple Production Mod		 08/23/09                                            */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-		//TB Traits begin
-	int iYield = ((bYield) ? (getModifiedBaseYieldRate(YIELD_PRODUCTION)) : 0);
+	//TB Traits begin
+	const int iYield = (flags & ProductionCalc::Yield) ? getModifiedBaseYieldRate(YIELD_PRODUCTION) : 0;
 	//TB Traits end
 /*
 	return (((getBaseYieldRate(YIELD_PRODUCTION) + iOverflow) * getBaseYieldRateModifier(YIELD_PRODUCTION, iProductionModifier)) / 100 + iFoodProduction);
 */
-	return (((iYield + iOverflow) * getBaseYieldRateModifier(YIELD_PRODUCTION, iProductionModifier)) / 100 + iFoodProduction);
-	/************************************************************************************************/
-	/* Afforess	Multiple Production Mod       END                                                */
-	/************************************************************************************************/
-
+	return ((iYield + iOverflow) * getBaseYieldRateModifier(YIELD_PRODUCTION, modifier)) / 100 + iFoodProduction;
 }
 
 
 int CvCity::getCurrentProductionDifference(bool bIgnoreFood, bool bOverflow) const
 {
-	return getProductionDifference(getProductionNeeded(), getProduction(), getProductionModifier(), (!bIgnoreFood && isFoodProduction()), bOverflow);
-}
+	const ProductionCalc::flags foodFlag = (!bIgnoreFood && isFoodProduction()) ? ProductionCalc::FoodProduction : ProductionCalc::None;
+	const ProductionCalc::flags overflowProd = bOverflow ? ProductionCalc::Overflow : ProductionCalc::None;
 
+	return getProductionPerTurn(getProductionModifier(), foodFlag | overflowProd | ProductionCalc::Yield);
+}
 
 int CvCity::getExtraProductionDifference(int iExtra) const
 {
