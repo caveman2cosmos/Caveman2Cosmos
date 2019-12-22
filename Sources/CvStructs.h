@@ -357,16 +357,6 @@ struct GameTurnInfo				// Exposed to Python
 	GameTurnInfo() : iMonthIncrement(0), iNumGameTurnsPerIncrement(0) {}
 };
 
-struct OrderData					// Exposed to Python
-{
-	OrderTypes eOrderType;
-	int iData1;
-	int iData2;
-	bool bSave;
-
-	OrderData() : eOrderType(NO_ORDER), iData1(0), iData2(0), bSave(0) {}
-};
-
 //	Koshling - need to cram some extra info into some orders.  Existing usage
 //	means iData1 and iData2 can actually be shorts, so we divide them into two 16 bit fields
 //	iData1 gets the unitType in the external data (previous usage), and the location the unit
@@ -376,6 +366,164 @@ struct OrderData					// Exposed to Python
 #define	EXTERNAL_ORDER_IDATA(iData)				(short)((iData) & 0xFFFF)
 #define	INTERNAL_AUXILIARY_ORDER_IDATA(iData)	(short)(((iData) & 0xffff0000) >> 16)
 #define	PACK_INTERNAL_ORDER_IDATA(iBase, iAux)	(((unsigned int)(iBase) & 0xFFFF) | (((unsigned int)(iAux)) << 16))
+
+struct OrderData // Exposed to Python
+{
+	OrderTypes eOrderType;
+	union {
+		struct {
+			int iData1;
+			int iData2;
+		};
+		struct { // Untyped
+			word iData1_aux;
+			word iData1_external;
+			word iData2_aux;
+			word iData2_external;
+		} raw;
+		struct { // For units
+			word plotIndex; // aux, 0xFFFF for none
+			/*UnitTypes*/word type;
+
+			byte contractFlags; // aux
+			/*UnitAITypes*/byte contractedAIType; // aux, 0xFF for none
+			/*UnitAITypes*/word AIType;
+		} unit;
+		struct {
+			/*BuildingTypes*/int type;
+			int padding;
+		} building;
+		struct {
+			/*ProjectTypes*/int type;
+			int padding;
+		} project;
+		struct {
+			/*ProcessTypes*/int type;
+			int padding;
+		} process;
+		struct {
+			int id;
+			int padding;
+		} orderlist;
+	};
+	bool bSave;
+
+	OrderData(OrderTypes eOrderType = NO_ORDER, int iData1 = 0, int iData2 = 0, bool bSave = false)
+		: eOrderType(eOrderType), iData1(iData1), iData2(iData2), bSave(bSave) {}
+	OrderData(const OrderData& other)
+		: eOrderType(other.eOrderType), iData1(other.iData1), iData2(other.iData2), bSave(other.bSave) {}
+
+	bool operator==(const OrderData& other) const
+	{
+		return eOrderType == other.eOrderType && iData1 == other.iData1 && iData2 == other.iData2 && bSave == other.bSave;
+	}
+
+	static OrderData createUnitOrder(UnitTypes type, UnitAITypes AIType, word plotIndex, byte contractFlags, UnitAITypes contractedAIType, bool bSave)
+	{
+		OrderData order(ORDER_TRAIN);
+		order.unit.type = static_cast<word>(type);
+		order.unit.AIType = static_cast<word>(AIType);
+		order.unit.plotIndex = plotIndex;
+		order.unit.contractFlags = contractFlags;
+		order.unit.contractedAIType = static_cast<byte>(contractedAIType);
+		order.bSave = bSave;
+		return order;
+	}
+	static OrderData createBuildingOrder(BuildingTypes type, bool bSave)
+	{
+		OrderData order(ORDER_CONSTRUCT);
+		order.building.type = static_cast<word>(type);
+		order.bSave = bSave;
+		return order;
+	}
+	static OrderData createProjectOrder(ProjectTypes type, bool bSave)
+	{
+		OrderData order(ORDER_CREATE);
+		order.project.type = static_cast<word>(type);
+		order.bSave = bSave;
+		return order;
+	}
+	static OrderData createProcessOrder(ProcessTypes type, bool bSave)
+	{
+		OrderData order(ORDER_MAINTAIN);
+		order.process.type = static_cast<word>(type);
+		order.bSave = bSave;
+		return order;
+	}
+	// Convert to external view for the exe
+	OrderData to_external() const 
+	{
+		return OrderData(eOrderType, EXTERNAL_ORDER_IDATA(iData1), EXTERNAL_ORDER_IDATA(iData2), bSave);
+	}
+
+	UnitTypes getUnitType() const { 
+		FAssert(eOrderType == ORDER_TRAIN);
+		return static_cast<UnitTypes>(unit.type); 
+	}
+	void setUnitType(UnitTypes newUnitType) { 
+		FAssert(eOrderType == ORDER_TRAIN);
+		unit.type = static_cast<word>(newUnitType); 
+	}
+
+	UnitAITypes getUnitAIType() const { 
+		FAssert(eOrderType == ORDER_TRAIN);
+		return static_cast<UnitAITypes>(unit.AIType);
+	}
+	void setUnitAIType(UnitAITypes newUnitAIType) { 
+		FAssert(eOrderType == ORDER_TRAIN);
+		unit.AIType = static_cast<word>(newUnitAIType);
+	}
+
+	word getUnitPlotIndex() const {
+		FAssert(eOrderType == ORDER_TRAIN);
+		return unit.plotIndex;
+	}
+	byte getUnitContractFlags() const {
+		FAssert(eOrderType == ORDER_TRAIN);
+		return unit.contractedAIType;
+	}
+	UnitAITypes getUnitContractedAIType() const {
+		FAssert(eOrderType == ORDER_TRAIN);
+		return static_cast<UnitAITypes>(unit.contractedAIType);
+	}
+	BuildingTypes getBuildingType() const {
+		FAssert(eOrderType == ORDER_CONSTRUCT);
+		return static_cast<BuildingTypes>(building.type);
+	}
+	void setBuildingType(BuildingTypes newBuildingType) { 
+		FAssert(eOrderType == ORDER_CONSTRUCT);
+		building.type = static_cast<int>(newBuildingType);
+	}
+	ProjectTypes getProjectType() const {
+		FAssert(eOrderType == ORDER_CREATE);
+		return static_cast<ProjectTypes>(project.type);
+	}
+	void setProjectType(ProjectTypes newProjectType) {
+		FAssert(eOrderType == ORDER_CREATE);
+		project.type = static_cast<int>(newProjectType);
+	}
+	ProcessTypes getProcessType() const {
+		FAssert(eOrderType == ORDER_MAINTAIN);
+		return static_cast<ProcessTypes>(process.type);
+	}
+	void setProcessType(ProcessTypes newProcessType) {
+		FAssert(eOrderType == ORDER_MAINTAIN);
+		building.type = static_cast<int>(newProcessType);
+	}
+	int getOrderListID() const {
+		FAssert(eOrderType == ORDER_LIST);
+		return orderlist.id;
+	}
+
+	static const OrderData InvalidOrder;
+};
+
+struct _oldOrderData { OrderTypes eOrderType; int iData1; int iData2; bool bSave; };
+STATIC_ASSERT(offsetof(OrderData, eOrderType) == offsetof(_oldOrderData, eOrderType), eOrderType_offset_wrong);
+STATIC_ASSERT(offsetof(OrderData, iData1) == offsetof(_oldOrderData, iData1), iData1_offset_wrong);
+STATIC_ASSERT(offsetof(OrderData, iData2) == offsetof(_oldOrderData, iData2), iData2_offset_wrong);
+STATIC_ASSERT(offsetof(OrderData, bSave) == offsetof(_oldOrderData, bSave), bSave_offset_wrong);
+STATIC_ASSERT(sizeof(OrderData) == sizeof(_oldOrderData), OrderData_struct_size_incorrect_check_alignment);
 
 //	Contract auxiliary flags
 #define	AUX_CONTRACT_FLAG_IS_UNIT_CONTRACT	0x01

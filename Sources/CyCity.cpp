@@ -2754,9 +2754,9 @@ int CyCity::getOrderQueueLength()
 	return m_pCity ? m_pCity->getOrderQueueLength() : -1;
 }
 
-OrderData* CyCity::getOrderFromQueue(int iIndex)
+OrderData CyCity::getOrderFromQueue(int iIndex)
 {
-	return m_pCity ? m_pCity->getOrderFromQueue(iIndex) : NULL;
+	return m_pCity ? m_pCity->getOrderAt(iIndex) : OrderData::InvalidOrder;
 }
 
 void CyCity::setWallOverridePoints(const python::tuple& kPoints)

@@ -333,7 +333,7 @@ public:
 	bool isProductionProject() const;																							// Exposed to Python
 	bool isProductionProcess() const;																		// Exposed to Python
 
-	bool canContinueProduction(OrderData order);														// Exposed to Python
+	bool canContinueProduction(const OrderData& order);														// Exposed to Python
 	int getProductionExperience(UnitTypes eUnit = NO_UNIT);									// Exposed to Python
 	void addProductionExperience(CvUnit* pUnit, bool bConscript = false);		// Exposed to Python
 
@@ -358,16 +358,19 @@ public:
 	int getProductionNeeded(UnitTypes eUnit) const;
 	int getProductionNeeded(BuildingTypes eBuilding) const;
 	int getProductionNeeded(ProjectTypes eProject) const;		
-	int getQueueNodeProductionTurnsLeft(CLLNode<OrderData>* pOrderNode, int iIndex = 0) const;
+	int getOrderProductionTurnsLeft(const OrderData& order, int iIndex = 0) const;
+
+	// For fractional production calculations:
 	int getTotalProductionQueueTurnsLeft() const;
-	int getProductionTurnsLeft() const;																	// Exposed to Python 
-	int getProductionTurnsLeft(UnitTypes eUnit, int iNum) const;					// Exposed to Python
-	int getProductionTurnsLeft(BuildingTypes eBuilding, int iNum) const;	// Exposed to Python
-	int getProductionTurnsLeft(ProjectTypes eProject, int iNum) const;		// Exposed to Python
+	int getProductionTurnsLeft() const; // Exposed to Python 
+	int getProductionTurnsLeft(UnitTypes eUnit, int iNum) const; // Exposed to Python
+	int getProductionTurnsLeft(BuildingTypes eBuilding, int iNum) const; // Exposed to Python
+	int getProductionTurnsLeft(ProjectTypes eProject, int iNum) const; // Exposed to Python
 	int getProductionTurnsLeft(int iProductionNeeded, int iProduction, int iFirstProductionDifference, int iProductionDifference) const;
+
 	void setProduction(int iNewValue);																			// Exposed to Python
 	void changeProduction(int iChange);																			// Exposed to Python
-	int numQueuedUnits(UnitAITypes eUnitAI, CvPlot* pDestPlot);
+	int numQueuedUnits(UnitAITypes contractedAIType, const CvPlot* contractedPlot) const;
 
 	int getProductionModifier() const;																						// Exposed to Python
 	int getProductionModifier(UnitTypes eUnit) const;															// Exposed to Python
@@ -1391,13 +1394,16 @@ public:
 	void popOrder(int iNum, bool bFinish = false, bool bChoose = false, bool bResolveList = true);		// Exposed to Python
 	void startHeadOrder();
 	void stopHeadOrder();
-	int getOrderQueueLength();																		// Exposed to Python
-	OrderData* getOrderFromQueue(int iIndex);											// Exposed to Python
-	CLLNode<OrderData>* nextOrderQueueNode(CLLNode<OrderData>* pNode) const;
-	CLLNode<OrderData>* headOrderQueueNode() const;
-	DllExport int getNumOrdersQueued() const;
+
+	int getOrderQueueLength() const; // Exposed to Python
+	bst::optional<OrderData> getHeadOrder() const { return m_orderQueue.empty() ? bst::optional<OrderData>() : m_orderQueue.front(); }
+	bst::optional<OrderData> getTailOrder() const { return m_orderQueue.empty() ? bst::optional<OrderData>() : m_orderQueue.back(); }
+	OrderData getOrderAt(int index) const { return m_orderQueue[index]; } // Exposed to Python
+
+	//CLLNode<OrderData>* nextOrderQueueNode(CLLNode<OrderData>* pNode) const;
+	//CLLNode<OrderData>* headOrderQueueNode() const;
+	DllExport int getNumOrdersQueued() const { return m_orderQueue.size(); };
 	DllExport OrderData getOrderData(int iIndex) const;
-	OrderData getOrderDataInternal(int iIndex, bool externalView = true) const;
 	bool pushFirstValidBuildListOrder(int iListID);
 
 	// fill the kVisible array with buildings that you want shown in city, as well as the number of generics
@@ -2180,7 +2186,8 @@ protected:
 
 	std::vector<IDInfo> m_paTradeCities;
 
-	mutable CLinkList<OrderData> m_orderQueue;
+	typedef std::vector<OrderData> OrderQueue;
+	OrderQueue m_orderQueue;
 
 	std::vector< std::pair < float, float> > m_kWallOverridePoints;
 
