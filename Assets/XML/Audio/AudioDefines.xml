@@ -4215,13 +4215,6 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_NOSPREAD</SoundID>
-			<Filename>Sounds/Units/NoSpread</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_FEATUREGROWTH</SoundID>
 			<Filename>Sounds/FeatureGrowth</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
