@@ -68332,6 +68332,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_PRODUCTION</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_COMMERCE</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_SANITATION</BuildingType>
+				<BuildingType>BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</BuildingType>				
 				<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
 				<BuildingType>BUILDING_WV_HUMAN_SACRIFICE</BuildingType>
 			</Buildings>
@@ -69363,6 +69364,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_PRODUCTION</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_COMMERCE</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_SANITATION</BuildingType>
+				<BuildingType>BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</BuildingType>	
 				<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
 				<BuildingType>BUILDING_WV_HUMAN_SACRIFICE</BuildingType>
 			</Buildings>
