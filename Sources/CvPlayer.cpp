@@ -8891,19 +8891,9 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 			return false;
 		}
 	}
-	if (pPlot->isPeak())
+	if (pPlot->isPeak() && !GET_TEAM(getTeam()).isCanFoundOnPeaks())
 	{
-		if (GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
-		{
-			if (!GET_TEAM(getTeam()).isCanFoundOnPeaks())
-			{
-				return false;
-			}
-		}
-		else
-		{
-			return false;
-		}
+		return false;
 	}
 	if (pPlot->getClaimingOwner() != NO_PLAYER)
 	{
