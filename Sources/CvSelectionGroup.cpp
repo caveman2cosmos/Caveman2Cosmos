@@ -3992,44 +3992,20 @@ bool CvSelectionGroup::isFull() const
 
 bool CvSelectionGroup::hasCargo() const
 {
-	CLLNode<IDInfo>* pUnitNode = headUnitNode();
-
-	while (pUnitNode != NULL)
-	{
-		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = nextUnitNode(pUnitNode);
-
-		if (pLoopUnit->hasCargo())
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return algo::any_of(units(), CvUnit::fn::hasCargo());
 }
 
 //Call for volume when you want the total cargo volume held by the group
 int CvSelectionGroup::getCargo(bool bVolume) const
 {
-	int iCargoCount = 0;
-
-	CLLNode<IDInfo>* pUnitNode = headUnitNode();
-	while (pUnitNode != NULL)
+	if (bVolume && GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = nextUnitNode(pUnitNode);
-		
-		if (bVolume && GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
-		{
-			iCargoCount += pLoopUnit->SMgetCargo();
-		}
-		else
-		{
-			iCargoCount += pLoopUnit->getCargo();
-		}
+		return algo::accumulate(units() | transformed(CvUnit::fn::SMgetCargo()), 0);
 	}
-
-	return iCargoCount;
+	else
+	{
+		return algo::accumulate(units() | transformed(CvUnit::fn::getCargo()), 0);
+	}
 }
 
 bool CvSelectionGroup::_canAllMove()
@@ -4039,150 +4015,51 @@ bool CvSelectionGroup::_canAllMove()
 
 bool CvSelectionGroup::canAllMove() const
 {
-	PROFILE_FUNC();
-
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
-
-	if (getNumUnits() > 0)
-	{
-		pUnitNode = headUnitNode();
-
-		while (pUnitNode != NULL)
-		{
-			pLoopUnit = ::getUnit(pUnitNode->m_data);
-			pUnitNode = nextUnitNode(pUnitNode);
-
-			FAssertMsg(pLoopUnit != NULL, "existing node, but NULL unit");
-
-			if (pLoopUnit != NULL && !(pLoopUnit->canMove()))
-			{
-				return false;
-			}
-		}
-
-		return true;
-	}
-
-	return false;
+	return getNumUnits() > 0 
+		&& algo::all_of(units(), CvUnit::fn::canMove());
 }
 
 
 bool CvSelectionGroup::canAnyMove(bool bValidate)
 {
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
-	bool bResult = false;
-	bool bFoundNonMoveCapable = false;
-
-	pUnitNode = headUnitNode();
-
-	while (pUnitNode != NULL)
+	if (!bValidate)
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = nextUnitNode(pUnitNode);
-
-		if (pLoopUnit->canMove())
-		{
-			bResult = true;
-			if ( !bValidate )
-			{
-				break;
-			}
-		}
-		else
-		{
-			bFoundNonMoveCapable = true;
-		}
+		return algo::any_of(units(), CvUnit::fn::canMove());
 	}
-
-	if ( bResult && bValidate && bFoundNonMoveCapable )
+	else
 	{
-		//	Selection group has both units that can and cannot move further
-		//	If we're validating the state then such groups should be busy (else
-		//	a WFoC will result), so if they are not set them to sleep for this
-		//	turn
-		if ( !isBusy() && getActivityType() == ACTIVITY_AWAKE )
+		const int canMoveCount = algo::count_if(units(), CvUnit::fn::canMove());
+		if (canMoveCount > 0 
+			&& canMoveCount < getNumUnits() 
+			&& !isBusy()
+			&& getActivityType() == ACTIVITY_AWAKE)
 		{
+			//	Selection group has both units that can and cannot move further
+			//	If we're validating the state then such groups should be busy (else
+			//	a WFoC will result), so if they are not set them to sleep for this
+			//	turn
 			setActivityType(ACTIVITY_SLEEP);
 		}
+		return canMoveCount > 0;
 	}
-
-	return bResult;
 }
 
 bool CvSelectionGroup::hasMoved() const
 {
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
-
-	pUnitNode = headUnitNode();
-
-	while (pUnitNode != NULL)
-	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = nextUnitNode(pUnitNode);
-
-		if (pLoopUnit->hasMoved())
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return algo::any_of(units(), CvUnit::fn::hasMoved());
 }
 
 
 bool CvSelectionGroup::canEnterTerritory(TeamTypes eTeam, bool bIgnoreRightOfPassage) const
 {
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
-
-	if (getNumUnits() > 0)
-	{
-		pUnitNode = headUnitNode();
-
-		while (pUnitNode != NULL)
-		{
-			pLoopUnit = ::getUnit(pUnitNode->m_data);
-			pUnitNode = nextUnitNode(pUnitNode);
-
-			if (!(pLoopUnit->canEnterTerritory(eTeam, bIgnoreRightOfPassage)))
-			{
-				return false;
-			}
-		}
-
-		return true;
-	}
-
-	return false;
+	return getNumUnits() > 0 
+		&& algo::all_of(units(), bind(&CvUnit::canEnterTerritory, _1, eTeam, bIgnoreRightOfPassage));
 }
 
 bool CvSelectionGroup::canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage) const
 {
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
-
-	if (getNumUnits() > 0)
-	{
-		pUnitNode = headUnitNode();
-
-		while (pUnitNode != NULL)
-		{
-			pLoopUnit = ::getUnit(pUnitNode->m_data);
-			pUnitNode = nextUnitNode(pUnitNode);
-
-			if (!(pLoopUnit->canEnterArea(eTeam, pArea, bIgnoreRightOfPassage)))
-			{
-				return false;
-			}
-		}
-
-		return true;
-	}
-
-	return false;
+	return getNumUnits() > 0
+		&& algo::all_of(units(), bind(&CvUnit::canEnterArea, _1, eTeam, pArea, bIgnoreRightOfPassage));
 }
 
 bool CvSelectionGroup::_canMoveInto(CvPlot* pPlot, bool bAttack)
@@ -4197,26 +4074,8 @@ bool CvSelectionGroup::canMoveInto(const CvPlot* pPlot, bool bAttack) const
 
 bool CvSelectionGroup::canMoveIntoWithWar(const CvPlot* pPlot, bool bAttack, bool bDeclareWar) const
 {
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
-
-	if (getNumUnits() > 0)
-	{
-		pUnitNode = headUnitNode();
-
-		while (pUnitNode != NULL)
-		{
-			pLoopUnit = ::getUnit(pUnitNode->m_data);
-			pUnitNode = nextUnitNode(pUnitNode);
-
-			if (pLoopUnit->canMoveInto(pPlot, bAttack? MoveCheck::Attack : MoveCheck::None))
-			{
-				return true;
-			}
-		}
-	}
-
-	return false;
+	return getNumUnits() > 0
+		&& algo::any_of(units(), bind(&CvUnit::canMoveInto, _1, pPlot, bAttack ? MoveCheck::Attack : MoveCheck::None, nullptr));
 }
 
 bool CvSelectionGroup::_canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar)

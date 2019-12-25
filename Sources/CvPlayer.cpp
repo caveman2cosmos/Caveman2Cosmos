@@ -8891,19 +8891,9 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 			return false;
 		}
 	}
-	if (pPlot->isPeak())
+	if (pPlot->isPeak() && !GET_TEAM(getTeam()).isCanFoundOnPeaks())
 	{
-		if (GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
-		{
-			if (!GET_TEAM(getTeam()).isCanFoundOnPeaks())
-			{
-				return false;
-			}
-		}
-		else
-		{
-			return false;
-		}
+		return false;
 	}
 	if (pPlot->getClaimingOwner() != NO_PLAYER)
 	{
@@ -19952,7 +19942,6 @@ void CvPlayer::deleteUnit(int iID)
 	m_units.removeAt(iID);
 }
 
-
 CvSelectionGroup* CvPlayer::firstSelectionGroup(int *pIterIdx, bool bRev) const
 {
 	CvSelectionGroup* pResult = !bRev ? m_selectionGroups.beginIter(pIterIdx) : m_selectionGroups.endIter(pIterIdx);
@@ -19964,7 +19953,6 @@ CvSelectionGroup* CvPlayer::firstSelectionGroup(int *pIterIdx, bool bRev) const
 
 	return pResult;
 }
-
 
 CvSelectionGroup* CvPlayer::nextSelectionGroup(int *pIterIdx, bool bRev) const
 {
@@ -19978,6 +19966,25 @@ CvSelectionGroup* CvPlayer::nextSelectionGroup(int *pIterIdx, bool bRev) const
 	return pResult;
 }
 
+CvSelectionGroup* CvPlayer::firstSelectionGroupNonEmpty(int* pIterIdx, bool bRev) const
+{
+	CvSelectionGroup* pResult = firstSelectionGroup(pIterIdx, bRev);
+	while (pResult != nullptr && pResult->getHeadUnit() == nullptr)
+	{
+		pResult = nextSelectionGroup(pIterIdx, bRev);
+	}
+	return pResult;
+}
+
+CvSelectionGroup* CvPlayer::nextSelectionGroupNonEmpty(int* pIterIdx, bool bRev) const
+{
+	CvSelectionGroup* pResult = nextSelectionGroup(pIterIdx, bRev);
+	while (pResult != nullptr && pResult->getHeadUnit() == nullptr)
+	{
+		pResult = nextSelectionGroup(pIterIdx, bRev);
+	}
+	return pResult;
+}
 
 int CvPlayer::getNumSelectionGroups() const																
 {

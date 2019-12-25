@@ -196,6 +196,7 @@ Unity( 'Sources-Unity' )
     .UnityInputExcludePattern = '*/Cy*'
     // Keep our pch file out of the unity files
     .UnityInputExcludedFiles = { "CvGameCoreDLL.cpp" }
+    .UnityInputIsolatedFiles = { "CvGameTextMgr.cpp" }
     .UnityOutputPath        = '$BUILD_DIR$\unity'
     .UnityInputPathRecurse  = false
     .UnityNumFiles          = 12
