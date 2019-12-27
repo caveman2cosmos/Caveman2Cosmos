@@ -2,6 +2,8 @@ Version=11
 BeginGame
 	Speed=NONE
 	Option=GAMEOPTION_MOUNTAINS
+	Option=GAMEOPTION_ASSIMILATION
+	Option=GAMEOPTION_ECOLOGICAL_ANIMALS
 	Victory=VICTORY_SPACE_RACE
 	StartYear=-200000
 	Description= C2C 10% larger Standard Earth Map with 20 Civs. By Harrier.

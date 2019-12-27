@@ -219,8 +219,12 @@ void IFPSetCount(ProfileSample* sample, int count);
 
 // Alias our latest boost version
 namespace bst = boost155;
-// Bring range adaptors straight into global namespace, as we use them a lot
+
+// Bring range adaptors into global namespace
 using namespace bst::adaptors;
+
+// Bring bind into global namespace
+using bst::bind;
 
 //
 // Boost Python

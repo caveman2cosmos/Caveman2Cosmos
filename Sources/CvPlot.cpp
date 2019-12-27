@@ -16466,7 +16466,8 @@ void CvPlot::enableCenterUnitRecalc(bool bEnable)
 
 	if ( bEnable )
 	{
-		updateCenterUnit();
+		hideGraphics(ECvPlotGraphics::UNIT);
+		// updateCenterUnit();
 	}
 }
 

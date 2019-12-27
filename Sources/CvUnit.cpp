@@ -14778,6 +14778,13 @@ BuildTypes CvUnit::getBuildType() const
 	return NO_BUILD;
 }
 
+ImprovementTypes CvUnit::getBuildTypeImprovement() const
+{
+	const BuildTypes buildType = getBuildType();
+	if (buildType == NO_BUILD) return NO_IMPROVEMENT;
+	return static_cast<ImprovementTypes>(GC.getBuildInfo(buildType).getImprovement());
+}
+
 bool CvUnit::isAnimal() const
 {
 	return GET_PLAYER(getOwnerINLINE()).isAnimal();

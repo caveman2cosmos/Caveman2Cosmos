@@ -75,10 +75,15 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 				MessageBox(0, "Creation of FPK packs failed, are you sure you set up the development environment correctly?", "ERROR!", 0);
 				return FALSE;
 			}
-			if (!runProcess("cmd.exe /C \"" + git_dir + "\\Tools\\_BootDLLCheck.bat\" " + TOSTRING(BUILD_TARGET), git_dir + "\\Tools"))
+
+			// Don't attempt rebuild if debugger is connected, its annoying
+			if(!IsDebuggerPresent())
 			{
-				MessageBox(0, "DLL update failed!", "ERROR!", 0);
-				return FALSE;
+				if (!runProcess("cmd.exe /C \"" + git_dir + "\\Tools\\_BootDLLCheck.bat\" " + TOSTRING(BUILD_TARGET), git_dir + "\\Tools"))
+				{
+					MessageBox(0, "DLL update failed!", "ERROR!", 0);
+					return FALSE;
+				}
 			}
 		}
 		}

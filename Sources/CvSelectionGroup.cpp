@@ -3534,38 +3534,20 @@ bool CvSelectionGroup::isFull() const
 
 bool CvSelectionGroup::hasCargo() const
 {
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		if ((*unitItr)->hasCargo())
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return algo::any_of(units(), CvUnit::fn::hasCargo());
 }
 
 //Call for volume when you want the total cargo volume held by the group
 int CvSelectionGroup::getCargo(bool bVolume) const
 {
-	int iCargoCount = 0;
-
 	if (bVolume && GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-		{
-			iCargoCount += (*unitItr)->SMgetCargo();
-		}
+		return algo::accumulate(units() | transformed(CvUnit::fn::SMgetCargo()), 0);
 	}
 	else
 	{
-		for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-		{
-			iCargoCount += (*unitItr)->getCargo();
-		}
+		return algo::accumulate(units() | transformed(CvUnit::fn::getCargo()), 0);
 	}
-
-	return iCargoCount;
 }
 
 bool CvSelectionGroup::_canAllMove()
@@ -3575,101 +3557,51 @@ bool CvSelectionGroup::_canAllMove()
 
 bool CvSelectionGroup::canAllMove() const
 {
-	PROFILE_FUNC();
-
-	FAssert(getNumUnits() > 0);
-
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		FAssert((*unitItr) != NULL);
-
-		if (!(*unitItr)->canMove())
-		{
-			return false;
-		}
-	}
-
-	return true;
+	return getNumUnits() > 0 
+		&& algo::all_of(units(), CvUnit::fn::canMove());
 }
 
 
 bool CvSelectionGroup::canAnyMove(bool bValidate)
 {
-	bool bResult = false;
-	bool bFoundNonMoveCapable = false;
-
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
+	if (!bValidate)
 	{
-		if ((*unitItr)->canMove())
-		{
-			bResult = true;
-			if ( !bValidate )
-			{
-				break;
-			}
-		}
-		else
-		{
-			bFoundNonMoveCapable = true;
-		}
+		return algo::any_of(units(), CvUnit::fn::canMove());
 	}
-
-	if ( bResult && bValidate && bFoundNonMoveCapable )
+	else
 	{
-		//	Selection group has both units that can and cannot move further
-		//	If we're validating the state then such groups should be busy (else
-		//	a WFoC will result), so if they are not set them to sleep for this turn
-		if ( !isBusy() && getActivityType() == ACTIVITY_AWAKE )
+		const int canMoveCount = algo::count_if(units(), CvUnit::fn::canMove());
+		if (canMoveCount > 0 
+			&& canMoveCount < getNumUnits() 
+			&& !isBusy()
+			&& getActivityType() == ACTIVITY_AWAKE)
 		{
+			//	Selection group has both units that can and cannot move further
+			//	If we're validating the state then such groups should be busy (else
+			//	a WFoC will result), so if they are not set them to sleep for this
+			//	turn
 			setActivityType(ACTIVITY_SLEEP);
 		}
+		return canMoveCount > 0;
 	}
-
-	return bResult;
 }
 
 bool CvSelectionGroup::hasMoved() const
 {
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		if ((*unitItr)->hasMoved())
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return algo::any_of(units(), CvUnit::fn::hasMoved());
 }
 
 
 bool CvSelectionGroup::canEnterTerritory(TeamTypes eTeam, bool bIgnoreRightOfPassage) const
 {
-	FAssert(getNumUnits() > 0);
-
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		if (!(*unitItr)->canEnterTerritory(eTeam, bIgnoreRightOfPassage))
-		{
-			return false;
-		}
-	}
-
-	return true;
+	return getNumUnits() > 0 
+		&& algo::all_of(units(), bind(&CvUnit::canEnterTerritory, _1, eTeam, bIgnoreRightOfPassage));
 }
 
 bool CvSelectionGroup::canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage) const
 {
-	FAssert(getNumUnits() > 0);
-
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		if (!(*unitItr)->canEnterArea(eTeam, pArea, bIgnoreRightOfPassage))
-		{
-			return false;
-		}
-	}
-
-	return true;
+	return getNumUnits() > 0
+		&& algo::all_of(units(), bind(&CvUnit::canEnterArea, _1, eTeam, pArea, bIgnoreRightOfPassage));
 }
 
 bool CvSelectionGroup::_canMoveInto(CvPlot* pPlot, bool bAttack)
@@ -3684,17 +3616,8 @@ bool CvSelectionGroup::canMoveInto(const CvPlot* pPlot, bool bAttack) const
 
 bool CvSelectionGroup::canMoveIntoWithWar(const CvPlot* pPlot, bool bAttack, bool bDeclareWar) const
 {
-	FAssert(getNumUnits() > 0);
-
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		if ((*unitItr)->canMoveInto(pPlot, bAttack? MoveCheck::Attack : MoveCheck::None))
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return getNumUnits() > 0
+		&& algo::any_of(units(), bind(&CvUnit::canMoveInto, _1, pPlot, bAttack ? MoveCheck::Attack : MoveCheck::None, nullptr));
 }
 
 bool CvSelectionGroup::_canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar)

@@ -37,6 +37,10 @@
 				<change module="AutomatedSettings" function="changedAllowUnitSuiciding"/>
 			</option>
 
+			<option id="AutoHuntReturnForUpgrades" key="AutoHuntReturnForUpgrades" type="boolean" default="False" get="isAutoHuntReturnForUpgrades" set="setAutoHuntReturnForUpgrades">
+				<change module="AutomatedSettings" function="changedAutoHuntReturnForUpgrades"/>
+			</option>
+
 			<option id="HideAutomateHunt" key="HideAutomateHunt" type="boolean" default="False" get="isHideAutomateHunt" set="setHideAutomateHunt">
 				<change module="AutomatedSettings" function="changedHideAutomateHunt"/>
 			</option>

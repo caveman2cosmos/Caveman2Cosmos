@@ -19952,7 +19952,6 @@ void CvPlayer::deleteUnit(int iID)
 	m_units.removeAt(iID);
 }
 
-
 CvSelectionGroup* CvPlayer::firstSelectionGroup(int *pIterIdx, bool bRev) const
 {
 	CvSelectionGroup* pResult = !bRev ? m_selectionGroups.beginIter(pIterIdx) : m_selectionGroups.endIter(pIterIdx);
@@ -19964,7 +19963,6 @@ CvSelectionGroup* CvPlayer::firstSelectionGroup(int *pIterIdx, bool bRev) const
 
 	return pResult;
 }
-
 
 CvSelectionGroup* CvPlayer::nextSelectionGroup(int *pIterIdx, bool bRev) const
 {
@@ -19978,6 +19976,25 @@ CvSelectionGroup* CvPlayer::nextSelectionGroup(int *pIterIdx, bool bRev) const
 	return pResult;
 }
 
+CvSelectionGroup* CvPlayer::firstSelectionGroupNonEmpty(int* pIterIdx, bool bRev) const
+{
+	CvSelectionGroup* pResult = firstSelectionGroup(pIterIdx, bRev);
+	while (pResult != nullptr && pResult->getHeadUnit() == nullptr)
+	{
+		pResult = nextSelectionGroup(pIterIdx, bRev);
+	}
+	return pResult;
+}
+
+CvSelectionGroup* CvPlayer::nextSelectionGroupNonEmpty(int* pIterIdx, bool bRev) const
+{
+	CvSelectionGroup* pResult = nextSelectionGroup(pIterIdx, bRev);
+	while (pResult != nullptr && pResult->getHeadUnit() == nullptr)
+	{
+		pResult = nextSelectionGroup(pIterIdx, bRev);
+	}
+	return pResult;
+}
 
 int CvPlayer::getNumSelectionGroups() const																
 {
