@@ -6326,7 +6326,7 @@
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<iHappiness>-3</iHappiness>
-			<iMilitaryProductionModifier>-35</iMilitaryProductionModifier>
+			<iMilitaryProductionModifier>35</iMilitaryProductionModifier>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_PHENOTYPE_STUDIO</BuildingClassType>
