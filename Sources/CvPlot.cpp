@@ -1943,6 +1943,12 @@ bool CvPlot::isFreshWater(bool bIgnoreJungle) const
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 {
+	CvCity* pCity = getPlotCity();
+	if (pCity != NULL && pCity->hasFreshWater())
+	{
+		return true;
+	}
+
 	if (isLake())
 	{
 		return true;
@@ -1978,19 +1984,6 @@ bool CvPlot::isFreshWater(bool bIgnoreJungle) const
 						return true;
 					}
 				}
-				/************************************************************************************************/
-				/* Afforess	                  Start		 12/13/09                                                */
-				/*                                                                                              */
-				/*                                                                                              */
-				/************************************************************************************************/
-				CvCity* pCity = pLoopPlot->getPlotCity();
-				if (pCity != NULL && pCity->hasFreshWater())
-				{
-					return true;
-				}
-				/************************************************************************************************/
-				/* Afforess	                     END                                                            */
-				/************************************************************************************************/
 			}
 		}
 	}
@@ -2002,7 +1995,8 @@ bool CvPlot::isFreshWater(bool bIgnoreJungle) const
 bool CvPlot::isPotentialIrrigation() const
 {
 //===NM=====Mountain Mod===0X=====
-	if ((isCity() && !(isHills() || isPeak2(true))) || ((getImprovementType() != NO_IMPROVEMENT) && (GC.getImprovementInfo(getImprovementType()).isCarriesIrrigation())))
+	//TB Debug: Why should it be necessary for cities to require Not being on hills or alternative peak types (like volcanoes) for them to be potentially irrigated?  Seems to be a strange requirement for wells to function.
+	if ((isCity() /*&& !(isHills() || isPeak2(true))*/) || ((getImprovementType() != NO_IMPROVEMENT) && (GC.getImprovementInfo(getImprovementType()).isCarriesIrrigation())))
 	{
 		if ((getTeam() != NO_TEAM) && GET_TEAM(getTeam()).isIrrigation())
 		{
@@ -2019,7 +2013,8 @@ bool CvPlot::canHavePotentialIrrigation() const
 	int iI;
 
 //===NM=====Mountain Mod===0X=====
-	if (isCity() && !(isHills() || isPeak2(true)))
+	//TB Debug: Why should it be necessary for cities to require Not being on either hills or alternative peak types (like volcanoes) for them to be potentially irrigated?  Seems to be a strange requirement for wells to function.
+	if (isCity() /*&& !(isHills() || isPeak2(true))*/)
 	{
 		return true;
 	}
