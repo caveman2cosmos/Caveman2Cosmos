@@ -1954,7 +1954,9 @@ bool CvPlot::isFreshWater(bool bIgnoreJungle) const
 		return true;
 	}
 
-	if (isWater() || isImpassable())
+	TeamTypes eTeam = getTeam();
+
+	if (isWater() || isImpassable(eTeam))
 	{
 		return false;
 	}
@@ -6746,9 +6748,16 @@ bool CvPlot::isValidDomainForAction(const CvUnit& unit) const
 
 bool CvPlot::isImpassable(TeamTypes eTeam) const
 {
-	if (eTeam == NO_TEAM || isPeak2(true) && !GET_TEAM(eTeam).isCanPassPeaks())
+	if (isPeak2(true))
 	{
-		return true;
+		if (eTeam != NO_TEAM && GET_TEAM(eTeam).isCanPassPeaks())
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
 	}
 	if (getTerrainType() == NO_TERRAIN)
 	{
