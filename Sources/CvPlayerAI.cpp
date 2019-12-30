@@ -31274,6 +31274,7 @@ CvCity* CvPlayerAI::getTeamInquisitionRevoltCity(CvUnit *pUnit, bool bNoUnit, in
 CvCity* CvPlayerAI::getReligiousVictoryTarget(CvUnit *pUnit, bool bNoUnit)
 {
 	FAssert(pUnit != NULL);
+
 	if (!hasInquisitionTarget() || (!isPushReligiousVictory() && !isConsiderReligiousVictory()))
 	{
 		return NULL;
@@ -31285,11 +31286,11 @@ CvCity* CvPlayerAI::getReligiousVictoryTarget(CvUnit *pUnit, bool bNoUnit)
 
 	CvCity* pBestCity = NULL;
 	int iBestCityValue = MAX_INT;
-
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		const CvPlayer& kLoopPlayer = GET_PLAYER(PlayerTypes(iI));
 		const CvTeam& kLoopTeam = GET_TEAM(kLoopPlayer.getTeam());
+
 		if (kLoopPlayer.isAlive()
 			&& (TeamTypes(kLoopPlayer.getTeam()) == getTeam() || kLoopTeam.isVassal((TeamTypes)kLoopPlayer.getTeam()))
 			&& pUnitPlot->isHasPathToPlayerCity(getTeam(), PlayerTypes(iI))
@@ -31302,7 +31303,7 @@ CvCity* CvPlayerAI::getReligiousVictoryTarget(CvUnit *pUnit, bool bNoUnit)
 				if (pLoopCity->isInquisitionConditions()
 					&& (bNoUnit || pUnit->generatePath(pLoopPlot, 0, false))
 					)
-				{	
+				{
 					int tempCityValue = pUnitPlot->calculatePathDistanceToPlot(getTeam(), pLoopPlot);
 					if (isNonStateReligionCommerce()
 						&& kLoopPlayer.getID() == getID())
@@ -31322,11 +31323,11 @@ CvCity* CvPlayerAI::getReligiousVictoryTarget(CvUnit *pUnit, bool bNoUnit)
 						{
 							tempCityValue += 13;
 						}
-						if (tempCityValue < iBestCityValue)
-						{
-							pBestCity = pLoopCity;
-							iBestCityValue = tempCityValue;
-						}
+					}
+					if (tempCityValue < iBestCityValue)
+					{
+						pBestCity = pLoopCity;
+						iBestCityValue = tempCityValue;
 					}
 				}
 			}
