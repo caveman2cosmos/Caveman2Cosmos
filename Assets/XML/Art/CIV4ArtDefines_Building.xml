@@ -19240,16 +19240,6 @@
 			<Button>art/Embassy/art/bulgarianembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CASTILIAN_EMBASSY</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>art/Embassy/art/castilianembassy.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_COLOMBIAN_EMBASSY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>

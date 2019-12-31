@@ -356,16 +356,6 @@
 			<Button>,Art/Interface/Buttons/Civilizations/Spain.dds,Art/Interface/Buttons/Warlords_Atlas_2.dds,5,1</Button>
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Castilian -->
-		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_CASTILIAN</Type>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Empty.nif</NIF>
-			<KFM></KFM>
-			<Button>art/Embassy/art/castilianembassy.dds</Button>
-			<FontButtonIndex>145</FontButtonIndex>
-		</BonusArtInfo>
 	<!-- Celtic -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CELTIC</Type>

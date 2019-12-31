@@ -1627,15 +1627,6 @@
 			<DefaultBuilding>BUILDING_BULGARIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_CASTILIAN_EMBASSY</Type>
-			<Description>TXT_KEY_BUILDING_CASTILIAN_EMBASSY</Description>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
-			<DefaultBuilding>BUILDING_CASTILIAN_EMBASSY</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_COLOMBIAN_EMBASSY</Type>
 			<Description>TXT_KEY_BUILDING_COLOMBIAN_EMBASSY</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>

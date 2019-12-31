@@ -356,16 +356,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CARTHAGINIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Castilian -->
-	<!-- by Hydromancerx -->
-		<BonusInfo>
-			<Type>BONUS_CASTILIAN</Type>
-			<Description>TXT_KEY_BONUS_CASTILIAN</Description>
-			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_CASTILIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
-		</BonusInfo>
 	<!-- Celtic -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
