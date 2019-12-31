@@ -122,7 +122,7 @@ m_Properties(this)
 	{
 		g_dummyUnit = new CvUnitAI(true);
 
-		if ( GC.getDefineINT("ENABLE_DYNAMIC_UNIT_ENTITIES") )
+		if (GC.getENABLE_DYNAMIC_UNIT_ENTITIES())
 		{
 			g_bUseDummyEntities = true;
 		}

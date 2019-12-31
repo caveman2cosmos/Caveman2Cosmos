@@ -654,6 +654,7 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 		(bAssassinate ? MoveCheck::Assassinate : MoveCheck::None) |
 		(bSuprise ? MoveCheck::Suprise : MoveCheck::None);
 
+	int iBestOdds = 0;
 	int iBestValue = 0;
 	CvUnit* pBestUnit = NULL;
 
@@ -676,13 +677,18 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 					{
 						PROFILE("AI_getBestGroupAttacker.RegularAttackOdds");
 
-						int iValue = pBestDefender ? pLoopUnit->AI_attackOddsAtPlot(pPlot, (CvUnitAI*)pBestDefender) : pLoopUnit->AI_attackOdds(pPlot, bPotentialEnemy, 0, bAssassinate);
+						const int iOdds = pBestDefender? 
+							pLoopUnit->AI_attackOddsAtPlot(pPlot, (CvUnitAI*)pBestDefender)
+							:
+							pLoopUnit->AI_attackOdds(pPlot, bPotentialEnemy, 0, bAssassinate);
+
+						int iValue = iOdds;
 						FAssertMsg(iValue > 0, "iValue is expected to be greater than 0");
 	
 						if (pLoopUnit->collateralDamage() > 0)
 						{
 							const int iPossibleTargets = std::min((pPlot->getNumVisiblePotentialEnemyDefenders(pLoopUnit) - 1), pLoopUnit->collateralDamageMaxUnits());
-
+	
 							if (iPossibleTargets > 0)
 							{
 								iValue *= (100 + ((pLoopUnit->collateralDamage() * iPossibleTargets) / 5));
@@ -694,6 +700,7 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 						if (iValue > iBestValue || (!bIsHuman && iValue > 0 && iValue == iBestValue))
 						{
 							iBestValue = iValue;
+							iBestOdds = iOdds;
 							pBestUnit = pLoopUnit;
 						}
 					}
@@ -709,13 +716,10 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 		// Recalculate, this time modifying the predicted hitpoints that will result
 		// if the battle occurs.  This will return a better odds estimate than we
 		//	had previously, but should not change the unit choice
-		iUnitOdds = pBestUnit->AI_attackOdds(pPlot, bPotentialEnemy, ppDefender);
+		iBestOdds = pBestUnit->AI_attackOdds(pPlot, bPotentialEnemy, ppDefender);
 	}
-	else
-	{
-		iUnitOdds = iBestValue;
-	}
-
+	
+	iUnitOdds = iBestOdds;
 	return pBestUnit;
 }
 
@@ -1151,8 +1155,6 @@ int CvSelectionGroupAI::AI_getGenericValueTimes100(UnitValueFlags eFlags) const
 
 bool CvSelectionGroupAI::AI_hasBeneficialPropertyEffectForCity(CvCity* pCity) const
 {
-	FAssert(headUnitNode() != NULL);
-
 	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
 	{
 		if ((*unitItr)->AI_beneficialPropertyValueToCity(pCity, NO_PROPERTY) > 0)
@@ -1257,14 +1259,17 @@ CvUnit* CvSelectionGroupAI::AI_ejectBestDefender(CvPlot* pDefendPlot, bool allow
 
 bool CvSelectionGroupAI::AI_isCityGarrison(const CvCity* pCity) const
 {
-	FAssert(getHeadUnit() != NULL);
-	return getHeadUnit()->AI_isCityGarrison(pCity);
+	const CvUnit* pHeadUnit = getHeadUnit();
+	return pHeadUnit ? pHeadUnit->AI_isCityGarrison(pCity) : false;
 }
 
 void CvSelectionGroupAI::AI_setAsGarrison(const CvCity* pCity)
 {
-	FAssert(getHeadUnit() != NULL);
-	getHeadUnit()->AI_setAsGarrison(pCity);
+	CvUnit* pHeadUnit = getHeadUnit();
+	if (pHeadUnit != NULL)
+	{
+		pHeadUnit->AI_setAsGarrison(pCity);
+	}
 }
 
 
@@ -1317,8 +1322,7 @@ void CvSelectionGroupAI::write(FDataStreamBase* pStream)
 
 bool CvSelectionGroupAI::AI_isAwaitingContract() const
 {
-	FAssert(getHeadUnit() != NULL);
-	return getHeadUnit()->AI_isAwaitingContract();
+	return (getHeadUnit() != NULL && getHeadUnit()->AI_isAwaitingContract());
 }
 
 // Private Functions...
