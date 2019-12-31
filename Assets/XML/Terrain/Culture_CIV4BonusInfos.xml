@@ -1056,16 +1056,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_LIANGZHU</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Leonese -->
-	<!-- by Hydromancerx -->
-		<BonusInfo>
-			<Type>BONUS_LEON</Type>
-			<Description>TXT_KEY_BONUS_LEON</Description>
-			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_LEON</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
-		</BonusInfo>
 	<!-- Luba -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
@@ -4615,22 +4605,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_RED_OCHER</ArtDefineTag>
-			<TechReveal>NONE</TechReveal>
-			<TechCityTrade>NONE</TechCityTrade>
-			<TechObsolete>NONE</TechObsolete>
-			<iAITradeModifier>0</iAITradeModifier>
-			<iAIObjective>0</iAIObjective>
-			<iHealth>0</iHealth>
-			<iHappiness>0</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
-			<iConstAppearance>0</iConstAppearance>
-		</BonusInfo>
-		<BonusInfo>
-			<Type>BONUS_SABBATEAN</Type>
-			<Description>TXT_KEY_BONUS_SABBATEAN</Description>
-			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_SABBATEAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>

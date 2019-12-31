@@ -1046,16 +1046,6 @@
 			<Button>,Art/Interface/Buttons/Civilizations/Spain.dds,Art/Interface/Buttons/Warlords_Atlas_2.dds,4,1</Button>
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Leonese -->
-		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_LEON</Type>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Empty.nif</NIF>
-			<KFM></KFM>
-			<Button>art/Embassy/art/leonembassy.dds</Button>
-			<FontButtonIndex>145</FontButtonIndex>
-		</BonusArtInfo>
 	<!-- Liangzhu -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_LIANGZHU</Type>
@@ -3321,15 +3311,6 @@
 			<NIF>Art/Empty.nif</NIF>
 			<KFM></KFM>
 			<Button>Art/Embassy/red_ocherembassy.dds</Button>
-			<FontButtonIndex>145</FontButtonIndex>
-		</BonusArtInfo>
-		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_SABBATEAN</Type>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Empty.nif</NIF>
-			<KFM></KFM>
-			<Button>Art/Embassy/sabbateanembassy.dds</Button>
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>

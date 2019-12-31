@@ -18126,23 +18126,6 @@
 		<Polish>Konjo - grupa etniczna w Afryce</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LEON_EMBASSY</Tag>
-		<English>Culture (Leon)</English>
-		<Polish>Kultura (Leon)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LEON_EMBASSY_STRATEGY</Tag>
-		<English>Build Culture (Leon) to gain access to unique buildings and units.</English>
-		<French>Construisez la Culture (Leon) pour avoir accès à des bâtiments et unités uniques.</French>
-		<German>Kulturen ermöglichen den Zugriff auf kulturspezifische Gebäude und Einheiten.</German>
-		<Polish>Zbuduj Culture (Leon) to gain access to unique buildings and units.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LEON_EMBASSY_PEDIA</Tag>
-		<English>TBD</English>
-		<Polish>Leon - prowincja Hiszpanii. Powierzchnia 15 600 km2, 530 000 mieszkańców (dane z 2001 r.)</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LIANGZHU_EMBASSY</Tag>
 		<English>Culture (Liangzhu)</English>
 		<Polish>Kultura (Liangzhu)</Polish>
@@ -37615,19 +37598,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RED_OCHER_EMBASSY_PEDIA</Tag>
 		<English>The Red Ocher people were an indigenous people of North America. A series of archaeological sites located in the Upper Great Lakes, the Greater Illinois River Valley, and the Ohio River Valley in the American Midwest have been discovered to be a Red Ocher burial complex, dating from 1000 BC to 400 BC, the Terminal Archaic - Early Woodland period. Characterized as shallow burials located in sandy ridges along river valleys, covered in red ochre or hydrated iron oxide (FeH3O), they contain diagnostic artifacts that include caches of flint points, turkey-tails, and various forms of worked copper. Turkey-tails are large flint blades of a distinct type. It is believed that Red Ocher people spoke an ancestral form of the Algonquian languages. Red ochre has a long history of use in North America; as early as the Folsom tradition during the Paleo-Indian period, certain localities in New Mexico and Wyoming were actively being mined for the substance. The people today known as Red Ocher were first identified by the University of Chicago in 1937. During the late 1950s and early 1960s, the Red Ocher Culture was a topic of great interest among archaeologists who were trying to better define the burial culture through various methods of research. Since then intermittent archaeological works have been published dealing with specific sub-topics within the burial culture and supported by more reliable AMS carbon dates. Nevertheless, many important archaeological questions regarding the Red Ocher burial manifestation and cultural phenomenon are still without answers.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SABBATEAN_EMBASSY</Tag>
-		<English>Culture (Sabbatean)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SABBATEAN_EMBASSY_STRATEGY</Tag>
-		<English>Build Culture (Sabbatean) to gain access to unique buildings and units.</English>
-		<German>Kulturen ermöglichen den Zugriff auf kulturspezifische Gebäude und Einheiten.</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SABBATEAN_EMBASSY_PEDIA</Tag>
-		<English>Sabbateans (Sabbatians) is a complex general term that refers to a variety of followers of, disciples and believers in Sabbatai Zevi (1626-1676), a Jewish rabbi who was proclaimed to be the Jewish Messiah in 1665 by Nathan of Gaza. Vast numbers of Jews in the Jewish diaspora accepted his claims, even after he became a Jewish apostate with his conversion to Islam in 1666. Sabbatai Zevi's followers, both during his "Messiahship" and after his conversion to Islam, are known as Sabbateans. They can be grouped into three: "Maaminim" (believers), "Haberim" (associates), and "Ba'ale Milhamah" (warriors).</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAFAVIDS_EMBASSY</Tag>
