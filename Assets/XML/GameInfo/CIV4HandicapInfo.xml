@@ -62,7 +62,7 @@
 			<iTechTradeKnownModifier>-99</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
 			<iStartingLocPercent>10</iStartingLocPercent>
-			<iAnimalAttackProb>50</iAnimalAttackProb>
+			<iAnimalAttackProb>40</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>8</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>60</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>180</iUnownedWaterTilesPerBarbarianUnit>
@@ -325,7 +325,7 @@
 			<iTechTradeKnownModifier>-66</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
 			<iStartingLocPercent>20</iStartingLocPercent>
-			<iAnimalAttackProb>55</iAnimalAttackProb>
+			<iAnimalAttackProb>44</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>7</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>55</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>165</iUnownedWaterTilesPerBarbarianUnit>
@@ -615,7 +615,7 @@
 			<iTechTradeKnownModifier>-33</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
 			<iStartingLocPercent>30</iStartingLocPercent>
-			<iAnimalAttackProb>60</iAnimalAttackProb>
+			<iAnimalAttackProb>48</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>6</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>50</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>150</iUnownedWaterTilesPerBarbarianUnit>
@@ -892,7 +892,7 @@
 			</PropertyManipulators>
 			<!-- These only count for human players -->
 			<iStartingLocPercent>40</iStartingLocPercent>
-			<iAnimalAttackProb>65</iAnimalAttackProb>
+			<iAnimalAttackProb>52</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>5</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>45</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>135</iUnownedWaterTilesPerBarbarianUnit>
@@ -1198,7 +1198,7 @@
 			<iTechTradeKnownModifier>10</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
 			<iStartingLocPercent>50</iStartingLocPercent>
-			<iAnimalAttackProb>70</iAnimalAttackProb>
+			<iAnimalAttackProb>56</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>4</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>40</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>120</iUnownedWaterTilesPerBarbarianUnit>
@@ -1513,7 +1513,7 @@
 			<iTechTradeKnownModifier>20</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
 			<iStartingLocPercent>60</iStartingLocPercent>
-			<iAnimalAttackProb>75</iAnimalAttackProb>
+			<iAnimalAttackProb>60</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>3</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>35</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>105</iUnownedWaterTilesPerBarbarianUnit>
@@ -1838,7 +1838,7 @@
 			<iTechTradeKnownModifier>30</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
 			<iStartingLocPercent>70</iStartingLocPercent>
-			<iAnimalAttackProb>80</iAnimalAttackProb>
+			<iAnimalAttackProb>64</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>2</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>30</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>90</iUnownedWaterTilesPerBarbarianUnit>
@@ -2195,7 +2195,7 @@
 			<iTechTradeKnownModifier>40</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
 			<iStartingLocPercent>80</iStartingLocPercent>
-			<iAnimalAttackProb>85</iAnimalAttackProb>
+			<iAnimalAttackProb>68</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>1</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>25</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>75</iUnownedWaterTilesPerBarbarianUnit>
@@ -2542,7 +2542,7 @@
 			<iTechTradeKnownModifier>50</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
 			<iStartingLocPercent>90</iStartingLocPercent>
-			<iAnimalAttackProb>90</iAnimalAttackProb>
+			<iAnimalAttackProb>72</iAnimalAttackProb>
 			<iUnownedTilesPerBarbarianUnit>20</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>60</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>20</iUnownedTilesPerBarbarianCity>
@@ -2915,7 +2915,7 @@
 			<iTechTradeKnownModifier>70</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
 			<iStartingLocPercent>100</iStartingLocPercent>
-			<iAnimalAttackProb>100</iAnimalAttackProb>
+			<iAnimalAttackProb>76</iAnimalAttackProb>
 			<iUnownedTilesPerBarbarianUnit>10</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>30</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>10</iUnownedTilesPerBarbarianCity>
@@ -3287,7 +3287,7 @@
 			<iTechTradeKnownModifier>70</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
 			<iStartingLocPercent>100</iStartingLocPercent>
-			<iAnimalAttackProb>100</iAnimalAttackProb>
+			<iAnimalAttackProb>80</iAnimalAttackProb>
 			<iUnownedTilesPerBarbarianUnit>10</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>30</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>10</iUnownedTilesPerBarbarianCity>

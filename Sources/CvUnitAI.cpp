@@ -1866,84 +1866,51 @@ void CvUnitAI::AI_animalMove()
 	PROFILE_FUNC();
 
 	//TB Animal Mod Begin
-#ifdef C2C_BUILD
-	if (!isAnimal())
+	if (canAttack())
 	{
-		FAssertMsg(false, "Subdued animal still has animal AI");
-		OutputDebugString("Choosing animal mission\n");
-		if (AI_heal())
+		bool bReckless = GC.getGame().isOption(GAMEOPTION_RECKLESS_ANIMALS);
+		int iAttackProb = GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAnimalAttackProb();
+		int iOddsThreshold = (bReckless ? 0 : 60);
+		//Attack potential targets first. Animals are pretty good at assessing their chances of taking down prey, therefore 60% odds prereq.
+		if ((iOddsThreshold < 1 || iAttackProb > 99 || GC.getGameINLINE().getSorenRandNum(100, "Animal Attack") < iAttackProb)
+			&& AI_attackTargets(2, iOddsThreshold, 0, false, true))
 		{
-			OutputDebugString("Chosen to heal\n");
 			return;
 		}
 
-		if (AI_construct())
+		//Then attack elsewhere, recklessness based on animal aggression.
+		int iAggression = 666;
+		if (!bReckless)
 		{
-			OutputDebugString("Chosen to construct\n");
-			return;
+			iAggression = m_pUnitInfo->getAggression() + getLevel() - 1;
+			iAggression *= maxHitPoints() - getDamage();
+			iAggression /= 100;
+			iAggression *= iAttackProb;
+			iAggression /= 100;
 		}
-
-		if (AI_guardCity())
+		if (GC.getGameINLINE().getSorenRandNum(10, "Animal Attack") < iAggression)
 		{
-			OutputDebugString("Chosen to guard city\n");
-			return;
-		}
-
-		OutputDebugString("No valid choice - skipping\n");
-	}
-	else
-#endif
-	{
-		if (canAttack())
-		{
-
-			int iTargetsOddsThreshold = ((GC.getGame().isOption(GAMEOPTION_RECKLESS_ANIMALS))? 0 : 40);
-			//Attack potential targets first.  Animals are pretty good at assessing their chances of taking down prey but are a little reckless at doing so, therefore 40% odds prereq.
-			if (AI_attackTargets(2, iTargetsOddsThreshold, 0, false, true))
+			iOddsThreshold = (bReckless ? 0 : 5);
+			// 5% odds assessment is there to account for some small understanding of likelihood of success even in an aggressive action.
+			if (AI_anyAttack(2, iOddsThreshold, 0, false, true))
 			{
 				return;
 			}
-
-			//Then attack elsewhere
-			int iAggression = m_pUnitInfo->getAggression();
-			iAggression += (getLevel()-1);
-			iAggression *= (maxHitPoints() - getDamage());
-			iAggression /= 100;
-			iAggression *= GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAnimalAttackProb();
-			iAggression /= 100;
-			int iReckless = (12 * GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAnimalAttackProb())/100;
-			int iOtherOddsThreshold = 0;/*((GC.getGame().isOption(GAMEOPTION_RECKLESS_ANIMALS))? 0 : 5);*///Removed to help test the underlying system better.
-			int iLikelihood = (GC.getGame().isOption(GAMEOPTION_RECKLESS_ANIMALS)? iReckless : iAggression);
-			if (GC.getGameINLINE().getSorenRandNum(10, "Animal Attack") < iLikelihood)
-			{
-				//5% odds assessment is there to account for some small understanding of likelihood of success even in an aggressive action.  A badger isn't likely to try to attack an elephant and a wounded Lion will probably hold off and hide when faced with 100 men.
-				if (AI_anyAttack(2, iOtherOddsThreshold, 0, false, true))
-				{
-					return;
-				}
-			}
-
-			//TB: This was causing delays and animals to sit around doing nothing in many cases.  Re-engineer for this purpose if really needed.
-			//if (iAggression <= 2 && !GC.getGame().isOption(GAMEOPTION_RECKLESS_ANIMALS))
-			//{
-			//	if (AI_safety())
-			//	{
-			//		return;
-			//	}
-			//}
 		}
-
-		if (AI_heal())
-		{
-			return;
-		}
-
-		if (AI_patrol(true))
+		if (iAggression < 666 && exposedToDanger(plot(), 60, true) && AI_safety())
 		{
 			return;
 		}
 	}
 
+	if (AI_heal())
+	{
+		return;
+	}
+	if (AI_patrol(true))
+	{
+		return;
+	}
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
 }
@@ -22053,14 +22020,12 @@ bool CvUnitAI::AI_attackTargets(int iRange, int iOddsThreshold, int iMinStack, b
 	int iValue;
 	int iBestValue;
 
-
-	FAssert(canMove());
-
 	if (AI_ambush(iOddsThreshold, true))
 	{
 		return true;
 	}
 
+	FAssert(canMove());
 	iSearchRange = AI_searchRange(iRange);
 
 
