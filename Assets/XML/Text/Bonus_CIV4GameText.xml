@@ -964,6 +964,12 @@
 		<Polish>Kartagińska</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_CASTILIAN</Tag>
+		<English>Castilian</English>
+		<French>Castellan</French>
+		<Polish>Kastylijska</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_CAT</Tag>
 		<English>Cat</English>
 		<French>Chat</French>
@@ -3658,6 +3664,12 @@
 		<English>The lemon, Citrus × limon, is a citrus tree, a hybrid of cultivated origin. The fruit are cultivated primarily for their juice, though the pulp and rind (zest) are also used, primarily in cooking or mixing. Lemon juice is about 5% citric acid, which gives lemons a sour taste. This is a small tree, grows to 6 m (20 ft) but usually smaller. The branches are thorny, and form an open crown. The leaves are elliptical-acuminate. Flowers are violet and streaked in the interior and white on the outside. On a lemon tree, flowers and ripe fruits can be found at the same time. The first description of the lemon, which had been introduced from India two centuries earlier, is found in Arabic writings from the 12th century. The origin of the name lemon is through Persian (____ Limu), from the Sanskrit nimbuka. They were cultivated in Genoa in the mid-fifteenth century, and appeared in the Azores in 1494. More recent research has identified lemons in the ruins of Pompeii. Lemons were once used by the British Royal navy to combat scurvy, as they provided a large amount of vitamin C. - Wikipedia</English>
 		<German>[COLOR_HIGHLIGHT_TEXT]Zitronen[COLOR_REVERT] oder Limonen werden die Früchte des Zitronenbaums (Citrus × limon) genannt. Sie sind länglich-oval, etwa faustgroß und von gelber bis grün-gelber Farbe. Ihr saftiges, saures Fruchtfleisch enthält viel Vitamin C.[NEWLINE]Die Gattung der Zitruspflanzen stammt aus Asien, vermutlich aus dem Gebiet von Nordostindien und Myanmar sowie Teilen von Südchina. Von dort aus haben sie sich im Laufe der Jahrhunderte verbreitet. Die Zitronatzitrone war die erste Zitrusfrucht, die in Europa eingeführt wurde. Die Nachfolger Alexanders des Großen brachten sie von Persien nach Kleinasien mit. Etwa im 2. Jahrhundert n.Chr. wurde die Zitrone dann von jüdischen Einwanderern in Spanien, Griechenland und Italien verbreitet. Gerade die Römer wussten die Frucht, die sie Medischen Apfel nannten, zu schätzen. Von den arabischen Siedlern wurden im 9. Jahrhundert in den annektierten Gebieten dann auch echte Zitronen und Bitterorangen (Pomeranzen) angepflanzt. Sie wurden aber selbst zu Zeiten der Renaissance noch weitgehend als Zierpflanze genutzt und kaum in der Küche eingesetzt. Wichtig war die Entdeckung, dass Zitrusfrüchte den Skorbut, der durch Vitaminmangel bei langen Seereisen ausgelöst wurde, heilen konnten.</German>
 		<Polish>Jest małym drzewem (3 - 6 m wysokości). Pochodzi z podnóża Himalajów, do Europy dotarł w czasie wypraw krzyżowych w XIII wieku. Obecnie uprawiane jest w USA, Włoszech, Hiszpanii m Grecji, Argentynie i Brazylii. Pod względem produkcji cytryna zajmuje drugie miejsce wśród cytrusów(po pomarańczy słodkiej). Owocem są żółte jagody o średnicy 4 cm. Charakterystyczna dla owocu cytryny jest spiczasta końcówka. Drzewo kwitnie i owocuje przez cały rok, a u niektórych odmian na drzewie rosną jednocześnie kwiaty i owoce w różnych fazach dojrzałości. Sok i skórka cytryny stanowią dodatki smakowe do potraw i napojów. Sok, bogaty w kwas cytrynowy stanowi dodatek do maseczek kosmetycznych, płukanek do włosów, kremów wybielających. Olejek cytrynowy ze skórki cytryny stosuje się w przemyśle spożywczym i perfumeryjnym. Dawniej, w czasach wiktoriańskich wykorzystywano również młodziutkie listki cytryny - stanowiły one dodatek do sałatek.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_LEON</Tag>
+		<English>Leonese</English>
+		<French>Léonais</French>
+		<Polish>Leońska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LIANGZHU</Tag>
@@ -9119,6 +9131,10 @@ Türkis zählt zu den ältesten Schmucksteinen und hat mit seinen zarten Pastell
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RED_OCHER</Tag>
 		<English>Red Ocher</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_SABBATEAN</Tag>
+		<English>Sabbatean</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SAFAVIDS</Tag>

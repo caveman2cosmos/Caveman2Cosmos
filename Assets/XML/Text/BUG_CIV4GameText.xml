@@ -23705,6 +23705,21 @@ uno de s, A, a, p, g, n, o, r (véase archivo de ayuda)</Spanish>
 		<Spanish>Nomenclatura: Combat[CULTURE_RED_OCHER]</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_CULTURE_SABBATEAN_HOVER</Tag>
+		<English>Enter the user defined naming convention for combat units 'CULTURE_SABBATEAN'.</English>
+		<French>Entrez la convention des noms pour les unités 'CULTURE_SABBATEAN'.</French>
+		<German>Eingabe der benutzerdefinierten Benennungsregel für 'CULTURE_SABBATEAN' Einheiten</German>
+		<Italian>Inserisci la tua convenzione di denominazione personalizzata per le Unitr di Combattimento Corazzate ('Combat[CULTURE_SABBATEAN]').</Italian>
+		<Spanish>Introduce la nomenclatura que desees para nombrar a las unidades de tipo 'CULTURE_SABBATEAN'.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_CULTURE_SABBATEAN_TEXT</Tag>
+		<English>Naming Convention: Combat[CULTURE_SABBATEAN]</English>
+		<French>Convention des Noms: Combat[CULTURE_SABBATEAN]</French>
+		<German>Benennungsregel: Kampf[CULTURE_SABBATEAN]</German>
+		<Spanish>Nomenclatura: Combat[CULTURE_SABBATEAN]</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_CULTURE_SAFAVIDS_HOVER</Tag>
 		<English>Enter the user defined naming convention for combat units 'CULTURE_SAFAVIDS'.</English>
 		<French>Entrez la convention des noms pour les unités 'CULTURE_SAFAVIDS'.</French>

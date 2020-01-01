@@ -1626,6 +1626,17 @@
 			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BULGARIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
+<!-- No units
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CASTILIAN_EMBASSY</Type>
+			<Description>TXT_KEY_BUILDING_CASTILIAN_EMBASSY</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<bNoLimit>1</bNoLimit>
+			<DefaultBuilding>BUILDING_CASTILIAN_EMBASSY</DefaultBuilding>
+		</BuildingClassInfo>
+-->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_COLOMBIAN_EMBASSY</Type>
 			<Description>TXT_KEY_BUILDING_COLOMBIAN_EMBASSY</Description>
@@ -1680,6 +1691,17 @@
 			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_KONJO_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
+<!-- No units
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_LEON_EMBASSY</Type>
+			<Description>TXT_KEY_BUILDING_LEON_EMBASSY</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<bNoLimit>1</bNoLimit>
+			<DefaultBuilding>BUILDING_LEON_EMBASSY</DefaultBuilding>
+		</BuildingClassInfo>
+-->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_LIANGZHU_EMBASSY</Type>
 			<Description>TXT_KEY_BUILDING_LIANGZHU_EMBASSY</Description>
@@ -3201,6 +3223,17 @@
 			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_RED_OCHER_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
+<!-- Wrong flag
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_SABBATEAN_EMBASSY</Type>
+			<Description>TXT_KEY_BUILDING_SABBATEAN_EMBASSY</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<bNoLimit>1</bNoLimit>
+			<DefaultBuilding>BUILDING_SABBATEAN_EMBASSY</DefaultBuilding>
+		</BuildingClassInfo>
+-->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SAFAVIDS_EMBASSY</Type>
 			<Description>TXT_KEY_BUILDING_SAFAVIDS_EMBASSY</Description>
