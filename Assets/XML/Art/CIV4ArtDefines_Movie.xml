@@ -764,7 +764,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_CYRUS_CYLINDER</Type>
-			<Path>Art/Movies/Wonders/cyrus_cyliner.bik</Path>
+			<Path>Art/Movies/Wonders/cyrus_cyliner.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_CYRUS_TOMB</Type>
@@ -792,7 +792,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_UNIVERSAL_HEALTH_CARE</Type>
-			<Path>Art/Movies/Wonders/UniversalHealthCare.bik</Path>
+			<Path>Art/Movies/Wonders/UniversalHealthCare.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_PERGAMON</Type>
@@ -1300,7 +1300,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_GATE_OF_THE_SUN</Type>
-			<Path>Art/Movies/Wonders/Gate_Of_The_Sun.bik</Path>
+			<Path>Art/Movies/Wonders/Gate_Of_The_Sun.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_GENOMIC_E</Type>
@@ -1568,7 +1568,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_STRATEGIC_GRAIN_RESERVE</Type>
-			<Path>Art/movies/wonders/StrategicGrainReserve.bik</Path>
+			<Path>Art/movies/wonders/StrategicGrainReserve.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_TOPKAPI_PALACE</Type>
@@ -1625,6 +1625,10 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_REICHSTAG</Type>
 			<Path>art/Reichstag.bik</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BEAULIEU</Type>
+			<Path>Art/Movies/Wonders/Beaulieu.dds</Path>
 		</MovieArtInfo>
 	</MovieArtInfos>
 </Civ4ArtDefines>

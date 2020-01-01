@@ -8696,6 +8696,7 @@
 			<Strategy>TXT_KEY_BUILDING_BEAULIEU_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BEAULIEU</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BEAULIEU</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
