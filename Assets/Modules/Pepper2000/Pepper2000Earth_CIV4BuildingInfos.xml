@@ -7219,6 +7219,7 @@
 			<Strategy>TXT_KEY_BUILDING_ONE_BELT_ONE_ROAD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ONE_BELT_ONE_ROAD</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ONE_BELT_ONE_ROAD</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -8078,6 +8079,7 @@
 			<Strategy>TXT_KEY_BUILDING_BIOSPHERE_2_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIOSPHERE_2</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BIOSPHERE_2</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -9012,6 +9014,7 @@
 			<Strategy>TXT_KEY_BUILDING_BELL_LABS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BELL_LABS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BELL_LABS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -14670,6 +14673,7 @@
 			<Strategy>TXT_KEY_BUILDING_BIZARRO_WORLD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIZARRO_WORLD</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BIZARRO_WORLD</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23303,6 +23307,7 @@
 			<Strategy>TXT_KEY_BUILDING_BIONIC_TOWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIONIC_TOWER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BIONIC_TOWER</MovieDefineTag>
 			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -24397,6 +24402,7 @@
 			<Strategy>TXT_KEY_BUILDING_BOSTON_ARCOLOGY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BOSTON_ARCOLOGY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BOSTON_ARCOLOGY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -25782,6 +25788,7 @@
 			<Strategy>TXT_KEY_BUILDING_BAIKONUR_COSMODROME_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BAIKONUR_COSMODROME</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BAIKONUR_COSMODROME</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -26884,6 +26891,7 @@
 			<Strategy>TXT_KEY_BUILDING_BREAKTHROUGH_STARSHOT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BREAKTHROUGH_STARSHOT</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BREAKTHROUGH_STARSHOT</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

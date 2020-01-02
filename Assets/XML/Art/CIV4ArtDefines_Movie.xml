@@ -1718,5 +1718,57 @@
 			<Type>ART_DEF_MOVIE_SHRINE_CANAANISM</Type>
 			<Path>Art/CutScene/Canaanism/EMPTY.dds</Path>
 		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BAIKONUR_COSMODROME</Type>
+			<Path>Art/Movies/Wonders/BAIKONUR_COSMODROME.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_KHMER_BARAY</Type>
+			<Path>Art/Movies/Wonders/KHMER_BARAY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BELL_LABS</Type>
+			<Path>Art/Movies/Wonders/BELL_LABS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ONE_BELT_ONE_ROAD</Type>
+			<Path>Art/Movies/Wonders/ONE_BELT_ONE_ROAD.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BIG_BEN</Type>
+			<Path>Art/Movies/Wonders/BIG_BEN.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BIONIC_TOWER</Type>
+			<Path>Art/Movies/Wonders/BIONIC_TOWER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BIOSPHERE_2</Type>
+			<Path>Art/Movies/Wonders/BIOSPHERE_2.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BNS</Type>
+			<Path>Art/Movies/Wonders/BNS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BIZARRO_WORLD</Type>
+			<Path>Art/Movies/Wonders/BIZARRO_WORLD.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BOSTON_ARCOLOGY</Type>
+			<Path>Art/Movies/Wonders/BOSTON_ARCOLOGY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BRAZEN_BULL</Type>
+			<Path>Art/Movies/Wonders/BRAZEN_BULL.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BREAKTHROUGH_STARSHOT</Type>
+			<Path>Art/Movies/Wonders/BREAKTHROUGH_STARSHOT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BURJ_KHALIFA</Type>
+			<Path>Art/Movies/Wonders/BURJ_KHALIFA.dds</Path>
+		</MovieArtInfo>
 	</MovieArtInfos>
 </Civ4ArtDefines>

@@ -934,6 +934,7 @@
 			<Strategy>TXT_KEY_BUILDING_KHMER_BARAY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KHMER_BARAY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_KHMER_BARAY</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_AQUEDUCT</ConstructSound>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1066,6 +1067,7 @@
 			<Strategy>TXT_KEY_BUILDING_BIG_BEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIG_BEN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BIG_BEN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CLOCKWORKS</PrereqTech>
@@ -1138,6 +1140,7 @@
 			<Strategy>TXT_KEY_BUILDING_BNS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BNS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BNS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
@@ -1702,6 +1705,7 @@
 			<Strategy>TXT_KEY_BUILDING_BURJ_KHALIFA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BURJ_KHALIFA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BURJ_KHALIFA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CONGLOMERATES</PrereqTech>
@@ -17600,6 +17604,7 @@
 			<Strategy>TXT_KEY_BUILDING_BRAZEN_BULL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BRAZEN_BULL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BRAZEN_BULL</MovieDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_DUALISM</PrereqTech>
 			<PrereqBonuses>
