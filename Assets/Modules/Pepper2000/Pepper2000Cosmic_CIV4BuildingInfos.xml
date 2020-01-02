@@ -3223,6 +3223,7 @@
 			<Strategy>TXT_KEY_BUILDING_ANDROMEDA_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANDROMEDA_COLONY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ANDROMEDA_COLONY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERGALACTIC_TRAVEL</PrereqTech>
 			<iCost>11412</iCost>

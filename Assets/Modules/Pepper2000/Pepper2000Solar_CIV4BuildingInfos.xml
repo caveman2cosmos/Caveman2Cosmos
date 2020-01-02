@@ -2457,6 +2457,7 @@
 			<Strategy>TXT_KEY_BUILDING_ASTEROID_BELT_ASTRONOMICAL_TELESCOPE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_BELT_ASTRONOMICAL_TELESCOPE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ASTEROID_BELT_ASTRONOMICAL_TELESCOPE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PHOTONIC_SATELLITES</PrereqTech>
 			<iCost>7471</iCost>
