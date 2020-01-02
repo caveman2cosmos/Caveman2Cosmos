@@ -1710,5 +1710,13 @@
 			<Type>ART_DEF_MOVIE_ATLANTIS</Type>
 			<Path>Art/Movies/Wonders/ATLANTIS.dds</Path>
 		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ADVANCED_MINE_TECHNOLOGY_CENTER</Type>
+			<Path>Art/Movies/Mine_Tech_Center/Mine_Explosion.bik</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SHRINE_CANAANISM</Type>
+			<Path>Art/CutScene/Canaanism/EMPTY.dds</Path>
+		</MovieArtInfo>
 	</MovieArtInfos>
 </Civ4ArtDefines>
