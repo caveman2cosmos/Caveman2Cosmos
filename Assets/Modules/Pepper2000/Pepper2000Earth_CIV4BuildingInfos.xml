@@ -77,6 +77,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_LUXURY_FURNITURE_WORKSHOP</BuildingClass>
@@ -84,6 +85,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_PERSONAL_ROBOTS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_ORGAN_HALL</BuildingClass>
@@ -91,6 +93,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_TELESCREEN</BuildingClass>
@@ -112,6 +115,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_EMPORIUM</BuildingClass>
@@ -119,17 +123,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_CONGLOMERATES</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DEPT_FOREIGN_POLICY</BuildingClass>
 			<Type>BUILDING_DEPT_FOREIGN_POLICY</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AMBASSADOR_HOUSE</BuildingClass>
-			<Type>BUILDING_AMBASSADOR_HOUSE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -140,6 +138,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_FOREIGN_POLICY</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_GARDEN_CITY</BuildingClass>
@@ -15269,11 +15268,6 @@
 			</ReplaceBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_EMPORIUM</BuildingClass>
-			<Type>BUILDING_EMPORIUM</Type>
-			<ObsoleteTech>TECH_CONGLOMERATES</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_FAMILY_FARM</BuildingClass>
 			<Type>BUILDING_FAMILY_FARM</Type>
 			<ObsoleteTech>TECH_ORGANIC_CITIES</ObsoleteTech>
@@ -15421,16 +15415,6 @@
 			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUXURY_FURNITURE_WORKSHOP</BuildingClass>
-			<Type>BUILDING_LUXURY_FURNITURE_WORKSHOP</Type>
-			<ObsoleteTech>TECH_PERSONAL_ROBOTS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LYCEUM</BuildingClass>
-			<Type>BUILDING_LYCEUM</Type>
-			<ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_MAJOR_LEAGUE_STADIUM</BuildingClass>
 			<Type>BUILDING_MAJOR_LEAGUE_STADIUM</Type>
 			<ObsoleteTech>TECH_BINARY_PYSCHOKINESIS</ObsoleteTech>
@@ -15536,11 +15520,6 @@
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NEGOTIATOR_HUT</BuildingClass>
-			<Type>BUILDING_NEGOTIATOR_HUT</Type>
-			<ObsoleteTech>TECH_FOREIGN_POLICY</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_OBSIDIAN_QUARRY</BuildingClass>
@@ -15832,11 +15811,6 @@
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AMBASSADOR_HOUSE</BuildingClass>
-			<Type>BUILDING_AMBASSADOR_HOUSE</Type>
-			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_COMMERCIAL_PORT</BuildingClass>
@@ -17690,11 +17664,6 @@
 			<ObsoleteTech>TECH_SOCIAL_CALCULUS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_BATTLEBOT_ARENA</BuildingClass>
-			<Type>BUILDING_BATTLEBOT_ARENA</Type>
-			<ObsoleteTech>TECH_WARMACHINES</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_COUNTRY_CLUB</BuildingClass>
 			<Type>BUILDING_COUNTRY_CLUB</Type>
 			<ObsoleteTech>TECH_UTOPIA_DESTINY</ObsoleteTech>
@@ -17712,11 +17681,6 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_OPERA_HOUSE</BuildingClass>
 			<Type>BUILDING_OPERA_HOUSE</Type>
-			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ORGAN_HALL</BuildingClass>
-			<Type>BUILDING_ORGAN_HALL</Type>
 			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -19161,11 +19125,6 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_MUSKOX_CAMP</BuildingClass>
 			<Type>BUILDING_MUSKOX_CAMP</Type>
-			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_BREEDING_NARWHAL</BuildingClass>
-			<Type>BUILDING_BREEDING_NARWHAL</Type>
 			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
