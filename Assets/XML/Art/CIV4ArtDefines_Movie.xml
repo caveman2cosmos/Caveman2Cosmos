@@ -608,7 +608,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SHRINE_MORMON</Type>
-			<Path>Art/Movies/Wonders/MormonShrine.bik</Path>
+			<Path>Art/Movies/Wonders/TheFirstVision.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_OLDOINYO</Type>
@@ -1616,15 +1616,15 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_HELSINKI</Type>
-			<Path>art/Helsinki Cathedral.bik</Path>
+			<Path>art/Movies/Wonders/Helsinki Cathedral.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_THE_MOTHERLAND_CALLS</Type>
-			<Path>art/The Motherland Calls.bik</Path>
+			<Path>art/Movies/Wonders/The Motherland Calls.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_REICHSTAG</Type>
-			<Path>art/Reichstag.bik</Path>
+			<Path>art/Movies/Wonders/Reichstag.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_BEAULIEU</Type>
@@ -1712,7 +1712,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ADVANCED_MINE_TECHNOLOGY_CENTER</Type>
-			<Path>Art/Movies/Mine_Tech_Center/Mine_Explosion.bik</Path>
+			<Path>Art/Movies/Wonders/Mine_Explosion.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SHRINE_CANAANISM</Type>
