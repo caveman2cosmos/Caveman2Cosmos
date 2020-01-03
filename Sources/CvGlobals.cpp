@@ -4788,56 +4788,6 @@ int cvInternalGlobals::getPASSIVE_ANIMAL_TEAM()
 	return PASSIVE_ANIMAL_TEAM;
 }
 
-int cvInternalGlobals::getNPC1_PLAYER()
-{
-	return NPC1_PLAYER;
-}
-
-int cvInternalGlobals::getNPC1_TEAM()
-{
-	return NPC1_TEAM;
-}
-
-int cvInternalGlobals::getNPC2_PLAYER()
-{
-	return NPC2_PLAYER;
-}
-
-int cvInternalGlobals::getNPC2_TEAM()
-{
-	return NPC2_TEAM;
-}
-
-int cvInternalGlobals::getNPC3_PLAYER()
-{
-	return NPC3_PLAYER;
-}
-
-int cvInternalGlobals::getNPC3_TEAM()
-{
-	return NPC3_TEAM;
-}
-
-int cvInternalGlobals::getNPC4_PLAYER()
-{
-	return NPC4_PLAYER;
-}
-
-int cvInternalGlobals::getNPC4_TEAM()
-{
-	return NPC4_TEAM;
-}
-
-int cvInternalGlobals::getNPC5_PLAYER()
-{
-	return NPC5_PLAYER;
-}
-
-int cvInternalGlobals::getNPC5_TEAM()
-{
-	return NPC5_TEAM;
-}
-
 int cvInternalGlobals::getNPC6_PLAYER()
 {
 	return NPC6_PLAYER;

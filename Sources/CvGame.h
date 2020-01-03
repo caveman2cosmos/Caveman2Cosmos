@@ -422,12 +422,16 @@ public:
 	int getTopPopCount() const;
 	int getImprovementCount(ImprovementTypes eIndex) const;
 	void changeImprovementCount(ImprovementTypes eIndex, int iChange);
+
 protected:
+	void initNPC(int iIndex, const char* szLeader, const char* szCivilization);
+
 	void doFlexibleDifficulty();
 	void doHightoLow();
 	void doIncreasingDifficulty();
 	void doFinalFive();
 	void doFoundCorporations();
+
 	bool* m_abPreviousRequest;
 	int* m_aiModderGameOption;
 	int* m_aiFlexibleDifficultyTimer;

@@ -443,16 +443,6 @@ public:
 	int getAGGRESSIVE_ANIMAL_TEAM() const { return GC.getAGGRESSIVE_ANIMAL_TEAM(); }
 	int getPASSIVE_ANIMAL_PLAYER() const { return GC.getPASSIVE_ANIMAL_PLAYER(); }
 	int getPASSIVE_ANIMAL_TEAM() const { return GC.getPASSIVE_ANIMAL_TEAM(); }
-	int getNPC1_PLAYER() const { return GC.getNPC1_PLAYER(); }
-	int getNPC1_TEAM() const { return GC.getNPC1_TEAM(); }
-	int getNPC2_PLAYER() const { return GC.getNPC2_PLAYER(); }
-	int getNPC2_TEAM() const { return GC.getNPC2_TEAM(); }
-	int getNPC3_PLAYER() const { return GC.getNPC3_PLAYER(); }
-	int getNPC3_TEAM() const { return GC.getNPC3_TEAM(); }
-	int getNPC4_PLAYER() const { return GC.getNPC4_PLAYER(); }
-	int getNPC4_TEAM() const { return GC.getNPC4_TEAM(); }
-	int getNPC5_PLAYER() const { return GC.getNPC5_PLAYER(); }
-	int getNPC5_TEAM() const { return GC.getNPC5_TEAM(); }
 	int getNPC6_PLAYER() const { return GC.getNPC6_PLAYER(); }
 	int getNPC6_TEAM() const { return GC.getNPC6_TEAM(); }
 	int getNPC7_PLAYER() const { return GC.getNPC7_PLAYER(); }

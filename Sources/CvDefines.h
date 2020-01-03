@@ -61,50 +61,33 @@
 #define RANDPLOT_NOT_VISIBLE_TO_CIV						(0x00000020)
 #define RANDPLOT_NOT_CITY											(0x00000040)
 
+#define MAX_PLAYERS								(51)
+#define MAX_TEAMS								(MAX_PLAYERS)
 #ifdef _USRDLL
-/********************************************************************************/
-/**		REVOLUTION_MOD							1/1/08				jdog5000	*/
-/**																				*/
-/**																				*/
-/********************************************************************************/
-//#define MAX_CIV_PLAYERS												(18)
-// Mod next line to change max number of players
-#define MAX_CIV_PLAYERS												(50)
-/********************************************************************************/
-/**		REVOLUTION_MOD							END								*/
-/********************************************************************************/	
+#define MAX_CIV_PLAYERS							(MAX_PLAYERS - 1)
 #else
-#define MAX_CIV_PLAYERS												(cvInternalGlobals::getInstance().getMaxCivPlayers())
+#define MAX_CIV_PLAYERS							(cvInternalGlobals::getInstance().getMaxCivPlayers())
 #endif
-//TBANIMAL - the project really starts here
-#define MAX_CIV_TEAMS													(50)
-#define MAX_PC_PLAYERS														(40)
-#define MAX_PC_TEAMS														(40)
-#define MAX_PLAYERS														(51)
-#define MAX_TEAMS														(51)
-#define NPC1_PLAYER											((PlayerTypes)40)
-#define NPC1_TEAM												((TeamTypes)40)
-#define NPC2_PLAYER											((PlayerTypes)41)
-#define NPC2_TEAM												((TeamTypes)41)
-#define NPC3_PLAYER											((PlayerTypes)42)
-#define NPC3_TEAM												((TeamTypes)42)
-#define NPC4_PLAYER											((PlayerTypes)43)
-#define NPC4_TEAM												((TeamTypes)43)
-#define NPC5_PLAYER											((PlayerTypes)44)
-#define NPC5_TEAM												((TeamTypes)44)
-#define NPC6_PLAYER											((PlayerTypes)45)//insectoids
-#define NPC6_TEAM												((TeamTypes)45)
-#define NPC7_PLAYER											((PlayerTypes)46)//Neanderthal
-#define NPC7_TEAM												((TeamTypes)46)
-#define NPC8_PLAYER											((PlayerTypes)47)//Greenman
-#define NPC8_TEAM												((TeamTypes)47)
-#define AGGRESSIVE_ANIMAL_PLAYER							((PlayerTypes)48)//Greenman
-#define AGGRESSIVE_ANIMAL_TEAM									((TeamTypes)48)
-#define PASSIVE_ANIMAL_PLAYER								((PlayerTypes)49)//Greenman
-#define PASSIVE_ANIMAL_TEAM										((TeamTypes)49)
-#define BARBARIAN_PLAYER									((PlayerTypes)50)
-#define BARBARIAN_TEAM										((TeamTypes)50)
-#define FIRST_NPC_PLAYER									((PlayerTypes)45)
+#define MAX_CIV_TEAMS							(MAX_TEAMS - 1)
+
+#define MAX_PC_PLAYERS							(MAX_PLAYERS - NUM_NPC_PLAYERS)
+#define MAX_PC_TEAMS							(MAX_TEAMS - NUM_NPC_TEAMS)
+
+#define NPC6_PLAYER								((PlayerTypes)(MAX_PLAYERS -6))//insectoids
+#define NPC6_TEAM								((TeamTypes)(MAX_TEAMS -6))
+#define NPC7_PLAYER								((PlayerTypes)(MAX_PLAYERS -5))//Neanderthal
+#define NPC7_TEAM								((TeamTypes)(MAX_TEAMS -5))
+#define NPC8_PLAYER								((PlayerTypes)(MAX_PLAYERS -4))//Greenman
+#define NPC8_TEAM								((TeamTypes)(MAX_TEAMS -4))
+#define AGGRESSIVE_ANIMAL_PLAYER				((PlayerTypes)(MAX_PLAYERS -3))//Greenman
+#define AGGRESSIVE_ANIMAL_TEAM					((TeamTypes)(MAX_TEAMS -3))
+#define PASSIVE_ANIMAL_PLAYER					((PlayerTypes)(MAX_PLAYERS -2))//Greenman
+#define PASSIVE_ANIMAL_TEAM						((TeamTypes)(MAX_TEAMS -2))
+#define BARBARIAN_PLAYER						((PlayerTypes)(MAX_PLAYERS -1))
+#define BARBARIAN_TEAM							((TeamTypes)(MAX_TEAMS -1))
+#define NUM_NPC_PLAYERS							(6)
+#define NUM_NPC_TEAMS							(6)
+#define FIRST_NPC_PLAYER						((PlayerTypes)(MAX_PLAYERS - NUM_NPC_PLAYERS))
 
 // Char Count limit for edit boxes
 #define PREFERRED_EDIT_CHAR_COUNT							(15)

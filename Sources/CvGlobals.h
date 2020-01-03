@@ -1232,16 +1232,6 @@ public:
 	int getAGGRESSIVE_ANIMAL_TEAM();
 	int getPASSIVE_ANIMAL_PLAYER();
 	int getPASSIVE_ANIMAL_TEAM();
-	int getNPC1_PLAYER();
-	int getNPC1_TEAM();
-	int getNPC2_PLAYER();
-	int getNPC2_TEAM();
-	int getNPC3_PLAYER();
-	int getNPC3_TEAM();
-	int getNPC4_PLAYER();
-	int getNPC4_TEAM();
-	int getNPC5_PLAYER();
-	int getNPC5_TEAM();
 	int getNPC6_PLAYER();
 	int getNPC6_TEAM();
 	int getNPC7_PLAYER();
@@ -3347,56 +3337,6 @@ public:
 	{
 		PROXY_TRACK("getPASSIVE_ANIMAL_TEAM");	
 		return gGlobals->getPASSIVE_ANIMAL_TEAM();	
-	}
-	int getNPC1_PLAYER()
-	{
-		PROXY_TRACK("getNPC1_PLAYER");	
-		return gGlobals->getNPC1_PLAYER();	
-	}
-	int getNPC1_TEAM()
-	{
-		PROXY_TRACK("getNPC1_TEAM");	
-		return gGlobals->getNPC1_TEAM();	
-	}
-	int getNPC2_PLAYER()
-	{
-		PROXY_TRACK("getNPC2_PLAYER");	
-		return gGlobals->getNPC2_PLAYER();	
-	}
-	int getNPC2_TEAM()
-	{
-		PROXY_TRACK("getNPC2_TEAM");	
-		return gGlobals->getNPC2_TEAM();	
-	}
-	int getNPC3_PLAYER()
-	{
-		PROXY_TRACK("getNPC3_PLAYER");	
-		return gGlobals->getNPC3_PLAYER();	
-	}
-	int getNPC3_TEAM()
-	{
-		PROXY_TRACK("getNPC3_TEAM");	
-		return gGlobals->getNPC3_TEAM();	
-	}
-	int getNPC4_PLAYER()
-	{
-		PROXY_TRACK("getNPC4_PLAYER");	
-		return gGlobals->getNPC4_PLAYER();	
-	}
-	int getNPC4_TEAM()
-	{
-		PROXY_TRACK("getNPC4_TEAM");	
-		return gGlobals->getNPC4_TEAM();	
-	}
-	int getNPC5_PLAYER()
-	{
-		PROXY_TRACK("getNPC5_PLAYER");	
-		return gGlobals->getNPC5_PLAYER();	
-	}
-	int getNPC5_TEAM()
-	{
-		PROXY_TRACK("getNPC5_TEAM");	
-		return gGlobals->getNPC5_TEAM();	
 	}
 	int getNPC6_PLAYER()
 	{
