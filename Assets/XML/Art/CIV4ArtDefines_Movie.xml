@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<MovieArtInfos>
 		<MovieArtInfo>
@@ -189,7 +188,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SHRINE_TAOIST</Type>
 			<Path>Art/Movies/Religion/Taoism/Shrine_Tao_dwg_512.dds</Path>
-			<KFM>None</KFM>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_APOSTOLIC_PALACE</Type>
@@ -478,7 +476,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_BRANDENBURG_GATE</Type>
 			<Path>Art/Movies/wonders/Brandenburg.bik</Path>
-			<KFM>None</KFM>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_CHEOMSEONGDAE</Type>
@@ -495,12 +492,10 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_PISA</Type>
 			<Path>Art/Movies/wonders/Pisa.bik</Path>
-			<KFM>None</KFM>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_NEUSCHWANSTEIN</Type>
 			<Path>Art/Movies/wonders/NeuschwansteinCastle.bik</Path>
-			<KFM>None</KFM>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SAN_MARCO</Type>
