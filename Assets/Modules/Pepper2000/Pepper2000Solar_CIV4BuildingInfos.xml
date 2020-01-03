@@ -853,7 +853,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_INDUSTRIALIZED_ASTEROID</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PARATERRAFORMING</PrereqTech>
-			<iCost>-1</iCost>
+			<iCost>4123</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
