@@ -2864,7 +2864,7 @@ public:
 	int getExtraCargoVolume() const;
 	void setExtraCargoVolume(int iNewValue);
 	void changeExtraCargoVolume(int iChange);
-	int SMCargoVolumePreCheck() const;
+	int getSMCargoVolumeBase() const;
 	int getCargoVolume() const;
 	void setCargoVolume(int iNewValue);
 	int SMCargoVolume() const;

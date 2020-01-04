@@ -42912,47 +42912,31 @@ void CvUnit::changeExtraCargoVolume(int iChange)
 	setExtraCargoVolume(getExtraCargoVolume() + iChange);
 }
 
-int CvUnit::SMCargoVolumePreCheck() const
+int CvUnit::getSMCargoVolumeBase() const
 {
-	int iData = 100;
-	iData += getExtraCargoVolume();
-	return std::max(0, iData);
+	// Units have base cargo volume which can be modified by promotions
+	const int CargoVolumeBase = 100;
+	return std::max(0, CargoVolumeBase + getExtraCargoVolume());
 }
 
 int CvUnit::SMCargoVolume() const
 {
-	int iData = 0;
-	if (getCargoVolume() == 0)
+	if (!GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+		return 0;
+
+	int cargoVolume = getCargoVolume() == 0? getSMCargoVolumeBase() : getCargoVolume();
+	cargoVolume = std::max(1, cargoVolume);
+	if (isCarrier())
 	{
-		iData = SMCargoVolumePreCheck();
-	}
-	else
-	{
-		iData = getCargoVolume();
+		cargoVolume += SMgetCargo();
 	}
 
-	//if (!isCarrier())//Carriers can be carried so they need Cargo Volume as well.
-	//{
-	iData = std::max(1, iData);
-	//}
-	//else
-	//{
-	//	iData = 0;
-	//}
-	if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
-	{
-		if (isCarrier())
-		{
-			iData += SMgetCargo();
-		}
-		return iData;
-	}
-	return 0;
+	return cargoVolume;
 }
 
 void CvUnit::setSMCargoVolume()
 {
-	m_iSMCargoVolume = applySMRank(SMCargoVolumePreCheck(),
+	m_iSMCargoVolume = applySMRank(getSMCargoVolumeBase(),
 		getSizeMattersSpacialOffsetValue(),
 		GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER"));
 
@@ -42968,33 +42952,33 @@ void CvUnit::setSMCargoVolume()
 
 int CvUnit::getSizeMattersOffsetValue() const
 {
-	int iData = qualityRank();
-	iData += groupRank();
-	iData += sizeRank();
+	int offsetValue = qualityRank();
+	offsetValue += groupRank();
+	offsetValue += sizeRank();
 	if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS_UNCUT))
 	{
-		iData -= m_pUnitInfo->getSMRankTotal();
+		offsetValue -= m_pUnitInfo->getSMRankTotal();
 	}
 	else
 	{
-		iData -= 15;
+		offsetValue -= 15;
 	}
-	return iData;
+	return offsetValue;
 }
 
 int CvUnit::getSizeMattersSpacialOffsetValue() const
 {
-	int iData = groupRank();
-	iData += sizeRank();
+	int spaceOffsetValue = groupRank();
+	spaceOffsetValue += sizeRank();
 	if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS_UNCUT))
 	{
-		iData -= m_pUnitInfo->getSMVolumetricRankTotal();
+		spaceOffsetValue -= m_pUnitInfo->getSMVolumetricRankTotal();
 	}
 	else
 	{
-		iData -= 10;
+		spaceOffsetValue -= 10;
 	}
-	return iData;
+	return spaceOffsetValue;
 }
 
 int CvUnit::getCargoCapacitybyType(int iValue) const
