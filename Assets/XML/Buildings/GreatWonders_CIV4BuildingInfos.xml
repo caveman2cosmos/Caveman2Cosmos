@@ -2505,6 +2505,7 @@
 			<Strategy>TXT_KEY_BUILDING_CN_TOWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CN_TOWER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CN_TOWER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>

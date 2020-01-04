@@ -759,7 +759,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_CYRUS_CYLINDER</Type>
-			<Path>Art/Movies/Wonders/cyrus_cyliner.dds</Path>
+			<Path>Art/Movies/Wonders/CYRUS_CYLINDER.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_CYRUS_TOMB</Type>
@@ -1764,6 +1764,66 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_BURJ_KHALIFA</Type>
 			<Path>Art/Movies/Wonders/BURJ_KHALIFA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CN_TOWER</Type>
+			<Path>Art/Movies/Wonders/CN_TOWER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CAPTURED_IO</Type>
+			<Path>Art/Movies/Wonders/CAPTURED_IO.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CARINA_SAGITTARIUS_ARM</Type>
+			<Path>Art/Movies/Wonders/CARINA_SAGITTARIUS_ARM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CENTAURUS_SUPERCLUSTER</Type>
+			<Path>Art/Movies/Wonders/CENTAURUS_SUPERCLUSTER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CENTERPOINT_STATION</Type>
+			<Path>Art/Movies/Wonders/CENTERPOINT_STATION.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CFA2_GREAT_WALL</Type>
+			<Path>Art/Movies/Wonders/CFA2_GREAT_WALL.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CHUO_SHINKANSEN</Type>
+			<Path>Art/Movies/Wonders/CHUO_SHINKANSEN.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CHURCH_TURING_THESIS</Type>
+			<Path>Art/Movies/Wonders/CHURCH_TURING_THESIS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_COMA_SUPERCLUSTER</Type>
+			<Path>Art/Movies/Wonders/COMA_SUPERCLUSTER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_COMPUTRONIUM_TITAN</Type>
+			<Path>Art/Movies/Wonders/COMPUTRONIUM_TITAN.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_COSMIC_AC</Type>
+			<Path>Art/Movies/Wonders/COSMIC_AC.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CRYSTAL_ISLAND</Type>
+			<Path>Art/Movies/Wonders/CRYSTAL_ISLAND.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CRYSTALPUNK_EMBASSY</Type>
+			<Path>Art/Movies/Wonders/CRYSTALPUNK_EMBASSY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ALZHEIMERS_CURE</Type>
+			<Path>Art/Movies/Wonders/ALZHEIMERS_CURE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CYGNUS_X1</Type>
+			<Path>Art/Movies/Wonders/CYGNUS_X1.dds</Path>
 		</MovieArtInfo>
 	</MovieArtInfos>
 </Civ4ArtDefines>

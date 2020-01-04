@@ -8405,6 +8405,7 @@
 			<Strategy>TXT_KEY_BUILDING_CHURCH_TURING_THESIS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHURCH_TURING_THESIS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CHURCH_TURING_THESIS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -12108,6 +12109,7 @@
 			<Strategy>TXT_KEY_BUILDING_ALZHEIMERS_CURE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ALZHEIMERS_CURE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ALZHEIMERS_CURE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -12799,6 +12801,7 @@
 			<Strategy>TXT_KEY_BUILDING_CRYSTALPUNK_EMBASSY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CRYSTALPUNK_EMBASSY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CRYSTALPUNK_EMBASSY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -13474,6 +13477,7 @@
 			<Strategy>TXT_KEY_BUILDING_CHUO_SHINKANSEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHUO_SHINKANSEN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CHUO_SHINKANSEN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23340,6 +23344,7 @@
 			<Strategy>TXT_KEY_BUILDING_CRYSTAL_ISLAND_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CRYSTAL_ISLAND</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CRYSTAL_ISLAND</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

@@ -7915,6 +7915,7 @@
 			<Strategy>TXT_KEY_BUILDING_CENTERPOINT_STATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CENTERPOINT_STATION</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CENTERPOINT_STATION</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GRAVITRONICS</PrereqTech>
 			<iCost>22063</iCost>
@@ -8551,6 +8552,7 @@
 			<Strategy>TXT_KEY_BUILDING_CARINA_SAGITTARIUS_ARM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CARINA_SAGITTARIUS_ARM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CARINA_SAGITTARIUS_ARM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PrereqTech>
 			<iCost>33800</iCost>
@@ -8689,6 +8691,7 @@
 			<Strategy>TXT_KEY_BUILDING_CYGNUS_X1_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CYGNUS_X1</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CYGNUS_X1</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PrereqTech>
 			<iCost>33800</iCost>
