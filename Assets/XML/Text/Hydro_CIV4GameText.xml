@@ -2259,6 +2259,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gesteinssammler:Gesteinssammlers:Gesteinssammler:Gesteinssammler</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
 		<Italian>Raccgolitore di rocce</Italian>
 		<Polish>Zbieracz Kamieni</Polish>
 	</TEXT>
@@ -2266,11 +2271,13 @@
 		<Tag>TXT_KEY_BUILDING_ROCK_GATHERER_STRATEGY</Tag>
 		<English>Gather Rocks for tools or building materials.</English>
 		<French>Récolte les Roches utiles pour les outils.</French>
+		<German>[COLOR_BUILDING_TEXT]Gesteinssammler[COLOR_REVERT] steigern die Produktion früher Städte und werden für diverse weiterführende Gebäude wie die Steinwerkstatt benötigt.</German>		
 		<Italian>Raccogli le rocce per usarle come utensili o come materiali da costruzione.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROCK_GATHERER_PEDIA</Tag>
 		<English>In geology, rock or stone is a naturally occurring solid aggregate of minerals and/or mineraloids.</English>
+		<German>Verschiedene Gesteinsarten werden schon seit Urzeiten als Werkstoff oder Dekorationselemente geschätzt. Während das Anlegen einer Gesteinssammlung heute eher ein Zeitvertreib ist, war die Suche nach verwertbaren Steinen für die frühen Menschen überlebenswichtig.</German>
 		<Italian>In geologia una roccia è un aggregato solido naturale costituito da minerali o altri elementi derivati da essi.</Italian>
 		<Polish>Osoba odpowiedzialna za zabieranie kamieni przydatnych dla Twojego plemienia.</Polish>
 	</TEXT>
@@ -4157,6 +4164,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Schilfsammler:Schilfsammlers:Schilfsammler:Schilfsammler</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
 		<Italian>Raccoglitore di canne</Italian>
 		<Polish>Zbieracz Trzciny</Polish>
 	</TEXT>
@@ -4164,12 +4176,14 @@
 		<Tag>TXT_KEY_BUILDING_REED_GATHERER_STRATEGY</Tag>
 		<English>Build a Reed Gatherer to increase your cities production.</English>
 		<French>Construire un [COLOR_BUILDING_TEXT]Récolteur de roseaux[COLOR_REVERT] pour augmenter la production de la ville.</French>
+		<German>[COLOR_BUILDING_TEXT]Schilfsammler[COLOR_REVERT] sorgen für mehr Nahrung und Produktion in Städten in der Nähe von Torfmooren und stellen außerdem den Rohstoff [COLOR_CYAN]Schilf[COLOR_REVERT] zur Verfügung.</German>
 		<Italian>Costruisci un raccoglitore di canne per incrementare la produzione della tua città.</Italian>
 		<Polish>Zbuduj Reed Gatherer by zwiększyć produkcję w Twoich miastach.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REED_GATHERER_PEDIA</Tag>
 		<English>In polyphyletic botany, a reed is a type of tall, grass-like plant of wet places, it is also very flammable; the namesake vegetation of reed beds.</English>
+		<German>Schilfrohr war schon in der Steinzeit sehr begehrt, denn es ist nicht nur ein sehr gutes Baumaterial für Gebäude und Schiffe, es kann auch als Gemüse verzehrt oder als Mehl zum Backen verwendet werden. Schilf ließ sich aber erst mit den richtigen Werkzeugen effektiv sammeln und bearbeiten, denn ohne Messer kann man dem Gras kaum zu Leibe rücken und die Ernte mit bloßen Händen führt zu Verletzungen an den scharfen Blättern.</German>
 		<Italian>In botanica, una canna è un tipo di erba altache cresce in luoghi umidi, ma è anche molto infiammabile; l'omonima vegetazione sono i canneti.</Italian>
 		<Polish>Trzcina (Phragmites L.) - rodzaj roślin należący do rodziny wiechlinowatych. Należy do niego 4-5 gatunków. W Polsce w środowisku naturalnym rośnie jeden tylko gatunek - trzcina pospolita (Phragmites australis), jest to zarazem gatunek typowy rodzaju.</Polish>
 	</TEXT>

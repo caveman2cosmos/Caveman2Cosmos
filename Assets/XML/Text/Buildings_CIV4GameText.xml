@@ -15091,17 +15091,24 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Lavasteinsammler:Lavasteinsammlers:Lavasteinsammler:Lavasteinsammler</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
 		<Polish>Wyrobisko Kamienia Wulkanicznego</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LAVA_ROCK_QUARRY_PEDIA</Tag>
 		<English>Volcanic rock (often shortened to volcanics in scientific contexts) is a rock formed from magma erupted from a volcano. In other words, it differs from other igneous rock by being of volcanic origin. Like all rock types, the concept of volcanic rock is artificial, and in nature volcanic rocks grade into hypabyssal and metamorphic rocks and constitute an important element of some sediments and sedimentary rocks. For these reasons, in geology, volcanics and shallow hypabyssal rocks are not always treated as distinct. In the context of Precambrian shield geology, the term volcanic rock is applied to what are strictly metavolcanic rocks. Volcanic rocks are among the most common rock types on Earth's surface, particularly in the oceans. On land, they are very common at plate boundaries and in flood basalt provinces.</English>
+		<German>Neben Feuerstein waren vulkanische Gesteine wie Bimsstein und Obsidian wichtige Werkstoffe für die frühen Menschen. Man konnte sie leicht einsammeln und gut bearbeiten. Aus Obsidian ließen sich gefährliche Waffen fertigen, während der leichte Bimsstein eher als Baumaterial verwendet wurde. Wie auch beim Feuerstein wurden am Anfang einfach herumliegende Steine mitgenommen. Diese geringe Ausbeute reichte aber für größere Stämme irgendwann nicht mehr aus, weswegen man dem Gestein später mit Steinbrüchen und Minen zu Leibe rückte.</German>
 		<Polish>Skały magmowe - jeden z trzech głównych typów skał (obokskał osadowych i metamorficznych) budujących skorupę ziemską, powstałych wskutek krystalizacji lub zakrzepnięciamagmy w głębi skorupy ziemskiej lub lawy na powierzchniZiemi. Geolodzy opisali ponad 700 odmian skał magmowych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LAVA_ROCK_QUARRY_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Lava Rock Quarry[COLOR_REVERT] is a prehistoric era building that increases a city's [COLOR_GREEN]Gold[COLOR_REVERT] and [COLOR_GREEN]Hammer[COLOR_REVERT] production but withthe cost of causing [COLOR_RED]Unhealthiness[COLOR_REVERT]. It also gives [COLOR_CYAN]Obsidian[COLOR_REVERT] and [COLOR_CYAN]Pumice Stone[COLOR_REVERT], the first being the resource that enables the training of obsidian [COLOR_UNIT_TEXT]Melee[COLOR_REVERT] units. The building is also quite important for being the prerequisite for building the [COLOR_BUILDING_TEXT]Waterproof Cement Maker[COLOR_REVERT] that gives [COLOR_CYAN]Waterproof Cement[COLOR_REVERT], which reduces the time to build water-based buildings quite considerably. To build it a city needs to be in the vicinity of an active or dormant [COLOR_CYAN]Volcano[COLOR_REVERT] (this includes a few [COLOR_BUILDING_TEXT]Wonder of Nature[COLOR_REVERT]).</English>
 		<French>Construisez une [COLOR_BUILDING_TEXT]Carrière de Roches de Lave[COLOR_REVERT] pour augmenter la production de votre ville.</French>
+		<German>[COLOR_BUILDING_TEXT]Lavasteinsammler[COLOR_REVERT] steigern die Produktion und den Reichtum früher Städte in der Nähe von Vulkanen und stellen außerdem die Rohstoffe [COLOR_CYAN]Bimsstein[COLOR_REVERT] und [COLOR_CYAN]Obsidian[COLOR_REVERT] zur Verfügung, haben aber einen negativen Einfluss auf die städtische Gesundheit.</German>
 		<Polish>Zbuduj Lava Rock Quarry by zwiększyć produkcję w Twoich miastach.</Polish>
 	</TEXT>
 	<TEXT>
@@ -15358,18 +15365,25 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Flechtensammler:Flechtensammlers:Flechtensammler:Flechtensammler</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
 		<Polish>Zbieracz Porostów</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LICHEN_GATHERER_PEDIA</Tag>
 		<English>Lichens occur in some of the most extreme environments on Earth-arctic tundra, hot deserts, rocky coasts, and toxic slag heaps. However, they are also abundant as epiphytes on leaves and branches in rain forests and temperate woodland, on bare rock, including walls and gravestones, and on exposed soil surfaces in otherwise mesic habitats. The roofs of many buildings have lichens growing on them. Lichens are widespread and may be long-lived; however, many are also vulnerable to environmental disturbance, and may be useful to scientists in assessing the effects of air pollution, ozone depletion, and metal contamination. Lichens have also been used in making dyes and perfumes, as well as in traditional medicines.</English>
 		<French>lichens occur in some of the most extreme environments on Earth-arctic tundra, hot deserts, rocky coasts, and toxic slag heaps. However, they are also abundant as epiphytes on leaves and branches in rain forests and temperate woodland, on bare rock, including walls and gravestones, and on exposed soil surfaces in otherwise mesic habitats. The roofs of many buildings have lichens growing on them. Lichens are widespread and may be long-lived; however, many are also vulnerable to environmental disturbance, and may be useful to scientists in assessing the effects of air pollution, ozone depletion, and metal contamination. Lichens have also been used in making dyes and perfumes, ainsi que in traditional medicines.</French>
+		<German>Unter Flechten (Lichen) versteht man symbiotische Lebensgemeinschaften aus Pilzen und Grünalgen oder Cyanobakterien. Weltweit gibt es rund 25000 Flechtenarten, in Mitteleuropa etwa 2000.[NEWLINE]Flechten wurden zunächst gesammelt, um sie als Nahrungsmittel zu verwenden. Ab dem Altertum wurden sie auch als Heilmittel für die verschiedensten Krankheiten eingesetzt. Noch heute ist z.B. isländisches Moos in Hustenmitteln enthalten. In der Neuzeit sind noch viele weitere Einsatzmöglichkeiten hinzugekommen, so werden verschiedene Flechten in der Parfüm- oder Alkoholherstellung verwendet.</German>
 		<Polish>Porosty - tradycyjna nazwa organizmów składających się z grzybów(Fungi), tworzących obligatoryjne symbiozy - głównie z prokariotycznymi cyjanobakteriami (Cyanobacteria) lub eukariotycznymi zielenicami (Chlorophyta). Jako samodzielna jednostka taksonomiczna przestała istnieć w 1981 roku w wyniku zmian wprowadzonych przez Międzynarodowy Kodeks Nomenklatury Botanicznej. Pojęcie to ujmowane jest obecnie w kategoriach ekologicznych (podobnie jak grzyby mikoryzowe), a nie systematycznych. Systematyka i nomenklatura porostów dotyczy ich komponentu grzybowego.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LICHEN_GATHERER_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Lichen Gatherer[COLOR_REVERT] is a prehistoric era building that increases a city's [COLOR_GREEN]Hammer[COLOR_REVERT] production and provides [COLOR_GREEN]Healthiness[COLOR_REVERT]. It also lowers [COLOR_GREEN]Disease[COLOR_REVERT] generation.</English>
 		<French>Utile pour réduire les maladies et augmenter la production de votre ville dans l'Ere préhistorique</French>
+		<German>[COLOR_BUILDING_TEXT]Flechtensammler[COLOR_REVERT] sind wichtig für das Überleben früher Städte. Sie vermindern die Wahrscheinlichkeit für Krankheitsausbrüche und steigern zusätzlich die allgemeine Gesundheit. Außerdem kurbeln sie die Produktion an.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LIGHTHOUSE</Tag>
