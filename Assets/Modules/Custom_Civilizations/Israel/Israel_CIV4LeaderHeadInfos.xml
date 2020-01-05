@@ -6,7 +6,6 @@
 <!-- -->
 <!-- Leader Infos and AI Settings -->
 <Civ4LeaderHeadInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
-
 	<LeaderHeadInfos>
 		<LeaderHeadInfo>
 			<Type>LEADER_SOLOMON</Type>
@@ -486,10 +485,22 @@
 					<EraType>ERA_MODERN</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
+					<EraType>ERA_INFORMATION</EraType>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
+					<EraType>ERA_NANOTECH</EraType>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
 					<EraType>ERA_TRANSHUMAN</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_GALACTIC</EraType>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
+					<EraType>ERA_COSMIC</EraType>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
+					<EraType>ERA_TRANSCENDENT</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_FUTURE</EraType>
@@ -525,11 +536,27 @@
 					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
+					<EraType>ERA_INFORMATION</EraType>
+					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
+					<EraType>ERA_NANOTECH</EraType>
+					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
 					<EraType>ERA_TRANSHUMAN</EraType>
 					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_GALACTIC</EraType>
+					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
+					<EraType>ERA_COSMIC</EraType>
+					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
+					<EraType>ERA_TRANSCENDENT</EraType>
 					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -560,16 +587,32 @@
 					<EraType>ERA_MODERN</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
+					<EraType>ERA_INFORMATION</EraType>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
+					<EraType>ERA_NANOTECH</EraType>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
 					<EraType>ERA_TRANSHUMAN</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_GALACTIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
+					<EraType>ERA_COSMIC</EraType>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
+					<EraType>ERA_TRANSCENDENT</EraType>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
 					<EraType>ERA_FUTURE</EraType>
 				</DiploMusicWarEra>
 			</DiplomacyIntroMusicWar>
 			<DiplomacyMusicWar>
+				<DiploMusicWarEra>
+					<EraType>ERA_ANCIENT</EraType>
+					<DiploScriptId>AS2D_DIPLO_WARDRUMS_EARLY</DiploScriptId>
+				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_SEDENTARY</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_EARLY</DiploScriptId>
@@ -595,7 +638,27 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
+					<EraType>ERA_INFORMATION</EraType>
+					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
+					<EraType>ERA_NANOTECH</EraType>
+					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
 					<EraType>ERA_TRANSHUMAN</EraType>
+					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
+					<EraType>ERA_GALACTIC</EraType>
+					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
+					<EraType>ERA_COSMIC</EraType>
+					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
+					<EraType>ERA_TRANSCENDENT</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -1106,10 +1169,22 @@
 					<EraType>ERA_MODERN</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
+					<EraType>ERA_INFORMATION</EraType>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
+					<EraType>ERA_NANOTECH</EraType>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
 					<EraType>ERA_TRANSHUMAN</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_GALACTIC</EraType>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
+					<EraType>ERA_COSMIC</EraType>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
+					<EraType>ERA_TRANSCENDENT</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_FUTURE</EraType>
@@ -1145,11 +1220,27 @@
 					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
+					<EraType>ERA_INFORMATION</EraType>
+					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
+					<EraType>ERA_NANOTECH</EraType>
+					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
 					<EraType>ERA_TRANSHUMAN</EraType>
 					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_GALACTIC</EraType>
+					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
+					<EraType>ERA_COSMIC</EraType>
+					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
+					<EraType>ERA_TRANSCENDENT</EraType>
 					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -1180,10 +1271,22 @@
 					<EraType>ERA_MODERN</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
+					<EraType>ERA_INFORMATION</EraType>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
+					<EraType>ERA_NANOTECH</EraType>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
 					<EraType>ERA_TRANSHUMAN</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_GALACTIC</EraType>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
+					<EraType>ERA_COSMIC</EraType>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
+					<EraType>ERA_TRANSCENDENT</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_FUTURE</EraType>
@@ -1219,11 +1322,27 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
+					<EraType>ERA_INFORMATION</EraType>
+					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
+					<EraType>ERA_NANOTECH</EraType>
+					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
 					<EraType>ERA_TRANSHUMAN</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_GALACTIC</EraType>
+					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
+					<EraType>ERA_COSMIC</EraType>
+					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
+					<EraType>ERA_TRANSCENDENT</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -1721,10 +1840,22 @@
 					<EraType>ERA_MODERN</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
+					<EraType>ERA_INFORMATION</EraType>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
+					<EraType>ERA_NANOTECH</EraType>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
 					<EraType>ERA_TRANSHUMAN</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_GALACTIC</EraType>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
+					<EraType>ERA_COSMIC</EraType>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
+					<EraType>ERA_TRANSCENDENT</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_FUTURE</EraType>
@@ -1760,11 +1891,27 @@
 					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
+					<EraType>ERA_INFORMATION</EraType>
+					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
+					<EraType>ERA_NANOTECH</EraType>
+					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
 					<EraType>ERA_TRANSHUMAN</EraType>
 					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_GALACTIC</EraType>
+					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
+					<EraType>ERA_COSMIC</EraType>
+					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
+				</DiploMusicPeaceEra>
+				<DiploMusicPeaceEra>
+					<EraType>ERA_TRANSCENDENT</EraType>
 					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -1795,10 +1942,22 @@
 					<EraType>ERA_MODERN</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
+					<EraType>ERA_INFORMATION</EraType>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
+					<EraType>ERA_NANOTECH</EraType>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
 					<EraType>ERA_TRANSHUMAN</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_GALACTIC</EraType>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
+					<EraType>ERA_COSMIC</EraType>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
+					<EraType>ERA_TRANSCENDENT</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_FUTURE</EraType>
@@ -1834,11 +1993,27 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
+					<EraType>ERA_INFORMATION</EraType>
+					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
+					<EraType>ERA_NANOTECH</EraType>
+					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
 					<EraType>ERA_TRANSHUMAN</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_GALACTIC</EraType>
+					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
+					<EraType>ERA_COSMIC</EraType>
+					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
+				</DiploMusicWarEra>
+				<DiploMusicWarEra>
+					<EraType>ERA_TRANSCENDENT</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>

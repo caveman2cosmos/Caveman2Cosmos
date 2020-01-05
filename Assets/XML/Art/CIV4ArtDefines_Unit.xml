@@ -80623,6 +80623,7 @@
 			<bActAsRanged>0</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
+<!-- Culture had wrong flag
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_MAGOS</Type>
 			<Button>Art/culture/Magos.dds</Button>
@@ -80661,6 +80662,7 @@
 			<bActAsRanged>0</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
+-->
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_TOFANGCHI</Type>
 			<Button>Art/culture/Tofangchi.dds</Button>

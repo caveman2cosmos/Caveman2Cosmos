@@ -1402,112 +1402,7 @@ void CvCity::changeReinforcementCounter(int iChange)
 	setReinforcementCounter(getReinforcementCounter() + iChange);
 }
 
-// AIAndy: This function seems incomplete and unused
-int CvCity::getRevIndexHappinessVal()
-{
-	FAssertMsg(false, "This function should never have been called!");
-	return 0;
-
-#if 0
-	int iVal = 0;
-	double fHappyMod = 1.0;
-
-	int iUnhappy = unhappyLevel(-1);
-	int iHappy = happyLevel();
-
-	if (iUnhappy > iHappy)
-	{
-		double unhappy = iUnhappy;
-
-		// Lower unhappiness from war weariness
-		if (getWarWearinessPercentAnger() > 0)
-		{
-			unhappy -= (1.0 * getPopulation() * (double)(getWarWearinessPercentAnger() / 2)) / GC.getPERCENT_ANGER_DIVISOR();
-		}
-
-		// Lower unhappiness from Rev index (avoid spiral)
-		unhappy -= (1.0 * getPopulation() * getRevIndexPercentAnger()) / GC.getPERCENT_ANGER_DIVISOR();
-
-		unhappy -= iHappy;
-
-		if (unhappy > 0)
-		{
-			// Lower unhappiness from espionage missions
-			if (getEspionageHappinessCounter())
-			{
-				unhappy -= std::min((-unhappy) / 3.0, getEspionageHappinessCounter() / 3.0);
-			}
-
-			if (getOccupationTimer() > 0)
-			{
-				unhappy = unhappy / 3.0;
-			}
-			else if (isRecentlyAcquired())
-			{
-				unhappy = unhappy / 2.0;
-			}
-
-		}
-	}
-	else
-	{
-
-	}
-
-	return iVal;
-#endif
-}
-
-int CvCity::getRevIndexDistanceVal()
-{
-	int iVal = 0;
-
-	return iVal;
-}
-
-int CvCity::getRevIndexColonyVal()
-{
-	int iVal = 0;
-
-	return iVal;
-}
-
-int CvCity::getRevIndexReligionVal()
-{
-	int iVal = 0;
-
-	return iVal;
-}
-
-int CvCity::getRevIndexNationalityVal()
-{
-	int iVal = 0;
-
-	return iVal;
-}
-
-int CvCity::getRevIndexHealthVal()
-{
-	int iVal = 0;
-
-	return iVal;
-}
-
-int CvCity::getRevIndexGarrisonVal()
-{
-	int iVal = 0;
-
-	return iVal;
-}
-
-int CvCity::getRevIndexDisorderVal()
-{
-	int iVal = 0;
-
-	return iVal;
-}
-
-bool CvCity::isRecentlyAcquired()
+bool CvCity::isRecentlyAcquired() const
 {
 	int iModifier = GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getConstructPercent();
 	return ((GC.getGameINLINE().getGameTurn() - getGameTurnAcquired()) < (12 * iModifier) / 100);
@@ -1519,7 +1414,6 @@ bool CvCity::isRecentlyAcquired()
 void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 {
 	PROFILE_FUNC();
-
 
 	if (isCitySelected())
 	{
@@ -1544,7 +1438,6 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 	// < M.A.D. Nukes Start >
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-
 		if (!GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
 			continue;
@@ -2065,15 +1958,9 @@ void CvCity::doTurn()
 		{
 			CvPlot* pLoopPlot = getCityIndexPlot(iI);
 
-			if (pLoopPlot != NULL)
+			if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == this && pLoopPlot->isBeingWorked())
 			{
-				if (pLoopPlot->getWorkingCity() == this)
-				{
-					if (pLoopPlot->isBeingWorked())
-					{
-						pLoopPlot->doImprovement();
-					}
-				}
+				pLoopPlot->doImprovement();
 			}
 		}
 	}
@@ -2343,12 +2230,7 @@ void CvCity::updateVisibility()
 {
 	PROFILE_FUNC();
 
-	if (!GC.IsGraphicsInitialized())
-	{
-		return;
-	}
-
-	if (!isInViewport())
+	if (!GC.IsGraphicsInitialized() || !isInViewport())
 	{
 		return;
 	}
@@ -2366,7 +2248,8 @@ void CvCity::updateVisibility()
 	}
 
 }
-bool CvCity::isVisibilitySetup()
+
+bool CvCity::isVisibilitySetup() const
 {
 	return m_bVisibilitySetup;
 }
@@ -2582,14 +2465,11 @@ void CvCity::verifyWorkingPlot(int iIndex)
 	{
 		CvPlot* pPlot = getCityIndexPlot(iIndex);
 
-		if (pPlot != NULL)
+		if (pPlot != NULL && !canWork(pPlot))
 		{
-			if (!canWork(pPlot))
-			{
-				setWorkingPlot(iIndex, false);
+			setWorkingPlot(iIndex, false);
 
-				AI_setAssignWorkDirty(true);
-			}
+			AI_setAssignWorkDirty(true);
 		}
 	}
 }
@@ -2621,24 +2501,21 @@ int CvCity::countNumImprovedPlots(ImprovementTypes eImprovement, bool bPotential
 
 	for (int iI = 0; iI < getNumCityPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = getCityIndexPlot(iI);
+		const CvPlot* pLoopPlot = getCityIndexPlot(iI);
 
-		if (pLoopPlot != NULL)
+		if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == this)
 		{
-			if (pLoopPlot->getWorkingCity() == this)
+			if (eImprovement != NO_IMPROVEMENT)
 			{
-				if (eImprovement != NO_IMPROVEMENT)
+				if (pLoopPlot->getImprovementType() == eImprovement ||
+					(bPotential && pLoopPlot->canHaveImprovement(eImprovement, getTeam())))
 				{
-					if (pLoopPlot->getImprovementType() == eImprovement ||
-						(bPotential && pLoopPlot->canHaveImprovement(eImprovement, getTeam())))
-					{
-						++iCount;
-					}
+					++iCount;
 				}
-				else if (pLoopPlot->getImprovementType() != NO_IMPROVEMENT)
-				{
-					iCount++;
-				}
+			}
+			else if (pLoopPlot->getImprovementType() != NO_IMPROVEMENT)
+			{
+				iCount++;
 			}
 		}
 	}
@@ -2653,17 +2530,11 @@ int CvCity::countNumWaterPlots() const
 
 	for (int iI = 0; iI < getNumCityPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = getCityIndexPlot(iI);
+		const CvPlot* pLoopPlot = getCityIndexPlot(iI);
 
-		if (pLoopPlot != NULL)
+		if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == this && pLoopPlot->isWater())
 		{
-			if (pLoopPlot->getWorkingCity() == this)
-			{
-				if (pLoopPlot->isWater())
-				{
-					iCount++;
-				}
-			}
+			iCount++;
 		}
 	}
 
@@ -2676,17 +2547,11 @@ int CvCity::countNumRiverPlots() const
 
 	for (int iI = 0; iI < getNumCityPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = getCityIndexPlot(iI);
+		const CvPlot* pLoopPlot = getCityIndexPlot(iI);
 
-		if (pLoopPlot != NULL)
+		if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == this && pLoopPlot->isRiver())
 		{
-			if (pLoopPlot->getWorkingCity() == this)
-			{
-				if (pLoopPlot->isRiver())
-				{
-					++iCount;
-				}
-			}
+			++iCount;
 		}
 	}
 
@@ -4542,7 +4407,7 @@ bool CvCity::isProductionProcess() const
 }
 
 
-bool CvCity::canContinueProduction(const OrderData& order)
+bool CvCity::canContinueProduction(OrderData order) const
 {
 	switch (order.eOrderType)
 	{
@@ -4564,7 +4429,7 @@ bool CvCity::canContinueProduction(const OrderData& order)
 }
 
 
-int CvCity::getProductionExperience(UnitTypes eUnit)
+int CvCity::getProductionExperience(UnitTypes eUnit) const
 {
 	const CvPlayer& kPlayer = GET_PLAYER(getOwnerINLINE());
 	const CvCivilizationInfo& kCivilization = GC.getCivilizationInfo(getCivilizationType());
@@ -4574,14 +4439,13 @@ int CvCity::getProductionExperience(UnitTypes eUnit)
 	if (eUnit != NO_UNIT)
 	{
 		const CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
-		const UnitClassTypes eUnitClass = (UnitClassTypes)kUnit.getUnitClassType();
 
 		if (kUnit.isSpy() && !GC.isSS_ENABLED())
 		{
 			return 0;
 		}
 
-		if ((UnitTypes)kCivilization.getCivilizationUnits(eUnitClass) == eUnit && kUnit.canAcquireExperience())
+		if ((UnitTypes)kCivilization.getCivilizationUnits((UnitClassTypes)kUnit.getUnitClassType()) == eUnit && kUnit.canAcquireExperience())
 		{
 			iExperience += getSpecialistFreeExperience();
 
@@ -4599,8 +4463,7 @@ int CvCity::getProductionExperience(UnitTypes eUnit)
 				iExperience += kPlayer.getUnitCombatFreeExperience(eSubCombatType);
 			}
 
-			iExperience += getDomainFreeExperience((DomainTypes)kUnit.getDomainType());
-
+			iExperience += getDomainFreeExperience((DomainTypes)(kUnit.getDomainType()));
 		}
 	}
 
@@ -12887,7 +12750,7 @@ void CvCity::setCitySizeBoost(int iBoost)
 }
 
 // < M.A.D. Nukes Start >
-int CvCity::getMADIncoming()
+int CvCity::getMADIncoming() const
 {
 	return m_iMADIncoming;
 }
@@ -17549,38 +17412,34 @@ void CvCity::setNumRealBuildingTimed(BuildingTypes eIndex, int iNewValue, bool b
 				GET_PLAYER(getOwnerINLINE()).makeNukesValid(true);
 			}
 		}
-
+#ifdef THE_GREAT_WALL
 		//great wall
-		if (bFirst)
+		if (bFirst && GC.getBuildingInfo(eIndex).isAreaBorderObstacle())
 		{
-			if (GC.getBuildingInfo(eIndex).isAreaBorderObstacle())
+			int iCountExisting = 0;
+			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 			{
-				int iCountExisting = 0;
-				for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+				if (eIndex != iI && GC.getBuildingInfo((BuildingTypes)iI).isAreaBorderObstacle())
 				{
-					if (eIndex != iI && GC.getBuildingInfo((BuildingTypes)iI).isAreaBorderObstacle())
-					{
-						iCountExisting += getNumRealBuilding((BuildingTypes)iI);
-					}
-				}
-
-				if (iCountExisting == 1 && iNewValue == 0)
-				{
-					processGreatWall(true, true);
-				}
-				else if (iCountExisting == 0 && iNewValue > 0)
-				{
-					processGreatWall(true, true);
+					iCountExisting += getNumRealBuilding((BuildingTypes)iI);
 				}
 			}
+
+			if (iCountExisting == 1 && iNewValue == 0)
+			{
+				processGreatWall(true, true);
+			}
+			else if (iCountExisting == 0 && iNewValue > 0)
+			{
+				processGreatWall(true, true);
+			}
 		}
+#endif // THE_GREAT_WALL
 	}
 }
 
 bool CvCity::processGreatWall(bool bIn, bool bForce, bool bSeeded)
 {
-	return false;
-
 	/*
 	> TBNote: I've found both a crash scenario in PBEM and an infinite hang scenario in single player.
 	> A player complained about exceedingly strange graphic artifice when they encircle the globe with a singular culture that possesses the GW and the hang looked to have a similar basis.
@@ -17589,8 +17448,8 @@ bool CvCity::processGreatWall(bool bIn, bool bForce, bool bSeeded)
 	> Better would be to FIX it but I've got no clue on that.
 	See https://github.com/caveman2cosmos/Caveman2Cosmos/issues/44
 	*/
-#if 0
 
+#ifdef THE_GREAT_WALL
 	if (!bForce && !GC.getReprocessGreatWallDynamically())
 	{
 		return true;
@@ -17627,12 +17486,12 @@ bool CvCity::processGreatWall(bool bIn, bool bForce, bool bSeeded)
 		else
 		{
 			//	Need to find a culturally connected city that IS in the current viewport
-			int						iDummyVal;
+			int iDummyVal;
 			CvUnitSelectionCriteria	noGrowthCriteria;
 
 			noGrowthCriteria.m_bIgnoreGrowth = true;
 
-			UnitTypes				eDummyUnit = AI_bestUnitAI(UNITAI_ATTACK, iDummyVal, true, true, &noGrowthCriteria);
+			UnitTypes eDummyUnit = AI_bestUnitAI(UNITAI_ATTACK, iDummyVal, true, true, &noGrowthCriteria);
 
 			if (eDummyUnit == NO_UNIT)
 			{
@@ -17645,7 +17504,7 @@ bool CvCity::processGreatWall(bool bIn, bool bForce, bool bSeeded)
 
 			for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
 			{
-				CvCity* pCity = itr.plot()->getPlotCity();
+				const CvCity* pCity = itr.plot()->getPlotCity();
 
 				if (pCity != NULL && pCity->isInViewport())
 				{
@@ -17659,8 +17518,8 @@ bool CvCity::processGreatWall(bool bIn, bool bForce, bool bSeeded)
 
 		//	If no suitable city is within the viewport we'll have to move the viewport
 		bool bViewportMoved = false;
-		int	 iOldViewportXOffset = 0;
-		int	 iOldViewportYOffset = 0;
+		int iOldViewportXOffset = 0;
+		int iOldViewportYOffset = 0;
 
 		if (pUseCity == NULL && !bSeeded)
 		{
@@ -17692,9 +17551,8 @@ bool CvCity::processGreatWall(bool bIn, bool bForce, bool bSeeded)
 
 		return true;
 	}
-
+#endif // THE_GREAT_WALL
 	return false;
-#endif
 }
 
 int CvCity::getNumFreeBuilding(BuildingTypes eIndex) const
@@ -18500,11 +18358,11 @@ void CvCity::clearOrderQueue()
 
 bool CvCity::pushFirstValidBuildListOrder(int iListID)
 {
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
+	const CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	int index = kPlayer.m_pBuildLists->getIndexByID(iListID);
 	if (index < 0)
 		return false;
-	int iNum = kPlayer.m_pBuildLists->getListLength(index);
+	const int iNum = kPlayer.m_pBuildLists->getListLength(index);
 	for (int i = 0; i < iNum; i++)
 	{
 		OrderData* pOrder = kPlayer.m_pBuildLists->getOrder(index, i);
@@ -21579,7 +21437,7 @@ bool CvCity::isValidBuildingLocation(BuildingTypes eBuilding) const
 	/************************************************************************************************/
 	if (kBuilding.isFreshWater())
 	{
-		if (!(plot()->isFreshWater()))
+		if (!plot()->isFreshWater())
 		{
 			return false;
 		}
@@ -22159,24 +22017,19 @@ void CvCity::setEventOccured(EventTypes eEvent, bool bOccured)
 
 // CACHE: cache frequently used values
 ///////////////////////////////////////
-bool CvCity::hasShrine(ReligionTypes eReligion)
+bool CvCity::hasShrine(ReligionTypes eReligion) const
 {
-	bool bHasShrine = false;
-
 	// note, for normal XML, this count will be one, there is only one shrine of each religion
-	int	shrineBuildingCount = GC.getGameINLINE().getShrineBuildingCount(eReligion);
+	const int shrineBuildingCount = GC.getGameINLINE().getShrineBuildingCount(eReligion);
 	for (int iI = 0; iI < shrineBuildingCount; iI++)
 	{
-		BuildingTypes eBuilding = GC.getGameINLINE().getShrineBuilding(iI, eReligion);
-
-		if (getNumBuilding(eBuilding) > 0)
+		if (getNumBuilding(GC.getGameINLINE().getShrineBuilding(iI, eReligion)) > 0)
 		{
-			bHasShrine = true;
-			break;
+			return true;
 		}
 	}
 
-	return bHasShrine;
+	return false;
 }
 
 bool CvCity::hasOrbitalInfrastructure() const
@@ -23099,7 +22952,7 @@ void CvCity::emergencyConscript()
 /*        New Functions                                                                         */
 /************************************************************************************************/
 
-int CvCity::getRevTrend()
+int CvCity::getRevTrend() const
 {
 	if (GC.getGameINLINE().isOption(GAMEOPTION_NO_REVOLUTION))
 		return 0;
@@ -24164,18 +24017,24 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 
 void CvCity::changeFreshWater(int iChange)
 {
+	bool bDidHaveFreshWater = hasFreshWater();
+
 	if (iChange != 0)
 	{
 		m_iFreshWater += iChange;
-		for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
+		bool bDoesHaveFreshWater = hasFreshWater();
+		if (bDidHaveFreshWater != bDoesHaveFreshWater)
 		{
-			CvPlot* pLoopPlot = getCityIndexPlot(iJ);
-			if (pLoopPlot != NULL)
+			for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
 			{
-				pLoopPlot->updateIrrigated();
+				CvPlot* pLoopPlot = getCityIndexPlot(iJ);
+				if (pLoopPlot != NULL)
+				{
+					pLoopPlot->updateIrrigated();
+				}
 			}
+			updateFreshWaterHealth();
 		}
-		updateFreshWaterHealth();
 	}
 }
 
@@ -24450,7 +24309,7 @@ void CvCity::checkBuildings(bool bBonus, bool bCivics, bool bWar, bool bPower, b
 			/* Check fresh water */
 			if (kBuilding.isFreshWater())
 			{
-				if (plot()->isFreshWater())
+				if (plot()->isFreshWater() || hasFreshWater())
 				{
 					bRestoreBuildings = true;
 				}
@@ -26837,7 +26696,7 @@ int CvCity::getGlobalSourcedProperty(PropertyTypes eProperty) const
 {
 	int iSum = 0;
 	CvPropertyManipulators* pMani = GC.getPropertyInfo(eProperty).getPropertyManipulators();
-	int iNum = pMani->getNumSources();
+	const int iNum = pMani->getNumSources();
 	for (int i = 0; i < iNum; i++)
 	{
 		CvPropertySource* pSource = pMani->getSource(i);

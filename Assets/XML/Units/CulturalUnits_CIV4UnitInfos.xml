@@ -31840,6 +31840,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</UnitInfo>
+<!-- Wrong flag
 		<UnitInfo>
 			<Class>UNITCLASS_MAGOS</Class>
 			<Type>UNIT_MAGOS</Type>
@@ -31968,6 +31969,7 @@
 				</FreePromotion>
 			</FreePromotions>
 		</UnitInfo>
+-->
 		<UnitInfo>
 			<Class>UNITCLASS_TOFANGCHI</Class>
 			<Type>UNIT_TOFANGCHI</Type>

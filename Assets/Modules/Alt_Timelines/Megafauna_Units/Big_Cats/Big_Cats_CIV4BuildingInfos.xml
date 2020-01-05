@@ -16,6 +16,7 @@
 			<Strategy>TXT_KEY_BUILDING_BIG_CAT_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIG_CAT_TRAINER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BIG_CAT_TRAINER</MovieDefineTag>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_FELINE_DOMESTICATION</PrereqTech>

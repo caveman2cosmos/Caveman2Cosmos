@@ -26,7 +26,6 @@ public:
 	void AI_separateImpassable();
 	void AI_separateEmptyTransports();
 
-
 	bool AI_update();
 
 	int AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy, bool bForce = false, bool* bWin = NULL, int iTheshold = -1) const;
@@ -67,7 +66,7 @@ public:
 	void write(FDataStreamBase* pStream);
 
 protected:
-	bool	AI_isAwaitingContract() const;
+	bool AI_isAwaitingContract() const;
 
 	int m_iMissionAIX;
 	int m_iMissionAIY;

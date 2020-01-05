@@ -4,11 +4,12 @@ image: Visual Studio 2019
 skip_tags: true
 skip_branch_with_pr: true
 
-cache:
-- Build\Debug -> Tools\deps.exe, Tools\_MakeDLL.bat, Sources\, appveyor.yml
-- Build\Release -> Tools\deps.exe, Tools\_MakeDLL.bat, Sources\, appveyor.yml
-- Build\FinalRelease -> Tools\deps.exe, Tools\_MakeDLL.bat, Sources\, appveyor.yml
-- Build\cache
+# Disabled as it isn't working right
+# cache:
+# - Build\Debug -> Tools\deps.exe, Tools\_MakeDLL.bat, Sources\, appveyor.yml
+# - Build\Release -> Tools\deps.exe, Tools\_MakeDLL.bat, Sources\, appveyor.yml
+# - Build\FinalRelease -> Tools\deps.exe, Tools\_MakeDLL.bat, Sources\, appveyor.yml
+# - Build\cache
 
 # setup remote desktop access
 #on_finish:

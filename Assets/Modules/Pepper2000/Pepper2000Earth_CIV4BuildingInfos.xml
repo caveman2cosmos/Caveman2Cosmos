@@ -77,6 +77,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_LUXURY_FURNITURE_WORKSHOP</BuildingClass>
@@ -84,6 +85,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_PERSONAL_ROBOTS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_ORGAN_HALL</BuildingClass>
@@ -91,6 +93,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_TELESCREEN</BuildingClass>
@@ -112,6 +115,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_EMPORIUM</BuildingClass>
@@ -119,17 +123,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_CONGLOMERATES</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DEPT_FOREIGN_POLICY</BuildingClass>
 			<Type>BUILDING_DEPT_FOREIGN_POLICY</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AMBASSADOR_HOUSE</BuildingClass>
-			<Type>BUILDING_AMBASSADOR_HOUSE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -140,6 +138,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_FOREIGN_POLICY</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_GARDEN_CITY</BuildingClass>
@@ -6326,7 +6325,7 @@
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<iHappiness>-3</iHappiness>
-			<iMilitaryProductionModifier>-35</iMilitaryProductionModifier>
+			<iMilitaryProductionModifier>35</iMilitaryProductionModifier>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_PHENOTYPE_STUDIO</BuildingClassType>
@@ -6427,6 +6426,7 @@
 			<Strategy>TXT_KEY_BUILDING_AMNESTY_INTERNATIONAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AMNESTY_INTERNATIONAL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_AMNESTY_INTERNATIONAL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -7218,6 +7218,7 @@
 			<Strategy>TXT_KEY_BUILDING_ONE_BELT_ONE_ROAD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ONE_BELT_ONE_ROAD</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ONE_BELT_ONE_ROAD</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -7520,6 +7521,7 @@
 			<Strategy>TXT_KEY_BUILDING_AI_SINGLETON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AI_SINGLETON</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_AI_SINGLETON</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -8041,6 +8043,7 @@
 			<Strategy>TXT_KEY_BUILDING_ARXIV_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ARXIV</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ARXIV</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -8075,6 +8078,7 @@
 			<Strategy>TXT_KEY_BUILDING_BIOSPHERE_2_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIOSPHERE_2</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BIOSPHERE_2</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -8401,6 +8405,7 @@
 			<Strategy>TXT_KEY_BUILDING_CHURCH_TURING_THESIS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHURCH_TURING_THESIS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CHURCH_TURING_THESIS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -8715,6 +8720,7 @@
 			<Strategy>TXT_KEY_BUILDING_AMUNDSEN_SCOTT_SOUTH_POLE_STATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AMUNDSEN_SCOTT_SOUTH_POLE_STATION</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_AMUNDSEN_SCOTT_SOUTH_POLE_STATION</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -9008,6 +9014,7 @@
 			<Strategy>TXT_KEY_BUILDING_BELL_LABS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BELL_LABS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BELL_LABS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -11059,6 +11066,7 @@
 					<iFreeSpecialistCount>3</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
+			<MovieDefineTag>ART_DEF_MOVIE_10000_YEAR_CLOCK</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DIGITAL_RESURRECTION</BuildingClass>
@@ -12101,6 +12109,7 @@
 			<Strategy>TXT_KEY_BUILDING_ALZHEIMERS_CURE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ALZHEIMERS_CURE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ALZHEIMERS_CURE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -12792,6 +12801,7 @@
 			<Strategy>TXT_KEY_BUILDING_CRYSTALPUNK_EMBASSY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CRYSTALPUNK_EMBASSY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CRYSTALPUNK_EMBASSY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -13467,6 +13477,7 @@
 			<Strategy>TXT_KEY_BUILDING_CHUO_SHINKANSEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHUO_SHINKANSEN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CHUO_SHINKANSEN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -14665,6 +14676,7 @@
 			<Strategy>TXT_KEY_BUILDING_BIZARRO_WORLD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIZARRO_WORLD</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BIZARRO_WORLD</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -15260,11 +15272,6 @@
 			</ReplaceBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_EMPORIUM</BuildingClass>
-			<Type>BUILDING_EMPORIUM</Type>
-			<ObsoleteTech>TECH_CONGLOMERATES</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_FAMILY_FARM</BuildingClass>
 			<Type>BUILDING_FAMILY_FARM</Type>
 			<ObsoleteTech>TECH_ORGANIC_CITIES</ObsoleteTech>
@@ -15412,16 +15419,6 @@
 			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUXURY_FURNITURE_WORKSHOP</BuildingClass>
-			<Type>BUILDING_LUXURY_FURNITURE_WORKSHOP</Type>
-			<ObsoleteTech>TECH_PERSONAL_ROBOTS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LYCEUM</BuildingClass>
-			<Type>BUILDING_LYCEUM</Type>
-			<ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_MAJOR_LEAGUE_STADIUM</BuildingClass>
 			<Type>BUILDING_MAJOR_LEAGUE_STADIUM</Type>
 			<ObsoleteTech>TECH_BINARY_PYSCHOKINESIS</ObsoleteTech>
@@ -15527,11 +15524,6 @@
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NEGOTIATOR_HUT</BuildingClass>
-			<Type>BUILDING_NEGOTIATOR_HUT</Type>
-			<ObsoleteTech>TECH_FOREIGN_POLICY</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_OBSIDIAN_QUARRY</BuildingClass>
@@ -15823,11 +15815,6 @@
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AMBASSADOR_HOUSE</BuildingClass>
-			<Type>BUILDING_AMBASSADOR_HOUSE</Type>
-			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_COMMERCIAL_PORT</BuildingClass>
@@ -17681,11 +17668,6 @@
 			<ObsoleteTech>TECH_SOCIAL_CALCULUS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_BATTLEBOT_ARENA</BuildingClass>
-			<Type>BUILDING_BATTLEBOT_ARENA</Type>
-			<ObsoleteTech>TECH_WARMACHINES</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_COUNTRY_CLUB</BuildingClass>
 			<Type>BUILDING_COUNTRY_CLUB</Type>
 			<ObsoleteTech>TECH_UTOPIA_DESTINY</ObsoleteTech>
@@ -17703,11 +17685,6 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_OPERA_HOUSE</BuildingClass>
 			<Type>BUILDING_OPERA_HOUSE</Type>
-			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ORGAN_HALL</BuildingClass>
-			<Type>BUILDING_ORGAN_HALL</Type>
 			<ObsoleteTech>TECH_BINARY_SUBCONSCIOUSNESS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -19152,11 +19129,6 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_MUSKOX_CAMP</BuildingClass>
 			<Type>BUILDING_MUSKOX_CAMP</Type>
-			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_BREEDING_NARWHAL</BuildingClass>
-			<Type>BUILDING_BREEDING_NARWHAL</Type>
 			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -23298,6 +23270,7 @@
 			<Strategy>TXT_KEY_BUILDING_BIONIC_TOWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIONIC_TOWER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BIONIC_TOWER</MovieDefineTag>
 			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -23336,6 +23309,7 @@
 			<Strategy>TXT_KEY_BUILDING_AEROPOLIS_2001_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AEROPOLIS_2001</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_AEROPOLIS_2001</MovieDefineTag>
 			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -23370,6 +23344,7 @@
 			<Strategy>TXT_KEY_BUILDING_CRYSTAL_ISLAND_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CRYSTAL_ISLAND</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CRYSTAL_ISLAND</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23776,6 +23751,7 @@
 			<Strategy>TXT_KEY_BUILDING_ARCONIC_TOWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ARCONIC_TOWER</ArtDefineTag>
+ 			<MovieDefineTag>ART_DEF_MOVIE_ARCONIC_TOWER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24137,6 +24113,7 @@
 			<Strategy>TXT_KEY_BUILDING_ARCOSANTI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ARCOSANTI</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ARCOSANTI</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24389,6 +24366,7 @@
 			<Strategy>TXT_KEY_BUILDING_BOSTON_ARCOLOGY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BOSTON_ARCOLOGY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BOSTON_ARCOLOGY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -25648,6 +25626,7 @@
 			<Strategy>TXT_KEY_BUILDING_ATLANTIS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ATLANTIS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ATLANTIS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -25773,6 +25752,7 @@
 			<Strategy>TXT_KEY_BUILDING_BAIKONUR_COSMODROME_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BAIKONUR_COSMODROME</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BAIKONUR_COSMODROME</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -26875,6 +26855,7 @@
 			<Strategy>TXT_KEY_BUILDING_BREAKTHROUGH_STARSHOT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BREAKTHROUGH_STARSHOT</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BREAKTHROUGH_STARSHOT</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -28666,6 +28647,7 @@
 			<Strategy>TXT_KEY_BUILDING_ASCENSION_GATE_STRATEGY</Strategy>
 			<bCenterInCity>1</bCenterInCity>
 			<ArtDefineTag>ART_DEF_BUILDING_ASCENSION_GATE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ASCENSION_GATE</MovieDefineTag>
 			<Civilopedia>TXT_KEY_BUILDING_ASCENSION_GATE_PEDIA</Civilopedia>
 			<Description>TXT_KEY_BUILDING_ASCENSION_GATE</Description>
 			<Help>TXT_KEY_BUILDING_ASCENSION_GATE_HELP</Help>

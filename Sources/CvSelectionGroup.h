@@ -54,7 +54,6 @@ public:
 	CvSelectionGroup();
 	virtual ~CvSelectionGroup();
 
-
 	DllExport void init(int iID, PlayerTypes eOwner);
 	DllExport void uninit();			
 	DllExport void reset(int iID = 0, PlayerTypes eOwner = NO_PLAYER, bool bConstructorCall = false);

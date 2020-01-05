@@ -6,11 +6,7 @@
 
 from CvPythonExtensions import *
 import CvUtil
-import ScreenInput
-import time
 import PyHelpers
-import Popup as PyPopup
-import math
 
 PyPlayer = PyHelpers.PyPlayer
 PyInfo = PyHelpers.PyInfo

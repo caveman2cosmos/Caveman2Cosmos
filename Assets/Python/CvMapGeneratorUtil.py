@@ -1363,29 +1363,15 @@ def findStartingPlot(playerID, validFn = None):
 	while (True):
 		iBestValue = 0
 		pBestPlot = None
-
 		for iX in range(map.getGridWidth()):
 			for iY in range(map.getGridHeight()):
 				if validFn != None and not validFn(playerID, iX, iY):
 					continue
 				pLoopPlot = map.plot(iX, iY)
-
 				val = pLoopPlot.getFoundValue(playerID)
-
 				if val > iBestValue:
-
-					valid = True
-
-					for iI in range(gc.getMAX_PC_PLAYERS()):
-						if (gc.getPlayer(iI).isAlive()):
-							if (iI != playerID):
-								if gc.getPlayer(iI).startingPlotWithinRange(pLoopPlot, playerID, iRange, iPass):
-									valid = False
-									break
-
-					if valid:
-							iBestValue = val
-							pBestPlot = pLoopPlot
+					iBestValue = val
+					pBestPlot = pLoopPlot
 
 		if pBestPlot != None:
 			return map.plotNum(pBestPlot.getX(), pBestPlot.getY())

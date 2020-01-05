@@ -132,7 +132,7 @@ int CvMapExternal::plotNum(int iX, int iY) const																		// Exposed to 
 }
 
 
-int CvMapExternal::pointXToPlotX(float fX)
+int CvMapExternal::pointXToPlotX(float fX) const
 {
 	return m_proxiedMap->pointXToPlotX(fX);
 }
@@ -144,7 +144,7 @@ float CvMapExternal::plotXToPointX(int iX)
 }
 
 
-int CvMapExternal::pointYToPlotY(float fY)
+int CvMapExternal::pointYToPlotY(float fY) const
 {
 	return m_proxiedMap->pointYToPlotY(fY);
 }
@@ -168,13 +168,13 @@ int CvMapExternal::getGridHeight() const																	// Exposed to Python
 }
 
 
-int CvMapExternal::getLandPlots()																					// Exposed to Python
+int CvMapExternal::getLandPlots() const																					// Exposed to Python
 {
 	return m_proxiedMap->getLandPlots();
 }
 
 
-int CvMapExternal::getOwnedPlots()																				// Exposed to Python
+int CvMapExternal::getOwnedPlots() const																				// Exposed to Python
 {
 	return m_proxiedMap->getOwnedPlots();
 }
@@ -204,26 +204,25 @@ WorldSizeTypes CvMapExternal::getWorldSize()															// Exposed to Python
 }
 
 
-ClimateTypes CvMapExternal::getClimate()																	// Exposed to Python
+ClimateTypes CvMapExternal::getClimate() const																	// Exposed to Python
 {
 	return m_proxiedMap->getClimate();
 }
 
 
-SeaLevelTypes CvMapExternal::getSeaLevel()																// Exposed to Python
+SeaLevelTypes CvMapExternal::getSeaLevel() const																// Exposed to Python
 {
 	return m_proxiedMap->getSeaLevel();
 }
 
 
-
-int CvMapExternal::getNumCustomMapOptions()
+int CvMapExternal::getNumCustomMapOptions() const
 {
 	return m_proxiedMap->getNumCustomMapOptions();
 }
 
 
-CustomMapOptionTypes CvMapExternal::getCustomMapOption(int iOption)				// Exposed to Python
+CustomMapOptionTypes CvMapExternal::getCustomMapOption(int iOption) const				// Exposed to Python
 {
 	return m_proxiedMap->getCustomMapOption(iOption);
 }
@@ -265,13 +264,13 @@ CvPlot* CvMapExternal::pointToPlot(float fX, float fY)
 }
 
 
-int CvMapExternal::getNumAreas()														// Exposed to Python
+int CvMapExternal::getNumAreas() const														// Exposed to Python
 {
 	return m_proxiedMap->getNumAreas();
 }
 
 
-int CvMapExternal::getNumLandAreas()
+int CvMapExternal::getNumLandAreas() const
 {
 	return m_proxiedMap->getNumLandAreas();
 }

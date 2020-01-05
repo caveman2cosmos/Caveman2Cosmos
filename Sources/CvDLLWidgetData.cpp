@@ -4460,37 +4460,34 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 		bool bFirst = true;
 		for (int iTeamIndex = 0; iTeamIndex < MAX_TEAMS; iTeamIndex++)
 		{
-			TeamTypes eLoopTeam = (TeamTypes) iTeamIndex;
+			TeamTypes eLoopTeam = (TeamTypes)iTeamIndex;
 			CvTeamAI& kLoopTeam = GET_TEAM(eLoopTeam);
-			if (eLoopTeam != eTeam && kLoopTeam.isAlive() && !kLoopTeam.isNPC() && !kLoopTeam.isMinorCiv())
+			if (eLoopTeam != eTeam && kLoopTeam.isAlive() && !kLoopTeam.isMinorCiv() && kTeam.isAtWar(eLoopTeam))
 			{
-				if (kTeam.isAtWar(eLoopTeam))
+				if (bFirst)
 				{
-					if (bFirst)
-					{
-						szBuffer.append(CvWString::format(SETCOLR L"Current War:\n" ENDCOLR, TEXT_COLOR("COLOR_UNIT_TEXT")));
-						bFirst = false;
-					}
-
-					bHadAny = true;
-					
-					WarPlanTypes eWarPlan = kTeam.AI_getWarPlan(eLoopTeam);
-					CvWStringBuffer szWarplan;
-					GAMETEXT.getWarplanString(szWarplan, eWarPlan);
-
-					int iOtherValue = kTeam.AI_endWarVal(eLoopTeam);
-					int iTheirValue = kLoopTeam.AI_endWarVal(eTeam);
-					
-					szBuffer.append( CvWString::format(SETCOLR L" %s " ENDCOLR SETCOLR L"(%d, %d)" ENDCOLR SETCOLR L" with %s " ENDCOLR  SETCOLR L"(%d, %d)\n" ENDCOLR, 
-						TEXT_COLOR((iOtherValue < iTheirValue) ? "COLOR_POSITIVE_TEXT" : "COLOR_NEGATIVE_TEXT"),
-						szWarplan.getCString(),
-						TEXT_COLOR((iOtherValue < iTheirValue) ? "COLOR_POSITIVE_TEXT" : "COLOR_NEGATIVE_TEXT"),
-						iOtherValue, kTeam.AI_getWarSuccess(eLoopTeam),
-						TEXT_COLOR((iOtherValue < iTheirValue) ? "COLOR_POSITIVE_TEXT" : "COLOR_NEGATIVE_TEXT"),
-						kLoopTeam.getName().GetCString(),
-						TEXT_COLOR((iTheirValue < iOtherValue) ? "COLOR_POSITIVE_TEXT" : "COLOR_NEGATIVE_TEXT"),
-						iTheirValue, kLoopTeam.AI_getWarSuccess(eTeam)) );
+					szBuffer.append(CvWString::format(SETCOLR L"Current War:\n" ENDCOLR, TEXT_COLOR("COLOR_UNIT_TEXT")));
+					bFirst = false;
 				}
+
+				bHadAny = true;
+				
+				WarPlanTypes eWarPlan = kTeam.AI_getWarPlan(eLoopTeam);
+				CvWStringBuffer szWarplan;
+				GAMETEXT.getWarplanString(szWarplan, eWarPlan);
+
+				int iOtherValue = kTeam.AI_endWarVal(eLoopTeam);
+				int iTheirValue = kLoopTeam.AI_endWarVal(eTeam);
+				
+				szBuffer.append( CvWString::format(SETCOLR L" %s " ENDCOLR SETCOLR L"(%d, %d)" ENDCOLR SETCOLR L" with %s " ENDCOLR  SETCOLR L"(%d, %d)\n" ENDCOLR, 
+					TEXT_COLOR((iOtherValue < iTheirValue) ? "COLOR_POSITIVE_TEXT" : "COLOR_NEGATIVE_TEXT"),
+					szWarplan.getCString(),
+					TEXT_COLOR((iOtherValue < iTheirValue) ? "COLOR_POSITIVE_TEXT" : "COLOR_NEGATIVE_TEXT"),
+					iOtherValue, kTeam.AI_getWarSuccess(eLoopTeam),
+					TEXT_COLOR((iOtherValue < iTheirValue) ? "COLOR_POSITIVE_TEXT" : "COLOR_NEGATIVE_TEXT"),
+					kLoopTeam.getName().GetCString(),
+					TEXT_COLOR((iTheirValue < iOtherValue) ? "COLOR_POSITIVE_TEXT" : "COLOR_NEGATIVE_TEXT"),
+					iTheirValue, kLoopTeam.AI_getWarSuccess(eTeam)) );
 			}
 		}
 		
@@ -4515,11 +4512,11 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 		// show warplan values
 		bHadAny = false;
 		bFirst = true;
-		for (int iTeamIndex = 0; iTeamIndex < MAX_TEAMS; iTeamIndex++)
+		for (int iTeamIndex = 0; iTeamIndex < MAX_PC_TEAMS; iTeamIndex++)
 		{
 			TeamTypes eLoopTeam = (TeamTypes) iTeamIndex;
 			CvTeamAI& kLoopTeam = GET_TEAM(eLoopTeam);
-			if (eLoopTeam != eTeam && kLoopTeam.isAlive() && !kLoopTeam.isNPC())
+			if (eLoopTeam != eTeam && kLoopTeam.isAlive())
 			{
 				WarPlanTypes eWarPlan = kTeam.AI_getWarPlan(eLoopTeam);
 				if (!kTeam.isAtWar(eLoopTeam) && eWarPlan != NO_WARPLAN)
@@ -4674,13 +4671,13 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 		} aStartWarInfo[MAX_TEAMS];
 		
 		// first calculate all the values and put into array
-		for (int iTeamIndex = 0; iTeamIndex < MAX_TEAMS; iTeamIndex++)
+		for (int iTeamIndex = 0; iTeamIndex < MAX_PC_TEAMS; iTeamIndex++)
 		{
 			aStartWarInfo[iTeamIndex].bValid = false;
 			
 			TeamTypes eLoopTeam = (TeamTypes) iTeamIndex;
 			CvTeamAI& kLoopTeam = GET_TEAM(eLoopTeam);
-			if (eLoopTeam != eTeam && kLoopTeam.isAlive() && !kLoopTeam.isNPC())
+			if (eLoopTeam != eTeam && kLoopTeam.isAlive())
 			{
 				WarPlanTypes eWarPlan = kTeam.AI_getWarPlan(eLoopTeam);
 				if (!kTeam.isAtWar(eLoopTeam) && (eWarPlan == NO_WARPLAN))
