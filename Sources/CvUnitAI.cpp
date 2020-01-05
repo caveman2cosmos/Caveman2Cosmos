@@ -1861,7 +1861,7 @@ int CvUnitAI::AI_sacrificeValue(const CvPlot* pPlot) const
 
 // Protected Functions...
 
-void CvUnitAI::AI_animalMove()
+void CvUnitAI::AI_animalMove() const
 {
 	PROFILE_FUNC();
 
