@@ -7392,8 +7392,7 @@ CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadU
 	}
 	else
 	{
-		// try to find remainder head with same AI as head, if we cannot find one, we will split the rest of the group up
-		// loop over all the units
+		// try to find remainder head with same AI as head, if we cannot find one, we will leave the remaining units in this group
 		unit_iterator fitr = std::find_if(beginUnits(), endUnits(), bst::bind(isValidHeadUnit, pNewHeadUnit, eOldHeadAI, _1));
 		if (fitr != endUnits())
 		{
@@ -7402,7 +7401,8 @@ CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadU
 	}
 	
 	CvSelectionGroup* pSplitGroup = NULL;
-	CvSelectionGroup* pRemainderGroup = NULL;
+	// Default to leaving remaining units in this group
+	CvSelectionGroup* pRemainderGroup = this;
 	
 	// make the new group for the new head
 	pNewHeadUnit->joinGroup(NULL);
