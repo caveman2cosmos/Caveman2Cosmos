@@ -18,10 +18,6 @@
 			<Path>Art/Movies/Intros/TheWay_720x486.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_PLACEHOLDER</Type>
-			<Path>Art/Movies/wonders/Placeholder.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ANGKOR_WAT</Type>
 			<Path>Art/Movies/Wonders/AngkorWat.bik</Path>
 		</MovieArtInfo>
@@ -218,18 +214,6 @@
 			<Path>Art/Movies/Wonders/Leonardos_Workshop.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_SHRINE_EGYPTIAN_MYTH</Type>
-			<Path>Art/Cutscene/Egyptian_Shrine.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_SHRINE_GREEK_MYTH</Type>
-			<Path>Art/Cutscene/Greek_Shrine.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_SHRINE_ZOROASTRIANISM</Type>
-			<Path>Art/Cutscene/Zoroastrianism/Shrine_Zoro_dwg_512.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ALHAMBRA</Type>
 			<Path>Art/Movies/Wonders/alhambra.bik</Path>
 		</MovieArtInfo>
@@ -252,14 +236,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_CRUSADE</Type>
 			<Path>Art/Movies/Wonders/Crusade.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_EVOLUTION</Type>
-			<Path>Art/Movies/Wonders/Evolution.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_LONGEVITY</Type>
-			<Path>Art/Movies/Wonders/longevity.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_MAGELLAN</Type>
@@ -298,10 +274,6 @@
 			<Path>Art/Movies/Wonders/HimejiCastle.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_AMUSEMENT_PARK</Type>
-			<Path>Art/Movies/Wonders/AmusementPark.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_CDC</Type>
 			<Path>Art/Movies/Wonders/CDC.bik</Path>
 		</MovieArtInfo>
@@ -324,10 +296,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_PONT_DU_GARD</Type>
 			<Path>Art/Movies/Wonders/PontDuGard.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_THEORY_OF_EVERYTHING</Type>
-			<Path>Art/Movies/Wonders/QuantumTheory.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SECRET_ARMY_BASE</Type>
@@ -406,62 +374,6 @@
 			<Path>Art/Movies/Wonders/Carhenge.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_APOTHEGUILD</Type>
-			<Path>Art/Movies/Apothecaries.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_ARTISTGUILD</Type>
-			<Path>Art/Movies/Artists.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_BAKERGUILD</Type>
-			<Path>Art/Movies/Bakers.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_BLACKSMGUILD</Type>
-			<Path>Art/Movies/Blacksmiths.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_BUTCHERGUILD</Type>
-			<Path>Art/Movies/Butchers.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_CARPENTERGUILD</Type>
-			<Path>Art/Movies/Carpenters.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_CLERKSGUILD</Type>
-			<Path>Art/Movies/Clerks.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_DRAPERSGUILD</Type>
-			<Path>Art/Movies/Drapers.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_EQUESTGUILD</Type>
-			<Path>Art/Movies/Equestrians.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_GLASSGUILD</Type>
-			<Path>Art/Movies/Glassblowers.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_GOLDSMGUILD</Type>
-			<Path>Art/Movies/Goldsmiths.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_GROCERGUILD</Type>
-			<Path>Art/Movies/Grocers.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_MASONGUILD</Type>
-			<Path>Art/Movies/Masons.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_MERCERGUILD</Type>
-			<Path>Art/Movies/Mercers.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_MASTERY_VICTORY</Type>
 			<Path>Art/Movies/Mastery.bik</Path>
 		</MovieArtInfo>
@@ -514,14 +426,6 @@
 			<Path>Art/Movies/wonders/wtc.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_WALLS</Type>
-			<Path>Art/Movies/Wonders/WALLS.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_BATHMOVIE</Type>
-			<Path>Art/Movies/Wonders/BathMovie.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_WESTP</Type>
 			<Path>Art/Movies/Wonders/WESTP.bik</Path>
 		</MovieArtInfo>
@@ -548,10 +452,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ARC_DE_TRIOMPHE</Type>
 			<Path>Art/Movies/Wonders/Arc_de_triomphe.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CHOQUEQUIRAO</Type>
-			<Path>Art/Movies/Wonders/Choquequirao.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_DORADO</Type>
@@ -730,10 +630,6 @@
 			<Path>Art/Movies/Wonders/Itsukushima_torii_angle.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_SIKHISM_SHRINE</Type>
-			<Path>Art/Movies/Wonders/Harmandir_sahib.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_TENGRI_SHRINE</Type>
 			<Path>Art/Movies/Wonders/Peak_of_Khan_Tengri.bik</Path>
 		</MovieArtInfo>
@@ -898,14 +794,6 @@
 			<Path>Art/Movies/Wonders/PleistocenePark.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_POCKETMONSTER_BREEDING_FACILITY</Type>
-			<Path>Art/Movies/Wonders/PMBreedingCenter.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_POCKETMONSTER_LEAGUEHQ</Type>
-			<Path>Art/Movies/Wonders/PMLeagueHQ.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_RIVERROUGE</Type>
 			<Path>Art/Movies/Wonders/RiverRouge.bik</Path>
 		</MovieArtInfo>
@@ -1048,10 +936,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_PROPAGANDA</Type>
 			<Path>Art/Movies/Wonders/PROPAGANDA_Net.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_TERRACOTTA</Type>
-			<Path>Art/Movies/Wonders/TerraCotta.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_COLUMN</Type>
@@ -1525,7 +1409,7 @@
 			<Type>ART_DEF_MOVIE_NEANDERTHAL_EMBASSY</Type>
 			<Path>Art/Movies/Wonders/NeanderthalEmbassy.bik</Path>
 		</MovieArtInfo>
-				<MovieArtInfo>
+		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_FIRE_FESTIVAL</Type>
 			<Path>Art/Movies/Wonders/xfirefestival.bik</Path>
 		</MovieArtInfo>
@@ -1548,10 +1432,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ARK</Type>
 			<Path>Art/movies/wonders/Ark of The Covenant.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_ISHTAR</Type>
-			<Path>Art/Movies/Wonders/Ishtar.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_GREAT_JAGUAR_TEMPLE</Type>
@@ -1596,10 +1476,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_DALI_THEATRE</Type>
 			<Path>Art/Movies/Wonders/Dali_Theatre.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_LAS_MEDULAS</Type>
-			<Path>Art/Movies/Wonders/Las_Medulas.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_THE_ATOMIUM</Type>
