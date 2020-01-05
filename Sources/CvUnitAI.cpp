@@ -1861,7 +1861,7 @@ int CvUnitAI::AI_sacrificeValue(const CvPlot* pPlot) const
 
 // Protected Functions...
 
-void CvUnitAI::AI_animalMove() const
+void CvUnitAI::AI_animalMove()
 {
 	PROFILE_FUNC();
 
@@ -36632,7 +36632,7 @@ bool CvUnitAI::AI_isNegativePropertyUnit()
 	return bAnswer;
 }
 
-int CvUnitAI::getMyAggression(int iAttackProb)
+int CvUnitAI::getMyAggression(int iAttackProb) const
 {
 	int iAggression = m_pUnitInfo->getAggression() + getLevel() - 1;
 	iAggression *= maxHitPoints() - getDamage();
