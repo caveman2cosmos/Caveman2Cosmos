@@ -30044,6 +30044,7 @@
 			</FreePromotions>
 			<LeaderPromotion>PROMOTION_LEADER</LeaderPromotion>
 		</UnitInfo>
+<!-- Deactivated culture - wrong flag
 		<UnitInfo>
 			<Class>UNITCLASS_SHEBA</Class>
 			<Type>UNIT_SHEBA</Type>
@@ -30175,6 +30176,7 @@
 			</FreePromotions>
 			<LeaderPromotion>PROMOTION_LEADER</LeaderPromotion>
 		</UnitInfo>
+-->
 		<UnitInfo>
 			<Class>UNITCLASS_ISMAIL_I</Class>
 			<Type>UNIT_ISMAIL_I</Type>

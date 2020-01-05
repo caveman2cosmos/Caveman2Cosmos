@@ -470,6 +470,7 @@
 			<Strategy>TXT_KEY_BUILDING_COMPUTRONIUM_TITAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COMPUTRONIUM_TITAN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_COMPUTRONIUM_TITAN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_COMPUTRONIUM_UNIVERSE</PrereqTech>
 			<iCost>69062</iCost>

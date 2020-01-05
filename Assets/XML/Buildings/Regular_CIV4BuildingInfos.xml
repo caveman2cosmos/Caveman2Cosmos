@@ -2650,7 +2650,6 @@
 			<Strategy>TXT_KEY_BUILDING_ANGORA_RABBIT_BREEDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANGORA_RABBIT_BREEDER</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_PET_SHOP</ConstructSound>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -8244,7 +8243,7 @@
 			<Strategy>TXT_KEY_BUILDING_BALLOON_FESTIVAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BALLOON_FESTIVAL</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_MARKET</ConstructSound>
+			<ConstructSound>AS2D_BUILD_MARKETPLACE</ConstructSound>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -8284,7 +8283,7 @@
 			<Strategy>TXT_KEY_BUILDING_BALLOON_RIDES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BALLOON_RIDES</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_MARKET</ConstructSound>
+			<ConstructSound>AS2D_BUILD_MARKETPLACE</ConstructSound>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -12482,7 +12481,7 @@
 			<Strategy>TXT_KEY_BUILDING_BLIMP_ADVERTIZING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BLIMP_ADVERTIZING</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_MARKET</ConstructSound>
+			<ConstructSound>AS2D_BUILD_MARKETPLACE</ConstructSound>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -19755,7 +19754,7 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
@@ -44366,7 +44365,6 @@
 			<Strategy>TXT_KEY_BUILDING_GERBIL_BREEDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GERBIL_BREEDER</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_PET_SHOP</ConstructSound>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -47849,7 +47847,6 @@
 			<Strategy>TXT_KEY_BUILDING_GUINEAPIG_BREEDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GUINEAPIG_BREEDER</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_PET_SHOP</ConstructSound>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -47999,7 +47996,6 @@
 			<Strategy>TXT_KEY_BUILDING_HAMSTER_BREEDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HAMSTER_BREEDER</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_PET_SHOP</ConstructSound>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -69855,7 +69851,6 @@
 			<Strategy>TXT_KEY_BUILDING_MOUSE_BREEDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MOUSE_BREEDER</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_PET_SHOP</ConstructSound>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -83793,7 +83788,6 @@
 			<Strategy>TXT_KEY_BUILDING_RABBIT_BREEDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RABBIT_BREEDER</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_PET_SHOP</ConstructSound>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -84377,7 +84371,6 @@
 			<Strategy>TXT_KEY_BUILDING_RAT_BREEDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RAT_BREEDER</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_PET_SHOP</ConstructSound>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -112095,7 +112088,7 @@
 			<Strategy>TXT_KEY_BUILDING_PAWN_SHOP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PAWN_SHOP</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_MARKET</ConstructSound>
+			<ConstructSound>AS2D_BUILD_MARKETPLACE</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -112162,7 +112155,7 @@
 			<Strategy>TXT_KEY_BUILDING_MOTORCYCLE_CLUB_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MOTORCYCLE_CLUB</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_MARKET</ConstructSound>
+			<ConstructSound>AS2D_BUILD_MARKETPLACE</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>

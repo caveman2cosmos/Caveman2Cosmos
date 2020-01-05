@@ -1626,8 +1626,8 @@ bool CvTeam::canDeclareWar(TeamTypes eTeam) const
 /// plans aren't unnecessarily affected by current conditions.
 ///
 /// Could not change definition of canDeclareWar, some sporadic crash-inducing compatibility issue
-/// with the DLL it seems.  Lost a lot of time tracking down the source of the crash, it really is 
-/// just from adding bool bWhatever = false to canDeclareWar in CvTeam.h.  So, that's why there's 
+/// with the DLL it seems.  Lost a lot of time tracking down the source of the crash, it really is
+/// just from adding bool bWhatever = false to canDeclareWar in CvTeam.h.  So, that's why there's
 /// this overlapping second function.
 bool CvTeam::canEventuallyDeclareWar(TeamTypes eTeam) const
 {
@@ -2486,7 +2486,7 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 		if( !isMinorCiv() && !GET_TEAM(eTeam).isMinorCiv() )
 		{
 			// Announce if both are really alive
-			if( bHasUnitsOrCities && bHasUnitsOrCities2 ) 
+			if( bHasUnitsOrCities && bHasUnitsOrCities2 )
 			{
 				for (iI = 0; iI < MAX_PLAYERS; iI++)
 				{
@@ -3066,13 +3066,13 @@ bool CvTeam::canVassalRevolt(TeamTypes eMaster) const
 		}
 	}
 
-	if (GC.getDefineINT("FREE_VASSAL_LAND_PERCENT") < 0 || 
+	if (GC.getDefineINT("FREE_VASSAL_LAND_PERCENT") < 0 ||
 		100 * getTotalLand(false) < kMaster.getTotalLand(false) * GC.getDefineINT("FREE_VASSAL_LAND_PERCENT"))
 	{
 		return false;
 	}
 
-	if (GC.getDefineINT("FREE_VASSAL_POPULATION_PERCENT") < 0 || 
+	if (GC.getDefineINT("FREE_VASSAL_POPULATION_PERCENT") < 0 ||
 		100 * getTotalPopulation(false) < kMaster.getTotalPopulation(false) * GC.getDefineINT("FREE_VASSAL_POPULATION_PERCENT"))
 	{
 		return false;
@@ -3912,7 +3912,7 @@ void CvTeam::setIsMinorCiv( bool bNewValue, bool bDoBarbCivCheck )
 						if( iCount > 2 || GET_TEAM((TeamTypes)iI).AI_getWarSuccess(getID()) > GC.getDefineINT("WAR_SUCCESS_CITY_CAPTURING") )
 						{
 							logMsg("  Barb civ %d decides to keep war on victim Team %d", getID(), eBarbCivVictim);
-							declareWar((TeamTypes)iI, true, WARPLAN_TOTAL); 
+							declareWar((TeamTypes)iI, true, WARPLAN_TOTAL);
 						}
 						else
 						{
@@ -4286,7 +4286,7 @@ bool CvTeam::isMapTrading()	const
 }
 
 
-void CvTeam::changeMapTradingCount(int iChange)						 
+void CvTeam::changeMapTradingCount(int iChange)						
 {
 	m_iMapTradingCount = (m_iMapTradingCount + iChange);
 	FAssert(getMapTradingCount() >= 0);
@@ -4299,13 +4299,13 @@ int CvTeam::getTechTradingCount() const
 }
 
 
-bool CvTeam::isTechTrading() const													 
+bool CvTeam::isTechTrading() const													
 {
 	return (getTechTradingCount() > 0);
 }
 
 
-void CvTeam::changeTechTradingCount(int iChange)						 
+void CvTeam::changeTechTradingCount(int iChange)						
 {
 	m_iTechTradingCount = (m_iTechTradingCount + iChange);
 	FAssert(getTechTradingCount() >= 0);
@@ -4318,13 +4318,13 @@ int CvTeam::getGoldTradingCount() const
 }
 
 
-bool CvTeam::isGoldTrading() const													 
+bool CvTeam::isGoldTrading() const													
 {
 	return (getGoldTradingCount() > 0);
 }
 
 
-void CvTeam::changeGoldTradingCount(int iChange)						 
+void CvTeam::changeGoldTradingCount(int iChange)						
 {
 	m_iGoldTradingCount = (m_iGoldTradingCount + iChange);
 	FAssert(getGoldTradingCount() >= 0);
@@ -4428,7 +4428,7 @@ bool CvTeam::isBridgeBuilding()	const
 }
 
 
-void CvTeam::changeBridgeBuildingCount(int iChange)				 
+void CvTeam::changeBridgeBuildingCount(int iChange)				
 {
 	if (iChange != 0)
 	{
@@ -4564,7 +4564,7 @@ void CvTeam::setMapCentering(bool bNewValue)
 		m_bMapCentering = bNewValue;
 
 		if (getID() == GC.getGameINLINE().getActiveTeam())
-		{ 
+		{
 			gDLL->getInterfaceIFace()->setDirty(MinimapSection_DIRTY_BIT, true);
 		}
 	}
@@ -4633,12 +4633,12 @@ void CvTeam::changeStolenVisibilityTimer(TeamTypes eIndex, int iChange)
 }
 
 
-int CvTeam::getWarWeariness(TeamTypes eIndex) const								 
+int CvTeam::getWarWeariness(TeamTypes eIndex) const								
 {
 	return getWarWearinessTimes100(eIndex)/100;
 }
 
-int CvTeam::getWarWearinessTimes100(TeamTypes eIndex) const								 
+int CvTeam::getWarWearinessTimes100(TeamTypes eIndex) const								
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
@@ -4791,7 +4791,7 @@ void CvTeam::changeExtraMoves(DomainTypes eIndex, int iChange)
 }
 
 
-bool CvTeam::isHasMet(TeamTypes eIndex)	const														 
+bool CvTeam::isHasMet(TeamTypes eIndex)	const														
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
@@ -4993,7 +4993,7 @@ bool CvTeam::isFreeTrade(TeamTypes eIndex) const
 	}
 	
 	if (isOpenBorders(eIndex))
-	{ 
+	{
 		return true;
 	}
 	//If the secretary general voted for open markets
@@ -5611,14 +5611,14 @@ void CvTeam::changeRouteChange(RouteTypes eIndex, int iChange)
 }
 
 
-int CvTeam::getProjectCount(ProjectTypes eIndex) const																	 
+int CvTeam::getProjectCount(ProjectTypes eIndex) const																	
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumProjectInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 	return m_paiProjectCount[eIndex];
 }
 
-int CvTeam::getProjectDefaultArtType(ProjectTypes eIndex) const																	 
+int CvTeam::getProjectDefaultArtType(ProjectTypes eIndex) const																	
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumProjectInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
@@ -5856,7 +5856,7 @@ void CvTeam::processProjectChange(ProjectTypes eIndex, int iChange, int iOldProj
 	}
 }
 
-int CvTeam::getProjectMaking(ProjectTypes eIndex) const																	 
+int CvTeam::getProjectMaking(ProjectTypes eIndex) const																	
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumProjectInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
@@ -6597,7 +6597,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 										eSlotReligion = ReligionTypes(iI);
 
 										if( (GC.getReligionInfo(eSlotReligion).getTechPrereq() == eIndex)
-										&& (!GC.getGameINLINE().isReligionSlotTaken(eSlotReligion))) 
+										&& (!GC.getGameINLINE().isReligionSlotTaken(eSlotReligion)))
 										{
 											for (iJ = 0; iJ < MAX_PLAYERS; iJ++)
 											{
@@ -6632,7 +6632,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 
 										if (eBestPlayer != NO_PLAYER)
 										{
-											//	KOSHLING - the following line commented out because it's wrong as 
+											//	KOSHLING - the following line commented out because it's wrong as
 											//	far s I can see:
 											//		1) This is done inside cvPlayer::foundReligion()
 											//		2) The above asserts it has not already been done (and that assertion failed)
@@ -6653,7 +6653,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 													{
 														gDLL->getInterfaceIFace()->addPopup(pInfo, eBestPlayer);
 													}
-												} 
+												}
 												else
 												{
 													eReligion = GET_PLAYER(eBestPlayer).AI_chooseReligion();
@@ -6666,7 +6666,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 														}
 													}
 												}
-											} 
+											}
 											else if (NO_RELIGION != eReligion)
 											{
 												if(GC.getGameINLINE().isTechCanFoundReligion(eIndex) )
@@ -7351,21 +7351,22 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 /*                                                                                              */
 /************************************************************************************************/
 	CvTechInfo& kTech = GC.getTechInfo(eTech);
-	if (kTech.isCanPassPeaks())
+	if (GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
 	{
-		changeCanPassPeaksCount(iChange);
-	}
-
-	if (kTech.isMoveFastPeaks())
-	{
-		changeMoveFastPeaksCount(iChange);
-	}
-
-	if (kTech.isCanFoundOnPeaks())
-	{
-		changeCanFoundOnPeaksCount(iChange);
-		//	Koshling - makes peaks workable which chnages the yield calculation
-		updateYield();
+		if (kTech.isCanPassPeaks())
+		{
+			changeCanPassPeaksCount(iChange);
+			//	Koshling - makes peaks workable which chnages the yield calculation
+			updateYield();
+		}
+		if (kTech.isMoveFastPeaks())
+		{
+			changeMoveFastPeaksCount(iChange);
+		}
+		if (kTech.isCanFoundOnPeaks())
+		{
+			changeCanFoundOnPeaksCount(iChange);
+		}
 	}
 
 	if (iChange > 0)
@@ -8438,7 +8439,7 @@ int CvTeam::getCanPassPeaksCount() const
 	return m_iCanPassPeaksCount;
 }
 
-void CvTeam::changeCanPassPeaksCount(int iChange)						 
+void CvTeam::changeCanPassPeaksCount(int iChange)						
 {
 	m_iCanPassPeaksCount = (m_iCanPassPeaksCount + iChange);
 	FAssert(getCanPassPeaksCount() >= 0);
@@ -8454,7 +8455,7 @@ int CvTeam::getMoveFastPeaksCount() const
 	return m_iMoveFastPeaksCount;
 }
 
-void CvTeam::changeMoveFastPeaksCount(int iChange)						 
+void CvTeam::changeMoveFastPeaksCount(int iChange)						
 {
 	m_iMoveFastPeaksCount = (m_iMoveFastPeaksCount + iChange);
 	FAssert(getMoveFastPeaksCount() >= 0);
@@ -8470,7 +8471,7 @@ int CvTeam::getCanFoundOnPeaksCount() const
 	return m_iCanFoundOnPeaksCount;
 }
 
-void CvTeam::changeCanFoundOnPeaksCount(int iChange)						 
+void CvTeam::changeCanFoundOnPeaksCount(int iChange)						
 {
 	m_iCanFoundOnPeaksCount = (m_iCanFoundOnPeaksCount + iChange);
 	FAssert(getCanFoundOnPeaksCount() >= 0);
@@ -8518,7 +8519,7 @@ void CvTeam::changeTechExtraBuildingHappiness(BuildingTypes eIndex, int iChange)
 	}
 }
 
-int CvTeam::getTechExtraBuildingHealth(BuildingTypes eIndex) const 
+int CvTeam::getTechExtraBuildingHealth(BuildingTypes eIndex) const
 {
 
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
@@ -9027,7 +9028,7 @@ int CvTeam::getTotalVictoryScore() const
 	
 	for (int iK = 0; iK < GC.getNumBuildingClassInfos(); iK++)
 	{
-		if (GC.getBuildingClassInfo((BuildingClassTypes)iK).getMaxGlobalInstances() == 1) 
+		if (GC.getBuildingClassInfo((BuildingClassTypes)iK).getMaxGlobalInstances() == 1)
 		{
 			globalWonderScore ++;
 		}
@@ -9121,7 +9122,7 @@ int CvTeam::getTotalVictoryScore() const
 	}
 
 	// Add the land score component
-	if (globalLand > 0) 
+	if (globalLand > 0)
 	{
 		iTotalVictoryScore += int(getTotalLand() * 100 / globalLand);
 	}

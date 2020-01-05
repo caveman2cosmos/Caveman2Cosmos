@@ -136,6 +136,7 @@
 			<Strategy>TXT_KEY_BUILDING_MORMON_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MORMON_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_MORMON</MovieDefineTag>
 			<HolyCity>RELIGION_MORMON</HolyCity>
 			<ReligionType>RELIGION_MORMON</ReligionType>
 			<GlobalReligionCommerce>RELIGION_MORMON</GlobalReligionCommerce>

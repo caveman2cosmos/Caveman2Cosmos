@@ -21877,7 +21877,7 @@ bool CvCity::isValidBuildingLocation(BuildingTypes eBuilding) const
 	/************************************************************************************************/
 	if (kBuilding.isFreshWater())
 	{
-		if (!(plot()->isFreshWater()))
+		if (!plot()->isFreshWater())
 		{
 			return false;
 		}
@@ -24461,18 +24461,24 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 
 void CvCity::changeFreshWater(int iChange)
 {
+	bool bDidHaveFreshWater = hasFreshWater();
+
 	if (iChange != 0)
 	{
 		m_iFreshWater += iChange;
-		for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
+		bool bDoesHaveFreshWater = hasFreshWater();
+		if (bDidHaveFreshWater != bDoesHaveFreshWater)
 		{
-			CvPlot* pLoopPlot = getCityIndexPlot(iJ);
-			if (pLoopPlot != NULL)
+			for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
 			{
-				pLoopPlot->updateIrrigated();
+				CvPlot* pLoopPlot = getCityIndexPlot(iJ);
+				if (pLoopPlot != NULL)
+				{
+					pLoopPlot->updateIrrigated();
+				}
 			}
+			updateFreshWaterHealth();
 		}
-		updateFreshWaterHealth();
 	}
 }
 
@@ -24747,7 +24753,7 @@ void CvCity::checkBuildings(bool bBonus, bool bCivics, bool bWar, bool bPower, b
 			/* Check fresh water */
 			if (kBuilding.isFreshWater())
 			{
-				if (plot()->isFreshWater())
+				if (plot()->isFreshWater() || hasFreshWater())
 				{
 					bRestoreBuildings = true;
 				}

@@ -667,8 +667,8 @@ public:
 	bool canGift(bool bTestVisible = false, bool bTestTransport = true);																											// Exposed to Python 
 	void gift(bool bTestTransport = true);
 
-	bool canLoadUnit(const CvUnit* pUnit, const CvPlot* pPlot) const;															// Exposed to Python
-	void loadUnit(CvUnit* pUnit);
+	bool canLoadOntoUnit(const CvUnit* pUnit, const CvPlot* pPlot) const;															// Exposed to Python
+	void loadOntoUnit(CvUnit* pUnit);
 
 	bool canLoad(const CvPlot* pPlot) const;																											// Exposed to Python
 	void load();
@@ -2864,7 +2864,7 @@ public:
 	int getExtraCargoVolume() const;
 	void setExtraCargoVolume(int iNewValue);
 	void changeExtraCargoVolume(int iChange);
-	int SMCargoVolumePreCheck() const;
+	int getSMCargoVolumeBase() const;
 	int getCargoVolume() const;
 	void setCargoVolume(int iNewValue);
 	int SMCargoVolume() const;

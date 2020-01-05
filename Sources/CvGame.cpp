@@ -13240,10 +13240,6 @@ int CvGame::getAverageCorporationInfluence(CvCity* pCity, CorporationTypes eCorp
 
 bool CvGame::canEverResearch(TechTypes eTech) const
 {
-	if (!isOption(GAMEOPTION_MOUNTAINS) && GC.getTechInfo(eTech).isCanPassPeaks())
-	{
-		return false;
-	}
 	if (isOption(GAMEOPTION_NO_FUTURE))
 	{
 		if (GC.getTechInfo(eTech).getEra() > GC.getInfoTypeForString("ERA_MODERN"))

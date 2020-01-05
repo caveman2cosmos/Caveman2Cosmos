@@ -1943,12 +1943,20 @@ bool CvPlot::isFreshWater(bool bIgnoreJungle) const
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 {
+	CvCity* pCity = getPlotCity();
+	if (pCity != NULL && pCity->hasFreshWater())
+	{
+		return true;
+	}
+
 	if (isLake())
 	{
 		return true;
 	}
 
-	if (isWater() || isImpassable())
+	TeamTypes eTeam = getTeam();
+
+	if (isWater() || isImpassable(eTeam))
 	{
 		return false;
 	}
@@ -1978,19 +1986,6 @@ bool CvPlot::isFreshWater(bool bIgnoreJungle) const
 						return true;
 					}
 				}
-				/************************************************************************************************/
-				/* Afforess	                  Start		 12/13/09                                                */
-				/*                                                                                              */
-				/*                                                                                              */
-				/************************************************************************************************/
-				CvCity* pCity = pLoopPlot->getPlotCity();
-				if (pCity != NULL && pCity->hasFreshWater())
-				{
-					return true;
-				}
-				/************************************************************************************************/
-				/* Afforess	                     END                                                            */
-				/************************************************************************************************/
 			}
 		}
 	}
@@ -2002,7 +1997,8 @@ bool CvPlot::isFreshWater(bool bIgnoreJungle) const
 bool CvPlot::isPotentialIrrigation() const
 {
 //===NM=====Mountain Mod===0X=====
-	if ((isCity() && !(isHills() || isPeak2(true))) || ((getImprovementType() != NO_IMPROVEMENT) && (GC.getImprovementInfo(getImprovementType()).isCarriesIrrigation())))
+	//TB Debug: Why should it be necessary for cities to require Not being on hills or alternative peak types (like volcanoes) for them to be potentially irrigated?  Seems to be a strange requirement for wells to function.
+	if ((isCity() /*&& !(isHills() || isPeak2(true))*/) || ((getImprovementType() != NO_IMPROVEMENT) && (GC.getImprovementInfo(getImprovementType()).isCarriesIrrigation())))
 	{
 		if ((getTeam() != NO_TEAM) && GET_TEAM(getTeam()).isIrrigation())
 		{
@@ -2019,7 +2015,8 @@ bool CvPlot::canHavePotentialIrrigation() const
 	int iI;
 
 //===NM=====Mountain Mod===0X=====
-	if (isCity() && !(isHills() || isPeak2(true)))
+	//TB Debug: Why should it be necessary for cities to require Not being on either hills or alternative peak types (like volcanoes) for them to be potentially irrigated?  Seems to be a strange requirement for wells to function.
+	if (isCity() /*&& !(isHills() || isPeak2(true))*/)
 	{
 		return true;
 	}
@@ -2789,26 +2786,7 @@ bool CvPlot::canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude) const
 		return false;
 	}
 
-/************************************************************************************************/
-/* Afforess	Mountains Start		 08/03/09                                           		 */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-//	if (isPeak())
-//	{
-//		return false;
-//	}
 
-	if (!GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
-	{
-		if (isPeak2(true))
-		{
-			return false;
-		}
-	}
-/************************************************************************************************/
-/* Afforess	Mountains End       END        		                                             */
-/************************************************************************************************/
 	if (getFeatureType() != NO_FEATURE)
 	{
 		if (!(GC.getBonusInfo(eBonus).isFeature(getFeatureType())))
@@ -2836,24 +2814,13 @@ bool CvPlot::canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude) const
 			return false;
 		}
 	}
-/************************************************************************************************/
-/* Afforess	Mountains Start		 08/31/09                                           		 */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	else if (isPeak2(true))
 	{
-		if (GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
+		if (!(GC.getBonusInfo(eBonus).isPeaks()))
 		{
-			if (!(GC.getBonusInfo(eBonus).isPeaks()))
-			{
-				return false;
-			}
+			return false;
 		}
 	}
-/************************************************************************************************/
-/* Afforess	Mountains End       END        		                                             */
-/************************************************************************************************/
 	else if (isFlatlands())
 	{
 		if (!(GC.getBonusInfo(eBonus).isFlatlands()))
@@ -2870,7 +2837,7 @@ bool CvPlot::canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude) const
 		}
 	}
 
-	if (GC.getBonusInfo(eBonus).getMinAreaSize() != -1)
+	if (GC.getBonusInfo(eBonus).getMinAreaSize() > 1)
 	{
 		if (area()->getNumTiles() < GC.getBonusInfo(eBonus).getMinAreaSize())
 		{
@@ -4798,23 +4765,10 @@ int CvPlot::defenseModifier(TeamTypes eDefender, bool bIgnoreBuilding, bool bHel
 	{
 		iModifier += GC.getHILLS_EXTRA_DEFENSE();
 	}
-
-/************************************************************************************************/
-/* Afforess	Mountains Start		 08/03/09                                           		 */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-
-	if (GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
+	else if (isPeak2(true))
 	{
-		if (isPeak2(true))
-		{
-			iModifier += GC.getPEAK_EXTRA_DEFENSE();
-		}
+		iModifier += GC.getPEAK_EXTRA_DEFENSE();
 	}
-/************************************************************************************************/
-/* Afforess	Mountains End       END        		                                             */
-/************************************************************************************************/
 
 	if (bHelp)
 	{
@@ -6794,35 +6748,17 @@ bool CvPlot::isValidDomainForAction(const CvUnit& unit) const
 
 bool CvPlot::isImpassable(TeamTypes eTeam) const
 {
-/************************************************************************************************/
-/* Afforess	Mountains Start		 09/18/09                                           		 */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-//	if (isPeak())
-//	{
-//		return true;
-//	}
-
-	if (!GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
+	if (isPeak2(true))
 	{
-		if (isPeak2(true))
+		if (eTeam != NO_TEAM && GET_TEAM(eTeam).isCanPassPeaks())
+		{
+			return false;
+		}
+		else
 		{
 			return true;
 		}
 	}
-	else if (isPeak2(true))
-	{
-		if (eTeam == NO_TEAM || !GET_TEAM(eTeam).isCanPassPeaks())
-		{
-			return true;
-		}
-	}
-	
-/************************************************************************************************/
-/* Afforess	Mountains End       END        		                                             */
-/************************************************************************************************/
-
 	if (getTerrainType() == NO_TERRAIN)
 	{
 		return false;
@@ -9472,23 +9408,13 @@ int CvPlot::calculateNatureYield(YieldTypes eYield, TeamTypes eTeam, bool bIgnor
 
 	if (isImpassable(getTeam()))
 	{
-		if (GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
+		if (isPeak2(true))
 		{
-			if (!isPeak2(true))
-			{
+			if (eTeam != NO_TEAM && !isRoute())
+			{// It makes sense to only require a route for a city to work the peak even if the player doesn't have the mounteneering tech.
+			// Perhaps add a landslide event that destroys route and improvement on peaks, so that players without the mountaneering tech
+			// can't rebuild easily mountain improvements conquered from a more advanced civilization.
 				return 0;
-			}
-			else
-			{
-				//	Koshling - prevent mountains being worked until workers can
-				//	move into peak tiles
-				if ( eTeam != NO_TEAM && !GET_TEAM(eTeam).isCanPassPeaks()  )
-				{
-					if ( !isRoute() )
-					{
-						return 0;
-					}
-				}
 			}
 		}
 		else
