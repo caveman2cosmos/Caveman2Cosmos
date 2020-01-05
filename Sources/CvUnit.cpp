@@ -5815,7 +5815,7 @@ bool CvUnit::canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bT
 		pUnit = ::getUnit(IDInfo(((PlayerTypes)iData1), iData2));
 		if (pUnit != NULL)
 		{
-			if (canLoadUnit(pUnit, plot()))
+			if (canLoadOntoUnit(pUnit, plot()))
 			{
 				return true;
 			}
@@ -5977,7 +5977,7 @@ void CvUnit::doCommand(CommandTypes eCommand, int iData1, int iData2)
 			pUnit = ::getUnit(IDInfo(((PlayerTypes)iData1), iData2));
 			if (pUnit != NULL)
 			{
-				loadUnit(pUnit);
+				loadOntoUnit(pUnit);
 				bCycle = true;
 			}
 			break;
@@ -7931,7 +7931,7 @@ void CvUnit::gift(bool bTestTransport)
 }
 
 
-bool CvUnit::canLoadUnit(const CvUnit* pUnit, const CvPlot* pPlot) const
+bool CvUnit::canLoadOntoUnit(const CvUnit* pUnit, const CvPlot* pPlot) const
 {
 	FAssert(pUnit != NULL);
 	FAssert(pPlot != NULL);
@@ -8035,9 +8035,9 @@ bool CvUnit::canLoadUnit(const CvUnit* pUnit, const CvPlot* pPlot) const
 }
 
 
-void CvUnit::loadUnit(CvUnit* pUnit)
+void CvUnit::loadOntoUnit(CvUnit* pUnit)
 {
-	if (!canLoadUnit(pUnit, plot()))
+	if (!canLoadOntoUnit(pUnit, plot()))
 	{
 		return;
 	}
@@ -8136,7 +8136,7 @@ bool CvUnit::canLoad(const CvPlot* pPlot) const
 		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 		pUnitNode = pPlot->nextUnitNode(pUnitNode);
 
-		if (canLoadUnit(pLoopUnit, pPlot))
+		if (canLoadOntoUnit(pLoopUnit, pPlot))
 		{
 			return true;
 		}
@@ -8169,7 +8169,7 @@ void CvUnit::load()
 			pLoopUnit = ::getUnit(pUnitNode->m_data);
 			pUnitNode = pPlot->nextUnitNode(pUnitNode);
 
-			if (canLoadUnit(pLoopUnit, pPlot))
+			if (canLoadOntoUnit(pLoopUnit, pPlot))
 			{
 				if ((iPass == 0) ? (pLoopUnit->getOwnerINLINE() == getOwnerINLINE()) : (pLoopUnit->getTeam() == getTeam()))
 				{
