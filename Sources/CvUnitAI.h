@@ -528,6 +528,7 @@ public:
 	bool isWaitingOnUnitAIAny();
 	void setWaitingOnUnitAIAny();
 	bool AI_isNegativePropertyUnit();
+	int getMyAggression(int iAttackProb);
 
 	//	Check whether a plot is dangerous for the unit (alone) with provided acceptable
 	//	survival odds

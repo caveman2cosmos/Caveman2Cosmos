@@ -1870,44 +1870,25 @@ void CvUnitAI::AI_animalMove()
 	{
 		bool bReckless = GC.getGame().isOption(GAMEOPTION_RECKLESS_ANIMALS);
 		int iAttackProb = GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAnimalAttackProb();
-		int iOddsThreshold = (bReckless ? 0 : 60);
-		//Attack potential targets first. Animals are pretty good at assessing their chances of taking down prey, therefore 60% odds prereq.
-		if ((iOddsThreshold < 1 || iAttackProb > 99 || GC.getGameINLINE().getSorenRandNum(100, "Animal Attack") < iAttackProb)
-			&& AI_attackTargets(2, iOddsThreshold, 0, false, true))
+		// Attack potential targets first. Animals are pretty good at assessing their chances of taking down prey, therefore 60% odds prereq.
+		if ((bReckless || iAttackProb > 99 || GC.getGameINLINE().getSorenRandNum(100, "Animal Attack") < iAttackProb)
+			&& AI_attackTargets(2, (bReckless ? 0 : 60), 0, false, true))
 		{
 			return;
 		}
-
-		//Then attack elsewhere, recklessness based on animal aggression.
-		int iAggression = 666;
-		if (!bReckless)
+		// Then attack elsewhere, recklessness based on animal aggression.
+		// 5% odds assessment is there to account for some small understanding of likelihood of success even in an aggressive action.
+		if ((bReckless || GC.getGameINLINE().getSorenRandNum(10, "Animal Attack") < getMyAggression(iAttackProb))
+			&& AI_anyAttack(2, (bReckless ? 0 : 5), 0, false, true))
 		{
-			iAggression = m_pUnitInfo->getAggression() + getLevel() - 1;
-			iAggression *= maxHitPoints() - getDamage();
-			iAggression /= 100;
-			iAggression *= iAttackProb;
-			iAggression /= 100;
+			return;
 		}
-		if (GC.getGameINLINE().getSorenRandNum(10, "Animal Attack") < iAggression)
-		{
-			iOddsThreshold = (bReckless ? 0 : 5);
-			// 5% odds assessment is there to account for some small understanding of likelihood of success even in an aggressive action.
-			if (AI_anyAttack(2, iOddsThreshold, 0, false, true))
-			{
-				return;
-			}
-		}
-		if (iAggression < 666 && exposedToDanger(plot(), 60, true) && AI_safety())
+		if (!bReckless && exposedToDanger(plot(), 60, true) && AI_safety())
 		{
 			return;
 		}
 	}
-
-	if (AI_heal())
-	{
-		return;
-	}
-	if (AI_patrol(true))
+	if (AI_heal() || AI_patrol(true))
 	{
 		return;
 	}
@@ -36649,4 +36630,13 @@ bool CvUnitAI::AI_isNegativePropertyUnit()
 		}
 	}
 	return bAnswer;
+}
+
+int CvUnitAI::getMyAggression(int iAttackProb)
+{
+	int iAggression = m_pUnitInfo->getAggression() + getLevel() - 1;
+	iAggression *= maxHitPoints() - getDamage();
+	iAggression /= 100;
+	iAggression *= iAttackProb;
+	return iAggression / 100;
 }
