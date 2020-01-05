@@ -5815,7 +5815,7 @@ bool CvUnit::canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bT
 		pUnit = ::getUnit(IDInfo(((PlayerTypes)iData1), iData2));
 		if (pUnit != NULL)
 		{
-			if (canLoadUnit(pUnit, plot()))
+			if (canLoadOntoUnit(pUnit, plot()))
 			{
 				return true;
 			}
@@ -5977,7 +5977,7 @@ void CvUnit::doCommand(CommandTypes eCommand, int iData1, int iData2)
 			pUnit = ::getUnit(IDInfo(((PlayerTypes)iData1), iData2));
 			if (pUnit != NULL)
 			{
-				loadUnit(pUnit);
+				loadOntoUnit(pUnit);
 				bCycle = true;
 			}
 			break;
@@ -7931,7 +7931,7 @@ void CvUnit::gift(bool bTestTransport)
 }
 
 
-bool CvUnit::canLoadUnit(const CvUnit* pUnit, const CvPlot* pPlot) const
+bool CvUnit::canLoadOntoUnit(const CvUnit* pUnit, const CvPlot* pPlot) const
 {
 	FAssert(pUnit != NULL);
 	FAssert(pPlot != NULL);
@@ -8035,9 +8035,9 @@ bool CvUnit::canLoadUnit(const CvUnit* pUnit, const CvPlot* pPlot) const
 }
 
 
-void CvUnit::loadUnit(CvUnit* pUnit)
+void CvUnit::loadOntoUnit(CvUnit* pUnit)
 {
-	if (!canLoadUnit(pUnit, plot()))
+	if (!canLoadOntoUnit(pUnit, plot()))
 	{
 		return;
 	}
@@ -8136,7 +8136,7 @@ bool CvUnit::canLoad(const CvPlot* pPlot) const
 		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 		pUnitNode = pPlot->nextUnitNode(pUnitNode);
 
-		if (canLoadUnit(pLoopUnit, pPlot))
+		if (canLoadOntoUnit(pLoopUnit, pPlot))
 		{
 			return true;
 		}
@@ -8169,7 +8169,7 @@ void CvUnit::load()
 			pLoopUnit = ::getUnit(pUnitNode->m_data);
 			pUnitNode = pPlot->nextUnitNode(pUnitNode);
 
-			if (canLoadUnit(pLoopUnit, pPlot))
+			if (canLoadOntoUnit(pLoopUnit, pPlot))
 			{
 				if ((iPass == 0) ? (pLoopUnit->getOwnerINLINE() == getOwnerINLINE()) : (pLoopUnit->getTeam() == getTeam()))
 				{
@@ -42912,47 +42912,31 @@ void CvUnit::changeExtraCargoVolume(int iChange)
 	setExtraCargoVolume(getExtraCargoVolume() + iChange);
 }
 
-int CvUnit::SMCargoVolumePreCheck() const
+int CvUnit::getSMCargoVolumeBase() const
 {
-	int iData = 100;
-	iData += getExtraCargoVolume();
-	return std::max(0, iData);
+	// Units have base cargo volume which can be modified by promotions
+	const int CargoVolumeBase = 100;
+	return std::max(0, CargoVolumeBase + getExtraCargoVolume());
 }
 
 int CvUnit::SMCargoVolume() const
 {
-	int iData = 0;
-	if (getCargoVolume() == 0)
+	if (!GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+		return 0;
+
+	int cargoVolume = getCargoVolume() == 0? getSMCargoVolumeBase() : getCargoVolume();
+	cargoVolume = std::max(1, cargoVolume);
+	if (isCarrier())
 	{
-		iData = SMCargoVolumePreCheck();
-	}
-	else
-	{
-		iData = getCargoVolume();
+		cargoVolume += SMgetCargo();
 	}
 
-	//if (!isCarrier())//Carriers can be carried so they need Cargo Volume as well.
-	//{
-	iData = std::max(1, iData);
-	//}
-	//else
-	//{
-	//	iData = 0;
-	//}
-	if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
-	{
-		if (isCarrier())
-		{
-			iData += SMgetCargo();
-		}
-		return iData;
-	}
-	return 0;
+	return cargoVolume;
 }
 
 void CvUnit::setSMCargoVolume()
 {
-	m_iSMCargoVolume = applySMRank(SMCargoVolumePreCheck(),
+	m_iSMCargoVolume = applySMRank(getSMCargoVolumeBase(),
 		getSizeMattersSpacialOffsetValue(),
 		GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER"));
 
@@ -42968,33 +42952,33 @@ void CvUnit::setSMCargoVolume()
 
 int CvUnit::getSizeMattersOffsetValue() const
 {
-	int iData = qualityRank();
-	iData += groupRank();
-	iData += sizeRank();
+	int offsetValue = qualityRank();
+	offsetValue += groupRank();
+	offsetValue += sizeRank();
 	if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS_UNCUT))
 	{
-		iData -= m_pUnitInfo->getSMRankTotal();
+		offsetValue -= m_pUnitInfo->getSMRankTotal();
 	}
 	else
 	{
-		iData -= 15;
+		offsetValue -= 15;
 	}
-	return iData;
+	return offsetValue;
 }
 
 int CvUnit::getSizeMattersSpacialOffsetValue() const
 {
-	int iData = groupRank();
-	iData += sizeRank();
+	int spaceOffsetValue = groupRank();
+	spaceOffsetValue += sizeRank();
 	if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS_UNCUT))
 	{
-		iData -= m_pUnitInfo->getSMVolumetricRankTotal();
+		spaceOffsetValue -= m_pUnitInfo->getSMVolumetricRankTotal();
 	}
 	else
 	{
-		iData -= 10;
+		spaceOffsetValue -= 10;
 	}
-	return iData;
+	return spaceOffsetValue;
 }
 
 int CvUnit::getCargoCapacitybyType(int iValue) const

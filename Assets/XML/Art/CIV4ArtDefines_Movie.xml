@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<MovieArtInfos>
 		<MovieArtInfo>
@@ -17,10 +16,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_NVIDIA_INTRO</Type>
 			<Path>Art/Movies/Intros/TheWay_720x486.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_PLACEHOLDER</Type>
-			<Path>Art/Movies/wonders/Placeholder.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ANGKOR_WAT</Type>
@@ -189,7 +184,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SHRINE_TAOIST</Type>
 			<Path>Art/Movies/Religion/Taoism/Shrine_Tao_dwg_512.dds</Path>
-			<KFM>None</KFM>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_APOSTOLIC_PALACE</Type>
@@ -220,18 +214,6 @@
 			<Path>Art/Movies/Wonders/Leonardos_Workshop.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_SHRINE_EGYPTIAN_MYTH</Type>
-			<Path>Art/Cutscene/Egyptian_Shrine.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_SHRINE_GREEK_MYTH</Type>
-			<Path>Art/Cutscene/Greek_Shrine.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_SHRINE_ZOROASTRIANISM</Type>
-			<Path>Art/Cutscene/Zoroastrianism/Shrine_Zoro_dwg_512.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ALHAMBRA</Type>
 			<Path>Art/Movies/Wonders/alhambra.bik</Path>
 		</MovieArtInfo>
@@ -254,14 +236,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_CRUSADE</Type>
 			<Path>Art/Movies/Wonders/Crusade.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_EVOLUTION</Type>
-			<Path>Art/Movies/Wonders/Evolution.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_LONGEVITY</Type>
-			<Path>Art/Movies/Wonders/longevity.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_MAGELLAN</Type>
@@ -300,10 +274,6 @@
 			<Path>Art/Movies/Wonders/HimejiCastle.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_AMUSEMENT_PARK</Type>
-			<Path>Art/Movies/Wonders/AmusementPark.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_CDC</Type>
 			<Path>Art/Movies/Wonders/CDC.bik</Path>
 		</MovieArtInfo>
@@ -326,10 +296,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_PONT_DU_GARD</Type>
 			<Path>Art/Movies/Wonders/PontDuGard.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_THEORY_OF_EVERYTHING</Type>
-			<Path>Art/Movies/Wonders/QuantumTheory.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SECRET_ARMY_BASE</Type>
@@ -408,62 +374,6 @@
 			<Path>Art/Movies/Wonders/Carhenge.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_APOTHEGUILD</Type>
-			<Path>Art/Movies/Apothecaries.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_ARTISTGUILD</Type>
-			<Path>Art/Movies/Artists.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_BAKERGUILD</Type>
-			<Path>Art/Movies/Bakers.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_BLACKSMGUILD</Type>
-			<Path>Art/Movies/Blacksmiths.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_BUTCHERGUILD</Type>
-			<Path>Art/Movies/Butchers.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_CARPENTERGUILD</Type>
-			<Path>Art/Movies/Carpenters.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_CLERKSGUILD</Type>
-			<Path>Art/Movies/Clerks.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_DRAPERSGUILD</Type>
-			<Path>Art/Movies/Drapers.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_EQUESTGUILD</Type>
-			<Path>Art/Movies/Equestrians.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_GLASSGUILD</Type>
-			<Path>Art/Movies/Glassblowers.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_GOLDSMGUILD</Type>
-			<Path>Art/Movies/Goldsmiths.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_GROCERGUILD</Type>
-			<Path>Art/Movies/Grocers.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_MASONGUILD</Type>
-			<Path>Art/Movies/Masons.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CORPORATION_MERCERGUILD</Type>
-			<Path>Art/Movies/Mercers.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_MASTERY_VICTORY</Type>
 			<Path>Art/Movies/Mastery.bik</Path>
 		</MovieArtInfo>
@@ -478,7 +388,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_BRANDENBURG_GATE</Type>
 			<Path>Art/Movies/wonders/Brandenburg.bik</Path>
-			<KFM>None</KFM>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_CHEOMSEONGDAE</Type>
@@ -495,12 +404,10 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_PISA</Type>
 			<Path>Art/Movies/wonders/Pisa.bik</Path>
-			<KFM>None</KFM>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_NEUSCHWANSTEIN</Type>
 			<Path>Art/Movies/wonders/NeuschwansteinCastle.bik</Path>
-			<KFM>None</KFM>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SAN_MARCO</Type>
@@ -517,14 +424,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_WORLD_TRADE_CENTER</Type>
 			<Path>Art/Movies/wonders/wtc.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_WALLS</Type>
-			<Path>Art/Movies/Wonders/WALLS.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_BATHMOVIE</Type>
-			<Path>Art/Movies/Wonders/BathMovie.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_WESTP</Type>
@@ -553,10 +452,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ARC_DE_TRIOMPHE</Type>
 			<Path>Art/Movies/Wonders/Arc_de_triomphe.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CHOQUEQUIRAO</Type>
-			<Path>Art/Movies/Wonders/Choquequirao.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_DORADO</Type>
@@ -608,7 +503,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SHRINE_MORMON</Type>
-			<Path>Art/Movies/Wonders/MormonShrine.bik</Path>
+			<Path>Art/Movies/Wonders/TheFirstVision.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_OLDOINYO</Type>
@@ -735,10 +630,6 @@
 			<Path>Art/Movies/Wonders/Itsukushima_torii_angle.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_SIKHISM_SHRINE</Type>
-			<Path>Art/Movies/Wonders/Harmandir_sahib.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_TENGRI_SHRINE</Type>
 			<Path>Art/Movies/Wonders/Peak_of_Khan_Tengri.bik</Path>
 		</MovieArtInfo>
@@ -764,7 +655,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_CYRUS_CYLINDER</Type>
-			<Path>Art/Movies/Wonders/cyrus_cyliner.bik</Path>
+			<Path>Art/Movies/Wonders/CYRUS_CYLINDER.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_CYRUS_TOMB</Type>
@@ -792,7 +683,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_UNIVERSAL_HEALTH_CARE</Type>
-			<Path>Art/Movies/Wonders/UniversalHealthCare.bik</Path>
+			<Path>Art/Movies/Wonders/UniversalHealthCare.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_PERGAMON</Type>
@@ -901,14 +792,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_PLEISTO_PARK</Type>
 			<Path>Art/Movies/Wonders/PleistocenePark.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_POCKETMONSTER_BREEDING_FACILITY</Type>
-			<Path>Art/Movies/Wonders/PMBreedingCenter.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_POCKETMONSTER_LEAGUEHQ</Type>
-			<Path>Art/Movies/Wonders/PMLeagueHQ.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_RIVERROUGE</Type>
@@ -1053,10 +936,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_PROPAGANDA</Type>
 			<Path>Art/Movies/Wonders/PROPAGANDA_Net.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_TERRACOTTA</Type>
-			<Path>Art/Movies/Wonders/TerraCotta.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_COLUMN</Type>
@@ -1300,7 +1179,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_GATE_OF_THE_SUN</Type>
-			<Path>Art/Movies/Wonders/Gate_Of_The_Sun.bik</Path>
+			<Path>Art/Movies/Wonders/Gate_Of_The_Sun.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_GENOMIC_E</Type>
@@ -1530,7 +1409,7 @@
 			<Type>ART_DEF_MOVIE_NEANDERTHAL_EMBASSY</Type>
 			<Path>Art/Movies/Wonders/NeanderthalEmbassy.bik</Path>
 		</MovieArtInfo>
-				<MovieArtInfo>
+		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_FIRE_FESTIVAL</Type>
 			<Path>Art/Movies/Wonders/xfirefestival.bik</Path>
 		</MovieArtInfo>
@@ -1555,10 +1434,6 @@
 			<Path>Art/movies/wonders/Ark of The Covenant.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_ISHTAR</Type>
-			<Path>Art/Movies/Wonders/Ishtar.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_GREAT_JAGUAR_TEMPLE</Type>
 			<Path>Art/Movies/Wonders/JaguarTemple.bik</Path>
 		</MovieArtInfo>
@@ -1568,7 +1443,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_STRATEGIC_GRAIN_RESERVE</Type>
-			<Path>Art/movies/wonders/StrategicGrainReserve.bik</Path>
+			<Path>Art/movies/wonders/StrategicGrainReserve.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_TOPKAPI_PALACE</Type>
@@ -1603,10 +1478,6 @@
 			<Path>Art/Movies/Wonders/Dali_Theatre.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_LAS_MEDULAS</Type>
-			<Path>Art/Movies/Wonders/Las_Medulas.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_THE_ATOMIUM</Type>
 			<Path>Art/Movies/Wonders/The_Atomium.bik</Path>
 		</MovieArtInfo>
@@ -1616,15 +1487,219 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_HELSINKI</Type>
-			<Path>art/Helsinki Cathedral.bik</Path>
+			<Path>art/Movies/Wonders/Helsinki Cathedral.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_THE_MOTHERLAND_CALLS</Type>
-			<Path>art/The Motherland Calls.bik</Path>
+			<Path>art/Movies/Wonders/The Motherland Calls.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_REICHSTAG</Type>
-			<Path>art/Reichstag.bik</Path>
+			<Path>art/Movies/Wonders/Reichstag.bik</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BEAULIEU</Type>
+			<Path>Art/Movies/Wonders/Beaulieu.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_10000_YEAR_CLOCK</Type>
+			<Path>Art/Movies/Wonders/10000_Year_Clock.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_AEROPOLIS_2001</Type>
+			<Path>Art/Movies/Wonders/Aeropolis_2001.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_AI_SINGLETON</Type>
+			<Path>Art/Movies/Wonders/Ai_Singleton.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ALMAGEST</Type>
+			<Path>Art/Movies/Wonders/ALMAGEST.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_AMNESTY_INTERNATIONAL</Type>
+			<Path>Art/Movies/Wonders/AMNESTY_INTERNATIONAL.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_AMUNDSEN_SCOTT_SOUTH_POLE_STATION</Type>
+			<Path>Art/Movies/Wonders/AMUNDSEN_SCOTT_SOUTH_POLE_STATION.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANDROMEDA_COLONY</Type>
+			<Path>Art/Movies/Wonders/ANDROMEDA_COLONY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BIG_CAT_TRAINER</Type>
+			<Path>Art/Movies/Wonders/BIG_CAT_TRAINER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANTIKYTHERA_MECHANISM</Type>
+			<Path>Art/Movies/Wonders/ANTIKYTHERA_MECHANISM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_AON_CENTER</Type>
+			<Path>Art/Movies/Wonders/AON_CENTER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ARCONIC_TOWER</Type>
+			<Path>Art/Movies/Wonders/ARCONIC_TOWER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ARCOSANTI</Type>
+			<Path>Art/Movies/Wonders/ARCOSANTI.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ARGUS_ARRAY</Type>
+			<Path>Art/Movies/Wonders/ARGUS_ARRAY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ARTIFICIAL_CONSTELLATION</Type>
+			<Path>Art/Movies/Wonders/ARTIFICIAL_CONSTELLATION.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_VENUS_ARTIFICIAL_ROTATION</Type>
+			<Path>Art/Movies/Wonders/VENUS_ARTIFICIAL_ROTATION.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ARXIV</Type>
+			<Path>Art/Movies/Wonders/ARXIV.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASCENSION_GATE</Type>
+			<Path>Art/Movies/Wonders/ASCENSION_GATE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTEROID_BELT_ASTRONOMICAL_TELESCOPE</Type>
+			<Path>Art/Movies/Wonders/ASTEROID_BELT_ASTRONOMICAL_TELESCOPE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTEROID_MINING_COMPLEX</Type>
+			<Path>Art/Movies/Wonders/ASTEROID_MINING_COMPLEX.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ATLANTIS</Type>
+			<Path>Art/Movies/Wonders/ATLANTIS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ADVANCED_MINE_TECHNOLOGY_CENTER</Type>
+			<Path>Art/Movies/Wonders/Mine_Explosion.bik</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SHRINE_CANAANISM</Type>
+			<Path>Art/CutScene/Canaanism/EMPTY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BAIKONUR_COSMODROME</Type>
+			<Path>Art/Movies/Wonders/BAIKONUR_COSMODROME.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_KHMER_BARAY</Type>
+			<Path>Art/Movies/Wonders/KHMER_BARAY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BELL_LABS</Type>
+			<Path>Art/Movies/Wonders/BELL_LABS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ONE_BELT_ONE_ROAD</Type>
+			<Path>Art/Movies/Wonders/ONE_BELT_ONE_ROAD.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BIG_BEN</Type>
+			<Path>Art/Movies/Wonders/BIG_BEN.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BIONIC_TOWER</Type>
+			<Path>Art/Movies/Wonders/BIONIC_TOWER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BIOSPHERE_2</Type>
+			<Path>Art/Movies/Wonders/BIOSPHERE_2.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BNS</Type>
+			<Path>Art/Movies/Wonders/BNS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BIZARRO_WORLD</Type>
+			<Path>Art/Movies/Wonders/BIZARRO_WORLD.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BOSTON_ARCOLOGY</Type>
+			<Path>Art/Movies/Wonders/BOSTON_ARCOLOGY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BRAZEN_BULL</Type>
+			<Path>Art/Movies/Wonders/BRAZEN_BULL.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BREAKTHROUGH_STARSHOT</Type>
+			<Path>Art/Movies/Wonders/BREAKTHROUGH_STARSHOT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BURJ_KHALIFA</Type>
+			<Path>Art/Movies/Wonders/BURJ_KHALIFA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CN_TOWER</Type>
+			<Path>Art/Movies/Wonders/CN_TOWER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CAPTURED_IO</Type>
+			<Path>Art/Movies/Wonders/CAPTURED_IO.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CARINA_SAGITTARIUS_ARM</Type>
+			<Path>Art/Movies/Wonders/CARINA_SAGITTARIUS_ARM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CENTAURUS_SUPERCLUSTER</Type>
+			<Path>Art/Movies/Wonders/CENTAURUS_SUPERCLUSTER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CENTERPOINT_STATION</Type>
+			<Path>Art/Movies/Wonders/CENTERPOINT_STATION.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CFA2_GREAT_WALL</Type>
+			<Path>Art/Movies/Wonders/CFA2_GREAT_WALL.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CHUO_SHINKANSEN</Type>
+			<Path>Art/Movies/Wonders/CHUO_SHINKANSEN.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CHURCH_TURING_THESIS</Type>
+			<Path>Art/Movies/Wonders/CHURCH_TURING_THESIS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_COMA_SUPERCLUSTER</Type>
+			<Path>Art/Movies/Wonders/COMA_SUPERCLUSTER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_COMPUTRONIUM_TITAN</Type>
+			<Path>Art/Movies/Wonders/COMPUTRONIUM_TITAN.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_COSMIC_AC</Type>
+			<Path>Art/Movies/Wonders/COSMIC_AC.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CRYSTAL_ISLAND</Type>
+			<Path>Art/Movies/Wonders/CRYSTAL_ISLAND.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CRYSTALPUNK_EMBASSY</Type>
+			<Path>Art/Movies/Wonders/CRYSTALPUNK_EMBASSY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ALZHEIMERS_CURE</Type>
+			<Path>Art/Movies/Wonders/ALZHEIMERS_CURE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CYGNUS_X1</Type>
+			<Path>Art/Movies/Wonders/CYGNUS_X1.dds</Path>
 		</MovieArtInfo>
 	</MovieArtInfos>
 </Civ4ArtDefines>

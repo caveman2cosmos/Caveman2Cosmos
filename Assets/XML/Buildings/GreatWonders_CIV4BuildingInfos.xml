@@ -401,6 +401,7 @@
 			<!-- Misc -->
 			<iConquestProb>100</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_ANTIKYTHERA_MECHANISM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ANTIKYTHERA_MECHANISM</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Aon Center -->
@@ -414,6 +415,7 @@
 			<Strategy>TXT_KEY_BUILDING_AON_CENTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AON_CENTER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_AON_CENTER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
@@ -777,6 +779,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<Help>TXT_KEY_BUILDING_ASCENSION_GATE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_ASCENSION_GATE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ASCENSION_GATE</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_ACCELERATOR</ConstructSound>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>10000</fVisibilityPriority>
@@ -931,6 +934,7 @@
 			<Strategy>TXT_KEY_BUILDING_KHMER_BARAY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KHMER_BARAY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_KHMER_BARAY</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_AQUEDUCT</ConstructSound>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1063,6 +1067,7 @@
 			<Strategy>TXT_KEY_BUILDING_BIG_BEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIG_BEN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BIG_BEN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CLOCKWORKS</PrereqTech>
@@ -1135,6 +1140,7 @@
 			<Strategy>TXT_KEY_BUILDING_BNS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BNS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BNS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
@@ -1699,6 +1705,7 @@
 			<Strategy>TXT_KEY_BUILDING_BURJ_KHALIFA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BURJ_KHALIFA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BURJ_KHALIFA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CONGLOMERATES</PrereqTech>
@@ -2498,6 +2505,7 @@
 			<Strategy>TXT_KEY_BUILDING_CN_TOWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CN_TOWER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CN_TOWER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
@@ -8696,6 +8704,7 @@
 			<Strategy>TXT_KEY_BUILDING_BEAULIEU_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BEAULIEU</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BEAULIEU</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -17083,6 +17092,7 @@
 			<Strategy>TXT_KEY_BUILDING_THE_ALMAGEST_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_THE_ALMAGEST</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ALMAGEST</MovieDefineTag>
 			<PrereqTech>TECH_GEOCENTRISM</PrereqTech>
 			<ObsoleteTech>TECH_HELIOCENTRISM</ObsoleteTech>
 			<iCost>1680</iCost>
@@ -17595,6 +17605,7 @@
 			<Strategy>TXT_KEY_BUILDING_BRAZEN_BULL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BRAZEN_BULL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BRAZEN_BULL</MovieDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_DUALISM</PrereqTech>
 			<PrereqBonuses>

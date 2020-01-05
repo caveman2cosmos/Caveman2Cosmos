@@ -358,6 +358,7 @@
 		</BonusInfo>
 	<!-- Castilian -->
 	<!-- by Hydromancerx -->
+<!-- No units
 		<BonusInfo>
 			<Type>BONUS_CASTILIAN</Type>
 			<Description>TXT_KEY_BONUS_CASTILIAN</Description>
@@ -366,6 +367,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_CASTILIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
+-->
 	<!-- Celtic -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
@@ -1058,6 +1060,7 @@
 		</BonusInfo>
 	<!-- Leonese -->
 	<!-- by Hydromancerx -->
+<!-- No units
 		<BonusInfo>
 			<Type>BONUS_LEON</Type>
 			<Description>TXT_KEY_BONUS_LEON</Description>
@@ -1066,6 +1069,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_LEON</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
+-->
 	<!-- Luba -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
@@ -4625,6 +4629,7 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
+<!-- Wrong flag
 		<BonusInfo>
 			<Type>BONUS_SABBATEAN</Type>
 			<Description>TXT_KEY_BONUS_SABBATEAN</Description>
@@ -4641,6 +4646,7 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
+-->
 		<BonusInfo>
 			<Type>BONUS_SAFAVIDS</Type>
 			<Description>TXT_KEY_BONUS_SAFAVIDS</Description>

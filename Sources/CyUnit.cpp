@@ -137,7 +137,7 @@ void CyUnit::gift()
 /************************************************************************************************/
 bool CyUnit::canLoadUnit(CyUnit* pUnit, CyPlot* pPlot)
 {
-	return m_pUnit ? m_pUnit->canLoadUnit(pUnit->getUnit(), pPlot->getPlot()) : false;
+	return m_pUnit ? m_pUnit->canLoadOntoUnit(pUnit->getUnit(), pPlot->getPlot()) : false;
 }
 
 bool CyUnit::canLoad(CyPlot* pPlot)

@@ -2083,8 +2083,9 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 		</BuildingInfo>
+<!-- No units
 		<BuildingInfo>
-			<!-- Culture (Castilian) -->
+			<!- Culture (Castilian) ->
 			<BuildingClass>BUILDINGCLASS_CASTILIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_CASTILIAN_EMBASSY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -2092,9 +2093,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_CASTILIAN_EMBASSY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CASTILIAN_EMBASSY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<!-- Graphical and interface -->
+			<!- Graphical and interface ->
 			<ArtDefineTag>ART_DEF_BUILDING_CASTILIAN_EMBASSY</ArtDefineTag>
-			<!-- Prerequisites -->
+			<!- Prerequisites ->
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<RawVicinityBonus>BONUS_BARLEY</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -2103,9 +2104,9 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<!-- Construction -->
+			<!- Construction ->
 			<iCost>1992</iCost>
-			<!-- Main effects -->
+			<!- Main effects ->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2113,12 +2114,13 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_CASTILIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<!-- Special properties -->
+			<!- Special properties ->
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 		</BuildingInfo>
+-->
 		<BuildingInfo>
 			<!-- Culture (Celtic) -->
 			<BuildingClass>BUILDINGCLASS_CELTIC_EMBASSY</BuildingClass>
@@ -5286,8 +5288,9 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 		</BuildingInfo>
+<!-- No units
 		<BuildingInfo>
-			<!-- Culture (Leon) -->
+			<!- Culture (Leon) ->
 			<BuildingClass>BUILDINGCLASS_LEON_EMBASSY</BuildingClass>
 			<Type>BUILDING_LEON_EMBASSY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -5295,9 +5298,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_LEON_EMBASSY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LEON_EMBASSY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<!-- Graphical and interface -->
+			<!- Graphical and interface ->
 			<ArtDefineTag>ART_DEF_BUILDING_LEON_EMBASSY</ArtDefineTag>
-			<!-- Prerequisites -->
+			<!- Prerequisites ->
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_GOOD_EUROPEAN</BuildingClassType>
@@ -5306,9 +5309,9 @@
 			</BuildingClassNeededs>
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<RawVicinityBonus>BONUS_PLATINUM</RawVicinityBonus>
-			<!-- Construction -->
+			<!- Construction ->
 			<iCost>1992</iCost>
-			<!-- Main effects -->
+			<!- Main effects ->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -5316,12 +5319,13 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_LEON</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<!-- Special properties -->
+			<!- Special properties ->
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 		</BuildingInfo>
+-->
 		<BuildingInfo>
 			<!-- Culture (Liangzhu) -->
 			<BuildingClass>BUILDINGCLASS_LIANGZHU_EMBASSY</BuildingClass>
@@ -15021,8 +15025,9 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 		</BuildingInfo>
+<!-- Wrong flag
 		<BuildingInfo>
-			<!-- Culture (Sabbatean) -->
+			<!- Culture (Sabbatean) ->
 			<BuildingClass>BUILDINGCLASS_SABBATEAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_SABBATEAN_EMBASSY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15030,9 +15035,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_SABBATEAN_EMBASSY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SABBATEAN_EMBASSY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<!-- Graphical and interface -->
+			<!- Graphical and interface ->
 			<ArtDefineTag>ART_DEF_BUILDING_SABBATEAN_EMBASSY</ArtDefineTag>
-			<!-- Prerequisites -->
+			<!- Prerequisites ->
 			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_HENNA</RawVicinityBonus>
@@ -15042,9 +15047,9 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<!-- Construction cost -->
+			<!- Construction cost ->
 			<iCost>960</iCost>
-			<!-- Main effects -->
+			<!- Main effects ->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15052,13 +15057,14 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_SABBATEAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<!-- Misc. Effects -->
-			<!-- Special properties -->
+			<!- Misc. Effects ->
+			<!- Special properties ->
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 		</BuildingInfo>
+-->
 		<BuildingInfo>
 			<!-- Culture (Safavids) -->
 			<BuildingClass>BUILDINGCLASS_SAFAVIDS_EMBASSY</BuildingClass>
