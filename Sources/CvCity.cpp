@@ -4939,26 +4939,26 @@ int CvCity::getProductionNeeded(ProjectTypes eProject) const
 	return GET_PLAYER(getOwnerINLINE()).getProductionNeeded(eProject);
 }
 
-int CvCity::getProductionTurnsLeft(int mult /*= 1*/) const
+int CvCity::getProductionTurnsLeft() const
 {
 	bst::optional<OrderData> order = getHeadOrder();
 	if(order)
 	{
-		return getOrderProductionTurnsLeft(*order, 0, mult);
+		return getOrderProductionTurnsLeft(*order);
 	}
 	return 0;
 }
 
-int CvCity::getOrderProductionTurnsLeft(const OrderData& order, int iIndex, int mult /*= 1*/) const
+int CvCity::getOrderProductionTurnsLeft(const OrderData& order, int iIndex) const
 {
 	switch (order.eOrderType)
 	{
 	case ORDER_TRAIN:
-		return getProductionTurnsLeft(order.getUnitType(), iIndex, mult);
+		return getProductionTurnsLeft(order.getUnitType(), iIndex);
 	case ORDER_CONSTRUCT:
-		return getProductionTurnsLeft(order.getBuildingType(), iIndex, mult);
+		return getProductionTurnsLeft(order.getBuildingType(), iIndex);
 	case ORDER_CREATE:
-		return getProductionTurnsLeft(order.getProjectType(), iIndex, mult);
+		return getProductionTurnsLeft(order.getProjectType(), iIndex);
 	case ORDER_MAINTAIN:
 		break;
 	case ORDER_LIST:
@@ -4973,14 +4973,19 @@ int CvCity::getOrderProductionTurnsLeft(const OrderData& order, int iIndex, int 
 
 int CvCity::getTotalProductionQueueTurnsLeft() const
 {
-	const int TurnsMult = 100;
+	//CLLNode<OrderData>* pOrderNode = headOrderQueueNode();
+	//int iResult = 0;
+	//int	iIndex = 0;
 
-	int totalTurns = 0;
-	for (int orderIndex = 0; orderIndex < m_orderQueue.size(); ++orderIndex)
-	{
-		totalTurns += getOrderProductionTurnsLeft(m_orderQueue[orderIndex], orderIndex++, TurnsMult);
-	}
-	return totalTurns / TurnsMult;
+	//while (pOrderNode != NULL)
+	//{
+	//	iResult += getOrderProductionTurnsLeft(pOrderNode, iIndex++);
+
+	//	pOrderNode = nextOrderQueueNode(pOrderNode);
+	//}
+
+	//return iResult;
+	return 0;
 }
 
 namespace {
@@ -4997,7 +5002,7 @@ int CvCity::numQueuedUnits(UnitAITypes contractedAIType, const CvPlot* contracte
 	return algo::count_if(m_orderQueue, bind(matchUnitAtPlot, _1, contractedAIType, contractedPlot));
 }
 
-int CvCity::getProductionTurnsLeft(UnitTypes eUnit, int orderIndex, int mult /*= 1*/) const
+int CvCity::getProductionTurnsLeft(UnitTypes eUnit, int orderIndex) const
 {
 	const int firstOrderIndex = getFirstUnitOrder(eUnit);
 	// We can count production already put towards this if we are looking
@@ -5009,10 +5014,10 @@ int CvCity::getProductionTurnsLeft(UnitTypes eUnit, int orderIndex, int mult /*=
 	const int perTurnProduction = getProductionPerTurn(modifier, foodProd | ProductionCalc::Yield);
 	// If we are looking at the first order then overflow would be applied
 	const int nextTurnProduction = (orderIndex == 0) ? getProductionPerTurn(modifier, foodProd | ProductionCalc::Overflow | ProductionCalc::Yield) : perTurnProduction;
-	return getProductionTurnsLeft(getProductionNeeded(eUnit), alreadyDone, nextTurnProduction, perTurnProduction, mult);
+	return getProductionTurnsLeft(getProductionNeeded(eUnit), alreadyDone, nextTurnProduction, perTurnProduction);
 }
 
-int CvCity::getProductionTurnsLeft(BuildingTypes eBuilding, int orderIndex, int mult /*= 1*/) const
+int CvCity::getProductionTurnsLeft(BuildingTypes eBuilding, int orderIndex) const
 {
 	const int firstOrderIndex = getFirstBuildingOrder(eBuilding);
 	// We can count production already put towards this if we are looking
@@ -5023,11 +5028,11 @@ int CvCity::getProductionTurnsLeft(BuildingTypes eBuilding, int orderIndex, int 
 	const int perTurnProduction = getProductionPerTurn(modifier, ProductionCalc::Yield);
 	// If we are looking at the first order then overflow would be applied
 	const int nextTurnProduction = (orderIndex == 0) ? getProductionPerTurn(modifier, ProductionCalc::Overflow | ProductionCalc::Yield) : perTurnProduction;
-	return getProductionTurnsLeft(getProductionNeeded(eBuilding), alreadyDone, nextTurnProduction, perTurnProduction, mult);
+	return getProductionTurnsLeft(getProductionNeeded(eBuilding), alreadyDone, nextTurnProduction, perTurnProduction);
 }
 
 
-int CvCity::getProductionTurnsLeft(ProjectTypes eProject, int orderIndex, int mult /*= 1*/) const
+int CvCity::getProductionTurnsLeft(ProjectTypes eProject, int orderIndex) const
 {
 	const int firstOrderIndex = getFirstProjectOrder(eProject);
 	// We can count production already put towards this if we are looking
@@ -5038,27 +5043,27 @@ int CvCity::getProductionTurnsLeft(ProjectTypes eProject, int orderIndex, int mu
 	const int perTurnProduction = getProductionPerTurn(modifier, ProductionCalc::Yield);
 	// If we are looking at the first order then overflow would be applied
 	const int nextTurnProduction = (orderIndex == 0) ? getProductionPerTurn(modifier, ProductionCalc::Overflow | ProductionCalc::Yield) : perTurnProduction;
-	return getProductionTurnsLeft(getProductionNeeded(eProject), alreadyDone, nextTurnProduction, perTurnProduction, mult);
+	return getProductionTurnsLeft(getProductionNeeded(eProject), alreadyDone, nextTurnProduction, perTurnProduction);
 }
 
-int CvCity::getProductionTurnsLeft(int totalRequiredProduction, int currentProduction, int nextTurnProduction, int perTurnProduction, int mult /*= 1*/) const
+int CvCity::getProductionTurnsLeft(int totalRequiredProduction, int currentProduction, int nextTurnProduction, int perTurnProduction) const
 {
-	const int remainingProduction = std::max(0, totalRequiredProduction - currentProduction - nextTurnProduction);
+	int remainingProduction = std::max(0, totalRequiredProduction - currentProduction - nextTurnProduction);
 	// This doesn't look right...
 	if (perTurnProduction == 0)
 	{
 		return remainingProduction + 1;
 	}
 
-	int turnsLeft = remainingProduction * mult / perTurnProduction;
-	if (turnsLeft * perTurnProduction < remainingProduction * mult)
+	int turnsLeft = remainingProduction / perTurnProduction;
+	if (turnsLeft * perTurnProduction < remainingProduction)
 	{
-		turnsLeft += mult;
+		turnsLeft++;
 	}
 
-	turnsLeft += mult;
+	turnsLeft++;
 
-	return std::max(mult, turnsLeft);
+	return std::max(1, turnsLeft);
 }
 
 

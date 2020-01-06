@@ -348,15 +348,15 @@ public:
 	int getProductionNeeded(UnitTypes eUnit) const;
 	int getProductionNeeded(BuildingTypes eBuilding) const;
 	int getProductionNeeded(ProjectTypes eProject) const;		
-	int getOrderProductionTurnsLeft(const OrderData& order, int iIndex = 0, int mult = 1) const;
+	int getOrderProductionTurnsLeft(const OrderData& order, int iIndex = 0) const;
 
 	// For fractional production calculations:
 	int getTotalProductionQueueTurnsLeft() const;
-	int getProductionTurnsLeft(int mult = 1) const; // Exposed to Python 
-	int getProductionTurnsLeft(UnitTypes eUnit, int iNum, int mult = 1) const; // Exposed to Python
-	int getProductionTurnsLeft(BuildingTypes eBuilding, int iNum, int mult = 1) const; // Exposed to Python
-	int getProductionTurnsLeft(ProjectTypes eProject, int iNum, int mult = 1) const; // Exposed to Python
-	int getProductionTurnsLeft(int iProductionNeeded, int iProduction, int iFirstProductionDifference, int iProductionDifference, int mult = 1) const;
+	int getProductionTurnsLeft() const; // Exposed to Python 
+	int getProductionTurnsLeft(UnitTypes eUnit, int iNum) const; // Exposed to Python
+	int getProductionTurnsLeft(BuildingTypes eBuilding, int iNum) const; // Exposed to Python
+	int getProductionTurnsLeft(ProjectTypes eProject, int iNum) const; // Exposed to Python
+	int getProductionTurnsLeft(int iProductionNeeded, int iProduction, int iFirstProductionDifference, int iProductionDifference) const;
 
 	void setProduction(int iNewValue);																			// Exposed to Python
 	void changeProduction(int iChange);																			// Exposed to Python
