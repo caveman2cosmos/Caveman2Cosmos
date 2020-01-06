@@ -6059,8 +6059,10 @@ bool CvSelectionGroup::CachedPathGenerator::HaveCachedPathEdgeCosts(CvPlot* pFro
 			iWorstMoveCost = (itr->second).iWorstMoveCost;
 			iToPlotNodeCost = (itr->second).iToPlotNodeCost;
 
+#ifdef _DEBUG
 			FAssert((itr->second).pFromPlot == pFromPlot);
 			FAssert((itr->second).pToPlot == pToPlot);
+#endif
 
 			result = true;
 		}
@@ -6080,8 +6082,10 @@ bool CvSelectionGroup::CachedPathGenerator::HaveCachedPathEdgeCosts(CvPlot* pFro
 			iWorstMoveCost = (itr->second).iWorstMoveCost;
 			iToPlotNodeCost = (itr->second).iToPlotNodeCost;
 
+#ifdef _DEBUG
 			FAssert((itr->second).pFromPlot == pFromPlot);
 			FAssert((itr->second).pToPlot == pToPlot);
+#endif
 
 			result = true;
 		}
