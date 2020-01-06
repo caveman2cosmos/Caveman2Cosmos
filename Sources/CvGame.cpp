@@ -118,6 +118,16 @@ CvGame::~CvGame()
 /************************************************************************************************/
 }
 
+namespace {
+	void initNPC(CvGame* game, PlayerTypes player, TeamTypes team, const char* leader, const char* civilization)
+	{
+		game->addPlayer(player, (LeaderHeadTypes)GC.getInfoTypeForString(leader), (CivilizationTypes)GC.getInfoTypeForString(civilization), false);
+		GET_PLAYER(player).setNewPlayerAlive(true);
+		GET_TEAM(team).init(team);
+		GC.getInitCore().setTeam(player, team);
+	}
+}
+
 void CvGame::init(HandicapTypes eHandicap)
 {
 	//--------------------------------
@@ -429,16 +439,6 @@ void CvGame::init(HandicapTypes eHandicap)
 	AI_init();
 
 	doUpdateCacheOnTurn();
-}
-
-namespace {
-	void CvGame::initNPC(PlayerTypes player, TeamTypes team, const char* leader, const char* civilization)
-	{
-		addPlayer(player, (LeaderHeadTypes)GC.getInfoTypeForString(leader), (CivilizationTypes)GC.getInfoTypeForString(civilization), false);
-		GET_PLAYER(player).setNewPlayerAlive(true);
-		GET_TEAM(team).init(team);
-		GC.getInitCore().setTeam(player, team);
-	}
 }
 
 //
