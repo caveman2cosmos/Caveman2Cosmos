@@ -2673,24 +2673,6 @@ void CvGame::update()
 		}
 	}
 
-	if (isOption(GAMEOPTION_SIZE_MATTERS))
-	{
-		static bool bSetSMCached = false;
-
-		if ( !bSetSMCached )
-		{
-			PROFILE("CvGame::update.ResetUnitSMValues");
-			for(int iI = 0; iI < MAX_PLAYERS; iI++)
-			{
-				if ( GET_PLAYER((PlayerTypes)iI).isAlive() )
-				{
-					GET_PLAYER((PlayerTypes)iI).resetUnitSMValues();
-				}
-			}
-			bSetSMCached = true;
-		}
-	}
-
 again:
 	if (!gDLL->GetWorldBuilderMode() || isInAdvancedStart())
 	{
@@ -10211,6 +10193,18 @@ void CvGame::read(FDataStreamBase* pStream)
 	for (iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 	{
 		GC.getImprovementInfo((ImprovementTypes)iI).setHighestCost();
+	}
+
+	// SM: Update player cached values
+	if (isOption(GAMEOPTION_SIZE_MATTERS))
+	{
+		for (int iI = 0; iI < MAX_PLAYERS; iI++)
+		{
+			if (GET_PLAYER((PlayerTypes)iI).isAlive())
+			{
+				GET_PLAYER((PlayerTypes)iI).setSMValues();
+			}
+		}
 	}
 }
 

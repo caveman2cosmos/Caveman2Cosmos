@@ -1698,7 +1698,7 @@ int CvPlayerAI::AI_movementPriority(CvSelectionGroup* pGroup) const
 			return 6;
 		}
 
-		if (pHeadUnit->bombardRate() > 0)
+		if (pHeadUnit->getBombardRate() > 0)
 		{
 			return 7;
 		}
