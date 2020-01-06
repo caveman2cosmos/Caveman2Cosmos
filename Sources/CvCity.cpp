@@ -4407,7 +4407,7 @@ bool CvCity::isProductionProcess() const
 }
 
 
-bool CvCity::canContinueProduction(OrderData order) const
+bool CvCity::canContinueProduction(const OrderData& order) const
 {
 	switch (order.eOrderType)
 	{
@@ -20380,7 +20380,7 @@ void CvCity::read(FDataStreamBase* pStream)
 				}
 				else
 				{
-
+					m_orderQueue.push_back(pNode->m_data);
 					pNode = orderQueue.next(pNode);
 				}
 			}

@@ -323,7 +323,7 @@ public:
 	bool isProductionProject() const;																							// Exposed to Python
 	bool isProductionProcess() const;																		// Exposed to Python
 
-	bool canContinueProduction(OrderData order) const;														// Exposed to Python
+	bool canContinueProduction(const OrderData& order) const;														// Exposed to Python
 	int getProductionExperience(UnitTypes eUnit = NO_UNIT) const;									// Exposed to Python
 	void addProductionExperience(CvUnit* pUnit, bool bConscript = false);		// Exposed to Python
 

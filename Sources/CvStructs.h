@@ -376,18 +376,18 @@ struct OrderData // Exposed to Python
 			int iData2;
 		};
 		struct { // Untyped
-			word iData1_aux;
 			word iData1_external;
-			word iData2_aux;
+			word iData1_aux;
 			word iData2_external;
+			word iData2_aux;
 		} raw;
 		struct { // For units
-			word plotIndex; // aux, 0xFFFF for none
 			/*UnitTypes*/word type;
+			word plotIndex; // aux, 0xFFFF for none
 
-			byte contractFlags; // aux
-			/*UnitAITypes*/byte contractedAIType; // aux, 0xFF for none
 			/*UnitAITypes*/word AIType;
+			/*UnitAITypes*/byte contractedAIType; // aux, 0xFF for none
+			byte contractFlags; // aux
 		} unit;
 		struct {
 			/*BuildingTypes*/int type;
