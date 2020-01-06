@@ -270,16 +270,6 @@ public:
 	int getNumEspionageMissionInfos() const { return GC.getNumEspionageMissionInfos(); }
 	int getNumHints() const { return GC.getNumHints(); }
 	int getNumMainMenus() const { return GC.getNumMainMenus(); }
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 02/19/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-// Python Modular Loading
-	int getNumPythonModulesInfos() const { return GC.getNumPythonModulesInfos(); }
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 	int getNumInvisibleInfos() const { return GC.getNumInvisibleInfos(); }
 	int getNumVoteSourceInfos() const { return GC.getNumVoteSourceInfos(); }
 
