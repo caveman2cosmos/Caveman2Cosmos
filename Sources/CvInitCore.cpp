@@ -539,7 +539,7 @@ void CvInitCore::resetGame()
 	m_eWorldSize = NO_WORLDSIZE;											// STANDARD_ option?
 	m_eClimate = (ClimateTypes)GC.getDefineINT("STANDARD_CLIMATE");			// NO_ option?
 	m_eSeaLevel = (SeaLevelTypes)GC.getDefineINT("STANDARD_SEALEVEL");		// NO_ option?
-	m_eEra = (EraTypes)GC.getDefineINT("STANDARD_ERA");						// NO_ option?
+	m_eEra = FIRST_ERA;						// NO_ option?
 	m_eGameSpeed = (GameSpeedTypes)GC.getDefineINT("STANDARD_GAMESPEED");	// NO_ option?
 	m_eTurnTimer = (TurnTimerTypes)GC.getDefineINT("STANDARD_TURNTIMER");	// NO_ option?
 	m_eCalendar = (CalendarTypes)GC.getDefineINT("STANDARD_CALENDAR");		// NO_ option?
@@ -623,7 +623,7 @@ void CvInitCore::resetGame(CvInitCore * pSource, bool bClear, bool bSaveGameType
 		setWorldSize(pSource->getWorldSize());
 		setClimate(pSource->getClimate());
 		setSeaLevel(pSource->getSeaLevel());
-		setEra(pSource->getEra());
+		setEra(FIRST_ERA);
 		setGameSpeed(pSource->getGameSpeed());
 		setTurnTimer(pSource->getTurnTimer());
 		setCalendar(pSource->getCalendar());

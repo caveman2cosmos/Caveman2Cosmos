@@ -183,6 +183,8 @@
 
 #define ANIMATION_DEFAULT											(1)			// Default idle animation
 
+#define FIRST_ERA						((EraTypes)0)
+
 // python module names
 #define PYDebugToolModule			"CvDebugInterface"
 #define PYScreensModule				"CvScreensInterface"
