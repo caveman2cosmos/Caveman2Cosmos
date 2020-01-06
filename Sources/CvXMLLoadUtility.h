@@ -795,10 +795,6 @@ private:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-
-	// Python Modular Loading
-	template <class T>
-	void LoadPythonModulesInfo(std::vector<T*>& aInfos, const char* szFileRoot, const wchar_t* szXmlPath, bool bTwoPass);
 	//Main control of the MLF feature
 	void ModularLoadingControlXML();
 	// In the next 2 methods we load the MLF classes
