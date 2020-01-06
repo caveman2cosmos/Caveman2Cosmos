@@ -419,24 +419,26 @@ void CvGame::init(HandicapTypes eHandicap)
 		}
 	}
 
-	initNPC(NPC6_PLAYER, "LEADER_GREEN_MAN", "CIVILIZATION_INSECTOID");
-	initNPC(NPC7_PLAYER, "LEADER_NEANDERTHAL", "CIVILIZATION_NPC_NEANDERTHAL");
-	initNPC(NPC8_PLAYER, "LEADER_GREEN_MAN", "CIVILIZATION_ANIMAL_BEAST");
-	initNPC(AGGRESSIVE_ANIMAL_PLAYER, "LEADER_GREEN_MAN", "CIVILIZATION_ANIMAL_PREDATOR");
-	initNPC(PASSIVE_ANIMAL_PLAYER, "LEADER_GREEN_MAN", "CIVILIZATION_ANIMAL_PREY");
-	initNPC(BARBARIAN_PLAYER, "LEADER_BARBARIAN", "CIVILIZATION_BARBARIAN");
+	initNPC(NPC6_PLAYER, NPC6_TEAM, "LEADER_GREEN_MAN", "CIVILIZATION_INSECTOID");
+	initNPC(NPC7_PLAYER, NPC7_TEAM, "LEADER_NEANDERTHAL", "CIVILIZATION_NPC_NEANDERTHAL");
+	initNPC(NPC8_PLAYER, NPC8_TEAM, "LEADER_GREEN_MAN", "CIVILIZATION_ANIMAL_BEAST");
+	initNPC(AGGRESSIVE_ANIMAL_PLAYER, AGGRESSIVE_ANIMAL_TEAM, "LEADER_GREEN_MAN", "CIVILIZATION_ANIMAL_PREDATOR");
+	initNPC(PASSIVE_ANIMAL_PLAYER, PASSIVE_ANIMAL_TEAM, "LEADER_GREEN_MAN", "CIVILIZATION_ANIMAL_PREY");
+	initNPC(BARBARIAN_PLAYER, BARBARIAN_TEAM, "LEADER_BARBARIAN", "CIVILIZATION_BARBARIAN");
 
 	AI_init();
 
 	doUpdateCacheOnTurn();
 }
 
-void CvGame::initNPC(int iIndex, const char* szLeader, const char* szCivilization)
-{
-	addPlayer((PlayerTypes)iIndex, (LeaderHeadTypes)GC.getInfoTypeForString(szLeader), (CivilizationTypes)GC.getInfoTypeForString(szCivilization), false);
-	GET_PLAYER((PlayerTypes)iIndex).setNewPlayerAlive(true);
-	GET_TEAM((TeamTypes)iIndex).init((TeamTypes)iIndex);
-	GC.getInitCore().setTeam((PlayerTypes)iIndex, (TeamTypes)iIndex);
+namespace {
+	void CvGame::initNPC(PlayerTypes player, TeamTypes team, const char* leader, const char* civilization)
+	{
+		addPlayer(player, (LeaderHeadTypes)GC.getInfoTypeForString(leader), (CivilizationTypes)GC.getInfoTypeForString(civilization), false);
+		GET_PLAYER(player).setNewPlayerAlive(true);
+		GET_TEAM(team).init(team);
+		GC.getInitCore().setTeam(player, team);
+	}
 }
 
 //
