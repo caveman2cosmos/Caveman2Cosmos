@@ -1126,23 +1126,9 @@ public:
 	void setHotKeyNumber(int iNewValue);																											// Exposed to Python
 
 	DllExport int getViewportX() const;																																// Exposed to Python
-	inline int getX_INLINE() const
-	{
-		return m_iX;
-	}
-	inline int getX() const
-	{
-		return m_iX;
-	}
+	inline int getX() const { return m_iX; }
 	DllExport int getViewportY() const;																																// Exposed to Python
-	inline int getY() const
-	{
-		return m_iY;
-	}
-	inline int getY_INLINE() const
-	{
-		return m_iY;
-	}
+	inline int getY() const { return m_iY; }
 	bool isInViewport() const;
 	void setXY(int iX, int iY, bool bGroup = false, bool bUpdate = true, bool bShow = false, bool bCheckPlotVisible = false, bool bInit = false);	// Exposed to Python
 	bool isTempUnit() const;

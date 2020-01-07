@@ -1407,12 +1407,12 @@ void CyUnit::setHotKeyNumber(int iNewValue)
 
 int CyUnit::getX()
 {
-	return m_pUnit ? m_pUnit->getX_INLINE() : -1;
+	return m_pUnit ? m_pUnit->getX() : -1;
 }
 
 int CyUnit::getY()
 {
-	return m_pUnit ? m_pUnit->getY_INLINE() : -1;
+	return m_pUnit ? m_pUnit->getY() : -1;
 }
 
 void CyUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow)

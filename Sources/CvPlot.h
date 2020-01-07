@@ -562,10 +562,10 @@ protected:
 
 	DllExport int getViewportX() const;
 	inline int getX() const { return m_iX; }
-	inline int getX_INLINE() const { return m_iX; }
+
 	DllExport int getViewportY() const; // Exposed to Python
 	inline int getY() const { return m_iY; }
-	inline int getY_INLINE() const { return m_iY; }
+
 	bool isInViewport(int comfortBorderSize = 0) const;
 
 	// Base iterator type for iterating over adjacent valid plots

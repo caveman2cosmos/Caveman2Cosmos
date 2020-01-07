@@ -830,12 +830,12 @@ int CyCity::getID()
 
 int CyCity::getX()
 {
-	return m_pCity ? m_pCity->getX_INLINE() : -1;
+	return m_pCity ? m_pCity->getX() : -1;
 }
 
 int CyCity::getY()
 {
-	return m_pCity ? m_pCity->getY_INLINE() : -1;
+	return m_pCity ? m_pCity->getY() : -1;
 }
 
 bool CyCity::at(int iX, int iY)

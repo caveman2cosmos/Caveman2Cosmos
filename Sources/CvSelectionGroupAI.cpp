@@ -170,7 +170,7 @@ bool CvSelectionGroupAI::AI_update()
 					CvWString szTempString;
 					getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
 					sprintf(szOut, "Unit stuck in loop( Warning before short circuit (pass: %d) ): %S(%S)[%d, %d] (%S)\n", iPass, pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwnerINLINE()).getName(),
-						pHeadUnit->getX_INLINE(), pHeadUnit->getY_INLINE(), szTempString.GetCString());
+						pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString());
 					gDLL->messageControlLog(szOut);
 				//}
 			}
@@ -187,7 +187,7 @@ bool CvSelectionGroupAI::AI_update()
 					CvWString szTempString;
 					getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
 					sprintf(szOut, "Unit stuck in loop: %S(%S)[%d, %d] (%S)\n", pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwnerINLINE()).getName(),
-						pHeadUnit->getX_INLINE(), pHeadUnit->getY_INLINE(), szTempString.GetCString());
+						pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString());
 					gDLL->messageControlLog(szOut);
 				}
 				
@@ -1059,8 +1059,8 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, CvPlot* p
 
 	if (pNewPlot != NULL)
 	{
-		m_iMissionAIX = pNewPlot->getX_INLINE();
-		m_iMissionAIY = pNewPlot->getY_INLINE();
+		m_iMissionAIX = pNewPlot->getX();
+		m_iMissionAIY = pNewPlot->getY();
 	}
 	else
 	{

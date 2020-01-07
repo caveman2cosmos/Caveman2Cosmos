@@ -2684,7 +2684,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			}
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_FOUND)
 			{
-				if (!(GET_PLAYER(pHeadSelectedUnit->getOwnerINLINE()).canFound(pMissionPlot->getX_INLINE(), pMissionPlot->getY_INLINE())))
+				if (!(GET_PLAYER(pHeadSelectedUnit->getOwnerINLINE()).canFound(pMissionPlot->getX(), pMissionPlot->getY())))
 				{
 					bool bValid = true;
 
@@ -2703,7 +2703,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 /************************************************************************************************/
 						for (int iDY = -(iRange); iDY <= iRange; iDY++)
 						{
-							CvPlot* pLoopPlot	= plotXY(pMissionPlot->getX_INLINE(), pMissionPlot->getY_INLINE(), iDX, iDY);
+							CvPlot* pLoopPlot	= plotXY(pMissionPlot->getX(), pMissionPlot->getY(), iDX, iDY);
 
 							if (pLoopPlot != NULL)
 							{
@@ -3425,7 +3425,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 								}
 								for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
 								{
-									CvPlot* pLoopPlot = plotCity(pMissionPlot->getX_INLINE(), pMissionPlot->getY_INLINE(), iI);
+									CvPlot* pLoopPlot = plotCity(pMissionPlot->getX(), pMissionPlot->getY(), iI);
 
 									if (pLoopPlot != NULL)
 									{

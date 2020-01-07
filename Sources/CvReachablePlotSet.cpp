@@ -320,7 +320,7 @@ bool CvReachablePlotSet::canMoveBetweenWithFlags(const CvSelectionGroup* group, 
 		//	Can't cross diagonally across 'land'
 		if (pFromPlot->isWater() && pToPlot->isWater())
 		{
-			if (!(GC.getMapINLINE().plotINLINE(pFromPlot->getX_INLINE(), pToPlot->getY_INLINE())->isWater()) && !(GC.getMapINLINE().plotINLINE(pToPlot->getX_INLINE(), pFromPlot->getY_INLINE())->isWater()))
+			if (!(GC.getMapINLINE().plotINLINE(pFromPlot->getX(), pToPlot->getY())->isWater()) && !(GC.getMapINLINE().plotINLINE(pToPlot->getX(), pFromPlot->getY())->isWater()))
 			{
 				if( !(group->canMoveAllTerrain()) )
 				{
@@ -399,18 +399,18 @@ void CvReachablePlotSet::enumerateReachablePlotsInternal(int iRange, int iDepth,
 		{
 			for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
 			{
-				CvPlot* pAdjacentPlot = plotDirection((*itr).first->getX_INLINE(), (*itr).first->getY_INLINE(), ((DirectionTypes)iI));
+				CvPlot* pAdjacentPlot = plotDirection((*itr).first->getX(), (*itr).first->getY(), ((DirectionTypes)iI));
 
 				if ( pAdjacentPlot != NULL && reachablePlots->find(pAdjacentPlot) == reachablePlots->end() )
 				{
 					bool bValidAsTerminus = false;
-					bool bValid = ContextFreeNewPathValidFunc(m_group, (*itr).first->getX_INLINE(), (*itr).first->getY_INLINE(), pAdjacentPlot->getX_INLINE(), pAdjacentPlot->getY_INLINE(), m_iFlags, false, false, 0, NULL, &bValidAsTerminus);
+					bool bValid = ContextFreeNewPathValidFunc(m_group, (*itr).first->getX(), (*itr).first->getY(), pAdjacentPlot->getX(), pAdjacentPlot->getY(), m_iFlags, false, false, 0, NULL, &bValidAsTerminus);
 
 					if ( !bValid )
 					{
 						bool bDummy;
 
-						bValidAsTerminus |= NewPathDestValid(m_group, pAdjacentPlot->getX_INLINE(), pAdjacentPlot->getY_INLINE(), m_iFlags, bDummy);
+						bValidAsTerminus |= NewPathDestValid(m_group, pAdjacentPlot->getX(), pAdjacentPlot->getY(), m_iFlags, bDummy);
 					}
 
 					//if ( canMoveBetweenWithFlags(m_group, (*itr), pAdjacentPlot, m_iFlags) )

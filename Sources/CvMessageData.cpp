@@ -1729,7 +1729,7 @@ void CvNetChooseMergeUnit::Execute()
 			CvUnit* pUnit3 = GET_PLAYER(m_ePlayer).getUnit(GET_PLAYER(m_ePlayer).getSecondMergeSelectionUnit());
 			UnitTypes eUnitType = pUnit1->getUnitType();
 
-			CvUnit* pkMergedUnit = GET_PLAYER(m_ePlayer).initUnit(eUnitType, pUnit1->getX_INLINE(), pUnit1->getY_INLINE(), NO_UNITAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+			CvUnit* pkMergedUnit = GET_PLAYER(m_ePlayer).initUnit(eUnitType, pUnit1->getX(), pUnit1->getY(), NO_UNITAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
 			PROFILE_FUNC();
 
 			int iTotalGroupOffset = 1;
@@ -1883,9 +1883,9 @@ void CvNetConfirmSplitUnit::Execute()
 		{
 			CvUnit* pUnit0 = GET_PLAYER(m_ePlayer).getUnit(GET_PLAYER(m_ePlayer).getSplittingUnit());
 			UnitTypes eUnitType = pUnit0->getUnitType();
-			CvUnit* pUnit1 = GET_PLAYER(m_ePlayer).initUnit(eUnitType, pUnit0->getX_INLINE(), pUnit0->getY_INLINE(), NO_UNITAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
-			CvUnit* pUnit2 = GET_PLAYER(m_ePlayer).initUnit(eUnitType, pUnit0->getX_INLINE(), pUnit0->getY_INLINE(), NO_UNITAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
-			CvUnit* pUnit3 = GET_PLAYER(m_ePlayer).initUnit(eUnitType, pUnit0->getX_INLINE(), pUnit0->getY_INLINE(), NO_UNITAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+			CvUnit* pUnit1 = GET_PLAYER(m_ePlayer).initUnit(eUnitType, pUnit0->getX(), pUnit0->getY(), NO_UNITAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+			CvUnit* pUnit2 = GET_PLAYER(m_ePlayer).initUnit(eUnitType, pUnit0->getX(), pUnit0->getY(), NO_UNITAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+			CvUnit* pUnit3 = GET_PLAYER(m_ePlayer).initUnit(eUnitType, pUnit0->getX(), pUnit0->getY(), NO_UNITAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
 			PROFILE_FUNC();
 
 			int iTotalGroupOffset = -1;

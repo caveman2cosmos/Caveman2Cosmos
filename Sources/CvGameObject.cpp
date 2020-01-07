@@ -558,12 +558,12 @@ void CvGameObjectPlot::foreachOn(GameObjectTypes eType, bst::function<void(CvGam
 
 void CvGameObjectPlot::foreachNear(GameObjectTypes eType, bst::function<void(CvGameObject *)> func, int iDistance)
 {
-	int iPlotX = m_pPlot->getX_INLINE();
-	int iPlotY = m_pPlot->getY_INLINE();
+	const int iPlotX = m_pPlot->getX();
+	const int iPlotY = m_pPlot->getY();
 	
-	for (int iX=iPlotX - iDistance; iX <= iPlotX + iDistance; iX++)
+	for (int iX = iPlotX - iDistance; iX <= iPlotX + iDistance; iX++)
 	{
-		for (int iY=iPlotY - iDistance; iY <= iPlotY + iDistance; iY++)
+		for (int iY = iPlotY - iDistance; iY <= iPlotY + iDistance; iY++)
 		{
 			CvPlot* pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
 			if (pPlot)
@@ -595,7 +595,7 @@ void CvGameObjectCity::foreachRelated(GameObjectTypes eType, RelationTypes eRela
 		{
 			for (int iI = 0; iI < m_pCity->getNumCityPlots(); iI++)
 			{
-				CvPlot* pLoopPlot = plotCity(m_pCity->getX_INLINE(), m_pCity->getY_INLINE(), iI);
+				CvPlot* pLoopPlot = plotCity(m_pCity->getX(), m_pCity->getY(), iI);
 				if (pLoopPlot)
 				{
 					if (pLoopPlot->getWorkingCity() == m_pCity)

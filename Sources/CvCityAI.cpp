@@ -350,8 +350,8 @@ void CvCityAI::AI_doContractFloatingDefenders()
 		}
 		GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(iOurPriority,
 																	   DEFENSIVE_UNITCAPABILITIES,
-																	   getX_INLINE(),
-																	   getY_INLINE(),
+																	   getX(),
+																	   getY(),
 																	   NULL,
 																	   eFloatingDefenderUnitAI,
 																	   iRequiredStrength);
@@ -6062,7 +6062,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 								CvCity* pCapital = GET_PLAYER(getOwnerINLINE()).getCapitalCity();
 								if (pCapital != NULL)
 								{
-									int iCapitalDistance = ::plotDistance(getX_INLINE(), getY_INLINE(), pCapital->getX_INLINE(), pCapital->getY_INLINE());
+									int iCapitalDistance = ::plotDistance(getX(), getY(), pCapital->getX(), pCapital->getY());
 									int iOldCapitalDistance = iCapitalDistance;
 									iCapitalDistance *= 100 + kBuilding.getRevIdxDistanceModifier();
 									iCapitalDistance /= 100;
@@ -7077,7 +7077,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						{
 							if (iI != CITY_HOME_PLOT)
 							{
-								pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+								pLoopPlot = plotCity(getX(), getY(), iI);
 								if (pLoopPlot != NULL &&
 									!pLoopPlot->isWater() &&
 									!pLoopPlot->isFreshWater() &&
@@ -8436,7 +8436,7 @@ int CvCityAI::AI_neededAirDefenders()
 	{
 		for (int iDY = -(iRange); iDY <= iRange; iDY++)
 		{
-			CvPlot* pLoopPlot = plotXY(getX_INLINE(), getY_INLINE(), iDX, iDY);
+			CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
 
 			if ((pLoopPlot != NULL) && pLoopPlot->isOwned() && (pLoopPlot->getTeam() != getTeam()))
 			{
@@ -8504,7 +8504,7 @@ int CvCityAI::evaluateDanger()
 
 	if ( eDummyUnit != NO_UNIT )
 	{
-		CvUnit*				pTempUnit = GET_PLAYER(getOwnerINLINE()).getTempUnit(eDummyUnit, getX_INLINE(), getY_INLINE());
+		CvUnit*				pTempUnit = GET_PLAYER(getOwnerINLINE()).getTempUnit(eDummyUnit, getX(), getY());
 		CvReachablePlotSet	plotSet(pTempUnit->getGroup(), 0, MAX_DANGER_EVALUATION_RANGE, false, 1);
 		int					iBorderDanger = 0;
 		//int					iGeneralDanger = 0;
@@ -8680,9 +8680,9 @@ void CvCityAI::AI_updateRouteToCity() const
 					{
 						if (pLoopCity->area() == area())
 						{
-							if (!(gDLL->getFAStarIFace()->GeneratePath(&GC.getRouteFinder(), getX_INLINE(), getY_INLINE(), pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE(), false, getOwnerINLINE(), true)))
+							if (!(gDLL->getFAStarIFace()->GeneratePath(&GC.getRouteFinder(), getX(), getY(), pLoopCity->getX(), pLoopCity->getY(), false, getOwnerINLINE(), true)))
 							{
-								int iValue = plotDistance(getX_INLINE(), getY_INLINE(), pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE());
+								int iValue = plotDistance(getX(), getY(), pLoopCity->getX(), pLoopCity->getY());
 
 								if (iValue < iBestValue)
 								{
@@ -8878,7 +8878,7 @@ int CvCityAI::AI_totalBestBuildValue(CvArea* pArea)
 	{
 		if (iI != CITY_HOME_PLOT)
 		{
-			CvPlot* pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+			CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 
 			if (pLoopPlot != NULL)
 			{
@@ -8898,7 +8898,7 @@ int CvCityAI::AI_totalBestBuildValue(CvArea* pArea)
 
 int CvCityAI::AI_clearFeatureValue(int iIndex)
 {
-	CvPlot* pPlot = plotCity(getX_INLINE(), getY_INLINE(), iIndex);
+	CvPlot* pPlot = plotCity(getX(), getY(), iIndex);
 	FAssert(pPlot != NULL);
 	
 	FeatureTypes eFeature = pPlot->getFeatureType();
@@ -9959,7 +9959,7 @@ int CvCityAI::AI_countBestBuilds(CvArea* pArea)
 	{
 		if (iI != CITY_HOME_PLOT)
 		{
-			CvPlot* pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+			CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 
 			if (pLoopPlot != NULL)
 			{
@@ -10429,7 +10429,7 @@ void CvCityAI::AI_updateBestBuild()
 
 		if (iI != CITY_HOME_PLOT)
 		{
-			CvPlot* pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+			CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 
 			if (NULL != pLoopPlot && pLoopPlot->getWorkingCity() == this)
 			{
@@ -10500,7 +10500,7 @@ void CvCityAI::AI_updateBestBuild()
 		{
 			if (iI != CITY_HOME_PLOT)
 			{
-				CvPlot* pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+				CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 
 				if (NULL != pLoopPlot && pLoopPlot->getWorkingCity() == this)
 				{
@@ -10564,7 +10564,7 @@ void CvCityAI::AI_updateBestBuild()
 			{
 				if (iI != CITY_HOME_PLOT)
 				{
-					CvPlot* pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+					CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 
 					if (NULL != pLoopPlot && pLoopPlot->getWorkingCity() == this)
 					{
@@ -11405,7 +11405,7 @@ void CvCityAI::AI_doEmphasize()
 /* JOOYO_ADDON                          END                                                     */
 /************************************************************************************************/
 				{
-					CvPlot* pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iPlot);
+					CvPlot* pLoopPlot = plotCity(getX(), getY(), iPlot);
 					if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == this)
 					{
 						int iFood = pLoopPlot->getYield(YIELD_FOOD);
@@ -11497,8 +11497,8 @@ bool CvCityAI::AI_chooseUnit(const char* reason, UnitAITypes eUnitAI, int iOdds,
 				//	Put out a tender for this unit
 				GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(iPriorityOverride,
 																				NO_UNITCAPABILITIES,
-																				getX_INLINE(),
-																				getY_INLINE(),
+																				getX(),
+																				getY(),
 																				NULL,
 																				eUnitAI,
 																				iUnitStrength,
@@ -13480,7 +13480,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 		{
 			for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 			{
-				CvPlot* pAdjacentPlot = plotDirection(pPlot->getX_INLINE(), pPlot->getY_INLINE(), ((DirectionTypes)iI));
+				CvPlot* pAdjacentPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
 
 				if ((pAdjacentPlot != NULL) && (pAdjacentPlot->getOwner() == getOwner()) && (pAdjacentPlot->isCityRadius()))
 				{
@@ -13495,7 +13495,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 
 							for (int iJ = 0; iJ < NUM_DIRECTION_TYPES; iJ++)
 							{
-								CvPlot* pAdjacentPlot2 = plotDirection(pAdjacentPlot->getX_INLINE(), pAdjacentPlot->getY_INLINE(), ((DirectionTypes)iJ));
+								CvPlot* pAdjacentPlot2 = plotDirection(pAdjacentPlot->getX(), pAdjacentPlot->getY(), ((DirectionTypes)iJ));
 								if ((pAdjacentPlot2 != NULL) && (pAdjacentPlot2->getOwner() == getOwner()))
 								{
 									BonusTypes eTempBonus = pAdjacentPlot2->getNonObsoleteBonusType(getTeam());
@@ -14328,7 +14328,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 			{
 				if( gCityLogLevel >= 2 )
 				{
-					logBBAI("    City %S, tile (%d,%d) best build changed from %S to %S", getName().GetCString(), pPlot->getX_INLINE(), pPlot->getY_INLINE(), GC.getBuildInfo(*peBestBuild).getDescription(), GC.getBuildInfo(eBestBuild).getDescription());
+					logBBAI("    City %S, tile (%d,%d) best build changed from %S to %S", getName().GetCString(), pPlot->getX(), pPlot->getY(), GC.getBuildInfo(*peBestBuild).getDescription(), GC.getBuildInfo(eBestBuild).getDescription());
 				}
 			}
 
@@ -14454,7 +14454,7 @@ int CvCityAI::AI_calculateCulturePressure(bool bGreatWork)
 	int iValue = 0;
 	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
 	{
-		CvPlot* pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+		CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 		if (pLoopPlot != NULL)
 		{
 			if (pLoopPlot->getOwnerINLINE() == NO_PLAYER)
@@ -14844,7 +14844,7 @@ int CvCityAI::AI_countGoodTiles(bool bHealthy, bool bUnworkedOnly, int iThreshol
 /* JOOYO_ADDON                          END                                                     */
 /************************************************************************************************/
 	{
-		CvPlot* pLoopPlot = plotCity(getX_INLINE(),getY_INLINE(), iI);
+		CvPlot* pLoopPlot = plotCity(getX(),getY(), iI);
 		if ((iI != CITY_HOME_PLOT) && (pLoopPlot != NULL))
 		{
 			if (pLoopPlot->getWorkingCity() == this)
@@ -14872,7 +14872,7 @@ int CvCityAI::AI_calculateTargetCulturePerTurn()
 	
 	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
 	{
-		CvPlot* pLoopPlot = plotCity(getX_INLINE(),getY_INLINE(),iI);
+		CvPlot* pLoopPlot = plotCity(getX(),getY(),iI);
 		
 		if (pLoopPlot != NULL)
 		{
@@ -14988,7 +14988,7 @@ void CvCityAI::AI_stealPlots()
 
 	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
 	{
-		CvPlot* pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+		CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 		
 		if (pLoopPlot != NULL)
 		{
@@ -15050,7 +15050,7 @@ int CvCityAI::AI_buildingSpecialYieldChangeValue(BuildingTypes eBuilding, YieldT
 		{
 			if (iI != CITY_HOME_PLOT)
 			{
-				CvPlot* pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+				CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 				if ((pLoopPlot != NULL) && (pLoopPlot->getWorkingCity() == this))
 				{
 					if (pLoopPlot->isWater())
@@ -15231,7 +15231,7 @@ int CvCityAI::AI_countNumBonuses(BonusTypes eBonus, bool bIncludeOurs, bool bInc
 	int iCount = 0;
 	for (int iI = 0; iI < getNumCityPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+		CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 		
 		if (pLoopPlot != NULL)
 		{
@@ -15278,7 +15278,7 @@ int CvCityAI::AI_countNumImprovableBonuses( bool bIncludeNeutral, TechTypes eExt
 	int iCount = 0;
 	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
 	{
-		CvPlot* pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+		CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 		
 		if (pLoopPlot != NULL)
 		{
@@ -15376,7 +15376,7 @@ void CvCityAI::AI_cachePlayerCloseness(int iMaxDistance)
 					continue;
 				}
 
-				int iDistance = stepDistance(getX_INLINE(), getY_INLINE(), pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE());
+				int iDistance = stepDistance(getX(), getY(), pLoopCity->getX(), pLoopCity->getY());
 				
 				if (area() != pLoopCity->area() )
 				{
@@ -18019,7 +18019,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 										CvCity* pCapital = GET_PLAYER(getOwnerINLINE()).getCapitalCity();
 										if (pCapital != NULL)
 										{
-											int iCapitalDistance = ::plotDistance(getX_INLINE(), getY_INLINE(), pCapital->getX_INLINE(), pCapital->getY_INLINE());
+											int iCapitalDistance = ::plotDistance(getX(), getY(), pCapital->getX(), pCapital->getY());
 											int iOldCapitalDistance = iCapitalDistance;
 											iCapitalDistance *= 100 + kBuilding.getRevIdxDistanceModifier();
 											iCapitalDistance /= 100;
@@ -19070,7 +19070,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 								{
 									if (iI != CITY_HOME_PLOT)
 									{
-										pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+										pLoopPlot = plotCity(getX(), getY(), iI);
 										if (pLoopPlot != NULL &&
 											!pLoopPlot->isWater() &&
 											!pLoopPlot->isFreshWater() &&
@@ -20245,7 +20245,7 @@ bool CvCityAI::AI_chooseHealerUnit(int iMinNeeded)
 			CvPlot* pLoopPlot;
 			for (int iJ = 0; iJ < NUM_CITY_PLOTS_1; iJ++)
 			{
-				pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iJ);
+				pLoopPlot = plotCity(getX(), getY(), iJ);
 				if (pLoopPlot != NULL)
 				{
 					for (int iK = 0; iK < NUM_DOMAIN_TYPES; iK++)

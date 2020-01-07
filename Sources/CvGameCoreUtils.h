@@ -5,23 +5,8 @@
 #ifndef CIV4_GAMECORE_UTILS_H
 #define CIV4_GAMECORE_UTILS_H
 
-
-//#include "CvStructs.h"
 #include "CvGlobals.h"
 #include "CvMap.h"
-
-#ifndef _USRDLL
-// use non inline functions when not in the dll
-#define getMapINLINE	getMap
-#define getGridHeightINLINE	getGridHeight
-#define getGridWidthINLINE	getGridWidth
-#define isWrapYINLINE	isWrapY
-#define isWrapXINLINE	isWrapX
-#define plotINLINE	plot
-#define getX_INLINE	getX
-#define getY_INLINE	getY
-
-#endif
 
 class CvPlot;
 class CvCity;
@@ -186,7 +171,7 @@ inline CvPlot* plotDirection(int iX, int iY, DirectionTypes eDirection)							//
 
 inline CvPlot* plotDirection(CvPlot* pPlot, DirectionTypes eDirection)
 {
-	return plotDirection(pPlot->getX_INLINE(), pPlot->getY_INLINE(), eDirection);
+	return plotDirection(pPlot->getX(), pPlot->getY(), eDirection);
 }
 
 inline CvPlot* plotCardinalDirection(int iX, int iY, CardinalDirectionTypes eCardinalDirection)	// Exposed to Python
@@ -218,7 +203,7 @@ inline DirectionTypes reverseDirection(DirectionTypes iDirection)															
 
 inline DirectionTypes directionXY(const CvPlot* pFromPlot, const CvPlot* pToPlot)			// Exposed to Python
 {
-	return directionXY(dxWrap(pToPlot->getX_INLINE() - pFromPlot->getX_INLINE()), dyWrap(pToPlot->getY_INLINE() - pFromPlot->getY_INLINE()));
+	return directionXY(dxWrap(pToPlot->getX() - pFromPlot->getX()), dyWrap(pToPlot->getY() - pFromPlot->getY()));
 }
 
 inline DirectionTypes getAdjacentDirection(DirectionTypes eDirection, bool bClockwise)
