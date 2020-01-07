@@ -173,7 +173,7 @@ public:
 	void changeNumBonusesOnLand(BonusTypes eIndex, int iChange);
 
 #ifdef _USRDLL
-	inline int isPlot(int iX, int iY) const
+	inline bool isPlot(int iX, int iY) const
 	{
 		return ((iX >= 0) && (iX < getGridWidth()) && (iY >= 0) && (iY < getGridHeight()));
 	}
