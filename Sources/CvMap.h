@@ -132,39 +132,6 @@ public:
 	int getMapFractalFlags();																												// Exposed to Python
 	bool findWater(const CvPlot* pPlot, int iRange, bool bFreshWater) const;										// Exposed to Python
 
-	bool isPlotNonInl(int iX, int iY) const;																		// Exposed to Python
-#ifdef _USRDLL
-	inline int isPlot(int iX, int iY) const
-	{
-		return ((iX >= 0) && (iX < getGridWidth()) && (iY >= 0) && (iY < getGridHeight()));
-	}
-	inline int isPlotINLINE(int iX, int iY) const
-	{
-		return ((iX >= 0) && (iX < getGridWidth()) && (iY >= 0) && (iY < getGridHeight()));
-	}
-#endif
-	int numPlotsNonInl() const; 																								// Exposed to Python
-#ifdef _USRDLL
-	inline int numPlots() const
-	{
-		return getGridWidth() * getGridHeight();
-	}
-	inline int numPlotsINLINE() const
-	{
-		return getGridWidth() * getGridHeight();
-	}
-#endif
-	int plotNumNonInl(int iX, int iY) const;																		// Exposed to Python
-#ifdef _USRDLL
-	inline int plotNum(int iX, int iY) const
-	{
-		return ((iY * getGridWidth()) + iX);
-	}
-	inline int plotNumINLINE(int iX, int iY) const
-	{
-		return ((iY * getGridWidth()) + iX);
-	}
-#endif
 	int plotX(int iIndex) const;																										// Exposed to Python
 	int plotY(int iIndex) const;																										// Exposed to Python
 
@@ -180,28 +147,6 @@ public:
 	int maxPlotDistance();																								// Exposed to Python
 	int maxStepDistance();																								// Exposed to Python
 
-	int getGridWidthNonInl() const;																		// Exposed to Python
-#ifdef _USRDLL
-	inline int getGridWidth() const
-	{
-		return m_iGridWidth;
-	}
-	inline int getGridWidthINLINE() const
-	{
-		return m_iGridWidth;
-	}
-#endif
-	int getGridHeightNonInl() const;																	// Exposed to Python
-#ifdef _USRDLL
-	inline int getGridHeight() const
-	{
-		return m_iGridHeight;
-	}
-	inline int getGridHeightINLINE() const
-	{
-		return m_iGridHeight;
-	}
-#endif
 	int getLandPlots() const;																					// Exposed to Python
 	void changeLandPlots(int iChange);
 
@@ -214,39 +159,6 @@ public:
 	int getNextRiverID();																									// Exposed to Python
 	void incrementNextRiverID();																					// Exposed to Python
 
-	bool isWrapXNonInl() const;																							// Exposed to Python
-#ifdef _USRDLL
-	inline bool isWrapX() const
-	{
-		return m_bWrapX;
-	}
-	inline bool isWrapXINLINE() const
-	{
-		return m_bWrapX;
-	}
-#endif
-	bool isWrapYNonInl() const;																							// Exposed to Python
-#ifdef _USRDLL
-	inline bool isWrapY() const
-	{
-		return m_bWrapY;
-	}
-	inline bool isWrapYINLINE() const
-	{
-		return m_bWrapY;
-	}
-#endif
-	bool isWrapNonInl() const;
-#ifdef _USRDLL
-	inline bool isWrap() const
-	{
-		return m_bWrapX || m_bWrapY;
-	}
-	inline bool isWrapINLINE() const
-	{
-		return m_bWrapX || m_bWrapY;
-	}
-#endif
 	WorldSizeTypes getWorldSize();															// Exposed to Python
 	ClimateTypes getClimate() const;																	// Exposed to Python
 	SeaLevelTypes getSeaLevel() const;																// Exposed to Python
@@ -260,8 +172,71 @@ public:
 	int getNumBonusesOnLand(BonusTypes eIndex);														// Exposed to Python
 	void changeNumBonusesOnLand(BonusTypes eIndex, int iChange);
 
-	CvPlot* plotByIndexNonInl(int iIndex) const;											// Exposed to Python
 #ifdef _USRDLL
+	inline int isPlot(int iX, int iY) const
+	{
+		return ((iX >= 0) && (iX < getGridWidth()) && (iY >= 0) && (iY < getGridHeight()));
+	}
+	inline int isPlotINLINE(int iX, int iY) const
+	{
+		return ((iX >= 0) && (iX < getGridWidth()) && (iY >= 0) && (iY < getGridHeight()));
+	}
+	inline int numPlots() const
+	{
+		return getGridWidth() * getGridHeight();
+	}
+	inline int numPlotsINLINE() const
+	{
+		return getGridWidth() * getGridHeight();
+	}
+	inline int plotNum(int iX, int iY) const
+	{
+		return ((iY * getGridWidth()) + iX);
+	}
+	inline int plotNumINLINE(int iX, int iY) const
+	{
+		return ((iY * getGridWidth()) + iX);
+	}
+	inline int getGridWidth() const
+	{
+		return m_iGridWidth;
+	}
+	inline int getGridWidthINLINE() const
+	{
+		return m_iGridWidth;
+	}
+	inline int getGridHeight() const
+	{
+		return m_iGridHeight;
+	}
+	inline int getGridHeightINLINE() const
+	{
+		return m_iGridHeight;
+	}
+	inline bool isWrapX() const
+	{
+		return m_bWrapX;
+	}
+	inline bool isWrapXINLINE() const
+	{
+		return m_bWrapX;
+	}
+	inline bool isWrapY() const
+	{
+		return m_bWrapY;
+	}
+	inline bool isWrapYINLINE() const
+	{
+		return m_bWrapY;
+	}
+	inline bool isWrap() const
+	{
+		return m_bWrapX || m_bWrapY;
+	}
+	inline bool isWrapINLINE() const
+	{
+		return m_bWrapX || m_bWrapY;
+	}
 	inline CvPlot* plotByIndex(int iIndex) const
 	{
 		return (((iIndex >= 0) && (iIndex < (getGridWidth() * getGridHeight()))) ? &(m_pMapPlots[iIndex]) : NULL);
@@ -270,9 +245,6 @@ public:
 	{
 		return (((iIndex >= 0) && (iIndex < (getGridWidth() * getGridHeight()))) ? &(m_pMapPlots[iIndex]) : NULL);
 	}
-#endif
-	CvPlot* plotNonInl(int iX, int iY) const;													// Exposed to Python
-#ifdef _USRDLL
 	__forceinline CvPlot* plot(int iX, int iY) const
 	{
 		if ((iX == INVALID_PLOT_COORD) || (iY == INVALID_PLOT_COORD))
