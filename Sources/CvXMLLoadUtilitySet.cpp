@@ -4313,12 +4313,6 @@ DllExport bool CvXMLLoadUtility::LoadPlayerOptions()
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	// Python Modular Loading
-	if (!CreateFXml())
-		return false;
-	LoadPythonModulesInfo(GC.getPythonModulesInfos(), "CIV4PythonModulesInfos", L"/Civ4PythonModulesInfos/PythonModulesInfos/PythonModulesInfo", false);
-	DestroyFXml();
-
 	// MLF loading
 	if (!gDLL->isModularXMLLoading())
 	{
@@ -4354,53 +4348,11 @@ DllExport bool CvXMLLoadUtility::LoadGraphicOptions()
 	return true;
 }
 
-
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 10/24/07                            MRGENIE          */
 /*                                                                                              */
 /* Initialize the list of Module Directories to be loaded                                       */
 /************************************************************************************************/
-// Python Modular Loading
-template <class T>
-void CvXMLLoadUtility::LoadPythonModulesInfo(std::vector<T*>& aInfos, const char* szFileRoot, const wchar_t* szXmlPath, bool bTwoPass)
-{
-	bool bLoaded = false;
-	GC.addToInfosVectors(&aInfos);
-
-//	XML_CHECK_DOUBLE_TYPE						10/10/07							MRGENIE
-#ifdef _DEBUG
-	logXmlCheckDoubleTypes("Entering: %s\n", szFileRoot);
-#endif
-//	XML_CHECK_DOUBLE_TYPE						END   
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 03/28/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	GC.setModDir("NONE");
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 END                                                  */
-/************************************************************************************************/
-	
-	std::vector<CvString> aszFiles;
-	gDLL->enumerateFiles(aszFiles, CvString::format("Python Config\\*_%s.xml", szFileRoot));  // search for the modular files
-
-	for (std::vector<CvString>::iterator it = aszFiles.begin(); it != aszFiles.end(); ++it)
-	{
-		bLoaded = LoadCivXml(NULL, *it);
-
-		if (!bLoaded)
-		{
-			char szMessage[1024];
-			sprintf(szMessage, "LoadXML call failed for %s.", (*it).GetCString());
-			gDLL->MessageBox(szMessage, "XML Load Error");
-		}
-		else
-		{
-			SetGlobalClassInfo(aInfos, szXmlPath, bTwoPass);
-		}
-	}
-}
 // Main control of the MLF feature
 void CvXMLLoadUtility::ModularLoadingControlXML()
 {
@@ -4408,7 +4360,6 @@ void CvXMLLoadUtility::ModularLoadingControlXML()
 	pSetMod->setModLoadControlDirArray(LoadModLoadControlInfo(GC.getModLoadControlInfos(), "CIV4ModularLoadingControls", L"Type"));
 	SAFE_DELETE(pSetMod);
 }
-
 
 // In the next 2 methods we load the MLF classes
 template <class T>

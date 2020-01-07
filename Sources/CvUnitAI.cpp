@@ -1866,84 +1866,32 @@ void CvUnitAI::AI_animalMove()
 	PROFILE_FUNC();
 
 	//TB Animal Mod Begin
-#ifdef C2C_BUILD
-	if (!isAnimal())
+	if (canAttack())
 	{
-		FAssertMsg(false, "Subdued animal still has animal AI");
-		OutputDebugString("Choosing animal mission\n");
-		if (AI_heal())
-		{
-			OutputDebugString("Chosen to heal\n");
-			return;
-		}
-
-		if (AI_construct())
-		{
-			OutputDebugString("Chosen to construct\n");
-			return;
-		}
-
-		if (AI_guardCity())
-		{
-			OutputDebugString("Chosen to guard city\n");
-			return;
-		}
-
-		OutputDebugString("No valid choice - skipping\n");
-	}
-	else
-#endif
-	{
-		if (canAttack())
-		{
-
-			int iTargetsOddsThreshold = ((GC.getGame().isOption(GAMEOPTION_RECKLESS_ANIMALS))? 0 : 40);
-			//Attack potential targets first.  Animals are pretty good at assessing their chances of taking down prey but are a little reckless at doing so, therefore 40% odds prereq.
-			if (AI_attackTargets(2, iTargetsOddsThreshold, 0, false, true))
-			{
-				return;
-			}
-
-			//Then attack elsewhere
-			int iAggression = m_pUnitInfo->getAggression();
-			iAggression += (getLevel()-1);
-			iAggression *= (maxHitPoints() - getDamage());
-			iAggression /= 100;
-			iAggression *= GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAnimalAttackProb();
-			iAggression /= 100;
-			int iReckless = (12 * GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAnimalAttackProb())/100;
-			int iOtherOddsThreshold = 0;/*((GC.getGame().isOption(GAMEOPTION_RECKLESS_ANIMALS))? 0 : 5);*///Removed to help test the underlying system better.
-			int iLikelihood = (GC.getGame().isOption(GAMEOPTION_RECKLESS_ANIMALS)? iReckless : iAggression);
-			if (GC.getGameINLINE().getSorenRandNum(10, "Animal Attack") < iLikelihood)
-			{
-				//5% odds assessment is there to account for some small understanding of likelihood of success even in an aggressive action.  A badger isn't likely to try to attack an elephant and a wounded Lion will probably hold off and hide when faced with 100 men.
-				if (AI_anyAttack(2, iOtherOddsThreshold, 0, false, true))
-				{
-					return;
-				}
-			}
-
-			//TB: This was causing delays and animals to sit around doing nothing in many cases.  Re-engineer for this purpose if really needed.
-			//if (iAggression <= 2 && !GC.getGame().isOption(GAMEOPTION_RECKLESS_ANIMALS))
-			//{
-			//	if (AI_safety())
-			//	{
-			//		return;
-			//	}
-			//}
-		}
-
-		if (AI_heal())
+		bool bReckless = GC.getGame().isOption(GAMEOPTION_RECKLESS_ANIMALS);
+		int iAttackProb = GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAnimalAttackProb();
+		// Attack potential targets first. Animals are pretty good at assessing their chances of taking down prey, therefore 60% odds prereq.
+		if ((bReckless || iAttackProb > 99 || GC.getGameINLINE().getSorenRandNum(100, "Animal Attack") < iAttackProb)
+			&& AI_attackTargets(2, (bReckless ? 0 : 60), 0, false, true))
 		{
 			return;
 		}
-
-		if (AI_patrol(true))
+		// Then attack elsewhere, recklessness based on animal aggression.
+		// 5% odds assessment is there to account for some small understanding of likelihood of success even in an aggressive action.
+		if ((bReckless || GC.getGameINLINE().getSorenRandNum(10, "Animal Attack") < getMyAggression(iAttackProb))
+			&& AI_anyAttack(2, (bReckless ? 0 : 5), 0, false, true))
+		{
+			return;
+		}
+		if (!bReckless && exposedToDanger(plot(), 60, true) && AI_safety())
 		{
 			return;
 		}
 	}
-
+	if (AI_heal() || AI_patrol(true))
+	{
+		return;
+	}
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
 }
@@ -14270,6 +14218,44 @@ bool CvUnitAI::AI_groupMergeRange(UnitAITypes eUnitAI, int iMaxRange, bool bBigg
 	return false;
 }
 
+namespace {
+	bool canPathTo(const CvPlot* plot, const CvUnit* unit, int maxPathTurns)
+	{
+		int pathTurns = 0;
+		if (unit->generatePath(plot, 0, true, &pathTurns, maxPathTurns + 1))
+		{
+			if (unit->getPathMovementRemaining() == 0)
+			{
+				pathTurns++;
+			}
+
+			if (pathTurns <= maxPathTurns)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	bool canTransportReachPlot(const CvPlot* loadingPlot, const CvUnit* targetUnit, const CvUnit* transportUnit, int maxTransportPath)
+	{
+		if (loadingPlot->isCoastalLand()
+			&& loadingPlot->isOwned()
+			&& targetUnit->isPotentialEnemy(loadingPlot->getTeam(), loadingPlot)
+			&& !targetUnit->isNPC()
+			&& loadingPlot->area()->getCitiesPerPlayer(loadingPlot->getOwnerINLINE()) > 0
+			)
+		{
+			// Transport cannot enter land plot without cargo, so generate path only works properly if
+			// land units are already loaded
+			return algo::any_of(
+				targetUnit->plot()->adjacent() | filtered(CvPlot::fn::isWater()), 
+				bind(canPathTo, _1, transportUnit, maxTransportPath)
+			);
+		}
+		return false;
+	}
+}
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      04/18/10                                jdog5000      */
 /*                                                                                              */
@@ -14283,12 +14269,6 @@ bool CvUnitAI::AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITyp
 {
 	PROFILE_FUNC();
 
-	CvUnit* pLoopUnit;
-	CvUnit* pBestUnit;
-	int iPathTurns;
-	int iValue;
-	int iBestValue;
-	int iLoop;
 
 	if (hasCargo())
 	{
@@ -14307,108 +14287,117 @@ bool CvUnitAI::AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITyp
 		{
 			return false;
 		}
-	}	
+	}
 
-	iBestValue = MAX_INT;
-	pBestUnit = NULL;
-	
 	const int iLoadMissionAICount = 4;
-	//setting up a value so that we may loop through the following predefined array
+	// setting up a value so that we may loop through the following predefined array
 
 	MissionAITypes aeLoadMissionAI[iLoadMissionAICount] = {MISSIONAI_LOAD_ASSAULT, MISSIONAI_LOAD_SETTLER, MISSIONAI_LOAD_SPECIAL, MISSIONAI_ATTACK_SPY};
 
 	int iCurrentGroupSize = getGroup()->getNumUnits();
-	//Under Size Matters we need the volume of the group
+	// Under Size Matters we need the volume of the group
 	if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		iCurrentGroupSize = getGroup()->getNumUnitCargoVolumeTotal();
 	}
 		
+	CvUnit* bestTransportUnit = nullptr;
+	int bestTransportUnitScore = MAX_INT;
 	{
 		PROFILE("CvUnitAI::AI_load.SearchTransport");
 
 		CvReachablePlotSet plotSet(getGroup(), iFlags, iMaxPath);
 
-		for(pLoopUnit = GET_PLAYER(getOwnerINLINE()).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(getOwnerINLINE()).nextUnit(&iLoop))
-		{//loop through all the player's units
-			if (pLoopUnit != this)
-			{//if the unit under evaluation isn't this unit (the unit seeking to be loaded apparently)
-				if (plotSet.find(pLoopUnit->plot()) != plotSet.end())
-				{//if the plot the unit under evaluation is on isn't the plot it was headed for?
-					if (canLoadUnit(pLoopUnit, pLoopUnit->plot()))
-					{//if this unit can be loaded onto the looped unit
-						// special case ASSAULT_SEA UnitAI, so that, if a unit is marked escort, but can load units, it will load them
-						// transport units might have been built as escort, this most commonly happens with galleons
-						UnitAITypes eLoopUnitAI = pLoopUnit->AI_getUnitAIType();
-						//eloopunitai is the ai of the unit under evaluation.
-						if (eLoopUnitAI == eUnitAI)// || (eUnitAI == UNITAI_ASSAULT_SEA && eLoopUnitAI == UNITAI_ESCORT_SEA))
-						{//if the unit under evaluation is the type we were wanting to get loaded through this command
-							int iCargoSpaceAvailable = pLoopUnit->cargoSpaceAvailable(getSpecialUnitType(), getDomainType());
-							//iCargoSpaceAvailable refers to the space (in unit counts here) available to load units on the transport under eval
-							if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
-							{
-								iCargoSpaceAvailable = pLoopUnit->SMcargoSpaceAvailable(getSpecialUnitType(), getDomainType());
-								//here we make it refer to the space (in cargo volumes) available to load units on the transport instead
-								iCargoSpaceAvailable -= GET_PLAYER(getOwnerINLINE()).AI_unitTargetMissionAIs(pLoopUnit, aeLoadMissionAI, iLoadMissionAICount, getGroup(), -1, true);
-								//here we must refer to things in a cargo volume manner rather than a unit count manner
-								//This is asking to subtract out the number of units that already have planned to load onto this ship
-								//Adapted the structure to enable me to ask not for the number of units but for the total cargo volume OF those units
-								//iCargoSpaceAvailable now refers to actual cargo space by volume rather than by unit count
-							}
-							else
-							{
-								iCargoSpaceAvailable -= GET_PLAYER(getOwnerINLINE()).AI_unitTargetMissionAIs(pLoopUnit, aeLoadMissionAI, iLoadMissionAICount, getGroup());
-							}
-							if (iCargoSpaceAvailable > 0)
-							{//if there is cargo space available after the units that have spoken for the transport are loaded then:
-								//note this may not be enough now because we're talking about cargo volumes that may still be greater than the amount available
-								if ((eTransportedUnitAI == NO_UNITAI) || (pLoopUnit->getUnitAICargo(eTransportedUnitAI) > 0))
-								{//if we're not already transporting any units
-									//or the transporting unit already is transporting unit(s) of the instructed ai type
-									//(apparently seeks to ensure that transports only transport units with the same ai type?)
-									if ((iMinCargo == -1) || (pLoopUnit->getCargo() >= iMinCargo))
-									{//if iMinCargo is any value
-										// or the unit to be loaded onto has more or as much cargo as iMinCargo specified
-										//looks like it's to enforce that settlers don't load alone
-										//getCargo still has its ai uses under size matters as a basic count of the amount of UNITS that are loaded...
-										//This is one example
+		foreach_(CvUnit* pLoopUnit, GET_PLAYER(getOwnerINLINE()).units())
+		{
+			// if the plot the unit under evaluation is on isn't the plot it was headed for?
+			// if this unit can be loaded onto the looped unit
+			if (plotSet.find(pLoopUnit->plot()) != plotSet.end() 
+				&& canLoadOntoUnit(pLoopUnit, pLoopUnit->plot()))
+			{
+				// special case ASSAULT_SEA UnitAI, so that, if a unit is marked escort, but can load units, it will load them
+				// transport units might have been built as escort, this most commonly happens with galleons
+				UnitAITypes eLoopUnitAI = pLoopUnit->AI_getUnitAIType();
 
-										// Use existing count of cargo space available
-										if ((iMinCargoSpace == -1) || (iCargoSpaceAvailable >= iMinCargoSpace))
-										{//Ok here we have a bigger issue.  iMinCargoSpace - minimum amount of units that must be loadable was what it DID mean
-											//NOW I'll need to search for it's bigger purpose 
-											//This will be harder to convert because I may need it to send through the minimum amount of sm cargo space in some cases
-											//And for cases where I only need a 'count' it's impossible to say this generically.
-											//Solved volumetrically - when option is on it takes the estimated best unit for the type it's trying to load and converts that unit's cargo volume * the iMinCargoSpace# previously defined.
-											if ((iMaxCargoSpace == -1) || (iCargoSpaceAvailable <= iMaxCargoSpace))
-											{//max cargo space... what?  Don't load if there's too much space available on this ship???
-												//Apparently its to keep counter units escorting settlers and workers from overloading themselves
-												//Resolved by conditionally making this value worth ((SMCargoVolume()*2)-1) - 
-												//twice the cargo volume of the evaluating unit but one less so a second one can't load after it does
-												if ((iMaxCargoOurUnitAI == -1) || (pLoopUnit->getUnitAICargo(AI_getUnitAIType()) <= iMaxCargoOurUnitAI))
-												{//I presume iMaxCargoOurUnitAI is intended to keep more than one settler from getting on the same boat.  
-													//Assuming I'm correct, this probably doesn't need to be addressed any differently as it's just going to be a count.
-													// Don't block city defense from getting on board
-													if (true)
+				// eloopunitai is the ai of the unit under evaluation.
+					
+				// if the unit under evaluation is the type we were wanting to get loaded through this command
+				if (eLoopUnitAI == eUnitAI)// || (eUnitAI == UNITAI_ASSAULT_SEA && eLoopUnitAI == UNITAI_ESCORT_SEA))
+				{
+					int iCargoSpaceAvailable = pLoopUnit->cargoSpaceAvailable(getSpecialUnitType(), getDomainType());
+					// iCargoSpaceAvailable refers to the space (in unit counts here) available to load units on the transport under eval
+					if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+					{
+						iCargoSpaceAvailable = pLoopUnit->SMcargoSpaceAvailable(getSpecialUnitType(), getDomainType());
+						// here we make it refer to the space (in cargo volumes) available to load units on the transport instead
+						iCargoSpaceAvailable -= GET_PLAYER(getOwnerINLINE()).AI_unitTargetMissionAIs(pLoopUnit, aeLoadMissionAI, iLoadMissionAICount, getGroup(), -1, true);
+						// here we must refer to things in a cargo volume manner rather than a unit count manner
+						// This is asking to subtract out the number of units that already have planned to load onto this ship
+						// Adapted the structure to enable me to ask not for the number of units but for the total cargo volume OF those units
+						// iCargoSpaceAvailable now refers to actual cargo space by volume rather than by unit count
+					}
+					else
+					{
+						iCargoSpaceAvailable -= GET_PLAYER(getOwnerINLINE()).AI_unitTargetMissionAIs(pLoopUnit, aeLoadMissionAI, iLoadMissionAICount, getGroup());
+					}
+
+					// if there is cargo space available after the units that have spoken for the transport are loaded then:
+					if (iCargoSpaceAvailable > 0)
+					{
+						// note this may not be enough now because we're talking about cargo volumes that may still be greater than the amount available
+
+						// if we're not already transporting any units
+						if (eTransportedUnitAI == NO_UNITAI || pLoopUnit->getUnitAICargo(eTransportedUnitAI) > 0)
+						{
+							// or the transporting unit already is transporting unit(s) of the instructed ai type
+							// (apparently seeks to ensure that transports only transport units with the same ai type?)
+							if (iMinCargo == -1 || pLoopUnit->getCargo() >= iMinCargo)
+							{
+								// or the unit to be loaded onto has more or as much cargo as iMinCargo specified
+								// looks like it's to enforce that settlers don't load alone
+								// getCargo still has its ai uses under size matters as a basic count of the amount of UNITS that are loaded...
+								// This is one example
+
+								// Use existing count of cargo space available
+
+								// Ok here we have a bigger issue.  iMinCargoSpace - minimum amount of units that must be loadable was what it DID mean
+								if (iMinCargoSpace == -1 || iCargoSpaceAvailable >= iMinCargoSpace)
+								{
+									// NOW I'll need to search for it's bigger purpose 
+									// This will be harder to convert because I may need it to send through the minimum amount of sm cargo space in some cases
+									// And for cases where I only need a 'count' it's impossible to say this generically.
+									// Solved volumetrically - when option is on it takes the estimated best unit for the type it's trying to load and converts that unit's cargo volume * the iMinCargoSpace# previously defined.
+
+									// max cargo space... what?  Don't load if there's too much space available on this ship???
+									// Apparently its to keep counter units escorting settlers and workers from overloading themselves
+									if (iMaxCargoSpace == -1 || iCargoSpaceAvailable <= iMaxCargoSpace)
+									{
+										// Resolved by conditionally making this value worth ((SMCargoVolume()*2)-1) - 
+										// twice the cargo volume of the evaluating unit but one less so a second one can't load after it does
+
+										// I presume iMaxCargoOurUnitAI is intended to keep more than one settler from getting on the same boat.  
+										// Assuming I'm correct, this probably doesn't need to be addressed any differently as it's just going to be a count.
+										if (iMaxCargoOurUnitAI == -1 || pLoopUnit->getUnitAICargo(AI_getUnitAIType()) <= iMaxCargoOurUnitAI)
+										{
+											// Don't block city defense from getting on board
+											if (!pLoopUnit->plot()->isVisibleEnemyUnit(this))
+											{
+												CvPlot* pUnitTargetPlot = pLoopUnit->getGroup()->AI_getMissionAIPlot();
+												if (pUnitTargetPlot == nullptr 
+													|| pUnitTargetPlot->getTeam() == getTeam()
+													|| !pUnitTargetPlot->isOwned() 
+													|| !isPotentialEnemy(pUnitTargetPlot->getTeam(), pUnitTargetPlot))
+												{
+													int iPathTurns = 0;
+													if (atPlot(pLoopUnit->plot()) || generatePath(pLoopUnit->plot(), iFlags, true, &iPathTurns, iMaxPath))
 													{
-														if (!(pLoopUnit->plot()->isVisibleEnemyUnit(this)))
-														{
-															CvPlot* pUnitTargetPlot = pLoopUnit->getGroup()->AI_getMissionAIPlot();
-															if ((pUnitTargetPlot == NULL) || (pUnitTargetPlot->getTeam() == getTeam()) || (!pUnitTargetPlot->isOwned() || !isPotentialEnemy(pUnitTargetPlot->getTeam(), pUnitTargetPlot)))
-															{
-																iPathTurns = 0;
-																if (atPlot(pLoopUnit->plot()) || generatePath(pLoopUnit->plot(), iFlags, true, &iPathTurns, iMaxPath))
-																{
-																	// prefer a transport that can hold as much of our group as possible 
-																	iValue = (std::max(0, iCurrentGroupSize - iCargoSpaceAvailable) * 5) + iPathTurns;
+														// prefer a transport that can hold as much of our group as possible 
+														const int score = std::max(0, iCurrentGroupSize - iCargoSpaceAvailable) * 5 + iPathTurns;
 
-																	if (iValue < iBestValue)
-																	{//apparently low is better
-																		iBestValue = iValue;
-																		pBestUnit = pLoopUnit;
-																	}//and we've found the best transport for our needs (so far)
-																}
-															}
+														if (score < bestTransportUnitScore)
+														{
+															bestTransportUnitScore = score;
+															bestTransportUnit = pLoopUnit;
 														}
 													}
 												}
@@ -14424,78 +14413,28 @@ bool CvUnitAI::AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITyp
 		}
 	}
 
-	if( pBestUnit != NULL && iMaxTransportPath < MAX_INT )
+	if( bestTransportUnit != NULL && iMaxTransportPath < MAX_INT )
 	{
 		PROFILE("CvUnitAI::AI_load.SearchTarget");
 
 		// Can transport reach enemy in requested time
-		bool bFoundEnemyPlotInRange = false;
-		int iPathTurns;
-		int iRange = iMaxTransportPath * pBestUnit->baseMoves();
-		CvPlot* pAdjacentPlot = NULL;
-
-		for( int iDX = -iRange; (iDX <= iRange && !bFoundEnemyPlotInRange); iDX++ )
+		const int loadingRange = iMaxTransportPath * bestTransportUnit->baseMoves();
+		if (!algo::any_of(
+			CvPlot::rect(getX_INLINE(), getY_INLINE(), loadingRange, loadingRange), 
+			bind(canTransportReachPlot, _1, this, bestTransportUnit, iMaxTransportPath))
+			)
 		{
-			for( int iDY = -iRange; (iDY <= iRange && !bFoundEnemyPlotInRange); iDY++ )
-			{
-				CvPlot* pLoopPlot = plotXY(getX_INLINE(), getY_INLINE(), iDX, iDY);
-
-				if( pLoopPlot != NULL )
-				{
-					if( pLoopPlot->isCoastalLand() )
-					{
-						if( pLoopPlot->isOwned() )
-						{
-							if( isPotentialEnemy(pLoopPlot->getTeam(), pLoopPlot) && !isNPC() )
-							{
-								if( pLoopPlot->area()->getCitiesPerPlayer(pLoopPlot->getOwnerINLINE()) > 0 )
-								{
-									// Transport cannot enter land plot without cargo, so generate path only works properly if
-									// land units are already loaded
-									
-									for( int iI = 0; (iI < NUM_DIRECTION_TYPES && !bFoundEnemyPlotInRange); iI++ )
-									{
-										pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), (DirectionTypes)iI);
-										if (pAdjacentPlot != NULL)
-										{
-											if( pAdjacentPlot->isWater() )
-											{
-												if( pBestUnit->generatePath(pAdjacentPlot, 0, true, &iPathTurns, iMaxTransportPath+1) )
-												{
-													if (pBestUnit->getPathMovementRemaining() == 0)
-													{
-														iPathTurns++;
-													}
-
-													if( iPathTurns <= iMaxTransportPath )
-													{
-														bFoundEnemyPlotInRange = true;
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-
-		if( !bFoundEnemyPlotInRange )
-		{
-			pBestUnit = NULL;
+			bestTransportUnit = nullptr;
 		}
 	}
 
-	if (pBestUnit != NULL)
+	if (bestTransportUnit != NULL)
 	{
-		if (atPlot(pBestUnit->plot()))
+		if (atPlot(bestTransportUnit->plot()))
 		{
 			CvSelectionGroup* pOtherGroup = NULL;
 			// TBNOTE: fixed setTransportUnit for Size Matters (hopefully correctly)
-			getGroup()->setTransportUnit(pBestUnit, &pOtherGroup); // XXX is this dangerous (not pushing a mission...) XXX air units?
+			getGroup()->setTransportUnit(bestTransportUnit, &pOtherGroup); // XXX is this dangerous (not pushing a mission...) XXX air units?
 
 			// If part of large group loaded, then try to keep loading the rest
 			if( eUnitAI == UNITAI_ASSAULT_SEA && (eMissionAI == MISSIONAI_LOAD_ASSAULT || eMissionAI == MISSIONAI_LOAD_SETTLER))
@@ -14521,10 +14460,10 @@ bool CvUnitAI::AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITyp
 		{
 			// BBAI TODO: To split or not to split?
 			//Here is where it gets complicated again...
-			int iCargoSpaceAvailable = pBestUnit->cargoSpaceAvailable(getSpecialUnitType(), getDomainType());
+			int iCargoSpaceAvailable = bestTransportUnit->cargoSpaceAvailable(getSpecialUnitType(), getDomainType());
 			if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 			{//This is actually somewhat unnecessary as it's only going to ask for a count and otherwise split into individual units rather than a group that can then load just right
-				iCargoSpaceAvailable = pBestUnit->SMcargoSpaceAvailable(getSpecialUnitType(), getDomainType());
+				iCargoSpaceAvailable = bestTransportUnit->SMcargoSpaceAvailable(getSpecialUnitType(), getDomainType());
 			}
 			FAssertMsg(iCargoSpaceAvailable > 0, "best unit has no space");
 
@@ -14547,7 +14486,7 @@ bool CvUnitAI::AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITyp
 			if (pSplitGroup != NULL)
 			{
 				CvPlot* pOldPlot = pSplitGroup->plot();
-				pSplitGroup->pushMission(MISSION_MOVE_TO_UNIT, pBestUnit->getOwnerINLINE(), pBestUnit->getID(), iFlags, false, false, eMissionAI, NULL, pBestUnit);
+				pSplitGroup->pushMission(MISSION_MOVE_TO_UNIT, bestTransportUnit->getOwnerINLINE(), bestTransportUnit->getID(), iFlags, false, false, eMissionAI, NULL, bestTransportUnit);
 				bool bMoved = (pSplitGroup->plot() != pOldPlot);
 				if (!bMoved && pOtherGroup != NULL)
 				{
@@ -22053,14 +21992,12 @@ bool CvUnitAI::AI_attackTargets(int iRange, int iOddsThreshold, int iMinStack, b
 	int iValue;
 	int iBestValue;
 
-
-	FAssert(canMove());
-
 	if (AI_ambush(iOddsThreshold, true))
 	{
 		return true;
 	}
 
+	FAssert(canMove());
 	iSearchRange = AI_searchRange(iRange);
 
 
@@ -28953,7 +28890,7 @@ bool CvUnitAI::AI_airCarrier()
 
 	for(pLoopUnit = GET_PLAYER(getOwnerINLINE()).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(getOwnerINLINE()).nextUnit(&iLoop))
 	{
-		if (canLoadUnit(pLoopUnit, pLoopUnit->plot()))
+		if (canLoadOntoUnit(pLoopUnit, pLoopUnit->plot()))
 		{
 			iValue = 10;
 
@@ -29023,7 +28960,7 @@ bool CvUnitAI::AI_missileLoad(UnitAITypes eTargetUnitAI, int iMaxOwnUnitAI, bool
 			{
 				if ((iMaxOwnUnitAI == -1) || (pLoopUnit->getUnitAICargo(AI_getUnitAIType()) <= iMaxOwnUnitAI))
 				{
-					if (canLoadUnit(pLoopUnit, pLoopUnit->plot()))
+					if (canLoadOntoUnit(pLoopUnit, pLoopUnit->plot()))
 					{
 						int iValue = 100;
 						
@@ -36684,4 +36621,13 @@ bool CvUnitAI::AI_isNegativePropertyUnit()
 		}
 	}
 	return bAnswer;
+}
+
+int CvUnitAI::getMyAggression(int iAttackProb) const
+{
+	int iAggression = m_pUnitInfo->getAggression() + getLevel() - 1;
+	iAggression *= maxHitPoints() - getDamage();
+	iAggression /= 100;
+	iAggression *= iAttackProb;
+	return iAggression / 100;
 }

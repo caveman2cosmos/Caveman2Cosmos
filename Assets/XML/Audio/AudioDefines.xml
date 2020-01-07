@@ -12266,14 +12266,14 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_BUILD_FESTIVAL</SoundID>
-			<Filename>Sounds/Civic_Buildings/Soundpack/Festival</Filename>
+			<Filename>Sounds/Civics_Buildings/Soundpack/Festival</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_BUILD_DIVINE_MONUMENT</SoundID>
-			<Filename>Sounds/Civic_Buildings/Soundpack/Divine_Monument</Filename>
+			<Filename>Sounds/Civics_Buildings/Soundpack/Divine_Monument</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -12315,7 +12315,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_BUILD_WTC</SoundID>
-			<Filename>Sounds/RoMModularWonders/Soundpack/Soundpack/wtc</Filename>
+			<Filename>Sounds/RoMModularWonders/Soundpack/wtc</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>

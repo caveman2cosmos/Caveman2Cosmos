@@ -5041,25 +5041,31 @@ void CvSelectionGroup::setTransportUnit(CvUnit* pTransportUnit, CvSelectionGroup
 			
 			FAssertMsg(iCargoSpaceAvailable >= getNumUnits(), "cargo size too small");
 		}
-		else if (iCargoSpaceAvailable < getNumUnitCargoVolumeTotal()/*pTransportUnit->cargoSpaceAvailable(pHeadUnit->getSpecialUnitType(), pHeadUnit->getDomainType())*/)
+		else if (iCargoSpaceAvailable < getNumUnitCargoVolumeTotal()
+			/*pTransportUnit->cargoSpaceAvailable(pHeadUnit->getSpecialUnitType(), pHeadUnit->getDomainType())*/
+			)
 		{
-			CvSelectionGroup* pSplitGroup = splitGroup(1, NULL, pOtherGroup);
-			if (pSplitGroup != NULL)
+			// If we can't fit the whole group but we can fit the first unit then split it off and load it on its own.
+			if (getNumUnits() > 1 && iCargoSpaceAvailable >= getHeadUnit()->SMCargoVolume())
 			{
-				if (iCargoSpaceAvailable < pSplitGroup->getHeadUnit()->SMCargoVolume())
-				{
-					pSplitGroup->setTransportUnit(pTransportUnit);
-				}
-				else if (pSplitGroup->getHeadUnit()->canSplit())
-				{
-					pSplitGroup->getHeadUnit()->doSplit();
-					setTransportUnit(pTransportUnit);
-				}//this could lead to interesting results getting boats really packed with smaller units.
+				CvSelectionGroup* pSplitGroup = splitGroup(1, NULL, pOtherGroup);
+				FAssertMsg(pSplitGroup, "Split failed");
+				pSplitGroup->setTransportUnit(pTransportUnit);
+			}
+			// If the head unit can be split then try it
+			else if (getHeadUnit()->canSplit())
+			{
+				// TODO: https://github.com/caveman2cosmos/Caveman2Cosmos/issues/329 (we need to calculate if splitting unit will work first, only do it if it will)
+				getHeadUnit()->doSplit();
+				// Recurse and try again
+				setTransportUnit(pTransportUnit);
+			}
+			// We can't load anything
+			else
+			{
 				return;
 			}
-			FAssertMsg(iCargoSpaceAvailable >= getNumUnitCargoVolumeTotal(), "cargo size too small");
 		}
-					
 		
 		// setTransportUnit removes the unit from the current group so we copy the unit list from the group first (group being modified while being iterated can cause problems).
 		std::vector<CvUnit*> units(beginUnits(), endUnits());
@@ -5068,6 +5074,7 @@ void CvSelectionGroup::setTransportUnit(CvUnit* pTransportUnit, CvSelectionGroup
 			CvUnit* pLoopUnit = *itr;
 			// just in case implementation of setTransportUnit changes, check to make sure this unit is not already loaded
 			FAssertMsg(pLoopUnit->getTransportUnit() != pTransportUnit, "Unit is already changed");
+
 			// if there is room, load the unit
 			if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 			{
@@ -6500,8 +6507,7 @@ CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadU
 	}
 	else
 	{
-		// try to find remainder head with same AI as head, if we cannot find one, we will split the rest of the group up
-		// loop over all the units
+		// try to find remainder head with same AI as head, if we cannot find one, we will leave the remaining units in this group
 		unit_iterator fitr = std::find_if(beginUnits(), endUnits(), bst::bind(isValidHeadUnit, pNewHeadUnit, eOldHeadAI, _1));
 		if (fitr != endUnits())
 		{
@@ -6510,7 +6516,8 @@ CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadU
 	}
 	
 	CvSelectionGroup* pSplitGroup = NULL;
-	CvSelectionGroup* pRemainderGroup = NULL;
+	// Default to leaving remaining units in this group
+	CvSelectionGroup* pRemainderGroup = this;
 	
 	// make the new group for the new head
 	pNewHeadUnit->joinGroup(NULL);

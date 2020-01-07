@@ -1273,23 +1273,6 @@ CvMainMenuInfo& cvInternalGlobals::getMainMenus(int i)
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-// Python Modular Loading
-int cvInternalGlobals::getNumPythonModulesInfos()
-{
-	return (int)m_paPythonModulesInfo.size();
-}
-
-std::vector<CvPythonModulesInfo*>& cvInternalGlobals::getPythonModulesInfos()
-{
-	return m_paPythonModulesInfo;
-}
-
-CvPythonModulesInfo& cvInternalGlobals::getPythonModulesInfo(int iIndex)
-{
-	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumPythonModulesInfos(), "PythonModulesInfo index out of bounds");
-	return *(m_paPythonModulesInfo[iIndex]);
-}
-
 // MLF loading
 void cvInternalGlobals::resetModLoadControlVector()
 {
@@ -5136,8 +5119,6 @@ void cvInternalGlobals::deleteInfoArrays()
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	// Python Modular Loading
-	deleteInfoArray(m_paPythonModulesInfo);
 	// MLF loading
 	m_paModLoadControlVector.clear();
 	deleteInfoArray(m_paModLoadControls);

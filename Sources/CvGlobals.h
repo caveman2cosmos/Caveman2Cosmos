@@ -6,7 +6,6 @@
 #ifndef CIV4_GLOBALS_H
 #define CIV4_GLOBALS_H
 
-//#include "CvStructs.h"
 //
 // 'global' vars for Civ IV.  singleton class.
 // All globals and global types should be contained in this class
@@ -149,8 +148,6 @@ class CvInvisibleInfo;
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-// Python Modular Loading
-class CvPythonModulesInfo;
 // MLF loading
 class CvModLoadControlInfo;
 /************************************************************************************************/
@@ -430,10 +427,6 @@ public:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	// Python Modular Loading
-	int getNumPythonModulesInfos();
-	std::vector<CvPythonModulesInfo*>& getPythonModulesInfos();
-	CvPythonModulesInfo& getPythonModulesInfo(int i);
 	// MLF loading
 	void resetModLoadControlVector();
 	int getModLoadControlVectorSize();
@@ -1509,8 +1502,6 @@ protected:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	// Python Modular Loading
-	std::vector<CvPythonModulesInfo*> m_paPythonModulesInfo;
 	// MLF loading
 	std::vector<CvString> m_paModLoadControlVector;
 	std::vector<CvModLoadControlInfo*> m_paModLoadControls;
@@ -2463,17 +2454,6 @@ public:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	// Python Modular Loading
-	int getNumPythonModulesInfos()
-	{
-		PROXY_TRACK("getNumPythonModulesInfos");	
-		return gGlobals->getNumPythonModulesInfos();	
-	}
-	CvPythonModulesInfo& getPythonModulesInfo(int i)
-	{
-		PROXY_TRACK("getPythonModulesInfo");	
-		return gGlobals->getPythonModulesInfo(i);	
-	}
 	CvModLoadControlInfo& getModLoadControlInfos(int i)
 	{
 		PROXY_TRACK("getModLoadControlInfos");	

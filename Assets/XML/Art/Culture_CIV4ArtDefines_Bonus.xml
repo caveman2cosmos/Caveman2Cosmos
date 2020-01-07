@@ -357,6 +357,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Castilian -->
+<!-- No units
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CASTILIAN</Type>
 			<fScale>1.0</fScale>
@@ -366,6 +367,7 @@
 			<Button>art/Embassy/art/castilianembassy.dds</Button>
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
+-->
 	<!-- Celtic -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CELTIC</Type>
@@ -1047,6 +1049,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 	<!-- Leonese -->
+<!-- No units
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_LEON</Type>
 			<fScale>1.0</fScale>
@@ -1056,6 +1059,7 @@
 			<Button>art/Embassy/art/leonembassy.dds</Button>
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
+-->
 	<!-- Liangzhu -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_LIANGZHU</Type>
@@ -3323,6 +3327,7 @@
 			<Button>Art/Embassy/red_ocherembassy.dds</Button>
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
+<!-- Wrong flag
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SABBATEAN</Type>
 			<fScale>1.0</fScale>
@@ -3332,6 +3337,7 @@
 			<Button>Art/Embassy/sabbateanembassy.dds</Button>
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
+-->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SAFAVIDS</Type>
 			<fScale>1.0</fScale>

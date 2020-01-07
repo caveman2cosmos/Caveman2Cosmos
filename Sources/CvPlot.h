@@ -612,6 +612,59 @@ protected:
 	typedef bst::iterator_range<adjacent_iterator> adjacent_range;
 	adjacent_range adjacent() const { return adjacent_range(beginAdjacent(), endAdjacent()); }
 
+	// Base iterator type for iterating over a rectangle of plots
+	template < class Value_ >
+	struct rect_iterator_base :
+		public bst::iterator_facade<rect_iterator_base<Value_>, Value_*, bst::forward_traversal_tag, Value_*>
+	{
+		rect_iterator_base() : m_centerX(-1), m_centerY(-1), m_wid(0), m_hgt(0), m_curr(nullptr), m_x(0), m_y(0){}
+		explicit rect_iterator_base(int centerX, int centerY, int halfwid, int halfhgt) : m_centerX(centerX), m_centerY(centerY), m_wid(halfwid), m_hgt(halfhgt), m_curr(nullptr), m_x(-halfwid), m_y(-halfhgt)
+		{
+			increment();
+		}
+
+	private:
+		friend class bst::iterator_core_access;
+		void increment()
+		{
+			m_curr = nullptr;
+			for (; m_x <= m_wid && m_curr == nullptr; m_x++)
+			{
+				if (m_y == m_hgt)
+					m_y = -m_hgt;
+				for (; m_y <= m_hgt && m_curr == nullptr; m_y++)
+				{
+					m_curr = plotXY(m_centerX, m_centerY, m_x, m_y);
+				}
+			}
+		}
+		bool equal(rect_iterator_base const& other) const
+		{
+			return (this->m_centerX == other.m_centerX
+				&& this->m_centerY == other.m_centerY
+				&& this->m_x == other.m_x
+				&& this->m_y == other.m_y)
+				|| (this->m_curr == NULL && other.m_curr == NULL);
+		}
+
+		Value_* dereference() const { return m_curr; }
+
+		int m_centerX;
+		int m_centerY;
+		int m_wid;
+		int m_hgt;
+		Value_* m_curr;
+		int m_x;
+		int m_y;
+	};
+	typedef rect_iterator_base<CvPlot> rect_iterator;
+
+	static rect_iterator beginRect(int centerX, int centerY, int halfWid, int halfHgt) { return rect_iterator(centerX, centerY, halfWid, halfHgt); }
+	static rect_iterator endRect() { return rect_iterator(); }
+
+	typedef bst::iterator_range<rect_iterator> rect_range;
+	static rect_range rect(int centerX, int centerY, int halfWid, int halfHgt) { return rect_range(beginRect(centerX, centerY, halfWid, halfHgt), endRect()); }
+
 	// ==========================================================================================
 	// PAGING SYSTEM
 	//
@@ -1241,6 +1294,14 @@ protected:
 	ECvPlotGraphics::type m_requiredVisibleGraphics;
 	ECvPlotGraphics::type m_visibleGraphics;
 	CvPlotPaging::paging_handle m_pagingHandle;
+
+public:
+	//
+	// Algorithm/range helpers
+	//
+	struct fn {
+		DECLARE_MAP_FUNCTOR(CvPlot, bool, isWater);
+	}; 
 };
 
 #endif // CvPlot_h__
