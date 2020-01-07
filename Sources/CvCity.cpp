@@ -20040,17 +20040,19 @@ void CvCity::doProduction(bool bAllowNoProduction)
 				AI_chooseProduction();
 			}
 
+			//This section prevented building multiple wonders at once
+			//Maybe just prevent food from adding up in multiproduction overflow?
 			//to eliminate pre-build exploits for all Wonders and all Projects
-			if (isProductionWonder() || isProductionProject())
-			{
-				break;
-			}
+			//if (isProductionWonder() || isProductionProject())
+			//{
+			//	break;
+			//}
 
 			//to eliminate pre-build exploits for Settlers and Workers
-			if (isFoodProduction() && !isBuiltFoodProducedUnit())
-			{
-				break;
-			}
+			//if (isFoodProduction() && !isBuiltFoodProducedUnit())
+			//{
+			//	break;
+			//}
 
 			if (isProductionProcess())
 			{
