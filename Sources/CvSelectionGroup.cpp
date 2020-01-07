@@ -3406,20 +3406,7 @@ bool CvSelectionGroup::_isBusy()
 
 bool CvSelectionGroup::isBusy() const
 {
-	if (getMissionTimer() > 0)
-	{
-		return true;
-	}
-
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		if ((*unitItr)->isCombat())
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return getMissionTimer() > 0 || algo::any_of(units(), CvUnit::fn::isCombat());
 }
 
 
@@ -3519,12 +3506,9 @@ bool CvSelectionGroup::isFull() const
 	// if every unit in the group has special cargo, then check those, otherwise, consider ourselves full
 	if (iSpecialCargoCount >= iCargoCount)
 	{
-		for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-		{				
-			if (!(*unitItr)->isFull())
-			{
-				return false;
-			}
+		if (!algo::all_of(units(), CvUnit::fn::isFull()))
+		{
+			return false;
 		}
 	}
 
@@ -3699,29 +3683,13 @@ bool CvSelectionGroup::canMoveThrough(const CvPlot* pPlot, bool bDeclareWar) con
 
 bool CvSelectionGroup::canFight() const
 {
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		if ((*unitItr)->canFight())
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return algo::any_of(units(), CvUnit::fn::canFight());
 }
 
 
 bool CvSelectionGroup::canDefend() const
 {
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		if ((*unitItr)->canDefend())
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return algo::any_of(units(), CvUnit::fn::canDefend());
 }
 
 bool CvSelectionGroup::hasBombardCapability() const
@@ -3754,7 +3722,7 @@ bool CvSelectionGroup::canBombard(const CvPlot* pPlot, bool bCheckCanReduceOnly)
 {
 	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
 	{
-		CvUnit* pLoopUnit = *unitItr;
+		const CvUnit* pLoopUnit = *unitItr;
 
 		if (pLoopUnit->canBombard(pPlot, bCheckCanReduceOnly))
 		{
@@ -4119,15 +4087,7 @@ bool CvSelectionGroup::calculateIsStranded()
 
 bool CvSelectionGroup::canMoveAllTerrain() const
 {
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		if (!(*unitItr)->canMoveAllTerrain())
-		{
-			return false;
-		}
-	}
-
-	return true;
+	return algo::all_of(units(), CvUnit::fn::canMoveAllTerrain());
 }
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
@@ -4145,15 +4105,7 @@ bool CvSelectionGroup::alwaysInvisible() const
 {
 	FAssert(getNumUnits() > 0);
 
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		if (!(*unitItr)->alwaysInvisible())
-		{
-			return false;
-		}
-	}
-
-	return true;
+	return algo::all_of(units(), CvUnit::fn::alwaysInvisible());
 }
 
 
@@ -4173,7 +4125,7 @@ bool CvSelectionGroup::isInvisible(TeamTypes eTeam) const
 }
 
 
-int CvSelectionGroup::countNumUnitAIType(UnitAITypes eUnitAI)
+int CvSelectionGroup::countNumUnitAIType(UnitAITypes eUnitAI) const
 {
 	FAssertMsg(headUnitNode() != NULL, "headUnitNode() is not expected to be equal with NULL");
 
@@ -4191,23 +4143,15 @@ int CvSelectionGroup::countNumUnitAIType(UnitAITypes eUnitAI)
 }
 
 
-bool CvSelectionGroup::hasWorker()
+bool CvSelectionGroup::hasWorker() const
 {
 	return ((countNumUnitAIType(UNITAI_WORKER) > 0) || (countNumUnitAIType(UNITAI_WORKER_SEA) > 0));
 }
 
 
-bool CvSelectionGroup::IsSelected()
+bool CvSelectionGroup::IsSelected() const
 {
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		if ((*unitItr)->IsSelected())
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return algo::any_of(units(), CvUnit::fn::IsSelected());
 }
 
 
@@ -4300,7 +4244,7 @@ DomainTypes CvSelectionGroup::getDomainType() const
 }
 
 
-RouteTypes CvSelectionGroup::getBestBuildRoute(CvPlot* pPlot, BuildTypes* peBestBuild) const
+RouteTypes CvSelectionGroup::getBestBuildRoute(const CvPlot* pPlot, BuildTypes* peBestBuild) const
 {
 	PROFILE_FUNC();
 
@@ -4341,19 +4285,11 @@ bool CvSelectionGroup::canIgnoreZoneofControl() const
 {
 	FAssert(getNumUnits() > 0);
 
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		if (!(*unitItr)->canIgnoreZoneofControl())
-		{
-			return false;
-		}
-	}
-
-	return true;
+	return algo::all_of(units(), CvUnit::fn::canIgnoreZoneofControl());
 }
 
 // Returns true if group was bumped...
-bool CvSelectionGroup::groupDeclareWar(CvPlot* pPlot, bool bForce)
+bool CvSelectionGroup::groupDeclareWar(const CvPlot* pPlot, bool bForce)
 {
 	if (!AI_isDeclareWar(pPlot))
 	{
@@ -6058,12 +5994,10 @@ bool CvSelectionGroup::CachedPathGenerator::HaveCachedPathEdgeCosts(CvPlot* pFro
 			iBestMoveCost = (itr->second).iBestMoveCost;
 			iWorstMoveCost = (itr->second).iWorstMoveCost;
 			iToPlotNodeCost = (itr->second).iToPlotNodeCost;
-
 #ifdef _DEBUG
 			FAssert((itr->second).pFromPlot == pFromPlot);
 			FAssert((itr->second).pToPlot == pToPlot);
 #endif
-
 			result = true;
 		}
 	}
@@ -6081,12 +6015,10 @@ bool CvSelectionGroup::CachedPathGenerator::HaveCachedPathEdgeCosts(CvPlot* pFro
 			iBestMoveCost = (itr->second).iBestMoveCost;
 			iWorstMoveCost = (itr->second).iWorstMoveCost;
 			iToPlotNodeCost = (itr->second).iToPlotNodeCost;
-
 #ifdef _DEBUG
 			FAssert((itr->second).pFromPlot == pFromPlot);
 			FAssert((itr->second).pToPlot == pToPlot);
 #endif
-
 			result = true;
 		}
 	}
@@ -7381,15 +7313,7 @@ int CvSelectionGroup::getStrength() const
 
 bool CvSelectionGroup::hasCommander() const
 {
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		if ((*unitItr)->isCommander())
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return algo::any_of(units(), CvUnit::fn::isCommander());
 }
 
 void CvSelectionGroup::validateLocations(bool bFixup) const

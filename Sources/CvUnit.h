@@ -3326,11 +3326,20 @@ public:
 	struct fn {
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isDead);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, hasCargo);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isFull);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, canMove);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, canMoveAllTerrain);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, hasMoved);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, canIgnoreZoneofControl);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isAutoUpgrading);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isReadyForUpgrade);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isPromotionReady);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCombat);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, canFight);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, canDefend);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, alwaysInvisible);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, IsSelected);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCommander);
 		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, hasAfflictionLine, PromotionLineTypes);
 
 		DECLARE_MAP_FUNCTOR(CvUnit, int, getDamage);
