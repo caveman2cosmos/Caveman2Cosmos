@@ -12,7 +12,11 @@ def init(dir):
 	print "ScreenResolution.init\nSet custom resolution from CivilizationIV.ini if found."
 	import ConfigParser
 	Config = ConfigParser.ConfigParser()
-	Config.read(dir + "\CivilizationIV.ini")
+	path = dir + "\CivilizationIV.ini"
+	import IniMgr
+	IniMgr.readC2CIni(Config, path)
+
+	Config.read(path)
 	#Config.sections()
 	X0 = Config.get("DEBUG", "ScreenWidth")
 	Y0 = Config.get("DEBUG", "ScreenHeight")
