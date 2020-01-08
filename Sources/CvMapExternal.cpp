@@ -105,28 +105,33 @@ void CvMapExternal::updateCenterUnit()
 	m_proxiedMap->updateCenterUnit();
 }
 
-CvCity* CvMapExternal::findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eTeam, bool bSameArea, bool bCoastalOnly, TeamTypes eTeamAtWarWith, DirectionTypes eDirection, CvCity* pSkipCity)
+CvCity* CvMapExternal::_findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eTeam, bool bSameArea, bool bCoastalOnly, TeamTypes eTeamAtWarWith, DirectionTypes eDirection, CvCity* pSkipCity)
+{
+	return findCity(iX, iY, eOwner, eTeam, bSameArea, bCoastalOnly, eTeamAtWarWith, eDirection, pSkipCity);
+}
+
+CvCity* CvMapExternal::findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eTeam, bool bSameArea, bool bCoastalOnly, TeamTypes eTeamAtWarWith, DirectionTypes eDirection, const CvCity* pSkipCity) const
 {
 	return m_proxiedMap->findCity(iX, iY, eOwner, eTeam, bSameArea, bCoastalOnly, eTeamAtWarWith, eDirection, pSkipCity);
 }
 
-CvSelectionGroup* CvMapExternal::findSelectionGroup(int iX, int iY, PlayerTypes eOwner, bool bReadyToSelect, bool bWorkers)
+CvSelectionGroup* CvMapExternal::findSelectionGroup(int iX, int iY, PlayerTypes eOwner, bool bReadyToSelect, bool bWorkers) const
 {
 	return m_proxiedMap->findSelectionGroup(iX, iY, eOwner, bReadyToSelect, bWorkers);
 }
 
-bool CvMapExternal::isPlot(int iX, int iY) const																		// Exposed to Python
+bool CvMapExternal::isPlot(int iX, int iY) const
 {
 	return m_proxiedMap->isPlot(iX, iY);
 }
 
-int CvMapExternal::numPlots() const 																								// Exposed to Python
+int CvMapExternal::numPlots() const
 {
 	return m_proxiedMap->numPlots();
 }
 
 
-int CvMapExternal::plotNum(int iX, int iY) const																		// Exposed to Python
+int CvMapExternal::plotNum(int iX, int iY) const
 {
 	return m_proxiedMap->plotNum(iX, iY);
 }
@@ -138,7 +143,13 @@ int CvMapExternal::pointXToPlotX(float fX) const
 }
 
 
-float CvMapExternal::plotXToPointX(int iX)
+float CvMapExternal::_plotXToPointX(int iX)
+{
+	return plotXToPointX(iX);
+}
+
+
+float CvMapExternal::plotXToPointX(int iX) const
 {
 	return m_proxiedMap->plotXToPointX(iX);
 }
@@ -150,67 +161,97 @@ int CvMapExternal::pointYToPlotY(float fY) const
 }
 
 
-float CvMapExternal::plotYToPointY(int iY)
+float CvMapExternal::_plotYToPointY(int iY)
+{
+	return plotYToPointY(iY);
+}
+
+
+float CvMapExternal::plotYToPointY(int iY) const
 {
 	return m_proxiedMap->plotYToPointY(iY);
 }
 
 
-int CvMapExternal::getGridWidth() const																		// Exposed to Python
+int CvMapExternal::getGridWidth() const
 {
 	return m_proxiedMap->getGridWidth();
 }
 
 
-int CvMapExternal::getGridHeight() const																	// Exposed to Python
+int CvMapExternal::getGridHeight() const
 {
 	return m_proxiedMap->getGridHeight();
 }
 
 
-int CvMapExternal::getLandPlots() const																					// Exposed to Python
+int CvMapExternal::getLandPlots() const
 {
 	return m_proxiedMap->getLandPlots();
 }
 
 
-int CvMapExternal::getOwnedPlots() const																				// Exposed to Python
+int CvMapExternal::getOwnedPlots() const
 {
 	return m_proxiedMap->getOwnedPlots();
 }
 
 
-bool CvMapExternal::isWrapX()																							// Exposed to Python
+bool CvMapExternal::_isWrapX()
+{
+	return isWrapX();
+}
+
+
+bool CvMapExternal::isWrapX() const
 {
 	return m_proxiedMap->isWrapX();
 }
 
 
-bool CvMapExternal::isWrapY()																							// Exposed to Python
+bool CvMapExternal::_isWrapY()
+{
+	return isWrapY();
+}
+
+
+bool CvMapExternal::isWrapY() const
 {
 	return m_proxiedMap->isWrapY();
 }
 
 
-bool CvMapExternal::isWrap()																							// Exposed to Python
+bool CvMapExternal::_isWrap()
+{
+	return isWrap();
+}
+
+
+bool CvMapExternal::isWrap() const
 {
 	return m_proxiedMap->isWrap();
 }
 
 
-WorldSizeTypes CvMapExternal::getWorldSize()															// Exposed to Python
+WorldSizeTypes CvMapExternal::_getWorldSize()
+{
+	return getWorldSize();
+}
+
+
+WorldSizeTypes CvMapExternal::getWorldSize() const
 {
 	return m_proxiedMap->getWorldSize();
 }
 
 
-ClimateTypes CvMapExternal::getClimate() const																	// Exposed to Python
+ClimateTypes CvMapExternal::getClimate() const
 {
 	return m_proxiedMap->getClimate();
 }
 
 
-SeaLevelTypes CvMapExternal::getSeaLevel() const																// Exposed to Python
+SeaLevelTypes CvMapExternal::getSeaLevel() const
 {
 	return m_proxiedMap->getSeaLevel();
 }
@@ -222,18 +263,18 @@ int CvMapExternal::getNumCustomMapOptions() const
 }
 
 
-CustomMapOptionTypes CvMapExternal::getCustomMapOption(int iOption) const				// Exposed to Python
+CustomMapOptionTypes CvMapExternal::getCustomMapOption(int iOption) const
 {
 	return m_proxiedMap->getCustomMapOption(iOption);
 }
 
 
-CvPlot* CvMapExternal::plotByIndex(int iIndex) const											// Exposed to Python
+CvPlot* CvMapExternal::plotByIndex(int iIndex) const
 {
-	FAssert( 0 <= iIndex && iIndex < numPlots());
+	FAssert(0 <= iIndex && iIndex < numPlots());
 	CvPlot* result = m_proxiedMap->plotByIndex(iIndex);
 
-	if ( result == NULL )
+	if (result == NULL)
 	{
 		OutputDebugString(CvString::format("    Plot at (%d,%d): NULL\n").c_str());
 	}
@@ -241,30 +282,32 @@ CvPlot* CvMapExternal::plotByIndex(int iIndex) const											// Exposed to Pyt
 }
 
 
-CvPlot* CvMapExternal::plot(int iX, int iY) const													// Exposed to Python
-{
-	CvPlot* result;
-	
-	if ( !m_bMapCoordinates )
+CvPlot* CvMapExternal::plot(int iX, int iY) const
+{	
+	if (!m_bMapCoordinates)
 	{
-		result = m_proxiedMap->getUnderlyingMap()->plot(iX, iY);
+		return m_proxiedMap->getUnderlyingMap()->plot(iX, iY);
 	}
 	else
 	{
-		result = m_proxiedMap->plot(iX, iY);
+		return m_proxiedMap->plot(iX, iY);
 	}
-
-	return result;
 }
 
 
-CvPlot* CvMapExternal::pointToPlot(float fX, float fY)
+CvPlot* CvMapExternal::_pointToPlot(float fX, float fY)
+{
+	return pointToPlot(fX, fY);
+}
+
+
+CvPlot* CvMapExternal::pointToPlot(float fX, float fY) const
 {
 	return m_proxiedMap->pointToPlot(fX, fY);
 }
 
 
-int CvMapExternal::getNumAreas() const														// Exposed to Python
+int CvMapExternal::getNumAreas() const
 {
 	return m_proxiedMap->getNumAreas();
 }

@@ -125,14 +125,14 @@ public:
 
 	CvPlot* syncRandPlot(int iFlags = 0, int iArea = -1, int iMinUnitDistance = -1, int iTimeout = 100);// Exposed to Python 
 
-	CvCity* findCity(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, bool bSameArea = true, bool bCoastalOnly = false, TeamTypes eTeamAtWarWith = NO_TEAM, DirectionTypes eDirection = NO_DIRECTION, CvCity* pSkipCity = NULL);	// Exposed to Python
-	CvSelectionGroup* findSelectionGroup(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, bool bReadyToSelect = false, bool bWorkers = false);				// Exposed to Python
-	CvSelectionGroup* findSelectionGroupInternal(int iX, int iY, PlayerTypes eOwner, bool bReadyToSelect, bool bWorkers, bool bAllowViewportSwitch);				// Exposed to Python
+	CvCity* findCity(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, bool bSameArea = true, bool bCoastalOnly = false, TeamTypes eTeamAtWarWith = NO_TEAM, DirectionTypes eDirection = NO_DIRECTION, const CvCity* pSkipCity = NULL) const;	// Exposed to Python
+	CvSelectionGroup* findSelectionGroup(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, bool bReadyToSelect = false, bool bWorkers = false) const;				// Exposed to Python
+	CvSelectionGroup* findSelectionGroupInternal(int iX, int iY, PlayerTypes eOwner, bool bReadyToSelect, bool bWorkers, bool bAllowViewportSwitch) const;				// Exposed to Python
 
-	CvArea* findBiggestArea(bool bWater);																						// Exposed to Python
+	CvArea* findBiggestArea(bool bWater) const;																						// Exposed to Python
 
-	int getMapFractalFlags();																												// Exposed to Python
-	bool findWater(CvPlot* pPlot, int iRange, bool bFreshWater) const;										// Exposed to Python
+	int getMapFractalFlags() const;																												// Exposed to Python
+	bool findWater(const CvPlot* pPlot, int iRange, bool bFreshWater) const;										// Exposed to Python
 
 	bool isPlot(int iX, int iY) const;																		// Exposed to Python
 #ifdef _USRDLL
@@ -169,16 +169,16 @@ public:
 	int plotY(int iIndex) const;																										// Exposed to Python
 
 	int pointXToPlotX(float fX) const;
-	float plotXToPointX(int iX);
+	float plotXToPointX(int iX) const;
 
 	int pointYToPlotY(float fY) const;
-	float plotYToPointY(int iY);
+	float plotYToPointY(int iY) const;
 
-	float getWidthCoords();
-	float getHeightCoords();
+	float getWidthCoords() const;
+	float getHeightCoords() const;
 
-	int maxPlotDistance();																								// Exposed to Python
-	int maxStepDistance();																								// Exposed to Python
+	int maxPlotDistance() const;																								// Exposed to Python
+	int maxStepDistance() const;																								// Exposed to Python
 
 	int getGridWidth() const;																		// Exposed to Python
 #ifdef _USRDLL
@@ -203,7 +203,7 @@ public:
 	int getTopLatitude() const;																									// Exposed to Python
 	int getBottomLatitude() const;																							// Exposed to Python
 
-	int getNextRiverID();																									// Exposed to Python
+	int getNextRiverID() const;																									// Exposed to Python
 	void incrementNextRiverID();																					// Exposed to Python
 
 	bool isWrapX() const;																							// Exposed to Python
@@ -227,17 +227,17 @@ public:
 		return m_bWrapX || m_bWrapY;
 	}
 #endif
-	WorldSizeTypes getWorldSize();															// Exposed to Python
+	WorldSizeTypes getWorldSize() const;															// Exposed to Python
 	ClimateTypes getClimate() const;																	// Exposed to Python
 	SeaLevelTypes getSeaLevel() const;																// Exposed to Python
 
 	int getNumCustomMapOptions() const;
 	CustomMapOptionTypes getCustomMapOption(int iOption) const;				// Exposed to Python
 
-	int getNumBonuses(BonusTypes eIndex);																	// Exposed to Python
+	int getNumBonuses(BonusTypes eIndex) const;																	// Exposed to Python
 	void changeNumBonuses(BonusTypes eIndex, int iChange);
 
-	int getNumBonusesOnLand(BonusTypes eIndex);														// Exposed to Python
+	int getNumBonusesOnLand(BonusTypes eIndex) const;														// Exposed to Python
 	void changeNumBonusesOnLand(BonusTypes eIndex, int iChange);
 
 	CvPlot* plotByIndex(int iIndex) const;											// Exposed to Python
@@ -268,17 +268,17 @@ public:
 		return &(m_pMapPlots[plotNumINLINE(iX, iY)]);
 	}
 #endif
-	CvPlot* pointToPlot(float fX, float fY);
+	CvPlot* pointToPlot(float fX, float fY) const;
 
-	int getIndexAfterLastArea();														// Exposed to Python
+	int getIndexAfterLastArea() const;														// Exposed to Python
 	int getNumAreas() const;														// Exposed to Python
 	int getNumLandAreas() const;
-	CvArea* getArea(int iID);																// Exposed to Python
+	CvArea* getArea(int iID) const;																// Exposed to Python
 	CvArea* addArea();
 	void deleteArea(int iID);
 	// iteration
-	CvArea* firstArea(int *pIterIdx, bool bRev=false);								// Exposed to Python
-	CvArea* nextArea(int *pIterIdx, bool bRev=false);									// Exposed to Python
+	CvArea* firstArea(int *pIterIdx, bool bRev=false) const;								// Exposed to Python
+	CvArea* nextArea(int *pIterIdx, bool bRev=false) const;									// Exposed to Python
 
 	void recalculateAreas();																		// Exposed to Python
 

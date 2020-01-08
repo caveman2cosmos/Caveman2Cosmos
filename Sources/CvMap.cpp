@@ -736,7 +736,7 @@ CvPlot* CvMap::syncRandPlot(int iFlags, int iArea, int iMinUnitDistance, int iTi
 }
 
 
-CvCity* CvMap::findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eTeam, bool bSameArea, bool bCoastalOnly, TeamTypes eTeamAtWarWith, DirectionTypes eDirection, CvCity* pSkipCity)
+CvCity* CvMap::findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eTeam, bool bSameArea, bool bCoastalOnly, TeamTypes eTeamAtWarWith, DirectionTypes eDirection, const CvCity* pSkipCity) const
 {
 	PROFILE_FUNC();
 
@@ -785,12 +785,12 @@ CvCity* CvMap::findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eTeam, boo
 }
 
 
-CvSelectionGroup* CvMap::findSelectionGroup(int iX, int iY, PlayerTypes eOwner, bool bReadyToSelect, bool bWorkers)
+CvSelectionGroup* CvMap::findSelectionGroup(int iX, int iY, PlayerTypes eOwner, bool bReadyToSelect, bool bWorkers) const
 {
 	return findSelectionGroupInternal(iX, iY, eOwner, bReadyToSelect, bWorkers, false);
 }
 
-CvSelectionGroup* CvMap::findSelectionGroupInternal(int iX, int iY, PlayerTypes eOwner, bool bReadyToSelect, bool bWorkers, bool bAllowViewportSwitch)
+CvSelectionGroup* CvMap::findSelectionGroupInternal(int iX, int iY, PlayerTypes eOwner, bool bReadyToSelect, bool bWorkers, bool bAllowViewportSwitch) const
 {
 	// XXX look for barbarian cities???
 
@@ -832,7 +832,7 @@ CvSelectionGroup* CvMap::findSelectionGroupInternal(int iX, int iY, PlayerTypes 
 	return pBestSelectionGroupInViewport != NULL ? pBestSelectionGroupInViewport : (bAllowViewportSwitch ? pBestSelectionGroup : NULL);
 }
 
-CvArea* CvMap::findBiggestArea(bool bWater)
+CvArea* CvMap::findBiggestArea(bool bWater) const
 {
 	int iBestValue = 0;
 	CvArea* pBestArea = NULL;
@@ -855,7 +855,7 @@ CvArea* CvMap::findBiggestArea(bool bWater)
 }
 
 
-int CvMap::getMapFractalFlags()
+int CvMap::getMapFractalFlags() const
 {
 	const int wrapX = isWrapXINLINE() ? (int)CvFractal::FRAC_WRAP_X : 0;
 	const int wrapY = isWrapYINLINE() ? (int)CvFractal::FRAC_WRAP_Y : 0;
@@ -864,7 +864,7 @@ int CvMap::getMapFractalFlags()
 
 
 //"Check plots for wetlands or seaWater.  Returns true if found"
-bool CvMap::findWater(CvPlot* pPlot, int iRange, bool bFreshWater) const
+bool CvMap::findWater(const CvPlot* pPlot, int iRange, bool bFreshWater) const
 {
 	PROFILE("CvMap::findWater()");
 
@@ -923,7 +923,7 @@ int CvMap::pointXToPlotX(float fX) const
 }
 
 
-float CvMap::plotXToPointX(int iX)
+float CvMap::plotXToPointX(int iX) const
 {
 	float fWidth, fHeight;
 	gDLL->getEngineIFace()->GetLandscapeGameDimensions(fWidth, fHeight);
@@ -939,7 +939,7 @@ int CvMap::pointYToPlotY(float fY) const
 }
 
 
-float CvMap::plotYToPointY(int iY)
+float CvMap::plotYToPointY(int iY) const
 {
 	float fWidth, fHeight;
 	gDLL->getEngineIFace()->GetLandscapeGameDimensions(fWidth, fHeight);
@@ -947,25 +947,25 @@ float CvMap::plotYToPointY(int iY)
 }
 
 
-float CvMap::getWidthCoords()																	
+float CvMap::getWidthCoords() const																	
 {
 	return (GC.getPLOT_SIZE() * ((float)getGridWidthINLINE()));
 }
 
 
-float CvMap::getHeightCoords()																	
+float CvMap::getHeightCoords() const																	
 {
 	return (GC.getPLOT_SIZE() * ((float)getGridHeightINLINE()));
 }
 
 
-int CvMap::maxPlotDistance()
+int CvMap::maxPlotDistance() const
 {
 	return std::max(1, plotDistance(0, 0, ((isWrapXINLINE()) ? (getGridWidthINLINE() / 2) : (getGridWidthINLINE() - 1)), ((isWrapYINLINE()) ? (getGridHeightINLINE() / 2) : (getGridHeightINLINE() - 1))));
 }
 
 
-int CvMap::maxStepDistance()
+int CvMap::maxStepDistance() const
 {
 	return std::max(1, stepDistance(0, 0, ((isWrapXINLINE()) ? (getGridWidthINLINE() / 2) : (getGridWidthINLINE() - 1)), ((isWrapYINLINE()) ? (getGridHeightINLINE() / 2) : (getGridHeightINLINE() - 1))));
 }
@@ -1021,7 +1021,7 @@ int CvMap::getBottomLatitude() const
 }
 
 
-int CvMap::getNextRiverID()
+int CvMap::getNextRiverID() const
 {
 	return m_iNextRiverID;
 }
@@ -1049,7 +1049,7 @@ bool CvMap::isWrap() const
 	return isWrapINLINE();
 }
 
-WorldSizeTypes CvMap::getWorldSize()
+WorldSizeTypes CvMap::getWorldSize() const
 {
 	return GC.getInitCore().getWorldSize();
 }
@@ -1079,7 +1079,7 @@ CustomMapOptionTypes CvMap::getCustomMapOption(int iOption) const
 }
 
 
-int CvMap::getNumBonuses(BonusTypes eIndex)													
+int CvMap::getNumBonuses(BonusTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
@@ -1087,7 +1087,7 @@ int CvMap::getNumBonuses(BonusTypes eIndex)
 }
 
 
-void CvMap::changeNumBonuses(BonusTypes eIndex, int iChange)									
+void CvMap::changeNumBonuses(BonusTypes eIndex, int iChange)
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
@@ -1096,7 +1096,7 @@ void CvMap::changeNumBonuses(BonusTypes eIndex, int iChange)
 }
 
 
-int CvMap::getNumBonusesOnLand(BonusTypes eIndex)													
+int CvMap::getNumBonusesOnLand(BonusTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
@@ -1104,7 +1104,7 @@ int CvMap::getNumBonusesOnLand(BonusTypes eIndex)
 }
 
 
-void CvMap::changeNumBonusesOnLand(BonusTypes eIndex, int iChange)									
+void CvMap::changeNumBonusesOnLand(BonusTypes eIndex, int iChange)
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
@@ -1125,13 +1125,13 @@ CvPlot* CvMap::plot(int iX, int iY) const
 }
 
 
-CvPlot* CvMap::pointToPlot(float fX, float fY)													
+CvPlot* CvMap::pointToPlot(float fX, float fY) const
 {
 	return plotINLINE(pointXToPlotX(fX), pointYToPlotY(fY));
 }
 
 
-int CvMap::getIndexAfterLastArea()																
+int CvMap::getIndexAfterLastArea() const
 {
 	return m_areas.getIndexAfterLast();
 }
@@ -1160,7 +1160,7 @@ int CvMap::getNumLandAreas() const
 }
 
 
-CvArea* CvMap::getArea(int iID)																
+CvArea* CvMap::getArea(int iID) const
 {
 	return m_areas.getAt(iID);
 }
@@ -1178,13 +1178,13 @@ void CvMap::deleteArea(int iID)
 }
 
 
-CvArea* CvMap::firstArea(int *pIterIdx, bool bRev)
+CvArea* CvMap::firstArea(int *pIterIdx, bool bRev) const
 {
 	return !bRev ? m_areas.beginIter(pIterIdx) : m_areas.endIter(pIterIdx);
 }
 
 
-CvArea* CvMap::nextArea(int *pIterIdx, bool bRev)
+CvArea* CvMap::nextArea(int *pIterIdx, bool bRev) const
 {
 	return !bRev ? m_areas.nextIter(pIterIdx) : m_areas.prevIter(pIterIdx);
 }
