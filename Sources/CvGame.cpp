@@ -307,7 +307,6 @@ void CvGame::init(HandicapTypes eHandicap)
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-#if defined QC_MASTERY_VICTORY
 //Sevo Begin--VCM
 	// This looks like a reasonable place for me to place my own interrupts for the victory conditions
 	// I need to ensure that the AI understands it has to go after everything, so ALL the victory options
@@ -347,9 +346,6 @@ void CvGame::init(HandicapTypes eHandicap)
 		}
 	}
 //Sevo End VCM
-#else
-  }
-#endif
 
 	m_plotGroupHashesInitialized = false;
 	
@@ -871,13 +867,12 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	calculateNumWonders();
 	m_iLastNukeStrikeX = INVALID_PLOT_COORD;
 	m_iLastNukeStrikeY = INVALID_PLOT_COORD;
-#if defined QC_MASTERY_VICTORY
+
 	for (int loopI = 0; loopI < MAX_TEAMS; loopI++)
 	{
 	  starshipLaunched[loopI] = false;
 	  diplomaticVictoryAchieved[loopI] = false;		
 	}	
-#endif
 /************************************************************************************************/
 /* Afforess	                         END                                                        */
 /************************************************************************************************/	
@@ -8951,14 +8946,12 @@ bool CvGame::testVictory(VictoryTypes eVictory, TeamTypes eTeam, bool* pbEndScor
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-#if defined QC_MASTERY_VICTORY
 //Sevo Begin--VCM
 		else
 		{
 			starshipLaunched[eTeam] = true;	  	
 		}
 //Sevo End VCM
-#endif
 /************************************************************************************************/
 /* Afforess	                         END                                                        */
 /************************************************************************************************/	
@@ -9934,10 +9927,8 @@ void CvGame::read(FDataStreamBase* pStream)
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-#if defined QC_MASTERY_VICTORY
 	WRAPPER_READ_ARRAY(wrapper,"CvGame",MAX_TEAMS, starshipLaunched);
 	WRAPPER_READ_ARRAY(wrapper,"CvGame",MAX_TEAMS, diplomaticVictoryAchieved);
-#endif
 /************************************************************************************************/
 /* Afforess	                         END                                                        */
 /************************************************************************************************/	
@@ -10306,11 +10297,8 @@ void CvGame::write(FDataStreamBase* pStream)
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-#if defined QC_MASTERY_VICTORY
-
 	WRAPPER_WRITE_ARRAY(wrapper, "CvGame", MAX_TEAMS, starshipLaunched);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvGame", MAX_TEAMS, diplomaticVictoryAchieved);
-#endif
 /************************************************************************************************/
 /* Afforess	                         END                                                        */
 /************************************************************************************************/	
@@ -11942,8 +11930,6 @@ void CvGame::changeWaterAnimalSpawnChance(int iChange)
 	setWaterAnimalSpawnChance(getWaterAnimalSpawnChance() + iChange);
 }
 
-#if defined QC_MASTERY_VICTORY
-
 bool CvGame::getStarshipLaunched(int ID) const
 {  
 	return starshipLaunched[GET_PLAYER((PlayerTypes)ID).getTeam()];
@@ -11953,7 +11939,6 @@ bool CvGame::getDiplomaticVictoryAchieved(int ID) const
 {	
 	return diplomaticVictoryAchieved[GET_PLAYER((PlayerTypes)ID).getTeam()];
 }
-#endif
 
 int CvGame::getCurrentVoteID() const
 {

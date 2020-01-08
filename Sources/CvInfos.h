@@ -4944,10 +4944,8 @@ public:
 	int getCityCulture() const;				// Exposed to Python
 	int getNumCultureCities() const;		// Exposed to Python
 	int getTotalCultureRatio() const;		// Exposed to Python
-#ifdef QC_MASTERY_VICTORY
 	//Sevo VCM
 	bool isTotalVictory() const;
-#endif
 	int getVictoryDelayTurns() const;		// Exposed to Python
 
 	bool isTargetScore() const;				// Exposed to Python
@@ -4980,10 +4978,9 @@ protected:
 	bool m_bConquest;
 	bool m_bDiploVote;
 	bool m_bPermanent;
-#ifdef QC_MASTERY_VICTORY
 	//Sevo VCM
 	bool m_bTotalVictory;
-#endif
+
 	CvString m_szMovie;
 
 };

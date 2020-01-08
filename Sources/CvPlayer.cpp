@@ -32977,7 +32977,6 @@ int CvPlayer::calculateTaxRateUnhappiness() const
 	return (getCommercePercent(COMMERCE_GOLD) * getTaxRateUnhappiness() / 100);
 }
 
-#if defined QC_MASTERY_VICTORY
 //Sevo Begin -VCM
 /*  getSevoWonderScore
 This function returns the number of wonders BUILT by the playerID (not OWNED!)
@@ -33051,7 +33050,6 @@ int CvPlayer::getSevoWondersScore(int mode)
 	}
 }
 	//Sevo End VCM
-#endif
 
 void CvPlayer::recalculatePopulationgrowthratepercentage()
 {

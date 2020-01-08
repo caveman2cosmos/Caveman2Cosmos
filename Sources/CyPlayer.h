@@ -461,11 +461,9 @@ public:
 	int getUnitPower();
 	int getPopScore();
 	int getLandScore();
-#if defined QC_MASTERY_VICTORY
 //Sevo Begin--VCM
 	int getSevoWondersScore(int mode);
 //Sevo End VCM
-#endif
 	int getWondersScore();
 	int getTechScore();
 	int getTotalTimePlayed();

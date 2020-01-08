@@ -1705,14 +1705,12 @@ int CyPlayer::getLandScore()
 	return m_pPlayer ? m_pPlayer->getLandScore() : -1;
 }
 
-#if defined QC_MASTERY_VICTORY
 //Sevo Begin--VCM
 int CyPlayer::getSevoWondersScore(int mode)
 {
 	return m_pPlayer ? m_pPlayer->getSevoWondersScore(mode) : -1;
 }
 //Sevo End VCM
-#endif
 
 int CyPlayer::getWondersScore()
 {

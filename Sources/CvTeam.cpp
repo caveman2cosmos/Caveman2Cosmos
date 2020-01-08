@@ -6310,7 +6310,6 @@ void CvTeam::resetVictoryProgress()
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-#if defined QC_MASTERY_VICTORY
 			bool bValid = false;
 			for (int iJ = 0; iJ < GC.getNumVictoryInfos(); ++iJ)
 			{
@@ -6324,7 +6323,6 @@ void CvTeam::resetVictoryProgress()
 				}
 			}			
 			if (!bValid)			
-#endif
 			{
 /************************************************************************************************/
 /* Afforess	                         END                                                        */
