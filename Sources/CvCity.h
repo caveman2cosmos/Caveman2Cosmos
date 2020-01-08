@@ -336,15 +336,18 @@ public:
 	const wchar* getProductionNameKey() const;													// Exposed to Python
 	int getGeneralProductionTurnsLeft() const;										// Exposed to Python
 
-	bool isFoodProduction() const;																								// Exposed to Python
-	bool isFoodProduction(UnitTypes eUnit) const;																	// Exposed to Python
-	int getFirstUnitOrder(UnitTypes eUnit) const;																	// Exposed to Python
-	int getFirstBuildingOrder(BuildingTypes eBuilding) const;											// Exposed to Python
-	int getFirstProjectOrder(ProjectTypes eProject) const;												// Exposed to Python
-	int getNumTrainUnitAI(UnitAITypes eUnitAI) const;															// Exposed to Python
+	bool isFoodProduction() const; // Exposed to Python
+	bool isFoodProduction(const OrderData& order) const;
+	bool isFoodProduction(UnitTypes eUnit) const; // Exposed to Python
 
-	int getProduction() const;																						// Exposed to Python
-	int getProductionNeeded() const;																						// Exposed to Python
+	int getFirstUnitOrder(UnitTypes eUnit) const; // Exposed to Python
+	int getFirstBuildingOrder(BuildingTypes eBuilding) const; // Exposed to Python
+	int getFirstProjectOrder(ProjectTypes eProject) const; // Exposed to Python
+	int getNumTrainUnitAI(UnitAITypes eUnitAI) const; // Exposed to Python
+
+	int getProduction() const; // Exposed to Python
+	int getProductionNeeded() const; // Exposed to Python
+	int getProductionNeeded(const OrderData& order) const;
 	int getProductionNeeded(UnitTypes eUnit) const;
 	int getProductionNeeded(BuildingTypes eBuilding) const;
 	int getProductionNeeded(ProjectTypes eProject) const;		
@@ -362,10 +365,12 @@ public:
 	void changeProduction(int iChange);																			// Exposed to Python
 	int numQueuedUnits(UnitAITypes contractedAIType, const CvPlot* contractedPlot) const;
 
-	int getProductionModifier() const;																						// Exposed to Python
-	int getProductionModifier(UnitTypes eUnit) const;															// Exposed to Python
-	int getProductionModifier(BuildingTypes eBuilding) const;											// Exposed to Python
-	int getProductionModifier(ProjectTypes eProject) const;												// Exposed to Python
+	int getProductionModifier(const OrderData& order) const;
+	int getProductionModifier() const; // Exposed to Python
+
+	int getProductionModifier(UnitTypes eUnit) const; // Exposed to Python
+	int getProductionModifier(BuildingTypes eBuilding) const; // Exposed to Python
+	int getProductionModifier(ProjectTypes eProject) const; // Exposed to Python
 
 //	int getOverflowProductionDifference(int iProductionNeeded, int iProduction, int iProductionModifier, int iDiff, int iModifiedProduction) const;
 //	int getProductionDifference(int iProductionNeeded, int iProduction, int iProductionModifier, bool bFoodProduction, bool bOverflow) const;
@@ -374,8 +379,9 @@ public:
 	// int getProductionDifference(int iProductionNeeded, int iProduction, int iProductionModifier, bool bFoodProduction, bool bOverflow, bool bYield = true) const;
 	int getProductionPerTurn(int iProductionModifier, ProductionCalc::flags flags) const;
 
-	int getCurrentProductionDifference(bool bIgnoreFood, bool bOverflow) const;				// Exposed to Python
-	int getExtraProductionDifference(int iExtra) const;																					// Exposed to Python
+	int getProductionDifference(const OrderData& orderData, ProductionCalc::flags flags) const;
+	int getCurrentProductionDifference(ProductionCalc::flags flags) const; // Exposed to Python
+	int getExtraProductionDifference(int iExtra) const; // Exposed to Python
 
 	bool canHurry(HurryTypes eHurry, bool bTestVisible = false) const;		// Exposed to Python
 	void hurry(HurryTypes eHurry);																						// Exposed to Python

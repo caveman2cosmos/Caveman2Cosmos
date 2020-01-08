@@ -4751,30 +4751,16 @@ const wchar* CvCity::getProductionNameKey() const
 	return L"";
 }
 
+bool CvCity::isFoodProduction(const OrderData& order) const
+{
+	return order.getOrderType() == ORDER_TRAIN && isFoodProduction(order.getUnitType());
+}
 
 bool CvCity::isFoodProduction() const
 {
 	bst::optional<OrderData> order = getHeadOrder();
 
-	if (order)
-	{
-		switch (order->eOrderType)
-		{
-		case ORDER_TRAIN:
-			return isFoodProduction(order->getUnitType());
-		case ORDER_CONSTRUCT:
-		case ORDER_CREATE:
-		case ORDER_MAINTAIN:
-		case ORDER_LIST:
-			break;
-
-		default:
-			FErrorMsg("pOrderNode->m_data.eOrderType failed to match a valid option");
-			break;
-		}
-	}
-
-	return false;
+	return order && isFoodProduction(*order);
 }
 
 
@@ -4882,25 +4868,26 @@ int CvCity::getProduction() const
 int CvCity::getProductionNeeded() const
 {
 	bst::optional<OrderData> order = getHeadOrder();
+	return order ? getProductionNeeded(*order) : MAX_INT;
+}
 
-	if (order)
+int CvCity::getProductionNeeded(const OrderData& order) const
+{
+	switch (order.eOrderType)
 	{
-		switch (order->eOrderType)
-		{
-		case ORDER_TRAIN:
-			return getProductionNeeded(order->getUnitType());
-		case ORDER_CONSTRUCT:
-			return getProductionNeeded(order->getBuildingType());
-		case ORDER_CREATE:
-			return getProductionNeeded(order->getProjectType());
-		case ORDER_MAINTAIN:
-		case ORDER_LIST:
-			break;
+	case ORDER_TRAIN:
+		return getProductionNeeded(order.getUnitType());
+	case ORDER_CONSTRUCT:
+		return getProductionNeeded(order.getBuildingType());
+	case ORDER_CREATE:
+		return getProductionNeeded(order.getProjectType());
+	case ORDER_MAINTAIN:
+	case ORDER_LIST:
+		break;
 
-		default:
-			FAssertMsg(false, "pOrderNode->m_data.eOrderType failed to match a valid option");
-			break;
-		}
+	default:
+		FErrorMsg("OrderType failed to match a valid option");
+		break;
 	}
 
 	return MAX_INT;
@@ -4942,11 +4929,7 @@ int CvCity::getProductionNeeded(ProjectTypes eProject) const
 int CvCity::getProductionTurnsLeft() const
 {
 	bst::optional<OrderData> order = getHeadOrder();
-	if(order)
-	{
-		return getOrderProductionTurnsLeft(*order);
-	}
-	return 0;
+	return order ? getOrderProductionTurnsLeft(*order) : 0;
 }
 
 int CvCity::getOrderProductionTurnsLeft(const OrderData& order, int iIndex) const
@@ -4973,19 +4956,45 @@ int CvCity::getOrderProductionTurnsLeft(const OrderData& order, int iIndex) cons
 
 int CvCity::getTotalProductionQueueTurnsLeft() const
 {
-	//CLLNode<OrderData>* pOrderNode = headOrderQueueNode();
-	//int iResult = 0;
-	//int	iIndex = 0;
+	if (m_orderQueue.empty())
+	{
+		return 0;
+	}
 
-	//while (pOrderNode != NULL)
-	//{
-	//	iResult += getOrderProductionTurnsLeft(pOrderNode, iIndex++);
+	int currProd = getCurrentProductionDifference(ProductionCalc::FoodProduction | ProductionCalc::Overflow);
+	if (currProd == 0)
+	{
+		return MAX_INT;
+	}
 
-	//	pOrderNode = nextOrderQueueNode(pOrderNode);
-	//}
+	int turns = 1;
+	foreach_ (const OrderData & order, m_orderQueue)
+	{
+		int productionNeeded = getProductionNeeded(order);
 
-	//return iResult;
-	return 0;
+		while (productionNeeded > 0)
+		{
+			if (currProd > productionNeeded)
+			{
+				// Can build this turn
+				currProd -= productionNeeded;
+				productionNeeded = 0;
+			}
+			else
+			{
+				// Next turn
+				productionNeeded -= currProd;
+				currProd = getProductionDifference(order, ProductionCalc::FoodProduction);
+				if (currProd == 0)
+				{
+					return MAX_INT;
+				}
+				++turns;
+			}
+		}
+	}
+
+	return turns;
 }
 
 namespace {
@@ -5121,34 +5130,33 @@ void CvCity::changeProduction(int iChange)
 	}
 }
 
-
-int CvCity::getProductionModifier() const
+int CvCity::getProductionModifier(const OrderData& order) const
 {
-	bst::optional<OrderData> order = getHeadOrder();
-
-	if (order)
+	switch (order.getOrderType())
 	{
-		switch (order->eOrderType)
-		{
-		case ORDER_TRAIN:
-			return getProductionModifier(order->getUnitType());
-		case ORDER_CONSTRUCT:
-			return getProductionModifier(order->getBuildingType());
-		case ORDER_CREATE:
-			return getProductionModifier(order->getProjectType());
-		case ORDER_MAINTAIN:
-		case ORDER_LIST:
-			break;
+	case ORDER_TRAIN:
+		return getProductionModifier(order.getUnitType());
+	case ORDER_CONSTRUCT:
+		return getProductionModifier(order.getBuildingType());
+	case ORDER_CREATE:
+		return getProductionModifier(order.getProjectType());
+	case ORDER_MAINTAIN:
+	case ORDER_LIST:
+		break;
 
-		default:
-			FErrorMsg("order->eOrderType failed to match a valid option");
-			break;
-		}
+	default:
+		FErrorMsg("OrderType failed to match a valid option");
+		break;
 	}
 
 	return 0;
 }
 
+int CvCity::getProductionModifier() const
+{
+	bst::optional<OrderData> order = getHeadOrder();
+	return order ? getProductionModifier(*order) : 0;
+}
 
 int CvCity::getProductionModifier(UnitTypes eUnit) const
 {
@@ -5287,13 +5295,18 @@ int CvCity::getProductionPerTurn(int modifier, ProductionCalc::flags flags = Pro
 	return ((iYield + iOverflow) * getBaseYieldRateModifier(YIELD_PRODUCTION, modifier)) / 100 + iFoodProduction;
 }
 
-
-int CvCity::getCurrentProductionDifference(bool bIgnoreFood, bool bOverflow) const
+int CvCity::getProductionDifference(const OrderData& orderData, ProductionCalc::flags flags) const
 {
-	const ProductionCalc::flags foodFlag = (!bIgnoreFood && isFoodProduction()) ? ProductionCalc::FoodProduction : ProductionCalc::None;
-	const ProductionCalc::flags overflowProd = bOverflow ? ProductionCalc::Overflow : ProductionCalc::None;
+	const ProductionCalc::flags foodFlag = ((flags & ProductionCalc::FoodProduction) && isFoodProduction(orderData)) ? ProductionCalc::FoodProduction : ProductionCalc::None;
+	const ProductionCalc::flags overflowProd = (flags & ProductionCalc::Overflow) ? ProductionCalc::Overflow : ProductionCalc::None;
 
-	return getProductionPerTurn(getProductionModifier(), foodFlag | overflowProd | ProductionCalc::Yield);
+	return getProductionPerTurn(getProductionModifier(orderData), foodFlag | overflowProd | ProductionCalc::Yield);
+}
+
+int CvCity::getCurrentProductionDifference(ProductionCalc::flags flags) const
+{
+	bst::optional<OrderData> order = getHeadOrder();
+	return order ? getProductionDifference(*order, flags) : 0;
 }
 
 int CvCity::getExtraProductionDifference(int iExtra) const
@@ -5539,9 +5552,9 @@ bool CvCity::hurryOverflow(HurryTypes eHurry, int* iProduction, int* iGold, bool
 	if (bCountThisTurn)
 	{
 		// include chops and previous overflow here
-		iOverflow += getCurrentProductionDifference(false, true);
+		iOverflow += getCurrentProductionDifference(ProductionCalc::FoodProduction | ProductionCalc::Overflow);
 	}
-	int iMaxOverflow = std::max(iTotal, getCurrentProductionDifference(false, false));
+	int iMaxOverflow = std::max(iTotal, getCurrentProductionDifference(ProductionCalc::FoodProduction));
 	int iLostProduction = std::max(0, iOverflow - iMaxOverflow);
 	int iBaseModifier = getBaseYieldRateModifier(YIELD_PRODUCTION);
 	int iTotalModifier = getBaseYieldRateModifier(YIELD_PRODUCTION, iModifier);
@@ -18614,7 +18627,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 
 			// max overflow is the value of the item produced (to eliminate prebuild exploits)
 			const int iUnlimitedOverflow = getUnitProduction(eTrainUnit) - iProductionNeeded;
-			const int iMaxOverflow = std::max(iProductionNeeded, getCurrentProductionDifference(false, false));
+			const int iMaxOverflow = std::max(iProductionNeeded, getCurrentProductionDifference(ProductionCalc::FoodProduction));
 			int iLostProduction = std::max(0, iUnlimitedOverflow - iMaxOverflow);
 			m_iLostProductionModified = iLostProduction;
 			m_iLostProductionBase = (100 * iLostProduction) / std::max(1, getBaseYieldRateModifier(YIELD_PRODUCTION, getProductionModifier(eTrainUnit)));
@@ -18801,7 +18814,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 			int iProductionNeeded = getProductionNeeded(eConstructBuilding);
 			// max overflow is the value of the item produced (to eliminate prebuild exploits)
 			int iUnlimitedOverflow = getBuildingProduction(eConstructBuilding) - iProductionNeeded;
-			int iMaxOverflow = std::max(iProductionNeeded, getCurrentProductionDifference(false, false));
+			int iMaxOverflow = std::max(iProductionNeeded, getCurrentProductionDifference(ProductionCalc::FoodProduction));
 			int iLostProduction = std::max(0, iUnlimitedOverflow - iMaxOverflow);
 			m_iLostProductionModified = iLostProduction;
 			m_iLostProductionBase = (100 * iLostProduction) / std::max(1, getBaseYieldRateModifier(YIELD_PRODUCTION, getProductionModifier(eConstructBuilding)));
@@ -18923,7 +18936,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 			int iProductionNeeded = getProductionNeeded(eCreateProject);
 			// max overflow is the value of the item produced (to eliminate pre-build exploits)
 			int iUnlimitedOverflow = getProjectProduction(eCreateProject) - iProductionNeeded;
-			int iMaxOverflow = std::max(iProductionNeeded, getCurrentProductionDifference(false, false));
+			int iMaxOverflow = std::max(iProductionNeeded, getCurrentProductionDifference(ProductionCalc::FoodProduction));
 			int iLostProduction = std::max(0, iUnlimitedOverflow - iMaxOverflow);
 			m_iLostProductionModified = iLostProduction;
 			m_iLostProductionBase = (100 * iLostProduction) / std::max(1, getBaseYieldRateModifier(YIELD_PRODUCTION, getProductionModifier(eCreateProject)));
@@ -19510,7 +19523,7 @@ void CvCity::doProduction(bool bAllowNoProduction)
 
 	if (isProduction())
 	{
-		changeProduction(getCurrentProductionDifference(false, true));
+		changeProduction(getCurrentProductionDifference(ProductionCalc::FoodProduction | ProductionCalc::Overflow));
 		setOverflowProduction(0);
 		setFeatureProduction(0);
 		/************************************************************************************************/
@@ -19577,7 +19590,7 @@ void CvCity::doProduction(bool bAllowNoProduction)
 	}
 	else
 	{
-		changeOverflowProduction(getCurrentProductionDifference(false, false), getProductionModifier());
+		changeOverflowProduction(getCurrentProductionDifference(ProductionCalc::FoodProduction), getProductionModifier());
 	}
 }
 
@@ -21368,8 +21381,8 @@ bool CvCity::getProductionBarPercentages(std::vector<float>& afPercentages) cons
 	if (!isProductionProcess())
 	{
 		afPercentages.resize(NUM_INFOBAR_TYPES, 0.0f);
-		int iProductionDiffNoFood = getCurrentProductionDifference(true, true);
-		int iProductionDiffJustFood = getCurrentProductionDifference(false, true) - iProductionDiffNoFood;
+		const int iProductionDiffNoFood = getCurrentProductionDifference(ProductionCalc::Overflow);
+		const int iProductionDiffJustFood = getCurrentProductionDifference(ProductionCalc::FoodProduction | ProductionCalc::Overflow) - iProductionDiffNoFood;
 		afPercentages[INFOBAR_STORED] = getProduction() / (float)getProductionNeeded();
 		afPercentages[INFOBAR_RATE] = iProductionDiffNoFood / (float)getProductionNeeded();
 		afPercentages[INFOBAR_RATE_EXTRA] = iProductionDiffJustFood / (float)getProductionNeeded();

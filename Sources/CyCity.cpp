@@ -442,7 +442,10 @@ int CyCity::getProductionModifier()
 
 int CyCity::getCurrentProductionDifference(bool bIgnoreFood, bool bOverflow)
 {
-	return m_pCity ? m_pCity->getCurrentProductionDifference(bIgnoreFood, bOverflow) : -1;
+	return m_pCity ? m_pCity->getCurrentProductionDifference(
+		(bIgnoreFood? ProductionCalc::None : ProductionCalc::FoodProduction) | 
+		(bOverflow? ProductionCalc::Overflow : ProductionCalc::None)
+	) : -1;
 }
 
 int CyCity::getUnitProductionModifier(int /*UnitTypes*/ iUnit)

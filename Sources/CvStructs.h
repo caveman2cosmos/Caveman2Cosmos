@@ -456,6 +456,8 @@ struct OrderData // Exposed to Python
 		return OrderData(eOrderType, EXTERNAL_ORDER_IDATA(iData1), EXTERNAL_ORDER_IDATA(iData2), bSave);
 	}
 
+	OrderTypes getOrderType() const { return eOrderType; }
+
 	UnitTypes getUnitType() const { 
 		FAssert(eOrderType == ORDER_TRAIN);
 		return static_cast<UnitTypes>(unit.type); 

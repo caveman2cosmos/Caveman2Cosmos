@@ -10575,12 +10575,12 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		}
 		else
 		{
-			iBaseProductionDiffNoFood = pCity->getCurrentProductionDifference(true, false);
+			iBaseProductionDiffNoFood = pCity->getCurrentProductionDifference(ProductionCalc::None);
 		}
 // BUG - Base Production - end
 
-		iProductionDiffNoFood = pCity->getCurrentProductionDifference(true, true);
-		iProductionDiffJustFood = (pCity->getCurrentProductionDifference(false, true) - iProductionDiffNoFood);
+		iProductionDiffNoFood = pCity->getCurrentProductionDifference(ProductionCalc::Overflow);
+		iProductionDiffJustFood = (pCity->getCurrentProductionDifference(ProductionCalc::FoodProduction | ProductionCalc::Overflow) - iProductionDiffNoFood);
 
 		if (iProductionDiffJustFood > 0)
 		{
@@ -10642,7 +10642,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		}
 		else
 		{
-			iBaseProductionDiffNoFood = pCity->getCurrentProductionDifference(true, false);
+			iBaseProductionDiffNoFood = pCity->getCurrentProductionDifference(ProductionCalc::Overflow);
 		}
 		if (iOverflow > 0 || iBaseProductionDiffNoFood > 0)
 		{
@@ -35957,7 +35957,7 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 
 // BUG - Building Additional Production - start
 	bool bBuildingAdditionalYield = getBugOptionBOOL("MiscHover__BuildingAdditionalProduction", true, "BUG_BUILDING_ADDITIONAL_PRODUCTION_HOVER");
-	if (city.getCurrentProductionDifference(false, true) == 0 && !bBuildingAdditionalYield)
+	if (city.getCurrentProductionDifference(ProductionCalc::FoodProduction | ProductionCalc::Overflow) == 0 && !bBuildingAdditionalYield)
 // BUG - Building Additional Production - end
 	{
 		return;
@@ -36332,7 +36332,7 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 
 	int iModProduction = iFoodProduction + (iBaseModifier * iBaseProduction) / 100;
 
-	FAssertMsg(iModProduction == city.getCurrentProductionDifference(false, !bIsProcess), "Modified Production does not match actual value");
+	FAssertMsg(iModProduction == city.getCurrentProductionDifference(ProductionCalc::FoodProduction | (!bIsProcess? ProductionCalc::Overflow : ProductionCalc::None)), "Modified Production does not match actual value");
 
 	szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_FINAL_YIELD", iModProduction));
 
