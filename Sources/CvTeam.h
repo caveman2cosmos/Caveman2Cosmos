@@ -96,11 +96,10 @@ public:
 
 	bool isUnitPrereqOrBonusesMet(const CvUnitInfo& unit) const;
 
-#if defined QC_MASTERY_VICTORY
 //Sevo Begin--VCM
 	int getTotalVictoryScore() const;																												// Exposed to Python
 //Sevo End VCM
-#endif
+
 	int getVotes(VoteTypes eVote, VoteSourceTypes eVoteSource) const;
 	bool isVotingMember(VoteSourceTypes eVoteSource) const;
 	bool isFullMember(VoteSourceTypes eVoteSource) const;
