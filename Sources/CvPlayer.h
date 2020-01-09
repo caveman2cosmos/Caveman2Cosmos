@@ -1141,10 +1141,10 @@ public:
 	void changeImprovementCount(ImprovementTypes eIndex, int iChange);
 
 	int getFreeBuildingCount(BuildingTypes eIndex) const;
-	int getFreeAreaBuildingCount(BuildingTypes eIndex, CvArea* area) const;
-	bool isBuildingFree(BuildingTypes eIndex, CvArea* area = NULL) const;																									// Exposed to Python
+	int getFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* area) const;
+	bool isBuildingFree(BuildingTypes eIndex, const CvArea* area = NULL) const;																									// Exposed to Python
 	void changeFreeBuildingCount(BuildingTypes eIndex, int iChange);
-	void changeFreeAreaBuildingCount(BuildingTypes eIndex, CvArea* area, int iChange);
+	void changeFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* area, int iChange);
 
 	int getExtraBuildingHappiness(BuildingTypes eIndex) const;																				// Exposed to Python
 /********************************************************************************/

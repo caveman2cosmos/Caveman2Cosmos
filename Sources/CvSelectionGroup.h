@@ -472,6 +472,7 @@ public:
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, UnitAITypes, getHeadUnitAI);
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, PlayerTypes, getHeadOwner);
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, TeamTypes, getHeadTeam);
+		DECLARE_MAP_FUNCTOR(CvSelectionGroup, AutomateTypes, getAutomateType);
 	};
 };
 
