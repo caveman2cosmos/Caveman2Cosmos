@@ -16640,25 +16640,19 @@ void CvPlayer::setAutoMoves(bool bNewValue)
 
 		if (!isAutoMoves())
 		{
-			if ( isHuman() )
+			if (isHuman() && hasReadyUnit(true))
 			{
 				//	A unit ready to move at this point is one the player needs to interact with
-				if ( hasReadyUnit(true) )
-				{
-					setTurnHadUIInteraction(true);
-				}
+				setTurnHadUIInteraction(true);
 			}
 
 			if (isEndTurn() || (!isHuman() && !hasReadyUnit(true)))
 			{
 				setTurnActive(false);
 			}
-			else
+			else if (getID() == GC.getGame().getActivePlayer())
 			{
-				if (getID() == GC.getGameINLINE().getActivePlayer())
-				{
-					gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
-				}
+				gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
 			}
 		}
 	}
@@ -16687,14 +16681,10 @@ void CvPlayer::setEndTurn(bool bNewValue)
 /*                                                                                              */
 /* Advanced Automations                                                                         */
 /************************************************************************************************/
-			int iLoop;
-			for(CvSelectionGroup* pLoopSelectionGroup = firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = nextSelectionGroup(&iLoop))
+			foreach_(CvSelectionGroup* group, groups() | filtered(CvSelectionGroup::fn::getAutomateType() == AUTOMATE_SHADOW))
 			{
-				if (pLoopSelectionGroup->getAutomateType() == AUTOMATE_SHADOW)
-				{
-					pLoopSelectionGroup->setForceUpdate(true);
-					pLoopSelectionGroup->AI_update();
-				}
+				group->setForceUpdate(true);
+				group->AI_update();
 			}
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -16825,10 +16815,7 @@ EraTypes CvPlayer::getCurrentEra() const
 
 void CvPlayer::setCurrentEra(EraTypes eNewValue)
 {
-	CvCity* pLoopCity;
-	CvUnit* pLoopUnit;
 	CvPlot* pLoopPlot;
-	int iLoop;
 	int iI;
 
 	if (getCurrentEra() != eNewValue)
@@ -16854,9 +16841,9 @@ void CvPlayer::setCurrentEra(EraTypes eNewValue)
 		}
 
 		// dirty all of this player's cities...
-		for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+		foreach_ (CvCity* city, cities())
 		{
-			if (pLoopCity->getOwnerINLINE() == getID())
+			if (city->getOwner() == getID())
 			{
 				//TB Era Advance Free Specialist Type
 	//Team Project (6)
@@ -16864,20 +16851,20 @@ void CvPlayer::setCurrentEra(EraTypes eNewValue)
 				{
 					if (getEraAdvanceFreeSpecialistCount((SpecialistTypes)iI) > 0)
 					{
-						pLoopCity->changeFreeSpecialistCount((SpecialistTypes)iI, getEraAdvanceFreeSpecialistCount((SpecialistTypes)iI), true);
+						city->changeFreeSpecialistCount((SpecialistTypes)iI, getEraAdvanceFreeSpecialistCount((SpecialistTypes)iI), true);
 					}
 				}
 				
-				pLoopCity->setLayoutDirty(true);
+				city->setLayoutDirty(true);
 			}
 		}
 
 		//update unit eras
-		for(pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
+		foreach_ (CvUnit* unit, units())
 		{
-			if ( !pLoopUnit->isUsingDummyEntities() )
+			if (!unit->isUsingDummyEntities())
 			{
-				gDLL->getEntityIFace()->updateGraphicEra(pLoopUnit->getUnitEntity(), eOldEra);
+				gDLL->getEntityIFace()->updateGraphicEra(unit->getUnitEntity(), eOldEra);
 			}
 		}
 
@@ -17468,40 +17455,33 @@ int CvPlayer::getCommercePercent(CommerceTypes eIndex) const
 
 void CvPlayer::setCommercePercent(CommerceTypes eIndex, int iNewValue)
 {
-	int iTotalCommercePercent;
-	int iOldValue;
-	int iI;
-
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
 
-	iOldValue = getCommercePercent(eIndex);
+	const int iOldValue = getCommercePercent(eIndex);
 
 	m_aiCommercePercent[eIndex] = range(iNewValue, 0, 100);
 
 	if (iOldValue != getCommercePercent(eIndex))
 	{
-		iTotalCommercePercent = 0;
+		int iTotalCommercePercent = 0;
 
-		for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 		{
 			iTotalCommercePercent += getCommercePercent((CommerceTypes)iI);
 		}
 
-		for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+		for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 		{
-			if (iI != eIndex)
+			if (iJ != eIndex)
 			{
-				if (100 != iTotalCommercePercent)
-				{
-					int iAdjustment = std::min(m_aiCommercePercent[iI], iTotalCommercePercent - 100);
-					m_aiCommercePercent[iI] -= iAdjustment;
-					iTotalCommercePercent -= iAdjustment;
-				}
-				else
+				if (iTotalCommercePercent == 100)
 				{
 					break;
 				}
+				const int iAdjustment = std::min(m_aiCommercePercent[iJ], iTotalCommercePercent - 100);
+				m_aiCommercePercent[iJ] -= iAdjustment;
+				iTotalCommercePercent -= iAdjustment;
 			}
 		}
 
@@ -17674,8 +17654,6 @@ int CvPlayer::getCapitalCommerceRateModifier(CommerceTypes eIndex) const
 
 void CvPlayer::changeCapitalCommerceRateModifier(CommerceTypes eIndex, int iChange)
 {
-	CvCity* pCapitalCity;
-
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
 
@@ -17683,7 +17661,7 @@ void CvPlayer::changeCapitalCommerceRateModifier(CommerceTypes eIndex, int iChan
 	{
 		m_aiCapitalCommerceRateModifier[eIndex] = (m_aiCapitalCommerceRateModifier[eIndex] + iChange);
 
-		pCapitalCity = getCapitalCity();
+		CvCity* pCapitalCity = getCapitalCity();
 
 		if (pCapitalCity != NULL)
 		{
@@ -17880,31 +17858,22 @@ int CvPlayer::getBonusExport(BonusTypes eIndex) const
 
 void CvPlayer::changeBonusExport(BonusTypes eIndex, int iChange)
 {
-	CvCity* pCapitalCity;
-
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
 	if (iChange != 0)
 	{
-		pCapitalCity = getCapitalCity();
-		// Koshling - optimised - no need to recalculate the entire plot group's
-		// full set of bonuses - jyust adjust the one that is changing
-		//if (pCapitalCity != NULL)
-		//{
-		//	pCapitalCity->plot()->updatePlotGroupBonus(false);
-		//}
 		m_paiBonusExport[eIndex] = (m_paiBonusExport[eIndex] + iChange);
 		FAssert(getBonusExport(eIndex) >= 0);
+
+		const CvCity* pCapitalCity = getCapitalCity();
 		if (pCapitalCity != NULL)
 		{
-			CvPlotGroup*	ownerPlotGroup = pCapitalCity->plotGroup(getID());
-
-			if ( ownerPlotGroup != NULL )
+			CvPlotGroup* ownerPlotGroup = pCapitalCity->plotGroup(getID());
+			if (ownerPlotGroup != NULL)
 			{
 				ownerPlotGroup->changeNumBonuses(eIndex, -iChange);
 			}
-			//pCapitalCity->plot()->updatePlotGroupBonus(true);
 		}
 	}
 }
@@ -17920,31 +17889,22 @@ int CvPlayer::getBonusImport(BonusTypes eIndex) const
 
 void CvPlayer::changeBonusImport(BonusTypes eIndex, int iChange)
 {
-	CvCity* pCapitalCity;
-
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumBonusInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
 	if (iChange != 0)
 	{
-		pCapitalCity = getCapitalCity();
-		// Koshling - optimised - no need to recalculate the entire plot group's
-		// full set of bonuses - jyust adjust the one that is changing
-		//if (pCapitalCity != NULL)
-		//{
-		//	pCapitalCity->plot()->updatePlotGroupBonus(false);
-		//}
 		m_paiBonusImport[eIndex] = (m_paiBonusImport[eIndex] + iChange);
 		FAssert(getBonusImport(eIndex) >= 0);
+
+		const CvCity* pCapitalCity = getCapitalCity();
 		if (pCapitalCity != NULL)
 		{
-			CvPlotGroup*	ownerPlotGroup = pCapitalCity->plotGroup(getID());
-
-			if ( ownerPlotGroup != NULL )
+			CvPlotGroup* ownerPlotGroup = pCapitalCity->plotGroup(getID());
+			if (ownerPlotGroup != NULL)
 			{
 				ownerPlotGroup->changeNumBonuses(eIndex, iChange);
 			}
-			//pCapitalCity->plot()->updatePlotGroupBonus(true);
 		}
 	}
 }
@@ -17974,7 +17934,7 @@ int CvPlayer::getFreeBuildingCount(BuildingTypes eIndex) const
 	return m_paiFreeBuildingCount[eIndex];
 }
 
-int CvPlayer::getFreeAreaBuildingCount(BuildingTypes eIndex, CvArea* area) const
+int CvPlayer::getFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* area) const
 {
 	int iLoop;
 
@@ -17998,7 +17958,7 @@ int CvPlayer::getFreeAreaBuildingCount(BuildingTypes eIndex, CvArea* area) const
 }
 
 
-bool CvPlayer::isBuildingFree(BuildingTypes eIndex, CvArea* area)	const															
+bool CvPlayer::isBuildingFree(BuildingTypes eIndex, const CvArea* area) const															
 {
 	return (getFreeBuildingCount(eIndex) > 0 || (area != NULL && getFreeAreaBuildingCount(eIndex, area) > 0));
 }
@@ -18007,13 +17967,12 @@ bool CvPlayer::isBuildingFree(BuildingTypes eIndex, CvArea* area)	const
 void CvPlayer::changeFreeBuildingCount(BuildingTypes eIndex, int iChange)
 {
 	CvCity* pLoopCity;
-	int iOldFreeBuildingCount;
 	int iLoop;
 
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
-	iOldFreeBuildingCount = getFreeBuildingCount(eIndex);
+	const int iOldFreeBuildingCount = getFreeBuildingCount(eIndex);
 	//	Don't allow things to go negative - this has been observed when buildings get disabled across asset chnages
 	if ( (iChange > 0 || iOldFreeBuildingCount != 0) && iChange != 0)
 	{
@@ -18041,20 +18000,19 @@ void CvPlayer::changeFreeBuildingCount(BuildingTypes eIndex, int iChange)
 	}
 }
 
-void CvPlayer::changeFreeAreaBuildingCount(BuildingTypes eIndex, CvArea* area, int iChange)
+void CvPlayer::changeFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* area, int iChange)
 {
 	CvCity* pLoopCity;
-	int iOldFreeAreaBuildingCount;
 	int iLoop;
 
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
-	iOldFreeAreaBuildingCount = getFreeAreaBuildingCount(eIndex, area);
+	const int iOldFreeAreaBuildingCount = getFreeAreaBuildingCount(eIndex, area);
 	//	Don't allow things to go negative - this has been observed when buildings get disabled across asset changes
-	if ( (iChange > 0 || iOldFreeAreaBuildingCount != 0) && iChange != 0)
+	if (iChange != 0 && (iChange > 0 || iOldFreeAreaBuildingCount != 0))
 	{
-		int iNewFreeBuildingCount = iOldFreeAreaBuildingCount + iChange;
+		const int iNewFreeBuildingCount = iOldFreeAreaBuildingCount + iChange;
 		FAssert(iNewFreeBuildingCount >= 0);
 
 		if (iOldFreeAreaBuildingCount == 0)
@@ -18306,7 +18264,7 @@ bool CvPlayer::isBuildingGroupMaxedOut(SpecialBuildingTypes eIndex, int iExtra) 
 		return false;
 	}
 
-	int iLimit = GC.getSpecialBuildingInfo(eIndex).getMaxPlayerInstances();
+	const int iLimit = GC.getSpecialBuildingInfo(eIndex).getMaxPlayerInstances();
 	FAssertMsg(getBuildingGroupCount(eIndex) <= iLimit, "SpecialbuildingCount is expected to be less than or match the number of max player instances plus extra player instances");
 
 	return ((getBuildingGroupCount(eIndex) + iExtra) >= iLimit);
@@ -18423,7 +18381,7 @@ void CvPlayer::changeHurryCount(HurryTypes eIndex, int iChange)
 	FAssert(eIndex >= 0);
 	FAssert(eIndex < GC.getNumHurryInfos());
 
-	int oldHurryCount = m_paiHurryCount[eIndex];
+	const int oldHurryCount = m_paiHurryCount[eIndex];
 	m_paiHurryCount[eIndex] = (m_paiHurryCount[eIndex] + iChange);
 	FAssert(getHurryCount(eIndex) >= 0);
 	
@@ -18527,12 +18485,9 @@ int CvPlayer::getHasReligionCount(ReligionTypes eIndex) const
 
 int CvPlayer::countTotalHasReligion() const
 {
-	int iCount;
-	int iI;
+	int iCount = 0;
 
-	iCount = 0;
-
-	for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 	{
 		iCount += getHasReligionCount((ReligionTypes)iI);
 	}
@@ -18542,12 +18497,7 @@ int CvPlayer::countTotalHasReligion() const
 
 int CvPlayer::getHasCorporationCount(CorporationTypes eIndex) const													
 {
-	if (!isActiveCorporation(eIndex))
-	{
-		return 0;
-	}
-
-	return m_paiHasCorporationCount[eIndex];
+	return isActiveCorporation(eIndex) ? m_paiHasCorporationCount[eIndex] : 0;
 }
 
 
@@ -18596,16 +18546,11 @@ bool CvPlayer::isActiveCorporation(CorporationTypes eIndex) const
 
 int CvPlayer::findHighestHasReligionCount() const
 {
-	int iValue;
-	int iBestValue;
-	int iI;
+	int iBestValue = 0;
 
-	iBestValue = 0;
-
-	for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 	{
-		iValue = getHasReligionCount((ReligionTypes)iI);
-
+		const int iValue = getHasReligionCount((ReligionTypes)iI);
 		if (iValue > iBestValue)
 		{
 			iBestValue = iValue;
@@ -18777,8 +18722,6 @@ CivicTypes CvPlayer::getCivics(CivicOptionTypes eIndex) const
 
 int CvPlayer::getSingleCivicUpkeep(CivicTypes eCivic, bool bIgnoreAnarchy) const
 {
-	int iUpkeep;
-
 	if (eCivic == NO_CIVIC)
 	{
 		return 0;
@@ -18794,15 +18737,12 @@ int CvPlayer::getSingleCivicUpkeep(CivicTypes eCivic, bool bIgnoreAnarchy) const
 		return 0;
 	}
 
-	if (!bIgnoreAnarchy)
+	if (!bIgnoreAnarchy && isAnarchy())
 	{
-		if (isAnarchy())
-		{
-			return 0;
-		}
+		return 0;
 	}
 
-	iUpkeep = 0;
+	int iUpkeep = 0;
 
 	// BBAI TODO: WTF? civic option type added and subtracted below
 /************************************************************************************************/
@@ -18857,17 +18797,14 @@ int CvPlayer::getSingleCivicUpkeep(CivicTypes eCivic, bool bIgnoreAnarchy) const
 
 int CvPlayer::getCivicUpkeep(CivicTypes* paeCivics, bool bIgnoreAnarchy) const
 {
-	int iTotalUpkeep;
-	int iI;
-
 	if (paeCivics == NULL)
 	{
 		paeCivics = m_paeCivics;
 	}
 
-	iTotalUpkeep = 0;
+	int iTotalUpkeep = 0;
 
-	for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 	{
 		iTotalUpkeep += getSingleCivicUpkeep(paeCivics[iI], bIgnoreAnarchy);
 	}
@@ -18892,16 +18829,13 @@ void CvPlayer::setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue)
 	PROFILE_FUNC();
 
 	CvWString szBuffer;
-	CivicTypes eOldCivic;
-	int iI;
-	CvCity* pLoopCity;
 
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumCivicOptionInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 	FAssertMsg(eNewValue >= 0, "eNewValue is expected to be non-negative (invalid Index)");
 	FAssertMsg(eNewValue < GC.getNumCivicInfos(), "eNewValue is expected to be within maximum bounds (invalid Index)");
 
-	eOldCivic = getCivics(eIndex);
+	const CivicTypes eOldCivic = getCivics(eIndex);
 
 	if (eOldCivic != eNewValue)
 	{
@@ -18920,14 +18854,13 @@ void CvPlayer::setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue)
 /*                                                                                              */
 /* Check Buildings, Clear Caches                                                                */
 /************************************************************************************************/
-		int iLoop;
 		bool bUpdateHealth = false;
 		bool bUpdateHappiness = false;
 		if (eNewValue != NO_CIVIC && eOldCivic != NO_CIVIC)
 		{
-			CvCivicInfo& kCivic = GC.getCivicInfo(getCivics(eIndex));
-			CvCivicInfo& kOldCivic = GC.getCivicInfo(eOldCivic);
-			for (iI = 0; iI < GC.getNumImprovementInfos(); iI++)
+			const CvCivicInfo& kCivic = GC.getCivicInfo(getCivics(eIndex));
+			const CvCivicInfo& kOldCivic = GC.getCivicInfo(eOldCivic);
+			for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 			{
 				if (kCivic.getImprovementHealthPercentChanges(iI) != kOldCivic.getImprovementHealthPercentChanges(iI))
 				{
@@ -18948,13 +18881,13 @@ void CvPlayer::setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue)
 			bUpdateHappiness = true;
 			bUpdateHealth = true;
 		}
-		for (pLoopCity = firstCity(&iLoop); NULL != pLoopCity; pLoopCity = nextCity(&iLoop))
+		foreach_ (CvCity* city, cities())
 		{
-			pLoopCity->checkBuildings(false, true, false, false, false);
+			city->checkBuildings(false, true, false, false, false);
 			if (bUpdateHappiness)
-				pLoopCity->updateFeatureHappiness();
+				city->updateFeatureHappiness();
 			if (bUpdateHealth)
-				pLoopCity->updateImprovementHealth();
+				city->updateImprovementHealth();
 		}
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -18989,7 +18922,7 @@ void CvPlayer::setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue)
 				{
 					if (getCivics(eIndex) != GC.getCivilizationInfo(getCivilizationType()).getCivilizationInitialCivics(eIndex))
 					{
-						for (iI = 0; iI < MAX_PLAYERS; iI++)
+						for (int iI = 0; iI < MAX_PLAYERS; iI++)
 						{
 							if (GET_PLAYER((PlayerTypes)iI).isAlive())
 							{
@@ -19019,7 +18952,7 @@ void CvPlayer::setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue)
 /************************************************************************************************/
 		// From Sanguo Mod Performance, ie the CAR Mod
 		// Attitude cache
-		for (iI = 0; iI < MAX_PLAYERS; iI++)
+		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			GET_PLAYER(getID()).AI_invalidateAttitudeCache((PlayerTypes)iI);
 			GET_PLAYER((PlayerTypes)iI).AI_invalidateAttitudeCache(getID());
@@ -19029,9 +18962,9 @@ void CvPlayer::setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue)
 /************************************************************************************************/
 
 		//	A new civic can effect best plot build decisions so mark stale in all cities
-		for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+		foreach_ (CvCity* city, cities())
 		{
-			pLoopCity->AI_markBestBuildValuesStale();
+			city->AI_markBestBuildValuesStale();
 		}
 
 		clearCanConstructCacheForClass(NO_BUILDINGCLASS, true);
@@ -19106,96 +19039,51 @@ void CvPlayer::updateGroupCycle(CvUnit* pUnit, bool bFarMove)
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
-	CLLNode<int>* pReinsertSearchStart;
-	CLLNode<int>* pSelectionGroupNode;
-	CLLNode<int>* pBestSelectionGroupNode;
-	CvSelectionGroup* pLoopSelectionGroup;
-	CvUnit* pHeadUnit;
-	CvUnit* pBeforeUnit;
-	CvUnit* pAfterUnit;
-	CvUnit* pLoopUnit;
-	CvPlot* pPlot;
-	int iValue;
-	int iBestValue;
-
-	if (!(pUnit->onMap()))
-	{
-		return;
-	}
-
-	if ( isTempUnit(pUnit) )
+	if (!pUnit->onMap() || isTempUnit(pUnit))
 	{
 		return;
 	}
 
 	FAssertMsg(pUnit->getGroup() != NULL, "Unit->getGroup() is not assigned a valid value");
 
-	pReinsertSearchStart = removeGroupCycle(pUnit->getGroupID());
+	CLLNode<int>* pReinsertSearchStart = removeGroupCycle(pUnit->getGroupID());
 
-	pPlot = pUnit->plot();
+	CvUnit* pBeforeUnit = NULL;
+	CvUnit* pAfterUnit = NULL;
 
-	pBeforeUnit = NULL;
-	pAfterUnit = NULL;
-
-//TB OOS Fix: Another longshot that did seem to help
-	if ( pUnit->getGroup() == NULL )
+	foreach_ (CvUnit* pLoopUnit, pUnit->plot()->units())
 	{
-			::MessageBox(NULL,
-						pUnit->getGroupID() == FFreeList::INVALID_INDEX ? "Unit with NULL group ID on call to CvPlayer::updateGroupCycle\n" : "Unit with no group on call to CvPlayer::updateGroupCycle\n",
-						"CvGameCoreDLL Diagnostics",
-						MB_OK);
-	}
-	pUnitNode = pPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
-	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
 		//AlbertS2 added this to fix a CTD that happened while loading a saved game
 		if (pLoopUnit == NULL)	continue;
 
-//TB OOS fix: Another longshot that seems to help
-		if ( pLoopUnit->getGroup() == NULL )
+		FAssert(pLoopUnit->getGroup() != NULL);
+
+		if (pLoopUnit->isGroupHead() && pLoopUnit != pUnit)
 		{
-			::MessageBox(NULL,
-						pLoopUnit->getGroupID() == FFreeList::INVALID_INDEX ? "Unit with NULL group ID found in stack on call to CvPlayer::updateGroupCycle\n" : "Unit with no group found in stack on call to CvPlayer::updateGroupCycle\n",
-						"CvGameCoreDLL Diagnostics",
-						MB_OK);
-		}
-		else if (pLoopUnit->isGroupHead())
-		{
-			if (pLoopUnit != pUnit)
+			if (!isBeforeUnitCycle(pLoopUnit, pUnit))
 			{
-				if (!isBeforeUnitCycle(pLoopUnit, pUnit))
-				{
-					pBeforeUnit = pLoopUnit;
-					break;
-				}
-				else
-				{
-					pAfterUnit = pLoopUnit;
-				}
+				pBeforeUnit = pLoopUnit;
+				break;
+			}
+			else
+			{
+				pAfterUnit = pLoopUnit;
 			}
 		}
 	}
 
-	iBestValue = MAX_INT;
-	pBestSelectionGroupNode = NULL;
-
 	int	iSearchHorizon;
-	
-	if ( !bFarMove && pBeforeUnit == NULL && pAfterUnit == NULL )
+	if (!bFarMove && pBeforeUnit == NULL && pAfterUnit == NULL)
 	{
 		iSearchHorizon = REINSERT_SEARCH_HORIZON;
-
-		while( pReinsertSearchStart != NULL && iSearchHorizon-- > 0 )
+		while(pReinsertSearchStart != NULL && iSearchHorizon-- > 0)
 		{
 			pReinsertSearchStart = previousGroupCycleNode(pReinsertSearchStart);
 		}
 	}
 
-	if ( bFarMove )
+	CLLNode<int>* pSelectionGroupNode;
+	if (bFarMove)
 	{
 		pSelectionGroupNode = headGroupCycleNode();
 		iSearchHorizon = MAX_INT;
@@ -19206,12 +19094,15 @@ void CvPlayer::updateGroupCycle(CvUnit* pUnit, bool bFarMove)
 		iSearchHorizon = REINSERT_SEARCH_HORIZON*2;	//Horizon in each direction
 	}
 
+	int iBestValue = MAX_INT;
+	CLLNode<int>* pBestSelectionGroupNode = NULL;
+
 	while (pSelectionGroupNode != NULL && iSearchHorizon-- > 0)
 	{
-		pLoopSelectionGroup = getSelectionGroup(pSelectionGroupNode->m_data);
+		CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(pSelectionGroupNode->m_data);
 		FAssertMsg(pLoopSelectionGroup != NULL, "LoopSelectionGroup is not assigned a valid value");
 
-		pHeadUnit = pLoopSelectionGroup->getHeadUnit();
+		CvUnit* pHeadUnit = pLoopSelectionGroup->getHeadUnit();
 
 		if (pHeadUnit != NULL)
 		{
@@ -19233,8 +19124,7 @@ void CvPlayer::updateGroupCycle(CvUnit* pUnit, bool bFarMove)
 			}
 			else
 			{
-				iValue = plotDistance(pUnit->getX_INLINE(), pUnit->getY_INLINE(), pHeadUnit->getX_INLINE(), pHeadUnit->getY_INLINE());
-
+				const int iValue = plotDistance(pUnit->getX(), pUnit->getY(), pHeadUnit->getX(), pHeadUnit->getY());
 				if (iValue < iBestValue)
 				{
 					iBestValue = iValue;
@@ -19261,10 +19151,8 @@ CLLNode<int>* CvPlayer::removeGroupCycle(int iID)
 {
 	PROFILE_FUNC();
 
-	CLLNode<int>* pSelectionGroupNode;
 	CLLNode<int>* pPreviousNode = NULL;
-
-	pSelectionGroupNode = headGroupCycleNode();
+	CLLNode<int>* pSelectionGroupNode = headGroupCycleNode();
 
 	while (pSelectionGroupNode != NULL)
 	{
@@ -19314,11 +19202,9 @@ CLLNode<int>* CvPlayer::tailGroupCycleNode() const
 }
 
 // AIAndy: This can cause a large huge amount of paths to be created if there are lots of OR with lots of subsets the same (so especially a very expensive operation when the target tech is far away)
-void	CvPlayer::constructTechPathSet(TechTypes eTech, std::vector<techPath*>& pathSet, techPath& rootPath) const
+void CvPlayer::constructTechPathSet(TechTypes eTech, std::vector<techPath*>& pathSet, techPath& rootPath) const
 {
 	PROFILE_FUNC();
-
-	int i;
 
 	// AIAndy: Consider using a set for efficient testing
 	if (GET_TEAM(getTeam()).isHasTech(eTech) || std::find(rootPath.begin(), rootPath.end(), eTech) != rootPath.end())
@@ -19330,9 +19216,9 @@ void	CvPlayer::constructTechPathSet(TechTypes eTech, std::vector<techPath*>& pat
 	rootPath.push_back(eTech);
 
 	//	Cycle through the and paths and add their tech paths
-	for (i = 0; i < GC.getNUM_AND_TECH_PREREQS(); i++)
+	for (int i = 0; i < GC.getNUM_AND_TECH_PREREQS(); i++)
 	{
-		TechTypes ePreReq = (TechTypes)GC.getTechInfo(eTech).getPrereqAndTechs(i);
+		const TechTypes ePreReq = (TechTypes)GC.getTechInfo(eTech).getPrereqAndTechs(i);
 
 		if (ePreReq != NO_TECH)
 		{
@@ -19343,17 +19229,15 @@ void	CvPlayer::constructTechPathSet(TechTypes eTech, std::vector<techPath*>& pat
 	//TechTypes eShortestOr = NO_TECH;
 	//int iLowestCost = MAX_INT;
 	//	Find the shortest OR tech
-	for (i = 0; i < GC.getNUM_OR_TECH_PREREQS(); i++)
+	for (int j = 0; j < GC.getNUM_OR_TECH_PREREQS(); j++)
 	{
-		//	Grab the tech
-		TechTypes ePreReq = (TechTypes)GC.getTechInfo(eTech).getPrereqOrTechs(i);
+		const TechTypes ePreReq = (TechTypes)GC.getTechInfo(eTech).getPrereqOrTechs(j);
 
-		//	If this is a valid tech
 		if (ePreReq != NO_TECH)
 		{
 			techPath* seedPath;
 
-			if ( i == 0 )
+			if (j == 0)
 			{
 				seedPath = &rootPath;
 			}
@@ -19510,11 +19394,9 @@ int CvPlayer::getQueuePosition(TechTypes eTech) const
 
 void CvPlayer::clearResearchQueue()
 {
-	int iI;
-
 	m_researchQueue.clear();
 
-	for (iI = 0; iI < GC.getNumTechInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
 		setResearchingTech(((TechTypes)iI), false);
 	}
@@ -19533,13 +19415,6 @@ void CvPlayer::clearResearchQueue()
 //	research immediately and should be used with clear.  Clear will clear the entire queue.
 bool CvPlayer::pushResearch(TechTypes eTech, bool bClear)
 {
-	int i;
-	int iNumSteps;
-	int iShortestPath;
-	bool bOrPrereqFound;
-	TechTypes ePreReq;
-	TechTypes eShortestOr;
-
 	FAssertMsg(eTech != NO_TECH, "Tech is not assigned a valid value");
 
 	if (GET_TEAM(getTeam()).isHasTech(eTech) || isResearchingTech(eTech))
@@ -19553,35 +19428,29 @@ bool CvPlayer::pushResearch(TechTypes eTech, bool bClear)
 		return false;
 	}
 
-	//	Pop the entire queue...
 	if (bClear)
 	{
 		clearResearchQueue();
 	}
 
 	//	Add in all the pre-reqs for the and techs...
-	for (i = 0; i < GC.getNUM_AND_TECH_PREREQS(); i++)
+	for (int i = 0; i < GC.getNUM_AND_TECH_PREREQS(); i++)
 	{
-		ePreReq = (TechTypes)GC.getTechInfo(eTech).getPrereqAndTechs(i);
-
-		if (ePreReq != NO_TECH)
+		const TechTypes ePreReq = (TechTypes)GC.getTechInfo(eTech).getPrereqAndTechs(i);
+		if (ePreReq != NO_TECH && !pushResearch(ePreReq))
 		{
-			if (!pushResearch(ePreReq))
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 
 	// Will return the shortest path of all the or techs.  Tie breaker goes to the first one...
-	eShortestOr = NO_TECH;
-	iShortestPath = MAX_INT;
-	bOrPrereqFound = false;
+	TechTypes eShortestOr = NO_TECH;
+	int iShortestPath = MAX_INT;
+	bool bOrPrereqFound = false;
 	//	Cycle through all the OR techs
-	for (i = 0; i < GC.getNUM_OR_TECH_PREREQS(); i++)
+	for (int j = 0; j < GC.getNUM_OR_TECH_PREREQS(); j++)
 	{
-		ePreReq = (TechTypes)GC.getTechInfo(eTech).getPrereqOrTechs(i);
-
+		const TechTypes ePreReq = (TechTypes)GC.getTechInfo(eTech).getPrereqOrTechs(j);
 		if (ePreReq != NO_TECH)
 		{
 			bOrPrereqFound = true;
@@ -19596,7 +19465,7 @@ bool CvPlayer::pushResearch(TechTypes eTech, bool bClear)
 			if (canEverResearch(ePreReq))
 			{
 				//	Find the length of the path to this pre-req
-				iNumSteps = findPathLength(ePreReq);
+				const int iNumSteps = findPathLength(ePreReq);
 
 				//	If this pre-req is a valid tech, and its the shortest current path, set it as such
 				if (iNumSteps < iShortestPath)
@@ -19621,20 +19490,17 @@ bool CvPlayer::pushResearch(TechTypes eTech, bool bClear)
 		return false;
 	}
 
-	//	Insert this tech at the end of the queue
 	m_researchQueue.insertAtEnd(eTech);
 
 	setResearchingTech(eTech, true);
 
-	//	Set the dirty bits
-	if (getTeam() == GC.getGameINLINE().getActiveTeam())
+	if (getTeam() == GC.getGame().getActiveTeam())
 	{
 		gDLL->getInterfaceIFace()->setDirty(ResearchButtons_DIRTY_BIT, true);
 		gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
 		gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
 	}
 
-	// ONEVENT - Tech selected (any)
 	CvEventReporter::getInstance().techSelected(eTech, getID());
 
 	return true;
@@ -19704,18 +19570,8 @@ int CvPlayer::getNumCityNames() const
 
 CvWString CvPlayer::getCityName(int iIndex) const
 {
-	CLLNode<CvWString>* pCityNameNode;
-
-	pCityNameNode = m_cityNames.nodeNum(iIndex);
-
-	if (pCityNameNode != NULL)
-	{
-		return pCityNameNode->m_data;
-	}
-	else
-	{
-		return L"";
-	}
+	const CLLNode<CvWString>* pCityNameNode = m_cityNames.nodeNum(iIndex);
+	return pCityNameNode ? pCityNameNode->m_data : L"";
 }
 
 

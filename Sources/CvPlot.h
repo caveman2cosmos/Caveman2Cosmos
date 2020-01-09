@@ -467,9 +467,6 @@ protected:
 	LandmarkTypes m_eLandmarkType;
 	bool m_bCounted;
 	static stdext::hash_map<int,int>* m_resultHashMap;
-#ifdef SUPPORT_MULTITHREADED_PATHING
-	static CRITICAL_SECTION m_resultHashAccessSection;
-#endif
 
 	public:
 /************************************************************************************************/
