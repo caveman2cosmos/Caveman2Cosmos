@@ -33506,7 +33506,11 @@ bool CvUnitAI::AI_huntRange(int iRange, int iOddsThreshold, bool bStayInBorders,
 			&& (!potentialTargetPlot->isCity() || bCanCaptureCities)
 			&& AI_plotValid(potentialTargetPlot)
 			&& potentialTargetPlot->isVisible(getTeam(), false) 
-			&& potentialTargetPlot->getNumVisibleEnemyTargetUnits(this) > 0
+			&& (
+				AI_getUnitAIType() == UNITAI_HUNTER && algo::any_of(potentialTargetPlot->units(), CvUnit::fn::isAnimal())
+				||
+				AI_getUnitAIType() != UNITAI_HUNTER && potentialTargetPlot->isVisibleEnemyUnit(this)
+				)
 			&& getGroup()->canMoveInto(potentialTargetPlot, true) 
 			// && potentialTargetPlot->getNumVisiblePotentialEnemyDefenders(this) <= getGroup()->getNumUnits()
 			&& generatePath(potentialTargetPlot, 0, true, nullptr, iRange)
