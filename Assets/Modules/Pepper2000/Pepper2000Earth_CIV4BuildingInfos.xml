@@ -10808,6 +10808,7 @@
 			<Strategy>TXT_KEY_BUILDING_ENCYCLOPEDIA_GALACTICA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENCYCLOPEDIA_GALACTICA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ENCYCLOPEDIA_GALACTICA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24553,6 +24554,7 @@
 			<Strategy>TXT_KEY_BUILDING_EXODUS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EXODUS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EXODUS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -26268,6 +26270,7 @@
 			<Strategy>TXT_KEY_BUILDING_EURO_ELT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EURO_ELT</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EURO_ELT</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -26372,6 +26375,7 @@
 			<Strategy>TXT_KEY_BUILDING_ET_DISCOVERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ET_DISCOVERY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ET_DISCOVERY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -28412,6 +28416,7 @@
 			<Strategy>TXT_KEY_BUILDING_EYE_IN_SKY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EYE_IN_SKY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EYE_IN_SKY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
