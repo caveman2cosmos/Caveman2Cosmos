@@ -1701,5 +1701,29 @@
 			<Type>ART_DEF_MOVIE_CYGNUS_X1</Type>
 			<Path>Art/Movies/Wonders/CYGNUS_X1.dds</Path>
 		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_DARCO</Type>
+			<Path>Art/Movies/Wonders/DARCO.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_DARPA</Type>
+			<Path>Art/Movies/Wonders/DARPA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_DEEP_THOUGHT</Type>
+			<Path>Art/Movies/Wonders/DEEP_THOUGHT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_DEHLI_MUMBAI_INDUSTRIAL_CORRIDOR</Type>
+			<Path>Art/Movies/Wonders/DEHLI_MUMBAI_INDUSTRIAL_CORRIDOR.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_DUBAI_CITY_TOWER</Type>
+			<Path>Art/Movies/Wonders/DUBAI_CITY_TOWER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_DUBAI_WORLD_CENTRAL</Type>
+			<Path>Art/Movies/Wonders/DUBAI_WORLD_CENTRAL.dds</Path>
+		</MovieArtInfo>
 	</MovieArtInfos>
 </Civ4ArtDefines>

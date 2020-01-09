@@ -9124,6 +9124,7 @@
 			<Strategy>TXT_KEY_BUILDING_DARPA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DARPA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DARPA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -10943,6 +10944,7 @@
 			<Strategy>TXT_KEY_BUILDING_DEEP_THOUGHT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_THOUGHT</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DEEP_THOUGHT</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23232,6 +23234,7 @@
 			<Strategy>TXT_KEY_BUILDING_DUBAI_CITY_TOWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DUBAI_CITY_TOWER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DUBAI_CITY_TOWER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24520,6 +24523,7 @@
 			<Strategy>TXT_KEY_BUILDING_DARCO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DARCO</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DARCO</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24798,6 +24802,7 @@
 			<Strategy>TXT_KEY_BUILDING_DUBAI_WORLD_CENTRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DUBAI_WORLD_CENTRAL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DUBAI_WORLD_CENTRAL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24866,6 +24871,7 @@
 			<Strategy>TXT_KEY_BUILDING_DEHLI_MUMBAI_INDUSTRIAL_CORRIDOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEHLI_MUMBAI_INDUSTRIAL_CORRIDOR</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DEHLI_MUMBAI_INDUSTRIAL_CORRIDOR</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -25574,6 +25580,7 @@
 			<Strategy>TXT_KEY_BUILDING_ECUMENOPOLIS_EARTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ECUMENOPOLIS_EARTH</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ECUMENOPOLIS_EARTH</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
