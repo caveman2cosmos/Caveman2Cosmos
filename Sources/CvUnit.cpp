@@ -30183,29 +30183,33 @@ bool CvUnit::isTargetOf(const CvUnit& attacker) const
 
 	//if (!plot()->isCity(true, getTeam()) || (attacker.plot() == plot() && (attacker.isAssassin() || isAssassin())))
 	//{
-		if (NO_UNITCLASS != getUnitClassType() && attackerInfo.getTargetUnitClass(getUnitClassType()))
-		{
-			return true;
-		}
-		// TB SubCombat Mod Begin - Original code:
-		for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = m_unitCombatKeyedInfo.begin(), end = m_unitCombatKeyedInfo.end(); it != end; ++it)
-		{
-			if(it->second.m_bHasUnitCombat)
-			{
-				if (attackerInfo.getTargetUnitCombat(it->first) || 
-					attacker.hasTargetUnitCombat(it->first))
-				{
-					return true;
-				}
-			}
-		}
-		//TB SubCombat Mod End	
-	//}
 
-	if (NO_UNITCLASS != attackerInfo.getUnitClassType() && ourInfo.getDefenderUnitClass(attackerInfo.getUnitClassType()))
+	if (getUnitClassType() != NO_UNITCLASS && attackerInfo.getTargetUnitClass(getUnitClassType()))
 	{
 		return true;
 	}
+
+	if (attackerInfo.getUnitClassType() != NO_UNITCLASS && ourInfo.getDefenderUnitClass(attackerInfo.getUnitClassType()))
+	{
+		return true;
+	}
+
+	// TB SubCombat Mod Begin - Original code:
+	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = m_unitCombatKeyedInfo.begin(), end = m_unitCombatKeyedInfo.end(); it != end; ++it)
+	{
+		if(it->second.m_bHasUnitCombat)
+		{
+			if (attackerInfo.getTargetUnitCombat(it->first) || 
+				attacker.hasTargetUnitCombat(it->first))
+			{
+				return true;
+			}
+		}
+	}
+	//TB SubCombat Mod End	
+
+	//}
+
 
 	// TB SubCombat Mod Begin
 	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = attacker.m_unitCombatKeyedInfo.begin(), end = attacker.m_unitCombatKeyedInfo.end(); it != end; ++it)

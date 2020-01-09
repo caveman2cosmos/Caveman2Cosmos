@@ -8565,7 +8565,7 @@ int CvCityAI::evaluateDanger()
 	}
 }
 
-bool CvCityAI::AI_isDanger()
+bool CvCityAI::AI_isDanger() const
 {
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      08/20/09                                jdog5000      */

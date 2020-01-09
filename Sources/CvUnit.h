@@ -3333,6 +3333,7 @@ public:
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isReadyForUpgrade);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isPromotionReady);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCombat);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isAnimal);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, canFight);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, canDefend);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, alwaysInvisible);

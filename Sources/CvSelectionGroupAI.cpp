@@ -1191,7 +1191,7 @@ CvUnit* CvSelectionGroupAI::AI_ejectBestPropertyManipulator(CvCity* pTargetCity)
 	return pBestUnit;
 }
 
-CvUnit* CvSelectionGroupAI::AI_findBestDefender(CvPlot* pDefendPlot, bool allowAllDefenders, bool bConsiderPropertyValues)
+CvUnit* CvSelectionGroupAI::AI_findBestDefender(const CvPlot* pDefendPlot, bool allowAllDefenders, bool bConsiderPropertyValues) const
 {	
 	CvUnit* pBestUnit = NULL;
 	int iBestUnitValue = 0;
