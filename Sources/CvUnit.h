@@ -1822,14 +1822,6 @@ public:
 	bool isRbombardable(int iMinStack);
 	int getRbombardSeigeCount(CvPlot* pPlot);
 	// RevolutionDCM - end
-
-private:
-	int m_iDCMBombRange;
-	int m_iDCMBombAccuracy;
-	int m_iHealUnitCombatCount;
-	std::vector<int> m_aiExtraBuildTypes;
-public:
-// Dale - RB: Field Bombard END
 // Dale - ARB: Archer Bombard START
 	bool canArcherBombard() const;
 	// fromPlot - units own plot() isn't valid in some cases (when its out of viewport or using dummy entities)
@@ -1906,6 +1898,12 @@ public:
 
 	PlayerTypes m_eOriginalOwner;
 
+protected:
+	int m_iDCMBombRange;
+	int m_iDCMBombAccuracy;
+	int m_iHealUnitCombatCount;
+	std::vector<int> m_aiExtraBuildTypes;
+
 	DomainTypes m_eNewDomainCargo;
 	SpecialUnitTypes m_eNewSpecialCargo;
 	SpecialUnitTypes m_eNewSMSpecialCargo;
@@ -1913,7 +1911,7 @@ public:
 	SpecialUnitTypes m_eSpecialUnit;
 	MissionTypes m_eSleepType;
 	PromotionLineTypes m_eCurrentBuildUpType;
-protected:
+
 	bool m_bHiddenNationality;
 	bool m_bHasHNCapturePromotion;
 /************************************************************************************************/
