@@ -10194,18 +10194,6 @@ void CvGame::read(FDataStreamBase* pStream)
 	{
 		GC.getImprovementInfo((ImprovementTypes)iI).setHighestCost();
 	}
-
-	// SM: Update player cached values
-	if (isOption(GAMEOPTION_SIZE_MATTERS))
-	{
-		for (int iI = 0; iI < MAX_PLAYERS; iI++)
-		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive())
-			{
-				GET_PLAYER((PlayerTypes)iI).setSMValues();
-			}
-		}
-	}
 }
 
 #define TAGGED_SAVES 1
