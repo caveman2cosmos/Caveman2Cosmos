@@ -18593,7 +18593,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 
 	if (bFinish && order.bSave)
 	{
-		pushOrder(externalOrder.eOrderType, order.iData1, order.iData2, true, false, true);
+		pushOrder(externalOrder.eOrderType, externalOrder.iData1, externalOrder.iData2, true, false, true);
 	}
 
 	UnitTypes eTrainUnit = NO_UNIT;
