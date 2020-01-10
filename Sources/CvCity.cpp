@@ -18577,6 +18577,11 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 {
 	PROFILE_FUNC();
 
+	if (m_orderQueue.empty() || m_orderQueue.size() <= static_cast<size_t>(orderIndex))
+	{
+		return;
+	}
+
 	if (orderIndex == -1) orderIndex = m_orderQueue.size() - 1;
 
 	FAssertMsg(orderIndex >= 0 && orderIndex < static_cast<int>(m_orderQueue.size()), "Order index out of bounds");
