@@ -11625,13 +11625,10 @@ bool CvGame::isCivEverActive(CivilizationTypes eCivilization) const
 {
 	for (int iPlayer = 0; iPlayer < MAX_PLAYERS; iPlayer++)
 	{
-		CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
-		if (kLoopPlayer.isEverAlive())
+		const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
+		if (kLoopPlayer.isEverAlive() && kLoopPlayer.getCivilizationType() == eCivilization)
 		{
-			if (kLoopPlayer.getCivilizationType() == eCivilization)
-			{
-				return true;
-			}
+			return true;
 		}
 	}
 
@@ -11642,45 +11639,10 @@ bool CvGame::isLeaderEverActive(LeaderHeadTypes eLeader) const
 {
 	for (int iPlayer = 0; iPlayer < MAX_PLAYERS; iPlayer++)
 	{
-		CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
-		if (kLoopPlayer.isEverAlive())
+		const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
+		if (kLoopPlayer.isEverAlive() && kLoopPlayer.getLeaderType() == eLeader)
 		{
-			if (kLoopPlayer.getLeaderType() == eLeader)
-			{
-				return true;
-			}
-		}
-	}
-
-	return false;
-}
-
-bool CvGame::isUnitEverActive(UnitTypes eUnit) const
-{
-	for (int iCiv = 0; iCiv < GC.getNumCivilizationInfos(); ++iCiv)
-	{
-		if (isCivEverActive((CivilizationTypes)iCiv))
-		{
-			if (eUnit == GC.getCivilizationInfo((CivilizationTypes)iCiv).getCivilizationUnits(GC.getUnitInfo(eUnit).getUnitClassType()))
-			{
-				return true;
-			}
-		}
-	}
-
-	return false;
-}
-
-bool CvGame::isBuildingEverActive(BuildingTypes eBuilding) const
-{
-	for (int iCiv = 0; iCiv < GC.getNumCivilizationInfos(); ++iCiv)
-	{
-		if (isCivEverActive((CivilizationTypes)iCiv))
-		{
-			if (eBuilding == GC.getCivilizationInfo((CivilizationTypes)iCiv).getCivilizationBuildings(GC.getBuildingInfo(eBuilding).getBuildingClassType()))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
 
