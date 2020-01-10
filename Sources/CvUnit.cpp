@@ -30229,7 +30229,7 @@ bool CvUnit::isTargetOf(const CvUnit& attacker) const
 
 bool CvUnit::isEnemy(TeamTypes eTeam, const CvPlot* pPlot, const CvUnit* pUnit) const
 {
-	if (pUnit != NULL && (isBarbCoExist() && pUnit->isHominid()) || (pUnit->isBarbCoExist() && isHominid()))
+	if (pUnit != NULL && (isBarbCoExist() && pUnit->isHominid() || pUnit->isBarbCoExist() && isHominid()))
 	{
 		return false;
 	}
@@ -30244,7 +30244,7 @@ bool CvUnit::isEnemy(TeamTypes eTeam, const CvPlot* pPlot, const CvUnit* pUnit) 
 
 bool CvUnit::isPotentialEnemy(TeamTypes eTeam, const CvPlot* pPlot, const CvUnit* pUnit) const
 {
-	if (pUnit != NULL && (isBarbCoExist() && pUnit->isHominid()) || (pUnit->isBarbCoExist() && isHominid()))
+	if (pUnit != NULL && (isBarbCoExist() && pUnit->isHominid() || pUnit->isBarbCoExist() && isHominid()))
 	{
 		return false;
 	}
@@ -30259,7 +30259,7 @@ bool CvUnit::isPotentialEnemy(TeamTypes eTeam, const CvPlot* pPlot, const CvUnit
 
 bool CvUnit::isSuicide() const
 {
-	return (m_pUnitInfo->isSuicide() || getKamikazePercent() != 0);
+	return m_pUnitInfo->isSuicide() || getKamikazePercent() != 0;
 }
 
 int CvUnit::getDropRange() const

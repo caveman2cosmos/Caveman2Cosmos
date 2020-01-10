@@ -33501,40 +33501,31 @@ bool CvUnitAI::AI_huntRange(int iRange, int iOddsThreshold, bool bStayInBorders,
 
 	foreach_(const CvPlot* potentialTargetPlot, CvPlot::rect(getX_INLINE(), getY_INLINE(), iRange, iRange))
 	{
-		if (   !atPlot(potentialTargetPlot)
+		if (!atPlot(potentialTargetPlot)
 			&& (!bStayInBorders || potentialTargetPlot->getOwnerINLINE() == getOwnerINLINE())
 			&& (!potentialTargetPlot->isCity() || bCanCaptureCities)
 			&& AI_plotValid(potentialTargetPlot)
-			&& potentialTargetPlot->isVisible(getTeam(), false) 
-			&& (
-				AI_getUnitAIType() == UNITAI_HUNTER && algo::any_of(potentialTargetPlot->units(), CvUnit::fn::isAnimal())
-				||
-				AI_getUnitAIType() != UNITAI_HUNTER && potentialTargetPlot->isVisibleEnemyUnit(this)
-				)
-			&& getGroup()->canMoveInto(potentialTargetPlot, true) 
-			// && potentialTargetPlot->getNumVisiblePotentialEnemyDefenders(this) <= getGroup()->getNumUnits()
-			&& generatePath(potentialTargetPlot, 0, true, nullptr, iRange)
-			)
+			&& potentialTargetPlot->isVisible(getTeam(), false))
 		{
-			const int plotScore = getGroup()->AI_attackOdds(potentialTargetPlot, true);
-
-			if (plotScore > bestScore && plotScore >= AI_finalOddsThreshold(potentialTargetPlot, iOddsThreshold))
+			const bool huntingAnimals = AI_getUnitAIType() == UNITAI_HUNTER && algo::any_of(potentialTargetPlot->units(), CvUnit::fn::isAnimal());
+			if ((huntingAnimals || potentialTargetPlot->isVisibleEnemyUnit(this))
+				&& getGroup()->canMoveInto(potentialTargetPlot, true)
+				&& generatePath(potentialTargetPlot, 0, true, nullptr, iRange)
+				)
 			{
-				//if (!exposedToDanger(potentialTargetPlot, iOddsThreshold))
-				//{
-				const CvPlot* endTurnPlot = getPathEndTurnPlot();
-				//if ( endTurnPlot == potentialTargetPlot || !exposedToDanger(endTurnPlot, iOddsThreshold) TB: See notes above - same test
-				//	)
-				//{
-				bestScore = plotScore;
-				bestTargetPlot = endTurnPlot;
-				//}
-				//}
+				const int attackOdds = getGroup()->AI_attackOdds(potentialTargetPlot, true);
+				const int plotScore = attackOdds + (huntingAnimals ? 25 : 0);
+
+				if (plotScore > bestScore && attackOdds >= AI_finalOddsThreshold(potentialTargetPlot, iOddsThreshold))
+				{
+					bestScore = plotScore;
+					bestTargetPlot = getPathEndTurnPlot();
+				}
 			}
 		}
 	}
 
-	if (bestTargetPlot != NULL)
+	if (bestTargetPlot != nullptr)
 	{
 		FAssert(!atPlot(bestTargetPlot));
 		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, bestTargetPlot->getX_INLINE(), bestTargetPlot->getY_INLINE(), MOVE_DIRECT_ATTACK, false, false);
