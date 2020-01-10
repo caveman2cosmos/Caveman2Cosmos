@@ -151,9 +151,9 @@ public:
 	void unloadAll();
 	bool alwaysInvisible() const;																																							// Exposed to Python
 	bool isInvisible(TeamTypes eTeam) const;																								// Exposed to Python
-	int countNumUnitAIType(UnitAITypes eUnitAI);																												// Exposed to Python
-	bool hasWorker();																																										// Exposed to Python
-	bool IsSelected();
+	int countNumUnitAIType(UnitAITypes eUnitAI) const;																												// Exposed to Python
+	bool hasWorker() const;																																										// Exposed to Python
+	bool IsSelected() const;
 	DllExport void NotifyEntity(MissionTypes eMission);
 	void airCircle(bool bStart);
 	void setBlockading(bool bStart);
@@ -168,11 +168,11 @@ public:
 	CvArea* area() const;																																													// Exposed to Python
 	DomainTypes getDomainType() const;
 
-	RouteTypes getBestBuildRoute(CvPlot* pPlot, BuildTypes* peBestBuild = NULL) const;	// Exposed to Python
+	RouteTypes getBestBuildRoute(const CvPlot* pPlot, BuildTypes* peBestBuild = NULL) const;	// Exposed to Python
 
 	bool canIgnoreZoneofControl() const;
 
-	bool groupDeclareWar(CvPlot* pPlot, bool bForce = false);
+	bool groupDeclareWar(const CvPlot* pPlot, bool bForce = false);
 	bool groupAttack(int iX, int iY, int iFlags, bool& bFailedAlreadyFighting, bool bStealth = false);
 	void groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUnit = NULL, bool bEndMove = false);
 	bool groupPathTo(int iX, int iY, int iFlags);
@@ -472,6 +472,7 @@ public:
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, UnitAITypes, getHeadUnitAI);
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, PlayerTypes, getHeadOwner);
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, TeamTypes, getHeadTeam);
+		DECLARE_MAP_FUNCTOR(CvSelectionGroup, AutomateTypes, getAutomateType);
 	};
 };
 

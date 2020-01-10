@@ -1141,10 +1141,10 @@ public:
 	void changeImprovementCount(ImprovementTypes eIndex, int iChange);
 
 	int getFreeBuildingCount(BuildingTypes eIndex) const;
-	int getFreeAreaBuildingCount(BuildingTypes eIndex, CvArea* area) const;
-	bool isBuildingFree(BuildingTypes eIndex, CvArea* area = NULL) const;																									// Exposed to Python
+	int getFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* area) const;
+	bool isBuildingFree(BuildingTypes eIndex, const CvArea* area = NULL) const;																									// Exposed to Python
 	void changeFreeBuildingCount(BuildingTypes eIndex, int iChange);
-	void changeFreeAreaBuildingCount(BuildingTypes eIndex, CvArea* area, int iChange);
+	void changeFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* area, int iChange);
 
 	int getExtraBuildingHappiness(BuildingTypes eIndex) const;																				// Exposed to Python
 /********************************************************************************/
@@ -1962,7 +1962,7 @@ public:
 	virtual void AI_conquerCity(CvCity* pCity) = 0;
 	virtual int AI_foundValue(int iX, int iY, int iMinUnitRange = -1, bool bStartingLoc = false) const = 0; // Exposed to Python
 	virtual bool AI_isCommercePlot(CvPlot* pPlot) const = 0;
-	virtual int AI_getPlotDanger(CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const = 0;
+	virtual int AI_getPlotDanger(const CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const = 0;
 	virtual bool AI_isFinancialTrouble() const = 0;																											// Exposed to Python
 	virtual TechTypes AI_bestTech(int iMaxPathLength = 1, bool bIgnoreCost = false, bool bAsync = false, TechTypes eIgnoreTech = NO_TECH, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR) const = 0;
 	virtual void AI_chooseFreeTech() = 0;

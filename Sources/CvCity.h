@@ -1699,7 +1699,7 @@ public:
 /********************************************************************************/
 /**		BETTER_BTS_AI_MOD						END								*/
 /********************************************************************************/
-	virtual bool AI_isDanger() = 0;
+	virtual bool AI_isDanger() const = 0;
 	virtual int evaluateDanger() = 0;
 	virtual int AI_neededDefenders() = 0;
 	virtual int AI_neededAirDefenders() = 0;

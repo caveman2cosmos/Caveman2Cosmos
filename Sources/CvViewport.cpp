@@ -82,7 +82,7 @@ void	CvViewport::resizeForMap()
 	}
 }
 
-void	CvViewport::bringIntoView(int iX, int iY, CvUnit* pSelectionUnit, bool bLookAt, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity)
+void	CvViewport::bringIntoView(int iX, int iY, const CvUnit* pSelectionUnit, bool bLookAt, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity)
 {
 	m_pLookatPlot = m_pMap->plotINLINE(iX, iY);
 	if ( pSelectionUnit != NULL && !pSelectionUnit->isDead() && !pSelectionUnit->isDelayedDeath() )
@@ -569,27 +569,27 @@ CvPlot* CvViewport::syncRandPlot(int iFlags, int iArea, int iMinUnitDistance, in
 	return m_pMap->syncRandPlot(iFlags, iArea, iMinUnitDistance, iTimeout);
 }
 
-CvCity* CvViewport::findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eTeam, bool bSameArea, bool bCoastalOnly, TeamTypes eTeamAtWarWith, DirectionTypes eDirection, CvCity* pSkipCity)
+CvCity* CvViewport::findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eTeam, bool bSameArea, bool bCoastalOnly, TeamTypes eTeamAtWarWith, DirectionTypes eDirection, const CvCity* pSkipCity) const
 {
 	return m_pMap->findCity(iX, iY, eOwner, eTeam, bSameArea, bCoastalOnly, eTeamAtWarWith, eDirection, pSkipCity);
 }
 
-CvSelectionGroup* CvViewport::findSelectionGroup(int iX, int iY, PlayerTypes eOwner, bool bReadyToSelect, bool bWorkers)
+CvSelectionGroup* CvViewport::findSelectionGroup(int iX, int iY, PlayerTypes eOwner, bool bReadyToSelect, bool bWorkers) const
 {
 	return m_pMap->findSelectionGroup(iX, iY, eOwner, bReadyToSelect, bWorkers);
 }
 
-CvArea* CvViewport::findBiggestArea(bool bWater)
+CvArea* CvViewport::findBiggestArea(bool bWater) const
 {
 	return m_pMap->findBiggestArea(bWater);
 }
 
-int CvViewport::getMapFractalFlags()
+int CvViewport::getMapFractalFlags() const
 {
 	return m_pMap->getMapFractalFlags();
 }
 
-bool CvViewport::findWater(CvPlot* pPlot, int iRange, bool bFreshWater) const
+bool CvViewport::findWater(const CvPlot* pPlot, int iRange, bool bFreshWater) const
 {
 	return m_pMap->findWater(pPlot, iRange, bFreshWater);
 }
@@ -630,7 +630,7 @@ int CvViewport::pointXToPlotX(float fX) const
 	return iResult;
 }
 
-float CvViewport::plotXToPointX(int iX)
+float CvViewport::plotXToPointX(int iX) const
 {
 	float fWidth, fHeight;
 	gDLL->getEngineIFace()->GetLandscapeGameDimensions(fWidth, fHeight);
@@ -648,29 +648,29 @@ int CvViewport::pointYToPlotY(float fY) const
 	return iResult;
 }
 
-float CvViewport::plotYToPointY(int iY)
+float CvViewport::plotYToPointY(int iY) const
 {
 	float fWidth, fHeight;
 	gDLL->getEngineIFace()->GetLandscapeGameDimensions(fWidth, fHeight);
 	return ((iY * fHeight) / ((float)getGridHeight())) - (fHeight / 2.0f) + (GC.getPLOT_SIZE() / 2.0f);
 }
 
-float CvViewport::getWidthCoords()
+float CvViewport::getWidthCoords() const
 {
 	return (GC.getPLOT_SIZE() * ((float)getGridWidth()));
 }
 
-float CvViewport::getHeightCoords()
+float CvViewport::getHeightCoords() const
 {
 	return (GC.getPLOT_SIZE() * ((float)getGridHeight()));
 }
 
-int CvViewport::maxPlotDistance()
+int CvViewport::maxPlotDistance() const
 {
 	return m_pMap->maxPlotDistance();
 }
 
-int CvViewport::maxStepDistance()
+int CvViewport::maxStepDistance() const
 {
 	return m_pMap->maxStepDistance();
 }
@@ -722,7 +722,7 @@ bool CvViewport::isWrap() const
 	return isWrapX() || isWrapY();
 }
 
-WorldSizeTypes CvViewport::getWorldSize()
+WorldSizeTypes CvViewport::getWorldSize() const
 {
 	return m_pMap->getWorldSize();
 }
@@ -757,7 +757,7 @@ CvPlot* CvViewport::plot(int iX, int iY) const
 	return m_pMap->plot(getMapXFromViewportX(iX), getMapYFromViewportY(iY));
 }
 
-CvPlot* CvViewport::pointToPlot(float fX, float fY)
+CvPlot* CvViewport::pointToPlot(float fX, float fY) const
 {
 	return plot(pointXToPlotX(fX), pointYToPlotY(fY));
 }

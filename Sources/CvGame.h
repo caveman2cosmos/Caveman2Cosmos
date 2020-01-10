@@ -330,10 +330,10 @@ public:
 	int getWaterAnimalSpawnChance() const;							// Exposed to Python
 	void setWaterAnimalSpawnChance(int iNewValue);					// Exposed to Python
 	void changeWaterAnimalSpawnChance(int iChange);					// Exposed to Python
-#if defined QC_MASTERY_VICTORY
+
 	bool getStarshipLaunched(int ID) const;
 	bool getDiplomaticVictoryAchieved(int ID) const;
-#endif
+
 	int getCurrentVoteID() const;
 	void setCurrentVoteID(int iNewValue);
 	
@@ -856,10 +856,9 @@ protected:
 	int m_iHighToLowCounter;
 	int m_iIncreasingDifficultyCounter;
 	int m_iMercyRuleCounter;
-#if defined QC_MASTERY_VICTORY
+
 	bool starshipLaunched[MAX_TEAMS]; 				//Ordered by team ID (both)
 	bool diplomaticVictoryAchieved[MAX_TEAMS];
-#endif
 /************************************************************************************************/
 /* Afforess	                         END                                                        */
 /************************************************************************************************/	

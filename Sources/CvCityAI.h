@@ -159,7 +159,7 @@ public:
 /********************************************************************************/
 /* 	BETTER_BTS_AI_MOD						END								    */
 /********************************************************************************/
-	bool AI_isDanger();
+	bool AI_isDanger() const;
 	int evaluateDanger();
 
 	bool AI_isAdequateHappinessMilitary(int iExtra);

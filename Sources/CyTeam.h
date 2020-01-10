@@ -48,11 +48,9 @@ public:
 	int getPower(bool bIncludeVassals);
 	int getDefensivePower();
 	int getNumNukeUnits();
-#if defined QC_MASTERY_VICTORY
 //Sevo Begin--VCM
 	int getTotalVictoryScore();
 //Sevo End VCM
-#endif
 
 	int getAtWarCount(bool bIgnoreMinors);
 	int getWarPlanCount(int /*WarPlanTypes*/ eWarPlan, bool bIgnoreMinors);
