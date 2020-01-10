@@ -10553,6 +10553,7 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANTATION</ArtDefineTag>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<bChangeRemove>1</bChangeRemove>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
