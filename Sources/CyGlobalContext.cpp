@@ -507,19 +507,6 @@ CvMainMenuInfo* CyGlobalContext::getMainMenus(int i) const
 	return ((i >= 0 && i < GC.getNumMainMenus()) ? &GC.getMainMenus(i) : NULL);
 }
 
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 02/19/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-// Python Modular Loading
-CvPythonModulesInfo* CyGlobalContext::getPythonModulesInfo(int i) const
-{
-	return ((i >= 0 && i < GC.getNumPythonModulesInfos()) ? &GC.getPythonModulesInfo(i) : NULL);
-}
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 
 CvVoteSourceInfo* CyGlobalContext::getVoteSourceInfo(int i) const
 {

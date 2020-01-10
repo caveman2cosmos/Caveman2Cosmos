@@ -6,7 +6,6 @@
 #ifndef CIV4_GLOBALS_H
 #define CIV4_GLOBALS_H
 
-//#include "CvStructs.h"
 //
 // 'global' vars for Civ IV.  singleton class.
 // All globals and global types should be contained in this class
@@ -149,8 +148,6 @@ class CvInvisibleInfo;
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-// Python Modular Loading
-class CvPythonModulesInfo;
 // MLF loading
 class CvModLoadControlInfo;
 /************************************************************************************************/
@@ -430,10 +427,6 @@ public:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	// Python Modular Loading
-	int getNumPythonModulesInfos();
-	std::vector<CvPythonModulesInfo*>& getPythonModulesInfos();
-	CvPythonModulesInfo& getPythonModulesInfo(int i);
 	// MLF loading
 	void resetModLoadControlVector();
 	int getModLoadControlVectorSize();
@@ -625,8 +618,6 @@ public:
 /************************************************************************************************/
 	int getPEAK_EXTRA_DEFENSE();
 	int getPEAK_EXTRA_MOVEMENT();
-
-	bool isFormationsMod() const;
 	
 	int iStuckUnitID;
 	int iStuckUnitCount;
@@ -638,8 +629,6 @@ public:
 	void setXMLLogging(bool bNewVal);
 	
 	void updateReplacements();
-	
-	const wchar* parseDenialHover(DenialTypes eDenial);
 	
 	int getSCORE_FREE_PERCENT();
 	int getSCORE_POPULATION_FACTOR();
@@ -1372,10 +1361,6 @@ public:
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
 
-	/**** Dexy - Dark Ages START ****/
-	const wchar* getRankingTextKeyWide(RankingTypes eRanking) const;
-	/**** Dexy - Dark Ages  END  ****/
-
 protected:
 
 	bool m_bGraphicsInitialized;
@@ -1517,8 +1502,6 @@ protected:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	// Python Modular Loading
-	std::vector<CvPythonModulesInfo*> m_paPythonModulesInfo;
 	// MLF loading
 	std::vector<CvString> m_paModLoadControlVector;
 	std::vector<CvModLoadControlInfo*> m_paModLoadControls;
@@ -1795,7 +1778,6 @@ protected:
 /************************************************************************************************/
 	int m_iPEAK_EXTRA_DEFENSE;
 	int m_iPEAK_EXTRA_MOVEMENT;
-	bool m_bFormationsMod;
 	bool m_bXMLLogging;
 	bool m_bLoadedPlayerOptions;
 	
@@ -2472,17 +2454,6 @@ public:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	// Python Modular Loading
-	int getNumPythonModulesInfos()
-	{
-		PROXY_TRACK("getNumPythonModulesInfos");	
-		return gGlobals->getNumPythonModulesInfos();	
-	}
-	CvPythonModulesInfo& getPythonModulesInfo(int i)
-	{
-		PROXY_TRACK("getPythonModulesInfo");	
-		return gGlobals->getPythonModulesInfo(i);	
-	}
 	CvModLoadControlInfo& getModLoadControlInfos(int i)
 	{
 		PROXY_TRACK("getModLoadControlInfos");	
@@ -3869,23 +3840,6 @@ inline CvGlobals& CvGlobals::getInstance()
 
 #ifndef FIXED_MISSION_NUMBER
 #define NUM_MISSION_TYPES (GC.getNumMissionInfos())
-#endif
-
-
-
-/************************************************************************************************/
-/* ADVANCED COMBAT ODDS                      17/02/09                          PieceOfMind      */
-/*                                                                                              */
-/************************************************************************************************/
-
-#ifndef ADVANCED_COMBAT_ODDS_H
-#define ADVANCED_COMBAT_ODDS_H
-
-#define ACO_DETAIL_LOW          0
-#define ACO_DETAIL_MEDIUM       1
-#define ACO_DETAIL_HIGH         2
-#define ACO_DETAIL_EVERYTHING   3
-
 #endif
 
 #endif

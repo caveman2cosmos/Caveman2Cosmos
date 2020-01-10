@@ -37,11 +37,9 @@ void CyTeamPythonInterface()
 		.def("getPower", &CyTeam::getPower, "int (bool bIncludeVassals)")
 		.def("getDefensivePower", &CyTeam::getDefensivePower, "int ()")
 		.def("getNumNukeUnits", &CyTeam::getNumNukeUnits, "int ()")
-#if defined QC_MASTERY_VICTORY
 //Sevo Begin--VCM
 		.def("getTotalVictoryScore", &CyTeam::getTotalVictoryScore, "int ()")
 //Sevo End VCM
-#endif		
 
 		.def("getAtWarCount", &CyTeam::getAtWarCount, "int (bool bIgnoreMinors)")
 		.def("getWarPlanCount", &CyTeam::getWarPlanCount, "int (int /*WarPlanTypes*/ eWarPlan, bool bIgnoreMinors)")

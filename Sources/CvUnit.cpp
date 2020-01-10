@@ -122,7 +122,7 @@ m_Properties(this)
 	{
 		g_dummyUnit = new CvUnitAI(true);
 
-		if ( GC.getDefineINT("ENABLE_DYNAMIC_UNIT_ENTITIES") )
+		if (GC.getENABLE_DYNAMIC_UNIT_ENTITIES())
 		{
 			g_bUseDummyEntities = true;
 		}
@@ -450,7 +450,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 		if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
 			GET_PLAYER(getOwnerINLINE()).changeAssets(assetValueTotal());
-			GET_PLAYER(getOwnerINLINE()).changeUnitPower(powerValueTotal());
+			GET_PLAYER(getOwnerINLINE()).changeUnitPower(getPowerValueTotal());
 		}
 
 		doSetUnitCombats();
@@ -463,7 +463,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 		else
 		{
 			GET_PLAYER(getOwnerINLINE()).changeAssets(assetValueTotal());
-			GET_PLAYER(getOwnerINLINE()).changeUnitPower(powerValueTotal());
+			GET_PLAYER(getOwnerINLINE()).changeUnitPower(getPowerValueTotal());
 		}
 		//--------------------------------
 		// Init non-saved data
@@ -1530,7 +1530,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 	GET_PLAYER(getOwnerINLINE()).changeAssets(-assetValueTotal());
 
-	GET_PLAYER(getOwnerINLINE()).changeUnitPower(-powerValueTotal());
+	GET_PLAYER(getOwnerINLINE()).changeUnitPower(-getPowerValueTotal());
 
 	if (pPlot != NULL)
 	{
@@ -7616,7 +7616,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 			return false;
 		}
 
-		if (airBombBaseRate() == 0)
+		if (getAirBombBaseRate() == 0)
 		{
 			return false;
 		}
@@ -9887,7 +9887,7 @@ bool CvUnit::canAirBomb(const CvPlot* pPlot) const
 		return false;
 	}
 
-	if (airBombBaseRate() == 0)
+	if (getAirBombBaseRate() == 0)
 	{
 		return false;
 	}
@@ -10080,7 +10080,7 @@ bool CvUnit::airBomb(int iX, int iY)
 		if (!GC.isDCM_AIR_BOMBING())
 		{
 			// RevolutionDCM start - vanilla airbomb behaviour
-			if (GC.getGameINLINE().getSorenRandNum(airBombCurrRate(), "Air Bomb - Offense") >=
+			if (GC.getGameINLINE().getSorenRandNum(getAirBombCurrRate(), "Air Bomb - Offense") >=
 					GC.getGameINLINE().getSorenRandNum(GC.getImprovementInfo(pPlot->getImprovementType()).getAirBombDefense(), "Air Bomb - Defense"))
 			{
 				MEMORY_TRACK_EXEMPT();
@@ -10149,7 +10149,7 @@ bool CvUnit::airBomb(int iX, int iY)
 			if (!GC.isDCM_AIR_BOMBING())
 			{
 				// RevolutionDCM start - vanilla airbomb behaviour
-				pCity->changeDefenseModifier(-airBombCurrRate());
+				pCity->changeDefenseModifier(-getAirBombCurrRate());
 				
 				MEMORY_TRACK_EXEMPT();
 
@@ -10424,7 +10424,7 @@ CvPlot* CvUnit::bombardImprovementTarget(const CvPlot* pPlot) const
 
 bool CvUnit::canBombard(const CvPlot* pPlot, bool bIgnoreHasAttacked) const
 {
-	if (bombardRate() <= 0)
+	if (getBombardRate() <= 0)
 	{
 		return false;
 	}
@@ -10499,7 +10499,7 @@ bool CvUnit::bombard()
 				iBombardModifier -= pBombardCity->getBuildingBombardDefense();
 			}
 
-			pBombardCity->changeDefenseModifier(-(bombardRate() * std::max(0, 100 + iBombardModifier)) / 100);
+			pBombardCity->changeDefenseModifier(-(getBombardRate() * std::max(0, 100 + iBombardModifier)) / 100);
 
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENSES_IN_CITY_REDUCED_TO", pBombardCity->getNameKey(), pBombardCity->getDefenseModifier(false), GET_PLAYER(getOwnerINLINE()).getNameKey());
 			AddDLLMessage(pBombardCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pBombardCity->getX_INLINE(), pBombardCity->getY_INLINE(), true, true);
@@ -10511,7 +10511,7 @@ bool CvUnit::bombard()
 		{
 			MEMORY_TRACK_EXEMPT();
 
-			pTargetPlot->changeDefenseDamage(bombardRate());
+			pTargetPlot->changeDefenseDamage(getBombardRate());
 
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENSES_IN_CITY_REDUCED_TO", GC.getImprovementInfo(pTargetPlot->getImprovementType()).getText(),
 				(GC.getImprovementInfo(pTargetPlot->getImprovementType()).getDefenseModifier()-pTargetPlot->getDefenseDamage()), GET_PLAYER(getOwnerINLINE()).getNameKey());
@@ -15243,7 +15243,7 @@ int CvUnit::getSMStrength() const
 
 void CvUnit::setSMStrength()
 {
-	int iStrength = getDomainType() == DOMAIN_AIR? baseAirCombatStrPreCheck() : baseCombatStrPreCheck();
+	const int iStrength = getDomainType() == DOMAIN_AIR? baseAirCombatStrPreCheck() : baseCombatStrPreCheck();
 	m_iSMStrength = applySMRank(iStrength, getSizeMattersOffsetValue(), GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
 	FAssert(m_iSMStrength >= 0);
 }
@@ -18590,7 +18590,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		}
 
 		pNewPlot->area()->changeUnitsPerPlayer(getOwnerINLINE(), 1);
-		pNewPlot->area()->changePower(getOwnerINLINE(), powerValueTotal()/100);
+		pNewPlot->area()->changePower(getOwnerINLINE(), getPowerValueTotal()/100);
 
 		if (AI_getUnitAIType() != NO_UNITAI)
 		{
@@ -18621,7 +18621,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		changeDebugCount(-1);
 
 		pOldPlot->area()->changeUnitsPerPlayer(getOwnerINLINE(), -1);
-		pOldPlot->area()->changePower(getOwnerINLINE(), -powerValueTotal()/100);
+		pOldPlot->area()->changePower(getOwnerINLINE(), -getPowerValueTotal()/100);
 
 		if (AI_getUnitAIType() != NO_UNITAI)
 		{
@@ -30178,34 +30178,38 @@ int CvUnit::computeWaveSize( bool bRangedRound, int iAttackerMax, int iDefenderM
 
 bool CvUnit::isTargetOf(const CvUnit& attacker) const
 {
-	CvUnitInfo& attackerInfo = attacker.getUnitInfo();
-	CvUnitInfo& ourInfo = getUnitInfo();
+	const CvUnitInfo& attackerInfo = attacker.getUnitInfo();
+	const CvUnitInfo& ourInfo = getUnitInfo();
 
 	//if (!plot()->isCity(true, getTeam()) || (attacker.plot() == plot() && (attacker.isAssassin() || isAssassin())))
 	//{
-		if (NO_UNITCLASS != getUnitClassType() && attackerInfo.getTargetUnitClass(getUnitClassType()))
-		{
-			return true;
-		}
-		// TB SubCombat Mod Begin - Original code:
-		for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = m_unitCombatKeyedInfo.begin(), end = m_unitCombatKeyedInfo.end(); it != end; ++it)
-		{
-			if(it->second.m_bHasUnitCombat)
-			{
-				if (attackerInfo.getTargetUnitCombat(it->first) || 
-					attacker.hasTargetUnitCombat(it->first))
-				{
-					return true;
-				}
-			}
-		}
-		//TB SubCombat Mod End	
-	//}
 
-	if (NO_UNITCLASS != attackerInfo.getUnitClassType() && ourInfo.getDefenderUnitClass(attackerInfo.getUnitClassType()))
+	if (getUnitClassType() != NO_UNITCLASS && attackerInfo.getTargetUnitClass(getUnitClassType()))
 	{
 		return true;
 	}
+
+	if (attackerInfo.getUnitClassType() != NO_UNITCLASS && ourInfo.getDefenderUnitClass(attackerInfo.getUnitClassType()))
+	{
+		return true;
+	}
+
+	// TB SubCombat Mod Begin - Original code:
+	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = m_unitCombatKeyedInfo.begin(), end = m_unitCombatKeyedInfo.end(); it != end; ++it)
+	{
+		if(it->second.m_bHasUnitCombat)
+		{
+			if (attackerInfo.getTargetUnitCombat(it->first) || 
+				attacker.hasTargetUnitCombat(it->first))
+			{
+				return true;
+			}
+		}
+	}
+	//TB SubCombat Mod End	
+
+	//}
+
 
 	// TB SubCombat Mod Begin
 	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = attacker.m_unitCombatKeyedInfo.begin(), end = attacker.m_unitCombatKeyedInfo.end(); it != end; ++it)
@@ -30225,43 +30229,37 @@ bool CvUnit::isTargetOf(const CvUnit& attacker) const
 
 bool CvUnit::isEnemy(TeamTypes eTeam, const CvPlot* pPlot, const CvUnit* pUnit) const
 {
-	if (NULL == pPlot)
+	if (pUnit != NULL && (isBarbCoExist() && pUnit->isHominid() || pUnit->isBarbCoExist() && isHominid()))
+	{
+		return false;
+	}
+
+	if (pPlot == NULL)
 	{
 		pPlot = plot();
 	}
 
-	if (pUnit != NULL)
-	{
-		if (isBarbCoExist() && pUnit->isHominid() || pUnit->isBarbCoExist() && isHominid())
-		{
-			return false;
-		}
-	}
-
-	return (atWar(GET_PLAYER(getCombatOwner(eTeam, pPlot)).getTeam(), eTeam));
+	return atWar(GET_PLAYER(getCombatOwner(eTeam, pPlot)).getTeam(), eTeam);
 }
 
 bool CvUnit::isPotentialEnemy(TeamTypes eTeam, const CvPlot* pPlot, const CvUnit* pUnit) const
 {
-	if (NULL == pPlot)
+	if (pUnit != NULL && (isBarbCoExist() && pUnit->isHominid() || pUnit->isBarbCoExist() && isHominid()))
+	{
+		return false;
+	}
+
+	if (pPlot == NULL)
 	{
 		pPlot = plot();
 	}
 
-	if (pUnit != NULL)
-	{
-		if (isBarbCoExist() && pUnit->isHominid() || pUnit->isBarbCoExist() && isHominid())
-		{
-			return false;
-		}
-	}
-
-	return (::isPotentialEnemy(GET_PLAYER(getCombatOwner(eTeam, pPlot)).getTeam(), eTeam));
+	return ::isPotentialEnemy(GET_PLAYER(getCombatOwner(eTeam, pPlot)).getTeam(), eTeam);
 }
 
 bool CvUnit::isSuicide() const
 {
-	return (m_pUnitInfo->isSuicide() || getKamikazePercent() != 0);
+	return m_pUnitInfo->isSuicide() || getKamikazePercent() != 0;
 }
 
 int CvUnit::getDropRange() const
@@ -30648,27 +30646,14 @@ bool CvUnit::isAlwaysHostile(const CvPlot* pPlot) const
 		return false;
 	}
 
-	if (NULL != pPlot && pPlot->isCity(true, getTeam()))
+	if (pPlot != NULL && pPlot->isCity(true, getTeam()))
 	{
-		if (!isBlendIntoCity())
+		if (isBlendIntoCity())
 		{
-			if (pPlot->getOwner() == getOwner() || (isBarbCoExist() && pPlot->isHominid()))
-			{
-				return false;//TBBARBCOEXIST
-			}
-			else
-			{
-				return true;
-			}
+			return isAssassin() && pPlot == plot();
 		}
-		else if (isAssassin() && pPlot == plot())
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
+
+		return (!(pPlot->getOwner() == getOwner() || (isBarbCoExist() && pPlot->isHominid())));//TBBARBCOEXIST
 	}
 
 	return true;
@@ -30676,33 +30661,19 @@ bool CvUnit::isAlwaysHostile(const CvPlot* pPlot) const
 
 bool CvUnit::verifyStackValid()
 {
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
-	CvPlot* pPlot;
+	CvPlot* pPlot = plot();
 
-	pPlot = plot();
-
-	pUnitNode = pPlot->headUnitNode();
-
-	while (pUnitNode != NULL)
+	foreach_ (CvUnit* unit, pPlot->units())
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
-		if ( pLoopUnit != this )
+		if (unit != this && isEnemy(unit->getTeam(), NULL, unit) && !unit->isInvisible(getTeam(),false) && !canCoexistWithTeamOnPlot(unit->getTeam(), *pPlot))
 		{
-			if (isEnemy(pLoopUnit->getTeam(), NULL, pLoopUnit) && !pLoopUnit->isInvisible(getTeam(),false) && !canCoexistWithTeamOnPlot(pLoopUnit->getTeam(), *pPlot))
-			{
-				return jumpToNearestValidPlot();
-			}
+			return jumpToNearestValidPlot();
 		}
 	}
 
 	return true;
 }
 
-
-// Private Functions...
 
 //check if quick combat
 bool CvUnit::isCombatVisible(const CvUnit* pDefender) const
@@ -30736,34 +30707,19 @@ bool CvUnit::isCombatVisible(const CvUnit* pDefender) const
 // used by the executable for the red glow and plot indicators
 bool CvUnit::shouldShowEnemyGlow(TeamTypes eForTeam) const
 {
-	if (isDelayedDeath())
+	if (isDelayedDeath() || getDomainType() == DOMAIN_AIR || !canFight())
 	{
 		return false;
 	}
 
-	if (getDomainType() == DOMAIN_AIR)
-	{
-		return false;
-	}
-
-	if (!canFight())
-	{
-		return false;
-	}
-
-	CvPlot* pPlot = plot();
+	const CvPlot* pPlot = plot();
 	if (pPlot == NULL)
 	{
 		return false;
 	}
 
-	TeamTypes ePlotTeam = pPlot->getTeam();
-	if (ePlotTeam != eForTeam)
-	{
-		return false;
-	}
-
-	if (!isEnemy(ePlotTeam))
+	const TeamTypes ePlotTeam = pPlot->getTeam();
+	if (ePlotTeam != eForTeam || !isEnemy(ePlotTeam))
 	{
 		return false;
 	}
@@ -30779,12 +30735,9 @@ bool CvUnit::shouldShowFoundBorders() const
 
 void CvUnit::cheat(bool bCtrl, bool bAlt, bool bShift)
 {
-	if (gDLL->getChtLvl() > 0)
+	if (gDLL->getChtLvl() > 0 && bCtrl)
 	{
-		if (bCtrl)
-		{
-			setPromotionReady(true);
-		}
+		setPromotionReady(true);
 	}
 }
 
@@ -30792,22 +30745,20 @@ float CvUnit::getHealthBarModifier() const
 {
 	if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		int iWidthDivisor = 1+((int)GET_PLAYER(getOwnerINLINE()).getCurrentEra());;
-		iWidthDivisor *= 4;
-		return ((GC.getDefineFLOAT("HEALTH_BAR_WIDTH")/iWidthDivisor) / (GC.getGameINLINE().getBestLandUnitCombat() * 2));
+		const int iWidthDivisor = (1 + (int)GET_PLAYER(getOwner()).getCurrentEra()) * 4;
+		return ((GC.getDefineFLOAT("HEALTH_BAR_WIDTH") / iWidthDivisor) / (GC.getGame().getBestLandUnitCombat() * 2));
 	}
-	return (GC.getDefineFLOAT("HEALTH_BAR_WIDTH") / (GC.getGameINLINE().getBestLandUnitCombat() * 2));
+	return (GC.getDefineFLOAT("HEALTH_BAR_WIDTH") / (GC.getGame().getBestLandUnitCombat() * 2));
 }
 
 void CvUnit::getLayerAnimationPaths(std::vector<AnimationPathTypes>& aAnimationPaths) const
 {
-	for (int i=0; i < GC.getNumPromotionInfos(); ++i)
+	for (int i = 0; i < GC.getNumPromotionInfos(); ++i)
 	{
-		PromotionTypes ePromotion = (PromotionTypes) i;
-		if (isHasPromotion(ePromotion))
+		if (isHasPromotion((PromotionTypes)i))
 		{
-			AnimationPathTypes eAnimationPath = (AnimationPathTypes) GC.getPromotionInfo(ePromotion).getLayerAnimationPath();
-			if(eAnimationPath != ANIMATIONPATH_NONE)
+			const AnimationPathTypes eAnimationPath = (AnimationPathTypes)GC.getPromotionInfo((PromotionTypes)i).getLayerAnimationPath();
+			if (eAnimationPath != ANIMATIONPATH_NONE)
 			{
 				aAnimationPaths.push_back(eAnimationPath);
 			}
@@ -30844,7 +30795,7 @@ bool CvUnit::canAirBomb1(const CvPlot* pPlot) const
 		return false;
 	}
 
-	if (airBombBaseRate() == 0)
+	if (getAirBombBaseRate() == 0)
 	{
 		return false;
 	}
@@ -30860,51 +30811,40 @@ bool CvUnit::canAirBomb1(const CvPlot* pPlot) const
 
 bool CvUnit::canAirBomb1At(const CvPlot* pPlot, int iX, int iY) const
 {
-	CvCity* pCity;
-	CvPlot* pTargetPlot;
-
 	if (!canAirBomb1(pPlot))
 	{
 		return false;
 	}
 
-	pTargetPlot = GC.getMapINLINE().plotINLINE(iX, iY);
-
-	if (plotDistance(pPlot->getX_INLINE(), pPlot->getY_INLINE(), pTargetPlot->getX_INLINE(), pTargetPlot->getY_INLINE()) > airRange())
+	const CvPlot* pTargetPlot = GC.getMap().plot(iX, iY);
+	if (plotDistance(pPlot->getX(), pPlot->getY(), pTargetPlot->getX(), pTargetPlot->getY()) > airRange())
 	{
 		return false;
 	}
 
-	if (pTargetPlot->isOwned())
+	if (pTargetPlot->isOwned() && !atWar(pTargetPlot->getTeam(), getTeam()))
 	{
-		if (!atWar(pTargetPlot->getTeam(), getTeam()))
-		{
-			return false;
-		}
+		return false;
 	}
 
-	pCity = pTargetPlot->getPlotCity();
-
+	const CvCity* pCity = pTargetPlot->getPlotCity();
 	if (pCity != NULL)
 	{
-		if (!(pCity->isBombardable(this)))
+		if (!pCity->isBombardable(this))
 		{
 			return false;
 		}
 	}
 	else
 	{
-		if (pTargetPlot->getImprovementType() == NO_IMPROVEMENT)
+		const ImprovementTypes targetImprovement = pTargetPlot->getImprovementType();
+		if (targetImprovement == NO_IMPROVEMENT)
 		{
 			return false;
 		}
 
-		if (GC.getImprovementInfo(pTargetPlot->getImprovementType()).isPermanent())
-		{
-			return false;
-		}
-
-		if (GC.getImprovementInfo(pTargetPlot->getImprovementType()).getAirBombDefense() == -1)
+		const CvImprovementInfo& targetImprovementInfo = GC.getImprovementInfo(targetImprovement);
+		if (targetImprovementInfo.isPermanent() || targetImprovementInfo.getAirBombDefense() == -1)
 		{
 			return false;
 		}
@@ -30940,7 +30880,7 @@ bool CvUnit::airBomb1(int iX, int iY)
 	CvCity* pCity = pPlot->getPlotCity();
 	if (pCity != NULL)
 	{
-		pCity->changeDefenseDamage(airBombCurrRate());
+		pCity->changeDefenseDamage(getAirBombCurrRate());
 		bool bBarb = pCity->isHominid();
 		//TB Combat Mods begin
 		int iMax = MAX_INT;
@@ -30963,7 +30903,7 @@ bool CvUnit::airBomb1(int iX, int iY)
 	{
 		if (pPlot->getImprovementType() != NO_IMPROVEMENT)
 		{
-			if (GC.getGameINLINE().getSorenRandNum(airBombCurrRate(), "Air Bomb - Offense") >=
+			if (GC.getGameINLINE().getSorenRandNum(getAirBombCurrRate(), "Air Bomb - Offense") >=
 					GC.getGameINLINE().getSorenRandNum(GC.getImprovementInfo(pPlot->getImprovementType()).getAirBombDefense(), "Air Bomb - Defense"))
 			{
 				{
@@ -31078,7 +31018,7 @@ bool CvUnit::canAirBomb2(const CvPlot* pPlot) const
 	{
 		return false;
 	}
-	if (airBombBaseRate() == 0)
+	if (getAirBombBaseRate() == 0)
 	{
 		return false;
 	}
@@ -31092,30 +31032,20 @@ bool CvUnit::canAirBomb2(const CvPlot* pPlot) const
 
 bool CvUnit::canAirBomb2At(const CvPlot* pPlot, int iX, int iY) const
 {
-	CvCity* pCity;
-	CvPlot* pTargetPlot;
 	if (!canAirBomb2(pPlot))
 	{
 		return false;
 	}
-	pTargetPlot = GC.getMapINLINE().plotINLINE(iX, iY);
-	if (plotDistance(pPlot->getX_INLINE(), pPlot->getY_INLINE(), pTargetPlot->getX_INLINE(), pTargetPlot->getY_INLINE()) > airRange())
+	const CvPlot* pTargetPlot = GC.getMap().plot(iX, iY);
+	if (plotDistance(pPlot->getX(), pPlot->getY(), pTargetPlot->getX(), pTargetPlot->getY()) > airRange())
 	{
 		return false;
 	}
-	if (pTargetPlot->isOwned())
-	{
-		if (!atWar(pTargetPlot->getTeam(), getTeam()))
-		{
-			return false;
-		}
-	}
-	pCity = pTargetPlot->getPlotCity();
-	if (pCity == NULL)
+	if (pTargetPlot->isOwned() && !atWar(pTargetPlot->getTeam(), getTeam()))
 	{
 		return false;
 	}
-	return true;
+	return pTargetPlot->getPlotCity() != NULL;
 }
 
 
@@ -31338,7 +31268,7 @@ bool CvUnit::canAirBomb3(const CvPlot* pPlot) const
 	{
 		return false;
 	}
-	if (airBombBaseRate() == 0)
+	if (getAirBombBaseRate() == 0)
 	{
 		return false;
 	}
@@ -31603,7 +31533,7 @@ bool CvUnit::canAirBomb4(const CvPlot* pPlot) const
 	{
 		return false;
 	}
-	if (airBombBaseRate() == 0)
+	if (getAirBombBaseRate() == 0)
 	{
 		return false;
 	}
@@ -31902,7 +31832,7 @@ bool CvUnit::canAirBomb5(const CvPlot* pPlot) const
 	{
 		return false;
 	}
-	if (airBombBaseRate() == 0)
+	if (getAirBombBaseRate() == 0)
 	{
 		return false;
 	}
@@ -32394,7 +32324,7 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 			// Plot bombardment
 			if (pPlot->getImprovementType() != NO_IMPROVEMENT) 
 			{
-				if (GC.getGameINLINE().getSorenRandNum(bombardRate(), "Bomb - Offense") >=
+				if (GC.getGameINLINE().getSorenRandNum(getBombardRate(), "Bomb - Offense") >=
 						GC.getGameINLINE().getSorenRandNum(GC.getImprovementInfo(pPlot->getImprovementType()).getAirBombDefense(), "Bomb - Defense"))
 				{
 					{
@@ -32537,7 +32467,7 @@ void CvUnit::doOpportunityFire()
 	{
 		return;
 	}
-	if (bombardRate() <= 0 || getDCMBombRange() <= 0)
+	if (getBombardRate() <= 0 || getDCMBombRange() <= 0)
 	{
 		return;
 	}
@@ -32579,7 +32509,7 @@ void CvUnit::doOpportunityFire()
 		if (pDefender != NULL)
 		{
 			setBattlePlot(pAttackPlot, pDefender);
-			iUnitDamage = (GC.getGameINLINE().getSorenRandNum(bombardRate(), "Bombard damage") * 5);
+			iUnitDamage = (GC.getGameINLINE().getSorenRandNum(getBombardRate(), "Bombard damage") * 5);
 			pDefender->changeDamage(iUnitDamage, getOwner());
 			//TB Combat Mod begin
 			if (dealsColdDamage())
@@ -34066,7 +33996,6 @@ bool CvUnit::spyNuke(int iX, int iY, bool bCaught)
 
 bool CvUnit::canClaimTerritory(const CvPlot* pPlot) const
 {
-
 	if (!GET_PLAYER(getOwnerINLINE()).hasFixedBorders())
 	{
 		return false;
@@ -34152,7 +34081,6 @@ bool CvUnit::claimTerritory()
 {
 	//logMsg("%S claims territory from %S at (%d, %d)", GET_PLAYER(getOwner()).getCivilizationShortDescription(), GET_PLAYER(plot()->getOwner()).getCivilizationShortDescription(), plot()->getX(), plot()->getY());
 	
-
 	CvPlot* pPlot = plot();
 	bool bWasOwned = false;
 	PlayerTypes pPlayerThatLostTerritory;
@@ -34445,31 +34373,13 @@ int CvUnit::getHurryFood(const CvPlot* pPlot) const
 
 bool CvUnit::canHurryFood(const CvPlot* pPlot) const
 {
-	if (isDelayedDeath())
+	if (isDelayedDeath() || getHurryFood(pPlot) == 0)
 	{
 		return false;
 	}
 
-	CvCity* pCity;
-
-	if (getHurryFood(pPlot) == 0)
-	{
-		return false;
-	}
-
-	pCity = pPlot->getPlotCity();
-
-	if (pCity == NULL)
-	{
-		return false;
-	}
-	
-	if (pCity->getOwnerINLINE() != getOwnerINLINE())
-	{
-		return false;
-	}
-
-	if (pCity->getFoodTurnsLeft() == 1)
+	const CvCity* pCity = pPlot->getPlotCity();
+	if (pCity == NULL || pCity->getOwnerINLINE() != getOwnerINLINE() || pCity->getFoodTurnsLeft() == 1)
 	{
 		return false;
 	}
@@ -34480,14 +34390,12 @@ bool CvUnit::canHurryFood(const CvPlot* pPlot) const
 
 bool CvUnit::hurryFood()
 {
-	CvCity* pCity;
-
 	if (!canHurryFood(plot()))
 	{
 		return false;
 	}
 
-	pCity = plot()->getPlotCity();
+	CvCity* pCity = plot()->getPlotCity();
 
 	if (pCity != NULL)
 	{
@@ -35255,9 +35163,9 @@ int CvUnit::getTerrainProtectedCount(TerrainTypes eIndex, bool bIgnoreCommanders
 		iTotal = info->m_iTerrainProtected;
 	}
 
-	if (!bIgnoreCommanders && !isCommander()) //this is not a commander
+	if (!bIgnoreCommanders && !isCommander())
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
 			iTotal += pCommander->getTerrainProtectedCount(eIndex);
@@ -35285,13 +35193,14 @@ void CvUnit::doCommerceAttacks(const CvUnit* pDefender, const CvPlot* pPlot)
 {
 	if (pDefender->isDead())
 	{
-		if (pPlot->getPlotCity() != NULL)
+		CvCity* city = pPlot->getPlotCity();
+		if (city != NULL)
 		{
 			for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 			{
-				if (pPlot->getPlotCity()->getMaxCommerceAttacks((CommerceTypes)iI) > 0)
+				if (city->getMaxCommerceAttacks((CommerceTypes)iI) > 0)
 				{
-					pPlot->getPlotCity()->changeCommerceAttacks((CommerceTypes)iI, 1);
+					city->changeCommerceAttacks((CommerceTypes)iI, 1);
 				}
 			}
 		}
@@ -42724,7 +42633,7 @@ int CvUnit::getSMHPValue() const
 
 void CvUnit::setSMHPValue()
 {
-	int newSMHPValue = applySMRank(HPValueTotalPreCheck(),
+	const int newSMHPValue = applySMRank(HPValueTotalPreCheck(),
 		getSizeMattersOffsetValue(),
 		GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
 	m_iSMHPValue = std::max(1, newSMHPValue);
@@ -42746,32 +42655,32 @@ void CvUnit::changeExtraPowerValue(int iChange)
 	}
 }
 
-int CvUnit::powerValueTotal() const
+int CvUnit::getPowerValueTotal() const
 {
-	int iData = 0;
+	int powerValue = 0;
 	if (!GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		iData = powerValueTotalPreCheck();
+		powerValue = getSMPowerValueTotalBase();
 	}
 	else
 	{
 		if (getSMPowerValue() == 0)
 		{
-			iData = powerValueTotalPreCheck();
+			powerValue = getSMPowerValueTotalBase();
 		}
 		else
 		{
-			iData = getSMPowerValue();
+			powerValue = getSMPowerValue();
 		}
 	}
-	return std::max(1, iData);
+	return std::max(1, powerValue);
 }
 
-int CvUnit::powerValueTotalPreCheck() const
+int CvUnit::getSMPowerValueTotalBase() const
 {
-	int iData = m_pUnitInfo->getPowerValue();
-	iData += getExtraPowerValue();
-	return std::max(1, iData);
+	const int powerValueBase = m_pUnitInfo->getPowerValue() 
+		+ getExtraPowerValue();
+	return std::max(1, powerValueBase);
 }
 
 int CvUnit::getSMPowerValue() const
@@ -42781,17 +42690,16 @@ int CvUnit::getSMPowerValue() const
 
 void CvUnit::setSMPowerValue(bool bForLoad)
 {
-	FAssert(powerValueTotalPreCheck() >= 0);
-	int oldSMPowerValue = powerValueTotal();
-	int newSMPowerValue = applySMRank(powerValueTotalPreCheck(),
+	FAssert(getSMPowerValueTotalBase() >= 0);
+	const int oldSMPowerValue = getPowerValueTotal();
+	const int newSMPowerValue = applySMRank(getSMPowerValueTotalBase(),
 		getSizeMattersOffsetValue(),
 		GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
 	FAssert(newSMPowerValue >= 0);
 	m_iSMPowerValue = std::max(1, newSMPowerValue);
 	if (!bForLoad)
 	{
-		int iChange = m_iSMPowerValue - oldSMPowerValue;
-		iChange = std::max(1, iChange);
+		const int iChange = std::max(1, m_iSMPowerValue - oldSMPowerValue);
 		GET_PLAYER(getOwnerINLINE()).changePower(iChange);
 	}
 	FAssert(getSMPowerValue() >= 0);
@@ -42850,7 +42758,7 @@ void CvUnit::setSMAssetValue(bool bForLoad)
 	const int offsetValue = getSizeMattersOffsetValue();
 	if (offsetValue != -15) // Special Case for size cat undefined units
 	{
-		int oldSMAssetValue = assetValueTotal();
+		const int oldSMAssetValue = assetValueTotal();
 		m_iSMAssetValue = applySMRank(assetValueTotalPreCheck(),
 			offsetValue,
 			GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
@@ -43203,12 +43111,13 @@ void CvUnit::setExtraBombardRate(int iChange)
 	}
 }
 
-int CvUnit::bombardRate() const//The call that plugs into the rest of the code (final value) - this can be plugged into the existing final - or even be renamed to the existing final (though experience has shown me this causes me tremendous confusion!)
+// The call that plugs into the rest of the code (final value) - this can be plugged into the existing final - or even be renamed to the existing final (though experience has shown me this causes me tremendous confusion!)
+int CvUnit::getBombardRate() const
 {
-	int iData = 0;
+	int bombardRate = 0;
 	if (!GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		iData = bombardRateTotalPreCheck();
+		bombardRate = getSMBombardRateTotalBase();
 	}
 	else
 	{
@@ -43217,20 +43126,22 @@ int CvUnit::bombardRate() const//The call that plugs into the rest of the code (
 //		//Either that or the base is 0 anyhow.
 		if (getSMBombardRate() == 0)
 		{
-			iData = bombardRateTotalPreCheck();
+			bombardRate = getSMBombardRateTotalBase();
 		}
 		else
 		{
-			iData = getSMBombardRate();
+			bombardRate = getSMBombardRate();
 		}
 	}
-	return std::max(0, iData);
+	return std::max(0, bombardRate);
 }
 
-int CvUnit::bombardRateTotalPreCheck() const//The total before the Size Matters multiplicative method adjusts for the final value.
+// The total before the Size Matters multiplicative method adjusts for the final value.
+int CvUnit::getSMBombardRateTotalBase() const
 {
-	int iData = m_pUnitInfo->getBombardRate();//Unit base.
-	iData += getExtraBombardRate();//Extra Adjustments from CCs and promos (Optional)
+	const int bombardRateTotalBase = 
+		m_pUnitInfo->getBombardRate() // Unit base.
+		+ getExtraBombardRate(); // Extra Adjustments from CCs and promos (Optional)
 //	//If there is a flat base not defined on the unit itself then it needs to plug in here.
 //
 //	//The following lines can vary depending on if you want an approaching 0 return, diminishing return, max or whatever
@@ -43238,7 +43149,7 @@ int CvUnit::bombardRateTotalPreCheck() const//The total before the Size Matters 
 //	//to work with
 	//In THIS case, units can easily have NO bombard rate (there's a check above to make sure it's not less than 0 as that would be an odd situation.)
 	//If this value starts going less than 0 then perhaps a min needs to be established.
-	return iData;
+	return bombardRateTotalBase;
 }
 
 int CvUnit::getSMBombardRate() const//The final result of the Multiplicative adjustment
@@ -43250,7 +43161,7 @@ int CvUnit::getSMBombardRate() const//The final result of the Multiplicative adj
 ////This is the core multiplicative method being utilized.
 void CvUnit::setSMBombardRate()
 {
-	m_iSMBombardRate = applySMRank(bombardRateTotalPreCheck(),
+	m_iSMBombardRate = applySMRank(getSMBombardRateTotalBase(),
 		getSizeMattersOffsetValue(),
 		GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
 
@@ -43276,17 +43187,17 @@ void CvUnit::setSMBombardRate()
 //	return m_pUnitInfo->getBombRate();
 //}
 
-int CvUnit::airBombCurrRate() const
+int CvUnit::getAirBombCurrRate() const
 {
-	return ((airBombBaseRate() * currHitPoints()) / maxHitPoints());
+	return ((getAirBombBaseRate() * currHitPoints()) / maxHitPoints());
 }
 
-int CvUnit::airBombBaseRate() const//The call that plugs into the rest of the code (final value) - this can be plugged into the existing final - or even be renamed to the existing final (though experience has shown me this causes me tremendous confusion!)
+int CvUnit::getAirBombBaseRate() const//The call that plugs into the rest of the code (final value) - this can be plugged into the existing final - or even be renamed to the existing final (though experience has shown me this causes me tremendous confusion!)
 {
-	int iData = 0;
+	int airBombBaseRate = 0;
 	if (!GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		iData = airBombBaseRateTotalPreCheck();
+		airBombBaseRate = getSMAirBombBaseRateTotalBase();
 	}
 	else
 	{
@@ -43295,20 +43206,19 @@ int CvUnit::airBombBaseRate() const//The call that plugs into the rest of the co
 		//Either that or the base is 0 anyhow.
 		if (getSMAirBombBaseRate() == 0)
 		{
-			iData = airBombBaseRateTotalPreCheck();
+			airBombBaseRate = getSMAirBombBaseRateTotalBase();
 		}
 		else
 		{
-			iData = getSMAirBombBaseRate();
+			airBombBaseRate = getSMAirBombBaseRate();
 		}
 	}
-	return iData;
+	return airBombBaseRate;
 }
 
-int CvUnit::airBombBaseRateTotalPreCheck() const//The total before the Size Matters multiplicative method adjusts for the final value.
+int CvUnit::getSMAirBombBaseRateTotalBase() const//The total before the Size Matters multiplicative method adjusts for the final value.
 {
-	int iData = m_pUnitInfo->getBombRate();//Unit base.
-	return iData;
+	return m_pUnitInfo->getBombRate();//Unit base.
 }
 
 int CvUnit::getSMAirBombBaseRate() const//The final result of the Multiplicative adjustment
@@ -43320,7 +43230,7 @@ int CvUnit::getSMAirBombBaseRate() const//The final result of the Multiplicative
 //This is the core multiplicative method being utilized.
 void CvUnit::setSMAirBombBaseRate()
 {
-	m_iSMAirBombBaseRate = applySMRank(airBombBaseRateTotalPreCheck(),
+	m_iSMAirBombBaseRate = applySMRank(getSMAirBombBaseRateTotalBase(),
 		getSizeMattersOffsetValue(),
 		GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
 

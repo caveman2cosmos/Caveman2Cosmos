@@ -1849,17 +1849,17 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				}
 			}
 
-			if (pUnit->bombardRate() > 0)
+			if (pUnit->getBombardRate() > 0)
 			{
 				if (bShort)
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_UNIT_BOMBARD_RATE_SHORT", ((pUnit->bombardRate() * 100) / GC.getMAX_CITY_DEFENSE_DAMAGE())));
+					szString.append(gDLL->getText("TXT_KEY_UNIT_BOMBARD_RATE_SHORT", ((pUnit->getBombardRate() * 100) / GC.getMAX_CITY_DEFENSE_DAMAGE())));
 				}
 				else
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_UNIT_BOMBARD_RATE", ((pUnit->bombardRate() * 100) / GC.getMAX_CITY_DEFENSE_DAMAGE())));
+					szString.append(gDLL->getText("TXT_KEY_UNIT_BOMBARD_RATE", ((pUnit->getBombardRate() * 100) / GC.getMAX_CITY_DEFENSE_DAMAGE())));
 				}
 			}
 
@@ -4519,7 +4519,6 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 	CvWString szTempBuffer;
 	CvWString szOffenseOdds;
 	CvWString szDefenseOdds;
-	bool bValid;
 	int iModifier;
 
 	UnitCombatTypes eUnitCombatType;
@@ -4530,7 +4529,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 		return false;
 	}
 
-	bValid = false;
+	bool bValid = false;
 
 	switch (gDLL->getInterfaceIFace()->getSelectionList()->getDomainType())
 	{
@@ -4543,7 +4542,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 		break;
 
 	case DOMAIN_LAND:
-		bValid = (!(pPlot->isWater()) || pPlot->isCanMoveLandUnits() || gDLL->getInterfaceIFace()->getSelectionList()->canMoveAllTerrain());
+		bValid = (!pPlot->isWater() || pPlot->isSeaTunnel() || gDLL->getInterfaceIFace()->getSelectionList()->canMoveAllTerrain());
 		break;
 
 	case DOMAIN_IMMOBILE:

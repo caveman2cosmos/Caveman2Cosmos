@@ -323,7 +323,7 @@ class BarbarianCiv:
 
 		szTxt = TRNSLTR.getText("TXT_KEY_BARBCIV_WORD_SPREADS", ()) + " "
 		szTxt += TRNSLTR.getText("TXT_KEY_BARBCIV_FORM_MINOR", ()) % (civName, szCityName)
-		MSG_TIME = GC.getDefineINT("EVENT_MESSAGE_TIME")
+		MSG_TIME = GC.getEVENT_MESSAGE_TIME()
 		for iPlayerX in xrange(MAX_PC_PLAYERS):
 			CyPlayerX = GC.getPlayer(iPlayerX)
 			if not CyPlayerX.isHuman(): continue

@@ -26,7 +26,6 @@ public:
 	void AI_separateImpassable();
 	void AI_separateEmptyTransports();
 
-
 	bool AI_update();
 
 	int AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy, bool bForce = false, bool* bWin = NULL, int iTheshold = -1) const;
@@ -53,7 +52,7 @@ public:
 	MissionAITypes AI_getMissionAIType() const;
 	void AI_setMissionAI(MissionAITypes eNewMissionAI, CvPlot* pNewPlot, CvUnit* pNewUnit);
 	void AI_noteSizeChange(int iChange, int iVolume);
-	CvUnit* AI_findBestDefender(CvPlot* pTargetPlot, bool allowAllDefenders, bool bConsiderPropertyValues = false);
+	CvUnit* AI_findBestDefender(const CvPlot* pTargetPlot, bool allowAllDefenders, bool bConsiderPropertyValues = false) const;
 	CvUnit* AI_ejectBestDefender(CvPlot* pTargetPlot, bool allowAllDefenders);
 	virtual bool AI_hasBeneficialPropertyEffectForCity(CvCity* pCity) const;
 	virtual CvUnit* AI_ejectBestPropertyManipulator(CvCity* pTargetCity);
@@ -67,7 +66,7 @@ public:
 	void write(FDataStreamBase* pStream);
 
 protected:
-	bool	AI_isAwaitingContract() const;
+	bool AI_isAwaitingContract() const;
 
 	int m_iMissionAIX;
 	int m_iMissionAIY;

@@ -162,11 +162,9 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getUnitPower", &CyPlayer::getUnitPower, "int ()")
 		.def("getPopScore", &CyPlayer::getPopScore, "int ()")
 		.def("getLandScore", &CyPlayer::getLandScore, "int ()")
-#if defined QC_MASTERY_VICTORY
 		//Sevo Begin--VCM
 		.def("getSevoWondersScore", &CyPlayer::getSevoWondersScore, "int ()")
 		//Sevo End VCM
-#endif
 		.def("getWondersScore", &CyPlayer::getWondersScore, "int ()")
 		.def("getTechScore", &CyPlayer::getTechScore, "int ()")
 		.def("getTotalTimePlayed", &CyPlayer::getTotalTimePlayed, "int ()")

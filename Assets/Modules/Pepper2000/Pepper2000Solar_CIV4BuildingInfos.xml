@@ -2067,6 +2067,7 @@
 			<Strategy>TXT_KEY_BUILDING_EDEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EDEN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EDEN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ECOSYNTHESIS</PrereqTech>
 			<iCost>38544</iCost>
@@ -4925,6 +4926,7 @@
 			<Strategy>TXT_KEY_BUILDING_ERIS_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ERIS_COLONY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ERIS_COLONY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SOLAR_ORDNANCE</PrereqTech>
 			<iCost>11837</iCost>

@@ -752,10 +752,10 @@ void CvGame::updateBlockadedPlots()
 
 	gDLL->getEngineIFace()->clearAreaBorderPlots(AREA_BORDER_LAYER_BLOCKADED);
 
-	int iNumPlots = GC.getMapINLINE().numPlots();
+	const int iNumPlots = GC.getMapINLINE().numPlots();
 	for (int i = 0; i < iNumPlots; ++i)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndex(i);
+		const CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndex(i);
 
 		FAssert(NULL != pLoopPlot);
 
@@ -777,14 +777,12 @@ void CvGame::updateSelectionList()
 
 void CvGame::updateSelectionListInternal(bool bSetCamera, bool bAllowViewportSwitch, bool bForceAcceptCurrent)
 {
-	CvUnit* pHeadSelectedUnit;
-
 	if (GET_PLAYER(getActivePlayer()).isOption(PLAYEROPTION_NO_UNIT_CYCLING) || GC.getCurrentViewport()->isSelectionInhibitted())
 	{
 		return;
 	}
 
-	pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+	CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
 	if ((pHeadSelectedUnit == NULL) || (!bForceAcceptCurrent && !(pHeadSelectedUnit->getGroup()->readyToSelect(true))))
 	{
@@ -798,12 +796,9 @@ void CvGame::updateSelectionListInternal(bool bSetCamera, bool bAllowViewportSwi
 
 		pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
-		if (pHeadSelectedUnit != NULL)
+		if (pHeadSelectedUnit != NULL && !pHeadSelectedUnit->getGroup()->readyToSelect())
 		{
-			if (!(pHeadSelectedUnit->getGroup()->readyToSelect()))
-			{
-				gDLL->getInterfaceIFace()->clearSelectionList();
-			}
+			gDLL->getInterfaceIFace()->clearSelectionList();
 		}
 	}
 }
@@ -884,70 +879,58 @@ CvUnit* CvGame::getPlotUnit(const CvPlot* pPlot, int iIndex) const
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode1;
-	CLLNode<IDInfo>* pUnitNode2;
-	CvUnit* pLoopUnit1;
-	CvUnit* pLoopUnit2;
-	int iCount;
-	int iPass;
 	PlayerTypes activePlayer = getActivePlayer();
 	TeamTypes activeTeam = getActiveTeam();
 
 	if (pPlot != NULL)
 	{
-		iCount = 0;
+		int iCount = 0;
 
-		for (iPass = 0; iPass < 2; iPass++)
+		for (int iPass = 0; iPass < 2; iPass++)
 		{
-			pUnitNode1 = pPlot->headUnitNode();
+			CLLNode<IDInfo>* pUnitNode1 = pPlot->headUnitNode();
 
 			while (pUnitNode1 != NULL)
 			{
-				pLoopUnit1 = ::getUnit(pUnitNode1->m_data);
-				pUnitNode1 = pPlot->nextUnitNode(pUnitNode1);
+				CvUnit* pLoopUnit1 = ::getUnit(pUnitNode1->m_data);
 
-				if (!(pLoopUnit1->isInvisible(activeTeam, true)))
+				if (!pLoopUnit1->isInvisible(activeTeam, true) && !pLoopUnit1->isCargo())
 				{
-					if (!(pLoopUnit1->isCargo()))
+					if ((pLoopUnit1->getOwnerINLINE() == activePlayer) == (iPass == 0))
 					{
-						if ((pLoopUnit1->getOwnerINLINE() == activePlayer) == (iPass == 0))
+						if (iCount == iIndex)
 						{
-							if (iCount == iIndex)
-							{
-								return pLoopUnit1;
-							}
+							return pLoopUnit1;
+						}
 
-							iCount++;
+						iCount++;
 
-							//if ((pLoopUnit1->getTeam() == activeTeam) || isDebugMode())
+						//if ((pLoopUnit1->getTeam() == activeTeam) || isDebugMode())
+						{
+							if (pLoopUnit1->hasCargo())
 							{
-								if (pLoopUnit1->hasCargo())
+								CLLNode<IDInfo>* pUnitNode2 = pPlot->headUnitNode();
+
+								while (pUnitNode2 != NULL)
 								{
-									pUnitNode2 = pPlot->headUnitNode();
+									CvUnit* pLoopUnit2 = ::getUnit(pUnitNode2->m_data);
 
-									while (pUnitNode2 != NULL)
+									if (!pLoopUnit2->isInvisible(activeTeam, true) && pLoopUnit2->getTransportUnit() == pLoopUnit1)
 									{
-										pLoopUnit2 = ::getUnit(pUnitNode2->m_data);
-										pUnitNode2 = pPlot->nextUnitNode(pUnitNode2);
-
-										if (!(pLoopUnit2->isInvisible(activeTeam, true)))
+										if (iCount == iIndex)
 										{
-											if (pLoopUnit2->getTransportUnit() == pLoopUnit1)
-											{
-												if (iCount == iIndex)
-												{
-													return pLoopUnit2;
-												}
-
-												iCount++;
-											}
+											return pLoopUnit2;
 										}
+
+										iCount++;
 									}
+									pUnitNode2 = pPlot->nextUnitNode(pUnitNode2);
 								}
 							}
 						}
 					}
 				}
+				pUnitNode1 = pPlot->nextUnitNode(pUnitNode1);
 			}
 		}
 	}
@@ -960,13 +943,12 @@ void CvGame::getPlotUnits(const CvPlot* pPlot, std::vector<CvUnit*>& plotUnits) 
 	PROFILE_FUNC();
 	plotUnits.erase(plotUnits.begin(), plotUnits.end());
 
-	int iPass;
 	PlayerTypes activePlayer = getActivePlayer();
 	TeamTypes activeTeam = getActiveTeam();
 
 	if (pPlot != NULL)
 	{
-		for (iPass = 0; iPass < 2; iPass++)
+		for (int iPass = 0; iPass < 2; iPass++)
 		{
 			CLLNode<IDInfo>* pUnitNode1 = pPlot->headUnitNode();
 
@@ -975,32 +957,26 @@ void CvGame::getPlotUnits(const CvPlot* pPlot, std::vector<CvUnit*>& plotUnits) 
 				CvUnit* pLoopUnit1 = ::getUnit(pUnitNode1->m_data);
 				pUnitNode1 = pPlot->nextUnitNode(pUnitNode1);
 
-				if (!(pLoopUnit1->isInvisible(activeTeam, true)))
+				if (!pLoopUnit1->isInvisible(activeTeam, true) && !pLoopUnit1->isCargo())
 				{
-					if (!(pLoopUnit1->isCargo()))
+					if ((pLoopUnit1->getOwnerINLINE() == activePlayer) == (iPass == 0))
 					{
-						if ((pLoopUnit1->getOwnerINLINE() == activePlayer) == (iPass == 0))
+						plotUnits.push_back(pLoopUnit1);
+
+						//if ((pLoopUnit1->getTeam() == activeTeam) || isDebugMode())
 						{
-							plotUnits.push_back(pLoopUnit1);
-
-							//if ((pLoopUnit1->getTeam() == activeTeam) || isDebugMode())
+							if (pLoopUnit1->hasCargo())
 							{
-								if (pLoopUnit1->hasCargo())
+								CLLNode<IDInfo>* pUnitNode2 = pPlot->headUnitNode();
+
+								while (pUnitNode2 != NULL)
 								{
-									CLLNode<IDInfo>* pUnitNode2 = pPlot->headUnitNode();
+									CvUnit* pLoopUnit2 = ::getUnit(pUnitNode2->m_data);
+									pUnitNode2 = pPlot->nextUnitNode(pUnitNode2);
 
-									while (pUnitNode2 != NULL)
+									if (!pLoopUnit2->isInvisible(activeTeam, true) && pLoopUnit2->getTransportUnit() == pLoopUnit1)
 									{
-										CvUnit* pLoopUnit2 = ::getUnit(pUnitNode2->m_data);
-										pUnitNode2 = pPlot->nextUnitNode(pUnitNode2);
-
-										if (!(pLoopUnit2->isInvisible(activeTeam, true)))
-										{
-											if (pLoopUnit2->getTransportUnit() == pLoopUnit1)
-											{
-												plotUnits.push_back(pLoopUnit2);
-											}
-										}
+										plotUnits.push_back(pLoopUnit2);
 									}
 								}
 							}

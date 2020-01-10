@@ -229,12 +229,10 @@ public:
 	bool isPaused();
 	int /*UnitTypes*/ getBestLandUnit();
 	int getBestLandUnitCombat();
-#if defined QC_MASTERY_VICTORY
 //Sevo Begin--VCM
 	bool getStarshipLaunched(int ID);
 	bool getDiplomaticVictoryAchieved(int ID);
 //Sevo End VCM
-#endif
 	
 	int /*TeamTypes*/ getWinner();
 	int /*VictoryTypes*/ getVictory();

@@ -122,14 +122,12 @@ int CyTeam::getNumNukeUnits()
 	return m_pTeam ? m_pTeam->getNumNukeUnits() : -1;
 }
 
-#if defined QC_MASTERY_VICTORY
 //Sevo Begin--VCM
 int CyTeam::getTotalVictoryScore()
 {
 	return m_pTeam ? m_pTeam->getTotalVictoryScore() : -1;
 }
 //Sevo End VCM
-#endif
 
 int CyTeam::getAtWarCount(bool bIgnoreMinors)
 {

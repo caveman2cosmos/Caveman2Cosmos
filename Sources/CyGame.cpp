@@ -739,7 +739,6 @@ int CyGame::getBestLandUnitCombat()
 	return m_pGame ? m_pGame->getBestLandUnitCombat() : -1;
 }
 
-#if defined QC_MASTERY_VICTORY
 //Sevo Begin--VCM
 bool CyGame::getStarshipLaunched(int playaID)
 {
@@ -751,7 +750,6 @@ bool CyGame::getDiplomaticVictoryAchieved(int playaID)
 	return m_pGame ? m_pGame->getDiplomaticVictoryAchieved(playaID) : false;
 }
 //Sevo End VCM
-#endif
 
 int /*TeamTypes*/ CyGame::getWinner() 
 {

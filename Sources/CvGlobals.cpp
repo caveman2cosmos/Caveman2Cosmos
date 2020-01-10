@@ -380,7 +380,6 @@ cvInternalGlobals::cvInternalGlobals()
 	/************************************************************************************************/
 	, m_iPEAK_EXTRA_MOVEMENT(0)
 	, m_iPEAK_EXTRA_DEFENSE(0)
-	, m_bFormationsMod(false)
 	, m_bLoadedPlayerOptions(false)
 	, m_bXMLLogging(false)
 	, m_iSCORE_FREE_PERCENT(0)
@@ -1274,23 +1273,6 @@ CvMainMenuInfo& cvInternalGlobals::getMainMenus(int i)
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-// Python Modular Loading
-int cvInternalGlobals::getNumPythonModulesInfos()
-{
-	return (int)m_paPythonModulesInfo.size();
-}
-
-std::vector<CvPythonModulesInfo*>& cvInternalGlobals::getPythonModulesInfos()
-{
-	return m_paPythonModulesInfo;
-}
-
-CvPythonModulesInfo& cvInternalGlobals::getPythonModulesInfo(int iIndex)
-{
-	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumPythonModulesInfos(), "PythonModulesInfo index out of bounds");
-	return *(m_paPythonModulesInfo[iIndex]);
-}
-
 // MLF loading
 void cvInternalGlobals::resetModLoadControlVector()
 {
@@ -4016,7 +3998,6 @@ void cvInternalGlobals::cacheGlobals()
 /************************************************************************************************/
 	m_iPEAK_EXTRA_MOVEMENT = getDefineINT("PEAK_EXTRA_MOVEMENT");
 	m_iPEAK_EXTRA_DEFENSE = getDefineINT("PEAK_EXTRA_DEFENSE");
-	m_bFormationsMod = getDefineINT("FORMATIONS");
 	m_bXMLLogging = getDefineINT("XML_LOGGING_ENABLED");
 	m_iSCORE_FREE_PERCENT = getDefineINT("SCORE_FREE_PERCENT");
 	m_iSCORE_POPULATION_FACTOR = getDefineINT("SCORE_POPULATION_FACTOR");
@@ -4167,20 +4148,11 @@ void cvInternalGlobals::setDefineINT( const char * szName, int iValue, bool bUpd
 		else
 			GC.getDefinesVarSystem()->SetValue( szName, iValue );
 		cacheGlobals();
-			
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 }
-/************************************************************************************************/
-/* Afforess	                  Start		 08/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 void cvInternalGlobals::setDefineFLOAT( const char * szName, float fValue, bool bUpdate )
 {
-
 	if (getDefineFLOAT(szName) != fValue)
 	{
 		if (bUpdate)
@@ -4189,15 +4161,8 @@ void cvInternalGlobals::setDefineFLOAT( const char * szName, float fValue, bool 
 			GC.getDefinesVarSystem()->SetValue( szName, fValue );
 		cacheGlobals();
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 }
-/************************************************************************************************/
-/* Afforess	                  Start		 08/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 void cvInternalGlobals::setDefineSTRING( const char * szName, const char * szValue, bool bUpdate )
 {
 	if (getDefineSTRING(szName) != szValue)
@@ -4208,10 +4173,10 @@ void cvInternalGlobals::setDefineSTRING( const char * szName, const char * szVal
 			GC.getDefinesVarSystem()->SetValue( szName, szValue );
 		cacheGlobals(); // TO DO : we should not cache all globals at each single set
 	}
+}
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-}
 
 int cvInternalGlobals::getMOVE_DENOMINATOR()
 {
@@ -5154,8 +5119,6 @@ void cvInternalGlobals::deleteInfoArrays()
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	// Python Modular Loading
-	deleteInfoArray(m_paPythonModulesInfo);
 	// MLF loading
 	m_paModLoadControlVector.clear();
 	deleteInfoArray(m_paModLoadControls);
@@ -5952,11 +5915,6 @@ int cvInternalGlobals::getPEAK_EXTRA_DEFENSE()
 	return m_iPEAK_EXTRA_DEFENSE;
 }
 
-bool cvInternalGlobals::isFormationsMod() const
-{
-	return m_bFormationsMod;
-}
-
 bool cvInternalGlobals::isLoadedPlayerOptions() const
 {
 	return m_bLoadedPlayerOptions;
@@ -6350,54 +6308,6 @@ int cvInternalGlobals::getGraphicalDetailPageInRange()
 /************************************************************************************************/
 /* Mod Globals                        END                                           phungus420  */
 /************************************************************************************************/
-
-/**** Dexy - Dark Ages START ****/
-const wchar* cvInternalGlobals::getRankingTextKeyWide(RankingTypes eRanking) const
-{
-	/* TODO read these from XML */
-	switch (eRanking)
-	{
-	case RANKING_POWER:
-		return L"TXT_KEY_RANKING_POWER";
-	case RANKING_POPULATION:
-		return L"TXT_KEY_RANKING_POPULATION";
-	case RANKING_LAND:
-		return L"TXT_KEY_RANKING_LAND";
-	case RANKING_CULTURE:
-		return L"TXT_KEY_RANKING_CULTURE";
-	case RANKING_ESPIONAGE:
-		return L"TXT_KEY_RANKING_ESPIONAGE";
-	case RANKING_WONDERS:
-		return L"TXT_KEY_RANKING_WONDERS";
-	case RANKING_TECH:
-		return L"TXT_KEY_RANKING_TECH";
-	default:
-		FAssertMsg(false, "Ranking type unknown");
-		return L"Ranking Type Unknown";
-	}			
-}
-/**** Dexy - Dark Ages  END  ****/
-
-const wchar* cvInternalGlobals::parseDenialHover(DenialTypes eDenial)
-{
-	int iCount = getDefineINT(getDenialInfo(eDenial).getType());
-	int iRand;
-	if (iCount > 0)
-	{
-		iRand = getASyncRand().get(iCount);
-		if (iRand == 0)
-		{
-			return GC.getDenialInfo(eDenial).getDescription();
-		}
-		else
-		{
-			CvWString szType = getDenialInfo(eDenial).getType();
-			szType.append(CvWString::format(L"_%d", iRand));
-			return gDLL->getText(szType);
-		}
-	}
-	return GC.getDenialInfo(eDenial).getDescription();
-}
 
 // calculate asset checksum
 unsigned int cvInternalGlobals::getAssetCheckSum()

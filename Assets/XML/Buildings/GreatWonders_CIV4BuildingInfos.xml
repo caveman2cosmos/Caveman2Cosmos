@@ -3210,6 +3210,7 @@
 			<Strategy>TXT_KEY_BUILDING_ASSYRIA_EKAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ASSYRIA_EKAL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ASSYRIA_EKAL</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -3322,6 +3323,7 @@
 			<Strategy>TXT_KEY_BUILDING_PORTUGAL_FEITORIA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PORTUGAL_FEITORIA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PORTUGAL_FEITORIA</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
 			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3539,6 +3541,7 @@
 			<Strategy>TXT_KEY_BUILDING_FORT_KNOX_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FORT_KNOX</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FORT_KNOX</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
@@ -18670,6 +18673,7 @@
 			<Help>TXT_KEY_BUILDING_EMPIRE_STATE_BUILDING_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EMPIRE_STATE_BUILDING</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EMPIRE_STATE_BUILDING</MovieDefineTag>
 			<PrereqTech>TECH_PLASTICS</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

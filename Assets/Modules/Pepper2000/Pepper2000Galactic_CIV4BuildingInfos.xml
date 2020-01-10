@@ -7519,6 +7519,7 @@
 			<Strategy>TXT_KEY_BUILDING_EARTH_BACKUP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EARTH_BACKUP</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EARTH_BACKUP</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_DATA_ARCHIVAL</PrereqTech>
 			<iCost>8998</iCost>
@@ -7671,6 +7672,7 @@
 			<Strategy>TXT_KEY_BUILDING_EARTH_20_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EARTH_20</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EARTH_20</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_HYPERSTRUCTURE_ENGINEERING</PrereqTech>
 			<iCost>33952</iCost>

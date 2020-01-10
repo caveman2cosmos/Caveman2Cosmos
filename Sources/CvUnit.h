@@ -1822,14 +1822,6 @@ public:
 	bool isRbombardable(int iMinStack);
 	int getRbombardSeigeCount(CvPlot* pPlot);
 	// RevolutionDCM - end
-
-private:
-	int m_iDCMBombRange;
-	int m_iDCMBombAccuracy;
-	int m_iHealUnitCombatCount;
-	std::vector<int> m_aiExtraBuildTypes;
-public:
-// Dale - RB: Field Bombard END
 // Dale - ARB: Archer Bombard START
 	bool canArcherBombard() const;
 	// fromPlot - units own plot() isn't valid in some cases (when its out of viewport or using dummy entities)
@@ -1906,6 +1898,12 @@ public:
 
 	PlayerTypes m_eOriginalOwner;
 
+protected:
+	int m_iDCMBombRange;
+	int m_iDCMBombAccuracy;
+	int m_iHealUnitCombatCount;
+	std::vector<int> m_aiExtraBuildTypes;
+
 	DomainTypes m_eNewDomainCargo;
 	SpecialUnitTypes m_eNewSpecialCargo;
 	SpecialUnitTypes m_eNewSMSpecialCargo;
@@ -1913,7 +1911,7 @@ public:
 	SpecialUnitTypes m_eSpecialUnit;
 	MissionTypes m_eSleepType;
 	PromotionLineTypes m_eCurrentBuildUpType;
-protected:
+
 	bool m_bHiddenNationality;
 	bool m_bHasHNCapturePromotion;
 /************************************************************************************************/
@@ -2845,8 +2843,8 @@ public:
 	
 	int getExtraPowerValue() const;
 	void changeExtraPowerValue(int iChange);
-	int powerValueTotal() const;
-	int powerValueTotalPreCheck() const;
+	int getPowerValueTotal() const;
+	int getSMPowerValueTotalBase() const;
 	int getSMPowerValue() const;
 	void setSMPowerValue(bool bForLoad = false);
 	
@@ -2892,14 +2890,14 @@ public:
 	int getExtraBombardRate() const;																													// Exposed to Python
 	void changeExtraBombardRate(int iChange);
 	void setExtraBombardRate(int iChange);
-	int bombardRate() const;
-	int bombardRateTotalPreCheck() const;
+	int getBombardRate() const;
+	int getSMBombardRateTotalBase() const;
 	int getSMBombardRate() const;
 	void setSMBombardRate();
 
-	int airBombCurrRate() const;
-	int airBombBaseRate() const;
-	int airBombBaseRateTotalPreCheck() const;
+	int getAirBombCurrRate() const;
+	int getAirBombBaseRate() const;
+	int getSMAirBombBaseRateTotalBase() const;
 	int getSMAirBombBaseRate() const;
 	void setSMAirBombBaseRate();
 
@@ -3326,11 +3324,21 @@ public:
 	struct fn {
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isDead);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, hasCargo);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isFull);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, canMove);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, canMoveAllTerrain);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, hasMoved);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, canIgnoreZoneofControl);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isAutoUpgrading);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isReadyForUpgrade);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isPromotionReady);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCombat);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isAnimal);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, canFight);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, canDefend);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, alwaysInvisible);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, IsSelected);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCommander);
 		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, hasAfflictionLine, PromotionLineTypes);
 
 		DECLARE_MAP_FUNCTOR(CvUnit, int, getDamage);

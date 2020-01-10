@@ -173,20 +173,10 @@ public:
 	void setReinforcementCounter( int iNewValue );
 	void changeReinforcementCounter( int iChange );
 
-	int getRevIndexHappinessVal();
-	int getRevIndexDistanceVal();
-	int getRevIndexColonyVal();
-	int getRevIndexReligionVal();
-	int getRevIndexNationalityVal();
-	int getRevIndexHealthVal();
-	int getRevIndexGarrisonVal();
-	int getRevIndexDisorderVal();
-
-	bool isRecentlyAcquired();
+	bool isRecentlyAcquired() const;
 /************************************************************************************************/
 /* REVOLUTION_MOD                          END                                                  */
 /************************************************************************************************/
-
 
 	void kill(bool bUpdatePlotGroups, bool bUpdateCulture = true);																								// Exposed to Python
 	void killTestCheap(); // For testing, do not call in a game situation
@@ -201,7 +191,7 @@ public:
 	void updateYield();
 
 	void updateVisibility();
-	bool isVisibilitySetup();
+	bool isVisibilitySetup() const;
 
 	void createGreatPeople(UnitTypes eGreatPersonUnit, bool bIncrementThreshold, bool bIncrementExperience);		// Exposed to Python
 
@@ -320,8 +310,8 @@ public:
 	bool isProductionProject() const;																							// Exposed to Python
 	bool isProductionProcess() const;																		// Exposed to Python
 
-	bool canContinueProduction(OrderData order);														// Exposed to Python
-	int getProductionExperience(UnitTypes eUnit = NO_UNIT);									// Exposed to Python
+	bool canContinueProduction(OrderData order) const;														// Exposed to Python
+	int getProductionExperience(UnitTypes eUnit = NO_UNIT) const;									// Exposed to Python
 	void addProductionExperience(CvUnit* pUnit, bool bConscript = false);		// Exposed to Python
 
 	UnitTypes getProductionUnit() const;																// Exposed to Python
@@ -1017,7 +1007,7 @@ public:
 	void setCitySizeBoost(int iBoost);
 
 	// < M.A.D. Nukes Start >
-	int getMADIncoming();											// Exposed to Python
+	int getMADIncoming() const;											// Exposed to Python
 	void setMADIncoming(int iValue);								// Exposed to Python
 	void changeMADIncoming(int iValue);							// Exposed to Python
 	// < M.A.D. Nukes End   >
@@ -1504,7 +1494,7 @@ public:
 	
 	int calculateBuildingCommerceModifier(CommerceTypes eCommerce) const;
 	int calculateBuildingYieldModifier(YieldTypes eYield) const;
-	int getRevTrend();
+	int getRevTrend() const;
 	bool isInquisitionConditions() const;
 	int calculateCorporationHealth() const;
 	int calculateCorporationHappiness() const;
@@ -1709,7 +1699,7 @@ public:
 /********************************************************************************/
 /**		BETTER_BTS_AI_MOD						END								*/
 /********************************************************************************/
-	virtual bool AI_isDanger() = 0;
+	virtual bool AI_isDanger() const = 0;
 	virtual int evaluateDanger() = 0;
 	virtual int AI_neededDefenders() = 0;
 	virtual int AI_neededAirDefenders() = 0;
@@ -1766,7 +1756,7 @@ public:
 /********************************************************************************/
 	virtual int AI_getBuildPriority() const = 0;
 
-	bool hasShrine(ReligionTypes eReligion);
+	bool hasShrine(ReligionTypes eReligion) const;
 	bool hasOrbitalInfrastructure() const;
 	void processVoteSourceBonus(VoteSourceTypes eVoteSource, bool bActive);
 
