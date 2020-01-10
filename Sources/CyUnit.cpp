@@ -1310,17 +1310,17 @@ int CyUnit::domainModifier(int /*DomainTypes*/ eDomain)
 
 int CyUnit::bombardRate()
 {
-	return m_pUnit ? m_pUnit->bombardRate() : -1;
+	return m_pUnit ? m_pUnit->getBombardRate() : -1;
 }
 
 int CyUnit::airBombBaseRate()
 {
-	return m_pUnit ? m_pUnit->airBombBaseRate() : -1;
+	return m_pUnit ? m_pUnit->getAirBombBaseRate() : -1;
 }
 
 int CyUnit::airBombCurrRate()
 {
-	return m_pUnit ? m_pUnit->airBombCurrRate() : -1;
+	return m_pUnit ? m_pUnit->getAirBombCurrRate() : -1;
 }
 
 int /*SpecialUnitTypes*/ CyUnit::specialCargo()

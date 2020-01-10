@@ -22808,7 +22808,7 @@ bool CvUnitAI::AI_seaBombardRange(int iMaxRange)
 		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 		pUnitNode = pGroup->nextUnitNode(pUnitNode);
 
-		if (pLoopUnit->bombardRate() > 0)
+		if (pLoopUnit->getBombardRate() > 0)
 		{
 			bHasBombardUnit = true;
 
@@ -29460,7 +29460,7 @@ bool CvUnitAI::AI_airBombDefenses()
 
 						if (iPotentialAttackers > 1)
 						{
-							iValue += std::max(0, (std::min((pCity->getDefenseDamage() + airBombCurrRate()), GC.getMAX_CITY_DEFENSE_DAMAGE()) - pCity->getDefenseDamage()));
+							iValue += std::max(0, (std::min((pCity->getDefenseDamage() + getAirBombCurrRate()), GC.getMAX_CITY_DEFENSE_DAMAGE()) - pCity->getDefenseDamage()));
 
 							iValue *= 4 + iPotentialAttackers;
 

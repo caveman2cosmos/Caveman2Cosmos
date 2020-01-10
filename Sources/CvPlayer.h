@@ -2649,7 +2649,7 @@ public:
 
 	void setGreatGeneralTypetoAssign();
 	UnitTypes getGreatGeneralTypetoAssign() const;
-	void resetUnitSMValues();
+	void setSMValues();
 
 	void upgradePlotPopup(ImprovementTypes eImprovement, int iX, int iY);
 	void upgradePlot(int iX, int iY, ImprovementTypes eImprovement, bool bConfirm);

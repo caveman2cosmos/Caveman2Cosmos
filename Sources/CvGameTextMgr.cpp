@@ -1849,17 +1849,17 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				}
 			}
 
-			if (pUnit->bombardRate() > 0)
+			if (pUnit->getBombardRate() > 0)
 			{
 				if (bShort)
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_UNIT_BOMBARD_RATE_SHORT", ((pUnit->bombardRate() * 100) / GC.getMAX_CITY_DEFENSE_DAMAGE())));
+					szString.append(gDLL->getText("TXT_KEY_UNIT_BOMBARD_RATE_SHORT", ((pUnit->getBombardRate() * 100) / GC.getMAX_CITY_DEFENSE_DAMAGE())));
 				}
 				else
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_UNIT_BOMBARD_RATE", ((pUnit->bombardRate() * 100) / GC.getMAX_CITY_DEFENSE_DAMAGE())));
+					szString.append(gDLL->getText("TXT_KEY_UNIT_BOMBARD_RATE", ((pUnit->getBombardRate() * 100) / GC.getMAX_CITY_DEFENSE_DAMAGE())));
 				}
 			}
 

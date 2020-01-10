@@ -2668,24 +2668,6 @@ void CvGame::update()
 		}
 	}
 
-	if (isOption(GAMEOPTION_SIZE_MATTERS))
-	{
-		static bool bSetSMCached = false;
-
-		if ( !bSetSMCached )
-		{
-			PROFILE("CvGame::update.ResetUnitSMValues");
-			for(int iI = 0; iI < MAX_PLAYERS; iI++)
-			{
-				if ( GET_PLAYER((PlayerTypes)iI).isAlive() )
-				{
-					GET_PLAYER((PlayerTypes)iI).resetUnitSMValues();
-				}
-			}
-			bSetSMCached = true;
-		}
-	}
-
 again:
 	if (!gDLL->GetWorldBuilderMode() || isInAdvancedStart())
 	{
