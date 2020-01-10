@@ -848,3 +848,4 @@ PBGameSetupData::PBGameSetupData()
 	}
 }
 
+const OrderData OrderData::InvalidOrder(NO_ORDER, -1, -1, false);

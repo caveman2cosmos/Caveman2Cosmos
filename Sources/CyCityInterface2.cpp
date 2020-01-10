@@ -14,7 +14,7 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("pushOrder", &CyCity::pushOrder, "void (OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce)")
 		.def("popOrder", &CyCity::popOrder, "int (int iNum, bool bFinish, bool bChoose)")
 		.def("getOrderQueueLength", &CyCity::getOrderQueueLength, "void ()")
-		.def("getOrderFromQueue", &CyCity::getOrderFromQueue, python::return_value_policy<python::reference_existing_object>(), "OrderData* (int iIndex)")  // only use local
+		.def("getOrderFromQueue", &CyCity::getOrderFromQueue, python::return_value_policy<python::return_by_value>(), "OrderData* (int iIndex)")  // only use local
 
 		.def("setWallOverridePoints", &CyCity::setWallOverridePoints, "setWallOverridePoints(const python::tuple& kPoints)")
 		.def("getWallOverridePoints", &CyCity::getWallOverridePoints, "python::tuple getWallOverridePoints()")
@@ -229,7 +229,6 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		/************************************************************************************************/
 		.def("AI_bestUnit", &CyCity::AI_bestUnit, "int /*UnitTypes*/ ()")
 		.def("AI_bestUnitAI", &CyCity::AI_bestUnitAI, "int /*UnitTypes*/ (int iUnitAIType)")
-		.def("AI_bestBuilding", &CyCity::AI_bestBuilding, "int /*BuildingTypes*/ (int iFocusFlags)")
 		/************************************************************************************************/
 		/* REVOLUTION_MOD                          END                                                  */
 		/************************************************************************************************/
