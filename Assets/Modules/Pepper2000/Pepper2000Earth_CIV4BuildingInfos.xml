@@ -782,6 +782,7 @@
 			<Strategy>TXT_KEY_BUILDING_FRAUNHOFER_SOCIETY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FRAUNHOFER_SOCIETY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FRAUNHOFER_SOCIETY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -8441,6 +8442,7 @@
 			<Strategy>TXT_KEY_BUILDING_FERMATS_LAST_THEOREM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FERMATS_LAST_THEOREM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FERMATS_LAST_THEOREM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -8473,6 +8475,7 @@
 			<Strategy>TXT_KEY_BUILDING_FOUR_COLOR_THEOREM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FOUR_COLOR_THEOREM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FOUR_COLOR_THEOREM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -12745,6 +12748,7 @@
 			<Strategy>TXT_KEY_BUILDING_FLATLAND_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLATLAND</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FLATLAND</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -14364,6 +14368,7 @@
 			<Strategy>TXT_KEY_BUILDING_FUTURE_VENICE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FUTURE_VENICE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FUTURE_VENICE</MovieDefineTag>
 			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -28345,6 +28350,7 @@
 			<Strategy>TXT_KEY_BUILDING_FRIEDLANDER_SKYSHADE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FRIEDLANDER_SKYSHADE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FRIEDLANDER_SKYSHADE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

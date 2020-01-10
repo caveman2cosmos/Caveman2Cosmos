@@ -1789,5 +1789,49 @@
 			<Type>ART_DEF_MOVIE_MAMMOTH_TRAINER</Type>
 			<Path>Art/Movies/Wonders/MAMMOTH_TRAINER.dds</Path>
 		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_FAIRYLAND</Type>
+			<Path>Art/Movies/Wonders/FAIRYLAND.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_PORTUGAL_FEITORIA</Type>
+			<Path>Art/Movies/Wonders/PORTUGAL_FEITORIA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_FERMATS_LAST_THEOREM</Type>
+			<Path>Art/Movies/Wonders/FERMATS_LAST_THEOREM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_FEYMARCH</Type>
+			<Path>Art/Movies/Wonders/FEYMARCH.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_FLATLAND</Type>
+			<Path>Art/Movies/Wonders/FLATLAND.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_FORNAX_CLUSTER</Type>
+			<Path>Art/Movies/Wonders/FORNAX_CLUSTER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_FORT_KNOX</Type>
+			<Path>Art/Movies/Wonders/FORT_KNOX.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_FOUR_COLOR_THEOREM</Type>
+			<Path>Art/Movies/Wonders/FOUR_COLOR_THEOREM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_FRAUNHOFER_SOCIETY</Type>
+			<Path>Art/Movies/Wonders/FRAUNHOFER_SOCIETY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_FRIEDLANDER_SKYSHADE</Type>
+			<Path>Art/Movies/Wonders/FRIEDLANDER_SKYSHADE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_FUTURE_VENICE</Type>
+			<Path>Art/Movies/Wonders/FUTURE_VENICE.dds</Path>
+		</MovieArtInfo>
 	</MovieArtInfos>
 </Civ4ArtDefines>

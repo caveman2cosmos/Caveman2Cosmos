@@ -3323,6 +3323,7 @@
 			<Strategy>TXT_KEY_BUILDING_PORTUGAL_FEITORIA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PORTUGAL_FEITORIA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PORTUGAL_FEITORIA</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
 			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3540,6 +3541,7 @@
 			<Strategy>TXT_KEY_BUILDING_FORT_KNOX_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FORT_KNOX</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FORT_KNOX</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
