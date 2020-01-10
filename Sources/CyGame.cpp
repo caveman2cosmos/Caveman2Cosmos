@@ -1309,16 +1309,6 @@ bool CyGame::isLeaderEverActive(int /*LeaderHeadTypes*/ eLeader)
 	return (NULL != m_pGame ? m_pGame->isLeaderEverActive((LeaderHeadTypes)eLeader) : false);
 }
 
-bool CyGame::isUnitEverActive(int /*UnitTypes*/ eUnit)
-{
-	return (NULL != m_pGame ? m_pGame->isUnitEverActive((UnitTypes)eUnit) : false);
-}
-
-bool CyGame::isBuildingEverActive(int /*BuildingTypes*/ eBuilding)
-{
-	return (NULL != m_pGame ? m_pGame->isBuildingEverActive((BuildingTypes)eBuilding) : false);
-}
-
 bool CyGame::isEventActive(int /*EventTriggerTypes*/ eTrigger)
 {
 	return (NULL != m_pGame ? m_pGame->isEventActive((EventTriggerTypes)eTrigger) : false);

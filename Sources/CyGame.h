@@ -370,8 +370,6 @@ public:
 	
 	bool isCivEverActive(int /*CivilizationTypes*/ eCivilization);
 	bool isLeaderEverActive(int /*LeaderHeadTypes*/ eLeader);
-	bool isUnitEverActive(int /*UnitTypes*/ eUnit);
-	bool isBuildingEverActive(int /*BuildingTypes*/ eBuilding);
 
 	bool isEventActive(int /*EventTriggerTypes*/ eTrigger);
 	void doControl(int iControl);
