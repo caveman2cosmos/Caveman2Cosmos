@@ -3888,6 +3888,7 @@
 			<iConquestProb>100</iConquestProb>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_GLOBE_THEATRE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GLOBE_THEATRE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Gobekli Tepe -->
@@ -3961,6 +3962,7 @@
 			<Strategy>TXT_KEY_BUILDING_GOLDEN_GATE_BRIDGE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GOLDEN_GATE_BRIDGE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GOLDEN_GATE_BRIDGE</MovieDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<TechTypes>
@@ -5027,6 +5029,7 @@
 			<Strategy>TXT_KEY_BUILDING_GREAT_FIREWALL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GREAT_FIREWALL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GREAT_FIREWALL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
@@ -11730,6 +11733,7 @@
 			<Strategy>TXT_KEY_BUILDING_GATEWAY_ARCH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GATEWAY_ARCH</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GATEWAY_ARCH</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>

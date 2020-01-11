@@ -1833,5 +1833,61 @@
 			<Type>ART_DEF_MOVIE_FUTURE_VENICE</Type>
 			<Path>Art/Movies/Wonders/FUTURE_VENICE.dds</Path>
 		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GALACTIC_CORE_DYSON_SPHERE</Type>
+			<Path>Art/Movies/Wonders/GALACTIC_CORE_DYSON_SPHERE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GALACTIC_NEWS</Type>
+			<Path>Art/Movies/Wonders/GALACTIC_NEWS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GATEWAY_ARCH</Type>
+			<Path>Art/Movies/Wonders/GATEWAY_ARCH.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GLIESE_163C</Type>
+			<Path>Art/Movies/Wonders/GLIESE_163C.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GLIESE_581D</Type>
+			<Path>Art/Movies/Wonders/GLIESE_581D.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GLIESE_667CC</Type>
+			<Path>Art/Movies/Wonders/GLIESE_667CC.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_INTERCONTINENTAL_RAIL</Type>
+			<Path>Art/Movies/Wonders/INTERCONTINENTAL_RAIL.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GLOBE_THEATRE</Type>
+			<Path>Art/Movies/Wonders/GLOBE_THEATRE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GODEL_INCOMPLETENESS_THEOREM</Type>
+			<Path>Art/Movies/Wonders/GODEL_INCOMPLETENESS_THEOREM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GODWHEEL</Type>
+			<Path>Art/Movies/Wonders/GODWHEEL.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GOLDEN_GATE_BRIDGE</Type>
+			<Path>Art/Movies/Wonders/GOLDEN_GATE_BRIDGE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GRAND_UNIFICATION_ACCELERATOR</Type>
+			<Path>Art/Movies/Wonders/GRAND_UNIFICATION_ACCELERATOR.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GREAT_FIREWALL</Type>
+			<Path>Art/Movies/Wonders/GREAT_FIREWALL.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GREEN_WALL_OF_CHINA</Type>
+			<Path>Art/Movies/Wonders/GREEN_WALL_OF_CHINA.dds</Path>
+		</MovieArtInfo>
 	</MovieArtInfos>
 </Civ4ArtDefines>

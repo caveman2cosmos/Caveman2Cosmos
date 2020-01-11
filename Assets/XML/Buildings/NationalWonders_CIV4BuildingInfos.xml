@@ -6273,7 +6273,7 @@
 			</CommerceChangeDoubleTimes>
 			<!-- Units -->
 			<iMilitaryProductionModifier>25</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Global -->
 			<bTeamShare>1</bTeamShare>

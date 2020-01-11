@@ -2277,6 +2277,7 @@
 			<Strategy>TXT_KEY_BUILDING_GRAND_UNIFICATION_ACCELERATOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GRAND_UNIFICATION_ACCELERATOR</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GRAND_UNIFICATION_ACCELERATOR</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ZEPTOTECHNOLOGY</PrereqTech>
 			<iCost>71510</iCost>

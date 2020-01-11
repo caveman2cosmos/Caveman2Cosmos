@@ -1447,6 +1447,7 @@
 			<Strategy>TXT_KEY_BUILDING_GODWHEEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GODWHEEL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GODWHEEL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MENSIOKINESIS</PrereqTech>
 			<iCost>30517</iCost>
@@ -7594,6 +7595,7 @@
 			<Strategy>TXT_KEY_BUILDING_GALACTIC_NEWS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GALACTIC_NEWS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GALACTIC_NEWS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_WORMHOLE_COMMUNICATIONS</PrereqTech>
 			<iCost>16224</iCost>
@@ -7772,6 +7774,7 @@
 			<Strategy>TXT_KEY_BUILDING_GALACTIC_CORE_DYSON_SPHERE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GALACTIC_CORE_DYSON_SPHERE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GALACTIC_CORE_DYSON_SPHERE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GALACTIC_ENGINEERING</PrereqTech>
 			<iCost>38440</iCost>
@@ -7991,6 +7994,7 @@
 			<Strategy>TXT_KEY_BUILDING_GLIESE_667CC_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GLIESE_667CC</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GLIESE_667CC</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERSTELLAR_COLONIZATION</PrereqTech>
 			<iCost>8998</iCost>
@@ -8042,6 +8046,7 @@
 			<Strategy>TXT_KEY_BUILDING_GLIESE_581D_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GLIESE_581D</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GLIESE_581D</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERSTELLAR_COLONIZATION</PrereqTech>
 			<iCost>8998</iCost>
@@ -8248,6 +8253,7 @@
 			<Strategy>TXT_KEY_BUILDING_GLIESE_163C_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GLIESE_163C</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GLIESE_163C</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ACNP_PROPULSION</PrereqTech>
 			<iCost>11424</iCost>
