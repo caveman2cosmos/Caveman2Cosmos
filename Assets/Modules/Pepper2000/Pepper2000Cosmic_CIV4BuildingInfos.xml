@@ -3467,6 +3467,7 @@
 			<Strategy>TXT_KEY_BUILDING_FORNAX_CLUSTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FORNAX_CLUSTER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FORNAX_CLUSTER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERGROUP_TRAVEL</PrereqTech>
 			<iCost>13205</iCost>
@@ -3582,6 +3583,7 @@
 			<Strategy>TXT_KEY_BUILDING_ERIDANUS_CLUSTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ERIDANUS_CLUSTER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ERIDANUS_CLUSTER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERGROUP_TRAVEL</PrereqTech>
 			<iCost>13205</iCost>
@@ -3996,6 +3998,7 @@
 			<Strategy>TXT_KEY_BUILDING_FEYMARCH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FEYMARCH</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FEYMARCH</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_METAVERSE</PrereqTech>
 			<iCost>21020</iCost>

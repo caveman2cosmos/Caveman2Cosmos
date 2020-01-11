@@ -20631,7 +20631,7 @@ bool CvUnitAI::AI_refreshExploreRange(int iRange, bool bIncludeVisibilityRefresh
 
 //	Determine if there is a threatening unit at the spcified plot.
 //	Return a pointer to the unit if so (NULL with a detected threat means multiple units)
-bool	CvUnitAI::getThreateningUnit(CvPlot* pPlot, CvUnit*& pThreateningUnit, CvPlot* pAttackPlot, int& iIndex, bool bReturnWorstOfMultiple) const
+bool	CvUnitAI::getThreateningUnit(const CvPlot* pPlot, CvUnit*& pThreateningUnit, const CvPlot* pAttackPlot, int& iIndex, bool bReturnWorstOfMultiple) const
 {
 	int iOdds = 0;
 	int iWorstOdds = 0;
@@ -20688,7 +20688,7 @@ bool	CvUnitAI::getThreateningUnit(CvPlot* pPlot, CvUnit*& pThreateningUnit, CvPl
 	return (pThreateningUnit != NULL);
 }
 
-bool CvUnitAI::exposedToDanger(CvPlot* pPlot, int acceptableOdds, bool bConsiderOnlyWorstThreat) const
+bool CvUnitAI::exposedToDanger(const CvPlot* pPlot, int acceptableOdds, bool bConsiderOnlyWorstThreat) const
 {
 	if ( GET_PLAYER(getOwnerINLINE()).AI_getPlotDanger(pPlot, 1, false) )
 	{
@@ -22808,7 +22808,7 @@ bool CvUnitAI::AI_seaBombardRange(int iMaxRange)
 		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 		pUnitNode = pGroup->nextUnitNode(pUnitNode);
 
-		if (pLoopUnit->bombardRate() > 0)
+		if (pLoopUnit->getBombardRate() > 0)
 		{
 			bHasBombardUnit = true;
 
@@ -23155,7 +23155,7 @@ bool CvUnitAI::AI_pillage(int iBonusValueThreshold)
 	return false;
 }
 
-bool CvUnitAI::AI_canPillage(CvPlot& kPlot) const
+bool CvUnitAI::AI_canPillage(const CvPlot& kPlot) const
 {
 	if (isEnemy(kPlot.getTeam(), &kPlot))
 	{
@@ -29460,7 +29460,7 @@ bool CvUnitAI::AI_airBombDefenses()
 
 						if (iPotentialAttackers > 1)
 						{
-							iValue += std::max(0, (std::min((pCity->getDefenseDamage() + airBombCurrRate()), GC.getMAX_CITY_DEFENSE_DAMAGE()) - pCity->getDefenseDamage()));
+							iValue += std::max(0, (std::min((pCity->getDefenseDamage() + getAirBombCurrRate()), GC.getMAX_CITY_DEFENSE_DAMAGE()) - pCity->getDefenseDamage()));
 
 							iValue *= 4 + iPotentialAttackers;
 
@@ -30858,18 +30858,16 @@ bool CvUnitAI::AI_potentialEnemy(TeamTypes eTeam, const CvPlot* pPlot)
 
 
 // Returns true if this plot needs some defense...
-bool CvUnitAI::AI_defendPlot(CvPlot* pPlot)
+bool CvUnitAI::AI_defendPlot(const CvPlot* pPlot) const
 {
-	CvCity* pCity;
-
 	if (!canDefend(pPlot))
 	{
 		return false;
 	}
 
-	bool	bHasTerrainDamage = (plot()->getTotalTurnDamage(getGroup()) > 0 || plot()->getFeatureTurnDamage() > 0);	
+	const bool bHasTerrainDamage = (plot()->getTotalTurnDamage(getGroup()) > 0 || plot()->getFeatureTurnDamage() > 0);	
 	
-	pCity = pPlot->getPlotCity();
+	const CvCity* pCity = pPlot->getPlotCity();
 
 	if (bHasTerrainDamage && !pPlot->isRoute() && pCity == NULL) 
 	{
@@ -30906,7 +30904,7 @@ bool CvUnitAI::AI_defendPlot(CvPlot* pPlot)
 }
 
 
-int CvUnitAI::AI_pillageValue(CvPlot* pPlot, int iBonusValueThreshold)
+int CvUnitAI::AI_pillageValue(const CvPlot* pPlot, int iBonusValueThreshold) const
 {
 	CvPlot* pAdjacentPlot;
 	ImprovementTypes eImprovement;
@@ -31051,14 +31049,14 @@ int CvUnitAI::AI_pillageValue(CvPlot* pPlot, int iBonusValueThreshold)
 	return iValue;
 }
 
-int CvUnitAI::AI_nukeValue(CvCity* pCity)
+int CvUnitAI::AI_nukeValue(const CvCity* pCity) const
 {
 	PROFILE_FUNC();
 	FAssertMsg(pCity != NULL, "City is not assigned a valid value");
 
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
-		CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iI);
+		const CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iI);
 		if (kLoopTeam.isAlive() && !isEnemy((TeamTypes)iI))
 		{
 			if (isNukeVictim(pCity->plot(), ((TeamTypes)iI)))
@@ -31082,7 +31080,7 @@ int CvUnitAI::AI_nukeValue(CvCity* pCity)
 	{
 		for (int iDY = -(nukeRange()); iDY <= nukeRange(); iDY++)
 		{
-			CvPlot* pLoopPlot = plotXY(pCity->getX_INLINE(), pCity->getY_INLINE(), iDX, iDY);
+			const CvPlot* pLoopPlot = plotXY(pCity->getX_INLINE(), pCity->getY_INLINE(), iDX, iDY);
 
 			if (pLoopPlot != NULL)
 			{
@@ -31132,7 +31130,7 @@ int CvUnitAI::AI_nukeValue(CvCity* pCity)
 }
 
 
-int CvUnitAI::AI_searchRange(int iRange)
+int CvUnitAI::AI_searchRange(int iRange) const
 {
 	if (iRange == 0)
 	{
@@ -31155,7 +31153,7 @@ int CvUnitAI::AI_searchRange(int iRange)
 
 
 // XXX at some point test the game with and without this function...
-bool CvUnitAI::AI_plotValid(CvPlot* pPlot) const
+bool CvUnitAI::AI_plotValid(const CvPlot* pPlot) const
 {
 	PROFILE_FUNC();
 
@@ -31216,24 +31214,17 @@ bool CvUnitAI::AI_plotValid(CvPlot* pPlot) const
 }
 
 
-int CvUnitAI::AI_finalOddsThreshold(CvPlot* pPlot, int iOddsThreshold)
+int CvUnitAI::AI_finalOddsThreshold(const CvPlot* pPlot, int iOddsThreshold) const
 {
 	PROFILE_FUNC();
+	int iFinalOddsThreshold = iOddsThreshold;
+	const CvCity* pCity = pPlot->getPlotCity();
 
-	CvCity* pCity;
-
-	int iFinalOddsThreshold;
-
-	iFinalOddsThreshold = iOddsThreshold;
-
-	pCity = pPlot->getPlotCity();
-
-	if (pCity != NULL)
+	if (pCity != NULL
+		&& pCity->getDefenseDamage() < ((GC.getMAX_CITY_DEFENSE_DAMAGE() * 3) / 4)
+		)
 	{
-		if (pCity->getDefenseDamage() < ((GC.getMAX_CITY_DEFENSE_DAMAGE() * 3) / 4))
-		{
-			iFinalOddsThreshold += std::max(0, (pCity->getDefenseDamage() - pCity->getLastDefenseDamage() - (GC.getDefineINT("CITY_DEFENSE_DAMAGE_HEAL_RATE") * 2)));
-		}
+		iFinalOddsThreshold += std::max(0, (pCity->getDefenseDamage() - pCity->getLastDefenseDamage() - (GC.getDefineINT("CITY_DEFENSE_DAMAGE_HEAL_RATE") * 2)));
 	}
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      03/29/10                                jdog5000      */
@@ -31266,12 +31257,13 @@ int CvUnitAI::AI_finalOddsThreshold(CvPlot* pPlot, int iOddsThreshold)
 		iFinalOddsThreshold /= (3 + GET_PLAYER(getOwnerINLINE()).AI_adjacentPotentialAttackers(pPlot, true) + ((stepDistance(getX_INLINE(), getY_INLINE(), pPlot->getX_INLINE(), pPlot->getY_INLINE()) > 1) ? 1 : 0) + ((AI_isCityAIType()) ? 2 : 0));
 	}
 */
-	int iDefenders = pPlot->getNumVisiblePotentialEnemyDefenders(this);
+	
+	const int iDefenders = pPlot->getNumVisiblePotentialEnemyDefenders(this);
 
 	// More aggressive if only one enemy defending city
 	// More aggressive if there are units in the plot that are special targets of the attacker (such as animals for hunters)
 	if ((iDefenders == 1 && pCity != NULL)
-		|| (pPlot->getNumVisibleEnemyTargetUnits(this) > 0))
+		|| pPlot->getNumVisibleEnemyTargetUnits(this) > 0)
 	{
 		iFinalOddsThreshold *= 2;
 		iFinalOddsThreshold /= 3;
@@ -31327,9 +31319,9 @@ int CvUnitAI::AI_finalOddsThreshold(CvPlot* pPlot, int iOddsThreshold)
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 #else
-	if ((getDomainType() == DOMAIN_SEA) && getGroup()->hasCargo())
+	if (getDomainType() == DOMAIN_SEA && getGroup()->hasCargo())
 	{
-		iFinalOddsThreshold = (iFinalOddsThreshold*3)/2;	// don't risk cargo without better odds
+		iFinalOddsThreshold = iFinalOddsThreshold * 3 / 2; // don't risk cargo without better odds
 	}
 	else
 	{
@@ -31349,7 +31341,7 @@ int CvUnitAI::AI_finalOddsThreshold(CvPlot* pPlot, int iOddsThreshold)
 }
 
 
-int CvUnitAI::AI_stackOfDoomExtra()
+int CvUnitAI::AI_stackOfDoomExtra() const
 {
 	return ((AI_getBirthmark() % (1 + GET_PLAYER(getOwnerINLINE()).getCurrentEra())) + 4);
 }
@@ -33500,79 +33492,43 @@ bool CvUnitAI::AI_huntRange(int iRange, int iOddsThreshold, bool bStayInBorders,
 {
 	PROFILE_FUNC();
 
-	CvPlot* pLoopPlot;
-	CvPlot* pBestPlot;
-	CvPlot* endTurnPlot = NULL;
-	int iSearchRange;
-	int iPathTurns;
-	int iValue;
-	int iBestValue;
-	int iDX, iDY;
-	
-	bool bCanCaptureCities = !GET_PLAYER(getOwnerINLINE()).isModderOption(MODDEROPTION_AUTO_HUNT_NO_CITY_CAPTURING) && getGroup()->getAutomateType() == AUTOMATE_HUNT;
-	if (bCanCaptureCities)
+	const bool bCanCaptureCities =
+		getGroup()->getAutomateType() == AUTOMATE_HUNT && !GET_PLAYER(getOwnerINLINE()).isModderOption(MODDEROPTION_AUTO_HUNT_NO_CITY_CAPTURING) ||
+		getGroup()->getAutomateType() == AUTOMATE_BORDER_PATROL && !GET_PLAYER(getOwnerINLINE()).isModderOption(MODDEROPTION_AUTO_PATROL_NO_CITY_CAPTURING);
+
+	int bestScore = iMinValue;
+	const CvPlot* bestTargetPlot = NULL;
+
+	foreach_(const CvPlot* potentialTargetPlot, CvPlot::rect(getX_INLINE(), getY_INLINE(), iRange, iRange))
 	{
-		bCanCaptureCities = !GET_PLAYER(getOwnerINLINE()).isModderOption(MODDEROPTION_AUTO_PATROL_NO_CITY_CAPTURING) && getGroup()->getAutomateType() == AUTOMATE_BORDER_PATROL;
-	}
-
-	iSearchRange = iRange;
-
-	iBestValue = iMinValue;
-	pBestPlot = NULL;
-
-	for (iDX = -(iSearchRange); iDX <= iSearchRange; iDX++)
-	{
-		for (iDY = -(iSearchRange); iDY <= iSearchRange; iDY++)
+		if (!atPlot(potentialTargetPlot)
+			&& (!bStayInBorders || potentialTargetPlot->getOwnerINLINE() == getOwnerINLINE())
+			&& (!potentialTargetPlot->isCity() || bCanCaptureCities)
+			&& AI_plotValid(potentialTargetPlot)
+			&& potentialTargetPlot->isVisible(getTeam(), false))
 		{
-			pLoopPlot = plotXY(getX_INLINE(), getY_INLINE(), iDX, iDY);
-
-			if (pLoopPlot != NULL)
+			const bool huntingAnimals = AI_getUnitAIType() == UNITAI_HUNTER && algo::any_of(potentialTargetPlot->units(), CvUnit::fn::isAnimal());
+			if ((huntingAnimals || potentialTargetPlot->isVisibleEnemyUnit(this))
+				&& getGroup()->canMoveInto(potentialTargetPlot, true)
+				&& generatePath(potentialTargetPlot, 0, true, nullptr, iRange)
+				)
 			{
-				if (AI_plotValid(pLoopPlot))
+				const int attackOdds = getGroup()->AI_attackOdds(potentialTargetPlot, true);
+				const int plotScore = attackOdds + (huntingAnimals ? 25 : 0);
+
+				if (plotScore > bestScore && attackOdds >= AI_finalOddsThreshold(potentialTargetPlot, iOddsThreshold))
 				{
-					if (!bStayInBorders || (pLoopPlot->getOwnerINLINE() == getOwnerINLINE()))
-					{
-						if (!pLoopPlot->isCity() || bCanCaptureCities)
-						{
-							if (pLoopPlot->isVisible(getTeam(),false) && pLoopPlot->isVisibleEnemyUnit(this))
-							{
-								if (!atPlot(pLoopPlot) && getGroup()->canMoveInto(pLoopPlot, true) && generatePath(pLoopPlot, 0, true, &iPathTurns, iRange))
-								{
-									//if (pLoopPlot->getNumVisiblePotentialEnemyDefenders(this) <= getGroup()->getNumUnits())//TB: testing to see if this makes hunters on automation more willing to attack.
-									//{
-										iValue = getGroup()->AI_attackOdds(pLoopPlot, true);
-
-										if (iValue >= AI_finalOddsThreshold(pLoopPlot, iOddsThreshold))
-										{
-											/*if (!exposedToDanger(pLoopPlot, iOddsThreshold)) TB: testing to see if this makes hunters on automation more willing to attack.*/
-											{
-												if (iValue > iBestValue)
-												{
-													endTurnPlot = getPathEndTurnPlot();
-
-													if ( endTurnPlot == pLoopPlot /*|| !exposedToDanger(endTurnPlot, iOddsThreshold) TB: See notes above - same test*/)
-													{
-														iBestValue = iValue;
-														pBestPlot = endTurnPlot;
-														FAssert(!atPlot(pBestPlot));
-													}
-												}
-											}
-										}
-									//}
-								}
-							}
-						}
-					}
+					bestScore = plotScore;
+					bestTargetPlot = getPathEndTurnPlot();
 				}
 			}
 		}
 	}
 
-	if (pBestPlot != NULL)
+	if (bestTargetPlot != nullptr)
 	{
-		FAssert(!atPlot(pBestPlot));
-		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), MOVE_DIRECT_ATTACK, false, false);
+		FAssert(!atPlot(bestTargetPlot));
+		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, bestTargetPlot->getX_INLINE(), bestTargetPlot->getY_INLINE(), MOVE_DIRECT_ATTACK, false, false);
 	}
 
 	return false;

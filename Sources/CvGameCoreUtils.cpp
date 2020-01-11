@@ -1710,12 +1710,12 @@ bool PUF_isOtherTeam(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* 
 	return (pUnit->getTeam() != eTeam);
 }
 
-bool PUF_isEnemy(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
+bool PUF_isEnemy(const CvUnit* pUnit, int otherPlayer, int otherUnitAlwaysHostile, const CvUnit* otherUnit)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
-	FAssertMsg(iData2 != -1, "Invalid data argument, should be >= 0");
+	FAssertMsg(otherPlayer != -1, "Invalid data argument, should be >= 0");
+	FAssertMsg(otherUnitAlwaysHostile != -1, "Invalid data argument, should be >= 0");
 
-	TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
+	TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)otherPlayer).getTeam();
 	TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
 
 	if (pUnit->canCoexistWithTeam(eOtherTeam))
@@ -1723,7 +1723,7 @@ bool PUF_isEnemy(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThi
 		return false;
 	}
 
-	return (iData2 ? eOtherTeam != eOurTeam : atWar(eOtherTeam, eOurTeam));
+	return (otherUnitAlwaysHostile ? eOtherTeam != eOurTeam : atWar(eOtherTeam, eOurTeam));
 }
 
 bool PUF_isEnemyTarget(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
@@ -1883,10 +1883,10 @@ bool PUF_canDefendEnemy(const CvUnit* pUnit, int iData1, int iData2, const CvUni
 	return (PUF_canDefend(pUnit, iData1, iData2) && PUF_isEnemy(pUnit, iData1, iData2));
 }
 
-bool PUF_canDefendPotentialEnemyAgainst(const CvUnit* pUnit, int pThisTeam, int pThisAlwaysHostile, const CvUnit* pThis)
+bool PUF_canDefendPotentialEnemyAgainst(const CvUnit* pUnit, int otherTeam, int otherAlwaysHostile, const CvUnit* otherUnit)
 {
-	FAssertMsg(pThisTeam != -1, "Invalid data argument, should be >= 0");
-	return (PUF_canDefend(pUnit) && PUF_isPotentialEnemy(pUnit, pThisTeam, pThisAlwaysHostile, pThis));
+	FAssertMsg(otherTeam != -1, "Invalid data argument, should be >= 0");
+	return (PUF_canDefend(pUnit) && PUF_isPotentialEnemy(pUnit, otherTeam, otherAlwaysHostile, otherUnit));
 }
 
 bool PUF_canDefenselessPotentialEnemyAgainst(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)

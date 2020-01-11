@@ -1676,6 +1676,7 @@
 			<Strategy>TXT_KEY_BUILDING_FAIRYLAND_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FAIRYLAND</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FAIRYLAND</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_NON_TEMPORAL_ENTITIES</PrereqTech>
 			<iCost>11658</iCost>

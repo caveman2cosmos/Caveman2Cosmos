@@ -396,25 +396,25 @@ protected:
 /************************************************************************************************/
 	bool AI_espionageSpy();
 	bool AI_moveToStagingCity();
-	bool AI_seaRetreatFromCityDanger();
-	bool AI_airRetreatFromCityDanger();
-	bool AI_airAttackDamagedSkip();
+	//bool AI_seaRetreatFromCityDanger();
+	//bool AI_airRetreatFromCityDanger();
+	//bool AI_airAttackDamagedSkip();
 
 	bool AI_followBombard();
 
 	bool AI_potentialEnemy(TeamTypes eTeam, const CvPlot* pPlot = NULL);
 
-	bool AI_defendPlot(CvPlot* pPlot);
-	int AI_pillageValue(CvPlot* pPlot, int iBonusValueThreshold = 0);
-	int AI_nukeValue(CvCity* pCity);
-	bool AI_canPillage(CvPlot& kPlot) const;
+	bool AI_defendPlot(const CvPlot* pPlot) const;
+	int AI_pillageValue(const CvPlot* pPlot, int iBonusValueThreshold = 0) const;
+	int AI_nukeValue(const CvCity* pCity) const;
+	bool AI_canPillage(const CvPlot& kPlot) const;
 
-	int AI_searchRange(int iRange);
-	bool AI_plotValid(CvPlot* pPlot) const;
+	int AI_searchRange(int iRange) const;
+	bool AI_plotValid(const CvPlot* pPlot) const;
 
-	int AI_finalOddsThreshold(CvPlot* pPlot, int iOddsThreshold);
+	int AI_finalOddsThreshold(const CvPlot* pPlot, int iOddsThreshold) const;
 
-	int AI_stackOfDoomExtra();
+	int AI_stackOfDoomExtra() const;
 
 	bool AI_stackAttackCity(int iRange, int iPowerThreshold, bool bFollow = true);
 	bool AI_moveIntoCity(int iRange, bool bOpponentOnly = false);
@@ -532,13 +532,21 @@ public:
 
 	//	Check whether a plot is dangerous for the unit (alone) with provided acceptable
 	//	survival odds
-	bool exposedToDanger(CvPlot* pPlot, int acceptableOdds, bool bConsiderOnlyWorstThreat = false) const;
-	bool getThreateningUnit(CvPlot* pPlot, CvUnit*& pThreateningUnit, CvPlot* pAttackPlot, int& iIndex, bool bReturnWorstOfMultiple = false) const;
+	bool exposedToDanger(const CvPlot* pPlot, int acceptableOdds, bool bConsiderOnlyWorstThreat = false) const;
+	bool getThreateningUnit(const CvPlot* pPlot, CvUnit*& pThreateningUnit, const CvPlot* pAttackPlot, int& iIndex, bool bReturnWorstOfMultiple = false) const;
 
 	static void	AI_clearCaches();
 
 	static PlayerTypes			m_cachedPlayer;
 	static CvReachablePlotSet*	m_cachedMissionaryPlotset;
+
+public:
+
+	//
+	// Algorithm/range helpers
+	//
+	struct fn {
+	}; 
 };
 
 #endif

@@ -124,6 +124,19 @@ public:
 	CvUnitSelectionCriteria& IsCommander(bool IsCommander) { m_bIsCommander = IsCommander; return *this; }
 };
 
+struct ProductionCalc
+{
+	enum flags {
+		None = 0,
+		FoodProduction = 1 << 0,
+		Overflow = 1 << 1,
+		Yield = 1 << 2
+	};
+};
+
+DECLARE_FLAGS(ProductionCalc::flags);
+
+
 class CvCity : public CvDLLEntity
 {
 public:
@@ -310,7 +323,7 @@ public:
 	bool isProductionProject() const;																							// Exposed to Python
 	bool isProductionProcess() const;																		// Exposed to Python
 
-	bool canContinueProduction(OrderData order) const;														// Exposed to Python
+	bool canContinueProduction(const OrderData& order) const;														// Exposed to Python
 	int getProductionExperience(UnitTypes eUnit = NO_UNIT) const;									// Exposed to Python
 	void addProductionExperience(CvUnit* pUnit, bool bConscript = false);		// Exposed to Python
 
@@ -323,48 +336,52 @@ public:
 	const wchar* getProductionNameKey() const;													// Exposed to Python
 	int getGeneralProductionTurnsLeft() const;										// Exposed to Python
 
-	bool isFoodProduction() const;																								// Exposed to Python
-	bool isFoodProduction(UnitTypes eUnit) const;																	// Exposed to Python
-	int getFirstUnitOrder(UnitTypes eUnit) const;																	// Exposed to Python
-	int getFirstBuildingOrder(BuildingTypes eBuilding) const;											// Exposed to Python
-	int getFirstProjectOrder(ProjectTypes eProject) const;												// Exposed to Python
-	int getNumTrainUnitAI(UnitAITypes eUnitAI) const;															// Exposed to Python
+	bool isFoodProduction() const; // Exposed to Python
+	bool isFoodProduction(const OrderData& order) const;
+	bool isFoodProduction(UnitTypes eUnit) const; // Exposed to Python
 
-	int getProduction() const;																						// Exposed to Python
-	int getProductionNeeded() const;																						// Exposed to Python
+	int getFirstUnitOrder(UnitTypes eUnit) const; // Exposed to Python
+	int getFirstBuildingOrder(BuildingTypes eBuilding) const; // Exposed to Python
+	int getFirstProjectOrder(ProjectTypes eProject) const; // Exposed to Python
+	int getNumTrainUnitAI(UnitAITypes eUnitAI) const; // Exposed to Python
+
+	int getProduction() const; // Exposed to Python
+	int getProductionNeeded() const; // Exposed to Python
+	int getProductionNeeded(const OrderData& order) const;
 	int getProductionNeeded(UnitTypes eUnit) const;
 	int getProductionNeeded(BuildingTypes eBuilding) const;
 	int getProductionNeeded(ProjectTypes eProject) const;		
-	int getQueueNodeProductionTurnsLeft(CLLNode<OrderData>* pOrderNode, int iIndex = 0) const;
+	int getOrderProductionTurnsLeft(const OrderData& order, int iIndex = 0) const;
+
+	// For fractional production calculations:
 	int getTotalProductionQueueTurnsLeft() const;
-	int getProductionTurnsLeft() const;																	// Exposed to Python 
-	int getProductionTurnsLeft(UnitTypes eUnit, int iNum) const;					// Exposed to Python
-	int getProductionTurnsLeft(BuildingTypes eBuilding, int iNum) const;	// Exposed to Python
-	int getProductionTurnsLeft(ProjectTypes eProject, int iNum) const;		// Exposed to Python
+	int getProductionTurnsLeft() const; // Exposed to Python 
+	int getProductionTurnsLeft(UnitTypes eUnit, int iNum) const; // Exposed to Python
+	int getProductionTurnsLeft(BuildingTypes eBuilding, int iNum) const; // Exposed to Python
+	int getProductionTurnsLeft(ProjectTypes eProject, int iNum) const; // Exposed to Python
 	int getProductionTurnsLeft(int iProductionNeeded, int iProduction, int iFirstProductionDifference, int iProductionDifference) const;
+
 	void setProduction(int iNewValue);																			// Exposed to Python
 	void changeProduction(int iChange);																			// Exposed to Python
-	int numQueuedUnits(UnitAITypes eUnitAI, CvPlot* pDestPlot);
+	int numQueuedUnits(UnitAITypes contractedAIType, const CvPlot* contractedPlot) const;
 
-	int getProductionModifier() const;																						// Exposed to Python
-	int getProductionModifier(UnitTypes eUnit) const;															// Exposed to Python
-	int getProductionModifier(BuildingTypes eBuilding) const;											// Exposed to Python
-	int getProductionModifier(ProjectTypes eProject) const;												// Exposed to Python
+	int getProductionModifier(const OrderData& order) const;
+	int getProductionModifier() const; // Exposed to Python
 
-/************************************************************************************************/
-/* Afforess	Multiple Production Mod		 08/23/09                                            */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+	int getProductionModifier(UnitTypes eUnit) const; // Exposed to Python
+	int getProductionModifier(BuildingTypes eBuilding) const; // Exposed to Python
+	int getProductionModifier(ProjectTypes eProject) const; // Exposed to Python
+
 //	int getOverflowProductionDifference(int iProductionNeeded, int iProduction, int iProductionModifier, int iDiff, int iModifiedProduction) const;
 //	int getProductionDifference(int iProductionNeeded, int iProduction, int iProductionModifier, bool bFoodProduction, bool bOverflow) const;
+
 	int getOverflowProductionDifference() const;
-	int getProductionDifference(int iProductionNeeded, int iProduction, int iProductionModifier, bool bFoodProduction, bool bOverflow, bool bYield = true) const;
-/************************************************************************************************/
-/* Afforess	Multiple Production Mod       END                                                */
-/************************************************************************************************/
-	int getCurrentProductionDifference(bool bIgnoreFood, bool bOverflow) const;				// Exposed to Python
-	int getExtraProductionDifference(int iExtra) const;																					// Exposed to Python
+	// int getProductionDifference(int iProductionNeeded, int iProduction, int iProductionModifier, bool bFoodProduction, bool bOverflow, bool bYield = true) const;
+	int getProductionPerTurn(int iProductionModifier, ProductionCalc::flags flags) const;
+
+	int getProductionDifference(const OrderData& orderData, ProductionCalc::flags flags) const;
+	int getCurrentProductionDifference(ProductionCalc::flags flags) const; // Exposed to Python
+	int getExtraProductionDifference(int iExtra) const; // Exposed to Python
 
 	bool canHurry(HurryTypes eHurry, bool bTestVisible = false) const;		// Exposed to Python
 	void hurry(HurryTypes eHurry);																						// Exposed to Python
@@ -1250,6 +1267,7 @@ public:
 	bool isCorporationBonus(BonusTypes eBonus) const;
 	bool isActiveCorporation(CorporationTypes eCorporation) const;
 
+	// How many hammers already put into production of the building
 	int getBuildingProduction(BuildingTypes eIndex) const;							// Exposed to Python
 	void setBuildingProduction(BuildingTypes eIndex, int iNewValue);				// Exposed to Python
 	void changeBuildingProduction(BuildingTypes eIndex, int iChange);				// Exposed to Python
@@ -1372,13 +1390,16 @@ public:
 	void popOrder(int iNum, bool bFinish = false, bool bChoose = false, bool bResolveList = true);		// Exposed to Python
 	void startHeadOrder();
 	void stopHeadOrder();
-	int getOrderQueueLength();																		// Exposed to Python
-	OrderData* getOrderFromQueue(int iIndex);											// Exposed to Python
-	CLLNode<OrderData>* nextOrderQueueNode(CLLNode<OrderData>* pNode) const;
-	CLLNode<OrderData>* headOrderQueueNode() const;
-	DllExport int getNumOrdersQueued() const;
+
+	int getOrderQueueLength() const; // Exposed to Python
+	bst::optional<OrderData> getHeadOrder() const { return m_orderQueue.empty() ? bst::optional<OrderData>() : m_orderQueue.front(); }
+	bst::optional<OrderData> getTailOrder() const { return m_orderQueue.empty() ? bst::optional<OrderData>() : m_orderQueue.back(); }
+	OrderData getOrderAt(int index) const { return m_orderQueue[index]; } // Exposed to Python
+
+	//CLLNode<OrderData>* nextOrderQueueNode(CLLNode<OrderData>* pNode) const;
+	//CLLNode<OrderData>* headOrderQueueNode() const;
+	DllExport int getNumOrdersQueued() const { return m_orderQueue.size(); };
 	DllExport OrderData getOrderData(int iIndex) const;
-	OrderData getOrderDataInternal(int iIndex, bool externalView = true) const;
 	bool pushFirstValidBuildListOrder(int iListID);
 
 	// fill the kVisible array with buildings that you want shown in city, as well as the number of generics
@@ -1654,7 +1675,6 @@ public:
 	virtual UnitTypes AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAsync = false, bool bNoRand = false, CvUnitSelectionCriteria* criteria = NULL) = 0;
 
 	virtual void AI_FlushBuildingValueCache(bool bRetainValues = false) = 0;
-	virtual BuildingTypes AI_bestBuilding(int iFocusFlags = 0, int iMaxTurns = MAX_INT, bool bAsync = false, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR, bool bMaximizeFlaggedValue = false) = 0;
 
 	// Represents a building with associated score as measured by the AI
 	struct ScoredBuilding
@@ -1699,7 +1719,7 @@ public:
 /********************************************************************************/
 /**		BETTER_BTS_AI_MOD						END								*/
 /********************************************************************************/
-	virtual bool AI_isDanger() = 0;
+	virtual bool AI_isDanger() const = 0;
 	virtual int evaluateDanger() = 0;
 	virtual int AI_neededDefenders() = 0;
 	virtual int AI_neededAirDefenders() = 0;
@@ -2162,7 +2182,8 @@ protected:
 
 	std::vector<IDInfo> m_paTradeCities;
 
-	mutable CLinkList<OrderData> m_orderQueue;
+	typedef std::vector<OrderData> OrderQueue;
+	OrderQueue m_orderQueue;
 
 	std::vector< std::pair < float, float> > m_kWallOverridePoints;
 

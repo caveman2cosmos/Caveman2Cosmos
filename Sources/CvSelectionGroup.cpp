@@ -1649,7 +1649,7 @@ bool CvSelectionGroup::startMission()
 /************************************************************************************************/
 				{
 					int iMovesLeft = pLoopUnit->movesLeft();
-					if( pLoopUnit->bombardRate() > 0 )
+					if( pLoopUnit->getBombardRate() > 0 )
 					{
 						iMovesLeft /= 2;
 					}
@@ -1683,7 +1683,7 @@ bool CvSelectionGroup::startMission()
 /************************************************************************************************/
 					{
 						int iMovesLeft = pLoopUnit->movesLeft();
-						if( pLoopUnit->bombardRate() > 0 )
+						if( pLoopUnit->getBombardRate() > 0 )
 						{
 							iMovesLeft /= 2;
 						}
@@ -3696,7 +3696,7 @@ bool CvSelectionGroup::hasBombardCapability() const
 {
 	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
 	{
-		if ((*unitItr)->bombardRate() > 0)
+		if ((*unitItr)->getBombardRate() > 0)
 		{
 			return true;
 		}
@@ -3859,7 +3859,7 @@ int CvSelectionGroup::getBombardTurns(const CvCity* pCity) const
 	{
 		const CvUnit* pLoopUnit = *unitItr;
 
-		int iUnitBombardRate = pLoopUnit->bombardRate();
+		int iUnitBombardRate = pLoopUnit->getBombardRate();
 		if (iUnitBombardRate > 0)
 		{
 			if( pLoopUnit->ignoreBuildingDefense() )

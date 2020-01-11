@@ -2843,8 +2843,8 @@ public:
 	
 	int getExtraPowerValue() const;
 	void changeExtraPowerValue(int iChange);
-	int powerValueTotal() const;
-	int powerValueTotalPreCheck() const;
+	int getPowerValueTotal() const;
+	int getSMPowerValueTotalBase() const;
 	int getSMPowerValue() const;
 	void setSMPowerValue(bool bForLoad = false);
 	
@@ -2890,14 +2890,14 @@ public:
 	int getExtraBombardRate() const;																													// Exposed to Python
 	void changeExtraBombardRate(int iChange);
 	void setExtraBombardRate(int iChange);
-	int bombardRate() const;
-	int bombardRateTotalPreCheck() const;
+	int getBombardRate() const;
+	int getSMBombardRateTotalBase() const;
 	int getSMBombardRate() const;
 	void setSMBombardRate();
 
-	int airBombCurrRate() const;
-	int airBombBaseRate() const;
-	int airBombBaseRateTotalPreCheck() const;
+	int getAirBombCurrRate() const;
+	int getAirBombBaseRate() const;
+	int getSMAirBombBaseRateTotalBase() const;
 	int getSMAirBombBaseRate() const;
 	void setSMAirBombBaseRate();
 
@@ -3333,6 +3333,7 @@ public:
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isReadyForUpgrade);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isPromotionReady);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCombat);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isAnimal);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, canFight);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, canDefend);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, alwaysInvisible);

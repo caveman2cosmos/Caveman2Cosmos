@@ -2067,6 +2067,7 @@
 			<Strategy>TXT_KEY_BUILDING_EDEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EDEN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EDEN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ECOSYNTHESIS</PrereqTech>
 			<iCost>38544</iCost>
@@ -2276,6 +2277,7 @@
 			<Strategy>TXT_KEY_BUILDING_GRAND_UNIFICATION_ACCELERATOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GRAND_UNIFICATION_ACCELERATOR</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GRAND_UNIFICATION_ACCELERATOR</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ZEPTOTECHNOLOGY</PrereqTech>
 			<iCost>71510</iCost>
@@ -4925,6 +4927,7 @@
 			<Strategy>TXT_KEY_BUILDING_ERIS_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ERIS_COLONY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ERIS_COLONY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SOLAR_ORDNANCE</PrereqTech>
 			<iCost>11837</iCost>
