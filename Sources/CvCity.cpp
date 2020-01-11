@@ -18411,13 +18411,13 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 		{
 			const unsigned short iAIType = EXTERNAL_ORDER_IDATA(iData2);
 			const UnitAITypes AIType = (iAIType == 0xFFFF) ?
-				static_cast<UnitAITypes>(0xFF)
+				static_cast<UnitAITypes>(GC.getUnitInfo(unitType).getDefaultUnitAIType())
 				:
 				static_cast<UnitAITypes>(iAIType)
 				;
 				
 			contractedAIType = (iAIType == 0xFFFF)?
-				static_cast<UnitAITypes>(GC.getUnitInfo(unitType).getDefaultUnitAIType())
+				static_cast<UnitAITypes>(0xFF)
 				:
 				contractedAIType
 				;
