@@ -8511,6 +8511,7 @@
 			<Strategy>TXT_KEY_BUILDING_GODEL_INCOMPLETENESS_THEOREM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GODEL_INCOMPLETENESS_THEOREM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GODEL_INCOMPLETENESS_THEOREM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -13662,6 +13663,7 @@
 			<Strategy>TXT_KEY_BUILDING_INTERCONTINENTAL_RAIL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INTERCONTINENTAL_RAIL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_INTERCONTINENTAL_RAIL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -14608,6 +14610,7 @@
 			<Strategy>TXT_KEY_BUILDING_GREEN_WALL_OF_CHINA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GREEN_WALL_OF_CHINA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GREEN_WALL_OF_CHINA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
