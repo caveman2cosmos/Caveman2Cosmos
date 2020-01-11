@@ -20329,6 +20329,10 @@ void CvCity::read(FDataStreamBase* pStream)
 			case ORDER_TRAIN: {
 				orderData.setUnitType(static_cast<UnitTypes>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, orderData.getUnitType(), true)));
 				bDeleteNode = (orderData.getUnitType() == NO_UNIT);
+				if (!bDeleteNode && orderData.getUnitAIType() == static_cast<UnitAITypes>(0xFF))
+				{
+					orderData.unit.AIType = static_cast<UnitAITypes>(GC.getUnitInfo(orderData.getUnitType()).getDefaultUnitAIType());
+				}
 				break;
 			};
 			case ORDER_CONSTRUCT: {
