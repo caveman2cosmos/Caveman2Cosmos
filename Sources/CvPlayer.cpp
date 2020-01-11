@@ -34968,7 +34968,7 @@ void CvPlayer::clearModifierTotals()
 	for(CvUnit* pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
 	{
 		m_iAssets += pLoopUnit->assetValueTotal();
-		m_iUnitPower += pLoopUnit->powerValueTotal();
+		m_iUnitPower += pLoopUnit->getPowerValueTotal();
 	}
 }
 
@@ -37727,14 +37727,11 @@ UnitTypes CvPlayer::getGreatGeneralTypetoAssign() const
 	return m_eGreatGeneralTypetoAssign;
 }
 
-void CvPlayer::resetUnitSMValues()
+void CvPlayer::setSMValues()
 {
-	CvUnit* pLoopUnit;
-	int iLoop;
-
-	for (pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
+	foreach_(CvUnit* unit, units())
 	{
-		pLoopUnit->setSMValues();
+		unit->setSMValues();
 	}
 }
 

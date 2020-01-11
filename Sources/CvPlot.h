@@ -612,7 +612,7 @@ protected:
 	struct rect_iterator_base :
 		public bst::iterator_facade<rect_iterator_base<Value_>, Value_*, bst::forward_traversal_tag, Value_*>
 	{
-		rect_iterator_base() : m_centerX(-1), m_centerY(-1), m_wid(0), m_hgt(0), m_curr(nullptr), m_x(0), m_y(0){}
+		rect_iterator_base() : m_centerX(-1), m_centerY(-1), m_wid(-1), m_hgt(-1), m_curr(nullptr), m_x(0), m_y(0){}
 		explicit rect_iterator_base(int centerX, int centerY, int halfwid, int halfhgt) : m_centerX(centerX), m_centerY(centerY), m_wid(halfwid), m_hgt(halfhgt), m_curr(nullptr), m_x(-halfwid), m_y(-halfhgt)
 		{
 			increment();
@@ -623,23 +623,26 @@ protected:
 		void increment()
 		{
 			m_curr = nullptr;
-			for (; m_x <= m_wid && m_curr == nullptr; m_x++)
+			while (m_curr == nullptr && m_x <= m_wid)
 			{
-				if (m_y == m_hgt)
-					m_y = -m_hgt;
-				for (; m_y <= m_hgt && m_curr == nullptr; m_y++)
+				m_curr = plotXY(m_centerX, m_centerY, m_x, m_y);
+				++m_y;
+				if(m_y > m_hgt) 
 				{
-					m_curr = plotXY(m_centerX, m_centerY, m_x, m_y);
+					m_y = -m_hgt;
+					++m_x;
 				}
 			}
 		}
+
 		bool equal(rect_iterator_base const& other) const
 		{
-			return (this->m_centerX == other.m_centerX
-				&& this->m_centerY == other.m_centerY
-				&& this->m_x == other.m_x
-				&& this->m_y == other.m_y)
-				|| (this->m_curr == NULL && other.m_curr == NULL);
+			return this->m_curr == other.m_curr;
+			//(this->m_centerX == other.m_centerX
+			//&& this->m_centerY == other.m_centerY
+			//&& this->m_x == other.m_x
+			//&& this->m_y == other.m_y)
+			//|| (this->m_curr == NULL && other.m_curr == NULL);
 		}
 
 		Value_* dereference() const { return m_curr; }

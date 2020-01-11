@@ -652,7 +652,7 @@ public:
 	void pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce);
 	void popOrder(int iNum, bool bFinish, bool bChoose);
 	int getOrderQueueLength();
-	OrderData* getOrderFromQueue(int iIndex);
+	OrderData getOrderFromQueue(int iIndex);
 
 	void setWallOverridePoints(const python::tuple& kPoints); /* points are given in world space ... i.e. PlotXToPointX, etc */
 	python::tuple getWallOverridePoints() const;
@@ -680,7 +680,6 @@ public:
 /************************************************************************************************/
 	int /*UnitTypes*/ AI_bestUnit();
 	int /*UnitTypes*/ AI_bestUnitAI(int iUnitAIType);
-	int /*BuildingTypes*/ AI_bestBuilding(int iFocusFlags);
 /************************************************************************************************/
 /* REVOLUTION_MOD                          END                                                  */
 /************************************************************************************************/

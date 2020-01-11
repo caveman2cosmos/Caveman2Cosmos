@@ -450,7 +450,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 		if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
 			GET_PLAYER(getOwnerINLINE()).changeAssets(assetValueTotal());
-			GET_PLAYER(getOwnerINLINE()).changeUnitPower(powerValueTotal());
+			GET_PLAYER(getOwnerINLINE()).changeUnitPower(getPowerValueTotal());
 		}
 
 		doSetUnitCombats();
@@ -463,7 +463,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 		else
 		{
 			GET_PLAYER(getOwnerINLINE()).changeAssets(assetValueTotal());
-			GET_PLAYER(getOwnerINLINE()).changeUnitPower(powerValueTotal());
+			GET_PLAYER(getOwnerINLINE()).changeUnitPower(getPowerValueTotal());
 		}
 		//--------------------------------
 		// Init non-saved data
@@ -1530,7 +1530,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 	GET_PLAYER(getOwnerINLINE()).changeAssets(-assetValueTotal());
 
-	GET_PLAYER(getOwnerINLINE()).changeUnitPower(-powerValueTotal());
+	GET_PLAYER(getOwnerINLINE()).changeUnitPower(-getPowerValueTotal());
 
 	if (pPlot != NULL)
 	{
@@ -7616,7 +7616,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 			return false;
 		}
 
-		if (airBombBaseRate() == 0)
+		if (getAirBombBaseRate() == 0)
 		{
 			return false;
 		}
@@ -9887,7 +9887,7 @@ bool CvUnit::canAirBomb(const CvPlot* pPlot) const
 		return false;
 	}
 
-	if (airBombBaseRate() == 0)
+	if (getAirBombBaseRate() == 0)
 	{
 		return false;
 	}
@@ -10080,7 +10080,7 @@ bool CvUnit::airBomb(int iX, int iY)
 		if (!GC.isDCM_AIR_BOMBING())
 		{
 			// RevolutionDCM start - vanilla airbomb behaviour
-			if (GC.getGameINLINE().getSorenRandNum(airBombCurrRate(), "Air Bomb - Offense") >=
+			if (GC.getGameINLINE().getSorenRandNum(getAirBombCurrRate(), "Air Bomb - Offense") >=
 					GC.getGameINLINE().getSorenRandNum(GC.getImprovementInfo(pPlot->getImprovementType()).getAirBombDefense(), "Air Bomb - Defense"))
 			{
 				MEMORY_TRACK_EXEMPT();
@@ -10149,7 +10149,7 @@ bool CvUnit::airBomb(int iX, int iY)
 			if (!GC.isDCM_AIR_BOMBING())
 			{
 				// RevolutionDCM start - vanilla airbomb behaviour
-				pCity->changeDefenseModifier(-airBombCurrRate());
+				pCity->changeDefenseModifier(-getAirBombCurrRate());
 				
 				MEMORY_TRACK_EXEMPT();
 
@@ -10424,7 +10424,7 @@ CvPlot* CvUnit::bombardImprovementTarget(const CvPlot* pPlot) const
 
 bool CvUnit::canBombard(const CvPlot* pPlot, bool bIgnoreHasAttacked) const
 {
-	if (bombardRate() <= 0)
+	if (getBombardRate() <= 0)
 	{
 		return false;
 	}
@@ -10499,7 +10499,7 @@ bool CvUnit::bombard()
 				iBombardModifier -= pBombardCity->getBuildingBombardDefense();
 			}
 
-			pBombardCity->changeDefenseModifier(-(bombardRate() * std::max(0, 100 + iBombardModifier)) / 100);
+			pBombardCity->changeDefenseModifier(-(getBombardRate() * std::max(0, 100 + iBombardModifier)) / 100);
 
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENSES_IN_CITY_REDUCED_TO", pBombardCity->getNameKey(), pBombardCity->getDefenseModifier(false), GET_PLAYER(getOwnerINLINE()).getNameKey());
 			AddDLLMessage(pBombardCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pBombardCity->getX_INLINE(), pBombardCity->getY_INLINE(), true, true);
@@ -10511,7 +10511,7 @@ bool CvUnit::bombard()
 		{
 			MEMORY_TRACK_EXEMPT();
 
-			pTargetPlot->changeDefenseDamage(bombardRate());
+			pTargetPlot->changeDefenseDamage(getBombardRate());
 
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENSES_IN_CITY_REDUCED_TO", GC.getImprovementInfo(pTargetPlot->getImprovementType()).getText(),
 				(GC.getImprovementInfo(pTargetPlot->getImprovementType()).getDefenseModifier()-pTargetPlot->getDefenseDamage()), GET_PLAYER(getOwnerINLINE()).getNameKey());
@@ -15243,7 +15243,7 @@ int CvUnit::getSMStrength() const
 
 void CvUnit::setSMStrength()
 {
-	int iStrength = getDomainType() == DOMAIN_AIR? baseAirCombatStrPreCheck() : baseCombatStrPreCheck();
+	const int iStrength = getDomainType() == DOMAIN_AIR? baseAirCombatStrPreCheck() : baseCombatStrPreCheck();
 	m_iSMStrength = applySMRank(iStrength, getSizeMattersOffsetValue(), GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
 	FAssert(m_iSMStrength >= 0);
 }
@@ -18590,7 +18590,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		}
 
 		pNewPlot->area()->changeUnitsPerPlayer(getOwnerINLINE(), 1);
-		pNewPlot->area()->changePower(getOwnerINLINE(), powerValueTotal()/100);
+		pNewPlot->area()->changePower(getOwnerINLINE(), getPowerValueTotal()/100);
 
 		if (AI_getUnitAIType() != NO_UNITAI)
 		{
@@ -18621,7 +18621,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		changeDebugCount(-1);
 
 		pOldPlot->area()->changeUnitsPerPlayer(getOwnerINLINE(), -1);
-		pOldPlot->area()->changePower(getOwnerINLINE(), -powerValueTotal()/100);
+		pOldPlot->area()->changePower(getOwnerINLINE(), -getPowerValueTotal()/100);
 
 		if (AI_getUnitAIType() != NO_UNITAI)
 		{
@@ -30183,29 +30183,33 @@ bool CvUnit::isTargetOf(const CvUnit& attacker) const
 
 	//if (!plot()->isCity(true, getTeam()) || (attacker.plot() == plot() && (attacker.isAssassin() || isAssassin())))
 	//{
-		if (NO_UNITCLASS != getUnitClassType() && attackerInfo.getTargetUnitClass(getUnitClassType()))
-		{
-			return true;
-		}
-		// TB SubCombat Mod Begin - Original code:
-		for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = m_unitCombatKeyedInfo.begin(), end = m_unitCombatKeyedInfo.end(); it != end; ++it)
-		{
-			if(it->second.m_bHasUnitCombat)
-			{
-				if (attackerInfo.getTargetUnitCombat(it->first) || 
-					attacker.hasTargetUnitCombat(it->first))
-				{
-					return true;
-				}
-			}
-		}
-		//TB SubCombat Mod End	
-	//}
 
-	if (NO_UNITCLASS != attackerInfo.getUnitClassType() && ourInfo.getDefenderUnitClass(attackerInfo.getUnitClassType()))
+	if (getUnitClassType() != NO_UNITCLASS && attackerInfo.getTargetUnitClass(getUnitClassType()))
 	{
 		return true;
 	}
+
+	if (attackerInfo.getUnitClassType() != NO_UNITCLASS && ourInfo.getDefenderUnitClass(attackerInfo.getUnitClassType()))
+	{
+		return true;
+	}
+
+	// TB SubCombat Mod Begin - Original code:
+	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = m_unitCombatKeyedInfo.begin(), end = m_unitCombatKeyedInfo.end(); it != end; ++it)
+	{
+		if(it->second.m_bHasUnitCombat)
+		{
+			if (attackerInfo.getTargetUnitCombat(it->first) || 
+				attacker.hasTargetUnitCombat(it->first))
+			{
+				return true;
+			}
+		}
+	}
+	//TB SubCombat Mod End	
+
+	//}
+
 
 	// TB SubCombat Mod Begin
 	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = attacker.m_unitCombatKeyedInfo.begin(), end = attacker.m_unitCombatKeyedInfo.end(); it != end; ++it)
@@ -30225,7 +30229,7 @@ bool CvUnit::isTargetOf(const CvUnit& attacker) const
 
 bool CvUnit::isEnemy(TeamTypes eTeam, const CvPlot* pPlot, const CvUnit* pUnit) const
 {
-	if (pUnit != NULL && (isBarbCoExist() && pUnit->isHominid()) || (pUnit->isBarbCoExist() && isHominid()))
+	if (pUnit != NULL && (isBarbCoExist() && pUnit->isHominid() || pUnit->isBarbCoExist() && isHominid()))
 	{
 		return false;
 	}
@@ -30240,7 +30244,7 @@ bool CvUnit::isEnemy(TeamTypes eTeam, const CvPlot* pPlot, const CvUnit* pUnit) 
 
 bool CvUnit::isPotentialEnemy(TeamTypes eTeam, const CvPlot* pPlot, const CvUnit* pUnit) const
 {
-	if (pUnit != NULL && (isBarbCoExist() && pUnit->isHominid()) || (pUnit->isBarbCoExist() && isHominid()))
+	if (pUnit != NULL && (isBarbCoExist() && pUnit->isHominid() || pUnit->isBarbCoExist() && isHominid()))
 	{
 		return false;
 	}
@@ -30255,7 +30259,7 @@ bool CvUnit::isPotentialEnemy(TeamTypes eTeam, const CvPlot* pPlot, const CvUnit
 
 bool CvUnit::isSuicide() const
 {
-	return (m_pUnitInfo->isSuicide() || getKamikazePercent() != 0);
+	return m_pUnitInfo->isSuicide() || getKamikazePercent() != 0;
 }
 
 int CvUnit::getDropRange() const
@@ -30791,7 +30795,7 @@ bool CvUnit::canAirBomb1(const CvPlot* pPlot) const
 		return false;
 	}
 
-	if (airBombBaseRate() == 0)
+	if (getAirBombBaseRate() == 0)
 	{
 		return false;
 	}
@@ -30876,7 +30880,7 @@ bool CvUnit::airBomb1(int iX, int iY)
 	CvCity* pCity = pPlot->getPlotCity();
 	if (pCity != NULL)
 	{
-		pCity->changeDefenseDamage(airBombCurrRate());
+		pCity->changeDefenseDamage(getAirBombCurrRate());
 		bool bBarb = pCity->isHominid();
 		//TB Combat Mods begin
 		int iMax = MAX_INT;
@@ -30899,7 +30903,7 @@ bool CvUnit::airBomb1(int iX, int iY)
 	{
 		if (pPlot->getImprovementType() != NO_IMPROVEMENT)
 		{
-			if (GC.getGameINLINE().getSorenRandNum(airBombCurrRate(), "Air Bomb - Offense") >=
+			if (GC.getGameINLINE().getSorenRandNum(getAirBombCurrRate(), "Air Bomb - Offense") >=
 					GC.getGameINLINE().getSorenRandNum(GC.getImprovementInfo(pPlot->getImprovementType()).getAirBombDefense(), "Air Bomb - Defense"))
 			{
 				{
@@ -31014,7 +31018,7 @@ bool CvUnit::canAirBomb2(const CvPlot* pPlot) const
 	{
 		return false;
 	}
-	if (airBombBaseRate() == 0)
+	if (getAirBombBaseRate() == 0)
 	{
 		return false;
 	}
@@ -31264,7 +31268,7 @@ bool CvUnit::canAirBomb3(const CvPlot* pPlot) const
 	{
 		return false;
 	}
-	if (airBombBaseRate() == 0)
+	if (getAirBombBaseRate() == 0)
 	{
 		return false;
 	}
@@ -31529,7 +31533,7 @@ bool CvUnit::canAirBomb4(const CvPlot* pPlot) const
 	{
 		return false;
 	}
-	if (airBombBaseRate() == 0)
+	if (getAirBombBaseRate() == 0)
 	{
 		return false;
 	}
@@ -31828,7 +31832,7 @@ bool CvUnit::canAirBomb5(const CvPlot* pPlot) const
 	{
 		return false;
 	}
-	if (airBombBaseRate() == 0)
+	if (getAirBombBaseRate() == 0)
 	{
 		return false;
 	}
@@ -32320,7 +32324,7 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 			// Plot bombardment
 			if (pPlot->getImprovementType() != NO_IMPROVEMENT) 
 			{
-				if (GC.getGameINLINE().getSorenRandNum(bombardRate(), "Bomb - Offense") >=
+				if (GC.getGameINLINE().getSorenRandNum(getBombardRate(), "Bomb - Offense") >=
 						GC.getGameINLINE().getSorenRandNum(GC.getImprovementInfo(pPlot->getImprovementType()).getAirBombDefense(), "Bomb - Defense"))
 				{
 					{
@@ -32463,7 +32467,7 @@ void CvUnit::doOpportunityFire()
 	{
 		return;
 	}
-	if (bombardRate() <= 0 || getDCMBombRange() <= 0)
+	if (getBombardRate() <= 0 || getDCMBombRange() <= 0)
 	{
 		return;
 	}
@@ -32505,7 +32509,7 @@ void CvUnit::doOpportunityFire()
 		if (pDefender != NULL)
 		{
 			setBattlePlot(pAttackPlot, pDefender);
-			iUnitDamage = (GC.getGameINLINE().getSorenRandNum(bombardRate(), "Bombard damage") * 5);
+			iUnitDamage = (GC.getGameINLINE().getSorenRandNum(getBombardRate(), "Bombard damage") * 5);
 			pDefender->changeDamage(iUnitDamage, getOwner());
 			//TB Combat Mod begin
 			if (dealsColdDamage())
@@ -42629,7 +42633,7 @@ int CvUnit::getSMHPValue() const
 
 void CvUnit::setSMHPValue()
 {
-	int newSMHPValue = applySMRank(HPValueTotalPreCheck(),
+	const int newSMHPValue = applySMRank(HPValueTotalPreCheck(),
 		getSizeMattersOffsetValue(),
 		GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
 	m_iSMHPValue = std::max(1, newSMHPValue);
@@ -42651,32 +42655,32 @@ void CvUnit::changeExtraPowerValue(int iChange)
 	}
 }
 
-int CvUnit::powerValueTotal() const
+int CvUnit::getPowerValueTotal() const
 {
-	int iData = 0;
+	int powerValue = 0;
 	if (!GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		iData = powerValueTotalPreCheck();
+		powerValue = getSMPowerValueTotalBase();
 	}
 	else
 	{
 		if (getSMPowerValue() == 0)
 		{
-			iData = powerValueTotalPreCheck();
+			powerValue = getSMPowerValueTotalBase();
 		}
 		else
 		{
-			iData = getSMPowerValue();
+			powerValue = getSMPowerValue();
 		}
 	}
-	return std::max(1, iData);
+	return std::max(1, powerValue);
 }
 
-int CvUnit::powerValueTotalPreCheck() const
+int CvUnit::getSMPowerValueTotalBase() const
 {
-	int iData = m_pUnitInfo->getPowerValue();
-	iData += getExtraPowerValue();
-	return std::max(1, iData);
+	const int powerValueBase = m_pUnitInfo->getPowerValue() 
+		+ getExtraPowerValue();
+	return std::max(1, powerValueBase);
 }
 
 int CvUnit::getSMPowerValue() const
@@ -42686,17 +42690,16 @@ int CvUnit::getSMPowerValue() const
 
 void CvUnit::setSMPowerValue(bool bForLoad)
 {
-	FAssert(powerValueTotalPreCheck() >= 0);
-	int oldSMPowerValue = powerValueTotal();
-	int newSMPowerValue = applySMRank(powerValueTotalPreCheck(),
+	FAssert(getSMPowerValueTotalBase() >= 0);
+	const int oldSMPowerValue = getPowerValueTotal();
+	const int newSMPowerValue = applySMRank(getSMPowerValueTotalBase(),
 		getSizeMattersOffsetValue(),
 		GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
 	FAssert(newSMPowerValue >= 0);
 	m_iSMPowerValue = std::max(1, newSMPowerValue);
 	if (!bForLoad)
 	{
-		int iChange = m_iSMPowerValue - oldSMPowerValue;
-		iChange = std::max(1, iChange);
+		const int iChange = std::max(1, m_iSMPowerValue - oldSMPowerValue);
 		GET_PLAYER(getOwnerINLINE()).changePower(iChange);
 	}
 	FAssert(getSMPowerValue() >= 0);
@@ -42755,7 +42758,7 @@ void CvUnit::setSMAssetValue(bool bForLoad)
 	const int offsetValue = getSizeMattersOffsetValue();
 	if (offsetValue != -15) // Special Case for size cat undefined units
 	{
-		int oldSMAssetValue = assetValueTotal();
+		const int oldSMAssetValue = assetValueTotal();
 		m_iSMAssetValue = applySMRank(assetValueTotalPreCheck(),
 			offsetValue,
 			GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
@@ -43108,12 +43111,13 @@ void CvUnit::setExtraBombardRate(int iChange)
 	}
 }
 
-int CvUnit::bombardRate() const//The call that plugs into the rest of the code (final value) - this can be plugged into the existing final - or even be renamed to the existing final (though experience has shown me this causes me tremendous confusion!)
+// The call that plugs into the rest of the code (final value) - this can be plugged into the existing final - or even be renamed to the existing final (though experience has shown me this causes me tremendous confusion!)
+int CvUnit::getBombardRate() const
 {
-	int iData = 0;
+	int bombardRate = 0;
 	if (!GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		iData = bombardRateTotalPreCheck();
+		bombardRate = getSMBombardRateTotalBase();
 	}
 	else
 	{
@@ -43122,20 +43126,22 @@ int CvUnit::bombardRate() const//The call that plugs into the rest of the code (
 //		//Either that or the base is 0 anyhow.
 		if (getSMBombardRate() == 0)
 		{
-			iData = bombardRateTotalPreCheck();
+			bombardRate = getSMBombardRateTotalBase();
 		}
 		else
 		{
-			iData = getSMBombardRate();
+			bombardRate = getSMBombardRate();
 		}
 	}
-	return std::max(0, iData);
+	return std::max(0, bombardRate);
 }
 
-int CvUnit::bombardRateTotalPreCheck() const//The total before the Size Matters multiplicative method adjusts for the final value.
+// The total before the Size Matters multiplicative method adjusts for the final value.
+int CvUnit::getSMBombardRateTotalBase() const
 {
-	int iData = m_pUnitInfo->getBombardRate();//Unit base.
-	iData += getExtraBombardRate();//Extra Adjustments from CCs and promos (Optional)
+	const int bombardRateTotalBase = 
+		m_pUnitInfo->getBombardRate() // Unit base.
+		+ getExtraBombardRate(); // Extra Adjustments from CCs and promos (Optional)
 //	//If there is a flat base not defined on the unit itself then it needs to plug in here.
 //
 //	//The following lines can vary depending on if you want an approaching 0 return, diminishing return, max or whatever
@@ -43143,7 +43149,7 @@ int CvUnit::bombardRateTotalPreCheck() const//The total before the Size Matters 
 //	//to work with
 	//In THIS case, units can easily have NO bombard rate (there's a check above to make sure it's not less than 0 as that would be an odd situation.)
 	//If this value starts going less than 0 then perhaps a min needs to be established.
-	return iData;
+	return bombardRateTotalBase;
 }
 
 int CvUnit::getSMBombardRate() const//The final result of the Multiplicative adjustment
@@ -43155,7 +43161,7 @@ int CvUnit::getSMBombardRate() const//The final result of the Multiplicative adj
 ////This is the core multiplicative method being utilized.
 void CvUnit::setSMBombardRate()
 {
-	m_iSMBombardRate = applySMRank(bombardRateTotalPreCheck(),
+	m_iSMBombardRate = applySMRank(getSMBombardRateTotalBase(),
 		getSizeMattersOffsetValue(),
 		GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
 
@@ -43181,17 +43187,17 @@ void CvUnit::setSMBombardRate()
 //	return m_pUnitInfo->getBombRate();
 //}
 
-int CvUnit::airBombCurrRate() const
+int CvUnit::getAirBombCurrRate() const
 {
-	return ((airBombBaseRate() * currHitPoints()) / maxHitPoints());
+	return ((getAirBombBaseRate() * currHitPoints()) / maxHitPoints());
 }
 
-int CvUnit::airBombBaseRate() const//The call that plugs into the rest of the code (final value) - this can be plugged into the existing final - or even be renamed to the existing final (though experience has shown me this causes me tremendous confusion!)
+int CvUnit::getAirBombBaseRate() const//The call that plugs into the rest of the code (final value) - this can be plugged into the existing final - or even be renamed to the existing final (though experience has shown me this causes me tremendous confusion!)
 {
-	int iData = 0;
+	int airBombBaseRate = 0;
 	if (!GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		iData = airBombBaseRateTotalPreCheck();
+		airBombBaseRate = getSMAirBombBaseRateTotalBase();
 	}
 	else
 	{
@@ -43200,20 +43206,19 @@ int CvUnit::airBombBaseRate() const//The call that plugs into the rest of the co
 		//Either that or the base is 0 anyhow.
 		if (getSMAirBombBaseRate() == 0)
 		{
-			iData = airBombBaseRateTotalPreCheck();
+			airBombBaseRate = getSMAirBombBaseRateTotalBase();
 		}
 		else
 		{
-			iData = getSMAirBombBaseRate();
+			airBombBaseRate = getSMAirBombBaseRate();
 		}
 	}
-	return iData;
+	return airBombBaseRate;
 }
 
-int CvUnit::airBombBaseRateTotalPreCheck() const//The total before the Size Matters multiplicative method adjusts for the final value.
+int CvUnit::getSMAirBombBaseRateTotalBase() const//The total before the Size Matters multiplicative method adjusts for the final value.
 {
-	int iData = m_pUnitInfo->getBombRate();//Unit base.
-	return iData;
+	return m_pUnitInfo->getBombRate();//Unit base.
 }
 
 int CvUnit::getSMAirBombBaseRate() const//The final result of the Multiplicative adjustment
@@ -43225,7 +43230,7 @@ int CvUnit::getSMAirBombBaseRate() const//The final result of the Multiplicative
 //This is the core multiplicative method being utilized.
 void CvUnit::setSMAirBombBaseRate()
 {
-	m_iSMAirBombBaseRate = applySMRank(airBombBaseRateTotalPreCheck(),
+	m_iSMAirBombBaseRate = applySMRank(getSMAirBombBaseRateTotalBase(),
 		getSizeMattersOffsetValue(),
 		GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
 

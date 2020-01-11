@@ -1698,7 +1698,7 @@ int CvPlayerAI::AI_movementPriority(CvSelectionGroup* pGroup) const
 			return 6;
 		}
 
-		if (pHeadUnit->bombardRate() > 0)
+		if (pHeadUnit->getBombardRate() > 0)
 		{
 			return 7;
 		}
@@ -4646,7 +4646,7 @@ int CvPlayerAI::plotDangerCacheHits = 0;
 int CvPlayerAI::plotDangerCacheReads = 0;
 #endif
 
-int CvPlayerAI::AI_getPlotDanger(CvPlot* pPlot, int iRange, bool bTestMoves) const
+int CvPlayerAI::AI_getPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMoves) const
 {
 	PROFILE_FUNC();
 
@@ -4724,7 +4724,7 @@ int CvPlayerAI::AI_getPlotDanger(CvPlot* pPlot, int iRange, bool bTestMoves) con
 #endif
 }
 
-int CvPlayerAI::AI_getPlotDangerInternal(CvPlot* pPlot, int iRange, bool bTestMoves) const
+int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool bTestMoves) const
 {
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit;
@@ -4930,7 +4930,7 @@ int CvPlayerAI::AI_getUnitDanger(CvUnit* pUnit, int iRange, bool bTestMoves, boo
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-int CvPlayerAI::AI_countNumLocalNavy(CvPlot* pPlot, int iRange) const
+int CvPlayerAI::AI_countNumLocalNavy(const CvPlot* pPlot, int iRange) const
 {
 	PROFILE_FUNC();
 
@@ -4985,7 +4985,7 @@ int CvPlayerAI::AI_countNumLocalNavy(CvPlot* pPlot, int iRange) const
 	return iCount;
 }
 
-int CvPlayerAI::AI_getWaterDanger(CvPlot* pPlot, int iRange, bool bTestMoves) const
+int CvPlayerAI::AI_getWaterDanger(const CvPlot* pPlot, int iRange, bool bTestMoves) const
 {
 	PROFILE_FUNC();
 
