@@ -181,7 +181,54 @@ protected:
 	bool AI_shadow(UnitAITypes eUnitAI, int iMax = -1, int iMaxRatio = -1, bool bWithCargoOnly = true);
 */
 	bool AI_shadow(UnitAITypes eUnitAI, int iMax = -1, int iMaxRatio = -1, bool bWithCargoOnly = true, bool bOutsideCityOnly = false, int iMaxPath = MAX_INT);
-	bool AI_group(UnitAITypes eUnitAI, int iMaxGroup = -1, int iMaxOwnUnitAI = -1, int iMinUnitAI = -1, bool bIgnoreFaster = false, bool bIgnoreOwnUnitType = false, bool bStackOfDoom = false, int iMaxPath = MAX_INT, bool bAllowRegrouping = false, bool bWithCargoOnly = false, bool bInCityOnly = false, MissionAITypes eIgnoreMissionAIType = NO_MISSIONAI);
+
+	struct GroupingParams
+	{
+		GroupingParams()
+			: eUnitAI(NO_UNITAI)
+			, iMaxGroup(-1)
+			, iMaxOwnUnitAI(-1)
+			, iMinUnitAI(-1)
+			, bIgnoreFaster(false)
+			, bIgnoreOwnUnitType(false)
+			, bStackOfDoom(false)
+			, iMaxPath(MAX_INT)
+			, bAllowRegrouping(false)
+			, bWithCargoOnly(false)
+			, bInCityOnly(false)
+			, eIgnoreMissionAIType(NO_MISSIONAI)
+		{}
+		GroupingParams& withUnitAI(UnitAITypes unitAI) { eUnitAI = unitAI; return *this; }
+		GroupingParams& maxGroupSize(int maxGroup) { iMaxGroup = maxGroup; return *this; }
+		GroupingParams& maxOwnUnitAI(int maxOwnUnitAI) { iMaxOwnUnitAI = maxOwnUnitAI; return *this; }
+		GroupingParams& minUnitAI(int minUnitAI) { iMinUnitAI = minUnitAI; return *this; }
+		GroupingParams& ignoreFaster(bool state = true) { bIgnoreFaster = state; return *this; }
+		GroupingParams& ignoreOwnUnitType(bool state = true) { bIgnoreOwnUnitType = state; return *this; }
+		GroupingParams& stackOfDoom(bool state = true) { bStackOfDoom = state; return *this; }
+		GroupingParams& maxPathTurns(int maxPath) { iMaxPath = maxPath; return *this; }
+		GroupingParams& allowRegrouping(bool state = true) { bAllowRegrouping = state; return *this; }
+		GroupingParams& withCargoOnly(bool state = true) { bWithCargoOnly = state; return *this; }
+		GroupingParams& inCityOnly(bool state = true) { bInCityOnly = state; return *this; }
+		GroupingParams& ignoreMissionAIType(MissionAITypes ignoreMissionAIType) { eIgnoreMissionAIType = ignoreMissionAIType; return *this; }
+
+		UnitAITypes eUnitAI;
+		int iMaxGroup;
+		int iMaxOwnUnitAI;
+		int iMinUnitAI;
+		bool bIgnoreFaster;
+		bool bIgnoreOwnUnitType;
+		bool bStackOfDoom;
+		int iMaxPath;
+		bool bAllowRegrouping;
+		bool bWithCargoOnly;
+		bool bInCityOnly;
+		MissionAITypes eIgnoreMissionAIType;
+	};
+
+
+	// Returns true if a group was joined or a mission was pushed...
+	bool AI_group(const GroupingParams& params);
+
 	//bool AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITypes eTransportedUnitAI = NO_UNITAI, int iMinCargo = -1, int iMinCargoSpace = -1, int iMaxCargoSpace = -1, int iMaxCargoOurUnitAI = -1, int iFlags = 0, int iMaxPath = MAX_INT, int iMaxTransportPath = MAX_INT);
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
@@ -263,6 +310,10 @@ protected:
 	bool AI_safety(int iRange = 1);
 	bool AI_hide();
 	bool AI_goody(int iRange);
+
+	// Send explorer units to group up with combat groups if we are at war
+	// Return true if it happens
+	bool AI_explorerJoinOffensiveStacks();
 	bool AI_explore();
 	bool AI_exploreRange(int iRange);
 	bool AI_refreshExploreRange(int iRange, bool bIncludeVisibilityRefresh = true);
