@@ -1294,7 +1294,13 @@ public:
 	// Algorithm/range helpers
 	//
 	struct fn {
+		DECLARE_MAP_FUNCTOR(CvPlot, bool, isIrrigated);
+		DECLARE_MAP_FUNCTOR(CvPlot, bool, isOwned);
 		DECLARE_MAP_FUNCTOR(CvPlot, bool, isWater);
+
+		DECLARE_MAP_FUNCTOR(CvPlot, int, getArea);
+		DECLARE_MAP_FUNCTOR(CvPlot, FeatureTypes, getFeatureType);
+		DECLARE_MAP_FUNCTOR(CvPlot, PlayerTypes, getOwner);
 	}; 
 };
 
