@@ -234,9 +234,9 @@ int CvArea::calculateTotalBestNatureYield() const
 {
 	int iCount = 0;
 
-	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		const CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 		if (pLoopPlot->getArea() == getID())
 		{
 			iCount += pLoopPlot->calculateTotalBestNatureYield(NO_TEAM);
@@ -256,9 +256,9 @@ int CvArea::countCoastalLand() const
 
 	int iCount = 0;
 
-	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		const CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 		if (pLoopPlot->getArea() == getID() && pLoopPlot->isCoastalLand())
 		{
 			iCount++;
@@ -353,8 +353,8 @@ void CvArea::changeNumTiles(int iChange)
 		// cppcheck-suppress knownConditionTrueFalse
 		if (bWasLake != isLake())
 		{
-			GC.getMapINLINE().updateIrrigated();
-			GC.getMapINLINE().updateYield();
+			GC.getMap().updateIrrigated();
+			GC.getMap().updateYield();
 		}
 	}
 }
@@ -761,14 +761,14 @@ int CvArea::getNumUnrevealedTiles(TeamTypes eIndex) const
 
 int CvArea::getNumRevealedFeatureTiles(TeamTypes eTeam, FeatureTypes eFeature) const
 {
-	if (m_iCachedTurnPlotTypeCounts != GC.getGameINLINE().getGameTurn() ||
+	if (m_iCachedTurnPlotTypeCounts != GC.getGame().getGameTurn() ||
 		m_eCachedTeamPlotTypeCounts != eTeam)
 	{
 		m_plotFeatureCountCache.clear();
 		m_plotTerrainCountCache.clear();
 	}
 
-	m_iCachedTurnPlotTypeCounts = GC.getGameINLINE().getGameTurn();
+	m_iCachedTurnPlotTypeCounts = GC.getGame().getGameTurn();
 	m_eCachedTeamPlotTypeCounts = eTeam;
 
 	std::map<FeatureTypes, int>::const_iterator	itr = m_plotFeatureCountCache.find(eFeature);
@@ -776,9 +776,9 @@ int CvArea::getNumRevealedFeatureTiles(TeamTypes eTeam, FeatureTypes eFeature) c
 	{
 		int	iResult = 0;
 
-		for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 		{
-			const CvPlot* pPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+			const CvPlot* pPlot = GC.getMap().plotByIndex(iI);
 			if (pPlot != NULL &&
 				pPlot->area() == this &&
 				pPlot->isRevealed(eTeam, false) &&
@@ -798,14 +798,14 @@ int CvArea::getNumRevealedFeatureTiles(TeamTypes eTeam, FeatureTypes eFeature) c
 
 int CvArea::getNumRevealedTerrainTiles(TeamTypes eTeam, TerrainTypes eTerrain) const
 {
-	if (m_iCachedTurnPlotTypeCounts != GC.getGameINLINE().getGameTurn() ||
+	if (m_iCachedTurnPlotTypeCounts != GC.getGame().getGameTurn() ||
 		m_eCachedTeamPlotTypeCounts != eTeam)
 	{
 		m_plotFeatureCountCache.clear();
 		m_plotTerrainCountCache.clear();
 	}
 
-	m_iCachedTurnPlotTypeCounts = GC.getGameINLINE().getGameTurn();
+	m_iCachedTurnPlotTypeCounts = GC.getGame().getGameTurn();
 	m_eCachedTeamPlotTypeCounts = eTeam;
 
 	std::map<TerrainTypes, int>::const_iterator	itr = m_plotTerrainCountCache.find(eTerrain);
@@ -813,9 +813,9 @@ int CvArea::getNumRevealedTerrainTiles(TeamTypes eTeam, TerrainTypes eTerrain) c
 	{
 		int	iResult = 0;
 
-		for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 		{
-			const CvPlot* pPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+			const CvPlot* pPlot = GC.getMap().plotByIndex(iI);
 			if (pPlot != NULL &&
 				pPlot->area() == this &&
 				pPlot->isRevealed(eTeam, false) &&
@@ -873,7 +873,7 @@ void CvArea::changeCleanPowerCount(TeamTypes eIndex, int iChange)
 			GET_TEAM(eIndex).updateCommerce();
 			GET_TEAM(eIndex).updatePowerHealth();
 
-			if (eIndex == GC.getGameINLINE().getActiveTeam())
+			if (eIndex == GC.getGame().getActiveTeam())
 			{
 				gDLL->getInterfaceIFace()->setDirty(CityInfo_DIRTY_BIT, true);
 			}
@@ -904,7 +904,7 @@ void CvArea::changeBorderObstacleCount(TeamTypes eIndex, int iChange)
 
 	if (iChange > 0 && m_aiBorderObstacleCount[eIndex] == iChange)
 	{
-		GC.getMapINLINE().verifyUnitValidPlot();
+		GC.getMap().verifyUnitValidPlot();
 	}
 }
 
@@ -979,7 +979,7 @@ void CvArea::changeYieldRateModifier(PlayerTypes eIndex1, YieldTypes eIndex2, in
 
 		GET_PLAYER(eIndex1).AI_makeAssignWorkDirty();
 
-		if (GET_PLAYER(eIndex1).getTeam() == GC.getGameINLINE().getActiveTeam())
+		if (GET_PLAYER(eIndex1).getTeam() == GC.getGame().getActiveTeam())
 		{
 			gDLL->getInterfaceIFace()->setDirty(CityInfo_DIRTY_BIT, true);
 		}
