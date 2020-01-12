@@ -34,5 +34,16 @@ Mark up sections of code with the @SAVEBREAK tag to indicate changes that should
     // WRITE_SAVE_DATA(m_newData);
     // SAVEBREAK@
 
+
+The following wrappers where added to keep saved game compatability while changing member variable data types.
+They should be cleaned up when given an opportunity.
+
+ - Change WRITE_CHAR_AS_INT wrappers to WRITE
+ - Change READ_CHAR_AS_INT wrappers to READ
+
+ - Change WRITE_SHORT_AS_INT wrappers to WRITE
+ - Change READ_SHORT_AS_INT wrappers to READ
+
+
 When it comes times to break the save we need to apply all the changes that are marked like this.
 

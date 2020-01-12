@@ -306,8 +306,9 @@ private:
 #define WRAPPER_WRITE_CLASS_ARRAY_OF_CLASS_ENUM(wrapper,className,classType,valueClassType,count,name)	{ static int _idHint; static int _saveSeq = -1; (wrapper).WriteClassArrayOfClassEnum(className "::" #name, _idHint, _saveSeq,classType,valueClassType,count,name); }
 #define WRAPPER_WRITE_CLASS_ENUM_ARRAY(wrapper,className,classType,count,name) { static int _idHint; static int _saveSeq = -1; (wrapper).WriteClassEnumArray(className "::" #name, _idHint, _saveSeq, classType,count,name); }
 
-#define WRAPPER_WRITE_SHORT(wrapper,className,name)	{ static int _idHint; static int _saveSeq = -1; int val = name; (wrapper).Write(className "::" #name, _idHint, _saveSeq, val); }
-#define WRAPPER_WRITE_CHAR(wrapper,className,name)	{ static int _idHint; static int _saveSeq = -1; int val = name; (wrapper).Write(className "::" #name, _idHint, _saveSeq, val); }
+// for saved game copatability
+#define WRAPPER_WRITE_SHORT_AS_INT(wrapper,className,name)	{ static int _idHint; static int _saveSeq = -1; int val = name; (wrapper).Write(className "::" #name, _idHint, _saveSeq, val); }
+#define WRAPPER_WRITE_CHAR_AS_INT(wrapper,className,name)	{ static int _idHint; static int _saveSeq = -1; int val = name; (wrapper).Write(className "::" #name, _idHint, _saveSeq, val); }
 
 #define WRAPPER_WRITE_OBJECT_START(wrapper)	{ static int _idHint; static int _saveSeq = -1; (wrapper).WriteStartObject(__FUNCTION__, _idHint, _saveSeq); }
 #define WRAPPER_WRITE_OBJECT_END(wrapper)	(wrapper).WriteEndObject()
@@ -331,8 +332,9 @@ private:
 #define WRAPPER_READ_CLASS_ENUM_ARRAY(wrapper,className,classType,count,name) { static int _idHint; static int _saveSeq = -1; (wrapper).ReadClassEnumArray(className "::" #name, _idHint, _saveSeq, classType,count,name); }
 #define WRAPPER_READ_CLASS_ENUM_ARRAY_ALLOW_MISSING(wrapper,className,classType,count,name) { static int _idHint; static int _saveSeq = -1; (wrapper).ReadClassEnumArray(className "::" #name, _idHint, _saveSeq, classType,count,name,true); }
 
-#define WRAPPER_READ_SHORT(wrapper,className,name)	{ static int _idHint; static int _saveSeq = -1; int val; (wrapper).Read(className "::" #name, _idHint, _saveSeq, &val); FAssert(val >= 0 ? val <= MAX_SHORT : val > -MAX_SHORT); *name = val; }
-#define WRAPPER_READ_CHAR(wrapper,className,name)	{ static int _idHint; static int _saveSeq = -1; int val; (wrapper).Read(className "::" #name, _idHint, _saveSeq, &val); FAssert(val >= 0 ? val <= MAX_CHAR : val > -MAX_CHAR); *name = val; }
+// for saved game copatability
+#define WRAPPER_READ_SHORT_AS_INT(wrapper,className,name)	{ static int _idHint; static int _saveSeq = -1; int val; (wrapper).Read(className "::" #name, _idHint, _saveSeq, &val); FAssert(val >= 0 ? val <= MAX_SHORT : val > -MAX_SHORT); *name = val; }
+#define WRAPPER_READ_CHAR_AS_INT(wrapper,className,name)	{ static int _idHint; static int _saveSeq = -1; int val; (wrapper).Read(className "::" #name, _idHint, _saveSeq, &val); FAssert(val >= 0 ? val <= MAX_CHAR : val > -MAX_CHAR); *name = val; }
 
 #define	WRAPPER_SKIP_ELEMENT(wrapper,className,name,type)	{ static int _idHint; static int _saveSeq = -1; (wrapper).SkipElement(className "::" #name, _idHint, _saveSeq, type); }
 
