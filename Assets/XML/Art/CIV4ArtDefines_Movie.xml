@@ -1953,5 +1953,9 @@
 			<Type>ART_DEF_MOVIE_HYPERURANION</Type>
 			<Path>Art/Movies/Wonders/HYPERURANION.dds</Path>
 		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_OTTOMAN_HAMMAM</Type>
+			<Path>Art/Movies/Wonders/OTTOMAN_HAMMAM.dds</Path>
+		</MovieArtInfo>
 	</MovieArtInfos>
 </Civ4ArtDefines>

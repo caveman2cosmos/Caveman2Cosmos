@@ -5262,6 +5262,7 @@
 			<Strategy>TXT_KEY_BUILDING_OTTOMAN_HAMMAM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OTTOMAN_HAMMAM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_OTTOMAN_HAMMAM</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_AQUEDUCT</ConstructSound>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
