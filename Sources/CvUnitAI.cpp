@@ -4642,14 +4642,28 @@ void CvUnitAI::AI_attackCityMove()
 		{
 			// BBAI Notes: Add this stack lead by bombard unit to stack probably not lead by a bombard unit
 			// BBAI TODO: Some sense of minimum stack size?  Can have big stack moving 10 turns to merge with tiny stacks
-			if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK_CITY).ignoreFaster(bIgnoreFaster).ignoreOwnUnitType().stackOfDoom().maxPathTurns(10).allowRegrouping()))
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK_CITY)
+				.biggerGroupOnly()
+				.mergeWholeGroup()
+				.ignoreFaster(bIgnoreFaster)
+				.ignoreOwnUnitType()
+				.stackOfDoom()
+				.maxPathTurns(10)
+				.allowRegrouping()))
 			{
 				return;
 			}
 		}
 		else
 		{
-			if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK_CITY).maxGroupSize(AI_stackOfDoomExtra() * 2).ignoreFaster(bIgnoreFaster).ignoreOwnUnitType().stackOfDoom().maxPathTurns(10)))
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK_CITY)
+				.maxGroupSize(AI_stackOfDoomExtra() * 2)
+				.biggerGroupOnly()
+				.mergeWholeGroup()
+				.ignoreFaster(bIgnoreFaster)
+				.ignoreOwnUnitType()
+				.stackOfDoom()
+				.maxPathTurns(10)))
 			{
 				return;
 			}
@@ -14031,7 +14045,7 @@ bool CvUnitAI::AI_group(const GroupingParams& params)
 
 	// if we are on a transport, then do not regroup
 	if (isCargo()
-		|| !params.bAllowRegrouping && getGroup()->getNumUnits() > 1
+		|| !(params.bAllowRegrouping || params.bMergeWholeGroup) && getGroup()->getNumUnits() > 1
 		|| getDomainType() == DOMAIN_LAND && !canMoveAllTerrain() && area()->getNumAIUnits(getOwnerINLINE(), params.eUnitAI) == 0
 		|| !AI_canGroupWithAIType(params.eUnitAI)
 		|| GET_PLAYER(getOwnerINLINE()).AI_getNumAIUnits(params.eUnitAI) == 0
@@ -14047,6 +14061,7 @@ bool CvUnitAI::AI_group(const GroupingParams& params)
 
 	const bool bCanDefend = getGroup()->canDefend();
 	const int groupExtra = params.bStackOfDoom ? AI_stackOfDoomExtra() : 0;
+	const int ourGroupSizeWithoutUs = getGroup()->getNumUnits() - 1;
 
 	CvReachablePlotSet plotSet(getGroup(), bCanDefend ? 0 : MOVE_OUR_TERRITORY, AI_searchRange(params.iMaxPath));
 
@@ -14057,6 +14072,7 @@ bool CvUnitAI::AI_group(const GroupingParams& params)
 		if (plotSet.find(unit->plot()) != plotSet.end()
 			&& (params.iMaxPath > 0 || unit->plot() == plot())
 			&& !isEnemy(unit->plot()->getTeam())
+			&& (!params.bBiggerGroupOnly || group->getNumUnits() > ourGroupSizeWithoutUs)
 			&& AI_allowGroup(unit, params.eUnitAI)
 			&& (params.iMaxOwnUnitAI == -1 || group->countNumUnitAIType(AI_getUnitAIType()) <= params.iMaxOwnUnitAI + groupExtra)
 			&& (params.iMinUnitAI == -1 || group->countNumUnitAIType(params.eUnitAI) >= params.iMinUnitAI)
@@ -14102,7 +14118,14 @@ bool CvUnitAI::AI_group(const GroupingParams& params)
 	{
 		if (atPlot(pBestUnit->plot()))
 		{
-			joinGroup(pBestUnit->getGroup());
+			if (params.bMergeWholeGroup)
+			{
+				getGroup()->mergeIntoGroup(pBestUnit->getGroup());
+			}
+			else
+			{
+				joinGroup(pBestUnit->getGroup());
+			}
 			return true;
 		}
 		else

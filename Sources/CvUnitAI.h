@@ -192,6 +192,8 @@ protected:
 			, bIgnoreFaster(false)
 			, bIgnoreOwnUnitType(false)
 			, bStackOfDoom(false)
+			, bBiggerGroupOnly(false)
+			, bMergeWholeGroup(false)
 			, iMaxPath(MAX_INT)
 			, bAllowRegrouping(false)
 			, bWithCargoOnly(false)
@@ -204,6 +206,8 @@ protected:
 		GroupingParams& minUnitAI(int minUnitAI) { iMinUnitAI = minUnitAI; return *this; }
 		GroupingParams& ignoreFaster(bool state = true) { bIgnoreFaster = state; return *this; }
 		GroupingParams& ignoreOwnUnitType(bool state = true) { bIgnoreOwnUnitType = state; return *this; }
+		GroupingParams& biggerGroupOnly(bool state = true) { bBiggerGroupOnly = state; return *this; }
+		GroupingParams& mergeWholeGroup(bool state = true) { bBiggerGroupOnly = state; return *this; }
 		GroupingParams& stackOfDoom(bool state = true) { bStackOfDoom = state; return *this; }
 		GroupingParams& maxPathTurns(int maxPath) { iMaxPath = maxPath; return *this; }
 		GroupingParams& allowRegrouping(bool state = true) { bAllowRegrouping = state; return *this; }
@@ -218,6 +222,8 @@ protected:
 		bool bIgnoreFaster;
 		bool bIgnoreOwnUnitType;
 		bool bStackOfDoom;
+		bool bBiggerGroupOnly;
+		bool bMergeWholeGroup;
 		int iMaxPath;
 		bool bAllowRegrouping;
 		bool bWithCargoOnly;
