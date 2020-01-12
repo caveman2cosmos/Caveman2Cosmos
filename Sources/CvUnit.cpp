@@ -20616,7 +20616,7 @@ int CvUnit::getExtraFirstStrikes() const
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-	return std::max(0, m_iExtraFirstStrikes);
+	return m_iExtraFirstStrikes >= 0 ? m_iExtraFirstStrikes : 0;
 }
 
 void CvUnit::changeExtraFirstStrikes(int iChange)			
@@ -26121,20 +26121,20 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iID);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iGroupID);
 	WRAPPER_READ_SHORT(wrapper, "CvUnit", &m_iHotKeyNumber);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iX);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iY);
+	WRAPPER_READ_SHORT(wrapper, "CvUnit", &m_iX);
+	WRAPPER_READ_SHORT(wrapper, "CvUnit", &m_iY);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iLastMoveTurn);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iReconX);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iReconY);
+	WRAPPER_READ_SHORT(wrapper, "CvUnit", &m_iReconX);
+	WRAPPER_READ_SHORT(wrapper, "CvUnit", &m_iReconY);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iGameTurnCreated);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iDamage);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iMoves);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iMoves);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExperience);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iLevel);
+	WRAPPER_READ_SHORT(wrapper, "CvUnit", &m_iLevel);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCargo);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCargoCapacity);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iAttackPlotX);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iAttackPlotY);
+	WRAPPER_READ_SHORT(wrapper, "CvUnit", &m_iAttackPlotX);
+	WRAPPER_READ_SHORT(wrapper, "CvUnit", &m_iAttackPlotY);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatTimer);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatFirstStrikes);
 	if (uiFlag < 2)
@@ -26143,12 +26143,12 @@ void CvUnit::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvUnit", &iCombatDamage);
 	}
 	WRAPPER_READ(wrapper, "CvUnit", &m_iFortifyTurns);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iBlitzCount);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iAmphibCount);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iRiverCount);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iEnemyRouteCount);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iAlwaysHealCount);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iHillsDoubleMoveCount);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iBlitzCount);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iAmphibCount);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iRiverCount);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iEnemyRouteCount);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iAlwaysHealCount);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iHillsDoubleMoveCount);
 /************************************************************************************************/
 /* Afforess  Mountaineering Promotion                              10/13/09                     */
 /*                                                                                              */
@@ -26213,10 +26213,10 @@ void CvUnit::read(FDataStreamBase* pStream)
 /* Afforess	                         END                                                        */
 /************************************************************************************************/	
 
-	WRAPPER_READ(wrapper, "CvUnit", &m_iImmuneToFirstStrikesCount);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraVisibilityRange);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraMoves);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraMoveDiscount);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iImmuneToFirstStrikesCount);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iExtraVisibilityRange);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iExtraMoves);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iExtraMoveDiscount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraAirRange);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraIntercept);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraEvasion);
@@ -27312,24 +27312,24 @@ void CvUnit::read(FDataStreamBase* pStream)
 /**  Reason Added: New Tag Definition                                                               **/
 /**  Notes: Adapted by Thunderbrd for C2C                                                           **/
 /*****************************************************************************************************/
-	WRAPPER_READ(wrapper, "CvUnit", &m_iDefensiveVictoryMoveCount);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iFreeDropCount);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iOffensiveVictoryMoveCount);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iPillageCultureCount);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iPillageEspionageCount);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iPillageMarauderCount);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iPillageOnMoveCount);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iPillageOnVictoryCount);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iPillageResearchCount);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iDefensiveVictoryMoveCount);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iFreeDropCount);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iOffensiveVictoryMoveCount);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iPillageCultureCount);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iPillageEspionageCount);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iPillageMarauderCount);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iPillageOnMoveCount);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iPillageOnVictoryCount);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iPillageResearchCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iAirCombatLimitChange);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iCelebrityHappy);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iCelebrityHappy);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCollateralDamageLimitChange);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCollateralDamageMaxUnitsChange);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatLimitChange);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraDropRange);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iExtraDropRange);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iVictoryHeal);
 //Team Project (2)
-	WRAPPER_READ(wrapper, "CvUnit", &m_iOneUpCount);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iOneUpCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSurvivorChance);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iVictoryAdjacentHeal);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iVictoryStackHeal);
@@ -28047,29 +28047,29 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iID);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iGroupID);
 	WRAPPER_WRITE_SHORT(wrapper, "CvUnit", m_iHotKeyNumber);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iX);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iY);
+	WRAPPER_WRITE_SHORT(wrapper, "CvUnit", m_iX);
+	WRAPPER_WRITE_SHORT(wrapper, "CvUnit", m_iY);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iLastMoveTurn);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iReconX);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iReconY);
+	WRAPPER_WRITE_SHORT(wrapper, "CvUnit", m_iReconX);
+	WRAPPER_WRITE_SHORT(wrapper, "CvUnit", m_iReconY);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iGameTurnCreated);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iDamage);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iMoves);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iMoves);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExperience);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iLevel);
+	WRAPPER_WRITE_SHORT(wrapper, "CvUnit", m_iLevel);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCargo);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCargoCapacity);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iAttackPlotX);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iAttackPlotY);
+	WRAPPER_WRITE_SHORT(wrapper, "CvUnit", m_iAttackPlotX);
+	WRAPPER_WRITE_SHORT(wrapper, "CvUnit", m_iAttackPlotY);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCombatTimer);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iCombatFirstStrikes);
+	WRAPPER_WRITE_SHORT(wrapper, "CvUnit", m_iCombatFirstStrikes);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iFortifyTurns);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iBlitzCount);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iAmphibCount);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iRiverCount);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iEnemyRouteCount);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iAlwaysHealCount);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iHillsDoubleMoveCount);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iBlitzCount);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iAmphibCount);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iRiverCount);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iEnemyRouteCount);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iAlwaysHealCount);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iHillsDoubleMoveCount);
 /************************************************************************************************/
 /* Afforess  Mountaineering Promotion                              10/13/09                     */
 /*                                                                                              */
@@ -28107,14 +28107,14 @@ void CvUnit::write(FDataStreamBase* pStream)
 /************************************************************************************************/
 /* Afforess	                         END                                                     */
 /************************************************************************************************/	
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iImmuneToFirstStrikesCount);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraVisibilityRange);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraMoves);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraMoveDiscount);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iImmuneToFirstStrikesCount);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iExtraVisibilityRange);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iExtraMoves);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iExtraMoveDiscount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraAirRange);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraIntercept);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraEvasion);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraFirstStrikes);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iExtraFirstStrikes);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraChanceFirstStrikes);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraWithdrawal);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraCollateralDamage);
@@ -28525,24 +28525,24 @@ void CvUnit::write(FDataStreamBase* pStream)
 /**  Reason Added: New Tag Definition                                                               **/
 /**  Notes:                                                                                         **/
 /*****************************************************************************************************/
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iDefensiveVictoryMoveCount);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iFreeDropCount);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iOffensiveVictoryMoveCount);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iPillageCultureCount);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iPillageEspionageCount);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iPillageMarauderCount);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iPillageOnMoveCount);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iPillageOnVictoryCount);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iPillageResearchCount);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iDefensiveVictoryMoveCount);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iFreeDropCount);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iOffensiveVictoryMoveCount);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iPillageCultureCount);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iPillageEspionageCount);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iPillageMarauderCount);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iPillageOnMoveCount);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iPillageOnVictoryCount);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iPillageResearchCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iAirCombatLimitChange);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iCelebrityHappy);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iCelebrityHappy);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCollateralDamageLimitChange);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCollateralDamageMaxUnitsChange);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCombatLimitChange);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraDropRange);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iExtraDropRange);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iVictoryHeal);
 //Team Project (2)
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iOneUpCount);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iOneUpCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iSurvivorChance);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iVictoryAdjacentHeal);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iVictoryStackHeal);

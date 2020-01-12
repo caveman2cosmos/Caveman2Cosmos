@@ -80,10 +80,16 @@ typedef unsigned long    dword;
 typedef unsigned __int64 qword;
 typedef wchar_t          wchar;
 
-typedef char    	int8_t;
-typedef short   	int16_t;
-typedef int     	int32_t;
-typedef long long	int64_t;
+#define USE_SMALLER_INTEGER_TYPES
+#ifdef USE_SMALLER_INTEGER_TYPES
+typedef char       int8_t;
+typedef short      int16_t;
+#else
+typedef int        int8_t;
+typedef int        int16_t;
+#endif
+typedef int        int32_t;
+typedef long long  int64_t;
 
 //
 // Type traits

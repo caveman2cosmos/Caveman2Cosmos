@@ -118,7 +118,7 @@
 #define MAX_CHAT_CHAR_COUNT										(256)
 #define MAX_ADDRESS_CHAR_COUNT								(64)
 
-#define INVALID_PLOT_COORD										(-(MAX_INT))	// don't use -1 since that is a valid wrap coordinate
+#define INVALID_PLOT_COORD										(-(MAX_SHORT))	// don't use -1 since that is a valid wrap coordinate
 #define DIRECTION_RADIUS											(1)
 #define DIRECTION_DIAMETER										((DIRECTION_RADIUS * 2) + 1)
 

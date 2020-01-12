@@ -1939,7 +1939,6 @@ protected:
 	//Great Commanders... By KillmePlease
 	int16_t m_iExtraControlPoints;
 	int8_t m_iExtraCommandRange;
-	//auxillary members:
 	int16_t m_iControlPointsLeft;
 	int m_iCommanderID;			//id of commander. used for game save/load
 	mutable int m_iCommanderCacheTurn;
@@ -1953,35 +1952,35 @@ protected:
 	int m_iID;
 	int m_iGroupID;
 	int16_t m_iHotKeyNumber;
-	int m_iX;
-	int m_iY;
+	int16_t m_iX;
+	int16_t m_iY;
 	int m_iLastMoveTurn;
-	int m_iReconX;
-	int m_iReconY;
+	int16_t m_iReconX;
+	int16_t m_iReconY;
 	int m_iGameTurnCreated;
 	int m_iDamage;
-	int m_iMoves;
+	int8_t m_iMoves;
 	int m_iExperience;
-	int m_iLevel;
+	int16_t m_iLevel;
 	int m_iCargo;
 	int m_iCargoCapacity;
 	int m_iSMCargo;
 	int m_iSMCargoCapacity;
-	int m_iAttackPlotX;
-	int m_iAttackPlotY;
+	int16_t m_iAttackPlotX;
+	int16_t m_iAttackPlotY;
 	int m_iCombatTimer;
-	int m_iCombatFirstStrikes;
+	int16_t m_iCombatFirstStrikes;
 	int m_iCombatDamage;
 	int m_iFortifyTurns;
-	int m_iBlitzCount;
-	int m_iRBombardForceAbilityCount;
-	int m_iAmphibCount;
-	int m_iRiverCount;
-	int m_iEnemyRouteCount;
-	int m_iAlwaysHealCount;
-	int m_iHillsDoubleMoveCount;
-	int m_iImmuneToFirstStrikesCount;
-	int m_iAlwaysInvisibleCount;
+	int8_t m_iBlitzCount;
+	int8_t m_iRBombardForceAbilityCount;
+	int8_t m_iAmphibCount;
+	int8_t m_iRiverCount;
+	int8_t m_iEnemyRouteCount;
+	int8_t m_iAlwaysHealCount;
+	int8_t m_iHillsDoubleMoveCount;
+	int8_t m_iImmuneToFirstStrikesCount;
+	int8_t m_iAlwaysInvisibleCount;
 /*****************************************************************************************************/
 /**  Author: TheLadiesOgre                                                                          **/
 /**  Date: 16.09.2009                                                                               **/
@@ -1989,23 +1988,23 @@ protected:
 /**  Reason Added: New Tag Definition                                                               **/
 /**  Notes:                                                                                         **/
 /*****************************************************************************************************/
-	int m_iDefensiveVictoryMoveCount;
-	int m_iFreeDropCount;
-	int m_iOffensiveVictoryMoveCount;
+	int8_t m_iDefensiveVictoryMoveCount;
+	int8_t m_iFreeDropCount;
+	int8_t m_iOffensiveVictoryMoveCount;
 //Team Project (2)
-	int m_iOneUpCount;
-	int m_iPillageCultureCount;
-	int m_iPillageEspionageCount;
-	int m_iPillageMarauderCount;
-	int m_iPillageOnMoveCount;
-	int m_iPillageOnVictoryCount;
-	int m_iPillageResearchCount;
+	int8_t m_iOneUpCount;
+	int8_t m_iPillageCultureCount;
+	int8_t m_iPillageEspionageCount;
+	int8_t m_iPillageMarauderCount;
+	int8_t m_iPillageOnMoveCount;
+	int8_t m_iPillageOnVictoryCount;
+	int8_t m_iPillageResearchCount;
 	int m_iAirCombatLimitChange;
-	int m_iCelebrityHappy;
+	int8_t m_iCelebrityHappy;
 	int m_iCollateralDamageLimitChange;
 	int m_iCollateralDamageMaxUnitsChange;
 	int m_iCombatLimitChange;
-	int m_iExtraDropRange;
+	int8_t m_iExtraDropRange;
 //Team Project (2)
 	int m_iSurvivorChance;
 	int m_iVictoryAdjacentHeal;
@@ -2015,13 +2014,13 @@ protected:
 /*****************************************************************************************************/
 /**  TheLadiesOgre; 16.09.2009; TLOTags                                                             **/
 /*****************************************************************************************************/
-	int m_iExtraVisibilityRange;
-	int m_iExtraMoves;
-	int m_iExtraMoveDiscount;
+	int8_t m_iExtraVisibilityRange;
+	int8_t m_iExtraMoves;
+	int8_t m_iExtraMoveDiscount;
 	int m_iExtraAirRange;
 	int m_iExtraIntercept;
 	int m_iExtraEvasion;
-	int m_iExtraFirstStrikes;
+	int16_t m_iExtraFirstStrikes;
 	int m_iExtraChanceFirstStrikes;
 	int m_iExtraWithdrawal;
 	//TB Combat Mods Begin
