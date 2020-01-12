@@ -52,10 +52,13 @@ def init():
 	return userDir
 
 def initUserSettingsDir():
-	if not path.isdir(userSettingsDir):
-		mkdir(userSettingsDir)
-	if not path.isdir(userSettingsDir + "\\DomesticAdv"):
-		mkdir(userSettingsDir + "\\DomesticAdv")
+	try:
+		if not path.isdir(userSettingsDir):
+			mkdir(userSettingsDir)
+		if not path.isdir(userSettingsDir + "\\DomesticAdv"):
+			mkdir(userSettingsDir + "\\DomesticAdv")
+	except:
+		CyPythonMgr().errorMsg("Error while attempting to create a new user settings folder. This problem can usually be solved by running the mod in administrator mode. Path:/s" + userSettingsDir)
 
 def isFile(aPath):
 	return path.isfile(aPath)
