@@ -26120,7 +26120,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ(wrapper, "CvUnit", &m_iID);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iGroupID);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iHotKeyNumber);
+	WRAPPER_READ_SHORT(wrapper, "CvUnit", &m_iHotKeyNumber);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iX);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iY);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iLastMoveTurn);
@@ -26154,19 +26154,19 @@ void CvUnit::read(FDataStreamBase* pStream)
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	WRAPPER_READ(wrapper, "CvUnit", &m_iCanMovePeaksCount);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iCanMovePeaksCount);
 	//	Koshling - enhanced mountaineering mode to differentiate between ability to move through
 	//	mountains, and ability to lead a stack through mountains
-	WRAPPER_READ(wrapper, "CvUnit", &m_iCanLeadThroughPeaksCount);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iCanLeadThroughPeaksCount);
 
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSleepTimer);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraControlPoints);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraCommandRange);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iControlPointsLeft);
+	WRAPPER_READ_SHORT(wrapper, "CvUnit", &m_iExtraControlPoints);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iExtraCommandRange);
+	WRAPPER_READ_SHORT(wrapper, "CvUnit", &m_iControlPointsLeft);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCommanderID);			//id will be used later on player initialization to get m_pUsedCommander pointer
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_eOriginalOwner);
 	WRAPPER_READ(wrapper, "CvUnit", &m_bCommander);
-	
+
 	if (uiFlag > 2)
 	{
 		WRAPPER_READ(wrapper, "CvUnit", &m_bAutoPromoting);
@@ -27694,7 +27694,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_MISSIONS, (int*)&m_eSleepType);
 	WRAPPER_READ(wrapper, "CvUnit", &m_bHasBuildUp);
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONLINES, (int*)&m_eCurrentBuildUpType);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iZoneOfControlCount);
+	WRAPPER_READ_CHAR(wrapper, "CvUnit", &m_iZoneOfControlCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_bInhibitMerge);
 	WRAPPER_READ(wrapper, "CvUnit", &m_bInhibitSplit);
 	WRAPPER_READ(wrapper, "CvUnit", &m_bIsBuildUp);
@@ -27963,8 +27963,8 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	}
 
-	WRAPPER_READ(wrapper, "CvUnit", &m_iXOrigin);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iYOrigin);
+	WRAPPER_READ_SHORT(wrapper, "CvUnit", &m_iXOrigin);
+	WRAPPER_READ_SHORT(wrapper, "CvUnit", &m_iYOrigin);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraNoDefensiveBonusCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraGatherHerdCount);
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_RELIGIONS, (int*)&m_eReligionType);
@@ -28046,7 +28046,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iID);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iGroupID);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iHotKeyNumber);
+	WRAPPER_WRITE_SHORT(wrapper, "CvUnit", m_iHotKeyNumber);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iX);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iY);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iLastMoveTurn);
@@ -28075,14 +28075,14 @@ void CvUnit::write(FDataStreamBase* pStream)
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iCanMovePeaksCount);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iCanMovePeaksCount);
 	//	Koshling - enhanced mountaineering mode to differentiate between ability to move through
 	//	mountains, and ability to lead a stack through mountains
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iCanLeadThroughPeaksCount);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iCanLeadThroughPeaksCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iSleepTimer);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraControlPoints);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraCommandRange);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iControlPointsLeft);
+	WRAPPER_WRITE_SHORT(wrapper, "CvUnit", m_iExtraControlPoints);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iExtraCommandRange);
+	WRAPPER_WRITE_SHORT(wrapper, "CvUnit", m_iControlPointsLeft);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCommanderID);	//-1 means there is no used commander
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_eOriginalOwner);
@@ -28678,7 +28678,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_MISSIONS, m_eSleepType);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bHasBuildUp);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROMOTIONLINES, m_eCurrentBuildUpType);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iZoneOfControlCount);
+	WRAPPER_WRITE_CHAR(wrapper, "CvUnit", m_iZoneOfControlCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bInhibitMerge);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bInhibitSplit);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bIsBuildUp);
@@ -28885,8 +28885,8 @@ void CvUnit::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iType2, "AidChange.iChange");
 		}
 	}
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iXOrigin);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iYOrigin);
+	WRAPPER_WRITE_SHORT(wrapper, "CvUnit", m_iXOrigin);
+	WRAPPER_WRITE_SHORT(wrapper, "CvUnit", m_iYOrigin);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraNoDefensiveBonusCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraGatherHerdCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraReligiousCombatModifier);

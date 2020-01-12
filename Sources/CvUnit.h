@@ -1919,10 +1919,10 @@ protected:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	int m_iCanMovePeaksCount; 
+	int8_t m_iCanMovePeaksCount;
 	//	Koshling - enhanced mountaineering mode to differentiate between ability to move through
 	//	mountains, and ability to lead a stack through mountains
-	int m_iCanLeadThroughPeaksCount; 
+	int8_t m_iCanLeadThroughPeaksCount;
 
 	int m_movementCharacteristicsHash;
 
@@ -1930,17 +1930,17 @@ protected:
 	CombatResult m_combatResult;
 	int m_iSleepTimer;
 	bool m_bCommander;
-	int m_iZoneOfControlCount;
+	int8_t m_iZoneOfControlCount;
 	
 	bool m_bAutoPromoting;
 	bool m_bAutoUpgrading;
 	IDInfo m_shadowUnit;
 	TechTypes m_eDesiredDiscoveryTech;
 	//Great Commanders... By KillmePlease
-	int m_iExtraControlPoints;
-	int m_iExtraCommandRange;
+	int16_t m_iExtraControlPoints;
+	int8_t m_iExtraCommandRange;
 	//auxillary members:
-	int m_iControlPointsLeft;
+	int16_t m_iControlPointsLeft;
 	int m_iCommanderID;			//id of commander. used for game save/load
 	mutable int m_iCommanderCacheTurn;
 	mutable int m_iCachedCommander;
@@ -1952,7 +1952,7 @@ protected:
 
 	int m_iID;
 	int m_iGroupID;
-	int m_iHotKeyNumber;
+	int16_t m_iHotKeyNumber;
 	int m_iX;
 	int m_iY;
 	int m_iLastMoveTurn;
@@ -2382,9 +2382,9 @@ public:
 	std::map<PromotionLineTypes, PromotionLineKeyedInfo>&  getPromotionLineKeyedInfo() const;
 
 private:
-	bool	bGraphicsSetup;
-	int m_iXOrigin;
-	int m_iYOrigin;
+	bool bGraphicsSetup;
+	int16_t m_iXOrigin;
+	int16_t m_iYOrigin;
 
 	//TB Combat Mods begin
 public:
