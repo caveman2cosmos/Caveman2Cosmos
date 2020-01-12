@@ -8543,6 +8543,7 @@
 			<Strategy>TXT_KEY_BUILDING_MILLENNIUM_PROBLEMS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MILLENNIUM_PROBLEMS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MILLENNIUM_PROBLEMS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -11146,6 +11147,7 @@
 			<Strategy>TXT_KEY_BUILDING_HUNGER_GAMES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HUNGER_GAMES</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HUNGER_GAMES</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -13345,6 +13347,7 @@
 			<Strategy>TXT_KEY_BUILDING_HYPERLOOP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYPERLOOP</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HYPERLOOP</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24928,6 +24931,7 @@
 			<Strategy>TXT_KEY_BUILDING_HUDSON_YARDS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HUDSON_YARDS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HUDSON_YARDS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

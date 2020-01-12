@@ -1642,6 +1642,7 @@
 			<Strategy>TXT_KEY_BUILDING_HYPERURANION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYPERURANION</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HYPERURANION</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ARCHETYPAL_VECTOR_SPACES</PrereqTech>
 			<iCost>13692</iCost>

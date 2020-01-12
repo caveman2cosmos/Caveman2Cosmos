@@ -2136,6 +2136,7 @@
 			<Strategy>TXT_KEY_BUILDING_HALO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HALO</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HALO</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_COLONY_ARCOLOGY</PrereqTech>
 			<iCost>16494</iCost>
@@ -5033,6 +5034,7 @@
 			<Strategy>TXT_KEY_BUILDING_HAUMEA_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HAUMEA_COLONY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HAUMEA_COLONY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SOLAR_ORDNANCE</PrereqTech>
 			<iCost>11837</iCost>
