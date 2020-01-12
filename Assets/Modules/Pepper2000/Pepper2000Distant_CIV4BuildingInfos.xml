@@ -1532,6 +1532,7 @@
 			<Strategy>TXT_KEY_BUILDING_HEAVEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HEAVEN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HEAVEN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_OMEGA_POINT</PrereqTech>
 			<iCost>14732</iCost>

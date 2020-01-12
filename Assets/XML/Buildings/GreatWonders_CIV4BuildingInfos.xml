@@ -5382,6 +5382,7 @@
 			<Strategy>TXT_KEY_BUILDING_HERMITAGE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HERMITAGE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HERMITAGE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
@@ -5641,6 +5642,7 @@
 			<Strategy>TXT_KEY_BUILDING_SIAM_HO_TRAI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SIAM_HO_TRAI</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SIAM_HO_TRAI_LIBRARY</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -5846,6 +5848,7 @@
 			<Strategy>TXT_KEY_BUILDING_HUMPHREY_METRODOME_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HUMPHREY_METRODOME</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HUMPHREY_METRODOME</MovieDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
 			<ObsoleteTech>TECH_BINARY_PYSCHOKINESIS</ObsoleteTech>
@@ -18190,6 +18193,7 @@
 			<Strategy>TXT_KEY_BUILDING_HARAPPAN_FAKE_GEMS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HARAPPAN_FAKE_GEMS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HARAPPAN_FAKE_GEMS</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_GLASSMITH</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->

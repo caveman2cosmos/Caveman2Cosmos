@@ -8207,6 +8207,7 @@
 			<Strategy>TXT_KEY_BUILDING_HD_85512B_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HD_85512B</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HD_85512B</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ACNP_PROPULSION</PrereqTech>
 			<iCost>11424</iCost>
@@ -8609,6 +8610,7 @@
 			<Strategy>TXT_KEY_BUILDING_HYADES_STAR_CLUSTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYADES_STAR_CLUSTER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HYADES_STAR_CLUSTER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_STELLAR_ENGINE</PrereqTech>
 			<iCost>36440</iCost>
