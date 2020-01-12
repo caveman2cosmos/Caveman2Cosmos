@@ -4642,14 +4642,28 @@ void CvUnitAI::AI_attackCityMove()
 		{
 			// BBAI Notes: Add this stack lead by bombard unit to stack probably not lead by a bombard unit
 			// BBAI TODO: Some sense of minimum stack size?  Can have big stack moving 10 turns to merge with tiny stacks
-			if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK_CITY).ignoreFaster(bIgnoreFaster).ignoreOwnUnitType().stackOfDoom().maxPathTurns(10).allowRegrouping()))
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK_CITY)
+				.biggerGroupOnly()
+				.mergeWholeGroup()
+				.ignoreFaster(bIgnoreFaster)
+				.ignoreOwnUnitType()
+				.stackOfDoom()
+				.maxPathTurns(10)
+				.allowRegrouping()))
 			{
 				return;
 			}
 		}
 		else
 		{
-			if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK_CITY).maxGroupSize(AI_stackOfDoomExtra() * 2).ignoreFaster(bIgnoreFaster).ignoreOwnUnitType().stackOfDoom().maxPathTurns(10)))
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK_CITY)
+				.maxGroupSize(AI_stackOfDoomExtra() * 2)
+				.biggerGroupOnly()
+				.mergeWholeGroup()
+				.ignoreFaster(bIgnoreFaster)
+				.ignoreOwnUnitType()
+				.stackOfDoom()
+				.maxPathTurns(10)))
 			{
 				return;
 			}
@@ -14031,7 +14045,7 @@ bool CvUnitAI::AI_group(const GroupingParams& params)
 
 	// if we are on a transport, then do not regroup
 	if (isCargo()
-		|| !params.bAllowRegrouping && getGroup()->getNumUnits() > 1
+		|| !(params.bAllowRegrouping || params.bMergeWholeGroup) && getGroup()->getNumUnits() > 1
 		|| getDomainType() == DOMAIN_LAND && !canMoveAllTerrain() && area()->getNumAIUnits(getOwnerINLINE(), params.eUnitAI) == 0
 		|| !AI_canGroupWithAIType(params.eUnitAI)
 		|| GET_PLAYER(getOwnerINLINE()).AI_getNumAIUnits(params.eUnitAI) == 0
@@ -14047,6 +14061,7 @@ bool CvUnitAI::AI_group(const GroupingParams& params)
 
 	const bool bCanDefend = getGroup()->canDefend();
 	const int groupExtra = params.bStackOfDoom ? AI_stackOfDoomExtra() : 0;
+	const int ourGroupSizeWithoutUs = getGroup()->getNumUnits() - 1;
 
 	CvReachablePlotSet plotSet(getGroup(), bCanDefend ? 0 : MOVE_OUR_TERRITORY, AI_searchRange(params.iMaxPath));
 
@@ -14057,6 +14072,7 @@ bool CvUnitAI::AI_group(const GroupingParams& params)
 		if (plotSet.find(unit->plot()) != plotSet.end()
 			&& (params.iMaxPath > 0 || unit->plot() == plot())
 			&& !isEnemy(unit->plot()->getTeam())
+			&& (!params.bBiggerGroupOnly || group->getNumUnits() > ourGroupSizeWithoutUs)
 			&& AI_allowGroup(unit, params.eUnitAI)
 			&& (params.iMaxOwnUnitAI == -1 || group->countNumUnitAIType(AI_getUnitAIType()) <= params.iMaxOwnUnitAI + groupExtra)
 			&& (params.iMinUnitAI == -1 || group->countNumUnitAIType(params.eUnitAI) >= params.iMinUnitAI)
@@ -14102,7 +14118,14 @@ bool CvUnitAI::AI_group(const GroupingParams& params)
 	{
 		if (atPlot(pBestUnit->plot()))
 		{
-			joinGroup(pBestUnit->getGroup());
+			if (params.bMergeWholeGroup)
+			{
+				getGroup()->mergeIntoGroup(pBestUnit->getGroup());
+			}
+			else
+			{
+				joinGroup(pBestUnit->getGroup());
+			}
 			return true;
 		}
 		else
@@ -17952,9 +17975,18 @@ namespace {
 		}
 		return constructions;
 	}
+
+	int getDecayedConstructProbability(int base, const int rate, const int iterations)
+	{
+		for (int i = 0; i < iterations; ++i)
+		{
+			base = base * rate / 100;
+		}
+		return base;
+	}
 }
 
-int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, int iDecayProbabilityRate, int iThreshold, bool assumeSameValueEverywhere, CvPlot*& pBestConstructPlot, CvPlot*& pBestPlot, CvUnitAI*& eBestTargetingUnit, BuildingTypes& eBestBuilding)
+int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, int iDecayProbabilityRate, int iThreshold, bool assumeSameValueEverywhere, CvPlot*& pBestConstructPlot, CvPlot*& pBestPlot, CvUnitAI*& pBestTargetingUnit, BuildingTypes& eBestBuilding)
 {
 	PROFILE_FUNC();
 
@@ -17964,7 +17996,7 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 	// Set outputs to default values
 	pBestConstructPlot = nullptr;
 	pBestPlot = nullptr;
-	eBestTargetingUnit = nullptr;
+	pBestTargetingUnit = nullptr;
 	eBestBuilding = NO_BUILDING;
 	
 	int iBestValue = 0;
@@ -17972,16 +18004,16 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 	//	we'll stick to it unless something significantly better is found
 	if (m_eIntendedConstructBuilding != NO_BUILDING && getGroup()->AI_getMissionAIType() == MISSIONAI_CONSTRUCT)
 	{
-		CvCity* pLoopCity = getGroup()->AI_getMissionAIPlot()->getPlotCity();
+		CvCity* city = getGroup()->AI_getMissionAIPlot()->getPlotCity();
 
-		if (pLoopCity != nullptr
-			&& canConstruct(pLoopCity->plot(), m_eIntendedConstructBuilding)
-			&& generatePath(pLoopCity->plot(), MOVE_NO_ENEMY_TERRITORY, true)
+		if (city != nullptr
+			&& canConstruct(city->plot(), m_eIntendedConstructBuilding)
+			&& generatePath(city->plot(), MOVE_NO_ENEMY_TERRITORY, true)
 			)
 		{
-			iBestValue = (pLoopCity->AI_buildingValue(m_eIntendedConstructBuilding)*110)/100;
+			iBestValue = (city->AI_buildingValue(m_eIntendedConstructBuilding)*110)/100;
 			pBestPlot = getPathEndTurnPlot();
-			pBestConstructPlot = pLoopCity->plot();
+			pBestConstructPlot = city->plot();
 			eBestBuilding = m_eIntendedConstructBuilding;
 		}
 	}
@@ -17989,7 +18021,7 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 	typedef stdext::hash_map<BuildingTypes, int> PossibleBuildingsMap;
 	PossibleBuildingsMap possibleBuildings;
 
-	CvPlayerAI& player = GET_PLAYER(getOwnerINLINE());
+	const CvPlayerAI& player = GET_PLAYER(getOwnerINLINE());
 	// Determine the list of building types we could make, based on what already exists
 	for (int iI = 0; iI < m_pUnitInfo->getNumBuildings(); iI++)
 	{
@@ -17998,30 +18030,13 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 			&& player.canConstruct(eBuilding, false, false, true)
 			&& player.AI_getNumBuildingsNeeded(eBuilding, (getDomainType() == DOMAIN_SEA)) > 0)
 		{
-			int iThisConstructBelow = iConstructBelow;
-			int iCount = 0;
-			CvCity* pLoopCity = nullptr;
-			for (CvPlayer::city_iterator cityItr = player.beginCities(); cityItr != player.endCities(); ++cityItr)
-			{
-				pLoopCity = *cityItr;
-				if (pLoopCity->getNumBuilding(eBuilding) > 0)
-				{
-					iCount++;
+			const int numBuildings = algo::count_if(player.cities(), CvCity::fn::getNumBuilding(eBuilding) != 0);
+			const bool canBuild = numBuildings < iMaxCount &&
+					(
+						iDecayProbabilityRate == 0 || getDecayedConstructProbability(iConstructBelow, iDecayProbabilityRate, numBuildings) >= iContructRand
+					);
 
-					if (iCount >= iMaxCount || iThisConstructBelow < iContructRand)
-					{
-						break;
-					}
-
-					//	If we are decaying the construct probability based on existing building count...
-					if (iDecayProbabilityRate != 0)
-					{
-						iThisConstructBelow = (iThisConstructBelow * iDecayProbabilityRate) / 100;
-					}
-				}
-			}
-
-			if (pLoopCity == nullptr)
+			if (canBuild)
 			{
 				possibleBuildings[eBuilding] = 0;
 			}
@@ -18033,14 +18048,13 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 		return 0;
 	}
 
-	CityConstructMap constructions = getConstructBuildings(player, getGroup());
-	CvReachablePlotSet plotSet(getGroup(), MOVE_NO_ENEMY_TERRITORY, MAX_INT);
+	const CityConstructMap constructions = getConstructBuildings(player, getGroup());
+	const CvReachablePlotSet plotSet(getGroup(), MOVE_NO_ENEMY_TERRITORY, MAX_INT);
 
 	int iBestWeightedValue = 0;
 
-	for(CvPlayer::city_iterator cityItr = player.beginCities(); cityItr != player.endCities(); ++cityItr)
+	foreach_(CvCity* pLoopCity, player.cities())
 	{
-		CvCity* pLoopCity = *cityItr;
 		//if (AI_plotValid(pLoopCity->plot()) && pLoopCity->area() == area())
 		if (plotSet.find(pLoopCity->plot()) == plotSet.end())
 			continue;
@@ -18112,14 +18126,14 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 						iWeightedValue = iValue;
 					}
 
-					if ((iValue > iThreshold) && (iWeightedValue > iBestWeightedValue))
+					if (iValue > iThreshold && iWeightedValue > iBestWeightedValue)
 					{
 						iBestValue = iValue;
 						iBestWeightedValue = iWeightedValue;
 						pBestPlot = getPathEndTurnPlot();
 						pBestConstructPlot = pLoopCity->plot();
 						eBestBuilding = buildingType;
-						eBestTargetingUnit = targetingUnit;
+						pBestTargetingUnit = targetingUnit;
 					}
 				}
 			}

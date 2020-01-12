@@ -2435,6 +2435,14 @@ public:
 protected:
 	void invalidateCachedCanTrainForUnit(UnitTypes eUnit) const;
 #endif
+
+public:
+	//
+	// Algorithm/range helpers
+	//
+	struct fn {
+		DECLARE_MAP_FUNCTOR_1(CvCity, int, getNumBuilding, BuildingTypes);
+	};
 };
 
 #endif

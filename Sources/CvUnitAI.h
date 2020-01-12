@@ -192,6 +192,8 @@ protected:
 			, bIgnoreFaster(false)
 			, bIgnoreOwnUnitType(false)
 			, bStackOfDoom(false)
+			, bBiggerGroupOnly(false)
+			, bMergeWholeGroup(false)
 			, iMaxPath(MAX_INT)
 			, bAllowRegrouping(false)
 			, bWithCargoOnly(false)
@@ -204,6 +206,8 @@ protected:
 		GroupingParams& minUnitAI(int minUnitAI) { iMinUnitAI = minUnitAI; return *this; }
 		GroupingParams& ignoreFaster(bool state = true) { bIgnoreFaster = state; return *this; }
 		GroupingParams& ignoreOwnUnitType(bool state = true) { bIgnoreOwnUnitType = state; return *this; }
+		GroupingParams& biggerGroupOnly(bool state = true) { bBiggerGroupOnly = state; return *this; }
+		GroupingParams& mergeWholeGroup(bool state = true) { bBiggerGroupOnly = state; return *this; }
 		GroupingParams& stackOfDoom(bool state = true) { bStackOfDoom = state; return *this; }
 		GroupingParams& maxPathTurns(int maxPath) { iMaxPath = maxPath; return *this; }
 		GroupingParams& allowRegrouping(bool state = true) { bAllowRegrouping = state; return *this; }
@@ -218,6 +222,8 @@ protected:
 		bool bIgnoreFaster;
 		bool bIgnoreOwnUnitType;
 		bool bStackOfDoom;
+		bool bBiggerGroupOnly;
+		bool bMergeWholeGroup;
 		int iMaxPath;
 		bool bAllowRegrouping;
 		bool bWithCargoOnly;
@@ -281,7 +287,7 @@ protected:
 	bool AI_switchHurry();
 	bool AI_hurry(bool bAny = false);
 	bool checkSwitchToConstruct();
-	int getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, int iDecayProbabilityRate, int iThreshold, bool assumeSameValueEverywhere, CvPlot*& bestConstructPlot, CvPlot*& bestTurnPlot, CvUnitAI*& eBestTargetingUnit, BuildingTypes& eBestBuilding);
+	int getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, int iDecayProbabilityRate, int iThreshold, bool assumeSameValueEverywhere, CvPlot*& bestConstructPlot, CvPlot*& bestTurnPlot, CvUnitAI*& pBestTargetingUnit, BuildingTypes& eBestBuilding);
 	bool enactConstruct(CvPlot* pBestConstructPlot, CvPlot* pBestPlot, CvUnitAI* eBestTargetingUnit, BuildingTypes eBestBuilding);
 /************************************************************************************************/
 /* RevDCM                  Start		 5/2/09                                                 */
