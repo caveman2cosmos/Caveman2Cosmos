@@ -20403,7 +20403,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_FIRE_MYTH_EFFECT</BuildingClass>
@@ -20419,7 +20418,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_METAL_MYTH_EFFECT</BuildingClass>
@@ -20435,7 +20433,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_SEA_MYTH</BuildingClass>
@@ -20518,7 +20515,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_SKY_MYTH</BuildingClass>
@@ -20602,7 +20598,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_STONE_MYTH_EFFECT</BuildingClass>
@@ -20618,7 +20613,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRAGON_MYTH</BuildingClass>

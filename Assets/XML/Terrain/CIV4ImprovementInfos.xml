@@ -657,7 +657,6 @@
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Water Worked (Graphical) -->
 		<ImprovementInfo>
@@ -668,7 +667,6 @@
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- City Ruins (Graphical, Obsolete, TODO: edit city raze python to replace improvement w/ FEATURE_CITY_RUINS)  -->
 		<ImprovementInfo>
@@ -680,7 +678,6 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>10</iAirBombDefense>
 			<iDefenseModifier>15</iDefenseModifier>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- City Ruins Arcology (Graphical, Obsolete, TODO: edit city raze python to replace improvement w/ FEATURE_ARCOLOGY_RUINS)  -->
 		<ImprovementInfo>
@@ -692,7 +689,6 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>10</iAirBombDefense>
 			<iDefenseModifier>15</iDefenseModifier>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Goody Hut -->
 		<ImprovementInfo>
@@ -844,7 +840,6 @@
 				</TerrainBoolean>
 			</TerrainMakesValids>
 			<WorldSoundscapeAudioScript>ASSS_FOREST_SELECT_AMB</WorldSoundscapeAudioScript>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Fishing Boats -->
 		<ImprovementInfo>
@@ -6057,7 +6052,6 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Plant Jungle -->
 		<ImprovementInfo>
@@ -6094,7 +6088,6 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<bGraphicalOnly>1</bGraphicalOnly>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6158,7 +6151,6 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<bGraphicalOnly>1</bGraphicalOnly>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6217,7 +6209,6 @@
 				<FeatureType>FEATURE_SAVANNA</FeatureType>
 			</FeatureChangeTypes>
 			<bChangeRemove>1</bChangeRemove>
-			<bGraphicalOnly>1</bGraphicalOnly>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6276,7 +6267,6 @@
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 			</FeatureChangeTypes>
 			<bChangeRemove>1</bChangeRemove>
-			<bGraphicalOnly>1</bGraphicalOnly>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>

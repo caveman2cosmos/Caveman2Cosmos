@@ -2487,7 +2487,6 @@
 			<Path>Art/Effects/FF_explosion_large/FF_explosion_large.nif</Path>
 			<bIsProjectile>0</bIsProjectile>
 		</EffectInfo>
-
 		<!--Final Frontier Unit Effects:-->
 		<EffectInfo>
 			<Type>EFFECT_INVASIONSHIP_SMALL_HIT</Type>

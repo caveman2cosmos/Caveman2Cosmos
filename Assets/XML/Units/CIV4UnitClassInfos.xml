@@ -9807,7 +9807,6 @@ Assyria, Hungary, Minoa, Armenia
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_SUBDUED_PIG_NEW</DefaultUnit>
 		</UnitClassInfo>
-
 		<UnitClassInfo>
 			<Type>UNITCLASS_TALESOF_SALTWATER_CROCS</Type>
 			<Description>TXT_KEY_UNIT_TALESOF_SALTWATER_CROCS</Description>

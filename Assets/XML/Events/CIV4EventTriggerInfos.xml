@@ -10874,7 +10874,6 @@
 			<iCityFoodWeight>0</iCityFoodWeight>
 			<PythonCanDo>canTriggerBlarneyVisit</PythonCanDo>
 		</EventTriggerInfo>
-
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_DINO_ATTACK</Type>
 			<WorldNewsTexts>
@@ -10942,7 +10941,6 @@
 			<bShowPlot>1</bShowPlot>
 			<iCityFoodWeight>0</iCityFoodWeight>
 		</EventTriggerInfo>
-
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_NSLCHAMP</Type>
 			<WorldNewsTexts>
@@ -11010,7 +11008,6 @@
 			<bShowPlot>1</bShowPlot>
 			<iCityFoodWeight>0</iCityFoodWeight>
 		</EventTriggerInfo>
-
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_VEGAS_JACKPOT</Type>
 			<WorldNewsTexts>
@@ -11078,7 +11075,6 @@
 			<bShowPlot>1</bShowPlot>
 			<iCityFoodWeight>0</iCityFoodWeight>
 		</EventTriggerInfo>
-
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_BREAK_THE_BANK</Type>
 			<WorldNewsTexts>
@@ -11146,7 +11142,6 @@
 			<bShowPlot>1</bShowPlot>
 			<iCityFoodWeight>0</iCityFoodWeight>
 		</EventTriggerInfo>
-
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_MEGA_ATTACK</Type>
 			<WorldNewsTexts>
@@ -11214,7 +11209,6 @@
 			<bShowPlot>1</bShowPlot>
 			<iCityFoodWeight>0</iCityFoodWeight>
 		</EventTriggerInfo>
-
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_SUMMER_OF_LOVE</Type>
 			<WorldNewsTexts>

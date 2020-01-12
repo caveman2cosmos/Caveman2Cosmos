@@ -416,7 +416,6 @@
 			<fScale>1.0</fScale>
 			<Path>Art/Effects/fire_torch/fx_fire_torch.nif</Path>
 		</AttachableInfo>
-
 		<!-- Final Frontier: -->
 		<AttachableInfo>
 			<Type>ATTACHABLE_INVASIONSHIP_GLOW</Type>

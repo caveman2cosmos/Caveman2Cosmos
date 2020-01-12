@@ -3,14 +3,10 @@
 <!-- Tech Infos -->
 <!--
 	If modifying READ THIS
-
 	Not all techs appear in this file some of them appear in a module.
 	This is true of the RELIGION and CULTURE techs.
-
 	See also modders documentation.
-
 Current techs which are not in this file:-
-
 	Modules\Custom_Religions
 	(   X,  Y ) TECH_Z
 	( 014, 17 ) TECH_SHAMANISM
@@ -31,7 +27,6 @@ Current techs which are not in this file:-
 	( 067, 03 ) TECH_MORMON
 	( 072, 01 ) TECH_CAODAIISM
 	( 077, 07 ) TECH_SCIENTOLOGY
-
 	Modules\Alt_Timelines
 	( 049, 01 ) TECH_CLOCKPUNK
 	( 063, 13 ) TECH_STEAMPUNK

@@ -831,7 +831,6 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
         <ImprovementInfo>
 			<Type>IMPROVEMENT_BUILD_GALAXY</Type>
@@ -864,7 +863,6 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
         <!-- Space Solar Array -->
 		<ImprovementInfo>

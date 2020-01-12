@@ -12109,9 +12109,7 @@
 			<ObsoleteTech>TECH_MOUNTAINEERING</ObsoleteTech>
 			<Button>Art/Interface/Buttons/Promotions/Explorer1.dds</Button>
 		</PromotionInfo>
-
 		<!-- RETINUE FOR HEROES -->
-
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_ADVENTURER</Type>
 			<Description>TXT_KEY_PROMOTION_RETINUE_ADVENTURER_DESC</Description>
@@ -14043,7 +14041,6 @@
 			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/seahunter4.dds</Button>
 		</PromotionInfo>
-
 <!-- CIV4PromotionInfos.xml BEGIN MILITIA PROMOTIONS CODE -->
  		 <PromotionInfo>
             <Type>PROMOTION_BUSHMAN</Type>
@@ -26927,10 +26924,6 @@
 			</UnitCombatMods>
 			<Button>Art/Interface/Buttons/Promotions/animal_snow.dds</Button>
 		</PromotionInfo>
-
-
-
-
 		<!--ONLY BUILDUPS (AND LATER STATUSES) PAST THIS POINT!-->
 		<PromotionInfo>
 			<Type>PROMOTION_BUILD_UP_CHASE_PLANS1</Type>
@@ -29229,11 +29222,6 @@
 			<iRevoltProtection>2</iRevoltProtection>
 			<Button>,Art/Buttons/Promotions/Patriotism5Buildup.dds</Button>
 		</PromotionInfo>
-
-
-
-
-
 		<!--ONLY STATUSES PAST THIS POINT!-->
 		<PromotionInfo>
 			<Type>PROMOTION_STANDOUT_STATUS</Type>

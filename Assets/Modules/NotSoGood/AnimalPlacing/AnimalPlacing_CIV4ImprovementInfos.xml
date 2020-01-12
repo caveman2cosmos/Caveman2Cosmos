@@ -14,7 +14,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_HORSE</Type>
@@ -23,7 +22,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_ELEPHANT</Type>
@@ -32,7 +30,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_BISON</Type>
@@ -41,7 +38,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_CAMEL</Type>
@@ -50,7 +46,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_COW</Type>
@@ -59,7 +54,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_DEER</Type>
@@ -68,7 +62,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_FUR</Type>
@@ -77,7 +70,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_KANGAROO</Type>
@@ -86,7 +78,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_LLAMA</Type>
@@ -95,7 +86,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_MAMMOTH</Type>
@@ -104,7 +94,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_PIG</Type>
@@ -113,7 +102,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_POULTRY</Type>
@@ -122,7 +110,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_RABBIT</Type>
@@ -131,7 +118,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_SEA_LIONS</Type>
@@ -140,7 +126,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_SHEEP</Type>
@@ -149,7 +134,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_WALRUS</Type>
@@ -158,7 +142,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_GUINEA_PIG</Type>
@@ -167,7 +150,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_PARROTS</Type>
@@ -176,7 +158,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_BARLEY</Type>
@@ -185,7 +166,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_CORN</Type>
@@ -194,7 +174,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_FLAX</Type>
@@ -203,7 +182,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
  		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_POMEGRANATE</Type>
@@ -212,7 +190,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
  		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_KAVA</Type>
@@ -221,7 +198,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_GUAVA</Type>
@@ -230,7 +206,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_MELON</Type>
@@ -239,7 +214,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_POTATO</Type>
@@ -248,7 +222,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_PUMPKIN</Type>
@@ -257,7 +230,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_RICE</Type>
@@ -266,7 +238,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_SQUASH</Type>
@@ -275,7 +246,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_WHEAT</Type>
@@ -284,7 +254,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_ALMONDS</Type>
@@ -293,7 +262,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_APPLE</Type>
@@ -302,7 +270,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_BANANA</Type>
@@ -311,7 +278,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_COCONUT</Type>
@@ -320,7 +286,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_DATES</Type>
@@ -329,7 +294,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_FIG</Type>
@@ -338,7 +302,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_LEMON</Type>
@@ -347,7 +310,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_MANGO</Type>
@@ -356,7 +318,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_OLIVES</Type>
@@ -365,7 +326,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_PAPAYA</Type>
@@ -374,7 +334,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_PISTACHIO</Type>
@@ -383,7 +342,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_WINE</Type>
@@ -392,7 +350,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_HENNA</Type>
@@ -401,7 +358,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_INDIGO</Type>
@@ -410,7 +366,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_RUBBER</Type>
@@ -419,7 +374,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_TIMBER</Type>
@@ -428,7 +382,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_CANNABIS</Type>
@@ -437,7 +390,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_COCA</Type>
@@ -446,7 +398,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_COCOA</Type>
@@ -455,7 +406,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_COFFEE</Type>
@@ -464,7 +414,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_COTTON</Type>
@@ -473,7 +422,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_INCENSE</Type>
@@ -482,7 +430,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_MUSHROOMS</Type>
@@ -491,7 +438,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_OPIUM</Type>
@@ -500,7 +446,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_PAPYRUS</Type>
@@ -509,7 +454,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_PEYOTE</Type>
@@ -518,7 +462,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_PRICKLY_PEAR</Type>
@@ -527,7 +470,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_RESIN</Type>
@@ -536,7 +478,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_SILK</Type>
@@ -545,7 +486,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_SPICES</Type>
@@ -554,7 +494,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_SUGAR</Type>
@@ -563,7 +502,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_TEA</Type>
@@ -572,7 +510,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_TOBACCO</Type>
@@ -581,7 +518,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BONUS_VANILLA</Type>
@@ -590,7 +526,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 	</ImprovementInfos>
 </Civ4ImprovementInfos>

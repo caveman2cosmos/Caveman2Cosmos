@@ -99,7 +99,6 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_BULL_MYTH</BuildingClass>
@@ -274,7 +273,6 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_ELEPHANT_MYTH</BuildingClass>
@@ -360,7 +358,6 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_GOAT_MYTH</BuildingClass>
@@ -520,7 +517,6 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_OLD_MAN_MYTH</BuildingClass>
@@ -638,7 +634,6 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_SPOTTED_CAT_MYTH</BuildingClass>
@@ -736,7 +731,6 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_TIGER_MYTH</BuildingClass>
@@ -818,7 +812,6 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_WEASEL_MYTH</BuildingClass>
@@ -908,7 +901,6 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>
