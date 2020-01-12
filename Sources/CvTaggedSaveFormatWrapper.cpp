@@ -2729,6 +2729,18 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int* 
 	{
 		m_stream->Read(i);
 	}
+
+#ifdef _DEBUG
+#define LOG_INTEGER_SIZES
+#endif
+#ifdef LOG_INTEGER_SIZES
+	TCHAR buf[1024];
+	if (*i < MAX_CHAR)       sprintf(buf, "int8_t %s: %i\n", name, i);
+	else if (*i < MAX_SHORT) sprintf(buf, "int16_t %s: %i\n", name, i);
+	else                    sprintf(buf, "int32_t %s: %i\n", name, i);
+
+	gDLL->logMsg("Integer Sizes.txt", buf);
+#endif
 }
 
 

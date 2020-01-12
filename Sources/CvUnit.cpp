@@ -14821,6 +14821,7 @@ int CvUnit::getRBombardForceAbilityCount() const
 
 void CvUnit::changeRBombardForceAbilityCount(int iChange)			
 {
+	FAssert(iChange <= MAX_CHAR);
 	m_iRBombardForceAbilityCount += iChange;
 }
 
@@ -18322,6 +18323,7 @@ void CvUnit::setHotKeyNumber(int iNewValue)
 			}
 		}
 
+		FAssert(m_iHotKeyNumber + iNewValue <= MAX_SHORT);
 		m_iHotKeyNumber = iNewValue;
 
 		if (IsSelected())
@@ -18383,6 +18385,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 	//	the wider game state (and indeed should not without additional concurrency protection)
 	if ( isTempUnit() )
 	{
+		FAssert(iX <= MAX_SHORT && iY <= MAX_SHORT);
 		m_iX = iX;
 		m_iY = iY;
 
@@ -18701,6 +18704,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 
 	if (pNewPlot != NULL)
 	{
+		FAssert(pNewPlot->getX() <= MAX_SHORT && pNewPlot->getY() <= MAX_SHORT)
 		m_iX = pNewPlot->getX_INLINE();
 		m_iY = pNewPlot->getY_INLINE();
 	}
@@ -19271,6 +19275,7 @@ void CvUnit::setReconPlot(CvPlot* pNewValue)
 		}
 		else
 		{
+			FAssert(pNewValue->getX() <= MAX_SHORT && pNewValue->getY() <= MAX_SHORT);
 			m_iReconX = pNewValue->getX_INLINE();
 			m_iReconY = pNewValue->getY_INLINE();
 
@@ -19474,6 +19479,7 @@ void CvUnit::setMoves(int iNewValue)
 	{
 		pPlot = plot();
 
+		FAssert(iNewValue <= MAX_CHAR);
 		m_iMoves = iNewValue;
 
 		FAssert(getMoves() >= 0);
@@ -19615,6 +19621,7 @@ void CvUnit::setLevel(int iNewValue)
 {
 	if (getLevel() != iNewValue)
 	{
+		FAssert(iNewValue <= MAX_SHORT);
 		m_iLevel = iNewValue;
 		FAssert(getLevel() > 0);
 
@@ -19803,6 +19810,7 @@ void CvUnit::setAttackPlot(const CvPlot* pNewValue, bool bAirCombat)
 	{
 		if (pNewValue != NULL)
 		{
+			FAssert(pNewValue->getX() <= MAX_SHORT && pNewValue->getY() <= MAX_SHORT);
 			m_iAttackPlotX = pNewValue->getX_INLINE();
 			m_iAttackPlotY = pNewValue->getY_INLINE();
 		}
@@ -19844,6 +19852,7 @@ int CvUnit::getCombatFirstStrikes() const
 
 void CvUnit::setCombatFirstStrikes(int iNewValue)			
 {
+	FAssert(iNewValue <= MAX_SHORT);
 	m_iCombatFirstStrikes = iNewValue;
 	FAssert(getCombatFirstStrikes() >= 0);
 }
@@ -19992,6 +20001,7 @@ bool CvUnit::isBlitz() const
 
 void CvUnit::changeBlitzCount(int iChange)			
 {
+	FAssert(m_iBlitzCount + iChange <= MAX_CHAR);
 	m_iBlitzCount += iChange;
 	FAssert(getBlitzCount() >= 0);
 }
@@ -20008,6 +20018,7 @@ bool CvUnit::isAmphib() const
 
 void CvUnit::changeAmphibCount(int iChange)
 {
+	FAssert(m_iAmphibCount + iChange <= MAX_CHAR);
 	m_iAmphibCount += iChange;
 	FAssert(getAmphibCount() >= 0);
 }
@@ -34276,6 +34287,7 @@ bool CvUnit::isCanMovePeaks() const
 
 void CvUnit::changeCanMovePeaksCount(int iChange)
 {
+	FAssert(m_iCanMovePeaksCount + iChange <= MAX_CHAR);
 	m_iCanMovePeaksCount += iChange;
 	FAssert(getCanMovePeaksCount() >= 0);
 }
@@ -34294,6 +34306,7 @@ bool CvUnit::isCanLeadThroughPeaks() const
 
 void CvUnit::changeCanLeadThroughPeaksCount(int iChange)
 {
+	FAssert(m_iCanLeadThroughPeaksCount + iChange <= MAX_CHAR);
 	m_iCanLeadThroughPeaksCount += iChange;
 	FAssert(getCanLeadThroughPeaksCount() >= 0);
 }
@@ -34611,7 +34624,10 @@ int CvUnit::getExtraControlPoints() const	//control points
 
 void CvUnit::changeExtraControlPoints(int iChange)			
 {
+	FAssert(m_iExtraControlPoints + iChange <= MAX_SHORT);
 	m_iExtraControlPoints += iChange;
+
+	FAssert(m_iControlPointsLeft + iChange <= MAX_SHORT);
 	m_iControlPointsLeft += iChange;
 }
 
@@ -34632,6 +34648,7 @@ int CvUnit::getExtraCommandRange() const	//command range
 
 void CvUnit::changeExtraCommandRange(int iChange)			
 {
+	FAssert(m_iExtraCommandRange + iChange <= MAX_CHAR);
 	m_iExtraCommandRange += iChange;
 }
 
@@ -35219,6 +35236,7 @@ bool CvUnit::isZoneOfControl() const
 
 void CvUnit::changeZoneOfControlCount(int iChange)			
 {
+	FAssert(getZoneOfControlCount() + iChange <= MAX_CHAR);
 	m_iZoneOfControlCount += iChange;
 	if (isZoneOfControl())
 	{
