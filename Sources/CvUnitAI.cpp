@@ -17952,9 +17952,18 @@ namespace {
 		}
 		return constructions;
 	}
+
+	int getDecayedConstructProbability(int base, const int rate, const int iterations)
+	{
+		for (int i = 0; i < iterations; ++i)
+		{
+			base = base * rate / 100;
+		}
+		return base;
+	}
 }
 
-int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, int iDecayProbabilityRate, int iThreshold, bool assumeSameValueEverywhere, CvPlot*& pBestConstructPlot, CvPlot*& pBestPlot, CvUnitAI*& eBestTargetingUnit, BuildingTypes& eBestBuilding)
+int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, int iDecayProbabilityRate, int iThreshold, bool assumeSameValueEverywhere, CvPlot*& pBestConstructPlot, CvPlot*& pBestPlot, CvUnitAI*& pBestTargetingUnit, BuildingTypes& eBestBuilding)
 {
 	PROFILE_FUNC();
 
@@ -17964,7 +17973,7 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 	// Set outputs to default values
 	pBestConstructPlot = nullptr;
 	pBestPlot = nullptr;
-	eBestTargetingUnit = nullptr;
+	pBestTargetingUnit = nullptr;
 	eBestBuilding = NO_BUILDING;
 	
 	int iBestValue = 0;
@@ -17972,16 +17981,16 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 	//	we'll stick to it unless something significantly better is found
 	if (m_eIntendedConstructBuilding != NO_BUILDING && getGroup()->AI_getMissionAIType() == MISSIONAI_CONSTRUCT)
 	{
-		CvCity* pLoopCity = getGroup()->AI_getMissionAIPlot()->getPlotCity();
+		CvCity* city = getGroup()->AI_getMissionAIPlot()->getPlotCity();
 
-		if (pLoopCity != nullptr
-			&& canConstruct(pLoopCity->plot(), m_eIntendedConstructBuilding)
-			&& generatePath(pLoopCity->plot(), MOVE_NO_ENEMY_TERRITORY, true)
+		if (city != nullptr
+			&& canConstruct(city->plot(), m_eIntendedConstructBuilding)
+			&& generatePath(city->plot(), MOVE_NO_ENEMY_TERRITORY, true)
 			)
 		{
-			iBestValue = (pLoopCity->AI_buildingValue(m_eIntendedConstructBuilding)*110)/100;
+			iBestValue = (city->AI_buildingValue(m_eIntendedConstructBuilding)*110)/100;
 			pBestPlot = getPathEndTurnPlot();
-			pBestConstructPlot = pLoopCity->plot();
+			pBestConstructPlot = city->plot();
 			eBestBuilding = m_eIntendedConstructBuilding;
 		}
 	}
@@ -17989,7 +17998,7 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 	typedef stdext::hash_map<BuildingTypes, int> PossibleBuildingsMap;
 	PossibleBuildingsMap possibleBuildings;
 
-	CvPlayerAI& player = GET_PLAYER(getOwnerINLINE());
+	const CvPlayerAI& player = GET_PLAYER(getOwnerINLINE());
 	// Determine the list of building types we could make, based on what already exists
 	for (int iI = 0; iI < m_pUnitInfo->getNumBuildings(); iI++)
 	{
@@ -17998,30 +18007,13 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 			&& player.canConstruct(eBuilding, false, false, true)
 			&& player.AI_getNumBuildingsNeeded(eBuilding, (getDomainType() == DOMAIN_SEA)) > 0)
 		{
-			int iThisConstructBelow = iConstructBelow;
-			int iCount = 0;
-			CvCity* pLoopCity = nullptr;
-			for (CvPlayer::city_iterator cityItr = player.beginCities(); cityItr != player.endCities(); ++cityItr)
-			{
-				pLoopCity = *cityItr;
-				if (pLoopCity->getNumBuilding(eBuilding) > 0)
-				{
-					iCount++;
+			const int numBuildings = algo::count_if(player.cities(), CvCity::fn::getNumBuilding(eBuilding) != 0);
+			const bool canBuild = numBuildings < iMaxCount &&
+					(
+						iDecayProbabilityRate == 0 || getDecayedConstructProbability(iConstructBelow, iDecayProbabilityRate, numBuildings) >= iContructRand
+					);
 
-					if (iCount >= iMaxCount || iThisConstructBelow < iContructRand)
-					{
-						break;
-					}
-
-					//	If we are decaying the construct probability based on existing building count...
-					if (iDecayProbabilityRate != 0)
-					{
-						iThisConstructBelow = (iThisConstructBelow * iDecayProbabilityRate) / 100;
-					}
-				}
-			}
-
-			if (pLoopCity == nullptr)
+			if (canBuild)
 			{
 				possibleBuildings[eBuilding] = 0;
 			}
@@ -18033,14 +18025,13 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 		return 0;
 	}
 
-	CityConstructMap constructions = getConstructBuildings(player, getGroup());
-	CvReachablePlotSet plotSet(getGroup(), MOVE_NO_ENEMY_TERRITORY, MAX_INT);
+	const CityConstructMap constructions = getConstructBuildings(player, getGroup());
+	const CvReachablePlotSet plotSet(getGroup(), MOVE_NO_ENEMY_TERRITORY, MAX_INT);
 
 	int iBestWeightedValue = 0;
 
-	for(CvPlayer::city_iterator cityItr = player.beginCities(); cityItr != player.endCities(); ++cityItr)
+	foreach_(CvCity* pLoopCity, player.cities())
 	{
-		CvCity* pLoopCity = *cityItr;
 		//if (AI_plotValid(pLoopCity->plot()) && pLoopCity->area() == area())
 		if (plotSet.find(pLoopCity->plot()) == plotSet.end())
 			continue;
@@ -18112,14 +18103,14 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 						iWeightedValue = iValue;
 					}
 
-					if ((iValue > iThreshold) && (iWeightedValue > iBestWeightedValue))
+					if (iValue > iThreshold && iWeightedValue > iBestWeightedValue)
 					{
 						iBestValue = iValue;
 						iBestWeightedValue = iWeightedValue;
 						pBestPlot = getPathEndTurnPlot();
 						pBestConstructPlot = pLoopCity->plot();
 						eBestBuilding = buildingType;
-						eBestTargetingUnit = targetingUnit;
+						pBestTargetingUnit = targetingUnit;
 					}
 				}
 			}

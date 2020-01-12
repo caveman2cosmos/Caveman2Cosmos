@@ -281,7 +281,7 @@ protected:
 	bool AI_switchHurry();
 	bool AI_hurry(bool bAny = false);
 	bool checkSwitchToConstruct();
-	int getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, int iDecayProbabilityRate, int iThreshold, bool assumeSameValueEverywhere, CvPlot*& bestConstructPlot, CvPlot*& bestTurnPlot, CvUnitAI*& eBestTargetingUnit, BuildingTypes& eBestBuilding);
+	int getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, int iDecayProbabilityRate, int iThreshold, bool assumeSameValueEverywhere, CvPlot*& bestConstructPlot, CvPlot*& bestTurnPlot, CvUnitAI*& pBestTargetingUnit, BuildingTypes& eBestBuilding);
 	bool enactConstruct(CvPlot* pBestConstructPlot, CvPlot* pBestPlot, CvUnitAI* eBestTargetingUnit, BuildingTypes eBestBuilding);
 /************************************************************************************************/
 /* RevDCM                  Start		 5/2/09                                                 */
