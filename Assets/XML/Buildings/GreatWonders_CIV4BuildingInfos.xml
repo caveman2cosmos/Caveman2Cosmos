@@ -5969,6 +5969,7 @@
 			</Flavors>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_ZULU_IKHANDA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ZULU_IKHANDA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Independence Hall -->

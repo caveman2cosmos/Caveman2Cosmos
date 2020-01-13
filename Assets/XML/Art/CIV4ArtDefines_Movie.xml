@@ -2033,5 +2033,9 @@
 			<Type>ART_DEF_MOVIE_LUNAR_SOLAR_ARRAY</Type>
 			<Path>Art/Movies/Wonders/LUNAR_SOLAR_ARRAY.dds</Path>
 		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ZULU_IKHANDA</Type>
+			<Path>Art/Movies/Wonders/ZULU_IKHANDA.dds</Path>
+		</MovieArtInfo>
 	</MovieArtInfos>
 </Civ4ArtDefines>
