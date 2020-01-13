@@ -157,6 +157,30 @@ namespace detail {
 // or
 //   CvUnit::fn::getDamage() < CvUnit::fn::getHealth()
 // 
+namespace map_fun_details {
+
+	template < class Ty_, class Enable_ = void >
+	struct default_value
+	{
+		static const Ty_ value = Ty_();
+	};
+
+	template < class Ty_ >
+	struct default_value<Ty_, typename bst::enable_if< bst::is_integral<Ty_> >::type>
+	{
+		static const Ty_ value = Ty_();
+	};
+
+	template < class Ty_ >
+	struct default_value<Ty_, typename bst::enable_if< bst::is_pointer<Ty_> >::type>
+	{
+		static const Ty_ value;
+	};
+
+	template < class Ty_ >
+	const Ty_ default_value<Ty_, typename bst::enable_if< bst::is_pointer<Ty_> >::type>::value = nullptr;
+}
+
 #define DECLARE_MAP_FUNCTOR(obj_type_, result_type_, mem_fn_) \
 	struct mem_fn_ : detail::algo_functor<const obj_type_*, result_type_, mem_fn_> { \
 		result_type_ operator()(const obj_type_* obj) const { \
@@ -166,7 +190,7 @@ namespace detail {
 #define DECLARE_MAP_FUNCTOR_1(obj_type_, result_type_, mem_fn_, val_type_) \
 	struct mem_fn_ : detail::algo_functor<const obj_type_*, result_type_, mem_fn_> { \
 		mem_fn_(const mem_fn_& other) : val(other.val) {} \
-		mem_fn_(const val_type_ val = val_type_()) : val(val) {} \
+		mem_fn_(val_type_ val = map_fun_details::default_value<val_type_>::value) : val(val) {} \
 		result_type_ operator()(const obj_type_* obj) const { \
 			return obj->mem_fn_(val); \
 		} \
@@ -175,12 +199,23 @@ namespace detail {
 #define DECLARE_MAP_FUNCTOR_2(obj_type_, result_type_, mem_fn_, val_type_, val_type2_) \
 	struct mem_fn_ : detail::algo_functor<const obj_type_*, result_type_, mem_fn_> { \
 		mem_fn_(const mem_fn_& other) : val(other.val), val2(other.val2) {} \
-		mem_fn_(const val_type_ val = val_type_(), const val_type2_ val2 = val_type2_()) : val(val), val2(val2) {} \
+		mem_fn_(val_type_ val = map_fun_details::default_value<val_type_>::value, val_type2_ val2 = map_fun_details::default_value<val_type2_>::value) : val(val), val2(val2) {} \
 		result_type_ operator()(const obj_type_* obj) const { \
 			return obj->mem_fn_(val, val2); \
 		} \
 		val_type_ val; \
 		val_type2_ val2; \
+	};
+#define DECLARE_MAP_FUNCTOR_3(obj_type_, result_type_, mem_fn_, val_type_, val_type2_, val_type3_) \
+	struct mem_fn_ : detail::algo_functor<const obj_type_*, result_type_, mem_fn_> { \
+		mem_fn_(const mem_fn_& other) : val(other.val), val2(other.val2), val3(other.val3) {} \
+		mem_fn_(val_type_ val = map_fun_details::default_value<val_type_>::value, val_type2_ val2 = map_fun_details::default_value<val_type2_>::value, val_type3_ val3 = map_fun_details::default_value<val_type3_>::value) : val(val), val2(val2), val3(val3) {} \
+		result_type_ operator()(const obj_type_* obj) const { \
+			return obj->mem_fn_(val, val2, val3); \
+		} \
+		val_type_ val; \
+		val_type2_ val2; \
+		val_type3_ val3; \
 	};
 
 namespace algo {
@@ -236,8 +271,10 @@ namespace algo {
 	using bst::lower_bound;
 	//using bst::max_element;
 	DECLARE_OPT_RANGE_ALGO(bst::range::max_element, max_element);
+	DECLARE_OPT_RANGE_ALGO_ARG(bst::range::max_element, max_element);
 	//using bst::min_element;
 	DECLARE_OPT_RANGE_ALGO(bst::range::min_element, min_element);
+	DECLARE_OPT_RANGE_ALGO_ARG(bst::range::min_element, min_element);
 	using bst::mismatch;
 	using bst::search;
 	using bst::search_n;
