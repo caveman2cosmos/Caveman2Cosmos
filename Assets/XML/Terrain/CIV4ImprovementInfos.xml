@@ -657,6 +657,7 @@
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Water Worked (Graphical) -->
 		<ImprovementInfo>
@@ -667,6 +668,7 @@
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- City Ruins (Graphical, Obsolete, TODO: edit city raze python to replace improvement w/ FEATURE_CITY_RUINS)  -->
 		<ImprovementInfo>
@@ -678,6 +680,7 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>10</iAirBombDefense>
 			<iDefenseModifier>15</iDefenseModifier>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- City Ruins Arcology (Graphical, Obsolete, TODO: edit city raze python to replace improvement w/ FEATURE_ARCOLOGY_RUINS)  -->
 		<ImprovementInfo>
@@ -689,6 +692,7 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>10</iAirBombDefense>
 			<iDefenseModifier>15</iDefenseModifier>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Goody Hut -->
 		<ImprovementInfo>
@@ -6035,8 +6039,8 @@
 		<!-- Sanitize Water (Graphical) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_SANITIZE_WATER</Type>
-			<Description>.</Description>
-			<Civilopedia>.</Civilopedia>
+			<Description>TXT_KEY_IMPROVEMENT_SANITIZE_WATER</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_SANITIZE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SANITIZE_WATER</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<bWater>1</bWater>
@@ -6052,6 +6056,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Plant Jungle -->
 		<ImprovementInfo>
@@ -6301,6 +6306,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Terraform Muddy -->
 		<ImprovementInfo>
@@ -6321,6 +6327,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Terraform Grass -->
 		<ImprovementInfo>
@@ -6341,6 +6348,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Terraform Plains -->
 		<ImprovementInfo>
@@ -6366,6 +6374,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Terraform Tundra -->
 		<ImprovementInfo>
@@ -6387,6 +6396,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Terraform Permafrost -->
 		<ImprovementInfo>
@@ -6408,6 +6418,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Terraform Rocky -->
 		<ImprovementInfo>
@@ -6429,6 +6440,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Terraform Scrub -->
 		<ImprovementInfo>
@@ -6454,6 +6466,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Terraform Desert -->
 		<ImprovementInfo>
@@ -6475,6 +6488,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Terraform Dunes -->
 		<ImprovementInfo>
@@ -6496,6 +6510,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Prehistoric other plant improvements -->
 		<!-- Fruit Gatherer -->
@@ -7514,7 +7529,7 @@
 		<!-- Lighthouse -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_LIGHTHOUSE_CORAL</Type>
-			<Description>TXT_KEY_IMPROVEMENT_LIGHTHOUSE</Description>
+			<Description>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_CORAL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LIGHTHOUSE</ArtDefineTag>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
@@ -7549,7 +7564,7 @@
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_LIGHTHOUSE_REEF</Type>
-			<Description>TXT_KEY_IMPROVEMENT_LIGHTHOUSE</Description>
+			<Description>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_REEF</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LIGHTHOUSE</ArtDefineTag>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
