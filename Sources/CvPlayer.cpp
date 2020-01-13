@@ -10688,6 +10688,28 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 
 	}
 	
+	if (!bTestVisible)
+	{
+		if (pPlot != NULL)
+		{
+			if (pPlot->getFeatureType() != NO_FEATURE)
+			{
+				if (!(GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getFeatureTech(pPlot->getFeatureType()))))
+				{
+					if (!kBuild.isNoTechCanRemoveWithNoProductionGain(pPlot->getFeatureType()))
+					{
+						return false;
+					}
+
+				}
+			}
+
+			if (std::max(0, getEffectiveGold()) < getBuildCost(pPlot, eBuild))
+			{
+				return false;
+			}
+		}
+	}
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
