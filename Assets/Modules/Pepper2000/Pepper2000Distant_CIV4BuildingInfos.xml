@@ -1456,6 +1456,7 @@
 			<Strategy>TXT_KEY_BUILDING_LIBRARY_OF_BABEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LIBRARY_OF_BABEL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_LIBRARY_OF_BABEL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TRANSFINITE_COMPUTATION</PrereqTech>
 			<iCost>13692</iCost>

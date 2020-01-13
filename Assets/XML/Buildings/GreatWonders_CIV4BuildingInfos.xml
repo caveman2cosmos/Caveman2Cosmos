@@ -6526,6 +6526,7 @@
 			<Strategy>TXT_KEY_BUILDING_KINGDOM_CENTRE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KINGDOM_CENTRE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_KINGDOM_CENTRE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CONGLOMERATES</PrereqTech>
@@ -17205,6 +17206,7 @@
 			<Strategy>TXT_KEY_BUILDING_LAS_MEDULAS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LAS_MEDULAS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_LAS_MEDULAS</MovieDefineTag>
 			<PrereqTech>TECH_HYDRAULIC_MINING</PrereqTech>
 			<ObsoleteTech>TECH_NITROGLYCERIN</ObsoleteTech>
 			<iCost>1152</iCost>

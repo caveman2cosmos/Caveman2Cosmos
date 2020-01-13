@@ -3093,6 +3093,7 @@
 			<Strategy>TXT_KEY_BUILDING_LARGE_MAGELLANIC_CLOUD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LARGE_MAGELLANIC_CLOUD</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_LARGE_MAGELLANIC_CLOUD</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERGALACTIC_TRAVEL</PrereqTech>
 			<iCost>11412</iCost>
