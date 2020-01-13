@@ -3411,6 +3411,7 @@
 			<Strategy>TXT_KEY_BUILDING_MAFFEI_GROUP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAFFEI_GROUP</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MAFFEI_GROUP</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERGROUP_TRAVEL</PrereqTech>
 			<iCost>13205</iCost>

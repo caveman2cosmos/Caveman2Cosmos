@@ -7938,6 +7938,7 @@
 			<Strategy>TXT_KEY_BUILDING_DEEPSEA_MISSION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEPSEA_MISSION</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DEEPSEA_MISSION</MovieDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_DEEP_SEA_EXPLORATION</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
@@ -7988,6 +7989,7 @@
 			<Strategy>TXT_KEY_BUILDING_EARTHCORE_MISSION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EARTHCORE_MISSION</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EARTHCORE_MISSION</MovieDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SUBTERRANEAN_EXPLORATION</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
@@ -8264,6 +8266,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Help>TXT_KEY_BUILDING_NANITE_DEFUSER_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_NANITE_DEFUSER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NANITE_DEFUSER</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_ACCELERATOR</ConstructSound>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>10000</fVisibilityPriority>
@@ -8318,6 +8321,7 @@
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SHIELD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SHIELD</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SHIELD</MovieDefineTag>
 			<fVisibilityPriority>1000</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ADVANCED_SHIELDING</PrereqTech>
@@ -18265,6 +18269,7 @@
 			<Strategy>TXT_KEY_BUILDING_MING_VASE_WORKSHOP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MING_VASE_WORKSHOP</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MING_VASE_WORKSHOP</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_GLASSMITH</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -18403,6 +18408,7 @@
 			<Strategy>TXT_KEY_BUILDING_MURANO_GLASSMAKERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MURANO_GLASSMAKERS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MURANO_GLASSMAKERS</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_GLASSMITH</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->

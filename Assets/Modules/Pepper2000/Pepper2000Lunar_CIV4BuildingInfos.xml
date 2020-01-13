@@ -359,6 +359,7 @@
 			<Strategy>TXT_KEY_BUILDING_MITHRIL_FOUNDRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MITHRIL_FOUNDRY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MITHRIL_FOUNDRY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ELECTROWEAK_MATTER</PrereqTech>
 			<iCost>28868</iCost>

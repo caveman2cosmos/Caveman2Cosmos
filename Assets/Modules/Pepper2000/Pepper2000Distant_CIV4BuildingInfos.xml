@@ -1494,6 +1494,7 @@
 			<Strategy>TXT_KEY_BUILDING_MILLIWAYS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MILLIWAYS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MILLIWAYS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TIME_REVERSAL</PrereqTech>
 			<iCost>7783</iCost>
