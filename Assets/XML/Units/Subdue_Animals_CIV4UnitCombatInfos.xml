@@ -327,7 +327,6 @@
 				</Action>
 			</Actions>
 		</UnitCombatInfo>
-
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_MAMMAL_RHINO</Type>
 			<Actions>
@@ -386,7 +385,6 @@
 				</Action>
 			</Actions>
 		</UnitCombatInfo>
-
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_SEA_SMALL</Type>
 			<Description>TXT_KEY_UNITCOMBAT_SEA_SMALL</Description>

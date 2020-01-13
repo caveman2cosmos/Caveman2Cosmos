@@ -82,7 +82,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_PALEOLITHIC_CAT_MYTH</BuildingClass>
@@ -162,7 +161,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_PALEOLITHIC_MARSUPIAL_MYTH</BuildingClass>
@@ -242,7 +240,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

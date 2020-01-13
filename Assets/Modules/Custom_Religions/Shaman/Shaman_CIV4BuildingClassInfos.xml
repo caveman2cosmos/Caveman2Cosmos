@@ -78,7 +78,6 @@
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_SHAMAN_TEMPLE_WALRUS</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SHAMAN_CATHEDRAL</Type>
 			<Description>TXT_KEY_BUILDING_SHAMAN_CATHEDRAL</Description>
@@ -167,7 +166,6 @@
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_SHAMAN_MONASTERY_WALRUS</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SHAMAN_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_SHAMAN_SHRINE</Description>

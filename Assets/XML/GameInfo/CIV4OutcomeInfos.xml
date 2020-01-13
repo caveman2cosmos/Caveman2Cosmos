@@ -646,7 +646,6 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 		</OutcomeInfo>
-
 		<OutcomeInfo>
 			<Type>OUTCOME_UPGRADE_TO_SETTLER</Type>
 			<Description>TXT_KEY_OUTCOME_UPGRADE_TO_SETTLER</Description>
@@ -757,7 +756,6 @@
 				<BuildingType>BUILDING_BARRACKS</BuildingType>
 			</PrereqBuildings>
 		</OutcomeInfo>
-
 		<OutcomeInfo>
 			<Type>OUTCOME_JOIN_CITY_FREED_SLAVE</Type>
 			<Description>TXT_KEY_OUTCOME_JOIN_CITY_FREED_SLAVE</Description>
@@ -871,7 +869,6 @@
 				<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_LIBRARY</OutcomeType>
 			</ReplaceOutcomes>
 		</OutcomeInfo>
-
 		<OutcomeInfo>
 			<Type>OUTCOME_ANIMAL_COMBAT1</Type>
 			<Description>TXT_KEY_OUTCOME_ANIMAL_COMBAT1</Description>

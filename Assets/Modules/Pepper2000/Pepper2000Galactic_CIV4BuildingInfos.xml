@@ -7954,6 +7954,7 @@
 			<Strategy>TXT_KEY_BUILDING_INTERSTELLAR_OLYMPICS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_OLYMPICS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_INTERSTELLAR_OLYMPICS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_WORMHOLE_TRAVERSAL</PrereqTech>
 			<iCost>18220</iCost>
@@ -8315,6 +8316,7 @@
 			<Strategy>TXT_KEY_BUILDING_KEPLER_186F_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KEPLER_186F</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_KEPLER_186F</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ANTIMATTER_ROCKET</PrereqTech>
 			<iCost>29200</iCost>
@@ -8362,6 +8364,7 @@
 			<Strategy>TXT_KEY_BUILDING_KEPLER_22B_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KEPLER_22B</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_KEPLER_22B</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ANTIMATTER_ROCKET</PrereqTech>
 			<iCost>29200</iCost>

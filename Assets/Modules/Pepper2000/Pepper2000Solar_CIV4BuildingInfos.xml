@@ -3823,6 +3823,7 @@
 			<Strategy>TXT_KEY_BUILDING_JOVIAN_MAGNETOSPHERE_POWER_PLANT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JOVIAN_MAGNETOSPHERE_POWER_PLANT</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_JOVIAN_MAGNETOSPHERE_POWER_PLANT</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANET_ENGINEERING</PrereqTech>
 			<iCost>38544</iCost>
@@ -3856,6 +3857,7 @@
 			<Strategy>TXT_KEY_BUILDING_JUPITER_CORE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JUPITER_CORE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_JUPITER_CORE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_NANOSHIELDING</PrereqTech>
 			<iCost>9454</iCost>

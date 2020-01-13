@@ -606,6 +606,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
         <!-- Terraform Mars -->
 		<ImprovementInfo>
@@ -650,6 +651,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
         <!-- Induce Supernova -->
 		<ImprovementInfo>
@@ -680,6 +682,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
             </FeatureMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
         <!-- Terraform Hyperspace -->
 		<ImprovementInfo>
@@ -710,6 +713,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
         <!-- Terraform Past -->
 		<ImprovementInfo>
@@ -740,6 +744,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
         <!-- Terraform Future -->
 		<ImprovementInfo>
@@ -770,6 +775,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
         <ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_BRANESPACE</Type>
@@ -799,6 +805,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
         <ImprovementInfo>
 			<Type>IMPROVEMENT_BUILD_ASTEROID</Type>

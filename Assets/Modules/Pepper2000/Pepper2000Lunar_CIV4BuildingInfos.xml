@@ -30,6 +30,7 @@
 			<Strategy>TXT_KEY_BUILDING_URBAN_MOON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_URBAN_MOON</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_URBAN_MOON</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LUNAR_MEGASTRUCTURES</PrereqTech>
 			<iCost>9912</iCost>
@@ -146,6 +147,7 @@
 			<Strategy>TXT_KEY_BUILDING_LUNA_RING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LUNA_RING</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_LUNA_RING</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LUNAR_MEGASTRUCTURES</PrereqTech>
 			<iCost>9912</iCost>
@@ -1828,6 +1830,7 @@
 			<Strategy>TXT_KEY_BUILDING_LUNAR_SOLAR_ARRAY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LUNAR_SOLAR_ARRAY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_LUNAR_SOLAR_ARRAY</MovieDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>

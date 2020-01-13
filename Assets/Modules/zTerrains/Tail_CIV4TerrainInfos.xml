@@ -11,7 +11,6 @@
 			<Description>TXT_KEY_TERRAIN_SLIMY_COAST</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_SLIMY_COAST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_SLIMY_COAST</ArtDefineTag>
-			<bGraphicalOnly>1</bGraphicalOnly>
 			<bWater>1</bWater>
 			<iMovement>6</iMovement>
 			<Yields>
@@ -153,7 +152,6 @@
 			<Description>TXT_KEY_TERRAIN_SLIMY_OCEAN</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_SLIMY_OCEAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_SLIMY_OCEAN</ArtDefineTag>
-			<bGraphicalOnly>1</bGraphicalOnly>
 			<bWater>1</bWater>
 			<iMovement>20</iMovement>
 			<Yields>

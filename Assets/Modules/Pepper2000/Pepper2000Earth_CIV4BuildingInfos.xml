@@ -11880,6 +11880,7 @@
 			<Strategy>TXT_KEY_BUILDING_INTERNET_ARCHIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INTERNET_ARCHIVE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_INTERNET_ARCHIVE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -22443,6 +22444,7 @@
 			<Strategy>TXT_KEY_BUILDING_KHAZAR_ISLANDS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KHAZAR_ISLANDS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_KHAZAR_ISLANDS</MovieDefineTag>
 			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -23212,6 +23214,7 @@
 			<Strategy>TXT_KEY_BUILDING_JEDDAH_TOWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JEDDAH_TOWER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_JEDDAH_TOWER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24424,6 +24427,7 @@
 			<Strategy>TXT_KEY_BUILDING_LEAN_LINEAR_CITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LEAN_LINEAR_CITY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_LEAN_LINEAR_CITY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24964,6 +24968,7 @@
 			<Strategy>TXT_KEY_BUILDING_KING_ABDULLAH_ECONOMIC_CITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KING_ABDULLAH_ECONOMIC_CITY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_KING_ABDULLAH_ECONOMIC_CITY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
