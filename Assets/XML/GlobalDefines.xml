@@ -1827,16 +1827,6 @@
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 	<!-- Super Forts end -->
-	<!-- Size Matters begin -->
-	<Define>
-		<DefineName>SM_NAVAL_CARGO_INCREMENT</DefineName>
-		<iDefineIntVal>30</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>SM_MISSILE_CARGO_INCREMENT</DefineName>
-		<iDefineIntVal>3</iDefineIntVal>
-	</Define>
-	<!-- Size Matters end -->
 	<!-- More Rivers begin -->
 	<!--
  Valid results on this divisor will never exceed 12
