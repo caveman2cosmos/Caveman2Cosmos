@@ -398,6 +398,12 @@
     <ClInclude Include="scoring.h" />
     <ClInclude Include="StackWalker.h" />
     <ClInclude Include="Stopwatch.h" />
+    <ClInclude Include="ComponentBase.h" />
+    <ClInclude Include="UnitComponentBase.h" />
+    <ClInclude Include="UnitComponentCombatBase.h" />
+    <ClInclude Include="UnitComponentTransportBase.h" />
+    <ClInclude Include="UnitComponentTransportDefault.h" />
+    <ClInclude Include="UnitComponentTransportSM.h" />
     <ClInclude Include="wchar_utils.h" />
     <ClInclude Include="CvEnums.h" />
     <ClInclude Include="CvEventReporter.h" />

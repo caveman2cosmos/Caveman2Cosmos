@@ -19,6 +19,9 @@
     <Filter Include="Source Files\Smart">
       <UniqueIdentifier>{786fdd94-8455-45ee-8b56-cbcd36fcc5e8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Components">
+      <UniqueIdentifier>{27347836-f58d-49fa-8b5a-3c1c95e78900}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="_precompile.cpp">
@@ -931,6 +934,24 @@
     </ClInclude>
     <ClInclude Include="idinfo_iterator_base.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentBase.h">
+      <Filter>Source Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitComponentBase.h">
+      <Filter>Source Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitComponentCombatBase.h">
+      <Filter>Source Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitComponentTransportBase.h">
+      <Filter>Source Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitComponentTransportDefault.h">
+      <Filter>Source Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitComponentTransportSM.h">
+      <Filter>Source Files\Components</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
