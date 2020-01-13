@@ -12806,37 +12806,25 @@ void CvPlayer::killGoldenAgeUnits(CvUnit* pUnitAlive)
 	SAFE_DELETE_ARRAY(pabUnitUsed);
 }
 
-
-int CvPlayer::greatPeopleThreshold(bool bMilitary) const
+int CvPlayer::greatPeopleThresholdMilitary() const
 {
-	int iThreshold;
-
-	if (bMilitary)
-	{
-		iThreshold = ((GC.getDefineINT("GREAT_GENERALS_THRESHOLD") * std::max(0, (getGreatGeneralsThresholdModifier() + 100))) / 100);
-	}
-	else
-	{
-		iThreshold = ((GC.getDefineINT("GREAT_PEOPLE_THRESHOLD") * std::max(0, (getGreatPeopleThresholdModifier() + 100))) / 100);
-	}
-
+	int iThreshold = ((GC.getDefineINT("GREAT_GENERALS_THRESHOLD") * std::max(0, (getGreatGeneralsThresholdModifier() + 100))) / 100);
 	iThreshold *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getGreatPeoplePercent();
-	if (bMilitary)
-	{
-		iThreshold /= std::max(1, GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent());
-	}
-	else
-	{
-		iThreshold /= 100;
-	}
-
+	iThreshold /= std::max(1, GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent());
 	iThreshold *= GC.getEraInfo(GC.getGameINLINE().getStartEra()).getGreatPeoplePercent();
 	iThreshold /= 100;
-
-
 	return std::max(1, iThreshold);
 }
 
+int CvPlayer::greatPeopleThresholdNonMilitary() const
+{
+	int iThreshold = ((GC.getDefineINT("GREAT_PEOPLE_THRESHOLD") * std::max(0, (getGreatPeopleThresholdModifier() + 100))) / 100);
+	iThreshold *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getGreatPeoplePercent();
+	iThreshold /= 100;
+	iThreshold *= GC.getEraInfo(GC.getGameINLINE().getStartEra()).getGreatPeoplePercent();
+	iThreshold /= 100;
+	return std::max(1, iThreshold);
+}
 
 int CvPlayer::specialistYield(SpecialistTypes eSpecialist, YieldTypes eYield) const
 {
@@ -15570,83 +15558,54 @@ int CvPlayer::getCombatExperience() const
 	return m_iCombatExperience;
 }
 
+namespace {
+	int calculateGreatGeneralSpawnCityScore(const CvCity* city, int numCities)
+	{
+		int iValue = 4 * GC.getGameINLINE().getSorenRandNum(numCities, "Warlord City Selection");
+
+		for (int i = 0; i < NUM_YIELD_TYPES; i++)
+		{
+			iValue += city->findYieldRateRank((YieldTypes)i);
+		}
+		iValue += city->findPopulationRank();
+
+		return iValue;
+	}
+}
+
 void CvPlayer::setCombatExperience(int iExperience, UnitTypes eGGType)
 {
+	FAssertMsg(iExperience > 0, "iExperience must be greater than 0");
+
 	iExperience = std::max(0, iExperience);
-	UnitTypes eGGTypetoAssign = (UnitTypes)GC.getInfoTypeForString("UNIT_GREAT_GENERAL");
-	if (eGGType == NO_UNIT)
+
+	if (iExperience == getCombatExperience())
 	{
-		eGGType = (UnitTypes)GC.getInfoTypeForString("UNIT_GREAT_GENERAL");
+		return;
 	}
 
-	if (iExperience != getCombatExperience())
+	const int iExperienceDiff = std::max(0, iExperience - m_iCombatExperience);
+
+	changeGreatGeneralPointsForType(eGGType == NO_UNIT? (UnitTypes)GC.getInfoTypeForString("UNIT_GREAT_GENERAL") : eGGType, iExperienceDiff);
+	
+	m_iCombatExperience = iExperience;
+
+	if (!isNPC() || (isHominid() && GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)))
 	{
-		int iExperienceDiff = std::max(0, (iExperience - m_iCombatExperience));
-		changeGreatGeneralPointsForType(eGGType, iExperienceDiff);
-		m_iCombatExperience = iExperience;
-/*************************************************************************************************/
-/**	Great Generals From Barbarian Combat Start													**/
-/**			Oct 19 2009																			**/
-/**																								**/
-/*************************************************************************************************/
-		if (!isNPC() || (isHominid() && GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)))
-/*************************************************************************************************/
+		const int iExperienceThreshold = greatPeopleThresholdMilitary();
+		if (m_iCombatExperience >= iExperienceThreshold && iExperienceThreshold > 0)
 		{
-			eGGTypetoAssign = getGreatGeneralTypetoAssign();
-			int iExperienceThreshold = greatPeopleThreshold(true);
-			if (m_iCombatExperience >= iExperienceThreshold && iExperienceThreshold > 0)
+			// create great person
+			CvCity* pBestCity = scoring::min_score(cities(), bind(calculateGreatGeneralSpawnCityScore, _1, getNumCities())).get_value_or(nullptr);
+			if (pBestCity)
 			{
-				// create great person
-				CvCity* pBestCity = NULL;
-				int iBestValue = MAX_INT;
-				int iLoop;
-				for (CvCity* pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
-				{
-					int iValue = 4 * GC.getGameINLINE().getSorenRandNum(getNumCities(), "Warlord City Selection");
-
-					for (int i = 0; i < NUM_YIELD_TYPES; i++)
-					{
-						iValue += pLoopCity->findYieldRateRank((YieldTypes)i);
-					}
-					iValue += pLoopCity->findPopulationRank();
-
-					if (iValue < iBestValue)
-					{
-						pBestCity = pLoopCity;
-						iBestValue = iValue;
-					}
-				}
-
-				if (pBestCity)
-				{
-					//TB WAS:
-					//int iRandOffset = GC.getGameINLINE().getSorenRandNum(GC.getNumUnitInfos(), "Warlord Unit Generation");
-					//for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
-					//{
-					//	UnitTypes eLoopUnit = (UnitTypes)((iI + iRandOffset) % GC.getNumUnitInfos());
-					//	/************************************************************************************************/
-					//	/* Afforess	                  Start		 12/19/09                                                */
-					//	/*                                                                                              */
-					//	/*                                                                                              */
-					//	/************************************************************************************************/
-					//	/* was:
-					//	if (GC.getUnitInfo(eLoopUnit).getLeaderExperience() > 0 || GC.getUnitInfo(eLoopUnit).getLeaderPromotion() != NO_PROMOTION)
-					//	*/
-					//	if (GC.getUnitInfo(eLoopUnit).isGreatGeneral())
-					//	/************************************************************************************************/
-					//	/* Afforess	                     END                                                            */
-					//	/************************************************************************************************/
-					//	{
-					//		pBestCity->createGreatPeople(eLoopUnit, false, true);
-					//		setCombatExperience(getCombatExperience() - iExperienceThreshold);
-					//		break;
-					//	}
-					//}
-					//TB Now:
-					pBestCity->createGreatPeople(eGGTypetoAssign, false, true);
-					m_iCombatExperience -= iExperienceThreshold;
-					setGreatGeneralPointsForType(eGGTypetoAssign, 0);
-				}
+				const UnitTypes eGGTypetoAssign = getGreatGeneralTypetoAssign();
+				pBestCity->createGreatPeople(eGGTypetoAssign, false, true);
+				// HACK: overflows can cause experience explosion, this will ensure we don't have more than 1 GG of experience accumulated
+				m_iCombatExperience = (m_iCombatExperience - iExperienceThreshold) % iExperienceThreshold;
+				// Normal code: if the overflows weren't present this code would be used
+				// m_iCombatExperience = m_iCombatExperience - iExperienceThreshold;
+				setGreatGeneralPointsForType(eGGTypetoAssign, 0);
 			}
 		}
 	}

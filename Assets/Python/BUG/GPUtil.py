@@ -73,7 +73,7 @@ def getDisplayCity():
 def findNextCity():
 	CyCity = iTurns = 0
 	CyPlayer = GC.getActivePlayer()
-	iThreshold = CyPlayer.greatPeopleThreshold(False)
+	iThreshold = CyPlayer.greatPeopleThresholdNonMilitary()
 
 	CyCityX, i = CyPlayer.firstCity(False)
 	while CyCityX:
@@ -105,7 +105,7 @@ def findMaxCity():
 def getCityTurns(CyCity):
 	if CyCity:
 		CyPlayer = GC.getPlayer(CyCity.getOwner())
-		iThreshold = CyPlayer.greatPeopleThreshold(False)
+		iThreshold = CyPlayer.greatPeopleThresholdNonMilitary()
 		iRate = CyCity.getGreatPeopleRate()
 		if iRate > 0:
 			iProgress = CyCity.getGreatPeopleProgress()

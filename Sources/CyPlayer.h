@@ -265,7 +265,8 @@ public:
 	int unitsRequiredForGoldenAge();
 	int unitsGoldenAgeCapable();
 	int unitsGoldenAgeReady();
-	int greatPeopleThreshold(bool bMilitary);
+	int greatPeopleThresholdMilitary();
+	int greatPeopleThresholdNonMilitary();
 	int specialistYield(int /*SpecialistTypes*/ eSpecialist, int /*YieldTypes*/ eCommerce);
 	int specialistCommerce(int /*SpecialistTypes*/ eSpecialist, int /*CommerceTypes*/ eCommerce);
 
