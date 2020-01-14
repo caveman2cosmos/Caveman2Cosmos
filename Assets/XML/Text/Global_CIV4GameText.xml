@@ -3194,21 +3194,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BEACON_CORAL</Tag>
-		<English>Build a [LINK=IMPROVEMENT_BEACON_CORAL]Beacon[\LINK]</English>
-		<French>Placer une [LINK=IMPROVEMENT_BEACON_CORAL]Balise[\LINK]</French>
-		<German>Bauen ein [LINK=IMPROVEMENT_BEACON_CORAL]Leuchtfeuer[\LINK]</German>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_BEACON_CORAL]Torre di segnalazione[\LINK]</Italian>
-		<Spanish>Construir una [LINK=IMPROVEMENT_BEACON_CORAL]Baliza[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_BEACON_CORAL]Boję[\LINK]</Polish>
+		<English>Build a [LINK=IMPROVEMENT_BEACON_CORAL]Beacon[\LINK] (Coral)</English>
+		<French>Placer une [LINK=IMPROVEMENT_BEACON_CORAL]Balise[\LINK] (Coral)</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_BEACON_CORAL]Leuchtfeuer[\LINK] (Coral)</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_BEACON_CORAL]Torre di segnalazione[\LINK] (Coral)</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_BEACON_CORAL]Baliza[\LINK] (Coral)</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_BEACON_CORAL]Boję[\LINK] (Coral)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BEACON_REEF</Tag>
-		<English>Build a [LINK=IMPROVEMENT_BEACON_REEF]Beacon[\LINK]</English>
-		<French>Placer une [LINK=IMPROVEMENT_BEACON_REEF]Balise[\LINK]</French>
-		<German>Bauen ein [LINK=IMPROVEMENT_BEACON_REEF]Leuchtfeuer[\LINK]</German>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_BEACON_REEF]Torre di segnalazione[\LINK]</Italian>
-		<Spanish>Construir una [LINK=IMPROVEMENT_BEACON_REEF]Baliza[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_BEACON_REEF]Boję[\LINK]</Polish>
+		<English>Build a [LINK=IMPROVEMENT_BEACON_REEF]Beacon[\LINK] (Reef)</English>
+		<French>Placer une [LINK=IMPROVEMENT_BEACON_REEF]Balise[\LINK] (Reef)</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_BEACON_REEF]Leuchtfeuer[\LINK] (Reef)</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_BEACON_REEF]Torre di segnalazione[\LINK] (Reef)</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_BEACON_REEF]Baliza[\LINK] (Reef)</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_BEACON_REEF]Boję[\LINK] (Reef)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BREAK_ICE</Tag>
@@ -3218,6 +3218,15 @@
 		<Italian>Rompi il [LINK=FEATURE_ICE]Ghiaccio[\LINK]</Italian>
 		<Spanish>Romper un [LINK=FEATURE_ICE]Iceberg[\LINK]</Spanish>
 		<Polish>Złam [LINK=FEATURE_ICE]Lód[\LINK]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_BREAK_ICE_K</Tag>
+		<English>Break [LINK=FEATURE_ICE]Ice[\LINK] (Consumed)</English>
+		<French>Faille de [LINK=FEATURE_ICE]Glace[\LINK] (Consumed)</French>
+		<German>[LINK=FEATURE_ICE]Eis[\LINK]-Brechen (Consumed)</German>
+		<Italian>Rompi il [LINK=FEATURE_ICE]Ghiaccio[\LINK] (Consumed)</Italian>
+		<Spanish>Romper un [LINK=FEATURE_ICE]Iceberg[\LINK] (Consumed)</Spanish>
+		<Polish>Złam [LINK=FEATURE_ICE]Lód[\LINK] (Consumed)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BUNKER</Tag>
@@ -3335,6 +3344,15 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_DESERT_CAMP]Pustynny Obóz[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_DESERT_CAMP_K</Tag>
+		<English>Build a [LINK=IMPROVEMENT_DESERT_CAMP]Desert Camp[\LINK] (Consumed)</English>
+		<French>Construire un [LINK=IMPROVEMENT_DESERT_CAMP]Camp de Desert[\LINK] (Consumed)</French>
+		<German>Errichte [LINK=IMPROVEMENT_DESERT_CAMP]Wuste feldlager[\LINK] (Consumed)</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_DESERT_CAMP]campo nella deserto[\LINK] (Consumed)</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_DESERT_CAMP]Campamento de desierto[\LINK] (Consumed)</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_DESERT_CAMP]Pustynny Obóz[\LINK] (Consumed)</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_EXPLORETEMPLE</Tag>
 		<English>[LINK=IMPROVEMENT_EXPLORETEMPLE]Examine Ruins[\LINK]</English>
 		<French>[LINK=IMPROVEMENT_EXPLORETEMPLE]Ruines examne[\LINK]</French>
@@ -3360,6 +3378,15 @@
 		<Italian>Costruisci una [LINK=IMPROVEMENT_3FACTORY]Fabbrica[\LINK]</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_3FACTORY]Fábrica[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_3FACTORY]Fabrykę[\LINK]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_FACTORY_COLD</Tag>
+		<English>Build [LINK=IMPROVEMENT_3FACTORY]Factory (Cold Climate)[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_3FACTORY]Usine (Cold Climate)[\LINK]</French>
+		<German>Errichte [LINK=IMPROVEMENT_3FACTORY]Fabrik (Cold Climate)[\LINK]</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_3FACTORY]Fabbrica (Cold Climate)[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_3FACTORY]Fábrica (Cold Climate)[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_3FACTORY]Fabrykę (Cold Climate)[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FARM</Tag>
@@ -3465,6 +3492,14 @@
 		<Polish>[LINK=IMPROVEMENT_GRAIN_GATHERER]Zbieraj Plony[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_GRAIN_GATHERER_K</Tag>
+		<English>[LINK=IMPROVEMENT_GRAIN_GATHERER]Gather Grains[\LINK] (Consumed)</English>
+		<French>[LINK=IMPROVEMENT_GRAIN_GATHERER]Récolter les céréales[\LINK] (Consumed)</French>
+		<German>[LINK=IMPROVEMENT_GRAIN_GATHERER]Körner sammeln[\LINK] (Consumed)</German>
+		<Spanish>[LINK=IMPROVEMENT_GRAIN_GATHERER]Recolectar cereales[\LINK] (Consumed)</Spanish>
+		<Polish>[LINK=IMPROVEMENT_GRAIN_GATHERER]Zbieraj Plony[\LINK] (Consumed)</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_GRAPE_GATHERER</Tag>
 		<English>Build a [LINK=IMPROVEMENT_GRAPE_GATHERER]Grape Gathering Camp[\LINK]</English>
 		<French>Installer un [LINK=IMPROVEMENT_GRAPE_GATHERER]camp de récolte de Raisins[\LINK]</French>
@@ -3551,6 +3586,15 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_HARVEST_KELP]Uprawę Wodorostów[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_HARVEST_KELP_K</Tag>
+		<English>[LINK=IMPROVEMENT_HARVEST_KELP]Harvest the Kelp[\LINK] (Consumed)</English>
+		<French>[LINK=IMPROVEMENT_HARVEST_KELP]Récolter les Algues[\LINK] (Consumed)</French>
+		<German>[LINK=IMPROVEMENT_HARVEST_KELP]Ernte Seetang[\LINK] (Consumed)</German>
+		<Italian>[LINK=IMPROVEMENT_HARVEST_KELP]Raccogli il Kelp[\LINK] (Consumed)</Italian>
+		<Spanish>[LINK=IMPROVEMENT_HARVEST_KELP]Recolectar algas[\LINK] (Consumed)</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_HARVEST_KELP]Uprawę Wodorostów[\LINK] (Consumed)</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_HIGHWAY</Tag>
 		<English>Build a Highway</English>
 		<French>Construire une [COLOR_BUILDING_TEXT]Autoroute[COLOR_REVERT]</French>
@@ -3614,13 +3658,31 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_JUNGLE_CAMP]Obóz w Dżungli[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_LIGHTHOUSE</Tag>
-		<English>Build a [LINK=IMPROVEMENT_LIGHTHOUSE]Lighthouse[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_LIGHTHOUSE]Phare[\LINK]</French>
-		<German>Bauen ein [LINK=IMPROVEMENT_LIGHTHOUSE]Leuchtturm[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_LIGHTHOUSE]Faro[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_LIGHTHOUSE]Faro[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_LIGHTHOUSE]Latarnię Morską[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_JUNGLE_CAMP_K</Tag>
+		<English>Build a [LINK=IMPROVEMENT_JUNGLE_CAMP]Jungle Camp[\LINK] (Consumed)</English>
+		<French>Construire un [LINK=IMPROVEMENT_JUNGLE_CAMP]Camp de Jungle[\LINK] (Consumed)</French>
+		<German>Errichte [LINK=IMPROVEMENT_JUNGLE_CAMP]dschungel feldlager[\LINK] (Consumed)</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_JUNGLE_CAMP]campo nella giungla[\LINK] (Consumed)</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_JUNGLE_CAMP]Campamento selvático[\LINK] (Consumed)</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_JUNGLE_CAMP]Obóz w Dżungli[\LINK] (Consumed)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_LIGHTHOUSE_CORAL</Tag>
+		<English>Build a [LINK=IMPROVEMENT_LIGHTHOUSE]Lighthouse[\LINK] (Coral)</English>
+		<French>Construire un [LINK=IMPROVEMENT_LIGHTHOUSE]Phare[\LINK] (Coral)</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_LIGHTHOUSE]Leuchtturm[\LINK] (Coral)</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_LIGHTHOUSE]Faro[\LINK] (Coral)</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_LIGHTHOUSE]Faro[\LINK] (Coral)</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_LIGHTHOUSE]Latarnię Morską[\LINK] (Coral)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_LIGHTHOUSE_REEF</Tag>
+		<English>Build a [LINK=IMPROVEMENT_LIGHTHOUSE]Lighthouse[\LINK] (Reef)</English>
+		<French>Construire un [LINK=IMPROVEMENT_LIGHTHOUSE]Phare[\LINK] (Reef)</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_LIGHTHOUSE]Leuchtturm[\LINK] (Reef)</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_LIGHTHOUSE]Faro[\LINK] (Reef)</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_LIGHTHOUSE]Faro[\LINK] (Reef)</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_LIGHTHOUSE]Latarnię Morską[\LINK] (Reef)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LISTENING_NODE</Tag>
@@ -3716,6 +3778,15 @@
 		<Italian>Costruisci un [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Funghi raccoglitori[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Recolector de setas[\LINK]</Spanish>
 		<Polish>Zbudu [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Obóz Zbieraczy Grzybów[\LINK]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_MUSHROOM_GATHERER_K</Tag>
+		<English>Build a [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Mushroom Gatherer[\LINK] (Consumed)</English>
+		<French>Construire une [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Champignonnière[\LINK] (Consumed)</French>
+		<German>[LINK=IMPROVEMENT_MUSHROOM_GATHERER]Pilze sammeln[\LINK] (Consumed)</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Funghi raccoglitori[\LINK] (Consumed)</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Recolector de setas[\LINK] (Consumed)</Spanish>
+		<Polish>Zbudu [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Obóz Zbieraczy Grzybów[\LINK] (Consumed)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_NATURE_PRESERVE</Tag>
@@ -3909,6 +3980,15 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_ROCK_GATHERER]Warsztat Kamiennych Narzędzi[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_ROCK_GATHERER_K</Tag>
+		<English>Build a [LINK=IMPROVEMENT_ROCK_GATHERER]Stone Tools Workshop[\LINK] (Consumed)</English>
+		<French>Construire un [LINK=IMPROVEMENT_ROCK_GATHERER]Atelier d'Outils en pierre [\LINK] (Consumed)</French>
+		<German>[LINK=IMPROVEMENT_ROCK_GATHERER]Steinwerkstatt bauen[\LINK] (Consumed)</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_ROCK_GATHERER]Raccoglitore di pietre[\LINK] (Consumed)</Italian>
+		<Spanish>Contruir un [LINK=IMPROVEMENT_ROCK_GATHERER]Taller de herramientas de piedra[\LINK] (Consumed)</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_ROCK_GATHERER]Warsztat Kamiennych Narzędzi[\LINK] (Consumed)</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_ROCK_GATHERER2</Tag>
 		<English>[LINK=IMPROVEMENT_ROCK_GATHERER2]Gather Special Stone[\LINK]</English>
 		<French>[LINK=IMPROVEMENT_ROCK_GATHERER2]Récupérer des Pierres remarquables[\LINK]</French>
@@ -3931,6 +4011,12 @@
 		<English>[LINK=IMPROVEMENT_SALT_GATHERER]Gather Salt[\LINK]</English>
 		<French>[LINK=IMPROVEMENT_SALT_GATHERER]Récolter du Sel[\LINK]</French>
 		<Polish>[LINK=IMPROVEMENT_SALT_GATHERER]Zbieraj Sól[\LINK]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SALT_GATHERER_K</Tag>
+		<English>[LINK=IMPROVEMENT_SALT_GATHERER]Gather Salt[\LINK] (Consumed)</English>
+		<French>[LINK=IMPROVEMENT_SALT_GATHERER]Récolter du Sel[\LINK] (Consumed)</French>
+		<Polish>[LINK=IMPROVEMENT_SALT_GATHERER]Zbieraj Sól[\LINK] (Consumed)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SANITIZE</Tag>
@@ -4082,6 +4168,15 @@
 		<Italian>Costruisci a [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_TAR_GATHERER]Recolector de alquitrán[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_TAR_GATHERER]Chatę Zbieracza Smoły[\LINK]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_TAR_GATHERER_K</Tag>
+		<English>Build a [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK] (Consumed)</English>
+		<French>Construire un [LINK=IMPROVEMENT_TAR_GATHERER]récolteur de goudron[\LINK] (Consumed)</French>
+		<German>Bauen a [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK] (Consumed)</German>
+		<Italian>Costruisci a [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK] (Consumed)</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_TAR_GATHERER]Recolector de alquitrán[\LINK] (Consumed)</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_TAR_GATHERER]Chatę Zbieracza Smoły[\LINK] (Consumed)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_DESERT</Tag>
@@ -4250,6 +4345,15 @@
 		<Italian>Costruisci un [LINK=IMPROVEMENT_WETLANDS_CAMP]campo nella zone umide[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_WETLANDS_CAMP]Campamento de humedal[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_WETLANDS_CAMP]Obóz na bagnach[\LINK]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_WETLANDS_CAMP_K</Tag>
+		<English>Build a [LINK=IMPROVEMENT_WETLANDS_CAMP]Wetlands Camp[\LINK] (Consumed)</English>
+		<French>Construire un [LINK=IMPROVEMENT_WETLANDS_CAMP]Camp de zones humides[\LINK] (Consumed)</French>
+		<German>Errichte [LINK=IMPROVEMENT_WETLANDS_CAMP]feuchtgebiete feldlager[\LINK] (Consumed)</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_WETLANDS_CAMP]campo nella zone umide[\LINK] (Consumed)</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_WETLANDS_CAMP]Campamento de humedal[\LINK] (Consumed)</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_WETLANDS_CAMP]Obóz na bagnach[\LINK] (Consumed)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WHALING_SHIPS</Tag>
@@ -8277,7 +8381,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HELLENIC_MONASTERY_CIVIC_EXTRA_HEALTHINESS</Tag>
 		<English>[ICON_HEALTHY] from [LINK=BUILDING_HELLENIC_MONASTERY]Hellenic Gymnasia[\LINK]</English>
-		<French>[ICON_HEALTHY] du [LINK=BUILDING_HELLENIC_MONASTERY]Monastère hellénique [\LINK]</French>
+		<French>[ICON_HEALTHY] du [LINK=BUILDING_HELLENIC_MONASTERY]Monastère hellénique[\LINK]</French>
 		<German>[ICON_HEALTHY] vom [LINK=BUILDING_HELLENIC_MONASTERY]Hellenistischen Gymnasium[\LINK]</German>
 		<Italian>[ICON_HEALTHY] da [LINK=BUILDING_HELLENIC_MONASTERY]Monastero ellenico[\LINK]</Italian>
 		<Spanish>[ICON_HEALTHY] por [LINK=BUILDING_HELLENIC_MONASTERY]Gimnasio helénico[\LINK]</Spanish>
