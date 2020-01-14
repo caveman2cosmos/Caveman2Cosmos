@@ -2401,19 +2401,19 @@ void CvUnitAI::AI_workerMove()
 		//	Look for a local group we can join to be safe!
 		AI_setLeaderPriority(LEADER_PRIORITY_MIN);	//	We don't want to take control
 
-		if ( AI_group(UNITAI_HUNTER, -1, -1, -1, false, true, false, 1) )
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_HUNTER).ignoreOwnUnitType().maxPathTurns(1)))
 		{
 			return;
 		}
-		if ( AI_group(UNITAI_ATTACK, -1, -1, -1, true, true, false, 1) )
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK).ignoreFaster().ignoreOwnUnitType().maxPathTurns(1)))
 		{
 			return;
 		}
-		if ( AI_group(UNITAI_ATTACK_CITY, -1, -1, -1, true, true, false, 1) )
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK_CITY).ignoreFaster().ignoreOwnUnitType().maxPathTurns(1)))
 		{
 			return;
 		}
-		if ( AI_group(UNITAI_COUNTER, -1, -1, -1, true, true, false, 1) )
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_COUNTER).ignoreFaster().ignoreOwnUnitType().maxPathTurns(1)))
 		{
 			return;
 		}
@@ -3085,7 +3085,7 @@ void CvUnitAI::AI_attackMove()
 
 	if ( MISSIONAI_REGROUP == getGroup()->AI_getMissionAIType() )
 	{
-		if (AI_group(UNITAI_SETTLE, 2, -1, -1, false, false, false, 1, true))
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_SETTLE).maxGroupSize(2).maxPathTurns(1).allowRegrouping()))
 		{
 			return;
 		}
@@ -3208,12 +3208,12 @@ void CvUnitAI::AI_attackMove()
 		
 		if (!bDanger)
 		{
-			if (AI_group(UNITAI_SETTLE, 1, -1, -1, false, false, false, 3, true))
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_SETTLE).maxGroupSize(1).maxPathTurns(3).allowRegrouping()))
 			{
 				return;
 			}
 
-			if (AI_group(UNITAI_SETTLE, 2, -1, -1, false, false, false, 3, true))
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_SETTLE).maxGroupSize(2).maxPathTurns(3).allowRegrouping()))
 			{
 				return;
 			}
@@ -3488,12 +3488,13 @@ void CvUnitAI::AI_attackMove()
 				}
 			}
 
-			if (AI_group(UNITAI_ATTACK_CITY, /*iMaxGroup*/ 1, /*iMaxOwnUnitAI*/ 1, -1, bIgnoreFaster, true, true, /*iMaxPath*/ 5))
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK_CITY).maxGroupSize(1).maxOwnUnitAI(1).ignoreFaster(bIgnoreFaster).ignoreOwnUnitType().stackOfDoom().maxPathTurns(5))
+				)
 			{
 				return;
 			}
 
-			if (AI_group(UNITAI_ATTACK, /*iMaxGroup*/ 1, /*iMaxOwnUnitAI*/ 1, -1, true, true, false, /*iMaxPath*/ 4))
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK).maxGroupSize(1).maxOwnUnitAI(1).ignoreFaster().ignoreOwnUnitType().maxPathTurns(4)))
 			{
 				return;
 			}
@@ -3501,13 +3502,13 @@ void CvUnitAI::AI_attackMove()
 			// BBAI TODO: Need group to be fast, need to ignore slower groups
 			//if (GET_PLAYER(getOwnerINLINE()).AI_isDoStrategy(AI_STRATEGY_FASTMOVERS))
 			//{
-			//	if (AI_group(UNITAI_ATTACK, /*iMaxGroup*/ 4, /*iMaxOwnUnitAI*/ 1, -1, true, false, false, /*iMaxPath*/ 3))
+			//	if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK).maxGroupSize(4).maxOwnUnitAI(1).ignoreFaster().maxPathTurns(3)))
 			//	{
 			//		return;
 			//	}
 			//}
 
-			if (AI_group(UNITAI_ATTACK, /*iMaxGroup*/ 1, /*iMaxOwnUnitAI*/ 1, -1, true, false, false, /*iMaxPath*/ 1))
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK).maxGroupSize(1).maxOwnUnitAI(1).ignoreFaster().maxPathTurns(1)))
 			{
 				return;
 			}
@@ -4641,14 +4642,28 @@ void CvUnitAI::AI_attackCityMove()
 		{
 			// BBAI Notes: Add this stack lead by bombard unit to stack probably not lead by a bombard unit
 			// BBAI TODO: Some sense of minimum stack size?  Can have big stack moving 10 turns to merge with tiny stacks
-			if (AI_group(UNITAI_ATTACK_CITY, -1, -1, -1, bIgnoreFaster, true, true, /*iMaxPath*/ 10, /*bAllowRegrouping*/ true))
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK_CITY)
+				.biggerGroupOnly()
+				.mergeWholeGroup()
+				.ignoreFaster(bIgnoreFaster)
+				.ignoreOwnUnitType()
+				.stackOfDoom()
+				.maxPathTurns(10)
+				.allowRegrouping()))
 			{
 				return;
 			}
 		}
 		else
 		{
-			if (AI_group(UNITAI_ATTACK_CITY, AI_stackOfDoomExtra() * 2, -1, -1, bIgnoreFaster, true, true, /*iMaxPath*/ 10, /*bAllowRegrouping*/ false))
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK_CITY)
+				.maxGroupSize(AI_stackOfDoomExtra() * 2)
+				.biggerGroupOnly()
+				.mergeWholeGroup()
+				.ignoreFaster(bIgnoreFaster)
+				.ignoreOwnUnitType()
+				.stackOfDoom()
+				.maxPathTurns(10)))
 			{
 				return;
 			}
@@ -5081,7 +5096,7 @@ void CvUnitAI::AI_pillageMove()
 		}
 	}
 
-	if (AI_group(UNITAI_PILLAGE, /*iMaxGroup*/ 1, /*iMaxOwnUnitAI*/ 1, -1, /*bIgnoreFaster*/ true, false, false, /*iMaxPath*/ 3))
+	if (AI_group(GroupingParams().withUnitAI(UNITAI_PILLAGE).maxGroupSize(1).maxOwnUnitAI(1).ignoreFaster().maxPathTurns(3)))
 	{
 		return;
 	}
@@ -5215,7 +5230,7 @@ void CvUnitAI::AI_reserveMove()
 /************************************************************************************************/
 	if( !(plot()->isOwned()) )
 	{
-		if (AI_group(UNITAI_SETTLE, 1, -1, -1, false, false, false, 1, true))
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_SETTLE).maxGroupSize(1).maxPathTurns(1).allowRegrouping()))
 		{
 			return;
 		}
@@ -5231,7 +5246,7 @@ void CvUnitAI::AI_reserveMove()
 
 	if (!bDanger)
 	{
-		if (AI_group(UNITAI_SETTLE, 2, -1, -1, false, false, false, 3, true))
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_SETTLE).maxGroupSize(2).maxPathTurns(3).allowRegrouping()))
 		{
 			return;
 		}
@@ -5395,7 +5410,7 @@ void CvUnitAI::AI_counterMove()
 
 	if ( MISSIONAI_REGROUP == getGroup()->AI_getMissionAIType() )
 	{
-		if (AI_group(UNITAI_SETTLE, 2, -1, -1, false, false, false, 1, true))
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_SETTLE).maxGroupSize(2).maxPathTurns(1).allowRegrouping()))
 		{
 			return;
 		}
@@ -5536,14 +5551,14 @@ void CvUnitAI::AI_counterMove()
 		}
 	}
 
-	if (AI_group(UNITAI_ATTACK_CITY, /*iMaxGroup*/ -1, 2, -1, bIgnoreFasterStacks, /*bIgnoreOwnUnitType*/ true, /*bStackOfDoom*/ true, /*iMaxPath*/ 6))
+	if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK_CITY).maxOwnUnitAI(2).ignoreFaster(bIgnoreFasterStacks).ignoreOwnUnitType().stackOfDoom().maxPathTurns(6)))
 	{
 		return;
 	}
 	
 	bool bFastMovers = (GET_PLAYER(getOwnerINLINE()).AI_isDoStrategy(AI_STRATEGY_FASTMOVERS));
 
-	if (AI_group(UNITAI_ATTACK, /*iMaxGroup*/ 2, -1, -1, bFastMovers, /*bIgnoreOwnUnitType*/ true, /*bStackOfDoom*/ true, /*iMaxPath*/ 5))
+	if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK).maxGroupSize(2).ignoreFaster(bFastMovers).ignoreOwnUnitType().stackOfDoom().maxPathTurns(5)))
 	{
 		return;
 	}
@@ -5640,7 +5655,7 @@ void CvUnitAI::AI_cityDefenseMove()
 
 	if ( MISSIONAI_REGROUP == getGroup()->AI_getMissionAIType() )
 	{
-		if (AI_group(UNITAI_SETTLE, 5, 2, -1, false, false, false, 1, true))
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_SETTLE).maxGroupSize(5).maxOwnUnitAI(2).maxPathTurns(1).allowRegrouping()))
 		{
 			return;
 		}
@@ -5651,7 +5666,7 @@ void CvUnitAI::AI_cityDefenseMove()
 	}
 	else if( !(plot()->isOwned()) )
 	{
-		if (AI_group(UNITAI_SETTLE, 5, 2, -1, false, false, false, 2, true))
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_SETTLE).maxGroupSize(5).maxOwnUnitAI(2).maxPathTurns(2).allowRegrouping()))
 		{
 			return;
 		}
@@ -5753,7 +5768,7 @@ void CvUnitAI::AI_cityDefenseMove()
 	
 	if (!bDanger)
 	{
-		if (AI_group(UNITAI_SETTLE, /*iMaxGroup*/ 5, 2, -1, false, false, false, /*iMaxPath*/ 2, /*bAllowRegrouping*/ true))
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_SETTLE).maxGroupSize(5).maxOwnUnitAI(2).maxPathTurns(2).allowRegrouping()))
 		{
 			return;
 		}
@@ -5853,7 +5868,7 @@ void CvUnitAI::AI_cityDefenseMove()
 			}
 		}
 
-		if (AI_group(UNITAI_ATTACK_CITY, -1, 2, 4, bIgnoreFaster))
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK_CITY).maxOwnUnitAI(2).minUnitAI(4).ignoreFaster(bIgnoreFaster)))
 		{
 			return;
 		}
@@ -5958,7 +5973,7 @@ void CvUnitAI::AI_cityDefenseExtraMove()
 	{
 		if (getGroup()->getHeadUnitAI() == UNITAI_CITY_COUNTER)
 		{
-			if (AI_group(UNITAI_SETTLE, /*iMaxGroup*/ 5, 2, -1, false, false, false, /*iMaxPath*/ 4, /*bAllowRegrouping*/ true))
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_SETTLE).maxGroupSize(5).maxOwnUnitAI(2).maxPathTurns(4).allowRegrouping()))
 			{
 				return;
 			}
@@ -5994,7 +6009,7 @@ void CvUnitAI::AI_cityDefenseExtraMove()
 
 	if (getGroup()->getHeadUnitAI() == UNITAI_CITY_COUNTER)
 	{
-		if (AI_group(UNITAI_SETTLE, /*iMaxGroup*/ 5, 2, -1, false, false, false, /*iMaxPath*/ 2, /*bAllowRegrouping*/ true))
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_SETTLE).maxGroupSize(5).maxOwnUnitAI(2).maxPathTurns(2).allowRegrouping()))
 		{
 			return;
 		}
@@ -6975,23 +6990,23 @@ void CvUnitAI::AI_generalMove()
 		if (bOffenseWar && getLevel() >= 4)
 		{
 			//try to join SoD (?)
-			if (AI_group(UNITAI_ATTACK, -1, 1, 6, false, false, true, bCanDefend ? MAX_INT : 1, true, false, false)) 
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK).maxOwnUnitAI(1).minUnitAI(6).stackOfDoom().maxPathTurns(bCanDefend? MAX_INT : 1).allowRegrouping())) 
 			{
 				return;
 			}
-			if (AI_group(UNITAI_ATTACK, -1, 1, 4, false, false, true, bCanDefend ? MAX_INT : 1, true, false, false)) 
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK).maxOwnUnitAI(1).minUnitAI(4).stackOfDoom().maxPathTurns(bCanDefend ? MAX_INT : 1).allowRegrouping())) 
 			{
 				return;
 			}
-			if (AI_group(UNITAI_ATTACK_CITY, -1, 1, 4, false, false, true, bCanDefend ? MAX_INT : 1, true, false, false)) 
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK_CITY).maxOwnUnitAI(1).minUnitAI(4).stackOfDoom().maxPathTurns(bCanDefend ? MAX_INT : 1).allowRegrouping())) 
 			{
 				return;
 			}
-			if (AI_group(UNITAI_COLLATERAL, -1, 1, 4, false, false, true, bCanDefend ? MAX_INT : 1, true, false, false)) 
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_COLLATERAL).maxOwnUnitAI(1).minUnitAI(4).stackOfDoom().maxPathTurns(bCanDefend ? MAX_INT : 1).allowRegrouping()))
 			{
 				return;
 			}
-			if (AI_group(UNITAI_COUNTER, -1, 1, 3, false, false, true, bCanDefend ? MAX_INT : 1, true, false, false)) 
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_COUNTER).maxOwnUnitAI(1).minUnitAI(3).stackOfDoom().maxPathTurns(bCanDefend ? MAX_INT : 1).allowRegrouping()))
 			{
 				return;
 			}
@@ -8338,7 +8353,7 @@ void CvUnitAI::AI_pirateSeaMove()
 		if (((AI_getBirthmark() / 8) % 2) == 0)
 		{
 			// Previously code actually blocked grouping
-			if (AI_group(UNITAI_PIRATE_SEA, -1, 1, -1, true, false, false, 8))
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_PIRATE_SEA).maxOwnUnitAI(1).ignoreFaster().maxPathTurns(8)))
 			{
 				return;
 			}
@@ -8635,12 +8650,12 @@ void CvUnitAI::AI_attackSeaMove()
 		}
 	}
 
-	if (AI_group(UNITAI_CARRIER_SEA, /*iMaxGroup*/ 4, 1, -1, true, false, false, /*iMaxPath*/ 5))
+	if (AI_group(GroupingParams().withUnitAI(UNITAI_CARRIER_SEA).maxGroupSize(4).maxOwnUnitAI(1).ignoreFaster().maxPathTurns(5)))
 	{
 		return;
 	}
 	
-	if (AI_group(UNITAI_ATTACK_SEA, /*iMaxGroup*/ 1, -1, -1, true, false, false, /*iMaxPath*/ 3))
+	if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK_SEA).maxGroupSize(1).ignoreFaster().maxPathTurns(3)))
 	{
 		return;
 	}
@@ -8687,18 +8702,18 @@ void CvUnitAI::AI_attackSeaMove()
 		}
 
 		// Group with large flotillas first
-		if (AI_group(UNITAI_ASSAULT_SEA, -1, 4, 3, false, false, false, 3, false, true, false))
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_ASSAULT_SEA).maxOwnUnitAI(4).minUnitAI(3).maxPathTurns(3).withCargoOnly()))
 		{
 			return;
 		}
 
-		if (AI_group(UNITAI_ASSAULT_SEA, -1, 2, -1, false, false, false, 5, false, true, false))
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_ASSAULT_SEA).maxOwnUnitAI(2).maxPathTurns(5).withCargoOnly()))
 		{
 			return;
 		}
 	}
 	
-	if (AI_group(UNITAI_CARRIER_SEA, -1, 1, -1, false, false, false, 10))
+	if (AI_group(GroupingParams().withUnitAI(UNITAI_CARRIER_SEA).maxOwnUnitAI(1).maxPathTurns(10)))
 	{
 		return;
 	}
@@ -8884,7 +8899,7 @@ void CvUnitAI::AI_reserveSeaMove()
 		return;
 	}
 	
-	if (AI_group(UNITAI_RESERVE_SEA, 1, -1, -1, false, false, false, 8))
+	if (AI_group(GroupingParams().withUnitAI(UNITAI_RESERVE_SEA).maxGroupSize(1).maxPathTurns(8)))
 	{
 		return;
 	}
@@ -9031,7 +9046,7 @@ void CvUnitAI::AI_escortSeaMove()
 				return;
 			}
 
-			if (AI_group(UNITAI_ASSAULT_SEA, -1, /*iMaxOwnUnitAI*/ 1, -1, /*bIgnoreFaster*/ true, false, false, /*iMaxPath*/ 1))
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_ASSAULT_SEA).maxOwnUnitAI(1).ignoreFaster().maxPathTurns(1)))
 			{
 				return;
 			}
@@ -9103,12 +9118,12 @@ void CvUnitAI::AI_escortSeaMove()
 /* 	BETTER_BTS_AI_MOD						END								*/
 /********************************************************************************/
 	
-	if (AI_group(UNITAI_CARRIER_SEA, -1, /*iMaxOwnUnitAI*/ 0, -1, /*bIgnoreFaster*/ true))
+	if (AI_group(GroupingParams().withUnitAI(UNITAI_CARRIER_SEA).maxOwnUnitAI(0).ignoreFaster()))
 	{
 		return;
 	}
 		
-	if (AI_group(UNITAI_ASSAULT_SEA, -1, /*iMaxOwnUnitAI*/ 0, -1, /*bIgnoreFaster*/ true, false, false, /*iMaxPath*/ 3))
+	if (AI_group(GroupingParams().withUnitAI(UNITAI_ASSAULT_SEA).maxOwnUnitAI(0).ignoreFaster().maxPathTurns(3)))
 	{
 		return;
 	}
@@ -9123,22 +9138,22 @@ void CvUnitAI::AI_escortSeaMove()
 		return;
 	}
 	
-	if (AI_group(UNITAI_MISSILE_CARRIER_SEA, 1, 1, 1))
+	if (AI_group(GroupingParams().withUnitAI(UNITAI_MISSILE_CARRIER_SEA).maxGroupSize(1).maxOwnUnitAI(1).minUnitAI(1)))
 	{
 		return;
 	}
 
-	if (AI_group(UNITAI_ASSAULT_SEA, 1, /*iMaxOwnUnitAI*/ 0, /*iMinUnitAI*/ -1, /*bIgnoreFaster*/ true))
+	if (AI_group(GroupingParams().withUnitAI(UNITAI_ASSAULT_SEA).maxGroupSize(1).maxOwnUnitAI(0).ignoreFaster()))
 	{
 		return;
 	}
 	
-	if (AI_group(UNITAI_ASSAULT_SEA, -1, /*iMaxOwnUnitAI*/ 2, /*iMinUnitAI*/ -1, /*bIgnoreFaster*/ true))
+	if (AI_group(GroupingParams().withUnitAI(UNITAI_ASSAULT_SEA).maxOwnUnitAI(2).ignoreFaster()))
 	{
 		return;
 	}
 	
-	if (AI_group(UNITAI_CARRIER_SEA, -1, /*iMaxOwnUnitAI*/ 2, /*iMinUnitAI*/ -1, /*bIgnoreFaster*/ true))
+	if (AI_group(GroupingParams().withUnitAI(UNITAI_CARRIER_SEA).maxOwnUnitAI(2).ignoreFaster()))
 	{
 		return;
 	}
@@ -9154,7 +9169,7 @@ void CvUnitAI::AI_escortSeaMove()
 	}
 */
 	// Group only with large flotillas first
-	if (AI_group(UNITAI_ASSAULT_SEA, -1, /*iMaxOwnUnitAI*/ 4, /*iMinUnitAI*/ 3, /*bIgnoreFaster*/ true))
+	if (AI_group(GroupingParams().withUnitAI(UNITAI_ASSAULT_SEA).maxOwnUnitAI(4).minUnitAI(3).ignoreFaster()))
 	{
 		return;
 	}
@@ -9184,12 +9199,12 @@ void CvUnitAI::AI_escortSeaMove()
 /************************************************************************************************/
 	// If nothing else useful to do, escort nearby large flotillas even if they're faster
 	// Gives Caravel escorts something to do during the Galleon/pre-Frigate era
-	if (AI_group(UNITAI_ASSAULT_SEA, -1, /*iMaxOwnUnitAI*/ 4, /*iMinUnitAI*/ 3, /*bIgnoreFaster*/ false, false, false, 4, false, true))
+	if (AI_group(GroupingParams().withUnitAI(UNITAI_ASSAULT_SEA).maxOwnUnitAI(4).minUnitAI(3).maxPathTurns(4).withCargoOnly()))
 	{
 		return;
 	}
 
-	if (AI_group(UNITAI_ASSAULT_SEA, -1, /*iMaxOwnUnitAI*/ 2, /*iMinUnitAI*/ -1, /*bIgnoreFaster*/ false, false, false, 1, false, true))
+	if (AI_group(GroupingParams().withUnitAI(UNITAI_ASSAULT_SEA).maxOwnUnitAI(2).maxPathTurns(1).withCargoOnly()))
 	{
 		return;
 	}
@@ -9614,7 +9629,7 @@ void CvUnitAI::AI_assaultSeaMove()
 
 		if( (iCargoCount > 0) && (iEscorts == 0) )
 		{
-			if (AI_group(UNITAI_ASSAULT_SEA,-1,-1,-1,/*bIgnoreFaster*/true,false,false,/*iMaxPath*/1,false,/*bCargoOnly*/true,false,MISSIONAI_ASSAULT))
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_ASSAULT_SEA).ignoreFaster().maxPathTurns(1).withCargoOnly().ignoreMissionAIType(MISSIONAI_ASSAULT)))
 			{
 				return;
 			}
@@ -9744,7 +9759,7 @@ void CvUnitAI::AI_assaultSeaMove()
 		{
 			if ( iCargoCount > 0 )
 			{
-				if (AI_group(UNITAI_ASSAULT_SEA,-1,-1,-1,/*bIgnoreFaster*/true,false,false,/*iMaxPath*/5,false,/*bCargoOnly*/true,false,MISSIONAI_ASSAULT))
+				if (AI_group(GroupingParams().withUnitAI(UNITAI_ASSAULT_SEA).ignoreFaster().maxPathTurns(5).withCargoOnly().ignoreMissionAIType(MISSIONAI_ASSAULT)))
 				{
 					return;
 				}
@@ -10029,12 +10044,12 @@ void CvUnitAI::AI_assaultSeaMove()
 	if ((bFull || bReinforce) && !bAttack)
 	{
 		// Group with nearby transports with units on board
-		if (AI_group(UNITAI_ASSAULT_SEA, -1, /*iMaxOwnUnitAI*/ -1, -1, true, false, false, 2, false, true, false, MISSIONAI_ASSAULT))
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_ASSAULT_SEA).ignoreFaster().maxPathTurns(2).withCargoOnly().ignoreMissionAIType(MISSIONAI_ASSAULT)))
 		{
 			return;
 		}
 
-		if (AI_group(UNITAI_ASSAULT_SEA, -1, -1, -1, true, false, false, 10, false, true, false, MISSIONAI_ASSAULT))
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_ASSAULT_SEA).ignoreFaster().maxPathTurns(10).withCargoOnly().ignoreMissionAIType(MISSIONAI_ASSAULT)))
 		{
 			return;
 		}
@@ -10837,7 +10852,7 @@ void CvUnitAI::AI_carrierSeaMove()
 		}
 	}
 	
-	if (AI_group(UNITAI_CARRIER_SEA, -1, /*iMaxOwnUnitAI*/ 1))
+	if (AI_group(GroupingParams().withUnitAI(UNITAI_CARRIER_SEA).maxOwnUnitAI(1)))
 	{
 		return;
 	}
@@ -14023,19 +14038,17 @@ namespace {
 		return GET_PLAYER(unit->getOwnerINLINE()).AI_unitImpassableCount(unit->getUnitType());
 	}
 }
-// Added new options to aid transport grouping
-// Returns true if a group was joined or a mission was pushed...
-bool CvUnitAI::AI_group(UnitAITypes eUnitAI, int iMaxGroup, int iMaxOwnUnitAI, int iMinUnitAI, bool bIgnoreFaster, bool bIgnoreOwnUnitType, bool bStackOfDoom, int iMaxPath, bool bAllowRegrouping, bool bWithCargoOnly, bool bInCityOnly, MissionAITypes eIgnoreMissionAIType)
+
+bool CvUnitAI::AI_group(const GroupingParams& params)
 {
 	PROFILE_FUNC();
 
-
 	// if we are on a transport, then do not regroup
 	if (isCargo()
-		|| !bAllowRegrouping && getGroup()->getNumUnits() > 1
-		|| getDomainType() == DOMAIN_LAND && !canMoveAllTerrain() && area()->getNumAIUnits(getOwnerINLINE(), eUnitAI) == 0
-		|| !AI_canGroupWithAIType(eUnitAI)
-		|| GET_PLAYER(getOwnerINLINE()).AI_getNumAIUnits(eUnitAI) == 0
+		|| !(params.bAllowRegrouping || params.bMergeWholeGroup) && getGroup()->getNumUnits() > 1
+		|| getDomainType() == DOMAIN_LAND && !canMoveAllTerrain() && area()->getNumAIUnits(getOwnerINLINE(), params.eUnitAI) == 0
+		|| !AI_canGroupWithAIType(params.eUnitAI)
+		|| GET_PLAYER(getOwnerINLINE()).AI_getNumAIUnits(params.eUnitAI) == 0
 		)
 	{
 		return false;
@@ -14047,25 +14060,27 @@ bool CvUnitAI::AI_group(UnitAITypes eUnitAI, int iMaxGroup, int iMaxOwnUnitAI, i
 	CvUnit* pBestUnit = NULL;
 
 	const bool bCanDefend = getGroup()->canDefend();
-	const int groupExtra = bStackOfDoom ? AI_stackOfDoomExtra() : 0;
+	const int groupExtra = params.bStackOfDoom ? AI_stackOfDoomExtra() : 0;
+	const int ourGroupSizeWithoutUs = getGroup()->getNumUnits() - 1;
 
-	CvReachablePlotSet plotSet(getGroup(), bCanDefend ? 0 : MOVE_OUR_TERRITORY, AI_searchRange(iMaxPath));
+	CvReachablePlotSet plotSet(getGroup(), bCanDefend ? 0 : MOVE_OUR_TERRITORY, AI_searchRange(params.iMaxPath));
 
 	// Loop over groups, AI_allowGroup blocks non-head units anyway
 	foreach_(CvSelectionGroup* group, GET_PLAYER(getOwnerINLINE()).groups_non_empty())
 	{
 		CvUnit* unit = group->getHeadUnit();
 		if (plotSet.find(unit->plot()) != plotSet.end()
-			&& (iMaxPath > 0 || unit->plot() == plot())
+			&& (params.iMaxPath > 0 || unit->plot() == plot())
 			&& !isEnemy(unit->plot()->getTeam())
-			&& AI_allowGroup(unit, eUnitAI)
-			&& (iMaxOwnUnitAI == -1 || group->countNumUnitAIType(AI_getUnitAIType()) <= iMaxOwnUnitAI + groupExtra)
-			&& (iMinUnitAI == -1 || group->countNumUnitAIType(eUnitAI) >= iMinUnitAI)
-			&& (!bIgnoreFaster || group->baseMoves() <= baseMoves())
-			&& (!bIgnoreOwnUnitType || unit->getUnitType() != getUnitType())
-			&& (!bWithCargoOnly || unit->getGroup()->hasCargo())
-			&& (!bInCityOnly || unit->plot()->isCity())
-			&& (eIgnoreMissionAIType == NO_MISSIONAI || eIgnoreMissionAIType != unit->getGroup()->AI_getMissionAIType())
+			&& (!params.bBiggerGroupOnly || group->getNumUnits() > ourGroupSizeWithoutUs)
+			&& AI_allowGroup(unit, params.eUnitAI)
+			&& (params.iMaxOwnUnitAI == -1 || group->countNumUnitAIType(AI_getUnitAIType()) <= params.iMaxOwnUnitAI + groupExtra)
+			&& (params.iMinUnitAI == -1 || group->countNumUnitAIType(params.eUnitAI) >= params.iMinUnitAI)
+			&& (!params.bIgnoreFaster || group->baseMoves() <= baseMoves())
+			&& (!params.bIgnoreOwnUnitType || unit->getUnitType() != getUnitType())
+			&& (!params.bWithCargoOnly || unit->getGroup()->hasCargo())
+			&& (!params.bInCityOnly || unit->plot()->isCity())
+			&& (params.eIgnoreMissionAIType == NO_MISSIONAI || params.eIgnoreMissionAIType != unit->getGroup()->AI_getMissionAIType())
 			&& !unit->plot()->isVisibleEnemyUnit(this)
 			&& (
 				(iOurImpassableCount == 0 && AI_getUnitAIType() != UNITAI_ASSAULT_SEA)
@@ -14073,16 +14088,16 @@ bool CvUnitAI::AI_group(UnitAITypes eUnitAI, int iMaxGroup, int iMaxOwnUnitAI, i
 				iOurImpassableCount == algo::max_element(group->units() | transformed(unitImpassableCount)).get_value_or(0)
 				)
 			&& (
-				iMaxGroup == -1
+				params.iMaxGroup == -1
 				||
-				group->getNumUnits() + GET_PLAYER(getOwnerINLINE()).AI_unitTargetMissionAIs(unit, MISSIONAI_GROUP, getGroup()) <= iMaxGroup + groupExtra
+				group->getNumUnits() + GET_PLAYER(getOwnerINLINE()).AI_unitTargetMissionAIs(unit, MISSIONAI_GROUP, getGroup()) <= params.iMaxGroup + groupExtra
 				)
 			)
 		{
 			int iPathTurns;
 			if (generatePath(unit->plot(), bCanDefend ? 0 : MOVE_OUR_TERRITORY, true, &iPathTurns))
 			{
-				if (iPathTurns <= iMaxPath)
+				if (iPathTurns <= params.iMaxPath)
 				{
 					int iValue = 1000 * (iPathTurns + 1);
 					iValue *= 4 + group->getCargo();
@@ -14103,7 +14118,14 @@ bool CvUnitAI::AI_group(UnitAITypes eUnitAI, int iMaxGroup, int iMaxOwnUnitAI, i
 	{
 		if (atPlot(pBestUnit->plot()))
 		{
-			joinGroup(pBestUnit->getGroup());
+			if (params.bMergeWholeGroup)
+			{
+				getGroup()->mergeIntoGroup(pBestUnit->getGroup());
+			}
+			else
+			{
+				joinGroup(pBestUnit->getGroup());
+			}
 			return true;
 		}
 		else
@@ -17953,9 +17975,18 @@ namespace {
 		}
 		return constructions;
 	}
+
+	int getDecayedConstructProbability(int base, const int rate, const int iterations)
+	{
+		for (int i = 0; i < iterations; ++i)
+		{
+			base = base * rate / 100;
+		}
+		return base;
+	}
 }
 
-int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, int iDecayProbabilityRate, int iThreshold, bool assumeSameValueEverywhere, CvPlot*& pBestConstructPlot, CvPlot*& pBestPlot, CvUnitAI*& eBestTargetingUnit, BuildingTypes& eBestBuilding)
+int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, int iDecayProbabilityRate, int iThreshold, bool assumeSameValueEverywhere, CvPlot*& pBestConstructPlot, CvPlot*& pBestPlot, CvUnitAI*& pBestTargetingUnit, BuildingTypes& eBestBuilding)
 {
 	PROFILE_FUNC();
 
@@ -17965,7 +17996,7 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 	// Set outputs to default values
 	pBestConstructPlot = nullptr;
 	pBestPlot = nullptr;
-	eBestTargetingUnit = nullptr;
+	pBestTargetingUnit = nullptr;
 	eBestBuilding = NO_BUILDING;
 	
 	int iBestValue = 0;
@@ -17973,16 +18004,16 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 	//	we'll stick to it unless something significantly better is found
 	if (m_eIntendedConstructBuilding != NO_BUILDING && getGroup()->AI_getMissionAIType() == MISSIONAI_CONSTRUCT)
 	{
-		CvCity* pLoopCity = getGroup()->AI_getMissionAIPlot()->getPlotCity();
+		CvCity* city = getGroup()->AI_getMissionAIPlot()->getPlotCity();
 
-		if (pLoopCity != nullptr
-			&& canConstruct(pLoopCity->plot(), m_eIntendedConstructBuilding)
-			&& generatePath(pLoopCity->plot(), MOVE_NO_ENEMY_TERRITORY, true)
+		if (city != nullptr
+			&& canConstruct(city->plot(), m_eIntendedConstructBuilding)
+			&& generatePath(city->plot(), MOVE_NO_ENEMY_TERRITORY, true)
 			)
 		{
-			iBestValue = (pLoopCity->AI_buildingValue(m_eIntendedConstructBuilding)*110)/100;
+			iBestValue = (city->AI_buildingValue(m_eIntendedConstructBuilding)*110)/100;
 			pBestPlot = getPathEndTurnPlot();
-			pBestConstructPlot = pLoopCity->plot();
+			pBestConstructPlot = city->plot();
 			eBestBuilding = m_eIntendedConstructBuilding;
 		}
 	}
@@ -17990,7 +18021,7 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 	typedef stdext::hash_map<BuildingTypes, int> PossibleBuildingsMap;
 	PossibleBuildingsMap possibleBuildings;
 
-	CvPlayerAI& player = GET_PLAYER(getOwnerINLINE());
+	const CvPlayerAI& player = GET_PLAYER(getOwnerINLINE());
 	// Determine the list of building types we could make, based on what already exists
 	for (int iI = 0; iI < m_pUnitInfo->getNumBuildings(); iI++)
 	{
@@ -17999,30 +18030,13 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 			&& player.canConstruct(eBuilding, false, false, true)
 			&& player.AI_getNumBuildingsNeeded(eBuilding, (getDomainType() == DOMAIN_SEA)) > 0)
 		{
-			int iThisConstructBelow = iConstructBelow;
-			int iCount = 0;
-			CvCity* pLoopCity = nullptr;
-			for (CvPlayer::city_iterator cityItr = player.beginCities(); cityItr != player.endCities(); ++cityItr)
-			{
-				pLoopCity = *cityItr;
-				if (pLoopCity->getNumBuilding(eBuilding) > 0)
-				{
-					iCount++;
+			const int numBuildings = algo::count_if(player.cities(), CvCity::fn::getNumBuilding(eBuilding) != 0);
+			const bool canBuild = numBuildings < iMaxCount &&
+					(
+						iDecayProbabilityRate == 0 || getDecayedConstructProbability(iConstructBelow, iDecayProbabilityRate, numBuildings) >= iContructRand
+					);
 
-					if (iCount >= iMaxCount || iThisConstructBelow < iContructRand)
-					{
-						break;
-					}
-
-					//	If we are decaying the construct probability based on existing building count...
-					if (iDecayProbabilityRate != 0)
-					{
-						iThisConstructBelow = (iThisConstructBelow * iDecayProbabilityRate) / 100;
-					}
-				}
-			}
-
-			if (pLoopCity == nullptr)
+			if (canBuild)
 			{
 				possibleBuildings[eBuilding] = 0;
 			}
@@ -18034,14 +18048,13 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 		return 0;
 	}
 
-	CityConstructMap constructions = getConstructBuildings(player, getGroup());
-	CvReachablePlotSet plotSet(getGroup(), MOVE_NO_ENEMY_TERRITORY, MAX_INT);
+	const CityConstructMap constructions = getConstructBuildings(player, getGroup());
+	const CvReachablePlotSet plotSet(getGroup(), MOVE_NO_ENEMY_TERRITORY, MAX_INT);
 
 	int iBestWeightedValue = 0;
 
-	for(CvPlayer::city_iterator cityItr = player.beginCities(); cityItr != player.endCities(); ++cityItr)
+	foreach_(CvCity* pLoopCity, player.cities())
 	{
-		CvCity* pLoopCity = *cityItr;
 		//if (AI_plotValid(pLoopCity->plot()) && pLoopCity->area() == area())
 		if (plotSet.find(pLoopCity->plot()) == plotSet.end())
 			continue;
@@ -18113,14 +18126,14 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 						iWeightedValue = iValue;
 					}
 
-					if ((iValue > iThreshold) && (iWeightedValue > iBestWeightedValue))
+					if (iValue > iThreshold && iWeightedValue > iBestWeightedValue)
 					{
 						iBestValue = iValue;
 						iBestWeightedValue = iWeightedValue;
 						pBestPlot = getPathEndTurnPlot();
 						pBestConstructPlot = pLoopCity->plot();
 						eBestBuilding = buildingType;
-						eBestTargetingUnit = targetingUnit;
+						pBestTargetingUnit = targetingUnit;
 					}
 				}
 			}
@@ -19823,11 +19836,56 @@ bool CvUnitAI::AI_goody(int iRange)
 	return false;
 }
 
+bool CvUnitAI::AI_explorerJoinOffensiveStacks()
+{
+	//When in an offensive war, we are already sending stacks into enemy territory, so exploring
+	//in addition to the stacks is counterproductive, and dangerous
+	const bool bOffenseWar = area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE;
+	if (bOffenseWar && !isHuman() && AI_getUnitAIType() != UNITAI_HUNTER && canAttack())	//	Exempt hunters from this behaviour and also defend-only explorers
+	{
+		//try to join SoD
+		if (AI_group(CvUnitAI::GroupingParams().withUnitAI(UNITAI_ATTACK).maxOwnUnitAI(1).minUnitAI(6).stackOfDoom().allowRegrouping()))
+		{
+			return true;
+		}
+		if (AI_group(CvUnitAI::GroupingParams().withUnitAI(UNITAI_ATTACK).maxOwnUnitAI(1).minUnitAI(4).stackOfDoom().allowRegrouping()))
+		{
+			return true;
+		}
+		if (AI_group(CvUnitAI::GroupingParams().withUnitAI(UNITAI_ATTACK_CITY).maxOwnUnitAI(1).minUnitAI(4).stackOfDoom().allowRegrouping()))
+		{
+			return true;
+		}
+		if (AI_group(CvUnitAI::GroupingParams().withUnitAI(UNITAI_COLLATERAL).maxOwnUnitAI(1).minUnitAI(4).stackOfDoom().allowRegrouping()))
+		{
+			return true;
+		}
+		if (AI_group(CvUnitAI::GroupingParams().withUnitAI(UNITAI_COUNTER).maxOwnUnitAI(1).minUnitAI(3).stackOfDoom().allowRegrouping()))
+		{
+			return true;
+		}
+		//try to join attacking stack
+		if (AI_group(CvUnitAI::GroupingParams().withUnitAI(UNITAI_ATTACK).maxOwnUnitAI(1)))
+		{
+			return true;
+		}
+		if (AI_group(CvUnitAI::GroupingParams().withUnitAI(UNITAI_ATTACK_CITY).maxOwnUnitAI(1)))
+		{
+			return true;
+		}
+	}
+	return false;
+}
 
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_explore()
 {
 	PROFILE_FUNC();
+
+	if (AI_explorerJoinOffensiveStacks())
+	{
+		return true;
+	}
 
 	CvPlot* pLoopPlot;
 	CvPlot* pAdjacentPlot;
@@ -19843,51 +19901,6 @@ bool CvUnitAI::AI_explore()
 	pBestExplorePlot = NULL;
 	
 	bool bNoContact = (GC.getGameINLINE().countCivTeamsAlive() > GET_TEAM(getTeam()).getHasMetCivCount(true));
-
-/************************************************************************************************/
-/* Afforess	                  Start		 5/29/11                                                */
-/*                                                                                              */
-/* AI War Logic                                                                                 */
-/************************************************************************************************/
-	//When in an offensive war, we are already sending stacks into enemy territory, so exploring
-	//in addition to the stacks is counterproductive, and dangerous
-	bool bOffenseWar = (area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE);
-	if (bOffenseWar && !isHuman() && AI_getUnitAIType() != UNITAI_HUNTER && canAttack())	//	Exempt hunters from this behaviour and also defend-only explorers
-	{
-		//try to join SoD
-		if (AI_group(UNITAI_ATTACK, -1, 1, 6, false, false, true, MAX_INT, true, false, false))
-		{
-			return true;
-		}
-		if (AI_group(UNITAI_ATTACK, -1, 1, 4, false, false, true, MAX_INT, true, false, false))
-		{
-			return true;
-		}
-		if (AI_group(UNITAI_ATTACK_CITY, -1, 1, 4, false, false, true, MAX_INT, true, false, false))
-		{
-			return true;
-		}
-		if (AI_group(UNITAI_COLLATERAL, -1, 1, 4, false, false, true, MAX_INT, true, false, false))
-		{
-			return true;
-		}
-		if (AI_group(UNITAI_COUNTER, -1, 1, 3, false, false, true, MAX_INT, true, false, false))
-		{
-			return true;
-		}
-		//try to join attacking stack
-		if (AI_group(UNITAI_ATTACK, -1, 1, -1, false))
-		{
-			return true;
-		}
-		if (AI_group(UNITAI_ATTACK_CITY, -1, 1, -1, false))
-		{
-			return true;
-		}
-	}
-/*************************************************************************************************/
-/**	Afforess									END												**/
-/*************************************************************************************************/
 
 	//	If we had previously selected a target make sure we include it in our evaluation this
 	//	time around else dithering between different plots can occur
@@ -20067,62 +20080,12 @@ bool CvUnitAI::AI_exploreRange(int iRange)
 	CvPlot* pAdjacentPlot;
 	CvPlot* pBestPlot;
 	CvPlot* pBestExplorePlot;
-	int iSearchRange;
 	int iPathTurns;
 	int iValue;
 	int iBestValue;
 	int iDX, iDY;
 	int iI;
 	bool candidatesRejectedForMoveSafety = false;
-
-	iSearchRange = AI_searchRange(iRange);
-
-/************************************************************************************************/
-/* Afforess	                  Start		 5/29/11                                                */
-/*                                                                                              */
-/* AI War Logic                                                                                 */
-/************************************************************************************************/
-	//When in an offensive war, we are already sending stacks into enemy territory, so exploring
-	//in addition to the stacks is counterproductive, and dangerous
-	bool bOffenseWar = (area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE);
-	if (bOffenseWar && !isHuman() && AI_getUnitAIType() != UNITAI_HUNTER && canAttack())	//	Exempt hunters from this behaviour and also defend-only explorers
-	{
-		PROFILE("CvUnitAI::AI_exploreRange.OffensiveWar");
-
-		//try to join SoD
-		if (AI_group(UNITAI_ATTACK, -1, 1, 6, false, false, true, MAX_INT, true, false, false))
-		{
-			return true;
-		}
-		if (AI_group(UNITAI_ATTACK, -1, 1, 4, false, false, true, MAX_INT, true, false, false))
-		{
-			return true;
-		}
-		if (AI_group(UNITAI_ATTACK_CITY, -1, 1, 4, false, false, true, MAX_INT, true, false, false))
-		{
-			return true;
-		}
-		if (AI_group(UNITAI_COLLATERAL, -1, 1, 4, false, false, true, MAX_INT, true, false, false))
-		{
-			return true;
-		}
-		if (AI_group(UNITAI_COUNTER, -1, 1, 3, false, false, true, MAX_INT, true, false, false))
-		{
-			return true;
-		}
-		//try to join attacking stack
-		if (AI_group(UNITAI_ATTACK, -1, 1, -1, false))
-		{
-			return true;
-		}
-		if (AI_group(UNITAI_ATTACK_CITY, -1, 1, -1, false))
-		{
-			return true;
-		}
-	}
-/*************************************************************************************************/
-/**	Afforess									END												**/
-/*************************************************************************************************/
 
 	//	If we had previously selected a target bias towards move in that direction
 	CvPlot*	pPreviouslySelectedPlot = NULL;
@@ -20136,10 +20099,16 @@ bool CvUnitAI::AI_exploreRange(int iRange)
 		}
 	}
 
+	if (AI_explorerJoinOffensiveStacks())
+	{
+		return true;
+	}
+
 	std::vector<plotValue>	plotValues;
 
 	int iImpassableCount = GET_PLAYER(getOwnerINLINE()).AI_unitImpassableCount(getUnitType());
 
+	const int iSearchRange = AI_searchRange(iRange);
 	CvReachablePlotSet plotSet(getGroup(), MOVE_NO_ENEMY_TERRITORY, iSearchRange);
 
 	for(CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
@@ -20394,7 +20363,6 @@ bool CvUnitAI::AI_refreshExploreRange(int iRange, bool bIncludeVisibilityRefresh
 	CvPlot* pAdjacentPlot;
 	CvPlot* pBestPlot;
 	CvPlot* pBestExplorePlot;
-	int iSearchRange;
 	int iPathTurns;
 	int iValue;
 	int iBestValue;
@@ -20402,7 +20370,7 @@ bool CvUnitAI::AI_refreshExploreRange(int iRange, bool bIncludeVisibilityRefresh
 	int iI;
 	bool candidatesRejectedForMoveSafety = false;
 
-	iSearchRange = AI_searchRange(iRange);
+	const int iSearchRange = AI_searchRange(iRange);
 
 	//	If we had previously selected a target bias towards move in that direction
 	CvPlot*	pPreviouslySelectedPlot = NULL;
@@ -20416,50 +20384,10 @@ bool CvUnitAI::AI_refreshExploreRange(int iRange, bool bIncludeVisibilityRefresh
 		}
 	}
 
-/************************************************************************************************/
-/* Afforess	                  Start		 5/29/11                                                */
-/*                                                                                              */
-/* AI War Logic                                                                                 */
-/************************************************************************************************/
-	//When in an offensive war, we are already sending stacks into enemy territory, so exploring
-	//in addition to the stacks is counterproductive, and dangerous
-	bool bOffenseWar = (area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE);
-	if (bOffenseWar && !isHuman() && AI_getUnitAIType() != UNITAI_HUNTER && canAttack())	//	Exempt hunters from this behaviour and also defend-only explorers
+	if (AI_explorerJoinOffensiveStacks())
 	{
-		//try to join SoD
-		if (AI_group(UNITAI_ATTACK, -1, 1, 6, false, false, true, MAX_INT, true, false, false))
-		{
-			return true;
-		}
-		if (AI_group(UNITAI_ATTACK, -1, 1, 4, false, false, true, MAX_INT, true, false, false))
-		{
-			return true;
-		}
-		if (AI_group(UNITAI_ATTACK_CITY, -1, 1, 4, false, false, true, MAX_INT, true, false, false))
-		{
-			return true;
-		}
-		if (AI_group(UNITAI_COLLATERAL, -1, 1, 4, false, false, true, MAX_INT, true, false, false))
-		{
-			return true;
-		}
-		if (AI_group(UNITAI_COUNTER, -1, 1, 3, false, false, true, MAX_INT, true, false, false))
-		{
-			return true;
-		}
-		//try to join attacking stack
-		if (AI_group(UNITAI_ATTACK, -1, 1, -1, false))
-		{
-			return true;
-		}
-		if (AI_group(UNITAI_ATTACK_CITY, -1, 1, -1, false))
-		{
-			return true;
-		}
+		return true;
 	}
-/*************************************************************************************************/
-/**	Afforess									END												**/
-/*************************************************************************************************/
 
 	iBestValue = 0;
 	pBestPlot = NULL;
@@ -33277,7 +33205,7 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		}
 		//	In the worker case we don't want to get sucked into a stack with an already protected
 		//	worker, or one not also in non-owned territory so just search this plot
-		if (AI_group(UNITAI_WORKER, 1, -1, -1, false, false, false, 0))
+		if (AI_group(GroupingParams().withUnitAI(UNITAI_WORKER).maxGroupSize(1).maxPathTurns(0)))
 		{
 			return;
 		}

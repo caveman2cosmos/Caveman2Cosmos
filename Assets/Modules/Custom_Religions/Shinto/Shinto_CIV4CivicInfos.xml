@@ -16,7 +16,6 @@
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 		</CivicInfo>
-
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_RELIGION</CivicOptionType>
 			<Type>CIVIC_STATE_CHURCH</Type>
@@ -31,7 +30,6 @@
 				</BuildingCommerceModifier>
 			</BuildingCommerceModifiers>
 		</CivicInfo>
-
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_WELFARE</CivicOptionType>
 			<Type>CIVIC_CHURCH</Type>
@@ -42,7 +40,6 @@
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
 		</CivicInfo>
-
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_GOVERNMENT</CivicOptionType>
 			<Type>CIVIC_THEOCRACY</Type>
@@ -57,7 +54,6 @@
 				</BuildingCommerceModifier>
 			</BuildingCommerceModifiers>
 		</CivicInfo>
-
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_EDUCATION</CivicOptionType>
 			<Type>CIVIC_RELIGIOUS_TRAINING</Type>

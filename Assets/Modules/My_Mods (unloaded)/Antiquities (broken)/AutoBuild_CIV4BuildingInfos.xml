@@ -24,7 +24,6 @@
 			</PrereqOrFeature>
 			<FreeBuilding>BUILDINGCLASS_CAVE_IN_NATION</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_CAVE_IN_NATION</BuildingClass>
@@ -36,7 +35,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CAVE_IN_NATION</ArtDefineTag>
 			<!--ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech-->
 			<iCost>-1</iCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_ELITE_HOUSING</BuildingClass>

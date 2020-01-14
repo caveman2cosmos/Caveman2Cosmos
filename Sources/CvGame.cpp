@@ -8286,8 +8286,7 @@ void CvGame::createBarbarianUnits()
 	}
 	else
 	{
-		int iLoop = 0;
-		for(CvArea* pLoopArea = GC.getMapINLINE().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMapINLINE().nextArea(&iLoop))
+		foreach_(CvArea * pLoopArea, GC.getMapINLINE().areas())
 		{
 			UnitAITypes eBarbUnitAI = pLoopArea->isWater()? UNITAI_ATTACK_SEA : UNITAI_ATTACK;
 
@@ -13686,8 +13685,7 @@ void CvGame::recalculateModifiers()
 		}
 	}
 
-	int iLoop;
-	for(CvArea* pLoopArea = GC.getMapINLINE().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMapINLINE().nextArea(&iLoop))
+	foreach_(CvArea * pLoopArea, GC.getMapINLINE().areas())
 	{
 		pLoopArea->clearModifierTotals();
 	}

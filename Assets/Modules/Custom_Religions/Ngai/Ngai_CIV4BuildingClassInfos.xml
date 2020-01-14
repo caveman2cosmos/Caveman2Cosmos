@@ -30,7 +30,6 @@
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_NGAINANYOKE</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NGAINAROK</Type>
 			<Description>TXT_KEY_BUILDING_NGAINAROK</Description>
@@ -63,7 +62,6 @@
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_NGAINAROK_SHEEP</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NGAI_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_NGAI_SHRINE</Description>

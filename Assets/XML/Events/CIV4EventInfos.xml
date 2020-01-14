@@ -5120,7 +5120,6 @@
 			<Description>TXT_KEY_EVENT_TRADE_FOUNDED_1</Description>
 			<UnitClass>UNITCLASS_TRADE_CARAVAN</UnitClass>
 			<iNumFreeUnits>1</iNumFreeUnits>
-
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -5661,7 +5660,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_FAMOUS_DOCTOR_2</Type>
 			<Description>TXT_KEY_EVENT_FAMOUS_DOCTOR_2</Description>
@@ -5671,7 +5669,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_HARDY_CROPS_1</Type>
 			<Description>TXT_KEY_EVENT_HARDY_CROPS_1</Description>
@@ -5685,7 +5682,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_PRIME_TIMBER_1</Type>
 			<Description>TXT_KEY_EVENT_PRIME_TIMBER_1</Description>
@@ -5694,7 +5690,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_RESORT_TOWN_1</Type>
 			<Description>TXT_KEY_EVENT_RESORT_TOWN_1</Description>
@@ -5714,7 +5709,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_LOCAL_MILLS_1</Type>
 			<Description>TXT_KEY_EVENT_LOCAL_MILLS_1</Description>
@@ -5728,7 +5722,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_GREENSPACE_1</Type>
 			<Description>TXT_KEY_EVENT_GREENSPACE_1</Description>
@@ -5737,7 +5730,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_TOLERANCE_1</Type>
 			<Description>TXT_KEY_EVENT_TOLERANCE_1</Description>
@@ -5746,7 +5738,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_RECRUITMENT_DRIVE_1</Type>
 			<Description>TXT_KEY_EVENT_RECRUITMENT_DRIVE_1</Description>
@@ -5773,7 +5764,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_EXPLOITED_PEASANTS_1</Type>
 			<Description>TXT_KEY_EVENT_EXPLOITED_PEASANTS_1</Description>
@@ -5784,7 +5774,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_SALT_MINE_1</Type>
 			<Description>TXT_KEY_EVENT_SALT_MINE_1</Description>
@@ -5801,7 +5790,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_WAR_MEMORIAL_1</Type>
 			<Description>TXT_KEY_EVENT_WAR_MEMORIAL_1</Description>
@@ -5825,7 +5813,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_GREAT_MONUMENTS_1</Type>
 			<Description>TXT_KEY_EVENT_GREAT_MONUMENTS_1</Description>
@@ -5840,7 +5827,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_HERETICAL_RESEARCH_1</Type>
 			<Description>TXT_KEY_EVENT_HERETICAL_RESEARCH_1</Description>
@@ -5857,7 +5843,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_HERETICAL_RESEARCH2_1</Type>
 			<Description>TXT_KEY_EVENT_HERETICAL_RESEARCH2_1</Description>
@@ -5874,7 +5859,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_STREAMLINED_GOVERNMENT_1</Type>
 			<Description>TXT_KEY_EVENT_STREAMLINED_GOVERNMENT_1</Description>
@@ -5882,7 +5866,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_TAX_COLLECTION_RECORDS_1</Type>
 			<Description>TXT_KEY_EVENT_TAX_COLLECTION_RECORDS_1</Description>
@@ -5890,7 +5873,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_PROMISING_COMMANDER_1</Type>
 			<Description>TXT_KEY_EVENT_PROMISING_COMMANDER_1</Description>
@@ -5899,7 +5881,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_LOYALTY_TESTS_1</Type>
 			<Description>TXT_KEY_EVENT_LOYALTY_TESTS_1</Description>
@@ -5914,7 +5895,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_EXPENSIVE_HABITS_1</Type>
 			<Description>TXT_KEY_EVENT_EXPENSIVE_HABITS_1</Description>
@@ -5929,7 +5909,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_ACADEMIC_FUNDING_1</Type>
 			<Description>TXT_KEY_EVENT_ACADEMIC_FUNDING_1</Description>
@@ -5943,7 +5922,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_MAJOR_IN_HUMANITIES_1</Type>
 			<Description>TXT_KEY_EVENT_MAJOR_IN_HUMANITIES_1</Description>
@@ -5964,7 +5942,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_SOCIAL_STAGNATION_1</Type>
 			<Description>TXT_KEY_EVENT_SOCIAL_STAGNATION_1</Description>
@@ -5973,7 +5950,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_LARGE_RECESSION_1</Type>
 			<Description>TXT_KEY_EVENT_LARGE_RECESSION_1</Description>
@@ -5989,7 +5965,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_QUALITY_WOOL_1</Type>
 			<Description>TXT_KEY_EVENT_QUALITY_WOOL_1</Description>
@@ -5998,7 +5973,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_HARDY_SCOUTS</Type>
 			<Description>TXT_KEY_EVENT_HARDY_SCOUTS_1</Description>
@@ -6011,7 +5985,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_CATTLE_RANCHERS_1</Type>
 			<Description>TXT_KEY_EVENT_CATTLE_RANCHERS_1</Description>
@@ -6020,7 +5993,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_FORT_IN_DISREPAIR_1</Type>
 			<Description>TXT_KEY_EVENT_FORT_IN_DISREPAIR_1</Description>
@@ -6036,7 +6008,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_COTTON_IRRIGATION_1</Type>
 			<Description>TXT_KEY_EVENT_COTTON_IRRIGATION_1</Description>
@@ -6060,7 +6031,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_LABOR_UNIONS_1</Type>
 			<Description>TXT_KEY_EVENT_LABOR_UNIONS_1</Description>
@@ -6111,7 +6081,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_NO_JUSTICE_1</Type>
 			<Description>TXT_KEY_EVENT_NO_JUSTICE_1</Description>
@@ -6119,7 +6088,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_GOOD_HARBOR_1</Type>
 			<Description>TXT_KEY_EVENT_GOOD_HARBOR_1</Description>
@@ -6144,7 +6112,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_LOOSE_MORALS_1</Type>
 			<Description>TXT_KEY_EVENT_LOOSE_MORALS_1</Description>
@@ -6159,7 +6126,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_HEIR_ASSASSINATED_1</Type>
 			<Description>TXT_KEY_EVENT_HEIR_ASSASSINATED_1</Description>
@@ -6167,7 +6133,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_PRESIDENT_ASSASSINATED_1</Type>
 			<Description>TXT_KEY_EVENT_PRESIDENT_ASSASSINATED_1</Description>
@@ -6181,7 +6146,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_NOBLES_DEMAND_COMPENSATION_1</Type>
 			<Description>TXT_KEY_EVENT_NOBLES_DEMAND_COMPENSATION_1</Description>
@@ -6189,7 +6153,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_NOBLES_DEMAND_COMPENSATION_2</Type>
 			<Description>TXT_KEY_EVENT_NOBLES_DEMAND_COMPENSATION_2</Description>
@@ -6197,7 +6160,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_INDEPENDENT_FISHERS_1</Type>
 			<Description>TXT_KEY_EVENT_INDEPENDENT_FISHERS_1</Description>
@@ -6206,7 +6168,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_FISHING_BOATS_SUNK_1</Type>
 			<Description>TXT_KEY_EVENT_FISHING_BOATS_SUNK_1</Description>
@@ -6222,7 +6183,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>10</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_BANANA_BLIGHT_1</Type>
 			<Description>TXT_KEY_EVENT_BANANA_BLIGHT_1</Description>
@@ -6236,7 +6196,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_GAME_MIGRATION_1</Type>
 			<Description>TXT_KEY_EVENT_GAME_MIGRATION_1</Description>
@@ -6245,7 +6204,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_OVERFISHING_1</Type>
 			<Description>TXT_KEY_EVENT_OVERFISHING_1</Description>
@@ -6283,7 +6241,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_NAVAL_PROXIMITY_AAA_FUSES_1</Type>
 			<Description>TXT_KEY_EVENT_NAVAL_PROXIMITY_AAA_FUSES_1</Description>
@@ -6377,7 +6334,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_NATIONAL_ANTHEM_1</Type>
 			<Description>TXT_KEY_EVENT_NATIONAL_ANTHEM_1</Description>
@@ -6385,7 +6341,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_CORRUPT_SENATE_1</Type>
 			<Description>TXT_KEY_EVENT_CORRUPT_SENATE_1</Description>
@@ -6409,7 +6364,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_COMPULSORY_DEM_1</Type>
 			<Description>TXT_KEY_EVENT_COMPULSORY_DEM_1</Description>
@@ -6468,7 +6422,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_UNLIMITED_POWER_1</Type>
 			<Description>TXT_KEY_EVENT_UNLIMITED_POWER_1</Description>
@@ -6487,7 +6440,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>5000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_SUPER_VIRUS_1</Type>
 			<Description>TXT_KEY_EVENT_SUPER_VIRUS_1</Description>
@@ -6527,14 +6479,12 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_NEW_WORLD_1</Type>
 			<Description>TXT_KEY_EVENT_NEW_WORLD_1</Description>
 			<iHurryAnger>1</iHurryAnger>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_NEW_WORLD_2</Type>
 			<Description>TXT_KEY_EVENT_NEW_WORLD_2</Description>
@@ -6554,7 +6504,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_DOCK_WORKERS_STRIKE_1</Type>
 			<Description>TXT_KEY_EVENT_DOCK_WORKERS_STRIKE_1</Description>
@@ -6623,7 +6572,6 @@
 			<iRevoltTurns>1</iRevoltTurns>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 		</EventInfo>
-
 <!-- Other -->
 		<EventInfo>
 			<Type>EVENT_ACHIEVEMENT</Type>
@@ -6641,7 +6589,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 <!-- STUCK IN SWAMP -->
 		<EventInfo>
 			<Type>EVENT_STUCK_IN_SWAMP_1</Type>
@@ -6650,7 +6597,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 <!-- Events for Missions and Outcomes-->
 		<EventInfo>
 			<Type>EVENT_LAWYER_LITIGATION</Type>
@@ -6674,7 +6620,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_FORTIFIED_CAVE_IN_DISREPAIR_1</Type>
 			<Description>TXT_KEY_EVENT_FORT_IN_DISREPAIR_1</Description>
@@ -6735,7 +6680,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_FUTURE_BUNKER_IN_DISREPAIR_1</Type>
 			<Description>TXT_KEY_EVENT_FORT_IN_DISREPAIR_1</Description>
@@ -6751,7 +6695,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_COCK_FIGHTS_1</Type>
 			<Description>TXT_KEY_EVENT_COCK_FIGHTS_1</Description>
@@ -7390,7 +7333,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_PIRATE_INVASION_1</Type>
 			<Description>Ignore them.</Description>
@@ -7560,7 +7502,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_BLARNEYVISIT_2</Type>
 			<Description>TXT_KEY_EVENT_BLARNEYVISIT_2</Description>
@@ -7621,7 +7562,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_DINO_ATTACK_1</Type>
 			<Description>TXT_KEY_EVENT_DINO_ATTACK_1</Description>
@@ -7681,7 +7621,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_DINO_ATTACK_2</Type>
 			<Description>TXT_KEY_EVENT_DINO_ATTACK_2</Description>
@@ -7741,7 +7680,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_NSL_CHAMP_1</Type>
 			<Description>TXT_KEY_EVENT_NSLCHAMP_1</Description>
@@ -7808,7 +7746,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_NSL_CHAMP_2</Type>
 			<Description>TXT_KEY_EVENT_NSLCHAMP_2</Description>
@@ -7876,7 +7813,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_VEGAS_JACKPOT_1</Type>
 			<Description>TXT_KEY_EVENT_VEGAS_JACKPOT_1</Description>
@@ -7937,7 +7873,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_VEGAS_JACKPOT_2</Type>
 			<Description>TXT_KEY_EVENT_VEGAS_JACKPOT_2</Description>
@@ -7998,7 +7933,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_BREAK_THE_BANK_1</Type>
 			<Description>TXT_KEY_EVENT_BREAK_THE_BANK_1</Description>
@@ -8059,7 +7993,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_BREAK_THE_BANK_2</Type>
 			<Description>TXT_KEY_EVENT_BREAK_THE_BANK_2</Description>
@@ -8120,7 +8053,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_MEGA_ATTACK_1</Type>
 			<Description>TXT_KEY_EVENT_MEGA_ATTACK_1</Description>
@@ -8180,7 +8112,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_MEGA_ATTACK_2</Type>
 			<Description>TXT_KEY_EVENT_MEGA_ATTACK_2</Description>
@@ -8240,7 +8171,6 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-
 		<EventInfo>
 			<Type>EVENT_SUMMER_OF_LOVE</Type>
 			<Description>TXT_KEY_EVENT_SUMMER_OF_LOVE_1</Description>

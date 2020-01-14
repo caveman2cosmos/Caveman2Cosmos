@@ -46,7 +46,6 @@
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_KI</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_KI_WHEAT</Type>
 			<Description>TXT_KEY_BUILDING_TEMPLE_OF_KI_WHEAT</Description>
@@ -79,7 +78,6 @@
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_KI_POTATO</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MESO_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_MESO_SHRINE</Description>

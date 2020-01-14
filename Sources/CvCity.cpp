@@ -19858,7 +19858,7 @@ void CvCity::doGreatPeople()
 		changeGreatPeopleUnitProgress(((UnitTypes)iI), getGreatPeopleUnitRate((UnitTypes)iI));
 	}
 
-	if (getGreatPeopleProgress() >= GET_PLAYER(getOwnerINLINE()).greatPeopleThreshold(false))
+	if (getGreatPeopleProgress() >= GET_PLAYER(getOwnerINLINE()).greatPeopleThresholdNonMilitary())
 	{
 		int iTotalGreatPeopleUnitProgress = 0;
 		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
@@ -19884,7 +19884,7 @@ void CvCity::doGreatPeople()
 
 		if (eGreatPeopleUnit != NO_UNIT)
 		{
-			changeGreatPeopleProgress(-(GET_PLAYER(getOwnerINLINE()).greatPeopleThreshold(false)));
+			changeGreatPeopleProgress(-(GET_PLAYER(getOwnerINLINE()).greatPeopleThresholdNonMilitary()));
 
 			for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 			{

@@ -7398,6 +7398,7 @@
 			<Strategy>TXT_KEY_BUILDING_MILKY_WAY_CLUSTER_BRAIN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MILKY_WAY_CLUSTER_BRAIN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MILKY_WAY_CLUSTER_BRAIN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_WORMHOLE_HIVEMIND</PrereqTech>
 			<iCost>38840</iCost>
@@ -7890,6 +7891,7 @@
 			<Strategy>TXT_KEY_BUILDING_PROTOS_MANDATE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PROTOS_MANDATE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PROTOS_MANDATE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ASTRODIPLOMACY</PrereqTech>
 			<iCost>10144</iCost>
@@ -7954,6 +7956,7 @@
 			<Strategy>TXT_KEY_BUILDING_INTERSTELLAR_OLYMPICS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_OLYMPICS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_INTERSTELLAR_OLYMPICS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_WORMHOLE_TRAVERSAL</PrereqTech>
 			<iCost>18220</iCost>
@@ -8207,6 +8210,7 @@
 			<Strategy>TXT_KEY_BUILDING_HD_85512B_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HD_85512B</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HD_85512B</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ACNP_PROPULSION</PrereqTech>
 			<iCost>11424</iCost>
@@ -8314,6 +8318,7 @@
 			<Strategy>TXT_KEY_BUILDING_KEPLER_186F_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KEPLER_186F</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_KEPLER_186F</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ANTIMATTER_ROCKET</PrereqTech>
 			<iCost>29200</iCost>
@@ -8361,6 +8366,7 @@
 			<Strategy>TXT_KEY_BUILDING_KEPLER_22B_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KEPLER_22B</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_KEPLER_22B</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ANTIMATTER_ROCKET</PrereqTech>
 			<iCost>29200</iCost>
@@ -8456,6 +8462,7 @@
 			<Strategy>TXT_KEY_BUILDING_NORMA_AND_OUTER_ARM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NORMA_AND_OUTER_ARM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NORMA_AND_OUTER_ARM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PrereqTech>
 			<iCost>33800</iCost>
@@ -8609,6 +8616,7 @@
 			<Strategy>TXT_KEY_BUILDING_HYADES_STAR_CLUSTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYADES_STAR_CLUSTER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HYADES_STAR_CLUSTER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_STELLAR_ENGINE</PrereqTech>
 			<iCost>36440</iCost>
@@ -8656,6 +8664,7 @@
 			<Strategy>TXT_KEY_BUILDING_NGC_6811_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NGC_6811</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NGC_6811</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_STELLAR_ENGINE</PrereqTech>
 			<iCost>36440</iCost>

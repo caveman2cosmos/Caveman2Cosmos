@@ -432,21 +432,17 @@ void CvPlayerAI::AI_doTurnPre()
 #ifdef _DEBUG
 	//	Validate AI unit counts
 	{
-		CvUnit*	pLoopUnit;
-		CvArea* pLoopArea;
-		int		iLoop;
-		int		iLoop2;
-		int		iMilitary = 0;
+		int iMilitary = 0;
 
-		for(pLoopArea = GC.getMapINLINE().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMapINLINE().nextArea(&iLoop))
+		foreach_(CvArea * pLoopArea, GC.getMapINLINE().areas())
 		{
 			for(int iI = 0; iI < NUM_UNITAI_TYPES; iI++)
 			{
 				int iCount = 0;
 
-				for(pLoopUnit = firstUnit(&iLoop2); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop2))
+				foreach_(CvUnit * pLoopUnit, units())
 				{
-					UnitAITypes eAIType = pLoopUnit->AI_getUnitAIType();
+					const UnitAITypes eAIType = pLoopUnit->AI_getUnitAIType();
 
 					if ( (UnitAITypes)iI == eAIType && pLoopUnit->area() == pLoopArea)
 					{
@@ -524,13 +520,13 @@ void CvPlayerAI::AI_doTurnPre()
 	}
 #endif
 
-	AI_doResearch();
+		AI_doResearch();
 
-	AI_doCommerce();
+		AI_doCommerce();
 
-	AI_doMilitary();
+		AI_doMilitary();
 
-	AI_doCivics();
+		AI_doCivics();
 
 	AI_doReligion();
 
@@ -1432,8 +1428,6 @@ void CvPlayerAI::AI_updateFoundValues(bool bClear, CvArea* area) const
 	PROFILE_FUNC();
 
 	CvPlot* pLoopPlot;
-	CvArea* pLoopArea;
-	int iLoop;
 	int iValue;
 	int iI;
 	bool bSetup = (getNumCities() == 0);
@@ -1452,7 +1446,7 @@ void CvPlayerAI::AI_updateFoundValues(bool bClear, CvArea* area) const
 			}
 		}
 
-		for(pLoopArea = GC.getMapINLINE().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMapINLINE().nextArea(&iLoop))
+		foreach_(CvArea * pLoopArea, GC.getMapINLINE().areas())
 		{
 			pLoopArea->setBestFoundValue(getID(), -1);
 		}
@@ -1527,12 +1521,9 @@ void CvPlayerAI::AI_updateFoundValues(bool bClear, CvArea* area) const
 
 void CvPlayerAI::AI_updateAreaTargets()
 {
-	CvArea* pLoopArea;
-	int iLoop;
-
-	for(pLoopArea = GC.getMapINLINE().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMapINLINE().nextArea(&iLoop))
+	foreach_(CvArea * pLoopArea, GC.getMapINLINE().areas())
 	{
-		if (!(pLoopArea->isWater()))
+		if (!pLoopArea->isWater())
 		{
 			if (GC.getGameINLINE().getSorenRandNum(3, "AI Target City") == 0)
 			{
@@ -1774,12 +1765,8 @@ void CvPlayerAI::AI_unitUpdate()
 {
 	PROFILE_FUNC();
 
-	CLLNode<int>* pCurrUnitNode;
-	CLLNode<int>* pNextUnitNode;
-	int iLoop;
-
 	//	Do delayed death here so that empty groups are removed now
-	for(CvSelectionGroup* pLoopSelectionGroup = firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = nextSelectionGroup(&iLoop))
+	foreach_(CvSelectionGroup* pLoopSelectionGroup, groups())
 	{
 		pLoopSelectionGroup->doDelayedDeath(); // could destroy the selection group...
 	}
@@ -1788,8 +1775,8 @@ void CvPlayerAI::AI_unitUpdate()
 	//	as (indirectly via their head units) by m_groupCycle.  These have been seen to
 	//	get out of step, which results in a WFoC so if they contain differing member
 	//	counts go through and fix it!
-	//	Note - this is fixing a symtpom rather than a cause which is distasteful, but as
-	//	yet the cause remains ellusive
+	//	Note - this is fixing a symptom rather than a cause which is distasteful, but as
+	//	yet the cause remains elusive
 	if ( m_groupCycle.getLength() != m_selectionGroups.getCount() - (m_pTempUnit == NULL ? 0 : 1) )
 	{
 		if ( m_pTempUnit != NULL )
@@ -1798,24 +1785,20 @@ void CvPlayerAI::AI_unitUpdate()
 			OutputDebugString(CvString::format("temp group id is %d\n", m_pTempUnit->getGroup()->getID()).c_str());
 		}
 		OutputDebugString("Group cycle:\n");
-		pCurrUnitNode = headGroupCycleNode();
-
-		while (pCurrUnitNode != NULL)
+		for(CLLNode<int>* pCurrUnitNode = headGroupCycleNode(); pCurrUnitNode != NULL; pCurrUnitNode = nextGroupCycleNode(pCurrUnitNode))
 		{
 			CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(pCurrUnitNode->m_data);
-			pCurrUnitNode = nextGroupCycleNode(pCurrUnitNode);
-
 			OutputDebugString(CvString::format("    %d with %d units at (%d,%d)\n",
-												pLoopSelectionGroup->getID(),
-												pLoopSelectionGroup->getNumUnits(),
-												pLoopSelectionGroup->plot() == NULL ? -1 : pLoopSelectionGroup->plot()->getX_INLINE(),
-												pLoopSelectionGroup->plot() == NULL ? -1 : pLoopSelectionGroup->plot()->getY_INLINE()).c_str());
+				pLoopSelectionGroup->getID(),
+				pLoopSelectionGroup->getNumUnits(),
+				pLoopSelectionGroup->plot() == NULL ? -1 : pLoopSelectionGroup->plot()->getX_INLINE(),
+				pLoopSelectionGroup->plot() == NULL ? -1 : pLoopSelectionGroup->plot()->getY_INLINE()).c_str());
 		}
 
 		FAssert(m_selectionGroups.getCount() > m_groupCycle.getLength());	//	Other way round not seen - not handled currently
 
 		OutputDebugString("Selection groups:\n");
-		for (CvSelectionGroup* pLoopSelectionGroup = firstSelectionGroup(&iLoop); pLoopSelectionGroup != NULL; pLoopSelectionGroup = nextSelectionGroup(&iLoop))
+		foreach_ (CvSelectionGroup* pLoopSelectionGroup, groups())
 		{
 			OutputDebugString(CvString::format("    %d with %d units at (%d,%d)\n",
 												pLoopSelectionGroup->getID(),
@@ -1831,17 +1814,16 @@ void CvPlayerAI::AI_unitUpdate()
 
 	if (!hasBusyUnit())
 	{
-		pCurrUnitNode = headGroupCycleNode();
-
 		CvPathGenerator::EnableMaxPerformance(true);
-		while (pCurrUnitNode != NULL)
+		
+		for (CLLNode<int>* pCurrUnitNode = headGroupCycleNode(); pCurrUnitNode != NULL; )
 		{
 			CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(pCurrUnitNode->m_data);
-			pNextUnitNode = nextGroupCycleNode(pCurrUnitNode);
+			CLLNode<int>* pNextUnitNode = nextGroupCycleNode(pCurrUnitNode);
 
 			//	Since we know the set of selection groups can (somehow - reason is unknown) get out of step
 			//	with the set in the update cycle (hence the code in the section above this one that copes with
-			//	selection gropups that don't have group cycle entries), it follows that the converse may also
+			//	selection groups that don't have group cycle entries), it follows that the converse may also
 			//	occur.  Thus we must be prepared to handle cycle entries with no corresponding selection group
 			//	still extant
 			if ( pLoopSelectionGroup == NULL )
@@ -1862,12 +1844,9 @@ void CvPlayerAI::AI_unitUpdate()
 
 		if (isHuman())
 		{
-			pCurrUnitNode = headGroupCycleNode();
-
-			while (pCurrUnitNode != NULL)
+			for (CLLNode<int>* pCurrUnitNode = headGroupCycleNode(); pCurrUnitNode != NULL; pCurrUnitNode = nextGroupCycleNode(pCurrUnitNode))
 			{
 				CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(pCurrUnitNode->m_data);
-				pCurrUnitNode = nextGroupCycleNode(pCurrUnitNode);
 
 				if (pLoopSelectionGroup->AI_update())
 				{
@@ -1877,25 +1856,23 @@ void CvPlayerAI::AI_unitUpdate()
 		}
 		else
 		{
-			std::vector<std::pair<int, int> > groupList;
+			std::vector< std::pair<int, int> > groupList;
 
-			pCurrUnitNode = headGroupCycleNode();
-			while (pCurrUnitNode != NULL)
+			for (CLLNode<int>* pCurrUnitNode = headGroupCycleNode(); pCurrUnitNode != NULL; pCurrUnitNode = nextGroupCycleNode(pCurrUnitNode))
 			{
 				CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(pCurrUnitNode->m_data);
 				FAssert(pLoopSelectionGroup != NULL);
 
 				int iPriority = AI_movementPriority(pLoopSelectionGroup);
 				groupList.push_back(std::make_pair(iPriority, pCurrUnitNode->m_data));
-
-				pCurrUnitNode = nextGroupCycleNode(pCurrUnitNode);
 			}
 
 			std::sort(groupList.begin(), groupList.end());
 			for (size_t i = 0; i < groupList.size(); i++)
 			{
 				CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(groupList[i].second);
-				if (pLoopSelectionGroup && pLoopSelectionGroup->AI_update())
+				if (pLoopSelectionGroup
+					&& pLoopSelectionGroup->AI_update())
 				{
 					FAssert(pLoopSelectionGroup && pLoopSelectionGroup->getNumUnits() > 0);
 					break;
@@ -7908,10 +7885,8 @@ int CvPlayerAI::AI_techUnitValue( TechTypes eTech, int iPathLength, bool &bEnabl
 
 						if (iAssaultValue > 0)
 						{
-							int iLoop;
-							CvArea* pLoopArea;
 							bool bIsAnyAssault = false;
-							for(pLoopArea = GC.getMapINLINE().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMapINLINE().nextArea(&iLoop))
+							foreach_(CvArea* pLoopArea, GC.getMapINLINE().areas())
 							{
 								if (AI_isPrimaryArea(pLoopArea))
 								{
@@ -23741,11 +23716,11 @@ void CvPlayerAI::AI_doDiplo()
 												{
 													if (GET_TEAM(getTeam()).isHasEmbassy(GET_PLAYER((PlayerTypes)iI).getTeam()))
 													{
-															CvUnit* pWorker = NULL;
-															int iNeededWorkers = 0;
+														CvUnit* pWorker = NULL;
+														int iNeededWorkers = 0;
 
 														//figure out if we need workers or not
-														for (CvArea* pLoopArea = GC.getMapINLINE().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMapINLINE().nextArea(&iLoop))
+														foreach_(CvArea* pLoopArea, GC.getMapINLINE().areas())
 														{
 															if (pLoopArea->getCitiesPerPlayer(getID()) > 0)
 															{
@@ -23755,7 +23730,7 @@ void CvPlayerAI::AI_doDiplo()
 														//if we need workers
 														if (iNeededWorkers > 0)
 														{
-															for (CvUnit* pLoopUnit = GET_PLAYER((PlayerTypes)iI).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER((PlayerTypes)iI).nextUnit(&iLoop))
+															foreach_ (CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)iI).units())
 															{
 																if (pLoopUnit->canTradeUnit(getID()))
 																{
@@ -25345,15 +25320,14 @@ void CvPlayerAI::AI_doSplit()
 		return;
 	}
 
-	int iLoop;
 	std::map<int, int> mapAreaValues;
 
-	for (CvArea* pLoopArea = GC.getMapINLINE().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMapINLINE().nextArea(&iLoop))
+	foreach_(CvArea * pLoopArea, GC.getMapINLINE().areas())
 	{
 		mapAreaValues[pLoopArea->getID()] = 0;
 	}
 
-	for (CvCity* pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	foreach_(CvCity* pLoopCity, cities())
 	{
 		mapAreaValues[pLoopCity->area()->getID()] += pLoopCity->AI_cityValue();
 	}
@@ -25369,7 +25343,7 @@ void CvPlayerAI::AI_doSplit()
 			{
 				splitEmpire(iAreaId);
 
-				for (CvUnit* pUnit = firstUnit(&iLoop); pUnit != NULL; pUnit = nextUnit(&iLoop))
+				foreach_ (CvUnit* pUnit, units())
 				{
 					if (pUnit->area()->getID() == iAreaId)
 					{
@@ -25377,7 +25351,7 @@ void CvPlayerAI::AI_doSplit()
 
 						if (NO_TEAM != ePlotTeam)
 						{
-							CvTeam& kPlotTeam = GET_TEAM(ePlotTeam);
+							const CvTeam& kPlotTeam = GET_TEAM(ePlotTeam);
 							if (kPlotTeam.isVassal(getTeam()) && GET_TEAM(getTeam()).isParent(ePlotTeam))
 							{
 								pUnit->gift();
@@ -28259,13 +28233,10 @@ void CvPlayerAI::AI_calculateAverages() const
 // K-Mod edition
 void CvPlayerAI::AI_convertUnitAITypesForCrush()
 {
-	int iLoop;
-
 	std::map<int, int> spare_units;
 	std::multimap<int, CvUnit*> ordered_units;
 
-	CvArea *pLoopArea = NULL;
-	for (pLoopArea = GC.getMapINLINE().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMapINLINE().nextArea(&iLoop))
+	foreach_(CvArea * pLoopArea, GC.getMapINLINE().areas())
 	{
 		// Keep 1/2 of recommended floating defenders.
 		if (!pLoopArea || pLoopArea->getAreaAIType(getTeam()) == AREAAI_ASSAULT
@@ -28279,8 +28250,7 @@ void CvPlayerAI::AI_convertUnitAITypesForCrush()
 		}
 	}
 
-	CvUnit* pLoopUnit;
-	for (pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
+	foreach_(CvUnit* pLoopUnit, units())
 	{
 		bool bValid = false;
 
@@ -31633,8 +31603,6 @@ int CvPlayerAI::AI_workerTradeVal(CvUnit* pUnit) const
 	PROFILE_FUNC();
 
 	int iValue = 0;
-	int iLoop;
-	CvArea* pLoopArea;
 	int iNeededWorkers = 0;
 
 	if (!(GC.getUnitInfo(pUnit->getUnitType()).isWorkerTrade()))
@@ -31672,7 +31640,7 @@ int CvPlayerAI::AI_workerTradeVal(CvUnit* pUnit) const
 	//	Normalise for game speed
 	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent()) / 100;
 
-	for (pLoopArea = GC.getMapINLINE().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMapINLINE().nextArea(&iLoop))
+	foreach_(CvArea * pLoopArea, GC.getMapINLINE().areas())
 	{
 		if (pLoopArea->getCitiesPerPlayer(getID()) > 0)
 		{

@@ -763,7 +763,7 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 			int iProgress = getGreatPeopleProgress();
 			if (iProgress > 0)
 			{
-				int iThreshold = GET_PLAYER(getOwnerINLINE()).greatPeopleThreshold();
+				int iThreshold = GET_PLAYER(getOwnerINLINE()).greatPeopleThresholdNonMilitary();
 				iTempValue += ((iGreatPeopleRate * (isHuman() ? 1 : 4) * iGPPValue * iProgress * iProgress) / (iThreshold * iThreshold));
 			}
 		}
@@ -1560,11 +1560,9 @@ void CvCityAI::AI_chooseProduction()
 			return;
 		}
 		
-		if (AI_chooseUnit("barbarian last resort"))
-		{
-			return;
-		}
-		
+		// As last resort choose any unit we can build
+		AI_chooseUnit("barbarian last resort", NO_UNITAI);
+
 		return;
 	}
 	
@@ -1741,12 +1739,7 @@ void CvCityAI::AI_chooseProduction()
 						}
 					}
 				}
-
-				if (AI_chooseUnit("rebel last resort"))
-				{
-					return;
-				}
-			}			
+			}
 		}
 
 		// Buildings important for rebels
@@ -2286,14 +2279,11 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-	if (!m_bRequestedUnit)
+	if (!m_bRequestedUnit && !bInhibitUnits)
 	{
-		if (!bInhibitUnits)
+		if (AI_establishSeeInvisibleCoverage())
 		{
-			if (AI_establishSeeInvisibleCoverage())
-			{
-				return;
-			}
+			return;
 		}
 	}
 
@@ -4386,39 +4376,15 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-	bool bChooseUnit = false;
-	if (!bInhibitUnits && iUnitCostPercentage < iMaxUnitSpending + 5)
+	// Only cities with reasonable production
+	if (!isHuman() && (iProductionRank <= ((kPlayer.getNumCities() > 8) ? 3 : 2)) && (getPopulation() > 3))
 	{
-		if ((bLandWar) ||
-			  ((kPlayer.getNumCities() <= 3) && (GC.getGameINLINE().getElapsedGameTurns() < 60)) ||
-			  (GC.getGameINLINE().getSorenRandNum(100, "AI Build Unit Production") < AI_buildUnitProb()) ||
-				(isHuman() && (getGameTurnFounded() == GC.getGameINLINE().getGameTurn())))
+		if (AI_chooseProject())
 		{
-			if (AI_chooseUnit("optional units"))
-			{
-				return;
-			}
-
-			bChooseUnit = true;
+			if( gCityLogLevel >= 2 ) logBBAI("      City %S uses choose project 2", getName().GetCString());
+			return;
 		}
 	}
-
-	m_iTempBuildPriority--;
-
-	// BBAI TODO: Temporary for testing
-	//if( getOwnerINLINE()%2 == 1 )
-	//{
-		// Only cities with reasonable production
-		if (!isHuman() && (iProductionRank <= ((kPlayer.getNumCities() > 8) ? 3 : 2))
-		&& (getPopulation() > 3))
-		{
-			if (AI_chooseProject())
-			{
-				if( gCityLogLevel >= 2 ) logBBAI("      City %S uses choose project 2", getName().GetCString());
-				return;
-			}
-		}
-	//}
 
 	m_iTempBuildPriority--;
 
@@ -4430,9 +4396,14 @@ void CvCityAI::AI_chooseProduction()
 	
 	m_iTempBuildPriority--;
 
-	if (!bChooseUnit && !bFinancialTrouble && kPlayer.AI_isDoStrategy(AI_STRATEGY_FINAL_WAR))
+	if (!bFinancialTrouble && kPlayer.AI_isDoStrategy(AI_STRATEGY_FINAL_WAR))
 	{
-		if (AI_chooseUnit("final war units"))
+		if (AI_chooseUnit("final war units", UNITAI_ATTACK))
+		{
+			return;
+		}
+
+		if (AI_chooseUnit("final war units", UNITAI_ATTACK_CITY))
 		{
 			return;
 		}
@@ -11457,7 +11428,6 @@ void CvCityAI::AI_doEmphasize()
 //Fuyu bIgnoreNotUnitAIs
 bool CvCityAI::AI_chooseUnit(const char* reason, UnitAITypes eUnitAI, int iOdds, int iUnitStrength, int iPriorityOverride, CvUnitSelectionCriteria* criteria)
 {//Adding a unit type direct selection here...
-
 #ifdef USE_UNIT_TENDERING
 	//	Have we already contracted for a unit?
 	if ( m_bRequestedUnit )
@@ -14728,16 +14698,8 @@ void CvCityAI::AI_buildGovernorChooseProduction()
 		return;
 	}
 
-
-	if (AI_chooseProcess())
-	{
-		return;
-	}
-	
-	if (AI_chooseUnit("crappy governor"))
-	{
-		return;
-	}
+	// As last resort select a process
+	AI_finalProcessSelection();
 }
 
 int CvCityAI::AI_calculateWaterWorldPercent()

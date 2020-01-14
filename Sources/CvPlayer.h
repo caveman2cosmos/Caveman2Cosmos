@@ -467,7 +467,9 @@ public:
 	int unitsGoldenAgeReady() const;																														// Exposed to Python
 	void killGoldenAgeUnits(CvUnit* pUnitAlive);
 
-	int greatPeopleThreshold(bool bMilitary = false) const;																														// Exposed to Python
+	int greatPeopleThresholdMilitary() const; // Exposed to Python
+	int greatPeopleThresholdNonMilitary() const; // Exposed to Python
+
 	int specialistYield(SpecialistTypes eSpecialist, YieldTypes eYield) const;														// Exposed to Python
 	int specialistCommerceTimes100(SpecialistTypes eSpecialist, CommerceTypes eCommerce) const;
 	int specialistCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce) const;										// Exposed to Python
