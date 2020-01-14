@@ -47,7 +47,6 @@ inline int coordRange(int iCoord, int iRange, bool bWrap)
 class CvSelectionGroup;
 class CvMap : public CvMapInterfaceBase
 {
-
 	friend class CyMap;
 
 public:
@@ -134,37 +133,33 @@ public:
 	int getMapFractalFlags() const;																												// Exposed to Python
 	bool findWater(const CvPlot* pPlot, int iRange, bool bFreshWater) const;										// Exposed to Python
 
-	bool isPlot(int iX, int iY) const;																		// Exposed to Python
-#ifdef _USRDLL
+	inline bool isPlot(int iX, int iY) const
+	{
+		return iX >= 0 && iX < getGridWidth() && iY >= 0 && iY < getGridHeight();
+	}
 	inline int isPlotINLINE(int iX, int iY) const
 	{
-		return ((iX >= 0) && (iX < getGridWidthINLINE()) && (iY >= 0) && (iY < getGridHeightINLINE()));
+		return ((iX >= 0) && (iX < getGridWidth()) && (iY >= 0) && (iY < getGridHeight()));
 	}
-#endif
-	int numPlots() const; 																								// Exposed to Python
-#ifdef _USRDLL
+
+	inline int numPlots() const
+	{
+		return getGridWidth() * getGridHeight();
+	}
 	inline int numPlotsINLINE() const
 	{
-		return getGridWidthINLINE() * getGridHeightINLINE();
+		return getGridWidth() * getGridHeight();
 	}
-#endif
-	int plotNum(int iX, int iY) const;																		// Exposed to Python
-#ifdef _USRDLL
+
+	inline int plotNum(int iX, int iY) const
+	{
+		return (iY * getGridWidth()) + iX;
+	}
 	inline int plotNumINLINE(int iX, int iY) const
 	{
-		return ((iY * getGridWidthINLINE()) + iX);
+		return ((iY * getGridWidth()) + iX);
 	}
-	inline int plotNumINLINE_checked(int iX, int iY) const
-	{
-		if ((iX == INVALID_PLOT_COORD) || (iY == INVALID_PLOT_COORD))
-		{
-			return -1;
-		}
-		int iMapX = coordRange(iX, getGridWidthINLINE(), isWrapXINLINE());
-		int iMapY = coordRange(iY, getGridHeightINLINE(), isWrapYINLINE());
-		return (isPlotINLINE(iMapX, iMapY) ? plotNumINLINE(iMapX, iMapY) : -1);
-	}
-#endif
+
 	int plotX(int iIndex) const;																										// Exposed to Python
 	int plotY(int iIndex) const;																										// Exposed to Python
 
@@ -180,20 +175,24 @@ public:
 	int maxPlotDistance() const;																								// Exposed to Python
 	int maxStepDistance() const;																								// Exposed to Python
 
-	int getGridWidth() const;																		// Exposed to Python
-#ifdef _USRDLL
+	inline int getGridWidth() const
+	{
+		return m_iGridWidth;
+	}
 	inline int getGridWidthINLINE() const
 	{
 		return m_iGridWidth;
 	}
-#endif
-	int getGridHeight() const;																	// Exposed to Python
-#ifdef _USRDLL
+
+	inline int getGridHeight() const
+	{
+		return m_iGridHeight;
+	}
 	inline int getGridHeightINLINE() const
 	{
 		return m_iGridHeight;
 	}
-#endif
+
 	int getLandPlots() const;																					// Exposed to Python
 	void changeLandPlots(int iChange);
 
@@ -206,27 +205,33 @@ public:
 	int getNextRiverID() const;																									// Exposed to Python
 	void incrementNextRiverID();																					// Exposed to Python
 
-	bool isWrapX() const;																							// Exposed to Python
-#ifdef _USRDLL
+	inline bool isWrapX() const
+	{
+		return m_bWrapX;
+	}
 	inline bool isWrapXINLINE() const
 	{
 		return m_bWrapX;
 	}
-#endif
-	bool isWrapY() const;																							// Exposed to Python
-#ifdef _USRDLL
+
+	inline bool isWrapY() const
+	{
+		return m_bWrapY;
+	}
 	inline bool isWrapYINLINE() const
 	{
 		return m_bWrapY;
 	}
-#endif
-	bool isWrap() const;
-#ifdef _USRDLL
+
+	inline bool isWrap() const
+	{
+		return m_bWrapX || m_bWrapY;
+	}
 	inline bool isWrapINLINE() const
 	{
 		return m_bWrapX || m_bWrapY;
 	}
-#endif
+
 	WorldSizeTypes getWorldSize() const;															// Exposed to Python
 	ClimateTypes getClimate() const;																	// Exposed to Python
 	SeaLevelTypes getSeaLevel() const;																// Exposed to Python
@@ -240,24 +245,34 @@ public:
 	int getNumBonusesOnLand(BonusTypes eIndex) const;														// Exposed to Python
 	void changeNumBonusesOnLand(BonusTypes eIndex, int iChange);
 
-	CvPlot* plotByIndex(int iIndex) const;											// Exposed to Python
-#ifdef _USRDLL
+	inline CvPlot* plotByIndex(int iIndex) const
+	{
+		return iIndex >= 0 && iIndex < getGridWidth() * getGridHeight() ? &(m_pMapPlots[iIndex]) : NULL;
+	}
 	inline CvPlot* plotByIndexINLINE(int iIndex) const
 	{
-		return (((iIndex >= 0) && (iIndex < (getGridWidthINLINE() * getGridHeightINLINE()))) ? &(m_pMapPlots[iIndex]) : NULL);
+		return (((iIndex >= 0) && (iIndex < (getGridWidth() * getGridHeight()))) ? &(m_pMapPlots[iIndex]) : NULL);
 	}
-#endif
-	CvPlot* plot(int iX, int iY) const;													// Exposed to Python
-#ifdef _USRDLL
+
+	__forceinline CvPlot* plot(int iX, int iY) const
+	{
+		if (iX == INVALID_PLOT_COORD || iY == INVALID_PLOT_COORD)
+		{
+			return NULL;
+		}
+		const int iMapX = coordRange(iX, getGridWidth(), isWrapX());
+		const int iMapY = coordRange(iY, getGridHeight(), isWrapY());
+		return isPlot(iMapX, iMapY) ? &(m_pMapPlots[plotNum(iMapX, iMapY)]) : NULL;
+	}
 	__forceinline CvPlot* plotINLINE(int iX, int iY) const
 	{
 		if ((iX == INVALID_PLOT_COORD) || (iY == INVALID_PLOT_COORD))
 		{
 			return NULL;
 		}
-		int iMapX = coordRange(iX, getGridWidthINLINE(), isWrapXINLINE());
-		int iMapY = coordRange(iY, getGridHeightINLINE(), isWrapYINLINE());
-		return ((isPlotINLINE(iMapX, iMapY)) ? &(m_pMapPlots[plotNumINLINE(iMapX, iMapY)]) : NULL);
+		const int iMapX = coordRange(iX, getGridWidth(), isWrapX());
+		const int iMapY = coordRange(iY, getGridHeight(), isWrapY());
+		return (isPlot(iMapX, iMapY) ? &(m_pMapPlots[plotNum(iMapX, iMapY)]) : NULL);
 	}
 	__forceinline CvPlot* plotSorenINLINE(int iX, int iY) const
 	{
@@ -265,9 +280,9 @@ public:
 		{
 			return NULL;
 		}
-		return &(m_pMapPlots[plotNumINLINE(iX, iY)]);
+		return &(m_pMapPlots[plotNum(iX, iY)]);
 	}
-#endif
+
 	CvPlot* pointToPlot(float fX, float fY) const;
 
 	int getIndexAfterLastArea() const;														// Exposed to Python
