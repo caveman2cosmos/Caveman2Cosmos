@@ -389,10 +389,9 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 	//GC.getGameINLINE().logOOSSpecial(13, getID(), iX, iY);
 	setXY(iX, iY, false, true, false, false, true);
 
-	CvCity* pCity;
-	if (plot()->getPlotCity() != NULL)
+	CvCity* pCity = plot()->getPlotCity();
+	if (pCity != NULL)
 	{
-		pCity = plot()->getPlotCity();
 		setCityOfOrigin(pCity);
 	}
 
@@ -671,6 +670,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iAnimalIgnoresBordersCount = 0;
 	m_iOnslaughtCount = 0;
 	m_iExtraFortitude = 0;
+#ifdef STRENGTH_IN_NUMBERS
 	m_iExtraFrontSupportPercent = 0;
 	m_iExtraShortRangeSupportPercent = 0;
 	m_iExtraMediumRangeSupportPercent = 0;
@@ -679,6 +679,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iSupportCount = 0;
 	m_iAttackFromPlotX = INVALID_PLOT_COORD;
 	m_iAttackFromPlotY = INVALID_PLOT_COORD;
+#endif
 	m_iExtraDodgeModifier = 0;
 	m_iExtraPrecisionModifier = 0;
 	m_iExtraPowerShots = 0;
@@ -888,7 +889,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_eCapturingUnit.reset();
 	m_combatUnit.reset();
 	m_transportUnit.reset();
-	//TB Combat Mods begin
+#ifdef STRENGTH_IN_NUMBERS
 	afIUnit.reset();
 	afIIUnit.reset();
 	asrIUnit.reset();
@@ -909,7 +910,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	dlrIIUnit.reset();
 	dflIUnit.reset();
 	dflIIUnit.reset();
-	//TB Combat Mods end
+#endif
 
 	for (iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
 	{
@@ -26674,6 +26675,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iRoundCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iAttackCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iDefenseCount);
+#ifdef STRENGTH_IN_NUMBERS
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraFrontSupportPercent);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraShortRangeSupportPercent);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraMediumRangeSupportPercent);
@@ -26722,6 +26724,57 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &dflIUnit.iID);
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&dflIIUnit.eOwner);
 	WRAPPER_READ(wrapper, "CvUnit", &dflIIUnit.iID);
+#else
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &m_iExtraFrontSupportPercent, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &m_iExtraShortRangeSupportPercent, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &m_iExtraMediumRangeSupportPercent, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &m_iExtraLongRangeSupportPercent, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &m_iExtraFlankSupportPercent, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &m_iSupportCount, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &m_iAttackFromPlotX, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &m_iAttackFromPlotY, SAVE_VALUE_TYPE_INT);
+
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)&afIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &afIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)&afIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &afIIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)&asrIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &asrIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)&asrIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &asrIIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)&amrIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &amrIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)&amrIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &amrIIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)&alrIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", alrIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)&alrIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &alrIIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)&aflIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &aflIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)&aflIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &aflIIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)&dfIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &dfIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)&dfIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &dfIIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)&dsrIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &dsrIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)&dsrIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &dsrIIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)&dmrIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &dmrIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)&dmrIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &dmrIIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)&dlrIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &dlrIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)&dlrIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &dlrIIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)&dflIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &dflIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)&dflIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &dflIIUnit.iID, SAVE_VALUE_TYPE_INT);
+#endif
 
 	//	Backward compatibility - read array format if present
 	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
@@ -28286,6 +28339,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iRoundCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iAttackCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iDefenseCount);
+#ifdef STRENGTH_IN_NUMBERS
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraFrontSupportPercent);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraShortRangeSupportPercent);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraMediumRangeSupportPercent);
@@ -28334,7 +28388,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", dflIUnit.iID);
 	WRAPPER_WRITE(wrapper, "CvUnit", dflIIUnit.eOwner);
 	WRAPPER_WRITE(wrapper, "CvUnit", dflIIUnit.iID);
-
+#endif
 	//	Use condensed format now - only save non-default array elements
 	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
@@ -36150,24 +36204,22 @@ int CvUnit::getCityRepel() const
 {
 	PROFILE_FUNC();
 
-	UnitCombatTypes eUnitCombat;
-	int iI;
-	CvCity* pCity;
 	int iCityRepel = 0;
 
-	if (plot() != NULL)
+	const CvPlot* pPlot = plot();
+	if (pPlot != NULL)
 	{
-		if (plot()->getPlotCity() != NULL)
+		const CvCity* city = pPlot->getPlotCity();
+		if (city != NULL)
 		{
-			pCity = plot()->getPlotCity(); 
-			iCityRepel += pCity->getExtraLocalRepel();
+			iCityRepel += city->getExtraLocalRepel();
 
-			for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+			for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 			{	
-				eUnitCombat = ((UnitCombatTypes)iI);
+				const UnitCombatTypes eUnitCombat = ((UnitCombatTypes)iI);
 				if (isHasUnitCombat(eUnitCombat))
 				{
-					iCityRepel += pCity->getUnitCombatRepelModifierTotal(eUnitCombat);
+					iCityRepel += city->getUnitCombatRepelModifierTotal(eUnitCombat);
 				}
 			}
 		}
@@ -36177,99 +36229,81 @@ int CvUnit::getCityRepel() const
 
 #ifdef STRENGTH_IN_NUMBERS
 
-int CvUnit::getCityFrontSupportPercentModifier() const
-{
-	PROFILE_FUNC();
-
-	CvCity* pCity;
-	int iModifier = 0;
-	if (plot() != NULL)
+namespace {
+	int getCityFrontSupportPercentModifier(const CvPlot* plot)
 	{
-		if (plot()->getPlotCity() != NULL)
+		if (plot != NULL)
 		{
-			pCity = plot()->getPlotCity();
-			iModifier += pCity->getTotalFrontSupportPercentModifier();
+			const CvCity* city = plot->getPlotCity();
+			if (city != NULL)
+			{
+				return city->getTotalFrontSupportPercentModifier();
+			}
 		}
+		return 0;
 	}
-	return iModifier;
+
+	int getCityShortRangeSupportPercentModifier(const CvPlot* plot)
+	{
+		if (plot != NULL)
+		{
+			const CvCity* city = plot->getPlotCity();
+			if (city != NULL)
+			{
+				return city->getTotalShortRangeSupportPercentModifier();
+			}
+		}
+		return 0;
+	}
+
+	int getCityMediumRangeSupportPercentModifier(const CvPlot* plot)
+	{
+		if (plot != NULL)
+		{
+			const CvCity* city = plot->getPlotCity();
+			if (city != NULL)
+			{
+				return city->getTotalMediumRangeSupportPercentModifier();
+			}
+		}
+		return 0;
+	}
+
+	int getCityLongRangeSupportPercentModifier(const CvPlot* plot)
+	{
+		if (plot != NULL)
+		{
+			const CvCity* city = plot->getPlotCity();
+			if (city != NULL)
+			{
+				return city->getTotalLongRangeSupportPercentModifier();
+			}
+		}
+		return 0;
+	}
+
+	int getCityFlankSupportPercentModifier(const CvPlot* plot)
+	{
+		if (plot != NULL)
+		{
+			const CvCity* city = plot->getPlotCity();
+			if (city != NULL)
+			{
+				return city->getTotalFlankSupportPercentModifier();
+			}
+		}
+		return 0;
+	}
 }
 
-int CvUnit::getCityShortRangeSupportPercentModifier() const
-{
-	PROFILE_FUNC();
-
-	CvCity* pCity;
-	int iModifier = 0;
-	if (plot() != NULL)
-	{
-		if (plot()->getPlotCity() != NULL)
-		{
-			pCity = plot()->getPlotCity();
-			iModifier += pCity->getTotalShortRangeSupportPercentModifier();
-		}
-	}
-	return iModifier;
-}
-
-int CvUnit::getCityMediumRangeSupportPercentModifier() const
-{
-	PROFILE_FUNC();
-
-	CvCity* pCity;
-	int iModifier = 0;
-	if (plot() != NULL)
-	{
-		if (plot()->getPlotCity() != NULL)
-		{
-			pCity = plot()->getPlotCity();
-			iModifier += pCity->getTotalMediumRangeSupportPercentModifier();
-		}
-	}
-	return iModifier;
-}
-
-int CvUnit::getCityLongRangeSupportPercentModifier() const
-{
-	PROFILE_FUNC();
-
-	CvCity* pCity;
-	int iModifier = 0;
-	if (plot() != NULL)
-	{
-		if (plot()->getPlotCity() != NULL)
-		{
-			pCity = plot()->getPlotCity();
-			iModifier += pCity->getTotalLongRangeSupportPercentModifier();
-		}
-	}
-	return iModifier;
-}
-
-int CvUnit::getCityFlankSupportPercentModifier() const
-{
-	PROFILE_FUNC();
-
-	CvCity* pCity;
-	int iModifier = 0;
-	if (plot() != NULL)
-	{
-		if (plot()->getPlotCity() != NULL)
-		{
-			pCity = plot()->getPlotCity();
-			iModifier += pCity->getTotalFlankSupportPercentModifier();
-		}
-	}
-	return iModifier;
-}
-
-int CvUnit::getExtraFrontSupportPercent (bool bIgnoreCommanders) const
+int CvUnit::getExtraFrontSupportPercent(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander()) //this is not a commander
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return	m_iExtraFrontSupportPercent + pCommander->getExtraFrontSupportPercent();
+			return m_iExtraFrontSupportPercent + pCommander->getExtraFrontSupportPercent();
 		}
 	}
 	return m_iExtraFrontSupportPercent;
@@ -36277,18 +36311,18 @@ int CvUnit::getExtraFrontSupportPercent (bool bIgnoreCommanders) const
 
 void CvUnit::changeExtraFrontSupportPercent(int iChange)
 {
-	m_iExtraFrontSupportPercent +=iChange;
+	m_iExtraFrontSupportPercent += iChange;
 	FAssert(getExtraFrontSupportPercent() >= 0);
 }
 
-int CvUnit::getExtraShortRangeSupportPercent (bool bIgnoreCommanders) const
+int CvUnit::getExtraShortRangeSupportPercent(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander()) //this is not a commander
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return	m_iExtraShortRangeSupportPercent + pCommander->getExtraShortRangeSupportPercent();
+			return m_iExtraShortRangeSupportPercent + pCommander->getExtraShortRangeSupportPercent();
 		}
 	}
 	return m_iExtraShortRangeSupportPercent;
@@ -36296,18 +36330,18 @@ int CvUnit::getExtraShortRangeSupportPercent (bool bIgnoreCommanders) const
 
 void CvUnit::changeExtraShortRangeSupportPercent(int iChange)
 {
-	m_iExtraShortRangeSupportPercent +=iChange;
+	m_iExtraShortRangeSupportPercent += iChange;
 	FAssert(getExtraShortRangeSupportPercent() >= 0);
 }
 
-int CvUnit::getExtraMediumRangeSupportPercent (bool bIgnoreCommanders) const
+int CvUnit::getExtraMediumRangeSupportPercent(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander()) //this is not a commander
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return	m_iExtraMediumRangeSupportPercent + pCommander->getExtraMediumRangeSupportPercent();
+			return m_iExtraMediumRangeSupportPercent + pCommander->getExtraMediumRangeSupportPercent();
 		}
 	}
 	return m_iExtraMediumRangeSupportPercent;
@@ -36315,18 +36349,18 @@ int CvUnit::getExtraMediumRangeSupportPercent (bool bIgnoreCommanders) const
 
 void CvUnit::changeExtraMediumRangeSupportPercent(int iChange)
 {
-	m_iExtraMediumRangeSupportPercent +=iChange;
+	m_iExtraMediumRangeSupportPercent += iChange;
 	FAssert(getExtraMediumRangeSupportPercent() >= 0);
 }
 
-int CvUnit::getExtraLongRangeSupportPercent (bool bIgnoreCommanders) const
+int CvUnit::getExtraLongRangeSupportPercent(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander()) //this is not a commander
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return	m_iExtraLongRangeSupportPercent + pCommander->getExtraLongRangeSupportPercent();
+			return m_iExtraLongRangeSupportPercent + pCommander->getExtraLongRangeSupportPercent();
 		}
 	}
 	return m_iExtraLongRangeSupportPercent;
@@ -36334,18 +36368,18 @@ int CvUnit::getExtraLongRangeSupportPercent (bool bIgnoreCommanders) const
 
 void CvUnit::changeExtraLongRangeSupportPercent(int iChange)
 {
-	m_iExtraLongRangeSupportPercent +=iChange;
+	m_iExtraLongRangeSupportPercent += iChange;
 	FAssert(getExtraLongRangeSupportPercent() >= 0);
 }
 
-int CvUnit::getExtraFlankSupportPercent (bool bIgnoreCommanders) const
+int CvUnit::getExtraFlankSupportPercent(bool bIgnoreCommanders) const
 {
 	if (!bIgnoreCommanders && !isCommander()) //this is not a commander
 	{
-		CvUnit* pCommander = getCommander();
+		const CvUnit* pCommander = getCommander();
 		if (pCommander != NULL)
 		{
-			return	m_iExtraFlankSupportPercent + pCommander->getExtraFlankSupportPercent();
+			return m_iExtraFlankSupportPercent + pCommander->getExtraFlankSupportPercent();
 		}
 	}
 	return m_iExtraFlankSupportPercent;
@@ -36353,63 +36387,63 @@ int CvUnit::getExtraFlankSupportPercent (bool bIgnoreCommanders) const
 
 void CvUnit::changeExtraFlankSupportPercent(int iChange)
 {
-	m_iExtraFlankSupportPercent +=iChange;
+	m_iExtraFlankSupportPercent += iChange;
 	FAssert(getExtraFlankSupportPercent() >= 0);
 }
 
 int CvUnit::frontSupportPercentTotal() const
 {
-	return std::max(0, (m_pUnitInfo->getFrontSupportPercent() + getExtraFrontSupportPercent() + getCityFrontSupportPercentModifier()));
+	return (m_pUnitInfo->getFrontSupportPercent() + getExtraFrontSupportPercent() + getCityFrontSupportPercentModifier(plot()));
 }
 
 int CvUnit::shortRangeSupportPercentTotal() const
 {
-	return std::max(0, (m_pUnitInfo->getShortRangeSupportPercent() + getExtraShortRangeSupportPercent() + getCityShortRangeSupportPercentModifier()));
+	return (m_pUnitInfo->getShortRangeSupportPercent() + getExtraShortRangeSupportPercent() + getCityShortRangeSupportPercentModifier(plot()));
 }
 
 int CvUnit::mediumRangeSupportPercentTotal() const
 {
-	return std::max(0, (m_pUnitInfo->getMediumRangeSupportPercent() + getExtraMediumRangeSupportPercent() + getCityMediumRangeSupportPercentModifier()));
+	return (m_pUnitInfo->getMediumRangeSupportPercent() + getExtraMediumRangeSupportPercent() + getCityMediumRangeSupportPercentModifier(plot()));
 }
 
 int CvUnit::longRangeSupportPercentTotal() const
 {
-	return std::max(0, (m_pUnitInfo->getLongRangeSupportPercent() + getExtraLongRangeSupportPercent() + getCityLongRangeSupportPercentModifier()));
+	return (m_pUnitInfo->getLongRangeSupportPercent() + getExtraLongRangeSupportPercent() + getCityLongRangeSupportPercentModifier(plot()));
 }
 
 int CvUnit::flankSupportPercentTotal() const
 {
-	return std::max(0, (m_pUnitInfo->getFlankSupportPercent() + getExtraFlankSupportPercent() + getCityFlankSupportPercentModifier()));
+	return (m_pUnitInfo->getFlankSupportPercent() + getExtraFlankSupportPercent() + getCityFlankSupportPercentModifier(plot()));
 }
 
 bool CvUnit::isFrontSupporter() const
 {
-	return (std::max(0, (m_pUnitInfo->getFrontSupportPercent() + getExtraFrontSupportPercent())) > 0);
+	return m_pUnitInfo->getFrontSupportPercent() > 0 || getExtraFrontSupportPercent() > 0;
 }
 
 bool CvUnit::isShortRangeSupporter() const
 {
-	return (std::max(0, (m_pUnitInfo->getShortRangeSupportPercent() + getExtraShortRangeSupportPercent())) > 0);
+	return m_pUnitInfo->getShortRangeSupportPercent() > 0 || getExtraShortRangeSupportPercent() > 0;
 }
 
 bool CvUnit::isMediumRangeSupporter() const
 {
-	return (std::max(0, (m_pUnitInfo->getMediumRangeSupportPercent() + getExtraMediumRangeSupportPercent())) > 0);
+	return m_pUnitInfo->getMediumRangeSupportPercent() > 0 || getExtraMediumRangeSupportPercent() > 0;
 }
 
 bool CvUnit::isLongRangeSupporter() const
 {
-	return (std::max(0, (m_pUnitInfo->getLongRangeSupportPercent() + getExtraLongRangeSupportPercent())) > 0);
+	return m_pUnitInfo->getLongRangeSupportPercent() > 0 || getExtraLongRangeSupportPercent() > 0;
 }
 
 bool CvUnit::isFlankSupporter() const
 {
-	return (std::max(0, (m_pUnitInfo->getFlankSupportPercent() + getExtraFlankSupportPercent())) > 0);
+	return m_pUnitInfo->getFlankSupportPercent() > 0 || getExtraFlankSupportPercent() > 0;
 }
 
 CvPlot* CvUnit::getAttackFromPlot() const
 {
-	return GC.getMapINLINE().plotSorenINLINE(m_iAttackFromPlotX, m_iAttackFromPlotY);
+	return GC.getMap().plotSorenINLINE(m_iAttackFromPlotX, m_iAttackFromPlotY);
 }
 
 void CvUnit::setAttackFromPlot(const CvPlot* pNewValue)
@@ -36418,8 +36452,8 @@ void CvUnit::setAttackFromPlot(const CvPlot* pNewValue)
 	{
 		if (pNewValue != NULL)
 		{
-			m_iAttackFromPlotX = pNewValue->getX_INLINE();
-			m_iAttackFromPlotY = pNewValue->getY_INLINE();
+			m_iAttackFromPlotX = pNewValue->getX();
+			m_iAttackFromPlotY = pNewValue->getY();
 		}
 		else
 		{
@@ -36431,27 +36465,26 @@ void CvUnit::setAttackFromPlot(const CvPlot* pNewValue)
 
 int CvUnit::getAttackerSupportValue() const
 {
-	if (!GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
 	PROFILE_FUNC();
 
-	CvPlot* aPlot = getAttackFromPlot();
-	CvPlot* pPlot = getAttackPlot();
-	CvUnit* pDefender;
-	pDefender = pPlot->getBestDefender(NO_PLAYER, getOwnerINLINE(), this, true);
+	const CvPlot* aPlot = getAttackFromPlot();
+	const CvPlot* pPlot = getAttackPlot();
+	const CvUnit* pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true);
 	int iTotalSupport = 0;
-	int iFrontOne = getAttackerFirstFrontSupportValue(aPlot, pPlot, pDefender);
-	int iFrontTwo = getAttackerSecondFrontSupportValue(aPlot, pPlot, pDefender);
-	int iShortOne = getAttackerFirstShortRangeSupportValue(aPlot, pPlot, pDefender);
-	int iShortTwo = getAttackerSecondShortRangeSupportValue(aPlot, pPlot, pDefender);
-	int iMedOne = getAttackerFirstMediumRangeSupportValue(aPlot, pPlot, pDefender);
-	int iMedTwo = getAttackerSecondMediumRangeSupportValue(aPlot, pPlot, pDefender);
-	int iLongOne = getAttackerFirstLongRangeSupportValue(aPlot, pPlot, pDefender);
-	int iLongTwo = getAttackerSecondLongRangeSupportValue(aPlot, pPlot, pDefender);
-	int iFlankOne = getAttackerFirstFlankSupportValue(aPlot, pPlot, pDefender);
-	int iFlankTwo = getAttackerSecondFlankSupportValue(aPlot, pPlot, pDefender);
+	const int iFrontOne = getAttackerFirstFrontSupportValue(aPlot, pPlot, pDefender);
+	const int iFrontTwo = getAttackerSecondFrontSupportValue(aPlot, pPlot, pDefender);
+	const int iShortOne = getAttackerFirstShortRangeSupportValue(aPlot, pPlot, pDefender);
+	const int iShortTwo = getAttackerSecondShortRangeSupportValue(aPlot, pPlot, pDefender);
+	const int iMedOne = getAttackerFirstMediumRangeSupportValue(aPlot, pPlot, pDefender);
+	const int iMedTwo = getAttackerSecondMediumRangeSupportValue(aPlot, pPlot, pDefender);
+	const int iLongOne = getAttackerFirstLongRangeSupportValue(aPlot, pPlot, pDefender);
+	const int iLongTwo = getAttackerSecondLongRangeSupportValue(aPlot, pPlot, pDefender);
+	const int iFlankOne = getAttackerFirstFlankSupportValue(aPlot, pPlot, pDefender);
+	const int iFlankTwo = getAttackerSecondFlankSupportValue(aPlot, pPlot, pDefender);
 	iTotalSupport = (iFrontOne + iFrontTwo + iShortOne + iShortTwo + iMedOne + iMedTwo + iLongOne + iLongTwo + iFlankOne + iFlankTwo);
 	return iTotalSupport;
 }
@@ -37227,13 +37260,13 @@ void CvUnit::setAttackerSecondFlankSupportingUnit(CvUnit* pBestUnit)
 
 int CvUnit::getDefenderSupportValue(const CvUnit* pAttacker) const
 {
-	if (!GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
 	PROFILE_FUNC();
 
-	CvPlot* pPlot = plot();
+	const CvPlot* pPlot = plot();
 
 	int iTotalSupport = 0;
 	iTotalSupport += getDefenderFirstFrontSupportValue(pAttacker, pPlot);
@@ -37819,7 +37852,7 @@ void CvUnit::setDefenderSecondFlankSupportingUnit(CvUnit* pBestUnit)
 	dflIIUnit = pBestUnit->getIDInfo();
 }
 
-bool CvUnit::isSupporting()
+bool CvUnit::isSupporting() const
 {
 	return (m_iSupportCount > 0);
 }
