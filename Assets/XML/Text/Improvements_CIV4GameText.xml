@@ -1127,8 +1127,25 @@
 		<Polish>Teren - każdy dowolnie określony fragment powierzchni lądowej. Termin spełniający taką samą funkcję jak akwen w odniesieniu do powierzchni wodnej.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_LIGHTHOUSE</Tag>
-		<English>A Lighthouse</English>
+		<Tag>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_CORAL</Tag>
+		<English>Lighthouse(Coral)</English>
+		<French>
+			<Text>Phare</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Ein Leuchtturm</German>
+		<Italian>Un Faro</Italian>
+		<Spanish>
+			<Text>Un Faro</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Latarnia Morska</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_REEF</Tag>
+		<English>Lighthouse(Reef)</English>
 		<French>
 			<Text>Phare</Text>
 			<Gender>Male</Gender>

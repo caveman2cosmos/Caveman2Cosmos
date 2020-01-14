@@ -2152,6 +2152,7 @@
 			<Strategy>TXT_KEY_BUILDING_L5_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_L5_COLONY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_L5_COLONY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ORBITAL_MEGASTRUCTURES</PrereqTech>
 			<iCost>11175</iCost>
@@ -2191,6 +2192,7 @@
 			<Strategy>TXT_KEY_BUILDING_INTERPLANETARY_TRANSPORT_NETWORK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INTERPLANETARY_TRANSPORT_NETWORK</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_INTERPLANETARY_TRANSPORT_NETWORK</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ASTROGATION_CONSTELLATION</PrereqTech>
 			<iCost>10179</iCost>

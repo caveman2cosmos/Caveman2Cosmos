@@ -40,7 +40,6 @@
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TAMED_DONKEY</DefaultUnit>
 		</UnitClassInfo>
-
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_LLAMA</Type>
 			<Description>TXT_KEY_UNIT_TAMED_LLAMA</Description>
@@ -59,8 +58,6 @@
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TAMED_CAMEL</DefaultUnit>
 		</UnitClassInfo>
-
-
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_BISON</Type>
 			<Description>TXT_KEY_UNIT_TAMED_BISON</Description>

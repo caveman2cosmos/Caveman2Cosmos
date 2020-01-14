@@ -79,7 +79,6 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</FeatureInfo>
 	       <FeatureInfo>
 			<Type>FEATURE_GREAT_BARRIER_WITH_LIGHTHOUSE</Type>
@@ -108,7 +107,6 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</FeatureInfo>
 		<FeatureInfo>
 			<Type>FEATURE_PLATY_EVEREST</Type>
@@ -626,7 +624,6 @@
 			</TerrainBooleans>
 			<WorldSoundscapeAudioScript>ASSS_OASIS_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
-
 		<FeatureInfo>
 			<Type>FEATURE_PLATY_KILIMANJARO</Type>
 			<Description>TXT_KEY_FEATURE_KILIMANJARO</Description>
