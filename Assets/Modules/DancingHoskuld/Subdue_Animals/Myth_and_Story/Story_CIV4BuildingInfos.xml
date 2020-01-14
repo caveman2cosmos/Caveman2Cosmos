@@ -147,7 +147,6 @@
 				</Active>
     			</PropertySource>
 	           </PropertyManipulators>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_PALEOLITHIC_CAT_STORY</BuildingClass>
@@ -293,7 +292,6 @@
 				</Active>
     			</PropertySource>
 	           </PropertyManipulators>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_PALEOLITHIC_DOG_STORY</BuildingClass>
@@ -439,7 +437,6 @@
 				</Active>
     			</PropertySource>
 	           </PropertyManipulators>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_PALEOLITHIC_MARSUPIAL_STORY</BuildingClass>
@@ -585,7 +582,6 @@
 				</Active>
     			</PropertySource>
 	           </PropertyManipulators>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

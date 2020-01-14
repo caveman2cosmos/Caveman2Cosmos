@@ -205,8 +205,6 @@
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_OWL_STORIES_EFFECT</DefaultBuilding>
 		</BuildingClassInfo>
-
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_RAPTOR_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_RAPTOR_MYTH</Description>
@@ -247,7 +245,6 @@
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_RAPTOR_STORIES_EFFECT</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_LOCAL_FISH_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_LOCAL_FISH_MYTH</Description>
@@ -296,7 +293,6 @@
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_FISH_STORIES_EFFECT</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_REPTILE_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_REPTILE_MYTH</Description>
@@ -337,7 +333,6 @@
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_REPTILE_STORIES_EFFECT</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_RODENT_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_RODENT_MYTH</Description>
@@ -498,7 +493,6 @@
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_PENGUIN_STORIES_EFFECT</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NEW_W_MONKEY_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_NEW_W_MONKEY_MYTH</Description>
@@ -539,7 +533,6 @@
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_NEW_W_MONKEY_STORIES_EFFECT</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_OLD_W_MONKEY_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_OLD_W_MONKEY_MYTH</Description>

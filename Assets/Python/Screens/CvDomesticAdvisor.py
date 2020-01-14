@@ -846,7 +846,7 @@ class CvDomesticAdvisor:
 
 		iGreatPersonRate = city.getGreatPeopleRate()
 		if iGreatPersonRate > 0:
-			iGPPLeft = self.CyPlayer.greatPeopleThreshold(False) - city.getGreatPeopleProgress()
+			iGPPLeft = self.CyPlayer.greatPeopleThresholdNonMilitary() - city.getGreatPeopleProgress()
 			return (iGPPLeft + iGreatPersonRate - 1) / iGreatPersonRate
 		return u"-"
 

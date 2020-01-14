@@ -742,8 +742,6 @@ public:
 
 	bool isCivEverActive(CivilizationTypes eCivilization) const;      // Exposed to Python
 	bool isLeaderEverActive(LeaderHeadTypes eLeader) const;		// Exposed to Python
-	bool isUnitEverActive(UnitTypes eUnit) const;		// Exposed to Python
-	bool isBuildingEverActive(BuildingTypes eBuilding) const;		// Exposed to Python
 
 	void processBuilding(BuildingTypes eBuilding, int iChange);
 	

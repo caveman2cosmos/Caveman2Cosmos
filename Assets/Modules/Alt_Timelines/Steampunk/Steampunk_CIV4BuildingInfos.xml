@@ -449,6 +449,7 @@
 			<Strategy>TXT_KEY_BUILDING_NEMO_ACADEMY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEMO_ACADEMY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NEMO_ACADEMY</MovieDefineTag>
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

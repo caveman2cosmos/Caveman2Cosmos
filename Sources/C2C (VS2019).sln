@@ -9,7 +9,6 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Assert|x86 = Assert|x86
 		Debug|x86 = Debug|x86
-		Debug-old|x86 = Debug-old|x86
 		FinalRelease|x86 = FinalRelease|x86
 		Profile|x86 = Profile|x86
 		Release|x86 = Release|x86
@@ -20,8 +19,6 @@ Global
 		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Assert|x86.Build.0 = Assert|Win32
 		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Debug|x86.ActiveCfg = Debug|Win32
 		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Debug|x86.Build.0 = Debug|Win32
-		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Debug-old|x86.ActiveCfg = Debug-old|Win32
-		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Debug-old|x86.Build.0 = Debug-old|Win32
 		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.FinalRelease|x86.ActiveCfg = FinalRelease|Win32
 		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.FinalRelease|x86.Build.0 = FinalRelease|Win32
 		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Profile|x86.ActiveCfg = Profile|Win32

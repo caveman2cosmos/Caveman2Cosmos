@@ -57,12 +57,11 @@
 			<Type>BUILDING_CROW_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_CROW_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_SONG_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CROW_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>-1</iCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_CROW_STORY</BuildingClass>
@@ -173,7 +172,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<bGraphicalOnly>1</bGraphicalOnly>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>

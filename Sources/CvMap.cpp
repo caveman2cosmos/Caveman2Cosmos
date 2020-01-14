@@ -817,24 +817,10 @@ CvSelectionGroup* CvMap::findSelectionGroupInternal(int iX, int iY, PlayerTypes 
 
 CvArea* CvMap::findBiggestArea(bool bWater) const
 {
-	int iBestValue = 0;
-	CvArea* pBestArea = NULL;
-
-	int iLoop;
-	for (CvArea* pLoopArea = firstArea(&iLoop); pLoopArea != NULL; pLoopArea = nextArea(&iLoop))
-	{
-		if (pLoopArea->isWater() == bWater)
-		{
-			const int iValue = pLoopArea->getNumTiles();
-			if (iValue > iBestValue)
-			{
-				iBestValue = iValue;
-				pBestArea = pLoopArea;
-			}
-		}
-	}
-
-	return pBestArea;
+	return scoring::max_score(
+		areas() | filtered(CvArea::fn::isWater() == bWater),
+		CvArea::fn::getNumTiles()
+	).get_value_or(nullptr);
 }
 
 
@@ -1070,18 +1056,7 @@ int CvMap::getNumAreas() const
 
 int CvMap::getNumLandAreas() const
 {
-	int iNumLandAreas = 0;
-
-	int iLoop;
-	for(CvArea* pLoopArea = GC.getMap().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMap().nextArea(&iLoop))
-	{
-		if (!pLoopArea->isWater())
-		{
-			iNumLandAreas++;
-		}
-	}
-
-	return iNumLandAreas;
+	return algo::count_if(GC.getMap().areas(), !CvArea::fn::isWater());
 }
 
 

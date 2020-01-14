@@ -6088,46 +6088,43 @@ void CvDLLWidgetData::parseSelectedHelp(CvWidgetDataStruct &widgetDataStruct, Cv
 
 	if (pHeadSelectedCity != NULL)
 	{
-		OrderData* pOrder = pHeadSelectedCity->getOrderFromQueue(widgetDataStruct.m_iData1);
+		const OrderData order = pHeadSelectedCity->getOrderAt(widgetDataStruct.m_iData1);
 
-		if (pOrder != NULL)
+		switch (order.eOrderType)
 		{
-			switch (pOrder->eOrderType)
-			{
-			case ORDER_TRAIN:
-				GAMETEXT.setUnitHelp(szBuffer, ((UnitTypes)EXTERNAL_ORDER_IDATA(pOrder->iData1)), false, false, false, pHeadSelectedCity);
-				break;
+		case ORDER_TRAIN:
+			GAMETEXT.setUnitHelp(szBuffer, order.getUnitType(), false, false, false, pHeadSelectedCity);
+			break;
 
-			case ORDER_CONSTRUCT:
+		case ORDER_CONSTRUCT:
 // BUG - Building Actual Effects - start
-				GAMETEXT.setBuildingHelpActual(szBuffer, ((BuildingTypes)(pOrder->iData1)), false, false, false, pHeadSelectedCity);
+			GAMETEXT.setBuildingHelpActual(szBuffer, order.getBuildingType(), false, false, false, pHeadSelectedCity);
 // BUG - Building Actual Effects - end
-				break;
+			break;
 
-			case ORDER_CREATE:
-				GAMETEXT.setProjectHelp(szBuffer, ((ProjectTypes)(pOrder->iData1)), false, pHeadSelectedCity);
-				break;
+		case ORDER_CREATE:
+			GAMETEXT.setProjectHelp(szBuffer, order.getProjectType(), false, pHeadSelectedCity);
+			break;
 
-			case ORDER_MAINTAIN:
-				GAMETEXT.setProcessHelp(szBuffer, ((ProcessTypes)(pOrder->iData1)));
-				break;
+		case ORDER_MAINTAIN:
+			GAMETEXT.setProcessHelp(szBuffer, order.getProcessType());
+			break;
 
-			case ORDER_LIST:
+		case ORDER_LIST:
+			{
+				const CvPlayerAI& kPlayer = GET_PLAYER(pHeadSelectedCity->getOwnerINLINE());
+				const int index = kPlayer.m_pBuildLists->getIndexByID(order.getOrderListID());
+				if (index >= 0)
 				{
-					CvPlayerAI& kPlayer = GET_PLAYER(pHeadSelectedCity->getOwnerINLINE());
-					int index = kPlayer.m_pBuildLists->getIndexByID(pOrder->iData1);
-					if (index >= 0)
-					{
-						szBuffer.append(CvWString(kPlayer.m_pBuildLists->getListName(index)));
-					}
-					// Possibly display some building names on the list here
+					szBuffer.append(CvWString(kPlayer.m_pBuildLists->getListName(index)));
 				}
-				break;
-
-			default:
-				FAssertMsg(false, "eOrderType did not match valid options");
-				break;
+				// Possibly display some building names on the list here
 			}
+			break;
+
+		default:
+			FAssertMsg(false, "eOrderType did not match valid options");
+			break;
 		}
 	}
 }

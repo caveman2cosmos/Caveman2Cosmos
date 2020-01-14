@@ -13,7 +13,6 @@
 			<iCombatPercent>10</iCombatPercent>
 			<Button>Art/Interface/Buttons/Promotions/Nomad_Axes_1.dds</Button>
 		</PromotionInfo>
-
 		<PromotionInfo>
 			<Type>PROMOTION_NOMAD_CLUBS</Type>
 			<Description>TXT_KEY_PROMOTION_NOMAD_CLUBS</Description>
@@ -40,7 +39,6 @@
 			<iCombatPercent>10</iCombatPercent>
 			<Button>Art/Interface/Buttons/Promotions/Nomad_Stone_Mace.dds</Button>
 		</PromotionInfo>
-
 		<PromotionInfo>
 			<Type>PROMOTION_NOMAD_SPEAR_WOOD</Type>
 			<Description>TXT_KEY_PROMOTION_NOMAD_SPEAR_WOOD</Description>
@@ -129,7 +127,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Promotions/Nomad_Spear_Obsidian.dds</Button>
 		</PromotionInfo>
-
 		<PromotionInfo>
 			<Type>PROMOTION_NOMAD_FIRE_STICK</Type>
 			<Description>TXT_KEY_PROMOTION_NOMAD_FIRE_STICK</Description>

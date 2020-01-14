@@ -889,9 +889,14 @@ int CyPlayer::unitsGoldenAgeReady()
 	return m_pPlayer ? m_pPlayer->unitsGoldenAgeReady() : -1;
 }
 
-int CyPlayer::greatPeopleThreshold(bool bMilitary)
+int CyPlayer::greatPeopleThresholdMilitary()
 {
-	return m_pPlayer ? m_pPlayer->greatPeopleThreshold(bMilitary) : -1;
+	return m_pPlayer ? m_pPlayer->greatPeopleThresholdMilitary() : -1;
+}
+
+int CyPlayer::greatPeopleThresholdNonMilitary()
+{
+	return m_pPlayer ? m_pPlayer->greatPeopleThresholdNonMilitary() : -1;
 }
 
 int CyPlayer::specialistYield(int /*SpecialistTypes*/ eSpecialist, int /*YieldTypes*/ eCommerce)

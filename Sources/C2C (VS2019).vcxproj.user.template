@@ -2,31 +2,37 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Assert|Win32'">
     <LocalDebuggerCommand>{BTSDIR}\Civ4BeyondSword.exe</LocalDebuggerCommand>
-    <LocalDebuggerCommandArguments>mod= Mods\Caveman2Cosmos</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>multiple mod= Mods\Caveman2Cosmos</LocalDebuggerCommandArguments>
     <LocalDebuggerWorkingDirectory>{BTSDIR}</LocalDebuggerWorkingDirectory>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LocalDebuggerCommand>{BTSDIR}\Civ4BeyondSword.exe</LocalDebuggerCommand>
-    <LocalDebuggerCommandArguments>mod= Mods\Caveman2Cosmos</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>multiple mod= Mods\Caveman2Cosmos</LocalDebuggerCommandArguments>
     <LocalDebuggerWorkingDirectory>{BTSDIR}</LocalDebuggerWorkingDirectory>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='FinalRelease|Win32'">
     <LocalDebuggerCommand>{BTSDIR}\Civ4BeyondSword.exe</LocalDebuggerCommand>
-    <LocalDebuggerCommandArguments>mod= Mods\Caveman2Cosmos</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>multiple mod= Mods\Caveman2Cosmos</LocalDebuggerCommandArguments>
     <LocalDebuggerWorkingDirectory>{BTSDIR}</LocalDebuggerWorkingDirectory>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
     <LocalDebuggerCommand>{BTSDIR}\Civ4BeyondSword.exe</LocalDebuggerCommand>
-    <LocalDebuggerCommandArguments>mod= Mods\Caveman2Cosmos</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>multiple mod= Mods\Caveman2Cosmos</LocalDebuggerCommandArguments>
     <LocalDebuggerWorkingDirectory>{BTSDIR}</LocalDebuggerWorkingDirectory>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LocalDebuggerCommand>{BTSDIR}\Civ4BeyondSword.exe</LocalDebuggerCommand>
-    <LocalDebuggerCommandArguments>mod= Mods\Caveman2Cosmos</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>multiple mod= Mods\Caveman2Cosmos</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>{BTSDIR}</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Testing|Win32'">
+    <LocalDebuggerCommand>{BTSDIR}\Civ4BeyondSword.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>multiple mod= Mods\Caveman2Cosmos</LocalDebuggerCommandArguments>
     <LocalDebuggerWorkingDirectory>{BTSDIR}</LocalDebuggerWorkingDirectory>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>

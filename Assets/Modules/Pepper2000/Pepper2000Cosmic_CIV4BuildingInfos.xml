@@ -3093,6 +3093,7 @@
 			<Strategy>TXT_KEY_BUILDING_LARGE_MAGELLANIC_CLOUD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LARGE_MAGELLANIC_CLOUD</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_LARGE_MAGELLANIC_CLOUD</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERGALACTIC_TRAVEL</PrereqTech>
 			<iCost>11412</iCost>
@@ -3410,6 +3411,7 @@
 			<Strategy>TXT_KEY_BUILDING_MAFFEI_GROUP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAFFEI_GROUP</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MAFFEI_GROUP</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERGROUP_TRAVEL</PrereqTech>
 			<iCost>13205</iCost>
@@ -3467,6 +3469,7 @@
 			<Strategy>TXT_KEY_BUILDING_FORNAX_CLUSTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FORNAX_CLUSTER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FORNAX_CLUSTER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERGROUP_TRAVEL</PrereqTech>
 			<iCost>13205</iCost>
@@ -3582,6 +3585,7 @@
 			<Strategy>TXT_KEY_BUILDING_ERIDANUS_CLUSTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ERIDANUS_CLUSTER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ERIDANUS_CLUSTER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERGROUP_TRAVEL</PrereqTech>
 			<iCost>13205</iCost>
@@ -3690,6 +3694,7 @@
 			<Strategy>TXT_KEY_BUILDING_HYDRA_SUPERCLUSTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYDRA_SUPERCLUSTER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HYDRA_SUPERCLUSTER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERCLUSTER_TRAVEL</PrereqTech>
 			<iCost>16984</iCost>
@@ -3848,6 +3853,7 @@
 			<Strategy>TXT_KEY_BUILDING_HERCULES_CORONA_BOREALIS_GREAT_WALL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HERCULES_CORONA_BOREALIS_GREAT_WALL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HERCULES_CORONA_BOREALIS_GREAT_WALL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_COSMIC_ENGINEERING</PrereqTech>
 			<iCost>18970</iCost>
@@ -3996,6 +4002,7 @@
 			<Strategy>TXT_KEY_BUILDING_FEYMARCH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FEYMARCH</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FEYMARCH</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_METAVERSE</PrereqTech>
 			<iCost>21020</iCost>

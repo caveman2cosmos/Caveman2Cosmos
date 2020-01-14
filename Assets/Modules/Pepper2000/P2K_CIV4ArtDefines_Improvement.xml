@@ -354,7 +354,7 @@
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.1</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Structures/Improvements/geothermal/mine_modern.nif</NIF>
+			<NIF>Art/Structures/Improvements/geothermal/geothermal.nif</NIF>
 			<KFM>Art/Structures/Improvements/Mine/Mine_Modern.kfm</KFM>
 			<Button>art/interface/buttons/improvements/helioform.dds</Button>
 		</ImprovementArtInfo>

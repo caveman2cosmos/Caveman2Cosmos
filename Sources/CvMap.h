@@ -291,9 +291,18 @@ public:
 	CvArea* getArea(int iID) const;																// Exposed to Python
 	CvArea* addArea();
 	void deleteArea(int iID);
-	// iteration
-	CvArea* firstArea(int *pIterIdx, bool bRev=false) const;								// Exposed to Python
-	CvArea* nextArea(int *pIterIdx, bool bRev=false) const;									// Exposed to Python
+
+	// city iteration
+	DECLARE_INDEX_ITERATOR(const CvMap, CvArea, area_iterator, firstArea, nextArea);
+	area_iterator beginAreas() const { return area_iterator(this); }
+	area_iterator endAreas() const { return area_iterator(); }
+	typedef bst::iterator_range<area_iterator> area_range;
+	area_range areas() const { return area_range(beginAreas(), endAreas()); }
+
+	// deprecated, use area_range	
+	CvArea* firstArea(int *pIterIdx, bool bRev=false) const; // Exposed to Python
+	// deprecated, use area_range	
+	CvArea* nextArea(int *pIterIdx, bool bRev=false) const; // Exposed to Python
 
 	void recalculateAreas();																		// Exposed to Python
 

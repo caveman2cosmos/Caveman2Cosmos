@@ -2198,6 +2198,7 @@
 			<Strategy>TXT_KEY_BUILDING_URBAN_MARS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_URBAN_MARS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_URBAN_MARS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_MEGASTRUCTURES</PrereqTech>
 			<iCost>21176</iCost>

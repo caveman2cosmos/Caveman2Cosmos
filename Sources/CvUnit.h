@@ -2843,8 +2843,8 @@ public:
 	
 	int getExtraPowerValue() const;
 	void changeExtraPowerValue(int iChange);
-	int powerValueTotal() const;
-	int powerValueTotalPreCheck() const;
+	int getPowerValueTotal() const;
+	int getSMPowerValueTotalBase() const;
 	int getSMPowerValue() const;
 	void setSMPowerValue(bool bForLoad = false);
 	
@@ -2890,14 +2890,14 @@ public:
 	int getExtraBombardRate() const;																													// Exposed to Python
 	void changeExtraBombardRate(int iChange);
 	void setExtraBombardRate(int iChange);
-	int bombardRate() const;
-	int bombardRateTotalPreCheck() const;
+	int getBombardRate() const;
+	int getSMBombardRateTotalBase() const;
 	int getSMBombardRate() const;
 	void setSMBombardRate();
 
-	int airBombCurrRate() const;
-	int airBombBaseRate() const;
-	int airBombBaseRateTotalPreCheck() const;
+	int getAirBombCurrRate() const;
+	int getAirBombBaseRate() const;
+	int getSMAirBombBaseRateTotalBase() const;
 	int getSMAirBombBaseRate() const;
 	void setSMAirBombBaseRate();
 
@@ -3333,6 +3333,7 @@ public:
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isReadyForUpgrade);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isPromotionReady);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCombat);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isAnimal);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, canFight);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, canDefend);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, alwaysInvisible);
@@ -3340,9 +3341,13 @@ public:
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCommander);
 		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, hasAfflictionLine, PromotionLineTypes);
 
+		DECLARE_MAP_FUNCTOR_1(CvUnit, int, upgradePrice, UnitTypes);
+		DECLARE_MAP_FUNCTOR_2(CvUnit, bool, canUpgrade, UnitTypes, bool);
+
 		DECLARE_MAP_FUNCTOR(CvUnit, int, getDamage);
 		DECLARE_MAP_FUNCTOR(CvUnit, int, getID);
 		DECLARE_MAP_FUNCTOR(CvUnit, TeamTypes, getTeam);
+		DECLARE_MAP_FUNCTOR(CvUnit, UnitTypes, getUnitType);
 		DECLARE_MAP_FUNCTOR(CvUnit, UnitCombatTypes, getUnitCombatType);
 
 		DECLARE_MAP_FUNCTOR(CvUnit, const CvPlot*, plot);
@@ -3353,6 +3358,9 @@ public:
 
 		DECLARE_MAP_FUNCTOR_1(CvUnit, int, worsenedProbabilitytoAfflict, PromotionLineTypes);
 		DECLARE_MAP_FUNCTOR_1(CvUnit, int, aidTotal, PropertyTypes);
+
+		DECLARE_MAP_FUNCTOR_3(CvUnit, int, getTriggerValue, EventTriggerTypes /*eTrigger*/, const CvPlot* /*pPlot*/, bool /*bCheckPlot*/);
+		
 	};
 };
 
