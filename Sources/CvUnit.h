@@ -2040,10 +2040,10 @@ protected:
 	int m_iExtraKnockback;
 	int m_iExtraKnockbackRetries;
 	int m_iStampedeCount;
-	int m_iAttackOnlyCitiesCount;
-	int m_iIgnoreNoEntryLevelCount;
-	int m_iIgnoreZoneofControlCount;
-	int m_iFliesToMoveCount;
+	int8_t m_iAttackOnlyCitiesCount;
+	int8_t m_iIgnoreNoEntryLevelCount;
+	int8_t m_iIgnoreZoneofControlCount;
+	int8_t m_iFliesToMoveCount;
 	int m_iExtraStrAdjperRnd;
 	int m_iExtraStrAdjperAtt;
 	int m_iExtraStrAdjperDef;

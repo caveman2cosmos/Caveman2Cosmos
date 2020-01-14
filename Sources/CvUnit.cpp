@@ -21029,7 +21029,7 @@ bool CvUnit::mayStampede() const
 void CvUnit::changeStampedeCount(int iChange)
 {
 	m_iStampedeCount += iChange;
-	FAssert(getStampedeCount() >=0)
+	FAssert(getStampedeCount() >= 0);
 }
 
 int CvUnit::getAttackOnlyCitiesCount() const
@@ -21039,11 +21039,13 @@ int CvUnit::getAttackOnlyCitiesCount() const
 
 void CvUnit::setAttackOnlyCitiesCount(int iChange)
 {
+	FAssert(iChange <= MAX_CHAR);
 	m_iAttackOnlyCitiesCount = iChange;
 }
 
 void CvUnit::changeAttackOnlyCitiesCount(int iChange)
 {
+	FAssert(m_iAttackOnlyCitiesCount + iChange <= MAX_CHAR);
 	m_iAttackOnlyCitiesCount += iChange;
 }
 
@@ -21054,11 +21056,13 @@ int CvUnit::getIgnoreNoEntryLevelCount() const
 
 void CvUnit::setIgnoreNoEntryLevelCount(int iChange)
 {
+	FAssert(iChange <= MAX_CHAR);
 	m_iIgnoreNoEntryLevelCount = iChange;
 }
 
 void CvUnit::changeIgnoreNoEntryLevelCount(int iChange)
 {
+	FAssert(m_iIgnoreNoEntryLevelCount + iChange <= MAX_CHAR);
 	m_iIgnoreNoEntryLevelCount += iChange;
 }
 
@@ -21084,11 +21088,13 @@ int CvUnit::getFliesToMoveCount() const
 
 void CvUnit::setFliesToMoveCount(int iChange)
 {
+	FAssert(iChange <= MAX_CHAR);
 	m_iFliesToMoveCount = iChange;
 }
 
 void CvUnit::changeFliesToMoveCount(int iChange)
 {
+	FAssert(m_iFliesToMoveCount + iChange <= MAX_CHAR);
 	m_iFliesToMoveCount += iChange;
 }
 
@@ -27511,9 +27517,9 @@ void CvUnit::read(FDataStreamBase* pStream)
 	//End Bug Compatibility
 	//Notes: There will still be some things that this bugfix doesn't heal until a unit recalculation is completed.
 
-	WRAPPER_READ(wrapper, "CvUnit", &m_iAttackOnlyCitiesCount);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iIgnoreNoEntryLevelCount);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iIgnoreZoneofControlCount);
+	WRAPPER_READ_CHAR_AS_INT(wrapper, "CvUnit", &m_iAttackOnlyCitiesCount);
+	WRAPPER_READ_CHAR_AS_INT(wrapper, "CvUnit", &m_iIgnoreNoEntryLevelCount);
+	WRAPPER_READ_CHAR_AS_INT(wrapper, "CvUnit", &m_iIgnoreZoneofControlCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraTaunt);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraMaxHP);	
 
@@ -27615,7 +27621,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 			info->m_iExtraWithdrawOnFeatureType = g_paiTempExtraWithdrawOnFeatureType[iI];
 		}
 	}
-	WRAPPER_READ(wrapper, "CvUnit", &m_iFliesToMoveCount);
+	WRAPPER_READ_CHAR_AS_INT(wrapper, "CvUnit", &m_iFliesToMoveCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iQualityBaseTotal);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iGroupBaseTotal);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSizeBaseTotal);
@@ -28592,9 +28598,9 @@ void CvUnit::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombat");
 		}
 	}
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iAttackOnlyCitiesCount);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iIgnoreNoEntryLevelCount);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iIgnoreZoneofControlCount);
+	WRAPPER_WRITE_CHAR_AS_INT(wrapper, "CvUnit", m_iAttackOnlyCitiesCount);
+	WRAPPER_WRITE_CHAR_AS_INT(wrapper, "CvUnit", m_iIgnoreNoEntryLevelCount);
+	WRAPPER_WRITE_CHAR_AS_INT(wrapper, "CvUnit", m_iIgnoreZoneofControlCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraTaunt);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraMaxHP);
 
@@ -28624,7 +28630,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraWithdrawOnFeatureType((FeatureTypes)iI), "extraWithdrawOnFeatureType");
 		}
 	}
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iFliesToMoveCount);
+	WRAPPER_WRITE_CHAR_AS_INT(wrapper, "CvUnit", m_iFliesToMoveCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iQualityBaseTotal);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iGroupBaseTotal);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iSizeBaseTotal);
