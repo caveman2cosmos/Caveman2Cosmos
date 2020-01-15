@@ -10936,7 +10936,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 	if (iGppRate > 0 && getBugOptionBOOL("CityBar__GreatPersonTurns", true, "BUG_CITYBAR_GREAT_PERSON_TURNS"))
 	{
 		int iGpp = pCity->getGreatPeopleProgress();
-		int iGppTotal = GET_PLAYER(pCity->getOwnerINLINE()).greatPeopleThreshold(false);
+		int iGppTotal = GET_PLAYER(pCity->getOwnerINLINE()).greatPeopleThresholdNonMilitary();
 		szString.append(gDLL->getText("TXT_KEY_CITY_BAR_GREAT_PEOPLE", iGpp, iGppTotal));
 		int iGppLeft = iGppTotal - iGpp;
 		int iGppTurns = (iGppLeft + iGppRate - 1) / iGppRate;
@@ -10948,7 +10948,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		// unchanged
 		if (pCity->getGreatPeopleProgress() > 0)
 		{
-			szString.append(gDLL->getText("TXT_KEY_CITY_BAR_GREAT_PEOPLE", pCity->getGreatPeopleProgress(), GET_PLAYER(pCity->getOwnerINLINE()).greatPeopleThreshold(false)));
+			szString.append(gDLL->getText("TXT_KEY_CITY_BAR_GREAT_PEOPLE", pCity->getGreatPeopleProgress(), GET_PLAYER(pCity->getOwnerINLINE()).greatPeopleThresholdNonMilitary()));
 		}
 	}
 // BUG - Great Person Turns - end
@@ -37437,11 +37437,11 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 	}
 	CvPlayer& owner = GET_PLAYER(city.getOwnerINLINE());
 
-	szBuffer.assign(gDLL->getText("TXT_KEY_MISC_GREAT_PERSON", city.getGreatPeopleProgress(), owner.greatPeopleThreshold(false)));
+	szBuffer.assign(gDLL->getText("TXT_KEY_MISC_GREAT_PERSON", city.getGreatPeopleProgress(), owner.greatPeopleThresholdNonMilitary()));
 
 	if (city.getGreatPeopleRate() > 0)
 	{
-		int iGPPLeft = owner.greatPeopleThreshold(false) - city.getGreatPeopleProgress();
+		int iGPPLeft = owner.greatPeopleThresholdNonMilitary() - city.getGreatPeopleProgress();
 
 		if (iGPPLeft > 0)
 		{
@@ -37727,7 +37727,7 @@ bool CvGameTextMgr::setBuildingAdditionalGreatPeopleHelp(CvWStringBuffer &szBuff
 
 void CvGameTextMgr::parseGreatGeneralHelp(CvWStringBuffer &szBuffer, CvPlayer& kPlayer)
 {
-	szBuffer.append(gDLL->getText("TXT_KEY_MISC_GREAT_MILITARY_PERSON", kPlayer.getCombatExperience(), kPlayer.greatPeopleThreshold(true), GC.getUnitInfo(kPlayer.getGreatGeneralTypetoAssign()).getTextKeyWide()));
+	szBuffer.append(gDLL->getText("TXT_KEY_MISC_GREAT_MILITARY_PERSON", kPlayer.getCombatExperience(), kPlayer.greatPeopleThresholdMilitary(), GC.getUnitInfo(kPlayer.getGreatGeneralTypetoAssign()).getTextKeyWide()));
 
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{

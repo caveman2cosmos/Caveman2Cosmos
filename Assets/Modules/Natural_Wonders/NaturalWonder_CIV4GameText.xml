@@ -838,21 +838,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BEACON_GREAT_BARRIER</Tag>
-		<English>Build a [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER]Beacon[\LINK]</English>
-		<French>Placer une [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER]Balise[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_BEACON_GREAT_BARRIER]Leuchtfeuer[\LINK] errichten</German>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER]Torre di segnalazione[\LINK]</Italian>
-		<Spanish>Construir una [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER]Baliza[\LINK]</Spanish>
-		<Polish>Wybuduj [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER]Boję[\LINK]</Polish>
+		<English>Build a [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER]Beacon[\LINK] (Great Reef)</English>
+		<French>Placer une [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER]Balise[\LINK] (Great Reef)</French>
+		<German>[LINK=IMPROVEMENT_BEACON_GREAT_BARRIER]Leuchtfeuer[\LINK] errichten (Great Reef)</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER]Torre di segnalazione[\LINK] (Great Reef)</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER]Baliza[\LINK] (Great Reef)</Spanish>
+		<Polish>Wybuduj [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER]Boję[\LINK](Great Reef)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LIGHTHOUSE_GREAT_BARRIER</Tag>
-		<English>Build a [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER]Lighthouse[\LINK]</English>
-		<French>Placer un [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER]Phare[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER]Leuchtturm[\LINK] bauen</German>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER]Faro[\LINK]</Italian>
-		<Spanish>Construir una [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER]Faro[\LINK]</Spanish>
-		<Polish>Wybuduj [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER]Latarnię Morską[\LINK]</Polish>
+		<English>Build a [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER]Lighthouse[\LINK](Great Reef)</English>
+		<French>Placer un [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER]Phare[\LINK](Great Reef)</French>
+		<German>[LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER]Leuchtturm[\LINK](Great Reef) bauen</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER]Faro[\LINK](Great Reef)</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER]Faro[\LINK](Great Reef)</Spanish>
+		<Polish>Wybuduj [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER]Latarnię Morską[\LINK](Great Reef)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OASIS_MYTH</Tag>

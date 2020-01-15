@@ -763,7 +763,7 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 			int iProgress = getGreatPeopleProgress();
 			if (iProgress > 0)
 			{
-				int iThreshold = GET_PLAYER(getOwnerINLINE()).greatPeopleThreshold();
+				int iThreshold = GET_PLAYER(getOwnerINLINE()).greatPeopleThresholdNonMilitary();
 				iTempValue += ((iGreatPeopleRate * (isHuman() ? 1 : 4) * iGPPValue * iProgress * iProgress) / (iThreshold * iThreshold));
 			}
 		}

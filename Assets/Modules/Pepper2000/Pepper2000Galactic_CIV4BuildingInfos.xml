@@ -7398,6 +7398,7 @@
 			<Strategy>TXT_KEY_BUILDING_MILKY_WAY_CLUSTER_BRAIN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MILKY_WAY_CLUSTER_BRAIN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MILKY_WAY_CLUSTER_BRAIN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_WORMHOLE_HIVEMIND</PrereqTech>
 			<iCost>38840</iCost>
@@ -7890,6 +7891,7 @@
 			<Strategy>TXT_KEY_BUILDING_PROTOS_MANDATE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PROTOS_MANDATE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PROTOS_MANDATE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ASTRODIPLOMACY</PrereqTech>
 			<iCost>10144</iCost>
@@ -8460,6 +8462,7 @@
 			<Strategy>TXT_KEY_BUILDING_NORMA_AND_OUTER_ARM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NORMA_AND_OUTER_ARM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NORMA_AND_OUTER_ARM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PrereqTech>
 			<iCost>33800</iCost>
@@ -8661,6 +8664,7 @@
 			<Strategy>TXT_KEY_BUILDING_NGC_6811_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NGC_6811</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NGC_6811</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_STELLAR_ENGINE</PrereqTech>
 			<iCost>36440</iCost>

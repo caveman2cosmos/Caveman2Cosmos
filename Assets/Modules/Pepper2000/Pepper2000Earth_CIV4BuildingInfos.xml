@@ -8684,6 +8684,7 @@
 			<Strategy>TXT_KEY_BUILDING_METRIC_SYSTEM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_METRIC_SYSTEM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_METRIC_SYSTEM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -14731,6 +14732,7 @@
 			<Strategy>TXT_KEY_BUILDING_NEO_PYRAMID_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEO_PYRAMID</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NEO_PYRAMID</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -14878,6 +14880,7 @@
 			<Strategy>TXT_KEY_BUILDING_MORSE_CODE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MORSE_CODE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MORSE_CODE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24486,6 +24489,7 @@
 			<Strategy>TXT_KEY_BUILDING_NUDING_SPACE_ARCOLOGY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NUDING_SPACE_ARCOLOGY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NUDING_SPACE_ARCOLOGY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24786,6 +24790,7 @@
 			<Strategy>TXT_KEY_BUILDING_MASDAR_CITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MASDAR_CITY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MASDAR_CITY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24996,6 +25001,7 @@
 			<Strategy>TXT_KEY_BUILDING_NEOM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEOM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NEOM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -28028,6 +28034,7 @@
 			<Strategy>TXT_KEY_BUILDING_MITHRIL_IMPORTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MITHRIL_IMPORTER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MITHRIL_IMPORTER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

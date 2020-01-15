@@ -3341,9 +3341,13 @@ public:
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCommander);
 		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, hasAfflictionLine, PromotionLineTypes);
 
+		DECLARE_MAP_FUNCTOR_1(CvUnit, int, upgradePrice, UnitTypes);
+		DECLARE_MAP_FUNCTOR_2(CvUnit, bool, canUpgrade, UnitTypes, bool);
+
 		DECLARE_MAP_FUNCTOR(CvUnit, int, getDamage);
 		DECLARE_MAP_FUNCTOR(CvUnit, int, getID);
 		DECLARE_MAP_FUNCTOR(CvUnit, TeamTypes, getTeam);
+		DECLARE_MAP_FUNCTOR(CvUnit, UnitTypes, getUnitType);
 		DECLARE_MAP_FUNCTOR(CvUnit, UnitCombatTypes, getUnitCombatType);
 
 		DECLARE_MAP_FUNCTOR(CvUnit, const CvPlot*, plot);
@@ -3354,6 +3358,9 @@ public:
 
 		DECLARE_MAP_FUNCTOR_1(CvUnit, int, worsenedProbabilitytoAfflict, PromotionLineTypes);
 		DECLARE_MAP_FUNCTOR_1(CvUnit, int, aidTotal, PropertyTypes);
+
+		DECLARE_MAP_FUNCTOR_3(CvUnit, int, getTriggerValue, EventTriggerTypes /*eTrigger*/, const CvPlot* /*pPlot*/, bool /*bCheckPlot*/);
+		
 	};
 };
 
