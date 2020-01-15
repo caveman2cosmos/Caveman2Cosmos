@@ -26985,9 +26985,9 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Magi is a term, used since at least the 6th century BCE, to denote followers of Zoroastrianism or Zoroaster. The earliest known usage of the word Magi is in the trilingual inscription written by Darius the Great, known as the Behistun Inscription. Old Persian texts, pre-dating the Hellenistic period, refer to a Magus as a Zurvanic, and presumably Zoroastrian, priest.</English>
 	</TEXT>
 	<TEXT>
-		<!-- TXT_KEY_UNIT_SIGHT_VALUE -->
+		<!-- TXT_KEY_UNIT_SPOT_VALUE -->
 		<Tag>TXT_KEY_UNIT_VISIBILITY_INTENSITY</Tag>
-		<English>[ICON_BULLET]%d1_Change %F2_Type Sight</English>
+		<English>[ICON_BULLET]%d1_Change %F2_Type Spot</English>
 		<French>[ICON_BULLET]%d1_Change %F2_Type Perception</French>
 		<German>[ICON_BULLET]%d1_Change %F2_Type-Sicht</German>
 	</TEXT>
@@ -27006,16 +27006,16 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<German>[ICON_BULLET]Jede [LINK=%s1_Type]%F2_TypeName[\LINK]-Unsichtbarkeit ist aufgehoben.</German>
 	</TEXT>
 	<TEXT>
-		<!-- TXT_KEY_UNIT_SIGHT_RANGE_VALUE -->
+		<!-- TXT_KEY_UNIT_SPOT_RANGE_VALUE -->
 		<Tag>TXT_KEY_UNIT_VISIBILITY_RANGE_INTENSITY</Tag>
-		<English>[ICON_BULLET]%D1_Change %F2_Type Sight Range</English>
+		<English>[ICON_BULLET]%D1_Change %F2_Type Spot Range</English>
 		<French>[ICON_BULLET]%D1_Change Portée étendue de détection %F2_Type</French>
 		<German>[ICON_BULLET]%D1_Change %F2_Type-Sichtweite</German>
 	</TEXT>
 	<TEXT>
-		<!-- TXT_KEY_UNIT_SIGHT_SAME_TILE_VALUE -->
+		<!-- TXT_KEY_UNIT_SPOT_SAME_TILE_VALUE -->
 		<Tag>TXT_KEY_UNIT_VISIBILITY_SAME_TILE_INTENSITY</Tag>
-		<English>[ICON_BULLET]%D1_Change %F2_Type Sight on Same Tile</English>
+		<English>[ICON_BULLET]%D1_Change %F2_Type Spot on Same Tile</English>
 		<French>[ICON_BULLET]Perception %D1_Change %F2_Type sur la même case</French>
 		<German>[ICON_BULLET]%D1_Change %F2_Type-Sicht in gleichem Gelände</German>
 	</TEXT>
@@ -27035,31 +27035,31 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Unsichtbarkeit (in Gesamtwert bereits eingerechnet)</German>
 	</TEXT>
 	<TEXT>
-		<!-- TXT_KEY_UNIT_SIGHT_PLOT_VALUE -->
+		<!-- TXT_KEY_UNIT_SPOT_PLOT_VALUE -->
 		<Tag>TXT_KEY_UNIT_VISIBILITY_PLOT_INTENSITY</Tag>
-		<English>[ICON_BULLET]%D1_Change %F2_Type Sight on %s3_Plot</English>
+		<English>[ICON_BULLET]%D1_Change %F2_Type Spot on %s3_Plot</English>
 		<French>[ICON_BULLET]%D1_Change Perception améliorée (%F2_Type) de  lorsque sur une case %s3_Plot</French>
 		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Sicht</German>
 	</TEXT>
 	<TEXT>
-		<!-- TXT_KEY_UNIT_SIGHT_PLOT_VALUE_ADJ -->
+		<!-- TXT_KEY_UNIT_SPOT_PLOT_VALUE_ADJ -->
 		<!-- Not in Use, subject to deletion -->
 		<Tag>TXT_KEY_UNIT_VISIBILITY_PLOT_INTENSITY_ADJ</Tag>
-		<English>[ICON_BULLET]%D1_Change %F2_Type Sight on %s3_Plot (already tallied into total.)</English>
+		<English>[ICON_BULLET]%D1_Change %F2_Type Spot on %s3_Plot (already tallied into total.)</English>
 		<French>[ICON_BULLET]%D1_Change Perception améliorée (%F2_Type) de  lorsque sur une case %s3_Plot (inclus dans le total)</French>
 		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Sicht (in Gesamtwert bereits eingerechnet)</German>
 	</TEXT>
 	<TEXT>
-		<!-- TXT_KEY_UNIT_SIGHT_PLOT_RANGE_VALUE -->
+		<!-- TXT_KEY_UNIT_SPOT_PLOT_RANGE_VALUE -->
 		<Tag>TXT_KEY_UNIT_VISIBILITY_PLOT_RANGE_INTENSITY</Tag>
-		<English>[ICON_BULLET]%D1_Change %F2_Type Sight Range on %s3_Plot</English>
+		<English>[ICON_BULLET]%D1_Change %F2_Type Spot Range on %s3_Plot</English>
 		<French>[ICON_BULLET]%D2_Change Portée étendue de Perception (%F2_Type)  lorsque sur une case %s3_Plot</French>
 		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Sichtweite</German>
 	</TEXT>
 	<TEXT>
-		<!-- TXT_KEY_UNIT_SIGHT_PLOT_RANGE_VALUE_ADJ -->
+		<!-- TXT_KEY_UNIT_SPOT_PLOT_RANGE_VALUE_ADJ -->
 		<Tag>TXT_KEY_UNIT_VISIBILITY_PLOT_RANGE_INTENSITY_ADJ</Tag>
-		<English>[ICON_BULLET]%D1_Change %F2_Type Sight Range on %s3_Plot (already tallied into total.)</English>
+		<English>[ICON_BULLET]%D1_Change %F2_Type Spot Range on %s3_Plot (already tallied into total.)</English>
 		<French>[ICON_BULLET%D2_Change Portée étendue de Perception (%F2_Type)  lorsque sur une case %s3_Plot (inclus dans le total.)</French>
 		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Sichtweite (in Gesamtwert bereits eingerechnet)</German>
 	</TEXT>
