@@ -824,11 +824,13 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	/************************************************************************************************/
 		//TB Combat Mod (Buildings) begin
 	m_iAidRate = 0;
-	m_iTotalFrontSupportPercentModifier = 0;
-	m_iTotalShortRangeSupportPercentModifier = 0;
-	m_iTotalMediumRangeSupportPercentModifier = 0;
-	m_iTotalLongRangeSupportPercentModifier = 0;
-	m_iTotalFlankSupportPercentModifier = 0;
+
+#ifdef STRENGTH_IN_NUMBERS
+	for (int iI = 0; iI = NUM_SUPPORT_POSITION_TYPES; iI++)
+	{
+		m_iTotalSupportPercentModifier.push_back(0);
+	}
+#endif
 	//Team Project (3)
 	m_iExtraLocalCaptureProbabilityModifier = 0;
 	m_iExtraLocalCaptureResistanceModifier = 0;
@@ -20498,11 +20500,14 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_paiExtraBonusAidModifier, SAVE_VALUE_ANY);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatProductionModifier);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatRepelModifier);
-	WRAPPER_READ(wrapper, "CvCity", &m_iTotalFrontSupportPercentModifier);
-	WRAPPER_READ(wrapper, "CvCity", &m_iTotalShortRangeSupportPercentModifier);
-	WRAPPER_READ(wrapper, "CvCity", &m_iTotalMediumRangeSupportPercentModifier);
-	WRAPPER_READ(wrapper, "CvCity", &m_iTotalLongRangeSupportPercentModifier);
-	WRAPPER_READ(wrapper, "CvCity", &m_iTotalFlankSupportPercentModifier);
+#ifdef STRENGTH_IN_NUMBERS
+	//WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_SUPPORT_POSITIONS, NUM_SUPPORT_POSITION_TYPES, m_iTotalSupportPercentModifier);
+#endif
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iTotalFrontSupportPercentModifier, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iTotalShortRangeSupportPercentModifier, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iTotalMediumRangeSupportPercentModifier, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iTotalLongRangeSupportPercentModifier, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iTotalFlankSupportPercentModifier, SAVE_VALUE_TYPE_INT);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatOngoingTrainingTimeCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatOngoingTrainingTimeIncrement);
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_paiNewDiseaseTypeCount, SAVE_VALUE_ANY);
@@ -20994,11 +20999,9 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvCity", m_iAidRate);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatProductionModifier);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatRepelModifier);
-	WRAPPER_WRITE(wrapper, "CvCity", m_iTotalFrontSupportPercentModifier);
-	WRAPPER_WRITE(wrapper, "CvCity", m_iTotalShortRangeSupportPercentModifier);
-	WRAPPER_WRITE(wrapper, "CvCity", m_iTotalMediumRangeSupportPercentModifier);
-	WRAPPER_WRITE(wrapper, "CvCity", m_iTotalLongRangeSupportPercentModifier);
-	WRAPPER_WRITE(wrapper, "CvCity", m_iTotalFlankSupportPercentModifier);
+#ifdef STRENGTH_IN_NUMBERS
+	//WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_SUPPORT_POSITIONS, NUM_SUPPORT_POSITION_TYPES, m_iTotalSupportPercentModifier);
+#endif
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatOngoingTrainingTimeCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatOngoingTrainingTimeIncrement);
 	//Team Project (1)
@@ -27291,60 +27294,18 @@ void CvCity::changeUnitCombatDefenseAgainstModifierTotal(UnitCombatTypes eIndex,
 	m_paiUnitCombatDefenseAgainstModifier[eIndex] = (m_paiUnitCombatDefenseAgainstModifier[eIndex] + iChange);
 }
 
-int CvCity::getTotalFrontSupportPercentModifier() const
+#ifdef STRENGTH_IN_NUMBERS
+int CvCity::getTotalSupportPercentModifier(SupportPositionTypes position) const
 {
-	return m_iTotalFrontSupportPercentModifier;
+	return m_iTotalSupportPercentModifier[position];
 }
 
-void CvCity::changeTotalFrontSupportPercentModifier(int iChange)
+void CvCity::changeTotalFrontSupportPercentModifier(SupportPositionTypes position, int iChange)
 {
-	m_iTotalFrontSupportPercentModifier = (m_iTotalFrontSupportPercentModifier + iChange);
-	FAssert(getTotalFrontSupportPercentModifier() >= 0);
+	m_iTotalSupportPercentModifier[position] += iChange;
+	FAssert(getTotalSupportPercentModifier(position) >= 0);
 }
-
-int CvCity::getTotalShortRangeSupportPercentModifier() const
-{
-	return m_iTotalShortRangeSupportPercentModifier;
-}
-
-void CvCity::changeTotalShortRangeSupportPercentModifier(int iChange)
-{
-	m_iTotalShortRangeSupportPercentModifier = (m_iTotalShortRangeSupportPercentModifier + iChange);
-	FAssert(getTotalShortRangeSupportPercentModifier() >= 0);
-}
-
-int CvCity::getTotalMediumRangeSupportPercentModifier() const
-{
-	return m_iTotalMediumRangeSupportPercentModifier;
-}
-
-void CvCity::changeTotalMediumRangeSupportPercentModifier(int iChange)
-{
-	m_iTotalMediumRangeSupportPercentModifier = (m_iTotalMediumRangeSupportPercentModifier + iChange);
-	FAssert(getTotalMediumRangeSupportPercentModifier() >= 0);
-}
-
-int CvCity::getTotalLongRangeSupportPercentModifier() const
-{
-	return m_iTotalLongRangeSupportPercentModifier;
-}
-
-void CvCity::changeTotalLongRangeSupportPercentModifier(int iChange)
-{
-	m_iTotalLongRangeSupportPercentModifier = (m_iTotalLongRangeSupportPercentModifier + iChange);
-	FAssert(getTotalLongRangeSupportPercentModifier() >= 0);
-}
-
-int CvCity::getTotalFlankSupportPercentModifier() const
-{
-	return m_iTotalFlankSupportPercentModifier;
-}
-
-void CvCity::changeTotalFlankSupportPercentModifier(int iChange)
-{
-	m_iTotalFlankSupportPercentModifier = (m_iTotalFlankSupportPercentModifier + iChange);
-	FAssert(getTotalFlankSupportPercentModifier() >= 0);
-}
+#endif
 
 int CvCity::getUnitCombatOngoingTrainingTimeCount(UnitCombatTypes eIndex) const
 {

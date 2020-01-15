@@ -458,7 +458,7 @@ CvUnitInfo::~CvUnitInfo()
 /* Afforess						 END															*/
 /************************************************************************************************/
 	SAFE_DELETE(m_pExprTrainCondition);
-	SAFE_DELETE(m_aiSupportPercent);
+	//SAFE_DELETE(m_aiSupportPercent);
 
 	for (int i=0; i<(int)m_aOutcomeMissions.size(); i++)
 	{
@@ -4085,14 +4085,11 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_iLunge);
 	CheckSum(iSum, m_iDynamicDefense);
 	CheckSum(iSum, m_iFortitude);
-	CheckSumI(iSum, NUM_SUPPORT_POSITION_TYPES, m_aiSupportPercent);
-
-	CheckSum(iSum, m_iFrontSupportPercent);
-	CheckSum(iSum, m_iShortRangeSupportPercent);
-	CheckSum(iSum, m_iMediumRangeSupportPercent);
-	CheckSum(iSum, m_iLongRangeSupportPercent);
-	CheckSum(iSum, m_iFlankSupportPercent);
-
+	CheckSum(iSum, m_aiSupportPercent[SUPPORT_POSITION_FRONT]);
+	CheckSum(iSum, m_aiSupportPercent[SUPPORT_POSITION_SHORT_RANGE]);
+	CheckSum(iSum, m_aiSupportPercent[SUPPORT_POSITION_MEDIUM_RANGE]);
+	CheckSum(iSum, m_aiSupportPercent[SUPPORT_POSITION_LONG_RANGE]);
+	CheckSum(iSum, m_aiSupportPercent[SUPPORT_POSITION_FLANK]);
 	CheckSum(iSum, m_iDodgeModifier);
 	CheckSum(iSum, m_iPrecisionModifier);
 	CheckSum(iSum, m_iPowerShots);
@@ -4940,7 +4937,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 
 	for (int iI = 0; iI < NUM_SUPPORT_POSITION_TYPES; iI++)
 	{
-		m_aiSupportPercent.pushback(0);
+		m_aiSupportPercent.push_back(0);
 	}
 	pXML->GetOptionalChildXmlValByName(&m_aiSupportPercent[SUPPORT_POSITION_FRONT], L"iFrontSupportPercent");
 	pXML->GetOptionalChildXmlValByName(&m_aiSupportPercent[SUPPORT_POSITION_SHORT_RANGE], L"iShortRangeSupportPercent");
@@ -6154,12 +6151,6 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	{
 		if ( m_aiSupportPercent[iI] == iDefault ) m_aiSupportPercent[iI] = pClassInfo->getSupportPercent((SupportPositionTypes)iI, true);
 	}
-	if ( m_iFrontSupportPercent == iDefault ) m_iFrontSupportPercent = pClassInfo->getFrontSupportPercent(true);
-	if ( m_iShortRangeSupportPercent == iDefault ) m_iShortRangeSupportPercent = pClassInfo->getShortRangeSupportPercent(true);
-	if ( m_iMediumRangeSupportPercent == iDefault ) m_iMediumRangeSupportPercent = pClassInfo->getMediumRangeSupportPercent(true);
-	if ( m_iLongRangeSupportPercent == iDefault ) m_iLongRangeSupportPercent = pClassInfo->getLongRangeSupportPercent(true);
-	if ( m_iFlankSupportPercent == iDefault ) m_iFlankSupportPercent = pClassInfo->getFlankSupportPercent(true);
-
 	if ( m_iDodgeModifier == iDefault ) m_iDodgeModifier = pClassInfo->getDodgeModifier();
 	if ( m_iPrecisionModifier == iDefault ) m_iPrecisionModifier = pClassInfo->getPrecisionModifier();
 	if ( m_iPowerShots == iDefault ) m_iPowerShots = pClassInfo->getPowerShots();

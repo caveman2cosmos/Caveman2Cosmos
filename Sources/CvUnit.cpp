@@ -26684,46 +26684,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSupportCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iAttackFromPlotX);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iAttackFromPlotY);	
-	WRAPPER_READ(wrapper, "CvUnit", (int*)&afIUnit.eOwner);
-	WRAPPER_READ(wrapper, "CvUnit", &afIUnit.iID);	
-	WRAPPER_READ(wrapper, "CvUnit", (int*)&afIIUnit.eOwner);
-	WRAPPER_READ(wrapper, "CvUnit", &afIIUnit.iID);	
-	WRAPPER_READ(wrapper, "CvUnit", (int*)&asrIUnit.eOwner);
-	WRAPPER_READ(wrapper, "CvUnit", &asrIUnit.iID);
-	WRAPPER_READ(wrapper, "CvUnit", (int*)&asrIIUnit.eOwner);
-	WRAPPER_READ(wrapper, "CvUnit", &asrIIUnit.iID);
-	WRAPPER_READ(wrapper, "CvUnit", (int*)&amrIUnit.eOwner);
-	WRAPPER_READ(wrapper, "CvUnit", &amrIUnit.iID);
-	WRAPPER_READ(wrapper, "CvUnit", (int*)&amrIIUnit.eOwner);
-	WRAPPER_READ(wrapper, "CvUnit", &amrIIUnit.iID);
-	WRAPPER_READ(wrapper, "CvUnit", (int*)&alrIUnit.eOwner);
-	WRAPPER_READ(wrapper, "CvUnit", &alrIUnit.iID);
-	WRAPPER_READ(wrapper, "CvUnit", (int*)&alrIIUnit.eOwner);
-	WRAPPER_READ(wrapper, "CvUnit", &alrIIUnit.iID);
-	WRAPPER_READ(wrapper, "CvUnit", (int*)&aflIUnit.eOwner);
-	WRAPPER_READ(wrapper, "CvUnit", &aflIUnit.iID);
-	WRAPPER_READ(wrapper, "CvUnit", (int*)&aflIIUnit.eOwner);
-	WRAPPER_READ(wrapper, "CvUnit", &aflIIUnit.iID);	
-	WRAPPER_READ(wrapper, "CvUnit", (int*)&dfIUnit.eOwner);
-	WRAPPER_READ(wrapper, "CvUnit", &dfIUnit.iID);	
-	WRAPPER_READ(wrapper, "CvUnit", (int*)&dfIIUnit.eOwner);
-	WRAPPER_READ(wrapper, "CvUnit", &dfIIUnit.iID);	
-	WRAPPER_READ(wrapper, "CvUnit", (int*)&dsrIUnit.eOwner);
-	WRAPPER_READ(wrapper, "CvUnit", &dsrIUnit.iID);
-	WRAPPER_READ(wrapper, "CvUnit", (int*)&dsrIIUnit.eOwner);
-	WRAPPER_READ(wrapper, "CvUnit", &dsrIIUnit.iID);
-	WRAPPER_READ(wrapper, "CvUnit", (int*)&dmrIUnit.eOwner);
-	WRAPPER_READ(wrapper, "CvUnit", &dmrIUnit.iID);
-	WRAPPER_READ(wrapper, "CvUnit", (int*)&dmrIIUnit.eOwner);
-	WRAPPER_READ(wrapper, "CvUnit", &dmrIIUnit.iID);
-	WRAPPER_READ(wrapper, "CvUnit", (int*)&dlrIUnit.eOwner);
-	WRAPPER_READ(wrapper, "CvUnit", &dlrIUnit.iID);
-	WRAPPER_READ(wrapper, "CvUnit", (int*)&dlrIIUnit.eOwner);
-	WRAPPER_READ(wrapper, "CvUnit", &dlrIIUnit.iID);
-	WRAPPER_READ(wrapper, "CvUnit", (int*)&dflIUnit.eOwner);
-	WRAPPER_READ(wrapper, "CvUnit", &dflIUnit.iID);
-	WRAPPER_READ(wrapper, "CvUnit", (int*)&dflIIUnit.eOwner);
-	WRAPPER_READ(wrapper, "CvUnit", &dflIIUnit.iID);
 #else
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &m_iExtraFrontSupportPercent, SAVE_VALUE_TYPE_INT);
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &m_iExtraShortRangeSupportPercent, SAVE_VALUE_TYPE_INT);
@@ -26733,7 +26693,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &m_iSupportCount, SAVE_VALUE_TYPE_INT);
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &m_iAttackFromPlotX, SAVE_VALUE_TYPE_INT);
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &m_iAttackFromPlotY, SAVE_VALUE_TYPE_INT);
-
+#endif
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)&afIUnit.eOwner, SAVE_VALUE_TYPE_INT);
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &afIUnit.iID, SAVE_VALUE_TYPE_INT);
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)&afIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
@@ -26774,7 +26734,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &dflIUnit.iID, SAVE_VALUE_TYPE_INT);
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)&dflIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", &dflIIUnit.iID, SAVE_VALUE_TYPE_INT);
-#endif
 
 	//	Backward compatibility - read array format if present
 	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
@@ -28348,46 +28307,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iSupportCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iAttackFromPlotX);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iAttackFromPlotY);	
-	WRAPPER_WRITE(wrapper, "CvUnit", afIUnit.eOwner);
-	WRAPPER_WRITE(wrapper, "CvUnit", afIUnit.iID);	
-	WRAPPER_WRITE(wrapper, "CvUnit", afIIUnit.eOwner);
-	WRAPPER_WRITE(wrapper, "CvUnit", afIIUnit.iID);	
-	WRAPPER_WRITE(wrapper, "CvUnit", asrIUnit.eOwner);
-	WRAPPER_WRITE(wrapper, "CvUnit", asrIUnit.iID);
-	WRAPPER_WRITE(wrapper, "CvUnit", asrIIUnit.eOwner);
-	WRAPPER_WRITE(wrapper, "CvUnit", asrIIUnit.iID);
-	WRAPPER_WRITE(wrapper, "CvUnit", amrIUnit.eOwner);
-	WRAPPER_WRITE(wrapper, "CvUnit", amrIUnit.iID);
-	WRAPPER_WRITE(wrapper, "CvUnit", amrIIUnit.eOwner);
-	WRAPPER_WRITE(wrapper, "CvUnit", amrIIUnit.iID);
-	WRAPPER_WRITE(wrapper, "CvUnit", alrIUnit.eOwner);
-	WRAPPER_WRITE(wrapper, "CvUnit", alrIUnit.iID);
-	WRAPPER_WRITE(wrapper, "CvUnit", alrIIUnit.eOwner);
-	WRAPPER_WRITE(wrapper, "CvUnit", alrIIUnit.iID);
-	WRAPPER_WRITE(wrapper, "CvUnit", aflIUnit.eOwner);
-	WRAPPER_WRITE(wrapper, "CvUnit", aflIUnit.iID);
-	WRAPPER_WRITE(wrapper, "CvUnit", aflIIUnit.eOwner);
-	WRAPPER_WRITE(wrapper, "CvUnit", aflIIUnit.iID);	
-	WRAPPER_WRITE(wrapper, "CvUnit", dfIUnit.eOwner);
-	WRAPPER_WRITE(wrapper, "CvUnit", dfIUnit.iID);	
-	WRAPPER_WRITE(wrapper, "CvUnit", dfIIUnit.eOwner);
-	WRAPPER_WRITE(wrapper, "CvUnit", dfIIUnit.iID);	
-	WRAPPER_WRITE(wrapper, "CvUnit", dsrIUnit.eOwner);
-	WRAPPER_WRITE(wrapper, "CvUnit", dsrIUnit.iID);
-	WRAPPER_WRITE(wrapper, "CvUnit", dsrIIUnit.eOwner);
-	WRAPPER_WRITE(wrapper, "CvUnit", dsrIIUnit.iID);
-	WRAPPER_WRITE(wrapper, "CvUnit", dmrIUnit.eOwner);
-	WRAPPER_WRITE(wrapper, "CvUnit", dmrIUnit.iID);
-	WRAPPER_WRITE(wrapper, "CvUnit", dmrIIUnit.eOwner);
-	WRAPPER_WRITE(wrapper, "CvUnit", dmrIIUnit.iID);
-	WRAPPER_WRITE(wrapper, "CvUnit", dlrIUnit.eOwner);
-	WRAPPER_WRITE(wrapper, "CvUnit", dlrIUnit.iID);
-	WRAPPER_WRITE(wrapper, "CvUnit", dlrIIUnit.eOwner);
-	WRAPPER_WRITE(wrapper, "CvUnit", dlrIIUnit.iID);
-	WRAPPER_WRITE(wrapper, "CvUnit", dflIUnit.eOwner);
-	WRAPPER_WRITE(wrapper, "CvUnit", dflIUnit.iID);
-	WRAPPER_WRITE(wrapper, "CvUnit", dflIIUnit.eOwner);
-	WRAPPER_WRITE(wrapper, "CvUnit", dflIIUnit.iID);
 #endif
 	//	Use condensed format now - only save non-default array elements
 	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)

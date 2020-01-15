@@ -2425,101 +2425,27 @@ public:
 	int getCityRepel() const;
 
 #ifdef STRENGTH_IN_NUMBERS
-	int getExtraFrontSupportPercent (bool bIgnoreCommanders = false) const;
-	void changeExtraFrontSupportPercent (int iChange);
-
-	int getExtraShortRangeSupportPercent (bool bIgnoreCommanders = false) const;
-	void changeExtraShortRangeSupportPercent (int iChange);
-
-	int getExtraMediumRangeSupportPercent (bool bIgnoreCommanders = false) const;
-	void changeExtraMediumRangeSupportPercent (int iChange);
-
-	int getExtraLongRangeSupportPercent (bool bIgnoreCommanders = false) const;
-	void changeExtraLongRangeSupportPercent (int iChange);
-
-	int getExtraFlankSupportPercent (bool bIgnoreCommanders = false) const;
-	void changeExtraFlankSupportPercent (int iChange);
+	int getExtraFrontSupportPercent(SupportPositionTypes position) const;
+	void changeExtraFrontSupportPercent(SupportPositionTypes position, int iChange);
 	
-	int frontSupportPercentTotal() const;
-	int shortRangeSupportPercentTotal() const;
-	int mediumRangeSupportPercentTotal() const;
-	int longRangeSupportPercentTotal() const;
-	int flankSupportPercentTotal() const;
-	bool isFrontSupporter() const;
-	bool isShortRangeSupporter() const;
-	bool isMediumRangeSupporter() const;
-	bool isLongRangeSupporter() const;
-	bool isFlankSupporter() const;
+	int supportPercentTotal(SupportPositionTypes position) const;
+	bool isSupporter(SupportPositionTypes position) const;
 
 	CvPlot* getAttackFromPlot() const;
 	void setAttackFromPlot(const CvPlot* pNewValue);
 
-	int getAttackerSupportValue() const;
-	int getAttackerFirstFrontSupportValue(const CvPlot* aPlot, const CvPlot* pPlot, const CvUnit* pDefender) const;
-	int getAttackerSecondFrontSupportValue(const CvPlot* aPlot, const CvPlot* pPlot, const CvUnit* pDefender) const;
-	int getAttackerFirstShortRangeSupportValue(const CvPlot* aPlot, const CvPlot* pPlot, const CvUnit* pDefender) const;
-	int getAttackerSecondShortRangeSupportValue(const CvPlot* aPlot, const CvPlot* pPlot, const CvUnit* pDefender) const;
-	int getAttackerFirstMediumRangeSupportValue(const CvPlot* aPlot, const CvPlot* pPlot, const CvUnit* pDefender) const;
-	int getAttackerSecondMediumRangeSupportValue(const CvPlot* aPlot, const CvPlot* pPlot, const CvUnit* pDefender) const;
-	int getAttackerFirstLongRangeSupportValue(const CvPlot* aPlot, const CvPlot* pPlot, const CvUnit* pDefender) const;
-	int getAttackerSecondLongRangeSupportValue(const CvPlot* aPlot, const CvPlot* pPlot, const CvUnit* pDefender) const;
-	int getAttackerFirstFlankSupportValue(const CvPlot* aPlot, const CvPlot* pPlot, const CvUnit* pDefender) const;
-	int getAttackerSecondFlankSupportValue(const CvPlot* aPlot, const CvPlot* pPlot, const CvUnit* pDefender) const;
-	CvUnit* getAttackerFirstFrontSupportingUnit() const;
-	CvUnit* getAttackerSecondFrontSupportingUnit() const;
-	CvUnit* getAttackerFirstShortRangeSupportingUnit() const;
-	CvUnit* getAttackerSecondShortRangeSupportingUnit() const;
-	CvUnit* getAttackerFirstMediumRangeSupportingUnit() const;
-	CvUnit* getAttackerSecondMediumRangeSupportingUnit() const;
-	CvUnit* getAttackerFirstLongRangeSupportingUnit() const;
-	CvUnit* getAttackerSecondLongRangeSupportingUnit() const;
-	CvUnit* getAttackerFirstFlankSupportingUnit() const;
-	CvUnit* getAttackerSecondFlankSupportingUnit() const;
-	void setAttackerFirstFrontSupportingUnit(CvUnit* pBestUnit);
-	void setAttackerSecondFrontSupportingUnit(CvUnit* pBestUnit);
-	void setAttackerFirstShortRangeSupportingUnit(CvUnit* pBestUnit);
-	void setAttackerSecondShortRangeSupportingUnit(CvUnit* pBestUnit);
-	void setAttackerFirstMediumRangeSupportingUnit(CvUnit* pBestUnit);
-	void setAttackerSecondMediumRangeSupportingUnit(CvUnit* pBestUnit);
-	void setAttackerFirstLongRangeSupportingUnit(CvUnit* pBestUnit);
-	void setAttackerSecondLongRangeSupportingUnit(CvUnit* pBestUnit);
-	void setAttackerFirstFlankSupportingUnit(CvUnit* pBestUnit);
-	void setAttackerSecondFlankSupportingUnit(CvUnit* pBestUnit);
+	int getTotalAttackerSupport() const;
+	int getAttackerSupportValue(const CvPlot* aPlot, const CvPlot* pPlot, const CvUnit* pDefender, SupportPositionTypes positionType, int position) const;
+	CvUnit* getAttackerSupportingUnit(int position) const;
 
-	int getDefenderSupportValue(const CvUnit* pAttacker) const;
-	int getDefenderFirstFrontSupportValue(const CvUnit* pAttacker, const CvPlot* pPlot) const;
-	int getDefenderSecondFrontSupportValue(const CvUnit* pAttacker, const CvPlot* pPlot) const;
-	int getDefenderFirstShortRangeSupportValue(const CvUnit* pAttacker, const CvPlot* pPlot) const;
-	int getDefenderSecondShortRangeSupportValue(const CvUnit* pAttacker, const CvPlot* pPlot) const;
-	int getDefenderFirstMediumRangeSupportValue(const CvUnit* pAttacker, const CvPlot* pPlot) const;
-	int getDefenderSecondMediumRangeSupportValue(const CvUnit* pAttacker, const CvPlot* pPlot) const;
-	int getDefenderFirstLongRangeSupportValue(const CvUnit* pAttacker, const CvPlot* pPlot) const;
-	int getDefenderSecondLongRangeSupportValue(const CvUnit* pAttacker, const CvPlot* pPlot) const;
-	int getDefenderFirstFlankSupportValue(const CvUnit* pAttacker, const CvPlot* pPlot) const;
-	int getDefenderSecondFlankSupportValue(const CvUnit* pAttacker, const CvPlot* pPlot) const;
-	CvUnit* getDefenderFirstFrontSupportingUnit() const;
-	CvUnit* getDefenderSecondFrontSupportingUnit() const;
-	CvUnit* getDefenderFirstShortRangeSupportingUnit() const;
-	CvUnit* getDefenderSecondShortRangeSupportingUnit() const;
-	CvUnit* getDefenderFirstMediumRangeSupportingUnit() const;
-	CvUnit* getDefenderSecondMediumRangeSupportingUnit() const;
-	CvUnit* getDefenderFirstLongRangeSupportingUnit() const;
-	CvUnit* getDefenderSecondLongRangeSupportingUnit() const;
-	CvUnit* getDefenderFirstFlankSupportingUnit() const;
-	CvUnit* getDefenderSecondFlankSupportingUnit() const;
-	void setDefenderFirstFrontSupportingUnit(CvUnit* pBestUnit);
-	void setDefenderSecondFrontSupportingUnit(CvUnit* pBestUnit);
-	void setDefenderFirstShortRangeSupportingUnit(CvUnit* pBestUnit);
-	void setDefenderSecondShortRangeSupportingUnit(CvUnit* pBestUnit);
-	void setDefenderFirstMediumRangeSupportingUnit(CvUnit* pBestUnit);
-	void setDefenderSecondMediumRangeSupportingUnit(CvUnit* pBestUnit);
-	void setDefenderFirstLongRangeSupportingUnit(CvUnit* pBestUnit);
-	void setDefenderSecondLongRangeSupportingUnit(CvUnit* pBestUnit);
-	void setDefenderFirstFlankSupportingUnit(CvUnit* pBestUnit);
-	void setDefenderSecondFlankSupportingUnit(CvUnit* pBestUnit);
+	int getTotalDefenderSupport(const CvUnit* pAttacker) const;
+	int getDefenderSupportValue(const CvUnit* pAttacker, const CvPlot* pPlot, SupportPositionTypes positionType, int position) const;
+	CvUnit* getDefenderSupportingUnit(int position) const;
 
 	bool isSupporting() const;
 	void setSupportCount(int iChange);
+
+	void initSupportUnitsCache();
 	void ClearSupports();
 #endif
 

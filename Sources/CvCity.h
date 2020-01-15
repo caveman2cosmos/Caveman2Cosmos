@@ -2056,11 +2056,6 @@ protected:
 /************************************************************************************************/
 	//TB Combat Mod (Buildings) begin
 	int m_iAidRate;
-	int m_iTotalFrontSupportPercentModifier;
-	int m_iTotalShortRangeSupportPercentModifier;
-	int m_iTotalMediumRangeSupportPercentModifier;
-	int m_iTotalLongRangeSupportPercentModifier;
-	int m_iTotalFlankSupportPercentModifier;
 	int* m_paiNewAfflictionTypeCount;
 	int* m_paiAidRate;
 	int** m_ppaaiExtraBonusAidModifier;
@@ -2187,6 +2182,9 @@ protected:
 
 	std::vector< std::pair < float, float> > m_kWallOverridePoints;
 
+#ifdef STRENGTH_IN_NUMBERS
+	std::vector<int> m_aiTotalSupportPercentModifier;
+#endif
 	std::vector<EventTypes> m_aEventsOccured;
 	std::vector<BuildingYieldChange> m_aBuildingYieldChange;
 	std::vector<BuildingCommerceChange> m_aBuildingCommerceChange;

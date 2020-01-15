@@ -3038,7 +3038,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 #ifdef STRENGTH_IN_NUMBERS
 			if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 			{
-				if (pUnit->frontSupportPercentTotal() > 0)
+				if (pUnit->supportPercentTotal(SUPPORT_POSITION_FRONT) > 0)
 				{
 					if (bShort)
 					{
@@ -3051,7 +3051,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 						szString.append(gDLL->getText("TXT_KEY_UNIT_FRONT_SUPPORT_PERCENT_TOTAL", pUnit->frontSupportPercentTotal()));
 					}
 				}
-				if (pUnit->shortRangeSupportPercentTotal() > 0)
+				if (pUnit->supportPercentTotal(SUPPORT_POSITION_SHORT_RANGE) > 0)
 				{
 					if (bShort)
 					{
@@ -3064,7 +3064,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 						szString.append(gDLL->getText("TXT_KEY_UNIT_SHORT_RANGE_SUPPORT_PERCENT_TOTAL", pUnit->shortRangeSupportPercentTotal()));
 					}
 				}
-				if (pUnit->mediumRangeSupportPercentTotal() > 0)
+				if (pUnit->supportPercentTotal(SUPPORT_POSITION_MEDIUM_RANGE) > 0)
 				{
 					if (bShort)
 					{
@@ -3077,7 +3077,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 						szString.append(gDLL->getText("TXT_KEY_UNIT_MEDIUM_RANGE_SUPPORT_PERCENT_TOTAL", pUnit->mediumRangeSupportPercentTotal()));
 					}
 				}
-				if (pUnit->longRangeSupportPercentTotal() > 0)
+				if (pUnit->supportPercentTotal(SUPPORT_POSITION_LONG_RANGE) > 0)
 				{
 					if (bShort)
 					{
@@ -3090,7 +3090,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 						szString.append(gDLL->getText("TXT_KEY_UNIT_LONG_RANGE_SUPPORT_PERCENT_TOTAL", pUnit->longRangeSupportPercentTotal()));
 					}
 				}
-				if (pUnit->flankSupportPercentTotal() > 0)
+				if (pUnit->supportPercentTotal(SUPPORT_POSITION_FLANK) > 0)
 				{
 					if (bShort)
 					{
@@ -8285,7 +8285,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 				}
 #ifdef STRENGTH_IN_NUMBERS
 				//Strength in Numbers extended alternative display
-				else if (bSINView && GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+/*				else if (bSINView && GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 				{
 					CvPlot* aPlot = pAttacker->plot();
 					CvUnit* paFIUnit = pAttacker->getAttackerFirstFrontSupportingUnit();
@@ -8428,7 +8428,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						szString.append(NEWLINE);
 						szString.append(szTempBuffer.GetCString());
 					}
-				}
+				}*/
 #endif // STRENGTH_IN_NUMBERS
 			}
 			return true;
@@ -20597,30 +20597,30 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		//Strength in Numbers offered support
 		if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 		{
-			if (kUnit.getFrontSupportPercent() > 0)
+			if (kUnit.getSupportPercent(SUPPORT_POSITION_FRONT) > 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_FRONT_SUPPORT_PERCENT_TEXT", kUnit.getFrontSupportPercent()));
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_FRONT_SUPPORT_PERCENT_TEXT", kUnit.getSupportPercent(SUPPORT_POSITION_FRONT)));
 			}
-			if (kUnit.getShortRangeSupportPercent() > 0)
+			if (kUnit.getSupportPercent(SUPPORT_POSITION_SHORT_RANGE) > 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_SHORT_RANGE_SUPPORT_PERCENT_TEXT", kUnit.getShortRangeSupportPercent()));
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_SHORT_RANGE_SUPPORT_PERCENT_TEXT", kUnit.getSupportPercent(SUPPORT_POSITION_SHORT_RANGE)));
 			}
-			if (kUnit.getMediumRangeSupportPercent() > 0)
+			if (kUnit.getSupportPercent(SUPPORT_POSITION_MEDIUM_RANGE) > 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_MEDIUM_RANGE_SUPPORT_PERCENT_TEXT", kUnit.getMediumRangeSupportPercent()));
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_MEDIUM_RANGE_SUPPORT_PERCENT_TEXT", kUnit.getSupportPercent(SUPPORT_POSITION_MEDIUM_RANGE)));
 			}
-			if (kUnit.getLongRangeSupportPercent() > 0)
+			if (kUnit.getSupportPercent(SUPPORT_POSITION_LONG_RANGE) > 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_LONG_RANGE_SUPPORT_PERCENT_TEXT", kUnit.getLongRangeSupportPercent()));
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_LONG_RANGE_SUPPORT_PERCENT_TEXT", kUnit.getSupportPercent(SUPPORT_POSITION_LONG_RANGE)));
 			}
-			if (kUnit.getFlankSupportPercent() > 0)
+			if (kUnit.getSupportPercent(SUPPORT_POSITION_FLANK) > 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_FLANK_SUPPORT_PERCENT_TEXT", kUnit.getFlankSupportPercent()));
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_FLANK_SUPPORT_PERCENT_TEXT", kUnit.getSupportPercent(SUPPORT_POSITION_FLANK)));
 			}
 		}
 
