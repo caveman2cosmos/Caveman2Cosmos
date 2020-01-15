@@ -2047,11 +2047,7 @@ public:
 	int getLunge(bool bForLoad = false) const;
 	int getDynamicDefense(bool bForLoad = false) const;
 	int getFortitude(bool bForLoad = false) const;
-	int getFrontSupportPercent(bool bForLoad = false) const;
-	int getShortRangeSupportPercent(bool bForLoad = false) const;
-	int getMediumRangeSupportPercent(bool bForLoad = false) const;
-	int getLongRangeSupportPercent(bool bForLoad = false) const;
-	int getFlankSupportPercent(bool bForLoad = false) const;
+	int getSupportPercent(SupportPositionTypes position, bool bForLoad = false) const;
 	int getDodgeModifier() const;
 	int getPrecisionModifier() const;
 	int getPowerShots() const;
@@ -2372,6 +2368,8 @@ protected:
 	std::vector<CvWString> m_aszCivilizationNamesValueforPass3;
 
 	BoolExpr* m_pExprTrainCondition;
+
+	std::vector<int> m_aiSupportPercent;
 
 public:
 /************************************************************************************************/
@@ -2784,11 +2782,6 @@ protected:
 	int m_iLunge;
 	int m_iDynamicDefense;
 	int m_iFortitude;
-	int m_iFrontSupportPercent;
-	int m_iShortRangeSupportPercent;
-	int m_iMediumRangeSupportPercent;
-	int m_iLongRangeSupportPercent;
-	int m_iFlankSupportPercent;
 	int m_iDodgeModifier;
 	int m_iPrecisionModifier;
 	int m_iPowerShots;

@@ -298,11 +298,6 @@ m_iEnclose(0),
 m_iLunge(0),
 m_iDynamicDefense(0),
 m_iFortitude(0),
-m_iFrontSupportPercent(0),
-m_iShortRangeSupportPercent(0),
-m_iMediumRangeSupportPercent(0),
-m_iLongRangeSupportPercent(0),
-m_iFlankSupportPercent(0),
 m_iDodgeModifier(0),
 m_iPrecisionModifier(0),
 m_iPowerShots(0),
@@ -463,6 +458,7 @@ CvUnitInfo::~CvUnitInfo()
 /* Afforess						 END															*/
 /************************************************************************************************/
 	SAFE_DELETE(m_pExprTrainCondition);
+	SAFE_DELETE(m_aiSupportPercent);
 
 	for (int i=0; i<(int)m_aOutcomeMissions.size(); i++)
 	{
@@ -1707,7 +1703,7 @@ const TCHAR* CvUnitInfo::getLateArtDefineTag(int i, UnitArtStyleTypes eStyle) co
 
 	if (NO_UNIT_ARTSTYLE != eStyle)
 	{
-		int iIndex = GC.getInfoTypeForString(getType());
+		const int iIndex = GC.getInfoTypeForString(getType());
 		if (-1 != iIndex)
 		{
 			const TCHAR* pcTag = GC.getUnitArtStyleTypeInfo(eStyle).getLateArtDefineTag(i, iIndex);
@@ -1716,7 +1712,6 @@ const TCHAR* CvUnitInfo::getLateArtDefineTag(int i, UnitArtStyleTypes eStyle) co
 				return pcTag;
 			}
 		}
-
 	}
 
 	return (m_paszLateArtDefineTags) ? m_paszLateArtDefineTags[i] : NULL;
@@ -1736,7 +1731,7 @@ const TCHAR* CvUnitInfo::getMiddleArtDefineTag(int i, UnitArtStyleTypes eStyle) 
 
 	if (NO_UNIT_ARTSTYLE != eStyle)
 	{
-		int iIndex = GC.getInfoTypeForString(getType());
+		const int iIndex = GC.getInfoTypeForString(getType());
 		if (-1 != iIndex)
 		{
 			const TCHAR* pcTag = GC.getUnitArtStyleTypeInfo(eStyle).getMiddleArtDefineTag(i, iIndex);
@@ -1745,7 +1740,6 @@ const TCHAR* CvUnitInfo::getMiddleArtDefineTag(int i, UnitArtStyleTypes eStyle) 
 				return pcTag;
 			}
 		}
-
 	}
 
 	return (m_paszMiddleArtDefineTags) ? m_paszMiddleArtDefineTags[i] : NULL;
@@ -1801,7 +1795,6 @@ const TCHAR* CvUnitInfo::getClassicalArtDefineTag(int i, UnitArtStyleTypes eStyl
 				return pcTag;
 			}
 		}
-
 	}
 
 	return (m_paszClassicalArtDefineTags) ? m_paszClassicalArtDefineTags[i] : NULL;
@@ -1821,7 +1814,7 @@ const TCHAR* CvUnitInfo::getRennArtDefineTag(int i, UnitArtStyleTypes eStyle) co
 
 	if (NO_UNIT_ARTSTYLE != eStyle)
 	{
-		int iIndex = GC.getInfoTypeForString(getType());
+		const int iIndex = GC.getInfoTypeForString(getType());
 		if (-1 != iIndex)
 		{
 			const TCHAR* pcTag = GC.getUnitArtStyleTypeInfo(eStyle).getRennArtDefineTag(i, iIndex);
@@ -1830,7 +1823,6 @@ const TCHAR* CvUnitInfo::getRennArtDefineTag(int i, UnitArtStyleTypes eStyle) co
 				return pcTag;
 			}
 		}
-
 	}
 
 	return (m_paszRennArtDefineTags) ? m_paszRennArtDefineTags[i] : NULL;
@@ -1850,7 +1842,7 @@ const TCHAR* CvUnitInfo::getIndustrialArtDefineTag(int i, UnitArtStyleTypes eSty
 
 	if (NO_UNIT_ARTSTYLE != eStyle)
 	{
-		int iIndex = GC.getInfoTypeForString(getType());
+		const int iIndex = GC.getInfoTypeForString(getType());
 		if (-1 != iIndex)
 		{
 			const TCHAR* pcTag = GC.getUnitArtStyleTypeInfo(eStyle).getIndustrialArtDefineTag(i, iIndex);
@@ -1859,7 +1851,6 @@ const TCHAR* CvUnitInfo::getIndustrialArtDefineTag(int i, UnitArtStyleTypes eSty
 				return pcTag;
 			}
 		}
-
 	}
 
 	return (m_paszIndustrialArtDefineTags) ? m_paszIndustrialArtDefineTags[i] : NULL;
@@ -1879,7 +1870,7 @@ const TCHAR* CvUnitInfo::getFutureArtDefineTag(int i, UnitArtStyleTypes eStyle) 
 
 	if (NO_UNIT_ARTSTYLE != eStyle)
 	{
-		int iIndex = GC.getInfoTypeForString(getType());
+		const int iIndex = GC.getInfoTypeForString(getType());
 		if (-1 != iIndex)
 		{
 			const TCHAR* pcTag = GC.getUnitArtStyleTypeInfo(eStyle).getFutureArtDefineTag(i, iIndex);
@@ -1888,7 +1879,6 @@ const TCHAR* CvUnitInfo::getFutureArtDefineTag(int i, UnitArtStyleTypes eStyle) 
 				return pcTag;
 			}
 		}
-
 	}
 
 	return (m_paszFutureArtDefineTags) ? m_paszFutureArtDefineTags[i] : NULL;
@@ -2152,8 +2142,7 @@ void CvUnitInfo::setEraSubCombat()
 	{
 		return;
 	}
-	int iI;
-	for (iI=0; iI < getNumSubCombatTypes(); iI++)
+	for (int iI = 0; iI < getNumSubCombatTypes(); iI++)
 	{
 		if (GC.getUnitCombatInfo((UnitCombatTypes)getSubCombatType(iI)).getEra() != NO_ERA)
 		{
@@ -2357,49 +2346,13 @@ int CvUnitInfo::getFortitude(bool bForLoad) const
 	return m_iFortitude;
 }
 
-int CvUnitInfo::getFrontSupportPercent(bool bForLoad) const
+int CvUnitInfo::getSupportPercent(SupportPositionTypes position, bool bForLoad) const
 {
 	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
-	return m_iFrontSupportPercent;
-}
-
-int CvUnitInfo::getShortRangeSupportPercent(bool bForLoad) const
-{
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
-	{
-		return 0;
-	}
-	return m_iShortRangeSupportPercent;
-}
-
-int CvUnitInfo::getMediumRangeSupportPercent(bool bForLoad) const
-{
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
-	{
-		return 0;
-	}
-	return m_iMediumRangeSupportPercent;
-}
-
-int CvUnitInfo::getLongRangeSupportPercent(bool bForLoad) const
-{
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
-	{
-		return 0;
-	}
-	return m_iLongRangeSupportPercent;
-}
-
-int CvUnitInfo::getFlankSupportPercent(bool bForLoad) const
-{
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
-	{
-		return 0;
-	}
-	return m_iFlankSupportPercent;
+	return m_aiSupportPercent[position];
 }
 
 int CvUnitInfo::getDodgeModifier() const
@@ -4132,11 +4085,14 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_iLunge);
 	CheckSum(iSum, m_iDynamicDefense);
 	CheckSum(iSum, m_iFortitude);
+	CheckSumI(iSum, NUM_SUPPORT_POSITION_TYPES, m_aiSupportPercent);
+
 	CheckSum(iSum, m_iFrontSupportPercent);
 	CheckSum(iSum, m_iShortRangeSupportPercent);
 	CheckSum(iSum, m_iMediumRangeSupportPercent);
 	CheckSum(iSum, m_iLongRangeSupportPercent);
 	CheckSum(iSum, m_iFlankSupportPercent);
+
 	CheckSum(iSum, m_iDodgeModifier);
 	CheckSum(iSum, m_iPrecisionModifier);
 	CheckSum(iSum, m_iPowerShots);
@@ -4981,11 +4937,17 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iLunge, L"iLunge");
 	pXML->GetOptionalChildXmlValByName(&m_iDynamicDefense, L"iDynamicDefense");
 	pXML->GetOptionalChildXmlValByName(&m_iFortitude, L"iFortitude");
-	pXML->GetOptionalChildXmlValByName(&m_iFrontSupportPercent, L"iFrontSupportPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iShortRangeSupportPercent, L"iShortRangeSupportPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iMediumRangeSupportPercent, L"iMediumRangeSupportPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iLongRangeSupportPercent, L"iLongRangeSupportPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iFlankSupportPercent, L"iFlankSupportPercent");
+
+	for (int iI = 0; iI < NUM_SUPPORT_POSITION_TYPES; iI++)
+	{
+		m_aiSupportPercent.pushback(0);
+	}
+	pXML->GetOptionalChildXmlValByName(&m_aiSupportPercent[SUPPORT_POSITION_FRONT], L"iFrontSupportPercent");
+	pXML->GetOptionalChildXmlValByName(&m_aiSupportPercent[SUPPORT_POSITION_SHORT_RANGE], L"iShortRangeSupportPercent");
+	pXML->GetOptionalChildXmlValByName(&m_aiSupportPercent[SUPPORT_POSITION_MEDIUM_RANGE], L"iMediumRangeSupportPercent");
+	pXML->GetOptionalChildXmlValByName(&m_aiSupportPercent[SUPPORT_POSITION_LONG_RANGE], L"iLongRangeSupportPercent");
+	pXML->GetOptionalChildXmlValByName(&m_aiSupportPercent[SUPPORT_POSITION_FLANK], L"iFlankSupportPercent");
+
 	pXML->GetOptionalChildXmlValByName(&m_iDodgeModifier, L"iDodgeModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iPrecisionModifier, L"iPrecisionModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iPowerShots, L"iPowerShots");
@@ -5058,7 +5020,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	//boolean vectors without delayed resolution
 	pXML->SetOptionalIntVector(&m_aiSubCombatTypes, L"SubCombatTypes");
 
-
 	pXML->SetOptionalIntVector(&m_aiCureAfflictionTypes, L"CureAfflictionTypes");
 
 	pXML->SetOptionalIntVector(&m_aiTerrainImpassableTypes, L"TerrainImpassableTypes");
@@ -5074,11 +5035,10 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"AfflictionFortitudeModifiers"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"AfflictionFortitudeModifier" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"AfflictionFortitudeModifier" );
 		m_aAfflictionFortitudeModifiers.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"AfflictionFortitudeModifier"))
 			{
 				do
@@ -5097,11 +5057,10 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"AfflictOnAttackTypes"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"AfflictOnAttackType" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"AfflictOnAttackType" );
 		m_aAfflictOnAttackTypes.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"AfflictOnAttackType"))
 			{
 				do
@@ -5123,11 +5082,10 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"HealUnitCombatTypes"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"HealUnitCombatType" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"HealUnitCombatType" );
 		m_aHealUnitCombatTypes.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"HealUnitCombatType"))
 			{
 				do
@@ -5147,11 +5105,10 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"GroupSpawnUnitCombatTypes"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"GroupSpawnUnitCombatType" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"GroupSpawnUnitCombatType" );
 		m_aGroupSpawnUnitCombatTypes.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"GroupSpawnUnitCombatType"))
 			{
 				do
@@ -5171,11 +5128,10 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"InvisibleTerrainChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"InvisibleTerrainChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"InvisibleTerrainChange" );
 		m_aInvisibleTerrainChanges.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"InvisibleTerrainChange"))
 			{
 				do
@@ -5196,11 +5152,10 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"InvisibleFeatureChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"InvisibleFeatureChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"InvisibleFeatureChange" );
 		m_aInvisibleFeatureChanges.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"InvisibleFeatureChange"))
 			{
 				do
@@ -5221,11 +5176,10 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"InvisibleImprovementChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"InvisibleImprovementChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"InvisibleImprovementChange" );
 		m_aInvisibleImprovementChanges.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"InvisibleImprovementChange"))
 			{
 				do
@@ -5246,11 +5200,10 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"VisibleTerrainChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"VisibleTerrainChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"VisibleTerrainChange" );
 		m_aVisibleTerrainChanges.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"VisibleTerrainChange"))
 			{
 				do
@@ -5271,11 +5224,10 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"VisibleFeatureChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"VisibleFeatureChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"VisibleFeatureChange" );
 		m_aVisibleFeatureChanges.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"VisibleFeatureChange"))
 			{
 				do
@@ -5296,11 +5248,10 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"VisibleImprovementChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"VisibleImprovementChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"VisibleImprovementChange" );
 		m_aVisibleImprovementChanges.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"VisibleImprovementChange"))
 			{
 				do
@@ -5321,11 +5272,10 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"VisibleTerrainRangeChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"VisibleTerrainRangeChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"VisibleTerrainRangeChange" );
 		m_aVisibleTerrainRangeChanges.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"VisibleTerrainRangeChange"))
 			{
 				do
@@ -5346,11 +5296,10 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"VisibleFeatureRangeChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"VisibleFeatureRangeChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"VisibleFeatureRangeChange" );
 		m_aVisibleFeatureRangeChanges.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"VisibleFeatureRangeChange"))
 			{
 				do
@@ -5371,11 +5320,10 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"VisibleImprovementRangeChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"VisibleImprovementRangeChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"VisibleImprovementRangeChange" );
 		m_aVisibleImprovementRangeChanges.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"VisibleImprovementRangeChange"))
 			{
 				do
@@ -5396,11 +5344,10 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"DistanceAttackCommunicabilityTypeChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"DistanceAttackCommunicabilityTypeChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"DistanceAttackCommunicabilityTypeChange" );
 		m_aDistanceAttackCommunicabilityTypeChanges.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"DistanceAttackCommunicabilityTypeChange"))
 			{
 				do
@@ -5419,7 +5366,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"EnabledCivilizationTypes"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"EnabledCivilizationType" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"EnabledCivilizationType" );
 		m_aEnabledCivilizationTypes.resize(iNum); // Important to keep the delayed resolution pointers correct
 
 		if(pXML->TryMoveToXmlFirstChild())
@@ -6202,11 +6149,17 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	if ( m_iLunge == iDefault ) m_iLunge = pClassInfo->getLunge(true);
 	if ( m_iDynamicDefense == iDefault ) m_iDynamicDefense = pClassInfo->getDynamicDefense(true);
 	if ( m_iFortitude == iDefault ) m_iFortitude = pClassInfo->getFortitude(true);
+
+	for (int iI = 0; iI < NUM_SUPPORT_POSITION_TYPES; iI++)
+	{
+		if ( m_aiSupportPercent[iI] == iDefault ) m_aiSupportPercent[iI] = pClassInfo->getSupportPercent((SupportPositionTypes)iI, true);
+	}
 	if ( m_iFrontSupportPercent == iDefault ) m_iFrontSupportPercent = pClassInfo->getFrontSupportPercent(true);
 	if ( m_iShortRangeSupportPercent == iDefault ) m_iShortRangeSupportPercent = pClassInfo->getShortRangeSupportPercent(true);
 	if ( m_iMediumRangeSupportPercent == iDefault ) m_iMediumRangeSupportPercent = pClassInfo->getMediumRangeSupportPercent(true);
 	if ( m_iLongRangeSupportPercent == iDefault ) m_iLongRangeSupportPercent = pClassInfo->getLongRangeSupportPercent(true);
 	if ( m_iFlankSupportPercent == iDefault ) m_iFlankSupportPercent = pClassInfo->getFlankSupportPercent(true);
+
 	if ( m_iDodgeModifier == iDefault ) m_iDodgeModifier = pClassInfo->getDodgeModifier();
 	if ( m_iPrecisionModifier == iDefault ) m_iPrecisionModifier = pClassInfo->getPrecisionModifier();
 	if ( m_iPowerShots == iDefault ) m_iPowerShots = pClassInfo->getPowerShots();
@@ -6790,7 +6743,7 @@ void CvUnitInfo::setTotalModifiedCombatStrengthDetails()
 	{
 		if (hasUnitCombat((UnitCombatTypes)iI))
 		{
-			UnitCombatTypes eUnitCombat = ((UnitCombatTypes)iI);
+			const UnitCombatTypes eUnitCombat = ((UnitCombatTypes)iI);
 			m_iTotalCombatStrengthChangeBase += GC.getUnitCombatInfo(eUnitCombat).getStrengthChange();
 			if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS_UNCUT))
 			{
@@ -6818,11 +6771,6 @@ int CvUnitInfo::getCombatStrengthModifier() const
 int CvUnitInfo::getTotalModifiedCombatStrength100() const
 {
 	int iStr = m_iCombat + m_iTotalCombatStrengthChangeBase;
-	int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER");
-	bool bPositive = (m_iTotalCombatStrengthModifierBase > 0);
-	int iIterator = ((bPositive) ? m_iTotalCombatStrengthModifierBase : (-1 * m_iTotalCombatStrengthModifierBase));
-	int iI = 0;
-
 
 	if (iStr < 0)
 	{
@@ -6831,7 +6779,12 @@ int CvUnitInfo::getTotalModifiedCombatStrength100() const
 	if (iStr !=0)
 	{
 		iStr *= 100;
-		for (iI = 0; iI < iIterator; iI++)
+
+		const int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER");
+		const bool bPositive = (m_iTotalCombatStrengthModifierBase > 0);
+		const int iIterator = ((bPositive) ? m_iTotalCombatStrengthModifierBase : (-1 * m_iTotalCombatStrengthModifierBase));
+
+		for (int iI = 0; iI < iIterator; iI++)
 		{
 			if (bPositive)
 			{
@@ -6938,7 +6891,7 @@ void CvUnitInfo::setBaseCargoVolume()
 	m_iBaseGroupRank = iBaseGroup;
 
 	int iBase = 100;
-	int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER");
+	const int iSMMultiplier = GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER");
 	bool bPositive = ((iOffset > 0) ? true : false);
 	iBase *= 100;
 	if (bPositive)
