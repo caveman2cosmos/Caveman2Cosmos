@@ -22,6 +22,12 @@
     <Filter Include="Source Files\Components">
       <UniqueIdentifier>{27347836-f58d-49fa-8b5a-3c1c95e78900}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Components\UnitVisibility">
+      <UniqueIdentifier>{785c1043-4aeb-4c69-92d7-467a5df6556b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Components\UnitDetection">
+      <UniqueIdentifier>{06445a4e-e6fd-4885-b4e3-3282b7789187}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="_precompile.cpp">
@@ -476,6 +482,18 @@
     </ClCompile>
     <ClCompile Include="..\boost_test\test.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitVisibilityDefault.cpp">
+      <Filter>Source Files\Components\UnitVisibility</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitVisibilityHideAndSeek.cpp">
+      <Filter>Source Files\Components\UnitVisibility</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitDetectionDefault.cpp">
+      <Filter>Source Files\Components\UnitDetection</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitDetectionHideAndSeek.cpp">
+      <Filter>Source Files\Components\UnitDetection</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -952,6 +970,24 @@
     </ClInclude>
     <ClInclude Include="UnitComponentTransportSM.h">
       <Filter>Source Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitVisibilityBase.h">
+      <Filter>Source Files\Components\UnitVisibility</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitVisibilityDefault.h">
+      <Filter>Source Files\Components\UnitVisibility</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitVisibilityHideAndSeek.h">
+      <Filter>Source Files\Components\UnitVisibility</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitDetectionBase.h">
+      <Filter>Source Files\Components\UnitDetection</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitDetectionDefault.h">
+      <Filter>Source Files\Components\UnitDetection</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitDetectionHideAndSeek.h">
+      <Filter>Source Files\Components\UnitDetection</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

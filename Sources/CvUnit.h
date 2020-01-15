@@ -848,11 +848,7 @@ public:
 	SpecialUnitTypes getSpecialUnitType() const;								// Exposed to Python								 
 	UnitTypes getCaptureUnitType(CivilizationTypes eCivilization) const;	// Exposed to Python								
 	UnitCombatTypes getUnitCombatType() const;									// Exposed to Python								
-	DllExport DomainTypes getDomainType() const;													// Exposed to Python								
-	InvisibleTypes getInvisibleType() const;										// Exposed to Python								
-	int getNumSeeInvisibleTypes() const;									// Exposed to Python
-	InvisibleTypes getSeeInvisibleType(int i) const;									// Exposed to Python
-																																				
+	DllExport DomainTypes getDomainType() const;													// Exposed to Python																																		
 	int flavorValue(FlavorTypes eFlavor) const;														// Exposed to Python		
 
 	bool isBarbarian() const;
@@ -2258,12 +2254,6 @@ protected:
 	IDInfo m_transportUnit;
 
 	int* m_aiExtraDomainModifier;
-
-	int* m_aiExtraVisibilityIntensity;
-	int* m_aiExtraInvisibilityIntensity;
-	int* m_aiExtraVisibilityIntensityRange;
-	int* m_aiNegatesInvisibleCount;
-	int* m_aiExtraVisibilityIntensitySameTile;
 
 //Team Project (4)
 	//WorkRateMod

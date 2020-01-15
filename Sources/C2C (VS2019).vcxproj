@@ -196,6 +196,10 @@
     <ClCompile Include="CvPython.cpp" />
     <ClCompile Include="CyPlayerInterface3.cpp" />
     <ClCompile Include="logging.cpp" />
+    <ClCompile Include="UnitDetectionDefault.cpp" />
+    <ClCompile Include="UnitDetectionHideAndSeek.cpp" />
+    <ClCompile Include="UnitVisibilityDefault.cpp" />
+    <ClCompile Include="UnitVisibilityHideAndSeek.cpp" />
     <ClCompile Include="Win32.cpp" />
     <ClCompile Include="StackWalker.cpp" />
     <ClCompile Include="_precompile.cpp" />
@@ -401,9 +405,15 @@
     <ClInclude Include="ComponentBase.h" />
     <ClInclude Include="UnitComponentBase.h" />
     <ClInclude Include="UnitComponentCombatBase.h" />
+    <ClInclude Include="UnitDetectionBase.h" />
+    <ClInclude Include="UnitDetectionDefault.h" />
+    <ClInclude Include="UnitDetectionHideAndSeek.h" />
     <ClInclude Include="UnitComponentTransportBase.h" />
     <ClInclude Include="UnitComponentTransportDefault.h" />
     <ClInclude Include="UnitComponentTransportSM.h" />
+    <ClInclude Include="UnitVisibilityBase.h" />
+    <ClInclude Include="UnitVisibilityDefault.h" />
+    <ClInclude Include="UnitVisibilityHideAndSeek.h" />
     <ClInclude Include="wchar_utils.h" />
     <ClInclude Include="CvEnums.h" />
     <ClInclude Include="CvEventReporter.h" />
