@@ -355,7 +355,8 @@ public:
 /* DCM                                     END                                                  */
 /************************************************************************************************/
 	int defensiveModifierAtPlot(const CvPlot* pPlot) const;
-	bool meetsUnitSelectionCriteria(const CvUnitSelectionCriteria* criteria) const;
+	bool meetsUnitSelectionCriteria(const CvUnitSelectionCriteria& criteria) const;
+	int baseCombatStr() const;
 	int getStrength() const;
 	bool hasCommander() const;
 	bool hasUnitOfAI(UnitAITypes eUnitAI) const;
@@ -473,6 +474,8 @@ public:
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, PlayerTypes, getHeadOwner);
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, TeamTypes, getHeadTeam);
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, AutomateTypes, getAutomateType);
+		DECLARE_MAP_FUNCTOR(CvSelectionGroup, const CvArea*, area);
+		DECLARE_MAP_FUNCTOR(CvSelectionGroup, int, baseCombatStr);
 	};
 };
 

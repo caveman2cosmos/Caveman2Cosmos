@@ -6254,41 +6254,17 @@ int CvSelectionGroup::getNumUnits() const
 
 int CvSelectionGroup::getNumUnitCargoVolumeTotal() const
 {
-	int iTotal = 0;
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		iTotal += (*unitItr)->SMCargoVolume();
-	}
-
-	return iTotal;
+	return algo::accumulate(units() | transformed(CvUnit::fn::SMCargoVolume()), 0);
 }
 
 int CvSelectionGroup::getLeastCargoVolume() const
 {
-	int iLowest = MAX_INT;
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		const int iVolume = (*unitItr)->SMCargoVolume();
-		if (iVolume < iLowest)
-		{
-			iLowest = iVolume;
-		}
-	}
-	return iLowest;
+	return algo::min_element(units() | transformed(CvUnit::fn::SMCargoVolume())).get_value_or(MAX_INT);
 }
 
-
-bool CvSelectionGroup::meetsUnitSelectionCriteria(const CvUnitSelectionCriteria* criteria) const
+bool CvSelectionGroup::meetsUnitSelectionCriteria(const CvUnitSelectionCriteria& criteria) const
 {
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		if ((*unitItr)->meetsUnitSelectionCriteria(criteria))
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return algo::any_of(units(), CvUnit::fn::meetsUnitSelectionCriteria(criteria));
 }
 
 void CvSelectionGroup::mergeIntoGroup(CvSelectionGroup* pSelectionGroup)
@@ -7190,16 +7166,16 @@ int CvSelectionGroup::defensiveModifierAtPlot(const CvPlot* pPlot) const
 	return iModifier + iBestExtraModifier;
 }
 
+int CvSelectionGroup::baseCombatStr() const
+{
+	return algo::accumulate(units() | transformed(CvUnit::fn::baseCombatStr()), 0);
+}
+
 int CvSelectionGroup::getStrength() const
 {
-	int iStrength = 0;
-
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		iStrength += (*unitItr)->AI_genericUnitValueTimes100(UNITVALUE_FLAGS_DEFENSIVE | UNITVALUE_FLAGS_OFFENSIVE);
-	}
-
-	return iStrength/100;
+	return algo::accumulate(
+		units() | transformed(CvUnit::fn::AI_genericUnitValueTimes100(UNITVALUE_FLAGS_DEFENSIVE | UNITVALUE_FLAGS_OFFENSIVE)), 0
+	) / 100;
 }
 
 bool CvSelectionGroup::hasCommander() const

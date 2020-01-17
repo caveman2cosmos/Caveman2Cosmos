@@ -2254,13 +2254,13 @@ void CvUnitAI::AI_settleMove()
 							getGroup()->getStrength();
 					}
 
-					GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(HIGHEST_PRIORITY_ESCORT_PRIORITY, 
-																					DEFENSIVE_UNITCAPABILITIES, 
-																					plot()->getX_INLINE(), 
-																					plot()->getY_INLINE(), 
-																					this, 
-																					UNITAI_CITY_DEFENSE, 
-																					AI_minSettlerDefense());
+					GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(WorkParams()
+						.priority(HIGHEST_PRIORITY_ESCORT_PRIORITY)
+						.unitCaps(DEFENSIVE_UNITCAPABILITIES)
+						.joinUnit(this)
+						.AIType(UNITAI_CITY_DEFENSE)
+						.unitStrength(AI_minSettlerDefense())
+					);
 
 					m_contractsLastEstablishedTurn = GC.getGameINLINE().getGameTurn();
 					m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;
@@ -3961,12 +3961,11 @@ void CvUnitAI::AI_attackCityMove()
 		//	Special case - if we have no attackers at all advertise for one urgently
 		if ( iCityCaptureCount == 0 && !isCargo())
 		{
-			GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(HIGH_PRIORITY_ESCORT_PRIORITY+1,
-																		   NO_UNITCAPABILITIES,
-																		   getX_INLINE(),
-																		   getY_INLINE(),
-																		   this,
-																		   UNITAI_ATTACK_CITY);
+			GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(WorkParams()
+				.priority(HIGH_PRIORITY_ESCORT_PRIORITY + 1)
+				.joinUnit(this)
+				.AIType(UNITAI_ATTACK_CITY)
+			);
 
 			if( gUnitLogLevel > 2 )
 			{
@@ -4132,14 +4131,13 @@ void CvUnitAI::AI_attackCityMove()
 		//	Try to get a healer if we don't have enough
 		if ( !isCargo() && eMostNeeded != NO_UNITCOMBAT )
 		{
-			GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(HIGH_PRIORITY_ESCORT_PRIORITY,
-																		   HEALER_UNITCAPABILITIES,
-																		   getX_INLINE(),
-																		   getY_INLINE(),
-																		   this,
-																		   UNITAI_HEALER,
-																		   -1,
-																		   &healerCriteria);
+			GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(WorkParams()
+				.priority(HIGH_PRIORITY_ESCORT_PRIORITY)
+				.unitCaps(HEALER_UNITCAPABILITIES)
+				.joinUnit(this)
+				.AIType(UNITAI_HEALER)
+				.criteria(healerCriteria)
+			);
 
 			if( gUnitLogLevel > 2 )
 			{
@@ -4159,12 +4157,11 @@ void CvUnitAI::AI_attackCityMove()
 				return;
 			}
 
-			GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(bReadyToAttack ? LOW_PRIORITY_ESCORT_PRIORITY : HIGH_PRIORITY_ESCORT_PRIORITY,
-																		   NO_UNITCAPABILITIES,
-																		   getX_INLINE(),
-																		   getY_INLINE(),
-																		   this,
-																		   UNITAI_ATTACK_CITY);
+			GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(WorkParams()
+				.priority(bReadyToAttack ? LOW_PRIORITY_ESCORT_PRIORITY : HIGH_PRIORITY_ESCORT_PRIORITY)
+				.joinUnit(this)
+				.AIType(UNITAI_ATTACK_CITY)
+			);
 
 			if( gUnitLogLevel > 2 )
 			{
@@ -4176,12 +4173,11 @@ void CvUnitAI::AI_attackCityMove()
 			//	Also try to get a great commander if we don't have one
 			if ( GC.getGameINLINE().isOption(GAMEOPTION_GREAT_COMMANDERS) && !getGroup()->hasCommander() )
 			{
-				GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(bReadyToAttack ? HIGH_PRIORITY_ESCORT_PRIORITY : LOW_PRIORITY_ESCORT_PRIORITY,
-																			   NO_UNITCAPABILITIES,
-																			   getX_INLINE(),
-																			   getY_INLINE(),
-																			   this,
-																			   UNITAI_GENERAL);
+				GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(WorkParams()
+					.priority(bReadyToAttack ? HIGH_PRIORITY_ESCORT_PRIORITY : LOW_PRIORITY_ESCORT_PRIORITY)
+					.joinUnit(this)
+					.AIType(UNITAI_GENERAL)
+				);
 
 				if( gUnitLogLevel > 2 )
 				{
@@ -6938,7 +6934,11 @@ void CvUnitAI::AI_generalMove()
 					plot()->getY_INLINE());
 		}
 
-		GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(LOW_PRIORITY_ESCORT_PRIORITY, (unitCapabilities)(DEFENSIVE_UNITCAPABILITIES | OFFENSIVE_UNITCAPABILITIES), plot()->getX_INLINE(), plot()->getY_INLINE(), this);
+		GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(WorkParams()
+			.priority(LOW_PRIORITY_ESCORT_PRIORITY)
+			.unitCaps(DEFENSIVE_UNITCAPABILITIES | OFFENSIVE_UNITCAPABILITIES)
+			.joinUnit(this)
+		);
 
 		m_contractsLastEstablishedTurn = GC.getGameINLINE().getGameTurn();
 		m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;
@@ -7072,11 +7072,10 @@ void CvUnitAI::AI_generalMove()
 			else if ( !bLookForWork && !isCargo() )
 			{
 				//	Get another escort unit
-				GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(HIGHEST_PRIORITY_ESCORT_PRIORITY,
-																				NO_UNITCAPABILITIES,
-																			   getX_INLINE(),
-																			   getY_INLINE(),
-																			   this);
+				GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(WorkParams()
+					.priority(HIGHEST_PRIORITY_ESCORT_PRIORITY)
+					.joinUnit(this)
+				);
 
 				if( gUnitLogLevel > 2 )
 				{
@@ -7086,12 +7085,11 @@ void CvUnitAI::AI_generalMove()
 		}
 		else if ( !bLookForWork && !isCargo() )
 		{
-			GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(HIGHEST_PRIORITY_ESCORT_PRIORITY,
-																		   NO_UNITCAPABILITIES,
-																		   getX_INLINE(),
-																		   getY_INLINE(),
-																		   this,
-																		   UNITAI_HUNTER);
+			GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(WorkParams()
+				.priority(HIGHEST_PRIORITY_ESCORT_PRIORITY)
+				.joinUnit(this)
+				.AIType(UNITAI_HUNTER)
+			);
 
 			if( gUnitLogLevel > 2 )
 			{
@@ -12353,12 +12351,11 @@ void CvUnitAI::AI_InfiltratorMove()
 	bool bReadytoInfiltrate = (iExistingGroupSize >= iTargetGroupSize);
 	if (!bFinancialTrouble && !bReadytoInfiltrate && bIsAtHome)
 	{
-		GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(HIGH_PRIORITY_ESCORT_PRIORITY,
-																	   NO_UNITCAPABILITIES,
-																	   getX_INLINE(),
-																	   getY_INLINE(),
-																	   this,
-																	   UNITAI_INFILTRATOR);
+		GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(WorkParams()
+			.priority(HIGH_PRIORITY_ESCORT_PRIORITY)
+			.joinUnit(this)
+			.AIType(UNITAI_INFILTRATOR)
+		);
 
 		if( gUnitLogLevel > 2 )
 		{
@@ -33273,12 +33270,11 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 			if ( m_contractsLastEstablishedTurn != GC.getGameINLINE().getGameTurn() )
 			{
 				const int priority = HIGHEST_PRIORITY_ESCORT_PRIORITY;
-				GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(priority,
-					NO_UNITCAPABILITIES,
-					getX_INLINE(),
-					getY_INLINE(),
-					this,
-					UNITAI_HUNTER_ESCORT);
+				GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(WorkParams()
+					.priority(priority)
+					.joinUnit(this)
+					.AIType(UNITAI_HUNTER_ESCORT)
+				);
 
 				m_contractsLastEstablishedTurn = GC.getGameINLINE().getGameTurn();
 				m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;
@@ -36341,14 +36337,12 @@ bool CvUnitAI::AI_establishStackSeeInvisibleCoverage()
 					iUnitValue = GET_PLAYER(getOwner()).AI_bestAreaUnitAIValue(UNITAI_SEE_INVISIBLE, area(), &eBestUnit, &criteria);
 					if (eBestUnit != NO_UNIT)
 					{
-						GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(HIGHEST_PRIORITY_ESCORT_PRIORITY,
-							NO_UNITCAPABILITIES,
-							getX_INLINE(),
-							getY_INLINE(),
-							this,
-							UNITAI_SEE_INVISIBLE,
-							-1,
-							&criteria);
+						GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(WorkParams()
+							.priority(HIGHEST_PRIORITY_ESCORT_PRIORITY)
+							.joinUnit(this)
+							.AIType(UNITAI_SEE_INVISIBLE)
+							.criteria(criteria)
+						);
 
 						m_contractsLastEstablishedTurn = GC.getGameINLINE().getGameTurn();
 						m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;
@@ -36371,14 +36365,12 @@ bool CvUnitAI::AI_establishStackSeeInvisibleCoverage()
 					iUnitValue = GET_PLAYER(getOwner()).AI_bestAreaUnitAIValue(UNITAI_SEE_INVISIBLE_SEA, area(), &eBestUnit, &criteria);
 					if (eBestUnit != NO_UNIT)
 					{
-						GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(HIGHEST_PRIORITY_ESCORT_PRIORITY,
-							NO_UNITCAPABILITIES,
-							getX_INLINE(),
-							getY_INLINE(),
-							this,
-							UNITAI_SEE_INVISIBLE_SEA,
-							-1,
-							&criteria);
+						GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(WorkParams()
+							.priority(HIGHEST_PRIORITY_ESCORT_PRIORITY)
+							.joinUnit(this)
+							.AIType(UNITAI_SEE_INVISIBLE_SEA)
+							.criteria(criteria)
+						);
 
 						m_contractsLastEstablishedTurn = GC.getGameINLINE().getGameTurn();
 						m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;

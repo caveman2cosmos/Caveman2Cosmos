@@ -48,7 +48,7 @@ public:
 	{
 	}
 
-	CvString	getDescription()
+	CvString	getDescription() const
 	{
 		if ( m_eProperty != NO_PROPERTY )
 		{
@@ -2442,6 +2442,9 @@ public:
 	//
 	struct fn {
 		DECLARE_MAP_FUNCTOR_1(CvCity, int, getNumBuilding, BuildingTypes);
+		DECLARE_MAP_FUNCTOR(CvCity, const CvArea*, area);
+		DECLARE_MAP_FUNCTOR(CvCity, int, getPopulation);
+	
 	};
 };
 

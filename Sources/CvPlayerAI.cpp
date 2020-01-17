@@ -504,20 +504,14 @@ void CvPlayerAI::AI_doTurnPre()
 
 	AI_doEnemyUnitData();
 
-	if (isHuman())
+	if (!isHuman())
 	{
-		return;
-	}
-
-	//	Mark previous yield data as stale
+		//	Mark previous yield data as stale
 #ifdef YIELD_VALUE_CACHING
-	CvCity* pLoopCity;
-	int iLoop;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
-	{
-		pLoopCity->ClearYieldValueCache();
-	}
+		foreach_(CvCity * pLoopCity, cities())
+		{
+			pLoopCity->ClearYieldValueCache();
+		}
 #endif
 
 		AI_doResearch();
@@ -528,38 +522,14 @@ void CvPlayerAI::AI_doTurnPre()
 
 		AI_doCivics();
 
-	AI_doReligion();
+		AI_doReligion();
 
-/************************************************************************************************/
-/* RevDCM	                  Start		 12/9/09                                                */
-/*                                                                                              */
-/* Inquisitions                                                                                 */
-/************************************************************************************************/
-	AI_setPushReligiousVictory();
-	AI_setConsiderReligiousVictory();
-	AI_setHasInquisitionTarget();
-/************************************************************************************************/
-/* RevDCM	                     END                                                            */
-/************************************************************************************************/
+		AI_setPushReligiousVictory();
+		AI_setConsiderReligiousVictory();
+		AI_setHasInquisitionTarget();
 
-	AI_doCheckFinancialTrouble();
-/************************************************************************************************/
-/* Afforess	                  Start		 10/29/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	AI_doMilitaryProductionCity();
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-	if (isNPC())
-	{
-		return;
-	}
-
-	if (isMinorCiv())
-	{
-		return;
+		AI_doCheckFinancialTrouble();
+		AI_doMilitaryProductionCity();
 	}
 }
 
@@ -20282,6 +20252,120 @@ void CvPlayerAI::AI_doMilitary()
 	AI_setAttackOddsChange(GC.getLeaderHeadInfo(getPersonalityType()).getBaseAttackOddsChange() +
 		GC.getGameINLINE().getSorenRandNum(GC.getLeaderHeadInfo(getPersonalityType()).getAttackOddsChangeRand(), "AI Attack Odds Change #1") +
 		GC.getGameINLINE().getSorenRandNum(GC.getLeaderHeadInfo(getPersonalityType()).getAttackOddsChangeRand(), "AI Attack Odds Change #2"));
+
+	AI_updateDefensiveStacks();
+}
+
+namespace {
+	// Ignore for now:
+	//// Rival strength considers:
+	//// - Military size in the area relative to total military size:
+	////   If rival has most of their forces in a specific area in indicates intent.
+	//// - Relations:
+	////   Obviously if rival hates us then they might be a threat
+	//// - Temperament:
+	////   Warmongering rivals are a bigger threat
+	//// - Past behavior:
+	////   If they make a lot of war (particularly against us or our allies) then they are more of a threat.
+	//// e.g.
+	////    
+	////    
+	// Instead we will just use total estimated strength of player+allies in area - number of cities * some defender strength.
+	// i.e. Whats the biggest army the player+allies could send against us while leaving their cities reasonably defended.
+	struct getRivalStrengthEstimated : std::unary_function<PlayerTypes, int>
+	{
+		getRivalStrengthEstimated(const CvArea* area = nullptr) : area(area) {}
+		int operator()(PlayerTypes player) const
+		{
+			return algo::accumulate(GET_PLAYER(player).units()
+				| filtered(CvUnit::fn::area() == area)
+				| filtered(hasAttackingAI)
+				| transformed(CvUnit::fn::baseCombatStr()), 0);
+		}
+
+	private:
+		static bool hasAttackingAI(const CvUnit* unit)
+		{
+			switch (unit->AI_getUnitAIType())
+			{
+			case UNITAI_ATTACK:
+			case UNITAI_ATTACK_CITY:
+			case UNITAI_ATTACK_CITY_LEMMING:
+				return true;
+			};
+			return false;
+		}
+		//static bool hasDefendingAI(const CvUnit* unit)
+		//{
+		//	switch (unit->AI_getUnitAIType())
+		//	{
+		//	case UNITAI_CITY_DEFENSE:
+		//		return true;
+		//	};
+		//	return false;
+		//}
+		const CvArea* area;
+	};
+}
+
+void CvPlayerAI::AI_updateDefensiveStacks()
+{
+	// Determine how many defensive stacks we require
+	// We will consider number and size of areas, population of the areas, how safe the areas are
+
+	foreach_(const CvArea* area, GC.getMap().areas())
+	{
+		CvSelectionGroup* defensiveStack = algo::find_if(groups(), 
+			CvSelectionGroup::fn::area() == area && CvSelectionGroup::fn::getHeadUnitAI() == UNITAI_DEFENSIVE_STACK_LEADER
+		).get_value_or(nullptr);
+
+		//const int ourStrEstimate = algo::accumulate(groups() 
+		//	| filtered(CvSelectionGroup::fn::area() == area)
+		//	| transformed(CvSelectionGroup::fn::baseCombatStr()), 0
+		//);
+
+		const int maxRivalStrEstimate = algo::max_element(
+			PlayerTypesPCRange() | transformed(getRivalStrengthEstimated(area))
+		).get_value_or(0);
+
+		const int ourAreaPopulation = area->getPopulationPerPlayer(getID());
+		// Percentage of total population that resides in this area
+		// This gives a good risk factor for this area, i.e. if it is a total loss what will we lose?
+		const int areaPopulationPercent = ourAreaPopulation * 100 / getTotalPopulation();
+		if (ourAreaPopulation > 8 && areaPopulationPercent >= 25 && maxRivalStrEstimate > 0)
+		{
+			// Start a defensive stack
+			if (defensiveStack == nullptr)
+			{
+				const CvCity* mainCity = *scoring::max_score(
+					cities() | filtered(CvCity::fn::area() == area),
+					CvCity::fn::getPopulation()
+				);
+				getContractBroker().advertiseWork(WorkParams()
+					.priority(100)
+					.unitCaps(OFFENSIVE_UNITCAPABILITIES | DEFENSIVE_UNITCAPABILITIES)
+					.atPosition(mainCity)
+					.AIType(UNITAI_DEFENSIVE_STACK_LEADER)
+				);
+			}
+			// Bolster the defensive stack if required
+			else if(defensiveStack->baseCombatStr() < maxRivalStrEstimate)
+			{
+				CvUnit* stackLeader = defensiveStack->getHeadUnit();
+				getContractBroker().advertiseWork(WorkParams()
+					.priority(100)
+					.unitCaps(OFFENSIVE_UNITCAPABILITIES | DEFENSIVE_UNITCAPABILITIES)
+					.joinUnit(stackLeader)
+				);
+			}
+		}
+		else if (ourAreaPopulation < 5 || areaPopulationPercent < 10 || maxRivalStrEstimate == 0)
+		{
+			// Disband the defensive stack or send it elsewhere?
+			// Ideally we would ship it off to another area... Need a decent logistics system for that.
+			defensiveStack
+		}
+	}
 }
 
 

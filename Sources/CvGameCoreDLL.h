@@ -282,6 +282,8 @@ namespace python = boost::python;
 //
 #include "copy_iterator.h"
 #include "index_iterator_base.h"
+#include "enum_iterator.h"
+
 #include "logging.h"
 
 #include "algorithm2.h"

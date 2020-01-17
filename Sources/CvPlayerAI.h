@@ -567,6 +567,7 @@ public:
 	void AI_noteWarStatusChange(TeamTypes eTeam, bool bAtWar);
 	
 	void AI_doMilitaryProductionCity();
+	
 	int AI_getMilitaryProductionCityCount() const;
 	int AI_getNavalMilitaryProductionCityCount() const;
 
@@ -606,7 +607,10 @@ public:
 	int AI_calculateAverageLocalInstability() const;
 	int AI_calculateAverageCityDistance() const;
 
-protected:
+private:
+	void AI_updateDefensiveStacks();
+
+private:
 
 	static CvPlayerAI* m_aPlayers;
 

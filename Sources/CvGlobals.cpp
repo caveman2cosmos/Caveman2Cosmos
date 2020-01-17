@@ -2384,6 +2384,7 @@ void cvInternalGlobals::registerUnitAIs()
 	REGISTER_UNITAI(UNITAI_SEE_INVISIBLE);
 	REGISTER_UNITAI(UNITAI_SEE_INVISIBLE_SEA);
 	REGISTER_UNITAI(UNITAI_ESCORT);
+	REGISTER_UNITAI(UNITAI_DEFENSIVE_STACK_LEADER);
 }
 
 //	AIAndy - added internal registration of supported AIScale types similar to UnitAIs but without info class

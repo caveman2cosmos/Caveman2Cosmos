@@ -348,6 +348,7 @@
     <ClInclude Include="CvPlotPaging.h" />
     <ClInclude Include="CvPython.h" />
     <ClInclude Include="EnumFlags.h" />
+    <ClInclude Include="enum_iterator.h" />
     <ClInclude Include="flatten_range.h" />
     <ClInclude Include="hash.h" />
     <ClInclude Include="idinfo_iterator_base.h" />

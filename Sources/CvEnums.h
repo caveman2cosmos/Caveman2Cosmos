@@ -91,6 +91,8 @@ enum DirectionTypes					// Exposed to Python
 	DIRECTION_NORTHWEST_MASK = 1 << DIRECTION_NORTHWEST,
 };
 
+typedef fixed_enum_range<DirectionTypes, int, DIRECTION_NORTH, NUM_DIRECTION_TYPES> DirectionTypesRange;
+
 enum CardinalDirectionTypes			// Exposed to Python
 {
 	NO_CARDINALDIRECTION = -1,
@@ -105,6 +107,9 @@ enum CardinalDirectionTypes			// Exposed to Python
 #endif
 };
 
+typedef fixed_enum_range<CardinalDirectionTypes, int, CARDINALDIRECTION_NORTH, NUM_CARDINALDIRECTION_TYPES> CardinalDirectionTypesRange;
+
+
 enum RotationTypes
 {
 	ROTATE_NONE = 0,
@@ -118,6 +123,9 @@ enum RotationTypes
 	ROTATE_180CW_MASK	= 1 << ROTATE_180CW,
 	ROTATE_270CW_MASK	= 1 << ROTATE_270CW,
 };
+
+typedef fixed_enum_range<RotationTypes, int, ROTATE_NONE, NUM_ROTATION_TYPES> RotationTypesRange;
+
 
 // camera wrap helper
 enum WrapDirection
@@ -1283,11 +1291,17 @@ enum TeamTypes					// Exposed to Python
 {
 	NO_TEAM = -1,
 };
+typedef fixed_enum_range<RotationTypes, int, 0, MAX_TEAMS> TeamTypesRange;
+typedef fixed_enum_range<RotationTypes, int, 0, MAX_PC_TEAMS> TeamTypesPCRange;
+typedef fixed_enum_range<RotationTypes, int, NPC1_TEAM, MAX_TEAMS> TeamTypesNPCRange;
 
 enum PlayerTypes				// Exposed to Python
 {
 	NO_PLAYER = -1,
 };
+typedef fixed_enum_range<PlayerTypes, int, 0, MAX_PLAYERS> PlayerTypesRange;
+typedef fixed_enum_range<PlayerTypes, int, 0, MAX_PC_PLAYERS> PlayerTypesPCRange;
+typedef fixed_enum_range<PlayerTypes, int, FIRST_NPC_PLAYER, MAX_PLAYERS> PlayerTypesNPCRange;
 
 enum TraitTypes					// Exposed to Python
 {
@@ -1628,6 +1642,7 @@ enum UnitAITypes			// Exposed to Python
 	UNITAI_SEE_INVISIBLE,
 	UNITAI_SEE_INVISIBLE_SEA,
 	UNITAI_ESCORT,
+	UNITAI_DEFENSIVE_STACK_LEADER,
 
 	NUM_UNITAI_TYPES
 };

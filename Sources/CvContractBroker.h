@@ -9,18 +9,18 @@
 #define	USE_UNIT_TENDERING
 
 //	Capability flags - may be ORd together
-typedef enum	unitCapabilities
+enum unitCapabilities
 {
 	NO_UNITCAPABILITIES					= 0,
 	DEFENSIVE_UNITCAPABILITIES			= 1 << 0,
 	OFFENSIVE_UNITCAPABILITIES			= 1 << 1,
 	WORKER_UNITCAPABILITIES				= 1 << 2,
 	HEALER_UNITCAPABILITIES				= 1 << 3
-} unitCapabilities;
-
+};
+DECLARE_FLAGS(unitCapabilities);
 
 //	Structures used to hold work requests and looking-for-work unit info
-typedef struct
+struct workRequest
 {
 	int						iPriority;
 	unitCapabilities		eUnitFlags;
@@ -34,9 +34,9 @@ typedef struct
 	int						iRequiredStrengthTimes100;
 	bool					bFulfilled;
 	CvUnitSelectionCriteria	criteria;
-} workRequest;
+};
 
-typedef struct
+struct advertisingUnit
 {
 	int					iUnitId;
 	UnitTypes			eUnitType;
@@ -50,13 +50,13 @@ typedef struct
 	int					iMatchedToRequestSeqThisPlot;
 	int					iMatchedToRequestSeqAnyPlot;
 	int					iMinPriority;
-} advertisingUnit;
+};
 
-typedef struct
+struct cityTender
 {
 	int					iCityId;
 	int					iMinPriority;
-} cityTender;
+};
 
 //	Highest priority city builds have this priority and work down from there
 #define	CITY_BUILD_PRIORITY_CEILING				900
@@ -85,6 +85,53 @@ typedef struct
 //			to do what is asked of it (move to a location, join a group being current options)
 //		4)	If no suitable work is available continue with its own unit AI for low priority actions
 //
+
+struct WorkParams
+{
+	WorkParams()
+		: iPriority(-1)
+		, eUnitFlags(NO_UNITCAPABILITIES)
+		, iAtX(-1)
+		, iAtY(-1)
+		, pJoinUnit(nullptr)
+		, eAIType(NO_UNITAI)
+		, iUnitStrength(-1)
+		, iMaxPath(MAX_INT)
+		, pArea(nullptr)
+	{}
+
+	// priority should be in the range 0-1000 ideally
+	WorkParams& priority(int priority) { this->iPriority = iPriority; return *this; }
+	// unitCaps indicate the type(s) of unit sought
+	WorkParams& unitCaps(unitCapabilities unitCaps) { this->eUnitFlags = unitCaps; return *this; }
+	// <x,y> is *roughly* where the work will be
+	WorkParams& atPosition(int x, int y) { this->iAtX = x; this->iAtX = y; return *this; }
+	template < class PositionalObject_ >
+	WorkParams& atPosition(const PositionalObject_& obj) { this->iAtX = obj.getX(); this->iAtX = obj.getY(); return *this; }
+	template < class PositionalObject_ >
+	WorkParams& atPosition(const PositionalObject_* obj) { this->iAtX = obj->getX(); this->iAtX = obj->getY(); return *this; }
+
+	// joinUnit may be nullptr but if not it is a request to join that unit's group
+	WorkParams& joinUnit(CvUnit* joinUnit) { this->pJoinUnit = joinUnit; return atPosition(joinUnit); }
+	WorkParams& AIType(UnitAITypes AIType) { this->eAIType = AIType; return *this; }
+	WorkParams& unitStrength(int unitStrength) { this->iUnitStrength = unitStrength; return *this; }
+	WorkParams& criteria(CvUnitSelectionCriteria criteria) { this->pCriteria = criteria; return *this; }
+	WorkParams& maxPathLength(int maxPathLength) { this->iMaxPath = maxPathLength; return *this; }
+	WorkParams& inArea(CvArea* area) { this->pArea = area; return *this; }
+	
+
+	int iPriority;
+	unitCapabilities eUnitFlags;
+	int iAtX;
+	int iAtY;
+	CvUnit* pJoinUnit;
+	UnitAITypes eAIType;
+	int iUnitStrength;
+	bst::optional<CvUnitSelectionCriteria> pCriteria;
+	int iMaxPath;
+	CvArea* pArea;
+};
+
 class CvContractBroker
 {
 public:
@@ -92,35 +139,44 @@ public:
 	virtual ~CvContractBroker();
 
 	//	Initialize
-	void	init(PlayerTypes eOwner);
+	void init(PlayerTypes eOwner);
 
 	//	Delete all work requests and looking for work records
-	void	reset();
+	void reset();
 
 	//	Note a unit looking for work
-	void	lookingForWork(CvUnit* pUnit, int iMinPriority = 0);
+	void lookingForWork(CvUnit* pUnit, int iMinPriority = 0);
+
 	//	Unit fulfilled its work and is no longer advertising as available
-	void	removeUnit(CvUnit* pUnit);
+	void removeUnit(CvUnit* pUnit);
+
 	//	Make a work request
 	//		iPriority should be in the range 0-1000 ideally
 	//		eUnitFlags indicate the type(s) of unit sought
 	//		(iAtX,iAtY) is (roughly) where the work will be
 	//		pJoinUnit may be NULL but if not it is a request to join that unit's group
-	void	advertiseWork(int iPriority, unitCapabilities eUnitFlags, int iAtX, int iAtY, CvUnit* pJoinUnit, UnitAITypes eAIType = NO_UNITAI, int iUnitStrength = -1, CvUnitSelectionCriteria* criteria = NULL, int iMaxPath = MAX_INT);
+	void advertiseWork(const WorkParams& params);
+
 	//	Advertise a tender to build units
 	//		iMinPriority indicates the lowest priority request this tender is appropriate for
-	void	advertiseTender(CvCity* pCity, int iMinPriority);
+	void advertiseTender(CvCity* pCity, int iMinPriority);
+
 	//	Find out how many requests have already been made for units of a specified AI type
 	//	This is used by cities requesting globally needed units like settlers to avoid multiple
 	//	tenders all occurring at once
-	int		numRequestsOutstanding(UnitAITypes eUnitAI, bool bAtCityOnly = true, CvPlot* pPlot = NULL) const;
+	int numRequestsOutstandingAtCity(UnitAITypes eUnitAI) const;
+	int numRequestsOutstandingAtPlot(UnitAITypes eUnitAI, const CvPlot* pPlot) const;
+	// Compares against non default values of params (other than criteria which is currently ignored)
+	int numRequestsOutstanding(const WorkParams& params) const;
+
 	//	Make a contract
 	//	This will attempt to make the best contracts between currently
 	//	advertising units and work, then search the resulting set for the work 
 	//	of the requested unit
 	//	returns true if a contract is made along with the details of what to do
-	bool	makeContract(CvUnit* pUnit, int& iAtX, int& iAtY, CvUnit*& pJoinUnit, bool bThisPlotOnly);
-	void	finalizeTenderContracts();
+	bool makeContract(CvUnit* pUnit, int& iAtX, int& iAtY, CvUnit*& pJoinUnit, bool bThisPlotOnly);
+
+	void finalizeTenderContracts();
 
 private:
 	const workRequest*	findWorkRequest(int iWorkRequestId) const;
@@ -132,7 +188,7 @@ private:
 	std::vector<workRequest>		m_workRequests;
 	std::vector<advertisingUnit>	m_advertisingUnits;
 	std::vector<cityTender>			m_advertisingTenders;
-	std::map<int,bool>				m_contractedUnits;
+	stdext::hash_set<int>			m_contractedUnits;
 	int								m_iNextWorkRequestId;
 	PlayerTypes						m_eOwner;
 };

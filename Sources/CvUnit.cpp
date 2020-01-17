@@ -39054,69 +39054,65 @@ void CvUnit::checkFreetoCombatClass()
 }
 //TB Combat Mods end
 
-bool CvUnit::meetsUnitSelectionCriteria(const CvUnitSelectionCriteria* criteria) const
+bool CvUnit::meetsUnitSelectionCriteria(const CvUnitSelectionCriteria& criteria) const
 {
-	if ( criteria != NULL )
+	if ( criteria.m_eUnitAI != NO_UNITAI && AI_getUnitAIType() != criteria.m_eUnitAI )
 	{
-		if ( criteria->m_eUnitAI != NO_UNITAI && AI_getUnitAIType() != criteria->m_eUnitAI )
+		return false;
+	}
+
+	if (criteria.m_bNoNegativeProperties || criteria.m_bPropertyBeneficial)
+	{
+		int iPropertyDelta = AI_beneficialPropertyValueToCity(NULL, NO_PROPERTY);
+
+		if (iPropertyDelta < 0)
 		{
 			return false;
 		}
+	}
+	if (criteria.m_eProperty != NO_PROPERTY)
+	{
+		int iPropertyDelta = AI_beneficialPropertyValueToCity(NULL, criteria.m_eProperty);
 
-		if (criteria->m_bNoNegativeProperties || criteria->m_bPropertyBeneficial)
+		if ( iPropertyDelta == 0 )
 		{
-			int iPropertyDelta = AI_beneficialPropertyValueToCity(NULL, NO_PROPERTY);
-
-			if (iPropertyDelta < 0)
+			return false;
+		}
+		else if ( iPropertyDelta > 0 )
+		{
+			if ( !criteria.m_bPropertyBeneficial )
 			{
 				return false;
 			}
 		}
-		if (criteria->m_eProperty != NO_PROPERTY)
+		else
 		{
-			int iPropertyDelta = AI_beneficialPropertyValueToCity(NULL, criteria->m_eProperty);
-
-			if ( iPropertyDelta == 0 )
-			{
-				return false;
-			}
-			else if ( iPropertyDelta > 0 )
-			{
-				if ( !criteria->m_bPropertyBeneficial )
-				{
-					return false;
-				}
-			}
-			else
-			{
-				if ( criteria->m_bPropertyBeneficial )
-				{
-					return false;
-				}
-			}
-		}
-
-		if ( criteria->m_bIsHealer )
-		{
-			if (criteria->m_eHealUnitCombat == NO_UNITCOMBAT && ( getSameTileHeal() == 0 && getAdjacentTileHeal() == 0 ))
-			{
-				return false;
-			}
-			else if ((getBestHealingTypeConst() != criteria->m_eHealUnitCombat) || getNumHealSupportTotal() < 1)
-			{
-				return false;
-			}
-		}
-
-		if ( criteria->m_bIsCommander )
-		{
-			if ( !isCommander() )
+			if ( criteria.m_bPropertyBeneficial )
 			{
 				return false;
 			}
 		}
 	}
 
+	if ( criteria.m_bIsHealer )
+	{
+		if (criteria.m_eHealUnitCombat == NO_UNITCOMBAT && ( getSameTileHeal() == 0 && getAdjacentTileHeal() == 0 ))
+		{
+			return false;
+		}
+		else if ((getBestHealingTypeConst() != criteria.m_eHealUnitCombat) || getNumHealSupportTotal() < 1)
+		{
+			return false;
+		}
+	}
+
+	if ( criteria.m_bIsCommander )
+	{
+		if ( !isCommander() )
+		{
+			return false;
+		}
+	}
 	return true;
 }
 

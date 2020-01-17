@@ -1241,7 +1241,7 @@ void CvCityAI::AI_chooseProduction()
 		}
 	}
 	int iNumWaterAreaCitySites = (pWaterSettlerArea == NULL) ? 0 : kPlayer.AI_getNumAdjacentAreaCitySites(pWaterSettlerArea->getID(), getArea(), iWaterAreaBestFoundValue);
-	int iNumSettlers = kPlayer.AI_totalUnitAIs(UNITAI_SETTLE) + GET_PLAYER(getOwnerINLINE()).getContractBroker().numRequestsOutstanding(UNITAI_SETTLE);
+	int iNumSettlers = kPlayer.AI_totalUnitAIs(UNITAI_SETTLE) + GET_PLAYER(getOwnerINLINE()).getContractBroker().numRequestsOutstandingAtCity(UNITAI_SETTLE);
 	
 	bool bIsCapitalArea = false;
 	int iNumCapitalAreaCities = 0;
@@ -20133,7 +20133,7 @@ bool CvCityAI::AI_choosePropertyControlUnit(int iTriggerPercentOfPropertyOpRange
 					{
 						if ( m_iUnitSummonedLastEstablishedTurn != iGameTurn )
 						{
-							int iResponders = GET_PLAYER(getOwnerINLINE()).getContractBroker().numRequestsOutstanding(UNITAI_PROPERTY_CONTROL_SEA, false, pPlot);
+							int iResponders = GET_PLAYER(getOwnerINLINE()).getContractBroker().numRequestsOutstandingAtPlot(UNITAI_PROPERTY_CONTROL_SEA, pPlot);
 							if (iResponders < 1)
 							{	
 								str.Format("Property control for %S", GC.getPropertyInfo(eProperty).getDescription());
@@ -20159,7 +20159,7 @@ bool CvCityAI::AI_choosePropertyControlUnit(int iTriggerPercentOfPropertyOpRange
 
 						if ( m_iUnitSummonedLastEstablishedTurn != iGameTurn )
 						{
-							int iResponders = GET_PLAYER(getOwnerINLINE()).getContractBroker().numRequestsOutstanding(UNITAI_PROPERTY_CONTROL, false, pPlot);
+							int iResponders = GET_PLAYER(getOwnerINLINE()).getContractBroker().numRequestsOutstandingAtPlot(UNITAI_PROPERTY_CONTROL, pPlot);
 							if (iResponders < 2)//if there aren't already a couple or more property control units being trained and/or on the way
 							{
 								//then lets order the best type we can get from any city we have:
@@ -20547,7 +20547,7 @@ bool CvCityAI::AI_establishSeeInvisibleCoverage()
 			//
 			//if (eBestUnit != NO_UNIT)
 			//{
-			int iResponders = GET_PLAYER(getOwnerINLINE()).getContractBroker().numRequestsOutstanding(UNITAI_SEE_INVISIBLE, false, pPlot);//This will tend to space out the AI's sense of immediate need to prepare for each type.
+			int iResponders = GET_PLAYER(getOwnerINLINE()).getContractBroker().numRequestsOutstandingAtPlot(UNITAI_SEE_INVISIBLE, pPlot);//This will tend to space out the AI's sense of immediate need to prepare for each type.
 			iResponders += pPlot->countSeeInvisibleActive(getOwner(), eVisible);
 			if (iResponders < 1)
 			{			
@@ -20574,7 +20574,7 @@ bool CvCityAI::AI_establishInvestigatorCoverage()
 
 	int iLocalInvestigators = GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pPlot, MISSIONAI_INVESTIGATOR_MAINTAIN, NULL, 0);//MISSIONAI_INVESTIGATOR_MAINTAIN is probably not working as designed due to the way the contract broker works.  Once answered, the unit can really only be tracked by its AI type as mission type has been generically set.
 	iLocalInvestigators += pPlot->getNumPlayerUnitAI(UNITAI_INVESTIGATOR, getOwnerINLINE());
-	iLocalInvestigators += GET_PLAYER(getOwnerINLINE()).getContractBroker().numRequestsOutstanding(UNITAI_INVESTIGATOR, false, pPlot);
+	iLocalInvestigators += GET_PLAYER(getOwnerINLINE()).getContractBroker().numRequestsOutstandingAtPlot(UNITAI_INVESTIGATOR, pPlot);
 
 	if (iNumLocalCriminals > 0) // Yes, the first round the city has trained its first criminal it will run into this, even if no spawns ever occur.  Can never be too ready, right?
 	{

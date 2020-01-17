@@ -1152,8 +1152,8 @@ public:
 	DllExport bool atPlot(const CvPlot* pPlot) const;																					// Exposed to Python
 	CvPlot* plot() const;																														// Exposed to Python
 	DllExport CvPlot* plotExternal() const;																														// Exposed to Python
-	int getArea() const;																																			// Exposed to Python
-	CvArea* area() const;																																			// Exposed to Python
+	int getArea() const; // Exposed to Python
+	CvArea* area() const; // Exposed to Python
 	bool onMap() const;
 
 	int getLastMoveTurn() const;
@@ -2558,7 +2558,7 @@ public:
 	void setPromotionFreeCount(PromotionTypes ePromotion, int iChange);
 	void checkFreetoCombatClass();
 	//TB Combat Mods end
-	bool meetsUnitSelectionCriteria(const CvUnitSelectionCriteria* criteria) const;
+	bool meetsUnitSelectionCriteria(const CvUnitSelectionCriteria& criteria) const;
 	bool shouldUseWithdrawalOddsCap() const;
 	bool isPursuitinUse() const;
 	bool canSwitchEquipment(PromotionTypes eEquipment) const;
@@ -3322,6 +3322,7 @@ public:
 	// fn::find_if(units(), CvUnit::fn::isAutoUpgrading() && CvUnit::fn::isReadyForUpgrade())
 	//
 	struct fn {
+		DECLARE_MAP_FUNCTOR(CvUnit, int, getID);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isDead);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, hasCargo);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isFull);
@@ -3344,20 +3345,28 @@ public:
 		DECLARE_MAP_FUNCTOR_1(CvUnit, int, upgradePrice, UnitTypes);
 		DECLARE_MAP_FUNCTOR_2(CvUnit, bool, canUpgrade, UnitTypes, bool);
 
+		
+		DECLARE_MAP_FUNCTOR(CvUnit, int, baseCombatStr);
 		DECLARE_MAP_FUNCTOR(CvUnit, int, getDamage);
-		DECLARE_MAP_FUNCTOR(CvUnit, int, getID);
 		DECLARE_MAP_FUNCTOR(CvUnit, TeamTypes, getTeam);
 		DECLARE_MAP_FUNCTOR(CvUnit, UnitTypes, getUnitType);
 		DECLARE_MAP_FUNCTOR(CvUnit, UnitCombatTypes, getUnitCombatType);
+		DECLARE_MAP_FUNCTOR(CvUnit, UnitAITypes, AI_getUnitAIType);
+		
+		DECLARE_MAP_FUNCTOR(CvUnit, int, SMCargoVolume);
 
 		DECLARE_MAP_FUNCTOR(CvUnit, const CvPlot*, plot);
 		DECLARE_MAP_FUNCTOR(CvUnit, BuildTypes, getBuildType);
 		DECLARE_MAP_FUNCTOR(CvUnit, ImprovementTypes, getBuildTypeImprovement);
 		DECLARE_MAP_FUNCTOR(CvUnit, int, getCargo);
 		DECLARE_MAP_FUNCTOR(CvUnit, int, SMgetCargo);
+		DECLARE_MAP_FUNCTOR(CvUnit, int, getArea);
+		DECLARE_MAP_FUNCTOR(CvUnit, const CvArea*, area);
 
 		DECLARE_MAP_FUNCTOR_1(CvUnit, int, worsenedProbabilitytoAfflict, PromotionLineTypes);
 		DECLARE_MAP_FUNCTOR_1(CvUnit, int, aidTotal, PropertyTypes);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, int, AI_genericUnitValueTimes100, UnitValueFlags);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, int, meetsUnitSelectionCriteria, const CvUnitSelectionCriteria&);
 
 		DECLARE_MAP_FUNCTOR_3(CvUnit, int, getTriggerValue, EventTriggerTypes /*eTrigger*/, const CvPlot* /*pPlot*/, bool /*bCheckPlot*/);
 		
