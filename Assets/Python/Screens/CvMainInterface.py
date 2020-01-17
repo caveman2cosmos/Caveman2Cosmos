@@ -5255,7 +5255,7 @@ class CvMainInterface:
 			elif BASE == "PlotList":
 				if TYPE in ("Button", "Health"):
 					CyUnit = self.aPlotListList[ID][0]
-					if not CyUnit.isDead():
+					if not CyUnit.getGroup().isNone():
 						if TYPE == "Button":
 							szTxt = CyGameTextMgr().getSpecificUnitHelp(CyUnit, False, False)
 							x = self.xRes / 4
@@ -5265,6 +5265,7 @@ class CvMainInterface:
 							szTxt = "HP: %d/%d" %(CyUnit.currHitPoints(), CyUnit.maxHitPoints())
 							x = -1
 							y = -1
+						else: return
 						self.updateTooltip(screen, szTxt, x, y)
 
 			elif BASE == "BldgList":
