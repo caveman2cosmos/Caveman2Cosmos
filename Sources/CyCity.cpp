@@ -1144,11 +1144,6 @@ int CyCity::getFreshWaterGoodHealth()
 	return m_pCity ? m_pCity->getFreshWaterGoodHealth() : -1;
 }
 
-int CyCity::getFreshWaterBadHealth()
-{
-	return m_pCity ? m_pCity->getFreshWaterBadHealth() : -1;
-}
-
 int CyCity::getBuildingGoodHealth()
 {
 	return m_pCity ? m_pCity->getBuildingGoodHealth() : -1;

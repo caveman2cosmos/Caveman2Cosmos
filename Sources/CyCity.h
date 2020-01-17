@@ -287,7 +287,6 @@ public:
 	void changeEspionageHappinessCounter(int iChange);
 
 	int getFreshWaterGoodHealth();
-	int getFreshWaterBadHealth();
 	int getBuildingGoodHealth();
 	int getBuildingBadHealth();
 	int getFeatureGoodHealth();

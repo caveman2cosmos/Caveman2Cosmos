@@ -228,7 +228,6 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("changeEspionageHappinessCounter", &CyCity::changeEspionageHappinessCounter, "void (int iChange)")
 
 		.def("getFreshWaterGoodHealth", &CyCity::getFreshWaterGoodHealth, "int ()")
-		.def("getFreshWaterBadHealth", &CyCity::getFreshWaterBadHealth, "int ()")
 		.def("getBuildingGoodHealth", &CyCity::getBuildingGoodHealth, "int ()")
 		.def("getBuildingBadHealth", &CyCity::getBuildingBadHealth, "int ()")
 		.def("getFeatureGoodHealth", &CyCity::getFeatureGoodHealth, "int () - returns the good health provided by the feature this city is built on")
