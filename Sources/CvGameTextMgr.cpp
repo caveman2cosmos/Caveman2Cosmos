@@ -10217,11 +10217,6 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-		if (pPlot->isDepletedMine())
-		{
-			szString.append(NEWLINE);
-			szString.append(gDLL->getText("TXT_KEY_IMPROVEMENT_DEPLETED_MINE"));
-		}
 		if (pPlot->getLandmarkType() != NO_LANDMARK && GC.getGameINLINE().isOption(GAMEOPTION_PERSONALIZED_MAP))
 		{
 			szString.append(CvWString::format(SETCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT")));

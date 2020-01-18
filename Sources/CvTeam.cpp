@@ -6962,29 +6962,6 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 										szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_DISCOVERED_BONUS", GC.getBonusInfo(eBonus).getTextKeyWide(), pCity->getNameKey());
 										AddDLLMessage(pLoopPlot->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_INFO, GC.getBonusInfo(eBonus).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE(), true, true);
 									}
-								/************************************************************************************************/
-								/* Afforess	                  Start		 01/20/10                                               */
-								/*                                                                                              */
-								/*  Mine Depletion. Newly Revealed Resources Allow Depleted Mines to be Rebuilt                 */
-								/************************************************************************************************/
-									if (pLoopPlot->isDepletedMine())
-									{
-										for (int iK = 0; iK < GC.getNumImprovementInfos(); iK++)
-										{
-											if (GC.getImprovementInfo((ImprovementTypes)iK).isImprovementBonusMakesValid(eBonus))
-											{
-												//the only improvement that are valid on hills are mines
-												if (GC.getImprovementInfo((ImprovementTypes)iK).isHillsMakesValid())
-												{
-													pLoopPlot->setIsDepletedMine(false);
-													break;
-												}
-											}
-										}
-									}
-								/************************************************************************************************/
-								/* Afforess	                     END                                                            */
-								/************************************************************************************************/
 								}
 							}
 						}
