@@ -1131,7 +1131,7 @@ void CvUnit::convert(CvUnit* pUnit)
 
 	setName(pUnit->getNameNoDesc());
 // BUG - Unit Name - start
-	if (pUnit->isDescInName() && getBugOptionBOOL("MiscHover__UpdateUnitNameOnUpgrade", true, "BUG_UPDATE_UNIT_NAME_ON_UPGRADE"))
+	if (pUnit->isDescInName() && GC.getBugOptionBOOL("MiscHover__UpdateUnitNameOnUpgrade", true, "BUG_UPDATE_UNIT_NAME_ON_UPGRADE"))
 	{
 /************************************************************************************************/
 /* Afforess	                  Start		 08/24/10                                               */

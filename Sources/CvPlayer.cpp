@@ -23623,7 +23623,7 @@ void CvPlayer::doWarnings()
 // BUG - Ignore Harmless Barbarians - start
 							if (!bCheckBarbariansInitialized && GC.getGameINLINE().getElapsedGameTurns() > 0)
 							{
-								bCheckBarbarians = getBugOptionBOOL("Actions__IgnoreHarmlessBarbarians", true, "BUG_IGNORE_HARMLESS_BARBARIANS");
+								bCheckBarbarians = GC.getBugOptionBOOL("Actions__IgnoreHarmlessBarbarians", true, "BUG_IGNORE_HARMLESS_BARBARIANS");
 								bCheckBarbariansInitialized = true;
 							}
 							if (bCheckBarbarians && pUnit->isHominid() && pUnit->getDomainType() == DOMAIN_LAND)
