@@ -4207,15 +4207,6 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_TREEFARM]Plantację Drzew[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_TREE_NURSERY</Tag>
-		<English>Build a [LINK=IMPROVEMENT_TREE_NURSERY]Tree Nursery[\LINK]</English>
-		<French>Mettre en place une [LINK=IMPROVEMENT_TREE_NURSERY]pépinière d'Arbres[\LINK]</French>
-		<German>Bauen ein [LINK=IMPROVEMENT_TREE_NURSERY]Baumschule[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_TREE_NURSERY]Vivaio di alberi[\LINK]</Italian>
-		<Spanish>Crear una [LINK=IMPROVEMENT_TREE_NURSERY]Zona de reforestación[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_TREE_NURSERY]Szkółkę Leśną[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_TUNNEL</Tag>
 		<English>Build a Tunnel</English>
 		<French>Construire un [COLOR_BUILDING_TEXT]Tunnel sous-marin[COLOR_REVERT]</French>
@@ -4293,13 +4284,8 @@
 		<English>, [LINK=%s1_Build]%s2_Build[\LINK]</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_YOUNG_FOREST</Tag>
-		<English>Build a [LINK=IMPROVEMENT_YOUNG_FOREST]Young Forest[\LINK]</English>
-		<French>Mettre en place une [LINK=IMPROVEMENT_YOUNG_FOREST]pépinière d'Arbres[\LINK]</French>
-		<German>Bauen ein [LINK=IMPROVEMENT_YOUNG_FOREST]Baumschule[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_YOUNG_FOREST]Vivaio di alberi[\LINK]</Italian>
-		<Spanish>Crear una [LINK=IMPROVEMENT_YOUNG_FOREST]Zona de reforestación[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_YOUNG_FOREST]Młody Las[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_GROW_FOREST</Tag>
+		<English>Grow Forest</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ZIGGURAT</Tag>
@@ -10140,20 +10126,6 @@
 		<French>Les Astres favorisent l'unité nouvellement créé!</French>
 		<Spanish>¡Parece que los astros han favorecido a una unidad recién entrenada!</Spanish>
 		<Polish>Gwiazdy sprzyjają nowo zwerbowanej jednostce!</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_TREE_NURSERY</Tag>
-		<English>A tree nursery was built.</English>
-		<French>Une pépinière d'Arbres a été construite.</French>
-		<Spanish>Se ha construido una Zona de reforestación.</Spanish>
-		<Polish>Szkółka leśna została wybudowana.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_YOUNG_FOREST</Tag>
-		<English>A tree nursery has produced a forest.</English>
-		<French>La pépinière d'Arbres est devenue une forêt.</French>
-		<Spanish>Se ha producido un Bosque a partir de una Zona de reforestación.</Spanish>
-		<Polish>Szkółka leśna przekształciła się w las.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MILEHIGH_STRATEGY</Tag>

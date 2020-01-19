@@ -220,15 +220,6 @@
 		<Polish>Zbuduj Zbieraczy Ro[lin (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_PLANT_FOREST_SLAVE</Tag>
-		<English>Plant Forest (Forced)</English>
-		<French>Planter une Forêt (Forcé)</French>
-		<German>Zwangsarbeit - Pflanze Wald</German>
-		<Italian>Pianta una foresta (Schiavo)</Italian>
-		<Spanish>Plant Forest(Forzado)</Spanish>
-		<Polish>Zasadz Forest (Prace Przym.)</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_PINE_GATHERER_SLAVE</Tag>
 		<English>Build an [LINK=IMPROVEMENT_PINE_GATHERER]Prime Timber[\LINK] (Forced)</English>
 		<French>Construire une [LINK=IMPROVEMENT_PINE_GATHERER]Forêt Primaire[\LINK] (Forcé)</French>
@@ -479,15 +470,6 @@
 		<Italian>Costruisci una [LINK=IMPROVEMENT_LUMBERMILL]segheria[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_LUMBERMILL]aserradero[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_LUMBERMILL]Tartak[\LINK] (Prace Przym.)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_TREE_NURSERY_SLAVE</Tag>
-		<English>Build a [LINK=IMPROVEMENT_TREE_NURSERY]Tree Nursery[\LINK] (Forced)</English>
-		<French>Mettre en place une [LINK=IMPROVEMENT_TREE_NURSERY]pépinière d'Arbres[\LINK] (Forcé)</French>
-		<German>Zwangsarbeit - Bauen ein [LINK=IMPROVEMENT_TREE_NURSERY]Baumschule[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_TREE_NURSERY]Vivaio di alberi[\LINK] (Schiavo)</Italian>
-		<Spanish>Construye un [LINK=IMPROVEMENT_TREE_NURSERY]Vivero de árboles[\LINK] (Forzado)</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_TREE_NURSERY]SzkóBk Drzew[\LINK] (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WINDMILL_SLAVE</Tag>
