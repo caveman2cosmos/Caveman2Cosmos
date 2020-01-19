@@ -373,10 +373,6 @@ class CvGameUtils:
 	def doHolyCity(self):
 		return False
 
-	def doHolyCityTech(self, argsList):
-		#eTeam, ePlayer, eTech, bFirst = argsList
-		return False
-
 	def doGold(self, argsList):
 		#ePlayer = argsList[0]
 		return False
