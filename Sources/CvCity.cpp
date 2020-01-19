@@ -237,7 +237,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 		}
 	}
 
-	CvPlot* pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 	//--------------------------------
 	// Init saved data
 	reset(iID, eOwner, pPlot->getX(), pPlot->getY());
@@ -416,21 +416,13 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 
 	updateFreshWaterHealth();
 	updateFeatureHealth();
-	/************************************************************************************************/
-	/* JOOYO_ADDON, Added by Jooyo, 06/19/09                                                        */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 	updateImprovementHealth();
-	/************************************************************************************************/
-	/* JOOYO_ADDON                          END                                                     */
-	/************************************************************************************************/
 	updateFeatureHappiness();
 	updatePowerHealth();
 
 	GET_PLAYER(getOwner()).setMaintenanceDirty(true);
 
-	GC.getMapINLINE().updateWorkingCity();
+	GC.getMap().updateWorkingCity();
 
 	GC.getGameINLINE().AI_makeAssignWorkDirty();
 
@@ -1666,7 +1658,7 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 
 	kOwner.setMaintenanceDirty(true);
 
-	GC.getMapINLINE().updateWorkingCity();
+	GC.getMap().updateWorkingCity();
 
 	GC.getGameINLINE().AI_makeAssignWorkDirty();
 
@@ -1770,7 +1762,7 @@ void CvCity::killTestCheap()
 		//}
 
 
-		//GC.getMapINLINE().updateWorkingCity();
+		//GC.getMap().updateWorkingCity();
 
 		//GC.getGameINLINE().AI_makeAssignWorkDirty();
 
@@ -2333,7 +2325,7 @@ void CvCity::doTask(TaskTypes eTask, int iData1, int iData2, bool bOption, bool 
 		break;
 
 	case TASK_RALLY_PLOT:
-		setRallyPlot(GC.getMapINLINE().plotINLINE(iData1, iData2));
+		setRallyPlot(GC.getMap().plot(iData1, iData2));
 		break;
 
 	case TASK_CLEAR_RALLY_PLOT:
@@ -5002,7 +4994,7 @@ namespace {
 	{
 		return order.eOrderType == ORDER_TRAIN
 			&& order.unit.contractedAIType == contractedAIType
-			&& order.unit.plotIndex == GC.getMapINLINE().plotNumINLINE(pDestPlot->getX(), pDestPlot->getY());
+			&& order.unit.plotIndex == GC.getMap().plotNum(pDestPlot->getX(), pDestPlot->getY());
 	}
 };
 
@@ -7311,7 +7303,7 @@ int CvCity::getRevSuccessHappiness() const
 
 int CvCity::getLargestCityHappiness() const
 {
-	if (findPopulationRank() <= GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getTargetNumCities())
+	if (findPopulationRank() <= GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities())
 	{
 		return GET_PLAYER(getOwner()).getLargestCityHappiness();
 	}
@@ -8683,13 +8675,13 @@ bool CvCity::at(CvPlot* pPlot) const
 
 CvPlot* CvCity::plot() const
 {
-	return GC.getMapINLINE().plotSorenINLINE(getX(), getY());
+	return GC.getMap().plotSorenINLINE(getX(), getY());
 }
 
 CvPlot* CvCity::plotExternal() const
 {
 	FAssert(isInViewport());
-	return GC.getMapINLINE().plotSorenINLINE(getX(), getY());
+	return GC.getMap().plotSorenINLINE(getX(), getY());
 }
 
 
@@ -8797,7 +8789,7 @@ bool CvCity::isBlockaded() const
 
 CvPlot* CvCity::getRallyPlot() const
 {
-	return GC.getMapINLINE().plotSorenINLINE(m_iRallyX, m_iRallyY);
+	return GC.getMap().plotSorenINLINE(m_iRallyX, m_iRallyY);
 }
 
 
@@ -8837,7 +8829,7 @@ void CvCity::setGameTurnFounded(int iNewValue)
 		m_iGameTurnFounded = iNewValue;
 		FAssert(getGameTurnFounded() >= 0);
 
-		GC.getMapINLINE().updateWorkingCity();
+		GC.getMap().updateWorkingCity();
 	}
 }
 
@@ -9729,13 +9721,13 @@ int CvCity::calculateDistanceMaintenanceTimes100(int iExtraDistanceModifier, int
 		/************************************************************************************************/
 		/* Afforess	                     END                                                            */
 		/************************************************************************************************/
-		iTempMaintenance *= GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getDistanceMaintenancePercent();
+		iTempMaintenance *= GC.getWorldInfo(GC.getMap().getWorldSize()).getDistanceMaintenancePercent();
 		iTempMaintenance /= 100;
 
 		iTempMaintenance *= GC.getHandicapInfo(getHandicapType()).getDistanceMaintenancePercent();
 		iTempMaintenance /= 100;
 
-		iTempMaintenance /= GC.getMapINLINE().maxPlotDistance();
+		iTempMaintenance /= GC.getMap().maxPlotDistance();
 
 		//	To cope with the AI getting 2 starting cities on deity we greatly reduce
 		//	distance maintenance for the AI until it builds its third city
@@ -9773,7 +9765,7 @@ int CvCity::calculateNumCitiesMaintenanceTimes100(int iExtraModifier) const
 	iNumCitiesPercent *= (getPopulation() + 17);
 	iNumCitiesPercent /= 18;
 
-	iNumCitiesPercent *= GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getNumCitiesMaintenancePercent();
+	iNumCitiesPercent *= GC.getWorldInfo(GC.getMap().getWorldSize()).getNumCitiesMaintenancePercent();
 	iNumCitiesPercent /= 100;
 
 	iNumCitiesPercent *= GC.getHandicapInfo(getHandicapType()).getNumCitiesMaintenancePercent();
@@ -9838,7 +9830,7 @@ int CvCity::calculateColonyMaintenanceTimes100() const
 	iNumCitiesPercent *= (getPopulation() + 17);
 	iNumCitiesPercent /= 18;
 
-	iNumCitiesPercent *= GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getColonyMaintenancePercent();
+	iNumCitiesPercent *= GC.getWorldInfo(GC.getMap().getWorldSize()).getColonyMaintenancePercent();
 	iNumCitiesPercent /= 100;
 
 	iNumCitiesPercent *= GC.getHandicapInfo(getHandicapType()).getColonyMaintenancePercent();
@@ -9896,7 +9888,7 @@ int CvCity::calculateCorporationMaintenanceTimes100(CorporationTypes eCorporatio
 	}
 
 	int iBonusMaintenance = GC.getCorporationInfo(eCorporation).getMaintenance() * iNumBonuses;
-	iBonusMaintenance *= GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getCorporationMaintenancePercent();
+	iBonusMaintenance *= GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent();
 	iBonusMaintenance /= 100;
 	iMaintenance += iBonusMaintenance;
 
@@ -10915,7 +10907,7 @@ int CvCity::getAdditionalHappinessByCivic(CivicTypes eCivic, bool bDifferenceToC
 	if (kCivic.getLargestCityHappiness() != 0)
 	{
 		//int CvCity::getLargestCityHappiness() const
-		if (findPopulationRank() <= GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getTargetNumCities())
+		if (findPopulationRank() <= GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities())
 		{
 			iHappy += kCivic.getLargestCityHappiness();
 		}
@@ -14017,7 +14009,7 @@ int CvCity::getPeaceTradeModifier(TeamTypes eTeam) const
 
 int CvCity::getBaseTradeProfit(CvCity* pCity) const
 {
-	int iProfit = std::min(pCity->getPopulation() * GC.getDefineINT("THEIR_POPULATION_TRADE_PERCENT"), plotDistance(getX(), getY(), pCity->getX(), pCity->getY()) * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getTradeProfitPercent());
+	int iProfit = std::min(pCity->getPopulation() * GC.getDefineINT("THEIR_POPULATION_TRADE_PERCENT"), plotDistance(getX(), getY(), pCity->getX(), pCity->getY()) * GC.getWorldInfo(GC.getMap().getWorldSize()).getTradeProfitPercent());
 
 	iProfit *= GC.getDefineINT("TRADE_PROFIT_PERCENT");
 	iProfit /= 100;
@@ -15273,7 +15265,7 @@ int CvCity::getCorporationYieldByCorporation(YieldTypes eIndex, CorporationTypes
 			BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
 			if (NO_BONUS != eBonus && getNumBonuses(eBonus) > 0)
 			{
-				iYield += (GC.getCorporationInfo(eCorporation).getYieldProduced(eIndex) * getNumBonuses(eBonus) * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getCorporationMaintenancePercent()) / 100;
+				iYield += (GC.getCorporationInfo(eCorporation).getYieldProduced(eIndex) * getNumBonuses(eBonus) * GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()) / 100;
 			}
 		}
 		/************************************************************************************************/
@@ -15306,7 +15298,7 @@ int CvCity::getCorporationCommerceByCorporation(CommerceTypes eIndex, Corporatio
 			BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
 			if (NO_BONUS != eBonus && getNumBonuses(eBonus) > 0)
 			{
-				iCommerce += (GC.getCorporationInfo(eCorporation).getCommerceProduced(eIndex) * getNumBonuses(eBonus) * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getCorporationMaintenancePercent()) / 100;
+				iCommerce += (GC.getCorporationInfo(eCorporation).getCommerceProduced(eIndex) * getNumBonuses(eBonus) * GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()) / 100;
 			}
 		}
 		/************************************************************************************************/
@@ -18406,7 +18398,7 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 				;
 
 			const short plotIndex = (deliveryDestination != NULL) ?
-				order.unit.plotIndex = GC.getMapINLINE().plotNumINLINE(deliveryDestination->getX(), deliveryDestination->getY())
+				order.unit.plotIndex = GC.getMap().plotNum(deliveryDestination->getX(), deliveryDestination->getY())
 				:
 				order.unit.plotIndex = 0xFFFF;
 
@@ -18652,7 +18644,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 			if (iPlotIndex != (short)0xFFFF)
 			{
 				iFlags = MOVE_NO_ENEMY_TERRITORY;
-				pRallyPlot = GC.getMapINLINE().plotByIndexINLINE(iPlotIndex);
+				pRallyPlot = GC.getMap().plotByIndex(iPlotIndex);
 				if (pRallyPlot != NULL && gUnitLogLevel >= 3)
 				{
 					logBBAI("    New unit %S at (%d,%d) headed to contractual delivery plot (%d,%d)",
@@ -19695,7 +19687,7 @@ void CvCity::doReligion()
 
 									if (iSpread > 0)
 									{
-										iSpread /= std::max(1, (((GC.getDefineINT("RELIGION_SPREAD_DISTANCE_DIVISOR") * plotDistance(getX(), getY(), pLoopCity->getX(), pLoopCity->getY())) / GC.getMapINLINE().maxPlotDistance()) - 5));
+										iSpread /= std::max(1, (((GC.getDefineINT("RELIGION_SPREAD_DISTANCE_DIVISOR") * plotDistance(getX(), getY(), pLoopCity->getX(), pLoopCity->getY())) / GC.getMap().maxPlotDistance()) - 5));
 										/************************************************************************************************/
 										/* Afforess	                  Start		 06/09/10                                               */
 										/*                                                                                              */
@@ -24514,7 +24506,7 @@ int CvCity::getExtraYieldTurns() const
 void CvCity::changeExtraYieldTurns(int iChange)
 {
 	int iOldVal = m_iExtraYieldTurns;
-	CvPlot* pPlot = GC.getMapINLINE().plotINLINE(getX(), getY());
+	CvPlot* pPlot = GC.getMap().plot(getX(), getY());
 
 	m_iExtraYieldTurns += iChange;
 
@@ -24544,7 +24536,7 @@ void CvCity::changeLineOfSight(int iChange)
 void CvCity::setExtraYieldTurns(int iNewVal)
 {
 	m_iExtraYieldTurns = iNewVal;
-	CvPlot* pPlot = GC.getMapINLINE().plotINLINE(getX(), getY());
+	CvPlot* pPlot = GC.getMap().plot(getX(), getY());
 
 	if (iNewVal > 0)
 	{
@@ -25355,7 +25347,7 @@ void CvCity::doCorporation()
 
 									if (iSpread > 0)
 									{
-										iSpread /= std::max(1, (((GC.getDefineINT("CORPORATION_SPREAD_DISTANCE_DIVISOR") * plotDistance(getX(), getY(), pLoopCity->getX(), pLoopCity->getY())) / GC.getMapINLINE().maxPlotDistance()) - 5));
+										iSpread /= std::max(1, (((GC.getDefineINT("CORPORATION_SPREAD_DISTANCE_DIVISOR") * plotDistance(getX(), getY(), pLoopCity->getX(), pLoopCity->getY())) / GC.getMap().maxPlotDistance()) - 5));
 
 										iRandThreshold = std::max(iRandThreshold, iSpread);
 									}
@@ -25545,7 +25537,7 @@ int CvCity::calculateCorporateTaxes() const
 			}
 
 			int iBonusTaxes = GC.getCorporationInfo(eCorporation).getMaintenance() * iNumBonuses;
-			iBonusTaxes *= GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getCorporationMaintenancePercent();
+			iBonusTaxes *= GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent();
 			iBonusTaxes /= 200;
 			iTaxes += iBonusTaxes;
 

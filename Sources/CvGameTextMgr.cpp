@@ -3869,7 +3869,7 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 								{
 								case MISSION_MOVE_TO:
 								case MISSION_ROUTE_TO:
-									pMissionPlot =  GC.getMapINLINE().plotINLINE(pHeadGroup->getMissionData1(0), pHeadGroup->getMissionData2(0));
+									pMissionPlot =  GC.getMap().plot(pHeadGroup->getMissionData1(0), pHeadGroup->getMissionData2(0));
 									break;
 
 								case MISSION_MOVE_TO_UNIT:
@@ -4169,7 +4169,7 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 												{
 													iTargetValue = GET_PLAYER(pHeadGroup->getOwner()).AI_targetCityValue(pLoopCity,false,true);
 
-													if( (GC.getMapINLINE().calculatePathDistance(pPlot, pLoopCity->plot()) < 20))
+													if( (GC.getMap().calculatePathDistance(pPlot, pLoopCity->plot()) < 20))
 													{
 														szString.append(CvWString::format(L"\n%s : %d + rand %d", pLoopCity->getName().c_str(), iTargetValue, (pLoopCity->getPopulation() / 2)));
 													}
@@ -8914,7 +8914,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 					vecUnitAIs.push_back(UNITAI_COUNTER);
 				}
 
-				CvCity* pCloseCity = GC.getMapINLINE().findCity(pPlot->getX(), pPlot->getY(), pPlot->getOwner(), NO_TEAM, true);
+				CvCity* pCloseCity = GC.getMap().findCity(pPlot->getX(), pPlot->getY(), pPlot->getOwner(), NO_TEAM, true);
 
 				if( pCloseCity != NULL )
 				{
@@ -11419,7 +11419,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		{
 			szHelpString.append(NEWLINE);
 			// Use absolute value with unhappy face
-			szHelpString.append(gDLL->getText("TXT_KEY_CIVIC_LARGEST_CITIES_HAPPINESS", abs(GC.getTraitInfo(eTrait).getLargestCityHappiness()), ((GC.getTraitInfo(eTrait).getLargestCityHappiness() > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR)), GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getTargetNumCities()));
+			szHelpString.append(gDLL->getText("TXT_KEY_CIVIC_LARGEST_CITIES_HAPPINESS", abs(GC.getTraitInfo(eTrait).getLargestCityHappiness()), ((GC.getTraitInfo(eTrait).getLargestCityHappiness() > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR)), GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities()));
 		}
 		
 		// State Religion Happiness
@@ -17792,10 +17792,10 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 /* Bugfix                                                                                       */
 /************************************************************************************************/
 /* original bts code
-		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_LARGEST_CITIES_HAPPINESS", GC.getCivicInfo(eCivic).getLargestCityHappiness(), ((GC.getCivicInfo(eCivic).getLargestCityHappiness() > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR)), GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getTargetNumCities()));
+		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_LARGEST_CITIES_HAPPINESS", GC.getCivicInfo(eCivic).getLargestCityHappiness(), ((GC.getCivicInfo(eCivic).getLargestCityHappiness() > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR)), GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities()));
 */
 		// Use absolute value with unhappy face
-		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_LARGEST_CITIES_HAPPINESS", abs(GC.getCivicInfo(eCivic).getLargestCityHappiness()), ((GC.getCivicInfo(eCivic).getLargestCityHappiness() > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR)), GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getTargetNumCities()));
+		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_LARGEST_CITIES_HAPPINESS", abs(GC.getCivicInfo(eCivic).getLargestCityHappiness()), ((GC.getCivicInfo(eCivic).getLargestCityHappiness() > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR)), GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities()));
 /************************************************************************************************/
 /* UNOFFICIAL_PATCH                        END                                                  */
 /************************************************************************************************/
@@ -29204,7 +29204,7 @@ void CvGameTextMgr::setCorporationHelp(CvWStringBuffer &szBuffer, CorporationTyp
 		int iYieldProduced = GC.getCorporationInfo(eCorporation).getYieldProduced((YieldTypes)iI);
 		if (NO_PLAYER != GC.getGameINLINE().getActivePlayer())
 		{
-			iYieldProduced *= GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getCorporationMaintenancePercent();
+			iYieldProduced *= GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent();
 			iYieldProduced /= 100;
 		}
 
@@ -29244,7 +29244,7 @@ void CvGameTextMgr::setCorporationHelp(CvWStringBuffer &szBuffer, CorporationTyp
 		int iCommerceProduced = GC.getCorporationInfo(eCorporation).getCommerceProduced((CommerceTypes)iI);
 		if (NO_PLAYER != GC.getGameINLINE().getActivePlayer())
 		{
-			iCommerceProduced *= GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getCorporationMaintenancePercent();
+			iCommerceProduced *= GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent();
 			iCommerceProduced /= 100;
 		}
 		if (iCommerceProduced != 0)
@@ -29561,7 +29561,7 @@ void CvGameTextMgr::setCorporationHelpCity(CvWStringBuffer &szBuffer, Corporatio
 
 		if (bActive)
 		{
-			iYield += (kCorporation.getYieldProduced(i) * iNumResources * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getCorporationMaintenancePercent()) / 100;
+			iYield += (kCorporation.getYieldProduced(i) * iNumResources * GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()) / 100;
 /************************************************************************************************/
 /* Afforess	                  Start		 02/27/10                                               */
 /*                                                                                              */
@@ -29594,7 +29594,7 @@ void CvGameTextMgr::setCorporationHelpCity(CvWStringBuffer &szBuffer, Corporatio
 		
 		if (bActive)
 		{
-			iCommerce += (kCorporation.getCommerceProduced(i) * iNumResources * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getCorporationMaintenancePercent()) / 100;
+			iCommerce += (kCorporation.getCommerceProduced(i) * iNumResources * GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()) / 100;
 /************************************************************************************************/
 /* Afforess	                  Start		 02/27/10                                               */
 /*                                                                                              */
@@ -38147,7 +38147,7 @@ void CvGameTextMgr::setEventHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, i
 
 	CvCity* pCity = kActivePlayer.getCity(pTriggeredData->m_iCityId);
 	CvCity* pOtherPlayerCity = NULL;
-	CvPlot* pPlot = GC.getMapINLINE().plot(pTriggeredData->m_iPlotX, pTriggeredData->m_iPlotY);
+	CvPlot* pPlot = GC.getMap().plot(pTriggeredData->m_iPlotX, pTriggeredData->m_iPlotY);
 	CvUnit* pUnit = kActivePlayer.getUnit(pTriggeredData->m_iUnitId);
 
 	if (NO_PLAYER != pTriggeredData->m_eOtherPlayer)
@@ -39668,7 +39668,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 				}
 			}
 
-			iTempModifier = (iDistance + GC.getMapINLINE().maxPlotDistance()) * GC.getDefineINT("ESPIONAGE_DISTANCE_MULTIPLIER_MOD") / GC.getMapINLINE().maxPlotDistance() - 100;
+			iTempModifier = (iDistance + GC.getMap().maxPlotDistance()) * GC.getDefineINT("ESPIONAGE_DISTANCE_MULTIPLIER_MOD") / GC.getMap().maxPlotDistance() - 100;
 			if (0 != iTempModifier)
 			{
 				szBuffer.append(NEWLINE);

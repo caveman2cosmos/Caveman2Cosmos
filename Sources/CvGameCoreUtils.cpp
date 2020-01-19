@@ -19,12 +19,12 @@
 
 CvPlot* plotCity(int iX, int iY, int iIndex)
 {
-	return GC.getMapINLINE().plotINLINE((iX + GC.getCityPlotX()[iIndex]), (iY + GC.getCityPlotY()[iIndex]));
+	return GC.getMap().plot((iX + GC.getCityPlotX()[iIndex]), (iY + GC.getCityPlotY()[iIndex]));
 }
 
 int plotCityXY(int iDX, int iDY)
 {
-	if ((abs(iDX) > CITY_PLOTS_RADIUS) || (abs(iDY) > CITY_PLOTS_RADIUS))
+	if (abs(iDX) > CITY_PLOTS_RADIUS || abs(iDY) > CITY_PLOTS_RADIUS)
 	{
 		return -1;
 	}
@@ -474,7 +474,7 @@ int getWorldSizeMaxConscript(CivicTypes eCivic)
 
 	iMaxConscript = GC.getCivicInfo(eCivic).getMaxConscript();
 
-	iMaxConscript *= std::max(0, (GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getMaxConscriptModifier() + 100));
+	iMaxConscript *= std::max(0, (GC.getWorldInfo(GC.getMap().getWorldSize()).getMaxConscriptModifier() + 100));
 	iMaxConscript /= 100;
 
 	return iMaxConscript;
@@ -2116,7 +2116,7 @@ int potentialIrrigation(FAStarNode* parent, FAStarNode* node, int data, const vo
 		return TRUE;
 	}
 
-	return ((GC.getMapINLINE().plotSorenINLINE(node->m_iX, node->m_iY)->isPotentialIrrigation()) ? TRUE : FALSE);
+	return ((GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY)->isPotentialIrrigation()) ? TRUE : FALSE);
 }
 
 
@@ -2124,7 +2124,7 @@ int checkFreshWater(FAStarNode* parent, FAStarNode* node, int data, const void* 
 {
 	if (data == ASNL_ADDCLOSED)
 	{
-		if (GC.getMapINLINE().plotSorenINLINE(node->m_iX, node->m_iY)->isFreshWater())
+		if (GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY)->isFreshWater())
 		{
 			*((bool *)pointer) = true;
 		}
@@ -2138,7 +2138,7 @@ int changeIrrigated(FAStarNode* parent, FAStarNode* node, int data, const void* 
 {
 	if (data == ASNL_ADDCLOSED)
 	{
-		GC.getMapINLINE().plotSorenINLINE(node->m_iX, node->m_iY)->setIrrigated(*((bool *)pointer));
+		GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY)->setIrrigated(*((bool *)pointer));
 	}
 
 	return 1;
@@ -2285,7 +2285,7 @@ int pathValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 		//	Can't cross diagonally across 'land'
 		if (pFromPlot->isWater() && pToPlot->isWater())
 		{
-			if (!(GC.getMapINLINE().plotINLINE(pFromPlot->getX(), pToPlot->getY())->isWater()) && !(GC.getMapINLINE().plotINLINE(pToPlot->getX(), pFromPlot->getY())->isWater()))
+			if (!(GC.getMap().plot(pFromPlot->getX(), pToPlot->getY())->isWater()) && !(GC.getMap().plot(pToPlot->getX(), pFromPlot->getY())->isWater()))
 			{
 				if( !(pSelectionGroup->canMoveAllTerrain()) )
 				{
@@ -3123,9 +3123,9 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 
 	static const CvSelectionGroup* gLastSelectionGroup = NULL;
 
-	pFromPlot = GC.getMapINLINE().plotSorenINLINE(iFromX, iFromY);
+	pFromPlot = GC.getMap().plotSorenINLINE(iFromX, iFromY);
 	FAssert(pFromPlot != NULL);
-	pToPlot = GC.getMapINLINE().plotSorenINLINE(iToX, iToY);
+	pToPlot = GC.getMap().plotSorenINLINE(iToX, iToY);
 	FAssert(pToPlot != NULL);
 
 	iWorstCost = MAX_INT;
@@ -3788,7 +3788,7 @@ bool NewPathDestValid(const CvSelectionGroup* pSelectionGroup, int iToX, int iTo
 
 	bRequiresWar = false;
 
-	pToPlot = GC.getMapINLINE().plotSorenINLINE(iToX, iToY);
+	pToPlot = GC.getMap().plotSorenINLINE(iToX, iToY);
 	FAssert(pToPlot != NULL);
 
 	if (pSelectionGroup->atPlot(pToPlot))
@@ -3921,9 +3921,9 @@ bool ContextFreeNewPathValidFunc(const CvSelectionGroup* pSelectionGroup, int iF
 	CvPlot* pToPlot;
 	PlayerTypes eOwner = pSelectionGroup->getHeadOwner();
 
-	pFromPlot = GC.getMapINLINE().plotSorenINLINE(iFromX,iFromY);
+	pFromPlot = GC.getMap().plotSorenINLINE(iFromX,iFromY);
 	FAssert(pFromPlot != NULL);
-	pToPlot = GC.getMapINLINE().plotSorenINLINE(iToX, iToY);
+	pToPlot = GC.getMap().plotSorenINLINE(iToX, iToY);
 	FAssert(pToPlot != NULL);
 
 	if ( pbValidAsTerminus != NULL )
@@ -3952,7 +3952,7 @@ bool ContextFreeNewPathValidFunc(const CvSelectionGroup* pSelectionGroup, int iF
 				//	Can't cross diagonally across 'land'
 				if (pFromPlot->isWater() && pToPlot->isWater())
 				{
-					if (!(GC.getMapINLINE().plotINLINE(pFromPlot->getX(), pToPlot->getY())->isWater()) && !(GC.getMapINLINE().plotINLINE(pToPlot->getX(), pFromPlot->getY())->isWater()))
+					if (!(GC.getMap().plot(pFromPlot->getX(), pToPlot->getY())->isWater()) && !(GC.getMap().plot(pToPlot->getX(), pFromPlot->getY())->isWater()))
 					{
 						if( !(pSelectionGroup->canMoveAllTerrain()) )
 						{
@@ -4154,9 +4154,9 @@ int stepDestValid(int iToX, int iToY, const void* pointer, FAStar* finder)
 	CvPlot* pFromPlot;
 	CvPlot* pToPlot;
 
-	pFromPlot = GC.getMapINLINE().plotSorenINLINE(gDLL->getFAStarIFace()->GetStartX(finder), gDLL->getFAStarIFace()->GetStartY(finder));
+	pFromPlot = GC.getMap().plotSorenINLINE(gDLL->getFAStarIFace()->GetStartX(finder), gDLL->getFAStarIFace()->GetStartY(finder));
 	FAssert(pFromPlot != NULL);
-	pToPlot = GC.getMapINLINE().plotSorenINLINE(iToX, iToY);
+	pToPlot = GC.getMap().plotSorenINLINE(iToX, iToY);
 	FAssert(pToPlot != NULL);
 
 	if (pFromPlot->area() != pToPlot->area())
@@ -4169,7 +4169,7 @@ int stepDestValid(int iToX, int iToY, const void* pointer, FAStar* finder)
 
 			if ( iPlot != -1 )
 			{
-				CvPlot*	destPlot = GC.getMapINLINE().plotByIndexINLINE(iPlot);
+				CvPlot*	destPlot = GC.getMap().plotByIndex(iPlot);
 
 				if ( destPlot == pToPlot )
 				{
@@ -4205,7 +4205,7 @@ int stepValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 		return TRUE;
 	}
 
-	pNewPlot = GC.getMapINLINE().plotSorenINLINE(node->m_iX, node->m_iY);
+	pNewPlot = GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY);
 
 	if (pNewPlot->isImpassable())
 	{
@@ -4216,7 +4216,7 @@ int stepValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 	if(iInvalidPlot > 0)
 	{
 		// 1 is subtracted because 1 was added earlier to avoid a conflict with index 0
-		if(pNewPlot == GC.getMapINLINE().plotByIndexINLINE((iInvalidPlot - 1)))
+		if(pNewPlot == GC.getMap().plotByIndex((iInvalidPlot - 1)))
 		{
 			return FALSE;
 		}
@@ -4229,12 +4229,12 @@ int stepValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 /* 	Bugfix																	*/
 /********************************************************************************/
 /* original BTS code
-	if (GC.getMapINLINE().plotSorenINLINE(parent->m_iX, parent->m_iY)->area() != pNewPlot->area())
+	if (GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY)->area() != pNewPlot->area())
 	{
 		return FALSE;
 	}
 */
-	CvPlot* pFromPlot = GC.getMapINLINE().plotSorenINLINE(parent->m_iX, parent->m_iY);
+	CvPlot* pFromPlot = GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY);
 	if (pFromPlot->area() != pNewPlot->area())
 	{
 		return FALSE;
@@ -4243,7 +4243,7 @@ int stepValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 	// Don't count diagonal hops across land isthmus
 	if (pFromPlot->isWater() && pNewPlot->isWater())
 	{
-		if (!(GC.getMapINLINE().plotINLINE(parent->m_iX, node->m_iY)->isWater()) && !(GC.getMapINLINE().plotINLINE(node->m_iX, parent->m_iY)->isWater()))
+		if (!(GC.getMap().plot(parent->m_iX, node->m_iY)->isWater()) && !(GC.getMap().plot(node->m_iX, parent->m_iY)->isWater()))
 		{
 			return FALSE;
 		}
@@ -4270,9 +4270,9 @@ int teamStepValid(FAStarNode* parent, FAStarNode* node, int data, const void* po
 		return TRUE;
 	}
 
-	pNewPlot = GC.getMapINLINE().plotSorenINLINE(node->m_iX, node->m_iY);
+	pNewPlot = GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY);
 
-	CvPlot* pFromPlot = GC.getMapINLINE().plotSorenINLINE(parent->m_iX, parent->m_iY);
+	CvPlot* pFromPlot = GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY);
 	if (pFromPlot->area() != pNewPlot->area())
 	{
 		return FALSE;
@@ -4281,7 +4281,7 @@ int teamStepValid(FAStarNode* parent, FAStarNode* node, int data, const void* po
 	// Don't count diagonal hops across land isthmus
 	if (pFromPlot->isWater() && pNewPlot->isWater())
 	{
-		if (!(GC.getMapINLINE().plotINLINE(parent->m_iX, node->m_iY)->isWater()) && !(GC.getMapINLINE().plotINLINE(node->m_iX, parent->m_iY)->isWater()))
+		if (!(GC.getMap().plot(parent->m_iX, node->m_iY)->isWater()) && !(GC.getMap().plot(node->m_iX, parent->m_iY)->isWater()))
 		{
 			return FALSE;
 		}
@@ -4353,7 +4353,7 @@ int routeValid(FAStarNode* parent, FAStarNode* node, int data, const void* point
 		return TRUE;
 	}
 
-	pNewPlot = GC.getMapINLINE().plotSorenINLINE(node->m_iX, node->m_iY);
+	pNewPlot = GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY);
 
 	ePlayer = ((PlayerTypes)(gDLL->getFAStarIFace()->GetInfo(finder)));
 
@@ -4374,7 +4374,7 @@ int borderValid(FAStarNode* parent, FAStarNode* node, int data, const void* poin
 	CvPlot* pNewPlot;
 	CvPlot* pOldPlot;
 	PlayerTypes ePlayer;
-	bool isWater = GC.getMapINLINE().plotSorenINLINE(gDLL->getFAStarIFace()->GetDestX(finder), gDLL->getFAStarIFace()->GetDestY(finder))->isWater();
+	bool isWater = GC.getMap().plotSorenINLINE(gDLL->getFAStarIFace()->GetDestX(finder), gDLL->getFAStarIFace()->GetDestY(finder))->isWater();
 
 	if (parent == NULL)
 	{
@@ -4382,10 +4382,10 @@ int borderValid(FAStarNode* parent, FAStarNode* node, int data, const void* poin
 	}
 	else
 	{
-		pOldPlot = GC.getMapINLINE().plotSorenINLINE(parent->m_iX, parent->m_iY);
+		pOldPlot = GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY);
 	}
 
-	pNewPlot = GC.getMapINLINE().plotSorenINLINE(node->m_iX, node->m_iY);
+	pNewPlot = GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY);
 
 	ePlayer = ((PlayerTypes)(gDLL->getFAStarIFace()->GetInfo(finder)));
 
@@ -4418,19 +4418,19 @@ int areaValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 /* General AI                                                                                   */
 /************************************************************************************************/
 // original BTS code
-	return ((GC.getMapINLINE().plotSorenINLINE(parent->m_iX, parent->m_iY)->isWater() == GC.getMapINLINE().plotSorenINLINE(node->m_iX, node->m_iY)->isWater()) ? TRUE : FALSE);
+	return ((GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY)->isWater() == GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY)->isWater()) ? TRUE : FALSE);
 
 	// BBAI TODO: Why doesn't this work to break water and ice into separate area?
 /*
-	if( GC.getMapINLINE().plotSorenINLINE(parent->m_iX, parent->m_iY)->isWater() != GC.getMapINLINE().plotSorenINLINE(node->m_iX, node->m_iY)->isWater() )
+	if( GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY)->isWater() != GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY)->isWater() )
 	{
 		return FALSE;
 	}
 
 	// Ice blocks become their own area
-	if( GC.getMapINLINE().plotSorenINLINE(parent->m_iX, parent->m_iY)->isWater() && GC.getMapINLINE().plotSorenINLINE(node->m_iX, node->m_iY)->isWater() )
+	if( GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY)->isWater() && GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY)->isWater() )
 	{
-		if( GC.getMapINLINE().plotSorenINLINE(parent->m_iX, parent->m_iY)->isImpassable() != GC.getMapINLINE().plotSorenINLINE(node->m_iX, node->m_iY)->isImpassable() )
+		if( GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY)->isImpassable() != GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY)->isImpassable() )
 		{
 			return FALSE;
 		}
@@ -4447,7 +4447,7 @@ int joinArea(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 {
 	if (data == ASNL_ADDCLOSED)
 	{
-		GC.getMapINLINE().plotSorenINLINE(node->m_iX, node->m_iY)->setArea(gDLL->getFAStarIFace()->GetInfo(finder));
+		GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY)->setArea(gDLL->getFAStarIFace()->GetInfo(finder));
 	}
 
 	return 1;
@@ -4465,8 +4465,8 @@ int plotGroupValid(FAStarNode* parent, FAStarNode* node, int data, const void* p
 		return TRUE;
 	}
 
-	pOldPlot = GC.getMapINLINE().plotSorenINLINE(parent->m_iX, parent->m_iY);
-	pNewPlot = GC.getMapINLINE().plotSorenINLINE(node->m_iX, node->m_iY);
+	pOldPlot = GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY);
+	pNewPlot = GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY);
 
 	ePlayer = ((PlayerTypes)(gDLL->getFAStarIFace()->GetInfo(finder)));
 	TeamTypes eTeam = GET_PLAYER(ePlayer).getTeam();
@@ -4502,7 +4502,7 @@ int countPlotGroup(FAStarNode* parent, FAStarNode* node, int data, const void* p
 
 	if (data == ASNL_ADDCLOSED)
 	{
-		CvPlot* pPlot = GC.getMapINLINE().plotSorenINLINE(node->m_iX, node->m_iY);
+		CvPlot* pPlot = GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY);
 		plotGroupCheckInfo* checkInfo = (plotGroupCheckInfo*)pointer;
 
 		pPlot->m_groupGenerationNumber = checkInfo->groupGenerationNumber;

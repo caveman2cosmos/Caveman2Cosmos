@@ -770,7 +770,7 @@ protected:
 	bool isFlagDirty() const; // Exposed to Python
 	void setFlagDirty(bool bNewValue); // Exposed to Python
 
-	DllExport inline PlayerTypes getOwner() const { return m_eOwner; } // Exposed to Python
+	DllExport inline PlayerTypes getOwner() const { return (PlayerTypes)m_eOwner; } // Exposed to Python
 	void setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotGroup);
 	static void	setDeferredPlotGroupRecalculationMode(bool bDefer);
 

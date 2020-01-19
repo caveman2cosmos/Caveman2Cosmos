@@ -7285,36 +7285,25 @@ void CvUnit::move(CvPlot* pPlot, bool bShow, bool bFree)
 }
 
 // false if unit is killed
-/************************************************************************************************/
-/* Afforess	                  Start		 06/13/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 bool CvUnit::jumpToNearestValidPlot(bool bKill)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 {
-	CvCity* pNearestCity;
 	CvPlot* pLoopPlot;
 	CvPlot* pBestPlot;
 	int iValue;
-	int iBestValue;
-	int iI;
 
 	FAssertMsg(!isAttacking(), "isAttacking did not return false as expected");
 	FAssertMsg(!isFighting(), "isFighting did not return false as expected");
 
 	//	If the jump is due to being in an incorrect doamin it implies there WILL be an area change, so the relevant nearest
 	//	city cannot possibly be in the same area, hence we need to search all
-	pNearestCity = GC.getMapINLINE().findCity(getX(), getY(), getOwner(), NO_TEAM, plot()->isValidDomainForAction(*this));
+	CvCity* pNearestCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, plot()->isValidDomainForAction(*this));
 
-	iBestValue = MAX_INT;
+	int iBestValue = MAX_INT;
 	pBestPlot = NULL;
 
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (pLoopPlot->isValidDomainForLocation(*this))
 		{
@@ -7348,23 +7337,12 @@ bool CvUnit::jumpToNearestValidPlot(bool bKill)
 									iValue *= 3;
 								}
 							}
-							else
+							else if (pLoopPlot->area() != area())
 							{
-								if (pLoopPlot->area() != area())
-								{
-									iValue *= 3;
-								}
+								iValue *= 3;
 							}
-/************************************************************************************************/
-/* Afforess	                  Start		 06/20/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-							iValue *= std::max(1, ((pLoopPlot->getTotalTurnDamage(this)) / 2));
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
+							iValue *= std::max(1, ((pLoopPlot->getTotalTurnDamage(this)) / 2));
 							if (iValue < iBestValue)
 							{
 								iBestValue = iValue;
@@ -7383,31 +7361,15 @@ bool CvUnit::jumpToNearestValidPlot(bool bKill)
 		//GC.getGameINLINE().logOOSSpecial(17, getID(), pBestPlot->getX(), pBestPlot->getY());
 		setXY(pBestPlot->getX(), pBestPlot->getY());
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 06/13/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	else if (bKill)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	{
 		kill(false);
 		bValid = false;
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 06/13/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	else
 	{
 		bValid = false;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	return bValid;
 }
@@ -9066,7 +9028,6 @@ bool CvUnit::canAirlift(const CvPlot* pPlot) const
 
 bool CvUnit::canAirliftAt(const CvPlot* pPlot, int iX, int iY) const
 {
-	CvPlot* pTargetPlot;
 	CvCity* pTargetCity;
 
 	if (!canAirlift(pPlot))
@@ -9074,7 +9035,7 @@ bool CvUnit::canAirliftAt(const CvPlot* pPlot, int iX, int iY) const
 		return false;
 	}
 
-	pTargetPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	CvPlot* pTargetPlot = GC.getMap().plot(iX, iY);
 
 	if (!canMoveInto(pTargetPlot))
 	{
@@ -9148,7 +9109,7 @@ bool CvUnit::airlift(int iX, int iY)
 
 	pCity = plot()->getPlotCity();
 	FAssert(pCity != NULL);
-	pTargetPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	pTargetPlot = GC.getMap().plot(iX, iY);
 	FAssert(pTargetPlot != NULL);
 	pTargetCity = pTargetPlot->getPlotCity();
 	FAssert(pTargetCity != NULL);
@@ -9257,7 +9218,7 @@ bool CvUnit::canNukeAt(const CvPlot* pPlot, int iX, int iY, bool bTestAtWar) con
 		return false;
 	}
 
-	pTargetPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	pTargetPlot = GC.getMap().plot(iX, iY);
 	// < M.A.D. Nukes Start >
 
 	if (bTestAtWar)
@@ -9292,18 +9253,16 @@ bool CvUnit::canNukeAt(const CvPlot* pPlot, int iX, int iY, bool bTestAtWar) con
 // < M.A.D. Nukes Start >
 bool CvUnit::setMADTargetPlot(int iX, int iY)
 {
-	CvPlot* pPlot;
-	CvCity* pCity;
 	CvWString szBuffer;
 
-	if(!GC.getMapINLINE().isPlot(iX, iY))
+	if (!GC.getMap().isPlot(iX, iY))
 	{
 		return false;
 	}
 
-	pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 
-	pCity = pPlot->getPlotCity();
+	CvCity* pCity = pPlot->getPlotCity();
 
 	if(pCity == NULL)
 	{
@@ -9395,7 +9354,7 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 		return false;
 	}
 
-	pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	pPlot = GC.getMap().plot(iX, iY);
 
 	// < M.A.D. Nukes Start >
 	if(GET_PLAYER(getOwner()).isEnabledMAD())
@@ -9710,30 +9669,21 @@ bool CvUnit::canReconAt(const CvPlot* pPlot, int iX, int iY) const
 
 bool CvUnit::recon(int iX, int iY)
 {
-	CvPlot* pPlot;
-
 	if (!canReconAt(plot(), iX, iY))
 	{
 		return false;
 	}
 
-	pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 
 	setReconPlot(pPlot);
 
 	finishMoves();
-/************************************************************************************************/
-/* Afforess	                  Start		 09/13/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	if (GC.getGameINLINE().isModderGameOption(MODDERGAMEOPTION_IMPROVED_XP))
 	{
 		 setExperience100(getExperience100() + 5, -1);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	addMission(CvAirMissionDefinition(MISSION_RECON, pPlot, this, NULL));
 
@@ -9772,7 +9722,7 @@ bool CvUnit::canParadropAt(const CvPlot* fromPlot, int toX, int toY) const
 		return false;
 	}
 
-	CvPlot* pTargetPlot = GC.getMapINLINE().plotINLINE(toX, toY);
+	CvPlot* pTargetPlot = GC.getMap().plot(toX, toY);
 	if (NULL == pTargetPlot || pTargetPlot == fromPlot)
 	{
 		return false;
@@ -9817,7 +9767,7 @@ bool CvUnit::paradrop(int iX, int iY)
 		return false;
 	}
 
-	CvPlot* pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 
 	changeMoves(GC.getMOVE_DENOMINATOR() / 2);
 	setMadeAttack(true);
@@ -9910,7 +9860,7 @@ bool CvUnit::canAirBombAt(const CvPlot* pPlot, int iX, int iY) const
 		return false;
 	}
 
-	pTargetPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	pTargetPlot = GC.getMap().plot(iX, iY);
 
 	if (plotDistance(pPlot->getX(), pPlot->getY(), pTargetPlot->getX(), pTargetPlot->getY()) > airRange())
 	{
@@ -10044,7 +9994,7 @@ bool CvUnit::airBomb(int iX, int iY)
 		return false;
 	}
 
-	pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	pPlot = GC.getMap().plot(iX, iY);
 
 	if (!isEnemy(pPlot->getTeam()))
 	{
@@ -11019,7 +10969,7 @@ void CvUnit::updatePlunder(int iChange, bool bUpdatePlotGroups)
 			if (NULL != pLoopPlot && pLoopPlot->isWater() && pLoopPlot->area() == area())
 			{
 
-				int iPathDist = GC.getMapINLINE().calculatePathDistance(plot(),pLoopPlot);
+				int iPathDist = GC.getMap().calculatePathDistance(plot(),pLoopPlot);
 				
 				// BBAI NOTES:  There are rare issues where the path finder will return incorrect results
 				// for unknown reasons.  Seems to find a suboptimal path sometimes in partially repeatable 
@@ -11195,7 +11145,7 @@ bool CvUnit::sabotage()
 
 		finishMoves();
 
-		pNearestCity = GC.getMapINLINE().findCity(pPlot->getX(), pPlot->getY(), pPlot->getOwner(), NO_TEAM, false);
+		pNearestCity = GC.getMap().findCity(pPlot->getX(), pPlot->getY(), pPlot->getOwner(), NO_TEAM, false);
 
 		if (pNearestCity != NULL)
 		{
@@ -12550,8 +12500,8 @@ int CvUnit::getTradeGold(const CvPlot* pPlot) const
 	iGold *= pCity->getPopulation();
 	iGold /= 10;
  
-	CvPlot* cPlot = GC.getMapINLINE().plotINLINE(m_iXOrigin, m_iYOrigin);
-	int iMaxDistance = GC.getMapINLINE().maxPlotDistance();
+	CvPlot* cPlot = GC.getMap().plot(m_iXOrigin, m_iYOrigin);
+	int iMaxDistance = GC.getMap().maxPlotDistance();
 	if (cPlot != NULL)
 	{
 		iGold *= iMaxDistance + plotDistance(m_iXOrigin, m_iYOrigin, pPlot->getX(), pPlot->getY());
@@ -13265,7 +13215,7 @@ bool CvUnit::testSpyIntercepted(PlayerTypes eTargetPlayer, int iModifier)
 	}
 
 	CvWString szCityName = kTargetPlayer.getCivilizationShortDescription();
-	CvCity* pClosestCity = GC.getMapINLINE().findCity(getX(), getY(), eTargetPlayer, kTargetPlayer.getTeam(), true, false);
+	CvCity* pClosestCity = GC.getMap().findCity(getX(), getY(), eTargetPlayer, kTargetPlayer.getTeam(), true, false);
 	if (pClosestCity != NULL)
 	{
 		szCityName = pClosestCity->getName();
@@ -14310,7 +14260,7 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 	else
 	{
 		// find the closest city
-		CvCity* pClosestCity = GC.getMapINLINE().findCity(getX(), getY(), NO_PLAYER, getTeam(), true, bCoastalOnly);
+		CvCity* pClosestCity = GC.getMap().findCity(getX(), getY(), NO_PLAYER, getTeam(), true, bCoastalOnly);
 		if (pClosestCity != NULL)
 		{
 			// if we can train, then return this city (otherwise it will return NULL)
@@ -16855,7 +16805,7 @@ int CvUnit::experienceNeeded() const
 	//adjust level thresholds to a world size.
 	if (isCommander())
 	{
-//		iExperienceNeeded *= GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getCommandersLevelThresholdsPercent() / 100;
+//		iExperienceNeeded *= GC.getWorldInfo(GC.getMap().getWorldSize()).getCommandersLevelThresholdsPercent() / 100;
 		iExperienceNeeded *= 3;
 		iExperienceNeeded /= 2;
 	}
@@ -18420,8 +18370,8 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 	{
 		return;
 	}
-	FAssert((iX == INVALID_PLOT_COORD) || (GC.getMapINLINE().plotINLINE(iX, iY)->getX() == iX));
-	FAssert((iY == INVALID_PLOT_COORD) || (GC.getMapINLINE().plotINLINE(iX, iY)->getY() == iY));
+	FAssert((iX == INVALID_PLOT_COORD) || (GC.getMap().plot(iX, iY)->getX() == iX));
+	FAssert((iY == INVALID_PLOT_COORD) || (GC.getMap().plot(iX, iY)->getY() == iY));
 
 	if (getGroup() != NULL)
 	{
@@ -18449,7 +18399,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		joinGroup(NULL, true);
 	}
 
-	pNewPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	pNewPlot = GC.getMap().plot(iX, iY);
 	pOldPlot = plot();
 
 	if (pNewPlot != NULL)
@@ -19201,14 +19151,14 @@ CvPlot* CvUnit::plot() const
 {
 	//FAssertMsg(isInViewport(), "Can't get plot of unit that is not in the viewport");
 	//FAssertMsg(!isUsingDummyEntities(), "Can't get plot of unit that is using dummy entities");
-	return GC.getMapINLINE().plotSorenINLINE(getX(), getY());
+	return GC.getMap().plotSorenINLINE(getX(), getY());
 }
 
 CvPlot* CvUnit::plotExternal() const
 {
 	FAssertMsg(isInViewport(), "Can't get plot of unit that is not in the viewport");
 	FAssertMsg(!isUsingDummyEntities(), "Can't get plot of unit that is using dummy entities");
-	return GC.getMapINLINE().plotSorenINLINE(getX(), getY());
+	return GC.getMap().plotSorenINLINE(getX(), getY());
 }
 
 
@@ -19245,7 +19195,7 @@ void CvUnit::setLastMoveTurn(int iNewValue)
 
 CvPlot* CvUnit::getReconPlot() const
 {
-	return GC.getMapINLINE().plotSorenINLINE(m_iReconX, m_iReconY);
+	return GC.getMap().plotSorenINLINE(m_iReconX, m_iReconY);
 }
 
 
@@ -19793,7 +19743,7 @@ void CvUnit::validateCargoUnits()
 
 CvPlot* CvUnit::getAttackPlot() const
 {
-	return GC.getMapINLINE().plotSorenINLINE(m_iAttackPlotX, m_iAttackPlotY);
+	return GC.getMap().plotSorenINLINE(m_iAttackPlotX, m_iAttackPlotY);
 }
 
 
@@ -29715,7 +29665,7 @@ bool CvUnit::canRangeStrikeAt(const CvPlot* pPlot, int iX, int iY) const
 		return false;
 	}
 
-	CvPlot* pTargetPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	CvPlot* pTargetPlot = GC.getMap().plot(iX, iY);
 
 	if (NULL == pTargetPlot)
 	{
@@ -29769,7 +29719,7 @@ bool CvUnit::rangeStrike(int iX, int iY)
 	int iUnitDamage;
 	int iDamage;
 
-	CvPlot* pPlot = GC.getMapINLINE().plot(iX, iY);
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 	if (NULL == pPlot)
 	{
 		return false;
@@ -30857,7 +30807,7 @@ bool CvUnit::airBomb1(int iX, int iY)
 	{
 		return false;
 	}
-	CvPlot* pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 	if (interceptTest(pPlot))
 	{
 		return true;
@@ -31059,7 +31009,7 @@ bool CvUnit::airBomb2(int iX, int iY)
 	{
 		return false;
 	}
-	pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	pPlot = GC.getMap().plot(iX, iY);
 	if (interceptTest(pPlot))
 	{
 		return true;
@@ -31283,7 +31233,7 @@ bool CvUnit::canAirBomb3At(const CvPlot* pPlot, int iX, int iY) const
 	{
 		return false;
 	}
-	pTargetPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	pTargetPlot = GC.getMap().plot(iX, iY);
 	if (plotDistance(pPlot->getX(), pPlot->getY(), pTargetPlot->getX(), pTargetPlot->getY()) > airRange())
 	{
 		return false;
@@ -31307,7 +31257,6 @@ bool CvUnit::canAirBomb3At(const CvPlot* pPlot, int iX, int iY) const
 bool CvUnit::airBomb3(int iX, int iY)
 {
 	CvCity* pCity;
-	CvPlot* pPlot;
 	CvWString szBuffer;
 	int build, iI, iAttempts, iMaxAttempts;
 	bool bNoTarget = true;
@@ -31320,7 +31269,7 @@ bool CvUnit::airBomb3(int iX, int iY)
 	{
 		return false;
 	}
-	pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 	if (interceptTest(pPlot))
 	{
 		return true;
@@ -31550,7 +31499,7 @@ bool CvUnit::canAirBomb4At(const CvPlot* pPlot, int iX, int iY) const
 	{
 		return false;
 	}
-	pTargetPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	pTargetPlot = GC.getMap().plot(iX, iY);
 	if (plotDistance(pPlot->getX(), pPlot->getY(), pTargetPlot->getX(), pTargetPlot->getY()) > airRange())
 	{
 		return false;
@@ -31625,7 +31574,7 @@ bool CvUnit::airBomb4(int iX, int iY)
 	{
 		return false;
 	}
-	pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	pPlot = GC.getMap().plot(iX, iY);
 	if (interceptTest(pPlot))
 	{
 		return true;
@@ -31847,7 +31796,7 @@ bool CvUnit::canAirBomb5At(const CvPlot* pPlot, int iX, int iY) const
 	{
 		return false;
 	}
-	pTargetPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	pTargetPlot = GC.getMap().plot(iX, iY);
 	if (plotDistance(pPlot->getX(), pPlot->getY(), pTargetPlot->getX(), pTargetPlot->getY()) > airRange())
 	{
 		return false;
@@ -31880,7 +31829,7 @@ bool CvUnit::airBomb5(int iX, int iY)
 	{
 		return false;
 	}
-	pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	pPlot = GC.getMap().plot(iX, iY);
 	if (interceptTest(pPlot))
 	{
 		return true;
@@ -32077,7 +32026,7 @@ bool CvUnit::canBombardAtRanged(const CvPlot* pPlot, int iX, int iY) const
 	{
 		return false;
 	}
-	pTargetPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	pTargetPlot = GC.getMap().plot(iX, iY);
 
 	if (plotDistance(pPlot->getX(), pPlot->getY(), pTargetPlot->getX(), pTargetPlot->getY()) > getDCMBombRange())
 	{
@@ -32139,7 +32088,7 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 		return false;
 	}
 
-	pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	pPlot = GC.getMap().plot(iX, iY);
 	if (pPlot == NULL)
 	{
 		return false;
@@ -32694,7 +32643,7 @@ bool CvUnit::canArcherBombardAt(const CvPlot* fromPlot, int iX, int iY) const
 		return false;
 	}
 
-	CvPlot* pTargetPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	CvPlot* pTargetPlot = GC.getMap().plot(iX, iY);
 
 	if (!pTargetPlot)
 	{
@@ -32738,7 +32687,7 @@ bool CvUnit::archerBombard(int iX, int iY, bool supportAttack)
 	{
 		return false;
 	}
-	pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	pPlot = GC.getMap().plot(iX, iY);
 	iDefenderNum = pPlot->getNumVisiblePotentialEnemyDefenders(this);
 	if(iDefenderNum == 0)
 	{
@@ -32910,7 +32859,7 @@ bool CvUnit::canFEngageAt(const CvPlot* pPlot, int iX, int iY) const
 	{
 		return false;
 	}
-	pTargetPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	pTargetPlot = GC.getMap().plot(iX, iY);
 
 	if (plotDistance(pPlot->getX(), pPlot->getY(), pTargetPlot->getX(), pTargetPlot->getY()) > airRange())
 	{
@@ -32958,7 +32907,7 @@ bool CvUnit::fighterEngage(int iX, int iY)
 	{
 		return false;
 	}
-	pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	pPlot = GC.getMap().plot(iX, iY);
 	if (interceptTest(pPlot))
 	{
 		return true;
@@ -33874,7 +33823,7 @@ bool CvUnit::spyNuke(int iX, int iY, bool bCaught)
 	bool abTeamsAffected[MAX_TEAMS];
 	int iI, iJ, iK;
 
-	pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	pPlot = GC.getMap().plot(iX, iY);
 
 	for (iI = 0; iI < MAX_TEAMS; iI++)
 	{
@@ -34101,7 +34050,7 @@ bool CvUnit::claimTerritory()
 	if (bWasOwned)
 	{
 		CvWString szBuffer;
-		CvCity *pNearestCity = GC.getMapINLINE().findCity(pPlot->getX(), pPlot->getY(), pPlayerThatLostTerritory, NO_TEAM, false);				
+		CvCity *pNearestCity = GC.getMap().findCity(pPlot->getX(), pPlot->getY(), pPlayerThatLostTerritory, NO_TEAM, false);				
 		
 		MEMORY_TRACK_EXEMPT();
 
@@ -35282,7 +35231,7 @@ void CvUnit::setMADEnabled(bool bValue)
 // Dale - MAD: get MAD plot
 CvPlot* CvUnit::getMADTargetPlot() const
 {
-	return GC.getMapINLINE().plotINLINE(m_iMADTargetPlotX, m_iMADTargetPlotY);
+	return GC.getMap().plot(m_iMADTargetPlotX, m_iMADTargetPlotY);
 }
 
 int CvUnit::getMADTargetPlotX() const
@@ -36404,7 +36353,7 @@ bool CvUnit::isFlankSupporter() const
 
 CvPlot* CvUnit::getAttackFromPlot() const
 {
-	return GC.getMapINLINE().plotSorenINLINE(m_iAttackFromPlotX, m_iAttackFromPlotY);
+	return GC.getMap().plotSorenINLINE(m_iAttackFromPlotX, m_iAttackFromPlotY);
 }
 
 void CvUnit::setAttackFromPlot(const CvPlot* pNewValue)
@@ -46437,7 +46386,7 @@ void CvUnit::clearCityOfOrigin()
 
 CvCity* CvUnit::getCityOfOrigin() const
 {
-	CvPlot* pPlot = GC.getMapINLINE().plotSorenINLINE(m_iXOrigin, m_iYOrigin);
+	CvPlot* pPlot = GC.getMap().plotSorenINLINE(m_iXOrigin, m_iYOrigin);
 	CvCity* pCity;
 	if (pPlot != NULL)
 	{

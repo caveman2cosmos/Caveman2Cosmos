@@ -1085,9 +1085,9 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 
 	if (aiYield[YIELD_PRODUCTION] || aiYield[YIELD_FOOD] || aiCommerce[COMMERCE_CULTURE] || m_iGPP || (bUnitToCity && m_eUnitType > NO_UNIT) || m_iHappinessTimer || m_iPopulationBoost || m_iReduceAnarchyLength)
 	{
-		CvCity* pCity = GC.getMapINLINE().findCity(kUnit.plot()->getX(), kUnit.plot()->getY(), kUnit.getOwner(), NO_TEAM, true, bToCoastalCity);
+		CvCity* pCity = GC.getMap().findCity(kUnit.plot()->getX(), kUnit.plot()->getY(), kUnit.getOwner(), NO_TEAM, true, bToCoastalCity);
 		if (!pCity)
-			pCity = GC.getMapINLINE().findCity(kUnit.plot()->getX(), kUnit.plot()->getY(), kUnit.getOwner(), NO_TEAM, false, bToCoastalCity);
+			pCity = GC.getMap().findCity(kUnit.plot()->getX(), kUnit.plot()->getY(), kUnit.getOwner(), NO_TEAM, false, bToCoastalCity);
 
 		if (pCity)
 		{
@@ -1415,9 +1415,9 @@ int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool 
 		// short circuit plot city as this method will be called for city plots most of the time
 		CvCityAI* pCity = (CvCityAI*) kPlot.getPlotCity();
 		if (!pCity || (bToCoastalCity && (!pCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))))
-			pCity = (CvCityAI*) GC.getMapINLINE().findCity(kPlot.getX(), kPlot.getY(), kUnit.getOwner(), NO_TEAM, true, bToCoastalCity);
+			pCity = (CvCityAI*) GC.getMap().findCity(kPlot.getX(), kPlot.getY(), kUnit.getOwner(), NO_TEAM, true, bToCoastalCity);
 		if (!pCity)
-			pCity = (CvCityAI*) GC.getMapINLINE().findCity(kPlot.getX(), kPlot.getY(), kUnit.getOwner(), NO_TEAM, false, bToCoastalCity);
+			pCity = (CvCityAI*) GC.getMap().findCity(kPlot.getX(), kPlot.getY(), kUnit.getOwner(), NO_TEAM, false, bToCoastalCity);
 
 		if (pCity)
 		{

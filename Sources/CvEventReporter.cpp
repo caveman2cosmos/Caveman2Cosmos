@@ -59,11 +59,11 @@ bool CvEventReporter::kbdEvent(int evt, int key, int iCursorX, int iCursorY)
 		}
 		if ( gDLL->altKey() && gDLL->shiftKey() && evt == 7 && (key == 30) )
 		{
-			GC.getMapINLINE().toggleCitiesDisplay();
+			GC.getMap().toggleCitiesDisplay();
 		}
 		if ( gDLL->altKey() && gDLL->shiftKey() && evt == 7 && (key == 32) )
 		{
-			GC.getMapINLINE().toggleUnitsDisplay();
+			GC.getMap().toggleUnitsDisplay();
 		}
 #ifndef FINAL_RELEASE
 		if ( gDLL->altKey() && gDLL->ctrlKey() && evt ==7 && key == FInputDevice::KB_P )

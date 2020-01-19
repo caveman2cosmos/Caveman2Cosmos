@@ -902,7 +902,7 @@ void CvPlot::doImprovement()
 /************************************************************************************************/
 							setBonusType((BonusTypes)iI);
 
-							pCity = GC.getMapINLINE().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
+							pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
 
 							if (pCity != NULL && isInViewport())
 							{
@@ -949,7 +949,7 @@ void CvPlot::doImprovement()
 							}
 							setImprovementType(eDepletedMine);
 							setIsDepletedMine(true);
-							pCity = GC.getMapINLINE().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
+							pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
 							GC.getGameINLINE().logMsg("Mine Depleted!");
 							if (pCity != NULL)
 							{	
@@ -2212,7 +2212,7 @@ bool CvPlot::isRiverConnection(DirectionTypes eDirection) const
 
 CvPlot* CvPlot::getNearestLandPlotInternal(int iDistance) const
 {
-	if (iDistance > GC.getMapINLINE().getGridHeightINLINE() && iDistance > GC.getMapINLINE().getGridWidthINLINE())
+	if (iDistance > GC.getMap().getGridHeight() && iDistance > GC.getMap().getGridWidth())
 	{
 		return NULL;
 	}
@@ -3856,7 +3856,7 @@ int CvPlot::getFeatureProduction(BuildTypes eBuild, TeamTypes eTeam, CvCity** pp
 
 	if (*ppCity == NULL)
 	{
-		*ppCity = GC.getMapINLINE().findCity(getX(), getY(), NO_PLAYER, eTeam, false);
+		*ppCity = GC.getMap().findCity(getX(), getY(), NO_PLAYER, eTeam, false);
 	}
 
 	if (*ppCity == NULL)
@@ -4431,9 +4431,9 @@ void CvPlot::doImprovementCulture()
 int CvPlot::countRegionPlots(const CvPlot* pInvalidPlot) const
 {
 	int iCount = 0;
-	int iInvalidPlot = (pInvalidPlot == NULL) ? 0 : GC.getMapINLINE().plotNum(pInvalidPlot->getX(), pInvalidPlot->getY()) + 1;
+	int iInvalidPlot = (pInvalidPlot == NULL) ? 0 : GC.getMap().plotNum(pInvalidPlot->getX(), pInvalidPlot->getY()) + 1;
 	FAStar* pRegionFinder = gDLL->getFAStarIFace()->create();
-	gDLL->getFAStarIFace()->Initialize(pRegionFinder, GC.getMapINLINE().getGridWidthINLINE(), GC.getMapINLINE().getGridHeightINLINE(), GC.getMapINLINE().isWrapXINLINE(), GC.getMapINLINE().isWrapYINLINE(), 
+	gDLL->getFAStarIFace()->Initialize(pRegionFinder, GC.getMap().getGridWidth(), GC.getMap().getGridHeight(), GC.getMap().isWrapX(), GC.getMap().isWrapY(), 
 		NULL, NULL, NULL, stepValid, NULL, countRegion, NULL);
 	gDLL->getFAStarIFace()->SetData(pRegionFinder, &iCount);
 	// Note to self: for GeneratePath() should bReuse be true or false?
@@ -4463,7 +4463,7 @@ int CvPlot::countAdjacentPassableSections(bool bWater) const
 					// Don't count diagonal hops across land isthmus
 					if (bPlotIsWater && !isCardinalDirection((DirectionTypes)iI))
 					{
-						if (!(GC.getMapINLINE().plotINLINE(getX(), pAdjacentPlot->getY())->isWater()) && !(GC.getMapINLINE().plotINLINE(pAdjacentPlot->getX(), getY())->isWater()))
+						if (!(GC.getMap().plot(getX(), pAdjacentPlot->getY())->isWater()) && !(GC.getMap().plot(pAdjacentPlot->getX(), getY())->isWater()))
 						{
 							continue;
 						}
@@ -4624,7 +4624,7 @@ void CvPlot::calculateCanalValue()
 				{
 					if(!apPlotsToCheck[iI]->isLake() || !apPlotsToCheck[iJ]->isLake())
 					{
-						int iDistance = GC.getMapINLINE().calculatePathDistance(apPlotsToCheck[iI], apPlotsToCheck[iJ]);
+						int iDistance = GC.getMap().calculatePathDistance(apPlotsToCheck[iI], apPlotsToCheck[iJ]);
 						if(iDistance == -1)
 						{
 						
@@ -4690,7 +4690,7 @@ void CvPlot::calculateChokeValue()
 						// Don't count diagonal hops across land isthmus
 						if (bWater && !isCardinalDirection((DirectionTypes)iI))
 						{
-							if (!(GC.getMapINLINE().plotINLINE(getX(), pAdjacentPlot->getY())->isWater()) && !(GC.getMapINLINE().plotINLINE(pAdjacentPlot->getX(), getY())->isWater()))
+							if (!(GC.getMap().plot(getX(), pAdjacentPlot->getY())->isWater()) && !(GC.getMap().plot(pAdjacentPlot->getX(), getY())->isWater()))
 							{
 								continue;
 							}
@@ -4721,7 +4721,7 @@ void CvPlot::calculateChokeValue()
 			{
 				for (int iJ = iI + 1; iJ < iPlotsFound; ++iJ)
 				{
-					int iDistance = GC.getMapINLINE().calculatePathDistance(apPlotsToCheck[iI], apPlotsToCheck[iJ], this);
+					int iDistance = GC.getMap().calculatePathDistance(apPlotsToCheck[iI], apPlotsToCheck[iJ], this);
 					if(iDistance == -1)
 					{
 						// If no path was found then value is based off the number of plots in the region minus a minimum area
@@ -5151,7 +5151,7 @@ bool CvPlot::isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb ) c
 	teamVec.push_back(eAttackerTeam);
 	teamVec.push_back(NO_TEAM);
 	FAStar* pTeamStepFinder = gDLL->getFAStarIFace()->create();
-	gDLL->getFAStarIFace()->Initialize(pTeamStepFinder, GC.getMapINLINE().getGridWidthINLINE(), GC.getMapINLINE().getGridHeightINLINE(), GC.getMapINLINE().isWrapXINLINE(), GC.getMapINLINE().isWrapYINLINE(), stepDestValid, stepHeuristic, stepCost, teamStepValid, stepAdd, NULL, NULL);
+	gDLL->getFAStarIFace()->Initialize(pTeamStepFinder, GC.getMap().getGridWidth(), GC.getMap().getGridHeight(), GC.getMap().isWrapX(), GC.getMap().isWrapY(), stepDestValid, stepHeuristic, stepCost, teamStepValid, stepAdd, NULL, NULL);
 	gDLL->getFAStarIFace()->SetData(pTeamStepFinder, &teamVec);
 
 	bool bFound = false;
@@ -5229,7 +5229,7 @@ bool CvPlot::isHasPathToPlayerCity( TeamTypes eMoveTeam, PlayerTypes eOtherPlaye
 	teamVec.push_back(eMoveTeam);
 	teamVec.push_back(GET_PLAYER(eOtherPlayer).getTeam());
 	FAStar* pTeamStepFinder = gDLL->getFAStarIFace()->create();
-	gDLL->getFAStarIFace()->Initialize(pTeamStepFinder, GC.getMapINLINE().getGridWidthINLINE(), GC.getMapINLINE().getGridHeightINLINE(), GC.getMapINLINE().isWrapXINLINE(), GC.getMapINLINE().isWrapYINLINE(), stepDestValid, stepHeuristic, stepCost, teamStepValid, stepAdd, NULL, NULL);
+	gDLL->getFAStarIFace()->Initialize(pTeamStepFinder, GC.getMap().getGridWidth(), GC.getMap().getGridHeight(), GC.getMap().isWrapX(), GC.getMap().isWrapY(), stepDestValid, stepHeuristic, stepCost, teamStepValid, stepAdd, NULL, NULL);
 	gDLL->getFAStarIFace()->SetData(pTeamStepFinder, &teamVec);
 
 	bool bFound = false;
@@ -5269,7 +5269,7 @@ int CvPlot::calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot ) 
 	teamVec.push_back(eTeam);
 	teamVec.push_back(NO_TEAM);
 	FAStar* pTeamStepFinder = gDLL->getFAStarIFace()->create();
-	gDLL->getFAStarIFace()->Initialize(pTeamStepFinder, GC.getMapINLINE().getGridWidthINLINE(), GC.getMapINLINE().getGridHeightINLINE(), GC.getMapINLINE().isWrapXINLINE(), GC.getMapINLINE().isWrapYINLINE(), stepDestValid, stepHeuristic, stepCost, teamStepValid, stepAdd, NULL, NULL);
+	gDLL->getFAStarIFace()->Initialize(pTeamStepFinder, GC.getMap().getGridWidth(), GC.getMap().getGridHeight(), GC.getMap().isWrapX(), GC.getMap().isWrapY(), stepDestValid, stepHeuristic, stepCost, teamStepValid, stepAdd, NULL, NULL);
 	gDLL->getFAStarIFace()->SetData(pTeamStepFinder, &teamVec);
 	FAStarNode* pNode;
 
@@ -6815,43 +6815,43 @@ int CvPlot::calculateMinutes(int iPlotIndex, int iPlotCount, bool bWrap, int iDe
 
 int CvPlot::getLongitudeMinutes() const
 {
-	CvMap& kMap = GC.getMapINLINE();
+	CvMap& kMap = GC.getMap();
 
-	if (kMap.isWrapXINLINE())
+	if (kMap.isWrapX())
 	{
 		// normal and toroidal
-		return calculateMinutes(getX(), kMap.getGridWidthINLINE(), true, MIN_LONGITUDE, MAX_LONGITUDE);
+		return calculateMinutes(getX(), kMap.getGridWidth(), true, MIN_LONGITUDE, MAX_LONGITUDE);
 	}
-	else if (!kMap.isWrapYINLINE())
+	else if (!kMap.isWrapY())
 	{
 		// flat
-		return calculateMinutes(getX(), kMap.getGridWidthINLINE(), false, MIN_LONGITUDE, MAX_LONGITUDE);
+		return calculateMinutes(getX(), kMap.getGridWidth(), false, MIN_LONGITUDE, MAX_LONGITUDE);
 	}
 	else
 	{
 		// tilted axis
-		return calculateMinutes(getY(), kMap.getGridHeightINLINE(), true, MIN_LONGITUDE, MAX_LONGITUDE);
+		return calculateMinutes(getY(), kMap.getGridHeight(), true, MIN_LONGITUDE, MAX_LONGITUDE);
 	}
 }
 
 int CvPlot::getLatitudeMinutes() const
 {
-	CvMap& kMap = GC.getMapINLINE();
+	CvMap& kMap = GC.getMap();
 
-	if (kMap.isWrapXINLINE())
+	if (kMap.isWrapX())
 	{
 		// normal and toroidal
-		return calculateMinutes(getY(), kMap.getGridHeightINLINE(), kMap.isWrapYINLINE(), kMap.getBottomLatitude(), kMap.getTopLatitude());
+		return calculateMinutes(getY(), kMap.getGridHeight(), kMap.isWrapY(), kMap.getBottomLatitude(), kMap.getTopLatitude());
 	}
-	else if (!kMap.isWrapYINLINE())
+	else if (!kMap.isWrapY())
 	{
 		// flat
-		return calculateMinutes(getY(), kMap.getGridHeightINLINE(), false, kMap.getBottomLatitude(), kMap.getTopLatitude());
+		return calculateMinutes(getY(), kMap.getGridHeight(), false, kMap.getBottomLatitude(), kMap.getTopLatitude());
 	}
 	else
 	{
 		// tilted axis
-		return calculateMinutes(getX(), kMap.getGridWidthINLINE(), false, kMap.getBottomLatitude(), kMap.getTopLatitude());
+		return calculateMinutes(getX(), kMap.getGridWidth(), false, kMap.getBottomLatitude(), kMap.getTopLatitude());
 	}
 }
 
@@ -6889,7 +6889,7 @@ CvArea* CvPlot::area() const
 {
 	if(m_pPlotArea == NULL)
 	{
-		m_pPlotArea = GC.getMapINLINE().getArea(getArea());
+		m_pPlotArea = GC.getMap().getArea(getArea());
 	}
 
 	return m_pPlotArea;
@@ -7350,7 +7350,7 @@ CvPlot* CvPlot::getInlandCorner() const
 		switch (aiShuffle[iI])
 		{
 		case 0:
-			pRiverPlot = GC.getMapINLINE().plotSorenINLINE(getX(), getY()); break;
+			pRiverPlot = GC.getMap().plotSorenINLINE(getX(), getY()); break;
 		case 1:
 			pRiverPlot = plotDirection(getX(), getY(), DIRECTION_NORTH); break;
 		case 2:
@@ -7470,13 +7470,13 @@ void CvPlot::updateIrrigated()
 				if (pLoopPlot != NULL)
 				{
 					bFoundFreshWater = false;
-					gDLL->getFAStarIFace()->Initialize(pIrrigatedFinder, GC.getMapINLINE().getGridWidthINLINE(), GC.getMapINLINE().getGridHeightINLINE(), GC.getMapINLINE().isWrapXINLINE(), GC.getMapINLINE().isWrapYINLINE(), NULL, NULL, NULL, potentialIrrigation, NULL, checkFreshWater, &bFoundFreshWater);
+					gDLL->getFAStarIFace()->Initialize(pIrrigatedFinder, GC.getMap().getGridWidth(), GC.getMap().getGridHeight(), GC.getMap().isWrapX(), GC.getMap().isWrapY(), NULL, NULL, NULL, potentialIrrigation, NULL, checkFreshWater, &bFoundFreshWater);
 					gDLL->getFAStarIFace()->GeneratePath(pIrrigatedFinder, pLoopPlot->getX(), pLoopPlot->getY(), -1, -1);
 
 					if (!bFoundFreshWater)
 					{
 						bIrrigated = false;
-						gDLL->getFAStarIFace()->Initialize(pIrrigatedFinder, GC.getMapINLINE().getGridWidthINLINE(), GC.getMapINLINE().getGridHeightINLINE(), GC.getMapINLINE().isWrapXINLINE(), GC.getMapINLINE().isWrapYINLINE(), NULL, NULL, NULL, potentialIrrigation, NULL, changeIrrigated, &bIrrigated);
+						gDLL->getFAStarIFace()->Initialize(pIrrigatedFinder, GC.getMap().getGridWidth(), GC.getMap().getGridHeight(), GC.getMap().isWrapX(), GC.getMap().isWrapY(), NULL, NULL, NULL, potentialIrrigation, NULL, changeIrrigated, &bIrrigated);
 						gDLL->getFAStarIFace()->GeneratePath(pIrrigatedFinder, pLoopPlot->getX(), pLoopPlot->getY(), -1, -1);
 					}
 				}
@@ -7488,7 +7488,7 @@ void CvPlot::updateIrrigated()
 		if (isPotentialIrrigation() && isIrrigationAvailable(true))
 		{
 			bIrrigated = true;
-			gDLL->getFAStarIFace()->Initialize(pIrrigatedFinder, GC.getMapINLINE().getGridWidthINLINE(), GC.getMapINLINE().getGridHeightINLINE(), GC.getMapINLINE().isWrapXINLINE(), GC.getMapINLINE().isWrapYINLINE(), NULL, NULL, NULL, potentialIrrigation, NULL, changeIrrigated, &bIrrigated);
+			gDLL->getFAStarIFace()->Initialize(pIrrigatedFinder, GC.getMap().getGridWidth(), GC.getMap().getGridHeight(), GC.getMap().isWrapX(), GC.getMap().isWrapY(), NULL, NULL, NULL, potentialIrrigation, NULL, changeIrrigated, &bIrrigated);
 			gDLL->getFAStarIFace()->GeneratePath(pIrrigatedFinder, getX(), getY(), -1, -1);
 		}
 	}
@@ -7726,7 +7726,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 				{
 					area()->changeNumOwnedTiles(-1);
 				}
-				GC.getMapINLINE().changeOwnedPlots(-1);
+				GC.getMap().changeOwnedPlots(-1);
 
 				if (!isWater())
 				{
@@ -7808,7 +7808,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 				{
 					area()->changeNumOwnedTiles(1);
 				}
-				GC.getMapINLINE().changeOwnedPlots(1);
+				GC.getMap().changeOwnedPlots(1);
 
 				if (!isWater())
 				{
@@ -8041,7 +8041,7 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 			}
 		}
 
-		GC.getMapINLINE().resetPathDistance();
+		GC.getMap().resetPathDistance();
 
 		if (bWasWater != isWater())
 		{
@@ -8089,11 +8089,11 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 				}
 			}
 
-			GC.getMapINLINE().changeLandPlots((isWater()) ? -1 : 1);
+			GC.getMap().changeLandPlots((isWater()) ? -1 : 1);
 
 			if (getBonusType() != NO_BONUS)
 			{
-				GC.getMapINLINE().changeNumBonusesOnLand(getBonusType(), ((isWater()) ? -1 : 1));
+				GC.getMap().changeNumBonusesOnLand(getBonusType(), ((isWater()) ? -1 : 1));
 			}
 
 			if (isOwned())
@@ -8199,7 +8199,7 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 
 				if (bRecalculateAreas)
 				{
-					GC.getMapINLINE().recalculateAreas();
+					GC.getMap().recalculateAreas();
 				}
 				else
 				{
@@ -8207,12 +8207,12 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 
 					if ((area() != NULL) && (area()->getNumTiles() == 1))
 					{
-						GC.getMapINLINE().deleteArea(getArea());
+						GC.getMap().deleteArea(getArea());
 					}
 
 					if (pNewArea == NULL)
 					{
-						pNewArea = GC.getMapINLINE().addArea();
+						pNewArea = GC.getMap().addArea();
 						pNewArea->init(pNewArea->getID(), isWater());
 					}
 
@@ -8608,11 +8608,11 @@ void CvPlot::setBonusType(BonusTypes eNewValue)
 			{
 				area()->changeNumBonuses(getBonusType(), -1);
 			}
-			GC.getMapINLINE().changeNumBonuses(getBonusType(), -1);
+			GC.getMap().changeNumBonuses(getBonusType(), -1);
 
 			if (!isWater())
 			{
-				GC.getMapINLINE().changeNumBonusesOnLand(getBonusType(), -1);
+				GC.getMap().changeNumBonusesOnLand(getBonusType(), -1);
 			}
 
 			if ( eNewValue == NO_BONUS && getImprovementType() != NO_IMPROVEMENT )
@@ -8645,11 +8645,11 @@ void CvPlot::setBonusType(BonusTypes eNewValue)
 			{
 				area()->changeNumBonuses(getBonusType(), 1);
 			}
-			GC.getMapINLINE().changeNumBonuses(getBonusType(), 1);
+			GC.getMap().changeNumBonuses(getBonusType(), 1);
 
 			if (!isWater())
 			{
-				GC.getMapINLINE().changeNumBonusesOnLand(getBonusType(), 1);
+				GC.getMap().changeNumBonusesOnLand(getBonusType(), 1);
 			}
 		}
 
@@ -9553,7 +9553,7 @@ int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, Yield
 
 		if( bBestRoute && ePlayer != NO_PLAYER )
 		{
-			eRoute = GET_PLAYER(ePlayer).getBestRoute(GC.getMapINLINE().plotSorenINLINE(getX(), getY()));
+			eRoute = GET_PLAYER(ePlayer).getBestRoute(GC.getMap().plotSorenINLINE(getX(), getY()));
 		}
 
 		if (eRoute != NO_ROUTE)
@@ -10563,7 +10563,7 @@ void CvPlot::updatePlotGroup(PlayerTypes ePlayer, bool bRecalculate, bool bRecal
 						else
 						{
 							FAssertMsg(getPlotGroup(ePlayer) == pPlotGroup, "ePlayer's plot group is expected to equal pPlotGroup");
-							GC.getMapINLINE().combinePlotGroups(ePlayer, pPlotGroup, pAdjacentPlotGroup, bRecalculateBonuses);
+							GC.getMap().combinePlotGroups(ePlayer, pPlotGroup, pAdjacentPlotGroup, bRecalculateBonuses);
 							pPlotGroup = getPlotGroup(ePlayer);
 							FAssertMsg(pPlotGroup != NULL, "PlotGroup is not assigned a valid value");
 						}
@@ -12858,7 +12858,7 @@ void CvPlot::doFeature()
 									{
 										setFeatureType((FeatureTypes)iI);
 										strcpy(szSound, kFeature.getGrowthSound());
-										pCity = GC.getMapINLINE().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
+										pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
 										//if (GC.getGameINLINE().getElapsedGameTurns() > 1)
 										//{
 											/*if (kFeature.isCanGrowAnywhere() && getImprovementType() != NO_IMPROVEMENT && !isWater())
@@ -15702,8 +15702,8 @@ void CvPlot::doResourceDepletion()
 				iBonusOdds /= 100;
 				
 				//Duel Maps are size 0.
-				iBonusOdds *= 12 * ((int)GC.getMapINLINE().getWorldSize() + 1);
-				iBonusOdds /= GC.getMapINLINE().getNumBonuses(getBonusType());
+				iBonusOdds *= 12 * ((int)GC.getMap().getWorldSize() + 1);
+				iBonusOdds /= GC.getMap().getNumBonuses(getBonusType());
 				
 				if (GET_PLAYER(getOwner()).getResourceConsumption(getBonusType()) > 0)
 				{
@@ -15721,7 +15721,7 @@ void CvPlot::doResourceDepletion()
 							szBuffer = gDLL->getText("TXT_KEY_MISC_RESOURCE_DEPLETED", GC.getBonusInfo(getBonusType()).getTextKeyWide(), GC.getImprovementInfo(getImprovementType()).getDescription());			
 							AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_FIRSTTOTECH", MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo(getBonusType()).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
 						}
-						pCity = GC.getMapINLINE().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
+						pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
 						GC.getGameINLINE().logMsg("Resource Depleted! Resource was %d, The odds were 1 in %d", getBonusType(), iBonusOdds);
 						setBonusType(NO_BONUS);
 						if (pCity != NULL)
@@ -16360,9 +16360,9 @@ void	CvPlot::setDeferredPlotGroupRecalculationMode(bool bDefer)
 		{
 			CvPlotGroup::startBulkRecalculate();
 
-			for(int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+			for(int iI = 0; iI < GC.getMap().numPlots(); iI++)
 			{
-				CvPlot*	pPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+				CvPlot*	pPlot = GC.getMap().plotByIndex(iI);
 
 				if ( pPlot != NULL && pPlot->m_bPlotGroupsDirty )
 				{

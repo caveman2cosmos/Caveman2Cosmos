@@ -457,9 +457,9 @@ void CvGame::updateColoredPlots()
 		{
 			if (gDLL->getInterfaceIFace()->canSelectionListFound())
 			{
-				for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+				for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 				{
-					pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+					pLoopPlot = GC.getMap().plotByIndex(iI);
 
 					if (pLoopPlot->getOwner() == pHeadSelectedUnit->getOwner())
 					{
@@ -720,7 +720,7 @@ void CvGame::updateColoredPlots()
 /*                                                                                              */
 /* Bugfix                                                                                       */
 /************************************************************************************************/
-										if( GC.getMapINLINE().calculatePathDistance(pLoopUnit->plot(),pLoopPlot) > iBlockadeRange )
+										if( GC.getMap().calculatePathDistance(pLoopUnit->plot(),pLoopPlot) > iBlockadeRange )
 										{
 											// No blockading on other side of an isthmus
 											continue;
@@ -752,10 +752,10 @@ void CvGame::updateBlockadedPlots()
 
 	gDLL->getEngineIFace()->clearAreaBorderPlots(AREA_BORDER_LAYER_BLOCKADED);
 
-	const int iNumPlots = GC.getMapINLINE().numPlots();
+	const int iNumPlots = GC.getMap().numPlots();
 	for (int i = 0; i < iNumPlots; ++i)
 	{
-		const CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndex(i);
+		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(i);
 
 		FAssert(NULL != pLoopPlot);
 
@@ -1080,7 +1080,7 @@ void CvGame::cycleSelectionGroupsInternal(bool bClear, bool bForward, bool bWork
 	else
 	{
 		pPlot = gDLL->getInterfaceIFace()->getLookAtPlot();
-		pNextSelectionGroup = GC.getMapINLINE().findSelectionGroupInternal(((pPlot != NULL) ? pPlot->getX() : 0), ((pPlot != NULL) ? pPlot->getY() : 0), getActivePlayer(), true, bWorkers, bAllowViewportSwitch);
+		pNextSelectionGroup = GC.getMap().findSelectionGroupInternal(((pPlot != NULL) ? pPlot->getX() : 0), ((pPlot != NULL) ? pPlot->getY() : 0), getActivePlayer(), true, bWorkers, bAllowViewportSwitch);
 	}
 
 	bool bViewportSwitched = false;
@@ -2638,7 +2638,7 @@ void CvGame::startFlyoutMenu(const CvPlot* pPlot, std::vector<CvFlyoutMenuData>&
 
 void CvGame::applyFlyoutMenu(const CvFlyoutMenuData& kItem)
 {
-	CvPlot* pPlot = GC.getMapINLINE().plotINLINE(kItem.m_iX, kItem.m_iY);
+	CvPlot* pPlot = GC.getMap().plot(kItem.m_iX, kItem.m_iY);
 	if (pPlot != NULL)
 	{
 		switch (kItem.m_eFlyout)

@@ -2108,7 +2108,7 @@ void CvDLLWidgetData::doPediaBuildJump(CvWidgetDataStruct &widgetDataStruct)
 
 void CvDLLWidgetData::doGotoTurnEvent(CvWidgetDataStruct &widgetDataStruct)
 {
-	CvPlot* pPlot = GC.getMapINLINE().plotINLINE(widgetDataStruct.m_iData1, widgetDataStruct.m_iData2);
+	CvPlot* pPlot = GC.getMap().plot(widgetDataStruct.m_iData1, widgetDataStruct.m_iData2);
 
 	if (NULL != pPlot && !gDLL->getEngineIFace()->isCameraLocked())
 	{
@@ -2119,7 +2119,7 @@ void CvDLLWidgetData::doGotoTurnEvent(CvWidgetDataStruct &widgetDataStruct)
 	}
 }
 
-void CvDLLWidgetData::doMenu( void )
+void CvDLLWidgetData::doMenu()
 {
 	if (!gDLL->isGameInitializing())
 	{

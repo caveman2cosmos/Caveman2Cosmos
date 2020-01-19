@@ -137,27 +137,13 @@ public:
 	{
 		return iX >= 0 && iX < getGridWidth() && iY >= 0 && iY < getGridHeight();
 	}
-	inline int isPlotINLINE(int iX, int iY) const
-	{
-		return ((iX >= 0) && (iX < getGridWidth()) && (iY >= 0) && (iY < getGridHeight()));
-	}
-
 	inline int numPlots() const
 	{
 		return getGridWidth() * getGridHeight();
 	}
-	inline int numPlotsINLINE() const
-	{
-		return getGridWidth() * getGridHeight();
-	}
-
 	inline int plotNum(int iX, int iY) const
 	{
 		return (iY * getGridWidth()) + iX;
-	}
-	inline int plotNumINLINE(int iX, int iY) const
-	{
-		return ((iY * getGridWidth()) + iX);
 	}
 
 	int plotX(int iIndex) const;																										// Exposed to Python
@@ -179,16 +165,7 @@ public:
 	{
 		return m_iGridWidth;
 	}
-	inline int getGridWidthINLINE() const
-	{
-		return m_iGridWidth;
-	}
-
 	inline int getGridHeight() const
-	{
-		return m_iGridHeight;
-	}
-	inline int getGridHeightINLINE() const
 	{
 		return m_iGridHeight;
 	}
@@ -209,25 +186,11 @@ public:
 	{
 		return m_bWrapX;
 	}
-	inline bool isWrapXINLINE() const
-	{
-		return m_bWrapX;
-	}
-
 	inline bool isWrapY() const
 	{
 		return m_bWrapY;
 	}
-	inline bool isWrapYINLINE() const
-	{
-		return m_bWrapY;
-	}
-
 	inline bool isWrap() const
-	{
-		return m_bWrapX || m_bWrapY;
-	}
-	inline bool isWrapINLINE() const
 	{
 		return m_bWrapX || m_bWrapY;
 	}
@@ -249,10 +212,6 @@ public:
 	{
 		return iIndex >= 0 && iIndex < getGridWidth() * getGridHeight() ? &(m_pMapPlots[iIndex]) : NULL;
 	}
-	inline CvPlot* plotByIndexINLINE(int iIndex) const
-	{
-		return (((iIndex >= 0) && (iIndex < (getGridWidth() * getGridHeight()))) ? &(m_pMapPlots[iIndex]) : NULL);
-	}
 
 	__forceinline CvPlot* plot(int iX, int iY) const
 	{
@@ -262,18 +221,9 @@ public:
 		}
 		const int iMapX = coordRange(iX, getGridWidth(), isWrapX());
 		const int iMapY = coordRange(iY, getGridHeight(), isWrapY());
-		return isPlot(iMapX, iMapY) ? &(m_pMapPlots[plotNum(iMapX, iMapY)]) : NULL;
-	}
-	__forceinline CvPlot* plotINLINE(int iX, int iY) const
-	{
-		if ((iX == INVALID_PLOT_COORD) || (iY == INVALID_PLOT_COORD))
-		{
-			return NULL;
-		}
-		const int iMapX = coordRange(iX, getGridWidth(), isWrapX());
-		const int iMapY = coordRange(iY, getGridHeight(), isWrapY());
 		return (isPlot(iMapX, iMapY) ? &(m_pMapPlots[plotNum(iMapX, iMapY)]) : NULL);
 	}
+
 	__forceinline CvPlot* plotSorenINLINE(int iX, int iY) const
 	{
 		if ((iX == INVALID_PLOT_COORD) || (iY == INVALID_PLOT_COORD))

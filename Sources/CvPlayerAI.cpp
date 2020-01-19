@@ -434,7 +434,7 @@ void CvPlayerAI::AI_doTurnPre()
 	{
 		int iMilitary = 0;
 
-		foreach_(CvArea * pLoopArea, GC.getMapINLINE().areas())
+		foreach_(CvArea * pLoopArea, GC.getMap().areas())
 		{
 			for(int iI = 0; iI < NUM_UNITAI_TYPES; iI++)
 			{
@@ -1436,17 +1436,17 @@ void CvPlayerAI::AI_updateFoundValues(bool bClear, CvArea* area) const
 	{
 		m_bCitySitesNotCalculated = true;
 
-		for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+		for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 		{
-			pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+			pLoopPlot = GC.getMap().plotByIndex(iI);
 
 			if ( bSetup || pLoopPlot->isRevealed(getTeam(), false) )
 			{
-				GC.getMapINLINE().plotByIndexINLINE(iI)->clearFoundValue(getID());
+				GC.getMap().plotByIndex(iI)->clearFoundValue(getID());
 			}
 		}
 
-		foreach_(CvArea * pLoopArea, GC.getMapINLINE().areas())
+		foreach_(CvArea * pLoopArea, GC.getMap().areas())
 		{
 			pLoopArea->setBestFoundValue(getID(), -1);
 		}
@@ -1457,9 +1457,9 @@ void CvPlayerAI::AI_updateFoundValues(bool bClear, CvArea* area) const
 
 		//logBBAI("Player %d (%S) Update Found Values ...", getID(), getCivilizationDescription(0));
 
-		for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+		for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 		{
-			pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+			pLoopPlot = GC.getMap().plotByIndex(iI);
 
 			if ((area == NULL || pLoopPlot->area() == area) && (bSetup || pLoopPlot->isRevealed(getTeam(), false)))
 			{
@@ -1521,7 +1521,7 @@ void CvPlayerAI::AI_updateFoundValues(bool bClear, CvArea* area) const
 
 void CvPlayerAI::AI_updateAreaTargets()
 {
-	foreach_(CvArea * pLoopArea, GC.getMapINLINE().areas())
+	foreach_(CvArea * pLoopArea, GC.getMap().areas())
 	{
 		if (!pLoopArea->isWater())
 		{
@@ -2207,7 +2207,7 @@ void CvPlayerAI::AI_conquerCity(CvCity* pCity)
 					{
 						iRazeValue += 40;
 
-						CvCity* pNearestTeamAreaCity = GC.getMapINLINE().findCity(pCity->getX(), pCity->getY(), NO_PLAYER, getTeam(), true, false, NO_TEAM, NO_DIRECTION, pCity);
+						CvCity* pNearestTeamAreaCity = GC.getMap().findCity(pCity->getX(), pCity->getY(), NO_PLAYER, getTeam(), true, false, NO_TEAM, NO_DIRECTION, pCity);
 
 						if( pNearestTeamAreaCity == NULL )
 						{
@@ -2436,7 +2436,7 @@ bool CvPlayerAI::AI_captureUnit(UnitTypes eUnit, CvPlot* pPlot) const
 		return true;
 	}
 
-	pNearestCity = GC.getMapINLINE().findCity(pPlot->getX(), pPlot->getY(), NO_PLAYER, getTeam());
+	pNearestCity = GC.getMap().findCity(pPlot->getX(), pPlot->getY(), NO_PLAYER, getTeam());
 
 	if (pNearestCity != NULL)
 	{
@@ -2775,7 +2775,6 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	int iRange;
 	int iDX, iDY;
 	int iI;
-	bool bIsCoastal;
 	int iResourceValue = 0;
 	int iSpecialFood = 0;
 	int iSpecialFoodPlus = 0;
@@ -2786,18 +2785,17 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	bool bNeutralTerritory = true;
 
 	int iGreed;
-	int iNumAreaCities;
 
-	pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	pPlot = GC.getMap().plot(iX, iY);
 
 	if (!canFound(iX, iY))
 	{
 		return 0;
 	}
 
-	bIsCoastal = pPlot->isCoastalLand(GC.getMIN_WATER_SIZE_FOR_OCEAN());
+	bool bIsCoastal = pPlot->isCoastalLand(GC.getMIN_WATER_SIZE_FOR_OCEAN());
 	pArea = pPlot->area();
-	iNumAreaCities = pArea->getCitiesPerPlayer(getID());
+	int iNumAreaCities = pArea->getCitiesPerPlayer(getID());
 
 	bool bAdvancedStart = (getAdvancedStartPoints() >= 0);
 
@@ -3825,12 +3823,12 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	{
 		if (pPlot->getMinOriginalStartDist() == -1)
 		{
-			iValue += (GC.getMapINLINE().maxStepDistance() * 100);
+			iValue += (GC.getMap().maxStepDistance() * 100);
 		}
 		else
 		{
 			iValue *= (1 + 4 * pPlot->getMinOriginalStartDist());
-			iValue /= (1 + 2 * GC.getMapINLINE().maxStepDistance());
+			iValue /= (1 + 2 * GC.getMap().maxStepDistance());
 		}
 
 		//nice hacky way to avoid this messing with normalizer, use elsewhere?
@@ -3892,7 +3890,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		}
 	}
 
-	pNearestCity = GC.getMapINLINE().findCity(iX, iY, ((isNPC()) ? NO_PLAYER : getID()));
+	pNearestCity = GC.getMap().findCity(iX, iY, ((isNPC()) ? NO_PLAYER : getID()));
 
 	if (pNearestCity != NULL)
 	{
@@ -3950,11 +3948,11 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	}
 	else
 	{
-		pNearestCity = GC.getMapINLINE().findCity(iX, iY, ((isNPC()) ? NO_PLAYER : getID()), ((isNPC()) ? NO_TEAM : getTeam()), false);
+		pNearestCity = GC.getMap().findCity(iX, iY, ((isNPC()) ? NO_PLAYER : getID()), ((isNPC()) ? NO_TEAM : getTeam()), false);
 		if (pNearestCity != NULL)
 		{
 			int iDistance = plotDistance(iX, iY, pNearestCity->getX(), pNearestCity->getY());
-			iValue -= std::min(500 * iDistance, (8000 * iDistance) / GC.getMapINLINE().maxPlotDistance());
+			iValue -= std::min(500 * iDistance, (8000 * iDistance) / GC.getMap().maxPlotDistance());
 		}
 	}
 
@@ -4290,14 +4288,14 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 		}
 	}
 
-	pNearestCity = GC.getMapINLINE().findCity(pCity->getX(), pCity->getY(), getID());
+	pNearestCity = GC.getMap().findCity(pCity->getX(), pCity->getY(), getID());
 
 	if (pNearestCity != NULL)
 	{
 		// Now scales sensibly with map size, on large maps this term was incredibly dominant in magnitude
 		int iTempValue = 30;
-		iTempValue *= std::max(1, ((GC.getMapINLINE().maxStepDistance() * 2) - GC.getMapINLINE().calculatePathDistance(pNearestCity->plot(), pCity->plot())));
-		iTempValue /= std::max(1, (GC.getMapINLINE().maxStepDistance() * 2));
+		iTempValue *= std::max(1, ((GC.getMap().maxStepDistance() * 2) - GC.getMap().calculatePathDistance(pNearestCity->plot(), pCity->plot())));
+		iTempValue /= std::max(1, (GC.getMap().maxStepDistance() * 2));
 
 		iValue += iTempValue;
 	}
@@ -6023,9 +6021,9 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 	if (kTech.isCanPassPeaks())
 	{
 		CvPlot* pPlot;
-		for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 		{
-			pPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+			pPlot = GC.getMap().plotByIndex(iI);
 			if (pPlot->isPeak2(true))
 			{
 				if (pPlot->getOwner() != NO_PLAYER)
@@ -7886,7 +7884,7 @@ int CvPlayerAI::AI_techUnitValue( TechTypes eTech, int iPathLength, bool &bEnabl
 						if (iAssaultValue > 0)
 						{
 							bool bIsAnyAssault = false;
-							foreach_(CvArea* pLoopArea, GC.getMapINLINE().areas())
+							foreach_(CvArea* pLoopArea, GC.getMap().areas())
 							{
 								if (AI_isPrimaryArea(pLoopArea))
 								{
@@ -8792,9 +8790,9 @@ int CvPlayerAI::AI_calculateStolenCityRadiusPlots(PlayerTypes ePlayer) const
 
 	int iCount = 0;
 
-	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		const CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (pLoopPlot->getOwner() == ePlayer && pLoopPlot->isPlayerCityRadius(getID()))
 		{
@@ -12254,7 +12252,7 @@ DenialTypes CvPlayerAI::AI_cityTrade(CvCity* pCity, PlayerTypes ePlayer) const
 
 	if (!(GET_PLAYER(ePlayer).isHuman()))
 	{
-		pNearestCity = GC.getMapINLINE().findCity(pCity->getX(), pCity->getY(), ePlayer, NO_TEAM, true, false, NO_TEAM, NO_DIRECTION, pCity);
+		pNearestCity = GC.getMap().findCity(pCity->getX(), pCity->getY(), ePlayer, NO_TEAM, true, false, NO_TEAM, NO_DIRECTION, pCity);
 		if ((pNearestCity == NULL) || (plotDistance(pCity->getX(), pCity->getY(), pNearestCity->getX(), pNearestCity->getY()) > 18))
 		{
 			return DENIAL_NO_GAIN;
@@ -17416,7 +17414,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	iTempValue = kCivic.getLargestCityHappiness();
 	if (iTempValue != 0)
 	{
-		iValue += (12 * std::min(getNumCities(), GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getTargetNumCities()) * ((isCivic(eCivic)) ? -AI_getHappinessWeight(-iTempValue, 1) : AI_getHappinessWeight(iTempValue, 1) )) / 100;
+		iValue += (12 * std::min(getNumCities(), GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities()) * ((isCivic(eCivic)) ? -AI_getHappinessWeight(-iTempValue, 1) : AI_getHappinessWeight(iTempValue, 1) )) / 100;
 	}
 
 	if (kCivic.getWarWearinessModifier() != 0)
@@ -21239,7 +21237,7 @@ void CvPlayerAI::AI_doCivics()
 											iTechPathLen *= GC.getHandicapInfo(getHandicapType()).getResearchPercent();
 											iTechPathLen /= 100;
 
-											iTechPathLen *= GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getResearchPercent();
+											iTechPathLen *= GC.getWorldInfo(GC.getMap().getWorldSize()).getResearchPercent();
 											iTechPathLen /= 100;
 
 											iTechPathLen *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getResearchPercent();
@@ -23720,7 +23718,7 @@ void CvPlayerAI::AI_doDiplo()
 														int iNeededWorkers = 0;
 
 														//figure out if we need workers or not
-														foreach_(CvArea* pLoopArea, GC.getMapINLINE().areas())
+														foreach_(CvArea* pLoopArea, GC.getMap().areas())
 														{
 															if (pLoopArea->getCitiesPerPlayer(getID()) > 0)
 															{
@@ -24726,7 +24724,7 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 
 	int iNumCities = getNumCities();
 	CvCity* pCity = getCity(kTriggeredData.m_iCityId);
-	CvPlot* pPlot = GC.getMapINLINE().plot(kTriggeredData.m_iPlotX, kTriggeredData.m_iPlotY);
+	CvPlot* pPlot = GC.getMap().plot(kTriggeredData.m_iPlotX, kTriggeredData.m_iPlotY);
 	CvUnit* pUnit = getUnit(kTriggeredData.m_iUnitId);
 
 	int iHappy = 0;
@@ -25322,7 +25320,7 @@ void CvPlayerAI::AI_doSplit()
 
 	std::map<int, int> mapAreaValues;
 
-	foreach_(CvArea * pLoopArea, GC.getMapINLINE().areas())
+	foreach_(CvArea * pLoopArea, GC.getMap().areas())
 	{
 		mapAreaValues[pLoopArea->getID()] = 0;
 	}
@@ -26293,7 +26291,7 @@ int CvPlayerAI::AI_getDominationVictoryStage() const
 
 	int iPercentOfDomination = 0;
 	int iOurPopPercent = (100 * GET_TEAM(getTeam()).getTotalPopulation()) / std::max(1, GC.getGameINLINE().getTotalPopulation());
-	int iOurLandPercent = (100 * GET_TEAM(getTeam()).getTotalLand()) / std::max(1, GC.getMapINLINE().getLandPlots());
+	int iOurLandPercent = (100 * GET_TEAM(getTeam()).getTotalLand()) / std::max(1, GC.getMap().getLandPlots());
 
 	iPercentOfDomination = (100 * iOurPopPercent) / std::max(1, GC.getGameINLINE().getAdjustedPopulationPercent(eDomination));
 	iPercentOfDomination = std::min( iPercentOfDomination, (100 * iOurLandPercent) / std::max(1, GC.getGameINLINE().getAdjustedLandPercent(eDomination)) );
@@ -27209,7 +27207,7 @@ int CvPlayerAI::AI_getStrategyHash() const
 	iParanoia /= 3 * (std::max(1, GC.getNumEraInfos()));
 	// That starts as a factor of 1, and drop to 1/3.  And now for game size...
 	iParanoia *= 14;
-	iParanoia /= (7 + std::max(GET_TEAM(getTeam()).getHasMetCivCount(true), GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getDefaultPlayers()));
+	iParanoia /= (7 + std::max(GET_TEAM(getTeam()).getHasMetCivCount(true), GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()));
 
 	// Alert strategy
 	if( iParanoia >= 200 )
@@ -28024,7 +28022,7 @@ int CvPlayerAI::AI_goldToUpgradeAllUnits(int iExpThreshold) const
 						}
 						else
 						{
-							CvCity* pCloseCity = GC.getMapINLINE().findCity(pLoopUnit->getX(), pLoopUnit->getY(), getID(), NO_TEAM, true, (pLoopUnit->getDomainType() == DOMAIN_SEA));
+							CvCity* pCloseCity = GC.getMap().findCity(pLoopUnit->getX(), pLoopUnit->getY(), getID(), NO_TEAM, true, (pLoopUnit->getDomainType() == DOMAIN_SEA));
 							if (pCloseCity != NULL && pCloseCity->canTrain(eUpgradeUnitType))
 							{
 								bCanUpgrade = true;
@@ -28236,7 +28234,7 @@ void CvPlayerAI::AI_convertUnitAITypesForCrush()
 	std::map<int, int> spare_units;
 	std::multimap<int, CvUnit*> ordered_units;
 
-	foreach_(CvArea * pLoopArea, GC.getMapINLINE().areas())
+	foreach_(CvArea * pLoopArea, GC.getMap().areas())
 	{
 		// Keep 1/2 of recommended floating defenders.
 		if (!pLoopArea || pLoopArea->getAreaAIType(getTeam()) == AREAAI_ASSAULT
@@ -28375,9 +28373,9 @@ int CvPlayerAI::AI_countNumAreaHostileUnits(CvArea* pArea, bool bPlayer, bool bT
 
 	iCount = 0;
 
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		pLoopPlot = GC.getMap().plotByIndex(iI);
 		if ((pLoopPlot->area() == pArea) && pLoopPlot->isVisible(getTeam(), false) && stepDistance(pLoopPlot->getX(), pLoopPlot->getY(), pPlot->getX(), pPlot->getY()) <= iMaxDistance &&
 			((bPlayer && pLoopPlot->getOwner() == getID()) || (bTeam && pLoopPlot->getTeam() == getTeam()) 
 				|| (bNeutral && !pLoopPlot->isOwned()) || (bHostile && pLoopPlot->isOwned() && GET_TEAM(getTeam()).isAtWar(pLoopPlot->getTeam()))))
@@ -28737,7 +28735,7 @@ CvPlot* CvPlayerAI::AI_advancedStartFindCapitalPlot() const
 						{
 							iValue += GC.getGame().getSorenRandNum(100, "AI Advanced Start Choose Team Start");
 						}
-						CvCity * pNearestCity = GC.getMapINLINE().findCity(iX, iY, NO_PLAYER, getTeam());
+						CvCity * pNearestCity = GC.getMap().findCity(iX, iY, NO_PLAYER, getTeam());
 						if (NULL != pNearestCity)
 						{
 							FAssert(pNearestCity->getTeam() == getTeam());
@@ -28780,9 +28778,9 @@ CvPlot* CvPlayerAI::AI_advancedStartFindCapitalPlot() const
 
 	if (NULL != getStartingPlot())
 	{
-		for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 		{
-			CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 			if (pLoopPlot->getArea() == getStartingPlot()->getArea())
 			{
 				int iValue = pLoopPlot->getFoundValue(getID());
@@ -29088,7 +29086,7 @@ bool CvPlayerAI::AI_advancedStartDoRoute(CvPlot* pFromPlot, CvPlot* pToPlot)
 
 		while (pNode != NULL)
 		{
-			CvPlot* pPlot = GC.getMapINLINE().plotSorenINLINE(pNode->m_iX, pNode->m_iY);
+			CvPlot* pPlot = GC.getMap().plotSorenINLINE(pNode->m_iX, pNode->m_iY);
 			RouteTypes eRoute = AI_bestAdvancedStartRoute(pPlot);
 			if (eRoute != NO_ROUTE)
 			{
@@ -29121,9 +29119,9 @@ void CvPlayerAI::AI_advancedStartRouteTerritory()
 //	std::vector<int> aiPlotGroups;
 //	for (iPass = 4; iPass > 1; --iPass)
 //	{
-//		for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+//		for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 //		{
-//			pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+//			pLoopPlot = GC.getMap().plotByIndex(iI);
 //			if ((pLoopPlot != NULL) && (pLoopPlot->getOwner() == getID()) && (pLoopPlot->getRouteType() == NO_ROUTE))
 //			{
 //				aiPlotGroups.clear();
@@ -29165,9 +29163,9 @@ void CvPlayerAI::AI_advancedStartRouteTerritory()
 	CvPlot* pLoopPlot;
 	int iI;
 
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		pLoopPlot = GC.getMap().plotByIndex(iI);
 		if ((pLoopPlot != NULL) && (pLoopPlot->getOwner() == getID()) && (pLoopPlot->getRouteType() == NO_ROUTE))
 		{
 			if (pLoopPlot->getImprovementType() != NO_IMPROVEMENT)
@@ -29207,7 +29205,7 @@ void CvPlayerAI::AI_advancedStartRouteTerritory()
 												{
 													iValue += 100;
 												}
-												int iDistance = GC.getMapINLINE().calculatePathDistance(pLoopPlot, pLoopPlot2);
+												int iDistance = GC.getMap().calculatePathDistance(pLoopPlot, pLoopPlot2);
 												if (iDistance > 0)
 												{
 													iValue /= (1 + iDistance);
@@ -29279,7 +29277,7 @@ void CvPlayerAI::AI_advancedStartRouteTerritory()
 							{
 								iValue += 100;
 							}
-							int iDistance = GC.getMapINLINE().calculatePathDistance(pLoopCity->plot(), pLoopPlot);
+							int iDistance = GC.getMap().calculatePathDistance(pLoopCity->plot(), pLoopPlot);
 							if (iDistance > 0)
 							{
 								iValue /= (1 + iDistance);
@@ -29351,9 +29349,9 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 				CvPlot* pStartingPlot = getStartingPlot();
 				if (NULL != pStartingPlot)
 				{
-					for (int iPlotLoop = 0; iPlotLoop < GC.getMapINLINE().numPlots(); ++iPlotLoop)
+					for (int iPlotLoop = 0; iPlotLoop < GC.getMap().numPlots(); ++iPlotLoop)
 					{
-						CvPlot* pPlot = GC.getMapINLINE().plotByIndex(iPlotLoop);
+						CvPlot* pPlot = GC.getMap().plotByIndex(iPlotLoop);
 
 						if (plotDistance(pPlot->getX(), pPlot->getY(), pStartingPlot->getX(), pStartingPlot->getY()) <= GC.getDefineINT("ADVANCED_START_SIGHT_RANGE"))
 						{
@@ -29380,9 +29378,9 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 
 	for (int iPass = 0; iPass < 6; iPass++)
 	{
-		for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 		{
-			CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 			if (pLoopPlot->isRevealed(getTeam(), false))
 			{
 				if (pLoopPlot->getBonusType(getTeam()) != NO_BONUS)
@@ -29466,9 +29464,9 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 		int iBestFoundValue = 0;
 		CvPlot* pBestFoundPlot = NULL;
 		AI_updateFoundValues(true);
-		for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 		{
-			CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 			//if (pLoopPlot->area() == getStartingPlot()->area())
 			{
 				if (plotDistance(getStartingPlot()->getX(), getStartingPlot()->getY(), pLoopPlot->getX(), pLoopPlot->getY()) < 9)
@@ -29725,9 +29723,9 @@ void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) 
 		int iBestFoundValue = 0;
 		CvPlot* pBestFoundPlot = NULL;
 
-		for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+		for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 		{
-			CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 			if (pLoopPlot->isRevealed(getTeam(), false))
 			{
 				iValue = pLoopPlot->getFoundValue(getID());
@@ -29751,7 +29749,7 @@ void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) 
 		{
 			MEMORY_TRACK_EXEMPT();
 			logBBAI("    Found City Site at (%d, %d)", pBestFoundPlot->getX(), pBestFoundPlot->getY()); 
-			m_aiAICitySites.push_back(GC.getMapINLINE().plotNum(pBestFoundPlot->getX(), pBestFoundPlot->getY()));
+			m_aiAICitySites.push_back(GC.getMap().plotNum(pBestFoundPlot->getX(), pBestFoundPlot->getY()));
 			AI_recalculateFoundValues(pBestFoundPlot->getX(), pBestFoundPlot->getY(), CITY_PLOTS_RADIUS, 2 * CITY_PLOTS_RADIUS);
 		}
 		else
@@ -29795,13 +29793,13 @@ int CvPlayerAI::AI_getNumCitySites() const
 
 bool CvPlayerAI::AI_isPlotCitySite(CvPlot* pPlot) const
 {
-	std::vector<int>::iterator it;
-	int iPlotIndex = GC.getMapINLINE().plotNumINLINE(pPlot->getX(), pPlot->getY());
-
 	if ( m_bCitySitesNotCalculated )
 	{
 		calculateCitySites();
 	}
+
+	std::vector<int>::iterator it;
+	const int iPlotIndex = GC.getMap().plotNum(pPlot->getX(), pPlot->getY());
 
 	for (it = m_aiAICitySites.begin(); it != m_aiAICitySites.end(); ++it)
 	{
@@ -29811,23 +29809,22 @@ bool CvPlayerAI::AI_isPlotCitySite(CvPlot* pPlot) const
 		}
 	}
 	return false;
-
 }
 
 int CvPlayerAI::AI_getNumAreaCitySites(int iAreaID, int& iBestValue) const
 {
-	std::vector<int>::iterator it;
-	int iCount = 0;
-	iBestValue = 0;
-
 	if ( m_bCitySitesNotCalculated )
 	{
 		calculateCitySites();
 	}
 
+	std::vector<int>::iterator it;
+	int iCount = 0;
+	iBestValue = 0;
+
 	for (it = m_aiAICitySites.begin(); it != m_aiAICitySites.end(); ++it)
 	{
-		CvPlot* pCitySitePlot = GC.getMapINLINE().plotByIndex((*it));
+		CvPlot* pCitySitePlot = GC.getMap().plotByIndex((*it));
 		if (pCitySitePlot->getArea() == iAreaID)
 		{
 			iCount++;
@@ -29850,7 +29847,7 @@ int CvPlayerAI::AI_getNumAdjacentAreaCitySites(int iWaterAreaID, int iExcludeAre
 
 	for (it = m_aiAICitySites.begin(); it != m_aiAICitySites.end(); ++it)
 	{
-		CvPlot* pCitySitePlot = GC.getMapINLINE().plotByIndex((*it));
+		CvPlot* pCitySitePlot = GC.getMap().plotByIndex((*it));
 		if (pCitySitePlot->getArea() != iExcludeArea)
 		{
 			if (pCitySitePlot->isAdjacentToArea(iWaterAreaID))
@@ -29868,7 +29865,7 @@ int CvPlayerAI::AI_getNumAdjacentAreaCitySites(int iWaterAreaID, int iExcludeAre
 CvPlot* CvPlayerAI::AI_getCitySite(int iIndex) const
 {
 	FAssert(iIndex < (int)m_aiAICitySites.size());
-	return GC.getMapINLINE().plotByIndex(m_aiAICitySites[iIndex]);
+	return GC.getMap().plotByIndex(m_aiAICitySites[iIndex]);
 }
 
 int CvPlayerAI::AI_bestAreaUnitAIValue(UnitAITypes eUnitAI, CvArea* pArea, UnitTypes* peBestUnitType, CvUnitSelectionCriteria* criteria) const
@@ -30046,15 +30043,14 @@ void CvPlayerAI::AI_doEnemyUnitData()
 
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit;
-	int iI;
 
 	int iOldTotal = 0;
 	int iNewTotal = 0;
 
 	// Count enemy land and sea units visible to us
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 		int iAdjacentAttackers = -1;
 		if (pLoopPlot->isVisible(getTeam(), false))
 		{
@@ -30426,7 +30422,7 @@ int CvPlayerAI::AI_getPlotAirbaseValue(CvPlot* pPlot) const
 
 //	if (iMinOtherCityPlot != NULL)
 //	{
-//		CvCity* pNearestCity = GC.getMapINLINE().findCity(iMinOtherCityPlot->getX(), iMinOtherCityPlot->getY(), NO_PLAYER, getTeam(), false);
+//		CvCity* pNearestCity = GC.getMap().findCity(iMinOtherCityPlot->getX(), iMinOtherCityPlot->getY(), NO_PLAYER, getTeam(), false);
 //		if (NULL == pNearestCity)
 //		{
 //			return 0;
@@ -30443,7 +30439,7 @@ int CvPlayerAI::AI_getPlotAirbaseValue(CvPlot* pPlot) const
 	{
 		if (iMinOtherCityPlot != NULL)
 		{
-			CvCity* pNearestCity = GC.getMapINLINE().findCity(iMinOtherCityPlot->getX(), iMinOtherCityPlot->getY(), NO_PLAYER, getTeam(), false);
+			CvCity* pNearestCity = GC.getMap().findCity(iMinOtherCityPlot->getX(), iMinOtherCityPlot->getY(), NO_PLAYER, getTeam(), false);
 			if (NULL != pNearestCity)
 			{
 				if (plotDistance(pNearestCity->getX(), pNearestCity->getY(), iMinOtherCityPlot->getX(), iMinOtherCityPlot->getY()) < iMinOtherCityDistance)
@@ -31640,7 +31636,7 @@ int CvPlayerAI::AI_workerTradeVal(CvUnit* pUnit) const
 	//	Normalise for game speed
 	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent()) / 100;
 
-	foreach_(CvArea * pLoopArea, GC.getMapINLINE().areas())
+	foreach_(CvArea * pLoopArea, GC.getMap().areas())
 	{
 		if (pLoopArea->getCitiesPerPlayer(getID()) > 0)
 		{
@@ -42333,7 +42329,7 @@ void CvPlayerAI::AI_recalculateUnitCounts()
 	{
 		AI_changeNumAIUnits( (UnitAITypes)iI, -AI_getNumAIUnits((UnitAITypes)iI) );
 
-		for(pLoopArea = GC.getMapINLINE().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMapINLINE().nextArea(&iLoop))
+		for(pLoopArea = GC.getMap().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMap().nextArea(&iLoop))
 		{
 			pLoopArea->changeNumAIUnits(m_eID, (UnitAITypes)iI, -pLoopArea->getNumAIUnits(m_eID, (UnitAITypes)iI));
 		}

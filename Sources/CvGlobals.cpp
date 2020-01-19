@@ -5528,20 +5528,13 @@ void cvInternalGlobals::switchMap(MapTypes eMap)
 {	
 	//bool bInitial = false;
 
-	GC.getMapINLINE().beforeSwitch();
+	GC.getMap().beforeSwitch();
 
 	if (eMap > NO_MAP && eMap < GC.getNumMapInfos())
 		GC.getGame().setCurrentMap(eMap);
 
-	GC.getMapINLINE().afterSwitch();
+	GC.getMap().afterSwitch();
 }
-
-#ifdef _USRDLL
-CvMap& cvInternalGlobals::getMapINLINE()
-{
-	return *m_maps[GC.getGame().getCurrentMap()];
-}
-#endif
 
 CvMap& cvInternalGlobals::getMap()
 {
@@ -5555,12 +5548,12 @@ CvViewport* cvInternalGlobals::getCurrentViewport()
 
 int	cvInternalGlobals::getViewportSizeX() const
 {
-	return GC.viewportsEnabled() ? std::min(m_iViewportSizeX, m_maps[GC.getGame().getCurrentMap()]->getGridWidthINLINE()) : m_maps[GC.getGame().getCurrentMap()]->getGridWidthINLINE();
+	return GC.viewportsEnabled() ? std::min(m_iViewportSizeX, m_maps[GC.getGame().getCurrentMap()]->getGridWidth()) : m_maps[GC.getGame().getCurrentMap()]->getGridWidth();
 }
 
 int	cvInternalGlobals::getViewportSizeY() const
 {
-	return GC.viewportsEnabled() ? std::min(m_iViewportSizeY, m_maps[GC.getGame().getCurrentMap()]->getGridHeightINLINE()) : m_maps[GC.getGame().getCurrentMap()]->getGridHeightINLINE();
+	return GC.viewportsEnabled() ? std::min(m_iViewportSizeY, m_maps[GC.getGame().getCurrentMap()]->getGridHeight()) : m_maps[GC.getGame().getCurrentMap()]->getGridHeight();
 }
 
 int	cvInternalGlobals::getViewportSelectionBorder() const

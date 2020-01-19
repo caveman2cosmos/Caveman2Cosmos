@@ -926,9 +926,9 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 
 	case TRADE_MAPS: {
 
-		for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 		{
-			CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 			if (pLoopPlot->isRevealed(GET_PLAYER(eFromPlayer).getTeam(), false))
 			{

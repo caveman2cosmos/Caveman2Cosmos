@@ -39,17 +39,11 @@ CvReplayInfo::~CvReplayInfo()
 void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 {
 	CvGame& game = GC.getGameINLINE();
-/************************************************************************************************/
-/* Afforess	                  Start		 03/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	if (!game.isFinalInitialized())
 		return;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-	CvMap& map = GC.getMapINLINE();
+
+	const CvMap& map = GC.getMap();
 	
 	if (ePlayer == NO_PLAYER)
 	{
@@ -103,7 +97,6 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 	}
 
 	m_bMultiplayer = game.isGameMultiPlayer();
-
 
 	m_iInitialTurn = GC.getGameINLINE().getStartTurn();
 	m_iStartYear = GC.getGameINLINE().getStartYear();
@@ -173,8 +166,8 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 		}
 	}
 
-	m_iMapWidth = GC.getMapINLINE().getGridWidthINLINE();
-	m_iMapHeight = GC.getMapINLINE().getGridHeightINLINE();
+	m_iMapWidth = GC.getMap().getGridWidth();
+	m_iMapHeight = GC.getMap().getGridHeight();
 	
 	SAFE_DELETE(m_pcMinimapPixels);	
 	m_pcMinimapPixels = new unsigned char[m_nMinimapSize];

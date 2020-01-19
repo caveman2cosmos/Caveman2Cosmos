@@ -102,13 +102,13 @@ void	CvContractBroker::removeUnit(CvUnit* pUnit)
 //		eUnitFlags indicate the type(s) of unit sought
 //		(iAtX,iAtY) is (roughly) where the work will be
 //		pJoinUnit may be NULL but if not it is a request to join that unit's group
-void	CvContractBroker::advertiseWork(int iPriority, unitCapabilities eUnitFlags, int iAtX, int iAtY, CvUnit* pJoinUnit, UnitAITypes eAIType, int iUnitStrength, CvUnitSelectionCriteria* criteria, int iMaxPath)
+void CvContractBroker::advertiseWork(int iPriority, unitCapabilities eUnitFlags, int iAtX, int iAtY, CvUnit* pJoinUnit, UnitAITypes eAIType, int iUnitStrength, CvUnitSelectionCriteria* criteria, int iMaxPath)
 {
 	PROFILE_FUNC();
 
 	workRequest	newRequest;
-	int			iLoop;
-	int			iUnitStrengthTimes100 = (iUnitStrength == -1 ? -1 : iUnitStrength*100);
+	int iLoop;
+	int iUnitStrengthTimes100 = (iUnitStrength == -1 ? -1 : iUnitStrength*100);
 
 	//	First check that there are not already units on the way to meet this need
 	//	else concurrent builds will get queued while they are in transit
@@ -116,7 +116,7 @@ void	CvContractBroker::advertiseWork(int iPriority, unitCapabilities eUnitFlags,
 	{
 		CvPlot* pMissionPlot = pLoopSelectionGroup->AI_getMissionAIPlot();
 
-		if ( pMissionPlot == GC.getMapINLINE().plotINLINE(iAtX, iAtY) && !pLoopSelectionGroup->atPlot(pMissionPlot)
+		if ( pMissionPlot == GC.getMap().plot(iAtX, iAtY) && !pLoopSelectionGroup->atPlot(pMissionPlot)
 			&& pLoopSelectionGroup->AI_getMissionAIType() == (pJoinUnit == NULL ? MISSIONAI_CONTRACT : MISSIONAI_CONTRACT_UNIT) &&
 			 pLoopSelectionGroup->getNumUnits() > 0 && 	//	Allow for the last unit having died so that this group is about to vanish
 			 (eAIType == NO_UNITAI || pLoopSelectionGroup->getHeadUnitAI() == eAIType) &&
@@ -235,12 +235,12 @@ int		CvContractBroker::numRequestsOutstanding(UnitAITypes eUnitAI, bool bAtCityO
 
 	for(int iI = 0; iI < (int)m_workRequests.size(); iI++)
 	{
-		CvPlot* pDestPlot = GC.getMapINLINE().plotINLINE(m_workRequests[iI].iAtX, m_workRequests[iI].iAtY);
+		CvPlot* pDestPlot = GC.getMap().plot(m_workRequests[iI].iAtX, m_workRequests[iI].iAtY);
 		if ( !m_workRequests[iI].bFulfilled )
 		{
 			if ( m_workRequests[iI].eAIType == eUnitAI )
 			{
-				CvCity* targetCity = GC.getMapINLINE().plotINLINE(m_workRequests[iI].iAtX, m_workRequests[iI].iAtY)->getPlotCity();
+				CvCity* targetCity = GC.getMap().plot(m_workRequests[iI].iAtX, m_workRequests[iI].iAtY)->getPlotCity();
 
 				if ( !bAtCityOnly || (targetCity != NULL && targetCity->getOwner() == m_eOwner) )
 				{
@@ -279,7 +279,7 @@ void CvContractBroker::finalizeTenderContracts()
 			UnitTypes eBestUnit = NO_UNIT;
 			UnitAITypes eBestAIType = NO_UNITAI;
 			CvCity*	pBestCity = NULL;
-			CvPlot* pDestPlot = GC.getMapINLINE().plotINLINE(m_workRequests[iI].iAtX, m_workRequests[iI].iAtY);
+			CvPlot* pDestPlot = GC.getMap().plot(m_workRequests[iI].iAtX, m_workRequests[iI].iAtY);
 
 			if( gCityLogLevel >= 3 )
 			{
@@ -326,7 +326,7 @@ void CvContractBroker::finalizeTenderContracts()
 							CvChecksum xSum;
 
 							xSum.add(pCity->getID());
-							xSum.add(GC.getMapINLINE().plotNumINLINE(m_workRequests[iI].iAtX, m_workRequests[iI].iAtY));
+							xSum.add(GC.getMap().plotNum(m_workRequests[iI].iAtX, m_workRequests[iI].iAtY));
 							xSum.add((int)m_workRequests[iI].eAIType);
 
 							iTenderAllocationKey = xSum.get();
@@ -412,7 +412,7 @@ void CvContractBroker::finalizeTenderContracts()
 									if ( iValue > 0 )
 									{
 										//	Decrease by 5% per turn of separation from destination
-										//int iDistance = GC.getMapINLINE().calculatePathDistance(pCity->plot(),pDestPlot);
+										//int iDistance = GC.getMap().calculatePathDistance(pCity->plot(),pDestPlot);
 										int iMaxPath = m_workRequests[iI].iMaxPath;
 										int iMaxWinPath = std::max(0,20 - (20*iBestValue)/iValue);
 
@@ -751,7 +751,7 @@ advertisingUnit*	CvContractBroker::findBestUnit(workRequest& request, bool bThis
 
 				if ( iValue*1000 > iBestValue )
 				{
-					CvPlot*	pTargetPlot = GC.getMapINLINE().plotINLINE(request.iAtX, request.iAtY);
+					CvPlot*	pTargetPlot = GC.getMap().plot(request.iAtX, request.iAtY);
 					int		iPathTurns = 0;
 					int		iMaxPathTurns = std::min((request.iPriority > LOW_PRIORITY_ESCORT_PRIORITY ? MAX_INT : 10), (iBestValue == 0 ? MAX_INT : (1000*iValue)/iBestValue));
 

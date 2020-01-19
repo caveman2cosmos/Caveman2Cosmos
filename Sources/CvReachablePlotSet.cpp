@@ -320,7 +320,7 @@ bool CvReachablePlotSet::canMoveBetweenWithFlags(const CvSelectionGroup* group, 
 		//	Can't cross diagonally across 'land'
 		if (pFromPlot->isWater() && pToPlot->isWater())
 		{
-			if (!(GC.getMapINLINE().plotINLINE(pFromPlot->getX(), pToPlot->getY())->isWater()) && !(GC.getMapINLINE().plotINLINE(pToPlot->getX(), pFromPlot->getY())->isWater()))
+			if (!(GC.getMap().plot(pFromPlot->getX(), pToPlot->getY())->isWater()) && !(GC.getMap().plot(pToPlot->getX(), pFromPlot->getY())->isWater()))
 			{
 				if( !(group->canMoveAllTerrain()) )
 				{

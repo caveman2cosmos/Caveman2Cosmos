@@ -837,12 +837,11 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 	case BUTTONPOPUP_GOTO_CITY:
 		break;
 
-
 	case BUTTONPOPUP_CHOOSE_ARREST_UNIT:
 		if (pPopupReturn->getButtonClicked() != 0)
 		{
 			int iUnitID = pPopupReturn->getButtonClicked();
-			CvPlot* pPlot = GC.getMapINLINE().plotINLINE(info.getData2(), info.getData3());
+			CvPlot* pPlot = GC.getMap().plot(info.getData2(), info.getData3());
 			bst::optional<CvUnit*> clickedUnit = algo::find_if(pPlot->units(), CvUnit::fn::getID() == iUnitID);
 			if (clickedUnit)
 			{
@@ -2018,7 +2017,7 @@ bool CvDLLButtonPopup::launchDeclareWarMovePopup(CvPopup* pPopup, CvPopupInfo &i
 
 	FAssert(eRivalTeam != NO_TEAM);
 
-	CvPlot* pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 
 	CvWString szBuffer;
 	if ((pPlot != NULL) && (pPlot->getTeam() == eRivalTeam))
@@ -2434,9 +2433,9 @@ bool CvDLLButtonPopup::launchMainMenuPopup(CvPopup* pPopup, CvPopupInfo &info)
 /********************************************************************************/
 		if (bShow)
 		{
-			for (int i = 0; i < GC.getMapINLINE().numPlots(); ++i)
+			for (int i = 0; i < GC.getMap().numPlots(); ++i)
 			{
-				CvPlot* pPlot = GC.getMapINLINE().plotByIndexINLINE(i);
+				CvPlot* pPlot = GC.getMap().plotByIndex(i);
 				if (!pPlot->getScriptData().empty())
 				{
 					bShow = false;
@@ -2844,7 +2843,7 @@ bool CvDLLButtonPopup::launchEventPopup(CvPopup* pPopup, CvPopupInfo &info)
 
 	if (kTrigger.isShowPlot())
 	{
-		CvPlot* pPlot = GC.getMapINLINE().plot(pTriggeredData->m_iPlotX, pTriggeredData->m_iPlotY);
+		CvPlot* pPlot = GC.getMap().plot(pTriggeredData->m_iPlotX, pTriggeredData->m_iPlotY);
 		if (NULL != pPlot && pPlot->isInViewport())
 		{
 			gDLL->getEngineIFace()->addColoredPlot(pPlot->getViewportX(), pPlot->getViewportY(), GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT")).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
@@ -2869,7 +2868,7 @@ bool CvDLLButtonPopup::launchFreeColonyPopup(CvPopup* pPopup, CvPopupInfo &info)
 
 	if (GET_PLAYER(ePlayer).canSplitEmpire())
 	{
-		foreach_(CvArea* pLoopArea, GC.getMapINLINE().areas())
+		foreach_(CvArea* pLoopArea, GC.getMap().areas())
 		{
 			if (GET_PLAYER(ePlayer).canSplitArea(pLoopArea->getID()))
 			{
@@ -3124,7 +3123,7 @@ bool CvDLLButtonPopup::launchSelectShadowUnitPopup(CvPopup* pPopup, CvPopupInfo 
 		return false;
 	}
 
-	CvPlot* pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 	if (pPlot == NULL)
 	{
 		return false;
@@ -3384,7 +3383,7 @@ bool CvDLLButtonPopup::launchSelectMergeUnitPopup(CvPopup* pPopup, CvPopupInfo &
 		return false;
 	}
 
-	CvPlot* pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 	if (pPlot == NULL)
 	{
 		return false;
@@ -3434,7 +3433,7 @@ bool CvDLLButtonPopup::launchConfirmSplitUnitPopup(CvPopup* pPopup, CvPopupInfo 
 		return false;
 	}
 
-	CvPlot* pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 	if (pPlot == NULL)
 	{
 		return false;
@@ -3462,7 +3461,7 @@ bool CvDLLButtonPopup::launchImprovementUpgradeOptionsPopup(CvPopup* pPopup, CvP
 		return false;
 	}
 
-	CvPlot* pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 	GET_PLAYER(ePlayer).setFocusPlots(iX,iY);
 	if (pPlot == NULL)
 	{
@@ -3528,7 +3527,7 @@ bool CvDLLButtonPopup::launchSelectArrestUnitPopup(CvPopup* pPopup, CvPopupInfo 
 		return false;
 	}
 
-	CvPlot* pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 	if (pPlot == NULL)
 	{
 		return false;
@@ -3581,7 +3580,7 @@ bool CvDLLButtonPopup::launchConfirmAmbushPopup(CvPopup* pPopup, CvPopupInfo &in
 
 	bool bAssassinate = GET_PLAYER(ePlayer).isAssassinate();
 
-	CvPlot* pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 	if (pPlot == NULL)
 	{
 		return false;

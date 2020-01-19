@@ -257,7 +257,7 @@ void CvTeamAI::AI_updateAreaStragies(bool bTargets)
 		return;
 	}
 
-	for(pLoopArea = GC.getMapINLINE().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMapINLINE().nextArea(&iLoop))
+	for(pLoopArea = GC.getMap().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMap().nextArea(&iLoop))
 	{
 		pLoopArea->setAreaAIType(getID(), AI_calculateAreaAIType(pLoopArea));
 	}
@@ -266,23 +266,14 @@ void CvTeamAI::AI_updateAreaStragies(bool bTargets)
 	{
 		AI_updateAreaTargets();
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 03/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	AI_updateCache();
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 }
 
 
 void CvTeamAI::AI_updateAreaTargets()
 {
-	int iI;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -393,7 +384,7 @@ bool CvTeamAI::AI_hasCitiesInPrimaryArea(TeamTypes eTeam) const
 
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 
-	for(pLoopArea = GC.getMapINLINE().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMapINLINE().nextArea(&iLoop))
+	for(pLoopArea = GC.getMap().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMap().nextArea(&iLoop))
 	{
 		if (AI_isPrimaryArea(pLoopArea))
 		{
@@ -682,24 +673,17 @@ int CvTeamAI::AI_calculateAdjacentLandPlots(TeamTypes eTeam) const
 {
 	PROFILE_FUNC();
 
-	CvPlot* pLoopPlot;
-	int iCount;
-	int iI;
-
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 
-	iCount = 0;
+	int iCount = 0;
 
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
-		if (!(pLoopPlot->isWater()))
+		if (!pLoopPlot->isWater() && pLoopPlot->getTeam() == eTeam && pLoopPlot->isAdjacentTeam(getID(), true))
 		{
-			if ((pLoopPlot->getTeam() == eTeam) && pLoopPlot->isAdjacentTeam(getID(), true))
-			{
-				iCount++;
-			}
+			iCount++;
 		}
 	}
 
@@ -713,9 +697,9 @@ int CvTeamAI::AI_calculatePlotWarValue(TeamTypes eTeam) const
 
 	int iValue = 0;
 
-	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (pLoopPlot->getTeam() == eTeam)
 		{
@@ -758,9 +742,9 @@ int CvTeamAI::AI_calculateBonusWarValue(TeamTypes eTeam) const
 
 	int iValue = 0;
 
-	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (pLoopPlot->getTeam() == eTeam)
 		{
@@ -875,7 +859,7 @@ int CvTeamAI::AI_calculateCapitalProximity(TeamTypes eTeam) const
 	if (iCount > 0)
 	{
 		FAssert(iMaxDistance > 0);
-		return ((GC.getMapINLINE().maxPlotDistance() * (iMaxDistance - ((iTotalDistance / iCount) - iMinDistance))) / iMaxDistance);
+		return ((GC.getMap().maxPlotDistance() * (iMaxDistance - ((iTotalDistance / iCount) - iMinDistance))) / iMaxDistance);
 	}
 
 	return 0;
@@ -1517,7 +1501,7 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 	int iTheirAttackers = 0;
 	CvArea* pLoopArea = NULL;
 	int iLoop;
-	for(pLoopArea = GC.getMapINLINE().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMapINLINE().nextArea(&iLoop))
+	for(pLoopArea = GC.getMap().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMap().nextArea(&iLoop))
 	{
 		iTheirAttackers += countEnemyDangerByArea(pLoopArea, eTeam);
 	}
@@ -2106,16 +2090,14 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 int CvTeamAI::AI_mapTradeVal(TeamTypes eTeam) const
 {
 	CvPlot* pLoopPlot;
-	int iValue;
-	int iI;
 
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 
-	iValue = 0;
+	int iValue = 0;
 
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (!(pLoopPlot->isRevealed(getID(), false)) && pLoopPlot->isRevealed(eTeam, false))
 		{
@@ -2595,7 +2577,7 @@ DenialTypes CvTeamAI::AI_surrenderTrade(TeamTypes eTeam, int iPowerMultiplier) c
 			{
 				bLandThreat = false;
 
-				int iThreshold = GC.getMapINLINE().getLandPlots() * GC.getGameINLINE().getAdjustedLandPercent((VictoryTypes)i);
+				int iThreshold = GC.getMap().getLandPlots() * GC.getGameINLINE().getAdjustedLandPercent((VictoryTypes)i);
 				if (400 * getTotalLand(!isAVassal()) > 3 * iThreshold)
 				{
 					return DENIAL_VICTORY;
@@ -5338,7 +5320,7 @@ void CvTeamAI::AI_doWar()
 						bAreaValid = false;
 						bShareValid = false;
 
-						for(pLoopArea = GC.getMapINLINE().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMapINLINE().nextArea(&iLoop))
+						for(pLoopArea = GC.getMap().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMap().nextArea(&iLoop))
 						{
 							if (AI_isPrimaryArea(pLoopArea))
 							{
@@ -5568,20 +5550,20 @@ void CvTeamAI::AI_doWar()
 /************************************************************************************************/
 		// if (GET_PLAYER(getLeaderID()).getCurrentEra() < GC.getNumEraInfos() / 2)
 		// {
-			// if (GET_PLAYER(getLeaderID()).getNumCities() < GC.getMapINLINE().getWorldSize() + 1)
+			// if (GET_PLAYER(getLeaderID()).getNumCities() < GC.getMap().getWorldSize() + 1)
 			// {
 				// return;
 			// }
 			// CvCity* pCapital = GET_PLAYER(getLeaderID()).getCapitalCity();
 			//bool bEarlyGame = (100 * GC.getGameINLINE().getElapsedGameTurns()) / std::max(1, GC.getGameINLINE().getEstimateEndTurn()) < 20;
-			// int iAverage = GC.getMapINLINE().getGridWidthINLINE() + GC.getMapINLINE().getGridHeightINLINE() / 2;
+			// int iAverage = GC.getMap().getGridWidth() + GC.getMap().getGridHeight() / 2;
 			// bool bPrimaryArea = true;
 			// if (pCapital != NULL)
 				// bPrimaryArea = AI_isPrimaryArea(pCapital->area());
 			// int iThreshold = bAggressive ? 40 : 30;
 			// if (pCapital != NULL)
 			// {
-				// if (GC.getMapINLINE().percentUnoccupiedLand(true, true, true, bPrimaryArea ? pCapital->area() : NULL, /*bEarlyGame ?  */iAverage / 5/* : -1*/, bPrimaryArea ? pCapital->plot() : NULL) > iThreshold)
+				// if (GC.getMap().percentUnoccupiedLand(true, true, true, bPrimaryArea ? pCapital->area() : NULL, /*bEarlyGame ?  */iAverage / 5/* : -1*/, bPrimaryArea ? pCapital->plot() : NULL) > iThreshold)
 				// {
 					// return;
 				// }
@@ -6629,21 +6611,15 @@ bool CvTeamAI::AI_hasAdjacentLandPlots(TeamTypes eTeam) const
 {
 	PROFILE_FUNC();
 
-	CvPlot* pLoopPlot;
-	int iI;
-
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
-		if (!(pLoopPlot->isWater()))
+		if (!pLoopPlot->isWater() && pLoopPlot->getTeam() == eTeam && pLoopPlot->isAdjacentTeam(getID(), true))
 		{
-			if ((pLoopPlot->getTeam() == eTeam) && pLoopPlot->isAdjacentTeam(getID(), true))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
 

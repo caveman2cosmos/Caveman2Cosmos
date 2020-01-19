@@ -168,9 +168,9 @@ void CvGameObjectGame::foreach(GameObjectTypes eType, bst::function<void (CvGame
 			break;
 
 		case GAMEOBJECT_PLOT:
-			for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+			for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 			{
-				func(GC.getMapINLINE().plotByIndexINLINE(iI)->getGameObject());
+				func(GC.getMap().plotByIndex(iI)->getGameObject());
 			}
 			break;
 
@@ -211,9 +211,9 @@ void CvGameObjectTeam::foreach(GameObjectTypes eType, bst::function<void (CvGame
 			break;
 
 		case GAMEOBJECT_PLOT:
-			for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+			for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 			{
-				CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+				CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 				if (pLoopPlot->getTeam() == m_pTeam->getID())
 				{
 					func(pLoopPlot->getGameObject());
@@ -255,9 +255,9 @@ void CvGameObjectPlayer::foreach(GameObjectTypes eType, bst::function<void (CvGa
 			break;
 
 		case GAMEOBJECT_PLOT:
-			for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+			for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 			{
-				CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+				CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 				if (pLoopPlot->getOwner() == m_pPlayer->getID())
 				{
 					func(pLoopPlot->getGameObject());
@@ -565,7 +565,7 @@ void CvGameObjectPlot::foreachNear(GameObjectTypes eType, bst::function<void(CvG
 	{
 		for (int iY=iPlotY - iDistance; iY <= iPlotY + iDistance; iY++)
 		{
-			CvPlot* pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+			CvPlot* pPlot = GC.getMap().plot(iX, iY);
 			if (pPlot)
 				pPlot->getGameObject()->foreachOn(eType, func);
 		}
@@ -1990,26 +1990,26 @@ void CvGameObjectPlot::disposePythonWrapper(void *pArgument)
 int CvGameObject::adaptValueToGame(int iID, int iValue) const
 {
 	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getPercent(iID)) / 100;
-	return (iValue * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getPercent(iID)) / 100;
+	return (iValue * GC.getWorldInfo(GC.getMap().getWorldSize()).getPercent(iID)) / 100;
 }
 
 int CvGameObjectPlayer::adaptValueToGame(int iID, int iValue) const
 {
 	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getPercent(iID)) / 100;
-	iValue = (iValue * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getPercent(iID)) / 100;
+	iValue = (iValue * GC.getWorldInfo(GC.getMap().getWorldSize()).getPercent(iID)) / 100;
 	return (iValue * GC.getHandicapInfo(m_pPlayer->getHandicapType()).getPercent(iID)) / 100;
 }
 
 int CvGameObjectCity::adaptValueToGame(int iID, int iValue) const
 {
 	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getPercent(iID)) / 100;
-	iValue = (iValue * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getPercent(iID)) / 100;
+	iValue = (iValue * GC.getWorldInfo(GC.getMap().getWorldSize()).getPercent(iID)) / 100;
 	return (iValue * GC.getHandicapInfo(GET_PLAYER(m_pCity->getOwner()).getHandicapType()).getPercent(iID)) / 100;
 }
 
 int CvGameObjectUnit::adaptValueToGame(int iID, int iValue) const
 {
 	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getPercent(iID)) / 100;
-	iValue = (iValue * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getPercent(iID)) / 100;
+	iValue = (iValue * GC.getWorldInfo(GC.getMap().getWorldSize()).getPercent(iID)) / 100;
 	return (iValue * GC.getHandicapInfo(GET_PLAYER(m_pUnit->getOwner()).getHandicapType()).getPercent(iID)) / 100;
 }

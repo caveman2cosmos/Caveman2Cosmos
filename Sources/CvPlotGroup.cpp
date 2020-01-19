@@ -142,7 +142,7 @@ void CvPlotGroup::Validate()
 
 	while (pPlotNode != NULL)
 	{
-		CvPlot* pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
+		CvPlot* pPlot = GC.getMap().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
 
 		FAssert(pPlot->getPlotGroup(m_eOwner) == this);
 		pPlotNode = nextPlotsNode(pPlotNode);
@@ -157,7 +157,7 @@ CvPlot* CvPlotGroup::getRepresentativePlot() const
 
 	if ( m_seedPlotX != -1 && m_seedPlotY != -1 )
 	{
-		result = GC.getMapINLINE().plotINLINE(m_seedPlotX, m_seedPlotY);
+		result = GC.getMap().plot(m_seedPlotX, m_seedPlotY);
 
 		if ( result != NULL && result->getPlotGroup(m_eOwner) != this )
 		{
@@ -167,11 +167,11 @@ CvPlot* CvPlotGroup::getRepresentativePlot() const
 
 	if ( result == NULL )
 	{
-		for(int iI = 0; iI < GC.getMapINLINE().getGridWidthINLINE(); iI++)
+		for(int iI = 0; iI < GC.getMap().getGridWidth(); iI++)
 		{
-			for(int iJ = 0; iJ < GC.getMapINLINE().getGridHeightINLINE(); iJ++)
+			for(int iJ = 0; iJ < GC.getMap().getGridHeight(); iJ++)
 			{
-				result = GC.getMapINLINE().plotSorenINLINE(iI, iJ);
+				result = GC.getMap().plotSorenINLINE(iI, iJ);
 
 				if ( result->getPlotGroup(m_eOwner) == this )
 				{
@@ -297,7 +297,7 @@ void CvPlotGroup::recalculatePlots()
 			pPlotNode != NULL;
 			pPlotNode = removedPlotParams.removedPlots.next(pPlotNode))
 		{
-			pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
+			pPlot = GC.getMap().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
 
 			FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
 
@@ -309,7 +309,7 @@ void CvPlotGroup::recalculatePlots()
 			pPlotNode != NULL;
 			pPlotNode = removedPlotParams.removedPlots.next(pPlotNode))
 		{
-			pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
+			pPlot = GC.getMap().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
 
 			FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
 
@@ -339,7 +339,7 @@ void CvPlotGroup::recalculatePlots()
 		{
 			PROFILE("CvPlotGroup::recalculatePlots update 1");
 
-			pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
+			pPlot = GC.getMap().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
 
 			FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
 
@@ -356,7 +356,7 @@ void CvPlotGroup::recalculatePlots()
 		{
 			PROFILE("CvPlotGroup::recalculatePlots update 2");
 
-			pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
+			pPlot = GC.getMap().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
 
 			FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
 
@@ -377,7 +377,7 @@ void CvPlotGroup::recalculatePlots()
 		{
 			PROFILE("CvPlotGroup::recalculatePlots update 2");
 
-			pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
+			pPlot = GC.getMap().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
 
 			FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
 
@@ -405,7 +405,7 @@ void CvPlotGroup::recalculatePlots()
 		{
 			PROFILE("CvPlotGroup::recalculatePlots update 3");
 
-			pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
+			pPlot = GC.getMap().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
 
 			FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
 
@@ -452,9 +452,9 @@ void CvPlotGroup::recalculatePlots()
 	}
 
 #ifdef VALIDATION_FOR_PLOT_GROUPS
-	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if ( pLoopPlot->getPlotGroupId(m_eOwner) != -1 && pLoopPlot->getPlotGroup(m_eOwner) == NULL )
 		{
@@ -526,7 +526,7 @@ void CvPlotGroup::plotEnumerator(bool (*pfFunc)(CvPlotGroup* onBehalfOf, CvPlot*
 
 	if ( m_seedPlotX != -1 && m_seedPlotY != -1 )
 	{
-		pStartPlot = GC.getMapINLINE().plotINLINE(m_seedPlotX, m_seedPlotY);
+		pStartPlot = GC.getMap().plot(m_seedPlotX, m_seedPlotY);
 
 		if ( pStartPlot != NULL && pStartPlot->getPlotGroup(m_eOwner) == this )
 		{
@@ -541,25 +541,25 @@ void CvPlotGroup::plotEnumerator(bool (*pfFunc)(CvPlotGroup* onBehalfOf, CvPlot*
 
 	if ( !bSeedValid )
 	{
-		pStartPlot = GC.getMapINLINE().plotSorenINLINE(GC.getMapINLINE().getGridWidthINLINE()/2,GC.getMapINLINE().getGridHeightINLINE()/2);
+		pStartPlot = GC.getMap().plotSorenINLINE(GC.getMap().getGridWidth()/2, GC.getMap().getGridHeight()/2);
 	}
 
-	int iMaxXDistance = GC.getMapINLINE().getGridWidthINLINE();
-	int iMaxYDistance = GC.getMapINLINE().getGridHeightINLINE();
+	int iMaxXDistance = GC.getMap().getGridWidth();
+	int iMaxYDistance = GC.getMap().getGridHeight();
 
-	if ( GC.getMapINLINE().isWrapXINLINE() )
+	if (GC.getMap().isWrapX())
 	{
 		iMaxXDistance /= 2;
 	}
 
-	if ( GC.getMapINLINE().isWrapYINLINE() )
+	if (GC.getMap().isWrapY())
 	{
 		iMaxYDistance /= 2;
 	}
 
-	int iMinX = pStartPlot->getX() - iMaxXDistance + (GC.getMapINLINE().getGridWidthINLINE()%2 == 0 ? 1 : 0);
+	int iMinX = pStartPlot->getX() - iMaxXDistance + (GC.getMap().getGridWidth()%2 == 0 ? 1 : 0);
 	int iMaxX = pStartPlot->getX() + iMaxXDistance;
-	int iMinY = pStartPlot->getY() - iMaxYDistance + (GC.getMapINLINE().getGridHeightINLINE()%2 == 0 ? 1 : 0);
+	int iMinY = pStartPlot->getY() - iMaxYDistance + (GC.getMap().getGridHeight()%2 == 0 ? 1 : 0);
 	int iMaxY = pStartPlot->getY() + iMaxYDistance;
 
 	for(int iRadius = 0;
@@ -605,7 +605,7 @@ void CvPlotGroup::plotEnumerator(bool (*pfFunc)(CvPlotGroup* onBehalfOf, CvPlot*
 					continue;
 				}
 
-				CvPlot* pLoopPlot = GC.getMapINLINE().plotINLINE(iX,iY);
+				CvPlot* pLoopPlot = GC.getMap().plot(iX,iY);
 
 				if ( pLoopPlot != NULL && pLoopPlot->getPlotGroup(m_eOwner) == this )
 				{

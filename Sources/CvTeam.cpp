@@ -632,9 +632,9 @@ void CvTeam::reset(TeamTypes eID, bool bConstructorCall)
 //
 void CvTeam::resetPlotAndCityData()
 {
-	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 		
 		pLoopPlot->setRevealedOwner(getID(), NO_PLAYER);
 		pLoopPlot->setRevealedImprovementType(getID(), NO_IMPROVEMENT);
@@ -1038,9 +1038,9 @@ void CvTeam::addTeam(TeamTypes eTeam)
 		}
 	}
 
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		pLoopPlot->changeVisibilityCount(getID(), pLoopPlot->getVisibilityCount(eTeam), NO_INVISIBLE, false);
 
@@ -1760,8 +1760,8 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 /* Efficiency                                                                                   */
 /************************************************************************************************/
 		// Plot danger cache
-		GC.getMapINLINE().invalidateIsTeamBorderCache(eTeam);
-		GC.getMapINLINE().invalidateIsTeamBorderCache(getID());
+		GC.getMap().invalidateIsTeamBorderCache(eTeam);
+		GC.getMap().invalidateIsTeamBorderCache(getID());
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
@@ -1831,7 +1831,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 
 		if (bInFull)
 		{
-			GC.getMapINLINE().verifyUnitValidPlot();
+			GC.getMap().verifyUnitValidPlot();
 		}
 
 		//isolated NPC war declarations as it happens now on each load process at a point when such validation cannot take place in the environment that isn't fully initialized yet.
@@ -2304,8 +2304,8 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 /* Efficiency                                                                                   */
 /************************************************************************************************/
 		// Plot danger cache
-		GC.getMapINLINE().invalidateIsTeamBorderCache(eTeam);
-		GC.getMapINLINE().invalidateIsTeamBorderCache(getID());
+		GC.getMap().invalidateIsTeamBorderCache(eTeam);
+		GC.getMap().invalidateIsTeamBorderCache(getID());
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
@@ -2329,7 +2329,7 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 
 		if (bBumpUnits)
 		{
-			GC.getMapINLINE().verifyUnitValidPlot();
+			GC.getMap().verifyUnitValidPlot();
 		}
 
 		GC.getGameINLINE().AI_makeAssignWorkDirty();
@@ -3456,9 +3456,9 @@ int CvTeam::countEnemyDangerByArea(CvArea* pArea, TeamTypes eEnemyTeam ) const
 
 	int iCount = 0;
 
-	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (pLoopPlot != NULL && pLoopPlot->area() == pArea && pLoopPlot->getTeam() == getID())
 		{
@@ -3535,7 +3535,7 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 	iCost *= iModifier;
 	iCost /= 100;
 
-	iModifier = GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getResearchPercent();
+	iModifier = GC.getWorldInfo(GC.getMap().getWorldSize()).getResearchPercent();
 	iCost *= iModifier;
 	iCost /= 100;
 
@@ -4264,12 +4264,12 @@ void CvTeam::changeExtraWaterSeeFromCount(int iChange)
 {
 	if (iChange != 0)
 	{
-		GC.getMapINLINE().updateSight(false);
+		GC.getMap().updateSight(false);
 
 		m_iExtraWaterSeeFromCount = (m_iExtraWaterSeeFromCount + iChange);
 		FAssert(getExtraWaterSeeFromCount() >= 0);
 
-		GC.getMapINLINE().updateSight(true);
+		GC.getMap().updateSight(true);
 	}
 }
 
@@ -4462,7 +4462,7 @@ void CvTeam::changeIrrigationCount(int iChange)
 		m_iIrrigationCount = (m_iIrrigationCount + iChange);
 		FAssert(getIrrigationCount() >= 0);
 
-		GC.getMapINLINE().updateIrrigated();
+		GC.getMap().updateIrrigated();
 	}
 }
 
@@ -4613,9 +4613,9 @@ void CvTeam::setStolenVisibilityTimer(TeamTypes eIndex, int iNewValue)
 
 		if (bOldStolenVisibility != isStolenVisibility(eIndex))
 		{
-			for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+			for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 			{
-				pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+				pLoopPlot = GC.getMap().plotByIndex(iI);
 
 				if (pLoopPlot->isVisible(eIndex, false))
 				{
@@ -5047,7 +5047,7 @@ void CvTeam::setOpenBorders(TeamTypes eIndex, bool bNewValue)
 
 		AI_setOpenBordersCounter(eIndex, 0);
 
-		GC.getMapINLINE().verifyUnitValidPlot();
+		GC.getMap().verifyUnitValidPlot();
 
 		if ((getID() == GC.getGameINLINE().getActiveTeam()) || (eIndex == GC.getGameINLINE().getActiveTeam()))
 		{
@@ -5249,9 +5249,9 @@ void CvTeam::setVassal(TeamTypes eIndex, bool bNewValue, bool bCapitulated)
 			}
 		}
 
-		for (int i = 0; i < GC.getMapINLINE().numPlotsINLINE(); ++i)
+		for (int i = 0; i < GC.getMap().numPlots(); ++i)
 		{
-			CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(i);
+			CvPlot* pLoopPlot = GC.getMap().plotByIndex(i);
 			if (pLoopPlot && (pLoopPlot->getTeam() == getID() || pLoopPlot->getTeam() == eIndex))
 			{
 				pLoopPlot->updateCulture(true, false);
@@ -6483,9 +6483,9 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 		}
 		else
 		{
-			for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+			for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 			{
-				pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+				pLoopPlot = GC.getMap().plotByIndex(iI);
 
 				if (pLoopPlot->getBonusType() != NO_BONUS)
 				{
@@ -6503,9 +6503,9 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 
 			m_pabHasTech[eIndex] = bNewValue;
 
-			for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+			for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 			{
-				pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+				pLoopPlot = GC.getMap().plotByIndex(iI);
 
 				if (pLoopPlot->getBonusType() != NO_BONUS)
 				{
@@ -6558,7 +6558,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 
 			if (GC.getTechInfo(eIndex).isMapVisible())
 			{
-				GC.getMapINLINE().setRevealedPlots(getID(), true, true);
+				GC.getMap().setRevealedPlots(getID(), true, true);
 			}
 
 			// report event to Python, along with some other key state
@@ -6941,9 +6941,9 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 				{
 					announceTechToPlayers(eIndex);
 
-					for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+					for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 					{
-						pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+						pLoopPlot = GC.getMap().plotByIndex(iI);
 
 						if (pLoopPlot->getTeam() == getID())
 						{
@@ -6953,7 +6953,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 							{
 								if (GC.getBonusInfo(eBonus).getTechReveal() == eIndex && !isForceRevealedBonus(eBonus))
 								{
-									pCity = GC.getMapINLINE().findCity(pLoopPlot->getX(), pLoopPlot->getY(), NO_PLAYER, getID(), false);
+									pCity = GC.getMap().findCity(pLoopPlot->getX(), pLoopPlot->getY(), NO_PLAYER, getID(), false);
 
 									if (pCity != NULL)
 									{
@@ -7229,20 +7229,20 @@ void CvTeam::testCircumnavigated()
 		return;
 	}
 
-	if (!GC.getGameINLINE().circumnavigationAvailable())
+	if (!GC.getGame().circumnavigationAvailable())
 	{
 		return;
 	}
 
-	if (GC.getMapINLINE().isWrapXINLINE())
+	if (GC.getMap().isWrapX())
 	{
-		for (iX = 0; iX < GC.getMapINLINE().getGridWidthINLINE(); iX++)
+		for (iX = 0; iX < GC.getMap().getGridWidth(); iX++)
 		{
 			bFoundVisible = false;
 
-			for (iY = 0; iY < GC.getMapINLINE().getGridHeightINLINE(); iY++)
+			for (iY = 0; iY < GC.getMap().getGridHeight(); iY++)
 			{
-				pPlot = GC.getMapINLINE().plotSorenINLINE(iX, iY);
+				pPlot = GC.getMap().plotSorenINLINE(iX, iY);
 
 				if (pPlot->isRevealed(getID(), false))
 				{
@@ -7258,15 +7258,15 @@ void CvTeam::testCircumnavigated()
 		}
 	}
 
-	if (GC.getMapINLINE().isWrapYINLINE())
+	if (GC.getMap().isWrapY())
 	{
-		for (iY = 0; iY < GC.getMapINLINE().getGridHeightINLINE(); iY++)
+		for (iY = 0; iY < GC.getMap().getGridHeight(); iY++)
 		{
 			bFoundVisible = false;
 
-			for (iX = 0; iX < GC.getMapINLINE().getGridWidthINLINE(); iX++)
+			for (iX = 0; iX < GC.getMap().getGridWidth(); iX++)
 			{
-				pPlot = GC.getMapINLINE().plotSorenINLINE(iX, iY);
+				pPlot = GC.getMap().plotSorenINLINE(iX, iY);
 
 				if (pPlot->isRevealed(getID(), false))
 				{
@@ -7616,9 +7616,9 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 /* Afforess	                     END                                                            */
 /************************************************************************************************/	
 
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		eBonus = pLoopPlot->getBonusType();
 
@@ -7897,9 +7897,9 @@ void CvTeam::setForceRevealedBonus(BonusTypes eBonus, bool bRevealed)
 		return;
 	}
 
-	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); ++iI)
+	for (int iI = 0; iI < GC.getMap().numPlots(); ++iI)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (pLoopPlot->getBonusType() == eBonus)
 		{
@@ -7928,9 +7928,9 @@ void CvTeam::setForceRevealedBonus(BonusTypes eBonus, bool bRevealed)
 		}
 	}
 
-	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); ++iI)
+	for (int iI = 0; iI < GC.getMap().numPlots(); ++iI)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (pLoopPlot->getBonusType() == eBonus)
 		{
@@ -7941,9 +7941,9 @@ void CvTeam::setForceRevealedBonus(BonusTypes eBonus, bool bRevealed)
 		}
 	}
 
-	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); ++iI)
+	for (int iI = 0; iI < GC.getMap().numPlots(); ++iI)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (pLoopPlot->getBonusType() == eBonus)
 		{
@@ -9402,19 +9402,16 @@ void CvTeam::changeBuildingYieldModifier(BuildingTypes eIndex1, YieldTypes eInde
 
 void CvTeam::setLimitedBorders(TeamTypes eIndex, bool bNewValue)
 {
-	bool bOldFreeTrade;
-	int iI;
-
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
 
 	if (isLimitedBorders(eIndex) != bNewValue)
 	{
-		bOldFreeTrade = isFreeTrade(eIndex);
+		const bool bOldFreeTrade = isFreeTrade(eIndex);
 
 		m_abLimitedBorders[eIndex] = bNewValue;
 
-		GC.getMapINLINE().verifyUnitValidPlot();
+		GC.getMap().verifyUnitValidPlot();
 
 		if ((getID() == GC.getGameINLINE().getActiveTeam()) || (eIndex == GC.getGameINLINE().getActiveTeam()))
 		{
@@ -9423,7 +9420,7 @@ void CvTeam::setLimitedBorders(TeamTypes eIndex, bool bNewValue)
 
 		if (bOldFreeTrade != isFreeTrade(eIndex))
 		{
-			for (iI = 0; iI < MAX_PLAYERS; iI++)
+			for (int iI = 0; iI < MAX_PLAYERS; iI++)
 			{
 				if (GET_PLAYER((PlayerTypes)iI).isAlive())
 				{

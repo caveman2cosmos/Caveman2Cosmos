@@ -814,18 +814,16 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 //
 // Reset all data for this player stored in plot and city objects
 //
-void CvPlayer::resetPlotAndCityData( )
+void CvPlayer::resetPlotAndCityData()
 {
-	CvPlot* pLoopPlot;
-	CvCity* pLoopCity;
-	for (int iPlot = 0; iPlot < GC.getMapINLINE().numPlotsINLINE(); ++iPlot)
+	for (int iPlot = 0; iPlot < GC.getMap().numPlots(); ++iPlot)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iPlot);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
 
 		pLoopPlot->setCulture(getID(), 0, false, false);
 		pLoopPlot->setFoundValue(getID(), 0);
 
-		pLoopCity = pLoopPlot->getPlotCity();
+		CvCity* pLoopCity = pLoopPlot->getPlotCity();
 		if( pLoopCity != NULL )
 		{
 			pLoopCity->setCulture(getID(), 0, false, false);
@@ -2480,9 +2478,9 @@ void CvPlayer::initFreeUnits()
 		CvPlot* pStartingPlot = getStartingPlot();
 		if (NULL != pStartingPlot)
 		{
-			for (int iPlotLoop = 0; iPlotLoop < GC.getMapINLINE().numPlots(); ++iPlotLoop)
+			for (int iPlotLoop = 0; iPlotLoop < GC.getMap().numPlots(); ++iPlotLoop)
 			{
-				CvPlot* pPlot = GC.getMapINLINE().plotByIndex(iPlotLoop);
+				CvPlot* pPlot = GC.getMap().plotByIndex(iPlotLoop);
 
 				if (plotDistance(pPlot->getX(), pPlot->getY(), pStartingPlot->getX(), pStartingPlot->getY()) <= GC.getDefineINT("ADVANCED_START_SIGHT_RANGE"))
 				{
@@ -2763,15 +2761,15 @@ int CvPlayer::startingPlotRange() const
 {
 	int iRange;
 
-	iRange = (GC.getMapINLINE().maxStepDistance() + 10);
+	iRange = (GC.getMap().maxStepDistance() + 10);
 
 	iRange *= GC.getDefineINT("STARTING_DISTANCE_PERCENT");
 	iRange /= 100;
 
-	iRange *= (GC.getMapINLINE().getLandPlots() / (GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getTargetNumCities() * GC.getGameINLINE().countCivPlayersAlive()));
+	iRange *= (GC.getMap().getLandPlots() / (GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities() * GC.getGameINLINE().countCivPlayersAlive()));
 	iRange /= NUM_CITY_PLOTS;
 
-	iRange += std::min(((GC.getMapINLINE().getNumAreas() + 1) / 2), GC.getGameINLINE().countCivPlayersAlive());
+	iRange += std::min(((GC.getMap().getNumAreas() + 1) / 2), GC.getGameINLINE().countCivPlayersAlive());
 
 	int iResult = 0;
 	if (Cy::call_optional(gDLL->getPythonIFace()->getMapScriptModule(), "minStartingDistanceModifier", iResult))
@@ -2871,7 +2869,7 @@ int CvPlayer::findStartingArea() const
 	int result = -1;
 	if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "findStartingArea", Cy::Args() << getID(), result))
 	{
-		if (result == -1 || GC.getMapINLINE().getArea(result) != NULL)
+		if (result == -1 || GC.getMap().getArea(result) != NULL)
 		{
 			return result;
 		}
@@ -2882,7 +2880,7 @@ int CvPlayer::findStartingArea() const
 	}
 
 	const CvArea* bestStartingArea = scoring::max_score(
-		GC.getMapINLINE().areas() | filtered(!CvArea::fn::isWater()), 
+		GC.getMap().areas() | filtered(!CvArea::fn::isWater()), 
 		calculateStartingAreaScore
 	).get_value_or(nullptr);
 
@@ -2895,11 +2893,10 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 	PROFILE_FUNC();
 
 	{
-
 		int result = -1;
 		if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "findStartingPlot", Cy::Args() << getID(), result))
 		{
-			CvPlot *pPlot = GC.getMapINLINE().plotByIndexINLINE(result);
+			CvPlot *pPlot = GC.getMap().plotByIndex(result);
 			if (pPlot != NULL)
 			{
 				return pPlot;
@@ -2934,14 +2931,14 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 	}
 
 	//iRange = startingPlotRange();
-	for(int iPass = 0; iPass < GC.getMapINLINE().maxPlotDistance(); iPass++)
+	for(int iPass = 0; iPass < GC.getMap().maxPlotDistance(); iPass++)
 	{
 		CvPlot *pBestPlot = NULL;
 		int iBestValue = 0;
 		
-		for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+		for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 		{
-			pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+			pLoopPlot = GC.getMap().plotByIndex(iI);
 
 			if ((iBestArea == -1) || (pLoopPlot->getArea() == iBestArea))
 			{
@@ -2996,7 +2993,7 @@ CvCity* CvPlayer::initCity(int iX, int iY, bool bBumpUnits, bool bUpdatePlotGrou
 {
 	PROFILE_FUNC();
 
-	CvPlot*	pCityPlot = GC.getMapINLINE().plotINLINE(iX,iY);
+	CvPlot*	pCityPlot = GC.getMap().plot(iX,iY);
 	int iI, iJ;
 
 	if ( bUpdatePlotGroups )
@@ -3022,7 +3019,7 @@ CvCity* CvPlayer::initCity(int iX, int iY, bool bBumpUnits, bool bUpdatePlotGrou
 	pCity = addCity();
 
 	FAssertMsg(pCity != NULL, "City is not assigned a valid value");
-	FAssertMsg(!(GC.getMapINLINE().plotINLINE(iX, iY)->isCity()), "No city is expected at this plot when initializing new city");
+	FAssertMsg(!(GC.getMap().plot(iX, iY)->isCity()), "No city is expected at this plot when initializing new city");
 
 	pCity->init(pCity->getID(), getID(), iX, iY, bBumpUnits, false);
 
@@ -3742,7 +3739,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 		}
 
-		GC.getMapINLINE().verifyUnitValidPlot();
+		GC.getMap().verifyUnitValidPlot();
 	}
 /************************************************************************************************/
 /* Afforess	                  Start		 02/15/10                                               */
@@ -3932,9 +3929,9 @@ void CvPlayer::killCities()
 
 	// Super Forts begin *culture* - Clears culture from forts when a player dies
 	PlayerTypes ePlayer = getID();
-	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 		if (pLoopPlot->getOwner() == ePlayer)
 		{
 			pLoopPlot->setOwner(pLoopPlot->calculateCulturalOwner(), true, false);
@@ -5053,9 +5050,9 @@ void CvPlayer::doTurn()
 	int iLoop;
 
 #ifdef VALIDATION_FOR_PLOT_GROUPS
-	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if ( pLoopPlot->getPlotGroupId(getID()) != -1 && pLoopPlot->getPlotGroup(getID()) == NULL )
 		{
@@ -5528,9 +5525,9 @@ void CvPlayer::doTurnUnits()
 
 	m_guardableResourcePlots.clear();
 
-	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (pLoopPlot->getOwner() == getID())
 		{
@@ -5683,9 +5680,9 @@ void CvPlayer::updatePlotGroups(CvArea* possibleNewInAreaOnly, bool reInitialize
 		if ( reInitialize )
 		{
 			//	Throw away all existing plot groups
-			for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+			for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 			{
-				CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+				CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 				pLoopPlot->setPlotGroup(getID(), NULL, false);
 			}
@@ -5701,9 +5698,9 @@ void CvPlayer::updatePlotGroups(CvArea* possibleNewInAreaOnly, bool reInitialize
 		}
 	}
 
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 		
 		if ( possibleNewInAreaOnly == NULL || pLoopPlot->area() == possibleNewInAreaOnly )
 		{
@@ -5716,9 +5713,9 @@ void CvPlayer::updatePlotGroups(CvArea* possibleNewInAreaOnly, bool reInitialize
 	}
 
 #ifdef VALIDATION_FOR_PLOT_GROUPS
-	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if ( pLoopPlot->getPlotGroupId(getID()) != -1 && pLoopPlot->getPlotGroup(getID()) == NULL )
 		{
@@ -6225,7 +6222,7 @@ int CvPlayer::calculateScore(bool bFinal, bool bVictory) const
 
 int CvPlayer::findBestFoundValue() const
 {
-	return algo::max_element(GC.getMapINLINE().areas() 
+	return algo::max_element(GC.getMap().areas() 
 		| transformed(CvArea::fn::getBestFoundValue(getID()))
 	).get_value_or(0);
 }
@@ -6456,9 +6453,9 @@ int CvPlayer::countOwnedBonuses(BonusTypes eBonus) const
 		bool bAdvancedStart = (getAdvancedStartPoints() >= 0) && (getCurrentEra() < 3);
 
 		//count bonuses outside city radius
-		for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+		for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 		{
-			pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+			pLoopPlot = GC.getMap().plotByIndex(iI);
 
 			if ((pLoopPlot->getOwner() == getID() && !pLoopPlot->isCityRadius()) ||
 				(bAdvancedStart && pLoopPlot->isRevealed(getTeam(), false)))
@@ -6507,9 +6504,9 @@ int CvPlayer::countUnimprovedBonuses(CvArea* pArea, CvPlot* pFromPlot) const
 
 	iCount = 0;
 
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (pLoopPlot->area() == pArea)
 		{
@@ -8503,7 +8500,7 @@ bool CvPlayer::canReceiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit) 
 
 		if (getNumCities() == 1)
 		{
-			pCity = GC.getMapINLINE().findCity(pPlot->getX(), pPlot->getY(), NO_PLAYER, getTeam());
+			pCity = GC.getMap().findCity(pPlot->getX(), pPlot->getY(), NO_PLAYER, getTeam());
 
 			if (pCity != NULL)
 			{
@@ -8811,7 +8808,7 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 	int iRange;
 	int iDX, iDY;
 
-	pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	pPlot = GC.getMap().plot(iX, iY);
 
 	if(GC.getUSE_CANNOT_FOUND_CITY_CALLBACK())
 	{
@@ -10326,7 +10323,7 @@ int CvPlayer::getBuildingClassPrereqBuilding(BuildingTypes eBuilding, BuildingCl
 
 	BuildingClassTypes eBuildingClass = (BuildingClassTypes)kBuilding.getBuildingClassType();
 
-	iPrereqs *= std::max(0, (GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getBuildingClassPrereqModifier() + 100));
+	iPrereqs *= std::max(0, (GC.getWorldInfo(GC.getMap().getWorldSize()).getBuildingClassPrereqModifier() + 100));
 	iPrereqs /= 100;
 
 	if (!isLimitedWonderClass(eBuildingClass))
@@ -10486,7 +10483,7 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 
     if (GC.getBuildingInfo(eBuilding).getOtherAreaMaintenanceModifier() != 0)
     {
-		foreach_(CvArea * pLoopArea, GC.getMapINLINE().areas())
+		foreach_(CvArea * pLoopArea, GC.getMap().areas())
         {
             if (pLoopArea != pArea)
             {
@@ -12582,7 +12579,7 @@ int CvPlayer::getCivicAnarchyLength(CivicTypes* paeNewCivics) const
 		iTotalAnarchyLength *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getAnarchyPercent();
 		iTotalAnarchyLength /= 100;
 
-		iTotalAnarchyLength += getNumCities() * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getNumCitiesAnarchyPercent();
+		iTotalAnarchyLength += getNumCities() * GC.getWorldInfo(GC.getMap().getWorldSize()).getNumCitiesAnarchyPercent();
 	}
 	else
 	{
@@ -12642,7 +12639,7 @@ int CvPlayer::getReligionAnarchyLength() const
 	iAnarchyLength *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getAnarchyPercent();
 	iAnarchyLength /= 100;
 
-	iAnarchyLength += (getNumCities() * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getNumCitiesAnarchyPercent() / 100);
+	iAnarchyLength += (getNumCities() * GC.getWorldInfo(GC.getMap().getWorldSize()).getNumCitiesAnarchyPercent() / 100);
 
 	iAnarchyLength = ((iAnarchyLength * std::max(0, (getAnarchyModifier() + 100))) / 100);
 
@@ -12855,7 +12852,7 @@ int CvPlayer::specialistCommerceTimes100(SpecialistTypes eSpecialist, CommerceTy
 
 CvPlot* CvPlayer::getStartingPlot() const
 {
-	return GC.getMapINLINE().plotSorenINLINE(m_iStartingX, m_iStartingY);
+	return GC.getMap().plotSorenINLINE(m_iStartingX, m_iStartingY);
 }
 
 
@@ -12873,7 +12870,7 @@ void CvPlayer::setStartingPlot(CvPlot* pNewValue, bool bUpdateStartDist)
 
 			if (bUpdateStartDist)
 			{
-				GC.getMapINLINE().updateMinOriginalStartDist(pOldStartingPlot->area());
+				GC.getMap().updateMinOriginalStartDist(pOldStartingPlot->area());
 			}
 		}
 
@@ -12891,7 +12888,7 @@ void CvPlayer::setStartingPlot(CvPlot* pNewValue, bool bUpdateStartDist)
 
 			if (bUpdateStartDist)
 			{
-				GC.getMapINLINE().updateMinOriginalStartDist(getStartingPlot()->area());
+				GC.getMap().updateMinOriginalStartDist(getStartingPlot()->area());
 			}
 		}
 	}
@@ -14803,7 +14800,7 @@ int CvPlayer::getModifiedWarWearinessPercentAnger(int iWarWearinessPercentAnger)
 		iWarWearinessPercentAnger /= 100;
 	}
 
-	iWarWearinessPercentAnger *= std::max(0, (GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getWarWearinessModifier() + 100));
+	iWarWearinessPercentAnger *= std::max(0, (GC.getWorldInfo(GC.getMap().getWorldSize()).getWarWearinessModifier() + 100));
 	iWarWearinessPercentAnger /= 100;
 
 	if (!isHuman() && !isNPC() && !isMinorCiv())
@@ -16056,7 +16053,7 @@ void CvPlayer::setTurnActiveForPbem(bool bActive)
 		// Plot danger cache
 		//if( GC.getGameINLINE().getNumGameTurnActive() != 1 )
 		{
-			GC.getMapINLINE().invalidateIsActivePlayerNoDangerCache();
+			GC.getMap().invalidateIsActivePlayerNoDangerCache();
 		}
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
@@ -16232,17 +16229,17 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 				//	Calculate plot danger values for this player
 				CvPlot* pLoopPlot;
 
-				for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+				for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 				{
-					pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+					pLoopPlot = GC.getMap().plotByIndex(iI);
 
 					//	Decay danger count from the previous turn
 					pLoopPlot->setDangerCount(m_eID, 2*pLoopPlot->getDangerCount(m_eID)/3);
 				}
 
-				for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+				for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 				{
-					pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+					pLoopPlot = GC.getMap().plotByIndex(iI);
 
 					//	Add in known dangers from visible enemy units
 					if ( pLoopPlot->isVisible(getTeam(),false) )
@@ -16463,7 +16460,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 		// Plot danger cache
 		//if( GC.getGameINLINE().getNumGameTurnActive() != 1 )
 		{
-			GC.getMapINLINE().invalidateIsActivePlayerNoDangerCache();
+			GC.getMap().invalidateIsActivePlayerNoDangerCache();
 		}
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
@@ -16697,9 +16694,9 @@ void CvPlayer::setCurrentEra(EraTypes eNewValue)
 
 		if (GC.getGameINLINE().getActiveTeam() != NO_TEAM)
 		{
-			for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+			for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 			{
-				pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+				pLoopPlot = GC.getMap().plotByIndex(iI);
 				pLoopPlot->updateGraphicEra();
 
 				if (pLoopPlot->getRevealedImprovementType(GC.getGameINLINE().getActiveTeam(), true) != NO_IMPROVEMENT)
@@ -19492,9 +19489,9 @@ CvPlotGroup* CvPlayer::addPlotGroup()
 void CvPlayer::deletePlotGroup(int iID)																
 {
 #ifdef VALIDATION_FOR_PLOT_GROUPS
-	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if ( pLoopPlot->getPlotGroup(getID()) != NULL && pLoopPlot->getPlotGroup(getID())->getID() == iID )
 		{
@@ -21052,7 +21049,7 @@ int CvPlayer::getEspionageMissionCostModifier(EspionageMissionTypes eMission, Pl
 			}
 		}
 
-		iModifier *= (iDistance + GC.getMapINLINE().maxPlotDistance()) * GC.getDefineINT("ESPIONAGE_DISTANCE_MULTIPLIER_MOD") / GC.getMapINLINE().maxPlotDistance();
+		iModifier *= (iDistance + GC.getMap().maxPlotDistance()) * GC.getDefineINT("ESPIONAGE_DISTANCE_MULTIPLIER_MOD") / GC.getMap().maxPlotDistance();
 		iModifier /= 100;
 	}
 
@@ -21149,7 +21146,7 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 		{
 			// Blow it up
 			//TSHEEP - Add nearby city to plot destruction message (if any)
-			CvCity* pNearCity = GC.getMapINLINE().findCity(pPlot->getX(), pPlot->getY(), eTargetPlayer, GET_PLAYER(eTargetPlayer).getTeam(), true, false);
+			CvCity* pNearCity = GC.getMap().findCity(pPlot->getX(), pPlot->getY(), eTargetPlayer, GET_PLAYER(eTargetPlayer).getTeam(), true, false);
 			if (pNearCity != NULL)
 			{
 			if (pPlot->getImprovementType() != NO_IMPROVEMENT)
@@ -21340,7 +21337,7 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 					if (pTargetUnit->getTeam() == eTargetTeam)
 					{
 						FAssert(pTargetUnit->plot() == pPlot);
-						CvCity* pNearCity = GC.getMapINLINE().findCity(pPlot->getX(), pPlot->getY(), eTargetPlayer, GET_PLAYER(eTargetPlayer).getTeam(), true, false);
+						CvCity* pNearCity = GC.getMap().findCity(pPlot->getX(), pPlot->getY(), eTargetPlayer, GET_PLAYER(eTargetPlayer).getTeam(), true, false);
 						if (pNearCity != NULL)
 							szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SOMETHING_BRIBED_NEAR_CITY", pTargetUnit->getNameKey(), pNearCity->getNameKey()).GetCString();
 						else
@@ -23192,9 +23189,9 @@ int CvPlayer::getAdvancedStartRouteCost(RouteTypes eRoute, bool bAdd, CvPlot* pP
 		int iPlotLoop = 0;
 		CvPlot* pPlot;
 
-		for (iPlotLoop = 0; iPlotLoop < GC.getMapINLINE().numPlots(); iPlotLoop++)
+		for (iPlotLoop = 0; iPlotLoop < GC.getMap().numPlots(); iPlotLoop++)
 		{
-			pPlot = GC.getMapINLINE().plotByIndex(iPlotLoop);
+			pPlot = GC.getMap().plotByIndex(iPlotLoop);
 
 			if (pPlot->getRouteType() == eRoute)
 			{
@@ -23329,9 +23326,9 @@ int CvPlayer::getAdvancedStartImprovementCost(ImprovementTypes eImprovement, boo
 		int iPlotLoop = 0;
 		CvPlot* pPlot;
 
-		for (iPlotLoop = 0; iPlotLoop < GC.getMapINLINE().numPlots(); iPlotLoop++)
+		for (iPlotLoop = 0; iPlotLoop < GC.getMap().numPlots(); iPlotLoop++)
 		{
-			pPlot = GC.getMapINLINE().plotByIndex(iPlotLoop);
+			pPlot = GC.getMap().plotByIndex(iPlotLoop);
 			
 			if (pPlot->getImprovementType() == eImprovement)
 			{
@@ -23546,9 +23543,9 @@ int CvPlayer::getAdvancedStartVisibilityCost(bool bAdd, CvPlot* pPlot) const
 		int iPlotLoop = 0;
 		CvPlot* pPlot;
 
-		for (iPlotLoop = 0; iPlotLoop < GC.getMapINLINE().numPlots(); iPlotLoop++)
+		for (iPlotLoop = 0; iPlotLoop < GC.getMap().numPlots(); iPlotLoop++)
 		{
-			pPlot = GC.getMapINLINE().plotByIndex(iPlotLoop);
+			pPlot = GC.getMap().plotByIndex(iPlotLoop);
 
 			if (pPlot->isRevealed(getTeam(), false))
 			{
@@ -23600,14 +23597,14 @@ void CvPlayer::doWarnings()
 
 	//update enemy units close to your territory
 	iMaxCount = range(((getNumCities() + 4) / 7), 2, 5);
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
 		if (iMaxCount == 0)
 		{
 			break;
 		}
 
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (pLoopPlot->isAdjacentPlayer(getID()))
 		{
@@ -23637,7 +23634,7 @@ void CvPlayer::doWarnings()
 							}
 // BUG - Ignore Harmless Barbarians - end
 
-							pNearestCity = GC.getMapINLINE().findCity(pLoopPlot->getX(), pLoopPlot->getY(), getID(), NO_TEAM, !(pLoopPlot->isWater()));
+							pNearestCity = GC.getMap().findCity(pLoopPlot->getX(), pLoopPlot->getY(), getID(), NO_TEAM, !(pLoopPlot->isWater()));
 
 							if (pNearestCity != NULL)
 							{	
@@ -23873,7 +23870,7 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange, bool bLimited)
 		 //DPII < Maintenance Modifiers >
 		if ((GC.getCivicInfo(eCivic).getOtherAreaMaintenanceModifier() != 0) || (GC.getCivicInfo(eCivic).getHomeAreaMaintenanceModifier() != 0))
 		{
-			foreach_(CvArea* pLoopArea, GC.getMapINLINE().areas())
+			foreach_(CvArea* pLoopArea, GC.getMap().areas())
 			{
 				if (pLoopArea->isHomeArea(getID()))
 				{
@@ -26083,7 +26080,7 @@ void CvPlayer::createGreatPeople(UnitTypes eGreatPersonUnit, bool bIncrementThre
 	}
 
 
-	CvPlot* pPlot = GC.getMapINLINE().plot(iX, iY);
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 	CvCity* pCity = NULL;
 	CvWString szReplayMessage;
 
@@ -26292,7 +26289,7 @@ void CvPlayer::setTriggerFired(const EventTriggeredData& kTriggeredData, bool bO
 
 	if (bAnnounce)
 	{
-		CvPlot* pPlot = GC.getMapINLINE().plot(kTriggeredData.m_iPlotX, kTriggeredData.m_iPlotY);
+		CvPlot* pPlot = GC.getMap().plot(kTriggeredData.m_iPlotX, kTriggeredData.m_iPlotY);
 
 		if (!kTriggeredData.m_szGlobalText.empty())
 		{
@@ -26372,7 +26369,7 @@ EventTriggeredData* CvPlayer::initTriggeredData(EventTriggerTypes eEventTrigger,
 	{
 		pOtherPlayerCity = GET_PLAYER(eOtherPlayer).getCity(iOtherPlayerCityId);
 	}
-	CvPlot* pPlot = GC.getMapINLINE().plot(iPlotX, iPlotY);
+	CvPlot* pPlot = GC.getMap().plot(iPlotX, iPlotY);
 	CvUnit* pUnit = getUnit(iUnitId);
 
 	std::vector<CvPlot*> apPlots;
@@ -26539,9 +26536,9 @@ EventTriggeredData* CvPlayer::initTriggeredData(EventTriggerTypes eEventTrigger,
 
 		if (bPickPlot)
 		{
-			for (int iPlot = 0; iPlot < GC.getMapINLINE().numPlotsINLINE(); ++iPlot)
+			for (int iPlot = 0; iPlot < GC.getMap().numPlots(); ++iPlot)
 			{
-				CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iPlot);
+				CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
 
 				if (pLoopPlot->canTrigger(eEventTrigger, getID()))
 				{
@@ -26619,7 +26616,7 @@ EventTriggeredData* CvPlayer::initTriggeredData(EventTriggerTypes eEventTrigger,
 
 			if (NULL == pCity)
 			{
-				pCity = GC.getMapINLINE().findCity(pPlot->getX(), pPlot->getY(), getID(), NO_TEAM, false);
+				pCity = GC.getMap().findCity(pPlot->getX(), pPlot->getY(), getID(), NO_TEAM, false);
 			}
 		}
 		else 
@@ -26753,7 +26750,7 @@ EventTriggeredData* CvPlayer::initTriggeredData(EventTriggerTypes eEventTrigger,
 
 						if (NULL != pCity)
 						{
-							pBestCity = GC.getMapINLINE().findCity(pCity->getX(), pCity->getY(), (PlayerTypes)i);
+							pBestCity = GC.getMap().findCity(pCity->getX(), pCity->getY(), (PlayerTypes)i);
 						}
 						else
 						{
@@ -26820,7 +26817,7 @@ EventTriggeredData* CvPlayer::initTriggeredData(EventTriggerTypes eEventTrigger,
 
 		// python may change pTriggerData
 		pCity = getCity(pTriggerData->m_iCityId);
-		pPlot = GC.getMapINLINE().plot(pTriggerData->m_iPlotX, pTriggerData->m_iPlotY);
+		pPlot = GC.getMap().plot(pTriggerData->m_iPlotX, pTriggerData->m_iPlotY);
 		pUnit = getUnit(pTriggerData->m_iUnitId);
 		eOtherPlayer = pTriggerData->m_eOtherPlayer;
 		if (NO_PLAYER != eOtherPlayer)
@@ -27047,7 +27044,7 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 
 	if (kTriggeredData.m_eTrigger > NO_EVENTTRIGGER && ::isPlotEventTrigger(kTriggeredData.m_eTrigger))
 	{
-		CvPlot* pPlot = GC.getMapINLINE().plotINLINE(kTriggeredData.m_iPlotX, kTriggeredData.m_iPlotY);
+		CvPlot* pPlot = GC.getMap().plot(kTriggeredData.m_iPlotX, kTriggeredData.m_iPlotY);
 		if (NULL != pPlot)
 		{
 			if (!pPlot->canApplyEvent(eEvent))
@@ -27419,7 +27416,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 			}
 		}
 
-		CvPlot* pPlot = GC.getMapINLINE().plotINLINE(pTriggeredData->m_iPlotX, pTriggeredData->m_iPlotY);
+		CvPlot* pPlot = GC.getMap().plot(pTriggeredData->m_iPlotX, pTriggeredData->m_iPlotY);
 		if (NULL != pPlot)
 		{
 			if (pTriggeredData->m_eTrigger > NO_EVENTTRIGGER && ::isPlotEventTrigger(pTriggeredData->m_eTrigger))
@@ -27927,11 +27924,11 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 			int iNumPillaged = 0;
 			for (int i = 0; i < iNumPillage; ++i)
 			{
-				int iRandOffset = GC.getGameINLINE().getSorenRandNum(GC.getMapINLINE().numPlotsINLINE(), "Pick event pillage plot (any city)");
-				for (int j = 0; j < GC.getMapINLINE().numPlotsINLINE(); ++j)
+				int iRandOffset = GC.getGameINLINE().getSorenRandNum(GC.getMap().numPlots(), "Pick event pillage plot (any city)");
+				for (int j = 0; j < GC.getMap().numPlots(); ++j)
 				{
-					int iPlot = (j + iRandOffset) % GC.getMapINLINE().numPlotsINLINE();
-					CvPlot* pPlot = GC.getMapINLINE().plotByIndexINLINE(iPlot);
+					int iPlot = (j + iRandOffset) % GC.getMap().numPlots();
+					CvPlot* pPlot = GC.getMap().plotByIndex(iPlot);
 					if (NULL != pPlot && pPlot->getOwner() == getID() && pPlot->isCity())
 					{
 						if (NO_IMPROVEMENT != pPlot->getImprovementType() && !GC.getImprovementInfo(pPlot->getImprovementType()).isPermanent())
@@ -28551,9 +28548,9 @@ bool CvPlayer::canTrigger(EventTriggerTypes eTrigger, PlayerTypes ePlayer, Relig
 	{
 		int iCount = 0;
 
-		for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); ++iI)
+		for (int iI = 0; iI < GC.getMap().numPlots(); ++iI)
 		{
-			CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 			if (!pLoopPlot->isWater())
 			{
@@ -28795,14 +28792,14 @@ bool CvPlayer::isEventTriggerPossible(EventTriggerTypes eTrigger, bool bIgnoreAc
 		return false;
 	}
 
-	if (GC.getMapINLINE().getNumLandAreas() < kTrigger.getMinMapLandmass())
+	if (GC.getMap().getNumLandAreas() < kTrigger.getMinMapLandmass())
 	{
 		return false;
 	}
 
 	if (kTrigger.getMinOurLandmass() > 0 || kTrigger.getMaxOurLandmass() != -1)
 	{
-		const int iNumLandmass = algo::count_if(GC.getMapINLINE().areas(), 
+		const int iNumLandmass = algo::count_if(GC.getMap().areas(), 
 			!CvArea::fn::isWater() && CvArea::fn::getCitiesPerPlayer(getID()) > 0
 		);
 
@@ -28923,7 +28920,7 @@ bool CvPlayer::canSplitEmpire() const
 
 	bool bFoundArea = false;
 
-	foreach_(CvArea * pLoopArea, GC.getMapINLINE().areas())
+	foreach_(CvArea * pLoopArea, GC.getMap().areas())
 	{
 		if (canSplitArea(pLoopArea->getID()))
 		{
@@ -28942,7 +28939,7 @@ bool CvPlayer::canSplitEmpire() const
 
 bool CvPlayer::canSplitArea(int iAreaId) const
 {
-	CvArea* pArea = GC.getMapINLINE().getArea(iAreaId);
+	CvArea* pArea = GC.getMap().getArea(iAreaId);
 	CvCity* pCapital = getCapitalCity();
 
 	if (NULL == pCapital)
@@ -29056,7 +29053,7 @@ bool CvPlayer::splitEmpire(int iAreaId)
 		return false;
 	}
 
-	CvArea* pArea = GC.getMapINLINE().getArea(iAreaId);
+	CvArea* pArea = GC.getMap().getArea(iAreaId);
 	if (NULL == pArea)
 	{
 		return false;
@@ -29125,9 +29122,9 @@ bool CvPlayer::splitEmpire(int iAreaId)
 /************************************************************************************************/
 /*
 		// remove leftover culture from old recycled player
-		for (int iPlot = 0; iPlot < GC.getMapINLINE().numPlotsINLINE(); ++iPlot)
+		for (int iPlot = 0; iPlot < GC.getMap().numPlots(); ++iPlot)
 		{
-			CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iPlot);
+			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
 
 			pLoopPlot->setCulture(eNewPlayer, 0, false, false);
 		}
@@ -29160,9 +29157,9 @@ bool CvPlayer::splitEmpire(int iAreaId)
 	}
 
 	std::vector< std::pair<int, int> > aCultures;
-	for (int iPlot = 0; iPlot < GC.getMapINLINE().numPlotsINLINE(); ++iPlot)
+	for (int iPlot = 0; iPlot < GC.getMap().numPlots(); ++iPlot)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iPlot);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
 
 		bool bTranferPlot = pLoopPlot->area() == pArea;
 
@@ -29221,7 +29218,7 @@ bool CvPlayer::splitEmpire(int iAreaId)
 
 	for (uint i = 0; i < aCultures.size(); i++)
 	{
-		CvPlot* pPlot = GC.getMapINLINE().plotByIndexINLINE(aCultures[i].first);
+		CvPlot* pPlot = GC.getMap().plotByIndex(aCultures[i].first);
 		pPlot->setCulture(eNewPlayer, aCultures[i].second, true, false);
 		pPlot->setCulture(getID(), 0, true, false);
 
@@ -29332,9 +29329,9 @@ bool CvPlayer::assimilatePlayer( PlayerTypes ePlayer )
 	}
 
 	// Share map
-	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (pLoopPlot->isRevealed(kTeam.getID(), false))
 		{
@@ -29361,9 +29358,9 @@ bool CvPlayer::assimilatePlayer( PlayerTypes ePlayer )
 	kPlayer.killUnits();
 	kPlayer.killCities();
 
-	for (int i = 0; i < GC.getMapINLINE().numPlotsINLINE(); ++i)
+	for (int i = 0; i < GC.getMap().numPlots(); ++i)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(i);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(i);
 		if (pLoopPlot && (pLoopPlot->getTeam() == getTeam() || pLoopPlot->getTeam() == kTeam.getID()))
 		{
 			pLoopPlot->updateCulture(true, false);
@@ -29371,7 +29368,7 @@ bool CvPlayer::assimilatePlayer( PlayerTypes ePlayer )
 	}
 
 	GC.getGameINLINE().updatePlotGroups();
-	GC.getMapINLINE().verifyUnitValidPlot();
+	GC.getMap().verifyUnitValidPlot();
 
 	GET_TEAM(getTeam()).AI_updateWorstEnemy();
 	GET_TEAM(getTeam()).AI_updateAreaStragies();
@@ -31615,9 +31612,9 @@ void CvPlayer::getDebugLayerColors(GlobeLayerResourceOptionTypes eOption, std::v
 	int iDivisor = 1;
 	int iNumChokeValuedPlots = 0;
 
-	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		int iValue = pLoopPlot->getChokeValue();
 
@@ -31636,9 +31633,9 @@ void CvPlayer::getDebugLayerColors(GlobeLayerResourceOptionTypes eOption, std::v
 
 	float fAvgValue = (iNumChokeValuedPlots == 0 ? 0.0f : (float)iDivisor*((float)iTotalValue/(float)iNumChokeValuedPlots));
 
-	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 		PlayerTypes eOwner = pLoopPlot->getRevealedOwner(getTeam(), true); 
 
 		// visibility query
@@ -31687,9 +31684,9 @@ void CvPlayer::getResourceLayerColors(GlobeLayerResourceOptionTypes eOption, std
 	//PlayerColorTypes ePlayerColor = getPlayerColor();
 
 	CvWStringBuffer szBuffer;
-	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 		PlayerTypes eOwner = pLoopPlot->getRevealedOwner(getTeam(), true); 
 
 		if (pLoopPlot->isRevealed(getTeam(), true) && pLoopPlot->isInViewport())
@@ -31924,7 +31921,7 @@ void CvPlayer::doCheckForTaxationAnger()
 	
 	iModifier = GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getAnarchyPercent();
 	iModifier += GC.getEraInfo(GC.getGameINLINE().getStartEra()).getAnarchyPercent();
-	iModifier += getNumCities() * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getNumCitiesAnarchyPercent();
+	iModifier += getNumCities() * GC.getWorldInfo(GC.getMap().getWorldSize()).getNumCitiesAnarchyPercent();
 	iModifier /= 300;
 	iModifier = std::max(1, iModifier);
 	
@@ -33125,9 +33122,9 @@ void CvPlayer::setShowLandmarks(bool bNewVal)
 	bool bOldVal = m_bShowLandmarks;
 	if (bOldVal && !bNewVal)
 	{
-		for (int iPlot = 0; iPlot < GC.getMapINLINE().numPlotsINLINE(); iPlot++)
+		for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
 		{
-			CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iPlot);
+			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
 			if (pLoopPlot->getLandmarkType() != NO_LANDMARK)
 			{
 				Cy::call(PYCivModule, "AddSign", Cy::Args() << pLoopPlot << getID() << "");
@@ -33136,9 +33133,9 @@ void CvPlayer::setShowLandmarks(bool bNewVal)
 	}
 	else
 	{
-		for (int iPlot = 0; iPlot < GC.getMapINLINE().numPlotsINLINE(); iPlot++)
+		for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
 		{
-			CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iPlot);
+			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
 			if (pLoopPlot->getLandmarkType() != NO_LANDMARK)
 			{
 				Cy::call(PYCivModule, "AddSign", Cy::Args() << pLoopPlot << getID() << pLoopPlot->getLandmarkMessage().GetCString());
@@ -34092,20 +34089,18 @@ void CvPlayer::updateCache()
 
 void CvPlayer::clearTileCulture()
 {
-	int iI;
-	CvPlot* pLoopPlot;
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 		pLoopPlot->setCulture(getID(), 0, true, true);
 	}
 }
 
 void CvPlayer::clearCityCulture()
 {
-	int iI, iLoop;
+	int iLoop;
 	CvCity* pLoopCity;
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -37557,7 +37552,7 @@ void CvPlayer::upgradePlotPopup(ImprovementTypes eImprovement, int iX, int iY)
 void CvPlayer::upgradePlot(int iX, int iY, ImprovementTypes eImprovement, bool bConfirm)
 {
 	TeamTypes eTeam = getTeam();
-	CvPlot* pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 	BuildTypes eBestBuild = NO_BUILD;
 	int iBestProduction = 0;
 	int iProduction = 0;

@@ -246,8 +246,6 @@ public:
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-	CvMap& getMapINLINE();	//	Synonym for GetMap() currently as internal callers don't usually need the viewport
-// PARALLEL MAPS MODIFIED FUNCTION
 	CvMap& getMap();
 	CvViewport* getCurrentViewport();
 	int	getViewportSizeX() const;

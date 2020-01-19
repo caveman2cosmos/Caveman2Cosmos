@@ -1854,8 +1854,8 @@ void CvPathGenerator::SelfTest()
 {
 	PROFILE_FUNC();
 
-	CvMap&		map = GC.getMapINLINE();
-	int			iMapSize = map.numPlotsINLINE();
+	CvMap&		map = GC.getMap();
+	int			iMapSize = map.numPlots();
 	CvRandom	rand;
 	int			iPathsSuccessful = 0;
 #define NUM_PATHS		10000
@@ -1868,13 +1868,13 @@ void CvPathGenerator::SelfTest()
 
 	int	iPathsRemaining = NUM_PATHS;
 	//	Pick an arbitrary unit with more than 1 movement point
-	UnitTypes eLandUnit = (UnitTypes)GC.getInfoTypeForString("UNIT_WORKER");
+	const UnitTypes eLandUnit = (UnitTypes)GC.getInfoTypeForString("UNIT_WORKER");
 
 	EnableMaxPerformance(true);
 
 	while( iPathsRemaining > 0 )
 	{
-		CvPlot*	pStartPlot = map.plotByIndexINLINE(rand.getInt()%iMapSize);
+		CvPlot*	pStartPlot = map.plotByIndex(rand.getInt()%iMapSize);
 		//	For now just land paths considered
 		if ( !pStartPlot->isWater() )
 		{
@@ -1888,7 +1888,7 @@ void CvPathGenerator::SelfTest()
 
 			for(int iI = 0; iI < NUM_PATHS_PER_START_POINT; iI++)
 			{
-				CvPlot*	pEndPlot = map.plotINLINE((pStartPlot->getX() + rand.getInt()%(MAX_DISTANCE*2) + map.getGridWidthINLINE() - MAX_DISTANCE)%map.getGridWidthINLINE(),(std::max(0,(int)(pStartPlot->getY() - MAX_DISTANCE + rand.getInt()%(MAX_DISTANCE*2))))%map.getGridHeightINLINE());
+				CvPlot*	pEndPlot = map.plot((pStartPlot->getX() + rand.getInt()%(MAX_DISTANCE*2) + map.getGridWidth() - MAX_DISTANCE)%map.getGridWidth(),(std::max(0,(int)(pStartPlot->getY() - MAX_DISTANCE + rand.getInt()%(MAX_DISTANCE*2))))%map.getGridHeight());
 
 				attemptTrace[iI].iStartX = pStartPlot->getX();
 				attemptTrace[iI].iStartY = pStartPlot->getY();

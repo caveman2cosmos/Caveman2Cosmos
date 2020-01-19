@@ -2681,7 +2681,7 @@ void CvUnitAI::AI_workerMove()
 
 //		if (pCity == NULL)
 //		{
-//			pCity = GC.getMapINLINE().findCity(getX(), getY(), getOwner()); // XXX do team???
+//			pCity = GC.getMap().findCity(getX(), getY(), getOwner()); // XXX do team???
 //		}
 
 		if (AI_nextCityToImprove(pCity))
@@ -12792,7 +12792,7 @@ void CvUnitAI::AI_cityAutomated()
 
 	if (pCity == NULL)
 	{
-		pCity = GC.getMapINLINE().findCity(getX(), getY(), getOwner()); // XXX do team???
+		pCity = GC.getMap().findCity(getX(), getY(), getOwner()); // XXX do team???
 	}
 
 	if (pCity != NULL)
@@ -15162,7 +15162,7 @@ bool CvUnitAI::AI_guardBonus(int iMinValue)
 	//	already in the right place.  To ensure an evaluation order that makes this optimization likely we sort on simple plot distance
 	for (std::map<int,BonusTypes>::const_iterator itr = guardableResourcePlots.begin(); itr != guardableResourcePlots.end(); ++itr)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(itr->first);
+		pLoopPlot = GC.getMap().plotByIndex(itr->first);
 
 		sortedIndex.insert(std::pair<int,int>(stepDistance(getX(),getY(),pLoopPlot->getX(),pLoopPlot->getY()), itr->first));
 	}
@@ -15177,7 +15177,7 @@ bool CvUnitAI::AI_guardBonus(int iMinValue)
 		FAssert( searchItr != guardableResourcePlots.end());
 		eNonObsoleteBonus = searchItr->second;
 
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (AI_plotValid(pLoopPlot))
 		{
@@ -15483,9 +15483,9 @@ bool CvUnitAI::AI_guardFortMinDefender(bool bSearch)
 	CvPlot* pBestPlot = NULL;
 	CvPlot* pBestGuardPlot = NULL;
 
-	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (AI_plotValid(pLoopPlot) && !atPlot(pLoopPlot))
 		{
@@ -15874,9 +15874,9 @@ bool CvUnitAI::AI_sabotageSpy()
 	pBestPlot = NULL;
 	pBestSabotagePlot = NULL;
 
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (AI_plotValid(pLoopPlot))
 		{
@@ -18189,7 +18189,7 @@ bool CvUnitAI::AI_outcomeMission()
 	// favor the closest city
 	CvCity* pClosestCity = plot()->getPlotCity();
 	if (!pClosestCity)
-		pClosestCity = GC.getMapINLINE().findCity(getX(), getY(), getOwner(), NO_TEAM, true, false);
+		pClosestCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, true, false);
 
 	std::vector<std::pair<MissionTypes, CvOutcomeList*> > aMissions;
 
@@ -18905,11 +18905,11 @@ bool CvUnitAI::AI_offensiveAirlift()
 						iValue *= (GET_PLAYER(getOwner()).AI_militaryWeight(pLoopCity->area()) + 10);
 						iValue /= (GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(pLoopCity->area(), AI_getUnitAIType()) + 10);
 
-						iValue += std::max(1, ((GC.getMapINLINE().maxStepDistance() * 2) - GC.getMapINLINE().calculatePathDistance(pLoopCity->plot(), pTargetCity->plot())));
+						iValue += std::max(1, ((GC.getMap().maxStepDistance() * 2) - GC.getMap().calculatePathDistance(pLoopCity->plot(), pTargetCity->plot())));
 						
 						if (AI_getUnitAIType() == UNITAI_PARADROP)
 						{
-							CvCity* pNearestEnemyCity = GC.getMapINLINE().findCity(pLoopCity->getX(), pLoopCity->getY(), NO_PLAYER, NO_TEAM, false, false, getTeam());
+							CvCity* pNearestEnemyCity = GC.getMap().findCity(pLoopCity->getX(), pLoopCity->getY(), NO_PLAYER, NO_TEAM, false, false, getTeam());
 
 							if (pNearestEnemyCity != NULL)
 							{
@@ -22404,13 +22404,13 @@ bool CvUnitAI::AI_pirateBlockade()
 	int iValue;
 	int iI;
 	
-	std::vector<int> aiDeathZone(GC.getMapINLINE().numPlotsINLINE(), 0);
+	std::vector<int> aiDeathZone(GC.getMap().numPlots(), 0);
 
 	CvReachablePlotSet plotSet(getGroup(), 0, MAX_INT);
 	
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 		if (plotSet.find(pLoopPlot) != plotSet.end())
 		{
 			if (pLoopPlot->isOwned() && (pLoopPlot->getTeam() != getTeam()))
@@ -22442,10 +22442,10 @@ bool CvUnitAI::AI_pirateBlockade()
 					{
 						for (int iY = -iBestHostileMoves; iY <= iBestHostileMoves; iY++)
 						{
-							CvPlot * pRangePlot = plotXY(pLoopPlot->getX(), pLoopPlot->getY(), iX, iY);
+							CvPlot* pRangePlot = plotXY(pLoopPlot->getX(), pLoopPlot->getY(), iX, iY);
 							if (pRangePlot != NULL)
 							{
-								aiDeathZone[GC.getMap().plotNumINLINE(pRangePlot->getX(), pRangePlot->getY())]++;
+								aiDeathZone[GC.getMap().plotNum(pRangePlot->getX(), pRangePlot->getY())]++;
 							}
 						}
 					}
@@ -22454,7 +22454,7 @@ bool CvUnitAI::AI_pirateBlockade()
 		}
 	}
 	
-	bool bIsInDanger = aiDeathZone[GC.getMap().plotNumINLINE(getX(), getY())] > 0;
+	bool bIsInDanger = aiDeathZone[GC.getMap().plotNum(getX(), getY())] > 0;
 	bool bNeedsHeal = (getDamage() > 0);
 	bool bHasTerrainDamage = (plot()->getTotalTurnDamage(getGroup()) > 0 || plot()->getFeatureTurnDamage() > 0);	
 
@@ -22490,9 +22490,9 @@ bool CvUnitAI::AI_pirateBlockade()
 	bool bBestIsForceMove = false;
 	bool bBestIsMove = false;
 	
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (plotSet.find(pLoopPlot) != plotSet.end())
 		{
@@ -22551,7 +22551,7 @@ bool CvUnitAI::AI_pirateBlockade()
 							iValue *= 3;
 						}
 						
-						int iDeath = aiDeathZone[GC.getMap().plotNumINLINE(pLoopPlot->getX(), pLoopPlot->getY())];
+						int iDeath = aiDeathZone[GC.getMap().plotNum(pLoopPlot->getX(), pLoopPlot->getY())];
 						
 						bool bForceMove = false;
 						if (iDeath)
@@ -22650,7 +22650,7 @@ bool CvUnitAI::AI_pirateBlockade()
 				{
 					CvPlot*	pPlot = itr.plot();
 
-					bool bIsInDanger = aiDeathZone[GC.getMap().plotNumINLINE(pPlot->getX(), pPlot->getY())] > 0;
+					bool bIsInDanger = aiDeathZone[GC.getMap().plotNum(pPlot->getX(), pPlot->getY())] > 0;
 					bool bHasTerrainDamage = (pPlot->getTotalTurnDamage(getGroup()) > 0 || pPlot->getFeatureTurnDamage() > 0);	
 
 					//	If an intermediary plot is one that the heal decsion logic (near the start of this method)
@@ -23356,9 +23356,9 @@ bool CvUnitAI::AI_found()
 //	pBestPlot = NULL;
 //	pBestFoundPlot = NULL;
 //
-//	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+//	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 //	{
-//		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+//		pLoopPlot = GC.getMap().plotByIndex(iI);
 //
 //		if (AI_plotValid(pLoopPlot) && (pLoopPlot != plot() || GET_PLAYER(getOwner()).AI_getPlotDanger(pLoopPlot, 1) <= pLoopPlot->plotCount(PUF_canDefend, -1, -1, getOwner())))
 //		{
@@ -24120,8 +24120,8 @@ bool CvUnitAI::AI_assaultSeaReinforce(bool bBarbarian)
 											{
 												//	Use approximate path lengths here as switching path calculations between stacks
 												//	throws out all cached pathing data and is very expensive performance-wise
-												int	iStepPathTurns = (10*GC.getMapINLINE().calculatePathDistance(plot(), pLoopPlot) + 5)/(10*baseMoves());
-												int	iOtherStepPathTurns = (10*GC.getMapINLINE().calculatePathDistance(pLoopSelectionGroup->plot(), pLoopPlot) + 5)/(10*pLoopSelectionGroup->getHeadUnit()->baseMoves());
+												int	iStepPathTurns = (10*GC.getMap().calculatePathDistance(plot(), pLoopPlot) + 5)/(10*baseMoves());
+												int	iOtherStepPathTurns = (10*GC.getMap().calculatePathDistance(pLoopSelectionGroup->plot(), pLoopPlot) + 5)/(10*pLoopSelectionGroup->getHeadUnit()->baseMoves());
 
 												if( (iStepPathTurns > iOtherStepPathTurns) && (iStepPathTurns < iOtherStepPathTurns + 6) )
 												{
@@ -24596,9 +24596,9 @@ bool CvUnitAI::AI_settlerSeaTransport()
 	
 	int iMinFoundValue = GET_PLAYER(getOwner()).AI_getMinFoundValue();
 
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (pLoopPlot->isCoastalLand())
 		{
@@ -25936,9 +25936,9 @@ bool CvUnitAI::AI_irrigateTerritory()
 	eBestBuild = NO_BUILD;
 	pBestPlot = NULL;
 
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (AI_plotValid(pLoopPlot) && pLoopPlot->area() == area())
 		{
@@ -26198,7 +26198,7 @@ bool CvUnitAI::AI_fortTerritory(bool bCanal, bool bAirbase)
 											iValue /= (iPathTurns + 1);
 											if(pLoopPlot->getOwner() == NO_PLAYER)
 											{
-												CvCity* pNearestCity = GC.getMapINLINE().findCity(pLoopPlot->getX(), pLoopPlot->getY(), getOwner(), NO_TEAM, false);
+												CvCity* pNearestCity = GC.getMap().findCity(pLoopPlot->getX(), pLoopPlot->getY(), getOwner(), NO_TEAM, false);
 												if((pNearestCity == NULL) || 
 													(plotDistance(pLoopPlot->getX(), pLoopPlot->getY(), pNearestCity->getX(), pNearestCity->getY()) > iMaxDistFromBorder) ||
 													(iPathTurns > (iMaxDistFromBorder / 2)))
@@ -26283,9 +26283,9 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 	CvReachablePlotSet	plotSet(getGroup(), iBasePathFlags, -1, true, iMaxDistFromBorder == -1 ? -1 : iMaxDistFromBorder/2+1);
 	bool				bPlotSetPopulated = false;
 
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if ( bPlotSetPopulated && plotSet.find(pLoopPlot) == plotSet.end() )
 		{
@@ -26338,7 +26338,7 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 							}
 						}
 
-						CvCity* pNearestCity = GC.getMapINLINE().findCity(pLoopPlot->getX(), pLoopPlot->getY(), getOwner(), NO_TEAM, false);
+						CvCity* pNearestCity = GC.getMap().findCity(pLoopPlot->getX(), pLoopPlot->getY(), getOwner(), NO_TEAM, false);
 						int iPathTurns = 0;
 
 						if ((pNearestCity != NULL) && generatePath(pLoopPlot, 0, true, &iPathTurns, iMaxDistFromBorder/2))
@@ -26810,7 +26810,7 @@ bool CvUnitAI::processContracts(int iMinPriority)
 		}
 		else
 		{
-			pTargetPlot = GC.getMapINLINE().plotINLINE(iAtX,iAtY);
+			pTargetPlot = GC.getMap().plot(iAtX,iAtY);
 		}
 
 		if (atPlot(pTargetPlot))
@@ -27198,9 +27198,9 @@ bool CvUnitAI::AI_connectBonus(bool bTestTrade)
 
 	// XXX how do we make sure that we can build roads???
 
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (pLoopPlot->getOwner() == getOwner()) // XXX team???
 		{
@@ -27343,25 +27343,23 @@ bool CvUnitAI::AI_routeTerritory(bool bImprovementOnly)
 	PROFILE_FUNC();
 
 	CvPlot* pLoopPlot;
-	CvPlot* pBestPlot;
 	ImprovementTypes eImprovement;
 	RouteTypes eBestRoute;
 	bool bValid;
 	int iPathTurns;
 	int iValue;
-	int iBestValue;
-	int iI, iJ;
+	int iJ;
 
 	// XXX how do we make sure that we can build roads???
 
 	FAssert(canBuildRoute());
 
-	iBestValue = 0;
-	pBestPlot = NULL;
+	int iBestValue = 0;
+	CvPlot* pBestPlot = NULL;
 
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (pLoopPlot->getOwner() == getOwner()) // XXX team???
 		{
@@ -27512,7 +27510,7 @@ bool CvUnitAI::AI_travelToUpgradeCity()
 		}
 		if (pClosestCity == NULL)
 		{
-			pClosestCity = GC.getMapINLINE().findCity(getX(), getY(), NO_PLAYER, getTeam(), true, bSeaUnit);
+			pClosestCity = GC.getMap().findCity(getX(), getY(), NO_PLAYER, getTeam(), true, bSeaUnit);
 		}
 
 		// can we path to the upgrade city?
@@ -28274,9 +28272,9 @@ bool CvUnitAI::AI_airOffensiveCity()
 	/* original BTS code
 
 	*/
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		// Limit to cities and forts, true for any city but only this team's forts
 		if (pLoopPlot->isCity(true, getTeam()))
@@ -28632,7 +28630,7 @@ int CvUnitAI::AI_airOffenseBaseValue( CvPlot* pPlot )
 		}
 
 		// No real enemies, check for minor civ or barbarian cities where attacks could be supported
-		pNearestEnemyCity = GC.getMapINLINE().findCity(pPlot->getX(), pPlot->getY(), NO_PLAYER, NO_TEAM, false, false, getTeam());
+		pNearestEnemyCity = GC.getMap().findCity(pPlot->getX(), pPlot->getY(), NO_PLAYER, NO_TEAM, false, false, getTeam());
 
 		if (pNearestEnemyCity != NULL)
 		{
@@ -29092,7 +29090,7 @@ bool CvUnitAI::AI_defensiveAirStrike()
 					// Only attack enemy land units near our cities
 					if( pLoopPlot->isPlayerCityRadius(getOwner()) && !pLoopPlot->isWater() )
 					{
-						CvCity* pClosestCity = GC.getMapINLINE().findCity(pLoopPlot->getX(), pLoopPlot->getY(), getOwner(), getTeam(), true, false);
+						CvCity* pClosestCity = GC.getMap().findCity(pLoopPlot->getX(), pLoopPlot->getY(), getOwner(), getTeam(), true, false);
 
 						if( pClosestCity != NULL )
 						{
@@ -31763,12 +31761,12 @@ bool CvUnitAI::AI_solveBlockageProblem(CvPlot* pDestPlot, bool bDeclareWar)
 			while (pStepNode != NULL)
 			{
 				int iPathTurns;
-				CvPlot* pStepPlot = GC.getMapINLINE().plotSorenINLINE(pStepNode->m_iX, pStepNode->m_iY);
+				CvPlot* pStepPlot = GC.getMap().plotSorenINLINE(pStepNode->m_iX, pStepNode->m_iY);
 				if (canMoveOrAttackInto(pStepPlot) && generatePath(pStepPlot, 0, false, &iPathTurns))
 				{
 					if (bDeclareWar && pStepNode->m_pPrev != NULL)
 					{
-						CvPlot* pPlot = GC.getMapINLINE().plotSorenINLINE(pStepNode->m_pPrev->m_iX, pStepNode->m_pPrev->m_iY);
+						CvPlot* pPlot = GC.getMap().plotSorenINLINE(pStepNode->m_pPrev->m_iX, pStepNode->m_pPrev->m_iY);
 						if (pPlot->getTeam() != NO_TEAM)
 						{
 							if (!getGroup()->canMoveIntoWithWar(pPlot, true, true))
@@ -32969,7 +32967,7 @@ bool CvUnitAI::AI_hurryFood()
 			&& (
 				pLoopCity->foodDifference() < 0 
 				|| (GC.getGameINLINE().getSorenRandNum(100, "AI hurry with food") > 75 
-					&& pLoopCity->findPopulationRank() > GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getTargetNumCities())
+					&& pLoopCity->findPopulationRank() > GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities())
 				)
 			)
 		{
@@ -33090,21 +33088,17 @@ bool CvUnitAI::AI_AutomatedPillage(int iBonusValueThreshold)
 	FAssertMsg(isHuman(), "should not be called for AI's");
 
 	CvPlot* pLoopPlot;
-	CvPlot* pBestPlot;
-	CvPlot* pBestPillagePlot;
 	CvPlot* endTurnPlot = NULL;
 	int iPathTurns;
 	int iValue;
-	int iBestValue;
-	int iI;
 
-	iBestValue = 0;
-	pBestPlot = NULL;
-	pBestPillagePlot = NULL;
+	int iBestValue = 0;
+	CvPlot* pBestPlot = NULL;
+	CvPlot* pBestPillagePlot = NULL;
 
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (AI_plotValid(pLoopPlot) && getGroup()->canPillage(pLoopPlot) && pLoopPlot->area() == area())
 		{
@@ -33741,7 +33735,7 @@ bool	CvUnitAI::AI_moveToBorders()
 					break;
 				}
 
-				pLoopPlot = GC.getMapINLINE().plotINLINE(iX,iY);
+				pLoopPlot = GC.getMap().plot(iX,iY);
 
 				if (pLoopPlot != NULL)
 				{
@@ -33797,7 +33791,7 @@ bool	CvUnitAI::AI_moveToBorders()
 			}
 		}
 
-		if ( iDistance++ > std::max(GC.getMapINLINE().getGridHeight(), GC.getMapINLINE().getGridWidth()) )
+		if ( iDistance++ > std::max(GC.getMap().getGridHeight(), GC.getMap().getGridWidth()) )
 		{
 			break;
 		}
@@ -34956,7 +34950,7 @@ bool CvUnitAI::AI_approximatePath(CvPlot* pToPlot, int iFlags, int* piPathTurns)
 
 #define CLOSE_THRESHOLD 10
 	CvPlot*	start = plot();
-	int	iStepPathLen = GC.getMapINLINE().calculatePathDistance(start, pToPlot);
+	int	iStepPathLen = GC.getMap().calculatePathDistance(start, pToPlot);
 
 	OutputDebugString(CvString::format("Approx path from (%d,%d) to (%d,%d), step pathLen: %d\n",start->getX(),start->getY(),pToPlot->getX(), pToPlot->getY(), iStepPathLen).c_str());
 
@@ -34998,7 +34992,7 @@ bool CvUnitAI::AI_approximatePath(CvPlot* pToPlot, int iFlags, int* piPathTurns)
 
 		while( pNode->m_pParent != NULL )
 		{
-			if ( !canMoveInto( GC.getMapINLINE().plotINLINE(pNode->m_iX,pNode->m_iY)) )
+			if ( !canMoveInto( GC.getMap().plot(pNode->m_iX,pNode->m_iY)) )
 			{
 				pCandidateSubPathEndNode = pNode->m_pParent;
 			}
@@ -35006,7 +35000,7 @@ bool CvUnitAI::AI_approximatePath(CvPlot* pToPlot, int iFlags, int* piPathTurns)
 			pNode = pNode->m_pParent;
 		}
 
-		CvPlot* pSubPathTerminus = GC.getMapINLINE().plotINLINE(pCandidateSubPathEndNode->m_iX, pCandidateSubPathEndNode->m_iY);
+		CvPlot* pSubPathTerminus = GC.getMap().plot(pCandidateSubPathEndNode->m_iX, pCandidateSubPathEndNode->m_iY);
 		int iSubPathTurns;
 
 		{

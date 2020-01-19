@@ -93,22 +93,22 @@ inline int wrapCoordDifference(int iDiff, int iRange, bool bWrap)
 
 inline int xDistance(int iFromX, int iToX)
 {
-	return coordDistance(iFromX, iToX, GC.getMapINLINE().getGridWidthINLINE(), GC.getMapINLINE().isWrapXINLINE());
+	return coordDistance(iFromX, iToX, GC.getMap().getGridWidth(), GC.getMap().isWrapX());
 }
 
 inline int yDistance(int iFromY, int iToY)
 {
-	return coordDistance(iFromY, iToY, GC.getMapINLINE().getGridHeightINLINE(), GC.getMapINLINE().isWrapYINLINE());
+	return coordDistance(iFromY, iToY, GC.getMap().getGridHeight(), GC.getMap().isWrapY());
 }
 
 inline int dxWrap(int iDX)																													// Exposed to Python
 {
-	return wrapCoordDifference(iDX, GC.getMapINLINE().getGridWidthINLINE(), GC.getMapINLINE().isWrapXINLINE());
+	return wrapCoordDifference(iDX, GC.getMap().getGridWidth(), GC.getMap().isWrapX());
 }
 
 inline int dyWrap(int iDY)																													// Exposed to Python
 {
-	return wrapCoordDifference(iDY, GC.getMapINLINE().getGridHeightINLINE(), GC.getMapINLINE().isWrapYINLINE());
+	return wrapCoordDifference(iDY, GC.getMap().getGridHeight(), GC.getMap().isWrapY());
 }
 
 // 4 | 4 | 3 | 3 | 3 | 4 | 4
@@ -161,11 +161,11 @@ inline CvPlot* plotDirection(int iX, int iY, DirectionTypes eDirection)							//
 {
 	if(eDirection == NO_DIRECTION)
 	{
-		return GC.getMapINLINE().plotINLINE(iX, iY);
+		return GC.getMap().plot(iX, iY);
 	}
 	else
 	{
-		return GC.getMapINLINE().plotINLINE((iX + GC.getPlotDirectionX()[eDirection]), (iY + GC.getPlotDirectionY()[eDirection]));
+		return GC.getMap().plot((iX + GC.getPlotDirectionX()[eDirection]), (iY + GC.getPlotDirectionY()[eDirection]));
 	}
 }
 
@@ -176,12 +176,12 @@ inline CvPlot* plotDirection(CvPlot* pPlot, DirectionTypes eDirection)
 
 inline CvPlot* plotCardinalDirection(int iX, int iY, CardinalDirectionTypes eCardinalDirection)	// Exposed to Python
 {
-	return GC.getMapINLINE().plotINLINE((iX + GC.getPlotCardinalDirectionX()[eCardinalDirection]), (iY + GC.getPlotCardinalDirectionY()[eCardinalDirection]));
+	return GC.getMap().plot((iX + GC.getPlotCardinalDirectionX()[eCardinalDirection]), (iY + GC.getPlotCardinalDirectionY()[eCardinalDirection]));
 }
 
 inline CvPlot* plotXY(int iX, int iY, int iDX, int iDY)																// Exposed to Python
 {
-	return GC.getMapINLINE().plotINLINE((iX + iDX), (iY + iDY));
+	return GC.getMap().plot((iX + iDX), (iY + iDY));
 }
 
 inline DirectionTypes directionXY(int iDX, int iDY)																		// Exposed to Python
