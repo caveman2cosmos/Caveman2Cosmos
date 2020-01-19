@@ -65,8 +65,8 @@ void	CvContractBroker::lookingForWork(CvUnit* pUnit, int iMinPriority)
 	}
 
 	unitDetails.iUnitId			= pUnit->getID();
-	unitDetails.iAtX			= pUnit->getX_INLINE();
-	unitDetails.iAtY			= pUnit->getY_INLINE();
+	unitDetails.iAtX			= pUnit->getX();
+	unitDetails.iAtY			= pUnit->getY();
 	unitDetails.iMinPriority	= iMinPriority;
 
 	//	Initially not assigned to a contract

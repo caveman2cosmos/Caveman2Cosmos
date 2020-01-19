@@ -628,21 +628,11 @@ public:
 	void setID(int iID);
 
 	DllExport int getViewportX() const;																			// Exposed to Python
-	int getX() const;																			// Exposed to Python
-#ifdef _USRDLL
-	inline int getX_INLINE() const
-	{
-		return m_iX;
-	}
-#endif
+	inline int getX() const { return m_iX; }
+
 	DllExport int getViewportY() const;																			// Exposed to Python
-	int getY() const;																			// Exposed to Python
-#ifdef _USRDLL
-	inline int getY_INLINE() const
-	{
-		return m_iY;
-	}
-#endif
+	inline int getY() const { return m_iY; }
+
 	bool isInViewport() const;
 	bool at(int iX, int iY) const;																				// Exposed to Python
 	bool at(CvPlot* pPlot) const;																					// Exposed to Python - atPlot

@@ -97,8 +97,8 @@ void CvPlotGroup::addPlot(CvPlot* pPlot, bool bRecalculateBonuses)
 
 	if ( m_seedPlotX == -1 )
 	{
-		m_seedPlotX = pPlot->getX_INLINE();
-		m_seedPlotY = pPlot->getY_INLINE();
+		m_seedPlotX = pPlot->getX();
+		m_seedPlotY = pPlot->getY();
 	}
 }
 
@@ -205,8 +205,8 @@ static bool buildRemovedPlotList(CvPlotGroup* onBehalfOf, CvPlot* pLoopPlot, voi
 	{
 		XYCoords xy;
 
-		xy.iX = pLoopPlot->getX_INLINE();
-		xy.iY = pLoopPlot->getY_INLINE();
+		xy.iX = pLoopPlot->getX();
+		xy.iY = pLoopPlot->getY();
 
 		parm->removedPlots.insertAtEnd(xy);
 	}
@@ -225,8 +225,8 @@ static bool buildAllPlotList(CvPlotGroup* onBehalfOf, CvPlot* pLoopPlot, void* p
 
 	XYCoords xy;
 
-	xy.iX = pLoopPlot->getX_INLINE();
-	xy.iY = pLoopPlot->getY_INLINE();
+	xy.iX = pLoopPlot->getX();
+	xy.iY = pLoopPlot->getY();
 
 	parm->allPlots.insertAtEnd(xy);
 
@@ -269,7 +269,7 @@ void CvPlotGroup::recalculatePlots()
 	//	Check whether the same set of cities and bonuses are still in the connected region
 	//	If they are then there is no material change and we don't need to recalculate
 	gDLL->getFAStarIFace()->SetData(&GC.getPlotGroupFinder(), &checkInfo);
-	gDLL->getFAStarIFace()->GeneratePath(&GC.getPlotGroupFinder(), pPlot->getX_INLINE(), pPlot->getY_INLINE(), -1, -1, false, eOwner);
+	gDLL->getFAStarIFace()->GeneratePath(&GC.getPlotGroupFinder(), pPlot->getX(), pPlot->getY(), -1, -1, false, eOwner);
 
 	if (checkInfo.hashInfo.allNodesHash == m_zobristHashes.allNodesHash)
 	{
@@ -344,7 +344,7 @@ void CvPlotGroup::recalculatePlots()
 			FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
 
 			pPlot->setPlotGroup(eOwner, NULL, false);
-			//OutputDebugString(CvString::format("Nulled plot group for: (%d,%d)\n", pPlot->getX_INLINE(), pPlot->getY_INLINE()).c_str());
+			//OutputDebugString(CvString::format("Nulled plot group for: (%d,%d)\n", pPlot->getX(), pPlot->getY()).c_str());
 		}
 
 		int	iStartingAllocSeq = m_allocationSeqForSession;
@@ -563,10 +563,10 @@ void CvPlotGroup::plotEnumerator(bool (*pfFunc)(CvPlotGroup* onBehalfOf, CvPlot*
 		iMaxYDistance /= 2;
 	}
 
-	int iMinX = pStartPlot->getX_INLINE() - iMaxXDistance + (GC.getMapINLINE().getGridWidthINLINE()%2 == 0 ? 1 : 0);
-	int iMaxX = pStartPlot->getX_INLINE() + iMaxXDistance;
-	int iMinY = pStartPlot->getY_INLINE() - iMaxYDistance + (GC.getMapINLINE().getGridHeightINLINE()%2 == 0 ? 1 : 0);
-	int iMaxY = pStartPlot->getY_INLINE() + iMaxYDistance;
+	int iMinX = pStartPlot->getX() - iMaxXDistance + (GC.getMapINLINE().getGridWidthINLINE()%2 == 0 ? 1 : 0);
+	int iMaxX = pStartPlot->getX() + iMaxXDistance;
+	int iMinY = pStartPlot->getY() - iMaxYDistance + (GC.getMapINLINE().getGridHeightINLINE()%2 == 0 ? 1 : 0);
+	int iMaxY = pStartPlot->getY() + iMaxYDistance;
 
 	for(int iRadius = 0;
 			iRadius <= std::max(iMaxXDistance, iMaxYDistance) && expectedPlotsRemaining > 0;
@@ -579,8 +579,8 @@ void CvPlotGroup::plotEnumerator(bool (*pfFunc)(CvPlotGroup* onBehalfOf, CvPlot*
 		{
 			for( int iSide = 0; iSide < 4; iSide++ )
 			{
-				int iX = pStartPlot->getX_INLINE();
-				int iY = pStartPlot->getY_INLINE();
+				int iX = pStartPlot->getX();
+				int iY = pStartPlot->getY();
 
 				switch(iSide)
 				{
@@ -618,8 +618,8 @@ void CvPlotGroup::plotEnumerator(bool (*pfFunc)(CvPlotGroup* onBehalfOf, CvPlot*
 					expectedPlotsRemaining--;
 					if ( m_seedPlotX == -1 )
 					{
-						m_seedPlotX = pLoopPlot->getX_INLINE();
-						m_seedPlotY = pLoopPlot->getY_INLINE();
+						m_seedPlotX = pLoopPlot->getX();
+						m_seedPlotY = pLoopPlot->getY();
 					}
 
 					if ( !(*pfFunc)(this, pLoopPlot, param) )
@@ -871,7 +871,7 @@ CvPlotGroup* CvPlotGroup::colorRegionInternal(CvPlot* pPlot, PlayerTypes eOwner,
 
 				for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
 				{
-					CvPlot* pAdjacentPlot = plotDirection(pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE(), (DirectionTypes)iI);
+					CvPlot* pAdjacentPlot = plotDirection(pLoopPlot->getX(), pLoopPlot->getY(), (DirectionTypes)iI);
 
 					if (pAdjacentPlot != NULL && pLoopPlot->isTradeNetworkConnected(pAdjacentPlot, GET_PLAYER(eOwner).getTeam()))
 					{

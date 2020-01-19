@@ -113,7 +113,7 @@ void	CvViewport::centerOnSelection()
 
 	if ( pUnit != NULL )
 	{
-		bringIntoView( pUnit->getX_INLINE(), pUnit->getY_INLINE(), pUnit, true, true);
+		bringIntoView( pUnit->getX(), pUnit->getY(), pUnit, true, true);
 	}
 }
 
@@ -282,7 +282,7 @@ void CvViewport::closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRi
 			m_pLookatPlot = m_pMap->plotINLINE(iMapX, iMapY);
 		}
 
-		bringIntoView(m_pLookatPlot->getX_INLINE(), m_pLookatPlot->getY_INLINE(), ::getUnit(m_preservedHeadSelectedUnitId));
+		bringIntoView(m_pLookatPlot->getX(), m_pLookatPlot->getY(), ::getUnit(m_preservedHeadSelectedUnitId));
 	}
 }
 
@@ -361,8 +361,8 @@ void CvViewport::processActionState()
 
 		m_transformType = VIEWPORT_TRANSFORM_TYPE_WINDOW;
 
-		setMapOffset(range((m_pLookatPlot->getX_INLINE() - m_iXSize/2 + (m_pMap->isWrapXINLINE() ? m_pMap->getGridWidthINLINE() : 0))%m_pMap->getGridWidthINLINE(), 0, m_pMap->getGridWidthINLINE() - (m_pMap->isWrapXINLINE() ? 1 : m_iXSize)),
-					 range((m_pLookatPlot->getY_INLINE() - m_iYSize/2 + (m_pMap->isWrapYINLINE() ? m_pMap->getGridHeightINLINE() : 0))%m_pMap->getGridHeightINLINE(), 0, m_pMap->getGridHeightINLINE() - (m_pMap->isWrapYINLINE() ? 1 : m_iYSize)));
+		setMapOffset(range((m_pLookatPlot->getX() - m_iXSize/2 + (m_pMap->isWrapXINLINE() ? m_pMap->getGridWidthINLINE() : 0))%m_pMap->getGridWidthINLINE(), 0, m_pMap->getGridWidthINLINE() - (m_pMap->isWrapXINLINE() ? 1 : m_iXSize)),
+					 range((m_pLookatPlot->getY() - m_iYSize/2 + (m_pMap->isWrapYINLINE() ? m_pMap->getGridHeightINLINE() : 0))%m_pMap->getGridHeightINLINE(), 0, m_pMap->getGridHeightINLINE() - (m_pMap->isWrapYINLINE() ? 1 : m_iYSize)));
 
 		if ( m_mode == VIEWPORT_MODE_INITIALIZED )
 		{
@@ -442,7 +442,7 @@ void CvViewport::processActionState()
 
 			if ( pSelectedUnit != NULL )
 			{
-				bringIntoView(pSelectedUnit->getX_INLINE(), pSelectedUnit->getY_INLINE(), pSelectedUnit, true, true);
+				bringIntoView(pSelectedUnit->getX(), pSelectedUnit->getY(), pSelectedUnit, true, true);
 			}
 
 #if 0

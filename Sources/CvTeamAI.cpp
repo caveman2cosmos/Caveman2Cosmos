@@ -855,7 +855,7 @@ int CvTeamAI::AI_calculateCapitalProximity(TeamTypes eTeam) const
 
 								if (pTheirCapitalCity != NULL)
 								{
-									int iDistance = (plotDistance(pOurCapitalCity->getX_INLINE(), pOurCapitalCity->getY_INLINE(), pTheirCapitalCity->getX_INLINE(), pTheirCapitalCity->getY_INLINE()) * (pOurCapitalCity->area() != pTheirCapitalCity->area() ? 3 : 2));
+									int iDistance = (plotDistance(pOurCapitalCity->getX(), pOurCapitalCity->getY(), pTheirCapitalCity->getX(), pTheirCapitalCity->getY()) * (pOurCapitalCity->area() != pTheirCapitalCity->area() ? 3 : 2));
 									if (GET_PLAYER((PlayerTypes)iJ).getTeam() == eTeam)
 									{
 										iTotalDistance += iDistance;
@@ -2975,7 +2975,7 @@ bool CvTeamAI::AI_acceptSurrender( TeamTypes eSurrenderTeam )
 					CvPlot* pLoopPlot = NULL;
 					for (int iJ = 0; iJ < NUM_CITY_PLOTS; iJ++)
 					{
-						pLoopPlot = plotCity(pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE(), iJ);
+						pLoopPlot = plotCity(pLoopCity->getX(), pLoopCity->getY(), iJ);
 
 						if (pLoopPlot != NULL)
 						{
