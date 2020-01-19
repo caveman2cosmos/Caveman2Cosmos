@@ -952,7 +952,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 					{
 						int iExp = pLoopUnit->getExperience();
 						CvCity* pPlotCity = pLoopUnit->plot()->getPlotCity();
-						if (pPlotCity != NULL && pPlotCity->getOwnerINLINE() == getID())
+						if (pPlotCity != NULL && pPlotCity->getOwner() == getID())
 						{
 							int iCityExp = 0;
 							iCityExp += pPlotCity->getFreeExperience();
@@ -3256,7 +3256,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 			eBonusImprovement = NO_IMPROVEMENT;
 
 			int iCultureMultiplier;
-            if (!pLoopPlot->isOwned() || (pLoopPlot->getOwnerINLINE() == getID()))
+            if (!pLoopPlot->isOwned() || (pLoopPlot->getOwner() == getID()))
             {
                 iCultureMultiplier = 100;    
             }
@@ -3264,7 +3264,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
             {
             	bNeutralTerritory = false;
                 int iOurCulture = pLoopPlot->getCulture(getID());
-                int iOtherCulture = std::max(1, pLoopPlot->getCulture(pLoopPlot->getOwnerINLINE()));
+                int iOtherCulture = std::max(1, pLoopPlot->getCulture(pLoopPlot->getOwner()));
 /************************************************************************************************/
 /* UNOFFICIAL_PATCH                       04/25/10                          denev & Fuyu	    */
 /*                                                                                              */
@@ -3443,7 +3443,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 			{
 				iTempValue *= 2;
 			}
-			else if ((pLoopPlot->getOwnerINLINE() == getID()) || (stepDistance(iX, iY, pLoopPlot->getX(), pLoopPlot->getY()) == 1))
+			else if ((pLoopPlot->getOwner() == getID()) || (stepDistance(iX, iY, pLoopPlot->getX(), pLoopPlot->getY()) == 1))
 			{
 				// BBAI Notes:  Extra weight on tiles which will be available immediately
 				iTempValue *= 3;
@@ -3463,7 +3463,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 			}
 			else
 			{
-				if ((pLoopPlot->getOwnerINLINE() == getID()) || (stepDistance(iX, iY, pLoopPlot->getX(), pLoopPlot->getY()) <= 1))
+				if ((pLoopPlot->getOwner() == getID()) || (stepDistance(iX, iY, pLoopPlot->getX(), pLoopPlot->getY()) <= 1))
 				{
 					iTempValue *= 3;
 					iTempValue /= 2;
@@ -3503,7 +3503,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
                     if (iI != CITY_HOME_PLOT && !bStartingLoc)
                     {
-                        if ((pLoopPlot->getOwnerINLINE() != getID()) && stepDistance(pPlot->getX(),pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY()) > 1)
+                        if ((pLoopPlot->getOwner() != getID()) && stepDistance(pPlot->getX(),pPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY()) > 1)
 						{
                             iTempValue *= 2;
                             iTempValue /= 3;
@@ -4202,7 +4202,7 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 			iValue += std::max(2,((GC.getGameINLINE().calculateReligionPercent((ReligionTypes)iI)) / 5));
 			iValue += ((AI_getFlavorValue(/* AI_FLAVOR_RELIGION */ (FlavorTypes)1) +2) / 6);
 
-			if (GET_PLAYER(pCity->getOwnerINLINE()).getStateReligion() == iI)
+			if (GET_PLAYER(pCity->getOwner()).getStateReligion() == iI)
 			{
 				iValue += 2;
 			}
@@ -4242,7 +4242,7 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 				iValue += std::min(8,std::max(1, AI_bonusVal(pLoopPlot->getBonusType(getTeam()))/10));
 			}
 
-			if (pLoopPlot->getOwnerINLINE() == getID())
+			if (pLoopPlot->getOwner() == getID())
 			{
 				iValue++;
 			}
@@ -4254,13 +4254,13 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 		}
 	}
 
-	if( GET_PLAYER(pCity->getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3) )
+	if( GET_PLAYER(pCity->getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3) )
 	{
 		if( pCity->getCultureLevel() >= (GC.getGameINLINE().culturalVictoryCultureLevel() - 1) )
 		{
 			iValue += 15;
 
-			if( GET_PLAYER(pCity->getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE4) )
+			if( GET_PLAYER(pCity->getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE4) )
 			{
 				iValue += 25;
 
@@ -4272,13 +4272,13 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 		}
 	}
 
-	if( GET_PLAYER(pCity->getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_SPACE3) )
+	if( GET_PLAYER(pCity->getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_SPACE3) )
 	{
 		if( pCity->isCapital() )
 		{
 			iValue += 10;
 
-			if( GET_PLAYER(pCity->getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_SPACE4) )
+			if( GET_PLAYER(pCity->getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_SPACE4) )
 			{
 				iValue += 20;
 
@@ -6028,9 +6028,9 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 			pPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
 			if (pPlot->isPeak2(true))
 			{
-				if (pPlot->getOwnerINLINE() != NO_PLAYER)
+				if (pPlot->getOwner() != NO_PLAYER)
 				{
-					if (GET_PLAYER(pPlot->getOwnerINLINE()).getID() == getID())
+					if (GET_PLAYER(pPlot->getOwner()).getID() == getID())
 					{
 						iTempValue += 35;
 					}
@@ -8796,7 +8796,7 @@ int CvPlayerAI::AI_calculateStolenCityRadiusPlots(PlayerTypes ePlayer) const
 	{
 		const CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
 
-		if (pLoopPlot->getOwnerINLINE() == ePlayer && pLoopPlot->isPlayerCityRadius(getID()))
+		if (pLoopPlot->getOwner() == ePlayer && pLoopPlot->isPlayerCityRadius(getID()))
 		{
 			iCount++;
 		}
@@ -9826,7 +9826,7 @@ PlayerVoteTypes CvPlayerAI::AI_diploVote(const VoteSelectionSubData& kVoteData, 
 				CvCity* pCity = kPlayer.getCity(kVoteData.iCityId);
 				if (NULL != pCity)
 				{
-					if (NO_PLAYER != kVoteData.eOtherPlayer && kVoteData.eOtherPlayer != pCity->getOwnerINLINE())
+					if (NO_PLAYER != kVoteData.eOtherPlayer && kVoteData.eOtherPlayer != pCity->getOwner())
 					{
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      10/03/09                                jdog5000      */
@@ -11972,7 +11972,7 @@ int CvPlayerAI::AI_cityTradeVal(CvCity* pCity) const
 	int iValue;
 	int iI;
 
-	FAssert(pCity->getOwnerINLINE() != getID());
+	FAssert(pCity->getOwner() != getID());
 	/************************************************************************************************/
 	/* Afforess	                                    		 5/29/11                                */
 	/*                                                                                              */
@@ -12023,7 +12023,7 @@ int CvPlayerAI::AI_cityTradeVal(CvCity* pCity) const
 			iValue += AI_corporationValue((CorporationTypes)iI, pCity) / 25;
 			if (pCity->isHeadquarters((CorporationTypes)iI))
 			{
-				iValue += AI_corporationTradeVal((CorporationTypes)iI, pCity->getOwnerINLINE());
+				iValue += AI_corporationTradeVal((CorporationTypes)iI, pCity->getOwner());
 			}
 		}
 	}
@@ -12041,10 +12041,10 @@ int CvPlayerAI::AI_cityTradeVal(CvCity* pCity) const
 	/* Improved AI                                                                                  */
 	/************************************************************************************************/
 	/*
-	iValue += (((((pCity->getPopulation() * 50) + GC.getGameINLINE().getElapsedGameTurns() + 100) * 4) * pCity->plot()->calculateCulturePercent(pCity->getOwnerINLINE())) / 100);
+	iValue += (((((pCity->getPopulation() * 50) + GC.getGameINLINE().getElapsedGameTurns() + 100) * 4) * pCity->plot()->calculateCulturePercent(pCity->getOwner())) / 100);
 
 	 */
-	iValue += (((GC.getGameINLINE().getElapsedGameTurns() + 100) * 4) * pCity->plot()->calculateCulturePercent(pCity->getOwnerINLINE())) / 400;
+	iValue += (((GC.getGameINLINE().getElapsedGameTurns() + 100) * 4) * pCity->plot()->calculateCulturePercent(pCity->getOwner())) / 400;
 	/************************************************************************************************/
 	/* Afforess	                               END                                                  */
 	/************************************************************************************************/
@@ -12093,7 +12093,7 @@ int CvPlayerAI::AI_cityTradeVal(CvCity* pCity) const
 		iValue /= 3;
 	}
 	//colony
-	if (!GC.getMap().getArea(pCity->getArea())->isHomeArea(GET_PLAYER(pCity->getOwnerINLINE()).getID()))
+	if (!GC.getMap().getArea(pCity->getArea())->isHomeArea(GET_PLAYER(pCity->getOwner()).getID()))
 	{
 		iValue *= 4;
 		iValue /= 5;
@@ -12174,7 +12174,7 @@ int CvPlayerAI::AI_ourCityValue(CvCity* pCity) const
 			iValue += AI_corporationValue((CorporationTypes)iI, pCity) / 25;
 			if (pCity->isHeadquarters((CorporationTypes)iI))
 			{
-				iValue += AI_corporationTradeVal((CorporationTypes)iI, pCity->getOwnerINLINE());
+				iValue += AI_corporationTradeVal((CorporationTypes)iI, pCity->getOwner());
 			}
 		}
 	}
@@ -12182,7 +12182,7 @@ int CvPlayerAI::AI_ourCityValue(CvCity* pCity) const
 
 	iValue += (pCity->getCultureLevel() * 200);
 
-	iValue += (((GC.getGameINLINE().getElapsedGameTurns() + 100) * 4) * pCity->plot()->calculateCulturePercent(pCity->getOwnerINLINE())) / 400;
+	iValue += (((GC.getGameINLINE().getElapsedGameTurns() + 100) * 4) * pCity->plot()->calculateCulturePercent(pCity->getOwner())) / 400;
 
 	for (iI = 0; iI < pCity->getNumCityPlots(); iI++)
 	{
@@ -12226,7 +12226,7 @@ DenialTypes CvPlayerAI::AI_cityTrade(CvCity* pCity, PlayerTypes ePlayer) const
 {
 	CvCity* pNearestCity;
 
-	FAssert(pCity->getOwnerINLINE() == getID());
+	FAssert(pCity->getOwner() == getID());
 
 	if (pCity->getLiberationPlayer(false) == ePlayer)
 	{
@@ -14313,7 +14313,7 @@ int CvPlayerAI::AI_totalWaterAreaUnitAIs(CvArea* pArea, UnitAITypes eUnitAI) con
 				{
 					iCount += pLoopCity->plot()->plotCount(PUF_isUnitAIType, eUnitAI, -1, NULL, getID());
 
-					if (pLoopCity->getOwnerINLINE() == getID())
+					if (pLoopCity->getOwner() == getID())
 					{
 						iCount += pLoopCity->getNumTrainUnitAI(eUnitAI);
 					}
@@ -14607,7 +14607,7 @@ int CvPlayerAI::AI_adjacentPotentialAttackers(CvPlot* pPlot, bool bTestCanMove) 
 				const CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 				pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
 
-				if (pLoopUnit->getOwnerINLINE() == getID() && pLoopUnit->getDomainType() == (pPlot->isWater() ? DOMAIN_SEA : DOMAIN_LAND))
+				if (pLoopUnit->getOwner() == getID() && pLoopUnit->getDomainType() == (pPlot->isWater() ? DOMAIN_SEA : DOMAIN_LAND))
 				{
 					if (pLoopUnit->canAttack() && (!bTestCanMove || pLoopUnit->canMove()) && !pLoopUnit->AI_isCityAIType())
 					{
@@ -18518,7 +18518,7 @@ int CvPlayerAI::AI_religionValue(ReligionTypes eReligion) const
 	CvCity* pHolyCity = GC.getGameINLINE().getHolyCity(eReligion);
 	if (pHolyCity != NULL)
 	{
-		bool bOurHolyCity = pHolyCity->getOwnerINLINE() == getID();
+		bool bOurHolyCity = pHolyCity->getOwner() == getID();
 		bool bOurTeamHolyCity = pHolyCity->getTeam() == getTeam();
 
 		if (bOurHolyCity || bOurTeamHolyCity)
@@ -18763,13 +18763,13 @@ EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerT
 
 						if (kMissionInfo.isDestroyImprovement())
 						{
-							int iValue = AI_espionageVal(pSpyPlot->getOwnerINLINE(), (EspionageMissionTypes)iMission, pSpyPlot, -1);
+							int iValue = AI_espionageVal(pSpyPlot->getOwner(), (EspionageMissionTypes)iMission, pSpyPlot, -1);
 
 							if (iValue > iBestValue)
 							{
 								iBestValue = iValue;
 								eBestMission = (EspionageMissionTypes)iMission;
-								eTargetPlayer = pSpyPlot->getOwnerINLINE();
+								eTargetPlayer = pSpyPlot->getOwner();
 								pPlot = pSpyPlot;
 								iData = -1;
 							}
@@ -18793,13 +18793,13 @@ EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerT
 
 							if (kMissionInfo.getBuyUnitCostFactor() > 0 && GC.getDefineINT("SS_BRIBE"))
 							{
-								int iValue = AI_espionageVal(pSpyPlot->getOwnerINLINE(), (EspionageMissionTypes)iMission, pSpyPlot, -1);
+								int iValue = AI_espionageVal(pSpyPlot->getOwner(), (EspionageMissionTypes)iMission, pSpyPlot, -1);
 
 								if (iValue > iBestValue)
 								{
 									iBestValue = iValue;
 									eBestMission = (EspionageMissionTypes)iMission;
-									eTargetPlayer = pSpyPlot->getOwnerINLINE();
+									eTargetPlayer = pSpyPlot->getOwner();
 									pPlot = pSpyPlot;
 									iData = -1;
 								}
@@ -18826,13 +18826,13 @@ EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerT
 					CvEspionageMissionInfo& kMissionInfo = GC.getEspionageMissionInfo((EspionageMissionTypes)iMission);
 					if (kMissionInfo.isRevolt() || kMissionInfo.isDisablePower() || kMissionInfo.getWarWearinessCounter() > 0 || kMissionInfo.getBuyCityCostFactor() > 0)
 					{
-						int iValue = AI_espionageVal(pSpyPlot->getOwnerINLINE(), (EspionageMissionTypes)iMission, pSpyPlot, -1);
+						int iValue = AI_espionageVal(pSpyPlot->getOwner(), (EspionageMissionTypes)iMission, pSpyPlot, -1);
 
 						if (iValue > iBestValue)
 						{
 							iBestValue = iValue;
 							eBestMission = (EspionageMissionTypes)iMission;
-							eTargetPlayer = pSpyPlot->getOwnerINLINE();
+							eTargetPlayer = pSpyPlot->getOwner();
 							pPlot = pSpyPlot;
 							iData = -1;
 						}
@@ -18848,13 +18848,13 @@ EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerT
 						CvEspionageMissionInfo& kMissionInfo = GC.getEspionageMissionInfo((EspionageMissionTypes)iMission);
 						if (kMissionInfo.isNuke())
 						{
-							int iValue = AI_espionageVal(pSpyPlot->getOwnerINLINE(), (EspionageMissionTypes)iMission, pSpyPlot, -1);
+							int iValue = AI_espionageVal(pSpyPlot->getOwner(), (EspionageMissionTypes)iMission, pSpyPlot, -1);
 
 							if (iValue > iBestValue)
 							{
 								iBestValue = iValue;
 								eBestMission = (EspionageMissionTypes)iMission;
-								eTargetPlayer = pSpyPlot->getOwnerINLINE();
+								eTargetPlayer = pSpyPlot->getOwner();
 								pPlot = pSpyPlot;
 								iData = -1;
 							}
@@ -18871,13 +18871,13 @@ EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerT
 						CvEspionageMissionInfo& kMissionInfo = GC.getEspionageMissionInfo((EspionageMissionTypes)iMission);
 						if (kMissionInfo.getCityInsertCultureAmountFactor() > 0)
 						{
-							int iValue = AI_espionageVal(pSpyPlot->getOwnerINLINE(), (EspionageMissionTypes)iMission, pSpyPlot, -1);
+							int iValue = AI_espionageVal(pSpyPlot->getOwner(), (EspionageMissionTypes)iMission, pSpyPlot, -1);
 
 							if (iValue > iBestValue)
 							{
 								iBestValue = iValue;
 								eBestMission = (EspionageMissionTypes)iMission;
-								eTargetPlayer = pSpyPlot->getOwnerINLINE();
+								eTargetPlayer = pSpyPlot->getOwner();
 								pPlot = pSpyPlot;
 								iData = -1;
 							}
@@ -18919,13 +18919,13 @@ EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerT
 
 									if (pCity->getNumBuilding(eBuilding) > 0)
 									{
-										int iValue = AI_espionageVal(pSpyPlot->getOwnerINLINE(), (EspionageMissionTypes)iMission, pSpyPlot, iBuilding);
+										int iValue = AI_espionageVal(pSpyPlot->getOwner(), (EspionageMissionTypes)iMission, pSpyPlot, iBuilding);
 
 										if (iValue > iBestValue)
 										{
 											iBestValue = iValue;
 											eBestMission = (EspionageMissionTypes)iMission;
-											eTargetPlayer = pSpyPlot->getOwnerINLINE();
+											eTargetPlayer = pSpyPlot->getOwner();
 											pPlot = pSpyPlot;
 											iData = iBuilding;
 										}
@@ -18945,13 +18945,13 @@ EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerT
 							{
 								ProjectTypes eProject = (ProjectTypes)iProject;
 
-								int iValue = AI_espionageVal(pSpyPlot->getOwnerINLINE(), (EspionageMissionTypes)iMission, pSpyPlot, iProject);
+								int iValue = AI_espionageVal(pSpyPlot->getOwner(), (EspionageMissionTypes)iMission, pSpyPlot, iProject);
 
 								if (iValue > iBestValue)
 								{
 									iBestValue = iValue;
 									eBestMission = (EspionageMissionTypes)iMission;
-									eTargetPlayer = pSpyPlot->getOwnerINLINE();
+									eTargetPlayer = pSpyPlot->getOwner();
 									pPlot = pSpyPlot;
 									iData = iProject;
 								}
@@ -18969,13 +18969,13 @@ EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerT
 								if ((kMissionInfo.getCityPoisonWaterCounter() > 0) || (kMissionInfo.getDestroyProductionCostFactor() > 0)
 									|| (kMissionInfo.getStealTreasuryTypes() > 0))
 								{
-									int iValue = AI_espionageVal(pSpyPlot->getOwnerINLINE(), (EspionageMissionTypes)iMission, pSpyPlot, -1);
+									int iValue = AI_espionageVal(pSpyPlot->getOwner(), (EspionageMissionTypes)iMission, pSpyPlot, -1);
 
 									if (iValue > iBestValue)
 									{
 										iBestValue = iValue;
 										eBestMission = (EspionageMissionTypes)iMission;
-										eTargetPlayer = pSpyPlot->getOwnerINLINE();
+										eTargetPlayer = pSpyPlot->getOwner();
 										pPlot = pSpyPlot;
 										iData = -1;
 									}
@@ -18992,13 +18992,13 @@ EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerT
 							CvEspionageMissionInfo& kMissionInfo = GC.getEspionageMissionInfo((EspionageMissionTypes)iMission);
 							if ((kMissionInfo.getCityRevoltCounter() > 0) || (kMissionInfo.getPlayerAnarchyCounter() > 0))
 							{
-								int iValue = AI_espionageVal(pSpyPlot->getOwnerINLINE(), (EspionageMissionTypes)iMission, pSpyPlot, -1);
+								int iValue = AI_espionageVal(pSpyPlot->getOwner(), (EspionageMissionTypes)iMission, pSpyPlot, -1);
 
 								if (iValue > iBestValue)
 								{
 									iBestValue = iValue;
 									eBestMission = (EspionageMissionTypes)iMission;
-									eTargetPlayer = pSpyPlot->getOwnerINLINE();
+									eTargetPlayer = pSpyPlot->getOwner();
 									pPlot = pSpyPlot;
 									iData = -1;
 								}
@@ -19050,13 +19050,13 @@ EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerT
 									}
 								}
 
-								int iValue = AI_espionageVal(pSpyPlot->getOwnerINLINE(), (EspionageMissionTypes)iMission, pSpyPlot, -1);
+								int iValue = AI_espionageVal(pSpyPlot->getOwner(), (EspionageMissionTypes)iMission, pSpyPlot, -1);
 
 								if (iValue > iBestValue)
 								{
 									iBestValue = iValue;
 									eBestMission = (EspionageMissionTypes)iMission;
-									eTargetPlayer = pSpyPlot->getOwnerINLINE();
+									eTargetPlayer = pSpyPlot->getOwner();
 									pPlot = pSpyPlot;
 									iData = theGreatSpecialistTarget;
 								}
@@ -19080,13 +19080,13 @@ EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerT
 						CvEspionageMissionInfo& kMissionInfo = GC.getEspionageMissionInfo((EspionageMissionTypes)iMission);
 						if (kMissionInfo.getCounterespionageNumTurns() > 0)
 						{
-							int iValue = AI_espionageVal(pSpyPlot->getOwnerINLINE(), (EspionageMissionTypes)iMission, pSpyPlot, -1);
+							int iValue = AI_espionageVal(pSpyPlot->getOwner(), (EspionageMissionTypes)iMission, pSpyPlot, -1);
 
 							if (iValue > iBestValue)
 							{
 								iBestValue = iValue;
 								eBestMission = (EspionageMissionTypes)iMission;
-								eTargetPlayer = pSpyPlot->getOwnerINLINE();
+								eTargetPlayer = pSpyPlot->getOwner();
 								pPlot = pSpyPlot;
 								iData = -1;
 							}
@@ -19104,7 +19104,7 @@ EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerT
 						for (int iTech = 0; iTech < GC.getNumTechInfos(); iTech++)
 						{
 							TechTypes eTech = (TechTypes)iTech;
-							int iValue = AI_espionageVal(pSpyPlot->getOwnerINLINE(), (EspionageMissionTypes)iMission, pSpyPlot, eTech);
+							int iValue = AI_espionageVal(pSpyPlot->getOwner(), (EspionageMissionTypes)iMission, pSpyPlot, eTech);
 
 							iValue *= 2;		//Increase AI weight of techvalues TSHEEP
 
@@ -19112,7 +19112,7 @@ EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerT
 							{
 								iBestValue = iValue;
 								eBestMission = (EspionageMissionTypes)iMission;
-								eTargetPlayer = pSpyPlot->getOwnerINLINE();
+								eTargetPlayer = pSpyPlot->getOwner();
 								pPlot = pSpyPlot;
 								iData = eTech;
 							}
@@ -19161,7 +19161,7 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 	int iValue = 0;
 	if (bMalicious && GC.getEspionageMissionInfo(eMission).isDestroyImprovement())
 	{
-		if (pPlot->getOwnerINLINE() == eTargetPlayer)
+		if (pPlot->getOwner() == eTargetPlayer)
 		{
 			ImprovementTypes eImprovement = pPlot->getImprovementType();
 			if (eImprovement != NO_IMPROVEMENT)
@@ -19174,9 +19174,9 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 					int iTempValue = 0;
 					if (NULL != pPlot->getWorkingCity())
 					{
-						iTempValue += (pPlot->calculateImprovementYieldChange(eImprovement, YIELD_FOOD, pPlot->getOwnerINLINE()) * 2);
-						iTempValue += (pPlot->calculateImprovementYieldChange(eImprovement, YIELD_PRODUCTION, pPlot->getOwnerINLINE()) * 1);
-						iTempValue += (pPlot->calculateImprovementYieldChange(eImprovement, YIELD_COMMERCE, pPlot->getOwnerINLINE()) * 2);
+						iTempValue += (pPlot->calculateImprovementYieldChange(eImprovement, YIELD_FOOD, pPlot->getOwner()) * 2);
+						iTempValue += (pPlot->calculateImprovementYieldChange(eImprovement, YIELD_PRODUCTION, pPlot->getOwner()) * 1);
+						iTempValue += (pPlot->calculateImprovementYieldChange(eImprovement, YIELD_COMMERCE, pPlot->getOwner()) * 2);
 						iTempValue += GC.getImprovementInfo(eImprovement).getUpgradeTime() / 2;
 						iValue += iTempValue;
 					}
@@ -19367,7 +19367,7 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-			if (GET_PLAYER(pCity->getOwnerINLINE()).getNumCities() == 1)
+			if (GET_PLAYER(pCity->getOwner()).getNumCities() == 1)
 			{
 				iValue *= 3;
 			}
@@ -19516,9 +19516,9 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 			iTempValue += GC.getGameINLINE().getSorenRandNum((pCity->getPopulation() + 1), "AI Nuke City Value");
 			iTempValue += std::max(0, pCity->getPopulation() - 10);
 
-			iTempValue += ((pCity->getPopulation() * (100 + pCity->calculateCulturePercent(pCity->getOwnerINLINE()))) / 100);
+			iTempValue += ((pCity->getPopulation() * (100 + pCity->calculateCulturePercent(pCity->getOwner()))) / 100);
 
-			iTempValue += AI_getAttitudeVal(pCity->getOwnerINLINE()) / 3;
+			iTempValue += AI_getAttitudeVal(pCity->getOwner()) / 3;
 
 			for (int iDX = -(iRange); iDX <= iRange; iDX++)
 			{
@@ -22050,7 +22050,7 @@ void CvPlayerAI::AI_doDiplo()
 
 														if (pLoopPlot != NULL)
 														{
-															if (pLoopPlot->getOwnerINLINE() == iI)
+															if (pLoopPlot->getOwner() == iI)
 															{
 																iCount++;
 															}
@@ -27853,7 +27853,7 @@ int CvPlayerAI::AI_getOurPlotStrength(const CvPlot* pPlot, int iRange, bool bDef
 						pLoopUnit = ::getUnit(pUnitNode->m_data);
 						pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
 
-						if (pLoopUnit->getOwnerINLINE() == getID())
+						if (pLoopUnit->getOwner() == getID())
 						{
 							if ((bDefensiveBonuses && pLoopUnit->canDefend()) || pLoopUnit->canAttack())
 							{
@@ -28379,7 +28379,7 @@ int CvPlayerAI::AI_countNumAreaHostileUnits(CvArea* pArea, bool bPlayer, bool bT
 	{
 		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
 		if ((pLoopPlot->area() == pArea) && pLoopPlot->isVisible(getTeam(), false) && stepDistance(pLoopPlot->getX(), pLoopPlot->getY(), pPlot->getX(), pPlot->getY()) <= iMaxDistance &&
-			((bPlayer && pLoopPlot->getOwnerINLINE() == getID()) || (bTeam && pLoopPlot->getTeam() == getTeam()) 
+			((bPlayer && pLoopPlot->getOwner() == getID()) || (bTeam && pLoopPlot->getTeam() == getTeam()) 
 				|| (bNeutral && !pLoopPlot->isOwned()) || (bHostile && pLoopPlot->isOwned() && GET_TEAM(getTeam()).isAtWar(pLoopPlot->getTeam()))))
 		{
 			iCount += pLoopPlot->plotCount(PUF_isEnemy, getID(), 0, NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, getID());
@@ -28930,7 +28930,7 @@ bool CvPlayerAI::AI_advancedStartPlaceCity(CvPlot* pPlot)
 		doAdvancedStartAction(ADVANCEDSTARTACTION_CITY, pPlot->getX(), pPlot->getY(), -1, true);
 
 		pCity = pPlot->getPlotCity();
-		if ((pCity == NULL) || (pCity->getOwnerINLINE() != getID()))
+		if ((pCity == NULL) || (pCity->getOwner() != getID()))
 		{
 			//this should never happen since the cost for a city should be 0 if
 			//the city can't be placed.
@@ -30081,7 +30081,7 @@ void CvPlayerAI::AI_doEnemyUnitData()
 					{
 						iUnitValue += 10;
 
-						if ((pLoopPlot->getOwnerINLINE() == getID()))
+						if ((pLoopPlot->getOwner() == getID()))
 						{
 							iUnitValue += 15;
 						}
@@ -30089,7 +30089,7 @@ void CvPlayerAI::AI_doEnemyUnitData()
 						{
 							if (iAdjacentAttackers == -1)
 							{
-								iAdjacentAttackers = GET_PLAYER(pLoopPlot->getOwnerINLINE()).AI_adjacentPotentialAttackers(pLoopPlot);
+								iAdjacentAttackers = GET_PLAYER(pLoopPlot->getOwner()).AI_adjacentPotentialAttackers(pLoopPlot);
 							}
 							if (iAdjacentAttackers > 0)
 							{
@@ -30103,7 +30103,7 @@ void CvPlayerAI::AI_doEnemyUnitData()
 /* Bugfix                                                                                       */
 /************************************************************************************************/
 /* original bts code
-					else if (pLoopUnit->getOwnerINLINE() != getID())
+					else if (pLoopUnit->getOwner() != getID())
 */
 					else if (pLoopUnit->getTeam() != getTeam())
 /************************************************************************************************/
@@ -31004,12 +31004,12 @@ bool CvPlayerAI::AI_isPlotThreatened(CvPlot* pPlot, int iRange, bool bTestMoves)
 								if (pLoopUnit->isEnemy(getTeam()) && pLoopUnit->canAttack() && !pLoopUnit->isInvisible(getTeam(), false))
 								{
 									if ( pLoopGroup == NULL ||
-										 pLoopUnit->getOwnerINLINE() > pLoopGroup->getOwnerINLINE() ||
-										 (pLoopUnit->getOwnerINLINE() == pLoopGroup->getOwnerINLINE() && pLoopUnit->getGroupID() > pLoopGroup->getID()) )
+										 pLoopUnit->getOwner() > pLoopGroup->getOwner() ||
+										 (pLoopUnit->getOwner() == pLoopGroup->getOwner() && pLoopUnit->getGroupID() > pLoopGroup->getID()) )
 									{
 										if ( pNextGroup == NULL ||
-											 pLoopUnit->getOwnerINLINE() < pNextGroup->getOwnerINLINE() ||
-											 (pLoopUnit->getOwnerINLINE() == pNextGroup->getOwnerINLINE() && pLoopUnit->getGroupID() < pNextGroup->getID()) )
+											 pLoopUnit->getOwner() < pNextGroup->getOwner() ||
+											 (pLoopUnit->getOwner() == pNextGroup->getOwner() && pLoopUnit->getGroupID() < pNextGroup->getID()) )
 										{
 											pNextGroup = pLoopUnit->getGroup();
 										}

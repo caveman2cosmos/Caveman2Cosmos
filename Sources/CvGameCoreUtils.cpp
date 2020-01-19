@@ -192,9 +192,9 @@ bool isBeforeUnitCycle(const CvUnit* pFirstUnit, const CvUnit* pSecondUnit)
 	FAssert(pSecondUnit != NULL);
 	FAssert(pFirstUnit != pSecondUnit);
 
-	if (pFirstUnit->getOwnerINLINE() != pSecondUnit->getOwnerINLINE())
+	if (pFirstUnit->getOwner() != pSecondUnit->getOwner())
 	{
-		return (pFirstUnit->getOwnerINLINE() < pSecondUnit->getOwnerINLINE());
+		return (pFirstUnit->getOwner() < pSecondUnit->getOwner());
 	}
 
 	if (pFirstUnit->getDomainType() != pSecondUnit->getDomainType())
@@ -1144,7 +1144,7 @@ float getCombatOddsSpecific(CvUnit* pAttacker, CvUnit* pDefender, int n_A, int n
 		if (pDefender->isHominid())
 		{
 			//defender is barbarian
-			if (!GET_PLAYER(pAttacker->getOwnerINLINE()).isHominid() && GET_PLAYER(pAttacker->getOwnerINLINE()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(pAttacker->getOwnerINLINE()).getHandicapType()).getFreeWinsVsBarbs())
+			if (!GET_PLAYER(pAttacker->getOwner()).isHominid() && GET_PLAYER(pAttacker->getOwner()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(pAttacker->getOwner()).getHandicapType()).getFreeWinsVsBarbs())
 			{
 				//attacker is not barb and attacker player has free wins left
 				//I have assumed in the following code only one of the units (attacker and defender) can be a barbarian
@@ -1156,7 +1156,7 @@ float getCombatOddsSpecific(CvUnit* pAttacker, CvUnit* pDefender, int n_A, int n
 		else if (pAttacker->isHominid())
 		{
 			//attacker is barbarian
-			if (!GET_PLAYER(pDefender->getOwnerINLINE()).isHominid() && GET_PLAYER(pDefender->getOwnerINLINE()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(pDefender->getOwnerINLINE()).getHandicapType()).getFreeWinsVsBarbs())
+			if (!GET_PLAYER(pDefender->getOwner()).isHominid() && GET_PLAYER(pDefender->getOwner()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(pDefender->getOwner()).getHandicapType()).getFreeWinsVsBarbs())
 			{
 				//defender is not barbarian and defender has free wins left and attacker is barbarian
 				iAttackerOdds = std::min((10 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iAttackerOdds);
@@ -1675,7 +1675,7 @@ bool PUF_isGroupHead(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* 
 bool PUF_isPlayer(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
 	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
-	return (pUnit->getOwnerINLINE() == iData1);
+	return (pUnit->getOwner() == iData1);
 }
 
 bool PUF_isTeam(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
@@ -1695,7 +1695,7 @@ bool PUF_isCombatTeam(const CvUnit* pUnit, int iData1, int iData2, const CvUnit*
 bool PUF_isOtherPlayer(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
 	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
-	return (pUnit->getOwnerINLINE() != iData1);
+	return (pUnit->getOwner() != iData1);
 }
 
 bool PUF_isOtherTeam(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
@@ -1840,7 +1840,7 @@ bool PUF_isWantedCriminal(const CvUnit* pUnit, int iData1, int iData2, const CvU
 
 bool PUF_isCityGarrison(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	if ( pUnit->getGroup()->AI_isCityGarrison(GET_PLAYER(pUnit->getOwnerINLINE()).getCity(iData1)) )
+	if ( pUnit->getGroup()->AI_isCityGarrison(GET_PLAYER(pUnit->getOwner()).getCity(iData1)) )
 	{
 		bool bAllowAnyDefenders = (bool)iData2;
 

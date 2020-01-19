@@ -78,7 +78,7 @@ void CvPlotGroup::addPlot(CvPlot* pPlot, bool bRecalculateBonuses)
 {
 	PROFILE_FUNC();
 
-	pPlot->setPlotGroup(getOwnerINLINE(), this, bRecalculateBonuses);
+	pPlot->setPlotGroup(getOwner(), this, bRecalculateBonuses);
 
 	//	Add the zobrist contribution of this plot to the hash
 	m_zobristHashes.allNodesHash ^= pPlot->getZobristContribution();
@@ -88,7 +88,7 @@ void CvPlotGroup::addPlot(CvPlot* pPlot, bool bRecalculateBonuses)
 		m_zobristHashes.resourceNodesHash ^= pPlot->getZobristContribution();
 	}
 
-	if ( m_numCities != -1 && pPlot->isCity() && pPlot->getPlotCity()->getOwnerINLINE() == getOwnerINLINE())
+	if ( m_numCities != -1 && pPlot->isCity() && pPlot->getPlotCity()->getOwner() == getOwner())
 	{
 		m_numCities++;
 	}
@@ -110,15 +110,15 @@ void CvPlotGroup::removePlot(CvPlot* pPlot, bool bRecalculateBonuses)
 	FAssert(pPlot->getPlotGroup(m_eOwner) == this);
 	if ( pPlot->getPlotGroup(m_eOwner) == this )
 	{
-		pPlot->setPlotGroup(getOwnerINLINE(), NULL, bRecalculateBonuses);
+		pPlot->setPlotGroup(getOwner(), NULL, bRecalculateBonuses);
 
 		if ( --m_numPlots == 0 )
 		{
-			GET_PLAYER(getOwnerINLINE()).deletePlotGroup(getID());
+			GET_PLAYER(getOwner()).deletePlotGroup(getID());
 		}
 		else
 		{
-			if ( m_numCities != -1 && pPlot->isCity() && pPlot->getPlotCity()->getOwnerINLINE() == getOwnerINLINE() )
+			if ( m_numCities != -1 && pPlot->isCity() && pPlot->getPlotCity()->getOwner() == getOwner() )
 			{
 				m_numCities--;
 			}
@@ -251,7 +251,7 @@ void CvPlotGroup::recalculatePlots()
 	Validate();
 #endif
 
-	PlayerTypes eOwner = getOwnerINLINE();
+	PlayerTypes eOwner = getOwner();
 	CvPlot* pPlot = getRepresentativePlot();
 	if (pPlot == NULL)
 	{
@@ -424,7 +424,7 @@ void CvPlotGroup::recalculatePlots()
 				iPlotsTransferred++;
 				newTransitionGroup->m_numPlots--;
 
-				if ( pPlot->getPlotCity() != NULL && pPlot->getPlotCity()->getOwnerINLINE() == m_eOwner )
+				if ( pPlot->getPlotCity() != NULL && pPlot->getPlotCity()->getOwner() == m_eOwner )
 				{
 					m_numCities++;
 				}
@@ -476,12 +476,6 @@ void CvPlotGroup::setID(int iID)
 }
 
 
-PlayerTypes CvPlotGroup::getOwner() const
-{
-	return getOwnerINLINE();
-}
-
-
 int CvPlotGroup::getNumBonuses(BonusTypes eBonus) const
 {
 	FAssertMsg(eBonus >= 0, "eBonus is expected to be non-negative (invalid Index)");
@@ -513,10 +507,10 @@ void CvPlotGroup::changeNumBonuses(BonusTypes eBonus, int iChange)
 
 		m_paiNumBonuses[eBonus] = (m_paiNumBonuses[eBonus] + iChange);
 
-		for (CvPlayer::city_iterator cityItr = GET_PLAYER(getOwnerINLINE()).beginCities(); cityItr != GET_PLAYER(getOwnerINLINE()).endCities(); ++cityItr)
+		for (CvPlayer::city_iterator cityItr = GET_PLAYER(getOwner()).beginCities(); cityItr != GET_PLAYER(getOwner()).endCities(); ++cityItr)
 		{
 			CvCity* pLoopCity = *cityItr;
-			if (pLoopCity->plotGroup(getOwnerINLINE()) == this)
+			if (pLoopCity->plotGroup(getOwner()) == this)
 			{
 				pLoopCity->changeNumBonuses(eBonus, iChange);
 			}
@@ -641,7 +635,7 @@ static bool countCitiesCallback(CvPlotGroup* onBehalfOf, CvPlot* pLoopPlot, void
 {
 	const CvCity* pCity = pLoopPlot->getPlotCity();
 
-	if (pCity != NULL && pCity->getOwnerINLINE() == onBehalfOf->getOwnerINLINE())
+	if (pCity != NULL && pCity->getOwner() == onBehalfOf->getOwner())
 	{
 		onBehalfOf->m_numCities++;
 	}
@@ -831,7 +825,7 @@ void CvPlotGroup::mergeIn(CvPlotGroup* from, bool bRecalculateBonuses)
 
 	from->plotEnumerator(plotGroupMerger, &params);
 	
-	GET_PLAYER(getOwnerINLINE()).deletePlotGroup(from->getID());
+	GET_PLAYER(getOwner()).deletePlotGroup(from->getID());
 }
 
 void CvPlotGroup::colorRegion(CvPlot* pStartPlot, PlayerTypes eOwner, bool bRecalculateBonuses)

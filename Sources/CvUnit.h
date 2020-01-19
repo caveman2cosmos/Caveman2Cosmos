@@ -1610,13 +1610,7 @@ public:
 	void setBlockading(bool bNewValue);
 	void collectBlockadeGold();
 
-	DllExport PlayerTypes getOwner() const;																									// Exposed to Python
-#ifdef _USRDLL
-	inline PlayerTypes getOwnerINLINE() const
-	{
-		return m_eOwner;
-	}
-#endif
+	DllExport inline PlayerTypes getOwner() const { return m_eOwner; } // Exposed to Python
 	DllExport PlayerTypes getVisualOwner(TeamTypes eForTeam = NO_TEAM) const;																									// Exposed to Python
 	PlayerTypes getCombatOwner(TeamTypes eForTeam, const CvPlot* pPlot) const;																									// Exposed to Python
 	DllExport TeamTypes getTeam() const;																										// Exposed to Python

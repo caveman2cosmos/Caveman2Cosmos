@@ -1880,7 +1880,7 @@ void CyCity::setPlundered(bool bNewValue)
 
 int /*PlayerTypes*/ CyCity::getOwner()
 {
-	return m_pCity ? m_pCity->getOwnerINLINE() : NO_PLAYER;
+	return m_pCity ? m_pCity->getOwner() : NO_PLAYER;
 }
 
 int /*TeamTypes*/ CyCity::getTeam()
@@ -2952,7 +2952,7 @@ void CyCity::changeBonusCommerceRateModifier(int /*CommerceTypes*/ eIndex, int i
 
 bool CyCity::AI_isDefended(int iExtra)
 {
-	return (m_pCity ? m_pCity->AI_isDefended(iExtra*GET_PLAYER(m_pCity->getOwnerINLINE()).strengthOfBestUnitAI(DOMAIN_LAND, UNITAI_CITY_DEFENSE)) : 0);
+	return (m_pCity ? m_pCity->AI_isDefended(iExtra*GET_PLAYER(m_pCity->getOwner()).strengthOfBestUnitAI(DOMAIN_LAND, UNITAI_CITY_DEFENSE)) : 0);
 }
 int CyCity::getArea() const
 {

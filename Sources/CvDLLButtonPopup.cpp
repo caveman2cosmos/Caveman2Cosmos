@@ -201,12 +201,12 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 				CvPlot* pPlot = pSelectionGroup->plot();
 				foreach_ (CvUnit* unit, pPlot->units())
 				{
-					if (pSelectionGroup->canDoCommand(COMMAND_LOAD_UNIT, unit->getOwnerINLINE(), unit->getID()))
+					if (pSelectionGroup->canDoCommand(COMMAND_LOAD_UNIT, unit->getOwner(), unit->getID()))
 					{
 						iCount--;
 						if (iCount == 0)
 						{
-							GC.getGameINLINE().selectionListGameNetMessage(GAMEMESSAGE_DO_COMMAND, COMMAND_LOAD_UNIT, unit->getOwnerINLINE(), unit->getID());
+							GC.getGameINLINE().selectionListGameNetMessage(GAMEMESSAGE_DO_COMMAND, COMMAND_LOAD_UNIT, unit->getOwner(), unit->getID());
 							break;
 						}
 					}
@@ -916,7 +916,7 @@ void CvDLLButtonPopup::OnFocus(CvPopup* pPopup, CvPopupInfo &info)
 		{
 			CvCity* pCity = GET_PLAYER(ePlayer).getCity(info.getData1());
 
-			if (NULL == pCity || pCity->getOwnerINLINE() != ePlayer || pCity->isProduction())
+			if (NULL == pCity || pCity->getOwner() != ePlayer || pCity->isProduction())
 			{
 				gDLL->getInterfaceIFace()->popupSetAsCancelled(pPopup);
 				break;
@@ -946,7 +946,7 @@ void CvDLLButtonPopup::OnFocus(CvPopup* pPopup, CvPopupInfo &info)
 		{
 			CvCity* pCity = GET_PLAYER(ePlayer).getCity(info.getData1());
 
-			if (NULL == pCity || pCity->getOwnerINLINE() != ePlayer)
+			if (NULL == pCity || pCity->getOwner() != ePlayer)
 			{
 				gDLL->getInterfaceIFace()->popupSetAsCancelled(pPopup);
 				break;
@@ -1215,7 +1215,7 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 		return (false);
 	}
 
-	FAssertMsg(pCity->getOwnerINLINE() == GC.getGameINLINE().getActivePlayer(), "City must belong to Active Player");	
+	FAssertMsg(pCity->getOwner() == GC.getGameINLINE().getActivePlayer(), "City must belong to Active Player");	
 
 	// This popup might be called to suggest a specific thing that the player should do, as opposed to just 
 	// indicating that a build queue is empty. In this case the thing to build is determined below
@@ -1250,7 +1250,7 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 		{
 			szPopupHeader = gDLL->getText(((isLimitedUnitClass((UnitClassTypes)(GC.getUnitInfo(eTrainUnit).getUnitClassType()))) ? "TXT_KEY_POPUP_CANNOT_TRAIN_WORK_NEXT_LIMITED" : "TXT_KEY_POPUP_CANNOT_TRAIN_WORK_NEXT"), GC.getUnitInfo(eTrainUnit).getTextKeyWide(), pCity->getNameKey());
 		}
-		szArtFilename = GET_PLAYER(pCity->getOwnerINLINE()).getUnitButton(eTrainUnit);
+		szArtFilename = GET_PLAYER(pCity->getOwner()).getUnitButton(eTrainUnit);
 	}
 	else if (eConstructBuilding != NO_BUILDING)
 	{
@@ -1337,7 +1337,7 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 		{
 			int iTurns = pCity->getProductionTurnsLeft(eProductionUnit, 0);
 			CvWString szUnitText = gDLL->getText("TXT_KEY_POPUP_RECOMMENDED", GC.getUnitInfo(eProductionUnit).getTextKeyWide(), iTurns, GC.getAdvisorInfo(eUnitAdvisor).getTextKeyWide());
-			gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szUnitText, GET_PLAYER(pCity->getOwnerINLINE()).getUnitButton(eProductionUnit), GC.getUnitInfo(eProductionUnit).getUnitClassType(), WIDGET_TRAIN, GC.getUnitInfo(eProductionUnit).getUnitClassType(), pCity->getID(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
+			gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szUnitText, GET_PLAYER(pCity->getOwner()).getUnitButton(eProductionUnit), GC.getUnitInfo(eProductionUnit).getUnitClassType(), WIDGET_TRAIN, GC.getUnitInfo(eProductionUnit).getUnitClassType(), pCity->getID(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
 			iNumBuilds++;
 		}
 	}
@@ -1410,7 +1410,7 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 		//TB SubCombat Mod Footnote: this following section is the only place in the dll files that references getUnitCombatType that has not been updated for SubCombats as I'm not sure where it displays nor how to best frame it yet.
 
 		// Add the 5 strongest military units
-		const CvPlayerAI& player = GET_PLAYER(pCity->getOwnerINLINE());
+		const CvPlayerAI& player = GET_PLAYER(pCity->getOwner());
 		const CvCivilizationInfo& civInfo = GC.getCivilizationInfo(pCity->getCivilizationType());
 		std::vector<UnitBuildItem> units;
 
@@ -1462,7 +1462,7 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 			const CvUnitInfo& unitInfo = GC.getUnitInfo(unitBuildItem.type);
 			gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup,
 				CvWString::format(L"%s (%d)", unitInfo.getDescription(), pCity->getProductionTurnsLeft(unitBuildItem.type, 0)),
-				GET_PLAYER(pCity->getOwnerINLINE()).getUnitButton(unitBuildItem.type),
+				GET_PLAYER(pCity->getOwner()).getUnitButton(unitBuildItem.type),
 				unitInfo.getUnitClassType(), WIDGET_TRAIN, unitInfo.getUnitClassType(), pCity->getID(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
 			iNumBuilds++;
 		}
@@ -2023,7 +2023,7 @@ bool CvDLLButtonPopup::launchDeclareWarMovePopup(CvPopup* pPopup, CvPopupInfo &i
 	CvWString szBuffer;
 	if ((pPlot != NULL) && (pPlot->getTeam() == eRivalTeam))
 	{
-		szBuffer = gDLL->getText("TXT_KEY_POPUP_ENTER_LANDS_WAR", GET_PLAYER(pPlot->getOwnerINLINE()).getCivilizationAdjective());
+		szBuffer = gDLL->getText("TXT_KEY_POPUP_ENTER_LANDS_WAR", GET_PLAYER(pPlot->getOwner()).getCivilizationAdjective());
 
 		if (GET_TEAM(GC.getGameINLINE().getActiveTeam()).isOpenBordersTrading())
 		{
@@ -2080,7 +2080,7 @@ bool CvDLLButtonPopup::launchLoadUnitPopup(CvPopup* pPopup, CvPopupInfo &info)
 	{
 		CvUnit* pLoopUnit = *unitItr;
 
-		if (pSelectionGroup->canDoCommand(COMMAND_LOAD_UNIT, pLoopUnit->getOwnerINLINE(), pLoopUnit->getID()))
+		if (pSelectionGroup->canDoCommand(COMMAND_LOAD_UNIT, pLoopUnit->getOwner(), pLoopUnit->getID()))
 		{
 			if (!pFirstUnit)
 			{
@@ -2106,7 +2106,7 @@ bool CvDLLButtonPopup::launchLoadUnitPopup(CvPopup* pPopup, CvPopupInfo &info)
 	{
 		if (pFirstUnit)
 		{
-			GC.getGameINLINE().selectionListGameNetMessage(GAMEMESSAGE_DO_COMMAND, COMMAND_LOAD_UNIT, pFirstUnit->getOwnerINLINE(), pFirstUnit->getID());
+			GC.getGameINLINE().selectionListGameNetMessage(GAMEMESSAGE_DO_COMMAND, COMMAND_LOAD_UNIT, pFirstUnit->getOwner(), pFirstUnit->getID());
 		}
 		return (false);
 	}
@@ -2190,7 +2190,7 @@ bool CvDLLButtonPopup::launchDoEspionagePopup(CvPopup* pPopup, CvPopupInfo &info
 	{
 		if (!GC.getEspionageMissionInfo((EspionageMissionTypes) iLoop).isPassive())
 		{
-			if (GET_PLAYER(pUnit->getOwnerINLINE()).canDoEspionageMission((EspionageMissionTypes) iLoop, pPlot->getOwnerINLINE(), pPlot, -1, pUnit))
+			if (GET_PLAYER(pUnit->getOwner()).canDoEspionageMission((EspionageMissionTypes) iLoop, pPlot->getOwner(), pPlot, -1, pUnit))
 			{
 				if (GC.getEspionageMissionInfo((EspionageMissionTypes) iLoop).isTwoPhases())
 				{
@@ -2199,7 +2199,7 @@ bool CvDLLButtonPopup::launchDoEspionagePopup(CvPopup* pPopup, CvPopupInfo &info
 				}
 				else
 				{
-					int iCost = GET_PLAYER(pUnit->getOwnerINLINE()).getEspionageMissionCost((EspionageMissionTypes) iLoop, pPlot->getOwnerINLINE(), pPlot, -1, pUnit);
+					int iCost = GET_PLAYER(pUnit->getOwner()).getEspionageMissionCost((EspionageMissionTypes) iLoop, pPlot->getOwner(), pPlot, -1, pUnit);
 					if (iCost > 0)
 					{
 						CvWString szBuffer = gDLL->getText("TXT_KET_ESPIONAGE_MISSION_COST", GC.getEspionageMissionInfo((EspionageMissionTypes) iLoop).getTextKeyWide(), iCost);
@@ -2226,7 +2226,7 @@ bool CvDLLButtonPopup::launchDoEspionageTargetPopup(CvPopup* pPopup, CvPopupInfo
 	}
 
 	CvPlot* pPlot = pUnit->plot();
-	PlayerTypes eTargetPlayer = pPlot->getOwnerINLINE();
+	PlayerTypes eTargetPlayer = pPlot->getOwner();
 
 	if (NO_PLAYER == eTargetPlayer)
 	{
@@ -3396,7 +3396,7 @@ bool CvDLLButtonPopup::launchSelectMergeUnitPopup(CvPopup* pPopup, CvPopupInfo &
 	{
 		CvUnit* pLoopUnit = *unitItr;
 
-		if (pLoopUnit->getOwnerINLINE() == pUnit->getOwnerINLINE())
+		if (pLoopUnit->getOwner() == pUnit->getOwner())
 		{
 			if (GET_PLAYER(pLoopUnit->getOwner()).getBaseMergeSelectionUnit() != pLoopUnit->getID() && GET_PLAYER(pLoopUnit->getOwner()).getFirstMergeSelectionUnit() != pLoopUnit->getID())
 			{
@@ -3483,7 +3483,7 @@ bool CvDLLButtonPopup::launchImprovementUpgradeOptionsPopup(CvPopup* pPopup, CvP
 	{
 		CvImprovementInfo& kImprovement = GC.getImprovementInfo((ImprovementTypes)iI);
 		ImprovementTypes eImprovement = ((ImprovementTypes)iI);
-		if (eImprovement != eCurrentImprovement && (GC.getImprovementInfo(eImprovement).getHighestCost() < GET_PLAYER(pPlot->getOwnerINLINE()).getEffectiveGold()))
+		if (eImprovement != eCurrentImprovement && (GC.getImprovementInfo(eImprovement).getHighestCost() < GET_PLAYER(pPlot->getOwner()).getEffectiveGold()))
 		{
 			if ((ImprovementTypes)GC.getImprovementInfo(eCurrentImprovement).getImprovementUpgrade() == eImprovement
 				&& pPlot->canHaveImprovementAsUpgrade(eImprovement, eTeam, false, false))

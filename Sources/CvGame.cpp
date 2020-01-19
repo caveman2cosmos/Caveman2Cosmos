@@ -3038,7 +3038,7 @@ void CvGame::selectGroup(CvUnit* pUnit, bool bShift, bool bCtrl, bool bAlt) cons
 			CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 			pUnitNode = pUnitPlot->nextUnitNode(pUnitNode);
 
-			if (pLoopUnit->getOwnerINLINE() == getActivePlayer())
+			if (pLoopUnit->getOwner() == getActivePlayer())
 			{
 				if (pLoopUnit->canMove())
 				{
@@ -3070,7 +3070,7 @@ void CvGame::selectAll(CvPlot* pPlot) const
 	{
 		CvUnit* pCenterUnit = pPlot->getDebugCenterUnit();
 
-		if ((pCenterUnit != NULL) && (pCenterUnit->getOwnerINLINE() == getActivePlayer()))
+		if ((pCenterUnit != NULL) && (pCenterUnit->getOwner() == getActivePlayer()))
 		{
 			pSelectUnit = pCenterUnit;
 		}
@@ -6343,7 +6343,7 @@ void CvGame::setHolyCity(ReligionTypes eIndex, CvCity* pNewValue, bool bAnnounce
 				if (isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
 				{
 					szBuffer = gDLL->getText("TXT_KEY_MISC_REL_FOUNDED", GC.getReligionInfo(eIndex).getTextKeyWide(), pHolyCity->getNameKey());
-					addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, pHolyCity->getOwnerINLINE(), szBuffer, pHolyCity->getX(), pHolyCity->getY(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+					addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, pHolyCity->getOwner(), szBuffer, pHolyCity->getX(), pHolyCity->getY(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 
 					for (iI = 0; iI < MAX_PLAYERS; iI++)
 					{
@@ -6384,14 +6384,14 @@ void CvGame::setHolyCity(ReligionTypes eIndex, CvCity* pNewValue, bool bAnnounce
 				{
 					if( pNewValue != NULL )
 					{
-						GET_PLAYER(pNewValue->getOwnerINLINE()).AI_invalidateAttitudeCache((PlayerTypes)iJ);
-						GET_PLAYER((PlayerTypes)iJ).AI_invalidateAttitudeCache(pNewValue->getOwnerINLINE());
+						GET_PLAYER(pNewValue->getOwner()).AI_invalidateAttitudeCache((PlayerTypes)iJ);
+						GET_PLAYER((PlayerTypes)iJ).AI_invalidateAttitudeCache(pNewValue->getOwner());
 					}
 					
 					if( pOldValue != NULL )
 					{
-						GET_PLAYER(pOldValue->getOwnerINLINE()).AI_invalidateAttitudeCache((PlayerTypes)iJ);
-						GET_PLAYER((PlayerTypes)iJ).AI_invalidateAttitudeCache(pOldValue->getOwnerINLINE());
+						GET_PLAYER(pOldValue->getOwner()).AI_invalidateAttitudeCache((PlayerTypes)iJ);
+						GET_PLAYER((PlayerTypes)iJ).AI_invalidateAttitudeCache(pOldValue->getOwner());
 					}
 				}
 			}
@@ -6480,7 +6480,7 @@ void CvGame::setHeadquarters(CorporationTypes eIndex, CvCity* pNewValue, bool bA
 				if (isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
 				{
 					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CORPORATION_FOUNDED", GC.getCorporationInfo(eIndex).getTextKeyWide(), pHeadquarters->getNameKey());
-					addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, pHeadquarters->getOwnerINLINE(), szBuffer, pHeadquarters->getX(), pHeadquarters->getY(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+					addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, pHeadquarters->getOwner(), szBuffer, pHeadquarters->getX(), pHeadquarters->getY(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 
 					for (int iI = 0; iI < MAX_PLAYERS; iI++)
 					{
@@ -6929,7 +6929,7 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 
 		if ( pPlot->plotCount(PUF_isOtherPlayer, ePlayer) == 0 )
 		{
-			if ( (bAnimalBarred || spawnInfo.getNeutralOnly()) && (pPlot->getOwnerINLINE() != NO_PLAYER && pPlot->getOwnerINLINE() != ePlayer) )
+			if ( (bAnimalBarred || spawnInfo.getNeutralOnly()) && (pPlot->getOwner() != NO_PLAYER && pPlot->getOwner() != ePlayer) )
 			{
 				continue;
 			}
@@ -7115,7 +7115,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 			if (pLoopUnit != NULL)
 			{
 				//	Only care about evaluated NPC
-				if ( pLoopUnit->getOwnerINLINE() == ePlayer )
+				if ( pLoopUnit->getOwner() == ePlayer )
 				{
 					if ( areaPopulationMap[pPlot->getArea()].find(pLoopUnit->getUnitType()) != areaPopulationMap[pPlot->getArea()].end() )
 					{
@@ -7667,7 +7667,7 @@ void CvGame::doGlobalWarming()
 							MEMORY_TRACK_EXEMPT();
 
 							CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_GLOBAL_WARMING_NEAR_CITY", pCity->getNameKey());
-							AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GLOBALWARMING", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
+							AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GLOBALWARMING", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
 						}
 					}
 				}
@@ -7746,7 +7746,7 @@ void CvGame::doGlobalWarming()
 							MEMORY_TRACK_EXEMPT();
 
 							CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_NUCLEAR_WINTER_NEAR_CITY", pCity->getNameKey());
-							AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GLOBALWARMING", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
+							AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GLOBALWARMING", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
 						}
 					}
 				}
@@ -9348,7 +9348,7 @@ void CvGame::processVote(const VoteTriggeredData& kData, int iChange)
 
 			if (NULL != pCity)
 			{
-				if (NO_PLAYER != kData.kVoteOption.eOtherPlayer && kData.kVoteOption.eOtherPlayer != pCity->getOwnerINLINE())
+				if (NO_PLAYER != kData.kVoteOption.eOtherPlayer && kData.kVoteOption.eOtherPlayer != pCity->getOwner())
 				{
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      10/02/09                                jdog5000      */
@@ -13066,14 +13066,14 @@ void CvGame::doFoundCorporation(CorporationTypes eCorporation, bool bForce)
 							//Discourage players with more than 2 corporations from getting more
 							if (pBestCity != NULL)
 							{
-								if (pBestCity->getOwnerINLINE() == iI)
+								if (pBestCity->getOwner() == iI)
 								{
 									int iCorporationCount = 0;
 									for (int iJ = 0; iJ < GC.getNumCorporationInfos(); iJ++)
 									{
 										if (getHeadquarters((CorporationTypes)iJ) != NULL)
 										{
-											if (getHeadquarters((CorporationTypes)iJ)->getOwnerINLINE() == iI)
+											if (getHeadquarters((CorporationTypes)iJ)->getOwner() == iI)
 											{
 												iCorporationCount++;
 											}

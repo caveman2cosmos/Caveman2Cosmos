@@ -242,7 +242,7 @@ int		CvContractBroker::numRequestsOutstanding(UnitAITypes eUnitAI, bool bAtCityO
 			{
 				CvCity* targetCity = GC.getMapINLINE().plotINLINE(m_workRequests[iI].iAtX, m_workRequests[iI].iAtY)->getPlotCity();
 
-				if ( !bAtCityOnly || (targetCity != NULL && targetCity->getOwnerINLINE() == m_eOwner) )
+				if ( !bAtCityOnly || (targetCity != NULL && targetCity->getOwner() == m_eOwner) )
 				{
 					if (pPlot == NULL || pPlot == pDestPlot)
 					{

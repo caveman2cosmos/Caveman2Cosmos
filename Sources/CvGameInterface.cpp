@@ -461,11 +461,11 @@ void CvGame::updateColoredPlots()
 				{
 					pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
 
-					if (pLoopPlot->getOwnerINLINE() == pHeadSelectedUnit->getOwnerINLINE())
+					if (pLoopPlot->getOwner() == pHeadSelectedUnit->getOwner())
 					{
 						if (pLoopPlot->getWorkingCity() != NULL)
 						{
-							NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")/*(GC.getPlayerColorInfo(GET_PLAYER(pHeadSelectedUnit->getOwnerINLINE()).getPlayerColor()).getColorTypePrimary())*/).getColor());
+							NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")/*(GC.getPlayerColorInfo(GET_PLAYER(pHeadSelectedUnit->getOwner()).getPlayerColor()).getColorTypePrimary())*/).getColor());
 							color.a = 1.0f;
 							gDLL->getEngineIFace()->fillAreaBorderPlot(pLoopPlot->getX(), pLoopPlot->getY(), color, AREA_BORDER_LAYER_CITY_RADIUS);
 						}
@@ -625,7 +625,7 @@ void CvGame::updateColoredPlots()
 		{
 			if ((pHeadSelectedUnit->AI_getUnitAIType() == UNITAI_WORKER) || (pHeadSelectedUnit->AI_getUnitAIType() == UNITAI_WORKER_SEA))
 			{
-				if (pHeadSelectedUnit->plot()->getOwnerINLINE() == pHeadSelectedUnit->getOwnerINLINE())
+				if (pHeadSelectedUnit->plot()->getOwner() == pHeadSelectedUnit->getOwner())
 				{
 					pCity = pHeadSelectedUnit->plot()->getWorkingCity();
 
@@ -669,7 +669,7 @@ void CvGame::updateColoredPlots()
 #endif
 // BUFFY - Don't Recommend Plots in Fog of War - end
 
-								if (GET_PLAYER(pHeadSelectedUnit->getOwnerINLINE()).AI_isPlotCitySite(pLoopPlot))
+								if (GET_PLAYER(pHeadSelectedUnit->getOwner()).AI_isPlotCitySite(pLoopPlot))
 								{
 									gDLL->getEngineIFace()->addColoredPlot(pLoopPlot->getX(), pLoopPlot->getY(), GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
 								}
@@ -896,7 +896,7 @@ CvUnit* CvGame::getPlotUnit(const CvPlot* pPlot, int iIndex) const
 
 				if (!pLoopUnit1->isInvisible(activeTeam, true) && !pLoopUnit1->isCargo())
 				{
-					if ((pLoopUnit1->getOwnerINLINE() == activePlayer) == (iPass == 0))
+					if ((pLoopUnit1->getOwner() == activePlayer) == (iPass == 0))
 					{
 						if (iCount == iIndex)
 						{
@@ -959,7 +959,7 @@ void CvGame::getPlotUnits(const CvPlot* pPlot, std::vector<CvUnit*>& plotUnits) 
 
 				if (!pLoopUnit1->isInvisible(activeTeam, true) && !pLoopUnit1->isCargo())
 				{
-					if ((pLoopUnit1->getOwnerINLINE() == activePlayer) == (iPass == 0))
+					if ((pLoopUnit1->getOwner() == activePlayer) == (iPass == 0))
 					{
 						plotUnits.push_back(pLoopUnit1);
 
@@ -1004,11 +1004,11 @@ void CvGame::cycleCities(bool bForward, bool bAdd) const
 		iLoop = pHeadSelectedCity->getIndex();
 		iLoop += (bForward ? 1 : -1);
 
-		pLoopCity = GET_PLAYER(pHeadSelectedCity->getOwnerINLINE()).nextCity(&iLoop, !bForward);
+		pLoopCity = GET_PLAYER(pHeadSelectedCity->getOwner()).nextCity(&iLoop, !bForward);
 
 		if (pLoopCity == NULL)
 		{
-			pLoopCity = GET_PLAYER(pHeadSelectedCity->getOwnerINLINE()).firstCity(&iLoop, !bForward);
+			pLoopCity = GET_PLAYER(pHeadSelectedCity->getOwner()).firstCity(&iLoop, !bForward);
 		}
 
 		if ((pLoopCity != NULL) && (pLoopCity != pHeadSelectedCity))
@@ -1062,7 +1062,7 @@ void CvGame::cycleSelectionGroupsInternal(bool bClear, bool bForward, bool bWork
 
 	if (pCycleUnit != NULL)
 	{
-		if (pCycleUnit->getOwnerINLINE() != getActivePlayer())
+		if (pCycleUnit->getOwner() != getActivePlayer())
 		{
 			pCycleUnit = NULL;
 		}
@@ -1103,7 +1103,7 @@ void CvGame::cycleSelectionGroupsInternal(bool bClear, bool bForward, bool bWork
 		//	If we switched viewport then the asynchronous viewport switching will also handle the unit selection
 		else
 		{
-			FAssert(pNextSelectionGroup->getOwnerINLINE() == getActivePlayer());
+			FAssert(pNextSelectionGroup->getOwner() == getActivePlayer());
 			gDLL->getInterfaceIFace()->selectUnit(pNextSelectionGroup->getHeadUnit(), bClear);
 		}
 	}
@@ -1208,7 +1208,7 @@ bool CvGame::cyclePlotUnits(CvPlot* pPlot, bool bForward, bool bAuto, int iCount
 				}
 			}
 
-			if (pLoopUnit->getOwnerINLINE() == getActivePlayer())
+			if (pLoopUnit->getOwner() == getActivePlayer())
 			{
 				if (bAuto)
 				{
@@ -1250,7 +1250,7 @@ bool CvGame::selectCity(CvCity* pSelectCity, bool bCtrl, bool bAlt, bool bShift)
 	if (bAlt)
 	{
 		int iLoop;
-		for (CvCity* pLoopCity = GET_PLAYER(pSelectCity->getOwnerINLINE()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(pSelectCity->getOwnerINLINE()).nextCity(&iLoop))
+		for (CvCity* pLoopCity = GET_PLAYER(pSelectCity->getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(pSelectCity->getOwner()).nextCity(&iLoop))
 		{
 			gDLL->getInterfaceIFace()->addSelectedCity(pLoopCity);
 		}
@@ -1258,7 +1258,7 @@ bool CvGame::selectCity(CvCity* pSelectCity, bool bCtrl, bool bAlt, bool bShift)
 	else if (bCtrl)
 	{
 		int iLoop;
-		for (CvCity* pLoopCity = GET_PLAYER(pSelectCity->getOwnerINLINE()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(pSelectCity->getOwnerINLINE()).nextCity(&iLoop))
+		for (CvCity* pLoopCity = GET_PLAYER(pSelectCity->getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(pSelectCity->getOwner()).nextCity(&iLoop))
 		{
 			if (pLoopCity->getArea() == pSelectCity->getArea())
 			{
@@ -1293,7 +1293,7 @@ void CvGame::selectionListMove(CvPlot* pPlot, bool bAlt, bool bShift, bool bCtrl
 
 	pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
-	if ((pHeadSelectedUnit == NULL) || (pHeadSelectedUnit->getOwnerINLINE() != getActivePlayer()))
+	if ((pHeadSelectedUnit == NULL) || (pHeadSelectedUnit->getOwner() != getActivePlayer()))
 	{
 		return;
 	}
@@ -1365,7 +1365,7 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 
 	if (pHeadSelectedUnit != NULL)
 	{
-		if (pHeadSelectedUnit->getOwnerINLINE() == getActivePlayer())
+		if (pHeadSelectedUnit->getOwner() == getActivePlayer())
 		{
 			if (eMessage == GAMEMESSAGE_JOIN_GROUP)
 			{
@@ -1401,7 +1401,7 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 // BUG - All Units Actions - start
 				if ((iData2 == COMMAND_DELETE) && bAlt)
 				{
-					CvPlayerAI& kPlayer = GET_PLAYER(pHeadSelectedUnit->getOwnerINLINE());
+					CvPlayerAI& kPlayer = GET_PLAYER(pHeadSelectedUnit->getOwner());
 					int iLoop;
 					pSelectedUnitNode = gDLL->getInterfaceIFace()->headSelectionListNode();
 					pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
@@ -1442,7 +1442,7 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 // BUG - All Units Actions - start
 					if (((iData2 == MISSION_FORTIFY) || (iData2 == MISSION_SLEEP) || /*(iData2 == MISSION_ESTABLISH) || (iData2 == MISSION_ESCAPE) ||*/ (iData2 == MISSION_BUILDUP) || (iData2 == MISSION_AUTO_BUILDUP))&& bAlt)
 					{
-						CvPlayerAI& kPlayer = GET_PLAYER(pHeadSelectedUnit->getOwnerINLINE());
+						CvPlayerAI& kPlayer = GET_PLAYER(pHeadSelectedUnit->getOwner());
 						int iLoop;
 						pSelectedUnitNode = gDLL->getInterfaceIFace()->headSelectionListNode();
 						pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
@@ -1519,7 +1519,7 @@ void CvGame::selectedCitiesGameNetMessage(int eMessage, int iData2, int iData3, 
 
 		if (pSelectedCity != NULL)
 		{
-			if (pSelectedCity->getOwnerINLINE() == getActivePlayer())
+			if (pSelectedCity->getOwner() == getActivePlayer())
 			{
 				switch (eMessage)
 				{
@@ -1582,9 +1582,9 @@ bool CvGame::canHandleAction(int iAction, CvPlot* pPlot, bool bTestVisible, bool
 
 	if (pHeadSelectedUnit != NULL)
 	{
-		if (pHeadSelectedUnit->getOwnerINLINE() == getActivePlayer())
+		if (pHeadSelectedUnit->getOwner() == getActivePlayer())
 		{
-			if (isMPOption(MPOPTION_SIMULTANEOUS_TURNS) || GET_PLAYER(pHeadSelectedUnit->getOwnerINLINE()).isTurnActive())
+			if (isMPOption(MPOPTION_SIMULTANEOUS_TURNS) || GET_PLAYER(pHeadSelectedUnit->getOwner()).isTurnActive())
 			{
 				CvSelectionGroup* pSelectedInterfaceList = gDLL->getInterfaceIFace()->getSelectionList();
 
@@ -1986,7 +1986,7 @@ void CvGame::doControl(ControlTypes eControl)
 				{
 					pUnit = plotUnits[iI];
 
-					if (pUnit->getOwnerINLINE() == getActivePlayer())
+					if (pUnit->getOwner() == getActivePlayer())
 					{
 						if (!isMPOption(MPOPTION_SIMULTANEOUS_TURNS) || getTurnSlice() - pUnit->getLastMoveTurn() > GC.getDefineINT("MIN_TIMER_UNIT_DOUBLE_MOVES"))
 						{
@@ -2470,7 +2470,7 @@ void CvGame::startFlyoutMenu(const CvPlot* pPlot, std::vector<CvFlyoutMenuData>&
 		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 		pUnitNode = pPlot->nextUnitNode(pUnitNode);
 
-		if (pLoopUnit->getOwnerINLINE() == getActivePlayer())
+		if (pLoopUnit->getOwner() == getActivePlayer())
 		{
 			bUnits = true;
 
@@ -2493,7 +2493,7 @@ void CvGame::startFlyoutMenu(const CvPlot* pPlot, std::vector<CvFlyoutMenuData>&
 	CvCity* pCity = pPlot->getPlotCity();
 	if (pCity != NULL)
 	{
-		if (pCity->getOwnerINLINE() == getActivePlayer())
+		if (pCity->getOwner() == getActivePlayer())
 		{
 			szBuffer = gDLL->getText("TXT_KEY_CHANGE_PRODUCTION");
 			aFlyoutItems.push_back(CvFlyoutMenuData(NO_FLYOUT, -1, -1, -1, szBuffer));
@@ -2625,7 +2625,7 @@ void CvGame::startFlyoutMenu(const CvPlot* pPlot, std::vector<CvFlyoutMenuData>&
 		for (int iI = 0; iI < (int) plotUnits.size(); iI++)
 		{
 			CvUnit* pLoopUnit = plotUnits[iI];
-			if (pLoopUnit->getOwnerINLINE() == getActivePlayer())
+			if (pLoopUnit->getOwner() == getActivePlayer())
 			{
 				CvWStringBuffer szTempBuffer;
 				GAMETEXT.setUnitHelp(szTempBuffer, pLoopUnit, true);
@@ -2653,7 +2653,7 @@ void CvGame::applyFlyoutMenu(const CvFlyoutMenuData& kItem)
 				CvCity* pCity = pPlot->getPlotCity();
 				if (pCity != NULL)
 				{
-					if (pCity->getOwnerINLINE() == getActivePlayer())
+					if (pCity->getOwner() == getActivePlayer())
 					{
 						CvMessageControl::getInstance().sendDoTask(pCity->getID(), TASK_HURRY, kItem.m_iID, -1, false, false, false, false);
 					}
@@ -2666,7 +2666,7 @@ void CvGame::applyFlyoutMenu(const CvFlyoutMenuData& kItem)
 				CvCity* pCity = pPlot->getPlotCity();
 				if (pCity != NULL)
 				{
-					if (pCity->getOwnerINLINE() == getActivePlayer())
+					if (pCity->getOwner() == getActivePlayer())
 					{
 						CvMessageControl::getInstance().sendDoTask(pCity->getID(), TASK_CONSCRIPT, -1, -1, false, false, false, false);
 					}
@@ -2679,7 +2679,7 @@ void CvGame::applyFlyoutMenu(const CvFlyoutMenuData& kItem)
 				CvCity* pCity = pPlot->getPlotCity();
 				if (pCity != NULL)
 				{
-					if (pCity->getOwnerINLINE() == getActivePlayer())
+					if (pCity->getOwner() == getActivePlayer())
 					{
 						cityPushOrder(pCity, ORDER_TRAIN, kItem.m_iID);
 					}
@@ -2692,7 +2692,7 @@ void CvGame::applyFlyoutMenu(const CvFlyoutMenuData& kItem)
 				CvCity* pCity = pPlot->getPlotCity();
 				if (pCity != NULL)
 				{
-					if (pCity->getOwnerINLINE() == getActivePlayer())
+					if (pCity->getOwner() == getActivePlayer())
 					{
 						cityPushOrder(pCity, ORDER_CONSTRUCT, kItem.m_iID);
 					}
@@ -2705,7 +2705,7 @@ void CvGame::applyFlyoutMenu(const CvFlyoutMenuData& kItem)
 				CvCity* pCity = pPlot->getPlotCity();
 				if (pCity != NULL)
 				{
-					if (pCity->getOwnerINLINE() == getActivePlayer())
+					if (pCity->getOwner() == getActivePlayer())
 					{
 						cityPushOrder(pCity, ORDER_CREATE, kItem.m_iID);
 					}
@@ -2718,7 +2718,7 @@ void CvGame::applyFlyoutMenu(const CvFlyoutMenuData& kItem)
 				CvCity* pCity = pPlot->getPlotCity();
 				if (pCity != NULL)
 				{
-					if (pCity->getOwnerINLINE() == getActivePlayer())
+					if (pCity->getOwner() == getActivePlayer())
 					{
 						cityPushOrder(pCity, ORDER_MAINTAIN, kItem.m_iID);
 					}
@@ -3312,7 +3312,7 @@ void CvGame::handleCityScreenPlotPicked(CvCity* pCity, CvPlot* pPlot, bool bAlt,
 	if (pCity != NULL && pPlot != NULL)
 	{
 		int iIndex = pCity->getCityPlotIndex(pPlot);
-		if ((pPlot->getOwnerINLINE() == getActivePlayer()) && (pCity->getOwnerINLINE() == getActivePlayer()) && (iIndex != -1))
+		if ((pPlot->getOwner() == getActivePlayer()) && (pCity->getOwner() == getActivePlayer()) && (iIndex != -1))
 		{
 			CvMessageControl::getInstance().sendDoTask(pCity->getID(), TASK_CHANGE_WORKING_PLOT, iIndex, -1, false, bAlt, bShift, bCtrl);
 		}
@@ -3338,7 +3338,7 @@ void CvGame::handleCityScreenPlotRightPicked(CvCity* pCity, CvPlot* pPlot, bool 
 {
 	if (pCity != NULL && pPlot != NULL)
 	{
-		if ((pCity->getOwnerINLINE() == getActivePlayer()) && (pPlot->getOwnerINLINE() == getActivePlayer()) && (pCity->getCityPlotIndex(pPlot) != -1))
+		if ((pCity->getOwner() == getActivePlayer()) && (pPlot->getOwner() == getActivePlayer()) && (pCity->getCityPlotIndex(pPlot) != -1))
 		{
 			CvMessageControl::getInstance().sendDoTask(pCity->getID(), TASK_CLEAR_WORKING_OVERRIDE, pCity->getCityPlotIndex(pPlot), -1, false, bAlt, bShift, bCtrl);
 		}

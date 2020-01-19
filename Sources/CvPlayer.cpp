@@ -2243,7 +2243,7 @@ void CvPlayer::changeCiv( CivilizationTypes eNewCiv )
 		// dirty all of this player's cities...
 		for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 		{
-			if (pLoopCity->getOwnerINLINE() == getID())
+			if (pLoopCity->getOwner() == getID())
 			{
 				pLoopCity->setLayoutDirty(true);
 			}
@@ -3043,7 +3043,7 @@ CvCity* CvPlayer::initCity(int iX, int iY, bool bBumpUnits, bool bUpdatePlotGrou
 					{
 						CvPlot* pPlot = pCity->getCityIndexPlot(iJ);
 
-						if (pPlot != NULL && pPlot->getOwnerINLINE() == getID())
+						if (pPlot != NULL && pPlot->getOwner() == getID())
 						{
 							if (pPlot->getPlotGroup((PlayerTypes)iI) != NULL )
 							{
@@ -3160,7 +3160,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 	pCityPlot = pOldCity->plot();
-	eOldOwner = pOldCity->getOwnerINLINE();
+	eOldOwner = pOldCity->getOwner();
 
 	//	Whose trade networks was this city relevant to prior to ownership change
 	if ( bUpdatePlotGroups )
@@ -3218,14 +3218,14 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 					{
 						if (!pLoopPlot->isCity())	
 						{
-							if ((pLoopPlot->getOwnerINLINE() == pOldCity->getOwnerINLINE()) || (pLoopPlot->getOwnerINLINE() == NO_PLAYER))
+							if ((pLoopPlot->getOwner() == pOldCity->getOwner()) || (pLoopPlot->getOwner() == NO_PLAYER))
 							{
 								bool bCultureLevelFound = false;
 								bool bDoClaim = false;
 
 								for (int iJ = 0; iJ < GC.getNumCultureLevelInfos(); ++iJ)
 								{
-									int iNumCitiesForRange = pLoopPlot->getCultureRangeCities(pOldCity->getOwnerINLINE(), iJ);
+									int iNumCitiesForRange = pLoopPlot->getCultureRangeCities(pOldCity->getOwner(), iJ);
 									
 									// Occupy the tile if it is within the city's culture range, but not within any other city's range at the same or closer distance 
 									if ((iNumCitiesForRange == 1) && ((pOldCity->getCultureLevel() >= iJ) && (pOldCity->cultureDistance(iDX, iDY) == iJ))) 
@@ -3286,9 +3286,9 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 					if (pLoopPlot != NULL)
 					{
-						if (pLoopPlot->getOwnerINLINE() == pOldCity->getOwnerINLINE())	
+						if (pLoopPlot->getOwner() == pOldCity->getOwner())	
 						{
-							if (pLoopPlot->getNumCultureRangeCities(pOldCity->getOwnerINLINE()) == 1)
+							if (pLoopPlot->getNumCultureRangeCities(pOldCity->getOwner()) == 1)
 							{
 								bool bForceUnowned = false;
 
@@ -3319,7 +3319,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		}
 	}
 
-	if (pOldCity->getOriginalOwner() == pOldCity->getOwnerINLINE())
+	if (pOldCity->getOriginalOwner() == pOldCity->getOwner())
 	{
 		GET_PLAYER(pOldCity->getOriginalOwner()).changeCitiesLost(1);
 	}
@@ -3331,7 +3331,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 	// Added new BarbCiv specfic circumstance for counting a city as lost
 	else if( !GC.getGame().isOption(GAMEOPTION_NO_BARBARIAN_CIV) && pOldCity->isCapital() && pOldCity->getOriginalOwner() == GC.getBARBARIAN_PLAYER() )
 	{
-		GET_PLAYER(pOldCity->getOwnerINLINE()).changeCitiesLost(1);
+		GET_PLAYER(pOldCity->getOwner()).changeCitiesLost(1);
 	}
 /************************************************************************************************/
 /* REVOLUTION_MOD                          END                                                  */
@@ -3349,7 +3349,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			szBuffer = gDLL->getText("TXT_KEY_MISC_CAPTURED_CITY", pOldCity->getNameKey()).GetCString();
 			AddDLLMessage(getID(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYCAPTURE", MESSAGE_TYPE_MAJOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pOldCity->getX(), pOldCity->getY(), true, true);
 		}
-		szName.Format(L"%s (%s)", pOldCity->getName().GetCString(), GET_PLAYER(pOldCity->getOwnerINLINE()).getName());
+		szName.Format(L"%s (%s)", pOldCity->getName().GetCString(), GET_PLAYER(pOldCity->getOwner()).getName());
 
 		for (iI = 0; iI < MAX_PLAYERS; iI++)
 		{
@@ -4192,7 +4192,7 @@ void CvPlayer::disbandUnit(bool bAnnounce)
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-						if (pLoopUnit->plot()->getOwnerINLINE() == pLoopUnit->getOwnerINLINE())
+						if (pLoopUnit->plot()->getOwner() == pLoopUnit->getOwner())
 						{
 							iValue /= 6;
 						}
@@ -5532,7 +5532,7 @@ void CvPlayer::doTurnUnits()
 	{
 		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
 
-		if (pLoopPlot->getOwnerINLINE() == getID())
+		if (pLoopPlot->getOwner() == getID())
 		{
 			BonusTypes eNonObsoleteBonus = pLoopPlot->getNonObsoleteBonusType(getTeam());
 
@@ -6460,7 +6460,7 @@ int CvPlayer::countOwnedBonuses(BonusTypes eBonus) const
 		{
 			pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
 
-			if ((pLoopPlot->getOwnerINLINE() == getID() && !pLoopPlot->isCityRadius()) ||
+			if ((pLoopPlot->getOwner() == getID() && !pLoopPlot->isCityRadius()) ||
 				(bAdvancedStart && pLoopPlot->isRevealed(getTeam(), false)))
 			{
 				BonusTypes ePlotBonus = pLoopPlot->getBonusType(getTeam());
@@ -6513,7 +6513,7 @@ int CvPlayer::countUnimprovedBonuses(CvArea* pArea, CvPlot* pFromPlot) const
 
 		if (pLoopPlot->area() == pArea)
 		{
-			if (pLoopPlot->getOwnerINLINE() == getID())
+			if (pLoopPlot->getOwner() == getID())
 			{
 				if (!(pLoopPlot->isCity()))
 				{
@@ -6685,7 +6685,7 @@ int CvPlayer::countPotentialForeignTradeCitiesConnected() const
 					{
 						for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
 						{
-							FAssert(pLoopCity->getOwnerINLINE() != getID());
+							FAssert(pLoopCity->getOwner() != getID());
 							FAssert(pLoopCity->getTeam() != getTeam());
 
 							if (pLoopCity->plotGroup(getID()) == pCapitalCity->plotGroup(getID()))
@@ -7255,7 +7255,7 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 						//	pTradingCity = pUnitTraded->plot()->getPlotCity();
 							if (GC.getUnitInfo(pUnitTraded->getUnitType()).isWorkerTrade() && pUnitTraded->canMove()/* && (pTradingCity != NULL) */&& (pTheirCapitalCity != NULL))
 							{
-							//	if (pTradingCity->getOwnerINLINE() == getID())
+							//	if (pTradingCity->getOwner() == getID())
 							//	{
 								//	if (pTradingCity->isConnectedTo(pTheirCapitalCity))
 								//	{
@@ -7297,7 +7297,7 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 							pTradingCity = pUnitTraded->plot()->getPlotCity();
 							if (GC.getUnitInfo(pUnitTraded->getUnitType()).isMilitaryTrade() && pUnitTraded->canMove() && (pTradingCity != NULL) && (pTheirCapitalCity != NULL))
 							{
-								if (pTradingCity->getOwnerINLINE() == getID())
+								if (pTradingCity->getOwner() == getID())
 								{
 									if (pTradingCity->isConnectedTo(pTheirCapitalCity))
 									{
@@ -8222,7 +8222,7 @@ bool CvPlayer::canRaze(CvCity* pCity) const
 			return false;
 		}
 
-		if (pCity->getOwnerINLINE() != getID())
+		if (pCity->getOwner() != getID())
 		{
 			return false;
 		}
@@ -8274,7 +8274,7 @@ void CvPlayer::raze(CvCity* pCity)
 		return;
 	}
 
-	FAssert(pCity->getOwnerINLINE() == getID());
+	FAssert(pCity->getOwner() == getID());
 
 	eHighestCulturePlayer = pCity->findHighestCulture();
 
@@ -8881,7 +8881,7 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 		}
 	}
 
-	if (pPlot->isOwned() && (pPlot->getOwnerINLINE() != getID()))
+	if (pPlot->isOwned() && (pPlot->getOwner() != getID()))
 	{
 		return false;
 	}
@@ -10884,7 +10884,7 @@ int CvPlayer::calculateTotalExports(YieldTypes eYield) const
 			pTradeCity = pLoopCity->getTradeCity(iTradeLoop);
 			if (pTradeCity != NULL)
 			{
-				if (pTradeCity->getOwnerINLINE() != getID())
+				if (pTradeCity->getOwner() != getID())
 				{
 #ifdef _MOD_FRACTRADE
 					iCityExports += pLoopCity->calculateTradeYield(eYield, pLoopCity->calculateTradeProfitTimes100(pTradeCity));
@@ -10929,7 +10929,7 @@ int CvPlayer::calculateTotalImports(YieldTypes eYield) const
 					pTradeCity = pLoopCity->getTradeCity(iTradeLoop);
 					if (pTradeCity != NULL)
 					{
-						if (pTradeCity->getOwnerINLINE() == getID())
+						if (pTradeCity->getOwner() == getID())
 						{
 #ifdef _MOD_FRACTRADE
 							iCityImports += pLoopCity->calculateTradeYield(eYield, pLoopCity->calculateTradeProfitTimes100(pTradeCity));
@@ -12216,7 +12216,7 @@ bool CvPlayer::hasHolyCity(ReligionTypes eReligion) const
 
 	if (pHolyCity != NULL)
 	{
-		return (pHolyCity->getOwnerINLINE() == getID());
+		return (pHolyCity->getOwner() == getID());
 	}
 
 	return false;
@@ -12278,7 +12278,7 @@ bool CvPlayer::hasStateReligionShrine() const
 	{
 		if( pHolyCity->hasShrine(eStateReligion))
 		{
-			return (pHolyCity->getOwnerINLINE() == getID());
+			return (pHolyCity->getOwner() == getID());
 		}
 	}
 	return false;
@@ -12446,7 +12446,7 @@ bool CvPlayer::hasHeadquarters(CorporationTypes eCorporation) const
 
 	if (pHeadquarters != NULL)
 	{
-		return (pHeadquarters->getOwnerINLINE() == getID());
+		return (pHeadquarters->getOwner() == getID());
 	}
 
 	return false;
@@ -16704,7 +16704,7 @@ void CvPlayer::setCurrentEra(EraTypes eNewValue)
 
 				if (pLoopPlot->getRevealedImprovementType(GC.getGameINLINE().getActiveTeam(), true) != NO_IMPROVEMENT)
 				{
-					if ((pLoopPlot->getOwnerINLINE() == getID()) || (!(pLoopPlot->isOwned()) && (getID() == GC.getGameINLINE().getActivePlayer())))
+					if ((pLoopPlot->getOwner() == getID()) || (!(pLoopPlot->isOwned()) && (getID() == GC.getGameINLINE().getActivePlayer())))
 					{
 						pLoopPlot->setLayoutDirty(true);
 					}
@@ -20940,7 +20940,7 @@ int CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Player
 					iMissionCost = iBaseMissionCost + (kMission.getRemoveCorporationsCostFactor() * pCity->getPopulation() / pCity->getCorporationCount());
 					iMissionCost *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getAnarchyPercent();
 					iMissionCost /= 100;
-					if (GC.getGameINLINE().getHeadquarters(eCorporation) != NULL && GC.getGameINLINE().getHeadquarters(eCorporation)->getOwnerINLINE() == eTargetPlayer)
+					if (GC.getGameINLINE().getHeadquarters(eCorporation) != NULL && GC.getGameINLINE().getHeadquarters(eCorporation)->getOwner() == eTargetPlayer)
 					{
 						iMissionCost *= 2;
 					}
@@ -21408,19 +21408,19 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-				GET_PLAYER(pCity->getOwnerINLINE()).AI_changeMemoryCount(getID(), MEMORY_EVENT_BAD_TO_US, std::max(4, pCity->getPopulation()));
+				GET_PLAYER(pCity->getOwner()).AI_changeMemoryCount(getID(), MEMORY_EVENT_BAD_TO_US, std::max(4, pCity->getPopulation()));
 				for (int iI = 0; iI < MAX_PLAYERS; iI++)
 				{
 					if (GET_PLAYER((PlayerTypes)iI).isAlive())
 					{
-						if ( GET_PLAYER((PlayerTypes)iI).AI_getAttitude(pCity->getOwnerINLINE()) >= ATTITUDE_PLEASED)
+						if ( GET_PLAYER((PlayerTypes)iI).AI_getAttitude(pCity->getOwner()) >= ATTITUDE_PLEASED)
 						{
 							GET_PLAYER((PlayerTypes)iI).AI_changeMemoryCount(getID(), MEMORY_EVENT_BAD_TO_US, std::max(2, pCity->getPopulation() / 3));
 						}
 					}
 				}
 				
-				if (GET_PLAYER(pCity->getOwnerINLINE()).AI_getMemoryCount(getID(), MEMORY_EVENT_BAD_TO_US) > 15)
+				if (GET_PLAYER(pCity->getOwner()).AI_getMemoryCount(getID(), MEMORY_EVENT_BAD_TO_US) > 15)
 				{
 					GET_TEAM(pCity->getTeam()).declareWar(getTeam(), true, WARPLAN_TOTAL);
 				}
@@ -21880,12 +21880,12 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 
 			if (NULL != pCity)
 			{
-				GET_TEAM(pCity->getTeam()).setResearchProgress(GET_PLAYER(pCity->getOwnerINLINE()).getCurrentResearch(), 0, pCity->getOwnerINLINE());
+				GET_TEAM(pCity->getTeam()).setResearchProgress(GET_PLAYER(pCity->getOwner()).getCurrentResearch(), 0, pCity->getOwner());
 				bSomethingHappened = true;
 				if (bCaught)
-					szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_RESEARCH_SABATAGED_CAUGHT", GC.getTechInfo(GET_PLAYER(pCity->getOwnerINLINE()).getCurrentResearch()).getDescription(), getCivilizationAdjectiveKey()).GetCString();
+					szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_RESEARCH_SABATAGED_CAUGHT", GC.getTechInfo(GET_PLAYER(pCity->getOwner()).getCurrentResearch()).getDescription(), getCivilizationAdjectiveKey()).GetCString();
 				else
-					szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_RESEARCH_SABATAGED", GC.getTechInfo(GET_PLAYER(pCity->getOwnerINLINE()).getCurrentResearch()).getDescription());
+					szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_RESEARCH_SABATAGED", GC.getTechInfo(GET_PLAYER(pCity->getOwner()).getCurrentResearch()).getDescription());
 			}
 		}
 	}
@@ -22644,7 +22644,7 @@ int CvPlayer::getAdvancedStartUnitCost(UnitTypes eUnit, bool bAdd, CvPlot* pPlot
 		{
 			pCity = pPlot->getPlotCity();
 
-			if (NULL == pCity || pCity->getOwnerINLINE() != getID())
+			if (NULL == pCity || pCity->getOwner() != getID())
 			{
 				return -1;
 			}
@@ -22654,7 +22654,7 @@ int CvPlayer::getAdvancedStartUnitCost(UnitTypes eUnit, bool bAdd, CvPlot* pPlot
 		}
 		else
 		{
-			if (pPlot->getOwnerINLINE() != getID())
+			if (pPlot->getOwner() != getID())
 			{
 				return -1;
 			}
@@ -22805,7 +22805,7 @@ int CvPlayer::getAdvancedStartCityCost(bool bAdd, CvPlot* pPlot) const
 		{
 			if (pPlot->isCity())
 			{
-				if (pPlot->getPlotCity()->getOwnerINLINE() != getID())
+				if (pPlot->getPlotCity()->getOwner() != getID())
 				{
 					return -1;
 				}
@@ -22891,7 +22891,7 @@ int CvPlayer::getAdvancedStartPopCost(bool bAdd, CvCity* pCity) const
 
 	if (NULL != pCity)
 	{
-		if (pCity->getOwnerINLINE() != getID())
+		if (pCity->getOwner() != getID())
 		{
 			return -1;
 		}
@@ -22946,7 +22946,7 @@ int CvPlayer::getAdvancedStartCultureCost(bool bAdd, CvCity* pCity) const
 
 	if (NULL != pCity)
 	{
-		if (pCity->getOwnerINLINE() != getID())
+		if (pCity->getOwner() != getID())
 		{
 			return -1;
 		}
@@ -23026,7 +23026,7 @@ int CvPlayer::getAdvancedStartBuildingCost(BuildingTypes eBuilding, bool bAdd, C
 	}
 	if (NULL != pCity)
 	{
-		if (pCity->getOwnerINLINE() != getID())
+		if (pCity->getOwner() != getID())
 		{
 			return -1;
 		}
@@ -23161,7 +23161,7 @@ int CvPlayer::getAdvancedStartRouteCost(RouteTypes eRoute, bool bAdd, CvPlot* pP
 		}
 
 		// Must be owned by me
-		if (pPlot->getOwnerINLINE() != getID())
+		if (pPlot->getOwner() != getID())
 		{
 			return -1;
 		}
@@ -23298,7 +23298,7 @@ int CvPlayer::getAdvancedStartImprovementCost(ImprovementTypes eImprovement, boo
 		}
 
 		// Must be owned by me
-		if (pPlot->getOwnerINLINE() != getID())
+		if (pPlot->getOwner() != getID())
 		{
 			return -1;
 		}
@@ -26093,7 +26093,7 @@ void CvPlayer::createGreatPeople(UnitTypes eGreatPersonUnit, bool bIncrementThre
 		if (pCity)
 		{
 			CvWString szCity;
-			szCity.Format(L"%s (%s)", pCity->getName().GetCString(), GET_PLAYER(pCity->getOwnerINLINE()).getName());
+			szCity.Format(L"%s (%s)", pCity->getName().GetCString(), GET_PLAYER(pCity->getOwner()).getName());
 			szReplayMessage = gDLL->getText("TXT_KEY_MISC_GP_BORN", pGreatPeopleUnit->getName().GetCString(), szCity.GetCString());
 		}
 		else
@@ -27932,7 +27932,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 				{
 					int iPlot = (j + iRandOffset) % GC.getMapINLINE().numPlotsINLINE();
 					CvPlot* pPlot = GC.getMapINLINE().plotByIndexINLINE(iPlot);
-					if (NULL != pPlot && pPlot->getOwnerINLINE() == getID() && pPlot->isCity())
+					if (NULL != pPlot && pPlot->getOwner() == getID() && pPlot->isCity())
 					{
 						if (NO_IMPROVEMENT != pPlot->getImprovementType() && !GC.getImprovementInfo(pPlot->getImprovementType()).isPermanent())
 						{
@@ -27996,9 +27996,9 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 
 			for (CvCity* pLoopCity = firstCity(&iLoop); NULL != pLoopCity; pLoopCity = nextCity(&iLoop))
 			{
-				if (pLoopCity->getCultureTimes100(pLoopCity->getOwnerINLINE()) + 100 * kEvent.getCulture() > 0)
+				if (pLoopCity->getCultureTimes100(pLoopCity->getOwner()) + 100 * kEvent.getCulture() > 0)
 				{
-					pLoopCity->changeCulture(pLoopCity->getOwnerINLINE(), kEvent.getCulture(), true, true);
+					pLoopCity->changeCulture(pLoopCity->getOwner(), kEvent.getCulture(), true, true);
 				}
 			}
 		}
@@ -28557,7 +28557,7 @@ bool CvPlayer::canTrigger(EventTriggerTypes eTrigger, PlayerTypes ePlayer, Relig
 
 			if (!pLoopPlot->isWater())
 			{
-				if ((pLoopPlot->getOwnerINLINE() == getID()) && pLoopPlot->isAdjacentPlayer(ePlayer, true))
+				if ((pLoopPlot->getOwner() == getID()) && pLoopPlot->isAdjacentPlayer(ePlayer, true))
 				{
 					++iCount;
 				}
@@ -29169,7 +29169,7 @@ bool CvPlayer::splitEmpire(int iAreaId)
 		if (!bTranferPlot)
 		{
 			CvCity* pWorkingCity = pLoopPlot->getWorkingCity();
-			if (NULL != pWorkingCity && pWorkingCity->getOwnerINLINE() == getID() && pWorkingCity->area() == pArea)
+			if (NULL != pWorkingCity && pWorkingCity->getOwner() == getID() && pWorkingCity->area() == pArea)
 			{
 				bTranferPlot = true;
 			}
@@ -29430,7 +29430,7 @@ bool CvPlayer::isValidTriggerReligion(const CvEventTriggerInfo& kTrigger, CvCity
 		if (kTrigger.isHolyCity())
 		{
 			CvCity* pHolyCity = GC.getGameINLINE().getHolyCity(eReligion);
-			if (NULL == pHolyCity || pHolyCity->getOwnerINLINE() != getID())
+			if (NULL == pHolyCity || pHolyCity->getOwner() != getID())
 			{
 				return false;
 			}
@@ -29486,7 +29486,7 @@ bool CvPlayer::isValidTriggerCorporation(const CvEventTriggerInfo& kTrigger, CvC
 		if (kTrigger.isHeadquarters())
 		{
 			CvCity* pHeadquarters = GC.getGameINLINE().getHeadquarters(eCorporation);
-			if (NULL == pHeadquarters || pHeadquarters->getOwnerINLINE() != getID())
+			if (NULL == pHeadquarters || pHeadquarters->getOwner() != getID())
 			{
 				return false;
 			}
@@ -29695,7 +29695,7 @@ bool CvPlayer::hasShrine(ReligionTypes eReligion)
 		CvCity* pHolyCity = GC.getGameINLINE().getHolyCity(eReligion);
 		
 		// if the holy city exists, and we own it
-		if (pHolyCity != NULL && pHolyCity->getOwnerINLINE() == getID())
+		if (pHolyCity != NULL && pHolyCity->getOwner() == getID())
 			bHasShrine = pHolyCity->hasShrine(eReligion);
 	}
 	return bHasShrine;
@@ -33170,7 +33170,7 @@ void CvPlayer::acquireFort(CvPlot* pPlot)
 	CvPlot* pLoopPlot;
 	int iI;
 
-//	logMsg("%S acquiring fort from %S at (%d, %d)", getCivilizationShortDescription(), pPlot->getOwnerINLINE() == NO_PLAYER ? L"no one" : GET_PLAYER(pPlot->getOwnerINLINE()).getCivilizationShortDescription(), pPlot->getX(), pPlot->getY());
+//	logMsg("%S acquiring fort from %S at (%d, %d)", getCivilizationShortDescription(), pPlot->getOwner() == NO_PLAYER ? L"no one" : GET_PLAYER(pPlot->getOwner()).getCivilizationShortDescription(), pPlot->getX(), pPlot->getY());
 	
 	ImprovementTypes eOldFortImprovement = pPlot->getImprovementType();
 	
@@ -33182,9 +33182,9 @@ void CvPlayer::acquireFort(CvPlot* pPlot)
 		{
 			if (!pLoopPlot->isCity())	
 			{
-				if ((pLoopPlot->getOwnerINLINE() == pPlot->getOwnerINLINE()) || (pLoopPlot->getOwnerINLINE() == NO_PLAYER))
+				if ((pLoopPlot->getOwner() == pPlot->getOwner()) || (pLoopPlot->getOwner() == NO_PLAYER))
 				{
-					int iNumCitiesForRange = pLoopPlot->getCultureRangeCities(pPlot->getOwnerINLINE(), 1);
+					int iNumCitiesForRange = pLoopPlot->getCultureRangeCities(pPlot->getOwner(), 1);
 					
 					if (iNumCitiesForRange == 1 && pLoopPlot->calculateCulturalOwner() == getID())
 					{
@@ -33673,7 +33673,7 @@ void CvPlayer::setColor(PlayerColorTypes eColor)
 	// dirty all of this player's cities...
 	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 	{
-		if (pLoopCity->getOwnerINLINE() == getID())
+		if (pLoopCity->getOwner() == getID())
 		{
 			pLoopCity->setLayoutDirty(true);
 		}

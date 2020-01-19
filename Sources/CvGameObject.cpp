@@ -258,7 +258,7 @@ void CvGameObjectPlayer::foreach(GameObjectTypes eType, bst::function<void (CvGa
 			for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
 			{
 				CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
-				if (pLoopPlot->getOwnerINLINE() == m_pPlayer->getID())
+				if (pLoopPlot->getOwner() == m_pPlayer->getID())
 				{
 					func(pLoopPlot->getGameObject());
 				}
@@ -284,7 +284,7 @@ void CvGameObjectCity::foreach(GameObjectTypes eType, bst::function<void (CvGame
 			break;
 
 		case GAMEOBJECT_PLAYER:
-			func(GET_PLAYER(m_pCity->getOwnerINLINE()).getGameObject());
+			func(GET_PLAYER(m_pCity->getOwner()).getGameObject());
 			break;
 
 		case GAMEOBJECT_UNIT:
@@ -314,7 +314,7 @@ void CvGameObjectUnit::foreach(GameObjectTypes eType, bst::function<void (CvGame
 			break;
 
 		case GAMEOBJECT_PLAYER:
-			func(GET_PLAYER(m_pUnit->getOwnerINLINE()).getGameObject());
+			func(GET_PLAYER(m_pUnit->getOwner()).getGameObject());
 			break;
 
 		case GAMEOBJECT_CITY:
@@ -345,8 +345,8 @@ void CvGameObjectPlot::foreach(GameObjectTypes eType, bst::function<void (CvGame
 			break;
 
 		case GAMEOBJECT_PLAYER:
-			if (m_pPlot->getOwnerINLINE() != NO_PLAYER)
-				func(GET_PLAYER(m_pPlot->getOwnerINLINE()).getGameObject());
+			if (m_pPlot->getOwner() != NO_PLAYER)
+				func(GET_PLAYER(m_pPlot->getOwner()).getGameObject());
 			break;
 
 		case GAMEOBJECT_CITY:
@@ -387,18 +387,18 @@ CvGameObjectPlayer* CvGameObjectPlayer::getOwner()
 
 CvGameObjectPlayer* CvGameObjectCity::getOwner() 
 {
-	return GET_PLAYER(m_pCity->getOwnerINLINE()).getGameObject();
+	return GET_PLAYER(m_pCity->getOwner()).getGameObject();
 }
 
 CvGameObjectPlayer* CvGameObjectUnit::getOwner() 
 {
-	return GET_PLAYER(m_pUnit->getOwnerINLINE()).getGameObject();
+	return GET_PLAYER(m_pUnit->getOwner()).getGameObject();
 }
 
 CvGameObjectPlayer* CvGameObjectPlot::getOwner() 
 {
-	if (m_pPlot->getOwnerINLINE() != NO_PLAYER)
-		return GET_PLAYER(m_pPlot->getOwnerINLINE()).getGameObject();
+	if (m_pPlot->getOwner() != NO_PLAYER)
+		return GET_PLAYER(m_pPlot->getOwner()).getGameObject();
 	return NULL;
 }
 
@@ -1446,7 +1446,7 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID)
 		{
 			// Return true if the owner has the trait
 			TraitTypes eTrait = (TraitTypes) iID;
-			return GET_PLAYER(m_pCity->getOwnerINLINE()).hasTrait(eTrait);
+			return GET_PLAYER(m_pCity->getOwner()).hasTrait(eTrait);
 			//break;
 		}
 
@@ -1518,7 +1518,7 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID)
 		{
 			// Return true if the owning player has the civic active
 			CivicTypes eCivic = (CivicTypes) iID;
-			return GET_PLAYER(m_pCity->getOwnerINLINE()).isCivic(eCivic);
+			return GET_PLAYER(m_pCity->getOwner()).isCivic(eCivic);
 			//break;
 		}
 
@@ -1594,7 +1594,7 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID)
 		{
 			// Return true if the owner has the trait
 			TraitTypes eTrait = (TraitTypes) iID;
-			return GET_PLAYER(m_pUnit->getOwnerINLINE()).hasTrait(eTrait);
+			return GET_PLAYER(m_pUnit->getOwner()).hasTrait(eTrait);
 			//break;
 		}
 
@@ -1668,21 +1668,21 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID)
 		{
 			// Return true if the owning player has the civic active
 			CivicTypes eCivic = (CivicTypes) iID;
-			return GET_PLAYER(m_pUnit->getOwnerINLINE()).isCivic(eCivic);
+			return GET_PLAYER(m_pUnit->getOwner()).isCivic(eCivic);
 			//break;
 		}
 
 		case GOM_RELIGION:
 		{
 			// True if the religion is state religion
-			return GET_PLAYER(m_pUnit->getOwnerINLINE()).getStateReligion() == (ReligionTypes)iID;
+			return GET_PLAYER(m_pUnit->getOwner()).getStateReligion() == (ReligionTypes)iID;
 			//break;
 		}
 
 		case GOM_CORPORATION:
 		{
 			// True if the corporation is active
-			return GET_PLAYER(m_pUnit->getOwnerINLINE()).isActiveCorporation((CorporationTypes)iID);
+			return GET_PLAYER(m_pUnit->getOwner()).isActiveCorporation((CorporationTypes)iID);
 			//break;
 		}
 
@@ -1745,7 +1745,7 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 		{
 			// Return true if the owner has the trait
 			TraitTypes eTrait = (TraitTypes) iID;
-			PlayerTypes ePlayer = m_pPlot->getOwnerINLINE();
+			PlayerTypes ePlayer = m_pPlot->getOwner();
 			if (ePlayer != NO_PLAYER)
 			{
 				return GET_PLAYER(ePlayer).hasTrait(eTrait);
@@ -1836,7 +1836,7 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 		{
 			// Return true if the owning player has the civic active
 			CivicTypes eCivic = (CivicTypes) iID;
-			PlayerTypes ePlayer = m_pPlot->getOwnerINLINE();
+			PlayerTypes ePlayer = m_pPlot->getOwner();
 			if (ePlayer != NO_PLAYER)
 			{
 				return GET_PLAYER(ePlayer).isCivic(eCivic);
@@ -1899,7 +1899,7 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 		{
 			// Return true if the owning player has the handicap
 			HandicapTypes eHandicap = (HandicapTypes) iID;
-			PlayerTypes ePlayer = m_pPlot->getOwnerINLINE();
+			PlayerTypes ePlayer = m_pPlot->getOwner();
 			if (ePlayer != NO_PLAYER)
 			{
 				return GET_PLAYER(ePlayer).getHandicapType() == eHandicap;
@@ -2004,12 +2004,12 @@ int CvGameObjectCity::adaptValueToGame(int iID, int iValue) const
 {
 	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getPercent(iID)) / 100;
 	iValue = (iValue * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getPercent(iID)) / 100;
-	return (iValue * GC.getHandicapInfo(GET_PLAYER(m_pCity->getOwnerINLINE()).getHandicapType()).getPercent(iID)) / 100;
+	return (iValue * GC.getHandicapInfo(GET_PLAYER(m_pCity->getOwner()).getHandicapType()).getPercent(iID)) / 100;
 }
 
 int CvGameObjectUnit::adaptValueToGame(int iID, int iValue) const
 {
 	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getPercent(iID)) / 100;
 	iValue = (iValue * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getPercent(iID)) / 100;
-	return (iValue * GC.getHandicapInfo(GET_PLAYER(m_pUnit->getOwnerINLINE()).getHandicapType()).getPercent(iID)) / 100;
+	return (iValue * GC.getHandicapInfo(GET_PLAYER(m_pUnit->getOwner()).getHandicapType()).getPercent(iID)) / 100;
 }

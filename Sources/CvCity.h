@@ -1053,13 +1053,7 @@ public:
 	bool isPlundered() const;																		// Exposed to Python
 	void setPlundered(bool bNewValue);																// Exposed to Python
 
-	DllExport PlayerTypes getOwner() const;																// Exposed to Python
-#ifdef _USRDLL
-	inline PlayerTypes getOwnerINLINE() const
-	{
-		return m_eOwner;
-	}
-#endif
+	DllExport inline PlayerTypes getOwner() const { return m_eOwner; } // Exposed to Python
 	DllExport TeamTypes getTeam() const;																	// Exposed to Python
 
 	PlayerTypes getPreviousOwner() const;																	// Exposed to Python

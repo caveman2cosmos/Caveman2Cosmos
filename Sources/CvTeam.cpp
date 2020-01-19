@@ -6960,7 +6960,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 										MEMORY_TRACK_EXEMPT();
 
 										szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_DISCOVERED_BONUS", GC.getBonusInfo(eBonus).getTextKeyWide(), pCity->getNameKey());
-										AddDLLMessage(pLoopPlot->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_INFO, GC.getBonusInfo(eBonus).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), pLoopPlot->getX(), pLoopPlot->getY(), true, true);
+										AddDLLMessage(pLoopPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_INFO, GC.getBonusInfo(eBonus).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), pLoopPlot->getX(), pLoopPlot->getY(), true, true);
 									}
 								/************************************************************************************************/
 								/* Afforess	                  Start		 01/20/10                                               */
@@ -7867,7 +7867,7 @@ void CvTeam::verifySpyUnitsValidPlot()
 			{
 				if ( pUnit->plot() != NULL )
 				{
-					PlayerTypes eOwner = pUnit->plot()->getOwnerINLINE();
+					PlayerTypes eOwner = pUnit->plot()->getOwner();
 					if (NO_PLAYER != eOwner)
 					{
 						if (pUnit->isSpy())
@@ -8371,7 +8371,7 @@ bool CvTeam::hasShrine(ReligionTypes eReligion) const
 	{
 		CvCity* pHolyCity = GC.getGameINLINE().getHolyCity(eReligion);
 
-		if (pHolyCity != NULL && GET_PLAYER(pHolyCity->getOwnerINLINE()).getTeam() == getID())
+		if (pHolyCity != NULL && GET_PLAYER(pHolyCity->getOwner()).getTeam() == getID())
 			return pHolyCity->hasShrine(eReligion);
 	}
 

@@ -266,7 +266,7 @@ bool CvUnit::isUsingDummyEntities() const
 
 void CvUnit::reloadEntity(bool bForceLoad)
 {
-	bool	bNeedsRealEntity = !g_bUseDummyEntities || bForceLoad || (plot() != NULL && plot()->isActiveVisible(false) && (plot()->getCenterUnit() == this || getOwnerINLINE() == GC.getGameINLINE().getActivePlayer()));
+	bool	bNeedsRealEntity = !g_bUseDummyEntities || bForceLoad || (plot() != NULL && plot()->isActiveVisible(false) && (plot()->getCenterUnit() == this || getOwner() == GC.getGameINLINE().getActivePlayer()));
 
 	//OutputDebugString(CvString::format("reloadEntity for %08lx\n", this).c_str());
 	if ( !IsSelected() )
@@ -344,7 +344,7 @@ void CvUnit::reloadEntity(bool bForceLoad)
 
 void CvUnit::changeIdentity(UnitTypes eUnit)
 {
-	reset(getID(), eUnit, getOwnerINLINE(), false, true);
+	reset(getID(), eUnit, getOwner(), false, true);
 	//	Same id is now a differnt unit - make sure no old cached path info
 	//	gets used for it
 	CvPlot::NextCachePathEpoch();
@@ -433,24 +433,24 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 
 		GC.getGameINLINE().incrementUnitClassCreatedCount((UnitClassTypes)(m_pUnitInfo->getUnitClassType()));
 		GET_TEAM(getTeam()).changeUnitClassCount(((UnitClassTypes)(m_pUnitInfo->getUnitClassType())), 1);
-		GET_PLAYER(getOwnerINLINE()).changeUnitClassCount(((UnitClassTypes)(m_pUnitInfo->getUnitClassType())), 1);
+		GET_PLAYER(getOwner()).changeUnitClassCount(((UnitClassTypes)(m_pUnitInfo->getUnitClassType())), 1);
 
-		GET_PLAYER(getOwnerINLINE()).changeExtraUnitCost(getExtraUnitCost100());
+		GET_PLAYER(getOwner()).changeExtraUnitCost(getExtraUnitCost100());
 
 		if (m_pUnitInfo->getNukeRange() != -1)
 		{
-			GET_PLAYER(getOwnerINLINE()).changeNumNukeUnits(1);
+			GET_PLAYER(getOwner()).changeNumNukeUnits(1);
 		}
 
 		if (m_pUnitInfo->isMilitarySupport())
 		{
-			GET_PLAYER(getOwnerINLINE()).changeNumMilitaryUnits(1);
+			GET_PLAYER(getOwner()).changeNumMilitaryUnits(1);
 		}
 
 		if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
-			GET_PLAYER(getOwnerINLINE()).changeAssets(assetValueTotal());
-			GET_PLAYER(getOwnerINLINE()).changeUnitPower(getPowerValueTotal());
+			GET_PLAYER(getOwner()).changeAssets(assetValueTotal());
+			GET_PLAYER(getOwner()).changeUnitPower(getPowerValueTotal());
 		}
 
 		doSetUnitCombats();
@@ -462,8 +462,8 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 		}
 		else
 		{
-			GET_PLAYER(getOwnerINLINE()).changeAssets(assetValueTotal());
-			GET_PLAYER(getOwnerINLINE()).changeUnitPower(getPowerValueTotal());
+			GET_PLAYER(getOwner()).changeAssets(assetValueTotal());
+			GET_PLAYER(getOwner()).changeUnitPower(getPowerValueTotal());
 		}
 		//--------------------------------
 		// Init non-saved data
@@ -486,7 +486,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 			} 
 		}
 
-		if (getOwnerINLINE() == GC.getGameINLINE().getActivePlayer())
+		if (getOwner() == GC.getGameINLINE().getActivePlayer())
 		{
 			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
 		}
@@ -501,7 +501,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 
 					if (GET_TEAM(getTeam()).isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
 					{
-						szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_CREATED_UNIT", GET_PLAYER(getOwnerINLINE()).getNameKey(), getNameKey());
+						szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_CREATED_UNIT", GET_PLAYER(getOwner()).getNameKey(), getNameKey());
 						AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WONDER_UNIT_BUILD", MESSAGE_TYPE_MAJOR_EVENT, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_UNIT_TEXT"), getX(), getY(), true, true);
 					}
 					else
@@ -512,8 +512,8 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 				}
 			}
 
-			szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_CREATED_UNIT", GET_PLAYER(getOwnerINLINE()).getNameKey(), getNameKey());
-			GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getOwnerINLINE(), szBuffer, getX(), getY(), (ColorTypes)GC.getInfoTypeForString("COLOR_UNIT_TEXT"));
+			szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_CREATED_UNIT", GET_PLAYER(getOwner()).getNameKey(), getNameKey());
+			GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getOwner(), szBuffer, getX(), getY(), (ColorTypes)GC.getInfoTypeForString("COLOR_UNIT_TEXT"));
 		}
 
 		setGGExperienceEarnedTowardsType();
@@ -1125,8 +1125,8 @@ void CvUnit::convert(CvUnit* pUnit)
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 	setLevel(pUnit->getLevel());
-	int iOldModifier = std::max(1, 100 + GET_PLAYER(pUnit->getOwnerINLINE()).getLevelExperienceModifier());
-	int iOurModifier = std::max(1, 100 + GET_PLAYER(getOwnerINLINE()).getLevelExperienceModifier());
+	int iOldModifier = std::max(1, 100 + GET_PLAYER(pUnit->getOwner()).getLevelExperienceModifier());
+	int iOurModifier = std::max(1, 100 + GET_PLAYER(getOwner()).getLevelExperienceModifier());
 	setExperience(std::max(0, (pUnit->getExperience() * iOurModifier) / iOldModifier));
 
 	setName(pUnit->getNameNoDesc());
@@ -1331,7 +1331,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 						MEMORY_TRACK_EXEMPT();
 
 						szBuffer = gDLL->getText("TXT_KEY_MISC_UNIT_SURVIVED_TRANSPORT_SINKING", pLoopUnit->getNameKey(), getNameKey());
-						AddDLLMessage(pLoopUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT);
+						AddDLLMessage(pLoopUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT);
 					}
 					else
 					{
@@ -1341,7 +1341,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 						MEMORY_TRACK_EXEMPT();
 	
 						szBuffer = gDLL->getText("TXT_KEY_MISC_UNIT_DROWNED", pLoopUnit->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 						bMessaged = true;
 						pLoopUnit->kill(false, ePlayer, bMessaged);
 	
@@ -1365,7 +1365,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 						MEMORY_TRACK_EXEMPT();
 
 						szBuffer = gDLL->getText("TXT_KEY_MISC_GENERAL_KILLED", getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 						bMessaged = true;
 					}
 				}
@@ -1377,7 +1377,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		//	MEMORY_TRACK_EXEMPT();
 
 		//	szBuffer = gDLL->getText("TXT_KEY_MISC_UNIT_DEATH", getNameKey());
-		//	AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+		//	AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 		//	m_combatResult.bDeathMessaged = false;
 		//	bMessaged = true;
 		//}
@@ -1398,7 +1398,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 	/*****************************************************************************************************/
 		if (isCanRespawn())
 		{
-			CvCity* pCapitalCity = GET_PLAYER(getOwnerINLINE()).getCapitalCity();
+			CvCity* pCapitalCity = GET_PLAYER(getOwner()).getCapitalCity();
 			if ( pCapitalCity != NULL && pCapitalCity->plot() != plot())
 			{
 				//GC.getGameINLINE().logOOSSpecial(14, getID(), pCapitalCity->getX(), pCapitalCity->getY());
@@ -1406,7 +1406,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 				setDamage((9*maxHitPoints())/10);
 				changeOneUpCount(-1);
 				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_BATTLEFIELD_EVAC", getNameKey());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY());
 				m_bDeathDelay = false;
 				return;
 			}
@@ -1416,7 +1416,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		{
 			setDamage(maxHitPoints() - std::max(1,(getSurvivorChance() / 1000)));
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_UNIT_IS_HARDCORE", getNameKey());
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY());
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY());
 			m_bDeathDelay = false;
 			//	Only applies to THIS combat - it might be attacked again the same turn
 			setSurvivor(false);
@@ -1495,18 +1495,18 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		FAssertMsg(getCombatUnit() == NULL, "The current unit instance's combat unit is expected to be NULL");
 	}
 	GET_TEAM(getTeam()).changeUnitClassCount((UnitClassTypes)m_pUnitInfo->getUnitClassType(), -1);
-	GET_PLAYER(getOwnerINLINE()).changeUnitClassCount((UnitClassTypes)m_pUnitInfo->getUnitClassType(), -1);
+	GET_PLAYER(getOwner()).changeUnitClassCount((UnitClassTypes)m_pUnitInfo->getUnitClassType(), -1);
 
-	GET_PLAYER(getOwnerINLINE()).changeExtraUnitCost(-(getExtraUnitCost100()));
+	GET_PLAYER(getOwner()).changeExtraUnitCost(-(getExtraUnitCost100()));
 
 	if (m_pUnitInfo->getNukeRange() != -1)
 	{
-		GET_PLAYER(getOwnerINLINE()).changeNumNukeUnits(-1);
+		GET_PLAYER(getOwner()).changeNumNukeUnits(-1);
 	}
 
 	if (m_pUnitInfo->isMilitarySupport())
 	{
-		GET_PLAYER(getOwnerINLINE()).changeNumMilitaryUnits(-1);
+		GET_PLAYER(getOwner()).changeNumMilitaryUnits(-1);
 	}
 /************************************************************************************************/
 /* Afforess	                  Start		 04/16/10                                               */
@@ -1528,15 +1528,15 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 	}
 
 
-	GET_PLAYER(getOwnerINLINE()).changeAssets(-assetValueTotal());
+	GET_PLAYER(getOwner()).changeAssets(-assetValueTotal());
 
-	GET_PLAYER(getOwnerINLINE()).changeUnitPower(-getPowerValueTotal());
+	GET_PLAYER(getOwner()).changeUnitPower(-getPowerValueTotal());
 
 	if (pPlot != NULL)
 	{
-		OutputDebugString(CvString::format("Unit %S of player %S killed\n", getName().GetCString(),GET_PLAYER(getOwnerINLINE()).getCivilizationDescription(0)).c_str());
+		OutputDebugString(CvString::format("Unit %S of player %S killed\n", getName().GetCString(),GET_PLAYER(getOwner()).getCivilizationDescription(0)).c_str());
 	
-		GET_PLAYER(getOwnerINLINE()).AI_changeNumAIUnits(AI_getUnitAIType(), -1);
+		GET_PLAYER(getOwner()).AI_changeNumAIUnits(AI_getUnitAIType(), -1);
 		AI_killed();	//	Update AI counts for this unit
 		//GC.getGameINLINE().logOOSSpecial(15, getID(), INVALID_PLOT_COORD, INVALID_PLOT_COORD);
 		setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true);
@@ -1545,7 +1545,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 		CvEventReporter::getInstance().unitLost(this);
 		
-		eOwner = getOwnerINLINE();
+		eOwner = getOwner();
 		eCapturingPlayer = getCapturingPlayer();
 		pCapturingUnit = getCapturingUnit();
 		eCaptureUnitType = ((eCapturingPlayer != NO_PLAYER) ? getCaptureUnitType(GET_PLAYER(eCapturingPlayer).getCivilizationType()) : NO_UNIT);
@@ -1595,7 +1595,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 			}
 		}
 
-		GET_PLAYER(getOwnerINLINE()).deleteUnit(getID());
+		GET_PLAYER(getOwner()).deleteUnit(getID());
 
 	}
 }
@@ -1652,11 +1652,11 @@ void CvUnit::doTurn()
 		{
 			if (GET_TEAM(getTeam()).isOpenBorders(eTeam))
 			{
-				testSpyIntercepted(plot()->getOwnerINLINE(), GC.getDefineINT("ESPIONAGE_SPY_NO_INTRUDE_INTERCEPT_MOD"));
+				testSpyIntercepted(plot()->getOwner(), GC.getDefineINT("ESPIONAGE_SPY_NO_INTRUDE_INTERCEPT_MOD"));
 			}
 			else
 			{
-				testSpyIntercepted(plot()->getOwnerINLINE(), GC.getDefineINT("ESPIONAGE_SPY_INTERCEPT_MOD"));
+				testSpyIntercepted(plot()->getOwner(), GC.getDefineINT("ESPIONAGE_SPY_INTERCEPT_MOD"));
 			}
 		}
 	}
@@ -1967,7 +1967,7 @@ void CvUnit::resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionD
 			if (DOMAIN_AIR == pInterceptor->getDomainType())
 			{
 				iTheirDamage += iTheirRoundDamage;
-				pInterceptor->changeDamage(iTheirRoundDamage, getOwnerINLINE());
+				pInterceptor->changeDamage(iTheirRoundDamage, getOwner());
 				//TB Combat Mod begin
 				if (dealsColdDamage())
 				{
@@ -2006,7 +2006,7 @@ void CvUnit::resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionD
 		else
 		{
 			iOurDamage += iOurRoundDamage;
-			changeDamage(iOurRoundDamage, pInterceptor->getOwnerINLINE());
+			changeDamage(iOurRoundDamage, pInterceptor->getOwner());
 			//TB Combat Mod begin
 			if (pInterceptor->dealsColdDamage())
 			{
@@ -2049,7 +2049,7 @@ void CvUnit::resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionD
 			int iExperience = attackXPValue();
 			iExperience = (iExperience * iOurStrength) / std::max(1, iTheirStrength);
 			iExperience = range(iExperience, GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
-			pInterceptor->changeExperience(iExperience, maxXPValue(), true, pPlot->getOwnerINLINE() == pInterceptor->getOwnerINLINE(), (!isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+			pInterceptor->changeExperience(iExperience, maxXPValue(), true, pPlot->getOwner() == pInterceptor->getOwner(), (!isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
 		}
 	}
 	else if (pInterceptor->isDead())
@@ -2057,18 +2057,18 @@ void CvUnit::resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionD
 		int iExperience = pInterceptor->defenseXPValue();
 		iExperience = (iExperience * iTheirStrength) / std::max(1, iOurStrength);
 		iExperience = range(iExperience, GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
-		changeExperience(iExperience, pInterceptor->maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), (!pInterceptor->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+		changeExperience(iExperience, pInterceptor->maxXPValue(), true, pPlot->getOwner() == getOwner(), (!pInterceptor->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
 	}
 	else if (iOurDamage > 0)
 	{
 		if (iTheirRoundDamage > 0)
 		{
-			pInterceptor->changeExperience100(getExperiencefromWithdrawal(iOurOdds) * 10, maxXPValue(), true, pPlot->getOwnerINLINE() == pInterceptor->getOwnerINLINE(), (!isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+			pInterceptor->changeExperience100(getExperiencefromWithdrawal(iOurOdds) * 10, maxXPValue(), true, pPlot->getOwner() == pInterceptor->getOwner(), (!isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
 		}
 	}
 	else if (iTheirDamage > 0)
 	{
-		changeExperience100(getExperiencefromWithdrawal(iOurOdds) * 10, pInterceptor->maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), (!pInterceptor->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+		changeExperience100(getExperiencefromWithdrawal(iOurOdds) * 10, pInterceptor->maxXPValue(), true, pPlot->getOwner() == getOwner(), (!pInterceptor->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
 	}
 
 	kBattle.setDamage(BATTLE_UNIT_ATTACKER, iOurDamage);
@@ -2176,20 +2176,20 @@ void CvUnit::updateAirCombat(bool bQuick)
 			MEMORY_TRACK_EXEMPT();
 
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_SHOT_DOWN_ENEMY", pInterceptor->getNameKey(), getNameKey(), getVisualCivAdjective(pInterceptor->getTeam()));
-			AddDLLMessage(pInterceptor->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
+			AddDLLMessage(pInterceptor->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_SHOT_DOWN", getNameKey(), pInterceptor->getNameKey());
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, pInterceptor->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, pInterceptor->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
 		}
 		else if (kAirMission.getDamage(BATTLE_UNIT_ATTACKER) > 0)
 		{
 			MEMORY_TRACK_EXEMPT();
 
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_HURT_ENEMY_AIR", pInterceptor->getNameKey(), getNameKey(), -(kAirMission.getDamage(BATTLE_UNIT_ATTACKER)), getVisualCivAdjective(pInterceptor->getTeam()));
-			AddDLLMessage(pInterceptor->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
+			AddDLLMessage(pInterceptor->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIR_UNIT_HURT", getNameKey(), pInterceptor->getNameKey(), -(kAirMission.getDamage(BATTLE_UNIT_ATTACKER)));
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, pInterceptor->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, pInterceptor->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
 		}
 
 		if (pInterceptor->isDead())
@@ -2197,20 +2197,20 @@ void CvUnit::updateAirCombat(bool bQuick)
 			MEMORY_TRACK_EXEMPT();
 
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_SHOT_DOWN_ENEMY", getNameKey(), pInterceptor->getNameKey(), pInterceptor->getVisualCivAdjective(getTeam()));
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, pInterceptor->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, pInterceptor->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_SHOT_DOWN", pInterceptor->getNameKey(), getNameKey());
-			AddDLLMessage(pInterceptor->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
+			AddDLLMessage(pInterceptor->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
 		}
 		else if (kAirMission.getDamage(BATTLE_UNIT_DEFENDER) > 0)
 		{
 			MEMORY_TRACK_EXEMPT();
 
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_DAMAGED_ENEMY_AIR", getNameKey(), pInterceptor->getNameKey(), -(kAirMission.getDamage(BATTLE_UNIT_DEFENDER)), pInterceptor->getVisualCivAdjective(getTeam()));
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, pInterceptor->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, pInterceptor->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_AIR_UNIT_DAMAGED", pInterceptor->getNameKey(), getNameKey(), -(kAirMission.getDamage(BATTLE_UNIT_DEFENDER)));
-			AddDLLMessage(pInterceptor->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
+			AddDLLMessage(pInterceptor->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
 		}
 
 		if (0 == kAirMission.getDamage(BATTLE_UNIT_ATTACKER) + kAirMission.getDamage(BATTLE_UNIT_DEFENDER))
@@ -2218,10 +2218,10 @@ void CvUnit::updateAirCombat(bool bQuick)
 			MEMORY_TRACK_EXEMPT();
 
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ABORTED_ENEMY_AIR", pInterceptor->getNameKey(), getNameKey(), getVisualCivAdjective(getTeam()));
-			AddDLLMessage(pInterceptor->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, pInterceptor->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
+			AddDLLMessage(pInterceptor->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, pInterceptor->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_AIR_UNIT_ABORTED", getNameKey(), pInterceptor->getNameKey());
-			AddDLLMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
+			AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
 		}
 	}
 
@@ -2344,8 +2344,8 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 	int	iAttackerHitChance = 0; 
 	int iInitialDefXP = pDefender->getExperience100();
 	int iInitialAttXP = getExperience100();
-	int iInitialAttGGXP = GET_PLAYER(getOwnerINLINE()).getCombatExperience();
-	int iInitialDefGGXP = GET_PLAYER(pDefender->getOwnerINLINE()).getCombatExperience();
+	int iInitialAttGGXP = GET_PLAYER(getOwner()).getCombatExperience();
+	int iInitialDefGGXP = GET_PLAYER(pDefender->getOwner()).getCombatExperience();
 	bool bDynamicXP = GC.getGameINLINE().isModderGameOption(MODDERGAMEOPTION_IMPROVED_XP);
 	bool bDoDynamic = true;
 /************************************************************************************************/
@@ -2583,7 +2583,7 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 /**	Great Generals From Barbarian Combat Start													**/
 
 				//if (!bDynamicXP)
-				//	changeExperience(GC.getDefineINT("EXPERIENCE_FROM_WITHDRAWL"), pDefender->maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), (!pDefender->isBarbarian() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+				//	changeExperience(GC.getDefineINT("EXPERIENCE_FROM_WITHDRAWL"), pDefender->maxXPValue(), true, pPlot->getOwner() == getOwner(), (!pDefender->isBarbarian() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
 					
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -2603,13 +2603,13 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 						flankingStrikeCombat(pPlot, iAttackerStrength, iAttackerFirepower, iAttackerKillOdds, iDefenderDamage, pDefender);
 						bAttackerWithdrawn = true;
 
-						changeExperience100(getExperiencefromWithdrawal(AdjustedAttWithdrawal) * 10, maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+						changeExperience100(getExperiencefromWithdrawal(AdjustedAttWithdrawal) * 10, maxXPValue(), true, pPlot->getOwner() == getOwner(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
 
 						int iExperience = defenseXPValue();
 						iExperience = ((iExperience * iInitialAttackerStrength) / iInitialDefenderStrength);
 						iExperience = range(iExperience, GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
-						changeExperience100(iExperience * 10, maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
-						pDefender->changeExperience100(10, pDefender->maxXPValue(), true, pPlot->getOwnerINLINE() == pDefender->getOwnerINLINE(), (!isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+						changeExperience100(iExperience * 10, maxXPValue(), true, pPlot->getOwner() == getOwner(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+						pDefender->changeExperience100(10, pDefender->maxXPValue(), true, pPlot->getOwner() == pDefender->getOwner(), (!isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
 						bDoDynamic = false;
 
 // BUG - Combat Events - start
@@ -2637,7 +2637,7 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 					m_combatResult.bAttackerInjured = true;
 				}
 				//TB Combat Mod (Afflict) end
-				changeDamage(iAttackerDamage, pDefender->getOwnerINLINE());
+				changeDamage(iAttackerDamage, pDefender->getOwner());
 				//TB Combat Mod begin
 				checkForStun(iAttackerDamage, pDefender);
 				checkForCritical(iAttackerDamage, pDefender);
@@ -2683,7 +2683,7 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 						m_combatResult.bAttackerRepelled = true;
 						m_combatResult.bDeathMessaged = false;
 						
-						pDefender->changeExperience100(getExperiencefromWithdrawal(AdjustedRepel) * 15, pDefender->maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), (!isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+						pDefender->changeExperience100(getExperiencefromWithdrawal(AdjustedRepel) * 15, pDefender->maxXPValue(), true, pPlot->getOwner() == getOwner(), (!isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
 						bDoDynamic = false;
 
 						break;
@@ -2758,19 +2758,19 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 					if (!bBreakdown || getDamage() > combatLimit(this))
 					{
 						int iWithdrawOdds = 100 - pDefender->pursuitVSOpponentProbTotal(this);
-						changeExperience100(getExperiencefromWithdrawal(iWithdrawOdds) * 100, pDefender->maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+						changeExperience100(getExperiencefromWithdrawal(iWithdrawOdds) * 100, pDefender->maxXPValue(), true, pPlot->getOwner() == getOwner(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
 						
 						int iExperience = defenseXPValue();
 						iExperience = ((iExperience * iInitialAttackerStrength) / iInitialDefenderStrength);
 						iExperience = range(iExperience, GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
-						changeExperience100(iExperience * 10, maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
-						pDefender->changeExperience100(10, pDefender->maxXPValue(), true, pPlot->getOwnerINLINE() == pDefender->getOwnerINLINE(), (!isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+						changeExperience100(iExperience * 10, maxXPValue(), true, pPlot->getOwner() == getOwner(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+						pDefender->changeExperience100(10, pDefender->maxXPValue(), true, pPlot->getOwner() == pDefender->getOwner(), (!isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
 						bDoDynamic = false;
 
 						if (temporarypursuit == 0)
 						{
 							m_combatResult.bDeathMessaged = false;
-							pDefender->setDamage(combatLimit(pDefender), getOwnerINLINE());
+							pDefender->setDamage(combatLimit(pDefender), getOwner());
 							if (dealsColdDamage())
 							{
 								pDefender->setColdDamage(combatLimit(pDefender));
@@ -2805,8 +2805,8 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 							m_combatResult.bDefenderWithdrawn = true;
 							m_combatResult.bDeathMessaged = false;
 
-							pDefender->changeExperience100(getExperiencefromWithdrawal(AdjustedDefWithdraw) * 10, pDefender->maxXPValue(), true, pPlot->getOwnerINLINE() == pDefender->getOwnerINLINE(), (!isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
-							changeExperience100(10, maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+							pDefender->changeExperience100(getExperiencefromWithdrawal(AdjustedDefWithdraw) * 10, pDefender->maxXPValue(), true, pPlot->getOwner() == pDefender->getOwner(), (!isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+							changeExperience100(10, maxXPValue(), true, pPlot->getOwner() == getOwner(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
 
 							bDoDynamic = false;
 							//doDynamicXP(pDefender, pPlot, iAttackerInitialDamage, iWinningOdds, iDefenderInitialDamage, iInitialAttXP, iInitialDefXP, iInitialAttGGXP, iInitialDefGGXP, false, false);
@@ -2836,7 +2836,7 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 					if (!bNoFurtherDamagetoDefender)
 					{
 						m_combatResult.bDefenderInjured = true;
-						pDefender->changeDamage(iDefenderDamage, getOwnerINLINE());
+						pDefender->changeDamage(iDefenderDamage, getOwner());
 					}
 				}
 				//TB Combat Mods (Afflict) end
@@ -2884,7 +2884,7 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 								m_combatResult.bDefenderKnockedBack = true;
 								m_combatResult.bDeathMessaged = false;
 								m_combatResult.pPlot = selectWithdrawPlot(bSamePlot, plot(), pDefender).get_value_or(nullptr);
-								changeExperience100(getExperiencefromWithdrawal(AdjustedKnockback) * 15, maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+								changeExperience100(getExperiencefromWithdrawal(AdjustedKnockback) * 15, maxXPValue(), true, pPlot->getOwner() == getOwner(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
 								return;
 							}
 							else if ((KnockbackRollResult < iAttackerKnockback) && (KnockbackRollResult > AdjustedKnockback))
@@ -2993,13 +2993,13 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 				iExperience = range(iExperience, GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
 				if (!bDynamicXP)
 				{
-					pDefender->changeExperience(iExperience, maxXPValue(), true, pPlot->getOwnerINLINE() == pDefender->getOwnerINLINE(), (!isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+					pDefender->changeExperience(iExperience, maxXPValue(), true, pPlot->getOwner() == pDefender->getOwner(), (!isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
 				}
 
 
 				//	Koshling - add rolling history of combat results to allow the AI to adapt
 				//	to what it sees happening
-				pPlot->area()->recordCombatDeath(getOwnerINLINE(), getUnitType(), pDefender->getUnitType());
+				pPlot->area()->recordCombatDeath(getOwner(), getUnitType(), pDefender->getUnitType());
 			}
 			else
 			{
@@ -3015,7 +3015,7 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 /*************************************************************************************************/
 				if (!bDynamicXP)
 				{
-					changeExperience(iExperience, pDefender->maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+					changeExperience(iExperience, pDefender->maxXPValue(), true, pPlot->getOwner() == getOwner(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
 				}
 /*************************************************************************************************/
 /**	Great Generals From Barbarian Combat End													**/
@@ -3023,7 +3023,7 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 
 				//	Koshling - add rolling history of combat results to allow the AI to adapt
 				//	to what it sees happening
-				pPlot->area()->recordCombatDeath(pDefender->getOwnerINLINE(), pDefender->getUnitType(), getUnitType());
+				pPlot->area()->recordCombatDeath(pDefender->getOwner(), pDefender->getUnitType(), getUnitType());
 			}
 			break;
 		}
@@ -3133,7 +3133,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 	{
 		if (pSelectedDefender == NULL)
 		{
-			pDefender = pPlot->getBestDefender(NO_PLAYER, getOwnerINLINE(), this, true, false, false, false, bNoCache);
+			pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, false, false, false, bNoCache);
 		}
 		else
 		{
@@ -3270,7 +3270,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				float plotSize = GC.getPLOT_SIZE();
 				NiPoint3 lookAtPoint(plot()->getPoint().x + plotSize / 2 * attackDirection.x, plot()->getPoint().y + plotSize / 2 * attackDirection.y, (plot()->getPoint().z + pPlot->getPoint().z) / 2);
 				attackDirection.Unitize();
-				gDLL->getInterfaceIFace()->lookAt(lookAtPoint, (((getOwnerINLINE() != GC.getGameINLINE().getActivePlayer()) || gDLL->getGraphicOption(GRAPHICOPTION_NO_COMBAT_ZOOM)) ? CAMERALOOKAT_BATTLE : CAMERALOOKAT_BATTLE_ZOOM_IN), attackDirection);
+				gDLL->getInterfaceIFace()->lookAt(lookAtPoint, (((getOwner() != GC.getGameINLINE().getActivePlayer()) || gDLL->getGraphicOption(GRAPHICOPTION_NO_COMBAT_ZOOM)) ? CAMERALOOKAT_BATTLE : CAMERALOOKAT_BATTLE_ZOOM_IN), attackDirection);
 			}
 			else
 			{
@@ -3279,14 +3279,14 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				CvWString szMessage;
 				if (BARBARIAN_PLAYER != eAttacker)
 				{
-					szMessage = gDLL->getText("TXT_KEY_MISC_YOU_UNITS_UNDER_ATTACK", GET_PLAYER(getOwnerINLINE()).getNameKey());
+					szMessage = gDLL->getText("TXT_KEY_MISC_YOU_UNITS_UNDER_ATTACK", GET_PLAYER(getOwner()).getNameKey());
 				}
 				else
 				{
 					szMessage = gDLL->getText("TXT_KEY_MISC_YOU_UNITS_UNDER_ATTACK_UNKNOWN");
 				}
 
-				AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szMessage, "AS2D_COMBAT", MESSAGE_TYPE_DISPLAY_ONLY, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true);
+				AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szMessage, "AS2D_COMBAT", MESSAGE_TYPE_DISPLAY_ONLY, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true);
 			}
 			//Damage to Attacking Unit from City Defenses
 			if (pPlot->isCity(false) && !bSamePlot)
@@ -3313,7 +3313,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 		}
 
 		//OutputDebugString("UI interaction - unit attacked 1\n");
-		GET_PLAYER(pDefender->getOwnerINLINE()).setTurnHadUIInteraction(true);
+		GET_PLAYER(pDefender->getOwner()).setTurnHadUIInteraction(true);
 
 		FAssertMsg(pDefender != NULL, "Defender is not assigned a valid value");
 
@@ -3388,7 +3388,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					//was modified to only send false IF it was the LAST attack in the stack attack sequence while 
 					//this section was modified to ONLY turn bFinish true on quick attack if it is the last attack in the sequence, when,
 					//at that point it is safe to process as the finish of the battle.
-					if (!GET_PLAYER(getOwnerINLINE()).isOption(PLAYEROPTION_QUICK_ATTACK) || bQuick)//TBFLAG
+					if (!GET_PLAYER(getOwner()).isOption(PLAYEROPTION_QUICK_ATTACK) || bQuick)//TBFLAG
 					{
 						bFinish = true;
 					}
@@ -3451,7 +3451,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 		{
 			if (isCombatFocus() && gDLL->getInterfaceIFace()->isCombatFocus())
 			{
-				if (getOwnerINLINE() == GC.getGameINLINE().getActivePlayer())
+				if (getOwner() == GC.getGameINLINE().getActivePlayer())
 				{
 					gDLL->getInterfaceIFace()->releaseLockedCamera();
 				}
@@ -3558,12 +3558,12 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					if (BARBARIAN_PLAYER != eDefender)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKER_PURSUED_SUSTAIN_HUMAN", getNameKey(), pDefender->getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 					}
 					else
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKER_PURSUED_SUSTAIN_HUMAN_HIDDEN", getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 					}
 				}
 	
@@ -3576,12 +3576,12 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					if (BARBARIAN_PLAYER != eDefender)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENDER_PURSUED_SUSTAIN_HUMAN", getNameKey(), pDefender->getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 					}
 					else
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENDER_PURSUED_SUSTAIN_HUMAN_HIDDEN", getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 					}
 				}
 		
@@ -3596,12 +3596,12 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					if (BARBARIAN_PLAYER != eAttacker)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKER_PURSUED_SUSTAIN", getVisualCivAdjective(getTeam()), getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 					}
 					else
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKER_PURSUED_SUSTAIN_HIDDEN", getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 					}
 				}
 	
@@ -3614,12 +3614,12 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					if (BARBARIAN_PLAYER != eAttacker)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENDER_PURSUED_SUSTAIN", pDefender->getNameKey(), getVisualCivAdjective(getTeam()), getNameKey());
-						AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 					}
 					else
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENDER_PURSUED_SUSTAIN_HIDDEN", pDefender->getNameKey(),getNameKey());
-						AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 					}
 				}
 		
@@ -3636,12 +3636,12 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					if (BARBARIAN_PLAYER != eAttacker)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKER_UNYIELDING_SUSTAIN_HUMAN", getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 					}
 					else
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKER_UNYIELDING_SUSTAIN_HUMAN_HIDDEN", getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 					}
 				}
 	
@@ -3654,12 +3654,12 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					if (BARBARIAN_PLAYER != eDefender)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENDER_UNYIELDING_SUSTAIN_HUMAN", getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 					}
 					else
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENDER_UNYIELDING_SUSTAIN_HUMAN_HIDDEN", getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 					}
 				}
 
@@ -3674,12 +3674,12 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					if (BARBARIAN_PLAYER != eAttacker)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKER_UNYIELDING_SUSTAIN", getVisualCivAdjective(getTeam()), pDefender->getNameKey(), getNameKey());
-						AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 					}
 					else
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKER_UNYIELDING_SUSTAIN_HIDDEN", pDefender->getNameKey(), getNameKey());
-						AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 					}
 				}
 
@@ -3692,12 +3692,12 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					if (BARBARIAN_PLAYER != eAttacker)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENDER_UNYIELDING_SUSTAIN", pDefender->getNameKey(), getVisualCivAdjective(getTeam()), getNameKey());
-						AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 					}
 					else
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENDER_UNYIELDING_SUSTAIN_HIDDEN", pDefender->getNameKey(), getNameKey());
-						AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 					}
 				}
 		
@@ -3724,7 +3724,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 		{
 			if (isNPC())
 			{
-				GET_PLAYER(pDefender->getOwnerINLINE()).changeWinsVsBarbs(1);
+				GET_PLAYER(pDefender->getOwner()).changeWinsVsBarbs(1);
 			}
 
 			if (!isHiddenNationality() && !pDefender->isHiddenNationality())
@@ -3792,7 +3792,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 /************************************************************************************************/
 			{
 				MEMORY_TRACK_EXEMPT();
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
 			}
 			//TB Combat Mods Begin
 			//Original:
@@ -3851,7 +3851,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			{
 				MEMORY_TRACK_EXEMPT();
 
-				AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitVictoryScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+				AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitVictoryScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 			}
 
 /* JOOYO_ADDON, Added by Jooyo, 06/27/09                                                        */
@@ -3943,17 +3943,17 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			{
 				if (BARBARIAN_PLAYER != eAttacker)
 				{
-					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_FIELD_MEDIC_DEFENDERS", GET_PLAYER(pDefender->getOwnerINLINE()).getCivilizationAdjective());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_COMBAT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pDefender->getX(), pDefender->getY());
+					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_FIELD_MEDIC_DEFENDERS", GET_PLAYER(pDefender->getOwner()).getCivilizationAdjective());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_COMBAT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pDefender->getX(), pDefender->getY());
 				}
 				else
 				{
 					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_FIELD_MEDIC_DEFENDERS_HIDDEN");
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_COMBAT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pDefender->getX(), pDefender->getY());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_COMBAT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pDefender->getX(), pDefender->getY());
 				}
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_FIELD_MEDIC_DEFENDERS", pDefender->getNameKey(), iUnitsHealed);
-				AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefender->getX(), pDefender->getY());
+				AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefender->getX(), pDefender->getY());
 			}
 
 			if (pDefender->getDefensiveVictoryMoveCount() > 0)
@@ -3989,22 +3989,22 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				if (iPillageGold > 0)
 				{
 					iPillageGold += (iPillageGold * pDefender->getPillageChange()) / 100;
-					GET_PLAYER(pDefender->getOwnerINLINE()).changeGold(iPillageGold);
+					GET_PLAYER(pDefender->getOwner()).changeGold(iPillageGold);
 
 					if (BARBARIAN_PLAYER != eDefender)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_GOLD_LOOTED_FROM_DEAD", getNameKey(), pDefender->getVisualCivAdjective(pDefender->getTeam()));
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pDefenderPlot->getX(), pDefenderPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pDefenderPlot->getX(), pDefenderPlot->getY());
 					}
 					else
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_GOLD_LOOTED_FROM_DEAD_HIDDEN", getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pDefenderPlot->getX(), pDefenderPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pDefenderPlot->getX(), pDefenderPlot->getY());
 					}
 
 					for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
 					{
-						TechTypes ePillageTech = GET_PLAYER(pDefender->getOwnerINLINE()).getCurrentResearch();
+						TechTypes ePillageTech = GET_PLAYER(pDefender->getOwner()).getCurrentResearch();
 						CommerceTypes eCommerce = ((CommerceTypes)iI);
 						int iPillageResearch = 0;
 						int iPillageEspionage = 0;
@@ -4013,18 +4013,18 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 						case COMMERCE_GOLD:
 							if (pDefender->isPillageMarauder())
 							{
-								GET_PLAYER(pDefender->getOwnerINLINE()).changeGold(iPillageGold);
+								GET_PLAYER(pDefender->getOwner()).changeGold(iPillageGold);
 								szBuffer = gDLL->getText("TXT_KEY_MISC_MARAUDERS_PLUNDERED_VICTIMS", iPillageGold, pDefender->getNameKey());
-								AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
+								AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
 								if (BARBARIAN_PLAYER != eDefender)
 								{
 									szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENDED_BY_MARAUDERS", getNameKey(), getVisualCivAdjective(pDefender->getTeam()));
-									AddDLLMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pDefenderPlot->getX(), pDefenderPlot->getY(), true, true);
+									AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pDefenderPlot->getX(), pDefenderPlot->getY(), true, true);
 								}
 								else
 								{
 									szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENDED_BY_MARAUDERS_HIDDEN", getNameKey());
-									AddDLLMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pDefenderPlot->getX(), pDefenderPlot->getY(), true, true);
+									AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pDefenderPlot->getX(), pDefenderPlot->getY(), true, true);
 								}
 							}
 							break;
@@ -4032,16 +4032,16 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 							if (pDefender->isPillageResearch())
 							{
 								iPillageResearch += iPillageGold;
-								GET_TEAM(GET_PLAYER(pDefender->getOwnerINLINE()).getTeam()).changeResearchProgress(ePillageTech, iPillageResearch, pDefender->getOwnerINLINE());
+								GET_TEAM(GET_PLAYER(pDefender->getOwner()).getTeam()).changeResearchProgress(ePillageTech, iPillageResearch, pDefender->getOwner());
 								if (BARBARIAN_PLAYER != eDefender)
 								{
 									szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_RESEARCH_FROM_VICTIMS", iPillageResearch, pDefender->getNameKey(), getVisualCivAdjective(getTeam()), ePillageTech);
-									AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
+									AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
 								}
 								else
 								{
 									szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_RESEARCH_FROM_VICTIMS_HIDDEN", iPillageResearch, pDefender->getNameKey(), ePillageTech);
-									AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
+									AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
 								}
 							}
 							break;
@@ -4055,7 +4055,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 									szTempBuffer.Format(L" Influence: -%.1f%%", fInfluenceRatio);
 									szBuffer += szTempBuffer;
 									szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_CULTURE_FROM_VICTIMS");
-									AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
+									AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
 								}
 							}
 							break;
@@ -4065,16 +4065,16 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 								iPillageEspionage += iPillageGold;
 								if (pDefenderPlot->getTeam() != NO_TEAM)
 								{
-									GET_TEAM(GET_PLAYER(pDefender->getOwnerINLINE()).getTeam()).changeEspionagePointsAgainstTeam(getTeam(), iPillageEspionage);
+									GET_TEAM(GET_PLAYER(pDefender->getOwner()).getTeam()).changeEspionagePointsAgainstTeam(getTeam(), iPillageEspionage);
 									if (BARBARIAN_PLAYER != eDefender)
 									{
 										szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_ESPIONAGE_FROM_VICTIMS", iPillageEspionage, getVisualCivAdjective(getTeam()), pDefender->getNameKey());
-										AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
+										AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
 									}
 									else
 									{
 										szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_ESPIONAGE_FROM_VICTIMS_HIDDEN", iPillageEspionage, pDefender->getNameKey());
-										AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
+										AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
 									}
 								}
 							}
@@ -4092,7 +4092,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			
 			CvOutcomeListMerged list;
 			list.addOutcomeList(getUnitInfo().getKillOutcomeList());
-			//getUnitInfo().getKillOutcomeList()->execute(*pDefender, getOwnerINLINE(), getUnitType());
+			//getUnitInfo().getKillOutcomeList()->execute(*pDefender, getOwner(), getUnitType());
 			for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 			{
 				if (isHasUnitCombat((UnitCombatTypes)iI))
@@ -4100,16 +4100,16 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					UnitCombatTypes eCombat = (UnitCombatTypes)iI;
 					CvOutcomeList* pOutcomeList = GC.getUnitCombatInfo(eCombat).getKillOutcomeList();
 					list.addOutcomeList(pOutcomeList);
-					//pOutcomeList->execute(*pDefender, getOwnerINLINE(), getUnitType());
+					//pOutcomeList->execute(*pDefender, getOwner(), getUnitType());
 				}
 			}
-			list.execute(*pDefender, getOwnerINLINE(), getUnitType());
+			list.execute(*pDefender, getOwner(), getUnitType());
 		}
 		else if (pDefender->isDead())
 		{
 			if (pDefender->isNPC())
 			{
-				GET_PLAYER(getOwnerINLINE()).changeWinsVsBarbs(1);
+				GET_PLAYER(getOwner()).changeWinsVsBarbs(1);
 			}
 
 			if (!isHiddenNationality() && !pDefender->isHiddenNationality())
@@ -4187,11 +4187,11 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			{
 				MEMORY_TRACK_EXEMPT();
 
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitVictoryScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitVictoryScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 			}
 			//TB Combat Mods Begin
 			//Original:
-//			if (getVisualOwner(pDefender->getTeam()) != getOwnerINLINE())
+//			if (getVisualOwner(pDefender->getTeam()) != getOwner())
 //			{
 //				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED_UNKNOWN", pDefender->getNameKey(), getNameKey());
 //			}
@@ -4275,7 +4275,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			{
 				MEMORY_TRACK_EXEMPT();
 
-				AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer,GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
+				AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer,GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
 			}
 // TB Note: Again, an unnecessary, outdated reference that may get an overhaul at some point.
 // TB Note Revision: I now believe this is used for some python calls to take place.
@@ -4364,17 +4364,17 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			{
 				if (BARBARIAN_PLAYER != eAttacker)
 				{
-					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_FIELD_MEDIC_ATTACKERS", GET_PLAYER(getOwnerINLINE()).getCivilizationAdjective());
-					AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_COMBAT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), getX(), getY(), true, true);
+					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_FIELD_MEDIC_ATTACKERS", GET_PLAYER(getOwner()).getCivilizationAdjective());
+					AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_COMBAT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), getX(), getY(), true, true);
 				}
 				else
 				{
 					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_FIELD_MEDIC_ATTACKERS_HIDDEN");
-					AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_COMBAT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), getX(), getY(), true, true);
+					AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_COMBAT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), getX(), getY(), true, true);
 				}
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_FIELD_MEDIC_ATTACKERS", getNameKey(), iUnitsHealed);
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY());
 			}
 
 			if (getOffensiveVictoryMoveCount() > 0)
@@ -4395,7 +4395,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 
 			if ((!bDefendingSurvivor) && (pDefender->isOneUp()))
 			{
-				CvCity* pCapitalCity = GET_PLAYER(pDefender->getOwnerINLINE()).getCapitalCity();
+				CvCity* pCapitalCity = GET_PLAYER(pDefender->getOwner()).getCapitalCity();
 				if (pCapitalCity != NULL)
 				{
 					pDefender->setCanRespawn(true);
@@ -4413,22 +4413,22 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				if (iPillageGold > 0)
 	            {
 					iPillageGold += (iPillageGold * getPillageChange()) / 100;
-					GET_PLAYER(getOwnerINLINE()).changeGold(iPillageGold);
+					GET_PLAYER(getOwner()).changeGold(iPillageGold);
 
 					if (BARBARIAN_PLAYER != eAttacker)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_GOLD_LOOTED_FROM_DEAD", pDefender->getNameKey(), getVisualCivAdjective(getTeam()));
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pDefenderPlot->getX(), pDefenderPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pDefenderPlot->getX(), pDefenderPlot->getY());
 					}
 					else
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_GOLD_LOOTED_FROM_DEAD_HIDDEN", pDefender->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pDefenderPlot->getX(), pDefenderPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pDefenderPlot->getX(), pDefenderPlot->getY());
 					}
 
 					for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
 					{
-						TechTypes ePillageTech = GET_PLAYER(getOwnerINLINE()).getCurrentResearch();
+						TechTypes ePillageTech = GET_PLAYER(getOwner()).getCurrentResearch();
 						CommerceTypes eCommerce = ((CommerceTypes)iI);
 						int iPillageResearch = 0;
 						int iPillageEspionage = 0;
@@ -4437,18 +4437,18 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 						case COMMERCE_GOLD:
 							if (isPillageMarauder())
 							{
-								GET_PLAYER(getOwnerINLINE()).changeGold(iPillageGold);
+								GET_PLAYER(getOwner()).changeGold(iPillageGold);
 								szBuffer = gDLL->getText("TXT_KEY_MISC_MARAUDERS_PLUNDERED_VICTIMS", iPillageGold, getNameKey());
-								AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
+								AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
 								if (BARBARIAN_PLAYER != eAttacker)
 								{
 									szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKED_BY_MARAUDERS", pDefender->getNameKey(), getVisualCivAdjective(getTeam()));
-									AddDLLMessage(pDefender->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pDefenderPlot->getX(), pDefenderPlot->getY(), true, true);
+									AddDLLMessage(pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pDefenderPlot->getX(), pDefenderPlot->getY(), true, true);
 								}
 								else
 								{
 									szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKED_BY_MARAUDERS_HIDDEN", pDefender->getNameKey());
-									AddDLLMessage(pDefender->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pDefenderPlot->getX(), pDefenderPlot->getY(), true, true);
+									AddDLLMessage(pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pDefenderPlot->getX(), pDefenderPlot->getY(), true, true);
 								}
 							}
 							break;
@@ -4456,16 +4456,16 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 							if (isPillageResearch())
 							{
 								iPillageResearch += iPillageGold;
-								GET_TEAM(GET_PLAYER(getOwnerINLINE()).getTeam()).changeResearchProgress(ePillageTech, iPillageResearch, getOwnerINLINE());	
+								GET_TEAM(GET_PLAYER(getOwner()).getTeam()).changeResearchProgress(ePillageTech, iPillageResearch, getOwner());	
 								if (BARBARIAN_PLAYER != eDefender)
 								{
 									szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_RESEARCH_FROM_IMP", iPillageResearch, getNameKey(), getVisualCivAdjective(pDefender->getTeam()), ePillageTech);
-									AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
+									AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
 								}
 								else
 								{
 									szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_RESEARCH_FROM_IMP_HIDDEN", iPillageResearch, getNameKey(), ePillageTech);
-									AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
+									AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
 								}
 							}
 							break;
@@ -4479,7 +4479,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 									szTempBuffer.Format(L" Influence: -%.1f%%", fInfluenceRatio);
 									szBuffer += szTempBuffer;
 									szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_CULTURE_FROM_IMP");
-									AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
+									AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
 								}
 							}
 							break;
@@ -4489,20 +4489,20 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 								iPillageEspionage += iPillageGold;
 								if (pDefenderPlot->getTeam() != NO_TEAM)
 								{
-									GET_TEAM(GET_PLAYER(getOwnerINLINE()).getTeam()).changeEspionagePointsAgainstTeam(pDefenderPlot->getTeam(), iPillageEspionage);
+									GET_TEAM(GET_PLAYER(getOwner()).getTeam()).changeEspionagePointsAgainstTeam(pDefenderPlot->getTeam(), iPillageEspionage);
 									
 									if (BARBARIAN_PLAYER != eDefender)
 									{
 										szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_ESPIONAGE_FROM_IMP", iPillageEspionage, getNameKey(), getVisualCivAdjective(pDefender->getTeam()), ePillageTech);
-										AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
+										AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
 									}
 									else
 									{
 										szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_ESPIONAGE_FROM_IMP_HIDDEN", iPillageEspionage, getNameKey(), ePillageTech);
-										AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
+										AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
 									}
 									//szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_ESPIONAGE_FROM_IMP", iPillageEspionage);
-									//AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
+									//AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pDefenderPlot->getX(), pDefenderPlot->getY());
 								}
 							}
 							break;
@@ -4516,7 +4516,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 /*****************************************************************************************************/
 			CvEventReporter::getInstance().combatResult(this, pDefender);
 			//CvUnitInfo* pDefenderUnitInfo = &(pDefender->getUnitInfo());
-			PlayerTypes eDefenderUnitPlayer = pDefender->getOwnerINLINE();
+			PlayerTypes eDefenderUnitPlayer = pDefender->getOwner();
 			UnitTypes eDefenderUnitType = pDefender->getUnitType();
 
 			// generate the kill outcome list but don't execute it yet
@@ -4559,7 +4559,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				{
 					if (!isNoCapture())
 					{
-						pDefender->setCapturingPlayer(getOwnerINLINE());
+						pDefender->setCapturingPlayer(getOwner());
 						pDefender->setCapturingUnit(this);
 					}
 				}
@@ -4633,27 +4633,27 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_UNIT_WITHDRAW", pDefender->getNameKey(), getNameKey());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WITHDRAW", pDefender->getNameKey(), getNameKey());
-				AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+				AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 			}
 			else if (!m_combatResult.bAttackerOnslaught)
 			{
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_UNIT_WITHDRAW_STAMPEDE", pDefender->getNameKey(), getNameKey());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WITHDRAW_STAMPEDE", pDefender->getNameKey(), getNameKey());
-				AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+				AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 			}
 			else
 			{
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_UNIT_WITHDRAW_ONSLAUGHT", pDefender->getNameKey(), getNameKey());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WITHDRAW_ONSLAUGHT", pDefender->getNameKey(), getNameKey());
-				AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+				AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 			}
 
 			if (!bSamePlot)
@@ -4797,12 +4797,12 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					if (BARBARIAN_PLAYER != eDefender)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN", getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 					}
 					else
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_HIDDEN", getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 					}
 				}
 				else
@@ -4813,12 +4813,12 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					if (BARBARIAN_PLAYER != eDefender)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED", getVisualCivAdjective(getTeam()), getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 					}
 					else
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_HIDDEN", getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 					}
 				}
 			}
@@ -4831,12 +4831,12 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					if (BARBARIAN_PLAYER != eDefender)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_STAMPEDE", getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 					}
 					else
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_STAMPEDE_HIDDEN", getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 					}
 				}	
 				else
@@ -4846,12 +4846,12 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					if (BARBARIAN_PLAYER != eAttacker)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_STAMPEDE", getVisualCivAdjective(getTeam()), getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 					}
 					else
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_STAMPEDE_HIDDEN", getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 					}
 				}
 			}
@@ -4864,12 +4864,12 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					if (BARBARIAN_PLAYER != eDefender)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_ONSLAUGHT", getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 					}
 					else
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_ONSLAUGHT_HIDDEN", getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 					}
 				}
 				else
@@ -4879,12 +4879,12 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					if (BARBARIAN_PLAYER != eAttacker)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_ONSLAUGHT", getVisualCivAdjective(getTeam()), getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 					}
 					else
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_ONSLAUGHT_HIDDEN", getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 					}
 				}
 			}
@@ -4929,12 +4929,12 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					if (BARBARIAN_PLAYER != eDefender)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HUMAN", getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 					}
 					else
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HUMAN_HIDDEN", getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 					}
 				}
 		
@@ -4946,12 +4946,12 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					if (BARBARIAN_PLAYER != eAttacker)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENDER_KNOCKEDBACK", getVisualCivAdjective(getTeam()), getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 					}
 					else
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HIDDEN", getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 					}
 				}
 			}
@@ -4964,12 +4964,12 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					if (BARBARIAN_PLAYER != eDefender)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HUMAN_STAMPEDE", getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 					}
 					else
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HUMAN_STAMPEDE_HIDDEN", getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 					}
 				}
 		
@@ -4981,12 +4981,12 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					if (BARBARIAN_PLAYER != eAttacker)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_STAMPEDE", getVisualCivAdjective(getTeam()), getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 					}
 					else
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_STAMPEDE_HIDDEN", getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 					}
 				}
 			}
@@ -4999,12 +4999,12 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					if (BARBARIAN_PLAYER != eDefender)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HUMAN_ONSLAUGHT", getNameKey(), getVisualCivAdjective(pDefender->getTeam()), pDefender->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 					}
 					else
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HUMAN_ONSLAUGHT_HIDDEN", getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 					}
 				}
 		
@@ -5016,12 +5016,12 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					if (BARBARIAN_PLAYER != eAttacker)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_ONSLAUGHT", getVisualCivAdjective(getTeam()), getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 					}
 					else
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_ONSLAUGHT_HIDDEN", getNameKey(), pDefender->getNameKey());
-						AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 					}
 				}
 			}
@@ -5054,7 +5054,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			{
 				if (!isNoCapture())
 				{
-					pDefender->setCapturingPlayer(getOwnerINLINE());
+					pDefender->setCapturingPlayer(getOwner());
 					pDefender->setCapturingUnit(this);
 				}
 				if (!bStealthDefense)
@@ -5103,9 +5103,9 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WITHDRAW", getNameKey(), pDefender->getNameKey());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_UNIT_WITHDRAW", getNameKey(), pDefender->getNameKey());
-				AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+				AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 				
 				changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 				//GC.getGameINLINE().logOOSSpecial(53, getID(), getMoves(), getDamage());
@@ -5129,9 +5129,9 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_ATTACKER_WITHDRAW_STAMPEDE", getNameKey(), pDefender->getNameKey());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_UNIT_ATTACKER_WITHDRAW_STAMPEDE", getNameKey(), pDefender->getNameKey());
-				AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+				AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 				
 				if (getGroup() != NULL)
 				{
@@ -5145,9 +5145,9 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_ATTACKER_WITHDRAW_ONSLAUGHT", getNameKey(), pDefender->getNameKey());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_UNIT_ATTACKER_WITHDRAW_ONSLAUGHT", getNameKey(), pDefender->getNameKey());
-				AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
+				AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), pPlot->getX(), pPlot->getY());
 				
 				if (getGroup() != NULL)
 				{
@@ -5205,12 +5205,12 @@ bool CvUnit::isActionRecommended(int iAction)
 	BonusTypes eBonus;
 	int iIndex;
 
-	if (getOwnerINLINE() != GC.getGameINLINE().getActivePlayer())
+	if (getOwner() != GC.getGameINLINE().getActivePlayer())
 	{
 		return false;
 	}
 
-	if (GET_PLAYER(getOwnerINLINE()).isOption(PLAYEROPTION_NO_UNIT_RECOMMENDATIONS))
+	if (GET_PLAYER(getOwner()).isOption(PLAYEROPTION_NO_UNIT_RECOMMENDATIONS))
 	{
 		return false;
 	}
@@ -5251,7 +5251,7 @@ bool CvUnit::isActionRecommended(int iAction)
 		{
 			if (canDefend(pPlot))
 			{
-				if (pPlot->getNumDefenders(getOwnerINLINE()) < ((atPlot(pPlot)) ? 2 : 1))
+				if (pPlot->getNumDefenders(getOwner()) < ((atPlot(pPlot)) ? 2 : 1))
 				{
 					return true;
 				}
@@ -5294,7 +5294,7 @@ bool CvUnit::isActionRecommended(int iAction)
 	{
 		if (canFound(pPlot))
 		{
-			if (pPlot->isBestAdjacentFound(getOwnerINLINE()))
+			if (pPlot->isBestAdjacentFound(getOwner()))
 			{
 				return true;
 			}
@@ -5303,7 +5303,7 @@ bool CvUnit::isActionRecommended(int iAction)
 
 	if (GC.getActionInfo(iAction).getMissionType() == MISSION_BUILD)
 	{
-		if (pPlot->getOwnerINLINE() == getOwnerINLINE())
+		if (pPlot->getOwner() == getOwner())
 		{
 			eBuild = ((BuildTypes)(GC.getActionInfo(iAction).getMissionData()));
 			FAssert(eBuild != NO_BUILD);
@@ -5915,7 +5915,7 @@ void CvUnit::doCommand(CommandTypes eCommand, int iData1, int iData2)
 
 	bCycle = false;
 
-	FAssert(getOwnerINLINE() != NO_PLAYER);
+	FAssert(getOwner() != NO_PLAYER);
 
 	if (canDoCommand(eCommand, iData1, iData2))
 	{
@@ -6002,14 +6002,14 @@ void CvUnit::doCommand(CommandTypes eCommand, int iData1, int iData2)
 			break;
 
 		case COMMAND_MERGE:
-			if (!GET_PLAYER(getOwnerINLINE()).isBarbarian())
+			if (!GET_PLAYER(getOwner()).isBarbarian())
 			{
 				doMerge();
 			}
 			break;
 
 		case COMMAND_SPLIT:
-			if (!GET_PLAYER(getOwnerINLINE()).isBarbarian())
+			if (!GET_PLAYER(getOwner()).isBarbarian())
 			{
 				doSplit();
 			}
@@ -6187,7 +6187,7 @@ TeamTypes CvUnit::getDeclareWarMove(const CvPlot* pPlot) const
 			{
 				if (canMoveInto(pPlot, MoveCheck::Attack | MoveCheck::DeclareWar | MoveCheck::IgnoreLoad))
 				{
-					pUnit = pPlot->plotCheck(PUF_canDeclareWar, getOwnerINLINE(), isAlwaysHostile(pPlot), NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, getOwnerINLINE());
+					pUnit = pPlot->plotCheck(PUF_canDeclareWar, getOwner(), isAlwaysHostile(pPlot), NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, getOwner());
 
 					if (pUnit != NULL)
 					{
@@ -6315,9 +6315,9 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 
 	if (GC.getUSE_SPIES_NO_ENTER_BORDERS())
 	{
-		if (isSpy() && NO_PLAYER != pPlot->getOwnerINLINE())
+		if (isSpy() && NO_PLAYER != pPlot->getOwner())
 		{
-			if (!GET_PLAYER(getOwnerINLINE()).canSpiesEnterBorders(pPlot->getOwnerINLINE()))
+			if (!GET_PLAYER(getOwner()).canSpiesEnterBorders(pPlot->getOwner()))
 			{
 				return false;
 			}
@@ -6545,7 +6545,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 /************************************************************************************************/
 
 	//ls612: For units that can't enter non-Owned Cities
-	if (m_pUnitInfo->isNoNonOwnedEntry() && pPlot->isCity() && (pPlot->getOwnerINLINE() != getOwnerINLINE()))
+	if (m_pUnitInfo->isNoNonOwnedEntry() && pPlot->isCity() && (pPlot->getOwner() != getOwner()))
 	{
 		return false;
 	}
@@ -6707,8 +6707,8 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 						{
 							if (bIsVisibleEnemyDefender)
 							{
-								//FAssertMsg(isHuman() || (!bDeclareWar || (pPlot->isVisibleOtherUnit(getOwnerINLINE()) != bAttack)), "hopefully not an issue, but tracking how often this is the case when we dont want to really declare war");
-								if (!bDeclareWar || (pPlot->isVisibleOtherUnit(getOwnerINLINE())))
+								//FAssertMsg(isHuman() || (!bDeclareWar || (pPlot->isVisibleOtherUnit(getOwner()) != bAttack)), "hopefully not an issue, but tracking how often this is the case when we dont want to really declare war");
+								if (!bDeclareWar || (pPlot->isVisibleOtherUnit(getOwner())))
 								{
 									if ( bFailWithAttack )
 									{
@@ -6724,8 +6724,8 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 					{
 						if (!bIsVisibleEnemyDefender)
 						{
-							//FAssertMsg(isHuman() || (!bDeclareWar || (pPlot->isVisibleOtherUnit(getOwnerINLINE()) != bAttack)), "hopefully not an issue, but tracking how often this is the case when we dont want to really declare war");
-							if (!bDeclareWar || (!pPlot->isVisibleOtherUnit(getOwnerINLINE()) && !(pPlot->getPlotCity() && !isNoCapture() && !isBlendIntoCity())))
+							//FAssertMsg(isHuman() || (!bDeclareWar || (pPlot->isVisibleOtherUnit(getOwner()) != bAttack)), "hopefully not an issue, but tracking how often this is the case when we dont want to really declare war");
+							if (!bDeclareWar || (!pPlot->isVisibleOtherUnit(getOwner()) && !(pPlot->getPlotCity() && !isNoCapture() && !isBlendIntoCity())))
 							{
 								if ( bFailWithoutAttack )
 								{
@@ -6742,7 +6742,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 					if (bIsVisibleEnemyDefender != bAttack)
 					//if ((pPlot->isVisibleEnemyUnit(this) || pPlot->isEnemyCity(*this)) != bAttack)
 					{
-						//FAssertMsg(isHuman() || (!bDeclareWar || (pPlot->isVisibleOtherUnit(getOwnerINLINE()) != bAttack)), "hopefully not an issue, but tracking how often this is the case when we dont want to really declare war");
+						//FAssertMsg(isHuman() || (!bDeclareWar || (pPlot->isVisibleOtherUnit(getOwner()) != bAttack)), "hopefully not an issue, but tracking how often this is the case when we dont want to really declare war");
 						if (!bDeclareWar || (bIsVisibleEnemyDefender != bAttack && !(bAttack && pPlot->getPlotCity() && !isNoCapture())))
 						{
 							return false;//Searchforthis
@@ -6768,7 +6768,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 						}
 					}
 				}
-				CvUnit* pDefender = pPlot->getFirstDefender(NO_PLAYER, getOwnerINLINE(), this, true);
+				CvUnit* pDefender = pPlot->getFirstDefender(NO_PLAYER, getOwner(), this, true);
 				if (NULL != pDefender)
 				{
 					if (!canAttack(*pDefender))
@@ -6784,7 +6784,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 					}
 					if (bCheckForBest)
 					{
-						*ppDefender = pPlot->getBestDefender(NO_PLAYER, getOwnerINLINE(), this, true, false, false, bAssassinate);
+						*ppDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, false, false, bAssassinate);
 					}
 				}
 			}
@@ -6960,11 +6960,11 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 			PlayerTypes eDefender = plot()->controlsAdjacentZOCSource(getTeam());
 			if (eDefender != NO_PLAYER)
 			{
-				const CvPlot* pZoneOfControl = plot()->isInFortControl(true, eDefender, getOwnerINLINE());
-				const CvPlot* pForwardZoneOfControl = pPlot->isInFortControl(true, eDefender, getOwnerINLINE());
+				const CvPlot* pZoneOfControl = plot()->isInFortControl(true, eDefender, getOwner());
+				const CvPlot* pForwardZoneOfControl = pPlot->isInFortControl(true, eDefender, getOwner());
 				if (pZoneOfControl != NULL && pForwardZoneOfControl != NULL)
 				{
-					if (pZoneOfControl == pPlot->isInFortControl(true, eDefender, getOwnerINLINE(), pZoneOfControl) && !canIgnoreZoneofControl())
+					if (pZoneOfControl == pPlot->isInFortControl(true, eDefender, getOwner(), pZoneOfControl) && !canIgnoreZoneofControl())
 					{
 						return false;
 					}
@@ -6972,7 +6972,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 			}
 				
 			//City ZoC	
-			if (plot()->isInCityZoneOfControl(getOwnerINLINE()) && pPlot->isInCityZoneOfControl(getOwnerINLINE()) && !canIgnoreZoneofControl())
+			if (plot()->isInCityZoneOfControl(getOwner()) && pPlot->isInCityZoneOfControl(getOwner()) && !canIgnoreZoneofControl())
 			{
 				return false;
 			}
@@ -6982,7 +6982,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 		//Promotion ZoC
 		if (GC.getGameINLINE().isAnyoneHasUnitZoneOfControl())
 		{
-			if (plot()->isInUnitZoneOfControl(getOwnerINLINE()) && pPlot->isInUnitZoneOfControl(getOwnerINLINE()) && !canIgnoreZoneofControl())
+			if (plot()->isInUnitZoneOfControl(getOwner()) && pPlot->isInUnitZoneOfControl(getOwner()) && !canIgnoreZoneofControl())
 			{
 				return false;
 			}
@@ -7007,7 +7007,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 	{
 		// Python Override
 		if (Cy::call<bool>(PYGameModule, "unitCannotMoveInto", Cy::Args()
-			<< getOwnerINLINE()
+			<< getOwner()
 			<< getID()
 			<< pPlot->getX()
 			<< pPlot->getY()))
@@ -7162,7 +7162,7 @@ void CvUnit::attackForDamage(CvUnit *pDefender, int attackerDamageChange, int de
 			float plotSize = GC.getPLOT_SIZE();
 			NiPoint3 lookAtPoint(plot()->getPoint().x + plotSize / 2 * attackDirection.x, plot()->getPoint().y + plotSize / 2 * attackDirection.y, (plot()->getPoint().z + pPlot->getPoint().z) / 2);
 			attackDirection.Unitize();
-			gDLL->getInterfaceIFace()->lookAt(lookAtPoint, (((getOwnerINLINE() != GC.getGameINLINE().getActivePlayer()) || gDLL->getGraphicOption(GRAPHICOPTION_NO_COMBAT_ZOOM)) ? CAMERALOOKAT_BATTLE : CAMERALOOKAT_BATTLE_ZOOM_IN), attackDirection);
+			gDLL->getInterfaceIFace()->lookAt(lookAtPoint, (((getOwner() != GC.getGameINLINE().getActivePlayer()) || gDLL->getGraphicOption(GRAPHICOPTION_NO_COMBAT_ZOOM)) ? CAMERALOOKAT_BATTLE : CAMERALOOKAT_BATTLE_ZOOM_IN), attackDirection);
 		}
 		else
 		{
@@ -7172,19 +7172,19 @@ void CvUnit::attackForDamage(CvUnit *pDefender, int attackerDamageChange, int de
 			CvWString szMessage;
 			if (BARBARIAN_PLAYER != eAttacker)
 			{
-				szMessage = gDLL->getText("TXT_KEY_MISC_YOU_UNITS_UNDER_ATTACK", GET_PLAYER(getOwnerINLINE()).getNameKey());
+				szMessage = gDLL->getText("TXT_KEY_MISC_YOU_UNITS_UNDER_ATTACK", GET_PLAYER(getOwner()).getNameKey());
 			}
 			else
 			{
 				szMessage = gDLL->getText("TXT_KEY_MISC_YOU_UNITS_UNDER_ATTACK_UNKNOWN");
 			}
 
-			AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szMessage, "AS2D_COMBAT", MESSAGE_TYPE_DISPLAY_ONLY, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true);
+			AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szMessage, "AS2D_COMBAT", MESSAGE_TYPE_DISPLAY_ONLY, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true);
 		}
 	}
 
 	//OutputDebugString("UI interaction - unit attacked 2\n");
-	GET_PLAYER(pDefender->getOwnerINLINE()).setTurnHadUIInteraction(true);
+	GET_PLAYER(pDefender->getOwner()).setTurnHadUIInteraction(true);
 
 	FAssertMsg(plot()->isFighting(), "Current unit instance plot is not fighting as expected");
 	FAssertMsg(pPlot->isFighting(), "pPlot is not fighting as expected");
@@ -7192,14 +7192,14 @@ void CvUnit::attackForDamage(CvUnit *pDefender, int attackerDamageChange, int de
 	//setup battle object
 	CvBattleDefinition kBattle(pPlot, this, pDefender);
 
-	changeDamage(attackerDamageChange, pDefender->getOwnerINLINE());
+	changeDamage(attackerDamageChange, pDefender->getOwner());
 	//TB Combat Mod begin
 	if (pDefender->dealsColdDamage())
 	{
 		changeColdDamage(attackerDamageChange);
 	}
 	//TB Combat Mod end
-	pDefender->changeDamage(defenderDamageChange, getOwnerINLINE());
+	pDefender->changeDamage(defenderDamageChange, getOwner());
 	//TB Combat Mod begin
 	if (dealsColdDamage())
 	{
@@ -7264,7 +7264,7 @@ void CvUnit::move(CvPlot* pPlot, bool bShow, bool bFree)
 		}
 	}
 
-	if (getOwnerINLINE() == GC.getGameINLINE().getActivePlayer())
+	if (getOwner() == GC.getGameINLINE().getActivePlayer())
 	{
 		if (!(pPlot->isOwned()))
 		{
@@ -7307,7 +7307,7 @@ bool CvUnit::jumpToNearestValidPlot(bool bKill)
 
 	//	If the jump is due to being in an incorrect doamin it implies there WILL be an area change, so the relevant nearest
 	//	city cannot possibly be in the same area, hence we need to search all
-	pNearestCity = GC.getMapINLINE().findCity(getX(), getY(), getOwnerINLINE(), NO_TEAM, plot()->isValidDomainForAction(*this));
+	pNearestCity = GC.getMapINLINE().findCity(getX(), getY(), getOwner(), NO_TEAM, plot()->isValidDomainForAction(*this));
 
 	iBestValue = MAX_INT;
 	pBestPlot = NULL;
@@ -7488,7 +7488,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 			return false;
 		}
 		
-		if (GET_PLAYER(getOwnerINLINE()).isModderOption(MODDEROPTION_HIDE_AUTO_EXPLORE))
+		if (GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_AUTO_EXPLORE))
 		{
 			return false;
 		}
@@ -7508,7 +7508,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 /*                                                                                              */
 /* Advanced Automations                                                                         */
 /************************************************************************************************/
-		if (GET_PLAYER(getOwnerINLINE()).isModderOption(MODDEROPTION_HIDE_AUTO_SPREAD))
+		if (GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_AUTO_SPREAD))
 		{
 			return false;
 		}
@@ -7519,13 +7519,13 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 		{
 			return false;
 		}
-		if (GET_PLAYER(getOwnerINLINE()).isModderOption(MODDEROPTION_HIDE_AUTO_PILLAGE))
+		if (GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_AUTO_PILLAGE))
 		{
 			return false;
 		}
 		break;
 	case AUTOMATE_HUNT:
-		if (GET_PLAYER(getOwnerINLINE()).isModderOption(MODDEROPTION_HIDE_AUTO_HUNT))
+		if (GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_AUTO_HUNT))
 		{
 			return false;
 		}
@@ -7535,7 +7535,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 		}
 		break;
 	case AUTOMATE_CITY_DEFENSE:
-		if (GET_PLAYER(getOwnerINLINE()).isModderOption(MODDEROPTION_HIDE_AUTO_DEFENSE))
+		if (GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_AUTO_DEFENSE))
 		{
 			return false;
 		}
@@ -7545,7 +7545,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 		}
 		break;
 	case AUTOMATE_BORDER_PATROL:
-		if (GET_PLAYER(getOwnerINLINE()).isModderOption(MODDEROPTION_HIDE_AUTO_PATROL))
+		if (GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_AUTO_PATROL))
 		{
 			return false;
 		}
@@ -7555,7 +7555,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 		}
 		break;
 	case AUTOMATE_PIRATE:
-		if (GET_PLAYER(getOwnerINLINE()).isModderOption(MODDEROPTION_HIDE_AUTO_PIRATE))
+		if (GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_AUTO_PIRATE))
 		{
 			return false;
 		}
@@ -7573,7 +7573,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 		}
 		break;
 	case AUTOMATE_HURRY:
-		if (GET_PLAYER(getOwnerINLINE()).isModderOption(MODDEROPTION_HIDE_AUTO_CARAVAN))
+		if (GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_AUTO_CARAVAN))
 		{
 			return false;
 		}
@@ -7588,7 +7588,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 		}
 		break;
 	case AUTOMATE_AIRSTRIKE:
-		if (GET_PLAYER(getOwnerINLINE()).isModderOption(MODDEROPTION_HIDE_AUTO_AIR))
+		if (GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_AUTO_AIR))
 		{
 			return false;
 		}
@@ -7607,7 +7607,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 		}
 		break;
 	case AUTOMATE_AIRBOMB:
-		if (GET_PLAYER(getOwnerINLINE()).isModderOption(MODDEROPTION_HIDE_AUTO_AIR))
+		if (GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_AUTO_AIR))
 		{
 			return false;
 		}
@@ -7640,7 +7640,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 		{
 			return false;
 		}
-		if (GET_PLAYER(getOwnerINLINE()).isModderOption(MODDEROPTION_HIDE_AUTO_UPGRADE))
+		if (GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_AUTO_UPGRADE))
 		{
 			return false;
 		}
@@ -7656,7 +7656,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 		}
 		break;
 	case AUTOMATE_PROMOTIONS:
-		if (GET_PLAYER(getOwnerINLINE()).isModderOption(MODDEROPTION_HIDE_AUTO_PROMOTE))
+		if (GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_AUTO_PROMOTE))
 		{
 			return false;
 		}
@@ -7684,7 +7684,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 		{
 			return false;
 		}
-		if (GET_PLAYER(getOwnerINLINE()).isModderOption(MODDEROPTION_HIDE_AUTO_PROTECT))
+		if (GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_AUTO_PROTECT))
 		{
 			return false;
 		}
@@ -7773,7 +7773,7 @@ void CvUnit::scrap()
 	{
 		CvWString szString;
 		getUnitAIString(szString, AI_getUnitAIType());
-		logBBAI("    %S scraps %S (%d) with %S", GET_PLAYER(getOwnerINLINE()).getCivilizationDescription(0), getName(0).GetCString(), getID(), szString.GetCString());
+		logBBAI("    %S scraps %S (%d) with %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getID(), szString.GetCString());
 	}
 
 /************************************************************************************************/
@@ -7781,7 +7781,7 @@ void CvUnit::scrap()
 /*                                                                                              */
 /*    Gold when Disbanding                                                                      */
 /************************************************************************************************/
-	if (GC.getGame().isOption(GAMEOPTION_DOWNSIZING_IS_PROFITABLE) && plot()->getOwnerINLINE() == getOwnerINLINE())
+	if (GC.getGame().isOption(GAMEOPTION_DOWNSIZING_IS_PROFITABLE) && plot()->getOwner() == getOwner())
 	{
 		int iCost = (getUnitInfo().getProductionCost() * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent()) / 100;
 		iCost /= GC.getDefineINT("UNIT_GOLD_DISBAND_DIVISOR");
@@ -7791,7 +7791,7 @@ void CvUnit::scrap()
 			iCost = applySMRank(iCost, getSizeMattersOffsetValue(), GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
 		}
 		iCost = std::max(1, iCost);
-		GET_PLAYER(getOwnerINLINE()).changeGold(iCost);
+		GET_PLAYER(getOwner()).changeGold(iCost);
 	}
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -7812,7 +7812,7 @@ bool CvUnit::canGift(bool bTestVisible, bool bTestTransport)
 		return false;
 	}
 
-	if (pPlot->getOwnerINLINE() == getOwnerINLINE())
+	if (pPlot->getOwner() == getOwner())
 	{
 		return false;
 	}
@@ -7822,7 +7822,7 @@ bool CvUnit::canGift(bool bTestVisible, bool bTestTransport)
 		return false;
 	}
 
-	if (pPlot->isVisibleEnemyUnit(pPlot->getOwnerINLINE()))
+	if (pPlot->isVisibleEnemyUnit(pPlot->getOwner()))
 	{
 		return false;
 	}
@@ -7855,12 +7855,12 @@ bool CvUnit::canGift(bool bTestVisible, bool bTestTransport)
 			return false;
 		}
 
-		if (GET_PLAYER(pPlot->getOwnerINLINE()).isUnitClassMaxedOut(getUnitClassType(), GET_PLAYER(pPlot->getOwnerINLINE()).getUnitClassMaking(getUnitClassType())))
+		if (GET_PLAYER(pPlot->getOwner()).isUnitClassMaxedOut(getUnitClassType(), GET_PLAYER(pPlot->getOwner()).getUnitClassMaking(getUnitClassType())))
 		{
 			return false;
 		}
 
-		if (!(GET_PLAYER(pPlot->getOwnerINLINE()).AI_acceptUnit(this)))
+		if (!(GET_PLAYER(pPlot->getOwner()).AI_acceptUnit(this)))
 		{
 			return false;
 		}
@@ -7892,12 +7892,12 @@ void CvUnit::gift(bool bTestTransport)
 		aCargoUnits[i]->gift(false);
 	}
 
-	FAssertMsg(plot()->getOwnerINLINE() != NO_PLAYER, "plot()->getOwnerINLINE() is not expected to be equal with NO_PLAYER");
-	pGiftUnit = GET_PLAYER(plot()->getOwnerINLINE()).initUnit(getUnitType(), getX(), getY(), AI_getUnitAIType(), NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+	FAssertMsg(plot()->getOwner() != NO_PLAYER, "plot()->getOwner() is not expected to be equal with NO_PLAYER");
+	pGiftUnit = GET_PLAYER(plot()->getOwner()).initUnit(getUnitType(), getX(), getY(), AI_getUnitAIType(), NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
 
 	FAssertMsg(pGiftUnit != NULL, "GiftUnit is not assigned a valid value");
 
-	eOwner = getOwnerINLINE();
+	eOwner = getOwner();
 
 	pGiftUnit->convert(this);
 
@@ -7906,14 +7906,14 @@ void CvUnit::gift(bool bTestTransport)
 /*                                                                                              */
 /* General AI                                                                                   */
 /************************************************************************************************/
-	//GET_PLAYER(pGiftUnit->getOwnerINLINE()).AI_changePeacetimeGrantValue(eOwner, (pGiftUnit->getUnitInfo().getProductionCost() / 5));
+	//GET_PLAYER(pGiftUnit->getOwner()).AI_changePeacetimeGrantValue(eOwner, (pGiftUnit->getUnitInfo().getProductionCost() / 5));
 	if( pGiftUnit->isCombat() )
 	{
-		GET_PLAYER(pGiftUnit->getOwnerINLINE()).AI_changePeacetimeGrantValue(eOwner, (pGiftUnit->getUnitInfo().getProductionCost() * 3 * GC.getGameINLINE().AI_combatValue(pGiftUnit->getUnitType()))/100);
+		GET_PLAYER(pGiftUnit->getOwner()).AI_changePeacetimeGrantValue(eOwner, (pGiftUnit->getUnitInfo().getProductionCost() * 3 * GC.getGameINLINE().AI_combatValue(pGiftUnit->getUnitType()))/100);
 	}
 	else
 	{
-		GET_PLAYER(pGiftUnit->getOwnerINLINE()).AI_changePeacetimeGrantValue(eOwner, (pGiftUnit->getUnitInfo().getProductionCost()));
+		GET_PLAYER(pGiftUnit->getOwner()).AI_changePeacetimeGrantValue(eOwner, (pGiftUnit->getUnitInfo().getProductionCost()));
 	}
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
@@ -7923,11 +7923,11 @@ void CvUnit::gift(bool bTestTransport)
 		MEMORY_TRACK_EXEMPT();
 
 		szBuffer = gDLL->getText("TXT_KEY_MISC_GIFTED_UNIT_TO_YOU", GET_PLAYER(eOwner).getNameKey(), pGiftUnit->getNameKey());
-		AddDLLMessage(pGiftUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNITGIFTED", MESSAGE_TYPE_INFO, pGiftUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), pGiftUnit->getX(), pGiftUnit->getY(), true, true);
+		AddDLLMessage(pGiftUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNITGIFTED", MESSAGE_TYPE_INFO, pGiftUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), pGiftUnit->getX(), pGiftUnit->getY(), true, true);
 	}
 
 	// Python Event
-	CvEventReporter::getInstance().unitGifted(pGiftUnit, getOwnerINLINE(), plot());
+	CvEventReporter::getInstance().unitGifted(pGiftUnit, getOwner(), plot());
 }
 
 
@@ -8171,7 +8171,7 @@ void CvUnit::load()
 
 			if (canLoadOntoUnit(pLoopUnit, pPlot))
 			{
-				if ((iPass == 0) ? (pLoopUnit->getOwnerINLINE() == getOwnerINLINE()) : (pLoopUnit->getTeam() == getTeam()))
+				if ((iPass == 0) ? (pLoopUnit->getOwner() == getOwner()) : (pLoopUnit->getTeam() == getTeam()))
 				{
 					setTransportUnit(pLoopUnit);
 					break;
@@ -9314,7 +9314,7 @@ bool CvUnit::setMADTargetPlot(int iX, int iY)
 	{
 		if(isMADEnabled() && getMADTargetPlot() != NULL)
 		{
-			GET_PLAYER(getOwnerINLINE()).changeMADOutgoing(-1);
+			GET_PLAYER(getOwner()).changeMADOutgoing(-1);
 			GET_PLAYER(getMADTargetPlotOwner()).changeMADIncoming(-1);
 			getMADTargetPlot()->getPlotCity()->changeMADIncoming(-1);
 
@@ -9322,21 +9322,21 @@ bool CvUnit::setMADTargetPlot(int iX, int iY)
 
 		setMADEnabled(true);			// Dale - MAD: turn MAD on for unit
 		setMADTargetPlot(pPlot);		// Dale - MAD: set target
-		setMADTargetPlotOwner(pCity->getOwnerINLINE());
+		setMADTargetPlotOwner(pCity->getOwner());
 		//getGroup()->setActivityType(ACTIVITY_SLEEP);
 		finishMoves();
-		GET_PLAYER(getOwnerINLINE()).changeMADOutgoing(1);
-		GET_PLAYER(pCity->getOwnerINLINE()).changeMADIncoming(1);
+		GET_PLAYER(getOwner()).changeMADOutgoing(1);
+		GET_PLAYER(pCity->getOwner()).changeMADIncoming(1);
 		getMADTargetPlot()->getPlotCity()->changeMADIncoming(1);
 
 		{
 			MEMORY_TRACK_EXEMPT();
 
 			szBuffer = gDLL->getText("TXT_KEY_NUKE_TARGET_SET_ON", getNameKey(), pCity->getNameKey());
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY(), true, true);
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY(), true, true);
 
 			szBuffer = gDLL->getText("Someone has targetted %s1 with a nuke!", pCity->getNameKey());
-			AddDLLMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
+			AddDLLMessage(pCity->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
 		}
 
 		finishMoves();
@@ -9361,7 +9361,7 @@ bool CvUnit::clearMADTargetPlot()
 		MEMORY_TRACK_EXEMPT();
 
 		szBuffer = gDLL->getText("TXT_KEY_NUKE_TARGET_RESET", getNameKey());
-		AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY(), true, true);
+		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY(), true, true);
 	}
 
 	gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
@@ -9398,15 +9398,15 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 	pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
 
 	// < M.A.D. Nukes Start >
-	if(GET_PLAYER(getOwnerINLINE()).isEnabledMAD())
+	if(GET_PLAYER(getOwner()).isEnabledMAD())
 	{
 		if(!isHuman() && !isMADEnabled())
 		{
-			if(GET_PLAYER(getOwnerINLINE()).getMADDeterrent() > 0)
+			if(GET_PLAYER(getOwner()).getMADDeterrent() > 0)
 			{
-				if(GET_PLAYER(getOwnerINLINE()).getMADIncoming() >= GET_PLAYER(getOwnerINLINE()).getMADOutgoing())
+				if(GET_PLAYER(getOwner()).getMADIncoming() >= GET_PLAYER(getOwner()).getMADOutgoing())
 				{
-					GET_PLAYER(getOwnerINLINE()).changeMADDeterrent(-1);
+					GET_PLAYER(getOwner()).changeMADDeterrent(-1);
 					return false;
 				}
 			}
@@ -9417,14 +9417,14 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 	if(isMADEnabled() && !bTrap)
 	{
 		CvCity* pCity = getMADTargetPlot()->getPlotCity();
-		if(pCity == NULL || pCity->getOwnerINLINE() != getMADTargetPlotOwner())
+		if(pCity == NULL || pCity->getOwner() != getMADTargetPlotOwner())
 		{
 			setMADEnabled(false);
 				
 			MEMORY_TRACK_EXEMPT();
 
 			szBuffer = gDLL->getText("TXT_KEY_NUKE_TARGET_FAILED");
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getX(), getY(), true, true);
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getX(), getY(), true, true);
 			return false;
 		}
 	}
@@ -9502,8 +9502,8 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					szBuffer = gDLL->getText("TXT_KEY_MISC_NUKE_INTERCEPTED", GET_PLAYER(getOwnerINLINE()).getNameKey(), getNameKey(), GET_TEAM(eBestTeam).getName().GetCString());
-					AddDLLMessage(((PlayerTypes)iI), (((PlayerTypes)iI) == getOwnerINLINE()), GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_INTERCEPTED", MESSAGE_TYPE_MAJOR_EVENT, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
+					szBuffer = gDLL->getText("TXT_KEY_MISC_NUKE_INTERCEPTED", GET_PLAYER(getOwner()).getNameKey(), getNameKey(), GET_TEAM(eBestTeam).getName().GetCString());
+					AddDLLMessage(((PlayerTypes)iI), (((PlayerTypes)iI) == getOwner()), GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_INTERCEPTED", MESSAGE_TYPE_MAJOR_EVENT, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
 				}
 			}
 
@@ -9520,7 +9520,7 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 	//		1. Ascertain the teams affected.
 	//		2. Ascertain players in the teams affected.
 	//		3. Set the MAD trigger to true for the players affected to the agressor.
-	if (GET_PLAYER(getOwnerINLINE()).isEnabledMAD())
+	if (GET_PLAYER(getOwner()).isEnabledMAD())
 	{
 		for (iI = 0; iI < MAX_TEAMS; iI++)
 		{
@@ -9536,7 +9536,7 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 							{
 								if (GET_PLAYER((PlayerTypes)iJ).getTeam() == ((TeamTypes)iI))
 								{
-									GET_PLAYER((PlayerTypes)iJ).setMADTrigger(getOwnerINLINE(), true);
+									GET_PLAYER((PlayerTypes)iJ).setMADTrigger(getOwner(), true);
 								}
 							}
 						}
@@ -9597,7 +9597,7 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 						{
 							if (GET_PLAYER((PlayerTypes)iJ).getTeam() == ((TeamTypes)iI))
 							{
-								GET_PLAYER((PlayerTypes)iJ).AI_changeMemoryCount(getOwnerINLINE(), MEMORY_NUKED_US, 1);
+								GET_PLAYER((PlayerTypes)iJ).AI_changeMemoryCount(getOwner(), MEMORY_NUKED_US, 1);
 							}
 						}
 					}
@@ -9620,7 +9620,7 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 											{
 												if (GET_PLAYER((PlayerTypes)iK).getTeam() == ((TeamTypes)iI))
 												{
-													GET_PLAYER((PlayerTypes)iK).AI_changeMemoryCount(getOwnerINLINE(), MEMORY_NUKED_FRIEND, 1);
+													GET_PLAYER((PlayerTypes)iK).AI_changeMemoryCount(getOwner(), MEMORY_NUKED_FRIEND, 1);
 												}
 											}
 										}
@@ -9645,13 +9645,13 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 
 			if (!bTrap)
 			{
-				szBuffer = gDLL->getText("TXT_KEY_MISC_NUKE_LAUNCHED", GET_PLAYER(getOwnerINLINE()).getNameKey(), getNameKey());
+				szBuffer = gDLL->getText("TXT_KEY_MISC_NUKE_LAUNCHED", GET_PLAYER(getOwner()).getNameKey(), getNameKey());
 			}
 			else
 			{
-				szBuffer = gDLL->getText("TXT_KEY_MISC_NUKE_TRAP", getNameKey(), GET_PLAYER(getOwnerINLINE()).getNameKey());
+				szBuffer = gDLL->getText("TXT_KEY_MISC_NUKE_TRAP", getNameKey(), GET_PLAYER(getOwner()).getNameKey());
 			}
-			AddDLLMessage(((PlayerTypes)iI), (((PlayerTypes)iI) == getOwnerINLINE()), GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_MAJOR_EVENT, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
+			AddDLLMessage(((PlayerTypes)iI), (((PlayerTypes)iI) == getOwner()), GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_MAJOR_EVENT, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
 		}
 	}
 
@@ -10086,19 +10086,19 @@ bool CvUnit::airBomb(int iX, int iY)
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DESTROYED_IMP", getNameKey(), GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 
 				if (pPlot->isOwned())
 				{
 					if (BARBARIAN_PLAYER != eAttacker)
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_IMP_WAS_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide(), getNameKey(), getVisualCivAdjective(pPlot->getTeam()));
-						AddDLLMessage(pPlot->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
+						AddDLLMessage(pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
 					}
 					else
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_IMP_WAS_DESTROYED_HIDDEN", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide(), getNameKey());
-						AddDLLMessage(pPlot->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
+						AddDLLMessage(pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
 					}
 				}
 
@@ -10109,7 +10109,7 @@ bool CvUnit::airBomb(int iX, int iY)
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_FAIL_DESTROY_IMP", getNameKey(), GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMB_FAILS", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMB_FAILS", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
 			}
 			// RevolutionDCM end - vanilla airbomb behaviour
 		} else
@@ -10154,10 +10154,10 @@ bool CvUnit::airBomb(int iX, int iY)
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_DEFENSES_REDUCED_TO", pCity->getNameKey(), pCity->getDefenseModifier(false), getNameKey());
-				AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
+				AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
 				
 				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_DEFENSES_REDUCED_TO", getNameKey(), pCity->getNameKey(), pCity->getDefenseModifier(false));
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY());
 				// RevolutionDCM end - vanilla airbomb behaviour
 			} else
 			{
@@ -10179,7 +10179,7 @@ bool CvUnit::airBomb(int iX, int iY)
 								{
 									pLoopUnit = ::getUnit(pUnitNode->m_data);
 									pUnitNode = pPlot->nextUnitNode(pUnitNode);
-									if (pLoopUnit->getOwnerINLINE() == getOwnerINLINE())
+									if (pLoopUnit->getOwner() == getOwner())
 									{
 										iCount++;
 									}
@@ -10309,9 +10309,9 @@ bool CvUnit::airBomb(int iX, int iY)
 							MEMORY_TRACK_EXEMPT();
 
 							szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB_POP");
-							AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY(), true, true);
+							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY(), true, true);
 							szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB_POP");
-							AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
+							AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
 						}
 					}
 				}
@@ -10501,11 +10501,11 @@ bool CvUnit::bombard()
 
 			pBombardCity->changeDefenseModifier(-(getBombardRate() * std::max(0, 100 + iBombardModifier)) / 100);
 
-			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENSES_IN_CITY_REDUCED_TO", pBombardCity->getNameKey(), pBombardCity->getDefenseModifier(false), GET_PLAYER(getOwnerINLINE()).getNameKey());
-			AddDLLMessage(pBombardCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pBombardCity->getX(), pBombardCity->getY(), true, true);
+			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENSES_IN_CITY_REDUCED_TO", pBombardCity->getNameKey(), pBombardCity->getDefenseModifier(false), GET_PLAYER(getOwner()).getNameKey());
+			AddDLLMessage(pBombardCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pBombardCity->getX(), pBombardCity->getY(), true, true);
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_REDUCE_CITY_DEFENSES", getNameKey(), pBombardCity->getNameKey(), pBombardCity->getDefenseModifier(false));
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pBombardCity->getX(), pBombardCity->getY());
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pBombardCity->getX(), pBombardCity->getY());
 		}
 		else
 		{
@@ -10514,12 +10514,12 @@ bool CvUnit::bombard()
 			pTargetPlot->changeDefenseDamage(getBombardRate());
 
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENSES_IN_CITY_REDUCED_TO", GC.getImprovementInfo(pTargetPlot->getImprovementType()).getText(),
-				(GC.getImprovementInfo(pTargetPlot->getImprovementType()).getDefenseModifier()-pTargetPlot->getDefenseDamage()), GET_PLAYER(getOwnerINLINE()).getNameKey());
-			AddDLLMessage(pTargetPlot->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pTargetPlot->getX(), pTargetPlot->getY(), true, true);
+				(GC.getImprovementInfo(pTargetPlot->getImprovementType()).getDefenseModifier()-pTargetPlot->getDefenseDamage()), GET_PLAYER(getOwner()).getNameKey());
+			AddDLLMessage(pTargetPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pTargetPlot->getX(), pTargetPlot->getY(), true, true);
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_REDUCE_CITY_DEFENSES", getNameKey(), GC.getImprovementInfo(pTargetPlot->getImprovementType()).getText(), 
 				(GC.getImprovementInfo(pTargetPlot->getImprovementType()).getDefenseModifier()-pTargetPlot->getDefenseDamage()));
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pTargetPlot->getX(), pTargetPlot->getY());
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pTargetPlot->getX(), pTargetPlot->getY());
 		}
 		// Super Forts end
 
@@ -10542,8 +10542,8 @@ bool CvUnit::bombard()
 		if (pPlot->isActiveVisible(false))
 		{
 			// Super Forts begin *bombard*
-			CvUnit *pDefender = pTargetPlot->getBestDefender(NO_PLAYER, getOwnerINLINE(), this, true);
-			//CvUnit *pDefender = pBombardCity->plot()->getBestDefender(NO_PLAYER, getOwnerINLINE(), this, true); - Original Code
+			CvUnit *pDefender = pTargetPlot->getBestDefender(NO_PLAYER, getOwner(), this, true);
+			//CvUnit *pDefender = pBombardCity->plot()->getBestDefender(NO_PLAYER, getOwner(), this, true); - Original Code
 			// Super Forts end
 
 			// Bombard entity mission
@@ -10569,7 +10569,7 @@ bool CvUnit::canPillage(const CvPlot* pPlot) const
 		return false;
 	}
 
-	if (GET_PLAYER(getOwnerINLINE()).isModderOption(MODDEROPTION_NO_FRIENDLY_PILLAGING))
+	if (GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_NO_FRIENDLY_PILLAGING))
 	{
 		if (pPlot->getTeam() == getTeam())
 		{
@@ -10618,7 +10618,7 @@ bool CvUnit::canPillage(const CvPlot* pPlot) const
 	{
 		if (!potentialWarAction(pPlot))
 		{
-			if ((pPlot->getImprovementType() == NO_IMPROVEMENT) || (pPlot->getOwnerINLINE() != getOwnerINLINE()))
+			if ((pPlot->getImprovementType() == NO_IMPROVEMENT) || (pPlot->getOwner() != getOwner()))
 			{
 				return false;
 			}
@@ -10659,7 +10659,7 @@ bool CvUnit::pillage()
 		// we should not be calling this without declaring war first, so do not declare war here
 		if (!isEnemy(pPlot->getTeam(), pPlot))
 		{
-			if ((pPlot->getImprovementType() == NO_IMPROVEMENT) || (pPlot->getOwnerINLINE() != getOwnerINLINE()))
+			if ((pPlot->getImprovementType() == NO_IMPROVEMENT) || (pPlot->getOwner() != getOwner()))
 			{
 				return false;
 			}
@@ -10766,14 +10766,14 @@ bool CvUnit::pillage()
 /* Original Author Moctezuma              End                                                   */
 /************************************************************************************************/
 				iPillageGold += (iPillageGold * getPillageChange()) / 100;
-				GET_PLAYER(getOwnerINLINE()).changeGold(iPillageGold);
+				GET_PLAYER(getOwner()).changeGold(iPillageGold);
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_GOLD_FROM_IMP", iPillageGold, GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 
 				for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
 				{
-					TechTypes ePillageTech = GET_PLAYER(getOwnerINLINE()).getCurrentResearch();
+					TechTypes ePillageTech = GET_PLAYER(getOwner()).getCurrentResearch();
 					CommerceTypes eCommerce = ((CommerceTypes)iI);
 					int iPillageResearch = 0;
 					int iPillageEspionage = 0;
@@ -10782,21 +10782,21 @@ bool CvUnit::pillage()
 					case COMMERCE_GOLD:
 						if (isPillageMarauder())
 						{
-							GET_PLAYER(getOwnerINLINE()).changeGold(iPillageGold);
+							GET_PLAYER(getOwner()).changeGold(iPillageGold);
 							pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
 							szBuffer = gDLL->getText("TXT_KEY_MISC_MARAUDERS_PLUNDERED_IMP", iPillageGold, GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-							AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 							szBuffer = gDLL->getText("TXT_KEY_MISC_IMP_DESTROYED_BY_MARAUDERS", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide(), getNameKey(), getVisualCivAdjective(pPlot->getTeam()));
-							AddDLLMessage(pPlot->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
+							AddDLLMessage(pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
 						}
 						break;
 					case COMMERCE_RESEARCH:
 						if (isPillageResearch())
 						{
 							iPillageResearch += iPillageGold;
-							GET_TEAM(GET_PLAYER(getOwnerINLINE()).getTeam()).changeResearchProgress(ePillageTech, iPillageResearch, getOwnerINLINE());
+							GET_TEAM(GET_PLAYER(getOwner()).getTeam()).changeResearchProgress(ePillageTech, iPillageResearch, getOwner());
 							szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_RESEARCH_FROM_IMP", iPillageResearch, GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-							AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 						}
 						break;
 					case COMMERCE_CULTURE:
@@ -10809,7 +10809,7 @@ bool CvUnit::pillage()
 								szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_CULTURE_FROM_IMP", getNameKey(), getVisualCivAdjective(pPlot->getTeam()));
 								szInfluence.Format(L" Tile influence: +%.1f%%", fInfluenceRatio);
 								szBuffer += szInfluence;
-								AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+								AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 							}
 						}
 						break;
@@ -10819,9 +10819,9 @@ bool CvUnit::pillage()
 							iPillageEspionage += iPillageGold;
 							if (pPlot->getTeam() != NO_TEAM)
 							{
-								GET_TEAM(GET_PLAYER(getOwnerINLINE()).getTeam()).changeEspionagePointsAgainstTeam(pPlot->getTeam(), iPillageEspionage);
+								GET_TEAM(GET_PLAYER(getOwner()).getTeam()).changeEspionagePointsAgainstTeam(pPlot->getTeam(), iPillageEspionage);
 								szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_ESPIONAGE_FROM_IMP", iPillageEspionage, GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-								AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+								AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 							}
 						}
 						break;
@@ -10848,7 +10848,7 @@ bool CvUnit::pillage()
 				if (pPlot->isOwned())
 				{
 					szBuffer = gDLL->getText("TXT_KEY_MISC_IMP_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide(), getNameKey(), getVisualCivAdjective(pPlot->getTeam()));
-					AddDLLMessage(pPlot->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
+					AddDLLMessage(pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
 /************************************************************************************************/
 /* INFLUENCE_DRIVEN_WAR                   04/16/09                                johnysmith    */
 /*                                                                                              */
@@ -10868,7 +10868,7 @@ bool CvUnit::pillage()
 /* Original Author Moctezuma              End                                                   */
 /************************************************************************************************/
 					//	A pillage implies a source of danger even if we can't see it
-					GET_PLAYER(pPlot->getOwnerINLINE()).addPlotDangerSource(pPlot, 100);
+					GET_PLAYER(pPlot->getOwner()).addPlotDangerSource(pPlot, 100);
 				}
 			}
 		}
@@ -10891,12 +10891,12 @@ bool CvUnit::pillage()
 		if (pPlot->isOwned())
 		{
 			//	A pillage implies a source of danger even if we can't see it
-			GET_PLAYER(pPlot->getOwnerINLINE()).addPlotDangerSource(pPlot, 100);
+			GET_PLAYER(pPlot->getOwner()).addPlotDangerSource(pPlot, 100);
 
 			MEMORY_TRACK_EXEMPT();
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_IMP_DESTROYED", GC.getRouteInfo(eTempRoute).getTextKeyWide(), getNameKey(), getVisualCivAdjective(pPlot->getTeam()));
-			AddDLLMessage(pPlot->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
+			AddDLLMessage(pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
 		}
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -10925,7 +10925,7 @@ bool CvUnit::pillage()
 
 	if (eTempImprovement != NO_IMPROVEMENT || eTempRoute != NO_ROUTE)
 	{
-		CvEventReporter::getInstance().unitPillage(this, eTempImprovement, eTempRoute, getOwnerINLINE());
+		CvEventReporter::getInstance().unitPillage(this, eTempImprovement, eTempRoute, getOwner());
 	}
 
 	return true;
@@ -11161,7 +11161,7 @@ bool CvUnit::canSabotage(const CvPlot* pPlot, bool bTestVisible) const
 
 	if (!bTestVisible)
 	{
-		if (GET_PLAYER(getOwnerINLINE()).getEffectiveGold() < sabotageCost(pPlot))
+		if (GET_PLAYER(getOwner()).getEffectiveGold() < sabotageCost(pPlot))
 		{
 			return false;
 		}
@@ -11187,7 +11187,7 @@ bool CvUnit::sabotage()
 
 	bCaught = (GC.getGameINLINE().getSorenRandNum(100, "Spy: Sabotage") > sabotageProb(pPlot));
 
-	GET_PLAYER(getOwnerINLINE()).changeGold(-(sabotageCost(pPlot)));
+	GET_PLAYER(getOwner()).changeGold(-(sabotageCost(pPlot)));
 
 	if (!bCaught)
 	{
@@ -11195,19 +11195,19 @@ bool CvUnit::sabotage()
 
 		finishMoves();
 
-		pNearestCity = GC.getMapINLINE().findCity(pPlot->getX(), pPlot->getY(), pPlot->getOwnerINLINE(), NO_TEAM, false);
+		pNearestCity = GC.getMapINLINE().findCity(pPlot->getX(), pPlot->getY(), pPlot->getOwner(), NO_TEAM, false);
 
 		if (pNearestCity != NULL)
 		{
 			MEMORY_TRACK_EXEMPT();
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_SPY_SABOTAGED", getNameKey(), pNearestCity->getNameKey());
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_SABOTAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_SABOTAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 
 			if (pPlot->isOwned())
 			{
 				szBuffer = gDLL->getText("TXT_KEY_MISC_SABOTAGE_NEAR", pNearestCity->getNameKey());
-				AddDLLMessage(pPlot->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_SABOTAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
+				AddDLLMessage(pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_SABOTAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
 			}
 		}
 
@@ -11222,15 +11222,15 @@ bool CvUnit::sabotage()
 		{
 			MEMORY_TRACK_EXEMPT();
 
-			szBuffer = gDLL->getText("TXT_KEY_MISC_SPY_CAUGHT_AND_KILLED", GET_PLAYER(getOwnerINLINE()).getCivilizationAdjective(), getNameKey());
-			AddDLLMessage(pPlot->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSE", MESSAGE_TYPE_INFO);
+			szBuffer = gDLL->getText("TXT_KEY_MISC_SPY_CAUGHT_AND_KILLED", GET_PLAYER(getOwner()).getCivilizationAdjective(), getNameKey());
+			AddDLLMessage(pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSE", MESSAGE_TYPE_INFO);
 		}
 
 		{
 			MEMORY_TRACK_EXEMPT();
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_SPY_CAUGHT", getNameKey());
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
 		}
 
 		if (plot()->isActiveVisible(false))
@@ -11242,11 +11242,11 @@ bool CvUnit::sabotage()
 		{
 			if (!isEnemy(pPlot->getTeam(), pPlot))
 			{
-				GET_PLAYER(pPlot->getOwnerINLINE()).AI_changeMemoryCount(getOwnerINLINE(), MEMORY_SPY_CAUGHT, 1);
+				GET_PLAYER(pPlot->getOwner()).AI_changeMemoryCount(getOwner(), MEMORY_SPY_CAUGHT, 1);
 			}
 		}
 
-		kill(true, pPlot->getOwnerINLINE(), true);
+		kill(true, pPlot->getOwner(), true);
 	}
 
 	return true;
@@ -11362,7 +11362,7 @@ bool CvUnit::canDestroy(const CvPlot* pPlot, bool bTestVisible) const
 
 	if (!bTestVisible)
 	{
-		if (GET_PLAYER(getOwnerINLINE()).getEffectiveGold() < destroyCost(pPlot))
+		if (GET_PLAYER(getOwner()).getEffectiveGold() < destroyCost(pPlot))
 		{
 			return false;
 		}
@@ -11388,7 +11388,7 @@ bool CvUnit::destroy()
 	pCity = plot()->getPlotCity();
 	FAssertMsg(pCity != NULL, "City is not assigned a valid value");
 
-	GET_PLAYER(getOwnerINLINE()).changeGold(-(destroyCost(plot())));
+	GET_PLAYER(getOwner()).changeGold(-(destroyCost(plot())));
 
 	if (!bCaught)
 	{
@@ -11400,10 +11400,10 @@ bool CvUnit::destroy()
 			MEMORY_TRACK_EXEMPT();
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_SPY_DESTROYED_PRODUCTION", getNameKey(), pCity->getProductionNameKey(), pCity->getNameKey());
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DESTROY", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY());
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DESTROY", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY());
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_PRODUCTION_DESTROYED", pCity->getProductionNameKey(), pCity->getNameKey());
-			AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DESTROY", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
+			AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DESTROY", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
 		}
 
 		if (plot()->isActiveVisible(false))
@@ -11421,28 +11421,28 @@ bool CvUnit::destroy()
 		{
 			MEMORY_TRACK_EXEMPT();
 
-			szBuffer = gDLL->getText("TXT_KEY_MISC_SPY_CAUGHT_AND_KILLED", GET_PLAYER(getOwnerINLINE()).getCivilizationAdjective(), getNameKey());
-			AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSE", MESSAGE_TYPE_INFO);
+			szBuffer = gDLL->getText("TXT_KEY_MISC_SPY_CAUGHT_AND_KILLED", GET_PLAYER(getOwner()).getCivilizationAdjective(), getNameKey());
+			AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSE", MESSAGE_TYPE_INFO);
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_SPY_CAUGHT", getNameKey());
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
 
 			if (plot()->isActiveVisible(false))
 			{
 				NotifyEntity(MISSION_SURRENDER);
 			}
 
-			kill(true, pCity->getOwnerINLINE(), true);
+			kill(true, pCity->getOwner(), true);
 		}
 		else
 		{
 			MEMORY_TRACK_EXEMPT();
 
-			szBuffer = gDLL->getText("TXT_KEY_MISC_CRIMINAL_CAUGHT", GET_PLAYER(getOwnerINLINE()).getCivilizationAdjective(), getNameKey());
-			AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSE", MESSAGE_TYPE_INFO);
+			szBuffer = gDLL->getText("TXT_KEY_MISC_CRIMINAL_CAUGHT", GET_PLAYER(getOwner()).getCivilizationAdjective(), getNameKey());
+			AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSE", MESSAGE_TYPE_INFO);
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_CRIMINAL_CAUGHT", getNameKey());
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
 
 			makeWanted(pCity);
 		}
@@ -11450,7 +11450,7 @@ bool CvUnit::destroy()
 
 		if (!isEnemy(pCity->getTeam()))
 		{
-			GET_PLAYER(pCity->getOwnerINLINE()).AI_changeMemoryCount(getOwnerINLINE(), MEMORY_SPY_CAUGHT, 1);
+			GET_PLAYER(pCity->getOwner()).AI_changeMemoryCount(getOwner(), MEMORY_SPY_CAUGHT, 1);
 		}
 	}
 
@@ -11550,7 +11550,7 @@ bool CvUnit::canStealPlans(const CvPlot* pPlot, bool bTestVisible) const
 
 	if (!bTestVisible)
 	{
-		if (GET_PLAYER(getOwnerINLINE()).getEffectiveGold() < stealPlansCost(pPlot))
+		if (GET_PLAYER(getOwner()).getEffectiveGold() < stealPlansCost(pPlot))
 		{
 			return false;
 		}
@@ -11576,7 +11576,7 @@ bool CvUnit::stealPlans()
 	pCity = plot()->getPlotCity();
 	FAssertMsg(pCity != NULL, "City is not assigned a valid value");
 
-	GET_PLAYER(getOwnerINLINE()).changeGold(-(stealPlansCost(plot())));
+	GET_PLAYER(getOwner()).changeGold(-(stealPlansCost(plot())));
 
 	if (!bCaught)
 	{
@@ -11588,10 +11588,10 @@ bool CvUnit::stealPlans()
 			MEMORY_TRACK_EXEMPT();
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_SPY_STOLE_PLANS", getNameKey(), pCity->getNameKey());
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_STEALPLANS", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY());
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_STEALPLANS", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY());
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_PLANS_STOLEN", pCity->getNameKey());
-			AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_STEALPLANS", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
+			AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_STEALPLANS", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
 		}
 
 		if (plot()->isActiveVisible(false))
@@ -11610,35 +11610,35 @@ bool CvUnit::stealPlans()
 		{
 			MEMORY_TRACK_EXEMPT();
 
-			szBuffer = gDLL->getText("TXT_KEY_MISC_SPY_CAUGHT_AND_KILLED", GET_PLAYER(getOwnerINLINE()).getCivilizationAdjective(), getNameKey());
-			AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSE", MESSAGE_TYPE_INFO);
+			szBuffer = gDLL->getText("TXT_KEY_MISC_SPY_CAUGHT_AND_KILLED", GET_PLAYER(getOwner()).getCivilizationAdjective(), getNameKey());
+			AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSE", MESSAGE_TYPE_INFO);
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_SPY_CAUGHT", getNameKey());
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
 
 			if (plot()->isActiveVisible(false))
 			{
 				NotifyEntity(MISSION_SURRENDER);
 			}
 
-			kill(true, pCity->getOwnerINLINE(), true);
+			kill(true, pCity->getOwner(), true);
 		}
 		else
 		{
 			MEMORY_TRACK_EXEMPT();
 
-			szBuffer = gDLL->getText("TXT_KEY_MISC_CRIMINAL_CAUGHT", GET_PLAYER(getOwnerINLINE()).getCivilizationAdjective(), getNameKey());
-			AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSE", MESSAGE_TYPE_INFO);
+			szBuffer = gDLL->getText("TXT_KEY_MISC_CRIMINAL_CAUGHT", GET_PLAYER(getOwner()).getCivilizationAdjective(), getNameKey());
+			AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSE", MESSAGE_TYPE_INFO);
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_CRIMINAL_CAUGHT", getNameKey());
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
 
 			makeWanted(pCity);
 		}
 
 		if (!isEnemy(pCity->getTeam()))
 		{
-			GET_PLAYER(pCity->getOwnerINLINE()).AI_changeMemoryCount(getOwnerINLINE(), MEMORY_SPY_CAUGHT, 1);
+			GET_PLAYER(pCity->getOwner()).AI_changeMemoryCount(getOwner(), MEMORY_SPY_CAUGHT, 1);
 		}
 	}
 
@@ -11653,7 +11653,7 @@ bool CvUnit::canFound(const CvPlot* pPlot, bool bTestVisible) const
 		return false;
 	}
 
-	if (!(GET_PLAYER(getOwnerINLINE()).canFound(pPlot->getX(), pPlot->getY(), bTestVisible)))
+	if (!(GET_PLAYER(getOwner()).canFound(pPlot->getX(), pPlot->getY(), bTestVisible)))
 	{
 		return false;
 	}
@@ -11676,13 +11676,13 @@ bool CvUnit::found()
 		return false;
 	}
 	
-	if (GC.getGameINLINE().getActivePlayer() == getOwnerINLINE())
+	if (GC.getGameINLINE().getActivePlayer() == getOwner())
 	{
 		GC.getCurrentViewport()->bringIntoView(getX(), getY());
 		//gDLL->getInterfaceIFace()->lookAt(plot()->getPoint(), CAMERALOOKAT_NORMAL);
 	}
 
-	GET_PLAYER(getOwnerINLINE()).found(getX(), getY(), this);
+	GET_PLAYER(getOwner()).found(getX(), getY(), this);
 
 	if (pPlot->isActiveVisible(false))
 	{
@@ -11690,7 +11690,7 @@ bool CvUnit::found()
 	}
 
 	//	For the AI we need to run the turn for the new city to get production set
-	if ( !GET_PLAYER(getOwnerINLINE()).isHuman() )
+	if ( !GET_PLAYER(getOwner()).isHuman() )
 	{
 		CvCity* pCity = pPlot->getPlotCity();
 
@@ -11722,7 +11722,7 @@ bool CvUnit::canSpread(const CvPlot* pPlot, ReligionTypes eReligion, bool bTestV
 	if (GC.getUSE_USE_CANNOT_SPREAD_RELIGION_CALLBACK())
 	{
 		CyArgsList argsList;
-		argsList.add(getOwnerINLINE());
+		argsList.add(getOwner());
 		argsList.add(getID());
 		argsList.add((int) eReligion);
 		argsList.add(pPlot->getX());
@@ -11771,9 +11771,9 @@ bool CvUnit::canSpread(const CvPlot* pPlot, ReligionTypes eReligion, bool bTestV
 	{
 		if (pCity->getTeam() != getTeam())
 		{
-			if (GET_PLAYER(pCity->getOwnerINLINE()).isNoNonStateReligionSpread())
+			if (GET_PLAYER(pCity->getOwner()).isNoNonStateReligionSpread())
 			{
-				if (eReligion != GET_PLAYER(pCity->getOwnerINLINE()).getStateReligion())
+				if (eReligion != GET_PLAYER(pCity->getOwner()).getStateReligion())
 				{
 					return false;
 				}
@@ -11789,7 +11789,7 @@ bool CvUnit::canSpread(const CvPlot* pPlot, ReligionTypes eReligion, bool bTestV
 	if (GC.getUSE_USE_CANNOT_SPREAD_RELIGION_CALLBACK())
 	{
 		if (Cy::call<bool>(PYGameModule, "cannotSpreadReligion", Cy::Args()
-			<< getOwnerINLINE()
+			<< getOwner()
 			<< getID()
 			<< (int)eReligion
 			<< pPlot->getX()
@@ -11842,7 +11842,7 @@ bool CvUnit::canSpread(const CvPlot* pPlot, ReligionTypes eReligion, bool bTestV
 
 		if(GC.getGameINLINE().isOption(GAMEOPTION_LIMITED_RELIGIONS))
 		{
-			if(GET_PLAYER(getOwnerINLINE()).hasHolyCity())
+			if(GET_PLAYER(getOwner()).hasHolyCity())
 			{
 				isable = false;
 			}
@@ -11880,15 +11880,15 @@ bool CvUnit::spread(ReligionTypes eReligion)
 	{
 		iSpreadProb = m_pUnitInfo->getReligionSpreads(eReligion);
 //Team Project (6)
-		if (GET_PLAYER(getOwnerINLINE()).getID() != NO_PLAYER)
+		if (GET_PLAYER(getOwner()).getID() != NO_PLAYER)
 		{
-			if ((ReligionTypes)GET_PLAYER(getOwnerINLINE()).getStateReligion() == eReligion)
+			if ((ReligionTypes)GET_PLAYER(getOwner()).getStateReligion() == eReligion)
 			{
-				iSpreadProb += GET_PLAYER(getOwnerINLINE()).getExtraStateReligionSpreadModifier();
+				iSpreadProb += GET_PLAYER(getOwner()).getExtraStateReligionSpreadModifier();
 			}
-			if ((ReligionTypes)GET_PLAYER(getOwnerINLINE()).getStateReligion() != eReligion)
+			if ((ReligionTypes)GET_PLAYER(getOwner()).getStateReligion() != eReligion)
 			{
-				iSpreadProb += GET_PLAYER(getOwnerINLINE()).getExtraNonStateReligionSpreadModifier();
+				iSpreadProb += GET_PLAYER(getOwner()).getExtraNonStateReligionSpreadModifier();
 			}
 		}
 
@@ -11928,7 +11928,7 @@ bool CvUnit::spread(ReligionTypes eReligion)
 			MEMORY_TRACK_EXEMPT();
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_RELIGION_FAILED_TO_SPREAD", getNameKey(), GC.getReligionInfo(eReligion).getChar(), pCity->getNameKey());
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NOSPREAD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY());
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NOSPREAD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY());
 			bSuccess = false;
 		}
 
@@ -11954,7 +11954,7 @@ bool CvUnit::canSpreadCorporation(const CvPlot* pPlot, CorporationTypes eCorpora
 		return false;
 	}
 
-	if (!GET_PLAYER(getOwnerINLINE()).isActiveCorporation(eCorporation))
+	if (!GET_PLAYER(getOwner()).isActiveCorporation(eCorporation))
 	{
 		return false;
 	}
@@ -11982,7 +11982,7 @@ bool CvUnit::canSpreadCorporation(const CvPlot* pPlot, CorporationTypes eCorpora
 /************************************************************************************************/
 	if (GC.getCorporationInfo(eCorporation).getObsoleteTech() != NO_TECH)
 	{
-		if (GET_TEAM(GET_PLAYER(pCity->getOwnerINLINE()).getTeam()).isHasTech((TechTypes)GC.getCorporationInfo(eCorporation).getObsoleteTech()))
+		if (GET_TEAM(GET_PLAYER(pCity->getOwner()).getTeam()).isHasTech((TechTypes)GC.getCorporationInfo(eCorporation).getObsoleteTech()))
 		{
 			return false;
 		}
@@ -12004,7 +12004,7 @@ bool CvUnit::canSpreadCorporation(const CvPlot* pPlot, CorporationTypes eCorpora
 		{
 			if (GC.getCorporationInfo(eCorporation).getPrereqBuildingClass(iI) > 0)
 			{
-				if (GET_PLAYER(pCity->getOwnerINLINE()).getBuildingClassCount((BuildingClassTypes)iI) < GC.getCorporationInfo(eCorporation).getPrereqBuildingClass(iI))
+				if (GET_PLAYER(pCity->getOwner()).getBuildingClassCount((BuildingClassTypes)iI) < GC.getCorporationInfo(eCorporation).getPrereqBuildingClass(iI))
 				{
 					return false;
 				}
@@ -12022,7 +12022,7 @@ bool CvUnit::canSpreadCorporation(const CvPlot* pPlot, CorporationTypes eCorpora
 
 	if (!bTestVisible)
 	{
-		if (!GET_PLAYER(pCity->getOwnerINLINE()).isActiveCorporation(eCorporation))
+		if (!GET_PLAYER(pCity->getOwner()).isActiveCorporation(eCorporation))
 		{
 			return false;
 		}
@@ -12065,7 +12065,7 @@ bool CvUnit::canSpreadCorporation(const CvPlot* pPlot, CorporationTypes eCorpora
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 
-		if (GET_PLAYER(getOwnerINLINE()).getEffectiveGold() < spreadCorporationCost(eCorporation, pCity))
+		if (GET_PLAYER(getOwner()).getEffectiveGold() < spreadCorporationCost(eCorporation, pCity))
 		{
 			return false;
 		}
@@ -12076,7 +12076,7 @@ bool CvUnit::canSpreadCorporation(const CvPlot* pPlot, CorporationTypes eCorpora
 
 int CvUnit::spreadCorporationCost(CorporationTypes eCorporation, CvCity* pCity) const
 {
-	int iCost = std::max(0, GC.getCorporationInfo(eCorporation).getSpreadCost() * (100 + GET_PLAYER(getOwnerINLINE()).calculateInflationRate()));
+	int iCost = std::max(0, GC.getCorporationInfo(eCorporation).getSpreadCost() * (100 + GET_PLAYER(getOwner()).calculateInflationRate()));
 	iCost /= 100;
 
 	if (NULL != pCity)
@@ -12119,7 +12119,7 @@ bool CvUnit::spreadCorporation(CorporationTypes eCorporation)
 
 	if (NULL != pCity)
 	{
-		GET_PLAYER(getOwnerINLINE()).changeGold(-spreadCorporationCost(eCorporation, pCity));
+		GET_PLAYER(getOwner()).changeGold(-spreadCorporationCost(eCorporation, pCity));
 
 		iSpreadProb = m_pUnitInfo->getCorporationSpreads(eCorporation);
 
@@ -12139,7 +12139,7 @@ bool CvUnit::spreadCorporation(CorporationTypes eCorporation)
 			MEMORY_TRACK_EXEMPT();
 
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CORPORATION_FAILED_TO_SPREAD", getNameKey(), GC.getCorporationInfo(eCorporation).getChar(), pCity->getNameKey());
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NOSPREAD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY());
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NOSPREAD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY());
 		}
 	}
 
@@ -12328,7 +12328,7 @@ bool CvUnit::construct(BuildingTypes eBuilding)
 		NotifyEntity(MISSION_CONSTRUCT);
 	}
 
-	GET_PLAYER(getOwnerINLINE()).NoteUnitConstructed(eBuilding);
+	GET_PLAYER(getOwner()).NoteUnitConstructed(eBuilding);
 
 	getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
 	kill(true, NO_PLAYER, true);
@@ -12339,7 +12339,7 @@ bool CvUnit::construct(BuildingTypes eBuilding)
 
 TechTypes CvUnit::getDiscoveryTech() const
 {
-	return ::getDiscoveryTech(getUnitType(), getOwnerINLINE());
+	return ::getDiscoveryTech(getUnitType(), getOwner());
 }
 
 
@@ -12396,7 +12396,7 @@ bool CvUnit::discover()
 	TechTypes eDiscoveryTech = getDiscoveryTech();
 	FAssertMsg(eDiscoveryTech != NO_TECH, "DiscoveryTech is not assigned a valid value");
 
-	GET_TEAM(getTeam()).changeResearchProgress(eDiscoveryTech, getDiscoverResearch(eDiscoveryTech), getOwnerINLINE());
+	GET_TEAM(getTeam()).changeResearchProgress(eDiscoveryTech, getDiscoverResearch(eDiscoveryTech), getOwner());
 
 	if (plot()->isActiveVisible(false))
 	{
@@ -12527,7 +12527,7 @@ int CvUnit::getTradeGold(const CvPlot* pPlot) const
 	int iGold;
 
 	pCity = pPlot->getPlotCity();
-	pCapitalCity = GET_PLAYER(pPlot->getOwnerINLINE()).getCapitalCity();
+	pCapitalCity = GET_PLAYER(pPlot->getOwner()).getCapitalCity();
 	CvCity* pOriginCity = getCityOfOrigin();
 
 	if (pCity == NULL)
@@ -12638,7 +12638,7 @@ bool CvUnit::trade()
 		else
 		{
 			changeExperience100(10);
-			GET_PLAYER(getOwnerINLINE()).changeGold(getTradeGold(plot()));
+			GET_PLAYER(getOwner()).changeGold(getTradeGold(plot()));
 			finishMoves();
 			if (pCapital != NULL)
 			{
@@ -12648,7 +12648,7 @@ bool CvUnit::trade()
 		}
 	}
 
-	GET_PLAYER(getOwnerINLINE()).changeGold(getTradeGold(plot()));
+	GET_PLAYER(getOwner()).changeGold(getTradeGold(plot()));
 	//if is Great Person then kill
 
 	//otherwise send back to capital
@@ -12693,7 +12693,7 @@ bool CvUnit::canGreatWork(const CvPlot* pPlot) const
 		return false;
 	}
 
-	if (pCity->getOwnerINLINE() != getOwnerINLINE())
+	if (pCity->getOwner() != getOwner())
 	{
 		return false;
 	}
@@ -12726,12 +12726,12 @@ bool CvUnit::greatWork()
 
 		for (int i = 0; i < iNumTurnsApplied; ++i)
 		{
-			pCity->changeCultureTimes100(getOwnerINLINE(), iCultureToAdd / iNumTurnsApplied, true, true);
+			pCity->changeCultureTimes100(getOwner(), iCultureToAdd / iNumTurnsApplied, true, true);
 		}
 
 		if (iNumTurnsApplied > 0)
 		{
-			pCity->changeCultureTimes100(getOwnerINLINE(), iCultureToAdd % iNumTurnsApplied, false, true);
+			pCity->changeCultureTimes100(getOwner(), iCultureToAdd % iNumTurnsApplied, false, true);
 		}
 	}
 
@@ -12875,7 +12875,7 @@ bool CvUnit::infiltrate()
 		if (criminalSuccessCheck())
 		{
 			changeExperience100(100);
-			GET_TEAM(getTeam()).changeEspionagePointsAgainstTeam(GET_PLAYER(plot()->getOwnerINLINE()).getTeam(), iPoints);
+			GET_TEAM(getTeam()).changeEspionagePointsAgainstTeam(GET_PLAYER(plot()->getOwner()).getTeam(), iPoints);
 			GET_TEAM(getTeam()).changeEspionagePointsEver(iPoints);
 			if (pCapital != NULL)
 			{
@@ -12895,7 +12895,7 @@ bool CvUnit::infiltrate()
 	}
 	else
 	{
-		GET_TEAM(getTeam()).changeEspionagePointsAgainstTeam(GET_PLAYER(plot()->getOwnerINLINE()).getTeam(), iPoints);
+		GET_TEAM(getTeam()).changeEspionagePointsAgainstTeam(GET_PLAYER(plot()->getOwner()).getTeam(), iPoints);
 		GET_TEAM(getTeam()).changeEspionagePointsEver(iPoints);
 		kill(true, NO_PLAYER, true);
 	}
@@ -12921,7 +12921,7 @@ bool CvUnit::canEspionage(const CvPlot* pPlot, bool bTestVisible) const
 		return false;
 	}
 
-	PlayerTypes ePlotOwner = pPlot->getOwnerINLINE();
+	PlayerTypes ePlotOwner = pPlot->getOwner();
 	if (NO_PLAYER == ePlotOwner)
 	{
 		return false;
@@ -13021,7 +13021,7 @@ bool CvUnit::canAssassin(const CvPlot* pPlot, bool bTestVisible) const
 		return false;
 	} 
 
-	CvPlayer& kTarget = GET_PLAYER(pCity->getOwnerINLINE());
+	CvPlayer& kTarget = GET_PLAYER(pCity->getOwner());
 
 	if (kTarget.getTeam() == getTeam())
 	{
@@ -13071,7 +13071,7 @@ bool CvUnit::canBribe(const CvPlot* pPlot, bool bTestVisible) const
 		return false;
 	}
 
-	if(pPlot->plotCount(PUF_isOtherTeam, getOwnerINLINE(), -1, NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, getOwnerINLINE()) < 1)
+	if(pPlot->plotCount(PUF_isOtherTeam, getOwner(), -1, NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, getOwner()) < 1)
 	{
 		return false;
 	}	
@@ -13082,8 +13082,8 @@ bool CvUnit::canBribe(const CvPlot* pPlot, bool bTestVisible) const
 	}
 
 	CvUnit* pTargetUnit;
-	pTargetUnit = pPlot->plotCheck(PUF_isOtherTeam, getOwnerINLINE(), -1, NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, getOwnerINLINE());
-	CvPlayer& kTarget = GET_PLAYER(pTargetUnit->getOwnerINLINE());
+	pTargetUnit = pPlot->plotCheck(PUF_isOtherTeam, getOwner(), -1, NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, getOwner());
+	CvPlayer& kTarget = GET_PLAYER(pTargetUnit->getOwner());
 
 	if (kTarget.getTeam() == getTeam())
 	{
@@ -13132,25 +13132,25 @@ bool CvUnit::espionage(EspionageMissionTypes eMission, int iData)
 		return false;
 	}
 
-	PlayerTypes eTargetPlayer = plot()->getOwnerINLINE();
+	PlayerTypes eTargetPlayer = plot()->getOwner();
 
 	if (NO_ESPIONAGEMISSION == eMission)
 	{
-		FAssert(GET_PLAYER(getOwnerINLINE()).isHuman());
+		FAssert(GET_PLAYER(getOwner()).isHuman());
 		CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_DOESPIONAGE);
 		if (NULL != pInfo)
 		{
-			gDLL->getInterfaceIFace()->addPopup(pInfo, getOwnerINLINE(), true);
+			gDLL->getInterfaceIFace()->addPopup(pInfo, getOwner(), true);
 		}
 	}
 	else if (GC.getEspionageMissionInfo(eMission).isTwoPhases() && -1 == iData)
 	{
-		FAssert(GET_PLAYER(getOwnerINLINE()).isHuman());
+		FAssert(GET_PLAYER(getOwner()).isHuman());
 		CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_DOESPIONAGE_TARGET);
 		if (NULL != pInfo)
 		{
 			pInfo->setData1(eMission);
-			gDLL->getInterfaceIFace()->addPopup(pInfo, getOwnerINLINE(), true);
+			gDLL->getInterfaceIFace()->addPopup(pInfo, getOwner(), true);
 		}
 	}
 	else
@@ -13167,7 +13167,7 @@ bool CvUnit::espionage(EspionageMissionTypes eMission, int iData)
 /************************************************************************************************/
 		bool bCaught = testSpyIntercepted(eTargetPlayer, GC.getDefineINT("ESPIONAGE_SPY_MISSION_ESCAPE_MOD"));
 
-		if (GET_PLAYER(getOwnerINLINE()).doEspionageMission(eMission, eTargetPlayer, plot(), iData, this, (bCaught && !isAlwaysHeal())))
+		if (GET_PLAYER(getOwner()).doEspionageMission(eMission, eTargetPlayer, plot(), iData, this, (bCaught && !isAlwaysHeal())))
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
@@ -13187,7 +13187,7 @@ bool CvUnit::espionage(EspionageMissionTypes eMission, int iData)
 					setMadeAttack(true);
 					finishMoves();
 
-					CvCity* pCapital = GET_PLAYER(getOwnerINLINE()).getCapitalCity();
+					CvCity* pCapital = GET_PLAYER(getOwner()).getCapitalCity();
 	/************************************************************************************************/
 	/* Afforess	                  Start		 07/12/10                                               */
 	/*                                                                                              */
@@ -13216,7 +13216,7 @@ bool CvUnit::espionage(EspionageMissionTypes eMission, int iData)
 						MEMORY_TRACK_EXEMPT();
 
 						CvWString szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_SPY_SUCCESS", getNameKey(), pCapital->getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), pCapital->getX(), pCapital->getY(), true, true);
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), pCapital->getX(), pCapital->getY(), true, true);
 					}
 					//TSHEEP Give spies xp for successful missions
 					awardSpyExperience(GET_PLAYER(eTargetPlayer).getTeam(),GC.getEspionageMissionInfo(eMission).getDifficultyMod());
@@ -13275,8 +13275,8 @@ bool CvUnit::testSpyIntercepted(PlayerTypes eTargetPlayer, int iModifier)
 	{
 		MEMORY_TRACK_EXEMPT();
 
-		szBuffer = gDLL->getText(szFormatReveal.GetCString(), GET_PLAYER(getOwnerINLINE()).getCivilizationAdjectiveKey(), getNameKey(), kTargetPlayer.getCivilizationAdjectiveKey(), szCityName.GetCString());
-		AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
+		szBuffer = gDLL->getText(szFormatReveal.GetCString(), GET_PLAYER(getOwner()).getCivilizationAdjectiveKey(), getNameKey(), kTargetPlayer.getCivilizationAdjectiveKey(), szCityName.GetCString());
+		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
 	}
 
 	//TSHEEP Enable Loyalty Promotion
@@ -13285,7 +13285,7 @@ bool CvUnit::testSpyIntercepted(PlayerTypes eTargetPlayer, int iModifier)
 	{
 		if (!isEnemy(kTargetPlayer.getTeam()))
 		{
-			GET_PLAYER(eTargetPlayer).AI_changeMemoryCount(getOwnerINLINE(), MEMORY_SPY_CAUGHT, 1);
+			GET_PLAYER(eTargetPlayer).AI_changeMemoryCount(getOwner(), MEMORY_SPY_CAUGHT, 1);
 		}
 
 		MEMORY_TRACK_EXEMPT();
@@ -13328,7 +13328,7 @@ bool CvUnit::testSpyIntercepted(PlayerTypes eTargetPlayer, int iModifier)
 		setMadeAttack(true);
 		finishMoves();
 
-		CvCity* pCapital = GET_PLAYER(getOwnerINLINE()).getCapitalCity();
+		CvCity* pCapital = GET_PLAYER(getOwner()).getCapitalCity();
 		if (NULL != pCapital)
 		{
 			//GC.getGameINLINE().logOOSSpecial(21, getID(), pCapital->getX(), pCapital->getY());
@@ -13340,8 +13340,8 @@ bool CvUnit::testSpyIntercepted(PlayerTypes eTargetPlayer, int iModifier)
 
 			szFormatReveal = "TXT_KEY_SPY_ESCAPED_REVEAL";
 			szFormatNoReveal = "TXT_KEY_SPY_ESCAPED";
-			szBuffer = gDLL->getText(szFormatReveal.GetCString(), GET_PLAYER(getOwnerINLINE()).getCivilizationAdjectiveKey(), getNameKey(), kTargetPlayer.getCivilizationAdjectiveKey(), szCityName.GetCString());
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY(), true, true);
+			szBuffer = gDLL->getText(szFormatReveal.GetCString(), GET_PLAYER(getOwner()).getCivilizationAdjectiveKey(), getNameKey(), kTargetPlayer.getCivilizationAdjectiveKey(), szCityName.GetCString());
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY(), true, true);
 			szBuffer = gDLL->getText(szFormatNoReveal.GetCString(), getNameKey(), kTargetPlayer.getCivilizationAdjectiveKey(), szCityName.GetCString());
 			AddDLLMessage(eTargetPlayer, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
 		}
@@ -13437,7 +13437,7 @@ bool CvUnit::canGoldenAge(const CvPlot* pPlot, bool bTestVisible) const
 
 	if (!bTestVisible)
 	{
-		if (GET_PLAYER(getOwnerINLINE()).unitsRequiredForGoldenAge() > GET_PLAYER(getOwnerINLINE()).unitsGoldenAgeReady())
+		if (GET_PLAYER(getOwner()).unitsRequiredForGoldenAge() > GET_PLAYER(getOwner()).unitsGoldenAgeReady())
 		{
 			return false;
 		}
@@ -13454,10 +13454,10 @@ bool CvUnit::goldenAge()
 		return false;
 	}
 
-	GET_PLAYER(getOwnerINLINE()).killGoldenAgeUnits(this);
+	GET_PLAYER(getOwner()).killGoldenAgeUnits(this);
 
-	GET_PLAYER(getOwnerINLINE()).changeGoldenAgeTurns(GET_PLAYER(getOwnerINLINE()).getGoldenAgeLength());
-	GET_PLAYER(getOwnerINLINE()).changeNumUnitGoldenAges(1);
+	GET_PLAYER(getOwner()).changeGoldenAgeTurns(GET_PLAYER(getOwner()).getGoldenAgeLength());
+	GET_PLAYER(getOwner()).changeNumUnitGoldenAges(1);
 
 	if (plot()->isActiveVisible(false))
 	{
@@ -13485,7 +13485,7 @@ bool CvUnit::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestVisible)
 /************************************************************************************************/
 	if (getGroup()->isAutomated())
 	{
-		if (!GET_PLAYER(getOwnerINLINE()).isAutomatedCanBuild(eBuild))
+		if (!GET_PLAYER(getOwner()).isAutomatedCanBuild(eBuild))
 		{
 			return false;
 		}
@@ -13501,7 +13501,7 @@ bool CvUnit::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestVisible)
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 
-	if (!(GET_PLAYER(getOwnerINLINE()).canBuild(pPlot, eBuild, false, bTestVisible)))
+	if (!(GET_PLAYER(getOwner()).canBuild(pPlot, eBuild, false, bTestVisible)))
 	{
 		return false;
 	}
@@ -13538,7 +13538,7 @@ bool CvUnit::build(BuildTypes eBuild)
 	//			MEMORY_TRACK_EXEMPT();
 
 	//			szBuffer = gDLL->getText("TXT_KEY_MISC_UNIT_CANT_FINISH_BUILD", getNameKey(), GC.getBuildInfo(eBuild).getTextKeyWide());
-	//			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), plot()->getX(), plot()->getY());
+	//			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW"), plot()->getX(), plot()->getY());
 	//		}
 	//		return false;
 	//	}
@@ -13548,13 +13548,13 @@ bool CvUnit::build(BuildTypes eBuild)
 	// that function will notify the entity to stop building.
 	NotifyEntity((MissionTypes)GC.getBuildInfo(eBuild).getMissionType());
 
-	GET_PLAYER(getOwnerINLINE()).changeGold(-(GET_PLAYER(getOwnerINLINE()).getBuildCost(plot(), eBuild)));
+	GET_PLAYER(getOwner()).changeGold(-(GET_PLAYER(getOwner()).getBuildCost(plot(), eBuild)));
 /************************************************************************************************/
 /* Afforess	                  Start		 02/15/10                                               */
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	bFinished = plot()->changeBuildProgress(eBuild, workRate(false), getOwnerINLINE());
+	bFinished = plot()->changeBuildProgress(eBuild, workRate(false), getOwner());
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
@@ -13570,7 +13570,7 @@ bool CvUnit::build(BuildTypes eBuild)
 			{
 				if(plot()->getOwner() == NO_PLAYER)
 				{
-					plot()->setOwner(getOwnerINLINE(),true,true);
+					plot()->setOwner(getOwner(),true,true);
 				}
 
 				//	Special case for plot-grabbing improvements - to get the AI to behave sensibly
@@ -13622,7 +13622,7 @@ bool CvUnit::canPromote(PromotionTypes ePromotion, int iLeaderUnitId) const
 		}
 
 		// The command is always possible if it's coming from a Warlord unit that gives just experience points
-		CvUnit* pWarlord = GET_PLAYER(getOwnerINLINE()).getUnit(iLeaderUnitId);
+		CvUnit* pWarlord = GET_PLAYER(getOwner()).getUnit(iLeaderUnitId);
 		if (pWarlord && 
 			NO_UNIT != pWarlord->getUnitType() && 
 			pWarlord->getUnitInfo().getLeaderExperience() > 0 && 
@@ -13659,7 +13659,7 @@ bool CvUnit::canPromote(PromotionTypes ePromotion, int iLeaderUnitId) const
 	{
 		if (iLeaderUnitId >= 0)
 		{
-			CvUnit* pWarlord = GET_PLAYER(getOwnerINLINE()).getUnit(iLeaderUnitId);
+			CvUnit* pWarlord = GET_PLAYER(getOwner()).getUnit(iLeaderUnitId);
 			if (pWarlord && NO_UNIT != pWarlord->getUnitType())
 			{
 				return (pWarlord->getUnitInfo().getLeaderPromotion() == ePromotion);
@@ -13687,7 +13687,7 @@ bool CvUnit::promote(PromotionTypes ePromotion, int iLeaderUnitId)
 
 	if (iLeaderUnitId >= 0)
 	{
-		CvUnit* pWarlord = GET_PLAYER(getOwnerINLINE()).getUnit(iLeaderUnitId);
+		CvUnit* pWarlord = GET_PLAYER(getOwner()).getUnit(iLeaderUnitId);
 		if (pWarlord)
 		{
 			pWarlord->giveExperience();
@@ -13765,13 +13765,13 @@ bool CvUnit::lead(int iUnitId)
 		CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_LEADUNIT, eLeaderPromotion, getID());
 		if (pInfo)
 		{
-			gDLL->getInterfaceIFace()->addPopup(pInfo, getOwnerINLINE(), true);
+			gDLL->getInterfaceIFace()->addPopup(pInfo, getOwner(), true);
 		}
 		return false;
 	}
 	else
 	{
-		CvUnit* pUnit = GET_PLAYER(getOwnerINLINE()).getUnit(iUnitId);
+		CvUnit* pUnit = GET_PLAYER(getOwner()).getUnit(iUnitId);
 
 		if (!pUnit || !pUnit->canPromote(eLeaderPromotion, getID()))			
 		{
@@ -13837,7 +13837,7 @@ int CvUnit::canLead(const CvPlot* pPlot, int iUnitId) const
 			pUnitNode = pPlot->nextUnitNode(pUnitNode);
 
 			if (pUnit && pUnit != this && 
-				pUnit->getOwnerINLINE() == getOwnerINLINE() && 
+				pUnit->getOwner() == getOwner() && 
 				!pUnit->isTrap() && 
 				!pUnit->isCommander() &&
 				pUnit->canPromote((PromotionTypes)kUnitInfo.getLeaderPromotion(), getID()))
@@ -13848,7 +13848,7 @@ int CvUnit::canLead(const CvPlot* pPlot, int iUnitId) const
 	}
 	else
 	{
-		CvUnit* pUnit = GET_PLAYER(getOwnerINLINE()).getUnit(iUnitId);
+		CvUnit* pUnit = GET_PLAYER(getOwner()).getUnit(iUnitId);
 		if (pUnit && pUnit != this && 
 			!pUnit->isTrap() &&
 			pUnit->canPromote((PromotionTypes)kUnitInfo.getLeaderPromotion(), getID()))
@@ -13872,7 +13872,7 @@ int CvUnit::canGiveExperience(const CvPlot* pPlot) const
 			CvUnit* pUnit = ::getUnit(pUnitNode->m_data);
 			pUnitNode = pPlot->nextUnitNode(pUnitNode);
 
-			if (pUnit && pUnit != this && pUnit->getOwnerINLINE() == getOwnerINLINE() && pUnit->canAcquirePromotionAny())
+			if (pUnit && pUnit != this && pUnit->getOwner() == getOwner() && pUnit->canAcquirePromotionAny())
 			{
 /************************************************************************************************/
 /* Afforess	                  Start		 03/30/10                                               */
@@ -13916,7 +13916,7 @@ bool CvUnit::giveExperience()
 				pUnitNode = pPlot->nextUnitNode(pUnitNode);
 
 				if (pUnit && pUnit != this && 
-					pUnit->getOwnerINLINE() == getOwnerINLINE() && 
+					pUnit->getOwner() == getOwner() && 
 					!pUnit->isTrap() &&
 					!pUnit->isCommander() &&
 					pUnit->canAcquirePromotionAny())
@@ -13955,7 +13955,7 @@ int CvUnit::upgradePrice(UnitTypes eUnit) const
 	if(GC.getUSE_UPGRADE_UNIT_PRICE_CALLBACK())
 	{
 		int iResult = Cy::call<int>(PYGameModule, "getUpgradePriceOverride", Cy::Args()
-			<< getOwnerINLINE()
+			<< getOwner()
 			<< getID()
 			<< eUnit
 			);
@@ -13972,7 +13972,7 @@ int CvUnit::upgradePrice(UnitTypes eUnit) const
 		return 0;
 	}
 
-	int iBasePrice = GET_PLAYER(getOwnerINLINE()).getProductionNeeded(eUnit) - GET_PLAYER(getOwnerINLINE()).getProductionNeeded(getUnitType());
+	int iBasePrice = GET_PLAYER(getOwner()).getProductionNeeded(eUnit) - GET_PLAYER(getOwner()).getProductionNeeded(getUnitType());
 	int iCostPerProduction = GC.getDefineINT("UNIT_UPGRADE_COST_PER_PRODUCTION");
 	iPrice = iBasePrice * iCostPerProduction;
 	iPrice /= 100;
@@ -13985,11 +13985,11 @@ int CvUnit::upgradePrice(UnitTypes eUnit) const
 		iPrice *= GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAIUnitUpgradePercent();
 		iPrice /= 100;
 
-		iPrice *= std::max(0, ((GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAIPerEraModifier() * GET_PLAYER(getOwnerINLINE()).getCurrentEra()) + 100));
+		iPrice *= std::max(0, ((GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAIPerEraModifier() * GET_PLAYER(getOwner()).getCurrentEra()) + 100));
 		iPrice /= 100;
 	}
 
-	iPrice = iPrice * (100 + GET_PLAYER(getOwnerINLINE()).getUnitUpgradePriceModifier()) / 100;
+	iPrice = iPrice * (100 + GET_PLAYER(getOwner()).getUnitUpgradePriceModifier()) / 100;
 	iPrice -= ((iPrice * getUpgradeDiscount()) / 100);
 
 	//ls612: Upgrade price is now dependent on the level of a unit
@@ -14009,7 +14009,7 @@ int CvUnit::upgradePrice(UnitTypes eUnit) const
 
 bool CvUnit::upgradeAvailable(UnitTypes eFromUnit, UnitClassTypes eToUnitClass) const
 {
-	return GET_PLAYER(getOwnerINLINE()).upgradeAvailable(eFromUnit, eToUnitClass);
+	return GET_PLAYER(getOwner()).upgradeAvailable(eFromUnit, eToUnitClass);
 }
 
 
@@ -14027,13 +14027,13 @@ bool CvUnit::canUpgrade(UnitTypes eUnit, bool bTestVisible) const
 	
 	if (!bTestVisible)
 	{
-		if (GET_PLAYER(getOwnerINLINE()).getEffectiveGold() < upgradePrice(eUnit))
+		if (GET_PLAYER(getOwner()).getEffectiveGold() < upgradePrice(eUnit))
 		{
 			return false;
 		}
 	}
 
-	if (GET_PLAYER(getOwnerINLINE()).getUpgradeRoundCount() == GC.getUPGRADE_ROUND_LIMIT())
+	if (GET_PLAYER(getOwner()).getUpgradeRoundCount() == GC.getUPGRADE_ROUND_LIMIT())
 	{
 		return false;
 	}
@@ -14061,7 +14061,7 @@ bool CvUnit::canUpgrade(UnitTypes eUnit, bool bTestVisible) const
 bool CvUnit::isReadyForUpgrade() const
 {
 
-	bool bUpgradeAnywhere = (isUpgradeAnywhere() || GET_PLAYER(getOwnerINLINE()).isUpgradeAnywhere());
+	bool bUpgradeAnywhere = (isUpgradeAnywhere() || GET_PLAYER(getOwner()).isUpgradeAnywhere());
 /************************************************************************************************/
 /* REVDCM                                 02/16/10                                phungus420    */
 /*                                                                                              */
@@ -14116,7 +14116,7 @@ CvCity* CvUnit::getUpgradeCity(bool bSearch) const
 {
 	PROFILE_FUNC();
 
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwnerINLINE());
+	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	UnitAITypes eUnitAI = AI_getUnitAIType();
 	CvArea* pArea = area();
 
@@ -14167,7 +14167,7 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 		return NULL;
 	}
 	
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwnerINLINE());
+	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	CvUnitInfo& kUnitInfo = GC.getUnitInfo(eUnit);
 /************************************************************************************************/
 /* Afforess	                  Start		 02/17/10                                               */
@@ -14344,8 +14344,8 @@ bool CvUnit::upgrade(UnitTypes eUnit)
 
 // BUG - Upgrade Unit Event - start
 	int iPrice = upgradePrice(eUnit);
-	GET_PLAYER(getOwnerINLINE()).changeGold(-iPrice);
-	GET_PLAYER(getOwnerINLINE()).changeUpgradeRoundCount(1);
+	GET_PLAYER(getOwner()).changeGold(-iPrice);
+	GET_PLAYER(getOwner()).changeUpgradeRoundCount(1);
 // BUG - Upgrade Unit Event - end
 
 	//	Preserve the AI type if that is possible
@@ -14357,11 +14357,11 @@ bool CvUnit::upgrade(UnitTypes eUnit)
 	}
 	
 	//Set Group to rejoin
-	GET_PLAYER(getOwnerINLINE()).setSelectionRegroup(getGroupID());
+	GET_PLAYER(getOwner()).setSelectionRegroup(getGroupID());
 	//Set Unit to reload onto
 	CvUnit* pTransportUnit = getTransportUnit();
 
-	pUpgradeUnit = GET_PLAYER(getOwnerINLINE()).initUnit(eUnit, getX(), getY(), eUnitAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+	pUpgradeUnit = GET_PLAYER(getOwner()).initUnit(eUnit, getX(), getY(), eUnitAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
 	
 	FAssertMsg(pUpgradeUnit != NULL, "UpgradeUnit is not assigned a valid value");
 	
@@ -14371,7 +14371,7 @@ bool CvUnit::upgrade(UnitTypes eUnit)
 		pUpgradeUnit->setTransportUnit(pTransportUnit);
 	}
 	//Clear Group to rejoin
-	GET_PLAYER(getOwnerINLINE()).setSelectionRegroup(NULL);
+	GET_PLAYER(getOwner()).setSelectionRegroup(NULL);
 
 	pUpgradeUnit->convert(this);
 
@@ -14405,7 +14405,7 @@ bool CvUnit::upgrade(UnitTypes eUnit)
 	{
 		CvWString szString;
 		getUnitAIString(szString, pUpgradeUnit->AI_getUnitAIType());
-		logBBAI("    %S spends %d to upgrade %S to %S, unit AI %S", GET_PLAYER(getOwnerINLINE()).getCivilizationDescription(0), upgradePrice(eUnit), getName(0).GetCString(), pUpgradeUnit->getName(0).GetCString(), szString.GetCString());
+		logBBAI("    %S spends %d to upgrade %S to %S, unit AI %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), upgradePrice(eUnit), getName(0).GetCString(), pUpgradeUnit->getName(0).GetCString(), szString.GetCString());
 	}
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
@@ -14416,18 +14416,18 @@ bool CvUnit::upgrade(UnitTypes eUnit)
 
 HandicapTypes CvUnit::getHandicapType() const
 {
-	return GET_PLAYER(getOwnerINLINE()).getHandicapType();
+	return GET_PLAYER(getOwner()).getHandicapType();
 }
 
 
 CivilizationTypes CvUnit::getCivilizationType() const
 {
-	return GET_PLAYER(getOwnerINLINE()).getCivilizationType();
+	return GET_PLAYER(getOwner()).getCivilizationType();
 }
 
 const wchar* CvUnit::getVisualCivAdjective(TeamTypes eForTeam) const
 {
-	if (getVisualOwner(eForTeam) == getOwnerINLINE())
+	if (getVisualOwner(eForTeam) == getOwner())
 	{
 		return GC.getCivilizationInfo(getCivilizationType()).getAdjectiveKey();
 	}
@@ -14493,25 +14493,25 @@ int CvUnit::flavorValue(FlavorTypes eFlavor) const
 
 bool CvUnit::isBarbarian() const
 {
-	return GET_PLAYER(getOwnerINLINE()).isBarbarian();
+	return GET_PLAYER(getOwner()).isBarbarian();
 }
 
 
 bool CvUnit::isNPC() const
 {
-	return GET_PLAYER(getOwnerINLINE()).isNPC();
+	return GET_PLAYER(getOwner()).isNPC();
 }
 
 
 bool CvUnit::isHominid() const
 {
-	return GET_PLAYER(getOwnerINLINE()).isHominid();
+	return GET_PLAYER(getOwner()).isHominid();
 }
 
 
 bool CvUnit::isHuman() const
 {
-	return GET_PLAYER(getOwnerINLINE()).isHuman();
+	return GET_PLAYER(getOwner()).isHuman();
 }
 
 
@@ -14612,11 +14612,11 @@ int CvUnit::airRange() const
 	SpecialUnitTypes eMissile = (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_MISSILE");
 	if (getDomainType() == DOMAIN_AIR && nukeRange() == -1 && getSpecialUnitType() != eMissile)
 	{
-		return (m_pUnitInfo->getAirRange() + getExtraAirRange() + GET_TEAM(getTeam()).getExtraMoves(DOMAIN_AIR) + GET_PLAYER(getOwnerINLINE()).getNationalFlightOperationRangeChange());
+		return (m_pUnitInfo->getAirRange() + getExtraAirRange() + GET_TEAM(getTeam()).getExtraMoves(DOMAIN_AIR) + GET_PLAYER(getOwner()).getNationalFlightOperationRangeChange());
 	}
 	if (getDomainType() == DOMAIN_AIR && getSpecialUnitType() == eMissile)
 	{
-		return (m_pUnitInfo->getAirRange() + getExtraAirRange() + GET_TEAM(getTeam()).getExtraMoves(DOMAIN_AIR) + GET_PLAYER(getOwnerINLINE()).getNationalMissileRangeChange());
+		return (m_pUnitInfo->getAirRange() + getExtraAirRange() + GET_TEAM(getTeam()).getExtraMoves(DOMAIN_AIR) + GET_PLAYER(getOwner()).getNationalMissileRangeChange());
 	}
 	return (m_pUnitInfo->getAirRange() + getExtraAirRange());
 /************************************************************************************************/
@@ -14787,7 +14787,7 @@ ImprovementTypes CvUnit::getBuildTypeImprovement() const
 
 bool CvUnit::isAnimal() const
 {
-	return GET_PLAYER(getOwnerINLINE()).isAnimal();
+	return GET_PLAYER(getOwner()).isAnimal();
 }
 
 
@@ -14946,7 +14946,7 @@ namespace {
 }
 bool CvUnit::canCoexistWithAttacker(const CvUnit& attacker, bool bAssassinate) const
 {
-	const TeamTypes attackerTeam = GET_PLAYER(attacker.getOwnerINLINE()).getTeam();
+	const TeamTypes attackerTeam = GET_PLAYER(attacker.getOwner()).getTeam();
 
 	return
 		// Always coexists
@@ -15395,7 +15395,7 @@ int CvUnit::maxCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDet
 		pCombatDetails->iCurrHitPoints = 0;
 		pCombatDetails->iMaxHitPoints = 0;
 		pCombatDetails->iCurrCombatStr = 0;
-		pCombatDetails->eOwner = getOwnerINLINE();
+		pCombatDetails->eOwner = getOwner();
 		pCombatDetails->eVisualOwner = getVisualOwner();
 		pCombatDetails->sUnitName = getName().GetCString();
 	}
@@ -16845,7 +16845,7 @@ int CvUnit::fortifyRepelModifier() const
 int CvUnit::experienceNeeded() const
 {
 
-	int iExperienceNeeded = calculateExperience(getLevel(), getOwnerINLINE());
+	int iExperienceNeeded = calculateExperience(getLevel(), getOwner());
 
 /************************************************************************************************/
 /* Afforess	                  Start		 04/2/10                       Coded By: KillMePlease   */
@@ -16933,7 +16933,7 @@ bool CvUnit::isRanged() const
 	CvUnitInfo * pkUnitInfo = &getUnitInfo();
 	for ( i = 0; i < pkUnitInfo->getGroupDefinitions(); i++ )
 	{
-		if ( !getArtInfo(i, GET_PLAYER(getOwnerINLINE()).getCurrentEra())->getActAsRanged() )
+		if ( !getArtInfo(i, GET_PLAYER(getOwner()).getCurrentEra())->getActAsRanged() )
 		{
 			return false;
 		}
@@ -17840,12 +17840,12 @@ int CvUnit::cargoSpace() const
 	iCargoCapacity += m_iCargoCapacity;
 	if (getDomainType() == DOMAIN_SEA)
 	{
-		iCargoCapacity += GET_PLAYER(getOwnerINLINE()).getNationalNavalCargoSpaceChange();
+		iCargoCapacity += GET_PLAYER(getOwner()).getNationalNavalCargoSpaceChange();
 	}
 	SpecialUnitTypes eMissile = (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_MISSILE");
 	if (specialCargo() == eMissile)
 	{
-		iCargoCapacity += GET_PLAYER(getOwnerINLINE()).getNationalMissileCargoSpaceChange();
+		iCargoCapacity += GET_PLAYER(getOwner()).getNationalMissileCargoSpaceChange();
 	}
 	return iCargoCapacity;
 }
@@ -18023,7 +18023,7 @@ int CvUnit::getIndex() const
 
 IDInfo CvUnit::getIDInfo() const
 {
-	IDInfo unit(getOwnerINLINE(), getID());
+	IDInfo unit(getOwner(), getID());
 	return unit;
 }
 
@@ -18054,7 +18054,7 @@ bool CvUnit::isGroupHead() const // XXX is this used???
 
 CvSelectionGroup* CvUnit::getGroup() const
 {
-	return GET_PLAYER(getOwnerINLINE()).getSelectionGroup(getGroupID());
+	return GET_PLAYER(getOwner()).getSelectionGroup(getGroupID());
 }
 
 bool CvUnit::canJoinGroup(const CvPlot* pPlot, CvSelectionGroup* pSelectionGroup) const
@@ -18068,13 +18068,13 @@ bool CvUnit::canJoinGroup(const CvPlot* pPlot, CvSelectionGroup* pSelectionGroup
 		return false;
 	}
 	
-	if (pSelectionGroup->getOwnerINLINE() == NO_PLAYER)
+	if (pSelectionGroup->getOwner() == NO_PLAYER)
 	{
 		pHeadUnit = pSelectionGroup->getHeadUnit();
 
 		if (pHeadUnit != NULL)
 		{
-			if (pHeadUnit->getOwnerINLINE() != getOwnerINLINE())
+			if (pHeadUnit->getOwner() != getOwner())
 			{
 				return false;
 			}
@@ -18082,7 +18082,7 @@ bool CvUnit::canJoinGroup(const CvPlot* pPlot, CvSelectionGroup* pSelectionGroup
 	}
 	else
 	{
-		if (pSelectionGroup->getOwnerINLINE() != getOwnerINLINE())
+		if (pSelectionGroup->getOwner() != getOwner())
 		{
 			return false;
 		}
@@ -18130,7 +18130,7 @@ void CvUnit::joinGroup(CvSelectionGroup* pSelectionGroup, bool bRemoveSelected, 
 	CvSelectionGroup* pNewSelectionGroup;
 	CvPlot* pPlot;
 
-	pOldSelectionGroup = GET_PLAYER(getOwnerINLINE()).getSelectionGroup(getGroupID());
+	pOldSelectionGroup = GET_PLAYER(getOwner()).getSelectionGroup(getGroupID());
 
 	if (pSelectionGroup != pOldSelectionGroup && pSelectionGroup != NULL)
 	{
@@ -18152,27 +18152,27 @@ void CvUnit::joinGroup(CvSelectionGroup* pSelectionGroup, bool bRemoveSelected, 
 		{
 			if (bRejoin)
 			{
-				int iSelectionRegroup = GET_PLAYER(getOwnerINLINE()).getSelectionRegroup();
-				int iNumSelectionGroups = GET_PLAYER(getOwnerINLINE()).getNumSelectionGroups();
+				int iSelectionRegroup = GET_PLAYER(getOwner()).getSelectionRegroup();
+				int iNumSelectionGroups = GET_PLAYER(getOwner()).getNumSelectionGroups();
 				//TB Note: the above is just a tracker to see how many a player can handle before the crash it gets when there's too many initiated.
 				//both proves the theory and shows how many can exist before crashing.
 				
 				if (iSelectionRegroup != NULL)
 				{
-					pNewSelectionGroup = GET_PLAYER(getOwnerINLINE()).getSelectionGroup(iSelectionRegroup);
+					pNewSelectionGroup = GET_PLAYER(getOwner()).getSelectionGroup(iSelectionRegroup);
 					if (!canJoinGroup(pPlot, pNewSelectionGroup))
 					{
-						pNewSelectionGroup = GET_PLAYER(getOwnerINLINE()).addSelectionGroup();
+						pNewSelectionGroup = GET_PLAYER(getOwner()).addSelectionGroup();
 						FAssert(pNewSelectionGroup != NULL);
-						pNewSelectionGroup->init(pNewSelectionGroup->getID(), getOwnerINLINE());
+						pNewSelectionGroup->init(pNewSelectionGroup->getID(), getOwner());
 					}
 
 				}
 				else
 				{
-					pNewSelectionGroup = GET_PLAYER(getOwnerINLINE()).addSelectionGroup();
+					pNewSelectionGroup = GET_PLAYER(getOwner()).addSelectionGroup();
 					FAssert(pNewSelectionGroup != NULL);
-					pNewSelectionGroup->init(pNewSelectionGroup->getID(), getOwnerINLINE());
+					pNewSelectionGroup->init(pNewSelectionGroup->getID(), getOwner());
 				}
 			}
 			else
@@ -18267,7 +18267,7 @@ void CvUnit::joinGroup(CvSelectionGroup* pSelectionGroup, bool bRemoveSelected, 
 				}
 				else
 				{
-					GET_PLAYER(getOwnerINLINE()).updateGroupCycle(this, false);
+					GET_PLAYER(getOwner()).updateGroupCycle(this, false);
 				}
 			}
 
@@ -18307,13 +18307,13 @@ void CvUnit::setHotKeyNumber(int iNewValue)
 	CvUnit* pLoopUnit;
 	int iLoop;
 
-	FAssert(getOwnerINLINE() != NO_PLAYER);
+	FAssert(getOwner() != NO_PLAYER);
 
 	if (getHotKeyNumber() != iNewValue)
 	{
 		if (iNewValue != -1)
 		{
-			for(pLoopUnit = GET_PLAYER(getOwnerINLINE()).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(getOwnerINLINE()).nextUnit(&iLoop))
+			for(pLoopUnit = GET_PLAYER(getOwner()).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(getOwner()).nextUnit(&iLoop))
 			{
 				if (pLoopUnit->getHotKeyNumber() == iNewValue)
 				{
@@ -18356,7 +18356,7 @@ bool CvUnit::isInViewport() const
 
 bool CvUnit::isTempUnit() const
 {
-	return GET_PLAYER(getOwnerINLINE()).isTempUnit(this);
+	return GET_PLAYER(getOwner()).isTempUnit(this);
 }
 
 void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool bCheckPlotVisible, bool bInit)
@@ -18405,7 +18405,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		if (gDLL->getChtLvl() > 0)
 		{
 			char szOut[1024];
-			sprintf(szOut, "Player %d Unit %d (%S's %S) moving from %d:%d to %d:%d\n", getOwnerINLINE(), getID(), GET_PLAYER(getOwnerINLINE()).getNameKey(), getName().GetCString(), getX(), getY(), iX, iY);
+			sprintf(szOut, "Player %d Unit %d (%S's %S) moving from %d:%d to %d:%d\n", getOwner(), getID(), GET_PLAYER(getOwner()).getNameKey(), getName().GetCString(), getX(), getY(), iX, iY);
 			gDLL->messageControlLog(szOut);
 		}
 	}
@@ -18474,7 +18474,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 				{
 					if (getDomainType() != DOMAIN_AIR)
 					{
-						if (!pNewPlot->hasDefender(false, NO_PLAYER, getOwnerINLINE(), this, true, false, false, true))
+						if (!pNewPlot->hasDefender(false, NO_PLAYER, getOwner(), this, true, false, false, true))
 						{
 							while (pNewPlot->hasStealthDefender(this))
 							{
@@ -18506,7 +18506,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 						else
 						{
 							CvUnit* pDefender = NULL;
-							pDefender = pNewPlot->getBestDefender(NO_PLAYER, getOwnerINLINE(), this, true, true, false, false, true);
+							pDefender = pNewPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, true, false, false, true);
 							if (pDefender != NULL)
 							{
 								attack(pNewPlot, true, false, true);
@@ -18570,11 +18570,11 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 												GET_TEAM(getTeam()).changeWarWeariness(pLoopUnit->getTeam(), *pNewPlot, GC.getDefineINT("WW_CAPTURED_UNIT"));
 												GET_TEAM(getTeam()).AI_changeWarSuccess(pLoopUnit->getTeam(), GC.getDefineINT("WAR_SUCCESS_UNIT_CAPTURING"));
 											}
-											pLoopUnit->setCapturingPlayer(getOwnerINLINE());
+											pLoopUnit->setCapturingPlayer(getOwner());
 											pLoopUnit->setCapturingUnit(this);
 										}
 
-										pLoopUnit->kill(false, getOwnerINLINE(), true);
+										pLoopUnit->kill(false, getOwner(), true);
 									}
 								}
 							}
@@ -18586,25 +18586,25 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 
 		if (pNewPlot->isGoody(getTeam()) && !isNPC() && !m_pUnitInfo->isNoRevealMap())
 		{
-			GET_PLAYER(getOwnerINLINE()).doGoody(pNewPlot, this);
+			GET_PLAYER(getOwner()).doGoody(pNewPlot, this);
 		}
 
-		pNewPlot->area()->changeUnitsPerPlayer(getOwnerINLINE(), 1);
-		pNewPlot->area()->changePower(getOwnerINLINE(), getPowerValueTotal()/100);
+		pNewPlot->area()->changeUnitsPerPlayer(getOwner(), 1);
+		pNewPlot->area()->changePower(getOwner(), getPowerValueTotal()/100);
 
 		if (AI_getUnitAIType() != NO_UNITAI)
 		{
-			pNewPlot->area()->changeNumAIUnits(getOwnerINLINE(), AI_getUnitAIType(), 1);
+			pNewPlot->area()->changeNumAIUnits(getOwner(), AI_getUnitAIType(), 1);
 		}
 		//TB Combat Mods - next line adds animal ignore
 		if (isAnimal())
 		{
-			pNewPlot->area()->changeAnimalsPerPlayer(getOwnerINLINE(), 1);
+			pNewPlot->area()->changeAnimalsPerPlayer(getOwner(), 1);
 		}
 
 		if (pNewPlot->getTeam() != getTeam() && (pNewPlot->getTeam() == NO_TEAM || !GET_TEAM(pNewPlot->getTeam()).isVassal(getTeam())))
 		{
-			GET_PLAYER(getOwnerINLINE()).changeNumOutsideUnits(1);
+			GET_PLAYER(getOwner()).changeNumOutsideUnits(1);
 		}
 	}
 
@@ -18620,22 +18620,22 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		pOldPlot->changeAdjacentSight(getTeam(), visibilityRange(pOldPlot), false, this, true);
 		changeDebugCount(-1);
 
-		pOldPlot->area()->changeUnitsPerPlayer(getOwnerINLINE(), -1);
-		pOldPlot->area()->changePower(getOwnerINLINE(), -getPowerValueTotal()/100);
+		pOldPlot->area()->changeUnitsPerPlayer(getOwner(), -1);
+		pOldPlot->area()->changePower(getOwner(), -getPowerValueTotal()/100);
 
 		if (AI_getUnitAIType() != NO_UNITAI)
 		{
-			pOldPlot->area()->changeNumAIUnits(getOwnerINLINE(), AI_getUnitAIType(), -1);
+			pOldPlot->area()->changeNumAIUnits(getOwner(), AI_getUnitAIType(), -1);
 		}
 		//TB Combat Mod next line
 		if (isAnimal())
 		{
-			pOldPlot->area()->changeAnimalsPerPlayer(getOwnerINLINE(), -1);
+			pOldPlot->area()->changeAnimalsPerPlayer(getOwner(), -1);
 		}
 
 		if (pOldPlot->getTeam() != getTeam() && (pOldPlot->getTeam() == NO_TEAM || !GET_TEAM(pOldPlot->getTeam()).isVassal(getTeam())))
 		{
-			GET_PLAYER(getOwnerINLINE()).changeNumOutsideUnits(-1);
+			GET_PLAYER(getOwner()).changeNumOutsideUnits(-1);
 		}
 
 		setLastMoveTurn(GC.getGameINLINE().getTurnSlice());
@@ -18749,7 +18749,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-				PlayerTypes eNewOwner = GET_PLAYER(getOwnerINLINE()).pickConqueredCityOwner(*pNewCity);
+				PlayerTypes eNewOwner = GET_PLAYER(getOwner()).pickConqueredCityOwner(*pNewCity);
 
 				if (isHiddenNationality())
 				{
@@ -18780,13 +18780,13 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 
 			bool bDoAcquireFort = false;
 			
-			if (pNewPlot->getOwnerINLINE() == NO_PLAYER)
+			if (pNewPlot->getOwner() == NO_PLAYER)
 			{
 				bDoAcquireFort = true;
 			}
 			else
 			{
-				CvPlayer& pNewPlotOwner = GET_PLAYER(pNewPlot->getOwnerINLINE());
+				CvPlayer& pNewPlotOwner = GET_PLAYER(pNewPlot->getOwner());
 				if ((isEnemy(pNewPlotOwner.getTeam()) || !pNewPlotOwner.isAlive()) 
 					&& !canCoexistWithTeamOnPlot(pNewPlotOwner.getTeam(), *pNewPlot)
 					&& canFight()
@@ -18794,14 +18794,14 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 				{
 					bDoAcquireFort = true;
 
-					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_CAPTURED_BY", GC.getImprovementInfo(eImprovement).getText(), GET_PLAYER(getOwnerINLINE()).getCivilizationDescriptionKey());
+					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_CAPTURED_BY", GC.getImprovementInfo(eImprovement).getText(), GET_PLAYER(getOwner()).getCivilizationDescriptionKey());
 					AddDLLMessage(pNewPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYCAPTURED", MESSAGE_TYPE_MAJOR_EVENT, GC.getImprovementInfo(eImprovement).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pNewPlot->getX(), pNewPlot->getY(), true, true);
 				}
 			}
 			
 			if (bDoAcquireFort)
 			{
-				GET_PLAYER(getOwnerINLINE()).acquireFort(pNewPlot);
+				GET_PLAYER(getOwner()).acquireFort(pNewPlot);
 			}
 		}
 /************************************************************************************************/
@@ -18979,14 +18979,14 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 	                        if (iPillageGold > 0)
 	                        {
 								iPillageGold += (iPillageGold * getPillageChange()) / 100;
-								GET_PLAYER(getOwnerINLINE()).changeGold(iPillageGold);
+								GET_PLAYER(getOwner()).changeGold(iPillageGold);
 
 								szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_GOLD_FROM_IMP", iPillageGold, GC.getImprovementInfo(pNewPlot->getImprovementType()).getTextKeyWide());
-								AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pNewPlot->getX(), pNewPlot->getY());
+								AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pNewPlot->getX(), pNewPlot->getY());
 
 								for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
 								{
-									TechTypes ePillageTech = GET_PLAYER(getOwnerINLINE()).getCurrentResearch();
+									TechTypes ePillageTech = GET_PLAYER(getOwner()).getCurrentResearch();
 									CommerceTypes eCommerce = ((CommerceTypes)iI);
 									int iPillageResearch = 0;
 									int iPillageEspionage = 0;
@@ -18995,21 +18995,21 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 									case COMMERCE_GOLD:
 										if (isPillageMarauder())
 										{
-											GET_PLAYER(getOwnerINLINE()).changeGold(iPillageGold);
+											GET_PLAYER(getOwner()).changeGold(iPillageGold);
 											pNewPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pNewPlot->getImprovementType()).getImprovementPillage()));
 											szBuffer = gDLL->getText("TXT_KEY_MISC_MARAUDERS_PLUNDERED_IMP", iPillageGold, GC.getImprovementInfo(pNewPlot->getImprovementType()).getTextKeyWide());
-											AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pNewPlot->getX(), pNewPlot->getY());
+											AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pNewPlot->getX(), pNewPlot->getY());
 											szBuffer = gDLL->getText("TXT_KEY_MISC_IMP_DESTROYED_BY_MARAUDERS", getVisualCivAdjective(getTeam()));
-											AddDLLMessage(pNewPlot->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pNewPlot->getX(), pNewPlot->getY(), true, true);
+											AddDLLMessage(pNewPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pNewPlot->getX(), pNewPlot->getY(), true, true);
 										}
 										break;
 									case COMMERCE_RESEARCH:
 										if (isPillageResearch())
 										{
 											iPillageResearch += iPillageGold;
-											GET_TEAM(GET_PLAYER(getOwnerINLINE()).getTeam()).changeResearchProgress(ePillageTech, iPillageResearch, getOwnerINLINE());
+											GET_TEAM(GET_PLAYER(getOwner()).getTeam()).changeResearchProgress(ePillageTech, iPillageResearch, getOwner());
 											szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_RESEARCH_FROM_IMP", iPillageResearch, GC.getImprovementInfo(pNewPlot->getImprovementType()).getTextKeyWide());
-											AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pNewPlot->getX(), pNewPlot->getY());
+											AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pNewPlot->getX(), pNewPlot->getY());
 										}
 										break;
 									case COMMERCE_CULTURE:
@@ -19022,7 +19022,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 												szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_CULTURE_FROM_IMP", getNameKey(), getVisualCivAdjective(pNewPlot->getTeam()));
 												szInfluence.Format(L" Tile influence: +%.1f%%", fInfluenceRatio);
 												szBuffer += szInfluence;
-												AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pNewPlot->getX(), pNewPlot->getY());
+												AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pNewPlot->getX(), pNewPlot->getY());
 											}
 										}
 										break;
@@ -19032,9 +19032,9 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 											iPillageEspionage += iPillageGold;
 											if (pNewPlot->getTeam() != NO_TEAM)
 											{
-												GET_TEAM(GET_PLAYER(getOwnerINLINE()).getTeam()).changeEspionagePointsAgainstTeam(pNewPlot->getTeam(), iPillageEspionage);
+												GET_TEAM(GET_PLAYER(getOwner()).getTeam()).changeEspionagePointsAgainstTeam(pNewPlot->getTeam(), iPillageEspionage);
 												szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_ESPIONAGE_FROM_IMP", iPillageEspionage, GC.getImprovementInfo(pNewPlot->getImprovementType()).getTextKeyWide());
-												AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pNewPlot->getX(), pNewPlot->getY());
+												AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pNewPlot->getX(), pNewPlot->getY());
 											}
 										}
 										break;
@@ -19043,7 +19043,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 								if (pNewPlot->isOwned())
 								{
 									szBuffer = gDLL->getText("TXT_KEY_MISC_IMP_DESTROYED", GC.getImprovementInfo(pNewPlot->getImprovementType()).getTextKeyWide(), getNameKey(), getVisualCivAdjective(pNewPlot->getTeam()));
-									AddDLLMessage(pNewPlot->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pNewPlot->getX(), pNewPlot->getY(), true, true);
+									AddDLLMessage(pNewPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pNewPlot->getX(), pNewPlot->getY(), true, true);
 								}
 							}
 						}
@@ -19138,7 +19138,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 	}
 
 	FAssert(pOldPlot != pNewPlot);
-	GET_PLAYER(getOwnerINLINE()).updateGroupCycle(this, bFarMove);
+	GET_PLAYER(getOwner()).updateGroupCycle(this, bFarMove);
 
 	if ( pNewPlot != NULL &&
 		 ((g_bUseDummyEntities &&
@@ -19543,7 +19543,7 @@ void CvUnit::changeExperience100(int iChange, int iMax, bool bFromCombat, bool b
 
 	if (bFromCombat)
 	{
-		CvPlayer& kPlayer = GET_PLAYER(getOwnerINLINE());
+		CvPlayer& kPlayer = GET_PLAYER(getOwner());
 		//TB GG Types mod
 		if (getGGExperienceEarnedTowardsType() == NO_UNIT)
 		{
@@ -19618,9 +19618,9 @@ void CvUnit::setLevel(int iNewValue)
 		m_iLevel = iNewValue;
 		FAssert(getLevel() > 0);
 
-		if (getLevel() > GET_PLAYER(getOwnerINLINE()).getHighestUnitLevel())
+		if (getLevel() > GET_PLAYER(getOwner()).getHighestUnitLevel())
 		{
-			GET_PLAYER(getOwnerINLINE()).setHighestUnitLevel(getLevel());
+			GET_PLAYER(getOwner()).setHighestUnitLevel(getLevel());
 		}
 
 		if (IsSelected())
@@ -19892,7 +19892,7 @@ void CvUnit::setFortifyTurns(int iNewValue)
 						PromotionTypes ePromotion = (PromotionTypes)GC.getPromotionLineInfo(ePromotionLine).getPromotion(iI);
 						if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1)
 						{
-							int iValue = GET_PLAYER(getOwnerINLINE()).AI_promotionValue(ePromotion, getUnitType(), this, AI_getUnitAIType(), true);
+							int iValue = GET_PLAYER(getOwner()).AI_promotionValue(ePromotion, getUnitType(), this, AI_getUnitAIType(), true);
 							if (iValue < 10)
 							{
 								clearBuildups();
@@ -20854,7 +20854,7 @@ int CvUnit::getExtraCostModifier() const
 void CvUnit::changeExtraCostModifier(int iChange)
 {
 	m_iExtraCostModifier +=iChange;
-	GET_PLAYER(getOwnerINLINE()).changeUnitPercentCountForCostAdjustment(iChange);
+	GET_PLAYER(getOwner()).changeUnitPercentCountForCostAdjustment(iChange);
 }
 
 int CvUnit::getExtraUnitCost100() const
@@ -22388,7 +22388,7 @@ void CvUnit::collectBlockadeGold()
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-						iGold *= (100 + GET_PLAYER(getOwnerINLINE()).calculateInflationRate());
+						iGold *= (100 + GET_PLAYER(getOwner()).calculateInflationRate());
 						iGold /= 100;
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -22396,16 +22396,16 @@ void CvUnit::collectBlockadeGold()
 						if (iGold > 0)
 						{
 							pCity->setPlundered(true);
-							GET_PLAYER(getOwnerINLINE()).changeGold(iGold);
-							GET_PLAYER(pCity->getOwnerINLINE()).changeGold(-iGold);
+							GET_PLAYER(getOwner()).changeGold(iGold);
+							GET_PLAYER(pCity->getOwner()).changeGold(-iGold);
 
 							MEMORY_TRACK_EXEMPT();
 
 							CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_TRADE_ROUTE_PLUNDERED", getNameKey(), pCity->getNameKey(), iGold);
-							AddDLLMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BUILD_BANK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY());
+							AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BUILD_BANK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY());
 
 							szBuffer = gDLL->getText("TXT_KEY_MISC_TRADE_ROUTE_PLUNDER", getNameKey(), pCity->getNameKey(), iGold);
-							AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BUILD_BANK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY());
+							AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BUILD_BANK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY());
 						}
 					}
 				}
@@ -22414,11 +22414,6 @@ void CvUnit::collectBlockadeGold()
 	}
 }
 
-
-PlayerTypes CvUnit::getOwner() const
-{
-	return getOwnerINLINE();
-}
 
 PlayerTypes CvUnit::getVisualOwner(TeamTypes eForTeam) const
 {
@@ -22438,7 +22433,7 @@ PlayerTypes CvUnit::getVisualOwner(TeamTypes eForTeam) const
 		}
 	}
 
-	return getOwnerINLINE();
+	return getOwner();
 }
 
 
@@ -22452,12 +22447,12 @@ PlayerTypes CvUnit::getCombatOwner(TeamTypes eForTeam, const CvPlot* pPlot) cons
 		}
 	}
 
-	return getOwnerINLINE();
+	return getOwner();
 }
 
 TeamTypes CvUnit::getTeam() const
 {
-	return GET_PLAYER(getOwnerINLINE()).getTeam();
+	return GET_PLAYER(getOwner()).getTeam();
 }
 
 
@@ -22536,8 +22531,8 @@ void CvUnit::setCombatUnit(CvUnit* pCombatUnit, bool bAttacking, bool bStealthAt
 					// Log info about this combat...
 					char szOut[1024];
 					sprintf( szOut, "*** KOMBAT!\n     ATTACKER: Player %d Unit %d (%S's %S), CombatStrength=%d\n     DEFENDER: Player %d Unit %d (%S's %S), CombatStrength=%d\n",
-						getOwnerINLINE(), getID(), GET_PLAYER(getOwnerINLINE()).getName(), getName().GetCString(), currCombatStr(NULL, NULL),
-						pCombatUnit->getOwnerINLINE(), pCombatUnit->getID(), GET_PLAYER(pCombatUnit->getOwnerINLINE()).getName(), pCombatUnit->getName().GetCString(), pCombatUnit->currCombatStr(pCombatUnit->plot(), this));
+						getOwner(), getID(), GET_PLAYER(getOwner()).getName(), getName().GetCString(), currCombatStr(NULL, NULL),
+						pCombatUnit->getOwner(), pCombatUnit->getID(), GET_PLAYER(pCombatUnit->getOwner()).getName(), pCombatUnit->getName().GetCString(), pCombatUnit->currCombatStr(pCombatUnit->plot(), this));
 					gDLL->messageControlLog(szOut);
 				}
 			}
@@ -22572,7 +22567,7 @@ void CvUnit::setCombatUnit(CvUnit* pCombatUnit, bool bAttacking, bool bStealthAt
 
 		FAssertMsg(getCombatUnit() == NULL, "Combat Unit is not expected to be assigned");
 		/*FAssertMsg(!(plot()->isFighting()), "(plot()->isFighting()) did not return false as expected");*///TB - this can happen now safely.
-		m_bCombatFocus = (bAttacking && !(gDLL->getInterfaceIFace()->isFocusedWidget()) && ((getOwnerINLINE() == GC.getGameINLINE().getActivePlayer()) || ((pCombatUnit->getOwnerINLINE() == GC.getGameINLINE().getActivePlayer()) && !(GC.getGameINLINE().isMPOption(MPOPTION_SIMULTANEOUS_TURNS)))));
+		m_bCombatFocus = (bAttacking && !(gDLL->getInterfaceIFace()->isFocusedWidget()) && ((getOwner() == GC.getGameINLINE().getActivePlayer()) || ((pCombatUnit->getOwner() == GC.getGameINLINE().getActivePlayer()) && !(GC.getGameINLINE().isMPOption(MPOPTION_SIMULTANEOUS_TURNS)))));
 		m_combatUnit = pCombatUnit->getIDInfo();
 		if (!bStealthAttack)
 		{
@@ -22745,7 +22740,7 @@ void CvUnit::setTransportUnit(CvUnit* pTransportUnit)
 /************************************************************************************************/
 			if (pOldTransportUnit != NULL && !pOldTransportUnit->hasCargo())
 			{
-				if (pOldTransportUnit->getDomainType() == DOMAIN_SEA && pOldTransportUnit->getOwnerINLINE() == BARBARIAN_PLAYER)
+				if (pOldTransportUnit->getDomainType() == DOMAIN_SEA && pOldTransportUnit->getOwner() == BARBARIAN_PLAYER)
 				{
 					pOldTransportUnit->AI_setUnitAIType(UNITAI_ATTACK_SEA);
 				}
@@ -23412,7 +23407,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 	{
 		if (kPromotion.getStateReligionPrereq() != NO_RELIGION)
 		{
-			if (GET_PLAYER(getOwnerINLINE()).getStateReligion() != kPromotion.getStateReligionPrereq())
+			if (GET_PLAYER(getOwner()).getStateReligion() != kPromotion.getStateReligionPrereq())
 			{
 				return false;
 			}
@@ -24327,7 +24322,7 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 	{
 		if (promotionInfo.getQualityChange() > 0)
 		{
-			int iExperienceNeededForNext = calculateExperience((getLevel() + 1), getOwnerINLINE());
+			int iExperienceNeededForNext = calculateExperience((getLevel() + 1), getOwner());
 			if (getExperience() >= iExperienceNeededForNext)
 			{
 				return false;
@@ -26280,7 +26275,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 		m_eUnitType = (UnitTypes)tempUnitType;
 		GET_TEAM(getTeam()).changeUnitClassCount((UnitClassTypes)GC.getUnitInfo(m_eUnitType).getUnitClassType(), 1);
-		GET_PLAYER(getOwnerINLINE()).changeUnitClassCount((UnitClassTypes)GC.getUnitInfo(m_eUnitType).getUnitClassType(), 1);
+		GET_PLAYER(getOwner()).changeUnitClassCount((UnitClassTypes)GC.getUnitInfo(m_eUnitType).getUnitClassType(), 1);
 		m_bDeathDelay = true;
 	}
 	m_pUnitInfo = &GC.getUnitInfo(m_eUnitType);
@@ -29058,7 +29053,7 @@ void CvUnit::collateralCombat(const CvPlot* pPlot, CvUnit* pSkipUnit)
 				{
 // BUG - Combat Events - start
 					int iDamageDone = iUnitDamage - pBestUnit->getDamage();
-					pBestUnit->setDamage(iUnitDamage, getOwnerINLINE());
+					pBestUnit->setDamage(iUnitDamage, getOwner());
 					//TB Combat Mod begin
 					if (dealsColdDamage())
 					{
@@ -29084,10 +29079,10 @@ void CvUnit::collateralCombat(const CvPlot* pPlot, CvUnit* pSkipUnit)
 		MEMORY_TRACK_EXEMPT();
 
 		szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_SUFFER_COL_DMG", iDamageCount);
-		AddDLLMessage(pSkipUnit->getOwnerINLINE(), (pSkipUnit->getDomainType() != DOMAIN_AIR), GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_COLLATERAL", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pSkipUnit->getX(), pSkipUnit->getY(), true, true);
+		AddDLLMessage(pSkipUnit->getOwner(), (pSkipUnit->getDomainType() != DOMAIN_AIR), GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_COLLATERAL", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pSkipUnit->getX(), pSkipUnit->getY(), true, true);
 
 		szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_INFLICT_COL_DMG", getNameKey(), iDamageCount);
-		AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_COLLATERAL", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pSkipUnit->getX(), pSkipUnit->getY());
+		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_COLLATERAL", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pSkipUnit->getX(), pSkipUnit->getY());
 	}
 }
 
@@ -29200,7 +29195,7 @@ void CvUnit::rBombardCombat(const CvPlot* pPlot, CvUnit* pFirstUnit)
 
 		if (pBestUnit != NULL)
 		{		
-			eBUPlayer = pBestUnit->getOwnerINLINE();
+			eBUPlayer = pBestUnit->getOwner();
 			eBUDomain = pBestUnit->getDomainType();
 
 			mapUnitDamage.erase(pBestUnit);
@@ -29261,7 +29256,7 @@ void CvUnit::rBombardCombat(const CvPlot* pPlot, CvUnit* pFirstUnit)
 				{
 // BUG - Combat Events - start
 					int iDamageDone = iUnitDamage - pBestUnit->getDamage();
-					pBestUnit->setDamage(iUnitDamage, getOwnerINLINE());
+					pBestUnit->setDamage(iUnitDamage, getOwner());
 					//TB Combat Mod begin
 					if (dealsColdDamage())
 					{
@@ -29327,7 +29322,7 @@ void CvUnit::rBombardCombat(const CvPlot* pPlot, CvUnit* pFirstUnit)
 		AddDLLMessage(eBUPlayer, (eBUDomain != DOMAIN_AIR), GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_COLLATERAL", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), iBUX, iBUY, true, true);
 
 		szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_INFLICT_COL_DMG", getNameKey(), iDamageCount);
-		AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_COLLATERAL", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), iBUX, iBUY);
+		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_COLLATERAL", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), iBUX, iBUY);
 	}
 	else
 	{
@@ -29421,7 +29416,7 @@ void CvUnit::flankingStrikeCombat(const CvPlot* pPlot, int iAttackerStrength, in
 // BUG - Combat Events - start
 		int iDamageDone = iDamage - pUnit->getDamage();
 // BUG - Combat Events - end
-		pUnit->setDamage(iDamage, getOwnerINLINE());
+		pUnit->setDamage(iDamage, getOwner());
 		//TB Combat Mod begin
 		if (dealsColdDamage())
 		{
@@ -29434,9 +29429,9 @@ void CvUnit::flankingStrikeCombat(const CvPlot* pPlot, int iAttackerStrength, in
 				MEMORY_TRACK_EXEMPT();
 
 				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_KILLED_UNIT_BY_FLANKING", getNameKey(), pUnit->getNameKey(), pUnit->getVisualCivAdjective(getTeam()));
-				AddDLLMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitVictoryScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitVictoryScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_UNIT_DIED_BY_FLANKING", pUnit->getNameKey(), getNameKey(), getVisualCivAdjective(pUnit->getTeam()));
-				AddDLLMessage(pUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
+				AddDLLMessage(pUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
 			}
 
 			pUnit->kill(false, NO_PLAYER, true); 
@@ -29453,12 +29448,12 @@ void CvUnit::flankingStrikeCombat(const CvPlot* pPlot, int iAttackerStrength, in
 		MEMORY_TRACK_EXEMPT();
 
 		CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_DAMAGED_UNITS_BY_FLANKING", getNameKey(), iNumUnitsHit);
-		AddDLLMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitVictoryScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+		AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitVictoryScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 
 		if (NULL != pSkipUnit)
 		{
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_UNITS_DAMAGED_BY_FLANKING", getNameKey(), iNumUnitsHit);
-			AddDLLMessage(pSkipUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
+			AddDLLMessage(pSkipUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
 		}
 	}
 }
@@ -29507,7 +29502,7 @@ CvUnit* CvUnit::airStrikeTarget(const CvPlot* pPlot) const
 {
 	CvUnit* pDefender;
 
-	pDefender = pPlot->getBestDefender(NO_PLAYER, getOwnerINLINE(), this, true);
+	pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true);
 
 	if (pDefender != NULL)
 	{
@@ -29610,10 +29605,10 @@ bool CvUnit::airStrike(CvPlot* pPlot)//
 		MEMORY_TRACK_EXEMPT();
 
 		CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ARE_ATTACKED_BY_AIR", pDefender->getNameKey(), getNameKey(), -(((iUnitDamage - pDefender->getDamage()) * 100) / pDefender->maxHitPoints()));
-		AddDLLMessage(pDefender->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
+		AddDLLMessage(pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
 
 		szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ATTACK_BY_AIR", getNameKey(), pDefender->getNameKey(), -(((iUnitDamage - pDefender->getDamage()) * 100) / pDefender->maxHitPoints()));
-		AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACKED", MESSAGE_TYPE_INFO, pDefender->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACKED", MESSAGE_TYPE_INFO, pDefender->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 	}
 
 	collateralCombat(pPlot, pDefender);
@@ -29654,7 +29649,7 @@ bool CvUnit::airStrike(CvPlot* pPlot)//
 		}
 	}
 
-	pDefender->setDamage(iUnitDamage, getOwnerINLINE());
+	pDefender->setDamage(iUnitDamage, getOwner());
 	//TB Combat Mod Begin
 	if (dealsColdDamage())
 	{
@@ -29830,12 +29825,12 @@ bool CvUnit::rangeStrike(int iX, int iY)
 
 		szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ARE_ATTACKED_BY_AIR", pDefender->getNameKey(), getNameKey(), -(((iUnitDamage - pDefender->getDamage()) * 100) / pDefender->maxHitPoints()));
 		//red icon over attacking unit
-		AddDLLMessage(pDefender->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_COMBAT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), this->getX(), this->getY(), true, true);
+		AddDLLMessage(pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_COMBAT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), this->getX(), this->getY(), true, true);
 		//white icon over defending unit
-		AddDLLMessage(pDefender->getOwnerINLINE(), false, 0, L"", "AS2D_COMBAT", MESSAGE_TYPE_DISPLAY_ONLY, pDefender->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), pDefender->getX(), pDefender->getY(), true, true);
+		AddDLLMessage(pDefender->getOwner(), false, 0, L"", "AS2D_COMBAT", MESSAGE_TYPE_DISPLAY_ONLY, pDefender->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), pDefender->getX(), pDefender->getY(), true, true);
 
 		szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ATTACK_BY_AIR", getNameKey(), pDefender->getNameKey(), -(((iUnitDamage - pDefender->getDamage()) * 100) / pDefender->maxHitPoints()));
-		AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_COMBAT", MESSAGE_TYPE_INFO, pDefender->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_COMBAT", MESSAGE_TYPE_INFO, pDefender->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 	}
 
 	collateralCombat(pPlot, pDefender);
@@ -29876,7 +29871,7 @@ bool CvUnit::rangeStrike(int iX, int iY)
 		}
 	}
 	//set damage but don't update entity damage visibility
-	pDefender->setDamage(iUnitDamage, getOwnerINLINE(), false);
+	pDefender->setDamage(iUnitDamage, getOwner(), false);
 	//TB Combat Mod begin
 	if (dealsColdDamage())
 	{
@@ -30325,7 +30320,7 @@ void CvUnit::getDefenderCombatValues(CvUnit& kDefender, const CvPlot* pPlot, int
 
 	if (kDefender.isNPC())
 	{
-		if (GET_PLAYER(getOwnerINLINE()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(getOwnerINLINE()).getHandicapType()).getFreeWinsVsBarbs())
+		if (GET_PLAYER(getOwner()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(getOwner()).getHandicapType()).getFreeWinsVsBarbs())
 		{
 			// UncutDragon
 /* original code
@@ -30337,7 +30332,7 @@ void CvUnit::getDefenderCombatValues(CvUnit& kDefender, const CvPlot* pPlot, int
 	}
 	if (isNPC())
 	{
-		if (GET_PLAYER(kDefender.getOwnerINLINE()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(kDefender.getOwnerINLINE()).getHandicapType()).getFreeWinsVsBarbs())
+		if (GET_PLAYER(kDefender.getOwner()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(kDefender.getOwner()).getHandicapType()).getFreeWinsVsBarbs())
 		{
 			// UncutDragon
 /* original code
@@ -30434,7 +30429,7 @@ int CvUnit::getTriggerValue(EventTriggerTypes eTrigger, const CvPlot* pPlot, boo
 	{
 		if (kTrigger.isUnitsOnPlot())
 		{
-			if (!plot()->canTrigger(eTrigger, getOwnerINLINE()))
+			if (!plot()->canTrigger(eTrigger, getOwner()))
 			{
 				return MIN_INT;
 			}
@@ -30454,7 +30449,7 @@ int CvUnit::getTriggerValue(EventTriggerTypes eTrigger, const CvPlot* pPlot, boo
 	{
 		if (!Cy::call<bool>(PYRandomEventModule, kTrigger.getPythonCanDoUnit(), Cy::Args()
 			<< eTrigger
-			<< getOwnerINLINE()
+			<< getOwner()
 			<< getID()))
 		{
 			return MIN_INT;
@@ -30545,7 +30540,7 @@ void CvUnit::applyEvent(EventTypes eEvent)
 		MEMORY_TRACK_EXEMPT();
 
 		CvWString szText = gDLL->getText("TXT_KEY_EVENT_UNIT_IMMOBILE", getNameKey(), kEvent.getUnitImmobileTurns());
-		AddDLLMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szText, "AS2D_UNITGIFTED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_UNIT_TEXT"), getX(), getY(), true, true);
+		AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szText, "AS2D_UNITGIFTED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_UNIT_TEXT"), getX(), getY(), true, true);
 	}
 
 	CvWString szNameKey(kEvent.getUnitNameKey());
@@ -30568,7 +30563,7 @@ const CvArtInfoUnit* CvUnit::getArtInfo(int i, EraTypes eEra) const
 
 const TCHAR* CvUnit::getButton() const
 {
-	const CvArtInfoUnit* pArtInfo = getArtInfo(0, GET_PLAYER(getOwnerINLINE()).getCurrentEra());
+	const CvArtInfoUnit* pArtInfo = getArtInfo(0, GET_PLAYER(getOwner()).getCurrentEra());
 
 	if (NULL != pArtInfo)
 	{
@@ -30686,14 +30681,14 @@ bool CvUnit::isCombatVisible(const CvUnit* pDefender) const
 		{
 			if (isHuman())
 			{
-				if (!GET_PLAYER(getOwnerINLINE()).isOption(PLAYEROPTION_QUICK_ATTACK))
+				if (!GET_PLAYER(getOwner()).isOption(PLAYEROPTION_QUICK_ATTACK))
 				{
 					bVisible = true;
 				}
 			}
 			else if (NULL != pDefender && pDefender->isHuman())
 			{
-				if (!GET_PLAYER(pDefender->getOwnerINLINE()).isOption(PLAYEROPTION_QUICK_DEFENSE))
+				if (!GET_PLAYER(pDefender->getOwner()).isOption(PLAYEROPTION_QUICK_DEFENSE))
 				{
 					bVisible = true;
 				}
@@ -30768,7 +30763,7 @@ void CvUnit::getLayerAnimationPaths(std::vector<AnimationPathTypes>& aAnimationP
 
 int CvUnit::getSelectionSoundScript() const
 {
-	int iScriptId = getArtInfo(0, GET_PLAYER(getOwnerINLINE()).getCurrentEra())->getSelectionSoundScriptId();
+	int iScriptId = getArtInfo(0, GET_PLAYER(getOwner()).getCurrentEra())->getSelectionSoundScriptId();
 	if (iScriptId == -1)
 	{
 		iScriptId = GC.getCivilizationInfo(getCivilizationType()).getSelectionSoundScriptId();
@@ -30888,16 +30883,16 @@ bool CvUnit::airBomb1(int iX, int iY)
 		{
 			iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
 		}
-		changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwnerINLINE() == getOwnerINLINE());
+		changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwner() == getOwner());
 		//TB Combat Mods end
 
 		MEMORY_TRACK_EXEMPT();
 
 		szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_DEFENSES_REDUCED_TO", pCity->getNameKey(), pCity->getDefenseModifier(false), getNameKey());
-		AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
+		AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
 
 		szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_DEFENSES_REDUCED_TO", getNameKey(), pCity->getNameKey(), pCity->getDefenseModifier(false));
-		AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY());
+		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY());
 	}
 	else
 	{
@@ -30910,7 +30905,7 @@ bool CvUnit::airBomb1(int iX, int iY)
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DESTROYED_IMP", getNameKey(), GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 				}
 
 				if (pPlot->isOwned())
@@ -30918,17 +30913,17 @@ bool CvUnit::airBomb1(int iX, int iY)
 					{
 						MEMORY_TRACK_EXEMPT();
 
-						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_IMP_WAS_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide(), getNameKey(), GET_PLAYER(getOwnerINLINE()).getCivilizationAdjectiveKey());
-						AddDLLMessage(pPlot->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
+						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_IMP_WAS_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide(), getNameKey(), GET_PLAYER(getOwner()).getCivilizationAdjectiveKey());
+						AddDLLMessage(pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
 					}
-					bool bBarb = GET_PLAYER(pPlot->getOwnerINLINE()).isHominid();
+					bool bBarb = GET_PLAYER(pPlot->getOwner()).isHominid();
 					//TB Combat Mods begin
 					int iMax = MAX_INT;
 					if (!GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
 					{
 						iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
 					}
-					changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pPlot->getOwnerINLINE() == getOwnerINLINE());
+					changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pPlot->getOwner() == getOwner());
 					//TB Combat Mods end
 				}
 
@@ -30985,7 +30980,7 @@ bool CvUnit::airBomb1(int iX, int iY)
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_FAIL_DESTROY_IMP", getNameKey(), GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMB_FAILS", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMB_FAILS", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
 			}
 		}
 	}
@@ -31085,14 +31080,14 @@ bool CvUnit::airBomb2(int iX, int iY)
 	{
 		if (GC.getTechInfo((TechTypes)iI).getDCMAirBombTech1())
 		{
-            if (GET_TEAM(GET_PLAYER(getOwnerINLINE()).getTeam()).isHasTech((TechTypes)iI))
+            if (GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isHasTech((TechTypes)iI))
 			{
 				abTech1 = true;
 			}
 		}
 		if (GC.getTechInfo((TechTypes)iI).getDCMAirBombTech2())
 		{
-            if (GET_TEAM(GET_PLAYER(getOwnerINLINE()).getTeam()).isHasTech((TechTypes)iI))
+            if (GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isHasTech((TechTypes)iI))
 			{
 				abTech2 = true;
 			}
@@ -31148,7 +31143,7 @@ bool CvUnit::airBomb2(int iX, int iY)
 				{
 					iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
 				}
-				changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwnerINLINE() == getOwnerINLINE());
+				changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwner() == getOwner());
 				//TB Combat Mod end
 				pCity->setNumRealBuilding((BuildingTypes)build, 0);
 
@@ -31156,9 +31151,9 @@ bool CvUnit::airBomb2(int iX, int iY)
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB2SUCCESS", GC.getBuildingInfo((BuildingTypes)build).getTextKeyWide(), pCity->getNameKey());
-					AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
+					AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
 					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB2SUCCESS", GC.getBuildingInfo((BuildingTypes)build).getTextKeyWide(), pCity->getNameKey());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY(), true, true);
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY(), true, true);
 				}
 
 				CvUnit* pLoopUnit;
@@ -31216,9 +31211,9 @@ bool CvUnit::airBomb2(int iX, int iY)
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB2FAIL", pCity->getNameKey());
-				AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
+				AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB2FAIL", pCity->getNameKey());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY(), true, true);
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY(), true, true);
 			}
 		}
 		if(bNoTarget)
@@ -31233,9 +31228,9 @@ bool CvUnit::airBomb2(int iX, int iY)
 						MEMORY_TRACK_EXEMPT();
 
 						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB_POP");
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY(), true, true);
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY(), true, true);
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB_POP");
-						AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
+						AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
 					}
 				}
 			}
@@ -31346,14 +31341,14 @@ bool CvUnit::airBomb3(int iX, int iY)
 	{
 		if (GC.getTechInfo((TechTypes)iI).getDCMAirBombTech1())
 		{
-            if (GET_TEAM(GET_PLAYER(getOwnerINLINE()).getTeam()).isHasTech((TechTypes)iI))
+            if (GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isHasTech((TechTypes)iI))
 			{
 				abTech1 = true;
 			}
 		}
 		if (GC.getTechInfo((TechTypes)iI).getDCMAirBombTech2())
 		{
-            if (GET_TEAM(GET_PLAYER(getOwnerINLINE()).getTeam()).isHasTech((TechTypes)iI))
+            if (GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isHasTech((TechTypes)iI))
 			{
 				abTech2 = true;
 			}
@@ -31409,16 +31404,16 @@ bool CvUnit::airBomb3(int iX, int iY)
 				{
 					iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
 				}
-				changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwnerINLINE() == getOwnerINLINE());
+				changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwner() == getOwner());
 				//TB Combat Mods end
 
 				{
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB3SUCCESS", GC.getBuildingInfo((BuildingTypes)build).getTextKeyWide(), pCity->getNameKey());
-					AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
+					AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
 					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB3SUCCESS", GC.getBuildingInfo((BuildingTypes)build).getTextKeyWide(), pCity->getNameKey());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY(), true, true);
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY(), true, true);
 				}
 				bSuccess = true;
 			}
@@ -31427,9 +31422,9 @@ bool CvUnit::airBomb3(int iX, int iY)
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB3FAIL", pCity->getNameKey());
-				AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
+				AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB3FAIL", pCity->getNameKey());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY(), true, true);
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY(), true, true);
 			}
 		}
 		if(bNoTarget)
@@ -31444,9 +31439,9 @@ bool CvUnit::airBomb3(int iX, int iY)
 						MEMORY_TRACK_EXEMPT();
 
 						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB_POP");
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY(), true, true);
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY(), true, true);
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB_POP");
-						AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
+						AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
 					}
 					bSuccess = true;
 				}
@@ -31684,7 +31679,7 @@ bool CvUnit::airBomb4(int iX, int iY)
 				{
 					iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
 				}
-				changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwnerINLINE() == getOwnerINLINE());
+				changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwner() == getOwner());
 				//TB Combat Mods end
 			}
 			iDamage = (airCombatDamage(pUnit) * 2);
@@ -31694,12 +31689,12 @@ bool CvUnit::airBomb4(int iX, int iY)
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ARE_ATTACKED_BY_AIR", pUnit->getNameKey(), getNameKey(), -(((iUnitDamage - pUnit->getDamage()) * 100) / pUnit->maxHitPoints()));
-				AddDLLMessage(pUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
+				AddDLLMessage(pUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ATTACK_BY_AIR", getNameKey(), pUnit->getNameKey(), -(((iUnitDamage - pUnit->getDamage()) * 100) / pUnit->maxHitPoints()));
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACKED", MESSAGE_TYPE_INFO, pUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACKED", MESSAGE_TYPE_INFO, pUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
 			}
 			bSuccess = true;
-			pUnit->setDamage(iUnitDamage, getOwnerINLINE());
+			pUnit->setDamage(iUnitDamage, getOwner());
 			//TB Combat Mod begin
 			if (dealsColdDamage())
 			{
@@ -31714,9 +31709,9 @@ bool CvUnit::airBomb4(int iX, int iY)
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMYSINK_AIRBOMB4SUCCESS", pUnit->getNameKey());
-					AddDLLMessage(pUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
+					AddDLLMessage(pUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
 					szBuffer = gDLL->getText("TXT_KEY_MISC_YOUSINK_AIRBOMB4SUCCESS", pUnit->getNameKey());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
 				}
 			}
 		}
@@ -31725,9 +31720,9 @@ bool CvUnit::airBomb4(int iX, int iY)
 			MEMORY_TRACK_EXEMPT();
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB4FAIL", pCity->getNameKey());
-			AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
+			AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB4FAIL", pCity->getNameKey());
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
 		}
 		if(bNoTarget)
 		{
@@ -31744,9 +31739,9 @@ bool CvUnit::airBomb4(int iX, int iY)
 							MEMORY_TRACK_EXEMPT();
 
 							szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB_POP");
-							AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
+							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
 							szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB_POP");
-							AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
+							AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
 						}
 					}
 				}
@@ -31914,9 +31909,9 @@ bool CvUnit::airBomb5(int iX, int iY)
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB5SUCCESS", pCity->getNameKey());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY(), true, true);
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY(), true, true);
 				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB5SUCCESS", pCity->getNameKey());
-				AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
+				AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
 			}
 			bool bBarb = pCity->isHominid();
 			//TB Combat Mods begin
@@ -31925,7 +31920,7 @@ bool CvUnit::airBomb5(int iX, int iY)
 			{
 				iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
 			}
-			changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwnerINLINE() == getOwnerINLINE());
+			changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwner() == getOwner());
 			//TB Combat Mods end
 		}
 		else
@@ -31933,9 +31928,9 @@ bool CvUnit::airBomb5(int iX, int iY)
 			MEMORY_TRACK_EXEMPT();
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB5FAIL", pCity->getNameKey());
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY(), true, true);
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY(), true, true);
 			szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB5FAIL", pCity->getNameKey());
-			AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
+			AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
 		}
 		if(bNoTarget)
 		{
@@ -31950,9 +31945,9 @@ bool CvUnit::airBomb5(int iX, int iY)
 						MEMORY_TRACK_EXEMPT();
 
 						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIRBOMB_POP");
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY(), true, true);
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY(), true, true);
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB_POP");
-						AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
+						AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
 					}
 				}
 			}
@@ -32192,11 +32187,11 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 //			{
 //				MEMORY_TRACK_EXEMPT();
 //
-//				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENSES_IN_CITY_REDUCED_TO", pCity->getNameKey(), pCity->getDefenseModifier(false), GET_PLAYER(getOwnerINLINE()).getNameKey());
-//				AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
+//				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENSES_IN_CITY_REDUCED_TO", pCity->getNameKey(), pCity->getDefenseModifier(false), GET_PLAYER(getOwner()).getNameKey());
+//				AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
 //
 //				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_REDUCE_CITY_DEFENSES", getNameKey(), pCity->getNameKey(), pCity->getDefenseModifier(false));
-//				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY());
+//				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY());
 //			}
 ///************************************************************************************************/
 ///* RevolutionDCM	                  Start		 05/31/10                        Afforess       */
@@ -32233,7 +32228,7 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 			int shotDistance = plotDistance(plot()->getX(), plot()->getY(), pPlot->getX(), pPlot->getY());
 			odds += (shotDistance - 1) * 30;
 
-			pLoopUnit = pPlot->getBestDefender(NO_PLAYER, getOwnerINLINE(), this, true);
+			pLoopUnit = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true);
 			if (pLoopUnit != NULL)
 			{
 				// RevolutionDCM - change proposal to ranged bombardment. Only collateral damage can be issued.
@@ -32243,21 +32238,21 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 						MEMORY_TRACK_EXEMPT();
 
 						szBuffer = gDLL->getText("TXT_KEY_HAS_RANGED_BOMBARD_ATTACKED", getNameKey());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY());
 						szBuffer = gDLL->getText("TXT_KEY_HAS_BEEN_RANGED_BOMBARD_ATTACKED", getNameKey());
-						AddDLLMessage(pLoopUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
+						AddDLLMessage(pLoopUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
 					}
 					rBombardCombat(pPlot, pLoopUnit);
-					changeExperience100(100, maxXPValue(), true, pLoopUnit->getOwnerINLINE() == getOwnerINLINE(), false/*this was too corruptable with SM - split to bombatd and get tons of GG pts(!pPlot->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS))*/);
+					changeExperience100(100, maxXPValue(), true, pLoopUnit->getOwner() == getOwner(), false/*this was too corruptable with SM - split to bombatd and get tons of GG pts(!pPlot->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS))*/);
 				}
 				else
 				{
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_BOMB_MISSED", getNameKey());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY());
 					szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_BOMB_MISSED", getNameKey());
-					AddDLLMessage(pLoopUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY(), true, true);
+					AddDLLMessage(pLoopUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY(), true, true);
 				}
 			}
 /************************************************************************************************/
@@ -32284,7 +32279,7 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 		int shotDistance = plotDistance(plot()->getX(), plot()->getY(), pPlot->getX(), pPlot->getY());
 		odds += (shotDistance - 1) * 30;
 
-		pLoopUnit = pPlot->getBestDefender(NO_PLAYER, getOwnerINLINE(), this, true);
+		pLoopUnit = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true);
 		if (pLoopUnit != NULL)
 		{
 			//RevolutionDCM - change proposal to ranged bombardment. Only collateral damage can be issued.
@@ -32294,21 +32289,21 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_HAS_RANGED_BOMBARD_ATTACKED", getNameKey());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY());
 					szBuffer = gDLL->getText("TXT_KEY_HAS_BEEN_RANGED_BOMBARD_ATTACKED", getNameKey());
-					AddDLLMessage(pLoopUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
+					AddDLLMessage(pLoopUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
 				}
 				rBombardCombat(pPlot, pLoopUnit);
-				changeExperience100(100, maxXPValue(), true, pLoopUnit->getOwnerINLINE() == getOwnerINLINE(), false/*this was too corruptable with SM - split to bombatd and get tons of GG pts(!pPlot->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS))*/);
+				changeExperience100(100, maxXPValue(), true, pLoopUnit->getOwner() == getOwner(), false/*this was too corruptable with SM - split to bombatd and get tons of GG pts(!pPlot->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS))*/);
 			}
 			else
 			{
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_BOMB_MISSED", getNameKey());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY());
 				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_BOMB_MISSED", getNameKey());
-				AddDLLMessage(pLoopUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY(), true, true);
+				AddDLLMessage(pLoopUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY(), true, true);
 			}
 /************************************************************************************************/
 /* RevolutionDCM	                  Start		 05/31/10                        Afforess       */
@@ -32331,11 +32326,11 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 						MEMORY_TRACK_EXEMPT();
 
 						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DESTROYED_IMP", getNameKey(), GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 						if (pPlot->isOwned())
 						{
-							szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_IMP_WAS_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide(), getNameKey(), GET_PLAYER(getOwnerINLINE()).getCivilizationAdjectiveKey());
-							AddDLLMessage(pPlot->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
+							szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_IMP_WAS_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide(), getNameKey(), GET_PLAYER(getOwner()).getCivilizationAdjectiveKey());
+							AddDLLMessage(pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
 						}
 					}
 					pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
@@ -32346,7 +32341,7 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_FAIL_DESTROY_IMP", getNameKey(), GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMB_FAILS", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMB_FAILS", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
 				}
 			}
 /************************************************************************************************/
@@ -32483,7 +32478,7 @@ void CvUnit::doOpportunityFire()
 				if (iVolumeDefenders > 0)
 				{
 					pBestUnit = NULL;
-					pBestUnit = pLoopPlot->getBestDefender(NO_PLAYER, getOwnerINLINE(), this, true);
+					pBestUnit = pLoopPlot->getBestDefender(NO_PLAYER, getOwner(), this, true);
 					if (pBestUnit != NULL)
 					{
 						iBestUnitStr = pBestUnit->currCombatStr(pLoopPlot, this, NULL, true);
@@ -32522,9 +32517,9 @@ void CvUnit::doOpportunityFire()
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_OPP_FIRE", getNameKey(), pDefender->getNameKey());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pAttackPlot->getX(), pAttackPlot->getY(), true, true);
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pAttackPlot->getX(), pAttackPlot->getY(), true, true);
 				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_OPP_FIRE", getNameKey(), pDefender->getNameKey());
-				AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pAttackPlot->getX(), pAttackPlot->getY(), true, true);
+				AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pAttackPlot->getX(), pAttackPlot->getY(), true, true);
 			}
 
 			// Bombard entity mission
@@ -32581,12 +32576,12 @@ void CvUnit::doActiveDefense()
 							MEMORY_TRACK_EXEMPT();
 
 							szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ARE_ATTACKED_BY_AIR", pDefender->getNameKey(), getNameKey(), -(((iUnitDamage - pDefender->getDamage()) * 100) / pDefender->maxHitPoints()));
-							AddDLLMessage(pDefender->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pLoopPlot->getX(), pLoopPlot->getY(), true, true);
+							AddDLLMessage(pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pLoopPlot->getX(), pLoopPlot->getY(), true, true);
 							szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ATTACK_BY_AIR", getNameKey(), pDefender->getNameKey(), -(((iUnitDamage - pDefender->getDamage()) * 100) / pDefender->maxHitPoints()));
-							AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACKED", MESSAGE_TYPE_INFO, pDefender->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pLoopPlot->getX(), pLoopPlot->getY());
+							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACKED", MESSAGE_TYPE_INFO, pDefender->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pLoopPlot->getX(), pLoopPlot->getY());
 						}
 						collateralCombat(pLoopPlot, pDefender);
-						pDefender->setDamage(iUnitDamage, getOwnerINLINE());
+						pDefender->setDamage(iUnitDamage, getOwner());
 						bSuccess = true;
 						//TB Combat Mod begin
 						if (dealsColdDamage())
@@ -32751,7 +32746,7 @@ bool CvUnit::archerBombard(int iX, int iY, bool supportAttack)
 	}
 
 	// RevolutionDCM - getBestDefender() now used in all cases
-	pLoopUnit = pPlot->getBestDefender(NO_PLAYER, getOwnerINLINE(), this, true);
+	pLoopUnit = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true);
 
 	if (GC.getGameINLINE().getSorenRandNum(100, "Bombard Accuracy") <= getDCMBombAccuracy())
 	{
@@ -32762,10 +32757,10 @@ bool CvUnit::archerBombard(int iX, int iY, bool supportAttack)
 		MEMORY_TRACK_EXEMPT();
 
 		szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_BOMB_MISSED", getNameKey());
-		AddDLLMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
+		AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
 		szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_BOMB_MISSED", getNameKey());
 		// RevolutionDCM - Archer Bombard fix - text display
-		AddDLLMessage(pLoopUnit->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY());
+		AddDLLMessage(pLoopUnit->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY());
 	}
 	if (bTarget)
 	{
@@ -32783,7 +32778,7 @@ bool CvUnit::archerBombard(int iX, int iY, bool supportAttack)
 		{
 			if (pLoopUnit->isNPC())
 			{
-				GET_PLAYER(getOwnerINLINE()).changeWinsVsBarbs(1);
+				GET_PLAYER(getOwner()).changeWinsVsBarbs(1);
 			}
 			if (!isHiddenNationality() && !pLoopUnit->isHiddenNationality())
 			{
@@ -32800,8 +32795,8 @@ bool CvUnit::archerBombard(int iX, int iY, bool supportAttack)
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DESTROYED_ENEMY", getNameKey(), pLoopUnit->getNameKey());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitVictoryScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
-				if (getVisualOwner(pLoopUnit->getTeam()) != getOwnerINLINE())
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitVictoryScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+				if (getVisualOwner(pLoopUnit->getTeam()) != getOwner())
 				{
 					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED_UNKNOWN", pLoopUnit->getNameKey(), getNameKey());
 				}
@@ -32809,12 +32804,12 @@ bool CvUnit::archerBombard(int iX, int iY, bool supportAttack)
 				{
 					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED", pLoopUnit->getNameKey(), getNameKey(), getVisualCivAdjective(pLoopUnit->getTeam()));
 				}
-				AddDLLMessage(pLoopUnit->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer,GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
+				AddDLLMessage(pLoopUnit->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer,GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
 			}
 
 			// report event to Python, along with some other key state
 			CvEventReporter::getInstance().combatResult(this, pLoopUnit);
-			//pLoopUnit->getUnitInfo().getKillOutcomeList()->execute(*this, pLoopUnit->getOwnerINLINE(), pLoopUnit->getUnitType());
+			//pLoopUnit->getUnitInfo().getKillOutcomeList()->execute(*this, pLoopUnit->getOwner(), pLoopUnit->getUnitType());
 
 			CvOutcomeListMerged list;
 			list.addOutcomeList(pLoopUnit->getUnitInfo().getKillOutcomeList());
@@ -32827,7 +32822,7 @@ bool CvUnit::archerBombard(int iX, int iY, bool supportAttack)
 					list.addOutcomeList(pOutcomeList);
 				}
 			}
-			list.execute(*this, pLoopUnit->getOwnerINLINE(), pLoopUnit->getUnitType());
+			list.execute(*this, pLoopUnit->getOwner(), pLoopUnit->getUnitType());
 
 			/*for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 			{
@@ -32835,7 +32830,7 @@ bool CvUnit::archerBombard(int iX, int iY, bool supportAttack)
 				{
 					UnitCombatTypes eCombat = (UnitCombatTypes)iI;
 					CvOutcomeList* pOutcomeList = GC.getUnitCombatInfo(eCombat).getKillOutcomeList();
-					pOutcomeList->execute(*this, pLoopUnit->getOwnerINLINE(), pLoopUnit->getUnitType());
+					pOutcomeList->execute(*this, pLoopUnit->getOwner(), pLoopUnit->getUnitType());
 				}
 			}*/
 		}
@@ -32845,10 +32840,10 @@ bool CvUnit::archerBombard(int iX, int iY, bool supportAttack)
 			//TB Note: re-including original but commented out.  Once I see the damage mentioned I may want to tweak the coding rather than completely over-write its intention.
 //original:	szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ATTACK_BY_AIR", getNameKey(), pLoopUnit->getNameKey(), -(((iUnitDamage - pLoopUnit->getDamage()) * 100) / pLoopUnit->maxHitPoints()));
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ATTACK_BY_AIR", getNameKey(), pLoopUnit->getNameKey(), -iUnitDamage);
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACKED", MESSAGE_TYPE_INFO, pLoopUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACKED", MESSAGE_TYPE_INFO, pLoopUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 //original:	szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ARE_ATTACKED_BY_AIR", pLoopUnit->getNameKey(), getNameKey(), -(((iUnitDamage - pLoopUnit->getDamage()) * 100) / pLoopUnit->maxHitPoints()));
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ARE_ATTACKED_BY_AIR", pLoopUnit->getNameKey(), getNameKey(), -iUnitDamage);
-			AddDLLMessage(pLoopUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
+			AddDLLMessage(pLoopUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
 		}
 		// RevolutionDCM - end
 /************************************************************************************************/
@@ -33008,45 +33003,45 @@ bool CvUnit::fighterEngage(int iX, int iY)
 			MEMORY_TRACK_EXEMPT();
 
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_SHOT_DOWN_ENEMY", pDefender->getNameKey(), getNameKey(), getVisualCivAdjective(pDefender->getTeam()));
-			AddDLLMessage(pDefender->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
+			AddDLLMessage(pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_SHOT_DOWN", getNameKey(), pDefender->getNameKey());
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, pDefender->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, pDefender->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
 		}
 		else if (kAirMission.getDamage(BATTLE_UNIT_ATTACKER) > 0)
 		{
 			MEMORY_TRACK_EXEMPT();
 
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_HURT_ENEMY_AIR", pDefender->getNameKey(), getNameKey(), -(kAirMission.getDamage(BATTLE_UNIT_ATTACKER)), getVisualCivAdjective(pDefender->getTeam()));
-			AddDLLMessage(pDefender->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
+			AddDLLMessage(pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_AIR_UNIT_HURT", getNameKey(), pDefender->getNameKey(), -(kAirMission.getDamage(BATTLE_UNIT_ATTACKER)));
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, pDefender->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, pDefender->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
 		}
 		if (pDefender->isDead())
 		{
 			MEMORY_TRACK_EXEMPT();
 
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_SHOT_DOWN_ENEMY", getNameKey(), pDefender->getNameKey(), pDefender->getVisualCivAdjective(getTeam()));
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, pDefender->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, pDefender->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_SHOT_DOWN", pDefender->getNameKey(), getNameKey());
-			AddDLLMessage(pDefender->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
+			AddDLLMessage(pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
 		}
 		else if (kAirMission.getDamage(BATTLE_UNIT_DEFENDER) > 0)
 		{
 			MEMORY_TRACK_EXEMPT();
 
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_DAMAGED_ENEMY_AIR", getNameKey(), pDefender->getNameKey(), -(kAirMission.getDamage(BATTLE_UNIT_DEFENDER)), pDefender->getVisualCivAdjective(getTeam()));
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, pDefender->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, pDefender->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_AIR_UNIT_DAMAGED", pDefender->getNameKey(), getNameKey(), -(kAirMission.getDamage(BATTLE_UNIT_DEFENDER)));
-			AddDLLMessage(pDefender->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
+			AddDLLMessage(pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
 		}
 		if (0 == kAirMission.getDamage(BATTLE_UNIT_ATTACKER) + kAirMission.getDamage(BATTLE_UNIT_DEFENDER))
 		{
 			MEMORY_TRACK_EXEMPT();
 
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ABORTED_ENEMY_AIR", pDefender->getNameKey(), getNameKey(), getVisualCivAdjective(getTeam()));
-			AddDLLMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, pDefender->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
+			AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPT", MESSAGE_TYPE_INFO, pDefender->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY(), true, true);
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_AIR_UNIT_ABORTED", getNameKey(), pDefender->getNameKey());
-			AddDLLMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
+			AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_INTERCEPTED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
 		}
 	}
 	setMadeAttack(true);
@@ -33074,7 +33069,7 @@ float CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWith
 	PROFILE_FUNC();
 
 	/*** Dexy - Fixed Borders START ****/
-	if (GET_PLAYER(pLoserUnit->getOwnerINLINE()).hasFixedBorders())
+	if (GET_PLAYER(pLoserUnit->getOwner()).hasFixedBorders())
 	{
 		return 0.0f;
 	}
@@ -33135,7 +33130,7 @@ float CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWith
 	{
 		pDefenderPlot = pLoserPlot;
 	}
-	int iWinnerCultureBefore = pDefenderPlot->getCulture(getOwnerINLINE()); //used later for influence %
+	int iWinnerCultureBefore = pDefenderPlot->getCulture(getOwner()); //used later for influence %
 
 	float fWinnerPlotMultiplier = GC.getIDW_WINNER_PLOT_MULTIPLIER();
 
@@ -33154,21 +33149,21 @@ float CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWith
 		{
 			// if there are still some city defenders ->
 			// we use same influence rules as for field combat
-			influencePlots(pLoserPlot, pLoserUnit->getOwnerINLINE(), fLoserPlotMultiplier);
-			influencePlots(pWinnerPlot, pLoserUnit->getOwnerINLINE(), fWinnerPlotMultiplier);			
+			influencePlots(pLoserPlot, pLoserUnit->getOwner(), fLoserPlotMultiplier);
+			influencePlots(pWinnerPlot, pLoserUnit->getOwner(), fWinnerPlotMultiplier);			
 		}		
 		else // last defender is dead
 		{			
 			float fNoCityDefenderMultiplier = GC.getIDW_NO_CITY_DEFENDER_MULTIPLIER();
 
 			// last city defender is dead -> influence is increased
-			influencePlots(pLoserPlot, pLoserUnit->getOwnerINLINE(), fLoserPlotMultiplier * fNoCityDefenderMultiplier);
-			influencePlots(pWinnerPlot, pLoserUnit->getOwnerINLINE(), fWinnerPlotMultiplier * fNoCityDefenderMultiplier);
+			influencePlots(pLoserPlot, pLoserUnit->getOwner(), fLoserPlotMultiplier * fNoCityDefenderMultiplier);
+			influencePlots(pWinnerPlot, pLoserUnit->getOwner(), fWinnerPlotMultiplier * fNoCityDefenderMultiplier);
 
 			if (GC.isIDW_EMERGENCY_DRAFT_ENABLED())
 			{
-				int iDefenderCulture = pLoserPlot->getCulture(pLoserUnit->getOwnerINLINE());
-				int iAttackerCulture = pLoserPlot->getCulture(getOwnerINLINE());
+				int iDefenderCulture = pLoserPlot->getCulture(pLoserUnit->getOwner());
+				int iAttackerCulture = pLoserPlot->getCulture(getOwner());
 				
 				if (iDefenderCulture >= iAttackerCulture)
 				{
@@ -33183,8 +33178,8 @@ float CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWith
 
 						CvWString szBuffer;
 						szBuffer.Format(L"City militia has emerged! Resistance: %.1f%%", fResistence);	
-						AddDLLMessage(pLoserUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pLoserPlot->getX(), pLoserPlot->getY(), true, true);
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pLoserPlot->getX(), pLoserPlot->getY());
+						AddDLLMessage(pLoserUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pLoserPlot->getX(), pLoserPlot->getY(), true, true);
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pLoserPlot->getX(), pLoserPlot->getY());
 					}
 				}
 			}
@@ -33206,20 +33201,20 @@ float CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWith
 			float fFortCaptureMultiplier = GC.getIDW_FORT_CAPTURE_MULTIPLIER();
 
 			// influence is increased
-			influencePlots(pLoserPlot, pLoserUnit->getOwnerINLINE(), fLoserPlotMultiplier * fFortCaptureMultiplier);
-			influencePlots(pWinnerPlot, pLoserUnit->getOwnerINLINE(), fWinnerPlotMultiplier * fFortCaptureMultiplier);
+			influencePlots(pLoserPlot, pLoserUnit->getOwner(), fLoserPlotMultiplier * fFortCaptureMultiplier);
+			influencePlots(pWinnerPlot, pLoserUnit->getOwner(), fWinnerPlotMultiplier * fFortCaptureMultiplier);
 
 		}
 		else
 		{			
-			influencePlots(pLoserPlot, pLoserUnit->getOwnerINLINE(), fLoserPlotMultiplier);
-			influencePlots(pWinnerPlot, pLoserUnit->getOwnerINLINE(), fWinnerPlotMultiplier);
+			influencePlots(pLoserPlot, pLoserUnit->getOwner(), fLoserPlotMultiplier);
+			influencePlots(pWinnerPlot, pLoserUnit->getOwner(), fWinnerPlotMultiplier);
 		}
 	}
 
 	// calculate influence % in defended plot (to be displayed in game log)
     
-	int iWinnerCultureAfter = pDefenderPlot->getCulture(getOwnerINLINE());
+	int iWinnerCultureAfter = pDefenderPlot->getCulture(getOwner());
 	int iTotalCulture = pDefenderPlot->countTotalCulture();
 	float fInfluenceRatio = 0.0f;
 	if (iTotalCulture > 0)
@@ -33267,7 +33262,7 @@ void CvUnit::influencePlots(CvPlot* pCentralPlot, PlayerTypes eTargetPlayer, flo
 
 //	CvWString szBuffer;
 //	szBuffer.Format(L"Factors: %.1f, %.1f, %.1f, %.1f, %.1f, %.1f, %.3f, %d", fBaseCombatInfluence, fLocationMultiplier, fGameSpeedMultiplier, fPlotDistanceFactor, fExperienceMultiplier, fWarlordMultiplier, fBaseMultiplier, iInfluenceRadius);	
-//	AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCentralPlot->getX(), pCentralPlot->getY());
+//	AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCentralPlot->getX(), pCentralPlot->getY());
 
 	for (int iDX = -iInfluenceRadius; iDX <= iInfluenceRadius; iDX++)
 	{
@@ -33342,7 +33337,7 @@ void CvUnit::influencePlots(CvPlot* pCentralPlot, PlayerTypes eTargetPlayer, flo
 							pLoopPlot->setCulture(eTargetPlayer,1,false,false);
 						}
 						// owners's culture in plot is raised
-						pLoopPlot->changeCulture(getOwnerINLINE(), iCultureTransfer, true);
+						pLoopPlot->changeCulture(getOwner(), iCultureTransfer, true);
 					}
 				}	
 			}
@@ -33393,7 +33388,7 @@ float CvUnit::doPillageInfluence()
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-	int iOurCultureBefore = pPlot->getCulture(getOwnerINLINE()); //used later for influence %
+	int iOurCultureBefore = pPlot->getCulture(getOwner()); //used later for influence %
 
 	float fBasePillageInfluence = GC.getIDW_BASE_PILLAGE_INFLUENCE();
 
@@ -33422,15 +33417,15 @@ float CvUnit::doPillageInfluence()
 	// target player's culture in plot is lowered
 	pPlot->changeCulture(eTargetPlayer, -iCultureTransfer, false);
 	// owners's culture in plot is raised
-	pPlot->changeCulture(getOwnerINLINE(), iCultureTransfer, true);
+	pPlot->changeCulture(getOwner(), iCultureTransfer, true);
 
 	// calculate influence % in pillaged plot (to be displayed in game log)
-    int iOurCultureAfter = pPlot->getCulture(getOwnerINLINE());
+    int iOurCultureAfter = pPlot->getCulture(getOwner());
 	float fInfluenceRatio = ((iOurCultureAfter-iOurCultureBefore)*100.0f)/pPlot->countTotalCulture();	
  
 //	CvWString szBuffer;
 //	szBuffer.Format(L"Factors: %.1f, %.1f, %d, Result: %.3f, ", fGameSpeedMultiplier, fBasePillageInfluence, iTargetCulture, fInfluenceRatio);	
-//	AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+//	AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 
 	return fInfluenceRatio;
 }
@@ -33463,11 +33458,11 @@ bool CvUnit::canPerformInquisition(const CvPlot* pPlot) const
 	{
 		return false;
 	}
-	if( GET_PLAYER(getOwnerINLINE()).getStateReligion() == NO_RELIGION )
+	if( GET_PLAYER(getOwner()).getStateReligion() == NO_RELIGION )
 	{
 		return false;
 	}
-	if (!pCity->isHasReligion(GET_PLAYER(getOwnerINLINE()).getStateReligion()))
+	if (!pCity->isHasReligion(GET_PLAYER(getOwner()).getStateReligion()))
 	{
 		return false;
 	}
@@ -33477,11 +33472,11 @@ bool CvUnit::canPerformInquisition(const CvPlot* pPlot) const
 	{
 		return false;
 	}
-	if (!pCity->isInquisitionConditions() || !GET_PLAYER(getOwnerINLINE()).isInquisitionConditions())
+	if (!pCity->isInquisitionConditions() || !GET_PLAYER(getOwner()).isInquisitionConditions())
 	{
 		return false;
 	}
-	if(GET_PLAYER(getOwnerINLINE()).getStateReligion() != GET_PLAYER(pCity->getOwnerINLINE()).getStateReligion())
+	if(GET_PLAYER(getOwner()).getStateReligion() != GET_PLAYER(pCity->getOwner()).getStateReligion())
 	{
 		return false;
 	}
@@ -33529,7 +33524,7 @@ bool CvUnit::performInquisition()
 		
 		for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
 		{
-			if ((ReligionTypes)iI != GET_PLAYER(getOwnerINLINE()).getStateReligion())
+			if ((ReligionTypes)iI != GET_PLAYER(getOwner()).getStateReligion())
 			{
 				if (pCity->isHasReligion((ReligionTypes)iI))
 				{
@@ -33552,16 +33547,16 @@ bool CvUnit::performInquisition()
 					if( plot()->isVisible(kLoopPlayer.getTeam(), false)
 					|| plot()->isRevealed(kLoopPlayer.getTeam(), false) )
 					{
-						if (GET_TEAM(kLoopPlayer.getTeam()).isHasMet(GET_PLAYER(getOwnerINLINE()).getTeam()))
+						if (GET_TEAM(kLoopPlayer.getTeam()).isHasMet(GET_PLAYER(getOwner()).getTeam()))
 						{
 							for (iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
 							{
-								if (GET_PLAYER(getOwnerINLINE()).getStateReligion() != (ReligionTypes)iJ)
+								if (GET_PLAYER(getOwner()).getStateReligion() != (ReligionTypes)iJ)
 								{
 									//if the player has the holy city, or has the religion as a state religion.
 									if (kLoopPlayer.hasHolyCity((ReligionTypes)iJ) || ((pCity->isHasReligion((ReligionTypes)iJ)) && (kLoopPlayer.getStateReligion() == (ReligionTypes)iJ)))
 									{
-										kLoopPlayer.AI_changeMemoryCount(getOwnerINLINE(), MEMORY_INQUISITION, 1);
+										kLoopPlayer.AI_changeMemoryCount(getOwner(), MEMORY_INQUISITION, 1);
 										break;
 									}
 								}
@@ -33578,7 +33573,7 @@ bool CvUnit::performInquisition()
 					CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo((BuildingTypes)iI);
 					for (iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
 					{
-						if (GET_PLAYER(getOwnerINLINE()).getStateReligion() != (ReligionTypes)iJ)
+						if (GET_PLAYER(getOwner()).getStateReligion() != (ReligionTypes)iJ)
 						{
 							if (kLoopBuilding.getPrereqReligion() == (ReligionTypes)iJ)
 							{
@@ -33592,7 +33587,7 @@ bool CvUnit::performInquisition()
 			//Remove the Religion & Holy Cities
 			for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
 			{
-				if (GET_PLAYER(getOwnerINLINE()).getStateReligion() != (ReligionTypes)iI)
+				if (GET_PLAYER(getOwner()).getStateReligion() != (ReligionTypes)iI)
 				{
 					if (pCity->isHolyCity((ReligionTypes)iI))
 					{
@@ -33678,7 +33673,7 @@ bool CvUnit::performInquisition()
 			}
 			else
 			{
-				GET_PLAYER(getOwnerINLINE()).changeGold(iCompensationGold);
+				GET_PLAYER(getOwner()).changeGold(iCompensationGold);
 			}
 		}
 		//Inquisition Fails...
@@ -33809,7 +33804,7 @@ void CvUnit::tradeUnit(PlayerTypes eReceivingPlayer)
 	//CvArea* pWaterArea = NULL;
 	PlayerTypes eOwner;
 	
-	eOwner = getOwnerINLINE();
+	eOwner = getOwner();
 	
 	if (eReceivingPlayer != NO_PLAYER)
 	{
@@ -33828,7 +33823,7 @@ void CvUnit::tradeUnit(PlayerTypes eReceivingPlayer)
 			MEMORY_TRACK_EXEMPT();
 
 			 szBuffer = gDLL->getText("TXT_KEY_MISC_TRADED_UNIT_TO_YOU", GET_PLAYER(eOwner).getNameKey(), pTradeUnit->getNameKey());
-			 AddDLLMessage(pTradeUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNITGIFTED", MESSAGE_TYPE_INFO, pTradeUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), pTradeUnit->getX(), pTradeUnit->getY(), true, true);
+			 AddDLLMessage(pTradeUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNITGIFTED", MESSAGE_TYPE_INFO, pTradeUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), pTradeUnit->getX(), pTradeUnit->getY(), true, true);
 		}
 	 }
 }
@@ -33932,7 +33927,7 @@ bool CvUnit::spyNuke(int iX, int iY, bool bCaught)
 							{
 								if (GET_PLAYER((PlayerTypes)iJ).getTeam() == ((TeamTypes)iI))
 								{
-									GET_PLAYER((PlayerTypes)iJ).AI_changeMemoryCount(getOwnerINLINE(), MEMORY_NUKED_US, 1);
+									GET_PLAYER((PlayerTypes)iJ).AI_changeMemoryCount(getOwner(), MEMORY_NUKED_US, 1);
 								}
 							}
 						}
@@ -33955,7 +33950,7 @@ bool CvUnit::spyNuke(int iX, int iY, bool bCaught)
 												{
 													if (GET_PLAYER((PlayerTypes)iK).getTeam() == ((TeamTypes)iI))
 													{
-														GET_PLAYER((PlayerTypes)iK).AI_changeMemoryCount(getOwnerINLINE(), MEMORY_NUKED_FRIEND, 1);
+														GET_PLAYER((PlayerTypes)iK).AI_changeMemoryCount(getOwner(), MEMORY_NUKED_FRIEND, 1);
 													}
 												}
 											}
@@ -33970,7 +33965,7 @@ bool CvUnit::spyNuke(int iX, int iY, bool bCaught)
 			}
 		}
 	}
-	szBuffer = gDLL->getText("TXT_KEY_MISC_NUKE_UNKNOWN", GET_PLAYER(pPlot->getOwnerINLINE()).getNameKey());
+	szBuffer = gDLL->getText("TXT_KEY_MISC_NUKE_UNKNOWN", GET_PLAYER(pPlot->getOwner()).getNameKey());
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
@@ -33978,8 +33973,8 @@ bool CvUnit::spyNuke(int iX, int iY, bool bCaught)
 			MEMORY_TRACK_EXEMPT();
 
 			if (bCaught)
-				szBuffer = gDLL->getText("TXT_KEY_MISC_NUKE_ENEMY_SPY", GET_PLAYER(getOwnerINLINE()).getNameKey(), GET_PLAYER(pPlot->getOwnerINLINE()).getNameKey());
-			AddDLLMessage(((PlayerTypes)iI), (((PlayerTypes)iI) == getOwnerINLINE()), GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_MAJOR_EVENT, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
+				szBuffer = gDLL->getText("TXT_KEY_MISC_NUKE_ENEMY_SPY", GET_PLAYER(getOwner()).getNameKey(), GET_PLAYER(pPlot->getOwner()).getNameKey());
+			AddDLLMessage(((PlayerTypes)iI), (((PlayerTypes)iI) == getOwner()), GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_MAJOR_EVENT, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
 		}
 	}
 
@@ -33996,7 +33991,7 @@ bool CvUnit::spyNuke(int iX, int iY, bool bCaught)
 
 bool CvUnit::canClaimTerritory(const CvPlot* pPlot) const
 {
-	if (!GET_PLAYER(getOwnerINLINE()).hasFixedBorders())
+	if (!GET_PLAYER(getOwner()).hasFixedBorders())
 	{
 		return false;
 	}
@@ -34024,7 +34019,7 @@ bool CvUnit::canClaimTerritory(const CvPlot* pPlot) const
 	if (pPlot != NULL)
 	{
 	
-		if (getOwnerINLINE() == pPlot->getOwnerINLINE())
+		if (getOwner() == pPlot->getOwner())
 		{
 			return false;
 		}
@@ -34057,7 +34052,7 @@ bool CvUnit::canClaimTerritory(const CvPlot* pPlot) const
 		}
 		
 		/* plots adjacent to cities always belong to those cities' owners */
-		if (pPlot->getAdjacentCity(pPlot->getOwnerINLINE()) != NULL)
+		if (pPlot->getAdjacentCity(pPlot->getOwner()) != NULL)
 		{
 			return false;
 		}
@@ -34091,7 +34086,7 @@ bool CvUnit::claimTerritory()
 	}
 	if (pPlot->isOwned())
 	{
-		pPlayerThatLostTerritory = pPlot->getOwnerINLINE();
+		pPlayerThatLostTerritory = pPlot->getOwner();
 		TeamTypes tTeamThatLostTerritory = GET_PLAYER(pPlayerThatLostTerritory).getTeam();
 		
 		GET_TEAM(tTeamThatLostTerritory).changeWarWeariness(getTeam(), *pPlot, GC.getDefineINT("WW_PLOT_CAPTURED"));
@@ -34101,7 +34096,7 @@ bool CvUnit::claimTerritory()
 		bWasOwned = true;
 	}
 	
-	pPlot->setClaimingOwner(getOwnerINLINE());
+	pPlot->setClaimingOwner(getOwner());
 	
 	if (bWasOwned)
 	{
@@ -34112,11 +34107,11 @@ bool CvUnit::claimTerritory()
 
 		if (pNearestCity != NULL)
 		{
-			szBuffer = gDLL->getText("TXT_KEY_MISSION_CLAIM_TERRITORY_CIV_SUCCESS_NEAR", GET_PLAYER(getOwnerINLINE()).getCivilizationAdjectiveKey(), pNearestCity->getName().GetCString());
+			szBuffer = gDLL->getText("TXT_KEY_MISSION_CLAIM_TERRITORY_CIV_SUCCESS_NEAR", GET_PLAYER(getOwner()).getCivilizationAdjectiveKey(), pNearestCity->getName().GetCString());
 		}
 		else 
 		{
-			szBuffer = gDLL->getText("TXT_KEY_MISSION_CLAIM_TERRITORY_CIV_SUCCESS", GET_PLAYER(getOwnerINLINE()).getCivilizationAdjectiveKey());
+			szBuffer = gDLL->getText("TXT_KEY_MISSION_CLAIM_TERRITORY_CIV_SUCCESS", GET_PLAYER(getOwner()).getCivilizationAdjectiveKey());
 		}
 		AddDLLMessage(pPlayerThatLostTerritory, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
 	}
@@ -34311,13 +34306,13 @@ void CvUnit::combatWon(CvUnit* pLoser, bool bAttacking)
     CvUnit* pUnit;
 
     if ((//m_pUnitInfo->getEnslavementChance() + 
-	GET_PLAYER(getOwnerINLINE()).getEnslavementChance()) > 0)
+	GET_PLAYER(getOwner()).getEnslavementChance()) > 0)
     {
         if (//getDuration() == 0 && pLoser->isAlive() && !pLoser->isAnimal() && 
 		iUnit == NO_UNIT)
         {
             if (GC.getGameINLINE().getSorenRandNum(100, "Enslavement") <= (//m_pUnitInfo->getEnslavementChance() + 
-			GET_PLAYER(getOwnerINLINE()).getEnslavementChance()))
+			GET_PLAYER(getOwner()).getEnslavementChance()))
             {
                 iUnit = ((UnitTypes)(GC.getDefineINT("SLAVE_UNIT")));
 				//GC.getInfoTypeForString("UNIT_SLAVE");
@@ -34332,7 +34327,7 @@ void CvUnit::combatWon(CvUnit* pLoser, bool bAttacking)
 		//|| GC.getUnitInfo((UnitTypes)pLoser->getUnitType()).getEquipmentPromotion() != NO_PROMOTION
 		)
         {
-            pUnit = GET_PLAYER(getOwnerINLINE()).initUnit((UnitTypes)iUnit, plot()->getX(), plot()->getY());
+            pUnit = GET_PLAYER(getOwner()).initUnit((UnitTypes)iUnit, plot()->getX(), plot()->getY());
         }
     }*/
 }
@@ -34379,7 +34374,7 @@ bool CvUnit::canHurryFood(const CvPlot* pPlot) const
 	}
 
 	const CvCity* pCity = pPlot->getPlotCity();
-	if (pCity == NULL || pCity->getOwnerINLINE() != getOwnerINLINE() || pCity->getFoodTurnsLeft() == 1)
+	if (pCity == NULL || pCity->getOwner() != getOwner() || pCity->getFoodTurnsLeft() == 1)
 	{
 		return false;
 	}
@@ -34469,7 +34464,7 @@ CvUnit* CvUnit::getCommander() const
 
 	if ( m_iCommanderCacheTurn == GC.getGameINLINE().getGameTurn() )
 	{
-		pBestCommander = GET_PLAYER(getOwnerINLINE()).getUnit(m_iCachedCommander);
+		pBestCommander = GET_PLAYER(getOwner()).getUnit(m_iCachedCommander);
 		if ( pBestCommander != NULL )
 		{
 			//	Guard against this being called during the death of said GC!
@@ -34494,9 +34489,9 @@ CvUnit* CvUnit::getCommander() const
 	}
 
 	int iBestCommanderDistance = 9999999;
-	if (getOwnerINLINE() != NO_PLAYER)
+	if (getOwner() != NO_PLAYER)
 	{
-		CvPlayer& kPlayer = GET_PLAYER(getOwnerINLINE());
+		CvPlayer& kPlayer = GET_PLAYER(getOwner());
 		
 		for (int i=0; i < (int)kPlayer.Commanders.size(); i++)		//loop through player's commanders
 		{
@@ -34569,7 +34564,7 @@ void CvUnit::setCommander(bool bNewVal)
 	m_bCommander = bNewVal;
 	if (isCommander())
 	{
-		GET_PLAYER(getOwnerINLINE()).Commanders.push_back(this);
+		GET_PLAYER(getOwner()).Commanders.push_back(this);
 		m_iControlPointsLeft = controlPoints();
 		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 		{
@@ -34589,7 +34584,7 @@ void CvUnit::nullUsedCommander()
 
 CvUnit* CvUnit::getUsedCommander() const
 {
-	return (m_iCommanderID == -1 ? NULL : GET_PLAYER(getOwnerINLINE()).getUnit(m_iCommanderID));
+	return (m_iCommanderID == -1 ? NULL : GET_PLAYER(getOwner()).getUnit(m_iCommanderID));
 }
 
 void CvUnit::clearCommanderCache() 
@@ -35020,7 +35015,7 @@ void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdD
 
 			UnitTypes eGGType = getGGExperienceEarnedTowardsType();
 			setExperience100(iInitialAttXP);
-			GET_PLAYER(getOwnerINLINE()).setCombatExperience(iInitialAttGGXP, eGGType);
+			GET_PLAYER(getOwner()).setCombatExperience(iInitialAttGGXP, eGGType);
 
 			// Great Commander XP
 			if (getUsedCommander() != NULL)
@@ -35033,7 +35028,7 @@ void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdD
 
 				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_UNIT_PROMOTED_IN_BATTLE", getNameKey(), GC.getPromotionInfo(ptPromotion).getText());
 				AddDLLMessage(
-					getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,
+					getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,
 					GC.getPromotionInfo((PromotionTypes)0).getSound(), MESSAGE_TYPE_INFO, NULL,
 					(ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), this->plot()->getX(), this->plot()->getY());
 			}
@@ -35071,7 +35066,7 @@ void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdD
 
 			UnitTypes eGGType = pDefender->getGGExperienceEarnedTowardsType();
 			pDefender->setExperience100(iInitialDefXP);
-			GET_PLAYER(pDefender->getOwnerINLINE()).setCombatExperience(iInitialDefGGXP, eGGType);
+			GET_PLAYER(pDefender->getOwner()).setCombatExperience(iInitialDefGGXP, eGGType);
 			bDefenderPromoted = true;
 
 			// Great Commander XP
@@ -35086,7 +35081,7 @@ void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdD
 				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_UNIT_PROMOTED_IN_BATTLE", pDefender->getNameKey(),
 					GC.getPromotionInfo(ptPromotion).getText());
 				AddDLLMessage(
-					pDefender->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,
+					pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,
 					GC.getPromotionInfo((PromotionTypes)0).getSound(), MESSAGE_TYPE_INFO, NULL,
 					(ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 			}
@@ -35112,7 +35107,7 @@ void CvUnit::doDynamicXP(CvUnit* pDefender, const CvPlot* pPlot, int iAttackerIn
 			if ( attackXPValue() > 0 )
 			{
 				iExperience = range(iExperience, getRandomMinExperienceTimes100(), attackXPValue() * 100);
-				changeExperience100(iExperience, maxXPValue() == MAX_INT ? MAX_INT : maxXPValue() * 100, true, pPlot->getOwnerINLINE() == getOwnerINLINE(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+				changeExperience100(iExperience, maxXPValue() == MAX_INT ? MAX_INT : maxXPValue() * 100, true, pPlot->getOwner() == getOwner(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
 			}
 		}
 		if (!pDefender->isDead() && !bDefPromotion && pDefender->getUnitCombatType() != NO_UNITCOMBAT)
@@ -35131,7 +35126,7 @@ void CvUnit::doDynamicXP(CvUnit* pDefender, const CvPlot* pPlot, int iAttackerIn
 			if ( pDefender->defenseXPValue() > 0 )
 			{
 				iExperience = range(iExperience, getRandomMinExperienceTimes100(), pDefender->defenseXPValue() * 100);
-				pDefender->changeExperience100(iExperience, pDefender->maxXPValue() == MAX_INT ? MAX_INT : pDefender->maxXPValue() * 100, true, pPlot->getOwnerINLINE() == pDefender->getOwnerINLINE(), (!isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
+				pDefender->changeExperience100(iExperience, pDefender->maxXPValue() == MAX_INT ? MAX_INT : pDefender->maxXPValue() * 100, true, pPlot->getOwner() == pDefender->getOwner(), (!isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
 			}
 		}
 	}
@@ -35270,7 +35265,7 @@ void CvUnit::setMADEnabled(bool bValue)
 		
 		if (!isMADEnabled())
 		{
-			GET_PLAYER(getOwnerINLINE()).changeMADOutgoing(-1);
+			GET_PLAYER(getOwner()).changeMADOutgoing(-1);
 			if(getMADTargetPlotOwner() != NO_PLAYER)
 			{
 				GET_PLAYER(getMADTargetPlotOwner()).changeMADIncoming(-1);
@@ -35307,7 +35302,7 @@ void CvUnit::setMADTargetPlot(CvPlot* pPlot)
 	{
 		m_iMADTargetPlotX = pPlot->getX();
 		m_iMADTargetPlotY = pPlot->getY();
-		setMADTargetPlotOwner(pPlot->getPlotCity()->getOwnerINLINE());
+		setMADTargetPlotOwner(pPlot->getPlotCity()->getOwner());
 	}
 	else
 	{
@@ -35338,17 +35333,17 @@ void CvUnit::doMADNukes(bool bForceRetarget)
 	// Dale - MAD: check validity of Human nuke targets
 	if(isMADEnabled())
 	{
-		FAssertMsg(GET_PLAYER(getOwnerINLINE()).isEnabledMAD(), "Nukes Should Not Be Targeted!");
+		FAssertMsg(GET_PLAYER(getOwner()).isEnabledMAD(), "Nukes Should Not Be Targeted!");
 		
 		pCity = getMADTargetPlot()->getPlotCity();
-		if(pCity == NULL || pCity->getOwnerINLINE() != getMADTargetPlotOwner())
+		if(pCity == NULL || pCity->getOwner() != getMADTargetPlotOwner())
 		{
 			setMADEnabled(false);
 
 			MEMORY_TRACK_EXEMPT();
 
 			szBuffer = gDLL->getText("TXT_KEY_NUKE_TARGET_LOST");
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getX(), getY(), true, true);
+			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getX(), getY(), true, true);
 		}
 	}
 	if (!isHuman())
@@ -35371,9 +35366,9 @@ void CvUnit::doMADNukes(bool bForceRetarget)
 			iBestValue = 0;
 			for (int iI = 0; iI < MAX_PLAYERS; iI++)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive() && iI != GET_PLAYER(getOwnerINLINE()).getID())
+				if (GET_PLAYER((PlayerTypes)iI).isAlive() && iI != GET_PLAYER(getOwner()).getID())
 				{
-					if (GET_TEAM(getTeam()).AI_getWarPlan(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_WARPLAN || GET_PLAYER(getOwnerINLINE()).AI_getAttitudeVal((PlayerTypes)iI) < 0)
+					if (GET_TEAM(getTeam()).AI_getWarPlan(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_WARPLAN || GET_PLAYER(getOwner()).AI_getAttitudeVal((PlayerTypes)iI) < 0)
 					{
 						for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
 						{
@@ -35381,7 +35376,7 @@ void CvUnit::doMADNukes(bool bForceRetarget)
 							{
 								if (canNukeAt(plot(), pLoopCity->plot()->getX(), pLoopCity->plot()->getY(), false))
 								{
-									iValue = GET_PLAYER(getOwnerINLINE()).AI_targetCityValue(pLoopCity, true, false) / std::max(1, pLoopCity->getMADIncoming() / 3);
+									iValue = GET_PLAYER(getOwner()).AI_targetCityValue(pLoopCity, true, false) / std::max(1, pLoopCity->getMADIncoming() / 3);
 									if (iValue > iBestValue)
 									{
 										iBestValue = iValue;
@@ -35398,17 +35393,17 @@ void CvUnit::doMADNukes(bool bForceRetarget)
 			{
 				setMADTargetPlot(pBestCity->plot());
 				setMADEnabled(true);
-				setMADTargetPlotOwner(pBestCity->getOwnerINLINE());
-				GET_PLAYER(getOwnerINLINE()).changeMADOutgoing(1);
-				GET_PLAYER(pBestCity->getOwnerINLINE()).changeMADIncoming(1);
+				setMADTargetPlotOwner(pBestCity->getOwner());
+				GET_PLAYER(getOwner()).changeMADOutgoing(1);
+				GET_PLAYER(pBestCity->getOwner()).changeMADIncoming(1);
 				getMADTargetPlot()->getPlotCity()->changeMADIncoming(1);
 
 				if (pOldTarget != pBestCity)
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					szBuffer = gDLL->getText("TXT_KEY_NUKE_TARGET_FRIENDLY_CITY", GET_PLAYER(getOwnerINLINE()).getCivilizationAdjective(), pBestCity->getNameKey());
-					AddDLLMessage(pBestCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pBestCity->getX(), pBestCity->getY(), true, true);
+					szBuffer = gDLL->getText("TXT_KEY_NUKE_TARGET_FRIENDLY_CITY", GET_PLAYER(getOwner()).getCivilizationAdjective(), pBestCity->getNameKey());
+					AddDLLMessage(pBestCity->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pBestCity->getX(), pBestCity->getY(), true, true);
 				}
 			}
 		}
@@ -35419,7 +35414,7 @@ void CvUnit::doMADNukes(bool bForceRetarget)
 		if(canNuke(getMADTargetPlot()))
 		{
 			pCity = getMADTargetPlot()->getPlotCity();
-			if(pCity != NULL && (GET_PLAYER(getOwnerINLINE()).getMADTrigger(pCity->getOwnerINLINE()) || atWar(getTeam(), pCity->getTeam())))
+			if(pCity != NULL && (GET_PLAYER(getOwner()).getMADTrigger(pCity->getOwner()) || atWar(getTeam(), pCity->getTeam())))
 			{
 				nuke(getMADTargetPlot()->getX(), getMADTargetPlot()->getY());
 			}
@@ -35436,7 +35431,7 @@ bool CvUnit::canShadow() const
 		return false;
 	}
 	
-	if (GET_PLAYER(getOwnerINLINE()).isModderOption(MODDEROPTION_HIDE_AUTO_PROTECT))
+	if (GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_AUTO_PROTECT))
 	{
 		return false;
 	}
@@ -35528,7 +35523,7 @@ void CvUnit::waitForTech(int iFlag, int eTech)
 		CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_SELECT_DISCOVERY_TECH, getID(), 0, 0);
 		if (pInfo)
 		{
-			gDLL->getInterfaceIFace()->addPopup(pInfo, getOwnerINLINE(), true);
+			gDLL->getInterfaceIFace()->addPopup(pInfo, getOwner(), true);
 		}
 	}
 	else
@@ -36440,7 +36435,7 @@ int CvUnit::getAttackerSupportValue() const
 	CvPlot* aPlot = getAttackFromPlot();
 	CvPlot* pPlot = getAttackPlot();
 	CvUnit* pDefender;
-	pDefender = pPlot->getBestDefender(NO_PLAYER, getOwnerINLINE(), this, true);
+	pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true);
 	int iTotalSupport = 0;
 	int iFrontOne = getAttackerFirstFrontSupportValue(aPlot, pPlot, pDefender);
 	int iFrontTwo = getAttackerSecondFrontSupportValue(aPlot, pPlot, pDefender);
@@ -38035,7 +38030,7 @@ void CvUnit::checkPromotionObsoletion()
 						//MEMORY_TRACK_EXEMPT();
 
 						//szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-						//AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+						//AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 					}
 					if (bPromotionFree)
 					{
@@ -38045,7 +38040,7 @@ void CvUnit::checkPromotionObsoletion()
 						//MEMORY_TRACK_EXEMPT();
 
 						//szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-						//AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+						//AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 					}
 				}
 			}
@@ -38204,15 +38199,15 @@ void CvUnit::assignCritical(CvUnit* pOpponent)
 		eAfflictionLine = ((PromotionLineTypes)GC.getPromotionInfo(eCritical).getPromotionLine());
 		if (!hasAfflictionLine(eAfflictionLine))
 		{
-			GET_PLAYER(getOwnerINLINE()).changePlayerWideAfflictionCount(eAfflictionLine, 1);
+			GET_PLAYER(getOwner()).changePlayerWideAfflictionCount(eAfflictionLine, 1);
 		}
 	
 		MEMORY_TRACK_EXEMPT();
 
 		szBuffer = gDLL->getText("TXT_KEY_MISC_CRITICAL_SUFFERED", pOpponent->getNameKey(), getNameKey(), GC.getPromotionInfo(eCritical).getDescription());
-		AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 		szBuffer = gDLL->getText("TXT_KEY_MISC_CRITICAL_INFLICTED", pOpponent->getNameKey(), getNameKey(), GC.getPromotionInfo(eCritical).getDescription());
-		AddDLLMessage(pOpponent->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+		AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 	}
 }
 
@@ -38237,7 +38232,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 
 	bool bIsFreePromotion = (isPromotionFree(ePromotion));
 
-	if (GET_PLAYER(getOwnerINLINE()).isFreePromotion(getUnitCombatType(), ePromotion))
+	if (GET_PLAYER(getOwner()).isFreePromotion(getUnitCombatType(), ePromotion))
 	{
 		bIsFreePromotion = true;
 	}
@@ -38255,7 +38250,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_NOPROMO_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 			}
 		}
 		else
@@ -38265,7 +38260,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_NOPROMO_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 			}
 		}
 		return false;
@@ -38280,7 +38275,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_INVALIDATE_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 			}
 		}
 		else
@@ -38290,7 +38285,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_INVALIDATE_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 			}
 		}
 		return false;
@@ -38305,7 +38300,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_RBOMBARD_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 			}
 		}
 		else
@@ -38315,7 +38310,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_RBOMBARD_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 			}
 		}
 		return false;
@@ -38330,7 +38325,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_CARRIER_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 			}
 		}
 		else
@@ -38340,7 +38335,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_CARRIER_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 			}
 		}
 		return false;
@@ -38404,7 +38399,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 						MEMORY_TRACK_EXEMPT();
 
 						szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PROMOPREREQ_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 					}
 				}
 				else
@@ -38414,7 +38409,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 						MEMORY_TRACK_EXEMPT();
 
 						szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PROMOPREREQ_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 					}
 				}
 				return false;
@@ -38486,7 +38481,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 								MEMORY_TRACK_EXEMPT();
 
 								szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PROMOPREREQ_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-								AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+								AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 							}
 						}
 						else
@@ -38496,7 +38491,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 								MEMORY_TRACK_EXEMPT();
 
 								szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PROMOPREREQ_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-								AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+								AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 							}
 						}
 						return false;
@@ -38536,7 +38531,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_ERA_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 				}
 			}
 			else
@@ -38546,7 +38541,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_ERA_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 				}
 			}
 		}
@@ -38564,7 +38559,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_TECH_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 				}
 			}
 			else
@@ -38574,7 +38569,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_TECH_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 				}
 			}
 			return false;
@@ -38591,7 +38586,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_NOUNITCOMBAT_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 			}
 		}
 		else
@@ -38601,7 +38596,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_NOUNITCOMBAT_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 			}
 		}
 		return false;
@@ -38622,7 +38617,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 	}
 	if (NO_UNITCLASS != getUnitClassType())
 	{
-		if (GET_PLAYER(getOwnerINLINE()).isFreePromotion(getUnitClassType(), ePromotion))
+		if (GET_PLAYER(getOwner()).isFreePromotion(getUnitClassType(), ePromotion))
 		{
 			bIsUnitSpecific = true;
 		}
@@ -38673,7 +38668,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_UNITCOMBAT_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 				}
 			}
 			else
@@ -38683,7 +38678,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_UNITCOMBAT_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 				}
 			}
 			return false;
@@ -38703,7 +38698,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 						MEMORY_TRACK_EXEMPT();
 
 						szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_UNITCOMBAT_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 					}
 				}
 				else
@@ -38713,7 +38708,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 						MEMORY_TRACK_EXEMPT();
 
 						szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_UNITCOMBAT_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 					}
 				}
 				return false;
@@ -38735,7 +38730,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_DOMAIN_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 				}
 			}
 			else
@@ -38745,7 +38740,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_DOMAIN_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 				}
 			}
 			return false;
@@ -38759,7 +38754,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 	//Note: Commented out for now as its causing some issues.  This may be optionalized at a later date.
 	//if (GC.getPromotionInfo(ePromotion).getStateReligionPrereq() != NO_RELIGION)
 	//{
-	//	if (GET_PLAYER(getOwnerINLINE()).getStateReligion() != GC.getPromotionInfo(ePromotion).getStateReligionPrereq())
+	//	if (GET_PLAYER(getOwner()).getStateReligion() != GC.getPromotionInfo(ePromotion).getStateReligionPrereq())
 	//	{
 	//		return false;
 	//	}
@@ -38807,7 +38802,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_TERRAIN_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 				}
 			}
 			else
@@ -38817,7 +38812,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_TERRAIN_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 				}
 			}
 			return false;
@@ -38847,7 +38842,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_FEATURE_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 				}
 			}
 			else
@@ -38857,7 +38852,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_FEATURE_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 				}
 			}
 			return false;
@@ -38910,7 +38905,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_IMP_CITY_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 				}
 			}
 			else
@@ -38920,7 +38915,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_IMP_CITY_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 				}
 			}
 			return false;
@@ -38951,7 +38946,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PLOT_BONUS_CAN_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 				}
 			}
 			else
@@ -38961,7 +38956,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_OBSOLETED_PROMOTION_PLOT_BONUS_NO_RETRAIN", getNameKey(), GC.getPromotionInfo(ePromotion).getDescription());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 				}
 			}
 			return false;
@@ -39348,7 +39343,7 @@ bool CvUnit::canSwitchEquipment(PromotionTypes eEquipment) const
 
 	if (GC.getPromotionInfo(eEquipment).getStateReligionPrereq() != NO_RELIGION)
 	{
-		if (GET_PLAYER(getOwnerINLINE()).getStateReligion() != GC.getPromotionInfo(eEquipment).getStateReligionPrereq())
+		if (GET_PLAYER(getOwner()).getStateReligion() != GC.getPromotionInfo(eEquipment).getStateReligionPrereq())
 		{
 			return false;
 		}
@@ -40248,9 +40243,9 @@ void CvUnit::checkForStun(int iDamage, CvUnit* pOpponent)
 		MEMORY_TRACK_EXEMPT();
 
 		szBuffer = gDLL->getText("TXT_KEY_MISC_STUN_SUFFERED", pOpponent->getNameKey(), getNameKey(), iStunVolume);
-		AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 		szBuffer = gDLL->getText("TXT_KEY_MISC_STUN_INFLICTED", pOpponent->getNameKey(), getNameKey(), iStunVolume);
-		AddDLLMessage(pOpponent->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+		AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 	}
 }
 
@@ -40528,9 +40523,9 @@ void CvUnit::afflict(PromotionLineTypes eAfflictionLine, bool bPoisoned, CvUnit*
 							MEMORY_TRACK_EXEMPT();
 
 							szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_SUFFERED_POISON_BATTLE_FIRST", getNameKey(), pOpponent->getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide());
-							AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 							szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_DELIVERED_POISON_BATTLE_FIRST", getNameKey(), pOpponent->getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide());
-							AddDLLMessage(pOpponent->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+							AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 						}
 						else
 						{
@@ -40538,9 +40533,9 @@ void CvUnit::afflict(PromotionLineTypes eAfflictionLine, bool bPoisoned, CvUnit*
 							MEMORY_TRACK_EXEMPT();
 
 							szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_SUFFERED_DISEASE_BATTLE_FIRST", getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), pOpponent->getNameKey());
-							AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 							szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_DELIVERED_DISEASE_BATTLE_FIRST", pOpponent->getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), getNameKey());
-							AddDLLMessage(pOpponent->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+							AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 						}
 					}
 					else
@@ -40549,7 +40544,7 @@ void CvUnit::afflict(PromotionLineTypes eAfflictionLine, bool bPoisoned, CvUnit*
 						MEMORY_TRACK_EXEMPT();
 
 						szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_SUFFERED_DISEASE_FIRST", getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 					}
 				}
 			}
@@ -40565,9 +40560,9 @@ void CvUnit::afflict(PromotionLineTypes eAfflictionLine, bool bPoisoned, CvUnit*
 							MEMORY_TRACK_EXEMPT();
 
 							szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_SUFFERED_POISON_BATTLE_ADDITIONAL", getNameKey(), pOpponent->getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide());
-							AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 							szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_DELIVERED_POISON_BATTLE_ADDITIONAL", getNameKey(), pOpponent->getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide());
-							AddDLLMessage(pOpponent->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+							AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 						}
 						else
 						{
@@ -40575,9 +40570,9 @@ void CvUnit::afflict(PromotionLineTypes eAfflictionLine, bool bPoisoned, CvUnit*
 							MEMORY_TRACK_EXEMPT();
 
 							szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_SUFFERED_DISEASE_BATTLE_ADDITIONAL", getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), pOpponent->getNameKey());
-							AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 							szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_DELIVERED_DISEASE_BATTLE_ADDITIONAL", pOpponent->getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), getNameKey());
-							AddDLLMessage(pOpponent->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+							AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 						}
 					}
 					else
@@ -40586,7 +40581,7 @@ void CvUnit::afflict(PromotionLineTypes eAfflictionLine, bool bPoisoned, CvUnit*
 						MEMORY_TRACK_EXEMPT();
 
 						szBuffer = gDLL->getText("TXT_KEY_MISC_AFFLICT_SUFFERED_DISEASE_ADDITIONAL", getNameKey(), GC.getPromotionInfo(eAfflictionHad).getTextKeyWide(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide());
-						AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 					}
 				}
 			}
@@ -40597,18 +40592,18 @@ void CvUnit::afflict(PromotionLineTypes eAfflictionLine, bool bPoisoned, CvUnit*
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_TRAP_TRIGGERED_ALSO_AFFLICTION_SUFFERED", getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), pOpponent->getNameKey());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 					szBuffer = gDLL->getText("TXT_KEY_MISC_TRAP_TRIGGERED_ALSO_AFFLICTION_INFLICTED", getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), pOpponent->getNameKey());
-					AddDLLMessage(pOpponent->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+					AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 				}
 				else
 				{
 					MEMORY_TRACK_EXEMPT();
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_TRAP_TRIGGERED_AFFLICTION_SUFFERED", getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), pOpponent->getNameKey());
-					AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 					szBuffer = gDLL->getText("TXT_KEY_MISC_TRAP_TRIGGERED_AFFLICTION_INFLICTED", getNameKey(), GC.getPromotionInfo(eAfflictionGained).getTextKeyWide(), pOpponent->getNameKey());
-					AddDLLMessage(pOpponent->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+					AddDLLMessage(pOpponent->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 				}
 			}
 		}
@@ -40645,18 +40640,18 @@ void CvUnit::recover(PromotionLineTypes eAfflictionLine)
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_OVERCOME_IMPROVE", getNameKey(), eAfflictionHad, eAfflictionGained);
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 				break;
 			}
 		}
 	}
 	else
 	{
-		GET_PLAYER(getOwnerINLINE()).changePlayerWideAfflictionCount(eAfflictionLine, -1);
+		GET_PLAYER(getOwner()).changePlayerWideAfflictionCount(eAfflictionLine, -1);
 		MEMORY_TRACK_EXEMPT();
 
 		szBuffer = gDLL->getText("TXT_KEY_MISC_OVERCOME_COMPLETE", getNameKey(), eAfflictionHad);
-		AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 	}
 }
 
@@ -41169,7 +41164,7 @@ void CvUnit::doSetUnitCombats()
 void CvUnit::setFreePromotion(PromotionTypes ePromotion, bool bAdding, TraitTypes eTrait)
 {
 	const int numTraitInfos = GC.getNumTraitInfos();
-	CvPlayer& pPlayer = GET_PLAYER(getOwnerINLINE());
+	CvPlayer& pPlayer = GET_PLAYER(getOwner());
 
 	if (bAdding && !isHasPromotion(ePromotion))
 	{
@@ -41318,9 +41313,9 @@ int CvUnit::captureProbabilityTotal() const
 {
 	int iData = m_pUnitInfo->getCaptureProbabilityModifier();
 	iData += getExtraCaptureProbabilityModifier();
-	if (GET_PLAYER(getOwnerINLINE()).getID() != NO_PLAYER)
+	if (GET_PLAYER(getOwner()).getID() != NO_PLAYER)
 	{
-		iData += GET_PLAYER(getOwnerINLINE()).getExtraNationalCaptureProbabilityModifier();
+		iData += GET_PLAYER(getOwner()).getExtraNationalCaptureProbabilityModifier();
 	}
 
 	CvCity* pCity;
@@ -41356,9 +41351,9 @@ int CvUnit::captureResistanceTotal() const
 {
 	int iData = m_pUnitInfo->getCaptureResistanceModifier();
 	iData += getExtraCaptureResistanceModifier();
-	if (GET_PLAYER(getOwnerINLINE()).getID() != NO_PLAYER)
+	if (GET_PLAYER(getOwner()).getID() != NO_PLAYER)
 	{
-		iData += GET_PLAYER(getOwnerINLINE()).getExtraNationalCaptureResistanceModifier();
+		iData += GET_PLAYER(getOwner()).getExtraNationalCaptureResistanceModifier();
 	}
 
 	CvCity* pCity;
@@ -41591,14 +41586,14 @@ void CvUnit::checkCityAttackDefensesDamage(CvCity* pCity, const std::vector<Unit
 
 							if (iBuildingAttackDamageTotal > 0)
 							{
-								changeDamage(iBuildingAttackDamageTotal, getOwnerINLINE());
+								changeDamage(iBuildingAttackDamageTotal, getOwner());
 
 								if (isHuman())
 								{
 									MEMORY_TRACK_EXEMPT();
 
 									szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKER_SUFFERS_BUILDING_DAMAGE", getNameKey(), pCity->getNameKey(), GC.getBuildingInfo(eBuilding).getTextKeyWide(), iBuildingAttackDamageTotal);
-									AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_COMBAT", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY());
+									AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_COMBAT", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY());
 								}
 
 								if (GET_PLAYER(pCity->getOwner()).isHuman())
@@ -41670,11 +41665,11 @@ void CvUnit::resolveBreakdownAttack(CvPlot* pPlot, CvUnit* pDefender, int Adjust
 
 		MEMORY_TRACK_EXEMPT();
 
-		CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENSES_IN_CITY_REDUCED_TO", pCity->getNameKey(), pCity->getDefenseModifier(false), GET_PLAYER(getOwnerINLINE()).getNameKey());
-		AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
+		CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENSES_IN_CITY_REDUCED_TO", pCity->getNameKey(), pCity->getDefenseModifier(false), GET_PLAYER(getOwner()).getNameKey());
+		AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
 
 		szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_REDUCE_CITY_DEFENSES", getNameKey(), pCity->getNameKey(), pCity->getDefenseModifier(false));
-		AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY());
+		AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX(), pCity->getY());
 	}
 	return;
 }
@@ -41952,7 +41947,7 @@ bool CvUnit::canMerge(bool bAutocheck) const
 	{
 		CvUnit* pLoopUnit = *itr;
 
-		if (pLoopUnit->getOwnerINLINE() == getOwnerINLINE() && pLoopUnit->getID() != getID()
+		if (pLoopUnit->getOwner() == getOwner() && pLoopUnit->getID() != getID()
 
 			&& pLoopUnit->getUnitType() == getUnitType() 
 			&& pLoopUnit->groupRank() == groupRank() 
@@ -42072,7 +42067,7 @@ void CvUnit::doMerge()
 		pInfo->setData1(getID());
 		pInfo->setData2(plot()->getX());
 		pInfo->setData3(plot()->getY());
-		gDLL->getInterfaceIFace()->addPopup(pInfo, getOwnerINLINE(), true);
+		gDLL->getInterfaceIFace()->addPopup(pInfo, getOwner(), true);
 	}
 	else
 	{
@@ -42084,7 +42079,7 @@ void CvUnit::doMerge()
 		{
 			CvUnit* pLoopUnit = *itr;
 
-			if (pLoopUnit->getOwnerINLINE() == getOwnerINLINE() 
+			if (pLoopUnit->getOwner() == getOwner() 
 				&& pLoopUnit->getID() != pUnit1->getID()
 					
 				&& pLoopUnit->getUnitType() == pUnit1->getUnitType()
@@ -42257,7 +42252,7 @@ void CvUnit::doSplit()
 		pInfo->setData1(getID());
 		pInfo->setData2(plot()->getX());
 		pInfo->setData3(plot()->getY());
-		gDLL->getInterfaceIFace()->addPopup(pInfo, getOwnerINLINE(), true);
+		gDLL->getInterfaceIFace()->addPopup(pInfo, getOwner(), true);
 	}
 	else
 	{
@@ -42415,7 +42410,7 @@ UnitTypes CvUnit::getGGExperienceEarnedTowardsType() const
 int CvUnit::eraGroupMergeLimit() const
 {
 	int iLimit = m_pUnitInfo->getBaseGroupRank();
-	int iEra = ((int)GET_PLAYER(getOwnerINLINE()).getCurrentEra());
+	int iEra = ((int)GET_PLAYER(getOwner()).getCurrentEra());
 	iLimit += iEra + 1;
 	return iLimit;
 }
@@ -42423,7 +42418,7 @@ int CvUnit::eraGroupMergeLimit() const
 int CvUnit::eraGroupSplitLimit() const
 {
 	int iLimit = m_pUnitInfo->getBaseGroupRank();
-	int iEra = ((int)GET_PLAYER(getOwnerINLINE()).getCurrentEra());
+	int iEra = ((int)GET_PLAYER(getOwner()).getCurrentEra());
 	iLimit -= (iEra + 1);
 	return std::max(1, iLimit);
 }
@@ -42509,14 +42504,14 @@ int CvUnit::SMcargoSpace() const
 	{
 		if (getDomainType() == DOMAIN_SEA)
 		{
-			iCargoCapacity += applySMRank(GET_PLAYER(getOwnerINLINE()).getNationalNavalCargoSpaceChange(),
+			iCargoCapacity += applySMRank(GET_PLAYER(getOwner()).getNationalNavalCargoSpaceChange(),
 				getSizeMattersSpacialOffsetValue(),
 				GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER"));
 		}
 		SpecialUnitTypes eMissile = (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_MISSILE");
 		if (SMspecialCargo() == eMissile)
 		{
-			iCargoCapacity += applySMRank(GET_PLAYER(getOwnerINLINE()).getNationalMissileCargoSpaceChange(),
+			iCargoCapacity += applySMRank(GET_PLAYER(getOwner()).getNationalMissileCargoSpaceChange(),
 				getSizeMattersSpacialOffsetValue(),
 				GC.getDefineINT("SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER"));
 		}
@@ -42525,12 +42520,12 @@ int CvUnit::SMcargoSpace() const
 	{
 		if (getDomainType() == DOMAIN_SEA)
 		{
-			iCargoCapacity += (GET_PLAYER(getOwnerINLINE()).getNationalNavalCargoSpaceChange());
+			iCargoCapacity += (GET_PLAYER(getOwner()).getNationalNavalCargoSpaceChange());
 		}
 		SpecialUnitTypes eMissile = (SpecialUnitTypes)GC.getInfoTypeForString("SPECIALUNIT_MISSILE");
 		if (SMspecialCargo() == eMissile)
 		{
-			iCargoCapacity += (GET_PLAYER(getOwnerINLINE()).getNationalMissileCargoSpaceChange());
+			iCargoCapacity += (GET_PLAYER(getOwner()).getNationalMissileCargoSpaceChange());
 		}
 	}
 	return iCargoCapacity;
@@ -42647,7 +42642,7 @@ int CvUnit::getExtraPowerValue() const
 
 void CvUnit::changeExtraPowerValue(int iChange)
 {
-	GET_PLAYER(getOwnerINLINE()).changePower(iChange);
+	GET_PLAYER(getOwner()).changePower(iChange);
 	m_iExtraPowerValue += iChange;
 	if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
@@ -42700,7 +42695,7 @@ void CvUnit::setSMPowerValue(bool bForLoad)
 	if (!bForLoad)
 	{
 		const int iChange = std::max(1, m_iSMPowerValue - oldSMPowerValue);
-		GET_PLAYER(getOwnerINLINE()).changePower(iChange);
+		GET_PLAYER(getOwner()).changePower(iChange);
 	}
 	FAssert(getSMPowerValue() >= 0);
 }
@@ -42712,7 +42707,7 @@ int CvUnit::getExtraAssetValue() const
 
 void CvUnit::changeExtraAssetValue(int iChange)
 {
-	GET_PLAYER(getOwnerINLINE()).changeAssets(iChange);
+	GET_PLAYER(getOwner()).changeAssets(iChange);
 	m_iExtraAssetValue += iChange;
 	if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
@@ -42765,7 +42760,7 @@ void CvUnit::setSMAssetValue(bool bForLoad)
 		if (!bForLoad)
 		{
 			int iChange = m_iSMAssetValue - oldSMAssetValue;
-			GET_PLAYER(getOwnerINLINE()).changeAssets(iChange);
+			GET_PLAYER(getOwner()).changeAssets(iChange);
 		}
 		FAssertOptionRecalcMsg(GAMEOPTION_SIZE_MATTERS, getSMAssetValue() >= 0, "Asset value fell below 0");
 	}
@@ -43254,7 +43249,7 @@ int CvUnit::workRate(bool bMax) const
 
 	iRate = baseWorkRate();
 
-	iRate *= std::max(0, (GET_PLAYER(getOwnerINLINE()).getWorkerSpeedModifier() + 100));
+	iRate *= std::max(0, (GET_PLAYER(getOwner()).getWorkerSpeedModifier() + 100));
 	iRate /= 100;
 
 	if (!isHuman() && !isNPC())
@@ -44002,7 +43997,7 @@ void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, bool bRemove, Mis
 						if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1 
 							&& canAcquirePromotion(ePromotion, PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp))
 						{
-							iValue = std::max(1, GET_PLAYER(getOwnerINLINE()).AI_promotionValue(ePromotion, getUnitType(), this, AI_getUnitAIType(), true));
+							iValue = std::max(1, GET_PLAYER(getOwner()).AI_promotionValue(ePromotion, getUnitType(), this, AI_getUnitAIType(), true));
 							if (iValue > iBestValue)
 							{
 								iBestValue = iValue;
@@ -45477,7 +45472,7 @@ void CvUnit::doArrest()
 		pInfo->setData1(getID());
 		pInfo->setData2(plot()->getX());
 		pInfo->setData3(plot()->getY());
-		gDLL->getInterfaceIFace()->addPopup(pInfo, getOwnerINLINE(), true);
+		gDLL->getInterfaceIFace()->addPopup(pInfo, getOwner(), true);
 	}
 	else
 	{
@@ -45564,7 +45559,7 @@ bool CvUnit::canAmbush(CvPlot* pPlot, bool bAssassinate) const
 
 	if (isBlitz() || !isMadeAttack())
 	{
-		CvUnit* pDefender = pPlot->getBestDefender(NO_PLAYER, getOwnerINLINE(), this, true, true, false, bAssassinate);
+		CvUnit* pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, true, false, bAssassinate);
 		if (pDefender != NULL)
 		{
 			return true;
@@ -45614,7 +45609,7 @@ bool CvUnit::doAmbush(bool bAssassinate)
 			pInfo->setData1(getID());
 			pInfo->setData2(plot()->getX());
 			pInfo->setData3(plot()->getY());
-			gDLL->getInterfaceIFace()->addPopup(pInfo, getOwnerINLINE(), true);
+			gDLL->getInterfaceIFace()->addPopup(pInfo, getOwner(), true);
 		}
 		else
 		{
@@ -45623,7 +45618,7 @@ bool CvUnit::doAmbush(bool bAssassinate)
 			int iOdds = 0;
 			if (pPlot != NULL)
 			{
-				CvUnit* pDefender = pPlot->getBestDefender(NO_PLAYER, getOwnerINLINE(), this, true, true, false, bAssassinate);
+				CvUnit* pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, true, false, bAssassinate);
 				if (pDefender != NULL)
 				{
 					attackSamePlotSpecifiedUnit(pDefender, false);
@@ -45638,7 +45633,7 @@ bool CvUnit::doAmbush(bool bAssassinate)
 void CvUnit::enactAmbush(bool bAssassinate)
 {
 	CvPlot* pPlot = plot();
-	CvUnit* pDefender = pPlot->getBestDefender(NO_PLAYER, getOwnerINLINE(), this, !gDLL->altKey(), NO_TEAM == getDeclareWarMove(pPlot), false, bAssassinate);
+	CvUnit* pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, !gDLL->altKey(), NO_TEAM == getDeclareWarMove(pPlot), false, bAssassinate);
 	if (pDefender != NULL)
 	{
 		attackSamePlotSpecifiedUnit(pDefender, false);
@@ -46277,9 +46272,9 @@ void CvUnit::doTrapTrigger(CvUnit* pUnit, bool bImmune)
 				MEMORY_TRACK_EXEMPT();
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_TRAP_TRIGGERED_DAMAGE_SUFFERED", pUnit->getNameKey(), getNameKey(), iTrapDmg);
-				AddDLLMessage(pUnit->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+				AddDLLMessage(pUnit->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
 				szBuffer = gDLL->getText("TXT_KEY_MISC_TRAP_TRIGGERED_DAMAGE_INFLICTED", getNameKey(), pUnit->getNameKey(), iTrapDmg);
-				AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), plot()->getX(), plot()->getY());
 			}
 		}
 		//afflict
@@ -46324,11 +46319,11 @@ bool CvUnit::doTrapDisable(CvUnit* pUnit)
 	}
 	if (bCapturable)
 	{
-		setCapturingPlayer(pUnit->getOwnerINLINE());
+		setCapturingPlayer(pUnit->getOwner());
 		setCapturingUnit(pUnit);
 	}
 
-	kill(false, pUnit->getOwnerINLINE(), true);
+	kill(false, pUnit->getOwner(), true);
 	return true;
 }
 
@@ -46371,10 +46366,10 @@ void CvUnit::makeWanted(CvCity* pCity)
 				m_pPlayerInvestigated = ePlayer;
 				//do message
 				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_INVESTIGATED_WANTED_RESULT", pCity->getNameKey());
-				AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), pCity->getX(), pCity->getY(), true, true);
+				AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), pCity->getX(), pCity->getY(), true, true);
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_INVESTIGATED_BECOME_WANTED", getNameKey(), pCity->getNameKey());
-				AddDLLMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
+				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX(), pCity->getY(), true, true);
 				return;
 			}
 		}

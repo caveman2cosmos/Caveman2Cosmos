@@ -63,7 +63,7 @@ void callSetPayer(CvGameObject* pObject, CvGameObject** ppPayer)
 
 bool CvOutcomeMission::isPossible(CvUnit* pUnit, bool bTestVisible)
 {
-	CvPlayer* pOwner = &GET_PLAYER(pUnit->getOwnerINLINE());
+	CvPlayer* pOwner = &GET_PLAYER(pUnit->getOwner());
 
 	//if (!bTestVisible)
 	//{
@@ -170,7 +170,7 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer &szBuffer, CvUnit *pUn
 
 void CvOutcomeMission::execute(CvUnit* pUnit)
 {
-	CvPlayer* pOwner = &GET_PLAYER(pUnit->getOwnerINLINE());
+	CvPlayer* pOwner = &GET_PLAYER(pUnit->getOwner());
 	if (m_iCost)
 	{
 		pOwner->changeGold(-(m_iCost->evaluate(pUnit->getGameObject())));

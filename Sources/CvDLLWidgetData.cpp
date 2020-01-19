@@ -1356,7 +1356,7 @@ void CvDLLWidgetData::doPlotList(CvWidgetDataStruct &widgetDataStruct)
 
 	if (pUnit != NULL)
 	{
-		if (pUnit->getOwnerINLINE() == GC.getGameINLINE().getActivePlayer())
+		if (pUnit->getOwner() == GC.getGameINLINE().getActivePlayer())
 		{
 			bool bWasCityScreenUp = gDLL->getInterfaceIFace()->isCityScreenUp();
 
@@ -1387,7 +1387,7 @@ void CvDLLWidgetData::doRenameCity()
 
 	if (pHeadSelectedCity != NULL)
 	{
-		if (pHeadSelectedCity->getOwnerINLINE() == GC.getGameINLINE().getActivePlayer())
+		if (pHeadSelectedCity->getOwner() == GC.getGameINLINE().getActivePlayer())
 		{
 			CvEventReporter::getInstance().cityRename(pHeadSelectedCity);
 		}
@@ -1403,7 +1403,7 @@ void CvDLLWidgetData::doRenameUnit()
 
 	if (pHeadSelectedUnit != NULL)
 	{
-		if (pHeadSelectedUnit->getOwnerINLINE() == GC.getGameINLINE().getActivePlayer())
+		if (pHeadSelectedUnit->getOwner() == GC.getGameINLINE().getActivePlayer())
 		{
 			CvEventReporter::getInstance().unitRename(pHeadSelectedUnit);
 		}
@@ -2173,13 +2173,13 @@ void CvDLLWidgetData::parsePlotListHelp(CvWidgetDataStruct &widgetDataStruct, Cv
 	{
 		GAMETEXT.setUnitHelp(szBuffer, pUnit);
 
-		if (pUnit->plot()->plotCount(PUF_isUnitType, pUnit->getUnitType(), -1, NULL, pUnit->getOwnerINLINE()) > 1)
+		if (pUnit->plot()->plotCount(PUF_isUnitType, pUnit->getUnitType(), -1, NULL, pUnit->getOwner()) > 1)
 		{
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_MISC_CTRL_SELECT", GC.getUnitInfo(pUnit->getUnitType()).getTextKeyWide()));
 		}
 
-		if (pUnit->plot()->plotCount(NULL, -1, -1, NULL, pUnit->getOwnerINLINE()) > 1)
+		if (pUnit->plot()->plotCount(NULL, -1, -1, NULL, pUnit->getOwner()) > 1)
 		{
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_MISC_ALT_SELECT"));
@@ -2375,7 +2375,7 @@ void CvDLLWidgetData::parseHurryHelp(CvWidgetDataStruct &widgetDataStruct, CvWSt
 			szBuffer.append(gDLL->getText("TXT_KEY_MISC_UNIT_BUILDING_HURRY"));
 		}
 
-		if (!(GET_PLAYER(pHeadSelectedCity->getOwnerINLINE()).canHurry((HurryTypes)(widgetDataStruct.m_iData1))))
+		if (!(GET_PLAYER(pHeadSelectedCity->getOwner()).canHurry((HurryTypes)(widgetDataStruct.m_iData1))))
 		{
 			bool bFirst = true;
 
@@ -2459,7 +2459,7 @@ void CvDLLWidgetData::parseConscriptHelp(CvWidgetDataStruct &widgetDataStruct, C
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_MIN_CULTURE_PERCENT", iMinCulturePercent));
 			}
 
-			if (GET_PLAYER(pHeadSelectedCity->getOwnerINLINE()).getMaxConscript() == 0)
+			if (GET_PLAYER(pHeadSelectedCity->getOwner()).getMaxConscript() == 0)
 			{
 				bool bFirst = true;
 
@@ -2488,8 +2488,8 @@ void CvDLLWidgetData::parseConscriptHelp(CvWidgetDataStruct &widgetDataStruct, C
 				}
 				else
 				{
-					int iDraftUnits = GET_PLAYER(pHeadSelectedCity->getOwnerINLINE()).getConscriptCount();
-					int iMaxDraftUnits = GET_PLAYER(pHeadSelectedCity->getOwnerINLINE()).getMaxConscript();
+					int iDraftUnits = GET_PLAYER(pHeadSelectedCity->getOwner()).getConscriptCount();
+					int iMaxDraftUnits = GET_PLAYER(pHeadSelectedCity->getOwner()).getMaxConscript();
 
 					if (iDraftUnits >= iMaxDraftUnits)
 					{
@@ -2684,7 +2684,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			}
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_FOUND)
 			{
-				if (!(GET_PLAYER(pHeadSelectedUnit->getOwnerINLINE()).canFound(pMissionPlot->getX(), pMissionPlot->getY())))
+				if (!(GET_PLAYER(pHeadSelectedUnit->getOwner()).canFound(pMissionPlot->getX(), pMissionPlot->getY())))
 				{
 					bool bValid = true;
 
@@ -2734,23 +2734,23 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-					if (GET_PLAYER(pHeadSelectedUnit->getOwnerINLINE()).getCityLimit() > 0 &&
-						GET_PLAYER(pHeadSelectedUnit->getOwnerINLINE()).getCityOverLimitUnhappy() == 0 &&
-						GET_PLAYER(pHeadSelectedUnit->getOwnerINLINE()).getNumCities() >= GET_PLAYER(pHeadSelectedUnit->getOwnerINLINE()).getCityLimit())
+					if (GET_PLAYER(pHeadSelectedUnit->getOwner()).getCityLimit() > 0 &&
+						GET_PLAYER(pHeadSelectedUnit->getOwner()).getCityOverLimitUnhappy() == 0 &&
+						GET_PLAYER(pHeadSelectedUnit->getOwner()).getNumCities() >= GET_PLAYER(pHeadSelectedUnit->getOwner()).getCityLimit())
 					{
 						CvWString szCivics;
 						for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 						{
-							if (GET_PLAYER(pHeadSelectedUnit->getOwnerINLINE()).getCivics((CivicOptionTypes)iI) != NO_CIVIC)
+							if (GET_PLAYER(pHeadSelectedUnit->getOwner()).getCivics((CivicOptionTypes)iI) != NO_CIVIC)
 							{
-								if (GC.getCivicInfo((CivicTypes)GET_PLAYER(pHeadSelectedUnit->getOwnerINLINE()).getCivics((CivicOptionTypes)iI)).getCityLimit(pHeadSelectedUnit->getOwnerINLINE()) > 0)
+								if (GC.getCivicInfo((CivicTypes)GET_PLAYER(pHeadSelectedUnit->getOwner()).getCivics((CivicOptionTypes)iI)).getCityLimit(pHeadSelectedUnit->getOwner()) > 0)
 								{
-									szCivics.append(GC.getCivicInfo((CivicTypes)GET_PLAYER(pHeadSelectedUnit->getOwnerINLINE()).getCivics((CivicOptionTypes)iI)).getDescription());
+									szCivics.append(GC.getCivicInfo((CivicTypes)GET_PLAYER(pHeadSelectedUnit->getOwner()).getCivics((CivicOptionTypes)iI)).getDescription());
 								}
 							}
 						}
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CANNOT_FOUND_CITY_LIMIT", GET_PLAYER(pHeadSelectedUnit->getOwnerINLINE()).getCityLimit(), szCivics.c_str()));
+						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CANNOT_FOUND_CITY_LIMIT", GET_PLAYER(pHeadSelectedUnit->getOwner()).getCityLimit(), szCivics.c_str()));
 					}
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -2765,9 +2765,9 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 				{
 					if (pMissionCity->getTeam() != pHeadSelectedUnit->getTeam()) // XXX still true???
 					{
-						if (GET_PLAYER(pMissionCity->getOwnerINLINE()).isNoNonStateReligionSpread())
+						if (GET_PLAYER(pMissionCity->getOwner()).isNoNonStateReligionSpread())
 						{
-							if (eReligion != GET_PLAYER(pMissionCity->getOwnerINLINE()).getStateReligion())
+							if (eReligion != GET_PLAYER(pMissionCity->getOwner()).getStateReligion())
 							{
 								szBuffer.append(NEWLINE);
 								szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CANNOT_SPREAD_NON_STATE_RELIGION"));
@@ -2813,10 +2813,10 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 
 					if (!pHeadSelectedUnit->canSpreadCorporation(pMissionPlot, eCorporation))
 					{
-						if (!GET_PLAYER(pMissionCity->getOwnerINLINE()).isActiveCorporation(eCorporation))
+						if (!GET_PLAYER(pMissionCity->getOwner()).isActiveCorporation(eCorporation))
 						{
 							szBuffer.append(NEWLINE);
-							szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CORPORATION_NOT_ACTIVE", GC.getCorporationInfo(eCorporation).getTextKeyWide(), GET_PLAYER(pMissionCity->getOwnerINLINE()).getCivilizationAdjective()));
+							szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CORPORATION_NOT_ACTIVE", GC.getCorporationInfo(eCorporation).getTextKeyWide(), GET_PLAYER(pMissionCity->getOwner()).getCivilizationAdjective()));
 						}
 
 						CorporationTypes eCompetition = NO_CORPORATION;
@@ -2881,7 +2881,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						{
 							if (kCorporation.getPrereqBuildingClass(iI) > 0)
 							{
-								ePrereqBuilding = ((BuildingTypes)(GC.getCivilizationInfo(GET_PLAYER(pMissionCity->getOwnerINLINE()).getCivilizationType()).getCivilizationBuildings((BuildingClassTypes)iI)));
+								ePrereqBuilding = ((BuildingTypes)(GC.getCivilizationInfo(GET_PLAYER(pMissionCity->getOwner()).getCivilizationType()).getCivilizationBuildings((BuildingClassTypes)iI)));
 
 								if (ePrereqBuilding != NO_BUILDING)
 								{
@@ -3058,7 +3058,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			{
 				if (pMissionCity != NULL)
 				{
-					if (pMissionCity->getOwnerINLINE() == pHeadSelectedUnit->getOwnerINLINE())
+					if (pMissionCity->getOwner() == pHeadSelectedUnit->getOwner())
 					{
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_TRADE_MISSION_FOREIGN"));
@@ -3098,7 +3098,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			{
 				if (pMissionCity != NULL)
 				{
-					if (pMissionCity->getOwnerINLINE() == pHeadSelectedUnit->getOwnerINLINE())
+					if (pMissionCity->getOwner() == pHeadSelectedUnit->getOwner())
 					{
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_INFILTRATE_MISSION_FOREIGN"));
@@ -3122,8 +3122,8 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			}
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_GOLDEN_AGE)
 			{
-				int iUnitConsume = GET_PLAYER(pHeadSelectedUnit->getOwnerINLINE()).unitsRequiredForGoldenAge();
-				int iUnitDiff = (iUnitConsume - GET_PLAYER(pHeadSelectedUnit->getOwnerINLINE()).unitsGoldenAgeReady());
+				int iUnitConsume = GET_PLAYER(pHeadSelectedUnit->getOwner()).unitsRequiredForGoldenAge();
+				int iUnitDiff = (iUnitConsume - GET_PLAYER(pHeadSelectedUnit->getOwner()).unitsGoldenAgeReady());
 
 				if (iUnitDiff > 0)
 				{
@@ -3167,13 +3167,13 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			/*
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_ASSASSIN)
 			{
-				if(pMissionPlot->plotCount(PUF_isOtherTeam, pHeadSelectedUnit->getOwnerINLINE(), -1, NO_PLAYER, NO_TEAM, PUF_isVisible, pHeadSelectedUnit->getOwnerINLINE()) == 1)
+				if(pMissionPlot->plotCount(PUF_isOtherTeam, pHeadSelectedUnit->getOwner(), -1, NO_PLAYER, NO_TEAM, PUF_isVisible, pHeadSelectedUnit->getOwner()) == 1)
 				{
 					CvUnit* pTargetUnit;
 					int iEspionageCost = 0;
 					int iMissionChance = 0;
 
-					pTargetUnit = pMissionPlot->plotCheck(PUF_isOtherTeam, pHeadSelectedUnit->getOwnerINLINE(), -1, NO_PLAYER, NO_TEAM, PUF_isVisible, pHeadSelectedUnit->getOwnerINLINE());
+					pTargetUnit = pMissionPlot->plotCheck(PUF_isOtherTeam, pHeadSelectedUnit->getOwner(), -1, NO_PLAYER, NO_TEAM, PUF_isVisible, pHeadSelectedUnit->getOwner());
 					iEspionageCost = pHeadSelectedUnit->assassinCost(pTargetUnit);
 					iMissionChance = pHeadSelectedUnit->assassinProb(pTargetUnit);
 					szBuffer.append(NEWLINE);
@@ -3197,10 +3197,10 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 
 					if (eImprovement != NO_IMPROVEMENT)
 					{
-						iYield += pMissionPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iI), pHeadSelectedUnit->getOwnerINLINE());
+						iYield += pMissionPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iI), pHeadSelectedUnit->getOwner());
 						if (pMissionPlot->getImprovementType() != NO_IMPROVEMENT)
 						{
-							iYield -= pMissionPlot->calculateImprovementYieldChange(pMissionPlot->getImprovementType(), ((YieldTypes)iI), pHeadSelectedUnit->getOwnerINLINE());
+							iYield -= pMissionPlot->calculateImprovementYieldChange(pMissionPlot->getImprovementType(), ((YieldTypes)iI), pHeadSelectedUnit->getOwner());
 						}
 					}
 
@@ -3301,7 +3301,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					for (int i = 0; i < GC.getBuildInfo(eBuild).getNumPrereqBonusTypes(); i++)
 					{
 						BonusTypes prereqBonus = ((BonusTypes)GC.getBuildInfo(eBuild).getPrereqBonusType(i));
-						if (!(pMissionPlot->isAdjacentPlotGroupConnectedBonus(pHeadSelectedUnit->getOwnerINLINE(), prereqBonus)))
+						if (!(pMissionPlot->isAdjacentPlotGroupConnectedBonus(pHeadSelectedUnit->getOwner(), prereqBonus)))
 						{
 							szBuffer.append(NEWLINE);
 							szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING", CvWString(GC.getBonusInfo(prereqBonus).getType()).GetCString(), GC.getBonusInfo(prereqBonus).getTextKeyWide()));
@@ -3312,7 +3312,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					{
 						if (GC.getRouteInfo(eRoute).getPrereqBonus() != NO_BONUS)
 						{
-							if (!(pMissionPlot->isAdjacentPlotGroupConnectedBonus(pHeadSelectedUnit->getOwnerINLINE(), ((BonusTypes)(GC.getRouteInfo(eRoute).getPrereqBonus())))))
+							if (!(pMissionPlot->isAdjacentPlotGroupConnectedBonus(pHeadSelectedUnit->getOwner(), ((BonusTypes)(GC.getRouteInfo(eRoute).getPrereqBonus())))))
 							{
 								szBuffer.append(NEWLINE);
 								szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING", CvWString(GC.getBonusInfo((BonusTypes) GC.getRouteInfo(eRoute).getPrereqBonus()).getType()).GetCString(), GC.getBonusInfo((BonusTypes) GC.getRouteInfo(eRoute).getPrereqBonus()).getTextKeyWide()));
@@ -3328,7 +3328,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 								aeOrBonuses.push_back((BonusTypes)GC.getRouteInfo(eRoute).getPrereqOrBonus(i));
 								bFoundValid = false;
 
-								if (pMissionPlot->isAdjacentPlotGroupConnectedBonus(pHeadSelectedUnit->getOwnerINLINE(), ((BonusTypes)(GC.getRouteInfo(eRoute).getPrereqOrBonus(i)))))
+								if (pMissionPlot->isAdjacentPlotGroupConnectedBonus(pHeadSelectedUnit->getOwner(), ((BonusTypes)(GC.getRouteInfo(eRoute).getPrereqOrBonus(i)))))
 								{
 									bFoundValid = true;
 									break;
@@ -3636,7 +3636,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 					{
-						int iTurns = pMissionPlot->getUpgradeTimeLeft(eImprovement, pHeadSelectedUnit->getOwnerINLINE());
+						int iTurns = pMissionPlot->getUpgradeTimeLeft(eImprovement, pHeadSelectedUnit->getOwner());
 
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_BECOMES_IMP", CvWString(GC.getImprovementInfo((ImprovementTypes)GC.getImprovementInfo(eImprovement).getImprovementUpgrade()).getType()).GetCString(), GC.getImprovementInfo((ImprovementTypes) GC.getImprovementInfo(eImprovement).getImprovementUpgrade()).getTextKeyWide(), iTurns));
@@ -3725,10 +3725,10 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 
 				if (NULL != pHeadSelectedUnit)
 				{
-					if (GET_PLAYER(pHeadSelectedUnit->getOwnerINLINE()).getBuildCost(pMissionPlot, eBuild) > 0)
+					if (GET_PLAYER(pHeadSelectedUnit->getOwner()).getBuildCost(pMissionPlot, eBuild) > 0)
 					{
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_BUILD_COST", GET_PLAYER(pHeadSelectedUnit->getOwnerINLINE()).getBuildCost(pMissionPlot, eBuild)));
+						szBuffer.append(gDLL->getText("TXT_KEY_BUILD_COST", GET_PLAYER(pHeadSelectedUnit->getOwner()).getBuildCost(pMissionPlot, eBuild)));
 					}
 				}
 
@@ -3845,7 +3845,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 				int iPrice = 0;
 				if (bAlt && GC.getCommandInfo((CommandTypes)(GC.getActionInfo(widgetDataStruct.m_iData1).getCommandType())).getAll())
 				{
-					iPrice = GET_PLAYER(pHeadSelectedUnit->getOwnerINLINE()).upgradeAllPrice(((UnitTypes)(GC.getActionInfo(widgetDataStruct.m_iData1).getCommandData())), pHeadSelectedUnit->getUnitType());
+					iPrice = GET_PLAYER(pHeadSelectedUnit->getOwner()).upgradeAllPrice(((UnitTypes)(GC.getActionInfo(widgetDataStruct.m_iData1).getCommandData())), pHeadSelectedUnit->getUnitType());
 				}
 				else
 				{
@@ -3868,7 +3868,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			}
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getCommandType() == COMMAND_GIFT)
 			{
-				PlayerTypes eGiftPlayer = pHeadSelectedUnit->plot()->getOwnerINLINE();
+				PlayerTypes eGiftPlayer = pHeadSelectedUnit->plot()->getOwner();
 
 				if (eGiftPlayer != NO_PLAYER)
 				{
@@ -4100,7 +4100,7 @@ void CvDLLWidgetData::parseChangeSpecialistHelp(CvWidgetDataStruct &widgetDataSt
 
 			if (widgetDataStruct.m_iData1 != GC.getDefineINT("DEFAULT_SPECIALIST"))
 			{
-				if (!(GET_PLAYER(pHeadSelectedCity->getOwnerINLINE()).isSpecialistValid((SpecialistTypes)(widgetDataStruct.m_iData1))))
+				if (!(GET_PLAYER(pHeadSelectedCity->getOwner()).isSpecialistValid((SpecialistTypes)(widgetDataStruct.m_iData1))))
 				{
 					if (pHeadSelectedCity->getMaxSpecialistCount((SpecialistTypes)(widgetDataStruct.m_iData1)) > 0)
 					{
@@ -5820,8 +5820,8 @@ void CvDLLWidgetData::parseMaintenanceHelp(CvWidgetDataStruct &widgetDataStruct,
 			szBuffer.assign(gDLL->getText("TXT_KEY_MISC_MAINT_INFO"));
 			szBuffer.append(NEWLINE);
 
-			int iMaintenanceValue = GC.getEraInfo(GET_PLAYER(pHeadSelectedCity->getOwnerINLINE()).getCurrentEra()).getInitialCityMaintenancePercent();
-			if (iMaintenanceValue != 0 && !pHeadSelectedCity->isDisorder() && !GET_PLAYER(pHeadSelectedCity->getOwnerINLINE()).isAnarchy())
+			int iMaintenanceValue = GC.getEraInfo(GET_PLAYER(pHeadSelectedCity->getOwner()).getCurrentEra()).getInitialCityMaintenancePercent();
+			if (iMaintenanceValue != 0 && !pHeadSelectedCity->isDisorder() && !GET_PLAYER(pHeadSelectedCity->getOwner()).isAnarchy())
 			{
 				CvWString szMaint = CvWString::format(L"%d.%02d", iMaintenanceValue/100, iMaintenanceValue%100);
 				szBuffer.append(NEWLINE);
@@ -5831,10 +5831,10 @@ void CvDLLWidgetData::parseMaintenanceHelp(CvWidgetDataStruct &widgetDataStruct,
 			iMaintenanceValue = (pHeadSelectedCity->calculateDistanceMaintenanceTimes100()* std::max(0, (pHeadSelectedCity->getEffectiveMaintenanceModifier() + 100))) / 100;
 			if (iMaintenanceValue != 0)
 			{
-				//			swprintf(szTempBuffer, "\n%s%d%c: %s", ((iMaintenanceValue > 0) ?  "+" : ""), iMaintenanceValue, GC.getCommerceInfo(COMMERCE_GOLD).getChar(), ((GET_PLAYER(pHeadSelectedCity->getOwnerINLINE()).getNumGovernmentCenters() > 0) ? "Distance from Palace" : "No Palace Penalty"));
+				//			swprintf(szTempBuffer, "\n%s%d%c: %s", ((iMaintenanceValue > 0) ?  "+" : ""), iMaintenanceValue, GC.getCommerceInfo(COMMERCE_GOLD).getChar(), ((GET_PLAYER(pHeadSelectedCity->getOwner()).getNumGovernmentCenters() > 0) ? "Distance from Palace" : "No Palace Penalty"));
 				CvWString szMaint = CvWString::format(L"%d.%02d", iMaintenanceValue/100, iMaintenanceValue%100);
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_NUM_MAINT_FLOAT", szMaint.GetCString()) + ((GET_PLAYER(pHeadSelectedCity->getOwnerINLINE()).getNumGovernmentCenters() > 0) ? gDLL->getText("TXT_KEY_MISC_DISTANCE_FROM_PALACE") : gDLL->getText("TXT_KEY_MISC_NO_PALACE_PENALTY")));
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_NUM_MAINT_FLOAT", szMaint.GetCString()) + ((GET_PLAYER(pHeadSelectedCity->getOwner()).getNumGovernmentCenters() > 0) ? gDLL->getText("TXT_KEY_MISC_DISTANCE_FROM_PALACE") : gDLL->getText("TXT_KEY_MISC_NO_PALACE_PENALTY")));
 			}
 
 			iMaintenanceValue = (pHeadSelectedCity->calculateNumCitiesMaintenanceTimes100() * std::max(0, (pHeadSelectedCity->getEffectiveMaintenanceModifier() + 100))) / 100;
@@ -5884,11 +5884,11 @@ void CvDLLWidgetData::parseMaintenanceHelp(CvWidgetDataStruct &widgetDataStruct,
 /*
 			iMaintenanceValue = pHeadSelectedCity->getMaintenanceModifier();
 */
-			iMaintenanceValue = pHeadSelectedCity->getMaintenanceModifier() + GET_PLAYER(pHeadSelectedCity->getOwnerINLINE()).getMaintenanceModifier() + pHeadSelectedCity->area()->getTotalAreaMaintenanceModifier(GET_PLAYER(pHeadSelectedCity->getOwnerINLINE()).getID());
+			iMaintenanceValue = pHeadSelectedCity->getMaintenanceModifier() + GET_PLAYER(pHeadSelectedCity->getOwner()).getMaintenanceModifier() + pHeadSelectedCity->area()->getTotalAreaMaintenanceModifier(GET_PLAYER(pHeadSelectedCity->getOwner()).getID());
 
 			if (pHeadSelectedCity->isConnectedToCapital() && !(pHeadSelectedCity->isCapital()))
 			{
-				iMaintenanceValue += GET_PLAYER(pHeadSelectedCity->getOwnerINLINE()).getConnectedCityMaintenanceModifier();
+				iMaintenanceValue += GET_PLAYER(pHeadSelectedCity->getOwner()).getConnectedCityMaintenanceModifier();
 			}
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -5901,7 +5901,7 @@ void CvDLLWidgetData::parseMaintenanceHelp(CvWidgetDataStruct &widgetDataStruct,
 			}
 
 // BUG - Building Saved Maintenance - start
-			if (pHeadSelectedCity->getOwnerINLINE() == GC.getGame().getActivePlayer() && getBugOptionBOOL("MiscHover__BuildingSavedMaintenance", true, "BUG_BUILDING_SAVED_MAINTENANCE_HOVER"))
+			if (pHeadSelectedCity->getOwner() == GC.getGame().getActivePlayer() && getBugOptionBOOL("MiscHover__BuildingSavedMaintenance", true, "BUG_BUILDING_SAVED_MAINTENANCE_HOVER"))
 			{
 				GAMETEXT.setBuildingSavedMaintenanceHelp(szBuffer, *pHeadSelectedCity, DOUBLE_SEPARATOR);
 			}
@@ -5921,7 +5921,7 @@ void CvDLLWidgetData::parseHealthHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 		GAMETEXT.setGoodHealthHelp(szBuffer, *pHeadSelectedCity);
 
 // BUG - Building Additional Health - start
-		if (pHeadSelectedCity->getOwnerINLINE() == GC.getGame().getActivePlayer() && getBugOptionBOOL("MiscHover__BuildingAdditionalHealth", true, "BUG_BUILDING_ADDITIONAL_HEALTH_HOVER"))
+		if (pHeadSelectedCity->getOwner() == GC.getGame().getActivePlayer() && getBugOptionBOOL("MiscHover__BuildingAdditionalHealth", true, "BUG_BUILDING_ADDITIONAL_HEALTH_HOVER"))
 		{
 			GAMETEXT.setBuildingAdditionalHealthHelp(szBuffer, *pHeadSelectedCity, DOUBLE_SEPARATOR);
 		}
@@ -5989,7 +5989,7 @@ void CvDLLWidgetData::parseHappinessHelp(CvWidgetDataStruct &widgetDataStruct, C
 		GAMETEXT.setHappyHelp(szBuffer, *pHeadSelectedCity);
 
 // BUG - Building Additional Happiness - start
-		if (pHeadSelectedCity->getOwnerINLINE() == GC.getGame().getActivePlayer() && getBugOptionBOOL("MiscHover__BuildingAdditionalHappiness", true, "BUG_BUILDING_ADDITIONAL_HAPPINESS_HOVER"))
+		if (pHeadSelectedCity->getOwner() == GC.getGame().getActivePlayer() && getBugOptionBOOL("MiscHover__BuildingAdditionalHappiness", true, "BUG_BUILDING_ADDITIONAL_HAPPINESS_HOVER"))
 		{
 			GAMETEXT.setBuildingAdditionalHappinessHelp(szBuffer, *pHeadSelectedCity, DOUBLE_SEPARATOR);
 		}
@@ -6031,7 +6031,7 @@ void CvDLLWidgetData::parseCultureHelp(CvWidgetDataStruct &widgetDataStruct, CvW
 
 	if (pHeadSelectedCity != NULL)
 	{
-		int iCultureTimes100 = pHeadSelectedCity->getCultureTimes100(pHeadSelectedCity->getOwnerINLINE());
+		int iCultureTimes100 = pHeadSelectedCity->getCultureTimes100(pHeadSelectedCity->getOwner());
 		if (iCultureTimes100%100 == 0)
 		{
 			szBuffer.assign(gDLL->getText("TXT_KEY_MISC_CULTURE", iCultureTimes100/100, pHeadSelectedCity->getCultureThreshold()));
@@ -6112,7 +6112,7 @@ void CvDLLWidgetData::parseSelectedHelp(CvWidgetDataStruct &widgetDataStruct, Cv
 
 		case ORDER_LIST:
 			{
-				const CvPlayerAI& kPlayer = GET_PLAYER(pHeadSelectedCity->getOwnerINLINE());
+				const CvPlayerAI& kPlayer = GET_PLAYER(pHeadSelectedCity->getOwner());
 				const int index = kPlayer.m_pBuildLists->getIndexByID(order.getOrderListID());
 				if (index >= 0)
 				{
@@ -6188,7 +6188,7 @@ void CvDLLWidgetData::parseEspionageCostHelp(CvWidgetDataStruct &widgetDataStruc
 		CvPlot* pPlot = pUnit->plot();
 		if (NULL != pPlot)
 		{
-			GAMETEXT.setEspionageCostHelp(szBuffer, (EspionageMissionTypes)widgetDataStruct.m_iData1, pPlot->getOwnerINLINE(), pPlot, widgetDataStruct.m_iData2, pUnit);
+			GAMETEXT.setEspionageCostHelp(szBuffer, (EspionageMissionTypes)widgetDataStruct.m_iData1, pPlot->getOwner(), pPlot, widgetDataStruct.m_iData2, pUnit);
 		}
 	}
 }
